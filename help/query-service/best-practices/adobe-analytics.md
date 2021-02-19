@@ -215,8 +215,8 @@ Beim Reporting werden Bestellungen, Umsatz, Produktansichten und Hinzufügen zum
 
 | eVar6 (Produktsuchmethode) | Umsatz | Bestellungen | Produktansichten | Hinzufügen zum Warenkorb |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
-| Interne Suche:Wintermütze | 12,99 | 1 | 1 | 1 |
+| Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 3 |
+| Interne Suche:Wintermütze | 12,99 | 1 | 1 | 3 |
 
 Weitere Informationen zur Verwendung der Konversionssyntax finden Sie in der Adobe Analytics-Dokumentation zu [Implementieren von eVars mit Konvertierungssyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
