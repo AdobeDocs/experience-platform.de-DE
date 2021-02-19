@@ -74,7 +74,7 @@ Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von D
 
 #### C3 {#c3}
 
-Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten. Verträge über Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote für die Verwendung solcher Daten mit direkt identifizierbaren Daten.
+Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten. Verträge für Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote für die Verwendung solcher Daten mit direkt identifizierbaren Daten.
 
 #### C4 {#c4}
 
@@ -114,7 +114,7 @@ Letztendlich liegt die Interpretation der Beschriftung und die Art und Weise, wi
 
 IAB: 4. Inhaltsauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor erfassten Informationen, um Inhalte für Sie auszuwählen und bereitzustellen und den Versand und die Effektivität solcher Inhalte zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie im Zusammenhang mit dem Inhalt irgendwelche Aktionen durchgeführt haben, einschließlich der Auswahl von Inhalten. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um Inhalte und/oder Werbung für Sie in anderen Kontexten, wie Websites oder Apps, im Laufe der Zeit zu personalisieren.
 
-DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextuelle Werbung (d. h. Werbung, die auf dem Inhalt der Webseite basiert, die gerade besucht wird, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite).
+DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der Webseite basiert, die gerade besucht wird, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite).
 
 #### C8 {#c8}
 
