@@ -4,9 +4,9 @@ title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Arten und Kategorien von Destinationen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '513'
 ht-degree: 20%
 
 ---
@@ -62,7 +62,7 @@ Erweiterungen sind hilfreich, wenn Ereignis-Daten zum Trigger einer Aktion oder 
 
 ## Zielkategorien
 
-Die Verbindungen und Erweiterungen im [Zielkatalog](https://platform.adobe.com/destination/catalog) sind nach Zielplattformen (**Advertising**, **Cloud-Datenspeicherung**, **Umfragen-Plattformen**, **E-Mail-Marketing** usw.) gruppiert, je nach dem Marketinganwendungsfall, den sie Ihnen dabei helfen. Weitere Informationen zu den einzelnen Kategorien sowie zu den in den einzelnen Kategorien enthaltenen Zielen finden Sie in der [Katalogdokumentation zu Zielen](./catalog/overview.md).
+Die Verbindungen und Erweiterungen im [Zielkatalog](https://platform.adobe.com/destination/catalog) werden je nach Marketingaktion, die Sie erzielen, nach Zielplattformen (**Advertising**, **Cloud-Datenspeicherung**, **Umfrage-Plattformen**, **E-Mail-Marketing** usw.) gruppiert. Weitere Informationen zu den einzelnen Kategorien sowie zu den in den einzelnen Kategorien enthaltenen Zielen finden Sie in der [Katalogdokumentation zu Zielen](./catalog/overview.md).
 
 ![Zielkategorien](./assets/destination-types/destination-categories-menu.png)
 
