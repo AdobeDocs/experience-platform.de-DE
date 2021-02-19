@@ -3,10 +3,10 @@ keywords: Amazon Kinesis;Kinesis-Ziel;Kinesis
 title: Amazon Kinesis-Anschluss
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 7%
+source-wordcount: '510'
+ht-degree: 6%
 
 ---
 
@@ -45,16 +45,17 @@ Geben Sie für [!DNL Amazon Kinesis]-Ziele im Arbeitsablauf zum Erstellen von Zi
 
 ### Im Authentifizierungsschritt {#authentication-step}
 
-* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie  [!DNL Amazon Web Services]ein  `access key - secret access key` Paar, um Plattformzugriff auf Ihr  [!DNL Amazon Kinesis] Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).[
-* **Region**: Geben Sie an, zu welchem  [!DNL Amazon Web Services] Bereich Daten gestreamt werden sollen.
+* **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie  [!DNL Amazon Web Services]ein  `access key - secret access key` Paar, um Platform Zugriff auf Ihr  [!DNL Amazon Kinesis] Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).[
+* **Region**: Geben Sie an, zu welcher  [!DNL Amazon Web Services] Region Daten gestreamt werden sollen.
 
 ![Eingabefelder im Kontoschritt](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### Im Einrichtungsschritt {#setup-step}
+### Im Setup-Schritt {#setup-step}
 
-* **Name**: Geben Sie einen Namen für Ihre Verbindung an zu  [!DNL Amazon Kinesis]
-* **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung mit an  [!DNL Amazon Kinesis].
-* **Stream**: Geben Sie den Namen eines vorhandenen Datenstroms in Ihrem  [!DNL Amazon Kinesis] Konto an. Die Plattform exportiert Daten in diesen Stream.
+* **Name**: Geben Sie einen Namen für Ihre Verbindung ein, um  [!DNL Amazon Kinesis]
+* **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung mit ein  [!DNL Amazon Kinesis].
+* **stream**: Geben Sie den Namen eines vorhandenen Datenstroms in Ihrem  [!DNL Amazon Kinesis] Konto an. Plattform exportiert Daten in diesen Stream.
+* **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Eingabefelder im Authentifizierungsschritt](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -72,7 +73,7 @@ Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile
 
 ## Exportierte Daten {#exported-data}
 
-Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format [!DNL Amazon Kinesis]. Beispielsweise enthält das unten stehende Ereignis das E-Mail-Adressprofilattribut einer Zielgruppe, die sich für ein bestimmtes Segment qualifiziert und ein anderes Segment beendet hat. Die Identitäten für diese Perspektive sind ECID und E-Mail.
+Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format. [!DNL Amazon Kinesis] Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
 
 ```json
 {
@@ -116,7 +117,7 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format [!DNL A
 
 >[!MORELIKETHIS]
 >
->* [Herstellen einer Verbindung zu Amazon Kinesis und Aktivieren von Daten mithilfe von API-Aufrufen](../../api/streaming-destinations.md)
->* [Azure Event Hubs-Ziel](./azure-event-hubs.md)
+>* [Verbindung mit Amazon Kinesis und Datenaktivierung mithilfe von API-Aufrufen](../../api/streaming-destinations.md)
+>* [Azurblauer Ereignis Hubs Ziel](./azure-event-hubs.md)
 >* [Zieltypen und Kategorien](../../destination-types.md)
 
