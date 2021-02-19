@@ -3,10 +3,10 @@ keywords: Google-Anzeigenmanager;Google-Anzeige;DoubleClick;DoubleClick AdX;Doub
 title: Google Ad Manager-Verbindung
 description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.  '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 32%
+source-wordcount: '670'
+ht-degree: 33%
 
 ---
 
@@ -68,7 +68,7 @@ Geben Sie im Schritt **Setup** des Arbeitsablaufs zum Erstellen des Ziels [!UICO
    * Verwenden Sie `DFP by Google` für for Publishers.[!DNL DoubleClick]
    * `AdX buyer` für [!DNL Google AdX] verwenden
 * **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID ein  [!DNL Google]. Dies kann Ihre Netzwerkkennung oder Ihre Zielgruppenverknüpfungskennung sein. Normalerweise ist dies eine achtstellige Kennung.
-* **[!UICONTROL Anwendungsfall]** für das Marketing: Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Marketingaktion]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
