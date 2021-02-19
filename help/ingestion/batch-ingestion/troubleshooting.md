@@ -206,7 +206,7 @@ Wenn ein Batch den Status „Wird wiederholt“ aufweist, bedeutet dies, dass di
 
 ### Was bedeutet das, wenn ein Stapel „angehalten“ wurde?
 
-Befindet sich ein Stapel in &quot;Angehalten&quot;, bedeutet dies, dass [!DNL Data Ingestion Services] Schwierigkeiten beim Erfassen des Stapels hat und alle weitere Zustellversuche erschöpft sind.
+Befindet sich ein Stapel in &quot;Angehalten&quot;, bedeutet dies, dass [!DNL Data Ingestion Services] Schwierigkeiten beim Einsetzen des Stapels hat und alle weitere Zustellversuche erschöpft sind.
 
 ### Was bedeutet es, wenn der Status eines Batch immer noch „Wird geladen“ lautet?
 
