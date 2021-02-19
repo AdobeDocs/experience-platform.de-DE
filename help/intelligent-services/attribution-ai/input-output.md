@@ -89,7 +89,7 @@ Attribution AI gibt Folgendes aus:
 
 ### Rohe granulare Punktzahlen {#raw-granular-scores}
 
-Attribution AI gibt Zuordnungswerte auf möglichst granularer Ebene aus, sodass Sie die Ergebnisse nach jeder beliebigen Ergebnisspalte ausschneiden und würfeln können. Um diese Ergebnisse in der Benutzeroberfläche Ansicht, lesen Sie den Abschnitt [Anzeigen von Rohwertpfaden](#raw-score-path). Um die Punktzahlen mit der API herunterzuladen, besuchen Sie das Dokument [Herunterladen von Punktzahlen in Attribution AI](./download-scores.md).
+Attribution AI gibt Zuordnungswerte auf möglichst granularer Ebene aus, sodass Sie die Ergebnisse nach jeder beliebigen Ergebnisspalte ausschneiden und würfeln können. Um diese Werte in der Benutzeroberfläche Ansicht, lesen Sie den Abschnitt [Anzeigen von Rohwertpfaden](#raw-score-path). Um die Punktzahlen mit der API herunterzuladen, besuchen Sie das Dokument [Herunterladen von Punktzahlen in Attribution AI](./download-scores.md).
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ Die folgende Tabelle zeigt die Schema-Felder in der Rohwertbeispiel-Ausgabe:
 | customerProfile (Objekt) | False | Identitätsdetails des Benutzers, der zum Erstellen des Modells verwendet wird. |
 | identity (Objekt) | False | Enthält die Details des Benutzers, der zum Erstellen des Modells verwendet wird, z. B. `id` und `namespace`. |
 | id (Zeichenfolge) | true | Identitäts-ID des Benutzers, z. B. Cookie-ID oder AAID oder MCID usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |
-| namensraum (Zeichenfolge) | true | Identitäts-Namensraum, der zum Erstellen der Pfade und damit des Modells verwendet wird. <br> **Beispiel:** aid |
+| Namensraum (Zeichenfolge) | true | Identitäts-Namensraum, der zum Erstellen der Pfade und damit des Modells verwendet wird. <br> **Beispiel:** aid |
 | touchpointsDetail (Object-Array) | true | Die Liste der Touchpoint-Details, die zur nach Touchpoint-Vorkommen oder Zeitstempel sortierten Konvertierung führen. |
 | touchpointName (Zeichenfolge) | true | Name des Touchpoints, der während der Einrichtung konfiguriert wurde. <br> **Beispiel:** PAID_SEARCH_CLICK |
 | scores (Objekt) | true | Touchpoint-Beitrag zu dieser Konversion als Ergebnis. Weitere Informationen zu den in diesem Objekt erzeugten Ergebnissen finden Sie im Abschnitt [Aggregierte Zuordnungswerte](#aggregated-attribution-scores). |
@@ -197,12 +197,12 @@ Aggregierte Punktzahlen können im CSV-Format von der Plattform-Benutzeroberflä
 | product (Zeichenfolge) | Benutzerdefiniert | true | Die XDM-ID des Produkts. <br> **Beispiel**: CC |
 | product_type (Zeichenfolge) | Benutzerdefiniert | true | Der Anzeigename für das Produkt, der dem Benutzer für diese Ansicht angezeigt wird. <br> **Beispiel**: Gpus, Laptops |
 | geo (Zeichenfolge) | Benutzerdefiniert | true | Der geografische Speicherort, an dem die Konvertierung bereitgestellt wurde (placeContext.geo.countryCode) <br> **Beispiel**: US |
-| ereignis_type (Zeichenfolge) | Benutzerdefiniert | true | Der primäre Ereignistyp für diesen Zeitreihendatensatz <br> **Beispiel**: Gebührenpflichtige Konversion |
+| Ereignis_type (Zeichenfolge) | Benutzerdefiniert | true | Der primäre Ereignistyp für diesen Zeitreihendatensatz <br> **Beispiel**: Gebührenpflichtige Konversion |
 | media_type (Zeichenfolge) | ENUM | False | Beschreibt, ob der Medientyp bezahlt, im Besitz oder verdient ist. <br> **Beispiel**: BEZAHLTE, EIGENTÜMER |
-| kanal (Zeichenfolge) | ENUM | False | Die `channel._type`-Eigenschaft, mit der eine grobe Klassifizierung von Kanälen mit ähnlichen Eigenschaften in [!DNL Consumer Experience Event] XDM bereitgestellt wird. <br> **Beispiel**: SUCHE |
+| Kanal (Zeichenfolge) | ENUM | False | Die `channel._type`-Eigenschaft, mit der eine grobe Klassifizierung von Kanälen mit ähnlichen Eigenschaften in [!DNL Consumer Experience Event] XDM bereitgestellt wird. <br> **Beispiel**: SUCHE |
 | action (Zeichenfolge) | ENUM | False | Die `mediaAction`-Eigenschaft wird verwendet, um eine Art von Erlebnis-Ereignis-Medienaktion bereitzustellen. <br> **Beispiel**: KLICKEN |
-| kampagne_Gruppe (Zeichenfolge) | Benutzerdefiniert | true | Name der Kampagne, in der mehrere Kampagnen gruppiert sind, z. B. &quot;50%_DISCOUNT&quot;. <br> **Beispiel**: KOMMERZIELL |
-| kampagne_name (Zeichenfolge) | Benutzerdefiniert | true | Name der Kampagne, die zur Identifizierung der Marketing-Kampagne verwendet wird, z. B. &#39;50%_DISCOUNT_USA&#39; oder &#39;50%_DISCOUNT_ASIA&#39;. <br> **Beispiel**: Erntedankverkauf |
+| Kampagne_Gruppe (Zeichenfolge) | Benutzerdefiniert | true | Name der Kampagne, in der mehrere Kampagnen gruppiert sind, z. B. &quot;50%_DISCOUNT&quot;. <br> **Beispiel**: KOMMERZIELL |
+| Kampagne_name (Zeichenfolge) | Benutzerdefiniert | true | Name der Kampagne, die zur Identifizierung der Marketing-Kampagne verwendet wird, z. B. &#39;50%_DISCOUNT_USA&#39; oder &#39;50%_DISCOUNT_ASIA&#39;. <br> **Beispiel**: Erntedankverkauf |
 
 **Referenz zur Rohbewertung (aggregiert)**
 
@@ -218,12 +218,12 @@ Die nachstehende Tabelle ordnet die aggregierten Ergebnisse den Rohwerten zu. We
 | product | _tenantID.your_Schema_name.version.product |
 | product_type | _tenantID.your_Schema_name.version.product_type |
 | geo | _tenantID.your_Schema_name.conversion.geo |
-| ereignis_type | eventType |
+| Ereignis_type | eventType |
 | media_type | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaType |
 | channel | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaChannel |
 | Aktion | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.mediaAction |
-| kampagne_group | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
-| kampagne_name | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.campaignName |
+| Kampagne_group | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
+| Kampagne_name | _tenantID.your_Schema_name.touchpointsDetail.element.touchpoint.campaignName |
 
 
 ## Nächste Schritte {#next-steps}
