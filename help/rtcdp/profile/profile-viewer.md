@@ -1,5 +1,5 @@
 ---
-keywords: ansicht Profil rtcdp;rtcdp Profil Ansicht;rtcdp Profil
+keywords: Ansicht Profil rtcdp;rtcdp Profil Ansicht;rtcdp Profil
 title: Anzeigen von Profilen in der Echtzeit-Kundendatenplattform
 seo-title: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
 description: Echtzeit-Kundenprofildaten in der Echtzeit-Kundendatenplattform anzeigen
