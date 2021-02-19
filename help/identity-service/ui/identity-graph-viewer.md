@@ -39,7 +39,7 @@ Die Arbeit mit dem Identitätsdiagramm-Viewer erfordert ein Verständnis der ver
 
 Um den Identitätsdiagramm-Viewer in der Benutzeroberfläche zu verwenden, wählen Sie **[!UICONTROL Identities]** in der linken Navigation und dann die Registerkarte **[!UICONTROL Identitätsdiagramm]**. Klicken Sie im Bildschirm **[!UICONTROL Identity Namensraum]** auf das Symbol **[!UICONTROL Identität auswählen]**, um nach dem Namensraum zu suchen, den Sie verwenden möchten.
 
-![namensraum-Screen](../images/identity-graph-viewer/identity-namespace.png)
+![Namensraum-Screen](../images/identity-graph-viewer/identity-namespace.png)
 
 Das Bedienfeld **[!UICONTROL Identität auswählen]** wird angezeigt. Dieser Bildschirm enthält eine Liste von Namensräumen, die für Ihr Unternehmen zur Verfügung stehen, einschließlich Informationen zu den folgenden Elementen: **[!UICONTROL Anzeigename]**, **[!UICONTROL Identitätssymbol]**, **[!UICONTROL Inhaber]**, **[!UICONTROL Letzte Aktualisierung]** und **[!UICONTROL Beschreibung]**. Sie können einen beliebigen Namensraum verwenden, sofern ein gültiger Identitätswert mit ihm verbunden ist.
 
