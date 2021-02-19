@@ -13,7 +13,7 @@ ht-degree: 78%
 ---
 
 
-# [!DNL Real-time Customer Data Platform] startseite und Dashboards
+# [!DNL Real-time Customer Data Platform] Startseite und Dashboards
 
 Die Startseite der Echtzeit-Kundendatenplattform von , die ein Metriken-Dashboard enthält, wird angezeigt, sobald Sie sich bei der Echtzeit-Kundendatenplattform anmelden.
 
