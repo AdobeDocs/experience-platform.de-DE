@@ -19,7 +19,7 @@ Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quell
 
 [!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem CRM-System eines Drittanbieters. Zu den CRM-Anbietern zählen [!DNL Salesforce].
 
-## ZULASSUNGSLISTE der IP-Adresse
+## Zulassungsliste der IP-Adresse
 
 Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
 
