@@ -3,9 +3,9 @@ keywords: Google-Kundenübereinstimmungen;Google-Kundenübereinstimmung;Google-K
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1491'
 ht-degree: 4%
 
 ---
@@ -129,13 +129,13 @@ Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ih
 
 Geben Sie im Schritt **[!UICONTROL Authentication]** einen [!UICONTROL Name] und einen [!UICONTROL Description] für Ihre Aktivierung ein und füllen Sie Google die [!UICONTROL Konto-ID] aus.
 
-In diesem Schritt können Sie auch einen beliebigen **[!UICONTROL Anwendungsfall für das Marketing]** auswählen, der für dieses Ziel gelten soll. Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations). Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md#core-actions).
+In diesem Schritt können Sie auch eine beliebige **[!UICONTROL Marketingaktion]** auswählen, die auf dieses Ziel angewendet werden soll. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Echtzeit-CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md#core-actions).
 
 Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die obigen Felder ausgefüllt haben.
 
 >[!IMPORTANT]
 >
-> * Der Anwendungsfall **[!UICONTROL Mit PII]** kombinieren ist standardmäßig für das [!DNL Google Customer Match]-Ziel ausgewählt und kann nicht entfernt werden.
+> * Die Marketingaktion **[!UICONTROL Mit PII]** kombinieren ist standardmäßig für das [!DNL Google Customer Match]-Ziel ausgewählt und kann nicht entfernt werden.
 > * Für [!DNL Google Customer Match]-Ziele. **[!UICONTROL Die Konto-]** ID ist Ihre Kunden-Client-ID bei Google. Das Format der ID ist xxx-xxx-xxxx.
 
 
