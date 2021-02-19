@@ -141,7 +141,7 @@ Im Abschnitt **[!UICONTROL Modelle]** können Sie maschinelles Lernen und künst
 
 Im Abschnitt **[!UICONTROL Dienste]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Bewertungen verwalten oder die Intelligent Services der Adobe nutzen, eine Reihe von AI-Diensten, die eine personalisierte Kundenerfahrung in Echtzeit bereitstellen. Weitere Informationen zum Abschnitt &quot;Dienste&quot;finden Sie unter [Veröffentlichen eines Modells als Service-Lernprogramm](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
-### [!UICONTROL Data management]
+### [!UICONTROL Daten-Management]
 
 Im Abschnitt **[!UICONTROL Schema]** können Sie Erlebnisdatenmodell-Schema (XDM) erstellen und verwalten. Weitere Informationen zu Schemas finden Sie im Tutorial [Erstellen eines Schemas](../xdm/tutorials/create-schema-ui.md). Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
 
