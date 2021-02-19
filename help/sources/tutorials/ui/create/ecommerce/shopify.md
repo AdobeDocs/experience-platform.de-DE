@@ -72,4 +72,4 @@ Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Shopify]-Konto, mit
 
 ## Nächste Schritte
 
-Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Shopify]-Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und [einen Datendurchlauf konfigurieren, um eCommerce-Daten in [!DNL Platform]](../../dataflow/ecommerce.md) zu übertragen.
+Mit diesem Tutorial haben Sie eine Verbindung zu Ihrem [!DNL Shopify]-Konto hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und [einen Datendurchlauf konfigurieren, um eCommerce-Daten in [!DNL Platform]](../../dataflow/ecommerce.md) zu laden.
