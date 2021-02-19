@@ -82,7 +82,7 @@ Ein Unternehmen kann eine Standardrichtlinie für die Zusammenführung von Profi
 
 Jedes Unternehmen kann mehrere Zusammenführungsrichtlinien für eine einzelne XDM-Schema-Klasse erstellen. Es kann jedoch nur eine Standardzusammenführungsrichtlinie für jede Klasse deklariert werden. Ihre Organisation könnte beispielsweise über eine Standardrichtlinie zum Zusammenführen für die [!DNL XDM Individual Profile]-Klasse und eine andere Standardrichtlinie zum Zusammenführen für eine benutzerdefinierte Produktinventarklasse verfügen.
 
-Wenn Sie eine neue Richtlinie für die Zusammenführung erstellen und diese als Standard festlegen, wird die vorherige Standardrichtlinie für die Zusammenführung automatisch vom System aktualisiert, sodass sie nicht mehr die Standardrichtlinie ist.
+Wenn Sie eine neue Richtlinie für die Zusammenführung erstellen und diese als Standard festlegen, wird die vorherige Standardrichtlinie für die Zusammenführung automatisch vom System aktualisiert, sodass sie nicht mehr standardmäßig verwendet wird.
 
 >[!WARNING]
 >
@@ -183,7 +183,7 @@ ExperienceEvent-Datensätze können nicht manuell angeordnet werden. Stattdessen
 
 ### [!UICONTROL Review] {#review}
 
-Der letzte Schritt im Workflow besteht darin, Ihre Zusammenführungsrichtlinie zu überprüfen. Der Bildschirm **[!UICONTROL Überprüfen]** zeigt den Namen Ihrer neuen Zusammenführungsrichtlinie, die Schema-Klasse, auf der sie basiert, die [!UICONTROL ID-Suche]-Option sowie die Zusammenführungsmethode und die in der Zusammenführungsrichtlinie enthaltenen Datensätze an. Um alle enthaltenen Profil- oder ExperienceEvent-Datensätze Ansicht, wählen Sie die Anzahl der Datensätze aus, um die Dropdown-Liste zu erweitern.
+Der letzte Schritt im Arbeitsablauf besteht darin, Ihre Zusammenführungsrichtlinie zu überprüfen. Der Bildschirm **[!UICONTROL Überprüfen]** zeigt den Namen Ihrer neuen Zusammenführungsrichtlinie, die Schema-Klasse, auf der sie basiert, die [!UICONTROL ID-Suche]-Option sowie die Zusammenführungsmethode und die in der Zusammenführungsrichtlinie enthaltenen Datensätze an. Um alle enthaltenen Profil- oder ExperienceEvent-Datensätze Ansicht, wählen Sie die Anzahl der Datensätze aus, um die Dropdown-Liste zu erweitern.
 
 Bitte überprüfen Sie Ihre Merge-Richtlinie sorgfältig, bevor Sie **[!UICONTROL Finish]** auswählen, um den Erstellungsarbeitsablauf abzuschließen.
 
