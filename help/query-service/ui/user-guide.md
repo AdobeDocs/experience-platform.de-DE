@@ -117,7 +117,7 @@ Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UIC
 
 ![Bild](../images/queries/query-editor-overview/query-results.png)
 
-## Abfragen mit einem Tutorial zum Thema [!DNL Query Service] ausführen
+## Abfragen mit einem Tutorial zum Thema &quot;[!DNL Query Service]&quot;ausführen
 
 Das folgende Video zeigt, wie Abfragen auf der Adobe Experience Platform-Oberfläche und in einem PSQL-Client ausgeführt werden. Darüber hinaus werden die Verwendung einzelner Eigenschaften in einem XDM-Objekt, die Verwendung von Adobe-definierten Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS) demonstriert.
 
