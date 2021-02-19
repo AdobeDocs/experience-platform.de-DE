@@ -122,7 +122,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Erstellen eines ML-Dienstes aus einer vorhandenen ML-Instanz
 
-Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Dienstes mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Tutorial werden die spezifischen Fälle behandelt, in denen:
+Je nach Anwendungsfall und Anforderungen ist das Erstellen eines ML-Diensts mit einer ML-Instanz hinsichtlich der Planung von Schulungs- und BewertungsexperimentLAUFEN flexibel. In diesem Tutorial werden die spezifischen Fälle behandelt, in denen:
 
 - [Sie keine geplante Schulung benötigen, sondern eine geplante Auswertung.](#ml-service-with-scheduled-experiment-for-scoring)
 - [Sie geplante Experimentabläufe sowohl für Schulungen als auch für Auswertungen benötigen.](#ml-service-with-scheduled-experiments-for-training-and-scoring)
