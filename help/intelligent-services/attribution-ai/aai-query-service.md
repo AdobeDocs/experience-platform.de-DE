@@ -35,11 +35,11 @@ Wählen Sie Ihren Ausgabedatensatz aus. Die Seite zur Aktivität des Datensatzes
 
 Wählen Sie auf der Seite &quot;Aktivität des Datensatzes&quot;in der rechten oberen Ecke **[!UICONTROL Vorschau-Datensatz]** aus, um Ihre Daten Vorschau und sicherzustellen, dass sie erwartungsgemäß aufgenommen wurden.
 
-![vorschau DataSet](./images/aai-query/preview_dataset.JPG)
+![Vorschau DataSet](./images/aai-query/preview_dataset.JPG)
 
 Wählen Sie nach der Vorschau Ihrer Daten das Schema in der rechten Leiste aus. Es wird ein Popup mit dem Namen und der Beschreibung des Schemas angezeigt. Wählen Sie den Hyperlink &quot;Schema-Name&quot;, um zum bewerteten Schema umzuleiten.
 
-![schema auswählen](./images/aai-query/select_schema.png)
+![Schema auswählen](./images/aai-query/select_schema.png)
 
 Mithilfe des Schemas &quot;Bewertung&quot;können Sie einen Wert auswählen oder suchen. Nach der Auswahl wird die Seitenleiste **[!UICONTROL Feldeigenschaften]** geöffnet, damit Sie den Pfad kopieren können, der zum Erstellen von Abfragen verwendet werden soll.
 
@@ -53,7 +53,7 @@ Um von der Plattformbenutzeroberfläche aus auf den Abfrage-Dienst zuzugreifen, 
 
 Wählen Sie dann **[!UICONTROL Abfrage]** oben rechts aus. Der Abfragen-Editor wird geladen. Mit dem Abfragen-Editor können Sie mit der Erstellung von Abfragen mit Ihren Bewertungsdaten beginnen.
 
-![abfrage-Editor](./images/aai-query/query_example.png)
+![Abfrage-Editor](./images/aai-query/query_example.png)
 
 Weitere Informationen zum Abfragen-Editor finden Sie im Benutzerhandbuch [Abfrage-Editor](../../query-service/ui/user-guide.md).
 
