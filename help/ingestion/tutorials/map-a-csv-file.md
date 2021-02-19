@@ -75,7 +75,7 @@ Manchmal ist mehr als eine Empfehlung für das Quell-Schema verfügbar. In diese
 
 ![](../images/tutorials/map-a-csv-file/multiple-recommendations.png)
 
-Alternativ können Sie Ihr Quellcode-Schema manuell Ihrem Zielgruppe-Schema zuordnen. Bewegen Sie den Mauszeiger über das Quell-Schema, das Sie zuordnen möchten, und wählen Sie dann das Pluszeichen aus.
+Alternativ können Sie Ihr Quellcode-Schema manuell Ihrem Zielgruppe-Schema zuordnen. Bewegen Sie den Mauszeiger über das Quellelement, das Sie zuordnen möchten, und wählen Sie dann das Pluszeichen aus.
 
 ![](../images/tutorials/map-a-csv-file/mapping-with-suggestions-and-buttons.png)
 
