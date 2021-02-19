@@ -5,9 +5,9 @@ seo-title: Ziele – Übersicht
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Cross-Kanal-Marketing-Kampagnen, E-Mails, gezielte Werbung und mehr aktivieren können.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Destinations in Adobe Experience Platform verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '489'
 ht-degree: 27%
 
 ---
@@ -53,12 +53,12 @@ Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandb
 
 Datenverwaltung wird für Plattformziele durch folgende Maßnahmen erzwungen:
 
-* *Marketing-* Anwendungsfälle, die Sie im Arbeitsablauf zum Erstellen von Zielen auswählen können;
-* *Datenverwendungsrichtlinien,* die die Aktivierung von Daten mit bestimmten Gebrauchsbeschriftungen auf Ziele mit bestimmten Anwendungsfällen beschränken.
+* *Marketingaktionen,* die Sie im Arbeitsablauf zum Erstellen von Zielen auswählen können;
+* *Datenverwendungsrichtlinien,* die die Aktivierung von Daten mit bestimmten Gebrauchsbeschriftungen auf Ziele mit bestimmten Marketingaktionen beschränken.
 
-Weitere Informationen zu [Anwendungsfällen für das Marketing](../data-governance/policies/overview.md) und [Auflösen von Verstößen gegen die Datenrichtlinie](../data-governance/enforcement/auto-enforcement.md) finden Sie in der Plattformdokumentation unter [!DNL Data Governance].
+Weitere Informationen zu [Marketingaktionen](../data-governance/policies/overview.md) und [Auflösen von Verstößen gegen die Datenrichtlinie](../data-governance/enforcement/auto-enforcement.md) finden Sie in der Plattformdokumentation unter [!DNL Data Governance].
 
-Weitere Informationen zur Auswahl von Marketing-Anwendungsfällen im Arbeitsablauf zum Erstellen von Zielen finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Plattform:
+Weitere Informationen zur Auswahl von Marketingaktionen im Arbeitsablauf zum Erstellen von Zielen finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Plattform:
 
 * [Werbeziele - Google Ad Manager  ](./catalog/advertising/google-ad-manager.md)
 * [Werbeziele - Google-Anzeigen](./catalog/advertising/google-ads-destination.md)
