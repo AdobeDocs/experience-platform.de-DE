@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: ef0f7e20a55804c013756e261818c2ee2df4d103
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2140'
 ht-degree: 15%
 
 ---
@@ -38,7 +38,7 @@ Wählen Sie den Namen des Ziels aus, um zum Arbeitsablauf für die Aktivierung z
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die aktuell aktivierten Segmente sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die derzeit aktivierten Segmente für das Ziel sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
 
 Nachdem Sie ein Ziel ausgewählt haben, wählen Sie **[!UICONTROL Aktivieren]**.
 
@@ -234,7 +234,7 @@ Es wird empfohlen, dass eines der Attribute eine [eindeutige Kennung](../../dest
 
 >
 > 
-Wenn das Feld `person.name.firstName` beispielsweise bestimmte Datenverwendungsbeschriftungen enthält, die mit dem Marketing-Verwendungsfall des Ziels kollidieren, wird Ihnen im Review-Schritt eine Verletzung der Datenverwendungsrichtlinie angezeigt. Weitere Informationen finden Sie unter [Datenverwaltung in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+Wenn das Feld `person.name.firstName` beispielsweise bestimmte Datenverwendungsbeschriftungen enthält, die mit der Marketingaktion des Ziels kollidieren, wird Ihnen im Überprüfungsschritt eine Verletzung der Datenverwendungsrichtlinie angezeigt. Weitere Informationen finden Sie unter [Datenverwaltung in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **** ReviewStep  {#review}
 
