@@ -15,7 +15,7 @@ ht-degree: 14%
 
 # [!DNL Policy Service] API-Handbuch
 
-Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen. Es spielt eine Schlüsselrolle innerhalb von [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenlineage, Datenverwendungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Verwendung von Daten für Marketingaktionen.
+Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen. Es spielt eine Schlüsselrolle innerhalb von [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenbindung, Datenverwendungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Verwendung von Daten für Marketingaktionen.
 
 Die [!DNL Policy Service]-API bietet mehrere Endpunkte, mit denen Sie Datenverwendungsbeschriftungen und -richtlinien programmgesteuert verwalten und Marketingaktionen für Richtlinienverletzungen auswerten können. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern.[](./getting-started.md)
 
