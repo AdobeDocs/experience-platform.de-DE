@@ -91,7 +91,7 @@ Die folgenden Unterabschnitte enthalten Details zu Zusatzklauseln, die Sie in Ih
 
 ### SNAPSHOT-Klausel
 
-Diese Klausel kann verwendet werden, um Daten auf einer Tabelle basierend auf Snapshot-IDs inkrementell zu lesen. Eine Schnappschuss-ID ist eine Checkpoint-Markierung, die durch eine lange Nummer dargestellt wird, die jedes Mal, wenn Daten darauf geschrieben werden, auf eine Daten-Seetabelle angewendet wird. Die `SNAPSHOT`-Klausel hängt sich an die Tabellenbeziehung an, die sie neben verwendet wird.
+Diese Klausel kann verwendet werden, um Daten auf einer Tabelle basierend auf Snapshot-IDs inkrementell zu lesen. Eine Schnappschuss-ID ist eine Checkpoint-Markierung, die durch eine lange Nummer dargestellt wird, die bei jedem Schreiben der Daten auf eine Daten-Seetabelle angewendet wird. Die `SNAPSHOT`-Klausel hängt sich an die Tabellenbeziehung an, die sie neben verwendet wird.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
