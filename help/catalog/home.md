@@ -15,7 +15,7 @@ ht-degree: 43%
 
 # [!DNL Catalog Service]Übersicht
 
-[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. Während alle Daten, die in [!DNL Experience Platform] aufgenommen werden, im [!DNL Data Lake] als Dateien und Ordner gespeichert werden, enthält [!DNL Catalog] die Metadaten und Beschreibungen dieser Dateien und Ordner zu Zwecken der Suche und Überwachung.
+[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. Während alle Daten, die in [!DNL Experience Platform] aufgenommen werden, im [!DNL Data Lake] als Dateien und Ordner gespeichert werden, enthält [!DNL Catalog] die Metadaten und Beschreibungen dieser Dateien und Ordner für die Suche und Überwachung.
 
 Einfach ausgedrückt: [!DNL Catalog] fungiert als Metadatenspeicher oder &quot;Katalog&quot;, in dem Sie Informationen zu Ihren Daten in [!DNL Experience Platform] finden können. Sie können [!DNL Catalog] verwenden, um die folgenden Fragen zu beantworten:
 
