@@ -531,7 +531,7 @@ Stapelmeldungen, die eine Streaming-Validierung an [!DNL Platform] übergeben, w
 
 ## Nächste Schritte
 
-Nachdem Sie jetzt wissen, wie Sie mehrere Nachrichten in einer einzigen Anforderung senden und überprüfen können, wann die Nachrichten erfolgreich in den Dataset der Zielgruppe aufgenommen wurden, können Sie Beginn-Streaming Ihrer eigenen Daten an [!DNL Platform] durchführen. Eine Übersicht über die Abfrage und den Abruf von erfassten Daten von [!DNL Platform] finden Sie im Handbuch [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md).
+Nachdem Sie nun wissen, wie Sie mehrere Nachrichten in einer einzigen Anforderung senden und überprüfen können, wann die Nachrichten erfolgreich in den Dataset der Zielgruppe aufgenommen wurden, können Sie Beginn-Streaming Ihrer eigenen Daten an [!DNL Platform] durchführen. Eine Übersicht über die Abfrage und den Abruf von erfassten Daten von [!DNL Platform] finden Sie im Handbuch [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md).
 
 ## Anhang
 
