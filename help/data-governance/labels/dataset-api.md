@@ -170,7 +170,7 @@ Die folgende Anforderung entfernt die Beschriftungen für den Datensatz, der im 
 
 >[!IMPORTANT]
 >
->Eine gültige `If-Match`-Kopfzeile muss angegeben werden, wenn DELETE-Anforderungen an den `/datasets/{DATASET_ID}/labels`-Endpunkt gesendet werden. Weitere Informationen zur Verwendung der erforderlichen Kopfzeile finden Sie im Abschnitt [Anhang](#if-match).
+>Eine gültige `If-Match`-Kopfzeile muss bereitgestellt werden, wenn DELETE-Anforderungen an den `/datasets/{DATASET_ID}/labels`-Endpunkt gesendet werden. Weitere Informationen zur Verwendung der erforderlichen Kopfzeile finden Sie im Abschnitt [Anhang](#if-match).
 
 ```shell
 curl -X DELETE \
