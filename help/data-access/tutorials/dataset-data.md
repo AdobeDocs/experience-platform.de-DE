@@ -50,7 +50,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Sequenzdiagramm
 
-Dieses Lernprogramm folgt den Schritten, die im folgenden Sequenzdiagramm beschrieben werden, und hebt die Kernfunktionalität der [!DNL Data Access] API hervor.</br>
+Dieses Lernprogramm folgt den Schritten, die im folgenden Sequenzdiagramm beschrieben werden, und hebt die Kernfunktionalität der [!DNL Data Access]-API hervor.</br>
 ![](../images/sequence_diagram.png)
 
 Mit der API [!DNL Catalog] können Sie Informationen zu Stapeln und Dateien abrufen. Die [!DNL Data Access]-API ermöglicht Ihnen den Zugriff auf diese Dateien und den Download über HTTP als vollständige oder teilweise Downloads, je nach Größe der Datei.
