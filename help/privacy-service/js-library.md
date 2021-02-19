@@ -202,7 +202,7 @@ Im Folgenden finden Sie eine Liste der zulässigen Konfigurationsparameter für 
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `aamUUIDCookieName` | Name des Erstanbieter-Cookies mit der Unique User-ID, die von Adobe Audience Manager zurückgegeben wird. |
+| `aamUUIDCookieName` | Name des Erstanbieter-Cookies mit der eindeutigen Benutzer-ID, die von Adobe Audience Manager zurückgegeben wird. |
 
 **Adobe ID Service (ECID)**
 
