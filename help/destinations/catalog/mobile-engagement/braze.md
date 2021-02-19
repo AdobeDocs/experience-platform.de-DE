@@ -3,9 +3,9 @@ keywords: mobil; einblenden; Messaging;
 title: Verbindung bremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '925'
 ht-degree: 5%
 
 ---
@@ -64,7 +64,7 @@ Klicken Sie auf **[!UICONTROL Weiter]**. Geben Sie im Schritt [!UICONTROL Authen
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, unter dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, mit der Sie dieses Ziel in Zukunft identifizieren können.
 * **[!UICONTROL Endpunktinstanz]**: fragen Sie Ihren  [!DNL Braze] Kundenbetreuer, welche Endpunktinstanz Sie verwenden sollten.
-* **[!UICONTROL Anwendungsfall]** für das Marketing: Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen Anwendungsfällen für Marketingzwecke finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+* **[!UICONTROL Marketingaktion]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Authentifizierungsschritt](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
@@ -80,7 +80,7 @@ Um Ihre Audiencen korrekt von [!DNL Adobe Experience Platform] an das [!DNL Braz
 
 Die Zuordnung besteht darin, eine Verknüpfung zwischen den Feldern Ihres [!DNL Experience Data Model]-Schemas (XDM) in Ihrem [!DNL Platform]-Konto und den entsprechenden Entsprechungen aus dem Zielort der Zielgruppe zu erstellen.
 
-Gehen Sie wie folgt vor, um Ihre XDM-Felder den Bestimmungsfeldern [!DNL Braze] richtig zuzuordnen:
+Gehen Sie wie folgt vor, um die XDM-Felder den Bestimmungsfeldern [!DNL Braze] korrekt zuzuordnen:
 
 Klicken Sie im Schritt [!UICONTROL Zuordnung] auf **[!UICONTROL Hinzufügen neue Zuordnung]**.
 
