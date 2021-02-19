@@ -3,9 +3,9 @@ keywords: Luftschiffsattribute;Luftschiffsziel
 title: Verbindung zu Luftverkehrsattributen
 description: Übermitteln Sie die Daten zur Audience der Adobe nahtlos an Airship als Audiencen-Attribute für das Targeting innerhalb von Airship.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '1204'
+source-wordcount: '1201'
 ht-degree: 11%
 
 ---
@@ -89,7 +89,7 @@ Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Platform mit
 
 Geben Sie im Schritt **[!UICONTROL Authentication]** einen **[!UICONTROL Name]** und einen **[!UICONTROL Description]** für die Aktivierung ein.
 
-Außerdem können Sie in diesem Schritt entweder das US- oder das EU-Rechenzentrum auswählen, je nachdem, welches [!DNL Airship]-Rechenzentrum für dieses Ziel gilt. Wählen Sie schließlich einen oder mehrere Anwendungsfälle für das Marketing aus, für die Daten an das Ziel exportiert werden. Sie können aus den von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder eigene Anwendungsfälle erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+Außerdem können Sie in diesem Schritt entweder das US- oder das EU-Rechenzentrum auswählen, je nachdem, welches [!DNL Airship]-Rechenzentrum für dieses Ziel gilt. Wählen Sie schließlich eine oder mehrere **[!UICONTROL Marketingaktionen]** aus, für die Daten in das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eigene erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die oben stehenden Felder ausgefüllt haben.
 
