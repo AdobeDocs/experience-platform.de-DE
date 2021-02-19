@@ -14,7 +14,7 @@ ht-degree: 4%
 
 # Vorschau-Musterstatus-Endpunkt (Profil-Vorschau)
 
-Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da für Echtzeit-Kundendaten aktivierte Daten in [!DNL Platform] eingehen, werden sie im Profil-Datenspeicher gespeichert.
+Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in [!DNL Platform] eingehen, werden sie im Profil-Datenspeicher gespeichert.
 
 Wenn die Erfassung von Datensätzen im Profil Store die Gesamtanzahl der Profil um mehr als 5 % erhöht oder verringert, wird ein Stichprobenauftrag ausgelöst, um die Anzahl zu aktualisieren. Wie das Beispiel ausgelöst wird, hängt von der Art der verwendeten Aufnahme ab:
 
