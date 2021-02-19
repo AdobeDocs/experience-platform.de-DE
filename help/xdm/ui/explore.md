@@ -26,7 +26,7 @@ Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigation
 
 ![](../images/ui/explore/tabs.png)
 
-Auf der Registerkarte [!UICONTROL Durchsuchen] können Sie das Filtersymbol (![Filtersymbol Bild](../images/ui/explore/icon.png)) verwenden, um Steuerelemente in der linken Leiste anzuzeigen, um die aufgelisteten Ergebnisse einzuschränken.
+Auf der Registerkarte [!UICONTROL Durchsuchen] können Sie das Filtersymbol (![Filtersymbol](../images/ui/explore/icon.png)) verwenden, um Steuerelemente in der linken Leiste anzuzeigen, um die aufgelisteten Ergebnisse einzuschränken.
 
 Um beispielsweise die Liste so zu filtern, dass nur die von der Adobe bereitgestellten Standarddatentypen angezeigt werden, wählen Sie **[!UICONTROL Datentyp]** bzw. **[!UICONTROL Adobe]** unter den Abschnitten **[!UICONTROL Typ]** bzw. **[!UICONTROL Inhaber]** aus.
 
