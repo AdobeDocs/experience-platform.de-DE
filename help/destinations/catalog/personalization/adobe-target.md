@@ -1,5 +1,5 @@
 ---
-keywords: erweiterung des zieldatensatzes;Zielgruppe
+keywords: Erweiterung des Zieldatensatzes;Zielgruppe
 title: Adobe Target-Erweiterung
 description: Die Adobe Target-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
