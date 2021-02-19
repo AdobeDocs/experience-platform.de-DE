@@ -148,7 +148,7 @@ Klicken Sie auf **[!UICONTROL Vorschau von Datensatz anzeigen]**, um einen Dialo
 
 Nachdem Sie nun einen Datensatz erstellt und erfolgreich Daten in [!DNL Experience Platform] eingefügt haben, können Sie diese Schritte wiederholen, um einen neuen Datensatz zu erstellen oder weitere Daten in den vorhandenen Datensatz zu erfassen.
 
-Um mehr über die Stapelverarbeitung zu erfahren, lesen Sie bitte die [Übersicht über die Stapeleinbettung](../batch-ingestion/overview.md) und ergänzen Sie Ihre Lernerfahrung durch das folgende Video.
+Um mehr über die Stapelverarbeitung zu erfahren, lesen Sie bitte die [Übersicht über die Stapeleinbettung](../batch-ingestion/overview.md) und ergänzen Sie Ihre Lernerfahrung durch das unten stehende Video.
 
 >[!WARNING]
 >
