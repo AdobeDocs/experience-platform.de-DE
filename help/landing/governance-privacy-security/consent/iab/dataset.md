@@ -155,7 +155,7 @@ Damit Platform die von ihr empfangenen Daten für bestimmte Profil der Zustimmun
 
 >[!NOTE]
 >
->Das in diesem Schema dargestellte Beispiel verwendet das zugehörige `identityMap`-Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie einen indirekten Bezeichner wie eine Cookie-ID verwenden und nicht ein direkt identifizierbares Feld, das nicht in interessensbasierter Werbung wie einer E-Mail-Adresse verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
+>Das in diesem Schema dargestellte Beispiel verwendet das zugehörige `identityMap`-Feld als primäre Identität. Wenn Sie ein anderes Feld als primäre Identität festlegen möchten, stellen Sie sicher, dass Sie einen indirekten Bezeichner wie eine Cookie-ID verwenden und nicht ein direkt identifizierbares Feld, das nicht für interessensbasierte Werbung wie eine E-Mail-Adresse verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
 >
 >Schritte zum Festlegen eines primären Identitätsfelds für ein Schema finden Sie im Tutorial [Schema-Erstellung](../../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
@@ -171,7 +171,7 @@ Wählen Sie **[!UICONTROL Speichern]**, um Ihre Änderungen zu bestätigen.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-save.png)
 
-### Erstellen Sie ein zeitreihenbasiertes Schema für die Zustimmung {#event-schema}
+### Erstellen eines zeitreihenbasierten Schemas für die Zustimmung {#event-schema}
 
 Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** **[!UICONTROL Schema erstellen]** und wählen Sie dann **[!UICONTROL XDM ExperienceEvent]** aus der Dropdownliste.
 
