@@ -35,7 +35,7 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 | `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
 | `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Durch Hinzufügen eines `-` vor dem Parameterwert (`orderby=-title`) werden Elemente in absteigender Reihenfolge (Z-A) nach Titel sortiert. |
 
-### Filter {#filtering}
+### Filtern {#filtering}
 
 Sie können die Ergebnisse mit dem Parameter `property` filtern, mit dem ein bestimmter Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen angewendet wird. Zu den unterstützten Operatoren gehören:
 
