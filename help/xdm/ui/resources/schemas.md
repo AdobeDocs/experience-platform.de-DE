@@ -33,7 +33,7 @@ Wählen Sie im Arbeitsbereich [!UICONTROL Schemas] **[!UICONTROL Schema erstelle
 
 ![](../../images/ui/resources/schemas/create-schema.png)
 
-Wenn Sie eine Klasse auswählen, wird [!DNL Schema Editor] angezeigt und die Basisstruktur des Schemas (von der Klasse bereitgestellt) wird auf der Arbeitsfläche angezeigt. Von hier aus können Sie mit der rechten Leiste einen **[!UICONTROL Anzeigenamen]** und **[!UICONTROL Beschreibung]** für das Schema hinzufügen.
+Wenn Sie eine Klasse auswählen, wird [!DNL Schema Editor] angezeigt und die (von der Klasse bereitgestellte) Basisstruktur des Schemas wird auf der Arbeitsfläche angezeigt. Von hier aus können Sie mit der rechten Leiste einen **[!UICONTROL Anzeigenamen]** und **[!UICONTROL Beschreibung]** für das Schema hinzufügen.
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
@@ -139,7 +139,7 @@ Sie können die Klasse eines Schemas jederzeit während des anfänglichen Kompos
 
 >[!WARNING]
 >
->Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie also die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
+>Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
 
 Um eine Klasse neu zuzuweisen, wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Zuweisen]** aus.
 
