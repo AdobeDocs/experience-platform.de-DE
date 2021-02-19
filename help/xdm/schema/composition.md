@@ -153,7 +153,7 @@ Mixins definieren, mit welcher/n Klasse(n) sie kompatibel sind, basierend auf de
 
 [!DNL Experience Platform] enthält viele standardmäßige Mixins für Adoben und ermöglicht es Anbietern, Mixins für ihre Anwender zu definieren, sowie einzelnen Anwendern, Mixins für ihre eigenen spezifischen Konzepte zu definieren.
 
-Wenn Sie beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONTROL Hausadresse]&quot;für Ihr Schema &quot;[!UICONTROL Treuemitglieder]&quot;erfassen möchten, können Sie Standardmixins verwenden, die diese allgemeinen Begriffe definieren. Konzepte, die für seltener auftretende Anwendungsfälle spezifisch sind (z. B. &quot;[!UICONTROL Kundentreue-Programm-Ebene]&quot;), verfügen jedoch häufig nicht über eine vordefinierte Mischung. In diesem Fall müssen Sie einen eigenen Mixin definieren, um diese Informationen zu erfassen.
+Um beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONTROL Hausadresse]&quot;für Ihr Schema &quot;[!UICONTROL Treuemitglieder]&quot;zu erfassen, können Sie Standardmixins verwenden, die diese allgemeinen Begriffe definieren. Konzepte, die für seltener auftretende Anwendungsfälle spezifisch sind (z. B. &quot;[!UICONTROL Kundentreue-Programm-Ebene]&quot;), verfügen jedoch häufig nicht über eine vordefinierte Mischung. In diesem Fall müssen Sie einen eigenen Mixin definieren, um diese Informationen zu erfassen.
 
 Denken Sie daran, dass Schemas aus „Null oder mehr“ Mixins bestehen, was bedeutet, dass Sie ein gültiges Schema zusammenstellen können, ohne überhaupt Mixins zu verwenden.
 
