@@ -40,8 +40,8 @@ Für dieses Lernprogramm ist eine gepackte Rezept-Datei in Form einer Docker-URL
 Für dieses Lernprogramm müssen Sie das Tutorial [Authentifizierung bei Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) abgeschlossen haben, um erfolgreich Aufrufe an [!DNL Platform]-APIs durchführen zu können. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.
-- `{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.
-- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.
+- `{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 ## Erstellen einer Engine
 
