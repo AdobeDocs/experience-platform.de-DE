@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Data Science Workspace]. Fragen und Fehlerbehebung zu [!DNL Platform]-APIs im Allgemeinen finden Sie im Handbuch [Adobe Experience Platform API zur Fehlerbehebung](../landing/troubleshooting.md).
 
-## [!DNL JupyterLab] umgebung wird nicht geladen in  [!DNL Google Chrome]
+## [!DNL JupyterLab] Umgebung wird nicht geladen in  [!DNL Google Chrome]
 
 >[!IMPORTANT]
 >
