@@ -97,7 +97,7 @@ Detaillierte Anweisungen zum Erstellen eines Vorschau-Auftrags finden Sie im Han
 
 Schätzungs- und Vorschauen-Vorgänge werden asynchron ausgeführt, da unterschiedliche Abfragen unterschiedliche Zeiträume benötigen können. Nachdem eine Abfrage initiiert wurde, können Sie mit API-Aufrufen den aktuellen Status der Schätzung oder Vorschau abrufen (GET), während sie fortschreitet.
 
-Mit der API [!DNL Segmentation Service] können Sie den aktuellen Status eines Vorschau-Auftrags anhand seiner ID nachschlagen. Wenn der Status &quot;RESULT_READY&quot;lautet, können Sie die Ansichten durchführen. Um den aktuellen Status eines Vorschau-Auftrags nachzuschlagen, lesen Sie bitte den Abschnitt [Abrufen eines Vorschau-Auftrags](../api/previews-and-estimates.md#get-preview) im Handbuch Vorschauen- und Schätzung-Endpunkte. Um den aktuellen Status eines Schätzauftrags nachzuschlagen, lesen Sie bitte den Abschnitt [Abrufen eines Schätzauftrags](../api/previews-and-estimates.md#get-estimate) im Handbuch Vorschauen und geschätzte Endpunkte.
+Mit der API [!DNL Segmentation Service] können Sie den aktuellen Status eines Vorschau-Auftrags anhand seiner ID nachschlagen. Wenn der Status &quot;RESULT_READY&quot;lautet, können Sie die Ansicht der Ergebnisse durchführen. Um den aktuellen Status eines Vorschau-Auftrags nachzuschlagen, lesen Sie bitte den Abschnitt [Abrufen eines Vorschau-Auftrags](../api/previews-and-estimates.md#get-preview) im Handbuch Vorschauen- und Schätzung-Endpunkte. Um den aktuellen Status eines Schätzauftrags nachzuschlagen, lesen Sie bitte den Abschnitt [Abrufen eines Schätzauftrags](../api/previews-and-estimates.md#get-estimate) im Handbuch Vorschauen und geschätzte Endpunkte.
 
 
 ## Nächste Schritte
