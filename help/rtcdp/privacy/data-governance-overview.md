@@ -5,9 +5,9 @@ seo-title: Data Governance in der Echtzeit-Kundendatenplattform
 description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 seo-description: 'Mit Data Governance können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. '
 translation-type: tm+mt
-source-git-commit: e680191d495e4c33baa8242d40a15b9124eec8cd
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '701'
 ht-degree: 44%
 
 ---
@@ -31,17 +31,17 @@ Die Echtzeit-CDP basiert auf Adobe Experience Platform, und deshalb werden die m
 
 Genauere Informationen zum Arbeiten mit Datennutzungsbezeichnungen finden Sie im [Benutzerhandbuch für Datennutzungsbezeichnungen](../../data-governance/labels/overview.md) für Adobe Experience Platform.
 
-## Anwendungsfälle für das Marketing für Ziele {#destinations} konfigurieren
+## Konfigurieren von Marketingaktionen für Ziele {#destinations}
 
-Sie können Datenverwendungsbeschränkungen für ein Ziel festlegen, indem Sie Anwendungsfälle für das Marketing (auch als Marketingaktionen bezeichnet) für dieses Ziel definieren. Ein Anwendungsfall für das Marketing für ein Ziel gibt den Zweck der Daten an, die an dieses Ziel exportiert werden.
+Sie können Datenverwendungsbeschränkungen für ein Ziel festlegen, indem Sie Marketingaktionen (auch als Marketing-Anwendungsfälle bezeichnet) für dieses Ziel definieren. Eine Marketingaktion für ein Ziel gibt den Zweck der Daten an, die an dieses Ziel exportiert werden.
 
 >[!NOTE]
 >
 >Weitere Informationen zu Marketingaktionen und deren Verwendung in Datenverwendungsrichtlinien finden Sie in der [Übersicht über Datenverwendungsrichtlinien](../../data-governance/policies/overview.md) in der [!DNL Experience Platform]-Dokumentation.
 
-Durch die Definition von Anwendungsfällen für das Marketing an Zielen können Sie sicherstellen, dass alle an diese Ziele gesendeten Profil oder Segmente mit den Datenverwendungsrichtlinien übereinstimmen. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, geeignete Anwendungsfälle für das Marketing hinzufügen.
+Durch das Definieren von Marketingaktionen für Ziele können Sie sicherstellen, dass alle an diese Ziele gesendeten Profil oder Segmente mit den Datenverwendungsrichtlinien übereinstimmen. Daher sollten Sie Ihren Zielen entsprechend den Anforderungen Ihres Unternehmens, Richtlinienbeschränkungen für die Aktivierung durchzusetzen, entsprechende Marketingaktionen hinzufügen.
 
-Anwendungsfälle für Marketing können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Anwendungsfällen für das Marketing an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der Dokumentation zu [Zielen](../destinations/overview.md).
+Marketingaktionen können nur beim erstmaligen Einrichten eines Ziels ausgewählt werden. Je nach Zieltyp, mit dem Sie arbeiten, wird die Möglichkeit zur Konfiguration von Marketingaktionen an verschiedenen Punkten im Setup-Arbeitsablauf angezeigt. Anweisungen zum Konfigurieren des jeweiligen Ziels finden Sie in der Dokumentation zu [Zielen](../destinations/overview.md).
 
 ## Datennutzungsrichtlinien verwalten {#policies}
 
