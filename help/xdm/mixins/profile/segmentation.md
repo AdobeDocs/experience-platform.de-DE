@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# [!UICONTROL Details ] zur SegmentmitgliedschaftMixin
+# [!UICONTROL Segmentmitgliedschaft ] DetailsMixin
 
 >[!NOTE]
 >
