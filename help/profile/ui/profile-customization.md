@@ -66,7 +66,7 @@ Wenn Sie zum Bildschirm **[!UICONTROL Widget bearbeiten]** zurückkehren, sollte
 
 ![](../images/profile-customization/profiles-edit-widget-new-attributes.png)
 
-Nach dem Speichern werden Sie zur Registerkarte **[!UICONTROL Detail]** zurückgeleitet, auf der die aktualisierte Karte und die aktualisierten Attribute angezeigt werden.
+Nach dem Speichern werden Sie zum Register **[!UICONTROL Detail]** zurückgeleitet, wo die aktualisierte Karte und die aktualisierten Attribute angezeigt werden.
 
 ![](../images/profile-customization/profiles-resized-card-new-attributes.png)
 
