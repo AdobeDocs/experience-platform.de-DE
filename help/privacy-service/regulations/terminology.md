@@ -37,7 +37,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 **Datencontroller**: Die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt.
 
-**Datenlöschung**: Das Recht, vergessen zu werden, berechtigt die betroffene Person, ihre personenbezogenen Daten löschen zu lassen, die weitere Verbreitung der Daten einzustellen und Dritten die Verarbeitung der Daten möglicherweise einzustellen.
+**Datenlöschung**: Das Recht, vergessen zu werden, berechtigt die betroffene Person, ihre personenbezogenen Daten zu löschen, die weitere Verbreitung der Daten einzustellen und Dritten die Verarbeitung der Daten möglicherweise einzustellen.
 
 **Datenübertragbarkeit**: Die Verpflichtung der für die Verarbeitung Verantwortlichen, der betroffenen Person eine Kopie ihrer Daten in einem Format zur Verfügung zu stellen, das eine einfache Verwendung mit einem anderen Verantwortlichen ermöglicht.
 
@@ -111,7 +111,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 **Datenschutz nach Design**: Ein Grundsatz, der die Einbeziehung des Datenschutzes ab dem Beginn der Systementwicklung anstelle einer Ergänzung vorsieht.
 
-**Datenschutz-Folgenabschätzung**: Ein Werkzeug zur Identifizierung und Verringerung der Datenschutzrisiken von Unternehmen durch Analyse der verarbeiteten personenbezogenen Daten und der geltenden Datenschutzrichtlinien.
+**Datenschutz-Folgenabschätzung**: Ein Tool zur Identifizierung und Verringerung der Datenschutzrisiken von Unternehmen durch Analyse der verarbeiteten personenbezogenen Daten und der geltenden Datenschutzrichtlinien.
 
 **Verarbeitung**: Jeder Vorgang, der an personenbezogenen Daten durchgeführt wird, unabhängig davon, ob er automatisiert erfolgt oder nicht, einschließlich der Erhebung, Verwendung, Aufzeichnung usw.
 
@@ -137,7 +137,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 **Sensible Daten**: Personenbezogene Daten, die sich auf rassische oder ethnische Herkünfte, politische Meinungen, religiöse oder philosophische Überzeugungen, sexuelles Verhalten, Strafregister, Gesundheitsdaten, Behinderung, Informationen zur Vereinigung des Handels, genetische Daten, biometrische Daten oder alle Daten beziehen, die die betroffene Person betreffen können.
 
-**Zugriffsrecht** für Betreff: Er wird auch als Zugriffsrecht bezeichnet und berechtigt die betroffene Person, Zugang zu den sie betreffenden personenbezogenen Daten und Informationen darüber zu haben, welche sie von einem für die Verarbeitung Verantwortlichen hat.
+**Zugriffsrecht** für Betreff: Das Recht auf Zugang wird auch als Zugangsrecht bezeichnet und berechtigt die betroffene Person, Zugang zu den sie betreffenden personenbezogenen Daten und Informationen darüber zu erhalten, die ihr Verantwortlicher hat.
 
 **Aufsichtsbehörde**: Eine Behörde, die von einem Mitgliedstaat gemäß Artikel 46 eingerichtet wird.
 
