@@ -192,4 +192,4 @@ person.birthday occurs = 3 days before today
 
 ## Nächste Schritte
 
-Jetzt, da Sie Informationen über Datums- und Uhrzeitfunktionen erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Jetzt, da Sie Informationen zu Datums- und Uhrzeitfunktionen erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
