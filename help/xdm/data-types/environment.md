@@ -34,7 +34,7 @@ ht-degree: 14%
 | `domain` | Zeichenfolge | Die Domäne des ISP des Benutzers. |
 | `ipV4` | Zeichenfolge | Die numerische Beschriftung, die einem Gerät zugewiesen ist, das an einem Computernetzwerk teilnimmt, das das Internetprotokoll für die Kommunikation verwendet (32-Bit). |
 | `ipV6` | Zeichenfolge | Die numerische Beschriftung, die einem Gerät zugewiesen wird, das an einem Computernetzwerk teilnimmt, das das Internet-Protokoll für die Kommunikation verwendet (128 Bit). |
-| `operatingSystem` | Zeichenfolge | Der Name des Betriebssystems, das bei der Beobachtung verwendet wurde. Das Attribut sollte keine Versionsinformationen wie `10.5.3` enthalten, sondern stattdessen &quot;Edition&quot;-Bezeichnungen wie `Ultimate` oder `Professional`. |
+| `operatingSystem` | Zeichenfolge | Der Name des Betriebssystems, das bei der Beobachtung verwendet wurde. Das Attribut sollte keine Versionsinformationen wie `10.5.3` enthalten, sondern stattdessen &quot;Edition&quot;-Bezeichnungen wie `Ultimate` oder `Professional` enthalten. |
 | `operatingSystemVendor` | Zeichenfolge | Der Name des Betriebssystemanbieters, das bei der Beobachtung verwendet wurde. |
 | `operatingSystemVersion` | Zeichenfolge | Die Vollversionskennung des Betriebssystems, das bei der Beobachtung verwendet wurde. Versionen werden in der Regel numerisch zusammengestellt, können jedoch in einem vom Anbieter definierten Format vorliegen. |
 | `type` | Zeichenfolge | Der Typ der Anwendungs-Umgebung. Die zulässigen Werte finden Sie im Anhang [a1/>.](#type) |
