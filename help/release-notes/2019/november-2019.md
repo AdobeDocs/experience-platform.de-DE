@@ -74,7 +74,7 @@ Ab der November-Version unterstützt die Echtzeit-Kundendatenplattform der Adobe
 * Werbung: [!DNL Google]
 * E-Mail-Marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-Weitere Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md).
+Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md).
 
 **Bekannte Einschränkungen**
 
@@ -174,7 +174,7 @@ Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfl
 | Segmente als Bausteine | Beim Erstellen von Segmenten mithilfe der Benutzeroberfläche des Segmentaufbaus können Benutzer jetzt zuvor definierte Segmente als Bausteine für weitere Segmente verwenden. <ul><li>Referenz zur aktuellen Audience: aktualisiert, wenn Benutzer Audiencen ein- und aussteigen.</li><li>Logik kopieren: nimmt die ausgewählte Segmentdefinition und Duplikat sie im neuen Segment.</li></ul> |
 | Ansicht der Segmentmitgliedschaft nach ID-Namensraum | Die Segmentmitgliedschaft kann nun nach ID-Namensraum (E-Mail, ECID und Gesamtanzahl) angezeigt werden. |
 | RBAC-Unterstützung | Segmentaufbau unterstützt jetzt grundlegende rollenbasierte Zugriffskontrollen und Berechtigungen. |
-| Erweiterte Unterstützung für die Freigabe externer Audiencen zwischen [!DNL Platform]- und Adobe-Lösungen | Benutzer können nun externe Metadaten (nicht-[!DNL Experience Platform]) für Audiencen in Szenarien einbringen, in denen die Anzahl der Audiencen groß oder nicht von vornherein bekannt ist. Diese Version enthält Zugriff auf [!DNL Audience Manager]-Metadaten für Kunden, die den Lösungsanschluss bereitgestellt haben. Diese Metadaten der Audience können im Segmentaufbau verwendet werden, um neue [!DNL Experience Platform]-Segmente zu erstellen. <br/><br/> Darüber hinaus  [!DNL Experience Platform] werden in erstellte Segmente jetzt auch für die Verwendung in integrierten Adoben einschließlich  [!DNL Audience Manager],  [!DNL Target]und  [!DNL Ad Cloud]verfügbar sein. |
+| Erweiterte Unterstützung für die Freigabe externer Audiencen zwischen [!DNL Platform]- und Adobe-Lösungen | Benutzer können nun externe Metadaten (nicht-[!DNL Experience Platform]) für Audiencen in Szenarien einbringen, in denen die Anzahl der Audiencen groß oder nicht von vornherein bekannt ist. Diese Version enthält Zugriff auf [!DNL Audience Manager]-Metadaten für Kunden, die den Lösungsanschluss bereitgestellt haben. Diese Metadaten der Audience können im Segmentaufbau verwendet werden, um neue [!DNL Experience Platform]-Segmente zu erstellen. <br/><br/> Darüber hinaus  [!DNL Experience Platform] werden in erstellte Adoben jetzt auch in integrierten Lösungen wie  [!DNL Audience Manager],  [!DNL Target]und  [!DNL Ad Cloud]zur Verfügung stehen. |
 
 **Fehlerkorrekturen**
 
