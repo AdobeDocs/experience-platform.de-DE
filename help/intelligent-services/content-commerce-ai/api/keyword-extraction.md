@@ -17,7 +17,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] ist in der Betaphase enthalten. Die Dokumentation kann geändert werden.
+>[!DNL Content and Commerce AI] in der Betaphase enthalten. Die Dokumentation kann geändert werden.
 
 Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
 
@@ -32,7 +32,7 @@ Die von [!DNL Content and Commerce AI] erkannten benannten Entitäten sind in de
 | FAC | Gebäude, Flughäfen, Autobahnen, Brücken usw. |
 | ORG | Firmen, Agenturen, Einrichtungen usw. |
 | PRODUKT | Objekte, Fahrzeuge, Lebensmittel usw. (Keine Dienstleistungen.) |
-| EREIGNIS | Benannte Hurrikane, Kämpfe, Kriege, Ereignisse usw. |
+| Ereignis | Benannte Hurrikane, Kämpfe, Kriege, Ereignisse usw. |
 | WORK_OF_ART | Titel von Büchern, Liedern usw. |
 | GESETZ | Benannte Dokumente, die in Gesetze umgewandelt wurden. |
 | SPRACHE | Jede benannte Sprache. |
@@ -124,7 +124,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden angegebenen Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
 | `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, um zu funktionieren. Weitere Informationen zu den benutzerspezifischen Parametern finden Sie im Anhang [.](#appendix) | Nein |
 | `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Der vom Suchbegriff-Extraktion-Dienst verwendete Inhalt. Der Inhalt kann als Rohtext (&quot;inline&quot;-Inhaltstyp) verwendet werden. <br> Wenn es sich bei dem Inhalt um eine Datei unter S3 handelt (&#39;s3-bucket&#39; Content-Typ), übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anforderungskörpers ist, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
+| `content` | Der vom Suchbegriff-Extraktion-Dienst verwendete Inhalt. Der Inhalt kann als Rohtext (&quot;inline&quot;-Inhaltstyp) verwendet werden. <br> Wenn es sich bei dem Inhalt um eine Datei unter S3 handelt (&#39;s3-bucket&#39; Content-Typ), übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anforderungskörpers ist, sollte die Liste der Datenelemente nur ein Objekt haben. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
 
 **Antwort**
 
