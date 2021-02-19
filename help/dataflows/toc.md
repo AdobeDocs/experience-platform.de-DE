@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Handbuch zu Datenflüssen
 user-guide-description: Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben.
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 185c9c953a6ce923359e221d6f0f91b0f6614f05
 workflow-type: tm+mt
-source-wordcount: '31'
-ht-degree: 48%
+source-wordcount: '43'
+ht-degree: 34%
 
 ---
 
@@ -20,3 +20,4 @@ ht-degree: 48%
 - UI-Handbücher {#ui}
    - [Überwachen von Datenflüssen in Zielen](./ui/monitor-destinations.md)
    - [Überwachen von Datenflüssen in Quellen](./ui/monitor-sources.md)
+- [Flussdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
