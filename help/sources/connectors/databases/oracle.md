@@ -23,7 +23,7 @@ Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wi
 
 Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Die Unterstützung für Datenbankanbieter umfasst [!DNL Oracle].
 
-## ZULASSUNGSLISTE der IP-Adresse
+## Zulassungsliste der IP-Adresse
 
 Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
 
