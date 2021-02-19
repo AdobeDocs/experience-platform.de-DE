@@ -344,7 +344,7 @@ Das „Loyalty Members“-Schema sollte nun unter `$ref` im Array `allOf` die dr
 
 Im „Loyalty Members“-Schema müssen Informationen erfasst werden, die für das Treueprogramm spezifisch sind. Diese Informationen werden von keinem der Standard-Mixins abgedeckt.
 
-Das [!DNL Schema Registry] berücksichtigt dies, indem Sie Ihre eigenen Mixins im Mieter-Container definieren können. Diese Mixins sind für Ihr Unternehmen spezifisch und können von niemandem außerhalb Ihrer IMS-Organisation eingesehen oder bearbeitet werden.
+Das [!DNL Schema Registry] berücksichtigt dies, indem Sie Ihre eigenen Mixins im Mieter-Container definieren können. Diese Mixins sind für Ihr Unternehmen eindeutig und können von niemandem außerhalb Ihrer IMS-Organisation eingesehen oder bearbeitet werden.
 
 Die Erstellung eines neuen Mixins erfolgt mittels POST-Anfrage. Die Anfrage muss ein `meta:intendedToExtend`-Feld mit der `$id` der Basisklassen umfassen, mit denen das Mixin kompatibel ist, sowie die Eigenschaften, die das Mixin beinhalten soll.
 
