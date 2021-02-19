@@ -3,10 +3,10 @@ keywords: E-Mail;E-Mail;E-Mail-Ziele;Adobe-Kampagne;Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 41%
+source-wordcount: '713'
+ht-degree: 37%
 
 ---
 
@@ -47,6 +47,7 @@ Geben Sie unter **[!UICONTROL Grundlegende Informationen]** die entsprechenden I
 - **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad in Ihrer Datenspeicherung an, in dem die Plattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegt.
 - **[!UICONTROL Container]**:  *Für Blob-Verbindungen*. Der Container, in dem sich der Ordnerpfad Blob befindet.
 - **[!UICONTROL Dateiformat]**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
+- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Allgemeine Informationen zu Campaign](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
