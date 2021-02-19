@@ -54,7 +54,7 @@ Das Symbol [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf
 
 >[!NOTE]
 >
-> Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie also die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
+> Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
 
 Verwenden Sie die Felder auf der rechten Seite des Editors, um einen Anzeigenamen und eine optionale Beschreibung für das Schema anzugeben. Sobald ein Name eingegeben wurde, wird die Arbeitsfläche aktualisiert und gibt den neuen Namen des Schemas wieder.
 
@@ -128,7 +128,7 @@ Wenn Sie dieses Mal das Dialogfeld **[!UICONTROL Mixin hinzufügen]** öffnen, w
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
-Wie bei Klassennamen sollte der Name des Mixins kurz und einfach sein und beschreiben, was das Mixin zum Schema beiträgt. Auch diese sind einzigartig, sodass Sie den Namen nicht wiederverwenden können und daher sicherstellen müssen, dass er spezifisch genug ist.
+Wie bei Klassennamen sollte der Name des Mixins kurz und einfach sein und beschreiben, was das Mixin zum Schema beiträgt. Auch diese sind eindeutig, sodass Sie den Namen nicht wiederverwenden können und daher sicherstellen müssen, dass er spezifisch genug ist.
 
 Nennen Sie für dieses Tutorial das neue Mixin „Loyalitätsdetails“.
 
@@ -138,7 +138,7 @@ Wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, um zum [!DNL Schema Editor] 
 
 Nachdem Sie jetzt das Mixin „Loyalitätsdetails“ erstellt haben, können Sie die Felder definieren, die das Mixin zum Schema beitragen wird.
 
-Wählen Sie zunächst den Namen des Mixins im Abschnitt **[!UICONTROL Mixins]**. Danach werden die Eigenschaften des Mixins rechts im Editor angezeigt und unter **[!UICONTROL Struktur]** wird ein **Pluszeichen (+)** neben dem Namen des Schemas angezeigt.
+Wählen Sie zunächst den Namen des Mixins im Abschnitt **[!UICONTROL Mixins]**. Danach werden die Eigenschaften des Mixins rechts im Editor angezeigt und unter **[!UICONTROL Struktur]** wird ein **Plus-Symbol (+)** neben dem Namen des Schemas angezeigt.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
@@ -196,7 +196,7 @@ Beim Definieren von Feldern in [!DNL Schema Editor] gibt es einige zusätzliche 
 | [!UICONTROL Array] | Gibt an, dass das Feld ein Array von Werten mit jeweils dem angegebenen Datentyp enthält. Wenn Sie diese Einschränkung beispielsweise für ein Feld mit dem Datentyp &quot;[!UICONTROL String]&quot;verwenden, gibt das Feld ein Zeichenfolgenarray an. |
 | [!UICONTROL Enum] | Gibt an, dass dieses Feld einen der Werte aus einer nummerierten Liste möglicher Werte enthalten muss. |
 | [!UICONTROL Identität] | Gibt an, dass dieses Feld ein Identitätsfeld ist. Weitere Informationen zu Identitätsfeldern finden Sie [weiter unten in diesem Tutorial](#identity-field). |
-| [!UICONTROL Beziehung] | Während Schema-Beziehungen durch die Verwendung des Vereinigung-Schemas und [!DNL Real-time Customer Profile] abgeleitet werden können, gilt dies nur für Schema, die dieselbe Klasse gemeinsam haben. Die [!UICONTROL Relationship]-Beschränkung gibt an, dass dieses Feld auf die primäre Identität eines Schemas verweist, das auf einer anderen Klasse basiert, was eine Beziehung zwischen den beiden Schemas impliziert. Weitere Informationen finden Sie im Tutorial [Definieren einer Beziehung](./relationship-ui.md). |
+| [!UICONTROL Beziehung] | Während Schema-Beziehungen durch die Verwendung des Vereinigung-Schemas und [!DNL Real-time Customer Profile] abgeleitet werden können, gilt dies nur für Schema, die dieselbe Klasse gemeinsam haben. Die [!UICONTROL Relationship]-Beschränkung gibt an, dass dieses Feld auf die primäre Identität eines Schemas verweist, das auf einer anderen Klasse basiert, was eine Beziehung zwischen den beiden Schemas impliziert. Weitere Informationen finden Sie im Tutorial zu [Definieren einer Beziehung](./relationship-ui.md). |
 
 >[!NOTE]
 >
@@ -338,7 +338,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zur Verwendung von
 
 ### Neue Klasse erstellen {#create-new-class}
 
-[!DNL Experience Platform] bietet die Flexibilität, ein Schema auf der Grundlage einer Klasse zu definieren, die spezifisch für Ihr Unternehmen ist. Informationen zum Erstellen einer neuen Klasse finden Sie im Handbuch zum Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche[.](../ui/resources/classes.md#create)
+[!DNL Experience Platform] bietet die Flexibilität, ein Schema auf der Grundlage einer Klasse zu definieren, die eindeutig für Ihr Unternehmen ist. Informationen zum Erstellen einer neuen Klasse finden Sie im Handbuch zum Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche[.](../ui/resources/classes.md#create)
 
 ### Klasse eines Schemas ändern {#change-class}
 
@@ -346,6 +346,6 @@ Sie können die Klasse eines Schemas jederzeit während des anfänglichen Kompos
 
 >[!WARNING]
 >
->Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie also die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
+>Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
 
 Informationen zum Ändern der Klasse eines Schemas finden Sie im Handbuch [Verwalten von Schemas in der Benutzeroberfläche](../ui/resources/schemas.md).
