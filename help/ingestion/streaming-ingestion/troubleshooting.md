@@ -57,7 +57,7 @@ Sie können mehrere Nachrichten innerhalb einer einzigen Anforderungsnutzlast gr
 
 ### Wie weiß ich, ob meine gesendeten Daten empfangen werden?
 
-Alle Daten, die an [!DNL Platform] (erfolgreich oder anderweitig) gesendet werden, werden als Stapeldateien gespeichert, bevor sie in den Datensätzen beibehalten werden. Der Verarbeitungsstatus von Batches erscheint in dem Datensatz, an den sie gesendet wurden.
+Alle Daten, die (erfolgreich oder anderweitig) an [!DNL Platform] gesendet werden, werden als Stapeldateien gespeichert, bevor sie in den Datensätzen beibehalten werden. Der Verarbeitungsstatus von Batches erscheint in dem Datensatz, an den sie gesendet wurden.
 
 Sie können überprüfen, ob Daten erfolgreich erfasst wurden, indem Sie die Datensatzaktivität mit der [Benutzeroberfläche von Experience Platform](https://platform.adobe.com) überprüfen. Klicken Sie dazu im linken Navigationsbereich auf **[!UICONTROL Datensätze]**, um eine Liste der Datensätze anzuzeigen. Wählen Sie in der angezeigten Liste den Datensatz aus, an den Sie streamen, um die zugehörige Seite **[!UICONTROL Datensatzaktivität]** zu öffnen und alle Batches anzuzeigen, die in einem bestimmten Zeitraum gesendet wurden. Weitere Informationen zur Verwendung von [!DNL Experience Platform] zur Überwachung von Datenströmen finden Sie im Handbuch [Überwachung von Streaming-Datenströmen](../quality/monitor-data-ingestion.md).
 
