@@ -126,7 +126,7 @@ msg6 = model_train.process(msg5)
 | Funktionen | Eingabefunktionen für das Modell (Liste von Zeichenfolgen). <br> Beispiel: `browser`, `device`, `login_page`, `product_page`, `search_page` |
 | label | Spaltenname der Zielgruppe (Zeichenfolge). |
 | mode | Zug/Test (Zeichenfolge). |
-| model_path | Pfad zum Speichermodell lokal im Format &quot;onnx&quot;. |
+| model_path | Pfad zum gespeicherten Modell lokal im Format &quot;onnx&quot;. |
 | params.model | Absoluter Importpfad zum Modell (Zeichenfolge), z. B.: `sklearn.linear_model.LogisticRegression`. |
 | params.model_params | Modellhyperparameter finden Sie in der Dokumentation [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) weitere Informationen. |
 | node_instance.process(data_message_from_previous_node) | Die Methode `process()` nimmt DataMsg vom vorherigen Knoten und wendet eine Transformation an. Dies hängt von der aktuell verwendeten Node ab. |
