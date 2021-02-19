@@ -25,7 +25,7 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ## Was sind [!DNL Experience Platform]-APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] angebote mehrerer RESTful-APIs, die HTTP-Anforderungen für den Zugriff auf  [!DNL Platform] Ressourcen verwenden. Diese Dienst-APIs machen jeweils verschiedene Endpunkte verfügbar und ermöglichen Ihnen das Auflisten (GET), Nachschlagen (GET), Bearbeiten (PUT und/oder PATCH) und Löschen (DELETE) von Ressourcen. Weiterführende Informationen zu einzelnen Endpunkten und Vorgängen, die bei den jeweiligen Diensten verfügbar sind, finden Sie in der [API-Referenzdokumentation](http://www.adobe.com/go/platform-api-reference-en) in Adobe I/O.
+[!DNL Experience Platform] Angebote mehrerer RESTful-APIs, die HTTP-Anforderungen für den Zugriff auf  [!DNL Platform] Ressourcen verwenden. Diese Dienst-APIs machen jeweils verschiedene Endpunkte verfügbar und ermöglichen Ihnen das Auflisten (GET), Nachschlagen (GET), Bearbeiten (PUT und/oder PATCH) und Löschen (DELETE) von Ressourcen. Weiterführende Informationen zu einzelnen Endpunkten und Vorgängen, die bei den jeweiligen Diensten verfügbar sind, finden Sie in der [API-Referenzdokumentation](http://www.adobe.com/go/platform-api-reference-en) in Adobe I/O.
 
 ## Wie kann ich eine API-Anfrage formatieren? {#how-do-i-format-an-api-request}
 
