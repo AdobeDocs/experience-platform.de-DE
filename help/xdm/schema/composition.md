@@ -283,7 +283,7 @@ Die Vor- und Nachteile der Verwendung von Objekten über freien Feldern sind unt
 **Nachteile**:
 
 * Felder werden verschachtelter.
-* Bei Verwendung von [Adobe Experience Platform Abfrage Service](../../query-service/home.md) müssen für in Objekten verschachtelte Abfragen längere Referenzzeichenfolgen bereitgestellt werden.
+* Bei Verwendung von [Adobe Experience Platform Abfrage Service](../../query-service/home.md) müssen für Abfragen, die in Objekten verschachtelt sind, längere Referenzzeichenfolgen bereitgestellt werden.
 
 #### Freiformfelder
 
