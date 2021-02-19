@@ -243,7 +243,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum Schätzauftrag zu
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Ein Array von Objekten, das die Anzahl der Profil innerhalb des Segments anzeigt, aufgeschlüsselt nach Identitäts-Namensraum. Die Gesamtanzahl der Profil nach Namensraum (addieren Sie die für jeden Namensraum angezeigten Werte) kann höher als die Metrik für die Anzahl der Profil sein, da ein Profil mit mehreren Namensräumen verknüpft werden könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft. |
+| `estimatedNamespaceDistribution` | Ein Array von Objekten, das die Anzahl der Profil innerhalb des Segments nach Identitäts-Namensraum unterteilt anzeigt. Die Gesamtanzahl der Profil nach Namensraum (addieren Sie die für jeden Namensraum angezeigten Werte) kann höher als die Metrik für die Anzahl der Profil sein, da ein Profil mit mehreren Namensräumen verknüpft werden könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft. |
 | `state` | Der aktuelle Status des Auftrags für die Vorschau. Der Status lautet &quot;WIRD AUSGEFÜHRT&quot;, bis die Verarbeitung abgeschlossen ist. Anschließend wird er &quot;ERGEBNIS_READY&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
 | `_links.preview` | Wenn `state` &quot;RESULT_READY&quot;ist, stellt dieses Feld eine URL zur Ansicht der Schätzung bereit. |
 
