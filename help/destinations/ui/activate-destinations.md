@@ -38,7 +38,7 @@ Wählen Sie den Namen des Ziels aus, um zum Arbeitsablauf für die Aktivierung z
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die derzeit aktivierten Segmente für das Ziel sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die aktuell aktivierten Segmente sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
 
 Nachdem Sie ein Ziel ausgewählt haben, wählen Sie **[!UICONTROL Aktivieren]**.
 
