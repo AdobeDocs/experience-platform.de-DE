@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;HDFS;HDFS;Apache HDFS;Apache HDFS;Apache HDF
+keywords: Experience Platform;Home;beliebte Themen;HDFS;HDFS;Apache HDFS;Apache HDFS;Apache-Hdfs
 solution: Experience Platform
 title: Übersicht über den Apache HDFS Source Connector
 topic: overview
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten von diesen Systemen übertragen können. Ingetierte Daten können als JSON, Parquet oder als Trennzeichen formatiert werden. Zu den Cloud-Datenspeicherung-Anbietern zählen [!DNL Apache] HDFS.
 
-## ZULASSUNGSLISTE der IP-Adresse
+## Zulassungsliste der IP-Adresse
 
 Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
 
