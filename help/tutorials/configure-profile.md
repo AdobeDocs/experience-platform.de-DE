@@ -80,7 +80,7 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusamm
 - Legen Sie eine standardmäßige Mergerichtlinie für Ihr Unternehmen fest.
 - Verstehen Sie die Verstöße gegen die Fusionsrichtlinie.
 
-Um mit Mergerichtlinien in der [!DNL Platform]-Benutzeroberfläche zu arbeiten, besuchen Sie das [Mergepolicies-Benutzerhandbuch](../profile/ui/merge-policies.md). Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Echtzeit-Kundenprofil-API finden Sie im [Entwicklerhandbuch für Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
+Um mit Mergerichtlinien in der [!DNL Platform]-Benutzeroberfläche zu arbeiten, besuchen Sie das [Richtlinien zusammenführen-Benutzerhandbuch](../profile/ui/merge-policies.md). Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der Echtzeit-Kundenprofil-API finden Sie im [Entwicklerhandbuch für Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
 
 ## Konfigurieren von Edge-Projektionen
 
