@@ -65,6 +65,6 @@ Da einige Abfragen die API stark belasten können, wurden globale Beschränkunge
 
 Dieses Dokument deckte die erforderlichen Kenntnisse ab, um Aufrufe an die [!DNL Catalog]-API durchzuführen. Sie können nun mit den Beispielaufrufen in diesem Entwicklerhandbuch fortfahren und den entsprechenden Anweisungen folgen.
 
-Die meisten Beispiele in diesem Handbuch verwenden den Endpunkt `/dataSets`, die Prinzipien können jedoch auf andere Endpunkte innerhalb von [!DNL Catalog] angewendet werden (z. B. `/batches` und `/accounts`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+Die meisten Beispiele in diesem Handbuch verwenden den Endpunkt `/dataSets`, aber die Prinzipien können auf andere Endpunkte innerhalb von [!DNL Catalog] angewendet werden (z. B. `/batches` und `/accounts`). Eine vollständige Liste aller bei einzelnen Endpunkten verfügbaren Aufrufe und Vorgänge finden Sie in der [Referenz zur Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
 
 Ein schrittweiser Arbeitsablauf, der zeigt, wie die [!DNL Catalog]-API mit der Datenerfassung verbunden ist, finden Sie im Lernprogramm [Erstellen eines Datensatzes](../datasets/create.md).
