@@ -3,10 +3,10 @@ keywords: Streaming;
 title: HTTP-Verbindung
 description: Mit dem HTTP-Ziel in Adobe Experience Platform können Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 8%
+source-wordcount: '542'
+ht-degree: 7%
 
 ---
 
@@ -58,6 +58,7 @@ Geben Sie im Schritt [!UICONTROL Authentifizierung] die Anmeldeinformationen fü
 - **[!UICONTROL Name]**: Geben Sie einen Namen ein, unter dem Sie dieses Ziel in Zukunft erkennen werden.
 - **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, mit der Sie dieses Ziel in Zukunft identifizieren können.
 - **[!UICONTROL Benutzerdefinierte Kopfzeilen]**: Geben Sie alle benutzerdefinierten Kopfzeilen ein, die in die Zielaufrufe aufgenommen werden sollen, und befolgen Sie dabei das folgende Format:  `header1:value1,header2:value2,...headerN:valueN`.
+- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](/help/data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](/help/data-governance/policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -65,7 +66,7 @@ Geben Sie im Schritt [!UICONTROL Authentifizierung] die Anmeldeinformationen fü
 
 ![HTTP-Authentifizierung](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Anwendungsfall]** für das Marketing: Anwendungsfälle für das Marketing geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Anwendungsfällen für das Marketing auswählen oder einen eigenen Anwendungsfall für das Marketing erstellen. Weitere Informationen zu Anwendungsfällen für das Marketing finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../data-governance/policies/overview.md).
+**[!UICONTROL Marketingaktion]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../data-governance/policies/overview.md).
 
 Klicken Sie auf **[!UICONTROL Ziel erstellen]**.
 
