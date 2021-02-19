@@ -28,8 +28,8 @@ Folgen Sie dem Tutorial [Experience Platform API authentication tutorial](https:
 Sie sollten nun die folgenden Werte aus dem Tutorial haben:
 
 - `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.
-- `{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.
-- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.
+- `{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
+- `{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 - Link zu einem Docker-Bild eines intelligenten Dienstes
 
@@ -69,8 +69,8 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Die Konfiguration unserer MLInstance. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -180,9 +180,9 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Erstelltes Experimentobjekt. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -236,9 +236,9 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Zu veröffentlichender Datensatz. Das Beispiel, das wir in unserem Tutorial verwenden, ist hier dargestellt:
 
 ```JSON
@@ -324,9 +324,9 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}`: Die dem Zielexperiment entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen Ihres Experiments.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Inhaber-Token-Wert, der nach der Authentifizierung bereitgestellt wird.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.\
 `{JSON_PAYLOAD}`: Um einen Schulungsablauf zu erstellen, müssen Sie Folgendes in den Text einschließen:
 
 ```JSON
@@ -395,8 +395,8 @@ curl -X GET \
 `{EXPERIMENT_ID}`: Die ID, die das Experiment darstellt.\
 `{EXPERIMENT_RUN_ID}`: Die ID, die den Experimentablauf darstellt.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.\
-`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.\
+`{API_KEY}`: Ihr spezifischer API-Schlüsselwert in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 **Antwort**
 
@@ -458,7 +458,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}`: Die dem Zielexperimentablauf entsprechende Kennung. Diese finden Sie in der Antwort beim Erstellen des Experimentablaufs.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 Die Antwort stellt das Schulungsmodell dar, das erstellt wurde.
 
@@ -505,7 +505,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}`: Die Kennung, die dem Experiment entspricht.\
 `{ACCESS_TOKEN}`: Ihr spezifischer Bearer-Tokenwert, der nach der Authentifizierung bereitgestellt wird.\
-`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer einzigartigen Adobe Experience Platform-Integration.
+`{IMS_ORG}`: Ihre IMS-Organisationsberechtigungen in Ihrer eindeutigen Adobe Experience Platform-Integration.
 
 >[!NOTE]
 >
