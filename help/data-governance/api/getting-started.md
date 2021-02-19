@@ -19,7 +19,7 @@ Mit der API [!DNL Policy Service] können Sie verschiedene Ressourcen im Zusamme
 
 ## Voraussetzungen
 
-Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die in die Arbeit mit Data Governance-Funktionen einbezogen werden. Bevor Sie mit der Arbeit mit [!DNL Policy Service API] beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die mit der Arbeit mit Data Governance-Funktionen verbunden sind. Bevor Sie mit der Arbeit mit [!DNL Policy Service API] beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 * [[!DNL Data Governance]](../home.md): Das Framework, mit dem die Einhaltung der Datenverwendung  [!DNL Experience Platform] erzwungen wird.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
