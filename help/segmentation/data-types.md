@@ -46,7 +46,7 @@ Wie in der unten stehenden Tabelle dargestellt, werden die Ereignis-Daten mit Su
 
 | Schlüsselwort | Verwenden von  |
 | ------- | --- |
-| Einbeziehen/Ausschließen | Beschreibt das Verhalten des Ereignisses durch die Einbeziehung oder Auslassung von Daten. |
+| Einbeziehen/Ausschließen | Beschreibt das Verhalten des Ereignisses durch die Aufnahme oder Auslassung von Daten. |
 | Beliebig/Alle | Hilft bei der Bestimmung der Anzahl der qualifizierten Segmente. |
 | Umschalter &quot;Zeitregel anwenden&quot; | Enthält Datumsdaten. |
 | Gleich, ungleich, Beginn mit, nicht Beginn mit, endet mit, endet nicht mit, enthält, enthält nicht enthält, ist vorhanden, nicht vorhanden | Enthält Zeichenfolgendaten. |
