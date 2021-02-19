@@ -324,7 +324,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 }
 ```
 
-Wenn Sie eine GET für [Liste aller Datentypen](#list) im Pächter-Container anfordern, enthält dieser nun den Datentyp Eigenschaftendetails oder [Sie können eine Suchanfrage (GET) unter ](#lookup) mit dem URL-kodierten `$id`-URI ausführen, um den neuen Datentyp direkt Ansicht.
+Wenn Sie eine GET für [Liste aller Datentypen](#list) im Pächter-Container anfordern, wird jetzt der Datentyp Eigenschaftendetails enthalten. Oder Sie können [eine Suchanfrage (GET) mit der URL-kodierten `$id`-URI ausführen, um den neuen Datentyp direkt Ansicht.](#lookup)
 
 ## Datentyp {#put} aktualisieren
 
