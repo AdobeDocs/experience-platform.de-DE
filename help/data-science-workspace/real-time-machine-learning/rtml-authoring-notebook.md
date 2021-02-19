@@ -69,7 +69,7 @@ Die folgende Codezelle druckt eine Liste der verfügbaren Knoten.
 pprint(nf.discover_nodes())
 ```
 
-![liste der Notizen](../images/rtml/node-list.png)
+![Liste der Notizen](../images/rtml/node-list.png)
 
 ## Ausbildung eines Echtzeit-maschinellen Lernmodells
 
