@@ -75,7 +75,7 @@ Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Enti
 | --- | --- | --- | --- | --- |
 | 1234567 | Addieren | 275098 | 2 | 01.10.32 |
 | 1234567 | Entfernen | 275098 | 1 | 01.10.33 |
-| 1234567 | Addieren | 486502 | 3 | 01.10.41 |
+| 1234567 | Addieren | 486502 | 1 | 01.10.41 |
 | 1234567 | Addieren | 910482 | 5 | 03.10.15 |
 
 #### Anwendungsfälle für die Segmentierung
