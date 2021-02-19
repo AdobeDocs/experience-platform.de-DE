@@ -48,7 +48,7 @@ Das Quellcode-Schema &quot;[!DNL Loyalty Members]&quot;basiert auf der [!DNL XDM
 
 ![](../images/tutorials/relationship/loyalty-members.png)
 
-### [!DNL Hotels] schema
+### [!DNL Hotels] Schema
 
 Das Ziel-Schema &quot;[!DNL Hotels]&quot;basiert auf einer benutzerspezifischen Klasse &quot;[!DNL Hotels]&quot;und enthält Felder, die ein Hotel beschreiben. Das Feld `hotelId` dient als primäre Identität für das Schema unter einem benutzerdefinierten Namensraum `hotelId`. Wie das [!DNL Loyalty Members]-Schema wurde auch dieses Schema für [!DNL Real-time Customer Profile] aktiviert.
 
