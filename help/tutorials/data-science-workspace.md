@@ -26,7 +26,7 @@ Die [!DNL Sensei Machine Learning]-API bietet Datenwissenschaftlern einen Mechan
 
 **Die folgenden API-Entwicklerhandbücher stehen zur Verfügung:**
 - [Motoren](../data-science-workspace/api/engines.md)  - Erfahren Sie, wie Sie Ihre  [!DNL Docker] Registrierung nachschlagen, eine Engine erstellen, eine Feature-Pipeline-Engine erstellen, die Informationen für eine Engine abrufen, eine Engine aktualisieren und eine Engine löschen können.
-- [MLInstances (recipes)](../data-science-workspace/api/mlinstances.md)  - Erfahren Sie, wie Sie eine MLInstance erstellen, die Informationen für eine MLInstanz abrufen, eine MLInstance aktualisieren und eine MLInstance löschen.
+- [MLInstances (recipes)](../data-science-workspace/api/mlinstances.md)  - Erfahren Sie, wie Sie eine MLInstance erstellen, die Informationen für eine MLInstanz abrufen, eine MLInstanz aktualisieren und eine MLInstance löschen.
 - [Experimente](../data-science-workspace/api/experiments.md) : Erfahren Sie, wie Sie ein Experiment erstellen, Informationen zu Experimenten oder Experimenten abrufen, ein Experiment aktualisieren und ein Experiment löschen können.
 - [Modelle](../data-science-workspace/api/models.md)  - Erfahren Sie, wie Sie Ihr eigenes Modell registrieren, die Informationen für ein Modell abrufen, ein Modell aktualisieren, ein Modell löschen, eine neue Transkodierung für ein Modell erstellen und die Details eines transkodierten Modells abrufen.
 - [MLServices](../data-science-workspace/api/mlservices.md)  - Erfahren Sie, wie Sie einen MLService erstellen, die Informationen für einen MLService abrufen, einen MLService aktualisieren und einen MLService löschen.
