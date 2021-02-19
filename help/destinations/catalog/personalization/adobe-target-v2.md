@@ -1,5 +1,5 @@
 ---
-keywords: erweiterung des zieldatensatzes;Zielgruppe;Zielgruppe v2;Zielgruppe v2 Erweiterung
+keywords: Erweiterung des Zieldatensatzes;Zielgruppe;Zielgruppe v2;Zielgruppe v2 Erweiterung
 title: Adobe Target v2-Erweiterung
 description: Die Adobe Target v2-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 translation-type: tm+mt
