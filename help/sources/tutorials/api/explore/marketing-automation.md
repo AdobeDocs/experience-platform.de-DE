@@ -30,7 +30,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Erforderliche Anmeldedaten sammeln
 
-Für dieses Lernprogramm müssen Sie über eine gültige Verbindung zur Anwendung zur Marketingautomatisierung von Drittanbietern verfügen, von der Sie Daten erfassen möchten. Eine gültige Verbindung besteht aus der Verbindungs-ID und der Verbindungs-ID der Anwendung. Weitere Informationen zum Erstellen einer Verbindung zur Marketingautomatisierung und zum Abrufen dieser Werte finden Sie im Lehrgang [Marketing-Automatisierungsquelle mit Platform](../../api/create/marketing-automation/hubspot.md) verbinden.
+Für dieses Lernprogramm müssen Sie über eine gültige Verbindung zur Anwendung zur Marketingautomatisierung von Drittanbietern verfügen, von der Sie Daten erfassen möchten. Eine gültige Verbindung besteht aus der Verbindungs-ID und der Verbindungs-ID der Anwendung. Weitere Informationen zum Erstellen einer Verbindung zur Marketingautomatisierung und zum Abrufen dieser Werte finden Sie im Lernprogramm [Marketing-Automatisierungsquelle mit Platform](../../api/create/marketing-automation/hubspot.md) verbinden.
 
 ### Lesen von Beispiel-API-Aufrufen
 
