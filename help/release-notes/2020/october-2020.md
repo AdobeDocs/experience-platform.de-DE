@@ -42,7 +42,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| API-Ergänzungen zur Profil-Vorschau | Die Profil-Vorschau-API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Ansicht der gesamten Profil-Fragmente in Ihrer IMS-Organisation vorzunehmen und die Verteilung der Profil-Fragmente über Identitäts-Namensraum hinweg Ansicht. |
+| API-Ergänzungen zur Profil-Vorschau | Die Profil Vorschau API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profil-Fragmente in Ihrer IMS-Organisation Ansicht sowie die Ansicht der Verteilung von Profil-Fragmenten über Identitäts-Namensraum hinweg. |
 | Updates der Vereinigung Schema Ansicht | In der Benutzeroberfläche &quot;Experience Platform&quot;können Benutzer leichter Informationen zu allen Schemas und Datensätzen finden, die zum Schema der Vereinigung beitragen, sowie zu Oberflächenattributen wie Identitäts- und Beziehungsfeldern. Diese Updates verbessern die Fehlerbehebung und die Überprüfung der ordnungsgemäßen Konfiguration von Profilen, der richtigen Zuordnung von Identitäten und der erfolgreichen Erfassung von Daten. |
 
 Weitere Informationen zu [!DNL Real-time Customer Profile], einschließlich Übungen und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Profil des Kunden](../../profile/home.md).
@@ -107,13 +107,13 @@ Bei der Aktualisierung der automatischen Zuordnung, Zuordnungsfunktion und Benut
 
 Mit dem marketingfreundlichen Profil-Viewer mit Anpassung können Sie die Zusammensetzung eines Profils für die Segmentierung, Planung und Aktivierung verstehen. Der konsolidierte Arbeitsablauf verbessert das Profil durch einen schrittweisen Arbeitsablauf für die Richtlinie zum Zusammenführen.
 
-- Ansicht jedes einzelnen Profils in einem verbesserten Profil-Viewer, der ein Dashboard mit vollständiger Anpassung anzeigt, sodass gruppierte Daten zu Kanälen basierend auf den Geschäftszielen des Marketingexperten möglich sind.
+- Ansicht jedes einzelnen Profils in einem verbesserten Profil-Viewer, der ein Dashboard mit vollständiger Anpassung anzeigt und gruppierte Daten zu Kanälen basierend auf den Geschäftszielen des Marketingexperten ermöglicht.
 - Bearbeiten Sie standardmäßige und benutzerdefinierte Attribute im Widget &quot;Grundlegende Informationen&quot;entsprechend den geschäftlichen Anforderungen.
 - Passen Sie Widgets mit Attributen aus dem Echtzeit-Profil des Kunden mithilfe der Vereinigung-Schema-Auswahl an. Das Vereinigung-Schema wird von den zugrunde liegenden Datenmodellen abgeleitet, die bei der Datenerfassung von Profilen verwendet werden.
 
 
 #### Überwachung
 
-Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet werden.
+Gewährleistet Transparenz des Datenflusses und gibt Einblick in den Zustand des Datenverkehrs von den Quellschnittstellen in das System, wodurch mehr Selbstbedienung und schnellere Reaktionsfähigkeit bei der Fehlerbehebung gewährleistet sind.
 
 - Überwachen Sie die Ausführung des gesamten Datenflusses und sehen Sie eine detaillierte Ansicht der einzelnen Vorgänge, einschließlich Abschlussstatus, Laufzeit, Liste der verarbeiteten Dateien, Fehler und ausführbare Diagnosen.
