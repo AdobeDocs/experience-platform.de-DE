@@ -69,7 +69,7 @@ Die Arbeitsfläche wird aktualisiert, um den Feldnamen und -typ anzuzeigen. Die 
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-Sie können die oben stehenden Schritte ausführen, um dem Schema weitere Felder hinzuzufügen. Sobald das Schema gespeichert wurde, werden seine Basisklasse und seine Mixins auch gespeichert, wenn daran Änderungen vorgenommen wurden.
+Sie können die oben stehenden Schritte ausführen, um dem Schema weitere Felder hinzuzufügen. Sobald das Schema gespeichert wurde, werden seine Basisklasse und Mixins auch gespeichert, wenn daran Änderungen vorgenommen wurden.
 
 >[!NOTE]
 >
