@@ -122,7 +122,7 @@ Nachdem Sie Ihren CMP zur Generierung von Zustimmungszeichenfolgen konfiguriert 
 
 Damit das SDK Daten an die Experience Platform senden kann, müssen Sie zunächst eine neue Edge-Konfiguration für Platform in [!DNL Adobe Experience Platform Launch] erstellen. Spezifische Schritte zum Erstellen einer neuen Konfiguration finden Sie in der [SDK-Dokumentation](../../../../edge/fundamentals/edge-configuration.md).
 
-Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, klicken Sie auf die Schaltfläche zum Umschalten neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die folgenden Werte, um den Rest des Formulars auszufüllen:
+Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, klicken Sie auf die Umschalter neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die folgenden Werte, um den Rest des Formulars auszufüllen:
 
 | Edge-Konfigurationsfeld | Wert |
 | --- | --- |
