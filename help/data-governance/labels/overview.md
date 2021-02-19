@@ -59,4 +59,4 @@ Die [DataSet-Dienst-API](https://www.adobe.io/apis/experienceplatform/home/api-r
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Bezeichnungen der Datenverwendung und ihre Rolle im Rahmen der Datenverwaltung vorgestellt. Weitere Informationen zur Verwaltung von Bezeichnungen in [!DNL Experience Platform] finden Sie in der Dokumentation, die mit diesem Handbuch verknüpft ist.
+In diesem Dokument wurden die Bezeichnungen der Datenverwendung und ihre Rolle im Rahmen der Datenverwaltung vorgestellt. Weitere Informationen zur Verwaltung von Beschriftungen in [!DNL Experience Platform] finden Sie in der Dokumentation, die mit diesem Handbuch verknüpft ist.
