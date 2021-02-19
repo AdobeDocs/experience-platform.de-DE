@@ -142,7 +142,7 @@ Das Dialogfeld **[!UICONTROL JSON hochladen]** wird angezeigt. Es wird ein Fenst
 
 <img src="../images/user-guide/upload-json.png" width="500" /><br/>
 
-Wenn Sie keine JSON-Datei hochladen möchten, wählen Sie **[!UICONTROL Adobe-GDPR-Request.json herunterladen]**, um eine Vorlage herunterzuladen, die Sie entsprechend den Werten füllen können, die Sie von den betroffenen Personen gesammelt haben.
+Wenn Sie keine JSON-Datei zum Hochladen haben, wählen Sie **[!UICONTROL Adobe-GDPR-Request.json herunterladen]**, um eine Vorlage herunterzuladen, die Sie entsprechend den Werten füllen können, die Sie von den betroffenen Personen gesammelt haben.
 
 
 <img src="../images/user-guide/privacy-template.png" width="500" /><br/>
