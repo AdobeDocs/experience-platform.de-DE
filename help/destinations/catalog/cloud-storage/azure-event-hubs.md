@@ -3,9 +3,9 @@ keywords: Azurblauer Ereignis Hub Destination;Azurer Ereignis Hub;Azurabend
 title: Beta-Ereignis-Hubs-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '546'
 ht-degree: 6%
 
 ---
@@ -55,6 +55,7 @@ Geben Sie für [!DNL Azure Event Hubs]-Ziele im Arbeitsablauf zum Erstellen von 
 * **[!UICONTROL Name]**: Geben Sie einen Namen für die Verbindung ein  [!DNL Azure Event Hubs].
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung der Verbindung ein.  Beispiele: &quot;Premium-Tier-Kunden&quot;, &quot;Männer, die am Kitesurfen interessiert sind&quot;.
 * **[!UICONTROL eventHubName]**: Geben Sie einen Namen für den Stream zu Ihrem  [!DNL Azure Event Hubs] Ziel ein.
+* **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Im Setup-Schritt erforderliche Daten](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
