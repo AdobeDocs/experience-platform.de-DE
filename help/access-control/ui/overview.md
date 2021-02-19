@@ -8,7 +8,7 @@ translation-type: tm+mt
 source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -19,7 +19,7 @@ Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Be
 
 Folgende Aufgaben werden behandelt:
 
-- [Zugriff auf die Admin Console](./browse.md)
+- [Rufen Sie die Admin Console](./browse.md) auf
 - [Neues Produktprofil erstellen](./create-profile.md)
 - [Berechtigungen für ein Produktprofil verwalten](./permissions.md)
 - [Details und zusätzliche Dienste für ein Produkt verwalten](./details-and-services.md)
