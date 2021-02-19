@@ -101,4 +101,4 @@ Wenn Sie ein Beziehungsfeld aus der Liste auswählen, wird das angezeigte Schema
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs wissen Sie jetzt, wie Vereinigungen mithilfe der [!DNL Experience Platform]-Benutzeroberfläche Ansicht und navigiert werden können. Weitere Informationen zu Schemas, einschließlich deren Verwendung auf der gesamten Plattform, finden Sie unter [XDM Systemübersicht](../../xdm/home.md).
+Durch Lesen dieses Handbuchs wissen Sie jetzt, wie Vereinigungen mithilfe der [!DNL Experience Platform]-Benutzeroberfläche Ansicht und navigiert werden können. Weitere Informationen zu Schemas, einschließlich deren Verwendung auf der gesamten Plattform, finden Sie unter [XDM-Systemübersicht](../../xdm/home.md).
