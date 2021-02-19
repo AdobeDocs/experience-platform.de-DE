@@ -21,7 +21,7 @@ Die Streaming-Erfassung für Adobe Experience Platform bietet Benutzern eine Mö
 
 Mit Adobe Experience Platform können Sie koordinierte, konsistente und relevante Erlebnisse fördern, indem Sie für jeden Ihrer Kunden ein [!DNL Real-time Customer Profile] generieren. Die Streaming-Erfassung spielt eine Schlüsselrolle beim Aufbau dieser Profil, indem Sie [!DNL Profile]-Daten mit so wenig Latenz wie möglich in das [!DNL Data Lake]-Element übertragen können.
 
-Das folgende Video hilft Ihnen, das Streaming-Erlebnis zu verstehen, und erläutert die oben genannten Konzepte.
+Das folgende Video soll Ihnen helfen, das Streaming-Erlebnis zu verstehen, und beschreibt die oben genannten Konzepte.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
