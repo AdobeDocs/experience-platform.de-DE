@@ -91,7 +91,7 @@ Nach Auswahl eines Ereignisses wird rechts ein neues Dropdown-Feld angezeigt. Di
 
 Die Schaltflächen **[!UICONTROL Hinzufügen Ereignis]** und **[!UICONTROL Hinzufügen Gruppe]** werden verwendet, um Ihre Konvertierung weiter zu definieren. Je nach der von Ihnen definierten Konversion müssen Sie möglicherweise die Schaltflächen **[!UICONTROL Hinzufügen Ereignis]** und **[!UICONTROL Hinzufügen Gruppe]** verwenden, um weitere Kontexte bereitzustellen.
 
-![ereignis hinzufügen](./images/user-guide/add_event.png)
+![Ereignis hinzufügen](./images/user-guide/add_event.png)
 
 Durch Klicken auf **[!UICONTROL Hinzufügen Ereignis]** werden weitere Felder erstellt, die nach der oben beschriebenen Methode ausgefüllt werden können. Hierdurch wird der Zeichenfolgendefinition unter dem Konvertierungsnamen eine AND-Anweisung hinzugefügt. Klicken Sie auf **x**, um ein hinzugefügtes Ereignis zu entfernen.
 
@@ -133,7 +133,7 @@ Mit den Schaltflächen *Hinzufügen Ereignis* und *Hinzufügen Gruppe* können S
 
 Durch Klicken auf **Hinzufügen Ereignis** können weitere Felder hinzugefügt werden. Klicken Sie auf **x**, um ein hinzugefügtes Ereignis zu entfernen.
 
-![ereignis hinzufügen](./images/user-guide/touchpoint_add_event.png)
+![Ereignis hinzufügen](./images/user-guide/touchpoint_add_event.png)
 
 Wenn Sie auf **Hinzufügen Gruppe** klicken, können Sie zusätzliche Felder getrennt vom Original erstellen. Nach dem Hinzufügen von Gruppen wird eine blaue Schaltfläche *und* angezeigt. Klicken Sie auf **Und**, um den Parameter zu ändern, wird der neue Parameter &quot;Oder&quot;verwendet, um mehrere erfolgreiche Pfade zu definieren. Dieser Touchpoint hat nur einen erfolgreichen Pfad, daher ist &quot;Oder&quot;nicht erforderlich.
 
