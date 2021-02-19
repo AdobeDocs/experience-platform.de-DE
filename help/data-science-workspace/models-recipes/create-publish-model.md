@@ -54,7 +54,7 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 
 ## Vorbereiten der Daten {#prepare-your-data}
 
-Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen vermittelt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten in [!DNL Platform] bis [!DNL Adobe Analytics] eingehen und wie diese Daten in ein Funktionsdatensatz umgewandelt werden, das von Ihrem maschinellen Lernmodell verwendet werden soll.
+Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen zukommen lässt, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten in [!DNL Platform] bis [!DNL Adobe Analytics] eingehen und wie diese Daten in ein Funktionsdatensatz umgewandelt werden, das von Ihrem maschinellen Lernmodell verwendet werden soll.
 
 ### Daten und Schemas
 
