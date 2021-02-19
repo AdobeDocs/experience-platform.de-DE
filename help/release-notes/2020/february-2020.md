@@ -31,10 +31,10 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen, während Sie
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| API-Unterstützung für SaaS – Service-Systeme | Neue Quellschnittstellen für [!DNL Salesforce Service Cloud] API und [!DNL ServiceNow] API. |
+| API-Unterstützung für SaaS – Service-Systeme | Neue Quellschnittstellen für [!DNL Salesforce Service Cloud]-API und [!DNL ServiceNow]-API. |
 | API-Unterstützung für SaaS – Marketing-Systeme | Neue Quellschnittstellen für [!DNL HubSpot]-API. |
 | API-Unterstützung für [!DNL NoSQL]-Datenbanksysteme | Neue Quellschnittstellen für die APIs [!DNL AWS Redshift], [!DNL Google BigQuery], [!DNL MariaDB], [!DNL MySQL], [!DNL PostgreSQL] und [!DNL SQL Server]. |
-| API-Unterstützung für Cloud-Speicher | Neue Quellschnittstellen für [!DNL Azure Data Lake Service Gen 2] API und [!DNL Google Cloud Storage] API. |
+| API-Unterstützung für Cloud-Speicher | Neue Quellschnittstellen für [!DNL Azure Data Lake Service Gen 2]-API und [!DNL Google Cloud Storage]-API. |
 | Unterstützung für Cloud-Speicher via Benutzeroberfläche | Neuer Quellanschluss für [!DNL Google Cloud Storage] in der Benutzeroberfläche. |
 
 **Bekannte Probleme**
