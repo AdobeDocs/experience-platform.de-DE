@@ -31,7 +31,7 @@ Sie können Ihren Webshaken mit dem Client Ihrer Wahl konfigurieren. Um eine tem
 
 ![](../images/notifications/webhook-url.png)
 
-Während des anfänglichen Validierungsprozesses sendet [!DNL I/O Events] einen `challenge`-Abfrage-Parameter in einer GET-Anforderung an den Webshaken. Sie müssen Ihren Webshaken so konfigurieren, dass der Wert dieses Parameters in der Antwortnutzlast zurückgegeben wird. Wenn Sie WebHook.site verwenden, wählen Sie **[!DNL Edit]** in der oberen rechten Ecke aus und geben Sie `$request.query.challenge$` unter **[!DNL Response body]** ein, bevor Sie **[!DNL Save]** auswählen.
+Während des anfänglichen Validierungsprozesses sendet [!DNL I/O Events] einen `challenge`-Abfrage-Parameter in einer GET-Anforderung an den Webhaken. Sie müssen Ihren Webshaken so konfigurieren, dass der Wert dieses Parameters in der Antwortnutzlast zurückgegeben wird. Wenn Sie WebHook.site verwenden, wählen Sie **[!DNL Edit]** in der oberen rechten Ecke aus und geben Sie `$request.query.challenge$` unter **[!DNL Response body]** ein, bevor Sie **[!DNL Save]** auswählen.
 
 ![](../images/notifications/response-challenge.png)
 
