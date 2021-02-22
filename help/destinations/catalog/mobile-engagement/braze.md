@@ -80,7 +80,7 @@ Um Ihre Audiencen korrekt von [!DNL Adobe Experience Platform] an das [!DNL Braz
 
 Die Zuordnung besteht darin, eine Verknüpfung zwischen den Feldern Ihres [!DNL Experience Data Model]-Schemas (XDM) in Ihrem [!DNL Platform]-Konto und den entsprechenden Entsprechungen aus dem Zielort der Zielgruppe zu erstellen.
 
-Gehen Sie wie folgt vor, um Ihre XDM-Felder den Bestimmungsfeldern [!DNL Braze] richtig zuzuordnen:
+Gehen Sie wie folgt vor, um die XDM-Felder den Bestimmungsfeldern [!DNL Braze] korrekt zuzuordnen:
 
 Klicken Sie im Schritt [!UICONTROL Zuordnung] auf **[!UICONTROL Hinzufügen neue Zuordnung]**.
 
