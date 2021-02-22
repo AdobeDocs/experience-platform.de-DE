@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;Felder;Standardfelder;Standardfelder;Wörterbuch;Wörterbuch;Map;Map
 solution: Experience Platform
 title: Erlebnis-Datenmodell (XDM)-Feldwörterbuch
-topic: overviews
+topic: Übersichten
 description: Das Experience-Datenmodell (XDM) definiert einen Satz von Standardfeldern, die beim Erstellen von Adobe Experience Platform-Schemas verwendet werden können. Die Verwendung dieser Felder sichert ein konsistentes Verhalten aller Platform-Dienste, da alle Dienste, die XDM verwenden, die spezifischen Definitionen dieser Felder explizit verstehen.
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '25232'
+source-wordcount: '25233'
 ht-degree: 98%
 
 ---
