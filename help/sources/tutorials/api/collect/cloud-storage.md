@@ -2,11 +2,11 @@
 keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung-Daten
 solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten mithilfe von Source Connectors und APIs
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und zum Übertragen dieser Daten in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 19%
@@ -673,5 +673,6 @@ Im folgenden Abschnitt werden die verschiedenen Cloud-Datenspeicherung-Quellschn
 | [!DNL Azure Event Hubs] (Ereignis-Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
-| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
-| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
+| [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |
+| [!DNL Oracle Object Storage] | `c85f9425-fb21-426c-ad0b-405e9bd8a46c` |
+| [!DNL SFTP] | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
