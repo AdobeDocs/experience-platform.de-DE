@@ -5,10 +5,10 @@ title: Verbinden von RStudio mit dem Abfrage-Dienst
 topic: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 36%
+source-wordcount: '368'
+ht-degree: 18%
 
 ---
 
@@ -20,39 +20,40 @@ Dieses Dokument führt Sie durch die Schritte zum Verbinden von [!DNL RStudio] m
 >[!NOTE]
 >
 > Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL RStudio] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL RStudio] finden Sie in der [offiziellen  [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
+> 
+> Außerdem müssen Sie den PostgreSQL JDBC 4.2-Treiber installieren, um RStudio mit Abfrage Service zu verwenden. Sie können den JDBC-Treiber von der [offiziellen PostgreSQL-Site](https://jdbc.postgresql.org/download.html) herunterladen.
 
 ## [!DNL Query Service]-Verbindung in der [!DNL RStudio]-Schnittstelle erstellen
 
-Nach der Installation von [!DNL RStudio] müssen Sie auf dem Bildschirm **[!DNL Console]**, der angezeigt wird, zunächst Ihr R-Skript für die Verwendung von [!DNL PostgreSQL] vorbereiten.
+Nach der Installation von [!DNL RStudio] müssen Sie das RJDBC-Paket installieren. Wechseln Sie zum Bereich **[!DNL Packages]** und wählen Sie **[!DNL Install]**.
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+Es wird ein Popup mit dem Bildschirm **[!DNL Install Packages]** angezeigt. Stellen Sie sicher, dass **[!DNL Repository (CRAN)]** für den Abschnitt **[!DNL Install from]** ausgewählt ist. Der Wert für **[!DNL Packages]** sollte `RJDBC` sein. Stellen Sie sicher, dass **[!DNL Install dependencies]** ausgewählt ist. Nachdem Sie bestätigt haben, dass alle Werte korrekt sind, wählen Sie **[!DNL Install]** aus, um die Pakete zu installieren.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+Nachdem das RJDBC-Paket installiert wurde, starten Sie RStudio neu, um den Installationsprozess abzuschließen.
+
+Nach dem Neustart von RStudio können Sie nun eine Verbindung zum Abfrage Service herstellen. Wählen Sie im Bereich **[!DNL Packages]** das **[!DNL RJDBC]**-Paket aus und geben Sie den folgenden Befehl in die Konsole ein:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Nachdem Sie Ihr R-Skript für die Verwendung von [!DNL PostgreSQL] vorbereitet haben, können Sie [!DNL RStudio] jetzt [!DNL Query Service] durch Laden des [!DNL PostgreSQL]-Treibers verbinden.
+Dabei stellt {PATH TO THE POSTGRESQL JDBC JAR} den Pfad zur PostgreSQL JDBC JAR dar, die auf Ihrem Computer installiert wurde.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+Sie können jetzt Ihre Verbindung mit dem Abfrage Service herstellen, indem Sie den folgenden Befehl in der Konsole eingeben:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| Eigenschaft | Beschreibung |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | Der Name der zu verwendenden Datenbank. |
-| `{HOST_NUMBER` und `{PORT_NUMBER}` | Der Host-Endpunkt und sein Port für Query Service. |
-| `{USERNAME}` und `{PASSWORD}` | Die Anmeldedaten, die verwendet werden sollen. Der Benutzername hat die Form `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
 > Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]** und anschließend **[!UICONTROL Anmeldeinformationen]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Schreiben von Abfragen
 
