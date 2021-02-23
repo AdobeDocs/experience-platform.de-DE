@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung;Cloud-Datenspeicherung
 solution: Experience Platform
 title: Durchsuchen eines cLoud-Datenspeicherung-Systems mithilfe der Flow Service API
-topic: overview
+topic: Übersicht
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '742'
 ht-degree: 20%
 
 ---
@@ -30,14 +30,15 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Um eine Drittanbieter-Cloud-Datenspeicherung mithilfe von [!DNL Platform]-APIs zu untersuchen, müssen Sie über eine gültige Verbindungs-ID verfügen. Wenn Sie noch keine Verbindung zu der Datenspeicherung haben, mit der Sie arbeiten möchten, können Sie eine dieser Übungen erstellen:
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Azurblase Data Lake Datenspeicherung Gen2](../create/cloud-storage/adls-gen2.md)
-* [Azurbladdatei-Datenspeicherung](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google Cloud Store](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Lesen von Beispiel-API-Aufrufen
 
