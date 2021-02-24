@@ -1,24 +1,24 @@
 ---
-title: Integration der IAB TCF 2.0-Unterstützung mithilfe von Platform Launch und der Platform Web SDK Extension
+title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Platform launch und der Platform Web SDK Extension
 description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und der Adobe Experience Platform Web SDK-Erweiterung einrichten.
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 
-# Integrieren Sie die IAB TCF 2.0-Unterstützung mithilfe von Platform Launch und der Platform Web SDK-Erweiterung.
+# Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Platform launch und der Platform Web SDK-Erweiterung
 
-Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). Dieses Handbuch zeigt Ihnen, wie Sie eine Adobe Experience Platform Launch-Eigenschaft zum Senden von IAB TCF 2.0-Einwilligungsinformationen an die Adobe mithilfe der AEP Web SDK Extension for Experience Platform Launch einrichten.
+Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). Dieses Handbuch zeigt Ihnen, wie Sie eine Adobe Experience Platform Launch-Eigenschaft zum Senden von IAB TCF 2.0-Einwilligungsinformationen an die Adobe mithilfe der Adobe Experience Platform Web SDK Extension for Experience Platform Launch einrichten.
 
 Wenn Sie Experience Platform Launch nicht verwenden möchten, lesen Sie bitte das Handbuch [IAB TCF 2.0 ohne Experience Platform Launch](./without-launch.md).
 
 ## Erste Schritte
 
-Um IAB TCF 2.0 mit Experience Platform Launch und der AEP Web SDK Extension zu verwenden, benötigen Sie ein XDM-Schema und einen Dataset.
+Um IAB TCF 2.0 mit Experience Platform Launch und der Platform Web SDK Extension zu verwenden, benötigen Sie ein XDM-Schema und einen Dataset.
 
 Darüber hinaus erfordert dieses Handbuch ein Verständnis des Adobe Experience Platform Web SDK. Eine kurze Auffrischung erhalten Sie in der Dokumentation [Adobe Experience Platform Web SDK overview](../../home.md) und [Häufig gestellte Fragen](../../web-sdk-faq.md).
 
@@ -120,7 +120,7 @@ addEventListener();
 
 Dieser Code ist mit dem vorherigen benutzerspezifischen Code identisch, außer dass sowohl `useractioncomplete`- als auch `tcloaded`-Ereignis verarbeitet werden. Der [vorherige benutzerspezifische Code](#consent-code-1) nur Trigger, wenn der Kunde seine Voreinstellungen zum ersten Mal auswählt. Dieser Code wird auch dann Trigger, wenn der Kunde seine Voreinstellungen bereits ausgewählt hat. Zum Beispiel beim Laden der zweiten Seite.
 
-hinzufügen eine Aktion &quot;Ereignis senden&quot;aus der AEP Web SDK-Erweiterung. Wählen Sie im XDM-Feld das XDM-Datenelement aus, das Sie im vorherigen Abschnitt erstellt haben.
+hinzufügen eine Aktion &quot;Ereignis senden&quot;aus der Platform Web SDK-Erweiterung. Wählen Sie im XDM-Feld das XDM-Datenelement aus, das Sie im vorherigen Abschnitt erstellt haben.
 
 ## Weiterleiten anderer Ereignisse mit Informationen zur Zustimmung der IAB TCF 2.0
 
@@ -128,4 +128,4 @@ Wenn Ereignis nach dem ersten Experience Ereignis ausgelöst werden, sind die be
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der AEP Web SDK Extension einsetzen, können Sie sich auch für die Integration mit anderen Adoben wie Adobe Analytics oder Echtzeit-Kundendatenplattform entscheiden. Weitere Informationen finden Sie unter [Übersicht über IAB-Transparenz und -Zustimmung-Framework 2.0](./overview.md).
+Nachdem Sie nun gelernt haben, wie Sie IAB TCF 2.0 mit der Platform Web SDK Extension einsetzen, können Sie sich auch für die Integration mit anderen Adoben wie Adobe Analytics oder Echtzeit-Kundendatenplattform entscheiden. Weitere Informationen finden Sie unter [Übersicht über IAB-Transparenz und -Zustimmung-Framework 2.0](./overview.md).
