@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Namensraum;Namensraum;Namensraum;Namensraum;Identitäts-Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
 solution: Experience Platform
 title: Übersicht über Identitäts-Namensraum
-topic: overview
+topic: Übersicht
 description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1474'
 ht-degree: 22%
 
 ---
@@ -84,7 +84,7 @@ Wählen Sie einen Namensraum aus, um genauere Informationen auf der rechten Leis
 
 ![](./images/browse-namespaces.png)
 
-## Verwalten benutzerdefinierter Namensraum
+## Verwalten von benutzerdefinierten Namensräumen {#manage-namespaces}
 
 Je nach den Daten und Anwendungsfällen in Ihrer Organisation benötigen Sie möglicherweise benutzerdefinierte Namespaces. Benutzerdefinierte Namensraum können mit der API oder über die Benutzeroberfläche erstellt werden.[[!DNL Identity Service]](./api/create-custom-namespace.md)
 
