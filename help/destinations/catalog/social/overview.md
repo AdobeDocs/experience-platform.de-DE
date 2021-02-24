@@ -3,10 +3,10 @@ keywords: soziales Netzwerk;Social-Netzwerk-Ziele;Livefyre;Facebook;Facebook
 title: Ziele in sozialen Netzwerken – Übersicht
 description: Mit Zielen in sozialen Netzwerken können Sie Profile für Ihre Kampagnen basierend auf Hash-E-Mails für Zielgruppenbestimmung, Personalisierung und Unterdrückung aktivieren.
 translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 75%
+source-wordcount: '76'
+ht-degree: 71%
 
 ---
 
@@ -19,3 +19,4 @@ Adobe Experience Platform unterstützt derzeit die folgenden Social-Netzwerkziel
 
 - [Adobe Livefyre-Erweiterung](./adobe-livefyre.md)
 - [[!DNL Facebook] -Erweiterung ](./facebook.md)
+- [Verbindung zur LinkedIn-Audience](./linkedin.md)
