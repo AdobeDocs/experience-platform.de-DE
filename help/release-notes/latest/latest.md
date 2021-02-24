@@ -1,58 +1,83 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform vom 27. Januar 2021
+description: Versionshinweise zur Experience Platform vom 24. Februar 2021.
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: February 24, 2021
+author: ens70167
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: d3151d9ccaf61e6ec1a88e147f3694292e953de0
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 46%
+source-wordcount: '770'
+ht-degree: 36%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 27. Januar 2021**
+**Versionsdatum: 24. Februar 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
 - [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Data Prep] {#data-prep}
+## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Regelmäßige Ausdruck-Funktionen | [!DNL Data Prep] Mapper unterstützt jetzt das Abgleichen und Extrahieren eines Teils des Eingabefelds auf Grundlage von regulären Ausdrücken. |
-
-Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-## Ziele {#destinations}
-
-[!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
-
-**Neue Ziele**
-
-| Ziel | Beschreibung |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] ist die Objektlösung von Microsoft für die Cloud. |
+Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
-| ------- | ----------- |
-| Erweiterte ID-Übereinstimmung | Die Funktionen für Übereinstimmungsraten bei Audiencen in [!DNL Facebook Custom Audiences] und [!DNL Google Customer Match] wurden verbessert, indem zusätzliche Identitätszuordnungen wie externe IDs, Telefonnummern und Mobilgeräte-IDs unterstützt werden. Weitere Informationen finden Sie in der folgenden Dokumentation: <ul><li>[Facebook-Ziel](../../destinations/catalog/social/facebook.md)</li><li>[Google-Kundenübereinstimmungsziel](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profile und Segmente für ein Ziel aktivieren](../../destinations/ui/activate-destinations.md)</li></ul> |
+| --- | --- |
+| JupyterLab EDA Notebook | Die Analyse der Forschungsdaten (EDA) Python Notebook ist jetzt in Jupyterlab verfügbar. Dieses Notizbuch hilft Ihnen bei der Erkennung von Datenmustern, der Überprüfung der Datensicherheit und der Zusammenfassung der relevanten Daten für Prognosemodelle. Weitere Informationen finden Sie im Lernprogramm [Webbasierte Daten für Prognosemodelle](../../data-science-workspace/jupyterlab/eda-notebook.md) untersuchen. |
 
-Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md).
+Weitere allgemeine Informationen zum Data Science Workspace finden Sie im Abschnitt [Übersicht über den Data Science Workspace](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
+
+In Adobe Experience Platform werden Daten aus einer Vielzahl von Quellen erfasst, innerhalb der Experience Platform analysiert und zu einer Vielzahl von Zielen aktiviert. Plattform erleichtert die Verfolgung dieses potenziell nicht-linearen Datenflusses durch Transparenz mit Datenflüssen.
+
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Dienste konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connectors in Zielgruppen-Datasets zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich nach [!DNL Destinations] aktiviert werden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Neues Überwachungs-Dashboard | Sie können jetzt das Monitoring-Dashboard für dienstübergreifende Transparenz und umsetzbare Einblicke in die Erfassung von Quelldaten verwenden. Das neue Überwachungs-Dashboard bietet eine umfassende Ansicht von Daten, die von [!DNL Data Lake] bis [!DNL Identity Service] und [!DNL Profile] verarbeitet werden, und ermöglicht Ihnen gleichzeitig die Überwachung von Erfassungsraten, Erfolgen und Fehlern. Weitere Informationen finden Sie im Tutorial zu [Überwachungsquellen-Datenaflows in der Benutzeroberfläche](../../dataflows/ui/monitor-sources.md). |
+
+Weitere allgemeine Informationen zu Datenflüssen finden Sie im [Datenaflows-Überblick](../../dataflows/home.md).
+
+## [!DNL Experience Data Model (XDM) System] {#xdm}
+
+Normung und Interoperabilität sind Schlüsselkonzepte hinter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+
+XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf der Registerkarte [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schema] und im Dialogfeld &quot;Mixin-Auswahl&quot;unter [!DNL Schema Editor] verfügbar.<br><br>Bei der Suche nach einem Begriff zuvor wurden nur XDM-Ressourcen berücksichtigt, deren Name mit der Abfrage übereinstimmt. Zusätzlich zu den Ressourcen, deren Name mit der Abfrage übereinstimmt, werden auch die Ressourcen mit den einzelnen Attributen, die mit dem Begriff übereinstimmen, einbezogen. Auf diese Weise können Sie nach XDM-Ressourcen basierend auf den Attributen suchen, die sie enthalten, und nicht nach dem Namen der Ressource.<br><br>Weitere Informationen finden Sie in den Dokumenten zur  [Erforschung von XDM-](../../xdm/ui/explore.md) Ressourcen und zum  [Verwalten von ](../../xdm/ui/resources/schemas.md) Schemata in der Benutzeroberfläche. |
+
+Weitere allgemeine Informationen zu XDM finden Sie unter [XDM-Systemübersicht](../../xdm/home.md).
+
+## [!DNL Identity Service] {#identity}
+
+Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint.
+
+Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, eine bessere Ansicht Ihres Kundenverhaltens zu erzielen, indem Identitäten zwischen Geräten und Systemen überbrückt werden, sodass Sie in Echtzeit wirkungsvolle persönliche digitale Erlebnisse bereitstellen können.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Identitätsdiagramm Viewer | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, sodass Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
+
+Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Übersicht über den Identitätsdienst](../../identity-service/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -60,27 +85,11 @@ Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen un
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
-**Neue Funktionen**
+**Neue Quellen**
 
 | Funktion | Beschreibung |
-| ------- | ----------- |
-| Verbesserungen am Adobe Audience Manager-Quell-Connector | Sie können jetzt einzelne Erstanbietersegmente von Audience Manager bis zur Erfassung in Plattform filtern und auswählen sowie Erstanbieter-Eigenschaften herausfiltern. Weitere Informationen finden Sie im Lernprogramm unter [Erstellen eines Audience Manager-Quellconnectors](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
-| [!DNL Google BigQuery] Verbesserungen am Quellanschluss | Mit dem [!DNL BigQuery]-Quell-Connector können Sie jetzt Dateien mit einer Auflösung von mehr als 10 GB in einem Fluss erfassen. Weitere Informationen finden Sie unter [[!DNL BigQuery] Übersicht über den Quellanschluss](../../sources/connectors/databases/bigquery.md). |
-| Unterstützung komplexer Datentypen für Cloud-Datenspeicherung | Sie können jetzt komplexe Datentypen, wie z. B. Arrays in JSON-Datenspeicherung, erfassen, wenn Sie einen Cloud-Quell-Connector verwenden. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherung-Datenflusses [in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) oder [mit der  [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md). |
-| Unterstützung der Hauptschlüssel-basierten Authentifizierung für [!DNL Microsoft Dynamics]-Quelle | Sie können sich jetzt mit einem Hauptschlüssel als Alternative zur kennwortbasierten Authentifizierung bei Ihrem [!DNL Dynamics]-Konto authentifizieren. Weitere Informationen finden Sie unter [[!DNL Dynamics] Übersicht über den Quellanschluss](../../sources/connectors/crm/ms-dynamics.md). |
-| Benutzeroberflächenunterstützung für benutzerdefinierte Trennzeichen in Cloud-Datenspeicherung-Quellen | Sie können jetzt ein benutzerdefiniertes Spaltentrennzeichen wie ein Komma (`,`), ein Tabulator (`\t`) oder ein Pipe (`|`) festlegen, um durch Trennzeichen getrennte Dateien in der Benutzeroberfläche zu erfassen. Weitere Informationen finden Sie im Tutorial [Erstellen eines Datenflusses mit einem Cloud-Datenspeicherung-Quellanschluss](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) |
+| --- | --- |
+| [!DNL Google PubSub] | Sie können [!DNL Google PubSub] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen finden Sie unter [[!DNL Google PubSub] Connector overview](../../sources/connectors/cloud-storage/google-pubsub.md). |
+| [!DNL Oracle Object Storage] | Sie können [!DNL Oracle Object Storage] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen finden Sie unter [[!DNL Oracle Object Storage] Connector overview](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
 
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Adobe Experience Platform Launch Server Side reduziert die Gewichtung von Websites und Programmen, indem Adobe Experience Platform Edge Network für Aufgaben verwendet wird, die normalerweise auf dem Client ausgeführt werden. Regeln in Experience Platform Launch Server Side können Daten transformieren und an neue Ziele senden, ohne die Client-seitigen Implementierungen zu ändern.
-
-Das Server-seitige Experience Platform Launch in Verbindung mit den Adobe Experience Platform Web- und mobilen SDKs ermöglicht Folgendes:
-
-- Führen Sie einen einzelnen Aufruf von der Seite aus, der eine Payload von Daten enthält, und verbinden Sie dann diese Daten Server-seitig, um den Client-seitigen Netzwerkverkehr zu reduzieren und Kunden ein schnelleres Erlebnis zu bieten.
-- Verringern Sie die Ladezeit von Webseiten, sodass Ihre Site den Best Practices der Branche bezüglich der Leistung entspricht.
-- Erhöhen Sie die Transparenz und Kontrolle darüber, welche Datentypen wohin gesendet werden, über alle Client-seitigen Eigenschaften.
-- Erstellen Sie eine Server-seitige Regel, um zuvor verfolgte Daten an ein neues Ziel zu senden.
-
-Weitere Informationen finden Sie in der [Dokumentation zum Plattformstart](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).
+Weitere allgemeine Informationen zu Quellen finden Sie im [Sources-Überblick](../../sources/home.md).
