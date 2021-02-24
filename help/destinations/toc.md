@@ -5,9 +5,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele weitere Anwendungsfälle.
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '455'
 ht-degree: 58%
 
 ---
@@ -92,7 +92,7 @@ ht-degree: 58%
    * E-Mail-Marketing-Ziele {#email-marketing}
       * [E-Mail-Marketing-Ziele – Übersicht](./catalog/email-marketing/overview.md)
       * [Adobe Campaign-Verbindung](./catalog/email-marketing/adobe-campaign.md)
-      * [Verbindung oracle Eloqua](./catalog/email-marketing/oracle-eloqua.md)
+      * [Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-Verbindung](./catalog/email-marketing/oracle-responsys.md)
       * [Salesforce-Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch-Erweiterungen {#launch-extensions}
@@ -117,6 +117,7 @@ ht-degree: 58%
       * [Social-Netzwerkziel erstellen](./catalog/social/workflow.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
+      * [Verbindung zur LinkedIn-Audience](./catalog/social/linkedin.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
       * [Zielort für die vorausschauende Erweiterung](./catalog/survey/foresee.md)
