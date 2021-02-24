@@ -3,7 +3,7 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 8b7befd9775654a2d55d28a64b4b104e7f9576aa
+source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
 workflow-type: tm+mt
 source-wordcount: '1001'
 ht-degree: 12%
@@ -86,7 +86,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
 Sie können E-Mail-Adressen vor der Einbindung in Adobe Experience Platform als Hash-E-Mail-Adressen festlegen oder Sie können in Experience Platform mit E-Mail-Adressen arbeiten und sie von unserem Algorithmus auf Aktivierung hash lassen.
 
-Weitere Informationen zum Eingeben von E-Mail-Adressen in der Experience Platform finden Sie unter [Überblick über die Batch-Erfassung](/help/ingestion/batch-ingestion/overview.md) und [Übersicht über die Dampfaufnahme](/help/ingestion/streaming-ingestion/overview.md).
+Weitere Informationen zum Eingeben von E-Mail-Adressen in Experience Platformen finden Sie unter [Überblick über die Stapelverarbeitung](/help/ingestion/batch-ingestion/overview.md) und [Übersicht über die Streaming-Erfassung](/help/ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Sie sicher, dass folgende Anforderungen erfüllt sind:
 
