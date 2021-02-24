@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK-Erweiterung Übersicht
 description: Weitere Informationen zur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 55%
+source-wordcount: '640'
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 55%
 
 Die Adobe Experience Platform Web SDK Extension sendet Daten aus Webeigenschaften über das Adobe Experience Platform Edge Network an das Adobe Experience Cloud. Die Adobe Experience Platform Web SDK-Erweiterung ermöglicht das Streamen von Daten zu Platform, die Synchronisierung von Identitäten, das Opt-in und die automatische Erfassung von Kontextdaten.
 
-## Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
+## Konfigurieren Sie die Erweiterung
 
 Dieser Abschnitt bietet eine Referenz zu den verfügbaren Optionen beim Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung.
 
@@ -47,11 +47,11 @@ Wenn bei der Erweiterung ein Fehler auftritt, wird dieser standardmäßig in der
 
 ### **[!UICONTROL Teilnahme aktivieren]**
 
-Wenn **[!UICONTROL Opt-in aktivieren]** aktiviert ist, kann die AEP Web SDK-Erweiterung Treffer halten, bis eine Teilnahme eingegangen ist. In der Erweiterung ist eine Aktion zum Einrichten der Opt-in-Einstellungen vorhanden.
+Wenn **[!UICONTROL Opt-in aktivieren]** aktiviert ist, kann die Erweiterung Treffer halten, bis die Teilnahme empfangen wird. In der Erweiterung ist eine Aktion zum Einrichten der Opt-in-Einstellungen vorhanden.
 
 ### **[!UICONTROL ECID migrieren aktivieren]**
 
-Die Adobe Experience Platform Web SDK-Erweiterung verwendet zum Speichern der ECID ein neues Cookie. Diese Einstellung ermöglicht die Kompatibilität zwischen dem neuen und alten Cookie zu Migrationszwecken. Adobe empfiehlt dringend, diese Option zu aktivieren, es sei denn, Sie haben keine vorhandenen Besucher mit einer ECID.
+Die Platform Web SDK-Erweiterung verwendet ein neues Cookie, um die ECID zu speichern. Diese Einstellung ermöglicht die Kompatibilität zwischen dem neuen und alten Cookie zu Migrationszwecken. Adobe empfiehlt dringend, diese Option zu aktivieren, es sei denn, Sie haben keine vorhandenen Besucher mit einer ECID.
 
 ### **[!UICONTROL Drittanbieter-Cookies verwenden]**
 
