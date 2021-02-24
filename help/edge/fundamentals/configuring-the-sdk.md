@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK konfigu
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;Umgebung;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;webSDK-Einstellungen;prehidingStyle;opacity;cookieDestinationEnabled;urlDestination Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 85bb984231a3069aad0c63707f5024612181798c
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 70%
+source-wordcount: '743'
+ht-degree: 69%
 
 ---
 
@@ -147,7 +147,7 @@ Aktiviert URL-Ziele [!DNL Audience Manager], was das Auslösen von URLs auf Grun
 | -------- | ------------ | ----------------- |
 | Boolesch | Nein | wahr |
 
-Wenn &quot;true&quot;, liest das SDK alte AMCV-Cookies und legt sie fest. Dies hilft beim Übergang zur Verwendung des Adobe Experience Platform Web SDK, während einige Teile der Site möglicherweise noch Besucher.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, wird vom SDK außerdem die Besucher-API für die ECID Abfrage. Auf diese Weise können Sie zwei Tags mit dem AEP Web SDK verwenden und immer noch die gleiche ECID haben.
+Wenn &quot;true&quot;, liest das SDK alte AMCV-Cookies und legt sie fest. Dies hilft beim Übergang zur Verwendung des Adobe Experience Platform Web SDK, während einige Teile der Site möglicherweise noch Besucher.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, wird vom SDK außerdem die Besucher-API für die ECID Abfrage. Auf diese Weise können Sie zwei Tags mit dem Adobe Experience Platform Web SDK verwenden und immer noch dieselbe ECID haben.
 
 ### `thirdPartyCookiesEnabled`
 
