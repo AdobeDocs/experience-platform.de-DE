@@ -3,7 +3,7 @@ keywords: linkedin-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;linkedin
 title: Verbindung zu LinkedIn-Audiencen
 description: Aktivieren Sie Profil für Ihre LinkedIn-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, basierend auf Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
+source-git-commit: 48cc2017e4a65321fb7ef54ea26aca0a98606516
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 4%
@@ -11,7 +11,7 @@ ht-degree: 4%
 ---
 
 
-# [!DNL LinkedIn Matched Audience] connection
+# [!DNL LinkedIn Matched Audiences] connection
 
 Aktivieren Sie Profil für Ihre [!DNL LinkedIn]-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, basierend auf Hash-E-Mails und mobilen IDs.
 
