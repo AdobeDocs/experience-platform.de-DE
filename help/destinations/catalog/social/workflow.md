@@ -4,17 +4,17 @@ title: Social-Netzwerkziel erstellen
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten in Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 19e38faa84d365682e97c2ec1c6352d127c0ac29
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 53%
+source-wordcount: '460'
+ht-degree: 52%
 
 ---
 
 
 # Social-Netzwerkziel {#social-network-destinations-workflow} erstellen
 
-Dieses Lernprogramm verwendet [!DNL Facebook] als Beispiel, aber der Arbeitsablauf in Adobe Experience Platform ist für alle Social-Netzwerk-Ziele gleich, sobald dem Produkt mehr hinzugefügt wird.
+Dieses Lernprogramm verwendet [!DNL Facebook] als Beispiel, aber der Adobe Experience Platform-Arbeitsablauf ist für alle Social-Netzwerkziele gleich.
 
 Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf zur Kategorie **[!UICONTROL Social]** durch. Wählen Sie Ihr bevorzugtes soziales Netzwerkziel und dann **[!UICONTROL Konfigurieren]**.
 
@@ -38,16 +38,19 @@ Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ih
 
 Geben Sie im **[!UICONTROL Setup-Schritt]** einen [!UICONTROL Namen] und eine [!UICONTROL Beschreibung] für die Aktivierung ein und geben Sie die [!UICONTROL Kontokennung] Ihres Anzeigenkontos für das soziale Netzwerk ein.
 
-In diesem Schritt können Sie auch eine beliebige **[!UICONTROL Marketingaktion]** auswählen, die auf dieses Ziel angewendet werden soll. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+>[!IMPORTANT]
+>
+> Bei [!DNL Facebook]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL Facebook Ad Account ID]. Sie finden diese ID im [!DNL Facebook Ads Manager]. Stellen Sie der ID `act_` wie folgt voran:
 
-Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die obigen Felder ausgefüllt haben.
+![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Setup-Schritt](../../assets/catalog/social/workflow/setup.png)
 
 >[!IMPORTANT]
 >
-> * Für [!DNL Facebook]-Ziele. **[!UICONTROL Ihre Konto-]** ID  [!DNL Facebook Ad Account ID]. Sie finden diese ID im [!DNL Facebook Ads Manager]. Stellen Sie der ID `act_` wie folgt voran:
+> Bei [!DNL LinkedIn]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL LinkedIn Campaign Manager Account ID]. Sie finden diese ID im [!DNL LinkedIn Campaign Manager].
 
+In diesem Schritt können Sie auch eine beliebige **[!UICONTROL Marketingaktion]** auswählen, die auf dieses Ziel angewendet werden soll. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
-![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Setup-Schritt](../../assets/catalog/social/workflow/setup.png)
+Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die obigen Felder ausgefüllt haben.
 
 Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen sehen Sie sich den nächsten Abschnitt [Aktivieren von Segmenten für soziale Netzwerke](#activate-segments) an, in dem der restliche Workflow erläutert wird.
 
