@@ -2,26 +2,28 @@
 keywords: Experience Platform;Home;beliebte Themen;Identitätsdiagramm-Viewer;Identitätsdiagramm-Viewer;Diagramm-Viewer;Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
 solution: Experience Platform
 title: Übersicht über den Identitätsdiagramm-Viewer
-topic: tutorial
+topic: Tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
 translation-type: tm+mt
-source-git-commit: 8ec904d584225113a6791533ff544560fc2efdf3
+source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 2%
+source-wordcount: '1038'
+ht-degree: 3%
 
 ---
 
 
-# (Beta) Übersicht über den Identitätsdiagramm-Viewer
-
->[!NOTE]
->
->Der Identitätsdiagramm-Viewer befindet sich derzeit in der Betaphase. Seine Merkmale können sich ändern.
+# Übersicht über den Identitätsdiagramm-Viewer
 
 Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg. Alle Kundenidentitätsdiagramme werden von Adobe Experience Platform Identity Service in Echtzeit verwaltet und aktualisiert, um die Aktivität der Kunden zu gewährleisten.
 
 Mit dem Identitätsdiagramm-Viewer in der Benutzeroberfläche der Plattform können Sie visualisieren und besser verstehen, welche Kundenidentitäten zusammengeführt werden und auf welche Weise. Mit dem Viewer können Sie verschiedene Teile des Diagramms ziehen und mit ihnen interagieren. So können Sie komplexe Identitätsbeziehungen untersuchen, effizienter debuggen und von einer größeren Transparenz bei der Verwendung von Informationen profitieren.
+
+## Tutorial
+
+Das folgende Video soll Ihnen das Verständnis des Identitätsdiagramm-Viewers erleichtern.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Erste Schritte
 
@@ -50,6 +52,20 @@ Wählen Sie den gewünschten Namensraum aus und klicken Sie auf **[!UICONTROL W�
 Wenn Sie einen Namensraum ausgewählt haben, geben Sie den entsprechenden Kundenwert in das Textfeld **[!UICONTROL Identitätswert]** ein und wählen Sie **[!UICONTROL Ansicht]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Zugriff auf den Identitätsdiagramm-Viewer von Datasets
+
+Sie können auch über die DataSets-Oberfläche auf den Identitätsdiagramm-Viewer zugreifen. Wählen Sie auf der Seite &quot;Datensätze [!UICONTROL Durchsuchen]&quot;einen Datensatz, mit dem Sie interagieren möchten, und wählen Sie **[!UICONTROL Vorschau-Datensatz]**.
+
+![Vorschau-Datensatz](../images/identity-graph-viewer/preview-dataset.png)
+
+Wählen Sie im Fenster &quot;Vorschau&quot;ein Fingerabdrucksymbol aus, um die Identitäten im Identitätsdiagramm-Viewer anzuzeigen.
+
+>[!TIP]
+>
+>Das Symbol &quot;Fingerabdruck&quot;wird nur angezeigt, wenn der Datensatz zwei oder mehr Identitäten aufweist.
+
+![Fingerprint](../images/identity-graph-viewer/fingerprint.png)
 
 Der Identitätsdiagramm-Viewer wird angezeigt. Auf der linken Seite des Bildschirms befindet sich das Identitätsdiagramm mit allen Identitäten, die mit dem ausgewählten Namensraum verknüpft sind, sowie dem eingegebenen Identitätswert. Jeder Identitätsknoten besteht aus einem Namensraum und dem zugehörigen ID-Wert. Sie können eine beliebige Identität auswählen und halten, um das Diagramm zu ziehen und mit ihm zu interagieren. Alternativ können Sie den Mauszeiger über eine Identität bewegen, um Informationen zum ID-Wert anzuzeigen. Die Diagrammausgabe wird auch als eingebrachte Liste in der Mitte des Bildschirms angezeigt.
 
@@ -109,8 +125,9 @@ Fehler können beim Zugriff auf den Identitätsdiagramm-Viewer auftreten. Im Fol
 
 Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Plattform-Benutzeroberfläche erkunden können. Weitere Informationen zu Identitäten in der Plattform finden Sie unter [Übersicht über den Identitätsdienst](../home.md)
 
-## Zusätzliche Ressourcen
+## Änderungsprotokoll
 
-Das folgende Video soll Ihnen das Verständnis des Identitätsdiagramm-Viewers erleichtern.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+| Datum | Aktion |
+| ---- | ------ |
+| 2021-01 | <ul><li>Unterstützung für Streaming von erfassten Daten und Nicht-Produktions-Sandbox hinzugefügt.</li><li>Geringfügige Fehlerbehebungen.</li></ul> |
+| 2021-02 | <ul><li>Der Identitätsdiagramm-Viewer wird über die DataSet-Vorschau zugänglich gemacht.</li><li>Geringfügige Fehlerbehebungen.</li><li>Der Identitätsdiagramm-Viewer ist im Allgemeinen verfügbar.</li></ul> |
