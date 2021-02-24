@@ -5,7 +5,7 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele weitere Anwendungsfälle.
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 translation-type: tm+mt
-source-git-commit: 2ee4014de1eb5c02ee2b554bb543d2bee5854922
+source-git-commit: db2e5d51a5ed07b91997df8a566272c86a7c1708
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 58%
@@ -117,7 +117,7 @@ ht-degree: 58%
       * [Social-Netzwerkziel erstellen](./catalog/social/workflow.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
-      * [Verbindung zur LinkedIn-Audience](./catalog/social/linkedin.md)
+      * [Verbindung zu LinkedIn-Audiencen](./catalog/social/linkedin.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
       * [Zielort für die vorausschauende Erweiterung](./catalog/survey/foresee.md)
