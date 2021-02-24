@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Streaming;Streaming-Erfassung;Streaming-Validierung;Validierung;Streaming-Erfassungsvalidierung;Validierung;Synchrones Validieren;Synchrones Validieren;Asynchrone Validierung;Asynchrone Validierung;asynchrone Validierung;
 solution: Experience Platform
 title: Validierung der Streaming-Ingestion
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: Mit der Streaming-Erfassung können Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit nach Adobe Experience Platform hochladen. Die Streaming-Erfassungsmethode-APIs unterstützen zwei Überprüfungsmodi - synchron und asynchron.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 8f863eb3427097406237aa443262917fdc3f3e1c
 workflow-type: tm+mt
-source-wordcount: '875'
-ht-degree: 22%
+source-wordcount: '898'
+ht-degree: 21%
 
 ---
 
@@ -66,6 +66,10 @@ Die synchrone Validierung ist eine Methode der Validierung, die sofort Rückmeld
 Standardmäßig ist die synchrone Überprüfung nicht aktiviert. Um sie zu aktivieren, müssen Sie den optionalen Parameter für die Abfrage `synchronousValidation=true` bei API-Aufrufen einreichen. Darüber hinaus ist eine synchrone Validierung derzeit nur verfügbar, wenn sich Ihr Stream-Endpunkt im VA7-Rechenzentrum befindet.
 
 Wenn eine Nachricht während der synchronen Überprüfung fehlschlägt, wird die Nachricht nicht in die Ausgabelange geschrieben, was Benutzern sofortige Rückmeldungen gibt.
+
+>[!NOTE]
+>
+>Änderungen am Schema sind möglicherweise nicht sofort verfügbar, da die Änderungen zwischengespeichert werden. Die Aktualisierung des Cache dauert bis zu 15 Minuten.
 
 **API-Format**
 
