@@ -1,9 +1,9 @@
 ---
-title: Verwenden von Offer Decisioning mit dem Platform Web SDK
-description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche oder -API erstellen.
-keywords: Angebot-Entscheidungsfindung;Entscheidungsfindung;Web-SDK;Plattform-Web-SDK;personalisierte Angebot;Angebote bereitstellen;Angebot-Versand;Angebot-Personalisierung;
+title: Verwenden von Offer decisioning mit dem Platform Web SDK
+description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
+keywords: offer decisioning;Entscheidungsfindung;Web-SDK;Plattform-Web-SDK;personalisierte Angebot;Angebote bereitstellen;Angebot-Versand;Angebot-Personalisierung;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 16%
@@ -11,13 +11,13 @@ ht-degree: 16%
 ---
 
 
-# Verwenden von Offer Decisioning mit dem Platform Web SDK
+# Verwenden von Offer decisioning mit dem Platform Web SDK
 
 >[!NOTE]
 >
 >Ausgewählten Benutzern wird derzeit vorab Zugriff auf die Verwendung von Offer Decisioning im Adobe Experience Platform Web SDK gewährt. Diese Funktion ist nicht für alle IMS-Organisationen verfügbar.
 
-Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer Decisioning-Benutzeroberfläche (UI) oder APIs erstellen.
+Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer decisioning-Benutzeroberfläche (UI) oder APIs erstellen.
 
 ## Voraussetzungen
 
@@ -27,11 +27,11 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstel
 
 ## Terminologie
 
-Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und weitere Ansichten finden Sie im [Offer Decisioning Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie zu verstehen. Weitere Informationen und die Ansicht zusätzlicher Begriffe finden Sie im [Offer decisioning-Glossar](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
 
 * **Container:** Ein Container ist ein Isolationsmechanismus, der unterschiedliche Anliegen voneinander trennt. Die Container-ID ist das erste Pfadelement für alle Repository-APIs. Alle Entscheidungsobjekte befinden sich in einem Container.
 
-* **Entscheidungsfelder:** Für Offer Decisioning sind dies die Base64-kodierten JSON-Zeichenfolgen mit den Aktivitäten- und Platzierungs-IDs, die der Angebot-Entscheidungsdienst zum Vorschlagen von Angeboten verwenden soll.
+* **Entscheidungsfelder:** Für Offer decisioning sind dies die Base64-kodierten Zeichenfolgen von JSON, die die Aktivität- und Platzierungs-IDs enthalten, die der offer decisioning-Dienst zum Vorschlagen von Angeboten verwenden soll.
 
    *Entscheidungsbereich JSON:*
 
@@ -58,14 +58,14 @@ Bei der Arbeit mit Offer Decisioning ist es wichtig, die folgende Terminologie z
 
 * **Identität**: Weitere Informationen finden Sie in dieser Dokumentation, in der erläutert wird, wie  [Platform Web SDK den Identitätsdienst](../../identity/overview.md) nutzt.
 
-## Aktivieren von Offer Decisioning
+## Aktivieren von Offer decisioning
 
-Um Offer Decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführen:
+Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführen:
 
-1. Adobe Experience Platform in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) aktiviert und das Kontrollkästchen &quot;Offer Decisioning&quot;
+1. Adobe Experience Platform in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) aktiviert und das Kontrollkästchen &quot;Offer decisioning&quot;
    ![Angebot-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Befolgen Sie die Anweisungen zum Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. [ Hier finden Sie eine [Schnellanleitung zum Plattformstart](https://docs.adobe.com/content/help/de-DE/launch/using/intro/get-started/quick-start.html)).
-3. [Konfigurieren Sie das ](../../fundamentals/configuring-the-sdk.md) SDKfor Offer Decisioning. Weitere Offer Decisioning-spezifische Schritte finden Sie unten.
+2. Befolgen Sie die Anweisungen zum Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. [ Hier finden Sie eine [Schnellanleitung zum Beginn zu Platform launch](https://docs.adobe.com/content/help/de-DE/launch/using/intro/get-started/quick-start.html)).
+3. [Konfigurieren Sie das ](../../fundamentals/configuring-the-sdk.md) SDKfor Offer decisioning. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
    * Eigenständiges installiertes SDK
       1. Konfigurieren Sie die Aktion &quot;sendEvent&quot;mit `decisionScopes`
 
@@ -78,10 +78,10 @@ Um Offer Decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
           ]
       })
       ```
-   * Plattformstart installiertes SDK
-      1. [Eigenschaft &quot;Plattformstart&quot;erstellen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html)
-      2. [Einbettungscode für den Plattformstart Hinzufügen](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installieren und konfigurieren Sie die AEP Web SDK-Erweiterung mit der Edge-Konfiguration, die Sie gerade erstellt haben, indem Sie die Konfiguration aus der Dropdownliste &quot;Edge-Konfiguration&quot;auswählen. Nützliche Dokumentation zu [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
+   * platform launch installiertes SDK
+      1. [Erstellen einer Platform launch-Eigenschaft](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html)
+      2. [hinzufügen des Platform launch-Einbettungscodes](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      3. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit der Edge-Konfiguration, die Sie gerade erstellt haben, indem Sie die Konfiguration aus der Dropdownliste &quot;Edge-Konfiguration&quot;auswählen. Nützliche Dokumentation zu [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
