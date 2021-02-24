@@ -5,10 +5,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Segmentierungs-Service
 breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
 translation-type: tm+mt
-source-git-commit: b37cf48b839ac30026162d2224528d8aabd3d263
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 78%
+source-wordcount: '157'
+ht-degree: 75%
 
 ---
 
@@ -56,6 +56,7 @@ ht-degree: 78%
    - [Erstellen eines dynamischen Segments (Video)](video/create-a-dynamic-segment.md)
    - [Erstellen eines Segments mit mehreren Entitäten (Video)](video/create-multi-entity-segments.md)
    - [Bewerten eines Segments](tutorials/evaluate-a-segment.md)
+   - [Importieren und Verwenden externer Audiencen](tutorials/using-external-audiences.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Erzwingen der Datenverwendungskonformität für Segmente](tutorials/governance.md)
 - [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
