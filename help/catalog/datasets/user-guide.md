@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datensatz aktivieren;Datensatz;Datensatz;Datensatz
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Datasets
-topic: datasets
+topic: Datensätze
 description: Erfahren Sie, wie Sie allgemeine Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche durchführen.
 translation-type: tm+mt
-source-git-commit: 2b8c08dad34bcd69368c00050323835f05379c82
+source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1141'
 ht-degree: 71%
 
 ---
@@ -97,7 +97,7 @@ Der Schritt **[!UICONTROL Daten hinzufügen]** wird angezeigt. Laden Sie die CSV
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Datensatz für Echtzeit-Kundenprofile aktivieren
+## Datensatz für Echtzeit-Kundenprofile aktivieren {#enable-profile}
 
 Jeder Datensatz bietet die Möglichkeit, Kundenprofile mit den erfassten Daten anzureichern. Zu diesem Zweck muss das Schema, dem der Datensatz entspricht, für die Verwendung in [!DNL Real-time Customer Profile] kompatibel sein. Ein kompatibles Schema erfüllt folgende Anforderungen:
 
@@ -124,7 +124,7 @@ Sie können einen Datensatz löschen, indem Sie zunächst auf den Bildschirm **[
 
 >[!NOTE]
 >
->Datasets, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]), können nicht gelöscht werden.
+>Datasets, die von Anwendungen und Diensten der Adobe erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]), können nicht gelöscht werden.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
