@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 7142d13b144f34d92087affe101c5ccfcb52d90e
+source-git-commit: a2470d44512821996a2d5ee44722cb24990d1054
 workflow-type: tm+mt
-source-wordcount: '770'
-ht-degree: 36%
+source-wordcount: '1069'
+ht-degree: 34%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 36%
 
 **Versionsdatum: 24. Februar 2021**
 
+Neue Funktionen in Adobe Experience Platform:
+
+- [(Beta) Dashboard](#dashboards)
+
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## (Beta) Dashboard {#dashboards}
+
+Adobe Experience Platform bietet mehrere Dashboard zur Ansicht wichtiger Informationen über die Daten Ihres Unternehmens, wie sie bei täglichen Schnappschüssen erfasst werden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Dashboard für Profil, Segmente, Ziele und Lizenznutzung (Beta) | **Hinweis: Die Dashboard-Funktionalität befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketingfachablauf innerhalb der Plattform integriert. Diese Dashboard sind ohne zusätzliche IT-Unterstützung oder ohne den Zeit- und Arbeitsaufwand verfügbar, der andernfalls für den Export und die Verarbeitung von Daten mit zusätzlicher Entwicklung und Implementierung des Data Warehouse erforderlich wäre. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -78,6 +93,18 @@ Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, eine bessere Ansi
 | Identitätsdiagramm Viewer | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, sodass Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
 
 Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Übersicht über den Identitätsdienst](../../identity-service/home.md).
+
+## Echtzeit-Kundenprofil {#profile}
+
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. [!DNL Profile] ermöglicht Ihnen die Konsolidierung von Kundendaten in einer einheitlichen Ansicht, die eine umsetzbare und zeitgestempelte Kundeninteraktion ermöglicht.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Berechnete Attribute (Alpha) | ***Hinweis: Diese Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Anschließend können Sie die Aggregat in Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Zähler, Summe, Durchschnitt, min, max, true/false. Berechnete Attribute stehen derzeit nur über die API zur Verfügung. Weitere Informationen finden Sie unter [Übersicht über berechnete Attribute](../../profile/computed-attributes/overview.md). |
+
+Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Schulungen und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Profil von Kunden](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
