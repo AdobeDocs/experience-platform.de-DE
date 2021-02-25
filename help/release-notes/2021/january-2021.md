@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 translation-type: tm+mt
-source-git-commit: 2e3a6acbfaa7f733a9843068c00f31f0b7f535b6
+source-git-commit: 18712835b2408b24cd2735b19c94bf1b1fe50df1
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 31%
+source-wordcount: '712'
+ht-degree: 30%
 
 ---
 
@@ -21,6 +21,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -52,6 +53,19 @@ Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-pr
 | Erweiterte ID-Übereinstimmung | Die Funktionen für Übereinstimmungsraten bei Audiencen in [!DNL Facebook Custom Audiences] und [!DNL Google Customer Match] wurden verbessert, indem zusätzliche Identitätszuordnungen wie externe IDs, Telefonnummern und Mobilgeräte-IDs unterstützt werden. Weitere Informationen finden Sie in der folgenden Dokumentation: <ul><li>[Facebook-Ziel](../../destinations/catalog/social/facebook.md)</li><li>[Google-Kundenübereinstimmungsziel](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profile und Segmente für ein Ziel aktivieren](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md).
+
+## Echtzeit-Kundenprofil {#profile}
+
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. [!DNL Profile] ermöglicht Ihnen die Konsolidierung von Kundendaten in einer einheitlichen Ansicht, die eine umsetzbare und zeitgestempelte Kundeninteraktion ermöglicht.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Datensatz aus Profil Store löschen | Wenn Sie einen Datensatz aus dem Data Lake der Experience Platform löschen, wird er automatisch auch aus dem Profil-Store gelöscht. Sie müssen nicht mehr den API-Endpunkt für Systemaufträge verwenden, um eine Löschanforderung zu erstellen, um den Datensatz explizit aus dem Profil Store zu löschen. Weitere Informationen finden Sie im Handbuch [API-Endpunkt für Systemaufträge](../../profile/api/profile-system-jobs.md) des Profils. |
+| Geschätzte Anzahl der ID-Namensraum für ein bestimmtes Segment | Die Vorschauen-API meldet nun für geschätzte Profil Folgendes:<ul><li>Gesamtanzahl der geschätzten Profil in einem Segment für einen bestimmten Namensraum.</li><li>Gesamtanzahl der geschätzten Profil im Schema der Profil-Vereinigung für einen bestimmten Namensraum.</li></ul>Weitere Informationen finden Sie im Handbuch [Profil Vorschau API endpoint guide](../../profile/api/preview-sample-status.md). |
+
+Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Schulungen und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Profil von Kunden](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
