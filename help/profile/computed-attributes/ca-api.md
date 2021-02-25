@@ -5,7 +5,7 @@ topic: guide
 type: Dokumentation
 description: In Adobe Experience Platform sind berechnete Attribute Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. In diesem Handbuch wird das Erstellen, Ansicht, Aktualisieren und Löschen von berechneten Attributen mithilfe der Echtzeit-Customer Profil API beschrieben.
 translation-type: tm+mt
-source-git-commit: 6ae96ab25bd7992fe93d15bfc16b58a2fe7b4b7c
+source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
 workflow-type: tm+mt
 source-wordcount: '2279'
 ht-degree: 61%
@@ -96,7 +96,7 @@ Ein erfolgreich erstelltes berechnetes Attribut gibt den HTTP-Status 200 (OK) un
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
     "imsOrgId": "{IMS_ORG}",
     "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
         "type": "production",
         "default": true
