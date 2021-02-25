@@ -2,19 +2,19 @@
 keywords: Experience Platform;Home;beliebte Themen;Echtzeit-Profil des Kunden;Identitätsdienst;
 solution: Experience Platform
 title: Tutorials zum Echtzeit-Kundenprofil
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Tutorials für die einzelnen Workflows bereitgestellt.
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 0aa59a5375757f81d63ac43d778ff2c7179d449b
 workflow-type: tm+mt
-source-wordcount: '1011'
-ht-degree: 25%
+source-wordcount: '795'
+ht-degree: 28%
 
 ---
 
 
-# [!DNL Real-time Customer Profile] und [!DNL Identity Service] konfigurieren
+# Konfigurieren von [!DNL Real-time Customer Profile]
 
 Um [!DNL Real-time Customer Profile] für Ihr Unternehmen zu konfigurieren, müssen Sie mehrere separate Workflows durchführen. In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Tutorials für die einzelnen Workflows bereitgestellt.
 
@@ -32,16 +32,7 @@ Weitere Informationen finden Sie im Benutzerhandbuch [Echtzeit-Profil des Kunden
 
 ## Echtzeit-Kundenprofil-API
 
-Die Echtzeit-Client-Profil-API enthält mehrere Endpunkte. Mit Profil können Sie heterogene Kundendaten aus verschiedenen Kanälen, z. B. Online-, Offline-, CRM- und Drittanbieter-Daten, in einer einheitlichen Ansicht zusammenfassen, die eine verwertbare Auflistung mit Zeitstempel für jede Kundeninteraktion bietet. Weitere Informationen zu den einzelnen verfügbaren Endpunkten und Anwendungsfällen finden Sie in der Übersicht über die [Echtzeit-Kunden-Profil-API](../profile/api/overview.md).
-
-**Die folgenden API-Entwicklerhandbücher stehen zur Verfügung:**
-- [Berechnete Attribute (Alpha)  ](../profile/api/computed-attributes.md) - Erfahren Sie mehr über Anwendungsfälle für berechnete Attribute sowie darüber, wie ein berechnetes Attribut konfiguriert, aufgerufen, aktualisiert und gelöscht werden kann.
-- [Edge-Projektionen](../profile/api/edge-projections.md)  - Erfahren Sie, wie Sie Ziele für die Projektion, Ansicht, Aktualisierung, Löschen und Liste erstellen, aktualisieren und löschen. Außerdem enthält dieses Dokument Informationen zur Auflistung und Erstellung von Projektionskonfigurationen und Beispiele zur Verwendung von Selektoren.
-- [Entitäten (Profil-Zugriff)](../profile/api/entities.md)  - Erfahren Sie, wie Sie auf Profil-Daten durch Identitäten oder eine Liste von Identitäten zugreifen können. Erfahren Sie außerdem, wie Sie mithilfe von Identitäten, einem einzelnen Profil nach Identität und dem Zugriff auf mehrere Schema-Entitäten auf Zeitreihen-Ereignis für mehrere Profil zugreifen können.
-- [Exportaufträge (Profil-Export)](../profile/api/export-jobs.md)  - Erfahren Sie, wie Sie Exportaufträge erstellen, Ansicht, überwachen und abbrechen.
-- [Richtlinien](../profile/api/merge-policies.md)  zusammenführen - Erfahren Sie mehr über die Komponenten von Zusammenführungsrichtlinien und wie Sie auf eine Zusammenführungsrichtlinie zugreifen, diese erstellen, aktualisieren und löschen.
-- [Beispielstatus der Vorschau (Profil-Vorschau)](../profile/api/preview-sample-status.md)  - Erfahren Sie, wie Sie Ihren letzten Beispielstatus, die Verteilung des Liste-Profils nach Datensatz und die Verteilung des Liste-Profils nach Namensraum Ansicht festlegen.
-- [Profil-Systemaufträge (Anforderungen löschen)](../profile/api/profile-system-jobs.md)  - Erfahren Sie, wie Sie eine Anforderung zum Löschen eines Datensatzes oder Stapels im Profil Store Ansicht, erstellen und entfernen.
+Die Echtzeit-Client-Profil-API enthält mehrere Endpunkte. Weitere Informationen zu den einzelnen verfügbaren Endpunkten und Anwendungsfällen finden Sie in der Übersicht über die [Echtzeit-Kunden-Profil-API](../profile/api/overview.md).
 
 Weitere Informationen und die erforderlichen Werte für die Ausführung von CRUD-Operationen mit der Echtzeit-Client-Profil-API finden Sie im Handbuch [Erste Schritte](../profile/api/getting-started.md).
 
