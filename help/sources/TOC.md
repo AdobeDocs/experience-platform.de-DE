@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 15%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 15%
       - [FTP-Anschluss](connectors/cloud-storage/ftp.md)
       - [Google Cloud-Datenspeicherung-Connector](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
-      - [Oracle Object Datenspeicherung](connectors/cloud-storage/oracle-object-storage.md)
+      - [Oracle-Objekt-Datenspeicherung](connectors/cloud-storage/oracle-object-storage.md)
       - [SFTP-Anschluss](connectors/cloud-storage/sftp.md)
       - [Amazon S3- und Azurblase-Stecker](connectors/cloud-storage/blob-s3.md)
    - CRM {#crm}
@@ -53,8 +53,8 @@ ht-degree: 15%
       - [Apache Hive auf der Azurblauen HDInsights-Steckverbindung](connectors/databases/hive.md)
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
-      - [Azure Synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
+      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -88,7 +88,7 @@ ht-degree: 15%
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
          - [Google Cloud-Datenspeicherung](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
-         - [Oracle Object Datenspeicherung](tutorials/api/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle-Objekt-Datenspeicherung](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -101,7 +101,7 @@ ht-degree: 15%
          - [Apache Hive auf Azurblauer HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark auf Azurblauen HDInsights](tutorials/api/create/databases/spark.md)
          - [Azurblauer Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Datenspeicherung](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -148,6 +148,7 @@ ht-degree: 15%
    - [Eine Datensatzverbindung erstellen](tutorials/api/create-dataset-base-connection.md)
    - [Überwachen von Datenflüssen](tutorials/api/monitor.md)
    - [Aktualisieren von Verbindungen](tutorials/api/update.md)
+   - [Aktualisieren von Datenflüssen](tutorials/api/update-dataflows.md)
    - [Verbindungen löschen](tutorials/api/delete.md)
    - [Datenflüsse löschen](tutorials/api/delete-dataflows.md)
 - UI-Tutorials {#ui-tutorials}
@@ -170,7 +171,7 @@ ht-degree: 15%
          - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
          - [Google Cloud-Datenspeicherung](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
          - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
-         - [Oracle Object Datenspeicherung](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+         - [Oracle-Objekt-Datenspeicherung](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 und Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - CRM {#crm}
@@ -184,7 +185,7 @@ ht-degree: 15%
          - [Apache Hive auf Azurblauer HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark auf Azurblauen HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azurblauer Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Datenspeicherung](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Abfrage](tutorials/ui/create/databases/bigquery.md)
