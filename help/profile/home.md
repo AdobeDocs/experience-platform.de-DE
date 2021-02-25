@@ -4,10 +4,10 @@ title: Übersicht über das Echtzeit-Profil von Kunden
 topic: guide
 description: Das Echtzeit-Kundenprofil ist ein allgemeiner Suchentitäten-Speicher, in dem Informationen aus verschiedensten Datenquellen des Unternehmens zusammengeführt und zum Abruf verfügbar gemacht werden. Diese Daten werden in Form von individuellen Kundenprofilen sowie zugehörigen im Zeitverlauf erfassten, so genannten Zeitreihen-Ereignissen aufbereitet, die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '1883'
-ht-degree: 41%
+source-wordcount: '1825'
+ht-degree: 39%
 
 ---
 
@@ -36,11 +36,11 @@ Der Profil-Store verwendet eine Microsoft Azurblase Cosmos DB-Infrastruktur und 
 
 Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Sie vermeiden können, [Erlebnisdatenmodell (XDM)-Schema](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundendienstprogramm nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Leistungsbeeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der [Profil Guardrails](guardrails.md) Dokumentation.
 
-### (Alpha) Profil Dashboard {#profile-dashboard}
+### (Beta) Profil Dashboard {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->Die Dashboard-Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Dashboard-Funktion befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
 Die Benutzeroberfläche der Experience Platform bietet ein Dashboard, mit dem Sie wichtige Informationen zu Ihren Echtzeit-Kundendaten, wie sie in einem täglichen Schnappschuss erfasst werden, Ansichten vornehmen können. Weitere Informationen zum Zugriff auf und zum Arbeiten mit dem [!DNL Profile]-Dashboard in der Benutzeroberfläche sowie detaillierte Informationen zu den im Dashboard angezeigten Metriken finden Sie im Handbuch [Profil Dashboard UI guide](ui/profile-dashboard.md).
 
@@ -78,9 +78,9 @@ Weitere Informationen zu Schemas in der Vereinigung, einschließlich dem Zugriff
 
 >[!IMPORTANT]
 >
->Die Funktion für berechnete Attribute ist alphanumerisch. Dokumentation und Funktionalität können sich ändern.
+>Die Funktion für berechnete Attribute ist alphanumerisch. Die Dokumentation und Funktionalität können sich ändern.
 
-Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren. Jedes berechnete Attribut enthält einen Ausdruck oder eine „Regel“, der bzw. die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut oder Ereignis speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Weitere Informationen zu berechneten Attributen und schrittweise Anleitungen zum Arbeiten mit ihnen mithilfe der [!DNL Real-time Customer Profile]-API finden Sie im Handbuch [Berechnete Attribute endpoint Guide](api/computed-attributes.md). Dieses Handbuch hilft Ihnen, die Rolle von berechneten Attributen in Adobe Experience Platform besser zu verstehen. Es enthält Beispiel-API-Aufrufe zur Durchführung grundlegender CRUD-Vorgänge.
+Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Weitere Informationen zu berechneten Attributen, einschließlich eines Verständnisses der Rolle, die berechnete Attribute innerhalb von Adobe Experience Platform spielen, erhalten Sie zunächst unter [Übersicht über berechnete Attribute](computed-attributes/overview.md).
 
 ## Profil und Segmente
 
