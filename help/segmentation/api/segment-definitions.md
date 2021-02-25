@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Segmentdefinition;Segmentdefinitionen;API;API
 solution: Experience Platform
 title: API-Endpunkt für Segmentdefinitionen
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Der Endpunkt "Segmentdefinitionen"in der Adobe Experience Platform Segmentierungsdienst-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentdefinitionen für Ihr Unternehmen.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1124'
 ht-degree: 27%
 
 ---
@@ -197,6 +197,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | Gibt die Wertstruktur des Ausdrucks an. Derzeit wird folgendes Format unterstützt: <ul><li>`pql/text`: Eine Textdarstellung einer Segmentdefinition gemäß der veröffentlichten PQL-Grammatik.  Beispiel: `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Ein Ausdruck, der dem unter `expression.format` angegebenen Typ entspricht. |
 | `description` | Eine für Menschen lesbare Beschreibung der Definition. |
+
+>[!NOTE]
+>
+>Ein Segmentdefinitionswert kann auch auf ein berechnetes Attribut verweisen. Weitere Informationen finden Sie im Handbuch [API-Endpunkt für berechnete Attribute](../../profile/computed-attributes/ca-api.md)
+>
+>Die Funktion für berechnete Attribute ist alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
 **Antwort**
 
