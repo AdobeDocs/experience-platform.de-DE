@@ -4,10 +4,10 @@ audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 translation-type: tm+mt
-source-git-commit: cab7ba65cc62d8cab402bc23ea38c17d77841363
+source-git-commit: 08eff53f107549fab0f167a6c206b632f3c8c183
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 44%
+source-wordcount: '122'
+ht-degree: 40%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 44%
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
-   * [(Alpha) Berechnete Attribute](api/computed-attributes.md)
    * [Edge-Projektionen](api/edge-projections.md)
    * [Entitäten ([!DNL Profile] Zugriff)](api/entities.md)
    * [Exportaufträge ([!DNL Profile] Export)](api/export-jobs.md)
@@ -35,6 +34,11 @@ ht-degree: 44%
    * [Erstellen von Zusammenführungsrichtlinien (Video)](video/create-merge-policies.md)
    * [Handbuch zur Benutzeroberfläche von Vereinigung Schema](ui/union-schema.md)
    * [Übersicht über das Schema der Vereinigung (Video)](video/union-schemas-overview.md)
+* (Alpha) Berechnete Attribute {#computed-attributes}
+   * [Übersicht](computed-attributes/overview.md)
+   * [API für berechnete Attribute](computed-attributes/ca-api.md)
+   * [Berechnete Attributfelder konfigurieren](computed-attributes/configure-api.md)
+   * [BeispielAusdruck](computed-attributes/expressions.md)
 * Tutorials {#tutorials}
    * [Daten Hinzufügen [!DNL Profile]](tutorials/add-profile-data.md)
    * [DataSet  [!DNL Profile] & [!DNL Identity] forService konfigurieren](tutorials/dataset-configuration.md)
