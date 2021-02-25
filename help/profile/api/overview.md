@@ -4,10 +4,10 @@ title: Handbuch zur Echtzeit-Client-Profil-API
 topic: guide
 description: Mit der Echtzeit-Client-Profil-API können Entwickler Profil-Daten, einschließlich Ansicht-Profilen, prüfen und bearbeiten, Zusammenführungsrichtlinien erstellen und aktualisieren, Profil- oder Musterdaten exportieren und löschen sowie Profil-Daten löschen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 24a5af0440f58b4e1db639ec971c4e1611f107d8
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 21%
+source-wordcount: '895'
+ht-degree: 13%
 
 ---
 
@@ -28,7 +28,11 @@ Eine Anleitung zum Arbeiten mit [!DNL Real-time Customer Profile]-Daten in der [
 >
 >Die Funktion für berechnete Attribute ist alphanumerisch und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
-Mit berechneten Attributen können Sie den Wert von Feldern anhand anderer Werte, Berechnungen und Ausdrücke automatisch berechnen. Berechnete Attribute agieren auf der Profilebene, d. h., Sie können Werte über alle Datensätze und Ereignisse hinweg aggregieren. Jedes berechnete Attribut enthält einen Ausdruck oder eine „Regel“, der bzw. die eingehende Daten auswertet und den resultierenden Wert in einem Profilattribut oder Ereignis speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Sie können berechnete Attribute mit dem Endpunkt `config/computedAttributes` erstellen, Ansicht, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im Endpunkt [Berechnete Attribute ](computed-attributes.md).
+Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
+
+Jedes berechnete Attribut enthält einen Ausdruck, oder &quot;Regel&quot;, der eingehende Daten auswertet und den sich ergebenden Wert in einem Profil-Attribut speichert. Mit diesen Berechnungen können Sie Fragen im Zusammenhang mit dem Kaufwert über die gesamte Lebensdauer, der Zeit zwischen Käufen oder der Anzahl der Anwendungsöffnungen leicht beantworten, ohne für jede benötigte Information manuell komplexe Berechnungen ausführen zu müssen. Diese berechneten Attributwerte können dann in einem Profil angezeigt, zum Erstellen eines Segments verwendet oder über verschiedene Zugriffsmuster aufgerufen werden.
+
+Sie können berechnete Attribute mit dem Endpunkt `config/computedAttributes` erstellen, Ansicht, bearbeiten und löschen. Informationen zur Verwendung berechneter Attribute finden Sie im Abschnitt [Übersicht über berechnete Attribute](../computed-attributes/overview.md). Für API-Vorgänge besuchen Sie das [Handbuch für die API-Endpunkte für berechnete Attribute](../computed-attributes/ca-api.md).
 
 ## Edge-Projektionen {#edge-projections}
 
