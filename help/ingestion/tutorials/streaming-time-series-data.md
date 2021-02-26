@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Zeitreihendaten;Stream-Zeitreihendaten;
 solution: Experience Platform
 title: Streamen von Daten aus der Zeitreihe mithilfe von Streaming-Ingestion-APIs
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '1236'
-ht-degree: 71%
+source-wordcount: '1313'
+ht-degree: 66%
 
 ---
 
@@ -316,9 +316,11 @@ Die Erfassung von Zeitreihendaten in eine Streaming-Verbindung kann entweder mit
 
 In der folgenden Beispielanforderung werden die Zeitreihendaten mit einem fehlenden Quellnamen für die Plattform erfasst. Wenn den Daten der Quellname fehlt, wird die Quell-ID aus der Definition der Streaming-Verbindung hinzugefügt.
 
->[!NOTE]
+>[!IMPORTANT]
 >
-> Sie müssen Ihre eigene `xdmEntity._id` und `xdmEntity.timestamp` erstellen. Eine gute Methode zum Generieren einer Kennung ist die Verwendung eines UUID. Darüber hinaus sind für den folgenden API-Aufruf **keine** Authentifizierungskopfzeilen erforderlich.
+> Sie müssen Ihre eigene `xdmEntity._id` und `xdmEntity.timestamp` erstellen. Eine gute Möglichkeit zum Generieren einer ID ist die Verwendung der UUID-Funktion in der Datenvorgabe. Weitere Informationen über die UUID-Funktion finden Sie im Handbuch [Datenvorgabefunktionen](../../data-prep/functions.md). Das `xdmEntity._id`-Attribut stellt einen eindeutigen Bezeichner für den Datensatz selbst dar, **nicht** eine eindeutige ID der Person oder des Geräts, deren Datensatz es ist. Die Personen- oder Geräte-ID ist in allen Attributen spezifisch, die als Personen- oder Gerätekennung des Schemas zugewiesen sind.
+>
+>Sowohl `xdmEntity._id` als auch `xdmEntity.timestamp` sind die einzigen erforderlichen Felder für Zeitreihendaten. Darüber hinaus sind für den folgenden API-Aufruf **keine** Authentifizierungskopfzeilen erforderlich.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
