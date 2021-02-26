@@ -3,21 +3,15 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 28cfac3d7fed311d9eec01ef464cf921f44a10e9
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 12%
+source-wordcount: '942'
+ht-degree: 13%
 
 ---
 
 
 # [!DNL Facebook] connection
-
->[!IMPORTANT]
->
->Wir migrieren derzeit Kunden zur neuen Version dieses Ziels, [!DNL Facebook Custom Audience].
->
-> Die Anweisungen in diesem Artikel gelten für beide Versionen mit folgendem Hinweis: während diese Migration ausgeführt wird, sehen Sie nur die aktuelle Version des Ziels [!DNL Facebook] in der Benutzeroberfläche, wo Sie nur die Identitäten [!UICONTROL EMAIL] und [!UICONTROL EMAIL_LC_SHA_256] für die Aktivierung verwenden können.
 
 Aktivieren Sie Profil für Ihre [!DNL Facebook]-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 
