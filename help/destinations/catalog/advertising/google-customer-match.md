@@ -3,21 +3,15 @@ keywords: Google-Kundenübereinstimmungen;Google-Kundenübereinstimmung;Google-K
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1432'
 ht-degree: 4%
 
 ---
 
 
 # [!DNL Google Customer Match] connection
-
->[!IMPORTANT]
->
->Wir migrieren Kunden derzeit in die neue Version dieses Ziels.
->
-> Die Anweisungen in diesem Artikel gelten für beide Versionen mit folgendem Hinweis: während diese Migration ausgeführt wird, sehen Sie nur die aktuelle Version des Ziels [!DNL Google Customer Match] in der Benutzeroberfläche, wo Sie nur die Identitäten [!UICONTROL EMAIL] und [!UICONTROL EMAIL_LC_SHA_256] für die Aktivierung verwenden können.
 
 [Google-Kunden-](https://support.google.com/google-ads/answer/6379332?hl=en) Matchlets verwenden Sie Ihre Online- und Offlinedaten, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail]und  [!DNL YouTube].
 
