@@ -1,25 +1,43 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datum;Datumsfunktionen;Datumswerte;
+keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV-Datei zu xdm zuordnen;Handbuch;Zuordnung;Datum;Datumsfunktionen;Datumsfunktion;Datumsfunktion;Datum
 solution: Experience Platform
 title: Datenvorgabedatumsfunktionen
-topic: overview
-description: In diesem Dokument werden die Datumsfunktionen vorgestellt, die mit Data Prep verwendet werden.
+topic: Übersicht
+description: In diesem Dokument wird die Datumsfunktion vorgestellt, die mit Data Prep verwendet wird.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: d3531248f8a7116b66f9a7ca00e0eadbc3d9df3d
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 16%
+source-wordcount: '483'
+ht-degree: 15%
 
 ---
 
 
-# Datenvorgabedatumsfunktionen
+# Date, Funktion
 
 Data Prep unterstützt Datumsfunktionen sowohl als Zeichenfolgen als auch als Datenzeitobjekte.
 
+## Datumsformat
+
+Die Funktion date konvertiert Zeichenfolgen und Datenzeitobjekte in ein mit ISO 8601 formatiertes ZonedDateTime-Objekt.
+
+**Format**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `{DATE}` | Erforderlich. Die Zeichenfolge, die das Datum darstellt. |
+| `{FORMAT}` | Optional. Die Zeichenfolge, die das Format des Datums darstellt. Weitere Informationen zur Zeichenfolgenformatierung finden Sie im Abschnitt [Datums-/Uhrzeitformat-Zeichenfolge](#format). |
+| `{DEFAULT_DATE}` | Optional. Das Standarddatum, das zurückgegeben wird, wenn das angegebene Datum null ist. |
+
+Beispielsweise konvertiert der Ausdruck `date(orderDate, "yyyy-MM-dd")` den Wert `orderDate` von &quot;31. Dezember 2020&quot;in den Zeitwert &quot;2020-12-31&quot;.
+
 ## Datumsfunktion Konvertierungen
 
-Wenn Zeichenfolgenfelder aus eingehenden Daten in Schemas mithilfe des Experience Data Model (XDM) Datumsfeldern zugeordnet werden, sollte das Datumsformat explizit erwähnt werden. Wenn nicht explizit erwähnt, versucht Data Prep, die Eingabedaten zu konvertieren, indem sie mit den folgenden Formaten übereinstimmen. Sobald ein übereinstimmendes Format gefunden wurde, werden keine weiteren Formate ausgewertet.
+Wenn Zeichenfolgenfelder aus eingehenden Daten in Schemas mithilfe des Experience Data Model (XDM) Datumsfeldern zugeordnet werden, sollte das Datumsformat explizit erwähnt werden. Wenn nicht explizit erwähnt, versucht Data Prep, die Eingabedaten zu konvertieren, indem sie mit den folgenden Formaten übereinstimmen. Sobald ein passendes Format gefunden wurde, werden alle nachfolgenden Formate nicht mehr ausgewertet.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
@@ -46,7 +64,7 @@ Wenn Zeichenfolgenfelder aus eingehenden Daten in Schemas mithilfe des Experienc
 >
 > Data Prep versucht, Zeichenfolgen so gut wie möglich in Datumswerte umzuwandeln. Diese Konversionen können jedoch zu unerwünschten Ergebnissen führen. Der Zeichenfolgenwert &quot;12112020&quot;entspricht beispielsweise dem Muster &quot;Tag&quot;, der Benutzer hat jedoch möglicherweise beabsichtigt, das Datum mit dem Muster &quot;ddMMyyy&quot;zu lesen. Daher sollten Benutzer explizit das Datumsformat für Zeichenfolgen erwähnen.
 
-## Datums-/Uhrzeitformat-Zeichenfolgen
+## Datums-/Uhrzeitformat-Zeichenfolgen {#format}
 
 Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen definiert werden. Beachten Sie, dass bei den Buchstaben die Groß- und Kleinschreibung beachtet wird.
 
@@ -77,7 +95,3 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 | V | Zeitzone-ID | Text | Amerika/Los_Angeles |
 | O | Zeitzonenversatz | Text | GMT+8 |
 | Q/q | Quartal des Jahres | Zahl/Text | 3; 03; Q3; 3. Quartal |
-
-**Beispiel**
-
-Der Ausdruck `date(orderDate, "yyyy-MM-dd")` konvertiert den Wert `orderDate` von &quot;31. Dezember 2020&quot;in den Zeitwert &quot;2020-12-31&quot;.
