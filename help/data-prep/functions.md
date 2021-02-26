@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Felder;Zuordnungsfunktionen; Zuordnungsfunktionen
 solution: Experience Platform
 title: Funktionen für die Datenvorlagenzuordnung
-topic: overview
+topic: Übersicht
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: 49124d58fffa3670b332fab07843f2ef3db65f79
+source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3625'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Ein Feldname kann ein beliebiger offizieller Bezeichner sein - eine unbegrenzte 
 
 Wenn ein Feldname dieser Regel nicht entspricht, muss der Feldname mit `${}` umgebrochen werden. Wenn der Feldname beispielsweise &quot;Vorname&quot;oder &quot;Vorname&quot;lautet, muss der Name wie `${First Name}` bzw. `${First.Name}` umgebrochen werden.
 
-Darüber hinaus müssen die Feldnamen **beliebige** der folgenden reservierten Suchbegriffe mit `${}` umschlossen werden:
+Wenn ein Feldname **beliebige** der folgenden reservierten Suchbegriffe ist, muss er mit `${}` umschlossen werden:
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -103,7 +103,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 >[!NOTE]
 >
->Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen. Weitere Informationen zur Funktion `date` finden Sie im Funktionsleitfaden [date](./dates.md).
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 -------- | ----------- | ---------- | -------| ---------- | -------------
