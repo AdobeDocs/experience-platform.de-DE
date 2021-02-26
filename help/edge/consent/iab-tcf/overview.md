@@ -3,7 +3,7 @@ title: IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mithilfe des Adobe Experience Platform Web SDK die IAB TCF 2.0-Genehmigungsvoreinstellungen unterstützen.
 keywords: approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profil
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 1c6238a0cf72230e019fd10d9a72f30444bd9fb9
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Die folgenden Abschnitte beschreiben die wichtigsten Integrationspunkte zwischen
 
 Die Standardgenehmigung wird verwendet, wenn für einen Kunden noch keine Einwilligung gespeichert wurde. Das bedeutet, dass die standardmäßigen Zustimmungsoptionen das Verhalten des Adobe Experience Platform Web SDK steuern und je nach Region des Kunden ändern können.
 
-Wenn Sie z. B. einen Kunden haben, der nicht unter die Gerichtsbarkeit der Allgemeinen Datenschutzverordnung (GDPR) fällt, könnte die Standardgenehmigung auf `in` eingestellt werden, aber innerhalb der Gerichtsbarkeit von GDPR könnte die Standardgenehmigung auf `pending` eingestellt werden. Ihre Cloud-Management-Plattform (CMP) könnte die Region des Kunden erkennen und die Kennzeichnung `gdprApplies` für IAB TCF 2.0 bereitstellen. Mit diesem Flag können Sie die Standardgenehmigung festlegen.
+Wenn Sie z. B. einen Kunden haben, der nicht unter die Gerichtsbarkeit der Allgemeinen Datenschutzverordnung (GDPR) fällt, könnte die Standardgenehmigung auf `in` eingestellt werden, aber innerhalb der Gerichtsbarkeit von GDPR könnte die Standardgenehmigung auf `pending` eingestellt werden. Ihre Consent Management Platform (CMP) könnte die Region des Kunden erkennen und die Kennzeichnung `gdprApplies` für IAB TCF 2.0 bereitstellen. Mit diesem Flag können Sie die Standardgenehmigung festlegen.
 
 Weitere Informationen zur Standardgenehmigung finden Sie im Abschnitt [Standardgenehmigung](../../fundamentals/configuring-the-sdk.md#default-consent) in der SDK-Konfigurationsdokumentation.
 
