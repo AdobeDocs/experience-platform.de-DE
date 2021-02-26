@@ -2,9 +2,9 @@
 title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Platform launch und der Platform Web SDK Extension
 description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und der Adobe Experience Platform Web SDK-Erweiterung einrichten.
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -24,13 +24,9 @@ Darüber hinaus erfordert dieses Handbuch ein Verständnis des Adobe Experience 
 
 ## Standardgenehmigung festlegen
 
-Innerhalb der Erweiterungskonfiguration gibt es eine Einstellung für die Standardgenehmigung. Dies steuert das Verhalten von Kunden, die kein Cookie für die Zustimmung haben. Wenn Sie Experience Ereignisses für Kunden in die Warteschlange stellen möchten, die kein Cookie für die Zustimmung haben, setzen Sie dies auf `pending`.
+Innerhalb der Erweiterungskonfiguration gibt es eine Einstellung für die Standardgenehmigung. Dies steuert das Verhalten von Kunden, die kein Cookie für die Zustimmung haben. Wenn Sie Experience Ereignisses für Kunden in die Warteschlange stellen möchten, die kein Cookie für die Zustimmung haben, setzen Sie dies auf `pending`. Sie können auch ein Datenelement verwenden, um den Standardwert für die Zustimmung dynamisch festzulegen.
 
->[!NOTE]
->
->Derzeit gibt es keine Möglichkeit, dies dynamisch über die Experience Platform Launch-Erweiterung festzulegen.
-
-Weitere Informationen zur Standardgenehmigung finden Sie im Abschnitt [Standardgenehmigung](../../fundamentals/configuring-the-sdk.md#default-consent) in der SDK-Konfigurationsdokumentation.
+Weitere Informationen zum Konfigurieren der Standardgenehmigung finden Sie im Abschnitt [Standardgenehmigung](../../fundamentals/configuring-the-sdk.md#default-consent) im SDK-Konfigurationshandbuch.
 
 ## Profil mit Zustimmungsinformationen aktualisieren {#consent-code-1}
 
@@ -69,7 +65,7 @@ Dieser benutzerspezifische Code umfasst zwei Aufgaben:
 * Wert: &quot;%IAB TCF Consent String%&quot;
 * GDPR gilt: &quot;%IAB TCF Zustimmung GDPR%&quot;
 
-![IAB-Set-Aktion - Zustimmung](../../../assets/iab_set_consent_action.png)
+![IAB-Set-Aktion - Zustimmung](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
