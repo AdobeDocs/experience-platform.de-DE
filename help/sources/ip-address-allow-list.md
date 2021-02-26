@@ -3,11 +3,11 @@ keywords: Experience Platform;Home;beliebte Themen;ip-Adresse;ip-Adressen;ip-Adr
 description: IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können.
 solution: Experience Platform
 title: IP-Adressen-Zulassungsliste für Quellverbindungen
-topic: overview
+topic: Übersicht
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 6ee71de86d487a38ca4acc76813111994eb44bd9
 workflow-type: tm+mt
-source-wordcount: '113'
+source-wordcount: '117'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,15 @@ Sie können Netzwerk-Zugriffskontrollen über Ihre Netzwerk-Firewall definieren.
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
+
+## East US 2 Region
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
 
 ## Westeuropa
 
