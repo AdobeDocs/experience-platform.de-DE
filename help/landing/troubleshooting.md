@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Häufig gestellte Fragen zu Adobe Experience Platform und Handbuch zur Fehlerbehebung
 description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
 landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
-topic: getting started
-type: Documentation
+topic: Erste Schritte
+type: Dokumentation
 translation-type: tm+mt
 source-git-commit: ece2ae1eea8426813a95c18096c1b428acfd1a71
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: '1997'
 ht-degree: 73%
 
 ---
@@ -220,7 +220,7 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile fü
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn der Benutzer oder die Adobe I/O-Integration (gekennzeichnet durch das [Zugriffstoken](#how-do-i-get-an-access-token) in der `Authorization`-Kopfzeile) nicht berechtigt ist, Aufrufe an [!DNL Experience Platform]-APIs für das IMS-Org durchzuführen, das in der `x-gw-ims-org-id`-Kopfzeile angegeben ist. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige Kennung für Ihre IMS-Organisation eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
+Diese Fehlermeldung wird angezeigt, wenn der Benutzer oder die Adobe I/O-Integration (gekennzeichnet durch das [Zugriffstoken](#how-do-i-get-an-access-token) in der `Authorization`-Kopfzeile) nicht berechtigt ist, Aufrufe an [!DNL Experience Platform]-APIs für das IMS-Org durchzuführen, das in der `x-gw-ims-org-id`-Kopfzeile bereitgestellt wird. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige Kennung für Ihre IMS-Organisation eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
 
 ### Kein gültiger Inhaltstyp angegeben
 
