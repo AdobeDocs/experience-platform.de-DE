@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Schema-Editor;Schema-Editor;Schema;Schema;Schemas;Schemas;Erstellen
 solution: Experience Platform
 title: Erstellen eines Schemas mit dem Schema-Editor
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 translation-type: tm+mt
 source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
 workflow-type: tm+mt
-source-wordcount: '3600'
+source-wordcount: '3602'
 ht-degree: 18%
 
 ---
