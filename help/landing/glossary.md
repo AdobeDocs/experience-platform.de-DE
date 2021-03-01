@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Adobe Experience Platform Glossar
-topic: getting started
+topic: Erste Schritte
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 translation-type: tm+mt
 source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
 workflow-type: tm+mt
-source-wordcount: '7137'
+source-wordcount: '7139'
 ht-degree: 1%
 
 ---
