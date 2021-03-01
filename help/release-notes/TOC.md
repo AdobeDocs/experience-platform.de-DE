@@ -15,7 +15,7 @@ ht-degree: 100%
 
 # Adobe Experience Platform – Versionshinweise {#release-notes}
 
-* [Februar 2021](latest/latest.md)
+* [Februar 2021](latest/latest.md)
 * [2021. Januar](2021/january-2021.md)
 * 2020 {#2020}
    * [Dezember 2020](2020/december-2020.md)
