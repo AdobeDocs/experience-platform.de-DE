@@ -1,12 +1,12 @@
 ---
 title: Versionshinweise zum Adobe Experience Platform Web-SDK
-description: Die neuesten Versionshinweise für das Adobe Experience Platform Web SDK.
+description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise
 translation-type: tm+mt
 source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
