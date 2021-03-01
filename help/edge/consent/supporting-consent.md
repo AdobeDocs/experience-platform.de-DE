@@ -3,10 +3,10 @@ title: Unterstützende Voreinstellungen für die Zustimmung des Kunden mit dem A
 description: Erfahren Sie, wie Sie die Voreinstellungen für die Zustimmung mit dem Adobe Experience Platform Web SDK unterstützen.
 keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 58%
+source-wordcount: '753'
+ht-degree: 57%
 
 ---
 
@@ -18,7 +18,7 @@ Um die Privatsphäre Ihres Nutzers zu respektieren, sollten Sie die Zustimmung d
 Wenn der Nutzer sich für alle Zwecke anmeldet, darf das SDK die folgenden Aufgaben ausführen:
 
 * Senden an und Empfangen von Daten von Adobe-Servern.
-* Cookies oder Elemente der Web-Datenspeicherung lesen und schreiben (mit Ausnahme der Beibehaltung der Anmeldevoreinstellungen des Nutzers).
+* Lesen und Schreiben von Cookies oder Elementen der Web-Datenspeicherung.
 
 Wenn der Nutzer sich von allen Zwecken abmeldet, führt das SDK keine dieser Aufgaben aus.
 
