@@ -3,13 +3,13 @@ keywords: Experience Platform;Startseite;beliebte Themen;Aktualisieren von Konte
 description: Unter bestimmten Umständen kann es erforderlich sein, die Details eines Kontos mit vorhandenen Quellen zu aktualisieren. Der Quellenarbeitsbereich bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 solution: Experience Platform
 title: Kontodetails der Quellverbindung in der Benutzeroberfläche aktualisieren
-topic: overview
+topic: Übersicht
 type: Tutorial
 translation-type: tm+mt
-source-git-commit: ac477ee8053b30e88a38800ebe33fc9b5a520308
+source-git-commit: 04cf2cc1f15d9a673a0753643fc6263bcaf41464
 workflow-type: tm+mt
 source-wordcount: '681'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -26,8 +26,8 @@ Dieses Lernprogramm enthält Schritte zum Aktualisieren der Details und Anmeldei
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../home.md): Die DNL-Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu beschriften und zu verbessern.
-- [Sandboxen](../../../sandboxes/home.md): DNL Experience Platform bietet virtuelle Sandboxes, die eine einzelne Plattforminstanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Quellen](../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
+- [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Konten aktualisieren
 
