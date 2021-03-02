@@ -4,7 +4,7 @@ title: Ansichten-Zieldetails
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
 workflow-type: tm+mt
 source-wordcount: '740'
 ht-degree: 15%
@@ -79,7 +79,7 @@ Um die Details eines bestimmten Datenflusses Ansicht, wählen Sie die Ausführun
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Aktivierungen]
+## [!UICONTROL Aktivierungen] {#activation-data}
 
 Auf der Registerkarte [!UICONTROL Aktivierung data] wird eine Liste von Segmenten angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Beginn- und Enddatums (falls zutreffend). Um die Details zu einem bestimmten Segment Ansicht, wählen Sie dessen Namen in der Liste aus.
 
