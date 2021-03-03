@@ -3,10 +3,10 @@ title: Interagieren mit mehreren Eigenschaften im Adobe Experience Platform Web 
 description: Erfahren Sie, wie Sie mit mehreren Experience Platform Web SDK-Eigenschaften interagieren.
 keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: b865b7fb940ca2d5f8b44f71eb58e62e3473f52d
 workflow-type: tm+mt
-source-wordcount: '245'
-ht-degree: 78%
+source-wordcount: '242'
+ht-degree: 68%
 
 ---
 
@@ -19,7 +19,7 @@ Es gibt bestimmte Fälle, in denen Sie mit zwei verschiedenen Eigenschaften auf 
 * Datenaustausch-Beziehungen zwischen mehreren Firmen
 * Kunden, die neue Adobe-Lösungen testen und ihre vorhandene Implementierung nicht stören möchten
 
-Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im Basis-Code einen weiteren Namen hinzufügen. Im folgenden Beispiel haben wir zwei Namen angegeben, `mycustomname1` und `mycustomname2`.
+Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, indem Sie dem Array im Basis-Code einen weiteren Namen hinzufügen. Im folgenden Beispiel werden die beiden Namen `mycustomname1` und `mycustomname2` angezeigt.
 
 ```markup
 <script>
@@ -33,7 +33,7 @@ Mit dem SDK können Sie für jede Eigenschaft eine separate Instanz erstellen, i
 
 Daher erstellt das Skript zwei Instanzen des SDK. Die globale Funktion für die Interaktion mit der ersten Instanz heißt `mycustomname1` und die globale Funktion für die Interaktion mit der zweiten Instanz heißt `mycustomname2`.
 
-Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch die Interaktion mit `mycustomname1` auftritt, wird isoliert von `mycustomname2` gehalten und umgekehrt.
+Durch Erstellen von zwei separaten Instanzen kann jede für eine andere Eigenschaft konfiguriert werden. Jede Kommunikations- oder Datenpersistenz, die durch Interaktion mit `mycustomname1` auftritt, wird von `mycustomname2` isoliert gehalten.
 
 Im obigen Beispiel können Sie Befehle wie folgt mit jeder der Instanzen ausführen:
 
@@ -65,4 +65,4 @@ Achten Sie darauf, den `configure`-Befehl für jede Instanz auszuführen, bevor 
 
 ## Einschränkungen
 
-Um Konflikte mit Cookies zu vermeiden, kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] innerhalb einer Seite ein bestimmtes `edgeConfigId` aufweisen.  Ebenso kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] ein bestimmtes `orgId` haben.
+Um Konflikte mit Cookies zu vermeiden, kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] innerhalb einer Seite ein bestimmtes `edgeConfigId` aufweisen. Ebenso kann nur eine Instanz von Adobe Experience Platform [!DNL Web SDK] ein bestimmtes `orgId` haben.
