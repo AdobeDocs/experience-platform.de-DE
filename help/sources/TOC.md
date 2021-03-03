@@ -4,11 +4,12 @@ audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
+feature: Dateneinbettung, Quellen
 translation-type: tm+mt
-source-git-commit: f3b27fbe75af7499f4ce43d8904d2f7e01384cb3
+source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 15%
+source-wordcount: '577'
+ht-degree: 16%
 
 ---
 
@@ -54,7 +55,7 @@ ht-degree: 15%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -65,7 +66,7 @@ ht-degree: 15%
       - [Oracle-Anschluss](connectors/databases/oracle.md)
       - [Phoenix-Anschluss](connectors/databases/phoenix.md)
       - [PostgreSQL Connector](connectors/databases/postgres.md)
-   - eCommerce {#ecommerce}
+   - E-Commerce {#ecommerce}
       - [Shopify Connector](connectors/ecommerce/shopify.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [HubSpot-Anschluss](connectors/marketing-automation/hubspot.md)
@@ -113,7 +114,7 @@ ht-degree: 15%
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [SQL -Server](tutorials/api/create/databases/sql-server.md)
-      - eCommerce {#ecommerce}
+      - E-Commerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
@@ -197,7 +198,7 @@ ht-degree: 15%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
-      - eCommerce {#ecommerce}
+      - E-Commerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
