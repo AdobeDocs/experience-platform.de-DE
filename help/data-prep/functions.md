@@ -5,9 +5,9 @@ title: Funktionen für die Datenvorlagenzuordnung
 topic: Übersicht
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: fd2dffd5b8957833b670e9cb434517bcb0f886a3
+source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
 workflow-type: tm+mt
-source-wordcount: '3625'
+source-wordcount: '3719'
 ht-degree: 7%
 
 ---
@@ -149,6 +149,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | coalesce | Gibt das erste nicht-Null-Objekt in einem gegebenen Array zurück. | <ul><li>INPUT: **Erforderlich** Das Array, von dem Sie das erste Nicht-Null-Objekt suchen möchten.</li></ul> | coalesce(INPUT) | coalesce(null, null, null, &quot;first&quot;, null, &quot;second&quot;) | &quot;first&quot; |
 | first | Ruft das erste Element des angegebenen Arrays ab. | <ul><li>INPUT: **Erforderlich** Das Array, von dem Sie das erste Element suchen möchten.</li></ul> | first(INPUT) | first(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;1&quot; |
 | last | Ruft das letzte Element des angegebenen Arrays ab. | <ul><li>INPUT: **Erforderlich** Das Array, von dem Sie das letzte Element suchen möchten.</li></ul> | last(INPUT) | last(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;) | &quot;3&quot; |
+| add_to_array | Fügt Elemente am Ende des Arrays hinzu. | <ul><li>ARRAY: **Erforderlich** Das Array, dem Sie Elemente hinzufügen.</li><li>WERTE: Die Elemente, die Sie an das Array anhängen möchten.</li></ul> | add_to_array &#x200B;(ARRAY, VALUES) | add_to_array &#x200B;([&#39;a&#39;, &#39;b&#39;], &#39;c&#39;, &#39;d&#39;) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;] |
+| join_arrays | Kombiniert die Arrays miteinander. | <ul><li>ARRAY: **Erforderlich** Das Array, dem Sie Elemente hinzufügen.</li><li>WERTE: Die Array(s), die Sie an das übergeordnete Array anhängen möchten.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Führt eine Liste von Eingaben durch und konvertiert sie in ein Array. | <ul><li>INCLUDE_NULLS: **Erforderlich** Ein boolescher Wert, der angibt, ob Nullen in das Antwortarray einbezogen werden sollen.</li><li>WERTE: **Erforderlich** Die Elemente, die in ein Array konvertiert werden sollen.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
 ### Logische Operatoren
