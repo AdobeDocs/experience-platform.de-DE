@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK-Erweiterung Übersicht
 description: Weitere Informationen zur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 18e511337eaa8b6eb7785b1ee5f1ce2366ddd7c7
+source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 19%
+source-wordcount: '553'
+ht-degree: 14%
 
 ---
 
@@ -32,17 +32,17 @@ In beiden Fällen gelangen Sie zur Konfigurationsseite für das Platform Web SDK
 
 ## Allgemeine Konfigurationsoptionen
 
-Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an, wohin die Daten weitergeleitet werden sollen und welche Konfigurationen auf dem Server verwendet werden sollten.
+Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an, wohin die Daten weitergeleitet werden sollen und welche Konfigurationen auf dem Server verwendet werden sollen.
 
 ### [!UICONTROL Name]
 
-Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Dadurch können Daten mit einer einzigen Platform Launch-Konfiguration an mehrere Organisationen gesendet werden.
+Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer einzigen Platform launch-Konfiguration an mehrere Unternehmen zu senden.
 
 Der Name der Erweiterung lautet standardmäßig &quot;[!DNL alloy]&quot;. Sie können den Instanznamen jedoch in einen beliebigen anderen gültigen JavaScript-Objektnamen ändern.
 
 ### **[!UICONTROL IMS-Organisations-ID]**
 
-Die [!UICONTROL IMS-Organisations-ID] ist das Unternehmen, an das die Daten zur Adobe gesendet werden sollen. Meistens können Sie den Standardwert verwenden, der automatisch eingefügt wird. Wenn Sie mehrere Instanzen auf der Seite haben, füllen Sie dieses Feld mit dem Wert der zweiten Organisation, an die Sie Daten senden möchten.
+Die [!UICONTROL IMS-Organisations-ID] ist das Unternehmen, an das die Daten zur Adobe gesendet werden sollen. In den meisten Fällen verwenden Sie den Standardwert, der automatisch kopiert wird. Wenn Sie mehrere Instanzen auf der Seite haben, füllen Sie dieses Feld mit dem Wert der zweiten Organisation, an die Sie Daten senden möchten.
 
 ### **[!UICONTROL Edge-Domäne]**
 
@@ -50,7 +50,7 @@ Die [!UICONTROL Edge-Domäne] ist die Domäne, von der die Adobe Experience Plat
 
 ## [!UICONTROL Edge-Konfigurationen]
 
-Wenn eine Anforderung an das Adobe Experience Platform Edge Network gesendet wird, wird eine Edge-Konfigurations-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Dadurch können Sie die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
+Wenn eine Anforderung an das Adobe Experience Platform Edge Network gesendet wird, wird eine Edge-Konfigurations-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
 Weitere Informationen finden Sie im Handbuch [Edge-Konfigurationen](../fundamentals/edge-configuration.md).
 
@@ -61,5 +61,5 @@ Im Abschnitt [!UICONTROL Privatsphäre] können Sie konfigurieren, wie das SDK m
 | [!UICONTROL Standardebene für Zustimmung] | Beschreibung |
 | --- | --- |
 | [!UICONTROL Enthalten] | Anmelden. Verwenden Sie diese Option, wenn Sie die Zustimmung des Kunden standardmäßig und nur Ausschlusssignale annehmen. |
-| [!UICONTROL Ausstehend] | Kunden mit &quot;ausstehender&quot;Zustimmung werden bis zum Senden eines Opt-in-Signals abgemeldet. Verwenden Sie diese Option, wenn Sie eine ausdrückliche Zustimmung des Kunden für Ihre Geschäftsvorgänge benötigen. |
+| [!UICONTROL Ausstehend] | Kunden mit &quot;ausstehender&quot;Zustimmung werden abgemeldet, bis ein Abmeldesignal gesendet wird. Verwenden Sie diese Option, wenn Sie eine ausdrückliche Zustimmung des Kunden für Ihre Geschäftsvorgänge benötigen. |
 | [!UICONTROL Von Datenelement bereitgestellt] | Die standardmäßige Ebene der Zustimmung wird durch ein gesondertes Datenelement bestimmt, das Sie definieren. Wenn Sie diese Option verwenden, müssen Sie das Datenelement über das Dropdown-Menü angeben. |
