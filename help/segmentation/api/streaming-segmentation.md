@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Streaming-Segmentierung;Streaming-Segmentierung;Kontinuierliche Auswertung
 solution: Experience Platform
 title: 'Ereignis in Echtzeit mit Streaming-Segmentierung bewerten '
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Dieses Dokument enthält Beispiele zur Verwendung der Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 47%
+source-wordcount: '1341'
+ht-degree: 46%
 
 ---
 
