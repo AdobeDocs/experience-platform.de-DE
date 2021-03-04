@@ -5,9 +5,9 @@ title: Google PubSub Source Connector - Übersicht
 topic: Übersicht
 description: Erfahren Sie, wie Sie Google PubSub mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '244'
 ht-degree: 1%
 
 ---
