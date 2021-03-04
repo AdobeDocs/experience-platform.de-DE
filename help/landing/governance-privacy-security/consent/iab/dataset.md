@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;IAB;IAB 2.0;Zustimmung;Zustimmung
 solution: Experience Platform
 title: Erstellen von Datenbeständen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten
-topic: privacy events
+topic: Datenschutz-Ereignisse
 description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '1645'
+source-wordcount: '1647'
 ht-degree: 3%
 
 ---
@@ -105,7 +105,7 @@ Beide Versionen des [!UICONTROL Datenschutzdetails]-Mixins erfordern mindestens 
 | `xdm:consentStandard` | Der Rahmen für die Zustimmung, für den die Daten gelten. Für die TCF-Kompatibilität muss der Wert `IAB TCF` sein. |
 | `xdm:consentStandardVersion` | Die Versionsnummer des Genehmigungsrahmens, die durch `xdm:consentStandard` angegeben wird. Für die TCF 2.0-Kompatibilität muss der Wert `2.0` sein. |
 | `xdm:consentStringValue` | Die Zustimmungszeichenfolge, die von der Plattform für das Zustimmungsmanagement (CMP) basierend auf den ausgewählten Einstellungen des Kunden generiert wurde. |
-| `xdm:gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für diesen Kunden gilt. Der Wert muss auf `true` gesetzt werden, damit eine TCF 2.0-Durchsetzung erfolgt. Die Standardeinstellung ist `false`, wenn nicht enthalten. |
+| `xdm:gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für diesen Kunden gilt. Der Wert muss auf `true` gesetzt werden, damit eine TCF 2.0-Durchsetzung erfolgt. Die Standardeinstellung ist `true`, wenn nicht enthalten. |
 | `xdm:containsPersonalData` | Ein boolescher Wert, der angibt, ob die Aktualisierung der Zustimmung personenbezogene Daten enthält. Die Standardeinstellung ist `false`, wenn nicht enthalten. |
 
 ## Schemas zur Kundeneinwilligung {#create-schemas} erstellen
