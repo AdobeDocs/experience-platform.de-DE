@@ -5,9 +5,9 @@ title: Übersicht über Identitäts-Namensraum
 topic: Übersicht
 description: 'Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID. '
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1475'
 ht-degree: 22%
 
 ---
