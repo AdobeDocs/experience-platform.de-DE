@@ -6,10 +6,10 @@ topic: Tutorial
 type: Übung
 description: In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Tutorials für die einzelnen Workflows bereitgestellt.
 translation-type: tm+mt
-source-git-commit: 0aa59a5375757f81d63ac43d778ff2c7179d449b
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 28%
+source-wordcount: '796'
+ht-degree: 24%
 
 ---
 
@@ -75,7 +75,7 @@ Um mit Mergerichtlinien in der [!DNL Platform]-Benutzeroberfläche zu arbeiten, 
 
 ## Konfigurieren von Edge-Projektionen
 
-Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanäle hinweg in Echtzeit umsetzen zu können, müssen die richtigen Daten jederzeit verfügbar sein und bei Änderungen kontinuierlich aktualisiert werden. Die Adobe [!DNL Experience Platform] ermöglicht diesen Echtzeitzugriff auf Daten mithilfe von so genannten Kanten. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden.
+Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit zu ermöglichen, müssen die richtigen Daten jederzeit verfügbar sein und im Zuge von Änderungen kontinuierlich aktualisiert werden. Die Adobe [!DNL Experience Platform] ermöglicht diesen Echtzeitzugriff auf Daten mithilfe von so genannten Kanten. Ein Edge ist ein regional aufgestellter Server, der Daten erfasst und direkt für Anwendungen abrufbar macht. Die Daten werden mittels Projektion an einen Edge übermittelt, wobei ein Projektionsziel den Edge definiert, an den die Daten gesendet werden, und eine Projektionskonfiguration, die die Informationen spezifiziert, die am Edge zur Verfügung gestellt werden.
 
 **Dieses Handbuch hilft Ihnen:**
 - Liste, Erstellen, Ansicht, Aktualisieren und Löschen eines Ziels für die Edge-Projektion.
