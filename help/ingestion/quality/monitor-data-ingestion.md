@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Überwachung;Überwachung;Datenflüsse;Überwachung der Erfassung;Datenaufnahme;Datenaufnahme;Ansicht;Ansichten-Stapel;
 solution: Experience Platform
 title: Überwachen der Dateneinbindung
-topic: overview
+topic: Übersicht
 description: Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '571'
+source-wordcount: '573'
 ht-degree: 67%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 67%
 
 # Überwachen der Datenaufnahme
 
-Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit bis [!DNL Platform] erfassen können.
+Mit der Datenaufnahme können Sie Ihre Daten in Adobe Experience Platform aufnehmen. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie Ihre Daten mit Streaming-Endpunkten in Echtzeit auf [!DNL Platform] übertragen können.
 
 Dieses Benutzerhandbuch enthält eine Anleitung zum Überwachen Ihrer Daten in der Benutzeroberfläche von Adobe Experience Platform. Für dieses Handbuch benötigen Sie eine Adobe ID und Zugriff auf Adobe Experience Platform.
 
