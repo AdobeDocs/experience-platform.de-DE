@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Identitätsdienst-API;Identitätsdienst-Entwicklerhandbuch;Region
 solution: Experience Platform
 title: Identitätsdienst-API-Handbuch
-topic: API guide
+topic: API-Handbuch
 description: Die Identitätsdienst-API ermöglicht es Entwicklern, geräteübergreifende Kanal- und Echtzeitidentifizierungen Ihrer Kunden mithilfe von Identitätsdiagrammen Adobe Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '772'
 ht-degree: 28%
 
 ---
