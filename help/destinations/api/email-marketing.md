@@ -6,10 +6,10 @@ description: Dieses Dokument behandelt die Erstellung von E-Mail-Marketingzielen
 topic: Tutorial
 type: Übung
 translation-type: tm+mt
-source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
+source-git-commit: 789534c02746ed24dfa01c7b471cdf3be407711e
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 72%
+source-wordcount: '1701'
+ht-degree: 71%
 
 ---
 
@@ -366,6 +366,8 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] teilt die Exportdateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar.
+>
+>Dateinamen mit Teilinformationen werden mit einer Zahl angehängt, die angibt, dass die Datei Teil eines größeren Exports ist. Dies bedeutet: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API-Format**
 
