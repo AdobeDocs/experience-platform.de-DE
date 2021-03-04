@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: efb66b6374f8c0579d90f63452528353f4d1418d
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2164'
 ht-degree: 15%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 15%
 
 # Profile und Segmente für ein Ziel aktivieren
 
-Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
+Aktivieren Sie die Daten, die Sie in [!DNL Adobe Experience Platform] haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 
 ## Voraussetzungen  {#prerequisites}
 
@@ -38,7 +38,9 @@ Wählen Sie den Namen des Ziels aus, um zum Arbeitsablauf für die Aktivierung z
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Beachten Sie, dass Sie, wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, die derzeit aktivierten Segmente für das Ziel sehen können. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
+>[!NOTE]
+>
+>Wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, können Sie die Segmente sehen, die derzeit für das Ziel aktiviert werden. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
 
 Nachdem Sie ein Ziel ausgewählt haben, wählen Sie **[!UICONTROL Aktivieren]**.
 
@@ -62,7 +64,7 @@ Bei Social-Zielen müssen Sie Quellattribute oder Identitäts-Namensraum auswäh
 
 #### Beispiel: Aktivieren von Audiencen in [!DNL Facebook Custom Audience] {#example-facebook}
 
-Dies ist ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Audiencen in [!DNL Facebook].
+Nachstehend finden Sie ein Beispiel für eine korrekte Identitätszuordnung bei der Aktivierung von Audiencen in [!DNL Facebook].
 
 Auswählen von Quellfeldern:
 
@@ -76,7 +78,7 @@ Auswählen von Quellfeldern:
 
 Auswählen von Zielgruppen:
 
-* Wählen Sie den Namensraum `Email_LC_SHA256` als Zielgruppe-ID aus, wenn Ihre Quellordner `Email` oder `Email_LC_SHA256` sind.
+* Wählen Sie den Namensraum `Email_LC_SHA256` als Zielgruppe-ID aus, wenn Ihre Quell-Namensraum entweder `Email` oder `Email_LC_SHA256` sind.
 * Wählen Sie den Namensraum `Phone_SHA256` als Zielgruppe-ID aus, wenn Ihre Quell-Namensraum entweder `PHONE_E.164` oder `Phone_SHA256` sind.
 * Wählen Sie die Namensraum `IDFA` oder `GAID` als Zielgruppe-ID aus, wenn die Namensraum `IDFA` oder `GAID` sind.
 * Wählen Sie den Namensraum `Extern_ID` als Zielgruppe-ID aus, wenn Ihr Quell-Namensraum ein benutzerdefinierter ist.
@@ -140,17 +142,21 @@ Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
 ![Schritt konfigurieren](../assets/ui/activate-destinations/configure-icon.png)
 
-Im Schritt **[!UICONTROL Konfigurieren]** können Sie den Zeitplan und die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+[!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Datenspeicherung-Ziele in  [!DNL CSV] Dateiform. Im Schritt **[!UICONTROL Konfigurieren]** können Sie den Zeitplan und die Dateinamen für jedes Segment konfigurieren, das Sie exportieren. Die Konfiguration des Zeitplans ist obligatorisch, die Konfiguration des Dateinamens ist jedoch optional.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] teilt die Exportdateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar.
 
 Um einen Zeitplan für das Segment hinzuzufügen, wählen Sie **[!UICONTROL Plan erstellen]**.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-Es wird ein Popup mit Optionen zum Erstellen des Segmentplans angezeigt.
+Ein Dialogfeld mit Optionen zum Erstellen des Segmentplans wird angezeigt.
 
 * **Dateiexport**: Sie haben die Möglichkeit, entweder vollständige oder inkrementelle Dateien zu exportieren. Beim Exportieren einer vollständigen Datei wird eine vollständige Momentaufnahme aller Profil veröffentlicht, die für dieses Segment qualifiziert sind. Beim Exportieren einer inkrementellen Datei wird das Delta der Profil veröffentlicht, die seit dem letzten Export für dieses Segment qualifiziert sind.
 * **Häufigkeit**: Wenn &quot;Vollständige  **[!UICONTROL Datei]** exportieren&quot;ausgewählt ist, können Sie &quot;Einmalig&quot;oder &quot; ****  **[!UICONTROL Täglich]**&quot;exportieren. Wenn **[!UICONTROL Inkrementelle Dateien exportieren]** ausgewählt ist, haben Sie nur die Möglichkeit, **[!UICONTROL Täglich]** zu exportieren. Beim Exportieren einer Datei **[!UICONTROL Sobald]** wird die Datei einmal exportiert. Beim Exportieren einer Datei **[!UICONTROL Täglich]** wird die Datei jeden Tag vom Beginn bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST) exportiert, wenn vollständige Dateien ausgewählt sind, und um 22:00 Uhr UTC (7:00 Uhr EST), wenn inkrementelle Dateien ausgewählt wurden.
-* **Datum**: Wenn &quot;Einmalig&quot; **** ausgewählt ist, können Sie das Datum für den einmaligen Export auswählen. Wenn **[!UICONTROL Täglich]** ausgewählt ist, können Sie Beginns- und Enddaten für die Exporte auswählen.
+* **Datum**: Wenn &quot;Einmalig&quot; **** ausgewählt ist, können Sie das Datum für den einmaligen Export auswählen. Wenn **[!UICONTROL Täglich]** ausgewählt ist, können Sie die Beginns- und Enddaten für die Exporte auswählen.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -182,7 +188,7 @@ Gilt für: Werbeziele, soziale Ziele
 
 ![Segmentplanschritt](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-Auf der Seite **[!UICONTROL Segmentplan]** können Sie das Datum des Beginns für das Senden der Daten an das Ziel sowie die Häufigkeit für das Senden der Daten an das Ziel festlegen.
+Auf der Seite **[!UICONTROL Segmentplan]** können Sie das Datum des Beginns für das Senden der Daten an das Ziel und die Häufigkeit des Sendens der Daten an das Ziel festlegen.
 
 >[!IMPORTANT]
 >
