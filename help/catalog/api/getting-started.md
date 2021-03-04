@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Katalogdienst;Katalog;Katalogdienst;Katalog
 solution: Experience Platform
 title: Handbuch zur API für Katalogdienst
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Mit der Katalogdienst-API können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 57%
+source-wordcount: '602'
+ht-degree: 54%
 
 ---
 
@@ -25,7 +25,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen, wie Sie mit der Verwendung 
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 * [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform]: So erfasst und speichert Daten aus Datendateien wie CSV und Parquet.
-* [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md)[!DNL Experience Platform]: So erfasst und speichert Daten von Client- und Server-seitigen Geräten in Echtzeit.
+* [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So  [!DNL Experience Platform] werden Daten von Client- und serverseitigen Geräten in Echtzeit erfasst und gespeichert.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Catalog Service]-API erfolgreich aufrufen zu können.
 
