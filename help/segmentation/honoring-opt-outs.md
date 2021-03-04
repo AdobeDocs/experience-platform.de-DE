@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Ausschluss;Segmentierung;Segmentierungsdienst;Segmentierungsdienst;Ausschlussoption;Opt-out;Ausschluss;
 solution: Experience Platform
 title: Abrufen von Abmeldeanforderungen in Segmenten
-topic: overview
+topic: Übersicht
 description: 'Adobe Experience Platform ermöglicht es Ihren Kunden, Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils des Kunden zu senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem). '
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1033'
 ht-degree: 60%
 
 ---
