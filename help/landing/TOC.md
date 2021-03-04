@@ -3,12 +3,12 @@ product: experience-platform
 audience: user
 user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
-user-guide-description: Erfahren Sie, wie Experience Platform es ermöglicht, Ihren Kunden personalisierte Erlebnisse in Echtzeit bereitzustellen.
+user-guide-description: Erfahren Sie, wie die Experience Platform es ermöglicht, Ihren Kunden personalisierte Erlebnisse in Echtzeit bereitzustellen.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 32%
+source-wordcount: '160'
+ht-degree: 22%
 
 ---
 
