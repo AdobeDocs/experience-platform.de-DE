@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;IAB;IAB 2.0;Zustimmung;Zustimmung
 solution: Experience Platform
 title: IAB TCF 2.0-Unterstützung für Experience Platform
-topic: privacy events
+topic: Datenschutz-Ereignisse
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schema so konfigurieren, dass bei der Aktivierung von Segmenten an Zielorte in Adobe Experience Platform Auswahlmöglichkeiten für die Kundengenehmigung angezeigt werden.
 translation-type: tm+mt
-source-git-commit: b0af9d49f6cfe50f6dff745dfac174dbaa76d070
+source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ alloy("setConsent", {
 | `standard` | Der verwendete Zustimmungsstandard. Dieser Wert muss für die Verarbeitung der TCF 2.0-Einwilligung auf `IAB` eingestellt werden. |
 | `version` | Die Versionsnummer des Zustimmungsstandards, die unter `standard` angegeben ist. Dieser Wert muss für die Verarbeitung der TCF 2.0-Einwilligung auf `2.0` eingestellt werden. |
 | `value` | Die Base-64-kodierte Zustimmungszeichenfolge, die vom CMP generiert wurde. |
-| `gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für den derzeit angemeldeten Kunden gilt. Damit TCF 2.0 für diesen Kunden erzwungen werden kann, muss der Wert auf `true` gesetzt werden. |
+| `gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für den derzeit angemeldeten Kunden gilt. Damit TCF 2.0 für diesen Kunden erzwungen werden kann, muss der Wert auf `true` gesetzt werden. Die Standardeinstellung ist `true`, wenn nicht definiert. |
 
 Der Befehl `setConsent` sollte als Teil eines CMP-Hook verwendet werden, der Änderungen in den Einstellungen für die Zustimmung erkennt. Das folgende JavaScript bietet ein Beispiel dafür, wie der Befehl `setConsent` für den `OnConsentChanged`-Haken von OneTrust verwendet werden kann:
 
@@ -219,7 +219,7 @@ alloy("sendEvent", {
 | `consentStandard` | Der verwendete Zustimmungsstandard. Dieser Wert muss für die Verarbeitung der TCF 2.0-Einwilligung auf `IAB` eingestellt werden. |
 | `consentStandardVersion` | Die Versionsnummer des Zustimmungsstandards, die unter `standard` angegeben ist. Dieser Wert muss für die Verarbeitung der TCF 2.0-Einwilligung auf `2.0` eingestellt werden. |
 | `consentStringValue` | Die Base-64-kodierte Zustimmungszeichenfolge, die vom CMP generiert wurde. |
-| `gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für den derzeit angemeldeten Kunden gilt. Damit TCF 2.0 für diesen Kunden erzwungen werden kann, muss der Wert auf `true` gesetzt werden. |
+| `gdprApplies` | Ein boolescher Wert, der angibt, ob der GDPR für den derzeit angemeldeten Kunden gilt. Damit TCF 2.0 für diesen Kunden erzwungen werden kann, muss der Wert auf `true` gesetzt werden. Die Standardeinstellung ist `true`, wenn nicht definiert. |
 
 ### Umgang mit SDK-Antworten
 
@@ -233,7 +233,7 @@ Alle [!DNL Platform SDK]-Befehle geben Versprechungen zurück, die angeben, ob d
 
 Nachdem Sie Daten zur Kundengenehmigung gesammelt und Segmente mit den erforderlichen Genehmigungsattributen erstellt haben, können Sie die TCF 2.0-Konformität erzwingen, wenn Sie diese Audiencen an nachgelagerte Ziele exportieren.
 
-Sofern die Einstellung für die Zustimmung `gdprApplies` für eine Reihe von Profilen auf `true` eingestellt ist, werden alle Daten aus den Profilen, die in nachgelagerte Ziele exportiert werden, basierend auf den Voreinstellungen für die Zustimmung für jedes Profil gefiltert. Jedes Profil, das die erforderlichen Voreinstellungen für die Zustimmung nicht erfüllt, wird während des Exportvorgangs übersprungen.
+Sofern die Einstellung für die Zustimmung `gdprApplies` für eine Reihe von Profilen auf `true` eingestellt ist, werden alle Daten aus den Profilen, die in nachgelagerte Ziele exportiert werden, basierend auf den TCF-Voreinstellungen für die Zustimmung für jedes Profil gefiltert. Jedes Profil, das die erforderlichen Voreinstellungen für die Zustimmung nicht erfüllt, wird während des Exportvorgangs übersprungen.
 
 Die Kunden müssen den folgenden Zwecken zustimmen (wie in den Richtlinien [TCF 2.0 ](https://iabeurope.eu/iab-europe-transparency-consent-framework-policies/#Appendix_A_Purposes_and_Features_Definitions) beschrieben), damit ihre Profil in Segmente aufgenommen werden, die in Ziele exportiert werden:
 
