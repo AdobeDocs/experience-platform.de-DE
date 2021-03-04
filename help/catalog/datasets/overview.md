@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenposition;Datenposition;Data Management;Data Management;Lineage;Datentyp;Datentypen;Datentypen;Datentyp
 solution: Experience Platform
 title: Übersicht über Datasets
-topic: datasets
+topic: Datensätze
 description: Dieses Dokument bietet einen Überblick über Datensätze in der Experience Platform.
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '708'
 ht-degree: 3%
 
 ---
