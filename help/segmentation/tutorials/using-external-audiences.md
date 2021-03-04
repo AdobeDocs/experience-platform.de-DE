@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Durchsetzen der Datennutzungskonformität für Zielgruppensegmente
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 2ca0768c951cf67a775fdfc2c1f9440596d118bf
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 12%
+source-wordcount: '640'
+ht-degree: 10%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform unterstützt die Möglichkeit, externe Audiencen zu im
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 - [Datensätze](../../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in Experience Platform.
-- [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von Client- und Server-seitigen Geräten in Echtzeit.
+- [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von client- und serverseitigen Geräten in Echtzeit.
 
 ## Erstellen eines Identitäts-Namensraums für die externe Audience
 
