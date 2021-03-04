@@ -5,9 +5,9 @@ title: Erstellen von Datenbeständen zur Erfassung von IAB TCF 2.0-Genehmigungsd
 topic: Datenschutz-Ereignisse
 description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
 translation-type: tm+mt
-source-git-commit: a845ade0fc1e6e18c36b5f837fe7673a976f01c7
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
