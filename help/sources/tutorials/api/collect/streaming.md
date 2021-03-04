@@ -6,9 +6,9 @@ topic: Übersicht
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in die Plattform mithilfe von Quellschnittstellen und APIs erläutert.
 translation-type: tm+mt
-source-git-commit: b8f7f6e7f110dc9ebd025cd594fd1a54126ccdf3
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1306'
 ht-degree: 19%
 
 ---
@@ -344,7 +344,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbi
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zielgruppe-Datensatz aufgenommen werden können, müssen sie zunächst dem Zielgruppe-Schema zugeordnet werden, dem der Zielgruppe-Datensatz entspricht. Dies wird erreicht, indem eine POST-Anforderung an den Konvertierungsdienst mit Datenzuordnungen ausgeführt wird, die innerhalb der Anforderungs-Nutzlast definiert sind.
+Damit die Quelldaten in einen Zielgruppe-Datensatz aufgenommen werden können, müssen sie zunächst dem Zielgruppe-Schema zugeordnet werden, dem der Zielgruppe-Datensatz entspricht. Dies wird erreicht, indem eine POST an den Konvertierungsdienst mit Datenzuordnungen ausgeführt wird, die innerhalb der Anforderungs-Nutzlast definiert sind.
 
 **API-Format**
 
@@ -385,7 +385,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `xdmSchema` | Das `$id` des Ziel-XDM-Schemas. |
+| `xdmSchema` | Die `$id` des Zielgruppe XDM-Schemas. |
 
 **Antwort**
 
@@ -402,9 +402,9 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 }
 ```
 
-## Datennachschau-Spezifikationen {#specs}
+## Nachschlagen von Datennachrichtenspezifikationen {#specs}
 
-Ein Datenaflow ist für das Sammeln von Daten aus Quellen und deren Einspeisung in [!DNL Platform] verantwortlich. Um einen Datenaflow zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [!DNL Flow Service]-API senden. Dataflow-Spezifikationen sind für die Datenerfassung über einen Streaming-Connector zuständig.
+Ein Datenaflow ist für das Sammeln von Daten aus Quellen und deren Einspeisung in [!DNL Platform] verantwortlich. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [!DNL Flow Service]-API senden. Dataflow-Spezifikationen sind für die Datenerfassung über einen Streaming-Connector zuständig.
 **API-Format**
 
 ```http
@@ -423,7 +423,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Datenaflow-Spezifikation zurück, die für das Übertragen von Daten aus Ihrem Streaming-Connector in [!DNL Platform] verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datenaflow zu erstellen.
+Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für das Übertragen von Daten aus Ihrem Streaming-Connector nach [!DNL Platform] verantwortlich ist. Diese ID ist im nächsten Schritt erforderlich, um einen neuen Datendurchlauf zu erstellen.
 
 ```json
 {
@@ -495,14 +495,14 @@ Eine erfolgreiche Antwort gibt die Details der Datenaflow-Spezifikation zurück,
 
 ## Datenfluss erstellen
 
-Der letzte Schritt zur Datenerfassung ist die Erstellung eines Datenflusses. Inzwischen sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt bei der Erfassung von Streaming-Daten besteht in der Erstellung eines Datenflusses. Jetzt haben Sie die folgenden erforderlichen Werte vorbereitet:
 
-- [Quellverbindungskennung](#source)
-- [Ziel-Verbindungs-ID](#target)
+- [Quell-Verbindungs-ID](#source)
+- [Zielgruppen-Verbindungs-ID](#target)
 - [Mapping-ID](#mapping)
 - [Dataflow-Spezifikation-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenaflow erstellen, indem Sie eine POST anfordern, während Sie die zuvor genannten Werte innerhalb der Nutzlast angeben.
+Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
 
 **API-Format**
 
@@ -546,9 +546,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `flowSpec.id` | Die [flow spec ID](#specs), die im vorherigen Schritt abgerufen wurde. |
-| `sourceConnectionIds` | Die [Quellverbindungs-ID](#source) wurde in einem früheren Schritt abgerufen. |
-| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection) wurde in einem früheren Schritt abgerufen. |
+| `flowSpec.id` | Die [Flussspec-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) wurde in einem früheren Schritt abgerufen. |
+| `targetConnectionIds` | Die [Zielgruppe-Verbindungs-ID](#target-connection) wurde in einem früheren Schritt abgerufen. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) wurde in einem früheren Schritt abgerufen. |
 
 **Antwort**
@@ -564,7 +564,7 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zur
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Datenaflow erstellt, um Streaming-Daten von Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgeschalteten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Datenfeed erstellt, um Streaming-Daten aus Ihrem Streaming-Connector zu erfassen. Eingangsdaten können nun von nachgeschalteten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 - [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
