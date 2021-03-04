@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Kafka;Kafka-Anschluss;Kafka;
 solution: Experience Platform
 title: Kafka Connector
-topic: overview
-description: Der Stream-Connector für Adobe Experience Platform basiert auf Apache Kafka Connect. Mit dieser Bibliothek können Sie JSON-Ereignisse von Kafka-Themen in Ihrem Rechenzentrum in Echtzeit direkt an Experience Platform zu streamen.
+topic: Übersicht
+description: Der Stream-Connector für Adobe Experience Platform basiert auf Apache Kafka Connect. Diese Bibliothek kann verwendet werden, um JSON-Ereignis von Kafka-Themen in Ihrem Rechenzentrum direkt in Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 39%
+source-wordcount: '189'
+ht-degree: 27%
 
 ---
 
