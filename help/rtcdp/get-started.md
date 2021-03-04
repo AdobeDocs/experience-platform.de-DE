@@ -3,10 +3,10 @@ keywords: RTCDP;CDP;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;
 title: Erste Schritte mit der Echtzeit-Kundendatenplattform
 description: Verwenden Sie dieses Szenario als Beispiel, wenn Sie Ihre Implementierung der Echtzeit-Kundendatenplattform einrichten.
 translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '2326'
-ht-degree: 84%
+source-wordcount: '2328'
+ht-degree: 82%
 
 ---
 
@@ -66,7 +66,7 @@ Wenn Kunden Ihre Site zum ersten Mal besuchen, wissen Sie gar nichts über sie.
 
 ![Bild](assets/luma-site.png)
 
-Bei der Navigation werden Daten in Echtzeit erfasst und nicht nur an eine Report Suite in Adobe Analytics gesendet, sondern auch direkt an Adobe Experience Platform. Wenn Daten gesammelt werden, beginnen Sie eine Ansicht des Benutzers zu bilden, basierend auf Verhaltensdaten in [!DNL Experience Platform's real-time customer profile].
+Während der Navigation werden Daten in Echtzeit erfasst und nicht nur an eine Report Suite in Adobe Analytics gesendet, sondern auch direkt an Adobe Experience Platform gesendet. Wenn Daten gesammelt werden, beginnen Sie eine Ansicht des Benutzers zu bilden, basierend auf Verhaltensdaten in [!DNL Experience Platform's real-time customer profile].
 
 Bei vielen Besuchern der Website handelt es sich wahrscheinlich um wiederkehrende Kunden, die zuvor bereits bei Luma gekauft haben.  Es ist wichtig, dass Luma Botschaften und Angebote personalisieren kann, um sowohl neue und wiederkehrende Besucher als auch bekannte Kunden anzusprechen.
 
@@ -261,7 +261,7 @@ Außerdem können Sie planen, dass das Segment zu einer bestimmten Zeit beginnen
 
 Wählen Sie **[!UICONTROL Speichern]**, um zur nächsten Seite zu wechseln.
 
-Wenn ein Kunde in dieser Zielgruppe einen Kauf tätigt, wird seine Mitgliedschaft in dieser Zielgruppe in Echtzeit unterdrückt. Er ist dann nicht mehr qualifiziert, weil sich sein Status geändert hat.
+Wenn ein Kunde in dieser Audience einen Kauf tätigt, wird seine Mitgliedschaft in dieser Audience in Echtzeit unterdrückt. Er ist dann nicht mehr qualifiziert, weil sich sein Status geändert hat.
 
 Das spart dem Direktor des Medien-Teams von Luma Hunderttausende von Dollar, da er Inventar nicht für eine Zielgruppe verwenden muss, die gar nicht qualifiziert ist.
 
