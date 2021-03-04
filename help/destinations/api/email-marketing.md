@@ -3,13 +3,13 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Verbindungen zu E-Mail-Marketingzielen herstellen und Daten mithilfe von API-Aufrufen aktivieren
 description: Dieses Dokument behandelt die Erstellung von E-Mail-Marketingzielen mithilfe der Adobe Experience Platform API
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: c8b08b2feb30bf137d802ce82df92d3f9f8bdb78
 workflow-type: tm+mt
-source-wordcount: '1649'
-ht-degree: 73%
+source-wordcount: '1681'
+ht-degree: 72%
 
 ---
 
@@ -360,6 +360,12 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 ```
 
 ### Speicherort und Datenformat angeben
+
+[!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Datenspeicherung-Ziele in  [!DNL CSV] Dateiform.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] teilt die Exportdateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar.
 
 **API-Format**
 
