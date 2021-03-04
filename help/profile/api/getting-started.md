@@ -2,12 +2,12 @@
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: Erste Schritte mit der Echtzeit-Profil-API
 topic: guide
-type: Documentation
+type: Dokumentation
 description: In der Anleitung zum Einstieg in die Profil-API werden die wichtigsten Konzepte und grundlegenden Funktionen erläutert, die Sie kennen müssen, um mit API-Endpunkten für Echtzeit-Kunden-Profile grundlegende CRUD-Vorgänge für Profil-Daten durchzuführen.
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '413'
 ht-degree: 20%
 
 ---
