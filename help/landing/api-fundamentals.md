@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Grundlagen der Experience Platform-API
-topic: getting started
+topic: Erste Schritte
 description: In diesem Dokument erhalten Sie einen kurzen Überblick über einige der mit Experience Platform-APIs verbundenen Technologien und Syntaxen.
 translation-type: tm+mt
-source-git-commit: 8c98632b67ddae4fb7800e80fb8c83aca9bfa291
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 53%
+source-wordcount: '513'
+ht-degree: 52%
 
 ---
 
@@ -126,4 +126,4 @@ JSON-Schema ist ein Format, mit dem die Struktur von JSON-Daten beschrieben und 
 
 ## Nächste Schritte
 
-Dieses Dokument führte einige der Technologien und Syntaxen ein, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zum Arbeiten mit [!DNL Platform]-APIs, einschließlich Best Practices und Antworten auf häufig gestellte Fragen, finden Sie im Handbuch [Plattformfehlerbehebung](troubleshooting.md).
+Dieses Dokument führte einige der Technologien und Syntaxen ein, die mit der Verwaltung von JSON-basierten Ressourcen für [!DNL Experience Platform] verbunden sind. Weitere Informationen zum Arbeiten mit Plattform-APIs, einschließlich Best Practices, finden Sie im Handbuch [Erste Schritte](api-guide.md). Antworten auf häufig gestellte Fragen finden Sie im Handbuch [Plattformfehlerbehebung](troubleshooting.md).
