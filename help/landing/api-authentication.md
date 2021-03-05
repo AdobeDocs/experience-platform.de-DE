@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Authentifizieren;Zugriff
 solution: Experience Platform
 title: Experience Platform-APIs authentifizieren und aufrufen
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: 'Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können. '
 translation-type: tm+mt
-source-git-commit: 681a2554111f988ec03d40f23a3b2c8225a077ae
+source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 42%
+source-wordcount: '908'
+ht-degree: 41%
 
 ---
 
@@ -161,6 +161,6 @@ Wenn Ihre Antwort der unten stehenden ähnelt, sind Ihre Anmeldeinformationen g�
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für [!DNL Platform]-APIs gesammelt und erfolgreich getestet. Sie können nun die Beispiel-API-Aufrufe im Abschnitt [Dokumentation](../landing/documentation/overview.md) verfolgen.
+Durch Lesen dieses Dokuments haben Sie Ihre Zugriffsberechtigungen für [!DNL Platform]-APIs gesammelt und erfolgreich getestet. Sie können nun die Beispiele im Handbuch [Erste Schritte für Plattform-APIs](api-guide.md) folgen. Dieses Handbuch enthält Links zu den API-Handbüchern für jeden Plattformdienst und enthält weitere Informationen. zu Fehlern, Postman und JSON.
 
 Zusätzlich zu den Authentifizierungswerten, die Sie in diesem Lernprogramm gesammelt haben, benötigen viele [!DNL Platform]-APIs auch eine gültige `{SANDBOX_NAME}`-Kopfzeile. Weiterführende Informationen dazu finden Sie unter [Sandbox-Übersicht](../sandboxes/home.md).
