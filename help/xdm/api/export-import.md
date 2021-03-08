@@ -3,12 +3,12 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmode
 solution: Experience Platform
 title: API-Endpunkte exportieren/importieren
 description: Die Endpunkte "/export"und "/import"in der Schema Registry-API ermöglichen es Ihnen, XDM-Ressourcen zwischen IMS-Organisationen und Sandboxes freizugeben.
-topic: developer guide
+topic: Entwicklerhandbuch
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 2%
+source-wordcount: '502'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ Alle Ressourcen innerhalb von [!DNL Schema Library] sind in einer bestimmten San
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten Endpunkte sind Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
+Die in diesem Handbuch verwendeten Endpunkte sind Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
 
 Die export-/import-Endpunkte sind Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der API sind für RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` erforderlich und es wird kein `CONTAINER_ID` verwendet. [!DNL Schema Registry] Stattdessen müssen sie den Namensraum `/rpc` verwenden, wie in den unten stehenden API-Aufrufen gezeigt.
 
