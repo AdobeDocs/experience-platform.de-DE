@@ -6,10 +6,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten 
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 feature: Ziele
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 58%
+source-wordcount: '460'
+ht-degree: 57%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 58%
 * [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
 * API-Tutorials {#api}
-   * [Verbindung zu Streaming-Zielen herstellen und Daten mithilfe von API-Aufrufen aktivieren](./api/streaming-destinations.md)
-   * [Verbindungen zu E-Mail-Marketingzielen herstellen und Daten mithilfe von API-Aufrufen aktivieren](./api/email-marketing.md)
+   * [Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API](./api/streaming-destinations.md)
+   * [Herstellen einer Verbindung zu E-Mail-Marketingzielen und Aktivieren von Daten mithilfe der Flow Service API](./api/email-marketing.md)
 * UI-Handbücher {#ui}
    * [Übersicht über den Ziel-Arbeitsbereich](./ui/destinations-workspace.md)
    * [Ansichten-Zieldetails](./ui/destination-details-page.md)
