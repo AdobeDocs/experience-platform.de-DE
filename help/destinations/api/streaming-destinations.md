@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen; API-Lehrgänge; Streaming-Ziel-API; Plattform
 solution: Experience Platform
-title: Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe von API-Aufrufen in Adobe Experience Platform
+title: Herstellen einer Verbindung mit Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API in Adobe Experience Platform
 description: Dieses Dokument behandelt die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform API
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
-source-wordcount: '2021'
+source-wordcount: '2029'
 ht-degree: 54%
 
 ---
 
 
-# Verbindung zu Streaming-Zielen herstellen und Daten mithilfe von API-Aufrufen aktivieren
+# Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ### Swagger-Dokumentation  {#swagger-docs}
 
-Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Weitere Informationen finden Sie in der Dokumentation zur Flow Service API unter Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). [ Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Weitere Informationen finden Sie in der Dokumentation zur Flow Service API für Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). [ Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
 
 ## Liste der verfügbaren Streaming-Ziele abrufen {#get-the-list-of-available-streaming-destinations}
 
