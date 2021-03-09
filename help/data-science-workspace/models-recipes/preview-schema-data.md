@@ -2,33 +2,33 @@
 keywords: Experience Platform;Vorschau Schema Data;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Vorschau des Schemas Einzelhandelsverkäufe und des Datasets
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: Im folgenden Dokument wird die Vorschau von Schemas und Datensätzen auf Adobe Experience Platform beschrieben.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 59%
+source-wordcount: '238'
+ht-degree: 22%
 
 ---
 
 
 # Vorschau des Schemas und des Datensatzes für den Einzelhandel
 
-Nach erfolgreichem Abschluss des Bootstrap-Skripts aus dem Tutorial zum [Erstellen des Einzelhandelsschemas und -datensatzes](./create-retails-sales-dataset.md). Output-Schema und -Datensätze können unter [!DNL Experience Platform] angezeigt werden. Gehen Sie zur Anzeige der Schemas und Datensätze wie folgt vor:
+Nach erfolgreichem Abschluss des Bootstrap-Schemas aus dem Tutorial [Retail Sales und DataSet](./create-retails-sales-dataset.md). Output-Schema und -Datensätze können unter [!DNL Experience Platform] angezeigt werden. Gehen Sie zur Anzeige der Schemas und Datensätze wie folgt vor:
 
-1. Klicken Sie in der linken Navigationsspalte auf den Link **[!UICONTROL Schemas]** und suchen Sie das vom Bootstrap-Skript erstellte Eingabeschema. Der Name des Schemas entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde. Zeigen Sie die Schemadetails und deren Komposition an, indem Sie darauf klicken.
+Wählen Sie die Registerkarte **[!UICONTROL Schema]** in der linken Navigation aus und suchen Sie das vom Bootstrap-Schema erstellte Eingabedatum. Der Name des Schemas entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde. Zeigen Sie die Schemadetails und deren Komposition an, indem Sie darauf klicken.
 
-   ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2. Klicken Sie in der linken Navigationsspalte auf den Link **[!UICONTROL Datensätze]** und öffnen Sie den Eingabedatensatz, der durch Klicken auf den Namen der Auflistung erstellt wurde. Der Name des Datensatzes entspricht dem, der im vorherigen Schritt unter `config.yaml` definiert wurde.
+Wählen Sie in der linken Navigation die Registerkarte **[!UICONTROL Datensätze]** und öffnen Sie das Eingabedataset, das durch Auswahl des Namens des Datensatzes erstellt wurde. Der Name des Datensatzes entspricht dem, was im vorherigen Schritt unter `config.yaml` definiert wurde.
 
-   ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3. Klicken Sie oben rechts in der Vorschau auf **[!UICONTROL Datensatz-Vorschau]**, um eine Untergruppe des Datensatzes anzuzeigen.
+Wählen Sie **[!UICONTROL Vorschau DataSet]** oben rechts aus, um eine Untergruppe des Datensatzes Vorschau.
 
-   ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## Nächste Schritte
 
