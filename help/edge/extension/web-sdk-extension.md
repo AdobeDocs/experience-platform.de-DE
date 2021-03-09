@@ -2,10 +2,10 @@
 title: Adobe Experience Platform Web SDK-Erweiterung Übersicht
 description: Weitere Informationen zur Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 14%
+source-wordcount: '584'
+ht-degree: 13%
 
 ---
 
@@ -56,10 +56,13 @@ Weitere Informationen finden Sie im Handbuch [Edge-Konfigurationen](../fundament
 
 ## [!UICONTROL Datenschutz]
 
-Im Abschnitt [!UICONTROL Privatsphäre] können Sie konfigurieren, wie das SDK mit den Signalen für die Kundengenehmigung von Ihrer Website umgeht. Sie ermöglicht es Ihnen insbesondere, das Standardniveau der Zustimmung auszuwählen, das von einem Kunden angenommen wird, wenn keine andere ausdrückliche Zustimmung angegeben wurde. Die folgende Tabelle zeigt, was jede Option beinhaltet:
+Im Abschnitt [!UICONTROL Privatsphäre] können Sie konfigurieren, wie das SDK die Signale der Benutzereinwilligung von Ihrer Website verarbeitet. Insbesondere ermöglicht es Ihnen, das Standardniveau der Zustimmung auszuwählen, das von einem Benutzer angenommen wird, wenn keine andere ausdrückliche Zustimmung angegeben wurde. Die standardmäßige Zustimmungsstufe wird nicht auf dem Profil des Benutzers gespeichert. Die folgende Tabelle zeigt, was jede Option beinhaltet:
 
 | [!UICONTROL Standardebene für Zustimmung] | Beschreibung |
 | --- | --- |
-| [!UICONTROL Enthalten] | Anmelden. Verwenden Sie diese Option, wenn Sie die Zustimmung des Kunden standardmäßig und nur Ausschlusssignale annehmen. |
-| [!UICONTROL Ausstehend] | Kunden mit &quot;ausstehender&quot;Zustimmung werden abgemeldet, bis ein Abmeldesignal gesendet wird. Verwenden Sie diese Option, wenn Sie eine ausdrückliche Zustimmung des Kunden für Ihre Geschäftsvorgänge benötigen. |
+| [!UICONTROL Enthalten] | Erfassen von Ereignissen, die auftreten, bevor der Benutzer die Voreinstellungen für die Zustimmung eingibt. |
+| [!UICONTROL out] | Ereignis, die auftreten, bevor der Benutzer seine Zustimmung erteilt. |
+| [!UICONTROL Ausstehend] | Warteschlangen Sie Ereignis an, die auftreten, bevor der Benutzer die Voreinstellungen für die Zustimmung bereitstellt. Wenn die Voreinstellungen für die Zustimmung angegeben werden, werden die Ereignis je nach den bereitgestellten Präferenzen erfasst oder verworfen. |
 | [!UICONTROL Von Datenelement bereitgestellt] | Die standardmäßige Ebene der Zustimmung wird durch ein gesondertes Datenelement bestimmt, das Sie definieren. Wenn Sie diese Option verwenden, müssen Sie das Datenelement über das Dropdown-Menü angeben. |
+
+Verwenden Sie &quot;Ausstehend&quot;oder &quot;Ausstehend&quot;, wenn Sie eine ausdrückliche Zustimmung des Benutzers für Ihre Geschäftsvorgänge benötigen.
