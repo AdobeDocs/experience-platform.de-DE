@@ -2,10 +2,10 @@
 title: Aktionstypen in der Adobe Experience Platform Web SDK Extension
 description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die die Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch bereitstellt.
 translation-type: tm+mt
-source-git-commit: 2a0ae9541a8bb2bb985d43a402d0842e73b23c81
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 18%
+source-wordcount: '341'
+ht-degree: 6%
 
 ---
 
@@ -24,9 +24,9 @@ Alle Daten, die Sie senden möchten, können im Feld **[!UICONTROL XDM Data]** g
 
 ## Festlegen des Einverständnisses
 
-Nachdem Sie die Einwilligung Ihres Benutzers erhalten haben, muss diese Einwilligung mit dem Aktionstyp &quot;Einwilligung festlegen&quot;an das Adobe Experience Platform Web SDK übermittelt werden. Derzeit werden zwei Arten von Standards unterstützt: „Adobe“ und „IAB TCF“. Bei Verwendung des Adobe-Standards können Sie das Einverständnis derzeit als „In“ oder „Out“ festlegen oder mithilfe eines Datenelements bereitstellen. Wenn Sie den IAB-TCF-Standard verwenden, geben Sie die Version und den Wert an, die Sie verwenden möchten, sowie zusätzliche Informationen zur DSGVO.
+Nachdem Sie die Einwilligung Ihres Benutzers erhalten haben, muss diese Einwilligung mit dem Aktionstyp &quot;Einwilligung festlegen&quot;an das Adobe Experience Platform Web SDK übermittelt werden. Derzeit werden zwei Arten von Standards unterstützt: „Adobe“ und „IAB TCF“. Siehe [Voreinstellungen für unterstützende Kunden-Zustimmung](../consent/supporting-consent.md). Bei Verwendung der Adobe 2.0 wird nur ein Datenelementwert unterstützt. Sie müssen ein Datenelement erstellen, das zum Objekt für die Zustimmung aufgelöst wird.
 
-In dieser Aktion wird Ihnen auch ein optionales Feld zur Aufnahme einer Identitätskarte bereitgestellt, damit Identitäten synchronisiert werden können, sobald die Zustimmung eingegangen ist. Die Synchronisierung ist nützlich, wenn die Zustimmung als &quot;Ausstehend&quot;konfiguriert ist, da der Einwilligungsaufruf wahrscheinlich der erste ausgelöste Aufruf ist.
+In dieser Aktion wird Ihnen auch ein optionales Feld zur Aufnahme einer Identitätskarte bereitgestellt, damit Identitäten synchronisiert werden können, sobald die Zustimmung eingegangen ist. Die Synchronisierung ist nützlich, wenn die Zustimmung als &quot;Ausstehend&quot;oder &quot;Ausstehend&quot;konfiguriert ist, da der Genehmigungsaufruf wahrscheinlich der erste ausgelöste Aufruf ist.
 
 ## Zurücksetzen der Zusammenführungs-ID des Ereignisses
 
@@ -34,4 +34,4 @@ Wenn Sie Ihre Ereignis Merge-ID auf Ihrer Seite zurücksetzen möchten, können 
 
 ## Nächste Schritte
 
-Nachdem Sie die Aktionstypen festgelegt haben, konfigurieren Sie [die Datenelementtypen](data-element-types.md).
+Nachdem Sie die Aktionstypen festgelegt haben, konfigurieren Sie [Ihre Datenelementtypen](data-element-types.md).
