@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblase-Datenspeicherung;Azimarktisch-Datenspeicherung;ATS;ats
 solution: Experience Platform
 title: Übersicht über den Source Connector für die Datenspeicherung von Avocent
-topic: overview
+topic: Übersicht
 description: Erfahren Sie, wie Sie die Azurblase Table-Datenspeicherung mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 10%
+source-wordcount: '306'
+ht-degree: 9%
 
 ---
 
@@ -26,6 +26,10 @@ Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quell
 ## Zulassungsliste der IP-Adresse
 
 Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+
+>[!IMPORTANT]
+>
+>Der [!DNL Azure Table Storage]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
 Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Table Storage] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
 
