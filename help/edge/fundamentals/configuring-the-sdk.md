@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK konfigu
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;Umgebung;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;webSDK-Einstellungen;prehidingStyle;opacity;cookieDestinationEnabled;urlDestination Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: f78da58ba7a593d9c161030833d9b69e2ba57c9a
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 69%
+source-wordcount: '793'
+ht-degree: 64%
 
 ---
 
@@ -103,7 +103,11 @@ Legen Sie dies fest, um einen Rückruf zu konfigurieren, der für jedes Ereignis
 | -------- | ------------ | ----------------- |
 | Objekt | Nein | `"in"` |
 
-Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Der andere gültige Wert ist `"pending"`. Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt. Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](../consent/supporting-consent.md).
+Legt die Standardzustimmung des Nutzers fest. Wird verwendet, wenn für den Nutzer noch keine Voreinstellung für die Zustimmung gespeichert wurde. Die anderen gültigen Werte sind `"pending"` und `"out"`. Dieser Standardwert bleibt nicht auf dem Profil des Benutzers erhalten. Nur wenn setConsent aufgerufen wird, wird das Profil des Benutzers aktualisiert.
+* `"in"`: Wenn dieser Wert festgelegt ist oder kein Wert angegeben wird, wird die Arbeit ohne Benutzereinwilligung fortgesetzt.
+* `"pending"`: Wenn dies festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Nutzer die Zustimmungseinstellungen eingibt.
+* `"out"`: Wenn dies festgelegt ist, werden die Arbeiten verworfen, bis der Benutzer seine Zustimmung erteilt.
+Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](../consent/supporting-consent.md).
 
 ## Personalisierungsoptionen
 
