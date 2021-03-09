@@ -2,9 +2,9 @@
 title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe von Platform launch und der Platform Web SDK Extension
 description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit Adobe Experience Platform Launch und der Adobe Experience Platform Web SDK-Erweiterung einrichten.
 translation-type: tm+mt
-source-git-commit: 1a51ce92eb5c41ff65ebcf4c652640dd0782487f
+source-git-commit: b9fb71ac7eca95c65165d6780b681ada3f16325b
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Darüber hinaus erfordert dieses Handbuch ein Verständnis des Adobe Experience 
 
 ## Standardgenehmigung festlegen
 
-Innerhalb der Erweiterungskonfiguration gibt es eine Einstellung für die Standardgenehmigung. Dies steuert das Verhalten von Kunden, die kein Cookie für die Zustimmung haben. Wenn Sie Experience Ereignisses für Kunden in die Warteschlange stellen möchten, die kein Cookie für die Zustimmung haben, setzen Sie dies auf `pending`. Sie können auch ein Datenelement verwenden, um den Standardwert für die Zustimmung dynamisch festzulegen.
+Innerhalb der Erweiterungskonfiguration gibt es eine Einstellung für die Standardgenehmigung. Dies steuert das Verhalten von Kunden, die kein Cookie für die Zustimmung haben. Wenn Sie Experience Ereignisses für Kunden in die Warteschlange stellen möchten, die kein Cookie für die Zustimmung haben, setzen Sie dies auf `pending`. Wenn Sie Experience Ereignisses für Kunden verwerfen möchten, die kein Cookie für die Zustimmung haben, setzen Sie dies auf `out`. Sie können auch ein Datenelement verwenden, um den Standardwert für die Zustimmung dynamisch festzulegen.
 
 Weitere Informationen zum Konfigurieren der Standardgenehmigung finden Sie im Abschnitt [Standardgenehmigung](../../fundamentals/configuring-the-sdk.md#default-consent) im SDK-Konfigurationshandbuch.
 
