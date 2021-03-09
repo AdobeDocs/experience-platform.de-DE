@@ -3,7 +3,7 @@ keywords: Azurblauer Ereignis Hub Destination;Azurer Ereignis Hub;Azurabend
 title: Beta-Ereignis-Hubs-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 6%
@@ -22,7 +22,7 @@ ht-degree: 6%
 Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs]-Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
 
 * Weitere Informationen zu [!DNL Azure Event Hubs] finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] mithilfe von API-Aufrufen finden Sie im Lehrgang [Streaming-Ziel-API](../../api/streaming-destinations.md).
+* Informationen zum programmgesteuerten Herstellen einer Verbindung mit [!DNL Azure Event Hubs] finden Sie im Lehrgang [Streaming-Ziel-API](../../api/streaming-destinations.md).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] mithilfe der Plattform-Benutzeroberfläche finden Sie in den folgenden Abschnitten.
 
 ![AWS Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -108,6 +108,6 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format. [!DNL 
 
 >[!MORELIKETHIS]
 >
->* [Verbindung zu Azurblauen Ereignis-Hubs und Aktivierung von Daten mithilfe von API-Aufrufen](../../api/streaming-destinations.md)
+>* [Stellen Sie eine Verbindung zu den Ereignis-Hubs her und aktivieren Sie Daten mithilfe der Flow Service API](../../api/streaming-destinations.md)
 >* [AWS Kinesis-Ziel](./amazon-kinesis.md)
 >* [Zieltypen und Kategorien](../../destination-types.md)
