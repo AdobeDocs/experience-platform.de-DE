@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Explorer;Azure Data Explorer
 solution: Experience Platform
 title: Übersicht über den Avocent Data Explorer Source Connector
-topic: overview
+topic: Übersicht
 description: Erfahren Sie, wie Sie Azurblase-Data Explorer mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '270'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,10 @@ Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschl
 ## Zulassungsliste der IP-Adresse
 
 Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+
+>[!IMPORTANT]
+>
+>Der [!DNL Azure Data Explorer]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
 Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Data Explorer] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
 
