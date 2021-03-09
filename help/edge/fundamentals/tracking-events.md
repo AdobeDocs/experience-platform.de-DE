@@ -1,12 +1,12 @@
 ---
 title: Ereignisse mit dem Adobe Experience Platform Web SDK verfolgen
-seo-description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignis verfolgen.
+description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignis verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;sendBeacon;documentUnloading;Dokument Unloading;onBeforeEventSend;
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 25cf425df92528cec88ea027f3890abfa9cd9b41
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 56%
+source-wordcount: '1397'
+ht-degree: 46%
 
 ---
 
@@ -79,7 +79,7 @@ In diesem Beispiel wird die Datenschicht geklont, indem sie in JSON serialisiert
 
 Derzeit wird das Senden von Daten, die nicht mit einem XDM-Schema übereinstimmen, nicht unterstützt. Die Unterstützung ist für einen späteren Termin geplant.
 
-### Einstellen von `eventType`
+### Einstellen von `eventType` {#event-types}
 
 In einem XDM-Erlebnis-Ereignis gibt es ein optionales `eventType`-Feld. Dies enthält den primären Ereignistyp für den Datensatz. Das Festlegen eines Ereignistyps kann Ihnen helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet mehrere vordefinierte Ereignistyp, die Sie verwenden können, oder Sie erstellen Ihre eigenen benutzerdefinierten Ereignistyp für Ihre Anwendungsfälle. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistyp, die von XDM bereitgestellt werden. [Lesen Sie mehr im öffentlichen XDM-Bericht](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
@@ -211,20 +211,20 @@ alloy("sendEvent", {
 
 ## Globale Änderung von Ereignissen {#modifying-events-globally}
 
-Wenn Sie Felder global aus dem Ereignis hinzufügen, entfernen oder ändern möchten, können Sie einen `onBeforeEventSend`-Rückruf konfigurieren.  Dieser Rückruf wird jedes Mal abgerufen, wenn ein Ereignis gesendet wird.  Dieser Rückruf wird an ein Ereignis-Objekt mit einem `xdm`-Feld übergeben.  Ändern Sie `event.xdm`, um die im Ereignis gesendeten Daten zu ändern.
+Wenn Sie Felder global aus dem Ereignis hinzufügen, entfernen oder ändern möchten, können Sie einen `onBeforeEventSend`-Rückruf konfigurieren.  Dieser Rückruf wird jedes Mal abgerufen, wenn ein Ereignis gesendet wird.  Dieser Rückruf wird an ein Ereignis-Objekt mit einem `xdm`-Feld übergeben.  Ändern Sie `content.xdm`, um die mit dem Ereignis gesendeten Daten zu ändern.
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -235,10 +235,54 @@ Die `xdm`-Felder werden in der folgenden Reihenfolge festgelegt:
 2. Automatisch erfasste Werte.  (Siehe [Automatische Informationen](../data-collection/automatic-information.md).)
 3. Die Änderungen, die im `onBeforeEventSend`-Rückruf vorgenommen wurden.
 
-Wenn der `onBeforeEventSend`-Rückruf eine Ausnahme auslöst, wird das Ereignis trotzdem gesendet. jedoch wird keine der im Rückruf vorgenommenen Änderungen auf das endgültige Ereignis angewendet.
+Einige Hinweise zum Rückruf `onBeforeEventSend`:
+
+* Ereignis XDM kann während des Rückrufs geändert werden. Nachdem der Rückruf zurückgegeben wurde, können alle geänderten Felder und Werte von
+die Objekte content.xdm und content.data werden mit dem Ereignis gesendet.
+
+   ```javascript
+   onBeforeEventSend: function(content){
+     //sets a query parameter in XDM
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     content.xdm.marketing.trackingCode = urlParams.get('cid')
+   }
+   ```
+
+* Wenn der Rückruf eine Ausnahme auslöst, wird die Verarbeitung für das Ereignis abgebrochen und das Ereignis wird nicht gesendet.
+* Wenn der Rückruf den booleschen Wert von `false` zurückgibt, wird die Verarbeitung des Ereignisses abgebrochen.
+ohne Fehler und das Ereignis wird nicht gesendet. Dieser Mechanismus ermöglicht es, bestimmte Ereignis leicht zu ignorieren durch
+Prüfung der Ereignis-Daten und Rückgabe von `false`, wenn das Ereignis nicht gesendet werden sollte.
+
+   >[!NOTE]
+   >Es sollte darauf geachtet werden, dass beim ersten Ereignis auf einer Seite kein Fehler zurückgegeben wird. Die Ausgabe von &quot;false&quot;im ersten Ereignis kann sich negativ auf die Personalisierung auswirken.
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+Jeder andere Rückgabewert als der boolesche `false` ermöglicht es dem Ereignis, nach dem Rückruf zu verarbeiten und zu senden.
+
+* Ereignis können gefiltert werden, indem Sie den Ereignistyp untersuchen (Siehe [Ereignistyp](#event-types).):
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## Potenzielle umsetzbare Fehler
 
 Beim Senden eines Ereignisses wird möglicherweise ein Fehler ausgegeben, wenn die gesendeten Daten zu groß sind (mehr als 32 KB für eine vollständige Anforderung). In diesem Fall müssen Sie die Menge der gesendeten Daten verringern.
-
-Wenn Debugging aktiviert ist, validiert der Server synchron die gesendeten Ereignisdaten für das konfigurierte XDM-Schema. Wenn die Daten nicht mit dem Schema übereinstimmen, werden Details zur Nichtübereinstimmung vom Server zurückgegeben und ein Fehler wird ausgegeben. Ändern Sie in diesem Fall die Daten entsprechend dem Schema. Wenn das Debugging nicht aktiviert ist, validiert der Server die Daten asynchron und kein entsprechender Fehler wird ausgegeben.
