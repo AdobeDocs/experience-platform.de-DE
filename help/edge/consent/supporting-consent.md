@@ -3,10 +3,10 @@ title: Unterstützende Voreinstellungen für die Zustimmung des Kunden mit dem A
 description: Erfahren Sie, wie Sie die Voreinstellungen für die Zustimmung mit dem Adobe Experience Platform Web SDK unterstützen.
 keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: 308c10eb0d1f78dad2b8b6158f28d0384a65c78c
+source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 57%
+source-wordcount: '964'
+ht-degree: 33%
 
 ---
 
@@ -34,11 +34,65 @@ alloy("configure", {
 });
 ```
 
-Wenn die Standardzustimmung für den allgemeinen Zweck auf „Ausstehend“ eingestellt ist, führt der Versuch, Befehle auszuführen, die von den Nutzeranmeldeeinstellungen (z. B. `event`-Befehl) abhängen, dazu, dass der Befehl innerhalb des SDK in die Warteschlange gestellt wird. Diese Befehle werden erst verarbeitet, nachdem Sie die Nutzeranmeldeeinstellungen an das SDK übermittelt haben.
+Wenn die Standardzustimmung für den allgemeinen Zweck auf „Ausstehend“ eingestellt ist, führt der Versuch, Befehle auszuführen, die von den Nutzeranmeldeeinstellungen (z. B. `sendEvent`-Befehl) abhängen, dazu, dass der Befehl innerhalb des SDK in die Warteschlange gestellt wird. Diese Befehle werden erst verarbeitet, nachdem Sie die Nutzeranmeldeeinstellungen an das SDK übermittelt haben.
+
+>[!NOTE]
+>
+>Befehle werden nur im Arbeitsspeicher in die Warteschlange gestellt. Sie werden nicht beim Laden der Seite gespeichert.
+
+Wenn Sie keine Ereignis erfassen möchten, die vor dem Festlegen der Anmeldevoreinstellungen des Benutzers aufgetreten sind, können Sie `"defaultConsent": "out"` während der SDK-Konfiguration weiterleiten. Der Versuch, Befehle auszuführen, die von den Anmeldevoreinstellungen des Benutzers abhängen, hat keine Auswirkungen, bis Sie die Anmeldevoreinstellungen des Benutzers an das SDK übermittelt haben.
+
+>[!NOTE]
+>
+>Derzeit unterstützt das SDK nur einen einzigen, ganz oder gar keinen Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für Adobe Experience Platform [!DNL Web SDK]- und NICHT für andere JavaScript-Bibliotheken der Adobe.
 
 An dieser Stelle möchten Sie den Nutzer vielleicht bitten, sich irgendwo in Ihrer Benutzeroberfläche anzumelden. Sobald die Benutzereinstellungen erfasst wurden, teilen Sie diese Voreinstellungen dem SDK mit.
 
-## Voreinstellungen für die Übermittlung von Zustimmungen über Adobe Standard
+## Voreinstellungen für die Übermittlung von Zustimmungen über den Adobe Experience Platform Standard
+
+Das SDK unterstützt die Versionen 1.0 und 2.0 des Adobe Experience Platform-Zustimmungsstandards. Die 1.0- und 2.0-Standards unterstützen derzeit nur die automatische Durchsetzung einer &quot;Alles oder Nichts&quot;-Präferenz. Der 1.0-Standard wird zugunsten des 2.0-Standards eingestellt. Der 2.0-Standard ermöglicht es Ihnen, zusätzliche Voreinstellungen für die Zustimmung hinzuzufügen, die zur manuellen Durchsetzung der Einwilligung verwendet werden können.
+
+### Verwenden der Adobe-Standardversion 2.0
+
+Wenn Sie Adobe Experience Platform verwenden, müssen Sie ein Profil-Schema einschließen, in dem Sie Ihre Privatsphäre verändern können. Weitere Informationen zur Adobe-Standardversion 2.0 finden Sie unter [Verwaltung, Datenschutz und Sicherheit in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md). Sie können Daten innerhalb des Wertobjekts unten entsprechend dem Schema des Felds `consents` des Profils &quot;Zustimmung und Voreinstellungen&quot;hinzufügen.
+
+Wenn sich der Benutzer anmeldet, führen Sie den Befehl `setConsent` mit der Erfassungseinstellung `y` wie folgt aus:
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "2.0",
+      value: {
+        collect: {
+          val: "y"
+        }
+      }
+    }]
+});
+```
+
+Wenn der Benutzer Opt-out, führen Sie den Befehl `setConsent` aus, wobei die Erfassungseinstellung auf `n` wie folgt eingestellt ist:
+
+```javascript
+alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "2.0",
+      value: {
+        collect: {
+          val: "n"
+        }
+      }
+    }]
+});
+```
+
+>[!NOTE]
+>
+>Nachdem sich ein Benutzer abgemeldet hat, können Sie mit dem SDK nicht festlegen, dass die Benutzer die Zustimmung einholen auf `y` setzen.
+
+### Verwenden der Adobe-Standardversion 1.0
 
 Wenn sich der Nutzer anmeldet, führen Sie den `setConsent`-Befehl mit der `general`-Option, die auf `in` eingestellt ist, wie folgt aus:
 
@@ -53,8 +107,6 @@ alloy("setConsent", {
     }]
 });
 ```
-
-Da der Nutzer jetzt angemeldet ist, werden alle zuvor in die Warteschlange gestellten Befehle vom SDK ausgeführt. Zukünftige Befehle, die vom Nutzer abhängen, werden nicht in die Warteschlange gestellt und stattdessen sofort ausgeführt.
 
 Wenn der Nutzer sich entscheidet, sich abzumelden, führen Sie den `setConsent`-Befehl wie folgt aus, während die `general`-Option auf `out` eingestellt ist:
 
@@ -74,12 +126,6 @@ alloy("setConsent", {
 >
 >Nachdem sich ein Nutzer abgemeldet hat, ist es im SDK nicht möglich, die Nutzerzustimmung auf `in` einzustellen.
 
-Da der Nutzer sich für eine Abmeldung entschieden hat, werden Promises, die von zuvor in die Warteschlange gestellten Befehlen zurückgegeben wurden, abgelehnt. Zukünftige Befehle, die von der Anmeldung des Nutzers abhängen, geben Promises zurück, die in ähnlicher Weise abgelehnt werden. Weitere Informationen zum Umgang mit oder zur Unterdrückung von Fehlern finden Sie unter [Befehle ausführen](../fundamentals/executing-commands.md).
-
->[!NOTE]
->
->Derzeit unterstützt das SDK nur den `general`-Zweck. Obwohl wir planen, eine stabilere Reihe von Zielen oder Kategorien zu entwickeln, die den verschiedenen Adobe-Funktionen und -Produktangeboten entsprechen, bietet die aktuelle Implementierung nur die Alles-oder-Nichts-Methode zur Teilnahme.  Dies gilt nur für Adobe Experience Platform [!DNL Web SDK]- und NICHT für andere JavaScript-Bibliotheken der Adobe.
-
 ## Übermittlung von Präferenzen für die Zustimmung über den IAB-TCF-Standard
 
 Das SDK unterstützt die Aufzeichnung von Voreinstellungen für die Zustimmung eines Benutzers, die über den IAB-Standard (Interactive Advertising Bureau Europe) Transparency and Consent Framework (TCF) bereitgestellt werden. Die Zeichenfolge für die Einwilligung kann mit demselben Befehl wie oben festgelegt werden:`setConsent`
@@ -97,7 +143,7 @@ alloy("setConsent", {
 
 Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil-XDM-Schema das [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Informationen zur Einwilligung in Ereignissen zu senden, muss das [Experience Ereignis Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) dem Experience Ereignis Schema hinzugefügt werden.
 
-## Senden beider Standards in einer Anforderung
+## Senden mehrerer Standards in einer Anforderung
 
 Das SDK unterstützt auch das Senden von mehr als einem Einwilligungsobjekt in einer Anforderung.
 
@@ -105,9 +151,11 @@ Das SDK unterstützt auch das Senden von mehr als einem Einwilligungsobjekt in e
 alloy("setConsent", {
     consent: [{
       standard: "Adobe",
-      version: "1.0",
+      version: "2.0",
       value: {
-        general: "in"
+        collect: {
+          val: "y"
+        }
       }
     },{
       standard: "IAB TCF",
@@ -120,9 +168,11 @@ alloy("setConsent", {
 
 ## Beständigkeit der Zustimmungseinstellungen
 
-Nachdem Sie dem SDK mithilfe des `setConsent`-Befehls Benutzereinstellungen mitgeteilt haben, behält das SDK die Voreinstellungen des Nutzers in einem Cookie bei. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft das SDK diese beibehaltenen Voreinstellungen ab und verwendet sie, um zu bestimmen, ob Ereignis an die Adobe gesendet werden können. Es ist nicht erforderlich, den `setConsent`-Befehl erneut auszuführen, außer um eine Änderung der Voreinstellungen des Nutzers mitzuteilen, was jederzeit möglich ist.
+Nachdem Sie dem SDK mithilfe des `setConsent`-Befehls Benutzereinstellungen mitgeteilt haben, behält das SDK die Voreinstellungen des Nutzers in einem Cookie bei. Wenn der Benutzer das nächste Mal Ihre Website im Browser lädt, ruft das SDK diese beibehaltenen Voreinstellungen ab und verwendet sie, um zu bestimmen, ob Ereignis an die Adobe gesendet werden können.
+
+Sie müssen die Benutzereinstellungen unabhängig speichern, um den Dialog zur Genehmigung mit den aktuellen Voreinstellungen anzeigen zu können. Es gibt keine Möglichkeit, die Benutzereinstellungen aus dem SDK abzurufen. Um sicherzustellen, dass die Benutzereinstellungen mit dem SDK synchronisiert bleiben, können Sie bei jedem Laden der Seite den Befehl `setConsent` aufrufen. Das SDK führt nur dann einen Server-Aufruf durch, wenn sich die Voreinstellungen geändert haben.
 
 ## Synchronisieren von Identitäten während der Einrichtung der Zustimmung
 
-Wenn die Standardgenehmigung aussteht, kann `setConsent` die erste Anforderung sein, die ausgeht und Identität festlegt. Aus diesem Grund kann es wichtig sein, Identitäten bei der ersten Anforderung zu synchronisieren. Die Identitätskarte kann wie beim Befehl `setConsent` hinzugefügt werden. `sendEvent` Siehe [Abrufen der Experience Cloud-ID](../identity/overview.md)
+Wenn die Standardgenehmigung aussteht oder ausfällt, kann `setConsent` die erste Anforderung sein, die ausgeht und Identität festlegt. Aus diesem Grund kann es wichtig sein, Identitäten bei der ersten Anforderung zu synchronisieren. Die Identitätskarte kann wie beim Befehl `setConsent` hinzugefügt werden. `sendEvent` Siehe [Abrufen der Experience Cloud-ID](../identity/overview.md)
 
