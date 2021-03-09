@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblase Data Lake Datenspeicherung Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Azurblase Data Lake Datenspeicherung Gen2 Source Connector - Übersicht
-topic: overview
+topic: Übersicht
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azurblase Data Lake Datenspeicherung Gen2 und Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '457'
 ht-degree: 3%
 
 ---
@@ -22,6 +22,10 @@ Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in [!DNL Platform] üb
 ## Zulassungsliste der IP-Adresse
 
 Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+
+>[!IMPORTANT]
+>
+>Der [!DNL Azure Data Lake Storage Gen2]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
 ## Benennungsbeschränkungen für Dateien und Ordner
 
