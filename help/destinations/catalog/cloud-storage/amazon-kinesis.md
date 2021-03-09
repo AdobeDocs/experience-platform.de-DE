@@ -3,7 +3,7 @@ keywords: Amazon Kinesis;Kinesis-Ziel;Kinesis
 title: Amazon Kinesis-Anschluss
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 6%
@@ -22,7 +22,7 @@ Mit dem [!DNL Kinesis Data Streams]-Dienst von [!DNL Amazon Web Services] könne
 Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Amazon Kinesis]-Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
 
 * Weitere Informationen zu [!DNL Amazon Kinesis] finden Sie in der [Amazon-Dokumentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] mithilfe von API-Aufrufen finden Sie im Lehrgang [Streaming-Ziel-API](../../api/streaming-destinations.md).
+* Informationen zum programmgesteuerten Herstellen einer Verbindung mit [!DNL Amazon Kinesis] finden Sie im Lehrgang [Streaming-Ziel-API](../../api/streaming-destinations.md).
 * Informationen zum Herstellen einer Verbindung mit [!DNL Amazon Kinesis] mithilfe der Plattform-Benutzeroberfläche finden Sie in den folgenden Abschnitten.
 
 ![Amazon Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -117,7 +117,7 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format. [!DNL 
 
 >[!MORELIKETHIS]
 >
->* [Verbindung mit Amazon Kinesis und Datenaktivierung mithilfe von API-Aufrufen](../../api/streaming-destinations.md)
+>* [Herstellen einer Verbindung mit Amazon Kinesis und Aktivieren von Daten mithilfe der Flow Service API](../../api/streaming-destinations.md)
 >* [Azurblauer Ereignis Hubs Ziel](./azure-event-hubs.md)
 >* [Zieltypen und Kategorien](../../destination-types.md)
 
