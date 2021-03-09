@@ -3,10 +3,10 @@ title: Versionshinweise zur Adobe Experience Platform Web SDK Extension
 description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
 workflow-type: tm+mt
-source-wordcount: '990'
-ht-degree: 89%
+source-wordcount: '1134'
+ht-degree: 79%
 
 ---
 
@@ -14,6 +14,19 @@ ht-degree: 89%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 Dieses Dokument behandelt die Versionshinweise für die Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch. Die neuesten Versionshinweise zum SDK finden Sie in den [Platform Web SDK-Versionshinweisen](https://docs.adobe.com/content/help/de-DE/experience-platform/edge/release-notes.html).
+
+## 9. März 2020
+
+### Adobe Experience Platform Web-SDK 2.4.0
+
+Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
+
+* Das Kontrollkästchen [&quot;Dokument-Entladung&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) wurde zur Benutzeroberfläche der Aktion &quot;Ereignis senden&quot;hinzugefügt.
+* Es wurde Unterstützung für eine `out`-Option hinzugefügt, wenn [Standardgenehmigung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) konfiguriert wird, die alle Ereignis bis zum Erhalt der Zustimmung ablegt (die bestehende `pending`-Option setzt Ereignis in Warteschlange und sendet sie, sobald die Zustimmung eingegangen ist).
+* Es wurde eine QuickInfo zum Feld für die Standardgenehmigung hinzugefügt.
+* Unterstützung für [2.0-Standard der Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
+* In der Benutzeroberfläche des XDM-Objektdatenelements wird nun ein besserer Fehler angezeigt, wenn das Zugriffstoken des Benutzers ungültig oder nicht ordnungsgemäß bereitgestellt ist.
+* Es wurde ein Fehler bei der Herkunft zwischen verschiedenen Elementen behoben (der sich nicht auf den Vorgang der Erweiterung auswirkt), der in der Entwicklerkonsole des Browsers angezeigt wurde, wenn ein XDM-Objekt-Datenelement angezeigt wurde.
 
 ## 4. November 2020
 
