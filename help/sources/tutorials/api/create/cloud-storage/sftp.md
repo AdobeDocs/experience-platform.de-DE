@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;SFTP;sftp;Secure File Transfer Protocol;Secure File Transfer Protocol
 solution: Experience Platform
 title: Erstellen einer SFTP-Quellverbindung mit der Flow Service API
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 23%
+source-wordcount: '877'
+ht-degree: 21%
 
 ---
 
@@ -44,7 +44,7 @@ Damit [!DNL Flow Service] eine Verbindung zu SFTP herstellen kann, müssen Sie W
 | `host` | Der Name oder die IP-Adresse, die mit Ihrem SFTP-Server verknüpft ist. |
 | `username` | Der Benutzername mit Zugriff auf Ihren SFTP-Server. |
 | `password` | Das Kennwort für Ihren SFTP-Server. |
-| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Das Format des privaten SSH-Schlüssels OpenSSH (RSA/DSA). |
+| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
 | `passPhrase` | Die Phrase oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Phrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
 
 ### Lesen von Beispiel-API-Aufrufen
@@ -133,6 +133,10 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Um eine SFTP-Verbindung mit der SSH-Authentifizierung mit öffentlichem Schlüssel zu erstellen, fordern Sie eine POST an die [!DNL Flow Service]-API an, während Sie Werte für `host`, `userName`, `privateKeyContent` und `passPhrase` angeben.
 
+>[!IMPORTANT]
+>
+>Der SFTP-Connector unterstützt einen RSA- oder DSA-Typ OpenSSH-Schlüssel. Stellen Sie sicher, dass der Inhalt der Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und mit `"-----END [RSA/DSA] PRIVATE KEY-----"` endet. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um das PPK in das OpenSSH-Format zu konvertieren.
+
 **API-Format**
 
 ```http
@@ -172,7 +176,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | Der Hostname des SFTP-Servers. |
 | `auth.params.username` | Der mit Ihrem SFTP-Server verknüpfte Benutzername. |
-| `auth.params.privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Das Format des privaten SSH-Schlüssels OpenSSH (RSA/DSA). |
+| `auth.params.privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
 | `auth.params.passPhrase` | Die Phrase oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Phrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
 | `connectionSpec.id` | Die SFTP-Server-Verbindungs-ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
