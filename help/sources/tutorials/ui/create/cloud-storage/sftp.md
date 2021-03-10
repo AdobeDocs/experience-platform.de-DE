@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;SFTP;SFTP
 solution: Experience Platform
 title: Erstellen einer SFTP-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie eine SFTP-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: b39426d768a0c6fdfa742ec74e4e0bed9c432269
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '718'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Um eine Verbindung zu SFTP herzustellen, müssen Sie Werte für die folgenden Ve
 | `host` | Der Name oder die IP-Adresse, die mit Ihrem SFTP-Server verknüpft ist. |
 | `username` | Der Benutzername mit Zugriff auf Ihren SFTP-Server. |
 | `password` | Das Kennwort für Ihren SFTP-Server. |
-| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Das Format des privaten SSH-Schlüssels OpenSSH (RSA/DSA). |
+| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
 | `passPhrase` | Die Phrase oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch eine Phrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um ein neues SFTP-Konto für die Verbindung mit der Plattform zu erstellen.
@@ -75,13 +75,13 @@ Alternativ können Sie **[SSH-öffentlichen Schlüssel]** auswählen und Ihr SFT
 
 >[!IMPORTANT]
 >
->Der SFTP-Connector unterstützt einen RSA/DSA OpenSSH-Schlüssel. Stellen Sie sicher, dass der Inhalt Ihrer Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` Beginn wird. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um das PPK in das OpenSSH-Format zu konvertieren.
+>Der SFTP-Connector unterstützt einen RSA- oder DSA-Typ OpenSSH-Schlüssel. Stellen Sie sicher, dass der Inhalt der Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und mit `"-----END [RSA/DSA] PRIVATE KEY-----"` endet. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um das PPK in das OpenSSH-Format zu konvertieren.
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| Inhalt privater Schlüssel | Ein Base64-kodierter SSH-Inhalt mit privatem Schlüssel. Der private SSH-Schlüssel sollte im OpenSSH-Format vorliegen. |
+| Inhalt privater Schlüssel | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
 | Passphrase | Gibt den Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels an, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
 
 ### Vorhandenes Konto
