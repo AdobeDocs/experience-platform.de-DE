@@ -2,14 +2,14 @@
 keywords: Experience Platform;JupyterLab;Rezept;Notebooks;Data Science Workspace;beliebte Themen;Rezept erstellen
 solution: Experience Platform
 title: Erstellen eines Rezepts mit Jupyter-Notebooks
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: Dieses Tutorial umfasst zwei Hauptabschnitte. Zuerst erstellen Sie mit einer Vorlage in JupyterLab Notebook ein Modell für maschinelles Lernen. Dann führen Sie den Workflow „Notebook an Rezept“ in JupyterLab aus, um ein Rezept in Data Science Workspace zu erstellen.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 81%
+source-wordcount: '2366'
+ht-degree: 80%
 
 ---
 
@@ -92,9 +92,9 @@ Benutzer müssen die folgenden Variablen ausfüllen, bevor sie ein Training und 
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-Um die Datensatz- und Schemakennungen zu suchen, rufen Sie in Notebooks in der linken Navigationsleiste (unter dem Ordnersymbol) die Registerkarte „Daten“ auf.
+Um die Dataset- und Schema-IDs zu finden, gehen Sie in Notebooks auf der linken Navigationsleiste (unter dem Ordnersymbol) zur Registerkarte &quot;Daten&quot;.![](../images/jupyterlab/create-recipe/dataset-tab.png)
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 Dieselben Daten finden Sie in [Adobe Experience Platform](https://platform.adobe.com/) unter den Registerkarten **[Schema](https://platform.adobe.com/schema)** und **[Datensätze](https://platform.adobe.com/dataset/overview)**.
 
