@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 6c8bf05285dcfc3e631ae5a41dcf40f90217320a
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '2184'
+source-wordcount: '2151'
 ht-degree: 15%
 
 ---
@@ -30,19 +30,11 @@ Die Schritte im Arbeitsablauf für die Aktivierung unterscheiden sich geringfüg
 
 Gilt für: Alle Ziele
 
-Navigieren Sie in der Adobe Experience Platform-Benutzeroberfläche zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und wählen Sie das Ziel aus, an dem Sie Ihre Segmente aktivieren möchten.
+Navigieren Sie in der Adobe Experience Platform-Benutzeroberfläche zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und drücken Sie die Schaltfläche **[!UICONTROL Aktivieren]**, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-![zum Ziel navigieren](../assets/ui/activate-destinations/connect.png)
+![bis zum Ziel aktivieren](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-Wählen Sie den Namen des Ziels aus, um zum Arbeitsablauf für die Aktivierung zu navigieren.
-
-![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->Wenn für ein Ziel bereits ein Aktivierungen-Workflow vorhanden ist, können Sie die Segmente sehen, die derzeit für das Ziel aktiviert werden. Wählen Sie in der rechten Leiste die Option **[!UICONTROL Aktivierung bearbeiten]** und führen Sie die unten beschriebenen Schritte aus, um die Aktivierungsdetails zu ändern.
-
-Nachdem Sie ein Ziel ausgewählt haben, wählen Sie **[!UICONTROL Aktivieren]**.
+Führen Sie die Schritte im nächsten Abschnitt aus, um die Segmente auszuwählen, die Sie aktivieren möchten.
 
 ### [!UICONTROL Segmentschritt ] auswählen  {#select-segments}
 
@@ -159,7 +151,7 @@ Ein Dialogfeld mit Optionen zum Erstellen des Segmentplans wird angezeigt.
 
 * **Dateiexport**: Sie haben die Möglichkeit, entweder vollständige oder inkrementelle Dateien zu exportieren. Beim Exportieren einer vollständigen Datei wird eine vollständige Momentaufnahme aller Profil veröffentlicht, die für dieses Segment qualifiziert sind. Beim Exportieren einer inkrementellen Datei wird das Delta der Profil veröffentlicht, die seit dem letzten Export für dieses Segment qualifiziert sind.
 * **Häufigkeit**: Wenn &quot;Vollständige  **[!UICONTROL Datei]** exportieren&quot;ausgewählt ist, können Sie &quot;Einmalig&quot;oder &quot; ****  **[!UICONTROL Täglich]**&quot;exportieren. Wenn **[!UICONTROL Inkrementelle Dateien exportieren]** ausgewählt ist, haben Sie nur die Möglichkeit, **[!UICONTROL Täglich]** zu exportieren. Beim Exportieren einer Datei **[!UICONTROL Sobald]** wird die Datei einmal exportiert. Beim Exportieren einer Datei **[!UICONTROL Täglich]** wird die Datei jeden Tag vom Beginn bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST) exportiert, wenn vollständige Dateien ausgewählt sind, und um 22:00 Uhr UTC (7:00 Uhr EST), wenn inkrementelle Dateien ausgewählt wurden.
-* **Datum**: Wenn &quot;Einmalig&quot; **** ausgewählt ist, können Sie das Datum für den einmaligen Export auswählen. Wenn **[!UICONTROL Täglich]** ausgewählt ist, können Sie die Beginns- und Enddaten für die Exporte auswählen.
+* **Datum**: Wenn &quot;Einmalig&quot; **** ausgewählt ist, können Sie das Datum für den einmaligen Export auswählen. Wenn **[!UICONTROL Täglich]** ausgewählt ist, können Sie Beginns- und Enddaten für die Exporte auswählen.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
