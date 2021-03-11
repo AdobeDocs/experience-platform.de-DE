@@ -6,7 +6,7 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 15%
@@ -30,7 +30,7 @@ Die Schritte im Arbeitsablauf für die Aktivierung unterscheiden sich geringfüg
 
 Gilt für: Alle Ziele
 
-Navigieren Sie in der Adobe Experience Platform-Benutzeroberfläche zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und drücken Sie die Schaltfläche **[!UICONTROL Aktivieren]**, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
+Navigieren Sie in der Adobe Experience Platform-Benutzeroberfläche zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und klicken Sie auf die Schaltfläche **[!UICONTROL Aktivieren]**, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
 ![bis zum Ziel aktivieren](../assets/ui/activate-destinations/browse-tab-activate.png)
 
