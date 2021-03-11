@@ -4,10 +4,10 @@ title: Übersicht über den Ziel-Arbeitsbereich
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 9305936ca1e73821b2fe948ff1a17a7168840cba
+source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 41%
+source-wordcount: '1017'
+ht-degree: 36%
 
 ---
 
@@ -87,15 +87,19 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
->Verwenden Sie die Schaltfläche ![Hinzufügen in der Spalte **[!UICONTROL Name]**, um weitere Segmente zu diesem Ziel zu aktivieren.](../assets/ui/workspace/add-data-symbol.png)
+> * Verwenden Sie die Schaltfläche ![Hinzufügen Segmente](../assets/ui/workspace/add-data-symbol.png) in der Spalte **[!UICONTROL Name]**, um weitere Segmente zu diesem Ziel zu aktivieren.
+> * Verwenden Sie die Schaltfläche ![Ziele löschen](../assets/ui/workspace/delete-destination-symbol.png) in der Spalte **[!UICONTROL Name]**, um eine bestehende Verbindung zu einem Ziel zu löschen.
+
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschreibung |
 ---------|----------
-| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. |
+| Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerelemente: [!UICONTROL Aktivieren Sie ] und [!UICONTROL Löschen Sie das Ziel]. |
+| Letzter Flusslaufstatus | Der Status des letzten Datenflusses wird ausgeführt. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
+| Letzter Flusslaufdatum | Uhrzeit und Datum der letzten Ausführung des Datenflusses. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
 | [!UICONTROL Ziel] | Die Zielplattform, die Sie für Ihren Aktivierungsfluss ausgewählt haben. |
-| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Bei E-Mail-Marketing-Zielen: Kann S3 oder FTP sein.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li></ul> |
+| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Für E-Mail-Marketingziele: Kann S3, FTP oder [!DNL Azure Blob] sein.</li><li>Für Werbeziele in Echtzeit: Server-zu-Server.</li><li>Für Streaming-Ziele: Kann [!DNL Azure Event Hubs] oder [!DNL Amazon Kinesis] sein.</li></ul> |
 | [!UICONTROL Benutzername] | Die Kontoanmeldedaten, die Sie für den Zielfluss ausgewählt haben. |
 | [!UICONTROL Aktivierungen] | Gibt die Anzahl der Segmente an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Segmente zu erfahren. Weitere Informationen zu den aktivierten Aktivierungen finden Sie auf der Seite mit den Zieldetails unter [Daten zur ](/help/destinations/ui/destination-details-page.md#activation-data). |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. |
