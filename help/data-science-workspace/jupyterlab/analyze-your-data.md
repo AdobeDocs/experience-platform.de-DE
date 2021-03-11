@@ -2,13 +2,13 @@
 keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Analyse von Daten-Notebooks
 solution: Experience Platform
 title: Analysieren Ihrer Daten mit Notebooks
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace integrierten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1733'
 ht-degree: 22%
 
 ---
@@ -80,11 +80,11 @@ Jetzt gehen wir weiter zum Zugriff auf [!DNL Experience Platform]-Daten.
 
 Für diesen Abschnitt verwenden wir den Datensatz Einzelhandelsverkäufe, der mit dem Datensatz für Einzelhandelsverkäufe identisch ist.
 
-In unserem Jupyter-Notebook können wir auf unsere Daten über die Registerkarte **Daten** auf der linken Seite zugreifen. Wenn Sie auf die Registerkarte klicken, können Sie eine Liste von Datensätzen anzeigen.
+Im Jupyter-Notebook können Sie auf Ihre Daten über die Registerkarte **Daten** ![links zugreifen. ](../images/jupyterlab/analyze-data/dataset-tab.png) Bei Auswahl der Registerkarte werden zwei Ordner bereitgestellt. Wählen Sie den Ordner **[!UICONTROL Datasets]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Jetzt können wir im Ordner &quot;Datasets&quot;alle erfassten Datensätze sehen. Beachten Sie, dass es möglicherweise eine Minute dauern kann, alle Einträge zu laden, wenn Ihr Ordner stark mit Datensätzen gefüllt ist.
+Im Ordner &quot;Datasets&quot;können Sie nun alle erfassten Datensätze anzeigen. Beachten Sie, dass es möglicherweise eine Minute dauern kann, alle Einträge zu laden, wenn Ihr Ordner stark mit Datensätzen gefüllt ist.
 
 Da der Datensatz identisch ist, möchten wir die Daten des vorherigen Abschnitts ersetzen, der externe Daten verwendet. Wählen Sie den Codeblock unter **Daten laden** aus und drücken Sie zweimal die Taste **&#39;d&#39;** auf Ihrer Tastatur. Achten Sie darauf, dass der Fokus auf den Block und nicht auf den Text gelegt wird. Sie können **&#39;esc&#39;** drücken, um den Textfokus zu entfernen, bevor Sie die Taste **&#39;d&#39;** zweimal drücken.
 
