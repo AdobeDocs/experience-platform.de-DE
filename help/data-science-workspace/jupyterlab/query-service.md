@@ -2,14 +2,14 @@
 keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Abfrage
 solution: Experience Platform
 title: Abfrage-Service im Jupyter-Notebook
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: Mit Adobe Experience Platform können Sie SQL (Structured Query Language) in Data Science Workspace verwenden, indem Sie Query Service als Standardfunktion in JupyterLab integrieren. In diesem Lernprogramm werden Beispiele von SQL-Abfragen für gängige Anwendungsfälle zur Untersuchung, Transformation und Analyse von Adobe Analytics-Daten vorgestellt.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 9d84fc1eb898020ed4b154c091fcc9fc4933c7de
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 66%
+source-wordcount: '824'
+ht-degree: 60%
 
 ---
 
@@ -98,15 +98,13 @@ Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erf
 
 ## Abfragen der Daten {#query-your-data}
 
-Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie auf ihre Zelle und anschließend auf die Schaltfläche **[!UICONTROL Wiedergeben]** klicken. Erfolgreiche Abfrageergebnisse oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
+Geben Sie die folgenden SQL-Abfragen in die einzelnen Notebook-Zellen ein. Führen Sie eine Abfrage aus, indem Sie sie auf der Zelle auswählen und dann auf die Schaltfläche **[!UICONTROL play]** klicken. Erfolgreiche Abfrageergebnisse oder Fehlerprotokolle werden unterhalb der ausgeführten Zelle angezeigt.
 
-Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und [!DNL Query Service] unterbrochen werden. Starten Sie in solchen Fällen [!DNL JupyterLab] neu, indem Sie auf die Schaltfläche **[!UICONTROL Power]** klicken, die sich oben rechts befindet.
+Wenn ein Notebook über einen längeren Zeitraum inaktiv ist, kann die Verbindung zwischen dem Notebook und [!DNL Query Service] unterbrochen werden. In solchen Fällen müssen Sie [!DNL JupyterLab] neu starten, indem Sie die Schaltfläche **Neustart** ![Neustart](../images/jupyterlab/user-guide/restart_button.png) in der oberen rechten Ecke neben dem Betriebsschalter auswählen.
 
-![](../images/jupyterlab/query/restart_button.png)
+Der Notebook-Kernel setzt, aber die Zellen bleiben, alle Zellen erneut ausführen, um dort weiterzumachen, wo Sie aufgehört hatten.
 
-Der Notebook-Kernel wird zurückgesetzt. Führen Sie **alle** Zellen erneut aus, um dort weiterzumachen, wo Sie aufgehört haben.
-
-### Stündliche Besucherzahl  {#hourly-visitor-count}
+### Stündliche Besucherzahl {#hourly-visitor-count}
 
 Die folgende Abfrage gibt die stündliche Besucherzahl für ein bestimmtes Datum zurück:
 
@@ -188,7 +186,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Die Ausführung der geänderten Abfrage speichert die Ergebnisse in `hourly_actions_date_range` als Dataframe. Führen Sie die folgende Funktion in einer neuen Zelle aus, um eine Vorschau der Ergebnisse anzuzeigen:
+Beim Ausführen der geänderten Abfrage werden die Ergebnisse in `hourly_actions_date_range` als Datenformat gespeichert. Führen Sie die folgende Funktion in einer neuen Zelle aus, um eine Vorschau der Ergebnisse anzuzeigen:
 
 ```python
 hourly_actions_date_rage.head()
