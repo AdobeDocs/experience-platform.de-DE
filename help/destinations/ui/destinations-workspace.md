@@ -4,10 +4,10 @@ title: Übersicht über den Ziel-Arbeitsbereich
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 95ff15b212e0d6f454f0319ac1ec5bbee9c07dac
+source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 36%
+ht-degree: 34%
 
 ---
 
@@ -117,6 +117,6 @@ Auf der Registerkarte **[!UICONTROL Ansicht des Systems]** wird eine grafische D
 
 ![Datenflüsse1](../assets/ui/workspace/data-flows1.png)
 
-Wählen Sie eines der Ziele aus, die auf der Seite angezeigt werden, und klicken Sie auf **[!UICONTROL Datenflüsse anzeigen]**, um Informationen über alle Verbindungen anzuzeigen, die Sie für die einzelnen Ziele eingerichtet haben.
+Wählen Sie eines der auf der Seite angezeigten Ziele aus und klicken Sie auf **[!UICONTROL Ansicht-Fluss]**, um Informationen zu allen Verbindungen anzuzeigen, die Sie für jedes Ziel eingerichtet haben.
 
 ![Datenflüsse2](../assets/ui/workspace/data-flows2.png)
