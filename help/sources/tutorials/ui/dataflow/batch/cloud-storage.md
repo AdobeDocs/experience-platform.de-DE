@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenflug;Datenflug
 solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Cloud-Datenspeicherung-Batch-Connector in der Benutzeroberfläche
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1874'
 ht-degree: 2%
 
 ---
@@ -33,7 +33,7 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie über ein Konto für die
 
 [!DNL Experience Platform] unterstützt die folgenden Dateiformate, die von externen Datenspeicherung erfasst werden:
 
-* Trennzeichen-getrennte Werte (DSV): Die Unterstützung für DSV-formatierte Datendateien ist derzeit auf kommagetrennte Werte beschränkt. Der Wert von Feldkopfzeilen in DSV-formatierten Dateien darf nur aus alphanumerischen Zeichen und Unterstrichen bestehen. Die Unterstützung für allgemeine DSV-Dateien wird in Zukunft bereitgestellt.
+* Trennzeichen-getrennte Werte (DSV): Jeder einzelne Wert kann als Trennzeichen für DSV-formatierte Datendateien verwendet werden.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatierte Datendateien müssen XDM-konform sein.
 * [!DNL Apache Parquet]: Parquet-formatierte Datendateien müssen XDM-konform sein.
 
