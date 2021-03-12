@@ -3,17 +3,17 @@ keywords: Experience Platform;Benutzeroberfläche;Anpassung;Lizenznutzung Dashbo
 title: Dashboard der Lizenzverwendung
 description: Adobe Experience Platform bietet ein Dashboard zur Ansicht wichtiger Informationen zur Lizenznutzung in Ihrem Unternehmen.
 topic: guide
-type: Documentation
+type: Dokumentation
 translation-type: tm+mt
-source-git-commit: 084aaa315f694d696abee7f078be3a121111f6cc
+source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 1%
+source-wordcount: '656'
+ht-degree: 4%
 
 ---
 
 
-# (Beta) [!UICONTROL Lizenzverwendung] Dashboard {#license-usage-dashboard}
+# (Beta) Dashboard zur Lizenzverwendung {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Um eine zu Ansicht Sandbox im Dashboard auszuwählen, wählen Sie entweder [!UIC
 
 >[!NOTE]
 >
->Der Berichte &quot;Verbrauch&quot;für Sandboxen ist für alle Sandboxen desselben Typs kumulativ. Mit anderen Worten, wenn Sie [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] auswählen, werden Berichte zu allen Produktions- bzw. Entwicklungs-Sandboxen erstellt.
+>Der Berichte &quot;Verbrauch&quot;für Sandboxen ist für alle Sandboxen desselben Typs kumulativ. Anders ausgedrückt, bietet die Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxen.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -53,26 +53,35 @@ Nach Auswahl einer Sandbox können Sie mit der Dropdownliste Datumsbereich den Z
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widgets und Metriken
+## Widgets
 
-Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen enthalten. Weitere Informationen zu diesen Widgets finden Sie im Abschnitt zu den verfügbaren Widgets in diesem Handbuch.
+Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen enthalten. Die sichtbaren Metriken hängen von der spezifischen Lizenzierung Ihres Unternehmens ab (Einzelheiten finden Sie im Abschnitt [Verfügbare Metriken](#available-metrics)).
 
-## Verfügbare Widgets {#available-widgets}
+Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für Ihr Unternehmen mit den im Rahmen der Lizenzierung Ihres Unternehmens verfügbaren Gesamtwerten verglichen werden, und zeigt einen Prozentsatz der Gesamtnutzung an.
 
-Experience Platform stellt derzeit ein Widget zur Verfügung, mit dem Sie die Lizenznutzung visualisieren können. Weitere Widgets werden demnächst veröffentlicht.
+![](../images/license-usage/widgets.png)
 
-### [!UICONTROL Addressable Audiencen] {#addressable-audiences}
+## Verfügbare Metriken
 
-Das Widget **[!UICONTROL Addressable Audiencen]** zeigt die Gesamtanzahl der zusammengeführten Profil im Profil Data Store an, nachdem eine systemgenerierte Zusammenführungsrichtlinie angewendet wurde, um Profil-Fragmente aus allen vorhandenen Datensätzen mit einem deterministischen (privaten) Diagrammalgorithmus zu kombinieren.
+Im Dashboard zur Lizenznutzung stehen derzeit vier Metriken zur Verfügung:
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt *Profil-Fragmente vs. zusammengeführte Profil* des [Profil-Überblicks](../../profile/home.md).
+* [!UICONTROL Addressable Audience]  (gemessen nach Anzahl der Profil)
+* [!UICONTROL Durchschnittlicher Reichtum des Profils]
+* [!UICONTROL Konsumierte Datenspeicherung insgesamt]
+* [!UICONTROL Daten gescannt nach Segmentierungsverhältnis]
 
->[!NOTE]
->
->Die zur Berechnung dieser Metrik verwendete Richtlinie zum Zusammenführen wird von der Experience Platform generiert und kann nicht bearbeitet werden. Es kann auch keine andere Richtlinie zum Zusammenführen ausgewählt werden. Diese systemgenerierte Mergerichtlinie ist nicht mit der standardmäßigen Mergerichtlinie identisch, die zur Berechnung der [!UICONTROL Audience] im [!DNL Profile]-Dashboard verwendet wird. Daher ist es unwahrscheinlich, dass die Audience in den Dashboards [!UICONTROL Lizenznutzung] und [!DNL Profile] genau gleich ist.
+Die Definition dieser Metriken hängt von der Lizenzierung ab, die Ihr Unternehmen erworben hat. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
-![](../images/license-usage/addressable-audiences.png)
+| Lizenz | Produktbeschreibung |
+|---|---|
+| <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>RT-KUNDENDATENPLATTFORM:OD</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 10 M</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 50 M</li></ul> | [Echtzeit-Kundendatenplattform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD AKTIVIERUNG PRFL BIS 10 M</li><li>AEP:OD AKTIVIERUNG PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform Aktivierung](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
 ## Nächste Schritte
 
-Indem Sie diesem Dokument folgen, sollten Sie nun in der Lage sein, das Dashboard zur Lizenznutzung zu finden und eine Sandbox zur Ansicht auszuwählen. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zur Benutzeroberfläche der Experience Platform finden Sie im Handbuch [Plattformbenutzeroberfläche](../../landing/ui-guide.md).
+Nach dem Lesen dieses Dokuments können Sie das Dashboard zur Lizenznutzung suchen und eine zu Ansicht Sandbox auswählen. Weitere Informationen zu den verfügbaren Metriken für Ihr Unternehmen finden Sie auf der Grundlage der von Ihrem Unternehmen erworbenen Lizenzen.
+
+Weitere Informationen zu anderen Funktionen in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch [Plattformbenutzeroberfläche](../../landing/ui-guide.md).
