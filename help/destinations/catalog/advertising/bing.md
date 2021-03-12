@@ -3,10 +3,10 @@ keywords: 'Werbung; bing; '
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen über Microsoft Display Advertising durchführen.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 6%
+source-wordcount: '527'
+ht-degree: 5%
 
 ---
 
@@ -23,6 +23,10 @@ Beachten Sie die folgenden Details, die für das [!DNL Microsoft Bing]-Ziel spez
 
 * Sie können die folgenden [Identitäten](../../../identity-service/namespaces.md) an [!DNL Microsoft Bing]-Ziele senden: [!DNL Microsoft ID].
 
+>[!IMPORTANT]
+>
+>Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in der Vergangenheit im Experience Cloud-ID-Dienst (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Microsoft Bing]-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Plattform übertragen.
+
 ## Anwendungsbeispiele {#use-cases}
 
 Als Marketingspezialist möchte ich in der Lage sein, von [!DNL Microsoft Advertising IDs] erstellte Segmente für die Zielgruppe von Benutzern über Display-Werbung in [!DNL Microsoft Advertising]-Kanälen zu verwenden.
@@ -33,7 +37,7 @@ Als Marketingspezialist möchte ich in der Lage sein, von [!DNL Microsoft Advert
 
 ## Voraussetzungen {#prerequisites}
 
-Beim Konfigurieren des Ziels werden Sie gebeten, die folgenden Informationen anzugeben:
+Beim Konfigurieren des Ziels müssen Sie die folgenden Informationen angeben:
 
 * [!UICONTROL Konto-ID]: dies ist Ihr  [!DNL Bing Ads CID]ganzzahliges Format.
 
