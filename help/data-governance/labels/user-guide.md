@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung;Richtliniendienst;Datenverwendungsbeschriftungen Benutzerhandbuch
 solution: Experience Platform
 title: Datenverwendungsbezeichnungen in der Benutzeroberfläche verwalten
-topic: labels
+topic: Beschriftungen
 description: In diesem Handbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1135'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendung
 
 Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Nach der Anmeldung bei Adobe Experience Platform wählen Sie **[!UICONTROL Datensätze]** in der linken Navigation aus, um den Arbeitsbereich **[!UICONTROL Datensätze]** zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
 
-![Registerkarte &quot;Datenbestand&quot;im Datenbereich](../images/labels/datasets.png)
+![Registerkarte &quot;Datenbestand&quot;im Datenbereich](../images/labels/datasets-tab.png)
 
 Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes, auf den Beschriftungen angewendet werden sollen. Wenn Sie Bezeichnungen für einen vorhandenen Datensatz bearbeiten möchten, wählen Sie den Datensatz aus der Liste aus und fahren Sie fort mit [Hinzufügen von Bezeichnungen zur Datenverwendung zum Datensatz](#add-labels).
 
@@ -33,47 +33,47 @@ Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes
 
 Um einen neuen Datensatz zu erstellen, wählen Sie **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke des Arbeitsbereichs **[!UICONTROL Datensätze]**.
 
-![](../images/labels/create_dataset.png)
+![](../images/labels/create-dataset.png)
 
 Der Bildschirm **[!UICONTROL Datensatz erstellen]** wird angezeigt. Wählen Sie **[!UICONTROL Datensatz aus Schema]** erstellen.
 
-![Datensatz aus Schema erstellen](../images/labels/dataset_create.png)
+![Datensatz aus Schema erstellen](../images/labels/create-from-dataset.png)
 
 Der Bildschirm **[!UICONTROL Schema auswählen]** wird angezeigt, in dem alle verfügbaren Schema Liste werden, die Sie zum Erstellen eines Datensatzes verwenden können. Wählen Sie das Optionsfeld neben einem Schema aus, um es auszuwählen. Im Bereich **[!UICONTROL Schema]** auf der rechten Seite werden weitere Details zum ausgewählten Schema angezeigt. Nachdem Sie ein Schema ausgewählt haben, wählen Sie **[!UICONTROL Weiter]**.
 
-![Datenbestand-Schema auswählen](../images/labels/dataset_schema.png)
+![Datenbestand-Schema auswählen](../images/labels/select-schema.png)
 
 Der Bildschirm **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen Namen (erforderlich) und eine Beschreibung (optional, aber empfohlen) für Ihren neuen Datensatz ein und wählen Sie **[!UICONTROL Fertigstellen]**.
 
-![Datensatz mit Namen und Beschreibung konfigurieren](../images/labels/dataset_configure.png)
+![Datensatz mit Namen und Beschreibung konfigurieren](../images/labels/configure-dataset.png)
 
 Die Aktivität **[!UICONTROL Datensatz]** wird mit Informationen zum neu erstellten Datensatz angezeigt. In diesem Beispiel trägt der Datensatz den Namen &quot;Treuemitglieder&quot;, daher zeigt die Top-Navigation **Datensätze > Treuemitglieder** an.
 
-![Aktivität des Datensatzes](../images/labels/dataset_activity.png)
+![Aktivität des Datensatzes](../images/labels/dataset-created.png)
 
 ### hinzufügen die Beschriftungen für die Datenverwendung mit dem Dataset {#add-labels}
 
 Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen Datensatz aus der Liste im Arbeitsbereich **[!UICONTROL Datensätze]** ausgewählt haben, wählen Sie **[!UICONTROL Datenverwaltung]**, um den Arbeitsbereich **[!UICONTROL Datenverwaltung]** zu öffnen. Der Arbeitsbereich ermöglicht Ihnen die Verwaltung von Beschriftungen für die Datenverwendung auf Datensatzebene und Feldebene.
 
-![Registerkarte &quot;Datenverwaltung&quot;](../images/labels/dataset_data_governance.png)
+![Registerkarte &quot;Datenverwaltung&quot;](../images/labels/dataset-governance.png)
 
 Um die Beschriftungen für die Datenverwendung auf Datensatzebene zu bearbeiten, wählen Sie im Beginn das Stiftsymbol neben dem Datasetnamen aus.
 
-![Bezeichnungen auf Datensatzebene bearbeiten](../images/labels/dataset_labels_edit_button.png)
+![Bezeichnungen auf Datensatzebene bearbeiten](../images/labels/dataset-level-edit.png)
 
 Das Dialogfeld **[!UICONTROL Governance-Bezeichnungen bearbeiten]** wird geöffnet. Aktivieren Sie im Dialogfeld die Kontrollkästchen neben den Beschriftungen, die Sie auf den Datensatz anwenden möchten. Denken Sie daran, dass diese Beschriftungen von allen Feldern im Datensatz übernommen werden. Die Kopfzeile **[!UICONTROL Angewandte Bezeichnungen]** wird aktualisiert, wenn Sie die einzelnen Felder markieren, und zeigt die ausgewählten Bezeichnungen an. Nachdem Sie die gewünschten Bezeichnungen ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
 
-<img alt="Governance-Bezeichnungen auf Datenaset-Ebene anwenden" src="../images/labels/apply-labels-dataset.png" width="700"><br>
+![Governance-Bezeichnungen auf Datenaset-Ebene anwenden](../images/labels/apply-labels-dataset.png)
 
 Der Arbeitsbereich **[!UICONTROL Datenverwaltung]** wird wieder angezeigt und zeigt die Beschriftungen an, die Sie auf Datensatzebene angewendet haben. Sie können auch sehen, dass die Beschriftungen bis zu den einzelnen Feldern im Datensatz geerbt werden.
 
-![Von Feldern geerbte Datenbezeichnungen](../images/labels/dataset_inherited_labels.png)
+![Von Feldern geerbte Datenbezeichnungen](../images/labels/dataset-labels-applied.png)
 
 Beachten Sie, dass neben den Beschriftungen auf Datensatzebene ein &quot;x&quot;angezeigt wird, sodass Sie die Beschriftungen entfernen können. Die geerbten Beschriftungen neben jedem Feld haben kein &quot;x&quot; neben ihnen und erscheinen als &quot;grau ausgegraut&quot;, ohne dass sie entfernt oder bearbeitet werden können. Dies liegt daran, dass geerbte Felder schreibgeschützt sind, d. h. sie können nicht auf Feldebene entfernt werden.****
 
 Der Umschalter **[!UICONTROL Vererbte Bezeichnungen anzeigen]** ist standardmäßig aktiviert. Dadurch können Sie alle Bezeichnungen sehen, die vom Datensatz bis zu seinen Feldern geerbt wurden. Wenn Sie den Umschalter deaktivieren, werden alle geerbten Beschriftungen im Datensatz ausgeblendet.
 
-![Vererbte Beschriftungen ausblenden](../images/labels/hide_inherited_labels.png)
+![Vererbte Beschriftungen ausblenden](../images/labels/inherited-labels.png)
 
 ## Verwalten von Beschriftungen auf Feldebene
 
@@ -81,23 +81,23 @@ Wenn Sie den Arbeitsablauf für [Hinzufügen und Bearbeiten von Beschriftungen z
 
 Um die Beschriftungen für die Datenverwendung auf ein einzelnes Feld anzuwenden, aktivieren Sie das Kontrollkästchen neben dem Feldnamen und wählen Sie **[!UICONTROL Governance-Bezeichnungen bearbeiten]**.
 
-![Feldbezeichnungen bearbeiten](../images/labels/fields_single_field.png)
+![Feldbezeichnungen bearbeiten](../images/labels/field-label-edit.png)
 
 Das Dialogfeld **[!UICONTROL Governance-Bezeichnungen bearbeiten]** wird angezeigt. Im Dialogfeld werden Kopfzeilen mit ausgewählten Feldern, angewendeten Beschriftungen und geerbten Beschriftungen angezeigt. Beachten Sie, dass die geerbten Beschriftungen (C2 und C5) im Dialogfeld grau dargestellt werden. Es handelt sich um schreibgeschützte Bezeichnungen, die von der Datensatzebene übernommen werden und daher nur auf Datensatzebene bearbeitet werden können.
 
-<img alt="Bearbeiten von Governance-Beschriftungen für ein einzelnes Feld" src="../images/labels/field-label-inheritance.png" width="700"><br>
+![Bearbeiten von Governance-Beschriftungen für ein einzelnes Feld](../images/labels/field-label-inheritance.png)
 
 Wählen Sie Beschriftungen auf Feldebene aus, indem Sie das Kontrollkästchen neben der jeweiligen Beschriftung aktivieren, die Sie verwenden möchten. Wenn Sie Beschriftungen auswählen, wird die Kopfzeile **[!UICONTROL Angewandte Beschriftungen]** aktualisiert und zeigt Beschriftungen an, die auf die Felder angewendet werden, die in der Kopfzeile **[!UICONTROL Ausgewählte Felder]** angezeigt werden. Nachdem Sie die Feldbezeichnungen ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
 
-<img alt="Anwenden von Beschriftungen auf Feldebene" src="../images/labels/apply-labels-field.png" width="700"><br>
+![Anwenden von Beschriftungen auf Feldebene](../images/labels/apply-labels-field.png)
 
 Der Arbeitsbereich **[!UICONTROL Datenverwaltung]** wird wieder angezeigt, in dem die ausgewählten Beschriftungen auf Feldebene in der Zeile neben dem Feldnamen angezeigt werden. Beachten Sie, dass neben der Beschriftung auf Feldebene ein &quot;x&quot;steht, sodass Sie die Beschriftung entfernen können.
 
-![Feld mit Beschriftungen auf Feldebene](../images/labels/fields_show_field_level_labels.png)
+![Feld mit Beschriftungen auf Feldebene](../images/labels/field-labels-applied.png)
 
 Sie können diese Schritte wiederholen, um weiterhin Beschriftungen auf Feldebene für zusätzliche Felder hinzuzufügen und zu bearbeiten, einschließlich der Auswahl mehrerer Felder, um Beschriftungen auf Feldebene gleichzeitig anzuwenden.
 
-![Wählen Sie mehrere Felder aus, um Beschriftungen auf Feldebene gleichzeitig anzuwenden.](../images/labels/fields_select_multiple.png)
+![Wählen Sie mehrere Felder aus, um Beschriftungen auf Feldebene gleichzeitig anzuwenden.](../images/labels/multiple-fields.png)
 
 Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten verschoben wird (Dataset → Felder), d. h. dass auf Feldebene angewendete Beschriftungen nicht in andere Felder oder Datensätze übertragen werden.
 
