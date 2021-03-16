@@ -6,10 +6,10 @@ topic: Übersicht
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Konto beschrieben.
 translation-type: tm+mt
-source-git-commit: 115442a90ab56a93748bf161aa2e7ed680980f6e
+source-git-commit: 1fb4a272a914bf4ce7653f3f4f7fff63f36f9a48
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 2%
+source-wordcount: '1924'
+ht-degree: 3%
 
 ---
 
@@ -41,38 +41,52 @@ Darüber hinaus erfordert dieses Lernprogramm, dass Sie über ein Konto für die
 
 Nachdem Sie Ihr Cloud-Datenspeicherung-Konto erstellt haben, wird der Schritt **[!UICONTROL Daten auswählen]** angezeigt und bietet eine Oberfläche, über die Sie die Dateihierarchie in Ihrer Cloud-Datenspeicherung untersuchen können.
 
-* Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die Dateien und Ordner Ihres Servers anzeigt.
-* In der rechten Hälfte der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
+* Links auf der Benutzeroberfläche befindet sich ein Ordnerbrowser, in dem die Cloud-Datenspeicherung und -Verzeichnisse angezeigt werden.
+* Im rechten Bereich der Oberfläche können Sie bis zu 100 Datenzeilen aus einer kompatiblen Datei Vorschau werden.
 
-Wenn Sie einen aufgelisteten Ordner auswählen, können Sie die Ordnerhierarchie in tiefere Ordner durchlaufen. Wenn Sie eine kompatible Datei oder einen kompatiblen Ordner ausgewählt haben, wird das Dropdown-Menü **[!UICONTROL Datenformat auswählen]** angezeigt, in dem Sie ein Format auswählen können, in dem die Daten im Fenster &quot;Vorschau&quot;angezeigt werden sollen.
+![Benutzeroberfläche](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+Wenn Sie einen aufgelisteten Ordner auswählen, können Sie die Ordnerhierarchie in tiefere Ordner durchlaufen. Sie können einen einzelnen Ordner auswählen, um alle Dateien im Ordner rekursiv zu erfassen. Beim Einfügen eines ganzen Ordners müssen Sie sicherstellen, dass alle Dateien im Ordner dasselbe Schema verwenden.
 
-Wählen Sie das gewünschte Datenformat für die zu erfassende Datei aus und lassen Sie das Ausfüllen des Fensters &quot;Vorschau&quot;einige Sekunden lang zu.
+Wenn Sie eine kompatible Datei oder einen kompatiblen Ordner ausgewählt haben, wählen Sie im Dropdown-Menü [!UICONTROL Datenformat auswählen] das entsprechende Datenformat aus.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+Die folgende Tabelle zeigt das geeignete Datenformat für die unterstützten Dateitypen:
 
-Sie können beim Eingeben von getrennten Dateien ein benutzerdefiniertes Trennzeichen festlegen. Wählen Sie die Option **[!UICONTROL Trennzeichen]** und dann ein Trennzeichen aus dem Dropdown-Menü. Im Menü werden die am häufigsten verwendeten Optionen für Trennzeichen angezeigt, darunter ein Komma (`,`), ein Tabulator (`\t`) und ein Rohr (`|`). Alternativ dazu können Sie **[!UICONTROL Benutzerdefiniert]** auswählen und in der Popup-Eingabeleiste ein benutzerdefiniertes Trennzeichen Ihrer Wahl eingeben.
+| Dateityp | Datenformat |
+| --- | --- |
+| CSV | [!UICONTROL Getrennt] |
+| JSON | [!UICONTROL JSON] |
+| Parkett | [!UICONTROL XDM Parquet] |
+
+Wählen Sie **[!UICONTROL JSON]** aus und warten Sie einige Sekunden, bis die Benutzeroberfläche für die Vorschau gefüllt ist.
+
+![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
+
+>[!NOTE]
+>
+>Im Gegensatz zu getrennten und JSON-Dateitypen stehen parquet-formatierte Dateien nicht zur Vorschau zur Verfügung.
+
+Über die Benutzeroberfläche der Vorschau können Sie Inhalt und Struktur einer Datei überprüfen. Standardmäßig zeigt die Benutzeroberfläche der Vorschau die erste Datei im ausgewählten Ordner an.
+
+Um eine andere Datei Vorschau, klicken Sie auf das Symbol Vorschau neben dem Dateinamen, den Sie überprüfen möchten.
+
+![default-Vorschau](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
+
+Nachdem Sie Inhalt und Struktur der Dateien in Ihrem Ordner überprüft haben, wählen Sie **[!UICONTROL Next]** aus, um alle Dateien im Ordner rekursiv zu erfassen.
+
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+Wenn Sie eine bestimmte Datei auswählen möchten, wählen Sie die gewünschte Datei aus und wählen Sie dann **[!UICONTROL Weiter]**.
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
+### Festlegen eines benutzerdefinierten Trennzeichens für durch Trennzeichen getrennte Dateien
+
+Sie können beim Eingeben von getrennten Dateien ein benutzerdefiniertes Trennzeichen festlegen. Wählen Sie die Option **[!UICONTROL Trennzeichen]** und dann ein Trennzeichen aus dem Dropdown-Menü. Im Menü werden die am häufigsten verwendeten Optionen für Trennzeichen angezeigt, darunter ein Komma (`,`), ein Tabulator (`\t`) und ein Rohr (`|`). Wenn Sie lieber ein benutzerdefiniertes Trennzeichen verwenden möchten, wählen Sie **[!UICONTROL Benutzerdefiniert]** und geben Sie in der Popup-Eingabeleiste ein Trennzeichen Ihrer Wahl ein.
 
 Nachdem Sie das Datenformat ausgewählt und das Trennzeichen festgelegt haben, wählen Sie **[!UICONTROL Weiter]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### Parquet- oder JSON-Dateien aufnehmen
-
-Cloud-Datenspeicherung-Konten unterstützen auch JSON- und Parquet-Dateien. Parquet-Dateien müssen XDM-konform sein, während JSON-Dateien keine XDM-Beschwerde sein müssen. Um JSON- oder Parquet-Dateien zu erfassen, wählen Sie das entsprechende Dateiformat im Ordnerbrowser aus und wenden Sie auf der rechten Benutzeroberfläche das kompatible Datenformat an.
-
-Wenn das Datenformat in JSON vorliegt, wird eine Vorschau mit Informationen zu den Daten in der Datei angezeigt. Im Bildschirm &quot;Vorschau&quot;können Sie mithilfe der Dropdownliste **[!UICONTROL XDM-kompatibel]** auswählen, ob JSON XDM-konform ist.
-
-Wählen Sie **[!UICONTROL Weiter]**, um fortzufahren.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->Im Gegensatz zu getrennten und JSON-Dateitypen stehen parquet-formatierte Dateien nicht zur Vorschau zur Verfügung.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
