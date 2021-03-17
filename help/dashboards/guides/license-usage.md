@@ -5,10 +5,10 @@ description: Adobe Experience Platform bietet ein Dashboard zur Ansicht wichtige
 topic: guide
 type: Dokumentation
 translation-type: tm+mt
-source-git-commit: 3908011b31dd24b13a58a2bc5ad5137dd3af5f63
+source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 4%
+source-wordcount: '660'
+ht-degree: 3%
 
 ---
 
@@ -75,8 +75,8 @@ Die Definition dieser Metriken hängt von der Lizenzierung ab, die Ihr Unternehm
 | Lizenz | Produktbeschreibung |
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>RT-KUNDENDATENPLATTFORM:OD</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 10 M</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 50 M</li></ul> | [Echtzeit-Kundendatenplattform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, App-Dienste und intelligente Dienste](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT-KUNDENDATENPLATTFORM:OD</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 10 M</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 50 M</li></ul> | [Echtzeit-Kundendatenplattform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD AKTIVIERUNG PRFL BIS 10 M</li><li>AEP:OD AKTIVIERUNG PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform Aktivierung](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 
