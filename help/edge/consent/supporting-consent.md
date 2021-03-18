@@ -3,10 +3,10 @@ title: Unterstützende Voreinstellungen für die Zustimmung des Kunden mit dem A
 description: Erfahren Sie, wie Sie die Voreinstellungen für die Zustimmung mit dem Adobe Experience Platform Web SDK unterstützen.
 keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;
 translation-type: tm+mt
-source-git-commit: ff261c507d310b8132912680b6ddd1e7d5675d08
+source-git-commit: dd9101079a1093c109f43b268a78c07770221156
 workflow-type: tm+mt
-source-wordcount: '964'
-ht-degree: 33%
+source-wordcount: '977'
+ht-degree: 32%
 
 ---
 
@@ -66,13 +66,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-Wenn der Benutzer Opt-out, führen Sie den Befehl `setConsent` aus, wobei die Erfassungseinstellung auf `n` wie folgt eingestellt ist:
+Im Uhrzeitfeld sollte angegeben werden, wann der Benutzer seine Voreinstellungen für die Zustimmung zuletzt aktualisiert hat. Wenn der Benutzer Opt-out, führen Sie den Befehl `setConsent` aus, wobei die Erfassungseinstellung auf `n` wie folgt eingestellt ist:
 
 ```javascript
 alloy("setConsent", {
@@ -82,6 +85,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -155,6 +161,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
