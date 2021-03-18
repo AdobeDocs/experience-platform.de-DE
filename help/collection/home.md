@@ -3,54 +3,47 @@ keywords: Experience Platform;Home;beliebte Themen;Datenerfassung;Start;Web-SDK
 solution: Experience Platform
 title: Übersicht über die Datenerfassung
 topic: Übersicht
-description: Die Datenerfassung unterstützt Adobe Experience Platform, indem sie Benutzerwerkzeuge bereitstellt, die sich auf das Tagging von Seiten zur Datenerfassung konzentrieren.
+description: Erfahren Sie mehr über die verschiedenen Technologien zur Datenerfassung über Kundenerlebnisse in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 323bfc6b5eae5463a86761589fe384aedc40a4d6
+source-git-commit: 629fe68029a9f45e45d5e2d238ffff455c7d6de6
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 4%
+source-wordcount: '321'
+ht-degree: 5%
 
 ---
 
 
-# [!DNL Collection]Übersicht
+# Übersicht über die Datenerfassung
 
-Adobe Experience Platform Collection ist eine Reihe von Technologien, die die clientseitige Datenerfassung für Adobe Experience Platform Edge Network aus folgenden Quellen ermöglichen:
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Kundenerlebnisdaten aus clientseitigen Quellen erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie in Sekundenschnelle an Adoben- oder Nicht-Adobe-Ziele weitergegeben, transformiert und verteilt werden können.
 
-* Websites
+Die Datenerfassung wird für die folgenden clientseitigen Quellen unterstützt:
+
+* Webbasierte Anwendungen
 * Native Mobilanwendungen
-* OTT
+* OTT-Anwendungen (Over-the-top)
 
-<!-- * Servers -->
+Die von der Experience Platform bereitgestellten Datenerfassungstechnologien konzentrieren sich auf die Entdeckung und Zugänglichkeit von erfassten Datensätzen. Diese Technologien umfassen Folgendes:
 
-Daten können innerhalb von Sekunden an Ziele außerhalb der Adobe oder Adobe angepasst, transformiert und gesendet werden.
-
-[!DNL Data Collection] unterstützt Adobe Experience Platform durch die Bereitstellung von Benutzerwerkzeugen, die sich auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb von  [!DNL Experience Platform]konzentrieren.
-
-Adobe Experience Platform Collection Developer umfasst die folgenden Technologien:
-
-* Adobe Experience Platform Data Streams
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)
-* [Adobe Experience Platform Launch Client Side](https://experienceleague.adobe.com/docs/launch.html)
-* [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
+* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Experience-Datenmodell (XDM)](../xdm/home.md)
 
 ![](./images/Collection.png)
 
 ## Einfachere Implementierungen, schnellere clientseitige Performance
 
-Adobe Experience Platform Web- und Mobile-SDKs reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Web- oder mobilen SDK. Durch Komprimieren der Bibliotheken wird die Datenerfassung von diesen Geräten zum Adobe Experience Platform Edge Network beschleunigt und vereinfacht.
-
-Adobe Experience Platform Server SDK streamt Daten von jedem Server an das Adobe Experience Platform Edge Network.
+Adobe Experience Platform Web- und Mobile-SDKs reduzieren und komprimieren alle Produktbibliotheken in einem Entwicklungskit für Web- und Mobilplattformen. Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und Vorgänge werden von clientseitigen Geräten bis zum Adobe Experience Platform Edge Network zu einem einzigen Stream zusammengefasst.
 
 ## Umschalten zwischen den Schaltvorgängen zur Bereitstellung der Adobe
 
-Adobe Experience Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Adobe Experience Platform Data Streams können Sie die Adobe serverseitig aktivieren, ohne den clientseitigen Code zu ändern.
+Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Platform launch können Sie [Edge-Konfigurationen](../edge/fundamentals/edge-configuration.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten, mit denen Sie diese Produkte serverseitig aktivieren können, ohne den clientseitigen Code zu ändern.
 
 ![](./images/deploy.png)
 
 ## Schnelles und sicheres Transformieren, Erweitern und Senden von Daten
 
-Adobe Experience Platform Launch Server Side kann auf jeden Adobe Experience Platform Data Stream tippen. Mit extrem niedriger Latenz können Sie Daten mit extrem niedriger Latenz an andere Zielorte ohne Adobe transformieren, anreichern und senden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, der eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
+[Adobe Experience Platform Launch Server ](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html) Sidecan tippen Sie auf einen beliebigen Plattform-Datenstrom. Mit extrem niedriger Latenz können Sie Daten mit extrem niedriger Latenz an andere Zielorte ohne Adobe transformieren, anreichern und senden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, der eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
 
 ![](./images/launch.png)
