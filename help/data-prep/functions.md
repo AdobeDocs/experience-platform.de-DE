@@ -5,7 +5,7 @@ title: Funktionen für die Datenvorlagenzuordnung
 topic: Übersicht
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 translation-type: tm+mt
-source-git-commit: 6a541cca307dec8937c2d49470e8bcab770c80c7
+source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
 workflow-type: tm+mt
 source-wordcount: '3719'
 ht-degree: 7%
@@ -35,7 +35,7 @@ Daten innerhalb von Unterfeldern können mit der Punktnotation aufgerufen werden
 
 In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einschließlich Beispiel-Ausdruck und deren Ausgabeformate, Liste.
 
-### Zeichenfolgen-Funktionen
+### Zeichenfolgen-Funktionen {#string}
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | extract_regex | Extrahiert auf Basis eines regulären Ausdrucks Gruppen aus der Eingabezeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie die Gruppen extrahieren.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem die Gruppe übereinstimmen soll.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | match_regex | Überprüft, ob die Zeichenfolge mit dem eingegebenen regulären Ausdruck übereinstimmt. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die Sie überprüfen, stimmt mit dem regulären Ausdruck überein.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem Sie vergleichen.</li></ul> | match_regex(STRING, REGEX) | match_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | wahr |
 
-### Hashfunktionen
+### Hashfunktionen {#hashing}
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | md5 | Erstellt mithilfe von MD5 eine Eingabe und einen Hashwert. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Eine Eingabe verwendet einen CRC-Algorithmus (zyklische Redundanzprüfung), um einen 32-Bit-zyklischen Code zu erzeugen. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
-### URL-Funktionen
+### URL-Funktionen {#url}
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | get_url_path | Gibt den Pfad der angegebenen URL zurück. Standardmäßig wird der vollständige Pfad zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Pfad extrahiert werden muss.</li><li>FULL_PATH: *Optional* Ein boolescher Wert, der bestimmt, ob der vollständige Pfad zurückgegeben wird. Bei der Einstellung false wird nur das Ende des Pfads zurückgegeben.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_Abfrage_str | Gibt die Abfrage-Zeichenfolge einer angegebenen URL zurück. | <ul><li>URL: **Erforderlich** Die URL, von der Sie die Abfrage-Zeichenfolge abrufen möchten.</li><li>ANCHOR: **Erforderlich** Legt fest, was mit dem Anker in der Abfrage-Zeichenfolge geschehen soll. Kann einer von drei Werten sein: &quot;behalten&quot;, &quot;entfernen&quot;oder &quot;anhängen&quot;.<br><br>Wenn der Wert &quot;keep&quot;ist, wird der Anker an den zurückgegebenen Wert angehängt.<br>Wenn der Wert &quot;remove&quot;ist, wird der Anker aus dem zurückgegebenen Wert entfernt.<br>Wenn der Wert &quot;append&quot;ist, wird der Anker als separater Wert zurückgegeben.</li></ul> | get_url_Abfrage_str &#x200B;(URL, ANCHOR) | get_url_Abfrage_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;preserve&quot;)<br>get_url_Abfrage_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_Abfrage_str &#x200B;(&quot;foo://example.com:8042/2 over/thereB?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 
-### Datums- und Uhrzeitfunktionen
+### Datums- und Uhrzeitfunktionen {#date-and-time}
 
 >[!NOTE]
 >
@@ -122,7 +122,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 &#x200B;
 
-### Hierarchien - Objekte
+### Hierarchien - Objekte {#objects}
 
 >[!NOTE]
 >
@@ -138,7 +138,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | is_set | Überprüft, ob das Objekt in den Quelldaten vorhanden ist. | <ul><li>INPUT: **Erforderlich** Der zu prüfende Pfad, falls er in den Quelldaten vorhanden ist.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | wahr |
 | nullify | Legt den Wert des Attributs auf `null` fest. Dies sollte verwendet werden, wenn Sie das Feld nicht in das Schema Zielgruppe kopieren möchten. |  | nullify() | nullify() | `null` |
 
-### Hierarchien - Arrays
+### Hierarchien - Arrays {#arrays}
 
 >[!NOTE]
 >
@@ -153,7 +153,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | join_arrays | Kombiniert die Arrays miteinander. | <ul><li>ARRAY: **Erforderlich** Das Array, dem Sie Elemente hinzufügen.</li><li>WERTE: Die Array(s), die Sie an das übergeordnete Array anhängen möchten.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Führt eine Liste von Eingaben durch und konvertiert sie in ein Array. | <ul><li>INCLUDE_NULLS: **Erforderlich** Ein boolescher Wert, der angibt, ob Nullen in das Antwortarray einbezogen werden sollen.</li><li>WERTE: **Erforderlich** Die Elemente, die in ein Array konvertiert werden sollen.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
-### Logische Operatoren
+### Logische Operatoren {#logical-operators}
 
 >[!NOTE]
 >
@@ -164,7 +164,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | decode | Bei einem Schlüssel und einer Liste von Schlüsselwertpaaren, die als Array reduziert sind, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | <ul><li>SCHLÜSSEL: **Erforderlich** Der zuzuordnende Schlüssel.</li><li>OPTIONS: **Erforderlich** Ein reduziertes Array von Schlüssel/Wert-Paaren. Optional kann ein Standardwert am Ende gesetzt werden.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Lautet der angegebene stateCode &quot;ca&quot;, &quot;California&quot;.<br>Lautet der angegebene stateCode &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Wenn der stateCode nicht mit dem Folgenden übereinstimmt, &quot;K/A&quot;. |
 | iif | Wertet einen bestimmten booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | <ul><li>Ausdruck: **Erforderlich** Der boolesche Ausdruck, der ausgewertet wird.</li><li>TRUE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;true&quot;ergibt.</li><li>FALSE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;false&quot;ergibt.</li></ul> | iif(AUSDRUCK, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
-### Aggregation
+### Aggregation {#aggregation}
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Gibt das Maximum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
 
-### Typkonvertierungen
+### Typkonvertierungen {#type-conversions}
 
 >[!NOTE]
 >
@@ -188,7 +188,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | to_float | Konvertiert eine Zeichenfolge in eine Gleitkommazahl. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Gleitkommazahl konvertiert werden soll.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12 34 566 |
 | to_integer | Konvertiert eine Zeichenfolge in eine Ganzzahl. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Ganzzahl umgewandelt werden soll.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
-### JSON-Funktionen
+### JSON-Funktionen {#json}
 
 >[!NOTE]
 >
@@ -198,7 +198,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Deserialisieren Sie den JSON-Inhalt aus der angegebenen Zeichenfolge. | <ul><li>STRING: **Erforderlich** Die zu deserialisierende JSON-Zeichenfolge.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Ein Objekt, das die JSON darstellt. |
 
-### Besondere Maßnahmen
+### Spezialoperationen {#special-operations}
 
 >[!NOTE]
 >
@@ -208,7 +208,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Erstellt eine pseudo-zufällige ID. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
 
-### Benutzeragenten-Funktionen
+### Benutzeragenten-Funktionen {#user-agent}
 
 >[!NOTE]
 >
