@@ -1,19 +1,23 @@
 ---
 keywords: SFTP;SFTP
 title: SFTP-Verbindung
-description: Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
+description: Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 39%
+source-wordcount: '231'
+ht-degree: 7%
 
 ---
 
 
 # SFTP-Verbindung
 
-Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durch Trennzeichen getrennte Datendateien regelmäßig aus Experience Platform zu exportieren.
+Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Adobe Experience Platform zu exportieren.
+
+>[!IMPORTANT]
+>
+> Während Adobe Datenexporte auf SFTP-Server unterstützt, werden für den Datenexport in die Cloud die Speicherorte [!DNL Amazon S3] und [!DNL Azure Blob] empfohlen.
 
 ## Exporttyp {#export-type}
 
@@ -23,7 +27,7 @@ Stellen Sie mit Ihrem SFTP-Server eine aktive ausgehende Verbindung her, um durc
 
 ## Ziel verbinden {#connect-destination}
 
-Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Speicher-Zielen, einschließlich SFTP, finden Sie unter [Workflow für Cloud-Speicher-Ziele](./workflow.md).
+Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung-Zielen, einschließlich SFTP, finden Sie im Arbeitsablauf [Cloud-Datenspeicherung-Ziele ](./workflow.md).
 
 Geben Sie für SFTP-Ziele im Workflow zur Erstellung eines Ziels im Schritt **Authentifizierung** die folgenden Daten ein:
 
@@ -34,3 +38,7 @@ Geben Sie für SFTP-Ziele im Workflow zur Erstellung eines Ziels im Schritt **Au
 ## Exportierte Daten {#exported-data}
 
 Bei SFTP-Zielen erstellt Platform eine tabulatorgetrennte Datei `.txt` oder `.csv` im angegebenen Speicherort der Datenspeicherung. Weitere Informationen zu den Aktivierungen finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentbildung.
+
+## Zulassungsliste der IP-Adresse
+
+Informationen zum Hinzufügen von IPs zu einer Zulassungsliste finden Sie unter [IP-Adresse-Zulassungsliste für Cloud-Datenspeicherung-Ziele](./ip-address-allow-list.md).
