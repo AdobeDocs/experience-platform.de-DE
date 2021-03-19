@@ -3,9 +3,9 @@ keywords: Google-Kundenübereinstimmungen;Google-Kundenübereinstimmung;Google-K
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 494b41265a0eec71ec15c7896eb8c652b3164e18
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1608'
 ht-degree: 4%
 
 ---
@@ -31,19 +31,27 @@ Eine prominente Technologie-Firma hat gerade ein neues Handy veröffentlicht. In
 
 Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in die Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Bezeichner. Segmente werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen und an [!DNL Google Customer Match] gesendet werden, damit sie aktuelle Kunden, Kunden, die ältere Telefonmodelle besitzen, sowie ähnliche Kunden mit [!DNL YouTube] Zielgruppe erhalten.
 
-## Zielspezifikationen {#destination-specs}
-
-### Datenverwaltung für [!DNL Google Customer Match]-Ziele {#data-governance}
+## Datenverwaltung für [!DNL Google Customer Match]-Ziele {#data-governance}
 
 Die in der Experience Platform befindlichen Ziele können bestimmte Vorschriften und Pflichten für Daten haben, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Tools zur Datenverwaltung, mit denen Sie einige dieser Datenverwendungsverpflichtungen verwalten können. [Erfahren Sie ](../../..//data-governance/labels/overview.md) mehr über Tools und Richtlinien zur Datenverwaltung.
 
-### Exporttyp und Identitäten {#export-type}
+## Unterstützte Identitäten {#supported-identities}
+
+[!DNL Google Customer Match] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
+
+| Zielgruppe | Beschreibung | Zu beachten |
+|---|---|---|
+| GAID | Google Advertising ID | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein GAID-Namensraum ist. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein IDFA-Namensraum ist. |
+| phone_sha256_e.164 | Telefonnummern im Format E164, mit dem SHA256-Algorithmus gehasht | Sowohl Normaltext- als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen für die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namensraum für einfache und hash-Telefonnummern. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| email_lc_sha256 | Mit dem SHA256-Algorithmus verfasste E-Mail-Adressen | Sowohl einfache als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen für die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namensraum für E-Mail-Adressen mit Standardtext bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| user_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein benutzerdefinierter Namensraum ist. |
+
+## Exporttyp {#export-type}
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) wird im [!DNL Google Customer Match]-Ziel verwendet.
 
-**Identitäten** : Sie können in Google Rohdaten oder Hash-E-Mails als Kunden-IDs verwenden.
-
-### [!DNL Google Customer Match] Kontovoraussetzungen  {#google-account-prerequisites}
+## [!DNL Google Customer Match] Kontovoraussetzungen  {#google-account-prerequisites}
 
 Bevor Sie ein [!DNL Google Customer Match]-Ziel in der Experience Platform einrichten, sollten Sie die Google-Richtlinien für die Verwendung von [!DNL Customer Match] lesen und beachten, die in der [Google-Supportdokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben sind.
 
