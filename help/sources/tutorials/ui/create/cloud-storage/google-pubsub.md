@@ -6,10 +6,10 @@ topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie einen Google PubSub-Quellanschluss mithilfe der Plattform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: 0af90253f04377149986aedf2e9d3012ca06d4f8
+source-git-commit: b5358ce206888c413035b46fe751520fd9aefb14
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 11%
+source-wordcount: '511'
+ht-degree: 9%
 
 ---
 
@@ -33,16 +33,20 @@ Wenn Sie bereits über eine gültige [!DNL PubSub]-Verbindung verfügen, können
 
 ### Erforderliche Anmeldedaten sammeln
 
-Um [!DNL PubSub] mit Platform zu verbinden, müssen Sie einen gültigen Wert für die folgende Berechtigung angeben:
+Um [!DNL PubSub] mit Platform zu verbinden, müssen Sie einen gültigen Wert für die folgenden Anmeldeinformationen angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
 | `projectId` | Die Projekt-ID, die zum Authentifizieren von [!DNL PubSub] erforderlich ist. |
-| `credentials` | Die Berechtigung oder der Schlüssel, die für die Authentifizierung von [!DNL PubSub] erforderlich ist. |
+| `credentials` | Die für die Authentifizierung von [!DNL PubSub] erforderliche Berechtigungs- oder private Schlüssel-ID. |
 
-Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication).
+Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication). Wenn Sie die dienstkontobasierte Authentifizierung verwenden, finden Sie im folgenden Handbuch [PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) Anweisungen zum Generieren Ihrer Anmeldeinformationen.
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL Blob]-Konto mit der Plattform zu verknüpfen.
+>[!TIP]
+>
+>Wenn Sie die kontobasierte Authentifizierung eines Dienstes verwenden, stellen Sie sicher, dass Sie ausreichend Benutzerzugriff auf Ihr Dienstkonto gewährt haben und dass keine zusätzlichen Leerzeichen im JSON vorhanden sind, wenn Sie Ihre Anmeldeinformationen kopieren und einfügen.
+
+Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL PubSub]-Konto mit der Plattform zu verknüpfen.
 
 ## Verbinden Sie Ihr [!DNL PubSub]-Konto
 
