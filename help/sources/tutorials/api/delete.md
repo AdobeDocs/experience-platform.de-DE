@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Löschen von Verbindungen;Löschen;API
+keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Konten löschen;Löschen;API
 solution: Experience Platform
-title: Löschen einer Verbindung mit der Flussdienst-API
-topic: overview
+title: Ein Konto mithilfe der Flow Service API löschen
+topic: Übersicht
 type: Tutorial
-description: Erfahren Sie, wie Sie eine Verbindung mit der Flow Service API löschen.
+description: Erfahren Sie, wie Sie ein Konto mit der Flow Service API löschen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '594'
 ht-degree: 27%
 
 ---
 
 
-# Eine Verbindung mit der Flow Service API löschen
+# Ein Konto mithilfe der Flow Service API löschen
 
 Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
