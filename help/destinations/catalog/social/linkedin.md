@@ -3,9 +3,9 @@ keywords: linkedin-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;linkedin
 title: Verbindung zu LinkedIn-Audiencen
 description: Aktivieren Sie Profil für Ihre LinkedIn-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, basierend auf Hash-E-Mails.
 translation-type: tm+mt
-source-git-commit: 6d64bc362aa8c85e354f5c02cc2acbe6f1405c99
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '682'
 ht-degree: 4%
 
 ---
@@ -26,6 +26,17 @@ Eine Software-Firma organisiert eine Konferenz und möchte mit den Teilnehmern i
 ## Zielspezifikationen {#destination-specs}
 
 [!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: E-Mails mit Hashing  [!DNL GAID]und  [!DNL IDFA].
+
+### Unterstützte Identitäten {#supported-identities}
+
+[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
+
+| Zielgruppe | Beschreibung | Zu beachten |
+|---|---|---|
+| GAID | Google Advertising ID | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein GAID-Namensraum ist. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein IDFA-Namensraum ist. |
+| email_lc_sha256 | Mit dem SHA256-Algorithmus verfasste E-Mail-Adressen | Sowohl einfache als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen für die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namensraum für reine und Hash-E-Mails. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+
 
 ### Exporttyp {#export-type}
 
