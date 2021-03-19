@@ -3,10 +3,10 @@ keywords: Google-Kundenübereinstimmungen;Google-Kundenübereinstimmung;Google-K
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 translation-type: tm+mt
-source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1588'
+ht-degree: 3%
 
 ---
 
@@ -19,21 +19,21 @@ ht-degree: 4%
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Google Customer Match]-Ziel verwenden sollten, finden Sie hier Beispiele für Anwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann das [!DNL Google Customer Match]-Ziel verwendet werden soll, finden Sie hier Beispiele für Anwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
 ### Verwendungsfall Nr. 1
 
-Eine Sportbekleidungsmarke möchte Bestandskunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebot und Artikel auf der Grundlage ihrer bisherigen Käufe und Browsergeschichte zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in die Experience Platform aufnehmen, Segmente aus ihren eigenen Offlinedaten erstellen und diese Segmente an [!DNL Google Customer Match] senden, um sie über [!DNL Search] und [!DNL Shopping] hinweg zu verwenden und so ihre Werbeausgaben zu optimieren.
+Eine Sportbekleidungsmarke möchte Bestandskunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebot und Artikel auf der Grundlage ihrer bisherigen Käufe und Browsergeschichte zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in die Experience Platform aufnehmen und Segmente aus ihren eigenen Offlinedaten erstellen. Anschließend können sie diese Segmente an [!DNL Google Customer Match] senden, um sie über [!DNL Search] und [!DNL Shopping] hinweg zu verwenden, und ihre Werbeausgaben optimieren.
 
 ### Verwendungsfall Nr. 2
 
-Eine prominente Technologie-Firma hat gerade ein neues Handy veröffentlicht. In dem Bemühen, dieses neue Telefonmodell zu fördern, versuchen sie, das Bewusstsein für die neuen Funktionen des Telefons zu fördern, Kunden, die Inhaber früherer Modelle ihrer Telefone.
+Eine prominente Technologie-Firma startete ein neues Telefon. Um dieses neue Telefonmodell zu fördern, versuchen sie, das Bewusstsein für die neuen Funktionen des Telefons zu fördern, Kunden, die Inhaber früherer Modelle ihrer Telefone.
 
-Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in die Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Bezeichner. Segmente werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen und an [!DNL Google Customer Match] gesendet werden, damit sie aktuelle Kunden, Kunden, die ältere Telefonmodelle besitzen, sowie ähnliche Kunden mit [!DNL YouTube] Zielgruppe erhalten.
+Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in die Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Bezeichner. Segmente werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen. Anschließend werden Segmente an [!DNL Google Customer Match] gesendet, sodass die Firma aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden mit [!DNL YouTube] Zielgruppe erhalten kann.
 
 ## Datenverwaltung für [!DNL Google Customer Match]-Ziele {#data-governance}
 
-Die in der Experience Platform befindlichen Ziele können bestimmte Vorschriften und Pflichten für Daten haben, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Tools zur Datenverwaltung, mit denen Sie einige dieser Datenverwendungsverpflichtungen verwalten können. [Erfahren Sie ](../../..//data-governance/labels/overview.md) mehr über Tools und Richtlinien zur Datenverwaltung.
+Einige Ziele in der Experience Platform haben bestimmte Regeln und Pflichten für Daten, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Tools zur Datenverwaltung, mit denen Sie einige dieser Datenverwendungsverpflichtungen verwalten können. [Erfahren Sie ](../../..//data-governance/labels/overview.md) mehr über Tools und Richtlinien zur Datenverwaltung.
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -49,7 +49,7 @@ Die in der Experience Platform befindlichen Ziele können bestimmte Vorschriften
 
 ## Exporttyp {#export-type}
 
-**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) wird im [!DNL Google Customer Match]-Ziel verwendet.
+**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den IDs (Name, Telefonnummer usw.), die im  [!DNL Google Customer Match] Ziel verwendet werden.
 
 ## [!DNL Google Customer Match] Kontovoraussetzungen  {#google-account-prerequisites}
 
@@ -63,7 +63,7 @@ Bevor Sie ein [!DNL Google Customer Match]-Ziel in der Experience Platform einri
 
 Bevor Sie das [!DNL Google Customer Match]-Ziel in der Experience Platform erstellen, müssen Sie sich an Google wenden und den Anweisungen zur Zulassungsliste unter [Verwenden Sie die Kundenabstimmungspartner, um Ihre Daten](https://support.google.com/google-ads/answer/7361372?hl=en&amp;ref_topic=6296507) in der Google-Dokumentation hochzuladen.
 
-Darüber hinaus gibt es eine zweite Google-Zulassungsliste, der Sie Ihr Konto hinzufügen müssen, wenn Sie planen, Daten mit der Google [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) hochzuladen. Wenden Sie sich an Ihren Google-Kundenbetreuer, um sicherzustellen, dass Sie zu den Zulassungslisten hinzugefügt werden.
+Es gibt auch eine zweite Google-Zulassungsliste, der Sie Ihr Konto hinzufügen müssen, wenn Sie Daten mit der Google [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id) hochladen möchten. Um Ihr Konto zur Zulassungsliste hinzuzufügen, wenden Sie sich an Ihren Google-Kundenbetreuer.
 
 ### Anforderungen für die ID-Übereinstimmung {#id-matching-requirements}
 
@@ -75,7 +75,7 @@ Abhängig von der Art der IDs, die Sie in Adobe Experience Platform eingeben, m�
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer Match]:
 
-* **Rohe Telefonnummern** eingehen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in  [!DNL Platform]aufnehmen, die bei der Aktivierung automatisch mit Hashing versehen werden. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den `Phone_E.164`-Namensraum einzugeben.
+* **Rohe Telefonnummern** eingehen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in aufnehmen  [!DNL Platform]und sie werden automatisch bei der Aktivierung abgehackt. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den `Phone_E.164`-Namensraum einzugeben.
 * **Hash-Telefonnummern** eingehen: Sie können Ihre Telefonnummern vorab hash, bevor Sie  [!DNL Platform]einsteigen. Wenn Sie diese Option wählen, vergewissern Sie sich, dass Sie stets Ihre Hash-Telefonnummern in den `PHONE_SHA256_E.164`-Namensraum eingeben.
 
 >[!NOTE]
@@ -84,7 +84,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer
 
 #### Anforderungen für das E-Mail-Hashing {#hashing-requirements}
 
-Sie können E-Mail-Adressen vor der Einbindung in Adobe Experience Platform als Hash-E-Mail-Adressen festlegen oder Sie können in Experience Platform mit E-Mail-Adressen arbeiten und sie von unserem Algorithmus auf Aktivierung hash lassen.
+Sie können E-Mail-Adressen vor dem Eingeben in Adobe Experience Platform hash oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und sie bei der Aktivierung mit [!DNL Platform] Hash versehen.
 
 Weitere Informationen zu den Hashing-Anforderungen von Google und anderen Einschränkungen der Aktivierung finden Sie in den folgenden Abschnitten der Google-Dokumentation:
 
@@ -115,13 +115,13 @@ Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf 
 
 >[!NOTE]
 >
->Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
+>Wenn eine Verbindung mit diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-Wenn Sie im Schritt **Konto** zuvor eine Verbindung zu Ihrem [!DNL Google Customer Match]-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu [!DNL Google Customer Match] einzurichten. Wählen Sie **[!UICONTROL Mit Ziel]** verbinden, um sich anzumelden und Adobe Experience Cloud mit Ihrem [!DNL Google Ad]-Konto zu verbinden.
+Wenn Sie im Schritt **Konto** zuvor eine Verbindung zu Ihrem [!DNL Google Customer Match]-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu [!DNL Google Customer Match] einzurichten. Um sich anzumelden und Adobe Experience Cloud mit Ihrem [!DNL Google Ad]-Konto zu verbinden, wählen Sie **[!UICONTROL Mit Ziel]** verbinden.
 
 >[!NOTE]
 >
->Experience Platform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Berechtigungen in Ihr [!DNL Google Ad]-Konto eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldedaten ausführen.
+>Experience Platform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess. Es wird eine Fehlermeldung angezeigt, wenn Sie falsche Anmeldeinformationen in Ihr [!DNL Google Ad]-Konto eingeben, um sicherzustellen, dass Sie den Workflow nicht mit falschen Anmeldeinformationen abschließen.
 
 ![Verbindung zum Google-Kundenübereinstimmungsziel herstellen - Authentifizierungsschritt](../../assets/catalog/advertising/google-customer-match/connection.png)
 
@@ -131,7 +131,7 @@ Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ih
 
 Geben Sie im Schritt **[!UICONTROL Authentication]** einen **[!UICONTROL und einen**[!UICONTROL  Description ]**für Ihre Aktivierung ein und füllen Sie die Google**[!UICONTROL  Konto-ID ]**aus.]**
 
-In diesem Schritt können Sie auch alle **[!UICONTROL Marketingaktionen]** auswählen, die für dieses Ziel gelten sollen. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+In diesem Schritt können Sie auch alle **[!UICONTROL Marketingaktionen]** auswählen, die für dieses Ziel gelten. Marketingaktionen geben den Zweck an, für den die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die obigen Felder ausgefüllt haben.
 
@@ -205,7 +205,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
-Wechseln Sie nach Abschluss der Aktivierung zu Ihrem **[!UICONTROL Google Ads]**-Konto. Die aktivierten Segmente werden jetzt in Ihrem Google-Konto als Listen angezeigt. Beachten Sie, dass je nach Segmentgröße einige Audiencen nur dann gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
+Wechseln Sie nach Abschluss der Aktivierung zu Ihrem **[!UICONTROL Google Ads]**-Konto. Die aktivierten Segmente werden in Ihrem Google-Konto als Listen angezeigt. Beachten Sie, dass je nach Segmentgröße einige Audiencen nur dann gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
 
 Wenn Sie ein Segment sowohl mit [!DNL IDFA]- als auch mit [!DNL GAID]-Mobil-IDs verknüpfen, erstellt [!DNL Google Customer Match] für jede ID-Zuordnung ein separates Segment. Ihr [!DNL Google Ads]-Konto zeigt zwei verschiedene Segmente an, eines für das [!DNL IDFA]-Segment und eines für die [!DNL GAID]-Zuordnung.
 
