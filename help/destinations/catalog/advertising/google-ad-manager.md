@@ -3,10 +3,10 @@ keywords: Google-Anzeigenmanager;Google-Anzeige;DoubleClick;DoubleClick AdX;Doub
 title: Google Ad Manager-Verbindung
 description: 'Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.  '
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 950dc24e44a32cfd3e0cdde0fee967cb687c572e
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 33%
+source-wordcount: '754'
+ht-degree: 29%
 
 ---
 
@@ -19,8 +19,6 @@ ht-degree: 33%
 
 Beachten Sie die folgenden Details, die für [!DNL Google Ad Manager]-Ziele spezifisch sind:
 
-* Sie können die folgenden [Identitäten](../../../identity-service/namespaces.md) an [!DNL Google Ads]-Ziele senden: [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), Google-Cookie-ID, IDFA, GAID, Roku-IDs, Microsoft-IDs und Amazon Fire TV-IDs.
-   * Google verwendet [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) zur Zielgruppe von Benutzern in Kalifornien und die Google Cookie-ID für alle anderen Benutzer.
 * Aktivierte Audiencen werden programmgesteuert auf der [!DNL Google]-Plattform erstellt.
 * Die Plattform enthält derzeit keine Messungsmetrik zur Validierung einer erfolgreichen Aktivierung. Konsultieren Sie die Zielgruppenzahlen in Google, um die Integration zu validieren und die Zielgruppengröße zu verstehen.
 
@@ -28,7 +26,21 @@ Beachten Sie die folgenden Details, die für [!DNL Google Ad Manager]-Ziele spez
 >
 >Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] erstellen und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) im Experience Cloud-ID-Dienst in der Vergangenheit (mit Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Google]-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Plattform übertragen.
 
-### Exporttyp {#export-type}
+## Unterstützte Identitäten {#supported-identities}
+
+[!DNL Google Ad Manager] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind.
+
+| Zielgruppe | Beschreibung | Zu beachten |
+|---|---|---|
+| GAID | [!DNL Google Advertising ID] | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein GAID-Namensraum ist. |
+| IDFA | [!DNL Apple ID for Advertisers] | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein IDFA-Namensraum ist. |
+| AAM UUUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), auch bekannt als  [!DNL Device ID]. Eine numerische, 38-stellige Geräte-ID, die der Audience Manager jedem Gerät zuordnet, mit dem er interagiert. | Google verwendet [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) für Zielgruppen in Kalifornien und die Google Cookie-ID für alle anderen Benutzer. |
+| [!DNL Google] Cookie-ID | [!DNL Google] Cookie-ID | [!DNL Google] verwendet diese ID zur Zielgruppe von Benutzern außerhalb von Kalifornien. |
+| RIDA | Roku-ID für Werbung. Diese ID identifiziert Roku-Geräte eindeutig. |  |
+| MAID | Microsoft Advertising ID. Diese ID identifiziert Geräte mit Windows 10 eindeutig. |  |
+| Amazon Fire TV ID | Diese ID identifiziert Amazon Fire TVs eindeutig. |  |
+
+## Exporttyp {#export-type}
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) in das Google-Ziel.
 
