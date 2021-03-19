@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Updateverbindungen
+keywords: Experience Platform;Startseite;beliebte Themen;Flussdienst;Aktualisieren von Konten
 solution: Experience Platform
-title: Verbindungen mithilfe der Flow Service API aktualisieren
+title: Aktualisieren von Konten mit der Flow Service API
 topic: Übersicht
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen einer Verbindung mithilfe der Flow Service API beschrieben.
+description: In diesem Lernprogramm werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen eines Kontos mithilfe der Flow Service API beschrieben.
 translation-type: tm+mt
-source-git-commit: 5187647dfcf82a476bc776bf2b606db228ca70a4
+source-git-commit: 37be5f5ffa4640d7d4442a24cc257069237f15cb
 workflow-type: tm+mt
 source-wordcount: '689'
 ht-degree: 31%
@@ -14,7 +14,7 @@ ht-degree: 31%
 ---
 
 
-# Aktualisieren von Verbindungen mithilfe der Flow Service API
+# Aktualisieren von Konten mit der Flow Service API
 
 Unter bestimmten Umständen kann es erforderlich sein, die Details einer bestehenden Quellverbindung zu aktualisieren. [!DNL Flow Service] bietet Ihnen die Möglichkeit, Details zu einer vorhandenen Stapel- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 
