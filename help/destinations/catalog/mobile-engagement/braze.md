@@ -3,9 +3,9 @@ keywords: mobil; einblenden; Messaging;
 title: Verbindung bremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '951'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,6 @@ Um Profil-Daten an [!DNL Braze] zu senden, müssen Sie zunächst eine Verbindung
 
 Beachten Sie die folgenden Details, die für das [!DNL Braze]-Ziel spezifisch sind:
 
-* Sie können beliebige [Identität](../../../identity-service/namespaces.md) an das [!DNL Braze]-Ziel senden, solange Sie sie dem [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation) zuordnen.
 * [!DNL Adobe Experience Platform] Segmente werden  [!DNL Braze] unter dem  `AdobeExperiencePlatformSegments` Attribut exportiert.
 
 >[!NOTE]
@@ -37,6 +36,14 @@ Beachten Sie die folgenden Details, die für das [!DNL Braze]-Ziel spezifisch si
 ## Anwendungsbeispiele {#use-cases}
 
 Als Marketingspezialist möchte ich Benutzer an einem Ziel für die Interaktion mit Mobilgeräten mit Segmenten, die in [!DNL Adobe Experience Platform] integriert sind, Zielgruppe haben. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse bereitstellen, die auf Attributen aus ihren [!DNL Adobe Experience Platform]-Profilen basieren, sobald Segmente und Profil in [!DNL Adobe Experience Platform] aktualisiert werden.
+
+### Unterstützte Identitäten {#supported-identities}
+
+[!DNL Google Ad Manager] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind.
+
+| Zielgruppe | Beschreibung | Zu beachten |
+|---|---|---|
+| external_id | Benutzerdefinierter [!DNL Braze]-Bezeichner, der die Zuordnung einer beliebigen Identität unterstützt. | Sie können beliebige [Identität](../../../identity-service/namespaces.md) an das [!DNL Braze]-Ziel senden, solange Sie sie dem [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation) zuordnen. |
 
 ## Exporttyp {#export-type}
 
