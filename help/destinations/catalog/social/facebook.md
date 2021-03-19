@@ -1,12 +1,12 @@
 ---
 keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instagram;Messaging;Facebook-Botenenger
 title: Facebook-Verbindung
-description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen zur Zielgruppenbestimmung, Personalisierung und Unterdrückung anhand von Hash-E-Mails.
+description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 translation-type: tm+mt
-source-git-commit: bec44832a235dd3f9e2ee0f3ffc77854ee5784d7
+source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 13%
+source-wordcount: '1131'
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ Sie können dieses Ziel für das Targeting von Audiencen in [!DNL Facebook’s]-
 
 ## Nutzungsszenarien
 
-Damit Sie besser verstehen können, wie und wann Sie das [!DNL Facebook]-Ziel verwenden sollten, gibt es zwei Beispielverwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
+Damit Sie besser verstehen können, wie und wann das [!DNL Facebook]-Ziel verwendet werden soll, gibt es zwei Beispielverwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
 ### Verwendungsfall Nr. 1
 
@@ -35,19 +35,29 @@ Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten au
 
 Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook]-Ziel Zielgruppe werden können.
 
-## Zielspezifikationen {#destination-specs}
-
-### Datenverwaltung für [!DNL Facebook]-Ziele {#data-governance}
+## Datenverwaltung für [!DNL Facebook]-Ziele {#data-governance}
 
 >[!IMPORTANT]
 >
->Daten, die an [!DNL Facebook] gesendet werden, sollten keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Erfahren Sie mehr über [Mergepolicies](/help/profile/ui/merge-policies.md).
+>Daten, die an [!DNL Facebook] gesendet werden, dürfen keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Erfahren Sie mehr über [Mergepolicies](/help/profile/ui/merge-policies.md).
 
-### Exporttyp {#export-type}
+## Unterstützte Identitäten {#supported-identities}
 
-**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer usw.) verwendet im Facebook-Ziel.
+[!DNL Facebook Custom Audiences] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
 
-### Voraussetzungen für Facebook-Konten {#facebook-account-prerequisites}
+| Zielgruppe | Beschreibung | Zu beachten |
+|---|---|---|
+| GAID | Google Advertising ID | Wählen Sie die GAID-Zielgruppe-ID aus, wenn Ihre Quellidentität ein GAID-Namensraum ist. |
+| IDFA | Apple-ID für Werbetreibende | Wählen Sie die IDFA-Zielgruppen-ID aus, wenn Ihre Quellidentität ein IDFA-Namensraum ist. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht werden | Sowohl Normaltext- als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen für die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namensraum für einfache und hash-Telefonnummern. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| email_lc_sha256 | Mit dem SHA256-Algorithmus verfasste E-Mail-Adressen | Sowohl einfache als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen für die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namensraum für E-Mail-Adressen mit Standardtext bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielgruppen-ID aus, wenn Ihre Quellidentität ein benutzerdefinierter Namensraum ist. |
+
+## Exporttyp {#export-type}
+
+**Segmentexport** : Sie exportieren alle Segmentmitglieder (Audiencen) mit den IDs (Name, Telefonnummer oder andere), die im Facebook-Ziel verwendet werden.
+
+## Voraussetzungen für Facebook-Konten {#facebook-account-prerequisites}
 
 Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sicherstellen, dass Sie die folgenden Voraussetzungen erfüllen:
 
@@ -55,20 +65,20 @@ Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sic
 - Das Geschäftskonto **Adobe Experience Cloud** muss als Werbepartner in Ihrem [!DNL Facebook Ad Account] hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Hinzufügen Partner in Ihrem Business Manager](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
    >[!IMPORTANT]
    >
-   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
-- Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Rufen Sie dazu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` auf, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist.
+   > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Die Berechtigung ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
+- Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, wobei `accountID` Ihr [!DNL Facebook Ad Account ID] ist.
 
-### Anforderungen für die ID-Übereinstimmung {#id-matching-requirements}
+## Anforderungen für die ID-Übereinstimmung {#id-matching-requirements}
 
 [!DNL Facebook] verlangt, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher können die für [!DNL Facebook] aktivierten Audiencen anhand von *Hash*-IDs wie E-Mail-Adressen oder Telefonnummern ausgewertet werden.
 
 Abhängig von der Art der IDs, die Sie in Adobe Experience Platform eingeben, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-#### Hashanforderungen für Telefonnummern {#phone-number-hashing-requirements}
+### Hashanforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
-- **Rohe Telefonnummern** eingehen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in  [!DNL Platform]aufnehmen, die bei der Aktivierung automatisch mit Hashing versehen werden. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den `Phone_E.164`-Namensraum einzugeben.
+- **Rohe Telefonnummern** eingehen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in  [!DNL Platform]. Sie sind automatisch auf die Aktivierung gestoßen. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den `Phone_E.164`-Namensraum einzugeben.
 - **Hash-Telefonnummern** eingehen: Sie können Ihre Telefonnummern vorab hash, bevor Sie  [!DNL Platform]einsteigen. Wenn Sie diese Option wählen, vergewissern Sie sich, dass Sie stets Ihre Hash-Telefonnummern in den `Phone_SHA256`-Namensraum eingeben.
 
 >[!NOTE]
@@ -76,9 +86,9 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 >Telefonnummern, die in den `Phone`-Namensraum aufgenommen werden, können in [!DNL Facebook] nicht aktiviert werden.
 
 
-#### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
+### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
 
-Sie können E-Mail-Adressen vor der Einbindung in Adobe Experience Platform als Hash-E-Mail-Adressen festlegen oder Sie können in Experience Platform mit E-Mail-Adressen arbeiten und sie von unserem Algorithmus auf Aktivierung hash lassen.
+Sie können E-Mail-Adressen vor dem Eingeben in Adobe Experience Platform hash oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und sie bei der Aktivierung mit [!DNL Platform] Hash versehen.
 
 Weitere Informationen zum Eingeben von E-Mail-Adressen in Experience Platformen finden Sie unter [Überblick über die Stapelverarbeitung](/help/ingestion/batch-ingestion/overview.md) und [Übersicht über die Streaming-Erfassung](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -99,7 +109,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
 ![Identitätszuordnungs-Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-#### Verwenden benutzerdefinierter Namensraum {#custom-namespaces}
+### Verwenden benutzerdefinierter Namensraum {#custom-namespaces}
 
 Bevor Sie den Namensraum `Extern_ID` verwenden können, um Daten an [!DNL Facebook] zu senden, müssen Sie sicherstellen, dass Sie Ihre eigenen IDs mit [!DNL Facebook Pixel] synchronisieren. Ausführliche Informationen finden Sie in der [offiziellen Dokumentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers).
 
