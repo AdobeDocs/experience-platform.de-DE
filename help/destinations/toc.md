@@ -6,9 +6,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten 
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 feature: Ziele
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 648be489aa77870f67564ee350c4d85885673832
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '464'
 ht-degree: 57%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 57%
       * [Azurblauch-Verbindung](./catalog/cloud-storage/azure-blob.md)
       * [Beta-Ereignis-Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
+      * [Zulassungsliste der IP-Adresse](./catalog/cloud-storage/ip-address-allow-list.md)
    * Data Management Platform-Ziele {#data-management}
       * [Übersicht über Data Management Platform-(DMP-)Ziele](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
