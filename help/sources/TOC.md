@@ -6,10 +6,10 @@ breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Dateneinbettung, Quellen
 translation-type: tm+mt
-source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
+source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 15%
+source-wordcount: '582'
+ht-degree: 16%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 15%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
+      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -227,4 +227,5 @@ ht-degree: 15%
    - [Datenflüsse löschen](tutorials/ui/delete.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [Zulassungsliste der IP-Adresse](ip-address-allow-list.md)
+- [Häufig gestellte Fragen](./troubleshooting.md)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
