@@ -6,10 +6,10 @@ breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Dateneinbettung, Quellen
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 73ad0a264bcb0e9510ef500592fd945903c5cfea
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 16%
+source-wordcount: '579'
+ht-degree: 15%
 
 ---
 
@@ -55,7 +55,7 @@ ht-degree: 16%
       - [Apache Spark auf dem Azurblauen HDInsights-Connector](connectors/databases/spark.md)
       - [Data Explorer-Stecker](connectors/databases/data-explorer.md)
       - [azure synapse Analytics Connector](connectors/databases/synapse-analytics.md)
-      - [Azurblauer Tischstecker, Datenspeicherung](connectors/databases/ats.md)
+      - [Azurblender Datenspeicherung-Stecker](connectors/databases/ats.md)
       - [Steckverbinder](connectors/databases/couchbase.md)
       - [Google BigQuery Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Anschluss](connectors/databases/greenplum.md)
@@ -148,9 +148,9 @@ ht-degree: 16%
    - [Erfassen von Parquet-Daten aus einem Cloud-Datenspeicherung-System eines Drittanbieters](tutorials/api/cloud-storage-parquet.md)
    - [Eine Datensatzverbindung erstellen](tutorials/api/create-dataset-base-connection.md)
    - [Überwachen von Datenflüssen](tutorials/api/monitor.md)
-   - [Aktualisieren von Verbindungen](tutorials/api/update.md)
+   - [Konten aktualisieren](tutorials/api/update.md)
    - [Aktualisieren von Datenflüssen](tutorials/api/update-dataflows.md)
-   - [Verbindungen löschen](tutorials/api/delete.md)
+   - [Konten löschen](tutorials/api/delete.md)
    - [Datenflüsse löschen](tutorials/api/delete-dataflows.md)
 - UI-Tutorials {#ui-tutorials}
    - Erstellen einer Quellverbindung {#create}
@@ -222,6 +222,7 @@ ht-degree: 16%
    - [Aktivieren von Eingangsdaten zum Ausfüllen von Profilen](tutorials/ui/profile.md)
    - [Überwachen von Datenflüssen](tutorials/ui/monitor.md)
    - [Konten aktualisieren](tutorials/ui/update.md)
+   - [Aktualisieren von Datenflüssen](tutorials/ui/update-dataflows.md)
    - [Konten löschen](tutorials/ui/delete-accounts.md)
    - [Datenflüsse löschen](tutorials/ui/delete.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
