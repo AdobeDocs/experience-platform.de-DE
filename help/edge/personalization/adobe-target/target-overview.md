@@ -3,10 +3,10 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: Zielgruppe;adobe-Zielgruppe;Aktivität.id;Experience.id;renderDecision;DecisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;Audiencen;Beschlüsse;Scope;Schema;
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 4%
+source-wordcount: '657'
+ht-degree: 5%
 
 ---
 
@@ -15,21 +15,31 @@ ht-degree: 4%
 
 Adobe Experience Platform [!DNL Web SDK] kann personalisierte Erlebnisse, die in Adobe Target verwaltet werden, für den Web-Kanal bereitstellen und rendern. Sie können einen WYSIWYG-Editor mit dem Namen [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC) oder eine nicht visuelle Schnittstelle, den [Form-Based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), verwenden, um Ihre Aktivitäten und Personalisierungserlebnisse zu erstellen, zu aktivieren und bereitzustellen.
 
+Die folgenden Funktionen wurden getestet und werden derzeit in der Zielgruppe unterstützt:
+
+* A/B-Tests
+* A4T Impression and Conversion Berichte
+* Automatisierte Personalisierung
+* Erlebnis-Targeting
+* Multivarianz-Tests
+* Native Zielgruppe Impression and Conversion Berichte
+* VEC-Unterstützung
+
 ## Aktivieren von Adobe Target
 
-Um [!DNL Target] zu aktivieren, müssen Sie folgende Schritte ausführen:
+Gehen Sie wie folgt vor, um [!DNL Target] zu aktivieren:
 
 1. Aktivieren Sie die Zielgruppe in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) mit dem entsprechenden Clientcode.
 1. hinzufügen Sie die Option `renderDecisions` zu Ihren Ereignissen.
 
-Dann können Sie optional auch:
+Optional können Sie dann auch die folgenden Optionen hinzufügen:
 
-* hinzufügen Sie `decisionScopes` auf Ihre Ereignis, um bestimmte Aktivitäten abzurufen (nützlich für Aktivitäten, die mit dem formularbasierten Composer erstellt wurden).
-* hinzufügen Sie das Prähiding-Snippet [, um nur bestimmte Teile der Seite auszublenden.](../manage-flicker.md)
+* `decisionScopes`: Rufen Sie bestimmte Aktivitäten ab (nützlich für mit dem formularbasierten Composer erstellte Aktivitäten), indem Sie diese Option zu Ihren Ereignissen hinzufügen.
+* [Ausblenden von Snippets](../manage-flicker.md) verhindern: Blenden Sie nur bestimmte Teile der Seite aus.
 
 ## Verwenden des Adobe Target VEC
 
-Um VEC mit einer Platform Web SDK-Implementierung zu verwenden, müssen Sie entweder die [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/)- oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension installieren und aktivieren.
+Um VEC mit einer Platform Web SDK-Implementierung zu verwenden, installieren und aktivieren Sie entweder die VEC Helper Extension [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) oder [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
 
 ## VEC-Aktivitäten automatisch rendern
 
@@ -109,7 +119,7 @@ alloy("sendEvent", {
 
 Beim Definieren von Audiencen für Ihre Zielgruppe-Aktivitäten, die über Adobe Experience Platform Web SDK bereitgestellt werden, muss [XDM](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/home.html) definiert und verwendet werden. Nachdem Sie XDM-Schema, -Klassen und -Mixins definiert haben, können Sie eine Zielgruppe-Audience erstellen, die von XDM-Daten für das Targeting definiert wird. Innerhalb der Zielgruppe werden XDM-Daten im Audience Builder als benutzerdefinierter Parameter angezeigt. Das XDM wird mit der Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
 
-Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfügen, die benutzerdefinierte Parameter oder ein benutzerdefiniertes Profil verwenden, beachten Sie, dass diese nicht korrekt über das SDK bereitgestellt werden. Anstatt benutzerdefinierte Parameter oder das Profil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Audiencen-Targeting-Felder, die über das Adobe Experience Platform Web SDK unterstützt werden und keine XDM-Datei erfordern. Diese Felder stehen in der Benutzeroberfläche der Zielgruppe zur Verfügung, für die kein XDM erforderlich ist:
+Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfügen, die benutzerdefinierte Parameter oder ein benutzerdefiniertes Profil verwenden, werden diese nicht korrekt über das SDK bereitgestellt. Anstatt benutzerdefinierte Parameter oder das Profil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Audiencen-Targeting-Felder, die über das Adobe Experience Platform Web SDK unterstützt werden und keine XDM-Datei erfordern. Diese Felder sind in der Benutzeroberfläche der Zielgruppe verfügbar, für die kein XDM erforderlich ist:
 
 * Ziel-Bibliothek
 * Geo
@@ -122,10 +132,10 @@ Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfüge
 
 ## Terminologie
 
-__Entscheidungen:__ In  [!DNL Target]diesen Fällen wird das Erlebnis, das aus einer Aktivität ausgewählt wurde, korreliert.
+__Entscheidungen:__ In  [!DNL Target]den Beschlüssen wird das Erlebnis, das aus einer Aktivität ausgewählt wurde, korreliert.
 
 __Schema:__ Das Schema einer Entscheidung ist die Art des Angebots in  [!DNL Target].
 
-__Anwendungsbereich:__ Der Anwendungsbereich des Beschlusses. In [!DNL Target] ist dies die mBox. Die globale mBox ist der Bereich `__view__`.
+__Anwendungsbereich:__ Der Anwendungsbereich des Beschlusses. In [!DNL Target] ist der Gültigkeitsbereich die mBox. Die globale mBox ist der Bereich `__view__`.
 
 __XDM:__ Der XDM wird in Punktnotation serialisiert und dann  [!DNL Target] als mBox-Parameter eingefügt.
