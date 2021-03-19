@@ -5,7 +5,7 @@ title: Azurblase Data Lake Datenspeicherung Gen2 Source Connector - Übersicht
 topic: Übersicht
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azurblase Data Lake Datenspeicherung Gen2 und Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5c6539d45df91369c3608965fd887c013d528b98
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 3%
@@ -48,7 +48,7 @@ Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Data
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Verwenden der UI
+### Verwenden der UI
 
 - [Erstellen einer ADLS-Gen2-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
