@@ -4,7 +4,7 @@ title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 33%
@@ -62,7 +62,7 @@ In diesem Schritt wählen Sie die Felder aus, die in E-Mail-Marketing-Ziele expo
 
 Weitere Informationen zu diesem Schritt finden Sie im Schritt [Attribute auswählen](../../ui/activate-destinations.md#select-attributes) im Lernprogramm Ziele aktivieren.
 
-### Identität {#identity}
+## Identität {#identity}
 
 Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Das ist das Feld, aus dem die Identitäten Ihrer Benutzer übernommen werden. In der Regel besteht das Feld aus der E-Mail-Adresse, es kann aber auch eine Treueprogramm-Kennung oder eine Telefonnummer sein. In der folgenden Tabelle finden Sie die gängigsten eindeutigen Bezeichner und deren XDM-Feld im Schema.
 
@@ -72,7 +72,7 @@ Es wird empfohlen, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../
 | Telefon | `mobilePhone.number` |
 | Treueprogramm-Kennung | `Customer-defined XDM field` |
 
-### Andere Zielattribute
+## Andere Zielattribute
 
 Wählen Sie in der Schemafeldauswahl die anderen Felder aus, die Sie an das E-Mail-Ziel exportieren möchten. Zu den empfohlenen Optionen gehören:
 
