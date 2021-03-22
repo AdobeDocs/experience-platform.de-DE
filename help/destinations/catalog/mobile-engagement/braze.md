@@ -3,9 +3,9 @@ keywords: mobil; einblenden; Messaging;
 title: Verbindung bremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '953'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 5%
 >[!IMPORTANT]
 >
 >Das Braze-Ziel in Adobe Experience Platform befindet sich derzeit in Beta. Die Dokumentation und Funktionalität können sich ändern.
+
+## Übersicht {#overview}
 
 Mit dem [!DNL Braze]-Ziel können Sie Profil-Daten an [!DNL Braze] senden.
 
