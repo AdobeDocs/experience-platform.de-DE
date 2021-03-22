@@ -3,7 +3,7 @@ keywords: DoubleClick Bid Manager;DoubleClick Angebotsmanager;DoubleClick;Displa
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '788'
 ht-degree: 39%
@@ -15,7 +15,7 @@ ht-degree: 39%
 
 [!DNL Display & Video 360], früher als bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.[!DNL DoubleClick Bid Manager]
 
-## Zielspezifikationen
+## Zielspezifikationen {#specifics}
 
 Beachten Sie die folgenden Details, die für [!DNL Google Display & Video 360]-Ziele spezifisch sind:
 
@@ -26,7 +26,7 @@ Beachten Sie die folgenden Details, die für [!DNL Google Display & Video 360]-Z
 >
 >Wenn Sie Ihr erstes Ziel mit Google Display &amp; Video 360 erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in der Vergangenheit nicht aktiviert hatten (mit Adobe Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um die ID-Synchronisierung zu aktivieren. Wenn Sie zuvor Google-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Platform übertragen.
 
-### Unterstützte Identitäten {#supported-identities}
+## Unterstützte Identitäten {#supported-identities}
 
 [!DNL Google Ad Manager] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind.
 
@@ -40,7 +40,7 @@ Beachten Sie die folgenden Details, die für [!DNL Google Display & Video 360]-Z
 | MAID | Microsoft Advertising ID. Diese ID identifiziert Geräte mit Windows 10 eindeutig. |  |
 | Amazon Fire TV ID | Diese ID identifiziert Amazon Fire TVs eindeutig. |  |
 
-### Exporttyp {#export-type}
+## Exporttyp {#export-type}
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) in das Google-Ziel.
 
