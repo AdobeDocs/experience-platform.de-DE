@@ -6,7 +6,7 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 37b0ec0e04c45cb065eca9d262249016e80655ef
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '2151'
 ht-degree: 15%
@@ -26,7 +26,7 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 Die Schritte im Arbeitsablauf für die Aktivierung unterscheiden sich geringfügig von den Zieltypen. Der vollständige Arbeitsablauf für alle Zieltypen wird nachfolgend beschrieben.
 
-### Wählen Sie das Ziel aus, an dem die Daten für {#select-destination} aktiviert werden sollen
+## Wählen Sie das Ziel aus, an dem die Daten für {#select-destination} aktiviert werden sollen
 
 Gilt für: Alle Ziele
 
@@ -36,7 +36,7 @@ Navigieren Sie in der Adobe Experience Platform-Benutzeroberfläche zu **[!UICON
 
 Führen Sie die Schritte im nächsten Abschnitt aus, um die Segmente auszuwählen, die Sie aktivieren möchten.
 
-### [!UICONTROL Segmentschritt ] auswählen  {#select-segments}
+## [!UICONTROL Segmentschritt ] auswählen  {#select-segments}
 
 Gilt für: Alle Ziele
 
@@ -46,7 +46,7 @@ Wählen Sie im Arbeitsablauf **[!UICONTROL Ziel aktivieren]** auf der Seite **[!
 
 ![Segment an Ziel](../assets/ui/activate-destinations/email-select-segments.png)
 
-### [!UICONTROL Identitätszuordnungsschritt ]   {#identity-mapping}
+## [!UICONTROL Identitätszuordnungsschritt ]   {#identity-mapping}
 
 Gilt für: Social-Ziele und Werbeziel Google-Kunden-Übereinstimmung
 
@@ -54,7 +54,7 @@ Gilt für: Social-Ziele und Werbeziel Google-Kunden-Übereinstimmung
 
 Bei Social-Zielen müssen Sie Quellattribute oder Identitäts-Namensraum auswählen, die als Zielgruppen-IDs im Ziel zugeordnet werden sollen.
 
-#### Beispiel: Aktivieren von Audiencen in [!DNL Facebook Custom Audience] {#example-facebook}
+## Beispiel: Aktivieren von Audiencen in [!DNL Facebook Custom Audience] {#example-facebook}
 
 Nachstehend finden Sie ein Beispiel für eine korrekte Identitätszuordnung bei der Aktivierung von Audiencen in [!DNL Facebook].
 
@@ -84,7 +84,7 @@ Attributquellendaten werden nicht automatisch mit Hashing versehen. Wenn Ihr Que
 
  
 
-#### Beispiel: Aktivieren von Audiencen in [!DNL Google Customer Match] {#example-gcm}
+## Beispiel: Aktivieren von Audiencen in [!DNL Google Customer Match] {#example-gcm}
 
 Dies ist ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Audiencen in [!DNL Google Customer Match].
 
@@ -112,23 +112,7 @@ Daten von Namensräumen ohne Hash werden bei Aktivierung automatisch durch [!DNL
 Attributquellendaten werden nicht automatisch mit Hashing versehen. Wenn Ihr Quellfeld ungehackte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Transformation]** anwenden, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash.
 ![Identitätszuordnungs-Transformation](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-<!-- 
-`IDFA` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
-
-* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
-
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
-
-* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
-
-### **[!UICONTROL Configurestep]**   {#configure}
+## **[!UICONTROL Configurestep]**   {#configure}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
@@ -177,7 +161,7 @@ Wählen Sie **[!UICONTROL Änderungen anwenden]**, um Ihre Auswahl zu bestätige
 
 Nachdem Sie alle Segmente konfiguriert haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
-### **[!UICONTROL Segment-]** Zeitplanung  {#segment-schedule}
+## **[!UICONTROL Segment-]** Zeitplanung  {#segment-schedule}
 
 Gilt für: Werbeziele, soziale Ziele
 
@@ -197,7 +181,7 @@ Auf der Seite **[!UICONTROL Segmentplan]** können Sie das Datum des Beginns fü
 
 ![enter app id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-### **** Planungsschritt  {#scheduling}
+## **** Planungsschritt  {#scheduling}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
@@ -205,7 +189,7 @@ Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
 Auf der Seite **[!UICONTROL Einplanen]** können Sie das Datum des Beginns zum Senden der Daten an das Ziel sowie die Häufigkeit des Datenversands an das Ziel sehen. Diese Werte können nicht bearbeitet werden.
 
-### **[!UICONTROL Wählen Sie]** attributesstep  {#select-attributes}
+## **[!UICONTROL Wählen Sie]** attributesstep  {#select-attributes}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele
 
@@ -237,7 +221,7 @@ Es wird empfohlen, dass eines der Attribute eine [eindeutige Kennung](../../dest
 > 
 Wenn das Feld `person.name.firstName` beispielsweise bestimmte Datenverwendungsbeschriftungen enthält, die mit der Marketingaktion des Ziels kollidieren, wird Ihnen im Überprüfungsschritt eine Verletzung der Datenverwendungsrichtlinie angezeigt. Weitere Informationen finden Sie unter [Datenverwaltung in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
-### **** ReviewStep  {#review}
+## **** ReviewStep  {#review}
 
 Gilt für: alle Ziele
 
@@ -281,11 +265,11 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004100
 
 Das Vorhandensein dieser Dateien an Ihrem Speicherort bestätigt die erfolgreiche Aktivierung. Um zu verstehen, wie die exportierten Dateien strukturiert sind, können Sie eine .csv-Beispieldatei [herunterladen. ](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv) Diese Beispieldatei enthält die Profil-Attribute `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear` und `personalEmail.address`.
 
-### Werbeziele
+## Werbeziele
 
 Überprüfen Sie Ihr Konto im entsprechenden Werbeziel, an dem Sie Ihre Daten aktivieren. Wenn die Aktivierung erfolgreich war, werden in Ihrer Werbeplattform Zielgruppen ausgefüllt.
 
-### Ziele in sozialen Netzwerken
+## Ziele in sozialen Netzwerken
 
 Bei [!DNL Facebook] bedeutet eine erfolgreiche Aktivierung, dass eine [!DNL Facebook] benutzerdefinierte Audience programmgesteuert in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/) erstellt wird. Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
 
