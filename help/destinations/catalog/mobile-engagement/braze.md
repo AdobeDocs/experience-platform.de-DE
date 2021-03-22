@@ -3,10 +3,10 @@ keywords: mobil; einblenden; Messaging;
 title: Verbindung bremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
 source-wordcount: '953'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ Mit dem [!DNL Braze]-Ziel können Sie Profil-Daten an [!DNL Braze] senden.
 
 Um Profil-Daten an [!DNL Braze] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
-## Zielspezifikationen {#destination-specs}
+## Zielspezifikationen {#specifics}
 
 Beachten Sie die folgenden Details, die für das [!DNL Braze]-Ziel spezifisch sind:
 
