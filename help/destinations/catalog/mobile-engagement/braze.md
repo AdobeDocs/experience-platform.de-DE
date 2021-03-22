@@ -3,9 +3,9 @@ keywords: mobil; einblenden; Messaging;
 title: Verbindung bremsen
 description: Braze ist eine umfassende Kundenbindungsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '952'
 ht-degree: 5%
 
 ---
@@ -37,7 +37,7 @@ Beachten Sie die folgenden Details, die für das [!DNL Braze]-Ziel spezifisch si
 
 Als Marketingspezialist möchte ich Benutzer an einem Ziel für die Interaktion mit Mobilgeräten mit Segmenten, die in [!DNL Adobe Experience Platform] integriert sind, Zielgruppe haben. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse bereitstellen, die auf Attributen aus ihren [!DNL Adobe Experience Platform]-Profilen basieren, sobald Segmente und Profil in [!DNL Adobe Experience Platform] aktualisiert werden.
 
-### Unterstützte Identitäten {#supported-identities}
+## Unterstützte Identitäten {#supported-identities}
 
 [!DNL Google Ad Manager] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind.
 
@@ -49,7 +49,6 @@ Als Marketingspezialist möchte ich Benutzer an einem Ziel für die Interaktion 
 
 **[!DNL Profile-based]** - Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten entsprechend Ihrer Feldzuordnung.
 [!DNL Adobe Experience Platform] Segmente werden  [!DNL Braze] unter dem  `AdobeExperiencePlatformSegments` Attribut exportiert.
-
 
 ## Mit Ziel verbinden {#connect-destination}
 
@@ -87,7 +86,7 @@ Um Ihre Audiencen korrekt von [!DNL Adobe Experience Platform] an das [!DNL Braz
 
 Die Zuordnung besteht darin, eine Verknüpfung zwischen den Feldern Ihres [!DNL Experience Data Model]-Schemas (XDM) in Ihrem [!DNL Platform]-Konto und den entsprechenden Entsprechungen aus dem Zielort der Zielgruppe zu erstellen.
 
-Gehen Sie wie folgt vor, um die XDM-Felder den Bestimmungsfeldern [!DNL Braze] korrekt zuzuordnen:
+Gehen Sie wie folgt vor, um Ihre XDM-Felder den Bestimmungsfeldern [!DNL Braze] richtig zuzuordnen:
 
 Klicken Sie im Schritt [!UICONTROL Zuordnung] auf **[!UICONTROL Hinzufügen neue Zuordnung]**.
 
@@ -128,7 +127,7 @@ Die Feldzuordnung sollte nun in der Liste angezeigt werden.
 
 Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die vorherigen Schritte.
 
-### Beispiel {#mapping-example}
+## Zuordnungsbeispiel {#mapping-example}
 
 Angenommen, Ihr XDM-Profil-Schema und Ihre [!DNL Braze]-Instanz enthalten die folgenden Attribute und Identitäten:
 
