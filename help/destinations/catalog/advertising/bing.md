@@ -3,15 +3,17 @@ keywords: 'Werbung; bing; '
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen über Microsoft Display Advertising durchführen.
 translation-type: tm+mt
-source-git-commit: 0ef107963f7da377070eb845fd7c24218a99464b
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '528'
 ht-degree: 5%
 
 ---
 
 
 # [!DNL Microsoft Bing] connection  {#bing-destination}
+
+## Übersicht {#overview}
 
 Mit dem [!DNL Microsoft Bing]-Ziel können Sie Profil-Daten an [!DNL Microsoft Display Advertising] senden.
 
