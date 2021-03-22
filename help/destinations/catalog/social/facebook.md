@@ -3,7 +3,7 @@ keywords: Facebook-Verbindung;Facebook-Verbindung;Facebook-Ziele;Facebook;Instag
 title: Facebook-Verbindung
 description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, die auf Hash-E-Mails basieren.
 translation-type: tm+mt
-source-git-commit: fd95357f3e3533fe6b7b9752798dd99eb1cc0eb5
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '1131'
 ht-degree: 8%
@@ -74,7 +74,7 @@ Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sic
 
 Abhängig von der Art der IDs, die Sie in Adobe Experience Platform eingeben, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-### Hashanforderungen für Telefonnummern {#phone-number-hashing-requirements}
+## Hashanforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
@@ -86,7 +86,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 >Telefonnummern, die in den `Phone`-Namensraum aufgenommen werden, können in [!DNL Facebook] nicht aktiviert werden.
 
 
-### Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
+## Anforderungen für das E-Mail-Hashing {#email-hashing-requirements}
 
 Sie können E-Mail-Adressen vor dem Eingeben in Adobe Experience Platform hash oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und sie bei der Aktivierung mit [!DNL Platform] Hash versehen.
 
@@ -109,7 +109,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
 ![Identitätszuordnungs-Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Verwenden benutzerdefinierter Namensraum {#custom-namespaces}
+## Verwenden benutzerdefinierter Namensraum {#custom-namespaces}
 
 Bevor Sie den Namensraum `Extern_ID` verwenden können, um Daten an [!DNL Facebook] zu senden, müssen Sie sicherstellen, dass Sie Ihre eigenen IDs mit [!DNL Facebook Pixel] synchronisieren. Ausführliche Informationen finden Sie in der [offiziellen Dokumentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers).
 
