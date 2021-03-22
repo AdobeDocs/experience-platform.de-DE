@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Google Cloud-Datenspeicherung;Google Cloud-Datenspeicherung
 solution: Experience Platform
 title: Google Cloud Datenspeicherung Source Connector - Übersicht
-topic: overview
+topic: Übersicht
 description: Erfahren Sie, wie Sie Google Cloud-Datenspeicherung mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 2%
+source-wordcount: '542'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten von diesen Systemen übertragen können.
 
-Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON, XDM-Parquet oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus  [!DNL Google Cloud Storage] Stapeln einzubringen.
+Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Ingetierte Daten können als JSON oder Parquet formatiert werden, die mit dem Experience Data Model (XDM) konform sind, oder in einem getrennten Format. Jeder Schritt des Prozesses ist in den Quellarbeitsablauf integriert. Mit der Plattform können Sie Daten von [!DNL Google Cloud Storage] durch Stapel importieren.
 
 ## Zulassungsliste der IP-Adresse
 
@@ -25,7 +25,7 @@ Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor
 
 ## Voraussetzungen für die Einrichtung des [!DNL Google Cloud Storage]-Kontos
 
-Um eine Verbindung zu [!DNL Platform] herzustellen, müssen Sie zunächst die Interoperabilität für Ihr [!DNL Google Cloud Storage]-Konto aktivieren. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Settings]** aus der Option **[!UICONTROL Datenspeicherung]** im Navigationsbereich.
+Um eine Verbindung zur Plattform herzustellen, müssen Sie zunächst die Interoperabilität für Ihr [!DNL Google Cloud Storage]-Konto aktivieren. Um auf die Interoperabilitätseinstellung zuzugreifen, öffnen Sie [!DNL Google Cloud Platform] und wählen Sie **[!UICONTROL Settings]** aus der Option **[!UICONTROL Cloud-Datenspeicherung]** im Navigationsbereich.
 
 ![](../../images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -33,13 +33,11 @@ Die Seite **[!UICONTROL Einstellungen]** wird angezeigt. Von hier aus können Si
 
 ![](../../images/tutorials/create/google-cloud-storage/project-access.png)
 
-Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Benutzerkonto verknüpft ist. Wenn Sie noch kein Standardprojekt für den interoperablen Zugriff eingerichtet haben, können Sie eines im Abschnitt **[!UICONTROL Standardprojekt für den interoperablen Zugriff]** einrichten. Wenn bereits ein Standardprojekt eingerichtet wurde, wird im Abschnitt eine Bestätigung angezeigt, dass ein Projekt als Standard festgelegt wurde.
-
-Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ihr Benutzerkonto zu erstellen, wählen Sie **[!UICONTROL Einen Schlüssel erstellen]**.
+Die Seite **[!UICONTROL Interoperabilität]** enthält Informationen zur Authentifizierung, zu Zugriffsschlüsseln und zum Standardprojekt, das mit Ihrem Dienstkonto verknüpft ist. Um eine neue Zugriffsschlüssel-ID und einen geheimen Zugriffsschlüssel für Ihr Dienstkonto zu erstellen, wählen Sie **[!UICONTROL Einen Schlüssel für ein Dienstkonto]** erstellen.
 
 ![](../../images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Sie können Ihre neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit [!DNL Platform] zu verbinden.
+Sie können Ihre neu generierte Zugriffsschlüssel-ID und den geheimen Zugriffsschlüssel verwenden, um Ihr [!DNL Google Cloud Storage]-Konto mit der Plattform zu verbinden.
 
 ## Benennungsbeschränkungen für Dateien und Ordner
 
@@ -47,14 +45,14 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 
 - Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
 - Ordner- und Dateinamen können nicht mit einem Schrägstrich (`/`) enden. Sofern vorhanden, wird sie automatisch entfernt.
-- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! ' ( ) ; @ & = + $ , % # [ ]`
 - Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
 - Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.) ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundlegende Regeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
 
-## Verbinden Sie [!DNL Google Cloud Storage] mit [!DNL Platform]
+## [!DNL Google Cloud Storage] an Plattform anschließen
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Google Cloud Storage] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Google Cloud Storage] mithilfe von APIs oder der Benutzeroberfläche mit einer Plattform verbunden werden kann:
 
 ### APIs verwenden
 
