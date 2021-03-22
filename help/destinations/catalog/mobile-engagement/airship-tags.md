@@ -3,9 +3,9 @@ keywords: Luftschiff-Tags;Luftschiff-Ziel
 title: Verbindung zu Airship Tags
 description: Übergeben Sie nahtlos Daten zur Audience der Adobe als Audience-Tags für das Targeting innerhalb von Airship an Airship.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 11%
 
 ---
@@ -41,7 +41,7 @@ Bevor Sie Ihre Adobe Experience Platform-Segmente an [!DNL Airship] senden könn
 > 
 >Erstellen Sie ein [!DNL Airship]-Konto über [diesen Anmeldelink](https://go.airship.eu/accounts/register/plan/starter/), falls noch nicht geschehen.
 
-### Tag-Gruppen
+## Tag-Gruppen
 
 Das Konzept der Segmente in der Adobe-Erlebnisplattform ähnelt dem von [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, wobei sich die Implementierung geringfügig unterscheidet. Diese Integration ordnet den Status der [Mitgliedschaft eines Benutzers in einem Experience Platform-Segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) dem Vorhandensein oder Nichtvorhandensein eines [!DNL Airship]-Tags zu. In einem Plattformsegment, in dem `xdm:status` zu `realized` wechselt, wird das Tag dem Kanal [!DNL Airship] hinzugefügt oder dem dieser Profil zugeordnet wird. Wenn sich `xdm:status` in `exited` ändert, wird das Tag entfernt.
 
@@ -53,7 +53,7 @@ Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Air
 
 Anweisungen zum Erstellen der Tag-Gruppe finden Sie unter [Tag-Gruppen verwalten](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups).
 
-### Platzhalter-Token
+## Überbringungstoken generieren
 
 Gehen Sie zu **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs und Integrationen]** im [Airship-Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Tokens]** im Menü links.
 
