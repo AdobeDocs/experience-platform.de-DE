@@ -3,10 +3,10 @@ keywords: Streaming;
 title: HTTP-Verbindung
 description: Mit dem HTTP-Ziel in Adobe Experience Platform können Sie Profil-Daten an HTTP-Endpunkte von Drittanbietern senden.
 translation-type: tm+mt
-source-git-commit: 5435661d750c4138ea6a2d40619a48236b7b1e4f
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 7%
+source-wordcount: '543'
+ht-degree: 8%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 >Das [!DNL HTTP]-Ziel in der Plattform befindet sich derzeit in Alpha. Die Dokumentation und Funktionalität können sich ändern.
+
+## Übersicht {#overview}
 
 Das [!DNL HTTP]-Ziel ist ein [!DNL Adobe Experience Platform]-Streaming-Ziel, mit dem Sie Profil-Daten an Drittanbieter-Endpunkte [!DNL HTTP] senden können.
 
@@ -33,11 +35,9 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** [!DNL H
 
 ![HTTP-Ziel aktivieren](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
->
->![HTTP-Ziel aktivieren](../assets/catalog/http/connect.png)
+Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
+
+![HTTP-Ziel aktivieren](../assets/catalog/http/connect.png)
 
 Im Schritt [!UICONTROL Konto] müssen Sie die HTTP-Endpunktverbindungsdetails definieren. Wählen Sie **[!UICONTROL Neues Konto]** und geben Sie die Verbindungsdetails für den HTTP-Endpunkt ein, mit dem Sie eine Verbindung herstellen möchten.
 - **[!UICONTROL httpEndpoint]**: der vollständige  [!DNL URL] HTTP-Endpunkt, an den Sie die Profil-Daten senden möchten.
