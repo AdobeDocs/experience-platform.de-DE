@@ -3,9 +3,9 @@ keywords: Werbung; die Fachstelle;
 title: Verbindung zum Trade Desk
 description: 'Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, mit der sie zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg ausführen können. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '625'
 ht-degree: 5%
 
 ---
@@ -21,23 +21,27 @@ ht-degree: 5%
 
 Um Profil-Daten an [!DNL Trade Desk] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
-## Zielspezifikationen {#destination-specs}
-
-Beachten Sie die folgenden Details, die für das [!DNL Trade Desk]-Ziel spezifisch sind:
-
-* Sie können die folgenden [Identitäten](../../../identity-service/namespaces.md) an [!DNL The Trade Desk]-Ziele senden: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
-
->[!IMPORTANT]
->
->Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in der Vergangenheit im Experience Cloud-ID-Dienst (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL The Trade Desk]-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Plattform übertragen.
-
 ## Anwendungsbeispiele {#use-cases}
 
 Als Marketingspezialist möchte ich Segmente verwenden können, die aus [!DNL Trade Desk IDs] oder Geräte-IDs erstellt wurden, um Retargeting oder Audience zielgerichteter digitaler Kampagnen zu erstellen.
 
+## Unterstützte Identitäten {#supported-identities}
+
+[!DNL The Trade Desk] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
+
+| Zielgruppe | Beschreibung |
+|---|---|
+| GAID | [!DNL Google Advertising ID] |
+| IDFA | [!DNL Apple ID for Advertisers] |
+| Handelsschalter-ID | Advertiser-ID in der Plattform des Trade Desk |
+
 ## Exporttyp {#export-type}
 
 **[!DNL Segment export]** - Sie exportieren alle Segmentmitglieder (Audiencen) in das Ziel.
+
+## Voraussetzungen {#prerequisites}
+
+Wenn Sie Ihr erstes Ziel mit [!DNL The Trade Desk] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in der Vergangenheit im Experience Cloud-ID-Dienst (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL The Trade Desk]-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Plattform übertragen.
 
 ## Mit Ziel verbinden {#connect-destination}
 
@@ -45,13 +49,13 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** [!DNL T
 
 ![Das Ziel des Trade Desk konfigurieren](../../assets/catalog/advertising/tradedesk/configure.png)
 
->[!NOTE]
->
->Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
->
->![Handelsdatenträger-Ziel aktivieren](../../assets/catalog/advertising/tradedesk/activate.png)
+Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-Geben Sie im Schritt [!UICONTROL Authentication] die Verbindungsdetails [!DNL The Trade Desk] ein:
+![Handelsdatenträger-Ziel aktivieren](../../assets/catalog/advertising/tradedesk/activate.png)
+
+## Authentifizierungsschritt {#authentication}
+
+Geben Sie im Schritt **[!UICONTROL Authentication]** die Verbindungsdetails [!DNL The Trade Desk] ein:
 
 * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, mit der Sie dieses Ziel in Zukunft identifizieren können.
