@@ -3,7 +3,7 @@ keywords: Google-Anzeigen;Google-Anzeigen;Google-Adwords;Google AdWords;Google-A
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 translation-type: tm+mt
-source-git-commit: 0759919dc458798ca4bc5f233a9cb319194ea534
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 19%
@@ -15,7 +15,7 @@ ht-degree: 19%
 
 [!DNL Google Ads], früher bekannt als  [!DNL Google AdWords], ist ein Online-Werbedienst, der es Unternehmen ermöglicht, per Klick Werbung über textbasierte Suchvorgänge, Grafikanzeigen,  [!DNL YouTube] Videos und mobile In-App-Anzeigen zu bezahlen.
 
-## Zielspezifikationen
+## Zielspezifikationen {#specifics}
 
 Beachten Sie die folgenden Details, die für [!DNL Google Ads]-Ziele spezifisch sind:
 
@@ -26,7 +26,7 @@ Beachten Sie die folgenden Details, die für [!DNL Google Ads]-Ziele spezifisch 
 >
 >Wenn Sie Ihr erstes Ziel mit [!DNL Google Ads] erstellen und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) im Experience Cloud-ID-Dienst in der Vergangenheit (mit Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor Google-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Platform übertragen.
 
-### Unterstützte Identitäten {#supported-identities}
+## Unterstützte Identitäten {#supported-identities}
 
 [!DNL Google Ad Manager] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind.
 
@@ -40,7 +40,7 @@ Beachten Sie die folgenden Details, die für [!DNL Google Ads]-Ziele spezifisch 
 | MAID | Microsoft Advertising ID. Diese ID identifiziert Geräte mit Windows 10 eindeutig. |  |
 | Amazon Fire TV ID | Diese ID identifiziert Amazon Fire TVs eindeutig. |  |
 
-### Exporttyp {#export-type}
+## Exporttyp {#export-type}
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) in das Google-Ziel.
 
