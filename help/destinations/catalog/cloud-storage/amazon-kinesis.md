@@ -3,9 +3,9 @@ keywords: Amazon Kinesis;Kinesis-Ziel;Kinesis
 title: Amazon Kinesis-Anschluss
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer Amazon Kinesis-Datenspeicherung, um Daten von Adobe Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '506'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,14 @@ Unter [Arbeitsablauf für Cloud-Datenspeicherung-Ziele ](./workflow.md)finden Si
 
 Geben Sie für [!DNL Amazon Kinesis]-Ziele im Arbeitsablauf zum Erstellen von Zielen die folgenden Informationen ein:
 
-### Im Authentifizierungsschritt {#authentication-step}
+## Authentifizierungsschritt {#authentication-step}
 
 * **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie  [!DNL Amazon Web Services]ein  `access key - secret access key` Paar, um Platform Zugriff auf Ihr  [!DNL Amazon Kinesis] Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).[
 * **Region**: Geben Sie an, zu welcher  [!DNL Amazon Web Services] Region Daten gestreamt werden sollen.
 
 ![Eingabefelder im Kontoschritt](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### Im Setup-Schritt {#setup-step}
+## Setup-Schritt {#setup-step}
 
 * **Name**: Geben Sie einen Namen für Ihre Verbindung ein, um  [!DNL Amazon Kinesis]
 * **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung mit ein  [!DNL Amazon Kinesis].
