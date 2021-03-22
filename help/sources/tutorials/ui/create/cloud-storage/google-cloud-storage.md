@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Google Cloud-Datenspeicherung;Google Cloud-Datenspeicherung;GCS;Gcs
 solution: Experience Platform
 title: Erstellen einer Google Cloud-Datenspeicherung-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Google Cloud-Datenspeicherung-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '596'
 ht-degree: 8%
 
 ---
@@ -43,10 +43,10 @@ Um auf Ihre GCS-Daten auf [!DNL Platform] zugreifen zu können, müssen Sie die 
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| Schlüssel-ID aufrufen | Die Zugriffsschlüssel-ID des [!DNL Google Cloud Storage]-Kontos. |
-| Geheimer Zugriffsschlüssel | Das Clientgeheimnis des [!DNL Google Cloud Storage]-Kontos. |
+| Schlüssel-ID aufrufen | Eine 61-stellige, alphanumerische Zeichenfolge, mit der Ihr [!DNL Google Cloud Storage]-Konto für Platform authentifiziert wird. |
+| Geheimer Zugriffsschlüssel | Eine 40-stellige Base-64-kodierte Zeichenfolge, mit der Ihr [!DNL Google Cloud Storage]-Konto für Platform authentifiziert wird. |
 
-Weitere Informationen zum Einstieg finden Sie unter [Server-zu-Server-Authentifizierungshandbuch](https://cloud.google.com/docs/authentication/production) für [!DNL Google Cloud Storage].
+Weitere Informationen zu diesen Werten finden Sie im Handbuch [Google Cloud-Datenspeicherung HMAC-Schlüssel](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und des geheimen Zugriffsschlüssels finden Sie im Abschnitt [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ## Verbinden Sie Ihr [!DNL Google Cloud Storage]-Konto
 
