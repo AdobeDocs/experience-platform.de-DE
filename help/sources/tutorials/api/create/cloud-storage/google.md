@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Google Cloud-Datenspeicherung;Google Cloud-Datenspeicherung;Google;Google
 solution: Experience Platform
 title: Erstellen einer Google Cloud-Datenspeicherung-Quellverbindung mit der Flow Service API
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Google Cloud-Datenspeicherung-Konto herstellen.
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: f6a63ca1e21b3c3f6a55574f31fdf04038b7e5c4
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 26%
+source-wordcount: '597'
+ht-degree: 24%
 
 ---
 
@@ -35,10 +35,10 @@ Damit [!DNL Flow Service] eine Verbindung mit Ihrem [!DNL Google Cloud Storage]-
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `accessKeyId` | Die Zugriffsschlüssel-ID für Ihr [!DNL Google Cloud Storage]-Konto. |
-| `secretAccessKey` | Der geheime Zugriffsschlüssel für Ihr [!DNL Google Cloud Storage]-Konto. |
+| Schlüssel-ID aufrufen | Eine 61-stellige, alphanumerische Zeichenfolge, mit der Ihr [!DNL Google Cloud Storage]-Konto für Platform authentifiziert wird. |
+| Geheimer Zugriffsschlüssel | Eine 40-stellige Base-64-kodierte Zeichenfolge, mit der Ihr [!DNL Google Cloud Storage]-Konto für Platform authentifiziert wird. |
 
-Informationen zum Einstieg finden Sie in [diesem Google Cloud-Dokument](https://cloud.google.com/docs/authentication).
+Weitere Informationen zu diesen Werten finden Sie im Handbuch [Google Cloud-Datenspeicherung HMAC-Schlüssel](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und des geheimen Zugriffsschlüssels finden Sie im Abschnitt [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 
