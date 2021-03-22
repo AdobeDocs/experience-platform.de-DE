@@ -5,15 +5,17 @@ type: Tutorial
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '530'
+source-wordcount: '535'
 ht-degree: 34%
 
 ---
 
 
 # Ziel einer Cloud-Datenspeicherung erstellen
+
+## Übersicht {#overview}
 
 Auf dieser Seite wird erläutert, wie Sie eine Verbindung zu Cloud-Datenspeicherung in Adobe Experience Platform herstellen können.
 
@@ -25,6 +27,8 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** Ihr bev
 >
 >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
+## Authentifizierungsschritt {#authentication}
+
 Wenn Sie im Schritt **[!UICONTROL Authentifizieren]** zuvor eine Verbindung zu Ihrem Cloud-Speicher-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Cloud-Speicher-Ziel einzurichten. Geben Sie die Anmeldedaten für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel **als Base64-kodierte Zeichenfolge geschrieben werden muss.**
 
 Weitere Informationen zu den Anmeldeinformationen im Schritt **Authentifizierung** finden Sie unter [Amazon S3](./amazon-s3.md)-Ziel, [[!DNL Amazon Kinesis]](./amazon-kinesis.md)-Ziel, [[!DNL Azure Event Hubs]](./azure-event-hubs.md)-Ziel und [SFTP](./sftp.md)-Ziel.
@@ -34,6 +38,8 @@ Weitere Informationen zu den Anmeldeinformationen im Schritt **Authentifizierung
 >Plattform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen an Ihrem Speicherort für die Cloud-Datenspeicherung eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldeinformationen abschließen.
 
 ![Mit dem Cloud-Speicher-Ziel verbinden – Authentifizierungsschritt](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+
+## Setup-Schritt {#setup}
 
 Geben Sie im Schritt **[!UICONTROL Setup]** einen **[!UICONTROL Name]** und einen **[!UICONTROL description]** für die Aktivierung ein.
 
