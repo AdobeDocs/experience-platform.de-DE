@@ -3,15 +3,17 @@ keywords: SFTP;SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: 4f0047e7ac4c83e3e17ea0a077bbeb09c86d1db6
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 7%
+source-wordcount: '232'
+ht-degree: 8%
 
 ---
 
 
 # SFTP-Verbindung
+
+## Übersicht {#overview}
 
 Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Adobe Experience Platform zu exportieren.
 
