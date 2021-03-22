@@ -3,7 +3,7 @@ keywords: Azurblauch;Blob-Ziel;s3;Azzurblende-Ziel
 title: Azurblauch-Verbindung
 description: Erstellen Sie eine Live-Ausgangs-Verbindung mit Ihrer Blue Blob-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: 6d1960be886d12475603aeb79fe6283a1fd3030e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '602'
 ht-degree: 7%
@@ -26,7 +26,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Wenn Sie bereits über ein gültiges Blob-Ziel verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial [Aktivieren von Segmenten in Ihr Ziel](../../ui/activate-destinations.md) fortfahren.
 
-### Unterstützte Dateiformate
+## Unterstützte Dateiformate {#file-formats}
 
 [!DNL Experience Platform] unterstützt das folgende Dateiformat, in das exportiert werden soll  [!DNL Blob]:
 
@@ -48,7 +48,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Cloud-Datenspeicherung]** **[!UICO
 
 Die Seite **[!UICONTROL Verbindung mit der Azurblauch-Datenspeicherung]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
-### Neues Konto {#new-account}
+## Neues Konto {#new-account}
 
 Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im eingeblendeten Eingabebild die Verbindungszeichenfolge ein. Die Verbindungszeichenfolge ist erforderlich, um auf Daten in Ihrer Blob-Datenspeicherung zuzugreifen. Die [!DNL Blob]-Verbindungszeichenfolgen-Beginn mit: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`.
 
@@ -58,7 +58,7 @@ Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, 
 
 ![Neues Konto](../../assets/catalog/cloud-storage/blob/new.png)
 
-### Vorhandenes Konto
+## Vorhandenes Konto {#existing-account}
 
 Um ein vorhandenes Konto zu verbinden, wählen Sie das [!DNL Blob]-Konto, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **Weiter**, um fortzufahren.
 
