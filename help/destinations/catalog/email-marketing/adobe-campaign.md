@@ -3,7 +3,7 @@ keywords: E-Mail;E-Mail;E-Mail-Ziele;Adobe-Kampagne;Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 translation-type: tm+mt
-source-git-commit: b6e795d33b5590001a3270ea42995fdbad28dd88
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 26%
@@ -32,7 +32,6 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** Adobe C
 ![Verbindung mit Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 Wählen Sie im Schritt **[!UICONTROL Account]** des Arbeitsablaufs für das Verbinden von Zielen **[!UICONTROL Verbindungstyp]** für den Speicherort Ihrer Datenspeicherung aus. Adobe Campaign: Sie können zwischen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP mit Kennwort]**, **[!UICONTROL SFTP mit SSH-Schlüssel]** und **[!UICONTROL Blaue Blase]** wählen. Die bevorzugte Methode zum Senden von Daten an Adobe Campaign ist [!DNL Amazon S3] oder [!DNL Azure Blob]. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
-
 
 
 ![Assistent zum Einrichten von Campaign](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
