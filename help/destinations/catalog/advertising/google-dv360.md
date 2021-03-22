@@ -3,15 +3,17 @@ keywords: DoubleClick Bid Manager;DoubleClick Angebotsmanager;DoubleClick;Displa
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '789'
 ht-degree: 39%
 
 ---
 
 
 # [!DNL Google Display & Video 360] connection
+
+## Übersicht {#overview}
 
 [!DNL Display & Video 360], früher als bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.[!DNL DoubleClick Bid Manager]
 
