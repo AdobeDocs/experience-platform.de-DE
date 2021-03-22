@@ -1,17 +1,19 @@
 ---
-keywords: E-Mail;E-Mail;E-Mail-Ziele;oracle-Antwortziel
+keywords: E-Mail;E-Mail;E-Mail;E-Mail-Ziele;Ziel der oracle-Antwort
 title: Oracle Responsys-Verbindung
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '609'
 ht-degree: 47%
 
 ---
 
 
 # [!DNL Oracle Responsys] connection
+
+## Übersicht {#overview}
 
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/)[!DNL Oracle] ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 
