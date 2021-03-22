@@ -4,7 +4,7 @@ title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Arten und Kategorien von Destinationen in Adobe Experience Platform.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 20%
@@ -22,37 +22,37 @@ In Adobe Experience Platform unterscheiden wir zwischen zwei Zieltypen - Verbind
 
 ![Zieltypen](./assets/destination-types/types-of-destinations.png)
 
-### Verbindungen {#connections}
+## Verbindungen {#connections}
 
 **[!UICONTROL Profil]** Export- und  **[!UICONTROL Segmentexport-]** Ziele in Adobe Experience Platform erfassen Ereignis-Daten, kombinieren diese mit anderen Datenquellen, um das  [Echtzeit-Kundendienstmodell](../profile/home.md) zu bilden, wenden Segmentierung an und exportieren Segmente und qualifizierte Profil in Ziele.
 
-#### Profilexportziele
+## Profilexportziele
 
 Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Ziel [Amazon S3 Cloud-Datenspeicherung-Ziel](./catalog/cloud-storage/amazon-s3.md) ist ein Beispiel dafür, wo Sie Dateien mit Profil-Exporten hinterlegen können.
 
-#### Segmentexportziele
+## Segmentexportziele
 
 Segmentexportziele senden die Profil und Segmente, für die sie qualifiziert sind, an Zielplattformen. Diese Ziele nutzen Segmentkennungen oder Anwenderkennungen. Werbeziele wie [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) oder [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) sind Beispiele für diese Zieltypen.
 
-#### Export- und Segmentziele - Videoübersicht
+## Export- und Segmentziele - Videoübersicht
 
 Das folgende Video führt Sie durch die Besonderheiten der beiden Zieltypen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-### Erweiterungen {#extensions}
+## Erweiterungen {#extensions}
 
-Die Plattform nutzt die Leistungsfähigkeit und Flexibilität von Adobe Experience Platform Launch, um Plattformstarterweiterungen in die Plattform-Oberfläche aufzunehmen.
+Die Plattform nutzt die Leistungsfähigkeit und Flexibilität von Adobe Experience Platform Launch, um Platform launch-Erweiterungen in die Plattform-Oberfläche aufzunehmen.
 
 >[!TIP]
 >
 >Detaillierte Informationen zu Adobe Experience Platform Launch-Erweiterungen, einschließlich Anwendungsfällen und Informationen zum Auffinden in der Oberfläche, finden Sie unter [Übersicht über Adobe Experience Platform Launch-Erweiterungen](./catalog/launch-extensions/overview.md).
 
-Plattformstarterweiterungen leiten Rohdaten an verschiedene Ereignis weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](./catalog/personalization/gainsight.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](./catalog/voice/confirmit-digital-feedback.md).
+platform launch Extensions leiten unformatierte Ereignis-Daten an verschiedene Zieltypen weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](./catalog/personalization/gainsight.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](./catalog/voice/confirmit-digital-feedback.md).
 
 ![Experience Platform Launch-Erweiterungen im Vergleich zu anderen Zielen](./assets/common/launch-and-other-destinations.png)
 
-### Verwenden von Verbindungen und Erweiterungen
+## Verwenden von Verbindungen und Erweiterungen
 
 Als Vermarkter können Sie eine Kombination aus Verbindungen und Erweiterungen verwenden, um Ihre Anwendungsfälle zu bearbeiten.
 
