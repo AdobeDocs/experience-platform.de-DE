@@ -5,7 +5,7 @@ title: Übersicht über den Source Connector für die AEM File Datenspeicherung
 topic: Übersicht
 description: Erfahren Sie, wie Sie die Datenspeicherung von Blauen Dateien mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 2%
@@ -37,7 +37,7 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 
 - Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
 - Ordner- und Dateinamen können nicht mit einem Schrägstrich (`/`) enden. Sofern vorhanden, wird sie automatisch entfernt.
-- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! ' ( ) ; @ & = + $ , % # [ ]`
 - Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
 - Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.) ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundlegende Regeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
