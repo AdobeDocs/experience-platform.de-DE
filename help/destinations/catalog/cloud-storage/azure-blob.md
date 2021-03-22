@@ -3,15 +3,17 @@ keywords: Azurblauch;Blob-Ziel;s3;Azzurblende-Ziel
 title: Azurblauch-Verbindung
 description: Erstellen Sie eine Live-Ausgangs-Verbindung mit Ihrer Blue Blob-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 7%
+source-wordcount: '603'
+ht-degree: 8%
 
 ---
 
 
 # [!DNL Azure Blob] connection
+
+## Übersicht {#overview}
 
 [!DNL Azure Blob] (im Folgenden &quot;[!DNL Blob]&quot; genannt) ist die Objektlösung von Microsoft für die Cloud. Dieses Lernprogramm enthält Schritte zum Erstellen eines [!DNL Blob]-Ziels mithilfe der [!DNL Platform]-Benutzeroberfläche.
 
