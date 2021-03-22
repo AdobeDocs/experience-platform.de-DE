@@ -3,9 +3,9 @@ keywords: 'Werbung; bing; '
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie Retargeting und Audience zielgerichteter digitaler Kampagnen über Microsoft Display Advertising durchführen.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '533'
 ht-degree: 5%
 
 ---
@@ -19,25 +19,25 @@ Mit dem [!DNL Microsoft Bing]-Ziel können Sie Profil-Daten an [!DNL Microsoft D
 
 Um Profil-Daten an [!DNL Microsoft Bing] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
-## Zielspezifikationen {#destination-specs}
-
-Beachten Sie die folgenden Details, die für das [!DNL Microsoft Bing]-Ziel spezifisch sind:
-
-* Sie können die folgenden [Identitäten](../../../identity-service/namespaces.md) an [!DNL Microsoft Bing]-Ziele senden: [!DNL Microsoft ID].
-
->[!IMPORTANT]
->
->Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in der Vergangenheit im Experience Cloud-ID-Dienst (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Microsoft Bing]-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Plattform übertragen.
-
 ## Anwendungsbeispiele {#use-cases}
 
 Als Marketingspezialist möchte ich in der Lage sein, von [!DNL Microsoft Advertising IDs] erstellte Segmente für die Zielgruppe von Benutzern über Display-Werbung in [!DNL Microsoft Advertising]-Kanälen zu verwenden.
+
+## Unterstützte Identitäten {#supported-identities}
+
+[!DNL The Trade Desk] unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben sind. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
+
+| Zielgruppe | Beschreibung |
+|---|---|
+| MAID | Microsoft Advertising ID |
 
 ## Exporttyp {#export-type}
 
 **[!DNL Segment Export]** - Sie exportieren alle Segmentmitglieder (Audiencen) in das  [!DNL Microsoft Bing] Ziel.
 
 ## Voraussetzungen {#prerequisites}
+
+Wenn Sie Ihr erstes Ziel mit [!DNL Microsoft Bing] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in der Vergangenheit im Experience Cloud-ID-Dienst (mit Adobe Audience Manager oder anderen Anwendungen) nicht aktiviert haben, wenden Sie sich bitte an Adobe Consulting oder den Kundendienst, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Microsoft Bing]-Integrationen in Audience Manager eingerichtet haben, werden die ID-Synchronisierungen, die Sie eingerichtet haben, auf Plattform übertragen.
 
 Beim Konfigurieren des Ziels müssen Sie die folgenden Informationen angeben:
 
@@ -49,13 +49,13 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** [!DNL M
 
 ![Microsoft Bing-Ziel konfigurieren](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
->
->![Microsoft Bing-Ziel aktivieren](../../assets/catalog/advertising/bing/activate.png)
+Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-Im Schritt [!UICONTROL Authentifizierung] müssen Sie die Details der Zielverbindung eingeben:
+![Microsoft Bing-Ziel aktivieren](../../assets/catalog/advertising/bing/activate.png)
+
+## Authentifizierungsschritt {#authentication}
+
+Im Schritt **[!UICONTROL Authentifizierung]** müssen Sie die Details der Zielverbindung eingeben:
 
 * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, mit der Sie dieses Ziel in Zukunft identifizieren können.
