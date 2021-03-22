@@ -3,9 +3,9 @@ keywords: Azurblauer Ereignis Hub Destination;Azurer Ereignis Hub;Azurabend
 title: Beta-Ereignis-Hubs-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '542'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,14 @@ Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung-Zie
 
 Geben Sie für [!DNL Azure Event Hubs]-Ziele im Arbeitsablauf zum Erstellen von Zielen die folgenden Informationen ein:
 
-### Im Authentifizierungsschritt {#authentication-step}
+## Authentifizierungsschritt {#authentication-step}
 
 * **[!UICONTROL SAS-Key-]** Namen und  **[!UICONTROL SAS-Schlüssel]**: Geben Sie den Namen und die Taste Ihres SAS-Schlüssels ein. Erfahren Sie mehr über die Authentifizierung für [!DNL Azure Event Hubs] mit SAS-Schlüsseln in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namensraum]**: Füllen Sie Ihren  [!DNL Azure Event Hubs] Namensraum aus. Erfahren Sie mehr über die [!DNL Azure Event Hubs]-Namensraum in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ![Im Authentifizierungsschritt erforderliche Eingabe](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
-### Im Setup-Schritt {#setup-step}
+## Setup-Schritt {#setup-step}
 
 * **[!UICONTROL Name]**: Geben Sie einen Namen für die Verbindung ein  [!DNL Azure Event Hubs].
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung der Verbindung ein.  Beispiele: &quot;Premium-Tier-Kunden&quot;, &quot;Männer, die am Kitesurfen interessiert sind&quot;.
