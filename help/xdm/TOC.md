@@ -6,10 +6,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: b99af98c99a75863ed8e8408841d93aa17d61ae0
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 57%
+source-wordcount: '260'
+ht-degree: 52%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 57%
    * [Bewährte Verfahren für die Datenmodellierung](schema/best-practices.md)
    * [XDM-Feldtypeinschränkungen](schema/field-constraints.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
+   * Branchendatenmodelle {#industries}
+      * [Übersicht](./schema/industries/overview.md)
+      * [Einzelhandelsdatenmodell ERD](./schema/industries/retail.md)
+      * [Datenmodell für Finanzdienstleistungen ERD](./schema/industries/financial.md)
+      * [Reise- und Gastfreundschaftsdatenmodell ERD](./schema/industries/travel-hospitality.md)
+      * [Telekommunikationsdatenmodell ERD](./schema/industries/telecom.md)
 * Klassen {#classes}
    * [XDM Individuelles Profil](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
