@@ -3,9 +3,9 @@ keywords: Luftschiffsattribute;Luftschiffsziel
 title: Verbindung zu Luftverkehrsattributen
 description: Übermitteln Sie die Daten zur Audience der Adobe nahtlos an Airship als Audiencen-Attribute für das Targeting innerhalb von Airship.
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1202'
 ht-degree: 11%
 
 ---
@@ -39,13 +39,13 @@ Bevor Sie Ihre Audiencen an [!DNL Airship] senden können, müssen Sie Folgendes
 >
 >Erstellen Sie ein [!DNL Airship]-Konto über [diesen Anmeldelink](https://go.airship.eu/accounts/register/plan/starter/), falls noch nicht geschehen.
 
-### Attribute {#enable-attributes} aktivieren
+## Attribute {#enable-attributes} aktivieren
 
 Adobe Experience Platform-Profil-Attribute ähneln [!DNL Airship]-Attributen und können in Platform mithilfe des unten auf dieser Seite dargestellten Zuordnungswerkzeugs einfach zugeordnet werden.
 
 [!DNL Airship] Projekte haben mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere Informationen finden Sie unter [Attribute einrichten und verwalten](https://docs.airship.com/tutorials/audience/attributes/).
 
-### Interaktives Token {#bearer-token}
+## Überbringungstoken {#bearer-token} generieren
 
 Gehen Sie zu **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs und Integrationen]** im [Airship-Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Tokens]** im Menü links.
 
