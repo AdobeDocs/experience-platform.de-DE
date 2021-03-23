@@ -1,13 +1,13 @@
 ---
 keywords: Ziele;Ziel;Ziel;Detailseite der Ziele;Detailseite der Ziele
 title: Ansichten-Zieldetails
-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
-seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails, wie den Zielnamen, die Kennung, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
+description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
+seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 15%
+source-wordcount: '742'
+ht-degree: 5%
 
 ---
 
@@ -30,7 +30,7 @@ Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeig
 
 ![](../assets/ui/details-page/details.png)
 
-Darüber hinaus können Sie auf der Registerkarte &quot;Durchsuchen&quot;den ausgewählten Datenfluss löschen, indem Sie das Symbol ![Papierkorb](../assets/ui/details-page/trash-icon.png) auswählen. Alle Segmente, die für ein Ziel aktiviert wurden, werden vor dem Löschen des Datenflusses nicht zugeordnet.
+Darüber hinaus können Sie auf der Registerkarte &quot;Durchsuchen&quot;den ausgewählten Datenfluss löschen, indem Sie das Symbol ![Papierkorb](../assets/ui/details-page/trash-icon.png) auswählen. Alle Segmente, die für Ziele aktiviert wurden, werden vor dem Löschen des Datenflusses nicht zugeordnet.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
