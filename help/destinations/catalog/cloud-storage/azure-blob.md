@@ -3,9 +3,9 @@ keywords: Azurblauch;Blob-Ziel;s3;Azzurblende-Ziel
 title: Azurblauch-Verbindung
 description: Erstellen Sie eine Live-Ausgangs-Verbindung mit Ihrer Blue Blob-Datenspeicherung, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform zu exportieren.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '600'
 ht-degree: 8%
 
 ---
@@ -56,7 +56,7 @@ Wenn Sie neue Anmeldeinformationen verwenden, wählen Sie **[!UICONTROL Neues Ko
 
 Weitere Informationen zum Konfigurieren der [!DNL Blob]-Verbindungszeichenfolge finden Sie unter [Verbindungszeichenfolge für ein &quot;Blaue Datenspeicherung&quot;-Konto](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in der Microsoft-Dokumentation.
 
-Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel **als Base64-kodierte Zeichenfolge geschrieben werden muss.**
+Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierte Zeichenfolge geschrieben werden.
 
 ![Neues Konto](../../assets/catalog/cloud-storage/blob/new.png)
 
