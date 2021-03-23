@@ -3,10 +3,10 @@ keywords: E-Mail;E-Mail;E-Mail-Ziele;Adobe-Kampagne;Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 26%
+source-wordcount: '827'
+ht-degree: 19%
 
 ---
 
@@ -38,12 +38,12 @@ Wählen Sie im Schritt **[!UICONTROL Account]** des Arbeitsablaufs für das Verb
 
 ![Assistent zum Einrichten von Campaign](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- Bei Verbindungen des Typs **[!UICONTROL Amazon S3]** müssen Sie die Zugriffsschlüsselkennung und den geheimen Zugriffsschlüssel angeben.
-- Bei Verbindungen des Typs **[!UICONTROL SFTP mit Passwort]** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
-- Bei Verbindungen des Typs **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
+- Für Verbindungen mit dem Amazon S3 ]**müssen Sie die [!UICONTROL Zugriffsschlüssel-ID] und den [!UICONTROL Schlüssel für geheimen Zugriff] angeben.**[!UICONTROL 
+- Bei Verbindungen mit **[!UICONTROL SFTP mit Kennwort]** müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername] und [!UICONTROL Kennwort] angeben.
+- Bei Verbindungen mit **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername] und [!UICONTROL SSH-Schlüssel] angeben.
 - Für Verbindungen mit **[!UICONTROL Azurblauch]** müssen Sie eine Verbindungszeichenfolge angeben.
 
-Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um unter dem Abschnitt **[!UICONTROL Schlüssel]** eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien hinzuzufügen. Beachten Sie, dass dieser öffentliche Schlüssel **als Base64-kodierte Zeichenfolge geschrieben werden muss.**
+Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um unter dem Abschnitt **[!UICONTROL Schlüssel]** eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierte Zeichenfolge geschrieben werden.
 
 ![Campaign-Informationen ausfüllen](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -54,7 +54,7 @@ Geben Sie unter **[!UICONTROL Kontoauthentifizierung]** die relevanten Informati
 - **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad an, an dem die Exportdaten als CSV- oder tabulatorgetrennte Datenspeicherung hinterlegt  [!DNL Platform] werden sollen.
 - **[!UICONTROL Container]**:  *Für Blob-Verbindungen*. Der Container, in dem sich der Ordnerpfad Blob befindet.
 - **[!UICONTROL Dateiformat]**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
-- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md). Siehe auch [Adobe-definierte Marketingaktionen](../../../data-governance/policies/overview.md#core-actions) im selben Dokument.
+- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
 ![Allgemeine Informationen zu Campaign](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -66,7 +66,7 @@ Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile
 
 ## Zielattribute {#destination-attributes}
 
-Beim [Aktivieren von Segmenten](../../ui/activate-destinations.md) für das Adobe Campaign-Ziel empfehlen wir, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Wählen Sie, welche Schema-Felder als Zielattribute in Ihren exportierten Dateien](./overview.md#destination-attributes) in der Dokumentation zu den E-Mail-Marketing-Zielen verwendet werden sollen.
+Wenn Sie [segmente](../../ui/activate-destinations.md) zum Adobe Campaign-Ziel aktivieren, empfiehlt Adobe, im Schema [Vereinigung](../../../profile/home.md#profile-fragments-and-union-schemas) einen eindeutigen Bezeichner auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Wählen Sie, welche Schema-Felder als Zielattribute in den exportierten Dateien verwendet werden sollen](./overview.md#destination-attributes).
 
 ## Exportierte Daten {#exported-data}
 
