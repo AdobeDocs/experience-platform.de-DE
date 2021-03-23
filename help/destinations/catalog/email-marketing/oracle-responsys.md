@@ -3,10 +3,10 @@ keywords: E-Mail;E-Mail;E-Mail;E-Mail-Ziele;Ziel der oracle-Antwort
 title: Oracle Responsys-Verbindung
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 47%
+source-wordcount: '572'
+ht-degree: 31%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 47%
 
 ## Übersicht {#overview}
 
-[Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/)[!DNL Oracle] ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/)[!DNL Oracle] ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
 
 Um Segmentdaten an [!DNL Oracle Responsys] zu senden, müssen Sie zunächst [eine Verbindung zum Ziel](#connect-destination) in Adobe Experience Platform herstellen und dann [einen Datenimport](#import-data-into-responsys) von Ihrem Speicherort in [!DNL Oracle Responsys] einrichten.
 
@@ -29,21 +29,33 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** [!DNL O
 
 ![Mit Responsys verbinden](../../assets/catalog/email-marketing/oracle-responsys/catalog.png)
 
-Wenn Sie im Schritt **[!UICONTROL Authentifizieren]** zuvor eine Verbindung zu Ihrem Cloud-Speicher-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und eine Ihrer bestehenden Verbindungen aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung einzurichten. Geben Sie die Anmeldedaten für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Für [!DNL Oracle Responsys] können Sie zwischen **[!UICONTROL SFTP mit Kennwort]** und **[!UICONTROL SFTP mit SSH-Schlüssel]** wählen. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+Wenn Sie im Schritt **[!UICONTROL Konto]** bereits eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie eine Ihrer bestehenden Verbindungen aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung einzurichten. Geben Sie die Anmeldedaten für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Für [!DNL Oracle Responsys] können Sie zwischen **[!UICONTROL SFTP mit Kennwort]** und **[!UICONTROL SFTP mit SSH-Schlüssel]** wählen.
 
-Bei Verbindungen des Typs **[!UICONTROL SFTP mit Passwort]** müssen Sie Domäne, Port, Benutzernamen und Kennwort angeben.
+![Konto &quot;Antworten verbinden&quot;](../../assets/catalog/email-marketing/oracle-responsys/connection-type.png)
 
-Bei Verbindungen des Typs **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie Domäne, Port, Benutzernamen und SSH-Schlüssel angeben.
+Füllen Sie die folgenden Informationen je nach Verbindungstyp aus und wählen Sie **[!UICONTROL Konfigurieren]**.
+
+- Bei Verbindungen mit **[!UICONTROL SFTP mit Kennwort]** müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername] und [!UICONTROL Kennwort] angeben.
+- Bei Verbindungen mit **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername] und [!UICONTROL SSH-Schlüssel] angeben.
+
+Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um unter dem Abschnitt **[!UICONTROL Schlüssel]** eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierte Zeichenfolge geschrieben werden.
 
 ![Responsys-Informationen ausfüllen](../../assets/catalog/email-marketing/oracle-responsys/account-info.png)
 
-Geben Sie im **[!UICONTROL Setup-Schritt]** die entsprechenden Informationen für Ihr Ziel ein (wie folgt):
+Geben Sie im Schritt **[!UICONTROL Authentifizierung]** die relevanten Informationen für Ihr Ziel wie folgt ein:
 - **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
 - **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-- **[!UICONTROL Behältername]**: Ihr Amazon S3 Bucket, in dem die Plattform den Datenexport einlagert. Ihre Eingabe muss zwischen 3 und 63 Zeichen lang sein. Muss mit einem Buchstaben oder einer Nummer beginnen und enden. Muss nur Kleinbuchstaben, Zahlen oder Bindestriche (-) enthalten. Darf nicht als IP-Adresse formatiert werden (z. B. 192.100.1.1).
 - **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad in Ihrer Datenspeicherung an, in dem die Plattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegt.
 - **[!UICONTROL Dateiformat]**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
-- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+
+<!--
+
+Commenting out Amazon S3 bucket part for now until support is clarified
+
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+
+-->
 
 ![Responsys-Basisinformationen](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
@@ -55,7 +67,7 @@ Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile
 
 ## Zielattribute {#destination-attributes}
 
-Wenn Sie [segmente](../../ui/activate-destinations.md) in das [!DNL Oracle Responsys]-Ziel aktivieren, empfehlen wir Ihnen, einen eindeutigen Bezeichner aus Ihrem [Vereinigung-Schema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weiterführende Informationen finden Sie unter [Auswählen, welche Schemafelder in Ihren exportierten Dateien als Zielattribute verwendet werden sollen](./overview.md#destination-attributes) (in E-Mail-Marketing-Zielen).
+Wenn Sie [segmente](../../ui/activate-destinations.md) in das [!DNL Oracle Responsys]-Ziel aktivieren, empfiehlt Adobe, im [Vereinigung-Schema](../../../profile/home.md#profile-fragments-and-union-schemas) einen eindeutigen Bezeichner auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Wählen Sie, welche Schema-Felder als Zielattribute in den exportierten Dateien verwendet werden sollen](./overview.md#destination-attributes).
 
 ## Exportierte Daten {#exported-data}
 
@@ -63,4 +75,4 @@ Für [!DNL Oracle Responsys]-Ziele erstellt Platform eine tabulatorgetrennte `.t
 
 ## Einrichten des Datenimports in [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Nachdem Sie die Plattform mit Ihrer [!DNL Amazon S3]- oder SFTP-Datenspeicherung verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Oracle Responsys] einrichten. Weitere Informationen dazu finden Sie unter [Importieren von Kontakten oder Konten](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center].
+Nachdem Sie [!DNL Platform] mit Ihrer SFTP-Datenspeicherung verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Oracle Responsys] einrichten. Weitere Informationen dazu finden Sie unter [Importieren von Kontakten oder Konten](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center].
