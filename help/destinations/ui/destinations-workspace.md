@@ -4,10 +4,10 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
 workflow-type: tm+mt
-source-wordcount: '1016'
-ht-degree: 34%
+source-wordcount: '1012'
+ht-degree: 31%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 34%
 
 Wählen Sie in Adobe Experience Platform **[!UICONTROL Ziele]** aus der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Ziele] zuzugreifen.
 
-Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten] und [!UICONTROL Systemansicht]. Diese werden in den folgenden Abschnitten beschrieben.
+Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Abschnitten: [!UICONTROL Katalog], [!UICONTROL Durchsuchen], [!UICONTROL Konten] und [!UICONTROL Ansicht des Systems], wie in den folgenden Abschnitten beschrieben.
 
 ![Zielüberblick](../assets/ui/workspace/destinations-overview.png)
 
@@ -26,7 +26,7 @@ Der Arbeitsbereich [!UICONTROL Ziele] besteht aus vier Bereichen: [!UICONTROL Ka
 
 Auf der Registerkarte **[!UICONTROL Katalog]** wird eine Liste aller in der Plattform verfügbaren Ziele angezeigt, an die Sie Daten senden können.
 
-Die Benutzeroberfläche &quot;Plattform&quot;bietet auf der Katalogseite &quot;Ziele&quot;eine Reihe von Such- und Filteroptionen:
+Die Benutzeroberfläche &quot;Plattform&quot;bietet verschiedene Such- und Filteroptionen auf der Katalogseite &quot;Ziele&quot;:
 
 * Verwenden Sie die Suchfunktion auf der Seite, um ein bestimmtes Ziel zu finden.
 * Filtern Sie Ziele mithilfe des Steuerelements [!UICONTROL Kategorien].
@@ -35,7 +35,7 @@ Die Benutzeroberfläche &quot;Plattform&quot;bietet auf der Katalogseite &quot;Z
 
 ![Filtern und Suchdemo von Zielen](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!UICONTROL Activate]**-Steuerelement und ein sekundäres Steuerelement, das weitere Optionen aufruft. Diese sind alle nachstehend beschrieben:
+Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!UICONTROL Activate]**-Steuerelement und ein sekundäres Steuerelement, das weitere Optionen aufruft. Diese Kontrollen werden nachfolgend beschrieben:
 
 | Kontrolle | Beschreibung |
 ---------|----------
@@ -47,7 +47,7 @@ Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!U
 
 ![Steuerelemente auf der Zielkarte](../assets/ui/workspace/destination-card-options.png)
 
-Wählen Sie eine Zielkarte im Katalog aus, um die rechte Leiste zu öffnen.  Hier sehen Sie eine Beschreibung des Ziels. Die rechte Leiste bietet dieselben in der obigen Tabelle beschriebenen Steuerelemente sowie eine Beschreibung des Ziels und eine Angabe der Kategorie und des Typs des Ziels.
+Wählen Sie eine Zielkarte im Katalog aus, um die rechte Leiste zu öffnen. Hier sehen Sie eine Beschreibung des Ziels. Die rechte Leiste bietet dieselben in der obigen Tabelle beschriebenen Steuerelemente sowie eine Beschreibung des Ziels und eine Angabe der Kategorie und des Typs des Ziels.
 
 ![Optionen im Zielkatalog](../assets/ui/workspace/destination-right-rail.png)
 
@@ -98,14 +98,14 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 | Element | Beschreibung |
 ---------|----------
 | Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerelemente: [!UICONTROL Aktivieren Sie ] und [!UICONTROL Löschen Sie das Ziel]. |
-| Letzter Flusslaufstatus | Der Status des letzten Datenflusses wird ausgeführt. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
-| Letzter Flusslaufdatum | Uhrzeit und Datum der letzten Ausführung des Datenflusses. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
+| [!UICONTROL Letzter Flusslaufstatus] | Der Status des letzten Datenflusses wird ausgeführt. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
+| [!UICONTROL Letzter Flusslaufdatum] | Zeit und Datum, an dem der letzte Datenaflow ausgeführt wurde. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
 | [!UICONTROL Ziel] | Die Zielplattform, die Sie für Ihren Aktivierungsfluss ausgewählt haben. |
 | [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Für E-Mail-Marketingziele: Kann S3, FTP oder [!DNL Azure Blob] sein.</li><li>Für Werbeziele in Echtzeit: Server-zu-Server.</li><li>Für Streaming-Ziele: Kann [!DNL Azure Event Hubs] oder [!DNL Amazon Kinesis] sein.</li></ul> |
 | [!UICONTROL Benutzername] | Die Kontoanmeldedaten, die Sie für den Zielfluss ausgewählt haben. |
 | [!UICONTROL Aktivierungen] | Gibt die Anzahl der Segmente an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Segmente zu erfahren. Weitere Informationen zu den aktivierten Aktivierungen finden Sie auf der Seite mit den Zieldetails unter [Daten zur ](/help/destinations/ui/destination-details-page.md#activation-data). |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. |
-| [!UICONTROL Status] | `Active` oder `Inactive`. Gibt an, ob für dieses Ziel derzeit Daten aktiviert sind. Informationen zum Bearbeiten des Status finden Sie unter [Aktivierung deaktivieren](./activate-destinations.md#disable-activation). |
+| [!UICONTROL Status] | `Active` oder `Inactive`. Gibt an, ob Daten für dieses Ziel aktiviert werden. Informationen zum Bearbeiten des Status finden Sie unter [Aktivierung deaktivieren](./activate-destinations.md#disable-activation). |
 
 Klicken Sie auf eine Zielzeile, um weitere Informationen zum Ziel in der rechten Leiste anzuzeigen.
 
