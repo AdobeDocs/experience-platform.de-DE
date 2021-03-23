@@ -4,7 +4,7 @@ title: Social-Netzwerkziel erstellen
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten in Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
 workflow-type: tm+mt
 source-wordcount: '465'
 ht-degree: 52%
