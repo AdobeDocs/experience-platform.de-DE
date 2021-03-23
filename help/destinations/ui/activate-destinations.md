@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie den Zielen Segmente zuordnen. Gehen Sie dazu wie folgt vor.
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 0992b223a96b77446a9f9c2823f5195541dd93fa
 workflow-type: tm+mt
-source-wordcount: '2152'
+source-wordcount: '2150'
 ht-degree: 15%
 
 ---
@@ -102,7 +102,7 @@ Auswählen von Quellfeldern:
 
 Auswählen von Zielgruppen:
 
-* Wählen Sie den Namensraum `Email_LC_SHA256` als Zielgruppe-ID aus, wenn Ihre Quellordner `Email` oder `Email_LC_SHA256` sind.
+* Wählen Sie den Namensraum `Email_LC_SHA256` als Zielgruppe-ID aus, wenn Ihre Quell-Namensraum entweder `Email` oder `Email_LC_SHA256` sind.
 * Wählen Sie den Namensraum `Phone_SHA256_E.164` als Zielgruppe-ID aus, wenn Ihre Quell-Namensraum entweder `PHONE_E.164` oder `Phone_SHA256_E.164` sind.
 * Wählen Sie die Namensraum `IDFA` oder `GAID` als Zielgruppe-ID aus, wenn die Namensraum `IDFA` oder `GAID` sind.
 * Wählen Sie den Namensraum `User_ID` als Zielgruppe-ID aus, wenn Ihr Quell-Namensraum ein benutzerdefinierter ist.
@@ -143,7 +143,7 @@ Ein Dialogfeld mit Optionen zum Erstellen des Segmentplans wird angezeigt.
 
 Die Standarddateinamen bestehen aus dem Zielnamen, der Segment-ID und einer Datums- und Zeitanzeige. Sie können beispielsweise die Namen der exportierten Dateien bearbeiten, um zwischen verschiedenen Kampagnen zu unterscheiden, oder um die Datenexportzeit an die Dateien anhängen zu lassen.
 
-Wählen Sie das Stiftsymbol aus, um ein modales Fenster zu öffnen und die Dateinamen zu bearbeiten. Beachten Sie, dass Dateinamen auf 255 Zeichen begrenzt sind.
+Wählen Sie das Stiftsymbol aus, um ein modales Fenster zu öffnen und die Dateinamen zu bearbeiten. Dateinamen sind auf 255 Zeichen begrenzt.
 
 ![Dateinamen konfigurieren](../assets/ui/activate-destinations/configure-name.png)
 
@@ -161,7 +161,7 @@ Wählen Sie **[!UICONTROL Änderungen anwenden]**, um Ihre Auswahl zu bestätige
 
 ![Dateinamenoptionen bearbeiten](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Nachdem Sie alle Segmente konfiguriert haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Nachdem Sie alle Segmente konfiguriert haben, wählen Sie **[!UICONTROL Weiter]**, um fortzufahren.
 
 ## **[!UICONTROL Segment-]** Zeitplanung  {#segment-schedule}
 
