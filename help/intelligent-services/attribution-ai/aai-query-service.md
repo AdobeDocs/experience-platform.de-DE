@@ -2,12 +2,12 @@
 keywords: Einblicke;Zuordnungsai;Zuordnungs-ai-Einblicke;AAI-Abfrage-Dienst;Zuordnungs-Abfragen;Zuordnungswerte
 solution: Intelligent Services, Experience Platform
 title: Analysieren von Zuordnungswerten mithilfe des Abfrage Service
-topic: Attribution AI queries
+topic: Attribution AI-Abfragen
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Abfrage Service Attribution AI-Ergebnisse analysieren können.
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Weitere Informationen zum Abfragen-Editor finden Sie im Benutzerhandbuch [Abfrag
 
 ## Abfrage-Vorlagen für die Analyse des Zuordnungswerts
 
-Die folgenden Abfragen können als Vorlage für verschiedene Score-Analysen verwendet werden. Sie müssen die Werte `_tenantId` und `your_score_output_dataset` durch die entsprechenden Werte in Ihrem bewerteten Schema ersetzen.
+Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analyse des Punktwerts verwendet werden. Sie müssen die Werte `_tenantId` und `your_score_output_dataset` durch die entsprechenden Werte in Ihrem bewerteten Schema ersetzen.
 
 >[!NOTE]
 >
@@ -106,7 +106,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Score-Analysen verw
         conversionName
 ```
 
-### Beispiele für Trend-Analysen
+### Beispiel für Trend-Analyse
 
 **Anzahl der Konversionen pro Tag**
 
@@ -129,7 +129,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Score-Analysen verw
     LIMIT 20
 ```
 
-### Beispiele für die Distribution-Analyse
+### Beispiel für die Distribution-Analyse
 
 **Anzahl der Touchpoints auf Konversionspfaden nach definiertem Typ (innerhalb eines Konvertierungsfensters)**
 
@@ -299,4 +299,58 @@ Rufen Sie die Verteilung für die Anzahl der verschiedenen Touchpoints auf einem
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### Beispiel zum Reduzieren und Explodieren von Schemas
+
+Diese Abfrage reduziert die Strukturspalte in mehrere Einzelspalten und explodiert Arrays in mehrere Zeilen. Auf diese Weise können Sie Zuordnungswerte in ein CSV-Format umwandeln. Die Ausgabe dieser Abfrage enthält eine Konvertierung und einen der Touchpoints, die dieser Konvertierung in jeder Zeile entsprechen.
+
+>[!TIP]
+>
+> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset` ersetzen. Die Variable `COLUMN_NAME` kann die Werte der optionalen Übergabe durch Spaltennamen (Berichte-Spalten) annehmen, die während der Konfiguration der Attribution AI-Instanz hinzugefügt wurden. Bitte überprüfen Sie Ihr Schema für die Bewertungsausgabe, um die `{COLUMN_NAME}`-Werte zu finden, die zum Abschluss dieser Abfrage erforderlich sind.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
