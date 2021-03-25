@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Durchsetzen der Datennutzungskonformität für Zielgruppensegmente
+title: Importieren und Verwenden externer Audiencen
+description: In diesem Lernprogramm erfahren Sie, wie Sie externe Audiencen mit Adobe Experience Platform verwenden.
 topic: Tutorial
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
 workflow-type: tm+mt
-source-wordcount: '640'
-ht-degree: 10%
+source-wordcount: '652'
+ht-degree: 9%
 
 ---
 
