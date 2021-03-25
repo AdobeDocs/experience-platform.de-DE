@@ -5,9 +5,9 @@ title: Übersicht über den Identitätsdienst
 topic: Übersicht
 description: Mit dem Adobe Experience Platform Identity Service erhalten Sie eine bessere Ansicht Ihrer Kunden und ihres Verhaltens, indem Sie Identitäten zwischen Geräten und Systemen überbrücken und so wirkungsvolle persönliche digitale Erlebnisse in Echtzeit bereitstellen.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb218fc0cca6fe74693e99747963058bd0dc962a
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1718'
 ht-degree: 70%
 
 ---
@@ -63,10 +63,6 @@ Ihre Kunden können mit Ihrer Marke über eine Kombination aus Online- und Offli
 [!DNL Experience Platform] löst diese Herausforderung mit zwei Konzepten: mit [Identitäts-Namespaces](#identity-namespaces) und [Identitätsdiagrammen](#identity-graphs).
 
 Das folgende Video soll Ihr Verständnis von Identitäten und Identitätsdiagrammen unterstützen. Im folgenden Video werden die drei Funktionen von Identity Collection, Identity Graphs und APIs behandelt. Es beschreibt auch, wie deterministische und probabilistische Algorithmen zum Erstellen von Diagrammen für die private Identität verwendet werden, und beschreibt die Rolle von Diagrammen für die private Identität, von Adobe Experience Platform Identity Service Co-Op-Diagrammen und von Grafiken von Drittanbietern.
-
->[!IMPORTANT]
->
-> Probabilistische Privatgraphen sind noch in der Entwicklung und werden zu einem späteren Zeitpunkt veröffentlicht.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
