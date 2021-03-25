@@ -5,9 +5,9 @@ title: Erlebnis-Datenmodell (XDM)-Feldwörterbuch
 topic: Übersichten
 description: Das Experience-Datenmodell (XDM) definiert einen Satz von Standardfeldern, die beim Erstellen von Adobe Experience Platform-Schemas verwendet werden können. Die Verwendung dieser Felder sichert ein konsistentes Verhalten aller Platform-Dienste, da alle Dienste, die XDM verwenden, die spezifischen Definitionen dieser Felder explizit verstehen.
 translation-type: tm+mt
-source-git-commit: 027f3335b406ea526a07e1b3894e4d50c850d5d6
+source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
 workflow-type: tm+mt
-source-wordcount: '25236'
+source-wordcount: '25239'
 ht-degree: 98%
 
 ---
@@ -530,3 +530,5 @@ Sie können die Suchfunktion in [!DNL Schema Editor] verwenden, um Details zu di
 | xdm:workPhone | Geschäftliches Telefon | Geschäftliche Telefonnummer. | object |  | object | https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details, https://ns.adobe.com/xdm/context/profile-work-details |
 | xdm:xid | Erlebnis-ID | Falls vorhanden, stellt dieser Wert eine Namespace-übergreifenden Kennung dar, die über alle Kennungen in allen Namespaces eindeutig ist. | string |  | string | https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-profile-segmentation, https://ns.adobe.com/experience/profile/profile-all, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/experience/target/activity/activityevent/segmentevent, https://ns.adobe.com/experience/target/experienceevent-all, https://ns.adobe.com/xdm/context/experienceevent-enduserids, https://ns.adobe.com/xdm/context/experienceevent-enduserids-deprecated, https://ns.adobe.com/xdm/context/experienceevent-profile-stitch, https://ns.adobe.com/xdm/context/experienceevent-segmentmembership, https://ns.adobe.com/xdm/context/profile-identities-deprecated, https://ns.adobe.com/xdm/context/profile-segmentation |
 | xmpDM:duration | Kapitellänge/-dauer | Die Länge des Kapitels in Sekunden. | Ganzzahl |  | int | https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-reference, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media |
+
+{style=&quot;table-layout:auto&quot;}
