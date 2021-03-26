@@ -5,9 +5,9 @@ title: Einschränkungen des XDM-Feldtyps
 topic: Übersicht
 description: Eine Referenz für Feldtypeinschränkungen im Experience Data Model (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren.
 translation-type: tm+mt
-source-git-commit: cc1fa21df0bb2d49106775c75a0cb3c4f4d73941
+source-git-commit: bb5880340ca4c01d0b25c7cb16fd422d3182a89e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1080'
 ht-degree: 18%
 
 ---
@@ -212,7 +212,7 @@ In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition v
 
 Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung für [Erstellen einer Mischung](../api/mixins.md#create) oder [zum Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM-Typ</th>
     <th>Optionale Eigenschaften</th>
@@ -448,5 +448,3 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
     </td>
   </tr>
 </table>
-
-{style=&quot;table-layout:auto&quot;}
