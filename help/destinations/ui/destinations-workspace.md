@@ -4,9 +4,9 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Diese werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1018'
 ht-degree: 31%
 
 ---
@@ -45,6 +45,8 @@ Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!U
 | [!UICONTROL Ansicht DataFlows] | Ansicht der Datenflüsse, die für ein Ziel vorhanden sind. |
 | [!UICONTROL Dokumentation zur Ansicht] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu erhalten und die Einrichtung zu erleichtern. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ![Steuerelemente auf der Zielkarte](../assets/ui/workspace/destination-card-options.png)
 
 Wählen Sie eine Zielkarte im Katalog aus, um die rechte Leiste zu öffnen. Hier sehen Sie eine Beschreibung des Ziels. Die rechte Leiste bietet dieselben in der obigen Tabelle beschriebenen Steuerelemente sowie eine Beschreibung des Ziels und eine Angabe der Kategorie und des Typs des Ziels.
@@ -70,6 +72,8 @@ Auf der Registerkarte **[!UICONTROL Konten]** erfahren Sie mehr über die Verbin
 | [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](../catalog/email-marketing/overview.md#connect-destination) ausgewählt haben. |
 | [!UICONTROL Ziele] | Gibt die Zahl der eindeutigen erfolgreich verbundenen Zielflüsse mit grundlegenden Informationen an, die für ein Ziel erstellt wurden. |
 | [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Darüber hinaus können Sie Ihre Kontoinformationen bearbeiten oder aktualisieren. Klicken Sie in der Spalte **[!UICONTROL Plattform]** auf die Schaltfläche Konto bearbeiten, um die Kontoinformationen zu bearbeiten.![](../assets/ui/workspace/pencil-icon.png)
 
