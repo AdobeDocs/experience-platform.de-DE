@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Metrik-API-Endpunkt
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Erfahren Sie, wie Sie mithilfe der Observability Insights API in Experience Platform beobachtbare Metriken abrufen.
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 136c75f56c2ba4d61fef7981ff8a7889a0ade3d1
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2056'
 ht-degree: 40%
 
 ---
@@ -178,6 +178,8 @@ curl -X POST \
 | `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren von Datensätzen mit mehreren Serien zu einzelnen Ergebnissen verwendet werden soll. Ausführliche Informationen zu verfügbaren Aggregatoren finden Sie in der [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Abtastrate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für die Neuberechnung wird durch die `granularity`-Eigenschaft bestimmt. Ausführliche Informationen zum Downsampling finden Sie in der [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der Anforderung angegebenen Metriken und Filter zurück.
@@ -270,6 +272,8 @@ Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der An
 | `groupBy` | Wenn mehrere Datensätze in der `filter`-Eigenschaft für eine Metrik angegeben wurden und die `groupBy`-Option in der Anforderung auf &quot;true&quot;gesetzt wurde, enthält dieses Objekt die ID des Datensatzes, für das die entsprechende `dps`-Eigenschaft gilt.<br><br>Wenn dieses Objekt in der Antwort leer angezeigt wird, gilt die entsprechende  `dps` Eigenschaft für alle im  `filters` Array bereitgestellten Datensätze (bzw. für alle Datensätze, in denen  [!DNL Platform] keine Filter angegeben wurden). |
 | `dps` | Die zurückgegebenen Daten für die angegebene Metrik, den Filter und den Zeitraum. Jeder Schlüssel in diesem Objekt stellt einen Zeitstempel mit einem entsprechenden Wert für die angegebene Metrik dar. Der Zeitraum zwischen den einzelnen Datenpunkten hängt vom `granularity`-Wert ab, der in der Anforderung angegeben ist. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Anhang
 
 Der folgende Abschnitt enthält weitere Informationen zum Arbeiten mit dem `/metrics`-Endpunkt.
@@ -310,6 +314,8 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 | **timeseries.data.collection.inlet.success** | Gesamtzahl erfolgreicher HTTP-Aufrufe an einen Daten-Inlet oder an alle Daten-Inlets. | Inlet-ID |
 | **timeseries.data.collection.inlet.failure** | Gesamtzahl fehlgeschlagener HTTP-Aufrufe an einen Daten-Inlet oder an alle Daten-Inlets. | Inlet-ID |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Identity Service] {#identity}
 
 In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL Identity Service] aufgeführt.
@@ -326,6 +332,8 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 | timeseries.identity.graph.imsorg.numidgraphs.count | Anzahl der eindeutigen Diagrammidentitäten, die im Identitätsdiagramm für Ihre IMS-Organisation gespeichert sind. | K. A. |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Anzahl der eindeutigen Identitäten, die im Identitätsdiagramm für Ihre IMS-Organisation für eine bestimmte Diagrammstärke („unbekannt“, „schwach oder „stark“) gespeichert sind. | Diagrammstärke (**erforderlich**) |
 
+{style=&quot;table-layout:auto&quot;}
+
 #### [!DNL Privacy Service] {#privacy}
 
 In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL Privacy Service] aufgeführt.
@@ -335,6 +343,8 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 | timeseries.gdpr.jobs.totaljobs.count | Gesamtzahl der erstellten Aufträge von DSGVO. | ENV (**erforderlich**) |
 | timeseries.gdpr.jobs.completedjobs.count | Gesamtzahl der abgeschlossenen Aufträge von DSGVO. | ENV (**erforderlich**) |
 | timeseries.gdpr.jobs.errorjobs.count | Gesamtanzahl der Fehleraufträge von DSGVO. | ENV (**erforderlich**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Query Service] {#query}
 
@@ -348,6 +358,8 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 | timeseries.queryservice.query.scheduledquery.count | Gesamtzahl der ausgeführten geplanten Abfragen. | K. A. |
 | timeseries.queryservice.query.interactivequery.count | Gesamtanzahl der ausgeführten interaktiven Abfragen. | K. A. |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Gesamtzahl der ausgeführten Batch-Abfragen von PSQL. | K. A. |
+
+{style=&quot;table-layout:auto&quot;}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -369,6 +381,8 @@ In der folgenden Tabelle sind die Metriken für [!DNL Real-time Customer Profile
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Zeitstempel für die letzte Anfrage zur Eintragsaktualisierung für einen Datensatz. | Datensatz-ID (**Erforderlich**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Durchschnittliche Eintragsgröße. | IMS-Organisation (**Erforderlich**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Rate von Aktualisierungsanfragen für Einträge, die für einen Datensatz erfasst werden. | Datensatz-ID (**Erforderlich**) |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Fehlermeldungen
 
@@ -403,6 +417,8 @@ Antworten vom `/metrics`-Endpunkt können unter bestimmten Bedingungen Fehlermel
 | `title` | Eine Zeichenfolge, die die Fehlermeldung und den potenziellen Grund für den Fehler enthält. |
 | `report` | Enthält Kontextinformationen zum Fehler, einschließlich der Sandbox und des IMS-Orgs, die bei dem Vorgang verwendet werden, der ihn ausgelöst hat. |
 
+{style=&quot;table-layout:auto&quot;}
+
 In der folgenden Tabelle werden die verschiedenen Fehlercodes Liste, die von der API zurückgegeben werden können:
 
 | Fehler-Code | Titel | Beschreibung |
@@ -412,3 +428,5 @@ In der folgenden Tabelle werden die verschiedenen Fehlercodes Liste, die von der
 | `INSGHT-1001-500` | Abfrage von Metriken fehlgeschlagen | Beim Versuch, die Metrikdatenbank Abfrage, ist aufgrund eines Serverfehlers ein Fehler aufgetreten. Versuchen Sie es erneut, und wenn das Problem weiterhin besteht, wenden Sie sich an den Support der Adobe. |
 | `INSGHT-1002-500` | Dienstfehler | Die Anforderung konnte aufgrund eines internen Fehlers nicht verarbeitet werden. Versuchen Sie es erneut, und wenn das Problem weiterhin besteht, wenden Sie sich an den Support der Adobe. |
 | `INSGHT-1003-401` | Sandbox-Überprüfungsfehler | Die Anforderung konnte aufgrund eines Sandbox-Validierungsfehlers nicht verarbeitet werden. Stellen Sie sicher, dass der im Header `x-sandbox-name` angegebene Sandbox-Name eine gültige, aktivierte Sandbox für Ihre IMS-Organisation darstellt, bevor Sie die Anforderung erneut versuchen. |
+
+{style=&quot;table-layout:auto&quot;}
