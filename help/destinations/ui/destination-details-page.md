@@ -4,9 +4,9 @@ title: Ansichten-Zieldetails
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
 workflow-type: tm+mt
-source-wordcount: '742'
+source-wordcount: '745'
 ht-degree: 5%
 
 ---
@@ -57,6 +57,8 @@ Die folgende Tabelle enthält die Kontrollen und Einzelheiten der rechten Leiste
 | [!UICONTROL Identität] | Stellt den vom Ziel akzeptierten Identitäts-Namensraum dar, z. B. `GAID`, `IDFA` oder `email`. Weitere Informationen zu akzeptierten Identitäts-Namensräumen finden Sie unter [Übersicht über Identitäts-Namensraum](../../identity-service/namespaces.md). |
 | [!UICONTROL Erstellt von] | Gibt den Benutzer an, der dieses Ziel erstellt hat. |
 | [!UICONTROL Erstellt] | Gibt die UTC-Zeit an, zu der dieses Ziel erstellt wurde. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Aktiviert]/ Deaktiviert
 
