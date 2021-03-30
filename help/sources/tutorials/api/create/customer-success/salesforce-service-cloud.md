@@ -2,23 +2,19 @@
 keywords: Experience Platform;Home;beliebte Themen;ssc;SSC;Salesforce Service Cloud;Salesforce-Dienst-Cloud
 solution: Experience Platform
 title: Erstellen einer Salesforce Service Cloud-Quellverbindung mit der Flow Service API
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mit der Flow Service API mit der Salesforce Service Cloud verbinden.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 24%
+source-wordcount: '580'
+ht-degree: 25%
 
 ---
 
 
 # Erstellen einer [!DNL Salesforce Service Cloud]-Quellverbindung mit der [!DNL Flow Service]-API
-
->[!NOTE]
->
->Der [!DNL Salesforce Service Cloud]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
