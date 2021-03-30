@@ -2,14 +2,14 @@
 keywords: Experience Platform;Modellbewertung;Arbeitsbereich für Datenwissenschaften;beliebte Themen;ui;Punktzahl;Ergebnisse bewerten
 solution: Experience Platform
 title: Modellbewertung in der Benutzeroberfläche des Arbeitsbereichs "Datenwissenschaften"
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: 'Scoring in Adobe Experience Platform Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt. '
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 7feda18351061600b05dc7be8afbbfb9a0fa7ec1
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 84%
+source-wordcount: '650'
+ht-degree: 32%
 
 ---
 
@@ -30,38 +30,70 @@ Diese Anleitung setzt ein trainiertes Modell voraus. Wenn Sie noch kein trainier
 
 Ein Scoring-Lauf wird mithilfe optimierter Konfigurationen aus einem zuvor abgeschlossenen und ausgewerteten Trainings-Lauf erstellt. Der Satz optimaler Konfigurationen für ein Modell wird in der Regel durch Überprüfen der Auswertungsmetriken für Trainings-Läufe bestimmt.
 
-1. Finden Sie den optimalen Training-Lauf, um dessen Konfigurationen für das Scoring zu nutzen. Öffnen Sie den gewünschten Trainings-Lauf, indem Sie auf dessen Namen klicken.
+Finden Sie den optimalen Training-Lauf, um dessen Konfigurationen für das Scoring zu nutzen. Öffnen Sie dann die gewünschte Schulung, indem Sie den Hyperlink zum Namen auswählen.
 
-2. Klicken Sie auf dem Tab **[!UICONTROL Auswertung]** des Trainings-Laufs auf die Schaltfläche **[!UICONTROL Score]** oben rechts im Bildschirm. Dadurch wird ein neuer **Scoring ausführen**-Workflow initiiert.
-   ![](../images/models-recipes/score/training_run_overview.png)
+![Auswählen des Schulungslaufs](../images/models-recipes/score/select-run.png)
 
-3. Wählen Sie den Eingabe-Scoring-Datensatz aus und klicken Sie auf **[!UICONTROL Weiter]**.
-   ![](../images/models-recipes/score/scoring_input.png)
+Wählen Sie auf der Registerkarte **[!UICONTROL Evaluierung]** die Option **[!UICONTROL Ergebnis]** oben rechts im Bildschirm aus. Ein neuer Bewertungsarbeitsablauf beginnt.
 
-4. Wählen Sie den Ergebnis-Scoring-Datensatz aus. Hierbei handelt es sich um den dedizierten Ausgabedatensatz, in dem die Scoring-Ergebnisse gespeichert werden. Bestätigen Sie Ihre Auswahl und klicken Sie auf **[!UICONTROL Weiter]**.
-   ![](../images/models-recipes/score/scoring_results.png)
+![](../images/models-recipes/score/training_run_overview.png)
 
-5. Im letzten Schritt des Workflows werden Sie aufgefordert, Ihren Scoring-Lauf zu konfigurieren. Diese Konfigurationen werden vom Modell für den Scoring-Lauf verwendet.
-Beachten Sie, dass Sie geerbte Parameter, die bei der Modellerstellung festgelegt wurden, nicht entfernen können. Sie können nicht geerbte Parameter bearbeiten oder wiederherstellen, indem Sie auf den Wert doppelklicken oder auf das Symbol zum Zurücksetzen klicken, während Sie mit dem Mauszeiger über den Eintrag fahren.
-   ![](../images/models-recipes/score/configuration.png)
-Überprüfen und bestätigen Sie die Scoring-Konfigurationen und klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu erstellen und auszuführen. Sie werden zum Tab **[!UICONTROL Scoring-Läufe]** weitergeleitet; für den neuen Scoring-Lauf wird ein Status angezeigt.
-   ![](../images/models-recipes/score/scoring_runs_tab.png)
-Für einen Scoring-Lauf wird einer der vier folgenden Status angezeigt: „Ausstehend“, „Abgeschlossen“, „Fehlgeschlagen“ oder „Wird ausgeführt“. Die Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status „Abgeschlossen“ oder „Fehlgeschlagen“ lautet.
+Wählen Sie den Eingabesortierungsdataset aus und wählen Sie **[!UICONTROL Weiter]**.
+
+![](../images/models-recipes/score/scoring_input.png)
+
+Wählen Sie den Ergebnis-Scoring-Datensatz aus. Hierbei handelt es sich um den dedizierten Ausgabedatensatz, in dem die Scoring-Ergebnisse gespeichert werden. Bestätigen Sie Ihre Auswahl und wählen Sie **[!UICONTROL Weiter]**.
+
+![](../images/models-recipes/score/scoring_results.png)
+
+Im letzten Schritt des Workflows werden Sie aufgefordert, Ihren Scoring-Lauf zu konfigurieren. Diese Konfigurationen werden vom Modell für die Bewertungsausführung verwendet.
+Beachten Sie, dass Sie geerbte Parameter, die bei der Modellerstellung festgelegt wurden, nicht entfernen können. Sie können nicht geerbte Parameter bearbeiten oder wiederherstellen, indem Sie die Dublette auf den Wert klicken oder das Symbol zum Zurücksetzen auswählen, während Sie den Mauszeiger über den Eintrag halten.
+
+![Konfiguration](../images/models-recipes/score/configuration.png)
+
+Überprüfen Sie die Bewertungskonfigurationen und bestätigen Sie sie und wählen Sie **[!UICONTROL Fertigstellen]**, um die Bewertungsausführung zu erstellen und auszuführen. Sie werden zum Register **[!UICONTROL Scoring Runs]** weitergeleitet und die neue Scoring-Ausführung mit dem Status **[!UICONTROL Ausstehend]** wird angezeigt.
+
+![Registerkarte &quot;Bewertungsläufe&quot;](../images/models-recipes/score/scoring_runs_tab.png)
+
+Eine Bewertungsausführung kann mit einem der folgenden Status angezeigt werden:
+- Ausstehend
+- Abgeschlossen
+- Fehlgeschlagen
+- Wird ausgeführt
+
+Status werden automatisch aktualisiert. Fahren Sie mit dem nächsten Schritt fort, wenn der Status **[!UICONTROL Complete]** oder **[!UICONTROL Fehlgeschlagen]** ist.
 
 ## Scoring-Ergebnisse anzeigen
 
-1. Suchen Sie nach dem Trainings-Lauf, der für den Scoring-Lauf verwendet wurde, und klicken Sie auf dessen Namen, um die **[!UICONTROL Auswertungsseite]** anzuzeigen.
+Zur Ansicht der Bewertungsergebnisse wählen Sie einen Beginn aus.
 
-2. Klicken Sie oben auf der Auswertungsseite des Trainings-Laufs auf den Tab **[!UICONTROL Scoring-Läufe]**, um eine Liste der vorhandenen Scoring-Läufe anzuzeigen. Klicken Sie auf die Scoring-Liste, um in der rechten Spalte die entsprechenden Details anzuzeigen.
-   ![](../images/models-recipes/score/view_details.png)
+![Auswählen des Schulungslaufs](../images/models-recipes/score/select-run.png)
 
-3. Wenn der ausgewählte Scoring-Lauf den Status „Abgeschlossen“ oder „Fehlgeschlagen“ aufweist, ist der Link **[!UICONTROL Aktivitätsprotokolle anzeigen]** in der rechten Spalte aktiv. Klicken Sie auf den Link, um die Ausführungsprotokolle anzuzeigen und herunterzuladen. Wenn ein Scoring-Lauf fehlgeschlagen ist, können die Ausführungsprotokolle nützliche Daten zur Ermittlung der Fehlerquelle enthalten.
-   ![](../images/models-recipes/score/activity_logs.png)
+Sie werden zu der Seite **[!UICONTROL Evaluierung]** umgeleitet. Wählen Sie oben auf der Seite zur Evaluierung der Schulungslaufausführung die Registerkarte **[!UICONTROL Bewertungsläufe]** aus, um eine Liste der vorhandenen Testläufe Ansicht.
 
-4. Klicken Sie in der rechten Spalte auf den Link **[!UICONTROL Vorschau von Datensatz mit Scoring-Ergebnissen anzeigen]**. Sie können eine Vorschau des Ausgabedatensatzes des Scoring-Laufs anzeigen.
-   ![](../images/models-recipes/score/preview_results.png)
+![Bewertungsseite](../images/models-recipes/score/view_scoring_runs.png)
 
-5. Klicken Sie für den vollständigen Satz der Scoring-Ergebnisse auf den Link **[!UICONTROL Datensatz mit Scoring-Ergebnissen]** in der rechten Spalte.
+Wählen Sie anschließend einen Bewertungslauf aus, um die Ausführungsdetails Ansicht.
+
+![Ausführungsdetails](../images/models-recipes/score/view_details.png)
+
+Wenn der ausgewählte Bewertungslauf entweder den Status &quot;Complete&quot;oder &quot;Failure&quot;hat, wird der Link **[!UICONTROL Ansicht Aktivität Logs]** verfügbar gemacht. Wenn eine Bewertungsausführung fehlschlägt, können die Ausführungsprotokolle nützliche Informationen zur Bestimmung des Fehlerursprungs liefern. Um die Ausführungsprotokolle herunterzuladen, wählen Sie **[!UICONTROL Ansicht Aktivität Logs]**.
+
+![Ansichten auswählen](../images/models-recipes/score/view_logs.png)
+
+Das Popup **[!UICONTROL Ansicht Aktivität logs]** wird angezeigt. Wählen Sie eine URL aus, um die zugehörigen Protokolle automatisch herunterzuladen.
+
+![](../images/models-recipes/score/activity_logs.png)
+
+Sie haben auch die Möglichkeit, Ihre Bewertungsergebnisse Ansicht, indem Sie **[!UICONTROL Vorschau Scoring results dataset]** auswählen.
+
+![Vorschauen auswählen](../images/models-recipes/score/view_results.png)
+
+Eine Vorschau des Ausgabedatasets wird bereitgestellt.
+
+![Vorschauen](../images/models-recipes/score/preview_results.png)
+
+Wählen Sie für den vollständigen Satz der Bewertungsergebnisse den Link **[!UICONTROL Bewertungsergebnis-Datensatz]** in der rechten Spalte.
 
 ## Nächste Schritte
 
