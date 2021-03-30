@@ -5,17 +5,17 @@ title: Durchsuchen eines cLoud-Datenspeicherung-Systems mithilfe der Flow Servic
 topic: Übersicht
 description: In diesem Lernprogramm wird die Flow Service API verwendet, um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
 translation-type: tm+mt
-source-git-commit: 60a70352c2e13565fd3e8c44ae68e011a1d443a6
+source-git-commit: 457fc9e1b0c445233f0f574fefd31bc1fc3bafc8
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 20%
+source-wordcount: '821'
+ht-degree: 18%
 
 ---
 
 
 # Entdecken Sie ein Cloud-Datenspeicherung-System mit der API[!DNL Flow Service]
 
-Dieses Lernprogramm verwendet die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml), um ein Cloud-Datenspeicherung-System eines Drittanbieters zu untersuchen.
+In diesem Lernprogramm wird die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) verwendet, um ein Drittanbieter-Cloud-Datenspeicherung-System zu erkunden.
 
 ## Erste Schritte
 
@@ -101,14 +101,25 @@ Bei einer erfolgreichen Antwort wird ein Array von Dateien und Ordnern im abgefr
 ```json
 [
     {
-        "type": "File",
-        "name": "data.csv",
-        "path": "/some/path/data.csv"
+        "type": "file",
+        "name": "account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
+        "canPreview": true,
+        "canFetchSchema": true
     },
     {
-        "type": "Folder",
-        "name": "foobar",
-        "path": "/some/path/foobar"
+        "type": "file",
+        "name": "profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
+        "canPreview": true,
+        "canFetchSchema": true
+    },
+    {
+        "type": "file",
+        "name": "sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "canPreview": true,
+        "canFetchSchema": true
     }
 ]
 ```
@@ -117,14 +128,14 @@ Bei einer erfolgreichen Antwort wird ein Array von Dateien und Ordnern im abgefr
 
 Um die Struktur der Datendatei in Ihrer Cloud-Datenspeicherung zu überprüfen, führen Sie eine GET durch und geben Sie dabei den Dateipfad und -typ als Abfrage-Parameter an.
 
-Sie können die Struktur einer CSV- oder TSV-Datei überprüfen, indem Sie ein benutzerdefiniertes Trennzeichen als Abfrage-Rahmen angeben. Jeder einzelne Zeichenwert ist ein zulässiges Spaltentrennzeichen. Ist diese Angabe nicht verfügbar, wird ein Komma `(,)` als Standardwert verwendet.
+Sie können die Struktur einer Datendatei aus der Cloud-Datenspeicherung überprüfen, indem Sie eine GET anfordern und dabei den Dateipfad und -typ angeben. Sie können auch verschiedene Dateitypen wie CSV-, TSV- oder komprimierte JSON- und durch Trennzeichen getrennte Dateien prüfen, indem Sie die Dateitypen als Abfrage angeben.
 
 **API-Format**
 
 ```http
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=;
-GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
+GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
 ```
 
 | Parameter | Beschreibung |
@@ -132,13 +143,13 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 | `{CONNECTION_ID}` | Die Verbindungs-ID des Cloud-Datenspeicherung-Quellconnectors. |
 | `{FILE_PATH}` | Der Pfad zu der Datei, die Sie überprüfen möchten. |
 | `{FILE_TYPE}` | Der Typ der Datei. Folgende Dateitypen werden unterstützt:<ul><li>DELIMITED</code>: Trennzeichen-getrennter Wert. DSV-Dateien müssen kommagetrennt sein.</li><li>JSON</code>: JavaScript-Objektbeschreibung. JSON-Dateien müssen XDM-konform sein</li><li>PARQUET</code>: Apache Parquet. Parquet-Dateien müssen XDM-kompatibel sein.</li></ul> |
-| `columnDelimiter` | Der Wert für ein einzelnes Zeichen, den Sie als Trennzeichen für Spalten angegeben haben, um CSV- oder TSV-Dateien zu überprüfen. Wenn der Parameter nicht angegeben ist, wird als Wert standardmäßig ein Komma `(,)` verwendet. |
+| `{QUERY_PARAMS}` | Optionale Abfragen-Parameter, die zum Filtern der Ergebnisse verwendet werden können. Weitere Informationen finden Sie im Abschnitt zu [Abfrage parameters](#query). |
 
 **Anfrage**
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITED' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -173,6 +184,15 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlic
     }
 ]
 ```
+
+## Verwenden von Abfrageparametern {#query}
+
+Die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) unterstützt die Verwendung von Abfrage-Parametern zur Vorschau und Überprüfung verschiedener Dateitypen.
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `columnDelimiter` | Der Wert für ein einzelnes Zeichen, den Sie als Trennzeichen für Spalten angegeben haben, um CSV- oder TSV-Dateien zu überprüfen. Wenn der Parameter nicht angegeben ist, wird als Wert standardmäßig ein Komma `(,)` verwendet. |
+| `compressionType` | Ein erforderlicher Parameter für die Abfrage zur Vorschau einer komprimierten, getrennten Datei oder JSON-Datei. Die unterstützten komprimierten Dateien sind: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## Nächste Schritte
 
