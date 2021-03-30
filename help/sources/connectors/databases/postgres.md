@@ -2,22 +2,18 @@
 keywords: Experience Platform;Home;beliebte Themen;PostgreSQL;Postgresql
 solution: Experience Platform
 title: Übersicht über PostgreSQL Source Connector
-topic: overview
+topic: Übersicht
 description: Erfahren Sie, wie Sie PostgreSQL mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 22%
+source-wordcount: '226'
+ht-degree: 24%
 
 ---
 
 
-# (Beta) [!DNL PostgreSQL] Connector
-
->[!NOTE]
->
->Der [!DNL PostgreSQL]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../home.md#terms-and-conditions).
+# [!DNL PostgreSQL] connector
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
