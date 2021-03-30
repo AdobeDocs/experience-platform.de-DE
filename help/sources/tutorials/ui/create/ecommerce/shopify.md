@@ -2,23 +2,19 @@
 keywords: Experience Platform;Home;beliebte Themen;Shopify;Shopify
 solution: Experience Platform
 title: Erstellen einer Shopify-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Shopify-Quellverbindung erstellen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: cc23228cb410dc4c70a56c5142be00c2ca1c40d3
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 12%
+source-wordcount: '452'
+ht-degree: 13%
 
 ---
 
 
 # Erstellen einer [!DNL Shopify]-Quellverbindung in der Benutzeroberfläche
-
->[!NOTE]
->
-> Der [!DNL Shopify]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Erstellen eines [!DNL Shopify]-Quellconnectors mithilfe der [!DNL Platform]-Benutzeroberfläche.
 
