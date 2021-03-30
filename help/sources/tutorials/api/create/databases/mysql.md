@@ -2,23 +2,19 @@
 keywords: Experience Platform;Home;beliebte Themen;MySQL;mysql
 solution: Experience Platform
 title: Erstellen einer MySQL-Quellverbindung mit der Flow Service API
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und MySQL herstellen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 25%
+source-wordcount: '565'
+ht-degree: 26%
 
 ---
 
 
 # Erstellen einer MySQL-Quellverbindung mit der [!DNL Flow Service]-API
-
->[!NOTE]
->
->Der MySQL Connector befindet sich in der Beta-Version. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
