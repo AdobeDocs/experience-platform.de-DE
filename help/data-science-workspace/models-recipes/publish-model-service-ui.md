@@ -2,14 +2,14 @@
 keywords: Experience Platform;Veröffentlichen eines Modells;Arbeitsbereich für Datenwissenschaften;beliebte Themen;Erstellen eines Dienstes
 solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace
-topic: tutorial
-type: Tutorial
+topic: Tutorial
+type: Übung
 description: Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und bewertetes Modell als Service veröffentlichen, damit Benutzer in Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 85%
+source-wordcount: '504'
+ht-degree: 50%
 
 ---
 
@@ -28,29 +28,47 @@ Wenn Sie ein Modell lieber mithilfe von Sensei Machine Learning-APIs veröffentl
 
 ## Modell veröffentlichen {#publish-a-model}
 
-1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf den Link **[!UICONTROL Modelle]**, um alle vorhandenen Modelle aufzulisten. Suchen Sie nach dem Namen des Modells, das Sie als Service veröffentlichen möchten, und klicken Sie darauf.
-   ![](../images/models-recipes/publish-model/1_browse_model.png)
-2. Klicken Sie oben rechts auf der Modellübersichtsseite auf **[!UICONTROL Veröffentlichen]**, um einen Prozess zur Service-Erstellung zu starten.
-   ![](../images/models-recipes/publish-model/2_view_training_runs.png)
-3. Geben Sie den gewünschten Namen für den Service und optional eine Service-Beschreibung ein. Klicken Sie anschließend auf **[!UICONTROL Weiter]**.
-   ![](../images/models-recipes/publish-model/3_configure_service.png)
-4. Alle erfolgreichen Trainings-Läufe für das Modell werden aufgelistet. Der neue Service übernimmt die Trainings- und Scoring-Konfigurationen aus dem ausgewählten Trainings-Lauf.
-   ![](../images/models-recipes/publish-model/4_select_training_run.png)
-5. Klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Service zu erstellen und zur **[!UICONTROL Service Gallery]** zur gelangen, wo alle verfügbaren Services einschließlich des neu erstellten Services angezeigt werden.
-   ![](../images/models-recipes/publish-model/service_gallery.png)
+Wählen Sie in Adobe Experience Platform **[!UICONTROL Modelle]** in der linken Navigationsspalte aus und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um alle vorhandenen Modelle Liste. Wählen Sie den Namen des Modells aus, das als Dienst veröffentlicht werden soll.
 
-## Mit einem Service bewerten  {#access-a-service}
+![](../images/models-recipes/publish-model/browse_model.png)
 
-1. Klicken Sie in Adobe Experience Platform in der linken Navigationsspalte auf die Registerkarte **[!UICONTROL Services]**, um auf die **[!UICONTROL Service Gallery]** zuzugreifen. Suchen Sie nach dem gewünschten Service und klicken Sie auf **[!UICONTROL Score]**.
-   ![](../images/models-recipes/publish-model/click_to_score.png)
-2. Wählen Sie einen geeigneten Eingabedatensatz für den Scoring-Lauf und klicken Sie dann auf **[!UICONTROL Weiter]**.
-   ![](../images/models-recipes/publish-model/6_scoring_input.png)
-3. Wählen Sie einen geeigneten Ausgabedatensatz für die Scoring-Ergebnisse und klicken Sie dann auf **[!UICONTROL Weiter]**.
-   ![](../images/models-recipes/publish-model/7_scoring_output.png)
-4. Wenn ein Service erstellt wird, übernimmt er die standardmäßigen Scoring-Konfigurationen. Sie können diese Konfigurationen überprüfen und nach Bedarf anpassen, indem Sie auf die Werte doppelklicken. Wenn Sie mit den Konfigurationen zufrieden sind, klicken Sie auf **[!UICONTROL Fertig stellen]**, um den Scoring-Lauf zu starten.
-   ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5. Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Sobald der Auftrag abgeschlossen ist, wird die Kopfzeile **[!UICONTROL Zuletzt verwendet]** im Container **[!UICONTROL Punktzahl]** aktualisiert.
-   ![](../images/models-recipes/publish-model/score_pending.png)
+Wählen Sie **[!UICONTROL Publish]** oben rechts auf der Modellübersichtsseite aus, um einen Diensterstellungsprozess Beginn.
+
+![](../images/models-recipes/publish-model/view_training.png)
+
+Geben Sie einen gewünschten Namen für den Dienst ein und geben Sie optional eine Dienstbeschreibung ein. Wählen Sie danach **[!UICONTROL Weiter]** aus.
+
+![](../images/models-recipes/publish-model/configure_training.png)
+
+Alle erfolgreichen Trainings-Läufe für das Modell werden aufgelistet. Der neue Service übernimmt die Trainings- und Scoring-Konfigurationen aus dem ausgewählten Trainings-Lauf.
+
+![](../images/models-recipes/publish-model/select_training_run.png)
+
+Wählen Sie **[!UICONTROL Fertig stellen]**, um den Dienst zu erstellen und zur **[!UICONTROL Dienstgalerie]** umzuleiten, um alle verfügbaren Dienste einschließlich des neu erstellten Dienstes anzuzeigen.
+
+![](../images/models-recipes/publish-model/service_gallery.png)
+
+## Mit einem Service bewerten {#access-a-service}
+
+Wählen Sie in Adobe Experience Platform in der linken Navigationsspalte die Registerkarte **[!UICONTROL Dienste]**, um auf die **[!UICONTROL Dienstgalerie]** zuzugreifen. Suchen Sie den gewünschten Dienst und wählen Sie **[!UICONTROL Öffnen]**.
+
+![](../images/models-recipes/publish-model/open_service.png)
+
+Wählen Sie auf der Übersichtsseite des Dienstes **[!UICONTROL Ergebnis]**.
+
+![](../images/models-recipes/publish-model/score_service.png)
+
+Wählen Sie einen entsprechenden Eingabedatensatz für die Bewertungsausführung und dann **[!UICONTROL Weiter]**. Sie werden aufgefordert, denselben Schritt für den Bewertungsdatensatz zu tun. Nachdem Sie den Eingabe- und Ausgabedatensatz ausgewählt haben, können Sie die Konfigurationen aktualisieren.
+
+![](../images/models-recipes/publish-model/select_datasets.png)
+
+Wenn ein Service erstellt wird, übernimmt er die standardmäßigen Scoring-Konfigurationen. Sie können diese Konfigurationen überprüfen und nach Bedarf anpassen, indem Sie auf die Werte doppelklicken. Wenn Sie mit den Konfigurationen zufrieden sind, wählen Sie **[!UICONTROL Fertig stellen]**, um den Bewertungsvorgang zu starten.
+
+![](../images/models-recipes/publish-model/scoring_configs.png)
+
+Auf der Seite **Übersicht** des Services werden Details zum neuen Scoring-Auftrag und zu dessen Fortschritt angezeigt. Nach Abschluss des Auftrags wird die Kopfzeile **[!UICONTROL Zuletzt verwendet]** im Container **[!UICONTROL Punktwertung]** aktualisiert.
+
+![](../images/models-recipes/publish-model/pending_scoring.png)
 
 ## Nächste Schritte {#next-steps}
 
