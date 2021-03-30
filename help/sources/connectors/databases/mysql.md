@@ -2,22 +2,18 @@
 keywords: Experience Platform;Home;beliebte Themen;MySQL;mysql;MySQL;MySQL
 solution: Experience Platform
 title: Übersicht über MySQL Source Connector
-topic: overview
+topic: Übersicht
 description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen MySQL und Adobe Experience Platform herstellen.
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 11%
+source-wordcount: '234'
+ht-degree: 12%
 
 ---
 
 
-# (Beta) MySQL Connector
-
->[!NOTE]
->
->Der MySQL Connector befindet sich in der Beta-Version. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../home.md#terms-and-conditions).
+# MySQL Connector
 
 Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
