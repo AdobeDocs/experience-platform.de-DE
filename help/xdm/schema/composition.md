@@ -5,7 +5,7 @@ title: Grundlagen der Schema-Komposition
 topic: Übersicht
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
+source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
 workflow-type: tm+mt
 source-wordcount: '3502'
 ht-degree: 40%
@@ -165,7 +165,7 @@ Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche
 
 [!DNL Experience Platform] bietet eine Reihe von gebräuchlichen Datentypen als Teil der ,  [!DNL Schema Registry] um die Verwendung von Standardmustern zur Beschreibung allgemeiner Datenstrukturen zu unterstützen. Dies wird in den [!DNL Schema Registry]-Tutorials ausführlicher erklärt, wo es klarer wird, wenn Sie die Schritte zur Definition von Datentypen durchlaufen.
 
-Der folgende Screenshot zeigt, wie Datentypen in der Plattform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom Mixin ([!UICONTROL Demografische Details]) bereitgestellt werden, verwendet den Datentyp &quot;[!UICONTROL Personenname]&quot;, wie durch den Text neben dem Pipe-Zeichen (`|`) neben dem Feldnamen angegeben. Dieser bestimmte Datentyp enthält mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
+Der folgende Screenshot zeigt, wie Datentypen in der Plattform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom Mixin [!UICONTROL Demografische Details] bereitgestellt werden, verwendet den Datentyp &quot;[!UICONTROL Personenname]&quot;, wie durch den Text nach dem Senkrechtstrich (`|`) neben dem Feldnamen angegeben. Dieser bestimmte Datentyp enthält mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
 
 ![](../images/schema-composition/data-type.png)
 
