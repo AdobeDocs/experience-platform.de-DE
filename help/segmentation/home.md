@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentdienst;Segment;Segmente;Segmente
 solution: Experience Platform
 title: Übersicht über den Segmentdienst
-topic: overview
+topic: Übersicht
 description: Erfahren Sie mehr über den Adobe Experience Platform Segmentation Service und seine Rolle im Plattform-Ökosystem.
 translation-type: tm+mt
-source-git-commit: c0c42f872666323bfb3bdbdf5fb02475d3b5bc79
+source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1449'
 ht-degree: 8%
 
 ---
@@ -60,6 +60,12 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Streaming-S
 Als Alternative zu einem laufenden Datenauswahlprozess verschiebt die Stapelsegmentierung alle Profil-Daten gleichzeitig durch Segmentdefinitionen, um entsprechende Audiencen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert und gespeichert, damit Sie es zur Verwendung exportieren können.
 
 Informationen zur Bewertung von Segmenten finden Sie im Lehrgang [Segmentbewertung](./tutorials/evaluate-a-segment.md).
+
+### Kantensegmentierung
+
+Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
+
+Weitere Informationen zur Kantensegmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder in der [UI-Dokumentation](./ui/edge-segmentation.md).
 
 ## Zugriff auf Segmentierungsergebnisse
 
