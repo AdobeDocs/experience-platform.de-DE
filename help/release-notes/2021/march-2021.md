@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 8d4270d9168a570fcf92ba60d70dbc8e9af98136
+source-git-commit: 0192c951a288cc1e0891a12ba9eff32aea120518
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 50%
+source-wordcount: '436'
+ht-degree: 40%
 
 ---
 
@@ -19,7 +19,35 @@ ht-degree: 50%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| `add_to_array` durchführen | Die Funktionalität zur Unterstützung von Arrays als Parameter wurde aktualisiert. |
+| `to_array` durchführen | Die Funktionalität zur Unterstützung von Objekten als Parameter wurde aktualisiert. |
+
+Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## Segmentierungs-Service {#segmentation}
+
+Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Adoben werden zentral auf [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Anwendung leicht zugänglich sind.
+
+[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| (Beta) Edge-Segmentierung | Bei der Edge-Segmentierung werden Segmente in Echtzeit ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht. Weitere Informationen zur Kantensegmentierung finden Sie in der [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md). |
+| (Beta) Inkrementelle Segmentierung | Erhöht die Frische vorhandener Segmentdefinitionen, die in der Stapelsegmentierung ausgewertet werden, auf bis zu eine Stunde. |
+
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
