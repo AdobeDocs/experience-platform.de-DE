@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
 translation-type: tm+mt
-source-git-commit: 58382528cc787e8d2005c8c322904266880ad0b9
+source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
 workflow-type: tm+mt
-source-wordcount: '550'
-ht-degree: 44%
+source-wordcount: '422'
+ht-degree: 41%
 
 ---
 
@@ -20,7 +20,6 @@ ht-degree: 44%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -34,18 +33,6 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 | `to_array` durchführen | Die Funktionalität zur Unterstützung von Objekten als Parameter wurde aktualisiert. |
 
 Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-## [!DNL Sandboxes] {#sandboxes}
-
-Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss.
-
-Darum stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| (Beta) Mehrere Produktions-Sandboxen | Sie können jetzt mehrere Produktions-Sandboxen in Ihrem IMS-Org erstellen und verwalten und spezifische Produktions-Sandboxes unterschiedlichen Geschäftsfeldern, Marken, Projekten oder Regionen zuweisen. Weitere Informationen finden Sie in den Tutorials zum Erstellen einer Produktions-Sandbox [in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) oder [mit der API](../../sandboxes/api/create-sandbox.md). |
-
-Weitere Informationen zu Sandboxes finden Sie unter [Übersicht über Sandboxes](../../sandboxes/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
