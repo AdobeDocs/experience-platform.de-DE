@@ -5,10 +5,10 @@ title: Grundlagen der Schema-Komposition
 topic: Übersicht
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 translation-type: tm+mt
-source-git-commit: 8448b5dcedc42898d8a403aae1e044841bc2734c
+source-git-commit: 9a5618674946f67528de1b40609596dbb75ced0c
 workflow-type: tm+mt
-source-wordcount: '3166'
-ht-degree: 46%
+source-wordcount: '3502'
+ht-degree: 40%
 
 ---
 
@@ -23,19 +23,9 @@ Ein Schema ist ein Regelsatz, der die Datenstruktur und das Datenformat darstell
 
 Zusätzlich zur Beschreibung der Datenstruktur wenden Schemas Einschränkungen und Erwartungen an Daten an, damit diese bei ihren Bewegungen zwischen den Systemen validiert werden können. Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Daten, unabhängig von ihrer Herkunft, und machen eine anwendungsübergreifende Übersetzung überflüssig.
 
-[!DNL Experience Platform]Die erhält diese semantische Normalisierung durch die Verwendung von Schemas aufrecht. Schema sind die Standardmethode zum Beschreiben von Daten in [!DNL Experience Platform], sodass alle Daten, die Schemas entsprechen, innerhalb eines Unternehmens ohne Konflikte wiederverwendet werden können und sogar zwischen mehreren Organisationen freigegeben werden können.
+[!DNL Experience Platform] diese semantische Normalisierung mithilfe von Schemas aufrecht zu erhalten. Schema sind die Standardmethode zum Beschreiben von Daten in [!DNL Experience Platform], sodass alle Daten, die Schemas entsprechen, innerhalb eines Unternehmens ohne Konflikte wiederverwendet oder sogar von mehreren Organisationen gemeinsam genutzt werden können.
 
-### Relationale Tabellen versus eingebettete Objekte
-
-Bei der Arbeit mit relationalen Datenbanken bestehen die Best Practices darin, Daten zu normalisieren oder eine Entität in diskrete Teile zu zerlegen, die dann in mehreren Tabellen angezeigt werden. Um die Daten als Ganzes zu lesen oder die Entität zu aktualisieren, müssen Lese- und Schreibvorgänge über viele einzelne Tabellen mit JOIN durchgeführt werden.
-
-Durch den Einsatz von eingebetteten Objekten können XDM-Schema komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit einer hierarchischen Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie damit die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen. Es gibt keine Einschränkungen, wie viele Ebenen Ihre Schema-Hierarchie sein kann.
-
-### Schemas und Big Data
-
-Moderne digitale Systeme generieren enorme Mengen von Verhaltenssignalen (Transaktionsdaten, Weblogs, Internet der Dinge, Anzeige usw.). Diese Big-Data-Daten bieten außergewöhnliche Möglichkeiten zur Optimierung von Erlebnissen, sind aber aufgrund der Größe und Vielfalt der Daten schwierig zu nutzen. Um aus den Daten Nutzen zu ziehen, müssen Struktur, Format und Definitionen standardisiert werden, damit sie konsistent und effizient verarbeitet werden können.
-
-Schemas lösen dieses Problem, indem sie die Integration von Daten aus mehreren Quellen, die Standardisierung durch gemeinsame Strukturen und Definitionen und die lösungsübergreifende gemeinsame Nutzung ermöglichen. Dadurch können nachfolgende Prozesse und Dienste jede Art von Frage beantworten, die von den Daten gestellt wird, und sich von dem herkömmlichen Ansatz zur Datenmodellierung abwenden, bei dem alle Fragen, die an die Daten gestellt werden, im Voraus bekannt sind und die Daten modelliert werden, um diesen Erwartungen zu entsprechen.
+XDM-Schema eignen sich ideal zum Speichern umfangreicher komplexer Daten in einem eigenständigen Format. Weitere Informationen dazu, wie XDM dies erreicht, finden Sie in den Abschnitten unter [Eingebettete Objekte](#embedded) und [Big Data](#big-data) im Anhang zu diesem Dokument.
 
 ### Schema-basierte Workflows in [!DNL Experience Platform]
 
@@ -68,9 +58,9 @@ Um diesen Vorgang zu unterstützen, können Schlüsselfelder in Ihren Schemas al
 
 Zu den Feldern, die häufig als &quot;[!UICONTROL Identity]&quot;gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html)-, CRM-ID oder andere eindeutige ID-Felder. Sie sollten außerdem alle eindeutigen IDs berücksichtigen, die für Ihr Unternehmen spezifisch sind, da sie möglicherweise auch gut in den Feldern &quot;[!UICONTROL Identität]&quot;stehen.
 
-Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass die Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. In der Übersicht zu [Adobe Experience Platform Identity Service](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
+Es ist wichtig, während der Planungsphase des Schemas über Kundenidentitäten nachzudenken, um sicherzustellen, dass Daten zusammengeführt werden, um ein möglichst stabiles Profil zu schaffen. In der Übersicht zu [Adobe Experience Platform Identity Service](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
 `xdm:identityMap` ist ein Feld vom Typ &quot;Map&quot;, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namensräumen beschreibt. Mit diesem Feld können Sie Identitätsdaten für Ihre Schema bereitstellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
 
@@ -107,7 +97,7 @@ Wie im Beispiel oben gezeigt, stellt jeder Schlüssel im `identityMap`-Objekt ei
 
 >[!NOTE]
 >
->Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, unabhängig davon, ob der Wert eine primäre Identität ist (`primary`). Primär-IDs müssen nur für Schema festgelegt werden, die in [!DNL Real-time Customer Profile] verwendet werden sollen. Weitere Informationen finden Sie im Abschnitt zu [Vereinigung-Schemas](#union).
+>Für jeden Identitätswert kann auch ein boolescher Wert angegeben werden, um festzustellen, ob es sich bei dem Wert um eine primäre Identität (`primary`) handelt. Primär-IDs müssen nur für Schema festgelegt werden, die in [!DNL Real-time Customer Profile] verwendet werden sollen. Weitere Informationen finden Sie im Abschnitt zu [Vereinigung-Schemas](#union).
 
 ### Schema-Evolutionsprinzipien {#evolution}
 
@@ -143,7 +133,13 @@ Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen defin
 
 Die Klasse eines Schemas legt fest, welche Mixins in diesem Schema verwendet werden dürfen. Dies wird im [nächsten Abschnitt](#mixin) ausführlicher erläutert.
 
-Adobe bietet zwei standardmäßige (&quot;Core&quot;) XDM-Klassen: [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent]. Zusätzlich zu diesen Hauptklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihr Unternehmen zu beschreiben. Benutzerspezifische Klassen werden von einer Organisation definiert, wenn keine von der Adobe definierten Hauptklassen zur Beschreibung eines individuellen Anwendungsfalls verfügbar sind.
+Adobe bietet mehrere Standard-(Core-)XDM-Klassen. Zwei dieser Klassen, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent], sind für fast alle nachgeschalteten Plattformprozesse erforderlich. Zusätzlich zu diesen Hauptklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihr Unternehmen zu beschreiben. Benutzerspezifische Klassen werden von einer Organisation definiert, wenn keine von der Adobe definierten Hauptklassen zur Beschreibung eines individuellen Anwendungsfalls verfügbar sind.
+
+Der folgende Screenshot zeigt, wie Klassen in der Plattform-Benutzeroberfläche dargestellt werden. Da das hier dargestellte Schema keine Mixins enthält, werden alle angezeigten Felder von der Klasse des Schemas ([!UICONTROL XDM Individuelles Profil]) bereitgestellt.
+
+![](../images/schema-composition/class.png)
+
+Die aktuellste Liste der verfügbaren Standard-XDM-Klassen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/classes). Alternativ können Sie auch auf das Handbuch [XDM-Komponenten ](../ui/explore.md) zugreifen, wenn Sie lieber Ansichten in der Benutzeroberfläche vornehmen möchten.
 
 ### Mixin {#mixin}
 
@@ -157,17 +153,23 @@ Um beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONT
 
 Denken Sie daran, dass Schemas aus „Null oder mehr“ Mixins bestehen, was bedeutet, dass Sie ein gültiges Schema zusammenstellen können, ohne überhaupt Mixins zu verwenden.
 
-Eine Liste aller aktuellen Standard-Mixins finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/mixins).
+Der folgende Screenshot zeigt, wie Mixins in der Plattform-Benutzeroberfläche dargestellt werden. In diesem Beispiel wird einem Schema ein einzelnes Mixin ([!UICONTROL Demografische Details]) hinzugefügt, das eine Gruppierung der Felder zur Feldstruktur des Schemas bereitstellt.
+
+![](../images/schema-composition/mixin.png)
+
+Die aktuellste Liste der verfügbaren Standard-XDM-Mixins finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/mixins). Alternativ können Sie auch auf das Handbuch [XDM-Komponenten ](../ui/explore.md) zugreifen, wenn Sie lieber Ansichten in der Benutzeroberfläche vornehmen möchten.
 
 ### Datentyp {#data-type}
 
 Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Ähnlich wie ein Mixin ermöglicht ein Datentyp die konsistente Verwendung einer Mehrfeldstruktur, ist jedoch flexibler als ein Mixin, da ein Datentyp an beliebiger Stelle in ein Schema aufgenommen werden kann, indem er als „Datentyp“ eines Feldes hinzugefügt wird.
 
->[!NOTE]
->
->Weitere Informationen zu den Unterschieden zwischen Mixins und Datentypen sowie zu den Vor- und Nachteile der Verwendung des einen und des anderen für ähnliche Anwendungsfälle finden Sie im [Anhang](#mixins-v-datatypes).
-
 [!DNL Experience Platform] bietet eine Reihe von gebräuchlichen Datentypen als Teil der ,  [!DNL Schema Registry] um die Verwendung von Standardmustern zur Beschreibung allgemeiner Datenstrukturen zu unterstützen. Dies wird in den [!DNL Schema Registry]-Tutorials ausführlicher erklärt, wo es klarer wird, wenn Sie die Schritte zur Definition von Datentypen durchlaufen.
+
+Der folgende Screenshot zeigt, wie Datentypen in der Plattform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom Mixin ([!UICONTROL Demografische Details]) bereitgestellt werden, verwendet den Datentyp &quot;[!UICONTROL Personenname]&quot;, wie durch den Text neben dem Pipe-Zeichen (`|`) neben dem Feldnamen angegeben. Dieser bestimmte Datentyp enthält mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
+
+![](../images/schema-composition/data-type.png)
+
+Die aktuellste Liste der verfügbaren Standard-XDM-Datentypen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/datatypes). Alternativ können Sie auch auf das Handbuch [XDM-Komponenten ](../ui/explore.md) zugreifen, wenn Sie lieber Ansichten in der Benutzeroberfläche vornehmen möchten.
 
 ### Feld
 
@@ -242,6 +244,13 @@ Weitere Informationen zum Arbeiten mit [!DNL Profile] finden Sie unter [Übersic
 
 Alle Datendateien, die in [!DNL Experience Platform] eingeschlossen werden, müssen der Struktur eines XDM-Schemas entsprechen. Weitere Informationen zum Formatieren von Datendateien mit XDM-Hierarchien (einschließlich Beispieldateien) finden Sie im Dokument zu [Beispiel-ETL-Transformationen](../../etl/transformations.md). Allgemeine Informationen zum Einfügen von Datendateien in [!DNL Experience Platform] finden Sie unter [Überblick über die Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md).
 
+## Schema für externe Segmente
+
+Wenn Sie Segmente aus externen Systemen in Platform integrieren, müssen Sie diese mit den folgenden Komponenten in Ihren Schemas erfassen:
+
+* [[!UICONTROL Segment-] Definitionsklasse](../classes/segment-definition.md): Verwenden Sie diese Standardklasse, um Schlüsselattribute einer externen Segmentdefinition zu erfassen.
+* [[!UICONTROL Details ] zum Segmentmanagement](../mixins/profile/segmentation.md): hinzufügen Sie diese Mischung mit Ihrem  [!UICONTROL XDM Individual ] Profileschema, um Kundensegmente mit bestimmten Segmenten zu verbinden.
+
 ## Nächste Schritte
 
 Jetzt, da Sie die Grundlagen der Schema-Komposition verstehen, können Sie mit dem [!DNL Schema Registry] beginnen, Schema zu erkunden und zu bauen.
@@ -259,7 +268,19 @@ Um mit der [!DNL Schema Registry]-API zu beginnen, lesen Sie den Beginn im [Sche
 
 ## Anhang
 
-Der folgende Abschnitt enthält weitere Informationen zu den Grundsätzen der Zusammensetzung des Schemas.
+Die folgenden Abschnitte enthalten zusätzliche Informationen zu den Grundsätzen der Zusammensetzung des Schemas.
+
+### Relationale Tabellen versus eingebettete Objekte {#embedded}
+
+Bei der Arbeit mit relationalen Datenbanken bestehen die Best Practices darin, Daten zu normalisieren oder eine Entität in diskrete Teile zu zerlegen, die dann in mehreren Tabellen angezeigt werden. Um die Daten als Ganzes zu lesen oder die Entität zu aktualisieren, müssen Lese- und Schreibvorgänge über viele einzelne Tabellen mit JOIN durchgeführt werden.
+
+Durch den Einsatz von eingebetteten Objekten können XDM-Schema komplexe Daten direkt darstellen und in eigenständigen Dokumenten mit einer hierarchischen Struktur speichern. Einer der Hauptvorteile dieser Struktur besteht darin, dass Sie damit die Daten abfragen können, ohne die Entität durch teure Verbindungen zu mehreren denormalisierten Tabellen rekonstruieren zu müssen. Es gibt keine Einschränkungen, wie viele Ebenen Ihre Schema-Hierarchie sein kann.
+
+### Schemas und Big Data {#big-data}
+
+Moderne digitale Systeme generieren enorme Mengen von Verhaltenssignalen (Transaktionsdaten, Weblogs, Internet der Dinge, Anzeige usw.). Diese Big-Data-Daten bieten außergewöhnliche Möglichkeiten zur Optimierung von Erlebnissen, sind aber aufgrund der Größe und Vielfalt der Daten schwierig zu nutzen. Um aus den Daten Nutzen zu ziehen, müssen Struktur, Format und Definitionen standardisiert werden, damit sie konsistent und effizient verarbeitet werden können.
+
+Schemas lösen dieses Problem, indem sie die Integration von Daten aus mehreren Quellen, die Standardisierung durch gemeinsame Strukturen und Definitionen und die lösungsübergreifende gemeinsame Nutzung ermöglichen. Dadurch können nachfolgende Prozesse und Dienste jede Art von Frage beantworten, die von den Daten gestellt wird, und sich von dem herkömmlichen Ansatz zur Datenmodellierung abwenden, bei dem alle Fragen, die an die Daten gestellt werden, im Voraus bekannt sind und die Daten modelliert werden, um diesen Erwartungen zu entsprechen.
 
 ### Objekte gegen Freiformfelder {#objects-v-freeform}
 
@@ -296,4 +317,4 @@ Die Vor- und Nachteile der Verwendung von Freiformfeldern über Objekten sind un
 
 **Nachteile**:
 
-* Die Position von Freiformfeldern im Schema ist ad-hoc, d. h. sie werden in alphabetischer Reihenfolge im Schema-Editor angezeigt. Dies kann dazu führen, dass Schema weniger strukturiert sind und ähnliche Freiformfelder je nach Name weit voneinander getrennt werden.
+* Die Position von Freiformfeldern im Schema ist ad hoc, d. h. sie werden in alphabetischer Reihenfolge im Schema-Editor angezeigt. Dies kann dazu führen, dass Schema weniger strukturiert sind und ähnliche Freiformfelder je nach Name weit voneinander getrennt werden.
