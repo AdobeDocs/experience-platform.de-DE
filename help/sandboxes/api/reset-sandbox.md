@@ -5,7 +5,7 @@ title: Sandbox in der API zurücksetzen
 topic: Entwicklerhandbuch
 description: Sandboxes, die der Entwicklung dienen, verfügen über eine Funktion zum „Zurücksetzen auf Werkseinstellungen“, mit der alle nicht standardmäßigen Ressourcen aus einer Sandbox gelöscht werden. Sie können eine Sandbox zurücksetzen, indem Sie eine PUT anfordern, die den Namen der Sandbox im Anforderungspfad enthält.
 translation-type: tm+mt
-source-git-commit: ca3de18c093d7b692b582045afea4401d7133b9b
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 77%
@@ -37,6 +37,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
     "action": "reset"
