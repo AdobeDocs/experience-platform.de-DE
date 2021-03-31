@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierungsdienst;Segmentierungsdienst;Benutzerhandbuch;Segmentierungsleitfaden;Segmentaufbau;Segmentaufbau;Realisierung;Bestehend;Ausstieg;
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Segmentdienstes
-topic: ui guide
+topic: Handbuch
 description: Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 1634466d3a1d8eadc4c98bb93214d8772b6a47a3
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 23%
+source-wordcount: '1514'
+ht-degree: 22%
 
 ---
 
@@ -167,6 +167,12 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie im Benutzerhandbuch
 >[!NOTE]
 >
 >Damit Streaming-Segmentierung funktioniert, müssen Sie die geplante Segmentierung für das Unternehmen aktivieren. Weitere Informationen zum Aktivieren der geplanten Segmentierung finden Sie im Abschnitt [Streaming-Segmentierung in diesem Benutzerhandbuch](#scheduled-segmentation).
+
+## Kantensegmentierung {#edge-segmentation}
+
+Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
+
+Weitere Informationen zur Segmentierung der Edge finden Sie im [UI-Handbuch zur Segmentierung der Kante](./edge-segmentation.md)
 
 ## Rechtsverletzungen
 
