@@ -5,10 +5,10 @@ title: 'Ereignis in Echtzeit mit Streaming-Segmentierung bewerten '
 topic: Entwicklerhandbuch
 description: Dieses Dokument enthält Beispiele zur Verwendung der Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service API.
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: bb7edcaccca87918c56d00e092e4b7154d7c5d6e
 workflow-type: tm+mt
-source-wordcount: '1341'
-ht-degree: 46%
+source-wordcount: '1342'
+ht-degree: 44%
 
 ---
 
@@ -403,6 +403,6 @@ Derselbe Vorgang kann zum Deaktivieren eines Zeitplans verwendet werden, indem d
 
 ## Nächste Schritte
 
-Nachdem Sie sowohl neue als auch vorhandene Segmente für Streaming-Segmentierung und die geplante Segmentierung aktiviert haben, um eine Grundlinie zu entwickeln und wiederkehrende Auswertungen auszuführen, können Sie mit der Erstellung von Segmenten für Ihre Organisation beginnen.
+Nachdem Sie jetzt sowohl neue als auch vorhandene Segmente für die Streaming-Segmentierung aktiviert und die geplante Segmentierung aktiviert haben, um eine Grundlinie zu entwickeln und wiederkehrende Bewertungen durchzuführen, können Sie mit der Erstellung Streaming-fähiger Segmente für Ihr Unternehmen beginnen.
 
 Weiterführende Informationen zum Durchführen ähnlicher Aktionen und zum Verwenden von Segmenten unter Einsatz der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
