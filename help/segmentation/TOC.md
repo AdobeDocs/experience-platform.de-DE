@@ -6,10 +6,10 @@ breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
 feature: Segmente
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5839ab36a7d8f992e92c7f9eff8c58459c4c3260
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 75%
+source-wordcount: '162'
+ht-degree: 74%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 75%
 - Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
+   - [Kantensegmentierung](api/edge-segmentation.md)
    - [Exportaufträge](api/export-jobs.md)
    - [Vorschauen und Schätzungen](api/previews-and-estimates.md)
    - [Zeitpläne](api/schedules.md)
@@ -32,6 +33,7 @@ ht-degree: 75%
    - [Übersicht](ui/overview.md)
    - [Segment-Dashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
+   - [Kantensegmentierung](ui/edge-segmentation.md)
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
    - [Streaming-Segmentierung (Video)](video/streaming-segmentation-overview.md)
    - [Umgestaltung von Zeitbeschränkungen](ui/segment-refactoring.md)
