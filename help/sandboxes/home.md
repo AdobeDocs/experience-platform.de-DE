@@ -5,10 +5,10 @@ title: Übersicht über Sandboxen
 topic: Übersicht
 description: Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen.
 translation-type: tm+mt
-source-git-commit: ee2fb54ba59f22a1ace56a6afd78277baba5271e
+source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 78%
+source-wordcount: '756'
+ht-degree: 88%
 
 ---
 
@@ -23,13 +23,9 @@ Dieses Dokument bietet einen Überblick über Sandboxes in Experience Platform.
 
 ## Sandboxes
 
->[!NOTE]
->
->Die Funktion &quot;Mehrere Produktions-Sandboxen&quot;befindet sich in der Betaphase.
+Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Eine Experience Platform-Instanz unterstützt eine Produktions-Sandbox sowie mehrere Nicht-Produktions-Sandboxes, wobei jede Sandbox eine eigene, unabhängige Bibliothek mit Platform-Ressourcen (einschließlich Schemas, Datensätzen, Profilen usw.) unterhält.  Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus.
 
-Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Eine Experience Platform-Instanz unterstützt mehrere Produktions- und Nicht-Produktions-Sandboxen, wobei jede Sandbox eine eigene, unabhängige Bibliothek mit Plattformressourcen (einschließlich Schemas, Datensätzen, Profilen usw.) unterhält. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus.
-
-Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen sowohl Produktions- als auch Nicht-Produktions-Sandboxen über eine Reset-Funktion, mit der alle vom Kunden erstellten Ressourcen aus der Sandbox entfernt werden. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Mit diesen zusätzlichen Sandboxen können sowohl Produktions- als auch Nicht-Produktionssandboxes erstellt werden. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
+Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
 
 >[!NOTE]
 >
@@ -45,7 +41,7 @@ Zusammenfassend kann man sagen, dass Sandboxes folgende Vorteile bieten:
 
 Standardmäßig haben alle Benutzer einer Organisation Zugriff auf eine Produktions-Sandbox. Der Zugriff auf Nicht-Produktions-Sandboxes muss über die [Adobe Admin Console](https://adminconsole.adobe.com) von einem Systemadministrator, Produktadministrator oder Produktprofiladministrator gewährt werden.
 
-Um Produktions- und Nicht-Produktions-Sandboxen Ansicht, zu erstellen, zu aktualisieren oder zu löschen, müssen den Benutzern außerdem Sandbox-Administratorberechtigungen gewährt werden.
+Um Nicht-Produktions-Sandboxes anzuzeigen, zu erstellen, zu aktualisieren oder zu löschen, müssen Benutzer außerdem Sandbox-Administratorberechtigungen erhalten.
 
 Weiterführende Informationen zum Verwalten von Rollen und Berechtigungen für Sandboxes finden Sie unter [Zugriffskontrolle – Übersicht](../access-control/home.md).
 
