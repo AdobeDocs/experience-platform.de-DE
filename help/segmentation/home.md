@@ -5,10 +5,10 @@ title: Übersicht über den Segmentdienst
 topic: Übersicht
 description: Erfahren Sie mehr über den Adobe Experience Platform Segmentation Service und seine Rolle im Plattform-Ökosystem.
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 8%
+source-wordcount: '1499'
+ht-degree: 7%
 
 ---
 
@@ -58,6 +58,8 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Streaming-S
 ### Stapelsegmentierung
 
 Als Alternative zu einem laufenden Datenauswahlprozess verschiebt die Stapelsegmentierung alle Profil-Daten gleichzeitig durch Segmentdefinitionen, um entsprechende Audiencen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert und gespeichert, damit Sie es zur Verwendung exportieren können.
+
+Segmente, die mit der Stapelsegmentierung ausgewertet werden, werden alle 24 Stunden ausgewertet. Bei vorhandenen Segmenten hält die inkrementelle Segmentierung die Auswertung von Segmenten mithilfe der Stapelsegmentierung jedoch bis zu einer Stunde lang an. Alle neuen oder kürzlich geänderten Segmente müssen warten, bis der nächste vollständige Stapelsegmentierungsauftrag ausgeführt wurde, um die Vorteile der inkrementellen Segmentierung zu nutzen.
 
 Informationen zur Bewertung von Segmenten finden Sie im Lehrgang [Segmentbewertung](./tutorials/evaluate-a-segment.md).
 
@@ -111,7 +113,7 @@ Diese erweiterten Funktionen werden in den folgenden Abschnitten ausführlicher 
 
 ## Sequenzielle Segmentierung {#sequential}
 
-Eine Standard-Journey ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, die diese Journey widerspiegelt, und dabei Ereignis-Sequenzen erfassen. Sie können die Ereignis in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in [!DNL Segment Builder] verwenden.
+Eine Standard-Journey ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, die diese Journey widerspiegelt. Dadurch werden Sequenzen von Ereignissen beim Auftreten erfasst. Sie können die Ereignis in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in [!DNL Segment Builder] verwenden.
 
 Ein Beispiel für eine Journey eines Kunden, für die eine sequenzielle Segmentierung erforderlich wäre, wäre die Ansicht des Produkts > Hinzufügen des Produkts > Kassengang > Kein Kauf.
 
@@ -137,7 +139,7 @@ Indem Sie dem Attribut &quot;Kaufstatus&quot;eine Variable zuweisen, wird Ihr dy
 
 ## Segmentierung mit mehreren Entitäten {#multi-entity}
 
-Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten haben Sie die Möglichkeit, [!DNL Real-time Customer Profile]-Daten um zusätzliche Daten zu erweitern, die auf Produkten, Stores oder anderen Nicht-Personen basieren, auch als &quot;Dimensionsentitäten&quot;bezeichnet. Daher kann [!DNL Segmentation Service] während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im [!DNL Profile]-Datenspeicher. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Audiencen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Handbuch zur Segmentierung mehrerer Entitäten](multi-entity-segmentation.md).
+Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie [!DNL Real-time Customer Profile]-Daten um zusätzliche Daten erweitern, die auf Produkten, Stores oder anderen Nicht-Personen basieren, die auch als &quot;Dimensionsentitäten&quot;bezeichnet werden. Daher kann [!DNL Segmentation Service] während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im [!DNL Profile]-Datenspeicher. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Audiencen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Handbuch zur Segmentierung mehrerer Entitäten](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] Datentypen
 
