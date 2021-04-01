@@ -5,9 +5,9 @@ title: Übersicht über den Segmentdienst
 topic: Übersicht
 description: Erfahren Sie mehr über den Adobe Experience Platform Segmentation Service und seine Rolle im Plattform-Ökosystem.
 translation-type: tm+mt
-source-git-commit: 738256021fb583e7dc14fd33f5df193813a6e0bb
+source-git-commit: eff833f20eba4e51579a43fbb98c1e2333e326ef
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1581'
 ht-degree: 7%
 
 ---
@@ -47,7 +47,7 @@ Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Le
 
 ## Segmente bewerten
 
-Die Plattform unterstützt derzeit zwei Methoden zur Bewertung von Segmenten: Streaming-Segmentierung und Stapelsegmentierung.
+Die Plattform unterstützt derzeit drei Methoden zur Bewertung von Segmenten: Streaming-Segmentierung, Stapelsegmentierung und Kantensegmentierung.
 
 ### Streaming-Segmentierung
 
@@ -59,7 +59,15 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Streaming-S
 
 Als Alternative zu einem laufenden Datenauswahlprozess verschiebt die Stapelsegmentierung alle Profil-Daten gleichzeitig durch Segmentdefinitionen, um entsprechende Audiencen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert und gespeichert, damit Sie es zur Verwendung exportieren können.
 
-Segmente, die mit der Stapelsegmentierung ausgewertet werden, werden alle 24 Stunden ausgewertet. Bei vorhandenen Segmenten hält die inkrementelle Segmentierung die Auswertung von Segmenten mithilfe der Stapelsegmentierung jedoch bis zu einer Stunde lang an. Alle neuen oder kürzlich geänderten Segmente müssen warten, bis der nächste vollständige Stapelsegmentierungsauftrag ausgeführt wurde, um die Vorteile der inkrementellen Segmentierung zu nutzen.
+**Inkrementelle Segmentierung (Beta)**
+
+Stapelsegmente werden alle 24 Stunden ausgewertet. Bei vorhandenen Segmenten hält die inkrementelle Segmentierung Segmente jedoch bis zu einer Stunde frisch.
+
+Die inkrementelle Segmentierung wird mit neuen Daten ausgeführt, die in den Profil Store gelangen. Für die inkrementelle Segmentierung gelten jedoch die folgenden Einschränkungen:
+
+- Bei neuen oder kürzlich geänderten Segmenten werden Profil mit neuen Daten im nächsten inkrementellen Beginn qualifiziert. Profil ohne Änderungen werden jedoch im nächsten vollständigen Stapelsegmentierungsauftrag nachgeholt.
+- Segmente mit mehreren Entitäten werden in der inkrementellen Segmentierung aktualisiert. Wenn Entitätsaktualisierungen vorhanden sind, werden Profil mit neuen Daten im nächsten inkrementellen Beginn verwendet. Profil ohne Änderungen werden jedoch im nächsten vollständigen Stapelsegmentierungsauftrag nachgeholt.
+- Ereignis, die das Zeitfenster eines Segments verlassen, werden im nächsten vollständigen Stapelsegmentierungsauftrag abgeglichen.
 
 Informationen zur Bewertung von Segmenten finden Sie im Lehrgang [Segmentbewertung](./tutorials/evaluate-a-segment.md).
 
