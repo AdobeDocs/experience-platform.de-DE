@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 solution: Experience Platform
 title: Übersicht über die Datenvorbereitung
-topic: overview
+topic: Übersicht
 description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Platform ein.
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 0%
+source-wordcount: '352'
+ht-degree: 1%
 
 ---
 
@@ -37,4 +37,4 @@ Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, werden koll
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zu den verschiedenen Datums-Uhrzeit-Zeichenfolgen finden Sie im Handbuch [Datums-Zeichenfolgen](./dates.md).
+In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zu den verschiedenen Datums-Uhrzeit-Zeichenfolgen finden Sie im Handbuch [Datums-Zeichenfolgen](./dates.md). Informationen zur Verwendung der Data Prep API finden Sie im [Data Prep Developer Guide](api/overview.md).
