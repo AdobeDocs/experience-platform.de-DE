@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;Kantensegmentierung;Segmentie
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Edge-Segmentierung
 topic: Handbuch
-description: 'Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind. '
+description: Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
+exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 7eadb14dc71792174dfd750775148763f55834dd
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '339'
 ht-degree: 2%
 
 ---
-
 
 # Handbuch zur Benutzeroberfläche für die Edge-Segmentierung
 
@@ -25,8 +25,8 @@ Eine Abfrage kann mit der Kantensegmentierung bewertet werden, wenn sie eines de
 | ---------- | ------- | ------- |
 | Eingehender Treffer | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Eingehender Treffer, der sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profil-Attribute bezieht. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Häufigkeitsangaben Abfrage | Eine Segmentdefinition, die auf ein Ereignis verweist, das eine bestimmte Anzahl von Malen ausgeführt wird. |  |
-| Abfrage der Häufigkeit, die auf ein Profil verweist | Eine Segmentdefinition, die sich auf ein Ereignis bezieht, das eine bestimmte Anzahl von Malen passiert und eines oder mehrere Profil-Attribute aufweist. |  |
+| Häufigkeitsangaben Abfrage | Eine Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen ausgeführt wird. |  |
+| Abfrage der Häufigkeit, die auf ein Profil verweist | Eine Segmentdefinition, die sich auf ein Ereignis bezieht, das mindestens eine bestimmte Anzahl von Malen passiert und eines oder mehrere Profil-Attribute aufweist. |  |
 
 Wenn die Abfrage mit einem der oben genannten Segmenttypen übereinstimmt, können Sie sie für die Kantensegmentierung aktivieren, indem Sie den Umschalter **[!UICONTROL Als Streaming-Abfrage am Rand]** einschalten.
 
