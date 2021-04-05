@@ -4,14 +4,14 @@ title: Ziel einer Cloud-Datenspeicherung erstellen
 type: Tutorial
 description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 632003773100ec8ef0389840695a1c75a1aa663d
+source-git-commit: 1e33a7b48e20d7afe9f10b206a6fd68433b205db
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 29%
+source-wordcount: '617'
+ht-degree: 24%
 
 ---
-
 
 # Ziel einer Cloud-Datenspeicherung erstellen
 
@@ -35,9 +35,9 @@ Weitere Informationen zu den Anmeldeinformationen im Schritt **Authentifizierung
 
 >[!NOTE]
 >
->Plattform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen an Ihrem Speicherort für die Cloud-Datenspeicherung eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldeinformationen abschließen.
+>Plattform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen an Ihrem Speicherort für die Cloud-Datenspeicherung eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldedaten ausführen.
 
-![Mit dem Cloud-Speicher-Ziel verbinden – Authentifizierungsschritt](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Link zum Ziel der Cloud-Datenspeicherung - Kontoschritt](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## Authentifizierungsschritt {#authentication}
 
@@ -61,7 +61,35 @@ Geben Sie für [!DNL Azure Event Hubs]-Ziele den Namen Ihres vorhandenen Datenst
 
 ![Verbindung zum Ziel der Ereignis-Hubs-Cloud-Datenspeicherung - Authentifizierungsschritt](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)
 
-Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen finden Sie im nächsten Abschnitt [Segmente aktivieren](#activate-segments) Informationen zum Export von Daten durch den restlichen Workflow.
+Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. Lesen Sie den Abschnitt [Segmente aktivieren](#activate-segments), damit der Rest des Workflows Daten exportieren kann.
+
+## Verwenden Sie Makros, um einen Ordner in Ihrer Datenspeicherung zu erstellen.{#use-macros}
+
+Um einen benutzerdefinierten Ordner pro Segmentdatei im Speicherort der Datenspeicherung zu erstellen, können Sie Makros im Ordnerpfadeingabefeld verwenden. Fügen Sie die Makros wie unten dargestellt am Ende des Eingabefelds ein.
+
+![Verwenden von Makros zum Erstellen eines Ordners in Ihrer Datenspeicherung](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
+
+Die folgenden Beispiele verweisen auf ein Beispielsegment `Luxury Audience` mit ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+### Makro 1 - `%SEGMENT_NAME%`
+
+Eingabe: `acme/campaigns/2021/%SEGMENT_NAME%`
+
+Ordnerpfad im Speicherort der Datenspeicherung: `acme/campaigns/2021/Luxury Audience`
+
+### Makro 2 - `%SEGMENT_ID%`
+
+Eingabe: `acme/campaigns/2021/%SEGMENT_ID%`
+
+Ordnerpfad im Speicherort der Datenspeicherung: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### Makro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Eingabe: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Ordnerpfad im Speicherort der Datenspeicherung: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Aktivieren von Segmenten {#activate-segments}
 
