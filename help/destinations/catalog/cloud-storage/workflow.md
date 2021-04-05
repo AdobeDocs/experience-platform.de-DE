@@ -6,10 +6,10 @@ description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 seo-description: Anleitung zum Herstellen einer Verbindung zu Ihren Cloud-Speichern
 exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 translation-type: tm+mt
-source-git-commit: 7bb862c4c6c52c42e45d5e736fa6d239e812ac2c
+source-git-commit: ecda1f1c4a2829124aedaae2395a74e54929c7ad
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 24%
+source-wordcount: '631'
+ht-degree: 23%
 
 ---
 
@@ -64,6 +64,10 @@ Geben Sie für [!DNL Azure Event Hubs]-Ziele den Namen Ihres vorhandenen Datenst
 Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. Lesen Sie den Abschnitt [Segmente aktivieren](#activate-segments), damit der Rest des Workflows Daten exportieren kann.
 
 ## Verwenden Sie Makros, um einen Ordner in Ihrer Datenspeicherung zu erstellen.{#use-macros}
+
+>[!NOTE]
+>
+> Die in diesem Abschnitt beschriebene Funktionalität steht derzeit nur für [Amazon S3](./amazon-s3.md)-Ziele zur Verfügung.
 
 Um einen benutzerdefinierten Ordner pro Segmentdatei im Speicherort der Datenspeicherung zu erstellen, können Sie Makros im Ordnerpfadeingabefeld verwenden. Fügen Sie die Makros wie unten dargestellt am Ende des Eingabefelds ein.
 
