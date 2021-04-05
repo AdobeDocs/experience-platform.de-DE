@@ -3,14 +3,14 @@ title: Automatisch zugeordnete Adobe Analytics-Variablen im Adobe Experience Pla
 description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
 seo-description: Erfahren Sie, welche Variablen in Adobe Analytics mit dem Adobe Experience Platform Web SDK automatisch zugeordnet werden.
 keywords: adobe analytics;variables;analytics;automate map;automatisch zugeordnet;
+exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '684'
 ht-degree: 35%
 
 ---
-
 
 # Variablen werden automatisch in [!DNL Analytics] zugeordnet
 
@@ -103,3 +103,5 @@ Nachfolgend finden Sie eine Liste von Variablen, die Adobe Experience Platform E
 | `web.webPageDetails.server` | `sv` | AppMeasurement Abfrageparameter, USER_SERVER-Zuordnung. |
 | `web.webPageDetails.siteSection` | `ch` | AppMeasurement Abfrage-Parameterzuordnung für KANAL. |
 | `web.webReferrer.URL` | `r` | AppMeasurement Abfrageparameter, REFERRER-Zuordnung. |
+
+{style=&quot;table-layout:auto&quot;}
