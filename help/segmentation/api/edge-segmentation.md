@@ -4,14 +4,14 @@ solution: Experience Platform
 title: 'Edge-Segmentierung mit der API '
 topic: Entwicklerhandbuch
 description: Dieses Dokument enthält Beispiele zur Verwendung der Segmentierung mit der Adobe Experience Platform Segmentation Service API.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 0c4625ec0728c8c94b72e3e16e7ecf45ea2d0c0b
+source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '636'
 ht-degree: 10%
 
 ---
-
 
 # Kantensegmentierung
 
@@ -39,8 +39,8 @@ Damit ein Segment mithilfe der Kantensegmentierung bewertet werden kann, muss di
 | ---------- | ------- |
 | Eingehender Treffer | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
 | Eingehender Treffer, der sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profil-Attribute bezieht. |
-| Häufigkeitsangaben Abfrage | Eine Segmentdefinition, die auf ein Ereignis verweist, das eine bestimmte Anzahl von Malen ausgeführt wird. |
-| Abfrage der Häufigkeit, die auf ein Profil verweist | Eine Segmentdefinition, die sich auf ein Ereignis bezieht, das eine bestimmte Anzahl von Malen passiert und eines oder mehrere Profil-Attribute aufweist. |
+| Häufigkeitsangaben Abfrage | Eine Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen ausgeführt wird. |
+| Abfrage der Häufigkeit, die auf ein Profil verweist | Eine Segmentdefinition, die sich auf ein Ereignis bezieht, das mindestens eine bestimmte Anzahl von Malen passiert und eines oder mehrere Profil-Attribute aufweist. |
 
 {style=&quot;table-layout:auto&quot;}
 
