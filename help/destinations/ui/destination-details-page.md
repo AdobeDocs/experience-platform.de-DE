@@ -2,15 +2,15 @@
 keywords: Ziele;Ziel;Ziel;Detailseite der Ziele;Detailseite der Ziele
 title: Ansichten-Zieldetails
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
-seo-description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses. '
+seo-description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung sowie zum Aktivieren und Deaktivieren des Datenflusses.
+exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 translation-type: tm+mt
-source-git-commit: 4f5e7dfee17b2dde371efb82cf52d91c08696f39
+source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '651'
 ht-degree: 5%
 
 ---
-
 
 # Ansichten-Zieldetails
 
@@ -20,29 +20,37 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie die Attribute u
 
 >[!NOTE]
 >
->Die Seite mit den Details zu Zielen ist Teil des Arbeitsbereichs [!UICONTROL Ziele] in der Plattform-Benutzeroberfläche. Weitere Informationen finden Sie unter [[!UICONTROL Ziele] Arbeitsbereichübersicht](./destinations-workspace.md).
+>Die Seite mit den Details zu Zielen ist Teil des Arbeitsbereichs [!UICONTROL Ziele] im [!DNL Platform] [!DNL UI]. Weitere Informationen finden Sie unter [[!UICONTROL Ziele] Arbeitsbereichübersicht](./destinations-workspace.md).
 
-Navigieren Sie im Arbeitsbereich **[!UICONTROL Ziele]** der Plattform-Benutzeroberfläche zur Registerkarte **[!UICONTROL Durchsuchen]** und wählen Sie den Namen des Ziels aus, das Sie Ansicht haben möchten.
+## Ansicht-Zieldetails {#view-details}
 
-![](../assets/ui/details-page/select-destination.png)
+Gehen Sie wie folgt vor, um weitere Informationen zu einem vorhandenen Ziel Ansicht.
 
-Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeigt. Wenn Sie die Details eines Stapelziels anzeigen, wird auch ein Dashboard zur Überwachung angezeigt.
+1. Melden Sie sich bei [Experience Platform UI](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** in der linken Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile, um Ihre bestehenden Ziele Ansicht.
 
-![](../assets/ui/details-page/details.png)
+   ![Ziele durchsuchen](../assets/ui/details-page/browse-destinations.png)
 
-Darüber hinaus können Sie auf der Registerkarte &quot;Durchsuchen&quot;den ausgewählten Datenfluss löschen, indem Sie das Symbol ![Papierkorb](../assets/ui/details-page/trash-icon.png) auswählen. Alle Segmente, die für Ziele aktiviert wurden, werden vor dem Löschen des Datenflusses nicht zugeordnet.
+1. Wählen Sie oben links das Filtersymbol ![Filtersymbol](../assets/ui/details-page/filter.png) aus, um das Sortierfeld zu starten. Der Bereich &quot;Sortieren&quot;enthält eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl an Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
-![](../assets/ui/details-page/delete-flow.png)
+   ![Ziele filtern](../assets/ui/details-page/filter-destinations.png)
+
+1. Wählen Sie den Namen des Ziels aus, das Sie Ansichten vornehmen möchten.
+
+   ![Ziel auswählen](../assets/ui/details-page/destination-select.png)
+
+1. Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeigt. Wenn Sie die Details eines Stapelziels anzeigen, wird auch ein Dashboard zur Überwachung angezeigt.
+
+   ![Zieldetails](../assets/ui/details-page/destination-details.png)
 
 ## Rechte Leiste
 
-Die rechte Leiste zeigt die grundlegenden Informationen zum Ziel an.
+Die rechte Leiste zeigt die grundlegenden Informationen zum ausgewählten Ziel an.
 
-![](../assets/ui/details-page/right-rail.png)
+![rechte Schiene](../assets/ui/details-page/right-sidebar.png)
 
 Die folgende Tabelle enthält die Kontrollen und Einzelheiten der rechten Leiste:
 
-| Rechtsschiene | Beschreibung |
+| Rechte Leiste | Beschreibung |
 | --- | --- |
 | [!UICONTROL Aktivieren] | Wählen Sie dieses Steuerelement aus, um zu bearbeiten, welche Segmente dem Ziel zugeordnet werden. Weitere Informationen finden Sie im Handbuch [Aktivieren von Segmenten in ein Ziel](./activate-destinations.md). |
 | [!UICONTROL Löschen] | Ermöglicht das Löschen dieses Datenflusses und die Aufhebung der Zuordnung der zuvor aktivierten Segmente, sofern vorhanden. |
@@ -52,8 +60,8 @@ Die folgende Tabelle enthält die Kontrollen und Einzelheiten der rechten Leiste
 | [!UICONTROL Status] | Gibt an, ob das Ziel aktiviert oder deaktiviert ist. |
 | [!UICONTROL Marketing-Aktionen] | Zeigt die Marketingaktionen (Anwendungsfälle) an, die für dieses Ziel zu Zwecken der Datenverwaltung gelten. |
 | [!UICONTROL Kategorie] | Gibt den Zieltyp an. Weitere Informationen finden Sie im Katalog [Ziele](../catalog/overview.md). |
-| [!UICONTROL Verbindungstyp] | Gibt das Formular an, mit dem Ihre Audiencen an das Ziel gesendet werden. Mögliche Werte sind &quot;[!UICONTROL Cookie]&quot;und &quot;[!UICONTROL Profil-basiert]&quot;. |
-| [!UICONTROL Häufigkeit] | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Mögliche Werte sind &quot;[!UICONTROL Streaming]&quot;und &quot;[!UICONTROL Batch]&quot;. |
+| [!UICONTROL Verbindungstyp] | Gibt das Formular an, mit dem Ihre Audiencen an das Ziel gesendet werden. Mögliche Werte sind [!UICONTROL Cookie] und [!UICONTROL Profil-basiert]. |
+| [!UICONTROL Häufigkeit] | Gibt an, wie oft die Zielgruppen an das Ziel gesendet werden. Mögliche Werte sind [!UICONTROL Streaming] und [!UICONTROL Stapel]. |
 | [!UICONTROL Identität] | Stellt den vom Ziel akzeptierten Identitäts-Namensraum dar, z. B. `GAID`, `IDFA` oder `email`. Weitere Informationen zu akzeptierten Identitäts-Namensräumen finden Sie unter [Übersicht über Identitäts-Namensraum](../../identity-service/namespaces.md). |
 | [!UICONTROL Erstellt von] | Gibt den Benutzer an, der dieses Ziel erstellt hat. |
 | [!UICONTROL Erstellt] | Gibt die UTC-Zeit an, zu der dieses Ziel erstellt wurde. |
@@ -64,35 +72,18 @@ Die folgende Tabelle enthält die Kontrollen und Einzelheiten der rechten Leiste
 
 Sie können den Umschalter **[!UICONTROL Aktiviert]/[!UICONTROL Deaktiviert]** verwenden und alle Datenexporte an das Ziel anhalten.
 
-![](../assets/ui/details-page/enable-disable.png)
+![Deaktivieren](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Datenaflow-Ausführung]
 
-Die Registerkarte [!UICONTROL Datenaflow-Ausführung] enthält Metrikdaten zu Ihren Datenaflow-Aufrufen zu Stapelzielen. Es wird eine Liste der einzelnen Vorgänge und der zugehörigen Metriken sowie die folgenden Summen für Profil-Datensätze angezeigt:
-
-* **[!UICONTROL Profil-Datensätze aktiviert]**: Die Gesamtanzahl der Profil-Datensätze, die zur Aktivierung erstellt oder aktualisiert wurden.
-* **[!UICONTROL Profil-Datensätze übersprungen]**: Die Gesamtanzahl der Profil-Datensätze, die aufgrund von Profil-Ausstiegen oder fehlenden Attributen für die Aktivierung übersprungen werden.
-
-![](../assets/ui/details-page/dataflow-runs.png)
-
->[!NOTE]
->
->Dataflow-Ausläufe werden basierend auf der Häufigkeit des Planvorgangs des Zieldatafloms generiert. Für jede auf ein Segment angewendete Zusammenführungsrichtlinie wird ein separater Datendurchlauf ausgeführt.
-
-Um die Details eines bestimmten Datenflusses Ansicht, wählen Sie die Ausführungszeit des Beginns aus der Liste aus. Die Detailseite für einen Datenfluss enthält weitere Informationen, wie z. B. die Größe der verarbeiteten Daten und eine Liste der Fehler, die bei der Fehlerdiagnose aufgetreten sind.
-
-![](../assets/ui/details-page/dataflow.png)
+Die Registerkarte [!UICONTROL Datenaflow-Ausführung] enthält Metrikdaten zu Ihren Datenaflow-Aufrufen zu Stapelzielen. Weitere Informationen finden Sie unter [Monitordataflows](monitor-dataflows.md).
 
 ## [!UICONTROL Aktivierungen] {#activation-data}
 
 Auf der Registerkarte [!UICONTROL Aktivierung data] wird eine Liste von Segmenten angezeigt, die dem Ziel zugeordnet wurden, einschließlich des Beginn- und Enddatums (falls zutreffend). Um die Details zu einem bestimmten Segment Ansicht, wählen Sie dessen Namen in der Liste aus.
 
-![](../assets/ui/details-page/activation-data.png)
+![Aktivierungen](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
 >Weitere Informationen zum Erforschen der Detailseite eines Segments finden Sie in der [Übersicht über die Segmentierungsoberfläche](../../segmentation/ui/overview.md#segment-details).
-
-## Nächste Schritte
-
-In diesem Dokument wurden die Funktionen der Seite mit den Zieldetails behandelt. Weitere Informationen zum Verwalten von Zielen in der Benutzeroberfläche finden Sie in der Übersicht auf der Arbeitsfläche [[!UICONTROL Ziele].](./destinations-workspace.md)
