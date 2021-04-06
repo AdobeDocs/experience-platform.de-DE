@@ -4,7 +4,7 @@ title: Zielkonten aktualisieren
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche Liste
 translation-type: tm+mt
-source-git-commit: 6fd980b486c4a330f9188065bac55c624af584a1
+source-git-commit: e4afbdd6ff8f45ea8d5506f0228f0a80b44eee51
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 36%
@@ -21,7 +21,7 @@ Das Register **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die S
 ![Registerkarte „Konten“](../assets/ui/update-accounts/destination-accounts.png)
 
 | Element | Beschreibung |
----------|----------
+|---|---|
 | [!UICONTROL Plattform] | Das Ziel, für das Sie die Verbindung eingerichtet haben. |
 | [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp zu Ihrem Speicher-Bucket oder Ziel dar. <ul><li>Bei E-Mail-Marketing-Zielen: Kann S3 oder FTP sein.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li></ul> |
 | [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](../catalog/email-marketing/overview.md#connect-destination) ausgewählt haben. |
