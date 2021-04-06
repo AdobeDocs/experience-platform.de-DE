@@ -1,16 +1,16 @@
 ---
-keywords: Ziele löschen; Löschen von Zielen
+keywords: Löschen von Zielen
 title: Ziele löschen
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche Liste
+exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 translation-type: tm+mt
-source-git-commit: c7f01ce5667ad92e95f1576ff466b2a13338b54b
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 2%
 
 ---
-
 
 # Ziele löschen {#delete-destinations}
 
