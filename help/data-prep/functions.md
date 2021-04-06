@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Funktionen für die Datenvorlagenzuordnung
 topic: Übersicht
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
+exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 85a99171a6786b47bf50d4579a3ebc88af3c82f6
+source-git-commit: 21782ee74adfe97fa0a88f499d01393155691b29
 workflow-type: tm+mt
-source-wordcount: '3719'
+source-wordcount: '3793'
 ht-degree: 7%
 
 ---
-
 
 # Zuordnungsfunktionen für die Datenvorbereitung
 
@@ -44,13 +44,13 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | concat | Verkettet die angegebenen Zeichenfolgen. | <ul><li>STRING: Die zu verkettenden Zeichenfolgen.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| explode | Teilt die Zeichenfolge basierend auf einem Regex und gibt ein Array von Teilen zurück. Kann optional regex einschließen, um die Zeichenfolge zu teilen. Standardmäßig wird die Aufteilung in &quot;,&quot;aufgelöst. Die folgenden Trennzeichen **müssen mit `\` Escape-Zeichen versehen werden: `+, ?, ^, |, ., [, (, {, ), *, $, \`** | <ul><li>STRING: **Erforderlich** Die zu teilende Zeichenfolge.</li><li>REGEX: *Optional* Der reguläre Ausdruck, der zum Teilen der Zeichenfolge verwendet werden kann.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot;&quot;) | `["Hi,", "there"]` |
+| explode | Teilt die Zeichenfolge basierend auf einem Regex und gibt ein Array von Teilen zurück. Kann optional regex einschließen, um die Zeichenfolge zu teilen. Standardmäßig wird die Aufteilung in &quot;,&quot;aufgelöst. Die folgenden Trennzeichen **müssen mit `\` Escape-Zeichen versehen werden: `+, ?, ^, |, ., [, (, {, ), *, $, \` Wenn Sie mehrere Zeichen als Trennzeichen verwenden, wird das Trennzeichen als Trennzeichen für mehrere Zeichen behandelt.** | <ul><li>STRING: **Erforderlich** Die zu teilende Zeichenfolge.</li><li>REGEX: *Optional* Der reguläre Ausdruck, der zum Teilen der Zeichenfolge verwendet werden kann.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot;&quot;) | `["Hi,", "there"]` |
 | instr | Gibt die Position/den Index einer Unterzeichenfolge zurück. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die gesucht wird.</li><li>UNTERZEICHNUNG: **Erforderlich** Die Unterzeichenfolge, nach der in der Zeichenfolge gesucht wird.</li><li>Beginn_POSITION: *Optional* Die Position, an der der Beginn in der Zeichenfolge suchen soll.</li><li>AUFTRAG: *Optional* Das n-te Vorkommen, das von der Position des Beginns gesucht werden soll. Der Standardwert ist 1. </li></ul> | instr(INPUT, SUBSTRING, BEGINN_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | Ersatz | Ersetzt die Suchzeichenfolge, wenn sie in der ursprünglichen Zeichenfolge vorhanden ist. | <ul><li>INPUT: **Erforderlich** Die Eingabezeichenfolge.</li><li>TO_FIND: **Erforderlich** Die Zeichenfolge, die in der Eingabe nachgeschlagen werden soll.</li><li>TO_REPLACE: **Erforderlich** Die Zeichenfolge, die den Wert in &quot;TO_FIND&quot;ersetzt.</li></ul> | replace(INPUT, TO_FIND, TO_REPLACE) | replace(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;Dies ist ein String-Ersatz-Test&quot; |
 | substr | Gibt eine Teilzeichenfolge einer angegebenen Länge zurück. | <ul><li>INPUT: **Erforderlich** Die Eingabezeichenfolge.</li><li>Beginn_INDEX: **Erforderlich** Der Index der Eingabezeichenfolge, bei der die Unterzeichenfolge Beginn hat.</li><li>LÄNGE: **Erforderlich** Die Länge der Unterzeichenfolge.</li></ul> | substr(INPUT, BEGINN_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
 | lower /<br>lcase | Konvertiert eine Zeichenfolge in Kleinbuchstaben. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die in Kleinbuchstaben umgewandelt wird.</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | top /<br>ucase | Konvertiert eine Zeichenfolge in Großbuchstaben. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die in Großbuchstaben konvertiert wird.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | Teilt eine Eingabezeichenfolge auf einem Trennzeichen. Das folgende Trennzeichen **muss** mit `\` Escape-Zeichen versehen werden: `\`. | <ul><li>INPUT: **Erforderlich** Die Eingabezeichenfolge, die geteilt werden soll.</li><li>SEPARATOR: **Erforderlich** Die Zeichenfolge, die zum Teilen der Eingabe verwendet wird.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
+| split | Teilt eine Eingabezeichenfolge auf einem Trennzeichen. Das folgende Trennzeichen **muss** mit `\` Escape-Zeichen versehen werden: `\`. Wenn Sie mehrere Trennzeichen verwenden, wird die Zeichenfolge auf **beliebige** der in der Zeichenfolge vorhandenen Trennzeichen aufgeteilt. | <ul><li>INPUT: **Erforderlich** Die Eingabezeichenfolge, die geteilt werden soll.</li><li>SEPARATOR: **Erforderlich** Die Zeichenfolge, die zum Teilen der Eingabe verwendet wird.</li></ul> | split(INPUT, SEPARATOR) | split(&quot;Hello world&quot;, &quot;&quot;) | `["Hello", "world"]` |
 | join | Verbindet eine Liste von Objekten mit der Trennlinie. | <ul><li>SEPARATOR: **Erforderlich** Die Zeichenfolge, die zum Verbinden der Objekte verwendet wird.</li><li>OBJEKTE: **Erforderlich** Ein Array von Zeichenfolgen, die verbunden werden.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | Fügt die linke Seite einer Zeichenfolge mit der anderen angegebenen Zeichenfolge ein. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die hinzugefügt werden soll. Diese Zeichenfolge kann null sein.</li><li>COUNT: **Erforderlich** Die Größe der Zeichenfolge, die hinzugefügt werden soll.</li><li>HINZUFÜGEN: **Erforderlich** Die Zeichenfolge, mit der die Eingabe aufgefüllt werden soll. Wenn null oder leer, wird es als ein Leerzeichen behandelt.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzybat&quot; |
 | rpad | Fügt die rechte Seite einer Zeichenfolge mit der anderen angegebenen Zeichenfolge ein. | <ul><li>INPUT: **Erforderlich** Die Zeichenfolge, die hinzugefügt werden soll. Diese Zeichenfolge kann null sein.</li><li>COUNT: **Erforderlich** Die Größe der Zeichenfolge, die hinzugefügt werden soll.</li><li>HINZUFÜGEN: **Erforderlich** Die Zeichenfolge, mit der die Eingabe aufgefüllt werden soll. Wenn null oder leer, wird es als ein Leerzeichen behandelt.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -62,7 +62,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | gleich | Vergleicht zwei Zeichenfolgen, um sicherzustellen, dass sie gleich sind. Bei dieser Funktion wird zwischen Groß- und Kleinschreibung unterschieden. | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equals( &#x200B; STRING2) | &quot;string1&quot;. &#x200B;gleich &#x200B;(&quot;STRING1&quot;) | false |
 | equalsIgnoreCase | Vergleicht zwei Zeichenfolgen, um sicherzustellen, dass sie gleich sind. Bei dieser Funktion wird zwischen Groß- und Kleinschreibung unterschieden.**** | <ul><li>STRING1: **Erforderlich** Die erste Zeichenfolge, die Sie vergleichen möchten.</li><li>STRING2: **Erforderlich** Die zweite Zeichenfolge, die Sie vergleichen möchten.</li></ul> | STRING1. &#x200B;equalsIgnoreCase &#x200B;(STRING2) | &quot;string1&quot;. &#x200B;equalsIgnoreCase &#x200B;(&quot;STRING1) | wahr |
 
-&#x200B;
+{style=&quot;table-layout:auto&quot;}
 
 ### Regelmäßige Ausdruck-Funktionen
 
@@ -70,6 +70,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | extract_regex | Extrahiert auf Basis eines regulären Ausdrucks Gruppen aus der Eingabezeichenfolge. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, aus der Sie die Gruppen extrahieren.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem die Gruppe übereinstimmen soll.</li></ul> | extract_regex(STRING, REGEX) | extract_regex &#x200B;(&quot;E259,E259B_009,1_1&quot; &#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
 | match_regex | Überprüft, ob die Zeichenfolge mit dem eingegebenen regulären Ausdruck übereinstimmt. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die Sie überprüfen, stimmt mit dem regulären Ausdruck überein.</li><li>REGEX: **Erforderlich** Der reguläre Ausdruck, mit dem Sie vergleichen.</li></ul> | match_regex(STRING, REGEX) | match_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | wahr |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Hashfunktionen {#hashing}
 
@@ -85,6 +87,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | md5 | Erstellt mithilfe von MD5 eine Eingabe und einen Hashwert. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII. </li></ul> | md5(INPUT, CHARSET) | md5(&quot;my text&quot;, &quot;UTF-8&quot;) | d3b96ce8c9fb4 &#x200B; e9bd0198d03ba6852c7 |
 | crc32 | Eine Eingabe verwendet einen CRC-Algorithmus (zyklische Redundanzprüfung), um einen 32-Bit-zyklischen Code zu erzeugen. | <ul><li>INPUT: **Erforderlich** Der einfache Text, der mit Hashing versehen werden soll.</li><li>CHARSET: *Optional* Der Name des Zeichensatzes. Mögliche Werte sind UTF-8, UTF-16, ISO-8859-1 und US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32(&quot;my text&quot;, &quot;UTF-8&quot;) | 8df92e80 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### URL-Funktionen {#url}
 
 >[!NOTE]
@@ -98,6 +102,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | get_url_port | Gibt den Anschluss der angegebenen URL zurück. Wenn die Eingabe ungültig ist, gibt sie null zurück. | <ul><li>URL: **Erforderlich** Die URL, aus der der Anschluss extrahiert werden muss.</li></ul> | get_url_port(URL) | get_url_port &#x200B;(&quot;sftp://example.com//home/ &#x200B; joe/employee.csv&quot;) | 22 |
 | get_url_path | Gibt den Pfad der angegebenen URL zurück. Standardmäßig wird der vollständige Pfad zurückgegeben. | <ul><li>URL: **Erforderlich** Die URL, aus der der Pfad extrahiert werden muss.</li><li>FULL_PATH: *Optional* Ein boolescher Wert, der bestimmt, ob der vollständige Pfad zurückgegeben wird. Bei der Einstellung false wird nur das Ende des Pfads zurückgegeben.</li></ul> | get_url_path &#x200B;(URL, FULL_PATH) | get_url_path &#x200B;(&quot;sftp://example.com// &#x200B; home/joe/employee.csv&quot;) | &quot;//home/joe/ &#x200B; employee.csv&quot; |
 | get_url_Abfrage_str | Gibt die Abfrage-Zeichenfolge einer angegebenen URL zurück. | <ul><li>URL: **Erforderlich** Die URL, von der Sie die Abfrage-Zeichenfolge abrufen möchten.</li><li>ANCHOR: **Erforderlich** Legt fest, was mit dem Anker in der Abfrage-Zeichenfolge geschehen soll. Kann einer von drei Werten sein: &quot;behalten&quot;, &quot;entfernen&quot;oder &quot;anhängen&quot;.<br><br>Wenn der Wert &quot;keep&quot;ist, wird der Anker an den zurückgegebenen Wert angehängt.<br>Wenn der Wert &quot;remove&quot;ist, wird der Anker aus dem zurückgegebenen Wert entfernt.<br>Wenn der Wert &quot;append&quot;ist, wird der Anker als separater Wert zurückgegeben.</li></ul> | get_url_Abfrage_str &#x200B;(URL, ANCHOR) | get_url_Abfrage_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;preserve&quot;)<br>get_url_Abfrage_str &#x200B;(&quot;foo://example.com:8042 &#x200B;/over/there?name= &#x200B; ferret#nose&quot;, &quot;remove&quot;)<br>get_url_Abfrage_str &#x200B;(&quot;foo://example.com:8042/2 over/thereB?name=ferret#nose&quot;, &quot;append&quot;) | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Datums- und Uhrzeitfunktionen {#date-and-time}
 
@@ -120,6 +126,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | zone_date_to_utc | Konvertiert ein Datum in einer beliebigen Zeitzone in ein Datum in UTC. | <ul><li>DATUM: **Erforderlich** Das Datum, das konvertiert werden soll.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12.000000999-&#x200B;07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]` |
 | zone_date_to_zone | Konvertiert ein Datum aus einer Zeitzone in eine andere Zeitzone. | <ul><li>DATUM: **Erforderlich** Das Datum, das konvertiert werden soll.</li><li>ZONE: **Erforderlich** Die Zeitzone, in die Sie das Datum konvertieren möchten.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:12&#x200B;.000000999-07:00&#x200B;[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]` |
 
+{style=&quot;table-layout:auto&quot;}
 &#x200B;
 
 ### Hierarchien - Objekte {#objects}
@@ -138,6 +145,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | is_set | Überprüft, ob das Objekt in den Quelldaten vorhanden ist. | <ul><li>INPUT: **Erforderlich** Der zu prüfende Pfad, falls er in den Quelldaten vorhanden ist.</li></ul> | is_set(INPUT) | is_set &#x200B;(&quot;evars.evar.field1&quot;) | wahr |
 | nullify | Legt den Wert des Attributs auf `null` fest. Dies sollte verwendet werden, wenn Sie das Feld nicht in das Schema Zielgruppe kopieren möchten. |  | nullify() | nullify() | `null` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Hierarchien - Arrays {#arrays}
 
 >[!NOTE]
@@ -153,6 +162,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | join_arrays | Kombiniert die Arrays miteinander. | <ul><li>ARRAY: **Erforderlich** Das Array, dem Sie Elemente hinzufügen.</li><li>WERTE: Die Array(s), die Sie an das übergeordnete Array anhängen möchten.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Führt eine Liste von Eingaben durch und konvertiert sie in ein Array. | <ul><li>INCLUDE_NULLS: **Erforderlich** Ein boolescher Wert, der angibt, ob Nullen in das Antwortarray einbezogen werden sollen.</li><li>WERTE: **Erforderlich** Die Elemente, die in ein Array konvertiert werden sollen.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Logische Operatoren {#logical-operators}
 
 >[!NOTE]
@@ -164,6 +175,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | decode | Bei einem Schlüssel und einer Liste von Schlüsselwertpaaren, die als Array reduziert sind, gibt die Funktion den Wert zurück, wenn der Schlüssel gefunden wird, oder gibt einen Standardwert zurück, wenn er im Array vorhanden ist. | <ul><li>SCHLÜSSEL: **Erforderlich** Der zuzuordnende Schlüssel.</li><li>OPTIONS: **Erforderlich** Ein reduziertes Array von Schlüssel/Wert-Paaren. Optional kann ein Standardwert am Ende gesetzt werden.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, &quot;ca&quot;, &quot;California&quot;, &quot;pa&quot;, &quot;Pennsylvania&quot;, &quot;N/A&quot;) | Lautet der angegebene stateCode &quot;ca&quot;, &quot;California&quot;.<br>Lautet der angegebene stateCode &quot;pa&quot;, &quot;Pennsylvania&quot;.<br>Wenn der stateCode nicht mit dem Folgenden übereinstimmt, &quot;K/A&quot;. |
 | iif | Wertet einen bestimmten booleschen Ausdruck aus und gibt den angegebenen Wert basierend auf dem Ergebnis zurück. | <ul><li>Ausdruck: **Erforderlich** Der boolesche Ausdruck, der ausgewertet wird.</li><li>TRUE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;true&quot;ergibt.</li><li>FALSE_VALUE: **Erforderlich** Der Wert, der zurückgegeben wird, wenn der Ausdruck &quot;false&quot;ergibt.</li></ul> | iif(AUSDRUCK, TRUE_VALUE, FALSE_VALUE) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Aggregation {#aggregation}
 
 >[!NOTE]
@@ -174,6 +187,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | min | Gibt das Minimum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1 |
 | max | Gibt das Maximum der angegebenen Argumente zurück. Verwendet die natürliche Reihenfolge. | <ul><li>OPTIONS: **Erforderlich** Ein oder mehrere Objekte, die miteinander verglichen werden können.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Typkonvertierungen {#type-conversions}
 
@@ -188,6 +203,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | to_float | Konvertiert eine Zeichenfolge in eine Gleitkommazahl. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Gleitkommazahl konvertiert werden soll.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12 34 566 |
 | to_integer | Konvertiert eine Zeichenfolge in eine Ganzzahl. | <ul><li>STRING: **Erforderlich** Die Zeichenfolge, die in eine Ganzzahl umgewandelt werden soll.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### JSON-Funktionen {#json}
 
 >[!NOTE]
@@ -198,6 +215,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | json_to_object | Deserialisieren Sie den JSON-Inhalt aus der angegebenen Zeichenfolge. | <ul><li>STRING: **Erforderlich** Die zu deserialisierende JSON-Zeichenfolge.</li></ul> | json_to_object &#x200B;(STRING) | json_to_object &#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot; : &quot;Doe&quot;}) | Ein Objekt, das die JSON darstellt. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Spezialoperationen {#special-operations}
 
 >[!NOTE]
@@ -207,6 +226,8 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 -------- | ----------- | ---------- | -------| ---------- | -------------
 | uuid /<br>guid | Erstellt eine pseudo-zufällige ID. |  | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333 |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Benutzeragenten-Funktionen {#user-agent}
 
@@ -224,3 +245,5 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 | ua_agent_version_major | Extrahiert den Agentnamen und die Hauptversion aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 (wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrahiert den Agenten-Namen aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 (wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrahiert die Geräteklasse aus der Benutzeragenten-Zeichenfolge. | <ul><li>USER_AGENT: **Erforderlich** Die Benutzeragenten-Zeichenfolge.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 (wie Mac OS X) AppleWebKit/534.46 (KHTML, wie Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Telefon |
+
+{style=&quot;table-layout:auto&quot;}
