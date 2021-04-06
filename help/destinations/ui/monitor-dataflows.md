@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform,Home,Beliebte Themen,Überwachen von Konten,Überwachen von Datenflüssen,Datenflüsse,Ziele
+keywords: Experience Platform;Home;beliebte Themen;Monitorkonten;Datenflüsse überwachen;Datenflüsse; Ziele
 description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
 solution: Experience Platform
 title: Datenflüsse überwachen
 topic: Übersicht
 type: Tutorial
-exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 1%
 
 ---
+
 
 # Überwachen von Datenflüssen
 
