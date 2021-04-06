@@ -1,18 +1,18 @@
 ---
-keywords: Aktivierung bearbeiten; Bearbeitungsziel;
+keywords: Aktivierung bearbeiten,Ziel bearbeiten
 title: Aktivierungen bearbeiten
 type: Tutorial
 seo-title: Aktivierungen bearbeiten
 description: Führen Sie die in diesem Artikel beschriebenen Schritte aus, um eine vorhandene Aktivierung in Adobe Experience Platform zu bearbeiten.
 seo-description: Führen Sie die in diesem Artikel beschriebenen Schritte aus, um eine vorhandene Aktivierung in Adobe Experience Platform zu bearbeiten.
+exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 1%
 
 ---
-
 
 # Aktivierungen bearbeiten {#edit-activation-flows}
 
