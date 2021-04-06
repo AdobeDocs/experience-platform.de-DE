@@ -1,16 +1,16 @@
 ---
-keywords: Zielkonto aktualisieren,Zielkonten
+keywords: Aktualisieren des Zielkontos;Zielkonten;Aktualisieren von Konten
 title: Zielkonten aktualisieren
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Aktualisieren von Zielkonten in der Adobe Experience Platform-Benutzeroberfläche Liste
-exl-id: afb41878-4205-4c64-af4d-e2740f852785
 translation-type: tm+mt
-source-git-commit: 07869d63f395bbab6c49a3976051facdf94d43b7
+source-git-commit: ebe2a35e66b78acf6a9ffa20664877913cd35648
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '327'
 ht-degree: 36%
 
 ---
+
 
 # Zielkonten aktualisieren
 
