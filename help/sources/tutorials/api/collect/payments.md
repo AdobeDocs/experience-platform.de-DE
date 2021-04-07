@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Erfassen von Zahlungsdaten;Zahlungsdaten
 solution: Experience Platform
 title: Erfassen von Zahlungsdaten mithilfe von Quell-Connectors und APIs
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: Dieses Lernprogramm beschreibt die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs.
+exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 20%
+source-wordcount: '1600'
+ht-degree: 19%
 
 ---
-
 
 # Erfassen von Zahlungsdaten mithilfe von Quellschnittstellen und APIs
 
@@ -299,6 +299,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `schemaRef.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
@@ -338,7 +339,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -354,6 +355,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die zum Herstellen einer Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
