@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API
 solution: Experience Platform
 title: 'Verwalten von Datenverwendungsbezeichnungen mithilfe von APIs '
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Mit der DataSet-Dienst-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Funktionen des Adobe Experience Platform-Datenkatalogs, ist jedoch von der Katalogdienst-API getrennt, die die Metadaten des Datensatzes verwaltet.
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 4e75e3fbdcd480c384411c2f33bad5b2cdcc5c42
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 5%
+source-wordcount: '1147'
+ht-degree: 4%
 
 ---
 
@@ -280,7 +280,11 @@ Eine erfolgreiche Antwort gibt die Datenverwendungsbeschriftungen zurück, die a
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `labels` | Eine Liste von Datenverwendungsbeschriftungen, die auf den Datensatz angewendet wurden. |
-| `optionalLabels` | Eine Liste einzelner Felder im Datensatz, auf die Datenverwendungsbeschriftungen angewendet wurden. |
+| `optionalLabels` | Eine Liste einzelner Felder im Datensatz, auf die Datenverwendungsbeschriftungen angewendet wurden. Die folgenden Untereigenschaften sind erforderlich:<br/><br/>`option`: Ein Objekt, das die Attribute [!DNL Experience Data Model] (XDM) des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>`id`: Der URI- `$id` Wert des Schemas, das dem Feld zugeordnet ist.</li><li>`contentType`: Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API.</li><li>`schemaPath`: Der Pfad zur fraglichen Schema-Eigenschaft, geschrieben in  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
+
+- id: Der URI $id-Wert für das XDM-Schema, auf dem der Datensatz basiert.
+- contentType: Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API.
+- schemaPath: Der Pfad zur fraglichen Schema-Eigenschaft, geschrieben in [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer)-Syntax.
 
 ## Anwenden von Beschriftungen auf einen Datensatz {#apply-dataset-labels}
 
@@ -327,7 +331,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `labels` | Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Datensatz hinzufügen möchten. |
-| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen: <br/><br/>`option`: Ein Objekt, das die Attribute [!DNL Experience Data Model] (XDM) des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI $id</code>-Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Inhaltstyp und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
+| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften haben: Ein Objekt, das die Attribute [!DNL Experience Data Model] (XDM) des Felds enthält. <br/><br/>`option` Die folgenden drei Eigenschaften sind erforderlich:<ul><li>`id`: Der URI- `$id` Wert des Schemas, das dem Feld zugeordnet ist.</li><li>`contentType`: Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API.</li><li>`schemaPath`: Der Pfad zur fraglichen Schema-Eigenschaft, geschrieben in  [JSON ](../../landing/api-fundamentals.md#json-pointer) Pointersyntax.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
 
 **Antwort**
 
