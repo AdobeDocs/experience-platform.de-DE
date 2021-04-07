@@ -5,14 +5,14 @@ title: Streamen von Datensatzdaten mit Streaming-Ingestion-APIs
 topic: Tutorial
 type: Übung
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
+exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 62%
 
 ---
-
 
 # Streamen von Datensatzdaten mit Streaming Ingestion APIs
 
@@ -32,7 +32,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
@@ -245,7 +245,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "Dataset description",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID},
-        "contentType": "application/vnd.adobe.xed-full+json;version=1.0"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -297,7 +297,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -306,7 +306,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity": {
@@ -336,7 +336,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -456,5 +456,3 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Platform] erfassen können. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie Beginn zur Überwachung Ihrer erfassten Daten über die [!DNL Platform]-Benutzeroberfläche verwenden. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).
-
-
