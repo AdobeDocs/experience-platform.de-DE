@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenbankdatenbank;Drittanbieterdatenbank
 solution: Experience Platform
 title: Erfassen von Daten aus einer Datenbank mithilfe von Source Connectors und APIs
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
+exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1651'
 ht-degree: 19%
 
 ---
-
 
 # Erfassen von Daten aus einer Datenbank mithilfe von Quellschnittstellen und APIs
 
@@ -286,6 +286,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `schemaRef.id` | Die ID des XDM-Schemas der Zielgruppe. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
@@ -325,7 +326,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -341,6 +342,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes, der im vorherigen Schritt erfasst wurde. |
 | `connectionSpec.id` | Die Verbindungs-Spezifikations-ID, mit der eine Verbindung zum Data Lake hergestellt wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
