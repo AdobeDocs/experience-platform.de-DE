@@ -5,14 +5,14 @@ title: Erfassen von Cloud-Datenspeicherung-Daten mithilfe von Source Connectors 
 topic: Übersicht
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und zum Übertragen dieser Daten in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 8b85b25112ee16b09b1411c5d001bf13fb7fbcaa
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 18%
+source-wordcount: '1806'
+ht-degree: 17%
 
 ---
-
 
 # Erfassen von Cloud-Datenspeicherung-Daten mithilfe von Quellschnittstellen und APIs
 
@@ -332,6 +332,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `schemaRef.id` | Die ID des XDM-Schemas der Zielgruppe. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
@@ -371,7 +372,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -387,6 +388,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 | `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
 | `connectionSpec.id` | Die feste Verbindungs-spec-ID zum Data Lake. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
