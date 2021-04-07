@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmode
 solution: Experience Platform
 title: Erste Schritte mit der Schema Registry API
 description: In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie die Schema-Registrierungs-API aufrufen.
-topic: developer guide
+topic: Entwicklerhandbuch
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 48%
+source-wordcount: '1365'
+ht-degree: 39%
 
 ---
-
 
 # Erste Schritte mit der API[!DNL Schema Registry]
 
@@ -22,7 +22,7 @@ Mit der [!DNL Schema Registry]-API können Sie verschiedene XDM-Ressourcen (Expe
 Die Verwendung des Entwicklerhandbuchs erfordert ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemata.
+   * [Grundlagen der Schemakomposition](../schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemas.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
 
@@ -207,21 +207,38 @@ Die folgenden tabellarischen Listen sind mit `Accept`-Header-Werten kompatibel, 
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Gibt nur eine Liste von IDs zurück. Dies wird am häufigsten für die Auflistung von Ressourcen verwendet. |
 | `application/vnd.adobe.xed+json` | Gibt eine Liste des vollständigen JSON-Schemata einschließlich der ursprünglichen `$ref` und `allOf` zurück. Damit wird eine Liste der vollständigen Ressourcen zurückgegeben. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw-XDM mit `$ref` und `allOf`. Beinhaltet Titel und Beschreibungen. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref`-Attribute und `allOf` aufgelöst. Beinhaltet Titel und Beschreibungen. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw-XDM mit `$ref` und `allOf`. Keine Titel oder Beschreibungen. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref`-Attribute und `allOf` aufgelöst. Keine Titel oder Beschreibungen. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref`-Attribute und `allOf` aufgelöst. Deskriptoren sind enthalten. |
+| `application/vnd.adobe.xed+json; version=1` | Raw-XDM mit `$ref` und `allOf`. Beinhaltet Titel und Beschreibungen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref`-Attribute und `allOf` aufgelöst. Beinhaltet Titel und Beschreibungen. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw-XDM mit `$ref` und `allOf`. Keine Titel oder Beschreibungen. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref`-Attribute und `allOf` aufgelöst. Keine Titel oder Beschreibungen. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref`-Attribute und `allOf` aufgelöst. Deskriptoren sind enthalten. |
 
 >[!NOTE]
 >
->Wenn Sie nur die Hauptversion (z.B. 1, 2, 3) angeben, gibt die Registrierung die neueste Nebenversion (z.B. .1, .2, .3) automatisch.
+>Plattform unterstützt derzeit nur eine Hauptversion für jedes Schema (`1`). Daher muss der Wert für `version` immer `1` sein, wenn Suchanfragen ausgeführt werden, damit die neueste Nebenversion des Schemas zurückgegeben wird. Weitere Informationen zur Schema-Versionierung finden Sie im Unterabschnitt unten.
+
+### Schema-Versionierung {#versioning}
+
+Schema-Versionen werden von `Accept`-Headern in der Schema Registry-API und in den `schemaRef.contentType`-Eigenschaften in den nachgelagerten Platform-Dienst-API-Nutzdaten referenziert.
+
+Derzeit unterstützt Platform nur eine Hauptversion (`1`) für jedes Schema. Gemäß den [Regeln der Schema-Evolution](../schema/composition.md#evolution) muss jede Aktualisierung auf ein Schema nicht destruktiv sein, d. h., neue Nebenversionen eines Schemas (`1.2`, `1.3` usw.) sind immer abwärtskompatibel zu früheren Nebenversionen. Bei Angabe von `version=1` gibt die Schema-Registrierung daher immer die **neueste** Hauptversion `1` eines Schemas zurück, d. h., frühere Nebenversionen werden nicht zurückgegeben.
+
+>[!NOTE]
+>
+>Die nicht destruktive Anforderung der Schema-Evolution wird erst erzwungen, nachdem das Schema von einem Datensatz referenziert wurde und einer der folgenden Fälle zutrifft:
+>
+>* Daten wurden in den Datensatz aufgenommen.
+>* Der Datensatz wurde für die Verwendung im Echtzeit-Kundendaten-Profil aktiviert (auch wenn keine Daten erfasst wurden).
+
+>
+>
+Wenn das Schema nicht mit einem Datensatz verknüpft wurde, der eines der oben genannten Kriterien erfüllt, können Änderungen daran vorgenommen werden. In allen Fällen bleibt die `version`-Komponente jedoch weiterhin bei `1`.
 
 ## XDM-Feldbeschränkungen und Best Practices
 
 Die Felder eines Schemas werden innerhalb seines `properties`-Objekts aufgelistet. Jedes Feld ist selbst ein Objekt, das Attribute zur Beschreibung und Beschränkung der Daten enthält, die das Feld enthalten kann.
 
-Weitere Informationen zum Definieren von Feldtypen in der API finden Sie im [Anhang](appendix.md) zu diesem Handbuch, einschließlich Codebeispielen und optionale Beschränkungen für die am häufigsten verwendeten Datentypen.
+Weitere Informationen zum Definieren von Feldtypen in der API finden Sie im Handbuch [Feldbeschränkungen](../schema/field-constraints.md) für dieses Handbuch, einschließlich Codebeispiele und optionale Einschränkungen für die am häufigsten verwendeten Datentypen.
 
 Das folgende Beispielfeld veranschaulicht ein korrekt formatiertes XDM-Feld, wobei weitere Einzelheiten zu den Benennungsbeschränkungen und Best Practices weiter unten aufgeführt sind. Diese Verfahren können auch bei der Definition anderer Ressourcen angewendet werden, die ähnliche Attribute enthalten.
 
