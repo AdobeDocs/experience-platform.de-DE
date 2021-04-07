@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmode
 solution: Experience Platform
 title: Vereinigungen-API-Endpunkt
 description: Mit dem Endpunkt /Vereinigungen in der Schema Registry API können Sie XDM-Vereinigung-Schema in Ihrer Experience-Anwendung programmgesteuert verwalten.
-topic: developer guide
+topic: Entwicklerhandbuch
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 48%
+source-wordcount: '902'
+ht-degree: 47%
 
 ---
-
 
 # Vereinigungen-Endpunkt
 
@@ -126,8 +126,8 @@ Die folgenden Accept-Kopfzeilen stehen für das Nachschlagen von Vereinigungs-Sc
 
 | Accept | Beschreibung |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Roh mit `$ref` und `allOf`. Umfasst Titel und Beschreibungen. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` Attribute und `allOf` gelöst. Umfasst Titel und Beschreibungen. |
+| `application/vnd.adobe.xed+json; version=1` | Roh mit `$ref` und `allOf`. Umfasst Titel und Beschreibungen. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` Attribute und `allOf` gelöst. Umfasst Titel und Beschreibungen. |
 
 **Antwort**
 
