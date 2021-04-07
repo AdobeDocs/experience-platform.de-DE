@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datensatz;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen;Datensatz erstellen;Datenbestand aktivieren
 solution: Experience Platform
 title: Erstellen eines Datensatzes in der API
-topic: developer guide
+topic: Entwicklerhandbuch
 description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt in der Katalogdienst-API erstellen.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 53%
+source-wordcount: '256'
+ht-degree: 48%
 
 ---
-
 
 # Erstellen eines Datensatzes in der API
 
@@ -57,6 +57,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name des zu erstellenden Datensatzes. |
 | `schemaRef.id` | Der URI-`$id`-Wert für das XDM-Schema, auf dem der Datensatz basieren soll. |
+| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API. |
 
 >[!NOTE]
 >
