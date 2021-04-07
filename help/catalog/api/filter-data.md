@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Filter;Filter;Filterdaten;Daten filtern;Datumsbereich
 solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfragen-Parametern
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 89%
+source-wordcount: '2123'
+ht-degree: 87%
 
 ---
-
 
 # Filtern von [!DNL Catalog]-Daten mithilfe von Abfragen
 
@@ -155,6 +155,10 @@ Auf Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
 * Wenn ein Objekt keine der angefragten Eigenschaften enthält, wird es als leeres Objekt angezeigt. (`Dataset2`)
 * Ein Datensatz kann eine angefragte Eigenschaft als leeres Objekt zurückgeben, wenn er die Eigenschaft enthält, aber kein Wert vorhanden ist. (`Dataset3`)
 * Andernfalls zeigt der Datensatz den ganzen Wert aller angefragten Eigenschaften an. (`Dataset4`)
+
+>[!NOTE]
+>
+>In der Eigenschaft `schemaRef` für jeden Datensatz gibt die Versionsnummer die neueste Nebenversion des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API.
 
 ## Startindex von Antwortliste versetzen
 
