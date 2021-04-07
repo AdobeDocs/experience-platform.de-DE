@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Protokolldaten erfassen;Protokolldaten
 solution: Experience Platform
 title: Protokolldaten mithilfe von Quellschnittstellen und APIs erfassen
-topic: overview
+topic: Übersicht
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
+exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1549'
 ht-degree: 20%
 
 ---
-
 
 # Protokolldaten mithilfe von Quellschnittstellen und APIs erfassen
 
@@ -300,6 +300,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `schemaRef.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
