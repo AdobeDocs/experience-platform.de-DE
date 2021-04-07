@@ -5,14 +5,14 @@ title: Streamen von Daten aus der Zeitreihe mithilfe von Streaming-Ingestion-API
 topic: Tutorial
 type: Übung
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
+exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
 workflow-type: tm+mt
 source-wordcount: '1314'
 ht-degree: 66%
 
 ---
-
 
 # Streamen von Zeitreihendaten mithilfe von Streaming Ingestion APIs
 
@@ -32,7 +32,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
@@ -112,7 +112,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zu Ihrem neu erst
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.{SCHEMA_ID}",
     "meta:resourceType": "schemas",
-    "version": "{SCHEMA_VERSION}",
+    "version": "1",
     "type": "object",
     "title": "{SCHEMA_NAME}",
     "description": "{SCHEMA_DESCRIPTION}",
@@ -271,7 +271,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "{DATASET_DESCRIPTION}",
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
-        "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "fileDescription": {
         "persisted": true,
@@ -329,7 +329,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -338,7 +338,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity":{
@@ -391,7 +391,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
