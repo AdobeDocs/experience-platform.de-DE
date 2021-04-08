@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Segmentierung;Segmentierung;Segmentierungsdienst;Segmentierungsdienst;i-Handbuch
 solution: Experience Platform
 title: Handbuch zur Streaming-Segmentierung
-topic: ui guide
+topic: Handbuch
 description: Durch Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit der Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in die Plattform gelangen, was die Planung und Ausführung von Segmentierungsaufträgen erleichtert. Mit dieser Funktion können die meisten Segmentregeln jetzt bewertet werden, wenn die Daten an die Plattform übergeben werden. Dies bedeutet, dass die Segmentmitgliedschaft auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 translation-type: tm+mt
-source-git-commit: 405b7eb0c95ebef0b05d2b10ef92f28a37b7cc86
+source-git-commit: e1ae20412f449c991f53fdd0f095d0c3a6de262c
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
-
 
 # Streaming-Segmentierung
 
@@ -39,9 +39,11 @@ Eine Abfrage wird automatisch mit Streaming-Segmentierung bewertet, wenn sie ein
 | ---------- | ------- | ------- |
 | Eingehender Treffer | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Eingehender Treffer innerhalb eines relativen Zeitfensters | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Eingehender Treffer mit einem Zeitfenster | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Nur Profil | Eine Segmentdefinition, die nur auf ein Profil-Attribut verweist. |  |
 | Eingehender Treffer, der sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profil-Attribute bezieht. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute verweist. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment der Segmente | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | Mehrere Ereignis, die auf ein Profil verweisen | Eine Segmentdefinition, die auf mehrere Ereignis **innerhalb der letzten 24 Stunden** und (optional) verweist, verfügt über ein oder mehrere Profil-Attribute. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
