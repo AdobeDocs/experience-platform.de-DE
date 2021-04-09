@@ -6,18 +6,18 @@ topic: Entwicklerhandbuch
 description: Dieses Dokument enthält Beispiele zur Verwendung der Segmentierung mit der Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 translation-type: tm+mt
-source-git-commit: 692bfca8d14ac247527f956bbcba8b4eb37516e3
+source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 10%
+source-wordcount: '653'
+ht-degree: 11%
 
 ---
 
-# Kantensegmentierung
+# Edge-Segmentierung (Beta)
 
 >[!NOTE]
 >
->Im folgenden Dokument wird erläutert, wie die Segmentierung von Kanten mithilfe der API durchgeführt wird. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie im Handbuch [Edge Segmentation UI guide](../ui/edge-segmentation.md).
+>Im folgenden Dokument wird erläutert, wie die Segmentierung von Kanten mithilfe der API durchgeführt wird. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie im Handbuch [Edge Segmentation UI guide](../ui/edge-segmentation.md). Darüber hinaus befindet sich die Edge-Segmentierung derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
 
 Bei der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort am Rand ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
 
