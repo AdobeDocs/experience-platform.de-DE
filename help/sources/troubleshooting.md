@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Fehlerbehebung bei Quellen
 topic: troubleshooting
 description: Dieses Dokument beantwortet häufig gestellte Fragen zu Quellen auf Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '663'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Anleitung zur Fehlerbehebung bei Quellen
 
@@ -57,7 +57,7 @@ Unterstützte Datentypen sind Ganzzahlen, Zeichenfolgen, Boolesche Werte, Datenz
 
 ### Welche Datums- und Uhrzeitformate werden unterstützt?
 
-Quellen unterstützen eine Vielzahl von Datenzeitformaten bei der Erfassung von Daten. Weitere Informationen zu unterstützten Datenzeitformaten finden Sie im Handbuch [Datenvorgabedatumsfunktionen](../data-prep/dates.md).
+Quellen unterstützen eine Vielzahl von Datenzeitformaten bei der Erfassung von Daten. Weitere Informationen zu unterstützten Datenzeitformaten finden Sie im Abschnitt &quot;Daten&quot;des Handlungshandbuchs [Datenformat](../data-prep/data-handling.md#dates) in der Datenvorbereitung.
 
 ### Wie formatiere ich Arrays in CSV-, JSON- und Parquet-Dateien?
 
