@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Übersicht über die Datenvorbereitung
 topic: Übersicht
 description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Platform ein.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '389'
 ht-degree: 1%
 
 ---
@@ -35,6 +36,10 @@ Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Ha
 
 Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, werden kollektiv als Zuordnungssatz bezeichnet. Im Rahmen jedes Datenflusses wird ein einzelner Zuordnungssatz erstellt. Ein Zuordnungssatz ist ein integraler Bestandteil der Datenflüsse und wird im Rahmen der Datenflüsse erstellt, bearbeitet und überwacht.
 
+## Verarbeitung von Datenformaten
+
+Data Prep kann verschiedene Datenformate, die in die Plattform aufgenommen werden, mit großem Aufwand handhaben. Weitere Informationen zum Umgang mit verschiedenen Datentypen finden Sie unter [Übersicht über die Verarbeitung von Datenformaten](./data-handling.md).
+
 ## Nächste Schritte
 
-In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zu den verschiedenen Datums-Uhrzeit-Zeichenfolgen finden Sie im Handbuch [Datums-Zeichenfolgen](./dates.md). Informationen zur Verwendung der Data Prep API finden Sie im [Data Prep Developer Guide](api/overview.md).
+In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zum Umgang mit verschiedenen Datentypen finden Sie im Handbuch [Verarbeitung von Datenformaten](./data-handling.md#dates). Informationen zur Verwendung der Data Prep API finden Sie im [Data Prep Developer Guide](api/overview.md).
