@@ -5,10 +5,10 @@ user-guide-title: Datenvorbereitungsanleitung
 user-guide-description: Bereiten Sie Ihre Daten für die Aufnahme in Adobe Experience Platform vor.
 feature: Data Management, Dateningestion
 translation-type: tm+mt
-source-git-commit: cae6dc80d0394db51dc97478b92459be64c64498
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 52%
+source-wordcount: '43'
+ht-degree: 51%
 
 ---
 
@@ -22,5 +22,5 @@ ht-degree: 52%
    - [Erste Schritte](./api/getting-started.md)
    - [Funktionen](./api/functions.md)
    - [Zuordnungssatz](./api/mapping-set.md)
-- [Datenzeitobjekte](dates.md)
+- [Umgang mit Datenformaten](./data-handling.md)
 - [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
