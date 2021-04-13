@@ -6,9 +6,9 @@ topic: Übersicht
 description: In diesem Dokument werden die Zuordnungsfunktionen vorgestellt, die mit Data Prep verwendet werden.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 translation-type: tm+mt
-source-git-commit: 8b74cf5f54ddf56486d7b947b38bef58823c3684
+source-git-commit: c3939d4ce30bf12748b898f461a166f28f010abf
 workflow-type: tm+mt
-source-wordcount: '3793'
+source-wordcount: '3798'
 ht-degree: 7%
 
 ---
@@ -109,7 +109,7 @@ In den folgenden Tabellen werden alle unterstützten Zuordnungsfunktionen, einsc
 
 >[!NOTE]
 >
->Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen. Weitere Informationen zur Funktion `date` finden Sie im Funktionsleitfaden [date](./dates.md).
+>Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen. Weitere Informationen zur Funktion `date` finden Sie im Abschnitt &quot;Daten&quot;im Handbuch [Datenformatbearbeitung](./data-handling.md#dates).
 
 | Funktion | Beschreibung | Parameter | Syntax | Ausdruck | Beispielausgabe |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
