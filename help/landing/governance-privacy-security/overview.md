@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Governance, Datenschutz und Sicherheitsübersicht
-topic: overview
+topic: Übersicht
 description: Adobe Experience Platform bietet verschiedene Services und Tools, mit denen Sie Ihre erfassten Erlebnisdaten vertraulich steuern können, um Ihren Geschäftspraktiken, rechtlichen Verpflichtungen und Entwicklungsprozessen zu entsprechen.
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '833'
 ht-degree: 18%
 
 ---
-
 
 # Governance, Datenschutz und Sicherheit in Adobe Experience Platform
 
@@ -55,13 +55,13 @@ Adobe Experience Platform Privacy Service stellt eine RESTful-API und eine Benut
 
 Weiterführende Informationen dazu finden Sie unter [Übersicht zum Privacy Service](../../privacy-service/home.md).
 
-### Sammlung für Zustimmung {#consent}
+### Verarbeitung der Zustimmung {#consent}
 
 In vielen gesetzlichen Datenschutzbestimmungen wurden Anforderungen an die aktive und spezifische Zustimmung bei der Datenerfassung, Personalisierung und anderen Marketingzwecken eingeführt. Um diese Anforderungen zu erfüllen, ermöglicht Ihnen die Experience Platform die Erfassung von Informationen zur Einwilligung in einzelnen Profilen und die Verwendung dieser Präferenzen als entscheidenden Faktor für die Verwendung der Daten der einzelnen Kunden in den nachgelagerten Plattform-Workflows.
 
-Informationen zum Sammeln und Verarbeiten von Daten zur Kundeneinwilligung gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 finden Sie in der Übersicht über die Unterstützung für [IAB TCF 2.0 in Platform](./consent/iab/overview.md).
+Informationen zur Verarbeitung von Daten zur Kundeneinwilligung und zu Kundenpräferenzen mithilfe des Standards für Adoben finden Sie in der Übersicht zur [Verarbeitung der Einwilligung in Experience Platform](./consent/adobe/overview.md).
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+Informationen darüber, wie Daten zur Kundeneinwilligung gemäß dem IAB-Transparenz- und -Zustimmung-Framework (TCF) 2.0 verarbeitet werden, finden Sie in der Übersicht über die Unterstützung für die IAB-TCF 2.0 in Platform](./consent/iab/overview.md).[
 
 ## Sicherheit {#security}
 
