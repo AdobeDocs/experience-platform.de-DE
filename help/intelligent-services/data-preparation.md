@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;Intelligente Dienste;beliebte Themen;Intellig
 solution: Experience Platform, Intelligent Services
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
 topic: Intelligent Services
-description: 'Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen. '
+description: Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen. Insbesondere müssen alle in Intelligent Services verwendeten Datensätze dem XDM-Schema von Consumer ExperienceEvent (CEE) entsprechen.
+exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: b311a5970a121a3277bdb72f5a1285216444b339
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '2033'
 ht-degree: 2%
 
 ---
-
 
 # Daten für die Verwendung in [!DNL Intelligent Services] vorbereiten
 
@@ -75,7 +75,28 @@ Sie müssen das beste Feld als primäre Identität basierend auf der Quelle und 
 * &quot;mcid&quot;(für Adobe Audience Manager-IDs)
 * &quot;aaid&quot;(für Adobe Analytics-IDs)
 
-Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwenden sollten, wenden Sie sich an Adobe Consulting Services, um die beste Lösung zu finden.
+Wenn Sie sich nicht sicher sind, welches Feld Sie als primäre Identität verwenden sollten, wenden Sie sich an Adobe Consulting Services, um die beste Lösung zu finden. Wenn keine primäre Identität festgelegt ist, verwendet die Anwendung &quot;Intelligent Service&quot;das folgende Standardverhalten:
+
+| Standard | Attribution AI | Customer AI |
+| --- | --- | --- |
+| Identitätsspalte | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| Namespace | AAID | ECID |
+
+Um eine primäre Identität festzulegen, navigieren Sie auf der Registerkarte **[!UICONTROL Schema]** zu Ihrem Schema und wählen Sie den Hyperlink für den Schema-Namen aus, um das **[!DNL Schema Editor]** zu öffnen.
+
+![Zu Schema navigieren](./images/data-preparation/navigate_schema.png)
+
+Navigieren Sie anschließend zu dem Feld, das Sie als primäre Identität definieren möchten, und wählen Sie es aus. Das Menü **[!UICONTROL Feldeigenschaften]** wird für dieses Feld geöffnet.
+
+![Feld auswählen](./images/data-preparation/find_field.png)
+
+Blättern Sie im Menü **[!UICONTROL Feldeigenschaften]** nach unten, bis Sie das Kontrollkästchen **[!UICONTROL Identität]** gefunden haben. Nach dem Aktivieren des Kontrollkästchens wird die Option zum Festlegen der ausgewählten Identität als **[!UICONTROL Primär identity]** angezeigt. Wählen Sie auch dieses Kontrollkästchen aus.
+
+![Kontrollkästchen auswählen](./images/data-preparation/set_primary_identity.png)
+
+Als Nächstes müssen Sie einen **[!UICONTROL Identity-Namensraum]** aus der Liste vordefinierter Namensraum im Dropdown-Menü angeben. In diesem Beispiel wird der ECID-Namespace ausgewählt, da eine Adobe Audience Manager-ID `mcid.id` verwendet wird. Wählen Sie **[!UICONTROL Übernehmen]**, um die Aktualisierungen zu bestätigen, und wählen Sie dann **[!UICONTROL Speichern]** in der oberen rechten Ecke aus, um die Änderungen in Ihrem Schema zu speichern.
+
+![Speichern Sie die Änderungen](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -104,7 +125,7 @@ Dieses Feld stellt den Marketing-Kanal im Zusammenhang mit dem ExperienceEvent d
 
 Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `xdm:channel` finden Sie im Schema [Experience Kanal](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) spec. Einige Beispielzuordnungen finden Sie in der Tabelle [unter](#example-channels).
 
-##### Beispiel für Kanal-Zuordnungen {#example-channels}
+#### Beispiel für Kanal-Zuordnungen {#example-channels}
 
 Die folgende Tabelle enthält einige Beispiele für Marketing-Kanal, die dem Schema `xdm:channel` zugeordnet sind:
 
