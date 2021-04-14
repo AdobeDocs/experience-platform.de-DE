@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebn
 solution: Experience Platform
 title: Schemas in der Benutzeroberfläche erstellen und bearbeiten
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche der Experience Platform kennen.
-topic: user guide
+topic: Benutzerhandbuch
+exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 90a0c4e8d47d9bce38c9e13272e4f41f78f46e35
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1380'
 ht-degree: 1%
 
 ---
-
 
 # Schemas in der Benutzeroberfläche erstellen und bearbeiten
 
@@ -69,7 +69,15 @@ Es wird ein Dialogfeld mit einer Liste von Mixins angezeigt, die Sie für das Sc
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-Sie können die Suchleiste verwenden, um die gewünschte Mischung zu finden. Mixins, deren Name mit der Abfrage übereinstimmt, werden oben in der Liste angezeigt. Unter **[!UICONTROL Standardfelder]** werden Mixins angezeigt, die Felder enthalten, die die gewünschten Datenattribute beschreiben.
+Wenn Sie die allgemeine Aktivität oder den Geschäftsbereich der Mixin-Felder kennen, die Sie hinzufügen möchten, wählen Sie in der linken Leiste eine oder mehrere der vertikalen Kategorien aus, um die angezeigte Liste der Mixins zu filtern.
+
+![](../../images/ui/resources/schemas/industry-filter.png)
+
+>[!NOTE]
+>
+>Weitere Informationen zu Best Practices für die branchenspezifische Datenmodellierung in XDM finden Sie in der Dokumentation zu [Industrie-Datenmodellen](../../schema/industries/overview.md).
+
+Sie können auch die Suchleiste verwenden, um die gewünschte Mischung zu finden. Mixins, deren Name mit der Abfrage übereinstimmt, werden oben in der Liste angezeigt. Unter **[!UICONTROL Standardfelder]** werden Mixins angezeigt, die Felder enthalten, die die gewünschten Datenattribute beschreiben.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
