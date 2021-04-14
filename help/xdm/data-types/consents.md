@@ -3,14 +3,14 @@ keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;A
 title: Datentyp "Inhalt und Voreinstellungen"
 description: Der Datentyp "Zustimmung zum Datenschutz, zur Personalisierung und zu Marketingvoreinstellungen"soll die Erfassung von Kundenberechtigungen und -einstellungen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert wurden.
 topic: guide
+exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 865379292985037b184d92e5d3fc1abc1873e962
+source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
 workflow-type: tm+mt
-source-wordcount: '2067'
-ht-degree: 1%
+source-wordcount: '1845'
+ht-degree: 2%
 
 ---
-
 
 # [!DNL Consents & Preferences] Datentyp
 
@@ -80,17 +80,6 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
     },
     "metadata": {
       "time": "2019-01-01T15:52:25+00:00"
-    },
-    "idSpecific": {
-      "email": {
-        "jdoe@example.com": {
-          "marketing": {
-            "email": {
-              "val": "n"
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -250,36 +239,6 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `time` | Ein ISO 8601-Zeitstempel zum letzten Mal, wenn die Zustimmung und Voreinstellungen des Kunden aktualisiert wurden. Dieses Feld kann anstelle von Zeitstempeln für einzelne Voreinstellungen verwendet werden, um die Belastung und Komplexität zu reduzieren. Wenn Sie einen `time`-Wert unter einer individuellen Voreinstellung angeben, wird der `metadata`-Zeitstempel für diese bestimmte Voreinstellung außer Kraft gesetzt. |
-
-### `idSpecific`
-
-`idSpecific` kann verwendet werden, wenn eine bestimmte Zustimmung oder Präferenz nicht allgemein für einen Kunden gilt, sondern auf ein einzelnes Gerät oder eine einzelne ID beschränkt ist. Beispielsweise kann ein Kunde E-Mails an eine Adresse Opt-out und gleichzeitig E-Mails an eine andere Adresse senden.
-
->[!IMPORTANT]
->
->Einwilligungen und Voreinstellungen auf Kanal-Ebene (d. h. die unter `consents` außerhalb von `idSpecific` bereitgestellten) gelten für IDs in diesem Kanal. Daher wirken sich alle Zustimmung und Voreinstellungen auf Kanal-Ebene direkt darauf aus, ob entsprechende ID- oder gerätespezifische Einstellungen berücksichtigt werden:
->
->* Wenn der Kunde sich auf Kanal-Ebene abgemeldet hat, werden alle entsprechenden Zustimmungen oder Voreinstellungen in `idSpecific` ignoriert.
->* Wenn die Einwilligung oder Präferenz des Kanals nicht festgelegt ist oder der Kunde sich dafür entschieden hat, werden die entsprechenden Einwilligungen oder Präferenzen in `idSpecific` berücksichtigt.
-
-
-Jeder Schlüssel im `idSpecific`-Objekt stellt einen bestimmten, vom Adobe Experience Platform-Identitätsdienst erkannten Namensraum dar. Sie können zwar eigene benutzerdefinierte Namensraum definieren, um verschiedene Bezeichner zu kategorisieren, es wird jedoch empfohlen, einen der vom Identitätsdienst bereitgestellten Standard-Namensraum zu verwenden, um die Datenspeicherung für das Echtzeit-Kundendienstprogramm zu reduzieren. Weitere Informationen zu Identitäts-Namensräumen finden Sie unter [Übersicht über Identitäts-Namensraum](../../identity-service/namespaces.md) in der Dokumentation zum Identitätsdienst.
-
-Die Schlüssel für jedes Namensraum-Objekt stellen die eindeutigen Identitätswerte dar, für die der Kunde Voreinstellungen festgelegt hat. Jeder Identitätswert kann einen vollständigen Satz von Inhalten und Voreinstellungen enthalten, die auf dieselbe Weise wie `consents` formatiert sind.
-
-```json
-"idSpecific": {
-  "email": {
-    "jdoe@example.com": {
-      "marketing": {
-        "email": {
-          "val": "n"
-        }
-      }
-    }
-  }
-}
-```
 
 ## Daten mit dem Datentyp {#ingest} eingehen
 
