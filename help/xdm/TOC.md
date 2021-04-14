@@ -6,10 +6,10 @@ breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: 3e1005aa11b648bd633ee4f64d527cae56cca620
+source-git-commit: 8b88a828f8680ac4d064f7f84e0db9e315526833
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 53%
+source-wordcount: '280'
+ht-degree: 48%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 53%
       * [IdentityMap](./mixins/profile/identitymap.md)
       * [Demografische Details](./mixins/profile/person-details.md)
       * [Persönliche Kontaktangaben](./mixins/profile/personal-details.md)
+      * [Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zustimmung)](./mixins/profile/consents.md)
       * [Details zur Segmentmitgliedschaft](./mixins/profile/segmentation.md)
       * [Kontaktangaben bearbeiten](./mixins/profile/work-details.md)
    * Ereignis mixins {#event}
@@ -51,6 +52,10 @@ ht-degree: 53%
    * [Gerät](./data-types/device.md)
    * [E-Mail-Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
+   * [Allgemeines Feld für Zustimmung](./data-types/consent-field.md)
+   * [Feld für allgemeine Marketingpräferenzen](./data-types/marketing-field.md)
+   * [Allgemeines Feld für Marketingpräferenzen mit Abonnements](./data-types/marketing-field-subscriptions.md)
+   * [Feld für allgemeine Personalisierungseinstellungen](./data-types/personalization-field.md)
    * [Geo](./data-types/geo.md)
    * [Geo-Kreis](./data-types/geo-circle.md)
    * [Geo-Koordinaten](./data-types/geo-coordinates.md)
