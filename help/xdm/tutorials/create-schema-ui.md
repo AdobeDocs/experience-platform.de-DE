@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM;Erlebnisdatenmo
 solution: Experience Platform
 title: Erstellen eines Schemas mit dem Schema-Editor
 topic: Tutorial
-type: Übung
+type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
+exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 53bf2ad757b24ad294af32101124e8047580807a
 workflow-type: tm+mt
-source-wordcount: '3602'
-ht-degree: 18%
+source-wordcount: '3683'
+ht-degree: 17%
 
 ---
-
 
 # Erstellen Sie ein Schema mit dem[!DNL Schema Editor]
 
@@ -48,7 +48,11 @@ Wählen Sie für diese Übung **[!UICONTROL XDM Individuelles Profil]**.
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Das Symbol [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Da Sie eine Standard-XDM-Klasse ausgewählt haben, auf der das Schema basieren soll, wird automatisch ein unbenanntes Schema im Bereich **[!UICONTROL Struktur]** der Arbeitsfläche erstellt, wenn Sie im Editor eintreffen, zusammen mit den Standardfeldern, die in allen Schemas, die auf dieser Klasse basieren, enthalten sind. Die zugewiesene Klasse für das Schema wird auch unter **[!UICONTROL Class]** im Abschnitt **[!UICONTROL Zusammensetzung]** aufgeführt.
+Da Sie eine XDM-Standardklasse ausgewählt haben, auf der das Schema basieren soll, wird das Dialogfeld **[!UICONTROL Hinzufügen mixin]** angezeigt, in dem Sie sofort Beginn zum Hinzufügen von Feldern zum Schema hinzufügen können. Wählen Sie zunächst **[!UICONTROL Abbrechen]**, um das Dialogfeld zu verlassen.
+
+![](../images/tutorials/create-schema/cancel-mixin.png)
+
+Das Symbol [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Ein unbenanntes Schema wird automatisch im Bereich **[!UICONTROL Struktur]** der Arbeitsfläche erstellt, wenn Sie im Editor ankommen, zusammen mit den Standardfeldern, die in allen Schemas, die auf dieser Klasse basieren, enthalten sind. Die zugewiesene Klasse für das Schema wird auch unter **[!UICONTROL Class]** im Abschnitt **[!UICONTROL Zusammensetzung]** aufgeführt.
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -120,11 +124,13 @@ Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. &quot;[!UICONTROL
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Definieren eines neuen Mixins {#define-mixin}
+## Definieren eines benutzerdefinierten Mixins {#define-mixin}
 
-Das Schema &quot;[!UICONTROL Treuemitglieder]&quot;dient zum Erfassen von Daten, die mit den Mitgliedern eines Treuebereichs in Verbindung stehen. Es erfordert daher einige spezifische treuebezogene Programme. Es gibt keine standardmäßigen Mixins, die die erforderlichen Felder enthalten. Daher müssen Sie ein neues Mixin definieren.
+Das Schema &quot;[!UICONTROL Treuemitglieder]&quot;dient zum Erfassen von Daten, die mit den Mitgliedern eines Treuebereichs in Verbindung stehen. Es erfordert daher einige spezifische treuebezogene Programme.
 
-Wenn Sie dieses Mal das Dialogfeld **[!UICONTROL Mixin hinzufügen]** öffnen, wählen Sie **[!UICONTROL Neues Mixin erstellen]**. Sie werden dann aufgefordert, einen Anzeigenamen und eine Beschreibung für Ihr Mixin anzugeben.
+Es gibt eine standardmäßige Mischung [!UICONTROL Kundentreuedetails], die Sie dem Schema hinzufügen können, um gemeinsame Felder im Zusammenhang mit einem Treue-Programm zu erfassen. Es wird empfohlen, Standardmixins zur Darstellung von Schemas zu verwenden. Die Standardstruktur des Loyalitätsmixins kann jedoch möglicherweise nicht alle relevanten Daten für Ihr bestimmtes Treuemix-Programm erfassen. In diesem Szenario können Sie eine neue benutzerdefinierte Mischung definieren, um diese Felder stattdessen zu erfassen.
+
+Öffnen Sie erneut das Dialogfeld **[!UICONTROL Hinzufügen Mixin]**, aber dieses Mal wählen Sie **[!UICONTROL Neues Mixin erstellen]** oben aus. Anschließend werden Sie aufgefordert, einen Anzeigenamen und eine Beschreibung für Ihr Mixin anzugeben.
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
