@@ -4,9 +4,9 @@ title: Branchendatenmodelle - Übersicht
 topic: Übersicht
 description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene Branchen, die mit XDM-Komponenten (Standard Experience Data Model) konstruiert werden können.
 translation-type: tm+mt
-source-git-commit: 6a7aebb64a533158f7ab17af0cd28243aeda0eca
+source-git-commit: 9862cbcb8d8c74c96dd6bf44c5fa416f4f42fe64
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,6 @@ ERDs werden für folgende Branchen bereitgestellt:
 * [[!UICONTROL Einzelhandel]](./retail.md)
 * [[!UICONTROL Finanzdienstleistungen]](./financial.md)
 * [[!UICONTROL Reise und Gastfreundschaft]](./travel-hospitality.md)
-* [[!UICONTROL Telekommunikation]](./telecom.md)
 
 ## Nächste Schritte
 
