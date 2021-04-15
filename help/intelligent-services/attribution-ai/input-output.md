@@ -2,16 +2,16 @@
 keywords: Experience Platform;Erste Schritte;Attribution-ai;beliebte Themen;Attribution-ai-Eingabe;Attribution-ai-Ausgabe;
 solution: Experience Platform, Intelligent Services
 title: Eingabe und Ausgabe in Attribution AI
-topic: Input and Output data for Attribution AI
+topic: Eingabe- und Ausgangsdaten für Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2098'
 ht-degree: 4%
 
 ---
-
 
 # Eingabe und Ausgabe in [!DNL Attribution AI]
 
@@ -49,7 +49,7 @@ Die folgenden Spalten sind nicht erforderlich, es wird jedoch empfohlen, sie in 
 - web.webPageDetails
 - xdm:productListItems
 
-### Historische Daten
+### Historische Daten {#data-requirements}
 
 >[!IMPORTANT]
 >
