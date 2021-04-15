@@ -2,16 +2,16 @@
 keywords: Experience Platform;Einblicke;Kundenberatung;beliebte Themen;Einblicke in die Kundenwerbung
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Discover Insights mit Kunden-API
-topic: Discovering insights
+topic: Einblicke entdecken
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Dienstinstanzinformationen in der Benutzeroberfläche der Intelligent Services Customer AI.
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
 workflow-type: tm+mt
-source-wordcount: '1399'
-ht-degree: 12%
+source-wordcount: '1634'
+ht-degree: 10%
 
 ---
-
 
 # Entdecken Sie Einblicke in die Kundentechnik.
 
@@ -37,14 +37,15 @@ Die Seite zum Kundendienst wird angezeigt. Auf dieser Seite werden Dienstinstanz
 
 ![Instanz erstellen](../images/insights/dashboard.png)
 
-Klicken Sie zuerst auf den Namen einer Dienstinstanz.
+Wählen Sie einen Dienstinstanznamen aus, der beginnen soll.
 
 ![Instanz erstellen](../images/insights/click-the-name.png)
 
-Als Nächstes wird die Einblicke-Seite für diese Dienstinstanz angezeigt, auf der Sie Visualisierungen Ihrer Daten erhalten. Die Visualisierungen und die Möglichkeiten, die Sie mit den Daten haben, werden in diesem Handbuch ausführlicher erläutert.
+Als Nächstes wird die Einblicke-Seite für diese Dienstinstanz mit der Option **[!UICONTROL Neueste Ergebnisse]** oder **[!UICONTROL Leistungszusammenfassung]** angezeigt. Die Standardregisterkarte **[!UICONTROL Neueste Ergebnisse]** enthält Visualisierungen Ihrer Daten. Die Visualisierungen und die Möglichkeiten, die Sie mit den Daten haben, werden in diesem Handbuch ausführlicher erläutert.
 
-![Setup-Seite](../images/insights/landing-page.png)
+Die Registerkarte **[!UICONTROL Leistungszusammenfassung]** zeigt die tatsächlichen Konversionsraten für jeden Tendenzbehälter an. Weitere Informationen finden Sie im Abschnitt [Metriken zur Leistungszusammenfassung](#performance-metrics).
 
+![Setup-Seite](../images/insights/landing_page_insights.png)
 
 ### Details zur Dienstinstanz
 
@@ -155,6 +156,30 @@ Mit dem Segmentaufbau wird ein Segment definiert. Wenn Sie auf der Seite &quot;E
 Um Ihr neues Segment in der Plattform-Benutzeroberfläche Ansicht, klicken Sie im linken Navigationsbereich auf **[!UICONTROL Segmente]**. Die Seite **[!UICONTROL Durchsuchen]** wird angezeigt und zeigt alle verfügbaren Segmente an.
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
+
+## Metriken zur Leistungszusammenfassung {#performance-metrics}
+
+Die Registerkarte **[!UICONTROL Leistungszusammenfassung]** zeigt die tatsächlichen Konversionsraten, aufgeteilt in die von der Kunden-API erfassten Tendenzbehälter.
+
+![Registerkarte &quot;Leistungsübersicht&quot;](../images/insights/summary_tab.png)
+
+Zunächst werden nur die erwarteten Raten (gepunktete Linien) angezeigt. Die erwarteten Raten werden angezeigt, wenn keine Bewertungsausführung stattgefunden hat und noch keine Daten verfügbar sind. Sobald jedoch ein Ergebnisfenster abgelaufen ist, wird die erwartete Rate durch eine tatsächliche Rate (feste Linie) ersetzt.
+
+Wenn Sie den Mauszeiger über die Zeilen bewegen, werden das Datum und die tatsächliche/erwartete Rate für diesen Tag in diesem Behälter angezeigt.
+
+![Bucket-Beispiel](../images/insights/churn_tab.png)
+
+Sie können den Zeitrahmen für die angezeigten erwarteten und tatsächlichen Raten filtern. Wählen Sie das Symbol **Kalender** ![und dann einen neuen Datumsbereich aus. ](../images/insights/calendar_icon.png) Die Ergebnisse in den einzelnen Behältern werden aktualisiert, um innerhalb des neuen Datumsbereichs angezeigt zu werden.
+
+![Datumsauswahl](../images/insights/date_selector.png)
+
+### Einzelne Bewertungslaufraten
+
+In der unteren Hälfte der Registerkarte **[!UICONTROL Leistungszusammenfassung]** werden die Ergebnisse für jeden einzelnen Bewertungsvorgang angezeigt. Wählen Sie das Dropdown-Datum oben rechts aus, um die Ergebnisse für einen anderen Bewertungslauf anzuzeigen.
+
+Abhängig davon, ob Sie eine Kehrtwende oder Konvertierung vorhersagen, zeigt das Diagramm [!UICONTROL Verteilung der Ergebnisse] die Verteilung der Profil an, die in jeder Inkrementierung gedreht/konvertiert und nicht gedreht/nicht konvertiert wurden.
+
+![individuelle Bewertung](../images/insights/scoring_tab.png)
 
 ## Nächste Schritte
 
