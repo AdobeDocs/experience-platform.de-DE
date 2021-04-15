@@ -2,16 +2,16 @@
 keywords: Experience Platform;Benutzerhandbuch;Kundenhilfe;beliebte Themen;Instanz konfigurieren;Instanz erstellen;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Konfigurieren einer Customer AI-Instanz
-topic: Instance creation
+topic: Instanzerstellung
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
+exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 35%
+source-wordcount: '1304'
+ht-degree: 34%
 
 ---
-
 
 # Konfigurieren einer Customer AI-Instanz
 
@@ -54,7 +54,7 @@ Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Insta
 
 - Der Tendenztyp bestimmt den Zweck des Wertes und die Metrikpolarität. Sie können entweder **[!UICONTROL Abwanderung]** oder **[!UICONTROL Konversion]** wählen. Weitere Informationen darüber, wie sich der Tendenztyp auf Ihre Instanz auswirkt, finden Sie in der [Auswertungszusammenfassung](./discover-insights.md#scoring-summary) im Discover Insight-Dokument.
 
-- Die Datenquelle befindet sich an der Stelle, an der sich die Daten befinden. Der Datensatz ist der Eingabedatensatz, mit dem Ergebnisse vorhergesagt werden. Standardmäßig nutzt Customer AI Kundenerlebnis-Ereignisdaten, um Tendenzwerte zu berechnen. Wenn Sie einen Datensatz in der Dropdown-Auswahl wählen, werden nur Datensätze aufgelistet, die mit Customer KI kompatibel sind.
+- Die Datenquelle befindet sich an der Stelle, an der sich die Daten befinden. Der Datensatz ist der Eingabedatensatz, mit dem Ergebnisse vorhergesagt werden. Standardmäßig verwendet die Kundenunterstützung Consumer Experience Ereignis-, Adobe Analytics- und Adobe Audience Manager-Daten, um Tendenzwerte zu berechnen. Wenn Sie einen Datensatz in der Dropdown-Auswahl wählen, werden nur Datensätze aufgelistet, die mit Customer KI kompatibel sind.
 
 - Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es wurde eine qualifizierte Zielgruppe angegeben. Sie können eine qualifizierte Zielgruppe angeben, indem Sie Bedingungen festlegen, um Profile auf Grundlage von Ereignissen ein- oder auszuschließen.
 
@@ -133,4 +133,3 @@ In diesem Lernprogramm haben Sie erfolgreich eine Instanz der Kunden-API konfigu
 Das folgende Video unterstützt Sie dabei, den Konfigurationsarbeitsablauf für Kunden-API zu verstehen. Darüber hinaus werden Best Practices und Verwendungsfallbeispiele bereitgestellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
-
