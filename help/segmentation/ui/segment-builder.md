@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierungsdienst;Segmentierungsdienst;Benutzerhandbuch;Segmentierungsleitfaden;Segmentaufbau;Segmentaufbau;
 solution: Experience Platform
 title: Handbuch zur Segmentaufbau-Benutzeroberfläche
-topic: ui guide
-description: 'Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen Rich-Workspace, mit dem Sie mit Profil-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen. '
+topic: Handbuch
+description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen Rich-Workspace, mit dem Sie mit Profil-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
+exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: 354b756e53b360f31c1832c2b0f946b67099a87f
+source-git-commit: bad293cf25b955496897d895169ec494416e9787
 workflow-type: tm+mt
-source-wordcount: '1896'
-ht-degree: 45%
+source-wordcount: '2002'
+ht-degree: 43%
 
 ---
-
 
 # [!DNL Segment Builder] UI-Handbuch
 
@@ -116,6 +116,22 @@ Nachdem Sie das Ereignis im Container &quot;Ereignis&quot;platziert haben, wähl
 Die Aggregation wird jetzt hinzugefügt. Sie können jetzt die Aggregationsfunktion auswählen, das Aggregat-Attribut, die Gleichheitsfunktion sowie den Wert auswählen. Im unten stehenden Beispiel würde dieses Segment alle Profil mit einer Kaufsumme von mehr als 100 USD qualifizieren, selbst wenn jeder Einzelkauf unter 100 USD liegt.
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
+
+### Zählungsfunktionen
+
+Mit den Zählerfunktionen im Segmentaufbau können Sie nach bestimmten Ereignissen suchen und zählen, wie oft diese ausgeführt wurden. Die unterstützten Zählfunktionen im Segmentaufbau sind &quot;Mindestens&quot;, &quot;höchstens&quot;, &quot;Genau&quot;, &quot;Zwischen&quot;und &quot;Alle&quot;.
+
+Um eine Zählfunktion zu erstellen, wählen Sie in der linken Leiste ein Ereignis aus und fügen Sie es in den Container [!UICONTROL Ereignis] ein.
+
+![](../images/ui/segment-builder/add-event.png)
+
+Nachdem Sie das Ereignis im Container &quot;Ereignis&quot;platziert haben, klicken Sie auf die Schaltfläche [!UICONTROL Mindestens 1].
+
+![](../images/ui/segment-builder/add-count.png)
+
+Die Funktion count wird jetzt hinzugefügt. Sie können jetzt die Zählfunktion und den Wert der Funktion auswählen. Im Folgenden sehen Sie ein Ereignis mit mindestens einem Klick.
+
+![](../images/ui/segment-builder/select-count.png)
 
 ## Container
 
