@@ -2,16 +2,16 @@
 keywords: Experience Platform;Benutzerhandbuch;Zuordnungs-Hilfe;beliebte Themen;Region
 solution: Experience Platform, Intelligent Services
 title: Attribution AI UI Guide
-topic: User guide
+topic: 'Benutzerhandbuch '
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
+exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1767'
 ht-degree: 6%
 
 ---
-
 
 # Handbuch zur Benutzeroberfläche von Attribution AI
 
@@ -65,7 +65,11 @@ Geben Sie unter **[!UICONTROL Grundlegende Informationen]** einen Namen und eine
 
 Nachdem Sie die grundlegenden Informationen ausgefüllt haben, klicken Sie auf das Dropdown-Menü **Datensatz auswählen**, um Ihren Datensatz auszuwählen. Der Datensatz wird verwendet, um das Modell zu trainieren und die nachfolgenden Daten zu bewerten, die es erzeugt. Wenn Sie einen Datensatz aus der Dropdown-Auswahl auswählen, werden nur die Datensätze aufgelistet, die mit Attribution AI kompatibel sind und dem XDM-Schema (Experience Data Model) entsprechen. Klicken Sie nach Auswahl eines Datensatzes auf **Weiter** oben rechts, um mit der Seite &quot;Ereignis definieren&quot;fortzufahren.
 
-![Setup-Seite](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Adobe Analytics-Datensätze werden über den Analytics-Source-Connector unterstützt.
+
+![Setup-Seite](./images/user-guide/dataset_selector.png)
 
 ## Definieren von Ereignissen
 
