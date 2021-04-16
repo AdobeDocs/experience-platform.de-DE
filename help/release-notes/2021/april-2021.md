@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 2736b81ae32eebe4cbc997e106315be2529c0d15
+source-git-commit: fff9e6455c6eae5f9903e1d28ab365cddfd51ef8
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 24%
+source-wordcount: '331'
+ht-degree: 31%
 
 ---
 
@@ -38,6 +38,8 @@ Die in der Kundendatenplattform in Echtzeit verfügbare Kundentelefonie wird ver
 Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL Intelligent Services] Dokumentation zur Datenvorbereitung](../../intelligent-services/data-preparation.md).
 
 ### Attribution AI
+
+Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
