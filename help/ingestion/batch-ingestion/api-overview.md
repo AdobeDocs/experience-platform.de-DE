@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Erfassung;Entwicklerhandbuch;API-Handbuch;Hochladen;Parquet erfassen;JSON erfassen;
 solution: Experience Platform
 title: Handbuch zur Batch Ingestion API
-topic: developer guide
+topic: Entwicklerhandbuch
 description: Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von APIs für die Batch-Erfassung.
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
 workflow-type: tm+mt
-source-wordcount: '2698'
+source-wordcount: '2558'
 ht-degree: 89%
 
 ---
-
 
 # Handbuch zur Batchaufnahme-API
 
@@ -33,7 +33,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
@@ -608,15 +608,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
       "schemaRef": {
           "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-      },
-      "fileDescription": {
-          "format": "parquet",
-          "delimiters": [","], 
-          "quotes": ["\""],
-          "escapes": ["\\"],
-          "header": true,
-          "charset": "UTF-8"
-      }      
+      }
   }'
 ```
 
@@ -624,32 +616,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
 | --------- | ----------- |
 | `{TENANT_ID}` | Diese Kennung stellt sicher, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrer IMS-Organisation enthalten sind. |
 | `{SCHEMA_ID}` | Die Kennung des erstellten Schemas. |
-
-Eine Erläuterung der verschiedenen Teile des Abschnitts „fileDescription“ des JSON-Haupttexts finden Sie im Folgenden:
-
-```json
-{
-    "fileDescription": {
-        "format": "parquet",
-        "delimiters": [","],
-        "quotes": ["\""],
-        "escapes": ["\\"],
-        "header": true,
-        "charset": "UTF-8"
-    }
-}
-```
-
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| `format` | Das Format der Mastered-Datei, nicht das Format der Eingabedatei. |
-| `delimiters` | Das als Trennzeichen zu verwendende Zeichen. |
-| `quotes` | Das als Anführungszeichen zu verwendende Zeichen. |
-| `escapes` | Das als Escape-Zeichen zu verwendende Zeichen. |
-| `header` | Die hochgeladene Datei **muss** Kopfzeilen enthalten. Da Schemavalidierung durchgeführt wird, muss dieser Wert auf „true“ gesetzt sein. Darüber hinaus dürfen Kopfzeilen **keine** Leerzeichen enthalten. Wenn Ihre Kopfzeile Leerzeichen aufweist, ersetzen Sie diese durch Unterstriche. |
-| `charset` | Ein optionales Feld. Andere unterstützte Zeichensätze sind „US-ASCII“ und „ISO-8869-1“. Bei leer gelassenem Feld wird standardmäßig von UTF-8 ausgegangen. |
-
-Der referenzierte Datensatz muss über den oben aufgeführten Dateibeschreibungsblock verfügen und in der Registrierung auf ein gültiges Schema verweisen. Andernfalls wird die Datei nicht in Parquet gemeistert.
 
 ### Batch erstellen
 
