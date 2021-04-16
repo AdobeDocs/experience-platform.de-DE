@@ -6,9 +6,9 @@ topic: Eingabe- und Ausgangsdaten für Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2189'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,16 @@ Im folgenden Dokument werden die verschiedenen Eingabe- und Ausgabedaten umrisse
 
 ## [!DNL Attribution AI] Eingabedaten
 
-[!DNL Attribution AI] verwendet  [!DNL Consumer Experience Event] Daten, um algorithmische Ergebnisse zu berechnen. Weitere Informationen zu [!DNL Consumer Experience Event] finden Sie unter [Daten für die Verwendung in der Intelligent Services-Dokumentation ](../data-preparation.md) vorbereiten.
+Attribution AI analysiert zur Berechnung algorithmischer Ergebnisse einen der folgenden Datensätze:
+
+- Consumer Experience Ereignis (CEE)-Datensatz
+- Adobe Analytics-Datensätze mit dem [Analytics-Quellanschluss](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>Der Adobe Analytics-Quellanschluss kann bis zu vier Wochen in Anspruch nehmen, um Daten aufzustocken. Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für das Attribution AI erforderliche Mindestlänge aufweist. Überprüfen Sie anhand der Angaben im Abschnitt [Verlaufsdaten](#data-requirements), ob Sie über genügend Daten verfügen, um genaue algorithmische Ergebnisse zu berechnen.
+
+Weitere Informationen zum Einrichten des [!DNL Consumer Experience Event] (CEE)-Schemas finden Sie im Handbuch [Intelligente Dienste - Datenvorbereitung](../data-preparation.md). Weitere Informationen zur Zuordnung von Adobe Analytics-Daten finden Sie in der Dokumentation [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md).
 
 Nicht alle Spalten im Schema [!DNL Consumer Experience Event] (CEE) sind für Attribution AIS obligatorisch.
 
