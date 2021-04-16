@@ -4,14 +4,14 @@ title: API-Endpunkt für Exportaufträge
 topic: guide
 type: Documentation
 description: Echtzeit-Kundendaten ermöglichen es Ihnen, eine Ansicht einzelner Kunden in Adobe Experience Platform zu erstellen, indem Daten aus mehreren Quellen, einschließlich Attributdaten und Verhaltensdaten, zusammengeführt werden. Profil-Daten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 87729e4996b0b2ac26e1a0abaa80af717825f9e6
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1543'
 ht-degree: 7%
 
 ---
-
 
 # Endpunkt für Exportaufträge
 
@@ -68,9 +68,7 @@ curl -X POST \
           "contentType": "application/vnd.adobe.xed+json;version=1"
         },
         "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
+          "persisted": true
         }
       }'
 ```
