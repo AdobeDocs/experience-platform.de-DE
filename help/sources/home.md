@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Quellverbindungen;Quellanschluss;Quellen;Datenquellen;Datenquelle;Datenquellen;Datenquellenverbindung
 solution: Experience Platform
 title: Übersicht über Source Connectors
-topic: Übersicht
+topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 0e4fda4abf5c02df81b74f15d2fbcafb68548070
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 58%
+source-wordcount: '951'
+ht-degree: 57%
 
 ---
-
 
 # Übersicht über Connectoren für Datenquellen
 
@@ -36,6 +36,8 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Adobe-Anwendungen wie
 - [Übersicht über den Adobe Analytics-Connector](connectors/adobe-applications/analytics.md)
 - [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Erstellen einer Quellverbindung zu Kundenattributen in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] Verbindungsübersicht](connectors/adobe-applications/marketo/marketo.md)
+- [Erstellen einer  [!DNL Marketo Engage] Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Werbung
 
@@ -95,7 +97,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 
-### eCommerce
+### E-Commerce
 
 Experience Platform unterstützt die Erfassung von Daten aus einem Drittanbieter-E-Commerce-System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
