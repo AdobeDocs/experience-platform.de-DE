@@ -4,14 +4,14 @@ title: Zielkatalog – Übersicht
 seo-title: Zielkatalog – Übersicht
 description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
 seo-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adoben, Werbungsplattformen, Umfragen, E-Mail-Marketingplattformen und mehr.
+exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 translation-type: tm+mt
-source-git-commit: 2efdefc69c937c70f6a463113a73ca71d8998e14
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 37%
+source-wordcount: '197'
+ht-degree: 36%
 
 ---
-
 
 # Zielkatalog – Übersicht
 
@@ -31,6 +31,6 @@ Sie können Ihre Daten in verschiedenen Kategorien in Adobe Experience Platform 
 - [E-Mail-Marketing-Ziele – Übersicht](./email-marketing/overview.md)
 - [Ziele für die mobile Interaktion - Übersicht](./mobile-engagement/overview.md)
 - [Personalisierungsziele – Übersicht](./personalization/overview.md)
-- [Ziele in sozialen Netzwerken – Übersicht](./social/overview.md)
+- [Social-Ziele - Übersicht](./social/overview.md)
 - [Umfrageziele – Übersicht](./survey/overview.md)
 - [Übersicht über die Ziele des Kunden](./voice/overview.md)
