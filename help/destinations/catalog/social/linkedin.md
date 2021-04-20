@@ -4,9 +4,9 @@ title: Verbindung zu LinkedIn-Audiencen
 description: Aktivieren Sie Profil für Ihre LinkedIn-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, basierend auf Hash-E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '677'
 ht-degree: 4%
 
 ---
@@ -80,7 +80,7 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 
 ## Mit Ziel verbinden {#connect-destination}
 
-Informationen zum Herstellen einer Verbindung mit dem Ziel [!DNL LinkedIn Matched Audiences] finden Sie unter [Authentifizierungsarbeitsablauf für Social-Netzwerkziele](./workflow.md).
+Informationen zum Herstellen einer Verbindung mit dem Ziel [!DNL LinkedIn Matched Audiences] finden Sie unter [Arbeitsablauf für die Authentifizierung von Social-Zielen](./workflow.md).
 
 Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences]-Ziels und zum Aktivieren von Segmenten.
 
