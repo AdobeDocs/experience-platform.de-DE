@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Verarbeitung von Genehmigungen in Adobe Experience Platform
 topic: Erste Schritte
 description: Erfahren Sie, wie Sie mit dem Adobe 2.0-Standard Kundenbestätigungssignale in Adobe Experience Platform verarbeiten.
+exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: f7fde2cb6828ebdd1763171008858fdd7242c784
+source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
-
 
 # Verarbeitung von Genehmigungen in Adobe Experience Platform
 
@@ -83,13 +83,19 @@ Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie i
 
 Sobald Sie über Ihre Datasets verfügen und Richtlinien zusammenführen, um die erforderlichen Felder für die Zustimmung in Ihren Profilen zu repräsentieren, besteht der nächste Schritt darin, die Genehmigungsdaten selbst in die Plattform zu übertragen.
 
-In erster Linie sollten Sie das Adobe Experience Platform Web SDK verwenden, um Zustimmungsdaten an Platform zu senden, wenn Ereignisse zur Änderung der Zustimmung von Ihrem CMP erkannt werden. Wenn Sie jedoch bereits Genehmigungsdaten an einem anderen Ort gespeichert haben, können Sie auch Ihre erfassten Einwilligungsdaten direkt erfassen, indem Sie sie dem XDM-Schema Ihres Datasets zuordnen und durch Stapelverarbeitung an Platform senden.
+In erster Linie sollten Sie das Adobe Experience Platform Web SDK verwenden, um Zustimmungsdaten an Platform zu senden, wenn Ereignisse zur Änderung der Zustimmung von Ihrem CMP erkannt werden. Wenn Sie Daten zur Einwilligung auf einer mobilen Plattform erfassen, sollten Sie das Adobe Experience Platform Mobile SDK verwenden. Sie können sich auch dafür entscheiden, Ihre gesammelten Einwilligungsdaten direkt zu erfassen, indem Sie sie dem XDM-Schema Ihres Datasets für die Einwilligung zuordnen und durch Stapelverarbeitung an Platform senden.
 
 Einzelheiten zu diesen Methoden finden Sie in den Unterabschnitten unten.
 
-### Integrieren Sie das Experience Platform Web SDK, um die Daten zur Kundengenehmigung zu verarbeiten. {#sdk}
+### Experience Platform Web SDK für die Verarbeitung von Genehmigungsdaten {#web-sdk} konfigurieren
 
-Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Ereignisse zur Änderung der Einwilligung auf Ihrer Website überwacht, können Sie das Experience Platform Web SDK integrieren, um die aktualisierten Einstellungen für die Einwilligung zu erhalten und sie an die Plattform zu senden, sobald ein Ereignis zur Änderung der Einwilligung eintritt. Weitere Informationen finden Sie im Handbuch [Konfiguration des SDK zur Verarbeitung von Daten zur Kundengenehmigung](./sdk.md).
+Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Ereignis zur Änderung der Einwilligung auf Ihrer Website überwacht, können Sie das Experience Platform Web SDK integrieren, um die aktualisierten Einwilligungseinstellungen zu erhalten und sie bei jedem Seitenladevorgang und bei jedem Ereignis zur Änderung der Einwilligung an die Plattform zu senden. Weitere Informationen finden Sie im Handbuch [Konfigurieren des Web SDK zur Verarbeitung von Daten zur Kundengenehmigung](./sdk.md).
+
+### Konfigurieren Sie das Experience Platform Mobile SDK für die Verarbeitung von Genehmigungsdaten {#mobile-sdk}
+
+Wenn in Ihrer mobilen Anwendung die Voreinstellungen für die Kundengenehmigung erforderlich sind, können Sie das Experience Platform Mobile SDK integrieren, um die Einstellungen für die Zustimmung abzurufen und zu aktualisieren, und diese bei jedem Aufruf der API an die Plattform senden.
+
+Weitere Informationen finden Sie in der Mobile SDK-Dokumentation für [Konfigurieren der mobilen Erweiterung Zustimmung](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) und [mit der API für Zustimmung](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference). Weitere Informationen zum Umgang mit Datenschutzbelangen mit dem Mobile SDK finden Sie im Abschnitt [Datenschutz und PDF](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr).
 
 ### XDM-konforme Einwilligungsdaten direkt einholen {#batch}
 
