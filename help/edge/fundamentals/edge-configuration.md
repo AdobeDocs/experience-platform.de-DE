@@ -2,14 +2,14 @@
 title: Erstellen einer Edge-Konfiguration für das Web-SDK der Experience Platform
 description: 'Erfahren Sie, wie Sie das Experience Platform Edge Network konfigurieren. '
 keywords: configuration;edge;edge-Configuration-ID;Umgebung Settings;edgeConfigId;identity;id sync-Container-ID;Sandbox;Streaming-Inlet;Ereignis-Datensatz;Zielgruppe;Client-Code;Property-Token;Zielgruppe-Umgebung-ID;Cookie-Ziele;URL-Ziele;Analytics-Einstellungen Blockreport-Suite-ID;
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '928'
 ht-degree: 2%
 
 ---
-
 
 # Erstellen einer Edge-Konfiguration
 
@@ -35,17 +35,17 @@ Die im SDK als `edgeConfigId` verwendete ID ist eine Composite-ID, die die Konfi
 
 Nachfolgend finden Sie die verfügbaren Einstellungen für jede Konfigurationsdatei. Die meisten Abschnitte können aktiviert oder deaktiviert werden. Wenn diese Option deaktiviert ist, werden Ihre Einstellungen gespeichert, sind aber nicht aktiv.
 
-##  IdentitySettings
+## [!UICONTROL IDS-] Einstellungen von Drittanbietern
 
-Der Identitätsabschnitt ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: &quot;[!UICONTROL ID-Syncs aktiviert]&quot;und &quot;[!UICONTROL ID-Synchronisierungs-Container-ID]&quot;.
+Der Drittanbieter-ID-Abschnitt ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: &quot;[!UICONTROL Synchronisierung der Drittanbieter-ID aktiviert]&quot;und &quot;[!UICONTROL Container-ID-Synchronisierung mit Drittanbieter-ID]&quot;.
 
 ![Identitätsabschnitt der Konfigurationsoberfläche](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL ID-Synchronisierung aktiviert]
+### [!UICONTROL Synchronisierung von Drittanbieter-IDs aktiviert]
 
 Steuert, ob das SDK Identitätssynchronisierungen mit Drittanbieter-Partnern ausführt.
 
-### [!UICONTROL ID-Synchronisierungs-Container-ID]
+### [!UICONTROL Container-ID für Synchronisierung mit Drittanbieter-ID]
 
 ID-Synchronisierungen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Dadurch wird gesteuert, welcher Container von ID-Synchronisierungen für eine bestimmte Konfigurations-ID ausgeführt wird.
 
