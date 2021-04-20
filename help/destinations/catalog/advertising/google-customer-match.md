@@ -2,14 +2,14 @@
 keywords: Google-Kundenübereinstimmungen;Google-Kundenübereinstimmung;Google-Kundenübereinstimmung
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften wie Search, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '1589'
+source-wordcount: '1617'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Google Customer Match] connection
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 
 ![Google Customer Match-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Nutzungsszenarien
+## Anwendungsbeispiele
 
 Damit Sie besser verstehen können, wie und wann das [!DNL Google Customer Match]-Ziel verwendet werden soll, finden Sie hier Beispiele für Anwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
@@ -108,6 +108,12 @@ Bevor Sie den Namensraum `User_ID` verwenden können, um Daten an Google zu send
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+
+## Ziel konfigurieren - Videodurchlauf {#video}
+
+Das folgende Video zeigt die Schritte zum Konfigurieren eines [!DNL Google Customer Match]-Ziels und zum Aktivieren von Segmenten. Die Schritte werden auch in den nächsten Abschnitten sequenziell dargestellt.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Mit Ziel verbinden {#connect-destination}
 
