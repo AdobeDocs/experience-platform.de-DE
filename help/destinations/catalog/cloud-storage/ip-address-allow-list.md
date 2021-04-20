@@ -1,16 +1,16 @@
 ---
-keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele
+keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele, Zulassungsliste
 title: 'Zulassungsliste der IP-Adresse für Cloud-Datenspeicherung-Ziele '
-type: Dokumentation
+type: Documentation
 description: Diese Seite enthält IP-Bereiche, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von der Experience Platform auf Ihren SFTP-Server, Amazon S3 oder die Azurblase-Datenspeicherung zu exportieren.
+exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: 49905060a18fc94fe524401fb3cf86f212b639ce
+source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
 
 ---
-
 
 # Zulassungsliste der IP-Adresse für Cloud-Datenspeicherung-Ziele {#ip-address-allow-list}
 
