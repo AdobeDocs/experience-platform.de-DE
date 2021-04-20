@@ -1,15 +1,14 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Dateneinbettung, Quellen
 translation-type: tm+mt
-source-git-commit: 26e7116858574b366760ffd4f92b14117ccd28eb
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 16%
+source-wordcount: '602'
+ht-degree: 15%
 
 ---
 
@@ -27,6 +26,11 @@ ht-degree: 16%
          - [Analytics-Feldzuordnungen](connectors/adobe-applications/mapping/analytics.md)
          - [Feldzuordnungen für Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Feldzuordnungen für Zielgruppen](connectors/adobe-applications/mapping/target.md)
+         - [Feldzuordnungen für Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+      - Marketo Engage {#marketo}
+         - [Marketo Engage-Anschluss](connectors/adobe-applications/marketo/marketo.md)
+         - [Handbuch zur Marketo Engage-Authentifizierung](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage Namensraum und Schema](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Werbung {#advertising}
       - [Google AdWords Connector](connectors/advertising/ads.md)
    - Cloud-Datenspeicherung {#cloud-storage}
@@ -159,6 +163,7 @@ ht-degree: 16%
          - [Adobe Analytics (Classification-Daten)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
+         - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
       - Werbung {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloud-Datenspeicherung {#cloud-storage}
