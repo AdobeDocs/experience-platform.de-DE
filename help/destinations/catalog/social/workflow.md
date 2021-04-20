@@ -5,10 +5,10 @@ type: Tutorial
 description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Advertising-Konten in Adobe Experience Platform herstellen.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: e2af4fcfe232889f3f928c00c9f9b37cf9754ca1
 workflow-type: tm+mt
 source-wordcount: '489'
-ht-degree: 19%
+ht-degree: 11%
 
 ---
 
@@ -64,8 +64,8 @@ In diesem Schritt können Sie auch eine beliebige **[!UICONTROL Marketingaktion]
 
 Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die obigen Felder ausgefüllt haben.
 
-Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen sehen Sie sich den nächsten Abschnitt [Aktivieren von Segmenten für soziale Netzwerke](#activate-segments) an, in dem der restliche Workflow erläutert wird.
+Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen finden Sie im nächsten Abschnitt [Aktivieren von Segmenten in sozialen Zielen](#activate-segments) Informationen zum Rest des Workflows.
 
-## Aktivieren von Segmenten für soziale Netzwerke {#activate-segments}
+## Aktivieren von Segmenten zu sozialen Zielen {#activate-segments}
 
-Anweisungen zum Aktivieren von Segmenten für soziale Netzwerke finden Sie unter [Daten für Ziele aktivieren](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Segmenten in sozialen Zielen finden Sie unter [Daten in Ziele aktivieren](../../ui/activate-destinations.md).
