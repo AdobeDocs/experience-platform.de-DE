@@ -4,14 +4,14 @@ title: Ziele – Übersicht
 seo-title: Ziele – Übersicht
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Cross-Kanal-Marketing-Kampagnen, E-Mails, gezielte Werbung und mehr aktivieren können.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Destinations in Adobe Experience Platform verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
+exl-id: afd07ddc-652e-4e22-b298-feba27332462
 translation-type: tm+mt
-source-git-commit: 6e7ecfdc0b2cbf6f07e6b2220ec163289511375e
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '488'
 ht-degree: 27%
 
 ---
-
 
 # [!DNL Destinations] Übersicht {#overview}
 
@@ -65,6 +65,6 @@ Weitere Informationen zur Auswahl von Marketingaktionen im Arbeitsablauf zum Ers
 * [Werbeziele - Google Display &amp; Video 360  ](./catalog/advertising/google-dv360.md)
 * [ Cloud-Speicher-Ziele](./catalog/cloud-storage/workflow.md)
 * [E-Mail-Marketing-Ziele](./catalog/email-marketing/overview.md)
-* [Ziele in sozialen Netzwerken ](./catalog/social/workflow.md)
+* [Social-Ziele](./catalog/social/workflow.md)
 
 Weitere Informationen zu Verstößen gegen die Datenrichtlinie im Arbeitsablauf zur Segmentüberprüfung finden Sie im Schritt Überprüfen unter [Profil und Aktivierungen für ein Ziel](./ui/activate-destinations.md#review) aktivieren.
