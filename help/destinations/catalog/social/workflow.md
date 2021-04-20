@@ -1,22 +1,22 @@
 ---
-keywords: Facebook;facebook;Social-Netzwerk;Social-Netzwerk;Social-Netzwerkauthentifizierung;Social-Netzwerkauthentifizierung
-title: Social-Netzwerkziel erstellen
+keywords: Facebook;facebook;Social-Netzwerk;Social-Netzwerk;Social-Authentifizierung;Social-Netzwerkauthentifizierung
+title: Social-Ziel erstellen
 type: Tutorial
-description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten in Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Advertising-Konten in Adobe Experience Platform herstellen.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '503'
-ht-degree: 31%
+source-wordcount: '489'
+ht-degree: 19%
 
 ---
 
-# Social-Netzwerkziel {#social-network-destinations-workflow} erstellen
+# Erstellen eines sozialen Ziels {#social-network-destinations-workflow}
 
 ## Übersicht {#overview}
 
-Dieses Lernprogramm verwendet [!DNL Facebook] als Beispiel, aber der Adobe Experience Platform-Arbeitsablauf ist für alle Social-Netzwerkziele gleich.
+Dieses Lernprogramm verwendet [!DNL Facebook] als Beispiel, aber der Adobe Experience Platform-Arbeitsablauf ist für alle Social-Ziele gleich.
 
 ## Social-Ziel konfigurieren - Videoanleitung {#video}
 
@@ -26,9 +26,9 @@ Das folgende Video zeigt, wie Sie ein soziales Ziel konfigurieren und Segmente i
 
 ## Social-Ziel {#select-destination} auswählen
 
-Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf zur Kategorie **[!UICONTROL Social]** durch. Wählen Sie Ihr bevorzugtes soziales Netzwerkziel und dann **[!UICONTROL Konfigurieren]**.
+Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf zur Kategorie **[!UICONTROL Social]** durch. Wählen Sie Ihr bevorzugtes soziales Ziel und dann **[!UICONTROL Konfigurieren]**.
 
-![Verbindung zum sozialen Netzwerk-Ziel](../../assets/catalog/social/workflow/catalog.png)
+![Herstellen einer Verbindung zum sozialen Ziel](../../assets/catalog/social/workflow/catalog.png)
 
 >[!NOTE]
 >
@@ -36,13 +36,13 @@ Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf 
 
 ## Kontoschritt {#account}
 
-Wenn Sie im Schritt **Konto** zuvor eine Verbindung zu Ihrem Social-Netzwerkziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Ziel in einem sozialen Netzwerk einzurichten. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Dadurch gelangen Sie zum ausgewählten Ziel in einem sozialen Netzwerk, um sich anzumelden und Adobe Experience Cloud mit Ihrem Anzeigenkonto für das soziale Netzwerk zu verbinden.
+Wenn Sie im Schritt **Konto** zuvor eine Verbindung zu Ihrem sozialen Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Social-Ziel einzurichten. Wählen Sie **[!UICONTROL Verbindung mit Ziel]** herstellen. Dadurch gelangen Sie zum ausgewählten Social-Ziel, um sich anzumelden und Adobe Experience Cloud mit Ihrem Social-Anzeigenkonto zu verbinden.
 
 >[!NOTE]
 >
->Plattform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen in Ihre Social-Netzwerk-Konto-ID eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldedaten ausführen.
+>Plattform unterstützt die Berechtigungsüberprüfung im Authentifizierungsprozess und zeigt eine Fehlermeldung an, wenn Sie falsche Anmeldeinformationen in Ihre Social-Konto-ID eingeben. Dadurch wird sichergestellt, dass Sie den Workflow nicht mit falschen Anmeldedaten ausführen.
 
-![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Authentifizierungsschritt](../../assets/catalog/social/workflow/pre-connect.png)
+![Verbindung zum sozialen Ziel herstellen - Authentifizierungsschritt](../../assets/catalog/social/workflow/pre-connect.png)
 
 Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ihrem sozialen Netzwerk verbunden ist, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Schritt **[!UICONTROL Authentifizierung]** fortzufahren.
 
@@ -58,7 +58,7 @@ Geben Sie im Schritt **[!UICONTROL Authentication]** einen [!UICONTROL Name] und
 > * Bei [!DNL LinkedIn]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL LinkedIn Campaign Manager Account ID]. Sie finden diese ID im [!DNL LinkedIn Campaign Manager].
 
 
-![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Authentifizierungsschritt](../../assets/catalog/social/workflow/authentication.png)
+![Verbindung zum sozialen Ziel herstellen - Authentifizierungsschritt](../../assets/catalog/social/workflow/authentication.png)
 
 In diesem Schritt können Sie auch eine beliebige **[!UICONTROL Marketingaktion]** auswählen, die auf dieses Ziel angewendet werden soll. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
