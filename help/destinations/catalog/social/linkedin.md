@@ -2,14 +2,14 @@
 keywords: linkedin-Verbindung;LinkedIn-Verbindung;LinkedIn-Ziele;linkedin
 title: Verbindung zu LinkedIn-Audiencen
 description: Aktivieren Sie Profil für Ihre LinkedIn-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, basierend auf Hash-E-Mails.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '678'
 ht-degree: 4%
 
 ---
-
 
 # [!DNL LinkedIn Matched Audiences] connection
 
@@ -17,9 +17,9 @@ ht-degree: 4%
 
 Aktivieren Sie Profil für Ihre [!DNL LinkedIn]-Kampagnen für Targeting, Personalisierung und Unterdrückung von Audiencen, basierend auf Hash-E-Mails und mobilen IDs.
 
-![LinkedIn-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/linkedin/catalog.png)
+![linkedIn-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/linkedin/catalog.png)
 
-## Nutzungsszenarien
+## Anwendungsbeispiele
 
 Damit Sie besser verstehen können, wie und wann das [!DNL LinkedIn Matched Audiences]-Ziel verwendet werden soll, hier ein Anwendungsfall, den Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
@@ -40,9 +40,9 @@ Eine Software-Firma organisiert eine Konferenz und möchte mit den Teilnehmern i
 
 **Segmentexport** : Sie exportieren alle Segmentmitglieder (Audience) mit den IDs (Name, Telefonnummer usw.), die im  [!DNL LinkedIn Matched Audiences] Ziel verwendet werden.
 
-## Voraussetzungen für LinkedIn-Konto {#LinkedIn-account-prerequisites}
+## Voraussetzungen für linkedIn-Konten {#LinkedIn-account-prerequisites}
 
-Bevor Sie das Ziel [!UICONTROL LinkedIn Matched Audience] verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto die Berechtigungsstufe [!DNL Creative Manager] oder höher aufweist.
+Bevor Sie das [!UICONTROL LinkedIn Matched Audience]-Ziel verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto das Berechtigungsniveau [!DNL Creative Manager] oder höher aufweist.
 
 Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Werbekonten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 
@@ -81,6 +81,10 @@ Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Si
 ## Mit Ziel verbinden {#connect-destination}
 
 Informationen zum Herstellen einer Verbindung mit dem Ziel [!DNL LinkedIn Matched Audiences] finden Sie unter [Authentifizierungsarbeitsablauf für Social-Netzwerkziele](./workflow.md).
+
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences]-Ziels und zum Aktivieren von Segmenten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Aktivieren von Segmenten nach [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
