@@ -5,15 +5,15 @@ title: Häufig gestellte Fragen zu Adobe Experience Platform und Handbuch zur Fe
 description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
 landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen und eine Anleitung zur Fehlerbehebung bei häufigen Fehlern in Experience Platform.
 topic: Erste Schritte
-type: Dokumentation
+type: Documentation
+exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 83cc3ddbf067f413cb524a3a685d985d5853eafd
+source-git-commit: e722d7598a558bcbc5c48d237d394f91c0803352
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1717'
 ht-degree: 68%
 
 ---
-
 
 # [!DNL Platform] FAQ und Handbuch zur Fehlerbehebung
 
@@ -88,7 +88,7 @@ Im Folgenden finden Sie eine Liste von Fehlern, die bei der Verwendung eines [!D
 Die folgenden Statuscodes können bei jeder [!DNL Experience Platform]-API gefunden werden. Jeder Code kann verschiedene Ursachen haben; daher sind die Erklärungen in diesem Abschnitt allgemein gehalten. Weitere Informationen zu bestimmten Fehlern in einzelnen [!DNL Platform]-Diensten finden Sie im Ordner [Dienstfehlerbehebung](#service-troubleshooting-directory) unten.
 
 | Status-Code | Beschreibung | Mögliche Ursachen |
---- | --- | ---
+|--- | --- | ---|
 | 400 | Ungültige Anfrage | Die Anfrage wurde falsch erstellt, es fehlen wichtige Informationen und/oder die Syntax ist falsch. |
 | 401 | Authentifizierung fehlgeschlagen | Die Anfrage hat eine Authentifizierungsprüfung nicht bestanden. Ihr Zugriffstoken fehlt oder ist ungültig. Weiterführende Informationen finden Sie im Abschnitt [OAuth-Token-Fehler](#oauth-token-is-missing). |
 | 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Berechtigungen zur Anzeige. |
@@ -198,4 +198,3 @@ Im Folgenden finden Sie eine Liste der Anleitungen zur Fehlerbehebung und der AP
 | [!DNL Flow Service] ([!DNL Sources] und [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Handbuch zur Fehlerbehebung bei Sandboxes](../sandboxes/troubleshooting-guide.md) |
-
