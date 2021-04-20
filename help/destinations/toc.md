@@ -6,10 +6,10 @@ user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten 
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 feature: Ziele
 translation-type: tm+mt
-source-git-commit: 0bb6db19dc27031115e47415c1b3241661e0a0ae
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 57%
+source-wordcount: '470'
+ht-degree: 55%
 
 ---
 
@@ -118,11 +118,11 @@ ht-degree: 57%
       * [Gainsight-Erweiterung](./catalog/personalization/gainsight.md)
       * [KickFire-Erweiterung](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization-Erweiterung](./catalog/personalization/marketo-web-personalization.md)
-   * Ziele in sozialen Netzwerken {#social}
-      * [Ziele in sozialen Netzwerken – Übersicht](./catalog/social/overview.md)
-      * [Social-Netzwerkziel erstellen](./catalog/social/workflow.md)
+   * Social-Ziele{#social}
+      * [Social-Ziele - Übersicht](./catalog/social/overview.md)
+      * [Social-Ziel erstellen](./catalog/social/workflow.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
-      * [Facebook-Verbindung](./catalog/social/facebook.md)
+      * [Facebook-Anschluss](./catalog/social/facebook.md)
       * [Verbindung zu LinkedIn-Audiencen](./catalog/social/linkedin.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
