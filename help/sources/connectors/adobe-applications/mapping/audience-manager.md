@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Zuordnung von Audience Managern;Zuordnung von Audiencen-Managern
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Audience Manager Source Connector
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Adobe Audience Manager-Daten (Echtzeit-, Onboard- und Profil-Daten) den entsprechenden XDM-Feldern (Experience Data Model) für den Audience Manager-Quellanschluss zuordnen.
+exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 70%
+source-wordcount: '175'
+ht-degree: 68%
 
 ---
-
 
 # Feldzuordnungen für Audience Manager
 
@@ -38,6 +38,8 @@ Typ: Echtzeitdaten
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os name </li><li>d_os_version → os_version</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Profildaten
 
 Typ: Profil
@@ -47,3 +49,5 @@ Typ: Profil
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+
+{style=&quot;table-layout:auto&quot;}
