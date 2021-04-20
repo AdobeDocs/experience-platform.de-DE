@@ -1,22 +1,30 @@
 ---
-keywords: Facebook;Facebook;Social-Netzwerk;Social-Netzwerk;Social-Netzwerkauthentifizierung;Social-Netzwerkauthentifizierung
+keywords: Facebook;facebook;Social-Netzwerk;Social-Netzwerk;Social-Netzwerkauthentifizierung;Social-Netzwerkauthentifizierung
 title: Social-Netzwerkziel erstellen
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Verbindung zu Ihren Social-Netzwerk-Anzeigenkonten in Adobe Experience Platform herstellen.
+exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 95ca7112d1f2655bf33e8a1c549e886ced244a5d
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 52%
+source-wordcount: '503'
+ht-degree: 31%
 
 ---
-
 
 # Social-Netzwerkziel {#social-network-destinations-workflow} erstellen
 
 ## Übersicht {#overview}
 
 Dieses Lernprogramm verwendet [!DNL Facebook] als Beispiel, aber der Adobe Experience Platform-Arbeitsablauf ist für alle Social-Netzwerkziele gleich.
+
+## Social-Ziel konfigurieren - Videoanleitung {#video}
+
+Das folgende Video zeigt, wie Sie ein soziales Ziel konfigurieren und Segmente in Adobe Experience Platform aktivieren. Die Schritte werden auch in den nächsten Abschnitten sequenziell dargestellt.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+
+## Social-Ziel {#select-destination} auswählen
 
 Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf zur Kategorie **[!UICONTROL Social]** durch. Wählen Sie Ihr bevorzugtes soziales Netzwerkziel und dann **[!UICONTROL Konfigurieren]**.
 
@@ -26,9 +34,9 @@ Führen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** einen Bildlauf 
 >
 >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Aktivieren]** und **[!UICONTROL Konfigurieren]** finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-## Authentifizierungsschritt {#authentication}
+## Kontoschritt {#account}
 
-Wenn Sie im Schritt **Authentifizieren** zuvor eine Verbindung zu Ihrem Ziel in einem sozialen Netzwerk eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Ziel in einem sozialen Netzwerk einzurichten. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Dadurch gelangen Sie zum ausgewählten Ziel in einem sozialen Netzwerk, um sich anzumelden und Adobe Experience Cloud mit Ihrem Anzeigenkonto für das soziale Netzwerk zu verbinden.
+Wenn Sie im Schritt **Konto** zuvor eine Verbindung zu Ihrem Social-Netzwerkziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre bestehende Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu Ihrem Ziel in einem sozialen Netzwerk einzurichten. Wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Dadurch gelangen Sie zum ausgewählten Ziel in einem sozialen Netzwerk, um sich anzumelden und Adobe Experience Cloud mit Ihrem Anzeigenkonto für das soziale Netzwerk zu verbinden.
 
 >[!NOTE]
 >
@@ -36,23 +44,21 @@ Wenn Sie im Schritt **Authentifizieren** zuvor eine Verbindung zu Ihrem Ziel in 
 
 ![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Authentifizierungsschritt](../../assets/catalog/social/workflow/pre-connect.png)
 
-Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ihrem sozialen Netzwerk verbunden ist, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem **[!UICONTROL Setup-Schritt]** fortzufahren.
+Nachdem Sie Ihre Anmeldedaten bestätigt haben und Adobe Experience Cloud mit Ihrem sozialen Netzwerk verbunden ist, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Schritt **[!UICONTROL Authentifizierung]** fortzufahren.
 
 ![Anmeldedaten bestätigt](../../assets/catalog/social/workflow/post-connect.png)
 
-## Setup-Schritt {#setup}
+## Authentifizierungsschritt {#authentication}
 
-Geben Sie im **[!UICONTROL Setup-Schritt]** einen [!UICONTROL Namen] und eine [!UICONTROL Beschreibung] für die Aktivierung ein und geben Sie die [!UICONTROL Kontokennung] Ihres Anzeigenkontos für das soziale Netzwerk ein.
-
->[!IMPORTANT]
->
-> Bei [!DNL Facebook]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL Facebook Ad Account ID]. Sie finden diese ID im [!DNL Facebook Ads Manager]. Stellen Sie der ID `act_` wie folgt voran:
-
-![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Setup-Schritt](../../assets/catalog/social/workflow/setup.png)
+Geben Sie im Schritt **[!UICONTROL Authentication]** einen [!UICONTROL Name] und einen [!UICONTROL Description] für Ihre Aktivierung ein und füllen Sie [!UICONTROL Konto-ID] Ihres Social-Netzwerk-Anzeigenkontos aus.
 
 >[!IMPORTANT]
 >
-> Bei [!DNL LinkedIn]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL LinkedIn Campaign Manager Account ID]. Sie finden diese ID im [!DNL LinkedIn Campaign Manager].
+> * Bei [!DNL Facebook]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL Facebook Ad Account ID]. Sie finden diese ID im [!DNL Facebook Ads Manager]. Präfix der ID mit `act_`, wie in der Abbildung unten dargestellt.
+> * Bei [!DNL LinkedIn]-Zielen ist **[!UICONTROL Konto-ID]** Ihre [!DNL LinkedIn Campaign Manager Account ID]. Sie finden diese ID im [!DNL LinkedIn Campaign Manager].
+
+
+![Verbindung zum Ziel in einem sozialen Netzwerk herstellen – Authentifizierungsschritt](../../assets/catalog/social/workflow/authentication.png)
 
 In diesem Schritt können Sie auch eine beliebige **[!UICONTROL Marketingaktion]** auswählen, die auf dieses Ziel angewendet werden soll. Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
 
