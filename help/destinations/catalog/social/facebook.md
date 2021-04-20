@@ -4,9 +4,9 @@ title: Facebook-Anschluss
 description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen zum Targeting, zur Personalisierung und zur Unterdrückung von Audiencen anhand von Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 01aed33913b5334263090aea17f75ce181717c50
+source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1146'
 ht-degree: 8%
 
 ---
@@ -117,7 +117,7 @@ Bevor Sie den Namensraum `Extern_ID` verwenden können, um Daten an [!DNL Facebo
 
 ## Mit Ziel verbinden {#connect-destination}
 
-Informationen zum Herstellen einer Verbindung mit dem Ziel [!DNL Facebook] finden Sie unter [Authentifizierungsarbeitsablauf für Social-Netzwerkziele](./workflow.md).
+Informationen zum Herstellen einer Verbindung mit dem Ziel [!DNL Facebook] finden Sie unter [Arbeitsablauf für die Authentifizierung von Social-Zielen](./workflow.md).
 
 Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Facebook]-Ziels und zum Aktivieren von Segmenten.
 
