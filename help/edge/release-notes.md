@@ -2,18 +2,18 @@
 title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise
+exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: b0e6d1f7cf7302bb3a7403bb18dfd8b7489d583e
+source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 6%
+source-wordcount: '500'
+ht-degree: 5%
 
 ---
 
-
 # Versionshinweise
 
-## Version 2.4.0
+## Version 2.4.0, März 2021
 
 * Das SDK kann jetzt [als npm-Paket](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html) installiert werden.
 * Es wurde Unterstützung für eine `out`-Option hinzugefügt, wenn [die Standardgenehmigung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) konfiguriert wird. Dadurch werden alle Ereignis bis zum Erhalt der Einwilligung gelöscht (die bestehende `pending`-Option setzt Ereignis in Warteschlange und sendet sie, sobald die Einwilligung eingegangen ist).
@@ -27,7 +27,7 @@ ht-degree: 6%
 * Fehlerbehebung: Ereignisse für Interaktionsbenachrichtigungen zu Personalisierungen enthalten Informationen zu derselben Aktivität, wenn ein Benutzer zu einer neuen einseitigen App-Ansicht, zurück zur ursprünglichen Ansicht und auf ein Element klickt, das für die Konvertierung infrage kommt.
 * Fehlerbehebung: Wenn für das erste vom SDK gesendete Ereignis `documentUnloading` `true` festgelegt wurde, wird [`sendBeacon`](https://developer.mozilla.org/de-DE/docs/Web/API/Navigator/sendBeacon) verwendet, um das Ereignis zu senden, was zu einem Fehler bei einer nicht eingerichteten Identität führt.
 
-## Version 2.3.0
+## Version 2.3.0, November 2020
 
 * Neue nonce-Unterstützung, um strengere Content-Sicherheitsrichtlinien zu ermöglichen.
 * Unterstützung der Personalisierung für Einzelseitenanwendungen hinzugefügt.
@@ -37,12 +37,12 @@ ht-degree: 6%
 * Fehlerbehebung: Bestimmte Browserfehler, die eine schreibgeschützte `message`-Eigenschaft enthalten, wurden nicht ordnungsgemäß verarbeitet, was dazu führte, dass dem Kunden ein anderer Fehler angezeigt wurde.
 * Fehlerbehebung: Wenn das SDK in einem iframe ausgeführt wird, wird ein Fehler ausgegeben, wenn die HTML-Seite des iframe aus einer anderen Subdomäne stammt als die HTML-Seite des übergeordneten Fensters.
 
-## Version 2.2.0
+## Version 2.2.0, Oktober 2020
 
 * Fehlerbehebung: Das Opt-in-Objekt hinderte Alloy daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` ist.
 * Fehlerbehebung: Achten Sie auf Anforderungen, die Angebot zur Personalisierung zurückgeben, um ein flackerndes Problem zu vermeiden.
 
-## Version 2.1.0
+## Version 2.1.0, August 2020
 
 * Entfernen Sie den Befehl `syncIdentity` und unterstützen Sie die Übergabe dieser IDs im Befehl `sendEvent`.
 * Unterstützung von IAB 2.0 Consent Standard.
