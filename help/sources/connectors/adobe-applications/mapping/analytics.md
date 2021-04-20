@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Analytics-Zuordnungsfelder;Analytics-Zuordnung
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
-topic: overview
+topic-legacy: overview
 description: Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics Data Connector (ADC) erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
-source-wordcount: '3393'
+source-wordcount: '3405'
 ht-degree: 99%
 
 ---
-
 
 # Analytics-Feldzuordnungen
 
@@ -124,6 +124,8 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | videopausetime | media.mediaTimed.pauseTime | Objekt | <!-- MISSING --> | {id (Zeichenfolge), Wert (Zahl)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | Ganzzahl |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Aufgeteilte Zuordnungsfelder
 
 Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Positionen zugeordnet.
@@ -133,6 +135,8 @@ Diese Felder verfügen über eine einzige Quelle, sind aber **mehreren** XDM-Pos
 | s_resolution | device.screenWidth, device.screenHeight | Ganzzahl | Numerische ID, die die Auflösung des Bildschirms darstellt. |
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | Zeichenfolge | Version des mobilen Betriebssystems. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | Ganzzahl | Länge der Videoanzeige. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Generierte Zuordnungsfelder
 
@@ -191,6 +195,8 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | Zeichenfolge | Mobile Services – Beacon-Nähe. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | Ganzzahl | Der Name des Videokapitels. |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | Ganzzahl | Die Länge des Videos. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Erweiterte Zuordnungsfelder
 
@@ -269,3 +275,5 @@ Folgende Tabelle enthält Spalten, die den Namen des Analytics-Felds (*Analytics
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | Zeichenfolge | Numerische ID des Typs der verweisenden Stelle der ersten verweisenden Stelle des Besuchs. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | Zeichenfolge | Numerische ID der ersten Suchmaschine des Besuchs. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | Ganzzahl | Zeitstempel des ersten Treffers des Besuchs in Unix-Zeit. |
+
+{style=&quot;table-layout:auto&quot;}
