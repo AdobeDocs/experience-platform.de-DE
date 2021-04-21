@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Data Governance und Datenschutz – Tutorials
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Dieses Dokument bietet einen Überblick über die verschiedenen Schulungen zu Adobe Experience Platform Data Governance und Adobe Experience Platform Privacy Service.
+exl-id: c3cef447-b343-445b-a3ed-54f873f6dfb9
 translation-type: tm+mt
-source-git-commit: 97dfd3a9a66fe2ae82cec8954066bdf3b6346830
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 41%
 
 ---
-
 
 # [!DNL Data Governance] und  [!DNL Privacy] Tutorials
 
