@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblase-Datenspeicherung;Azimarktisch-Datenspeicherung;ATS;ats
 solution: Experience Platform
 title: Übersicht über den Source Connector für die Datenspeicherung von Avocent
-topic: Übersicht
+topic-legacy: overview
 description: Erfahren Sie, wie Sie die Azurblase Table-Datenspeicherung mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '305'
 ht-degree: 9%
 
 ---
-
 
 # (Beta) [!DNL Azure Table Storage] Connector
 
