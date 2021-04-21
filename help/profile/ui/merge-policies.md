@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Zusammenführungsrichtlinien;Benutzeroberfläche;Benutzeroberfläche;Zeitstempel geordnet;Datensatzpräferenz
 title: Leitfaden zur Benutzeroberfläche "Richtlinien zusammenführen"
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen. '
+description: Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen.
+exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3017'
 ht-degree: 8%
 
 ---
-
 
 # Leitfaden zur Benutzeroberfläche &quot;Richtlinien zusammenführen&quot;
 
