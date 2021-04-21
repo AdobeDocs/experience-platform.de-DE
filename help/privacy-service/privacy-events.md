@@ -2,20 +2,20 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Privacy Service-Ereignis abonnieren
-topic: privacy events
+topic-legacy: privacy events
 description: Erfahren Sie, wie Sie Privacy Service-Ereignis mit einem vorkonfigurierten Webshaken abonnieren.
+exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 translation-type: tm+mt
-source-git-commit: 2b919a3b6cbbd59521874cfd2d11e20de3077740
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 7%
 
 ---
 
-
 # Abonnieren von [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] sind Nachrichten von Adobe Experience Platform  [!DNL Privacy Service], die Adobe I/O-Ereignis nutzen, die an einen konfigurierten Webhaken gesendet werden, um eine effiziente Auftragsabwicklungsautomatisierung zu ermöglichen. Sie verringern oder beseitigen die Notwendigkeit, die [!DNL Privacy Service]-API abzufragen, um zu prüfen, ob ein Auftrag abgeschlossen ist oder ein bestimmter Meilenstein in einem Workflow erreicht wurde.
+[!DNL Privacy Service Events] sind Meldungen von Adobe Experience Platform  [!DNL Privacy Service], die Adoben I/O-Ereignis nutzen, die an einen konfigurierten Webhaken gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. Sie verringern oder beseitigen die Notwendigkeit, die [!DNL Privacy Service]-API abzufragen, um zu prüfen, ob ein Auftrag abgeschlossen ist oder ein bestimmter Meilenstein in einem Workflow erreicht wurde.
 
 Aktuell gibt es vier Arten von Benachrichtigungen im Lebenszyklus der Anfragen von Datenschutzaufträgen:
 
