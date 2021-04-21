@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
-topic: overview
+topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in zahlreichen Datenschutzbestimmungen beschrieben. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanforderungen für Echtzeit-Kundendaten-Profile behandelt.
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 11%
 
 ---
-
 
 # Verarbeitung von Datenschutzanfragen in [!DNL Real-time Customer Profile]
 
