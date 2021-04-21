@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Oracle DB;oracle db
 solution: Experience Platform
 title: Erstellen einer Oracle DB-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Oracle DB-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL Oracle DB]-Quellverbindung in der Benutzeroberfläche
 
@@ -56,7 +56,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** **[!UICONTROL Oracl
 
 ![Katalog](../../../../images/tutorials/create/oracle/catalog.png)
 
-Die Seite **[!UICONTROL Verbindung mit Oracle DB]** herstellen wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite **[!UICONTROL Verbindung mit Oracle DB]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
 
 ### Neues Konto
 
