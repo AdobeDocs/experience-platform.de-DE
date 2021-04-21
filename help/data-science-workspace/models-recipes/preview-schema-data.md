@@ -2,17 +2,17 @@
 keywords: Experience Platform;Vorschau Schema Data;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Vorschau des Schemas Einzelhandelsverkäufe und des Datasets
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: Im folgenden Dokument wird die Vorschau von Schemas und Datensätzen auf Adobe Experience Platform beschrieben.
+exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 translation-type: tm+mt
-source-git-commit: 5129a75071af680bc54a7f60bb89ce32d3216d09
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '236'
 ht-degree: 22%
 
 ---
-
 
 # Vorschau des Schemas und des Datensatzes für den Einzelhandel
 
