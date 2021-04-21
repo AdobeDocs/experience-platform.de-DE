@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Power BI;Power-bi;Verbindung zum Abfrage-Dienst herstellen
 solution: Experience Platform
 title: Power BI mit dem Abfrage-Dienst verbinden
-topic: connect
+topic-legacy: connect
 description: Dieses Dokument führt Sie durch die Schritte, um Power BI mit dem Adobe Experience Platform Abfrage Service zu verbinden.
+exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '466'
 ht-degree: 5%
 
 ---
-
 
 # Verbinden Sie [!DNL Power BI] mit dem Abfrage Service (PC)
 
