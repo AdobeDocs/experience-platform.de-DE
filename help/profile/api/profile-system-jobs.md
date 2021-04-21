@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: API-Endpunkt für Profil-Aufträge
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Stapel aus dem Profil Store löschen, um nicht mehr benötigte oder fälschlicherweise hinzugefügte Kundendaten in Echtzeit zu entfernen. Dies erfordert die Verwendung der Profil-API zum Erstellen eines Profil-Systemauftrags oder Löschen einer Anforderung.
+exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
 translation-type: tm+mt
-source-git-commit: d2ace7cadb06f77bdf14b6a4ef83e879c4ca88fd
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 66%
 
 ---
-
 
 # Endpunkt &quot;Systemaufträge&quot;(Anforderungen löschen)
 
