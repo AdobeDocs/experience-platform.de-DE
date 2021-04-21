@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Flussdienst;Datenflüsse aktualisieren
 solution: Experience Platform
 title: Aktualisieren von Datenflüssen mithilfe der Flussdienst-API
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Dieses Lernprogramm beschreibt die Schritte zum Aktualisieren eines Datenflusses, einschließlich seines Namens, seiner Beschreibung und seines Zeitplans, mithilfe der Flow Service API.
+exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 translation-type: tm+mt
-source-git-commit: e19b5b905a38c63b7dc47904c5af30dc2ed21e22
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '615'
 ht-degree: 33%
 
 ---
-
 
 # Aktualisieren von Datenflüssen mithilfe der Flow Service API
 
