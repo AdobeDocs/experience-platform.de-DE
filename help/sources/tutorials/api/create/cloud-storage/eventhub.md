@@ -7,18 +7,15 @@ type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Azurblauen Ereignis Hubs-Konto herstellen.
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d6f1521470b8dc630060584189690545c724de6b
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 25%
+source-wordcount: '550'
+ht-degree: 26%
 
 ---
 
-# Erstellen einer [!DNL Azure Event Hubs]-Quellverbindung mit der [!DNL Flow Service]-API
 
->[!NOTE]
->
-> Der [!DNL Azure Event Hubs]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
+# Erstellen einer [!DNL Azure Event Hubs]-Quellverbindung mit der [!DNL Flow Service]-API
 
 [!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
 
