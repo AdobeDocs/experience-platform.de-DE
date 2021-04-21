@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebn
 solution: Experience Platform
 title: Erforderliche Felder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein erforderliches XDM-Feld in der Benutzeroberfläche der Experience Platform definieren.
-topic: user guide
+topic-legacy: user guide
+exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '191'
 ht-degree: 1%
 
 ---
-
 
 # Definieren der erforderlichen Felder in der Benutzeroberfläche
 
