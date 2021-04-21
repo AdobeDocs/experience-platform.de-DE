@@ -2,16 +2,16 @@
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Benutzeroberfläche;Anpassung;Profil-Dashboard;Dashboard
 title: Profil-Dashboard
 description: Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, mit dem Sie wichtige Informationen zu Ihren Echtzeit-Kundendaten Ansicht haben.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
 translation-type: tm+mt
-source-git-commit: 077525d597d457ab2c3b8733490920da89f15ebb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 6%
 
 ---
-
 
 # (Beta) [!UICONTROL Profil] Dashboard {#profile-dashboard}
 
