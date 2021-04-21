@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;SFTP;sftp;Secure File Transfer Protocol;Secure File Transfer Protocol
 solution: Experience Platform
 title: Erstellen einer SFTP-Quellverbindung mit der Flow Service API
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
+exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 translation-type: tm+mt
-source-git-commit: 0e11acc4a599d360cb3048445003f61848ad23d3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '850'
 ht-degree: 21%
 
 ---
-
 
 # Erstellen Sie eine SFTP-Quellverbindung mit der API [!DNL Flow Service]
 
