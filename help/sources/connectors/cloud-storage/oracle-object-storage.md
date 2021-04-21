@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Oracle-Objekt-Datenspeicherung;oracle-Objekt-Datenspeicherung
 solution: Experience Platform
 title: Oracle Object Datenspeicherung Source Connector - Übersicht
-topic: Übersicht
-description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle Object Datenspeicherung und Adobe Experience Platform herstellen.
+topic-legacy: overview
+description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle Object Datenspeicherung und Adobe Experience Platform herstellen.
+exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
 translation-type: tm+mt
-source-git-commit: 04c605aedd4c52b54d0f075c169ce919650cdee9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '416'
+source-wordcount: '415'
 ht-degree: 3%
 
 ---
-
 
 # Oracle Object Datenspeicherung Connector
 
@@ -36,15 +36,15 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 
 ## [!DNL Oracle Object Storage] an Plattform anschließen
 
-Die nachstehende Dokumentation enthält Informationen zum Verbinden der Oracle Object Datenspeicherung mit Adobe Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
+Die nachstehende Dokumentation enthält Informationen zum Verbinden der Oracle Object-Datenspeicherung mit Adobe Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 ### APIs verwenden
 
-- [Erstellen einer Quellenverbindung zur Oracle Object Datenspeicherung mithilfe der Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [Erstellen einer Oracle Object Datenspeicherung-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
 - [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Oracle Object Datenspeicherung-Quellverbindung in der Benutzeroberfläche erstellen](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+- [Erstellen einer Oracle Object Datenspeicherung-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
 - [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
