@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datensatz aktivieren;Datensatz;Datensatz;Datensatz
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche von Datasets
-topic: Datensätze
+topic-legacy: datasets
 description: Erfahren Sie, wie Sie allgemeine Aktionen beim Arbeiten mit Datensätzen in der Adobe Experience Platform-Benutzeroberfläche durchführen.
+exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 translation-type: tm+mt
-source-git-commit: fc493a207e305887e798238ba6883f4934c5cba5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 71%
 
 ---
-
 
 # Handbuch zur Benutzeroberfläche von Datasets
 
@@ -124,7 +124,7 @@ Sie können einen Datensatz löschen, indem Sie zunächst auf den Bildschirm **[
 
 >[!NOTE]
 >
->Datasets, die von Anwendungen und Diensten der Adobe erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]), können nicht gelöscht werden.
+>Datasets, die von Adobe-Anwendungen und -Diensten erstellt und verwendet werden (z. B. Adobe Analytics, Adobe Audience Manager oder [!DNL Offer Decisioning]), können nicht gelöscht werden.
 
 ![](../images/datasets/user-guide/delete_dataset.png)
 
