@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;fullName;xdm:fullName;Personenname;Name;datatype;Datentyp;Datentyp;
 solution: Experience Platform
 title: Datentyp "Person"
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp "Personenname".
+exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 21%
 
 ---
-
 
 # [!UICONTROL Personenname-] Datentyp
 
