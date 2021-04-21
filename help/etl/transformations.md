@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;ETL;ETL;etl-Transformationen;ETL-Transformationen
 solution: Experience Platform
 title: Beispiel-ETL-Transformationen
-topic: overview
+topic-legacy: overview
 description: Dieser Artikel zeigt die folgenden Beispiel-Transformationen, auf die ein Extrakt-, Transform-, Load-(ETL-)Entwickler stoßen kann.
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 88%
 
 ---
-
 
 # Beispiel-ETL-Transformationen
 
@@ -307,4 +307,3 @@ Im Folgenden finden Sie das Array der Identitäten, die in XDM umgewandelt werde
       }]
    }
 ```
-
