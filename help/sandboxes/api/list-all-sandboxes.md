@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Liste-Sandboxen
 solution: Experience Platform
 title: Liste-Sandboxes in der API
-topic: Entwicklerhandbuch
+topic-legacy: developer guide
 description: Um alle Sandboxen Ihrer IMS-Organisation (aktiv oder anderweitig) Liste, stellen Sie eine GET an den Endpunkt /sandboxes.
+exl-id: 5e7dc6e7-cb9c-41e0-a3ad-025b625f14ec
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 52%
+source-wordcount: '320'
+ht-degree: 51%
 
 ---
-
 
 # Liste-Sandboxes in der API
 
