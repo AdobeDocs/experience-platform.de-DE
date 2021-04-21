@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Profil
 solution: Experience Platform
 title: Neues Profil in Adobe Admin Console erstellen
-topic: user guide
+topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Schaffung eines neuen Profils für Produkte in der Adobe Admin Console beschrieben. Um Beginn beim Erstellen eines neuen Profils zu erhalten, navigieren Sie zur Registerkarte "Profil"und klicken Sie auf "Neues Profil".
+exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 2%
 
 ---
-
 
 # Neues Profil in Adobe Admin Console erstellen
 
