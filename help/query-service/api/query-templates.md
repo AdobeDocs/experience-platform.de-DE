@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Vorlagen;API-Handbuch;Vorlagen;Abfrage-Dienst
 solution: Experience Platform
 title: API-Endpunkt für Abfragen-Vorlagen
-topic: query templates
+topic-legacy: query templates
 description: Die folgende Dokumentation führt Sie durch die verschiedenen API-Aufrufe, die Sie mithilfe von Abfragen-Vorlagen für die Abfrage Service API durchführen können.
+exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 89%
 
 ---
-
 
 # Endpunkt &quot;Abfrage-Vorlagen&quot;
 
