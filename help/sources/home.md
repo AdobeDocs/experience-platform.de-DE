@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 translation-type: tm+mt
-source-git-commit: 412d7c247353bfd30e134656140ba13f55d2ca07
+source-git-commit: 8edcb3697337edd0043f26553b92c31e52d3c87c
 workflow-type: tm+mt
-source-wordcount: '952'
+source-wordcount: '975'
 ht-degree: 57%
 
 ---
@@ -115,6 +115,13 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen
 Experience Platform unterstützt die Erfassung von Daten aus einem Zahlungssystem eines Drittanbieters. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
+
+### Streaming
+
+Experience Platform unterstützt die Erfassung von Daten aus Streaming-Quellen. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protokolle
 
