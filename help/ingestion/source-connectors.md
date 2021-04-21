@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Source Connectors
-topic: overview
+topic-legacy: overview
 description: Mithilfe von Quellverbindungen können Sie Ihre Datenspeicherung- und CRM-Dienste authentifizieren,  für die Erfassung festlegen und den Datendurchsatz verwalten.
+exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 16%
 
 ---
-
 
 # Quellen-Connectoren
 
