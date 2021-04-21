@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Couchbase;Couchbase
 solution: Experience Platform
 title: Überblick über den Connector für Couchbase-Quelle
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Couchbase mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) [!DNL Couchbase] Connector
 
