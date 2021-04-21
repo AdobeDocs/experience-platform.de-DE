@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;enum;mixin;Mixin;Mixins;Mixins;Datentyp;Datentypen;Datentypen;Datentyp;Primäridentität;Primäridentität;XDM-Profil;XDM-Felder;Enum-Datentyp;Experience-Ereignis;XDM Experience-Ereignis;XDM-ExperienceEvent;ExperienceEvent;XDM-Erlebnis;Schema-Design;class;Class;classes;Classes;datatype;datatype;datatype;Datentyp;Datentyp;Schema;Schema;;Identitätszuordnung;Identitätszuordnung;Schema;;Landkarte;Vereinigung Schema;Vereinigung
 solution: Experience Platform
 title: Grundlagen der Schema-Komposition
-topic: Übersicht
+topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
+exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: ae2c5f9fa4e732fefe55a8536894844986aea1e2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '3502'
+source-wordcount: '3501'
 ht-degree: 40%
 
 ---
-
 
 # Grundlagen der Schema-Komposition
 
