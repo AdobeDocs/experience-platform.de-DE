@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblübe;Azurblübe;Azurblauch-Stecker
 solution: Experience Platform
 title: Erstellen einer Azurblauch-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie einen Azurblauch-Quellanschluss mithilfe der Plattform-Benutzeroberfläche erstellen.
+exl-id: 0e54569b-7305-4065-981e-951623717648
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 7%
 
 ---
-
 
 # Erstellen einer [!DNL Azure Blob]-Quellverbindung in der Benutzeroberfläche
 
