@@ -3,16 +3,16 @@ keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM;Erlebnisdat
 solution: Experience Platform
 title: Erstellen eines Ad-hoc-Schemas
 description: Unter bestimmten Umständen kann es erforderlich sein, ein (Experience-Datenmodell) XDM-Schema mit Feldern zu erstellen, deren Namespace nur für die Verwendung durch einen einzigen Datensatz vorgesehen ist. Ein solches Schema wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schema werden für die Experience Platform in verschiedenen Workflows zur Datenerfassung verwendet, einschließlich der Erfassung von CSV-Dateien und der Erstellung bestimmter Quell-Verbindungen.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '823'
 ht-degree: 13%
 
 ---
-
 
 # Erstellen eines Ad-hoc-Schemas
 
