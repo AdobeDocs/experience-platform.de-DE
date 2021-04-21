@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Katalog;Suche nach mehreren Objekten;API
 solution: Experience Platform
 title: Mehrere Katalogobjekte suchen
-topic: developer guide
+topic-legacy: developer guide
 description: Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine Anfrage pro Objekt zu stellen, bietet der Katalog eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 54%
 
 ---
-
 
 # Mehrere Katalogobjekte suchen
 
