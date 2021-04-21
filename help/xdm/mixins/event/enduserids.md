@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schema-Design;mixin;mixin;enduserids;Endbenutzer;Endbenutzer;IDs;
 solution: Experience Platform
 title: Endbenutzer-ID-Details-Mixer
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über das Mixin "Endbenutzer-ID-Details".
+exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Endbenutzer-ID-] DetailMixin
 
