@@ -2,16 +2,16 @@
 keywords: Experience Platform;Benutzeroberfläche;Anpassung;Lizenznutzung Dashboard;Dashboard;Lizenzverwendung;Berechtigungen;Verbrauch
 title: Dashboard der Lizenzverwendung
 description: Adobe Experience Platform bietet ein Dashboard zur Ansicht wichtiger Informationen zur Lizenznutzung in Ihrem Unternehmen.
-topic: guide
-type: Dokumentation
+topic-legacy: guide
+type: Documentation
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 translation-type: tm+mt
-source-git-commit: 6baf1fbff20a02cd599d9ad9102d56db5a9004c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '658'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) Dashboard zur Lizenzverwendung {#license-usage-dashboard}
 
