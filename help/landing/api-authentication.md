@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Authentifizieren;Zugriff
 solution: Experience Platform
 title: Experience Platform-APIs authentifizieren und aufrufen
-topic: Tutorial
-type: Übung
-description: 'Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können. '
+topic-legacy: tutorial
+type: Tutorial
+description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können.
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '906'
 ht-degree: 41%
 
 ---
-
 
 # [!DNL Experience Platform]-APIs authentifizieren und darauf zugreifen
 
