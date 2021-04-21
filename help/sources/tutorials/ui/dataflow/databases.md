@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenbankanschluss
 solution: Experience Platform
 title: Konfigurieren eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Datenbankkonto.
+exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1448'
 ht-degree: 3%
 
 ---
-
 
 # Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche
 
