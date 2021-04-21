@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenvorgabe;API-Leitfaden;Zuordnungssätze;
 solution: Experience Platform
 title: API-Endpunkt für Zuordnungen
-topic: Zuordnungssets
-description: 'Sie können den Endpunkt "/mappingSets"in der Adobe Experience Platform API verwenden, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren. '
+topic-legacy: mapping sets
+description: Sie können den Endpunkt "/mappingSets"in der Adobe Experience Platform API verwenden, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 translation-type: tm+mt
-source-git-commit: 73bf6abb143c0866a400aafe984f9a553ffc1abf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '807'
 ht-degree: 6%
 
 ---
-
 
 # Endpunkt für Zuordnungen
 
