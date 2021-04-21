@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API;Datenverwendungsbeschriftungen - Übersicht
 solution: Experience Platform
 title: Übersicht über Datenverwendungs-Bezeichnungen
-topic: labels
+topic-legacy: labels
 description: Mit der Adobe Experience Platform-Datenverwaltung können Sie Datenverwendungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den jeweiligen Datenverwendungsrichtlinien kategorisieren. Dieses Dokument bietet einen Überblick über die Beschriftungen für die Datenverwendung in der Experience Platform.
+exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 14%
 
 ---
-
 
 # Datennutzungsbezeichnungen – Übersicht
 
