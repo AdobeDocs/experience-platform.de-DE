@@ -1,15 +1,15 @@
 ---
-keywords: Werbung; die Fachstelle;
+keywords: Werbung; die Fachstelle; Anzeigenhandelsschalter
 title: Verbindung zum Trade Desk
-description: 'Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, mit der sie zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg ausführen können. '
+description: Der Trade Desk ist eine Selbstbedienungsplattform für Anzeigenkäufer, mit der sie zielgerichtete digitale Kampagnen über Display-, Video- und mobile Inventurquellen hinweg ausführen können.
+exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 translation-type: tm+mt
-source-git-commit: 24e0a274e61fcf6311c647067920686e4f25e840
+source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '628'
 ht-degree: 5%
 
 ---
-
 
 # [!DNL The Trade Desk] connection
 
