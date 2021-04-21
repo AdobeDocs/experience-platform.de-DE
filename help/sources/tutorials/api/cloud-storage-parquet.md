@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenquellenverbindung
 solution: Experience Platform
 title: Daten aus einem Drittanbieter-Cloud-Datenspeicherung-System mithilfe der Flow-Dienst-API erfassen
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Dieses Lernprogramm verwendet die Flow Service API, um Sie durch die Schritte zum Erfassen von Apache Parquet-Daten von einem Drittanbieter-Cloud-Datenspeicherung-System zu führen.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1101'
 ht-degree: 19%
 
 ---
