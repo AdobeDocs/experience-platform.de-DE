@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Allgemeines Feld für Marketingpräferenzen mit Abonnement-Datentyp
-topic: Übersicht
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über das Feld "Allgemeine Marketingvorgabe"mit dem XDM-Datentyp von Abonnements.
+exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 8c5ab298bad69305358ae961ebaf7836a90a0eaa
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '728'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Allgemeines Feld für Marketingpräferenzen mit ] Abonnementdatentyp
 
