@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen; API-Lehrgänge; Streaming-Zi
 solution: Experience Platform
 title: Herstellen einer Verbindung mit Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API in Adobe Experience Platform
 description: Dieses Dokument behandelt die Erstellung von Streaming-Zielen mithilfe der Adobe Experience Platform API
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 translation-type: tm+mt
-source-git-commit: 32cb198bcf2c142b50c4b7a60282f0c923be06b1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2029'
+source-wordcount: '2027'
 ht-degree: 54%
 
 ---
-
 
 # Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API
 
