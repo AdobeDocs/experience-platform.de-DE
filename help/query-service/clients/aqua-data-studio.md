@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Aqua Data Studio;Aqua-Datenstudio;Verbindung zum Abfrage-Dienst
 solution: Experience Platform
 title: Verbinden von Aqua Data Studio mit Abfrage Service
-topic: connect
+topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von Aqua Data Studio mit Query Service von Adobe Experience Platform erläutert.
+exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 27%
 
 ---
-
 
 # Verbinden Sie [!DNL Aqua Data Studio] mit dem Abfrage-Dienst
 
