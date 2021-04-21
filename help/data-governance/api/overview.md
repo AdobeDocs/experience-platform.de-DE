@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Handbuch zur Policy Service API
-topic: developer guide
+topic-legacy: developer guide
 description: Die Policy-Service-API ermöglicht es Entwicklern, Datenverwendungsbeschriftungen und -richtlinien in der Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 14%
 
 ---
-
 
 # [!DNL Policy Service] API-Handbuch
 
