@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;PSQL;psql;PostgreSQL
 solution: Experience Platform
 title: Erstellen einer PostgreSQL-Quellverbindung in der Benutzeroberfläche
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine PostgreSQL-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '455'
 ht-degree: 10%
 
 ---
-
 
 # Erstellen einer [!DNL PostgreSQL]-Quellverbindung in der Benutzeroberfläche
 
