@@ -2,20 +2,20 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Adobe Experience Platform Glossar
-topic: Erste Schritte
+topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
+exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '7139'
+source-wordcount: '7137'
 ht-degree: 1%
 
 ---
 
-
 # Glossar zu Adobe Experience Platform {#adobe-experience-platform-glossary}
 
-## A 
+## A
 
 **Zugriffskontrolle**: Durch rollenbasierte Zugriffskontrolle können Administratoren Benutzern von Experience Platformen Zugriff und Berechtigungen zuweisen. Zu den Berechtigungen gehören die Möglichkeit zur Ansicht und/oder Verwendung von Experience Platform-Funktionen wie das Erstellen von Sandboxen, das Definieren von Schemas und das Verwalten von Datensätzen.
 
@@ -85,7 +85,7 @@ ht-degree: 1%
 
 **Business Intelligence-Tools**: Business Intelligence (BI) Tools sind in erster Linie in  [!DNL Experience Platform Query Service]integriert. BI-Tools sind Typen von Anwendungssoftware, die große Mengen unstrukturierter Daten von internen und externen Systemen erfassen und verarbeiten.
 
-## C 
+## C
 
 **Deckelung**: In  [!DNL Offer Decisioning]den Entscheidungsregeln wird durch die Deckelung (auch als Frequenzzuordnung bezeichnet) festgelegt, wie oft ein Angebot präsentiert wird. Es gibt zwei Arten von Großbuchstaben: wie oft ein Angebot in der kombinierten Zielgruppe-Audience (als &quot;globale Obergrenze&quot;bezeichnet) vorgeschlagen werden kann und wie oft ein Angebot demselben Endbenutzer vorgeschlagen werden kann (als &quot;Profil-Cap&quot;bezeichnet).
 
