@@ -5,9 +5,9 @@ breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Dateneinbettung, Quellen
 translation-type: tm+mt
-source-git-commit: fb24f7cf82038a38c2861bd84404531062e47485
+source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '610'
 ht-degree: 15%
 
 ---
@@ -79,6 +79,8 @@ ht-degree: 15%
       - [PayPal-Anschluss](connectors/payments/paypal.md)
    - Protokolle {#protocols}
       - [Generischer OData Connector](connectors/protocols/odata.md)
+   - Streaming {#streaming}
+      - [HTTP API-Anschluss](connectors/streaming/http.md)
 - API-Tutorials {#api-tutorials}
    - Erstellen einer Quellverbindung {#create}
       - Werbung {#advertising}
