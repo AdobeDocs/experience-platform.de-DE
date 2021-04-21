@@ -2,17 +2,17 @@
 keywords: Experience Platform;importiertes verpacktes Rezept;Data Science Workspace;beliebte Themen;Rezepte;API;sensei maschinelles Lernen;Engine erstellen
 solution: Experience Platform
 title: Importieren eines gepackten Rezepts mit der Sensei Machine Learning API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: 'Dieses Lernprogramm verwendet die Sensei Machine Learning API, um eine Engine zu erstellen, die auch als Rezept in der Benutzeroberfläche bezeichnet wird. '
+description: Dieses Lernprogramm verwendet die Sensei Machine Learning API, um eine Engine zu erstellen, die auch als Rezept in der Benutzeroberfläche bezeichnet wird.
+exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 31%
 
 ---
-
 
 # Importieren eines gepackten Rezeptes mit der Sensei Machine Learning API
 
