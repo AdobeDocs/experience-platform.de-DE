@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Streaming mehrerer Nachrichten;Mehrere Nachrichten;
 solution: Experience Platform
 title: Senden mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine Anleitung zum Senden mehrerer Nachrichten an Adobe Experience Platform innerhalb einer einzigen HTTP-Anforderung mithilfe der Streaming-Erfassung.
+exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1497'
 ht-degree: 68%
 
 ---
-
 
 # Senden mehrerer Nachrichten in einer einzelnen HTTP-Anforderung
 
