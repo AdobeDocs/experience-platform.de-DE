@@ -2,16 +2,16 @@
 keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Modelle;sensei-API für maschinelles Lernen
 solution: Experience Platform
 title: API-Endpunkt der Modelle
-topic: Developer guide
+topic-legacy: Developer guide
 description: Ein Modell ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen dazu trainiert wird, eine geschäftliche Fragestellung zu lösen.
+exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '864'
 ht-degree: 65%
 
 ---
-
 
 # Modellen-Endpunkt
 
@@ -474,5 +474,3 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein JSON-Objekt mit de
     "deprecated": false
 }
 ```
-
-
