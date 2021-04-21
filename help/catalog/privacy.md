@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenschutz;Identitäts-Namensräume;Privatsphäre;Datensee
 solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Data Lake
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 25%
 
 ---
-
 
 # Verarbeitung von Datenschutzanforderungen in [!DNL Data Lake]
 
