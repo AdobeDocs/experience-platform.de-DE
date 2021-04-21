@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;ccpa:CCPA;PDPA;PDPA;PDPA_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Übersicht über Privacy Service
-topic: overview
+topic-legacy: overview
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen in Ihren Experience Cloud-Datenoperationen erleichtern.
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 translation-type: tm+mt
-source-git-commit: 37c1c98ccba50fa917acc5e93763294f4dde5c36
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1394'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Privacy Service]Übersicht
 
@@ -92,7 +92,7 @@ Sobald Sie Datenschutzaufträge abgeschlossen haben, stehen Ihnen verschiedene O
 | --- | --- |
 | [!DNL Privacy Service] Benutzeroberfläche | Die [!DNL Privacy Service]-Benutzeroberfläche bietet ein Dashboard zur Überwachung, mit dem Sie eine visuelle Darstellung des Status aller aktiven Anforderungen Ansicht haben. Weitere Informationen finden Sie im Benutzerhandbuch [Privacy Service](ui/overview.md). |
 | [!DNL Privacy Service] API | Sie können den Status von Datenschutzaufträgen programmgesteuert überwachen, indem Sie die von der API [!DNL Privacy Service] bereitgestellten Lookup-Endpunkte verwenden. Ausführliche Anweisungen zur Verwendung der API finden Sie im [Privacy Service-Entwicklerhandbuch](./api/getting-started.md). |
-| [!DNL Privacy Events] | [!DNL Privacy Events] Adobe I/O-Ereignis, die an einen konfigurierten Webhaken gesendet werden, nutzen, um eine effiziente Auftragsautomatisierung zu ermöglichen. Sie verringern oder beseitigen die Notwendigkeit, die [!DNL Privacy Service]-API abzufragen, um zu prüfen, ob ein Auftrag abgeschlossen ist oder ein bestimmter Meilenstein in einem Workflow erreicht wurde. Weitere Informationen finden Sie im Tutorial [zum Abonnieren von Privacy Ereignisses](./privacy-events.md). |
+| [!DNL Privacy Events] | [!DNL Privacy Events] nutzen Sie Adobe I/O-Ereignis, die an einen konfigurierten WebHook gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. Sie verringern oder beseitigen die Notwendigkeit, die [!DNL Privacy Service]-API abzufragen, um zu prüfen, ob ein Auftrag abgeschlossen ist oder ein bestimmter Meilenstein in einem Workflow erreicht wurde. Weitere Informationen finden Sie im Tutorial [zum Abonnieren von Privacy Ereignisses](./privacy-events.md). |
 
 ## Nächste Schritte
 
