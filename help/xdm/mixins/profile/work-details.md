@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Schema-Design;Mixin;Mixins;Arbeitsdetails;Profil arbeiten;
 solution: Experience Platform
 title: Details des Arbeitskontakts-Mixer
-topic: overview
+topic-legacy: overview
 description: In diesem Dokument erhalten Sie einen Überblick über das Mixin "Work Contact Details".
+exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL Work Contact ] DetailsMixin
 
