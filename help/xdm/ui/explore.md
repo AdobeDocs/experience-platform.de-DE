@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM-System;Erlebnis
 solution: Experience Platform
 title: XDM-Ressourcen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie vorhandene Schema, Klassen, Mixins und Datentypen in der Benutzeroberfläche der Experience Platform untersuchen.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 62266187ed1f3ce2f0acca3f50487fb70cfa7307
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
 
 ---
-
 
 # XDM-Ressourcen in der Benutzeroberfläche
 
