@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Zeichenfolgen-Funktionen;Zeichenfolge;
 solution: Experience Platform
 title: PQL-Zeichenfolgen-Funktionen
-topic: developer guide
+topic-legacy: developer guide
 description: Profil Abfrage Language (PQL)-Angebote erleichtern die Interaktion mit Zeichenfolgen.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
 ht-degree: 10%
 
 ---
-
 
 # Zeichenfolgen-Funktionen
 
@@ -269,4 +269,3 @@ emailAddress.regexGroup("@(\w+)", 1)
 ## Nächste Schritte
 
 Nachdem Sie nun von Zeichenfolgen-Funktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
-
