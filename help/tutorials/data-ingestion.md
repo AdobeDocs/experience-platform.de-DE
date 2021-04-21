@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Tutorials zur Datenerfassung
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Datenerfassung beinhaltet die Batch-Erfassung, Streaming-Erfassung und Erfassung mithilfe von Quell-Connectoren.
+exl-id: 51627acf-e90b-4911-aa54-4a59f3b6a8f9
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '497'
 ht-degree: 40%
 
 ---
-
 
 # Daten in [!DNL Experience Platform] einbeziehen
 
@@ -45,6 +45,3 @@ Wenn ein Dataset und Dampfverbindungen vorhanden sind, können Sie Daten aus Dat
 ## Mehrere Nachrichten in einer einzelnen HTTP-Anfrage streamen
 
 Beim Streaming von Daten an Adobe Experience Platform kann das Ausführen zahlreicher HTTP-Aufrufe teuer werden. Anstatt beispielsweise 200 HTTP-Anfragen mit Payloads von 1 KB zu erstellen, ist es viel effizienter, 1 HTTP-Anfrage mit 200 Nachrichten mit jeweils 1 KB und einer Payload von 200 KB zu erstellen. Bei korrekter Verwendung ist die Gruppierung mehrerer Nachrichten in einer einzigen Anforderung eine hervorragende Möglichkeit, Daten zu optimieren, die an [!DNL Experience Platform] gesendet werden. Um zu erfahren, wie Sie mit der Streaming-Erfassung mehrere Nachrichten an [!DNL Experience Platform] innerhalb einer einzelnen HTTP-Anforderung senden, folgen Sie dem Tutorial [Senden mehrerer Nachrichten](../ingestion/tutorials/streaming-multiple-messages.md).
-
-
-
