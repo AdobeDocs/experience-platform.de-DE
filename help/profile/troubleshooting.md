@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: Handbuch zur Fehlerbehebung beim Profil in Echtzeit
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: In diesem Dokument finden Sie Antworten auf häufig gestellte Fragen zum Echtzeit-Profil von Kunden sowie eine Anleitung zur Fehlerbehebung bei häufigen Fehlern beim Arbeiten mit Profil-Daten mit Adobe Experience Platform.
+exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 0%
 
 ---
-
 
 # Handbuch zur Fehlerbehebung beim Profil in Echtzeit
 
@@ -151,7 +151,7 @@ Dieser Fehler tritt auf, wenn eine POST oder eine PUT-Anforderung mit einem ung�
 
 Die meisten Profil-Endpunkte akzeptieren &quot;application/json&quot;für ihren Content-Type-Header, mit folgenden Ausnahmen:
 
-| Endpunkt | Content-Type |
+| Endpunkt | Inhaltstyp |
 | --- | --- |
 | `/config/projections` | application/vnd.adobe.platform.projectsConfig+json; version=1 |
 | `/config/destinations` | application/vnd.adobe.platform.projectsDestination+json; version=1 |
