@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamik;Dynamik;Dynamik
 solution: Experience Platform
 title: Erstellen einer Microsoft Dynamics Source-Verbindung mithilfe der Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service API eine Verbindung zwischen Platform und einem Microsoft Dynamics-Konto herstellen.
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 27%
 
 ---
-
 
 # Erstellen einer [!DNL Microsoft Dynamics]-Quellverbindung mit der [!DNL Flow Service]-API
 
