@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;API-Leitfaden;Verbindungsparameter;Abfrage-Dienst
 solution: Experience Platform
 title: API-Endpunkt für Verbindungsparameter
-topic: connection parameters
+topic-legacy: connection parameters
 description: Sie können Ihre Verbindungsparameter für die Verwendung des interaktiven Dienstes abrufen, indem Sie eine GET an den Endpunkt "/connection_parameters"senden.
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 38%
 
 ---
-
 
 # Endpunkt der Verbindungsparameter
 
