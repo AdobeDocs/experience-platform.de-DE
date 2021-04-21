@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen; Analyse;Klassifizierungen
 description: Erfahren Sie, wie Sie einen Adobe Analytics-Quellanschluss in der Benutzeroberfläche erstellen, um Classification-Daten in Adobe Experience Platform zu importieren.
 solution: Experience Platform
 title: Erstellen einer Adobe Analytics-Quellverbindung für Classification-Daten in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 6%
 
 ---
-
 
 # Erstellen einer Adobe Analytics-Quellverbindung für Classification-Daten in der Benutzeroberfläche
 
