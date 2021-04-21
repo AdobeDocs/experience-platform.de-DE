@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM;Erlebnisdatenmo
 solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehung zwischen zwei Schemas mithilfe des Schema-Editors in der Benutzeroberfläche "Experience Platform".
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 31%
 
 ---
-
 
 # Definieren Sie eine Beziehung zwischen zwei Schemas mithilfe des [!DNL Schema Editor]
 
