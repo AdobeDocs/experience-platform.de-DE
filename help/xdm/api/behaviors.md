@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmode
 solution: Experience Platform
 title: Verhalten-API-Endpunkt
 description: Mit dem Endpunkt "/verhaltenors"in der Schema Registry-API können Sie alle verfügbaren Verhaltensweisen im globalen Container abrufen.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 5%
 
 ---
-
 
 # Verhaltensendpunkt
 
