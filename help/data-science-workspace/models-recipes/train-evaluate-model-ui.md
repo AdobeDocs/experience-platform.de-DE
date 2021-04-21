@@ -2,17 +2,17 @@
 keywords: Experience Platform;Schulung und Auswertung;Data Science Workspace;beliebte Themen;Erstellen eines Modells;Erstellen eines Schulungslaufs
 solution: Experience Platform
 title: Erstellen und Auswerten eines Modells in der Benutzeroberfläche von Data Science Workspace
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace können Sie ein Modell für maschinelles Lernen einrichten, indem Sie ein vorhandenes Rezept einbinden, das für den Zweck des Modells geeignet ist. Anschließend wird das Modell trainiert und bewertet, um seine Effizienz und Wirksamkeit zu erhöhen; dazu werden die entsprechenden Hyperparameter fein abgestimmt. Rezepte sind wiederverwendbar; mit einem Rezept können also verschiedene Modelle erstellt und auf individuelle Zwecke zugeschnitten werden.
+exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
 translation-type: tm+mt
-source-git-commit: 52415eb572a82f18f6daa3f45be1c670cae98b83
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1097'
 ht-degree: 65%
 
 ---
-
 
 # Erstellen und Auswerten eines Modells in der Benutzeroberfläche von Data Science Workspace
 
