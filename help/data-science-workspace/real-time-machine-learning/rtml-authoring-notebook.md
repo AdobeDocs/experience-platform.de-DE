@@ -2,16 +2,16 @@
 keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen;Node-Referenz;
 solution: Experience Platform
 title: Verwalten von Notebook-Computern mit maschinellem Lernen in Echtzeit
-topic: Training and scoring a ML model
+topic-legacy: Training and scoring a ML model
 description: In der folgenden Anleitung werden die Schritte erläutert, die zum Erstellen einer Echtzeitanwendung für maschinelles Lernen in Adobe Experience Platform JupyterLab erforderlich sind.
+exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 0%
 
 ---
-
 
 # Verwalten von Notebook-PCs für maschinelles Lernen in Echtzeit (Alpha)
 
