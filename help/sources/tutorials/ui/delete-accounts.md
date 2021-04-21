@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen; Konten löschen
 description: Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. Dieses Lernprogramm enthält Schritte zum Löschen von Konten aus dem Quellarbeitsbereich.
 solution: Experience Platform
 title: Quellverbindungskonten in der Benutzeroberfläche löschen
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 7cb65d17-d99d-46ff-b28f-7469d0b57d07
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 9%
 
 ---
-
 
 # Quellverbindungskonten löschen
 
