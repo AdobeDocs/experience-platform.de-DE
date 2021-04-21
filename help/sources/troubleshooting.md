@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Quellen;Integration;Fehlerbehebung;Fehlerbehebung;Quellquellen FAQ;FAQ;Quellschnittstellen;Quellanschluss;Quellschnittstellen-FAQ;Fehlerbehebung bei den Quellschnittstellen; Fehlerbehebung bei den Quellschnittstellen;
 solution: Experience Platform
 title: Fehlerbehebung bei Quellen
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dieses Dokument beantwortet häufig gestellte Fragen zu Quellen auf Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 2%
+source-wordcount: '662'
+ht-degree: 1%
 
 ---
 
