@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;CJA;Journey-Analyse;Kundenanalysen;Journey-Analyse;Kampagne-Orchestrierung;Orchestrierung;Kundenorientierung;Journey;Journey;Journey-Orchestrierung;Funktion;Workflow
 solution: Experience Platform
 title: Übersicht über die Experience Platform
-topic: overview
+topic-legacy: overview
 description: Die Dokumentation zu Adobe Experience Platform ist in verschiedenen Formaten verfügbar, einschließlich Übersichten, Übungen und Handbüchern für die Benutzeroberfläche und die API. Hier finden Sie eine kurze Beschreibung der am häufigsten verwendeten Dokumentationstypen, die für Experience Platform-Services verfügbar sind.
+exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 4%
 
 ---
-
 
 # Übersicht über die Experience Platform
 
@@ -36,4 +36,3 @@ Die Dokumentation zur Experience Platform ist in verschiedenen Formaten verfügb
 * **Tutorial:** Ein Tutorial ist eine schrittweise Anleitung durch die Benutzeroberfläche, API oder eine Kombination aus beiden, die zu einem bestimmten Ergebnis führt. Im Gegensatz zu Entwicklerhandbüchern konzentriert sich ein API-Tutorial möglicherweise nur auf einen oder zwei Endpunkte und stellt keine vollständige API-Ressource dar. In ähnlicher Weise konzentrieren sich die Benutzeroberflächen-Tutorials möglicherweise nur auf bestimmte Schritte, nicht auf die vollständige Benutzeroberfläche, die für diesen Dienst verfügbar ist. Tutorials sind oft Teil eines größeren Workflows und enthalten &quot;nächste Schritte&quot;, in denen beschrieben wird, welche Tutorials Sie als Nächstes ausprobieren möchten.
 
 * **UI-Handbuch:** In einem UI-Handbuch werden die in der  [!DNL Platform] Benutzeroberfläche für einen bestimmten Dienst verfügbaren Aktionen beschrieben. Diese Dokumente enthalten Screenshots und Schritte, die sich auf die Interaktion mit der Plattform über die Benutzeroberfläche konzentrieren. Ähnlich wie bei einem Entwicklerhandbuch werden im UI-Handbuch alle verfügbaren Aktionen und Optionen einschließlich der zu vermeidenden &quot;gotchas&quot;beschrieben. Dies ist die detaillierteste Ressource für die Arbeit mit der Benutzeroberfläche.
-
