@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenzugriff;Python-SDK;Spark-SDK;Datenzugriffs-API;Export;Export
 solution: Experience Platform
 title: Handbuch zur Datenzugriff-API
-topic: developer guide
+topic-legacy: developer guide
 description: Die Data Access API unterstützt Adobe Experience Platform, indem sie Entwicklern eine RESTful-Schnittstelle zur Verfügung stellt, die sich auf die Erkennung und Zugänglichkeit von erfassten Datensätzen innerhalb der Experience Platform konzentriert.
+exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '528'
 ht-degree: 9%
 
 ---
-
 
 # Handbuch zur Datenzugriff-API
 
