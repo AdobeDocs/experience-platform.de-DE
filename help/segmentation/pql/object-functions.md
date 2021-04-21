@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Objektfunktionen;Objekt
 solution: Experience Platform
 title: PQL-Objektfunktionen
-topic: developer guide
+topic-legacy: developer guide
 description: Profil Query Language (PQL) bietet Funktionen, die die Interaktion mit Objekten erleichtern.
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 70%
 
 ---
-
 
 # Objektfunktionen
 
