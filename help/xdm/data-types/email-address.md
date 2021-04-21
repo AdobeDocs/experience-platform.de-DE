@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;emailAddress;xdm:emailAddress;email;email address;datatype;data-type;data-type;
 solution: Experience Platform
 title: Datentyp E-Mail-Adresse
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp der E-Mail-Adresse.
+exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 3%
 
 ---
-
 
 # [!UICONTROL Datentyp ] für E-Mail-Adressen
 
