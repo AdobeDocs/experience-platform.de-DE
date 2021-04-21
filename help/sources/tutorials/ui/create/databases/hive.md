@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Apache-Hive;Azurblaue HDInsights;Azure-Hdinsights
 solution: Experience Platform
 title: Erstellen eines Apache Hive auf der Azurblauen HDInsights-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Apache Hive auf Azurblaus HDInsights-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL Apache Hive]-Quellverbindung in der Benutzeroberfläche[!DNL Azure HDInsights]
 
