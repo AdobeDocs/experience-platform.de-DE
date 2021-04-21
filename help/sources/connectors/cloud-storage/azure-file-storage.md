@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenspeicherung von Azurblase-Dateien;Azoure-Datei-Datenspeicherung
 solution: Experience Platform
 title: Übersicht über den Source Connector für die AEM File Datenspeicherung
-topic: Übersicht
+topic-legacy: overview
 description: Erfahren Sie, wie Sie die Datenspeicherung von Blauen Dateien mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '469'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Blue File Datenspeicherung Connector
 
