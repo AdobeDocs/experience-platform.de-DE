@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Apache Spark;Apache Spark;Azurblaue HDInsights;Azure Hdinsights
 solution: Experience Platform
 title: Apache Spark auf Azurblaus HDInsights Source Connector Übersicht
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Apache Spark auf Azurblauen HDInsights mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 10%
 
 ---
-
 
 # (Beta) [!DNL Apache Spark] auf [!DNL Azure HDInsights] Connector
 
