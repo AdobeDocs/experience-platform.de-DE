@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;XDM;XDM-System;XDM-Profil;XDM-Experience-Ereignis;XDM-Ereignis;Experience-Ereignis;Experience-Ereignis;Mixins;mixin;Mixin;Experience-Ereignis;XDM-Experience-Ereignis;XDM-ExperienceEvent;experienceEvent;XDM-Erlebnis-Ereignis;Erlebnis-Datenmodell;Erlebnis-Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema-Bibliothek;Schema-Bibliothek;Schema;Datensatzdaten;Zeitreihen;Zeitreihen
 solution: Experience Platform
 title: XDM-Systemübersicht
-topic: overview
-description: 'Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. '
+topic-legacy: overview
+description: Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
+exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 9%
 
 ---
-
 
 # XDM-System – Übersicht
 
@@ -119,4 +119,3 @@ Um Entwurfsgrundsätze und Best Practices für das Erstellen von Schemas zu lern
 Sehen Sie sich das folgende Video an, um Ihr Verständnis von [!DNL XDM System] in [!DNL Experience Platform] zu vertiefen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
-
