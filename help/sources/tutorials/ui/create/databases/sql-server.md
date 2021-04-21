@@ -7,18 +7,14 @@ type: Tutorial
 description: Erfahren Sie, wie Sie eine Microsoft SQL Server-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '461'
 ht-degree: 9%
 
 ---
 
 # Erstellen einer [!DNL Microsoft SQL Server]-Quellverbindung in der Benutzeroberfläche
-
->[!NOTE]
->
-> Der [!DNL Microsoft SQL Server]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
 
 Die Source Connectors in Adobe Experience Platform bieten die Möglichkeit, extern beschaffte Daten planmäßig zu erfassen. In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Microsoft SQL Server]-Quellconnectors (nachstehend &quot;a1/>&quot;genannt) mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.[!DNL SQL Server]
 
