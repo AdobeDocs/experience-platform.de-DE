@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Adobe Experience Platform;API-Handbuch;Plattform-API-Handbuch;Einführung in die Plattform;Entwicklerhandbuch
 solution: Experience Platform
 title: Erste Schritte mit Adobe Experience Platform APIs
-topic: API-Handbuch
+topic-legacy: api guide
 description: Adobe Experience Platform stellt API-Dienste bereit, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
+exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 translation-type: tm+mt
-source-git-commit: 85d2ae5ccf1b27baaafe839f1d3f00d588abe4fc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 25%
+source-wordcount: '1425'
+ht-degree: 26%
 
 ---
-
 
 # Erste Schritte mit Adobe Experience Platform APIs
 
@@ -147,4 +147,3 @@ In diesem Dokument wurden die erforderlichen Kopfzeilen und verfügbaren Handbü
 Antworten auf häufig gestellte Fragen finden Sie im Handbuch [Plattformfehlerbehebung](troubleshooting.md).
 
 Um eine Postman-Umgebung einzurichten und die verfügbaren Postman-Sammlungen zu erkunden, lesen Sie das [Platform Postman Guide](postman.md).
-
