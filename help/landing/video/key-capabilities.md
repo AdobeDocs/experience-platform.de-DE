@@ -1,21 +1,19 @@
 ---
 title: Schlüsselfunktionen der Experience Platform
 description: In diesem Video werden die wichtigsten Funktionen von Adobe Experience Platform&mdash;Erstellen Sie umsetzbare, intelligente Echtzeit-Profil; die Datenoptimierung und die Ableitung weiterer Einblicke in AI/ML-Modelle und Daten-Abfragen; Innovation mit offenen und zusammensetzbaren Komponenten; Verbesserung des Versands und der Personalisierung von Echtzeit-Erlebnissen; und gewinnen Sie Vertrauen in Governance-, Sicherheits- und Datenschutzkontrollen.
-feature: null
-topics: null
 kt: 4332
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32502.jpg
+exl-id: 6fa45d97-5aba-4764-9b31-6151b2238169
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
 
 ---
-
 
 # Schlüsselfunktionen der Experience Platform
 
