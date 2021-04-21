@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Zugriffskontrolle;adobe Admin Console
 solution: Experience Platform
-topic: overview
+topic-legacy: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffskontrolle für Adobe Experience Platform erfolgt über die Adobe Admin Console. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 translation-type: tm+mt
-source-git-commit: c277caabe851c81f66b822c07a25f4b94466eef0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 53%
 
 ---
-
 
 # Zugriffskontrolle – Übersicht
 
