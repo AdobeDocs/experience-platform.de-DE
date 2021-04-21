@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Lake Datenspeicherung Gen2;ADLS Gen2;adls gen2;adls Connector
 solution: Experience Platform
 title: Erstellen einer Azurblauen Data Lake Datenspeicherung Gen2-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Azurblase Data Lake Datenspeicherung Gen2-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL Azure Data Lake Storage Gen2]-Quellverbindung in der Benutzeroberfläche
 
