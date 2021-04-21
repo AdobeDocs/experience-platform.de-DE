@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;Data Science Workspace;beliebte Themen;Datenwissenschaftsarbeitsbereich;Datenwissenschaften
 solution: Experience Platform
 title: Übersicht über den Data Science Workspace
-topic: overview
+topic-legacy: overview
 description: Dieser Leitfaden bietet einen Überblick über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace in Adobe Experience Platform.
+exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 2%
 
 ---
-
 
 # Übersicht über den Data Science Workspace
 
@@ -196,4 +196,3 @@ Weitere Informationen, z. B. einen kompletten täglichen Arbeitsablauf, finden S
 Das folgende Video unterstützt Ihr Verständnis von [!DNL Data Science Workspace].
 
 >[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
-
