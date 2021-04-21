@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;Intelligente Dienste;beliebte Themen;Intelligenter Dienst;Intelligente Dienste
 solution: Experience Platform, Intelligent Services
 title: Vorbereiten von Daten für die Verwendung in Intelligent Services
-topic: Intelligent Services
+topic-legacy: Intelligent Services
 description: Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 867c97d58f3496cb9e9e437712f81bd8929ba99f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2400'
+source-wordcount: '2398'
 ht-degree: 2%
 
 ---
