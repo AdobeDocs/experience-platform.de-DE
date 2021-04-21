@@ -3,15 +3,15 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Handbuch zur Privacy Service-API
 description: Die Privacy Service-API ermöglicht es Entwicklern, Kundenanfragen zu erstellen und zu verwalten, um in allen Experience Cloud-Anwendungen auf ihre personenbezogenen Daten zuzugreifen oder sie zu löschen. Dabei gelten die gesetzlichen Datenschutzbestimmungen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: e649ab3da077cdd8e98562199b8bdece6108a572
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 22%
 
 ---
-
 
 # [!DNL Privacy Service] API-Handbuch
 
@@ -29,7 +29,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ## Sammeln von Werten für erforderliche Kopfzeilen
 
