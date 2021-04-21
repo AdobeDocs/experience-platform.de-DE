@@ -2,16 +2,16 @@
 keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen
 solution: Experience Platform
 title: Übersicht über maschinelles Lernen in Echtzeit
-topic: Übersicht
+topic-legacy: Overview
 description: Echtzeit-maschinelles Lernen kann die Relevanz Ihrer digitalen Erlebnisinhalte für Ihre Endbenutzer dramatisch erhöhen. Dies wird durch die Nutzung von Echtzeit-Inferencing und kontinuierlichem Lernen im Experience Edge ermöglicht.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '549'
 ht-degree: 5%
 
 ---
-
 
 # Übersicht über maschinelles Lernen in Echtzeit (Alpha)
 
@@ -81,4 +81,3 @@ Das maschinelle Lernen in Echtzeit befindet sich derzeit in der Alpha-Phase. Die
 ## Nächste Schritte
 
 Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für die Erstellung eines maschinellen Lernmodells in Echtzeit.
-
