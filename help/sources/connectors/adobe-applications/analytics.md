@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Analytics Data Connector;Analytics;Analytics
 solution: Experience Platform
 title: Adobe Analytics Source Connector for Report Suite Data
-topic: Übersicht
+topic-legacy: overview
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
+exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 41%
+source-wordcount: '503'
+ht-degree: 40%
 
 ---
-
 
 # Adobe Analytics Connector für Report Suite-Daten
 
