@@ -2,16 +2,16 @@
 keywords: Experience Platform;exemplarische Vorgehensweise;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Einführung zum Data Science Workspace
-topic: Walkthrough
+topic-legacy: Walkthrough
 description: Dieses Dokument bietet eine schrittweise Anleitung für Adobe Experience Platform Data Science Workspace. Speziell der allgemeine Arbeitsablauf, den ein Datenwissenschaftler durchlaufen würde, um ein Problem mit maschinellem Lernen zu lösen.
+exl-id: d814846e-52a9-46c6-831a-3399241959f2
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 33%
 
 ---
-
 
 # [!DNL Data Science Workspace] exemplarische Vorgehensweise
 
