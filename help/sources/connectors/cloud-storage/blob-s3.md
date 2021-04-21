@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblut;Amazon S3;Blob;Blob;S3;s3
 solution: Experience Platform
 title: Azurblauch und Amazon S3 Source Connectors - Übersicht
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Blase und Amazon S3 mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: 43a60d4d-1947-43c7-9a13-8e4094ca3604
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
 
 ---
-
 
 # Azurblase und Amazon S3-Stecker
 
