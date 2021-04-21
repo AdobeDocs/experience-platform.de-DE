@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;Profil aktivieren;Profil aktivieren;Vereinigung Schema;VEREINIGUNG PROFIL;Vereinigung Profil
 title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
-topic: guide
+topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
+exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 9%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] UI-Handbuch
 
