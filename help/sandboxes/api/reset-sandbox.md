@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Sandbox zurücksetzen
 solution: Experience Platform
 title: Sandbox in der API zurücksetzen
-topic: Entwicklerhandbuch
+topic-legacy: developer guide
 description: Sandboxes, die der Entwicklung dienen, verfügen über eine Funktion zum „Zurücksetzen auf Werkseinstellungen“, mit der alle nicht standardmäßigen Ressourcen aus einer Sandbox gelöscht werden. Sie können eine Sandbox zurücksetzen, indem Sie eine PUT anfordern, die den Namen der Sandbox im Anforderungspfad enthält.
+exl-id: 3a82735d-a043-4fe4-9042-1eb373748d35
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '169'
 ht-degree: 77%
 
 ---
-
 
 # Zurücksetzen einer Sandbox in der API
 
