@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenspeicherung der leeren Datei;Datenspeicherung der azurblauen Datei
 solution: Experience Platform
 title: Erstellen einer Azurblase-Datenspeicherung-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung mit der Azurblauen Datenspeicherung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL Azure File Storage]-Quellverbindung in der Benutzeroberfläche
 
