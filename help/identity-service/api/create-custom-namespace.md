@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Namensraum;Namensraum;Namensraum;Namensraum;Identitäts-Namensraum;Namensraum;Identität;Identität;Identität
 solution: Experience Platform
 title: Erstellen eines benutzerspezifischen Namensraums in der Identitätsdienst-API
-topic: API guide
+topic-legacy: API guide
 description: Mithilfe der Identitäts-Namensraum-API können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
+exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
 translation-type: tm+mt
-source-git-commit: 73035aec86297cfc4ee9337cf922d599001379c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 5%
 
 ---
-
 
 # Erstellen eines benutzerdefinierten Namensraums in der Identitätsdienst-API
 
