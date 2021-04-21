@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Marketingautomatisierungssystem;Erfassen von Daten zur Marketingautomatisierung
 solution: Experience Platform
 title: Erfassen von Marketing-Automatisierungsdaten mithilfe von Source Connectors und APIs
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem Marketingautomatisierungssystem und zum Einleiten in Adobe Experience Platform mithilfe von Quellschnittstellen und APIs beschrieben.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1578'
+source-wordcount: '1576'
 ht-degree: 20%
 
 ---
