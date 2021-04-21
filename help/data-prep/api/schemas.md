@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Leitfaden;Schemas
 solution: Experience Platform
 title: Schemas-API-Endpunkt
-topic: Schemas
+topic-legacy: schemas
 description: 'Sie können den Endpunkt "/Schemas"in der Adobe Experience Platform-API verwenden, um Schema programmgesteuert abzurufen, zu erstellen und zu aktualisieren, damit sie mit Mapper in Platform verwendet werden können. '
 translation-type: tm+mt
-source-git-commit: 435d27f7187074c78209948c0e57b610b63d2055
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '613'
 ht-degree: 9%
 
 ---
