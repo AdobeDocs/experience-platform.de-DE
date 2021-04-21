@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Ereignis-Hub;Azurblase-Ereignis-Hub;Ereignis-Hub
 solution: Experience Platform
 title: Erstellen einer Azurblauch-Ereignis-Hubs-Quellverbindung mit der Flow-Dienst-API
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Azurblauen Ereignis Hubs-Konto herstellen.
+exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 translation-type: tm+mt
-source-git-commit: 643da0981b3c955a9f66b6542ddaf2bda7398a2e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 26%
+source-wordcount: '566'
+ht-degree: 25%
 
 ---
-
 
 # Erstellen einer [!DNL Azure Event Hubs]-Quellverbindung mit der [!DNL Flow Service]-API
 
@@ -48,7 +48,7 @@ Weitere Informationen zu diesen Werten finden Sie in [diesem Ereignis Hubs-Dokum
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
