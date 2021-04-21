@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Adresse;xdm:address;datatype;Datentyp;Datentyp;
 solution: Experience Platform
 title: Datentyp für Postanschrift
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp der Postadresse.
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '336'
 ht-degree: 24%
 
 ---
-
 
 # [!UICONTROL Datentyp ] für Postadressen
 
