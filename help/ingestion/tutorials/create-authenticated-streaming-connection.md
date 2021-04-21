@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;authentifizierte Streaming-Verbindung;Streaming-Verbindung;Streaming-Verbindung erstellen;Authentifizierte Streaming-Verbindung erstellen;Streaming-Verbindung;Erfassung;
 solution: Experience Platform
 title: Authentifizierte Streaming-Verbindung erstellen
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Die authentifizierte Datenerfassung ermöglicht es Adobe Experience Platform-Diensten, wie z. B. Echtzeit-Kundendaten und -Identitäten, zwischen Datensätzen aus vertrauenswürdigen Quellen und nicht vertrauenswürdigen Quellen zu unterscheiden.
+exl-id: 14228cd9-4508-4605-8f50-04a74f1c6236
 translation-type: tm+mt
-source-git-commit: 17eb7b9cb715d7d8d0d7bce930ddec43259149cc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 23%
 
 ---
-
 
 # Erstellen einer authentifizierten Streaming-Verbindung
 
