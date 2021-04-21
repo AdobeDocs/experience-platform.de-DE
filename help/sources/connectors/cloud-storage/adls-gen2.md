@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblase Data Lake Datenspeicherung Gen2;ADLS-Gen2;adls gen2;ADLS Gen2
 solution: Experience Platform
 title: Azurblase Data Lake Datenspeicherung Gen2 Source Connector - Übersicht
-topic: Übersicht
+topic-legacy: overview
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Azurblase Data Lake Datenspeicherung Gen2 und Adobe Experience Platform herstellen.
+exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
 translation-type: tm+mt
-source-git-commit: 7fc99214272d2ce743b3666826c66f5d65e4d2ca
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 3%
+source-wordcount: '456'
+ht-degree: 2%
 
 ---
-
 
 # Datenspeicherung Gen2-Stecker für den Azurblau-Data-See
 
