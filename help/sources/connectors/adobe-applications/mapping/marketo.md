@@ -2,12 +2,12 @@
 keywords: Experience Platform;Home;beliebte Themen;Marketo Engage;Marketing für Interaktion;Marketo;Zuordnung
 solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
-topic: overview
+topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 translation-type: tm+mt
-source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
