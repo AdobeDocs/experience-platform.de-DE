@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Apache HDFS;HDFS;Hdfs
 solution: Experience Platform
 title: Erstellen einer Apache HDFS-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie eine Apache Hadoop Distributed File System-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+description: Erfahren Sie, wie Sie eine Apache Hadoop-Quellverbindung für verteilte Dateisysteme mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 6%
 
 ---
-
 
 # Erstellen einer [!DNL Apache]-HDFS-Quellverbindung in der Benutzeroberfläche
 
