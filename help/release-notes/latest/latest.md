@@ -1,25 +1,27 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform für den 31. März 2021.
+description: Versionshinweise zur Experience Platform vom 21. April 2021.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens70167
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
+source-git-commit: 0c9b60fe0777286819841c520a41007634622578
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 41%
+source-wordcount: '729'
+ht-degree: 37%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 31. März 2021**
+**Release-Datum: Mittwoch, 21. April 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -27,16 +29,44 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 [!DNL Data Prep] ermöglicht es Dateningenieuren, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren.
 
+**Neue Funktionen**
+
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| `add_to_array` durchführen | Die Funktionalität zur Unterstützung von Arrays als Parameter wurde aktualisiert. |
-| `to_array` durchführen | Die Funktionalität zur Unterstützung von Objekten als Parameter wurde aktualisiert. |
+| Unterstützung für die Bearbeitung der Zuordnung für vorhandene Datenflüsse | Sie können jetzt die Zuordnungssätze eines vorhandenen Datenflusses aktualisieren. Sie können keine Zuordnungssätze für Datenflüsse aktualisieren, die für eine einmalige Erfassung geplant waren. Diese Funktion wird für HTTP API, Adobe Analytics, Adobe Audience Manager und [!DNL Marketo Engage] nicht unterstützt. Weitere Informationen finden Sie im Tutorial zu [Aktualisieren der Quelldataflows in der Benutzeroberfläche](../../sources/tutorials/ui/update-dataflows.md). |
+| Unterstützung für Streaming-Erfassung | Sie können jetzt beim Erstellen einer Streaming-Quellverbindung die Funktion &quot;Datenvorgabe&quot;verwenden. Weitere Informationen finden Sie im Tutorial zum Erstellen einer Streaming-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/streaming/http.md).[ |
 
 Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
 
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. Auf diese Weise können Marketinganalysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen einer Firma erstellen, ohne dass hierfür Fachwissen in der Datenwissenschaft erforderlich ist.
+
+### Customer AI
+
+Die in der Kundendatenplattform in Echtzeit verfügbare Kundentelefonie wird verwendet, um benutzerspezifische Tendenzwerte wie Kehren und Konversion für einzelne Profil im Maßstab zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt, ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für Adobe Analytics-Daten | Die Funktion zur Unterstützung von Adobe Analytics-Datensätzen über den Analytics-Quell-Connector wurde aktualisiert, ohne dass die ETL-Daten an das Consumer Experience Ereignis (CEE)-Schema angepasst werden müssen. |
+| Unterstützung für Adobe Audience Manager-Daten | Die Funktion zur Unterstützung von Adobe Audience Manager-Datensätzen über den Audience Manager-Quell-Connector wurde aktualisiert, ohne dass die ETL-Daten an das Consumer Experience Ereignis (CEE)-Schema angepasst werden müssen. |
+| Leistungszusammenfassung des Modells | Die Kunden-API verfügt nun über die Registerkarte [Leistungszusammenfassung des Modells](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) auf der Insight-Seite der Dienstinstanz. Auf der Registerkarte &quot;Modellleistung&quot;werden alle tatsächlichen Konversions- und Absturzraten angezeigt. Auf diese Weise können Sie entziffern und verstehen, was in jedem Ihrer Tendenzbehälter geschieht. |
+
+Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL Intelligent Services] Dokumentation zur Datenvorbereitung](../../intelligent-services/data-preparation.md).
+
+### Attribution AI
+
+Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für Adobe Analytics-Daten | Die Funktion zur Unterstützung von Adobe Analytics-Datensätzen über den Analytics-Quell-Connector wurde aktualisiert, ohne dass die ETL-Daten an das Consumer Experience Ereignis (CEE)-Schema angepasst werden müssen. |
+
+Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL Intelligent Services] Dokumentation zur Datenvorbereitung](../../intelligent-services/data-preparation.md).
+
 ## Segmentierungs-Service {#segmentation}
 
-Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Adoben werden zentral auf [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Anwendung leicht zugänglich sind.
+Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Segmente werden zentral in Platform konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
 [!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
@@ -44,8 +74,7 @@ Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläc
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| (Beta) Edge-Segmentierung | Bei der Edge-Segmentierung werden Segmente in Echtzeit ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht. Weitere Informationen zur Kantensegmentierung finden Sie in der [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md). |
-| (Beta) Inkrementelle Segmentierung | Erhöht die Frische vorhandener Segmentdefinitionen, die in der Stapelsegmentierung ausgewertet werden, auf bis zu eine Stunde. |
+| Zusätzliche Aggregationsfunktionen | Funktionen zur Zählung wurden im Segmentaufbau hinzugefügt. Mit den Zählfunktionen können Sie zählen, wie oft das angegebene Ereignis ausgeführt wurde. Weitere Informationen zu den Zählfunktionen finden Sie im Abschnitt zu Zählfunktionen im Handbuch [Segmentaufbau](../../segmentation/ui/segment-builder.md#count-functions) |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md).
 
@@ -57,8 +86,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Beta-Quellen wechseln zu GA | Die folgenden Quellen wurden von der Beta-Version zur GA-Version beworben: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| API-Unterstützung für die Erfassung von komprimierten Dateien | Sie können jetzt komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Datenspeicherung-Quellen Vorschau und erfassen. Weitere Informationen finden Sie im Lernprogramm zum Erfassen von Cloud-Datenspeicherung-Daten mit APIs](../../sources/tutorials/api/collect/cloud-storage.md).[ |
-| Unterstützung für rekursives Hochladen von Dateien in der Benutzeroberfläche | Bei Verwendung einer Cloud-Datenspeicherung können Sie jetzt ganze Ordner rekursiv erfassen. Beim Einfügen eines ganzen Ordners müssen Sie sicherstellen, dass sein Inhalt dasselbe Schema verwendet. Weitere Informationen finden Sie im Tutorial zu [Konfigurieren eines Datenflusses für Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| [!DNL Marketo Engage] (Beta) | Sie können jetzt eine [!DNL Marketo Engage]-Quellverbindung über die Benutzeroberfläche erstellen, um B2B-Daten auf die Plattform zu übertragen und diese Daten mithilfe von Anwendungen mit Plattformverbindung auf dem neuesten Stand zu halten. Weitere Informationen finden Sie in der [[!DNL Marketo Engage] Dokumentation zum Quellanschluss](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
