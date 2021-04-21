@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;PSQL;psql;Abfrage-Dienst;Abfrage-Dienst;Metadaten;Befehle;Metadaten-Befehle
 solution: Experience Platform
 title: Metadaten-PostgreSQL-Befehle im Abfrage-Dienst
-topic: metadata
+topic-legacy: metadata
 description: Eine Liste von PostgreSQL-Befehlen, die derzeit für die Abfrage von Metadaten im Adobe Experience Platform Abfrage Service unterstützt werden.
+exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 0%
 
 ---
-
 
 # Metadaten-PostgreSQL-Befehle im Abfrage-Dienst
 
@@ -45,4 +45,3 @@ Für Metadaten in Ihrem Datensatz werden derzeit die folgenden PostgreSQL-Befehl
 Alle Befehle, die mit `\d` Beginn werden, können kombiniert werden. Beispielsweise können Sie `\dtsn` ausgeben, um eine Liste aller Tabellen, Sequenzen und Schema anzuzeigen. `\d` zeigt alle sichtbaren Tabellen, Ansichten, materialisierten Ansichten und Sequenzen an.
 
 Weitere Informationen zu den oben aufgeführten Befehlen finden Sie in der Dokumentation unter [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Beachten Sie jedoch, dass nicht alle in der PostgreSQL-Dokumentation angezeigten Optionen von [!DNL Experience Platform] unterstützt werden.
-
