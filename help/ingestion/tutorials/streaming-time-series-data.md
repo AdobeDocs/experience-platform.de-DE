@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Zeitreihendaten;Stream-Zeitreihendaten;
 solution: Experience Platform
 title: Streamen von Daten aus der Zeitreihe mithilfe von Streaming-Ingestion-APIs
-topic: Tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 727c9dbd87bacfd0094ca29157a2d0283c530969
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1312'
 ht-degree: 66%
 
 ---
