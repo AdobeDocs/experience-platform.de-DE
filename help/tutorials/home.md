@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Workflow
 solution: Experience Platform
 title: Query Service von Adobe Experience Platform
-topic: overview
+topic-legacy: overview
 description: Diese Tutorials dienen als Ergänzung zu den in der Dokumentation zu Experience Platform enthaltenen Informationen. Die besten Ergebnisse erzielen Sie, wenn Sie diese parat halten, während Sie die Tutorials absolvieren.
+exl-id: dc4d02a2-ab76-47fc-8875-951cbdbd796e
 translation-type: tm+mt
-source-git-commit: 2a528c705a7aa610f57047be39be1ce9886ce44c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '181'
 ht-degree: 76%
 
 ---
-
 
 # Übersicht über Tutorials zu Adobe Experience Platform
 
