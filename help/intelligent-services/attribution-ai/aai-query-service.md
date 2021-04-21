@@ -2,16 +2,16 @@
 keywords: Einblicke;Zuordnungsai;Zuordnungs-ai-Einblicke;AAI-Abfrage-Dienst;Zuordnungs-Abfragen;Zuordnungswerte
 solution: Intelligent Services, Experience Platform
 title: Analysieren von Zuordnungswerten mithilfe des Abfrage Service
-topic: Attribution AI-Abfragen
+topic-legacy: Attribution AI queries
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Abfrage Service Attribution AI-Ergebnisse analysieren können.
+exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 translation-type: tm+mt
-source-git-commit: d83244ac93830b0e40f6d14e87497d4cb78544d9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
-
 
 # Analysieren von Zuordnungswerten mithilfe des Abfrage Service
 
