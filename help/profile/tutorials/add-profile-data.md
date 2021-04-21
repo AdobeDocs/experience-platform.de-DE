@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Profil aktivieren;Profil aktivieren
 title: Daten Hinzufügen Echtzeit-Profil des Kunden
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte beschrieben, die zum Hinzufügen von Daten zum Echtzeit-Kundenprofil erforderlich sind.
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 translation-type: tm+mt
-source-git-commit: cad9c690be986961aea2969ef0ade975f33a8ee5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '380'
 ht-degree: 50%
 
 ---
-
 
 # Daten Hinzufügen [!DNL Real-time Customer Profile]
 
