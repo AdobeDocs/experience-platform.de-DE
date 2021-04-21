@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;PSQL;psqlconnect to Abfrage Service;Abfrage-Dienst;Abfrage-Dienst
 solution: Experience Platform
 title: PSQL mit dem Abfrage-Dienst verbinden
-topic: connect
-description: 'PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von PostgreSQL auf Ihrem Computer verwendet wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen. '
+topic-legacy: connect
+description: PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von PostgreSQL auf Ihrem Computer verwendet wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen.
+exl-id: ceb07128-409e-42be-8143-0cf681d435de
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 23%
 
 ---
-
 
 # PSQL mit dem Abfrage-Dienst verbinden
 
