@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpot Source Connector - Übersicht
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie HubSpot über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '232'
 ht-degree: 12%
 
 ---
-
 
 # (Beta) [!DNL HubSpot] Connector
 
