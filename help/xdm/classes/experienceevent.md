@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Identitätskarte;Identitätskarte;Schema-Design;Map;Vereinigung Schema;Vereinigung
 solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über die XDM ExperienceEvent-Klasse.
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '820'
 ht-degree: 6%
 
 ---
-
 
 # [!DNL XDM ExperienceEvent] class
 
