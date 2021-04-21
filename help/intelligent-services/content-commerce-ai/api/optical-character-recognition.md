@@ -2,16 +2,16 @@
 keywords: OCR;Textpräsenz;optische Zeichenerkennung
 solution: Experience Platform, Intelligent Services
 title: Textpräsenz und optische Zeichenerkennung
-topic: Developer guide
+topic-legacy: Developer guide
 description: In der API für Inhalts- und Commerce-API kann der Dienst für die Texterkennung/optische Zeichenerkennung (OCR) angeben, ob Text in einem bestimmten Bild vorhanden ist. Wenn Text vorhanden ist, kann OCR den Text zurückgeben.
+exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 4%
 
 ---
-
 
 # Textpräsenz und optische Zeichenerkennung
 
