@@ -2,17 +2,17 @@
 keywords: Experience Platform;Schulung und Auswertung;Data Science Workspace;beliebte Themen;Sensei-Maschinen-Learning-API
 solution: Experience Platform
 title: Ausbildung und Bewertung eines Modells mit der Sensei Machine Learning API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In diesem Lernprogramm erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning API-Aufrufen erstellen, ausbilden und auswerten können.
+exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 94%
 
 ---
-
 
 # Schulen und Auswerten eines Modells mithilfe der API[!DNL Sensei Machine Learning]
 
