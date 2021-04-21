@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierung;Segmentierung;Erstellen eines Datensatzes;Exportsegments für Audiencen;Exportsegment;
 solution: Experience Platform
 title: Erstellen eines Datensatzes zum Exportieren eines Segments für Audiencen
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments für Audiencen mithilfe der Benutzeroberfläche für Experience Platformen verwendet werden kann.
+exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 23%
 
 ---
-
 
 # Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audience
 
