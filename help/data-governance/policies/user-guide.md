@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Benutzerhandbuch zur Datenverwendungsrichtlinie
 solution: Experience Platform
 title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
-topic: policies
+topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie in der Benutzeroberfläche "Experience Platform"im Arbeitsbereich "Richtlinien"ausführen können.
+exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 31%
 
 ---
-
 
 # Datennutzungsrichtlinien in der Benutzeroberfläche verwalten
 
