@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Tableau;Tableau;Abfrage-Dienst;Abfrage-Dienst;Verbindung mit Abfrage-Dienst herstellen
 solution: Experience Platform
 title: Anschluss von Tableau an den Abfrage-Dienst
-topic: connect
+topic-legacy: connect
 description: Dieses Dokument führt Sie durch die Schritte, um Tableau mit dem Adobe Experience Platform Abfrage Service zu verbinden.
+exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 11%
 
 ---
-
 
 # Verbinden Sie [!DNL Tableau] mit dem Abfrage-Dienst
 
