@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierungsdienst;Segmentierungsdienst;Benutzerhandbuch;Segmentierungsleitfaden;Segmentaufbau;Segmentaufbau;
 solution: Experience Platform
 title: Handbuch zur Segmentaufbau-Benutzeroberfläche
-topic: Handbuch
+topic-legacy: ui guide
 description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen Rich-Workspace, mit dem Sie mit Profil-Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 translation-type: tm+mt
-source-git-commit: bad293cf25b955496897d895169ec494416e9787
+source-git-commit: 875d3838e16a3b79fa9ab3ec61e4ffb15ea1cf20
 workflow-type: tm+mt
-source-wordcount: '2002'
+source-wordcount: '2000'
 ht-degree: 43%
 
 ---
@@ -117,7 +117,7 @@ Die Aggregation wird jetzt hinzugefügt. Sie können jetzt die Aggregationsfunkt
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Zählungsfunktionen
+### Zählfunktionen {#count-functions}
 
 Mit den Zählerfunktionen im Segmentaufbau können Sie nach bestimmten Ereignissen suchen und zählen, wie oft diese ausgeführt wurden. Die unterstützten Zählfunktionen im Segmentaufbau sind &quot;Mindestens&quot;, &quot;höchstens&quot;, &quot;Genau&quot;, &quot;Zwischen&quot;und &quot;Alle&quot;.
 
