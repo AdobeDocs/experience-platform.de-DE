@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenerfassungsbenachrichtigungen;Benachrichtigungen;abonnierte Ereignisse;Ereignisse zum Datenerfassungsstatus;Ereignisse;Abonnieren;Statusbenachrichtigungen;
 solution: Experience Platform
 title: Dateneinbettungsbenachrichtigungen
-topic: overview
+topic-legacy: overview
 description: Um den Erfassungsvorgang zu überwachen, kann Adobe Experience Platform eine Reihe von Ereignissen abonnieren, die von jedem Prozessschritt veröffentlicht werden, und Sie über den Status der erfassten Daten und eventuelle Fehler informieren.
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '681'
 ht-degree: 29%
 
 ---
-
 
 # Benachrichtigungen zur Datenerfassung
 
@@ -73,7 +73,7 @@ Informationen zur Ansicht des vollständigen Schemas für Ereignis-Benachrichtig
 
 ## Nächste Schritte
 
-Nachdem Sie [!DNL Platform]-Benachrichtigungen für Ihr Projekt registriert haben, können Sie Ereignisse aus dem [!UICONTROL Projektüberblick] Ansicht haben. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignis finden Sie im Handbuch [Adobe I/O-Ereignis nachverfolgen](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
+Nachdem Sie [!DNL Platform]-Benachrichtigungen für Ihr Projekt registriert haben, können Sie Ereignisse aus dem [!UICONTROL Projektüberblick] Ansicht haben. Detaillierte Anweisungen zur Verfolgung Ihrer Ereignis finden Sie im Handbuch [Ereignis zur Adobe I/O der Ablaufverfolgung](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md).
 
 ## Anhang
 
