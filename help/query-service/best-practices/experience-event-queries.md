@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Erlebnisereignis-Abfragen;Erlebnis-Abfrage;Experience Ereignis-Abfrage
 solution: Experience Platform
 title: Beispielwerte für Abfragen für Experience Ereignisses
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: Das folgende Dokument enthält Beispiele für Abfragen, die Experience Ereignisses in Adobe Experience Platform Abfrage Service beinhalten.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 58%
 
 ---
-
 
 # Abfragen für Muster für [!DNL Experience Events]
 
@@ -190,4 +190,3 @@ ORDER BY pageViews DESC;
 ## Nächste Schritte
 
 Weitere Informationen zu Beispielabfragen mit Adobe Defined Functions (ADFs) finden Sie im Handbuch für Adobe Defined Functions. Allgemeine Hinweise zur Ausführung von Abfragen finden Sie im [Handbuch zum Ausführen von Abfragen in Query Service](./writing-queries.md).
-
