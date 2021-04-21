@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Geo;Koordinaten;Datentyp;Datentyp;Datentyp
 solution: Experience Platform
 title: Datentyp "Geo-Koordinaten"
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp "Geo-Koordinaten".
+exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 15%
 
 ---
-
 
 # [!UICONTROL Geo-] KoordinatenDatentyp
 
