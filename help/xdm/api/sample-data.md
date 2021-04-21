@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmode
 solution: Experience Platform
 title: Beispiel-Daten-API-Endpunkt
 description: Mit dem /sampledata-Endpunkt in der Schema Registry-API können Sie Beispieldaten generieren, die der Struktur eines vorhandenen XDM-Schemas zugeordnet sind.
-topic: Entwicklerhandbuch
+topic-legacy: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 translation-type: tm+mt
-source-git-commit: 0727ffa0c72bcb6a85de1a13215b691b97889b70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '319'
 ht-degree: 5%
 
 ---
-
 
 # Beispiel-Daten-Endpunkt
 
