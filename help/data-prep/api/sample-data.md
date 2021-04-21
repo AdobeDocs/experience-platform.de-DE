@@ -2,12 +2,12 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenvorgabe;API-Leitfaden;Musterdaten
 solution: Experience Platform
 title: Beispiel-Daten-API-Endpunkt
-topic: Musterdaten
+topic-legacy: sample data
 description: 'Sie können den Endpunkt "/samples"in der Adobe Experience Platform API verwenden, um Musterdaten programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren. '
 translation-type: tm+mt
-source-git-commit: a2c966ae2401faa572cbba974ce6f572d5280a8f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '401'
 ht-degree: 8%
 
 ---
