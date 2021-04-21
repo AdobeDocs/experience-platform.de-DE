@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;ServiceNow;Servicenow
 solution: Experience Platform
 title: Erstellen einer ServiceNow-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine ServiceNow-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL ServiceNow]-Quellverbindung in der Benutzeroberfläche
 
