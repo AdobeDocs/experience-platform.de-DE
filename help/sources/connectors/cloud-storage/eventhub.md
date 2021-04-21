@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Ereignis-Hubs;azure-Ereignis-Hubs;Ereignis-Hubs;Ereignis-Hubs
 solution: Experience Platform
 title: Übersicht über den Avocent Ereignis Hubs Source Connector
-topic: Übersicht
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Azurblase-Ereignis-Hubs mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '249'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) Azurblauer Ereignis-Hubs-Anschluss
 
