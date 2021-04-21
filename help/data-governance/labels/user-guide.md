@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung;Richtliniendienst;Datenverwendungsbeschriftungen Benutzerhandbuch
 solution: Experience Platform
 title: Datenverwendungsbezeichnungen in der Benutzeroberfläche verwalten
-topic: Beschriftungen
+topic-legacy: labels
 description: In diesem Handbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
+exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 translation-type: tm+mt
-source-git-commit: 41d01b3aec0afa60dd602716a30cc94402702a70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
-
 
 # Verwalten von Datenverwendungsbeschriftungen in der Benutzeroberfläche
 
