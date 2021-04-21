@@ -2,17 +2,17 @@
 keywords: Experience Platform;Modell für maschinelles Lernen;Arbeitsbereich für Datenwissenschaften;Echtzeit-Profil für Kunden;beliebte Themen;Einblicke in maschinelles Lernen
 solution: Experience Platform
 title: Verbessern Sie Ihr Echtzeit-Profil durch maschinelles Lernen - Insights
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Dieses Dokument bietet einen Leitfaden, wie Sie Echtzeit-Kundeneinblicke durch maschinelles Lernen bereichern können.
+exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '640'
 ht-degree: 24%
 
 ---
-
 
 # Bereichern Sie [!DNL Real-time Customer Profile] durch Einblicke in maschinelles Lernen.
 
