@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;XDM;XDM-System;XDM-Profil;XDM
 solution: Experience Platform
 title: XDM-System - Fehlerbehebungshandbuch
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Experience Data Model (XDM) und XDM System in Adobe Experience Platform sowie eine Anleitung zur Fehlerbehebung für häufige Fehler.
-topic: troubleshooting
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 1%
 
 ---
-
 
 # Handbuch zur Fehlerbehebung im XDM-System
 
