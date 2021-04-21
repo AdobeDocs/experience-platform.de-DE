@@ -2,17 +2,17 @@
 keywords: Experience Platform;Modellplanen;Arbeitsbereich für Datenwissenschaften;beliebte Themen;Planen der Punktzahl;Planen der Schulung
 solution: Experience Platform
 title: Planen eines Modells in der Benutzeroberfläche des Arbeitsbereichs für Datenwissenschaften
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: Mit dem Adobe Experience Platform Data Science Workspace können Sie planmäßige Scoring- und Schulungsabläufe auf einem maschinellen Lerndienst einrichten. Die Automatisierung des Trainings- und Bewertungsvorgangs kann dazu beitragen, die Effizienz eines Service im Laufe der Zeit zu erhalten und zu verbessern, indem Sie über Muster in Ihren Daten auf dem Laufenden bleiben.
+exl-id: 51f6f328-7c63-4de1-9184-2ba526bb82e2
 translation-type: tm+mt
-source-git-commit: 8f5b7018a52d4c5860e03cec3108435ede8815f1
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '555'
 ht-degree: 20%
 
 ---
-
 
 # Planen eines Modells in der Benutzeroberfläche von Data Science Workspace
 
