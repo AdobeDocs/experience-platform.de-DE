@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: Edge Promotion API-Endpunkte
-topic: guide
-type: Dokumentation
+topic-legacy: guide
+type: Documentation
 description: Mit Adobe Experience Platform können Sie koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden über mehrere Kanal hinweg in Echtzeit bereitstellen, indem Sie die richtigen Daten bereitstellen und im Zuge von Änderungen kontinuierlich aktualisieren. Dies geschieht durch die Verwendung von Kanten, einem geografisch platzierten Server, der Daten speichert und für Anwendungen leicht zugänglich macht.
+exl-id: ce429164-8e87-412d-9a9d-e0d4738c7815
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '1964'
 ht-degree: 7%
 
 ---
-
 
 # Endpunkte für Edge-Projektionen und Ziele
 
