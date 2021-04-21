@@ -2,16 +2,16 @@
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Benutzeroberfläche;Anpassung;Profil-Dashboard;Dashboard
 title: Dashboard Ziele
 description: Adobe Experience Platform bietet ein Dashboard zur Ansicht wichtiger Informationen über die aktiven Ziele Ihres Unternehmens.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 6a34a796-24a1-450a-af39-60113928873e
 translation-type: tm+mt
-source-git-commit: 2f2459c1c88c97a3ab322b08ee178463fbb4a592
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) [!UICONTROL Dashboard Ziele]
 
