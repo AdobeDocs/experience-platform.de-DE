@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Partielle Erfassung;Partielle Erfassung;Fehler abrufen;Fehler abrufen;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Erfassung;Einnahme;Einbettung; Einbettung;
 solution: Experience Platform
 title: Übersicht über die partielle Batch-Ingestion
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument enthält eine Anleitung zum Verwalten der partiellen Batch-Erfassung.
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '945'
 ht-degree: 42%
 
 ---
-
 
 # Partielle Batch-Erfassung
 
@@ -30,7 +30,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
