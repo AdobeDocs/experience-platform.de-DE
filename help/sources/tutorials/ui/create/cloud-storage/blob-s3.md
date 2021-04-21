@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Amazon S3;Azurblauch
 solution: Experience Platform
 title: Erstellen einer Azurblauch- oder Amazon S3-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Azurblase- oder Amazon S3-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%
 
 ---
-
 
 # Erstellen einer [!DNL Azure Blob]- oder [!DNL Amazon] S3-Quellverbindung in der Benutzeroberfläche
 
