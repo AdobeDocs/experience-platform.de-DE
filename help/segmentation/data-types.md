@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datentyp;Datentypen;Datentypen;Datentyp;Segmentierungsdatentypen;Segmentierung;Segmentierung;Segmentierungsdienst;Segmentierungsdienstdatentypen;
 solution: Experience Platform
 title: Unterstützte Datentypen im Segmentierungsdienst
-topic: overview
+topic-legacy: overview
 description: Alle XDM-Datentypen (Experience Data Model) werden im Segmentierungsdienst für Adoben unterstützt. Die Regeln, die eine Segmentdefinition bilden, werden durch die folgenden Datentypen kontextualisiert.
+exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 4%
 
 ---
-
 
 # Unterstützte Datentypen im Segmentierungsdienst
 
@@ -25,7 +25,7 @@ Stringdaten werden in Segmentdefinitionen mit logischen, einschließlich-/aussch
 
 | Anweisungstyp | Beispiele |
 | -------------- | -------- |
-| Logisch     | `and`, `or`, `not` |
+| Logisch       | `and`, `or`, `not` |
 | Inklusiv/exklusiv | `include`, `must` `exist`, `exclude`, `must not exist` |
 | Vergleich | `equals`, `does not equal`, `contains`, `starts with` |
 
