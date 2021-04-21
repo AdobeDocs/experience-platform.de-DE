@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;mysql;MySQL
 solution: Experience Platform
 title: Erstellen einer MySQL-Quellverbindung in der Benutzeroberfläche
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine MySQL-Quellverbindung erstellen.
+exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '417'
 ht-degree: 11%
 
 ---
-
 
 # Erstellen einer [!DNL MySQL]-Quellverbindung in der Benutzeroberfläche
 
