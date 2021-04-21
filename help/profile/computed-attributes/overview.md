@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: Einführung in berechnete Attribute
-topic: guide
-type: Dokumentation
+topic-legacy: guide
+type: Documentation
 description: Berechnete Attribute sind Funktionen zum Aggregat von Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 4ed2b80ebfd87f8920462ae0a918b01bb13d4210
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '728'
 ht-degree: 41%
 
 ---
-
 
 # (Alpha) Überblick über berechnete Attribute
 
