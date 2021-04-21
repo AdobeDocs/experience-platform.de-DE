@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;ETL;etl;etl-Integrationen;ETL-Integrationen
 solution: Experience Platform
 title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
-topic: overview
+topic-legacy: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
+exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '4143'
 ht-degree: 81%
 
 ---
-
 
 # Entwickeln von ETL-Integrationen für Adobe Experience Platform
 
@@ -53,7 +53,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
