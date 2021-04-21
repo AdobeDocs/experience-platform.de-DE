@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Leitfaden;Schemas
 solution: Experience Platform
 title: Schemas-API-Endpunkt
-topic: Schemas
-description: 'Sie können den Endpunkt "Funktionen"in der Adobe Experience Platform API verwenden, um Ihre Zuordnungsfunktionen und verfügbaren Zuordnungssatzfunktionen für die Liste zu validieren. '
+topic-legacy: schemas
+description: Sie können den Endpunkt "Funktionen"in der Adobe Experience Platform API verwenden, um Ihre Zuordnungsfunktionen und verfügbaren Zuordnungssatzfunktionen für die Liste zu validieren.
+exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 translation-type: tm+mt
-source-git-commit: 60c80a73deb8c77f19d5963cc3319d46143fb4c3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '210'
 ht-degree: 12%
 
 ---
-
 
 # Funktionsendpunkte
 
