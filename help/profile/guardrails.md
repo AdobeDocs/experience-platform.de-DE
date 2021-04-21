@@ -3,17 +3,17 @@ keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;G
 title: Leitlinien für Daten zum Echtzeit-Profil von Kunden
 solution: Experience Platform
 product: experience platform
-topic: guide
+topic-legacy: guide
 type: Documentation
-description: 'Adobe Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Sie vermeiden können, Datenmodelle zu erstellen, die vom Echtzeit-Profil nicht unterstützt werden können. In diesem Dokument werden Best Practices und Einschränkungen erläutert, die bei der Modellierung von Profil-Daten zu beachten sind. '
+description: Adobe Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Sie vermeiden können, Datenmodelle zu erstellen, die vom Echtzeit-Profil nicht unterstützt werden können. In diesem Dokument werden Best Practices und Einschränkungen erläutert, die bei der Modellierung von Profil-Daten zu beachten sind.
+exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1456'
 ht-degree: 2%
 
 ---
-
 
 # Grundlagen für [!DNL Real-time Customer Profile]-Daten
 
