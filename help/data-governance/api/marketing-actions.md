@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Politikdurchsetzung;Marketingaktionen API;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
 title: API-Endpunkt für Marketingaktionen
-topic: developer guide
+topic-legacy: developer guide
 description: Eine Marketingaktion im Rahmen der Adobe Experience Platform-Datenverwaltung ist eine Maßnahme, die ein Datenbenutzer in der Experience Platform ergreift und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 5%
 
 ---
-
 
 # Endpunkt der Marketing-Aktionen
 
