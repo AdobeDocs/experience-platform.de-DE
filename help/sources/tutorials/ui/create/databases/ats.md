@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenspeicherung von Azurblauen Tabellen;Datenspeicherung von Azofarben;ATS;ATS
 solution: Experience Platform
 title: Erstellen einer Azurblauen Datenspeicherung-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für die Datenspeicherung "Blaue Tabelle"mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL Azure Table Storage]-Quellverbindung in der Benutzeroberfläche
 
