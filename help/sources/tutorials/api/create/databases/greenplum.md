@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Greenplum;Greenplum
 solution: Experience Platform
 title: Erstellen einer GreenPlum-Quellverbindung mit der Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie GreenPlum mit der Flow Service API mit Adobe Experience Platform verbinden.
+exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 26%
 
 ---
-
 
 # Erstellen einer [!DNL GreenPlum]-Quellverbindung mit der [!DNL Flow Service]-API
 
@@ -42,7 +42,7 @@ Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie im Do
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
