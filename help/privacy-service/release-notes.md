@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Versionshinweise zu Privacy Services
-topic: release notes
+topic-legacy: release notes
 description: Die neuesten Versionshinweise für Adobe Experience Platform Privacy Service.
+exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 53%
 
 ---
-
 
 # [!DNL Privacy Service] Versionshinweise
 
@@ -64,7 +64,7 @@ Dieses Dokument enthält Informationen zu neuen Funktionen für Adobe Experience
 | --- | --- |
 | Dashboard „Anfragemetriken“ | Das neue Metriken-Dashboard in der Benutzeroberfläche [!DNL Privacy Service] bietet Einblicke in gesendete, fehlerhafte und abgeschlossene GDPR-Anforderungen. |
 | Request Builder | Um Unternehmen mit technischen und nicht-technischen Benutzern, die DSGVO-Anfragen senden, zu unterstützen, wurde der Benutzeroberfläche eine Funktion zum Erstellen einer Anfrage hinzugefügt. Die JSON-Dateisendefunktion ist in der [!DNL Privacy Service]-Benutzeroberfläche weiterhin für diejenigen Organisationen verfügbar, die sie weiterhin verwenden möchten. |
-| Ereignisbenachrichtigungen für DSGVO-Aufträge | Ereignisbenachrichtigungen über den DSGVO-Auftragsstatus sind für viele Workflows von entscheidender Bedeutung. Während Benachrichtigungen bisher über individuelle E-Mail-Benachrichtigungen zugestellt wurden, handelt es sich bei DSGVO-Ereignisbenachrichtigungen um Nachrichten, die Adobe I/O-Ereignisse nutzen und an einen konfigurierten Webhook gesendet werden, der die Automatisierung von Auftragsanfragen erleichtert. [!DNL Privacy Service] Benutzer der Benutzeroberfläche können Adobe I/O GDPR-Ereignis abonnieren, um Updates zu erhalten, wenn ein Produkt- oder der GDPR-Auftrag abgeschlossen wurde. |
+| Ereignisbenachrichtigungen für DSGVO-Aufträge | Ereignisbenachrichtigungen über den DSGVO-Auftragsstatus sind für viele Workflows von entscheidender Bedeutung. Während Benachrichtigungen bisher über individuelle E-Mail-Benachrichtigungen zugestellt wurden, handelt es sich bei DSGVO-Ereignisbenachrichtigungen um Nachrichten, die Adobe I/O-Ereignisse nutzen und an einen konfigurierten Webhook gesendet werden, der die Automatisierung von Auftragsanfragen erleichtert. [!DNL Privacy Service] Benutzer der Benutzeroberfläche können Adobe I/O-GDPR-Ereignis abonnieren, um Updates zu erhalten, wenn ein Produkt- oder der GDPR-Auftrag abgeschlossen wurde. |
 
 ## Donnerstag, 18. April 2019
 
