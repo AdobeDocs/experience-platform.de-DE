@@ -1,17 +1,17 @@
 ---
 solution: Experience Platform
 title: Einführung in die Dashboards der Experience Platform
-topic: overview
+topic-legacy: overview
 type: Documentation
-description: 'Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, um wichtige Informationen zu den Daten Ihres Unternehmens, wie sie bei täglichen Schnappschüssen erfasst werden, Ansicht. '
+description: Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, um wichtige Informationen zu den Daten Ihres Unternehmens, wie sie bei täglichen Schnappschüssen erfasst werden, Ansicht.
+exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 translation-type: tm+mt
-source-git-commit: d97fd09b382877608edf665d7559a684be00c0bb
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '274'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) Übersicht über Dashboard {#dashboards}
 
