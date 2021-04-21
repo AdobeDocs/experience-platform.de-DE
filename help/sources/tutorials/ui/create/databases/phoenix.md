@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Phoenix;Phoenix
 solution: Experience Platform
 title: Erstellen einer Phoenix-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Phoenix-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 8%
 
 ---
-
 
 # Erstellen einer [!DNL Phoenix]-Quellverbindung in der Benutzeroberfläche
 
