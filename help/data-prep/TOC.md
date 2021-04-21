@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Datenvorbereitungsanleitung
 user-guide-description: Bereiten Sie Ihre Daten für die Aufnahme in Adobe Experience Platform vor.
-feature: Data Management, Dateningestion
+feature: Data Management, Data Ingestion
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

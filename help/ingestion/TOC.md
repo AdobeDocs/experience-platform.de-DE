@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Hilfe zur Datenerfassung in Adobe Experience Platform
 breadcrumb-title: Anleitung zur Datenaufnahme
 user-guide-description: Implementieren Sie Ihre Daten durch Batch- oder Streaming-Aufnahmen in Platform.
-feature: Datenerfassung
+feature: Data Ingestion
 translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Marketo Engage;Markieren;Markieren
 solution: Experience Platform
 title: Marketo Engage-Anschluss
-topic: Übersicht
+topic: overview
 description: In diesem Dokument erhalten Sie einen Überblick über den Marketo Engage Source Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 translation-type: tm+mt
 source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3

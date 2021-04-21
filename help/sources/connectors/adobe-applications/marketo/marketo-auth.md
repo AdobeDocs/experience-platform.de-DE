@@ -2,7 +2,7 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Marketo Engage;Markieren;Markieren
 solution: Experience Platform
 title: Authentifizieren Sie Ihren Marketo-Quellanschluss.
-topic: Übersicht
+topic: overview
 description: Dieses Dokument enthält Informationen zum Generieren Ihrer Marketo-Authentifizierungsberechtigungen.
 translation-type: tm+mt
 source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3

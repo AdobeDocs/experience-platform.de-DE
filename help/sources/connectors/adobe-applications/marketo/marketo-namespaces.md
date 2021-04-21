@@ -2,7 +2,7 @@
 keywords: Experience Platform;Home;beliebte Themen;Marketo-Quellanschluss;Namensräume;Schemas
 solution: Experience Platform
 title: 'Marketo Namensräume '
-topic: Übersicht
+topic: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namensraum, die beim Erstellen eines Marketo Engage-Quell-Connectors erforderlich sind.
 translation-type: tm+mt
 source-git-commit: 2563b413ec35cb4c5f05a54bce6f7271917e51f3
