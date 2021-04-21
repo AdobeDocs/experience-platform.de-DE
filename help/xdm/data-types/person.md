@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Person;Datentyp;Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp der Person
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den Datentyp des Personenerlebnis-Datenmodells (XDM).
+exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 translation-type: tm+mt
-source-git-commit: 194b604d4b23f2acfaa4243155b04a6793fb0727
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 16%
 
 ---
-
 
 #  Persondata-Typ
 
