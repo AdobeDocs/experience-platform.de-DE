@@ -3,12 +3,12 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmode
 solution: Experience Platform
 title: Mixins-API-Endpunkt
 description: Mit dem /mixins-Endpunkt in der Schema Registry API können Sie XDM-Mixins in Ihrer Experience-Anwendung programmgesteuert verwalten.
-topic: Entwicklerhandbuch
+topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 13%
 
 ---
@@ -585,7 +585,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 Die folgende Beispielanforderung aktualisiert das `description` eines vorhandenen Mixins und fügt ein neues `propertyCity`-Feld hinzu.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang durchgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
