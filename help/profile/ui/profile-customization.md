@@ -2,15 +2,15 @@
 keywords: Experience Platform;Profil;Echtzeit-Kundendaten;Profil;Benutzeroberfläche;Anpassung;Profil;Details
 title: Profil-Detailanpassung in der Benutzeroberfläche
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Art und Weise, wie Kundendaten in Echtzeit in der Adobe Experience Platform-Benutzeroberfläche angezeigt werden. '
-topic: guide
+topic-legacy: guide
+exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 translation-type: tm+mt
-source-git-commit: ba1cbed3b5e3f3a8879b3882856a03ef4be9b96a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL Real-time Customer Profile] Detail-Anpassung  {#profile-detail-customization}
 
