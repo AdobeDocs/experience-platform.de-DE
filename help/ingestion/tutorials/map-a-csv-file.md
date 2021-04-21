@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm;ui-Handbuch zuordnen;
 solution: Experience Platform
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie eine CSV-Datei mithilfe der Adobe Experience Platform-Benutzeroberfläche einem XDM-Schema zuordnen.
+exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 3%
 
 ---
-
 
 # Zuordnen einer CSV-Datei zu einem XDM-Schema
 
