@@ -3,15 +3,15 @@ keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;XDM-System;Erlebn
 solution: Experience Platform
 title: Klassen in der Benutzeroberfläche erstellen und bearbeiten
 description: Erfahren Sie, wie Sie Klassen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
-topic: user guide
+topic-legacy: user guide
+exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 translation-type: tm+mt
-source-git-commit: aa2088d30716f56ac2909214badbb39c0ae97855
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 7%
 
 ---
-
 
 # Erstellen und Bearbeiten von Klassen in der Benutzeroberfläche
 
