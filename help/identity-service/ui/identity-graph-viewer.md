@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Identitätsdiagramm-Viewer;Identitätsdiagramm-Viewer;Diagramm-Viewer;Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
 solution: Experience Platform
 title: Übersicht über den Identitätsdiagramm-Viewer
-topic: Tutorial
+topic-legacy: tutorial
 description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
+exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
 translation-type: tm+mt
-source-git-commit: f4326c7a8bb8af90c092d3790e51c133744d498f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '1037'
 ht-degree: 3%
 
 ---
-
 
 # Übersicht über den Identitätsdiagramm-Viewer
 
