@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Posting;Potstico;Verbindung mit Abfrage-Dienst;
 solution: Experience Platform
 title: Anschlussmöglichkeit an Abfrage-Dienst
-topic: connect
+topic-legacy: connect
 description: Dieses Dokument enthält den Link zum Installieren des Backup-Clients "Postico for Adobe Experience Platform Abfrage Service".
+exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
 translation-type: tm+mt
-source-git-commit: 6655714d4b57d9c414cd40529bcee48c7bcd862d
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 16%
 
 ---
-
 
 # Verbinden von [!DNL Postico] mit Abfrage Service (Mac)
 
