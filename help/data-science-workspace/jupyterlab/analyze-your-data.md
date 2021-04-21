@@ -2,17 +2,17 @@
 keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Analyse von Daten-Notebooks
 solution: Experience Platform
 title: Analysieren Ihrer Daten mit Notebooks
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: Dieses Lernprogramm konzentriert sich auf die Verwendung von in Data Science Workspace integrierten Jupyter-Notebooks, um auf Ihre Daten zuzugreifen, sie zu untersuchen und sie zu visualisieren.
+exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
 translation-type: tm+mt
-source-git-commit: 6908c582cb7e0d60b82112dbc0854411d76b4fd4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1733'
+source-wordcount: '1731'
 ht-degree: 22%
 
 ---
-
 
 # Analysieren Ihrer Daten mithilfe von Notebooks
 
