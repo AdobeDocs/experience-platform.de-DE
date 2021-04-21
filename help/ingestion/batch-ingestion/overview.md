@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Batch;Stapel;Datensatz aktivieren;Stapelverarbeitungsübersicht;Übersicht;Stapelverarbeitungsübersicht; Stapelverarbeitungsübersicht;
 solution: Experience Platform
 title: Batch Ingestion - Übersicht
-topic: overview
+topic-legacy: overview
 description: Mit der Adobe Experience Platform Data Ingestion API können Sie Daten als Batch-Dateien in Plattform erfassen. Daten, die erfasst werden, können Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der XDM-Registrierung (Experience Data Model) entsprechen.
+exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 translation-type: tm+mt
-source-git-commit: a489ab248793a063295578943ad600d8eacab6a2
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 75%
 
 ---
-
 
 # Überblick über die Stapelverarbeitung
 
@@ -48,7 +48,7 @@ Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleine
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
