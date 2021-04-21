@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;adobe-definierte Funktionen;SQL
 solution: Experience Platform
 title: Adobe-definierte SQL-Funktionen im Abfrage-Dienst
-topic: functions
+topic-legacy: functions
 description: In diesem Dokument finden Sie Informationen zu Adoben-definierten Funktionen, die im Adobe Experience Platform Abfrage Service verfügbar sind.
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 21%
 
 ---
-
 
 # Adobe-definierte SQL-Funktionen im Abfrage-Dienst
 
