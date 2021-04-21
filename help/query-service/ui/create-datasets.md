@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Datensätze generieren;Datensatz generieren;Datensatz erstellen;
 solution: Experience Platform
 title: Generieren von Datensätzen aus Ergebnissen im Abfrage-Dienst
-topic: queries
+topic-legacy: queries
 type: Tutorial
-description: 'Der Adobe Experience Platform Abfrage Service ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden. '
+description: Der Adobe Experience Platform Abfrage Service ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
+exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 43%
 
 ---
-
 
 # Generieren von Datensätzen aus Ergebnissen im Abfrage-Dienst
 
