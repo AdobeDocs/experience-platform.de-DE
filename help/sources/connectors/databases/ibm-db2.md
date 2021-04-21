@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: IBM DB2 Source Connector - Übersicht
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie IBM DB2 mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) IBM DB2 Connector
 
