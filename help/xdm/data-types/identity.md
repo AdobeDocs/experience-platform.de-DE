@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Identität;Datentyp;Datentyp; Datentyp;
 solution: Experience Platform
 title: Identitätsdatentyp
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den Identitäts-XDM-Datentyp.
+exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 10%
 
 ---
-
 
 # [!UICONTROL Identitäts-] Datentyp
 
