@@ -2,15 +2,15 @@
 keywords: Experience Platform;Benutzeroberfläche;Benutzeroberfläche;Dashboards;Dashboard;Profil;Segmente;Ziele;Lizenzverwendung
 title: Plattformvariablen in der Benutzeroberfläche ändern
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Anpassen der Anzeige der Adobe Experience Platform-Daten Ihres Unternehmens in Dashboards. '
-topic: guide
+topic-legacy: guide
+exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 translation-type: tm+mt
-source-git-commit: 5cc973a5db88eb23c6e1aeee3695820a0555e4cf
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 2%
 
 ---
-
 
 # (Beta) Dashboard ändern {#modify-dashboards}
 
