@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblase HDInsights;Apache Spark
 solution: Experience Platform
 title: Erstellen Sie einen Apache Spark auf der Azurblauen HDInsights-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Adobe Experience Platform-Benutzeroberfläche einen Apache Spark auf der Azurblauen HDInsights-Quellverbindung erstellen.
+exl-id: 30d0b740-cec4-486f-9c9b-1579fd04f28b
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 15%
 
 ---
-
 
 # Erstellen einer [!DNL Apache Spark]-Quellverbindung in der Benutzeroberfläche[!DNL Azure HDInsights]
 
