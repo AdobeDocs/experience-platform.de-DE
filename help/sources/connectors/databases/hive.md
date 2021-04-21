@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Apache-Hive;Hive;Hive;Azurblauer HDInsights;Azure-Hdinsights;
 solution: Experience Platform
 title: Apache Hive auf Azurblaus HDInsights Source Connector Übersicht
-topic: overview
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Apache Hive auf Azurblauen HDInsights mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 10%
 
 ---
-
 
 # (Beta) [!DNL Apache Hive] auf [!DNL Azure HDInsights] Connector
 
