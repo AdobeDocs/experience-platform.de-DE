@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Fehlerbehebungshandbuch;FAQ;Fehlerbehebung;
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung beim Abfrage Service
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dieses Dokument enthält Informationen zu häufig auftretenden Fehlercodes und möglichen Ursachen.
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 82%
 
 ---
-
 
 # [!DNL Query Service] Handbuch zur Fehlerbehebung
 
