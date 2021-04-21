@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;ssc;SSC;Salesforce Service Cloud;Salesforce-Dienst-Cloud
 solution: Experience Platform
 title: Erstellen einer Salesforce Service Cloud-Quellverbindung mit der Flow Service API
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mit der Flow Service API mit der Salesforce Service Cloud verbinden.
+exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 translation-type: tm+mt
-source-git-commit: a0b016e8adc519bc79701f9fd850b6ddf7d46127
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '578'
 ht-degree: 25%
 
 ---
-
 
 # Erstellen einer [!DNL Salesforce Service Cloud]-Quellverbindung mit der [!DNL Flow Service]-API
 
@@ -43,7 +43,7 @@ Weitere Informationen zu den ersten Schritten finden Sie in [diesem Salesforce S
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
