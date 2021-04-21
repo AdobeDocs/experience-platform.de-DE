@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Ziele - Lernprogramm
 solution: Experience Platform
 title: Erstellen eines Ziels und Aktivieren von Daten mithilfe von APIs
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Hier erfahren Sie, wie Sie verschiedene Zieltypen erstellen und Daten aktivieren.
+exl-id: f9c421e5-7e07-4587-8cf7-dc14b716865c
 translation-type: tm+mt
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 76%
 
 ---
-
 
 # Erstellen eines Ziels und Aktivieren von Daten mithilfe von APIs
 
