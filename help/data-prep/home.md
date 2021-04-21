@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 solution: Experience Platform
 title: Übersicht über die Datenvorbereitung
-topic: Übersicht
+topic-legacy: overview
 description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 827a593c046530edba701edf26d9a47918cfd8f8
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 1%
+source-wordcount: '388'
+ht-degree: 0%
 
 ---
 
