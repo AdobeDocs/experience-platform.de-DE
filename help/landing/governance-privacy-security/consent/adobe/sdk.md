@@ -1,15 +1,15 @@
 ---
 title: Verarbeiten von Kundenbestätigungsdaten mit dem Adobe Experience Platform Web SDK
-topic: Erste Schritte
+topic-legacy: getting started
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK zur Verarbeitung von Daten zur Kundengenehmigung in Adobe Experience Platform mit dem Adobe 2.0-Standard integrieren.
+exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 translation-type: tm+mt
-source-git-commit: fee3f005ca3679f8639cea45c16150090b2a1e0f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1243'
 ht-degree: 0%
 
 ---
-
 
 # Integrieren Sie das Platform Web SDK, um Daten zur Kundeneinwilligung unter Verwendung des Adobe 2.0-Standards zu verarbeiten.
 
