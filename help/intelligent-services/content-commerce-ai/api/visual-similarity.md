@@ -2,22 +2,22 @@
 keywords: Visuelle Ähnlichkeit;Visuelle Ähnlichkeit;ccai API
 solution: Experience Platform, Intelligent Services
 title: Visuelle Ähnlichkeit in der API für Inhalts- und Commerce-API
-topic: Developer guide
+topic-legacy: Developer guide
 description: Der Dienst für visuelle Ähnlichkeit findet bei einem gegebenen Bild automatisch visuell ähnliche Bilder aus einem Katalog.
+exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
 translation-type: tm+mt
-source-git-commit: d10c00694b0a3b2a9da693bd59615b533cfae468
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
 
 ---
 
-
 # Visuelle Ähnlichkeit
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] ist in der Betaphase enthalten. Die Dokumentation kann geändert werden.
+>[!DNL Content and Commerce AI] in der Betaphase enthalten. Die Dokumentation kann geändert werden.
 
 Der Dienst für visuelle Ähnlichkeit findet bei einem gegebenen Bild automatisch visuell ähnliche Bilder aus einem Katalog.
 
@@ -160,4 +160,3 @@ Die folgenden visuell ähnlichen Bilder wurden in der folgenden Beispielantwort 
   "error": []
 }
 ```
-
