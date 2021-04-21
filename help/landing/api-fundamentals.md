@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Grundlagen der Experience Platform-API
-topic: Erste Schritte
+topic-legacy: getting started
 description: In diesem Dokument erhalten Sie einen kurzen Überblick über einige der mit Experience Platform-APIs verbundenen Technologien und Syntaxen.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: ca5c8527b1b54856aa1e762a06ddbe404f30ec42
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '511'
 ht-degree: 52%
 
 ---
-
 
 # Grundlagen der Experience Platform-API
 
