@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Schreiben von Abfragen;Schreiben von Abfrage;
 solution: Experience Platform
 title: Allgemeine Leitlinien für die Ausführung von Abfragen im Dienst Abfrage
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: In diesem Dokument werden wichtige Informationen zum Schreiben von Abfragen im Adobe Experience Platform Abfrage Service beschrieben.
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 3%
 
 ---
-
 
 # Allgemeine Anleitung zur Ausführung von Abfragen in [!DNL Query Service]
 
