@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;API;API;
 title: Handbuch zur Segmentdienst-API
-topic: guide
+topic-legacy: guide
 description: Die Segmentierungsdienst-API ermöglicht es Entwicklern, Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 6%
 
 ---
-
 
 # Handbuch zur Segmentdienst-API
 
