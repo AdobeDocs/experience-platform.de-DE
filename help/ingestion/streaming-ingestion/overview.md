@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Datenerfassung;erfassten Daten;Streaming;Übersicht;Streaming;Latenz;Streaming-Latenz; Streaming-Latenz;
 solution: Experience Platform
 title: Übersicht über die Streaming-Ingestion
-topic: Übersicht
+topic-legacy: overview
 description: Die Streaming-Erfassung für Adobe Experience Platform bietet eine Möglichkeit, Daten von Client- und serverseitigen Geräten in Echtzeit an die Experience Platform zu senden.
+exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 23%
+source-wordcount: '285'
+ht-degree: 22%
 
 ---
-
 
 # Streaming-Erfassung – Übersicht
 
