@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung-Connector;Cloud-Datenspeicherung
 solution: Experience Platform
 title: Konfigurieren eines Datenflusses für einen Cloud Datenspeicherung Streaming Connector in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Platform-Datensatz aufgenommen werden. In diesem Lernprogramm werden die Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Cloud-Datenspeicherung-Basisanschluss beschrieben.
+exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 6%
 
 ---
-
 
 # Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Streaming-Verbindung in der Benutzeroberfläche
 
