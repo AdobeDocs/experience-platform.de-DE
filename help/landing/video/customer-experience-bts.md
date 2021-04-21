@@ -1,21 +1,19 @@
 ---
 title: Hinter den Kulissen&#58; Kundenerlebnis mit Adobe Experience Platform
 description: Im vorherigen Video haben wir gesehen, wie eine Beispielmarke, Luma, eine reiche, lohnende und relevante Kundenerfahrung schaffen konnte. In diesem Video wird untersucht, wie Adobe Experience Platform zur Erreichung dieser Journey verwendet wird.
-feature: platform
-topics: null
 kt: 4340
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 28144.jpg
+exl-id: 8562e0da-7aac-418a-8e93-f0339d3ffc66
 translation-type: tm+mt
-source-git-commit: 333b89ccf2365c04646df9dc0434036bdd6f12ac
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
 
 ---
-
 
 # Hinter den Kulissen eines Kundenerlebnisses auf der Grundlage der Experience Platform
 
