@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Google Big Abfrage;Google Big Abfrage;GBQ;gbq
 solution: Experience Platform
 title: Erstellen einer Google Big Abfrage-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Google Big Abfrage-Quellverbindung erstellen.
+exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 8%
 
 ---
-
 
 # Erstellen einer [!DNL Google Big Query]-Quellverbindung in der Benutzeroberfläche
 
