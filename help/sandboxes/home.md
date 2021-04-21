@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Sandbox;Sandbox;Test;Test
 solution: Experience Platform
 title: Übersicht über Sandboxen
-topic: Übersicht
+topic-legacy: overview
 description: Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen.
+exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '755'
 ht-degree: 88%
 
 ---
-
 
 # Sandbox-Übersicht
 
