@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;IAB;IAB 2.0;Zustimmung;Zustimmung
 solution: Experience Platform
 title: Erstellen von Datenbeständen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten
-topic: Datenschutz-Ereignisse
+topic-legacy: privacy events
 description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1646'
 ht-degree: 3%
 
 ---
-
 
 # Erstellen von Datensätzen zur Erfassung von IAB TCF 2.0-Genehmigungsdaten
 
@@ -29,7 +29,7 @@ In diesem Dokument werden Schritte zur Einrichtung dieser beiden Datensätze zur
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Experience-Datenmodell (XDM)](../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemata.
+   * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemas.
 * [Adobe Experience Platform-Identitätsdienst](../../../../identity-service/home.md): Ermöglicht Ihnen, Kunden-Identitäten von unterschiedlichen Datenquellen über Geräte und Systeme hinweg zu überbrücken.
    * [Identitäts-Namensraum](../../../../identity-service/namespaces.md): Die Daten zur Kundenidentität müssen unter einem bestimmten, vom Identitätsdienst anerkannten Namensraum bereitgestellt werden.
 * [Echtzeit-Profil](../../../../profile/home.md): Ermöglicht  [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem Data Lake ab und behält die Profil der Kunden in einem eigenen separaten Datenspeicher bei.
