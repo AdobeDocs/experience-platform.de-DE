@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Hubspot;Hubspot
 solution: Experience Platform
 title: Erstellen einer HubSpot-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine HubSpot-Quellverbindung erstellen.
+exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '484'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL HubSpot]-Quellverbindung in der Benutzeroberfläche
 
