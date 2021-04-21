@@ -2,16 +2,16 @@
 keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;%DataSet;Interaktiver Modus;Stapelmodus;Spark-SDK;Python-SDK;Zugriffsdaten;Zugriff auf Notebook-Daten
 solution: Experience Platform
 title: Datenzugriff in Jupyterlab-Notebooks
-topic: Developer Guide
+topic-legacy: Developer Guide
 description: Dieser Leitfaden konzentriert sich auf die Verwendung von Jupyter-Notebooks, die in Data Science Workspace erstellt wurden, um auf Ihre Daten zuzugreifen.
+exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '3101'
 ht-degree: 24%
 
 ---
-
 
 # Datenzugriff in [!DNL Jupyterlab]-Notebooks
 
@@ -45,14 +45,14 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Sie sollten maximal 2 Millionen Zeilen (~6,1 GB Daten auf der Festplatte) XDM-Daten in weniger als 22 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Größe auf Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 | 6050 |
 | SDK (in Sekunden) | Artikel 20 Absatz 3 | 86,8 | 63 | 659 | 1315 |
 
 **Ad-hoc-Schema:** Sie sollten in weniger als 14 Minuten maximal 5 Millionen Zeilen (~5,6 GB Daten auf der Festplatte) von Nicht-XDM-Daten (Ad-hoc-Daten) lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M | 3 M | 5 M |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
 | Größe auf Festplatte (in MB) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
 | SDK (in Sekunden) | 7,27 | 9,04 | Artikel 27 Absatz 3 | 180 | 346 | 487 | 819 |
@@ -61,14 +61,14 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Sie sollten maximal 1 Million Zeilen XDM-Daten (3 GB Daten auf Festplatte) in weniger als 13 Minuten lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Größe auf Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 |
 | R Kernel (in Sekunden) | 14,03 | 69,6 | 86,8 | 775 |
 
 **Ad-hoc-Schema:** Sie sollten in etwa 10 Minuten maximal 3 Millionen Zeilen Ad-hoc-Daten (293 MB Daten auf dem Datenträger) lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M | 3 M |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
 | Größe auf Festplatte (in MB) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
 | R SDK (in Sekunden) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
@@ -77,7 +77,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie in etwa 20 Minuten maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) XDM-Daten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, sollten Sie zum Stapelmodus wechseln. Im Batch-Modus sollten Sie maximal 500 Millionen Zeilen (~1,31 TB Daten auf der Festplatte) XDM Daten in etwa 14 Stunden lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Größe auf dem Datenträger | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
 | SDK (interaktiver Modus) | 33 Sek. | 32.4 Sek. | 55.1 Sek. | 253.5 Sek. | 489.2 Sek. | 729.6 Sek. | 1206.8 Sek. | – | – | – | – |
@@ -85,7 +85,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie maximal 1 Milliarde Zeilen (~1.05TB Daten auf Festplatte) von Nicht-XDM Daten in etwa 18 Minuten lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1 B |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1 B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Größe auf Datenträger | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
 | SDK-Interaktiver Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | – | – | – | – | – |
@@ -95,7 +95,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie in etwa 18 Minuten maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) XDM-Daten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, sollten Sie zum Stapelmodus wechseln. Im Batch-Modus sollten Sie maximal 500 Millionen Zeilen (~1,31 TB Daten auf der Festplatte) XDM Daten in etwa 14 Stunden lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Größe auf Datenträger | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
 | SDK-Interaktiver Modus (in Sekunden) | 37.9 Sek. | 22.7 Sek. | 45.6 Sek. | 231.7 Sek. | 444.7 Sek. | 660.6 Sek. | 1100 Sek. | – | – | – | – |
@@ -103,7 +103,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 
 **Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie maximal 1 Milliarde Zeilen (~1,05 TB Daten auf Festplatte) von Nicht-XDM Daten in etwa 16 Minuten lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100 K | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1 B |
+| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1 B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Größe auf Datenträger | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
 | SDK-Interaktiver Modus (in Sekunden) | 35.7 Sek. | 31 Sek. | 19.5 Sek. | 25.3 Sek. | 23 Sek. | 33.2 Sek. | 25.5 Sek. | – | – | – | – | – |
@@ -619,4 +619,3 @@ In dieser Tabelle sind die optionalen SQL-Flags aufgeführt, die für [!DNL Quer
 | `-n`,  `--notify` | Umschaltoption für das Benachrichtigen bei Abfrageergebnissen. |
 | `-a`,  `--async` | Bei Verwendung dieser Markierung wird die Abfrage asynchron ausgeführt und kann der Kernel freigeben werden, während die Abfrage ausgeführt wird. Seien Sie vorsichtig, wenn Sie Abfrageergebnisse Variablen zuweisen, da sie möglicherweise undefiniert sind, wenn die Abfrage noch nicht abgeschlossen ist. |
 | `-d`,  `--display` | Die Verwendung dieser Markierung verhindert, dass Ergebnisse angezeigt werden. |
-
