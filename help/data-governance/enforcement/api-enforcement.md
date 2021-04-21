@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Richtliniendurchsetzung;Automatisierte Durchsetzung;API-basierte Durchsetzung;Datenverwaltung;Tests
 solution: Experience Platform
 title: Erzwingen von Datenverwendungsrichtlinien mithilfe der Policy Service API
-topic: guide
+topic-legacy: guide
 type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+exl-id: 093db807-c49d-4086-a676-1426426b43fd
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 44%
 
 ---
-
 
 # Erzwingen Sie Datenverwendungsrichtlinien mit der API [!DNL Policy Service]
 
