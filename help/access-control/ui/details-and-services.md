@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Profil
 solution: Experience Platform
 title: Details und zusätzliche Dienste für ein Produkt-Profil verwalten
-topic: user guide
+topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Verwaltung der Einzelheiten und zusätzlichen Dienstleistungen für ein Profil in der Adobe Admin Console beschrieben. Über das Menü Profileinstellungen können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen.
+exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 51%
 
 ---
-
 
 # Details und zusätzliche Dienste für ein Produktprofil verwalten
 
