@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: XDM-Schema und -Deskriptoren
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren. Schemas sind die Standardmethode zur Beschreibung von Daten in der Experience Platform, so dass alle Daten, die mit Schemas konform sind, ohne Konflikte innerhalb einer Organisation wiederverwendbar sind und sogar zwischen mehreren Organisationen geteilt werden können.
+exl-id: 1cdc45d7-57ca-4a2d-99a4-9a8cd885a511
 translation-type: tm+mt
-source-git-commit: 8c94d3631296c1c3cc97501ccf1a3ed995ec3cab
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 26%
 
 ---
-
 
 # Arbeiten mit [!DNL Experience Data Model] (XDM)-Schemas und Beziehungsdeskriptoren
 
