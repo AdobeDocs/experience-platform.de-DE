@@ -2,12 +2,12 @@
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API;Einwilligung;Einwilligung;Voreinstellungen;Voreinstellungen;DatenschutzOptOuts;MarketingPreferences;optOutType;basisOfProcessing;Einwilligung;Einwilligung
 title: Datentyp "Inhalt und Voreinstellungen"
 description: Der Datentyp "Zustimmung zum Datenschutz, zur Personalisierung und zu Marketingvoreinstellungen"soll die Erfassung von Kundenberechtigungen und -einstellungen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert wurden.
-topic: guide
+topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
 translation-type: tm+mt
-source-git-commit: 4e9395b4551842cf75b0d1a4ec36c85930c42da5
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1844'
 ht-degree: 2%
 
 ---
