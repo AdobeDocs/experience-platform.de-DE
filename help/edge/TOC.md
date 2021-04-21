@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
@@ -7,7 +6,7 @@ breadcrumb-title: Web SDK-Anleitung
 user-guide-description: Interagieren Sie mit Experience Cloud-Diensten über das Edge-Netzwerk.
 feature: Data Management
 translation-type: tm+mt
-source-git-commit: ac6935f09f620ea55cf8f612ff0a1fba503b5e17
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 37%
