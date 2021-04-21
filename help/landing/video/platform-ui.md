@@ -1,21 +1,19 @@
 ---
 title: Experience Platform-UI-Tour
 description: In diesem Video erhalten Sie einen schnellen Überblick über die Adobe Experience Platform-Benutzeroberfläche, in der Sie erfahren, wie Sie von Experience Cloud aus zur Experience Platform navigieren, das Dashboard der Homepage, die Funktionen zur Aktivierung der Oberfläche, den Sandbox-Umschalter und die Navigationselemente.
-feature: interface
-topics: null
 kt: 4821
 audience: all
 doc-type: video
 activity: understand
 thumbnail: 32792.jpg
+exl-id: 514b73cd-d1f1-472d-8021-ecfb2abeb411
 translation-type: tm+mt
-source-git-commit: 72f60ef80a23f5ca4e70147ee6aa6027028fefd0
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
 
 ---
-
 
 # Experience Platform-UI-Tour
 
