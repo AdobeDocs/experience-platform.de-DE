@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Echtzeit-Profil des Kunden;Identitätsdienst;
 solution: Experience Platform
 title: Tutorials zum Echtzeit-Kundenprofil
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Tutorials für die einzelnen Workflows bereitgestellt.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '794'
 ht-degree: 24%
 
 ---
-
 
 # Konfigurieren von [!DNL Real-time Customer Profile]
 
