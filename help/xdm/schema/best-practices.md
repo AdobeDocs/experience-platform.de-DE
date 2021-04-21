@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;enum;primäre Identität;primäre Identität;XDM-individuelles Profil;Experience Ereignis;XDM Experience Ereignis;XDM ExperienceEvent;experienceEvent;ExperienceEvent;XDM ExperienceEvent;Schema-Design;Best Practices
 solution: Experience Platform
 title: Best Practices für die Datenmodellierung
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
+exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2507'
 ht-degree: 2%
 
 ---
-
 
 # Bewährte Verfahren für die Datenmodellierung
 
