@@ -3,15 +3,15 @@ keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Importieren und Verwenden externer Audiencen
 description: In diesem Lernprogramm erfahren Sie, wie Sie externe Audiencen mit Adobe Experience Platform verwenden.
-topic: Tutorial
+topic-legacy: tutorial
+exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 translation-type: tm+mt
-source-git-commit: 400e4d9007212ed2693d031ae912a4f1cca97c57
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '651'
 ht-degree: 9%
 
 ---
-
 
 # Importieren und Verwenden externer Audiencen
 
