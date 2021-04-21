@@ -2,13 +2,13 @@
 keywords: Experience Platform;Erste Schritte;Kundenhilfe;beliebte Themen;Kundenai-Eingabe;Kundenai-Ausgabe
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Eingabe und Ausgabe in der Kundentechnik
-topic: Erste Schritte
+topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignis, Eingaben und Ausgaben, die von der KUNDENKI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2876'
 ht-degree: 13%
 
 ---
