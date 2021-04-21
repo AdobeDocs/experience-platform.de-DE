@@ -2,16 +2,16 @@
 keywords: Experience Platform;Fehlerbehebung;Data Science Workspace;beliebte Themen
 solution: Experience Platform
 title: Data Science Workspace - Fehlerbehebungshandbuch
-topic: Troubleshooting
+topic-legacy: Troubleshooting
 description: Dieses Dokument beantwortet häufig gestellte Fragen zum Adobe Experience Platform Data Science Workspace.
+exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 translation-type: tm+mt
-source-git-commit: 10ccccf72ff7a2fd726066332b9771dff1929af6
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '925'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
-
 
 # [!DNL Data Science Workspace] Handbuch zur Fehlerbehebung
 
