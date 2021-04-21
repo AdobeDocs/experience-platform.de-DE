@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Zugriff auf Datenquellen;Datenzugriff;Spark-SDK;Python-SDK
 solution: Experience Platform
 title: Lernprogramme zum Datenzugriff
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform ermöglicht es Benutzern, mithilfe der Datenzugriff-API erfasste Datensätze innerhalb der Experience Platform zu ermitteln und darauf zuzugreifen.
+exl-id: c0b6eb7d-8874-4f3a-927e-9ff51e3c0cc9
 translation-type: tm+mt
-source-git-commit: bececfde1df15fd8648d75b937da5e264d60b9a4
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # Lernprogramme zum Datenzugriff
 
