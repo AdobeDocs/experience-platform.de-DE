@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;SQL-Syntax;sql;ctas;CTAS;Tabelle erstellen als Auswahl
 solution: Experience Platform
 title: SQL-Syntax im Abfrage-Dienst
-topic: syntax
+topic-legacy: syntax
 description: Dieses Dokument zeigt die SQL-Syntax, die vom Adobe Experience Platform Abfrage Service unterstützt wird.
+exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 translation-type: tm+mt
-source-git-commit: 78707257c179101b29e68036bf9173d74f01e03a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1981'
 ht-degree: 14%
 
 ---
-
 
 # SQL-Syntax in Abfrage Service
 
