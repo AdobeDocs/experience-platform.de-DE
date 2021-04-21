@@ -2,16 +2,16 @@
 keywords: Experience Platform;Retail-Vertriebsrezept;Data Science Workspace;beliebte Themen;Rezepte;Prä-Build-Rezept
 solution: Experience Platform
 title: Rezept für Einzelhandel
-topic: overview
+topic-legacy: overview
 description: Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufszahlen für alle Läden für einen bestimmten Zeitraum erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 20%
 
 ---
-
 
 # Rezept für Einzelhandel
 
