@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Marketo-Quellanschluss;Marketo-Anschluss;Marketo-Quelle;Marketo
 solution: Experience Platform
 title: Erstellen eines Marketo Engage-Quellconnectors in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie einen Marketo Engage-Quellanschluss in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform zu importieren.
 translation-type: tm+mt
-source-git-commit: 5d4d88f88ab184c679a4cf425283a71983c929f3
+source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1383'
 ht-degree: 4%
 
 ---
