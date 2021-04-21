@@ -2,17 +2,17 @@
 keywords: Experience Platform;Optimieren;Modell;Data Science Workspace;beliebte Themen;Modelleinblicke
 solution: Experience Platform
 title: Optimieren eines Modells mit dem Model Insight Framework
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Das Model Insights Framework bietet Data Scientists Werkzeuge in Data Science Workspace, um auf der Grundlage von Experimenten schnelle und fundierte Entscheidungen für optimale maschinelle Lernmodelle zu treffen.
+exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: f6cfd691ed772339c888ac34fcbd535360baa116
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
 
 ---
-
 
 # Optimieren eines Modells mithilfe des Model Insights-Frameworks
 
