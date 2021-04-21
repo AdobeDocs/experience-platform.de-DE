@@ -2,16 +2,16 @@
 keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen
 solution: Experience Platform
 title: Erste Schritte mit maschinellem Lernen in Echtzeit
-topic: Getting started
+topic-legacy: Getting started
 description: Im folgenden Dokument werden die erforderlichen Schritte zum Erstellen eines Echtzeit-maschinellen Lernmodells in Adobe Experience Platform beschrieben.
+exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 1%
 
 ---
-
 
 # Erste Schritte mit maschinellem Lernen in Echtzeit (Alpha)
 
@@ -52,4 +52,3 @@ Um einen neuen Datensatz für den maschinellen Echtzeitunterricht zu erstellen, 
 ## Nächste Schritte {#next-steps}
 
 Nachdem Sie Ihre Daten für maschinelles Lernen in Echtzeit vorbereitet haben, lesen Sie im Beginn [Benutzerhandbuch für maschinelles Lernen in Echtzeit ](./rtml-authoring-notebook.md) nach, wie Sie ein ONNX-Modell erstellen und in den Store für maschinelles Lernen in Echtzeit hochladen können.
-
