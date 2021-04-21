@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Katalog;API;Objekt ersetzen
 solution: Experience Platform
 title: Katalogobjekt ersetzen
-topic: developer guide
+topic-legacy: developer guide
 description: Sie können den Inhalt eines Katalogobjekts mit einer PUT-Anforderung überschreiben, bei der die gesamte Ressource durch die Anforderungs-Nutzlast ersetzt wird.
+exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 10%
 
 ---
-
 
 # Katalogobjekt ersetzen
 
