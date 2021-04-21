@@ -2,15 +2,15 @@
 keywords: Experience Platform;Benutzeroberfläche;Benutzeroberfläche;Dashboards;Dashboard;Profil;Segmente;Ziele;Lizenzverwendung
 title: Verwenden der Widget-Bibliothek zum Hinzufügen und Erstellen von Dashboard-Widgets
 description: 'Dieses Handbuch enthält schrittweise Anleitungen zum Hinzufügen von Standard-Widgets und zum Erstellen benutzerdefinierter Widgets zur Visualisierung von Dashboard-Daten in Adobe Experience Platform. '
-topic: guide
+topic-legacy: guide
+exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 translation-type: tm+mt
-source-git-commit: 27444a0106eacbd69149168d7439773ebbb26119
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1029'
 ht-degree: 1%
 
 ---
-
 
 # (Beta) Widget-Bibliothek {#widget-library}
 
