@@ -2,16 +2,16 @@
 keywords: Experience Platform;Profil;Segment;Segmente;Segmentierung;Benutzeroberfläche;UI;Anpassen;SegmentDashboard;Dashboard
 title: Dashboard "Segmente"
 description: 'Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard zur Ansicht wichtiger Metriken zu Segmenten, die von Ihrem Unternehmen erstellt und gepflegt werden. '
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 4a45bc3a-be5e-42b5-abd1-f0fb5795f5f4
 translation-type: tm+mt
-source-git-commit: 77c94fb4654f7dcb0eb4ba9af6972be439eca55e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '148'
 ht-degree: 6%
 
 ---
-
 
 # (Beta) [!UICONTROL Segmente] Dashboard {#segment-dashboard}
 
