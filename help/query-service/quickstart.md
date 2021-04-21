@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfrage
 solution: Experience Platform
 title: Schnellstartanleitung für den Adobe Experience Platform Abfrage-Dienst
-topic: quickstart
+topic-legacy: quickstart
 description: Schnellstartanleitung für den Adobe Experience Platform Abfrage Service.
+exl-id: 77941755-8292-43ee-8ae3-09065f39ace7
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 42%
 
 ---
-
 
 # Schnellstartanleitung
 
@@ -21,4 +21,3 @@ ht-degree: 42%
 
 
 [!DNL Query Service] bietet außerdem eine Möglichkeit, externe Tools zu verknüpfen, um Abfragen auszuführen. Anweisungen zum Verbinden eines Tools wie eines Business Intelligence-Tools oder einer Befehlszeilenschnittstelle finden Sie unter [Verbinden eines Tools](clients/overview.md).
-
