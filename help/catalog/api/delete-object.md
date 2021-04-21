@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Löschen eines Objekts;Katalogdienst;API
 solution: Experience Platform
 title: Löschen eines Objekts in der API
-topic: developer guide
+topic-legacy: developer guide
 description: Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anfrage angeben.
+exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 translation-type: tm+mt
-source-git-commit: b395535cbe7e4030606ee2808eb173998f5c32e0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 47%
 
 ---
-
 
 # Löschen eines Objekts in der API
 
