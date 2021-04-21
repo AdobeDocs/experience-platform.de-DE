@@ -2,13 +2,13 @@
 keywords: Experience Platform;Benutzerhandbuch;Kundenhilfe;beliebte Themen;Instanz konfigurieren;Instanz erstellen;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Konfigurieren einer Customer AI-Instanz
-topic: Instanzerstellung
+topic-legacy: Instance creation
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 translation-type: tm+mt
-source-git-commit: 2ef2a6431865e8ffdc2abd6cf527249e8b5ca4d0
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1302'
 ht-degree: 34%
 
 ---
