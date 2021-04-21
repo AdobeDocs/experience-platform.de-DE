@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Zugriffskontrolle-Berechtigungen;Zugriffskontrolle-Ressourcentypen;Zugriffskontrolle-API
 solution: Experience Platform
 title: Referenz-API-Endpunkt
-topic: developer guide
+topic-legacy: developer guide
 description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Sie können die Namen aller Berechtigungen und Ressourcentypen Liste haben, indem Sie eine GET an den Endpunkt /acl/reference in der Zugriffskontrolle-API anfordern. Diese Namen können dann in API-Aufrufen verwendet werden, um effektive Richtlinien für den aktuellen Anwender anzuzeigen.
+exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 51%
 
 ---
-
 
 # Referenz-Endpunkt
 
