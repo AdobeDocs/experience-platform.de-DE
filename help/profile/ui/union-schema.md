@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Einheitliches Profil;Einheitliches Profil;Einheitliches Profil;RTCP;Profil aktivieren;Profil aktivieren;Vereinigung Schema;VEREINIGUNG PROFIL;Vereinigung Profil
 title: Handbuch zur Benutzeroberfläche von Vereinigung Schema
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: In der Adobe Experience Platform-Benutzeroberfläche können Sie ganz einfach jedes Schema der Vereinigung innerhalb Ihres Unternehmens Ansicht und Vorschau der Felder, Identitäten, Beziehungen und beitragenden Schema für eine bestimmte Klasse durchführen. In diesem Handbuch finden Sie detaillierte Informationen zur Ansicht und Erforschung von Schemas der Vereinigung mithilfe der Plattform-Benutzeroberfläche.
+exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
 translation-type: tm+mt
-source-git-commit: e6ecc5dac1d09c7906aa7c7e01139aa194ed662b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1044'
 ht-degree: 1%
 
 ---
-
 
 # [!UICONTROL Vereinigung ] schemaUI-Handbuch
 
