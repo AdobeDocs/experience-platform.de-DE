@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Konfigurieren eines Datasets zur Erfassung von Einwilligungs- und Vorgabedaten
-topic: Erste Schritte
+topic-legacy: getting started
 description: Erfahren Sie, wie Sie ein Experience Data Model (XDM)-Schema und einen Dataset konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
+exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 980bff169659d3ffc92a0678f8a0b153b3189906
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1476'
 ht-degree: 3%
 
 ---
-
 
 # Dataset zur Erfassung von Einwilligungs- und Präferenzdaten konfigurieren
 
