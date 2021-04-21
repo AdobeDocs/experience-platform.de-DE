@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
 title: Richtlinien-API-Endpunkt
-topic: developer guide
+topic-legacy: developer guide
 description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt /policies wird für alle API-Aufrufe verwendet, die sich auf das Anzeigen, Erstellen, Aktualisieren oder Löschen von Datenverwendungsrichtlinien beziehen.
+exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 9%
 
 ---
-
 
 # Endpunkt der Richtlinien
 
