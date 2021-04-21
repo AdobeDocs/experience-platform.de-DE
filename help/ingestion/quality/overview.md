@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenqualität;Qualität;Qualität;Unterstützte Validierung;Validierung;Unterstützte Validierung;
 solution: Experience Platform
 title: Datenqualität
-topic: overview
+topic-legacy: overview
 description: Das folgende Dokument enthält eine Zusammenfassung der unterstützten Prüf- und Prüfverhaltensweisen für die Batch- und Streaming-Erfassung in Adobe Experience Platform.
+exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 76%
 
 ---
-
 
 # Datenqualität in Adobe Experience Platform
 
