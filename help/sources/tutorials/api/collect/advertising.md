@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Werbung;Google Adwords;Werbung
 solution: Experience Platform
 title: Erfassen von Werbedaten mithilfe von Source Connectors und APIs
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und zum Integrieren dieser Daten in die Plattform mithilfe von Quellschnittstellen und der Flow Service API beschrieben.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1551'
 ht-degree: 20%
 
 ---
