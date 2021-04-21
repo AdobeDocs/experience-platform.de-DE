@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfrage;Abfrage-Editor;Abfrage-Editor;Abfrage-Editor;
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche des Abfrage Service
-topic: guide
+topic-legacy: guide
 description: Der Adobe Experience Platform Abfrage Service bietet eine Benutzeroberfläche, die zum Schreiben und Ausführen von Abfragen, Ansichten, die zuvor ausgeführt wurden, und zum Zugriff auf Abfragen verwendet werden kann, die von Benutzern in Ihrem IMS-Unternehmen gespeichert wurden.
+exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Query Service] guide
 
