@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Zeitplan;DULE
 solution: Experience Platform
 title: Übersicht über Datenverwendungsrichtlinien
-topic: policies
+topic-legacy: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
+exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1010'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
-
 
 # Datennutzungsrichtlinien – Übersicht
 
@@ -81,7 +81,7 @@ Die folgende Tabelle beschreibt die wichtigsten Marketingaktionen, die standardm
 | Analytics  | Eine Aktion, die Daten zu Analysezwecken verwendet, z. B. zur Messung, Analyse und zum Berichte der Nutzung der Sites oder Apps Ihres Unternehmens durch Kunden. |
 | Kombination mit PII | Eine Aktion, die alle persönlichen identifizierbaren Informationen (PII) mit anonymen Daten kombiniert. Verträge über Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, beinhalten häufig spezifische vertragliche Verbote der Verwendung solcher Daten mit direkt identifizierbaren Daten. |
 | Site-übergreifendes Targeting | Eine Aktion, die Daten für das Site-übergreifende Anzeigen-Targeting verwendet. Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als Site-übergreifende Daten bezeichnet. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen. |
-| Datenwissenschaften | Eine Aktion, die Daten für Workflows verwendet. Einige Verträge beinhalten explizite Verbote der Datenverwendung für die Datenwissenschaft. Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (AI), maschinelles Lernen (ML) oder Modellierung verbieten. |
+| Data Science | Eine Aktion, die Daten für Workflows verwendet. Einige Verträge beinhalten explizite Verbote der Datenverwendung für die Datenwissenschaft. Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (AI), maschinelles Lernen (ML) oder Modellierung verbieten. |
 | E-Mail-Targeting | Eine Aktion, die Daten in E-Mail-Targeting-Kampagnen verwendet. |
 | Exportieren in Dritte | Eine Aktion, die Daten an Prozessoren und Entitäten exportiert, die keine direkten Beziehungen zu Kunden haben. Viele Datenanbieter haben Vertragsbedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft eingeschränkt. |
 | Onsite-Werbung | Eine Aktion, die Daten für Onsite-Anzeigen verwendet, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen. |
