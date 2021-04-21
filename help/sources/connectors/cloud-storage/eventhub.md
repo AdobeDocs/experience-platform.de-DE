@@ -6,18 +6,15 @@ topic-legacy: overview
 description: Erfahren Sie, wie Sie Azurblase-Ereignis-Hubs mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6dac267be93241bffb4eb5092a6e8da5093c63a6
 workflow-type: tm+mt
-source-wordcount: '249'
+source-wordcount: '226'
 ht-degree: 1%
 
 ---
 
-# (Beta) Azurblauer Ereignis-Hubs-Anschluss
 
->[!NOTE]
->
->Der Azurblauer Ereignis Hubs Stecker ist in Beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../home.md#terms-and-conditions).
+# [!DNL Azure Event Hubs] connector
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform] übertragen.
 
