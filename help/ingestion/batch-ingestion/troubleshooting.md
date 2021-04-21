@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;erfasste Daten;Fehlerbehebung;FAQ;Einstieg;Stapelverarbeitung;Stapelverarbeitung; Stapelverarbeitung;
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei der Batch-Ingestion
-topic: troubleshooting
-description: 'Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform Batch Data Ingestion-APIs. '
+topic-legacy: troubleshooting
+description: Diese Dokumentation hilft bei der Beantwortung häufig gestellter Fragen zu Adobe Experience Platform Batch Data Ingestion-APIs.
+exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 translation-type: tm+mt
-source-git-commit: 089a4d517476b614521d1db4718966e3ebb13064
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1416'
 ht-degree: 87%
 
 ---
-
 
 # Handbuch zur Fehlerbehebung bei der Batch-Erfassung
 
