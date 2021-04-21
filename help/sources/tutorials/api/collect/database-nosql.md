@@ -2,14 +2,14 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datenbankdatenbank;Drittanbieterdatenbank
 solution: Experience Platform
 title: Erfassen von Daten aus einer Datenbank mithilfe von Source Connectors und APIs
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Datenbank und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1649'
 ht-degree: 19%
 
 ---
