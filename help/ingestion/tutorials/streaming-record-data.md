@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Streaming-Erfassung;Erfassung;Datensatzdaten;Stream-Datensatzdaten;
 solution: Experience Platform
 title: Streamen von Datensatzdaten mit Streaming-Ingestion-APIs
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1164'
 ht-degree: 62%
 
 ---
