@@ -2,16 +2,16 @@
 keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Motoren;sensei-API für maschinelles Lernen
 solution: Experience Platform
 title: Engines API-Endpunkt
-topic: Developer guide
+topic-legacy: Developer guide
 description: Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten Algorithmen für maschinelles Lernen, die bestimmte Probleme lösen, Pipelines zur Funktionsentwicklung aufweisen oder beides.
+exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 69%
 
 ---
-
 
 # Engines-Endpunkt
 
