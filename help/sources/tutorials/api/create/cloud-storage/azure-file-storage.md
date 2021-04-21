@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblase;Datenspeicherung der Azurblase-Datei;Datenspeicherung der  von Dateien
 solution: Experience Platform
 title: Erstellen einer Azurblase-Datenspeicherung-Quellverbindung mit der Flow-Dienst-API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie die Datenspeicherung von Azurblase-Dateien mit der Flow-Dienst-API mit Adobe Experience Platform verbinden.
+exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 25%
 
 ---
-
 
 # Erstellen einer [!DNL Azure File Storage]-Quellverbindung mit der [!DNL Flow Service]-API
 
@@ -48,7 +48,7 @@ Weitere Informationen zu den ersten Schritten finden Sie in [diesem Dokument zur
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
