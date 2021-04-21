@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Adobe Experience Platform;Benutzerhandbuch;Handbuch;Plattform-Handbuch;Einführung in die Plattform;Dashboard;
 solution: Experience Platform
 title: Übersicht über die Benutzeroberfläche der Experience Platform
-topic: ui guide
-description: 'Adobe Experience Platform '
+topic-legacy: ui guide
+description: Adobe Experience Platform
+exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 translation-type: tm+mt
-source-git-commit: 5575d5e45bddcc007dcf78720cd7a7e20475f78c
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1755'
 ht-degree: 3%
 
 ---
-
 
 # Adobe Experience Platform UI-Handbuch
 
@@ -133,7 +133,7 @@ Im Abschnitt **[!UICONTROL Richtlinien]** können Sie Datenverwendungsrichtlinie
 
 Im Abschnitt **[!UICONTROL Anforderungen]** können Sie Datenschutzanforderungen erstellen und verwalten. Bitte beachten Sie, dass Sie auf die Zulassungsliste gesetzt werden müssen, um Zugriff auf die Benutzeroberfläche des Privacy Service zu haben. Weitere Informationen zur Verwendung des Abschnitts &quot;Anforderungen&quot;finden Sie im [Privacy Service-Benutzerhandbuch](../privacy-service/ui/user-guide.md). Weitere Informationen zu Privacy Service finden Sie unter [Übersicht über Privacy Service](../privacy-service/home.md).
 
-### [!UICONTROL Datenwissenschaften]
+### [!UICONTROL Data Science]
 
 Der Bereich **[!UICONTROL Notebooks]** bietet Zugriff auf JupyterLab, eine interaktive Entwicklungs-Umgebung, mit der Sie Ihre Daten untersuchen, analysieren und modellieren können. Weitere Informationen zur Verwendung des Bereichs &quot;Notebooks&quot;finden Sie im [JupyterLab Benutzerhandbuch](../data-science-workspace/jupyterlab/overview.md). Weitere Informationen zum Data Science Workspace finden Sie im [Überblick über den Data Science Workspace](../data-science-workspace/home.md)
 
@@ -141,7 +141,7 @@ Im Abschnitt **[!UICONTROL Modelle]** können Sie maschinelles Lernen und künst
 
 Im Abschnitt **[!UICONTROL Dienste]** können Sie Ihre veröffentlichten Modelle für geplante Schulungen und Bewertungen verwalten oder die Intelligent Services der Adobe nutzen, eine Reihe von AI-Diensten, die eine personalisierte Kundenerfahrung in Echtzeit bereitstellen. Weitere Informationen zum Abschnitt &quot;Dienste&quot;finden Sie unter [Veröffentlichen eines Modells als Service-Lernprogramm](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
-### [!UICONTROL Daten-Management]
+### [!UICONTROL Datenmanagement]
 
 Im Abschnitt **[!UICONTROL Schema]** können Sie Erlebnisdatenmodell-Schema (XDM) erstellen und verwalten. Weitere Informationen zu Schemas finden Sie im Tutorial [Erstellen eines Schemas](../xdm/tutorials/create-schema-ui.md). Weitere Informationen zu XDM finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
 
@@ -153,7 +153,7 @@ Im Abschnitt **[!UICONTROL Überwachung]** können Sie die Batch- und Streaming-
 
 ### [!UICONTROL Entscheidungsfindung]
 
-Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdienst. Damit können Sie Experience Platform nutzen, um Kunden zur richtigen Zeit und an allen Berührungspunkten das optimale Angebot und Erlebnis zu unterbreiten. Weitere Informationen zu Offer Decisioning, einschließlich der Arbeit mit [!UICONTROL Angeboten] und [!UICONTROL Aktivitäten] finden Sie in der [Offer Decisioning-Dokumentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdienst. Damit können Sie Experience Platform nutzen, um Kunden zur richtigen Zeit und an allen Berührungspunkten das optimale Angebot und Erlebnis zu unterbreiten. Weitere Informationen zum Offer decisioning, einschließlich der Arbeit mit [!UICONTROL Angeboten] und [!UICONTROL Aktivitäten] finden Sie in der [Offer decisioning-Dokumentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
 
 ### [!UICONTROL Administration]
 
