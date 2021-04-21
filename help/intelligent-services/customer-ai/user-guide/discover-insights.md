@@ -2,13 +2,13 @@
 keywords: Experience Platform;Einblicke;Kundenberatung;beliebte Themen;Einblicke in die Kundenwerbung
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Discover Insights mit Kunden-API
-topic: Einblicke entdecken
+topic-legacy: Discovering insights
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Dienstinstanzinformationen in der Benutzeroberfläche der Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 translation-type: tm+mt
-source-git-commit: ff953cf0aed2b9122b78126a87625e88f1ca4506
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1632'
 ht-degree: 10%
 
 ---
