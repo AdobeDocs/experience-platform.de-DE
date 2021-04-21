@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Bezeichnungen-API-Endpunkt
-topic: developer guide
+topic-legacy: developer guide
 description: Erfahren Sie, wie Sie mit der Policy Service API Datenverwendungsbeschriftungen in Experience Platform verwalten.
+exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 6%
 
 ---
-
 
 # Beschriftungen-Endpunkt
 
