@@ -2,13 +2,13 @@
 keywords: Experience Platform;Home;beliebte Themen;Kantensegmentierung;Segmentierung;Segmentierungsdienst;Segmentierungsdienst;ui-Handbuch;Streaming-Edge
 solution: Experience Platform
 title: Handbuch zur Benutzeroberfläche für die Edge-Segmentierung
-topic: Handbuch
+topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 36169a42c7f6a73ca9cc165cd338d6a1cf245bfc
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '353'
 ht-degree: 5%
 
 ---
