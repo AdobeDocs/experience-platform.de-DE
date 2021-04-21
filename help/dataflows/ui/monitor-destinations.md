@@ -3,16 +3,16 @@ keywords: Experience Platform;Home;beliebte Themen;Monitorkonten;Datenflüsse ü
 description: Mit Zielen können Sie Ihre Daten von Adobe Experience Platform an unzählige externe Partner aktivieren. Dieses Lernprogramm enthält Anweisungen dazu, wie Sie mithilfe der Benutzeroberfläche "Experience Platform"Datenflüsse für Ihre Ziele überwachen können.
 solution: Experience Platform
 title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 translation-type: tm+mt
-source-git-commit: f8186e467dc982003c6feb01886ed16d23572955
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 4%
 
 ---
-
 
 # Überwachen von Datenflüssen auf Ziele in der Benutzeroberfläche
 
