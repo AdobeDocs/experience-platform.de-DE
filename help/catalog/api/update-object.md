@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Katalog;API;Objekt aktualisieren
 solution: Experience Platform
 title: Katalogobjekt aktualisieren
-topic: developer guide
-description: 'Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen. Dieses Dokument umfasst die Verwendung von Feldern und die Verwendung der JSON-Patch-Notation zum PATCH von Katalogobjekten. '
+topic-legacy: developer guide
+description: Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen. Dieses Dokument umfasst die Verwendung von Feldern und die Verwendung der JSON-Patch-Notation zum PATCH von Katalogobjekten.
+exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 81%
 
 ---
-
 
 # Katalogobjekt aktualisieren
 
