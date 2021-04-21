@@ -2,17 +2,17 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Microsoft SQL Server;SQL Server;SQL-Server
 solution: Experience Platform
 title: Erstellen einer Microsoft SQL Server-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Microsoft SQL Server-Quellverbindung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 9%
 
 ---
-
 
 # Erstellen einer [!DNL Microsoft SQL Server]-Quellverbindung in der Benutzeroberfläche
 
