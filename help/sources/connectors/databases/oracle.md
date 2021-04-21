@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Oracle;oracle
 solution: Experience Platform
-title: Übersicht über oracle Source Connector
-topic: overview
-description: Erfahren Sie, wie Sie Oracle mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+title: Übersicht über den oracle Source Connector
+topic-legacy: overview
+description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle und Adobe Experience Platform herstellen.
+exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) [!DNL Oracle] Connector
 
