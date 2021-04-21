@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Ausführen geplanter Abfragen;Ausführen geplanter Abfragen;Abfrage-Dienst;Geplante Abfragen;Geplante Abfrage
 solution: Experience Platform
 title: API-Endpunkt für terminierte Abfrage ausgeführt
-topic: runs for scheduled queries
+topic-legacy: runs for scheduled queries
 description: Die folgenden Abschnitte führen Sie durch die verschiedenen API-Aufrufe, die Sie für die Ausführung geplanter Abfragen mit der Abfrage Service API durchführen können.
+exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
 ht-degree: 88%
 
 ---
-
 
 # Endpunkt der geplanten Abfrage wird ausgeführt
 
