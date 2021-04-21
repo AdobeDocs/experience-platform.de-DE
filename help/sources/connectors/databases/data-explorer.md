@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Explorer;Azure Data Explorer
 solution: Experience Platform
 title: Übersicht über den Avocent Data Explorer Source Connector
-topic: Übersicht
+topic-legacy: overview
 description: Erfahren Sie, wie Sie Azurblase-Data Explorer mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
 translation-type: tm+mt
-source-git-commit: 0fb97fcf5d3f8230ff86906aeef245e4a7f44f30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '270'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
-
 
 # (Beta) [!DNL Azure Data Explorer] Connector
 
