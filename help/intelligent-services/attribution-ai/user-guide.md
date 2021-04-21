@@ -2,13 +2,13 @@
 keywords: Experience Platform;Benutzerhandbuch;Zuordnungs-Hilfe;beliebte Themen;Region
 solution: Experience Platform, Intelligent Services
 title: Attribution AI UI Guide
-topic: 'Benutzerhandbuch '
+topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AIS in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 translation-type: tm+mt
-source-git-commit: 013f8d99fc394477177fdbf7eb9dd9b8ce94b88f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1765'
 ht-degree: 6%
 
 ---
