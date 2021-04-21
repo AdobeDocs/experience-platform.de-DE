@@ -2,13 +2,13 @@
 keywords: Experience Platform;Erste Schritte;Attribution-ai;beliebte Themen;Attribution-ai-Eingabe;Attribution-ai-Ausgabe;
 solution: Experience Platform, Intelligent Services
 title: Eingabe und Ausgabe in Attribution AI
-topic: Eingabe- und Ausgangsdaten für Attribution AI
+topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 translation-type: tm+mt
-source-git-commit: 35b3994287d4f556fab8ee75c3bf242ff2690aef
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2182'
 ht-degree: 4%
 
 ---
