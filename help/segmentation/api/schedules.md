@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Zeitpläne;API;API;
 solution: Experience Platform
 title: Zeitplan-API-Endpunkt
-topic: developer guide
+topic-legacy: developer guide
 description: Zeitpläne sind ein Tool, mit dem Stapelsegmentierungsaufträge einmal täglich automatisch ausgeführt werden können.
+exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1203'
 ht-degree: 49%
 
 ---
-
 
 # Endpunkt des Zeitplans
 
