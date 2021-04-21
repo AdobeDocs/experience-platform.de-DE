@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;MySQL;mysql
 solution: Experience Platform
 title: Erstellen einer MySQL-Quellverbindung mit der Flow Service API
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und MySQL herstellen.
+exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 translation-type: tm+mt
-source-git-commit: 8851e11e956b393e56714d4d48870b7f68947c18
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '563'
 ht-degree: 26%
 
 ---
-
 
 # Erstellen einer MySQL-Quellverbindung mit der [!DNL Flow Service]-API
 
@@ -42,7 +42,7 @@ Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [d
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
