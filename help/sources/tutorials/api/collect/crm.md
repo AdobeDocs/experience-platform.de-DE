@@ -2,15 +2,15 @@
 keywords: Experience Platform;Home;beliebte Themen;crm;CRM
 solution: Experience Platform
 title: Erfassen von CRM-Daten über Source Connectors und APIs
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einem CRM-System eines Drittanbieters und zum Übertragen dieser Daten auf die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1592'
-ht-degree: 20%
+source-wordcount: '1590'
+ht-degree: 19%
 
 ---
 
