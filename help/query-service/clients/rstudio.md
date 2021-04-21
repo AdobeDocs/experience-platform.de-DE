@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;RStudio;Studio;Verbindung mit Abfrage-Dienst;
 solution: Experience Platform
 title: Verbinden von RStudio mit dem Abfrage-Dienst
-topic: connect
+topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
+exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 translation-type: tm+mt
-source-git-commit: f1b2fd7efd43f317a85c831cd64c09be29688f7a
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '368'
+source-wordcount: '367'
 ht-degree: 18%
 
 ---
-
 
 # Verbinden Sie [!DNL RStudio] mit dem Abfrage-Dienst
 
