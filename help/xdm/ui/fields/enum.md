@@ -3,15 +3,15 @@ keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Erle
 solution: Experience Platform
 title: Enum-Felder in der Benutzeroberfläche definieren
 description: Erfahren Sie, wie Sie ein Enum-Feld in der Benutzeroberfläche "Experience Platform"definieren.
-topic: user guide
+topic-legacy: user guide
+exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '251'
 ht-degree: 0%
 
 ---
-
 
 # Definieren von Enum-Feldern in der Benutzeroberfläche
 
