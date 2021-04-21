@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;FTP;FTP
 solution: Experience Platform
 title: Erstellen einer FTP-Quellverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine FTP-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 10%
 
 ---
-
 
 # Erstellen einer FTP-Quellverbindung in der Benutzeroberfläche
 
