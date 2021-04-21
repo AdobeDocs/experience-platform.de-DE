@@ -3,13 +3,13 @@ keywords: Experience Platform;Startseite;beliebte Themen;Aktualisieren von Daten
 description: In diesem Lernprogramm werden die Schritte zum Aktualisieren eines Datenflusszeitplans beschrieben, einschließlich der Erfassungsfrequenz und der Intervallrate, die mithilfe des Sources-Arbeitsbereichs vorgenommen werden.
 solution: Experience Platform
 title: Aktualisieren eines Quellverbindungsdatafloms in der Benutzeroberfläche
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 translation-type: tm+mt
-source-git-commit: 3a36996b43760bc9161b8d4750a1121e9ada8d30
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '744'
 ht-degree: 7%
 
 ---
