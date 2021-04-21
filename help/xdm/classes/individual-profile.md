@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Identitätskarte;Identitätskarte;Schema-Design;Map;Vereinigung Schema;Vereinigung
 solution: Experience Platform
 title: XDM Individuelle Profil-Klasse
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die XDM Individual Profil-Klasse.
+exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
 
 ---
-
 
 # [!DNL XDM Individual Profile] class
 
