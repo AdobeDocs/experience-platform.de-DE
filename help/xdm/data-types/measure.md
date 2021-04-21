@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schema;Maß;Datentyp;Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp messen
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den Datentyp "Measure Experience Data Model (XDM)".
+exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
 translation-type: tm+mt
-source-git-commit: d282ea5526a05b28c6a82470eabf23e44d1fb420
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 5%
 
 ---
-
 
 #  Messdatentyp
 
