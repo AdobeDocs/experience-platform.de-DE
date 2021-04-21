@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Katalog;Objektsuche;API
 solution: Experience Platform
 title: Nachschlagen eines Katalogobjekts
-topic: developer guide
-description: 'Wenn Sie die eindeutige Kennung eines bestimmten Catalog-Objekts kennen, können Sie eine GET-Anfrage ausführen, um Details zu diesem Objekt anzuzeigen. '
+topic-legacy: developer guide
+description: Wenn Sie die eindeutige Kennung eines bestimmten Catalog-Objekts kennen, können Sie eine GET-Anfrage ausführen, um Details zu diesem Objekt anzuzeigen.
+exl-id: fd6fbe72-0108-4be3-a065-c753e7a19d24
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 71%
 
 ---
-
 
 # Nachschlagen eines Katalogobjekts
 
