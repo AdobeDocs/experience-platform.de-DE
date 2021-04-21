@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;CCPA;ccpa;PDPA;PDPA;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
 solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
+exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 3%
 
 ---
-
 
 # Terminologie der Datenschutzbestimmungen
 
@@ -25,7 +25,7 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 **Biometrische** DatenPersonenbezogene Daten, die sich auf die physischen, physiologischen oder verhaltensbezogenen Merkmale einer Person beziehen und deren eindeutige Identifizierung ermöglichen.
 
-## C 
+## C
 
 **CCPA**: Die  [!DNL California Consumer Privacy Act] (CCPA) gibt kalifornischen Einwohnern mehr Kontrolle über die persönlichen Daten, die Unternehmen von da an sammeln. Das Gesetz sieht mehrere neue Rechte für Verbraucher vor, darunter das Recht auf Zugang und die von ihnen gesammelten personenbezogenen Daten sowie das Recht auf Opt-out des Verkaufs ihrer personenbezogenen Daten an Dritte.
 
