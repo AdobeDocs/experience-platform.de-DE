@@ -2,17 +2,17 @@
 keywords: Experience Platform;Home;beliebte Themen;Zahlungsverbindung
 solution: Experience Platform
 title: Konfigurieren eines Datenflusses für eine Zahlungsquellenverbindung in der Benutzeroberfläche
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Ein Datennachweis ist eine geplante Aufgabe, mit der Daten aus einer Quelle abgerufen und in einen Adobe Experience Platform-Datensatz aufgenommen werden. Dieses Lernprogramm enthält Schritte zum Konfigurieren eines neuen Datenflusses mit Ihrem Zahlungskonto.
+exl-id: 7355435b-c038-4310-b04a-8ac6b6723b9b
 translation-type: tm+mt
-source-git-commit: c7fb0d50761fa53c1fdf4dd70a63c62f2dcf6c85
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1463'
 ht-degree: 3%
 
 ---
-
 
 # Konfigurieren eines Datenflusses für eine Zahlungsverbindung in der Benutzeroberfläche
 
