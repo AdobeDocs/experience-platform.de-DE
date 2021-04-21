@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Datentyp für allgemeine Personalisierungseinstellungen
-topic: Übersicht
+topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp des Generischen Personalisierungsvoreinstellungsfelds.
+exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 translation-type: tm+mt
-source-git-commit: 9ca0978cdf42926303d622a4d536ac48bca32e70
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '478'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL Allgemeiner Personalisierungsvoreinstellungstyp ] des Felds
 
