@@ -2,14 +2,14 @@
 keywords: Experience Platform;Home;beliebte Themen;Cloud-Datenspeicherung-Daten
 solution: Experience Platform
 title: Erfassen von Cloud-Datenspeicherung-Daten mithilfe von Source Connectors und APIs
-topic: Übersicht
+topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Cloud-Datenspeicherung eines Drittanbieters und zum Übertragen dieser Daten in die Plattform mithilfe von Quellschnittstellen und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1804'
 ht-degree: 17%
 
 ---
