@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Umgebung;Datentyp;Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp der Umgebung
-topic: overview
+topic-legacy: overview
 description: Dieses Dokument gibt einen Überblick über den XDM-Datentyp der Umgebung.
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '464'
 ht-degree: 14%
 
 ---
-
 
 # [!UICONTROL Typ ] Environmentdata
 
