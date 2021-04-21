@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Verarbeitung von Genehmigungen in Adobe Experience Platform
-topic: Erste Schritte
+topic-legacy: getting started
 description: Erfahren Sie, wie Sie mit dem Adobe 2.0-Standard Kundenbestätigungssignale in Adobe Experience Platform verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: a0f585e4aaeecb968a9fc9f408630946e1c30b2b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Im Folgenden wird beschrieben, wie die Daten zur Zustimmung verarbeitet werden, 
 1. Ein Kunde gibt seine Einwilligung in die Datenerfassung durch einen Dialog auf Ihrer Website.
 1. Bei jedem Laden der Seite (oder wenn Ihr CMP eine Änderung der Voreinstellungen für die Zustimmung erkennt) ordnet ein benutzerdefiniertes Skript auf Ihrer Site die aktuellen Voreinstellungen einem Standard-XDM-Objekt zu. Dieses Objekt wird dann an den Befehl Platform Web SDK `setConsent` übergeben.
 1. Wenn `setConsent` aufgerufen wird, prüft das Plattform-Web-SDK, ob sich die Werte für die Zustimmung von denen unterscheiden, die es zuletzt erhalten hat. Wenn die Werte unterschiedlich sind (oder kein vorheriger Wert vorliegt), werden die strukturierten Daten zur Zustimmung/Voreinstellung an Adobe Experience Platform gesendet.
-1. Die Daten zur Einwilligung/Voreinstellung werden in einen [!DNL Profile]-aktivierten Dataset eingeschlossen, dessen Schema Einwilligungs-/Voreinstellungsfelder enthält.
+1. Die Daten zur Einwilligung/Voreinstellung werden in einen [!DNL Profile]-aktivierten Dataset eingeschlossen, dessen Schema die Felder für die Einwilligung/Voreinstellung enthält.
 
 Zusätzlich zu den SDK-Befehlen, die durch CMP-Zugriffs-/Änderungshaken ausgelöst werden, können Genehmigungsdaten auch über kundengenerierte XDM-Daten in die Experience Platform fließen, die direkt in ein [!DNL Profile]-aktiviertes Dataset hochgeladen werden.
 
