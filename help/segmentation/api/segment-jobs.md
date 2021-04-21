@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Segmentaufträge;Segmentauftrag;API;API;
 solution: Experience Platform
 title: API-Endpunkt für Segmentaufträge
-topic: developer guide
+topic-legacy: developer guide
 description: Mit dem Segmentauftragsendpunkt in der Adobe Experience Platform Segmentation Service API können Sie Segmentaufträge programmgesteuert für Ihr Unternehmen verwalten.
+exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 translation-type: tm+mt
-source-git-commit: 698639d6c2f7897f0eb4cce2a1f265a0f7bb57c9
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 32%
 
 ---
-
 
 # Endpunkt für Segmentaufträge
 
