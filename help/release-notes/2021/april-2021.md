@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 translation-type: tm+mt
-source-git-commit: 0c9b60fe0777286819841c520a41007634622578
+source-git-commit: 1072b95469fac19a2e03ca4eacaae05250e11be8
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 37%
+source-wordcount: '868'
+ht-degree: 36%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 37%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -36,6 +37,14 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 | Unterstützung für Streaming-Erfassung | Sie können jetzt beim Erstellen einer Streaming-Quellverbindung die Funktion &quot;Datenvorgabe&quot;verwenden. Weitere Informationen finden Sie im Tutorial zum Erstellen einer Streaming-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/streaming/http.md).[ |
 
 Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Experience Data Model (XDM) ist eine Open-Source-Spezifikation, die die Leistung digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, um Einblicke schneller und besser integriert zu liefern. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Empfehlungen des Schemas durch die Branche | Wenn Sie Klassen und Mixins in der Benutzeroberfläche des Schema-Editors auswählen, können Sie einen neuen Filter verwenden, um empfohlene Standardkomponenten basierend auf Ihrer Branche Ansicht. Weitere Informationen dazu, wie sich diese Komponenten für verschiedene Anwendungsfälle in der Industrie zueinander verhalten, finden Sie in der Dokumentation zu [Industrie-Datenmodellen](https://www.adobe.com/go/xdm-industry-erds-en). |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
