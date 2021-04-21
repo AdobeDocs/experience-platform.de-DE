@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;ECID;ecid
 solution: Experience Platform
 title: Identitätsdaten für Datenschutzanfragen
-topic: overview
+topic-legacy: overview
 description: In diesem Dokument finden Sie allgemeine Anweisungen zur Konfiguration Ihrer Datenvorgänge und zur Nutzung der Adobe-Technologien, um die entsprechenden Identitätsinformationen für Datenschutzanfragen von Kunden effektiv abzurufen.
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 44%
 
 ---
-
 
 # Identitätsdaten für Datenschutzanfragen
 
