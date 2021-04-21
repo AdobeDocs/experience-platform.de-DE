@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen;Oracle-Objekt-Datenspeicherung;oracle-Objekt-Datenspeicherung
 solution: Experience Platform
-title: Erstellen einer Oracle Object Datenspeicherung Source Connection in der Benutzeroberfläche
-topic: Übersicht
+title: Erstellen einer Oracle-Objekt-Datenspeicherung-Quellverbindung in der Benutzeroberfläche
+topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie eine Quellverbindung zur Oracle Object Datenspeicherung mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
+description: Erfahren Sie, wie Sie eine Oracle Object Datenspeicherung-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
+exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
 translation-type: tm+mt
-source-git-commit: c1453a9f0be42f834d35af871051324df8dadf80
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '462'
 ht-degree: 10%
 
 ---
-
 
 # Erstellen einer [!DNL Oracle Object Storage]-Quellverbindung in der Benutzeroberfläche
 
@@ -37,7 +37,7 @@ Um eine Verbindung zu [!DNL Oracle Object Storage] herzustellen, müssen Sie Wer
 | `bucketName` | Der zulässige Behältername ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. Der Behältername muss zwischen drei und 63 Zeichen lang sein, er muss entweder mit einem Buchstaben oder einer Zahl beginnen und enden und darf nur Kleinbuchstaben, Zahlen oder Bindestriche (`-`) enthalten. Der Behältername kann nicht wie eine IP-Adresse formatiert werden. |
 | `folderPath` | Der zulässige Ordnerpfad, der erforderlich ist, wenn der Benutzer eingeschränkten Zugriff hat. |
 
-Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch [Oracle Object Datenspeicherung Authentication Guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch [Oracle Object Datenspeicherung authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um ein neues Oracle Object Datenspeicherung-Konto für die Verbindung mit der Plattform zu erstellen.
 
