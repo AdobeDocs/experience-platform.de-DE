@@ -1,16 +1,16 @@
 ---
 solution: Experience Platform
 title: Datenmodell für die Finanzdienstleistungsbranche
-topic: Übersicht
+topic-legacy: overview
 description: Ansicht eines Entitäts-Beziehungsdiagramms (ERD), das ein standardisiertes Datenmodell für die Banken-, Finanz- und Versicherungsbranche beschreibt. Dieses Datenmodell ist mit dem Experience Data Model (XDM) für die Verwendung in Adobe Experience Platform kompatibel.
+exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
 translation-type: tm+mt
-source-git-commit: ffc113c0c85c76e6645fb4276c174779682f2b60
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 1%
+source-wordcount: '90'
+ht-degree: 0%
 
 ---
-
 
 # [!UICONTROL Datenmodell ] für Finanzdienstleistungen
 
