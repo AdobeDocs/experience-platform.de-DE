@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Logische Quantifizierer;Logischer Quantifizierer;
 solution: Experience Platform
 title: Logische PQL-Quantifizierer
-topic: developer guide
+topic-legacy: developer guide
 description: Logische Quantifizierer können verwendet werden, um Bedingungen mit Arrays in Profil Abfrage Language (PQL) zu erlangen.
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '219'
 ht-degree: 10%
 
 ---
-
 
 # Logikquantifizierer-Funktionen
 
