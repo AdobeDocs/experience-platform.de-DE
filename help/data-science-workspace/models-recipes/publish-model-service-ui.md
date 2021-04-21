@@ -2,17 +2,17 @@
 keywords: Experience Platform;Veröffentlichen eines Modells;Arbeitsbereich für Datenwissenschaften;beliebte Themen;Erstellen eines Dienstes
 solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: Mit dem Adobe Experience Platform Data Science Workspace können Sie Ihr trainiertes und bewertetes Modell als Service veröffentlichen, damit Benutzer in Ihrer IMS-Organisation Daten bewerten können, ohne eigene Modelle erstellen zu müssen.
+exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
 translation-type: tm+mt
-source-git-commit: 13fa4af388c6f31768a6b7e1da05cb56c5635c9e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '502'
 ht-degree: 50%
 
 ---
-
 
 # Veröffentlichen eines Modells als Dienst in der Benutzeroberfläche von Data Science Workspace
 
