@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
 title: Erste Schritte mit der Echtzeit-Profil-API
-topic: guide
-type: Dokumentation
+topic-legacy: guide
+type: Documentation
 description: In der Anleitung zum Einstieg in die Profil-API werden die wichtigsten Konzepte und grundlegenden Funktionen erläutert, die Sie kennen müssen, um mit API-Endpunkten für Echtzeit-Kunden-Profile grundlegende CRUD-Vorgänge für Profil-Daten durchzuführen.
+exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
 translation-type: tm+mt
-source-git-commit: 126b3d1cf6d47da73c6ab045825424cf6f99e5ac
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '411'
 ht-degree: 20%
 
 ---
-
 
 # Erste Schritte mit der [!DNL Real-time Customer Profile]-API {#getting-started}
 
@@ -29,7 +29,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen m�
 
 ## Lesen von Beispiel-API-Aufrufen
 
-Die API-Dokumentation für [!DNL Real-time Customer Profile] enthält Beispiel-API-Aufrufe, die zeigen, wie Anforderungen korrekt formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
+Die API-Dokumentation für [!DNL Real-time Customer Profile] enthält Beispiel-API-Aufrufe, die zeigen, wie Anforderungen korrekt formatiert werden. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
 
 ## Erforderliche Kopfzeilen
 
