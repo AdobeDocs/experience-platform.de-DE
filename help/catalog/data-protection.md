@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Katalog;Datenschutz;Verschlüsselungsdatensee
 solution: Experience Platform
 title: Datenschutz in Adobe Experience Platform
-topic: data protection
+topic-legacy: data protection
 description: Alle im Data Lake persistierten Daten werden in einem für Ihre Organisation eindeutigen, isolierten Microsoft Azure Data Lake Storage-Konto verschlüsselt, gespeichert und verwaltet. Das folgende Prozessflussdiagramm veranschaulicht, wie Daten von Experience Platform erfasst, verarbeitet, verschlüsselt und persistiert werden.
+exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 translation-type: tm+mt
-source-git-commit: a1103bfbf79f9c87bac5b113c01386a6fb8950e7
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 33%
 
 ---
-
 
 # Datenschutz in Adobe Experience Platform
 
