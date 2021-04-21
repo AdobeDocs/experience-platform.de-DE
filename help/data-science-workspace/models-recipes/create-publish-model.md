@@ -2,17 +2,17 @@
 keywords: Experience Platform;Modell für maschinelles Lernen;Arbeitsbereich für Datenwissenschaften;beliebte Themen;Erstellen und Veröffentlichen eines Modells
 solution: Experience Platform
 title: Erstellen und Veröffentlichen eines maschinellen Lernmodells
-topic: Tutorial
-type: Übung
+topic-legacy: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace bietet die Möglichkeit, Ihr Ziel mithilfe des vordefinierten Recommendations-Rezept zu erreichen. In diesem Lernprogramm erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in Data Science Workspace generieren können.
+exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
 translation-type: tm+mt
-source-git-commit: b5d42c6a38a50d39e1ca46e18623dde59c33833b
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1578'
 ht-degree: 2%
 
 ---
-
 
 # Erstellen und Veröffentlichen eines Modells für maschinelles Lernen
 
