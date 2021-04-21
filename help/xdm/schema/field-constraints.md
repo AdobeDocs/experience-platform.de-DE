@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;Mixin;Mixin;Mixins;Mixins;Datentyp;Datentypen;Datentypen;Datentyp;Datenentwurf;Schema-Design;Datentyp;Datentyp;Datentyp;Schema;Schemas;Schema-Design;Map;Map;Map;
 solution: Experience Platform
 title: Einschränkungen des XDM-Feldtyps
-topic: Übersicht
+topic-legacy: overview
 description: Eine Referenz für Feldtypeinschränkungen im Experience Data Model (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren.
+exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 456e595e66436c35c7d081ddf4699263e9c87234
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '1086'
+source-wordcount: '1085'
 ht-degree: 18%
 
 ---
-
 
 # XDM-Feldtypeinschränkungen
 
