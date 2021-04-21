@@ -2,16 +2,16 @@
 keywords: Experience Platform;Erste Schritte;Inhaltshilfe;Handelshilfe;Inhalts- und Commerce-Hilfe
 solution: Experience Platform, Intelligent Services
 title: Erste Schritte mit Content- und Commerce-API
-topic: Getting started
-description: Content and Commerce AI verwendet Adobe I/O APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das Authentifizierungslehrgang abschließen.
+topic-legacy: Getting started
+description: Content and Commerce AI verwendet Adobe I/O APIs. Um Adoben I/O-APIs und die E/A-Konsolenintegration aufzurufen, müssen Sie zunächst das Authentifizierungslehrgang abschließen.
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 translation-type: tm+mt
-source-git-commit: eb163949f91b0d1e9cc23180bb372b6f94fc951f
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 13%
 
 ---
-
 
 # Erste Schritte mit Content- und Commerce-API
 
@@ -19,13 +19,13 @@ ht-degree: 13%
 >
 >Die AI für Inhalte und Commerce befindet sich in der Betaphase. Die Dokumentation kann geändert werden.
 
-[!DNL Content and Commerce AI] verwendet Adobe I/O-APIs. Um Aufrufe an Adobe I/O-APIs und die I/O-Konsolenintegration durchzuführen, müssen Sie zunächst das [Authentifizierungstutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen.
+[!DNL Content and Commerce AI] verwendet Adobe I/O-APIs. Um Adoben I/O-APIs und die E/A-Konsolenintegration aufzurufen, müssen Sie zunächst das [Authentifizierungstutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen.
 
 Wenn Sie jedoch zum Schritt **Hinzufügen API** gelangen, befindet sich die API unter Experience Cloud anstelle von Adobe Experience Platform, wie im folgenden Screenshot gezeigt:
 
 ![Hinzufügen von Content- und Commerce-API](./images/add-api.png)
 
-Wenn Sie das Authentifizierungstraining abschließen, werden die Werte für die einzelnen erforderlichen Header in allen Adobe I/O API-Aufrufen bereitgestellt, wie unten dargestellt:
+Das Abschließen des Authentifizierungtutorials stellt die Werte für die einzelnen erforderlichen Kopfzeilen in allen Adobe I/O API-Aufrufen bereit, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -63,7 +63,7 @@ Sie können Ihre Umgebung jetzt im Dropdown-Menü oben rechts auswählen und all
 
 ![example](./images/select-environment.png)
 
-Weitere Informationen zum Arbeiten mit Adobe I/O-APIs mit Postman finden Sie im Beitrag Medium unter [Verwenden von Postman für die JWT-Authentifizierung unter Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
+Weitere Informationen zum Arbeiten mit Adobe I/O-APIs mit Postman finden Sie im Beitrag Medium unter [Verwenden von Postman für die JWT-Authentifizierung auf Adobe I/O](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f).
 
 ## Lesen von Beispiel-API-Aufrufen
 
