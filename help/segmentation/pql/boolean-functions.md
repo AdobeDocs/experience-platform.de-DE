@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Boolesche Funktionen;Boolescher Wert;
 solution: Experience Platform
 title: PQL Boolesche Funktionen
-topic: developer guide
+topic-legacy: developer guide
 description: Boolesche Funktionen werden verwendet, um eine Boolesche Logik für verschiedene Elemente in Profil Abfrage Language (PQL) auszuführen.
+exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 translation-type: tm+mt
-source-git-commit: b3defc3e33a55855e307ab70b9797d985d5719e3
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 12%
 
 ---
-
 
 # Boolesche Funktionen
 
