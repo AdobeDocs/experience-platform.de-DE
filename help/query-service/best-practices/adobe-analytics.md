@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfragen-Beispiel;Abfrage;Adobe-Analyse;
 solution: Experience Platform
 title: Beispieldaten für Abfragen für Adobe Analytics-Daten
-topic: queries
+topic-legacy: queries
 description: Die Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und für Sie als Datensätze in Adobe Experience Platform aufgenommen. In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen diese Daten von Query Service von Adobe Experience Platform verwendet werden. Die enthaltenen Beispielabfragen sollten mit Ihren Adobe Analytics-Datensätzen funktionieren.
+exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
 translation-type: tm+mt
-source-git-commit: 97dc0b5fb44f5345fd89f3f56bd7861668da9a6e
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
 ht-degree: 58%
 
 ---
-
 
 # Beispielabfragen für Adobe Analytics-Daten
 
@@ -215,8 +215,8 @@ Beim Reporting werden Bestellungen, Umsatz, Produktansichten und Hinzufügen zum
 
 | eVar6 (Produktsuchmethode) | Umsatz | Bestellungen | Produktansichten | Hinzufügen zum Warenkorb |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 3 |
-| Interne Suche:Wintermütze | 12,99 | 3 | 1 | 3 |
+| Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
+| Interne Suche:Wintermütze | 12,99 | 3 | 1 | 1 |
 
 Weitere Informationen zur Verwendung der Konversionssyntax finden Sie in der Adobe Analytics-Dokumentation zu [Implementieren von eVars mit Konvertierungssyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
