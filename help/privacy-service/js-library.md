@@ -2,16 +2,16 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Übersicht über die JavaScript-Bibliothek zum Datenschutz in der Adobe
-topic: overview
+topic-legacy: overview
 description: Mit der JavaScript-Bibliothek zum Datenschutz für Adoben können Sie die Identitäten der betroffenen Personen abrufen, um sie in Privacy Service zu verwenden.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: f2238d35f3e2a279fbe8ef8b581282102039e932
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 67%
 
 ---
-
 
 # Übersicht über die Adobe Privacy JavaScript Library
 
