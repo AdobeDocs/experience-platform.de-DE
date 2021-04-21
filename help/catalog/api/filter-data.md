@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Filter;Filter;Filterdaten;Daten filtern;Datumsbereich
 solution: Experience Platform
 title: Filtern von Katalogdaten mithilfe von Abfragen-Parametern
-topic: Entwicklerhandbuch
+topic-legacy: developer guide
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '2123'
+source-wordcount: '2121'
 ht-degree: 87%
 
 ---
