@@ -2,16 +2,16 @@
 keywords: Experience Platform;Home;beliebte Themen;Sandbox-Benutzerhandbuch;Sandbox-Handbuch
 solution: Experience Platform
 title: Handbuch zur Sandbox-Benutzeroberfläche
-topic: Benutzerhandbuch
+topic-legacy: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
+exl-id: b258c822-5182-4217-9d1b-8196d889740f
 translation-type: tm+mt
-source-git-commit: 62ce5ac92d03a6e85589fc92e8d953f7fc1d8f31
+source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '633'
 ht-degree: 48%
 
 ---
-
 
 # Handbuch zur Sandbox-Benutzeroberfläche
 
