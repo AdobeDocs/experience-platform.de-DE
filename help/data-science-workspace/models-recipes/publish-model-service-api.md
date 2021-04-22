@@ -7,7 +7,7 @@ type: Tutorial
 description: Dieses Lernprogramm beschreibt den Prozess der Veröffentlichung eines Modells als Dienst mit der Sensei Machine Learning API.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 49%
@@ -39,7 +39,7 @@ Für alle POST-, PUT- und PATCH-Anforderungen ist ein zusätzlicher Header erfor
 In der folgenden Tabelle werden einige häufig verwendete Terminologie für dieses Lernprogramm aufgeführt:
 
 | Begriff | Definition |
---- | ---
+| --- | --- |
 | **Machine Learning Instance (MLInstance)** | Eine Instanz einer [!DNL Sensei]-Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei]-Code enthält. |
 | **Experiment** | Eine Dachentität für Schulungs-Experimentabläufe, Auswertungs-Experimentabläufe, oder beides. |
 | **Geplantes Experiment** | Ein Begriff, der die Automatisierung von Schulungen oder Auswertungen von Experimentabläufen beschreibt und von einem benutzerdefinierten Zeitplan bestimmt wird. |
@@ -83,7 +83,7 @@ curl -X POST
 ```
 
 | Eigenschaft | Beschreibung |
---- | ---
+| --- | --- |
 | `mlInstanceId` | Bestehende MLInstance-Identifizierung, der zum Erstellen des ML-Dienstes verwendete Schulungs-Experimentablauf sollte dieser bestimmten MLInstance entsprechen. |
 | `trainingExperimentId` | Experimentidentifizierung entsprechend der MLInstance-Identifizierung. |
 | `trainingExperimentRunId` | Ein bestimmter Schulungs-Experimentablauf, der zum Veröffentlichen des ML-Dienstes verwendet wird. |
