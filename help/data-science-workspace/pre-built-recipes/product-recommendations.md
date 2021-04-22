@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Mit dem Rezept „Produktempfehlungen“ können Sie personalisierte Produktempfehlungen bereitstellen, die auf die Bedürfnisse und Interessen Ihrer Kunden zugeschnitten sind. Mit einem präzisen Prognosemodell können Sie anhand der Einkaufshistorie von Kunden feststellen, für welche Produkte sie sich interessieren.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 90%
@@ -39,7 +39,7 @@ Dieses Rezept nutzt benutzerdefinierte [XDM-Schemas](../../xdm/schema/field-dict
 ### Schema für Eingabedaten
 
 | Feldname | Typ |
---- | ---
+| --- | --- |
 | itemId | Zeichenfolge |
 | interactionType | Zeichenfolge |
 | timestamp | Zeichenfolge |
@@ -48,7 +48,7 @@ Dieses Rezept nutzt benutzerdefinierte [XDM-Schemas](../../xdm/schema/field-dict
 ### Schema für Ausgabedaten
 
 | Feldname | Typ |
---- | ---
+| --- | --- |
 | recommendations | Zeichenfolge |
 | userId | Ganzzahl |
 
