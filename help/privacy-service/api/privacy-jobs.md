@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Anwendungen verwalten.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 66%
+source-wordcount: '1362'
+ht-degree: 65%
 
 ---
 
@@ -41,6 +41,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`gdpr` (Europäische Vereinigung)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
@@ -160,6 +162,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` ausgelassen wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
 | `regulation` **(Erforderlich)** | Die Regelung für die Datenschutzfunktion. Die folgenden Werte werden akzeptiert: <ul><li>`gdpr` (Europäische Vereinigung)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (Neuseeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwort**
 
 Eine erfolgreiche Antwort gibt die Details der neu erstellten Aufträge zurück.
@@ -210,6 +214,8 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Aufträge zurück.
 | --- | --- |
 | `jobId` | Eine schreibgeschützte, eindeutige, systemgenerierte ID für einen Auftrag. Dieser Wert wird im nächsten Schritt der Suche nach einem bestimmten Auftrag verwendet. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Nachdem Sie die Auftragsanfrage erfolgreich gesendet haben, können Sie mit dem nächsten Schritt zur [Überprüfung des Auftragsstatus](#check-status) fortfahren.
 
 ## Status eines Auftrags überprüfen {#check-status}
@@ -229,6 +235,8 @@ GET /jobs/{JOB_ID}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten. Diese ID wird unter `jobId` in erfolgreichen API-Antworten für [Erstellen eines Auftrags](#create-job) und [zurückgegeben, in denen alle Aufträge](#list) aufgelistet werden. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
@@ -326,6 +334,8 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 | `productStatusResponse.results` | Bei bestimmten Statusangaben geben einige Produkte möglicherweise ein `results`-Objekt zurück, das zusätzliche Informationen bereitstellt, die nicht von `responseMsgDetail` abgedeckt werden. |
 | `downloadURL` | Ist der Auftragsstatus `complete`, stellt dieses Attribut eine URL zum Herunterladen der Auftragsergebnisse als ZIP-Datei bereit. Diese Datei kann bis zu 60 Tagen nach Abschluss des Auftrags heruntergeladen werden. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ### Auftragsstatus-Kategorien {#status-categories}
 
 In der folgenden Tabelle werden die verschiedenen Kategorien zum Auftragsstatus und ihre jeweilige Bedeutung Liste:
@@ -336,6 +346,8 @@ In der folgenden Tabelle werden die verschiedenen Kategorien zum Auftragsstatus 
 | `processing` | Anwendungen haben den Auftrag bestätigt und sind derzeit bei der Verarbeitung. |
 | `submitted` | Der Auftrag wird bei allen anwendbaren Anwendungen eingereicht. |
 | `error` | Bei der Verarbeitung des Auftrags ist etwas fehlgeschlagen – spezifischere Informationen können Sie durch Abrufen einzelner Auftragsdetails erhalten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
