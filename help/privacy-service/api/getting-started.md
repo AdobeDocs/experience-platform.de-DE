@@ -6,10 +6,10 @@ description: Die Privacy Service-API ermöglicht es Entwicklern, Kundenanfragen 
 topic-legacy: developer guide
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 22%
+source-wordcount: '791'
+ht-degree: 21%
 
 ---
 
@@ -35,9 +35,9 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 Um Aufrufe an die [!DNL Privacy Service]-API durchzuführen, müssen Sie zunächst Ihre Zugriffsberechtigungen erfassen, um in den erforderlichen Headern verwendet werden zu können:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 Hierzu gehört das Abrufen von Entwicklerberechtigungen für [!DNL Experience Platform] in Adobe Admin Console und das Generieren der Anmeldeinformationen in Adobe Developer Console.
 
