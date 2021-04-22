@@ -6,7 +6,7 @@ type: Tutorial
 description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime umfangreiche Funktionen zu entwickeln. Dieses Dokument beschreibt die verschiedenen Klassen, die in einer Feature-Pipeline gefunden wurden, und bietet eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Feature-Pipeline mit dem Model Authoring-SDK in PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
 ht-degree: 27%
@@ -163,7 +163,6 @@ class MyDataLoader(DataLoader):
 Ein DatasetTransformer stellt die Logik zum Transformieren eines Eingangs-DataFrames bereit und gibt einen neuen abgeleiteten DataFrame zurück. Diese Klasse kann implementiert werden, um entweder gemeinsam mit einer FeaturePipelineFactory zu arbeiten, als einzige Funktions-Engineering-Komponente zu arbeiten, oder Sie können festlegen, dass diese Klasse nicht implementiert wird.
 
 Im folgenden Beispiel wird die DataSetTransformer-Klasse erweitert:
-
 
 **PySpark-Beispiel**
 
