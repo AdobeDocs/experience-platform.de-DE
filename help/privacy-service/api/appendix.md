@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 11%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -60,13 +60,13 @@ Wenn Sie einen `namespace`-Wert in der [!DNL Privacy Service]-API angeben, muss 
 In der folgenden Tabelle sind die für die Angabe eines Adobe-Produkts im `include`-Attribut einer Auftragserstellungsanforderung zulässigen Werte aufgeführt.
 
 | Produkt | Wert für die Verwendung im `include`-Attribut |
---- | ---
-| Adobe Advertising Cloud | &quot;AdCloud&quot; |
-| Adobe Analytics | &quot;Analytics&quot; |
-| Adobe Audience Manager | &quot;AudienceManager&quot; |
-| Adobe Campaign | &quot;Campaign&quot; |
-| Adobe Experience Platform | &quot;aepDataLake&quot; |
-| Adobe Primetime-Authentifizierung | &quot;primetimeAuthentication&quot; |
-| Adobe Target | &quot;Target&quot; |
-| Customer Record Service | &quot;CRS&quot; |
-| Echtzeit-Kundenprofil | &quot;ProfileService&quot; |
+| --- | --- |
+| Adobe Advertising Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime-Authentifizierung | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| Customer Record Service | `CRS` |
+| Echtzeit-Kundenprofil | `ProfileService` |
