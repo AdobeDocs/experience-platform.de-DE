@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Mit dem Retail Sales-Rezept können Sie eine Prognose der Verkaufszahlen für alle Läden für einen bestimmten Zeitraum erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 20%
@@ -41,7 +41,7 @@ In diesem Lernprogramm wird beschrieben, wie Sie in einem Jupyter-Notebook das R
 Dieses Rezept verwendet [XDM-Schema](../../xdm/schema/field-dictionary.md), um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
---- | ---
+| --- | --- |
 | date | Zeichenfolge |
 | store | Ganzzahl |
 | storeType | Zeichenfolge |
