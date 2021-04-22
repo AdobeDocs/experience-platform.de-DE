@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über die XDM ExperienceEvent-Klasse.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '869'
 ht-degree: 6%
 
 ---
@@ -29,7 +29,7 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 | `eventMergeId` | Die ID des erfassten Stapels, die zur Erstellung des Datensatzes geführt hat. Dieses Feld wird beim Erfassen von Daten automatisch vom System ausgefüllt. |
 | `eventType` | Eine Zeichenfolge, die den primären Ereignistyp für den Datensatz angibt. Akzeptierte Werte und ihre Definitionen finden Sie im Abschnitt [Anhang](#eventType). |
 | `identityMap` | Ein Zuordnungsfeld, das einen Satz namensbezogener Identitäten für die einzelne Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, wenn Identitätsdaten erfasst werden. Um dieses Feld für [Kundendaten in Echtzeit](../../profile/home.md) richtig zu verwenden, sollten Sie nicht versuchen, den Feldinhalt in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den  [Grundlagen der ](../schema/composition.md#identityMap) Schema-Komposition. |
-| `timestamp` | Der Zeitpunkt, zu dem das Ereignis oder die Beobachtung aufgetreten ist, formatiert gemäß [RFC 339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `timestamp` | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses, formatiert gemäß [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Dieser Zeitstempel kann  **** nur die Beobachtung des Ereignisses selbst darstellen und muss in der Vergangenheit erfolgen. Wenn Ihre Anwendungsfälle für die Segmentierung die Verwendung von Zeitstempeln erfordern, die in der Zukunft auftreten können (z. B. ein Abflugdatum), müssen diese Werte an anderer Stelle im Experience Ereignis-Schema eingeschränkt werden. |
 
 ## Kompatible Mixins {#mixins}
 
