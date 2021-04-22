@@ -7,10 +7,10 @@ type: Tutorial
 description: Der Adobe Experience Platform Abfrage Service ermöglicht die Erstellung von Datensätzen über die Benutzeroberfläche. Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz im Data Lake aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d2f19cc97082f75e66cf38e54b5bdb89482930ed
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 43%
+ht-degree: 40%
 
 ---
 
@@ -23,9 +23,9 @@ Die wahre Stärke von [!DNL Query Service] wird angezeigt, wenn Abfragen zum Gen
 1. Schreiben Sie Ihre Anfrage mit einem verbundenen Client und validieren Sie die Ausgabe.
 2. Melden Sie sich bei der [!DNL Platform]-Benutzeroberfläche an und gehen Sie zu Abfragen.
 3. Suchen Sie Ihre Abfrage in der Liste und bewegen Sie den Mauszeiger über die Zeile.
-4. Klicken Sie auf **[!UICONTROL Datensatz erstellen]**. ![Bild](../images/ui/output-dataset.png)
+4. Wählen Sie **[!UICONTROL Datensatz erstellen]**. ![Bild](../images/ui/create-datasets/output-dataset.png)
 5. Geben Sie einen Namen für den Datensatz, dem Ihre LDAP-ID vorangestellt wird (muss nicht eindeutig oder SQL-sicher sein. Das System erzeugt anhand des hier angegebenen Namens einen „Tabellennamen“).
-6. Geben Sie eine Beschreibung für den Datensatz ein und klicken Sie dann auf **[!UICONTROL Abfrage ausführen]**.![Bild](../images/ui/run-query.png)
+6. Geben Sie eine Datensatzbeschreibung ein und wählen Sie **[!UICONTROL Abfrage ausführen]**.![Bild](../images/ui/create-datasets/run-query.png)
 7. Warten Sie, bis die Abfrage abgeschlossen ist, und rufen Sie dann die Seite mit der Datensatzliste auf, um den gerade erstellten Datensatz anzuzeigen.
 
 Nachdem ein Datensatz erstellt wurde, kann er wie jeder andere Datensatz in [!DNL Data Lake] aufgerufen und für eine Vielzahl von Anwendungsfällen verwendet werden.
