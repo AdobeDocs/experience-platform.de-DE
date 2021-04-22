@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 translation-type: tm+mt
-source-git-commit: 545ac984d9f9f540fc9121214d40719f9a254379
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '476'
+ht-degree: 6%
 
 ---
 
@@ -25,15 +25,17 @@ In der folgenden Tabelle sind einige häufig verwendete, vordefinierte Identitä
 
 | Identitätstyp | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| E-Mail  | E-Mail | 6 |
-| Telefon | Telefon | 7 |
-| Adobe Advertising Cloud ID | AdCloud | 411 |
-| Adobe Audience Manager UUID | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] ID für Advertisers | IDFA | 20915 |
-| [!DNL Google] Anzeigen-ID | GAID | 20914 |
-| [!DNL Windows] BEIHILFE | WAID | 8 |
+| E-Mail  | `Email` | `6` |
+| Telefon | `Phone` | `7` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Audience Manager UUID | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Adobe Target ID | `TNTID` | `9` |
+| [!DNL Apple] ID für Advertisers | `IDFA` | `20915` |
+| [!DNL Google] Anzeigen-ID | `GAID` | `20914` |
+| [!DNL Windows] BEIHILFE | `WAID` | `8` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
@@ -47,13 +49,15 @@ Wenn Sie einen `namespace`-Wert in der [!DNL Privacy Service]-API angeben, muss 
 
 | Qualifizierer | Definition |
 | --------- | ---------- |
-| Standard | Einer der weltweit definierten Standard-Namensraum, der nicht an einen unternehmensspezifischen Datensatz gebunden ist (z. B. E-Mail, Telefonnummer usw.). Namensraum-ID angegeben. |
-| custom | Ein eindeutiger Namensraum, der im Kontext einer Organisation erstellt wurde und nicht über das [!DNL Experience Cloud] freigegeben wurde. Der Wert stellt den Anzeigenamen (&quot;Namensfeld&quot;) dar, nach dem gesucht werden soll. Namensraum-ID angegeben. |
-| integrationCode | Integrationscode - ähnlich wie &quot;benutzerspezifisch&quot;, aber spezifisch definiert als Integrationscode einer zu durchsuchenden Datenquelle. Namensraum-ID angegeben. |
-| namespaceId | Gibt die tatsächliche ID des Namensraums an, der über den Namensraum-Dienst erstellt oder zugeordnet wurde. |
-| nicht registriert | Eine Freiformzeichenfolge, die nicht im Namensraum-Dienst definiert ist und als &quot;wie vorhanden&quot;gilt. Jede Anwendung, die mit solchen Namensräumen umgeht, überprüft diese und verarbeitet sie gegebenenfalls für den Kontext und den Datensatz der Firma. Es wird keine Namensraum-ID angegeben. |
-| analytics | Ein benutzerdefinierter Namensraum, der intern in [!DNL Analytics] und nicht im Namensraum-Dienst zugeordnet wird. Dies wird direkt wie von der ursprünglichen Anforderung angegeben ohne Namensraum-ID weitergeleitet |
-| target | Ein benutzerdefinierter Namensraum, der intern von [!DNL Target] verstanden wird, nicht im Namensraum-Dienst. Dies wird direkt wie von der ursprünglichen Anforderung angegeben ohne Namensraum-ID weitergeleitet |
+| `standard` | Einer der weltweit definierten Standard-Namensraum, der nicht an einen unternehmensspezifischen Datensatz gebunden ist (z. B. E-Mail, Telefonnummer usw.). Namensraum-ID angegeben. |
+| `custom` | Ein eindeutiger Namensraum, der im Kontext einer Organisation erstellt wurde und nicht über das [!DNL Experience Cloud] freigegeben wurde. Der Wert stellt den Anzeigenamen (&quot;Namensfeld&quot;) dar, nach dem gesucht werden soll. Namensraum-ID angegeben. |
+| `integrationCode` | Integrationscode - ähnlich wie &quot;benutzerspezifisch&quot;, aber spezifisch definiert als Integrationscode einer zu durchsuchenden Datenquelle. Namensraum-ID angegeben. |
+| `namespaceId` | Gibt die tatsächliche ID des Namensraums an, der über den Namensraum-Dienst erstellt oder zugeordnet wurde. |
+| `unregistered` | Eine Freiformzeichenfolge, die nicht im Namensraum-Dienst definiert ist und als &quot;wie vorhanden&quot;gilt. Jede Anwendung, die mit solchen Namensräumen umgeht, überprüft diese und verarbeitet sie gegebenenfalls für den Kontext und den Datensatz der Firma. Es wird keine Namensraum-ID angegeben. |
+| `analytics` | Ein benutzerdefinierter Namensraum, der intern in [!DNL Analytics] und nicht im Namensraum-Dienst zugeordnet wird. Dies wird direkt wie von der ursprünglichen Anforderung angegeben ohne Namensraum-ID weitergeleitet |
+| `target` | Ein benutzerdefinierter Namensraum, der intern von [!DNL Target] verstanden wird, nicht im Namensraum-Dienst. Dies wird direkt wie von der ursprünglichen Anforderung angegeben ohne Namensraum-ID weitergeleitet |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Akzeptierte Produktwerte
 
@@ -70,3 +74,5 @@ In der folgenden Tabelle sind die für die Angabe eines Adobe-Produkts im `inclu
 | Adobe Target | `Target` |
 | Customer Record Service | `CRS` |
 | Echtzeit-Kundenprofil | `ProfileService` |
+
+{style=&quot;table-layout:auto&quot;}
