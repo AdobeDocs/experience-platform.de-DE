@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Mit dem Produktkaufprognostizierungsrezept können Sie die Wahrscheinlichkeit eines bestimmten Ereignisses des Kundenkaufs vorhersagen, z. B. eines Produktkaufs.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 13%
@@ -36,7 +36,7 @@ Das Rezept zur Prognose des Produktkaufs verwendet maschinelles Lernen, um das K
 Dieses Rezept verwendet [XDM-Schema](../../xdm/home.md), um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
---- | ---
+| --- | --- |
 | userId | Zeichenfolge |
 | genderRatio | Nummer |
 | ageY | Nummer |
