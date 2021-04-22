@@ -7,7 +7,7 @@ type: Tutorial
 description: Das Model Insights Framework bietet Data Scientists Werkzeuge in Data Science Workspace, um auf der Grundlage von Experimenten schnelle und fundierte Entscheidungen für optimale maschinelle Lernmodelle zu treffen.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1265'
 ht-degree: 88%
@@ -77,7 +77,7 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 In der folgenden Tabelle sind die Standardmetriken für jede Klasse aufgeführt. Ein Benutzer kann auch die Werte in der `evaluation.metric`-Spalte verwenden, um eine bestimmte Metrik zu aktivieren.
 
 | `evaluator.class` | Standardmetriken | `evaluation.metric` |
---- | --- | ---
+| --- | --- | --- |
 | `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics | -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
 | `DefaultMultiClassificationEvaluator` | -Precision <br>-recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver-Betriebseigenschaften <br>-Bereich unter den Receiver-Betriebseigenschaften | -`PRECISION`-<br>-`RECALL`-<br>-<br>-`FSCORE`-<br>-`ACCURACY`-<br>-`ROC`-<br>-`AUROC`-`CONFUSION_MATRIX` |
 | `RecommendationsEvaluator` | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K | -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
@@ -161,7 +161,7 @@ Daten werden zunächst aus einer in [retail.config.json](https://github.com/adob
 [!DNL Sensei Model Insights Framework] unterstützt eine Standardvorlage für jeden Typ des maschinellen Lernalgorithmus. Die folgende Tabelle beinhaltet allgemeine übergeordnete Klassen für maschinelle Lernalgorithmen und zugehörige Auswertungsmetriken und Visualisierungen.
 
 | ML-Algorithmustyp | Auswertungsmetriken | Visualisierungen |
---- | --- | ---
+| --- | --- | --- |
 | Regression | - RMSE<br>- MAPE<br>- MASE<br>- MAE | Überlagerungskurve für prognostizierte vs. tatsächliche Werte |
 | Binäre Klassifizierung | - Confusion Matrix<br>- Precision-Recall<br>- Accuracy<br>- F-Score (spezifisch F1 ,F2)<br>- AUC<br>- ROC | ROC-Kurve und Konfusionsmatrix |
 | Mehrklassige Klassifizierung | - Confusion Matrix <br>- Für jede Klasse: <br>- Precision-Recall Accuracy <br>- F-Score (spezifisch F1, F2) | ROC-Kurve und Konfusionsmatrix |
