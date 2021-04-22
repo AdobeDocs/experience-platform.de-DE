@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Anfragen zur Kundengenehmigung für Experience Cloud-Anwendungen verwalten.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '247'
 ht-degree: 2%
 
 ---
@@ -66,6 +66,8 @@ curl -X POST \
 | `entities` | Ein Array von Objekten, die die Benutzer angeben, für die die Genehmigungsanfrage gilt. Jedes Objekt enthält ein `namespace`- und ein Array von `values`, um die einzelnen Benutzer mit diesem Namensraum abzugleichen. |
 | `nameSpace` | Jedes Objekt im Array `entities` muss einen der [standardmäßigen Identitäts-Namensraum](./appendix.md#standard-namespaces) enthalten, die von der Privacy Service-API erkannt werden. |
 | `values` | Ein Array von Werten für jeden Benutzer, das dem bereitgestellten `nameSpace` entspricht. |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
