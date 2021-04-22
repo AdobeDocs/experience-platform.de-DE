@@ -6,9 +6,9 @@ topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5256c2a13fc75f7d46911f2ad368188d9e818921
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '356'
 ht-degree: 5%
 
 ---
@@ -41,7 +41,7 @@ Die folgenden Abfragen werden derzeit für die Kantensegmentierung unterstützt:
 | Abfragetyp | Details |
 | ---------- | ------- |
 | Relatives Zeitfenster | Wenn sich eine Abfrage auf ein Zeitfenster bezieht, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
-| Negation | Wenn eine Abfrage eine Negation enthält, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
+| Negation | Wenn eine Abfrage eine Negation oder ein `not`-Ereignis enthält, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
 | Mehrere Ereignisse | Wenn eine Abfrage mehr als ein Ereignis enthält, kann sie nicht mithilfe der Kantensegmentierung bewertet werden. |
 
 ## Nächste Schritte
