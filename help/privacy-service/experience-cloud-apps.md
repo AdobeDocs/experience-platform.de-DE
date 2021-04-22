@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Dieses Dokument bietet eine Referenz zum Konfigurieren verschiedener Experience Cloud-Anwendungen für datenschutzbezogene Vorgänge.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
-source-wordcount: '576'
-ht-degree: 22%
+source-wordcount: '582'
+ht-degree: 21%
 
 ---
 
@@ -29,7 +29,7 @@ Lesen Sie die Dokumentation für Ihre [!DNL Experience Cloud]-Anwendungen, um zu
 Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud]-Anwendungen, die mit [!DNL Privacy Service] integriert sind, einschließlich der [!DNL Privacy Service]-Funktionen, mit denen sie kompatibel sind, und Links zur Dokumentation, um weitere Informationen zu erhalten.
 
 | Anwendung | Zugriff/Löschen | Ausschluss des Verkaufs | Dokumentation und Überlegungen |
---- | :---: | :---: | ---
+| --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | they | they | <ul><li>[Dokumentation für GDPR aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Verkaufsabmeldedokumentation für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | they | they | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/an-gdpr-overview.html)</li><li>[!DNL Analytics] verarbeitet Abmeldeanfragen mithilfe von  [Privacy Berichte-Variablen](https://docs.adobe.com/content/help/en/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | they | they | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Dokumentation zur Abmeldung](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
@@ -39,6 +39,7 @@ Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud]-Anwendungen, die 
 | Adobe Primetime-Authentifizierung | they | K. A. | <ul><li>[Dokumentation aufrufen/löschen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] nicht in der Lage ist, Daten zu übertragen, daher sind Ausschlussanträge nicht anwendbar.</li></ul> |
 | Adobe Target | they | K. A. | <ul><li>[Dokumentation aufrufen/löschen](https://docs.adobe.com/content/help/de-DE/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] nicht in der Lage ist, Daten zu übertragen, daher sind Ausschlussanträge nicht anwendbar.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Selbstbedienungsanwendungen {#self-serve}
 
@@ -51,3 +52,5 @@ Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud]-Anwendungen, die 
 | [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Eine Übersicht darüber, wie ein Datenschutzadministrator oder AEM Administrator GDPR-Anfragen bearbeiten kann. |
 | [Adobe Experience Manager Livefyre](https://docs.adobe.com/content/help/en/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Schritte zum Erstellen des Zugriffs auf GDPR und Löschen von Anforderungen mit Livefyre. |
 | [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Anleitung für Entwickler zur Verwendung von Erweiterungen und Rule Builder zum Definieren von Opt-in- und Opt-out-Lösungen. |
+
+{style=&quot;table-layout:auto&quot;}
