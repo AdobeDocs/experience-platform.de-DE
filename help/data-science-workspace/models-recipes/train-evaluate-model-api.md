@@ -7,10 +7,10 @@ type: Tutorial
 description: In diesem Lernprogramm erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning API-Aufrufen erstellen, ausbilden und auswerten können.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 94%
+source-wordcount: '1235'
+ht-degree: 92%
 
 ---
 
@@ -42,15 +42,13 @@ Wir verbrauchen die APIs, um einen Experimentablauf zu Schulungszwecken zu erste
 >[!NOTE]
 >
 > Die Begriffe „Engine“, „MLInstance“, „MLService“, „Experiment“ und „Modell“ werden in der Benutzeroberfläche als unterschiedliche Begriffe bezeichnet. Wenn Sie von der Benutzeroberfläche kommen, werden die Unterschiede in der folgenden Tabelle zugeordnet.
-> 
-> | UI-Begriff | API-Begriff |
-> --- | ---
-> | Rezept | Engine |
-> | Modell | MLInstance |
-> | Schulungsabläufe | Experiment |
-> | Service | MLService |
 
-
+| UI-Begriff | API-Begriff |
+| --- | --- |
+| Rezept | Engine |
+| Modell | MLInstance |
+| Schulungsabläufe | Experiment |
+| Service | MLService |
 
 ### Erstellen einer MLInstance
 
@@ -128,7 +126,7 @@ curl -X POST \
 >
 > Im `{JSON_PAYLOAD}` definieren wir Parameter, die für Schulungen und Auswertungen im `tasks` Array verwendet werden. Die `{ENGINE_ID}` ist die ID der Engine, die Sie verwenden möchten, und das `tag`-Feld ist ein optionaler Parameter, der zur Identifizierung der Instanz verwendet wird.
 
-Die Antwort enthält die `{INSTANCE_ID}`, die die erstellte MLInstance darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
+Die Antwort enthält die `{INSTANCE_ID}`, die die erstellte MLInstanz darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
 
 **Antwort**
 
