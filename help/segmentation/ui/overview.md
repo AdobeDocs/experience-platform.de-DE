@@ -6,7 +6,7 @@ topic-legacy: ui guide
 description: Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: fa2f4e046c6210137aa3e98d9f18010c1058275a
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 22%
@@ -32,7 +32,7 @@ Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument ver
 
 ## Übersicht
 
-Wählen Sie in der linken Navigation [[!DNL Experience Platform] UI](http://platform.adobe.com/) **[!UICONTROL Segmente]** aus, um die Registerkarte **[!UICONTROL Übersicht]** zu öffnen. Diese Registerkarte enthält Links zu Dokumentation und Videos, die Ihnen helfen, Segmente zu verstehen und mit ihnen zu arbeiten.
+Wählen Sie in der linken Navigation [[!DNL Experience Platform] UI](https://platform.adobe.com/) **[!UICONTROL Segmente]** aus, um die Registerkarte **[!UICONTROL Übersicht]** zu öffnen. Diese Registerkarte enthält Links zu Dokumentation und Videos, die Ihnen helfen, Segmente zu verstehen und mit ihnen zu arbeiten.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -44,14 +44,14 @@ Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste aller 
 
 Diese Ansicht Liste Informationen zur Segmentdefinition, einschließlich Aufschlüsselung, Ruhephase, Profil-Anzahl, Bewertungsmethode, erstelltes Datum und Datum der letzten Änderung.
 
-Die Aufschlüsselung zeigt ein Balkendiagramm mit dem Prozentwert der Profil, die zu den folgenden Statuswerten gehören: [!UICONTROL Eingegeben], [!UICONTROL Realisiert] und [!UICONTROL Ausstieg].
+Die Aufschlüsselung zeigt ein Balkendiagramm mit dem Prozentwert der Profil, die zu den folgenden Statuswerten gehören: [!UICONTROL Realized], [!UICONTROL Existing] und [!UICONTROL Exiting].
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Status | Beschreibung |
 | ------ | ----------- |
-| Eingestiegen | Ein neues Profil innerhalb des Segments. |
-| Realisiert | Ein vorhandenes Profil, das innerhalb des Segments geblieben ist. |
+| Realisiert | Ein neues Profil innerhalb des Segments. |
+| Bestehend | Ein vorhandenes Profil, das innerhalb des Segments geblieben ist. |
 | Beenden | Ein vorhandenes Profil, das das Segment verlässt. |
 
 Die Umdrehung stellt den Prozentsatz der Profil dar, die sich innerhalb einer Segmentdefinition im Vergleich zum letzten Ausführen des Segmentauftrags ändern, während die Anzahl der Profil die Gesamtanzahl der Profil darstellt, die für das Segment qualifiziert sind.
