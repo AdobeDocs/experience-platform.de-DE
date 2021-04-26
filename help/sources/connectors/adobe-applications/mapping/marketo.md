@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '456'
 ht-degree: 3%
 
 ---
-
 
 # (Beta) [!DNL Marketo Engage]-Feldzuordnungen
 
@@ -158,6 +158,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,8 +178,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Primär |
-| `marketingListID` | `staticListID` | Beziehung |
+| `staticListMemberID` | `marketingListMemberID` | Primär |
+| `staticListID` | `marketingListID` | Beziehung |
 | `personID` | `personID` | Beziehung |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -234,7 +235,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Wird nur empfohlen, wenn Sie die Salesforce-Integration verwenden. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Wird nur empfohlen, wenn Sie die Salesforce-Integration verwenden. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -279,7 +280,7 @@ Als Problemumgehung können Sie das ID-Heftfeld von `None` auf `Private graph` a
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Sekundär |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Sekundär |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -308,8 +309,13 @@ Als Problemumgehung können Sie das ID-Heftfeld von `None` auf `Private graph` a
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Das `to_object('ECID',arrays_to_objects('id',explode(ecids)))`-Quellfeld ist ein berechnetes Feld, das mithilfe der Option [!UICONTROL Hinzufügen berechneten Feld] in der Plattform-Benutzeroberfläche hinzugefügt werden muss. Weitere Informationen finden Sie im Tutorial [Hinzufügen berechneter Felder](../../../../ingestion/tutorials/map-a-csv-file.md).
 
 ## Nächste Schritte
 
