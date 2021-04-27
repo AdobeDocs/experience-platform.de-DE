@@ -8,10 +8,10 @@ topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a03d851f3e0037b8241ca1f1de890903b08feac4
 workflow-type: tm+mt
-source-wordcount: '1715'
-ht-degree: 68%
+source-wordcount: '1768'
+ht-degree: 66%
 
 ---
 
@@ -179,6 +179,16 @@ Diese Fehlermeldung wird angezeigt, wenn der Benutzer oder die Adobe I/O-Integra
 
 Diese Fehlermeldung wird angezeigt, wenn eine POST-, PUT- oder PATCH-Anfrage eine ungültige oder fehlende `Content-Type`-Kopfzeile aufweist. Stellen Sie sicher, dass die Kopfzeile in der Anfrage enthalten ist und ihr Wert `application/json` lautet.
 
+### Benutzerregion fehlt
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+Diese Fehlermeldung wird angezeigt, wenn Ihr Konto (wie durch die angegebenen Authentifizierungsdaten dargestellt) nicht mit einem Profil zur Experience Platform verknüpft ist. Führen Sie die Schritte unter [Generieren von Zugriffsberechtigungen](./api-authentication.md#authentication-for-each-session) im Plattform-API-Authentifizierungstraining aus, um Ihrem Konto eine Plattform hinzuzufügen und Ihre Authentifizierungsberechtigungen entsprechend zu aktualisieren.
 
 ## Verzeichnis zur Fehlerbehebung bei Diensten {#service-troubleshooting-directory}
 
