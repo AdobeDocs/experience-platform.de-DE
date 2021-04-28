@@ -2,14 +2,14 @@
 keywords: E-Mail;E-Mail;E-Mail;E-Mail-Ziele;Ziel der oracle-Antwort
 title: Oracle Responsys-Verbindung
 description: Responsys ist ein Enterprise-E-Mail-Marketing-Tool für kanalübergreifende Marketing-Kampagnen, das von Oracle angeboten wird und der Personalisierung von Interaktionen über E-Mail, Mobile, Display und Social Media hinweg dient.
+exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 31%
+source-wordcount: '618'
+ht-degree: 28%
 
 ---
-
 
 # [!DNL Oracle Responsys] connection
 
@@ -22,6 +22,12 @@ Um Segmentdaten an [!DNL Oracle Responsys] zu senden, müssen Sie zunächst [ein
 ## Exporttyp {#export-type}
 
 **Profil-basiert** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die  [Ziel-Aktivierung](../../ui/activate-destinations.md#select-attributes) ausgewählt.
+
+## IP-Adresse Zulassungsliste {#allow-list}
+
+Beim Einrichten von E-Mail-Marketingzielen mit der SFTP-Datenspeicherung empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
+
+Informationen zum Hinzufügen von IPs zur Zulassungsliste finden Sie unter [IP-Adresse für Cloud-Datenspeicherung-Ziele](../cloud-storage/ip-address-allow-list.md).
 
 ## Ziel verbinden {#connect-destination}
 
