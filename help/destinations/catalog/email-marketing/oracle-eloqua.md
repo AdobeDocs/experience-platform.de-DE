@@ -2,14 +2,14 @@
 keywords: E-Mail;E-Mail;E-Mail-Ziele;oracle eloqua;oracle
 title: Oracle Eloqua-Verbindung
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
+exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '628'
-ht-degree: 31%
+source-wordcount: '674'
+ht-degree: 28%
 
 ---
-
 
 # [!DNL Oracle Eloqua] connection
 
@@ -20,6 +20,12 @@ Um Segmentdaten an [!DNL Oracle Eloqua] zu senden, müssen Sie zunächst [das Zi
 ## Exporttyp {#export-type}
 
 **Profil-basiert** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die  [Ziel-Aktivierung](../../ui/activate-destinations.md#select-attributes) ausgewählt.
+
+## IP-Adresse Zulassungsliste {#allow-list}
+
+Beim Einrichten von E-Mail-Marketingzielen mit der SFTP-Datenspeicherung empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
+
+Informationen zum Hinzufügen von IPs zur Zulassungsliste finden Sie unter [IP-Adresse für Cloud-Datenspeicherung-Ziele](../cloud-storage/ip-address-allow-list.md).
 
 ## Mit Ziel verbinden {#connect-destination}
 
