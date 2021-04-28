@@ -2,14 +2,14 @@
 keywords: E-Mail;E-Mail;E-Mail-Ziele;Adobe-Kampagne;Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
 workflow-type: tm+mt
-source-wordcount: '827'
-ht-degree: 19%
+source-wordcount: '873'
+ht-degree: 21%
 
 ---
-
 
 # Adobe Campaign-Verbindung
 
@@ -23,6 +23,12 @@ Um Segmentdaten an Adobe Campaign zu senden, müssen Sie zunächst [das Ziel](#c
 
 **Profil-basiert** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Schritt  **[!UICONTROL Attribute]** auswählen des Arbeitsablaufs für die  [Aktivierung](../../ui/activate-destinations.md#select-attributes) ausgewählt.
 
+## IP-Adresse Zulassungsliste {#allow-list}
+
+Beim Einrichten von E-Mail-Marketingzielen mit der SFTP-Datenspeicherung empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
+
+Informationen zum Hinzufügen von IPs zur Zulassungsliste finden Sie unter [IP-Adresse für Cloud-Datenspeicherung-Ziele](../cloud-storage/ip-address-allow-list.md).
+
 ## Ziel verbinden {#connect-destination}
 
 Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** Adobe Campaign und dann **[!UICONTROL Konfigurieren]**.
@@ -31,7 +37,7 @@ Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** Adobe C
 >
 >Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen [!UICONTROL Aktivieren] und [!UICONTROL Konfigurieren] finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
 
-![Verbindung mit Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
+![Verbindung mit Adobe Campaign herstellen](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 Wählen Sie im Schritt **[!UICONTROL Account]** des Arbeitsablaufs für das Verbinden von Zielen **[!UICONTROL Verbindungstyp]** für den Speicherort Ihrer Datenspeicherung aus. Adobe Campaign: Sie können zwischen **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP mit Kennwort]**, **[!UICONTROL SFTP mit SSH-Schlüssel]** und **[!UICONTROL Blaue Blase]** wählen. Die bevorzugte Methode zum Senden von Daten an Adobe Campaign ist [!DNL Amazon S3] oder [!DNL Azure Blob]. Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie dann **[!UICONTROL Verbinden]**.
 
@@ -76,7 +82,7 @@ Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Platform] eine tabulatorgetrennt
 
 >[!IMPORTANT]
 >
->- Beachten Sie bei der Durchführung dieser Integration die Einschränkungen der SFTP-Datenspeicherung, die Datenspeicherung der Datenbank und die Einschränkungen des aktiven Profils gemäß Ihrem Adobe Campaign-Vertrag.
+>- Beachten Sie bei dieser Integration die Einschränkungen für die SFTP-Datenspeicherung, für die Datenbank-Datenspeicherung und für aktive Profile gemäß Ihrem Adobe Campaign-Vertrag.
 >- Sie müssen Ihre exportierten Segmente in Adobe Campaign mit [!DNL Campaign] Workflows planen, importieren und zuordnen. Weitere Informationen finden Sie unter [Einrichten eines wiederkehrenden Imports](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in der Adobe Campaign Classic-Dokumentation und [Informationen zu Data Management-Aktivitäten](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in der Adobe Campaign Standard-Dokumentation.
 >- Die bevorzugte Methode zum Senden von Daten an Adobe Campaign ist [!DNL Amazon S3] oder [!DNL Azure Blob].
 
