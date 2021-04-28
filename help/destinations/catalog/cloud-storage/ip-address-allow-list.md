@@ -5,9 +5,9 @@ type: Documentation
 description: Diese Seite enthält IP-Bereiche, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von der Experience Platform auf Ihren SFTP-Server, Amazon S3 oder die Azurblase-Datenspeicherung zu exportieren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
 translation-type: tm+mt
-source-git-commit: ac62ebcc7b00a96f718a3c39725bcf21ce3d56cf
+source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Übersicht {#overview}
 
-Diese Seite enthält IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von der Experience Platform in die Datenspeicherung [SFTP-Server](./sftp.md), [Amazon S3](./amazon-s3.md) oder [Blaue Blase](./azure-blob.md) zu exportieren.
+Diese Seite enthält IP-Bereiche, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von der Experience Platform in den [SFTP-Server](./sftp.md) zu exportieren.
 
 Sie können Netzwerk-Zugriffskontrollen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen.
 
