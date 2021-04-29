@@ -1,15 +1,15 @@
 ---
 keywords: Azurblauer Ereignis Hub Destination;Azurer Ereignis Hub;Azurabend
-title: Beta-Ereignis-Hubs-Verbindung
-description: Erstellen Sie eine ausgehende Echtzeitverbindung zur Azurblauen Ereignis Hubs-Datenspeicherung, um Daten aus der Experience Platform zu streamen.
+title: (Beta) !DNL-Ereignis-Hubs]-Verbindung
+description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer !DNL-Ereignis-Hubs]-Datenspeicherung, um Daten von der Experience Platform zu streamen.
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+source-git-commit: ce5001d0a1c95901089915ae9836fdd436f12297
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '545'
 ht-degree: 6%
 
 ---
-
 
 # (Beta) [!DNL Azure Event Hubs]-Verbindung
 
@@ -113,3 +113,4 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format. [!DNL 
 >* [Stellen Sie eine Verbindung zu den Ereignis-Hubs her und aktivieren Sie Daten mithilfe der Flow Service API](../../api/streaming-destinations.md)
 >* [AWS Kinesis-Ziel](./amazon-kinesis.md)
 >* [Zieltypen und Kategorien](../../destination-types.md)
+
