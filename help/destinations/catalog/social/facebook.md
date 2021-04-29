@@ -4,9 +4,9 @@ title: Facebook-Anschluss
 description: Aktivieren Sie Profil für Ihre Facebook-Kampagnen zum Targeting, zur Personalisierung und zur Unterdrückung von Audiencen anhand von Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 1e9e5831b19738285affeb0337985c7cb0d45ebf
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1102'
 ht-degree: 8%
 
 ---
@@ -36,12 +36,6 @@ Eine Fluggesellschaft hat verschiedene Kundenstufen (Bronze, Silver und Gold) un
 Um sie über soziale Netzwerke hinweg Zielgruppe, können sie die Kundendaten aus ihrem CRM-System in Adobe Experience Platform einbinden und dabei die E-Mail-Adressen als Bezeichner verwenden.
 
 Als Nächstes können sie ihre Offline-Daten einschließlich der zugehörigen Mitgliedschafts-IDs und Kundenebenen verwenden, um neue Audiencen zu erstellen, die sie über das [!DNL Facebook]-Ziel Zielgruppe werden können.
-
-## Datenverwaltung für [!DNL Facebook]-Ziele {#data-governance}
-
->[!IMPORTANT]
->
->Daten, die an [!DNL Facebook] gesendet werden, dürfen keine gehefteten Identitäten enthalten. Sie sind für die Erfüllung dieser Verpflichtung verantwortlich und können dies tun, indem Sie sicherstellen, dass Segmente, die für die Aktivierung ausgewählt wurden, keine Heftoption in ihrer Fusionsrichtlinie verwenden. Erfahren Sie mehr über [Mergepolicies](/help/profile/ui/merge-policies.md).
 
 ## Unterstützte Identitäten {#supported-identities}
 
