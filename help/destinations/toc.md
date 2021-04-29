@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Zielhandbuch
-user-guide-description: Aktivieren Sie Ihre bekannten und nicht bekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele weitere Anwendungsfälle.
+user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
-feature: Destinations
+feature: Ziele
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 55%
 
 ---
@@ -80,7 +80,7 @@ ht-degree: 55%
    * Cloud-Speicher-Ziele {#cloud-storage}
       * [Übersicht über die Ziele der Cloud-Datenspeicherung](./catalog/cloud-storage/overview.md)
       * [Ziel einer Cloud-Datenspeicherung erstellen](./catalog/cloud-storage/workflow.md)
-      * [Amazon Kinesis-Anschluss](./catalog/cloud-storage/amazon-kinesis.md)
+      * [(Beta) Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
       * [Azurblauch-Verbindung](./catalog/cloud-storage/azure-blob.md)
       * [Beta-Ereignis-Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
@@ -122,7 +122,7 @@ ht-degree: 55%
       * [Social-Ziel erstellen](./catalog/social/workflow.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Anschluss](./catalog/social/facebook.md)
-      * [Verbindung zu LinkedIn-Audiencen](./catalog/social/linkedin.md)
+      * [Verbindung zu linkedIn Match Audiencen](./catalog/social/linkedin.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
       * [Zielort für die vorausschauende Erweiterung](./catalog/survey/foresee.md)
