@@ -2,12 +2,11 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Verarbeitung von Datenschutzanfragen im Echtzeit-Profil des Kunden
-topic-legacy: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, um auf ihre personenbezogenen Daten zuzugreifen, sie Opt-out zu verkaufen oder sie zu löschen, wie in zahlreichen Datenschutzbestimmungen beschrieben. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanforderungen für Echtzeit-Kundendaten-Profile behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8d16a3030c663d40daed6c5105af07b2d2d5c7bf
 workflow-type: tm+mt
 source-wordcount: '1102'
 ht-degree: 11%
@@ -24,9 +23,9 @@ Dieses Dokument behandelt wesentliche Konzepte im Zusammenhang mit der Verarbeit
 
 Es wird empfohlen, die folgenden [!DNL Experience Platform]-Dienste zu verstehen, bevor Sie dieses Handbuch lesen:
 
-* [[!DNL Privacy Service]](home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
+* [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [[!DNL Identity Service]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
-* [[!DNL Real-time Customer Profile]](../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
+* [[!DNL Real-time Customer Profile]](home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
