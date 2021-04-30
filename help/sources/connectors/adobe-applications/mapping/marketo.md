@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 translation-type: tm+mt
-source-git-commit: 8f03b2e8a10d57fcae77dedecdce0e0176ba04fd
+source-git-commit: 5d37c9664f60e9d962e866c6d480d2ef2e0bfff3
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 3%
+source-wordcount: '333'
+ht-degree: 4%
 
 ---
 
@@ -259,10 +259,6 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Personen {#persons}
 
-Wenn im [!DNL Profiles]-Dashboard der Plattform-Benutzeroberfläche der Wert der ID-Verknüpfung in der von Ihnen verwendeten Zusammenführungsrichtlinie auf `None` festgelegt ist, zeigt das Fenster &quot;Verknüpfte Identitäten&quot;nur das primäre Identitätsattribut an.
-
-Als Problemumgehung können Sie das ID-Heftfeld von `None` auf `Private graph` aktualisieren, um alle verknüpften Identitäten mit einem [!DNL Profile] anzuzeigen. Alternativ können Sie entweder eine neue Richtlinie für die Zusammenführung erstellen oder eine andere Richtlinie für die Zusammenführung verwenden, die einen auf `Private graph` festgelegten ID-Heftungswert enthält. Wenn Sie eine neue Richtlinie für die Zusammenführung erstellen oder eine andere Richtlinie für die Zusammenführung verwenden, müssen Sie sicherstellen, dass die Richtlinie denselben Schema-Typ enthält, der für den Personensatz [!DNL Marketo] verwendet wird. Weitere Informationen finden Sie im Handbuch [Richtlinien in der Benutzeroberfläche zusammenführen](../../../../profile/ui/merge-policies.md).
-
 | Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primär |
@@ -313,7 +309,7 @@ Als Problemumgehung können Sie das ID-Heftfeld von `None` auf `Private graph` a
 
 {style=&quot;table-layout:auto&quot;}
 
->[!TIP]
+>[!NOTE]
 >
 >Das `to_object('ECID',arrays_to_objects('id',explode(ecids)))`-Quellfeld ist ein berechnetes Feld, das mithilfe der Option [!UICONTROL Hinzufügen berechneten Feld] in der Plattform-Benutzeroberfläche hinzugefügt werden muss. Weitere Informationen finden Sie im Tutorial [Hinzufügen berechneter Felder](../../../../ingestion/tutorials/map-a-csv-file.md).
 
