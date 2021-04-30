@@ -6,10 +6,10 @@ topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung der Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 43%
+source-wordcount: '1389'
+ht-degree: 42%
 
 ---
 
@@ -63,7 +63,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 Zum Ausführen spezifischer Anfragen können zusätzliche Kopfzeilen erforderlich sein. Die richtigen Kopfzeilen werden in jedem der Beispiele in diesem Dokument angezeigt. Achten Sie besonders auf die Beispielanfragen, um dafür zu sorgen, dass alle erforderlichen Kopfzeilen enthalten sind.
 
-### Für Streaming-Segmentierung aktivierte Abfragetypen {#streaming-segmentation-query-types}
+### Für Streaming-Segmentierung aktivierte Abfragetypen  {#streaming-segmentation-query-types}
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Damit ein Segment mithilfe der Streaming-Segmentierung bewertet werden kann, mus
 | Nur Profil | Eine Segmentdefinition, die nur auf ein Profil-Attribut verweist. |
 | Eingehender Treffer, der sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profil-Attribute bezieht. |
 | Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Eine Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profil-Attribute verweist. |
-| Segment der Segmente | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. |
+| Segment der Segmente | Jede Segmentdefinition, die ein oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis:** Wenn ein Segmentsegment verwendet wird, erfolgt der Profil-Disqualifizierung  **alle 24 Stunden**. |
 | Mehrere Ereignis, die auf ein Profil verweisen | Eine Segmentdefinition, die auf mehrere Ereignis **innerhalb der letzten 24 Stunden** und (optional) verweist, verfügt über ein oder mehrere Profil-Attribute. |
 
 Eine Segmentdefinition wird für die Streaming-Segmentierung in den folgenden Szenarien **nicht** aktiviert:
