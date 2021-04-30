@@ -5,14 +5,14 @@ title: Erstellen eines Marketo Engage-Quellconnectors in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 description: In diesem Lernprogramm wird beschrieben, wie Sie einen Marketo Engage-Quellanschluss in der Benutzeroberfläche erstellen, um B2B-Daten in Adobe Experience Platform zu importieren.
+exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 translation-type: tm+mt
-source-git-commit: f12baaa9d4b37f1101792a4ae479b5a62893eb68
+source-git-commit: 5322adb4b3a244de92300e7ce9d942ad4b968454
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1388'
 ht-degree: 4%
 
 ---
-
 
 # (Beta) Erstellen Sie einen [!DNL Marketo Engage]-Quellanschluss in der Benutzeroberfläche
 
@@ -75,7 +75,7 @@ Um einen Datenflug mit einem vorhandenen Konto zu erstellen, wählen Sie **[!UIC
 
 Nachdem Sie Ihr [!DNL Marketo]-Konto erstellt haben, bietet der nächste Schritt eine Oberfläche, über die Sie [!DNL Marketo]-Datensätze untersuchen können.
 
-Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die 10 [!DNL Marketo]-Datensätze anzeigt. Eine vollständig funktionierende [!DNL Marketo]-Quellverbindung erfordert die Erfassung der neun verschiedenen Datensätze. Wenn Sie auch die Funktion [!DNL Marketo's] Kontobasiertes Marketing (ABM) verwenden, müssen Sie auch einen 10. Datenfeed erstellen, um den Datensatz [!UICONTROL Benannte Konten] zu erfassen.
+Die linke Hälfte der Oberfläche ist ein Ordnerbrowser, der die 10 [!DNL Marketo]-Datensätze anzeigt. Eine vollständig funktionierende [!DNL Marketo]-Quellverbindung erfordert die Erfassung der neun verschiedenen Datensätze. Wenn Sie auch die Kontobasierte Marketing-Funktion (ABM) verwenden, müssen Sie auch einen 10. Datenflug erstellen, um den Datensatz [!UICONTROL Benannte Konten] zu erfassen.[!DNL Marketo]
 
 >[!NOTE]
 >
@@ -85,15 +85,15 @@ Wählen Sie zuerst den Datensatz aus, den Sie erfassen möchten, und wählen Sie
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Zuordnen von Datenfeldern zu einem XDM-Schema
+## Schema der Plattform zuordnen[!DNL Marketo]
 
-Der Schritt [!UICONTROL Zuordnung] wird angezeigt und stellt eine Schnittstelle bereit, um den [!DNL Marketo]-Datensatz einem Platform-Datensatz zuzuordnen.
+Der Schritt [!UICONTROL Zuordnung] wird angezeigt und stellt eine Schnittstelle bereit, um [!DNL Marketo]-Schema der Plattform zuzuordnen.
 
 Wählen Sie einen Datensatz, in den eingehende Daten aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
 ### Vorhandenen Datensatz verwenden
 
-Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandenen Datensatz verwenden]** und klicken Sie dann auf das Dataset-Symbol.
+Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandener Datensatz]** und klicken Sie dann auf das Dataset-Symbol.
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -103,7 +103,7 @@ Das Dialogfeld **[!UICONTROL Datensatz auswählen]** wird angezeigt. Suchen Sie 
 
 ### Verwenden eines neuen Datensatzes
 
-Um Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuen Datensatz erstellen]** und geben Sie in die entsprechenden Felder einen Namen und eine Beschreibung für den Datensatz ein.
+Um Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie in die entsprechenden Felder einen Namen und eine Beschreibung für den Datensatz ein.
 
 Sie können nach einem Schema suchen, indem Sie dessen Namen in die Suchleiste **[!UICONTROL Schema auswählen]** eingeben. Sie können auch das Dropdownsymbol auswählen, um eine Liste der vorhandenen Schema anzuzeigen. Alternativ können Sie **[!UICONTROL Erweiterte Suche]** auswählen, um die Seite der vorhandenen Schema mit den entsprechenden Details aufzurufen.
 
@@ -144,7 +144,7 @@ Der Schritt [!UICONTROL Datenfelddetails] wird angezeigt, mit dem Sie einen Name
 
 ![dataflow-detail](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-Aktivieren Sie den Umschalter **[!UICONTROL Fehlerdiagnose]**, um die Generierung einer detaillierten Fehlermeldung für neu eingefügte Stapel zuzulassen, die Sie mit der API herunterladen können.
+Aktivieren Sie den Umschalter **[!UICONTROL Fehlerdiagnose]**, um die Generierung einer detaillierten Fehlermeldung für neu eingefügte Stapel zuzulassen, die Sie mit der API herunterladen können. Weitere Informationen finden Sie im Tutorial zum Abrufen der Fehlerdiagnose beim Abrufen von Daten[.](../../../../../ingestion/quality/error-diagnostics.md)
 
 ![Fehler](../../../../images/tutorials/create/marketo/errors.png)
 
@@ -160,7 +160,7 @@ Nachdem Sie die Datenflug-Details angegeben und den Fehlerschwellenwert auf max 
 
 Der Schritt **[!UICONTROL Überprüfen]** wird angezeigt, mit dem Sie Ihren neuen Datenpfad überprüfen können, bevor er erstellt wird. Details werden in den folgenden Kategorien gruppiert:
 
-* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+* **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quellentität und die Anzahl der Spalten innerhalb dieser Quellentität an.
 * **[!UICONTROL Zuweisen von Dataset- und Zuordnungsfeldern]**: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, das der Datensatz einhält.
 
 Nachdem Sie den Datenfluss überprüft haben, wählen Sie **[!UICONTROL Fertig stellen]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
