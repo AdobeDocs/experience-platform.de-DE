@@ -7,9 +7,9 @@ type: Tutorial
 description: In diesem Lernprogramm werden die Schritte zum Abrufen von Streaming-Daten und zum Einbringen dieser Daten in die Plattform mithilfe von Quellschnittstellen und APIs erläutert.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f35c59843451267d0a054cfd594aea3e5d5ea8c6
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1526'
 ht-degree: 22%
 
 ---
@@ -202,7 +202,6 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
-
 ## Zielgruppe-XDM-Schema {#target-schema} erstellen
 
 Damit die Quelldaten in [!DNL Platform] verwendet werden können, muss ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein [!DNL Platform]-Datensatz erstellt, in dem die Quelldaten enthalten sind. Diese Zielgruppe XDM-Schema erweitert auch die XDM [!DNL Individual Profile]-Klasse.
@@ -334,6 +333,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -345,15 +345,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `schemaRef.id` | Die ID des XDM-Schemas der Zielgruppe. |
-| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
+| `name` | Der Name des zu erstellenden Datensatzes. |
+| `schemaRef.id` | Der URI `$id` für das XDM-Schema, auf dem der Datensatz basiert. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API. |
 
 **Antwort**
 
