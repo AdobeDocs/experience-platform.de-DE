@@ -5,7 +5,7 @@ description: 'Der Arbeitsbereich "Ziele"besteht aus vier Bereichen: "Katalog", "
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste "Ziele"aus, um auf den Zielarbeitsbereich zuzugreifen.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 translation-type: tm+mt
-source-git-commit: cc432f7c07f0f82deec653864154016638ec8138
+source-git-commit: eaa4a7efc248104d823267eca574f2eca16edc3f
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 21%
@@ -38,7 +38,7 @@ Die [!DNL Platform]-Benutzeroberfläche bietet verschiedene Such- und Filteropti
 Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!UICONTROL Activate]**-Steuerelement und ein sekundäres Steuerelement, das weitere Optionen aufruft. Diese Kontrollen werden nachfolgend beschrieben:
 
 | Kontrolle | Beschreibung |
----------|----------
+|---------|----------|
 | [!UICONTROL Konfigurieren von] | Ermöglicht Ihnen das Erstellen einer Verbindung mit dem Ziel. |
 | [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
 | [!UICONTROL Ansichten-Konto] | Ansicht der Konten, die Sie für ein Ziel verbunden haben. |
@@ -72,7 +72,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschreibung |
----------|----------
+|---------|----------|
 | Name | Der Name, den Sie für den Aktivierungsfluss zu diesem Ziel angegeben haben. Dieselbe Spalte enthält zwei Steuerelemente: [!UICONTROL Aktivieren Sie ] und [!UICONTROL Löschen Sie das Ziel]. |
 | [!UICONTROL Letzter Flusslaufstatus] | Der Status des letzten Datenflusses wird ausgeführt. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
 | [!UICONTROL Letzter Flusslaufdatum] | Zeit und Datum, an dem die letzte Ausführung des Datenflusses stattgefunden hat. Weitere Informationen zu Datenflug-Ansichten finden Sie unter [Zieldetails](destination-details-page.md). |
