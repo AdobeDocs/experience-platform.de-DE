@@ -7,10 +7,10 @@ type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 66%
+source-wordcount: '1349'
+ht-degree: 65%
 
 ---
 
@@ -290,9 +290,16 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 und ein Array zurück, das di
 ]
 ```
 
+
+## Aufbauen einer Streaming-Verbindung
+
+Nachdem Sie Ihr Schema und Ihr Dataset erstellt haben, müssen Sie eine Streaming-Verbindung erstellen, um Ihre Daten zu erfassen.
+
+Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
+
 ## Zeitreihendaten an die Streaming-Verbindung erfassen
 
-Mit der vorhandenen Dataset- und Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Zeitreihendaten innerhalb von [!DNL Platform] zu erfassen.
+Mit dem erstellten Dataset, der Streaming-Verbindung und dem Dataflow können Sie XDM-formatierte JSON-Datensätze erfassen, um Zeitreihendaten innerhalb von [!DNL Platform] zu erfassen.
 
 **API-Format**
 
@@ -326,7 +333,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -413,7 +420,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zum neu gestreamen [!
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | Die Kennung der zuvor erstellten Streaming-Verbindung. |
+| `{CONNECTION_ID}` | Die `inletId` der zuvor erstellten Streaming-Verbindung. |
 | `xactionId` | Eine eindeutige Kennung, die für den soeben gesendeten Datensatz Server-seitig generiert wurde. Diese Kennung hilft Adobe bei der Verfolgung des Lebenszyklus dieses Datensatzes in verschiedenen Systemen sowie beim Debugging. |
 | `receivedTimeMs`: Ein Zeitstempel (Epoche in Millisekunden), der angibt, wann die Anfrage empfangen wurde. |
 | `synchronousValidation.status` | Da der Abfrageparameter `synchronousValidation=true` hinzugefügt wurde, wird dieser Wert angezeigt. Wenn die Validierung erfolgreich war, lautet der Status `pass`. |
@@ -445,7 +452,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
