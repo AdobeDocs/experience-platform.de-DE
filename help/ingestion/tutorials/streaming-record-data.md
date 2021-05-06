@@ -7,12 +7,13 @@ type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 544eeb3a27d0b218885e3000deb214f21c8e9fcd
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 62%
+source-wordcount: '1168'
+ht-degree: 61%
 
 ---
+
 
 # Streamen von Datensatzdaten mit Streaming Ingestion APIs
 
@@ -23,10 +24,8 @@ In diesem Lernprogramm erfahren Sie, wie Sie mit der Verwendung von Streaming-AP
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
+   - [Entwicklerhandbuch](../../xdm/api/getting-started.md) zur Schema-Registrierung: Ein umfangreiches Handbuch, das alle verfügbaren Endpunkte der  [!DNL Schema Registry] API und Anleitungen zum Aufrufen dieser Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Entwicklerhandbuch](../../xdm/api/getting-started.md) zur Schema-Registrierung: Ein umfangreiches Handbuch, das alle verfügbaren Endpunkte der  [!DNL Schema Registry] API und Anleitungen zum Aufrufen dieser Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
-
-Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
 
@@ -264,6 +263,12 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 und ein Array zurück, das di
 ]
 ```
 
+## Aufbauen einer Streaming-Verbindung
+
+Nachdem Sie Ihr Schema und Ihr Dataset erstellt haben, können Sie eine Streaming-Verbindung erstellen
+
+Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
+
 ## Erfassen von Datensatzdaten zur Streaming-Verbindung {#ingest-data}
 
 Mit der vorhandenen Dataset- und Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Datensatzdaten in [!DNL Platform] zu erfassen.
@@ -276,7 +281,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Der `id`-Wert der zuvor erstellten Streaming-Verbindung. |
+| `{CONNECTION_ID}` | Der `inletId`-Wert der zuvor erstellten Streaming-Verbindung. |
 | `synchronousValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. |
 
 **Anfrage**
