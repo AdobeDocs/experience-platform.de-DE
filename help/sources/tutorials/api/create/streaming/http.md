@@ -7,10 +7,10 @@ type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
 workflow-type: tm+mt
-source-wordcount: '883'
-ht-degree: 39%
+source-wordcount: '1090'
+ht-degree: 31%
 
 ---
 
@@ -27,6 +27,8 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+
+Zum Erstellen einer Streaming-Verbindung benötigen Sie außerdem ein Zielgruppe-XDM-Schema und ein Dataset. Um diese zu erstellen, lesen Sie bitte das Tutorial zu [Streaming-Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder das Tutorial zu [Streaming-Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
 
@@ -54,9 +56,9 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 - Content-Type: application/json
 
-## Verbindung erstellen
+## Basisverbindung erstellen
 
-Eine Verbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-Erfassungs-APIs kompatibel zu machen. Beim Erstellen einer Verbindung haben Sie die Möglichkeit, eine nicht authentifizierte und eine authentifizierte Verbindung zu erstellen.
+Eine Basisverbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-APIs kompatibel zu machen. Beim Erstellen einer Basisverbindung haben Sie die Möglichkeit, eine nicht authentifizierte und eine authentifizierte Verbindung zu erstellen.
 
 ### Nicht authentifizierte Verbindung
 
@@ -95,7 +97,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | Eigenschaft | Beschreibung |
@@ -189,7 +191,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Ve
 
 ## Abrufen der Streaming-Endpunkt-URL
 
-Mit der erstellten Verbindung können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen.
+Mit der erstellten Basisverbindung können Sie jetzt Ihre Streaming-Endpunkt-URL abrufen.
 
 **API-Format**
 
@@ -247,6 +249,142 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## Erstellen einer Quellverbindung
+
+Nach dem Erstellen der Basisverbindung müssen Sie eine Quellverbindung erstellen. Beim Erstellen einer Quellverbindung benötigen Sie den `id`-Wert aus der erstellten Basisverbindung.
+
+**API-Format**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**Anfrage**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt HTTP-Status 201 mit detaillierten Angaben zur neu erstellten Quellverbindung zurück, einschließlich der eindeutigen Kennung (`id`).
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## Erstellen einer Zielgruppe-Verbindung
+
+Nach dem Erstellen der Quellverbindung können Sie eine Zielgruppe erstellen. Beim Erstellen der Zielgruppe benötigen Sie den `id`-Wert Ihres zuvor erstellten Datensatzes.
+
+**API-Format**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**Anfrage**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Zielgruppe-Verbindung zurück, einschließlich der eindeutigen Kennung (`id`).
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## Datenfluss erstellen
+
+Nachdem Sie die Quell- und Zielgruppe-Verbindungen erstellt haben, können Sie jetzt einen Datenflug erstellen. Der Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST an den `/flows`-Endpunkt anfordern.
+
+**API-Format**
+
+```http
+POST /flows
+```
+
+**Anfrage**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zum neu erstellten Datenpfad zurück, einschließlich der eindeutigen Kennung (`id`).
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
