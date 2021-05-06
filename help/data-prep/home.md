@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -35,6 +35,8 @@ Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Ha
 ## Zuordnungssatz
 
 Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, werden kollektiv als Zuordnungssatz bezeichnet. Im Rahmen jedes Datenflusses wird ein einzelner Zuordnungssatz erstellt. Ein Zuordnungssatz ist ein integraler Bestandteil der Datenflüsse und wird im Rahmen der Datenflüsse erstellt, bearbeitet und überwacht.
+
+Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung der Felder in einem Zuordnungssatz, finden Sie im Handbuch [Zuordnungssatz](./mapping-set.md). Um zu erfahren, wie Sie einen Zuordnungssatz erstellen und andere API-Aufrufe im Zusammenhang mit Zuordnungssätzen verwenden, lesen Sie bitte den Abschnitt &quot;Zuordnungssatz&quot;im [Entwicklerhandbuch](./api/mapping-set.md).
 
 ## Verarbeitung von Datenformaten
 
