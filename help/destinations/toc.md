@@ -5,9 +5,9 @@ user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 feature: Ziele
 translation-type: tm+mt
-source-git-commit: 020192469127e8f25f0d61e33b4b5dc60da6b57d
+source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '474'
 ht-degree: 55%
 
 ---
@@ -104,9 +104,9 @@ ht-degree: 55%
       * [Übersicht über die Adobe Experience Platform Launch-Erweiterung](./catalog/launch-extensions/overview.md)
    * Ziele für die mobile Interaktion {#mobile-engagement}
       * [Ziele für die mobile Interaktion - Übersicht](./catalog/mobile-engagement/overview.md)
-      * [Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
-      * [Verbindung zu Airship Tags](./catalog/mobile-engagement/airship-tags.md)
-      * [Verbindung bremsen](./catalog/mobile-engagement/braze.md)
+      * [(Beta) Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
+      * [(Beta) Verbindung zu Airship Tags](./catalog/mobile-engagement/airship-tags.md)
+      * [(Beta) Braze-Verbindung](./catalog/mobile-engagement/braze.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [Adobe Target-Erweiterung](./catalog/personalization/adobe-target.md)
