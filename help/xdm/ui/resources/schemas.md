@@ -6,10 +6,10 @@ description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas 
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1378'
-ht-degree: 1%
+source-wordcount: '1410'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +19,11 @@ Dieses Handbuch bietet einen Überblick darüber, wie Sie XDM-Schema (Experience
 
 >[!IMPORTANT]
 >
->XDM-Schema sind extrem anpassbar. Daher können die Schritte zum Erstellen eines Schemas je nach Art der Daten, die das Schema erfassen soll, variieren. Daher umfasst dieses Dokument nur die grundlegenden Interaktionen, die Sie mit Schemas in der Benutzeroberfläche durchführen können, und schließt zugehörige Schritte wie das Anpassen von Klassen, Mixins, Datentypen und Feldern aus.
+>XDM-Schema sind extrem anpassbar. Daher können die Schritte zum Erstellen eines Schemas je nach Art der Daten, die das Schema erfassen soll, variieren. Daher umfasst dieses Dokument nur die grundlegenden Interaktionen, die Sie mit Schemas in der Benutzeroberfläche durchführen können, und schließt zugehörige Schritte wie das Anpassen von Klassen, Schema-Feldgruppen, Datentypen und Feldern aus.
 >
 >Um eine vollständige Übersicht über den Erstellungsprozess für Schemas zu erhalten, folgen Sie dem [Tutorial zur Erstellung von Schemas](../../tutorials/create-schema-ui.md), um ein vollständiges Beispielbeispiel zu erstellen und sich mit den zahlreichen Funktionen von [!DNL Schema Editor] vertraut zu machen.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieses Handbuch erfordert ein funktionierendes Verständnis des XDM-Systems. Eine Einführung in die Rolle von XDM innerhalb des Experience Platform-Ökosystems finden Sie in der [XDM-Übersicht](../../home.md) und in den [Grundlagen der Schema-Komposition](../../schema/composition.md), um einen Überblick darüber zu erhalten, wie Schema aufgebaut werden.
 
@@ -37,7 +37,7 @@ Wenn Sie eine Klasse auswählen, wird [!DNL Schema Editor] angezeigt und die (vo
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-Sie können jetzt Beginn zum Erstellen der Struktur des Schemas mit [mixins](#add-mixins) hinzufügen.
+Sie können jetzt Beginn beim Aufbau der Struktur des Schemas durch [Hinzufügen von Schema-Feldgruppen](#add-field-groups) erstellen.
 
 ## Bearbeiten eines vorhandenen Schemas {#edit}
 
@@ -53,23 +53,23 @@ Um ein vorhandenes Schema zu bearbeiten, wählen Sie die Registerkarte **[!UICON
 >
 >Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um das Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch [XDM-Ressourcen](../explore.md) zu erkunden.
 
-Wenn Sie ein Schema auswählen, wird [!DNL Schema Editor] mit der auf der Arbeitsfläche angezeigten Struktur des Schemas angezeigt. Sie können nun [Mixins](#add-mixins) zum Schema, [Anzeigenamen für Felder bearbeiten](#display-names) oder [vorhandene benutzerdefinierte Mixins bearbeiten](./mixins.md#edit), wenn das Schema solche verwendet.
+Wenn Sie ein Schema auswählen, wird [!DNL Schema Editor] mit der auf der Arbeitsfläche angezeigten Struktur des Schemas angezeigt. Sie können dem Schema nun [Feldgruppen](#add-field-groups), [Anzeigenamen bearbeiten](#display-names) oder [bestehende benutzerspezifische Feldgruppen bearbeiten](./field-groups.md#edit) hinzufügen, wenn das Schema welche verwendet.
 
-## Hinzufügen von Mixins zu einem Schema {#add-mixins}
+## hinzufügen von Feldgruppen zu einem Schema {#add-field-groups}
 
 >[!NOTE]
 >
->In diesem Abschnitt wird beschrieben, wie Sie einem Schema vorhandene Mixins hinzufügen. Wenn Sie ein neues benutzerdefiniertes Mixin erstellen möchten, lesen Sie stattdessen das Handbuch [Erstellen und Bearbeiten von Mixins](./mixins.md#create).
+>In diesem Abschnitt wird beschrieben, wie Sie einem Schema vorhandene Feldgruppen hinzufügen. Wenn Sie eine neue benutzerspezifische Feldgruppe erstellen möchten, lesen Sie stattdessen das Handbuch [Feldgruppen erstellen und bearbeiten](./field-groups.md#create).
 
-Nachdem Sie ein Schema innerhalb von [!DNL Schema Editor] geöffnet haben, können Sie dem Schema Felder mithilfe von mixins hinzufügen. Wählen Sie zum Beginn **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Mixins]** in der linken Leiste aus.
+Nachdem Sie ein Schema innerhalb von [!DNL Schema Editor] geöffnet haben, können Sie mithilfe von Feldgruppen Felder zum Schema hinzufügen. Wählen Sie zum Beginn **[!UICONTROL Hinzufügen]** in der linken Leiste neben **[!UICONTROL Feldgruppen]** aus.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-Es wird ein Dialogfeld mit einer Liste von Mixins angezeigt, die Sie für das Schema auswählen können. Da Mixins nur mit einer Klasse kompatibel sind, werden nur die Mixins aufgelistet, die mit der ausgewählten Klasse des Schemas verknüpft sind. Standardmäßig werden die aufgelisteten Mixins nach ihrer Beliebtheit bei der Verwendung innerhalb Ihres Unternehmens sortiert.
+Es wird ein Dialogfeld mit einer Liste von Feldgruppen angezeigt, die Sie für das Schema auswählen können. Da Feldgruppen nur mit einer Klasse kompatibel sind, werden nur die Feldgruppen aufgelistet, die mit der ausgewählten Klasse des Schemas verknüpft sind. Standardmäßig werden die aufgelisteten Feldgruppen nach der Beliebtheit der Verwendung in Ihrem Unternehmen sortiert.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-Wenn Sie die allgemeine Aktivität oder den Geschäftsbereich der Mixin-Felder kennen, die Sie hinzufügen möchten, wählen Sie in der linken Leiste eine oder mehrere der vertikalen Kategorien aus, um die angezeigte Liste der Mixins zu filtern.
+Wenn Sie die allgemeine Aktivität oder den Geschäftsbereich der hinzuzufügenden Felder kennen, wählen Sie in der linken Leiste mindestens eine der vertikalen Kategorien aus, um die angezeigte Liste der Feldgruppen zu filtern.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
@@ -77,25 +77,25 @@ Wenn Sie die allgemeine Aktivität oder den Geschäftsbereich der Mixin-Felder k
 >
 >Weitere Informationen zu Best Practices für die branchenspezifische Datenmodellierung in XDM finden Sie in der Dokumentation zu [Industrie-Datenmodellen](../../schema/industries/overview.md).
 
-Sie können auch die Suchleiste verwenden, um die gewünschte Mischung zu finden. Mixins, deren Name mit der Abfrage übereinstimmt, werden oben in der Liste angezeigt. Unter **[!UICONTROL Standardfelder]** werden Mixins angezeigt, die Felder enthalten, die die gewünschten Datenattribute beschreiben.
+Sie können auch die Suchleiste verwenden, um die gewünschte Feldgruppe zu finden. Feldgruppen, deren Name mit der Abfrage übereinstimmt, werden oben in der Liste angezeigt. Unter **[!UICONTROL Standardfelder]** werden Feldgruppen angezeigt, die Felder enthalten, die die gewünschten Datenattribute beschreiben.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
-Aktivieren Sie das Kontrollkästchen neben dem Namen der Mischung, die Sie dem Schema hinzufügen möchten. Sie können mehrere Mixins aus der Liste auswählen, wobei jedes ausgewählte Mixin in der rechten Leiste angezeigt wird.
+Aktivieren Sie das Kontrollkästchen neben dem Namen der Feldgruppe, die Sie dem Schema hinzufügen möchten. Sie können mehrere Feldgruppen aus der Liste auswählen, wobei jede Feldgruppe in der rechten Leiste angezeigt wird.
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->Für alle aufgelisteten Mixins können Sie den Mauszeiger über das Informationssymbol (![](../../images/ui/resources/schemas/info-icon.png)) halten oder sich auf das Informationssymbol () konzentrieren, um eine kurze Beschreibung der Art der von dem Mixin erfassten Daten Ansicht. Sie können auch das Symbol &quot;Vorschau&quot;(![](../../images/ui/resources/schemas/preview-icon.png)) auswählen, um die Feldstruktur des Mixins Ansicht, bevor Sie es dem Schema hinzufügen.
+>Für alle aufgelisteten Feldgruppen können Sie den Mauszeiger über das Informationssymbol (![](../../images/ui/resources/schemas/info-icon.png)) halten oder sich auf das Informationssymbol () konzentrieren, um eine kurze Beschreibung der von der Feldgruppe erfassten Daten Ansicht. Sie können auch das Feldsymbol (![](../../images/ui/resources/schemas/preview-icon.png)) auswählen, um die Feldstruktur Ansicht, die die Feldgruppe bereitstellt, bevor Sie sie zum Schema hinzufügen.
 
-Nachdem Sie Ihre Mixins ausgewählt haben, wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, um sie dem Schema hinzuzufügen.
+Nachdem Sie die Feldgruppen ausgewählt haben, wählen Sie **[!UICONTROL Hinzufügen Feldgruppen]** aus, um sie dem Schema hinzuzufügen.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-Die Felder [!DNL Schema Editor] werden mit den von Mixin bereitgestellten Feldern auf der Arbeitsfläche erneut angezeigt.
+Die Felder [!DNL Schema Editor] werden mit den von der Feldgruppe bereitgestellten Feldern auf der Arbeitsfläche erneut angezeigt.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Aktivieren eines Schemas für das Echtzeit-Kundenprofil {#profile}
 
@@ -127,11 +127,11 @@ Das Schema ist jetzt für die Verwendung im Echtzeit-Kundenkonto-Profil aktivier
 
 ## Anzeigenamen für Schema-Felder {#display-names} bearbeiten
 
-Nachdem Sie einem Schema eine Klasse zugewiesen und Mixins hinzugefügt haben, können Sie die Anzeigenamen der Felder eines Schemas bearbeiten, unabhängig davon, ob diese Felder von Standard- oder benutzerdefinierten XDM-Ressourcen bereitgestellt wurden.
+Nachdem Sie einem Schema eine Klasse zugewiesen und Feldgruppen hinzugefügt haben, können Sie die Anzeigenamen der Felder eines Schemas bearbeiten, unabhängig davon, ob diese Felder von Standard- oder benutzerdefinierten XDM-Ressourcen bereitgestellt wurden.
 
 >[!NOTE]
 >
->Beachten Sie, dass die Anzeigenamen von Feldern, die zu Standardklassen oder Mixins gehören, nur im Kontext eines bestimmten Schemas bearbeitet werden können. Das heißt, dass eine Änderung des Anzeigenamens eines Standardfelds in einem Schema keine Auswirkungen auf andere Schema hat, die dieselbe Klasse oder dasselbe Mixin verwenden.
+>Beachten Sie, dass die Anzeigenamen von Feldern, die zu Standardklassen oder Feldgruppen gehören, nur im Kontext eines bestimmten Schemas bearbeitet werden können. Das heißt, dass eine Änderung des Anzeigenamens eines Standardfelds in einem Schema keine Auswirkungen auf andere Schema hat, die dieselbe Klasse oder Feldgruppe verwenden.
 
 Um den Anzeigenamen eines Schemas zu bearbeiten, wählen Sie das Feld auf der Arbeitsfläche aus. Geben Sie in der rechten Leiste unter **[!UICONTROL Anzeigename]** den neuen Namen ein.
 
@@ -147,7 +147,7 @@ Sie können die Klasse eines Schemas jederzeit während des anfänglichen Kompos
 
 >[!WARNING]
 >
->Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
+>Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Feldgruppen sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
 
 Um eine Klasse neu zuzuweisen, wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Zuweisen]** aus.
 
@@ -167,7 +167,7 @@ Nachdem Sie die Klassenänderung bestätigt haben, wird die Arbeitsfläche zurü
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Plattform-Benutzeroberfläche behandelt. Es wird dringend empfohlen, das Lernprogramm [Erstellung von Schemas](../../tutorials/create-schema-ui.md) für einen umfassenden Arbeitsablauf zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu überprüfen, einschließlich der Erstellung benutzerdefinierter Mixins und Datentypen für individuelle Anwendungsfälle.
+In diesem Dokument wurden die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Plattform-Benutzeroberfläche behandelt. Es wird dringend empfohlen, das Lernprogramm [Erstellung von Schemas](../../tutorials/create-schema-ui.md) für einen umfassenden Arbeitsablauf zum Erstellen eines vollständigen Schemas in der Benutzeroberfläche zu überprüfen, einschließlich der Erstellung benutzerdefinierter Feldgruppen und Datentypen für individuelle Anwendungsfälle.
 
 Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schema] finden Sie unter [[!UICONTROL Schema] Arbeitsbereichsübersicht](../overview.md).
 
