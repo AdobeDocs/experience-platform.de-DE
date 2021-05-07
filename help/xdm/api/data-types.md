@@ -5,16 +5,16 @@ title: Datentyp-API-Endpunkt
 description: Mit dem Endpunkt /datatypes in der Schema Registry API können Sie XDM-Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 translation-type: tm+mt
-source-git-commit: 610ce5c6dca5e7375b941e7d6f550382da10ca27
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1151'
 ht-degree: 13%
 
 ---
 
 # Datentypendpunkt
 
-Datentypen werden in Klassen oder Mixins genauso wie einfache Literalfelder als Referenztypen verwendet, wobei der Hauptunterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Ähnlich wie Mixins, da sie die einheitliche Verwendung einer Mehrfeldstruktur ermöglichen, sind die Datentypen flexibler, da sie an jeder beliebigen Stelle in der Schema-Struktur enthalten sein können, während Mixins nur auf der Stammebene hinzugefügt werden können. Mit dem `/datatypes`-Endpunkt in der [!DNL Schema Registry]-API können Sie Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Datentypen werden in Klassen oder Feldgruppen als Referenztypen auf dieselbe Weise wie einfache Literalfelder verwendet, wobei der Hauptunterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Die Datentypen sind ähnlich wie Feldgruppen, da sie eine einheitliche Verwendung einer mehrfeldigen Struktur ermöglichen, flexibler, da sie an jeder beliebigen Stelle in der Schema-Struktur enthalten sein können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Mit dem `/datatypes`-Endpunkt in der [!DNL Schema Registry]-API können Sie Datentypen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -477,7 +477,7 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 
 Die folgende Beispielanforderung aktualisiert das `description` eines vorhandenen Datentyps und fügt ein neues `floorSize`-Feld hinzu.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang durchgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
