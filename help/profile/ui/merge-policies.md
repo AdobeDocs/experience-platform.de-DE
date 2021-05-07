@@ -6,9 +6,9 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3017'
+source-wordcount: '3021'
 ht-degree: 8%
 
 ---
@@ -49,15 +49,15 @@ Während Profil-Datensätze in die Experience Platform aufgenommen werden, wird 
 
 Gelegentlich kann es zu Anwendungsfällen kommen, bei denen ein benutzerdefinierter Zeitstempel bereitgestellt werden muss und bei denen die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss. Dazu gehören beispielsweise das Aufstocken von Daten oder das Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn die Datensätze nicht mehr in der richtigen Reihenfolge angezeigt werden.
 
-Um einen benutzerdefinierten Zeitstempel zu verwenden, muss das **[!UICONTROL Externe Quellsystem-Audit-Details-Mixin]** Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten Feld `lastUpdatedDate` erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze über Datensätze hinweg zusammenzuführen. Wenn `lastUpdatedDate` nicht vorhanden oder nicht gefüllt ist, verwendet die Plattform weiterhin den Systemzeitstempel.
+Um einen benutzerdefinierten Zeitstempel verwenden zu können, muss die Feldgruppe **[!UICONTROL Externe Quellsystem-Prüfdetails] Schema** zu Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten Feld `lastUpdatedDate` erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze über Datensätze hinweg zusammenzuführen. Wenn `lastUpdatedDate` nicht vorhanden oder nicht gefüllt ist, verwendet die Plattform weiterhin den Systemzeitstempel.
 
 >[!NOTE]
 >
 >Sie müssen sicherstellen, dass der Zeitstempel `lastUpdatedDate` aufgefüllt wird, wenn ein Update für denselben Datensatz vorgenommen wird.
 
-Im folgenden Screenshot werden die Felder im [!UICONTROL Externe Quellsystem-Prüfdetails-Mixin] angezeigt. Eine schrittweise Anleitung zum Arbeiten mit Schemas in der Plattform-Benutzeroberfläche, einschließlich des Hinzufügens von Mixins zu Schemas, finden Sie im [Lernprogramm zum Erstellen eines Schemas mit der Benutzeroberfläche](../../xdm/tutorials/create-schema-ui.md).
+Im folgenden Screenshot werden die Felder in der Feldgruppe [!UICONTROL Audit-Details des externen Quellsystems] angezeigt. Eine schrittweise Anleitung zum Arbeiten mit Schemas in der Plattform-Benutzeroberfläche, einschließlich des Hinzufügens von Feldgruppen zu Schemas, finden Sie im [Lernprogramm zum Erstellen eines Schemas mit der Benutzeroberfläche](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der API finden Sie im Abschnitt [Richtlinie-Endpunkt zusammenführen zu benutzerdefinierten Zeitstempeln](../api/merge-policies.md#custom-timestamps).
 
