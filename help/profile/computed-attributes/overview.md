@@ -6,9 +6,9 @@ type: Documentation
 description: Berechnete Attribute sind Funktionen zum Aggregat von Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '730'
 ht-degree: 41%
 
 ---
@@ -55,4 +55,4 @@ Schema-Attribute, die bereits in einem Segmentdefinitionssegment verwendet, spä
 
 Da keine Abhängigkeit erkannt wurde, wird das zugehörige berechnete Attribut von der Experience Platform nicht automatisch bei jeder Bewertung der Segmentdefinition ausgewertet.
 
-Alternativ kann die Erstellung berechneter Attribute über eine bestimmte Mischung verwaltet werden, die neue berechnete Attribute hinzufügt, die nicht mit vorhandenen Attributen in Konflikt stehen. Eine andere Möglichkeit besteht darin, das Segment einfach mit der richtigen Abhängigkeitsverfolgung für die neuen berechneten Attribute neu zu erstellen.
+Alternativ kann die Erstellung von berechneten Attributen über eine bestimmte Feldgruppe für Schemas verwaltet werden, die neue berechnete Attribute hinzufügt, die nicht mit vorhandenen Attributen in Konflikt stehen. Eine andere Möglichkeit besteht darin, das Segment einfach mit der richtigen Abhängigkeitsverfolgung für die neuen berechneten Attribute neu zu erstellen.
