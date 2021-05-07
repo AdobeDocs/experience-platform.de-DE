@@ -6,16 +6,16 @@ description: Dieser Überblick beschreibt die wichtigsten Funktionen des Schemas
 topic-legacy: user guide
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '296'
 ht-degree: 3%
 
 ---
 
 # [!UICONTROL Übersicht über ] SchemasUI
 
-Mit dem Arbeitsbereich [!UICONTROL Schemas] in der Adobe Experience Platform-Benutzeroberfläche können Sie Erlebnisdatenmodellressourcen (XDM) verwalten, einschließlich Schemas, Klassen, Mixins und Datentypen. Sie können die wichtigsten Ressourcen, die durch die Adobe bereitgestellt werden, Ansichten durchführen und benutzerdefinierte Ressourcen und Schema für Ihr Unternehmen erstellen.
+Der Arbeitsbereich [!UICONTROL Schemas] in der Adobe Experience Platform-Benutzeroberfläche ermöglicht Ihnen die Verwaltung von XDM-Ressourcen (Experience Data Model), einschließlich Schemas, Klassen, Schema-Feldgruppen und Datentypen. Sie können die wichtigsten Ressourcen, die durch die Adobe bereitgestellt werden, Ansichten durchführen und benutzerdefinierte Ressourcen und Schema für Ihr Unternehmen erstellen.
 
 Um auf den Arbeitsbereich in der Plattform-Benutzeroberfläche zuzugreifen, wählen Sie in der linken Leiste **[!UICONTROL Schema]** aus.
 
@@ -33,12 +33,12 @@ Der Arbeitsbereich [!UICONTROL Schemas] bietet leistungsstarke Tools zum Erstell
 
 * [Schemas](./resources/schemas.md)
 * [Klassen](./resources/classes.md)
-* [Mixins](./resources/mixins.md)
+* [Feldergruppen](./resources/field-groups.md)
 * [Datentypen](./resources/data-types.md)
 
 ## Definieren von XDM-Feldern
 
-Klassen, Mixins und Datentypen tragen alle Felder zu einem Schema bei. Sie können beim Hinzufügen von Feldern zu diesen Ressourcen aus einer Liste von Standardfeldtypen auswählen und auch spezielle Felder für bestimmte Anwendungsfälle definieren. Weitere Informationen finden Sie im Handbuch [Definieren von XDM-Feldern in der Benutzeroberfläche](./fields/overview.md).
+Klassen, Feldgruppen und Datentypen tragen alle Felder zu einem Schema bei. Sie können beim Hinzufügen von Feldern zu diesen Ressourcen aus einer Liste von Standardfeldtypen auswählen und auch spezielle Felder für bestimmte Anwendungsfälle definieren. Weitere Informationen finden Sie im Handbuch [Definieren von XDM-Feldern in der Benutzeroberfläche](./fields/overview.md).
 
 ## Nächste Schritte
 
