@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;Mixin;Mixin;Mixins;Mixins;Datentyp;Datentypen;Datentypen;Datentyp;Datenentwurf;Schema-Design;Datentyp;Datentyp;Datentyp;Schema;Schemas;Schema-Design;Map;Map;Map;
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;Schema;Feldgruppe;Feldgruppen;Feldgruppen;Feldgruppen;Datentyp;Datentypen;Datentypen;Datentyp;Schema-Design;Datentyp;Datentyp;Datentyp;Datentyp;Schema;Schemas;Schema-Design;Landkarte;Landkarte;Landkarte
 solution: Experience Platform
 title: Einschränkungen des XDM-Feldtyps
 topic-legacy: overview
 description: Eine Referenz für Feldtypeinschränkungen im Experience Data Model (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1094'
 ht-degree: 18%
 
 ---
@@ -19,9 +19,9 @@ In Experience Data Model-(XDM-)Schemas beschränkt der Feldtyp, welche Daten das
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schema-Komposition](./composition.md), um eine Einführung in XDM-Schemas, -Klassen und -Mixins zu erhalten.
+Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schema-Komposition](./composition.md), um eine Einführung in XDM-Schemas, -Klassen und -Schema-Feldgruppen zu erhalten.
 
-Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, sollten Sie unbedingt mit dem [Schema Registry-Entwicklerhandbuch](../api/getting-started.md) Beginn haben, um zu erfahren, wie Mixins und Datentypen erstellt werden, die Ihre benutzerdefinierten Felder einschließen. Wenn Sie die Benutzeroberfläche für die Experience Platform verwenden, um Ihre Schema zu erstellen, lesen Sie das Handbuch zu [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md), um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Mixins und Datentypen definieren.
+Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, sollten Sie unbedingt mit dem [Schema Registry-Entwicklerhandbuch](../api/getting-started.md) Beginn haben, um zu erfahren, wie Sie Feldgruppen und Datentypen erstellen, die Ihre benutzerdefinierten Felder einschließen. Wenn Sie die Benutzeroberfläche für die Experience Platform verwenden, um Ihre Schema zu erstellen, lesen Sie das Handbuch zu [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md), um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerspezifischen Feldgruppen und Datentypen definieren.
 
 ## Basisstruktur und Beispiele
 
@@ -214,7 +214,7 @@ Alle XDM-Felder werden mit den standardmäßigen Einschränkungen [JSON-Schema](
 
 In der folgenden Tabelle sind die entsprechenden Formatierungen zur Definition verschiedener Feldtypen, einschließlich derjenigen mit optionalen Eigenschaften, aufgeführt. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung für [Erstellen einer Mischung](../api/mixins.md#create) oder [zum Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
+Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anforderung für [Erstellen einer Feldgruppe](../api/field-groups.md#create) oder [zum Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
 
 <table style="table-layout:auto">
   <tr>
