@@ -6,14 +6,21 @@ description: Mit dem /mixins-Endpunkt in der Schema Registry API können Sie XDM
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 13%
+source-wordcount: '1193'
+ht-degree: 12%
 
 ---
 
-# Mixins-Endpunkt
+
+# Mixins-Endpunkt (nicht mehr unterstützt)
+
+>[!IMPORTANT]
+>
+>Mixins wurden in Schema-Feldgruppen umbenannt. Daher wurde der `/mixins`-Endpunkt zugunsten des `/fieldgroups`-Endpunkts aufgegeben.
+>
+>`/mixins` wird weiterhin als Legacy-Endpunkt beibehalten. Es wird jedoch dringend empfohlen, `/fieldgroups` für neue Implementierungen der Schema Registry-API in Ihren Experience-Anwendungen zu verwenden. Weitere Informationen finden Sie im Endpunktleitfaden [Feldgruppen](./field-groups.md).
 
 Mixins sind wiederverwendbare Komponenten, die einen oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine einzelne Person, eine Postanschrift oder eine Webbrowser-Umgebung. Mixins sind als Teil eines Schemas gedacht, das eine kompatible Klasse implementiert, je nach dem Verhalten der von ihnen dargestellten Daten (Datensatz oder Zeitreihen). Mit dem `/mixins`-Endpunkt in der [!DNL Schema Registry]-API können Sie Mixins in Ihrer Experience-Anwendung programmgesteuert verwalten.
 
@@ -154,7 +161,7 @@ Eine erfolgreiche Antwort gibt die Details des Mixins zurück. Die zurückgegebe
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -300,7 +307,7 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Paylo
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -480,7 +487,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Mixins zurück.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -585,7 +592,7 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 Die folgende Beispielanforderung aktualisiert das `description` eines vorhandenen Mixins und fügt ein neues `propertyCity`-Feld hinzu.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang durchgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -621,7 +628,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das `d
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
