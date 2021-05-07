@@ -1,15 +1,15 @@
 ---
 title: Unterstützende Voreinstellungen für die Zustimmung des Kunden mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie die Voreinstellungen für die Zustimmung mit dem Adobe Experience Platform Web SDK unterstützen.
-keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy Mixin;Experience Ereignis Privacy Mixin;Privacy Mixin;
+keywords: approval;defaultConsent;default approval;setConsent;Profil Privacy field group;Experience Ereignis Privacy field group;Privacy field group;
+exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 translation-type: tm+mt
-source-git-commit: dd9101079a1093c109f43b268a78c07770221156
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '977'
+source-wordcount: '986'
 ht-degree: 32%
 
 ---
-
 
 # Unterstützende Voreinstellungen für die Kundengenehmigung
 
@@ -54,7 +54,7 @@ Das SDK unterstützt die Versionen 1.0 und 2.0 des Adobe Experience Platform-Zus
 
 ### Verwenden der Adobe-Standardversion 2.0
 
-Wenn Sie Adobe Experience Platform verwenden, müssen Sie ein Profil-Schema einschließen, in dem Sie Ihre Privatsphäre verändern können. Weitere Informationen zur Adobe-Standardversion 2.0 finden Sie unter [Verwaltung, Datenschutz und Sicherheit in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md). Sie können Daten innerhalb des Wertobjekts unten entsprechend dem Schema des Felds `consents` des Profils &quot;Zustimmung und Voreinstellungen&quot;hinzufügen.
+Wenn Sie Adobe Experience Platform verwenden, müssen Sie eine Schema-Feldgruppe zum Datenschutz in Ihr Profil-Schema einbeziehen. Weitere Informationen zur Adobe-Standardversion 2.0 finden Sie unter [Verwaltung, Datenschutz und Sicherheit in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md). Sie können Daten innerhalb des Wertobjekts unten hinzufügen, die dem Schema des Felds `consents` der Feldgruppe &quot;Profil und Voreinstellungen&quot;entsprechen.
 
 Wenn sich der Benutzer anmeldet, führen Sie den Befehl `setConsent` mit der Erfassungseinstellung `y` wie folgt aus:
 
@@ -147,7 +147,7 @@ alloy("setConsent", {
 });
 ```
 
-Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil-XDM-Schema das [Profil Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Informationen zur Einwilligung in Ereignissen zu senden, muss das [Experience Ereignis Privacy Mixin](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) dem Experience Ereignis Schema hinzugefügt werden.
+Wenn die Einwilligung auf diese Weise festgelegt wird, wird das Echtzeit-Profil des Kunden mit den Einwilligungsinformationen aktualisiert. Damit dies funktioniert, muss das Profil-XDM-Schema die Feldgruppe [Profil Privacy Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-privacy.schema.md) enthalten. Beim Senden von Ereignissen müssen die IAB-Einwilligungsinformationen manuell zum Ereignis-XDM-Objekt hinzugefügt werden. Das SDK enthält nicht automatisch die Informationen zur Einwilligung in die Ereignis. Um die Informationen zur Einwilligung in Ereignissen zu senden, muss die Feldgruppe [Experience Ereignis Privacy](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/experience-event/experienceevent-privacy.schema.md) dem Experience Ereignis-Schema hinzugefügt werden.
 
 ## Senden mehrerer Standards in einer Anforderung
 
@@ -184,4 +184,3 @@ Sie müssen die Benutzereinstellungen unabhängig speichern, um den Dialog zur G
 ## Synchronisieren von Identitäten während der Einrichtung der Zustimmung
 
 Wenn die Standardgenehmigung aussteht oder ausfällt, kann `setConsent` die erste Anforderung sein, die ausgeht und Identität festlegt. Aus diesem Grund kann es wichtig sein, Identitäten bei der ersten Anforderung zu synchronisieren. Die Identitätskarte kann wie beim Befehl `setConsent` hinzugefügt werden. `sendEvent` Siehe [Abrufen der Experience Cloud-ID](../identity/overview.md)
-
