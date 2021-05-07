@@ -4,9 +4,9 @@ description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SD
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 translation-type: tm+mt
-source-git-commit: d4ed6c8fa9c86eb2beec829ab24c381b665c2f03
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '502'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 5%
 * Das SDK kann jetzt [als npm-Paket](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html) installiert werden.
 * Es wurde Unterstützung für eine `out`-Option hinzugefügt, wenn [die Standardgenehmigung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) konfiguriert wird. Dadurch werden alle Ereignis bis zum Erhalt der Einwilligung gelöscht (die bestehende `pending`-Option setzt Ereignis in Warteschlange und sendet sie, sobald die Einwilligung eingegangen ist).
 * Der Rückruf [onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) kann jetzt verwendet werden, um zu verhindern, dass ein Ereignis gesendet wird.
-* Beim Senden von Ereignissen zu personalisierten Inhalten, die gerendert oder angeklickt werden, wird nun ein XDM-Mixin anstelle von `meta.personalization` verwendet.
+* Beim Senden von Ereignissen zu personalisierten Schemas, die gerendert oder angeklickt werden, wird nun eine XDM-Feldgruppe anstelle von `meta.personalization` verwendet.
 * Der Befehl [getIdentity](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) gibt jetzt die ID des Randbereichs neben der Identität zurück.
 * Warnungen und Fehler, die vom Server empfangen wurden, wurden verbessert und werden in einer angemesseneren Weise behandelt.
 * Unterstützung für [2.0-Standard der Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
