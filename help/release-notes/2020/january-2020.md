@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
+title: Versionshinweise zu Adobe Experience Platform
 description: Versionshinweise zur Experience Platform vom 15. Januar 2020
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
+exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 translation-type: tm+mt
-source-git-commit: adf8e8457c8ffef263223a38d3f9c345cf7c6ab2
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '884'
 ht-degree: 40%
 
 ---
 
-
-# Adobe Experience Platform – Versionshinweise
+# Versionshinweise zu Adobe Experience Platform
 
 **Releasedatum: 15. Januar 2020**
 
@@ -34,7 +34,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Feldtypeinschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als ein bestimmter Typ definiert wurde, müssen alle anderen Felder mit demselben Namen und derselben Hierarchie unabhängig von den Klassen oder Mixins, in denen sie verwendet werden, denselben Feldtyp verwenden. Wenn beispielsweise ein Mixin für die XDM [!DNL Profile]-Klasse ein `profile.age`-Feld des Typs &quot;integer&quot;enthält, kann ein ähnliches Mixin für XDM [!DNL ExperienceEvent] kein `profile.age`-Feld des Typs &quot;string&quot;haben. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie aufweisen als das zuvor definierte Feld (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schema in einer Vereinigung zusammengeführt werden. Die Beschränkung wirkt sich nicht rückwirkend auf vorhandene Schema aus. Es wird jedoch dringend empfohlen, Ihre Schema auf Feldkonflikte zu überprüfen und sie nach Bedarf zu bearbeiten. |
+| Feldtypeinschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als ein bestimmter Typ definiert wurde, müssen alle anderen Felder mit demselben Namen und derselben Hierarchie unabhängig von den Klassen oder Schema-Feldgruppen, in denen sie verwendet werden, denselben Feldtyp verwenden. Wenn beispielsweise eine Feldgruppe für die XDM [!DNL Profile]-Klasse ein `profile.age`-Feld des Typs &quot;integer&quot;enthält, kann eine ähnliche Feldgruppe für XDM [!DNL ExperienceEvent] kein `profile.age`-Feld des Typs &quot;string&quot;haben. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie aufweisen als das zuvor definierte Feld (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schema in einer Vereinigung zusammengeführt werden. Die Beschränkung wirkt sich nicht rückwirkend auf vorhandene Schema aus. Es wird jedoch dringend empfohlen, Ihre Schema auf Feldkonflikte zu überprüfen und sie nach Bedarf zu bearbeiten. |
 | Groß-/Kleinschreibung bei der Feldüberprüfung | Benutzerdefinierte Felder auf derselben Ebene müssen unabhängig von der Groß-/Kleinschreibung unterschiedliche Namen haben. Wenn Sie beispielsweise ein benutzerdefiniertes Feld mit dem Namen &quot;E-Mail&quot;hinzufügen, können Sie kein weiteres benutzerdefiniertes Feld mit dem Namen &quot;E-Mail&quot;hinzufügen. |
 
 **Bekannte Probleme**
