@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 9%
@@ -17,7 +17,7 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->Der Begriff &quot;mixin&quot;wurde zu &quot;Schema field group&quot;aktualisiert, um Verständnis zu fördern. Feldgruppen sind wiederverwendbare Feldsätze zur Unterstützung von Geschäftszwecken. Diese Änderung wird nun in der Schema Registry API, der Adobe Experience Platform-Benutzeroberfläche und in allen Plattformdokumenten widergespiegelt.
+>Der Begriff &quot;mixin&quot;wurde zum Schema &quot;Feldgruppe&quot;aktualisiert, um Verständnis zu fördern. Feldgruppen sind wiederverwendbare Feldsätze zur Unterstützung von Geschäftszwecken. Diese Änderung wird nun in der Schema Registry API, der Adobe Experience Platform-Benutzeroberfläche und in allen Plattformdokumenten widergespiegelt.
 
 Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
