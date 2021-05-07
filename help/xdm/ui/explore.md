@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM-System;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;erkunden;Klasse;mixin;Datentyp;Schema
+keywords: Experience Platform;Home;beliebte Themen;ui;UI;XDM;XDM-System;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;erkunden;Klasse;Feldgruppe;Datentyp;Schema
 solution: Experience Platform
 title: XDM-Ressourcen in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie vorhandene Schema, Klassen, Mixins und Datentypen in der Benutzeroberfläche der Experience Platform untersuchen.
+description: Erfahren Sie, wie Sie vorhandene Schema, Klassen, Schema-Feldgruppen und Datentypen in der Benutzeroberfläche "Experience Platform"untersuchen.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
 
 # XDM-Ressourcen in der Benutzeroberfläche
 
-In Adobe Experience Platform werden alle XDM-Ressourcen (Experience Data Model) im Ordner [!DNL Schema Library] gespeichert, einschließlich Standardressourcen, die durch Adoben und benutzerdefinierte Ressourcen bereitgestellt werden, die von Ihrem Unternehmen definiert werden. In der Benutzeroberfläche &quot;Experience Platform&quot;können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, eines Mixins oder eines Datentyps im [!DNL Schema Library] Ansicht werden. Dies ist besonders bei der Planung und Vorbereitung der Datenerfassung nützlich, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
+In Adobe Experience Platform werden alle XDM-Ressourcen (Experience Data Model) im Ordner [!DNL Schema Library] gespeichert, einschließlich Standardressourcen, die durch Adoben und benutzerdefinierte Ressourcen bereitgestellt werden, die von Ihrem Unternehmen definiert werden. In der Benutzeroberfläche &quot;Experience Platform&quot;können Sie die Struktur und die Felder eines vorhandenen Schemas, einer vorhandenen Klasse, einer Schema-Feldgruppe oder eines Datentyps im [!DNL Schema Library] Ansicht werden. Dies ist besonders bei der Planung und Vorbereitung der Datenerfassung nützlich, da die Benutzeroberfläche Informationen zu den erwarteten Datentypen und Anwendungsfällen der einzelnen Felder bereitstellt, die von diesen XDM-Ressourcen bereitgestellt werden.
 
-Dieses Lernprogramm beschreibt die Schritte zum Erforschen vorhandener Schema, Klassen, Mixins und Datentypen in der Benutzeroberfläche der Experience Platform.
+In diesem Lernprogramm werden die Schritte zum Erforschen vorhandener Schema, Klassen, Feldgruppen und Datentypen in der Benutzeroberfläche der Experience Platform beschrieben.
 
 ## Suchen Sie eine XDM-Ressource {#lookup}
 
-Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigationsbereich **[!UICONTROL Schema]** aus. Der Arbeitsbereich [!UICONTROL Schemas] enthält die Registerkarte **[!UICONTROL Durchsuchen]**, um alle vorhandenen XDM-Ressourcen in Ihrem Unternehmen zu untersuchen, sowie weitere dedizierte Registerkarten zum Erforschen der **[!UICONTROL Klassen]**, **[!UICONTROL Mixins]** und **[!UICONTROL Datentypen]** speziell.
+Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigationsbereich **[!UICONTROL Schema]** aus. Der Arbeitsbereich [!UICONTROL Schemas] enthält die Registerkarte **[!UICONTROL Durchsuchen]**, um alle vorhandenen XDM-Ressourcen in Ihrem Unternehmen zu untersuchen, sowie weitere dedizierte Registerkarten zum Erforschen der **[!UICONTROL Klassen]**, **[!UICONTROL Feldgruppen]** und **[!UICONTROL Datentypen]** speziell.
 
 ![](../images/ui/explore/tabs.png)
 
@@ -80,7 +80,7 @@ Wenn das geprüfte Feld ein Enum-Feld ist, zeigt die rechte Leiste auch die akze
 
 ### Identitätsfelder {#identity}
 
-Beim Prüfen von Schemas, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder dem Mixin aufgelistet, die bzw. das sie dem Schema bereitstellt. Wählen Sie in der linken Leiste den Namen des Identitätsfeldes aus, um das Feld auf der Arbeitsfläche unabhängig davon anzuzeigen, wie tief es verschachtelt ist.
+Beim Prüfen von Schemas, die Identitätsfelder enthalten, werden diese Felder in der linken Leiste unter der Klasse oder Feldgruppe aufgelistet, die bzw. die sie dem Schema zur Verfügung stellt. Wählen Sie in der linken Leiste den Namen des Identitätsfeldes aus, um das Feld auf der Arbeitsfläche unabhängig davon anzuzeigen, wie tief es verschachtelt ist.
 
 Identitätsfelder werden auf der Arbeitsfläche mit einem Fingerabdrucksymbol (![Fingerabdrucksymbol Bild](../images/ui/explore/identity-symbol.png)) markiert. Wenn Sie den Namen des Identitätsfelds auswählen, können Sie zusätzliche Informationen wie den [Identitätsname](../../identity-service/namespaces.md) und ob das Namensraum die primäre Identität für das Schema ist oder nicht, Ansicht vornehmen.
 
