@@ -6,10 +6,10 @@ description: In diesem Dokument erhalten Sie eine Einführung in die wichtigsten
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 39%
+source-wordcount: '1367'
+ht-degree: 38%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 39%
 
 Mit der [!DNL Schema Registry]-API können Sie verschiedene XDM-Ressourcen (Experience Data Model) erstellen und verwalten. Dieses Dokument bietet eine Einführung in die Kernkonzepte, die Sie kennen müssen, bevor Sie Aufrufe an die [!DNL Schema Registry]-API durchführen.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Die Verwendung des Entwicklerhandbuchs erfordert ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
@@ -85,16 +85,16 @@ Eine erfolgreiche Antwort gibt Informationen zur Verwendung von [!DNL Schema Reg
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -109,9 +109,9 @@ Eine erfolgreiche Antwort gibt Informationen zur Verwendung von [!DNL Schema Reg
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -160,7 +160,7 @@ Für Aufrufe der API [!DNL Schema Registry] ist die Verwendung eines `CONTAINER_
 
 ### Globaler Container
 
-Der `global`-Container enthält alle Standardklassen und [!DNL Experience Platform] vom Partner bereitgestellte Adoben, Mixins, Datentypen und Schema. Sie können nur Liste- und Suchanfragen (GET) für den `global`-Container ausführen.
+Der `global`-Container enthält alle Standardklassen für Adoben und [!DNL Experience Platform] vom Partner bereitgestellte Klassen, Schema-Feldgruppen, Datentypen und Schema. Sie können nur Liste- und Suchanfragen (GET) für den `global`-Container ausführen.
 
 Ein Beispiel für einen Aufruf mit dem Container `global` würde wie folgt aussehen:
 
@@ -170,15 +170,15 @@ GET /global/classes
 
 ### Mandanten-Container
 
-Der `tenant`-Container enthält alle Klassen, Mixins, Datentypen, Schema und Deskriptoren, die von einer IMS-Organisation definiert werden. `TENANT_ID` Sie sind für jede Organisation eindeutig, d h. sie sind für andere IMS-Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie im Container `tenant` erstellen.
+Der `tenant`-Container enthält alle Klassen, Feldgruppen, Datentypen, Schema und Deskriptoren, die von einer IMS-Organisation definiert werden. `TENANT_ID` Sie sind für jede Organisation eindeutig, d h. sie sind für andere IMS-Organisationen nicht sichtbar oder verwaltbar. Sie können alle CRUD-Vorgänge (GET, POST, PUT, PATCH, DELETE) für Ressourcen ausführen, die Sie im Container `tenant` erstellen.
 
 Ein Beispiel für einen Aufruf mit dem Container `tenant` würde wie folgt aussehen:
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-Wenn Sie eine Klasse, ein Mixin, ein Schema oder einen Datentyp im Container `tenant` erstellen, wird diese im Ordner [!DNL Schema Registry] gespeichert und eine `$id` URI zugewiesen, die Ihre `TENANT_ID` enthält. Diese `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für Werte der `$id` finden Sie im nächsten Abschnitt.
+Wenn Sie eine Klasse, eine Feldgruppe, ein Schema oder einen Datentyp im Container `tenant` erstellen, wird diese im Ordner [!DNL Schema Registry] gespeichert und eine `$id` URI zugewiesen, die Ihre `TENANT_ID` enthält. Diese `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für Werte der `$id` finden Sie im nächsten Abschnitt.
 
 ## Ressourcen-ID {#resource-identification}
 
