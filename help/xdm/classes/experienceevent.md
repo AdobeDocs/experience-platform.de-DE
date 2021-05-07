@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über die XDM ExperienceEvent-Klasse.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 translation-type: tm+mt
-source-git-commit: 9b63b38e664e5776ca638f8ed407896f185bcab0
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '875'
 ht-degree: 6%
 
 ---
@@ -31,16 +31,16 @@ Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene F
 | `identityMap` | Ein Zuordnungsfeld, das einen Satz namensbezogener Identitäten für die einzelne Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, wenn Identitätsdaten erfasst werden. Um dieses Feld für [Kundendaten in Echtzeit](../../profile/home.md) richtig zu verwenden, sollten Sie nicht versuchen, den Feldinhalt in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den  [Grundlagen der ](../schema/composition.md#identityMap) Schema-Komposition. |
 | `timestamp` | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses, formatiert gemäß [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>Dieser Zeitstempel kann  **** nur die Beobachtung des Ereignisses selbst darstellen und muss in der Vergangenheit erfolgen. Wenn Ihre Anwendungsfälle für die Segmentierung die Verwendung von Zeitstempeln erfordern, die in der Zukunft auftreten können (z. B. ein Abflugdatum), müssen diese Werte an anderer Stelle im Experience Ereignis-Schema eingeschränkt werden. |
 
-## Kompatible Mixins {#mixins}
+## Kompatible Schema-Feldgruppen {#field-groups}
 
 >[!NOTE]
 >
->Die Namen mehrerer Mixins haben sich geändert. Weitere Informationen finden Sie im Dokument [mixin name updates](../mixins/name-updates.md).
+>Die Namen mehrerer Feldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../field-groups/name-updates.md).
 
-Adobe bietet mehrere Standardmixins zur Verwendung mit der [!DNL XDM ExperienceEvent]-Klasse. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Mixins für die Klasse:
+Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM ExperienceEvent]-Klasse. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldgruppen für die Klasse:
 
-* [[!UICONTROL Details zur Endbenutzer-ID]](../mixins/event/enduserids.md)
-* [[!UICONTROL Umgebung]](../mixins/event/environment-details.md)
+* [[!UICONTROL Details zur Endbenutzer-ID]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Umgebung]](../field-groups/event/environment-details.md)
 
 ## Anhang
 
