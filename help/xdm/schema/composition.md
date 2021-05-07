@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;enum;mixin;Mixin;Mixins;Mixins;Datentyp;Datentypen;Datentypen;Datentyp;Primäridentität;Primäridentität;XDM-Profil;XDM-Felder;Enum-Datentyp;Experience-Ereignis;XDM Experience-Ereignis;XDM-ExperienceEvent;ExperienceEvent;XDM-Erlebnis;Schema-Design;class;Class;classes;Classes;datatype;datatype;datatype;Datentyp;Datentyp;Schema;Schema;;Identitätszuordnung;Identitätszuordnung;Schema;;Landkarte;Vereinigung Schema;Vereinigung
+keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;enum;mixin;Feldgruppe;Feldgruppen;mixins;Datentyp;Datentypen;Datentypen;Datentyp;Primäridentität;Primäridentität;XDM-Profil;XDM-Felder;Enum-Datentyp;Experience-Ereignis;XDM-Experience-Ereignis;XDM-ExperienceEvent;ExperienceEvent;XDM-Erlebnis;Schema-Design;class;Class;classes;Classes;datatype;datatype;datatype;Datentyp;Datentyp;Schema;Schema;;Identitätszuordnung;Identitätszuordnung;Schema;;Landkarte;Vereinigung Schema;Vereinigung
 solution: Experience Platform
 title: Grundlagen der Schema-Komposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3501'
-ht-degree: 40%
+source-wordcount: '3538'
+ht-degree: 33%
 
 ---
 
@@ -123,49 +123,49 @@ Um Daten in [!DNL Experience Platform] zu erfassen, muss zunächst ein Datensatz
 
 Schemas werden nach folgender Formel zusammengestellt:
 
-**Klasse + Mixin&amp;ast; = XDM-Schema**
+**Class + Schema Field Group&amp;ast; = XDM-Schema**
 
-&amp;ast;Ein Schema besteht aus einer Klasse und null oder mehr Mixins. Dies bedeutet, dass Sie in Datensatzschema ohne jegliche Verwendung von Mixins erstellen könnten.
+&amp;ast;Ein Schema besteht aus einer Klasse und einer oder mehreren Schema-Feldgruppen. Das bedeutet, dass Sie ein DataSet-Schema ohne Feldgruppen zusammenstellen können.
 
 ### Klasse {#class}
 
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
-Die Klasse eines Schemas legt fest, welche Mixins in diesem Schema verwendet werden dürfen. Dies wird im [nächsten Abschnitt](#mixin) ausführlicher erläutert.
+Die Klasse eines Schemas legt fest, welche Feldgruppen in diesem Schema verwendet werden dürfen. Dies wird im [nächsten Abschnitt](#field-group) ausführlicher erläutert.
 
 Adobe bietet mehrere Standard-(Core-)XDM-Klassen. Zwei dieser Klassen, [!DNL XDM Individual Profile] und [!DNL XDM ExperienceEvent], sind für fast alle nachgeschalteten Plattformprozesse erforderlich. Zusätzlich zu diesen Hauptklassen können Sie auch eigene benutzerdefinierte Klassen erstellen, um spezifischere Anwendungsfälle für Ihr Unternehmen zu beschreiben. Benutzerspezifische Klassen werden von einer Organisation definiert, wenn keine von der Adobe definierten Hauptklassen zur Beschreibung eines individuellen Anwendungsfalls verfügbar sind.
 
-Der folgende Screenshot zeigt, wie Klassen in der Plattform-Benutzeroberfläche dargestellt werden. Da das hier dargestellte Schema keine Mixins enthält, werden alle angezeigten Felder von der Klasse des Schemas ([!UICONTROL XDM Individuelles Profil]) bereitgestellt.
+Der folgende Screenshot zeigt, wie Klassen in der Plattform-Benutzeroberfläche dargestellt werden. Da das hier dargestellte Schema keine Feldgruppen enthält, werden alle angezeigten Felder von der Klasse des Schemas ([!UICONTROL XDM Individuelles Profil]) bereitgestellt.
 
 ![](../images/schema-composition/class.png)
 
 Die aktuellste Liste der verfügbaren Standard-XDM-Klassen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/classes). Alternativ können Sie auch auf das Handbuch [XDM-Komponenten ](../ui/explore.md) zugreifen, wenn Sie lieber Ansichten in der Benutzeroberfläche vornehmen möchten.
 
-### Mixin {#mixin}
+### Feldergruppe {#field-group}
 
-Ein Mixin ist eine wiederverwendbare Komponente, die ein oder mehrere Felder definiert, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Mixins sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
+Eine Feldgruppe ist eine wiederverwendbare Komponente, die ein oder mehrere Felder definiert, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Feldgruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
 
-Mixins definieren, mit welcher/n Klasse(n) sie kompatibel sind, basierend auf dem Verhalten der Daten, die sie darstellen (Datensatz- oder Zeitreihen). Das bedeutet, dass nicht alle Mixins für alle Klassen verfügbar sind.
+Feldgruppen definieren, mit welcher Klasse(n) sie kompatibel sind, basierend auf dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihen). Das bedeutet, dass nicht alle Feldgruppen für alle Klassen verfügbar sind.
 
-[!DNL Experience Platform] enthält viele standardmäßige Mixins für Adoben und ermöglicht es Anbietern, Mixins für ihre Anwender zu definieren, sowie einzelnen Anwendern, Mixins für ihre eigenen spezifischen Konzepte zu definieren.
+[!DNL Experience Platform] umfasst viele Standardfeldgruppen für Adoben, wobei Anbieter die Möglichkeit haben, Feldgruppen für ihre  zu definieren, und Einzelbenutzer können Feldgruppen für ihre eigenen spezifischen Konzepte definieren.
 
-Um beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONTROL Hausadresse]&quot;für Ihr Schema &quot;[!UICONTROL Treuemitglieder]&quot;zu erfassen, können Sie Standardmixins verwenden, die diese allgemeinen Begriffe definieren. Konzepte, die für seltener auftretende Anwendungsfälle spezifisch sind (z. B. &quot;[!UICONTROL Kundentreue-Programm-Ebene]&quot;), verfügen jedoch häufig nicht über eine vordefinierte Mischung. In diesem Fall müssen Sie einen eigenen Mixin definieren, um diese Informationen zu erfassen.
+Um beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONTROL Hausadresse]&quot;für Ihr Schema &quot;[!UICONTROL Treuemitglieder]&quot;zu erfassen, können Sie Standardfeldgruppen verwenden, die diese allgemeinen Begriffe definieren. Konzepte, die für seltener auftretende Anwendungsfälle spezifisch sind (z. B. &quot;[!UICONTROL Kundentreue-Programm-Ebene]&quot;), verfügen jedoch häufig nicht über eine vordefinierte Feldgruppe. In diesem Fall müssen Sie Ihre eigene Feldgruppe definieren, um diese Informationen zu erfassen.
 
-Denken Sie daran, dass Schemas aus „Null oder mehr“ Mixins bestehen, was bedeutet, dass Sie ein gültiges Schema zusammenstellen können, ohne überhaupt Mixins zu verwenden.
+Denken Sie daran, dass Schema aus Feldgruppen mit der Bezeichnung &quot;Null oder mehr&quot;bestehen. Dies bedeutet, dass Sie ein gültiges Schema ohne Feldgruppen zusammenstellen können.
 
-Der folgende Screenshot zeigt, wie Mixins in der Plattform-Benutzeroberfläche dargestellt werden. In diesem Beispiel wird einem Schema ein einzelnes Mixin ([!UICONTROL Demografische Details]) hinzugefügt, das eine Gruppierung der Felder zur Feldstruktur des Schemas bereitstellt.
+Der folgende Screenshot zeigt, wie Feldgruppen in der Plattform-Benutzeroberfläche dargestellt werden. In diesem Beispiel wird einem Schema eine Feldgruppe ([!UICONTROL Demografische Details]) hinzugefügt, die eine Feldgruppierung zur Feldstruktur des Schemas bereitstellt.
 
-![](../images/schema-composition/mixin.png)
+![](../images/schema-composition/field-group.png)
 
-Die aktuellste Liste der verfügbaren Standard-XDM-Mixins finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/mixins). Alternativ können Sie auch auf das Handbuch [XDM-Komponenten ](../ui/explore.md) zugreifen, wenn Sie lieber Ansichten in der Benutzeroberfläche vornehmen möchten.
+Die aktuellste Liste der verfügbaren Standard-XDM-Feldgruppen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/mixins). Alternativ können Sie auch auf das Handbuch [XDM-Komponenten ](../ui/explore.md) zugreifen, wenn Sie lieber Ansichten in der Benutzeroberfläche vornehmen möchten.
 
 ### Datentyp {#data-type}
 
-Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Ähnlich wie ein Mixin ermöglicht ein Datentyp die konsistente Verwendung einer Mehrfeldstruktur, ist jedoch flexibler als ein Mixin, da ein Datentyp an beliebiger Stelle in ein Schema aufgenommen werden kann, indem er als „Datentyp“ eines Feldes hinzugefügt wird.
+Datentypen werden als Referenzfeldtypen in Klassen oder Schemata auf die gleiche Weise verwendet wie grundlegende literale Felder. Der wesentliche Unterschied besteht darin, dass Datentypen mehrere Teilfelder definieren können. Ähnlich wie bei einer Feldgruppe ermöglicht ein Datentyp die konsistente Verwendung einer Mehrfeldstruktur, verfügt aber über mehr Flexibilität als eine Feldgruppe, da ein Datentyp an einer beliebigen Stelle in einem Schema eingefügt werden kann, indem er als &quot;Datentyp&quot;eines Felds hinzugefügt wird.
 
 [!DNL Experience Platform] bietet eine Reihe von gebräuchlichen Datentypen als Teil der ,  [!DNL Schema Registry] um die Verwendung von Standardmustern zur Beschreibung allgemeiner Datenstrukturen zu unterstützen. Dies wird in den [!DNL Schema Registry]-Tutorials ausführlicher erklärt, wo es klarer wird, wenn Sie die Schritte zur Definition von Datentypen durchlaufen.
 
-Der folgende Screenshot zeigt, wie Datentypen in der Plattform-Benutzeroberfläche dargestellt werden. Eines der Felder, die vom Mixin [!UICONTROL Demografische Details] bereitgestellt werden, verwendet den Datentyp &quot;[!UICONTROL Personenname]&quot;, wie durch den Text nach dem Senkrechtstrich (`|`) neben dem Feldnamen angegeben. Dieser bestimmte Datentyp enthält mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
+Der folgende Screenshot zeigt, wie Datentypen in der Plattform-Benutzeroberfläche dargestellt werden. Eines der Felder, die von der Feldgruppe [!UICONTROL Demografische Details] bereitgestellt werden, verwendet den Datentyp &quot;[!UICONTROL Personenname]&quot;, wie durch den Text neben dem Feldnamen angezeigt, der dem Senkrechtstrich (`|`) folgt. Dieser bestimmte Datentyp enthält mehrere Unterfelder, die sich auf den Namen einer Person beziehen, ein Konstrukt, das für andere Felder wiederverwendet werden kann, in denen der Name einer Person erfasst werden muss.
 
 ![](../images/schema-composition/data-type.png)
 
@@ -220,13 +220,13 @@ Eine vollständige Liste der verfügbaren XDM-Felder finden Sie im [XDM-Feldwör
 
 ## Kompositionsbeispiel
 
-Schema stellen das Format und die Struktur der Daten dar, die in [!DNL Platform] eingeschlossen und mithilfe eines Kompositionsmodells erstellt werden. Wie bereits erwähnt, bestehen diese Schemas aus einer Klasse und Null oder mehr Mixins, die mit dieser Klasse kompatibel sind.
+Schema stellen das Format und die Struktur der Daten dar, die in [!DNL Platform] eingeschlossen und mithilfe eines Kompositionsmodells erstellt werden. Wie bereits erwähnt, bestehen diese Schema aus einer Klasse und null oder mehr Feldgruppen, die mit dieser Klasse kompatibel sind.
 
-Beispielsweise könnte ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, als &quot;[!UICONTROL Geschäfte speichern]&quot;bezeichnet werden. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Kombination mit dem standardmäßigen [!UICONTROL Commerce]-Mixin und einem benutzerdefinierten [!UICONTROL Product Info]-Mixin.
+Beispielsweise könnte ein Schema, das Käufe in einem Einzelhandelsgeschäft beschreibt, als &quot;[!UICONTROL Geschäfte speichern]&quot;bezeichnet werden. Das Schema implementiert die [!DNL XDM ExperienceEvent]-Klasse in Verbindung mit der Standardfeldgruppe [!UICONTROL Commerce] und einer benutzerspezifischen [!UICONTROL Produktinfo]-Feldgruppe.
 
-Ein anderes Schema, das den Website-Traffic verfolgt, könnte &quot;[!UICONTROL Webbesuche]&quot;heißen. Es implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert diesmal jedoch das standardmäßige [!UICONTROL Web]-Mixin.
+Ein anderes Schema, das den Website-Traffic verfolgt, könnte &quot;[!UICONTROL Webbesuche]&quot;heißen. Es implementiert auch die [!DNL XDM ExperienceEvent]-Klasse, kombiniert diesmal jedoch die standardmäßige [!UICONTROL Web]-Feldgruppe.
 
-Das folgende Diagramm zeigt diese Schemas und die von den einzelnen Mixins hinzugefügten Felder. Es enthält außerdem zwei Schema, die auf der [!DNL XDM Individual Profile]-Klasse basieren, einschließlich des zuvor in diesem Handbuch erwähnten Schemas &quot;[!UICONTROL Treuemitglieder]&quot;.
+Das unten stehende Diagramm zeigt diese Schemas und die von den einzelnen Feldgruppen hinzugefügten Felder. Es enthält außerdem zwei Schema, die auf der [!DNL XDM Individual Profile]-Klasse basieren, einschließlich des zuvor in diesem Handbuch erwähnten Schemas &quot;[!UICONTROL Treuemitglieder]&quot;.
 
 ![](../images/schema-composition/composition.png)
 
@@ -249,18 +249,18 @@ Alle Datendateien, die in [!DNL Experience Platform] eingeschlossen werden, müs
 Wenn Sie Segmente aus externen Systemen in Platform integrieren, müssen Sie diese mit den folgenden Komponenten in Ihren Schemas erfassen:
 
 * [[!UICONTROL Segment-] Definitionsklasse](../classes/segment-definition.md): Verwenden Sie diese Standardklasse, um Schlüsselattribute einer externen Segmentdefinition zu erfassen.
-* [[!UICONTROL Details ] zum Segmentmanagement](../mixins/profile/segmentation.md): hinzufügen Sie diese Mischung mit Ihrem  [!UICONTROL XDM Individual ] Profileschema, um Kundensegmente mit bestimmten Segmenten zu verbinden.
+* [[!UICONTROL Segmentmitgliedschaft ] Detailfeldgruppe](../field-groups/profile/segmentation.md): hinzufügen Sie diese Feldgruppe mit Ihrem  [!UICONTROL XDM Individual ] Profileschema, um Kundensegmente bestimmten Segmenten zuzuordnen.
 
 ## Nächste Schritte
 
 Jetzt, da Sie die Grundlagen der Schema-Komposition verstehen, können Sie mit dem [!DNL Schema Registry] beginnen, Schema zu erkunden und zu bauen.
 
-Informationen zur Übersicht über die Struktur der beiden Core-XDM-Klassen und ihrer häufig verwendeten kompatiblen Mixins finden Sie in der folgenden Referenzdokumentation:
+Informationen zum Überprüfen der Struktur der beiden Core-XDM-Klassen und ihrer häufig verwendeten kompatiblen Feldgruppen finden Sie in der folgenden Referenzdokumentation:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-Das [!DNL Schema Registry] wird verwendet, um auf das [!DNL Schema Library] in Adobe Experience Platform zuzugreifen, und stellt eine Benutzeroberfläche und RESTful-API bereit, über die alle verfügbaren Bibliotheksressourcen zugänglich sind. Das [!DNL Schema Library] enthält Branchenressourcen, die durch Adobe, Händlerressourcen definiert werden, die von [!DNL Experience Platform]-Partnern definiert werden, sowie Klassen, Mixins, Datentypen und Schema, die von Mitgliedern Ihres Unternehmens zusammengestellt wurden.
+Das [!DNL Schema Registry] wird verwendet, um auf das [!DNL Schema Library] in Adobe Experience Platform zuzugreifen, und stellt eine Benutzeroberfläche und RESTful-API bereit, über die alle verfügbaren Bibliotheksressourcen zugänglich sind. Das [!DNL Schema Library] enthält Branchenressourcen, die durch Adobe, Händlerressourcen definiert werden, die von [!DNL Experience Platform]-Partnern definiert werden, sowie Klassen, Feldgruppen, Datentypen und Schema, die aus Mitgliedern Ihres Unternehmens bestehen.
 
 Um mit dem Erstellen von Schemas über die Benutzeroberfläche zu beginnen, folgen Sie dem [Schema-Editor-Tutorial](../tutorials/create-schema-ui.md), um das Schema „Loyalty Members“ zu erstellen, das in diesem Dokument erwähnt wird.
 
