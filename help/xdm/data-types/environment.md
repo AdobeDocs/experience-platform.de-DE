@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument gibt einen Überblick über den XDM-Datentyp der Umgebung.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '465'
 ht-degree: 14%
 
 ---
@@ -41,7 +41,7 @@ ht-degree: 14%
 | `viewportHeight` | Ganzzahl | Die vertikale Größe in Pixeln des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Web-Ansicht-Ereignis ist dies die Browser-Viewport-Höhe. |
 | `viewPortWidth` | Ganzzahl | Die horizontale Größe in Pixeln des Fensters, in dem das Erlebnis angezeigt wurde. Bei einem Web-Ansicht-Ereignis ist dies die Browser-Viewport-Breite. |
 
-Weitere Informationen zum Mixin finden Sie im öffentlichen XDM-Repository:
+Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)
