@@ -6,9 +6,9 @@ description: Erfahren Sie, wie Sie ein Identitätsfeld in der Benutzeroberfläch
 topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '575'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Im Erlebnis-Datenmodell (XDM) stellt ein Identitätsfeld ein Feld dar, das zur Identifizierung einer einzelnen Person verwendet werden kann, die mit einem Datensatz- oder Zeitreihen-Ereignis in Zusammenhang steht. In diesem Dokument wird beschrieben, wie Sie ein Identitätsfeld in der Adobe Experience Platform-Benutzeroberfläche definieren.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Identitätsfelder sind eine entscheidende Komponente bei der Konstruktion von Diagrammen zur Kundenidentität in Plattform. Dies wirkt sich letztlich darauf aus, wie Echtzeit-Kundendaten unterschiedliche Datenfragmente zusammenführen, um eine vollständige Ansicht des Kunden zu erhalten. Bevor Sie Identitätsfelder in Ihren Schemas definieren, lesen Sie bitte die folgende Dokumentation, um sich über die wichtigsten Dienste und Konzepte im Zusammenhang mit Identitätsfeldern zu informieren:
 
@@ -43,7 +43,7 @@ Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]**, um die Änderung au
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Die Arbeitsfläche wird aktualisiert, um die Änderungen widerzuspiegeln, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](../../images/ui/fields/special/identity-symbol.png)) erhält, um es als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder des Mixins aufgeführt, die bzw. das das Schema mit dem Feld versorgt.
+Die Arbeitsfläche wird aktualisiert, um die Änderungen widerzuspiegeln, wobei das ausgewählte Feld ein Fingerabdrucksymbol (![](../../images/ui/fields/special/identity-symbol.png)) erhält, um es als Identität zu kennzeichnen. In der linken Leiste wird das Identitätsfeld jetzt unter dem Namen der Klasse oder Schema-Feldgruppe aufgeführt, die das Feld für das Schema bereitstellt.
 
 Da alle Identitätsfelder standardmäßig erforderlich sind, wird das Feld jetzt in der linken Leiste unter **[!UICONTROL Erforderliche Felder]** aufgelistet. Wenn das Identitätsfeld innerhalb der Schema-Struktur verschachtelt ist, werden alle übergeordneten Felder ebenfalls nach Bedarf aufgelistet.
 
