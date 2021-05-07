@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schema so konfigurieren, dass bei der Aktivierung von Segmenten an Zielorte in Adobe Experience Platform Auswahlmöglichkeiten für die Kundengenehmigung angezeigt werden.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2470'
+source-wordcount: '2477'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Adobe Experience Platform ist Teil der registrierten Liste [IAB TCF 2.0 vendor](
 
 Dieses Dokument bietet einen Überblick darüber, wie Sie Ihre Datenvorgänge konfigurieren und Profil-Schema zum Akzeptieren von durch Ihren CMP generierten Daten zur Kundeneinwilligung verwenden können und wie Platform beim Exportieren von Segmenten Entscheidungen zur Benutzereinwilligung vermittelt.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Um diesem Leitfaden zu folgen, müssen Sie entweder eine kommerzielle oder eigene Consent Management Platform (CMP) verwenden, die mit dem IAB TCF integriert und kompatibel ist. Weitere Informationen finden Sie unter [Liste der konformen CMPs](https://iabeurope.eu/cmp-list/).
 
@@ -104,7 +104,7 @@ Die Daten zur Kundengenehmigung müssen an Datensätze gesendet werden, deren Sc
 
 Nachdem Sie einen [!DNL Profile]-aktivierten Datensatz für die Erfassung von Genehmigungsdaten erstellt haben, müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert wurden, dass stets die TCF-Genehmigungsfelder in Ihre Profil aufgenommen werden. Hierzu gehört die Festlegung der Priorität von Datasets, sodass Ihr Dataset für die Einwilligung Vorrang vor anderen möglicherweise widersprüchlichen Datensätzen hat.
 
-Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Benutzerhandbuch [Richtlinien zusammenführen](../../../../profile/ui/merge-policies.md). Beim Einrichten der Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Segmente alle erforderlichen Zustimmungsattribute enthalten, die vom [XDM Privacy mixin](./dataset.md#privacy-mixin) bereitgestellt werden, wie im Handbuch zur Vorbereitung des Datensatzes beschrieben.
+Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Benutzerhandbuch [Richtlinien zusammenführen](../../../../profile/ui/merge-policies.md). Beim Einrichten der Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Schema alle erforderlichen Zustimmungsattribute enthalten, die von der [XDM-Feldgruppe für Datenschutz](./dataset.md#privacy-field-group) bereitgestellt werden, wie im Handbuch zur Vorbereitung des Datensatzes beschrieben.
 
 ## Integrieren Sie das Experience Platform Web SDK, um Daten zur Kundeneinwilligung zu erfassen. {#sdk}
 
@@ -196,7 +196,7 @@ Sie können auch mit dem Befehl `sendEvent` Daten zur TCF 2.0-Einwilligung zu je
 
 >[!NOTE]
 >
->Um diese Methode verwenden zu können, müssen Sie dem [!DNL Profile]-aktivierten [!DNL XDM ExperienceEvent]-Schema [!DNL Experience Event Privacy mixin] den Wert  hinzugefügt haben. Anweisungen zum Konfigurieren finden Sie im Abschnitt zum Aktualisieren des ExperienceEvent-Schemas](./dataset.md#event-schema) im DataSet-Vorbereitungshandbuch.[
+>Um diese Methode verwenden zu können, müssen Sie die Experience Ereignis Privacy-Feldgruppe zu Ihrem [!DNL Profile]-aktivierten [!DNL XDM ExperienceEvent]-Schema hinzugefügt haben. Anweisungen zum Konfigurieren finden Sie im Abschnitt zum Aktualisieren des ExperienceEvent-Schemas](./dataset.md#event-schema) im DataSet-Vorbereitungshandbuch.[
 
 Der Befehl `sendEvent` sollte als Rückruf in entsprechenden Ereignis-Listenern auf Ihrer Website verwendet werden. Der Befehl erwartet zwei Argumente: (1) eine Zeichenfolge, die den Befehlstyp angibt (in diesem Fall `sendEvent`), und (2) eine Nutzlast, die ein `xdm`-Objekt enthält, das die erforderlichen Felder für die Zustimmung als JSON bereitstellt:
 
