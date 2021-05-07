@@ -6,9 +6,9 @@ description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mi
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '775'
 ht-degree: 49%
 
 ---
@@ -52,7 +52,7 @@ Sie können die Ergebnisse mit dem Parameter `property` filtern, mit dem ein bes
 
 >[!TIP]
 >
->Sie können den Parameter `property` verwenden, um Mixins nach ihrer kompatiblen Klasse zu filtern. Beispiel: `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` gibt nur Mixins zurück, die mit der [!DNL XDM Individual Profile]-Klasse kompatibel sind.
+>Sie können den Parameter `property` verwenden, um Schema-Feldgruppen nach ihrer kompatiblen Klasse zu filtern. Beispiel: `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` gibt nur Feldgruppen zurück, die mit der [!DNL XDM Individual Profile]-Klasse kompatibel sind.
 
 ## Kompatibilitätsmodus
 
