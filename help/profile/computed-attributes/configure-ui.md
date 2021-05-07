@@ -3,12 +3,12 @@ keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;A
 title: Konfigurieren eines Felds für berechnete Attribute
 topic-legacy: guide
 type: Documentation
-description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mit einem Mixin erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
+description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Feldgruppe erstellt werden, um das Schema einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6e0f7578d0818f88e13b963f64cb2de6729f0574
 workflow-type: tm+mt
-source-wordcount: '838'
-ht-degree: 63%
+source-wordcount: '859'
+ht-degree: 41%
 
 ---
 
@@ -19,19 +19,19 @@ ht-degree: 63%
 >
 >Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
-Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mit einem Mixin erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
+Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Feldgruppe erstellt werden, um das Schema einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
 
 >[!NOTE]
 >
->Berechnete Attribute können keinen Feldern in Adobe-definierten Mixins hinzugefügt werden. Das Feld muss sich im `tenant`-Namespace befinden, d. h. es muss ein Feld sein, das Sie definieren und einem Schema hinzufügen.
+>Berechnete Attribute können nicht zu Feldern innerhalb von Adoben-definierten Feldgruppen hinzugefügt werden. Das Feld muss sich im `tenant`-Namespace befinden, d. h. es muss ein Feld sein, das Sie definieren und einem Schema hinzufügen.
 
 Um ein berechnetes Attributfeld erfolgreich zu definieren, muss das Schema für [!DNL Profile] aktiviert sein und als Teil des Vereinigung-Schemas für die Klasse angezeigt werden, auf der das Schema basiert. Weitere Informationen zu [!DNL Profile]-aktivierten Schemas und Vereinigungen finden Sie im Abschnitt [!DNL Schema Registry] Entwicklerhandbuch unter [Aktivieren eines Schemas zum Profil und Anzeigen von Vereinigung-Schemas](../../xdm/api/getting-started.md). Außerdem empfehlen wir Ihnen, den [Abschnitt über Vereinigungen](../../xdm/schema/composition.md) in der Grundlagendokumentation zur Schemakomposition zu lesen.
 
-Der Arbeitsablauf in diesem Lernprogramm verwendet ein [!DNL Profile]-aktiviertes Schema und führt die Schritte zum Definieren einer neuen Mischung mit dem berechneten Attributfeld und zum Sicherstellen des richtigen Namensraums durch. Wenn Sie bereits über ein Feld verfügen, das sich in einem Profil-aktivierten Schema im richtigen Namespace befindet, können Sie direkt mit dem [Erstellen eines berechneten Attributs](#create-a-computed-attribute) fortfahren.
+Der Arbeitsablauf in diesem Lernprogramm verwendet ein [!DNL Profile]-aktiviertes Schema und führt die Schritte zum Definieren einer neuen Feldgruppe mit dem berechneten Attributfeld und zum Sicherstellen des richtigen Namensraums durch. Wenn Sie bereits über ein Feld verfügen, das sich in einem Profil-aktivierten Schema im richtigen Namespace befindet, können Sie direkt mit dem [Erstellen eines berechneten Attributs](#create-a-computed-attribute) fortfahren.
 
 ## Schema anzeigen
 
-In den folgenden Schritten nutzen Sie die Benutzeroberfläche von Adobe Experience Platform, um ein Schema zu suchen, ein Mixin hinzuzufügen und ein Feld zu definieren. Wenn Sie die [!DNL Schema Registry]-API bevorzugen, lesen Sie bitte das [Schema Registry-Entwicklerhandbuch](../../xdm/api/getting-started.md), um zu erfahren, wie Sie eine Mischung erstellen, eine Mischung zu einem Schema hinzufügen und ein Schema für die Verwendung mit [!DNL Real-time Customer Profile] aktivieren.
+Die folgenden Schritte werden in der Adobe Experience Platform-Benutzeroberfläche ausgeführt, um ein Schema zu suchen, eine Feldgruppe hinzuzufügen und ein Feld zu definieren. Wenn Sie die API lieber verwenden möchten, lesen Sie das [Schema Registry-Entwicklerhandbuch](../../xdm/api/getting-started.md), um zu erfahren, wie Sie eine Feldgruppe erstellen, eine Feldgruppe zu einem Schema hinzufügen und ein Schema für [!DNL Real-time Customer Profile] aktivieren.[!DNL Schema Registry]
 
 Klicken Sie in der Benutzeroberfläche in der linken Leiste auf **[!UICONTROL Schemas]** und nutzen Sie die Suchleiste auf dem Tab **[!UICONTROL Durchsuchen]**, um das Schema, das Sie aktualisieren möchten, zu suchen.
 
@@ -41,17 +41,17 @@ Nachdem Sie das Schema gefunden haben, klicken Sie auf seinen Namen, um das [!DN
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-## Erstellen eines Mixins
+## Erstellen einer Feldgruppe
 
-Um ein neues Mixin zu erstellen, klicken Sie im Abschnitt **[!UICONTROL Komposition]** auf der linken Seite des Editors neben **[!UICONTROL Mixins]** auf **[!UICONTROL Hinzufügen]**. Dadurch wird der Dialog **[!UICONTROL Mixin hinzufügen]** geöffnet, in dem vorhandene Mixins angezeigt werden. Klicken Sie auf das Optionsfeld für **[!UICONTROL Neues Mixin erstellen]**, um Ihr neues Mixin zu definieren.
+Um eine neue Feldgruppe zu erstellen, klicken Sie auf **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldgruppen]** im Abschnitt **[!UICONTROL Komposition]** links im Editor. Dadurch wird das Dialogfeld **[!UICONTROL Hinzufügen Feldgruppe]** geöffnet, in dem Sie die vorhandenen Feldgruppen sehen können. Klicken Sie auf das Optionsfeld für **[!UICONTROL Neue Feldgruppe]** erstellen, um Ihre neue Feldgruppe zu definieren.
 
-Geben Sie dem Mixin einen Namen und eine Beschreibung und klicken Sie anschließend auf **[!UICONTROL Mixin hinzufügen]**.
+Geben Sie der Feldgruppe einen Namen und eine Beschreibung ein und klicken Sie nach Abschluss auf **[!UICONTROL Hinzufügen Feldgruppe]**.
 
-![](../images/computed-attributes/Add-mixin.png)
+![](../images/computed-attributes/Add-field-group.png)
 
 ## Berechnetes Attributfeld für das Schema hinzufügen
 
-Ihr neues Mixin sollte nun im Abschnitt &quot;[!UICONTROL Mixins]&quot;unter &quot;[!UICONTROL Zusammensetzung]&quot;angezeigt werden. Klicken Sie auf den Namen des Mixins, woraufhin im Abschnitt **[!UICONTROL Struktur]** des Editors mehrere Schaltflächen vom Typ **[!UICONTROL Feld hinzufügen]** angezeigt werden.
+Ihre neue Feldgruppe sollte nun im Abschnitt &quot;[!UICONTROL Feldgruppen]&quot;unter &quot;[!UICONTROL Zusammensetzung]&quot;angezeigt werden. Klicken Sie auf den Namen der Feldgruppe, und im Abschnitt **[!UICONTROL Struktur]** werden mehrere Schaltflächen **[!UICONTROL Hinzufügen Feld]** angezeigt.
 
 Wählen Sie neben dem Namen des Schemas **[!UICONTROL Feld hinzufügen]**, um ein Feld der obersten Ebene hinzuzufügen. Alternativ können Sie das Feld an einer beliebigen Stelle im gewünschten Schema einfügen.
 
