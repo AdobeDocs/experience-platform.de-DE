@@ -7,22 +7,22 @@ type: Tutorial
 description: Erfahren Sie, wie Sie Datentypen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
 
 # Datentypen mithilfe der Benutzeroberfläche erstellen und bearbeiten
 
-Im Erlebnis-Datenmodell (XDM) werden Datentypen als Referenztypfelder in Klassen oder Mixins auf die gleiche Weise wie grundlegende Literalfelder verwendet, wobei der Hauptunterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Ähnlich wie Mixins, da sie die einheitliche Verwendung einer Mehrfeldstruktur ermöglichen, sind die Datentypen flexibler, da sie an jeder beliebigen Stelle in der Schema-Struktur enthalten sein können, während Mixins nur auf der Stammebene hinzugefügt werden können.
+Im Erlebnis-Datenmodell (XDM) werden Datentypen in Klassen oder Schema-Feldgruppen ebenso wie einfache Literalfelder als Referenztypfelder verwendet, wobei der Hauptunterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Die Datentypen sind ähnlich wie Feldgruppen, da sie eine einheitliche Verwendung einer mehrfeldigen Struktur ermöglichen, flexibler, da sie an jeder beliebigen Stelle in der Schema-Struktur enthalten sein können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können.
 
 Adobe Experience Platform bietet viele Standarddatentypen, die für eine Vielzahl von Anwendungsfällen im Rahmen des Erlebnismanagements verwendet werden können. Sie können jedoch auch eigene benutzerdefinierte Datentypen definieren, um Ihren individuellen Geschäftsanforderungen gerecht zu werden.
 
 In diesem Lernprogramm werden die Schritte zum Erstellen und Bearbeiten benutzerdefinierter Datentypen in der Benutzeroberfläche der Plattform beschrieben.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieses Handbuch erfordert ein funktionierendes Verständnis des XDM-Systems. Eine Einführung in die Rolle von XDM innerhalb des Experience Platform-Ökosystems finden Sie in der [XDM-Übersicht](../../home.md) und in den [Grundlagen der Schema-Komposition](../../schema/composition.md), wie Datentypen zu XDM-Schemas beitragen.
 
@@ -85,21 +85,21 @@ Dies zeigt, wie flexible Datentypen im Hinblick auf die Beschreibung Ihrer Daten
 
 Nachdem Sie die Felder zum Datentyp hinzugefügt haben, wählen Sie **[!UICONTROL Speichern]**, um die Änderungen zu speichern, und fügen Sie den Datentyp zum [!DNL Schema Library] hinzu.
 
-## hinzufügen des Datentyps zu einer Klasse oder einem Mixin
+## hinzufügen des Datentyps zu einer Klasse oder Feldgruppe
 
-Nachdem Sie einen Datentyp erstellt haben, können Sie ihn in Ihren Schemas verwenden. Da XDM-Schema aus einer Klasse und Null oder mehr Mixins bestehen, können von einem Datentyp bereitgestellte Felder einem Schema nicht direkt hinzugefügt werden. Stattdessen müssen sie in eine Klasse oder ein Mixin einbezogen werden.
+Nachdem Sie einen Datentyp erstellt haben, können Sie ihn in Ihren Schemas verwenden. Da XDM-Schema aus einer Klasse und null oder mehr Feldgruppen bestehen, können von einem Datentyp bereitgestellte Felder nicht direkt zu einem Schema hinzugefügt werden. Stattdessen müssen sie in eine Klasse oder Feldgruppe aufgenommen werden.
 
-Beginn, indem Sie die erforderlichen Schritte ausführen, um [ein Feld zu einer Klasse](./classes.md#add-fields) oder [ein Feld zu einer Mischung hinzuzufügen. ](./mixins.md#add-fields) Wenn Sie für das neue Feld **[!UICONTROL Typ]** wählen, wählen Sie den Namen Ihres Datentyps aus dem Dropdown-Menü.
+Beginn, indem Sie die Schritte ausführen, die beim Hinzufügen eines Felds zu einer Klasse](./classes.md#add-fields) oder [Hinzufügen eines Felds zu einer Feldgruppe](./field-groups.md#add-fields) erforderlich sind. [ Wenn Sie für das neue Feld **[!UICONTROL Typ]** wählen, wählen Sie den Namen Ihres Datentyps aus dem Dropdown-Menü.
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#convert}
 
-Wenn Sie ein Objekt-Typ-Feld mit mehreren Unterfeldern in [!DNL Schema Editor] erstellen, können Sie dieses Feld in einen Datentyp konvertieren, sodass Sie dieselbe Feldstruktur in einer anderen Klasse oder Mischung verwenden können.
+Wenn Sie ein Objekt-Typ-Feld mit mehreren Unterfeldern in [!DNL Schema Editor] erstellen, können Sie dieses Feld in einen Datentyp konvertieren, sodass Sie dieselbe Feldstruktur in einer anderen Klasse oder Feldgruppe verwenden können.
 
 Um ein Objekttypfeld in einen Datentyp zu konvertieren, wählen Sie das Feld auf der Arbeitsfläche aus. Bevor Sie das Feld konvertieren, stellen Sie sicher, dass der **[!UICONTROL Anzeigename]** die Daten beschreibt, die das Objekt enthalten soll, da dies der Name des Datentyps wird. Wenn Sie bereit sind, das Feld zu konvertieren, wählen Sie in der rechten Leiste **[!UICONTROL In neuen Datentyp]** konvertieren.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-Die Arbeitsfläche aktualisiert den Datentyp des Felds von &quot;[!UICONTROL Object]&quot;auf den neuen Datentyp. Neben den Unterfeldern befinden sich auch kleine Sperrsymbole, die darauf hinweisen, dass es sich nicht mehr um einzelne Felder, sondern um einen Datentyp mit mehreren Feldern handelt. Diese Struktur kann jetzt in anderen Klassen und Mixins wiederverwendet werden, indem dieser Datentyp aus der Dropdownliste **[!UICONTROL Typ]** ausgewählt wird, wenn ein neues Feld definiert wird.
+Die Arbeitsfläche aktualisiert den Datentyp des Felds von &quot;[!UICONTROL Object]&quot;auf den neuen Datentyp. Neben den Unterfeldern befinden sich auch kleine Sperrsymbole, die darauf hinweisen, dass es sich nicht mehr um einzelne Felder, sondern um einen Datentyp mit mehreren Feldern handelt. Diese Struktur kann jetzt in anderen Klassen und Feldgruppen wiederverwendet werden, indem dieser Datentyp aus der Dropdownliste **[!UICONTROL Typ]** ausgewählt wird, wenn ein neues Feld definiert wird.
 
 ![](../../images/ui/resources/data-types/converted.png)
 
