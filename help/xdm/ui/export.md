@@ -6,9 +6,9 @@ topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '505'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Um diese Anforderung zu erfüllen, können Sie im Arbeitsbereich [!UICONTROL Sch
 
 >[!NOTE]
 >
->Sie können die Schema Registry-API auch verwenden, um neben Schemas, einschließlich Klassen, Mixins und Datentypen, weitere Ressourcen zu exportieren. Weitere Informationen finden Sie im Handbuch zu den [export/import-Endpunkten](../api/export-import.md).
+>Sie können die Schema Registry-API auch verwenden, um neben Schemas, einschließlich Klassen, Schema-Feldgruppen und Datentypen, weitere Ressourcen zu exportieren. Weitere Informationen finden Sie im Handbuch zu den [export/import-Endpunkten](../api/export-import.md).
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Während die Plattform-Benutzeroberfläche den Export von XDM-Ressourcen ermöglicht, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder IMS-Orgs zu importieren, um den Workflow abzuschließen. Lesen Sie das Handbuch [Erste Schritte mit der Schema Registry API](../api/getting-started.md), um wichtige Informationen zu erforderlichen Authentifizierungsheader zu erhalten, bevor Sie diesem Handbuch folgen.
 
@@ -44,9 +44,9 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +171,12 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +189,8 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/mixins/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,7 +203,7 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
 ]
 ```
 
-Die Nutzlast erfolgt in Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine benutzerdefinierte XDM-Ressource darstellt, die exportiert werden soll. Im obigen Beispiel sind das benutzerdefinierte Mixin und das Schema &quot;[!DNL Loyalty Members]&quot;enthalten. [!DNL Loyalty details] Die vom Schema verwendeten Kernressourcen werden nicht in den Export einbezogen, da diese Ressourcen in allen Sandboxen und IMS-Organisationen verfügbar sind.
+Die Nutzlast erfolgt in Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine benutzerdefinierte XDM-Ressource darstellt, die exportiert werden soll. Im obigen Beispiel sind die benutzerspezifische Feldgruppe &quot;[!DNL Loyalty details]&quot;und das Schema &quot;[!DNL Loyalty Members]&quot;enthalten. Die vom Schema verwendeten Kernressourcen werden nicht in den Export einbezogen, da diese Ressourcen in allen Sandboxen und IMS-Organisationen verfügbar sind.
 
 Beachten Sie, dass jede Instanz der Mandanten-ID Ihres Unternehmens in der Payload als `<XDM_TENANTID_PLACEHOLDER>` angezeigt wird. Diese Platzhalter werden automatisch durch den entsprechenden Wert für die Mandanten-ID ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
 
