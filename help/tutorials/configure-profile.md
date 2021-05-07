@@ -7,9 +7,9 @@ type: Tutorial
 description: In diesem Dokument werden die erforderlichen Schritte beschrieben und Links zu Tutorials für die einzelnen Workflows bereitgestellt.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '796'
 ht-degree: 24%
 
 ---
@@ -43,7 +43,7 @@ Bevor Daten in Adobe Experience Platform aufgenommen und bei der Erstellung von 
 **Dieses Handbuch hilft Ihnen:**
 - Durchsuchen Sie vorhandene Schema.
 - Erstellen und Benennen eines Schemas.
-- hinzufügen und definieren Sie XDM-Mixins.
+- XDM-Schema-Feldgruppen Hinzufügen und definieren.
 - Legen Sie Ihre Schema-Felder als Identitätsfelder fest.
 - Aktivieren Sie Profil für Ihr Schema.
 
