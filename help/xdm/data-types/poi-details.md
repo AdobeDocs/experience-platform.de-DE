@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp "Point of Interest Details".
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 14%
+source-wordcount: '201'
+ht-degree: 13%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 14%
 | `poiID` | Zeichenfolge | Eine eindeutige Kennung des POI. |
 | `type` | Zeichenfolge | Der allgemeine Typ des POI unter Verwendung eines vom Administrator der POI-Definitionen ausgewählten Typisierungsschemas. |
 
-Weitere Informationen zum Mixin finden Sie im öffentlichen XDM-Repository:
+Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)
