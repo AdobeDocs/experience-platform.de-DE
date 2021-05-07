@@ -6,9 +6,9 @@ description: Die Schema Registry API ermöglicht es Entwicklern, alle Schema und
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -29,9 +29,9 @@ Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie die [Sch
 
 ## Schemas
 
-XDM-Schema stellen die Struktur und das Format der Daten dar, die in Plattform erfasst werden, und überprüfen sie. Ein Schema besteht aus einer Klasse und null oder mehr Mixins. Sie können Schema mit dem Endpunkt `/schemas` erstellen, Ansicht, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im Endpunktleitfaden [Schema](./schemas.md).
+XDM-Schema stellen die Struktur und das Format der Daten dar, die in Plattform erfasst werden, und überprüfen sie. Ein Schema besteht aus einer Klasse und einer Schema- oder Feldgruppe. Sie können Schema mit dem Endpunkt `/schemas` erstellen, Ansicht, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im Endpunktleitfaden [Schema](./schemas.md).
 
-Eine schrittweise Anleitung zum Erstellen eines vollständigen Schemas in der Schema-Registrierungs-API, einschließlich Erstellen und Hinzufügen von Mixins und Datentypen, finden Sie im Lernprogramm [API-Schema erstellen](../tutorials/create-schema-api.md).
+Eine schrittweise Anleitung zum Erstellen eines vollständigen Schemas in der Schema-Registrierungs-API, einschließlich Erstellen und Hinzufügen von Feldgruppen und Datentypen, finden Sie im Lernprogramm [API-Schema erstellen](../tutorials/create-schema-api.md).
 
 ## Verhalten
 
@@ -39,15 +39,15 @@ Verhalten definieren die Art der Daten, die ein Schema beschreibt. Jede XDM-Klas
 
 ## Klassen
 
-Eine Klasse definiert die Basisstruktur von allgemeinen Eigenschaften, die alle Schema, die auf dieser Klasse basieren, enthalten müssen, und bestimmt, welche Mixins für die Verwendung in diesen Schemas geeignet sind. Jede Klasse muss mit einem vorhandenen Verhalten verknüpft sein. Weitere Informationen zum Arbeiten mit Klassen in der API finden Sie im Handbuch [classes endpoint guide](./classes.md).
+Eine Klasse definiert die Basisstruktur von allgemeinen Eigenschaften, die alle auf dieser Klasse basierenden Schema enthalten müssen, und bestimmt, welche Feldgruppen für die Verwendung in diesen Schemas infrage kommen. Jede Klasse muss mit einem vorhandenen Verhalten verknüpft sein. Weitere Informationen zum Arbeiten mit Klassen in der API finden Sie im Handbuch [classes endpoint guide](./classes.md).
 
-## Mixins
+## Feldergruppen
 
-Mixins sind wiederverwendbare Komponenten, die einen oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine einzelne Person, eine Postanschrift oder eine Webbrowser-Umgebung. Mixins sind als Teil eines Schemas gedacht, das eine kompatible Klasse implementiert, je nach dem Verhalten der von ihnen dargestellten Daten (Datensatz oder Zeitreihen). Informationen zum Arbeiten mit Mixins in der API finden Sie im Handbuch [mixins endpoint.](./mixins.md)
+Feldgruppen sind wiederverwendbare Komponenten, die einen oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine Einzelperson, eine Postanschrift oder eine Webbrowser-Umgebung. Feldgruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert, je nach dem Verhalten der von ihnen dargestellten Daten (Datensatz oder Zeitreihen). Informationen zum Arbeiten mit Feldgruppen in der API finden Sie im Endpunkthandbuch [Feldgruppen.](./field-groups.md)
 
 ## Datentypen
 
-Datentypen werden in Klassen oder Mixins genauso wie einfache Literalfelder als Referenztypen verwendet, wobei der Hauptunterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Ähnlich wie Mixins, da sie die einheitliche Verwendung einer Mehrfeldstruktur ermöglichen, sind die Datentypen flexibler, da sie an jeder beliebigen Stelle in der Schema-Struktur enthalten sein können, während Mixins nur auf der Stammebene hinzugefügt werden können. Weitere Informationen zum Arbeiten mit Datentypen in der API finden Sie im Endpunkthandbuch [Datentypen](./data-types.md).
+Datentypen werden in Klassen oder Feldgruppen genauso wie einfache Literalfelder als Referenztypfelder verwendet, wobei der Hauptunterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Die Datentypen sind ähnlich wie Feldgruppen, da sie eine einheitliche Verwendung einer mehrfeldigen Struktur ermöglichen, flexibler, da sie an jeder beliebigen Stelle in der Schema-Struktur enthalten sein können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Weitere Informationen zum Arbeiten mit Datentypen in der API finden Sie im Endpunkthandbuch [Datentypen](./data-types.md).
 
 ## Deskriptoren
 
@@ -61,7 +61,7 @@ Informationen zum Ansicht von Vereinigungen in der Schema Registry-API finden Si
 
 ## Export/Import
 
-Mit der Schema Registry API können Sie XDM-Ressourcen zwischen Sandboxen und IMS-Organisationen übertragen und freigeben. Für jedes Schema, jede Mischung oder jeden Datentyp können Sie eine Export-Nutzlast generieren, die die Ressourcenstruktur und alle abhängigen Ressourcen enthält. Diese Payload kann dann verwendet werden, um die Ressource in eine Ziel-Sandbox und IMS-Org zu importieren.
+Mit der Schema Registry API können Sie XDM-Ressourcen zwischen Sandboxen und IMS-Organisationen übertragen und freigeben. Für jedes Schema, jede Feldgruppe oder jeden Datentyp können Sie eine Export-Nutzlast mit der Ressourcenstruktur und allen abhängigen Ressourcen generieren. Diese Payload kann dann verwendet werden, um die Ressource in eine Ziel-Sandbox und IMS-Org zu importieren.
 
 Weitere Informationen zur Verwendung dieser Endpunkte finden Sie im Handbuch [export/import endpoints](./export-import.md).
 
@@ -73,7 +73,7 @@ Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [Be
 
 ## Auditprotokoll
 
-Die Schema-Registrierung führt ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen an einer Ressource (Klasse, Mixin, Datentyp oder Schema) vorgenommen wurden. Sie können das Protokoll für eine bestimmte Ressource abrufen, indem Sie die `$id` oder `meta:altId` im Pfad einer GET-Anforderung zu diesem Endpunkt angeben.
+Die Schema-Registrierung führt ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen an einer Ressource (Klasse, Feldgruppe, Datentyp oder Schema) vorgenommen wurden. Sie können das Protokoll für eine bestimmte Ressource abrufen, indem Sie die `$id` oder `meta:altId` im Pfad einer GET-Anforderung zu diesem Endpunkt angeben.
 
 Weitere Informationen zur Verwendung dieses Endpunkts finden Sie im Handbuch [Auditprotokoll-Endpunkt](./audit-log.md).
 
