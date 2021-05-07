@@ -2,20 +2,20 @@
 title: Erfassen von Commerce- und Produktinformationen mithilfe des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Produktdaten oder Warenkorb hinzufügen.
 keywords: products;commerce;actions;measure;order;cartAbandons;checkouts;productListAdds;productListOpen;productListRemoval;productListReöffnings;productListViews;productViews;purchase;saveForLaters;currencyCode;PaymentAmount;PaymentType;transactionID;priceTotal;purchaseID;purchaseNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 95%
+source-wordcount: '1324'
+ht-degree: 93%
 
 ---
-
 
 # Erfassen von Handels- und Produktinformationen
 
 Wenn Sie Produkte auf Ihrer Site haben, ist dies ein Standardsatz, den Sie möglicherweise senden möchten, um die meisten Funktionen von Adobe zu aktivieren. Dies ist nur ein Vorschlag, Sie verfügen damit jedoch von Anfang an über einen sehr starken Datensatz.
 
-Dieses Dokument verwendet das Mixin [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md). Das `commerce`-Mixin wird in zwei Teile aufgeteilt: das `commerce`-Objekt und das `productListItems`-Array. Mit dem `commerce`-Objekt können Sie angeben, welche Aktionen auf das `productListItems`-Array angewendet werden.
+Dieses Dokument verwendet die Feldgruppe [ExperienceEvent Commerce-Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) Schema. Die Feldgruppe `commerce` ist in zwei Teile unterteilt: das `commerce`-Objekt und das `productListItems`-Array. Mit dem `commerce`-Objekt können Sie angeben, welche Aktionen auf das `productListItems`-Array angewendet werden.
 
 >[!TIP]
 >
