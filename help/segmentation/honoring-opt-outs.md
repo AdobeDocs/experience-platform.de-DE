@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Adobe Experience Platform ermöglicht es Ihren Kunden, Abmeldeanfragen zur Nutzung und Datenspeicherung ihrer Daten innerhalb des Echtzeit-Profils des Kunden zu senden.] Diese Opt-out-Anfragen sind Teil des California Consumer Privacy Act (CCPA), der kalifornischen Bürgern das Recht einräumt, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen und zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem).
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 60%
+source-wordcount: '1049'
+ht-degree: 48%
 
 ---
 
@@ -28,33 +28,33 @@ Die Berücksichtigung von Abmeldeanfragen erfordert ein Verständnis der verschi
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Hilft Unternehmen, die Einhaltung von Datenschutzbestimmungen zu automatisieren, die Kundendaten in  [!DNL Platform]die Daten einbeziehen.
 
-## Opt-out-Mixins
+## Feldgruppen für Ausschluss-Schemas
 
-Um CCPA-Abmeldeanforderungen nachzukommen, muss eines der Schema, das Bestandteil des Vereinigung-Schemas ist, die erforderlichen Abmeldefelder für [!DNL Experience Data Model] (XDM) enthalten. Es gibt zwei Mixins, die verwendet werden können, um einem Schema Opt-out-Felder hinzuzufügen. Sie werden in den folgenden Abschnitten ausführlicher behandelt:
+Um CCPA-Abmeldeanforderungen nachzukommen, muss eines der Schema, das Bestandteil des Vereinigung-Schemas ist, die erforderlichen Abmeldefelder für [!DNL Experience Data Model] (XDM) enthalten. Es gibt zwei Schema-Feldgruppen, die verwendet werden können, um einem Schema Ausschluss-Felder hinzuzufügen. Jede dieser Feldgruppen wird in den folgenden Abschnitten ausführlicher behandelt:
 
 - [Profildatenschutz](#profile-privacy): Dient zur Erfassung verschiedener Opt-out-Typen (allgemein oder Vertrieb/Freigabe).
 - [Profilvoreinstellungsdetails](#profile-preferences-details): Dient zum Erfassen von Opt-out-Anfragen für bestimmte XDM-Kanäle.
 
-Eine schrittweise Anleitung zum Hinzufügen eines Mixins zu einem Schema finden Sie im Abschnitt „Hinzufügen eines Mixins“ in der folgenden XDM-Dokumentation:
+Eine schrittweise Anleitung zum Hinzufügen einer Feldgruppe zu einem Schema finden Sie im Abschnitt &quot;Feldgruppe Hinzufügen&quot;in der folgenden XDM-Dokumentation:
 - [Tutorial zur Schema Registry-API](../xdm/api/getting-started.md).: Erstellen eines Schemas mit der Schema Registry-API.
 - [Schema Editor-Tutorial](../xdm/tutorials/create-schema-ui.md): Erstellen eines Schemas mithilfe der Platform-Benutzeroberfläche.
 
-Im Folgenden finden Sie ein Beispielbild mit den Opt-out-Mixins, die einem Schema in der Benutzeroberfläche hinzugefügt wurden:
+Im Folgenden finden Sie ein Beispielbild mit den Feldgruppen, die einem Schema in der Benutzeroberfläche hinzugefügt wurden, um die Teilnahme zu beenden:
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-Die Struktur der einzelnen Mixins sowie eine Beschreibung der Felder, die sie zum Schema beitragen, sind in den folgenden Abschnitten detaillierter dargestellt.
+Die Struktur der einzelnen Feldgruppen sowie eine Beschreibung der Felder, die sie zum Schema beitragen, sind in den folgenden Abschnitten detaillierter dargestellt.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-Mit dem [!DNL Profile Privacy]-Mixin können Sie zwei Arten von CCPA-Ausschluss-Anfragen von Kunden erfassen:
+Mit der Feldgruppe [!DNL Profile Privacy] können Sie zwei Arten von CCPA-Ausschluss-Anfragen von Kunden erfassen:
 
 1. Allgemeines Opt-out
 2. Opt-out für Vertrieb/Freigabe
 
 ![](images/opt-outs/profile-privacy.png)
 
-Das Mixin [!DNL Profile Privacy] enthält die folgenden Felder:
+Die Feldgruppe [!DNL Profile Privacy] enthält die folgenden Felder:
 
 - Datenschutz-Opt-outs (`privacyOptOuts`): Ein Array, das eine Liste von Opt-out-Objekten enthält.
 - Opt-out-Typ (`optOutType`): Die Art des Opt-outs. Dieses Feld ist ein Enum mit zwei möglichen Werten:
@@ -67,15 +67,15 @@ Das Mixin [!DNL Profile Privacy] enthält die folgenden Felder:
    - Opt-in (`in`): Der Kunde hat sich angemeldet.
 - Opt-out-Zeitstempel (`timestamp`): Zeitstempel des empfangenen Opt-out-Signals.
 
-Die vollständige Ansicht des [!DNL Profile Privacy]-Mixins finden Sie im öffentlichen [XDM GitHub-Repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) oder Vorschau des Mixins mithilfe der Plattform-Benutzeroberfläche.
+Um die vollständige Ansicht der Feldgruppe [!DNL Profile Privacy] zu erhalten, lesen Sie bitte das [XDM öffentliche GitHub-Repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) oder die Vorschau der Feldgruppe mithilfe der Plattform-Benutzeroberfläche.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-Das [!DNL Profile Preferences Details]-Mixin enthält mehrere Felder, die die Voreinstellungen für Profil des Kunden darstellen (z. B. E-Mail-Format, bevorzugte Sprache und Zeitzone). In einem der Felder, die in diesem Mixin enthalten sind, erlaubt „OptInOut“ (`optInOut`) das Festlegen von Opt-out-Werten für einzelne Kanäle.
+Die Feldgruppe [!DNL Profile Preferences Details] stellt mehrere Felder bereit, die Voreinstellungen für Profil des Kunden darstellen (z. B. E-Mail-Format, bevorzugte Sprache und Zeitzone). Eines der Felder in dieser Feldgruppe, OptInOut (`optInOut`), erlaubt die Festlegung von Ausschluss-Werten für einzelne Kanal.
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-Das [!DNL Profile Preferences Details]-Mixin enthält die folgenden Felder zum Ausschluss:
+Die Feldgruppe [!DNL Profile Preferences Details] enthält die folgenden Felder, die sich auf Ausschluss-Optionen beziehen:
 
 - OptInOut (`optInOut`): Ein Objekt, bei dem jeder Schlüssel einen gültigen und bekannten URI für einen Kommunikationskanal und den aktiven Status des Opt-outs für jeden Kanal darstellt. Jeder Kanal kann einen von vier möglichen Werten haben:
    - Nicht angegeben (`not_provided`): Für diesen Kanal wurde keine Opt-out-Anfrage gesendet.
@@ -100,7 +100,7 @@ Im folgenden JSON-Beispiel wird gezeigt, wie das OptInOut-Objekt mehrere Opt-out
 }
 ```
 
-Zur Ansicht der vollständigen Struktur des Profil Preferences Details mixins besuchen Sie bitte das [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) oder die Vorschau des mixins mithilfe der [!DNL Platform]-Benutzeroberfläche.
+Um die vollständige Ansicht der Feldgruppe &quot;Profil-Voreinstellungsdetails&quot;zu erhalten, besuchen Sie das öffentliche XDM-GitHub-Repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) oder Vorschau der Feldgruppe mithilfe der [!DNL Platform]-Benutzeroberfläche.[
 
 ## Handhabung von Opt-out-Optionen in der Segmentierung
 
