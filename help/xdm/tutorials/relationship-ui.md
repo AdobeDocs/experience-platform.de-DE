@@ -7,10 +7,10 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 31%
+source-wordcount: '956'
+ht-degree: 26%
 
 ---
 
@@ -54,23 +54,23 @@ Das Ziel-Schema &quot;[!DNL Hotels]&quot;basiert auf einer benutzerspezifischen 
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## Beziehungs-Mixin erstellen
+## Erstellen einer Beziehungs-Schema-Feldgruppe
 
 >[!NOTE]
 >
 >Dieser Schritt ist nur erforderlich, wenn Ihr Quell-Schema über kein dediziertes Zeichenfolgenfeld verfügt, das als Verweis auf das Ziel-Schema verwendet werden kann. Wenn das Feld in Ihrem Quellschema bereits definiert ist, fahren Sie mit dem nächsten Schritt zum [Definieren eines Beziehungsfelds](#relationship-field) fort.
 
-Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das als Verweis auf das Zielschema dient. Sie können dem Quellschema ein solches Feld hinzufügen, indem Sie ein neues Mixin erstellen.
+Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das als Verweis auf das Zielschema dient. Sie können dieses Feld dem Quellfeld hinzufügen, indem Sie eine neue Schema-Feldgruppe erstellen.
 
-Beginn durch Auswahl von **[!UICONTROL Hinzufügen]** im Abschnitt **[!UICONTROL Mixins]**.
+Beginn durch Auswahl von **[!UICONTROL Hinzufügen]** im Abschnitt **[!UICONTROL Feldgruppen]**.
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-Das Dialogfeld [!UICONTROL Mixin hinzufügen] wird angezeigt. Wählen Sie **[!UICONTROL Neue Mischung erstellen]**. Geben Sie in den angezeigten Textfeldern einen Anzeigenamen und eine Beschreibung für das neue Mixin ein. Wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, wenn Sie fertig sind.
+Das Dialogfeld [!UICONTROL Hinzufügen] wird angezeigt. Wählen Sie **[!UICONTROL Neue Feldgruppe]** erstellen. Geben Sie in die angezeigten Textfelder einen Anzeigenamen und eine Beschreibung für die neue Feldgruppe ein. Wählen Sie **[!UICONTROL Hinzufügen Feldgruppen]** aus, wenn Sie fertig sind.
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width="750"><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-Die Arbeitsfläche wird wieder angezeigt, wobei &quot;[!DNL Favorite Hotel]&quot;im Abschnitt **[!UICONTROL Mixins]** angezeigt wird. Wählen Sie den Namen des Mixins und dann **[!UICONTROL Hinzufügen Feld]** neben dem Feld `Loyalty Members` aus.
+Die Arbeitsfläche wird wieder angezeigt, wobei &quot;[!DNL Favorite Hotel]&quot;im Abschnitt **[!UICONTROL Feldgruppen]** angezeigt wird. Wählen Sie den Feldgruppennamen und dann **[!UICONTROL Hinzufügen Feld]** neben dem Feld `Loyalty Members` aus.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 
