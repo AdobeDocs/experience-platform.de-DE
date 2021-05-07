@@ -6,9 +6,9 @@ topic-legacy: Intelligent Services
 description: Damit Intelligent Services Einblicke aus den Daten Ihrer Marketing-Ereignis erhalten kann, müssen die Daten semantisch erweitert und in einer Standardstruktur gepflegt werden. Intelligente Dienste nutzen Experience Data Model-(XDM-)Schema, um dies zu erreichen.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2398'
+source-wordcount: '2410'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Wenn Ihre Daten außerhalb von [!DNL Experience Platform] gespeichert werden, f�
 
 Kunden-API und Attribution AI unterstützen nativ Adobe Analytics-Daten. Um Adobe Analytics-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Analytics-Quellanschluss](../sources/tutorials/ui/create/adobe-applications/analytics.md) einzurichten.
 
-Sobald der Quell-Connector Ihre Daten in die Experience Platform streamt, können Sie Adobe Analytics als Datenquelle auswählen, gefolgt von einem Datensatz während der Instanzkonfiguration. Alle erforderlichen Schema-Felder und Mixins werden während der Verbindungseinrichtung automatisch erstellt. Sie müssen die Datensätze nicht in das CEE-Format extrahieren, transformieren, laden.
+Sobald der Quell-Connector Ihre Daten in die Experience Platform streamt, können Sie Adobe Analytics als Datenquelle auswählen, gefolgt von einem Datensatz während der Instanzkonfiguration. Alle erforderlichen Feldgruppen und Schemas werden während der Verbindungseinrichtung automatisch erstellt. Sie müssen die Datensätze nicht in das CEE-Format extrahieren, transformieren, laden.
 
 >[!IMPORTANT]
 >
@@ -45,7 +45,7 @@ Sobald der Quell-Connector Ihre Daten in die Experience Platform streamt, könne
 
 Die Kundenunterstützung unterstützt nativ Adobe Audience Manager-Daten. Um Audience Manager-Daten zu verwenden, führen Sie die in der Dokumentation beschriebenen Schritte aus, um einen [Audience Manager-Quellanschluss](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) einzurichten.
 
-Sobald der Quell-Connector Ihre Daten in die Experience Platform streamt, können Sie Adobe Audience Manager als Datenquelle auswählen, gefolgt von einem Datensatz während der Konfiguration der Customer AI. Alle erforderlichen Schema-Felder und Mixins werden während der Verbindungseinrichtung automatisch erstellt. Sie müssen die Datensätze nicht in das CEE-Format extrahieren, transformieren, laden.
+Sobald der Quell-Connector Ihre Daten in die Experience Platform streamt, können Sie Adobe Audience Manager als Datenquelle auswählen, gefolgt von einem Datensatz während der Konfiguration der Customer AI. Alle Feldgruppen und Schema-Felder werden während der Verbindungseinrichtung automatisch erstellt. Sie müssen die Datensätze nicht in das CEE-Format extrahieren, transformieren, laden.
 
 >[!IMPORTANT]
 >
@@ -68,13 +68,13 @@ Das CEE-Schema erfasst wie alle XDM ExperienceEvent-Schema den zeitreihenbasiert
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Wie alle XDM-Schema ist auch das CEE-Mixin erweiterbar. Mit anderen Worten, zusätzliche Felder können dem CEE-Mixin hinzugefügt werden, und bei Bedarf können verschiedene Varianten in mehreren Schemas enthalten sein.
+Wie alle XDM-Schema ist auch die CEE-Schema-Feldgruppe erweiterbar. Mit anderen Worten, der CEE-Feldgruppe können zusätzliche Felder hinzugefügt werden, und bei Bedarf können verschiedene Varianten in mehreren Schemas eingeschlossen werden.
 
-Ein vollständiges Beispiel des Mixins finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Darüber hinaus können Sie die folgende [JSON-Datei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) als Beispiel für die Strukturierung von Daten zur Erfüllung des CEE-Schemas Ansicht und Kopieren verwenden. In beiden Beispielen erfahren Sie mehr über die im folgenden Abschnitt beschriebenen Schlüsselfelder, um zu ermitteln, wie Sie dem Schema Ihre eigenen Daten zuordnen können.
+Ein vollständiges Beispiel der Feldgruppe finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Darüber hinaus können Sie die folgende [JSON-Datei](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) als Beispiel für die Strukturierung von Daten zur Erfüllung des CEE-Schemas Ansicht und Kopieren verwenden. In beiden Beispielen erfahren Sie mehr über die im folgenden Abschnitt beschriebenen Schlüsselfelder, um zu ermitteln, wie Sie dem Schema Ihre eigenen Daten zuordnen können.
 
 ## Schlüsselfelder
 
-Es gibt mehrere Schlüsselfelder im CEE-Mixin, die verwendet werden sollten, damit [!DNL Intelligent Services] nützliche Einblicke generiert. In diesem Abschnitt werden der Verwendungsfall und die erwarteten Daten für diese Felder beschrieben und Links zur Referenzdokumentation für weitere Beispiele bereitgestellt.
+Es gibt mehrere Schlüsselfelder innerhalb der CEE-Feldgruppe, die verwendet werden sollten, damit [!DNL Intelligent Services] nützliche Einblicke generiert. In diesem Abschnitt werden der Verwendungsfall und die erwarteten Daten für diese Felder beschrieben und Links zur Referenzdokumentation für weitere Beispiele bereitgestellt.
 
 ### Obligatorische Felder
 
@@ -297,16 +297,16 @@ In diesem Abschnitt wird der Arbeitsablauf für die Zuordnung und Eingabe von Da
 
 #### Erstellen eines CEE-Schemas und eines Datasets
 
-Wenn Sie bereit sind, Ihre Daten für die Erfassung vorzubereiten, müssen Sie zunächst ein neues XDM-Schema erstellen, das das CEE-Mixin verwendet. Die folgenden Lernprogramme erläutern die Erstellung eines neuen Schemas in der Benutzeroberfläche oder API:
+Wenn Sie bereit sind, Ihre Daten für die Erfassung vorzubereiten, müssen Sie zunächst ein neues XDM-Schema erstellen, das die CEE-Feldgruppe verwendet. Die folgenden Lernprogramme erläutern die Erstellung eines neuen Schemas in der Benutzeroberfläche oder API:
 
 * [Erstellen eines Schemas in der Benutzeroberfläche](../xdm/tutorials/create-schema-ui.md)
 * [Erstellen eines Schemas in der API](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->Die oben stehenden Lernprogramme folgen einem allgemeinen Arbeitsablauf zum Erstellen eines Schemas. Bei der Auswahl einer Klasse für das Schema müssen Sie die **XDM ExperienceEvent-Klasse** verwenden. Nachdem diese Klasse ausgewählt wurde, können Sie das CEE-Mixin dem Schema hinzufügen.
+>Die oben stehenden Lernprogramme folgen einem allgemeinen Arbeitsablauf zum Erstellen eines Schemas. Bei der Auswahl einer Klasse für das Schema müssen Sie die **XDM ExperienceEvent-Klasse** verwenden. Nachdem diese Klasse ausgewählt wurde, können Sie die CEE-Feldgruppe dem Schema hinzufügen.
 
-Nachdem Sie das CEE-Mixin zum Schema hinzugefügt haben, können Sie je nach Bedarf weitere Mixins in Ihre Daten einfügen.
+Nachdem Sie die CEE-Feldgruppe zum Schema hinzugefügt haben, können Sie weitere Feldgruppen hinzufügen, wie dies für zusätzliche Felder in Ihren Daten erforderlich ist.
 
 Nachdem Sie das Schema erstellt und gespeichert haben, können Sie auf der Grundlage dieses Schemas einen neuen Datensatz erstellen. Die folgenden Lernprogramme erläutern den Vorgang zum Erstellen eines neuen Datensatzes in der Benutzeroberfläche oder API:
 
