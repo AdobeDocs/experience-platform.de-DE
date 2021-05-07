@@ -6,16 +6,16 @@ description: Die Endpunkte "/export"und "/import"in der Schema Registry-API erm�
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '507'
 ht-degree: 4%
 
 ---
 
 # Endpunkte exportieren/importieren
 
-Alle Ressourcen innerhalb von [!DNL Schema Library] sind in einer bestimmten Sandbox innerhalb einer IMS-Organisation enthalten. In einigen Fällen möchten Sie möglicherweise Experience Data Model-(XDM-)Ressourcen zwischen Sandboxen und IMS-Orgs freigeben. Die [!DNL Schema Registry]-API stellt zwei Endpunkte bereit, mit denen Sie eine Export-Nutzlast für beliebige Schema, Mixins oder Datentypen in der[!DNL  Schema Library] generieren und diese Nutzlast dann verwenden können, um diese Ressource (und alle abhängigen Ressourcen) in eine Zielgruppe-Sandbox und IMS-Org zu importieren.
+Alle Ressourcen innerhalb von [!DNL Schema Library] sind in einer bestimmten Sandbox innerhalb einer IMS-Organisation enthalten. In einigen Fällen möchten Sie möglicherweise Experience Data Model-(XDM-)Ressourcen zwischen Sandboxen und IMS-Orgs freigeben. Die [!DNL Schema Registry]-API stellt zwei Endpunkte bereit, mit denen Sie eine Export-Nutzlast für jedes Schema, jede Schema-Feldgruppe oder jeden Datentyp in der[!DNL  Schema Library] generieren und diese Nutzlast dann verwenden können, um diese Ressource (und alle abhängigen Ressourcen) in eine Zielgruppe-Sandbox und IMS-Org zu importieren.
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Die export-/import-Endpunkte sind Teil der Remote-Prozeduraufrufe (RPCs), die vo
 
 ## Abrufen einer Export-Nutzlast für eine Ressource {#export}
 
-Bei allen vorhandenen Schemas, Mixins oder Datentypen im [!DNL Schema Library] können Sie eine Exportnutzlast generieren, indem Sie eine GET an den `/export`-Endpunkt anfordern und die ID der Ressource im Pfad angeben.
+Für jedes vorhandene Schema, jede Feldgruppe oder jeder Datentyp in [!DNL Schema Library] können Sie eine Export-Nutzlast generieren, indem Sie eine GET an den `/export`-Endpunkt anfordern und die ID der Ressource im Pfad angeben.
 
 **API-Format**
 
@@ -39,11 +39,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Export-Nutzlast für ein `Restaurant`-Mixin ab.
+Mit der folgenden Anforderung wird eine Export-Nutzlast für eine `Restaurant`-Feldgruppe abgerufen.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -53,7 +53,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Zielgruppe-XDM-Ressource und alle davon abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein vom Pächter erstellter `Property`-Datentyp, den das `Restaurant`-mixin verwendet, während das zweite Objekt das `Restaurant`-mixin selbst ist. Diese Nutzlast kann dann verwendet werden, um [die Ressource](#import) in eine andere Sandbox oder IMS-Organisation zu importieren.
+Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Zielgruppe-XDM-Ressource und alle davon abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein vom Pächter erstellter Datentyp `Property`, den die Feldgruppe `Restaurant` verwendet, während das zweite Objekt die Feldgruppe `Restaurant` ist. Diese Nutzlast kann dann verwendet werden, um [die Ressource](#import) in eine andere Sandbox oder IMS-Organisation zu importieren.
 
 Beachten Sie, dass alle Instanzen der Mieter-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>` ersetzt werden. Auf diese Weise kann die Schema-Registrierung automatisch die richtige Mandant-ID auf die Ressourcen anwenden, je nachdem, wo sie im nachfolgenden Importaufruf gesendet werden.
 
@@ -129,9 +129,9 @@ Beachten Sie, dass alle Instanzen der Mieter-ID der Ressource durch `<XDM_TENANT
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -207,7 +207,7 @@ POST /rpc/import
 
 **Anfrage**
 
-Die folgende Anforderung nimmt die im vorherigen [Exportbeispiel](#export) zurückgegebene Nutzlast in Anspruch, um die `Restaurant`-Mischung in ein neues IMS-Org und eine neue Sandbox zu importieren, wie durch die `x-gw-ims-org-id`- bzw. `x-sandbox-name`-Kopfzeilen bestimmt.
+Die folgende Anforderung nimmt die im vorherigen [Exportbeispiel](#export) zurückgegebene Nutzlast in Anspruch, um die `Restaurant`-Feldgruppe in ein neues IMS-Org und eine neue Sandbox zu importieren, wie durch die Überschriften `x-gw-ims-org-id` bzw. `x-sandbox-name` bestimmt.
 
 ```shell
 curl -X POST \
@@ -288,9 +288,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -446,9 +446,9 @@ Bei einer erfolgreichen Antwort wird eine Liste der importierten Ressourcen zur�
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
