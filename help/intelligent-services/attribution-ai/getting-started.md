@@ -6,10 +6,10 @@ topic-legacy: Getting started
 description: Folgende Handbücher setzen ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie folgende Dokumente.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
-ht-degree: 75%
+ht-degree: 71%
 
 ---
 
@@ -21,7 +21,7 @@ Die folgenden Handbücher erfordern ein Verständnis der verschiedenen [!DNL Ado
 - [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md) des Schemas: Dieses Dokument bietet eine Einführung in Experience Data Model-(XDM-)Schema und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in  [!DNL Adobe Experience Platform]verwendet werden sollen.
 - [Erstellen von Schemas](../../xdm/tutorials/create-schema-ui.md): In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 
-Für Attribution AI müssen Datensätze dem Schema Consumer Experience Events (CEE) entsprechen; dabei handelt es sich um ein Mixin im [Experience-Datenmodell](../../xdm/home.md) (XDM). Wenden Sie sich bitte unter attributionai-support@adobe.com an den Support von Adobe, um die Daten zu implementieren oder zu ändern. Wenn Daten zu Medienausgaben vorhanden sind, können Sie weitere Analysen durchführen, z. B. zu inkrementellen Umsätzen und ROI. Wenn Kundenprofildaten verfügbar sind, können Sie Guthaben auf der Kundenebene genauer zuordnen.
+Attribution AI erfordert, dass die Datensätze dem Consumer Experience Ereignisses (CEE)-Schema entsprechen, bei dem es sich um eine [Erlebnisdatenmodell (XDM)](../../xdm/home.md)-Schema-Feldgruppe handelt. Wenden Sie sich bitte unter attributionai-support@adobe.com an den Support von Adobe, um die Daten zu implementieren oder zu ändern. Wenn Daten zu Medienausgaben vorhanden sind, können Sie weitere Analysen durchführen, z. B. zu inkrementellen Umsätzen und ROI. Wenn Kundenprofildaten verfügbar sind, können Sie Guthaben auf der Kundenebene genauer zuordnen.
 
 ## Terminologie
 
