@@ -6,16 +6,16 @@ description: Mit dem Endpunkt /Schemas in der Schema Registry API können Sie XD
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 18%
+source-wordcount: '1431'
+ht-degree: 16%
 
 ---
 
 # Schemas-Endpunkt
 
-Ein Schema kann man sich als Vorlage für die Daten vorstellen, die Sie in Adobe Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und null oder mehr Mixins. Mit dem `/schemas`-Endpunkt in der [!DNL Schema Registry]-API können Sie Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Ein Schema kann man sich als Vorlage für die Daten vorstellen, die Sie in Adobe Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und einer Schema-Feldgruppe von null oder mehr. Mit dem `/schemas`-Endpunkt in der [!DNL Schema Registry]-API können Sie Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
@@ -154,7 +154,7 @@ Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegeb
           "meta:xdmType": "object"
       },
       {
-          "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+          "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
           "type": "object",
           "meta:xdmType": "object"
       }
@@ -163,7 +163,7 @@ Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegeb
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
-      "https://ns.adobe.com/{TENANT_ID}/mixins/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
+      "https://ns.adobe.com/{TENANT_ID}/fieldgroups/443fe51457047d958f4a97853e64e0eca93ef34d7990583b",
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile"
@@ -193,7 +193,7 @@ Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Kl
 
 >[!NOTE]
 >
->Der folgende Beispielaufruf ist nur ein Grundbeispiel dafür, wie ein Schema in der API erstellt wird, mit den minimalen Kompositionserfordernissen einer Klasse und ohne Mixins. Ausführliche Anweisungen zum Erstellen eines Schemas in der API, einschließlich zum Zuweisen von Feldern mit Mixins und Datentypen, finden Sie im Tutorial [Schema-Erstellung](../tutorials/create-schema-api.md).
+>Der folgende Beispielaufruf ist nur ein Grundbeispiel dafür, wie ein Schema in der API erstellt wird, mit den Mindestanforderungen an die Zusammensetzung einer Klasse und ohne Feldgruppen. Ausführliche Anweisungen zum Erstellen eines Schemas in der API, einschließlich zum Zuweisen von Feldern mit Feldgruppen und Datentypen, finden Sie im Tutorial [Schema-Erstellung](../tutorials/create-schema-api.md).
 
 **API-Format**
 
@@ -227,7 +227,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Mischung verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert das `$id` der Klasse darstellt oder deren mixin das neue Schema implementiert wird. Es muss eine Klasse mit null oder mehr zusätzlichen Mixins bereitgestellt werden. Im obigen Beispiel ist das einzelne Objekt im Array `allOf` die Klasse des Schemas. |
+| `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Feldgruppe verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert das `$id` der Klasse oder Feldgruppe darstellt, die das neue Schema implementieren wird. Es muss eine Klasse mit null oder mehr zusätzlichen Feldgruppen bereitgestellt werden. Im obigen Beispiel ist das einzelne Objekt im Array `allOf` die Klasse des Schemas. |
 
 **Antwort**
 
@@ -268,7 +268,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 
 Wenn Sie eine GET für [Liste aller Schema](#list) im Pächter-Container durchführen, wird jetzt das neue Schema einbezogen. Sie können eine [Suchanfrage (GET)](#lookup) mit dem URL-kodierten `$id`-URI ausführen, um das neue Schema direkt Ansicht.
 
-Um einem Schema weitere Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um Mixins zu den Arrays `allOf` und `meta:extends` des Schemas hinzuzufügen.
+Um einem Schema weitere Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den Arrays des Schemas `allOf` und `meta:extends` Feldgruppen hinzuzufügen.
 
 ## Schema {#put} aktualisieren
 
@@ -357,7 +357,7 @@ Sie können einen Teil eines Schemas mit einer PATCH-Anforderung aktualisieren. 
 >
 >Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen eines Schemas mit einem PUT-Vorgang](#put).
 
-Eine der häufigsten PATCH-Vorgänge besteht darin, einem Schema zuvor definierte Mixins hinzuzufügen, wie im folgenden Beispiel gezeigt.
+Einer der häufigsten PATCH-Vorgänge besteht darin, einem Schema zuvor definierte Feldgruppen hinzuzufügen, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -371,9 +371,9 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Anfrage**
 
-Die folgende Beispielanforderung fügt einem Schema eine neue Mischung hinzu, indem der `$id`-Wert dieser Mischung sowohl den Arrays `meta:extends` als auch `allOf` hinzugefügt wird.
+Die folgende Beispielanforderung fügt einem Schema eine neue Feldgruppe hinzu, indem der `$id`-Wert dieser Feldgruppe sowohl den Arrays `meta:extends` als auch `allOf` hinzugefügt wird.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang durchgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
 
 ```SHELL
 curl -X PATCH\
@@ -387,13 +387,13 @@ curl -X PATCH\
         { 
           "op": "add",
           "path": "/meta:extends/-",
-          "value":  "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+          "value":  "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         },
         {
           "op": "add",
           "path": "/allOf/-",
           "value":  {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
           }
         }
       ]'
@@ -401,7 +401,7 @@ curl -X PATCH\
 
 **Antwort**
 
-Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das Mixin `$id` wurde dem Array `meta:extends` hinzugefügt und ein Verweis (`$ref`) auf das Mixin `$id` wird jetzt im Array `allOf` angezeigt.
+Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Feldgruppe `$id` wurde dem Array `meta:extends` hinzugefügt und im Array `allOf` wird nun ein Verweis (`$ref`) zur Feldgruppe `$id` angezeigt.
 
 ```JSON
 {
@@ -413,7 +413,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das Mi
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -422,7 +422,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das Mi
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -493,7 +493,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
             "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
         }
     ],
     "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
@@ -502,7 +502,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
     "meta:extends": [
         "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
         "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/e49cbb2eec33618f686b8344b4597ecf"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
