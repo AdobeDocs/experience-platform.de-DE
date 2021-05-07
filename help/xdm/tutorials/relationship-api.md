@@ -7,10 +7,10 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1337'
-ht-degree: 45%
+source-wordcount: '1354'
+ht-degree: 33%
 
 ---
 
@@ -111,35 +111,35 @@ Notieren Sie sich die `$id`-Werte der beiden Schemas, für die Sie eine Beziehun
 
 ## Definieren eines Referenzfelds für das Quell-Schema
 
-Innerhalb der [!DNL Schema Registry] funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in relationalen Datenbanktabellen: ein Feld im Quell-Schema als Verweis auf das primäre Identitätsfeld eines Schemas dient. Wenn Ihr Quellfeld zu diesem Zweck nicht über ein Schema verfügt, müssen Sie eventuell eine Mischung mit dem neuen Feld erstellen und es dem Schema hinzufügen. Dieses neue Feld muss den Wert `type` von &quot;[!DNL string]&quot;haben.
+Innerhalb der [!DNL Schema Registry] funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in relationalen Datenbanktabellen: ein Feld im Quell-Schema als Verweis auf das primäre Identitätsfeld eines Schemas dient. Wenn Ihr Quell-Schema zu diesem Zweck über kein Feld verfügt, müssen Sie eventuell eine Feldgruppe mit dem neuen Schema erstellen und diese dem Schema hinzufügen. Dieses neue Feld muss den Wert `type` von &quot;[!DNL string]&quot;haben.
 
 >[!IMPORTANT]
 >
 >Im Gegensatz zum Ziel-Schema kann das source-Schema seine primäre Identität nicht als Referenzfeld verwenden.
 
-In diesem Lernprogramm enthält das Zielfeld &quot;[!DNL Hotels]&quot;ein `hotelId`-Schema, das als primäre Identität des Schemas dient und daher auch als Referenzfeld dient. Das Quellfeld &quot;[!DNL Loyalty Members]&quot;verfügt jedoch nicht über ein dediziertes Schema, das als Referenz verwendet werden kann, und muss eine neue Mixin erhalten, die dem Schema ein neues Feld hinzufügt: `favoriteHotel`.
+In diesem Lernprogramm enthält das Zielfeld &quot;[!DNL Hotels]&quot;ein `hotelId`-Schema, das als primäre Identität des Schemas dient und daher auch als Referenzfeld dient. Das Quellfeld &quot;[!DNL Loyalty Members]&quot;verfügt jedoch nicht über ein dediziertes Schema, das als Referenz verwendet werden soll, und muss eine neue Feldgruppe erhalten, die dem Schema ein neues Feld hinzufügt: `favoriteHotel`.
 
 >[!NOTE]
 >
 >Wenn Ihr Quell-Schema bereits über ein dediziertes Feld verfügt, das Sie als Referenzfeld verwenden möchten, können Sie mit dem Schritt [Erstellen eines Referenzdeskriptors](#reference-identity) fortfahren.
 
-### Neues Mixin erstellen
+### Neue Feldgruppe erstellen
 
-Um einem Schema ein neues Feld hinzuzufügen, muss das Feld zunächst in einem Mixin definiert werden. Sie können ein neues Mixin einrichten, indem Sie eine POST-Anfrage an den `/tenant/mixins`-Endpunkt senden.
+Um einem Schema ein neues Feld hinzuzufügen, muss es zunächst in einer Feldgruppe definiert werden. Sie können eine neue Feldgruppe erstellen, indem Sie eine POST an den Endpunkt `/tenant/fieldgroups` anfordern.
 
 **API-Format**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Anfrage**
 
-Die folgende Anfrage erstellt ein neues Mixin, das ein `favoriteHotel`-Feld unter dem Namespace `_{TENANT_ID}` eines beliebigen Schemas hinzufügt, dem es hinzugefügt wird.
+Mit der folgenden Anforderung wird eine neue Feldgruppe erstellt, die ein `favoriteHotel`-Feld unter dem `_{TENANT_ID}`-Namensraum eines Schemas hinzufügt, dem es hinzugefügt wird.
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -149,7 +149,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -176,20 +176,20 @@ curl -X POST\
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten Mixins zurück.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Feldgruppe zurück.
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
-    "meta:resourceType": "mixins",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
+    "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",
     "title": "Favorite Hotel",
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -229,13 +229,13 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Mixins zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `$id` | Die schreibgeschützte, vom System erzeugte eindeutige Kennung des neuen Mixins. Erhält die Form eines URI. |
+| `$id` | Der schreibgeschützte, vom System erzeugte eindeutige Bezeichner der neuen Feldgruppe. Erhält die Form eines URI. |
 
-Notieren Sie den `$id`-URI des Mixins, der im nächsten Schritt beim Hinzufügen des Mixins zum Quellschema verwendet werden wird.
+Notieren Sie den `$id`-URI der Feldgruppe, der im nächsten Schritt beim Hinzufügen der Feldgruppe zum Quellcode-Schema verwendet wird.
 
-### Mixin dem Quellschema hinzufügen
+### hinzufügen der Feldgruppe zum Quellcode-Schema
 
-Nachdem Sie ein Mixin erstellt haben, können Sie es dem Quellschema hinzufügen, indem Sie eine PATCH-Anfrage an den `/tenant/schemas/{SCHEMA_ID}`-Endpunkt senden.
+Nachdem Sie eine Feldgruppe erstellt haben, können Sie sie dem Quell-Schema hinzufügen, indem Sie eine PATCH-Anforderung an den `/tenant/schemas/{SCHEMA_ID}`-Endpunkt senden.
 
 **API-Format**
 
@@ -249,7 +249,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird das Mixin &quot;[!DNL Favorite Hotel]&quot;zum Schema &quot;[!DNL Loyalty Members]&quot;hinzugefügt.
+Mit der folgenden Anforderung wird die Feldgruppe &quot;[!DNL Favorite Hotel]&quot;dem Schema &quot;[!DNL Loyalty Members]&quot;hinzugefügt.
 
 ```shell
 curl -X PATCH \
@@ -264,7 +264,7 @@ curl -X PATCH \
       "op": "add", 
       "path": "/allOf/-", 
       "value":  {
-        "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+        "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
       }
     }
   ]'
@@ -273,12 +273,12 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `op` | Der auszuführende PATCH-Vorgang. Diese Anfrage verwendet den `add`-Vorgang. |
-| `path` | Der Pfad zum Schemafeld, in dem die neue Ressource hinzugefügt wird. Beim Hinzufügen von Mixins zu Schemas muss der Wert &quot;/allOf/-&quot;lauten. |
-| `value.$ref` | Die `$id` des hinzuzufügenden Mixins. |
+| `path` | Der Pfad zum Schemafeld, in dem die neue Ressource hinzugefügt wird. Beim Hinzufügen von Feldgruppen zu Schemas muss der Wert &quot;/allOf/-&quot;lauten. |
+| `value.$ref` | Die `$id` der hinzuzufügenden Feldgruppe. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, das jetzt den `$ref`-Wert des hinzugefügten Mixins unter seinem `allOf`-Array enthält.
+Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, das jetzt den `$ref`-Wert der hinzugefügten Feldgruppe unter dem `allOf`-Array enthält.
 
 ```json
 {
@@ -300,13 +300,13 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/3387945212ad76ee59b6d2b964afb220"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220"
         }
     ],
     "meta:containerId": "tenant",
@@ -323,8 +323,8 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/ec16dfa484358f80478b75cde8c430d3",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/61969bc646b66a6230a7e8840f4a4d33"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/ec16dfa484358f80478b75cde8c430d3",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/61969bc646b66a6230a7e8840f4a4d33"
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
