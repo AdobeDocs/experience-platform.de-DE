@@ -3,13 +3,13 @@ keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;A
 title: Konfigurieren eines Felds für berechnete Attribute
 topic-legacy: guide
 type: Documentation
-description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry API erstellt werden, um ein Schema und eine benutzerdefinierte Mischung zu definieren, die das berechnete Attributfeld enthalten.
+description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry API erstellt werden, um ein Schema und eine benutzerspezifische Feldgruppe zu definieren, die das berechnete Attributfeld enthalten.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 18%
+source-wordcount: '736'
+ht-degree: 14%
 
 ---
 
@@ -19,33 +19,33 @@ ht-degree: 18%
 >
 >Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
-Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry API erstellt werden, um ein Schema und eine benutzerdefinierte Mischung zu definieren, die das berechnete Attributfeld enthalten. Es empfiehlt sich, ein separates Schema &quot;Berechnete Attribute&quot;und ein Mixin zu erstellen, in das Ihr Unternehmen alle Attribute einfügen kann, die als berechnete Attribute verwendet werden sollen. Auf diese Weise kann Ihr Unternehmen das Schema des berechneten Attributs sauber von anderen Schemas trennen, die zur Datenerfassung verwendet werden.
+Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry API erstellt werden, um ein Schema und eine benutzerspezifische Schema-Feldgruppe zu definieren, die das berechnete Attributfeld enthalten. Es empfiehlt sich, ein separates Schema und eine Feldgruppe für &quot;Berechnete Attribute&quot;zu erstellen, in die Ihr Unternehmen alle Attribute einfügen kann, die als berechnete Attribute verwendet werden sollen. Dadurch kann Ihr Unternehmen das Schema des berechneten Attributs sauber von anderen Schemas trennen, die zur Datenerfassung verwendet werden.
 
-Der Arbeitsablauf in diesem Dokument beschreibt, wie Sie mit der Schema Registry-API ein Profil-aktiviertes &quot;Berechnetes Attribut&quot;-Schema erstellen, das auf eine benutzerdefinierte Mischung verweist. Dieses Dokument enthält Beispielcode für berechnete Attribute. Detaillierte Informationen zum Definieren von Mixins und Schemas mithilfe der API finden Sie jedoch im Handbuch [Schema Registry API guide](../../xdm/api/overview.md).
+Der Arbeitsablauf in diesem Dokument beschreibt, wie Sie mit der Schema-Registrierungs-API ein Profil-aktiviertes &quot;Berechnetes Attribut&quot;-Schema erstellen, das auf eine benutzerspezifische Feldgruppe verweist. Dieses Dokument enthält Beispielcode, der spezifisch für berechnete Attribute ist. Detaillierte Informationen zum Definieren von Feldgruppen und Schemas mithilfe der API finden Sie jedoch im Handbuch [Schema Registry API guide](../../xdm/api/overview.md).
 
-## Erstellen eines berechneten Attributmixins
+## Erstellen einer Feldgruppe für berechnete Attribute
 
-Um eine Mischung mit der Schema Registry API zu erstellen, stellen Sie zunächst eine POST an den `/tenant/mixins`-Endpunkt und geben die Details des mixins im Anforderungstext ein. Weitere Informationen zum Arbeiten mit Mixins mit der Schema Registry API finden Sie im [mixins API-Endpunkthandbuch](../../xdm/api/mixins.md).
+Um eine Feldgruppe mithilfe der Schema Registry API zu erstellen, müssen Sie zunächst eine POST an den `/tenant/fieldgroups`-Endpunkt anfordern und die Details der Feldgruppe im Anforderungstext angeben. Weitere Informationen zum Arbeiten mit Feldgruppen mithilfe der Schema Registry API finden Sie im [API-Endpunktleitfaden ](../../xdm/api/field-groups.md) für Feldgruppen.
 
 **API-Format**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Anfrage**
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
-        "title":"Computed Attributes Mixin",
-        "description":"Description of the mixin.",
+        "title":"Computed Attributes Field Group",
+        "description":"Description of the field group.",
         "type":"object",
         "meta:extensible": true,
         "meta:abstract": true,
@@ -53,7 +53,7 @@ curl -X POST \
           "https://ns.adobe.com/xdm/context/profile"
         ],
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -72,7 +72,7 @@ curl -X POST \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -80,24 +80,24 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `title` | Der Name des Mixins, das Sie erstellen. |
-| `meta:intendedToExtend` | Die XDM-Klasse, mit der das Mixin verwendet werden kann. |
+| `title` | Der Name der Feldgruppe, die Sie erstellen. |
+| `meta:intendedToExtend` | Die XDM-Klasse, mit der die Feldgruppe verwendet werden kann. |
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt) mit einem Antworttext zurückgegeben, der Details zum neu erstellten Mixin einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
+Bei einer erfolgreichen Anforderung wird HTTP Response Status 201 (Erstellt) mit einem Antworttext zurückgegeben, der die Details der neu erstellten Feldgruppe enthält, einschließlich `$id`, `meta:altIt` und `version`. Diese Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of the mixin.",
+  "description": "Description of the field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -116,7 +116,7 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt)
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -145,16 +145,16 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 }
 ```
 
-## Aktualisieren der Mischung mit zusätzlichen berechneten Attributen
+## Feldgruppe mit zusätzlichen berechneten Attributen aktualisieren
 
-Da mehr berechnete Attribute benötigt werden, können Sie die berechneten Attribute, die mit zusätzlichen Attributen gemischt sind, aktualisieren, indem Sie eine PUT an den `/tenant/mixins`-Endpunkt anfordern. Für diese Anforderung müssen Sie die eindeutige ID des Mixins, das Sie im Pfad erstellt haben, sowie alle neuen Felder, die Sie im Textkörper hinzufügen möchten, einschließen.
+Da mehr berechnete Attribute benötigt werden, können Sie die Feldgruppe für berechnete Attribute mit zusätzlichen Attributen aktualisieren, indem Sie eine PUT an den `/tenant/fieldgroups`-Endpunkt anfordern. Für diese Anforderung müssen Sie die eindeutige ID der Feldgruppe, die Sie im Pfad erstellt haben, sowie alle neuen Felder, die Sie im Textkörper hinzufügen möchten, einschließen.
 
-Weitere Informationen zum Aktualisieren einer Mischung mit der Schema Registry-API finden Sie im [mixins API-Endpunkt-Handbuch](../../xdm/api/mixins.md).
+Weitere Informationen zum Aktualisieren einer Feldgruppe mit der Schema Registry API finden Sie im [API-Endpunktleitfaden ](../../xdm/api/field-groups.md) für Feldgruppen.
 
 **API-Format**
 
 ```http
-PUT /tenant/mixins/{MIXIN_ID}
+PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 **Anfrage**
@@ -163,11 +163,11 @@ Mit dieser Anforderung werden neue Felder zu `purchaseSummary`-Informationen hin
 
 >[!NOTE]
 >
->Beim Aktualisieren einer Mischung über eine PUT-Anforderung muss der Haupttext alle erforderlichen Felder enthalten, wenn eine neue Mischung in einer POST erstellt wird.
+>Beim Aktualisieren einer Feldgruppe über eine PUT-Anforderung muss der Textkörper alle Felder enthalten, die beim Erstellen einer neuen Feldgruppe in einer POST-Anforderung erforderlich sind.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -175,15 +175,15 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
-        "title": "Computed Attributes Mixin",
+        "title": "Computed Attributes Field Group",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [
           "https://ns.adobe.com/xdm/context/profile"
         ],
-        "description": "Description of mixin.",
+        "description": "Description of field group.",
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -222,7 +222,7 @@ curl -X PUT \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -230,19 +230,19 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Mixins zurück.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldgruppe zurück.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:resourceType": "mixins",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
-  "description": "Description of mixin.",
+  "description": "Description of field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -281,7 +281,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Mixins zurück.
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -324,7 +324,7 @@ POST /tenants/schemas
 
 **Anfrage**
 
-Die folgende Anforderung erstellt ein neues Schema, das auf das zuvor in diesem Dokument erstellte `computedAttributesMixin` verweist (unter Verwendung seiner eindeutigen ID) und für das Profil-Vereinigung-Schema aktiviert ist (unter Verwendung des Arrays `meta:immutableTags`). Detaillierte Anweisungen zum Erstellen eines Schemas mit der Schema Registry-API finden Sie im [Schemas API-Endpunkt-Handbuch](../../xdm/api/schemas.md).
+Die folgende Anforderung erstellt ein neues Schema, das auf das zuvor in diesem Dokument erstellte `computedAttributesFieldGroup` verweist (unter Verwendung seiner eindeutigen ID) und für das Profil-Vereinigung-Schema aktiviert ist (unter Verwendung des Arrays `meta:immutableTags`). Detaillierte Anweisungen zum Erstellen eines Schemas mit der Schema Registry-API finden Sie im [Schemas API-Endpunkt-Handbuch](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -345,7 +345,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -358,7 +358,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -391,7 +391,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -399,7 +399,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -409,7 +409,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
@@ -435,4 +435,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 
 ## Nächste Schritte
 
-Nachdem Sie ein Schema und eine Mischung erstellt haben, in denen die berechneten Attribute gespeichert werden, können Sie das berechnete Attribut mit dem API-Endpunkt `/computedattributes` erstellen. Ausführliche Anweisungen zum Erstellen eines berechneten Attributs in der API finden Sie in der Anleitung [API-Endpunkt für berechnete Attribute](ca-api.md).
+Nachdem Sie eine Schema- und Feldgruppe erstellt haben, in der die berechneten Attribute gespeichert werden, können Sie das berechnete Attribut mit dem API-Endpunkt `/computedattributes` erstellen. Ausführliche Anweisungen zum Erstellen eines berechneten Attributs in der API finden Sie in der Anleitung [API-Endpunkt für berechnete Attribute](ca-api.md).
