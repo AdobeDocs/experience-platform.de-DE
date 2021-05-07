@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über die Segmentdefinitionsklasse im Experience Data Model (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Diese Klasse sollte nur zur Erfassung von Informationen über Segmentdefinitionen selbst verwendet werden. Um Informationen zur Segmentmitgliedschaft in Ihren Profil-Daten zu erfassen, sollten Sie das [Segment-Mitgliedschaftsdetails-Gemisch](../mixins/profile/segmentation.md) in Ihrem [!UICONTROL XDM-Profil]-Schema verwenden.
+>Diese Klasse sollte nur zur Erfassung von Informationen über Segmentdefinitionen selbst verwendet werden. Um Informationen zur Segmentmitgliedschaft in Ihren Profil-Daten zu erfassen, sollten Sie die Feldgruppe [Details der Segmentmitgliedschaft](../field-groups/profile/segmentation.md) in Ihrem [!UICONTROL XDM-Profil]-Schema verwenden.
 
 ![](../images/classes/segment-definition.png)
 
