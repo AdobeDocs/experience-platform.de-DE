@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
+title: Versionshinweise zu Adobe Experience Platform
 description: Versionshinweise zur Experience Platform Oktober 2020
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
+exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
 translation-type: tm+mt
-source-git-commit: 5e5ac80e0c79b3cc0354b469edc036523e29b45d
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 19%
+source-wordcount: '1012'
+ht-degree: 18%
 
 ---
 
-
-# Adobe Experience Platform – Versionshinweise
+# Versionshinweise zu Adobe Experience Platform
 
 **Release-Datum: 14. Oktober 2020**
 
@@ -89,8 +89,8 @@ Adobe Experience Platform ermöglicht es Marketing Operations Teams, eine 360-Gr
 Verbessert die Benutzerfreundlichkeit und den Arbeitsablauf und bietet sofort verfügbare Einblicke, Standardisierung und Transparenz von Schlüsselfeldern in Schema-Kompositionen. Stellt Datenlinien für die Kombination einzelner Datenmodelle, die als &quot;Vereinigung-Schema&quot;dargestellt werden, bereit und bietet so Einblicke in die Struktur und die Inhaltsstoffe des Echtzeit-Kunden-Profils.
 
 - Aktualisierung des Schema-Workflows
-   - Verwenden Sie Tastenkombinationen für die am häufigsten verwendeten XDM-Schema, mit automatisierten Einstellungen im Schema-Editor und Mixin-Empfehlungen, die auf Ihren Zielsetzungen basieren
-   - Erhöhen Sie die Effizienz des Arbeitsablaufs durch Auswahl und Vorschau mehrerer Mixins.
+   - Verwenden Sie Tastenkombinationen für die am häufigsten verwendeten XDM-Schema mit automatisierten Einstellungen im Schema- und Schema-Feldgruppenempfehlungen, die auf Ihren Zielsetzungen basieren
+   - Erhöhen Sie die Effizienz des Arbeitsablaufs durch Auswahl und Vorschau mehrerer Feldgruppen.
    - Transparenz bei Schlüsselattributen der Schema-Komposition, einschließlich Identitäts-, Beziehungs- sowie erforderlichen und nicht mehr unterstützten Feldern
 - Vereinigung-Schema-Datenlineare und Schlüsselattribute-Transparenz
 
