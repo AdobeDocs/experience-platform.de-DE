@@ -6,16 +6,16 @@ description: Erfahren Sie, wie Sie ein Objekttypfeld in der Benutzeroberfläche 
 topic-legacy: user guide
 exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 # Definieren von Objektfeldern in der Benutzeroberfläche
 
-Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience Data Model-(XDM-)Klassen, Mixins und Datentypen vollständig anpassen. Um verwandte Felder in benutzerdefinierten XDM-Ressourcen zu organisieren und zu verschachteln, können Sie Objekttypfelder definieren, die zusätzliche Unterfelder enthalten können.
+Mit Adobe Experience Platform können Sie die Struktur Ihrer benutzerdefinierten Experience Data Model-Klassen (XDM), Schema-Feldgruppen und Datentypen vollständig anpassen. Um verwandte Felder in benutzerdefinierten XDM-Ressourcen zu organisieren und zu verschachteln, können Sie Objekttypfelder definieren, die zusätzliche Unterfelder enthalten können.
 
 Wenn [ein neues Feld](./overview.md#define) in der Adobe Experience Platform-Benutzeroberfläche definiert wird, verwenden Sie das Dropdownmenü **[!UICONTROL Typ]** und wählen Sie &quot;[!UICONTROL Objekt]&quot;aus der Liste.
 
@@ -33,7 +33,7 @@ Nachdem Sie das Unterfeld konfiguriert und **[!UICONTROL Apply]** ausgewählt ha
 
 ![](../../images/ui/fields/special/object-nested.png)
 
-Wenn Sie die Erstellung des Objekts abgeschlossen haben, können Sie feststellen, dass Sie seine Struktur in verschiedenen Klassen und Mixins wiederverwenden möchten. In diesem Fall können Sie das Objekt in einen Datentyp konvertieren. Weitere Informationen finden Sie im Abschnitt zu [Objekte in Datentypen konvertieren](../resources/data-types.md#convert) in der Benutzeroberfläche für Datentypen.
+Wenn Sie die Erstellung des Objekts abgeschlossen haben, können Sie feststellen, dass Sie seine Struktur in verschiedenen Klassen und Feldgruppen wiederverwenden möchten. In diesem Fall können Sie das Objekt in einen Datentyp konvertieren. Weitere Informationen finden Sie im Abschnitt zu [Objekte in Datentypen konvertieren](../resources/data-types.md#convert) in der Benutzeroberfläche für Datentypen.
 
 ## Nächste Schritte
 
