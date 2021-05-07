@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
-user-guide-description: Verwenden Sie Experience Data Model (XDM)-Klassen und -Mixins, um Erlebnisdaten zu standardisieren.
+user-guide-description: Verwenden Sie Experience Data Model-(XDM-)Klassen und Schema-Feldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 48%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -30,18 +30,18 @@ ht-degree: 48%
    * [XDM Individuelles Profil](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinition](./classes/segment-definition.md)
-* Mixins {#mixins}
-   * Profil mixins {#profile}
-      * [IdentityMap](./mixins/profile/identitymap.md)
-      * [Demografische Details](./mixins/profile/person-details.md)
-      * [Persönliche Kontaktangaben](./mixins/profile/personal-details.md)
-      * [Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zustimmung)](./mixins/profile/consents.md)
-      * [Details zur Segmentmitgliedschaft](./mixins/profile/segmentation.md)
-      * [Kontaktangaben bearbeiten](./mixins/profile/work-details.md)
-   * Ereignis mixins {#event}
-      * [Details zur Endbenutzer-ID](./mixins/event/enduserids.md)
-      * [Umgebung](./mixins/event/environment-details.md)
-   * [Aktualisierung von Mischnamen](./mixins/name-updates.md)
+* Schema-Feldgruppen {#field-groups}
+   * Profil-Feldgruppen {#profile}
+      * [IdentityMap](./field-groups/profile/identitymap.md)
+      * [Demografische Details](./field-groups/profile/demographic-details.md)
+      * [Persönliche Kontaktangaben](./field-groups/profile/personal-contact-details.md)
+      * [Details zur Segmentmitgliedschaft](./field-groups/profile/segmentation.md)
+      * [Kontaktangaben bearbeiten](./field-groups/profile/work-contact-details.md)
+      * [Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zustimmung)](./field-groups/profile/consents.md)
+   * Ereignis-Feldgruppen {#event}
+      * [Details zur Endbenutzer-ID](./field-groups/event/enduserids.md)
+      * [Umgebung](./field-groups/event/environment-details.md)
+   * [Aktualisierung der Feldgruppennamen](./field-groups/name-updates.md)
 * Datentypen {#data-types}
    * [Anwendung](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
@@ -81,7 +81,7 @@ ht-degree: 48%
    * Ressourcen {#resources} erstellen und bearbeiten
       * [Schemas](./ui/resources/schemas.md)
       * [Klassen](./ui/resources/classes.md)
-      * [Mixins](./ui/resources/mixins.md)
+      * [Feldergruppen](./ui/resources/field-groups.md)
       * [Datentypen](./ui/resources/data-types.md)
    * Felder {#fields} definieren
       * [Übersicht](./ui/fields/overview.md)
@@ -99,7 +99,7 @@ ht-degree: 48%
    * [Schemas](api/schemas.md)
    * [Verhalten](api/behaviors.md)
    * [Klassen](api/classes.md)
-   * [Mixins](api/mixins.md)
+   * [Schema-Feldgruppen](api/field-groups.md)
    * [Datentypen](api/data-types.md)
    * [Deskriptoren](api/descriptors.md)
    * [Vereinigungen](api/unions.md)
@@ -107,6 +107,7 @@ ht-degree: 48%
    * [Sample data](api/sample-data.md)
    * [Auditprotokoll](api/audit-log.md)
    * [Ad-hoc-Schemata](api/ad-hoc.md)
+   * [Mixins (nicht mehr unterstützt)](api/mixins.md)
    * [Anhang](api/appendix.md)
 * Tutorials {#tutorials}
    * [Erstellen eines Schemas (Benutzeroberfläche)](tutorials/create-schema-ui.md)
