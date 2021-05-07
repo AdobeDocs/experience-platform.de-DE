@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über das Feld "Allgemeine Marketingvorgabe"mit dem XDM-Datentyp von Abonnements.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '729'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Dieser Datentyp soll dazu verwendet werden, die Struktur der Schema für die Zustimmung Ihres Unternehmens mithilfe der [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)] mixin](../mixins/profile/consents.md) als Grundlage anzupassen.
+>Dieser Datentyp soll dazu verwendet werden, die Struktur der Schema für die Zustimmung Ihres Unternehmens mithilfe der Feldgruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)] als Grundlage anzupassen.](../field-groups/profile/consents.md)
 >
 >Wenn Sie keine `subscriptions`-Zuordnung für ein bestimmtes Feld mit Marketingpräferenzen benötigen, können Sie stattdessen den Datentyp [des grundlegenden Marketingfelds](./marketing-field.md) verwenden.
 
