@@ -6,16 +6,16 @@ description: Der /auditlog-Endpunkt in der Schema Registry-API ermöglicht es Ih
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '396'
+source-wordcount: '400'
 ht-degree: 4%
 
 ---
 
 # Endpunkt des Prüfprotokolls
 
-Für jede Experience Data Model-(XDM-)Ressource verwaltet das [!DNL Schema Registry] ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen vorgenommen wurden. Mit dem `/auditlog`-Endpunkt in der [!DNL Schema Registry]-API können Sie ein Prüfprotokoll für alle Klassen, Mixins, Datentypen oder Schema abrufen, die von der ID angegeben wurden.
+Für jede Experience Data Model-(XDM-)Ressource verwaltet das [!DNL Schema Registry] ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen vorgenommen wurden. Der `/auditlog`-Endpunkt in der [!DNL Schema Registry]-API ermöglicht Ihnen das Abrufen eines Prüfprotokolls für alle Klassen, Schema-Feldgruppen, Datentypen oder Schema, die durch die ID angegeben wurden.
 
 ## Erste Schritte
 
@@ -25,7 +25,7 @@ Der Endpunkt `/auditlog` ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!D
 
 ## Abrufen eines Prüfprotokolls für eine Ressource
 
-Sie können ein Prüfprotokoll für alle Klassen, Mixins, Datentypen oder Schema in der Schema-Bibliothek abrufen, indem Sie die Ressourcenkennung im Pfad einer GET zum Endpunkt `/auditlog` angeben.
+Sie können ein Prüfprotokoll für alle Klassen, Feldgruppen, Datentypen oder Schemas in der Schema-Bibliothek abrufen, indem Sie die Ressourcenkennung im Pfad einer GET zum Endpunkt `/auditlog` angeben.
 
 **API-Format**
 
@@ -39,11 +39,11 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 **Anfrage**
 
-Die folgende Anforderung ruft das Prüfprotokoll für ein `Restaurant`-Mixin ab.
+Die folgende Anforderung ruft das Prüfprotokoll für eine `Restaurant`-Feldgruppe ab.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/auditlog/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -57,11 +57,11 @@ Eine erfolgreiche Antwort gibt eine chronologische Liste der Änderungen zurück
 ```json
 [
   {
-    "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+    "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
     "auditTrails": [
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -73,8 +73,8 @@ Eine erfolgreiche Antwort gibt eine chronologische Liste der Änderungen zurück
         }
       },
       {
-        "id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
