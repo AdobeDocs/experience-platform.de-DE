@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2507'
+source-wordcount: '2515'
 ht-degree: 2%
 
 ---
@@ -193,26 +193,26 @@ In der Experience Platform werden als Identitäten markierte XDM-Felder verwende
 
 Beim Entwerfen Ihrer Schema sind alle Primärschlüssel in Ihren relationalen Datenbanktabellen wahrscheinlich Kandidaten für primäre Identitäten. Weitere Beispiele für anwendbare Identitätsfelder sind E-Mail-Adressen von Kunden, Telefonnummern, Konto-IDs und [ECID](../../identity-service/ecid.md).
 
-### Adobe-Applikationsmischungen
+### Feldgruppen Adobe Application Schema
 
-Experience Platform bietet mehrere vordefinierte XDM-Mixins zur Erfassung von Daten zu den folgenden Adoben:
+Experience Platform bietet mehrere vordefinierte XDM-Schema-Feldgruppen zum Erfassen von Daten zu den folgenden Adoben:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-Beispielsweise können Sie mit dem [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) [!DNL Analytics]-spezifischen Feldern Ihren XDM-Schemas zuordnen. Abhängig von den Adobe-Anwendungen, mit denen Sie arbeiten, sollten Sie diese mit Adobe bereitgestellten Mixins in Ihren Schemas verwenden.
+Beispielsweise können Sie mit der Feldgruppe [[!UICONTROL Adobe Analytics ExperienceEvent Template] ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) [!DNL Analytics]-spezifische Felder Ihren XDM-Schemas zuordnen. Abhängig von den Adoben, mit denen Sie arbeiten, sollten Sie diese mit Adobe bereitgestellten Feldgruppen in Ihren Schemas verwenden.
 
-<img src="../images/best-practices/analytics-mixin.png" width="700"><br>
+<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
 
-Bei Anwendungsanwendung-Mixins wird automatisch eine primäre Standardidentität zugewiesen, indem das Feld `identityMap` verwendet wird. Dabei handelt es sich um ein systemgeneriertes schreibgeschütztes Objekt, das Standardidentitätswerte für einen einzelnen Adobe zuordnet.
+Anwendungsfeldgruppen der Adobe weisen automatisch eine primäre Standardidentität zu, indem sie das Feld `identityMap` verwenden. Es handelt sich dabei um ein systemgeneriertes schreibgeschütztes Objekt, das Standardidentitätswerte für einen einzelnen Kunden zuordnet.
 
 Bei Adobe Analytics ist die ECID die primäre Standardidentität. Wenn kein ECID-Wert von einem Kunden bereitgestellt wird, lautet die primäre Identität stattdessen standardmäßig AAID.
 
 >[!IMPORTANT]
 >
->Bei Verwendung von Adobe-Anwendungs-Mixins sollten keine anderen Felder als primäre Identität gekennzeichnet werden. Wenn es zusätzliche Eigenschaften gibt, die als Identitäten gekennzeichnet werden müssen, müssen diese Felder stattdessen als sekundäre Identitäten zugewiesen werden.
+>Bei der Verwendung von Anwendungsfeldgruppen der Adobe sollten keine anderen Felder als primäre Identität gekennzeichnet werden. Wenn es zusätzliche Eigenschaften gibt, die als Identitäten gekennzeichnet werden müssen, müssen diese Felder stattdessen als sekundäre Identitäten zugewiesen werden.
 
 ## Nächste Schritte
 
