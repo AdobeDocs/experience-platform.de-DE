@@ -6,9 +6,9 @@ type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus mehreren Quellen zusammenführen und kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten sind Zusammenführungsrichtlinien die Regeln, die Plattform verwendet, um zu bestimmen, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu erstellen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2560'
+source-wordcount: '2569'
 ht-degree: 54%
 
 ---
@@ -533,7 +533,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Zusammenführungsr
 
 Einzelheiten zu den einzelnen Elementen, aus denen eine Zusammenführungsrichtlinie besteht, finden Sie im Abschnitt [Komponenten von Zusammenführungsrichtlinien](#components-of-merge-policies) am Anfang dieses Dokuments.
 
-## Zusammenführungsrichtlinie aktualisieren {#update}
+## Zusammenführungsrichtlinie aktualisieren  {#update}
 
 Sie können eine vorhandene Zusammenführungsrichtlinie ändern, indem Sie einzelne Attribute bearbeiten (PATCH) oder die gesamte Zusammenführungsrichtlinie mit neuen Attributen überschreiben (PUT). Nachfolgend sind entsprechende Beispiele aufgeführt.
 
@@ -751,19 +751,19 @@ Da Datensätze in die Experience Platform aufgenommen werden, wird zum Zeitpunkt
 
 Gelegentlich kann es zu Anwendungsfällen kommen, z. B. zum Aufstocken von Daten oder zum Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge aufgenommen werden, wenn ein benutzerdefinierter Zeitstempel angegeben werden muss und die Richtlinie zum Zusammenführen den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen muss.
 
-Um einen benutzerdefinierten Zeitstempel zu verwenden, muss das [[!DNL External Source System Audit Details Mixin]](#mixin-details) Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `xdm:lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten Feld `xdm:lastUpdatedDate` erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` nicht vorhanden oder nicht gefüllt ist, verwendet die Plattform weiterhin den Systemzeitstempel.
+Um einen benutzerdefinierten Zeitstempel zu verwenden, muss die Feldgruppe [[!DNL External Source System Audit Details] Schema](#field-group-details) Ihrem Profil-Schema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `xdm:lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten Feld `xdm:lastUpdatedDate` erfasst wird, verwendet die Experience Platform dieses Feld, um Datensätze oder Profil-Fragmente innerhalb und zwischen Datensätzen zusammenzuführen. Wenn `xdm:lastUpdatedDate` nicht vorhanden oder nicht gefüllt ist, verwendet die Plattform weiterhin den Systemzeitstempel.
 
 >[!NOTE]
 >
 >Sie müssen sicherstellen, dass der Zeitstempel `xdm:lastUpdatedDate` aufgefüllt wird, wenn eine PATCH in demselben Datensatz gesendet wird.
 
-Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema Registry API, einschließlich des Hinzufügens von Mixins zu Schemas, finden Sie im Lehrgang [zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md).
+Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema Registry API, einschließlich des Hinzufügens von Feldgruppen zu Schemas, finden Sie im Lehrgang [zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md).
 
 Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Verwenden von benutzerdefinierten Zeitstempeln](../ui/merge-policies.md#custom-timestamps) im Benutzerhandbuch [Zusammenführungsrichtlinien](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] details  {#mixin-details}
+#### [!DNL External Source System Audit Details] Feldgruppendetails  {#field-group-details}
 
-Das folgende Beispiel zeigt korrekt ausgefüllte Felder im [!DNL External Source System Audit Details Mixin]. Die vollständige Mix-JSON kann auch im [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
+Das folgende Beispiel zeigt korrekt ausgefüllte Felder in der Feldgruppe [!DNL External Source System Audit Details]. Die gesamte Feldgruppe JSON kann auch im [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
 
 ```json
 {
