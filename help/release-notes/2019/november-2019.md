@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
+title: Versionshinweise zu Adobe Experience Platform
 description: Versionshinweise zur Experience Platform, 18. November 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
+exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 translation-type: tm+mt
-source-git-commit: 5f120a716cc3396ef7749463bb6052a8ced2fbb4
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1883'
 ht-degree: 29%
 
 ---
 
-
-# Adobe Experience Platform – Versionshinweise
+# Versionshinweise zu Adobe Experience Platform
 
 **Releasedatum: 18. November 2019**
 
@@ -128,8 +128,8 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 | ---------- | ------------ |
 | Benachrichtigungs-Schema | Neues Schema, das Benachrichtigungsdaten darstellt, die während des Datenerfassungsprozesses gesendet werden. |
 | Adobe AdCloud DSP Schema | Es wurden fünf neue Schemas zur Darstellung der Adobe Advertising Cloud-DSP-Metadaten hinzugefügt: Platzierung, Kampagne, Paket, Advertiser, Konto. |
-| ExperienceEvent-Implementierungsdetails-Mixin | Neues ExperienceEvent-Mixin, das ein Standardfeld zum Speichern von Informationen über die Software zum Erfassen des Ereignisses hinzufügt. |
-| [!DNL Profile Privacy] mixin | Neues Profil-Mixin, das Felder hinzufügt, um allgemeine Ausschluss- und Verkaufs-/Freigabe-Abmeldesignale für [!DNL Real-time Customer Profile] zu akzeptieren. |
+| ExperienceEvent-Implementierungsdetails - Schema-Feldgruppen | Neue ExperienceEvent-Feldgruppen, die ein Standardfeld hinzufügen, um Informationen über die Software zu speichern, mit der das Ereignis erfasst wird. |
+| [!DNL Profile Privacy] Feldgruppen | Neue Feldgruppen für Profile, die Felder hinzufügen, um allgemeine Ausschluss- und Abmeldesignale für [!DNL Real-time Customer Profile] zu akzeptieren. |
 | Formatbeschränkungen für `xdm:alternateDisplayInfo` | Die Felder &quot;Titel&quot;und &quot;Beschreibung&quot;für `xdm:alternateDisplayInfo` müssen beide Zeichenfolgen sein, um die Überprüfung zu bestehen. |
 | Namensänderung: XDM [!DNL Individual Profile] | Der &quot;Titel&quot;der Klasse &quot;XDM [!DNL Profile]&quot;wurde auf &quot;XDM [!DNL Individual Profile]&quot;aktualisiert. Das formale `$id` der Klasse wurde nicht geändert. |
 
