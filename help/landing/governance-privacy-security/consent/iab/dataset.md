@@ -6,9 +6,9 @@ topic-legacy: privacy events
 description: In diesem Dokument werden Schritte zur Einrichtung der beiden erforderlichen Datensätze zur Erfassung der IAB TCF 2.0-Genehmigungsdaten beschrieben.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1670'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Für die Erfassung von TCF 2.0-Genehmigungsdaten sind insbesondere zwei Datensä
 
 In diesem Dokument werden Schritte zur Einrichtung dieser beiden Datensätze zur Erhebung der IAB TCF 2.0-Genehmigungsdaten beschrieben. Eine Übersicht über den vollständigen Arbeitsablauf zum Konfigurieren der Plattformdatenvorgänge für TCF 2.0 finden Sie in der [IAB TCF 2.0 Compliance-Übersicht](./overview.md).
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -34,15 +34,15 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Identitäts-Namensraum](../../../../identity-service/namespaces.md): Die Daten zur Kundenidentität müssen unter einem bestimmten, vom Identitätsdienst anerkannten Namensraum bereitgestellt werden.
 * [Echtzeit-Profil](../../../../profile/home.md): Ermöglicht  [!DNL Identity Service] die Erstellung detaillierter Kundendaten aus Ihren Datensätzen in Echtzeit. [!DNL Real-time Customer Profile] ruft Daten aus dem Data Lake ab und behält die Profil der Kunden in einem eigenen separaten Datenspeicher bei.
 
-## [!UICONTROL Privacy ] DetailsMixin-Struktur  {#structure}
+## [!UICONTROL Gruppenstruktur ] der Datenschutzdetails  {#structure}
 
-Das Mixin [!UICONTROL Datenschutzdetails] enthält die für den TCF 2.0-Support erforderlichen Felder für die Zustimmung des Kunden. Es gibt zwei Versionen dieses Mixins: eine mit der Klasse [!DNL XDM Individual Profile] und die andere mit der Klasse [!DNL XDM ExperienceEvent] kompatibel.
+Die Feldgruppe [!UICONTROL Datenschutzdetails] enthält Schema-Felder für die Kundengenehmigung, die für den TCF 2.0-Support erforderlich sind. Es gibt zwei Versionen dieser Feldgruppe: eine mit der Klasse [!DNL XDM Individual Profile] und die andere mit der Klasse [!DNL XDM ExperienceEvent] kompatibel.
 
-Die folgenden Abschnitte erläutern die Struktur der einzelnen Mixins, einschließlich der Daten, die sie während der Aufnahme erwarten.
+Die folgenden Abschnitte erläutern die Struktur jeder dieser Feldgruppen, einschließlich der Daten, die sie während der Erfassung erwarten.
 
-### Profil mixin {#profile-mixin}
+### Profil-Feldgruppe {#profile-field-group}
 
-Bei Schemas, die auf [!DNL XDM Individual Profile] basieren, stellt das Mixin [!UICONTROL Datenschutzdetails] ein einzelnes Kartenfeld bereit, `xdm:identityPrivacyInfo`, das die Kundenidentitäten ihren TCF-Genehmigungsvoreinstellungen zuordnet. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `xdm:identityPrivacyInfo` bei der Datenerfassung erwartet:
+Bei Schemas, die auf [!DNL XDM Individual Profile] basieren, stellt die Feldgruppe [!UICONTROL Datenschutzdetails] ein einzelnes Zuordnungsfeld bereit, `xdm:identityPrivacyInfo`, das die Kundenidentitäten ihren TCF-Genehmigungsvoreinstellungen zuordnet. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `xdm:identityPrivacyInfo` bei der Datenerfassung erwartet:
 
 ```json
 {
@@ -78,9 +78,9 @@ Innerhalb des Identitätswertobjekts befindet sich ein einzelnes Feld, `xdm:iden
 | `xdm:consentTimestamp` | Ein [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) Zeitstempel, der angibt, wann sich die TCF-Zustimmungswerte geändert haben. |
 | `xdm:consentString` | Ein Objekt, das die aktualisierten Daten zur Zustimmung des Kunden und andere Kontextinformationen enthält. Weitere Informationen zu den erforderlichen Untereigenschaften dieses Objekts finden Sie im Abschnitt [Eigenschaften der Einwilligungszeichenfolge](#consent-string). |
 
-### Ereignis mixin {#event-mixin}
+### Ereignis-Feldgruppe {#event-field-group}
 
-Bei Schemas, die auf [!DNL XDM ExperienceEvent] basieren, stellt das Mixin [!UICONTROL Datenschutzdetails] ein einzelnes Array-Typ-Feld bereit: `xdm:consentStrings`. Jedes Element in diesem Array muss ein Objekt sein, das die erforderlichen Eigenschaften für eine TCF-Genehmigungszeichenfolge enthält, ähnlich dem Feld `xdm:consentString` im Profil-Mixin. Weitere Informationen zu diesen Untereigenschaften finden Sie im [nächsten Abschnitt](#consent-string).
+Bei Schemas, die auf [!DNL XDM ExperienceEvent] basieren, stellt die Feldgruppe [!UICONTROL Datenschutzdetails] ein einzelnes Feld vom Typ Array bereit: `xdm:consentStrings`. Jedes Element in diesem Array muss ein Objekt sein, das die erforderlichen Eigenschaften für eine TCF-Genehmigungszeichenfolge enthält, ähnlich dem Feld `xdm:consentString` in der Feldgruppe &quot;Profil&quot;. Weitere Informationen zu diesen Untereigenschaften finden Sie im [nächsten Abschnitt](#consent-string).
 
 ```json
 {
@@ -98,7 +98,7 @@ Bei Schemas, die auf [!DNL XDM ExperienceEvent] basieren, stellt das Mixin [!UIC
 
 ### Eigenschaften von Genehmigungszeichenfolgen {#consent-string}
 
-Beide Versionen des [!UICONTROL Datenschutzdetails]-Mixins erfordern mindestens ein Objekt, das die erforderlichen Felder erfasst, die die TCF-Zustimmungszeichenfolge für den Kunden beschreiben. Die folgenden Eigenschaften werden erläutert:
+Beide Versionen der Feldgruppe [!UICONTROL Datenschutzdetails] erfordern mindestens ein Objekt, das die erforderlichen Felder erfasst, die die TCF-Zustimmungszeichenfolge für den Kunden beschreiben. Die folgenden Eigenschaften werden erläutert:
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
@@ -126,11 +126,11 @@ Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** **[!UICONTROL Schema erst
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Verwenden Sie die rechte Leiste, um einen Namen und eine Beschreibung für das Schema anzugeben, und wählen Sie dann **[!UICONTROL Hinzufügen]** im Bereich **[!UICONTROL Mixins]** links auf der Arbeitsfläche aus.
+Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Verwenden Sie die rechte Leiste, um einen Namen und eine Beschreibung für das Schema anzugeben, und wählen Sie dann **[!UICONTROL Hinzufügen]** im Bereich **[!UICONTROL Feldgruppen]** links auf der Arbeitsfläche aus.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-Das Dialogfeld **[!UICONTROL Hinzufügen mixin]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutzdetails]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Wenn das Mixin ausgewählt ist, wählen Sie **[!UICONTROL Hinzufügen mixin]**.
+Das Dialogfeld **[!UICONTROL Hinzufügen Feldgruppen]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutzdetails]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um die Feldgruppe einfacher zu finden. Wählen Sie nach Auswahl der Feldgruppe **[!UICONTROL Hinzufügen Feldgruppen]** aus.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -138,14 +138,14 @@ Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das Feld `identityPr
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-Wiederholen Sie von hier aus die oben genannten Schritte, um dem Schema die folgenden zusätzlichen Mixins hinzuzufügen:
+Wiederholen Sie die oben genannten Schritte, um dem Schema die folgenden zusätzlichen Feldgruppen hinzuzufügen:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Datenerfassungsregion für Profil]
 * [!UICONTROL Demografische Details]
 * [!UICONTROL Persönliche Kontaktangaben]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 Wenn Sie ein vorhandenes Schema bearbeiten, das bereits für die Verwendung in [!DNL Real-time Customer Profile] aktiviert wurde, wählen Sie **[!UICONTROL Speichern]**, um Ihre Änderungen zu bestätigen, bevor Sie mit dem Abschnitt [Erstellen eines Datensatzes auf der Grundlage Ihres Schemas für die Einwilligung](#dataset) fortfahren. Wenn Sie ein neues Schema erstellen, führen Sie die im Unterabschnitt unten beschriebenen Schritte aus.
 
@@ -177,11 +177,11 @@ Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** **[!UICONTROL Schema erst
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Verwenden Sie die rechte Leiste, um einen Namen und eine Beschreibung für das Schema anzugeben, und wählen Sie dann **[!UICONTROL Hinzufügen]** im Bereich **[!UICONTROL Mixins]** links auf der Arbeitsfläche aus.
+Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Verwenden Sie die rechte Leiste, um einen Namen und eine Beschreibung für das Schema anzugeben, und wählen Sie dann **[!UICONTROL Hinzufügen]** im Bereich **[!UICONTROL Feldgruppen]** links auf der Arbeitsfläche aus.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-Das Dialogfeld **[!UICONTROL Hinzufügen mixin]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutzdetails]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Wenn Sie ein Mixin ausgewählt haben, wählen Sie **[!UICONTROL Hinzufügen mixin]**.
+Das Dialogfeld **[!UICONTROL Hinzufügen Feldgruppen]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutzdetails]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um die Feldgruppe einfacher zu finden. Wenn Sie eine Feldgruppe ausgewählt haben, wählen Sie **[!UICONTROL Hinzufügen Feldgruppen]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -189,16 +189,16 @@ Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consentStrings`
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-Wiederholen Sie von hier aus die oben genannten Schritte, um dem Schema die folgenden zusätzlichen Mixins hinzuzufügen:
+Wiederholen Sie die oben genannten Schritte, um dem Schema die folgenden zusätzlichen Feldgruppen hinzuzufügen:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Umgebung]
 * [!UICONTROL Webdetails]
 * [!UICONTROL Implementierungsdetails]
 
-Nachdem die Mixins hinzugefügt wurden, beenden Sie sie durch Auswahl von **[!UICONTROL Speichern]**.
+Nachdem die Feldgruppen hinzugefügt wurden, beenden Sie die Auswahl von **[!UICONTROL Speichern]**.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## Erstellen Sie Datensätze basierend auf Ihren Schemas für die Zustimmung {#datasets}
 
