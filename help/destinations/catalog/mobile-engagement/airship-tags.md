@@ -2,14 +2,14 @@
 keywords: Luftschiff-Tags;Luftschiff-Ziel
 title: Verbindung zu Airship Tags
 description: Übergeben Sie nahtlos Daten zur Audience der Adobe als Audience-Tags für das Targeting innerhalb von Airship an Airship.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 translation-type: tm+mt
-source-git-commit: 7d579d85d427c45f39d000288ed883c7ffd003bf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1183'
 ht-degree: 11%
 
 ---
-
 
 # (Beta) [!DNL Airship Tags] Verbindung {#airship-tags-destination}
 
@@ -30,7 +30,7 @@ Weitere Informationen zu [!DNL Airship] finden Sie unter [Luftfrachtdokumente](h
 >
 >Diese Dokumentationsseite wurde vom [!DNL Airship]-Team erstellt. Für Anfragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Bevor Sie Ihre Adobe Experience Platform-Segmente an [!DNL Airship] senden können, müssen Sie:
 
@@ -43,7 +43,7 @@ Bevor Sie Ihre Adobe Experience Platform-Segmente an [!DNL Airship] senden könn
 
 ## Tag-Gruppen
 
-Das Konzept der Segmente in der Adobe-Erlebnisplattform ähnelt dem von [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, wobei sich die Implementierung geringfügig unterscheidet. Diese Integration ordnet den Status der [Mitgliedschaft eines Benutzers in einem Experience Platform-Segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) dem Vorhandensein oder Nichtvorhandensein eines [!DNL Airship]-Tags zu. In einem Plattformsegment, in dem `xdm:status` zu `realized` wechselt, wird das Tag dem Kanal [!DNL Airship] hinzugefügt oder dem dieser Profil zugeordnet wird. Wenn sich `xdm:status` in `exited` ändert, wird das Tag entfernt.
+Das Konzept der Segmente in der Adobe-Erlebnisplattform ähnelt dem von [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, wobei sich die Implementierung geringfügig unterscheidet. Diese Integration ordnet den Status der [Mitgliedschaft eines Benutzers in einem Experience Platform-Segment](../../../xdm/field-groups/profile/segmentation.md) dem Vorhandensein oder Nichtvorhandensein eines [!DNL Airship]-Tags zu. In einem Plattformsegment, in dem `xdm:status` zu `realized` wechselt, wird das Tag dem Kanal [!DNL Airship] hinzugefügt oder dem dieser Profil zugeordnet wird. Wenn sich `xdm:status` in `exited` ändert, wird das Tag entfernt.
 
 Um diese Integration zu aktivieren, erstellen Sie eine *Tag-Gruppe* in [!DNL Airship] mit dem Namen `adobe-segments`.
 
@@ -157,4 +157,3 @@ Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTRO
 ## Datenverwendung und -verwaltung {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit den Datenverwendungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] die Datenverwaltung erzwingt, finden Sie unter [Übersicht über die Datenverwaltung](../../../data-governance/home.md).
-
