@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '7137'
+source-wordcount: '7153'
 ht-degree: 1%
 
 ---
@@ -239,6 +239,8 @@ ht-degree: 1%
 
 **Feld**: Ein Feld ist das Element der untersten Ebene eines Datensatzes, wie es vom XDM-Schema des Datensatzes definiert wird. Jedes Feld hat einen Namen für Verweiszwecke und einen Typ, der den Typ der darin enthaltenen Daten angibt. Zu den Feldtypen können Ganzzahl, Zahl, Zeichenfolge, boolescher Wert und Objekt gehören.
 
+**Feldgruppe**: Siehe &quot;Schema field group&quot;.
+
 **Feldbeschriftungen**: Feldbezeichnungen sind Bezeichnungen zur Datenverwaltung, die entweder von einem Datensatz übernommen oder direkt auf ein Feld angewendet werden.
 
 **Feldname**: Ein Feldname wird verwendet, um auf den Feldwert in Abfragen und nachgeschalteten Diensten zu verweisen.
@@ -323,7 +325,7 @@ ht-degree: 1%
 
 **Richtlinie** zusammenführen: Zusammenführungsrichtlinien sind Regeln, die Experience Platform verwendet, um zu bestimmen, wie Kundendatenfragmente aus mehreren Quellen kombiniert werden, um ein einzelnes Profil zu erstellen. Wenn ein Datenkonflikt auftritt, bestimmt die Richtlinie zum Zusammenführen, welche Daten für die Aufnahme in das Profil priorisiert werden sollen.
 
-**Mixin**: Im Erlebnis-Datenmodell (XDM) können Benutzer mit einem Mixin wiederverwendbare Felder erweitern, um ein oder mehrere Attribute zu definieren, die in ein Schema eingeschlossen werden sollen.
+**Mixin**: Siehe &quot;Schema field group&quot;.
 
 **Modul**: Ein Modul ist  [!DNL Platform Launch]ein Snippet ausführbaren JavaScript, das von einer Erweiterung bereitgestellt wird, die Aktionen in einer Client-Umgebung ausführt, ohne dass eine Regel erstellt werden muss.
 
@@ -437,7 +439,9 @@ ht-degree: 1%
 
 **Bewertung**: Die Auswertung ist der Prozess, bei dem mithilfe eines geschulten Modells Erkenntnisse aus Daten generiert werden.
 
-**Schema**: Ein Schema ist ein Regelsatz, der die Datenstruktur und das Datenformat darstellt und überprüft. Ein Schema besteht aus einer Klasse und optionalen Mixin(en) und wird zum Erstellen von Datensätzen und Datastreams verwendet. Ein Schema kann Verhaltensattribute, Zeitstempel, Identitäten, Attributdefinitionen, Beziehungen und mehr enthalten.
+**Schema**: Ein Schema ist ein Regelsatz, der die Datenstruktur und das Datenformat darstellt und überprüft. Ein Schema besteht aus einer Klasse und optionalen Feldgruppen und wird zum Erstellen von Datensätzen und Datastreams verwendet. Ein Schema kann Verhaltensattribute, Zeitstempel, Identitäten, Attributdefinitionen, Beziehungen und mehr enthalten.
+
+**Schema-Feldgruppe**: Im Erlebnis-Datenmodell (XDM) ermöglicht eine Schema-Feldgruppe Benutzern das Erweitern wiederverwendbarer Felder, um ein oder mehrere Attribute zu definieren, die in ein Schema einbezogen werden sollen.
 
 **Schema-Bibliothek**: Die Schema-Bibliothek enthält branchenübliche XDM-Ressourcen, die nach Adobe bereitgestellt werden, sowie benutzerdefinierte Ressourcen, die von Ihrem Unternehmen definiert werden.
 
