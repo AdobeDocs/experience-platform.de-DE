@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: In diesem Dokument erhalten Sie einen kurzen Überblick über einige der mit Experience Platform-APIs verbundenen Technologien und Syntaxen.
 exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '516'
 ht-degree: 52%
 
 ---
@@ -23,7 +23,7 @@ JSON Pointer ist eine standardisierte Zeichenfolgensyntax ([RFC 6901](https://to
 
 ### Beispiel für ein JSON-Schema-Objekt
 
-Das folgende JSON stellt ein vereinfachtes XDM-Schema dar, dessen Felder mit JSON-Zeigerzeichenfolgen referenziert werden können. Beachten Sie, dass alle Felder, die mit benutzerdefinierten Mixins hinzugefügt wurden (z. B. `loyaltyLevel`), unter einem `_{TENANT_ID}`-Objekt benannt werden, während Felder, die mit Core Mixins (z. B. `fullName`) hinzugefügt wurden, nicht benannt werden.
+Das folgende JSON stellt ein vereinfachtes XDM-Schema dar, dessen Felder mit JSON-Zeigerzeichenfolgen referenziert werden können. Beachten Sie, dass alle Felder, die mit benutzerspezifischen Schema-Feldgruppen hinzugefügt wurden (z. B. `loyaltyLevel`), unter einem `_{TENANT_ID}`-Objekt benannt werden, während Felder, die mit Kernfeldgruppen (z. B. `fullName`) hinzugefügt wurden, nicht benannt werden.
 
 ```json
 {
@@ -87,8 +87,8 @@ Das folgende JSON stellt ein vereinfachtes XDM-Schema dar, dessen Felder mit JSO
 | JSON Pointer | wird zu |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-| `"/properties/person/properties/name/properties/fullName"` | (Gibt einen Verweis auf das `fullName`-Feld zurück, das von einer Core-Mixin bereitgestellt wird.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Gibt einen Verweis auf das `loyaltyLevel`-Feld zurück, das von einem benutzerdefinierten Mixin bereitgestellt wird.) |
+| `"/properties/person/properties/name/properties/fullName"` | (Gibt einen Verweis auf das Feld `fullName` zurück, das von einer Kernfeldgruppe bereitgestellt wird.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Gibt einen Verweis auf das Feld `loyaltyLevel` zurück, das von einer benutzerspezifischen Feldgruppe bereitgestellt wird.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
@@ -120,7 +120,7 @@ Es gibt viele PATCH-Vorgänge für [!DNL Platform]-APIs, die JSON Patch-Objekte 
 
 Je nach der in `op` angegebenen Vorgangsart benötigt das JSON Patch-Objekt möglicherweise zusätzliche Eigenschaften. Weitere Informationen zu den verschiedenen JSON Patch-Vorgängen und deren benötigter Syntax finden Sie in der [JSON Patch-Dokumentation](http://jsonpatch.com/).
 
-## JSON-Schema {#json-schema}
+## JSON-Schema  {#json-schema}
 
 JSON-Schema ist ein Format, mit dem die Struktur von JSON-Daten beschrieben und validiert wird. Das [Experience Data Model (XDM)](../xdm/home.md) nutzt JSON-Schema-Funktionen, um Beschränkungen in Bezug auf die Struktur und das Format der aufgenommenen Kundenerlebnisdaten zu erzwingen. Weitere Informationen zum JSON-Schema finden Sie in der [offiziellen Dokumentation](https://json-schema.org/).
 
