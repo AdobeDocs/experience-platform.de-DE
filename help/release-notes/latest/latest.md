@@ -1,22 +1,22 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
+title: Versionshinweise zu Adobe Experience Platform
 description: Versionshinweise zur Experience Platform vom 21. April 2021.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 translation-type: tm+mt
-source-git-commit: f0350be580394516016373b1754a49951b58e846
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '885'
 ht-degree: 35%
 
 ---
 
 
-# Adobe Experience Platform – Versionshinweise
+# Versionshinweise zu Adobe Experience Platform
 
-**Release-Datum: Mittwoch, 21. April 2021**
+**Releasedatum: 21. April 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -45,7 +45,7 @@ Experience Data Model (XDM) ist eine Open-Source-Spezifikation, die die Leistung
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Empfehlungen des Schemas durch die Branche | Wenn Sie Klassen und Mixins in der Benutzeroberfläche des Schema-Editors auswählen, können Sie einen neuen Filter verwenden, um empfohlene Standardkomponenten basierend auf Ihrer Branche Ansicht. Weitere Informationen dazu, wie sich diese Komponenten für verschiedene Anwendungsfälle in der Industrie zueinander verhalten, finden Sie in der Dokumentation zu [Industrie-Datenmodellen](https://www.adobe.com/go/xdm-industry-erds-en). |
+| Empfehlungen des Schemas durch die Branche | Wenn Sie Klassen und Schema-Feldgruppen in der Benutzeroberfläche des Schema-Editors auswählen, können Sie einen neuen Filter verwenden, um empfohlene Standardkomponenten basierend auf Ihrer Branche Ansicht. Weitere Informationen dazu, wie sich diese Komponenten für verschiedene Anwendungsfälle in der Industrie zueinander verhalten, finden Sie in der Dokumentation zu [Industrie-Datenmodellen](https://www.adobe.com/go/xdm-industry-erds-en). |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
