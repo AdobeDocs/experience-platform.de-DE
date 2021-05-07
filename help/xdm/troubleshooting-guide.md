@@ -6,9 +6,9 @@ description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu 
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1898'
 ht-degree: 1%
 
 ---
@@ -25,19 +25,19 @@ Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu
 
 ### Wie füge ich einem Schema Felder hinzu?
 
-Sie können einem Schema Felder mit einem Mixin hinzufügen. Jedes Mixin ist mit einer oder mehreren Klassen kompatibel, sodass das Mixin in jedem Schema verwendet werden kann, das eine dieser kompatiblen Klassen implementiert. Adobe Experience Platform stellt verschiedene Branchenmixins mit eigenen vordefinierten Feldern zur Verfügung. Sie können jedoch eigene Felder zu einem Schema hinzufügen, indem Sie neue Mixins mit der API oder der Benutzeroberfläche erstellen.
+Sie können Felder zu einem Schema hinzufügen, indem Sie eine Schema-Feldgruppe verwenden. Jede Feldgruppe ist mit einer oder mehreren Klassen kompatibel, sodass die Feldgruppe in allen Schemas verwendet werden kann, die eine dieser kompatiblen Klassen implementieren. Adobe Experience Platform stellt mehrere Branchenfeldgruppen mit eigenen vordefinierten Feldern zur Verfügung. Sie können jedoch eigene Felder zu einem Schema hinzufügen, indem Sie neue Feldgruppen mit der API oder der Benutzeroberfläche erstellen.
 
-Weitere Informationen zum Erstellen neuer Mixins in der [!DNL Schema Registry]-API finden Sie im [mixin-Endpunktleitfaden](api/mixins.md#create). Wenn Sie die Benutzeroberfläche verwenden, lesen Sie das Tutorial [Schema-Editor](./tutorials/create-schema-ui.md).
+Weitere Informationen zum Erstellen neuer Feldgruppen in der API finden Sie im Handbuch [!DNL Schema Registry] für Feldgruppen-Endpunkte](api/field-groups.md#create). [ Wenn Sie die Benutzeroberfläche verwenden, lesen Sie das Tutorial [Schema-Editor](./tutorials/create-schema-ui.md).
 
-### Welches sind die besten Verwendungen für Mixins und Datentypen?
+### Welches sind die besten Verwendungen für Feldgruppen oder Datentypen?
 
-[](./schema/composition.md#mixin) Mixinare sind Komponenten, die ein oder mehrere Felder in einem Schema definieren. Mixins erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema dieselbe Struktur auf, in dem sie enthalten sind. Mixins sind nur mit bestimmten Klassen kompatibel, die durch ihr `meta:intendedToExtend`-Attribut gekennzeichnet sind.
+[Feldgruppen ](./schema/composition.md#field-group) sind Komponenten, die ein oder mehrere Felder in einem Schema definieren. Feldgruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema dieselbe Struktur auf, in dem sie enthalten sind. Feldgruppen sind nur mit bestimmten Klassen kompatibel, die durch ihr `meta:intendedToExtend`-Attribut gekennzeichnet sind.
 
-[Datentypen ](./schema/composition.md#data-type) können auch ein oder mehrere Felder für ein Schema bereitstellen. Im Gegensatz zu Mixins sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch werden Datentypen flexibler, um häufig verwendete Datenstrukturen zu beschreiben, die über mehrere Schema mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können.
+[Datentypen ](./schema/composition.md#data-type) können auch ein oder mehrere Felder für ein Schema bereitstellen. Im Gegensatz zu Feldgruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch werden Datentypen flexibler, um häufig verwendete Datenstrukturen zu beschreiben, die über mehrere Schema mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können.
 
 ### Was ist die eindeutige ID für ein Schema?
 
-Alle [!DNL Schema Registry]-Ressourcen (Schema, Mixins, Datentypen, Klassen) haben einen URI, der als eindeutige ID für Referenz- und Nachschlagezwecke dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den Attributen `$id` und `meta:altId` der obersten Ebene.
+Alle [!DNL Schema Registry]-Ressourcen (Schema, Feldgruppen, Datentypen, Klassen) verfügen über einen URI, der als eindeutige ID für Referenz- und Nachschlagezwecke dient. Wenn Sie ein Schema in der API anzeigen, finden Sie es in den Attributen `$id` und `meta:altId` der obersten Ebene.
 
 Weitere Informationen finden Sie im Abschnitt [Ressourcenidentifizierung](api/getting-started.md#resource-identification) im API-Entwicklerhandbuch.[!DNL Schema Registry]
 
@@ -135,7 +135,7 @@ Weitere Informationen zum Erstellen von Nachschlagepfaden in der API finden Sie 
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit einem Titel zu erstellen, der bereits von einer anderen Ressource verwendet wird. Titel müssen für alle Ressourcentypen eindeutig sein. Wenn Sie beispielsweise versuchen, eine Mischung mit einem Titel zu erstellen, der bereits von einem Schema verwendet wird, erhalten Sie diese Fehlermeldung.
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit einem Titel zu erstellen, der bereits von einer anderen Ressource verwendet wird. Titel müssen für alle Ressourcentypen eindeutig sein. Wenn Sie z. B. versuchen, eine Feldgruppe mit einem Titel zu erstellen, der bereits von einem Schema verwendet wird, erhalten Sie diese Fehlermeldung.
 
 ### Benutzerdefinierte Felder müssen ein Feld der obersten Ebene verwenden
 
@@ -149,7 +149,7 @@ Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine Ressource mit einem
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine neue Mischung mit falsch benannten Feldern zu erstellen. Mixins, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder mit einem `TENANT_ID` Namensraum versehen, um Konflikte mit anderen Branchen- und Händlerressourcen zu vermeiden. Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für Mixins finden Sie im [mixins endpoint guide](./api/mixins.md#create).
+Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, eine neue Feldgruppe mit falsch benannten Feldern zu erstellen. Feldgruppen, die von Ihrer IMS-Organisation definiert werden, müssen ihre Felder mit einem `TENANT_ID` Namensraum versehen, um Konflikte mit anderen Branchen- und Händlerressourcen zu vermeiden. Ausführliche Beispiele für ordnungsgemäße Datenstrukturen für Feldgruppen finden Sie im Endpunktleitfaden [Feldgruppen](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] Fehler
