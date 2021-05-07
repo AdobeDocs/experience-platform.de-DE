@@ -1,19 +1,23 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;XDM;XDM-System;XDM-Profil;XDM-Experience-Ereignis;XDM-Ereignis;Experience-Ereignis;Experience-Ereignis;Mixins;mixin;Mixin;Experience-Ereignis;XDM-Experience-Ereignis;XDM-ExperienceEvent;experienceEvent;XDM-Erlebnis-Ereignis;Erlebnis-Datenmodell;Erlebnis-Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema-Bibliothek;Schema-Bibliothek;Schema;Datensatzdaten;Zeitreihen;Zeitreihen
+keywords: Experience Platform;Home;beliebte Themen;XDM;XDM-System;XDM-Profil;XDM-Erlebnis-Ereignis;Erlebnis-Ereignis;Erlebnis-Gruppen;Feldgruppen;Feldgruppe;Erlebnis-Ereignis;XDM-Ereignis;XDM-Erlebnis-Ereignis;Erlebnis-Ereignis;XDM-Erlebnis-Ereignis;Erlebnis-Datenmodell;Erlebnis-Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema-Bibliothek;Schema-Bibliothek;Schema;Datensatzdaten;Zeitreihen;Zeitreihen
 solution: Experience Platform
 title: XDM-Systemübersicht
 topic-legacy: overview
 description: Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. Das von Adobe unterstützte Experience-Datenmodell (XDM) ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Customer Experience Management zu definieren.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 58f6c5e3ac77070807f7486bf429493d14fdda9e
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1694'
 ht-degree: 9%
 
 ---
 
 # XDM-System – Übersicht
+
+>[!NOTE]
+>
+>Der Begriff &quot;mixin&quot;wurde zu &quot;Schema field group&quot;aktualisiert, um Verständnis zu fördern. Feldgruppen sind wiederverwendbare Feldsätze zur Unterstützung von Geschäftszwecken. Diese Änderung wird nun in der Schema Registry API, der Adobe Experience Platform-Benutzeroberfläche und in allen Plattformdokumenten widergespiegelt.
 
 Normung und Interoperabilität sind Schlüsselkonzepte für Adobe Experience Platform. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
 
@@ -27,7 +31,7 @@ Dieses Dokument bietet einen Überblick über die Rolle von XDM-System innerhalb
 
 [!DNL Experience Platform]Schemas dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, die Bedeutung beizubehalten und somit Wert aus Daten zu ziehen.
 
-Bevor Daten in [!DNL Platform] aufgenommen werden können, muss ein Schema zusammengestellt werden, um die Datenstruktur zu beschreiben und Beschränkungen für den Datentyp bereitzustellen, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer Basisklasse und Null oder mehr Mixins.
+Bevor Daten in [!DNL Platform] aufgenommen werden können, muss ein Schema zusammengestellt werden, um die Datenstruktur zu beschreiben und Beschränkungen für den Datentyp bereitzustellen, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer Basisklasse und einer Schema- oder Feldgruppe.
 
 Weitere Informationen zum Kompositionsmodell für Schemas, einschließlich Designprinzipien und Best Practices, finden Sie in den [Grundlagen der Schema-Komposition](schema/composition.md).
 
