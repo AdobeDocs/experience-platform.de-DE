@@ -6,20 +6,20 @@ description: Erfahren Sie, wie Sie XDM-Felder in der Benutzeroberfläche "Experi
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1325'
 ht-degree: 5%
 
 ---
 
 # Definieren von XDM-Feldern in der Benutzeroberfläche
 
-Mit dem Operator [!DNL Schema Editor] in der Adobe Experience Platform-Benutzeroberfläche können Sie Ihre eigenen Felder in benutzerdefinierten Experience Data Model-(XDM-)Klassen und Mixins definieren. Dieses Handbuch beschreibt die Schritte zum Definieren von XDM-Feldern in der Benutzeroberfläche, einschließlich der verfügbaren Konfigurationsoptionen für jeden Feldtyp.
+Mit dem Operator [!DNL Schema Editor] in der Adobe Experience Platform-Benutzeroberfläche können Sie Ihre eigenen Felder in benutzerdefinierten Experience Data Model-(XDM-)Klassen und Schema-Feldgruppen definieren. Dieses Handbuch beschreibt die Schritte zum Definieren von XDM-Feldern in der Benutzeroberfläche, einschließlich der verfügbaren Konfigurationsoptionen für jeden Feldtyp.
 
-## Voraussetzungen
+## Voraussetzungen 
 
-Dieses Handbuch erfordert ein funktionierendes Verständnis des XDM-Systems. In der [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in den [Grundlagen der Schema-Komposition](../../schema/composition.md), um zu erfahren, wie Klassen und Mixins Felder zu XDM-Schemas beitragen.
+Dieses Handbuch erfordert ein funktionierendes Verständnis des XDM-Systems. In der [XDM-Übersicht](../../home.md) finden Sie eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und in den [Grundlagen der Schema-Komposition](../../schema/composition.md), um zu erfahren, wie Klassen und Feldgruppen Felder zu XDM-Schemas beitragen.
 
 Es wird empfohlen, das Tutorial zum [Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) zu befolgen, um sich mit den verschiedenen Funktionen von [!DNL Schema Editor] vertraut zu machen.
 
@@ -27,13 +27,13 @@ Es wird empfohlen, das Tutorial zum [Erstellen eines Schemas in der Benutzerober
 
 Um neue XDM-Felder in der Benutzeroberfläche zu definieren, müssen Sie zunächst ein Schema innerhalb von [!DNL Schema Editor] öffnen. Je nachdem, welche Schema derzeit im Ordner [!DNL Schema Library] verfügbar sind, können Sie [ein neues Schema](../resources/schemas.md#create) oder [ein vorhandenes Schema zur Bearbeitung auswählen.](../resources/schemas.md#edit)
 
-Wenn Sie [!DNL Schema Editor] geöffnet haben, wählen Sie mit der linken Leiste die Klasse oder das Mixin aus, für die Sie Felder definieren möchten. Wenn es sich bei der Ressource um eine benutzerdefinierte Ressource handelt, die von Ihrem Unternehmen definiert wurde, werden Steuerelemente zum Hinzufügen oder Bearbeiten von Feldern auf der Arbeitsfläche angezeigt. Diese Steuerelemente werden neben dem Namen des Schemas sowie allen Objekttypfeldern angezeigt, die unter der ausgewählten Klasse oder Mischung definiert wurden.
+Wenn Sie [!DNL Schema Editor] geöffnet haben, wählen Sie mit der linken Leiste die Klasse oder Feldgruppe aus, für die Sie Felder definieren möchten. Wenn es sich bei der Ressource um eine benutzerdefinierte Ressource handelt, die von Ihrem Unternehmen definiert wurde, werden Steuerelemente zum Hinzufügen oder Bearbeiten von Feldern auf der Arbeitsfläche angezeigt. Diese Steuerelemente werden neben dem Namen des Schemas sowie allen Objekttypfeldern angezeigt, die unter der jeweiligen Klasse oder Feldgruppe definiert wurden.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
 >[!NOTE]
 >
->Wenn die ausgewählte Klasse oder das ausgewählte Mixin eine von der Adobe bereitgestellte Kernressource ist, kann sie nicht bearbeitet werden und daher werden die oben aufgeführten Steuerelemente nicht angezeigt. Wenn das Schema, dem Sie Felder hinzufügen möchten, auf einer XDM-Hauptklasse basiert und keine benutzerdefinierten Mixins enthält, können Sie [eine neue Mixin](../resources/mixins.md#create) erstellen, um stattdessen dem Schema hinzuzufügen.
+>Wenn die ausgewählte Klasse oder Feldgruppe eine von der Adobe bereitgestellte Kernressource ist, kann sie nicht bearbeitet werden und daher werden die oben aufgeführten Steuerelemente nicht angezeigt. Wenn das Schema, dem Sie Felder hinzufügen möchten, auf einer Kern-XDM-Klasse basiert und keine benutzerspezifischen Feldgruppen enthält, können Sie [eine neue Feldgruppe ](../resources/field-groups.md#create) erstellen, die Sie dem Schema hinzufügen möchten.
 
 Um der Ressource ein neues Feld hinzuzufügen, klicken Sie auf das Symbol **plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche oder neben dem Objekttypfeld, unter dem Sie das Feld definieren möchten.
 
@@ -41,7 +41,7 @@ Um der Ressource ein neues Feld hinzuzufügen, klicken Sie auf das Symbol **plus
 
 ## Definieren eines Felds für eine Ressource {#define}
 
-Nach Auswahl des Symbols **plus (+)** wird in der Arbeitsfläche ein **[!UICONTROL Neues Feld]** angezeigt, das sich in einem Objekt auf der Stammebene befindet, das mit Ihrer eindeutigen Mandanten-ID benannt wird (siehe `_tenantId` im Beispiel unten). Alle Felder, die über benutzerdefinierte Klassen und Mixins zu einem Schema hinzugefügt werden, werden automatisch in diesen Namensraum eingefügt, um Konflikte mit anderen Feldern aus von der Adobe bereitgestellten Klassen und Mixins zu vermeiden.
+Nach Auswahl des Symbols **plus (+)** wird in der Arbeitsfläche ein **[!UICONTROL Neues Feld]** angezeigt, das sich in einem Objekt auf der Stammebene befindet, das mit Ihrer eindeutigen Mandanten-ID benannt wird (siehe `_tenantId` im Beispiel unten). Alle Felder, die einem Schema über benutzerdefinierte Klassen und Feldgruppen hinzugefügt werden, werden automatisch in diesen Namensraum eingefügt, um Konflikte mit anderen Feldern aus Adoben- und Feldgruppen zu vermeiden.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -69,11 +69,11 @@ Die Arbeitsfläche wird aktualisiert, um den Feldnamen und -typ anzuzeigen. Die 
 
 ![](../../images/ui/fields/overview/field-added.png)
 
-Sie können die oben stehenden Schritte ausführen, um dem Schema weitere Felder hinzuzufügen. Sobald das Schema gespeichert wurde, werden seine Basisklasse und Mixins auch gespeichert, wenn daran Änderungen vorgenommen wurden.
+Sie können die oben stehenden Schritte ausführen, um dem Schema weitere Felder hinzuzufügen. Sobald das Schema gespeichert wurde, werden seine Basisklasse und Feldgruppen auch gespeichert, wenn Änderungen daran vorgenommen wurden.
 
 >[!NOTE]
 >
->Alle Änderungen, die Sie an den Mixins oder der Klasse eines Schemas vornehmen, werden in allen anderen Schemas übernommen, die diese verwenden.
+>Alle Änderungen, die Sie an den Feldgruppen oder der Feldklasse eines Schemas vornehmen, werden in allen anderen Schemas übernommen, die sie anwenden.
 
 ## Typspezifische Feldeigenschaften {#type-specific-properties}
 
@@ -107,6 +107,6 @@ Obwohl es sich technisch nicht um einen speziellen Feldtyp handelt, wird empfohl
 
 ## Nächste Schritte
 
-Dieses Handbuch gab einen Überblick darüber, wie XDM-Felder in der Benutzeroberfläche definiert werden. Beachten Sie, dass Felder nur mithilfe von Klassen und Mixins zu Schemas hinzugefügt werden können. Weitere Informationen zum Verwalten dieser Ressourcen in der Benutzeroberfläche finden Sie in den Handbüchern zum Erstellen und Bearbeiten von [Klassen](../resources/classes.md) und [mixins](../resources/mixins.md).
+Dieses Handbuch gab einen Überblick darüber, wie XDM-Felder in der Benutzeroberfläche definiert werden. Beachten Sie, dass Felder nur mithilfe von Klassen und Feldgruppen zu Schemas hinzugefügt werden können. Weitere Informationen zum Verwalten dieser Ressourcen in der Benutzeroberfläche finden Sie in den Handbüchern zum Erstellen und Bearbeiten von [Klassen](../resources/classes.md) und [Feldgruppen](../resources/field-groups.md).
 
 Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schema] finden Sie unter [[!UICONTROL Schema] Arbeitsbereichsübersicht](../overview.md).
