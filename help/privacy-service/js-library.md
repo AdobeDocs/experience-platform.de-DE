@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Mit der JavaScript-Bibliothek zum Datenschutz für Adoben können Sie die Identitäten der betroffenen Personen abrufen, um sie in Privacy Service zu verwenden.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b70e693b4ffeda561de4d4c8dd8fd1adeec489f7
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 67%
+source-wordcount: '953'
+ht-degree: 66%
 
 ---
 
@@ -47,7 +47,7 @@ Da alle drei Funktionen asynchrone Prozesse sind, müssen abgerufene Identitäte
 Um mit dem Beginn [!DNL Privacy JS Library] zu arbeiten, müssen Sie es mit einer der folgenden Methoden auf Ihrem Computer installieren:
 
 * Installieren Sie die Software mithilfe von npm, indem Sie den folgenden Befehl ausführen: `npm install @adobe/adobe-privacy`
-* Verwenden Sie die Adobe Launch-Erweiterung unter dem Namen `AdobePrivacy`.
+* Installieren Sie die Datenschutzerweiterung für Adoben mit [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en) unter dem Namen `AdobePrivacy`
 * Herunterladen vom [Experience Cloud GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## [!DNL Privacy JS Library] instanziieren
@@ -67,7 +67,7 @@ Eine vollständige Liste der unterstützten Parameter für verschiedene Adobe-L�
 
 ## Code-Beispiele
 
-Die folgenden Codebeispiele zeigen, wie [!DNL Privacy JS Library] für verschiedene gängige Szenarien verwendet wird, sofern Sie nicht [!DNL Launch] oder DTM verwenden.
+Die folgenden Codebeispiele zeigen, wie [!DNL Privacy JS Library] für verschiedene gängige Szenarien verwendet wird, vorausgesetzt, Sie verwenden [!DNL Platform Launch] nicht.
 
 ### Identitäten abrufen
 
