@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Erfahren Sie, wie Sie mit dem Adobe 2.0-Standard Kundenbestätigungssignale in Adobe Experience Platform verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1570'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Dieses Dokument gibt einen Überblick darüber, wie Sie Ihren Plattformdatenbetr
 >
 >Dieses Dokument konzentriert sich auf die Verarbeitung von Genehmigungsdaten unter Verwendung des Adobe-Standards. Wenn Sie die Genehmigungsdaten gemäß dem IAB-Transparenz- und -Zustimmung-Framework (TCF) 2.0 verarbeiten, finden Sie weitere Informationen im Handbuch [TCF 2.0-Unterstützung in der Echtzeit-Kundendatenplattform](../iab/overview.md).
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieser Leitfaden erfordert ein Verständnis der verschiedenen Experience Platformen, die an der Verarbeitung von Genehmigungsdaten beteiligt sind:
 
@@ -41,7 +41,7 @@ Im Folgenden wird beschrieben, wie die Daten zur Zustimmung verarbeitet werden, 
 1. Ein Kunde gibt seine Einwilligung in die Datenerfassung durch einen Dialog auf Ihrer Website.
 1. Bei jedem Laden der Seite (oder wenn Ihr CMP eine Änderung der Voreinstellungen für die Zustimmung erkennt) ordnet ein benutzerdefiniertes Skript auf Ihrer Site die aktuellen Voreinstellungen einem Standard-XDM-Objekt zu. Dieses Objekt wird dann an den Befehl Platform Web SDK `setConsent` übergeben.
 1. Wenn `setConsent` aufgerufen wird, prüft das Plattform-Web-SDK, ob sich die Werte für die Zustimmung von denen unterscheiden, die es zuletzt erhalten hat. Wenn die Werte unterschiedlich sind (oder kein vorheriger Wert vorliegt), werden die strukturierten Daten zur Zustimmung/Voreinstellung an Adobe Experience Platform gesendet.
-1. Die Daten zur Einwilligung/Voreinstellung werden in einen [!DNL Profile]-aktivierten Dataset eingeschlossen, dessen Schema die Felder für die Einwilligung/Voreinstellung enthält.
+1. Die Daten zur Einwilligung/Voreinstellung werden in einen [!DNL Profile]-aktivierten Dataset eingeschlossen, dessen Schema Einwilligungs-/Voreinstellungsfelder enthält.
 
 Zusätzlich zu den SDK-Befehlen, die durch CMP-Zugriffs-/Änderungshaken ausgelöst werden, können Genehmigungsdaten auch über kundengenerierte XDM-Daten in die Experience Platform fließen, die direkt in ein [!DNL Profile]-aktiviertes Dataset hochgeladen werden.
 
@@ -77,7 +77,7 @@ Nachdem Sie einen [!DNL Profile]-aktivierten Datensatz für die Verarbeitung von
 >
 >Wenn keine in Konflikt stehenden Datensätze vorhanden sind, sollten Sie stattdessen die Zeitstempelpriorität für Ihre Zusammenführungsrichtlinie festlegen. Dadurch wird sichergestellt, dass die von einem Kunden angegebene letzte Zustimmung die verwendete Einstellung für die Zustimmung ist.
 
-Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Benutzerhandbuch [Richtlinien zusammenführen](../../../../profile/ui/merge-policies.md). Beim Einrichten der Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Profil alle erforderlichen Zustimmungsattribute enthalten, die vom Mixin &quot;Einwilligungen und Voreinstellungen&quot;bereitgestellt werden, wie im Handbuch [Dataset-Vorbereitung](./dataset.md) beschrieben.
+Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Benutzerhandbuch [Richtlinien zusammenführen](../../../../profile/ui/merge-policies.md). Beim Einrichten der Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Profil alle erforderlichen Zustimmungsattribute enthalten, die von der Feldgruppe &quot;Schema für Zustimmung und Voreinstellungen&quot;bereitgestellt werden, wie im Handbuch [DatenDatensatzvorbereitung](./dataset.md) beschrieben.
 
 ## Genehmigungsdaten in Plattform übernehmen
 
