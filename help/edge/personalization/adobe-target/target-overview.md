@@ -2,14 +2,14 @@
 title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: Zielgruppe;adobe-Zielgruppe;Aktivität.id;Experience.id;renderDecision;DecisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;Audiencen;Beschlüsse;Scope;Schema;
+exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 translation-type: tm+mt
-source-git-commit: 98db5b92ea0f51c8641651eb14e3fe6cecf7027c
+source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '659'
 ht-degree: 5%
 
 ---
-
 
 # Verwenden von Adobe Target mit dem Platform Web SDK
 
@@ -19,7 +19,7 @@ Die folgenden Funktionen wurden getestet und werden derzeit in der Zielgruppe un
 
 * A/B-Tests
 * A4T Impression and Conversion Berichte
-* Automatisierte Personalisierung
+* Automated Personalization
 * Erlebnis-Targeting
 * Multivarianz-Tests
 * Native Zielgruppe Impression and Conversion Berichte
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 ## Audiencen in XDM
 
-Beim Definieren von Audiencen für Ihre Zielgruppe-Aktivitäten, die über Adobe Experience Platform Web SDK bereitgestellt werden, muss [XDM](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/home.html) definiert und verwendet werden. Nachdem Sie XDM-Schema, -Klassen und -Mixins definiert haben, können Sie eine Zielgruppe-Audience erstellen, die von XDM-Daten für das Targeting definiert wird. Innerhalb der Zielgruppe werden XDM-Daten im Audience Builder als benutzerdefinierter Parameter angezeigt. Das XDM wird mit der Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
+Beim Definieren von Audiencen für Ihre Zielgruppe-Aktivitäten, die über Adobe Experience Platform Web SDK bereitgestellt werden, muss [XDM](https://docs.adobe.com/content/help/de-DE/experience-platform/xdm/home.html) definiert und verwendet werden. Nachdem Sie XDM-Schema, -Klassen und -Schema-Feldgruppen definiert haben, können Sie eine Zielgruppe-Audience erstellen, die von XDM-Daten für das Targeting definiert wird. Innerhalb der Zielgruppe werden XDM-Daten im Audience Builder als benutzerdefinierter Parameter angezeigt. Das XDM wird mit der Punktnotation serialisiert (z. B. `web.webPageDetails.name`).
 
 Wenn Sie über Aktivitäten zur Zielgruppe mit vordefinierten Audiencen verfügen, die benutzerdefinierte Parameter oder ein benutzerdefiniertes Profil verwenden, werden diese nicht korrekt über das SDK bereitgestellt. Anstatt benutzerdefinierte Parameter oder das Profil zu verwenden, müssen Sie stattdessen XDM verwenden. Es gibt jedoch vordefinierte Audiencen-Targeting-Felder, die über das Adobe Experience Platform Web SDK unterstützt werden und keine XDM-Datei erfordern. Diese Felder sind in der Benutzeroberfläche der Zielgruppe verfügbar, für die kein XDM erforderlich ist:
 
