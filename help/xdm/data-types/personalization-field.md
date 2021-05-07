@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp des Generischen Personalisierungsvoreinstellungsfelds.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '479'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Dieser Datentyp soll dazu verwendet werden, die Struktur der Schema für die Zustimmung Ihres Unternehmens mithilfe der [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)] mixin](../mixins/profile/consents.md) als Grundlage anzupassen.
+>Dieser Datentyp soll dazu verwendet werden, die Struktur der Schema für die Zustimmung Ihres Unternehmens mithilfe der Feldgruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)] als Grundlage anzupassen.](../field-groups/profile/consents.md)
 
 ![](../images/data-types/personalization-field.png)
 
