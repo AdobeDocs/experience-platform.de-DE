@@ -6,16 +6,16 @@ description: Mit dem Endpunkt "/classes"in der Schema Registry API können Sie X
 topic-legacy: developer guide
 exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3985ba8f46a62e8d9ea8b1f084198b245318a24f
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 23%
+source-wordcount: '1512'
+ht-degree: 17%
 
 ---
 
 # Endpunkt der Klassen
 
-Alle XDM-Schema (Experience Data Model) müssen auf einer Klasse basieren. Eine Klasse legt die Basisstruktur von allgemeinen Eigenschaften fest, die alle Schema, die auf dieser Klasse basieren, enthalten müssen, sowie welche Mixins für die Verwendung in diesen Schemas zugelassen sind. Darüber hinaus bestimmt die Klasse eines Schemas die verhaltensbezogenen Aspekte der Daten, die ein Schema enthalten soll, von denen es zwei Typen gibt:
+Alle XDM-Schema (Experience Data Model) müssen auf einer Klasse basieren. Eine Klasse legt die Basisstruktur von allgemeinen Eigenschaften fest, die alle Schema, die auf dieser Klasse basieren, enthalten müssen, sowie welche Schema-Feldgruppen für die Verwendung in diesen Schemas infrage kommen. Darüber hinaus bestimmt die Klasse eines Schemas die verhaltensbezogenen Aspekte der Daten, die ein Schema enthalten soll, von denen es zwei Typen gibt:
 
 * **[!UICONTROL Datensatz]**: Stellt Informationen zu den Attributen eines Betreffs bereit. Ein Subjekt könnte eine Organisation oder eine Einzelperson sein.
 * **[!UICONTROL Zeitreihen]**: Stellt eine Momentaufnahme des Systems zum Zeitpunkt dar, zu dem eine Aktion entweder direkt oder indirekt von einem Datensatzsubjekt durchgeführt wurde.
@@ -246,7 +246,7 @@ Sie können eine benutzerdefinierte Klasse unter dem Container `tenant` definier
 
 >[!IMPORTANT]
 >
->Beim Erstellen eines Schemas, das auf einer von Ihnen definierten benutzerspezifischen Klasse basiert, können Sie keine standardmäßigen Mixins verwenden. Jedes Mixin definiert die Klassen, mit denen es kompatibel ist, in seinem `meta:intendedToExtend`-Attribut. Sobald Sie Mixins definiert haben, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung der `$id` Ihrer neuen Klasse im `meta:intendedToExtend`-Feld des Mixins), können Sie die Mixins jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten unter [Erstellen von Mixins](./mixins.md#create) und [Erstellen von Schemas](./schemas.md#create) in den jeweiligen Endpunkthandbüchern.
+>Beim Erstellen eines Schemas, das auf einer von Ihnen definierten benutzerspezifischen Klasse basiert, können Sie keine Standardfeldgruppen verwenden. Jede Feldgruppe definiert die Klassen, mit denen sie im Attribut `meta:intendedToExtend` kompatibel sind. Sobald Sie mit dem Definieren von Feldgruppen beginnen, die mit Ihrer neuen Klasse kompatibel sind (durch Verwendung von `$id` der neuen Klasse im `meta:intendedToExtend`-Feld der Feldgruppe), können Sie diese Feldgruppen jedes Mal wiederverwenden, wenn Sie ein Schema definieren, das die von Ihnen definierte Klasse implementiert. Weitere Informationen finden Sie in den Abschnitten unter [Erstellen von Feldgruppen](./field-groups.md#create) und [Erstellen von Schemas](./schemas.md#create) in den jeweiligen Endpunkthandbüchern.
 >
 >Wenn Sie planen, Schema auf Basis von benutzerdefinierten Klassen im Echtzeit-Kundencenter zu verwenden, sollten Sie auch bedenken, dass Schema der Vereinigung nur auf Schemas mit derselben Klasse basieren. Wenn Sie ein benutzerspezifisches Schema in die Vereinigung für eine andere Klasse wie [!UICONTROL XDM Individuelles Profil] oder [!UICONTROL XDM ExperienceEvent] einbeziehen möchten, müssen Sie eine Beziehung zu einem anderen Schema herstellen, das diese Klasse verwendet. Weitere Informationen finden Sie im Tutorial [Einrichten einer Beziehung zwischen zwei Schemas in der API](../tutorials/relationship-api.md).
 
@@ -260,7 +260,7 @@ POST /tenant/classes
 
 Die Anfrage zum Erstellen einer Klasse (POST) muss ein `allOf`-Attribut enthalten, das eine `$ref` zu einem von zwei Werten enthält: `https://ns.adobe.com/xdm/data/record` oder `https://ns.adobe.com/xdm/data/time-series`. Diese Werte stellen das Verhalten dar, auf dem die Klasse basiert (Datensatz oder Zeitreihe). Weiterführende Informationen zu Unterschieden zwischen Datensatzdaten und Zeitreihendaten finden Sie im Abschnitt zu Verhaltenstypen in den [Grundlagen der Schemakomposition](../schema/composition.md).
 
-Beim Definieren einer Klasse können Sie auch Mixins oder benutzerdefinierte Felder in die Klassendefinition einschließen. Das würde dazu führen, dass die hinzugefügten Mixins und Felder in allen Schemas enthalten sind, die die Klasse implementieren. Folgende Beispielanfrage definiert eine Klasse namens „Eigenschaft“, die Daten zu verschiedenen Eigenschaften erfasst, die von einer Firma besessen und genutzt werden. Sie enthält ein `propertyId`-Feld, das bei jeder Verwendung der Klasse eingeschlossen wird.
+Beim Definieren einer Klasse können Sie auch Feldgruppen oder benutzerdefinierte Felder in die Klassendefinition einbeziehen. Dadurch werden die hinzugefügten Feldgruppen und Felder in alle Schema einbezogen, die die Klasse implementieren. Folgende Beispielanfrage definiert eine Klasse namens „Eigenschaft“, die Daten zu verschiedenen Eigenschaften erfasst, die von einer Firma besessen und genutzt werden. Sie enthält ein `propertyId`-Feld, das bei jeder Verwendung der Klasse eingeschlossen wird.
 
 ```SHELL
 curl -X POST \
