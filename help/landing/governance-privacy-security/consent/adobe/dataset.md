@@ -6,9 +6,9 @@ topic-legacy: getting started
 description: Erfahren Sie, wie Sie ein Experience Data Model (XDM)-Schema und einen Dataset konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1503'
 ht-degree: 3%
 
 ---
@@ -23,14 +23,14 @@ In diesem Dokument werden Schritte zum Konfigurieren eines Datensatzes zur Verar
 >
 >Die Beispiele in diesem Handbuch verwenden einen standardisierten Satz von Feldern, um die Werte für die Zustimmung des Kunden zu repräsentieren, wie durch den XDM-Datentyp [Zustimmung und Voreinstellungen](../../../../xdm/data-types/consents.md) definiert. Die Struktur dieser Felder soll ein effizientes Datenmodell bieten, das viele gängige Nutzungsszenarien für die Einholung von Genehmigungen abdeckt.
 >
->Sie können jedoch auch eigene Mixins definieren, um die Zustimmung gemäß Ihren eigenen Datenmodellen zu repräsentieren. Bitte wenden Sie sich an Ihr Juristenteam, um die Genehmigung für ein Datenmodell für die Zustimmung zu erhalten, das Ihren geschäftlichen Anforderungen entspricht. Die folgenden Optionen sind verfügbar:
+>Sie können jedoch auch eigene Feldgruppen definieren, die die Zustimmung gemäß Ihren eigenen Datenmodellen darstellen. Bitte wenden Sie sich an Ihr Juristenteam, um die Genehmigung für ein Datenmodell für die Zustimmung zu erhalten, das Ihren geschäftlichen Anforderungen entspricht. Die folgenden Optionen sind verfügbar:
 >
->* Das standardisierte Zustimmungsmixin
->* Ein von Ihrer Organisation erstellter Mix für eine benutzerdefinierte Einwilligung
->* Eine Kombination aus dem standardisierten Zustimmungsmixin und zusätzlichen Feldern, die durch ein benutzerdefiniertes Zustimmungsmixin bereitgestellt werden
+>* Die standardisierte Einverständnisfeldgruppe
+>* Eine von Ihrer Organisation erstellte benutzerspezifische Gruppe für ein Einwilligungsfeld
+>* Eine Kombination aus der standardisierten Feldgruppe für die Zustimmung und zusätzlichen Feldern, die von einer Gruppe für ein Feld für die benutzerdefinierte Zustimmung bereitgestellt werden
 
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
@@ -42,11 +42,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >
 >In diesem Lernprogramm wird davon ausgegangen, dass Sie das [!DNL Profile]-Schema in Platform kennen, mit dem Sie Kundenattributinformationen erfassen möchten. Unabhängig von der Methode, die Sie zur Erfassung von Genehmigungsdaten verwenden, muss dieses Schema für Echtzeit-Kundendaten](../../../../xdm/ui/resources/schemas.md#profile) aktiviert sein. [ Darüber hinaus kann die primäre Identität des Schemas kein direkt identifizierbares Feld sein, das für interessensbasierte Werbung wie eine E-Mail-Adresse nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
 
-## Zustimmung und Voreinstellungen - Mixin-Struktur {#structure}
+## Struktur der Feldgruppe &quot;Inhalt und Voreinstellungen&quot; {#structure}
 
-Das [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin (nachfolgend &quot;Consents &amp; Preferences mixin&quot; genannt) stellt standardisierte Einwilligungsfelder für ein Schema bereit. Dieses Mixin ist derzeit nur mit Schemas kompatibel, die auf der [!DNL XDM Individual Profile]-Klasse basieren.
+Die Feldgruppe [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (nachfolgend &quot;Consents &amp; Preferences field group&quot;) stellt standardisierte Felder für die Zustimmung zu einem Schema bereit. Diese Feldgruppe ist derzeit nur mit Schemas kompatibel, die auf der [!DNL XDM Individual Profile]-Klasse basieren.
 
-Das Mixin bietet ein einzelnes Objekttypfeld, `consents`, dessen Untereigenschaften einen Satz standardisierter Zustimmungsfelder erfassen. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `consents` bei der Datenerfassung erwartet:
+Die Feldgruppe stellt ein einzelnes Objekt-Typ-Feld bereit, `consents`, dessen Untereigenschaften einen Satz standardisierter Felder für die Zustimmung erfassen. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `consents` bei der Datenerfassung erwartet:
 
 ```json
 {
@@ -95,7 +95,7 @@ Das Mixin bietet ein einzelnes Objekttypfeld, `consents`, dessen Untereigenschaf
 >
 >Weitere Informationen zur Struktur und Bedeutung der Untereigenschaften in `consents` finden Sie in der Übersicht zum Datentyp [Einwilligungen und Voreinstellungen](../../../../xdm/data-types/consents.md).
 
-## hinzufügen Sie das Mixin &quot;Einwilligungen und Voreinstellungen&quot;mit Ihrem [!DNL Profile]-Schema {#add-mixin}
+## hinzufügen Sie die Feldgruppe &quot;Zustimmung und Voreinstellungen&quot;auf Ihr [!DNL Profile]-Schema {#add-field-group}
 
 Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;in der linken Navigation **[!UICONTROL Schema]** und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste der vorhandenen Schema anzuzeigen. Wählen Sie hier den Namen des [!DNL Profile]-aktivierten Schemas aus, dem Sie die Felder für die Zustimmung hinzufügen möchten. Die Screenshots in diesem Abschnitt verwenden das Schema &quot;Treuemitglieder&quot;, das im Tutorial [Erstellung von Schemas](../../../../xdm/tutorials/create-schema-ui.md) erstellt wurde.
 
@@ -105,15 +105,15 @@ Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;in der linken Naviga
 >
 >Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um Ihr Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch [XDM-Ressourcen](../../../../xdm/ui/explore.md) zu erkunden.
 
-Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Hinzufügen]** unter dem Abschnitt **[!UICONTROL Mixins]**.
+Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Hinzufügen]** unter dem Abschnitt **[!UICONTROL Feldgruppen]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-Das Dialogfeld **[!UICONTROL Hinzufügen mixin]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um das Mixin einfacher zu finden. Wenn das Mixin ausgewählt ist, wählen Sie **[!UICONTROL Hinzufügen mixin]**.
+Das Dialogfeld **[!UICONTROL Hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um die Feldgruppe einfacher zu finden. Wählen Sie nach Auswahl der Feldgruppe **[!UICONTROL Hinzufügen Feldgruppe]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consents`-Objekt zur Schema-Struktur hinzugefügt wurde. Wenn Sie zusätzliche Zustimmungs- und Voreinstellungsfelder benötigen, die nicht vom Standardmixin erfasst werden, finden Sie weitere Informationen im Anhang zu [Hinzufügen von benutzerdefinierten Einwilligungs- und Voreinstellungsfeldern zum Schema](#custom-consent). Andernfalls wählen Sie **[!UICONTROL Speichern]**, um die Änderungen am Schema abzuschließen.
+Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consents`-Objekt zur Schema-Struktur hinzugefügt wurde. Wenn Sie zusätzliche Felder für die Zustimmung und Voreinstellung benötigen, die nicht von der Standardfeldgruppe erfasst werden, finden Sie weitere Informationen im Anhang zu [Hinzufügen von Feldern für die benutzerdefinierte Zustimmung und Voreinstellung zum Schema](#custom-consent). Andernfalls wählen Sie **[!UICONTROL Speichern]**, um die Änderungen am Schema abzuschließen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -165,17 +165,17 @@ Der folgende Abschnitt enthält weitere Informationen zum Erstellen eines Datens
 
 ### hinzufügen benutzerdefinierte Felder für die Zustimmung und die Voreinstellung zum Schema {#custom-consent}
 
-Wenn Sie zusätzliche Zustimmungssignale außerhalb der durch das standardmäßige [!DNL Consents & Preferences]-Mixin repräsentierten Signale erfassen müssen, können Sie benutzerdefinierte XDM-Komponenten verwenden, um Ihr Schema für die Zustimmung entsprechend Ihren jeweiligen Geschäftsanforderungen zu verbessern. In diesem Abschnitt werden die Grundprinzipien erläutert, wie Sie Ihr Schema für die Zustimmung so anpassen können, dass es mit den Befehlen zur Änderung der Zustimmung, die von Adobe Experience Platform Mobile- und Web-SDKs ausgeführt werden, kompatibel ist.
+Wenn Sie zusätzliche Zustimmungssignale außerhalb der von der standardmäßigen [!DNL Consents & Preferences]-Feldgruppe repräsentierten Signalen erfassen müssen, können Sie benutzerdefinierte XDM-Komponenten verwenden, um Ihr Schema für die Zustimmung entsprechend Ihren jeweiligen Geschäftsanforderungen zu verbessern. In diesem Abschnitt werden die Grundprinzipien erläutert, wie Sie Ihr Schema für die Zustimmung so anpassen können, dass es mit den Befehlen zur Änderung der Zustimmung, die von Adobe Experience Platform Mobile- und Web-SDKs ausgeführt werden, kompatibel ist.
 
 >[!IMPORTANT]
 >
->Sie müssen das [!DNL Consents & Preferences]-Mixin als Grundlage für die Struktur Ihrer Genehmigungsdaten verwenden und bei Bedarf zusätzliche Felder hinzufügen, anstatt zu versuchen, die gesamte Struktur von Grund auf zu erstellen.
+>Sie müssen die Feldgruppe [!DNL Consents & Preferences] als Grundlage für die Struktur Ihrer Genehmigungsdaten verwenden und bei Bedarf weitere Felder hinzufügen, anstatt zu versuchen, die gesamte Struktur von Grund auf zu erstellen.
 
-Um benutzerdefinierte Felder zur Struktur eines Standardmixins hinzuzufügen, müssen Sie zunächst ein benutzerdefiniertes Mixin erstellen. Nachdem Sie die [!DNL Consents & Preferences]-Mischung zum Schema hinzugefügt haben, wählen Sie im Abschnitt **[!UICONTROL Mixins]** das Symbol **plus (+)** aus und wählen Sie **[!UICONTROL Neue Mischung erstellen]**. Geben Sie einen Namen und eine optionale Beschreibung für das Mixin ein und wählen Sie **[!UICONTROL Hinzufügen mixin]**.
+Um der Struktur einer Standardfeldgruppe benutzerdefinierte Felder hinzuzufügen, müssen Sie zunächst eine benutzerspezifische Feldgruppe erstellen. Nachdem Sie die Feldgruppe [!DNL Consents & Preferences] zum Schema hinzugefügt haben, wählen Sie das Symbol **plus (+)** im Abschnitt **[!UICONTROL Feldgruppen]** und klicken Sie dann auf **[!UICONTROL Neue Feldgruppe]** erstellen. Geben Sie einen Namen und eine optionale Beschreibung für die Feldgruppe ein und wählen Sie dann **[!UICONTROL Hinzufügen Feldgruppe]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-Das [!DNL Schema Editor] wird wieder angezeigt, wenn das neue benutzerdefinierte Mixin in der linken Leiste ausgewählt ist. Auf der Arbeitsfläche werden Steuerelemente angezeigt, mit denen Sie benutzerdefinierte Felder zur Schema-Struktur hinzufügen können. Um ein neues Feld für die Zustimmung oder Voreinstellung hinzuzufügen, wählen Sie das Symbol **plus (+)** neben dem Objekt `consents` aus.
+Das Element [!DNL Schema Editor] wird erneut angezeigt, wobei die neue benutzerdefinierte Feldgruppe in der linken Leiste ausgewählt ist. Auf der Arbeitsfläche werden Steuerelemente angezeigt, mit denen Sie benutzerdefinierte Felder zur Schema-Struktur hinzufügen können. Um ein neues Feld für die Zustimmung oder Voreinstellung hinzuzufügen, wählen Sie das Symbol **plus (+)** neben dem Objekt `consents` aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
