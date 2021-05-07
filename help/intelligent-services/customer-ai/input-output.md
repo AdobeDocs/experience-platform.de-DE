@@ -6,9 +6,9 @@ topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignis, Eingaben und Ausgaben, die von der KUNDENKI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '2876'
+source-wordcount: '2890'
 ht-degree: 13%
 
 ---
@@ -36,10 +36,10 @@ In der folgenden Tabelle sind einige häufig verwendete Terminologie für dieses
 | Begriff | Definition |
 | --- | --- |
 | [Experience-Datenmodell (XDM)](../../xdm/home.md) | XDM ist das Fundament, das es Adobe Experience Cloud, powered by Adobe Experience Platform, ermöglicht, die richtige Botschaft an die richtige Person, auf dem richtigen Kanal, genau im richtigen Moment zu senden. Das XDM-System ist die Methode, auf der Experience Platform basiert. Es stellt Experience-Datenmodell-Schemata zur Verwendung durch Platform-Dienste bereit. |
-| XDM-Schema | Schemas dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, die Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Plattform aufgenommen werden können, muss ein Schema zusammengestellt werden, um die Datenstruktur zu beschreiben und Beschränkungen für den Datentyp bereitzustellen, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer XDM-Basisklasse und Null oder mehr Mixins. |
+| XDM-Schema | Schemas dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, die Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Plattform aufgenommen werden können, muss ein Schema zusammengestellt werden, um die Datenstruktur zu beschreiben und Beschränkungen für den Datentyp bereitzustellen, der in den einzelnen Feldern enthalten sein kann. Schema bestehen aus einer XDM-Basisklasse und einer Schema-Feldgruppe von null oder mehr. |
 | XDM-Klasse | Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema beim ersten Erstellen zugewiesen wird. XDM-Klassen beschreiben die kleinste Anzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten darzustellen. |
-| [Mixins](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Mixins erzwingen, wie die Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema dieselbe Struktur auf, in dem sie enthalten sind. Mixins sind nur mit bestimmten Klassen kompatibel, die durch ihr `meta:intendedToExtend`-Attribut gekennzeichnet sind. |
-| [Datentyp](../../xdm/schema/composition.md) | Eine Komponente, die auch ein oder mehrere Felder für ein Schema bereitstellen kann. Im Gegensatz zu Mixins sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch werden Datentypen flexibler, um häufig verwendete Datenstrukturen zu beschreiben, die über mehrere Schema mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können. Die in diesem Dokument beschriebenen Datentypen werden sowohl von den mittel- als auch von den Adobe Analytics-Schemas unterstützt. |
+| [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldgruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema dieselbe Struktur auf, in dem sie enthalten sind. Feldgruppen sind nur mit bestimmten Klassen kompatibel, die durch ihr `meta:intendedToExtend`-Attribut gekennzeichnet sind. |
+| [Datentyp](../../xdm/schema/composition.md) | Eine Komponente, die auch ein oder mehrere Felder für ein Schema bereitstellen kann. Im Gegensatz zu Feldgruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch werden Datentypen flexibler, um häufig verwendete Datenstrukturen zu beschreiben, die über mehrere Schema mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können. Die in diesem Dokument beschriebenen Datentypen werden sowohl von den mittel- als auch von den Adobe Analytics-Schemas unterstützt. |
 | Churn | Eine Messung des Prozentsatzes der Konten, die ihre Abonnements stornieren oder nicht verlängern. Eine hohe Rate der Abwanderung kann sich negativ auf den monatlichen wiederkehrenden Umsatz (MRR) auswirken und auch auf Unzufriedenheit mit einem Produkt oder einer Dienstleistung hindeuten. |
 | [Echtzeit-Kundenprofil](../../profile/home.md) | Echtzeit-Customer-Profil bietet ein zentrales Profil für zielgerichtetes und personalisiertes Erlebnis-Management. Jedes Profil enthält Daten, die über alle Systeme aggregiert werden, sowie umsetzbare Zeitstempelkonten von Ereignissen, an denen die Einzelperson beteiligt ist, die in einem der mit der Experience Platform verwendeten Systeme aufgetreten sind. |
 
@@ -49,7 +49,7 @@ In der folgenden Tabelle sind einige häufig verwendete Terminologie für dieses
 >
 > Die KUNDENKI ermittelt automatisch, welche Ereignis für Prognosen nützlich sind, und gibt eine Warnung aus, wenn die verfügbaren Daten nicht ausreichen, um Qualitätsprognosen zu erstellen.
 
-Kunden-AI unterstützt Datasets von CEE, Adobe Analytics und Adobe Audience Manager. Das CEE-Schema erfordert, dass Sie Mixins während der Erstellung des Schemas hinzufügen. Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Datensätze verwenden, ordnet der Quell-Connector direkt die standardmäßigen Ereignis (Commerce, Webseitendetails, Anwendung und Suche) zu, die während des Verbindungsprozesses unten aufgeführt werden.
+Kunden-AI unterstützt Datasets von CEE, Adobe Analytics und Adobe Audience Manager. Im CEE-Schema müssen Sie Feldgruppen während des Erstellungsprozesses des Schemas hinzufügen. Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Datensätze verwenden, ordnet der Quell-Connector direkt die standardmäßigen Ereignis (Commerce, Webseitendetails, Anwendung und Suche) zu, die während des Verbindungsprozesses unten aufgeführt werden.
 
 Weitere Informationen zum Zuordnen von Adobe Analytics-Daten oder Audience Manager-Daten finden Sie im Handbuch [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) oder [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
@@ -57,18 +57,17 @@ Weitere Informationen zum Zuordnen von Adobe Analytics-Daten oder Audience Manag
 
 XDM Experience Ereignisses werden zur Bestimmung verschiedener Kundenverhalten verwendet. Je nachdem, wie Ihre Daten strukturiert sind, umfassen die unten aufgeführten Ereignistypen möglicherweise nicht alle Verhaltensweisen Ihres Kunden. Es liegt an Ihnen, zu bestimmen, welche Felder über die erforderlichen Daten verfügen, um die Aktivität von Webbenutzern eindeutig und eindeutig zu identifizieren. Je nach Prognoseziel können sich die erforderlichen Felder ändern.
 
-Die Kundenunterstützung nutzt verschiedene Ereignistyp zum Erstellen von Modellfunktionen. Diese Ereignistyp werden automatisch mit mehreren XDM-Mixins zu Ihrem Schema hinzugefügt.
+Die Kundenunterstützung nutzt verschiedene Ereignistyp zum Erstellen von Modellfunktionen. Diese Ereignistyp werden Ihrem Schema automatisch mit mehreren XDM-Feldgruppen hinzugefügt.
 
 >[!NOTE]
 >
->Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Daten verwenden, wird das Schema automatisch mit den für die Datenerfassung erforderlichen Standard-Ereignissen erstellt. Wenn Sie ein eigenes benutzerdefiniertes CEE-Schema zur Datenerfassung erstellen, müssen Sie überlegen, welche Mixins zur Datenerfassung erforderlich sind.
+>Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Daten verwenden, wird das Schema automatisch mit den für die Datenerfassung erforderlichen Standard-Ereignissen erstellt. Wenn Sie ein eigenes benutzerdefiniertes CEE-Schema zur Datenerfassung erstellen, müssen Sie überlegen, welche Feldgruppen zur Datenerfassung benötigt werden.
 
 Es ist nicht erforderlich, Daten für jedes der unten aufgeführten Standardszenarien zu haben, aber für bestimmte Ereignis sind bestimmte Ereignis erforderlich. Wenn Sie über Standarddaten für Ereignis verfügen, sollten Sie diese in Ihr Schema aufnehmen. Wenn Sie z. B. eine Customer AI-Anwendung zum Vorhersagen von Kaufdaten erstellen möchten, ist es sinnvoll, Daten aus den Datentypen `Commerce` und `Web page details` zu haben.
 
-Um ein Mixin in der Plattform-Benutzeroberfläche Ansicht, wählen Sie auf der linken Leiste die Registerkarte **[!UICONTROL Schema]** und anschließend die Registerkarte **[!UICONTROL Mixins]**.
+Um eine Feldgruppe in der Plattform-Benutzeroberfläche Ansicht, wählen Sie auf der linken Leiste die Registerkarte **[!UICONTROL Schema]** und anschließend die Registerkarte **[!UICONTROL Feldgruppen]**.
 
-
-| Mixin | Ereignistyp | XDM-Feldpfad |
+| Feldergruppe | Ereignistyp | XDM-Feldpfad |
 | --- | --- | --- |
 | [!UICONTROL Commerce-Details] | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li> |
@@ -118,7 +117,7 @@ Zusätzlich zu den erforderlichen Mindestdaten funktioniert die Kundentreueanwei
 
 ### Beispielszenarios
 
-In diesem Abschnitt werden verschiedene Szenarien für Kunden-AI-Instanzen sowie die erforderlichen und empfohlenen Ereignistyp beschrieben. Weitere Informationen zum Mixin und seinem Feldpfad finden Sie in der obigen Tabelle [Standard-Ereignisse](#standard-events).
+In diesem Abschnitt werden verschiedene Szenarien für Kunden-AI-Instanzen sowie die erforderlichen und empfohlenen Ereignistyp beschrieben. Weitere Informationen zur Feldgruppe und zum jeweiligen Feldpfad finden Sie in der obigen Tabelle [Ereignisse.](#standard-events)
 
 >[!NOTE]
 >
@@ -249,7 +248,7 @@ Die verbleibenden [Ereignistyp](#standard-events) können je nach Komplexität d
 
 **Erforderliche Standard-Ereignistyp:**
 
-Um Eigenschaften aus Adobe Audience Manager verwenden zu können, müssen Sie eine Quellverbindung mit dem [Audience Manager-Quellanschluss](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) erstellen. Der Quell-Connector erstellt das Schema automatisch mit den richtigen Mixins. Sie müssen keine zusätzlichen Ereignistyp manuell hinzufügen, damit das Schema mit der Kundenunterstützung funktioniert.
+Um Eigenschaften aus Adobe Audience Manager verwenden zu können, müssen Sie eine Quellverbindung mit dem [Audience Manager-Quellanschluss](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) erstellen. Der Quell-Connector erstellt das Schema automatisch mit der entsprechenden Feldgruppe/n. Sie müssen keine zusätzlichen Ereignistyp manuell hinzufügen, damit das Schema mit der Kundenunterstützung funktioniert.
 
 Wenn Sie eine neue Kunden-AI-Instanz konfigurieren, können `audienceName` und `audienceID` verwendet werden, um eine bestimmte Eigenschaft für die Bewertung auszuwählen, während Sie Ihr Ziel definieren.
 
