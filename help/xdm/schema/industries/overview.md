@@ -5,9 +5,9 @@ topic-legacy: overview
 description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene Branchen, die mit XDM-Komponenten (Standard Experience Data Model) konstruiert werden können.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '520'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,12 @@ Je nach Branche, in der Ihr Unternehmen tätig ist, werden einige XDM-Komponente
 
 Dieser Leitfaden enthält eine Übersicht über Entitäts-Relationship-Diagramme (ERDs) für verschiedene unterstützte Branchenzeitschriften, um Ihnen dabei zu helfen, Ihre Datenmodellierungsstrategie auf Basis Ihrer Branche zu gestalten.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 Um die in diesem Handbuch erwähnten ERDs zu lesen, müssen Sie über ein funktionierendes Verständnis dafür verfügen, wie XDM-Komponenten mit Schemas interagieren und wie XDM-Schema in der Experience Platform als Ganzes funktionieren. Vergewissern Sie sich, dass Sie die folgende Übersichtsdokumentation gelesen haben, bevor Sie fortfahren:
 
 * [XDM-System - Übersicht](../../home.md): Erfahren Sie, wie XDM im Plattform-Ökosystem arbeitet.
-* [Grundlagen der Zusammensetzung](../../schema/composition.md) des Schemas: Erfahren Sie, wie XDM-Komponenten (wie Mixins, Klassen und Datentypen) zur Struktur eines Schemas sowie zur Rolle von Identitätsfeldern beitragen.
+* [Grundlagen der Zusammensetzung](../../schema/composition.md) des Schemas: Erfahren Sie, wie XDM-Komponenten (z. B. Schema-Feldgruppen, Klassen und Datentypen) zur Struktur eines Schemas sowie zur Rolle von Identitätsfeldern beitragen.
 
 Es wird außerdem empfohlen, den Leitfaden [Best Practices zur Datenmodellierung](../../schema/best-practices.md) für allgemeine Richtlinien zur Zuordnung Ihrer Daten zu XDM zu lesen.
 
@@ -37,7 +37,7 @@ Es wird außerdem empfohlen, den Leitfaden [Best Practices zur Datenmodellierung
 
 Die unten aufgeführten, von ERDs dargestellten vertikalen Branchenmodelle werden absichtlich denormalisiert und unter Berücksichtigung der Art und Weise, wie Daten in Plattform gespeichert werden, erstellt.
 
-Für eine bestimmte ERD basiert jede in dargestellte Entität auf einer zugrunde liegenden XDM-Klasse. Für eine bestimmte Entität stellt jede in **bold** markierte Zeile ein Mixin oder einen Datentyp dar, wobei die entsprechenden Felder unten in unverschlüsseltem Text aufgeführt sind. Die wichtigsten Felder für eine bestimmte Entität werden rot hervorgehoben.
+Für eine bestimmte ERD basiert jede in dargestellte Entität auf einer zugrunde liegenden XDM-Klasse. Für eine bestimmte Entität stellt jede in **bold** markierte Zeile eine Feldgruppe oder einen Datentyp dar, wobei die entsprechenden Felder unten im unverschlüsselten Text aufgeführt sind. Die wichtigsten Felder für eine bestimmte Entität werden rot hervorgehoben.
 
 >[!NOTE]
 >
