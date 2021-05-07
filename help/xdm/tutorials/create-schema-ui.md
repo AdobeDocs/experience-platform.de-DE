@@ -7,10 +7,10 @@ type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
-source-wordcount: '3682'
-ht-degree: 17%
+source-wordcount: '3751'
+ht-degree: 12%
 
 ---
 
@@ -29,7 +29,7 @@ Wenn Sie stattdessen lieber ein Schema mit der API zusammenstellen möchten, les
 Dieses Tutorial erfordert ein Verständnis der verschiedenen Aspekte der Adobe Experience Platform, die an der Schaffung von Schemas beteiligt sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die Dokumentation für die folgenden Konzepte:
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schema-Zusammensetzung](../schema/composition.md): Eine Übersicht über XDM-Schemas und ihre Bausteine, einschließlich Klassen, Mixins, Datentypen und Feldern.
+   * [Grundlagen der Zusammensetzung](../schema/composition.md) des Schemas: Eine Übersicht über XDM-Schema und ihre Bausteine, einschließlich Klassen, Schema-Feldgruppen, Datentypen und Einzelfelder.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 ## Öffnen Sie den Arbeitsbereich [!UICONTROL Schemas] {#browse}
@@ -48,9 +48,9 @@ Wählen Sie für diese Übung **[!UICONTROL XDM Individuelles Profil]**.
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Da Sie eine XDM-Standardklasse ausgewählt haben, auf der das Schema basieren soll, wird das Dialogfeld **[!UICONTROL Hinzufügen mixin]** angezeigt, in dem Sie sofort Beginn zum Hinzufügen von Feldern zum Schema hinzufügen können. Wählen Sie zunächst **[!UICONTROL Abbrechen]**, um das Dialogfeld zu verlassen.
+Da Sie eine Standard-XDM-Klasse ausgewählt haben, auf der das Schema basieren soll, wird das Dialogfeld **[!UICONTROL Hinzufügen Feldgruppe]** angezeigt, in dem Sie sofort Beginn zum Hinzufügen von Feldern zum Schema hinzufügen können. Wählen Sie zunächst **[!UICONTROL Abbrechen]**, um das Dialogfeld zu verlassen.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 Das Symbol [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf der Sie Ihr Schema zusammenstellen. Ein unbenanntes Schema wird automatisch im Bereich **[!UICONTROL Struktur]** der Arbeitsfläche erstellt, wenn Sie im Editor ankommen, zusammen mit den Standardfeldern, die in allen Schemas, die auf dieser Klasse basieren, enthalten sind. Die zugewiesene Klasse für das Schema wird auch unter **[!UICONTROL Class]** im Abschnitt **[!UICONTROL Zusammensetzung]** aufgeführt.
 
@@ -58,7 +58,7 @@ Das Symbol [!DNL Schema Editor] wird angezeigt. Dies ist die Arbeitsfläche, auf
 
 >[!NOTE]
 >
-> Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
+> Sie können [die Klasse eines Schemas](#change-class) jederzeit während des anfänglichen Kompositionsprozesses ändern, bevor das Schema gespeichert wird. Dies sollte jedoch mit größter Vorsicht geschehen. Feldgruppen sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
 
 Verwenden Sie die Felder auf der rechten Seite des Editors, um einen Anzeigenamen und eine optionale Beschreibung für das Schema anzugeben. Sobald ein Name eingegeben wurde, wird die Arbeitsfläche aktualisiert und gibt den neuen Namen des Schemas wieder.
 
@@ -72,35 +72,35 @@ Bei der Entscheidung über einen Namen für Ihr Schema sind einige wichtige Aspe
 
 Dieses Tutorial stellt ein Schema zum Erfassen von Daten zu den Mitgliedern eines Treueanschlusses vor, und deshalb heißt das Schema &quot;Treueanwärter&quot;.
 
-## Hinzufügen eines Mixins {#mixin}
+## hinzufügen einer Feldgruppe {#field-group}
 
-Sie können nun beginnen, Ihrem Schema Felder hinzuzufügen, indem Sie Mixins hinzufügen. Ein Mixin ist eine Gruppe aus einem oder mehreren Feldern, die häufig zusammen verwendet werden, um ein bestimmtes Konzept zu beschreiben. In diesem Tutorial werden Mixins verwendet, um die Mitglieder des Loyalitätsprogramms zu beschreiben und wichtige Informationen wie Name, Geburtstag, Telefonnummer, Adresse und mehr zu erfassen.
+Sie können nun mit dem Hinzufügen von Feldern zu Ihrem Schema beginnen, indem Sie Feldgruppen hinzufügen. Eine Feldgruppe ist eine Gruppe von Feldern, die häufig zusammen zur Beschreibung eines bestimmten Konzepts verwendet werden. In diesem Lernprogramm werden Feldgruppen verwendet, um die Mitglieder des Programms zu beschreiben und wichtige Informationen wie Name, Geburtstag, Telefonnummer, Adresse und mehr zu erfassen.
 
-Um ein Mixin hinzuzufügen, wählen Sie **[!UICONTROL Hinzufügen]** im Unterabschnitt **[!UICONTROL Mixins]** aus.
+Um eine Feldgruppe hinzuzufügen, wählen Sie **[!UICONTROL Hinzufügen]** im Unterabschnitt **[!UICONTROL Feldgruppen]** aus.
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
-Ein neues Dialogfeld mit einer Liste der verfügbaren Mixins wird angezeigt. Jedes Mixin ist nur für eine bestimmte Klasse vorgesehen. Daher ist der Dialog nur für Listen-Mixins vorgesehen, die mit der ausgewählten Klasse kompatibel sind (in diesem Fall mit der [!DNL XDM Individual Profile]-Klasse). Wenn Sie eine Standard-XDM-Klasse verwenden, wird die Liste der Mixins basierend auf der Beliebtheit der Verwendung intelligent sortiert.
+Ein neues Dialogfeld mit einer Liste der verfügbaren Feldgruppen wird angezeigt. Jede Feldgruppe ist nur für die Verwendung mit einer bestimmten Klasse vorgesehen. Daher werden im Dialogfeld nur Feldgruppen Liste, die mit der ausgewählten  kompatibel sind (in diesem Fall mit der [!DNL XDM Individual Profile]-Klasse). Wenn Sie eine Standard-XDM-Klasse verwenden, wird die Liste der Feldgruppen basierend auf der Beliebtheit der Verwendung intelligent sortiert.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
-Wenn Sie eine Mischung aus der Liste auswählen, wird sie in der rechten Leiste angezeigt. Sie können bei Bedarf mehrere Mixins auswählen und diese der Liste in der rechten Leiste hinzufügen, bevor Sie sie bestätigen. Darüber hinaus wird auf der rechten Seite des aktuell ausgewählten Mixins ein Symbol angezeigt, mit dem Sie die Vorschau der Feldstruktur, die es bietet, vornehmen können.
+Wenn Sie eine Feldgruppe aus der Liste auswählen, wird sie in der rechten Leiste angezeigt. Sie können bei Bedarf mehrere Feldgruppen auswählen und diese der Liste in der rechten Leiste hinzufügen, bevor Sie sie bestätigen. Darüber hinaus wird auf der rechten Seite der aktuell ausgewählten Feldgruppe ein Symbol angezeigt, mit dem Sie die Vorschau der Feldstruktur vornehmen können.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-Bei der Vorschau eines Mixins wird das Schema des Mixins in der rechten Leiste ausführlich beschrieben. Sie können auch durch die Felder des Mixins in der bereitgestellten Arbeitsfläche navigieren. Wenn Sie verschiedene Felder auswählen, wird die rechte Leiste aktualisiert, um Details zum betreffenden Feld anzuzeigen. Wählen Sie **[!UICONTROL Zurück]**, wenn Sie die Vorschau abgeschlossen haben, um zum Dialogfeld für die Mixinauswahl zurückzukehren.
+Bei der Vorschau einer Feldgruppe wird das Schema der Feldgruppe in der rechten Leiste ausführlich beschrieben. Sie können auch durch die Felder der Feldgruppe in der bereitgestellten Arbeitsfläche navigieren. Wenn Sie verschiedene Felder auswählen, wird die rechte Leiste aktualisiert, um Details zum betreffenden Feld anzuzeigen. Wählen Sie **[!UICONTROL Zurück]**, wenn Sie die Vorschau abgeschlossen haben, um zum Dialogfeld für die Feldgruppenauswahl zurückzukehren.
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-Wählen Sie für dieses Lernprogramm das Mixin **[!UICONTROL Demografische Details]** und dann **[!UICONTROL Hinzufügen mixin]**.
+Wählen Sie für dieses Lernprogramm die Feldgruppe **[!UICONTROL Demografische Details]** und dann **[!UICONTROL Hinzufügen Feldgruppe]**.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-Die Arbeitsfläche des Schemas wird wieder angezeigt. Im Abschnitt **[!UICONTROL Mixins]** werden jetzt Listen &quot;[!UICONTROL Demografische Details]&quot;und im Abschnitt **[!UICONTROL Struktur]**&quot;werden die vom Mixin hinzugefügten Felder angezeigt. Sie können den Namen des Mixins im Abschnitt **[!UICONTROL Mixins]** auswählen, um die spezifischen Felder, die es auf der Arbeitsfläche bereitstellt, hervorzuheben.
+Die Arbeitsfläche des Schemas wird wieder angezeigt. Im Abschnitt **[!UICONTROL Feldgruppen]** werden jetzt Listen &quot;[!UICONTROL Demografische Details]&quot;und im Abschnitt **[!UICONTROL Struktur]** werden die von der Feldgruppe hinzugefügten Felder angezeigt. Sie können den Namen der Feldgruppe im Abschnitt **[!UICONTROL Feldgruppen]** auswählen, um die spezifischen Felder, die sie auf der Arbeitsfläche bereitstellt, hervorzuheben.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
-Diese Mischung fügt mehrere Felder unter dem Namen der obersten Ebene `person` mit dem Datentyp &quot;[!UICONTROL Person]&quot;ein. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
+Diese Feldgruppe fügt mehrere Felder unter dem Namen der obersten Ebene `person` mit dem Datentyp &quot;[!UICONTROL Person]&quot;ein. Diese Gruppe von Feldern beschreibt Informationen zu einer Person, einschließlich Name, Geburtsdatum und Geschlecht.
 
 >[!NOTE]
 >
@@ -110,49 +110,49 @@ Beachten Sie, dass das Feld `name` den Datentyp &quot;[!UICONTROL Personenname]&
 
 Wählen Sie die verschiedenen Felder auf der Arbeitsfläche aus, um alle weiteren Felder anzuzeigen, die sie zur Schema-Struktur beitragen.
 
-## Hinzufügen eines weiteren Mixins {#mixin-2}
+## hinzufügen einer anderen Feldgruppe {#field-group-2}
 
-Sie können jetzt dieselben Schritte wiederholen, um ein weiteres Mixin hinzuzufügen. Wenn Sie dieses Mal das Dialogfeld **[!UICONTROL Hinzufügen mixin]** Ansicht haben, beachten Sie, dass die Mischung &quot;[!UICONTROL Demografische Details]&quot;ausgegraut wurde und das Kontrollkästchen daneben nicht aktiviert werden kann. Dadurch wird verhindert, dass Mixins, die bereits in Ihrem aktuellen Schema enthalten sind, versehentlich dupliziert werden.
+Sie können jetzt dieselben Schritte wiederholen, um eine weitere Feldgruppe hinzuzufügen. Wenn Sie dieses Mal das Dialogfeld **[!UICONTROL Hinzufügen]** Ansicht haben, beachten Sie, dass die Feldgruppe &quot;[!UICONTROL Demografische Details]&quot;ausgegraut wurde und das Kontrollkästchen daneben nicht aktiviert werden kann. Dadurch wird verhindert, dass Sie versehentlich Feldgruppen duplizieren, die Sie bereits im aktuellen Schema enthalten haben.
 
-Wählen Sie für dieses Tutorial im Dialogfeld die Mischung &quot;[!DNL Personal Contact Details]&quot;und wählen Sie dann **[!UICONTROL Hinzufügen mixin]** aus, um sie dem Schema hinzuzufügen.
+Wählen Sie für dieses Lernprogramm die Feldgruppe &quot;[!DNL Personal Contact Details]&quot;im Dialogfeld aus und wählen Sie dann **[!UICONTROL Hinzufügen Feldgruppe]** aus, um sie dem Schema hinzuzufügen.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. &quot;[!UICONTROL Persönliche Kontaktdaten]&quot;wird jetzt unter **[!UICONTROL Mixins]** im Abschnitt **[!UICONTROL Zusammensetzung]** aufgelistet. Die Felder für die Adresse, das Handy und weitere wurden unter **[!UICONTROL Struktur]** hinzugefügt.
+Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. &quot;[!UICONTROL Persönliche Kontaktdaten]&quot;wird jetzt unter **[!UICONTROL Feldgruppen]** im Abschnitt **[!UICONTROL Zusammensetzung]** aufgelistet. Die Felder für die Homepage, das Handy und weitere wurden unter **[!UICONTROL Struktur]** hinzugefügt.
 
 Ähnlich wie im Feld `name` stellen die soeben hinzugefügten Felder Konzepte für mehrere Felder dar. Beispiel: `homeAddress` hat den Datentyp &quot;[!UICONTROL Postadresse]&quot;und `mobilePhone` hat den Datentyp &quot;[!UICONTROL Telefonnummer]&quot;. Sie können jedes dieser Felder auswählen, um sie zu erweitern und die zusätzlichen Felder anzuzeigen, die im Datentyp enthalten sind.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Definieren eines benutzerdefinierten Mixins {#define-mixin}
+## Definieren einer benutzerspezifischen Feldgruppe {#define-field-group}
 
 Das Schema &quot;[!UICONTROL Treuemitglieder]&quot;dient zum Erfassen von Daten, die mit den Mitgliedern eines Treuebereichs in Verbindung stehen. Es erfordert daher einige spezifische treuebezogene Programme.
 
-Es gibt eine standardmäßige Mischung [!UICONTROL Kundentreuedetails], die Sie dem Schema hinzufügen können, um gemeinsame Felder im Zusammenhang mit einem Treue-Programm zu erfassen. Es wird empfohlen, Standardmixins zur Darstellung von Schemas zu verwenden. Die Standardstruktur des Loyalitätsmixins kann jedoch möglicherweise nicht alle relevanten Daten für Ihr bestimmtes Treuemix-Programm erfassen. In diesem Szenario können Sie eine neue benutzerdefinierte Mischung definieren, um diese Felder stattdessen zu erfassen.
+Es gibt eine Standardfeldgruppe [!UICONTROL Treuedetails], die Sie dem Schema hinzufügen können, um allgemeine Felder im Zusammenhang mit einem Treuefeld zu erfassen. Es wird dringend empfohlen, Standardfeldgruppen zur Darstellung von Begriffen zu verwenden, die von Ihren Schemas erfasst werden. Die Standardfeldgruppe für Loyalität kann jedoch möglicherweise nicht alle relevanten Daten für Ihr bestimmtes Treuhandfeld erfassen. In diesem Szenario können Sie eine neue benutzerspezifische Feldgruppe definieren, um diese Felder stattdessen zu erfassen.
 
-Öffnen Sie erneut das Dialogfeld **[!UICONTROL Hinzufügen Mixin]**, aber dieses Mal wählen Sie **[!UICONTROL Neues Mixin erstellen]** oben aus. Anschließend werden Sie aufgefordert, einen Anzeigenamen und eine Beschreibung für Ihr Mixin anzugeben.
+Öffnen Sie das Dialogfeld **[!UICONTROL Hinzufügen]** erneut, wählen Sie dieses Mal jedoch **[!UICONTROL Neue Feldgruppe]** oben erstellen. Anschließend werden Sie aufgefordert, einen Anzeigenamen und eine Beschreibung für Ihre Feldgruppe anzugeben.
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
-Wie bei Klassennamen sollte der Name des Mixins kurz und einfach sein und beschreiben, was das Mixin zum Schema beiträgt. Auch diese sind eindeutig, sodass Sie den Namen nicht wiederverwenden können und daher sicherstellen müssen, dass er spezifisch genug ist.
+Wie bei Klassennamen sollte der Feldgruppenname kurz und einfach sein und beschreiben, welchen Beitrag die Feldgruppe zum Schema leisten wird. Auch diese sind eindeutig, sodass Sie den Namen nicht wiederverwenden können und daher sicherstellen müssen, dass er spezifisch genug ist.
 
-Nennen Sie für dieses Tutorial das neue Mixin „Loyalitätsdetails“.
+Benennen Sie für dieses Lernprogramm die neue Feldgruppe &quot;Treuedetails&quot;.
 
-Wählen Sie **[!UICONTROL Hinzufügen mixin]** aus, um zum [!DNL Schema Editor] zurückzukehren. &quot;[!UICONTROL Kundentreuedetails]&quot;sollten jetzt auf der linken Seite der Arbeitsfläche unter **[!UICONTROL Mixins]** angezeigt werden. Es sind jedoch noch keine Felder damit verknüpft und daher werden unter **[!UICONTROL Struktur]** keine neuen Felder angezeigt.
+Wählen Sie **[!UICONTROL Hinzufügen Feldgruppe]** aus, um zum [!DNL Schema Editor] zurückzukehren. &quot;[!UICONTROL Kundentreuedetails]&quot;sollten jetzt links auf der Arbeitsfläche unter **[!UICONTROL Feldgruppen]** angezeigt werden. Es sind jedoch noch keine Felder verknüpft, sodass unter **[!UICONTROL Struktur]** keine neuen Felder angezeigt werden.
 
-## Hinzufügen von Feldern zum Mixin {#mixin-fields}
+## hinzufügen Felder zur Feldgruppe {#field-group-fields}
 
-Nachdem Sie jetzt das Mixin „Loyalitätsdetails“ erstellt haben, können Sie die Felder definieren, die das Mixin zum Schema beitragen wird.
+Nachdem Sie die Feldgruppe &quot;Treuedetails&quot;erstellt haben, ist es an der Zeit, die Felder zu definieren, die die Feldgruppe zum Schema beitragen soll.
 
-Wählen Sie zunächst den Namen des Mixins im Abschnitt **[!UICONTROL Mixins]**. Danach werden die Eigenschaften des Mixins rechts im Editor angezeigt und unter **[!UICONTROL Struktur]** wird ein **Plus-Symbol (+)** neben dem Namen des Schemas angezeigt.
+Wählen Sie zunächst den Feldgruppennamen im Abschnitt **[!UICONTROL Feldgruppen]** aus. Danach werden die Eigenschaften der Feldgruppe auf der rechten Seite des Editors angezeigt und unter **[!UICONTROL Struktur]** wird ein **Pluszeichen (+)** neben dem Namen des Schemas angezeigt.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
 Wählen Sie das Symbol **plus (+)** neben &quot;[!DNL Loyalty Members]&quot;aus, um einen neuen Knoten in der Struktur zu erstellen. Dieser Knoten (in diesem Beispiel `_tenantId` genannt) stellt die Mandant-ID Ihres IMS-Unternehmens dar, der ein Unterstrich vorangestellt ist. Das Vorhandensein der Mandanten-ID zeigt an, dass die Felder, die Sie hinzufügen, im Namensraum Ihres Unternehmens enthalten sind.
 
-Mit anderen Worten, die Felder, die Sie hinzufügen, sind für Ihr Unternehmen eindeutig und werden in einem bestimmten Bereich gespeichert, der nur für Ihr Unternehmen zugänglich ist. [!DNL Schema Registry] Felder, die Sie definieren, müssen immer Ihrem Pächter-Namensraum hinzugefügt werden, um Kollisionen mit Namen anderer Standardklassen, Mixins, Datentypen und Felder zu verhindern.
+Mit anderen Worten, die Felder, die Sie hinzufügen, sind für Ihr Unternehmen eindeutig und werden in einem bestimmten Bereich gespeichert, der nur für Ihr Unternehmen zugänglich ist. [!DNL Schema Registry] Felder, die Sie definieren, müssen immer Ihrem Pächter-Namensraum hinzugefügt werden, um Kollisionen mit Namen anderer Standardklassen, Feldgruppen, Datentypen und Felder zu vermeiden.
 
-Innerhalb dieses Namespaced-Knotens befindet sich ein &quot;[!UICONTROL Neues Feld]&quot;. Dies ist der Anfang des Mixins &quot;[!UICONTROL Treuedetails]&quot;.
+Innerhalb dieses Namespaced-Knotens befindet sich ein &quot;[!UICONTROL Neues Feld]&quot;. Dies ist der Anfang der Feldgruppe &quot;[!UICONTROL Treuedetails]&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -179,7 +179,7 @@ Je nach ausgewähltem Datentyp stehen verschiedene Einschränkungsoptionen zur V
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## hinzufügen Sie weitere Felder zum mixin {#mixin-fields-2}
+## hinzufügen Sie weitere Felder zur Feldgruppe {#field-group-fields-2}
 
 Nachdem Sie das Feld `loyaltyId` hinzugefügt haben, können Sie weitere Felder hinzufügen, um treuitätsbezogene Informationen zu erfassen, z. B.:
 
@@ -192,7 +192,7 @@ Nach Abschluss des Vorgangs enthält das Treueobjekt die Felder für die Loyalit
 
 ![](../images/tutorials/create-schema/loyalty_object_fields.png)
 
-## hinzufügen eines Enum-Felds an die mixin {#enum}
+## hinzufügen ein Enum-Feld für die Feldgruppe {#enum}
 
 Beim Definieren von Feldern in [!DNL Schema Editor] gibt es einige zusätzliche Optionen, die Sie auf einfache Feldtypen anwenden können, um weitere Einschränkungen für die Daten bereitzustellen, die das Feld enthalten kann. Die Anwendungsfälle für diese Beschränkungen werden in der folgenden Tabelle erläutert:
 
@@ -226,7 +226,7 @@ Wenn Sie alle Feldeigenschaften abgeschlossen haben, wählen Sie **[!UICONTROL A
 
 Das `loyalty`-Objekt enthält jetzt mehrere treuespezifische Felder und stellt eine gemeinsame Datenstruktur dar, die in anderen Schemas nützlich sein könnte. Mit dem [!DNL Schema Editor] können Sie wiederverwendbare Objekte mit mehreren Feldern einfach anwenden, indem Sie die Struktur dieser Objekte in Datentypen konvertieren.
 
-Datentypen ermöglichen den konsistenten Einsatz von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als ein Mixin, da sie überall in einem Schema verwendet werden können. Dazu legen Sie den Wert **[!UICONTROL Type]** des Felds auf den Wert eines Datentyps fest, der in [!DNL Schema Registry] definiert ist.
+Datentypen ermöglichen den konsistenten Einsatz von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als Feldgruppen, da sie überall in einem Schema verwendet werden können. Dazu legen Sie den Wert **[!UICONTROL Type]** des Felds auf den Wert eines Datentyps fest, der in [!DNL Schema Registry] definiert ist.
 
 Um das `loyalty`-Objekt in einen Datentyp zu konvertieren, wählen Sie unter **[!UICONTROL Struktur]** das Feld `loyalty` und dann **[!UICONTROL In neuen Datentyp]** konvertieren auf der rechten Seite des Editors unter **[!UICONTROL Feldeigenschaften]**. Es wird ein grünes Popup angezeigt, das bestätigt, dass das Objekt erfolgreich konvertiert wurde.
 
@@ -244,17 +244,17 @@ In einem zukünftigen Schema können Sie nun ein Feld als &quot;[!DNL Loyalty]&q
 
 ## Suchen und Filtern von Schema-Feldern
 
-Ihr Schema enthält jetzt neben den von der Basisklasse bereitgestellten Feldern mehrere Mixins. Wenn Sie mit größeren Schemas arbeiten, können Sie die Kontrollkästchen neben den Namen von Mixins in der linken Leiste aktivieren, um die angezeigten Felder auf diejenigen zu filtern, die von den Mixins bereitgestellt werden, die Sie interessieren.
+Ihr Schema enthält jetzt zusätzlich zu den von der Basisklasse bereitgestellten Feldern mehrere Feldgruppen. Wenn Sie mit größeren Schemas arbeiten, können Sie die Kontrollkästchen neben den Feldgruppennamen in der linken Leiste aktivieren, um die angezeigten Felder auf diejenigen zu filtern, die von den Feldgruppen bereitgestellt werden, die Sie interessieren.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
-Wenn Sie nach einem bestimmten Feld in Ihrem Schema suchen, können Sie die Suchleiste auch verwenden, um die angezeigten Felder nach Namen zu filtern, unabhängig davon, unter welcher Mischung sie angezeigt werden.
+Wenn Sie ein bestimmtes Feld in Ihrem Schema suchen, können Sie die angezeigten Felder auch über die Suchleiste nach Namen filtern, unabhängig davon, unter welcher Feldgruppe sie angezeigt werden.
 
 ![](../images/tutorials/create-schema/search.png)
 
 >[!IMPORTANT]
 >
->Die Suchfunktion berücksichtigt alle ausgewählten Mix-in-Filter, wenn die passenden Felder angezeigt werden. Wenn eine Abfrage nicht die erwarteten Ergebnisse anzeigt, müssen Sie ggf. die Dublette prüfen, ob Sie keine relevanten Mixins herausfiltern.
+>Bei der Suchfunktion werden alle Filter der Feldgruppe berücksichtigt, wenn die entsprechenden Felder angezeigt werden. Wenn in einer Abfrage der Suche nicht die erwarteten Ergebnisse angezeigt werden, müssen Sie ggf. die Dublette prüfen, ob Sie keine relevanten Feldgruppen herausfiltern.
 
 ## Festlegen eines Schemafelds als Identitätsfeld {#identity-field}
 
@@ -334,7 +334,7 @@ Das folgende Video zeigt, wie Sie ein einfaches Schema in der [!DNL Platform]-Be
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
-Das folgende Video soll Ihnen die Arbeit mit Mixins und Klassen erleichtern.
+Das folgende Video soll Ihr Verständnis für die Arbeit mit Feldgruppen und -klassen verbessern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
@@ -352,6 +352,6 @@ Sie können die Klasse eines Schemas jederzeit während des anfänglichen Kompos
 
 >[!WARNING]
 >
->Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Mixins sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
+>Die erneute Zuweisung der Klasse zu einem Schema sollte mit größter Vorsicht erfolgen. Feldgruppen sind nur mit bestimmten Klassen kompatibel. Wenn Sie die Klasse ändern, werden die Arbeitsfläche und alle hinzugefügten Felder zurückgesetzt.
 
 Informationen zum Ändern der Klasse eines Schemas finden Sie im Handbuch [Verwalten von Schemas in der Benutzeroberfläche](../ui/resources/schemas.md).
