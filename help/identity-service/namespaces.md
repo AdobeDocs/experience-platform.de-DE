@@ -6,10 +6,10 @@ topic-legacy: overview
 description: Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ca092af61ac26fcfb6839b7ba0887178c899f89f
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 22%
+source-wordcount: '1550'
+ht-degree: 21%
 
 ---
 
@@ -35,7 +35,7 @@ Zwei Profil-Fragmente können z. B. unterschiedliche primäre IDs enthalten, fü
 
 ### Identitätstypen
 
-Daten können anhand verschiedener Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namespace angegeben und steuert, ob die Daten im Identitätsdiagramm persistiert werden oder nicht. Außerdem gibt es spezielle Anweisungen zum Umgang mit diesen Daten.
+Daten können anhand verschiedener Identitätstypen identifiziert werden. Der Identitätstyp wird zum Zeitpunkt der Erstellung des Identitäts-Namespace angegeben und steuert, ob die Daten im Identitätsdiagramm persistiert werden oder nicht. Außerdem gibt es spezielle Anweisungen zum Umgang mit diesen Daten. Alle Identitätstypen mit Ausnahme von **Kennung für Nicht-Personen** folgen demselben Verhalten beim Verbinden eines Namensraums und des zugehörigen ID-Werts zu einem Identitätsdiagramm-Cluster. Daten werden bei Verwendung von **Kennung eines Nichtpersonals** nicht zusammengeführt.
 
 Die folgenden Identitätstypen sind innerhalb von [!DNL Platform] verfügbar:
 
@@ -58,7 +58,7 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 | ------------ | ----------- |
 | AdCloud | Ein Namensraum, der die Adobe AdCloud darstellt. |
 | Adobe Analytics (Legacy-ID) | Ein Namensraum, der Adobe Analytics repräsentiert. Weitere Informationen finden Sie im folgenden Dokument unter [Adobe Analytics-Namensraum](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces). |
-| Apple IDFA (ID für Werbetreibende) | Ein Namensraum, der die Apple-ID für Werbetreibende darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Interessensbasierte Anzeigen](https://support.apple.com/en-us/HT202074). |
+| Apple IDFA (ID für Werbetreibende) | Ein Namensraum, der die Apple-ID für Werbetreibende darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Interessensbasierte Anzeigen](https://support.apple.com/de-de/HT202074). |
 | Apple Push-Benachrichtigungsdienst | Ein Namensraum, der Identitäten darstellt, die mit dem Apple Push Notification-Dienst erfasst wurden. Weitere Informationen finden Sie im folgenden Dokument unter [Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1). |
 | CORE | Ein Namensraum, der Adobe Audience Manager repräsentiert. Dieser Namensraum kann auch durch seinen Legacy-Namen referenziert werden: &quot;Adobe AudienceManager&quot;. Weitere Informationen finden Sie im folgenden Dokument unter [Audience Manager-IDs](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-reference/data-privacy-ids.html?lang=en#aam-ids). |
 | ECID | Ein Namensraum, der die ECID darstellt. Dieser Namensraum kann auch durch folgende Aliase referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Weitere Informationen finden Sie im folgenden Dokument unter [ECID](./ecid.md). |
@@ -92,7 +92,9 @@ Um einen benutzerspezifischen Namensraum mithilfe der Benutzeroberfläche zu ers
 
 ![](./images/create.png)
 
-Das Dialogfeld **[!UICONTROL Identität erstellen]** wird angezeigt. Geben Sie ein eindeutiges **[!UICONTROL Anzeigename]** und **[!UICONTROL Identitätssymbol]** an und wählen Sie dann den Identitätstyp, den Sie erstellen möchten. Sie können auch eine optionale Beschreibung zu weiteren Informationen über den Namensraum hinzufügen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Erstellen]**.
+Das Dialogfeld **[!UICONTROL Identität erstellen]** wird angezeigt. Geben Sie ein eindeutiges **[!UICONTROL Anzeigename]** und **[!UICONTROL Identitätssymbol]** an und wählen Sie dann den Identitätstyp, den Sie erstellen möchten. Sie können auch eine optionale Beschreibung zu weiteren Informationen über den Namensraum hinzufügen. Alle Identitätstypen mit Ausnahme von **Kennung für Nicht-Personen** folgen demselben Verhalten wie das Verbinden. Wenn Sie beim Erstellen eines Namensraums **Kennung eines Nichtpersonals** als Identitätstyp auswählen, erfolgt keine Verknüpfung. Spezifische Informationen zu jedem Identitätstyp finden Sie in der Tabelle unter [Identitätstypen](#identity-types).
+
+Wenn Sie fertig sind, wählen Sie **[!UICONTROL Erstellen]**.
 
 >[!IMPORTANT]
 >
