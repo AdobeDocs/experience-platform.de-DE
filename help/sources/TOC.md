@@ -5,9 +5,9 @@ breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Dateneinbettung, Quellen
 translation-type: tm+mt
-source-git-commit: 121e2f410acdcd6de3953c6063a15901c853dd07
+source-git-commit: 32a6d0311169486b1273129c0ee87c242bee1e47
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '612'
 ht-degree: 15%
 
 ---
@@ -18,10 +18,10 @@ ht-degree: 15%
 - [Übersicht über Connectoren für Datenquellen](home.md)
 - Verfügbare Quell-Connectors {#connectors}
    - Adobe-Anwendungen {#adobe-applications}
-      - [Analytics Classifications Data Connector](connectors/adobe-applications/classifications.md)
-      - [Analytics Data Connector](connectors/adobe-applications/analytics.md)
-      - [Audience Manager-Anschluss](connectors/adobe-applications/audience-manager.md)
-      - [Connector für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
+      - [Analytics Classifications-Quellenanschluss](connectors/adobe-applications/classifications.md)
+      - [Analytics-Quellenanschluss](connectors/adobe-applications/analytics.md)
+      - [Audience Manager-Quellanschluss](connectors/adobe-applications/audience-manager.md)
+      - [Quellenanschluss für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
       - Anwendungsfeldzuordnungen für Adoben {#mapping}
          - [Analytics-Feldzuordnungen](connectors/adobe-applications/mapping/analytics.md)
          - [Feldzuordnungen für Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
@@ -38,7 +38,7 @@ ht-degree: 15%
       - [Amazon S3-Anschluss](connectors/cloud-storage/s3.md)
       - [Apache HDFS-Anschluss](connectors/cloud-storage/hdfs.md)
       - [Datenspeicherung Gen2-Stecker für den Azurblau-Data-See](connectors/cloud-storage/adls-gen2.md)
-      - [Azurblutstecker](connectors/cloud-storage/blob.md)
+      - [Azure-Blob-Connector](connectors/cloud-storage/blob.md)
       - [Azurblauer Ereignis-Hubs-Anschluss](connectors/cloud-storage/eventhub.md)
       - [Adapterkabel für die Datenspeicherung](connectors/cloud-storage/azure-file-storage.md)
       - [FTP-Anschluss](connectors/cloud-storage/ftp.md)
