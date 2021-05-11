@@ -2,14 +2,14 @@
 title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning;Entscheidungsfindung;Web-SDK;Plattform-Web-SDK;personalisierte Angebot;Angebote bereitstellen;Angebot-Versand;Angebot-Personalisierung;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 translation-type: tm+mt
-source-git-commit: 0b9a92f006d1ec151a0bb11c10c607ea9362f729
+source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 16%
 
 ---
-
 
 # Verwenden von Offer decisioning mit dem Platform Web SDK
 
@@ -19,7 +19,7 @@ ht-degree: 16%
 
 Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer decisioning-Benutzeroberfläche (UI) oder APIs erstellen.
 
-## Voraussetzungen
+## Voraussetzungen 
 
 * IMS-Organisation für die Edge-Entscheidungsfindung aktiviert
 * Angebote, erstellte Aktivitäten
@@ -78,6 +78,7 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
           ]
       })
       ```
+
    * platform launch installiertes SDK
       1. [Erstellen einer Platform launch-Eigenschaft](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html)
       2. [hinzufügen des Platform launch-Einbettungscodes](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
@@ -93,6 +94,7 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
          * hinzufügen einer Platform Web SDK Send-Ereignis-Aktion und fügen Sie die relevante `decisionScopes` zur Konfiguration dieser Aktion hinzu
             ![send-Ereignis-action-DecisionScopes](./assets/send-event-action-decisionScopes.png)
       6. [Erstellen und veröffentlichen Sie eine ](https://docs.adobe.com/content/help/de-DE/launch/using/reference/publish/libraries.html) Bibliothek, die alle von Ihnen konfigurierten Regeln, Datenelemente und Erweiterungen enthält
+
 
 
 ## Beispielanforderungen und Antworten
