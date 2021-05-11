@@ -7,9 +7,9 @@ topic-legacy: tutorial
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
 translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ddf66ab277e5882afe7ffbdd87ee5df958c3e7b0
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '1022'
 ht-degree: 0%
 
 ---
@@ -37,6 +37,12 @@ Mit dem Umschalter **[!UICONTROL In Profil]** eingeschlossen können Sie die Erg
 Sie können die Suchleiste auch verwenden, um die Ergebnisse weiter einzugrenzen. Wenn Sie nach einem Begriff suchen, stellen die obersten Elemente Ressourcen dar, deren Namen mit der Abfrage übereinstimmen. Unter diesen Elementen werden unter **[!UICONTROL Standardfelder]** alle Ressourcen aufgelistet, die Felder enthalten, die der Abfrage entsprechen. Auf diese Weise können Sie nach XDM-Ressourcen basierend auf dem Datentyp suchen, den sie enthalten, ohne vorher den Namen der Ressource kennen zu müssen.
 
 ![](../images/ui/explore/search.png)
+
+Die in den Suchergebnissen angezeigten Ressourcen werden zunächst nach Titelübereinstimmungen und dann nach Beschreibungsübereinstimmungen sortiert. Je mehr Wörter in einer dieser Kategorien übereinstimmen, desto höher wird die Ressource in der Liste angezeigt.
+
+>[!NOTE]
+>
+>Bei standardmäßigen XDM-Ressourcen gibt die Suchfunktion nur einzelne Felder zurück, die einen `xdm`-Namensraum enthalten. Felder, die sich unter einem anderen Namensraum befinden (z. B. Ihre Mandant-ID), werden nur zurückgegeben, wenn sie in einer benutzerdefinierten Ressource enthalten sind.
 
 Wenn Sie die Ressource gefunden haben, die Sie untersuchen möchten, wählen Sie deren Namen aus der Liste aus, um die Struktur auf der Arbeitsfläche Ansicht.
 
@@ -100,7 +106,7 @@ Die Beziehungsfelder werden auch auf der Arbeitsfläche eindeutig hervorgehoben 
 
 >[!NOTE]
 >
->Weitere Informationen zur Verwendung von Beziehungen in XDM-Schemas finden Sie im Tutorial zu [Erstellen einer Beziehung in der Benutzeroberfläche](../tutorials/create-schema-ui.md).
+>Weitere Informationen zur Verwendung von Beziehungen in XDM-Schemas finden Sie im Tutorial zu [Erstellen einer Beziehung in der Benutzeroberfläche](../tutorials/relationship-ui.md).
 
 ## Nächste Schritte
 
