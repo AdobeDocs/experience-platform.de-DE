@@ -3,11 +3,10 @@ keywords: Amazon S3;S3-Ziel;s3;Amazon s3
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um in regelmäßigen Abständen tabulatorgetrennte oder CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Buckets zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-translation-type: tm+mt
-source-git-commit: 7780a2b3b518ab976ec14531892e0734a6342e4c
+source-git-commit: 49a59e5b081243679f5d94b03a63d30df22cdc6a
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 14%
+source-wordcount: '270'
+ht-degree: 12%
 
 ---
 
@@ -31,9 +30,13 @@ Geben Sie für [!DNL Amazon S3]-Ziele im Arbeitsablauf zum Erstellen von Zielen 
 
 * **[!DNL Amazon S3]Zugriffsschlüssel und  [!DNL Amazon S3] geheimer Schlüssel**: Generieren Sie  [!DNL Amazon S3]ein  `access key - secret access key` Paar, um Platform Zugriff auf Ihr  [!DNL Amazon S3] Konto zu gewähren. Weitere Informationen finden Sie in der Dokumentation zu Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).[
 
+>[!TIP]
+>
+>Im Arbeitsablauf für das Verbindungsziel können Sie einen benutzerdefinierten Ordner in Ihrer Amazon S3-Datenspeicherung pro exportierter Segmentdatei erstellen. Lesen Sie die Anleitungen unter [Verwenden Sie Makros, um einen Datenspeicherung-Speicherort zu erstellen.](./workflow.md#use-macros)
+
 ## Erforderliche [!DNL Amazon S3] Berechtigungen {#required-s3-permission}
 
-Um Daten erfolgreich an den Speicherort der [!DNL Amazon S3]-Datenspeicherung zu verbinden und zu exportieren, erstellen Sie einen IAM-Benutzer für [!DNL Platform] in [!DNL Amazon S3] und weisen Sie Berechtigungen für folgende Aktionen zu:
+Um Daten erfolgreich an den Speicherort [!DNL Amazon S3] der Datenspeicherung zu verbinden und zu exportieren, erstellen Sie einen IAM-Benutzer (Identity and Access Management) für [!DNL Platform] in [!DNL Amazon S3] und weisen Sie Berechtigungen für die folgenden Aktionen zu:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
