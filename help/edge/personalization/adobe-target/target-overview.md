@@ -3,10 +3,9 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target wiedergeben
 keywords: Zielgruppe;adobe-Zielgruppe;Aktivität.id;Experience.id;renderDecision;DecisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;Audiencen;Beschlüsse;Scope;Schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-translation-type: tm+mt
-source-git-commit: e12b1337c44095ee8731f99c5829ab83bba14889
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '658'
 ht-degree: 5%
 
 ---
@@ -29,7 +28,7 @@ Die folgenden Funktionen wurden getestet und werden derzeit in der Zielgruppe un
 
 Gehen Sie wie folgt vor, um [!DNL Target] zu aktivieren:
 
-1. Aktivieren Sie die Zielgruppe in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) mit dem entsprechenden Clientcode.
+1. Aktivieren Sie die Zielgruppe in Ihrem [datastream](../../fundamentals/datastreams.md) mit dem entsprechenden Clientcode.
 1. hinzufügen Sie die Option `renderDecisions` zu Ihren Ereignissen.
 
 Optional können Sie dann auch die folgenden Optionen hinzufügen:
