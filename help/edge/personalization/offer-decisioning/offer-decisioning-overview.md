@@ -3,10 +3,9 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebot bereitstellen und rendern, die in Offer decisioning verwaltet werden. Sie können Ihre Angebot und andere zugehörige Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning;Entscheidungsfindung;Web-SDK;Plattform-Web-SDK;personalisierte Angebot;Angebote bereitstellen;Angebot-Versand;Angebot-Personalisierung;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-translation-type: tm+mt
-source-git-commit: 2113eb265020b1d1c2e73dba95554c8bf97acf13
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '842'
 ht-degree: 16%
 
 ---
@@ -23,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebot bereitstel
 
 * IMS-Organisation für die Edge-Entscheidungsfindung aktiviert
 * Angebote, erstellte Aktivitäten
-* Edge config wird veröffentlicht
+* Datumsformat wird veröffentlicht
 
 ## Terminologie
 
@@ -54,7 +53,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
    ![](assets/decision-scope-copy.png)
 
-* **Edge-Konfiguration:** Weitere Informationen finden Sie in der Dokumentation zur  [Edge-](../../fundamentals/edge-configuration.md) Konfiguration.
+* **Datastreams:** Weitere Informationen finden Sie in der  [](../../fundamentals/datastreams.md) Dokumentation zu Datastreams.
 
 * **Identität**: Weitere Informationen finden Sie in dieser Dokumentation, in der erläutert wird, wie  [Platform Web SDK den Identitätsdienst](../../identity/overview.md) nutzt.
 
@@ -62,7 +61,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
 Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführen:
 
-1. Adobe Experience Platform in Ihrer [Edge-Konfiguration](../../fundamentals/edge-configuration.md) aktiviert und das Kontrollkästchen &quot;Offer decisioning&quot;
+1. Adobe Experience Platform in Ihrem [Datastream](../../fundamentals/datastreams.md) aktiviert und das Kontrollkästchen &quot;Offer decisioning&quot;
    ![Angebot-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 2. Befolgen Sie die Anweisungen zum Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. [ Hier finden Sie eine [Schnellanleitung zum Beginn zu Platform launch](https://docs.adobe.com/content/help/de-DE/launch/using/intro/get-started/quick-start.html)).
 3. [Konfigurieren Sie das ](../../fundamentals/configuring-the-sdk.md) SDKfor Offer decisioning. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
@@ -82,7 +81,7 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
    * platform launch installiertes SDK
       1. [Erstellen einer Platform launch-Eigenschaft](https://docs.adobe.com/content/help/de-DE/launch/using/reference/admin/companies-and-properties.html)
       2. [hinzufügen des Platform launch-Einbettungscodes](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      3. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit der Edge-Konfiguration, die Sie gerade erstellt haben, indem Sie die Konfiguration aus der Dropdownliste &quot;Edge-Konfiguration&quot;auswählen. Nützliche Dokumentation zu [Erweiterungen](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
+      3. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem soeben erstellten Datastream, indem Sie die Konfiguration aus der Dropdownliste &quot;Datastream&quot;auswählen. Siehe die Dokumentation zu [extensions](https://docs.adobe.com/content/help/de-DE/launch/using/reference/manage-resources/extensions/overview.html).
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
