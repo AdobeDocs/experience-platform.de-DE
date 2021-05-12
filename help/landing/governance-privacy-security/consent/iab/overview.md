@@ -5,8 +5,7 @@ title: IAB TCF 2.0-Unterstützung für Experience Platform
 topic-legacy: privacy events
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schema so konfigurieren, dass bei der Aktivierung von Segmenten an Zielorte in Adobe Experience Platform Auswahlmöglichkeiten für die Kundengenehmigung angezeigt werden.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '2477'
 ht-degree: 0%
@@ -48,7 +47,7 @@ Dieses Handbuch erfordert auch ein Verständnis der folgenden Plattformdienste:
 
 Zusätzlich zu den oben aufgeführten Plattformdiensten sollten Sie auch mit [Zielen](../../../../data-governance/home.md) und ihrer Rolle im Plattform-Ökosystem vertraut sein.
 
-## Zusammenfassung zum Ablauf der Kundengenehmigung {#summary}
+## Übersicht zum Ablauf der Kundengenehmigung {#summary}
 
 In den folgenden Abschnitten wird beschrieben, wie Daten zur Einwilligung erfasst und erzwungen werden, nachdem das System ordnungsgemäß konfiguriert wurde.
 
@@ -120,7 +119,7 @@ Nachdem Sie Ihren CMP zur Generierung von Zustimmungszeichenfolgen konfiguriert 
 
 ### Neue Edge-Konfiguration erstellen
 
-Damit das SDK Daten an die Experience Platform senden kann, müssen Sie zunächst eine neue Edge-Konfiguration für Platform in [!DNL Adobe Experience Platform Launch] erstellen. Spezifische Schritte zum Erstellen einer neuen Konfiguration finden Sie in der [SDK-Dokumentation](../../../../edge/fundamentals/edge-configuration.md).
+Damit das SDK Daten an die Experience Platform senden kann, müssen Sie zunächst eine neue Edge-Konfiguration für Platform in [!DNL Adobe Experience Platform Launch] erstellen. Spezifische Schritte zum Erstellen einer neuen Konfiguration finden Sie in der [SDK-Dokumentation](../../../../edge/fundamentals/datastreams.md).
 
 Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, klicken Sie auf die Umschalter neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die folgenden Werte, um den Rest des Formulars auszufüllen:
 
@@ -225,7 +224,7 @@ alloy("sendEvent", {
 
 Alle [!DNL Platform SDK]-Befehle geben Versprechungen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsmeldungen an den Kunden. Genaue Beispiele finden Sie im Abschnitt [Handhabung von Erfolg oder Fehler](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) im Handbuch zum Ausführen von SDK-Befehlen.
 
-## Segmente {#export} exportieren
+## Segmente exportieren {#export}
 
 >[!NOTE]
 >
