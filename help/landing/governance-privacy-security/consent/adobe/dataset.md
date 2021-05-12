@@ -5,8 +5,7 @@ title: Konfigurieren eines Datasets zur Erfassung von Einwilligungs- und Vorgabe
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie ein Experience Data Model (XDM)-Schema und einen Dataset konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-translation-type: tm+mt
-source-git-commit: 30a2ddb875b035b4509b4be3692b95d0d3ef50b3
+source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
 workflow-type: tm+mt
 source-wordcount: '1503'
 ht-degree: 3%
@@ -42,7 +41,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >
 >In diesem Lernprogramm wird davon ausgegangen, dass Sie das [!DNL Profile]-Schema in Platform kennen, mit dem Sie Kundenattributinformationen erfassen möchten. Unabhängig von der Methode, die Sie zur Erfassung von Genehmigungsdaten verwenden, muss dieses Schema für Echtzeit-Kundendaten](../../../../xdm/ui/resources/schemas.md#profile) aktiviert sein. [ Darüber hinaus kann die primäre Identität des Schemas kein direkt identifizierbares Feld sein, das für interessensbasierte Werbung wie eine E-Mail-Adresse nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
 
-## Struktur der Feldgruppe &quot;Inhalt und Voreinstellungen&quot; {#structure}
+## Struktur der Feldgruppen &quot;Inhalt und Voreinstellungen&quot; {#structure}
 
 Die Feldgruppe [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (nachfolgend &quot;Consents &amp; Preferences field group&quot;) stellt standardisierte Felder für die Zustimmung zu einem Schema bereit. Diese Feldgruppe ist derzeit nur mit Schemas kompatibel, die auf der [!DNL XDM Individual Profile]-Klasse basieren.
 
@@ -121,7 +120,7 @@ Wenn das bearbeitete Schema von dem [!UICONTROL Profil-Datensatz] verwendet wird
 
 Wenn Sie keinen Datensatz für dieses Schema erstellt haben, führen Sie die Schritte im nächsten Abschnitt aus.
 
-## Erstellen Sie einen Datensatz basierend auf Ihrem Zustimmungs-Schema {#dataset}
+## Erstellen Sie einen Datensatz basierend auf Ihrem Schema zur Einwilligung {#dataset}
 
 Nachdem Sie ein Schema mit Einwilligungsfeldern erstellt haben, müssen Sie einen Datensatz erstellen, der letztendlich die Einwilligungsdaten Ihrer Kunden erfasst. Dieser Datensatz muss für [!DNL Real-time Customer Profile] aktiviert werden.
 
@@ -151,7 +150,7 @@ Wählen Sie schließlich **[!UICONTROL Aktivieren]** im Bestätigungs-Popup, um 
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, mit dem Platform Web SDK Genehmigungsdaten an Profil zu senden, müssen Sie diesen Datensatz beim Einrichten Ihrer [Edge-Konfiguration](../../../../edge/fundamentals/edge-configuration.md) als [!UICONTROL Profil-Datensatz] auswählen.
+Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, mit dem Platform Web SDK Genehmigungsdaten an Profil zu senden, müssen Sie diesen Datensatz beim Einrichten Ihrer [Edge-Konfiguration](../../../../edge/fundamentals/datastreams.md) als [!UICONTROL Profil-Datensatz] auswählen.
 
 ## Nächste Schritte
 
