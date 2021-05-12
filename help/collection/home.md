@@ -5,8 +5,7 @@ title: Übersicht über die Datenerfassung
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Datenerfassung über Kundenerlebnisse in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a150c23dffde9431953a019509e9554159052d21
 workflow-type: tm+mt
 source-wordcount: '320'
 ht-degree: 6%
@@ -38,7 +37,7 @@ Adobe Experience Platform Web- und Mobile-SDKs reduzieren und komprimieren alle 
 
 ## Umschalten zwischen den Schaltvorgängen zur Bereitstellung der Adobe
 
-Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Platform launch können Sie [Edge-Konfigurationen](../edge/fundamentals/edge-configuration.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten, mit denen Sie diese Produkte serverseitig aktivieren können, ohne den clientseitigen Code zu ändern.
+Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Platform launch können Sie [Edge-Konfigurationen](../edge/fundamentals/datastreams.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten, mit denen Sie diese Produkte serverseitig aktivieren können, ohne den clientseitigen Code zu ändern.
 
 ![](./images/deploy.png)
 
