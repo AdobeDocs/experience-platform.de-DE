@@ -1,14 +1,13 @@
 ---
 title: Häufig gestellte Fragen zum Adobe Experience Platform Web SDK
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Web SDK.
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
+source-git-commit: 5ead9dc72b8b9fe89e0a1bc8365ceff8affd3c85
 workflow-type: tm+mt
-source-wordcount: '1804'
-ht-degree: 3%
+source-wordcount: '1847'
+ht-degree: 2%
 
 ---
-
 
 # Häufig gestellte Fragen 
 
@@ -75,7 +74,7 @@ Adobe Experience Platform Web SDK kann auch Daten direkt an Adobe Experience Pla
 
 **Modern und zukunftsfähig:** Das Web SDK und seine Verbindung zum Experience Edge Network haben die Adobe in die Lage versetzt, die Art und Weise, wie Adobe mit der Datenerfassung, Personalisierung, Zustimmung und der Zukunft von Drittanbieter-Cookies umgeht, erheblich zu modernisieren. (Dadurch wird eine Erstanbieterdomäne aktiviert, die von der Adobe verwaltet wird.)
 
-**Time-to-Value:** Adobe hat hart gearbeitet (und wird es auch weiterhin tun), um die Bereitstellung des Web SDK so einfach wie möglich über Experience Platform Launch zu machen und clientseitige Daten XDM zuzuordnen.  Nach Abschluss dieser Arbeit können alle anderen Adoben und Adobe Experience Platform-Dienste serverseitig aktiviert oder deaktiviert werden. Wenn Sie dies beispielsweise für Adobe Analytics verwenden und die Zielgruppe oder Experience Platform aktivieren möchten, können Sie einfach einen Umschalter in der Experience Edge-Konfiguration aktivieren und diese Anwendungsfälle aufklären.
+**Time-to-Value:** Adobe hat hart gearbeitet (und wird es auch weiterhin tun), um die Bereitstellung des Web SDK so einfach wie möglich über Experience Platform Launch zu machen und clientseitige Daten XDM zuzuordnen.  Nach Abschluss dieser Arbeit können alle anderen Adoben und Adobe Experience Platform-Dienste serverseitig aktiviert oder deaktiviert werden. Wenn Sie dies beispielsweise für Adobe Analytics verwenden und die Zielgruppe oder Experience Platform aktivieren möchten, können Sie einfach einen Schalter in der Datastream-Konfiguration aktivieren und diese Anwendungsfälle aufklären.
 
 ## Was ist Alloy?
 
@@ -104,7 +103,7 @@ Adobe Experience Platform Web SDK wurde für folgende Personen entwickelt:
 
 ## Wie erhalte ich Zugriff auf Beginn mit dem Adobe Experience Platform Web SDK?
 
-Das Web SDK steht derzeit der Öffentlichkeit zur Verfügung und kann zum Senden von Daten an Adobe Experience Cloud-Produkte verwendet werden. Die Möglichkeit, Daten an Lösungen von Drittanbietern zu senden, wird demnächst verfügbar sein. Das SDK ist kostenlos, wird kostenlos von der Adobe gehostet und kann heruntergeladen werden, damit Sie es auf Ihren eigenen Servern hosten können, falls gewünscht, kostenlos. Platform Web SDK erfordert Zugriff auf Platform Edge Network-Konfigurationen und den Adobe Experience Platform XDM Schema Builder, damit die Server der Adobe eingehende Daten, die vom SDK stammen, ordnungsgemäß verarbeiten können. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihren Customer Success Manager (CSM), um den Anforderungsprozess Beginn.
+Das Web SDK steht derzeit der Öffentlichkeit zur Verfügung und kann zum Senden von Daten an Adobe Experience Cloud-Produkte verwendet werden. Die Möglichkeit, Daten an Lösungen von Drittanbietern zu senden, wird demnächst verfügbar sein. Das SDK ist kostenlos, wird kostenlos von der Adobe gehostet und kann heruntergeladen werden, damit Sie es auf Ihren eigenen Servern hosten können, falls gewünscht, kostenlos. Platform Web SDK erfordert Zugriff auf Datastream-Konfigurationen und den Adobe Experience Platform XDM Schema Builder, damit die Server der Adobe eingehende Daten, die vom SDK stammen, ordnungsgemäß verarbeiten können. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihren Customer Success Manager (CSM), um den Anforderungsprozess Beginn.
 
 ## Welche Anwendungsfälle werden derzeit vom Web SDK unterstützt?
 
@@ -138,7 +137,7 @@ Nein. Sie können die Datei `alloy.js` selbst herunterladen.
 
 Beachten Sie jedoch Folgendes:
 
-* Adobe Experience Platform Web SDK erfordert eine so genannte Experience Edge-Konfigurations-ID, damit das Edge-Netzwerk den Stream identifizieren und bestimmen kann, was mit den Daten zu tun ist. Diese ID wird in Experience Platform Launch erstellt. Dies bedeutet nicht, dass Sie Experience Platform Launch zum Erstellen von Eigenschaften oder Bereitstellen des JavaScript-Codes verwenden müssen, Sie müssen jedoch Experience Platform Launch verwenden, um eine Konfigurations-ID zu erstellen.
+* Adobe Experience Platform Web SDK erfordert eine so genannte Datastream-ID, damit das Edge-Netzwerk den Stream identifizieren und bestimmen kann, was mit den Daten zu tun ist. Diese ID wird in Experience Platform Launch erstellt. Dies bedeutet nicht, dass Sie Experience Platform Launch zum Erstellen von Eigenschaften oder Bereitstellen des JavaScript-Codes verwenden müssen, Sie müssen jedoch Experience Platform Launch verwenden, um eine Konfigurations-ID zu erstellen.
 
 * Adobe Experience Platform Launch ist nicht nur der beste verfügbare Tag- und SDK-Manager, es macht es sehr einfach, `alloy.js` bereitzustellen und Daten XDM-Schemas zuzuordnen. Wenn Sie sich entscheiden, Experience Platform Launch nicht zu verwenden, müssen Sie die Bereitstellung von `alloy.js`, das Ereignis und die Zuordnung Ihrer Daten zu XDM verwalten, bevor Sie sie senden. Dies ist ein _viel_ schwierigerer Prozess als die Verwendung von Experience Platform Launch.
 
@@ -163,6 +162,10 @@ Ja, das Web-SDK verwendet derzeit je nach Implementierung zwischen 1 und 4 Cooki
 **kndctr_orgid_personalization:** Dieses Cookie enthält Sitzungsinformationen, die Adobe Target zum Personalisieren von Webseiten verwendet.
 
 **kndctr_orgid_approvalCheck:** Dieses sitzungsbasierte Cookie signalisiert dem Server, die Voreinstellungen für die Zustimmung auf der Serverseite zu suchen.
+
+## Welche Browser unterstützt das Adobe Experience Platform Web SDK?
+
+Das Adobe Experience Platform Web SDK ist so konzipiert, dass es in den neuesten Versionen von Google Chrome, Safari, Firefox, Internet Explorer 11 und Microsoft Edge Chromium optimal funktioniert. Bei der Verwendung bestimmter Funktionen in älteren Versionen von Browsern kann es zu Problemen kommen.
 
 ## Wo erhalte ich weitere Informationen zum Adobe Experience Platform Web SDK?
 
