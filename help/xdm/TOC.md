@@ -4,10 +4,9 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience Data Model-(XDM-)Klassen und Schema-Feldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
-source-wordcount: '292'
+source-wordcount: '295'
 ht-degree: 43%
 
 ---
@@ -17,9 +16,10 @@ ht-degree: 43%
 
 * [XDM-System – Übersicht](home.md)
 * Schemas {#schema}
-   * [Grundlagen der Schemakomposition](schema/composition.md)
+   * [Grundlagen der Schema-Komposition](schema/composition.md)
    * [Bewährte Verfahren für die Datenmodellierung](schema/best-practices.md)
    * [XDM-Feldtypeinschränkungen](schema/field-constraints.md)
+   * [Benennung in XDM](./schema/namespaces.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
    * Branchendatenmodelle {#industries}
       * [Übersicht](./schema/industries/overview.md)
@@ -49,7 +49,7 @@ ht-degree: 43%
    * [Handel](./data-types/commerce.md)
    * [Zustimmung und Voreinstellungen](./data-types/consents.md)
    * [Gerät](./data-types/device.md)
-   * [E-Mail-Adresse](./data-types/email-address.md)
+   * [E-Mail  Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
    * [Allgemeines Feld für Zustimmung](./data-types/consent-field.md)
    * [Feld für allgemeine Marketingpräferenzen](./data-types/marketing-field.md)
@@ -62,7 +62,7 @@ ht-degree: 43%
    * [Geo-Form](./data-types/geo-shape.md)
    * [Identität](./data-types/identity.md)
    * [Maßnahme](./data-types/measure.md)
-   * [Auftrag](./data-types/order.md)
+   * [Bestellung](./data-types/order.md)
    * [Zahlungsbefehl](./data-types/payment-item.md)
    * [Person](./data-types/person.md)
    * [Personenname](./data-types/person-name.md)
