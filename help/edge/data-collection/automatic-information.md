@@ -2,14 +2,13 @@
 title: Automatisch erfasste Informationen im Adobe Experience Platform Web SDK
 description: Eine Übersicht über alle Informationen, die das Adobe Experience Platform SDK automatisch erfasst.
 keywords: Informationen erfassen;Kontext;konfigurieren;Gerät;Bildschirmhöhe;Bildschirmausrichtung;Bildschirmbreite;Bildschirmbreite;Umgebung;ViewportHeight;Viewport-Höhe;Viewport-Breite;Viewport-Breite;Viewport-Breite;Browserdetails;Browserdetails;Implementierungsdetails;Name;Version;OrtContext;localTime;localTimeOffset;LocalTimeOffset Local TimeZone Offset;timestamp;web;url;webPageDetails;Webseitendetails;webReferrer;web Werber;landscape;portrait;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
+source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
 workflow-type: tm+mt
-source-wordcount: '422'
-ht-degree: 73%
+source-wordcount: '515'
+ht-degree: 58%
 
 ---
-
 
 # Automatisch erfasste Informationen
 
@@ -25,7 +24,7 @@ Informationen zum Gerät. Dies umfasst keine Daten, die Server-seitig von der Be
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900` |
 
-Die Höhe des Bildschirms in Pixel.
+Die Höhe des Bildschirms (in Pixel).
 
 ### Bildschirmausrichtung
 
@@ -83,7 +82,7 @@ Informationen zum SDK, das zum Erfassen des Ereignisses verwendet wird.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden.
+Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Wenn die eigenständige Bibliothek verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Platform launch-Erweiterung verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -91,12 +90,15 @@ Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen UR
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
+Wenn die Standalone-Bibliothek verwendet wird, ist der Wert einfach die Bibliotheksversion. Wenn die Bibliothek als Teil der Platform launch-Erweiterung verwendet wird, ist dies die Bibliotheksversion und die Platform launch-Erweiterungsversion mit einem &quot;+&quot; verbunden. Wenn die Bibliotheksversion beispielsweise 2.1.0 und die Platform launch-Erweiterungsversion 2.1.3 wäre, wäre der Wert `2.1.0+2.1.3`.
+
 ### Umgebung
 
 | **Pfad in Payload:** | **Beispiel:** |
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser` |
 
+Die Umgebung, in der die Daten erfasst wurden. Dies ist immer auf `browser` eingestellt.
 
 ## Ortskontext (`placeContext`)
 
