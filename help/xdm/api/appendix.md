@@ -5,8 +5,7 @@ title: Handbuch zur API für die Registrierung von Schemas
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
 workflow-type: tm+mt
 source-wordcount: '775'
 ht-degree: 49%
@@ -54,7 +53,7 @@ Sie können die Ergebnisse mit dem Parameter `property` filtern, mit dem ein bes
 >
 >Sie können den Parameter `property` verwenden, um Schema-Feldgruppen nach ihrer kompatiblen Klasse zu filtern. Beispiel: `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` gibt nur Feldgruppen zurück, die mit der [!DNL XDM Individual Profile]-Klasse kompatibel sind.
 
-## Kompatibilitätsmodus
+## Kompatibilitätsmodus {#compatibility}
 
 [!DNL Experience Data Model]Das  (XDM) ist eine öffentlich dokumentierte Spezifikation, die von Adobe zur Verbesserung der Interoperabilität, Ausdrucksfähigkeit und Leistungsfähigkeit digitaler Erlebnisse unterstützt wird. Adobe verwaltet den Quell-Code und formale XDM-Definitionen in einem [Open-Source-Projekt auf GitHub](https://github.com/adobe/xdm/). Diese Definitionen werden in XDM Standard Notation geschrieben, wobei JSON-LD (JavaScript Object Notation for Linked Data) und JSON-Schema als Grammatik zur Definition von XDM-Schemas verwendet werden.
 
