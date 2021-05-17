@@ -2,14 +2,13 @@
 title: Adobe Experience Platform Web SDK installieren
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 keywords: Web-SDK-Installation;Installieren von Web-SDK;Internet-Explorer;Versprechen;npm-Paket
-translation-type: tm+mt
-source-git-commit: 63c0c5cae5ca2800b1f049b2b33e2a6f36ee7255
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: 07f598a9fd7c0e5af7802fe979a44bbafa7afae4
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 32%
+source-wordcount: '939'
+ht-degree: 31%
 
 ---
-
 
 # SDK {#installing-the-sdk} installieren
 
@@ -70,7 +69,7 @@ In diesem Beispiel wird die globale Funktion in `mycustomname` anstatt `alloy` u
 
 Dieser Basis-Code lädt neben der Erstellung einer globalen Funktion auch zusätzlichen Code, der in einer externen Datei \(`alloy.js`\) enthalten ist, die auf einem Server gehostet wird. Standardmäßig wird dieser Code asynchron geladen, damit Ihre Web-Seite so leistungsfähig wie möglich ist. Dies ist die empfohlene Implementierung.
 
-### Unterstützen von Internet Explorer {#support-internet-explore}
+### Unterstützen von Internet Explorer  {#support-internet-explore}
 
 Dieses SDK verwendet Versprechungen, die eine Methode darstellen, um den Abschluss asynchroner Aufgaben zu kommunizieren. Die vom SDK verwendete Implementierung von [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) wird nativ von allen Browsern der Zielgruppe mit Ausnahme von [!DNL Internet Explorer] unterstützt. Um das SDK für [!DNL Internet Explorer] zu verwenden, müssen Sie `window.Promise` [polygefüllt](https://remysharp.com/2010/10/08/what-is-a-polyfill) haben.
 
@@ -130,6 +129,10 @@ const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
+
+>[!NOTE]
+>
+>Das NPM-Paket stützt sich auf CommonJS-Module. Stellen Sie daher bei Verwendung eines Bundlers sicher, dass der Bundler CommonJS-Module unterstützt. Einige Bundler, wie [Datenaggregation](https://rollupjs.org), benötigen ein [Plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs), das CommonJS unterstützt.
 
 ### Verwenden des Pakets als ECMAScript 5-Modul
 
