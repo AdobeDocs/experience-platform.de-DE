@@ -5,10 +5,9 @@ title: Grundlagen der Schema-Komposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '3538'
+source-wordcount: '3621'
 ht-degree: 33%
 
 ---
@@ -60,9 +59,13 @@ Zu den Feldern, die häufig als &quot;[!UICONTROL Identity]&quot;gekennzeichnet 
 
 Es ist wichtig, während der Planungsphase des Schemas über Kundenidentitäten nachzudenken, um sicherzustellen, dass Daten zusammengeführt werden, um ein möglichst stabiles Profil zu schaffen. In der Übersicht zu [Adobe Experience Platform Identity Service](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` ist ein Feld vom Typ &quot;Map&quot;, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namensräumen beschreibt. Mit diesem Feld können Sie Identitätsdaten für Ihre Schema bereitstellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
+`identityMap` ist ein Feld vom Typ &quot;Map&quot;, das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namensräumen beschreibt. Mit diesem Feld können Sie Identitätsdaten für Ihre Schema bereitstellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
+
+Der Hauptnachteil bei der Verwendung von `identityMap` besteht darin, dass Identitäten in die Daten eingebettet werden und dadurch weniger sichtbar werden. Wenn Sie Rohdaten eingeben, sollten Sie stattdessen einzelne Identitätsfelder innerhalb der eigentlichen Schema-Struktur definieren.
+
+Identitätskarten können jedoch besonders hilfreich sein, wenn Sie Daten aus Quellen einbringen, die Identitäten wie [!DNL Airship] oder Adobe Audience Manager speichern. Darüber hinaus sind Identitätskarten erforderlich, wenn Sie das [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) verwenden.
 
 Ein Beispiel für eine einfache Identitätskarte würde wie folgt aussehen:
 
