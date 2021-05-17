@@ -4,10 +4,9 @@ title: Segmentdefinitionsklasse
 topic-legacy: overview
 description: Dieses Dokument bietet eine Übersicht über die Segmentdefinitionsklasse im Experience Data Model (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 632ea4e2a94bfcad098a5fc5a5ed8985c0f41e0e
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -28,7 +27,7 @@ ht-degree: 0%
 | `_id` | Ein eindeutiger, vom System generierter Zeichenfolgenbezeichner für den Datensatz. Dieses Feld dient zur Verfolgung der Einzigartigkeit eines einzelnen Datensatzes, zur Vermeidung von Datenduplizierungen und zur Nachforschung dieses Datensatzes in nachgelagerten Diensten.<br><br>Da dieses Feld vom System generiert wird, wird bei der Datenerfassung kein expliziter Wert angegeben. Sie können jedoch auch weiterhin Ihre eigenen eindeutigen ID-Werte angeben, wenn Sie möchten.<br><br>Es ist wichtig zu unterscheiden, dass dieses Feld  **keine Identität** darstellt, die sich auf eine Person bezieht, sondern vielmehr die Aufzeichnung der Daten selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen in [Identitätsfelder](../schema/composition.md#identity) umbenannt werden. |
 | `createdByBatchID` | Die ID des erfassten Stapels, die zur Erstellung des Datensatzes geführt hat. |
 | `description` | Eine Beschreibung der Segmentdefinition. |
-| `identityMap` | Ein Zuordnungsfeld, das eine Reihe von benannten Identitäten für die Personen enthält, für die das Segment gilt. Dieses Feld wird vom System automatisch aktualisiert, wenn Identitätsdaten erfasst werden.<br /><br />Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den  [Grundlagen der ](../schema/composition.md#identityMap) Schema-Komposition. |
+| `identityMap` | Ein Zuordnungsfeld, das eine Reihe von benannten Identitäten für die Personen enthält, für die das Segment gilt. Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den [Grundlagen der Schema-Komposition](../schema/composition.md#identityMap). |
 | `modifiedByBatchID` | Die ID des letzten erfassten Stapels, der zur Aktualisierung des Datensatzes geführt hat. |
 | `repositoryCreatedBy` | Die ID des Benutzers, der den Datensatz erstellt hat. |
 | `repositoryLastModifiedBy` | Die ID des Benutzers, der den Datensatz zuletzt geändert hat. |
