@@ -5,9 +5,9 @@ title: Marketo Namensräume
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namensraum, die beim Erstellen eines Marketo Engage-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
+source-git-commit: 609b951cbde880a9f354b343adb1796def0a812c
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1677'
 ht-degree: 10%
 
 ---
@@ -24,7 +24,7 @@ Dieses Dokument enthält Informationen über die zugrunde liegende Einrichtung f
 
 Der erste Schritt bei der Verwendung des Dienstprogramms für die automatische Erzeugung von Namensraum und Schema besteht darin, Ihre Plattform-Entwicklerkonsole und [!DNL Postman]-Umgebung einzurichten.[!DNL Marketo]
 
-- Sie können die Sammlung und Umgebung des Dienstprogramms zur automatischen Generierung von Namensraum und Schema von diesem [GitHub-Repository](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility) herunterladen.
+- Sie können die Sammlung und Umgebung des Dienstprogramms zur automatischen Generierung von Namensraum und Schema von diesem [GitHub-Repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility) herunterladen.
 - Informationen zur Verwendung von Plattform-APIs, einschließlich Informationen zum Sammeln von Werten für erforderliche Header und zum Lesen von Beispiel-API-Aufrufen, finden Sie im Handbuch [Erste Schritte mit Plattform-APIs](../../../../landing/api-guide.md).
 - Informationen zum Generieren Ihrer Anmeldeinformationen für Plattform-APIs finden Sie im Lernprogramm [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../../landing/api-authentication.md).
 - Weitere Informationen zum Einrichten von [!DNL Postman] für Plattform-APIs finden Sie im Lernprogramm zum Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../../landing/postman.md).[
