@@ -3,14 +3,13 @@ keywords: E-Mail;E-Mail;E-Mail;E-Mail-Ziele
 title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
 description: E-Mail-Dienstanbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-Mail-Kampagnen.
-translation-type: tm+mt
-source-git-commit: 02754055e2be8a45a0699386cb559dad8f25717c
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '796'
-ht-degree: 23%
+source-wordcount: '790'
+ht-degree: 21%
 
 ---
-
 
 # E-Mail-Marketing-Ziele – Übersicht {#email-marketing-destinations}
 
@@ -20,7 +19,7 @@ Um Segmente an E-Mail-Marketingziele für Ihre Kampagnen zu senden, muss die Pla
 
 Die Verbindung zu E-Mail-Marketingzielen erfolgt in drei Schritten ([configure destination](#connect-destination), [activate segments](#select-segments), [import data from Datenspeicherung location into the destination](#import-data-into-destination)). Jeder der Schritte wird auf dieser Seite unten beschrieben.
 
-Stellen Sie im Zielverbindungsfluss (wie im Abschnitt unten beschrieben) eine Verbindung zu Amazon S3 oder SFTP her. Plattform exportiert Ihre Segmente als `.csv`- oder `.txt`-Dateien und liefert sie an Ihren bevorzugten Speicherort. Planen Sie den Datenimport in Ihre E-Mail-Marketingplattform vom in der Plattform aktivierten Speicherort der Datenspeicherung. Das Verfahren zum Importieren von Daten ist je nach Partner unterschiedlich. Lesen Sie die Artikel zu den einzelnen Zielen, um weitere Informationen zu erhalten.
+Stellen Sie im Verbindungsziel-Fluss, wie im Abschnitt unten beschrieben, eine Verbindung zu [!DNL Amazon S3] oder [!DNL SFTP] her. Plattform exportiert Ihre Segmente als `.csv`-Dateien und liefert sie an Ihren bevorzugten Speicherort. Planen Sie den Datenimport in Ihre E-Mail-Marketingplattform von dem in [!DNL Platform] aktivierten Speicherort der Datenspeicherung. Das Verfahren zum Importieren von Daten ist je nach Partner unterschiedlich. Lesen Sie die Artikel zu den einzelnen Zielen, um weitere Informationen zu erhalten.
 
 ## Ziel {#connect-destination} konfigurieren
 
