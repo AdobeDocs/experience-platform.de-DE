@@ -5,10 +5,9 @@ title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgänge erläutert, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 91f586746c8d1db4e9219b261d7be36e572f1b50
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2230'
 ht-degree: 4%
 
 ---
@@ -48,7 +47,11 @@ Nicht alle Spalten im Schema [!DNL Consumer Experience Event] (CEE) sind für At
 | Marketing.campaigngroup | Touchpoint |
 | Handel | Konversion  |
 
-Normalerweise wird die Zuordnung auf Konvertierungsspalten wie Bestellung, Einkäufe und Kassengänge unter &quot;commerce&quot;ausgeführt. Die Spalten &quot;Kanal&quot;und &quot;Marketing&quot;werden dringend empfohlen, Touchpoints für gute Einblicke zu definieren. Sie können jedoch jede weitere Spalte zusammen mit den oben genannten Spalten einschließen, um sie als Konversions- oder Touchpoint-Definition zu konfigurieren.
+Normalerweise wird die Zuordnung auf Konvertierungsspalten wie Bestellung, Einkäufe und Kassengänge unter &quot;commerce&quot;ausgeführt. Die Spalten für &quot;Kanal&quot;und &quot;Marketing&quot;werden verwendet, um Touchpoints für Attribution AIS zu definieren (z. B. `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Für optimale Ergebnisse und Erkenntnisse wird dringend empfohlen, so viele Konversions- und Touchpoint-Spalten wie möglich einzuschließen. Außerdem sind Sie nicht auf die oben stehenden Spalten beschränkt. Sie können alle anderen empfohlenen oder benutzerdefinierten Spalten als Konversions- oder Touchpoint-Definition einschließen.
+
+>[!TIP]
+>
+>Wenn Sie Adobe Analytics-Daten in Ihrem CEE-Schema verwenden, werden die Touchpoint-Informationen für Analytics in der Regel in `channel.typeAtSource` (z. B. `channel.typeAtSource = 'email'`) gespeichert.
 
 Die folgenden Spalten sind nicht erforderlich, es wird jedoch empfohlen, sie in Ihr CEE-Schema einzubeziehen, wenn die verfügbaren Informationen vorliegen.
 
@@ -58,7 +61,7 @@ Die folgenden Spalten sind nicht erforderlich, es wird jedoch empfohlen, sie in 
 - web.webPageDetails
 - xdm:productListItems
 
-### Historische Daten {#data-requirements}
+## Historische Daten {#data-requirements}
 
 >[!IMPORTANT]
 >
