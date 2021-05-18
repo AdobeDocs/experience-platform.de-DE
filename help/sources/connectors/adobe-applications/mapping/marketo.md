@@ -5,8 +5,7 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-translation-type: tm+mt
-source-git-commit: e4823a2b787667fc181f8a4d474c7d2eb73c8eec
+source-git-commit: db7fde343b3ebf4428020c8256df2b9cfa1486ad
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 4%
@@ -261,9 +260,6 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primär |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
