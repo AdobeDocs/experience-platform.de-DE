@@ -2,14 +2,13 @@
 keywords: SFTP;SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine Live-ausgehende Verbindung mit Ihrem SFTP-Server, um in regelmäßigen Abständen durch Trennzeichen getrennte Datendateien aus Adobe Experience Platform zu exportieren.
-translation-type: tm+mt
-source-git-commit: 709908196bb5df665c7e7df10dc58ee9f3b0edbf
+exl-id: 27abfc38-ec19-4321-b743-169370d585a0
+source-git-commit: a21abb44bb9cbe6fefa0ff70a1ff19e31cc0c7de
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '230'
 ht-degree: 8%
 
 ---
-
 
 # SFTP-Verbindung
 
@@ -39,7 +38,7 @@ Geben Sie für SFTP-Ziele im Workflow zur Erstellung eines Ziels im Schritt **Au
 
 ## Exportierte Daten {#exported-data}
 
-Bei SFTP-Zielen erstellt Platform eine tabulatorgetrennte Datei `.txt` oder `.csv` im angegebenen Speicherort der Datenspeicherung. Weitere Informationen zu den Aktivierungen finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentbildung.
+Für [!DNL SFTP]-Ziele erstellt Platform eine tabulatorgetrennte `.csv`-Datenspeicherung im angegebenen Speicherort. Weitere Informationen zu den Aktivierungen finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentbildung.
 
 ## Zulassungsliste der IP-Adresse
 
