@@ -3,10 +3,9 @@ keywords: E-Mail;E-Mail;E-Mail-Ziele;E-Mail-Ziele;Verkaufsforce;Verkaufsziel
 title: Salesforce-Marketing Cloud-Verbindung
 seo-description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-translation-type: tm+mt
-source-git-commit: 29b4eaca06e2f1032584a0b4720490934a6e1fa7
+source-git-commit: 70be44e919070df910d618af4507b600ad51123c
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '629'
 ht-degree: 30%
 
 ---
@@ -77,8 +76,8 @@ Wenn Sie [segmente](../../ui/activate-destinations.md) in das [!DNL Salesforce M
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Salesforce Marketing Cloud]-Ziele erstellt Platform eine tabulatorgetrennte `.txt`- oder `.csv`-Datenspeicherung im angegebenen Speicherort. Weitere Informationen zu den Aktivierungen finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentbildung.
+Für [!DNL Salesforce Marketing Cloud]-Ziele erstellt Platform eine tabulatorgetrennte `.csv`-Datenspeicherung im angegebenen Speicherort. Weitere Informationen zu den Aktivierungen finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentbildung.
 
 ## Einrichten des Datenimports in [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Nachdem Sie [!DNL Platform] mit Ihrer SFTP-Datenspeicherung verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Salesforce Marketing Cloud] einrichten. Informationen dazu finden Sie unter [Importieren von Abonnenten aus einer Datei](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
+Nachdem Sie [!DNL Platform] mit der [!DNL SFTP]-Datenspeicherung verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Salesforce Marketing Cloud] einrichten. Informationen dazu finden Sie unter [Importieren von Abonnenten aus einer Datei](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) in [!DNL Salesforce Help Center].
