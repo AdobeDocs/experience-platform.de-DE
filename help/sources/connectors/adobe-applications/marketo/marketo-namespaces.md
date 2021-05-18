@@ -5,10 +5,9 @@ title: Marketo Namensräume
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namensraum, die beim Erstellen eines Marketo Engage-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-translation-type: tm+mt
-source-git-commit: 8dd7b1724f3de12bf6a3a1b77ee8050fd1a9eaf3
+source-git-commit: af728fb508c514db3d5871114f9a406c1ed428f2
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1670'
 ht-degree: 10%
 
 ---
@@ -56,6 +55,20 @@ Die folgende Tabelle enthält Beispielwerte sowie weitere Informationen zum Ausf
 | `has_msi` | Ein boolescher Wert, der angibt, ob Sie bei [!DNL Marketo Sales Insight] angemeldet sind. | `false` |
 
 {style=&quot;table-layout:auto&quot;}
+
+### Ausführen der Skripten
+
+Nachdem die Sammlung und Umgebung für [!DNL Postman] eingerichtet wurde, können Sie das Skript jetzt über die [!DNL Postman]-Schnittstelle ausführen.
+
+Wählen Sie in der Oberfläche [!DNL Postman] den Stammordner des Autogenerator-Dienstprogramms aus und wählen Sie dann **[!DNL Run]** aus der oberen Kopfzeile.
+
+![root-folder](../images/marketo/root-folder.png)
+
+Die [!DNL Runner]-Schnittstelle wird angezeigt. Stellen Sie von hier aus sicher, dass alle Kontrollkästchen aktiviert sind, und wählen Sie **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+
+![Generator](../images/marketo/run-generator.png)
+
+Bei einer erfolgreichen Anforderung werden die B2B-Namensraum und -Schema gemäß den Beta-Spezifikationen erstellt.
 
 ## [!DNL Marketo] Namensraum
 
