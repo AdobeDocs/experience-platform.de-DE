@@ -1,27 +1,20 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Vorschau;Beispiel
 title: Vorschau-Beispielstatus (Profil-Vorschau) API-Endpunkt
-description: Mithilfe des Vorschau-Musterstatus-Endpunkts, der Teil der Echtzeit-Customer Profil-API ist, können Sie die neueste erfolgreiche Vorschau Ihrer Profil-Daten sowie die Verteilung der Listen-Profil nach Datensatz und Identitäts-Namensraum innerhalb von Adobe Experience Platform verwenden.
-topic-legacy: guide
+description: Mithilfe des Statusendpunkts für die Vorschau, der Teil der Echtzeit-Customer Profil-API ist, können Sie die neueste erfolgreiche Stichprobe Ihrer Profil-Daten, die Verteilung der Liste-Profile nach Datensatz und Identität, und einen Bericht zur Datenüberschneidung erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 459eb626101b7382b8fe497835cc19f7d7adc6b2
 workflow-type: tm+mt
-source-wordcount: '1655'
-ht-degree: 4%
+source-wordcount: '2066'
+ht-degree: 1%
 
 ---
 
 # Vorschau-Musterstatus-Endpunkt (Profil-Vorschau)
 
-Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um stabile einheitliche Profil für einzelne Kunden zu erstellen. Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in [!DNL Platform] eingehen, werden sie im Profil-Datenspeicher gespeichert.
+Mit Adobe Experience Platform können Sie Kundendaten aus mehreren Quellen erfassen, um ein robustes, einheitliches Profil für jeden Ihrer Kunden zu erstellen. Da Daten in Plattform erfasst werden, wird ein Musterauftrag ausgeführt, um die Profil- und andere Metriken im Zusammenhang mit Profilen zu aktualisieren.
 
-Wenn die Erfassung von Datensätzen im Profil Store die Gesamtanzahl der Profil um mehr als 5 % erhöht oder verringert, wird ein Stichprobenauftrag ausgelöst, um die Anzahl zu aktualisieren. Wie das Beispiel ausgelöst wird, hängt von der Art der verwendeten Aufnahme ab:
-
-* Für **Streaming-Daten Workflows** wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Musterauftrag ausgelöst, um die Anzahl zu aktualisieren.
-* Bei **Stapelverarbeitung** wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Zählung zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Mithilfe der Profil-API können Sie den neuesten erfolgreichen Musterauftrag sowie die Verteilung des Liste-Profils nach Datensatz und Identitäts-Namensraum Vorschau werden.
-
-Diese Metriken stehen auch im Bereich [!UICONTROL Profil] der Benutzeroberfläche der Experience Platform zur Verfügung. Informationen zum Zugriff auf Profil-Daten über die Benutzeroberfläche finden Sie im [[!DNL Profile] Benutzerhandbuch](../ui/user-guide.md).
+Die Ergebnisse dieses Musterauftrags können mit dem `/previewsamplestatus`-Endpunkt der Echtzeit-Client-Profil-API angezeigt werden. Dieser Endpunkt kann auch verwendet werden, um Profil-Distributionen sowohl durch DataSet- als auch durch Identitäts-Namensraum Liste, sowie um einen Bericht zur Dataset-Überschneidung zu generieren, um die Zusammensetzung des Profil-Speichers Ihres Unternehmens besser sichtbar zu machen. Dieser Leitfaden führt die Schritte durch, die zur Ansicht dieser Metriken mithilfe des API-Endpunkts `/previewsamplestatus` erforderlich sind.
 
 >[!NOTE]
 >
@@ -35,11 +28,26 @@ Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Real-time Cus
 
 In diesem Handbuch werden sowohl &quot;Profil-Fragmente&quot;als auch &quot;zusammengeführte Profile&quot;aufgeführt. Es ist wichtig, den Unterschied zwischen diesen Begriffen zu verstehen, bevor Sie fortfahren.
 
-Jedes einzelne Profil besteht aus mehreren Profil-Fragmenten, die zu einer einzigen Ansicht des Kunden zusammengeführt wurden. Wenn ein Kunde beispielsweise über mehrere Kanal mit Ihrer Marke interagiert, enthält Ihr Unternehmen mehrere Profil-Fragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen angezeigt werden. Wenn diese Fragmente in eine Plattform integriert werden, werden sie (auf der Grundlage der Zusammenführungsrichtlinie) zusammengeführt, um ein einzelnes Profil für diesen Kunden zu erstellen. Daher ist die Gesamtanzahl der Fragmente im Profil wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
+Jedes einzelne Profil besteht aus mehreren Profil-Fragmenten, die zu einer einzigen Ansicht des Kunden zusammengeführt wurden. Wenn ein Kunde beispielsweise über mehrere Kanal mit Ihrer Marke interagiert, weist Ihr Unternehmen wahrscheinlich mehrere Profil-Fragmente auf, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen angezeigt werden.
+
+Wenn Profil-Fragmente in eine Plattform integriert werden, werden sie (auf der Grundlage einer Zusammenführungsrichtlinie) zusammengeführt, um ein einziges Profil für diesen Kunden zu erstellen. Daher ist die Gesamtanzahl der Fragmente im Profil wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
+
+Um mehr über Profil und deren Rolle innerhalb der Experience Platform zu erfahren, lesen Sie zunächst den [Überblick über das Echtzeit-Profil des Kunden](../home.md).
+
+## Auslösen des Musterauftrags
+
+Da Daten, die für Echtzeit-Kundendaten aktiviert wurden, in [!DNL Platform] eingehen, werden sie im Profil-Datenspeicher gespeichert. Wenn die Erfassung von Datensätzen im Profil Store die Gesamtanzahl der Profil um mehr als 5 % erhöht oder verringert, wird ein Stichprobenauftrag ausgelöst, um die Anzahl zu aktualisieren. Wie das Beispiel ausgelöst wird, hängt von der Art der verwendeten Aufnahme ab:
+
+* Für **Streaming-Daten Workflows** wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Musterauftrag ausgelöst, um die Anzahl zu aktualisieren.
+* Bei **Stapelverarbeitung** wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Zählung zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Mithilfe der Profil-API können Sie den neuesten erfolgreichen Musterauftrag sowie die Verteilung des Liste-Profils nach Datensatz und Identitäts-Namensraum Vorschau werden.
+
+Die Metriken für die Anzahl der Profil und die Profil nach Namensraum stehen auch im Bereich [!UICONTROL Profil] der Benutzeroberfläche der Experience Platform zur Verfügung. Weitere Informationen zum Zugriff auf Profil-Daten über die Benutzeroberfläche finden Sie im Handbuch [[!DNL Profile] UI](../ui/user-guide.md).
 
 ## Letzter Musterstatus der Ansicht {#view-last-sample-status}
 
-Sie können eine GET an den `/previewsamplestatus`-Endpunkt senden, um die Details für den letzten erfolgreichen Musterauftrag, der für Ihre IMS-Organisation ausgeführt wurde, Ansicht. Dies umfasst die Gesamtzahl der Profil im Beispiel sowie die Metrik zur Anzahl der Profil oder die Gesamtzahl der Profil, die Ihr Unternehmen innerhalb der Experience Platform hat. Die Profil-Anzahl wird nach dem Zusammenführen von Profil-Fragmenten generiert, um für jeden einzelnen Kunden ein Profil zu bilden. Mit anderen Worten: Ihre Organisation hat möglicherweise verschiedene Profilfragmente, die sich auf einen einzelnen Kunden beziehen, der mit Ihrer Marke über unterschiedliche Kanäle interagiert. Diese Fragmente würden jedoch zusammengeführt (gemäß der standardmäßigen Zusammenführungsrichtlinie) und eine Anzahl von „1“ zurückgeben, da sie alle mit derselben Person verbunden sind.
+Sie können eine GET an den `/previewsamplestatus`-Endpunkt senden, um die Details für den letzten erfolgreichen Musterauftrag, der für Ihre IMS-Organisation ausgeführt wurde, Ansicht. Dies umfasst die Gesamtzahl der Profil im Beispiel sowie die Metrik zur Anzahl der Profil oder die Gesamtzahl der Profil, die Ihr Unternehmen innerhalb der Experience Platform hat.
+
+Die Profil-Anzahl wird nach dem Zusammenführen von Profil-Fragmenten generiert, um für jeden einzelnen Kunden ein Profil zu bilden. Wenn also Profil-Fragmente zusammengeführt werden, wird das Profil &quot;1&quot;zurückgegeben, da sie alle mit derselben Person zusammenhängen.
 
 Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Profil, die nur Zeitreihendaten (Ereignis) enthalten, wie z. B. Adobe Analytics-Profil. Der Musterauftrag wird regelmäßig aktualisiert, wenn Profil-Daten erfasst werden, um eine aktuelle Gesamtanzahl von Profilen innerhalb der Plattform bereitzustellen.
 
@@ -62,7 +70,7 @@ curl -X GET \
 
 **Antwort**
 
-Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der für das IMS-Unternehmen ausgeführt wurde.
+Die Antwort enthält die Details zum letzten erfolgreichen Musterauftrag, der für das Unternehmen ausgeführt wurde.
 
 >[!NOTE]
 >
@@ -137,7 +145,7 @@ Die Antwort enthält ein `data`-Array, das eine Liste von DataSet-Objekten enth�
 
 >[!NOTE]
 >
->Wenn mehrere Berichte für das Datum vorhanden waren, wird nur der letzte zurückgegeben. Wenn für das bereitgestellte Datum kein Datensatzbericht vorhanden war, wird HTTP-Status 404 (Nicht gefunden) zurückgegeben.
+>Wenn mehrere Berichte für das Datum vorhanden sind, wird nur der letzte Bericht zurückgegeben. Wenn für das angegebene Datum kein Datensatzbericht vorhanden ist, wird HTTP-Status 404 (Nicht gefunden) zurückgegeben.
 
 ```json
 {
@@ -198,7 +206,9 @@ Die Antwort enthält ein `data`-Array, das eine Liste von DataSet-Objekten enth�
 
 ## Verteilung von Liste-Profil nach Namensraum
 
-Sie können eine GET an den `/previewsamplestatus/report/namespace`-Endpunkt ausführen, um die Aufschlüsselung nach Identitäts-Namensraum für alle zusammengeführten Profil in Ihrem Profil-Store Ansicht. Identity Namensräume sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Weitere Informationen finden Sie unter [Übersicht über den Identitäts-Namensraum](../../identity-service/namespaces.md).
+Sie können eine GET an den `/previewsamplestatus/report/namespace`-Endpunkt ausführen, um die Aufschlüsselung nach Identitäts-Namensraum für alle zusammengeführten Profil in Ihrem Profil-Store Ansicht.
+
+Identity Namensräume sind eine wichtige Komponente des Adobe Experience Platform Identity Service, die als Indikatoren für den Kontext dient, auf den sich Kundendaten beziehen. Um mehr zu erfahren, lesen Sie zunächst den [Übersicht über den Identitäts-Namensraum](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -291,6 +301,72 @@ Die Antwort enthält ein Array mit den einzelnen Objekten, die die Details für 
 | `code` | Das `code` für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mit der [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) gefunden werden und wird auch als [!UICONTROL Identitätssymbol] in der Benutzeroberfläche der Experience Platform bezeichnet. Weitere Informationen finden Sie unter [Übersicht über den Identitäts-Namensraum](../../identity-service/namespaces.md). |
 | `value` | Der `id`-Wert für den Namensraum. Dies kann bei der Arbeit mit Namensräumen mit der [Identitätsdienst-API](../../identity-service/api/list-namespaces.md) gefunden werden. |
 
+## Bericht zur Datenüberschneidung erstellen
+
+Der Bericht zur Datenüberschneidung bietet einen Einblick in die Zusammensetzung des Profil-Stores Ihres Unternehmens, indem er die Datensätze offen legt, die am meisten zu Ihrer adressierbaren Audience (Profilen) beitragen. Dieser Bericht bietet Ihnen nicht nur Einblicke in Ihre Daten, sondern kann Ihnen auch bei der Optimierung der Lizenznutzung helfen, z. B. beim Festlegen einer TTL für bestimmte Datensätze.
+
+Sie können den Bericht zur Datenüberschneidung erstellen, indem Sie eine GET an den Endpunkt `/previewsamplestatus/report/dataset/overlap` anfordern.
+
+Eine schrittweise Anleitung zum Generieren des Berichts zur Datenüberschneidung mithilfe der Befehlszeile oder der Postman-Benutzeroberfläche finden Sie im Lehrgang [Generieren des Berichts zur Datenüberschneidung](../tutorials/dataset-overlap-report.md).
+
+**API-Format**
+
+```http
+GET /previewsamplestatus/report/dataset/overlap
+GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
+```
+
+| Parameter | Beschreibung |
+|---|---|
+| `date` | Geben Sie das Datum des zurückzugebenden Berichts an. Wenn mehrere Berichte am selben Datum ausgeführt wurden, wird der letzte Bericht für dieses Datum zurückgegeben. Wenn für das angegebene Datum kein Bericht vorhanden ist, wird der Fehler 404 (Nicht gefunden) zurückgegeben. Wenn kein Datum angegeben ist, wird der letzte Bericht zurückgegeben. Format: JJJJ-MM-TT. Beispiel: `date=2024-12-31` |
+
+**Anfrage**
+
+Die folgende Anforderung verwendet den Parameter `date`, um den letzten Bericht für das angegebene Datum zurückzugeben.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Antwort**
+
+Bei einer erfolgreichen Anforderung werden HTTP-Status 200 (OK) und der Bericht zur Datenüberschneidung zurückgegeben.
+
+```json
+{
+    "data": {
+        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+        "5eeda0032af7bb19162172a7": 107
+    },
+    "reportTimestamp": "2021-12-29T19:55:31.147"
+}
+```
+
+| Eigenschaft | Beschreibung |
+|---|---|
+| `data` | Das `data`-Objekt enthält kommagetrennte Listen von Datensätzen und deren jeweilige Profil-Anzahl. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anforderung ein Parameter `date` angegeben wurde, gilt der zurückgegebene Bericht für das angegebene Datum. Wenn kein Parameter `date` angegeben ist, wird der letzte Bericht zurückgegeben. |
+
+Die Ergebnisse des Berichts können aus den Datensätzen und Profilen in der Antwort interpretiert werden. Betrachten Sie das folgende Beispielobjekt `data`:
+
+```json
+  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+  "5eeda0032af7bb19162172a7": 107
+```
+
+Dieser Bericht enthält die folgenden Informationen:
+* Es gibt 123 Profile aus Daten aus den folgenden Datensätzen: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* Es gibt 454.412 Profile, die aus Daten aus diesen beiden Datensätzen bestehen: `5d92921872831c163452edc8` und `5eb2cdc6fa3f9a18a7592a98`.
+* Es gibt 107 Profil, die nur aus Daten aus dem Datensatz `5eeda0032af7bb19162172a7` bestehen.
+* Die Einrichtung hat insgesamt 454 642 Profile.
+
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Musterdaten im Profil Store Vorschau können, können Sie auch die Vorschauen- und Schätzwerte der Segmentierungsdienst-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen Ansicht. Anhand dieser Informationen können Sie sicherstellen, dass Sie die erwartete Audience in Ihrem Segment isolieren. Weitere Informationen zum Arbeiten mit Segmentdaten und -schätzungen mithilfe der Segmentierungs-API finden Sie im Handbuch [Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
+Nachdem Sie nun wissen, wie Sie Musterdaten im Segmentspeicher Vorschau und Ausführung des Datenüberschneidungsberichts ausführen, können Sie auch die Vorschauen- und Schätzwerte der Segmentierungsdienst-API verwenden, um Informationen zu Segmentdefinitionen auf der Ebene der Ansicht zu erhalten. Anhand dieser Informationen können Sie sicherstellen, dass Sie die erwartete Audience in Ihrem Segment isolieren. Weitere Informationen zum Arbeiten mit Segmentdaten und -schätzungen mithilfe der Segmentierungs-API finden Sie im Handbuch [Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
+
