@@ -5,10 +5,9 @@ title: Importieren und Verwenden externer Audiencen
 description: In diesem Lernprogramm erfahren Sie, wie Sie externe Audiencen mit Adobe Experience Platform verwenden.
 topic-legacy: tutorial
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 82aa38c7bce05faeea5a9f42d0d86776737e04be
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '785'
 ht-degree: 9%
 
 ---
@@ -19,11 +18,25 @@ Adobe Experience Platform unterstützt die Möglichkeit, externe Audiencen zu im
 
 ## Erste Schritte
 
+Dieses Lernprogramm erfordert ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste, die beim Erstellen von Audiencen-Segmenten erforderlich sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+
 - [Segmentation Service](../home.md): Ermöglicht Ihnen das Erstellen von Zielgruppensegmenten aus Echtzeit-Kundenprofildaten.
 - [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
 - [Datensätze](../../catalog/datasets/overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in Experience Platform.
 - [Streaming-Erfassung](../../ingestion/streaming-ingestion/overview.md): So erfasst und speichert Experience Platform Daten von client- und serverseitigen Geräten in Echtzeit.
+
+### Segmentdaten und Segmentmetadaten
+
+Bevor Sie Beginn zum Importieren und Verwenden externer Audiencen haben, sollten Sie sich mit dem Unterschied zwischen Segmentdaten und Segmentmetadaten vertraut machen.
+
+Segmentdaten beziehen sich auf die Profil, die die Segmentqualifizierungskriterien erfüllen und daher Teil der Audience sind.
+
+Segmentmetadaten sind Informationen zum Segment selbst, einschließlich Name, Beschreibung, Ausdruck (falls zutreffend), Erstellungsdatum, Datum der letzten Änderung und ID. Die ID verknüpft die Segmentmetadaten mit den einzelnen Profilen, die die Segmentqualifikation erfüllen und Teil der resultierenden Audience sind.
+
+| Segmentdaten | Segmentmetadaten |
+| ------------ | ---------------- |
+| Profil, die die Segmentqualifikation erfüllen | Informationen zum Segment selbst |
 
 ## Erstellen eines Identitäts-Namensraums für die externe Audience
 
