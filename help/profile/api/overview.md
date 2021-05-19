@@ -1,11 +1,9 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;Profil aktivieren;Profil aktivieren
 title: Handbuch zur Echtzeit-Client-Profil-API
-topic-legacy: guide
 description: Mit der Echtzeit-Client-Profil-API können Entwickler Profil-Daten, einschließlich Ansicht-Profilen, prüfen und bearbeiten, Zusammenführungsrichtlinien erstellen und aktualisieren, Profil- oder Musterdaten exportieren und löschen sowie Profil-Daten löschen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 77bf6f4634987900bea1280290e8049120bb8856
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 14%
