@@ -4,9 +4,9 @@ title: Häufig gestellte Fragen zu Zielen
 seo-title: Häufig gestellte Fragen zu Zielen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform Destinationen
 seo-description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform Destinationen
-source-git-commit: 117f0f82adb764cedaa048e718cd72fa033845a0
+source-git-commit: 61678c5a62980cdb81714420016b7c4b2093f5c6
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '597'
 ht-degree: 12%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 12%
 
 # Häufig gestellte Fragen zu Zielen {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook-faq)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **Was muss ich tun, bevor ich Audiencen aktivieren kann  [!DNL Facebook Custom Audiences]?**
 
