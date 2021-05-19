@@ -2,27 +2,26 @@
 audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
-feature: Profiles
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+feature: Profile
+source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 41%
+source-wordcount: '128'
+ht-degree: 39%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile] Übersicht](home.md)
+* [[!DNL Profile]Übersicht](home.md)
 * [Videoüberblick (Profil)](video/profile-overview.md)
 * [[!DNL Profile] Guardraht](guardrails.md)
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Edge-Projektionen](api/edge-projections.md)
-   * [Entitäten ([!DNL Profile] Zugriff)](api/entities.md)
-   * [Exportaufträge ([!DNL Profile] Export)](api/export-jobs.md)
+   * [Entitäten ([!DNL Profile]-Zugriff)](api/entities.md)
+   * [Exportaufträge ([!DNL Profile] export)](api/export-jobs.md)
    * [Zusammenführungsrichtlinien](api/merge-policies.md)
    * [Musterstatus der Vorschau ([!DNL Profile] Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufträge (Anforderungen löschen)](api/profile-system-jobs.md)
@@ -41,7 +40,8 @@ ht-degree: 41%
    * [BeispielAusdruck](computed-attributes/expressions.md)
 * Tutorials {#tutorials}
    * [Daten Hinzufügen [!DNL Profile]](tutorials/add-profile-data.md)
-   * [DataSet  [!DNL Profile] & [!DNL Identity] forService konfigurieren](tutorials/dataset-configuration.md)
+   * [Datensatz für [!DNL Profile] & [!DNL Identity] Dienst konfigurieren](tutorials/dataset-configuration.md)
+   * [Bericht zur Datenüberschneidung erstellen](tutorials/dataset-overlap-report.md)
    * [Weitere Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
