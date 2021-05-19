@@ -4,10 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
 feature: Ziele
-translation-type: tm+mt
-source-git-commit: 9b383f09a3a73f785b0e3a415deda126b9ef6b39
+source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '476'
 ht-degree: 55%
 
 ---
@@ -17,6 +16,7 @@ ht-degree: 55%
 
 * [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
+* [Häufig gestellte Fragen zu Zielen](./destinations-faq.md)
 * API-Tutorials {#api}
    * [Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API](./api/streaming-destinations.md)
    * [Herstellen einer Verbindung zu E-Mail-Marketingzielen und Aktivieren von Daten mithilfe der Flow Service API](./api/email-marketing.md)
@@ -37,7 +37,7 @@ ht-degree: 55%
       * [Segmentfreigabe für Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
       * [Awin Advertiser Conversion Tag Extension](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
       * [Bing Ads Universal Ereignis Tracking (UET)-Erweiterung](./catalog/advertising/bing-ads.md)
@@ -60,7 +60,7 @@ ht-degree: 55%
       * [Analyseziele – Übersicht](./catalog/analytics/overview.md)
       * [Adform Website Tracking-Erweiterung](./catalog/analytics/adform.md)
       * [Adobe Analytics-Erweiterung](./catalog/analytics/adobe-analytics.md)
-      * [Adobe Media Analytics für Audio und Video – Erweiterung](./catalog/analytics/adobe-video-analytics.md)
+      * [Adobe Media Analytics für Audio und Video-Erweiterung](./catalog/analytics/adobe-video-analytics.md)
       * [Clicktale-Erweiterung](./catalog/analytics/clicktale.md)
       * [Contentsquare-Erweiterung](./catalog/analytics/contentsquare.md)
       * [Decibel-Erweiterung](./catalog/analytics/decibel.md)
@@ -113,7 +113,7 @@ ht-degree: 55%
       * [Adobe Target v2-Erweiterung](./catalog/personalization/adobe-target-v2.md)
       * [Beemray-Erweiterung](./catalog/personalization/beemray.md)
       * [D&amp;B Visitor Intelligence-Erweiterung](./catalog/personalization/dnb.md)
-      * [Experience Cloud ID Service-Erweiterung](./catalog/personalization/adobe-ecid.md)
+      * [Experience Cloud ID-Diensterweiterung](./catalog/personalization/adobe-ecid.md)
       * [Gainsight-Erweiterung](./catalog/personalization/gainsight.md)
       * [KickFire-Erweiterung](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization-Erweiterung](./catalog/personalization/marketo-web-personalization.md)
