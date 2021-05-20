@@ -1,9 +1,9 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '296'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 # Beitragen
@@ -20,7 +20,7 @@ Bitte melden Sie inakzeptables Verhalten an [Grp-opensourceoffice@adobe.com](mai
 
 ## Dokumentation zum Mitarbeiter-Handbuch
 
-Weiterführende Informationen finden Sie im [Mitarbeiter-Handbuch](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Weiterführende Informationen finden Sie im [Mitarbeiter-Handbuch](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de).
 
 ## Sie haben eine Frage?
 
