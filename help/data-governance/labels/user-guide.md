@@ -1,138 +1,137 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung;Richtliniendienst;Datenverwendungsbeschriftungen Benutzerhandbuch
+keywords: Experience Platform;Startseite;beliebte Themen;Data Governance;Datennutzungsbeschriftung;Policy Service;Benutzerhandbuch zu Datennutzungsbeschriftungen
 solution: Experience Platform
-title: Datenverwendungsbezeichnungen in der Benutzeroberfläche verwalten
+title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 topic-legacy: labels
-description: In diesem Handbuch werden die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der Adobe Experience Platform-Benutzeroberfläche beschrieben.
+description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Verwalten von Datenverwendungsbeschriftungen in der Benutzeroberfläche
+# Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datenverwendungsbeschriftungen in der [!DNL Experience Platform]-Benutzeroberfläche. Bevor Sie das Handbuch verwenden, lesen Sie bitte den [[!DNL Data Governance] overview](../home.md) für eine stabilere Einführung in das [!DNL Data Governance]-Framework.
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von [!DNL Experience Platform]. Bevor Sie das Handbuch verwenden, lesen Sie die [[!DNL Data Governance] Übersicht](../home.md), um eine genauere Einführung in das [!DNL Data Governance]-Framework zu erhalten.
 
-## Verwalten von Beschriftungen auf der Ebene des Datensatzes
+## Verwalten von Beschriftungen auf der Datensatzebene
 
-Zur Verwaltung der Datenverwendungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Nach der Anmeldung bei Adobe Experience Platform wählen Sie **[!UICONTROL Datensätze]** in der linken Navigation aus, um den Arbeitsbereich **[!UICONTROL Datensätze]** zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz Liste.
+Zum Verwalten der Datennutzungsbeschriftungen auf Datensatzebene müssen Sie einen vorhandenen Datensatz auswählen oder einen neuen erstellen. Wählen Sie nach der Anmeldung bei Adobe Experience Platform den Punkt **[!UICONTROL Datensätze]** in der linken Navigation aus, um den Arbeitsbereich **[!UICONTROL Datensätze]** zu öffnen. Auf dieser Seite werden alle erstellten Datensätze, die zu Ihrem Unternehmen gehören, sowie nützliche Details zu jedem Datensatz angezeigt.
 
-![Registerkarte &quot;Datenbestand&quot;im Datenbereich](../images/labels/datasets-tab.png)
+![Registerkarte „Datensatz“ im Arbeitsbereich für Daten](../images/labels/datasets-tab.png)
 
-Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes, auf den Beschriftungen angewendet werden sollen. Wenn Sie Bezeichnungen für einen vorhandenen Datensatz bearbeiten möchten, wählen Sie den Datensatz aus der Liste aus und fahren Sie fort mit [Hinzufügen von Bezeichnungen zur Datenverwendung zum Datensatz](#add-labels).
+Im nächsten Abschnitt finden Sie Schritte zum Erstellen eines neuen Datensatzes, auf den Beschriftungen angewendet werden sollen. Wenn Sie Beschriftungen für einen vorhandenen Datensatz bearbeiten möchten, wählen Sie den Datensatz aus der Liste aus und fahren Sie mit dem Punkt [Hinzufügen von Datennutzungsbeschriftungen zum Datensatz](#add-labels) fort.
 
 ### Neuen Datensatz erstellen
 
 >[!NOTE]
 >
->In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten [!DNL Experience Data Model] (XDM)-Schema erstellt. Weitere Informationen zu XDM-Schemas finden Sie unter [XDM-Systemübersicht](../../xdm/home.md) und [Grundlagen der Schema-Komposition](../../xdm/schema/composition.md).
+>In diesem Beispiel wird ein Datensatz mit einem vorkonfigurierten [!DNL Experience Data Model]-Schema (XDM) erstellt. Weitere Informationen zu XDM-Schemas finden Sie unter [XDM-Systemübersicht](../../xdm/home.md) und [Grundlagen der Schemakomposition](../../xdm/schema/composition.md).
 
-Um einen neuen Datensatz zu erstellen, wählen Sie **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke des Arbeitsbereichs **[!UICONTROL Datensätze]**.
+Um einen neuen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbeitsbereichs **[!UICONTROL Datensätze]** auf **[!UICONTROL Datensatz erstellen]**.
 
 ![](../images/labels/create-dataset.png)
 
-Der Bildschirm **[!UICONTROL Datensatz erstellen]** wird angezeigt. Wählen Sie **[!UICONTROL Datensatz aus Schema]** erstellen.
+Der Bildschirm **[!UICONTROL Datensatz erstellen]** wird angezeigt. Wählen Sie dort **[!UICONTROL Datensatz aus Schema erstellen]**.
 
 ![Datensatz aus Schema erstellen](../images/labels/create-from-dataset.png)
 
-Der Bildschirm **[!UICONTROL Schema auswählen]** wird angezeigt, in dem alle verfügbaren Schema Liste werden, die Sie zum Erstellen eines Datensatzes verwenden können. Wählen Sie das Optionsfeld neben einem Schema aus, um es auszuwählen. Im Bereich **[!UICONTROL Schema]** auf der rechten Seite werden weitere Details zum ausgewählten Schema angezeigt. Nachdem Sie ein Schema ausgewählt haben, wählen Sie **[!UICONTROL Weiter]**.
+Der Bildschirm **[!UICONTROL Schema auswählen]** wird angezeigt. Dort werden alle verfügbaren Schemas aufgelistet, die Sie zum Erstellen eines Datensatzes verwenden können. Wählen Sie die Optionsschaltfläche neben einem Schema aus, um es auszuwählen. Im Bereich **[!UICONTROL Schemas]** auf der rechten Seite werden weitere Details zum ausgewählten Schema angezeigt. Nachdem Sie ein Schema ausgewählt haben, wählen Sie **[!UICONTROL Weiter]**.
 
-![Datenbestand-Schema auswählen](../images/labels/select-schema.png)
+![Datensatzschema auswählen](../images/labels/select-schema.png)
 
-Der Bildschirm **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen Namen (erforderlich) und eine Beschreibung (optional, aber empfohlen) für Ihren neuen Datensatz ein und wählen Sie **[!UICONTROL Fertigstellen]**.
+Der Bildschirm **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen Namen (erforderlich) und eine Beschreibung (optional, aber empfohlen) für Ihren neuen Datensatz ein und wählen Sie anschließend **[!UICONTROL Fertigstellen]**.
 
-![Datensatz mit Namen und Beschreibung konfigurieren](../images/labels/configure-dataset.png)
+![Konfigurieren des Datensatzes mit Namen und Beschreibung](../images/labels/configure-dataset.png)
 
-Die Aktivität **[!UICONTROL Datensatz]** wird mit Informationen zum neu erstellten Datensatz angezeigt. In diesem Beispiel trägt der Datensatz den Namen &quot;Treuemitglieder&quot;, daher zeigt die Top-Navigation **Datensätze > Treuemitglieder** an.
+Die Seite **[!UICONTROL Datensatz-Aktivität]**, die Informationen zum neu erstellten Datensatz enthält, wird angezeigt. In diesem Beispiel trägt der Datensatz den Namen „Treueprogramm-Mitglieder“, daher zeigt die obere Navigation **„Datensätze“ > „Treueprogramm-Mitglieder“** an.
 
-![Aktivität des Datensatzes](../images/labels/dataset-created.png)
+![Seite mit der Datensatz-Aktivität](../images/labels/dataset-created.png)
 
-### hinzufügen die Beschriftungen für die Datenverwendung mit dem Dataset {#add-labels}
+### Hinzufügen von Datennutzungsbeschriftungen zum Datensatz {#add-labels}
 
-Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen Datensatz aus der Liste im Arbeitsbereich **[!UICONTROL Datensätze]** ausgewählt haben, wählen Sie **[!UICONTROL Datenverwaltung]**, um den Arbeitsbereich **[!UICONTROL Datenverwaltung]** zu öffnen. Der Arbeitsbereich ermöglicht Ihnen die Verwaltung von Beschriftungen für die Datenverwendung auf Datensatzebene und Feldebene.
+Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen Datensatz aus der Liste im Arbeitsbereich **[!UICONTROL Datensätze]** ausgewählt haben, wählen Sie **[!UICONTROL Data Governance]**, um den Arbeitsbereich **[!UICONTROL Data Governance]** zu öffnen. Der Arbeitsbereich ermöglicht Ihnen das Verwalten von Datennutzungsbeschriftungen auf Datensatz- und Feldebene.
 
-![Registerkarte &quot;Datenverwaltung&quot;](../images/labels/dataset-governance.png)
+![Registerkarte „Data Governance“ im Datensatz](../images/labels/dataset-governance.png)
 
-Um die Beschriftungen für die Datenverwendung auf Datensatzebene zu bearbeiten, wählen Sie im Beginn das Stiftsymbol neben dem Datasetnamen aus.
+Um die Datennutzungsbeschriftungen auf Datensatzebene zu bearbeiten, wählen Sie zunächst das Stiftsymbol neben dem Datensatznamen aus.
 
-![Bezeichnungen auf Datensatzebene bearbeiten](../images/labels/dataset-level-edit.png)
+![Bearbeiten von Beschriftungen auf Datensatzebene](../images/labels/dataset-level-edit.png)
 
-Das Dialogfeld **[!UICONTROL Governance-Bezeichnungen bearbeiten]** wird geöffnet. Aktivieren Sie im Dialogfeld die Kontrollkästchen neben den Beschriftungen, die Sie auf den Datensatz anwenden möchten. Denken Sie daran, dass diese Beschriftungen von allen Feldern im Datensatz übernommen werden. Die Kopfzeile **[!UICONTROL Angewandte Bezeichnungen]** wird aktualisiert, wenn Sie die einzelnen Felder markieren, und zeigt die ausgewählten Bezeichnungen an. Nachdem Sie die gewünschten Bezeichnungen ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
+Der Dialog **[!UICONTROL Governance-Beschriftungen bearbeiten]** wird geöffnet. Aktivieren Sie im Dialogfeld die Kontrollkästchen neben den Beschriftungen, die Sie auf den Datensatz anwenden möchten. Denken Sie daran, dass diese Beschriftungen von allen Feldern im Datensatz übernommen werden. Während Sie die einzelnen Kontrollkästchen auswählen, wird die Kopfzeile **[!UICONTROL Angewandte Beschriftungen]** aktualisiert, sodass sie die ausgewählten Beschriftungen anzeigt. Nachdem Sie die gewünschten Beschriftungen ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
 
-![Governance-Bezeichnungen auf Datenaset-Ebene anwenden](../images/labels/apply-labels-dataset.png)
+![Anwenden von Governance-Beschriftungen auf Datensatzebene](../images/labels/apply-labels-dataset.png)
 
-Der Arbeitsbereich **[!UICONTROL Datenverwaltung]** wird wieder angezeigt und zeigt die Beschriftungen an, die Sie auf Datensatzebene angewendet haben. Sie können auch sehen, dass die Beschriftungen bis zu den einzelnen Feldern im Datensatz geerbt werden.
+Der Arbeitsbereich **[!UICONTROL Data Governance]** öffnet sich wieder und zeigt die Beschriftungen an, die Sie auf Datensatzebene angewendet haben. Sie können auch sehen, dass die Beschriftungen für die einzelnen Feldern im Datensatz übernommen werden.
 
-![Von Feldern geerbte Datenbezeichnungen](../images/labels/dataset-labels-applied.png)
+![Von Feldern übernommene Datensatzbeschriftungen](../images/labels/dataset-labels-applied.png)
 
-Beachten Sie, dass neben den Beschriftungen auf Datensatzebene ein &quot;x&quot;angezeigt wird, sodass Sie die Beschriftungen entfernen können. Die geerbten Beschriftungen neben jedem Feld haben kein &quot;x&quot; neben ihnen und erscheinen als &quot;grau ausgegraut&quot;, ohne dass sie entfernt oder bearbeitet werden können. Dies liegt daran, dass geerbte Felder schreibgeschützt sind, d. h. sie können nicht auf Feldebene entfernt werden.****
+Beachten Sie, dass neben den Beschriftungen auf Datensatzebene ein „x“ angezeigt wird, sodass Sie die Beschriftungen entfernen können. Für die übernommenen Beschriftungen neben jedem Feld wird kein „x“ angezeigt, stattdessen sind sie ausgegraut und es gibt keine Möglichkeit, sie hier zu entfernen oder zu bearbeiten. Dies liegt daran, dass **übernommene Felder schreibgeschützt sind** und folglich nicht auf Feldebene entfernt werden können.
 
-Der Umschalter **[!UICONTROL Vererbte Bezeichnungen anzeigen]** ist standardmäßig aktiviert. Dadurch können Sie alle Bezeichnungen sehen, die vom Datensatz bis zu seinen Feldern geerbt wurden. Wenn Sie den Umschalter deaktivieren, werden alle geerbten Beschriftungen im Datensatz ausgeblendet.
+Der Umschalter **[!UICONTROL Übernommene Beschriftungen anzeigen]** ist standardmäßig aktiviert. Dadurch können Sie alle Beschriftungen sehen, die vom Datensatz auf seine Felder übertragen wurden. Wenn Sie den Umschalter deaktivieren, werden alle übernommenen Beschriftungen im Datensatz ausgeblendet.
 
-![Vererbte Beschriftungen ausblenden](../images/labels/inherited-labels.png)
+![Ausblenden von übernommenen Beschriftungen](../images/labels/inherited-labels.png)
 
 ## Verwalten von Beschriftungen auf Feldebene
 
-Wenn Sie den Arbeitsablauf für [Hinzufügen und Bearbeiten von Beschriftungen zur Datenverwendung auf Datensatzebene](#add-labels) fortsetzen, können Sie auch Beschriftungen auf Feldebene im Arbeitsbereich **[!UICONTROL Datenverwaltung]** für diesen Datensatz verwalten.
+Wenn Sie den Arbeitsablauf zum [Hinzufügen und Bearbeiten von Datennutzungskennzeichnungen auf Datensatzebene](#add-labels) fortsetzen, können Sie im Arbeitsbereich **[!UICONTROL Data Governance]** auch Kennzeichnungen auf Feldebene für diesen Datensatz verwalten.
 
-Um die Beschriftungen für die Datenverwendung auf ein einzelnes Feld anzuwenden, aktivieren Sie das Kontrollkästchen neben dem Feldnamen und wählen Sie **[!UICONTROL Governance-Bezeichnungen bearbeiten]**.
+Um die Datennutzungskennzeichnungen auf ein einzelnes Feld anzuwenden, aktivieren Sie das Kontrollkästchen neben dem Feldnamen und wählen Sie **[!UICONTROL Governance-Kennzeichnungen bearbeiten]**.
 
-![Feldbezeichnungen bearbeiten](../images/labels/field-label-edit.png)
+![Bearbeiten von Feldkennzeichnungen](../images/labels/field-label-edit.png)
 
-Das Dialogfeld **[!UICONTROL Governance-Bezeichnungen bearbeiten]** wird angezeigt. Im Dialogfeld werden Kopfzeilen mit ausgewählten Feldern, angewendeten Beschriftungen und geerbten Beschriftungen angezeigt. Beachten Sie, dass die geerbten Beschriftungen (C2 und C5) im Dialogfeld grau dargestellt werden. Es handelt sich um schreibgeschützte Bezeichnungen, die von der Datensatzebene übernommen werden und daher nur auf Datensatzebene bearbeitet werden können.
+Das Dialogfeld **[!UICONTROL Governance-Kennzeichnungen bearbeiten]** wird angezeigt. Im Dialogfeld werden Kopfzeilen mit ausgewählten Feldern, angewendeten Kennzeichnungen und übernommenen Kennzeichnungen angezeigt. Beachten Sie, dass die übernommenen Kennzeichnungen (C2 und C5) im Dialog ausgegraut sind. Es handelt sich um schreibgeschützte Kennzeichnungen, die von der Datensatzebene übernommen werden und daher nur auf Datensatzebene bearbeitet werden können.
 
-![Bearbeiten von Governance-Beschriftungen für ein einzelnes Feld](../images/labels/field-label-inheritance.png)
+![Bearbeiten von Governance-Kennzeichnungen für ein einzelnes Feld](../images/labels/field-label-inheritance.png)
 
-Wählen Sie Beschriftungen auf Feldebene aus, indem Sie das Kontrollkästchen neben der jeweiligen Beschriftung aktivieren, die Sie verwenden möchten. Wenn Sie Beschriftungen auswählen, wird die Kopfzeile **[!UICONTROL Angewandte Beschriftungen]** aktualisiert und zeigt Beschriftungen an, die auf die Felder angewendet werden, die in der Kopfzeile **[!UICONTROL Ausgewählte Felder]** angezeigt werden. Nachdem Sie die Feldbezeichnungen ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
+Wählen Sie Kennzeichnungen auf Feldebene aus, indem Sie das Kontrollkästchen neben der jeweiligen Kennzeichnung aktivieren, die Sie verwenden möchten. Wenn Sie Kennzeichnungen auswählen, wird die Kopfzeile **[!UICONTROL Angewandte Kennzeichnungen]** aktualisiert und zeigt Kennzeichnungen an, die auf die Felder angewendet werden, die in der Kopfzeile **[!UICONTROL Ausgewählte Felder]** angezeigt werden. Nachdem Sie die Kennzeichnungen auf Feldebene ausgewählt haben, wählen Sie **[!UICONTROL Änderungen speichern]**.
 
-![Anwenden von Beschriftungen auf Feldebene](../images/labels/apply-labels-field.png)
+![Anwenden von Kennzeichnungen auf Feldebene](../images/labels/apply-labels-field.png)
 
-Der Arbeitsbereich **[!UICONTROL Datenverwaltung]** wird wieder angezeigt, in dem die ausgewählten Beschriftungen auf Feldebene in der Zeile neben dem Feldnamen angezeigt werden. Beachten Sie, dass neben der Beschriftung auf Feldebene ein &quot;x&quot;steht, sodass Sie die Beschriftung entfernen können.
+Der Arbeitsbereich **[!UICONTROL Data Governance]** wird wieder angezeigt und zeigt nun ausgewählte(n) Kennzeichnung(en) auf Feldebene in der Zeile neben dem Feldnamen an. Beachten Sie, dass neben der Kennzeichnung auf Feldebene ein „x“ steht, über das Sie die Kennzeichnung entfernen können.
 
-![Feld mit Beschriftungen auf Feldebene](../images/labels/field-labels-applied.png)
+![Feld mit Kennzeichnungen auf Feldebene](../images/labels/field-labels-applied.png)
 
-Sie können diese Schritte wiederholen, um weiterhin Beschriftungen auf Feldebene für zusätzliche Felder hinzuzufügen und zu bearbeiten, einschließlich der Auswahl mehrerer Felder, um Beschriftungen auf Feldebene gleichzeitig anzuwenden.
+Sie können diese Schritte wiederholen, um weiterhin Kennzeichnungen auf Feldebene für zusätzliche Felder hinzuzufügen und zu bearbeiten. Sie können auch mehrere Felder auswählen, um Kennzeichnungen auf Feldebene gleichzeitig anzuwenden.
 
-![Wählen Sie mehrere Felder aus, um Beschriftungen auf Feldebene gleichzeitig anzuwenden.](../images/labels/multiple-fields.png)
+![Wählen Sie mehrere Felder aus, um Kennzeichnungen auf Feldebene gleichzeitig anzuwenden.](../images/labels/multiple-fields.png)
 
-Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten verschoben wird (Dataset → Felder), d. h. dass auf Feldebene angewendete Beschriftungen nicht in andere Felder oder Datensätze übertragen werden.
+Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten möglich ist wird (Datensatz → Felder). Das bedeutet, dass auf Feldebene angewendete Kennzeichnungen nicht in andere Felder oder Datensätze übertragen werden.
 
-## Benutzerdefinierte Beschriftungen verwalten
+## Verwalten von benutzerdefinierten Kennzeichnungen
 
-Sie können Ihre eigenen benutzerdefinierten Nutzungsbezeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** der [!DNL Experience Platform]-Benutzeroberfläche erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und dann **[!UICONTROL Bezeichnungen]** aus, um eine Liste der vorhandenen Bezeichnungen Ansicht. Wählen Sie **[!UICONTROL Beschriftung]** erstellen.
+Sie können Ihre eigenen benutzerspezifischen Nutzungskennzeichnungen im Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] erstellen. Wählen Sie **[!UICONTROL Richtlinien]** in der linken Navigation und anschließend **[!UICONTROL Kennzeichnungen]**, um eine Liste der vorhandenen Kennzeichnungen zu sehen. Wählen Sie dort **[!UICONTROL Kennzeichnung erstellen]**.
 
 ![](../images/labels/create-label-btn.png)
 
-Das Dialogfeld **[!UICONTROL Beschriftung erstellen]** wird angezeigt. Geben Sie von hier aus die folgenden Informationen für die neue Beschriftung ein:
+Das Dialogfeld **[!UICONTROL Kennzeichnung erstellen]** wird angezeigt. Geben Sie nun die folgenden Informationen für die neue Kennzeichnung ein:
 
-* **[!UICONTROL Bezeichner]**: Eine eindeutige Kennung für die Bezeichnung. Dieser Wert wird für Nachschlagezwecke verwendet und sollte daher kurz und knapp sein.
-* **[!UICONTROL Name]**: Ein Anzeigename für die Beschriftung.
-* **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Bezeichnung, um weiteren Kontext bereitzustellen.
+* **[!UICONTROL Kennung]**: Eine eindeutige Kennung für die Kennzeichnung. Dieser Wert wird für Suchen verwendet und sollte daher kurz und knapp sein.
+* **[!UICONTROL Name]**: Ein Anzeigename für die Kennzeichnung.
+* **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Kennzeichnung, um mehr Kontext bereitzustellen.
 
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Erstellen]**.
+Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
 ![](../images/labels/create-label.png)
 
-Das Dialogfeld wird geschlossen und die neu erstellte benutzerdefinierte Bezeichnung wird in der Liste unter der Registerkarte **[!UICONTROL Beschriftungen]** angezeigt.
+Das Dialogfeld wird geschlossen und die neu erstellte benutzerdefinierte Kennzeichnung wird in der Liste unter der Registerkarte **[!UICONTROL Kennzeichnungen]** angezeigt.
 
 ![](../images/labels/label-created.png)
 
-Die Beschriftung kann jetzt unter **[!UICONTROL Benutzerdefinierte Beschriftungen]** ausgewählt werden, wenn die Beschriftungen für Datasets und Felder bearbeitet oder Datenverwendungsrichtlinien erstellt werden.
+Die Kennzeichnung kann jetzt unter **[!UICONTROL Benutzerdefinierte Kennzeichnungen]** ausgewählt werden, wenn Kennzeichnungen für Datensätze und Felder bearbeitet oder Datennutzungsrichtlinien erstellt werden.
 
 <img src="../images/labels/add-custom-label.png" width="600" /><br>
 
 ## Nächste Schritte
 
-Nachdem Sie Datenverwendungsbezeichnungen auf der Ebene des Datensatzes und der Felder hinzugefügt haben, können Sie beginnen, Daten in [!DNL Experience Platform] zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
+Nachdem Sie Datennutzungskennzeichnungen auf Datensatz- und Feldebene hinzugefügt haben, können Sie damit beginnen, Daten in [!DNL Experience Platform] zu erfassen. Weitere Informationen erhalten Sie in der [Dokumentation zur Datenaufnahme](../../ingestion/home.md).
 
-Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../policies/overview.md).
+Sie können jetzt auch Datennutzungsrichtlinien auf Basis der von Ihnen angewendeten Kennzeichnungen definieren. Weitere Informationen finden Sie unter [Datennutzungsrichtlinien – Übersicht](../policies/overview.md).
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video soll Ihr Verständnis von [!DNL Data Governance] unterstützen und beschreibt, wie Beschriftungen auf einen Datensatz und einzelne Felder angewendet werden.
+Das folgende Video soll Ihnen dabei helfen, [!DNL Data Governance] besser zu verstehen, und beschreibt, wie Kennzeichnungen auf einen Datensatz und einzelne Felder angewendet werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
