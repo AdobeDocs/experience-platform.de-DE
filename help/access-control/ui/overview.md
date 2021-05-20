@@ -1,28 +1,27 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Zugriffskontrolle;Adobe Admin Console
+keywords: Experience Platform;Home;beliebte Themen;Zugriffssteuerung;Adobe Admin Console
 solution: Experience Platform
-title: Übersicht über die Benutzeroberfläche der Zugriffskontrolle
+title: Benutzeroberfläche der Zugriffssteuerung – Übersicht
 topic-legacy: user guide
-description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Navigieren in der Admin Console zum Verwalten der Zugriffskontrolle für Plattform.
+description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Navigieren in der Admin Console zum Verwalten der Zugriffssteuerung für Platform.
 exl-id: 6d83cbf5-c09f-4e2a-9678-b124981f8e83
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '194'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# Übersicht über die Benutzeroberfläche der Zugriffskontrolle
+# Benutzeroberfläche der Zugriffssteuerung – Übersicht
 
-Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene [!DNL Platform]-Funktionen mithilfe von [Adobe Admin Console](https://adminconsole.adobe.com) verwalten. Dieses Dokument dient als Anleitung zum Navigieren in [!DNL Admin Console], um die Zugriffskontrolle für [!DNL Platform] zu verwalten. Einen Überblick über die Zugriffskontrolle auf hoher Ebene in [!DNL Experience Platform] finden Sie unter [Übersicht über die Zugriffskontrolle](./../home.md).
+Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene [!DNL Platform]-Funktionen mithilfe von [Adobe Admin Console](https://adminconsole.adobe.com) verwalten. Dieses Dokument dient als Anleitung zum Navigieren in [!DNL Admin Console], um die Zugriffssteuerung für [!DNL Platform] zu verwalten. Einen umfassenden Überblick über die Zugriffssteuerung in [!DNL Experience Platform] finden Sie unter [Zugriffssteuerung – Übersicht](./../home.md).
 
-Folgende Aufgaben werden behandelt:
+Die folgenden Aufgaben werden behandelt:
 
-- [Rufen Sie die Admin Console](./browse.md) auf
+- [Rufen Sie die Admin Console auf](./browse.md)
 - [Neues Produktprofil erstellen](./create-profile.md)
 - [Berechtigungen für ein Produktprofil verwalten](./permissions.md)
-- [Details und zusätzliche Dienste für ein Produkt verwalten](./details-and-services.md)
+- [Details und zusätzliche Services für ein Produktprofil verwalten](./details-and-services.md)
 - [Benutzer für ein Produktprofil verwalten](./users.md)
 
-Wiederholen Sie die oben genannten Schritte, um weitere Benutzer nach Bedarf hinzuzufügen. Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf [!DNL Platform]-Funktionen über [!DNL Admin Console] steuern können, lesen Sie den Anhang im [Überblick über die Zugriffskontrolle](../home.md), um mehr über die einzelnen Berechtigungen und die [!DNL Platform]-Funktionen zu erfahren, auf die sie Zugriff gewähren.
+Wiederholen Sie die oben genannten Schritte, um weitere Benutzer nach Bedarf hinzuzufügen. Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Funktionen von [!DNL Platform] über [!DNL Admin Console] steuern können, finden Sie im Anhang zum [Übersicht über die Zugriffskontrolle](../home.md) weitere Informationen zu den einzelnen Berechtigungen und die Funktionen von [!DNL Platform], auf die sie Zugriff gewähren.
