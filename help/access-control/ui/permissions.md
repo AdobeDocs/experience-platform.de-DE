@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Profil;Berechtigungen verwalten
+keywords: Experience Platform;Home;beliebte Themen;Produktprofil;Berechtigungen verwalten
 solution: Experience Platform
-title: Berechtigungen für ein Produkt-Profil verwalten
+title: Berechtigungen für ein Produktprofil verwalten
 topic-legacy: user guide
-description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Verwalten von Berechtigungen für ein Produkt-Profil für Plattform.
+description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Verwalten von Berechtigungen für ein Produktprofil für Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -21,15 +20,15 @@ Unmittelbar nach der [Erstellung eines neuen Produktprofils](#create-a-new-produ
 
 Berechtigungen werden in Kategorien unterteilt und auf dieser Seite aufgelistet. In der Liste werden der Name der Kategorie, die Anzahl der enthaltenen Berechtigungen (und die Anzahl der aktiven Berechtigungen) sowie die zugehörige Beschreibung angezeigt.
 
-Wählen Sie eine beliebige Kategorie auf der Liste aus, um die Seite **[!UICONTROL Berechtigungen bearbeiten]** zu öffnen.
+Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechtigungen bearbeiten]** zu öffnen.
 
 ![edit-permissions](../images/edit-permissions.png)
 
-Auf der Seite **[!UICONTROL Berechtigungen bearbeiten]** gibt es einen Arbeitsbereich zum Hinzufügen und Entfernen von Berechtigungen für das ausgewählte Produktprofil. Auf der linken Seite des Bildschirms wird eine Liste mit Berechtigungskategorien angezeigt. Wenn Sie eine Kategorie auswählen, ändern sich die Berechtigungen, die unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt werden.
+Auf der Seite **[!UICONTROL Berechtigungen bearbeiten]** gibt es einen Arbeitsbereich zum Hinzufügen und Entfernen von Berechtigungen für das ausgewählte Produktprofil. Auf der linken Seite des Bildschirms wird eine Liste mit Berechtigungskategorien angezeigt. Durch Klicken auf eine Kategorie ändert sich, welche Berechtigungen jeweils unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt werden.
 
 ![change-permissions-category](../images/change-permissions-category.png)
 
-Um eine Berechtigung hinzuzufügen, wählen Sie das Symbol **plus (+)** neben dem Namen der Berechtigung aus. Alternativ können Sie **[!UICONTROL Hinzufügen alle]** auswählen, um dem Profil alle Berechtigungen unter der aktuellen Kategorie hinzuzufügen. Unter **[!UICONTROL Eingeschlossene Berechtigungselemente]** werden hinzugefügte Berechtigungen angezeigt.
+Um eine Berechtigung hinzuzufügen, klicken Sie auf das **Pluszeichen (+)** neben dem Namen der Berechtigung. Alternativ können Sie auf **[!UICONTROL Alle hinzufügen]** klicken, um alle Berechtigungen in der aktuellen Kategorie zum Profil hinzuzufügen. Unter **[!UICONTROL Eingeschlossene Berechtigungselemente]** werden hinzugefügte Berechtigungen angezeigt.
 
 ![add-permissions](../images/add-permissions.png)
 
@@ -37,9 +36,9 @@ Um eine Berechtigung hinzuzufügen, wählen Sie das Symbol **plus (+)** neben de
 >
 >In der Liste **[!UICONTROL Eingeschlossene Berechtigungselemente]** werden nur hinzugefügte Berechtigungen aus der aktuell ausgewählten Kategorie angezeigt.
 
-Um eine Berechtigung zu entfernen, wählen Sie das Symbol **X** neben dem Berechtigungsnamen oder klicken Sie auf **[!UICONTROL Alle entfernen, um alle Berechtigungen unter der aktuellen Kategorie zu entfernen.]** Entfernte Berechtigungen werden wieder unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt.
+Um eine Berechtigung zu entfernen, klicken Sie auf das Symbol **X** neben dem Namen der Berechtigung oder wählen Sie **[!UICONTROL Alle entfernen]**, um alle in der aktuellen Kategorie enthaltenen Berechtigungen zu entfernen. Entfernte Berechtigungen werden wieder unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt.
 
-Fahren Sie mit den verfügbaren Kategorien fort und fügen Sie gewünschte Berechtigungen hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]**.
+Fahren Sie mit den verfügbaren Kategorien fort und fügen Sie gewünschte Berechtigungen hinzu. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
 ![permissions-finish](../images/permissions-finish.png)
 
