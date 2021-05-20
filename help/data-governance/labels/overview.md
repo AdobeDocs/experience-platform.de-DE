@@ -1,62 +1,61 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API;Datenverwendungsbeschriftungen - Übersicht
+keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datennutzungsbeschriftungs-API;Richtlinien-Service-API;Übersicht zu Datennutzungsbeschriftungen
 solution: Experience Platform
-title: Übersicht über Datenverwendungs-Bezeichnungen
+title: Datennutzungsbeschriftungen – Übersicht
 topic-legacy: labels
-description: Mit der Adobe Experience Platform-Datenverwaltung können Sie Datenverwendungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den jeweiligen Datenverwendungsrichtlinien kategorisieren. Dieses Dokument bietet einen Überblick über die Beschriftungen für die Datenverwendung in der Experience Platform.
+description: Mit Adobe Experience Platform Data Governance können Sie Datennutzungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren. Dieses Dokument bietet einen Überblick über Datennutzungsbeschriftungen in Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# Datennutzungsbezeichnungen – Übersicht
+# Datennutzungsbeschriftungen – Übersicht
 
-Mit Adobe Experience Platform [!DNL Data Governance] können Sie Datenverwendungsbezeichnungen auf Datensätze und Felder anwenden und diese entsprechend den entsprechenden Datenverwendungsrichtlinien kategorisieren.
+Mit Adobe Experience Platform [!DNL Data Governance] können Sie Datennutzungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
 
-Dieses Dokument bietet eine Übersicht über die Beschriftungen für die Datenverwendung in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, finden Sie in der [Übersicht über die Datenverwaltung](../home.md) eine solidere Einführung in das Data Governance-Framework.
+Dieses Dokument bietet eine Übersicht über Datennutzungsbeschriftungen in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, finden Sie in der [Übersicht zu Data Governance](../home.md) eine solidere Einführung in das Data Governance-Framework.
 
-## Informationen zu den Datenverwendungsbeschreibungen
+## Verstehen von Datennutzungsbeschriftungen
 
-Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Bewährte Verfahren fördern die Kennzeichnung von Daten, sobald diese in [!DNL Experience Platform] aufgenommen werden oder sobald Daten für die Verwendung in [!DNL Platform] verfügbar sind.
+Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Platform] mit einer Beschriftung zu versehen.
 
 Datennutzungsbeschriftungen, die auf Datensatzebene angewendet werden, werden für alle Felder des Datensatzes übernommen. Außerdem können Beschriftungen direkt auf einzelne Felder (Spaltenüberschriften) in einem Datensatz angewendet werden, ohne dass eine Übernahme erfolgt.
 
-[!DNL Platform] bietet mehrere standardmäßige &quot;Kern&quot;-Datenverwendungsbezeichnungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Beschriftungen und den von ihnen dargestellten Nutzungsrichtlinien finden Sie im Handbuch [Beschriftungen für die Verwendung von Kerndaten](reference.md).
+[!DNL Platform] bietet mehrere standardmäßige „Kern“-Datennutzungsbeschriftungen, die eine Vielzahl von allgemeinen Einschränkungen für die Datenverwaltung abdecken. Weitere Informationen zu diesen Beschriftungen und den von ihnen dargestellten Nutzungsrichtlinien finden Sie im Handbuch zu [Kerndatennutzungsbeschriftungen](reference.md).
 
-Zusätzlich zu den von der Adobe bereitgestellten Bezeichnungen können Sie auch eigene benutzerdefinierte Bezeichnungen für Ihr Unternehmen definieren. Weitere Informationen finden Sie im Abschnitt [Verwalten von Bezeichnungen](#manage-labels).
+Zusätzlich zu den von Adobe bereitgestellten Beschriftungen können Sie auch eigene benutzerdefinierte Beschriftungen für Ihr Unternehmen definieren. Weitere Informationen finden Sie im Abschnitt [Verwalten von Beschriftungen](#manage-labels).
 
-## Beschriftungsvererbung für Audiencen
+## Beschriftungsvererbung für Zielgruppensegmente
 
-Alle von [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) erstellten Segmentsegmente übernehmen die Gebrauchsbeschriftungen der zugehörigen Datensätze. Dies ermöglicht die Experience Platform, bei der Aktivierung von Segmenten an Zielen eine automatische Durchsetzung der Datenverwendungsrichtlinie zu gewährleisten.
+Alle von [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) erstellten Zielgruppensegmente übernehmen die Nutzungsbeschriftungen der zugehörigen Datensätze. Dies ermöglicht Experience Platform, bei der Aktivierung von Segmenten für Ziele eine automatische Durchsetzung der Datennutzungsrichtlinie zu gewährleisten.
 
-Neben der Vererbung von Bezeichnungen auf Datensatzebene übernehmen Segmente standardmäßig alle Bezeichnungen auf Feldebene aus den zugehörigen Datensätzen. Daher können Sie leichter identifizieren, welche Attribute aus Ihren Segmenten ausgeschlossen werden sollen, und verhindern, dass sie Beschriftungen von ausgeschlossenen Feldern übernehmen.
+Neben der Vererbung von Beschriftungen auf Datensatzebene übernehmen Segmente standardmäßig alle Beschriftungen auf Feldebene aus den zugehörigen Datensätzen. Daher können Sie leichter identifizieren, welche Attribute bei Ihren Segmenten ausgeschlossen werden sollen, und so verhindern, dass die Segmente Beschriftungen von ausgeschlossenen Feldern übernehmen.
 
-Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Platform finden Sie im Überblick über [automatische Richtliniendurchsetzung](../enforcement/auto-enforcement.md).
+Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Platform finden Sie in der Übersicht über [automatische Richtliniendurchsetzung](../enforcement/auto-enforcement.md).
 
-### Vererbung von Adobe Audience Manager Data Export Controls
+### Vererbung von Adobe Audience Manager-Datenexportsteuerelementen
 
-[!DNL Experience Platform] hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportsteuerelemente, die auf Audience Manager angewendet wurden, werden in entsprechende Beschriftungen und Marketingaktionen übersetzt, die von [!DNL Experience Platform] [!DNL Data Governance] erkannt werden.
+[!DNL Experience Platform] hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportsteuerelemente, die auf Audience Manager angewendet wurden, werden in entsprechende Beschriftungen und Marketing-Aktionen übersetzt, die von [!DNL Experience Platform] [!DNL Data Governance] erkannt werden.
 
-Eine Referenz dazu, wie bestimmte Datenexportsteuerelemente den Datenverwendungsbeschriftungen in [!DNL Platform] zugeordnet sind, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Eine Referenz dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungsbeschriftungen in [!DNL Platform] zugeordnet sind, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#aam-data-export-control-in-aep).
 
-## Verwalten von Datenverwendungsbeschriftungen in [!DNL Experience Platform] {#manage-labels}
+## Verwalten von Datennutzungsbeschriftungen in [!DNL Experience Platform] {#manage-labels}
 
-Sie können Datenverwendungsbeschriftungen mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten zu den einzelnen Unterabschnitten finden Sie in den folgenden Abschnitten.
+Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten finden Sie in den nachfolgenden Abschnitten.
 
 ### Verwenden der UI
 
-Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der [!DNL Experience Platform]-Benutzeroberfläche ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Im Arbeitsbereich **[!DNL Datasets]** können Sie Beschriftungen auf Datensätze und Felder anwenden. Weitere Informationen finden Sie im Benutzerhandbuch [Beschriftungen](user-guide.md).
+Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Im Arbeitsbereich **[!DNL Datasets]** können Sie Beschriftungen auf Datensätze und Felder anwenden. Weitere Informationen finden Sie im [Benutzerhandbuch zu Beschriftungen](user-guide.md).
 
-### APIs verwenden
+### Verwenden von APIs
 
-Der `/labels`-Endpunkt in der [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ermöglicht Ihnen die programmgesteuerte Verwaltung von Datenverwendungsbeschriftungen, einschließlich der Erstellung benutzerdefinierter Bezeichnungen. Weitere Informationen finden Sie im Endpunktleitfaden [Beschriftungen](../api/labels.md).
+Der `/labels`-Endpunkt in der [Richtlinien-Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) ermöglicht Ihnen die programmgesteuerte Verwaltung von Datennutzungsbeschriftungen einschließlich des Erstellens benutzerdefinierter Beschriftungen. Weitere Informationen finden Sie im [Beschriftungsendpunkt-Handbuch](../api/labels.md).
 
-Die [DataSet-Dienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) wird verwendet, um Beschriftungen für Dataset und Felder zu verwalten. Weitere Informationen finden Sie im Handbuch [Verwalten von Datenbezeichnungen](./dataset-api.md).
+Die [Datensatz-Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) wird verwendet, um Beschriftungen für Datensätze und Felder zu verwalten. Weitere Informationen finden Sie im Handbuch zum [Verwalten von Datensatzbeschriftungen](./dataset-api.md).
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Bezeichnungen der Datenverwendung und ihre Rolle im Rahmen der Datenverwaltung vorgestellt. Weitere Informationen zur Verwaltung von Beschriftungen in [!DNL Experience Platform] finden Sie in der Dokumentation, die mit diesem Handbuch verknüpft ist.
+In diesem Dokument wurden Datennutzungsbeschriftungen und ihre Rolle im Rahmen der Data Governance vorgestellt. Weitere Informationen zur Verwaltung von Beschriftungen in [!DNL Experience Platform] finden Sie in der Dokumentation, auf die an mehreren Stellen in diesem Handbuch verwiesen wird.
