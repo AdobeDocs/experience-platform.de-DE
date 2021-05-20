@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datenverwendungsbeschriftung API;Policy-Dienst-API;Unterstützte Datenverwendungsbeschriftungen;Beschriftungen;Identitätsbeschriftungen;sensible Beschriftungen
+keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datennutzungskennzeichnungs- API;Policy Service-API;Unterstützte Datennutzungskennzeichnungen;Vertragskennzeichnungen;Identitätskennzeichnungen;sensible Kennzeichnungen
 solution: Experience Platform
-title: Glossar zu Datenverwendungsbezeichnungen
+title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
-description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Beschriftungen zur Datenverwendung beschrieben.
+description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1904'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Glossar zu Datenverwendungsbezeichnungen
+# Glossar der Datennutzungskennzeichnungen
 
-Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige Beschriftungen für die Kerndatenverwendung, die Sie zum Kategorisieren Ihrer Daten verwenden können.
+Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
 
-In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgestellten Beschriftungen zur Verwendung der Kerndaten erläutert. Weitere Informationen zu [!DNL Data Governance] finden Sie im [Überblick über die Datenverwaltung](../home.md).
+In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert. Weitere Informationen zu [!DNL Data Governance] finden Sie im [Datenverwaltung – Übersicht](../home.md).
 
 ## Vertragsbezeichnungen
 
@@ -26,15 +25,15 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | Beschriftung | Definition |
 |---|---|
 | **C1** | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
-| **C2** | Daten können nicht in einen Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
+| **C2** | Daten können nicht zu einem Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
 | **C3** | Daten können nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden. [Weitere Infos...](#c3) |
-| **C4** | Daten können nicht für das Targeting von Anzeigen oder Inhalten verwendet werden, weder auf der Site noch auf der Site. [Weitere Infos...](#c4) |
-| **C5** | Daten können nicht für interessensbasiertes, Site-übergreifendes Targeting von Inhalten oder Anzeigen verwendet werden. [Weitere Infos...](#c5) |
-| **C6** | Daten können nicht für das Targeting von Onsite-Anzeigen verwendet werden. [Weitere Infos...](#c6) |
+| **C4** | Daten können nicht für das Targeting von Anzeigen oder Inhalten verwendet werden, weder auf der Site noch Site-übergreifend. [Weitere Infos...](#c4) |
+| **C5** | Daten können nicht für interessenbasiertes, Site-übergreifendes Targeting von Inhalten oder Anzeigen verwendet werden. [Weitere Infos...](#c5) |
+| **C6** | Daten können nicht für das Targeting von Anzeigen auf der Site verwendet werden. [Weitere Infos...](#c6) |
 | **C7** | Daten können nicht für das Targeting von Inhalten auf der Site verwendet werden. [Weitere Infos...](#c7) |
-| **C8** | Daten können nicht zur Messung der Websites oder Apps Ihres Unternehmens verwendet werden. [Weitere Infos...](#c8) |
-| **C9** | Daten können nicht in Data Science Workflows verwendet werden. [Weitere Infos...](#c9) |
-| **C10** | Daten können nicht für die Aktivierung einer gehefteten Identität verwendet werden. [Weitere Infos...](#c10) |
+| **C8** | Daten können nicht zur Messung der Websites oder Mobile Apps Ihres Unternehmens verwendet werden. [Weitere Infos...](#c8) |
+| **C9** | Daten können nicht in Datenwissenschafts-Workflows verwendet werden. [Weitere Infos...](#c9) |
+| **C10** | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. [Weitere Infos...](#c10) |
 
 ## Identitätsbezeichnungen
 
@@ -43,13 +42,13 @@ Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, 
 | Beschriftung | Definition |
 |---|---|
 | **I1** | Direkt identifizierbare Daten, mit denen eine bestimmte Person anstatt eines Geräts identifiziert oder kontaktiert werden kann. |
-| **I2** | Indirekte identifizierbare Daten, die in Verbindung mit anderen Daten zur Identifizierung oder zum Kontakt mit einer bestimmten Person verwendet werden können. |
+| **I2** | Indirekt identifizierbare Daten, die in Verbindung mit anderen Daten zur Identifizierung oder zum Kontakt mit einer bestimmten Person verwendet werden können. |
 
-## Sensible Beschriftungen
+## Kennzeichnungen für sensible Daten
 
 Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisieren, die Sie und Ihre Organisation als vertraulich betrachten.
 
-Eine Art von Daten, die Sie als sensibel betrachten, kann verschiedene Arten geografischer Daten sein; Diese Kategorie ist jedoch nicht auf geografische Daten beschränkt.
+Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten von geografischen Daten handeln; diese Kategorie ist jedoch nicht auf geografische Daten beschränkt.
 
 | Beschriftung | Definition |
 |---|---|
@@ -58,72 +57,72 @@ Eine Art von Daten, die Sie als sensibel betrachten, kann verschiedene Arten geo
 
 ## Anhang
 
-Die folgenden Abschnitte enthalten weitere Informationen zu den verfügbaren Datenverwendungsbeschriftungen.
+Die folgenden Abschnitte enthalten weitere Informationen zu den verfügbaren Datennutzungskennzeichnungen.
 
-### Angaben zum Vertragszeichen
+### Details zur Kennzeichnung von Verträgen
 
-Die folgenden Abschnitte enthalten detaillierte Informationen zur Einführung spezifischer &quot;C&quot;-Kennzeichnungen.
+Die folgenden Abschnitte enthalten detaillierte Informationen zur Implementierung spezifischer „C“-Kennzeichnungen.
 
 #### C1 {#c1}
 
-Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. Zum Beispiel Daten, die aus sozialen Netzwerken stammen.
+Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. Zum Beispiel Daten, die aus Social Media stammen.
 
 #### C2 {#c2}
 
-Einige Datenanbieter haben in ihren Verträgen Bedingungen, die den Export von Daten, von denen sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft eingeschränkt. Die C2-Beschriftung ist restriktiver als [C1](#c1), was nur Aggregation und anonyme Daten erfordert.
+Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft durch deren Verträge eingeschränkt. Die Kennzeichnung C2 ist restriktiver als [C1](#c1), die nur Aggregation und anonyme Daten erfordert.
 
 #### C3 {#c3}
 
-Einige Datenanbieter haben Vertragsbedingungen, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten. Verträge für Daten, die aus Werbenetzwerken, Werbeservern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote für die Verwendung solcher Daten mit direkt identifizierbaren Daten.
+Einige Datenanbieter haben Vertragsklauseln, die die Kombination oder Verwendung dieser Daten mit direkt identifizierbaren Informationen verbieten. Verträge für Daten, die von Werbenetzwerken, Werbe-Servern und Drittanbietern von Daten bezogen werden, enthalten beispielsweise oft spezifische vertragliche Verbote der Verwendung solcher Daten mit direkt identifizierbaren Daten.
 
 #### C4 {#c4}
 
-C4 ist die restriktivste Bezeichnung - sie umfasst die Beschriftungen [C5](#c5), [C6](#c6) und [C7](#c7).
+C4 ist die restriktivste Kennzeichnung – sie umfasst die Kennzeichnungen [C5](#c5), [C6](#c6) und [C7](#c7).
 
 #### C5 {#c5}
 
-Interessensbasiertes Targeting oder Personalisierung tritt auf, wenn die folgenden drei Bedingungen erfüllt sind: Die vor Ort erfassten Daten werden (1) verwendet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen, (2) in einem anderen Kontext verwendet, z. B. auf einer anderen Site oder App (außerhalb der Site) UND (3) wird verwendet, um festzulegen, welche Inhalte oder Anzeigen auf der Grundlage dieser Schlussfolgerungen bereitgestellt werden.
+Von interessenbasiertem Targeting bzw. Personalisierung spricht man, wenn die folgenden drei Bedingungen erfüllt sind: Die auf der Website gesammelten Daten werden (1) verwendet, um Rückschlüsse auf die Interessen eines Nutzers zu ziehen, (2) in einem anderen Kontext verwendet, z. B. auf einer anderen Website oder in einem Programm außerhalb der Website, UND (3) verwendet, um auszuwählen, welche Inhalte oder Anzeigen auf der Grundlage dieser Rückschlüsse geschaltet werden.
 
-Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Vor-Ort-Daten und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als Site-übergreifende Daten bezeichnet. Verschiedene Sites stellen unterschiedliche Kontexte dar, sodass die Verwendung von Site-übergreifenden Daten in jedem Kontext anders ist als das Original. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen. Die Verwendung von Site-übergreifenden Daten zum Targeting von Anzeigen oder Inhalten gilt daher in der Regel als interessenbasiertes Targeting, unabhängig davon, ob die Anzeige oder der Inhalt auf der Site oder außerhalb der Site erscheint. Wenn z. B. Onsite-Daten in Kombination mit Offsite-Daten verwendet wurden, um auszuwählen, welche Anzeige einem Benutzer auf der eigenen Website eines Unternehmens angezeigt werden soll, würde diese Verwendung als interessensbasiertes Targeting gelten. Ein weiteres Beispiel: Das erneute Targeting von Anzeigen auf Benutzer außerhalb der Site würde wahrscheinlich auch als interessensbasiertes Targeting gelten.
+Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Daten in einer Site und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als „Site-übergreifende Daten“ bezeichnet. Verschiedene Sites stellen unterschiedliche Kontexte dar, sodass die Verwendung von Site-übergreifenden Daten in jedem Kontext anders ist als das Original. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen. Die Verwendung von Site-übergreifenden Daten zum Targeting von Anzeigen oder Inhalten gilt daher in der Regel als interessenbasiertes Targeting, unabhängig davon, ob die Anzeige oder der Inhalt auf der Site oder außerhalb der Site erscheint. Wenn z. B. Onsite-Daten in Kombination mit Offsite-Daten verwendet wurden, um auszuwählen, welche Anzeige einem Benutzer auf der eigenen Website eines Unternehmens angezeigt werden soll, würde diese Verwendung als interessenbasiertes Targeting gelten. Ein weiteres Beispiel: Das erneute Targeting von Anzeigen auf Benutzer außerhalb der Site würde wahrscheinlich auch als interessenbasiertes Targeting gelten.
 
-Die Verwendung von Offsite-Daten allein für das Targeting würde wahrscheinlich auch als zinsbasiertes Targeting gelten, da Offsite-Daten in der Regel gesammelt und verarbeitet werden, um Rückschlüsse auf die Interessen der Benutzer zu ziehen.
+Die Verwendung von Offsite-Daten allein für das Targeting würde wahrscheinlich ebenfalls als interessenbasiertes Targeting gelten, da Offsite-Daten in der Regel gesammelt und verarbeitet werden, um Rückschlüsse auf die Interessen der Benutzer zu ziehen.
 
-Beim Targeting von Inhalten oder Anzeigen, die ausschließlich Onsite-Daten verwenden, wird das Targeting jedoch in der Regel nicht als interessensbasiertes Targeting eingestuft. Das On-Site-Targeting, das ansonsten nicht als zinsbasiertes Targeting gilt, wird als zwei unterschiedliche Bezeichnungen behandelt. Das Label C6 befasst sich insbesondere mit dem Onsite-Targeting und dem Berichte von Anzeigen und bezieht sich insbesondere auf die Auswahl von Anzeigen, Versand und Berichte, und das Label C7 bezieht sich auf die Inhaltsauswahl, den Versand und den Berichte auf der Site (Targeting von Inhalten auf der Site).
+Beim Targeting von Inhalten oder Anzeigen, die ausschließlich Onsite-Daten verwenden, wird das Targeting jedoch in der Regel nicht als interessenbasiertes Targeting eingestuft. Ein Onsite-Targeting, das ansonsten nicht als interessenbasiertes Targeting gilt, wird als zwei unterschiedliche Kennzeichnungen gehandhabt. Die Kennzeichnung C6 befasst sich insbesondere mit dem Onsite-Targeting von Anzeigen und dem Reporting und bezieht sich speziell auf die Auswahl von Anzeigen, deren Bereitstellung und das Reporting, während sich die Kennzeichnung C7 auf die Inhaltsauswahl, die Bereitstellung und das Reporting jeweils auf der Site bezieht (Targeting von Inhalten auf der Site selbst).
 
-Letztendlich liegt die Interpretation der Beschriftung und die Art und Weise, wie die Nutzung der Daten mit dieser Beschriftung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Rahmenwerke als Referenz aufgeführt:
+Letztendlich liegt die Interpretation der Kennzeichnung und die Art und Weise, wie die Nutzung der Daten mit dieser Kennzeichnung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
 
-IAB: Personalisierung. Die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes zur späteren Personalisierung von Werbung und/oder Inhalten für Sie in anderen Kontexten, z. B. auf anderen Websites oder Apps, im Laufe der Zeit. Normalerweise wird der Inhalt der Site oder App verwendet, um Rückschlüsse auf Ihre Interessen zu ziehen, die die zukünftige Auswahl von Werbung und/oder Inhalten beeinflussen.
+IAB: Personalisierung. Die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Service zur späteren Personalisierung von Werbung und/oder Inhalten für Sie in anderen Kontexten, z. B. auf anderen Websites oder in Programmen, im Laufe der Zeit. Normalerweise wird der Inhalt der Site oder des Programms verwendet, um Rückschlüsse auf Ihre Interessen zu ziehen, die die zukünftige Auswahl von Werbung und/oder Inhalten beeinflussen.
 
-DAA: Online-verhaltensbasierte Werbung. Erfassen von Daten über das Verhalten von Webansichten auf einem bestimmten Computer oder Gerät im Zeitverlauf und über Websites, die keine Tochterunternehmen sind, zum Zweck der Verwendung solcher Daten zur Vorhersage von Benutzervorlieben oder -interessen, um auf der Grundlage von Voreinstellungen oder Interessen, die aus solchen Webansichtsverhalten abgeleitet werden, Werbung für diesen Computer oder dieses Gerät zu liefern.
+DAA: auf dem Online-Verhalten basierende Werbung. Das Sammeln von Daten von einem bestimmten Computer oder Gerät in Bezug auf das Verhalten beim Betrachten von Web-Seiten im Laufe der Zeit und über Websites hinweg, die nicht zu Tochterunternehmen gehören, mit dem Ziel, diese Daten zur Vorhersage von Benutzervorlieben oder -interessen zu verwenden, um Werbung an diesen Computer oder dieses Gerät zu liefern, die auf Vorlieben oder Interessen basiert, welche aus diesem Verhalten beim Betrachten von Web-Seiten abgeleitet werden.
 
 #### C6 {#c6}
 
-Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bilder, die auf einer Website oder App erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind von Inhalten auf der Site getrennt und werden durch die Beschriftung [C7](#c7) abgedeckt. Daten mit einem C6-Etikett können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Anzeigen. Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über die Interessen der Benutzer zur Auswahl von Anzeigen, Prozessdaten darüber, wann und wo die Anzeigen angezeigt wurden und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, wie z. B. die Auswahl einer Anzeige oder einen Kauf. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Anzeigen vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. *[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)*
+Anzeigen sind Nachrichten oder Benachrichtigungen, einschließlich Text und Bildern, die auf einer Website oder in einem Programm erscheinen und in erster Linie dazu dienen, den Verkauf von Waren oder Dienstleistungen zu fördern. Es liegt an Ihnen, den Zweck solcher Nachrichten oder Benachrichtigungen zu bestimmen. Anzeigen sind von Inhalten auf der Site getrennt, welche durch die Kennzeichnung [C7](#c7) abgedeckt werden. Daten mit einer C6-Kennzeichnung können nicht für das Targeting von Anzeigen auf der Site verwendet werden, einschließlich der Auswahl und der Bereitstellung von Anzeigen auf den Websites oder in Programmen Ihres Unternehmens oder zur Messung der Bereitstellung und der Effektivität solcher Anzeigen. Dazu gehören die Verwendung von zuvor erfassten Onsite-Daten über die Interessen der Benutzer zur Auswahl von Anzeigen, Prozessdaten darüber, welche Anzeigen wann und wo angezeigt wurden, und ob die Benutzer irgendwelche Aktionen im Zusammenhang mit der Werbung ergriffen haben, wie z. B. das Klicken auf eine Anzeige oder das Tätigen eines Kaufs. In der Regel würden die auf den Onsite-Aktivitäten der Benutzer beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Anzeigen auf der Site nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt wären. *[Diese Anforderungen finden Sie unter der Kennzeichnung C5.](#c5)*
 
-Letztendlich liegt die Interpretation der Beschriftung und die Art und Weise, wie die Nutzung der Daten mit dieser Beschriftung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Rahmenwerke als Referenz aufgeführt:
+Letztendlich liegt die Interpretation der Kennzeichnung und die Art und Weise, wie die Nutzung der Daten mit dieser Kennzeichnung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
 
-IAB: 3. Anzeigenauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor gesammelten Informationen, um Anzeigen für Sie auszuwählen und zu liefern und den Versand und die Effektivität solcher Anzeigen zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Anzeigen, die Verarbeitung von Daten darüber, welche Anzeigen angezeigt wurden, wie oft sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie irgendwelche Aktionen im Zusammenhang mit der Werbung unternommen haben, z. B. die Auswahl einer Anzeige oder den Kauf einer Anzeige. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um später Werbung und/oder Inhalte für Sie in anderen Kontexten, wie Websites oder Apps, personalisieren zu können.
+IAB: 3. Anzeigenauswahl, Bereitstellung, Reporting: Die Erfassung von Informationen und die Kombination mit zuvor gesammelten Informationen, um Anzeigen für Sie auszuwählen und zu übermitteln und die Bereitstellung sowie die Effektivität solcher Anzeigen zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen über Ihre Interessen zur Auswahl von Anzeigen, die Verarbeitung von Daten darüber, welche Anzeigen angezeigt wurden, wie oft sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie irgendwelche Aktionen im Zusammenhang mit der Werbung unternommen haben, wie z. B. das Klicken auf eine Anzeige oder das Tätigen eines Kaufs. Dies umfasst nicht die Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Service, um später Werbung und/oder Inhalte in anderen Kontexten, wie Websites oder Programmen, für Sie personalisieren zu können.
 
-DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der besuchten Webseite, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite basiert).
+DAA: Die auf dem Online-Verhalten basierende Werbung umfasst nicht die Aktivitäten von Erstanbietern, die Bereitstellung oder das Reporting von Anzeigen oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der besuchten Web-Seite, dem aktuellen Besuch einer Web-Seite durch den Verbraucher oder einer Suchanfrage basiert).
 
 #### C7 {#c7}
 
-Inhalt auf der Site ist Text und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck des Inhalts zu bestimmen, einschließlich der Frage, ob der Inhalt als native Werbung gelten würde. Das C7-Etikett ist nicht für Onsite-Anzeigen vorgesehen, die mit dem Etikett [C6](#c6) versehen sind. Daten mit einer C7-Bezeichnung können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und des Versands von Inhalten auf den Websites oder Apps Ihres Unternehmens oder zur Messung des Versands und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Interessen der Benutzer an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, beispielsweise die Auswahl von Inhalten. In der Regel würden die auf den Aktivitäten der Benutzer vor Ort beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Inhalten vor Ort nicht als interessenbasiertes Targeting (auch Personalisierung genannt) gelten, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt würden. *[Diese Anforderungen finden Sie auf dem Etikett C5.](#c5)*
+Onsite-Inhalte sind Texte und Bilder, die zur Information, Ausbildung oder Unterhaltung konzipiert sind und nicht zur Förderung des Verkaufs von Waren oder Dienstleistungen erstellt wurden. Es liegt an Ihnen, den Zweck der Inhalte zu bestimmen, einschließlich der Frage, ob ein Inhalt als native Werbung gelten könnte. Die Kennzeichnung C7 ist nicht für Onsite-Anzeigen vorgesehen, da diese mit der Kennzeichnung [C6](#c6) versehen sind. Daten mit einer Kennzeichnung C7 können nicht für das Targeting von Inhalten auf der Site verwendet werden, einschließlich der Auswahl und Bereitstellung von Inhalten auf den Web-Sites oder Programmen Ihres Unternehmens oder zur Messung der Bereitstellung und der Effektivität solcher Inhalte. Dazu gehören zuvor erfasste Informationen über die Interessen der Benutzer an ausgewählten Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob die Verwendungszwecke irgendwelche Aktionen im Zusammenhang mit dem Inhalt durchgeführt haben, beispielsweise das Klicken auf Inhalte. In der Regel würden die auf den Onsite-Aktivitäten der Benutzer beruhenden Präferenzen und die Verwendung dieser Präferenzen beim Targeting von Inhalten auf der Site nicht als interessenbasiertes Targeting (auch Personalisierung genannt) eingestuft, da nicht alle drei erforderlichen Voraussetzungen für ein interessenbasiertes Targeting erfüllt wären. *[Diese Anforderungen finden Sie unter der Kennzeichnung C5.](#c5)*
 
-Letztendlich liegt die Interpretation der Beschriftung und die Art und Weise, wie die Nutzung der Daten mit dieser Beschriftung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Rahmenwerke als Referenz aufgeführt:
+Letztendlich liegt die Interpretation der Kennzeichnung und die Art und Weise, wie die Nutzung der Daten mit dieser Kennzeichnung erzwungen wird, bei Ihnen. Nachstehend sind die IAB- und DAA-Frameworks als Referenz aufgeführt:
 
-IAB: 4. Inhaltsauswahl, Versand, Berichte: Die Erfassung von Informationen und die Kombination mit zuvor erfassten Informationen, um Inhalte für Sie auszuwählen und bereitzustellen und den Versand und die Effektivität solcher Inhalte zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie im Zusammenhang mit dem Inhalt irgendwelche Aktionen durchgeführt haben, einschließlich der Auswahl von Inhalten. Dies umfasst nicht Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Dienstes, um Inhalte und/oder Werbung für Sie in anderen Kontexten, wie Websites oder Apps, im Laufe der Zeit zu personalisieren.
+IAB: 4. Inhaltsauswahl, Bereitstellung, Reporting: Die Erfassung von Informationen und deren Kombination mit zuvor erfassten Informationen, um Inhalte für Sie auszuwählen und bereitzustellen und die Bereitstellung und Effektivität solcher Inhalte zu messen. Dazu gehören die Verwendung von zuvor erfassten Informationen zu Ihren Interessen zur Auswahl von Inhalten, die Verarbeitung von Daten darüber, welche Inhalte angezeigt wurden, wie oft und wie lange sie angezeigt wurden, wann und wo sie angezeigt wurden und ob Sie im Zusammenhang mit dem Inhalt irgendwelche Aktionen durchgeführt haben, einschließlich beispielsweise des Klickens auf Inhalte. Dies umfasst nicht die Personalisierung, d. h. die Erfassung und Verarbeitung von Informationen über Ihre Nutzung dieses Service zur späteren Personalisierung von Inhalten und/oder Werbung für Sie in anderen Kontexten, wie Websites oder Programmen, im Laufe der Zeit.
 
-DAA: Die Online-verhaltensbasierte Werbung umfasst nicht die Aktivitäten von Erstanbietern, Anzeigen-Versand oder Anzeigen-Berichte oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der Webseite basiert, die gerade besucht wird, dem aktuellen Besuch eines Abfrage auf einer Webseite oder einer Suchseite).
+DAA: Die auf dem Online-Verhalten basierende Werbung umfasst nicht die Aktivitäten von Erstanbietern, die Bereitstellung oder das Reporting von Anzeigen oder kontextbezogene Werbung (d. h. Werbung, die auf dem Inhalt der besuchten Web-Seite, dem aktuellen Besuch einer Web-Seite durch den Verbraucher oder einer Suchanfrage basiert).
 
 #### C8 {#c8}
 
-Daten können nicht verwendet werden, um die Nutzung der Sites oder Apps Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessensbasierte Targeting (Cross-Site-Targeting), d. h. die Sammlung von Informationen über Ihre Nutzung dieses Dienstes, um Inhalte und/oder Werbung später für Sie in anderen Kontexten, z. B. auf anderen Diensten wie Websites oder Apps, im Laufe der Zeit zu personalisieren.
+Daten können nicht verwendet werden, um die Nutzung der Sites oder Programme Ihres Unternehmens durch Benutzer zu messen, zu verstehen und Berichte darüber zu erstellen. Dies umfasst nicht das interessenbasierte Targeting (Site-übergreifendes Targeting), d. h. die Sammlung von Informationen über Ihre Nutzung dieses Service zur späteren Personalisierung von Inhalten und/oder Werbung für Sie in anderen Kontexten, z. B. auf anderen Websites oder in Programmen, im Laufe der Zeit.
 
 #### C9 {#c9}
 
-Einige Verträge beinhalten explizite Verbote der Datenverwendung für die Datenwissenschaft. Manchmal werden diese Begriffe in Begriffen ausgedrückt, die die Verwendung von Daten für künstliche Intelligenz (AI), maschinelles Lernen (ML) oder Modellierung verbieten.
+Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwissenschaftliche Zwecke. Manchmal wird dies so ausgedrückt, dass die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verboten ist.
 
 #### C10 {#c10}
 
-Einige Datenverwendungsrichtlinien beschränken die Verwendung von gehefteten Identitätsdaten für die Personalisierung. Die C10-Beschriftung wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option &quot;Privates Diagramm&quot;verwenden.
+Einige Datennutzungsrichtlinien beschränken die Verwendung von zusammengesetzten Identitätsdaten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
