@@ -1,47 +1,46 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Map CSV;Map CSV-Datei;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
+keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 solution: Experience Platform
-title: Übersicht über die Datenvorbereitung
+title: Datenvorbereitung – Übersicht
 topic-legacy: overview
-description: Dieses Dokument führt die Datenvorbereitung in Adobe Experience Platform ein.
+description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-translation-type: tm+mt
 source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
 workflow-type: tm+mt
 source-wordcount: '437'
-ht-degree: 0%
+ht-degree: 73%
 
 ---
 
 
-# Datenvorgabe - Übersicht
+# Datenvorbereitung – Übersicht
 
-Data Prep ermöglicht es Datenentwicklern, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren. Die Datenvorgabe wird als &quot;Map&quot;-Schritt in den Datenaufnahmemechanismen einschließlich des CSV-Ingestion-Arbeitsablaufs angezeigt. Dateningenieure können Data Prep verwenden, um die folgende Datenbearbeitung während der Erfassung durchzuführen:
+Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Datenmodell (XDM) zuzuordnen, umzuformen und zu validieren. Die Datenvorbereitung wird als „Map“-Schritt in den Datenaufnahmemechanismen, einschließlich des Workflows der CSV-Aufnahme, angezeigt. Dateningenieure können die Datenvorbereitung verwenden, um die folgende Datenbearbeitung während der Aufnahme durchzuführen:
 
-- Definieren einfacher Pass-through-Zuordnungen zur Zuweisung von Eingabedateien zu XDM-Attributen
-- Erstellen Sie berechnete Felder zur Durchführung von In-Line-Berechnungen, die XDM-Attributen zugewiesen werden können.
-- Daten durch Anwendung von Zeichenfolgen-, numerischen oder Datumsbearbeitungsfunktionen umwandeln
-- XDM-Hierarchien mithilfe von hierarchischen Funktionen erstellen
-- Vorschau der Daten, wie sie in der Datenvorgabe manipuliert werden
+- Definieren einfacher Pass-through-Zuordnungen zur Zuweisung von Eingabeattributen zu XDM-Attributen
+- Erstellen von berechneten Feldern, um in der Zeile Berechnungen durchzuführen, die XDM-Attributen zugewiesen werden können.
+- Umwandeln von Daten durch Anwenden von Zeichenfolgen-, numerischen oder Datumsbearbeitungsfunktionen
+- Erstellen von XDM-Hierarchien mithilfe von hierarchischen Funktionen
+- Vorschau der Daten, wie sie in der Datenvorbereitung bearbeitet werden
 
-Data Prep wendet außerdem mehrere intrinsische Datenvalidierungen an, um sicherzustellen, dass die Datenintegrität bei der Erfassung erhalten bleibt. Sofern möglich, ordnet Data Prep die eingehenden Daten-Schema automatisch XDM zu. Dateningenieure können die vorgeschlagenen Zuordnungen ändern, korrigieren und löschen und sie gegebenenfalls durch die Zuordnungen ersetzen.
+Die Datenvorbereitung wendet außerdem mehrere intrinsische Datenvalidierungen an, um sicherzustellen, dass die Integrität der Daten bei der Aufnahme erhalten bleibt. Sofern möglich, ordnet die Datenvorbereitung die eingehenden Daten-Schemas automatisch XDM zu. Dateningenieure können die vorgeschlagenen Zuordnungen ändern, korrigieren und löschen und sie gegebenenfalls durch andere Zuordnungen ersetzen.
 
 ## Zuordnung
 
-Eine Zuordnung ist eine Zuordnung eines Eingabedatums oder eines berechneten Felds zu einem XDM-Attribut. Ein einzelnes Attribut kann mehreren XDM-Attributen zugeordnet werden, indem einzelne Zuordnungen erstellt werden.
+„Zuordnung“ bezeichnet hier die Zuordnung eines Eingabeattributs oder berechneten Felds zu einem XDM-Attribut. Ein einzelnes Attribut kann mehreren XDM-Attributen zugeordnet werden, indem einzelne Zuordnungen erstellt werden.
 
-Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md).
+Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [Handbuch zu den Zuordnungsfunktionen](./functions.md).
 
 ## Zuordnungssatz
 
-Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, werden kollektiv als Zuordnungssatz bezeichnet. Im Rahmen jedes Datenflusses wird ein einzelner Zuordnungssatz erstellt. Ein Zuordnungssatz ist ein integraler Bestandteil der Datenflüsse und wird im Rahmen der Datenflüsse erstellt, bearbeitet und überwacht.
+Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, wird gemeinhin als Zuordnungssatz bezeichnet. Im Rahmen jedes Datenflusses wird ein einzelner Zuordnungssatz erstellt. Ein Zuordnungssatz ist ein integraler Bestandteil der Datenflüsse und wird im Rahmen der Datenflüsse erstellt, bearbeitet und überwacht.
 
-Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung der Felder in einem Zuordnungssatz, finden Sie im Handbuch [Zuordnungssatz](./mapping-set.md). Um zu erfahren, wie Sie einen Zuordnungssatz erstellen und andere API-Aufrufe im Zusammenhang mit Zuordnungssätzen verwenden, lesen Sie bitte den Abschnitt &quot;Zuordnungssatz&quot;im [Entwicklerhandbuch](./api/mapping-set.md).
+Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung der Felder in einem Zuordnungssatz, finden Sie in der [Anleitung zum Zuordnungssatz](./mapping-set.md). Informationen zum Erstellen eines Zuordnungssatzes und zum Verwenden anderer API-Aufrufe im Zusammenhang mit Zuordnungssätzen finden Sie im Abschnitt zum Zuordnungssatz im [Entwicklerhandbuch](./api/mapping-set.md).
 
-## Verarbeitung von Datenformaten
+## Umgang mit Datenformaten
 
-Data Prep kann verschiedene Datenformate, die in die Plattform aufgenommen werden, mit großem Aufwand handhaben. Weitere Informationen zum Umgang mit verschiedenen Datentypen finden Sie unter [Übersicht über die Verarbeitung von Datenformaten](./data-handling.md).
+Data Prep kann verschiedene Datenformate, die in Platform erfasst werden, stark verarbeiten. Weiterführende Informationen zur Verarbeitung verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Handhabung von Datenformaten](./data-handling.md).
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im Handbuch [Zuordnungsfunktionen](./functions.md). Weitere Informationen zum Umgang mit verschiedenen Datentypen finden Sie im Handbuch [Verarbeitung von Datenformaten](./data-handling.md#dates). Informationen zur Verwendung der Data Prep API finden Sie im [Data Prep Developer Guide](api/overview.md).
+In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [Handbuch zu den Zuordnungsfunktionen](./functions.md). Weiterführende Informationen zur Verarbeitung verschiedener Datentypen durch die Datenvorbereitung finden Sie im [Handbuch zur Handhabung von Datenformaten](./data-handling.md#dates). Informationen zur Verwendung der Data Prep-API finden Sie im [Entwicklerhandbuch für die Datenvorbereitung](api/overview.md).
