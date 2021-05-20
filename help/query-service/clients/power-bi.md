@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Power BI;Power-bi;Verbindung zum Abfrage-Dienst herstellen
+keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Power BI; Power BI; Verbindung mit Query Service
 solution: Experience Platform
-title: Power BI mit dem Abfrage-Dienst verbinden
+title: Power BI zu Query Service verbinden
 topic-legacy: connect
-description: Dieses Dokument führt Sie durch die Schritte, um Power BI mit dem Adobe Experience Platform Abfrage Service zu verbinden.
+description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Adobe Experience Platform Query Service erläutert.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 5%
+source-wordcount: '468'
+ht-degree: 6%
 
 ---
 
-# Verbinden Sie [!DNL Power BI] mit dem Abfrage Service (PC)
+# Verbinden von [!DNL Power BI] mit Query Service (PC)
 
-In diesem Dokument werden die Schritte zur Verbindung von Power BI mit dem Adobe Experience Platform Abfrage Service beschrieben.
+In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Adobe Experience Platform Query Service beschrieben.
 
 >[!NOTE]
 >
-> Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL Power BI] haben und mit der Navigation in der Oberfläche vertraut sind. Weitere Informationen zu [!DNL Power BI] finden Sie in der [offiziellen  [!DNL Power BI] Dokumentation](https://docs.looker.com/).
+> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL Power BI] haben und mit der Navigation in der Benutzeroberfläche vertraut sind. Weitere Informationen zu [!DNL Power BI] finden Sie in der [offiziellen [!DNL Power BI] Dokumentation](https://docs.microsoft.com/de-de/power-bi/).
 >
-> Zusätzlich ist Power BI **nur** auf Windows-Geräten verfügbar.
+> Außerdem ist der Power BI **nur** auf Windows-Geräten verfügbar.
 
-Nach der Installation von Power BI müssen Sie `Npgsql`, ein .NET-Treiberpaket für PostgreSQL, installieren. Weitere Informationen zu Npgsql finden Sie in der [Npgsql Dokumentation](https://www.npgsql.org/doc/index.html).
+Nach der Installation von Power BI müssen Sie `Npgsql` installieren, ein .NET-Treiberpaket für PostgreSQL. Weitere Informationen zu Npgsql finden Sie in der [Npgsql-Dokumentation](https://www.npgsql.org/doc/index.html).
 
 >[!IMPORTANT]
 >
 >Sie müssen Version 4.0.10 oder niedriger herunterladen, da neuere Versionen zu Fehlern führen.
 
-Wählen Sie im benutzerdefinierten Setup-Bildschirm unter &quot;[!DNL Npgsql GAC Installation]&quot;**[!DNL Will be installed on local hard drive]**.
+Wählen Sie unter &quot;[!DNL Npgsql GAC Installation]&quot;auf dem benutzerdefinierten Setup-Bildschirm **[!DNL Will be installed on local hard drive]** aus.
 
-Um sicherzustellen, dass npgsql ordnungsgemäß installiert wurde, starten Sie den Computer neu, bevor Sie mit den nächsten Schritten fortfahren.
+Um sicherzustellen, dass npgsql ordnungsgemäß installiert ist, starten Sie den Computer neu, bevor Sie mit den nächsten Schritten fortfahren.
 
 ## Verbinden Sie [!DNL Power BI] mit [!DNL Query Service]
 
-Um [!DNL Power BI] mit [!DNL Query Service] zu verbinden, öffnen Sie [!DNL Power BI] und wählen Sie **[!DNL Get Data]** in der oberen Menüleiste aus.
+Um [!DNL Power BI] mit [!DNL Query Service] zu verbinden, öffnen Sie [!DNL Power BI] und wählen Sie **[!DNL Get Data]** im oberen Menüband aus.
 
 ![](../images/clients/power-bi/open-power-bi.png)
 
@@ -43,31 +42,31 @@ Wählen Sie **[!DNL PostgreSQL database]**, gefolgt von **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-Sie können jetzt Werte für den Server und die Datenbank eingeben.  Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]** und anschließend **[!UICONTROL Anmeldeinformationen]**.
+Sie können jetzt Werte für den Server und die Datenbank eingeben.  Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
-**[!DNL Server]** ist der Host, der unter den Verbindungsdetails gefunden wird. Bei der Produktion fügen Sie Anschluss `:80` am Ende der Hostzeichenfolge hinzu. **[!DNL Database]** kann entweder &quot;all&quot;oder ein Dataset-Tabellenname sein.
+**[!DNL Server]** ist der Host, der unter den Verbindungsdetails gefunden wird. Fügen Sie für die Produktion Port `:80` am Ende der Host-Zeichenfolge hinzu. **[!DNL Database]** kann entweder &quot;all&quot;oder ein Datensatztabellenname sein.
 
-Zusätzlich können Sie **[!DNL Data Connectivity mode]** auswählen. Wählen Sie **[!DNL Import]** aus, um eine Liste aller verfügbaren Tabellen anzuzeigen, oder wählen Sie **[!DNL DirectQuery]**, um eine Abfrage direkt zu erstellen.
+Zusätzlich können Sie **[!DNL Data Connectivity mode]** auswählen. Wählen Sie **[!DNL Import]** aus, um eine Liste aller verfügbaren Tabellen anzuzeigen, oder wählen Sie **[!DNL DirectQuery]** aus, um direkt eine Abfrage zu erstellen.
 
-Weitere Informationen zum **[!DNL Import]**-Modus finden Sie im Abschnitt [Anzeigen einer Vorschau und Importieren einer Tabelle](#preview). Weitere Informationen zum **[!DNL DirectQuery]**-Modus finden Sie im Abschnitt [SQL-Anweisungen erstellen](#create). Wählen Sie **[!DNL OK]** aus, nachdem Sie die Datenbankdetails bestätigt haben.
+Weitere Informationen zum Modus **[!DNL Import]** finden Sie im Abschnitt [Vorschau und Import einer Tabelle](#preview). Weitere Informationen zum Modus **[!DNL DirectQuery]** finden Sie im Abschnitt [Erstellen von SQL-Anweisungen](#create). Wählen Sie **[!DNL OK]** aus, nachdem Sie Ihre Datenbankdetails bestätigt haben.
 
 ![](../images/clients/power-bi/connectivity-mode.png)
 
-Es wird eine Eingabeaufforderung zum Benutzernamen, Kennwort und Anwendungseinstellungen angezeigt. Füllen Sie diese Details aus und wählen Sie dann **[!DNL Connect]** aus, um mit dem nächsten Schritt fortzufahren.
+Eine Eingabeaufforderung mit der Aufforderung, Ihren Benutzernamen, Ihr Kennwort und Ihre Anwendungseinstellungen anzufordern, wird angezeigt. Füllen Sie diese Details aus und wählen Sie dann **[!DNL Connect]** aus, um mit dem nächsten Schritt fortzufahren.
 
 ![](../images/clients/power-bi/import-mode.png)
 
-## Vorschau und Importieren einer Tabelle {#preview}
+## Vorschau erstellen und Tabelle importieren {#preview}
 
-Wenn Sie den Modus **[!DNL Import]** ausgewählt haben, wird ein Dialogfeld mit einer Liste aller verfügbaren Tabellen angezeigt. Wählen Sie die zu Vorschau Tabelle aus, gefolgt von **[!DNL Load]**, um den Datensatz in [!DNL Power BI] zu laden.
+Wenn Sie den Modus **[!DNL Import]** ausgewählt haben, wird ein Dialogfeld mit einer Liste aller verfügbaren Tabellen angezeigt. Wählen Sie die Tabelle aus, die Sie in der Vorschau anzeigen möchten, gefolgt von **[!DNL Load]**, um den Datensatz in [!DNL Power BI] zu bringen.
 
 ![](../images/clients/power-bi/preview-table.png)
 
-Die Tabelle wird jetzt in den Power BI importiert.
+Der Tisch ist jetzt in den Power BI importiert.
 
 ![](../images/clients/power-bi/import-table.png)
 
-## SQL-Anweisungen {#create} erstellen
+## SQL-Anweisungen erstellen {#create}
 
 Wenn Sie den Modus **[!DNL DirectQuery]** ausgewählt haben, müssen Sie den Abschnitt Erweiterte Optionen mit der SQL-Abfrage ausfüllen, die Sie erstellen möchten.
 
@@ -81,4 +80,4 @@ Eine Vorschau Ihrer Abfrage wird angezeigt. Wählen Sie **[!DNL Load]** aus, um 
 
 ## Nächste Schritte
 
-Nachdem Sie eine Verbindung mit [!DNL Query Service] hergestellt haben, können Sie [!DNL Power BI] verwenden, um Abfragen zu schreiben. Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Leitfaden zu [laufenden Abfragen](../best-practices/writing-queries.md).
+Nachdem Sie sich mit [!DNL Query Service] angemeldet haben, können Sie [!DNL Power BI] verwenden, um Abfragen zu schreiben. Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch zu [laufenden Abfragen](../best-practices/writing-queries.md).
