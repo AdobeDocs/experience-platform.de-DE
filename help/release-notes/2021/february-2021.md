@@ -1,19 +1,18 @@
 ---
-title: Versionshinweise zu Adobe Experience Platform
-description: Versionshinweise zur Experience Platform vom 24. Februar 2021.
+title: Adobe Experience Platform – Versionshinweise
+description: Versionshinweise zu Experience Platform vom 24. Februar 2021.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-translation-type: tm+mt
 source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
 workflow-type: tm+mt
 source-wordcount: '1140'
-ht-degree: 32%
+ht-degree: 97%
 
 ---
 
-# Versionshinweise zu Adobe Experience Platform
+# Adobe Experience Platform – Versionshinweise
 
 **Versionsdatum: 24. Februar 2021**
 
@@ -33,55 +32,55 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## (Beta) Dashboard {#dashboards}
 
-Adobe Experience Platform bietet mehrere Dashboard zur Ansicht wichtiger Informationen über die Daten Ihres Unternehmens, wie sie bei täglichen Schnappschüssen erfasst werden.
+Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dashboard für Profil, Segmente, Ziele und Lizenznutzung (Beta) | **Hinweis: Die Dashboard-Funktionalität befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketingfachablauf innerhalb der Plattform integriert. Diese Dashboard sind ohne zusätzliche IT-Unterstützung oder ohne den Zeit- und Arbeitsaufwand verfügbar, der andernfalls für den Export und die Verarbeitung von Daten mit zusätzlicher Entwicklung und Implementierung des Data Warehouse erforderlich wäre. |
+| Dashboards (Beta) für Profile, Segmente, Ziele und Lizenznutzung | **Anmerkung: Diese Funktion befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.**<br/><br/> Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und werden direkt in den Marketing-Workflow in von Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace verwendet maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
+Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| JupyterLab EDA Notebook | Die Analyse der Forschungsdaten (EDA) Python Notebook ist jetzt in Jupyterlab verfügbar. Dieses Notizbuch hilft Ihnen bei der Erkennung von Datenmustern, der Überprüfung der Datensicherheit und der Zusammenfassung der relevanten Daten für Prognosemodelle. Weitere Informationen finden Sie im Lernprogramm [Webbasierte Daten für Prognosemodelle](../../data-science-workspace/jupyterlab/eda-notebook.md) untersuchen. |
+| JupyterLab EDA Notebook | Das Python-Notebook zur explorativen Datenanalyse (EDA) ist jetzt in Jupyterlab verfügbar. Dieses Notebook hilft Ihnen beim Erkennen von Datenmustern, beim Überprüfen der Datenplausibilität und beim Zusammenfassen der relevanten Daten für Prognosemodelle. Weitere Informationen finden Sie im Tutorial zum [Untersuchen von Web-basierten Daten für Prognosemodelle](../../data-science-workspace/jupyterlab/eda-notebook.md). |
 
-Weitere allgemeine Informationen zum Data Science Workspace finden Sie im Abschnitt [Übersicht über den Data Science Workspace](../../data-science-workspace/home.md).
+Weitere allgemeine Informationen zu Data Science Workspace finden Sie im Abschnitt [Übersicht über Data Science Workspace](../../data-science-workspace/home.md).
 
 ## [!DNL Dataflows] {#dataflows}
 
-In Adobe Experience Platform werden Daten aus einer Vielzahl von Quellen erfasst, innerhalb der Experience Platform analysiert und zu einer Vielzahl von Zielen aktiviert. Plattform erleichtert die Verfolgung dieses potenziell nicht-linearen Datenflusses durch Transparenz mit Datenflüssen.
+In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
 
-Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Dienste konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connectors in Zielgruppen-Datasets zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich nach [!DNL Destinations] aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert und unterstützen Sie dabei, Daten von den Quell-Connektoren in Zielgruppen-Datensätze zu verschieben, wo sie dann von [!DNL Identity Service] und [!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich für [!DNL Destinations] aktiviert werden.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neues Überwachungs-Dashboard | Sie können jetzt das Monitoring-Dashboard für dienstübergreifende Transparenz und umsetzbare Einblicke in die Erfassung von Quelldaten verwenden. Das neue Überwachungs-Dashboard bietet eine umfassende Ansicht von Daten, die von [!DNL Data Lake] bis [!DNL Identity Service] und [!DNL Profile] verarbeitet werden, und ermöglicht Ihnen gleichzeitig die Überwachung von Erfassungsraten, Erfolgen und Fehlern. Weitere Informationen finden Sie im Tutorial zu [Überwachungsquellen-Datenaflows in der Benutzeroberfläche](../../dataflows/ui/monitor-sources.md). |
+| Neues Überwachungs-Dashboard | Sie können jetzt das Überwachungs-Dashboard für Service-übergreifende Transparenz und umsetzbare Einblicke in die Erfassung von Quelldaten verwenden. Das neue Überwachungs-Dashboard bietet eine umfassende Ansicht von Daten, die von [!DNL Data Lake] zu [!DNL Identity Service] und [!DNL Profile] verarbeitet werden, und ermöglicht Ihnen gleichzeitig das Überwachen von Erfassungsraten, Erfolgen und Fehlern. Weitere Informationen finden Sie im Tutorial zum [Überwachen von Quelldatenflüssen in der Benutzeroberfläche](../../dataflows/ui/monitor-sources.md). |
 
-Weitere allgemeine Informationen zu Datenflüssen finden Sie im [Datenaflows-Überblick](../../dataflows/home.md).
+Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht zu Datenflüssen](../../dataflows/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
+[!DNL Destinations] sind vordefinierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
 **Neue Ziele**
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | Mit der [!DNL LinkedIn Matched Audiences]-Verbindung können Sie Audiencen auf der [!DNL LinkedIn]-Social-Plattform aktivieren. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | Mit der [!DNL LinkedIn Matched Audiences]-Verbindung können Sie Zielgruppen auf der sozialen Plattform [!DNL LinkedIn] aktivieren. |
 
-Allgemeine Informationen zu Zielen finden Sie im [Überblick über Ziele](../../destinations/home.md).
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-Normung und Interoperabilität sind Schlüsselkonzepte hinter [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), angetrieben von der Adobe, ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schema für das Kundenerlebnis-Management zu definieren.
+Standardisierung und Interoperabilität sind Schlüsselkonzepte von [!DNL Experience Platform]. Das von Adobe unterstützte [!DNL Experience Data Model] (XDM)-System ist ein Versuch, Kundenerlebnisdaten zu standardisieren und Schemas für das Kundenerlebnis-Management zu definieren.
 
 XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkeit digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
@@ -89,35 +88,35 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf der Registerkarte [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schema] und im Dialogfeld [!DNL Schema Editor] Schema-Feldgruppenauswahl verfügbar.<br><br>Bei der Suche nach einem Begriff zuvor wurden nur XDM-Ressourcen berücksichtigt, deren Name mit der Abfrage übereinstimmt. Zusätzlich zu den Ressourcen, deren Name mit der Abfrage übereinstimmt, werden auch die Ressourcen mit den einzelnen Attributen, die mit dem Begriff übereinstimmen, einbezogen. Auf diese Weise können Sie nach XDM-Ressourcen basierend auf den Attributen suchen, die sie enthalten, und nicht nach dem Namen der Ressource.<br><br>Weitere Informationen finden Sie in den Dokumenten zur  [Erforschung von XDM-](../../xdm/ui/explore.md) Ressourcen und zum  [Verwalten von ](../../xdm/ui/resources/schemas.md) Schemata in der Benutzeroberfläche. |
+| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf der Registerkarte [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemas] und im Dialogfeld zur Schemafeldgruppenauswahl im Arbeitsbereich [!DNL Schema Editor] verfügbar.<br><br>Beim Suchen nach einem Begriff wurden bisher nur XDM-Ressourcen berücksichtigt, deren Name mit der Suchanfrage übereinstimmten. Nun werden zusätzlich zu diesen Ressourcen, deren Name mit der Suchanfrage übereinstimmt, auch die Ressourcen mit einbezogen, bei denen einzelne Attribute mit dem Begriff übereinstimmen. Auf diese Weise können Sie basierend auf den enthaltenen Attributen und nicht nur basierend auf dem Namen der Ressource nach XDM-Ressourcen suchen.<br><br>Weitere Informationen finden Sie in den Dokumenten zum [Kennenlernen von XDM-Ressourcen](../../xdm/ui/explore.md) und zum [Verwalten von Schemas](../../xdm/ui/resources/schemas.md) in der Benutzeroberfläche. |
 
-Weitere allgemeine Informationen zu XDM finden Sie unter [XDM-Systemübersicht](../../xdm/home.md).
+Weitere allgemeine Informationen zu XDM finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
 ## [!DNL Identity Service] {#identity}
 
 Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint.
 
-Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, eine bessere Ansicht Ihres Kundenverhaltens zu erzielen, indem Identitäten zwischen Geräten und Systemen überbrückt werden, sodass Sie in Echtzeit wirkungsvolle persönliche digitale Erlebnisse bereitstellen können.
+Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und ihr Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für effektive und persönliche digitale Erlebnisse sorgen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Identitätsdiagramm Viewer | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, sodass Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
+| Identitätsdiagramm Ansicht | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, wodurch Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
 
-Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Übersicht über den Identitätsdienst](../../identity-service/home.md).
+Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Identity Service – Übersicht](../../identity-service/home.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. [!DNL Profile] ermöglicht Ihnen die Konsolidierung von Kundendaten in einer einheitlichen Ansicht, die eine umsetzbare und zeitgestempelte Kundeninteraktion ermöglicht.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Berechnete Attribute (Alpha) | ***Hinweis: Diese Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Anschließend können Sie die Aggregat in Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Zähler, Summe, Durchschnitt, min, max, true/false. Berechnete Attribute stehen derzeit nur über die API zur Verfügung. Weitere Informationen finden Sie unter [Übersicht über berechnete Attribute](../../profile/computed-attributes/overview.md). |
+| Berechnete Attribute (Alphaversion) | ***Hinweis: Diese Funktion befindet sich derzeit in der Alphaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.*** <br/><br/>Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Anschließend können Sie die Aggregate in der Segmentierung, Aktivierung und Personalisierung verwenden. Einige Beispiele für diese Funktionen sind Anzahl, Summe, Durchschnitt, min, max, true/false. Berechnete Attribute stehen derzeit nur per API zur Verfügung. Weiterführende Informationen finden Sie unter [Berechnete Attribute – Übersicht](../../profile/computed-attributes/overview.md). |
 
-Weitere Informationen zum Echtzeit-Profil von Kunden, einschließlich Schulungen und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Profil von Kunden](../../profile/home.md).
+Für weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, lesen Sie zunächst [Echtzeit-Kundenprofil – Übersicht](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -129,7 +128,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Google PubSub] | Sie können [!DNL Google PubSub] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen finden Sie unter [[!DNL Google PubSub] Connector overview](../../sources/connectors/cloud-storage/google-pubsub.md). |
-| [!DNL Oracle Object Storage] | Sie können [!DNL Oracle Object Storage] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weitere Informationen finden Sie unter [[!DNL Oracle Object Storage] Connector overview](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
+| [!DNL Google PubSub] | Sie können [!DNL Google PubSub] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weiterführende Informationen dazu finden Sie unter [[!DNL Google PubSub] Connectoren – Übersicht](../../sources/connectors/cloud-storage/google-pubsub.md). |
+| [!DNL Oracle Object Storage] | Sie können [!DNL Oracle Object Storage] jetzt mit [!DNL Experience Platform] über die [!DNL Flow Service]-API oder die Benutzeroberfläche verbinden. Weiterführende Informationen dazu finden Sie unter [[!DNL Oracle Object Storage] Connectoren – Übersicht](../../sources/connectors/cloud-storage/oracle-object-storage.md). |
 
-Weitere allgemeine Informationen zu Quellen finden Sie im [Sources-Überblick](../../sources/home.md).
+Weitere allgemeine Informationen zu Quellen finden Sie unter [Quellen – Übersicht](../../sources/home.md).
