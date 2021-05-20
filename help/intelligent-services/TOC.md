@@ -8,7 +8,7 @@ feature: Data Science Workspace
 source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 36%
+ht-degree: 98%
 
 ---
 
@@ -19,29 +19,29 @@ ht-degree: 36%
 - [Daten für die Verwendung in Intelligent Services vorbereiten](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Übersicht](attribution-ai/overview.md)
-   - [Erste Schritte mit Attribution AI](attribution-ai/getting-started.md)
+   - [Erste Schritte mit Attributions-KI](attribution-ai/getting-started.md)
    - [Eingabe und Ausgabe](attribution-ai/input-output.md)
    - [Handbuch zur Benutzeroberfläche](attribution-ai/user-guide.md)
-   - [Discover-Einblicke](attribution-ai/discover-insights.md)
-   - [Download-Punktzahlen](attribution-ai/download-scores.md)
-   - [Bewertung mithilfe des Abfrage Service analysieren](attribution-ai/aai-query-service.md)
-- Content and Commerce AI (beta) {#content-commerce-ai}
+   - [Einblicke erlangen](attribution-ai/discover-insights.md)
+   - [Scores herunterladen](attribution-ai/download-scores.md)
+   - [Scores mithilfe von Query Service analysieren](attribution-ai/aai-query-service.md)
+- Content and Commerce AI (Beta) {#content-commerce-ai}
    - [Übersicht](content-commerce-ai/overview.md)
    - [Erste Schritte](content-commerce-ai/getting-started.md)
-   - API für Inhalts- und Commerce-API{#api}
-      - [Extraktion](content-commerce-ai/api/color-extraction.md)
-      - [Suchbegriff-Extraktion](content-commerce-ai/api/keyword-extraction.md)
+   - Content and Commerce AI-API {#api}
+      - [Farbextraktion](content-commerce-ai/api/color-extraction.md)
+      - [Keyword-Extraktion](content-commerce-ai/api/keyword-extraction.md)
       - [Textklassifizierung](content-commerce-ai/api/text-classification.md)
       - [Visuelle Ähnlichkeit](content-commerce-ai/api/visual-similarity.md)
-      - [Textpräsenz und Erkennung optischer Zeichen](content-commerce-ai/api/optical-character-recognition.md)
+      - [Textpräsenz- und optische Zeichenerkennung](content-commerce-ai/api/optical-character-recognition.md)
 - Customer AI {#customer-ai}
    - [Übersicht](customer-ai/overview.md)
-   - [Erste Schritte mit der Kunden-API](customer-ai/getting-started.md)
+   - [Erste Schritte in Kunden-KI](customer-ai/getting-started.md)
    - [Eingabe und Ausgabe](customer-ai/input-output.md)
-   - UI-Hilfslinien{#user-guide}
+   - Handbücher zur Benutzeroberfläche {#user-guide}
       - [Instanz konfigurieren](customer-ai/user-guide/configure.md)
-      - [Discover-Einblicke](customer-ai/user-guide/discover-insights.md)
-      - [Erstellen von Segmenten mit Kunden-AI-Ergebnissen](customer-ai/user-guide/create-segment.md)
-      - [Download-Punktzahlen](customer-ai/user-guide/download-scores.md)
+      - [Einblicke erlangen](customer-ai/user-guide/discover-insights.md)
+      - [Erstellen von Segmenten mit Scores von Kunden-KI](customer-ai/user-guide/create-segment.md)
+      - [Scores herunterladen](customer-ai/user-guide/download-scores.md)
    - [Fehlerbehebung](customer-ai/troubleshooting.md)
-- [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+- [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
