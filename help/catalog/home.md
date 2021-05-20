@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Katalogdienst;Katalog;Katalogdienst;Datenspeicherort;Datenposition;Data Management;Data Management;Lineage;Linie;Katalog;Datensatz aktivieren
+keywords: Experience Platform;Startseite;beliebte Themen;Katalog-Service;Katalog;Catalog-Service;Datenspeicherort;Datenspeicherort;Daten-Management;Daten-Management;Verlauf;Verlauf;Katalog;Datensatz aktivieren
 solution: Experience Platform
-title: Übersicht über den Katalogdienst
+title: Katalog-Service – Übersicht
 topic-legacy: overview
 description: Catalog Service ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in Experience Platform aufgenommen werden, werden als Dateien und Ordner im Data Lake gespeichert. Der Katalog wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '805'
-ht-degree: 43%
+ht-degree: 100%
 
 ---
 
 # [!DNL Catalog Service]Übersicht
 
-[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Experience Platform. Während alle Daten, die in [!DNL Experience Platform] aufgenommen werden, im [!DNL Data Lake] als Dateien und Ordner gespeichert werden, enthält [!DNL Catalog] die Metadaten und Beschreibungen dieser Dateien und Ordner für die Suche und Überwachung.
+[!DNL Catalog Service] ist ein Aufzeichnungssystem für Speicherort und Herkunft von Daten in Adobe Experience Platform. Alle Daten, die in [!DNL Experience Platform] aufgenommen werden, werden als Dateien und Ordner im [!DNL Data Lake] gespeichert. [!DNL Catalog] wiederum speichert die Metadaten und Beschreibungen dieser Dateien und Ordner für Such- und Überwachungszwecke.
 
-Einfach ausgedrückt: [!DNL Catalog] fungiert als Metadatenspeicher oder &quot;Katalog&quot;, in dem Sie Informationen zu Ihren Daten in [!DNL Experience Platform] finden können. Sie können [!DNL Catalog] verwenden, um die folgenden Fragen zu beantworten:
+Einfach ausgedrückt, dient [!DNL Catalog] als Metadatenspeicher oder „Katalog“, in dem Informationen zu allen in [!DNL Experience Platform] gespeicherten Daten abrufbar sind. Mithilfe von [!DNL Catalog] erhalten Sie Antworten auf folgende Fragen:
 
 * Wo befinden sich meine Daten?
 * Auf welcher Stufe der Verarbeitung befinden sich diese Daten?
@@ -25,43 +24,43 @@ Einfach ausgedrückt: [!DNL Catalog] fungiert als Metadatenspeicher oder &quot;K
 * Wie viele Daten wurden erfolgreich verarbeitet?
 * Welche Fehler sind bei der Verarbeitung aufgetreten?
 
-[!DNL Catalog] stellt eine RESTful-API bereit, mit der Sie  [!DNL Platform] Metadaten programmgesteuert mithilfe einfacher CRUD-Vorgänge verwalten können. Weitere Informationen finden Sie im [Katalog-Service-Entwicklerhandbuch](api/getting-started.md).
+Im Rahmen von [!DNL Catalog] steht eine RESTful-API zur Verfügung, mit deren Hilfe Sie [!DNL Platform]-Metadaten anhand von grundlegenden CRUD-Operationen programmgesteuert verwalten können. Weitere Informationen finden Sie im [Katalog-Service-Entwicklerhandbuch](api/getting-started.md).
 
-## [!DNL Catalog] und  [!DNL Experience Platform] Dienstleistungen
+## [!DNL Catalog]- und [!DNL Experience Platform]-Services
 
-Die Ressourcen, die von [!DNL Catalog Service] verfolgt werden, werden von mehreren [!DNL Experience Platform]-Diensten verwendet. Um die Funktionen von [!DNL Catalog's] optimal nutzen zu können, sollten Sie sich mit diesen Diensten und ihrer Interaktion mit [!DNL Catalog] vertraut machen.
+Die Ressourcen, die von [!DNL Catalog Service] verfolgt werden, werden von mehreren [!DNL Experience Platform]-Services verwendet. Um die Möglichkeiten von [!DNL Catalog's] optimal zu nutzen, sollten Sie sich mit diesen Services vertraut machen und auch damit, wie sie mit [!DNL Catalog] interagieren.
 
-### [!DNL Experience Data Model] (XDM) System
+### [!DNL Experience Data Model] (XDM)-System
 
-[!DNL Experience Data Model] (XDM) System ist das standardisierte Framework, mit dem Kundenerlebnisdaten  [!DNL Platform] organisiert werden. [!DNL Experience Platform]XDM-Schemas dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten.
+Das [!DNL Experience Data Model] (XDM)-System ist das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. [!DNL Experience Platform]XDM-Schemas dienen in zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten.
 
-Wenn Daten in [!DNL Platform] aufgenommen werden, wird die Struktur dieser Daten einem XDM-Schema zugeordnet und im [!DNL Data Lake]-Datensatz gespeichert. Die Metadaten für jeden Datensatz werden von [!DNL Catalog Service] verfolgt, was einen Verweis auf das XDM-Schema enthält, dem der Datensatz entspricht.
+Bei der Aufnahme von Daten in [!DNL Platform] wird die Struktur dieser Daten einem XDM-Schema zugeordnet und in [!DNL Data Lake] als Teil eines Datensatzes gespeichert. Die Metadaten der einzelnen Datensätze werden von [!DNL Catalog Service] dokumentiert, wobei ein Verweis auf das dem Datensatz entsprechende XDM-Schema enthalten ist.
 
 Informationen zum XDM-System im Allgemeinen finden Sie in der [Übersicht über das XDM-System](../xdm/home.md).
 
 ### [!DNL Data Ingestion]
 
-[!DNL Experience Platform] erfasst Daten aus mehreren Quellen und speichert Datensätze als Datensätze innerhalb der  [!DNL Data Lake]. [!DNL Catalog] verfolgt die Metadaten für diese Datensätze, unabhängig von ihrer Quelle oder Methode der Erfassung.
+[!DNL Experience Platform] nimmt Daten aus verschiedenen Quellen auf und legt diese Aufzeichnungen als Datensätze in [!DNL Data Lake] ab. Die Metadaten für diese Datensätze werden allesamt in [!DNL Catalog] dokumentiert, unabhängig von ihrer Quelle oder der Methode ihrer Aufnahme.
 
-Bei Verwendung der Stapelverarbeitungsmethode verfolgt [!DNL Catalog] auch zusätzliche Metadaten für Stapeldateien. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. [!DNL Catalog] verfolgt die Metadaten für diese Stapeldateien sowie die Datensätze, in denen sie nach der Erfassung beibehalten werden. Batch-Metadaten umfassen Informationen zur Anzahl der erfolgreich aufgenommenen Datensätze sowie zu fehlgeschlagenen Datensätzen und zugehörige Fehlermeldungen.
+Bei Verwendung der Batch-Erfassungsmethode werden in [!DNL Catalog] außerdem zusätzliche Metadaten für Batch-Dateien festgehalten. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. [!DNL Catalog] dokumentiert die Metadaten für diese Batch-Dateien sowie die Datensätze, in denen sie nach der Aufnahme festgehalten werden. Batch-Metadaten umfassen Informationen zur Anzahl der erfolgreich aufgenommenen Datensätze sowie zu fehlgeschlagenen Datensätzen und zugehörige Fehlermeldungen.
 
 Weitere Informationen finden Sie in der [Datenerfassung – Übersicht](../ingestion/home.md).
 
-## [!DNL Catalog] Objekte
+## [!DNL Catalog]-Objekte
 
-Wie im vorherigen Abschnitt erläutert, verfolgt [!DNL Catalog] Metadaten für verschiedene Arten von Ressourcen und Vorgängen, die von anderen [!DNL Platform]-Diensten verwendet werden. [!DNL Catalog] verwaltet einen eigenen Speicher von &quot;Objekten&quot;, die diese Metadaten kapseln. [!DNL Catalog] Objekte sind abfragliche Darstellungen von  [!DNL Platform] Daten, mit denen Sie Ihre Daten suchen, überwachen und beschriften können, ohne selbst auf die Daten zugreifen zu müssen.
+Wie im vorherigen Abschnitt erläutert, werden in [!DNL Catalog] Metadaten für verschiedene Arten von Ressourcen und Vorgänge dokumentiert, die von anderen [!DNL Platform]-Services genutzt werden. [!DNL Catalog] Der Katalog unterhält einen eigenen „Objektspeicher“, in dem diese Metadaten eingekapselt werden. [!DNL Catalog]-Objekte sind abfragbare Darstellungen von [!DNL Platform]-Daten, über die Sie Ihre Daten suchen, überwachen und beschriften können, ohne auf die Daten an sich zugreifen zu müssen.
 
-Die folgende Tabelle zeigt die verschiedenen Objekttypen, die von [!DNL Catalog] unterstützt werden:
+In der folgenden Tabelle sind die verschiedenen von [!DNL Catalog] unterstützten Objekttypen aufgeführt:
 
 | Objekt | API-Endpunkt | Definition |
 |---|---|---|
-| Konto | `/accounts` | Beim Erstellen von Quellverbindungen müssen Authentifizierungsberechtigungen angegeben werden. Ein Konto ist eine Sammlung von Anmeldeinformationen, die zur Authentifizierung für das Herstellen einer Verbindung bestimmten Typs verwendet wurden. Jede Verbindung verfügt über einen Satz eindeutiger Parameter, die von [!DNL Catalog] beibehalten und in einem [!DNL Azure Key Vault] gesichert werden. |
-| Batch | `/batches` | Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Ein Stapelobjekt in [!DNL Catalog] zeigt die Erfassungsmetriken des Stapels an (z. B. die Anzahl der verarbeiteten Datensätze oder die Größe auf der Festplatte) und kann auch Links zu Datensätzen, Ansichten und anderen Ressourcen enthalten, die von dem Stapelvorgang betroffen waren. |
+| Konto | `/accounts` | Beim Erstellen von Quellverbindungen müssen Authentifizierungsberechtigungen angegeben werden. Ein Konto ist eine Sammlung von Anmeldeinformationen, die zur Authentifizierung für das Herstellen einer Verbindung bestimmten Typs verwendet wurden. Jede Verbindung verfügt über einen Satz eindeutiger Parameter, die von [!DNL Catalog] festgehalten und in einem [!DNL Azure Key Vault] gesichert werden. |
+| Batch | `/batches` | Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Ein Batch-Objekt in [!DNL Catalog] erfasst Metriken zur Batch-Aufnahme (beispielsweise die Anzahl der verarbeiteten Datensätze oder ihre Größe auf der Festplatte) und kann außerdem Links zu Datensätzen, Ansichten und andere Ressourcen enthalten, die von der Batch-Operation betroffen waren. |
 | Verbindung | `/connections` | Eine Verbindung ist eine einzelne Instanz eines Quell-Connectors, die für Ihr Unternehmen eindeutig ist und unter Verwendung der entsprechenden Anmeldeinformationen zur Authentifizierung für den Connector-Typ konfiguriert wurde. |
-| Connector | `/connectors` | Connectors definieren, wie Quellverbindungen Daten aus anderen Anwendungen der Adobe (z. B. Adobe Analytics und Adobe Audience Manager), Cloud-Datenspeicherung von Drittanbietern (z. B. [!DNL Azure Blob], [!DNL Amazon S3], FTP-Server und SFTP-Server) und CRM-Systemen von Drittanbietern (z. B. [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfassen sollen. |
-| Datensatz | `/dataSets` | Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Weitere Informationen finden Sie unter [Übersicht über Datensätze](./datasets/overview.md). |
-| Datensatzdatei | `/datasetFiles` | Datenbearbeitungsdateien stellen Datenblöcke dar, die unter [!DNL Platform] gespeichert wurden. Sie stellen Aufzeichnungen von Literaldateien und liefern als solches Informationen zur Dateigröße, zur Anzahl der darin enthaltenen Datensätze und einen Verweis auf den Batch, in dem die Datei aufgenommen wurde. |
+| Connector | `/connectors` | Connectoren definieren, wie Quellverbindungen Daten aus anderen Adobe-Programmen (beispielsweise Adobe Analytics und Adobe Audience Manager), Cloud-Speichern von Drittanbietern (beispielsweise [!DNL Azure Blob], [!DNL Amazon S3], FTP-Server und SFTP-Server) und Drittanbieter-CRM-Systemen (beispielsweise [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfassen sollen. |
+| Datensatz | `/dataSets` | Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Weiterführende Informationen dazu finden Sie in der [Übersicht zu Datensätzen](./datasets/overview.md). |
+| Datensatzdatei | `/datasetFiles` | Datensatzdateien repräsentieren Datenblöcke, die auf [!DNL Platform] gespeichert wurden. Sie stellen Aufzeichnungen von Literaldateien und liefern als solches Informationen zur Dateigröße, zur Anzahl der darin enthaltenen Datensätze und einen Verweis auf den Batch, in dem die Datei aufgenommen wurde. |
 
 ## Nächste Schritte
 
-Dieses Dokument gab eine Einführung in [!DNL Catalog Service] und wie es im größeren Bereich von [!DNL Experience Platform] funktioniert. Anweisungen zur Interaktion mit den verschiedenen Endpunkten dieser [!DNL Catalog]-API finden Sie im [[!DNL Catalog] Entwicklerhandbuch](api/getting-started.md). Es wird empfohlen, auch das Handbuch zum Thema [Filtern von Katalogdaten](api/filter-data.md) durchzugehen, da darin Best Practices für die Beschränkung der in API-Antworten zurückgegebenen Daten erläutert werden.
+Dieses Dokument diente als Einführung in [!DNL Catalog Service] und seine Funktionsweise in [!DNL Experience Platform]. Die einzelnen Schritte für die Interaktion mit den verschiedenen Endpunkten der zugehörigen [!DNL Catalog]-API finden Sie im [[!DNL Catalog] Entwicklerhandbuch](api/getting-started.md). Es wird empfohlen, auch das Handbuch zum Thema [Filtern von Katalogdaten](api/filter-data.md) durchzugehen, da darin Best Practices für die Beschränkung der in API-Antworten zurückgegebenen Daten erläutert werden.
