@@ -1,52 +1,51 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Datenposition;Datenposition;Data Management;Data Management;Lineage;Linie;Batch;Stapel;Ingetierte Daten
+keywords: Experience Platform;Startseite;beliebte Themen;Datenaufnahme;Datenspeicherort;Datenspeicherort;Daten-Management;Daten-Management;Abstammung;Abstammung;Batch;Batch;erfasste Daten
 solution: Experience Platform
-title: Übersicht über die Dateneinbindung
+title: Datenerfassung – Übersicht
 topic-legacy: overview
-description: In diesem Dokument werden die drei Hauptwege für die Dateneinbindung in die Plattform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten für weitere Informationen.
+description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '461'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
 # Datenerfassung – Übersicht
 
-Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Adobe Experience Platform Data Ingestion stellt die verschiedenen Methoden dar, mit denen [!DNL Platform] Daten aus diesen Quellen erfasst und wie diese Daten im Data Lake für die Verwendung durch nachgelagerte [!DNL Platform]-Dienste beibehalten werden.
+Adobe Experience Platform bringt Daten aus mehreren Quellen zusammen, um Marketern ein besseres Verständnis des Verhaltens ihrer Kunden zu ermöglichen. Die Datenaufnahme in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen [!DNL Platform] Daten aus den Quellen erfasst, sowie die Art und Weise, wie die Daten im Data Lake zur Verwendung durch nachgelagerte [!DNL Platform]-Services persistiert werden.
 
-In diesem Dokument werden die drei Hauptwege für die Erfassung von Daten in [!DNL Platform] mit Links zu den jeweiligen Übersichtsdokumenten vorgestellt.
+In diesem Dokument werden die drei Hauptwege für die Aufnahme von Daten in [!DNL Platform] mit Links zu den jeweiligen Übersichtsdokumenten vorgestellt, in denen Sie weitere Informationen finden.
 
 ## Batch-Erfassung
 
-Mit der Stapelverarbeitung können Sie Daten als Stapeldateien in [!DNL Experience Platform] erfassen. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Nach der Erfassung stellen Batches Metadaten bereit, die die Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen beschreiben.
+Die Batch-Aufnahme erlaubt Ihnen das Erfassen von Daten in [!DNL Experience Platform] in Form von Batch-Dateien. Batches sind Dateneinheiten aus einer oder mehreren Dateien, die als Ganzes aufgenommen werden. Nach der Erfassung stellen Batches Metadaten bereit, die die Anzahl der erfolgreich erfassten Datensätze sowie alle fehlgeschlagenen Datensätze und zugehörigen Fehlermeldungen beschreiben.
 
-Manuell hochgeladene Datendateien wie flache CSV-Dateien (XDM-Schemas zugeordnet) und Parquet-Datenbilder müssen mit dieser Methode erfasst werden.
+Manuell hochgeladene Datendateien wie CSV-Flatfiles (die XDM-Schemata zugeordnet sind) und Parquet-Daten-Frames müssen mit dieser Methode erfasst werden.
 
-Weitere Informationen finden Sie unter [Überblick über die Stapelverarbeitung](./batch-ingestion/overview.md).
+Weitere Informationen finden Sie in der [Übersicht zur Batch-Aufnahme](./batch-ingestion/overview.md).
 
 ## Streaming-Erfassung
 
-Mit der Streaming-Erfassung können Sie Daten von client- und serverseitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. [!DNL Platform] unterstützt die Verwendung von Dateneinlässen zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Dateneingänge können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
+Mit der Streaming-Aufnahme können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an [!DNL Experience Platform] senden. [!DNL Platform] unterstützt die Verwendung von Daten-Inlets zum Streamen eingehender Erlebnisdaten, die in Streaming-fähigen Datensätzen im Data Lake beibehalten werden. Daten-Inlets können so konfiguriert werden, dass die von ihnen erfassten Daten automatisch authentifiziert werden, sodass sichergestellt ist, dass die Daten von einer vertrauenswürdigen Quelle stammen.
 
-Weitere Informationen finden Sie unter [Streaming-Erfassungsübersicht](./streaming-ingestion/overview.md).
+Weiterführende Informationen dazu finden Sie in unter [Streaming-Aufnahme – Übersicht](./streaming-ingestion/overview.md).
 
 ## Quellen
 
-[!DNL Experience Platform] ermöglicht es Ihnen, Quellverbindungen zu verschiedenen Datenanbietern einzurichten. Mit diesen Verbindungen können Sie sich bei Ihren externen Datenquellen authentifizieren, Zeiten für die Erfassung festlegen und den Erfassungsdurchsatz verwalten.
+[!DNL Experience Platform] ermöglicht es Ihnen, Quellverbindungen zu verschiedenen Datenanbietern einzurichten. Mit diesen Verbindungen können Sie sich bei Ihren externen Datenquellen authentifizieren, Zeiten für die Aufnahme festlegen und den Aufnahmedurchsatz verwalten.
 
-Quellverbindungen können so konfiguriert werden, dass Daten aus anderen Anwendungen der Adobe (z. B. Adobe Analytics und Adobe Audience Manager), Cloud-Datenspeicherung von Drittanbietern (z. B. [!DNL Azure Blob], [!DNL Amazon] S3-, FTP- und SFTP-Server) und CRM-Systemen von Drittanbietern (z. B. [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfasst werden.
+Quellverbindungen können so konfiguriert sein, dass Daten aus anderen Adobe-Programmen (beispielsweise Adobe Analytics und Adobe Audience Manager), Cloud-Speichern von Drittanbietern (beispielsweise [!DNL Azure Blob], [!DNL Amazon] S3, FTP-Server und SFTP-Server) und Drittanbieter-CRM-Systemen (beispielsweise [!DNL Microsoft Dynamics] und [!DNL Salesforce]) erfasst werden.
 
-Weitere Informationen finden Sie unter [Übersicht über Quellen](../sources/home.md).
+Weiterführende Informationen dazu finden Sie in der [Übersicht zu Quellen](../sources/home.md).
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Dieses Dokument bietet eine kurze Einführung zu den verschiedenen Aspekten von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie weiterhin die Übersichtsdokumentation für jede Erfassungsmethode, um sich mit ihren verschiedenen Fähigkeiten, Anwendungsfällen und Best Practices vertraut zu machen. Sie können Ihr Lernen auch ergänzen, indem Sie sich das unten stehende Video zur Erfassung ansehen. Weitere Informationen dazu, wie [!DNL Experience Platform] die Metadaten nach erfassten Datensätzen verfolgt, finden Sie unter [Übersicht über den Katalogdienst](../catalog/home.md).
+Dieses Dokument bietet eine kurze Einführung in die verschiedenen Aspekte von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie darüber hinaus die Übersichtsdokumentation für jede Aufnahmemethode, um sich mit deren verschiedenen Funktionen, Anwendungsfällen und Best Practices vertraut zu machen. Sie können sich als Ergänzung zum Lernen auch das nachfolgende Video zur Aufnahme ansehen.  Weitere Informationen dazu, wie [!DNL Experience Platform] die Metadaten nach erfassten Datensätzen verfolgt, finden Sie unter [Übersicht über den Katalog-Service](../catalog/home.md).
 
 >[!WARNING]
 >
->Der Begriff &quot;Einheitliches Profil&quot;, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die korrekten Begriffe, die in der [!DNL Experience Platform]-Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
+>Der Begriff „Unified Profile“, der im folgenden Video verwendet wird, ist veraltet. Die Begriffe [!DNL "Profile"] oder [!DNL "Real-time Customer Profile"] sind die korrekten Begriffe, die in der [!DNL Experience Platform]-Dokumentation verwendet werden. Die neuesten Funktionen finden Sie in der Dokumentation.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
