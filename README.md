@@ -1,12 +1,12 @@
 ---
 source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
+translation-type: ht
 source-wordcount: '508'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
-# Beitrag zum Inhalt
+# Bereitstellen von Inhalten
 
 Wir freuen uns über Inhaltsbeiträge unserer Community und von Adobe-Mitarbeitern außerhalb der Dokumentationsteams.
 
@@ -14,9 +14,9 @@ Wir freuen uns über Inhaltsbeiträge unserer Community und von Adobe-Mitarbeite
 
 Für dieses Projekt gilt der [Adobe Open Source-Verhaltenskodex](code-of-conduct.md) oder der [.NET Foundation-Verhaltenskodex](https://dotnetfoundation.org/code-of-conduct). Weitere Informationen finden Sie im Artikel [Beitragen](contributing.md).
 
-## Möglichkeiten zum Beitrag zu Adoben
+## Möglichkeiten zum Bereitstellen von Adobe-Inhalten
 
-Lesen Sie das [Adobe Docs-Mitarbeiter-Handbuch](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=en).
+Lesen Sie das [Adobe Docs-Mitarbeiter-Handbuch](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de).
 
 Wie Sie Beiträge einbringen, hängt davon ab, wer Sie sind und welche Art von Änderungen Sie beitragen möchten:
 
@@ -36,15 +36,15 @@ Wenn Sie Mitglied der Adobe-Community sind und einen Artikel erstellen oder umfa
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
 -->
 
-### Wichtige Änderungen oder neue Artikel von Adobe-Mitarbeitern
+### Umfassende Änderungen oder neue Artikel von Adobe-Mitarbeitern
 
-Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen finden Sie im [Handbuch zur internen Zusammenarbeit](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en).
+Wenn Sie technischer Redakteur, Programmmanager oder Entwickler des Produktteams für eine Adobe Experience Cloud-Lösung sind und es Ihr Auftrag ist, technische Artikel zu erstellen oder zu diesen beizutragen, sollten Sie das private Repository unter `https://git.corp.adobe.com/AdobeDocs` verwenden. Weitere Informationen dazu finden Sie im [Handbuch zur internen Zusammenarbeit](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Kontakt zum Dokumentationsteam der Experience Platform
+## Kontakt zum Dokumentations-Team von Experience Platform
 
-Wie bereits erwähnt, können Mitglieder der Community eine Ausgabe einreichen, die dem jeweiligen Autor zugewiesen wird. Wenn Sie ein Mitarbeiter der Adobe sind, können Sie eine Ausgabe einreichen oder sich direkt an das Dokumentationsteam der Experience Platform wenden. Den Interessentenautor für einen bestimmten Plattformbereich finden Sie im [Adobe Experience Platform Documentation wiki](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Wie bereits erwähnt, können Mitglieder der Adobe-Community ein Thema einreichen, das dem jeweiligen Autor zugewiesen wird. Wenn Sie ein Adobe-Mitarbeiter sind, können Sie ein Thema einreichen oder sich direkt an das Dokumentations-Team von Experience Platform wenden. Den leitenden Autor für einen bestimmten Bereich von Adobe Platform finden Sie im [Dokumentations-Wiki zu Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Werkzeuge und Einrichtung
 
@@ -52,7 +52,7 @@ Wie bereits erwähnt, können Mitglieder der Community eine Ausgabe einreichen, 
 
 Community-Mitarbeiter können die GitHub-Benutzeroberfläche zur einfachen Bearbeitung oder zur Abspaltung des Repositorys verwenden, um umfangreiche Beiträge vorzunehmen.
 
-Weitere Informationen finden Sie im [Adobe Docs-Mitarbeiter-Handbuch](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Weitere Informationen finden Sie im [Adobe Docs-Mitarbeiter-Handbuch](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=de).
 
 ### Markdown
 
@@ -61,7 +61,7 @@ Alle Artikel in diesem Repository verwenden GitHub Flavored Markdown. Wenn Sie m
 * [Markdown-Grundlagen](https://help.github.com/articles/getting-started-with-writing-and-formatting-on-github/)
 * [Druckbares Markdown-Cheatsheet](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
-### Bezeichnungen
+### Beschriftungen
 
 Im öffentlichen Repository werden automatisierte Bezeichnungen Pull-Anforderungen zugewiesen, damit wir den Arbeitsablauf für Pull-Anforderungen verwalten und Ihnen mitteilen können, was mit Ihrer Pull-Anforderung passiert:
 
