@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datensatzapi;Datenverwendung verwalten;Datenverwendungs-API
+keywords: Experience Platform;Startseite;beliebte Themen;Datensatz-API;Datenverwendung verwalten;Datenverwendungs-API
 solution: Experience Platform
-title: 'Verwalten von Datennutzungsbeschriftungen für Datasets mithilfe von APIs '
+title: 'Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs '
 topic-legacy: developer guide
-description: Mit der DataSet-Dienst-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Funktionen des Adobe Experience Platform-Datenkatalogs, ist jedoch von der Katalogdienst-API getrennt, die die Metadaten des Datensatzes verwaltet.
+description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Verwalten von Datenverwendungsbeschriftungen für Datasets mithilfe von APIs
+# Verwalten von Datennutzungskennzeichnungen für Datensätze mithilfe von APIs
 
-Mit [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service]-API getrennt, die DataSet-Metadaten verwaltet.
+Mit [[!DNL Dataset Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) können Sie Nutzungskennzeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service]-API getrennt, die Datensatz-Metadaten verwaltet.
 
-In diesem Dokument wird beschrieben, wie Sie Beschriftungen für Datensätze und Felder mit dem [!DNL Dataset Service API] verwalten. Anweisungen zum Verwalten von Datenverwendungsbeschriftungen selbst mithilfe von API-Aufrufen finden Sie im Endpunktleitfaden [Beschriftungen](../api/labels.md) für das [!DNL Policy Service API].
+In diesem Dokument wird beschrieben, wie Sie Kennzeichnungen für Datensätze und Felder mit der [!DNL Dataset Service API] verwalten. Anweisungen zum Verwalten von Datennutzungskennzeichnungen selbst mithilfe von API-Aufrufen finden Sie im [Handbuch zu Endpunktkennzeichnungen](../api/labels.md) für die [!DNL Policy Service API].
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog Developer-Handbuch beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe an [!DNL Platform]-APIs zu sammeln.
+Bevor Sie dieses Handbuch lesen, führen Sie die Schritte aus, die im Abschnitt [Erste Schritte](../../catalog/api/getting-started.md) im Catalog-Entwicklerhandbuch beschrieben sind, um die erforderlichen Anmeldeinformationen für Aufrufe an [!DNL Platform]-APIs zu sammeln.
 
-Um die in diesem Dokument beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id`-Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch [Auflistung der Katalogobjekte](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
+Um die in diesem Dokument beschriebenen Endpunkte aufrufen zu können, müssen Sie über den eindeutigen `id`-Wert für einen bestimmten Datensatz verfügen. Wenn Sie diesen Wert nicht haben, finden Sie im Handbuch [Auflistung der Catalog-Objekte](../../catalog/api/list-objects.md) die IDs der vorhandenen Datensätze.
 
-## Suchen Sie nach Beschriftungen für einen Datensatz {#look-up}
+## Suchen nach Kennzeichnungen für einen Datensatz {#look-up}
 
-Sie können die Datenverwendungsbeschriftungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET an die API [!DNL Dataset Service] anfordern.
+Sie können die Datennutzungskennzeichnungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anfrage an die [!DNL Dataset Service]-API stellen.
 
 **API-Format**
 
@@ -37,7 +36,7 @@ GET /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige Wert von `id` des Datensatzes, dessen Beschriftungen Sie nachschlagen möchten. |
+| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, dessen Kennzeichnungen Sie nachschlagen möchten. |
 
 **Anfrage**
 
@@ -52,7 +51,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Datenverwendungsbeschriftungen zurück, die auf den Datensatz angewendet wurden.
+Eine erfolgreiche Antwort gibt die Datennutzungsbeschriftungen zurück, die auf den Datensatz angewendet wurden.
 
 ```json
 {
@@ -75,12 +74,12 @@ Eine erfolgreiche Antwort gibt die Datenverwendungsbeschriftungen zurück, die a
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `labels` | Eine Liste von Datenverwendungsbeschriftungen, die auf den Datensatz angewendet wurden. |
-| `optionalLabels` | Eine Liste einzelner Felder im Datensatz, auf die Datenverwendungsbeschriftungen angewendet wurden. |
+| `labels` | Eine Liste von Datennutzungsbeschriftungen, die auf den Datensatz angewendet wurden. |
+| `optionalLabels` | Eine Liste einzelner Felder im Datensatz, auf die Datennutzungsbeschriftungen angewendet werden bzw. wurden. |
 
-## Anwenden von Beschriftungen auf einen Datensatz {#apply}
+## Anwenden von Kennzeichnungen auf einen Datensatz {#apply}
 
-Sie können einen Satz von Bezeichnungen für ein Dataset erstellen, indem Sie sie in der Nutzlast einer POST oder einer PUT-Anforderung an die [!DNL Dataset Service]-API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
+Sie können einen Satz von Kennzeichnungen für einen Datensatz erstellen, indem Sie sie in der Payload einer POST- oder PUT-Anfrage an die [!DNL Dataset Service]-API bereitstellen. Wenn Sie eine dieser Methoden verwenden, werden vorhandene Beschriftungen überschrieben und durch die in der Payload bereitgestellten ersetzt.
 
 **API-Format**
 
@@ -91,15 +90,15 @@ PUT /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige Wert von `id` des Datensatzes, für den Sie Beschriftungen erstellen. |
+| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, für den Sie Kennzeichnungen erstellen. |
 
 **Anfrage**
 
-Mit der folgenden PUT-Anforderung werden die vorhandenen Bezeichnungen für einen Datensatz sowie ein bestimmtes Feld in diesem Datensatz aktualisiert. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine Anforderung der POST erforderlich sind.
+Mit der folgenden PUT-Anfrage werden die vorhandenen Kennzeichnungen für einen Datensatz sowie ein bestimmtes Feld in diesem Datensatz aktualisiert. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine POST-Anfrage erforderlich wären.
 
 >[!IMPORTANT]
 >
->Eine gültige `If-Match`-Kopfzeile muss bereitgestellt werden, wenn PUT-Anforderungen an den `/datasets/{DATASET_ID}/labels`-Endpunkt gesendet werden. Weitere Informationen zur Verwendung der erforderlichen Kopfzeile finden Sie im Abschnitt [Anhang](#if-match).
+>Es muss eine gültige `If-Match`-Kopfzeile bereitgestellt werden, wenn PUT-Anfragen an den `/datasets/{DATASET_ID}/labels`-Endpunkt gesendet werden. Weitere Informationen zur Verwendung der erforderlichen Kopfzeile finden Sie im Abschnitt [Anhang](#if-match).
 
 ```shell
 curl -X PUT \
@@ -127,12 +126,12 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `labels` | Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Datensatz hinzufügen möchten. |
-| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen: <br/><br/>`option`: Ein Objekt, das die Attribute [!DNL Experience Data Model] (XDM) des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI $id</code>-Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Inhaltstyp und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datenverwendungsbeschriftungen, die Sie dem Feld hinzufügen möchten. |
+| `labels` | Eine Liste von Datennutzungsbeschriftungen, die Sie dem Datensatz hinzufügen möchten. |
+| `optionalLabels` | Eine Liste der einzelnen Felder im Datensatz, denen Sie Beschriftungen hinzufügen möchten. Jedes Element in diesem Array muss die folgenden Eigenschaften aufweisen :<br/><br/>`option`Ein Objekt, das die [!DNL Experience Data Model] (XDM)-Attribute des Felds enthält. Die folgenden drei Eigenschaften sind erforderlich:<ul><li>id</code>: Der URI-$id</code>-Wert des Schemas, das dem Feld zugeordnet ist.</li><li>contentType</code>: Der Content-Typ und die Versionsnummer des Schemas. Dies sollte in Form eines der gültigen <a href="../../xdm/api/getting-started.md#accept">Accept-Header</a> für eine XDM-Suchanfrage erfolgen.</li><li>schemaPath</code>: Der Pfad zum Feld im Schema des Datensatzes.</li></ul>`labels`: Eine Liste von Datennutzungskennzeichnungen, die Sie zu dem Feld hinzufügen möchten. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Beschriftungen zurück, die dem Datensatz hinzugefügt wurden.
+Eine erfolgreiche Antwort gibt die Kennzeichnungen zurück, die dem Datensatz hinzugefügt wurden.
 
 ```json
 {
@@ -150,9 +149,9 @@ Eine erfolgreiche Antwort gibt die Beschriftungen zurück, die dem Datensatz hin
 }
 ```
 
-## Entfernen von Bezeichnungen aus einem Datensatz {#remove}
+## Entfernen von Kennzeichnungen aus einem Datensatz {#remove}
 
-Sie können die auf einen Datensatz angewendeten Beschriftungen entfernen, indem Sie eine DELETE-Anforderung an die API [!DNL Dataset Service] stellen.
+Sie können die auf einen Datensatz angewendeten Kennzeichnungen entfernen, indem Sie eine DELETE-Anfrage an die [!DNL Dataset Service]-API stellen.
 
 **API-Format**
 
@@ -162,15 +161,15 @@ DELETE /datasets/{DATASET_ID}/labels
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATASET_ID}` | Der eindeutige Wert von `id` des Datensatzes, dessen Beschriftungen Sie entfernen möchten. |
+| `{DATASET_ID}` | Der eindeutige `id`-Wert des Datensatzes, dessen Kennzeichnungen Sie entfernen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung entfernt die Beschriftungen für den Datensatz, der im Pfad angegeben ist.
+Die folgende Anfrage entfernt die Kennzeichnungen für den Datensatz, der im Pfad angegeben ist.
 
 >[!IMPORTANT]
 >
->Eine gültige `If-Match`-Kopfzeile muss bereitgestellt werden, wenn DELETE-Anforderungen an den `/datasets/{DATASET_ID}/labels`-Endpunkt gesendet werden. Weitere Informationen zur Verwendung der erforderlichen Kopfzeile finden Sie im Abschnitt [Anhang](#if-match).
+>Es muss eine gültige `If-Match`-Kopfzeile bereitgestellt werden, wenn DELETE-Anfragen an den `/datasets/{DATASET_ID}/labels`-Endpunkt gesendet werden. Weitere Informationen zur Verwendung der erforderlichen Kopfzeile finden Sie im Abschnitt [Anhang](#if-match).
 
 ```shell
 curl -X DELETE \
@@ -184,28 +183,28 @@ curl -X DELETE \
 
 **Antwort**
 
-Ein erfolgreicher HTTP-Status 200 (OK), der angibt, dass die Beschriftungen entfernt wurden. Sie können [die vorhandenen Bezeichnungen](#look-up) für den Datensatz in einem separaten Aufruf nachschlagen, um dies zu bestätigen.
+HTTP-Status 200 (OK) einer erfolgreichen Antwort, der angibt, dass die Kennzeichnungen entfernt wurden. Sie können die vorhandenen Bezeichnungen für den Datensatz in einem separaten Aufruf [nachschlagen](#look-up), um dies zu bestätigen.
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der API [!DNL Dataset Service] Datenverwendungsbeschriftungen für Datensätze und Felder verwalten können.
+Durch das Lesen dieses Dokuments haben Sie gelernt, wie Sie mit der [!DNL Dataset Service]-API Datennutzungskennzeichnungen für Datensätze und Felder verwalten können.
 
-Nachdem Sie Datenverwendungsbeschriftungen auf der Dataset- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in [!DNL Experience Platform] zu erfassen. Weitere Informationen erhalten Sie im Beginn in der [Datenerhebungsdokumentation](../../ingestion/home.md).
+Nachdem Sie Datennutzungskennzeichnungen auf der Datensatz- und Feldebene hinzugefügt haben, können Sie beginnen, Daten in [!DNL Experience Platform] aufzunehmen. Um mehr darüber zu erfahren, lesen Sie zunächst die [Dokumentation zur Datenaufnahme](../../ingestion/home.md).
 
-Sie können jetzt auch Datenverwendungsrichtlinien auf Basis der von Ihnen angewendeten Beschriftungen definieren. Weitere Informationen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../policies/overview.md).
+Sie können jetzt auch Datennutzungsrichtlinien auf Basis der von Ihnen angewendeten Kennzeichnungen definieren. Weitere Informationen finden Sie unter [Datennutzungsrichtlinien – Übersicht](../policies/overview.md).
 
-Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform] finden Sie unter [Übersicht über Datensätze](../../catalog/datasets/overview.md).
+Weitere Informationen zum Verwalten von Datensätzen in [!DNL Experience Platform] finden Sie unter [Datensätze – Übersicht](../../catalog/datasets/overview.md).
 
 ## Anhang {#appendix}
 
-Der folgende Abschnitt enthält weitere Informationen zum Arbeiten mit Beschriftungen mithilfe der DataSet-Dienst-API.
+Der folgende Abschnitt enthält weitere Informationen zum Arbeiten mit Kennzeichnungen mithilfe der Dataset Service-API.
 
-### [!DNL If-Match]-Kopfzeile{#if-match}
+### [!DNL If-Match]-Kopfzeile {#if-match}
 
-Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Bezeichnungen eines Datensatzes (PUT und DELETE) aktualisieren, muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für die Datensatzbeschriftung im DataSet-Dienst angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Dienst die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Version-Tag übereinstimmt.
+Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines Datensatzes aktualisieren (PUT und DELETE), muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für die Datensatzkennzeichnung in Dataset Service angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Dienst die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
 
 >[!NOTE]
 >
->Wenn für den betreffenden Datensatz derzeit keine Beschriftungen vorhanden sind, können neue Beschriftungen nur über eine Anforderung zur POST hinzugefügt werden, für die keine `If-Match`-Kopfzeile erforderlich ist. Nachdem einem Datensatz Beschriftungen hinzugefügt wurden, wird ein `etag`-Wert zugewiesen, mit dem die Beschriftungen zu einem späteren Zeitpunkt aktualisiert oder entfernt werden können.
+>Wenn für den betreffenden Datensatz derzeit keine Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine POST-Anfrage hinzugefügt werden, wofür keine `If-Match`-Kopfzeile erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, wird ihm ein `etag`-Wert zugewiesen, mit dem die Kennzeichnungen zu einem späteren Zeitpunkt aktualisiert oder entfernt werden können.
 
-Um die neueste Version der dataset-label-Entität abzurufen, erstellen Sie eine [GET request](#look-up) bis zum `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einem `etag`-Header zurückgegeben. Beim Aktualisieren vorhandener Datensatzbeschriftungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT- oder DELETE-Anforderung verwenden.
+Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT- oder DELETE-Anfrage verwenden.
