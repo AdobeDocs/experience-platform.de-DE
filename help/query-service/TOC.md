@@ -3,12 +3,11 @@ audience: user
 user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
-feature: Queries
-translation-type: tm+mt
+feature: Abfragen
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -24,25 +23,25 @@ ht-degree: 69%
    - [Geplante Abfragen](api/scheduled-queries.md)
    - [Ausführungen für geplante Abfragen](api/runs-scheduled-queries.md)
    - [Abfragevorlagen](api/query-templates.md)
-- Benutzeroberfläche des Abfrage-Dienstes {#ui}
-   - [UI-Übersicht](ui/overview.md)
+- Benutzeroberfläche von Query Service {#ui}
+   - [Benutzeroberfläche – Übersicht](ui/overview.md)
    - [Benutzerhandbuch zum Abfrage-Editor](ui/user-guide.md)
-   - [Generieren von Datensätzen aus Abfragen](ui/create-datasets.md)
+   - [Generieren von Datensätzen aus Abfrageergebnissen](ui/create-datasets.md)
 - Best Practices {#best-practices}
    - [Allgemeine Leitlinien für die Ausführung von Abfragen](best-practices/writing-queries.md)
-   - [Data Deduplizierung-Duplikate](best-practices/deduplication.md)
-   - [Beispielerlebnis-Ereignis-Abfragen](best-practices/experience-event-queries.md)
-   - [Adobe Analytics-Abfragen](best-practices/adobe-analytics.md)
-   - [Adobe Target-Abfragen](best-practices/adobe-target.md)
+   - [Deduplizierung von Daten](best-practices/deduplication.md)
+   - [Beispielabfragen von Erlebnisereignissen](best-practices/experience-event-queries.md)
+   - [Beispielabfragen von Adobe Analytics](best-practices/adobe-analytics.md)
+   - [Beispielabfragen von Adobe Target](best-practices/adobe-target.md)
 - SQL-Referenz {#sql}
    - [SQL-Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)
    - [Adobe-definierte Funktionen](sql/adobe-defined-functions.md)
    - [Spark SQL-Funktionen](sql/spark-sql-functions.md)
-   - [Metadaten, Befehle](sql/metadata.md)
+   - [Metadatenbefehle](sql/metadata.md)
    - [Vorbereitete Anweisungen](sql/prepared-statements.md)
 - Clients mit Query Service verbinden {#clients}
-   - [Überblick über Kundenverbindungen](clients/overview.md)
+   - [Kundenverbindungen – Überblick](clients/overview.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [Looker](clients/looker.md)
    - [Postico (Mac)](clients/postico.md)
@@ -52,4 +51,4 @@ ht-degree: 69%
    - [Tableau](clients/tableau.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
-- [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+- [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
