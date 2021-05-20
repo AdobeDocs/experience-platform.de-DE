@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;Home;Intelligente Dienste;beliebte Themen;Intelligenter Dienst;Intelligente Dienste
+keywords: Experience Platform;Home;Intelligent Services;beliebte Themen;Intelligent Service;Intelligent Service
 solution: Experience Platform, Intelligent Services
-title: Übersicht über intelligente Dienste
+title: Intelligent Services – Übersicht
 topic-legacy: Intelligent Services overview
 description: Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketing-Experten Prognosen in Adobe Experience Cloud, Adobe Experience Platform und Anwendungen anderer Anbieter aktivieren.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '502'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
 # Intelligent Services – Übersicht
 
-Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketingfachleute Prognosen in Anwendungen von [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] und Drittanbietern aktivieren.
+Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich ist. Darüber hinaus können Marketing-Experten Prognosen in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] und Programmen anderer Anbieter aktivieren.
 
-Das folgende Video unterstützt Sie dabei, Intelligente Dienste besser zu verstehen. In diesem Video, das Beispielfälle für geschäftliche Nutzung enthält, wird ein Workflow auf hoher Ebene erläutert und die Funktionen von Attribution AI und Customer AI erläutert.
+Das folgende Video soll Ihnen dabei helfen, Intelligent Services besser zu verstehen. In diesem Video werden anhand von Beispielfällen für geschäftliche Nutzung ein Arbeitsablauf auf hoher Ebene sowie die Funktionen von Attributions-KI und Kunden-KI erläutert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Vorteile von Intelligent Services
 
-Intelligente Dienste, die auf [!DNL Adobe Experience Platform] basieren, bieten Marketingexperten, die für die Kundenerfahrung verantwortlich sind, Zugriff auf AI-as-a-Service, sodass jeder das Kundenverhalten vorhersagen, die Auswirkungen einer Kampagne messen oder eine bessere Rendite für jede Investition sicherstellen kann. Nachstehend sind einige der Vorteile aufgeführt, die Intelligent Services bietet.
+Intelligent Services basieren auf [!DNL Adobe Experience Platform] und bieten Marketing-Experten, die für das Kundenerlebnis verantwortlich sind, Zugriff auf AI-as-a-Service. So kann jeder das Kundenverhalten vorhersagen, die Auswirkungen einer Kampagne messen oder bessere Renditen für Investitionen sicherstellen. Nachstehend sind einige der Vorteile aufgeführt, die Intelligent Services bietet.
 
 ### Kosteneffiziente Markteinführung
 
@@ -41,7 +40,7 @@ Ermöglichen Sie Marketing-Experten, sofort mit KI/ML zu beginnen und die Market
 
 ### Erfassen
 
-Kundendaten werden mit dem Experience Data Model (XDM) auf [!DNL Adobe Experience Platform] erfasst und transformiert. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../xdm/home.md).
+Kundendaten werden mit dem Experience-Datenmodell (XDM) in [!DNL Adobe Experience Platform] erfasst und transformiert. Weitere Informationen zu XDM finden Sie in [XDM – Übersicht](../xdm/home.md).
 
 ### Konfigurieren
 
@@ -53,7 +52,7 @@ Nachdem die Modelle Training und Bewertung abgeschlossen haben, werden die Ergeb
 
 ### Handeln
 
-Schließlich können Sie festlegen, welche Aktionen mit den Prognosen ausgeführt werden sollen, z. B. Einblicke verbrauchen, Anwendungen über das [!DNL Adobe Experience Cloud] aktivieren und benutzerdefinierte Dashboard erstellen.
+Schließlich können Sie anhand der Vorhersagen entscheiden, welche Aktionen durchgeführt werden sollen, beispielsweise die Nutzung von Einblicken, die Aktivierung von Programmen in [!DNL Adobe Experience Cloud] und die Erstellung benutzerdefinierter Dashboards.
 
 ## Nächste Schritte
 
