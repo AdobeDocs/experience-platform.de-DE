@@ -1,49 +1,48 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen
+keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
-title: Handbuch zur Policy Service API
+title: Handbuch zur Richtlinien-Service-API
 topic-legacy: developer guide
-description: Die Policy-Service-API ermöglicht es Entwicklern, Datenverwendungsbeschriftungen und -richtlinien in der Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '504'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# [!DNL Policy Service] API-Handbuch
+# [!DNL Policy Service]-API-Handbuch
 
-Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datenverwendung sicherstellen. Es spielt eine Schlüsselrolle innerhalb von [!DNL Experience Platform] auf verschiedenen Ebenen, einschließlich Katalogisierung, Datenbindung, Datenverwendungsbeschriftung, Datenverwendungsrichtlinien und Steuerung der Verwendung von Daten für Marketingaktionen.
+Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, beispielsweise bei der Katalogisierung, bei der Ermittlung der Datenherkunft, bei Datennutzungskennzeichnungen, bei Datennutzungsrichtlinien und bei der Steuerung der Nutzung von Daten für Marketing-Aktionen.
 
-Die [!DNL Policy Service]-API bietet mehrere Endpunkte, mit denen Sie Datenverwendungsbeschriftungen und -richtlinien programmgesteuert verwalten und Marketingaktionen für Richtlinienverletzungen auswerten können. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern.[](./getting-started.md)
+Die [!DNL Policy Service]-API bietet mehrere Endpunkte, mit denen Sie Datennutzungskennzeichnungen und -richtlinien programmgesteuert verwalten und Marketing-Aktionen für Richtlinienverletzungen auswerten können. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie den [[!DNL Policy Service] API-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Policy Service] API-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
 
-## Bezeichnungen
+## Beschriftungen
 
-Mit Datennutzungsbeschriftungen können Sie Daten anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Bewährte Verfahren fördern die Kennzeichnung von Daten, sobald diese in [!DNL Experience Platform] aufgenommen werden oder sobald Daten für die Verwendung in [!DNL Platform] verfügbar sind. Sie können Beschriftungen mit dem Endpunkt `/labels` erstellen, Ansicht, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im Endpunktleitfaden [label](./labels.md).
+Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in [!DNL Experience Platform] oder ab dem Zeitpunkt ihrer Nutzbarkeit in [!DNL Platform] mit einer Kennzeichnung zu versehen. Sie können Kennzeichnungen mit dem Endpunkt `/labels` erstellen, ansehen, bearbeiten und löschen. Informationen zur Verwendung dieses Endpunkts finden Sie im [Kennzeichnungsendpunkt-Handbuch](./labels.md).
 
 ## Marketing-Aktionen
 
-Marketingaktionen (auch als Marketing-Anwendungsfälle bezeichnet) im Kontext des [!DNL Data Governance]-Frameworks sind Aktionen, die ein [!DNL Experience Platform]-Datenbenutzer ausführen kann und für die Ihr Unternehmen die Datenverwendung einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketingaktionen finden Sie im [Endpunkthandbuch zu Marketingaktionen](./marketing-actions.md).
+Marketing-Aktionen (auch als Marketing-Anwendungsfälle bezeichnet) im Kontext des [!DNL Data Governance]-Frameworks sind Aktionen, die ein [!DNL Experience Platform]-Datenbenutzer ausführen kann und für die Ihr Unternehmen die Datennutzung einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketing-Aktionen finden Sie im [Endpunkthandbuch zu Marketing-Aktionen](./marketing-actions.md).
 
 ## Richtlinien
 
-Datenverwendungsrichtlinien sind Regeln, die die Arten von Marketingaktionen beschreiben, von denen Sie Daten innerhalb von [!DNL Experience Platform] ausführen dürfen oder von denen Sie eingeschränkt sind. Eine Richtlinie wird wie folgt definiert:
+Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen. Eine Richtlinie wird wie folgt definiert:
 
-1. Eine bestimmte Marketingaktion
-1. Die Datenverwendungs-Beschriftungen, die für diese Aktion eingeschränkt sind, gegen
+1. Eine bestimmte Marketing-Aktion
+1. Die Datennutzungsbeschriftung(en), für die diese Aktion nicht ausgeführt werden darf
 
-Informationen zum Verwalten von Richtlinien in der API finden Sie im [policies endpoint guide](./policies.md)
+Informationen zum Verwalten von Richtlinien in der API finden Sie im [Handbuch zu Richtlinienendpunkten](./policies.md)
 
 ## Auswertung
 
-Sobald Datenverwendungsbezeichnungen auf [!DNL Platform]-Datensätze angewendet wurden und für Marketingaktionen mit diesen Bezeichnungen Datenverwendungsrichtlinien definiert wurden, können Sie mit den Datenverwaltungsfunktionen diese Richtlinien durchsetzen und Datenoperationen verhindern, die Richtlinienverletzungen darstellen.
+Sobald Datennutzungskennzeichnungen auf [!DNL Platform]-Datensätze angewendet und somit Datennutzungsrichtlinien für Marketing-Aktionen mit diesen Kennzeichnungen definiert wurden, können Sie die Richtlinien mithilfe von Data-Governance-Funktionen durchsetzen und Datenvorgänge verhindern, bei denen Richtlinien verletzt werden.
 
-Die [!DNL Policy Service]-API stellt Endpunkte bereit, mit denen Sie Marketingaktionen gegen Datasets oder beliebige Kombinationen von Datenverwendungsbeschriftungen testen können, um festzustellen, ob Richtlinienverletzungen auftreten. Je nach API-Antwort können Sie dann Protokolle in Ihrer Erlebnisanwendung einrichten, um die Einhaltung von Datennutzungsrichtlinien richtig durchzusetzen. Weitere Informationen finden Sie im Leitfaden [Testendpunkte](./evaluation.md).
+Die [!DNL Policy Service]-API stellt Endpunkte bereit, mit denen Sie Marketing-Aktionen für Datensätze oder beliebige Kombinationen von Datennutzungskennzeichnungen testen können, um festzustellen, ob Richtlinien verletzt werden. Je nach API-Antwort können Sie dann Protokolle in Ihrer Erlebnisanwendung einrichten, um die Einhaltung von Datennutzungsrichtlinien richtig durchzusetzen. Weiterführende Informationen dazu finden Sie im [Handbuch zu Bewertungsendpunkten](./evaluation.md).
 
 ## Nächste Schritte
 
-Um mit dem Aufrufen der API zu beginnen, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) und wählen Sie dann eine der Endpunktleitfäden aus, um zu erfahren, wie bestimmte Endpunkte verwendet werden. [!DNL Policy Service] Informationen zum Arbeiten mit Beschriftungen und Richtlinien mithilfe der [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Benutzerhandbuch für Beschriftungen](../labels/user-guide.md) bzw. [Richtlinien-Benutzerhandbuch](../policies/user-guide.md).
+Um mit Aufrufen mit der [!DNL Policy Service]-API zu beginnen, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) und wählen Sie dann eins der Endpunkthandbücher aus, um zu erfahren, wie bestimmte Endpunkte verwendet werden. Informationen zum Arbeiten mit Kennzeichnungen und Richtlinien über die Benutzeroberfläche von [!DNL Experience Platform] finden Sie im [Benutzerhandbuch zu Kennzeichnungen](../labels/user-guide.md) und im [Benutzerhandbuch zu Richtlinien](../policies/user-guide.md).
