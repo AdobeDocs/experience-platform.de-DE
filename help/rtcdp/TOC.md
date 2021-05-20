@@ -4,18 +4,18 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '103'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 
 # Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Übersicht über CDP in Echtzeit](overview.md)
+* [Übersicht über Real-Time CDP](overview.md)
 * Erste Schritte {#intro}
    * [Erste Schritte](get-started.md)
    * [Metriken – Übersicht](home-page-dashboards.md)
@@ -40,5 +40,5 @@ ht-degree: 93%
    * [Customer AI](segmentation/customer-ai.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
-* [Versionshinweise zur Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)
