@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Identität;Identität;XDM-Diagramme;Identitätsdienst;Identitätsdienst
+keywords: Experience Platform;Home;beliebte Themen;Identität;Identität;XDM-Diagramme;Identity Service;Identity Service
 solution: Experience Platform
-title: Übersicht über den Identitätsdienst
+title: Identity Service – Übersicht
 topic-legacy: overview
-description: Mit dem Adobe Experience Platform Identity Service erhalten Sie eine bessere Ansicht Ihrer Kunden und ihres Verhaltens, indem Sie Identitäten zwischen Geräten und Systemen überbrücken und so wirkungsvolle persönliche digitale Erlebnisse in Echtzeit bereitstellen.
+description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1717'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
 # [!DNL Identity Service]Übersicht
 
-Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint. Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, eine bessere Ansicht Ihres Kundenverhaltens zu erzielen, indem Identitäten zwischen Geräten und Systemen überbrückt werden, sodass Sie in Echtzeit wirkungsvolle persönliche digitale Erlebnisse bereitstellen können.
+Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint. Der Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 
 ## Grundlagen zu [!DNL Identity Service]
 
-Jeden Tag interagieren Kunden mit Ihrem Unternehmen und gehen eine kontinuierlich wachsende Beziehung zu Ihrer Marke ein. Ein typischer Kunde kann in der Dateninfrastruktur Ihres Unternehmens in einer beliebigen Anzahl von Systemen aktiv sein, z. B. in Ihren E-Commerce-, Treueprogramm- und Helpdesk-Systemen. Derselbe Kunde kann auch anonym über verschiedene Geräte interagieren. [!DNL Identity Service]Mit können Sie sich einen Überblick über Ihren Kunden verschaffen und mit ihm verbundene Daten zusammenfassen, die andernfalls auf Silos in verschiedenen Systemen verteilt wären.
+Jeden Tag interagieren Kunden mit Ihrem Unternehmen und gehen eine kontinuierlich wachsende Beziehung zu Ihrer Marke ein. Ein typischer Kunde kann in der Dateninfrastruktur Ihres Unternehmens in einer beliebigen Anzahl von Systemen aktiv sein, z. B. in Ihren E-Commerce-, Treueprogramm- und Helpdesk-Systemen. Derselbe Kunde kann auch anonym über verschiedene Geräte interagieren. [!DNL Identity Service] Mit können Sie sich einen Überblick über Ihren Kunden verschaffen und mit ihm verbundene Daten zusammenfassen, die andernfalls auf Silos in verschiedenen Systemen verteilt wären.
 
 Betrachten wir ein alltägliches Beispiel für die Beziehung eines Verbrauchers zu Ihrer Marke:
 
@@ -27,11 +26,11 @@ Maria hat auf Ihrer E-Commerce-Site ein Konto, über das sie bereits mehrere Bes
 
 An diesem Punkt erscheinen Marias Aktivitäten als zwei separate Profile: ihre E-Commerce-Anmeldung und ihr Tablet-Gerät, möglicherweise identifiziert per Gerätekennung.
 
-Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Infolgedessen bezieht sich [!DNL Identity Service] jetzt Marias Tablet-Geräte-Aktivität mit ihrem E-Commerce-Kontoverlauf.
+Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Infolgedessen verknüpft der [!DNL Identity Service] Marias Aktivitäten auf ihrem Tablet nun mit dem Verlauf ihres E-Commerce-Kontos.
 
 Bis zum nächsten Klick auf das Tablet könnten Ihre Zielinhalte Marias gesamtes Profil inklusive Verlauf widerspiegeln, statt nur das Tablet eines unbekannten Kunden.
 
-Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und unterhält, werden von [!DNL Real-time Customer Profile] genutzt, um ein vollständiges Bild eines Kunden und dessen Interaktionen mit Ihrer Marke zu erstellen. Weiterführende Informationen finden Sie in der [Übersicht zu Echtzeit-Kundenprofil](../profile/home.md).
+Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und pflegt, werden vom [!DNL Real-time Customer Profile] genutzt, um das vollständige Bild eines Kunden und seiner Interaktionen mit Ihrer Marke zu erstellen. Weiterführende Informationen finden Sie in der [Übersicht zu Echtzeit-Kundenprofil](../profile/home.md).
 
 ### Identitäten
 
@@ -45,7 +44,7 @@ Bekannte und anonyme Identitäten sind (wie in der folgenden Abbildung gezeigt) 
 
 ![Identitätszusammenfügung in Platform](./images/identity-service-stitching.png)
 
-Beispiele für Implementierungen von [!DNL Identity Service]:
+Zu den Beispielen für Implementierungen von [!DNL Identity Service] gehören:
 
 - Ein Telekommunikationsunternehmen verlässt sich möglicherweise auf den Wert „Telefonnummer“, wobei eine Telefonnummer sowohl in Offline- als auch Online-Datensätzen auf dieselbe Person verweist.
 - Ein Einzelhandelsunternehmen kann aufgrund des hohen Prozentsatzes an anonymen Besuchern in Offline-Datensätzen die „E-Mail-Adresse“ und in Online-Datensätzen die „ECID“ verwenden.
@@ -62,7 +61,7 @@ Ihre Kunden können mit Ihrer Marke über eine Kombination aus Online- und Offli
 
 [!DNL Experience Platform] löst diese Herausforderung mit zwei Konzepten: mit [Identitäts-Namespaces](#identity-namespaces) und [Identitätsdiagrammen](#identity-graphs).
 
-Das folgende Video soll Ihr Verständnis von Identitäten und Identitätsdiagrammen unterstützen. Im folgenden Video werden die drei Funktionen von Identity Collection, Identity Graphs und APIs behandelt. Es beschreibt auch, wie deterministische und probabilistische Algorithmen zum Erstellen von Diagrammen für die private Identität verwendet werden, und beschreibt die Rolle von Diagrammen für die private Identität, von Adobe Experience Platform Identity Service Co-Op-Diagrammen und von Grafiken von Drittanbietern.
+Das folgende Video soll Ihnen das Verständnis von Identitäten und Identitätsdiagrammen erleichtern. Im folgenden Video werden die drei Möglichkeiten der Identitätssammlung, der Identitätsdiagramme und der APIs behandelt. Es beschreibt auch, wie deterministische und probabilistische Algorithmen zum Erstellen von Diagrammen für die private Identität verwendet werden, und erörtert die Rolle von Diagrammen für die private Identität, die Adobe Experience Platform Identity Service Co-Op-Diagramme und die Diagramme von Drittanbietern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
@@ -77,17 +76,17 @@ Ein Identitäts-Namespace ist eine Kennung (wie z. B. eine Geräte-ID oder E-Ma
 
 Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäts-Namespaces, die visuell veranschaulicht, wie Ihr Kunde über unterschiedliche Kanäle hinweg mit Ihrer Marke interagiert.
 
-Alle Diagramme zur Kundenidentität werden gemeinsam von [!DNL Identity Service] als Reaktion auf die Aktivität der Kunden in Echtzeit verwaltet und aktualisiert.
+Alle Diagramme zur Kundenidentität werden von [!DNL Identity Service] als Reaktion auf Kundenaktivität gemeinsam nahezu in Echtzeit verwaltet und aktualisiert.
 
 [!DNL Identity Service] verwaltet ein Identitätsdiagramm, das nur für Ihr Unternehmen sichtbar ist und auf Grundlage Ihrer Daten erstellt wird (als privates Diagramm bezeichnet). [!DNL Identity Service] erweitert das private Diagramm, wenn ein erfasster Datensatz mehr als eine Identität enthält, indem eine Beziehung zwischen den gefundenen Identitäten hinzugefügt wird.
 
 Als Beispiel für die möglichen Arten von Faktoren, die bei der Bereitstellung und Kennzeichnung von Identitätsdaten zu berücksichtigen sind, kann die Verwendung von Telefonnummern wie „Geschäftlich“ zu mehr Beziehungen führen, als Sie im Identitätsdiagramm haben möchten. Viele Mitarbeiter beziehen sich auf die gleiche geschäftliche Nummer, sodass „Privat“ und „Mobil“ besser dazu geeignet sind, Beziehungen so präzise wie möglich zu halten.
 
-Weitere Informationen finden Sie im Tutorial zum Zugriff auf den Identitätsdiagramm-Viewer](./ui/identity-graph-viewer.md)[
+Weitere Informationen finden Sie im Tutorial zum [Zugriff auf den Identitätsdiagramm-Viewer](./ui/identity-graph-viewer.md)
 
-## Identitätsdaten für [!DNL Identity Service] bereitstellen
+## Bereitstellen von Identitätsdaten für [!DNL Identity Service]
 
-In diesem Abschnitt wird beschrieben, wie an Adobe Experience Platform übermittelte Daten verarbeitet werden, bevor [!DNL Identity Service] zum Aufbau eines Identitätsdiagramms für jeden Kunden verwendet wird.
+In diesem Abschnitt wird beschrieben, wie an Adobe Experience Platform bereitgestellte Daten verarbeitet werden, bevor sie von [!DNL Identity Service] zum Erstellen eines Identitätsdiagramms für einen einzelnen Kunden verwendet werden.
 
 ### Identitätsfelder bestimmen
 
@@ -99,7 +98,7 @@ Je nach der Strategie Ihres Unternehmens zur Datenerfassung bestimmen die Datenf
 
 ### Zusätzliche Identitäts-Namespaces erstellen
 
-Während [!DNL Experience Platform] eine Reihe von Standard-Namensräumen Angebot, müssen Sie möglicherweise zusätzliche Namensraum erstellen, um Ihre Identitäten korrekt zu kategorisieren. Weiterführende Informationen finden Sie im Abschnitt zum [Anzeigen und Erstellen von Namespaces für Ihre Organisation](./namespaces.md) in der Übersicht zu Identitäts-Namespaces.
+Zwar bietet [!DNL Experience Platform] eine Vielzahl von standardmäßigen Namespaces, doch müssen Sie möglicherweise zusätzliche Namespaces erstellen, um Ihre Identitäten korrekt zu kategorisieren. Weiterführende Informationen finden Sie im Abschnitt zum [Anzeigen und Erstellen von Namespaces für Ihre Organisation](./namespaces.md) in der Übersicht zu Identitäts-Namespaces.
 
 >[!NOTE]
 >
@@ -107,7 +106,7 @@ Während [!DNL Experience Platform] eine Reihe von Standard-Namensräumen Angebo
 
 ### Identitätsdaten in [!DNL Experience Data Model] (XDM) einschließen
 
-Als standardisiertes Framework, mit dem [!DNL Platform] Kundendaten organisiert, ermöglicht [!DNL Experience Data Model] (XDM) die Freigabe und das Verständnis von Daten über [!DNL Experience Platform] und andere Dienste, die mit [!DNL Platform] interagieren. Weiterführende Informationen finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
+Als standardisiertes Framework, mit dem [!DNL Platform] Kundendaten organisiert, ermöglicht [!DNL Experience Data Model] (XDM) das Teilen und Verstehen von Daten über [!DNL Experience Platform] und andere Services hinweg, die mit [!DNL Platform] interagieren. Weiterführende Informationen finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
 
 Sowohl Datensatz- als auch Zeitreihenschemas bieten die Möglichkeit, Identitätsdaten einzubeziehen. Beim Erfassen von Daten erstellt das Identitätsdiagramm neue Beziehungen zwischen Datenfragmenten aus verschiedenen Namespaces, wenn festgestellt wird, dass sie gemeinsame Identitätsdaten aufweisen.
 
@@ -116,7 +115,7 @@ Sowohl Datensatz- als auch Zeitreihenschemas bieten die Möglichkeit, Identität
 Jedes Feld vom Typ `string` in Schemas, die XDM-Klassen für Datensätze oder Zeitreihen implementieren, kann als Identitätsfeld gekennzeichnet werden. In der Folge würden alle in diesem Feld erfassten Daten als Identitätsdaten betrachtet.
 
 Identitätsfelder erlauben auch eine Verknüpfung von Identitäten, wenn diese gemeinsame personenbezogene Daten aufweisen.
-Wenn Sie z. B. Telefonnummernfelder als Identitätsfelder kennzeichnen, zeigt [!DNL Identity Service] automatisch die Beziehungen zu den anderen Personen an, bei denen festgestellt wurde, dass sie dieselbe Telefonnummer verwenden.
+Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen, stellt [!DNL Identity Service] die Beziehungen zu den anderen Personen, bei denen dieselbe Telefonnummer ermittelt wurde, automatisch grafisch dar.
 
 >[!NOTE]
 >
@@ -124,13 +123,13 @@ Wenn Sie z. B. Telefonnummernfelder als Identitätsfelder kennzeichnen, zeigt [!
 
 ### Datensatz für [!DNL Identity Service] konfigurieren
 
-Während der Streaming-Erfassung extrahiert [!DNL Identity Service ]automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten jedoch erfasst werden können, müssen sie für [!DNL Identity Service] aktiviert werden. Weiterführende Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mit APIs](../profile/tutorials/dataset-configuration.md).
+Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ] automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Weiterführende Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mit APIs](../profile/tutorials/dataset-configuration.md).
 
 ### Daten in [!DNL Identity Service] aufnehmen
 
-[!DNL Identity Service] nutzt XDM-konforme Daten, die  [!DNL Experience Platform] entweder durch  [Batch-](../ingestion/batch-ingestion/overview.md) Erfassung oder  [Streaming-Erfassung](../ingestion/streaming-ingestion/overview.md) gesendet werden.
+[!DNL Identity Service] nutzt XDM-konforme Daten, die entweder per [Batch-Aufnahme](../ingestion/batch-ingestion/overview.md) oder per [Streaming-Aufnahme](../ingestion/streaming-ingestion/overview.md) an [!DNL Experience Platform] gesendet werden.
 
-Das folgende Video soll Ihr Verständnis von Identitätsdienst unterstützen. In diesem Video wird gezeigt, wie Datenfelder als Identitäten gekennzeichnet werden, Identitätsdaten erfasst und anschließend überprüft werden, ob die Daten in das Adobe Experience Platform Identity Service Private Graph eingegeben wurden.
+Das folgende Video soll Ihnen das Verständnis für Identity Service erleichtern. In diesem Video erfahren Sie, wie Sie Datenfelder als Identitäten kennzeichnen, Identitätsdaten aufnehmen und dann überprüfen, ob die Daten in das private Diagramm von Adobe Experience Platform Identity Service gelangt sind.
 
 >[!WARNING]
 >
@@ -140,8 +139,8 @@ Das folgende Video soll Ihr Verständnis von Identitätsdienst unterstützen. In
 
 ## Data Governance
 
-Adobe Experience Platform wurde mit Blick auf Datenschutz entwickelt und umfasst ein Data-Governance-Framework, um personenbezogene Daten Ihrer Kunden zu schützen. Identitätsdaten unter dem Namensraum &quot;email&quot; oder &quot;phone&quot; werden standardmäßig verschlüsselt. Um jedoch sicherzustellen, dass sensible Daten verschlüsselt werden, bevor sie bestehen bleiben, können Datenverwendungsbeschriftungen auf Daten angewendet werden, die bei der Erfassung oder beim Eintreffen in [!DNL Platform] erfasst werden. Weiterführende Informationen finden Sie in der [Übersicht zu Data Governance](../data-governance/home.md).
+Adobe Experience Platform wurde mit Blick auf Datenschutz entwickelt und umfasst ein Data-Governance-Framework, um personenbezogene Daten Ihrer Kunden zu schützen. Identitätsdaten unter den Namespaces „E-Mail-Adresse“ oder „Telefonnummer“ werden standardmäßig verschlüsselt. Um aber sicherzustellen, dass sensible Daten vor dem Speichern verschlüsselt werden, können Datennutzungskennzeichnungen auf Daten angewendet werden, während diese aufgenommen werden oder wenn sie in [!DNL Platform] eintreffen. Weiterführende Informationen finden Sie in der [Übersicht zu Data Governance](../data-governance/home.md).
 
 ## Nächste Schritte
 
-Nachdem Sie nun die Schlüsselkonzepte von [!DNL Identity Service] und ihre Rolle innerhalb von [!DNL Experience Platform] kennen, können Sie lernen, wie Sie mit Ihrem Identitätsdiagramm mit dem [[!DNL Identity Service API]](./api/getting-started.md) arbeiten.
+Sie kennen nun die Schlüsselkonzepte von [!DNL Identity Service] und dessen Rolle in [!DNL Experience Platform] und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe der [[!DNL Identity Service API]](./api/getting-started.md) verwenden.
