@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Politikdurchsetzung;Marketingaktionen API;API-basierte Durchsetzung;Datenverwaltung
+keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;Marketing-Aktionen-API;API-basierte Durchsetzung;Data Governance
 solution: Experience Platform
-title: API-Endpunkt für Marketingaktionen
+title: API-Endpunkt für Marketing-Aktionen
 topic-legacy: developer guide
-description: Eine Marketingaktion im Rahmen der Adobe Experience Platform-Datenverwaltung ist eine Maßnahme, die ein Datenbenutzer in der Experience Platform ergreift und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+description: Eine Marketing-Aktion bezeichnet im Kontext des Data Governance-Frameworks eine Aktion, die ein Datennutzer von Adobe Experience Platform ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '734'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # Endpunkt der Marketing-Aktionen
 
-Eine Marketingaktion im Zusammenhang mit dem Adobe Experience Platform [!DNL Data Governance] ist eine Aktion, die ein [!DNL Experience Platform]-Datenbenutzer durchführt und bei der überprüft werden muss, ob die Datenverwendungsrichtlinien verletzt wurden.
+Eine Marketing-Aktion bezeichnet im Kontext von Adobe Experience Platform [!DNL Data Governance] eine Aktion, die ein Datennutzer von [!DNL Experience Platform] ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
 
-Sie können Marketingaktionen für Ihr Unternehmen mithilfe des Endpunkts `/marketingActions` in der Policy Service API verwalten.
+Sie können Marketing-Aktionen für Ihr Unternehmen mithilfe des `/marketingActions`-Endpunkts in der Richtlinien-Service-API verwalten.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] -API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie im Handbuch [Erste Schritte](./getting-started.md) die Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
-## Abrufen einer Liste von Marketingaktionen {#list}
+## Abrufen einer Liste von Marketing-Aktionen {#list}
 
-Sie können eine Liste von Kern- oder benutzerspezifischen Marketingaktionen abrufen, indem Sie eine GET an `/marketingActions/core` oder `/marketingActions/custom` anfordern.
+Sie können eine Liste von Kern- oder benutzerspezifischen Marketing-Aktionen abrufen, indem Sie eine GET-Anfrage an `/marketingActions/core` oder `/marketingActions/custom` senden.
 
 **API-Format**
 
@@ -36,7 +35,7 @@ GET /marketingActions/custom
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine Liste von benutzerspezifischen Marketingaktionen ab, die von Ihrem Unternehmen verwaltet werden.
+Die folgende Anfrage ruft eine Liste von benutzerspezifischen Marketing-Aktionen ab, die von Ihrem Unternehmen verwaltet werden.
 
 ```shell
 curl -X GET \
@@ -49,7 +48,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details für jede abgerufene Marketingaktion zurück, einschließlich `name` und `href`. Der Wert `href` wird zur Identifizierung der Marketingaktion verwendet, wenn [eine Datenverwendungsrichtlinie](policies.md#create-policy) erstellt wird.
+Eine erfolgreiche Antwort gibt die Details für jede abgerufene Marketing-Aktion zurück, einschließlich `name` und `href`. Der Wert `href` wird beim [Erstellen einer Datennutzungsrichtlinie](policies.md#create-policy) zur Identifizierung der Marketing-Aktion verwendet.
 
 ```json
 {
@@ -101,14 +100,14 @@ Eine erfolgreiche Antwort gibt die Details für jede abgerufene Marketingaktion 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_page.count` | Die Gesamtzahl der zurückgegebenen Marketingaktionen. |
-| `children` | Ein Array von Objekten, die die Details der abgerufenen Marketingaktionen enthalten. |
-| `name` | Der Name der Marketingaktion, die als eindeutiger Bezeichner fungiert, wenn [eine bestimmte Marketingaktion](#lookup) sucht. |
-| `_links.self.href` | Eine URI-Referenz für die Marketingaktion, mit der das `marketingActionsRefs`-Array abgeschlossen werden kann, wenn [eine Datenverwendungsrichtlinie](policies.md#create-policy) erstellt wird. |
+| `_page.count` | Die Gesamtzahl der zurückgegebenen Marketing-Aktionen. |
+| `children` | Ein Array von Objekten, die die Details der abgerufenen Marketing-Aktionen enthalten. |
+| `name` | Der Name der Marketing-Aktion, die beim [Suchen nach einer bestimmten Marketing-Aktion](#lookup) als eindeutige Kennung fungiert. |
+| `_links.self.href` | Eine URI-Referenz für die Marketing-Aktion, mit der beim [Erstellen einer Datenverwendungsrichtlinie](policies.md#create-policy) das `marketingActionsRefs`-Array abgeschlossen werden kann. |
 
-## Suchen Sie nach einer bestimmten Marketingaktion {#lookup}
+## Suchen Sie nach einer bestimmten Marketing-Aktion {#lookup}
 
-Sie können die Details einer bestimmten Marketingaktion nachschlagen, indem Sie die `name`-Eigenschaft der Marketingaktion in den Pfad einer GET-Anforderung aufnehmen.
+Sie können die Details einer bestimmten Marketing-Aktion nachschlagen, indem Sie die `name`-Eigenschaft der Marketing-Aktion in den Pfad einer GET-Anfrage aufnehmen.
 
 **API-Format**
 
@@ -119,11 +118,11 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Die `name`-Eigenschaft der Marketingaktion, die Sie nachschlagen möchten. |
+| `{MARKETING_ACTION_NAME}` | Die `name`-Eigenschaft der Marketing-Aktion, die Sie nachschlagen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft eine benutzerdefinierte Marketingaktion mit dem Namen `combineData` ab.
+Die folgende Anfrage ruft eine benutzerdefinierte Marketing-Aktion mit dem Namen `combineData` ab.
 
 ```shell
 curl -X GET \
@@ -136,7 +135,7 @@ curl -X GET \
 
 **Antwort**
 
-Das Antwortobjekt enthält die Details für die Marketingaktion, einschließlich des Pfads (`_links.self.href`), der zum Verweisen auf die Marketingaktion benötigt wird, wenn [eine Datenverwendungsrichtlinie](policies.md#create-policy) (`marketingActionsRefs`) definiert wird.
+Das Antwortobjekt enthält die Details zur Marketing-Aktion, einschließlich des Pfads (`_links.self.href`), der beim [Definieren einer Datenverwendungsrichtlinie](policies.md#create-policy) zum Verweisen auf die Marketing-Aktion benötigt wird (`marketingActionsRefs`).
 
 ```JSON
 {
@@ -157,9 +156,9 @@ Das Antwortobjekt enthält die Details für die Marketingaktion, einschließlich
 }
 ```
 
-## Erstellen oder aktualisieren Sie eine benutzerdefinierte Marketingaktion {#create-update}
+## Erstellen oder aktualisieren einer benutzerspezifischen Marketing-Aktion {#create-update}
 
-Sie können eine neue benutzerspezifische Marketingaktion erstellen oder eine vorhandene aktualisieren, indem Sie den vorhandenen oder beabsichtigten Namen der Marketingaktion in den Pfad einer PUT-Anforderung aufnehmen.
+Sie können eine neue benutzerspezifische Marketing-Aktion erstellen oder eine vorhandene aktualisieren, indem Sie den vorhandenen oder beabsichtigten Namen der Marketing-Aktion in den Pfad einer PUT-Anfrage aufnehmen.
 
 **API-Format**
 
@@ -169,11 +168,11 @@ PUT /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die erstellt oder aktualisiert werden soll. Wenn im System bereits eine Marketingaktion mit dem angegebenen Namen vorhanden ist, wird diese Marketingaktion aktualisiert. Wenn keine Marketingaktion vorhanden ist, wird eine neue Marketingaktion für den angegebenen Namen erstellt. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die erstellt oder aktualisiert werden soll. Wenn im System bereits eine Marketing-Aktion mit dem angegebenen Namen vorhanden ist, wird diese Marketing-Aktion aktualisiert. Wenn noch keine Marketing-Aktion vorhanden ist, wird eine neue mit dem angegebenen Namen erstellt. |
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine neue Marketingaktion mit dem Namen `crossSiteTargeting`, sofern im System noch keine Marketingaktion mit demselben Namen vorhanden ist. Wenn eine `crossSiteTargeting`-Marketingaktion vorhanden ist, wird diese Marketingaktion stattdessen auf der Grundlage der in der Nutzlast bereitgestellten Eigenschaften aktualisiert.
+Die folgende Anfrage erstellt eine neue Marketing-Aktion mit dem Namen `crossSiteTargeting`, sofern im System noch keine Marketing-Aktion mit demselben Namen vorhanden ist. Wenn eine `crossSiteTargeting`-Marketing-Aktion vorhanden ist, wird diese stattdessen auf der Grundlage der in der Payload bereitgestellten Eigenschaften aktualisiert.
 
 ```shell
 curl -X PUT \
@@ -191,12 +190,12 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der Name der Marketingaktion, die erstellt oder aktualisiert werden soll. <br><br>**WICHTIG**: Diese Eigenschaft muss mit dem  `{MARKETING_ACTION_NAME}` im Pfad übereinstimmen, andernfalls tritt ein HTTP-400-Fehler (Fehlerhafte Anforderung) auf. Mit anderen Worten, nach Erstellung einer Marketingaktion kann deren `name`-Eigenschaft nicht mehr geändert werden. |
-| `description` | Eine optionale Beschreibung, um weitere Kontexte für die Marketingaktion anzugeben. |
+| `name` | Der Name der Marketing-Aktion, die erstellt oder aktualisiert werden soll. <br><br>**WICHTIG**: Diese Eigenschaft muss mit dem `{MARKETING_ACTION_NAME}` im Pfad übereinstimmen, andernfalls tritt ein HTTP-400-Fehler (Bad Request) auf. Mit anderen Worten: Nach dem Erstellen einer Marketing-Aktion kann deren Eigenschaft `name` nicht mehr geändert werden. |
+| `description` | Eine optionale Beschreibung, um mehr Kontexte für die Marketing-Aktion anzugeben. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Marketingaktion zurück. Wenn eine vorhandene Marketingaktion aktualisiert wurde, gibt die Antwort den HTTP-Status 200 (OK) zurück. Wenn eine neue Marketingaktion erstellt wurde, gibt die Antwort den HTTP-Status 201 (Erstellt) zurück.
+Eine erfolgreiche Antwort gibt die Details der Marketing-Aktion zurück. Wenn eine vorhandene Marketing-Aktion aktualisiert wurde, gibt die Antwort den HTTP-Status 200 (OK) zurück. Wenn eine neue Marketing-Aktion erstellt wurde, gibt die Antwort den HTTP-Status 201 (Created) zurück.
 
 ```JSON
 {
@@ -217,13 +216,13 @@ Eine erfolgreiche Antwort gibt die Details der Marketingaktion zurück. Wenn ein
 }
 ```
 
-## Löschen Sie eine benutzerdefinierte Marketingaktion {#delete}
+## Löschen einer benutzerspezifischen Marketing-Aktion {#delete}
 
-Sie können eine benutzerspezifische Marketingaktion löschen, indem Sie deren Namen in den Pfad einer DELETE-Anforderung eintragen.
+Sie können eine benutzerspezifische Marketing-Aktion löschen, indem Sie deren Namen in den Pfad einer DELETE-Anfrage aufnehmen.
 
 >[!NOTE]
 >
->Marketingaktionen, die von bestehenden Richtlinien referenziert werden, können nicht gelöscht werden. Der Versuch, eine dieser Marketingaktionen zu löschen, führt zu einem HTTP-400-Fehler (Ungültige Anforderung) zusammen mit einer Meldung, die die IDs aller Richtlinien enthält, die auf die Marketingaktion verweisen.
+>Marketing-Aktionen, die von bestehenden Richtlinien referenziert werden, können nicht gelöscht werden. Der Versuch, eine solche Marketing-Aktionen zu löschen, führt zu einem HTTP-400-Fehler (Bad Request) in Kombination mit einer Meldung, in der die IDs aller Richtlinien enthalten sind, die auf die Marketing-Aktion verweisen.
 
 **API-Format**
 
@@ -233,7 +232,7 @@ DELETE /marketingActions/custom/{MARKETING_ACTION_NAME}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | Der Name der Marketingaktion, die Sie löschen möchten. |
+| `{MARKETING_ACTION_NAME}` | Der Name der Marketing-Aktion, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -250,4 +249,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) mit einem leeren Antworttext zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie versuchen, [die Marketingaktion](#look-up) anzuzeigen. Sie sollten einen HTTP 404-Fehler (nicht gefunden) erhalten, wenn die Marketingaktion aus dem System entfernt wurde.
+Sie können überprüfen, ob der Löschvorgang erfolgreich war, indem Sie versuchen, [nach der die Marketing-Aktion zu suchen](#look-up). Dies sollte zu einem HTTP-404-Fehler (Not Found) führen, wenn die Marketing-Aktion aus dem System entfernt wurde.
