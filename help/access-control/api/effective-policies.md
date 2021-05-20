@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Effektive Richtlinien;Zugriffskontrolle API
+keywords: Experience Platform;Home;beliebte Themen;Effektive Richtlinien;Zugriffssteuerungs-API
 solution: Experience Platform
 title: API-Endpunkt für effektive Richtlinien
 topic-legacy: developer guide
-description: Mit der Zugriffskontrolle in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Plattformfunktionen mithilfe des Adobe Admin Console verwalten. Dieses Dokument dient als Leitfaden für die Ansicht effektiver Richtlinien mithilfe der Zugriffskontrolle-API für Adobe Experience Platform.
+description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Leitfaden für die Ansicht effektiver Richtlinien mithilfe der Zugriffssteuerungs-API für Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
 # Endpunkt für effektive Richtlinien
 
-Um effektive Richtlinien für den aktuellen Benutzer Ansicht, stellen Sie eine POST-Anforderung an den `/acl/effective-policies`-Endpunkt in der [!DNL Access Control]-API ein. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
+Um effektive Richtlinien für den aktuellen Benutzer anzuzeigen, stellen Sie eine POST-Anfrage an den `/acl/effective-policies`-Endpunkt in der [!DNL Access Control]-API. Die Berechtigungen und Ressourcentypen, die Sie abrufen möchten, müssen in der Anfrage-Payload in Form eines Arrays angegeben werden. Dies wird im folgenden Beispiel-API-Aufruf demonstriert.
 
 **API-Format**
 
@@ -25,7 +24,7 @@ POST /acl/effective-policies
 
 **Anfrage**
 
-Die folgenden Anforderungen rufen Informationen zur Berechtigung &quot;[!UICONTROL Datenbestände verwalten]&quot;und zum Zugriff auf den Ressourcentyp &quot;[!UICONTROL Schema]&quot;für den aktuellen Benutzer ab.
+Mit den folgenden Anfragen werden Informationen zur Zugriffsberechtigung [!UICONTROL Datensätze verwalten] und zum Zugriff auf den Ressourcentyp [!UICONTROL Schemas] für den aktuellen Benutzer abgerufen.
 
 ```shell
 curl -X POST \
@@ -66,11 +65,11 @@ Eine erfolgreiche Antwort gibt Informationen über die in der Anfrage angegebene
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie Aufrufe an die [!DNL Access Control]-API durchführen, um Informationen über aktive Berechtigungen und zugehörige Richtlinien für Ressourcentypen zurückzugeben. Weitere Informationen zur Zugriffskontrolle für [!DNL Experience Platform] finden Sie unter [Übersicht über die Zugriffskontrolle](../home.md).
+In diesem Dokument wurde beschrieben, wie Sie die [!DNL Access Control]-API aufrufen, um Informationen über aktive Berechtigungen und die zugehörigen Richtlinien für Ressourcentypen zu erhalten. Weitere Informationen zur Zugriffssteuerung für [!DNL Experience Platform] finden Sie in [Zugriffssteuerung – Übersicht](../home.md).
 
 ## Anhang
 
-Dieser Abschnitt enthält zusätzliche Informationen zur Verwendung der API [!DNL Access Control].
+Dieser Abschnitt enthält zusätzliche Informationen zur Verwendung der [!DNL Access Control]-API.
 
 ### Akzeptierte Berechtigungen und Ressourcentypen
 
