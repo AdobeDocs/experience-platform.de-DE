@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profile
-source-git-commit: 167407a8103acecb9846a6e0f8e38c66f3f3292d
+source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 96%
+source-wordcount: '135'
+ht-degree: 91%
 
 ---
 
@@ -15,29 +15,32 @@ ht-degree: 96%
 
 * [[!DNL Profile]Übersicht](home.md)
 * [Profilüberblick (Video)](video/profile-overview.md)
-* [[!DNL Profile] Leitlinien](guardrails.md)
+* [[!DNL Profile] Limits und SegmentierungsLimits](guardrails.md)
+* [[!DNL Profile] dashboard](ui/profile-dashboard.md)
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
    * [Edge-Projektionen](api/edge-projections.md)
    * [Entitäten ([!DNL Profile]-Zugriff)](api/entities.md)
    * [Exportaufträge ([!DNL Profile]-Export)](api/export-jobs.md)
-   * [Zusammenführungsrichtlinien](api/merge-policies.md)
    * [Musterstatus der Vorschau ([!DNL Profile]-Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufgaben (Löschanfragen)](api/profile-system-jobs.md)
-* Handbücher für die Profil-Benutzeroberfläche {#ui}
+* Profil-UI {#ui}
    * [ Handbuch für die [!DNL Profile]-Benutzeroberfläche](ui/user-guide.md)
-   * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
    * [[!DNL Profile]-Detailanpassung](ui/profile-customization.md)
-   * [Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien](ui/merge-policies.md)
-   * [Erstellen von Zusammenführungsrichtlinien (Video)](video/create-merge-policies.md)
-   * [Handbuch zur Vereinigungsschema-Benutzeroberfläche](ui/union-schema.md)
-   * [Übersicht zum Vereinigungsschema (Video)](video/union-schemas-overview.md)
 * (Alpha) Berechnete Attribute {#computed-attributes}
    * [Übersicht](computed-attributes/overview.md)
    * [API für berechnete Attribute](computed-attributes/ca-api.md)
    * [Konfigurieren eines berechneten Feldnamenfelds](computed-attributes/configure-api.md)
    * [Beispielausdrücke](computed-attributes/expressions.md)
+* Zusammenführungsrichtlinien {#merge-policies}
+   * [Übersicht](merge-policies/overview.md)
+   * [Zusammenführungsrichtlinien-API](api/merge-policies.md)
+   * [Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien](merge-policies/ui-guide.md)
+   * [Erstellen von Zusammenführungsrichtlinien (Video)](video/create-merge-policies.md)
+* Vereinigungsschemas {#union-schemas}
+   * [Handbuch zur Vereinigungsschema-Benutzeroberfläche](ui/union-schema.md)
+   * [Übersicht zum Vereinigungsschema (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
    * [Hinzufügen von Daten zu [!DNL Profile]](tutorials/add-profile-data.md)
    * [Konfigurieren eines Datensatzes für  [!DNL Profile] & [!DNL Identity]  Service](tutorials/dataset-configuration.md)
