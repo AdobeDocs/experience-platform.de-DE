@@ -3,7 +3,7 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d82eb1a839518dbd9831808485d9d5029e3dcaf5
+source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
 workflow-type: tm+mt
 source-wordcount: '1160'
 ht-degree: 8%
@@ -134,7 +134,7 @@ Bei [!DNL Facebook] bedeutet eine erfolgreiche Aktivierung, dass eine [!DNL Face
 
 ## Fehlerbehebung {#troubleshooting}
 
-### 400 Fehlermeldung bei fehlerhaften Anfragen {#bad-request}
+### 400 Fehlermeldung &quot;Bad Request&quot; {#bad-request}
 
 Beim Aktivieren von Segmenten für [!DNL Facebook] erhalten Sie möglicherweise den folgenden Fehler:
 
