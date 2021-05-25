@@ -4,10 +4,10 @@ title: Echtzeit-Kundenprofil – Übersicht
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil ist ein allgemeiner Suchentitäten-Speicher, in dem Informationen aus verschiedensten Datenquellen des Unternehmens zusammengeführt und zum Abruf verfügbar gemacht werden. Diese Daten werden in Form von individuellen Kundenprofilen sowie zugehörigen im Zeitverlauf erfassten, so genannten Zeitreihen-Ereignissen aufbereitet, die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 598f86188bcd9bde22333ccafb85f3f566aaae44
 workflow-type: tm+mt
-source-wordcount: '1826'
-ht-degree: 100%
+source-wordcount: '1813'
+ht-degree: 96%
 
 ---
 
@@ -63,9 +63,11 @@ Bei der Kommunikation mit Kunden gilt es, diese in einer auf sie persönlich abg
 
 ### Zusammenführungsrichtlinien
 
-Um ein umfassendes Bild jedes Ihrer Kunden zu zeichnen, werden Daten aus verschiedenen Quellen zusammengeführt und kombiniert. Zusammenführungsrichtlinien stellen dabei die Regeln, nach denen [!DNL Platform] bestimmt, wie Daten priorisiert und welche Daten zur Erstellung dieser zentralen Sicht verwendet werden. Wenn Daten aus mehreren Datensätzen miteinander in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, wie diese Daten behandelt werden und welcher Wert verwendet werden soll. Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten.
+Um ein umfassendes Bild jedes Ihrer Kunden zu zeichnen, werden Daten aus verschiedenen Quellen zusammengeführt und kombiniert. Zusammenführungsrichtlinien stellen dabei die Regeln, nach denen [!DNL Platform] bestimmt, wie Daten priorisiert und welche Daten zur Erstellung dieser zentralen Sicht verwendet werden.
 
-Weiterführende Informationen zum Arbeiten mit Zusammenführungsrichtlinien in der [!DNL Real-time Customer Profile]-API finden Sie im [Handbuch zu Endpunkten von Zusammenführungsrichtlinien](api/merge-policies.md). Informationen zum Arbeiten mit Zusammenführungsrichtlinien unter Verwendung der [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche der Zusammenführungsrichtlinien](ui/merge-policies.md).
+Wenn Daten aus mehreren Datensätzen miteinander in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, wie diese Daten behandelt werden sollen und welcher Wert verwendet werden soll. Über RESTful-APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen.
+
+Um mehr über Zusammenführungsrichtlinien und ihre Rolle in der Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
 
 ### Vereinigungsschemas {#profile-fragments-and-union-schemas}
 
