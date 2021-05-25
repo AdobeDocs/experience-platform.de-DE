@@ -1,32 +1,31 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Profil des Kunden;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;Profil aktivieren;Profil aktivieren;Vereinigung Schema;VEREINIGUNG PROFIL;Vereinigung Profil
-title: Handbuch zur Benutzeroberfläche des Profils in Echtzeit
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; einheitliches Profil; Einheitliches Profil; einheitliches Profil; Profil; rtcp; Profil aktivieren; Profil aktivieren; Vereinigungsschema; UNION PROFILE; Vereinigungsprofil
+title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 9%
+source-wordcount: '1327'
+ht-degree: 11%
 
 ---
 
-# [!DNL Real-time Customer Profile] UI-Handbuch
+#  Handbuch für die [!DNL Real-time Customer Profile]-Benutzeroberfläche
 
-[!DNL Real-time Customer Profile] erstellt eine ganzheitliche Ansicht der einzelnen Kunden und kombiniert Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieterdaten. Dieses Dokument dient als Leitfaden für die Interaktion mit [!DNL Real-time Customer Profile]-Daten in der Adobe Experience Platform-Benutzeroberfläche.
+[!DNL Real-time Customer Profile] erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden, wobei Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombiniert werden. Dieses Dokument dient als Leitfaden für die Interaktion mit [!DNL Real-time Customer Profile]-Daten in der Adobe Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
-Dieses UI-Handbuch erfordert ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die mit der Verwaltung von [!DNL Real-time Customer Profiles] verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste voraus, die mit der Verwaltung von [!DNL Real-time Customer Profiles] verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht  [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die sie eingeordnet werden  [!DNL Platform].
+* [[!DNL Real-time Customer Profile]](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht  [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen bei der Erfassung in  [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Übersicht
 
-Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;in der linken Navigationsleiste **[!UICONTROL Profil]** aus, um die Registerkarte **[!UICONTROL Übersicht]** zu öffnen. Diese Registerkarte enthält Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
+Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Profile]** aus, um die Registerkarte **[!UICONTROL Übersicht]** zu öffnen. Auf dieser Registerkarte finden Sie Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
 
 ![](../images/user-guide/profiles-overview.png)
 
@@ -34,98 +33,96 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;in der lin
 
 >[!IMPORTANT]
 >
->Die Dashboard-Funktion ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Dashboard-Funktion befindet sich derzeit in der Alpha-Phase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
-Bei einigen Benutzern bietet die Auswahl von **[!UICONTROL Profilen]** im linken Navigationsbereich und das Öffnen der Registerkarte **[!UICONTROL Übersicht]** ein Dashboard, in dem die Schlüsselmetriken im Zusammenhang mit Ihren Profil-Daten skizziert werden.
+Für einige Benutzer bietet die Auswahl von **[!UICONTROL Profile]** im linken Navigationsbereich und das Öffnen der Registerkarte **[!UICONTROL Übersicht]** ein Dashboard, in dem die Schlüsselmetriken für Ihre Profildaten dargestellt werden.
 
-Weitere Informationen finden Sie im Dashboard [Profil Guide](profile-dashboard.md).
+Weitere Informationen finden Sie im [Profil-Dashboard-Handbuch](profile-dashboard.md).
 
 ## Durchsuchen
 
-Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]**, um Profile nach Identität zu durchsuchen.
+Wählen Sie den Tab **[!UICONTROL Durchsuchen]** aus, um Profile nach Identität zu durchsuchen.
 
 ![](../images/user-guide/profiles-browse.png)
 
-### Profil-Metriken {#profile-metrics}
+### Profilmetriken {#profile-metrics}
 
-Auf der rechten Seite des Registers **[!UICONTROL Durchsuchen]** stehen einige wichtige Metriken zu Ihren Profil-Daten, einschließlich der Gesamtzahl [Profil-Anzahl](#profile-count) sowie der Auflistung von [Profilen nach Namensraum](#profiles-by-namespace).
+Auf der rechten Seite des Tabs **[!UICONTROL Durchsuchen]** befinden sich verschiedene wichtige Metriken, die mit Ihren Profildaten verbunden sind, darunter die Gesamtzahl der Profile [](#profile-count) sowie die Auflistung der Profile [nach Namespace](#profiles-by-namespace).
 
-Diese Profil-Metriken werden mit der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens ausgewertet. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien, einschließlich der Definition einer standardmäßigen Zusammenführungsrichtlinie, finden Sie im Benutzerhandbuch [Richtlinien zusammenführen](merge-policies.md).
+Diese Profilmetriken werden mit der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens ausgewertet. Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien, einschließlich der Definition einer standardmäßigen Zusammenführungsrichtlinie, finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
-Zusätzlich zu diesen Metriken bietet der Bereich &quot;Profil-Metriken&quot;auch ein Datum und eine Uhrzeit, die zuletzt aktualisiert wurden und anzeigen, wann die Metriken zuletzt bewertet wurden.
+Zusätzlich zu diesen Metriken bietet der Abschnitt Profilmetriken auch ein Datum und eine Uhrzeit der letzten Aktualisierung, die anzeigt, wann die Metriken zuletzt ausgewertet wurden.
 
 ![](../images/user-guide/profiles-profile-metrics.png)
 
 ### Anzahl der Profile {#profile-count}
 
-Die Anzahl der Profil zeigt die Gesamtzahl der Profil in Ihrem Unternehmen innerhalb von [!DNL Experience Platform] an, nachdem die standardmäßige Zusammenführungsrichtlinie Ihres Unternehmens Profil-Fragmente zusammengeführt hat, um ein einzelnes Profil für jeden einzelnen Kunden zu erstellen. Mit anderen Worten: Ihre Organisation hat möglicherweise verschiedene Profilfragmente, die sich auf einen einzelnen Kunden beziehen, der mit Ihrer Marke über unterschiedliche Kanäle interagiert. Diese Fragmente würden jedoch zusammengeführt (gemäß der standardmäßigen Zusammenführungsrichtlinie) und eine Anzahl von „1“ zurückgeben, da sie alle mit derselben Person verbunden sind.
+Die Anzahl der Profile zeigt die Gesamtzahl der Profile an, die Ihr Unternehmen innerhalb von [!DNL Experience Platform] hat, nachdem die standardmäßige Zusammenführungsrichtlinie Ihres Unternehmens Profilfragmente zusammengeführt hat, um für jeden einzelnen Kunden ein einzelnes Profil zu erstellen. Mit anderen Worten: Ihre Organisation hat möglicherweise verschiedene Profilfragmente, die sich auf einen einzelnen Kunden beziehen, der mit Ihrer Marke über unterschiedliche Kanäle interagiert. Diese Fragmente würden jedoch zusammengeführt (gemäß der standardmäßigen Zusammenführungsrichtlinie) und eine Anzahl von „1“ zurückgeben, da sie alle mit derselben Person verbunden sind.
 
-Die Profil-Anzahl umfasst auch Profil mit Attributen (Datensatzdaten) sowie Profil, die nur Zeitreihendaten (Ereignis) enthalten, wie z. B. Adobe Analytics-Profil. Die Anzahl der Profil wird regelmäßig aktualisiert, um eine aktuelle Gesamtanzahl von Profilen innerhalb der Plattform bereitzustellen.
+Die Profilanzahl umfasst auch Profile mit Attributen (Datensatzdaten) sowie Profile, die nur Zeitreihendaten (Ereignisdaten) enthalten, z. B. Adobe Analytics-Profile. Die Profilanzahl wird regelmäßig aktualisiert, um eine aktuelle Gesamtanzahl von Profilen in Platform bereitzustellen.
 
-Wenn die Erfassung von Datensätzen in den [!DNL Profile]-Speicher die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag zur Aktualisierung der Anzahl ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den Profil Store ein Auftrag ausgeführt, um die Anzahl der Profil zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
+Wenn die Aufnahme von Datensätzen in den Speicher [!DNL Profile] die Anzahl um mehr als 5 % erhöht oder verringert, wird ein Auftrag ausgelöst, der die Anzahl aktualisiert. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Profilanzahl zu aktualisieren. Bei der Batch-Erfassung wird innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den Profilspeicher ein Auftrag ausgeführt, um die Profilanzahl zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist.
 
-### Profil nach Namensraum {#profiles-by-namespace}
+### Profile nach Namespace {#profiles-by-namespace}
 
-Die Metrik **[!UICONTROL Profil nach Namensraum]** zeigt die Gesamtzahl und Aufschlüsselung der Namensraum für alle zusammengeführten Profil im Profil Store an. Die Gesamtanzahl der Profil nach Namensraum (d. h. das Addieren der für jeden Namensraum angezeigten Werte) ist immer höher als die Metrik für die Anzahl der Profil, da ein Profil mit mehreren Namensräumen verknüpft sein könnte. Wenn ein Kunde beispielsweise auf mehr als einem Kanal mit Ihrer Marke interagiert, werden mehrere Namensraum mit diesem Kunden verknüpft.
+Die Metrik **[!UICONTROL Profile nach Namespace]** zeigt die Gesamtanzahl und Aufschlüsselung der Namespaces für alle zusammengeführten Profile in Ihrem Profilspeicher an. Die Gesamtzahl der Profile nach Namespace (d. h. das Addieren der für jeden Namespace angezeigten Werte) ist immer höher als die Metrik für die Profilanzahl, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
 
-Ähnlich wie bei der Metrik [Profil](#profile-count) wird bei der Erfassung von Datensätzen im [!DNL Profile]-Speicher die Anzahl um mehr als 5 % erhöht oder verringert, ein Auftrag zur Aktualisierung der Namensraum-Metriken ausgelöst. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Anzahl der Profile zu aktualisieren. Bei der Stapelverarbeitung wird innerhalb von 15 Minuten nach dem erfolgreichen Einsetzen eines Stapels in den [!DNL Profile]-Speicher ein Auftrag zur Aktualisierung der Metriken ausgeführt, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht wurde.
+Ähnlich wie bei der Metrik [Profilanzahl](#profile-count) wird ein Auftrag ausgelöst, um die Namespace-Metriken zu aktualisieren, wenn durch die Aufnahme von Datensätzen in den [!DNL Profile]-Speicher die Anzahl um mehr als 5 % erhöht oder verringert wird. Für Streaming-Daten-Workflows wird stündlich geprüft, ob der Schwellenwert für eine Zu- oder Abnahme um 5 % erreicht wurde. Ist dies der Fall, wird automatisch ein Auftrag ausgelöst, um die Profilanzahl zu aktualisieren. Bei der Batch-Erfassung wird innerhalb von 15 Minuten nach erfolgreicher Aufnahme eines Batches in den [!DNL Profile]-Speicher ein Auftrag ausgeführt, um die Metriken zu aktualisieren, wenn der Schwellenwert für die Erhöhung oder Verringerung um 5 % erreicht ist.
 
-### Richtlinie zusammenführen
+### Zusammenführungsrichtlinie
 
-Mit der Auswahl **[!UICONTROL Richtlinie zusammenführen]** wird automatisch die standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen ausgewählt. Wenn Sie diese Richtlinie zum Zusammenführen nicht verwenden möchten, können Sie das Dialogfeld `X` neben der Standardrichtlinie zum Zusammenführen auswählen, um das Dialogfeld **[!UICONTROL Richtlinie zum Zusammenführen auswählen, in dem Sie eine andere Richtlinie zum Zusammenführen auswählen können.]**
+Der Selektor **[!UICONTROL Zusammenführungsrichtlinie]** wählt automatisch die standardmäßige Zusammenführungsrichtlinie für Ihre Organisation aus. Wenn Sie diese Zusammenführungsrichtlinie nicht verwenden möchten, können Sie `X` neben der standardmäßigen Zusammenführungsrichtlinie auswählen, um das Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie]** zu öffnen, in dem Sie eine andere Zusammenführungsrichtlinie auswählen können.
 
-Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in der Plattform finden Sie im Handbuch [Richtlinien in der Benutzeroberfläche zusammenführen](merge-policies.md).
+Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
-### Identitäts-Namensraum
+### Identitäts-Namespace
 
-Mit der Auswahl **[!UICONTROL Identity Namensraum]** wird ein Dialogfeld geöffnet, in dem Sie den Identitäts-Namensraum auswählen können, mit dem Sie suchen möchten. Sie können die Attribute, die bei der Suche angezeigt werden, anpassen, indem Sie das Filtersymbol auswählen und festlegen, welche Attribute Sie hinzufügen oder entfernen möchten.
+Der Selektor **[!UICONTROL Identitäts-Namespace]** öffnet ein Dialogfeld, in dem Sie den Identitäts-Namespace auswählen können, mit dem Sie suchen möchten. Außerdem können Sie die Attribute, die bei Ihrer Suche angezeigt werden, anpassen, indem Sie das Filtersymbol auswählen und auswählen, welche Attribute Sie hinzufügen oder entfernen möchten.
 
 ![](../images/user-guide/profiles-search-filter.png)
 
-Wählen Sie im Dialogfeld **[!UICONTROL Identitätsname auswählen]** den Namensraum aus, nach dem Sie suchen möchten, oder verwenden Sie die Suchleiste im Dialogfeld, um mit der Eingabe des Namensraums zu beginnen. Sie können einen Namensraum auswählen, um weitere Details Ansicht. Sobald Sie den gewünschten Namensraum gefunden haben, können Sie das Optionsfeld auswählen und **[!UICONTROL Auswahl]** drücken, um fortzufahren.
+Wählen Sie im Dialogfeld **[!UICONTROL Identitäts-Namespace]** aus, wählen Sie den Namespace aus, nach dem Sie suchen möchten, oder verwenden Sie die Suchleiste im Dialogfeld, um mit der Eingabe des Namens eines Namespace zu beginnen. Sie können einen Namespace auswählen, um weitere Details anzuzeigen. Sobald Sie den Namespace gefunden haben, den Sie verwenden möchten, können Sie das Optionsfeld auswählen und auf **[!UICONTROL Auswählen]** klicken, um fortzufahren.
 
 ![](../images/user-guide/profiles-select-identity-namespace.png)
 
 ### Identitätswert
 
-Nach Auswahl eines Identitäts-Namensraums kehren Sie zur Registerkarte **[!UICONTROL Durchsuchen]** zurück, wo Sie einen **[!UICONTROL Identitätswert]** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Profil und muss ein gültiger Eintrag für den bereitgestellten Namensraum sein. Wenn Sie beispielsweise den Identitäts-Namensraum &quot;E-Mail&quot;auswählen, ist ein Identitätswert in Form einer gültigen E-Mail-Adresse erforderlich.
+Nachdem Sie einen Identitäts-Namespace ausgewählt haben, kehren Sie zur Registerkarte **[!UICONTROL Durchsuchen]** zurück, auf der Sie einen **[!UICONTROL Identitätswert]** eingeben können. Dieser Wert ist spezifisch für ein einzelnes Kundenprofil und muss ein gültiger Eintrag für den angegebenen Namespace sein. Beispielsweise würde die Auswahl des Identitäts-Namespace &quot;E-Mail&quot;einen Identitätswert in Form einer gültigen E-Mail-Adresse erfordern.
 
 ![](../images/user-guide/profiles-show-profile.png)
 
-Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Profil anzeigen]** und ein Profil, das dem Wert entspricht, wird zurückgegeben. Wählen Sie die **[!UICONTROL Profil-ID]** aus, um die Details des Profils Ansicht.
+Nachdem ein Wert eingegeben wurde, wählen Sie **[!UICONTROL Profil anzeigen]** und ein einzelnes Profil, das dem Wert entspricht, wird zurückgegeben. Wählen Sie **[!UICONTROL Profil-ID]** aus, um die Profildetails anzuzeigen.
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Profil Detail {#profile-detail}
+### Profildetail {#profile-detail}
 
-Wenn Sie die **[!UICONTROL Profil-ID]** auswählen, wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Informationen zum Profil wurden aus mehreren Profil-Fragmenten zusammengeführt, um eine Ansicht des jeweiligen Kunden zu bilden. Dazu gehören Kundendetails wie Basisattribute, verknüpfte Identitäten und Voreinstellungen für Kanal. Die angezeigten Standardfelder können auch auf organisatorischer Ebene geändert werden, um bevorzugte Profil-Attribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich schrittweiser Anleitungen zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie im Handbuch [Profil-Detailanpassung](profile-customization.md).
+Nach Auswahl der **[!UICONTROL Profil-ID]** wird die Registerkarte **[!UICONTROL Detail]** geöffnet. Die auf der Registerkarte **[!UICONTROL Detail]** angezeigten Profilinformationen wurden aus mehreren Profilfragmenten zusammengeführt, um eine einzige Ansicht des einzelnen Kunden zu bilden. Dazu gehören Kundendetails wie grundlegende Attribute, verknüpfte Identitäten und Kanalpräferenzen. Die angezeigten Standardfelder können auch auf Organisationsebene geändert werden, um die bevorzugten Profilattribute anzuzeigen. Weitere Informationen zum Anpassen dieser Felder, einschließlich einer schrittweisen Anleitung zum Hinzufügen und Entfernen von Attributen und zum Ändern der Größe von Dashboard-Bedienfeldern, finden Sie im [Handbuch zur Profildetailanpassung](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Sie können weitere Informationen zum jeweiligen Profil durch Auswahl einer anderen verfügbaren Registerkarte Ansicht werden. Zu diesen Registerkarten gehören Attribute, Ereignis und Segmentmitgliedschaften, die die Segmente anzeigen, für die das Profil derzeit qualifiziert ist.
+Sie können zusätzliche Informationen zum jeweiligen Profil anzeigen, indem Sie eine andere der verfügbaren Registerkarten auswählen. Diese Registerkarten umfassen Attribute, Ereignisse und Segmentzugehörigkeiten, die die Segmente anzeigen, für die das Profil derzeit qualifiziert ist.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
 ## Zusammenführungsrichtlinien
 
-Wählen Sie im Hauptmenü **[!UICONTROL Profil]** die Registerkarte **[!UICONTROL Richtlinien zusammenführen]** aus, um eine Liste der zu Ihrem Unternehmen gehörenden Zusammenführungsrichtlinien Ansicht. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, sowie die Schema-Klasse, für die sie gilt.
+Wählen Sie im Hauptmenü **[!UICONTROL Profile]** die Registerkarte **[!UICONTROL Zusammenführungsrichtlinien]** aus, um eine Liste der zu Ihrer Organisation gehörenden Zusammenführungsrichtlinien anzuzeigen. Jede aufgelistete Richtlinie zeigt ihren Namen an, unabhängig davon, ob es sich um die standardmäßige Zusammenführungsrichtlinie handelt oder nicht, und die Schemaklasse, für die sie gilt.
 
-Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Handbuch [Richtlinien in der Benutzeroberfläche zusammenführen](merge-policies.md).
-
-Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien mit der Echtzeit-Kunden-Profil-API finden Sie im [Endpunkt-Handbuch Zusammenführungsrichtlinien](../api/merge-policies.md).
+Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## Vereinigungsschema {#union-schema}
 
-Wählen Sie im Hauptmenü **[!UICONTROL Profil]** die Registerkarte **[!UICONTROL Vereinigung Schema]** aus, um die verfügbaren Schema für die Vereinigung Ihrer erfassten Daten Ansicht. Ein Vereinigung-Schema ist eine Zusammenführung aller [!DNL Experience Data Model] (XDM)-Felder derselben Klasse, deren Schema für die Verwendung in [!DNL Real-time Customer Profile] aktiviert wurden.
+Wählen Sie im Hauptmenü **[!UICONTROL Profile]** die Registerkarte **[!UICONTROL Vereinigungsschema]** aus, um verfügbare Vereinigungsschemas für die erfassten Daten anzuzeigen. Ein Vereinigungsschema ist eine Kombination aller [!DNL Experience Data Model] (XDM)-Felder derselben Klasse, deren Schemas für die Verwendung in [!DNL Real-time Customer Profile] aktiviert wurden.
 
-Weitere Informationen zu Schemas in der Vereinigung finden Sie im Handbuch [Vereinigung Schema UI guide](union-schema.md).
+Weitere Informationen zu Vereinigungsschemas finden Sie im [UI-Handbuch für Vereinigungsschemas](union-schema.md).
 
 ![](../images/user-guide/profiles-union-schema.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Handbuchs wissen Sie jetzt, wie Sie Ihre [!DNL Profile]-Daten mit der [!DNL Experience Platform]-Benutzeroberfläche Ansicht und verwalten. Informationen zum Arbeiten mit Profil-Daten mithilfe der Echtzeit-Customer Profil API finden Sie im [Profil Developer Guide](../api/overview.md).
+Durch Lesen dieses Handbuchs wissen Sie jetzt, wie Sie Ihre [!DNL Profile]-Daten mithilfe der [!DNL Experience Platform]-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Arbeiten mit Profildaten mithilfe der Echtzeit-Kundenprofil-API finden Sie im [Profil-Entwicklerhandbuch](../api/overview.md).
