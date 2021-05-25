@@ -2,31 +2,30 @@
 audience: user
 user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
-description: Dieses Dokument Liste das Inhaltsverzeichnis für Adobe Experience Platform-Ziele.
+description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Ziele
-source-git-commit: d62b2df54357449f35894f9c8ab45f87d97363d2
+source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 55%
+source-wordcount: '477'
+ht-degree: 58%
 
 ---
 
 
 # Ziele {#destinations}
 
-* [Ziele – Übersicht](./home.md)
+* [Ziele Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
-* [Häufig gestellte Fragen zu Zielen](./destinations-faq.md)
 * API-Tutorials {#api}
-   * [Herstellen einer Verbindung zu Streaming-Zielen und Aktivieren von Daten mithilfe der Flow Service API](./api/streaming-destinations.md)
-   * [Herstellen einer Verbindung zu E-Mail-Marketingzielen und Aktivieren von Daten mithilfe der Flow Service API](./api/email-marketing.md)
-* UI-Handbücher {#ui}
+   * [Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API aktivieren](./api/streaming-destinations.md)
+   * [Verbindung zu E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren](./api/email-marketing.md)
+* Benutzeroberflächen-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
    * [Mit Ziel verbinden](./ui/connect-destination.md)
-   * [Ansichten-Zieldetails](./ui/destination-details-page.md)
+   * [Zieldetails anzeigen](./ui/destination-details-page.md)
    * [Profile und Segmente für ein Ziel aktivieren](./ui/activate-destinations.md)
    * [Zielkonten aktualisieren](./ui/update-accounts.md)
-   * [Aktivierungen bearbeiten](./ui/edit-activation.md)
+   * [Bearbeiten von Aktivierungsflüssen](./ui/edit-activation.md)
    * [Ziele löschen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
 * Zielkatalog {#catalog}
@@ -34,13 +33,13 @@ ht-degree: 55%
    * [ (Alpha) HTTP-Verbindung](./catalog/http-destination.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
-      * [Segmentfreigabe für Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Segmentfreigabe in Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Awin Advertiser Conversion Tag Extension](./catalog/advertising/awin-conversiontag.md)
+      * [Awin Advertiser Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
-      * [Bing Ads Universal Ereignis Tracking (UET)-Erweiterung](./catalog/advertising/bing-ads.md)
+      * [Bing Ads Universal Event Tracking (UET)-Erweiterung](./catalog/advertising/bing-ads.md)
       * [Branch-Erweiterung](./catalog/advertising/branch.md)
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
@@ -78,14 +77,14 @@ ht-degree: 55%
       * [TMMData-Erweiterung](./catalog/analytics/tmmdata.md)
       * [Yext Conversion Tracking-Erweiterung](./catalog/analytics/yext.md)
    * Cloud-Speicher-Ziele {#cloud-storage}
-      * [Übersicht über die Ziele der Cloud-Datenspeicherung](./catalog/cloud-storage/overview.md)
-      * [Ziel einer Cloud-Datenspeicherung erstellen](./catalog/cloud-storage/workflow.md)
+      * [Übersicht über Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
+      * [Erstellen eines Cloud-Speicher-Ziels](./catalog/cloud-storage/workflow.md)
       * [(Beta) Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
-      * [Azurblauch-Verbindung](./catalog/cloud-storage/azure-blob.md)
-      * [Beta-Ereignis-Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
+      * [(Beta) Azure Event Hub-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [Zulassungsliste der IP-Adresse](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [IP-Adressen-Zulassungsliste](./catalog/cloud-storage/ip-address-allow-list.md)
    * Data Management Platform-Ziele {#data-management}
       * [Übersicht über Data Management Platform-(DMP-)Ziele](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
@@ -102,11 +101,11 @@ ht-degree: 55%
       * [Salesforce-Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Experience Platform Launch-Erweiterungen {#launch-extensions}
       * [Übersicht über die Adobe Experience Platform Launch-Erweiterung](./catalog/launch-extensions/overview.md)
-   * Ziele für die mobile Interaktion {#mobile-engagement}
-      * [Ziele für die mobile Interaktion - Übersicht](./catalog/mobile-engagement/overview.md)
+   * Mobile Interaktionsziele {#mobile-engagement}
+      * [Mobile Interaktionsziele - Übersicht](./catalog/mobile-engagement/overview.md)
       * [(Beta) Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
-      * [(Beta) Verbindung zu Airship Tags](./catalog/mobile-engagement/airship-tags.md)
-      * [(Beta) Braze-Verbindung](./catalog/mobile-engagement/braze.md)
+      * [(Beta) Verbindung von Airship Tags](./catalog/mobile-engagement/airship-tags.md)
+      * [(Beta) Verbindung brennen](./catalog/mobile-engagement/braze.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [Adobe Target-Erweiterung](./catalog/personalization/adobe-target.md)
@@ -121,18 +120,19 @@ ht-degree: 55%
       * [Social-Ziele - Übersicht](./catalog/social/overview.md)
       * [Social-Ziel erstellen](./catalog/social/workflow.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
-      * [Facebook-Anschluss](./catalog/social/facebook.md)
-      * [Verbindung zu linkedIn Match Audiencen](./catalog/social/linkedin.md)
+      * [Facebook-Verbindung](./catalog/social/facebook.md)
+      * [Verbindung zwischen linkedIn Matched Audiences](./catalog/social/linkedin.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
-      * [Zielort für die vorausschauende Erweiterung](./catalog/survey/foresee.md)
+      * [Foresee-Erweiterungsziel](./catalog/survey/foresee.md)
       * [InMoment-Erweiterung](./catalog/survey/inmoment.md)
       * [Qualtrics Website Feedback-Erweiterung](./catalog/survey/qualtrics.md)
       * [QuestionPro Intercept Surveys-Erweiterung](./catalog/survey/web-intercept-surveys.md)
    * Sprache der Kundenziele {#voice}
-      * [Übersicht über die Ziele des Kunden](./catalog/voice/overview.md)
+      * [Sprache der Kundenziele - Übersicht](./catalog/voice/overview.md)
       * [Confirmit Digital Feedback-Erweiterung](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca Tags-Erweiterung](./catalog/voice/invoca.md)
       * [Medallia-Erweiterung](./catalog/voice/medallia.md)
       * [Talk URL Inbox-Erweiterung](./catalog/voice/talkurl.md)
-* [Versionshinweise zur Plattform](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Häufig gestellte Fragen ](./destinations-faq.md)
+* [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
