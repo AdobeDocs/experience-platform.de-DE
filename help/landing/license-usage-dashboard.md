@@ -1,28 +1,22 @@
 ---
-keywords: Experience Platform;Benutzeroberfläche;Anpassung;Lizenznutzung Dashboard;Dashboard;Lizenzverwendung;Berechtigungen;Verbrauch
-title: Dashboard der Lizenzverwendung
-description: 'Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, mit dem Sie wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen Ansichten vornehmen können. '
-topic-legacy: guide
+keywords: Experience Platform; Benutzeroberfläche; Benutzeroberfläche; Anpassung; Dashboard zur Lizenznutzung; Dashboard; Lizenzverwendung; Berechtigung; Verbrauch
+title: Dashboard zur Lizenznutzung
+description: 'Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können. '
 type: Documentation
 exl-id: 8cf34653-acf6-4af3-af7b-6c07e68bbc03
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5b5acd22f2dbdeef704b3e790ca603901ebc882a
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 6%
+source-wordcount: '125'
+ht-degree: 2%
 
 ---
 
-# (Beta) [!UICONTROL Lizenzverwendung] Dashboard {#license-usage-dashboard}
+# Dashboard zur Lizenzverwendung {#license-usage-dashboard}
 
->[!IMPORTANT]
->
->Die Dashboard-Funktionalität befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden.
 
-Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard, mit dem Sie wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen, wie sie in einem täglichen Schnappschuss erfasst werden, Ansichten vornehmen können.
+Detaillierte Anweisungen zum Zugriff auf das Dashboard zur Lizenznutzung in der Benutzeroberfläche und zur Interaktion mit diesem sowie weitere Informationen zu den verfügbaren Metriken, die im Dashboard angezeigt werden, finden Sie im [Dashboard zur Lizenznutzung](../dashboards/guides/license-usage.md).
 
-Detaillierte Anweisungen zum Zugriff auf das Dashboard zur Lizenznutzung in der Benutzeroberfläche und zu dessen Interaktion finden Sie im Handbuch [Dashboard zur Lizenzverwendung](../dashboards/guides/license-usage.md). Weitere Informationen zu den verfügbaren Metriken finden Sie im Dashboard.
+Um einen Überblick über alle Dashboard-Funktionen in Experience Platform zu erhalten, lesen Sie zunächst die [Übersicht über Dashboards](../dashboards/home.md).
 
-Einen Überblick über alle Dashboard-Funktionen in der Experience Platform erhalten Sie zunächst im [Überblick über die Dashboards](../dashboards/home.md).
-
-![](images/license-usage-dashboard/dashboard-overview.png)
+![](../dashboards/images/license-usage/dashboard-overview.png)
