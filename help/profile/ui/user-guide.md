@@ -4,9 +4,9 @@ title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 2696dab922d9c1992b61ffefe50a4e3155793282
+source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
 workflow-type: tm+mt
-source-wordcount: '1327'
+source-wordcount: '1303'
 ht-degree: 11%
 
 ---
@@ -29,11 +29,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigations
 
 ![](../images/user-guide/profiles-overview.png)
 
-### (Alpha) Profil-Dashboard
-
->[!IMPORTANT]
->
->Die Dashboard-Funktion befindet sich derzeit in der Alpha-Phase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+### Profil-Dashboard
 
 Für einige Benutzer bietet die Auswahl von **[!UICONTROL Profile]** im linken Navigationsbereich und das Öffnen der Registerkarte **[!UICONTROL Übersicht]** ein Dashboard, in dem die Schlüsselmetriken für Ihre Profildaten dargestellt werden.
 
