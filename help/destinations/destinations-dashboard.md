@@ -1,28 +1,22 @@
 ---
-keywords: Experience Platform;Benutzeroberfläche;Anpassung;Lizenznutzung Dashboard;Dashboard;Lizenzverwendung;Berechtigungen;Verbrauch
-title: Dashboard Ziele
-description: 'Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, mit dem Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens Ansicht haben. '
-topic-legacy: guide
+keywords: Experience Platform; Benutzeroberfläche; Benutzeroberfläche; Anpassung; Dashboard zur Lizenznutzung; Dashboard; Lizenzverwendung; Berechtigung; Verbrauch
+title: Dashboard "Ziele"
+description: 'Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können. '
 type: Documentation
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 6%
+source-wordcount: '121'
+ht-degree: 0%
 
 ---
 
 
-# (Beta) [!UICONTROL Ziele] Dashboard {#destinations-dashboard}
+#  Ziel-Dashboard  {#destinations-dashboard}
 
->[!IMPORTANT]
->
->Die Dashboard-Funktionalität befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden.
 
-Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard, mit dem Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens, wie sie in einem täglichen Schnappschuss erfasst werden, Ansichten vornehmen können.
+Detaillierte Anweisungen zum Zugriff auf das Ziel-Dashboard in der Benutzeroberfläche und zur Interaktion damit sowie weitere Informationen zu den verfügbaren Metriken, die im Dashboard angezeigt werden, finden Sie im Dashboard-Handbuch [Ziele .](../dashboards/guides/destinations.md)
 
-Detaillierte Anweisungen zum Zugriff auf das Dashboard &quot;Ziele&quot;in der Benutzeroberfläche und zur Interaktion mit diesem sowie weitere Informationen zu den verfügbaren Metriken im Dashboard finden Sie im Handbuch [Ziel-Dashboard](../dashboards/guides/destinations.md).
-
-Einen Überblick über alle Dashboard-Funktionen in der Experience Platform erhalten Sie zunächst im [Überblick über die Dashboards](../../dashboards/home.md).
+Um einen Überblick über alle Dashboard-Funktionen in Experience Platform zu erhalten, lesen Sie zunächst die [Übersicht über Dashboards](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)
