@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Rohdaten mit Experience Platform-Dashboards durchsuchen und verarbeiten
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
-source-git-commit: 743367431144e9714a967b0340c755bf2120559c
+source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
 workflow-type: tm+mt
-source-wordcount: '592'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -29,27 +29,27 @@ Sie können Query Service verwenden, um Raw-Datensätze für Profil-, Segment- u
 
 Für jede aktive Zusammenführungsrichtlinie im Echtzeit-Kundenprofil steht im Data Lake ein Datensatz mit Profilattributen zur Verfügung.
 
-Die Namenskonvention für diesen Datensatz lautet **Profilattribut** , gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+Die Namenskonvention für diese Datensätze lautet **Profilattribut** , gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-Um das vollständige Schema des Datensatzes zu verstehen, können Sie das Schema mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
+Um das vollständige Schema jedes Datensatzes zu verstehen, können Sie die Datensätze mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
 ### Datensatz für Segmentmetadaten
 
-Im Data Lake steht ein Segment-Metadaten-Datensatz für die einzelnen Segmente Ihres Unternehmens zur Verfügung.
+Im Data Lake ist ein Segment-Metadaten-Datensatz verfügbar, der Metadaten für die einzelnen Segmente Ihres Unternehmens enthält.
 
 Die Namenskonvention für diesen Datensatz lautet **Profilsegmentdefinition** , gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-Die folgende Abbildung zeigt das Schema des Segmentmetadaten-Datensatzes.
+Um das vollständige Schema des Datensatzes zu verstehen, können Sie das Schema mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
 ![](images/query/segment-metadata.png)
 
 ### Ziel-Metadaten-Datensatz
 
-Die Metadaten für Ihre aktivierten Ziele sind als Rohdatensatz im Data Lake verfügbar.
+Die Metadaten für alle aktivierten Ziele Ihres Unternehmens sind als Rohdatensatz im Data Lake verfügbar.
 
 Die Namenskonvention dieses Datensatzes lautet **DIM_Destination**.
 
-Die folgende Abbildung zeigt das Schema des Ziel-Metadaten-Datensatzes.
+Um das vollständige Schema des Datensatzes zu verstehen, können Sie das Schema mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
 ![](images/query/destinations-metadata.png)
 
@@ -102,8 +102,6 @@ Select
       group by
       segment_id
 ```
-
-### Anzahl der pro Ziel aktivierten Segmente für alle Ziele
 
 ## Nächste Schritte
 
