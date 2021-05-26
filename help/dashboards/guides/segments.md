@@ -1,92 +1,107 @@
 ---
-keywords: Experience Platform;Profil;Segment;Segmente;Segmentierung;Benutzeroberfläche;UI;Anpassen;SegmentDashboard;Dashboard
-title: Dashboard "Segmente"
-description: 'Adobe Experience Platform bietet ein Dashboard zur Ansicht wichtiger Informationen zu Segmenten, die Ihr Unternehmen erstellt hat. '
-topic-legacy: guide
+keywords: Experience Platform; Profil; Segment; Segmente; Segmentierung; Benutzeroberfläche; Benutzeroberfläche; Anpassung; Segmentdashboard; Dashboard
+title: Segmente-Dashboard
+description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 3%
 
 ---
 
-# (Beta) Dashboard Segmente {#segment-dashboard}
+# Segmente-Dashboard {#segment-dashboard}
 
->[!IMPORTANT]
->
->Die in diesem Dokument beschriebene Dashboard-Funktion befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Segmenten anzeigen können, die während einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie in der Benutzeroberfläche auf das Segment-Dashboard zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard, mit dem Sie wichtige Informationen zu Ihren Segmenten, wie sie in einem täglichen Schnappschuss erfasst werden, Ansichten durchführen können. In diesem Handbuch wird beschrieben, wie Sie auf das Segmentsteuerungs-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten, und es werden weitere Informationen zu den im Dashboard angezeigten Visualisierungen bereitgestellt.
+Einen Überblick über alle Adobe Experience Platform Segmentation Service-Funktionen in der Platform-Benutzeroberfläche finden Sie im Handbuch [Segmentation Service UI Guide](../../segmentation/ui/overview.md).
 
-Einen Überblick über alle Adobe Experience Platform-Segmentierungsdienstfunktionen in der Plattform-Benutzeroberfläche finden Sie im Handbuch [Segmentierungsdienst-Benutzeroberfläche](../../segmentation/ui/overview.md).
+## Dashboard-Daten des Segments
 
-## Segmentdaten Dashboard
+Das Segment-Dashboard zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher in der Experience Platform hat. Der Schnappschuss enthält keine Ereignisdaten (Zeitreihendaten).
 
-Das Dashboard segment zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im in der Experience Platform befindlichen Profil-Store hat. Der Schnappschuss enthält keine Ereignis- (Zeitreihendaten).
-
-Die Attributdaten im Schnappschuss zeigen die Daten exakt so an, wie sie zu dem Zeitpunkt angezeigt werden, zu dem der Schnappschuss erstellt wurde. Das heißt, der Schnappschuss ist keine Näherung oder Stichprobe der Daten und das Segmentelement wird nicht in Echtzeit aktualisiert.
+Die Attributdaten im Snapshot zeigen die Daten exakt so an, wie sie zu dem Zeitpunkt angezeigt werden, zu dem die Momentaufnahme erstellt wurde. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Segment-Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
->Änderungen oder Aktualisierungen, die seit der Erstellung des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
+>Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
 
-## Segmentanalyse - Dashboard
+## Segmente-Dashboard durchsuchen
 
-Um zum Segmentelement in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Segmente]** aus und klicken Sie dann auf die Registerkarte **[!UICONTROL Übersicht]**, um das Dashboard anzuzeigen.
+Um in der Platform-Benutzeroberfläche zum Segment-Dashboard zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Segmente]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
 
 ![](../images/segments/dashboard-overview.png)
 
-### Segment auswählen
+### Ändern des Dashboards [!UICONTROL Segmente]
 
-Das Dashboard wählt automatisch ein anzuzeigendes Segment aus, Sie können das angezeigte Segment jedoch über das Dropdown-Menü ändern. Um ein anderes Segment auszuwählen, wählen Sie die Dropdown-Liste neben dem Segmentnamen aus und wählen Sie dann das Segment aus, das Ansicht werden soll.
+Sie können das Erscheinungsbild des Dashboards [!UICONTROL Segmente] ändern, indem Sie **[!UICONTROL Dashboard ändern]** auswählen. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die [!UICONTROL Widget-Bibliothek] zugreifen, um verfügbare Widgets zu untersuchen und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
 
->[!NOTE]
->
->Das Dropdown-Menü zeigt alle Segmente an, die Ihre Organisation bisher erstellt hat. Dies kann bedeuten, dass Sie einen Bildlauf durchführen müssen, um die vollständige Liste der verfügbaren Segmente Ansicht.
+Weitere Informationen finden Sie in der Dokumentation [Dashboards ändern](../modify.md) und der [Widget-Bibliothek](../widget-library.md) .
+
+## Segment auswählen
+
+Das Dashboard wählt automatisch ein anzuzeigendes Segment aus. Sie können das Segment jedoch über das Dropdown-Menü oder die Segmentauswahl ändern.
+
+Um ein anderes Segment auszuwählen, wählen Sie die Dropdown-Liste neben dem Segmentnamen aus oder öffnen Sie mit der Segmentauswahl das Dialogfeld für die Segmentauswahl.
 
 ![](../images/segments/change-segment.png)
 
-### Widgets und Metriken
+![](../images/segments/select-segment-dialog.png)
 
-Das Segmentsegment-Dashboard besteht aus Widgets, bei denen es sich um schreibgeschützte Metriken handelt, die wichtige Informationen zu Ihrem ausgewählten Segment enthalten. Das Datum und die Uhrzeit der letzten Aktualisierung im Widget werden angezeigt, wenn der letzte Schnappschuss der Daten aufgenommen wurde.
+## Widgets und Metriken
+
+Das Segmente-Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihrem ausgewählten Segment enthalten.
+
+Das Datum und die Uhrzeit der letzten Aktualisierung eines Widgets zeigen an, wann die letzte Momentaufnahme der Daten erstellt wurde. Datum und Uhrzeit der Momentaufnahme werden in UTC angegeben. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der IMS-Organisation.
 
 ![](../images/segments/widget-timestamp.png)
 
 ## Verfügbare Widgets
 
-Experience Platform bietet mehrere Widgets, mit denen Sie verschiedene Metriken zu Ihrem Segment visualisieren können. Wählen Sie unten den Namen eines Widget aus, um weitere Informationen zu erhalten:
+Experience Platform bietet mehrere Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihrem Segment visualisieren können. Wählen Sie unten den Namen eines Widgets aus, um mehr zu erfahren:
 
-* [[!UICONTROL Segmentgröße]](#segment-size)
-* [[!UICONTROL Im Zeitverlauf hinzugefügte Profil]](#profiles-added-over-time)
-* [[!UICONTROL Profile nach Namensraum]](#profiles-by-namespace)
+* [[!UICONTROL Zielgruppengröße]](#audience-size)
+* [[!UICONTROL Zielgruppengrößentrend]](#audience-size-trend)
+* [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
+* [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 
-### [!UICONTROL Segmentgröße] {#segment-size}
+### [!UICONTROL Zielgruppengröße] {#audience-size}
 
-Das Widget **[!UICONTROL Segmentgröße]** zeigt die Gesamtanzahl der zusammengeführten Profil im ausgewählten Segment zum Zeitpunkt des Snapshots an. Diese Anzahl ist das Ergebnis der Anwendung der Segmentzusammenführungs-Richtlinie auf Ihre Profil-Daten, um Profil-Fragmente zu einem einzigen Profil für jede einzelne Segmentperson zusammenzuführen.
+Das Widget **[!UICONTROL Zielgruppengröße]** zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Segmentzusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zu einem einzigen Profil für jede Person im Segment zusammenzuführen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie zunächst im [Überblick über das Echtzeit-Profil des Kunden](../../profile/home.md).
+Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
-![](../images/segments/segment-size.png)
+![](../images/segments/audience-size.png)
 
-### [!UICONTROL Im Zeitverlauf hinzugefügte Profil] {#profiles-added-over-time}
+### [!UICONTROL Zielgruppengrößentrend] {#audience-size-trend}
 
-Das Widget **[!UICONTROL Im Zeitverlauf hinzugefügte Profil]** enthält Informationen zur Gesamtanzahl der Profil im Segment, die während des täglichen Schnappschusses für die letzten 30 Tage erfasst wurden. Dieses Widget zeigt an, wie sich die Segmentgröße über einen Zeitraum von 30 Tagen verändert hat, wenn neue Profil für das Segment qualifiziert sind oder es verlassen.
+Das Widget **[!UICONTROL Zielgruppengrößentrend]** liefert Informationen zur Gesamtanzahl der Profile im Segment, die während der täglichen Momentaufnahme für die letzten 30 Tage, 90 Tage oder 12 Monate erfasst wurden. Dieses Widget zeigt an, wie sich die Segmentgröße im Laufe der Zeit verändert haben kann, wenn sich neue Profile für das Segment qualifizieren oder es verlassen.
 
-Weitere Informationen zur Segmentauswertung und zur Qualifizierung und zum Ausstieg von Profilen finden Sie in der [Segmentierungsdienstdokumentation](../../segmentation/home.md).
+Weiterführende Informationen zur Segmentbewertung und zur Qualifizierung und Ausstieg von Profilen finden Sie in der [Dokumentation zum Segmentation Service](../../segmentation/home.md).
 
-![](../images/segments/profiles-added-over-time.png)
+![](../images/segments/audience-size-trend.png)
 
-### [!UICONTROL Profile nach Namensraum] {#profiles-by-namespace}
+### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
-Das Widget **[!UICONTROL Profil nach Namensraum]** zeigt die Aufschlüsselung der Namensraum für alle zusammengeführten Profil im ausgewählten Segment an. Die Gesamtanzahl der Profil nach Identitäts-Namensraum ([!UICONTROL ID-Namensraum] im Widget) kann höher sein als die Gesamtanzahl der Profil im Segment, da ein Profil mehrere Namensraum damit verknüpft sein könnte. Mit anderen Worten, wenn die für jeden Namensraum angezeigten Werte addiert werden, kann dies mehr als die Gesamtzahl der Profil im Segment ausmachen, da bei Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Namensraum mit diesem Kunden verbunden sein können.
+Das Widget **[!UICONTROL Identitätsüberschneidung]** zeigt ein Venn-Diagramm oder Set-Diagramm an, das die Überschneidung von Profilen in Ihrem Segment mit mehreren Identitäten anzeigt.
 
-Weitere Informationen zu Identitäts-Namensräumen finden Sie in der [Adobe Experience Platform Identity Service-Dokumentation](../../identity-service/home.md).
+Nachdem Sie die zu vergleichenden Identitäten mithilfe der Dropdown-Menüs im Widget ausgewählt haben, werden Kreise angezeigt, die die relative Größe jeder Identität anzeigen. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt.
 
-![](../images/segments/profiles-by-namespace.png)
+Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
+
+Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum Adobe Experience Platform Identity Service](../../identity-service/home.md).[
+
+![](../images/segments/identity-overlap.png)
+
+### [!UICONTROL Profile nach Identität] {#profiles-by-identity}
+
+Das Widget **[!UICONTROL Profile nach Identität]** zeigt die Aufschlüsselung der Identitäten für alle zusammengeführten Profile in Ihrem ausgewählten Segment an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile im Segment, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass das Addieren der für jede Identität angezeigten Werte mehr als die gesamte Zielgruppengröße im Segment ausmacht, da bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
+
+Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum Adobe Experience Platform Identity Service](../../identity-service/home.md).[
+
+![](../images/segments/profiles-by-identity.png)
 
 ## Nächste Schritte
 
-Indem Sie diesem Dokument folgen, sollten Sie nun in der Lage sein, das Segmentsegment zu suchen und ein Dashboard zur Ansicht auszuwählen. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Segmenten in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch [Segmentierungsdienst-Benutzeroberfläche](../../segmentation/ui/overview.md).
+Durch Befolgen dieses Dokuments sollten Sie jetzt in der Lage sein, das Segment-Dashboard zu finden und ein anzuzeigendes Segment auszuwählen. Sie sollten auch die Metriken verstehen, die in den verfügbaren Widgets angezeigt werden. Weitere Informationen zum Arbeiten mit Segmenten in der Experience Platform-Benutzeroberfläche finden Sie im Handbuch [Segmentation Service UI guide](../../segmentation/ui/overview.md).
