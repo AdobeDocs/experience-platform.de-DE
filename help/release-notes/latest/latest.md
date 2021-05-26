@@ -1,42 +1,68 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform für den 21. April 2021.
+description: Versionshinweise zur Experience Platform für den 26. Mai 2021.
 doc-type: release notes
-last-update: April 21, 2021
+last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 38%
+source-wordcount: '831'
+ht-degree: 30%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 21. April 2021**
+**Release-Datum: Mittwoch, 26. Mai 2021**
+
+Neue Funktionen in Adobe Experience Platform:
+
+- [Dashboards](#dashboards)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Segmentation Service]](#segmentation)
-- [[!DNL Sources]](#sources)
+- [Echtzeit-Kundenprofil](#profile)
+
+## Dashboards {#dashboards}
+
+Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke in die Daten Ihres Unternehmens erhalten, wie sie bei täglichen Momentaufnahmen erfasst werden.
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Profileinblicke | Das Profil-Dashboard bietet einen täglichen Überblick über die Echtzeit-Kundenprofil-Metriken für jede organisatorische Zusammenführungsrichtlinie in Experience Platform. Diese Profileinblicke stehen allen Benutzern zur Verfügung, die in Platform auf Profildaten zugreifen und diese anzeigen können. |
+| Zielgruppeneinblicke | Das Segment-Dashboard bietet zielgruppenbezogene Einblicke für alle Benutzer, die Zugriff auf Segmente in Platform haben. Das Dashboard bietet einen täglichen Überblick über die Zielgruppenmetriken für Zielgruppen, die mit der Segment Builder-Benutzeroberfläche erstellt oder aus Adobe Audience Manager importiert wurden. |
+| Aktivierungseinblicke | Das Ziel-Dashboard steht allen Benutzern mit der Möglichkeit zum Zugriff auf und zur Ansicht von Zielen zur Verfügung. Das Dashboard bietet einen täglichen Überblick über die Aktivierungsmetriken für Aktivierungen in allen Zielen. |
+| Benutzerspezifische Einblicke | Das Erscheinungsbild von Dashboards kann von jedem Benutzer personalisiert werden, einschließlich der Möglichkeit, das Layout des Dashboards durch Hinzufügen, Entfernen, Ändern der Größe und Neuanordnen von Widgets zu ändern. |
+| Erstellung und Verwaltung von Widgets | Alle standardmäßigen und benutzerdefinierten Widgets stehen Marketing-Experten in einem zentralen Repository zur Demokratisierung der Erstellung und Freigabe von Insights zur Verfügung:<br/><ul><li>Die Standardregisterkarte enthält von Adoben bereitgestellte Widgets, auf die im Dashboard-Kontext zugegriffen werden kann. </li><li>Die benutzerdefinierte Registerkarte enthält benutzerdefinierte Widgets, die von der Organisation erstellt wurden, einschließlich einer Option zum Ausblenden von Widgets für die Ansicht.</li><li>Der Workflow zur Erstellung von Widgets innerhalb von Profilen und Zielgruppeneinblicken ermöglicht die Bearbeitung, Auswahl, Vorschau und Veröffentlichung benutzerdefinierter Widgets.</li></ul> |
+| Benutzerspezifische Einblicke | Mit Zugriffsberechtigungen können Dateningenieure und Marketing-Experten Profilattribute anpassen, die für die Widget-Erstellung verfügbar sind. |
+
+Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, erhalten Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
 
-**Neue Funktionen**
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Warnhinweise bei unbekannten Fehlern | Die Fehlermeldungen von Data Prep Mapper sind jetzt milder, da sie Warnungen anstelle von Fehlern zusammen mit teilweise umgewandelten Zeilen enthalten. |
+| Neue Funktionen | Funktionen wurden hinzugefügt, mit denen Schlüssel abgerufen, Elemente an ein vorhandenes Array angehängt, Elemente aus mehreren Arrays an ein vorhandenes Array angehängt, Objekte zum Erstellen von Arrays verwendet und der Name des JSON-Objekts als Zeichenfolgenliteral verwendet werden kann. |
+
+Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für die Bearbeitung der Zuordnung für vorhandene Datenflüsse | Sie können jetzt die Zuordnungssätze eines vorhandenen Datenflusses aktualisieren. Sie können keine Zuordnungssätze für Datenflüsse aktualisieren, die für eine einmalige Erfassung geplant waren. Diese Funktion wird für HTTP-API, Adobe Analytics, Adobe Audience Manager und [!DNL Marketo Engage] nicht unterstützt. Weitere Informationen finden Sie im Tutorial zu [Aktualisieren der Datenflüsse für Quellen in der Benutzeroberfläche](../../sources/tutorials/ui/update-dataflows.md). |
-| Unterstützung für Streaming-Erfassung | Sie können jetzt beim Erstellen einer Streaming-Quell-Verbindung Datenvorbereitungsfunktionen verwenden. Weitere Informationen finden Sie im Tutorial zum Erstellen einer Streaming-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/streaming/http.md).[ |
+| Verbesserte Überwachung (Beta) | Verbesserte Funktionen zur Überwachung von Zielen, einschließlich Informationen für Batch- und Streaming-Ziele |
 
-Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
@@ -44,57 +70,15 @@ Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die die Leistun
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Empfehlungen für Schemas nach Branche | Bei der Auswahl von Klassen und Schemafeldgruppen in der Benutzeroberfläche des Schema-Editors können Sie einen neuen Filter verwenden, um empfohlene Standardkomponenten basierend auf Ihrer spezifischen Branche anzuzeigen. Weitere Informationen dazu, wie sich diese Komponenten für verschiedene Anwendungsfälle in der Branche gegenseitig beeinflussen, finden Sie in der Dokumentation zu [Industrie-Datenmodellen](https://www.adobe.com/go/xdm-industry-erds-en) . |
+| Schemafeldgruppen | Der Begriff &quot;Mixin&quot;wurde in &quot;Feldergruppe&quot;aktualisiert. Diese Änderung spiegelt sich in der Adobe Experience Platform-Benutzeroberfläche wider. Darüber hinaus verfügt die Schema Registry-API über einen neuen [Feldergruppen-Endpunkt](../../xdm/api/field-groups.md), während der Mixins-Endpunkt als Legacy-Endpunkt veraltet ist. Weitere Informationen finden Sie in der [XDM-Dokumentation](../../xdm/home.md) . |
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## Echtzeit-Kundenprofil {#profile}
 
-Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen eines Unternehmens erstellen, ohne dass datenwissenschaftliche Kenntnisse erforderlich sind.
-
-### Customer AI
-
-Customer AI, die in der Echtzeit-Kundendatenplattform verfügbar ist, wird verwendet, um benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion für einzelne Profile skaliert zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt, ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. Mit [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, im Zeitverlauf gezeichnete Darstellung jeder Kundeninteraktion bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Adobe Analytics-Daten | Die Funktion zur Unterstützung von Adobe Analytics-Datensätzen über den Analytics-Quell-Connector wurde aktualisiert, ohne dass Ihre Daten einer ETL unterzogen werden müssen, um dem Schema Consumer Experience Event (CEE) zu entsprechen. |
-| Unterstützung für Adobe Audience Manager-Daten | Die Funktion zur Unterstützung von Adobe Audience Manager-Datensätzen über den Audience Manager-Quell-Connector wurde aktualisiert, ohne dass Ihre Daten einem ETL-Prozess unterzogen werden müssen, um dem Schema Consumer Experience Event (CEE) zu entsprechen. |
-| Modellleistungszusammenfassung | Customer AI verfügt nun über die Registerkarte [Übersicht der Modellleistung](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) auf der Insights-Seite der Dienstinstanz. Auf der Registerkarte Modellleistung werden alle tatsächlichen Konversions- und Abwanderungsraten angezeigt. Auf diese Weise können Sie entschlüsseln und verstehen, was in jedem Ihrer Tendenzbehälter geschieht. |
+| Aktualisierungen des Arbeitsablaufs für Zusammenführungsrichtlinien | Beim Erstellen und Aktualisieren von Zusammenführungsrichtlinien in der Benutzeroberfläche können Benutzer jetzt anhand des Vereinigungsschemas eine Vorschau von 20 Beispielprofilen anzeigen. Auf diese Weise können Benutzer eine Vorschau davon anzeigen, wie Kundenprofile aussehen, bevor sie Zusammenführungsrichtlinienkonfigurationen speichern. Weitere Informationen finden Sie im [UI-Handbuch für Zusammenführungsrichtlinien](../../profile/merge-policies/ui-guide.md). |
+| Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md).[ |
 
-Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL Intelligent Services] Dokumentation zur Datenvorbereitung](../../intelligent-services/data-preparation.md).
-
-### Attribution AI
-
-Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Unterstützung für Adobe Analytics-Daten | Die Funktion zur Unterstützung von Adobe Analytics-Datensätzen über den Analytics-Quell-Connector wurde aktualisiert, ohne dass Ihre Daten einer ETL unterzogen werden müssen, um dem Schema Consumer Experience Event (CEE) zu entsprechen. |
-
-Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL Intelligent Services] Dokumentation zur Datenvorbereitung](../../intelligent-services/data-preparation.md).
-
-## Segmentierungs-Service {#segmentation}
-
-Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in Platform konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
-
-[!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Zusätzliche Aggregationsfunktionen | In Segment Builder wurden Funktionen zur Zählung hinzugefügt. Mit Zählerfunktionen können Sie zählen, wie oft das angegebene Ereignis durchgeführt wurde. Weitere Informationen zu den Zählfunktionen finden Sie im Abschnitt zu Zählfunktionen im [Segment Builder-Handbuch](../../segmentation/ui/segment-builder.md#count-functions) |
-
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md).
-
-## [!DNL Sources] {#sources}
-
-Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
-
-Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | Sie können jetzt über die Benutzeroberfläche eine [!DNL Marketo Engage] Quellverbindung erstellen, um B2B-Daten an Platform zu bringen und diese Daten mithilfe von Anwendungen mit Plattformverbindung auf dem neuesten Stand zu halten. Weitere Informationen finden Sie in der [[!DNL Marketo Engage] Quell-Connector-Dokumentation](../../sources/connectors/adobe-applications/marketo/marketo.md). |
-| Beta-Quellen wechseln zu GA | Die folgenden Quellen wurden von der Beta-Version zur allgemeinen Verfügbarkeit beworben: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
-
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
