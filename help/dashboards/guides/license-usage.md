@@ -1,87 +1,108 @@
 ---
-keywords: Experience Platform;Benutzeroberfläche;Anpassung;Lizenznutzung Dashboard;Dashboard;Lizenzverwendung;Berechtigungen;Verbrauch
-title: Dashboard der Lizenzverwendung
-description: Adobe Experience Platform bietet ein Dashboard zur Ansicht wichtiger Informationen zur Lizenznutzung in Ihrem Unternehmen.
-topic-legacy: guide
+keywords: Experience Platform; Benutzeroberfläche; Benutzeroberfläche; Anpassung; Dashboard zur Lizenznutzung; Dashboard; Lizenzverwendung; Berechtigung; Verbrauch
+title: Dashboard zur Lizenznutzung
+description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
 workflow-type: tm+mt
-source-wordcount: '658'
-ht-degree: 3%
+source-wordcount: '926'
+ht-degree: 4%
 
 ---
 
-# (Beta) Dashboard zur Lizenzverwendung {#license-usage-dashboard}
+# Dashboard zur Lizenzverwendung {#license-usage-dashboard}
 
->[!IMPORTANT]
->
->Die in diesem Dokument beschriebene Dashboard-Funktion befindet sich derzeit in der Beta-Version und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard zur Lizenzverwendung in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Die Adobe Experience Platform-Benutzeroberfläche (UI) bietet ein Dashboard, mit dem Sie wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen, wie sie in einem täglichen Schnappschuss erfasst werden, Ansichten vornehmen können. In diesem Handbuch wird beschrieben, wie Sie auf das Lizenzverwendungs-Dashboard in der Benutzeroberfläche zugreifen und mit ihm arbeiten. Außerdem werden weitere Informationen zu den Visualisierungen im Dashboard bereitgestellt.
+Eine allgemeine Übersicht über die Platform-Benutzeroberfläche finden Sie im [Handbuch zur Experience Platform-Benutzeroberfläche](../../landing/ui-guide.md).
 
-Eine allgemeine Übersicht über die Plattform-Benutzeroberfläche finden Sie im Handbuch [Experience Platform UI guide](../../landing/ui-guide.md).
+## Dashboard-Daten zur Lizenznutzung
 
-## Daten zum Dashboard der Lizenzverwendung
-
-Das Dashboard zur Lizenznutzung zeigt eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens zur Experience Platform an. Die Daten im Dashboard werden exakt so angezeigt, wie sie zu dem Zeitpunkt angezeigt werden, zu dem der Schnappschuss erstellt wurde. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard wird nicht in Echtzeit aktualisiert.
+Das Dashboard zur Lizenznutzung zeigt eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens zur Experience Platform an. Die Daten im Dashboard werden exakt so angezeigt, wie sie zum Zeitpunkt der Momentaufnahme angezeigt werden. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Dashboard wird nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
->Änderungen oder Aktualisierungen, die seit der Erstellung des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
+>Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
 
 ## Dashboard zur Lizenznutzung
 
-Um zum Dashboard zur Lizenzverwendung in der Plattform-Benutzeroberfläche zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Lizenzverwendung]**. Dies wird mit der Registerkarte **[!UICONTROL Übersicht]** geöffnet, auf der das Dashboard angezeigt wird.
+Um in der Platform-Benutzeroberfläche zum Dashboard für die Lizenzverwendung zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Lizenzverwendung]** aus. Dadurch wird die Registerkarte **[!UICONTROL Übersicht]** geöffnet, auf der das Dashboard angezeigt wird.
+
+>[!NOTE]
+>
+>Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen zum Anzeigen des Dashboards zur Lizenznutzung finden Sie im [Dashboard-Berechtigungshandbuch](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Sandbox auswählen
 
-Um eine zu Ansicht Sandbox im Dashboard auszuwählen, wählen Sie entweder [!UICONTROL Produktion] oder [!UICONTROL Entwicklung]. Die ausgewählte Sandbox wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
+Um eine Sandbox auszuwählen, die im Dashboard angezeigt werden soll, wählen Sie entweder [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] aus. Die ausgewählte Sandbox wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
 
->[!NOTE]
->
->Der Berichte &quot;Verbrauch&quot;für Sandboxen ist für alle Sandboxen desselben Typs kumulativ. Anders ausgedrückt, bietet die Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxen.
+Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Mit anderen Worten: Durch die Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] werden Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereitgestellt.
 
 ![](../images/license-usage/select-sandbox.png)
 
+>[!WARNING]
+>
+>Die Berechtigung zum Anzeigen des Dashboards zur Lizenznutzung muss auf Sandbox-Ebene angegeben werden. Das bedeutet, dass jeder einzelnen Sandbox die Berechtigung zum Anzeigen des Dashboards hinzugefügt werden muss. Diese Einschränkung wird in einer zukünftigen Version behoben. In der Zwischenzeit ist die folgende Problemumgehung verfügbar:
+>
+>1. Erstellen Sie ein Produktprofil in der Adobe Admin Console.
+>2. Fügen Sie unter Berechtigungen in der Kategorie Sandbox alle Sandboxes hinzu, die Sie im Dashboard zur Lizenznutzung anzeigen möchten.
+>3. Fügen Sie unter der Kategorie Berechtigungen für Benutzer-Dashboard die Berechtigung &quot;Dashboard zur Nutzung der Lizenz anzeigen&quot;hinzu.
+
+
 ### Datumsbereich auswählen
 
-Nach Auswahl einer Sandbox können Sie mit der Dropdownliste Datumsbereich den Zeitraum auswählen, der im Dashboard angezeigt werden soll. Es stehen drei Optionen zur Verfügung: [!UICONTROL Letzte 30 Tage], [!UICONTROL Letzte 90 Tage] und [!UICONTROL Letzte 12 Monate]. Die letzten 30 Tage sind standardmäßig ausgewählt.
+Nachdem Sie eine Sandbox ausgewählt haben, können Sie über das Dropdown-Menü Datumsbereich den Zeitraum auswählen, der im Dashboard angezeigt werden soll. Es stehen mehrere Optionen zur Verfügung, darunter der Standardwert der letzten 30 Tage.
 
 ![](../images/license-usage/select-date-range.png)
 
+Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** auswählen, um den angezeigten Zeitraum auszuwählen.
+
+![](../images/license-usage/select-custom-date.png)
+
 ## Widgets
 
-Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenznutzung in Ihrem Unternehmen enthalten. Die sichtbaren Metriken hängen von der spezifischen Lizenzierung Ihres Unternehmens ab (Einzelheiten finden Sie im Abschnitt [Verfügbare Metriken](#available-metrics)).
+Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen enthalten. Die sichtbaren Metriken hängen von der spezifischen Lizenzierung Ihres Unternehmens ab (weitere Informationen finden Sie im Abschnitt [Verfügbare Metriken](#available-metrics) ).
 
-Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für Ihr Unternehmen mit den im Rahmen der Lizenzierung Ihres Unternehmens verfügbaren Gesamtwerten verglichen werden, und zeigt einen Prozentsatz der Gesamtnutzung an.
+Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für Ihr Unternehmen mit den im Rahmen der Lizenzierung Ihres Unternehmens insgesamt verfügbaren Zahlen verglichen werden, und zeigt einen Prozentsatz der Gesamtnutzung an.
 
 ![](../images/license-usage/widgets.png)
 
 ## Verfügbare Metriken
 
-Im Dashboard zur Lizenznutzung stehen derzeit vier Metriken zur Verfügung:
+Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei in nachfolgenden Versionen weitere Metriken hinzugefügt werden müssen. Die verfügbaren Metriken sind unten aufgeführt.
 
-* [!UICONTROL Addressable Audience]  (gemessen nach Anzahl der Profil)
-* [!UICONTROL Durchschnittlicher Reichtum des Profils]
-* [!UICONTROL Konsumierte Datenspeicherung insgesamt]
-* [!UICONTROL Daten gescannt nach Segmentierungsverhältnis]
+>[!NOTE]
+>
+>Drei der verfügbaren Metriken befinden sich derzeit in der Beta-Phase.
 
-Die Definition dieser Metriken hängt von der Lizenzierung ab, die Ihr Unternehmen erworben hat. Detaillierte Definitionen zu den einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
+* [!UICONTROL Addressable Audience]
+* [!UICONTROL Durchschnittliche Profilreichweite]  (Beta)
+* [!UICONTROL Daten gescannt pro Segmentierungsverhältnis]  (Beta)
+* [!UICONTROL Verbrauchter Gesamtspeicher]  (Beta)
+
+>[!WARNING]
+>
+>Bekannte Einschränkung der Metrik [!UICONTROL Gesamter verbrauchter Speicher]: Beim Löschen von Batch-Daten wird dieser Batch für einen Zeitraum von 7 Tagen in einen weichen Löschstatus versetzt, um Anwendungsfälle für die Datenwiederherstellung zu unterstützen. Nach 7 Tagen wird der Batch in den Status &quot;Hard Delete&quot;verschoben. Die Berichterstellung zum insgesamt verbrauchten Speicher spiegelt keine Änderungen am Trenddiagramm wider, bis sich der Batch im Status &quot;Hard Delete&quot;befindet. Dieses Problem wird in einer zukünftigen Version behoben.
+
+Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen der einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
 | Lizenz | Produktbeschreibung |
 |---|---|
 | <ul><li>Adobe Experience Platform:OD LITE</li><li>Adobe Experience Platform:OD STANDARD</li><li>Adobe Experience Platform:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, App-Dienste und intelligente Dienste](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT-KUNDENDATENPLATTFORM:OD</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 10 M</li><li>RT-KUNDENDATENPLATTFORM:OD PRFL BIS 50 M</li></ul> | [Echtzeit-Kundendatenplattform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD AKTIVIERUNG PRFL BIS 10 M</li><li>AEP:OD AKTIVIERUNG PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform Aktivierung](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>Adobe Experience Platform:OD</li></ul> | [Experience Platform, App Services und Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL BIS 50M</li></ul> | [Echtzeit-Kundendatenplattform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>AEP:OD-AKTIVIERUNG</li><li>AEP:OD ACTIVATION PRFL BIS 10 M</li><li>AEP:OD ACTIVATION PRFL BIS ZU 50 M</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+
+>[!WARNING]
+>
+>Das Dashboard zur Lizenznutzung zeigt nur die neueste Lizenz an, die für Ihr Unternehmen bereitgestellt wurde. Wenn die neueste für Ihre Organisation bereitgestellte Lizenz nicht in der obigen Tabelle angezeigt wird, wird das Dashboard zur Lizenzverwendung möglicherweise nicht ordnungsgemäß angezeigt. Die Unterstützung für zusätzliche Lizenzen und mehrere Lizenzen in einer Organisation ist für eine künftige Version geplant.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments können Sie das Dashboard zur Lizenznutzung suchen und eine zu Ansicht Sandbox auswählen. Weitere Informationen zu den verfügbaren Metriken für Ihr Unternehmen finden Sie auf der Grundlage der von Ihrem Unternehmen erworbenen Lizenzen.
+Nach dem Lesen dieses Dokuments können Sie das Dashboard zur Lizenznutzung suchen und eine Sandbox auswählen, die angezeigt werden soll. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen finden Sie auf der Grundlage der von Ihrem Unternehmen erworbenen Lizenz.
 
-Weitere Informationen zu anderen Funktionen in der Benutzeroberfläche der Experience Platform finden Sie im Handbuch [Plattformbenutzeroberfläche](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
