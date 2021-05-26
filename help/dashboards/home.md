@@ -1,22 +1,18 @@
 ---
 solution: Experience Platform
 title: Einführung in Experience Platform-Dashboards
-topic-legacy: overview
 type: Documentation
 description: Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, mit denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen können, die bei täglichen Schnappschüssen erfasst werden.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 100%
+source-wordcount: '252'
+ht-degree: 90%
 
 ---
 
-# (Beta) Dashboards – Übersicht {#dashboards}
 
->[!IMPORTANT]
->
->Die Dashboard-Funktionen befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+# Dashboards – Übersicht {#dashboards}
 
 Adobe Experience Platform bietet mehrere Dashboard, mit denen Sie wichtige Informationen über die Daten Ihres Unternehmens sehen können, die bei täglichen Schnappschüssen erfasst werden.
 
@@ -38,4 +34,4 @@ Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnapp
 
 Derzeit stehen in Experience Platform mehrere Dashboards zur Verfügung, die die Kundendaten Ihres Unternehmens transparent machen.
 
-Um mehr über diese Dashboards und die darin verfügbaren Metriken zu erfahren, treffen Sie bitte eine entsprechende Auswahl aus der Liste der verfügbaren Dashboards in der Dokumentationsnavigation.
+Um mehr über diese Dashboards und ihre Metriken zu erfahren, wählen Sie in der Liste der verfügbaren Dashboards im Navigationsbereich der Dokumentation ein Dashboard aus.
