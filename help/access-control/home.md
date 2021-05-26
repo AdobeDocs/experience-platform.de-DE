@@ -5,10 +5,10 @@ topic-legacy: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
 workflow-type: tm+mt
-source-wordcount: '1281'
-ht-degree: 100%
+source-wordcount: '1307'
+ht-degree: 98%
 
 ---
 
@@ -109,6 +109,8 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | [!DNL Data Governance] | [!UICONTROL Anwenden von Datennutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
 | [!DNL Data Governance] | [!UICONTROL Verwalten von Datennutzungsrichtlinien] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datennutzungsrichtlinien. |
 | [!DNL Data Governance] | [!UICONTROL Anzeigen von Datennutzungsrichtlinien] | Schreibgeschützter Zugriff auf Datennutzungsrichtlinien Ihres Unternehmens. |
+| [!DNL Dashboards] | [!UICONTROL Anzeigen des Dashboards zur Lizenznutzung] | Schreibgeschützter Zugriff zum Anzeigen des Dashboards zur Lizenznutzung. |
+| [!DNL Dashboards] | [!UICONTROL Standard-Dashboards verwalten] | Fügen Sie benutzerdefinierte Attribute hinzu, die sich noch nicht im Data Warehouse befinden. |
 | [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Platform-Daten. |
 
 ## Nächste Schritte
