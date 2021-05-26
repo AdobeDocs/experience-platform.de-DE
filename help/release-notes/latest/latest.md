@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
+source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 30%
+source-wordcount: '978'
+ht-degree: 36%
 
 ---
 
@@ -27,6 +27,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
+- [Quellen](#sources)
 
 ## Dashboards {#dashboards}
 
@@ -82,3 +83,15 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md).[ |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
+
+## [!DNL Sources] {#sources}
+
+Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+
+Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Benutzeroberflächenunterstützung für die komprimierte Dateiaufnahme | Sie können jetzt komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Speicherquellen in der Benutzeroberfläche in der Vorschau anzeigen und erfassen. Weitere Informationen finden Sie im Tutorial zum Konfigurieren eines Datenflusses für eine Cloud-Speicher-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md).[ |
+
+Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
