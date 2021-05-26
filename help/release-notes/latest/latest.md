@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: d78f2d0fc8d1117614b0d8add0cada21619d8357
+source-git-commit: 91f75f5b6a8e5adb251455f65bc2b693934ef8e2
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 36%
+source-wordcount: '1070'
+ht-degree: 33%
 
 ---
 
@@ -62,6 +62,8 @@ Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Verbesserte Überwachung (Beta) | Verbesserte Funktionen zur Überwachung von Zielen, einschließlich Informationen für Batch- und Streaming-Ziele |
+| [Schnellerer inkrementeller Dateiexport (Beta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | Es wurde die Möglichkeit hinzugefügt, inkrementelle Dateien alle 3, 6, 8 oder 12 Stunden an Ziele zu exportieren. <br> <br>Diese Funktion befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Nicht-Beta-Kunden können inkrementelle Dateien einmal täglich exportieren. |
+| [Unterstützung von Deduplizierungsschlüsseln (Beta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | Die Funktion zum Festlegen von Identitäts-Namespaces oder Profilattributen als Deduplizierungsschlüssel wurde hinzugefügt. Deduplizierungsschlüssel verhindern die Möglichkeit, mehrere Datensätze desselben Profils in einer Exportdatei zu haben. <br> <br>Diese Funktion befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Anzahl von Kunden zur Verfügung. |
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
