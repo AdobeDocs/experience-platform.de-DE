@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 0cef5f1a0033bed987799c26b99e71145a85c1a9
+source-git-commit: c608ee8360fd07d6f98b31eed3b4691dc7124e12
 workflow-type: tm+mt
-source-wordcount: '1070'
-ht-degree: 33%
+source-wordcount: '1340'
+ht-degree: 32%
 
 ---
 
@@ -27,6 +27,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
+- [Sandboxes](#sandboxes)
 - [Quellen](#sources)
 
 ## Dashboards {#dashboards}
@@ -85,6 +86,22 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md).[ |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Darum stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Mehrere Produktions-Sandboxes | Sie können jetzt mehrere Produktions-Sandboxes in Ihrer IMS-Organisation erstellen und verwalten und bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Weitere Informationen finden Sie in den Tutorials zum Erstellen einer Produktions-Sandbox [in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) oder [mithilfe der API](../../sandboxes/api/overview.md) . |
+
+### Bekannte Einschränkungen
+
+- Jede Experience Cloud-Organisation verfügt über eine vordefinierte standardmäßige Produktions-Sandbox. Diese Sandbox fungiert als Standardziel für alle Anfragen, die von einer anderen Adobe App oder Nicht-Adobe App an Platform gesendet werden, die (noch) nicht Sandbox-kompatibel ist. Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird.
+- Produktions-Sandboxes, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden, können weder zurückgesetzt noch gelöscht werden.
+- Mit Ausnahme der standardmäßigen Produktions-Sandbox können alle vom Benutzer erstellten Produktions- und Entwicklungs-Sandboxes gelöscht werden.
+
+Weitere Informationen zu Sandboxes finden Sie unter [Sandboxes - Übersicht](../../sandboxes/home.md).
 
 ## [!DNL Sources] {#sources}
 
