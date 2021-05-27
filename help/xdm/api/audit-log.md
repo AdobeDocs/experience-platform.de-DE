@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Audit;Audit-Protokoll;Änderungsprotokoll;rpc
+keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Audit; Audit-Protokoll; Änderungsprotokoll; rpc
 solution: Experience Platform
 title: Auditprotokoll-API-Endpunkt
-description: Der /auditlog-Endpunkt in der Schema Registry-API ermöglicht es Ihnen, eine chronologische Liste der Änderungen abzurufen, die an einer vorhandenen XDM-Ressource vorgenommen wurden.
+description: Mit dem /auditlog-Endpunkt in der Schema Registry-API können Sie eine chronologische Liste der Änderungen abrufen, die an einer vorhandenen XDM-Ressource vorgenommen wurden.
 topic-legacy: developer guide
 exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 4%
+source-wordcount: '406'
+ht-degree: 8%
 
 ---
 
-# Endpunkt des Prüfprotokolls
+# Endpunkt des Auditprotokolls
 
-Für jede Experience Data Model-(XDM-)Ressource verwaltet das [!DNL Schema Registry] ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen vorgenommen wurden. Der `/auditlog`-Endpunkt in der [!DNL Schema Registry]-API ermöglicht Ihnen das Abrufen eines Prüfprotokolls für alle Klassen, Schema-Feldgruppen, Datentypen oder Schema, die durch die ID angegeben wurden.
+Für jede Experience-Datenmodell (XDM)-Ressource verwaltet das [!DNL Schema Registry] ein Protokoll aller Änderungen, die zwischen verschiedenen Aktualisierungen aufgetreten sind. Mit dem Endpunkt `/auditlog` in der API [!DNL Schema Registry] können Sie ein Auditprotokoll für jede Klasse, Schemafeldgruppe, jeden Datentyp oder jedes Schema abrufen, die durch eine ID angegeben wurde.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
-Der Endpunkt `/auditlog` ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der API sind für RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` erforderlich und es wird kein `CONTAINER_ID` verwendet. [!DNL Schema Registry] Stattdessen müssen sie den Namensraum `/rpc` verwenden, wie im API-Aufruf unten gezeigt.
+Der Endpunkt `/auditlog` ist Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API erfordern RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den Namespace `/rpc` verwenden, wie im API-Aufruf unten dargestellt.
 
-## Abrufen eines Prüfprotokolls für eine Ressource
+## Abrufen eines Auditprotokolls für eine Ressource
 
-Sie können ein Prüfprotokoll für alle Klassen, Feldgruppen, Datentypen oder Schemas in der Schema-Bibliothek abrufen, indem Sie die Ressourcenkennung im Pfad einer GET zum Endpunkt `/auditlog` angeben.
+Sie können ein Prüfprotokoll für jede Klasse, Feldergruppe, jeden Datentyp oder jedes Schema in der Schemabibliothek abrufen, indem Sie die Kennung der Ressource im Pfad einer GET-Anfrage an den Endpunkt `/auditlog` angeben.
 
 **API-Format**
 
@@ -35,11 +34,13 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RESOURCE_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Ressource, deren Prüfprotokoll Sie abrufen möchten. |
+| `{RESOURCE_ID}` | Die `meta:altId` oder URL-kodierte `$id` der Ressource, deren Auditprotokoll Sie abrufen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anforderung ruft das Prüfprotokoll für eine `Restaurant`-Feldgruppe ab.
+Mit der folgenden Anfrage wird das Auditprotokoll für eine Feldergruppe `Restaurant` abgerufen.
 
 ```shell
 curl -X GET \
@@ -52,7 +53,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine chronologische Liste der Änderungen zurück, die an der Ressource vorgenommen wurden, von der letzten bis zur letzten.
+Eine erfolgreiche Antwort gibt eine chronologische Liste der Änderungen zurück, die von der letzten zur letzten vorgenommen wurden.
 
 ```json
 [
@@ -91,8 +92,10 @@ Eine erfolgreiche Antwort gibt eine chronologische Liste der Änderungen zurück
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `auditTrails` | Ein Array von Objekten, wobei jedes Objekt eine Änderung darstellt, die an der angegebenen Ressource oder einer der abhängigen Ressourcen vorgenommen wurde. |
-| `id` | Die `$id` der Ressource, die geändert wurde. Dieser Wert stellt in der Regel die im Anforderungspfad angegebene Ressource dar, kann jedoch eine abhängige Ressource darstellen, wenn dies die Quelle der Änderung ist. |
-| `action` | Die Art der vorgenommenen Änderung. |
-| `path` | Eine [JSON-Zeiger](../../landing/api-fundamentals.md#json-pointer)-Zeichenfolge, die den Pfad zum jeweiligen Feld angibt, das geändert oder hinzugefügt wurde. |
+| `auditTrails` | Ein Array von Objekten, wobei jedes Objekt eine Änderung an der angegebenen Ressource oder an einer der abhängigen Ressourcen darstellt. |
+| `id` | Die `$id` der Ressource, die geändert wurde. Dieser Wert stellt normalerweise die im Anfragepfad angegebene Ressource dar, kann jedoch eine abhängige Ressource darstellen, wenn dies die Quelle der Änderung ist. |
+| `action` | Die Art der Änderung, die vorgenommen wurde. |
+| `path` | Eine [JSON Pointer](../../landing/api-fundamentals.md#json-pointer)-Zeichenfolge, die den Pfad zum spezifischen Feld angibt, das geändert oder hinzugefügt wurde. |
 | `value` | Der Wert, der dem neuen oder aktualisierten Feld zugewiesen wurde. |
+
+{style=&quot;table-layout:auto&quot;}
