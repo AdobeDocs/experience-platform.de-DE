@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Schema;Schema;Schemas;Schemas;Erstellen;Erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schemaregistrierung;Schemaregistrierung;Schema;Schema;Schemata;Erstellen
 solution: Experience Platform
 title: Schemas-API-Endpunkt
-description: Mit dem Endpunkt /Schemas in der Schema Registry API können Sie XDM-Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+description: Mit dem Endpunkt /schemas in der Schema Registry-API können Sie XDM-Schemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1431'
-ht-degree: 16%
+source-wordcount: '1458'
+ht-degree: 18%
 
 ---
 
-# Schemas-Endpunkt
+# Schemaendpunkt
 
-Ein Schema kann man sich als Vorlage für die Daten vorstellen, die Sie in Adobe Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und einer Schema-Feldgruppe von null oder mehr. Mit dem `/schemas`-Endpunkt in der [!DNL Schema Registry]-API können Sie Schema in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Ein Schema kann als Entwurf für die Daten betrachtet werden, die Sie in Adobe Experience Platform erfassen möchten. Jedes Schema besteht aus einer Klasse und keiner oder mehr Schemafeldgruppen. Mit dem Endpunkt `/schemas` in der API [!DNL Schema Registry] können Sie Schemas in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
-## Abrufen einer Liste von Schemas {#list}
+## Liste von Schemata abrufen {#list}
 
-Sie können alle Schema unter dem Container `global` oder `tenant` durch eine GET an `/global/schemas` bzw. `/tenant/schemas` Liste durchführen.
+Sie können alle Schemas unter dem Container `global` oder `tenant` auflisten, indem Sie eine GET an `/global/schemas` bzw. `/tenant/schemas` anfordern.
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument unter [Abfrage parameters](./appendix.md#query) im Anhang.
+>Bei der Auflistung von Ressourcen beschränkt die Schema Registry Ergebnissätze auf 300 Elemente. Um Ressourcen zurückzugeben, die über diese Grenze hinausgehen, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md#query) im Anhang.
 
 **API-Format**
 
@@ -37,12 +36,14 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container mit den Schemas, die Sie abrufen möchten: `global` für Adoben erstellte Schema oder `tenant` für Schemas, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query). |
+| `{CONTAINER_ID}` | Der Container, der die Schemas enthält, die Sie abrufen möchten: `global` für von Adoben erstellte Schemata oder `tenant` für Schemas, die Ihrem Unternehmen gehören. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste von Schemas aus dem Container `tenant` abgerufen. Dabei wird ein Parameter `orderby` für die Abfrage verwendet, um die Ergebnisse nach dem Attribut `title` zu sortieren.
+Mit der folgenden Anfrage wird eine Liste von Schemas aus dem `tenant`-Container abgerufen, wobei mithilfe eines `orderby`-Abfrageparameters die Ergebnisse nach ihrem `title`-Attribut sortiert werden.
 
 ```shell
 curl -X GET \
@@ -54,16 +55,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen zur Auflistung von Schemas zur Verfügung:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen zur Auflistung von Schemas zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
-| `application/vnd.adobe.xed+json` | Gibt für jede Ressource das vollständige JSON-Schema zurück, wobei die ursprünglichen Werte `$ref` und `allOf` enthalten sind. (Maximal: 300) |
+| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Gibt das vollständige JSON-Schema für jede Ressource zurück, wobei das ursprüngliche `$ref` und `allOf` enthalten sind. (Limit: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Schema. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Schemas zurückgegeben. Wählen Sie die entsprechende `Accept`-Kopfzeile, je nach den Informationen, die Sie in Ihrer Antwort benötigen.
+In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Schema. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Schemas zurückgegeben. Wählen Sie je nach den Informationen, die Sie in Ihrer Antwort benötigen, die entsprechende `Accept`-Kopfzeile aus.
 
 ```json
 {
@@ -97,7 +100,7 @@ Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe
 
 ## Nachschlagen eines Schemas {#lookup}
 
-Sie können ein bestimmtes Schema nachschlagen, indem Sie eine GET anfordern, die die ID des Schemas im Pfad enthält.
+Sie können ein bestimmtes Schema nachschlagen, indem Sie eine GET anfordern, die die Kennung des Schemas im Pfad enthält.
 
 **API-Format**
 
@@ -107,12 +110,14 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container mit dem Schema, in dem Sie Folgendes abrufen möchten: `global` für ein von der Adobe erstelltes Schema oder `tenant` für ein Schema, das Ihrem Unternehmen gehört. |
-| `{SCHEMA_ID}` | Die `meta:altId`- oder URL-kodierte `$id` des Schemas, nach dem Sie suchen möchten. |
+| `{CONTAINER_ID}` | Der Container, der das Schema enthält, das Sie abrufen möchten: `global` für ein von einer Adobe erstelltes Schema oder `tenant` für ein Schema, das Ihrem Unternehmen gehört. |
+| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie nachschlagen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anforderung ruft ein Schema ab, das durch den Wert `meta:altId` im Pfad angegeben wird.
+Mit der folgenden Anfrage wird ein Schema abgerufen, das durch seinen `meta:altId` -Wert im Pfad angegeben wird.
 
 ```shell
 curl -X GET \
@@ -124,7 +129,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Für alle Nachschlageanforderungen muss eine `version` in die `Accept`-Kopfzeile eingefügt werden. Die folgenden `Accept`-Kopfzeilen stehen zur Verfügung:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Für alle Nachschlageanfragen muss `version` in der `Accept`-Kopfzeile enthalten sein. Die folgenden `Accept`-Header sind verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -134,9 +139,11 @@ Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung g
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und zu bestimmen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -193,7 +200,7 @@ Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Kl
 
 >[!NOTE]
 >
->Der folgende Beispielaufruf ist nur ein Grundbeispiel dafür, wie ein Schema in der API erstellt wird, mit den Mindestanforderungen an die Zusammensetzung einer Klasse und ohne Feldgruppen. Ausführliche Anweisungen zum Erstellen eines Schemas in der API, einschließlich zum Zuweisen von Feldern mit Feldgruppen und Datentypen, finden Sie im Tutorial [Schema-Erstellung](../tutorials/create-schema-api.md).
+>Der folgende Beispielaufruf ist nur ein grundlegendes Beispiel dafür, wie ein Schema in der API erstellt wird, mit den minimalen Kompositionserfordernissen einer Klasse und ohne Feldergruppen. Vollständige Schritte zum Erstellen eines Schemas in der API, einschließlich der Zuweisung von Feldern mithilfe von Feldergruppen und Datentypen, finden Sie im Tutorial zur Schemaerstellung](../tutorials/create-schema-api.md).[
 
 **API-Format**
 
@@ -227,11 +234,13 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Feldgruppe verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert das `$id` der Klasse oder Feldgruppe darstellt, die das neue Schema implementieren wird. Es muss eine Klasse mit null oder mehr zusätzlichen Feldgruppen bereitgestellt werden. Im obigen Beispiel ist das einzelne Objekt im Array `allOf` die Klasse des Schemas. |
+| `allOf` | Ein Array von Objekten, wobei jedes Objekt auf eine Klasse oder Feldergruppe verweist, deren Felder vom Schema implementiert werden. Jedes Objekt enthält eine einzelne Eigenschaft (`$ref`), deren Wert die `$id` der Klasse oder Feldergruppe darstellt, die das neue Schema implementieren soll. Es muss eine Klasse mit null oder mehr zusätzlichen Feldergruppen bereitgestellt werden. Im obigen Beispiel ist das einzelne Objekt im Array `allOf` die Klasse des Schemas. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch das [!DNL Schema Registry] zugewiesen.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -266,17 +275,17 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Wenn Sie eine GET für [Liste aller Schema](#list) im Pächter-Container durchführen, wird jetzt das neue Schema einbezogen. Sie können eine [Suchanfrage (GET)](#lookup) mit dem URL-kodierten `$id`-URI ausführen, um das neue Schema direkt Ansicht.
+Wenn Sie eine GET-Anfrage an [list all schemas](#list) im Mandanten-Container ausführen, würde jetzt das neue Schema enthalten. Sie können eine [Nachschlageanfrage (GET)](#lookup) mit dem URL-kodierten `$id` -URI ausführen, um das neue Schema direkt anzuzeigen.
 
-Um einem Schema weitere Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den Arrays des Schemas `allOf` und `meta:extends` Feldgruppen hinzuzufügen.
+Um einem Schema zusätzliche Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den `allOf` - und `meta:extends` -Arrays des Schemas Feldergruppen hinzuzufügen.
 
-## Schema {#put} aktualisieren
+## Schema aktualisieren {#put}
 
-Sie können ein ganzes Schema durch eine PUT ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anforderung muss der Haupttext alle erforderlichen Felder enthalten, wenn [ein neues Schema](#create) in einer POST erstellt wird.
+Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder einschließen, die beim Erstellen eines neuen Schemas](#create) in einer POST-Anfrage erforderlich sind.[
 
 >[!NOTE]
 >
->Wenn Sie nur einen Teil eines Schemas aktualisieren möchten, anstatt es vollständig zu ersetzen, lesen Sie den Abschnitt [Aktualisieren eines Teils eines Schemas](#patch).
+>Wenn Sie nur einen Teil eines Schemas aktualisieren möchten, anstatt es vollständig zu ersetzen, lesen Sie den Abschnitt unter [Aktualisieren eines Teils eines Schemas](#patch).
 
 **API-Format**
 
@@ -286,11 +295,13 @@ PUT /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Die `meta:altId`- oder URL-kodierte `$id` des Schemas, das Sie neu schreiben möchten. |
+| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie neu schreiben möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anforderung ersetzt ein vorhandenes Schema und ändert die Attribute `title`, `description` und `allOf`.
+Die folgende Anfrage ersetzt ein vorhandenes Schema und ändert dessen Attribute `title`, `description` und `allOf`.
 
 ```SHELL
 curl -X PUT \
@@ -349,15 +360,15 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück.
 }
 ```
 
-## Einen Teil eines Schemas {#patch} aktualisieren
+## Einen Teil eines Schemas aktualisieren {#patch}
 
-Sie können einen Teil eines Schemas mit einer PATCH-Anforderung aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Schemas mithilfe einer PATCH-Anfrage aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zu JSON Patch finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen eines Schemas mit einem PUT-Vorgang](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen eines Schemas durch eine PUT-Operation](#put).
 
-Einer der häufigsten PATCH-Vorgänge besteht darin, einem Schema zuvor definierte Feldgruppen hinzuzufügen, wie im folgenden Beispiel gezeigt.
+Einer der häufigsten PATCH-Vorgänge besteht darin, einem Schema zuvor definierte Feldergruppen hinzuzufügen, wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -367,13 +378,15 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Schemas, das Sie aktualisieren möchten. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Schemas, das Sie aktualisieren möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Beispielanforderung fügt einem Schema eine neue Feldgruppe hinzu, indem der `$id`-Wert dieser Feldgruppe sowohl den Arrays `meta:extends` als auch `allOf` hinzugefügt wird.
+Die folgende Beispielanfrage fügt einem Schema eine neue Feldergruppe hinzu, indem der Wert `$id` dieser Feldergruppe sowohl den Arrays `meta:extends` als auch `allOf` hinzugefügt wird.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang durchgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anfragetext hat die Form eines Arrays, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), das Feld, für das der Vorgang ausgeführt werden soll (`path`), und welche Informationen in diesem Vorgang enthalten sein sollen (`value`).
 
 ```SHELL
 curl -X PATCH\
@@ -401,7 +414,7 @@ curl -X PATCH\
 
 **Antwort**
 
-Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Feldgruppe `$id` wurde dem Array `meta:extends` hinzugefügt und im Array `allOf` wird nun ein Verweis (`$ref`) zur Feldgruppe `$id` angezeigt.
+Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Feldergruppe `$id` wurde dem `meta:extends`-Array hinzugefügt und eine Referenz (`$ref`) zur Feldergruppe `$id` wird jetzt im `allOf`-Array angezeigt.
 
 ```JSON
 {
@@ -440,9 +453,9 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Fe
 }
 ```
 
-## Aktivieren eines Schemas zur Verwendung im Echtzeit-Kundenkonto-Profil {#union}
+## Aktivieren eines Schemas zur Verwendung im Echtzeit-Kundenprofil {#union}
 
-Damit ein Schema am [Echtzeit-Kundenstamm](../../profile/home.md) teilnimmt, müssen Sie dem `meta:immutableTags`-Array des Schemas ein `union`-Tag hinzufügen. Sie können dies erreichen, indem Sie eine PATCH für das betreffende Schema anfordern.
+Damit ein Schema am [Echtzeit-Kundenprofil](../../profile/home.md) teilnimmt, müssen Sie dem `meta:immutableTags` -Array des Schemas ein `union`-Tag hinzufügen. Dies können Sie erreichen, indem Sie eine PATCH-Anfrage für das betreffende Schema stellen.
 
 >[!IMPORTANT]
 >
@@ -456,11 +469,13 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Der URL-kodierte `$id`-URI oder `meta:altId` des Schemas, das aktiviert werden soll. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Schemas, das aktiviert werden soll. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-In der folgenden Beispielanforderung wird einem vorhandenen Schema ein `meta:immutableTags`-Array hinzugefügt, wobei dem Array ein einzelner Zeichenfolgenwert `union` zugewiesen wird, um ihn für die Verwendung in Profil zu aktivieren.
+Die folgende Beispielanfrage fügt ein `meta:immutableTags` -Array zu einem vorhandenen Schema hinzu, sodass das Array einen einzelnen Zeichenfolgenwert von `union` erhält, um ihn für die Verwendung in Profil zu aktivieren.
 
 ```SHELL
 curl -X PATCH\
@@ -523,11 +538,11 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
 }
 ```
 
-Sie können nun die Vereinigung für die Klasse dieses Schemas zur Bestätigung der Anzeige der Felder des Schemas Ansicht haben. Weitere Informationen finden Sie im Endpunktleitfaden [Vereinigungen](./unions.md).
+Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu bestätigen, dass die Felder des Schemas dargestellt werden. Weitere Informationen finden Sie im [Vereinigungsendpunkt-Handbuch](./unions.md) .
 
-## Löschen eines Schemas {#delete}
+## Schema löschen {#delete}
 
-Gelegentlich kann es erforderlich sein, ein Schema aus dem Schema-Register zu entfernen. Dies geschieht durch eine DELETE-Anforderung mit der im Pfad angegebenen Schema-ID.
+Gelegentlich kann es erforderlich sein, ein Schema aus der Schema Registry zu entfernen. Dies geschieht durch Ausführen einer DELETE-Anfrage mit der Schema-ID, die im Pfad angegeben ist.
 
 **API-Format**
 
@@ -537,7 +552,9 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SCHEMA_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` des Schemas, das Sie löschen möchten. |
+| `{SCHEMA_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Schemas, das Sie löschen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
@@ -554,4 +571,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an das Schema senden. Sie müssen einen `Accept`-Header in die Anforderung einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Schema aus der Schema-Registrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für das Schema ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Schema aus der Schema Registry entfernt wurde.
