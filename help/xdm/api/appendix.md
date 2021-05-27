@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Schema-Registrierung;Kompatibilität;Kompatibilitätsmodus;Kompatibilitätsmodus;Feldtyp;Feldtypen;Feldtypen;
+keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schemaregistrierung; Kompatibilität; Kompatibilitätsmodus; Kompatibilitätsmodus; Feldtyp; Feldtypen;
 solution: Experience Platform
-title: Handbuch zur API für die Registrierung von Schemas
+title: Handbuch zur Schema Registry-API
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: dcfdc9c479e8a77296f7cb0bf9f5bb36e9261b75
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '781'
 ht-degree: 49%
 
 ---
 
-# Handbuch zur API zur Schema-Registrierung
+# Handbuch zur Schema Registry-API
 
 Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der [!DNL Schema Registry]-API.
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die Variable [!DNL Schema Registry] unterstützt die Verwendung von Abfrage-Parametern zum Anzeigen von Seiten- und Filterergebnissen bei der Auflistung von Ressourcen.
+[!DNL Schema Registry] unterstützt die Verwendung von Abfrageparametern zur Seite und Filterung von Ergebnissen bei der Auflistung von Ressourcen.
 
 >[!NOTE]
 >
@@ -30,34 +30,38 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann aus dem `_page.next`-Attribut einer Liste-Antwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der Wert `_page.next` null ist, ist keine zusätzliche Seite verfügbar. |
+| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann vom `_page.next` -Attribut einer Listenantwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der Wert `_page.next` null ist, ist keine zusätzliche Seite verfügbar. |
 | `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
-| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Durch Hinzufügen eines `-` vor dem Parameterwert (`orderby=-title`) werden Elemente in absteigender Reihenfolge (Z-A) nach Titel sortiert. |
+| `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Durch Hinzufügen eines `-` vor dem Parameterwert (`orderby=-title`) werden die Elemente nach Titel in absteigender Reihenfolge sortiert (Z-A). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Filtern {#filtering}
 
-Sie können die Ergebnisse mit dem Parameter `property` filtern, mit dem ein bestimmter Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen angewendet wird. Zu den unterstützten Operatoren gehören:
+Sie können die Ergebnisse mithilfe des Parameters `property` filtern, mit dem ein bestimmter Operator auf eine bestimmte JSON-Eigenschaft in den abgerufenen Ressourcen angewendet wird. Zu den unterstützten Operatoren gehören:
 
 | Operator | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `==` | Filter, ob die Eigenschaft dem bereitgestellten Wert entspricht. | `property=title==test` |
-| `!=` | Filter, ob die Eigenschaft nicht mit dem bereitgestellten Wert übereinstimmt. | `property=title!=test` |
-| `<` | Filter, ob die Eigenschaft kleiner als der angegebene Wert ist. | `property=version<5` |
-| `>` | Filter, ob die Eigenschaft größer als der angegebene Wert ist. | `property=version>5` |
-| `<=` | Filter, ob die Eigenschaft kleiner als oder gleich dem bereitgestellten Wert ist. | `property=version<=5` |
-| `>=` | Filter, ob die Eigenschaft größer oder gleich dem bereitgestellten Wert ist. | `property=version>=5` |
-| `~` | Filter, ob die Eigenschaft mit einem bereitgestellten regulären Ausdruck übereinstimmt. | `property=title~test$` |
-| (Keine) | Wenn nur der Eigenschaftsname angegeben wird, werden nur Einträge zurückgegeben, bei denen die Eigenschaft vorhanden ist. | `property=title` |
+| `==` | Filtert danach, ob die Eigenschaft dem bereitgestellten Wert entspricht. | `property=title==test` |
+| `!=` | Filtert danach, ob die Eigenschaft nicht mit dem bereitgestellten Wert übereinstimmt. | `property=title!=test` |
+| `<` | Filtert danach, ob die Eigenschaft kleiner als der angegebene Wert ist. | `property=version<5` |
+| `>` | Filtert danach, ob die Eigenschaft größer als der angegebene Wert ist. | `property=version>5` |
+| `<=` | Filtert danach, ob die Eigenschaft kleiner oder gleich dem angegebenen Wert ist. | `property=version<=5` |
+| `>=` | Filtert danach, ob die Eigenschaft größer oder gleich dem angegebenen Wert ist. | `property=version>=5` |
+| `~` | Filtert danach, ob die Eigenschaft mit einem angegebenen regulären Ausdruck übereinstimmt. | `property=title~test$` |
+| (Keine) | Wenn nur der Eigenschaftsname festgelegt wird, werden nur Einträge zurückgegeben, in denen die Eigenschaft vorhanden ist. | `property=title` |
+
+{style=&quot;table-layout:auto&quot;}
 
 >[!TIP]
 >
->Sie können den Parameter `property` verwenden, um Schema-Feldgruppen nach ihrer kompatiblen Klasse zu filtern. Beispiel: `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` gibt nur Feldgruppen zurück, die mit der [!DNL XDM Individual Profile]-Klasse kompatibel sind.
+>Sie können den Parameter `property` verwenden, um Schemafeldgruppen nach ihrer kompatiblen Klasse zu filtern. Beispielsweise gibt `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` nur Feldergruppen zurück, die mit der Klasse [!DNL XDM Individual Profile] kompatibel sind.
 
 ## Kompatibilitätsmodus {#compatibility}
 
 [!DNL Experience Data Model]Das  (XDM) ist eine öffentlich dokumentierte Spezifikation, die von Adobe zur Verbesserung der Interoperabilität, Ausdrucksfähigkeit und Leistungsfähigkeit digitaler Erlebnisse unterstützt wird. Adobe verwaltet den Quell-Code und formale XDM-Definitionen in einem [Open-Source-Projekt auf GitHub](https://github.com/adobe/xdm/). Diese Definitionen werden in XDM Standard Notation geschrieben, wobei JSON-LD (JavaScript Object Notation for Linked Data) und JSON-Schema als Grammatik zur Definition von XDM-Schemas verwendet werden.
 
-Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich das Standard-XDM von dem unterscheidet, das Sie in Adobe Experience Platform sehen. Was Sie in [!DNL Experience Platform] sehen, wird als Kompatibilitätsmodus bezeichnet und bietet eine einfache Zuordnung zwischen Standard-XDM und der Verwendung innerhalb von [!DNL Platform].
+Wenn Sie sich die formalen XDM-Definitionen im öffentlichen Repository ansehen, können Sie erkennen, dass sich das Standard-XDM von dem unterscheidet, das Sie in Adobe Experience Platform sehen. Was Sie in [!DNL Experience Platform] sehen, wird als Kompatibilitätsmodus bezeichnet und bietet eine einfache Zuordnung zwischen Standard-XDM und der Art und Weise, wie es in [!DNL Platform] verwendet wird.
 
 ### Funktionsweise des Kompatibilitätsmodus
 
@@ -67,7 +71,7 @@ Der Hauptunterschied, den Sie zwischen Standard-XDM und Kompatibilitätsmodus be
 
 Im Folgenden finden Sie einen Vergleich, der sowohl im Standard-XDM als auch im Kompatibilitätsmodus geburtstagsbezogene Felder (mit entfernten „Beschreibungsattributen“) nebeneinander anzeigt. Beachten Sie, dass die Felder für den Kompatibilitätsmodus einen Verweis auf das XDM-Feld und seinen Datentyp in den Attributen „meta:xdmField“ und „meta:xdmType“ enthalten.
 
-<table>
+<table style="table-layout:auto">
   <th>Standard-XDM</th>
   <th>Kompatibilitätsmodus</th>
   <tr>
@@ -128,6 +132,6 @@ Adobe Experience Platform ist für die Verwendung mit mehreren Lösungen und Die
 
 Die meisten [!DNL Experience Platform]-Dienste einschließlich [!DNL Catalog], [!DNL Data Lake] und [!DNL Real-time Customer Profile] verwenden [!DNL Compatibility Mode] anstelle von Standard-XDM. Die [!DNL Schema Registry]-API verwendet auch [!DNL Compatibility Mode] und die Beispiele in diesem Dokument werden alle mit [!DNL Compatibility Mode] angezeigt.
 
-Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und der Art und Weise, wie sie in [!DNL Experience Platform] operalisiert wird, stattfindet, sollte jedoch nicht Ihre Verwendung von [!DNL Platform]-Diensten beeinträchtigen.
+Es lohnt sich zu wissen, dass eine Zuordnung zwischen Standard-XDM und der Art und Weise, wie es in [!DNL Experience Platform] operationalisiert wird, stattfindet. Sie sollte jedoch Ihre Verwendung von [!DNL Platform]-Diensten nicht beeinträchtigen.
 
 Das Open-Source-Projekt steht Ihnen zur Verfügung, aber wenn es darum geht, mit Ressourcen über das [!DNL Schema Registry] zu interagieren, bieten die API-Beispiele in diesem Dokument die Best Practices, die Sie kennen und befolgen sollten.
