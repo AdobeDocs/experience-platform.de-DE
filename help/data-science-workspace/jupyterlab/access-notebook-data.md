@@ -1,126 +1,125 @@
 ---
-keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;%DataSet;Interaktiver Modus;Stapelmodus;Spark-SDK;Python-SDK;Zugriffsdaten;Zugriff auf Notebook-Daten
+keywords: Experience Platform; JupyterLab; Notebooks; Data Science Workspace; beliebte Themen;%Datensatz; interaktiver Modus; Batch-Modus; Spark-SDK; Python-SDK; Datenzugriff; Notebook-Datenzugriff
 solution: Experience Platform
 title: Datenzugriff in Jupyterlab-Notebooks
 topic-legacy: Developer Guide
-description: Dieser Leitfaden konzentriert sich auf die Verwendung von Jupyter-Notebooks, die in Data Science Workspace erstellt wurden, um auf Ihre Daten zuzugreifen.
+description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
 workflow-type: tm+mt
-source-wordcount: '3101'
-ht-degree: 24%
+source-wordcount: '3290'
+ht-degree: 23%
 
 ---
 
-# Datenzugriff in [!DNL Jupyterlab]-Notebooks
+# Datenzugriff in [!DNL Jupyterlab] Notebooks
 
-Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Daten aus einem Datensatz in einem Notebook lesen können. Derzeit unterstützt JupyterLab in Adobe Experience Platform Data Science Workspace Notebooks für [!DNL Python], R, PySpark und Scala. Die Unterstützung für die Paginierung von Daten ist jedoch auf [!DNL Python]- und R-Notebooks beschränkt. Dieser Leitfaden konzentriert sich darauf, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können.
+Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Daten aus einem Datensatz in einem Notebook lesen können. Derzeit unterstützt JupyterLab in Adobe Experience Platform Data Science Workspace Notebooks für [!DNL Python], R, PySpark und Scala. Die Unterstützung für die Paginierung von Daten ist jedoch auf [!DNL Python]- und R-Notebooks beschränkt. In diesem Handbuch wird beschrieben, wie Sie mit JupyterLab-Notebooks auf Ihre Daten zugreifen können.
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md), um eine allgemeine Einführung zu [!DNL JupyterLab] und dessen Rolle innerhalb des Data Science Workspace zu erhalten.
+Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) , um eine allgemeine Einführung in [!DNL JupyterLab] und dessen Rolle in Data Science Workspace zu erhalten.
 
-## Einschränkungen für Notebook-Daten {#notebook-data-limits}
+## Beschränkungen für Notebook-Daten {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->Bei PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit dem Grund &quot;Remote RPC-Client getrennt&quot; erhalten. Dies bedeutet in der Regel, dass dem Treiber oder einem Assistenten der Arbeitsspeicher ausgeht. Versuchen Sie, den [&quot;batch&quot;-Modus](#mode) zu wechseln, um diesen Fehler zu beheben.
+>Bei PySpark- und Scala-Notebooks, wenn Sie einen Fehler mit dem Grund &quot;Remote RPC Client getrennt&quot;erhalten. Dies bedeutet normalerweise, dass dem Treiber oder einem Executor der Speicher ausgeht. Versuchen Sie, zum [&quot;batch&quot;-Modus](#mode) zu wechseln, um diesen Fehler zu beheben.
 
 Die folgenden Informationen definieren die maximale Datenmenge, die gelesen werden kann, welche Art von Daten verwendet wurde und den geschätzten Zeitrahmen, in dem die Daten gelesen werden.
 
-Für [!DNL Python] und R wurde ein mit 40 GB RAM konfigurierter Notebook-Server für die Benchmarks verwendet. Für PySpark und Scala wurde ein mit 64 GB RAM, 8 Kerne, 2 DBU mit maximal 4 Mitarbeitern konfigurierter Datenbankcluster für die unten beschriebenen Benchmarks verwendet.
+Für [!DNL Python] und R wurde ein mit 40 GB RAM konfigurierter Notebook-Server für die Benchmarks verwendet. Für PySpark und Scala wurde ein mit 64 GB RAM, 8 Kernen und 2 DBU konfigurierter Datenbank-Cluster mit maximal 4 Workern für die unten beschriebenen Benchmarks verwendet.
 
-Die verwendeten ExperienceEvent-Schema-Daten variierten in der Größe von 1.000 Zeilen bis zu einer Milliarde Zeilen (1B). Beachten Sie, dass für die Metriken PySpark und [!DNL Spark] ein Datumsbereich von 10 Tagen für die XDM-Daten verwendet wurde.
+Die verwendeten ExperienceEvent-Schemadaten variierten in ihrer Größe von 1.000 Zeilen (1.000) bis zu einer Milliarde (1.000) Zeilen. Beachten Sie, dass für die Metriken PySpark und [!DNL Spark] ein Datumsbereich von 10 Tagen für die XDM-Daten verwendet wurde.
 
-Die Ad-hoc-Schema-Daten wurden mit [!DNL Query Service] Tabelle als Auswahl erstellen (CTAS) vorverarbeitet. Diese Daten variierten auch in der Größe von 1.000 Zeilen (1.000) bis zu einer Milliarde (1.000) Zeilen.
+Die Ad-hoc-Schemadaten wurden mit [!DNL Query Service] Tabelle als Auswahl erstellen (CTAS) vorverarbeitet. Diese Daten variierten auch von 100 (1.000) Zeilen bis zu einer Milliarde (1.000) Zeilen.
 
-### Verwendung des Stapelmodus im interaktiven Modus {#mode}
+### Verwendung des Batch-Modus im Vergleich zum interaktiven Modus {#mode}
 
-Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Möglichkeit, den Datensatz im interaktiven Modus oder im Stapelmodus zu lesen. Interaktiv erfolgt die Erstellung schneller Ergebnisse, während der Stapelmodus für große Datensätze gilt.
+Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Möglichkeit, den interaktiven Modus oder Batch-Modus zu verwenden, um den Datensatz zu lesen. Interaktiv erfolgt für schnelle Ergebnisse, während der Batch-Modus für große Datensätze verwendet wird.
 
-- Bei PySpark- und Scala-Notebooks sollte der Stapelmodus verwendet werden, wenn mindestens 5 Millionen Datenzeilen gelesen werden. Weitere Informationen zur Effizienz der einzelnen Modi finden Sie in den Tabellen [PySpark](#pyspark-data-limits) oder [Scala](#scala-data-limits) zu Datenbeschränkungen.
+- Bei PySpark- und Scala-Notebooks sollte der Batch-Modus verwendet werden, wenn mindestens 5 Millionen Datenzeilen gelesen werden. Weitere Informationen zur Effizienz der einzelnen Modi finden Sie in den Tabellen [PySpark](#pyspark-data-limits) oder [Scala](#scala-data-limits) für Datenbeschränkungen unten.
 
 ### [!DNL Python] Datenbeschränkungen für Notebooks
 
-**XDM ExperienceEvent-Schema:** Sie sollten maximal 2 Millionen Zeilen (~6,1 GB Daten auf der Festplatte) XDM-Daten in weniger als 22 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
+**XDM ExperienceEvent-Schema:** Sie sollten maximal 2 Millionen Zeilen (~6,1 GB Daten auf der Festplatte) von XDM-Daten in weniger als 22 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
 | Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Größe auf Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 | 6050 |
 | SDK (in Sekunden) | Artikel 20 Absatz 3 | 86,8 | 63 | 659 | 1315 |
 
-**Ad-hoc-Schema:** Sie sollten in weniger als 14 Minuten maximal 5 Millionen Zeilen (~5,6 GB Daten auf der Festplatte) von Nicht-XDM-Daten (Ad-hoc-Daten) lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
+**Ad-hoc-Schema:** Sie sollten maximal 5 Millionen Zeilen (~5,6 GB Daten auf der Festplatte) von Nicht-XDM-Daten (Ad-hoc-Daten) in weniger als 14 Minuten lesen können. Das Hinzufügen zusätzlicher Zeilen kann zu Fehlern führen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
 | Größe auf Festplatte (in MB) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
 | SDK (in Sekunden) | 7,27 | 9,04 | Artikel 27 Absatz 3 | 180 | 346 | 487 | 819 |
 
-### R Datenbeschränkungen für Notebooks
+### R Notebook-Datenbeschränkungen
 
-**XDM ExperienceEvent-Schema:** Sie sollten maximal 1 Million Zeilen XDM-Daten (3 GB Daten auf Festplatte) in weniger als 13 Minuten lesen können.
+**XDM ExperienceEvent-Schema:** Sie sollten maximal 1 Million Zeilen mit XDM-Daten (3 GB Daten auf der Festplatte) in weniger als 13 Minuten lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Größe auf Festplatte (MB) | 18,73 | 187,5 | 308 | 3000 |
-| R Kernel (in Sekunden) | 14,03 | 69,6 | 86,8 | 775 |
+| R-Kernel (in Sekunden) | 14,03 | 69,6 | 86,8 | 775 |
 
-**Ad-hoc-Schema:** Sie sollten in etwa 10 Minuten maximal 3 Millionen Zeilen Ad-hoc-Daten (293 MB Daten auf dem Datenträger) lesen können.
+**Ad-hoc-Schema:** Sie sollten maximal 3 Millionen Zeilen Ad-hoc-Daten (293 MB Daten auf der Festplatte) in etwa 10 Minuten lesen können.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
 | Größe auf Festplatte (in MB) | 0,082 | 0,612 | 9.0 | 91 | 188 | 293 |
-| R SDK (in Sekunden) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
+| R SDK (in Sek.) | 7,7 | 4,58 | 35,9 | 233 | 470,5 | 603 |
 
-### Datenbeschränkungen für PySpark-Notebooks ([!DNL Python] Kernel): {#pyspark-data-limits}
+### PySpark ([!DNL Python] Kernel) Notebook-Datenbeschränkungen: {#pyspark-data-limits}
 
-**XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie in etwa 20 Minuten maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) XDM-Daten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, sollten Sie zum Stapelmodus wechseln. Im Batch-Modus sollten Sie maximal 500 Millionen Zeilen (~1,31 TB Daten auf der Festplatte) XDM Daten in etwa 14 Stunden lesen können.
+**XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 20 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (~1,31 TB-Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Größe auf dem Datenträger | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
+| Größe auf der Festplatte | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
 | SDK (interaktiver Modus) | 33 Sek. | 32.4 Sek. | 55.1 Sek. | 253.5 Sek. | 489.2 Sek. | 729.6 Sek. | 1206.8 Sek. | – | – | – | – |
-| SDK (Stapelmodus) | 815.8 Sek. | 492.8 Sek. | 379.1 Sek. | 637.4 Sek. | 624.5 Sek. | 869.2 Sek. | 1104.1 Sek. | 1786 Sek. | 5387.2 Sek. | 10624.6 Sek. | 50547 Sek. |
+| SDK (Batch-Modus) | 815.8 Sek. | 492.8 Sek. | 379.1 Sek. | 637.4 Sek. | 624.5 Sek. | 869.2 Sek. | 1104.1 Sek. | 1786 Sek. | 5387.2 Sek. | 10624.6 Sek. | 50547 Sek. |
 
-**Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie maximal 1 Milliarde Zeilen (~1.05TB Daten auf Festplatte) von Nicht-XDM Daten in etwa 18 Minuten lesen können.
+**Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 18 Minuten zu lesen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1 B |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
-| Größe auf Datenträger | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
-| SDK-Interaktiver Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | – | – | – | – | – |
-| SDK-Stapelmodus (in Sekunden) | 428.8 Sek. | 578.8 Sek. | 641.4 Sek. | 538.5 Sek. | 630.9 Sek. | 467.3 Sek. | 411 Sek. | 675 Sek. | 702 Sek. | 719.2 Sek. | 1022.1 Sek. | 1122.3 Sek. |
+| Größe der Festplatte | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
+| Interaktiver SDK-Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | – | – | – | – | – |
+| SDK-Batch-Modus (in Sekunden) | 428.8 Sek. | 578.8 Sek. | 641.4 Sek. | 538.5 Sek. | 630.9 Sek. | 467.3 Sek. | 411 Sek. | 675 Sek. | 702 Sek. | 719.2 Sek. | 1022.1 Sek. | 1122.3 Sek. |
 
-### [!DNL Spark] (Scala-Kernel) Datenbeschränkungen für Notebooks:  {#scala-data-limits}
+### [!DNL Spark] (Scala-Kernel) Notebook-Datenbeschränkungen:  {#scala-data-limits}
 
-**XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie in etwa 18 Minuten maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) XDM-Daten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, sollten Sie zum Stapelmodus wechseln. Im Batch-Modus sollten Sie maximal 500 Millionen Zeilen (~1,31 TB Daten auf der Festplatte) XDM Daten in etwa 14 Stunden lesen können.
+**XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 18 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (~1,31 TB-Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Größe auf Datenträger | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
-| SDK-Interaktiver Modus (in Sekunden) | 37.9 Sek. | 22.7 Sek. | 45.6 Sek. | 231.7 Sek. | 444.7 Sek. | 660.6 Sek. | 1100 Sek. | – | – | – | – |
-| SDK-Stapelmodus (in Sekunden) | 374.4 Sek. | 398.5 Sek. | 527 Sek. | 487.9 Sek. | 588.9 Sek. | 829 Sek. | 939.1 Sek. | 1441 Sek. | 5473.2 Sek. | 1018,8 | 49.207,6 |
+| Größe der Festplatte | 2,93 MB | 4,38 MB | 29,02 | 2.69 GB | 5.39 GB | 8.09 GB | 13.42 GB | 26.82 GB | 134.24 GB | 268.39 GB | 1,31 TB |
+| Interaktiver SDK-Modus (in Sekunden) | 37.9 Sek. | 22.7 Sek. | 45.6 Sek. | 231.7 Sek. | 444.7 Sek. | 660.6 Sek. | 1100 Sek. | – | – | – | – |
+| SDK-Batch-Modus (in Sekunden) | 374.4 Sek. | 398.5 Sek. | 527 Sek. | 487.9 Sek. | 588.9 Sek. | 829 Sek. | 939.1 Sek. | 1441 Sek. | 5473.2 Sek. | 10118,8 | 49207,6 |
 
-**Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie maximal 1 Milliarde Zeilen (~1,05 TB Daten auf Festplatte) von Nicht-XDM Daten in etwa 16 Minuten lesen können.
+**Ad-hoc-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~5,36 GB Daten auf der Festplatte) von Nicht-XDM-Daten in weniger als 3 Minuten lesen können. Im Batch-Modus sollten Sie in der Lage sein, maximal 1 Milliarde Zeilen (~1,05 TB Daten auf der Festplatte) von Nicht-XDM-Daten in etwa 16 Minuten zu lesen.
 
-| Anzahl Zeilen | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1 B |
+| Zeilenanzahl | 1 K | 10 K | 100.000 | 1 M | 2 M | 3 M | 5 M | 10 M | 50 M | 100 Min. | 500 Min. | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
-| Größe auf Datenträger | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
-| SDK-Interaktiver Modus (in Sekunden) | 35.7 Sek. | 31 Sek. | 19.5 Sek. | 25.3 Sek. | 23 Sek. | 33.2 Sek. | 25.5 Sek. | – | – | – | – | – |
-| SDK-Stapelmodus (in Sekunden) | 448.8 Sek. | 459.7 Sek. | 519 Sek. | 475.8 Sek. | 599.9 Sek. | 347.6 Sek. | 407.8 Sek. | 397 Sek. | 518.8 Sek. | 487.9 Sek. | 760.2 Sek. | 975.4 Sek. |
+| Größe der Festplatte | 1,12 MB | 11,24 MB | 109.48 MB | 2.69 GB | 2.14 GB | 3.21 GB | 5.36 GB | 10.71 GB | 53.58 GB | 107.52 GB | 535.88 GB | 1,05 TB |
+| Interaktiver SDK-Modus (in Sekunden) | 35.7 Sek. | 31 Sek. | 19.5 Sek. | 25.3 Sek. | 23 Sek. | 33.2 Sek. | 25.5 Sek. | – | – | – | – | – |
+| SDK-Batch-Modus (in Sekunden) | 448.8 Sek. | 459.7 Sek. | 519 Sek. | 475.8 Sek. | 599.9 Sek. | 347.6 Sek. | 407.8 Sek. | 397 Sek. | 518.8 Sek. | 487.9 Sek. | 760.2 Sek. | 975.4 Sek. |
 
 ## Python Notebooks {#python-notebook}
 
 [!DNL Python] Mit Notebooks können Sie Daten beim Zugriff auf Datensätze paginieren. Nachstehend finden Sie Beispiel-Code zum Lesen von Daten mit und ohne Paginierung. Weitere Informationen zu den verfügbaren Start-Python-Notebooks finden Sie im Abschnitt [[!DNL JupyterLab] Launcher](./overview.md#launcher) im JupyterLab-Benutzerhandbuch.
 
-Die nachstehende Python-Dokumentation beschreibt die folgenden Konzepte:
+In der folgenden Python-Dokumentation werden die folgenden Konzepte beschrieben:
 
-- [Aus Datensatz lesen](#python-read-dataset)
-- [In einen Datensatz schreiben](#write-python)
-- [Abfragen](#query-data-python)
-- [Erlebnis-Daten filtern](#python-filter)
+- [Aus einem Datensatz lesen](#python-read-dataset)
+- [Schreiben in einen Datensatz](#write-python)
+- [Abfragedaten](#query-data-python)
+- [ExperienceEvent-Daten filtern](#python-filter)
 
-### Lesen aus einem Datensatz in Python {#python-read-dataset}
+### Aus einem Datensatz in Python lesen {#python-read-dataset}
 
 **Ohne Paginierung:**
 
@@ -148,17 +147,17 @@ dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{D
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
-### Schreiben in einen Datensatz in Python {#write-python}
+### Schreiben Sie in einen Datensatz in Python {#write-python}
 
-Um in ein Dataset in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie in der linken Navigation von JupyterLab die Registerkarte &quot;Datensymbol&quot;(unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schema]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste und wählen Sie dann die Option **[!UICONTROL Daten in Notebook]** schreiben aus dem Dropdown-Menü des zu verwendenden Datensatzes. Am unteren Rand des Notebooks wird ein ausführbarer Code-Eintrag angezeigt.
+Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste darauf. Wählen Sie dann die Option **[!UICONTROL Daten in Notebook schreiben]** aus dem Dropdown-Menü des Datensatzes aus, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Verwenden Sie **[!UICONTROL Daten in Notebook]** schreiben, um eine Schreibzelle mit dem ausgewählten Datensatz zu erstellen.
-- Verwenden Sie **[!UICONTROL Daten im Notebook untersuchen]**, um eine Lesezelle mit dem ausgewählten Datensatz zu erstellen.
-- Verwenden Sie **[!UICONTROL Abfrage Data in Notebook]**, um eine Basiszelle mit dem ausgewählten Datensatz zu erstellen.
+- Verwenden Sie **[!UICONTROL Daten in Notebook schreiben]**, um eine Schreibzelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Daten in Notebook analysieren]**, um eine Leselelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Abfragedaten in Notebook]** , um eine einfache Abfragezelle mit Ihrem ausgewählten Datensatz zu generieren.
 
-Alternativ können Sie die folgende Codezelle kopieren und einfügen. Ersetzen Sie sowohl `{DATASET_ID}` als auch `{PANDA_DATAFRAME}`.
+Alternativ können Sie die folgende Code-Zelle kopieren und einfügen. Ersetzen Sie sowohl `{DATASET_ID}` als auch `{PANDA_DATAFRAME}`.
 
 ```python
 from platform_sdk.models import Dataset
@@ -169,23 +168,23 @@ dataset_writer = DatasetWriter(get_platform_sdk_client_context(), dataset)
 write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 ```
 
-### Abfragen mit [!DNL Query Service] in [!DNL Python] {#query-data-python}
+### Abfragen von Daten mit [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] on  [!DNL Platform] ermöglicht Ihnen, SQL in einem  [!DNL Python] Notebook zu verwenden, um über den  [Adobe Experience Platform Abfrage Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html) auf Daten zuzugreifen. Der Zugriff auf Daten über [!DNL Query Service] kann aufgrund der höheren Laufzeiten für die Behandlung großer Datensätze nützlich sein. Beachten Sie, dass die Datenabfrage mit [!DNL Query Service] eine Verarbeitungszeit von 10 Minuten hat.
+[!DNL JupyterLab] In  [!DNL Platform] können Sie SQL in einem  [!DNL Python] Notebook verwenden, um über den  [Adobe Experience Platform Query Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html) auf Daten zuzugreifen. Der Zugriff auf Daten über [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Verarbeitung großer Datensätze nützlich sein. Beachten Sie, dass die Abfrage von Daten mit [!DNL Query Service] eine Verarbeitungszeitbegrenzung von zehn Minuten hat.
 
-Bevor Sie [!DNL Query Service] in [!DNL JupyterLab] verwenden, sollten Sie sich mit der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md) vertraut machen.
+Bevor Sie [!DNL Query Service] in [!DNL JupyterLab] verwenden, müssen Sie über ein Verständnis der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md) verfügen.
 
-Beim Abfragen von Daten mit [!DNL Query Service] müssen Sie den Namen des Datasets der Zielgruppe angeben. Sie können die erforderlichen Code-Zellen generieren, indem Sie den gewünschten Datensatz mit dem **[!UICONTROL Data Explorer]** suchen. Klicken Sie mit der rechten Maustaste auf die Datensatzliste und klicken Sie auf **[!UICONTROL Abfrage Daten in Notebook]**, um zwei Codezellen in Ihrem Notebook zu generieren. Diese beiden Zellen werden nachstehend detaillierter beschrieben.
+Für die Abfrage von Daten mit [!DNL Query Service] müssen Sie den Namen des Zieldatensatzes angeben. Sie können die erforderlichen Code-Zellen generieren, indem Sie den gewünschten Datensatz mit dem **[!UICONTROL Data Explorer]** suchen. Klicken Sie mit der rechten Maustaste auf die Datensatzliste und klicken Sie auf **[!UICONTROL Daten in Notebook abfragen]** , um zwei Code-Zellen in Ihrem Notebook zu generieren. Diese beiden Zellen werden nachfolgend detaillierter beschrieben.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
-Um [!DNL Query Service] in [!DNL JupyterLab] verwenden zu können, müssen Sie zunächst eine Verbindung zwischen Ihrem funktionierenden [!DNL Python]-Notebook und [!DNL Query Service] herstellen. Dies kann durch Ausführen der ersten generierten Zelle erreicht werden.
+Um [!DNL Query Service] in [!DNL JupyterLab] zu verwenden, müssen Sie zunächst eine Verbindung zwischen Ihrem funktionsfähigen [!DNL Python]-Notebook und [!DNL Query Service] herstellen. Dies kann durch Ausführen der ersten generierten Zelle erreicht werden.
 
 ```python
 qs_connect()
 ```
 
-In der zweiten generierten Zelle muss die erste Zeile vor der SQL-Abfrage definiert werden. Standardmäßig definiert die generierte Zelle eine optionale Variable (`df0`), mit der die Abfrageergebnisse als Pandas-Dataframe gespeichert werden. <br>Das  `-c QS_CONNECTION` Argument ist obligatorisch und weist den Kernel an, die SQL-Abfrage gegen auszuführen  [!DNL Query Service]. Eine Liste weiterer Argumente finden Sie im [Anhang](#optional-sql-flags-for-query-service).
+In der zweiten generierten Zelle muss die erste Zeile vor der SQL-Abfrage definiert werden. Standardmäßig definiert die generierte Zelle eine optionale Variable (`df0`), mit der die Abfrageergebnisse als Pandas-Dataframe gespeichert werden. <br>Das  `-c QS_CONNECTION` Argument ist obligatorisch und weist den Kernel an, die SQL-Abfrage für auszuführen  [!DNL Query Service]. Eine Liste weiterer Argumente finden Sie im [Anhang](#optional-sql-flags-for-query-service).
 
 ```python
 %%read_sql df0 -c QS_CONNECTION
@@ -208,9 +207,9 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### Filtern Sie [!DNL ExperienceEvent] Daten {#python-filter}
+### Filtern [!DNL ExperienceEvent] Daten {#python-filter}
 
-Um auf einen [!DNL ExperienceEvent]-Datensatz in einem [!DNL Python]-Notebook zuzugreifen und ihn zu filtern, müssen Sie die ID des Datensatzes (`{DATASET_ID}`) zusammen mit den Filterregeln angeben, die einen bestimmten Zeitraum mithilfe logischer Operatoren definieren. Wenn ein Zeitraum definiert ist, wird jede angegebene Paginierung ignoriert und der gesamte Datensatz berücksichtigt.
+Um auf einen [!DNL ExperienceEvent]-Datensatz in einem [!DNL Python]-Notebook zuzugreifen und ihn zu filtern, müssen Sie die Kennung des Datensatzes (`{DATASET_ID}`) zusammen mit den Filterregeln angeben, die mithilfe logischer Operatoren einen bestimmten Zeitraum definieren. Wenn ein Zeitraum definiert ist, wird jede angegebene Paginierung ignoriert und der gesamte Datensatz berücksichtigt.
 
 Eine Liste der Filteroperatoren finden Sie nachfolgend:
 
@@ -222,7 +221,7 @@ Eine Liste der Filteroperatoren finden Sie nachfolgend:
 - `And()`: Logischer UND-Operator
 - `Or()`: Logischer ODER-Operator
 
-Die folgende Zelle Filter einen [!DNL ExperienceEvent]-Datensatz zu Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
+Die folgende Zelle filtert einen [!DNL ExperienceEvent]-Datensatz für Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
 
 ```python
 # Python
@@ -238,15 +237,15 @@ df = dataset_reader.\
 
 ## R Notebooks {#r-notebooks}
 
-Mit R-Notebooks können Sie Daten beim Zugriff auf Datensätze paginieren. Nachstehend finden Sie Beispiel-Code zum Lesen von Daten mit und ohne Paginierung. Weitere Informationen zu den verfügbaren Start-R-Notebooks finden Sie im Abschnitt [[!DNL JupyterLab] Starter](./overview.md#launcher) im JupyterLab-Benutzerhandbuch.
+Mit R-Notebooks können Sie Daten beim Zugriff auf Datensätze paginieren. Nachstehend finden Sie Beispiel-Code zum Lesen von Daten mit und ohne Paginierung. Weitere Informationen zu den verfügbaren Start-R-Notebooks finden Sie im Abschnitt [[!DNL JupyterLab] Launcher](./overview.md#launcher) im JupyterLab-Benutzerhandbuch.
 
-Die nachstehende R-Dokumentation enthält folgende Konzepte:
+In der folgenden R-Dokumentation werden die folgenden Konzepte beschrieben:
 
-- [Aus Datensatz lesen](#r-read-dataset)
-- [In einen Datensatz schreiben](#write-r)
-- [Erlebnis-Daten filtern](#r-filter)
+- [Aus einem Datensatz lesen](#r-read-dataset)
+- [Schreiben in einen Datensatz](#write-r)
+- [ExperienceEvent-Daten filtern](#r-filter)
 
-### Aus einem Datensatz in R lesen{#r-read-dataset}
+### Aus einem Datensatz in R lesen {#r-read-dataset}
 
 **Ohne Paginierung:**
 
@@ -284,16 +283,16 @@ dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id
 df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 ```
 
-### Schreiben in einen Datensatz in R {#write-r}
+### Schreiben Sie in einen Datensatz in R {#write-r}
 
-Um in ein Dataset in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie in der linken Navigation von JupyterLab die Registerkarte &quot;Datensymbol&quot;(unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schema]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste und wählen Sie dann die Option **[!UICONTROL Daten in Notebook]** schreiben aus dem Dropdown-Menü des zu verwendenden Datensatzes. Am unteren Rand des Notebooks wird ein ausführbarer Code-Eintrag angezeigt.
+Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste darauf. Wählen Sie dann die Option **[!UICONTROL Daten in Notebook schreiben]** aus dem Dropdown-Menü des Datensatzes aus, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Verwenden Sie **[!UICONTROL Daten in Notebook]** schreiben, um eine Schreibzelle mit dem ausgewählten Datensatz zu erstellen.
-- Verwenden Sie **[!UICONTROL Daten im Notebook untersuchen]**, um eine Lesezelle mit dem ausgewählten Datensatz zu erstellen.
+- Verwenden Sie **[!UICONTROL Daten in Notebook schreiben]**, um eine Schreibzelle mit Ihrem ausgewählten Datensatz zu generieren.
+- Verwenden Sie **[!UICONTROL Daten in Notebook analysieren]**, um eine Leselelle mit Ihrem ausgewählten Datensatz zu generieren.
 
-Alternativ können Sie die folgende Codezelle kopieren und einfügen:
+Alternativ können Sie die folgende Code-Zelle kopieren und einfügen:
 
 ```R
 psdk <- import("platform_sdk")
@@ -302,9 +301,9 @@ dataset_writer <- psdk$dataset_writer$DatasetWriter(py$get_platform_sdk_client_c
 write_tracker <- dataset_writer$write(df, file_format='json')
 ```
 
-### Filtern Sie [!DNL ExperienceEvent] Daten {#r-filter}
+### Filtern [!DNL ExperienceEvent] Daten {#r-filter}
 
-Um auf einen [!DNL ExperienceEvent]-Datensatz in einem R-Notebook zuzugreifen und ihn zu filtern, müssen Sie die ID des Datensatzes (`{DATASET_ID}`) zusammen mit den Filterregeln angeben, die einen bestimmten Zeitraum mithilfe von logischen Operatoren definieren. Wenn ein Zeitraum definiert ist, wird jede angegebene Paginierung ignoriert und der gesamte Datensatz berücksichtigt.
+Um auf einen [!DNL ExperienceEvent]-Datensatz in einem R-Notebook zuzugreifen und ihn zu filtern, müssen Sie die Kennung des Datensatzes (`{DATASET_ID}`) zusammen mit den Filterregeln angeben, die mithilfe logischer Operatoren einen bestimmten Zeitraum definieren. Wenn ein Zeitraum definiert ist, wird jede angegebene Paginierung ignoriert und der gesamte Datensatz berücksichtigt.
 
 Eine Liste der Filteroperatoren finden Sie nachfolgend:
 
@@ -316,7 +315,7 @@ Eine Liste der Filteroperatoren finden Sie nachfolgend:
 - `And()`: Logischer UND-Operator
 - `Or()`: Logischer ODER-Operator
 
-Die folgende Zelle Filter einen [!DNL ExperienceEvent]-Datensatz zu Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
+Die folgende Zelle filtert einen [!DNL ExperienceEvent]-Datensatz für Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
 
 ```R
 # R
@@ -339,12 +338,12 @@ df0 <- dataset_reader$
 
 ## PySpark 3 Notebooks {#pyspark-notebook}
 
-Die nachstehende PySpark-Dokumentation enthält folgende Konzepte:
+In der folgenden PySpark-Dokumentation werden die folgenden Konzepte beschrieben:
 
 - [Initialisieren von sparkSession](#spark-initialize)
 - [Daten lesen und schreiben](#magic)
-- [Lokales Datenwörterbuch erstellen](#pyspark-create-dataframe)
-- [Erlebnis-Daten filtern](#pyspark-filter-experienceevent)
+- [Lokalen Dataframe erstellen](#pyspark-create-dataframe)
+- [ExperienceEvent-Daten filtern](#pyspark-filter-experienceevent)
 
 ### Initialisieren von sparkSession {#spark-initialize}
 
@@ -355,9 +354,9 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 ```
 
-### Verwenden von %dataset zum Lesen und Schreiben mit einem PySpark 3 Notebook {#magic}
+### Verwenden von %dataset zum Lesen und Schreiben mit einem PySpark 3-Notebook {#magic}
 
-Mit der Einführung von [!DNL Spark] 2.4 wird `%dataset` benutzerdefinierte Magie für die Verwendung in PySpark 3 ([!DNL Spark] 2.4) Notebooks bereitgestellt. Weitere Informationen zu magischen Befehlen, die im IPython Kernel verfügbar sind, finden Sie in der [IPython Magic Dokumentation](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
+Mit der Einführung von [!DNL Spark] 2.4 wird `%dataset` benutzerdefinierte Magie für die Verwendung in PySpark 3 ([!DNL Spark] 2.4) Notebooks bereitgestellt. Weitere Informationen zu magischen Befehlen, die im IPython-Kernel verfügbar sind, finden Sie in der [IPython Magic-Dokumentation](https://ipython.readthedocs.io/en/stable/interactive/magics.html).
 
 
 **Nutzung**
@@ -368,36 +367,48 @@ Mit der Einführung von [!DNL Spark] 2.4 wird `%dataset` benutzerdefinierte Magi
 
 **Beschreibung**
 
-Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen oder Schreiben eines Datasets von einem [!DNL PySpark] Notebook ([!DNL Python] 3 Kernel).
+Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen oder Schreiben eines Datensatzes aus einem [!DNL PySpark] Notebook ([!DNL Python] 3 Kernel).
 
 | Name | Beschreibung | Erforderlich |
 | --- | --- | --- |
-| `{action}` | Der Aktionstyp, der für den Datensatz ausgeführt werden soll. Es stehen zwei Aktionen zur Verfügung: &quot;Lesen&quot;oder &quot;Schreiben&quot;. | Ja |
-| `--datasetId {id}` | Dient zum Ausgeben der ID des Datensatzes zum Lesen oder Schreiben. | Ja |
-| `--dataFrame {df}` | Das Pandas-Datenblatt. <ul><li> Wenn die Aktion &quot;gelesen&quot;ist, ist {df} die Variable, in der Ergebnisse des Datensatzlesevorgangs verfügbar sind. </li><li> Wenn die Aktion &quot;schreiben&quot;lautet, wird dieser Datenraum {df} in den Datensatz geschrieben. </li></ul> | Ja |
-| `--mode` | Ein zusätzlicher Parameter, der das Lesen von Daten ändert. Zulässige Parameter sind &quot;batch&quot;und &quot;interaktiv&quot;. Standardmäßig ist der Modus auf &quot;interaktiv&quot;eingestellt. Es wird empfohlen, beim Lesen großer Datenmengen den Stapelmodus zu verwenden. | Nein |
+| `{action}` | Der Aktionstyp, der für den Datensatz ausgeführt werden soll. Zwei Aktionen sind verfügbar: &quot;Lesen&quot;oder &quot;Schreiben&quot;. | Ja |
+| `--datasetId {id}` | Wird verwendet, um die ID des zu lese- oder schreibenden Datensatzes anzugeben. | Ja |
+| `--dataFrame {df}` | Der pandas-Dataframe. <ul><li> Wenn die Aktion &quot;read&quot;lautet, ist {df} die Variable, in der Ergebnisse des Datensatzlesevorgangs verfügbar sind. </li><li> Wenn die Aktion &quot;write&quot;lautet, wird dieser Dataframe {df} in den Datensatz geschrieben. </li></ul> | Ja |
+| `--mode` | Ein zusätzlicher Parameter, der die Art des Lesens von Daten ändert. Zulässige Parameter sind &quot;batch&quot;und &quot;interaktiv&quot;. Standardmäßig ist der Modus auf &quot;interaktiv&quot;eingestellt. Es wird empfohlen, beim Lesen großer Datenmengen den &quot;Batch&quot;-Modus zu verwenden. | Nein |
 
 >[!TIP]
 >
->Überprüfen Sie die PySpark-Tabellen im Abschnitt [Maximale Anzahl der Notebook-Daten](#notebook-data-limits), um festzustellen, ob `mode` auf `interactive` oder `batch` eingestellt werden soll.
+>Überprüfen Sie die PySpark-Tabellen im Abschnitt [Notebook-Datenbeschränkungen](#notebook-data-limits) , um festzustellen, ob `mode` auf `interactive` oder `batch` gesetzt werden soll.
 
 **Beispiele**
 
 - **Beispiel** lesen:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Beispiel** schreiben:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **Schreibbeispiel**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
-Sie können die oben genannten Beispiele in JupyterLab Buy mit der folgenden Methode automatisch generieren:
+>[!IMPORTANT]
+>
+> Das Zwischenspeichern von Daten mit `df.cache()` vor dem Schreiben von Daten kann die Notebook-Leistung erheblich verbessern. Dies kann hilfreich sein, wenn Sie einen der folgenden Fehler erhalten:
+> 
+> - Vorgang aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
+> - Remote RPC Client getrennt und andere Speicherfehler.
+> - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 
-Wählen Sie in der linken Navigation von JupyterLab die Registerkarte &quot;Datensymbol&quot;(unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schema]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste und wählen Sie dann die Option **[!UICONTROL Daten in Notebook]** schreiben aus dem Dropdown-Menü des zu verwendenden Datensatzes. Am unteren Rand des Notebooks wird ein ausführbarer Code-Eintrag angezeigt.
+> 
+> 
+Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
 
-- Verwenden Sie **[!UICONTROL Daten im Notebook untersuchen]**, um eine Lesegruppe zu generieren.
-- Verwenden Sie **[!UICONTROL Daten in Notebook]** schreiben, um eine Schreibzelle zu erstellen.
+Sie können die oben genannten Beispiele automatisch im JupyterLab-Buy mit der folgenden Methode generieren:
+
+Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste darauf. Wählen Sie dann die Option **[!UICONTROL Daten in Notebook schreiben]** aus dem Dropdown-Menü des Datensatzes aus, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
+
+- Verwenden Sie **[!UICONTROL Daten im Notebook untersuchen]**, um eine Leselelle zu generieren.
+- Verwenden Sie **[!UICONTROL Daten in Notebook schreiben]**, um eine Schreibzelle zu generieren.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
-### Lokales Datenformat {#pyspark-create-dataframe} erstellen
+### Lokalen Dataframe {#pyspark-create-dataframe} erstellen
 
-Verwenden Sie SQL-Abfragen, um mit PySpark 3 ein lokales Datenformat zu erstellen. Beispiel:
+Verwenden Sie SQL-Abfragen, um einen lokalen Dataframe mit PySpark 3 zu erstellen. Beispiel:
 
 ```scala
 date_aggregation.createOrReplaceTempView("temp_df")
@@ -424,13 +435,13 @@ sample_df = df.sample(fraction)
 
 >[!TIP]
 >
->Sie können auch ein optionales Seed-Beispiel angeben, z. B. einen booleschen withReplacement, einen Dublette-Anteil oder einen langen Samen.
+>Sie können auch ein optionales Seed-Beispiel angeben, z. B. einen booleschen withReplacement-, Double-Bruch- oder Long-Seed-Wert.
 
-### Filtern Sie [!DNL ExperienceEvent] Daten {#pyspark-filter-experienceevent}
+### Filtern [!DNL ExperienceEvent] Daten {#pyspark-filter-experienceevent}
 
-Für den Zugriff auf und das Filtern eines [!DNL ExperienceEvent]-Datensatzes in einem PySpark-Notebook müssen Sie die Dataset-Identität (`{DATASET_ID}`), die IMS-Identität Ihres Unternehmens und die Filterregeln, die einen bestimmten Zeitraum definieren, angeben. Ein Filterzeitbereich wird mithilfe der Funktion `spark.sql()` definiert, wobei der Funktionsparameter eine SQL-Abfrage-Zeichenfolge ist.
+Zum Zugreifen auf und Filtern eines [!DNL ExperienceEvent]-Datensatzes in einem PySpark-Notebook müssen Sie die Datensatz-Identität (`{DATASET_ID}`), die IMS-Identität Ihrer Organisation und die Filterregeln angeben, die einen bestimmten Zeitraum definieren. Ein Filterzeitbereich wird mithilfe der Funktion `spark.sql()` definiert, wobei der Funktionsparameter eine SQL-Abfragezeichenfolge ist.
 
-Die folgenden Zellen filtern einen [!DNL ExperienceEvent]-Datensatz nach ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 vorhandenen Daten.
+Die folgenden Zellen filtern einen [!DNL ExperienceEvent]-Datensatz nach Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
 
 ```python
 # PySpark 3 (Spark 2.4)
@@ -452,17 +463,17 @@ timepd.show()
 
 ## Scala Notebooks {#scala-notebook}
 
-Die nachstehende Dokumentation enthält Beispiele für die folgenden Konzepte:
+Die folgende Dokumentation enthält Beispiele für die folgenden Konzepte:
 
 - [Initialisieren von sparkSession](#scala-initialize)
 - [Datensatz lesen](#read-scala-dataset)
-- [In einen Datensatz schreiben](#scala-write-dataset)
-- [Lokales Datenwörterbuch erstellen](#scala-create-dataframe)
-- [Erlebnis-Daten filtern](#scala-experienceevent)
+- [Schreiben in einen Datensatz](#scala-write-dataset)
+- [Lokalen Dataframe erstellen](#scala-create-dataframe)
+- [ExperienceEvent-Daten filtern](#scala-experienceevent)
 
 ### Initialisieren von SparkSession {#scala-initialize}
 
-Für alle Scala-Notebooks ist es erforderlich, dass Sie die Sitzung mit dem folgenden Textbausteincode initialisieren:
+Bei allen Scala-Notebooks müssen Sie die Sitzung mit dem folgenden Textbausteincode initialisieren:
 
 ```scala
 import org.apache.spark.sql.{ SparkSession }
@@ -474,7 +485,19 @@ val spark = SparkSession
 
 ### Datensatz lesen {#read-scala-dataset}
 
-In Scala können Sie `clientContext` importieren, um Plattformwerte abzurufen und zurückzugeben. Dadurch müssen Variablen wie `var userToken` nicht mehr definiert werden. Im Beispiel zur Skala unten wird `clientContext` verwendet, um alle erforderlichen Werte abzurufen und zurückzugeben, die zum Lesen eines Datensatzes erforderlich sind.
+In Scala können Sie `clientContext` importieren, um Platform-Werte abzurufen und zurückzugeben. Dadurch müssen keine Variablen wie `var userToken` definiert werden. Im unten stehenden Scala-Beispiel wird `clientContext` verwendet, um alle erforderlichen Werte abzurufen und zurückzugeben, die zum Lesen eines Datensatzes erforderlich sind.
+
+>[!IMPORTANT]
+>
+> Das Zwischenspeichern von Daten mit `df.cache()` vor dem Schreiben von Daten kann die Notebook-Leistung erheblich verbessern. Dies kann hilfreich sein, wenn Sie einen der folgenden Fehler erhalten:
+> 
+> - Vorgang aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
+> - Remote RPC Client getrennt und andere Speicherfehler.
+> - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
+
+> 
+> 
+Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -498,28 +521,40 @@ df1.show(10)
 
 | Element | Beschreibung |
 | ------- | ----------- |
-| df1 | Eine Variable, die den Pandas-Dataframe darstellt, mit dem Daten gelesen und geschrieben werden. |
-| user-token | Ihr Benutzertoken, das automatisch mit `clientContext.getUserToken()` abgerufen wird. |
+| df1 | Eine Variable, die den Pandas-Dataframe darstellt, der zum Lesen und Schreiben von Daten verwendet wird. |
+| user-token | Ihr Benutzer-Token, das automatisch mit `clientContext.getUserToken()` abgerufen wird. |
 | service-token | Ihr Service-Token, das automatisch mit `clientContext.getServiceToken()` abgerufen wird. |
 | ims-org | Ihre IMS-Organisations-ID, die automatisch mit `clientContext.getOrgId()` abgerufen wird. |
 | api-key | Ihr API-Schlüssel, der automatisch mit `clientContext.getApiKey()` abgerufen wird. |
 
 >[!TIP]
 >
->Überprüfen Sie die Scala-Tabellen im Abschnitt [Maximale Anzahl der Notebook-Daten](#notebook-data-limits), um festzustellen, ob `mode` auf `interactive` oder `batch` eingestellt werden soll.
+>Überprüfen Sie die Scala-Tabellen im Abschnitt [Notebook-Datenbeschränkungen](#notebook-data-limits) , um festzustellen, ob `mode` auf `interactive` oder `batch` gesetzt werden soll.
 
-Sie können das obige Beispiel automatisch mit der folgenden Methode im JupyterLab-Kauf generieren:
+Sie können das obige Beispiel automatisch im JupyterLab-Buy mit der folgenden Methode generieren:
 
-Wählen Sie in der linken Navigation von JupyterLab die Registerkarte &quot;Datensymbol&quot;(unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schema]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste und wählen Sie dann die Option **[!UICONTROL Daten im Notebook untersuchen]** aus dem Dropdown-Menü des zu verwendenden Datensatzes. Am unteren Rand des Notebooks wird ein ausführbarer Code-Eintrag angezeigt.
+Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste darauf. Wählen Sie dann die Option **[!UICONTROL Daten in Notebook untersuchen]** aus dem Dropdown-Menü des Datensatzes aus, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 Und
-- Verwenden Sie **[!UICONTROL Daten im Notebook untersuchen]**, um eine Lesegruppe zu generieren.
-- Verwenden Sie **[!UICONTROL Daten in Notebook]** schreiben, um eine Schreibzelle zu erstellen.
+- Verwenden Sie **[!UICONTROL Daten im Notebook untersuchen]**, um eine Leselelle zu generieren.
+- Verwenden Sie **[!UICONTROL Daten in Notebook schreiben]**, um eine Schreibzelle zu generieren.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
 ### Schreiben in einen Datensatz {#scala-write-dataset}
 
-In Scala können Sie `clientContext` importieren, um Plattformwerte abzurufen und zurückzugeben. Dadurch müssen Variablen wie `var userToken` nicht mehr definiert werden. Im Beispiel zur Skala unten wird `clientContext` verwendet, um alle erforderlichen Werte zu definieren und an einen Datensatz zurückzugeben.
+In Scala können Sie `clientContext` importieren, um Platform-Werte abzurufen und zurückzugeben. Dadurch müssen keine Variablen wie `var userToken` definiert werden. Im unten stehenden Scala-Beispiel wird `clientContext` verwendet, um alle erforderlichen Werte zu definieren und zurückzugeben, die zum Schreiben in einen Datensatz erforderlich sind.
+
+>[!IMPORTANT]
+>
+> Das Zwischenspeichern von Daten mit `df.cache()` vor dem Schreiben von Daten kann die Notebook-Leistung erheblich verbessern. Dies kann hilfreich sein, wenn Sie einen der folgenden Fehler erhalten:
+> 
+> - Vorgang aufgrund von Staging-Fehler abgebrochen ... Kann nur RDDs mit derselben Anzahl von Elementen in jeder Partition komprimieren.
+> - Remote RPC Client getrennt und andere Speicherfehler.
+> - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
+
+> 
+> 
+Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -540,19 +575,19 @@ df1.write.format("com.adobe.platform.query")
 
 | element  | Beschreibung |
 | ------- | ----------- |
-| df1 | Eine Variable, die den Pandas-Dataframe darstellt, mit dem Daten gelesen und geschrieben werden. |
-| user-token | Ihr Benutzertoken, das automatisch mit `clientContext.getUserToken()` abgerufen wird. |
+| df1 | Eine Variable, die den Pandas-Dataframe darstellt, der zum Lesen und Schreiben von Daten verwendet wird. |
+| user-token | Ihr Benutzer-Token, das automatisch mit `clientContext.getUserToken()` abgerufen wird. |
 | service-token | Ihr Service-Token, das automatisch mit `clientContext.getServiceToken()` abgerufen wird. |
 | ims-org | Ihre IMS-Organisations-ID, die automatisch mit `clientContext.getOrgId()` abgerufen wird. |
 | api-key | Ihr API-Schlüssel, der automatisch mit `clientContext.getApiKey()` abgerufen wird. |
 
 >[!TIP]
 >
->Überprüfen Sie die Scala-Tabellen im Abschnitt [Maximale Anzahl der Notebook-Daten](#notebook-data-limits), um festzustellen, ob `mode` auf `interactive` oder `batch` eingestellt werden soll.
+>Überprüfen Sie die Scala-Tabellen im Abschnitt [Notebook-Datenbeschränkungen](#notebook-data-limits) , um festzustellen, ob `mode` auf `interactive` oder `batch` gesetzt werden soll.
 
-### ein lokales Dataframe {#scala-create-dataframe} erstellen
+### Erstellen eines lokalen Dataframes {#scala-create-dataframe}
 
-Zum Erstellen eines lokalen Datenspeichers mit Scala sind SQL-Abfragen erforderlich. Beispiel:
+Um einen lokalen Dataframe mit Scala zu erstellen, sind SQL-Abfragen erforderlich. Beispiel:
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")
@@ -560,11 +595,11 @@ sparkdf.createOrReplaceTempView("sparkdf")
 val localdf = spark.sql("SELECT * FROM sparkdf LIMIT 1)
 ```
 
-### Filtern Sie [!DNL ExperienceEvent] Daten {#scala-experienceevent}
+### Filtern [!DNL ExperienceEvent] Daten {#scala-experienceevent}
 
-Für den Zugriff auf und das Filtern eines [!DNL ExperienceEvent]-Datensatzes in einem Scala-Notebook müssen Sie die Dataset-Identität (`{DATASET_ID}`), die IMS-Identität Ihres Unternehmens und die Filterregeln, die einen bestimmten Zeitraum definieren, angeben. Ein Filterzeitbereich wird mithilfe der Funktion `spark.sql()` definiert, wobei der Funktionsparameter eine SQL-Abfragezeichenfolge ist.
+Zum Zugreifen auf und Filtern eines [!DNL ExperienceEvent]-Datensatzes in einem Scala-Notebook müssen Sie die Datensatz-Identität (`{DATASET_ID}`), die IMS-Identität Ihrer Organisation und die Filterregeln angeben, die einen bestimmten Zeitraum definieren. Ein Filterzeitbereich wird mithilfe der Funktion `spark.sql()` definiert, wobei der Funktionsparameter eine SQL-Abfragezeichenfolge ist.
 
-Die folgenden Zellen filtern einen [!DNL ExperienceEvent]-Datensatz nach ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 vorhandenen Daten.
+Die folgenden Zellen filtern einen [!DNL ExperienceEvent]-Datensatz nach Daten, die ausschließlich zwischen dem 1. Januar 2019 und dem 31. Dezember 2019 existierten.
 
 ```scala
 // Spark (Spark 2.4)
@@ -607,7 +642,7 @@ timedf.show()
 
 ## Nächste Schritte
 
-Dieses Dokument enthielt die allgemeinen Richtlinien für den Zugriff auf Datensätze mit JupyterLab-Notebooks. Ausführlichere Beispiele zur Abfrage von Datensätzen finden Sie in der Dokumentation zum [Abfrage-Dienst in JupyterLab-Notebooks](./query-service.md). Weitere Informationen zur Erforschung und Visualisierung Ihrer Datensätze finden Sie im Dokument [Analyse Ihrer Daten mit Notebooks](./analyze-your-data.md).
+In diesem Dokument wurden die allgemeinen Richtlinien für den Zugriff auf Datensätze mit JupyterLab-Notebooks erläutert. Ausführliche Beispiele zum Abfragen von Datensätzen finden Sie in der Dokumentation [Query Service in JupyterLab Notebooks](./query-service.md) . Weitere Informationen zur Erforschung und Visualisierung Ihrer Datensätze finden Sie im Dokument [Analysieren Ihrer Daten mit Notebooks](./analyze-your-data.md).
 
 ## Optionale SQL-Flags für [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
