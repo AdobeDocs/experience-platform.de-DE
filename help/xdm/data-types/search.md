@@ -1,33 +1,34 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Suche;Datentyp;Datentyp; Datentyp;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Suche; Datentyp; Datentyp; Datentyp; Datentyp
 solution: Experience Platform
-title: Datentyp suchen
+title: Suchdatentyp
 topic-legacy: overview
-description: Dieses Dokument bietet eine Übersicht über den Datentyp des Sucherlebnis-Datenmodells (XDM).
+description: Dieses Dokument bietet einen Überblick über den Datentyp "Search Experience Data Model (XDM)".
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 16%
+source-wordcount: '184'
+ht-degree: 17%
 
 ---
 
 #  SearchData-Typ
 
- Search ist ein standardmäßiger XDM-Datentyp (Experience Data Model), der Informationen zur Aktivität der Websuche enthält.
+ Search ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der Informationen zur Web-Suchaktivität enthält.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `isPaid` | Boolesch | Wird verwendet, um anzugeben, ob die Suche bezahlt wurde oder nicht. |
+| `isPaid` | Boolesch | Wird verwendet, um anzugeben, ob die Suche gebührenpflichtig ist oder nicht. |
 | `keywords` | Zeichenfolge | Die Suchbegriffe für die Suche. |
 | `pageDepth` | Ganzzahl | Die Klicktiefe in den Suchergebnissen. |
 | `position` | Ganzzahl | Die Position oder der Rang der Auflistung auf der Suchergebnisseite. |
 | `searchEngine` | Zeichenfolge | Die von der Suche verwendete Suchmaschine. |
-| `searchEngineID` | Zeichenfolge | Der anwendungsspezifische Bezeichner, der zur Identifizierung der Suchmaschine verwendet wird. |
+| `searchEngineID` | Zeichenfolge | Die anwendungsspezifische Kennung, die zur Identifizierung der Suchmaschine verwendet wird. |
 | `slot` | Zeichenfolge | Der benannte Abschnitt der Seite, auf der das Suchergebnis angezeigt wurde. Der Wert dieser Eigenschaft muss mit einem der bekannten Enum-Werte übereinstimmen, die Sie definieren, z. B. `top`, `side` oder `bottom`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
