@@ -1,36 +1,37 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schema-Design;Feldgruppe;Feldgruppe;Umgebung;Umgebung;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Umgebung; Umgebungsdetails;
 solution: Experience Platform
-title: Umgebung Details Schema Feldgruppe
+title: Feldergruppe "Umgebungsdetails"
 topic-legacy: overview
-description: Dieses Dokument bietet eine Übersicht über die Feldgruppe ExperienceEvent Umgebung Details Schema.
+description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe ExperienceEvent Environment Details .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 3%
+source-wordcount: '215'
+ht-degree: 5%
 
 ---
 
 
-# [!UICONTROL Feldgruppe &quot;] Umgebung Detailsschema&quot;
+# [!UICONTROL Feldergruppe ] &quot;Umgebungsdetails&quot;
 
 >[!NOTE]
 >
->Die Namen mehrerer Schema-Feldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md).
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
 
-[!UICONTROL Umgebung ] Details ist eine Standardfeldgruppe für Schema für die  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) Klasse, mit der Informationen zu Umgebung in Bezug auf ein Erlebnis-Ereignis wie Gerätedetails, Browserinformationen, Ortszeit und andere geografische Informationen erfasst werden.
+[!UICONTROL Umgebungsdetails ] sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) Klasse, die zum Erfassen von Informationen zu Umgebungsdetails im Zusammenhang mit einem Erlebnisereignis wie Gerätedetails, Browserinformationen, lokaler Zeit und anderen geografischen Informationen verwendet wird.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `device` | [Gerät](../../data-types/device.md) | Beschreibt eine identifizierte Geräte-, Anwendungs- oder Gerätebrowserinstanz, die sitzungsübergreifend verfolgt werden kann (normalerweise mit Cookies). |
-| `environment` | [Umgebung](../../data-types/environment.md) | Beschreibt Informationen zum situationsspezifischen Kontext der Ereignis-Beobachtung, insbesondere Informationen zu vorübergehenden Informationen wie Netzwerk- oder Softwareversionen. |
-| `placeContext` | [Ortskontext](../../data-types/place-context.md) | Beschreibt die vorübergehenden Umstände im Zusammenhang mit der Ereignis-Beobachtung. Beispiele für Gebietsschemaspezifische Informationen wie Wetter, Ortszeit, Traffic, Wochentag, Arbeitstag oder Urlaub und Arbeitszeit. |
+| `device` | [Gerät](../../data-types/device.md) | Beschreibt eine identifizierte Geräte-, Anwendungs- oder Geräte-Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies. |
+| `environment` | [Umgebung](../../data-types/environment.md) | Beschreibt Informationen zum situationsspezifischen Kontext der Ereignisüberwachung, insbesondere mit detaillierten Informationen zu vorübergehenden Informationen wie Netzwerk- oder Softwareversionen. |
+| `placeContext` | [Ortskontext](../../data-types/place-context.md) | Beschreibt die vorübergehenden Umstände im Zusammenhang mit der Ereignisbeobachtung. Beispiele sind gebietsschemaspezifische Informationen wie Wetter, Ortszeit, Traffic, Wochentag, Werktag vs. Urlaub und Arbeitszeit. |
 
-Weitere Informationen zur Feldgruppe finden Sie im öffentlichen XDM-Repository:
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.schema.json)
