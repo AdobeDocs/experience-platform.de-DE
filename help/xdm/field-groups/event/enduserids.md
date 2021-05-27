@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;ExperienceEvent;Felder;Schemas;Schemas;Schema-Design;Feldgruppe;Feldgruppe;Endbenutzer;Endbenutzer;Endbenutzer;IDs;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Endbenutzer; Endbenutzer; Endbenutzer; ID;
 solution: Experience Platform
-title: Endbenutzer-ID-Details-Schema-Feldgruppe
+title: Schemafeldgruppe "Endbenutzer-ID-Details"
 topic-legacy: overview
-description: Dieses Dokument bietet eine Übersicht über die Feldgruppe "Endbenutzer-ID-Details"im Schema.
+description: Dieses Dokument bietet eine Übersicht über die Schemakonstengruppe "Endbenutzer-ID-Details".
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 5%
+source-wordcount: '214'
+ht-degree: 7%
 
 ---
 
 
-# [!UICONTROL Endbenutzer-ID-] Detailschema-Feldgruppe
+# [!UICONTROL Feldergruppe &quot;Endbenutzer-ID-] Details&quot;
 
 >[!NOTE]
 >
->Die Namen mehrerer Schema-Feldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md).
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
 
-[!UICONTROL Endbenutzer-ID-] Details sind eine Standardfeldgruppe für Schema der  [[!DNL XDM ExperienceEvent] Klasse](../../classes/individual-profile.md), die zur Beschreibung der Identitätsinformationen einer Adobe in mehreren Anwendungen verwendet wird. Die Feldgruppe stellt ein `endUserIDs`-Objekt der Stammebene bereit, das wiederum ein schreibgeschütztes `_experience`-Feld enthält, dessen Werte automatisch aktualisiert werden, wenn Daten erfasst werden.
+[!UICONTROL Endbenutzer-ID-] Details sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] Klasse](../../classes/individual-profile.md), die zur Beschreibung der Identitätsdaten einer Person in mehreren Adobe Apps verwendet wird. Die Feldergruppe stellt ein `endUserIDs` -Objekt auf der Stammebene bereit, das wiederum ein schreibgeschütztes `_experience` -Feld enthält, dessen Werte bei der Erfassung von Daten automatisch aktualisiert werden.
 
 <img src="../../images/field-groups/enduserids.png" width="700" /><br />
 
@@ -35,7 +34,9 @@ ht-degree: 5%
 | `phonenumberid` | [Identität](../../data-types/identity.md) | Telefonnummer-IDs. |
 | `tntid` | [Identität](../../data-types/identity.md) | Endbenutzer-IDs für Adobe Target. |
 
-Weitere Informationen zur Feldgruppe finden Sie im öffentlichen XDM-Repository:
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)
