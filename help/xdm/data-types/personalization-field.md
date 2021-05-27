@@ -1,44 +1,47 @@
 ---
 solution: Experience Platform
-title: Datentyp für allgemeine Personalisierungseinstellungen
+title: Datentyp "Generische Personalisierungseinstellung"
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp des Generischen Personalisierungsvoreinstellungsfelds.
+description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp des Generischen Personalisierungspräferenzfelds.
 exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 2%
+source-wordcount: '485'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Allgemeiner Personalisierungsvoreinstellungstyp ] des Felds
+# [!UICONTROL Generischer ] Felddatentyp für Personalisierungseinstellungen
 
-[!UICONTROL Generische Voreinstellungsfelder ] für Personalisierungen sind ein standardmäßiger XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Personalisierungseinstellung beschreibt.
+[!UICONTROL Generische Personalisierungsvorgabenfelder ] sind standardmäßige XDM-Datentypen, die die Auswahl eines Kunden für eine bestimmte Personalisierungsvorgabe beschreiben.
 
 >[!NOTE]
 >
->Dieser Datentyp soll dazu verwendet werden, die Struktur der Schema für die Zustimmung Ihres Unternehmens mithilfe der Feldgruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)] als Grundlage anzupassen.](../field-groups/profile/consents.md)
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnisse)]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
 
 ![](../images/data-types/personalization-field.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `val` | Zeichenfolge | Die vom Kunden bereitgestellte Präferenz für diese Personalisierung. Die unten stehende Tabelle enthält akzeptierte Werte und Definitionen. |
+| `val` | Zeichenfolge | Die vom Kunden angegebene Voreinstellungsoption für diesen Personalisierungsfall. Die nachstehende Tabelle enthält akzeptierte Werte und Definitionen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
 | Wert | Titel | Beschreibung |
 | --- | --- | --- |
-| `y` | Ja | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie stimmen der Verwendung ihrer Daten gemäß der jeweiligen Präferenz zu.**** |
-| `n` | Nein | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **stimmen der Verwendung ihrer Daten nicht** zu, wie in der betreffenden Präferenz angegeben. |
-| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meistens im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Empfang von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um sicherzustellen, dass er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Verwendet diese Voreinstellung keinen zweistufigen Überprüfungsprozess, kann stattdessen die  `p` Auswahl verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Aufforderung zur Einwilligung reagiert hat. Beispielsweise können Sie den Wert auf der ersten Seite einer Website automatisch auf `p` einstellen, bevor der Kunde auf die Aufforderung zur Einwilligung reagiert hat. In Gerichtsbarkeiten, die keine ausdrückliche Zustimmung erfordern, können Sie diese auch verwenden, um anzugeben, dass der Kunde sich nicht explizit abgemeldet hat (d. h. die Zustimmung wird angenommen). |
-| `u` | „Unbekannt“ | Die Angaben zum Kundenwunsch sind unbekannt. |
-| `LI` | Rechtliches Interesse | Das legitime Geschäftsinteresse, diese Daten für den angegebenen Zweck zu erheben und zu verarbeiten, überwiegt den potenziellen Schaden, den sie dem Einzelnen verursachen. |
-| `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertraglichen Verpflichtungen mit der Einzelperson nachzukommen. |
+| `y` | Ja | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie stimmen **do** der Verwendung ihrer Daten zu, wie durch die betreffende Voreinstellung angegeben. |
+| `n` | Nein | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **stimmen nicht** der Verwendung ihrer Daten zu, wie durch die betreffende Voreinstellung angegeben. |
+| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Wenn diese Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, kann die  `p` Auswahl stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einwilligungsaufforderung reagiert hat. Sie können beispielsweise den Wert auf `p` automatisch auf der ersten Seite einer Website festlegen, bevor der Kunde auf die Einverständnisaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
+| `u` | „Unbekannt“ | Die Präferenzinformationen des Kunden sind unbekannt. |
+| `LI` | Rechtliches Interesse | Das berechtigte geschäftliche Interesse, diese Daten für den angegebenen Zweck zu sammeln und zu verarbeiten, überwiegt den potenziellen Schaden, den sie für die Person darstellt. |
+| `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertragliche Verpflichtungen mit der Person zu erfüllen. |
 | `CP` | Erfüllung einer rechtlichen Verpflichtung | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die rechtlichen Verpflichtungen des Unternehmens zu erfüllen. |
-| `VI` | Wesentliches Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist zum Schutz der vitalen Interessen des Einzelnen erforderlich. |
-| `PI` | Öffentliches Interesse | Die Erhebung von Daten zu dem festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt durchzuführen. |
+| `VI` | Wichtiges Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die lebenswichtigen Interessen des Einzelnen zu schützen. |
+| `PI` | Öffentliches Interesse | Die Erhebung von Daten für den festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt zu erfüllen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
