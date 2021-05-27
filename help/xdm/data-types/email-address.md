@@ -1,32 +1,33 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;emailAddress;xdm:emailAddress;email;email address;datatype;data-type;data-type;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; emailAddress; xdm:emailAddress; E-Mail; E-Mail-Adresse; E-Mail-Adresse; Datentyp; Datentyp;
 solution: Experience Platform
 title: Datentyp E-Mail-Adresse
 topic-legacy: overview
-description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp der E-Mail-Adresse.
+description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "E-Mail-Adresse".
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '187'
-ht-degree: 3%
+source-wordcount: '190'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL Datentyp ] für E-Mail-Adressen
+# [!UICONTROL Datentyp ] der E-Mail-Adresse
 
-[!UICONTROL E-Mail-] Adresse ist ein Standard-XDM-Datentyp, der die Details einer E-Mail-Adresse beschreibt.
+[!UICONTROL E-Mail-] Adresse ist ein standardmäßiger XDM-Datentyp, der die Details einer E-Mail-Adresse beschreibt.
 
 <img src="../images/data-types/email-address.png" width="450" /><br />
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `address` | Die technische Adresse der E-Mail, wie in RFC2822 und den nachfolgenden Standards (z. B. `name@domain.com`) allgemein definiert. |
-| `label` | Zusätzliche Anzeigeinformationen, die verfügbar sein können. Beispiel: Wenn eine E-Mail eine Rich-Address-Anzeige von `John Smith smithjr@company.uk` in Microsoft Outlook enthält, wird `John Smith` in dieses Feld eingefügt. |
-| `primary` | Gibt an, ob dies die primäre E-Mail-Adresse der Person ist. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary`-E-Mail-Adresse haben. |
+| `address` | Die technische Adresse der E-Mail, wie sie üblicherweise in RFC2822 und nachfolgenden Standards definiert ist (z. B. `name@domain.com`). |
+| `label` | Zusätzliche verfügbare Anzeigeinformationen. Wenn eine E-Mail beispielsweise eine Rich-Adresse von Microsoft Outlook mit `John Smith smithjr@company.uk` aufweist, wird `John Smith` in dieses Feld eingefügt. |
+| `primary` | Gibt an, ob dies die primäre E-Mail-Adresse des Kontakts ist. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary` E-Mail-Adresse haben. |
 | `status` | Gibt an, ob die E-Mail-Adresse derzeit verwendet werden kann |
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |
-| `type` | Die Art, wie das Konto mit der Person verknüpft ist (z. B. `work` oder `personal`). |
+| `type` | Die Art, wie das Konto mit der Person in Beziehung steht (z. B. `work` oder `personal`). |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Weitere Informationen zum Datentyp der E-Mail-Adresse finden Sie im öffentlichen XDM-Repository:
