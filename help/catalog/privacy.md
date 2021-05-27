@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 100%
+source-wordcount: '1351'
+ht-degree: 95%
 
 ---
 
@@ -17,6 +17,12 @@ ht-degree: 100%
 Adobe Experience Platform [!DNL Privacy Service] bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt.
 
 In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im [!DNL Data Lake] gespeicherte Kundendaten behandelt.
+
+>[!NOTE]
+>
+>In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Data Lake in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Echtzeit-Kundenprofil-Datenspeicher vornehmen möchten, lesen Sie zusätzlich zu diesem Tutorial das Handbuch [Verarbeitung von Datenschutzanfragen für Profil](../profile/privacy.md).
+>
+>Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Anwendungen finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
 ## Erste Schritte
 
