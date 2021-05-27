@@ -1,113 +1,117 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Identitätskarte;Identitätskarte;Schema-Design;Map;Ereignis-Modellierung;Ereignis-Modellierung;Best Practices;Ereignis;Ereignis;
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;XDM;Felder;Schemas;Schemas;Schemas;Identitätszuordnung;Identitätszuordnung;Schema-Design;Map;Map;Ereignismodellierung;Ereignismodellierung;Best Practices;Ereignis;Ereignisse;
 solution: Experience Platform
 title: XDM ExperienceEvent-Klasse
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die XDM ExperienceEvent-Klasse und bewährte Verfahren für die Ereignis-Datenmodellierung.
+description: Dieses Dokument bietet einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 4f1fe7ca5f09bb1e8e1b913d1dee1cff347d6a24
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1482'
 ht-degree: 4%
 
 ---
 
 # [!DNL XDM ExperienceEvent] class
 
-[!DNL XDM ExperienceEvent] ist eine standardmäßige XDM-Klasse (Experience Data Model), mit der Sie einen Schnappschuss des Systems mit Zeitstempel erstellen können, wenn ein bestimmtes Ereignis auftritt oder ein bestimmter Bedingungssatz erreicht wurde.
+[!DNL XDM ExperienceEvent] ist eine standardmäßige XDM-Klasse (Experience-Datenmodell), mit der Sie einen Schnappschuss des Systems mit Zeitstempel erstellen können, wenn ein bestimmtes Ereignis auftritt oder ein bestimmter Bedingungssatz erreicht wurde.
 
-Ein Experience Ereignis ist ein Faktenbericht über das, was geschehen ist, einschließlich des Zeitpunkts und der Identität der beteiligten Person. Ereignis können entweder explizit (direkt erkennbare menschliche Handlungen) oder implizit (ohne unmittelbare Handlung des Menschen aufgeworfen) sein und ohne Aggregation oder Interpretation aufgezeichnet werden. Weitere Informationen zur Verwendung dieser Klasse im Plattform-Ökosystem finden Sie in der [XDM-Übersicht](../home.md#data-behaviors).
+Ein Erlebnisereignis ist ein Faktendatensatz dessen, was geschehen ist, einschließlich des Zeitpunkts und der Identität der beteiligten Person. Ereignisse können entweder explizit (direkt beobachtbare menschliche Aktionen) oder implizit (ohne direkte menschliche Aktion ausgelöst) sein und ohne Aggregation oder Interpretation aufgezeichnet werden. Weiterführende Informationen zur Verwendung dieser Klasse im Platform-Ökosystem finden Sie in der [XDM-Übersicht](../home.md#data-behaviors).
 
-Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene Felder für ein Schema bereit. Die Werte einiger dieser Felder werden automatisch ausgefüllt, wenn Daten erfasst werden:
+Die [!DNL XDM ExperienceEvent]-Klasse selbst stellt mehrere zeitreihenbezogene Felder für ein Schema bereit. Die Werte einiger dieser Felder werden bei der Datenerfassung automatisch ausgefüllt:
 
 ![](../images/classes/experienceevent/structure.png)
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_id` | Eine eindeutige Zeichenfolgenkennung für das Ereignis. Dieses Feld dient der Verfolgung der Einzigartigkeit eines einzelnen Ereignisses, der Vermeidung von Datenduplizierung und der Suche nach diesem Ereignis in nachgelagerten Diensten.<br><br>In einigen Fällen  `_id` kann es sich um eine  [Universally Unique Identifier (UUID) ](https://tools.ietf.org/html/rfc4122) oder eine  [Global Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) handeln. In Adobe Experience Platform Data Prep kann dieser Wert mit den Zuordnungsfunktionen [`uuid` oder `guid` generiert werden.](../../data-prep/functions.md#special-operations)<br><br>Wenn Sie Daten aus einer Quellverbindung streamen oder direkt aus einer Parquet-Datei abrufen, sollten Sie diesen Wert generieren, indem Sie bestimmte Kombinationsfelder miteinander verknüpfen, die das Gerade eindeutig machen, z. B. eine primäre ID, einen Zeitstempel, einen Ereignistyp usw.<br><br>Es ist wichtig zu unterscheiden, dass  **dieses Feld nicht eine Identität darstellt, die mit einer Person** in Beziehung steht, sondern vielmehr die Aufzeichnung der Daten selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) zurückgesetzt werden, die von kompatiblen Mixins bereitgestellt werden. |
-| `eventMergeId` | Wenn Sie zum Erfassen von Daten das [Adobe Experience Platform Web SDK](../../edge/home.md) verwenden, stellt dies die ID des erfassten Stapels dar, der zur Erstellung des Datensatzes geführt hat. Dieses Feld wird beim Erfassen von Daten automatisch vom System ausgefüllt. Die Verwendung dieses Felds außerhalb des Kontexts einer Web SDK-Implementierung wird nicht unterstützt. |
-| `eventType` | Eine Zeichenfolge, die den Typ oder die Kategorie des Ereignisses angibt. Dieses Feld kann verwendet werden, wenn Sie verschiedene Ereignistyp innerhalb desselben Schemas und desselben Datensatzes unterscheiden möchten, z. B. indem Sie ein Ereignis für die Ansicht eines Produkts von einem Ereignis für den Zusatz zum Einkaufswagen für eine Einzelhandels-Firma unterscheiden.<br><br>Die Standardwerte für diese Eigenschaft werden im Abschnitt [ &quot;](#eventType)Anhang&quot;bereitgestellt, einschließlich Beschreibungen der Verwendungsart. Dieses Feld ist eine erweiterbare Enum, d. h. Sie können auch eigene Ereignistyp-Zeichenfolgen verwenden, um die Ereignis zu kategorisieren, die Sie verfolgen. |
-| `producedBy` | Ein Zeichenfolgenwert, der den Produzenten oder die Herkunft des Ereignisses beschreibt. Dieses Feld kann verwendet werden, um bestimmte Ereignis-Hersteller auszufiltern, wenn dies für Segmentierungszwecke erforderlich ist.<br><br>Einige empfohlene Werte für diese Eigenschaft finden Sie im  [Anhang](#producedBy). Dieses Feld ist eine erweiterbare Enum, d. h. Sie können auch eigene Zeichenfolgen verwenden, um verschiedene Ereignis-Produzenten zu repräsentieren. |
-| `identityMap` | Ein Zuordnungsfeld, das einen Satz namensbezogener Identitäten für die einzelne Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, wenn Identitätsdaten erfasst werden. Um dieses Feld für [Kundendaten in Echtzeit](../../profile/home.md) richtig zu verwenden, sollten Sie nicht versuchen, den Feldinhalt in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Weitere Informationen zum Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den  [Grundlagen der ](../schema/composition.md#identityMap) Schema-Komposition. |
-| `timestamp` | Ein ISO 8601-Zeitstempel zum Zeitpunkt des Ereignisses, formatiert gemäß [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Dieser Zeitstempel muss in der Vergangenheit auftreten. Bewährte Verfahren zur Verwendung dieses Felds finden Sie im Abschnitt [Zeitstempel](#timestamps). |
+| `_id` | Eine eindeutige Zeichenfolgenkennung für das Ereignis. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Ereignisses zu verfolgen, Datendoppelungen zu verhindern und dieses Ereignis in nachgelagerten Diensten nachzuschlagen.<br><br>In einigen Fällen  `_id` kann es sich um eine  [Universally Unique Identifier (UUID) ](https://tools.ietf.org/html/rfc4122) oder eine  [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) handeln. In Adobe Experience Platform Data Prep kann dieser Wert mithilfe der Zuordnungsfunktionen [`uuid` oder `guid` ](../../data-prep/functions.md#special-operations) generiert werden.<br><br>Wenn Sie Daten aus einer Quellverbindung streamen oder direkt aus einer Parquet-Datei erfassen, sollten Sie diesen Wert generieren, indem Sie bestimmte Kombinationsfelder miteinander verknüpfen, die das Ereignis eindeutig machen, z. B. eine primäre ID, einen Zeitstempel, einen Ereignistyp usw.<br><br>Es ist wichtig zu unterscheiden, dass  **dieses Feld keine Identität darstellt, die mit einer Person** in Verbindung steht, sondern vielmehr den Datensatz selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) beschränkt werden, die von kompatiblen Mixins bereitgestellt werden. |
+| `eventMergeId` | Wenn Sie das [Adobe Experience Platform Web SDK](../../edge/home.md) zum Erfassen von Daten verwenden, stellt dies die Kennung des erfassten Batches dar, der zur Erstellung des Datensatzes geführt hat. Dieses Feld wird bei der Datenerfassung automatisch vom System ausgefüllt. Die Verwendung dieses Felds außerhalb des Kontexts einer Web SDK-Implementierung wird nicht unterstützt. |
+| `eventType` | Eine Zeichenfolge, die den Typ oder die Kategorie für das Ereignis angibt. Dieses Feld kann verwendet werden, wenn Sie verschiedene Ereignistypen innerhalb desselben Schemas und Datensatzes unterscheiden möchten, z. B. die Unterscheidung eines Produktansichtsereignisses von einem Add-zu-Warenkorb-Ereignis für ein Einzelhandelsunternehmen.<br><br>Standardwerte für diese Eigenschaft finden Sie im  [Anhang](#eventType), einschließlich Beschreibungen des vorgesehenen Anwendungsfalls. Dieses Feld ist eine erweiterbare Enumeration, d. h. Sie können auch eigene Ereignistypen-Zeichenfolgen verwenden, um die Ereignisse zu kategorisieren, die Sie verfolgen. |
+| `producedBy` | Ein string -Wert, der den Hersteller oder Ursprung des Ereignisses beschreibt. Dieses Feld kann verwendet werden, um bestimmte Ereignisproduzenten bei Bedarf für Segmentierungszwecke herauszufiltern.<br><br>Einige empfohlene Werte für diese Eigenschaft finden Sie im  [Anhang](#producedBy). Dieses Feld ist eine erweiterbare Enumeration, d. h. Sie können auch eigene Zeichenfolgen verwenden, um verschiedene Ereignisproduzenten zu repräsentieren. |
+| `identityMap` | Ein map -Feld, das einen Satz von Namespaced-Identitäten für die Person enthält, für die das Ereignis gilt. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld für [Echtzeit-Kundenprofil](../../profile/home.md) richtig zu nutzen, sollten Sie nicht versuchen, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Weitere Informationen zu ihrem Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den  [Grundlagen der Schemakomposition ](../schema/composition.md#identityMap) . |
+| `timestamp` | Ein ISO 8601-Zeitstempel, der angibt, wann das Ereignis aufgetreten ist, formatiert gemäß [RFC 3339 Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). Dieser Zeitstempel muss in der Vergangenheit auftreten. Best Practices zur Verwendung dieses Felds finden Sie im folgenden Abschnitt zu [Zeitstempel](#timestamps) . |
 
-## Best Practices für die Modellierung von Ereignissen
+{style=&quot;table-layout:auto&quot;}
 
-Die folgenden Abschnitte beschreiben bewährte Verfahren zum Entwerfen Ihrer Ereignis-basierten Experience Data Model (XDM)-Schema in Adobe Experience Platform.
+## Best Practices für die Ereignismodellierung
+
+In den folgenden Abschnitten finden Sie Best Practices zum Entwerfen Ihrer ereignisbasierten Experience-Datenmodell (XDM)-Schemas in Adobe Experience Platform.
 
 ### Zeitstempel {#timestamps}
 
-Das Stammfeld `timestamp` eines Ereignis-Schemas kann **nur** die Beobachtung des Ereignisses selbst darstellen und muss in der Vergangenheit auftreten. Wenn Ihre Anwendungsfälle für die Segmentierung die Verwendung von Zeitstempeln erfordern, die in der Zukunft auftreten können, müssen diese Werte an anderer Stelle im Experience Ereignis-Schema eingeschränkt werden.
+Das Stammfeld `timestamp` eines Ereignisschemas kann **nur** die Beobachtung des Ereignisses selbst darstellen und muss in der Vergangenheit auftreten. Wenn Ihre Segmentierungsanwendungsfälle die Verwendung von Zeitstempeln erfordern, die in Zukunft auftreten können, müssen diese Werte an einer anderen Stelle im Erlebnisereignis-Schema eingeschränkt werden.
 
-Beispiel: Wenn ein Unternehmen der Reise- und Gastgewerbebranche ein Ereignis für die Flugreservierung modelliert, gibt das Feld auf Klassenebene `timestamp` den Zeitpunkt an, zu dem das Ereignis für die Reservierung eingehalten wurde. Andere Zeitstempel, die mit dem Ereignis zusammenhängen, wie z. B. der Beginn der Reisebuchung, sollten in separaten Feldern erfasst werden, die von Standard- oder benutzerdefinierten Mixins bereitgestellt werden.
+Wenn beispielsweise ein Unternehmen der Reise- und Gastgewerbe ein Flugreservierungsereignis modelliert, stellt das Feld auf Klassenebene `timestamp` den Zeitpunkt dar, zu dem das Reservierungsereignis beobachtet wurde. Andere Zeitstempel, die mit dem Ereignis in Verbindung stehen, wie das Startdatum der Reisereservierung, sollten in separaten Feldern erfasst werden, die von standardmäßigen oder benutzerdefinierten Mixins bereitgestellt werden.
 
 ![](../images/classes/experienceevent/timestamps.png)
 
-Indem Sie den Zeitstempel auf Klassenebene von anderen zugehörigen Datenzeitwerten in Ihren Ereignis-Schemas trennen, können Sie flexible Anwendungsfälle für die Segmentierung implementieren und gleichzeitig ein Kundenkonto mit Zeitstempel in Ihrer Erlebnisanwendung beibehalten.
+Indem Sie den Zeitstempel auf Klassenebene von anderen zugehörigen Datums-/Zeitwerten in Ihren Ereignisschemas trennen, können Sie flexible Anwendungsfälle für die Segmentierung implementieren und gleichzeitig ein Kundenkonto mit Zeitstempel in Ihrer Erlebnisanwendung beibehalten.
 
 ### Berechnete Felder verwenden
 
-Bestimmte Interaktionen in Ihren Erlebnisanwendungen können zu mehreren zugehörigen Ereignissen führen, die technisch den gleichen Ereignis-Zeitstempel verwenden und daher als ein Ereignis dargestellt werden können. Wenn ein Kunde beispielsweise ein Ereignis auf Ihrer Website Ansicht, kann dies zu einem Produktdatensatz führen, der sowohl Produktattribute als auch einige überlappende generische Seitenattribute der Ansicht enthält. In diesen Fällen können Sie berechnete Felder verwenden, um die wichtigsten Attribute zu erfassen, wenn mehrere Ereignis in einem Datensatz erfasst werden.
+Bestimmte Interaktionen in Ihren Erlebnisanwendungen können zu mehreren verwandten Ereignissen führen, die technisch denselben Ereigniszeitstempel aufweisen, und daher als einzelner Ereignisdatensatz dargestellt werden. Wenn ein Kunde beispielsweise ein Produkt auf Ihrer Website ansieht, kann dies zu einem Ereignisdatensatz führen, der sowohl die Attribute &quot;Produktansicht&quot;als auch einige überlappende allgemeine Attribute &quot;Seitenansicht&quot;enthält. In diesen Fällen können Sie berechnete Felder verwenden, um die wichtigsten Attribute zu erfassen, wenn mehrere Ereignisse in einem Datensatz erfasst werden.
 
-[Adobe Experience Platform Data ](../../data-prep/home.md) Prepallow you to map, transform and validate data to and from XDM. Mithilfe der verfügbaren [Zuordnungsfunktionen](../../data-prep/functions.md), die vom Dienst bereitgestellt werden, können Sie logische Operatoren aufrufen, um Daten aus Datensätzen mit mehreren Ereignissen zu priorisieren, umzuformen und/oder zu konsolidieren, wenn sie in die Experience Platform aufgenommen werden.
+[Adobe Experience Platform-Daten ](../../data-prep/home.md) Vorbereiten ermöglicht die Zuordnung, Umwandlung und Validierung von Daten zu und von XDM. Mithilfe der verfügbaren [Zuordnungsfunktionen](../../data-prep/functions.md), die vom Dienst bereitgestellt werden, können Sie logische Operatoren aufrufen, um bei der Erfassung in Experience Platform Daten aus Datensätzen mit mehreren Ereignissen zu priorisieren, umzuwandeln und/oder zu konsolidieren.
 
-Wenn Sie Daten manuell über die Benutzeroberfläche in die Plattform einbinden, finden Sie im Handbuch [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-a-csv-file.md) spezifische Schritte zum Erstellen berechneter Felder.
+Wenn Sie Daten manuell über die Benutzeroberfläche in Platform erfassen, finden Sie im Handbuch [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-a-csv-file.md) spezifische Schritte zum Erstellen berechneter Felder.
 
-Wenn Sie Daten mithilfe einer Quellverbindung an die Plattform streamen, können Sie die Quelle so konfigurieren, dass sie stattdessen berechnete Felder verwendet. Anweisungen zum Implementieren berechneter Felder beim Konfigurieren der Verbindung finden Sie in der [Dokumentation zu Ihrer jeweiligen Quelle](../../sources/home.md).
+Wenn Sie Daten mithilfe einer Quellverbindung an Platform streamen, können Sie die Quelle so konfigurieren, dass stattdessen berechnete Felder verwendet werden. Eine Anleitung zur Implementierung berechneter Felder beim Konfigurieren der Verbindung finden Sie in der [Dokumentation für Ihre jeweilige Quelle](../../sources/home.md) .
 
-## Kompatible Schema-Feldgruppen {#field-groups}
+## Kompatible Schemafeldgruppen {#field-groups}
 
 >[!NOTE]
 >
->Die Namen mehrerer Feldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../field-groups/name-updates.md).
+>Die Namen mehrerer Feldergruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../field-groups/name-updates.md) .
 
-Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM ExperienceEvent]-Klasse. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldgruppen für die Klasse:
+Adobe stellt mehrere Standardfeldgruppen für die Verwendung mit der Klasse [!DNL XDM ExperienceEvent] bereit. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldergruppen für die Klasse:
 
 * [[!UICONTROL Details zur Endbenutzer-ID]](../field-groups/event/enduserids.md)
-* [[!UICONTROL Umgebung]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Umgebungsdetails]](../field-groups/event/environment-details.md)
 
 ## Anhang
 
-Der folgende Abschnitt enthält weitere Informationen zur Klasse [!UICONTROL XDM ExperienceEvent].
+Der folgende Abschnitt enthält zusätzliche Informationen zur Klasse [!UICONTROL XDM ExperienceEvent].
 
-### Akzeptierte Werte für `eventType` {#eventType}
+### Zulässige Werte für `eventType` {#eventType}
 
-In der folgenden Tabelle sind die für `eventType` zulässigen Werte und ihre Definitionen aufgeführt:
+In der folgenden Tabelle sind die für `eventType` zulässigen Werte sowie deren Definitionen aufgeführt:
 
 | Wert | Definition |
 | --- | --- |
-| `advertising.completes` | Ein zeitgesteuertes Medienelement wurde bis zum Abschluss überwacht. Dies bedeutet nicht unbedingt, dass der Viewer das gesamte Video angesehen hat, da der Viewer möglicherweise vorzeitig übersprungen wurde. |
-| `advertising.timePlayed` | Beschreibt die Zeitdauer, die ein Benutzer für ein bestimmtes zeitgesteuertes Medienelement verbringt. |
-| `advertising.federated` | Gibt an, ob ein Experience Ereignis über den Datenverband (Datenfreigabe zwischen Kunden) erstellt wurde. |
-| `advertising.clicks` | Klicken Sie auf Aktion(en) für eine Werbung. |
-| `advertising.conversions` | Vordefinierte Aktionen, die von einem Kunden ausgeführt werden, der ein Ereignis zur Leistungsbewertung Trigger. |
+| `advertising.completes` | Ein zeitgesteuertes Medien-Asset wurde bis zum Ende angesehen. Das bedeutet nicht unbedingt, dass der Betrachter das gesamte Video angesehen hat, da der Betrachter voraus hätte überspringen können. |
+| `advertising.timePlayed` | Beschreibt die Zeit, die ein Benutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbringt. |
+| `advertising.federated` | Gibt an, ob ein Erlebnisereignis über eine Datenverknüpfung (Datenfreigabe zwischen Kunden) erstellt wurde. |
+| `advertising.clicks` | Klicken Sie auf eine(n) Aktion(en) für eine Anzeige. |
+| `advertising.conversions` | Vordefinierte Aktion(en), die von einem Kunden durchgeführt wird, der ein Ereignis zur Leistungsbewertung Trigger. |
 | `advertising.firstQuartiles` | Eine digitale Videoanzeige hat 25 % ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben. |
-| `advertising.impressions` | Impression(en) einer Werbung für einen Kunden mit dem Potenzial, angezeigt zu werden. |
+| `advertising.impressions` | Impression(en) einer Anzeige für einen Kunden mit dem Potenzial, angezeigt zu werden. |
 | `advertising.midpoints` | Eine digitale Videoanzeige hat 50% ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben. |
-| `advertising.starts` | Die Wiedergabe einer digitalen Videoanzeige wurde gestartet. |
+| `advertising.starts` | Die Wiedergabe einer digitalen Videoanzeige hat begonnen. |
 | `advertising.thirdQuartiles` | Eine digitale Videoanzeige hat 75% ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben. |
 | `web.webpagedetails.pageViews` | Eine Webseite hat eine oder mehrere Ansichten erhalten. |
-| `web.webinteraction.linkClicks` | Ein Link wurde ein- oder mehrmals ausgewählt. |
-| `commerce.checkouts` | Für eine Liste des Produkts ist ein Kassengang-Ereignis aufgetreten. Es kann mehrere Checkout-Ereignis geben, wenn ein Kassengangprozess mehrere Schritte umfasst. Wenn mehrere Schritte durchgeführt werden, werden der Zeitstempel und die referenzierte Seite/Erlebnis für jedes Ereignis verwendet, um das jeweilige Ereignis (Schritt) in der angegebenen Reihenfolge zu identifizieren. |
-| `commerce.productListAdds` | Ein Produkt wurde der Liste oder dem Warenkorb hinzugefügt. |
-| `commerce.productListOpens` | Eine neue Liste (Warenkorb) wurde initialisiert oder erstellt. |
-| `commerce.productListRemovals` | Ein oder mehrere Produkteinträge wurden aus einer Liste oder einem Warenkorb entfernt. |
-| `commerce.productListReopens` | Eine Liste (Warenkorb), auf die nicht mehr zugegriffen werden konnte (die abgebrochen wurde), wurde von einem Kunden erneut aktiviert, z. B. über eine Remarketing-Aktivität. |
-| `commerce.productListViews` | Eine Liste oder ein Warenkorb hat eine oder mehrere Ansichten erhalten. |
+| `web.webinteraction.linkClicks` | Ein Link wurde mindestens einmal ausgewählt. |
+| `commerce.checkouts` | Für eine Produktliste ist ein Checkout-Ereignis aufgetreten. Es kann mehr als ein Checkout-Ereignis geben, wenn ein Checkout-Prozess mehrere Schritte umfasst. Wenn mehrere Schritte vorhanden sind, werden der Zeitstempel und die referenzierte Seite/das referenzierte Erlebnis für jedes Ereignis verwendet, um die einzelnen Ereignisse (Schritte) zu identifizieren, die in der angegebenen Reihenfolge dargestellt werden. |
+| `commerce.productListAdds` | Ein Produkt wurde zur Produktliste oder zum Warenkorb hinzugefügt. |
+| `commerce.productListOpens` | Eine neue Produktliste (Warenkorb) wurde initialisiert oder erstellt. |
+| `commerce.productListRemovals` | Ein oder mehrere Produkteinträge wurden aus einer Produktliste oder einem Warenkorb entfernt. |
+| `commerce.productListReopens` | Eine Produktliste (Warenkorb), auf die nicht mehr zugegriffen werden konnte (abgebrochen), wurde von einem Kunden erneut aktiviert, z. B. über eine Remarketing-Aktivität. |
+| `commerce.productListViews` | Eine Produktliste oder ein Warenkorb hat eine oder mehrere Ansichten erhalten. |
 | `commerce.productViews` | Ein Produkt hat eine oder mehrere Ansichten erhalten. |
-| `commerce.purchases` | Eine Bestellung wurde angenommen. Dies ist die einzige erforderliche Aktion bei einer Commerce-Konvertierung. Auf ein Ereignis zum Einkauf muss eine Liste verwiesen werden. |
-| `commerce.saveForLaters` | Eine ProduktWunschliste wurde zur späteren Verwendung einer Liste gespeichert. |
-| `delivery.feedback` | Feedback-Ereignis für einen Versand, z. B. ein E-Mail-Versand. |
-| `message.feedback` | Feedback-Ereignis wie Senden/Absprung/Fehler für Nachrichten, die an einen Kunden gesendet werden. |
-| `message.tracking` | Verfolgen von Ereignissen wie &quot;Öffnen&quot;/&quot;Klicken&quot;/&quot;Benutzerdefinierte Aktionen&quot;in Nachrichten, die an einen Kunden gesendet werden. |
+| `commerce.purchases` | Eine Bestellung wurde angenommen. Dies ist die einzige erforderliche Aktion bei einer Commerce-Konversion. Auf ein Kaufereignis muss eine Produktliste verwiesen werden. |
+| `commerce.saveForLaters` | Eine Produktliste wurde für die zukünftige Verwendung gespeichert, z. B. eine ProduktWunschliste. |
+| `delivery.feedback` | Feedback-Ereignisse für einen Versand, z. B. ein E-Mail-Versand. |
+| `message.feedback` | Feedback-Ereignisse wie Senden/Bounce/Fehler für Nachrichten, die an einen Kunden gesendet werden. |
+| `message.tracking` | Tracking von Ereignissen wie Öffnen/Klicken/benutzerdefinierten Aktionen für Nachrichten, die an einen Kunden gesendet werden. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Vorgeschlagene Werte für `producedBy` {#producedBy}
 
-In der folgenden Tabelle sind einige für `producedBy` zulässige Werte aufgeführt:
+In der folgenden Tabelle sind einige akzeptierte Werte für `producedBy` aufgeführt:
 
 | Wert | Definition |
 | --- | --- |
-| `self` | self |
+| `self` | Selbst |
 | `system` | System |
 | `salesRef` | Vertriebsmitarbeiter |
-| `customerRep` | Kundenbeauftragter |
+| `customerRep` | Kundenbetreuer |
