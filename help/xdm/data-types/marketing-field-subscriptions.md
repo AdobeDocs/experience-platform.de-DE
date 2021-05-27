@@ -1,35 +1,36 @@
 ---
 solution: Experience Platform
-title: Allgemeines Feld für Marketingpräferenzen mit Abonnement-Datentyp
+title: Feld für allgemeine Marketing-Voreinstellungen mit Abonnementdatentyp
 topic-legacy: overview
-description: Dieses Dokument bietet eine Übersicht über das Feld "Allgemeine Marketingvorgabe"mit dem XDM-Datentyp von Abonnements.
+description: Dieses Dokument bietet einen Überblick über das Feld "Allgemeine Marketing-Voreinstellung"mit dem XDM-Datentyp "Abonnements".
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 2%
+source-wordcount: '738'
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Allgemeines Feld für Marketingpräferenzen mit ] Abonnementdatentyp
+# [!UICONTROL Generisches Feld für Marketing-Voreinstellungen mit Datentyp ] Abonnements
 
-[!UICONTROL Generisches Feld für Marketingpräferenzen mit ] Abonnement ist ein Standard-XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Marketingvorgabe beschreibt.
+[!UICONTROL Generisches Feld für Marketing-Voreinstellungen mit ] Abonnements ist ein standardmäßiger XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Marketing-Voreinstellung beschreibt.
 
 >[!NOTE]
 >
->Dieser Datentyp soll dazu verwendet werden, die Struktur der Schema für die Zustimmung Ihres Unternehmens mithilfe der Feldgruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)] als Grundlage anzupassen.](../field-groups/profile/consents.md)
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnisse)]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
 >
->Wenn Sie keine `subscriptions`-Zuordnung für ein bestimmtes Feld mit Marketingpräferenzen benötigen, können Sie stattdessen den Datentyp [des grundlegenden Marketingfelds](./marketing-field.md) verwenden.
+>Wenn Sie für ein bestimmtes Marketing-Voreinstellungsfeld keine `subscriptions`-Zuordnung benötigen, können Sie stattdessen den [grundlegenden Marketing-Felddatentyp](./marketing-field.md) verwenden.
 
 ![](../images/data-types/marketing-field-subscriptions.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `reason` | Zeichenfolge | Wenn ein Kunde sich aus einer Marketing-Verwendungsszenario ausschließt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
-| `subscriptions` | Zuordnung | Eine Übersicht der Kundenmarketing-Voreinstellungen für bestimmte Abonnement. Weitere Informationen finden Sie im Abschnitt [Abonnement](#subscriptions). |
-| `time` | DateTime | Ein Zeitstempel nach ISO 8601, der angibt, wann sich die Marketing-Voreinstellung geändert hat (falls zutreffend). |
-| `val` | Zeichenfolge | Die vom Kunden angebotene Voreinstellungsoption für diesen Marketing-Verwendungsfall. Akzeptierte Werte und Definitionen finden Sie im Abschnitt [Nächster Abschnitt](#val). |
+| `reason` | Zeichenfolge | Wenn ein Kunde einen Marketing-Anwendungsfall ablehnt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
+| `subscriptions` | Zuordnung | Eine Karte der Marketing-Voreinstellungen von Kunden für bestimmte Abonnements. Weitere Informationen finden Sie im Abschnitt [Abonnements](#subscriptions) . |
+| `time` | DateTime | Ein ISO 8601-Zeitstempel, mit dem die Marketing-Voreinstellung geändert wurde (falls zutreffend). |
+| `val` | Zeichenfolge | Die vom Kunden bereitgestellte bevorzugte Auswahl für diesen Marketing-Anwendungsfall. Akzeptierte Werte und Definitionen finden Sie im [nächsten Abschnitt](#val) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `val` {#val}
 
@@ -37,21 +38,23 @@ In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
 | Wert | Titel | Beschreibung |
 | --- | --- | --- |
-| `y` | Ja | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie stimmen der Verwendung ihrer Daten gemäß der jeweiligen Präferenz zu.**** |
-| `n` | Nein | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **stimmen der Verwendung ihrer Daten nicht** zu, wie in der betreffenden Präferenz angegeben. |
-| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meistens im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Empfang von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um sicherzustellen, dass er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Verwendet diese Voreinstellung keinen zweistufigen Überprüfungsprozess, kann stattdessen die  `p` Auswahl verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Aufforderung zur Einwilligung reagiert hat. Beispielsweise können Sie den Wert auf der ersten Seite einer Website automatisch auf `p` einstellen, bevor der Kunde auf die Aufforderung zur Einwilligung reagiert hat. In Gerichtsbarkeiten, die keine ausdrückliche Zustimmung erfordern, können Sie diese auch verwenden, um anzugeben, dass der Kunde sich nicht explizit abgemeldet hat (d. h. die Zustimmung wird angenommen). |
-| `u` | „Unbekannt“ | Die Angaben zum Kundenwunsch sind unbekannt. |
-| `LI` | Rechtliches Interesse | Das legitime Geschäftsinteresse, diese Daten für den angegebenen Zweck zu erheben und zu verarbeiten, überwiegt den potenziellen Schaden, den sie dem Einzelnen verursachen. |
-| `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertraglichen Verpflichtungen mit der Einzelperson nachzukommen. |
+| `y` | Ja | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie stimmen **do** der Verwendung ihrer Daten zu, wie durch die betreffende Voreinstellung angegeben. |
+| `n` | Nein | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **stimmen nicht** der Verwendung ihrer Daten zu, wie durch die betreffende Voreinstellung angegeben. |
+| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Wenn diese Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, kann die  `p` Auswahl stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einwilligungsaufforderung reagiert hat. Sie können beispielsweise den Wert auf `p` automatisch auf der ersten Seite einer Website festlegen, bevor der Kunde auf die Einverständnisaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
+| `u` | „Unbekannt“ | Die Präferenzinformationen des Kunden sind unbekannt. |
+| `LI` | Rechtliches Interesse | Das berechtigte geschäftliche Interesse, diese Daten für den angegebenen Zweck zu sammeln und zu verarbeiten, überwiegt den potenziellen Schaden, den sie für die Person darstellt. |
+| `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertragliche Verpflichtungen mit der Person zu erfüllen. |
 | `CP` | Erfüllung einer rechtlichen Verpflichtung | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die rechtlichen Verpflichtungen des Unternehmens zu erfüllen. |
-| `VI` | Wesentliches Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist zum Schutz der vitalen Interessen des Einzelnen erforderlich. |
-| `PI` | Öffentliches Interesse | Die Erhebung von Daten zu dem festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt durchzuführen. |
+| `VI` | Wichtiges Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die lebenswichtigen Interessen des Einzelnen zu schützen. |
+| `PI` | Öffentliches Interesse | Die Erhebung von Daten für den festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt zu erfüllen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## `subscriptions` {#subscriptions}
 
-Einige Unternehmen ermöglichen es Kunden, für verschiedene Abonnement zu Opt-in, die mit einem bestimmten Marketing-Kanal verbunden sind. Eine Bankverbindung könnte es Kunden beispielsweise ermöglichen, Telefonwarnungen für überzogene Programme zu abonnieren oder Verkaufsanrufe für treue Firma-Angebote zu empfangen.
+Einige Unternehmen ermöglichen es Kunden, sich für verschiedene Abonnements zu entscheiden, die mit einem bestimmten Marketing-Kanal verknüpft sind. Ein Bankunternehmen kann beispielsweise Kunden gestatten, Telefonwarnungen für überzogene Konten zu abonnieren oder Verkaufsanrufe für Treueprogramm-Angebote zu erhalten.
 
-Die folgende JSON-Datei stellt ein Beispielmarketingfeld für einen Telefonanruf-Marketing-Kanal dar, der eine `subscriptions`-Zuordnung enthält. Jeder Schlüssel im `subscriptions`-Objekt stellt ein einzelnes Abonnement für den Marketing-Kanal dar. Jedes Abonnement enthält wiederum einen Abmeldewert (`val`).
+Die folgende JSON-Datei stellt ein Beispiel-Marketing-Feld für einen Marketing-Kanal für Telefonanrufe dar, der eine `subscriptions` -Zuordnung enthält. Jeder Schlüssel im `subscriptions` -Objekt stellt ein individuelles Abonnement für den Marketing-Kanal dar. Jedes Abonnement enthält wiederum einen Opt-in-Wert (`val`).
 
 ```json
 "phone-marketing-field": {
@@ -88,8 +91,10 @@ Die folgende JSON-Datei stellt ein Beispielmarketingfeld für einen Telefonanruf
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `type` | Der Abonnement-Typ. Hierbei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, vorausgesetzt, diese darf nicht länger als 15 Zeichen sein. |
-| `subscribers` | Ein optionales Kartenfeld, das einen Satz von Bezeichnern (wie E-Mail-Adressen oder Telefonnummern) darstellt, die ein bestimmtes Abonnement abonniert haben. Jeder Schlüssel in diesem Objekt stellt den betreffenden Bezeichner dar und enthält zwei Untereigenschaften: <ul><li>`time`: Ein ISO 8601-Zeitstempel zum Zeitpunkt des Abonnements der Identität, falls zutreffend.</li><li>`source`: Die Quelle, von der der Abonnent stammt. Hierbei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, vorausgesetzt, diese darf nicht länger als 15 Zeichen sein.</li></ul> |
+| `type` | Der Abonnementtyp. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst. |
+| `subscribers` | Ein optionales Feld vom Typ Zuordnung , das eine Reihe von Kennungen (wie E-Mail-Adressen oder Telefonnummern) darstellt, die ein bestimmtes Abonnement abonniert haben. Jeder Schlüssel in diesem Objekt stellt die betreffende Kennung dar und enthält zwei Untereigenschaften: <ul><li>`time`: Ein ISO 8601-Zeitstempel, der angibt, wann die Identität abonniert hat (falls zutreffend).</li><li>`source`: Die Quelle, aus der der Abonnent stammt. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst.</li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Zusätzliche Ressourcen
 
