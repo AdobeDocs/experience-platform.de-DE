@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Persönliche Daten;Schema-Design;Feldgruppe;Feldgruppe;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; individuelles Profil; Felder; Schemas; Schemas; persönliche Details; Schema-Design; Feldergruppe; Feldergruppe; Feldergruppe
 solution: Experience Platform
-title: Schema für persönliche Kontaktdetails
+title: Feldergruppe "Persönliche Kontaktdetails"
 topic-legacy: overview
-description: In diesem Dokument erhalten Sie eine Übersicht über die Feldgruppe "Persönliche Kontaktdetails"des Schemas.
+description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe Persönliche Kontaktdetails .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-translation-type: tm+mt
-source-git-commit: 4755f9b7666efd8354a5f15aeed40a7da4a06efe
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 8%
+source-wordcount: '169'
+ht-degree: 10%
 
 ---
 
 
-# [!UICONTROL Feldgruppe &quot;Persönliche ] Kontaktdetails&quot;
+# [!UICONTROL Feldergruppe &quot;Persönliche ] Kontaktdaten&quot;
 
 >[!NOTE]
 >
->Die Namen mehrerer Schema-Feldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md).
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
 
-[!UICONTROL Persönliche Kontaktinformationen ] sind eine Standardfeldgruppe für das Schema der  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die die Kontaktinformationen für eine Einzelperson beschreibt.
+[!UICONTROL Persönliche Kontaktinformationen ] sind eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die die Kontaktinformationen für eine Person beschreibt.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -29,10 +28,12 @@ ht-degree: 8%
 | `faxPhone` | [Telefonnummer](../../data-types/phone-number.md) | Beschreibt die Faxnummer der Person. |
 | `homeAddress` | [Postadresse](../../data-types/postal-address.md) | Beschreibt die Wohnadresse der Person. |
 | `homePhone` | [Telefonnummer](../../data-types/phone-number.md) | Beschreibt die Telefonnummer der Person. |
-| `mobilePhone` | [Telefonnummer](../../data-types/phone-number.md) | Beschreibt die Handynummer der Person. |
+| `mobilePhone` | [Telefonnummer](../../data-types/phone-number.md) | Beschreibt die Mobiltelefonnummer der Person. |
 | `personalEmail` | [E-Mail-Adresse](../../data-types/email-address.md) | Beschreibt die E-Mail-Adresse der Person. |
 
-Weitere Informationen zur Feldgruppe finden Sie im öffentlichen XDM-Repository:
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
