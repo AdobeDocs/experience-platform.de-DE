@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;Felder;Schemas;Schemas;Browser;Browserdetails;Datentyp;Datentyp;Datentyp;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; Felder; Schemas; Schemas; Browser; Browserdetails; Datentyp; Datentyp; Datentyp;
 solution: Experience Platform
-title: Datentyp "Browserdetails"
+title: Datentyp "Browser Details"
 topic-legacy: overview
-description: Dieses Dokument bietet eine Übersicht über den XDM-Datentyp von Browserdetails.
+description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Browserdetails".
 exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 19%
+source-wordcount: '266'
+ht-degree: 20%
 
 ---
 
-# [!UICONTROL Browser-] DetailsDatentyp
+# [!UICONTROL Datentyp ] &quot;Browser details&quot;
 
-[!UICONTROL Browser-] Details enthalten einen Standard-XDM-Datentyp, der Details zu einem Browser oder einer Anwendung beschreibt.
+[!UICONTROL Browserdetails ] enthalten einen standardmäßigen XDM-Datentyp, der Details zu einem Browser oder einer Anwendung beschreibt.
 
 <img src="../images/data-types/browser-details.png" width="450" /><br />
 
@@ -23,18 +22,20 @@ ht-degree: 19%
 | --- | --- | --- |
 | `acceptLanguage` | Zeichenfolge | Ein IETF-Sprach-Tag ([RFC 5646](https://tools.ietf.org/html/rfc5646)). |
 | `cookiesEnabled` | Boolesch | Gibt an, ob die Benutzereinstellungen das Schreiben von Cookies zulassen. |
-| `javaEnabled` | Boolesch | Gibt an, ob Java auf dem Gerät, von dem die Beobachtung ausgeführt wurde, aktiviert wurde. |
-| `javaScriptEnabled` | Boolesch | Gibt an, ob JavaScript auf dem Gerät, von dem die Beobachtung durchgeführt wurde, aktiviert wurde. |
+| `javaEnabled` | Boolesch | Gibt an, ob Java auf dem Gerät aktiviert wurde, aus dem die Beobachtung durchgeführt wurde. |
+| `javaScriptEnabled` | Boolesch | Gibt an, ob JavaScript auf dem Gerät aktiviert wurde, von dem die Beobachtung durchgeführt wurde. |
 | `javaScriptVersion` | Zeichenfolge | Die während der Beobachtung unterstützte JavaScript-Version. |
 | `javaVersion` | Zeichenfolge | Die während der Beobachtung unterstützte Java-Version. |
 | `name` | Zeichenfolge | Der Anwendungs- oder Browsername. |
 | `quicktimeVersion` | Zeichenfolge | Die während der Beobachtung unterstützte Apple Quicktime-Version. |
-| `thirdPartyCookiesEnabled` | Boolesch | Gibt an, ob Drittanbieter-Cookies im Gerät, aus dem die Beobachtung stammt, aktiviert wurden. |
-| `userAgent` | Zeichenfolge | Die HTTP-Benutzeragent-Zeichenfolge aus der Clientanforderung. |
+| `thirdPartyCookiesEnabled` | Boolesch | Gibt an, ob Drittanbieter-Cookies auf dem Gerät aktiviert wurden, aus dem die Beobachtung durchgeführt wurde. |
+| `userAgent` | Zeichenfolge | Die HTTP-Benutzeragenten-Zeichenfolge aus der Clientanforderung. |
 | `vendor` | Zeichenfolge | Der Anwendungs- oder Browser-Anbieter. |
 | `version` | Zeichenfolge | Die Anwendungs- oder Browserversion. |
-| `viewportHeight` | Ganzzahl | Die vertikale Größe in Pixeln des Fensters, in dem das Ereignis angezeigt wurde. Bei einem Web-Ansicht-Ereignis ist dies die Browser-Viewport-Höhe. |
-| `viewportWidth` | Ganzzahl | Die horizontale Größe in Pixeln des Fensters, in dem das Ereignis angezeigt wurde. Bei einem Web-Ansicht-Ereignis ist dies die Browser-Viewport-Breite. |
+| `viewportHeight` | Ganzzahl | Die vertikale Größe in Pixel des Fensters, in dem das Ereignis angezeigt wurde. Bei einem Webansichtsereignis ist dies die Höhe des Browser-Ansichtsfensters. |
+| `viewportWidth` | Ganzzahl | Die horizontale Größe in Pixel des Fensters, in dem das Ereignis angezeigt wurde. Bei einem Webansichtsereignis ist dies die Breite des Browser-Ansichtsfensters. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
