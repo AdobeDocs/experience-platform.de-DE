@@ -1,56 +1,55 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Streaming-Verbindung;Streaming-Verbindung erstellen;API-Handbuch;Tutorial;Erstellen einer Streaming-Verbindung;Streaming-Verbindung;Erfassung;
+keywords: Experience Platform; Startseite; beliebte Themen; Streaming-Verbindung; Streaming-Verbindung erstellen; API-Handbuch; Tutorial; Erstellen einer Streaming-Verbindung; Streaming-Erfassung; Erfassung;
 solution: Experience Platform
-title: Erstellen einer Streaming-Verbindung mit der API
+title: Erstellen einer Streaming-Verbindung mithilfe der API
 topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-translation-type: tm+mt
-source-git-commit: 96f400466366d8a79babc194bc2ba8bf19ede6bb
+source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 31%
+source-wordcount: '1206'
+ht-degree: 37%
 
 ---
 
 
-# Erstellen einer Streaming-Verbindung mit der API
+# Streaming-Verbindung mithilfe der API erstellen
 
-Der Flow Service dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+Mit Flow Service werden Kundendaten aus verschiedenen Quellen in Adobe Experience Platform erfasst und zentralisiert. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zum Erstellen einer Streaming-Verbindung mit der Flow Service API zu führen.
+In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Sie durch die Schritte zum Erstellen einer Streaming-Verbindung mithilfe der Flow Service-API zu führen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Der standardisierte Rahmen, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches, benutzerdefiniertes Profil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
+- [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
-Zum Erstellen einer Streaming-Verbindung benötigen Sie außerdem ein Zielgruppe-XDM-Schema und ein Dataset. Um diese zu erstellen, lesen Sie bitte das Tutorial zu [Streaming-Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder das Tutorial zu [Streaming-Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+Zum Erstellen einer Streaming-Verbindung müssen Sie außerdem über ein Ziel-XDM-Schema und einen Datensatz verfügen. Um zu erfahren, wie Sie diese erstellen, lesen Sie das Tutorial zu [Streaming-Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md) oder das Tutorial zu [Streaming-Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../../../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../../../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -58,11 +57,11 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Basisverbindung erstellen
 
-Eine Basisverbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-APIs kompatibel zu machen. Beim Erstellen einer Basisverbindung haben Sie die Möglichkeit, eine nicht authentifizierte und eine authentifizierte Verbindung zu erstellen.
+Eine Basisverbindung gibt die Quelle an und enthält die Informationen, die erforderlich sind, um den Fluss mit Streaming-Aufnahme-APIs kompatibel zu machen. Beim Erstellen einer Basisverbindung haben Sie die Möglichkeit, eine nicht authentifizierte und eine authentifizierte Verbindung zu erstellen.
 
 ### Nicht authentifizierte Verbindung
 
-Nicht authentifizierte Verbindungen sind die Standard-Streaming-Verbindung, die Sie erstellen können, wenn Sie Daten in Plattform streamen möchten.
+Nicht authentifizierte Verbindungen sind die Standard-Streaming-Verbindung, die Sie erstellen können, wenn Sie Daten an Platform streamen möchten.
 
 **API-Format**
 
@@ -72,7 +71,7 @@ POST /flowservice/connections
 
 **Anfrage**
 
-Um eine Streaming-Verbindung zu erstellen, müssen die Anbieter-ID und die Verbindungs-ID als Teil der POST angegeben werden. Die Anbieter-ID ist `521eee4d-8cbe-4906-bb48-fb6bd4450033` und die Verbindungs-ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Um eine Streaming-Verbindung zu erstellen, müssen die Anbieter-ID und die Verbindungsspezifikations-ID im Rahmen der POST-Anfrage angegeben werden. Die Anbieter-ID ist `521eee4d-8cbe-4906-bb48-fb6bd4450033` und die Verbindungs-Spezifikations-ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -109,7 +108,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -125,7 +124,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Ve
 
 ### Authentifizierte Verbindung
 
-Authentifizierte Verbindungen sollten verwendet werden, wenn Sie zwischen Datensätzen aus vertrauenswürdigen und nicht vertrauenswürdigen Quellen unterscheiden müssen. Benutzer, die Informationen mit persönlich identifizierbaren Informationen (PII) senden möchten, sollten beim Streaming von Informationen an die Plattform eine authentifizierte Verbindung herstellen.
+Authentifizierte Verbindungen sollten verwendet werden, wenn Sie zwischen Datensätzen aus vertrauenswürdigen und nicht vertrauenswürdigen Quellen unterscheiden müssen. Benutzer, die Informationen mit personenbezogenen Daten (PII) senden möchten, sollten beim Streaming von Informationen an Platform eine authentifizierte Verbindung erstellen.
 
 **API-Format**
 
@@ -135,7 +134,7 @@ POST /flowservice/connections
 
 **Anfrage**
 
-Um eine Streaming-Verbindung zu erstellen, müssen die Anbieter-ID und die Verbindungs-ID als Teil der POST angegeben werden. Die Anbieter-ID ist `521eee4d-8cbe-4906-bb48-fb6bd4450033` und die Verbindungs-ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Um eine Streaming-Verbindung zu erstellen, müssen die Anbieter-ID und die Verbindungsspezifikations-ID im Rahmen der POST-Anfrage angegeben werden. Die Anbieter-ID ist `521eee4d-8cbe-4906-bb48-fb6bd4450033` und die Verbindungs-Spezifikations-ID ist `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -170,12 +169,12 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.sourceId` | Die ID der Streaming-Verbindung, die Sie erstellen möchten. |
 | `auth.params.dataType` | Der Datentyp für die Streaming-Verbindung. Dieser Wert muss `xdm` sein. |
 | `auth.params.name` | Der Name der Streaming-Verbindung, die Sie erstellen möchten. |
-| `auth.params.authenticationRequired` | Der Parameter, der die erstellte Streaming-Verbindung angibt |
+| `auth.params.authenticationRequired` | Der Parameter, der angibt, dass die erstellte Streaming-Verbindung hergestellt wurde |
 | `connectionSpec.id` | Die Verbindungsspezifikation `id` für Streaming-Verbindungen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -252,9 +251,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
-## Erstellen einer Quellverbindung
+## Quellverbindung erstellen
 
-Nach dem Erstellen der Basisverbindung müssen Sie eine Quellverbindung erstellen. Beim Erstellen einer Quellverbindung benötigen Sie den `id`-Wert aus der erstellten Basisverbindung.
+Nachdem Sie die Basisverbindung erstellt haben, müssen Sie eine Quellverbindung erstellen. Beim Erstellen einer Quellverbindung benötigen Sie den Wert `id` aus Ihrer erstellten Basisverbindung.
 
 **API-Format**
 
@@ -285,7 +284,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 mit detaillierten Angaben zur neu erstellten Quellverbindung zurück, einschließlich der eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit detaillierten Informationen zur neu erstellten Quellverbindung zurück, einschließlich der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -294,9 +293,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 mit detaillierten Angaben zur neu
 }
 ```
 
-## Erstellen einer Zielgruppe-Verbindung
+## Erstellen einer Zielverbindung
 
-Nach dem Erstellen der Quellverbindung können Sie eine Zielgruppe erstellen. Beim Erstellen der Zielgruppe benötigen Sie den `id`-Wert Ihres zuvor erstellten Datensatzes.
+Nachdem Sie die Quellverbindung erstellt haben, können Sie eine Zielverbindung erstellen. Beim Erstellen Ihrer Zielverbindung benötigen Sie den `id`-Wert Ihres zuvor erstellten Datensatzes.
 
 **API-Format**
 
@@ -332,7 +331,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Zielgruppe-Verbindung zurück, einschließlich der eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zur neu erstellten Zielverbindung zurück, einschließlich der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -343,7 +342,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zur neu erstellten Zi
 
 ## Datenfluss erstellen
 
-Nachdem Sie die Quell- und Zielgruppe-Verbindungen erstellt haben, können Sie jetzt einen Datenflug erstellen. Der Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST an den `/flows`-Endpunkt anfordern.
+Nachdem Sie Ihre Quell- und Zielverbindungen erstellt haben, können Sie jetzt einen Datenfluss erstellen. Der Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/flows` senden.
 
 **API-Format**
 
@@ -379,7 +378,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zum neu erstellten Datenpfad zurück, einschließlich der eindeutigen Kennung (`id`).
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zum neu erstellten Datenfluss zurück, einschließlich der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -390,13 +389,13 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 mit Details zum neu erstellten Da
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie den Streaming-Endpunkt zum Erfassen von Daten in die Plattform verwenden können. Anweisungen zum Erstellen einer Streaming-Verbindung in der Benutzeroberfläche finden Sie im Tutorial [Erstellen einer Streaming-Verbindung](../../../ui/create/streaming/http.md).
+In diesem Tutorial haben Sie eine Streaming-HTTP-Verbindung erstellt, über die Sie den Streaming-Endpunkt verwenden können, um Daten in Platform aufzunehmen. Anweisungen zum Erstellen einer Streaming-Verbindung in der Benutzeroberfläche finden Sie im Tutorial [Erstellen einer Streaming-Verbindung](../../../ui/create/streaming/http.md).
 
-Informationen zum Streamen von Daten auf die Plattform finden Sie im Tutorial zu [Streaming-Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder im Tutorial zu [Streaming-Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
+Informationen zum Streamen von Daten an Platform finden Sie im Tutorial zu [Streaming-Zeitreihendaten](../../../../../ingestion/tutorials/streaming-time-series-data.md) oder im Tutorial zu [Streaming-Datensatzdaten](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Anhang
 
-Dieser Abschnitt enthält zusätzliche Informationen zum Erstellen von Streaming-Verbindungen mit der API.
+Dieser Abschnitt enthält zusätzliche Informationen zum Erstellen von Streaming-Verbindungen mithilfe der API.
 
 ### Senden von Nachrichten an eine authentifizierte Streaming-Verbindung
 
@@ -416,3 +415,59 @@ Wenn die `Authorization`-Kopfzeile nicht vorhanden ist oder ein ungültiges/abge
     }
 }
 ```
+
+### Posten von Rohdaten, die in Platform erfasst werden {#ingest-data}
+
+Nachdem Sie Ihren Fluss erstellt haben, können Sie Ihre JSON-Nachricht an den zuvor erstellten Streaming-Endpunkt senden.
+
+**API-Format**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parameter | Beschreibung |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | Der `id`-Wert der neu erstellten Streaming-Verbindung. |
+
+**Anfrage**
+
+Die Beispielanfrage erfasst Rohdaten an den zuvor erstellten Streaming-Endpunkt.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den neu erfassten Informationen zurück.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Eigenschaft | Beschreibung |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | Die Kennung der zuvor erstellten Streaming-Verbindung. |
+| `xactionId` | Eine eindeutige Kennung, die für den soeben gesendeten Datensatz Server-seitig generiert wurde. Diese Kennung hilft Adobe bei der Verfolgung des Lebenszyklus dieses Datensatzes in verschiedenen Systemen sowie beim Debugging. |
+| `receivedTimeMs` | Ein Zeitstempel (Epoche in Millisekunden), der angibt, wann die Anfrage empfangen wurde. |
