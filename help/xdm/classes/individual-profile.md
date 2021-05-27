@@ -1,49 +1,51 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Schema;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Identitätskarte;Identitätskarte;Schema-Design;Map;Vereinigung Schema;Vereinigung
+keywords: Experience Platform;Startseite;beliebte Themen;Schema;XDM;individuelles Profil;Felder;Schemas;Schemas;Identitätszuordnung;Identitätszuordnung;Schema-Design;Map;Map;Vereinigungsschema;Vereinigungsschema
 solution: Experience Platform
-title: XDM Individuelle Profil-Klasse
+title: XDM Individual Profile Class
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die XDM Individual Profil-Klasse.
+description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Profile".
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 9fbb40a401250496761dcce63a3f033a8746ae7e
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 0%
+source-wordcount: '455'
+ht-degree: 1%
 
 ---
 
 # [!DNL XDM Individual Profile] class
 
-[!DNL XDM Individual Profile] ist eine standardmäßige XDM-Klasse (Experience Data Model), die eine Einzeldarstellung (oder ein &quot;Profil&quot;) einer Person bildet. Insbesondere erfasst die Klasse (und ihre kompatiblen Mixins) die Attribute und Interessen sowohl identifizierter als auch nur teilweise identifizierter Personen, die mit Ihrer Marke interagieren.
+[!DNL XDM Individual Profile] ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die eine Einzeldarstellung (oder ein &quot;Profil&quot;) einer einzelnen Person bildet. Insbesondere erfasst die Klasse (und ihre kompatiblen Mixins) die Attribute und Interessen sowohl identifizierter als auch nur teilweise identifizierter Personen, die mit Ihrer Marke interagieren.
 
-Profil können von anonymen Verhaltenssignalen (z. B. Browser-Cookies) bis hin zu eindeutig identifizierten Profilen mit detaillierten Informationen wie Name, Geburtsdatum, Ort und E-Mail-Adresse reichen. Mit zunehmendem Profil wird es zu einem robusten Archiv mit persönlichen Informationen, Identitäten, Kontaktdaten und Kommunikationsvorlieben für eine Einzelperson. Weitere Informationen zur Verwendung dieser Klasse im Plattform-Ökosystem finden Sie in der [XDM-Übersicht](../home.md#data-behaviors).
+Profile können von anonymen Verhaltenssignalen (wie Browser-Cookies) bis hin zu hoch identifizierten Profilen mit detaillierten Informationen wie Name, Geburtsdatum, Ort und E-Mail-Adresse reichen. Mit zunehmendem Profil wird es zu einem robusten Repository mit personenbezogenen Daten, Identitäten, Kontaktdaten und Kommunikationseinstellungen für eine Person. Weiterführende Informationen zur Verwendung dieser Klasse im Platform-Ökosystem finden Sie in der [XDM-Übersicht](../home.md#data-behaviors).
 
-Die [!DNL XDM Individual Profile]-Klasse selbst stellt mehrere systemgenerierte Werte bereit, die beim Erfassen von Daten automatisch ausgefüllt werden, während alle anderen Schema-Feldgruppen mithilfe von [kompatiblen Feldgruppen](#field-groups) hinzugefügt werden müssen:
+Die [!DNL XDM Individual Profile]-Klasse stellt mehrere systemgenerierte Werte bereit, die bei der Datenerfassung automatisch ausgefüllt werden, während alle anderen Felder durch die Verwendung von [kompatiblen Schemafeldgruppen](#field-groups) hinzugefügt werden müssen:
 
 ![](../images/classes/individual-profile.png)
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `_repo` | Ein Objekt, das die folgenden [!UICONTROL DateTime]-Felder enthält: <ul><li>`createDate`: Datum und Uhrzeit der Erstellung der Ressource im Datenspeicher, z. B. wann die Daten zum ersten Mal erfasst wurden.</li><li>`modifyDate`: Datum und Uhrzeit der letzten Änderung der Ressource.</li></ul> |
-| `_id` | Eine eindeutige ID für den Datensatz. Dieses Feld dient zur Verfolgung der Einzigartigkeit eines einzelnen Datensatzes, zur Vermeidung von Datenduplizierungen und zur Nachforschung dieses Datensatzes in nachgelagerten Diensten.<br><br>Es ist wichtig zu unterscheiden, dass dieses Feld  **keine Identität** darstellt, die sich auf eine Person bezieht, sondern vielmehr die Aufzeichnung der Daten selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen in [Identitätsfelder](../schema/composition.md#identity) umbenannt werden. |
-| `createdByBatchID` | Die ID des erfassten Stapels, die zur Erstellung des Datensatzes geführt hat. |
-| `modifiedByBatchID` | Die ID des letzten erfassten Stapels, der zur Aktualisierung des Datensatzes geführt hat. |
-| `personID` | Eine eindeutige Kennung für die einzelne Person, auf die sich dieser Datensatz bezieht. Dieses Feld stellt nicht unbedingt eine Identität dar, die mit der Person in Verbindung steht, es sei denn, es ist auch als [Identitätsfeld](../schema/composition.md#identity) gekennzeichnet. |
+| `_repo` | Ein Objekt, das die folgenden [!UICONTROL DateTime]-Felder enthält: <ul><li>`createDate`: Datum und Uhrzeit der Erstellung der Ressource im Datenspeicher, z. B. Zeitpunkt der ersten Datenerfassung.</li><li>`modifyDate`: Datum und Uhrzeit der letzten Änderung der Ressource.</li></ul> |
+| `_id` | Eine eindeutige Kennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Es ist wichtig zu unterscheiden, dass dieses Feld  **keine Identität** darstellt, die sich auf eine Person bezieht, sondern vielmehr den Datensatz selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) umgeleitet werden. |
+| `createdByBatchID` | Die ID des erfassten Batches, der zur Erstellung des Datensatzes geführt hat. |
+| `modifiedByBatchID` | Die ID des letzten erfassten Batches, der zur Aktualisierung des Datensatzes geführt hat. |
+| `personID` | Eine eindeutige Kennung für die Person, auf die sich dieser Datensatz bezieht. Dieses Feld stellt nicht unbedingt eine mit der Person verwandte Identität dar, es sei denn, es ist auch als [Identitätsfeld](../schema/composition.md#identity) gekennzeichnet. |
 | `repositoryCreatedBy` | Die ID des Benutzers, der den Datensatz erstellt hat. |
 | `repositoryLastModifiedBy` | Die ID des Benutzers, der den Datensatz zuletzt geändert hat. |
 
-## Kompatible Feldgruppen {#field-groups}
+{style=&quot;table-layout:auto&quot;}
+
+## Kompatible Feldergruppen {#field-groups}
 
 >[!NOTE]
 >
->Die Namen mehrerer Feldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../field-groups/name-updates.md).
+>Die Namen mehrerer Feldergruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../field-groups/name-updates.md) .
 
-Adobe bietet mehrere Standardfeldgruppen zur Verwendung mit der [!DNL XDM Individual Profile]-Klasse. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldgruppen für die Klasse:
+Adobe stellt mehrere Standardfeldgruppen für die Verwendung mit der Klasse [!DNL XDM Individual Profile] bereit. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldergruppen für die Klasse:
 
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Demografische Details]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL Persönliche Kontaktangaben]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Kontaktangaben bearbeiten]](../field-groups/profile/work-contact-details.md)
-* [[!UICONTROL Details zur Segmentmitgliedschaft]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Kontaktangaben für Arbeitskontakte]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Details zur Segmentzugehörigkeit]](../field-groups/profile/segmentation.md)
 
-Eine vollständige Liste aller kompatiblen Feldgruppen für [!DNL XDM Individual Profile] finden Sie im [XDM GitHub Repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+Eine vollständige Liste aller kompatiblen Feldergruppen für [!DNL XDM Individual Profile] finden Sie im [XDM GitHub-Repository](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
