@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;Schema-Registrierung;Feldgruppe;Feldgruppen;Erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Schema Registry;Feldergruppe;Feldergruppe;Feldergruppen erstellen
 solution: Experience Platform
-title: API-Endpunkt für Feldgruppen
-description: Mit dem Endpunkt /fieldgroups in der Schema Registry API können Sie XDM-Schema-Feldgruppen in Ihrer Experience-Anwendung programmgesteuert verwalten.
+title: Feldergruppen-API-Endpunkt
+description: Mit dem Endpunkt /fieldgroups in der Schema Registry-API können Sie XDM-Schemafeldgruppen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic: Entwicklerhandbuch
-translation-type: tm+mt
-source-git-commit: b25c545e86c8ffd6b5832893152aef597feaf71f
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1196'
-ht-degree: 9%
+source-wordcount: '1217'
+ht-degree: 11%
 
 ---
 
 
-# Endpunkt der Feldgruppen im Schema
+# Endpunkt für Schemafeldgruppen
 
-Schema-Feldgruppen sind wiederverwendbare Komponenten, die einen oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine Einzelperson, eine Postanschrift oder eine Webbrowser-Umgebung. Feldgruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert, je nach dem Verhalten der von ihnen dargestellten Daten (Datensatz oder Zeitreihen). Mit dem `/fieldgroups`-Endpunkt in der [!DNL Schema Registry]-API können Sie Feldgruppen in Ihrer Experience-Anwendung programmatisch verwalten.
+Schemafeldgruppen sind wiederverwendbare Komponenten, die ein oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine Einzelperson, eine Postanschrift oder eine Webbrowser-Umgebung. Feldergruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert, je nach dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihen). Mit dem Endpunkt `/fieldgroups` in der API [!DNL Schema Registry] können Sie Feldergruppen in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
-## Abrufen einer Liste von Feldgruppen {#list}
+## Liste von Feldergruppen abrufen {#list}
 
-Sie können alle Feldgruppen unter dem Container `global` oder `tenant` durch eine GET an `/global/fieldgroups` bzw. `/tenant/fieldgroups` Liste haben.
+Sie können alle Feldergruppen unter dem Container `global` oder `tenant` auflisten, indem Sie eine GET an `/global/fieldgroups` bzw. `/tenant/fieldgroups` anfordern.
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument unter [Abfrage parameters](./appendix.md#query) im Anhang.
+>Bei der Auflistung von Ressourcen beschränkt die Schema Registry Ergebnissätze auf 300 Elemente. Um Ressourcen zurückzugeben, die über diese Grenze hinausgehen, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md#query) im Anhang.
 
 **API-Format**
 
@@ -37,12 +36,14 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, von dem Sie Feldgruppen abrufen möchten: `global` für von der Adobe erstellte Feldgruppen oder `tenant` für Feldgruppen, die sich im Besitz Ihres Unternehmens befinden. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query). |
+| `{CONTAINER_ID}` | Der Container, aus dem Sie Feldergruppen abrufen möchten: `global` für von Adoben erstellte Feldergruppen oder `tenant` für Feldergruppen, die Ihrem Unternehmen gehören. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste von Feldgruppen aus dem Container `tenant` abgerufen. Dabei werden die Feldgruppen mit dem Parameter `orderby` sortiert, indem die Abfrage nach dem Attribut `title` sortiert wird.
+Mit der folgenden Anfrage wird eine Liste von Feldergruppen aus dem `tenant`-Container abgerufen, wobei mithilfe eines `orderby`-Abfrageparameters die Feldergruppen nach ihrem `title`-Attribut sortiert werden.
 
 ```shell
 curl -X GET \
@@ -54,16 +55,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen zur Auflistung von Feldgruppen zur Verfügung:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen zur Auflistung von Feldergruppen zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
-| `application/vnd.adobe.xed+json` | Gibt für jede Ressource die vollständige JSON-Feldgruppe zurück, wobei die ursprünglichen `$ref` und `allOf` enthalten sind. (Maximal: 300) |
+| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Gibt die vollständige JSON-Feldergruppe für jede Ressource zurück, wobei die ursprünglichen Werte `$ref` und `allOf` enthalten sind. (Limit: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jede Feldgruppe. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jeder Feldgruppe zurückgegeben. Wählen Sie die entsprechende `Accept`-Kopfzeile, je nach den Informationen, die Sie in Ihrer Antwort benötigen.
+In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jede Feldergruppe. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jeder Feldergruppe zurückgegeben. Wählen Sie je nach den Informationen, die Sie in Ihrer Antwort benötigen, die entsprechende `Accept`-Kopfzeile aus.
 
 ```json
 {
@@ -107,9 +110,9 @@ Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe
 }
 ```
 
-## Suchen Sie nach einer Feldgruppe {#lookup}
+## Feldergruppe nachschlagen {#lookup}
 
-Sie können eine bestimmte Feldgruppe nachschlagen, indem Sie die ID der Feldgruppe in den Pfad einer GET-Anforderung aufnehmen.
+Sie können nach einer bestimmten Feldergruppe suchen, indem Sie die Kennung der Feldergruppe in den Pfad einer GET-Anfrage einschließen.
 
 **API-Format**
 
@@ -119,12 +122,14 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, in dem die Feldgruppe enthalten ist, die Sie abrufen möchten: `global` für eine von der Adobe erstellte Feldgruppe oder `tenant` für eine Feldgruppe im Besitz Ihres Unternehmens. |
-| `{FIELD_GROUP_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Feldgruppe, nach der Sie suchen möchten. |
+| `{CONTAINER_ID}` | Der Container, der die Feldergruppe enthält, die Sie abrufen möchten: `global` für eine von Adoben erstellte Feldergruppe oder `tenant` für eine Feldergruppe, die sich im Besitz Ihrer Organisation befindet. |
+| `{FIELD_GROUP_ID}` | Die `meta:altId` oder URL-kodierte `$id` der Feldergruppe, die Sie nachschlagen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Feldgruppe anhand des im Pfad angegebenen Werts `meta:altId` abgerufen.
+Mit der folgenden Anfrage wird eine Feldergruppe anhand des im Pfad angegebenen Wertes `meta:altId` abgerufen.
 
 ```shell
 curl -X GET \
@@ -136,7 +141,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Für alle Nachschlageanforderungen muss eine `version` in die `Accept`-Kopfzeile eingefügt werden. Die folgenden `Accept`-Kopfzeilen stehen zur Verfügung:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Für alle Nachschlageanfragen muss `version` in der `Accept`-Kopfzeile enthalten sein. Die folgenden `Accept`-Header sind verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -146,9 +151,11 @@ Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung g
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Feldgruppe zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Eine erfolgreiche Antwort gibt die Details der Feldergruppe zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und zu bestimmen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -209,9 +216,9 @@ Eine erfolgreiche Antwort gibt die Details der Feldgruppe zurück. Die zurückge
 }
 ```
 
-## Feldgruppe {#create} erstellen
+## Feldergruppe erstellen {#create}
 
-Sie können eine benutzerspezifische Feldgruppe unter dem Container `tenant` definieren, indem Sie eine POST anfordern.
+Sie können eine benutzerdefinierte Feldergruppe unter dem Container `tenant` definieren, indem Sie eine POST anfordern.
 
 **API-Format**
 
@@ -221,11 +228,11 @@ POST /tenant/fieldgroups
 
 **Anfrage**
 
-Beim Definieren einer neuen Feldgruppe muss ein `meta:intendedToExtend`-Attribut vorhanden sein, das die `$id` der Klassen auflistet, mit denen die Feldgruppe kompatibel ist. In diesem Beispiel ist die Feldgruppe mit einer `Property`-Klasse kompatibel, die zuvor definiert wurde. Benutzerdefinierte Felder müssen unter `_{TENANT_ID}` verschachtelt sein (wie im Beispiel gezeigt), um Kollisionen mit ähnlichen Feldern zu vermeiden, die von Klassen und anderen Feldgruppen bereitgestellt werden.
+Bei der Definition einer neuen Feldergruppe muss sie ein `meta:intendedToExtend` -Attribut enthalten, in dem die `$id` der Klassen aufgelistet wird, mit denen die Feldergruppe kompatibel ist. In diesem Beispiel ist die Feldergruppe mit einer `Property`-Klasse kompatibel, die zuvor definiert wurde. Benutzerdefinierte Felder müssen unter `_{TENANT_ID}` verschachtelt sein (wie im Beispiel gezeigt), um Kollisionen mit ähnlichen Feldern zu vermeiden, die von Klassen und anderen Feldergruppen bereitgestellt werden.
 
 >[!NOTE]
 >
->Weitere Informationen zum Definieren verschiedener Feldtypen, die in Ihre Feldgruppe aufgenommen werden sollen, finden Sie im Handbuch [Feldbeschränkungen](../schema/field-constraints.md#define-fields).
+>Weitere Informationen zum Definieren verschiedener Feldtypen, die in Ihre Feldergruppe aufgenommen werden sollen, finden Sie im [Handbuch zu Feldbeschränkungen](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -294,7 +301,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit den Details der neu erstellten Feldgruppe zurück, einschließlich der `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch das [!DNL Schema Registry] zugewiesen.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details der neu erstellten Feldergruppe zurück, einschließlich `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -378,15 +385,15 @@ Eine erfolgreiche Antwort gibt HTTP-Status 201 (Erstellt) und eine Nutzlast mit 
 }
 ```
 
-Wenn Sie eine GET für [Liste aller Feldgruppen](#list) im Pächter-Container durchführen, wird jetzt die Feldgruppe Eigenschaftendetails einbezogen. Alternativ können Sie eine Suchanfrage (GET) [ mit dem URL-kodierten `$id`-URI ausführen, um die neue Feldgruppe direkt Ansicht.](#lookup)
+Wenn Sie eine GET-Anfrage an [Auflisten aller Feldergruppen](#list) im Mandanten-Container ausführen, wäre jetzt die Feldergruppe Eigenschaftendetails enthalten. Alternativ können Sie [eine Nachschlageanfrage (GET)](#lookup) mit dem URL-kodierten `$id` -URI ausführen, um die neue Feldergruppe direkt anzuzeigen.
 
-## Feldgruppe {#put} aktualisieren
+## Aktualisieren von Feldergruppen {#put}
 
-Sie können eine gesamte Feldgruppe durch einen PUT-Vorgang ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren einer Feldgruppe über eine PUT-Anforderung muss der Textkörper alle erforderlichen Felder enthalten, wenn [eine neue Feldgruppe](#create) in einer POST erstellt wird.
+Sie können eine ganze Feldergruppe durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren einer Feldergruppe über eine PUT-Anfrage muss der Hauptteil alle Felder einschließen, die beim Erstellen einer neuen Feldergruppe](#create) in einer POST-Anfrage erforderlich sind.[
 
 >[!NOTE]
 >
->Wenn Sie nur einen Teil einer Feldgruppe aktualisieren möchten, anstatt sie vollständig zu ersetzen, lesen Sie den Abschnitt unter [Aktualisieren eines Teils einer Feldgruppe](#patch).
+>Wenn Sie nur einen Teil einer Feldergruppe aktualisieren möchten, anstatt sie vollständig zu ersetzen, lesen Sie den Abschnitt unter [Aktualisieren eines Teils einer Feldergruppe](#patch).
 
 **API-Format**
 
@@ -396,11 +403,13 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Feldgruppe, die Sie neu schreiben möchten. |
+| `{FIELD_GROUP_ID}` | Die `meta:altId` oder URL-kodierte `$id` der Feldergruppe, die Sie neu schreiben möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine bestehende Feldgruppe neu geschrieben und ein neues `propertyCountry`-Feld hinzugefügt.
+Die folgende Anfrage schreibt eine vorhandene Feldergruppe neu und fügt ein neues `propertyCountry` -Feld hinzu.
 
 ```SHELL
 curl -X PUT \
@@ -474,7 +483,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldgruppe zurück.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldergruppe zurück.
 
 ```JSON
 {
@@ -563,13 +572,13 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldgruppe zurück
 }
 ```
 
-## Einen Teil einer Feldgruppe {#patch} aktualisieren
+## Aktualisieren eines Teils einer Feldergruppe {#patch}
 
-Sie können einen Teil einer Feldgruppe mit einer PATCH-Anforderung aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil einer Feldergruppe mithilfe einer PATCH-Anfrage aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zu JSON Patch finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen einer Feldgruppe mit einem PUT-Vorgang](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen einer Feldergruppe durch einen PUT-Vorgang](#put).
 
 **API-Format**
 
@@ -579,13 +588,15 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` der Feldgruppe, die Sie aktualisieren möchten. |
+| `{FIELD_GROUP_ID}` | Die URL-kodierte `$id` -URI oder `meta:altId` der Feldergruppe, die Sie aktualisieren möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Beispielanforderung aktualisiert das `description` einer vorhandenen Feldgruppe und fügt ein neues `propertyCity`-Feld hinzu.
+Die folgende Beispielanfrage aktualisiert die `description` einer vorhandenen Feldergruppe und fügt ein neues `propertyCity` -Feld hinzu.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anfragetext hat die Form eines Arrays, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), das Feld, für das der Vorgang ausgeführt werden soll (`path`), und welche Informationen in diesem Vorgang enthalten sein sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -704,9 +715,9 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das `d
 }
 ```
 
-## Eine Feldgruppe {#delete} löschen
+## Eine Feldergruppe löschen {#delete}
 
-Es kann vorkommen, dass eine Feldgruppe aus der Schema-Registrierung entfernt werden muss. Dies geschieht durch eine DELETE-Anforderung mit der Feldgruppen-ID, die im Pfad angegeben ist.
+Gelegentlich kann es erforderlich sein, eine Feldergruppe aus der Schema Registry zu entfernen. Dies geschieht durch Ausführen einer DELETE-Anfrage mit der im Pfad angegebenen Feldergruppen-ID.
 
 **API-Format**
 
@@ -716,7 +727,9 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` der Feldgruppe, die Sie löschen möchten. |
+| `{FIELD_GROUP_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` der Feldergruppe, die Sie löschen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
@@ -733,4 +746,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine [Nachschlageanforderung (GET)](#lookup) für die Feldgruppe versuchen. Sie müssen einen `Accept`-Header in die Anforderung einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da die Feldgruppe aus der Schema-Registrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Nachschlageanfrage (GET)](#lookup) für die Feldergruppe ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da die Feldergruppe aus der Schema Registry entfernt wurde.
