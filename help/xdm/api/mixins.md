@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;API;XDM;XDM;Erlebnisdatenmodell;Erlebnisdatenmodell;Erlebnisdatenmodell;Datenmodell;Datenmodell;mixin-Registrierung;Schema-Registrierung;Mixin;Mixins;Mixins;Mixins;Erstellen;Erstellen
+keywords: Experience Platform;Startseite;beliebte Themen;API;XDM;XDM-System;Experience-Datenmodell;Experience-Datenmodell;Experience-Datenmodell;Datenmodell;Datenmodell;Mixin-Registrierung;Schema Registry;Mixin;Mixin;Mixins;erstellen
 solution: Experience Platform
-title: Mixins-API-Endpunkt
-description: Mit dem /mixins-Endpunkt in der Schema Registry API können Sie XDM-Mixins in Ihrer Experience-Anwendung programmgesteuert verwalten.
+title: Mixins API Endpoint
+description: Mit dem Endpunkt /mixins in der Schema Registry-API können Sie XDM-Mixins in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-translation-type: tm+mt
-source-git-commit: a19a89d347b9197ab2766bd8a57018f5ac4f058d
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 12%
+source-wordcount: '1214'
+ht-degree: 15%
 
 ---
 
@@ -18,23 +17,23 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->Mixins wurden in Schema-Feldgruppen umbenannt. Daher wurde der `/mixins`-Endpunkt zugunsten des `/fieldgroups`-Endpunkts aufgegeben.
+>Mixins wurden in Schemafeldgruppen umbenannt. Daher wird der Endpunkt `/mixins` nicht mehr zugunsten des Endpunkts `/fieldgroups` unterstützt.
 >
->`/mixins` wird weiterhin als Legacy-Endpunkt beibehalten. Es wird jedoch dringend empfohlen, `/fieldgroups` für neue Implementierungen der Schema Registry-API in Ihren Experience-Anwendungen zu verwenden. Weitere Informationen finden Sie im Endpunktleitfaden [Feldgruppen](./field-groups.md).
+>Auch wenn `/mixins` weiterhin als Legacy-Endpunkt beibehalten wird, wird dringend empfohlen, `/fieldgroups` für neue Implementierungen der Schema Registry-API in Ihren Erlebnisanwendungen zu verwenden. Weitere Informationen finden Sie im [Endpunktleitfaden für Feldergruppen](./field-groups.md) .
 
-Mixins sind wiederverwendbare Komponenten, die einen oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine einzelne Person, eine Postanschrift oder eine Webbrowser-Umgebung. Mixins sind als Teil eines Schemas gedacht, das eine kompatible Klasse implementiert, je nach dem Verhalten der von ihnen dargestellten Daten (Datensatz oder Zeitreihen). Mit dem `/mixins`-Endpunkt in der [!DNL Schema Registry]-API können Sie Mixins in Ihrer Experience-Anwendung programmgesteuert verwalten.
+Mixins sind wiederverwendbare Komponenten, die ein oder mehrere Felder definieren, die ein bestimmtes Konzept repräsentieren, z. B. eine Einzelperson, eine Postanschrift oder eine Webbrowser-Umgebung. Mixins sollen als Teil eines Schemas eingefügt werden, das eine kompatible Klasse implementiert, je nach dem Verhalten der Daten, die sie darstellen (Datensatz oder Zeitreihen). Mit dem Endpunkt `/mixins` in der API [!DNL Schema Registry] können Sie Mixins in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die zum erfolgreichen Aufrufen einer Experience Platformen-API benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
-## Abrufen einer Liste von mixins {#list}
+## Liste von Mixins abrufen {#list}
 
-Sie können alle Mixins unter dem Container `global` oder `tenant` Liste werden, indem Sie eine GET an `/global/mixins` bzw. `/tenant/mixins` anfordern.
+Sie können alle Mixins unter dem Container `global` oder `tenant` auflisten, indem Sie eine GET an `/global/mixins` bzw. `/tenant/mixins` anfordern.
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen wird das Schema Registry-Ergebnis auf 300 Elemente begrenzt. Um Ressourcen über diese Grenze hinaus zurückzugeben, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfragen zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Dokument unter [Abfrage parameters](./appendix.md#query) im Anhang.
+>Bei der Auflistung von Ressourcen beschränkt die Schema Registry Ergebnissätze auf 300 Elemente. Um Ressourcen zurückzugeben, die über diese Grenze hinausgehen, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md#query) im Anhang.
 
 **API-Format**
 
@@ -44,12 +43,14 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, von dem Mixins abgerufen werden sollen: `global` für von der Adobe erstellte Mixins oder `tenant` für Mixins, die Ihrem Unternehmen gehören. |
-| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query). |
+| `{CONTAINER_ID}` | Der Container, aus dem Sie Mixins abrufen möchten: `global` für von Adoben erstellte Mixins oder `tenant` für Mixins, die Ihrem Unternehmen gehören. |
+| `{QUERY_PARAMS}` | Optionale Abfrageparameter zum Filtern der Ergebnisse. Eine Liste der verfügbaren Parameter finden Sie im Dokument [Anhang](./appendix.md#query) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine Liste von mixins aus dem Container `tenant` abgerufen, wobei ein `orderby`-Abfrage-Parameter zum Sortieren der Mixins nach ihrem `title`-Attribut verwendet wird.
+Die folgende Anfrage ruft eine Liste von Mixins aus dem `tenant`-Container ab, indem ein `orderby`-Abfrageparameter verwendet wird, um die Mixins nach ihrem `title`-Attribut zu sortieren.
 
 ```shell
 curl -X GET \
@@ -61,16 +62,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen für die Auflistung von Mixins zur Verfügung:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Die folgenden `Accept`-Kopfzeilen stehen zum Auflisten von Mixins zur Verfügung:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | --- | --- |
-| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung der einzelnen Ressourcen zurück. Dies ist die empfohlene Kopfzeile für die Auflistung der Ressourcen. (Maximal: 300) |
-| `application/vnd.adobe.xed+json` | Gibt das vollständige JSON-Mixin für jede Ressource zurück, wobei die ursprünglichen `$ref` und `allOf` enthalten sind. (Maximal: 300) |
+| `application/vnd.adobe.xed-id+json` | Gibt eine kurze Zusammenfassung jeder Ressource zurück. Dies ist die empfohlene Kopfzeile für die Auflistung von Ressourcen. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Gibt das vollständige JSON-Mixin für jede Ressource zurück, wobei das ursprüngliche `$ref` und `allOf` enthalten sind. (Limit: 300) |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Mixin. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Mixins zurückgegeben. Wählen Sie die entsprechende `Accept`-Kopfzeile, je nach den Informationen, die Sie in Ihrer Antwort benötigen.
+In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Mixin. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Mixins zurückgegeben. Wählen Sie je nach den Informationen, die Sie in Ihrer Antwort benötigen, die entsprechende `Accept`-Kopfzeile aus.
 
 ```json
 {
@@ -114,9 +117,9 @@ Bei der oben genannten Anforderung wurde die Überschrift `application/vnd.adobe
 }
 ```
 
-## Suchen Sie eine Mischung {#lookup}
+## Nachschlagen eines Mixins {#lookup}
 
-Sie können ein bestimmtes Mixin nachschlagen, indem Sie die ID des mixins in den Pfad einer GET-Anforderung einschließen.
+Sie können nach einem bestimmten Mixin suchen, indem Sie die ID des Mixins in den Pfad einer GET-Anfrage einschließen.
 
 **API-Format**
 
@@ -126,12 +129,14 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, in dem das Mixin enthalten ist, das Sie abrufen möchten: `global` für ein von der Adobe erstelltes Mixin oder `tenant` für ein Mixin, das Ihrem Unternehmen gehört. |
-| `{MIXIN_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Mischung, die Sie nachschlagen möchten. |
+| `{CONTAINER_ID}` | Der Container, der das Mixin enthält, das Sie abrufen möchten: `global` für ein von einer Adobe erstelltes Mixin oder `tenant` für ein Mixin, das Ihrem Unternehmen gehört. |
+| `{MIXIN_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Mixins, das Sie nachschlagen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anforderung ruft ein Mixin mit dem im Pfad angegebenen `meta:altId`-Wert ab.
+Die folgende Anfrage ruft ein Mixin anhand des im Pfad angegebenen `meta:altId` -Werts ab.
 
 ```shell
 curl -X GET \
@@ -143,7 +148,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Für alle Nachschlageanforderungen muss eine `version` in die `Accept`-Kopfzeile eingefügt werden. Die folgenden `Accept`-Kopfzeilen stehen zur Verfügung:
+Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Für alle Nachschlageanfragen muss `version` in der `Accept`-Kopfzeile enthalten sein. Die folgenden `Accept`-Header sind verfügbar:
 
 | `Accept`-Kopfzeile | Beschreibung |
 | ------- | ------------ |
@@ -153,9 +158,11 @@ Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anforderung g
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` und `allOf` aufgelöst, keine Titel oder Beschreibungen. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` und `allOf` aufgelöst, einschließlich Deskriptoren. |
 
+{style=&quot;table-layout:auto&quot;}
+
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Mixins zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anforderung gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und festzustellen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Eine erfolgreiche Antwort gibt die Details des Mixins zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und zu bestimmen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -218,7 +225,7 @@ Eine erfolgreiche Antwort gibt die Details des Mixins zurück. Die zurückgegebe
 
 ## Erstellen eines Mixins {#create}
 
-Sie können ein benutzerdefiniertes Mixin unter dem Container `tenant` definieren, indem Sie eine POST anfordern.
+Sie können ein benutzerdefiniertes Mixin unter dem Container `tenant` definieren, indem Sie eine POST-Anfrage ausführen.
 
 **API-Format**
 
@@ -232,7 +239,7 @@ Beim Definieren eines neuen Mixins muss dieses ein `meta:intendedToExtend`-Attri
 
 >[!NOTE]
 >
->Weitere Informationen zum Definieren verschiedener Feldtypen, die in Ihr Mixin einbezogen werden sollen, finden Sie im [Handbuch mit Feldbeschränkungen](../schema/field-constraints.md#define-fields).
+>Weitere Informationen zum Definieren verschiedener Feldtypen, die in Ihr Mixin aufgenommen werden sollen, finden Sie im [Handbuch zu Feldbeschränkungen](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -301,7 +308,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Payload mit den Details des neu erstellten Mixins zurückgegeben, einschließlich der Werte `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch das [!DNL Schema Registry] zugewiesen.
+Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Payload mit den Details des neu erstellten Mixins zurückgegeben, einschließlich der Werte `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch [!DNL Schema Registry] zugewiesen.
 
 ```JSON
 {
@@ -385,15 +392,15 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Paylo
 }
 ```
 
-Wenn Sie eine GET an [Liste anfordern, enthalten alle mixins](#list) im Pächter-Container jetzt das Eigenschaftendetails-Mixin oder Sie können [eine Suchanfrage (GET) unter ](#lookup) mit dem URL-kodierten `$id`-URI ausführen, um die neue Mischung direkt Ansicht.
+Wenn Sie eine GET-Anfrage an [list all mixins](#list) im Mandanten-Container ausführen, würde dies jetzt das Mixin &quot;Eigenschaftendetails&quot;enthalten. Alternativ können Sie [eine Suchanfrage (GET)](#lookup) mit dem URL-kodierten `$id`-URI ausführen, um das neue Mixin direkt anzuzeigen.
 
-## Aktualisieren eines mixins {#put}
+## Aktualisieren eines Mixins {#put}
 
-Sie können ein gesamtes Mixin durch eine PUT ersetzen und die Ressource im Grunde neu schreiben. Beim Aktualisieren einer Mischung über eine PUT-Anforderung muss der Haupttext alle erforderlichen Felder enthalten, wenn [eine neue Mischung](#create) in einer POST erstellt wird.
+Sie können ein ganzes Mixin über einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Mixins über eine PUT-Anfrage muss der Hauptteil alle Felder einschließen, die beim Erstellen eines neuen Mixins](#create) in einer POST-Anfrage erforderlich sind.[
 
 >[!NOTE]
 >
->Wenn Sie nur einen Teil eines Mixins aktualisieren möchten, anstatt ihn vollständig zu ersetzen, lesen Sie den Abschnitt unter [Aktualisieren eines Teils eines mixins](#patch).
+>Wenn Sie nur einen Teil eines Mixins aktualisieren möchten, anstatt es vollständig zu ersetzen, lesen Sie den Abschnitt zu [Aktualisieren eines Teils eines Mixins](#patch).
 
 **API-Format**
 
@@ -403,11 +410,13 @@ PUT /tenant/mixins/{MIXIN_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MIXIN_ID}` | Die `meta:altId`- oder URL-kodierte `$id` der Mischung, die Sie neu schreiben möchten. |
+| `{MIXIN_ID}` | Die `meta:altId` oder URL-kodierte `$id` des Mixins, das Sie neu schreiben möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein vorhandenes Mixin neu geschrieben und ein neues `propertyCountry`-Feld hinzugefügt.
+Die folgende Anfrage schreibt ein vorhandenes Mixin neu und fügt ein neues `propertyCountry` -Feld hinzu.
 
 ```SHELL
 curl -X PUT \
@@ -570,13 +579,13 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Mixins zurück.
 }
 ```
 
-## Einen Teil eines Mixins aktualisieren {#patch}
+## Aktualisieren eines Teils eines Mixins {#patch}
 
-Sie können einen Teil eines Mixins mit einer PATCH-Anforderung aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON-Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zum JSON-Patch finden Sie im Handbuch [API-Grundlagen](../../landing/api-fundamentals.md#json-patch).
+Sie können einen Teil eines Mixins mit einer PATCH-Anfrage aktualisieren. [!DNL Schema Registry] unterstützt alle standardmäßigen JSON Patch-Vorgänge, einschließlich `add`, `remove` und `replace`. Weitere Informationen zu JSON Patch finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen einer Mischung mit einem PUT-Vorgang](#put).
+>Wenn Sie eine gesamte Ressource durch neue Werte ersetzen möchten, anstatt einzelne Felder zu aktualisieren, lesen Sie den Abschnitt unter [Ersetzen eines Mixins mithilfe eines PUT-Vorgangs](#put) .
 
 **API-Format**
 
@@ -586,13 +595,15 @@ PATCH /tenant/mixin/{MIXIN_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MIXIN_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` der Mischung, die Sie aktualisieren möchten. |
+| `{MIXIN_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Mixins, das Sie aktualisieren möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Beispielanforderung aktualisiert das `description` eines vorhandenen Mixins und fügt ein neues `propertyCity`-Feld hinzu.
+Die folgende Beispielanfrage aktualisiert die `description` eines vorhandenen Mixins und fügt ein neues `propertyCity` -Feld hinzu.
 
-Der Anforderungstext besteht aus einem Array, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), für welches Feld der Vorgang ausgeführt werden soll (`path`) und welche Informationen in diesen Vorgang einbezogen werden sollen (`value`).
+Der Anfragetext hat die Form eines Arrays, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), das Feld, für das der Vorgang ausgeführt werden soll (`path`), und welche Informationen in diesem Vorgang enthalten sein sollen (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -711,9 +722,9 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das `d
 }
 ```
 
-## Löschen einer Mischung {#delete}
+## Löschen eines Mixins {#delete}
 
-Es kann gelegentlich erforderlich sein, ein Mixin aus der Schema-Registrierung zu entfernen. Dies geschieht durch eine DELETE-Anforderung mit der im Pfad bereitgestellten Mixin-ID.
+Gelegentlich kann es erforderlich sein, ein Mixin aus der Schema Registry zu entfernen. Dies geschieht durch Ausführen einer DELETE-Anfrage mit der im Pfad angegebenen Mixin-ID.
 
 **API-Format**
 
@@ -723,7 +734,9 @@ DELETE /tenant/mixins/{MIXIN_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MIXIN_ID}` | Die URL-kodierte `$id`-URI oder `meta:altId` der Mischung, die Sie löschen möchten. |
+| `{MIXIN_ID}` | Der URL-kodierte `$id` -URI oder `meta:altId` des Mixins, das Sie löschen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
@@ -740,4 +753,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine [Nachschlageanforderung (GET)](#lookup) zum Mixin versuchen. Sie müssen einen `Accept`-Header in die Anforderung einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Mixin aus der Schema-Registrierung entfernt wurde.
+Sie können den Löschvorgang bestätigen, indem Sie eine [Nachschlageanfrage (GET)](#lookup) für das Mixin ausführen. Sie müssen einen `Accept`-Header in die Anfrage einbeziehen, sollten jedoch einen HTTP-Status 404 (Nicht gefunden) erhalten, da das Mixin aus der Schema Registry entfernt wurde.
