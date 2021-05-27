@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Sandbox-Entwicklerhandbuch
+keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Entwicklerhandbuch
 solution: Experience Platform
-title: Sandbox-API-Handbuch
+title: Sandbox-API-Anleitung
 topic-legacy: developer guide
-description: Die Sandbox-API ermöglicht es Entwicklern, Sandboxen in Adobe Experience Platform programmatisch zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
+description: Mit der Sandbox-API können Entwickler Sandboxes in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 88%
+source-wordcount: '375'
+ht-degree: 87%
 
 ---
 
@@ -21,7 +20,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie die Sandbox-AP
 
 ## Erste Schritte mit der Sandbox-API
 
-Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Benutzer ohne Zugriffsberechtigungen können den Endpunkt nur zum [Auflisten aktiver Sandboxes für den aktuellen Anwender](./list-active-sandboxes.md) verwenden. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
+Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Benutzer ohne Zugriffsberechtigungen können den [verfügbaren Sandbox-Endpunkt](./available.md) nur verwenden, um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -29,7 +28,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abgeschlossen haben, damit Sie Platform-APIs erfolgreich aufrufen können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abgeschlossen haben, damit Sie Platform-APIs erfolgreich aufrufen können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
