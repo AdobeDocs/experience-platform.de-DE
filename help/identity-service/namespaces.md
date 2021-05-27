@@ -5,9 +5,9 @@ title: Identity Namespace - Überblick
 topic-legacy: overview
 description: Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: c2db929a96883607ea99f08bffc92a5a9bafd01a
+source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1638'
 ht-degree: 20%
 
 ---
@@ -72,6 +72,8 @@ Folgende Standard-Namespaces stehen allen Organisationen in Platform zur Verfüg
 | Telefon (SHA256_E.164) | Ein Namespace, der rohe Telefonnummern darstellt, die im SHA256- und E.164-Format gehasht werden müssen. |
 | TNTID | Ein Namespace, der Adobe Target darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) . |
 | Windows AID | Ein Namespace, der eine Windows Advertising-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument unter [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) . |
+
+### Anzeigen von Identitäts-Namespaces
 
 Um Identitäts-Namespaces in der Benutzeroberfläche anzuzeigen, wählen Sie im linken Navigationsbereich **[!UICONTROL Identitäten]** und dann **[!UICONTROL Durchsuchen]** aus.
 
