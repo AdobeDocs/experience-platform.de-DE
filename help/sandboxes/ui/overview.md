@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Sandbox-Übersicht
+keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Übersicht
 solution: Experience Platform
 title: Übersicht über die Sandbox-Benutzeroberfläche
 topic-legacy: user guide
 description: Adobe Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate, isolierte virtuelle Umgebungen unterteilen. Die Sandbox-Benutzeroberfläche finden Sie in der Benutzeroberfläche von Experience Platform.
 exl-id: d86e282c-6231-490f-a6c8-dbd12bf2341e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a3e12d304318b314060f3be339c63abb78c7733d
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 92%
@@ -14,7 +13,6 @@ ht-degree: 92%
 ---
 
 # Übersicht zur Sandbox-UI
-
 
 Adobe Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate, isolierte virtuelle Umgebungen unterteilen. Die Sandbox-Benutzeroberfläche finden Sie in der [Benutzeroberfläche von Experience Platform](https://platform.adobe.com).
 
