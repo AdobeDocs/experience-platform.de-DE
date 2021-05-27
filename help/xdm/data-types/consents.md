@@ -1,26 +1,25 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API;Einwilligung;Einwilligung;Voreinstellungen;Voreinstellungen;DatenschutzOptOuts;MarketingPreferences;optOutType;basisOfProcessing;Einwilligung;Einwilligung
-title: Datentyp "Inhalt und Voreinstellungen"
-description: Der Datentyp "Zustimmung zum Datenschutz, zur Personalisierung und zu Marketingvoreinstellungen"soll die Erfassung von Kundenberechtigungen und -einstellungen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert wurden.
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Einverständnis; Einverständnis; Voreinstellungen; Voreinstellungen; privacyOptOuts; marketingPreferences; optOutType; baseOfProcessing; Einverständnis; Einverständnis
+title: Datentyp "Einwilligungen und Voreinstellungen"
+description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
-source-wordcount: '1844'
-ht-degree: 2%
+source-wordcount: '1868'
+ht-degree: 3%
 
 ---
 
 # [!DNL Consents & Preferences] Datentyp
 
-Der Datentyp [!UICONTROL Zustimmung zum Datenschutz, zur Personalisierung und zum Marketing &lt; a1/> (im Folgenden &quot;Datentyp[!DNL Consents & Preferences]&quot;genannt) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -einstellungen unterstützt, die von CMPs (Consent Management Platforms) und anderen Quellen aus Ihren Datenoperationen generiert wurden.]
+Der Datentyp [!UICONTROL Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen] (im Folgenden &quot;Datentyp[!DNL Consents & Preferences]&quot;genannt) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -präferenzen unterstützt, die von Consent Management Platform (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 
-Dieses Dokument umfasst die Struktur und die vorgesehene Verwendung der vom Datentyp [!DNL Consents & Preferences] bereitgestellten Felder.
+Dieses Dokument behandelt die Struktur und die vorgesehene Verwendung der Felder, die vom Datentyp [!DNL Consents & Preferences] bereitgestellt werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Dokument erfordert ein funktionierendes Verständnis von XDM und die Verwendung der Schema in [!DNL Experience Platform]. Bitte lesen Sie die folgende Dokumentation, bevor Sie fortfahren:
+Dieses Dokument erfordert ein Verständnis von XDM und die Verwendung der Schemas in [!DNL Experience Platform]. Lesen Sie die folgende Dokumentation, bevor Sie fortfahren:
 
 * [XDM-System – Übersicht](http://www.adobe.com/go/xdm-home-en)
 * [Grundlagen der Schemakomposition](http://www.adobe.com/go/xdm-schema-best-practices-en)
@@ -29,26 +28,26 @@ Dieses Dokument erfordert ein funktionierendes Verständnis von XDM und die Verw
 
 >[!IMPORTANT]
 >
->Der Datentyp [!DNL Consents & Preferences] ist so ausgelegt, dass er eine Reihe von Anwendungsfällen im Zusammenhang mit der Zustimmung und der Präferenzverwaltung abdeckt. In diesem Dokument wird daher die Verwendung der Felder des Datentyps allgemein beschrieben und es werden nur Vorschläge zur Interpretation der Verwendung dieser Felder gemacht. Bitte wenden Sie sich an Ihr Datenschutzrechtsteam, um die Struktur des Datentyps an die Interpretation und Präsentation dieser Einwilligung und Präferenz für Ihre Kunden anzupassen.
+>Der Datentyp [!DNL Consents & Preferences] wurde für eine Reihe von Nutzungsszenarien im Zusammenhang mit der Einwilligungs- und Vorzugsverwaltung entwickelt. In diesem Dokument wird daher die Verwendung der Felder des Datentyps allgemein beschrieben und es werden nur Vorschläge zur Interpretation der Verwendung dieser Felder gemacht. Wenden Sie sich an Ihr Datenschutzrechtsteam, um die Struktur des Datentyps an die Interpretation und Präsentation dieser Zustimmungs- und Auswahlmöglichkeiten für Ihre Kunden anzupassen.
 
-Der Datentyp [!DNL Consents & Preferences] enthält mehrere Felder, die zum Erfassen von **Einwilligung**- und **Voreinstellungen**-Informationen verwendet werden.
+Der Datentyp [!DNL Consents & Preferences] stellt mehrere Felder bereit, mit denen **consent** und **Preferences** Informationen erfasst werden.
 
-Eine Einwilligung ist eine Option, mit der ein Kunde angeben kann, wie seine Daten verwendet werden können. Die meisten Zustimmungen haben einen rechtlichen Aspekt, da in einigen Rechtsordnungen eine Erlaubnis erforderlich ist, bevor Daten auf eine bestimmte Weise verwendet werden können, oder dass der Kunde die Möglichkeit hat, diese Verwendung zu beenden (Opt-out), wenn keine ausdrückliche Zustimmung erforderlich ist.
+Eine Einwilligung ist eine Option, mit der ein Kunde festlegen kann, wie seine Daten verwendet werden können. Die meisten Einverständniserklärungen haben einen rechtlichen Aspekt, da in einigen Rechtsordnungen eine Erlaubnis erforderlich ist, bevor Daten in einer bestimmten Weise verwendet werden können, oder der Kunde die Möglichkeit hat, diese Verwendung zu stoppen (Opt-out), wenn keine Zustimmung erforderlich ist.
 
-Eine Präferenz ist eine Option, mit der der Kunde festlegen kann, wie verschiedene Aspekte seines Erlebnisses mit einer Marke behandelt werden sollen. Diese fallen in zwei Kategorien:
+Eine Präferenz ist eine Option, mit der der Kunde festlegen kann, wie verschiedene Aspekte seines Erlebnisses mit einer Marke behandelt werden sollen. Diese Kategorien fallen in zwei Kategorien:
 
-* **Voreinstellungen** für Personalisierung: Voreinstellungen für die Personalisierung der Erlebnisse, die ein Kunde von der Marke erhält.
-* **Marketingvoreinstellungen**: Voreinstellungen, ob eine Marke über verschiedene Kanal mit einem Kunden in Kontakt treten darf.
+* **Personalisierungsvoreinstellungen**: Voreinstellungen bezüglich der Personalisierung von Erlebnissen, die für einen Kunden bereitgestellt werden.
+* **Marketing-Voreinstellungen**: Einstellungen, die angeben, ob eine Marke einen Kunden über verschiedene Kanäle kontaktieren darf.
 
-Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Plattform-Benutzeroberfläche dargestellt wird:
+Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Platform-Benutzeroberfläche dargestellt wird:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->Anweisungen zum Suchen von XDM-Ressourcen](../ui/explore.md) und zum Überprüfen ihrer Struktur in der Plattform-Benutzeroberfläche finden Sie im Handbuch [XDM-Ressourcen .
+>Anweisungen zum Suchen nach einer beliebigen XDM-Ressource und zum Überprüfen ihrer Struktur in der Platform-Benutzeroberfläche finden Sie im Handbuch zu [XDM-Ressourcen](../ui/explore.md) zu .
 
-Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [!DNL Consents & Preferences] verarbeiten kann. Informationen zur spezifischen Verwendung der einzelnen Felder finden Sie in den folgenden Abschnitten.
+Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp [!DNL Consents & Preferences] , den der Datentyp verarbeiten kann. Informationen zur spezifischen Verwendung dieser Felder finden Sie in den folgenden Abschnitten.
 
 ```json
 {
@@ -87,15 +86,15 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 >[!TIP]
 >
->Sie können JSON-Beispieldaten für jedes XDM-Schema generieren, das Sie in der Experience Platform definieren, um zu veranschaulichen, wie Ihre Daten zur Kundeneinwilligung und zu den Kundenpräferenzen zugeordnet werden sollen. Weitere Informationen finden Sie in der folgenden Dokumentation:
+>Sie können JSON-Beispieldaten für jedes XDM-Schema generieren, das Sie in Experience Platform definieren, um zu veranschaulichen, wie Ihre Kundenzustimmungs- und -bevorzugte Daten zugeordnet werden sollen. Weitere Informationen finden Sie in der folgenden Dokumentation:
 >
->* [Musterdaten in der Benutzeroberfläche generieren](../ui/sample.md)
->* [Musterdaten in der API generieren](../api/sample-data.md)
+>* [Generieren von Beispieldaten in der Benutzeroberfläche](../ui/sample.md)
+* [Beispieldaten in der API generieren](../api/sample-data.md)
 
 
 ## `consents` {#choices}
 
-`consents` enthält mehrere Felder, die die Zustimmung und Voreinstellungen eines Kunden beschreiben. Diese Felder werden in den Unterabschnitten weiter unten detailliert beschrieben.
+`consents` enthält mehrere Felder, die die Zustimmung und Voreinstellungen eines Kunden beschreiben. Diese Felder werden in den folgenden Unterabschnitten ausführlicher beschrieben.
 
 ```json
 "consents": {
@@ -129,7 +128,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 ### `collect`
 
-`collect` die Einwilligung des Kunden zur Erfassung seiner Daten.
+`collect` stellt die Einwilligung des Kunden zur Erfassung seiner Daten dar.
 
 ```json
 "collect" : {
@@ -139,7 +138,9 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `val` | Die vom Kunden angegebene Auswahl der Zustimmung für diesen Verwendungsfall. Akzeptierte Werte und Definitionen finden Sie im Anhang [a1/>.](#choice-values) |
+| `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Akzeptierte Werte und Definitionen finden Sie im [Anhang](#choice-values) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `adID`
 
@@ -153,11 +154,13 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `val` | Die vom Kunden angegebene Auswahl der Zustimmung für diesen Verwendungsfall. Akzeptierte Werte und Definitionen finden Sie im Anhang [a1/>.](#choice-values) |
+| `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Akzeptierte Werte und Definitionen finden Sie im [Anhang](#choice-values) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `share`
 
-`share` stellt die Zustimmung des Kunden dar, ob seine Daten an Dritte oder Zweitanbieter weitergegeben (oder an Dritte verkauft) werden können.
+`share` stellt die Einwilligung des Kunden dar, ob seine Daten an Zweit- oder Dritte weitergegeben (oder an Dritte verkauft) werden können.
 
 ```json
 "share" : {
@@ -167,17 +170,17 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `val` | Die vom Kunden angegebene Auswahl der Zustimmung für diesen Verwendungsfall. Akzeptierte Werte und Definitionen finden Sie im Anhang [a1/>.](#choice-values) |
+| `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Akzeptierte Werte und Definitionen finden Sie im [Anhang](#choice-values) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `personalize` {#personalize}
 
-`personalize` erfasst Kundenvoreinstellungen darüber, auf welche Weise ihre Daten für die Personalisierung verwendet werden können. Kunden können bestimmte Personalisierungs-Anwendungsfälle Opt-out oder ganz Opt-out Personalisierung.
+`personalize` erfasst Kundenpräferenzen darüber, auf welche Weise ihre Daten für die Personalisierung verwendet werden können. Kunden können bestimmte Anwendungsfälle der Personalisierung deaktivieren oder die Personalisierung vollständig deaktivieren.
 
 >[!IMPORTANT]
->
->`personalize` umfasst nicht Anwendungsfälle für das Inverkehrbringen. Wenn ein Kunde beispielsweise die Personalisierung für alle Kanal ablehnt, sollte er nicht aufhören, über diese Kanal Nachrichten zu empfangen. Vielmehr sollten die Nachrichten, die sie erhalten, generisch sein und nicht auf ihrem Profil basieren.
->
->Wenn sich ein Kunde beispielsweise für alle Kanal (über `marketing`, wie im [nächsten Abschnitt](#marketing) erklärt) vom Direktmarketing abmeldet, sollte dieser Kunde keine Nachrichten erhalten, auch wenn eine Personalisierung zulässig ist.
+`personalize` umfasst keine Marketing-Anwendungsfälle. Wenn beispielsweise ein Kunde die Personalisierung für alle Kanäle ablehnt, sollte er nicht aufhören, Nachrichten über diese Kanäle zu empfangen. Stattdessen sollten die Nachrichten, die sie empfangen, generisch sein und nicht auf ihrem Profil basieren.
+Wenn ein Kunde beispielsweise das Direktmarketing für alle Kanäle ablehnt (über `marketing`, wie im [nächsten Abschnitt](#marketing) erläutert), sollte dieser Kunde keine Nachrichten erhalten, selbst wenn eine Personalisierung zulässig ist.
 
 ```json
 "personalize": {
@@ -190,11 +193,13 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `content` | Stellt die Voreinstellungen des Kunden für personalisierte Inhalte auf Ihrer Website oder in Ihrer Anwendung dar. |
-| `val` | Die vom Kunden bereitgestellte Voreinstellung für die Personalisierung des angegebenen Anwendungsfalls. In Fällen, in denen der Kunde nicht aufgefordert werden muss, seine Zustimmung zu geben, sollte der Wert dieses Feldes die Grundlage angeben, auf der die Personalisierung erfolgen sollte. Akzeptierte Werte und Definitionen finden Sie im Anhang [a1/>.](#choice-values) |
+| `val` | Die vom Kunden bereitgestellte Personalisierungseinstellung für den angegebenen Anwendungsfall. In Fällen, in denen der Kunde nicht zur Einwilligung aufgefordert werden muss, sollte der Wert dieses Felds die Grundlage angeben, auf der die Personalisierung erfolgen soll. Akzeptierte Werte und Definitionen finden Sie im [Anhang](#choice-values) . |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `marketing` {#marketing}
 
-`marketing` erfasst Kundenpräferenzen hinsichtlich der Marketingzwecke, für die ihre Daten verwendet werden können. Kunden können bestimmte Anwendungsfälle Opt-out oder ganz Opt-out Direktmarketing.
+`marketing` erfasst Kundenpräferenzen in Bezug darauf, für welche Marketing-Zwecke ihre Daten verwendet werden können. Kunden können bestimmte Marketing-Anwendungsfälle abwählen oder Direktmarketing vollständig deaktivieren.
 
 ```json
 "marketing": {
@@ -217,14 +222,16 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `preferred` | Gibt den bevorzugten Kanal des Kunden für den Empfang von Nachrichten an. Die zulässigen Werte finden Sie im Anhang [a1/>.](#preferred-values) |
-| `any` | Stellt die Präferenzen des Kunden für Direktmarketing als Ganzes dar. Die in diesem Feld angegebene Voreinstellung für die Zustimmung gilt als &quot;Standard&quot; für jeden Marketing-Kanal, es sei denn, sie wird durch zusätzliche Unterfelder unter `marketing` überschrieben. Wenn Sie planen, detailliertere Optionen für die Zustimmung zu verwenden, sollten Sie dieses Feld ausschließen.<br><br>Wenn der Wert auf  `n`festgelegt ist, sollten alle spezifischeren Personalisierungseinstellungen ignoriert werden. Wenn der Wert auf `y` festgelegt ist, sollten alle feiner abgestuften Personalisierungsoptionen ebenfalls als `y` behandelt werden, es sei denn, es wurde explizit auf `n` eingestellt. Wenn der Wert nicht festgelegt ist, sollten die Werte für die einzelnen Personalisierungsoptionen wie angegeben berücksichtigt werden. |
+| `preferred` | Gibt den bevorzugten Kanal des Kunden für den Empfang von Nachrichten an. Akzeptierte Werte finden Sie im [Anhang](#preferred-values) . |
+| `any` | Stellt die Voreinstellungen des Kunden für Direktmarketing als Ganzes dar. Die in diesem Feld angegebene Zustimmungsvoreinstellung gilt als &quot;Standardeinstellung&quot;für jeden Marketing-Kanal, es sei denn, sie wird durch zusätzliche Unterfelder überschrieben, die unter `marketing` bereitgestellt werden. Wenn Sie planen, detailliertere Zustimmungsoptionen zu verwenden, wird empfohlen, dieses Feld auszuschließen.<br><br>Wenn der Wert auf  `n` festgelegt ist, sollten alle spezifischeren Personalisierungseinstellungen ignoriert werden. Wenn der Wert auf `y` festgelegt ist, sollten alle feinkörnigen Personalisierungsoptionen ebenfalls als `y` behandelt werden, es sei denn, dies ist explizit auf `n` festgelegt. Wenn der Wert nicht festgelegt ist, sollten die Werte für jede Personalisierungsoption wie angegeben berücksichtigt werden. |
 | `email` | Gibt an, ob der Kunde dem Empfang von E-Mail-Nachrichten zustimmt. |
-| `push` | Gibt an, ob der Kunde den Empfang von Push-Benachrichtigungen genehmigt. |
+| `push` | Gibt an, ob der Kunde den Empfang von Push-Benachrichtigungen gestattet. |
 | `sms` | Gibt an, ob der Kunde dem Empfang von Textnachrichten zustimmt. |
-| `val` | Die vom Kunden angegebene Voreinstellung für den angegebenen Verwendungsfall. In Fällen, in denen der Kunde nicht zur Erteilung der Zustimmung aufgefordert werden muss, sollte der Wert dieses Feldes die Grundlage angeben, auf der der Verwendungsfall für das Inverkehrbringen erfolgen sollte. Akzeptierte Werte und Definitionen finden Sie im Anhang [a1/>.](#choice-values) |
-| `time` | Ein Zeitstempel nach ISO 8601, der angibt, wann sich die Marketing-Voreinstellung geändert hat (falls zutreffend). Beachten Sie, dass, wenn der Zeitstempel für eine individuelle Voreinstellung mit dem unter `metadata` angegebenen Zeitstempel übereinstimmt, dieses Feld nicht für diese Voreinstellung festgelegt werden muss. |
-| `reason` | Wenn ein Kunde sich aus einer Marketing-Verwendungsszenario ausschließt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
+| `val` | Die vom Kunden angegebene Voreinstellung für den angegebenen Anwendungsfall. In Fällen, in denen der Kunde nicht aufgefordert werden muss, seine Zustimmung zu erteilen, sollte der Wert dieses Felds die Grundlage angeben, auf der der Marketing-Anwendungsfall stattfinden soll. Akzeptierte Werte und Definitionen finden Sie im [Anhang](#choice-values) . |
+| `time` | Ein ISO 8601-Zeitstempel, mit dem die Marketing-Voreinstellung geändert wurde (falls zutreffend). Beachten Sie, dass, wenn der Zeitstempel für eine individuelle Voreinstellung mit dem unter `metadata` angegebenen Zeitstempel übereinstimmt, dieses Feld nicht für diese Voreinstellung festgelegt werden darf. |
+| `reason` | Wenn ein Kunde einen Marketing-Anwendungsfall ablehnt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `metadata`
 
@@ -238,23 +245,23 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den der Datentyp [
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `time` | Ein ISO 8601-Zeitstempel zum letzten Mal, wenn die Zustimmung und Voreinstellungen des Kunden aktualisiert wurden. Dieses Feld kann anstelle von Zeitstempeln für einzelne Voreinstellungen verwendet werden, um die Belastung und Komplexität zu reduzieren. Wenn Sie einen `time`-Wert unter einer individuellen Voreinstellung angeben, wird der `metadata`-Zeitstempel für diese bestimmte Voreinstellung außer Kraft gesetzt. |
+| `time` | Ein ISO 8601-Zeitstempel zum letzten Mal, wenn die Zustimmungen und Voreinstellungen des Kunden aktualisiert wurden. Dieses Feld kann verwendet werden, anstatt Zeitstempel auf individuelle Voreinstellungen anzuwenden, um Belastung und Komplexität zu reduzieren. Wenn Sie einen `time` -Wert unter einer individuellen Voreinstellung angeben, wird der `metadata`-Zeitstempel für diese Voreinstellung überschrieben. |
 
-## Daten mit dem Datentyp {#ingest} eingehen
+{style=&quot;table-layout:auto&quot;}
 
-Um den Datentyp [!DNL Consents & Preferences] zum Erfassen von Daten zur Einwilligung Ihrer Kunden zu verwenden, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
+## Daten mithilfe des Datentyps erfassen {#ingest}
 
-Anweisungen zum Zuweisen von Datentypen zu Feldern finden Sie im Lernprogramm unter [Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en). Nachdem Sie ein Schema mit dem Datentyp [!DNL Consents & Preferences] erstellt haben, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im DataSet-Benutzerhandbuch, wie Sie einen Datensatz mit einem vorhandenen Schema erstellen.
+Um den Datentyp [!DNL Consents & Preferences] verwenden zu können, um Einwilligungsdaten von Ihren Kunden zu erfassen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
+
+Anweisungen zum Zuweisen von Datentypen zu Feldern finden Sie im Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . [ Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!DNL Consents & Preferences] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zum Datensatz und befolgen Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema.
 
 >[!IMPORTANT]
->
->Wenn Sie Genehmigungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den Datentyp [!DNL Consents & Preferences] enthält. Der Datensatz, den Sie anhand dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert werden. In den oben verlinkten Lernprogrammen finden Sie spezifische Schritte zu [!DNL Real-time Customer Profile]-Anforderungen für Schema und Datensätze.
->
->Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass die Datasets, die die neuesten Einwilligungs- und Voreinstellungsdaten enthalten, priorisiert werden, damit die Profil der Kunden ordnungsgemäß aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Mergepolicies](../../rtcdp/profile/merge-policies.md).
+Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den Datentyp [!DNL Consents & Preferences] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
+Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) .
 
-## Bearbeitung von Änderungen der Zustimmung und der Präferenz
+## Handhabung von Zustimmungs- und Vorgabenänderungen
 
-Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen mit dem [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md) erfasst und sofort erzwungen werden. Wenn sich ein Kunde aus der Datenerfassung ausschließt, muss die Datenerfassung sofort eingestellt werden. Wenn sich ein Kunde aus der Personalisierung ausschließt, sollte auf der nächsten Seite, die er besucht, keine Personalisierung vorhanden sein.
+Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert, sollten diese Änderungen erfasst und sofort mit dem [Adobe Experience Platform Web SDK](../../edge/consent/supporting-consent.md) erzwungen werden. Wenn ein Kunde die Datenerfassung ablehnt, muss die Datenerfassung sofort eingestellt werden. Wenn ein Kunde die Personalisierung ablehnt, sollte auf der nächsten besuchten Seite keine Personalisierung vorhanden sein.
 
 ## Anhang {#appendix}
 
@@ -266,15 +273,17 @@ In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
 | Wert | Titel | Beschreibung |
 | --- | --- | --- |
-| `y` | Ja | Der Kunde hat sich für die Zustimmung oder den Vorzug entschieden. Mit anderen Worten, sie stimmen der Verwendung ihrer Daten gemäß der jeweiligen Zustimmung oder Präferenz zu.**** |
-| `n` | Nein | Der Kunde hat sich von der Zustimmung oder Präferenz abgemeldet. Mit anderen Worten, sie **stimmen der Verwendung ihrer Daten nicht** zu, wie in der betreffenden Einwilligung oder Präferenz angegeben. |
-| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Zustimmungs- oder Präferenzwert erhalten. Dies wird meistens im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Empfang von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um sicherzustellen, dass er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Wenn diese Zustimmung oder Präferenz kein zweistufiges Überprüfungsverfahren verwendet, kann die  `p` Auswahl stattdessen dazu verwendet werden, anzugeben, dass der Kunde noch nicht auf die Aufforderung zur Einwilligung reagiert hat. Beispielsweise können Sie den Wert auf der ersten Seite einer Website automatisch auf `p` einstellen, bevor der Kunde auf die Aufforderung zur Einwilligung reagiert hat. In Gerichtsbarkeiten, die keine ausdrückliche Zustimmung erfordern, können Sie diese auch verwenden, um anzugeben, dass der Kunde sich nicht explizit abgemeldet hat (d. h. die Zustimmung wird angenommen). |
-| `u` | „Unbekannt“ | Die Zustimmung oder Präferenz des Kunden ist unbekannt. |
-| `LI` | Rechtliches Interesse | Das legitime Geschäftsinteresse, diese Daten für den angegebenen Zweck zu erheben und zu verarbeiten, überwiegt den potenziellen Schaden, den sie dem Einzelnen verursachen. |
-| `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertraglichen Verpflichtungen mit der Einzelperson nachzukommen. |
+| `y` | Ja | Der Kunde hat sich für die Zustimmung oder Präferenz entschieden. Mit anderen Worten, sie stimmen **do** der Verwendung ihrer Daten zu, wie durch die betreffende Einwilligung oder Präferenz angegeben. |
+| `n` | Nein | Der Kunde hat sich von der Zustimmung oder Präferenz abgemeldet. Mit anderen Worten, sie **stimmen nicht** der Verwendung ihrer Daten zu, wie durch die betreffende Einwilligung oder Präferenz angegeben. |
+| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Zustimmungs- oder Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Wenn diese Zustimmung oder Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, kann die  `p` Auswahl stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einwilligungsaufforderung reagiert hat. Sie können beispielsweise den Wert auf `p` automatisch auf der ersten Seite einer Website festlegen, bevor der Kunde auf die Einverständnisaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
+| `u` | „Unbekannt“ | Die Einwilligungs- oder Präferenzinformationen des Kunden sind unbekannt. |
+| `LI` | Rechtliches Interesse | Das berechtigte geschäftliche Interesse, diese Daten für den angegebenen Zweck zu sammeln und zu verarbeiten, überwiegt den potenziellen Schaden, den sie für die Person darstellt. |
+| `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertragliche Verpflichtungen mit der Person zu erfüllen. |
 | `CP` | Erfüllung einer rechtlichen Verpflichtung | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die rechtlichen Verpflichtungen des Unternehmens zu erfüllen. |
-| `VI` | Wesentliches Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist zum Schutz der vitalen Interessen des Einzelnen erforderlich. |
-| `PI` | Öffentliches Interesse | Die Erhebung von Daten zu dem festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt durchzuführen. |
+| `VI` | Wichtiges Interesse des Einzelnen | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die lebenswichtigen Interessen des Einzelnen zu schützen. |
+| `PI` | Öffentliches Interesse | Die Erhebung von Daten für den festgelegten Zweck ist erforderlich, um eine Aufgabe im öffentlichen Interesse oder in Ausübung öffentlicher Gewalt zu erfüllen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### Akzeptierte Werte für `preferred` {#preferred-values}
 
@@ -286,16 +295,18 @@ In der folgenden Tabelle sind die für `preferred` zulässigen Werte aufgeführt
 | `push` | Push-Benachrichtigungen. |
 | `inApp` | In-App-Nachrichten. |
 | `sms` | SMS-Nachrichten. |
-| `phone` | Telefonanrufinteraktionen. |
-| `phyMail` | Physikalische Post. |
-| `inVehicle` | Fahrzeuginterne Meldungen. |
+| `phone` | Interaktionen mit Telefonaufrufen. |
+| `phyMail` | Physische Post. |
+| `inVehicle` | In-Vehicle-Nachrichten. |
 | `inHome` | In-Home-Nachrichten. |
-| `iot` | Internet der Dinge (IoT) Nachrichten. |
-| `social` | Social-Media-Inhalte |
-| `other` | Ein Kanal, der nicht in eine Standard-Kategorie passt. |
+| `iot` | Internet der Nachrichten (IoT). |
+| `social` | Social-Media-Inhalte. |
+| `other` | Ein Kanal, der nicht in eine Standardkategorie passt. |
 | `none` | Kein bevorzugter Kanal. |
 | `unknown` | Der bevorzugte Kanal ist unbekannt. |
 
-### Vollständiges [!DNL Consents & Preferences] Schema {#full-schema}
+{style=&quot;table-layout:auto&quot;}
 
-Informationen zur Ansicht des vollständigen Schemas für den Datentyp [!DNL Consents & Preferences] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+### Vollständiges [!DNL Consents & Preferences]-Schema {#full-schema}
+
+Das vollständige Schema für den Datentyp [!DNL Consents & Preferences] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
