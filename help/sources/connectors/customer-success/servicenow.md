@@ -1,41 +1,36 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Servicenow;ServiceNow
+keywords: Experience Platform; home; beliebte Themen; service; serviceNow
 solution: Experience Platform
-title: ServiceNow Source Connector-Übersicht
+title: ServiceNow Source Connector - Übersicht
 topic-legacy: overview
-description: Erfahren Sie, wie Sie ServiceNow mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie ServiceNow über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '216'
 ht-degree: 8%
 
 ---
 
-# (Beta) [!DNL ServiceNow] Connector
+# [!DNL ServiceNow] Connector
 
->[!NOTE]
->
->Der [!DNL ServiceNow]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [sources overview](../../home.md#terms-and-conditions).
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-Kundenerfolgssystem. Zu den Support-Anbietern für den Kundenerfolg zählen [!DNL ServiceNow].
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem Drittanbieter-Kundenerfolgssystem. Zu den Support-Anbietern für Kundenerfolge zählen [!DNL ServiceNow].
+## IP-Adressen-Zulassungsliste
 
-## Zulassungsliste der IP-Adresse
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
-
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL ServiceNow] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL ServiceNow] und [!DNL Platform] herstellen:
 
 ## Verbinden Sie [!DNL ServiceNow] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer ServiceNow-Quellverbindung mit der Flow Service API](../../tutorials/api/create/customer-success/servicenow.md)
-- [Erforschen Sie ein Kundenerfolgssystem mithilfe der Flow Service API](../../tutorials/api/explore/customer-success.md)
-- [Erfassen von Daten aus einem Kundenerfolgssystem mithilfe der Flow Service API](../../tutorials/api/collect/customer-success.md)
+- [Erstellen einer Quellverbindung des ServiceNow mithilfe der Flow Service-API](../../tutorials/api/create/customer-success/servicenow.md)
+- [Erkunden eines Kundenerfolgssystems mithilfe der Flow Service-API](../../tutorials/api/explore/customer-success.md)
+- [Erfassen von Daten aus einem Customer Success System mithilfe der Flow Service-API](../../tutorials/api/collect/customer-success.md)
 
-## Verbinden Sie [!DNL ServiceNow] mit [!DNL Platform] mithilfe der Benutzeroberfläche
+## Verbinden Sie [!DNL ServiceNow] mit [!DNL Platform] über die Benutzeroberfläche
 
-- [Erstellen einer ServiceNow-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Konfigurieren des Datenflusses für eine Kundenerfolgsverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/customer-success.md)
+- [Erstellen einer Quellverbindung von ServiceNow über die Benutzeroberfläche](../../tutorials/ui/create/customer-success/servicenow.md)
+- [Datenfluss für eine Kundenerfolgsverbindung in der Benutzeroberfläche konfigurieren](../../tutorials/ui/dataflow/customer-success.md)
