@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Azure synapse Analytics;azure synapse-Analyse;Zusammenfassung;Zusammenfassung
+keywords: Experience Platform; Startseite; beliebte Themen; Azure synapse Analytics; azure synapse-Analyse; Synapse; Synapse
 solution: Experience Platform
-title: Übersicht über den azure synapse Analytics-Quell-Connector
+title: azure synapse Analytics Source Connector - Überblick
 topic-legacy: overview
-description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche Azure synapse Analytics mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Azure synapse Analytics mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '288'
 ht-degree: 9%
 
 ---
 
-# (Beta) [!DNL Azure Synapse Analytics] Connector
+# [!DNL Azure Synapse Analytics] Connector
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationale Datenbanken, NoSQL oder Data Warehouse herstellen. Zu den Datenbankanbietern zählen [!DNL Azure Synapse Analytics].
+[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter: [!DNL Azure Synapse Analytics].
 
-## Zulassungsliste der IP-Adresse
+## IP-Adressen-Zulassungsliste
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
 >[!IMPORTANT]
 >
->Der [!DNL Azure Synapse Analytics]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
+>Der Quell-Connector [!DNL Azure Synapse Analytics] unterstützt derzeit keine Verbindung zwischen denselben Regionen und Platform. Wenn Ihre Azure-Instanz also denselben Netzwerkbereich wie Platform verwendet, kann keine Verbindung zu Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Synapse Analytics] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL Azure Synapse Analytics] und [!DNL Platform] herstellen:
 
 ## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer Azure synapse Analytics-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Erstellen einer Azure synapse Analytics-Quellverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Durchsuchen eines Datenbanksystems mithilfe der Flow Service-API](../../tutorials/api/explore/database-nosql.md)
+- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] mithilfe der Benutzeroberfläche
+## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer Azure synapse Analytics-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/synapse-analytics.md)
 - [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
