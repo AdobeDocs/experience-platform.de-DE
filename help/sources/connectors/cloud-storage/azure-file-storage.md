@@ -1,58 +1,53 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Datenspeicherung von Azurblase-Dateien;Azoure-Datei-Datenspeicherung
+keywords: Experience Platform; Startseite; beliebte Themen; Azure-Dateispeicher; Azure-Dateispeicher
 solution: Experience Platform
-title: Übersicht über den Source Connector für die AEM File Datenspeicherung
+title: Azure File Storage Source Connector - Übersicht
 topic-legacy: overview
-description: Erfahren Sie, wie Sie die Datenspeicherung von Blauen Dateien mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+description: Erfahren Sie, wie Sie Azure File Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 2%
+source-wordcount: '449'
+ht-degree: 3%
 
 ---
 
-# (Beta) Blue File Datenspeicherung Connector
+# Azure File Storage-Connector
 
->[!NOTE]
->
->Der Azurblase File Datenspeicherung Stecker ist in Beta. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../home.md#terms-and-conditions).
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], mit der Sie Ihre Daten aus diesen Systemen importieren können.
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Ihre Daten von diesen Systemen übertragen können.
+Cloud-Speicher-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen das Einbringen von Daten aus  [!DNL Azure File Storage] Batches.
 
-Cloud-Datenspeicherung-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON, XDM-Parquet oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus  [!DNL Azure File Storage] Stapeln einzubringen.
+## IP-Adressen-Zulassungsliste
 
-## Zulassungsliste der IP-Adresse
-
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
 >[!IMPORTANT]
 >
->Der [!DNL Azure File Storage]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
+>Der Quell-Connector [!DNL Azure File Storage] unterstützt derzeit keine Verbindung zwischen denselben Regionen und Platform. Wenn Ihre Azure-Instanz also denselben Netzwerkbereich wie Platform verwendet, kann keine Verbindung zu Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
-## Benennungsbeschränkungen für Dateien und Ordner
+## Namensbeschränkungen für Dateien und Ordner
 
-Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung der Cloud-Datenspeicherung-Datei bzw. des Verzeichnisses berücksichtigen müssen.
+Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie beim Benennen Ihrer Cloud-Speicherdatei oder Ihres Verzeichnisses berücksichtigen müssen.
 
-- Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
-- Ordner- und Dateinamen können nicht mit einem Schrägstrich (`/`) enden. Sofern vorhanden, wird sie automatisch entfernt.
-- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! ' ( ) ; @ & = + $ , % # [ ]`
+- Die Namen von Verzeichnis- und Dateikomponenten dürfen 255 Zeichen nicht überschreiten.
+- Verzeichnis- und Dateinamen können nicht mit einem Schrägstrich (`/`) enden. Wenn angegeben, wird sie automatisch entfernt.
+- Die folgenden Zeichen der reservierten URL müssen ordnungsgemäß maskiert sein: `! ' ( ) ; @ & = + $ , % # [ ]`
 - Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
-- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.) ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundlegende Regeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
+- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen, wie Steuerzeichen (0x00 bis 0x1F, \u0081 usw.), ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie in [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, PRN, AUX, NUL, CON, CLOCK$, Punkt (..) und zwei Zeichen (..).
 
 ## Verbinden Sie [!DNL Azure File Storage] mit [!DNL Platform]
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure File Storage] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL Azure File Storage] und [!DNL Platform] herstellen:
 
-### APIs verwenden
+### Verwenden von APIs
 
-- [Erstellen Sie eine Quellverbindung für eine Azurblase-Datenspeicherung mithilfe der Flow Service API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Erstellen einer Azure File Storage-Quellverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Erkunden eines Cloud-Speichersystems mithilfe der Flow Service-API](../../tutorials/api/explore/cloud-storage.md)
+- [Erfassen von Cloud-Speicherdaten mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Erstellen einer Azurblase-Datenspeicherung-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer Azure File Storage-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
