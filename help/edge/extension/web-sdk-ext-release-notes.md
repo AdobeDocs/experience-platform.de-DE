@@ -1,32 +1,31 @@
 ---
-title: Versionshinweise zur Adobe Experience Platform Web SDK Extension
+title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
-translation-type: tm+mt
-source-git-commit: 14cf62084c88956906cd9454176619ed08081a0e
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
 workflow-type: tm+mt
-source-wordcount: '1134'
-ht-degree: 79%
+source-wordcount: '1130'
+ht-degree: 78%
 
 ---
 
-
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
-Dieses Dokument behandelt die Versionshinweise für die Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch. Die neuesten Versionshinweise zum SDK finden Sie in den [Platform Web SDK-Versionshinweisen](https://docs.adobe.com/content/help/de-DE/experience-platform/edge/release-notes.html).
+In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Erweiterung für Adobe Experience Platform Launch behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## 9. März 2020
+## 9. März 2020
 
 ### Adobe Experience Platform Web-SDK 2.4.0
 
 Enthält Version 2.4.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
-* Das Kontrollkästchen [&quot;Dokument-Entladung&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) wurde zur Benutzeroberfläche der Aktion &quot;Ereignis senden&quot;hinzugefügt.
-* Es wurde Unterstützung für eine `out`-Option hinzugefügt, wenn [Standardgenehmigung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) konfiguriert wird, die alle Ereignis bis zum Erhalt der Zustimmung ablegt (die bestehende `pending`-Option setzt Ereignis in Warteschlange und sendet sie, sobald die Zustimmung eingegangen ist).
-* Es wurde eine QuickInfo zum Feld für die Standardgenehmigung hinzugefügt.
-* Unterstützung für [2.0-Standard der Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
-* In der Benutzeroberfläche des XDM-Objektdatenelements wird nun ein besserer Fehler angezeigt, wenn das Zugriffstoken des Benutzers ungültig oder nicht ordnungsgemäß bereitgestellt ist.
-* Es wurde ein Fehler bei der Herkunft zwischen verschiedenen Elementen behoben (der sich nicht auf den Vorgang der Erweiterung auswirkt), der in der Entwicklerkonsole des Browsers angezeigt wurde, wenn ein XDM-Objekt-Datenelement angezeigt wurde.
+* Das Kontrollkästchen [&quot;document unloading&quot;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) wurde zur Benutzeroberfläche der Aktion &quot;Ereignis senden&quot;hinzugefügt.
+* Unterstützung für eine `out`-Option bei der [Konfiguration der standardmäßigen Einwilligung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) hinzugefügt, die alle Ereignisse bis zum Erhalt der Einwilligung verlässt (die vorhandene `pending`-Option versetzt Ereignisse in die Warteschlange und sendet sie, sobald die Einwilligung eingeht).
+* Dem standardmäßigen Einwilligungsfeld wurde eine QuickInfo hinzugefügt.
+* Unterstützung für [Adobe Consent 2.0 Standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
+* In der Benutzeroberfläche des XDM-Datenelements-Datenelements wird jetzt ein besserer Fehler angezeigt, wenn das Zugriffstoken des Benutzers ungültig oder nicht ordnungsgemäß bereitgestellt ist.
+* Fehlerkorrektur - Es wurde ein ursprungsübergreifender Fehler behoben, der beim Anzeigen eines XDM-Objekt-Datenelements in der Browser-Entwicklerkonsole angezeigt wurde (was sich nicht auf den Vorgang der Erweiterung auswirkt).
 
 ## 4. November 2020
 
@@ -46,7 +45,7 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 #### Fehlerkorrekturen
 
-* Als Kunden versuchten, ein XDM-Objekt aus Sandbox-Schemas zu erstellen, traten Authentifizierungsprobleme auf. Die API, die die Plattform aufruft, kennt jetzt Umgebung, sodass den Benutzern nur die Schema angezeigt werden, auf die sie Zugriff haben, um sie zu bearbeiten.
+* Als Kunden versuchten, ein XDM-Objekt aus Sandbox-Schemas zu erstellen, traten Authentifizierungsprobleme auf. Die API, die Platform aufruft, ist jetzt über Umgebungen informiert, sodass Benutzern nur die Schemas angezeigt werden, auf die sie Zugriff haben, um sie zu bearbeiten.
 
 #### Funktionen
 
@@ -70,12 +69,12 @@ Enthält Version 2.3.0 der Adobe Experience Platform Web SDK-Bibliothek.
 #### Funktionen
 
 * Grundlegende Änderung: Die Aktion `syncIdentity` wurde entfernt; die Übergabe dieser IDs erfolgt jetzt über die Aktion `sendEvent`. Deaktivieren Sie ggf. bestehende Regeln, die diese Aktion verwenden, bevor Sie ein Upgrade der Erweiterung vornehmen.
-* Aktualisierung auf Alloy Version 2.1.0 ([Versionshinweise](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html))
+* Aktualisierung auf Alloy Version 2.1.0 ([Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html))
 * Unterstützung für den IAB 2.0-Standard für Einwilligungen in der Aktion `setConsent`.
 * Unterstützung für das Überschreiben der Datensatz-ID in der Aktion `sendEvent`.
 * Neues Datenelement vom Typ `IdentityMap`. Über dieses kann der Eintrag `identityMap` im nun aktivierten XDM-Objektdatenelement sowie in der Aktion `setConsent` ausgefüllt werden.
 * Unterstützung für das Übergeben einer Identitätszuordnung bzw. „identityMap“ in der Aktion `setConsent`.
-* Unterstützung bei der Auswahl einer Plattform-Sandbox im XDM-Objektdatenelement.
+* Unterstützung für die Auswahl einer Platform-Sandbox im XDM-Objektdatenelement.
 
 
 ## 26. Mai 2020
@@ -105,7 +104,7 @@ Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn
 * Es wurde ein Problem mit der Ereignis-Merge-ID behoben, das jedes Mal zurückgesetzt wurde, wenn das Datenelement referenziert wurde.
 * Die Aktion `setCustomerIds` wurde in `syncIdentity` umbenannt.
 * Es wurde ein `getIdentity`-Befehl hinzugefügt. Dieser kann derzeit nur über benutzerdefinierten Code genutzt werden.
-* Durch Aktivierung des Debuggens mit `_satellite` wird jetzt das Debugging im Adobe Experience Platform Web SDK aktiviert.
+* Durch die Aktivierung von Debugging mit `_satellite` wird jetzt das Debugging im Adobe Experience Platform Web SDK aktiviert.
 * Jetzt werden eingegebene Werte im XDM-Objekt unterstützt: Boolesche, Zahlen und Dezimalzahlen.
 
 ## 16. März 2020
@@ -182,7 +181,7 @@ Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn
 * Integration der Erweiterung
 * ECID-Unterstützung ohne zusätzliche Bibliotheks- oder Netzwerkaufrufe
 * Opt-in-Unterstützung
-* Unterstützung beim Senden von XDM an die Plattform
+* Unterstützung beim Senden von XDM an Platform
 * Unterstützung der Erstanbieterdomäne
 * Automatische Erfassung des Browserkontexts
 * Vollständig Open Source ([Erweiterung](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))
