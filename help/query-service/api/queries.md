@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;API-Leitfaden;Abfragen;Abfrage;Abfrage-Dienst;
+keywords: Experience Platform; Startseite; beliebte Themen; Query Service; API-Handbuch; Abfragen; Abfrage; Query Service
 solution: Experience Platform
-title: Abfragen-API-Endpunkt
+title: Query API Endpoint
 topic-legacy: queries
-description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des Endpunkts /Abfragen in der Abfrage Service API durchführen können.
+description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 32%
 
 ---
 
-# Abfragen-Endpunkt
+# Abfrage-Endpunkt
 
 ## Beispiel-API-Aufrufe
 
-In den folgenden Abschnitten werden Aufrufe durchlaufen, die Sie mit dem `/queries`-Endpunkt in der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des Endpunkts `/queries` in der API [!DNL Query Service] tätigen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Eine Liste von Abfragen abrufen
+### Abrufen einer Abfrageliste
 
-Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET an den `/queries`-Endpunkt anfordern.
+Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/queries` stellen.
 
 **API-Format**
 
@@ -34,7 +33,7 @@ GET /queries?{QUERY_PARAMETERS}
 
 **Abfrageparameter**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfragen für die Auflistung von Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren Abfragen abgerufen.
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflistung von Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren Abfragen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
@@ -42,12 +41,12 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfragen für die Auflistung
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
 | `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
 | `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state` und `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt beispielsweise alle Abfragen mit der angegebenen ID zurück. |
-| `excludeSoftDeleted` | Gibt an, ob eine Abfrage, die weich gelöscht wurde, einbezogen werden soll. `excludeSoftDeleted=false` enthält beispielsweise **auch** gelöschte Abfragen. (*Boolean, Standardwert: true*) |
-| `excludeHidden` | Gibt an, ob nicht vom Benutzer gesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, werden **auch nicht vom Benutzer gesteuerte Abfragen wie CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen einbezogen.** (*Boolean, Standardwert: true*) |
+| `excludeSoftDeleted` | Gibt an, ob eine Abfrage einbezogen werden soll, bei der eine weiche Löschung vorgenommen wurde. Zum Beispiel `excludeSoftDeleted=false` enthält **die** weichen gelöschten Abfragen. (*Boolesch, Standardwert: true*) |
+| `excludeHidden` | Gibt an, ob benutzergesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, enthält **auch** nicht vom Benutzer gesteuerte Abfragen wie CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen. (*Boolesch, Standardwert: true*) |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird die neueste für Ihr IMS-Unternehmen erstellte Abfrage abgerufen.
+Mit der folgenden Anfrage wird die neueste für Ihre IMS-Organisation erstellte Abfrage abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -59,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen für die angegebene IMS-Organisation als JSON zurück. Die folgende Antwort gibt die neueste Abfrage zurück, die für Ihr IMS-Unternehmen erstellt wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragen für die angegebene IMS-Organisation als JSON zurück. Die folgende Antwort gibt die neueste für Ihre IMS-Organisation erstellte Abfrage zurück.
 
 ```json
 {
@@ -118,9 +117,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste von Abfragen für
 }
 ```
 
-### Eine Abfrage erstellen
+### Abfragen erstellen
 
-Sie können eine neue Abfrage erstellen, indem Sie eine POST an den `/queries`-Endpunkt anfordern.
+Sie können eine neue Abfrage erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/queries` senden.
 
 **API-Format**
 
@@ -130,7 +129,7 @@ POST /queries
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine neue Abfrage erstellt, die durch die in der Payload bereitgestellten Werte konfiguriert wird:
+Die folgende Anfrage erstellt eine neue Abfrage, die durch die in der Payload angegebenen Werte konfiguriert wird:
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
@@ -142,7 +141,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -d '{
         "dbName": "prod:all",
         "sql": "SELECT * FROM accounts;",
-        "name": "Sample Query"
+        "name": "Sample Query",
         "description": "Sample Description"
     }  
 ```
@@ -151,12 +150,12 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | -------- | ----------- |
 | `dbName` | Der Name der Datenbank, für die Sie eine SQL-Abfrage erstellen. |
 | `sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
-| `name` | Der Name der SQL-Abfrage. |
+| `name` | Der Name Ihrer SQL-Abfrage. |
 | `description` | Die Beschreibung Ihrer SQL-Abfrage. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Nachdem die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, ändert sich `state` von `SUBMITTED` in `SUCCESS`.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Nachdem die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, ändert sich `state` von `SUBMITTED` in `SUCCESS`.
 
 ```json
 {
@@ -199,11 +198,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` verwenden, um [Ihre erstellte Abfrage abzubrechen](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` bis [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
 
-### Abrufen einer Abfrage nach ID
+### Abfrage nach ID abrufen
 
-Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET an den Endpunkt `/queries` anfordern und den Wert `id` der Abfrage im Anforderungspfad angeben.
+Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/queries` senden und im Anfragepfad den Wert `id` der Abfrage angeben.
 
 **API-Format**
 
@@ -213,7 +212,7 @@ GET /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id`-Wert der Abfrage, die Sie abrufen möchten. |
+| `{QUERY_ID}` | Der `id` -Wert der Abfrage, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -227,7 +226,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zur angegebenen Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Abfrage zurück.
 
 ```json
 {
@@ -270,11 +269,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` verwenden, um [Ihre erstellte Abfrage abzubrechen](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` bis [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
 
-### Abfrage abbrechen
+### Abbrechen einer Abfrage
 
-Sie können das Löschen einer angegebenen Abfrage anfordern, indem Sie eine PATCH-Anforderung an den Endpunkt `/queries` stellen und den Wert `id` der Abfrage im Anforderungspfad angeben.
+Sie können das Löschen einer bestimmten Abfrage anfordern, indem Sie eine PATCH-Anfrage an den Endpunkt `/queries` senden und im Anfragepfad den Wert `id` der Abfrage angeben.
 
 **API-Format**
 
@@ -284,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id`-Wert der Abfrage, die Sie abbrechen möchten. |
+| `{QUERY_ID}` | Der `id` -Wert der Abfrage, die Sie abbrechen möchten. |
 
 
 **Anfrage**
