@@ -1,52 +1,58 @@
 ---
 title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Versionshinweise
+keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 5%
+source-wordcount: '562'
+ht-degree: 4%
 
 ---
 
 # Versionshinweise
 
+## Version 2.5.0, Juni 2021
+
+* Unterstützung für Umleitungs-Personalisierungsangebote hinzugefügt.
+* Automatisch erfasste Darstellungsfeldbreiten und -höhen, die negative Werte sind, werden nicht mehr an den Server gesendet.
+* Wenn ein Ereignis durch Rückgabe von `false` aus einem `onBeforeEventSend` -Rückruf abgebrochen wird, wird jetzt eine Nachricht protokolliert.
+* Es wurde ein Problem behoben, bei dem bestimmte XDM-Daten, die für ein einzelnes Ereignis vorgesehen waren, über mehrere Ereignisse hinweg einbezogen wurden.
+
 ## Version 2.4.0, März 2021
 
-* Das SDK kann jetzt [als npm-Paket](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html) installiert werden.
-* Es wurde Unterstützung für eine `out`-Option hinzugefügt, wenn [die Standardgenehmigung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) konfiguriert wird. Dadurch werden alle Ereignis bis zum Erhalt der Einwilligung gelöscht (die bestehende `pending`-Option setzt Ereignis in Warteschlange und sendet sie, sobald die Einwilligung eingegangen ist).
-* Der Rückruf [onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) kann jetzt verwendet werden, um zu verhindern, dass ein Ereignis gesendet wird.
-* Beim Senden von Ereignissen zu personalisierten Schemas, die gerendert oder angeklickt werden, wird nun eine XDM-Feldgruppe anstelle von `meta.personalization` verwendet.
-* Der Befehl [getIdentity](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) gibt jetzt die ID des Randbereichs neben der Identität zurück.
-* Warnungen und Fehler, die vom Server empfangen wurden, wurden verbessert und werden in einer angemesseneren Weise behandelt.
-* Unterstützung für [2.0-Standard der Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
-* Voreinstellungen für die Zustimmung werden nach Erhalt in lokaler Datenspeicherung gehasht und gespeichert, um eine optimierte Integration zwischen CMPs, Platform Web SDK und Platform Edge Network zu ermöglichen. Wenn Sie die Voreinstellungen für die Zustimmung erfassen, empfehlen wir Ihnen jetzt, bei jedem Laden der Seite `setConsent` anzurufen.
-* Es wurden zwei [Überwachungshinweise](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` und `onCommandRejected` hinzugefügt.
-* Fehlerbehebung: Ereignisse für Interaktionsbenachrichtigungen zu Personalisierungen enthalten Informationen zu derselben Aktivität, wenn ein Benutzer zu einer neuen einseitigen App-Ansicht, zurück zur ursprünglichen Ansicht und auf ein Element klickt, das für die Konvertierung infrage kommt.
-* Fehlerbehebung: Wenn für das erste vom SDK gesendete Ereignis `documentUnloading` `true` festgelegt wurde, wird [`sendBeacon`](https://developer.mozilla.org/de-DE/docs/Web/API/Navigator/sendBeacon) verwendet, um das Ereignis zu senden, was zu einem Fehler bei einer nicht eingerichteten Identität führt.
+* Das SDK kann jetzt [als NPM-Paket](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html) installiert sein.
+* Unterstützung für eine `out`-Option bei der [Konfiguration der standardmäßigen Einwilligung](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) hinzugefügt, bei der alle Ereignisse bis zum Erhalt der Einwilligung gelöscht werden (die vorhandene `pending`-Option versetzt Ereignisse in die Warteschlange und sendet sie, sobald die Einwilligung eingeht).
+* Der Rückruf [onBeforeEventSend](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) kann jetzt verwendet werden, um das Senden eines Ereignisses zu verhindern.
+* Verwendet jetzt beim Senden von Ereignissen zu gerenderten oder angeklickten personalisierten Inhalten eine XDM-Schemafeldgruppe anstelle von `meta.personalization`.
+* Der [getIdentity-Befehl](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) gibt jetzt die Edge-Regions-ID neben der Identität zurück.
+* Die vom Server empfangenen Warnungen und Fehler wurden verbessert und werden entsprechend gehandhabt.
+* Unterstützung für [Adobe Consent 2.0 Standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard) hinzugefügt.
+* Die Voreinstellungen für die Zustimmung werden bei Erhalt gehasht und im lokalen Speicher gespeichert, um eine optimierte Integration zwischen CMPs, dem Platform Web SDK und dem Platform Edge Network zu ermöglichen. Wenn Sie Zustimmungsvoreinstellungen erfassen, empfehlen wir Ihnen jetzt, bei jedem Seitenladevorgang `setConsent` aufzurufen.
+* Es wurden zwei [Monitoring-Hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` und `onCommandRejected` hinzugefügt.
+* Fehlerbehebung: Die Interaktionsbenachrichtigungsereignisse enthalten doppelte Informationen über dieselbe Aktivität, wenn ein Benutzer zu einer neuen Einzelseiten-App-Ansicht zurückkehrt, zur ursprünglichen Ansicht zurückkehrt und auf ein Element geklickt hat, das für die Konversion qualifiziert ist.
+* Fehlerbehebung: Wenn das erste vom SDK gesendete Ereignis `documentUnloading` auf `true` gesetzt ist, wird [`sendBeacon`](https://developer.mozilla.org/de-DE/docs/Web/API/Navigator/sendBeacon) zum Senden des Ereignisses verwendet, was zu einem Fehler hinsichtlich einer nicht erstellten Identität führt.
 
 ## Version 2.3.0, November 2020
 
-* Neue nonce-Unterstützung, um strengere Content-Sicherheitsrichtlinien zu ermöglichen.
-* Unterstützung der Personalisierung für Einzelseitenanwendungen hinzugefügt.
-* Verbesserte Kompatibilität mit anderen On-Page-JavaScript-Code, der `window.console`-APIs überschreiben kann.
-* Fehlerbehebung: `sendBeacon` wurde nicht verwendet, wenn `documentUnloading` auf `true` gesetzt wurde oder wenn Link-Klicks automatisch verfolgt wurden.
+* Nonce-Unterstützung wurde hinzugefügt, um strengere Richtlinien zur Inhaltssicherheit zu ermöglichen.
+* Personalisierungsunterstützung für Einzelseitenanwendungen hinzugefügt.
+* Verbesserte Kompatibilität mit anderen On-Page-JavaScript-Code, der möglicherweise `window.console`-APIs überschreibt.
+* Fehlerbehebung: `sendBeacon` wurde nicht verwendet, wenn `documentUnloading` auf `true` gesetzt war oder wenn Link-Klicks automatisch verfolgt wurden.
 * Fehlerbehebung: Ein Link wird nicht automatisch verfolgt, wenn das Ankerelement HTML-Inhalt enthält.
-* Fehlerbehebung: Bestimmte Browserfehler, die eine schreibgeschützte `message`-Eigenschaft enthalten, wurden nicht ordnungsgemäß verarbeitet, was dazu führte, dass dem Kunden ein anderer Fehler angezeigt wurde.
-* Fehlerbehebung: Wenn das SDK in einem iframe ausgeführt wird, wird ein Fehler ausgegeben, wenn die HTML-Seite des iframe aus einer anderen Subdomäne stammt als die HTML-Seite des übergeordneten Fensters.
+* Fehlerbehebung: Bestimmte Browser-Fehler, die eine schreibgeschützte `message` -Eigenschaft enthalten, wurden nicht ordnungsgemäß verarbeitet, was dazu führte, dass dem Kunden ein anderer Fehler angezeigt wurde.
+* Fehlerbehebung: Wenn das SDK in einem iframe ausgeführt wird, tritt ein Fehler auf, wenn die HTML-Seite des iframe aus einer anderen Subdomäne stammt als die HTML-Seite des übergeordneten Fensters.
 
 ## Version 2.2.0, Oktober 2020
 
 * Fehlerbehebung: Das Opt-in-Objekt hinderte Alloy daran, Aufrufe durchzuführen, wenn `idMigrationEnabled` `true` ist.
-* Fehlerbehebung: Achten Sie auf Anforderungen, die Angebot zur Personalisierung zurückgeben, um ein flackerndes Problem zu vermeiden.
+* Fehlerbehebung: Machen Sie Alloy auf Anfragen aufmerksam, die Personalisierungsangebote zurückgeben sollen, um ein flackerndes Problem zu verhindern.
 
 ## Version 2.1.0, August 2020
 
-* Entfernen Sie den Befehl `syncIdentity` und unterstützen Sie die Übergabe dieser IDs im Befehl `sendEvent`.
-* Unterstützung von IAB 2.0 Consent Standard.
-* Unterstützung der Weitergabe zusätzlicher IDs im Befehl `setConsent`.
-* Support Außerkraftsetzen von `datasetId` im Befehl `sendEvent`
-* Unterstützung für zulässige Monitore ([Mehr lesen](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
-* Übergeben Sie `environment: browser` in die Kontextdaten der Implementierung.
+* Entfernen Sie den Befehl `syncIdentity` und unterstützen Sie die Übergabe dieser IDs im Befehl `sendEvent` .
+* Unterstützung für IAB 2.0 Consent Standard.
+* Unterstützung für die Übergabe zusätzlicher IDs im `setConsent`-Befehl.
+* Unterstützung, die das `datasetId` im Befehl `sendEvent` überschreibt.
+* Unterstützende Alloy-Monitore ([mehr dazu](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
+* Übergeben Sie `environment: browser` in die Kontextdaten der Implementierungsdetails.
