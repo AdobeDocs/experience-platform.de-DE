@@ -1,22 +1,34 @@
 ---
 keywords: Bestimmungsländer; Fragen; häufig gestellte Fragen; faq; Ziele-FAQ
-title: 'Häufig gestellte Fragen '
-seo-title: 'Häufig gestellte Fragen '
+title: Häufig gestellte Fragen
+seo-title: Häufig gestellte Fragen
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 seo-description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: a01b53758f4ad42272c39f71a08021d30900e7af
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 12%
+source-wordcount: '733'
+ht-degree: 11%
 
 ---
 
 
-# Häufig gestellte Fragen  {#faq}
+# Häufig gestellte Fragen {#faq}
 
 ## Übersicht {#overview}
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform-Zielen. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Platform]-Diensten, einschließlich der bei allen [!DNL Platform]-APIs aufgetretenen Probleme, finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
+
+## Allgemeine Fragen zu Zielen {#general}
+
+**Warum werden in der Experience Platform-Benutzeroberfläche und in den exportierten CSV-Dateien unterschiedliche Profilzahlen angezeigt?**
+
+Dies ist ein normales Verhalten aufgrund der Art und Weise, wie Experience Platform die Segmentierung durchführt.
+
+Streaming-Segmentierung aktualisiert die Profilanzahl für Streaming-Segmente über den ganzen Tag, während die Batch-Segmentierung die Profilanzahl für Batch-Segmente einmal alle 24 Stunden aktualisiert.
+
+Wenn sich der Zeitplan für den Segmentexport von dem der Segmentierungsplanung unterscheidet, unterscheiden sich die Profilzahlen zwischen der Benutzeroberfläche und der exportierten [!DNL CSV]-Datei, insbesondere bei Streaming-Segmenten.
+
+Weitere Informationen finden Sie in der [Dokumentation zum Segmentation Service](../segmentation/home.md).
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
