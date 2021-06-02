@@ -3,9 +3,9 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 32bc4fc3c8a33c5ba91f6edb0d859691046bccaf
+source-git-commit: 835fbee335c1b125f22a33f1806680514dfd9a6f
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '822'
 ht-degree: 3%
 
 ---
@@ -138,6 +138,10 @@ Weitere Informationen finden Sie unter [Kategorien für Zielgruppen](https://exp
 Mit [!DNL Platform Web SDK] können Sie das Profil als Erlebnisereignis auf das Profil [!DNL Target] und auf das Profil [!DNL Platform Web SDK] aktualisieren.
 
 Um ein [!DNL Target]-Profil zu aktualisieren, stellen Sie sicher, dass die Profildaten wie folgt übergeben werden:
+
+* Unter `“data {“`
+* Unter `“__adobe”`
+* Präfix `“profile.”`, z. B. wie unten
 
 | Schlüssel | Typ | Beschreibung |
 | --- | --- | --- |
