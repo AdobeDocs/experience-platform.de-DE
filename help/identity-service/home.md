@@ -5,10 +5,10 @@ title: Identity Service – Übersicht
 topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 288f24351788ed4b8a0c68cffe5eb5c91ed01691
 workflow-type: tm+mt
-source-wordcount: '1717'
-ht-degree: 100%
+source-wordcount: '1734'
+ht-degree: 99%
 
 ---
 
@@ -113,6 +113,10 @@ Sowohl Datensatz- als auch Zeitreihenschemas bieten die Möglichkeit, Identität
 ### Markieren von XDM-Feldern als Identität
 
 Jedes Feld vom Typ `string` in Schemas, die XDM-Klassen für Datensätze oder Zeitreihen implementieren, kann als Identitätsfeld gekennzeichnet werden. In der Folge würden alle in diesem Feld erfassten Daten als Identitätsdaten betrachtet.
+
+>[!NOTE]
+>
+>Felder vom Typ Array und Zuordnung werden nicht unterstützt und können nicht als Identitätsfelder markiert und gekennzeichnet werden.
 
 Identitätsfelder erlauben auch eine Verknüpfung von Identitäten, wenn diese gemeinsame personenbezogene Daten aufweisen.
 Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen, stellt [!DNL Identity Service] die Beziehungen zu den anderen Personen, bei denen dieselbe Telefonnummer ermittelt wurde, automatisch grafisch dar.
