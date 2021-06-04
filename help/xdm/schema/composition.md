@@ -5,10 +5,10 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
 workflow-type: tm+mt
-source-wordcount: '3624'
-ht-degree: 33%
+source-wordcount: '3657'
+ht-degree: 32%
 
 ---
 
@@ -55,7 +55,7 @@ Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform] verwendet. D
 
 Um diesen Prozess zu unterstützen, können Schlüsselfelder in Ihren Schemas als Identitäten markiert werden. Bei der Datenerfassung werden die Daten in diesen Feldern in das &quot;[!UICONTROL Identitätsdiagramm]&quot;für diese Person eingefügt. Die Diagrammdaten können dann von [[!DNL Real-time Customer Profile]](../../profile/home.md) und anderen [!DNL Experience Platform]-Diensten aufgerufen werden, um eine zusammengesetzte Ansicht jedes einzelnen Kunden bereitzustellen.
 
-Zu den Feldern, die häufig als &quot;[!UICONTROL Identität]&quot;gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-ID oder andere eindeutige ID-Felder. Sie sollten auch alle eindeutigen Kennungen berücksichtigen, die für Ihr Unternehmen spezifisch sind, da sie auch gut mit den Feldern &quot;[!UICONTROL Identität]&quot;sein können.
+Zu den Feldern, die häufig als &quot;[!UICONTROL Identität]&quot;gekennzeichnet sind, gehören: E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID oder andere eindeutige ID-Felder. Sie sollten auch alle eindeutigen Kennungen berücksichtigen, die für Ihr Unternehmen spezifisch sind, da sie auch gut mit den Feldern &quot;[!UICONTROL Identität]&quot;sein können.
 
 Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. In der Übersicht zu [Adobe Experience Platform Identity Service](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
@@ -108,13 +108,15 @@ In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müss
 
 Da die Beibehaltung der Abwärtskompatibilität für die Schemaentwicklung von entscheidender Bedeutung ist, erzwingt [!DNL Experience Platform] ein rein additives Versionierungsprinzip, um sicherzustellen, dass alle Änderungen am Schema nur zu zerstörungsfreien Aktualisierungen und Änderungen führen. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
 
-| Unterstützte Änderungen | Brechende Änderungen (nicht unterstützt) |
-|------------------------------------|---------------------------------|
-| <ul><li>Hinzufügen neuer Felder zu einem vorhandenen Schema</li><li>Definieren eines obligatorischen Felds als optional</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Einführen neuer obligatorischer Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben von Attributen an eine andere Position in der Baumstruktur</li></ul> |
-
 >[!NOTE]
 >
->Wenn ein Schema noch nicht zur Aufnahme von Daten in [!DNL Experience Platform] verwendet wurde, können Sie eine brechende Änderung an diesem Schema vornehmen. Sobald das Schema jedoch in [!DNL Platform] verwendet wurde, muss es der Richtlinie für additive Versionierung entsprechen.
+>Wenn ein Schema noch nicht zur Aufnahme von Daten in [!DNL Experience Platform] verwendet wurde und nicht für die Verwendung im Echtzeit-Kundenprofil aktiviert wurde, können Sie eine brechende Änderung an diesem Schema vornehmen. Sobald das Schema jedoch in [!DNL Platform] verwendet wurde, muss es der Richtlinie für additive Versionierung entsprechen.
+
+In der folgenden Tabelle werden die Änderungen aufgeschlüsselt, die beim Bearbeiten von Schemas, Feldergruppen und Datentypen unterstützt werden:
+
+| Unterstützte Änderungen | Brechende Änderungen (nicht unterstützt) |
+| --- | --- |
+| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Definieren eines obligatorischen Felds als optional</li><li>Anzeigename und Beschreibung der Ressource ändern</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Einführen neuer obligatorischer Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben von Attributen an eine andere Position in der Baumstruktur</li></ul> |
 
 ### Schemas und Datenerfassung
 
