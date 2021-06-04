@@ -5,10 +5,10 @@ title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
-source-wordcount: '1904'
-ht-degree: 100%
+source-wordcount: '1982'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgeste
 Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen.
 
 | Beschriftung | Definition |
-|---|---|
+| --- | --- |
 | **C1** | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
 | **C2** | Daten können nicht zu einem Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
 | **C3** | Daten können nicht mit direkt identifizierbaren Informationen kombiniert oder anderweitig verwendet werden. [Weitere Infos...](#c3) |
@@ -34,13 +34,14 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | **C8** | Daten können nicht zur Messung der Websites oder Mobile Apps Ihres Unternehmens verwendet werden. [Weitere Infos...](#c8) |
 | **C9** | Daten können nicht in Datenwissenschafts-Workflows verwendet werden. [Weitere Infos...](#c9) |
 | **C10** | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. [Weitere Infos...](#c10) |
+| **C11** | Daten können nicht mit Segmentübereinstimmungspartnern freigegeben werden. [Weitere Infos...](#c11) |
 
 ## Identitätsbezeichnungen
 
 Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt.
 
 | Beschriftung | Definition |
-|---|---|
+| --- | --- |
 | **I1** | Direkt identifizierbare Daten, mit denen eine bestimmte Person anstatt eines Geräts identifiziert oder kontaktiert werden kann. |
 | **I2** | Indirekt identifizierbare Daten, die in Verbindung mit anderen Daten zur Identifizierung oder zum Kontakt mit einer bestimmten Person verwendet werden können. |
 
@@ -51,7 +52,7 @@ Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisie
 Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten von geografischen Daten handeln; diese Kategorie ist jedoch nicht auf geografische Daten beschränkt.
 
 | Beschriftung | Definition |
-|---|---|
+| --- | --- |
 | **S1** | Daten zur Angabe von Breiten- und Längengrad, die zur Bestimmung der genauen Position eines Geräts verwendet werden können. |
 | **S2** | Daten, die zur Bestimmung eines allgemein definierten Geofence-Bereichs verwendet werden können. |
 
@@ -126,3 +127,7 @@ Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwis
 #### C10 {#c10}
 
 Einige Datennutzungsrichtlinien beschränken die Verwendung von zusammengesetzten Identitätsdaten für die Personalisierung. Die Kennzeichnung C10 wird automatisch auf Segmente angewendet, wenn deren Zusammenführungsrichtlinien die Option „Privates Diagramm“ verwenden.
+
+#### C11 {#c11}
+
+Adobe Experience Platform-Segmentübereinstimmung ermöglicht es Ihnen, Erstanbietersegmente mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilerstellung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung C11 bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus der Segmentübereinstimmung ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom Workflow Segmentübereinstimmung erzwungen.
