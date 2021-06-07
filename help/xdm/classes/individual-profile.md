@@ -5,9 +5,9 @@ title: XDM Individual Profile Class
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Profile".
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: eddaa7090af2d2c947f154272bb219dc2e3bca08
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '561'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Die [!DNL XDM Individual Profile]-Klasse stellt mehrere systemgenerierte Werte b
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `_repo` | Ein Objekt, das die folgenden [!UICONTROL DateTime]-Felder enthält: <ul><li>`createDate`: Datum und Uhrzeit der Erstellung der Ressource im Datenspeicher, z. B. Zeitpunkt der ersten Datenerfassung.</li><li>`modifyDate`: Datum und Uhrzeit der letzten Änderung der Ressource.</li></ul> |
-| `_id` | Eine eindeutige Kennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, Datenduplizierung zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen.<br><br>Es ist wichtig zu unterscheiden, dass dieses Feld  **keine Identität** darstellt, die sich auf eine Person bezieht, sondern vielmehr den Datensatz selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) umgeleitet werden. |
+| `_id` | Eine eindeutige Zeichenfolgenkennung für den Datensatz. Dieses Feld wird verwendet, um die Eindeutigkeit eines einzelnen Datensatzes zu verfolgen, eine Duplizierung von Daten zu verhindern und diesen Datensatz in nachgelagerten Diensten nachzuschlagen. In einigen Fällen kann `_id` eine [Universally Unique Identifier (UUID)](https://tools.ietf.org/html/rfc4122) oder [Globally Unique Identifier (GUID)](https://docs.microsoft.com/en-us/dotnet/api/system.guid?view=net-5.0) sein.<br><br>Wenn Sie Daten aus einer Quellverbindung streamen oder direkt aus einer Parquet-Datei erfassen, sollten Sie diesen Wert generieren, indem Sie eine bestimmte Kombination von Feldern miteinander verknüpfen, die den Datensatz eindeutig machen, z. B. eine primäre ID, einen Zeitstempel, einen Datensatztyp usw. Der verkettete Wert muss eine `uri-reference` formatierte Zeichenfolge sein, d. h. alle Doppelpunkt-Zeichen müssen entfernt werden. Danach sollte der verkettete Wert mit SHA-256 oder einem anderen Algorithmus Ihrer Wahl gehasht werden.<br><br>Es ist wichtig zu unterscheiden, dass  **dieses Feld keine Identität darstellt, die mit einer Person** in Verbindung steht, sondern vielmehr den Datensatz selbst. Identitätsdaten, die sich auf eine Person beziehen, sollten stattdessen auf [Identitätsfelder](../schema/composition.md#identity) beschränkt werden, die von kompatiblen Feldergruppen bereitgestellt werden. |
 | `createdByBatchID` | Die ID des erfassten Batches, der zur Erstellung des Datensatzes geführt hat. |
 | `modifiedByBatchID` | Die ID des letzten erfassten Batches, der zur Aktualisierung des Datensatzes geführt hat. |
 | `personID` | Eine eindeutige Kennung für die Person, auf die sich dieser Datensatz bezieht. Dieses Feld stellt nicht unbedingt eine mit der Person verwandte Identität dar, es sei denn, es ist auch als [Identitätsfeld](../schema/composition.md#identity) gekennzeichnet. |
