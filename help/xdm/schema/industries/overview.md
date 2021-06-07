@@ -1,53 +1,40 @@
 ---
 solution: Experience Platform
-title: Branchendatenmodelle - Übersicht
+title: Übersicht über Branchendatenmodelle
 topic-legacy: overview
-description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene Branchen, die mit XDM-Komponenten (Standard Experience Data Model) konstruiert werden können.
+description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene vertikale Branchen, die mit standardmäßigen XDM-Komponenten (Experience-Datenmodell) erstellt werden können.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-translation-type: tm+mt
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 0%
+source-wordcount: '353'
+ht-degree: 1%
 
 ---
 
-# Übersicht über die Datenmodelle
+# Übersicht über die Datenmodelle der Branche
 
-Mit dem Experience Data Model (XDM) können Sie hochgradig anpassbare Schema erstellen, um wichtige Kundenerlebnisdaten in Bezug auf Ihr Unternehmen zu erfassen. Um den Prozess der Modellierung Ihrer Daten an XDM anzupassen, stellt Adobe Experience Platform eine vielseitige Suite mit Standard-XDM-Komponenten bereit, die Konzepte erfassen, die in verschiedenen Branchen häufig verwendet werden.
+Mit dem Experience-Datenmodell (XDM) können Sie hochgradig anpassbare Schemas erstellen, um wichtige Kundenerlebnisdaten zu Ihrem Unternehmen zu erfassen. Um den Prozess der Modellierung Ihrer Daten entsprechend XDM zu optimieren, bietet Adobe Experience Platform eine vielseitige Suite mit Standard-XDM-Komponenten, die Konzepte erfassen, die häufig in verschiedenen Branchen verwendet werden.
 
 >[!NOTE]
 >
->Neue Standard-XDM-Komponenten werden kontinuierlich an die Bedürfnisse der Kunden angepasst. Für eine Liste der aktuellsten Komponenten können Sie [vorhandene Ressourcen in der Benutzeroberfläche](../../ui/explore.md) erkunden oder auf GitHub auf das [offizielle XDM-Repository](https://github.com/adobe/xdm/tree/master/components) verweisen.
+>Neue Standard-XDM-Komponenten werden kontinuierlich veröffentlicht, um den Anforderungen der Verbraucher am besten gerecht zu werden. Eine Liste der aktuellsten Komponenten finden Sie unter [Vorhandene Ressourcen in der Benutzeroberfläche](../../ui/explore.md) oder im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components) auf GitHub.
 
-Je nach Branche, in der Ihr Unternehmen tätig ist, werden einige XDM-Komponenten für Ihre Bedürfnisse relevanter sein als andere. Darüber hinaus variieren die Beziehungen, die Sie zwischen Ihren XDM-Schemas herstellen, je nach Branche.
+Je nach Branche, in der Ihr Unternehmen tätig ist, sind einige XDM-Komponenten für Ihre Anforderungen relevanter als andere. Darüber hinaus variieren die Beziehungen, die Sie zwischen Ihren XDM-Schemas herstellen, je nach Branche.
 
-Dieser Leitfaden enthält eine Übersicht über Entitäts-Relationship-Diagramme (ERDs) für verschiedene unterstützte Branchenzeitschriften, um Ihnen dabei zu helfen, Ihre Datenmodellierungsstrategie auf Basis Ihrer Branche zu gestalten.
+Um Ihre Datenmodellierungsstrategie basierend auf Ihrer Branche zu steuern, bietet dieses Handbuch eine Referenz zu Entitätsbeziehungsdiagrammen (ERDs) für verschiedene unterstützte Branchen-Vertikale.
 
-## Voraussetzungen 
+## Voraussetzungen  
 
-Um die in diesem Handbuch erwähnten ERDs zu lesen, müssen Sie über ein funktionierendes Verständnis dafür verfügen, wie XDM-Komponenten mit Schemas interagieren und wie XDM-Schema in der Experience Platform als Ganzes funktionieren. Vergewissern Sie sich, dass Sie die folgende Übersichtsdokumentation gelesen haben, bevor Sie fortfahren:
+Um die in diesem Handbuch referenzierten ERDs zu lesen, müssen Sie wissen, wie XDM-Komponenten mit Formularschemata interagieren und wie XDM-Schemas in der Experience Platform als Ganzes funktionieren. Stellen Sie sicher, dass Sie die folgende Übersichtsdokumentation gelesen haben, bevor Sie fortfahren:
 
-* [XDM-System - Übersicht](../../home.md): Erfahren Sie, wie XDM im Plattform-Ökosystem arbeitet.
-* [Grundlagen der Zusammensetzung](../../schema/composition.md) des Schemas: Erfahren Sie, wie XDM-Komponenten (z. B. Schema-Feldgruppen, Klassen und Datentypen) zur Struktur eines Schemas sowie zur Rolle von Identitätsfeldern beitragen.
+* [XDM-System - Übersicht](../../home.md): Erfahren Sie, wie XDM im Platform-Ökosystem arbeitet.
+* [Grundlagen der Schemakomposition](../../schema/composition.md): Erfahren Sie, wie XDM-Komponenten (wie Schemafeldgruppen, Klassen und Datentypen) zur Struktur eines Schemas sowie zur Rolle von Identitätsfeldern beitragen.
 
-Es wird außerdem empfohlen, den Leitfaden [Best Practices zur Datenmodellierung](../../schema/best-practices.md) für allgemeine Richtlinien zur Zuordnung Ihrer Daten zu XDM zu lesen.
+Es wird außerdem empfohlen, die [Best Practices für die Datenmodellierung](../../schema/best-practices.md) zu lesen, um allgemeine Richtlinien für die Zuordnung Ihrer Daten zu XDM zu erhalten.
 
 ## ERDs des Branchendatenmodells {#erds}
 
-Die unten aufgeführten, von ERDs dargestellten vertikalen Branchenmodelle werden absichtlich denormalisiert und unter Berücksichtigung der Art und Weise, wie Daten in Plattform gespeichert werden, erstellt.
-
-Für eine bestimmte ERD basiert jede in dargestellte Entität auf einer zugrunde liegenden XDM-Klasse. Für eine bestimmte Entität stellt jede in **bold** markierte Zeile eine Feldgruppe oder einen Datentyp dar, wobei die entsprechenden Felder unten im unverschlüsselten Text aufgeführt sind. Die wichtigsten Felder für eine bestimmte Entität werden rot hervorgehoben.
-
->[!NOTE]
->
->Einige Entitäten können ein Feld &quot;_ID&quot;enthalten. Dies stellt den eindeutigen Bezeichner (`_id`) dar, den die Plattform bei der Erfassung automatisch Ereignis- oder Profil-Entitäten zuweist. Sie können jedoch auch Ihre eigenen eindeutigen ID-Werte für dieses Feld verwenden, wenn Sie möchten.
-
-Alle Eigenschaften, die zur Identifizierung einzelner Kunden verwendet werden können, werden als &quot;Identität&quot;gekennzeichnet, wobei eine dieser Eigenschaften als &quot;primäre Identität&quot;gekennzeichnet ist.
-
-Entitätsbeziehungen werden als nicht abhängig markiert, da cookie-basierte Ereignis häufig nicht bestimmen können, wer die Transaktion durchgeführt hat.
-
-ERDs werden für folgende Branchen bereitgestellt:
+ERDs werden für die folgenden vertikalen Industrien bereitgestellt:
 
 * [[!UICONTROL Einzelhandel]](./retail.md)
 * [[!UICONTROL Finanzdienstleistungen]](./financial.md)
@@ -55,4 +42,4 @@ ERDs werden für folgende Branchen bereitgestellt:
 
 ## Nächste Schritte
 
-Dieses Dokument gab einen Überblick über die branchenspezifischen Datenmodelle und deren Interpretation. Um eine ERD-Ansicht zu erstellen, wählen Sie eine aus der oben stehenden Liste aus.
+Dieses Dokument bietet einen Überblick über die branchenspezifischen Datenmodell-ERDs und deren Interpretation. Um eine ERD anzuzeigen, wählen Sie eine aus der obigen Liste aus.
