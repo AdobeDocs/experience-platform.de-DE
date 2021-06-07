@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie Variablen mithilfe von Verarbeitungsregeln im
 seo-description: Manuelles Zuordnen von Variablen zu Adobe Analytics mithilfe von Verarbeitungsregeln mit dem Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d67c8c0ada6dc4bf07b73547f9e571a8a7386b75
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 17%
+source-wordcount: '395'
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Web SDK] kann bestimmte Variablen automatisch zu
 
 Für XDM-Daten, die nicht automatisch [!DNL Analytics] zugeordnet werden, können Sie [Kontextdaten](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) verwenden, um Ihr [Schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html) zu entsprechen. Anschließend kann sie [!DNL Analytics] mithilfe von [Verarbeitungsregeln](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) zugeordnet werden, um [!DNL Analytics] -Variablen zu füllen.
 
-Außerdem können Sie einen Standardsatz von Aktionen und Produktlisten verwenden, um Daten mit dem Adobe Experience Platform Web SDK zu senden oder abzurufen. Weitere Information finden Sie unter [Produkte](https://experienceleague.adobe.com/docs/experience-platform/edge/implement/commerce.html).
+Außerdem können Sie einen Standardsatz von Aktionen und Produktlisten verwenden, um Daten mit dem Adobe Experience Platform Web SDK zu senden oder abzurufen. Weitere Informationen finden Sie unter [Commerce- und Produktinformationen abrufen](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Kontextdaten
 
