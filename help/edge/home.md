@@ -1,46 +1,45 @@
 ---
-title: Übersicht über Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK verwenden, um Plattformfunktionen in Ihre Website zu integrieren.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Besucher.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;Web SDK;Web SDK;Launch;Launch
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Übersicht über das Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Platform-Funktionen in Ihre Website integrieren können.
+keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
+source-git-commit: 7607f01109de1f6207f2e910a8620698c60b89d4
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 15%
+source-wordcount: '674'
+ht-degree: 14%
 
 ---
 
+# Übersicht über das Adobe Experience Platform Web SDK
 
-# Übersicht über Adobe Experience Platform Web SDK
-
-Adobe Experience Platform Web SDK ist eine clientseitige JavaScript-Bibliothek, die es Kunden von Adobe Experience Cloud ermöglicht, über das Adobe Experience Platform Edge Network mit den verschiedenen Diensten im [!DNL Experience Cloud] zu interagieren. Zusätzlich zur JavaScript-Bibliothek gibt es eine [Experience Platform Launch-Erweiterung](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html), die Sie bei Ihren Web SDK-Konfigurationen unterstützen kann.
+Das Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, mit der Kunden von Adobe Experience Cloud über das Adobe Experience Platform Edge Network mit den verschiedenen Diensten im [!DNL Experience Cloud] interagieren können. Zusätzlich zur JavaScript-Bibliothek gibt es eine [Experience Platform Launch-Erweiterung](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html), die Ihnen bei Ihren Web SDK-Konfigurationen hilft.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] ist Teil der Sammlung, aus der Experience Edge besteht. Experience Edge umfasst drei Technologien:
 
 * **[!DNL Adobe Experience Platform Web SDK]:** Ein JavaScript-SDK und eine  [!DNL Experience Platform Launch] Erweiterung zur drastischen Vereinfachung der Bereitstellung von  [!DNL Adobe] Technologien
-* **Adobe Experience Platform Mobile SDK:** Eine Erweiterung des v5 Mobile SDK, damit Kunden die neue Bereitstellungsmethodik verwenden können
+* **Adobe Experience Platform Mobile SDK:**  Eine Erweiterung des Mobile SDK v5, um Kunden die Verwendung der neuen Bereitstellungsmethode zu ermöglichen
 * **[!DNL Adobe Experience Platform Edge Network]:** Ein globales Netzwerk verteilter Server, das eine neue Methode zur Bereitstellung von  [!DNL Adobe] Produkten ermöglicht
 
-Das [!DNL Adobe Experience Edge] ist ein neues Framework für die Datenerfassung mit geringer Latenz, für Plug-In-Computing und für die schnelle Aktivierung von Daten in allen adressierbaren Kanälen.
+[!DNL Adobe Experience Edge] ist ein neues Framework für die Erfassung von Daten mit geringer Latenz, für Pluggable Computing und für die schnelle Aktivierung von Daten über alle adressierbaren Kanäle hinweg.
 
-[!DNL Adobe Experience Edge] stellt für jeden Kanal (JavaScript, Mobil, Server-seitig) ein einziges konsolidiertes SDK bereit, das Daten an eine allgemeine Adobe-Domäne (`adobedc.net`) sendet und eine einzige Nutzlast für Daten- und Erlebnis-Versand erhält.
+[!DNL Adobe Experience Edge] bietet für jeden Kanal (JavaScript, Mobil, Server-seitig) ein einziges konsolidiertes SDK, das Daten an eine gemeinsame Adobe-Domain (`adobedc.net`) sendet und eine einzige Payload für die Daten- und Erlebnisbereitstellung erhält.
 
-Serverseitig ermöglicht ein einheitliches Edge-Gateway und ein gemeinsames Framework für Plattformdienste eine einfache Plug-in- und Bereitstellung neuer Funktionen in dieser Echtzeit-Computing-Umgebung.  Diese Architektur:
+Auf der Server-Seite erleichtert ein einheitliches Edge-Gateway und ein gemeinsames Framework für Plattformdienste das Plug-in und die Bereitstellung neuer Funktionen in dieser Echtzeit-Computerumgebung.  Diese Architektur:
 
-* Verringert die Besuchszeit für Kunden
+* Verringert Kundenzeit bis Wert
 * Beendet die Notwendigkeit von &quot;Point&quot;-Integrationen
 * Verbessert die Leistung im Vergleich zu den alten Bibliotheken
 * Kostensenkungen
 * Erhöht die Innovationsgeschwindigkeit
-* Erwirbt nachhaltige Wettbewerbsvorteile für Adoben
+* Erstellt nachhaltige Wettbewerbsvorteile für Adobe-Kunden
 
-Ein einheitliches konsolidiertes Kantensystem ermöglicht es Kunden, ihre Werbe-, Marketing- oder Personalisierungs-Kampagnen über alle Kanal hinweg zu verwalten.  Es ermöglicht [!DNL Adobe], Dienste mit niedrigeren Gesamtbetriebskosten für Kunden bereitzustellen.  Darüber hinaus wird die Produktneuerung beschleunigt, indem der Echtzeit-Edge-Plug-In ermöglicht wird und [!DNL Adobe] und seine Kunden diesem Echtzeit-System schneller neue Funktionen und kundenspezifische Logik hinzufügen können.
+Mit einem einzigen konsolidierten Edge-System können Kunden ihre Werbe-, Marketing- oder Personalisierungskampagnen über alle Kanäle hinweg als integriertes Erlebnis verwalten.  Dadurch kann [!DNL Adobe] Dienste mit geringeren Gesamtbetriebskosten für Kunden bereitstellen.  Es trägt auch zur Beschleunigung der Produktinnovation bei, indem es die Echtzeit-Edge-Plugins ermöglicht und [!DNL Adobe] und seinen Kunden ermöglicht, diesem Echtzeit-System schneller neue Funktionen und kundendefinierte Logik hinzuzufügen.
 
 ## Videoüberblick
 
-Das folgende Video gibt einen Überblick über das Adobe Experience Platform [!DNL Web SDK] und Adobe Experience Platform [!DNL Edge Network].
+Das folgende Video gibt einen Überblick über die Adobe Experience Platform [!DNL Web SDK] und Adobe Experience Platform [!DNL Edge Network].
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
 
@@ -53,17 +52,17 @@ Das Adobe Experience Platform Web SDK ersetzt die folgenden SDKs:
 * AT.js
 * DIL.js
 
-Dies ist nicht nur ein Wrapper um vorhandene Bibliotheken. Es ist eine vollständige Umschreibung. Ihr Zweck ist es, Herausforderungen zu beenden, indem Tags in der richtigen Reihenfolge ausgelöst werden müssen, die nicht mit den Versionshinweisen der Bibliothek übereinstimmen und die Abhängigkeitsverwaltung verbessert wird. Es ist eine neue Methode, die [!DNL Experience Cloud] zu implementieren, und es ist [open source](https://github.com/adobe/alloy).
+Dies ist nicht nur ein Wrapper um vorhandene Bibliotheken. Es ist eine vollständige Umschreibung. Ihr Zweck besteht darin, Herausforderungen zu beenden, indem Tags in der richtigen Reihenfolge ausgelöst werden, die Konsistenz mit Herausforderungen bei der Bibliotheksversionierung beeinträchtigt wird und die Abhängigkeitsverwaltung verbessert wird. Es ist eine neue Methode, [!DNL Experience Cloud] zu implementieren und ist [Open Source](https://github.com/adobe/alloy).
 
 Neben einer neuen Bibliothek gibt es einen neuen Endpunkt, der die HTTP-Abfragen an Adobe-Lösungen optimiert. Zuvor sendete Visitor.js einen Sperraufruf an den Besucher-ID-Dienst und dann einen Aufruf an Adobe Target, dann sandte DIL.js einen Aufruf an Adobe Audience Manager und schließlich schickte AppMeasurement.js einen Aufruf an Adobe Analytics. Diese neue Bibliothek und dieser Endpunkt können eine ID abrufen, ein [!DNL Target]-Erlebnis abrufen, Daten an [!DNL Audience Manager] senden und die Daten in einem einzigen Aufruf an Adobe Experience Platform übergeben.
 
-Das folgende Video zeigt, wie Adobe Experience Platform [!DNL Web SDK] und Adobe Experience Platform [!DNL Edge Network] in Aktion ausgeführt werden. Im Videobeispiel wird ein Einzelaufruf an die Adobe verwendet, der Daten an [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] und [!DNL Target] sendet.
+Das folgende Video zeigt Adobe Experience Platform [!DNL Web SDK] und Adobe Experience Platform [!DNL Edge Network] in Aktion. Das Videobeispiel verwendet einen einzigen Aufruf an Adobe, der Daten an [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] und [!DNL Target] sendet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Dieses Produkt entwickelt sich ständig und wächst, um immer mehr Anwendungsfälle zu unterstützen. Um auf dem neuesten Stand zu sein, schauen Sie sich unser [unterstütztes Gebrauchsanweisung](https://github.com/adobe/alloy/projects/5) an. Wir halten dies auf dem neuesten Stand mit den derzeit unterstützten Anwendungsfällen und den Fällen, an denen wir arbeiten, damit Sie die bestmöglichen Entscheidungen treffen können.
+Dieses Produkt entwickelt sich ständig weiter und wächst, um immer mehr Anwendungsfälle zu unterstützen. Um mit dem neuesten Stand zu bleiben, lesen Sie die Seite [Unterstützte Anwendungsfälle](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Auf dieser Seite werden die aktuell unterstützten Anwendungsfälle mit Links zu weiteren Informationen aufgeführt, sofern verfügbar.
 
-* **Anwendungsfälle, die noch nicht unterstützt werden:** Dies sind Anwendungsfälle, die auf unserem Plan stehen und in Zukunft unterstützt werden sollen.
-* **Anwendungsfälle noch nicht abgeschlossen:** Dies sind die Anwendungsfälle, mit denen das Team derzeit arbeitet.
+* **Nutzungsszenarios noch nicht unterstützt:**  Dies sind Anwendungsfälle, die auf unserem Fahrplan stehen und in Zukunft unterstützt werden sollen.
+* **Anwendungsfälle in Bearbeitung:**  Dies sind die Anwendungsfälle, mit denen das Team derzeit eine Version abschließt.
 * **Unterstützte Anwendungsfälle:** Dies sind die Anwendungsfälle, die unterstützt werden und heute funktionieren.
-* **Anwendungsfälle, die wir nicht unterstützen werden:** Dies sind die Anwendungsfälle, die wir beschlossen haben, nicht zu unterstützen.
+* **Nutzungsszenarios, die wir nicht unterstützen:** Dies sind die Anwendungsfälle, für die wir entschieden haben, sie nicht zu unterstützen.
