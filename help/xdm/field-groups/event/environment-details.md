@@ -5,7 +5,7 @@ title: Feldergruppe "Umgebungsdetails"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe ExperienceEvent Environment Details .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 5%
@@ -19,7 +19,7 @@ ht-degree: 5%
 >
 >Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
 
-[!UICONTROL Umgebungsdetails ] sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/individual-profile.md) Klasse, die zum Erfassen von Informationen zu Umgebungsdetails im Zusammenhang mit einem Erlebnisereignis wie Gerätedetails, Browserinformationen, lokaler Zeit und anderen geografischen Informationen verwendet wird.
+[!UICONTROL Umgebungsdetails ] sind eine Standardschemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, die zum Erfassen von Informationen zu Umgebungsdetails im Zusammenhang mit einem Erlebnisereignis wie Gerätedetails, Browserinformationen, lokaler Zeit und anderen geografischen Informationen verwendet wird.
 
 <img src="../../images/field-groups/environment-details.png" width="500" /><br />
 
