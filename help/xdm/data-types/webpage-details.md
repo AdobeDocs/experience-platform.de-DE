@@ -5,7 +5,7 @@ title: Datentyp "Web Page Details"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Webseitendetails zum Experience-Datenmodell (XDM)-Datentyp.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 11%
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 [!UICONTROL Auf einer Webseite ] wird ein standardmäßiger XDM-Datentyp (Experience-Datenmodell) beschrieben, der Details zu einer Web-Seite beschreibt, die gerade geladen und angezeigt wurde, wie von einem ExperienceEvent aufgezeichnet.
 
-Der Datentyp ist für vollständige Seitendetails und das erstmalige Laden von Einzelseiten-Webanwendungen (SPA) vorgesehen. Informationen zu Interaktionen, die auf einer geladenen Seite stattfinden und bei denen kein neuer Seitenladevorgang Trigger wird, finden Sie im Datentyp [Web interaction](./web-interactions.md) .
+Der Datentyp ist für vollständige Seitendetails und das erstmalige Laden von Einzelseiten-Webanwendungen (SPA) vorgesehen. Informationen zu Interaktionen, die auf einer geladenen Seite stattfinden und bei denen kein neuer Seitenladevorgang Trigger wird, finden Sie im Datentyp [Web interaction](./web-interaction.md) .
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
