@@ -6,10 +6,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 27aafcbfc8f52491387561514e3b34313cc5d943
+source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 13%
+source-wordcount: '2688'
+ht-degree: 12%
 
 ---
 
@@ -48,6 +48,11 @@ Wählen Sie im Workflow **[!UICONTROL Ziel aktivieren]** auf der Seite **[!UICON
 ![Segment an Ziel](../assets/ui/activate-destinations/email-select-segments.png)
 
 ##  Zuordnungsschritt {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Umwandlung anwenden"
+>abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern, damit Adobe Experience Platform sie bei Aktivierung automatisch hash."
 
 Gilt für: Social-Ziele und Werbeziel für Google-Kundenabgleich
 
@@ -239,6 +244,12 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.sta
 
 ### Obligatorische Attribute {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="Über obligatorische Attribute"
+>abstract="Wählen Sie die XDM-Schemaattribute aus, die alle exportierten Profile enthalten sollen. Profile ohne obligatorischen Schlüssel werden nicht an das Ziel exportiert. Wenn Sie keinen obligatorischen Schlüssel auswählen, werden alle qualifizierten Profile unabhängig von ihren Attributen exportiert."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Sie können Attribute als obligatorisch markieren, um sicherzustellen, dass [!DNL Platform] nur die Profile exportiert, die das spezifische Attribut enthalten. Sie kann daher als zusätzliche Filterform verwendet werden. Die Kennzeichnung eines Attributs als obligatorisch ist **nicht** erforderlich.
 
 Wenn kein obligatorisches Attribut ausgewählt wird, werden alle qualifizierten Profile unabhängig von ihren Attributen exportiert.
@@ -246,6 +257,12 @@ Wenn kein obligatorisches Attribut ausgewählt wird, werden alle qualifizierten 
 Es wird empfohlen, eines der Attribute aus Ihrem Schema eine [eindeutige Kennung](../../destinations/catalog/email-marketing/overview.md#identity) zu verwenden. Weitere Informationen zu obligatorischen Attributen finden Sie im Abschnitt Identität in der Dokumentation [E-Mail-Marketing-Ziele](../../destinations/catalog/email-marketing/overview.md#identity) .
 
 ### Deduplizierungsschlüssel {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="Über Deduplizierungsschlüssel"
+>abstract="Beseitigen Sie mehrere Datensätze desselben Profils in den Exportdateien, indem Sie einen Deduplizierungsschlüssel auswählen. Wählen Sie einen einzelnen Namespace oder bis zu zwei XDM-Schemaattribute als Deduplizierungsschlüssel aus. Wenn Sie keinen Deduplizierungsschlüssel auswählen, werden in den Exportdateien möglicherweise doppelte Profileinträge angezeigt."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 >[!IMPORTANT]
 >
