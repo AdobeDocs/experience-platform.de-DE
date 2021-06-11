@@ -4,7 +4,7 @@ user-guide-title: Anleitung zu Katalog und Datensätzen
 user-guide-description: Informieren Sie sich über Datenlinien, Metadaten, Dateibeschreibungen, Verzeichnissen und Datensätzen im Data Lake.
 feature: Data Management
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '108'
 ht-degree: 100%
 
