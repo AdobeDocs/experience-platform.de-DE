@@ -92,7 +92,7 @@ Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste a
 
 ![](../images/enforcement/list-view.png)
 
-## Richtliniendurchsetzung für aktivierte Segmente  {#policy-enforcement-for-activated-segments}
+## Richtliniendurchsetzung für aktivierte Segmente {#policy-enforcement-for-activated-segments}
 
 Die Richtliniendurchsetzung gilt auch für Segmente, nachdem sie aktiviert wurden. Dadurch werden Änderungen an einem Segment oder seinem Ziel eingeschränkt, die zu einem Richtlinienverstoß führen würden. Aufgrund der Funktionsweise der [Datenherkunft](#lineage) bei der Durchsetzung von Richtlinien können die folgenden Aktionen möglicherweise eine Verletzung auslösen:
 
