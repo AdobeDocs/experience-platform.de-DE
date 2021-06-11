@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4143'
 ht-degree: 100%
 
@@ -56,7 +56,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -86,7 +86,7 @@ Modelldarstellungen eines Beispiel-ETL-Tools und -Workflows stehen unter [ETL-Wo
 
 >[!NOTE]
 >
-> Der ETL-Connector muss einen Filter für den Zeitstempel definieren, der das Datum zur Aufnahme von Daten und Offset (d. h. das Fenster, für das Daten gelesen werden sollen) kennzeichnet. Das ETL-Tool sollte die Aufnahme dieser beiden Parameter in dieser oder einer anderen relevanten Benutzeroberfläche unterstützen. In Adobe Experience Platform werden diese Parameter entweder Informationen zum Verfügbarkeitsdatum (sofern vorhanden) oder zum Erfassungsdatum im Batch-Objekt des Datensatzes zugeordnet.
+>Der ETL-Connector muss einen Filter für den Zeitstempel definieren, der das Datum zur Aufnahme von Daten und Offset (d. h. das Fenster, für das Daten gelesen werden sollen) kennzeichnet. Das ETL-Tool sollte die Aufnahme dieser beiden Parameter in dieser oder einer anderen relevanten Benutzeroberfläche unterstützen. In Adobe Experience Platform werden diese Parameter entweder Informationen zum Verfügbarkeitsdatum (sofern vorhanden) oder zum Erfassungsdatum im Batch-Objekt des Datensatzes zugeordnet.
 
 ### Anzeigen einer Liste von Datensätzen
 
@@ -172,7 +172,7 @@ Der erste Wert für „schemaRef.id“ im vorherigen Antwortobjekt (`https://ns.
 
 >[!NOTE]
 >
-> Die Eigenschaft „schema“ ist veraltet und wurde ersetzt durch die Eigenschaft „schemaRef“. Fehlt „schemaRef“ im Datensatz oder enthält keinen Wert, müssen Sie prüfen, ob eine „schema“-Eigenschaft vorhanden ist. Ersetzen Sie dazu im Abfrageparameter `properties` des vorherigen Aufrufs „schemaRef“ durch „Schema“. Näheres zur Eigenschaft „Schema“ finden Sie im nachfolgenden Abschnitt [Eigenschaft „Schema“ des Datensatzes](#dataset-schema-property-deprecated---eol-2019-05-30).
+>Die Eigenschaft „schema“ ist veraltet und wurde ersetzt durch die Eigenschaft „schemaRef“. Fehlt „schemaRef“ im Datensatz oder enthält keinen Wert, müssen Sie prüfen, ob eine „schema“-Eigenschaft vorhanden ist. Ersetzen Sie dazu im Abfrageparameter `properties` des vorherigen Aufrufs „schemaRef“ durch „Schema“. Näheres zur Eigenschaft „Schema“ finden Sie im nachfolgenden Abschnitt [Eigenschaft „Schema“ des Datensatzes](#dataset-schema-property-deprecated---eol-2019-05-30).
 
 **API-Format**
 
@@ -249,7 +249,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
-> Der optionale Abfrageparameter `expansion=xdm` weist die API an, alle referenzierten Schemas vollständig zu erweitern und einzubinden. Dies empfiehlt sich, wenn Sie eine Liste aller potenziellen Felder anzeigen möchten.
+>Der optionale Abfrageparameter `expansion=xdm` weist die API an, alle referenzierten Schemas vollständig zu erweitern und einzubinden. Dies empfiehlt sich, wenn Sie eine Liste aller potenziellen Felder anzeigen möchten.
 
 **Antwort**
 
@@ -491,7 +491,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 }
 ```
 
-Das Schreiben von Daten in [!DNL Experience Platform] erfolgt über die [Datenaufnahme-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). Das Schreiben von Daten ist ein asynchroner Prozess. Werden Daten in Adobe Experience Platform geschrieben, wird ein Batch erst dann erstellt und als erfolgreich markiert, wenn der Schreibvorgang der Daten vollständig abgeschlossen ist.
+Das Schreiben von Daten in [!DNL Experience Platform] erfolgt über die [Datenaufnahme-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  Das Schreiben von Daten ist ein asynchroner Prozess. Werden Daten in Adobe Experience Platform geschrieben, wird ein Batch erst dann erstellt und als erfolgreich markiert, wenn der Schreibvorgang der Daten vollständig abgeschlossen ist.
 
 Zum Schreiben von Daten in [!DNL Experience Platform] sollte das Parquet-Dateiformat verwendet werden.
 
