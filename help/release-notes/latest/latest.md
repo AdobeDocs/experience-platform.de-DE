@@ -8,14 +8,14 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
 workflow-type: tm+mt
 source-wordcount: '1355'
-ht-degree: 31%
+ht-degree: 36%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: Mittwoch, 26. Mai 2021**
+**Veröffentlichungsdatum: 26. Mai 2021**
 
 Neue Funktionen in Adobe Experience Platform:
 
@@ -70,7 +70,7 @@ Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Ziel
 
 ## [!DNL Experience Data Model (XDM)] {#xdm}
 
-Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die die Leistung digitaler Erlebnisse verbessern soll. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, um Einblicke schneller und besser integriert bereitzustellen. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu dient, die Leistung digitaler Erlebnisse zu verbessern. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -112,6 +112,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Benutzeroberflächenunterstützung für die komprimierte Dateiaufnahme | Sie können jetzt komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Speicherquellen in der Benutzeroberfläche in der Vorschau anzeigen und erfassen. Weitere Informationen finden Sie im Tutorial zum Konfigurieren eines Datenflusses für eine Cloud-Speicher-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md).[ |
-| Beta-Quellen wechseln zu GA | Die folgenden Quellen wurden von der Beta-Version zur allgemeinen Verfügbarkeit beworben: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
