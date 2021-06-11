@@ -7,7 +7,7 @@ type: Tutorial
 description: Mit der Policy Service-API können Sie Datennutzungsrichtlinien erstellen und verwalten, die bestimmen, welche Marketing-Aktionen für Daten entsprechend deren Datennutzungskennzeichnungen durchgeführt werden können. Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Datennutzungsrichtlinie mithilfe der Policy Service-API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1219'
 ht-degree: 100%
 
