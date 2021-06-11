@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenvorgabe;API-Leitfaden;Zuordnungssätze;
+keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Zuordnungssätze;
 solution: Experience Platform
-title: API-Endpunkt für Zuordnungen
+title: API-Endpunkt für Zuordnungssätze
 topic-legacy: mapping sets
-description: Sie können den Endpunkt "/mappingSets"in der Adobe Experience Platform API verwenden, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
+description: Sie können den Endpunkt „/mappingSets“ in der Adobe Experience Platform-API nutzen, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '807'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Endpunkt für Zuordnungen
+# Endpunkt für Zuordnungssätze
 
-Zuordnungssätze können verwendet werden, um zu definieren, wie Daten in einem Quell-Schema denen eines Ziel-Schemas zugeordnet werden. Sie können den Endpunkt `/mappingSets` in der Datenvorgabe-API verwenden, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
+Mit Zuordnungssätzen lässt sich definieren, wie Daten in einem Quellschema den Daten eines Zielschemas zugeordnet werden sollen. Sie können den `/mappingSets`-Endpunkt in der Datenvorbereitungs-API verwenden, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 
-## Zuordnungssätze für Listen
+## Auflisten von Zuordnungssätzen
 
-Sie können eine Liste aller Zuordnungssätze für Ihre IMS-Organisation abrufen, indem Sie eine GET an den `/mappingSets`-Endpunkt anfordern.
+Sie können eine Liste aller Zuordnungssätze für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/mappingSets`-Endpunkt senden.
 
 **API-Format**
 
-Der `/mappingSets`-Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Obwohl die meisten dieser Parameter optional sind, wird ihre Verwendung dringend empfohlen, um den teuren Aufwand zu reduzieren. Sie müssen jedoch sowohl die Parameter `start` als auch `limit` als Teil Ihrer Anforderung einbeziehen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/mappingSets`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Zwar sind die meisten dieser Parameter optional, doch wird ihre Verwendung dringend empfohlen, um kostspieligen Aufwand zu reduzieren. Sie müssen jedoch sowohl den Parameter `start` als auch den Parameter `limit` in Ihre Anfrage einbeziehen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /mappingSets?limit={LIMIT}&start={START}
@@ -35,14 +34,14 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{LIMIT}` | (**Erforderlich**) Gibt die Anzahl der zurückgegebenen Zuordnungssätze an. |
-| `{START}` | (**Erforderlich**) Gibt den Versatz der Seiten der Ergebnisse an. Um die erste Ergebnisseite abzurufen, legen Sie den Wert auf `start=0` fest. |
-| `{NAME}` | Die Zuordnungssätze werden nach Namen Filter. |
-| `{ORDER_BY}` | Sortiert die Reihenfolge der Ergebnisse. Die einzigen unterstützten Felder sind `createdDate` und `updatedDate`. Sie können der Eigenschaft `+` oder `-` voranstellen, um sie in auf- oder absteigender Reihenfolge zu sortieren. |
-| `{EXPAND_SCHEMA}` | Ein boolescher Wert, der bestimmt, ob das vollständige Output-Schema als Teil der Antwort zurückgegeben wird. |
+| `{START}` | **(Erforderlich**) Gibt den Versatz der Ergebnisseiten an. Um die erste Ergebnisseite zu erhalten, setzen Sie den Wert auf `start=0`. |
+| `{NAME}` | Filtert die Zuordnungssätze nach Namen. |
+| `{ORDER_BY}` | Sortiert die Reihenfolge der Ergebnisse. Die einzigen unterstützten Felder sind `createdDate` und `updatedDate`. Sie können der Eigenschaft `+` oder `-` voranstellen, um in auf- bzw. absteigender Reihenfolge zu sortieren. |
+| `{EXPAND_SCHEMA}` | Ein boolescher Wert, der darüber bestimmt, ob als Teil der Antwort das vollständige Ausgabeschema zurückgegeben wird. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft die letzten beiden Zuordnungssätze in Ihrer IMS-Organisation ab.
+Mit der folgenden Anfrage werden die letzten beiden Zuordnungssätze in Ihrer IMS-Organisation abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
@@ -165,9 +164,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?lim
 }
 ```
 
-## Erstellen eines Zuordnungssatzes
+## Erstellen von Zuordnungssätzen
 
-Sie können einen neuen Zuordnungssatz erstellen, indem Sie eine POST an den `/mappingSets`-Endpunkt anfordern.
+Sie können einen neuen Zuordnungssatz erstellen, indem Sie eine POST-Anfrage an den `/mappingSets`-Endpunkt senden.
 
 **API-Format**
 
@@ -177,7 +176,7 @@ POST /mappingSets
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neuer Zuordnungssatz erstellt, der von den in der Nutzlast bereitgestellten Parametern konfiguriert wird.
+Die folgende Anfrage erstellt einen neuen Zuordnungssatz, der durch die in der Payload bereitgestellten Parameter konfiguriert wird.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
@@ -218,15 +217,15 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `outputSchema.schemaRef.id` | Die ID des XDM-Schemas, auf das Sie verweisen. |
-| `outputSchema.schemaRef.contentType` | Bestimmt das Antwortformat des referenzierten Schemas. Weitere Informationen zu diesem Feld finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Der Quelltyp beschreibt, wie der Wert aus der Quelle zum Ziel extrahiert wird. |
-| `mappings.source` | Der Speicherort, von dem die Daten zugeordnet werden sollen. |
-| `mappings.destination` | Der Ort, an dem die Daten zugeordnet werden sollen. |
+| `outputSchema.schemaRef.id` | Die Kennung des XDM-Schemas, auf das Sie verweisen. |
+| `outputSchema.schemaRef.contentType` | Bestimmt über das Antwortformat des referenzierten Schemas. Weitere Informationen zu diesem Feld finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md#lookup). |
+| `mappings.sourceType` | Der Quelltyp beschreibt, wie der Wert aus der Quelle an das Ziel extrahiert wird. |
+| `mappings.source` | Der Speicherort, von dem aus die Daten zugeordnet werden sollen. |
+| `mappings.destination` | Der Speicherort, an dem die Daten zugeordnet werden sollen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu erstellten Zuordnungssatz zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem neu erstellten Zuordnungssatz zurück.
 
 ```json
 {
@@ -239,9 +238,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu er
 }
 ```
 
-## Zuordnungen überprüfen
+## Validieren von Zuordnungen
 
-Sie können überprüfen, ob Ihre Zuordnungen ordnungsgemäß funktionieren, indem Sie eine POST an den `/mappingSets/validate`-Endpunkt anfordern.
+Sie können überprüfen, ob Ihre Zuordnungen ordnungsgemäß funktionieren, indem Sie eine POST-Anfrage an den `/mappingSets/validate`-Endpunkt senden.
 
 **API-Format**
 
@@ -251,7 +250,7 @@ POST /mappingSets/validate
 
 **Anfrage**
 
-Die folgende Anforderung validiert die in der Nutzlast bereitgestellten Zuordnungen.
+Die folgende Anfrage validiert die in der Payload bereitgestellten Zuordnungen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
@@ -292,7 +291,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Validierungsinformationen für die vorgeschlagene Zuordnung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Validierungsdetails für die vorgeschlagene Zuordnung zurück.
 
 ```json
 {
@@ -313,9 +312,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Validierungsinformationen fü
 }
 ```
 
-## Vorschauen für Zuordnungen
+## Datenvorschau für Zuordnungen
 
-Sie können die Zuordnung Ihrer Daten durch eine POST an den `/mappingSets/preview`-Endpunkt anfordern.
+Sie können eine Vorschau zur Zuordnung Ihrer Daten anzeigen, indem Sie eine POST-Anfrage an den `/mappingSets/preview`-Endpunkt senden.
 
 **API-Format**
 
@@ -373,7 +372,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Vorschau Ihrer zugeordneten Daten zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Vorschau Ihrer zugeordneten Daten zurück.
 
 ```json
 [
@@ -392,9 +391,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Vorschau Ihrer zugeordn
 ]
 ```
 
-## Zuordnungssatz nachschlagen
+## Nachschlagen von Zuordnungssätzen
 
-Sie können einen bestimmten Zuordnungssatz abrufen, indem Sie dessen ID im Pfad einer GET zum `/mappingSets`-Endpunkt angeben. Dieser Endpunkt unterstützt außerdem mehrere Abfragen-Parameter, mit denen Sie Details zur angegebenen Zuordnungssatzversion abrufen können.
+Sie können einen bestimmten Zuordnungssatz abrufen, indem Sie im Pfad einer GET-Anfrage an den `/mappingSets`-Endpunkt dessen Kennung angeben. Dieser Endpunkt unterstützt außerdem verschiedene Abfrageparameter, mit denen Sie Details zur angegebenen Version des Zuordnungssatzes abrufen können.
 
 **API-Format**
 
@@ -406,13 +405,13 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | (**Erforderlich**) Die ID des Zuordnungssatzes, den Sie abrufen möchten. |
-| `{EXPAND_SCHEMA}` | Ein boolescher Abfrage-Parameter, der bestimmt, ob das Output-Schema als Teil der Antwort zurückgegeben werden soll. |
-| `{VERSION}` | Ein ganzzahliger Abfrage-Parameter, der bestimmt, welche Version des Zuordnungssatzes abgerufen werden soll. |
+| `{MAPPING_SET_ID}` | (**Erforderlich**) Die Kennung des Zuordnungssatzes, den Sie abrufen möchten. |
+| `{EXPAND_SCHEMA}` | Ein boolescher Abfrageparameter, der darüber bestimmt, ob das Ausgabeschema als Teil der Antwort zurückgegeben werden soll. |
+| `{VERSION}` | Ein ganzzahliger Abfrageparameter, der darüber bestimmt, welche Version des Zuordnungssatzes abgerufen wird. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft detaillierte Informationen zu einem angegebenen Zuordnungssatz ab.
+Die folgende Anfrage ruft detaillierte Informationen zu einem angegebenen Zuordnungssatz ab.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
@@ -424,11 +423,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen über den Zuordnungssatz zurück, den Sie abrufen möchten.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu jenem Zuordnungssatz zurück, den Sie abrufen möchten.
 
 >[!NOTE]
 >
->Die folgende Antwort wurde für Leerzeichen abgeschnitten.
+>Die folgende Antwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -583,9 +582,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen �
 }
 ```
 
-## Zuordnungssatz aktualisieren
+## Aktualisieren von Zuordnungssätzen
 
-Sie können einen Zuordnungssatz aktualisieren, indem Sie seine ID im Pfad einer `PUT`-Anforderung zum `mappingSets`-Endpunkt angeben.
+Sie können einen Zuordnungssatz aktualisieren, indem Sie im Pfad einer `PUT`-Anfrage an den `mappingSets`-Endpunkt seine Kennung angeben.
 
 **API-Format**
 
@@ -595,7 +594,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | Die ID des Zuordnungssatzes, den Sie aktualisieren möchten. |
+| `{MAPPING_SET_ID}` | Die Kennung des Zuordnungssatzes, den Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -643,11 +642,11 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zu Ihrem neu aktualisierten Zuordnungssatz zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem gerade aktualisierten Zuordnungssatz zurück.
 
 >[!NOTE]
 >
->Die folgende Antwort wurde für Leerzeichen abgeschnitten.
+>Die folgende Antwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -810,9 +809,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen z
 }
 ```
 
-## Liste der Zuordnungen für einen Zuordnungssatz
+## Auflisten der Zuordnungen für einen Zuordnungssatz
 
-Sie können alle Zuordnungen, die zu einem bestimmten Zuordnungssatz gehören, durch Angabe der ID im Pfad einer GET an den folgenden Endpunkt Ansicht haben.
+Sie können alle Zuordnungen anzeigen, die zu einem bestimmten Zuordnungssatz gehören, indem Sie im Pfad einer GET-Anfrage an den folgenden Endpunkt dessen Kennung angeben.
 
 **API-Format**
 
@@ -822,11 +821,11 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | Die ID des Zuordnungssatzes, für den Sie Zuordnungen abrufen möchten. |
+| `{MAPPING_SET_ID}` | Die Kennung des Zuordnungssatzes, für den Sie Zuordnungen abrufen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung gibt alle Zuordnungen im angegebenen Zuordnungssatz zurück.
+Die folgende Anfrage gibt alle Zuordnungen im angegebenen Zuordnungssatz zurück.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
@@ -913,9 +912,9 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## Suchen einer Zuordnung in einem Zuordnungssatz
+## Suchen nach einer Zuordnung in einem Zuordnungssatz
 
-Sie können eine bestimmte Zuordnung für einen Zuordnungssatz abrufen, indem Sie ihre IDs im Pfad einer GET an den folgenden Endpunkt angeben.
+Sie können eine bestimmte Zuordnung für einen Zuordnungssatz abrufen, indem Sie im Pfad einer GET-Anfrage an den folgenden Endpunkt die jeweilige Kennung angeben.
 
 **API-Format**
 
@@ -925,12 +924,12 @@ GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | Die ID des Zuordnungssatzes, über den Sie Zuordnungsinformationen nachschlagen möchten. |
-| `{MAPPING_ID}` | Die ID der Zuordnung, die Sie nachschlagen möchten. |
+| `{MAPPING_SET_ID}` | Die Kennung des Zuordnungssatzes, zu dem Sie Zuordnungsdaten nachschlagen möchten. |
+| `{MAPPING_ID}` | Die Kennung der Zuordnung, die Sie suchen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft Informationen zu einer bestimmten Zuordnung im angegebenen Zuordnungssatz ab.
+Die folgende Anfrage ruft Informationen zu einer bestimmten Zuordnung im angegebenen Zuordnungssatz ab.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
@@ -942,7 +941,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit detaillierten Informationen zur angegebenen Zuordnung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zur angegebenen Zuordnung zurück.
 
 ```json
 {
