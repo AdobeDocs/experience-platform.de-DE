@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;DGSVO;dgsvo;ccpa:CCPA;PDPA;PDPA;PDPA_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
+keywords: Experience Platform;Home;beliebte Themen;DSGVO;dsgvo;ccpa:CCPA;PDPA;PDPA;PDPA_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
 title: Übersicht über Privacy Service
 topic-legacy: overview
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1394'
 ht-degree: 100%
 
