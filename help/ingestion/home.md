@@ -6,7 +6,7 @@ topic-legacy: overview
 description: In diesem Dokument werden die drei Hauptwege für die Datenaufnahme in Platform vorgestellt, mit Links zu den jeweiligen Übersichtsdokumenten, in denen Sie weitere Informationen finden.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '461'
 ht-degree: 100%
 
@@ -42,7 +42,7 @@ Weiterführende Informationen dazu finden Sie in der [Übersicht zu Quellen](../
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Dieses Dokument bietet eine kurze Einführung in die verschiedenen Aspekte von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie darüber hinaus die Übersichtsdokumentation für jede Aufnahmemethode, um sich mit deren verschiedenen Funktionen, Anwendungsfällen und Best Practices vertraut zu machen. Sie können sich als Ergänzung zum Lernen auch das nachfolgende Video zur Aufnahme ansehen.  Weitere Informationen dazu, wie [!DNL Experience Platform] die Metadaten nach erfassten Datensätzen verfolgt, finden Sie unter [Übersicht über den Katalog-Service](../catalog/home.md).
+Dieses Dokument bietet eine kurze Einführung in die verschiedenen Aspekte von [!DNL Data Ingestion] in [!DNL Experience Platform]. Bitte lesen Sie darüber hinaus die Übersichtsdokumentation für jede Aufnahmemethode, um sich mit deren verschiedenen Funktionen, Anwendungsfällen und Best Practices vertraut zu machen. Sie können sich als Ergänzung zum Lernen auch das nachfolgende Video zur Aufnahme ansehen. Weitere Informationen dazu, wie [!DNL Experience Platform] die Metadaten nach erfassten Datensätzen verfolgt, finden Sie unter [Übersicht über den Katalog-Service](../catalog/home.md).
 
 >[!WARNING]
 >
