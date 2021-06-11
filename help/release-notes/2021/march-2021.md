@@ -1,17 +1,16 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform für den 31. März 2021.
+description: Versionshinweise zu Experience Platform vom 31. März 2021.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
-translation-type: tm+mt
-source-git-commit: 9b4395d423bbc62c8a1a9427ea91248a0f693794
-workflow-type: tm+mt
+exl-id: 027cd7b1-1651-4939-bc97-968a41824117
+source-git-commit: 0cbd5a933f8c67b26051012e9a5aa78cb06b055d
+workflow-type: ht
 source-wordcount: '422'
-ht-degree: 41%
+ht-degree: 100%
 
 ---
-
 
 # Adobe Experience Platform – Versionshinweise
 
@@ -25,18 +24,18 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## [!DNL Data Prep] {#data-prep}
 
-[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten dem Experience Data Model (XDM) zuzuordnen, umzuformen und zu validieren.
+[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| `add_to_array` durchführen | Die Funktionalität zur Unterstützung von Arrays als Parameter wurde aktualisiert. |
-| `to_array` durchführen | Die Funktionalität zur Unterstützung von Objekten als Parameter wurde aktualisiert. |
+| `add_to_array`-Funktion | Die Funktion wurde aktualisiert, um Arrays als Parameter zu unterstützen. |
+| `to_array`-Funktion | Die Funktion wurde aktualisiert, um Objekte als Parameter zu unterstützen. |
 
-Weitere Informationen finden Sie unter [[!DNL Data Prep] overview](../../data-prep/home.md).
+Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
-Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Adoben werden zentral auf [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Anwendung leicht zugänglich sind.
+Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral in [!DNL Platform] konfiguriert und gepflegt, sodass sie für jede Adobe-Anwendung leicht zugänglich sind.
 
 [!DNL Segmentation Service] definiert eine bestimmte Untergruppe von Profilen, indem das Kriterium beschrieben wird, das eine vermarktbare Personengruppe innerhalb Ihres Kundenstamms unterscheidet. Segmente können auf Datensatzdaten (z. B. demografische Daten) oder Zeitreihenereignissen basieren, die Kundeninteraktionen mit Ihrer Marke darstellen.
 
@@ -44,10 +43,10 @@ Der Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläc
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| (Beta) Edge-Segmentierung | Bei der Edge-Segmentierung werden Segmente in Echtzeit ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht. Weitere Informationen zur Kantensegmentierung finden Sie in der [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md). |
-| (Beta) Inkrementelle Segmentierung | Erhöht die Frische vorhandener Segmentdefinitionen, die in der Stapelsegmentierung ausgewertet werden, auf bis zu eine Stunde. |
+| (Beta) Edge-Segmentierung | Bei der Edge-Segmentierung werden Segmente in Echtzeit ausgewertet, was Anwendungsfälle mit Personalisierung auf derselben Seite und der folgenden Seite ermöglicht. Weitere Informationen zur Edge-Segmentierung finden Sie in der [Übersicht über die Segmentierungsbenutzeroberfläche](../../segmentation/ui/overview.md). |
+| (Beta) Inkrementelle Segmentierung | Erhöht die Aktualität vorhandener Segmentdefinitionen, die in der Batch-Segmentierung ausgewertet werden, auf bis zu eine Stunde. |
 
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierungsübersicht](../../segmentation/home.md).
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierung – Übersicht](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -57,8 +56,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Beta-Quellen wechseln zu GA | Die folgenden Quellen wurden von der Beta-Version zur GA-Version beworben: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
-| API-Unterstützung für die Erfassung von komprimierten Dateien | Sie können jetzt komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Datenspeicherung-Quellen Vorschau und erfassen. Weitere Informationen finden Sie im Lernprogramm zum Erfassen von Cloud-Datenspeicherung-Daten mit APIs](../../sources/tutorials/api/collect/cloud-storage.md).[ |
-| Unterstützung für rekursives Hochladen von Dateien in der Benutzeroberfläche | Bei Verwendung einer Cloud-Datenspeicherung können Sie jetzt ganze Ordner rekursiv erfassen. Beim Einfügen eines ganzen Ordners müssen Sie sicherstellen, dass sein Inhalt dasselbe Schema verwendet. Weitere Informationen finden Sie im Tutorial zu [Konfigurieren eines Datenflusses für Cloud-Datenspeicherung-Connectors in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
+| API-Unterstützung für die Erfassung komprimierter Dateien | Sie können komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Speicherquellen nun in einer Vorschau anzeigen und erfassen. Weitere Informationen finden Sie im Tutorial zum [Erfassen von Cloud-Speicherdaten mithilfe von APIs](../../sources/tutorials/api/collect/cloud-storage.md). |
+| UI-Unterstützung für das rekursive Hochladen von Dateien | Sie können bei Verwendung einer Cloud-Speicherquelle jetzt ganze Ordner rekursiv erfassen. Bei der Erfassung eines ganzen Ordners müssen Sie sicherstellen, dass dessen Inhalt dasselbe Schema aufweist. Weitere Informationen finden Sie im Tutorial zum [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
