@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform Observability Insights ist eine RESTful-API, mit der Sie Schlüsselmetriken zu Platform-Aktivitäten bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '223'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ Mit Adobe Experience Platform [!DNL Observability Insights] können Sie Platform
 
 Die [!DNL Observability Insights]-API ist eine RESTful-API, mit der Sie Schlüsselmetriken zur Beobachtung in Adobe Experience Platform bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Nutzung von [!DNL Platform], Systemdiagnosen für Services von [!DNL Platform], historische Trends und Leistungsindikatoren für verschiedene Funktionen von [!DNL Platform].
 
-Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observability Insights]  API-Entwicklerhandbuch](./api/overview.md).
+Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observability Insights] API-Entwicklerhandbuch](./api/overview.md).
 
 ## Ereignis-Benachrichtigungen
 
