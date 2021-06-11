@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '437'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -35,12 +35,12 @@ Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [H
 
 Eine Reihe von Zuordnungen, die ein Schema in ein anderes umwandeln, wird gemeinhin als Zuordnungssatz bezeichnet. Im Rahmen jedes Datenflusses wird ein einzelner Zuordnungssatz erstellt. Ein Zuordnungssatz ist ein integraler Bestandteil der Datenflüsse und wird im Rahmen der Datenflüsse erstellt, bearbeitet und überwacht.
 
-Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung der Felder in einem Zuordnungssatz, finden Sie in der [Anleitung zum Zuordnungssatz](./mapping-set.md). Informationen zum Erstellen eines Zuordnungssatzes und zum Verwenden anderer API-Aufrufe im Zusammenhang mit Zuordnungssätzen finden Sie im Abschnitt zum Zuordnungssatz im [Entwicklerhandbuch](./api/mapping-set.md).
+Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung von Feldern in einem Zuordnungssatz, finden Sie im [Handbuch für Zuordnungssätze](./mapping-set.md). Informationen zum Erstellen eines Zuordnungssatzes und zum Verwenden anderer API-Aufrufe im Zusammenhang mit Zuordnungssätzen finden Sie im Abschnitt zu den Zuordnungssätzen im [Entwicklerhandbuch](./api/mapping-set.md).
 
-## Umgang mit Datenformaten
+## Verarbeiten von Datenformaten
 
-Data Prep kann verschiedene Datenformate, die in Platform erfasst werden, stark verarbeiten. Weiterführende Informationen zur Verarbeitung verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Handhabung von Datenformaten](./data-handling.md).
+Datenvorbereitung kann verschiedene Datenformate, die in Platform erfasst werden, zuverlässig verarbeiten. Weitere Informationen zum Verarbeiten verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Verarbeitung von Datenformaten](./data-handling.md).
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [Handbuch zu den Zuordnungsfunktionen](./functions.md). Weiterführende Informationen zur Verarbeitung verschiedener Datentypen durch die Datenvorbereitung finden Sie im [Handbuch zur Handhabung von Datenformaten](./data-handling.md#dates). Informationen zur Verwendung der Data Prep-API finden Sie im [Entwicklerhandbuch für die Datenvorbereitung](api/overview.md).
+In diesem Dokument wurden die Grundlagen zur Datenvorbereitung in Adobe Experience Platform behandelt. Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [Handbuch zu den Zuordnungsfunktionen](./functions.md). Weitere Informationen zum Verarbeiten verschiedener Datentypen durch die Datenvorbereitung finden Sie im [Handbuch zur Verarbeitung von Datenformaten](./data-handling.md#dates). Informationen zur Verwendung der Datenvorbereitungs-API finden Sie im [Entwicklerhandbuch zur Datenvorbereitung](api/overview.md).
