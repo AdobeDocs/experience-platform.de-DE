@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: Dieses Dokument zeigt Ihnen, wie Sie Benutzer für ein Produktprofil in der Benutzeroberfläche von Adobe Experience Platform verwalten.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '206'
 ht-degree: 100%
 
