@@ -8,7 +8,7 @@ feature: Data Management
 source-git-commit: bcb80d7d27ab88e56450ddd99102871db23fbca8
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 94%
 * [Platform Web-SDK – Übersicht](home.md)
 * Grundlagen {#fundamentals}
    * [Voraussetzungen](fundamentals/prerequisite.md)
-   * [Konfigurieren eines Datastreams](fundamentals/datastreams.md)
+   * [Konfigurieren eines Datenflusses](fundamentals/datastreams.md)
    * [Installieren des SDK](fundamentals/installing-the-sdk.md)
    * [Konfigurieren des SDK](fundamentals/configuring-the-sdk.md)
    * [Ausführen von Befehlen](fundamentals/executing-commands.md)
