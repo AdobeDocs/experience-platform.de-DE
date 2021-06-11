@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenvorgabe;API-Leitfaden;Musterdaten
+keywords: Experience Platform;Startseite; beliebte Themen;Datenvorbereitung;API-Handbuch;Beispieldaten;
 solution: Experience Platform
-title: Beispiel-Daten-API-Endpunkt
+title: API-Endpunkt für Beispieldaten
 topic-legacy: sample data
-description: 'Sie können den Endpunkt "/samples"in der Adobe Experience Platform API verwenden, um Musterdaten programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren. '
-translation-type: tm+mt
+description: 'Sie können den Endpunkt „/samples“ in der Adobe Experience Platform-API verwenden, um Beispieldaten von Zuordnungen programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren. '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '401'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 
-# Beispiel-Daten-Endpunkt
+# Endpunkt für Beispieldaten
 
-Musterdaten können beim Erstellen eines Schemas für Ihren Zuordnungssatz verwendet werden. Sie können den Endpunkt `/samples` in der Datenvorgabe-API verwenden, um Beispieldaten programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
+Beispieldaten können beim Erstellen eines Schemas für Ihren Zuordnungssatz verwendet werden. Sie können den `/samples`-Endpunkt in der Datenvorbereitungs-API verwenden, um Beispieldaten programmgesteuert abzurufen, zu erstellen und zu aktualisieren.
 
-## Musterdaten für Listen
+## Auflisten von Beispieldaten
 
-Sie können eine Liste aller Musterdaten für Ihre IMS-Organisation abrufen, indem Sie eine GET an den `/samples`-Endpunkt anfordern.
+Sie können eine Liste aller Beispieldaten einer Zuordnung für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/samples`-Endpunkt senden.
 
 **API-Format**
 
-Der `/samples`-Endpunkt unterstützt mehrere Abfragen-Parameter, um die Ergebnisse zu filtern. Derzeit müssen Sie sowohl die Parameter `start` als auch `limit` als Teil Ihrer Anforderung einbeziehen.
+Der `/samples`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Aktuell müssen Sie sowohl den Parameter `start` als auch den Parameter `limit` in Ihre Anfrage einbeziehen.
 
 ```http
 GET /samples?limit={LIMIT}&start={START}
@@ -31,12 +30,12 @@ GET /samples?limit={LIMIT}&start={START}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{LIMIT}` | **Erforderlich**. Gibt die Anzahl der zurückgegebenen Musterdaten für die Zuordnung an. |
-| `{START}` | **Erforderlich**. Gibt den Versatz der Ergebnisseiten an. Um die erste Ergebnisseite abzurufen, legen Sie den Wert auf `start=0` fest. |
+| `{LIMIT}` | **Erforderlich**. Gibt die Anzahl der zurückgegebenen Beispieldaten für die Zuordnung an. |
+| `{START}` | **Erforderlich**. Gibt den Versatz der Ergebnisseiten an. Um die erste Ergebnisseite zu erhalten, setzen Sie den Wert auf `start=0`. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung werden die letzten beiden Zuordnungsmuster-Daten in Ihrer IMS-Organisation abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden Beispieldatenobjekte der Zuordnung in Ihrer IMS-Organisation abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
@@ -48,7 +47,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu den letzten beiden Objekten der Zuordnung von Musterdaten zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu den letzten beiden Objekten der Beispieldaten für die Zuordnung zurück.
 
 ```json
 {
@@ -86,9 +85,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu den letzten 
 | `sampleData` |  |
 | `sampleType` |  |
 
-## Musterdaten erstellen
+## Erstellen von Beispieldaten
 
-Sie können Musterdaten erstellen, indem Sie eine POST an den `/samples`-Endpunkt anfordern.
+Sie können Beispieldaten erstellen, indem Sie eine POST-Anfrage an den `/samples`-Endpunkt senden.
 
 ```http
 POST /samples
@@ -112,7 +111,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihren neu erstellten Musterdaten zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihren neu erstellten Beispieldaten zurück.
 
 ```json
 {
@@ -127,9 +126,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihren neu er
 }
 ```
 
-## Musterdaten durch Hochladen einer Datei erstellen
+## Erstellen von Beispieldaten durch Hochladen einer Datei
 
-Sie können Musterdaten mithilfe einer POST erstellen, indem Sie eine Anforderung an den Endpunkt `/samples/upload` stellen.
+Sie können Beispieldaten mithilfe einer Datei erstellen, indem Sie eine POST-Anfrage an den `/samples/upload`-Endpunkt senden.
 
 **API-Format**
 
@@ -151,7 +150,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihren neu erstellten Musterdaten zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihren neu erstellten Beispieldaten zurück.
 
 ```json
 {
@@ -166,9 +165,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihren neu er
 }
 ```
 
-## Nachschlagen eines bestimmten Musterdatenobjekts
+## Nachschlagen eines bestimmten Beispieldatenobjekts
 
-Sie können ein bestimmtes Objekt mit Musterdaten suchen, indem Sie dessen ID im Pfad einer GET zum `/samples`-Endpunkt angeben.
+Sie können ein bestimmtes Beispieldatenobjekt nachschlagen, indem Sie im Pfad einer GET-Anfrage an den `/samples`-Endpunkt dessen Kennung angeben.
 
 **API-Format**
 
@@ -178,7 +177,7 @@ GET /samples/{SAMPLE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | Die ID des Musterdatenobjekts, das Sie abrufen möchten. |
+| `{SAMPLE_ID}` | Die Kennung des Beispieldatenobjekts, das Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -192,7 +191,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen über das Musterdatenobjekt zurück, das Sie abrufen möchten.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum Beispieldatenobjekt zurück, das Sie abrufen möchten.
 
 ```json
 {
@@ -207,9 +206,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen über das Muste
 }
 ```
 
-## Musterdaten aktualisieren
+## Aktualisieren von Beispieldaten
 
-Sie können ein bestimmtes Musterdatenobjekt aktualisieren, indem Sie dessen ID im Pfad einer PUT-Anforderung zum `/samples`-Endpunkt angeben.
+Sie können ein bestimmtes Beispieldatenobjekt aktualisieren, indem Sie im Pfad einer PUT-Anfrage an den `/samples`-Endpunkt dessen Kennung angeben.
 
 **API-Format**
 
@@ -219,11 +218,11 @@ PUT /samples/{SAMPLE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{SAMPLE_ID}` | Die ID des Musterdatenobjekts, das Sie aktualisieren möchten. |
+| `{SAMPLE_ID}` | Die Kennung des Beispieldatenobjekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung aktualisiert die angegebenen Musterdaten. Insbesondere wird der Nachname von &quot;Smith&quot;in &quot;Lee&quot;aktualisiert.
+Die folgende Anfrage aktualisiert die angegebenen Beispieldaten. Insbesondere wird der Nachname von „Smith“ in „Lee“ geändert.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c20bae49d8ab33209ed126bdcd \
@@ -240,7 +239,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu den aktualisierten Musterdaten zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu den aktualisierten Beispieldaten zurück.
 
 ```json
 {
