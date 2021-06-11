@@ -7,7 +7,7 @@ type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1006'
 ht-degree: 100%
 
@@ -19,7 +19,7 @@ Nachdem Sie Datennutzungskennzeichnungen für Ihre Daten sowie Nutzungsrichtlini
 
 >[!NOTE]
 >
-> Standardmäßig können nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, an der Bewertung teilnehmen. Damit `DRAFT`-Richtlinien an der Bewertung teilnehmen können, müssen Sie den Abfrageparameter `includeDraft=true` in den Anfragepfad einbeziehen.
+>Standardmäßig können nur Richtlinien, deren Status auf `ENABLED` gesetzt ist, an der Bewertung teilnehmen. Damit `DRAFT`-Richtlinien an der Bewertung teilnehmen können, müssen Sie den Abfrageparameter `includeDraft=true` in den Anfragepfad einbeziehen.
 
 In diesem Dokument wird beschrieben, wie Sie mit der [!DNL Policy Service]-API in verschiedenen Szenarien nach Richtlinienverletzungen suchen können.
 
@@ -56,7 +56,7 @@ Die folgende Anfrage testet die Marketing-Aktion `exportToThirdParty` hinsichtli
 
 >[!NOTE]
 >
-> Bei Datennutzungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinienausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1`-Bezeichnung eine Verletzung auslösen, eine `c1`-Bezeichnung hingegen nicht.
+>Bei Datennutzungsbezeichnungen wird zwischen Groß- und Kleinschreibung unterschieden. Richtlinienverletzungen treten nur dann auf, wenn die in ihren Richtlinienausdrücken definierten Bezeichnungen exakt übereinstimmen. In diesem Beispiel würde eine `C1`-Bezeichnung eine Verletzung auslösen, eine `c1`-Bezeichnung hingegen nicht.
 
 ```shell
 curl -X GET \
