@@ -4,16 +4,15 @@ title: Real-Time Customer Data Platform – Übersicht
 seo-title: Real-Time Customer Data Platform – Übersicht
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Echtzeit-Kundendatenplattform – Übersicht
-translation-type: ht
-source-git-commit: 9f20f8bfeefb5bc427a72a11ac1f01816cdbc4b2
+exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: ht
 source-wordcount: '306'
 ht-degree: 100%
 
 ---
 
-
-# Real-Time Customer Data Platform – Übersicht 
+# Real-Time Customer Data Platform – Übersicht
 
 Die auf Adobe Experience Platform aufbauende Echtzeit-Kundendatenplattform (Echtzeit-CDP) hilft Firmen, bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammenzuführen, um Kundendaten zu erstellen, die dazu verwendet werden können, personalisierte Kundenerlebnisse auf allen Kanälen und Geräten in Echtzeit bereitzustellen.
 
