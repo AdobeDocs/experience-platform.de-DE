@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zum Durchsuchen des Arbeitsbereichs „Zugriffssteuerung“ beschrieben. Um die Zugriffskontrolle für Experience Platform über die Adobe Admin Console zu konfigurieren, müssen Sie Administrator einer IMS-Organisation sein, die über ein Abonnement für Experience Platform verfügt.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '315'
 ht-degree: 100%
 
