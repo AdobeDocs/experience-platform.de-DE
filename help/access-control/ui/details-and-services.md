@@ -6,7 +6,7 @@ topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Verwaltung der Einzelheiten und zusätzlichen Services für ein Produktprofil in Adobe Admin Console beschrieben. Über das Menü Profileinstellungen können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '213'
 ht-degree: 100%
 
