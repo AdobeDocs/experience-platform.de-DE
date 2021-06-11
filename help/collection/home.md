@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: a150c23dffde9431953a019509e9554159052d21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '320'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ Die Datenerfassung wird für die folgenden Client-seitigen Quellen unterstützt:
 Von Experience Platform bereitgestellte Datenerfassungstechnologien konzentrieren sich auf die Entdeckung und Zugänglichkeit von aufgenommenen Datensätzen. Diese Technologien umfassen Folgendes:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=de)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=de)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
 
@@ -43,6 +43,6 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 
 ## Schnelles und sicheres Transformieren, Erweitern und Senden von Daten
 
-[Adobe Experience Platform Launch Server Side ](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=de) kann einen beliebigen Plattformdatenstrom nutzen. Daten mit extrem niedriger Latenz können an Ziele ohne Adobe transformiert, angereichert und gesendet werden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, was eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
+[Adobe Experience Platform Launch Server Side](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=de) kann einen beliebigen Plattformdatenstrom nutzen. Daten mit extrem niedriger Latenz können an Ziele ohne Adobe transformiert, angereichert und gesendet werden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, was eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
 
 ![](./images/launch.png)
