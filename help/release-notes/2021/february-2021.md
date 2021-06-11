@@ -6,9 +6,9 @@ last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1140'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -88,7 +88,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf der Registerkarte [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemas] und im Dialogfeld zur Schemafeldgruppenauswahl im Arbeitsbereich [!DNL Schema Editor] verfügbar.<br><br>Beim Suchen nach einem Begriff wurden bisher nur XDM-Ressourcen berücksichtigt, deren Name mit der Suchanfrage übereinstimmten. Nun werden zusätzlich zu diesen Ressourcen, deren Name mit der Suchanfrage übereinstimmt, auch die Ressourcen mit einbezogen, bei denen einzelne Attribute mit dem Begriff übereinstimmen. Auf diese Weise können Sie basierend auf den enthaltenen Attributen und nicht nur basierend auf dem Namen der Ressource nach XDM-Ressourcen suchen.<br><br>Weitere Informationen finden Sie in den Dokumenten zum [Kennenlernen von XDM-Ressourcen](../../xdm/ui/explore.md) und zum [Verwalten von Schemas](../../xdm/ui/resources/schemas.md) in der Benutzeroberfläche. |
+| Aktualisierte Suchoberfläche | Verbesserte Suchfunktionen sind jetzt auf dem Tab [!UICONTROL Durchsuchen] im Arbeitsbereich [!UICONTROL Schemas] und im Dialogfeld für die Schemafeldgruppe von [!DNL Schema Editor] verfügbar.<br><br>Beim Suchen nach einem Begriff wurden bisher nur XDM-Ressourcen berücksichtigt, deren Name mit der Suchanfrage übereinstimmten. Nun werden zusätzlich zu diesen Ressourcen, deren Name mit der Suchanfrage übereinstimmt, auch die Ressourcen mit einbezogen, bei denen einzelne Attribute mit dem Begriff übereinstimmen. Auf diese Weise können Sie basierend auf den enthaltenen Attributen und nicht nur basierend auf dem Namen der Ressource nach XDM-Ressourcen suchen.<br><br>Weitere Informationen finden Sie in den Dokumenten zum [Kennenlernen von XDM-Ressourcen](../../xdm/ui/explore.md) und zum [Verwalten von Schemas](../../xdm/ui/resources/schemas.md) in der Benutzeroberfläche. |
 
 Weitere allgemeine Informationen zu XDM finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
