@@ -4,7 +4,7 @@ user-guide-title: Observability Insights-Anleitung
 user-guide-description: Überwachung von Platform-aktivitäten durch Verwendung statistischer Metriken und Ereignisbenachrichtigungen.
 feature: Data Management
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '55'
 ht-degree: 100%
 
