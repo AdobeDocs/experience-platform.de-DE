@@ -5,7 +5,7 @@ breadcrumb-title: Zugangssteuerungsanleitung
 user-guide-description: Nutzen Sie die Produktprofile in Adobe Admin Console, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen.
 feature: Zugriffskontrolle
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
 ht-degree: 100%
 
