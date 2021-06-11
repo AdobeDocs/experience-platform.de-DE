@@ -6,7 +6,7 @@ feature: Profile
 source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 91%
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 91%
    * [Musterstatus der Vorschau ([!DNL Profile]-Vorschau)](api/preview-sample-status.md)
    * [[!DNL Profile] Systemaufgaben (Löschanfragen)](api/profile-system-jobs.md)
 * Profil-UI {#ui}
-   * [ Handbuch für die [!DNL Profile]-Benutzeroberfläche](ui/user-guide.md)
+   * [Handbuch für die [!DNL Profile]-Benutzeroberfläche](ui/user-guide.md)
    * [[!DNL Profile]-Detailanpassung](ui/profile-customization.md)
 * (Alpha) Berechnete Attribute {#computed-attributes}
    * [Übersicht](computed-attributes/overview.md)
@@ -42,9 +42,9 @@ ht-degree: 91%
    * [Handbuch zur Vereinigungsschema-Benutzeroberfläche](ui/union-schema.md)
    * [Übersicht zum Vereinigungsschema (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
-   * [Hinzufügen von Daten zu [!DNL Profile]](tutorials/add-profile-data.md)
+   * [Hinzufügen von Daten zu  [!DNL Profile]](tutorials/add-profile-data.md)
    * [Konfigurieren eines Datensatzes für  [!DNL Profile] & [!DNL Identity]  Service](tutorials/dataset-configuration.md)
-   * [Bericht zur Datensatzüberschneidung generieren](tutorials/dataset-overlap-report.md)
+   * [Erstellen eines Berichts zur Datensatzüberschneidung](tutorials/dataset-overlap-report.md)
    * [Weitere Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
