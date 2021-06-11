@@ -77,7 +77,7 @@ Die folgende Tabelle beschreibt die wichtigsten Marketing-Aktionen, die von Adob
 
 | Marketing-Aktion | Beschreibung |
 | --- | --- |
-| Analytics  | Eine Aktion, die Daten zu Analysezwecken verwendet, z. B. zum Messen, Analysieren und Erstellen von Berichten über die Nutzung der Websites oder Programmen Ihres Unternehmens durch Kunden. |
+| Analytics | Eine Aktion, die Daten zu Analysezwecken verwendet, z. B. zum Messen, Analysieren und Erstellen von Berichten über die Nutzung der Websites oder Programmen Ihres Unternehmens durch Kunden. |
 | Kombinieren mit direkt identifizierbaren Daten | Eine Aktion, die alle persönlichen identifizierbaren Informationen (PII) mit anonymen Daten kombiniert. Verträge über Daten, die aus Werbenetzwerken, Werbe-Servern und Drittanbietern von Daten bezogen werden, beinhalten häufig spezifische vertragliche Verbote der Verwendung solcher Daten mit direkt identifizierbaren Daten. |
 | Site-übergreifendes Targeting | Eine Aktion, die Daten für Site-übergreifendes Targeting von Anzeigen verwendet. Die Kombination von Daten aus verschiedenen Sites, einschließlich einer Kombination aus Daten in einer Site und Offsite-Daten oder einer Kombination von Daten aus verschiedenen Offsite-Quellen, wird als „Site-übergreifende Daten“ bezeichnet. Site-übergreifende Daten werden in der Regel gesammelt und verarbeitet, um Rückschlüsse auf die Interessen der Benutzer zu ziehen. |
 | Data Science | Eine Aktion, die Daten für datenwissenschaftliche Workflows verwendet. Einige Verträge beinhalten ein explizites Verbot der Datennutzung für datenwissenschaftliche Zwecke. Manchmal wird dies so ausgedrückt, dass die Verwendung von Daten für künstliche Intelligenz (KI), maschinelles Lernen (ML) oder Modellierung verboten ist. |
