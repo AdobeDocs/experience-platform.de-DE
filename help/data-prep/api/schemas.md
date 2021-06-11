@@ -1,34 +1,33 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Leitfaden;Schemas
+keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemas;
 solution: Experience Platform
-title: Schemas-API-Endpunkt
+title: API-Endpunkt für Schemas
 topic-legacy: schemas
-description: 'Sie können den Endpunkt "/Schemas"in der Adobe Experience Platform-API verwenden, um Schema programmgesteuert abzurufen, zu erstellen und zu aktualisieren, damit sie mit Mapper in Platform verwendet werden können. '
-translation-type: tm+mt
+description: 'Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemas zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren. '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '613'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
 
 
-# Schemas-Endpunkt
+# Endpunkt für Schemas
 
-Schema können mit Mapper verwendet werden, um sicherzustellen, dass die in Adobe Experience Platform erfassten Daten mit den Daten übereinstimmen, die Sie erfassen möchten. Sie können den Endpunkt `/schemas` verwenden, um programmgesteuert benutzerdefinierte Schema für die Verwendung mit Mapper in Platform zu erstellen, zu Liste und abzurufen.
+Schemas können mit Mapper verwendet werden, um dafür zu sorgen, dass die von Ihnen in Adobe Experience Platform erfassten Daten mit den gewünschten Daten übereinstimmen. Sie können den `/schemas`-Endpunkt nutzen, um programmgesteuert benutzerdefinierte Schemas zur Verwendung mit Mapper in Platform zu erstellen, aufzulisten und abzurufen.
 
 >[!NOTE]
 >
->Schema, die mit diesem Endpunkt erstellt wurden, werden ausschließlich mit Mapper- und Zuordnungssätzen verwendet. Um Schema zu erstellen, auf die andere Plattformdienste zugreifen können, lesen Sie bitte das [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md).
+>Mit diesem Endpunkt erstellte Schemas werden ausschließlich mit Mapper und Zuordnungssätzen genutzt. Informationen zum Erstellen von Schemas, auf die andere Platform-Dienste zugreifen können, finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md).
 
-## Alle Schemas abrufen
+## Abrufen aller Schemas
 
-Sie können eine Liste aller verfügbaren Mapper-Schema für Ihre IMS-Organisation abrufen, indem Sie eine GET an den `/schemas`-Endpunkt anfordern.
+Sie können eine Liste aller verfügbaren Mapper-Schemas für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den `/schemas`-Endpunkt senden.
 
 **API-Format**
 
-Der `/schemas`-Endpunkt unterstützt mehrere Abfragen-Parameter, mit denen Sie Ihre Ergebnisse filtern können. Obwohl die meisten dieser Parameter optional sind, wird ihre Verwendung dringend empfohlen, um den teuren Aufwand zu reduzieren. Sie müssen jedoch sowohl die Parameter `start` als auch `limit` als Teil Ihrer Anforderung einbeziehen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
+Der `/schemas`-Endpunkt unterstützt verschiedene Abfrageparameter, mit denen Sie Ihre Ergebnisse filtern können. Zwar sind die meisten dieser Parameter optional, doch wird ihre Verwendung dringend empfohlen, um kostspieligen Aufwand zu reduzieren. Sie müssen jedoch sowohl den Parameter `start` als auch den Parameter `limit` in Ihre Anfrage einbeziehen. Es können mehrere Parameter eingeschlossen werden, die durch kaufmännische Und-Zeichen (`&`) voneinander getrennt werden.
 
 ```http
 GET /schemas?limit={LIMIT}&start={START}
@@ -38,14 +37,14 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{LIMIT}` | **Erforderlich**. Gibt die Anzahl der zurückgegebenen Schema an. |
-| `{START}` | **Erforderlich**. Gibt den Versatz der Ergebnisseiten an. Um die erste Ergebnisseite abzurufen, legen Sie den Wert auf `start=0` fest. |
-| `{NAME}` | Filter des Schemas auf Grundlage des Namens. |
-| `{ORDER_BY}` | Sortiert die Reihenfolge der Ergebnisse. Die unterstützten Felder sind `modifiedDate` und `createdDate`. Sie können der Eigenschaft `+` oder `-` voranstellen, um sie in auf- oder absteigender Reihenfolge zu sortieren. |
+| `{LIMIT}` | **Erforderlich**. Gibt die Anzahl der Schemas an, die zurückgegeben werden. |
+| `{START}` | **Erforderlich**. Gibt den Versatz der Ergebnisseiten an. Um die erste Ergebnisseite zu erhalten, setzen Sie den Wert auf `start=0`. |
+| `{NAME}` | Filtert das Schema anhand des Namens. |
+| `{ORDER_BY}` | Sortiert die Reihenfolge der Ergebnisse. Die unterstützten Felder sind `modifiedDate` und `createdDate`. Sie können der Eigenschaft `+` oder `-` voranstellen, um in auf- bzw. absteigender Reihenfolge zu sortieren. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung werden die letzten beiden erstellten Schema für Ihre IMS-Organisation abgerufen.
+Mit der folgenden Anfrage werden die letzten beiden erstellten Schemas für Ihre IMS-Organisation abgerufen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
@@ -57,11 +56,11 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **Antwort**
 
-Die folgende Antwort gibt HTTP-Status 200 mit einer Liste der angeforderten Schema zurück.
+Die folgende Antwort gibt den HTTP-Status-Code 200 mit einer Liste der angeforderten Schemas zurück.
 
 >[!NOTE]
 >
->Die folgende Antwort wurde für Leerzeichen abgeschnitten.
+>Die folgende Antwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -132,9 +131,9 @@ Die folgende Antwort gibt HTTP-Status 200 mit einer Liste der angeforderten Sche
 }
 ```
 
-## Schema erstellen
+## Erstellen von Schemas
 
-Sie können ein zu validierendes Schema erstellen, indem Sie eine POST an den `/schemas`-Endpunkt anfordern. Es gibt drei Möglichkeiten, ein Schema zu erstellen: Senden eines [JSON-Schemas](https://json-schema.org/) mithilfe von Musterdaten oder Verweisen auf ein vorhandenes XDM-Schema.
+Sie können für die Validierung ein Schema erstellen, indem Sie eine POST-Anfrage an den `/schemas`-Endpunkt senden. Es gibt drei Möglichkeiten zum Erstellen eines Schemas: Senden eines [JSON-Schemas](https://json-schema.org/), Verwenden von Beispieldaten oder Verweisen auf ein vorhandenes XDM-Schema.
 
 ```http
 POST /schemas
@@ -144,7 +143,7 @@ POST /schemas
 
 **Anfrage**
 
-Mit der folgenden Anforderung können Sie ein Schema erstellen, indem Sie ein [JSON-Schema](https://json-schema.org/) senden.
+Mit der folgenden Anfrage können Sie ein Schema erstellen, indem Sie ein [JSON-Schema](https://json-schema.org/) senden.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -165,7 +164,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu erstellten Schema zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem neu erstellten Schema zurück.
 
 ```json
 {
@@ -179,11 +178,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu er
 }
 ```
 
-### Verwenden von Musterdaten
+### Verwenden von Beispieldaten
 
 **Anfrage**
 
-Mit der folgenden Anforderung können Sie ein Schema mithilfe von Beispieldaten erstellen, die Sie zuvor hochgeladen haben.
+Mit der folgenden Anfrage können Sie ein Schema anhand von Beispieldaten erstellen, die Sie zuvor hochgeladen haben.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -200,11 +199,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sampleId` | Die ID der Musterdaten, auf denen das Schema basiert. |
+| `sampleId` | Die Kennung der Beispieldaten, auf denen das Schema basiert. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu erstellten Schema zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem neu erstellten Schema zurück.
 
 ```json
 {
@@ -244,11 +243,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu er
 }
 ```
 
-### Auf ein XDM-Schema verweisen
+### Verweisen auf ein XDM-Schema
 
 **Anfrage**
 
-Mit der folgenden Anforderung können Sie ein Schema erstellen, indem Sie auf ein vorhandenes XDM-Schema verweisen.
+Mit der folgenden Anfrage können Sie ein Schema erstellen, indem Sie auf ein vorhandenes XDM-Schema verweisen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
@@ -270,16 +269,16 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `name` | Der Name des Schemas, das Sie erstellen möchten. |
-| `schemaRef.id` | Die ID des Schemas, auf das Sie verweisen. |
-| `schemaRef.contentType` | Bestimmt das Antwortformat des referenzierten Schemas. Weitere Informationen zu diesem Feld finden Sie im [Schema Registry Registry-Entwicklerhandbuch](../../xdm/api/schemas.md#lookup) |
+| `schemaRef.id` | Die Kennung des Schemas, auf das Sie verweisen. |
+| `schemaRef.contentType` | Bestimmt das Antwortformat des referenzierten Schemas. Weitere Informationen zu diesem Feld finden Sie im [Schema Registry-Entwicklerhandbuch](../../xdm/api/schemas.md#lookup) |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu erstellten Schema zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem neu erstellten Schema zurück.
 
 >[!NOTE]
 >
->Die folgende Antwort wurde für Leerzeichen abgeschnitten.
+>Die folgende Antwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -294,9 +293,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu er
 }
 ```
 
-## Erstellen eines Schemas mithilfe des Dateiuploads
+## Erstellen von Schemas per Datei-Upload
 
-Sie können ein Schema erstellen, indem Sie eine JSON-Datei hochladen, aus der es konvertiert werden soll.
+Sie können ein Schema erstellen, indem Sie dafür eine JSON-Datei hochladen, aus der konvertiert werden soll.
 
 **API-Format**
 
@@ -306,7 +305,7 @@ POST /schemas/upload
 
 **Anfrage**
 
-Mit der folgenden Anforderung können Sie ein Schema aus einer hochgeladenen JSON-Datei erstellen.
+Mit der folgenden Anfrage können Sie ein Schema aus einer hochgeladenen JSON-Datei erstellen.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
@@ -320,7 +319,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu erstellten Schema zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem neu erstellten Schema zurück.
 
 ```json
 {
@@ -334,9 +333,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zu Ihrem neu er
 }
 ```
 
-## Abrufen eines bestimmten Schemas
+## Abrufen einzelner Schemas
 
-Sie können Informationen zu einem bestimmten Schema abrufen, indem Sie eine GET an den Endpunkt `/schemas` anfordern und die ID des Schemas angeben, das Sie im Anforderungspfad abrufen möchten.
+Sie können Informationen zu einem bestimmten Schema abrufen, indem Sie eine GET-Anfrage an den `/schemas`-Endpunkt senden und im Anfragepfad die Kennung des Schemas angeben, das Sie abrufen möchten.
 
 **API-Format**
 
@@ -346,11 +345,11 @@ GET /schemas/{SCHEMA_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | Die ID des Schemas, das Sie suchen. |
+| `{SCHEMA_ID}` | Die Kennung des Schemas, das Sie nachschlagen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft Informationen zum angegebenen Schema ab.
+Die folgende Anfrage ruft Details zum angegebenen Schema ab.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
@@ -362,7 +361,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Informationen zum angegebenen Schema zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegebenen Schema zurück.
 
 ```json
 {
