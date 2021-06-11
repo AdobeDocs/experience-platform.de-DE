@@ -102,7 +102,7 @@ Zwar bietet [!DNL Experience Platform] eine Vielzahl von standardmäßigen Names
 
 >[!NOTE]
 >
-> Identitäts-Namespaces sind ein Qualifizierer für Identitäten. Nachdem ein Namespace erstellt wurde, kann er daher nicht mehr gelöscht werden.
+>Identitäts-Namespaces sind ein Qualifizierer für Identitäten. Nachdem ein Namespace erstellt wurde, kann er daher nicht mehr gelöscht werden.
 
 ### Identitätsdaten in [!DNL Experience Data Model] (XDM) einschließen
 
@@ -127,7 +127,7 @@ Wenn Sie beispielsweise Telefonnummernfelder als Identitätsfelder kennzeichnen,
 
 ### Datensatz für [!DNL Identity Service] konfigurieren
 
-Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ] automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Weiterführende Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mit APIs](../profile/tutorials/dataset-configuration.md).
+Während der Streaming-Aufnahme extrahiert [!DNL Identity Service ]automatisch Identitätsdaten aus Datensatz- und Zeitreihendaten. Bevor Daten aufgenommen werden können, müssen sie jedoch für [!DNL Identity Service] aktiviert werden. Weiterführende Informationen finden Sie in der Anleitung zum [Konfigurieren eines Datensatzes für Echtzeit-Kundenprofil und Identity Service mit APIs](../profile/tutorials/dataset-configuration.md).
 
 ### Daten in [!DNL Identity Service] aufnehmen
 
