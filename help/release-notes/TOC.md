@@ -6,14 +6,14 @@ user-guide-description: Monatliche Versionshinweise für Adobe Experience Platfo
 source-git-commit: 8508d213834bb21951df4fe118732b60465b6d73
 workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise {#release-notes}
 
-* [Aktuelle Platform - Versionshinweise](latest/latest.md)
+* [Aktuelle Versionshinweise zu Platform](latest/latest.md)
 * 2021 {#2021}
    * [Mai 2021](2021/may-2021.md)
    * [April 2021](2021/april-2021.md)
@@ -34,7 +34,7 @@ ht-degree: 92%
    * [Februar 2020](2020/february-2020.md)
    * [Januar 2020](2020/january-2020.md)
 * 2019 {#2019}
-   * [2019. Dezember](2019/december-2019.md)
+   * [Dezember 2019](2019/december-2019.md)
    * [November 2019](2019/november-2019.md)
    * [September 2019](2019/september-2019.md)
    * [Juli 2019](2019/july-2019.md)
