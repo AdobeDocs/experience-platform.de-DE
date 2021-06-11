@@ -4,9 +4,9 @@ user-guide-title: Überblick über Adobe Experience Platform
 breadcrumb-title: Übersicht zu Experience Platform
 user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experience Platform in Echtzeit personalisierte Erlebnisse liefern können.
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '193'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 93%
 # Überblick über Adobe Experience Platform {#landing}
 
 * [Platform – Übersicht](home.md)
-* [  Platform – Übersicht (Video)](video/platform-overview.md)
+* [Platform – Übersicht (Video)](video/platform-overview.md)
 * [Ein auf Platform basierendes Kundenerlebnis (Video)](video/customer-experience.md)
 * [Hinter den Kulissen eines auf Platform basierenden Kundenerlebnisses (Video)](video/customer-experience-bts.md)
 * Erste Schritte {#getting-started}
@@ -29,7 +29,7 @@ ht-degree: 93%
    * [Browser- und Sprachunterstützung](browser-language-support.md)
 * Experience Platform-APIs {#platform-apis}
    * [Erste Schritte mit Platform-APIs](api-guide.md)
-   * [ Platform-APIs authentifizieren und aufrufen](api-authentication.md)
+   * [Platform-APIs authentifizieren und aufrufen](api-authentication.md)
    * [API-Grundlagen](api-fundamentals.md)
    * [Verwenden von Postman mit Platform-APIs](postman.md)
    * [API-Referenzdokumente](http://www.adobe.com/go/platform-api-reference-en)
@@ -46,7 +46,7 @@ ht-degree: 93%
       * Adobe Standard {#adobe}
          * [Übersicht](./governance-privacy-security/consent/adobe/overview.md)
          * [Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten](./governance-privacy-security/consent/adobe/dataset.md)
-         * [Integrieren des Platform Web SDK zur Verarbeitung von Zustimmungs- und Präferenzdaten](./governance-privacy-security/consent/adobe/sdk.md)
+         * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/adobe/sdk.md)
       * IAB TCF 2.0 {#iab}
          * [Übersicht](./governance-privacy-security/consent/iab/overview.md)
          * [Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten](./governance-privacy-security/consent/iab/dataset.md)
