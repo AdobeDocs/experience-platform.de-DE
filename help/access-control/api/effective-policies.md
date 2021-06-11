@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Leitfaden für die Ansicht effektiver Richtlinien mithilfe der Zugriffssteuerungs-API für Adobe Experience Platform.
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '320'
 ht-degree: 100%
 
