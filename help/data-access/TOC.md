@@ -5,7 +5,7 @@ breadcrumb-title: Datenzugriffsanleitung
 user-guide-description: Finden und greifen Sie auf aufzunehmende Datensätze innerhalb von Platform zu.
 feature: Daten-Management, Datenaufnahme
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '41'
 ht-degree: 100%
 
