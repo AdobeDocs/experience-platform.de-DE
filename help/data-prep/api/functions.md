@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Leitfaden;Schemas
+keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemas;
 solution: Experience Platform
-title: Schemas-API-Endpunkt
+title: Endpunkt für Schema-API
 topic-legacy: schemas
-description: Sie können den Endpunkt "Funktionen"in der Adobe Experience Platform API verwenden, um Ihre Zuordnungsfunktionen und verfügbaren Zuordnungssatzfunktionen für die Liste zu validieren.
+description: Sie können den Endpunkt „/features“ in der Adobe Experience Platform-API verwenden, um Ihre Zuordnungsausdrücke zu validieren und die verfügbaren Zuordnungssatzfunktionen aufzulisten.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Funktionsendpunkte
+# Endpunkte für Funktionen
 
-Mit Zuordnungsfunktionen können Sie Ihre Daten zwischen Quell- und Ziel-Schemas transformieren. Sie können den `/languages/el`-Endpunkt verwenden, um Ihre Ausdruck zu validieren und eine Liste aller verfügbaren Zuordnungsfunktionen zu erhalten.
+Mit Zuordnungssatzfunktionen können Sie Ihre Daten zwischen Quell- und Zielschemas konvertieren. Sie können den `/languages/el`-Endpunkt verwenden, um Ihre Ausdrücke zu validieren und eine Liste aller verfügbaren Zuordnungssatzfunktionen aufzurufen.
 
-## Ausdruck überprüfen
+## Validieren von Ausdrücken
 
-Sie können überprüfen, ob Ihr aktueller Ausdruck gültig ist, indem Sie eine POST an den `/languages/el/validate`-Endpunkt anfordern.
+Sie können überprüfen, ob Ihr aktueller Ausdruck gültig ist, indem Sie eine POST-Anfrage an den `/languages/el/validate`-Endpunkt senden.
 
 **API-Format**
 
@@ -44,7 +43,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit dem Überprüfungsstatus des Ausdrucks zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit dem Validierungsstatus des Ausdrucks zurück.
 
 ```json
 {
@@ -53,9 +52,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit dem Überprüfungsstatus des 
 }
 ```
 
-## Funktionen zum Zuordnen von Listen
+## Auflisten von Zuordnungssatzfunktionen
 
-Sie können eine Liste aller verfügbaren Zuordnungsfunktionen abrufen, indem Sie eine GET an den `/languages/el/functions`-Endpunkt anfordern.
+Sie können eine Liste aller verfügbaren Zuordnungssatzfunktionen abrufen, indem Sie eine GET-Anfrage an den `/languages/el/functions`-Endpunkt senden.
 
 **API-Format**
 
@@ -75,7 +74,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste aller verfügbaren Zuordnungsfunktionen zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Liste aller verfügbaren Zuordnungssatzfunktionen zurück.
 
 >[!NOTE]
 >
@@ -118,9 +117,9 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste aller verfügbare
 ]
 ```
 
-## Liste-Zuordnungsset-Operatoren
+## Auflisten der Operatoren von Zuordnungssätzen
 
-Sie können eine Liste aller verfügbaren Zuordnungsset-Operatoren abrufen, indem Sie eine GET an den `/languages/el/operators`-Endpunkt anfordern.
+Sie können eine Liste aller verfügbaren Zuordnungssatzoperatoren abrufen, indem Sie eine GET-Anfrage an den `/languages/el/operators`-Endpunkt senden.
 
 **API-Format**
 
@@ -140,7 +139,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/op
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste aller verfügbaren Zuordnungsset-Operatoren zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit einer Liste aller verfügbaren Zuordnungssatzoperatoren zurück.
 
 >[!NOTE]
 >
