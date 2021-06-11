@@ -6,7 +6,7 @@ topic-legacy: guide
 description: 'Sobald Datennutzungskennzeichnungen auf Adobe Experience Platform-Datensätze angewendet und somit Datennutzungsrichtlinien für Marketing-Aktionen mit diesen Kennzeichnungen definiert wurden, können Sie die Richtlinien mithilfe von Data Governance-Funktionen durchsetzen und Datenvorgänge verhindern, bei denen Richtlinien verletzt werden. Es gibt zwei Methoden zur Durchsetzung von Richtlinien, die durch die Data Governance-Funktionen in Platform bereitgestellt werden: API-basierte Durchsetzung und automatische Durchsetzung.'
 exl-id: d19d8060-85a1-405c-856d-f59041947a33
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '237'
 ht-degree: 100%
 
