@@ -5,7 +5,7 @@ breadcrumb-title: Data Governance-Anleitung
 user-guide-description: Beschränken Sie die Datennutzung durch die Verwendung von Bezeichnungen, Marketing-Aktionen und Richtlinien.
 feature: Data Governance
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
 ht-degree: 100%
 
