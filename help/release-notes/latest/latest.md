@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: fb5d5e7ecb36d1caa70d5c2d2a4f467e3067de4a
+source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
-source-wordcount: '1355'
-ht-degree: 36%
+source-wordcount: '1306'
+ht-degree: 37%
 
 ---
 
@@ -82,7 +82,6 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Aktualisierungen des Arbeitsablaufs für Zusammenführungsrichtlinien | Beim Erstellen und Aktualisieren von Zusammenführungsrichtlinien in der Benutzeroberfläche können Benutzer jetzt anhand des Vereinigungsschemas eine Vorschau von 20 Beispielprofilen anzeigen. Auf diese Weise können Benutzer eine Vorschau davon anzeigen, wie Kundenprofile aussehen, bevor sie Zusammenführungsrichtlinienkonfigurationen speichern. Weitere Informationen finden Sie im [UI-Handbuch für Zusammenführungsrichtlinien](../../profile/merge-policies/ui-guide.md). |
 | Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md).[ |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
