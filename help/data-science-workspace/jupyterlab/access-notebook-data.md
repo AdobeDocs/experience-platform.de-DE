@@ -5,9 +5,9 @@ title: Datenzugriff in Jupyterlab-Notebooks
 topic-legacy: Developer Guide
 description: In diesem Handbuch wird beschrieben, wie Sie mit Jupyter Notebooks, die in Data Science Workspace erstellt wurden, auf Ihre Daten zugreifen können.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: c2c2b1684e2c2c3c76dc23ad1df720abd6c4356c
+source-git-commit: 9e41db60580146fa90542ed00ceedd4eecb88b47
 workflow-type: tm+mt
-source-wordcount: '3290'
+source-wordcount: '3294'
 ht-degree: 23%
 
 ---
@@ -362,7 +362,7 @@ Mit der Einführung von [!DNL Spark] 2.4 wird `%dataset` benutzerdefinierte Magi
 **Nutzung**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **Beschreibung**
@@ -373,8 +373,8 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen
 | --- | --- | --- |
 | `{action}` | Der Aktionstyp, der für den Datensatz ausgeführt werden soll. Zwei Aktionen sind verfügbar: &quot;Lesen&quot;oder &quot;Schreiben&quot;. | Ja |
 | `--datasetId {id}` | Wird verwendet, um die ID des zu lese- oder schreibenden Datensatzes anzugeben. | Ja |
-| `--dataFrame {df}` | Der pandas-Dataframe. <ul><li> Wenn die Aktion &quot;read&quot;lautet, ist {df} die Variable, in der Ergebnisse des Datensatzlesevorgangs verfügbar sind. </li><li> Wenn die Aktion &quot;write&quot;lautet, wird dieser Dataframe {df} in den Datensatz geschrieben. </li></ul> | Ja |
-| `--mode` | Ein zusätzlicher Parameter, der die Art des Lesens von Daten ändert. Zulässige Parameter sind &quot;batch&quot;und &quot;interaktiv&quot;. Standardmäßig ist der Modus auf &quot;interaktiv&quot;eingestellt. Es wird empfohlen, beim Lesen großer Datenmengen den &quot;Batch&quot;-Modus zu verwenden. | Nein |
+| `--dataFrame {df}` | Der pandas-Dataframe. <ul><li> Wenn die Aktion &quot;read&quot;lautet, ist {df} die Variable, in der Ergebnisse des Datensatzlesevorgangs verfügbar sind (z. B. ein Dataframe). </li><li> Wenn die Aktion &quot;write&quot;lautet, wird dieser Dataframe {df} in den Datensatz geschrieben. </li></ul> | Ja |
+| `--mode` | Ein zusätzlicher Parameter, der die Art des Lesens von Daten ändert. Zulässige Parameter sind &quot;batch&quot;und &quot;interaktiv&quot;. Standardmäßig ist der Modus auf &quot;batch&quot;eingestellt.<br> Es wird empfohlen, den &quot;interaktiven&quot;Modus zu verwenden, um die Abfrageleistung bei kleineren Datensätzen zu verbessern. | Ja |
 
 >[!TIP]
 >
@@ -382,8 +382,8 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen
 
 **Beispiele**
 
-- **Beispiel** lesen:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Schreibbeispiel**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **Beispiel** lesen:  `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **Schreibbeispiel**:  `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
 
 >[!IMPORTANT]
 >
@@ -449,7 +449,7 @@ Die folgenden Zellen filtern einen [!DNL ExperienceEvent]-Datensatz nach Daten, 
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -511,7 +511,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -568,12 +568,12 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```
 
-| element  | Beschreibung |
+| element  | description |
 | ------- | ----------- |
 | df1 | Eine Variable, die den Pandas-Dataframe darstellt, der zum Lesen und Schreiben von Daten verwendet wird. |
 | user-token | Ihr Benutzer-Token, das automatisch mit `clientContext.getUserToken()` abgerufen wird. |
