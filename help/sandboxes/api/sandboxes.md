@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Sandbox-Management-API-Endpunkt
 topic-legacy: developer guide
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
-source-git-commit: f84898a87a8a86783220af7f74e17f464a780918
+source-git-commit: 1ec141fa5a13bb4ca6a4ec57f597f38802a92b3f
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 47%
+source-wordcount: '1440'
+ht-degree: 44%
 
 ---
 
@@ -348,11 +348,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 (OK) mit den Details der neu 
 
 ## Zurücksetzen einer Sandbox {#reset}
 
->[!IMPORTANT]
->
->Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird.
-
-Sandboxes, die der Entwicklung dienen, verfügen über eine Funktion zum „Zurücksetzen auf Werkseinstellungen“, mit der alle nicht standardmäßigen Ressourcen aus einer Sandbox gelöscht werden. Sie können eine Sandbox zurücksetzen, indem Sie eine PUT-Anfrage stellen, die im Anfragepfad den Namen (`name`) der Sandbox enthält.
+Sandboxes verfügen über die Funktion &quot;werkseitiges Zurücksetzen&quot;, mit der alle nicht standardmäßigen Ressourcen aus einer Sandbox gelöscht werden. Sie können eine Sandbox zurücksetzen, indem Sie eine PUT-Anfrage stellen, die im Anfragepfad den Namen (`name`) der Sandbox enthält.
 
 **API-Format**
 
@@ -363,6 +359,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{SANDBOX_NAME}` | Die `name`-Eigenschaft der Sandbox, die Sie zurücksetzen möchten. |
+| `validationOnly` | Ein optionaler Parameter, mit dem Sie eine Preflight-Prüfung für den Sandbox-Reset-Vorgang durchführen können, ohne die eigentliche Anfrage zu stellen. Setzen Sie diesen Parameter auf `validationOnly=true` , um zu überprüfen, ob die Sandbox, die Sie zurücksetzen möchten, Daten zur Freigabe von Adobe Analytics, Adobe Audience Manager oder Segmenten enthält. |
 
 **Anfrage**
 
@@ -370,7 +367,7 @@ Mit der folgenden Anfrage wird eine Sandbox mit dem Namen &quot;acme-dev&quot;zu
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -386,6 +383,10 @@ curl -X PUT \
 
 **Antwort**
 
+>[!NOTE]
+>
+>Nach dem Zurücksetzen einer Sandbox dauert es etwa 30 Sekunden, bis sie vom System bereitgestellt wird.
+
 Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück und zeigt an, dass ihr Status (`state`) „wird zurückgesetzt“ lautet.
 
 ```json
@@ -399,18 +400,76 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück un
 }
 ```
 
->[!NOTE]
->
->Nach dem Zurücksetzen einer Sandbox dauert es etwa 30 Sekunden, bis sie vom System bereitgestellt wird. Nach dem Bereitstellen ändert sich der Status (`state`) der Sandbox in „aktiv“ oder „fehlgeschlagen“.
+Die standardmäßige Produktions-Sandbox und alle benutzerdefinierten Produktions-Sandboxes können nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird.
 
-Die folgende Tabelle enthält mögliche Ausnahmen, die das Zurücksetzen einer Sandbox verhindern könnten:
+Im Folgenden finden Sie eine Liste möglicher Ausnahmen, die das Zurücksetzen einer Sandbox verhindern könnten:
 
-| Fehler-Code | Beschreibung |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+Sie können mit dem Zurücksetzen einer Produktions-Sandbox fortfahren, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird, indem Sie Ihrer Anforderung den Parameter `ignoreWarnings` hinzufügen.
+
+**API-Format**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
+```
+
+| Parameter | Beschreibung |
 | --- | --- |
-| `2074-400` | Diese Sandbox kann nicht zurückgesetzt werden, da das in dieser Sandbox gehostete Identitätsdiagramm auch von Adobe Analytics für die geräteübergreifende Analyse (CDA)-Funktion verwendet wird. |
-| `2075-400` | Diese Sandbox kann nicht zurückgesetzt werden, da das in dieser Sandbox gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion People Based Destinations (PBD) verwendet wird. |
-| `2076-400` | Diese Sandbox kann nicht zurückgesetzt werden, da das in dieser Sandbox gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion People Based Destinations (PBD) sowie von Adobe Analytics für die Funktion Cross Device Analytics (CDA) verwendet wird. |
-| `2077-400` | Warnung: Sandbox `{SANDBOX_NAME}` wird für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet. |
+| `{SANDBOX_NAME}` | Die `name`-Eigenschaft der Sandbox, die Sie zurücksetzen möchten. |
+| `ignoreWarnings` | Ein optionaler Parameter, mit dem Sie die Validierungsprüfung überspringen und das Zurücksetzen einer Produktions-Sandbox erzwingen können, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird. Dieser Parameter kann nicht auf eine standardmäßige Produktions-Sandbox angewendet werden. |
+
+**Anfrage**
+
+Mit der folgenden Anfrage wird eine Produktions-Sandbox mit dem Namen &quot;acme&quot;zurückgesetzt.
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Sandbox zurück und zeigt an, dass ihr Status (`state`) „wird zurückgesetzt“ lautet.
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Sandbox löschen {#delete}
 
@@ -433,14 +492,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{SANDBOX_NAME}` | Der `name` der Sandbox, die Sie löschen möchten. |
+| `validationOnly` | Ein optionaler Parameter, mit dem Sie eine Preflight-Prüfung für den Sandbox-Löschvorgang durchführen können, ohne die eigentliche Anfrage zu stellen. Setzen Sie diesen Parameter auf `validationOnly=true` , um zu überprüfen, ob die Sandbox, die Sie zurücksetzen möchten, Daten zur Freigabe von Adobe Analytics, Adobe Audience Manager oder Segmenten enthält. |
+| `ignoreWarnings` | Ein optionaler Parameter, mit dem Sie die Validierungsprüfung überspringen und das Löschen einer benutzerdefinierten Produktions-Sandbox erzwingen können, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird. Dieser Parameter kann nicht auf eine standardmäßige Produktions-Sandbox angewendet werden. |
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Sandbox mit dem Namen &quot;acme-dev&quot;gelöscht.
+Mit der folgenden Anfrage wird eine Produktions-Sandbox mit dem Namen &quot;acme&quot;gelöscht.
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -452,8 +513,8 @@ Bei einer erfolgreichen Antwort werden die aktualisierten Details der Sandbox zu
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
