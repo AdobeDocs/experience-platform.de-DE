@@ -5,10 +5,10 @@ title: Handbuch zur Sandbox-UI
 topic-legacy: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: ba03ec805d29a95ee7d0d1a23a756feaadcea407
+source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 20%
+source-wordcount: '779'
+ht-degree: 21%
 
 ---
 
@@ -68,7 +68,7 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite und d
 
 >[!IMPORTANT]
 >
->Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird. Produktions-Sandboxes, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden, können ebenfalls nicht zurückgesetzt werden.
+>Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird.
 
 Durch das Zurücksetzen einer Produktions- oder Entwicklungs-Sandbox werden alle mit dieser Sandbox verknüpften Ressourcen (Schemas, Datensätze usw.) gelöscht, wobei der Name der Sandbox und die zugehörigen Berechtigungen beibehalten werden. Diese „saubere“ Sandbox ist für Benutzer, die Zugriff darauf haben, unter demselben Namen weiter verfügbar.
 
@@ -88,29 +88,29 @@ Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezei
 
 ![Erfolgreich](../images/ui/success.png)
 
-### Fehlermeldungen
+### Warnungen
 
-Eine standardmäßige Produktions-Sandbox, die CDA-Daten enthält, kann nicht zurückgesetzt werden und gibt den folgenden Fehler zurück.
+Eine standardmäßige Produktions-Sandbox, die CDA-Daten enthält, kann nicht zurückgesetzt werden und gibt die folgende Warnung zurück.
 
 ![cda](../images/ui/cda.png)
 
-Eine standardmäßige Produktions-Sandbox, die PBD-Daten enthält, kann ebenfalls nicht zurückgesetzt werden und gibt den folgenden Fehler zurück.
+Eine standardmäßige Produktions-Sandbox, die PBD-Daten enthält, kann ebenfalls nicht zurückgesetzt werden und gibt die folgende Warnung zurück.
 
 ![pbd](../images/ui/pbd.png)
 
-Eine standardmäßige Produktions-Sandbox, die Daten für CDA und PBD enthält, kann ebenfalls nicht zurückgesetzt werden und gibt den folgenden Fehler zurück.
+Eine standardmäßige Produktions-Sandbox, die Daten für CDA und PBD enthält, kann ebenfalls nicht zurückgesetzt werden und gibt die folgende Warnung zurück.
 
 ![both](../images/ui/both.png)
 
-Eine Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann ebenfalls nicht zurückgesetzt werden und gibt den folgenden Fehler zurück.
+Sie können eine Produktions-Sandbox zurücksetzen, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird. Wählen Sie [!UICONTROL Weiter] aus, um mit dem Zurücksetzen fortzufahren.
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## Sandbox löschen
 
 >[!IMPORTANT]
 >
->Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden und Produktions-Sandboxes, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden, können ebenfalls nicht gelöscht werden.
+>Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden.
 
 Durch das Löschen einer Produktions- oder Entwicklungs-Sandbox werden alle mit dieser Sandbox verknüpften Ressourcen, einschließlich Berechtigungen, endgültig entfernt.
 
@@ -126,9 +126,9 @@ Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfel
 
 ![delete-validation](../images/ui/delete-confirm.png)
 
-Eine Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann nicht gelöscht werden und gibt den folgenden Fehler zurück.
+Eine vom Benutzer erstellte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird, kann nach der folgenden Warnung weiterhin gelöscht werden.
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## Nächste Schritte
 
