@@ -1,40 +1,39 @@
 ---
-keywords: Datenverwaltung rtcdp;rtcdp Datenverwaltung;Datenverwaltung in Echtzeit für Kundendaten-Profil;Datenschutz rtcdp;rtcdp Privatsphäre
-title: Datenschutz in Echtzeit-Kundendatenplattform
-seo-title: Datenschutz in Echtzeit-Kundendatenplattform
-description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess der Einhaltung von Datenschutzbestimmungen durch Ihre Datenvorgänge optimieren.
-seo-description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess der Einhaltung von Datenschutzbestimmungen durch Ihre Datenvorgänge optimieren.
-translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+keywords: Data Governance rtcdp;rtcdp Data Governance;Echtzeit-Data Profil Data Governance;Datenschutz rtcdp;rtcdp privacy
+title: Datenschutz in der Echtzeit-Kundendatenplattform
+seo-title: Datenschutz in der Echtzeit-Kundendatenplattform
+description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess optimieren, Ihre Datenvorgänge mit Datenschutzbestimmungen konform zu halten.
+seo-description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess optimieren, Ihre Datenvorgänge mit Datenschutzbestimmungen konform zu halten.
+exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 6%
 
 ---
 
+# Datenschutz in der Echtzeit-Kundendatenplattform
 
-# Datenschutz in Echtzeit-Kundendatenplattform
+[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) hilft Marketing-Experten, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, sodass sie ihre Kunden besser identifizieren, verstehen und ansprechen können. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
 
-[!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) hilft Marketingexperten, Daten aus mehreren Unternehmenssystemen zusammenzubringen, sodass sie ihre Kunden besser identifizieren, verstehen und ansprechen können. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
+Die meisten Funktionen von [!DNL Real-time CDP] werden von Adobe Experience Platform unterstützt. Dieses Dokument enthält Informationen zu den verschiedenen Technologien zur Verbesserung des Datenschutzes, die von [!DNL Real-time CDP] unterstützt werden, sowie Links zur [!DNL Experience Platform]-Dokumentation für weitere Informationen.
 
-Die meisten [!DNL Real-time CDP] Funktionen werden von Adobe Experience Platform betrieben. Dieses Dokument enthält Informationen zu den verschiedenen Technologien zur Datenschutzverbesserung, die von [!DNL Real-time CDP] unterstützt werden, sowie Links zur [!DNL Experience Platform]-Dokumentation.
+## Berücksichtigung von Zugriffs- und Löschanfragen von Kunden
 
-## Kundenzugriff berücksichtigen und Anforderungen löschen
+Durch gesetzliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulation] (DSGVO) und die [!DNL California Consumer Privacy Act] (CCPA) erhalten Kunden das Recht, Zugang zu den von Ihnen erfassten personenbezogenen Daten oder deren Löschung anzufordern. Da [!DNL Real-time CDP] die [!DNL Experience Platform]-Funktionen für die Datenerfassung und -speicherung nutzt, sollten Kundenanfragen zum Zugriff auf und Löschen ihrer personenbezogenen Daten innerhalb von [!DNL Platform] verwaltet werden. Weitere Informationen finden Sie in der Übersicht zu [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) .
 
-Rechtliche Datenschutzbestimmungen wie die [!DNL General Data Protection Regulation] (GDPR) und die [!DNL California Consumer Privacy Act] (CCPA) geben Kunden das Recht, den Zugriff auf oder die Löschung der von ihnen erfassten personenbezogenen Daten anzufordern. Da [!DNL Real-time CDP] die Funktionen [!DNL Experience Platform] für die Datenerfassung und Datenspeicherung nutzt, sollten Kundenanforderungen zum Zugriff und Löschen ihrer personenbezogenen Daten innerhalb von [!DNL Platform] verwaltet werden. Weitere Informationen finden Sie unter [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
+## Opt-out-Funktionen
 
-## Ausschluss-Funktionen
+[!DNL Real-time CDP] ermöglicht es Kunden, die Aufnahme ihrer personenbezogenen Daten in Segmentierungsanwendungsfälle abzuwählen. Die Opt-out-Voreinstellungen von Kunden werden von [!DNL Real-time Customer Profile] erfasst und gespeichert und können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mit boolescher Logik (&quot;AND NOT&quot;) im Segmentprädikat von einem Segment abgemeldet haben.
 
-[!DNL Real-time CDP] ermöglicht es Kunden, ihre personenbezogenen Daten in Anwendungsfällen mit Segmentierung Opt-out. Die Ausschluss-Voreinstellungen der Kunden werden von [!DNL Real-time Customer Profile] erfasst und gespeichert. Sie können erzwungen werden, indem Benutzer ausgeschlossen werden, die sich mit boolescher Logik (&quot;AND NOT&quot;) in der Segmentvorhersage für ein Segment entschieden haben.
-
-Weitere Informationen finden Sie im Dokument zu [Ausstiegsanfragen](../../segmentation/honoring-opt-outs.md) in der Dokumentation zum Adobe Experience Platform-Segmentdienst.
+Weitere Informationen finden Sie im Dokument [Berücksichtigung von Opt-out-Anfragen](../../segmentation/consents.md) in der Dokumentation zum Adobe Experience Platform Segmentation Service .
 
 ## IAB TCF 2.0-Unterstützung
 
-[!DNL Real-time CDP] basiert auf Adobe Experience Platform, das Teil der  [Händlerliste ](https://iabeurope.eu/vendor-list-tcf-v2-0/) für die  [!DNL Transparency & Consent Framework (TCF)]ist, wie in der  [!DNL Interactive Advertising Bureau (IAB)]. In Übereinstimmung mit den Anforderungen von TCF 2.0 können Sie mit Platform detaillierte Daten zur Kundeneinwilligung sammeln und diese in Ihre gespeicherten Profil integrieren. Diese Daten zur Einwilligung können dann je nach Anwendungsfall in die Segmente der exportierten Audience einbezogen werden.
+[!DNL Real-time CDP] basiert auf Adobe Experience Platform, das Teil der registrierten  [Anbieterliste ](https://iabeurope.eu/vendor-list-tcf-v2-0/) für die ist,  [!DNL Transparency & Consent Framework (TCF)]wie im  [!DNL Interactive Advertising Bureau (IAB)]beschrieben. In Übereinstimmung mit den TCF 2.0-Anforderungen können Sie mit Platform detaillierte Kundenzustimmungsdaten erfassen und in Ihre gespeicherten Kundenprofile integrieren. Diese Einwilligungsdaten können dann je nach Anwendungsfall in exportierte Zielgruppensegmente einbezogen werden.
 
-Weitere Informationen finden Sie unter [IAB TCF 2.0-Unterstützung in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md).
+Weitere Informationen finden Sie in der Übersicht über die [IAB TCF 2.0-Unterstützung in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) .
 
 ## Nächste Schritte
 
-In diesem Dokument erhalten Sie eine kurze Einführung in die Datenschutzfunktionen von [!DNL Real-time CDP]. Weitere Informationen zu den einzelnen Funktionen finden Sie in der Dokumentation zu den einzelnen Funktionen.
+Dieses Dokument bietet eine kurze Einführung in die Datenschutzfunktionen von [!DNL Real-time CDP]. Weitere Informationen zu den einzelnen Funktionen finden Sie in der Dokumentation zu den einzelnen Funktionen in diesem Handbuch.
