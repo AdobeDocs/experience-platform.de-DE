@@ -4,20 +4,28 @@ description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Ad
 seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
 keywords: Identität; Erstanbieter-Identität; Identity-Dienst; Drittanbieter-Identität; ID-Migration; Besucher-ID; Drittanbieter-Identität; thirdPartyCookiesEnabled; idMigrationEnabled; getIdentity; Syncing Identities; syncIdentity; sendEvent; identityMap; primary; ecid; Identity-Namespace; Namespace-ID; authenticationState; hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 3%
+source-wordcount: '1217'
+ht-degree: 5%
 
 ---
 
-# Abrufen von Adobe Experience Cloud IDs
+# Adobe Experience Cloud IDs
 
 Das Adobe Experience Platform Web SDK nutzt [Adobe Identity Service](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige Kennung verfügt, die auf dem Gerät beibehalten wird, sodass Aktivitäten zwischen Seiten verknüpft werden können.
 
 ## Erstanbieteridentität
 
-[!DNL Identity Service] speichert die Identität in einem Cookie in einer Erstanbieterdomäne. [!DNL Identity Service] versucht, das Cookie mithilfe eines HTTP-Headers in der Domäne festzulegen. Schlägt dies fehl, wird [!DNL Identity Service] auf das Setzen von Cookies über JavaScript zurückgesetzt. Adobe empfiehlt die Einrichtung eines CNAME, um sicherzustellen, dass Ihre Cookies nicht durch clientseitige ITP-Einschränkungen begrenzt werden.
+[!DNL Identity Service] speichert die Identität in einem Cookie in einer Erstanbieterdomäne. [!DNL Identity Service] versucht, das Cookie mithilfe eines HTTP-Headers in der Domäne festzulegen. Wenn dies fehlschlägt, setzt [!DNL Identity Service] auf das Setzen von Cookies mit JavaScript zurück. Es wird empfohlen, einen CNAME für Ihre [Edge Domain-Konfiguration](../fundamentals/configuring-the-sdk.md#edgeConfigId) einzurichten.
+
+Jedem vom Platform Web SDK stammenden Treffer wird vom Identity Service im Edge Network eine ECID hinzugefügt. Bei erstmaligen Besuchern wird die ECID generiert und der Payload hinzugefügt. Bei sich wiederholenden Besuchern wird die ECID aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie abgerufen und der Payload hinzugefügt.
+
+Die ECID wird unter dem Feld `identityMap` in Ihrem `xdm` hinzugefügt. Mithilfe des Entwicklungstools des Browsers können Sie die ECID in der Antwort unter der Payload mit dem Typ anzeigen: `identity:result`, aber die ECID kann nicht in der Anfrage angezeigt werden.
+
+Mit der CNAME-Implementierungen können Sie die von Adobe verwendete Sammel-Domain so anpassen, dass sie mit Ihrer eigenen Domain übereinstimmt. Dadurch kann Adobe First-Party-Cookies mithilfe von JavaScript Server-seitig anstatt Client-seitig setzen. In der Vergangenheit waren diese Server-seitigen Erstanbieter-Cookies keinen Beschränkungen unterworfen, die gemäß der ITP-Richtlinie (Intelligent Tracking Prevention) von Apple für Safari-Browser gelten. Im November 2020 aktualisierte Apple jedoch seine Richtlinien, sodass diese Einschränkungen auch auf Cookies angewendet wurden, die über CNAME gesetzt wurden. Derzeit sind beide Cookies, die serverseitig durch CNAME gesetzt werden, und die von JavaScript auf Client-Seite gesetzten Cookies unter ITP auf einen Ablauf von sieben Tagen oder 24 Stunden beschränkt. Weitere Informationen zur ITP-Richtlinie finden Sie in diesem Apple-Dokument zu [Tracking Prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp).
+
+Auch wenn eine CNAME-Implementierung keine Vorteile in Bezug auf die Cookie-Lebensdauer bietet, kann es einige weitere Vorteile wie Anzeigenblocker und weniger häufig verwendete Browser geben, die verhindern, dass Daten an Domänen gesendet werden, die sie als Tracker klassifizieren. In diesen Fällen kann die Verwendung eines CNAME verhindern, dass die Datenerfassung für Benutzer, die diese Tools verwenden, unterbrochen wird.
 
 ## Identität von Drittanbietern
 
