@@ -3,9 +3,9 @@ title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema;
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: e7f5074ef776fc6ccd4f9951722861d771a371de
+source-git-commit: ed6f0891958670c3c5896c4c9cbefef2a245bc15
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '932'
 ht-degree: 5%
 
 ---
@@ -159,32 +159,24 @@ Der typische [!DNL Platform Web SDK]-Code, der diesen Befehl verwendet, sieht wi
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
-**Beispielcode**
+**So senden Sie Profilattribute an Adobe Target:**
 
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## Empfehlungen anfordern
@@ -209,6 +201,22 @@ In der folgenden Tabelle sind die [!DNL Recommendations]-Attribute aufgeführt u
 |  | cartIds | Unterstützt |
 |  | productPurchasedId | Unterstützt |
 | Seiten- oder Elementkategorie für Kategorieaffinität | user.categoryId | Unterstützt |
+
+**So senden Sie Recommendations-Attribute an Adobe Target:**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## Debugging
 
