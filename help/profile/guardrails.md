@@ -1,113 +1,121 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;Guardrails;Guidelines;limit;entity;primary entity;dimension entity;
-title: Leitlinien für Daten zum Echtzeit-Profil von Kunden
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; Limits; Richtlinien; Grenze; Entität; primäre Entität; Dimensionentität;
+title: Limits für Echtzeit-Kundenprofildaten
 solution: Experience Platform
 product: experience platform
-topic-legacy: guide
 type: Documentation
-description: Adobe Experience Platform bietet eine Reihe von Garantieleistungen, mit denen Sie vermeiden können, Datenmodelle zu erstellen, die vom Echtzeit-Profil nicht unterstützt werden können. In diesem Dokument werden Best Practices und Einschränkungen erläutert, die bei der Modellierung von Profil-Daten zu beachten sind.
+description: Adobe Experience Platform bietet eine Reihe von Limits, mit denen Sie verhindern können, dass Datenmodelle erstellt werden, die vom Echtzeit-Kundenprofil nicht unterstützt werden. In diesem Dokument werden Best Practices und Einschränkungen beschrieben, die bei der Modellierung von Profildaten beachtet werden müssen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 2%
+source-wordcount: '1666'
+ht-degree: 4%
 
 ---
 
-# Grundlagen für [!DNL Real-time Customer Profile]-Daten
+# Limits für [!DNL Real-time Customer Profile]-Daten
 
-[!DNL Real-time Customer Profile] stellt individuelle Profil bereit, mit denen Sie personalisierte Erlebnisse für Kanal auf der Grundlage von Einblicken in das Verhalten und Kundenattributen bereitstellen können. Um dieses Targeting zu erreichen, verwenden [!DNL Profile] und die Segmentierungsmaschine in Adobe Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das einen neuen Ansatz zur Entwicklung von Profilen von Kunden Angebot. Die Verwendung dieses Hybrid-Datenmodells macht es äußerst wichtig, dass die erfassten Daten korrekt modelliert werden. Während der [!DNL Profile]-Datenspeicher zur Verwaltung von Profil-Daten kein relativer Speicher ist, ermöglicht [!DNL Profile] die Integration mit kleinen Dimensionentitäten, um Segmente auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als Segmentierung mehrerer Entitäten bezeichnet.
+[!DNL Real-time Customer Profile] bietet individuelle Profile, mit denen Sie personalisierte kanalübergreifende Erlebnisse auf der Grundlage von Verhaltenseinblicken und Kundenattributen bereitstellen können. Um dieses Targeting zu erreichen, verwenden [!DNL Profile] und die Segmentierungs-Engine in Adobe Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das einen neuen Ansatz zur Entwicklung von Kundenprofilen bietet. Durch die Verwendung dieses hybriden Datenmodells ist es wichtig, dass die erfassten Daten korrekt modelliert werden. Während der [!DNL Profile]-Datenspeicher, in dem Profildaten verwaltet werden, kein relativer Speicher ist, ermöglicht [!DNL Profile] die Integration mit kleinen Dimensionentitäten, um Segmente auf vereinfachte und intuitive Weise zu erstellen. Diese Integration wird als Segmentierung mit mehreren Entitäten bezeichnet.
 
-Adobe Experience Platform bietet eine Reihe von Garantieleistungen, um zu vermeiden, dass Datenmodelle erstellt werden, die von [!DNL Real-time Customer Profile] nicht unterstützt werden. In diesem Dokument werden diese Garantien sowie Best Practices und Einschränkungen bei der Verwendung von Profil-Daten für die Segmentierung erläutert.
+Adobe Experience Platform bietet eine Reihe von Limits, mit denen Sie verhindern können, dass Datenmodelle erstellt werden, die [!DNL Real-time Customer Profile] nicht unterstützen kann. In diesem Dokument werden diese Limits, Best Practices und Einschränkungen bei der Verwendung von Profildaten für die Segmentierung erläutert.
 
 >[!NOTE]
 >
->Die in diesem Dokument dargelegten Garantien und Grenzen werden ständig verbessert. Schauen Sie regelmäßig nach Updates.
+>Die in diesem Dokument dargelegten Limits und Limits werden ständig verbessert. Prüfen Sie regelmäßig nach Updates.
 
 ## Erste Schritte
 
-Es wird empfohlen, die folgende Dokumentation zu Experience Platform Services zu lesen, bevor Sie versuchen, Datenmodelle für die Verwendung in [!DNL Real-time Customer Profile] zu erstellen. Die Arbeit mit Datenmodellen und den in diesem Dokument beschriebenen Garantien erfordern ein Verständnis der verschiedenen Experience Platform-Services, die mit der Verwaltung von [!DNL Real-time Customer Profile]-Entitäten verbunden sind:
+Es wird empfohlen, die folgende Dokumentation zu Experience Platform-Diensten zu lesen, bevor Sie versuchen, Datenmodelle zur Verwendung in [!DNL Real-time Customer Profile] zu erstellen. Die Arbeit mit Datenmodellen und den in diesem Dokument beschriebenen Limits erfordern ein Verständnis der verschiedenen Experience Platform-Dienste, die mit der Verwaltung von [!DNL Real-time Customer Profile]-Entitäten verbunden sind:
 
-* [[!DNL Real-time Customer Profile]](home.md): Bietet ein einheitliches, Echtzeit-Profil für Kunden, das auf aggregierten Daten aus mehreren Quellen basiert.
-* [Adobe Experience Platform-Identitätsdienst](../identity-service/home.md): Unterstützt die Erstellung einer &quot;einzigen Ansicht des Kunden&quot;, indem Identitäten aus unterschiedlichen Datenquellen bei der Erfassung überbrückt werden  [!DNL Platform].
-* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Plattform Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Zusammensetzung](../xdm/schema/composition.md) des Schemas: Einführung in Schema und Datenmodellierung in der Experience Platform.
-* [Adobe Experience Platform-Segmentierungsdienst](../segmentation/home.md): Die Segmentierungsmaschine, die  [!DNL Platform] verwendet wird, um Audiencen-Segmente aus Ihren Profilen basierend auf Kundenverhalten und -attributen zu erstellen.
-   * [Segmentierung](../segmentation/multi-entity-segmentation.md) mehrerer Entitäten: Eine Anleitung zum Erstellen von Segmenten, die Dimensionselemente mit Profil-Daten integrieren.
+* [[!DNL Real-time Customer Profile]](home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
+* [Adobe Experience Platform Identity-Dienst](../identity-service/home.md): Unterstützt die Erstellung einer &quot;einheitlichen Ansicht des Kunden&quot;, indem Identitäten aus unterschiedlichen Datenquellen bei der Erfassung in überbrückt  [!DNL Platform]werden.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
+   * [Grundlagen der Schemakomposition](../xdm/schema/composition.md): Eine Einführung in Schemas und Datenmodellierung in Experience Platform.
+* [Adobe Experience Platform Segmentation Service](../segmentation/home.md): Die Segmentierungsmaschine, die in [!DNL Platform] verwendet wird, um Zielgruppensegmente aus Ihren Kundenprofilen basierend auf Kundenverhalten und -attributen zu erstellen.
+   * [Segmentierung mehrerer Entitäten](../segmentation/multi-entity-segmentation.md): Eine Anleitung zum Erstellen von Segmenten, die Dimensionentitäten mit Profildaten integrieren.
 
 ## Entitätstypen
 
-Das Datenmodell [!DNL Profile] zum Speichern besteht aus zwei Kern-Entitätstypen:
+Das Store-Datenmodell [!DNL Profile] besteht aus zwei Kernentitätstypen:
 
-* **Primär entity:** Eine primäre Entität oder Profil-Entität führt Daten zu einer &quot;einzigen Wahrheitsquelle&quot;für eine Einzelperson zusammen. Diese vereinheitlichten Daten werden mithilfe einer so genannten &quot;Vereinigung-Ansicht&quot;dargestellt. Eine Vereinigung-Ansicht Aggregat die Felder aller Schema, die dieselbe Klasse implementieren, in einem einzigen Vereinigung-Schema. Das Vereinigung-Schema für [!DNL Real-time Customer Profile] ist ein denormalisiertes Hybrid-Datenmodell, das als Container für alle Profil- und Verhaltensattribute fungiert.
+* **Primäre Entität:** Eine primäre Entität oder Profilentität führt Daten zu einer &quot;einzigen Wahrheitsquelle&quot;für eine Person zusammen. Diese einheitlichen Daten werden mithilfe einer so genannten &quot;Vereinigungsansicht&quot;dargestellt. Eine Vereinigungsansicht aggregiert die Felder aller Schemas, die dieselbe Klasse in ein Vereinigungsschema implementieren. Das Vereinigungsschema für [!DNL Real-time Customer Profile] ist ein denormalisiertes Hybrid-Datenmodell, das als Container für alle Profilattribute und Verhaltensereignisse fungiert.
 
-   Zeitunabhängige Attribute, auch als &quot;Datensatzdaten&quot;bezeichnet, werden mit [!DNL XDM Individual Profile] modelliert, während Zeitreihendaten, auch als &quot;Ereignis-Daten&quot;bezeichnet, mit [!DNL XDM ExperienceEvent] modelliert werden. Da Daten zu Datensatz und Zeitreihen in Adobe Experience Platform erfasst werden, beginnen die Trigger [!DNL Real-time Customer Profile] mit der Erfassung von Daten, die für ihre Verwendung aktiviert wurden. Je mehr Interaktionen und Details einbezogen werden, desto robuster werden die einzelnen Profil.
+   Zeitunabhängige Attribute, auch &quot;Datensatzdaten&quot;genannt, werden mit [!DNL XDM Individual Profile] modelliert, während Zeitreihendaten, auch &quot;Ereignisdaten&quot;genannt, mit [!DNL XDM ExperienceEvent] modelliert werden. Da Datensatz- und Zeitreihendaten in Adobe Experience Platform erfasst werden, wird es Trigger [!DNL Real-time Customer Profile], Daten zu erfassen, die für ihre Verwendung aktiviert wurden. Je mehr Interaktionen und Details erfasst werden, desto robuster werden einzelne Profile.
 
    ![](images/guardrails/profile-entity.png)
 
-* **Entität der Dimension:** Ihr Unternehmen kann auch XDM-Klassen definieren, um andere Dinge als Einzelpersonen zu beschreiben, wie z. B. Geschäfte, Produkte oder Eigenschaften. Diese nicht-[!DNL XDM Individual Profile]-Schema werden als &quot;Dimensionselemente&quot;bezeichnet und enthalten keine Zeitreihendaten. Dimensionen-Entitäten bieten Nachschlagedaten, die die Segmentdefinitionen mehrerer Entitäten erleichtern und vereinfachen, und müssen klein genug sein, damit die Segmentierungsmaschine den gesamten Datensatz zur optimalen Verarbeitung in den Speicher laden kann (schnelle Nachschlagevorgänge).
+* **Entität der Dimension:** Ihr Unternehmen kann auch XDM-Klassen definieren, um andere Dinge als Einzelpersonen zu beschreiben, z. B. Geschäfte, Produkte oder Eigenschaften. Diese nicht-[!DNL XDM Individual Profile]-Schemas werden als &quot;Dimensionselemente&quot;bezeichnet und enthalten keine Zeitreihendaten. Dimension-Entitäten stellen Suchdaten bereit, die Segmentdefinitionen mit mehreren Entitäten unterstützen und vereinfachen. Sie müssen klein genug sein, damit die Segmentierungsmaschine den gesamten Datensatz in den Speicher laden kann, um eine optimale Verarbeitung zu gewährleisten (Schnellpoint-Suche).
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Arten begrenzen
+## Profilfragmente
 
-Bei der Definition Ihres Datenmodells wird empfohlen, sich an den angegebenen Garantieleistungen zu halten, um eine ordnungsgemäße Leistung sicherzustellen und Systemfehler zu vermeiden. Die in diesem Dokument vorgesehenen Garantien umfassen zwei Arten von Beschränkungen:
+Es gibt mehrere Limits in diesem Dokument, die auf &quot;Profilfragmente&quot;verweisen. Das Echtzeit-Kundenprofil besteht aus mehreren Profilfragmenten. Jedes Fragment stellt die Daten für die Identität aus einem Datensatz dar, in dem es die primäre Identität ist. Das bedeutet, dass ein Fragment eine primäre ID und Ereignisdaten (Zeitreihen) in einem XDM ExperienceEvent-Datensatz enthalten kann oder aus einer primären ID und Datensatzdaten (zeitunabhängige Attribute) in einem Datensatz &quot;XDM Individual Profile&quot;bestehen kann.
 
-* **Weicher Grenzwert:** Eine weiche Grenze bietet ein empfohlenes Maximum für eine optimale Systemleistung. Es ist möglich, über eine weiche Grenze hinauszugehen, ohne das System zu beschädigen oder Fehlermeldungen zu erhalten, allerdings führt ein Überschreiten einer weichen Grenze zu einer Leistungsbeeinträchtigung. Es wird empfohlen, die weiche Grenze einzuhalten, um eine Verringerung der Gesamtleistung zu vermeiden.
+## Begrenzungstypen
 
-* **Hard limit:** Eine feste Grenze bietet ein absolutes Maximum für das System. Wenn Sie eine feste Grenze überschreiten, werden Unterbrechungen und Fehler auftreten, wodurch das System nicht wie erwartet funktioniert.
+Bei der Definition Ihres Datenmodells wird empfohlen, sich an die bereitgestellten Limits zu halten, um eine ordnungsgemäße Leistung sicherzustellen und Systemfehler zu vermeiden.
 
-## Datenmodellgarantien
+Die in diesem Dokument bereitgestellten Limits umfassen zwei Begrenzungstypen:
 
-Es wird empfohlen, beim Erstellen eines Datenmodells zur Verwendung mit [!DNL Real-time Customer Profile] die folgenden Garantien einzuhalten.
+* **Softlimit:** Eine weiche Begrenzung bietet ein empfohlenes Maximum für optimale Systemleistung. Es ist möglich, über eine weiche Grenze hinauszugehen, ohne das System zu beschädigen oder Fehlermeldungen zu erhalten. Eine Überschreitung dieser weichen Grenze führt jedoch zu einer Leistungsbeeinträchtigung. Es wird empfohlen, die weiche Grenze einzuhalten, um eine Verringerung der Gesamtleistung zu vermeiden.
 
-### Primär Entitätsgarantien
+* **Hardlimit:** Eine feste Begrenzung bietet ein absolutes Maximum für das System. Wenn Sie eine feste Grenze überschreiten, führt dies zu Fehlern und Störungen, sodass das System nicht wie erwartet funktioniert.
 
-| Guardrail | Maximal | Typ begrenzen | Beschreibung |
+## Limits für Datenmodelle
+
+Die Einhaltung der folgenden Limits wird beim Erstellen eines Datenmodells zur Verwendung mit [!DNL Real-time Customer Profile] empfohlen.
+
+### Limits Primärer Entitäten
+
+| Guardrail | Limit | Begrenzungstyp | Beschreibung |
 | --- | --- | --- | --- |
-| Anzahl der empfohlenen Datensätze als Beitrag zum Schema [!DNL Profile]-Vereinigung | 20 | Soft | **Es werden maximal 20  [!DNL Profile]aktivierte Datensätze empfohlen.** Um einen anderen Datensatz zu aktivieren,  [!DNL Profile]sollte zunächst ein vorhandener Datensatz entfernt oder deaktiviert werden. |
-| Anzahl der empfohlenen Beziehungen mit mehreren Entitäten | 5 | Weich | **Es wird empfohlen, maximal 5 Beziehungen mit mehreren Entitäten zu definieren, die zwischen primären Entitäten und Dimensionselementen definiert sind.** Zusätzliche Beziehungszuordnungen sollten erst dann vorgenommen werden, wenn eine bestehende Beziehung entfernt oder deaktiviert wurde. |
-| Maximale JSON-Tiefe für ID-Feld, das in einer Beziehung mit mehreren Entitäten verwendet wird | 4 | Weich | **Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, ist 4.** Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
-| Array-Kardinalität in einem Profil-Fragment | &lt;=500 | Weich | **Die optimale Array-Kardinalität in einem Profil-Fragment (zeitunabhängige Daten) ist  &lt;>** |
-| Array-Kardinalität in ExperienceEvent | &lt;=10 | Weich | **Die optimale Array-Kardinalität in einem ExperienceEvent (Zeitreihendaten) ist  &lt;>** |
+| Anzahl der empfohlenen Datensätze für den Beitrag zum Vereinigungsschema [!DNL Profile] | 20 | Soft | **Es werden maximal 20  [!DNL Profile]aktivierte Datensätze empfohlen.** Um einen anderen Datensatz für zu aktivieren,  [!DNL Profile]sollte zunächst ein vorhandener Datensatz entfernt oder deaktiviert werden. |
+| Anzahl der empfohlenen Beziehungen mit mehreren Entitäten | 5 | Soft | **Es werden maximal 5 Beziehungen mit mehreren Entitäten empfohlen, die zwischen primären Entitäten und Dimensionsentitäten definiert sind.** Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
+| Maximale JSON-Tiefe für ID-Feld, das in der Beziehung mit mehreren Entitäten verwendet wird | 4 | Soft | **Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, beträgt 4.** Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
+| Array-Kardinalität in einem Profilfragment | &lt;=500 | Soft | **Die optimale Array-Kardinalität in einem Profilfragment (zeitunabhängige Daten) ist  &lt;>** |
+| Array-Kardinalität in ExperienceEvent | &lt;=10 | Soft | **Die optimale Array-Kardinalität in einem ExperienceEvent (Zeitreihendaten) ist  &lt;>** |
 
-### Garantieleistungen für Dimensionen
+### Limits für Entitäten in Dimensionen
 
-| Guardrail | Maximal | Typ begrenzen | Beschreibung |
+| Guardrail | Limit | Begrenzungstyp | Beschreibung |
 | --- | --- | --- | --- |
-| Keine Zeitreihendaten zulässig für Nicht-[!DNL XDM Individual Profile]-Entitäten | 0 | Hard | **Zeitreihendaten sind für Nicht-[!DNL XDM Individual Profile] Entitäten im Profil Service nicht zulässig.** Wenn ein Dataset einer Zeitreihe mit einer Nicht-[!DNL XDM Individual Profile] ID verknüpft ist, sollte der Datensatz nicht aktiviert werden  [!DNL Profile]. |
-| Keine verschachtelten Beziehungen | 0 | Weich | **Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile] Schemas herstellen.** Die Möglichkeit, Beziehungen zu erstellen, wird nicht für Schema empfohlen, die nicht Teil des Schemas  [!DNL Profile] Vereinigung sind. |
-| Maximale JSON-Tiefe für primäres ID-Feld | 4 | Weich | **Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld ist 4.** Das bedeutet, dass Sie in einem hochverschachtelten Schema kein Feld als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
+| Keine Zeitreihendaten für Nicht-[!DNL XDM Individual Profile]-Entitäten zulässig | 0 | Hard | **Zeitreihendaten sind für Nicht-[!DNL XDM Individual Profile] Entitäten in Profile Service nicht zulässig.** Wenn ein Datensatz aus Zeitreihen mit einer Nicht-[!DNL XDM Individual Profile] ID verknüpft ist, sollte der Datensatz nicht für aktiviert werden  [!DNL Profile]. |
+| Keine verschachtelten Beziehungen | 0 | Soft | **Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile] Schemas erstellen.** Die Möglichkeit, Beziehungen zu erstellen, wird für keine Schemas empfohlen, die nicht Teil des  [!DNL Profile] Vereinigungsschemas sind. |
+| Maximale JSON-Tiefe für primäres ID-Feld | 4 | Soft | **Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld beträgt 4.** Das bedeutet, dass Sie in einem hochverschachtelten Schema ein Feld nicht als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
 
-## Datengröße
+## Limits bei der Datengröße
 
-Die folgenden Garantien beziehen sich auf die Datengröße und werden empfohlen, um sicherzustellen, dass Daten wie gewünscht erfasst, gespeichert und abgefragt werden können.
+Die folgenden Limits beziehen sich auf die Datengröße und werden empfohlen, um sicherzustellen, dass Daten wie gewünscht erfasst, gespeichert und abgefragt werden können.
 
 >[!NOTE]
 >
 >Die Datengröße wird als unkomprimierte Daten in JSON zum Zeitpunkt der Erfassung gemessen.
 
-### Primär Entitätsgarantien
+### Limits Primärer Entitäten
 
-| Guardrail | Maximal | Typ begrenzen | Beschreibung |
+| Guardrail | Limit | Begrenzungstyp | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Größe pro Profil | 10 KB | Weich | **Die empfohlene Maximalgröße für ein Profil-Fragment beträgt 10 KB.** Die Erfassung größerer Profil-Fragmente wirkt sich auf die Systemleistung aus. Das Laden eines umfangreichen CRM-Datensatzes mit einer Größe von 50 kB, in dem einige Profil-Fragmente enthalten sind, führt beispielsweise zu einer Beeinträchtigung der Systemleistung. |
-| Absolute Maximalgröße pro Profil-Fragment | 1 MB | hart | **Die absolute Maximalgröße eines Profil-Fragments beträgt 1 MB.** Die Auslastung schlägt fehl, wenn versucht wird, ein Profil-Fragment hochzuladen, das größer als 1 MB ist. |
+| Maximale ExperienceEvent-Größe | 10 KB | Hard | **Die maximale Größe eines Ereignisses beträgt 10 KB.** Die Aufnahme wird fortgesetzt, jedoch werden alle Ereignisse, die größer als 10 KB sind, gelöscht. |
+| Maximale Profildatensatzgröße | 100 KB | Hard | **Die maximale Größe eines Profildatensatzes beträgt 100 KB.** Die Aufnahme wird fortgesetzt, Profildatensätze, die größer als 100 KB sind, werden jedoch gelöscht. |
+| Maximale Größe von Profilfragmenten | 50 MB | Hard | **Die maximale Größe eines Profilfragments beträgt 50 MB.** Die Segmentierung, der Export und die Suche können bei allen  [Profilfragmenten, die größer als 50 MB ](#profile-fragments) sind, fehlschlagen. |
+| Maximale Profilspeichergröße | 50 MB | Soft | **Die maximale Größe eines gespeicherten Profils beträgt 50 MB.** Das Hinzufügen neuer  [Profilfragmente zu ](#profile-fragments) einem Profil, das größer als 50 MB ist, wirkt sich auf die Systemleistung aus. |
+| Anzahl der täglich erfassten Profil- oder ExperienceEvent-Batches | 90 | Soft | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag erfasst werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der täglich erfassten Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Die Aufnahme zusätzlicher Batches wirkt sich auf die Systemleistung aus. |
 
-### Garantieleistungen für Dimensionen
+### Limits für Entitäten in Dimensionen
 
-| Guardrail | Maximal | Typ begrenzen | Beschreibung |
+| Guardrail | Limit | Begrenzungstyp | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Gesamtgröße für alle dimensionalen Entitäten | 5 GB | Weich | **Die maximal empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB.** Die Erfassung von Entitäten mit großer Dimension führt zu einer Beeinträchtigung der Systemleistung. Beispielsweise wird der Versuch, einen 10-GB-Produktkatalog als Dimensionentität zu laden, nicht empfohlen. |
-| Datenbestände pro dimensionales Entitäts-Schema | 5 | Weich | **Es werden maximal 5 Datensätze empfohlen, die mit jedem dimensionalen Entitäts-Schema verknüpft sind.** Wenn Sie beispielsweise ein Schema für &quot;products&quot;erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Schema &quot;products&quot;verknüpft ist. |
+| Maximale Gesamtgröße für alle dimensionalen Entitäten | 5 GB | Soft | **Die maximal empfohlene Gesamtgröße für alle dimensionalen Entitäten beträgt 5 GB.** Die Erfassung großer Dimensionselemente führt zu einer verminderten Systemleistung. Es wird beispielsweise nicht empfohlen, einen 10 GB großen Produktkatalog als Dimensionentität zu laden. |
+| Datensätze pro dimensionales Entitätsschema | 5 | Soft | **Es werden maximal 5 Datensätze empfohlen, die mit jedem Dimensionsschema verknüpft sind.** Wenn Sie beispielsweise ein Schema für &quot;Produkte&quot;erstellen und fünf beitragende Datensätze hinzufügen, sollten Sie keinen sechsten Datensatz erstellen, der mit dem Produktschema verknüpft ist. |
+| Anzahl der pro Tag erfassten Dimensionentitäts-Batches | 4 pro Unternehmen | Soft | **Die maximale Anzahl von Dimensionentitäts-Batches, die pro Tag erfasst werden, beträgt 4 pro Entität.** Sie können beispielsweise Aktualisierungen an einem Produktkatalog bis zu 4-mal täglich erfassen. Die Aufnahme zusätzlicher Dimensionentitäts-Batches für dieselbe Entität wirkt sich auf die Systemleistung aus. |
 
-## Segmentierungsgarantien
+## Limits bei der Segmentierung
 
-Die in diesem Abschnitt erläuterten Leitlinien beziehen sich auf die Anzahl und Art der Segmente, die ein Unternehmen innerhalb der Experience Platform erstellen kann, sowie auf die Zuordnung und Aktivierung von Segmenten zu Zielen.
+Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Art der Segmente, die ein Unternehmen in Experience Platform erstellen kann, sowie auf die Zuordnung und Aktivierung von Segmenten zu Zielen.
 
-| Guardrail | Maximal | Typ begrenzen | Beschreibung |
+| Guardrail | Limit | Begrenzungstyp | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale Anzahl von Segmenten pro Sandbox | 10 K | Weich | **Die maximale Anzahl von Segmenten, die ein Unternehmen erstellen kann, beträgt 10 KB pro Sandbox.** Eine Organisation kann insgesamt mehr als 10.000 Segmente haben, solange in jeder einzelnen Sandbox weniger als 10.000 Segmente vorhanden sind. Der Versuch, weitere Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
-| Maximale Anzahl Streaming-Segmente pro Sandbox | 500 | Weich | **Die maximale Anzahl von Streaming-Segmenten, die ein Unternehmen erstellen kann, beträgt 500 pro Sandbox.** Eine Organisation kann insgesamt über 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
-| Maximale Anzahl an Stapelsegmenten pro Sandbox | 10 K | Weich | **Die maximale Anzahl von Stapelsegmenten, die ein Unternehmen erstellen kann, beträgt 10 KB pro Sandbox.** Ein Unternehmen kann insgesamt mehr als 10.000 Stapelsegmente haben, solange in jeder einzelnen Sandbox weniger als 10.000 Stapelsegmente vorhanden sind. Der Versuch, zusätzliche Stapelsegmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
+| Maximale Segmentanzahl pro Sandbox | 10 K | Soft | **Die maximale Anzahl von Segmenten, die ein Unternehmen erstellen kann, beträgt 10.000 pro Sandbox.** Eine Organisation kann insgesamt über mehr als 10.000 Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 10.000 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
+| Maximale Anzahl von Streaming-Segmenten pro Sandbox | 500 | Soft | **Die maximale Anzahl von Streaming-Segmenten, die ein Unternehmen erstellen kann, beträgt 500 pro Sandbox.** Eine Organisation kann über mehr als 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
+| Maximale Anzahl an Batch-Segmenten pro Sandbox | 10 K | Soft | **Die maximale Anzahl von Batch-Segmenten, die ein Unternehmen erstellen kann, beträgt 10.000 pro Sandbox.** Eine Organisation kann insgesamt über mehr als 10.000 Batch-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 10.000 Batch-Segmente vorhanden sind. Der Versuch, zusätzliche Batch-Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
