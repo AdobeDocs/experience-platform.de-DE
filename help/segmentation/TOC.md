@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Segmentierungs-Service
 breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
 feature: Segmente
-source-git-commit: 48ef54759ff62efa84aac493af3a7799e1b6d141
+source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 76%
+ht-degree: 75%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 76%
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
    - [Streaming-Segmentierung (Video)](video/streaming-segmentation-overview.md)
    - [Umgestaltung von Zeitbeschränkungen](ui/segment-refactoring.md)
-- [Erfüllen von Opt-outs](honoring-opt-outs.md)
+- [Einverständniserklärung](consents.md)
 - [Segmentierung mit mehreren Entitäten](multi-entity-segmentation.md)
 - Profile Query Language {#pql}
    - [Übersicht](pql/overview.md)
