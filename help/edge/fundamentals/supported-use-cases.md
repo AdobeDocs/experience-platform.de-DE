@@ -2,10 +2,10 @@
 title: Unterstützte Anwendungsfälle mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, welche Anwendungsfälle vom Adobe Experience Platform Web SDK unterstützt werden.
 keywords: Web SDK;Anwendungsfälle
-source-git-commit: b630a00f3985769243bd42ecd3c49f0d0ce60b07
+source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 17%
+source-wordcount: '574'
+ht-degree: 16%
 
 ---
 
@@ -40,7 +40,7 @@ Auf dieser Seite werden die unterstützten Anwendungsfälle für das Web SDK mit
 | --- | --- |
 | Senden von Erlebnisereignissen |  |
 | Offer Decisioning | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Senden von Daten an Echtzeit-Kundendatenprofil mit geringer Latenz |
+| Wenn der Datensatz für das Profil aktiviert ist, Möglichkeit, Daten in Echtzeit an das Echtzeit-Kundendatenprofil zu senden |  |
 | Senden von Daten an Customer Journey Analytics in Echtzeit |  |
 | Einverständnis zum Profil schreiben | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Übermitteln von Daten Server-seitig in Echtzeit an Dritte | [Dokumentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -87,6 +87,10 @@ Auf dieser Seite werden die unterstützten Anwendungsfälle für das Web SDK mit
 | Unterstützung von Besucherattributen |  |
 | Profilskripte |  |
 | XDM wird zu Mbox-Parametern |  |
+| Unterstützte Umleitungsangebote mit A4T-Reporting | [Dokumentation](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Aktualisieren des Target-Profils | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Empfehlungen |  |
+| mBox-Drittanbieter-ID |  |
 
 {style=&quot;table-layout:auto&quot;}
 
