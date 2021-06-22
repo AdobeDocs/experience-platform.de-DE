@@ -5,10 +5,10 @@ title: Erste Schritte mit der Schema Registry-API
 description: Dieses Dokument bietet eine Einführung in die wichtigsten Konzepte, die Sie kennen müssen, bevor Sie Aufrufe an die Schema Registry-API durchführen.
 topic-legacy: developer guide
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1370'
-ht-degree: 46%
+ht-degree: 47%
 
 ---
 
@@ -84,7 +84,7 @@ Eine erfolgreiche Antwort gibt Informationen zur Verwendung von [!DNL Schema Reg
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "fieldgroups": 3,
+    "mixins": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
@@ -93,7 +93,7 @@ Eine erfolgreiche Antwort gibt Informationen zur Verwendung von [!DNL Schema Reg
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -110,7 +110,7 @@ Eine erfolgreiche Antwort gibt Informationen zur Verwendung von [!DNL Schema Reg
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -270,4 +270,4 @@ Weitere Informationen zum Definieren verschiedener Feldtypen in der API finden S
 
 ## Nächste Schritte
 
-Um Aufrufe mit der API [!DNL Schema Registry] durchzuführen, wählen Sie eine der verfügbaren Endpunkthandbücher aus.
+Um mit dem Aufrufen der [!DNL Schema Registry]-API zu beginnen, wählen Sie eines der verfügbaren Handbücher zu Endpunkten.
