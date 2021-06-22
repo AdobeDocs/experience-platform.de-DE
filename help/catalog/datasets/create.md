@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Datensatz;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen;Datensatz erstellen
+keywords: Experience Platform; Startseite; beliebte Themen; Datensatz; Datensatz; Datensatz; Datensatz erstellen; Datensatz erstellen
 solution: Experience Platform
-title: Erstellen eines Datensatzes mit APIs
+title: Datensatz mit APIs erstellen
 topic-legacy: datasets
 description: In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines Datensatzes mithilfe der Adobe Experience Platform-APIs erläutert und aufgezeigt, wie der Datensatz anhand einer Datei befüllt wird.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1305'
-ht-degree: 81%
+ht-degree: 87%
 
 ---
 
@@ -21,31 +20,31 @@ In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines D
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Stapelverarbeitung](../../ingestion/batch-ingestion/overview.md):  [!DNL Experience Platform] erlaubt Ihnen, Daten als Batch-Dateien zu erfassen.
+* [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md):  [!DNL Experience Platform] ermöglicht die Aufnahme von Daten als Batch-Dateien.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-* [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -61,9 +60,9 @@ Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Date
 
 Dieses Tutorial setzt das im [Tutorial zur Schema Registry-API](../../xdm/tutorials/create-schema-api.md) Gelernte fort und greift dazu das darin erstellte „Loyalty Members“-Schema auf.
 
-Wenn Sie das [!DNL Schema Registry]-Tutorial noch nicht abgeschlossen haben, Beginn Sie bitte dort und fahren Sie mit diesem DataSet-Tutorial erst dann fort, wenn Sie das erforderliche Schema erstellt haben.
+Wenn Sie das Tutorial [!DNL Schema Registry] noch nicht abgeschlossen haben, beginnen Sie dort und fahren Sie mit diesem Tutorial nur fort, nachdem Sie das erforderliche Schema erstellt haben.
 
-Der folgende Aufruf kann zur Ansicht des Schemas &quot;Treuemitglieder&quot;verwendet werden, das Sie während des [!DNL Schema Registry]-API-Lernprogramms erstellt haben:
+Mit dem folgenden Aufruf können Sie das Schema &quot;Loyalty Members&quot;anzeigen, das Sie im API-Tutorial [!DNL Schema Registry] erstellt haben:
 
 **API-Format**
 
@@ -103,7 +102,7 @@ Das Format der Objektausgabe von der in der Anfrage verwendeten Accept-Kopfzeile
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -211,11 +210,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `schemaRef.id` | Der URI-`$id`-Wert für das XDM-Schema, auf dem der Datensatz basieren soll. |
-| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API. |
+| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
 
 >[!NOTE]
 >
->In diesem Lernprogramm wird für alle Beispiele das Dateiformat [Apache Parquet](https://parquet.apache.org/documentation/latest/) verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Tutorial wird für alle Beispiele das Dateiformat [Apache Parquet](https://parquet.apache.org/documentation/latest/) verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
@@ -295,7 +294,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 201 (Erstellung bestätigt)
 
 ## Hochladen von Dateien in einen Batch
 
-Nachdem der Batch für den Upload erfolgreich erstellt wurde, können Sie Dateien in den jeweiligen Datensatz hochladen. Beachten Sie, dass Sie bei der Definition des Datensatzes das Dateiformat als Parquet angegeben haben. Demensprechend können sie nur Dateien hochladen, die in diesem Format vorliegen.
+Nachdem der Batch für den Upload erfolgreich erstellt wurde, können Sie Dateien in den jeweiligen Datensatz hochladen. Beachten Sie dabei, dass Sie bei der Definition des Datensatzes das Dateiformat als Parquet angegeben haben. Demensprechend können sie nur Dateien hochladen, die in diesem Format vorliegen.
 
 >[!NOTE]
 >
@@ -330,7 +329,7 @@ Bei erfolgreichem Upload einer Datei wird für diese ein leerer Antworttext und 
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Nach Abschluss der Signierung erstellt der Dienst [!DNL Catalog] `DataSetFile`-Einträge für die hochgeladenen Dateien und verknüpft sie mit dem zuvor generierten Stapel. Der [!DNL Catalog]-Stapel ist als erfolgreich markiert, der alle nachgelagerten Ströme Trigger, die dann mit den jetzt verfügbaren Daten arbeiten können.
+Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Durch die Kennzeichnung der Fertigstellung erstellt der Dienst [!DNL Catalog] `DataSetFile` Einträge für die hochgeladenen Dateien und ordnet sie dem zuvor generierten Batch zu. Der Batch [!DNL Catalog] wird als erfolgreich markiert, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
 
 **API-Format**
 
