@@ -5,7 +5,7 @@ title: Mixins API Endpoint
 description: Mit dem Endpunkt /mixins in der Schema Registry-API können Sie XDM-Mixins in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 15%
@@ -168,7 +168,7 @@ Eine erfolgreiche Antwort gibt die Details des Mixins zurück. Die zurückgegebe
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -314,7 +314,7 @@ Bei einer erfolgreichen Antwort werden HTTP-Status 201 (Erstellt) und eine Paylo
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -496,7 +496,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Mixins zurück.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -639,7 +639,7 @@ Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Das `d
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "fieldgroups",
+  "meta:resourceType": "mixins",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
