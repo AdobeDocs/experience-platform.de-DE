@@ -4,9 +4,9 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1192'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ Die Attributdaten im Snapshot zeigen die Daten exakt so an, wie sie zu dem Zeitp
 ## Analyse des Dashboards [!UICONTROL Profile]
 
 Um in der Platform-Benutzeroberfläche zum Dashboard [!UICONTROL Profile] zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Profile]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+
+>[!NOTE]
+>
+>Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, ist das Dashboard [!UICONTROL Profile] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
 
 ![](../images/profiles/dashboard-overview.png)
 
