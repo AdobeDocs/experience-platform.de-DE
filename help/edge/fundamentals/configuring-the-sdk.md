@@ -1,24 +1,23 @@
 ---
-title: Adobe Experience Platform Web SDK konfigurieren
+title: Konfigurieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK konfigurieren.
 seo-description: Erfahren Sie, wie Sie das Experience Platform Web SDK konfigurieren
-keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;Umgebung;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;webSDK-Einstellungen;prehidingStyle;opacity;cookieDestinationEnabled;urlDestination Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-translation-type: tm+mt
-source-git-commit: 2895975b9c103e6afba7db221223b4ef2116caf3
+source-git-commit: 4b04f02a7a8843e667ea05b000bc93ebb065babd
 workflow-type: tm+mt
-source-wordcount: '803'
-ht-degree: 39%
+source-wordcount: '839'
+ht-degree: 43%
 
 ---
 
-# Plattform-Web-SDK konfigurieren
+# Konfigurieren des Platform Web SDK
 
 Die Konfiguration für das SDK erfolgt mit dem `configure`-Befehl.
 
 >[!IMPORTANT]
 >
->`configure` ist  ** immer der erste Befehl namens.
+>`configure` ist immer  ** der erste Befehl mit dem Namen .
 
 ```javascript
 alloy("configure", {
@@ -70,7 +69,7 @@ Gibt an, ob das Debugging aktiviert ist. Durch das Festlegen dieser Konfiguratio
 
 ### `edgeDomain` {#edge-domain}
 
-Füllen Sie dieses Feld mit Ihrer Erstanbieterdomäne. Weitere Informationen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+Füllen Sie dieses Feld mit Ihrer Erstanbieterdomäne aus. Weitere Informationen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
 Die Domäne ähnelt `data.{customerdomain.com}` für eine Website unter www.{customerdomain.com}.
 
@@ -82,7 +81,7 @@ Die Domäne ähnelt `data.{customerdomain.com}` für eine Website unter www.{cus
 
 {style=&quot;table-layout:auto&quot;}
 
-Ihre zugeordnete Organisations-ID [!DNL Experience Cloud]. Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
+Ihre zugewiesene [!DNL Experience Cloud] Organisations-ID. Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
 
 ## Datenerfassung
 
@@ -94,7 +93,7 @@ Ihre zugeordnete Organisations-ID [!DNL Experience Cloud]. Beim Konfigurieren me
 
 {style=&quot;table-layout:auto&quot;}
 
-Gibt an, ob mit Linkklicks verbundene Daten automatisch erfasst werden. Weitere Informationen finden Sie unter [Automatische Linkverfolgung](../data-collection/track-links.md#automaticLinkTracking).
+Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Weitere Informationen finden Sie unter [Automatische Linktracking](../data-collection/track-links.md#automaticLinkTracking) . Links werden auch als Downloadlinks bezeichnet, wenn sie ein Download-Attribut enthalten oder wenn der Link mit einer Dateierweiterung endet. Downloadlink-Qualifikatoren können mit einem regulären Ausdruck konfiguriert werden. Der Standardwert lautet `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -104,7 +103,7 @@ Gibt an, ob mit Linkklicks verbundene Daten automatisch erfasst werden. Weitere 
 
 {style=&quot;table-layout:auto&quot;}
 
-Konfigurieren Sie einen Rückruf, der für jedes Ereignis kurz vor dem Senden aufgerufen wird. Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet. Um zu ändern, was gesendet wird, ändern Sie das `xdm`-Objekt. Innerhalb des Rückrufs werden die Daten für das `xdm`-Objekt bereits im Ereignis-Befehl und die automatisch erfassten Informationen übergeben. Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
+Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden aufgerufen wird. Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet. Um zu ändern, was gesendet wird, ändern Sie das `xdm` -Objekt. Innerhalb des Rückrufs werden die Daten bereits im Ereignisbefehl an das `xdm`-Objekt und die automatisch erfassten Informationen übergeben. Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
 
 ## Datenschutzoptionen
 
@@ -116,10 +115,10 @@ Konfigurieren Sie einen Rückruf, der für jedes Ereignis kurz vor dem Senden au
 
 {style=&quot;table-layout:auto&quot;}
 
-Legt die Standardzustimmung des Nutzers fest. Verwenden Sie diese Einstellung, wenn für den Benutzer keine Voreinstellung für die Zustimmung bereits gespeichert wurde. Die anderen gültigen Werte sind `"pending"` und `"out"`. Dieser Standardwert bleibt nicht auf dem Profil des Benutzers erhalten. Das Profil des Benutzers wird nur aktualisiert, wenn `setConsent` aufgerufen wird.
-* `"in"`: Wenn diese Einstellung festgelegt ist oder kein Wert angegeben wird, wird die Arbeit ohne Benutzereinwilligung fortgesetzt.
-* `"pending"`: Wenn diese Einstellung festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Benutzer die Voreinstellungen für die Zustimmung bereitstellt.
-* `"out"`: Wenn diese Einstellung festgelegt ist, wird die Arbeit verworfen, bis der Benutzer seine Zustimmung erteilt.
+Legt die Standardzustimmung des Nutzers fest. Verwenden Sie diese Einstellung, wenn für den Benutzer keine Zustimmungsvoreinstellung gespeichert wurde. Die anderen gültigen Werte sind `"pending"` und `"out"`. Dieser Standardwert wird nicht im Profil des Benutzers beibehalten. Das Profil des Benutzers wird nur aktualisiert, wenn `setConsent` aufgerufen wird.
+* `"in"`: Wenn diese Einstellung festgelegt ist oder kein Wert angegeben wird, wird die Arbeit ohne Voreinstellungen für die Benutzerzustimmung fortgesetzt.
+* `"pending"`: Wenn diese Einstellung festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Benutzer Zustimmungsvoreinstellungen bereitstellt.
+* `"out"`: Wenn diese Einstellung festgelegt ist, wird die Arbeit verworfen, bis der Benutzer Zustimmungsvoreinstellungen bereitstellt.
 Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit basierend auf den Voreinstellungen des Nutzers entweder fortgesetzt oder abgebrochen. Weitere Informationen finden Sie unter [Unterstützen von Zustimmung](../consent/supporting-consent.md).
 
 ## Personalisierungsoptionen
@@ -132,9 +131,9 @@ Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit 
 
 {style=&quot;table-layout:auto&quot;}
 
-Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Web-Seite ausblendet, während personalisierter Inhalt vom Server geladen wird. Wenn diese Option nicht bereitgestellt wird, versucht das SDK nicht, Inhaltsbereiche auszublenden, während personalisierte Inhalte geladen werden, was möglicherweise zu einem Flackern führt.
+Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Web-Seite ausblendet, während personalisierter Inhalt vom Server geladen wird. Wenn diese Option nicht bereitgestellt wird, versucht das SDK nicht, Inhaltsbereiche beim Laden personalisierter Inhalte auszublenden, was möglicherweise zu einem &quot;Flackern&quot;führt.
 
-Beispiel: Wenn ein Element auf Ihrer Webseite die ID `container` aufweist, deren Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, verwenden Sie den folgenden Prähiding-Stil:
+Wenn beispielsweise ein Element auf Ihrer Web-Seite die Kennung `container` aufweist, dessen Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, verwenden Sie den folgenden Vorab-Ausblendungsstil:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -150,7 +149,7 @@ Beispiel: Wenn ein Element auf Ihrer Webseite die ID `container` aufweist, deren
 
 {style=&quot;table-layout:auto&quot;}
 
-Aktiviert die Cookie-Ziele [!DNL Audience Manager], wodurch Cookies basierend auf der Segmentqualifizierung gesetzt werden können.
+Aktiviert [!DNL Audience Manager] Cookie-Ziele, die das Setzen von Cookies basierend auf der Segmentqualifizierung ermöglichen.
 
 ### `urlDestinationsEnabled`
 
@@ -160,7 +159,7 @@ Aktiviert die Cookie-Ziele [!DNL Audience Manager], wodurch Cookies basierend au
 
 {style=&quot;table-layout:auto&quot;}
 
-Aktiviert URL-Ziele [!DNL Audience Manager], was das Auslösen von URLs auf Grundlage der Segmentqualifikation ermöglicht.
+Aktiviert [!DNL Audience Manager] URL-Ziele, die das Auslösen von URLs basierend auf der Segmentqualifizierung ermöglichen.
 
 ## Identitätsoptionen
 
@@ -172,7 +171,7 @@ Aktiviert URL-Ziele [!DNL Audience Manager], was das Auslösen von URLs auf Grun
 
 {style=&quot;table-layout:auto&quot;}
 
-Wenn &quot;true&quot;, liest und setzt das SDK alte AMCV-Cookies. Diese Option unterstützt den Übergang zur Verwendung des Adobe Experience Platform Web SDK, während einige Teile der Site möglicherweise weiterhin Besucher.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, die SDK Abfragen Besucher-API für die ECID. Mit dieser Option können Sie Seiten mit zwei Tags mit dem Adobe Experience Platform Web SDK versehen und immer noch die gleiche ECID haben.
+Wenn &quot;true&quot;, liest und setzt das SDK alte AMCV-Cookies. Diese Option hilft beim Übergang zur Verwendung des Adobe Experience Platform Web SDK, während einige Teile der Site möglicherweise noch Visitor.js verwenden. Wenn die Besucher-API auf der Seite definiert ist, fragt das SDK die Besucher-API für die ECID ab. Mit dieser Option können Sie Seiten mit dem Adobe Experience Platform Web SDK doppelt taggen, die immer noch dieselbe ECID aufweisen.
 
 ### `thirdPartyCookiesEnabled`
 
@@ -182,4 +181,4 @@ Wenn &quot;true&quot;, liest und setzt das SDK alte AMCV-Cookies. Diese Option u
 
 {style=&quot;table-layout:auto&quot;}
 
-Aktiviert die Einstellung von Adobe-Drittanbieter-Cookies. Das SDK kann die Besucher-ID in einem Drittanbieterkontext beibehalten, um die Verwendung derselben Besucher-ID für mehrere Sites zu ermöglichen. Verwenden Sie diese Option, wenn Sie mehrere Sites haben oder Daten mit Partnern teilen möchten. Manchmal ist diese Option aus Datenschutzgründen nicht erwünscht.
+Aktiviert die Einstellung von Adobe-Drittanbieter-Cookies. Das SDK kann die Besucher-ID in einem Drittanbieterkontext beibehalten, damit dieselbe Besucher-ID siteübergreifend verwendet werden kann. Verwenden Sie diese Option, wenn Sie mehrere Sites haben oder Daten mit Partnern teilen möchten. Manchmal ist diese Option jedoch aus Datenschutzgründen nicht erwünscht.
