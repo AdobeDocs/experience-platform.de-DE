@@ -4,10 +4,10 @@ title: Segmente-Dashboard
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 3%
+source-wordcount: '940'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,11 @@ Die Attributdaten im Snapshot zeigen die Daten exakt so an, wie sie zu dem Zeitp
 
 ## Segmente-Dashboard durchsuchen
 
-Um in der Platform-Benutzeroberfläche zum Segment-Dashboard zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Segmente]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+Um in der Platform-Benutzeroberfläche zum Dashboard [!UICONTROL Segmente] zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Segmente]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+
+>[!NOTE]
+>
+>Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, ist das Dashboard [!UICONTROL Segmente] nicht sichtbar. Stattdessen zeigt der Tab [!UICONTROL Übersicht] Links und Dokumentation an, die Ihnen bei den ersten Schritten mit der Segmentierung helfen.
 
 ![](../images/segments/dashboard-overview.png)
 
