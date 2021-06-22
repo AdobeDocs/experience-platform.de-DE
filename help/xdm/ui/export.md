@@ -1,52 +1,51 @@
 ---
 solution: Experience Platform
-title: Exportieren von XDM-Schemas in der Benutzeroberfläche
-description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder eine andere IMS-Organisation in der Adobe Experience Platform-Benutzeroberfläche exportieren.
+title: Exportieren von XDM-Schemas in die Benutzeroberfläche
+description: Erfahren Sie, wie Sie ein vorhandenes Schema in eine andere Sandbox oder IMS-Organisation in der Benutzeroberfläche von Adobe Experience Platform exportieren.
 topic-legacy: user guide
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-translation-type: tm+mt
-source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
+source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 0%
 
 ---
 
-# Exportieren von XDM-Schemas in der Benutzeroberfläche
+# Exportieren von XDM-Schemas in die Benutzeroberfläche
 
-Alle Ressourcen in der Schema-Bibliothek sind in einer bestimmten Sandbox innerhalb einer IMS-Organisation enthalten. In einigen Fällen möchten Sie möglicherweise Experience Data Model-(XDM-)Ressourcen zwischen Sandboxen und IMS-Orgs freigeben.
+Alle Ressourcen in der Schema Library sind in einer bestimmten Sandbox innerhalb einer IMS-Organisation enthalten. In einigen Fällen möchten Sie möglicherweise Experience-Datenmodell (XDM)-Ressourcen zwischen Sandboxes und IMS-Organisationen freigeben.
 
-Um diese Anforderung zu erfüllen, können Sie im Arbeitsbereich [!UICONTROL Schema] in der Adobe Experience Platform-Benutzeroberfläche eine Exportnutzlast für jedes Schema in der Schema-Bibliothek generieren. Diese Nutzlast kann dann in einem Aufruf an die Schema Registry API verwendet werden, um das Schema (und alle abhängigen Ressourcen) in eine Zielgruppe-Sandbox und IMS-Org zu importieren.
+Um dies zu erreichen, können Sie mit dem Arbeitsbereich [!UICONTROL Schemas] in der Adobe Experience Platform-Benutzeroberfläche eine Export-Payload für ein beliebiges Schema in der Schema Library generieren. Diese Payload kann dann in einem Aufruf an die Schema Registry-API verwendet werden, um das Schema (und alle abhängigen Ressourcen) in eine Ziel-Sandbox und IMS-Organisation zu importieren.
 
 >[!NOTE]
 >
->Sie können die Schema Registry-API auch verwenden, um neben Schemas, einschließlich Klassen, Schema-Feldgruppen und Datentypen, weitere Ressourcen zu exportieren. Weitere Informationen finden Sie im Handbuch zu den [export/import-Endpunkten](../api/export-import.md).
+>Sie können die Schema Registry-API auch verwenden, um neben Schemas weitere Ressourcen zu exportieren, darunter Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden Sie im Handbuch zu den [Export-/Import-Endpunkten](../api/export-import.md) .
 
-## Voraussetzungen 
+## Voraussetzungen  
 
-Während die Plattform-Benutzeroberfläche den Export von XDM-Ressourcen ermöglicht, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder IMS-Orgs zu importieren, um den Workflow abzuschließen. Lesen Sie das Handbuch [Erste Schritte mit der Schema Registry API](../api/getting-started.md), um wichtige Informationen zu erforderlichen Authentifizierungsheader zu erhalten, bevor Sie diesem Handbuch folgen.
+Während die Platform-Benutzeroberfläche den Export von XDM-Ressourcen ermöglicht, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder IMS-Organisationen zu importieren und den Workflow abzuschließen. Wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen finden Sie im [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) , bevor Sie dieses Handbuch befolgen.
 
 ## Exportnutzlast generieren
 
-Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;im linken Navigationsbereich **[!UICONTROL Schema]** aus. Suchen Sie im Arbeitsbereich [!UICONTROL Schema] das zu exportierende Schema und öffnen Sie es in [!DNL Schema Editor].
+Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Schemas]** aus. Suchen Sie im Arbeitsbereich [!UICONTROL Schemas] das Schema, das Sie exportieren möchten, und öffnen Sie es im Arbeitsbereich [!DNL Schema Editor].
 
 >[!TIP]
 >
->Weitere Informationen zur Suche nach der gesuchten XDM-Ressource finden Sie im Handbuch [XDM-Ressourcen](./explore.md).
+>Weitere Informationen zum Auffinden der gesuchten XDM-Ressource finden Sie im Handbuch [Erkunden von XDM-Ressourcen](./explore.md) .
 
 Nachdem Sie das Schema geöffnet haben, wählen Sie das Symbol **[!UICONTROL JSON kopieren]** (![Kopiersymbol](../images/ui/export/icon.png)) oben rechts auf der Arbeitsfläche aus.
 
 ![](../images/ui/export/copy-json.png)
 
-Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend auf der Schema-Struktur generiert wurde. Für das oben gezeigte Schema &quot;[!DNL Loyalty Members]&quot;wird folgende JSON generiert:
+Dadurch wird eine JSON-Payload in die Zwischenablage kopiert, die basierend auf der Schemastruktur generiert wurde. Für das oben dargestellte Schema &quot;[!DNL Loyalty Members]&quot;wird die folgende JSON generiert:
 
 ```json
 [
   {
-    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-    "meta:resourceType": "fieldgroups",
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
     "version": "1.0",
     "title": "Loyalty details",
     "type": "object",
@@ -171,12 +170,12 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
         "type": "object",
         "meta:xdmType": "object"
       },
       {
-        "$ref": "https://ns.adobe.com/xdm/fieldgroups/profile-consents",
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
         "type": "object",
         "meta:xdmType": "object"
       }
@@ -189,8 +188,8 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
       "https://ns.adobe.com/xdm/common/auditable",
       "https://ns.adobe.com/xdm/data/record",
       "https://ns.adobe.com/xdm/context/profile",
-      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
-      "https://ns.adobe.com/xdm/fieldgroups/profile-consents"
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
     ],
     "meta:xdmType": "object",
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -203,14 +202,14 @@ Dadurch wird eine JSON-Nutzlast in Ihre Zwischenablage kopiert, die basierend au
 ]
 ```
 
-Die Nutzlast erfolgt in Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine benutzerdefinierte XDM-Ressource darstellt, die exportiert werden soll. Im obigen Beispiel sind die benutzerspezifische Feldgruppe &quot;[!DNL Loyalty details]&quot;und das Schema &quot;[!DNL Loyalty Members]&quot;enthalten. Die vom Schema verwendeten Kernressourcen werden nicht in den Export einbezogen, da diese Ressourcen in allen Sandboxen und IMS-Organisationen verfügbar sind.
+Die Payload hat die Form eines Arrays, wobei jedes Array-Element ein Objekt ist, das eine benutzerdefinierte XDM-Ressource darstellt, die exportiert werden soll. Im obigen Beispiel sind die benutzerdefinierte Feldergruppe &quot;[!DNL Loyalty details]&quot;und das Schema &quot;[!DNL Loyalty Members]&quot;enthalten. Kernressourcen, die vom Schema verwendet werden, sind nicht im Export enthalten, da diese Ressourcen in allen Sandboxes und IMS-Organisationen verfügbar sind.
 
-Beachten Sie, dass jede Instanz der Mandanten-ID Ihres Unternehmens in der Payload als `<XDM_TENANTID_PLACEHOLDER>` angezeigt wird. Diese Platzhalter werden automatisch durch den entsprechenden Wert für die Mandanten-ID ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
+Beachten Sie, dass jede Instanz der Mandanten-ID Ihres Unternehmens in der Payload als `<XDM_TENANTID_PLACEHOLDER>` angezeigt wird. Diese Platzhalter werden automatisch durch den entsprechenden Mandanten-ID-Wert ersetzt, je nachdem, wo Sie das Schema im nächsten Schritt importieren.
 
-## Ressource mit der API importieren
+## Importieren der Ressource mit der API
 
-Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Nutzlast für eine POST-Anforderung an den `/import`-Endpunkt in der Schema-Registrierungs-API verwenden. Weitere Informationen zum Konfigurieren des Aufrufs zum Senden des Schemas an das gewünschte IMS-Org und die Sandbox finden Sie im Abschnitt [Importieren einer XDM-Ressource in der API](../api/export-import.md#import).
+Nachdem Sie die Export-JSON für das Schema kopiert haben, können Sie sie als Payload für eine POST-Anfrage an den `/import`-Endpunkt in der Schema Registry-API verwenden. Weitere Informationen zum Konfigurieren des Aufrufs zum Senden des Schemas an die gewünschte IMS-Organisation und Sandbox finden Sie im Abschnitt [Importieren einer XDM-Ressource in die API](../api/export-import.md#import) .
 
 ## Nächste Schritte
 
-Mit diesem Handbuch haben Sie ein XDM-Schema erfolgreich in ein anderes IMS-Org oder eine andere Sandbox exportiert. Weitere Informationen zu den Funktionen der Benutzeroberfläche [!UICONTROL Schema] finden Sie in der [[!UICONTROL Schema] UI-Übersicht](./overview.md).
+In diesem Handbuch haben Sie erfolgreich ein XDM-Schema in eine andere IMS-Organisation oder Sandbox exportiert. Weitere Informationen zu den Funktionen der [!UICONTROL Schemas]-Benutzeroberfläche finden Sie in der [[!UICONTROL Übersicht über Schemas] der Benutzeroberfläche](./overview.md).
