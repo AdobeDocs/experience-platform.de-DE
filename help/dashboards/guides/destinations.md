@@ -4,9 +4,9 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 8312d1523ab68dd0a4ba437dd826adde544838fe
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '792'
 ht-degree: 6%
 
 ---
@@ -28,6 +28,10 @@ Das Dashboard [!UICONTROL Ziele] zeigt eine Momentaufnahme der Ziele an, die Ihr
 ## Dashboard &quot;Ziele&quot;durchsuchen
 
 Um in der Benutzeroberfläche von Platform zum Dashboard für Ziele zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Ziele]** und dann die Registerkarte **[!UICONTROL Übersicht]** aus, um das Dashboard anzuzeigen.
+
+>[!NOTE]
+>
+>Wenn Ihr Unternehmen neu in Experience Platform ist und noch keine aktiven Ziele hat, sind die Registerkarten [!UICONTROL Ziele] und [!UICONTROL Übersicht] nicht sichtbar. Wenn Sie stattdessen [!UICONTROL Ziele] aus der linken Navigation auswählen, wird die Registerkarte [!UICONTROL Katalog] angezeigt. Weitere Informationen zum Tab [!UICONTROL Katalog] finden Sie im [[!UICONTROL Ziele] Workspace-Handbuch](../../destinations/ui/destinations-workspace.md).
 
 ![](../images/destinations/dashboard-overview.png)
 
