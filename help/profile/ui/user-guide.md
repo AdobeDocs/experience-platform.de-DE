@@ -4,14 +4,14 @@ title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: db094aac82b1d0a6671c213f3e98824f828771ab
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 11%
+source-wordcount: '1319'
+ht-degree: 10%
 
 ---
 
-#  Handbuch für die [!DNL Real-time Customer Profile]-Benutzeroberfläche
+# Handbuch für die [!DNL Real-time Customer Profile]-Benutzeroberfläche
 
 [!DNL Real-time Customer Profile] erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden, wobei Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombiniert werden. Dieses Dokument dient als Leitfaden für die Interaktion mit [!DNL Real-time Customer Profile]-Daten in der Adobe Experience Platform-Benutzeroberfläche.
 
@@ -25,15 +25,19 @@ Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Pla
 
 ## Übersicht
 
-Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Profile]** aus, um die Registerkarte **[!UICONTROL Übersicht]** zu öffnen. Auf dieser Registerkarte finden Sie Links zu Dokumentationen und Videos, die Ihnen helfen, Profile zu verstehen und mit ihnen zu arbeiten.
+Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Profile]** aus, um die Registerkarte **[!UICONTROL Übersicht]** mit dem Dashboard  zu öffnen.
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, ist das Dashboard [!UICONTROL Profile] nicht sichtbar. Stattdessen werden auf der Registerkarte [!UICONTROL Übersicht] Links und Dokumentation angezeigt, die Ihnen bei den ersten Schritten mit dem Echtzeit-Kundenprofil helfen.
 
-### Profil-Dashboard
+###  Profilesdashboard  {#profile-dashboard}
 
-Für einige Benutzer bietet die Auswahl von **[!UICONTROL Profile]** im linken Navigationsbereich und das Öffnen der Registerkarte **[!UICONTROL Übersicht]** ein Dashboard, in dem die Schlüsselmetriken für Ihre Profildaten dargestellt werden.
+Das Dashboard **[!UICONTROL Profile]** enthält Schlüsselmetriken, die sich auf die Profildaten Ihres Unternehmens beziehen.
 
-Weitere Informationen finden Sie im [Profil-Dashboard-Handbuch](profile-dashboard.md).
+Weitere Informationen finden Sie im [Profil-Dashboard-Handbuch](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Durchsuchen
 
