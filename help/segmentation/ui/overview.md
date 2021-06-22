@@ -5,9 +5,9 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
 workflow-type: tm+mt
-source-wordcount: '1547'
+source-wordcount: '1561'
 ht-degree: 22%
 
 ---
@@ -31,15 +31,19 @@ Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument ver
 
 ## Übersicht
 
-Wählen Sie in der [[!DNL Experience Platform] UI](https://platform.adobe.com/) **[!UICONTROL Segmente]** im linken Navigationsbereich aus, um die Registerkarte **[!UICONTROL Übersicht]** zu öffnen. Auf dieser Registerkarte finden Sie Links zu Dokumentationen und Videos, die Ihnen helfen, Segmente zu verstehen und mit ihnen zu arbeiten.
+Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Segmente]** aus, um den Tab **[!UICONTROL Übersicht]** zu öffnen, auf dem das Dashboard [!UICONTROL Segmente] angezeigt wird.
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, ist das Dashboard [!UICONTROL Segmente] nicht sichtbar. Stattdessen zeigt der Tab [!UICONTROL Übersicht] Links und Dokumentation an, die Ihnen bei den ersten Schritten mit Segmenten helfen.
 
-### Segmente-Dashboard
+###  Segmente-Dashboard  {#segments-dashboard}
 
-Für einige Benutzer bietet die Auswahl von **[!UICONTROL Segmenten]** im linken Navigationsbereich und das Öffnen des Tabs **[!UICONTROL Übersicht]** ein Dashboard, in dem die Schlüsselmetriken für Ihre Segmentdaten dargestellt werden.
+Das Dashboard **[!UICONTROL Segmente]** enthält Schlüsselmetriken, die sich auf die Segmentdaten Ihres Unternehmens beziehen.
 
-Weitere Informationen finden Sie im Handbuch [Segment-Dashboard](segment-dashboard.md).
+Weitere Informationen finden Sie im Handbuch [Segment-Dashboard](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Durchsuchen
 
