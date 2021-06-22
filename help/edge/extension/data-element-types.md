@@ -1,9 +1,8 @@
 ---
-title: Datenelementtypen in der Adobe Experience Platform Web SDK Extension
-description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch bereitgestellt werden.
+title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
+description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-translation-type: tm+mt
-source-git-commit: 3f7808a08d033c5940d2115006c269b8c4079822
+source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 47%
@@ -12,7 +11,7 @@ ht-degree: 47%
 
 # Datenelementtypen
 
-Nachdem Sie die Aktionstypen [in der [Adobe Experience Platform Web SDK-Erweiterung](web-sdk-extension.md) für [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html) festgelegt haben, konfigurieren Sie die Datenelementtypen.](action-types.md)
+Nachdem Sie die [Aktionstypen](action-types.md) in der [Adobe Experience Platform Web SDK-Erweiterung](web-sdk-extension-configuration.md) für [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html) festgelegt haben, konfigurieren Sie Ihre Datenelementtypen.
 
 Auf dieser Seite werden die verfügbaren Datenelementtypen beschrieben.
 
@@ -22,7 +21,7 @@ Dieses Datenelement stellt die Zusammenführungs-ID eines Ereignisses bereit, fa
 
 ## Identitätszuordnung
 
-Mit dem Datenelement „Identitätszuordnung“ können Sie Identitäten aus anderen Datenelementen oder anderen von Ihnen angegebenen Werten erstellen. Alle von Ihnen erstellten Identitäten müssen an einen entsprechenden Namensraum zurückgebunden werden. Dieses Datenelement bietet eine Dropdown-Liste mit allen Standardeinstellungen und allen von Ihnen erstellten Namensräumen.
+Mit dem Datenelement „Identitätszuordnung“ können Sie Identitäten aus anderen Datenelementen oder anderen von Ihnen angegebenen Werten erstellen. Alle von Ihnen erstellten Identitäten müssen an einen entsprechenden Namensraum zurückgebunden werden. Dieses Datenelement bietet eine Dropdown-Liste, die alle standardmäßigen Namespaces und alle von Ihnen erstellten Namespaces anzeigt.
 
 ![](./assets/identity-map-data-element.png)
 
@@ -36,4 +35,4 @@ Beachten Sie, dass beim Öffnen bestimmter Felder Ihres Schemas wie `web.webPage
 
 >[!NOTE]
 >
->Füllen Sie nur die Informationen aus, die Sie sammeln möchten. Alles, was nicht ausgefüllt wird, wird weggelassen, wenn die Daten an die Lösungen gesendet werden.
+>Füllen Sie nur die Informationen aus, die Sie sammeln möchten. Alles, was nicht ausgefüllt wird, wird beim Senden der Daten an die Lösungen weggelassen.
