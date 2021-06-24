@@ -5,10 +5,10 @@ title: Adobe Analytics Source Connector für Report Suite-Daten
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen einen Überblick über Analytics und beschreibt die Anwendungsfälle für Analytics-Daten.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 9defe1c3087c2f1284ceedede9d274a51cf97b96
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 25%
+source-wordcount: '542'
+ht-degree: 27%
 
 ---
 
@@ -44,6 +44,8 @@ Detaillierte Informationen zur Feldzuordnung zwischen [!DNL Analytics] und der E
 
 ## Wie hoch ist die erwartete Latenz für Analytics-Daten in Platform?
 
+Die erwartete Latenz für Analytics-Daten in Platform ist in der folgenden Tabelle dargestellt.  Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn die Analytics-Implementierung beispielsweise mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline um 5 bis 10 Minuten.
+
 | Analytics-Daten | Erwartete Latenz |
 | -------------- | ---------------- |
 | Neue Daten zu [!DNL Real-time Customer Profile] (A4T **nicht** aktiviert) | &lt; 2 Minuten |
@@ -53,7 +55,7 @@ Detaillierte Informationen zur Feldzuordnung zwischen [!DNL Analytics] und der E
 
 >[!NOTE]
 >
-> Die Latenz variiert je nach Kundenkonfiguration, Datenvolumen und Verbraucheranwendungen. Wenn beispielsweise die [!DNL Analytics]-Implementierung mit `A4T` konfiguriert ist, erhöht sich die Latenz zur Pipeline auf 5-10 Minuten.
+>Analytics-Aufstockungsdaten werden nicht in [!DNL Profile] erfasst und daher nicht in Lizenzprofilen berücksichtigt.
 
 ## Primäre Kennungen in [!DNL Analytics] -Daten
 
