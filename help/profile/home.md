@@ -2,12 +2,12 @@
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;XDM-Diagramme
 title: Echtzeit-Kundenprofil – Übersicht
 topic-legacy: guide
-description: Das Echtzeit-Kundenprofil ist ein allgemeiner Suchentitäten-Speicher, in dem Informationen aus verschiedensten Datenquellen des Unternehmens zusammengeführt und zum Abruf verfügbar gemacht werden. Diese Daten werden in Form von individuellen Kundenprofilen sowie zugehörigen im Zeitverlauf erfassten, so genannten Zeitreihen-Ereignissen aufbereitet, die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
+description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 96%
+source-wordcount: '1779'
+ht-degree: 94%
 
 ---
 
@@ -35,11 +35,7 @@ Der Profil-Store verwendet eine Microsoft Azure Cosmos DB-Infrastruktur und der 
 
 Experience Platform bietet eine Reihe von Leitlinien, mit denen Sie vermeiden können, [Experience-Datenmodell (XDM)-Schemas](../xdm/home.md) zu erstellen, die vom Echtzeit-Kundenprofil nicht unterstützt werden können. Dies umfasst weiche Beschränkungen, die zu Leistungsbeeinträchtigungen führen, sowie harte Beschränkungen, die zu Fehlern und Systembrüchen führen. Weitere Informationen, einschließlich einer Liste von Richtlinien und Beispielanwendungsfällen, finden Sie in der Dokumentation zu [Profil-Schutzvorrichtungen](guardrails.md).
 
-### (Beta) Profil-Dashboard {#profile-dashboard}
-
->[!IMPORTANT]
->
->Die Dashboard-Funktion befindet sich derzeit in der Beta-Phase und steht nicht allen Nutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+### Profil-Dashboard {#profile-dashboard}
 
 Die Benutzeroberfläche von Experience Platform bietet ein Dashboard, mit dem Sie wichtige Informationen zu Ihren Echtzeit-Kundenprofildaten anzeigen können, indem sie in einem täglichen Schnappschuss erfasst werden. Weitere Informationen zum Zugriff auf und zum Arbeiten mit dem [!DNL Profile]-Dashboard in der Benutzeroberfläche sowie detaillierte Informationen zu den im Dashboard angezeigten Metriken finden Sie im Handbuch [Handbuch für die Benutzeroberfläche des Profil-Dashboards](ui/profile-dashboard.md).
 
