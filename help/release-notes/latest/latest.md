@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform für den 26. Mai 2021.
+description: Versionshinweisehinweise zu Experience Platform vom 26. Mai 2021.
 doc-type: release notes
 last-update: May 26, 2021
 author: ens72741
@@ -8,7 +8,7 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
 workflow-type: tm+mt
 source-wordcount: '1306'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einblicke in die Daten Ihres Unternehmens erhalten, wie sie bei täglichen Momentaufnahmen erfasst werden.
+Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -40,7 +40,7 @@ Adobe Experience Platform bietet mehrere Dashboards, über die Sie wichtige Einb
 | Zielgruppeneinblicke | Das Segment-Dashboard bietet zielgruppenbezogene Einblicke für alle Benutzer, die Zugriff auf Segmente in Platform haben. Das Dashboard bietet einen täglichen Überblick über die Zielgruppenmetriken für Zielgruppen, die mit der Segment Builder-Benutzeroberfläche erstellt oder aus Adobe Audience Manager importiert wurden. |
 | Aktivierungseinblicke | Das Ziel-Dashboard steht allen Benutzern mit der Möglichkeit zum Zugriff auf und zur Ansicht von Zielen zur Verfügung. Das Dashboard bietet einen täglichen Überblick über die Aktivierungsmetriken für Aktivierungen in allen Zielen. |
 | Benutzerspezifische Einblicke | Das Erscheinungsbild von Dashboards kann von jedem Benutzer personalisiert werden, einschließlich der Möglichkeit, das Layout des Dashboards durch Hinzufügen, Entfernen, Ändern der Größe und Neuanordnen von Widgets zu ändern. |
-| Erstellung und Verwaltung von Widgets | Alle standardmäßigen und benutzerdefinierten Widgets stehen Marketing-Experten in einem zentralen Repository zur Demokratisierung der Erstellung und Freigabe von Insights zur Verfügung:<br/><ul><li>Die Standardregisterkarte enthält von Adoben bereitgestellte Widgets, auf die im Dashboard-Kontext zugegriffen werden kann. </li><li>Die benutzerdefinierte Registerkarte enthält benutzerdefinierte Widgets, die von der Organisation erstellt wurden, einschließlich einer Option zum Ausblenden von Widgets für die Ansicht.</li><li>Der Workflow zur Erstellung von Widgets innerhalb von Profilen und Zielgruppeneinblicken ermöglicht die Bearbeitung, Auswahl, Vorschau und Veröffentlichung benutzerdefinierter Widgets.</li></ul> |
+| Erstellung von Widgets &amp; Verwaltung | Alle standardmäßigen und benutzerdefinierten Widgets stehen Marketing-Experten in einem zentralen Repository zur Demokratisierung der Erstellung und Freigabe von Insights zur Verfügung:<br/><ul><li>Die Standardregisterkarte enthält von Adoben bereitgestellte Widgets, auf die im Dashboard-Kontext zugegriffen werden kann. </li><li>Die benutzerdefinierte Registerkarte enthält benutzerdefinierte Widgets, die von der Organisation erstellt wurden, einschließlich einer Option zum Ausblenden von Widgets für die Ansicht.</li><li>Der Workflow zur Erstellung von Widgets innerhalb von Profilen und Zielgruppeneinblicken ermöglicht die Bearbeitung, Auswahl, Vorschau und Veröffentlichung benutzerdefinierter Widgets.</li></ul> |
 | Benutzerspezifische Einblicke | Mit Zugriffsberechtigungen können Dateningenieure und Marketing-Experten Profilattribute anpassen, die für die Widget-Erstellung verfügbar sind. |
 
 Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, erhalten Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
@@ -74,7 +74,7 @@ Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu di
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Schemafeldgruppen | Der Begriff &quot;Mixin&quot;wurde in &quot;Feldergruppe&quot;aktualisiert. Diese Änderung spiegelt sich in der Adobe Experience Platform-Benutzeroberfläche wider. Darüber hinaus verfügt die Schema Registry-API über einen neuen [Feldergruppen-Endpunkt](../../xdm/api/field-groups.md), während der Mixins-Endpunkt als Legacy-Endpunkt veraltet ist. Weitere Informationen finden Sie in der [XDM-Dokumentation](../../xdm/home.md) . |
+| Schemafeldgruppen | Der Begriff „Mixin“ wurde in „Feldergruppe“ aktualisiert. Diese Änderung spiegelt sich in der Adobe Experience Platform-Benutzeroberfläche wider. Darüber hinaus verfügt die Schema Registry-API über einen neuen [Feldergruppen-Endpunkt](../../xdm/api/field-groups.md), während der Mixins-Endpunkt als Legacy-Endpunkt veraltet ist. Weitere Informationen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -82,7 +82,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md).[ |
+| Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum [Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md). |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
 
@@ -92,15 +92,15 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Mehrere Produktions-Sandboxes | Sie können jetzt mehrere Produktions-Sandboxes in Ihrer IMS-Organisation erstellen und verwalten und bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Weitere Informationen finden Sie in den Tutorials zum Erstellen einer Produktions-Sandbox [in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) oder [mithilfe der API](../../sandboxes/api/overview.md) . |
+| Mehrere Produktions-Sandboxes | Sie können jetzt mehrere Produktions-Sandboxes in Ihrer IMS-Organisation erstellen und verwalten und bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherungs-Datenflusses [in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) oder [mit der API](../../sandboxes/api/overview.md). |
 
 ### Bekannte Einschränkungen
 
-- Jede Experience Cloud-Organisation verfügt über eine vordefinierte standardmäßige Produktions-Sandbox. Diese Sandbox fungiert als Standardziel für alle Anfragen, die von einer anderen Adobe App oder Nicht-Adobe App an Platform gesendet werden, die (noch) nicht Sandbox-kompatibel ist. Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird.
+- Jede Experience Cloud-Organisation verfügt über eine vordefinierte standardmäßige Produktions-Sandbox. Diese Sandbox fungiert als Standardziel für alle Anfragen, die von einer anderen Adobe App oder Nicht-Adobe App an Platform gesendet werden, die (noch) nicht Sandbox-kompatibel ist. Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
 - Produktions-Sandboxes, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden, können weder zurückgesetzt noch gelöscht werden.
 - Mit Ausnahme der standardmäßigen Produktions-Sandbox können alle vom Benutzer erstellten Produktions- und Entwicklungs-Sandboxes gelöscht werden.
 
-Weitere Informationen zu Sandboxes finden Sie unter [Sandboxes - Übersicht](../../sandboxes/home.md).
+Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -110,7 +110,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Benutzeroberflächenunterstützung für die komprimierte Dateiaufnahme | Sie können jetzt komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Speicherquellen in der Benutzeroberfläche in der Vorschau anzeigen und erfassen. Weitere Informationen finden Sie im Tutorial zum Konfigurieren eines Datenflusses für eine Cloud-Speicher-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md).[ |
+| API-Unterstützung für die Erfassung komprimierter Dateien | Sie können komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Speicherquellen nun in einer Vorschau anzeigen und erfassen. Weitere Informationen finden Sie im Tutorial zum [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 | Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
