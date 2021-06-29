@@ -8,7 +8,7 @@ feature: Data Management
 source-git-commit: 8fd779d9fa73c178e8a8660a6cef01cfa112ecdc
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 98%
 * Datenerfassung {#data-collection}
    * [Automatisch erfasste Informationen](data-collection/automatic-information.md)
    * [Verfolgen von Links](data-collection/track-links.md)
-   * [Erfassen von Handels- und Produktdaten](data-collection/collect-commerce-data.md)
+   * [Sammeln von Handels- und Produktdaten](data-collection/collect-commerce-data.md)
    * Adobe Analytics {#adobe-analytics}
       * [Übersicht](data-collection/adobe-analytics/analytics-overview.md)
       * [Zuordnen von Analytics-Variablen](data-collection/adobe-analytics/manually-mapping-variables.md)
