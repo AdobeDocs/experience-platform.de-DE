@@ -8,7 +8,7 @@ exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 1ae0ce47381585b48020990a71493bbfc1504ec2
 workflow-type: tm+mt
 source-wordcount: '1982'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 | **C8** | Daten können nicht zur Messung der Websites oder Mobile Apps Ihres Unternehmens verwendet werden. [Weitere Infos...](#c8) |
 | **C9** | Daten können nicht in Datenwissenschafts-Workflows verwendet werden. [Weitere Infos...](#c9) |
 | **C10** | Daten können nicht für die Aktivierung einer zusammengesetzten Identität verwendet werden. [Weitere Infos...](#c10) |
-| **C11** | Daten können nicht mit Segmentübereinstimmungspartnern freigegeben werden. [Weitere Infos...](#c11) |
+| **C11** | Daten können nicht mit Segment Match-Partnern freigegeben werden. [Weitere Infos...](#c11) |
 
 ## Identitätsbezeichnungen
 
@@ -130,4 +130,4 @@ Einige Datennutzungsrichtlinien beschränken die Verwendung von zusammengesetzte
 
 #### C11 {#c11}
 
-Adobe Experience Platform-Segmentübereinstimmung ermöglicht es Ihnen, Erstanbietersegmente mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilerstellung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung C11 bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus der Segmentübereinstimmung ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom Workflow Segmentübereinstimmung erzwungen.
+Adobe Experience Platform Segment Match ermöglicht es Ihnen, Erstanbietersegmente mit Datenschutz- und Zustimmungsvoreinstellungen abzugleichen und so eine erweiterte Profilerstellung und nachgelagerte Einblicke zu ermöglichen. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus Segment Match ausschließen möchten, und die C11-Bezeichnung entsprechend hinzugefügt haben, wird die Bezeichnung automatisch vom Segment Match-Arbeitsablauf erzwungen.
