@@ -5,9 +5,9 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 9786b810d7b203300db49637039dc034a70f95a7
+source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
 workflow-type: tm+mt
-source-wordcount: '3657'
+source-wordcount: '3708'
 ht-degree: 32%
 
 ---
@@ -59,13 +59,18 @@ Zu den Feldern, die häufig als &quot;[!UICONTROL Identität]&quot;gekennzeichne
 
 Es ist wichtig, während der Schema-Planungsphase über Kundenidentitäten nachzudenken, um sicherzustellen, dass Daten zusammengeführt werden, um ein möglichst robustes Profil zu erstellen. In der Übersicht zu [Adobe Experience Platform Identity Service](../../identity-service/home.md) erfahren Sie mehr darüber, wie Identitätsinformationen Ihnen dabei helfen können, Ihren Kunden digitale Erlebnisse bereitzustellen.
 
+Es gibt zwei Möglichkeiten, Identitätsdaten an Platform zu senden:
+
+1. Hinzufügen von Identitätsdeskriptoren zu einzelnen Feldern entweder über die [Schema Editor-Benutzeroberfläche](../ui/fields/identity.md) oder über die [Schema Registry-API](../api/descriptors.md#create)
+1. Verwenden eines [`identityMap`-Felds](#identityMap)
+
 #### `identityMap` {#identityMap}
 
 `identityMap` ist ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Dieses Feld kann verwendet werden, um Identitätsinformationen für Ihre Schemas bereitzustellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
 
-Der größte Nachteil der Verwendung von `identityMap` besteht darin, dass Identitäten in die Daten eingebettet und dadurch weniger sichtbar werden. Wenn Sie Rohdaten erfassen, sollten Sie stattdessen einzelne Identitätsfelder innerhalb der tatsächlichen Schemastruktur definieren.
+Der größte Nachteil der Verwendung von `identityMap` besteht darin, dass Identitäten in die Daten eingebettet und dadurch weniger sichtbar werden. Wenn Sie Rohdaten erfassen, sollten Sie stattdessen einzelne Identitätsfelder innerhalb der tatsächlichen Schemastruktur definieren. Schemas, die `identityMap` verwenden, können auch nicht an Beziehungen teilnehmen.
 
-Identitätszuordnungen können jedoch besonders nützlich sein, wenn Sie Daten aus Quellen zusammenführen, die Identitäten wie [!DNL Airship] oder Adobe Audience Manager speichern. Darüber hinaus sind Identitätszuordnungen erforderlich, wenn Sie das [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) verwenden.
+Identitätszuordnungen können jedoch besonders nützlich sein, wenn Sie Daten aus Quellen zusammenführen, die Identitäten speichern (z. B. [!DNL Airship] oder Adobe Audience Manager), oder wenn für ein Schema eine variable Anzahl von Identitäten vorhanden ist. Darüber hinaus sind Identitätszuordnungen erforderlich, wenn Sie das [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) verwenden.
 
 Ein Beispiel für eine einfache Identitätszuordnung würde wie folgt aussehen:
 
