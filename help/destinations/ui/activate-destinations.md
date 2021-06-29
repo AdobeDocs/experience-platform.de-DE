@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a8822d66443cc4cda761e1f0963b0e0251427911
+source-git-commit: 694a647b9f268b84d55a960b360ce28527c6c652
 workflow-type: tm+mt
-source-wordcount: '2688'
+source-wordcount: '2826'
 ht-degree: 12%
 
 ---
@@ -27,7 +27,7 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 Die Schritte im Aktivierungs-Workflow variieren geringfügig zwischen den Zieltypen. Der vollständige Workflow für alle Zieltypen wird nachfolgend beschrieben.
 
-## Wählen Sie das Ziel aus, an das Daten für {#select-destination} aktiviert werden sollen
+## Wählen Sie das Ziel aus, für das Daten aktiviert werden sollen {#select-destination}
 
 Gilt für: Alle Ziele
 
@@ -37,7 +37,7 @@ Navigieren Sie in der Adobe Experience Platform-Benutzeroberfläche zu **[!UICON
 
 Führen Sie die Schritte im nächsten Abschnitt aus, um die Segmente auszuwählen, die Sie aktivieren möchten.
 
-## [!UICONTROL Schritt &quot;] Segmente auswählen&quot;  {#select-segments}
+## [!UICONTROL Schritt &quot;] Segmente auswählen&quot; {#select-segments}
 
 Gilt für: Alle Ziele
 
@@ -136,7 +136,7 @@ Wählen Sie die Schaltfläche **[!UICONTROL Zeitplan]** erstellen , die dem Segm
 
 ![Schaltfläche &quot;Zeitplan erstellen&quot;](../assets/ui/activate-destinations/create-schedule-button.png)
 
-### Vollständige Dateien exportieren {#export-full-files}
+### Exportieren von vollständigen Dateien {#export-full-files}
 
 Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, damit Ihre exportierten Dateien eine vollständige Momentaufnahme aller Profile enthalten, die für dieses Segment qualifiziert sind.
 
@@ -149,8 +149,13 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, damit Ihre e
    >
    >Die Option zum Exportieren von Dateien zu einer bestimmten Tageszeit befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Anzahl von Kunden zur Verfügung.
 
+   >[!IMPORTANT]
+   >
+   >Je nachdem, wann der Profilexport-Auftrag abgeschlossen ist und wann der Zieldienst den Segmentaktivierungsauftrag startet, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle erforderlichen Aufstockungsdaten. Um einen vollständigen und aktuellsten Datenexport für Aufstockungsdaten sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfehlen wir, die erste Dateiexportzeit nach 22.00 Uhr GMT des folgenden Tages festzulegen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+
 3. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
 4. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
+
 
 ### Inkrementelle Dateien exportieren {#export-incremental-files}
 
@@ -173,7 +178,11 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]** aus, damit Ihre e
 
    >[!IMPORTANT]
    >
-   >Die Option zur Auswahl der Tageszeit für den Export ist nur für eine ausgewählte Anzahl von Kunden verfügbar. Nicht-Beta-Kunden können inkrementelle Dateien einmal täglich um 23:00 Uhr UTC (7:00 Uhr EST) exportieren.
+   >Die Option zur Auswahl der Tageszeit für den Export ist nur für eine ausgewählte Anzahl von Kunden verfügbar.
+
+   >[!IMPORTANT]
+   >
+   >Je nachdem, wann der Profilexport-Auftrag abgeschlossen ist und wann der Zieldienst den Segmentaktivierungsauftrag startet, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle erforderlichen Aufstockungsdaten. Um einen vollständigen und aktuellsten Datenexport für Aufstockungsdaten sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfehlen wir, die erste Dateiexportzeit nach 22.00 Uhr GMT des folgenden Tages festzulegen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 3. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
 4. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
@@ -204,7 +213,7 @@ Wählen Sie **[!UICONTROL Änderungen anwenden]** aus, um Ihre Auswahl zu bestä
 
 Nachdem Sie alle Ihre Segmente konfiguriert haben, wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
-## **[!UICONTROL Zeitplan]** für Segmente  {#segment-schedule}
+## **[!UICONTROL Zeitplan]** für Segmente {#segment-schedule}
 
 Gilt für: Werbeziele, soziale Ziele
 
@@ -224,7 +233,7 @@ Auf der Seite **[!UICONTROL Segment schedule]** können Sie das Startdatum für 
 
 ![App-ID eingeben](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-## **[!UICONTROL Auswählen]** von attributesstep  {#select-attributes}
+## **[!UICONTROL Auswählen]** von attributesstep {#select-attributes}
 
 Gilt für: E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele
 
@@ -282,7 +291,7 @@ Es gibt drei Möglichkeiten, Deduplizierungsschlüssel in [!DNL Platform] zu ver
 > 
 > Sie können keine Kombination aus Identitäts-Namespaces und Profilattributen als Deduplizierungsschlüssel verwenden.
 
-### Deduplizierungsbeispiel {#deduplication-example}
+### Beispiel einer Deduplizierung {#deduplication-example}
 
 Dieses Beispiel zeigt, wie Deduplizierung je nach ausgewähltem Deduplizierungsschlüssel funktioniert.
 
@@ -427,7 +436,7 @@ Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTRO
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
-### E-Mail-Marketing-Ziele  und Cloud-Speicher-Ziele {#esp-and-cloud-storage}
+### E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele {#esp-and-cloud-storage}
 
 Für E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele erstellt Adobe Experience Platform eine tabulatorgetrennte `.csv`-Datei am von Ihnen angegebenen Speicherort. An diesem Speicherort wird täglich eine neue Datei erstellt. Das standardmäßige Dateiformat lautet:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
