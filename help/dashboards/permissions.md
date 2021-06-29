@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Erhalten und Gewähren von Zugriffsberechtigungen für Experience Platform-Dashboards
+title: Erhalten & Gewähren von Zugriffsberechtigungen für Experience Platform-Dashboards
 type: Documentation
 description: Gewähren Sie Benutzern die Möglichkeit, Experience Platform-Dashboards mithilfe von Adobe Admin Console anzuzeigen, zu bearbeiten und zu aktualisieren.
 source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '536'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Es gibt zwei Hauptberechtigungen, die für den Zugriff auf Dashboards in Experie
 
 Die folgenden Schritte zeigen Ihnen, wie Sie diese Berechtigungen mithilfe von Admin Console hinzufügen.
 
-## Produktprofile auswählen
+## Wählen Sie „Produktprofile“. 
 
 Um Benutzern Zugriff auf Dashboards in Experience Platform zu gewähren, melden Sie sich zunächst bei [Adobe Admin Console](https://adminconsole.adobe.com) an und wählen Sie **Products** aus der oberen Navigationsleiste aus.
 
@@ -64,7 +64,7 @@ Nachdem die Berechtigungen hinzugefügt wurden, wählen Sie **Speichern** aus, u
 
 ![](images/admin-console/dashboard-permissions.png)
 
-Wenn Sie zum Produktprofil zurückkehren, können Sie überprüfen, ob die Berechtigungen hinzugefügt wurden, indem Sie bestätigen, dass die Zeile **Dashboards** die Zeile &quot;2 von 2 enthalten&quot;anzeigt.
+Wenn Sie zum Produktprofil zurückkehren, können Sie überprüfen, ob die Berechtigungen hinzugefügt wurden, indem Sie bestätigen, dass die Zeile **Dashboards** die Zeile „2 von 2 enthalten“ anzeigt.
 
 ![](images/admin-console/product-permissions-included.png)
 
