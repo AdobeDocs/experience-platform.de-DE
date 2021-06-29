@@ -8,7 +8,7 @@ exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
 workflow-type: tm+mt
 source-wordcount: '1077'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -85,5 +85,5 @@ Die folgende Tabelle beschreibt die wichtigsten Marketing-Aktionen, die von Adob
 | Exportieren an Dritte | Eine Aktion, die Daten an Prozessoren und Entitäten exportiert, die keine direkten Beziehungen zu Kunden haben. Viele Datenanbieter haben Vertragsbedingungen, die den Export von Daten von dort, wo sie ursprünglich erfasst wurden, verbieten. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft durch deren Verträge eingeschränkt. |
 | Onsite-Werbung | Eine Aktion, die Daten für Anzeigen auf Websites verwendet, einschließlich der Auswahl und des Versands von Anzeigen auf den Websites oder in Programmen Ihres Unternehmens, oder zur Messung des Versands und der Effektivität solcher Anzeigen dient. |
 | Onsite-Personalisierung | Eine Aktion, die Daten zur Personalisierung von Inhalten in einer Website verwendet. Bei der Onsite-Personalisierung geht es um alle Daten, die verwendet werden, um Rückschlüsse auf die Interessen der Benutzer zu ziehen, und darum, auszuwählen, welche Inhalte oder Anzeigen auf der Grundlage dieser Rückschlüsse bereitgestellt werden. |
-| Segmentübereinstimmung | Eine Aktion, bei der Daten für die Adobe Experience Platform-Segmentübereinstimmung verwendet werden, mit der zwei oder mehr Platform-Benutzer Segmentdaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie &quot;Datenfreigabe beschränken&quot;aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
+| Segmentübereinstimmung | Eine Aktion, bei der Daten für die Adobe Experience Platform-Segmentübereinstimmung verwendet werden, mit der zwei oder mehr Platform-Benutzer Segmentdaten austauschen können. Durch Aktivierung von Richtlinien, die auf diese Aktion verweisen, können Sie einschränken, welche Daten für die Segmentübereinstimmung verwendet werden. Wenn beispielsweise die Kernrichtlinie „Datenfreigabe beschränken“ aktiviert ist, können keine Daten mit der Beschriftung [C11](../labels/reference.md#c11) für die Segmentübereinstimmung verwendet werden. |
 | Personalisierung für eine einzelne Identität | Eine Aktion, bei der eine einzelne Identität zu Personalisierungszwecken verwendet werden muss, anstatt Identitäten aus mehreren Quellen identische Inhalte zu bieten. |
