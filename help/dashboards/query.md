@@ -4,9 +4,9 @@ title: Rohdaten mit Experience Platform-Dashboards durchsuchen und verarbeiten
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
 source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '614'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Sie können Query Service verwenden, um Raw-Datensätze für Profil-, Segment- u
 
 Für jede aktive Zusammenführungsrichtlinie im Echtzeit-Kundenprofil steht im Data Lake ein Datensatz mit Profilattributen zur Verfügung.
 
-Die Namenskonvention für diese Datensätze lautet **Profilattribut** , gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+Die Namenskonvention für diese Datensätze lautet **Profilattribut**, gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
 Um das vollständige Schema jedes Datensatzes zu verstehen, können Sie die Datensätze mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
@@ -37,7 +37,7 @@ Um das vollständige Schema jedes Datensatzes zu verstehen, können Sie die Date
 
 Im Data Lake ist ein Segment-Metadaten-Datensatz verfügbar, der Metadaten für die einzelnen Segmente Ihres Unternehmens enthält.
 
-Die Namenskonvention für diesen Datensatz lautet **Profilsegmentdefinition** , gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+Die Namenskonvention für diesen Datensatz lautet **Profilsegmentdefinition**, gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
 Um das vollständige Schema des Datensatzes zu verstehen, können Sie das Schema mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
@@ -107,4 +107,4 @@ Select
 
 Durch Lesen dieses Handbuchs können Sie jetzt Query Service verwenden, um mehrere Abfragen durchzuführen, um die Rohdatensätze zu untersuchen und zu verarbeiten, die Ihre Profil-, Segment- und Ziel-Dashboards unterstützen.
 
-Um mehr über die einzelnen Dashboards und ihre Metriken zu erfahren, wählen Sie in der Liste der verfügbaren Dashboards in der Dokumentationsnavigation ein Dashboard aus.
+Um mehr über diese Dashboards und die darin verfügbaren Metriken zu erfahren, treffen Sie bitte eine entsprechende Auswahl aus der Liste der verfügbaren Dashboards in der Dokumentationsnavigation.
