@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
 workflow-type: tm+mt
 source-wordcount: '1206'
 ht-degree: 37%
@@ -416,7 +416,7 @@ Wenn die `Authorization`-Kopfzeile nicht vorhanden ist oder ein ungültiges/abge
 }
 ```
 
-### Posten von Rohdaten, die in Platform erfasst werden {#ingest-data}
+### Posten von Rohdaten, die in Platform erfasst werden sollen {#ingest-data}
 
 Nachdem Sie Ihren Fluss erstellt haben, können Sie Ihre JSON-Nachricht an den zuvor erstellten Streaming-Endpunkt senden.
 
@@ -445,10 +445,10 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
           "country": "United State of America",
           "address": "3692 Main Street"
       },
-      "gender": "Male"
+      "gender": "Male",
       "birthday": {
-          "year": 1984
-          "month": 6
+          "year": 1984,
+          "month": 6,
           "day": 9
       }
   }'
