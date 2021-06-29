@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Datenaufnahme, Quellen
-source-git-commit: 6c78549860e54748f43cf0b41540ee441a09331e
+source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '623'
 ht-degree: 17%
 
 ---
@@ -49,6 +49,7 @@ ht-degree: 17%
    - CRM {#crm}
       - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-Connector](connectors/crm/salesforce.md)
+      - [Veva CRM-Connector](connectors/crm/veeva.md)
    - Kundenerfolg {#customer-success}
       - [Salesforce Service Cloud-Connector](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow Connector](connectors/customer-success/servicenow.md)
@@ -100,6 +101,7 @@ ht-degree: 17%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
+         - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Kundenerfolg {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -186,6 +188,7 @@ ht-degree: 17%
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+         - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Kundenerfolg {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
