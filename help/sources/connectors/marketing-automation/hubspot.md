@@ -5,9 +5,9 @@ title: Übersicht über den HubSpot Source Connector
 topic-legacy: overview
 description: Erfahren Sie, wie Sie HubSpot über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '226'
 ht-degree: 13%
 
 ---
@@ -26,11 +26,11 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von API
 
 ## Verbinden Sie [!DNL HubSpot] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer HubSpot-Quellverbindung mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Erkunden Sie ein Marketing-Automatisierungssystem mithilfe der Flow Service-API.](../../tutorials/api/explore/marketing-automation.md)
-- [Erfassen von Daten zur Marketing-Automatisierung mithilfe der Flow Service-API](../../tutorials/api/collect/marketing-automation.md)
+- [Erstellen einer HubSpot-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Datenstruktur und Inhalt einer Marketing-Automatisierungsquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/marketing-automation.md)
+- [Erstellen eines Datenflusses für eine Marketing-Automatisierungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Verbinden Sie [!DNL HubSpot] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer HubSpot-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Konfigurieren eines Datenflusses für eine Verbindung zur Marketing-Automatisierung in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Erstellen eines Datenflusses für eine Verbindung zur Marketing-Automatisierungsquelle in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)
