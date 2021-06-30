@@ -1,73 +1,57 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen; Dateiübertragungsprotokoll; Dateiübertragungsprotokoll
+keywords: Experience Platform; Homepage; beliebte Themen Dateiübertragungsprotokoll; Dateiübertragungsprotokoll
 solution: Experience Platform
-title: Erstellen einer FTP-Quellverbindung mit der Flow Service API
+title: Erstellen einer FTP-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie Adobe Experience Platform mit der Flow Service API mit einem FTP-Server (File Transfer Protocol) verbinden.
+description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einem FTP-Server (File Transfer Protocol) herstellen.
 exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 26%
+source-wordcount: '489'
+ht-degree: 13%
 
 ---
 
-# Erstellen einer FTP-Quellverbindung mit der API[!DNL Flow Service]
+# Erstellen einer FTP-Basisverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der FTP-Anschluss befindet sich in der Betaphase. Die Funktionen und Dokumentation können sich ändern. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
+>Der FTP-Connector befindet sich in der Beta-Phase. Die Funktionen und Dokumentation können sich ändern. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
 
-In diesem Lernprogramm wird die API [!DNL Flow Service] verwendet, um Sie durch die Schritte zum Herstellen einer Verbindung von [!DNL Experience Platform] mit einem FTP-Server (File Transfer Protocol) zu führen.
+Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
+
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL FTP] (File Transfer Protocol) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der API [!DNL Flow Service] erfolgreich eine Verbindung zu einem FTP-Server herzustellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu einem [!DNL FTP]-Server herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit [!DNL Flow Service] eine Verbindung mit FTP herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung zu [!DNL FTP] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Name oder die IP-Adresse, die mit Ihrem FTP-Server verknüpft ist. |
-| `username` | Der Benutzername mit Zugriff auf Ihren FTP-Server. |
-| `password` | Das Kennwort für Ihren FTP-Server. |
+| `host` | Der Name oder die IP-Adresse, die mit Ihrem [!DNL FTP]-Server verknüpft ist. |
+| `username` | Der Benutzername mit Zugriff auf Ihren [!DNL FTP]-Server. |
+| `password` | Das Kennwort für Ihren [!DNL FTP]-Server. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL FTP] lautet: `fb2e94c9-c031-467d-8103-6bd6e0a432f2`. |
 
-### Lesen von Beispiel-API-Aufrufen
+### Verwenden von Platform-APIs
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-### Sammeln von Werten für erforderliche Kopfzeilen
+## Basisverbindung erstellen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
-
-* `Content-Type: application/json`
-
-## Verbindung erstellen
-
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro FTP-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
-
-### Erstellen einer FTP-Verbindung mit einfacher Authentifizierung
-
-Um eine FTP-Verbindung mit einfacher Authentifizierung zu erstellen, fordern Sie eine POST an die [!DNL Flow Service]-API an, während Sie Werte für `host`, `userName` und `password` angeben.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL FTP]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -77,7 +61,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine FTP-Verbindung zu erstellen, muss die eindeutige Verbindungs-ID als Teil der POST angegeben werden. Die Verbindungs-Spezifikations-ID für FTP ist `fb2e94c9-c031-467d-8103-6bd6e0a432f2`.
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL FTP]:
 
 ```shell
 curl -X POST \
@@ -107,14 +91,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.host` | Der Hostname des FTP-Servers. |
-| `auth.params.username` | Der mit Ihrem FTP-Server verknüpfte Benutzername. |
+| `auth.params.host` | Der Hostname Ihres FTP-Servers. |
+| `auth.params.username` | Der Benutzername, der Ihrem FTP-Server zugeordnet ist. |
 | `auth.params.password` | Das Ihrem FTP-Server zugeordnete Kennwort. |
-| `connectionSpec.id` | Die FTP-Server-Verbindungs-ID: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
+| `connectionSpec.id` | Die Kennung der FTP-Server-Verbindungsspezifikation: `fb2e94c9-c031-467d-8103-6bd6e0a432f2` |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Verbindung zurück. Diese ID ist erforderlich, um Ihren FTP-Server im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Verbindung zurück. Diese ID ist erforderlich, um Ihren FTP-Server im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -125,4 +109,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine FTP-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um Cloud-Datenspeicherung mithilfe der Flow Service API](../../explore/cloud-storage.md) oder [zu erfassen. Verwenden Sie dazu die Flussdienst-API](../../cloud-storage-parquet.md).[
+In diesem Tutorial haben Sie mithilfe der API [!DNL Flow Service] eine FTP-Verbindung erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API](../../explore/cloud-storage.md) oder [Ermitteln von Parquet-Daten mithilfe der Flow Service-API](../../cloud-storage-parquet.md) zu untersuchen.
