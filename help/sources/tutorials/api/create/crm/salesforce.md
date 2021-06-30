@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Salesforce;salesforce
+keywords: Experience Platform; Homepage; beliebte Themen; Salesforce; Salesforce
 solution: Experience Platform
-title: Erstellen einer Salesforce-Quellverbindung mit der Flow Service API
+title: Erstellen einer Salesforce-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und einem Salesforce-Konto herstellen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit einem Salesforce-Konto verbinden.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8035539321f5016521208aa110a4ee2881cb5d1e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 26%
+source-wordcount: '470'
+ht-degree: 12%
 
 ---
 
-# Erstellen einer [!DNL Salesforce]-Quellverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Salesforce]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
-Der Flow Service dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zu führen, die notwendig sind, um [!DNL Platform] mit der Flow Service API mit einem [!DNL Salesforce]-Konto zu verbinden.
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Salesforce] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] erfolgreich mit der [!DNL Flow Service]-API mit einem [!DNL Salesforce]-Konto zu verbinden.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Platform] mithilfe der [!DNL Flow Service]-API erfolgreich mit einem [!DNL Salesforce]-Konto zu verbinden.
 
 ### Erforderliche Anmeldedaten sammeln
 
@@ -35,36 +34,24 @@ Damit [!DNL Flow Service] eine Verbindung zu [!DNL Salesforce] herstellen kann, 
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `environmentUrl` | Die URL der [!DNL Salesforce]-Quellinstanz. |
+| `environmentUrl` | Die URL der Quellinstanz [!DNL Salesforce]. |
 | `username` | Der Benutzername für das [!DNL Salesforce]-Benutzerkonto. |
 | `password` | Das Kennwort für das [!DNL Salesforce]-Benutzerkonto. |
 | `securityToken` | Das Sicherheits-Token für das [!DNL Salesforce]-Benutzerkonto. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL AdWords] lautet: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
-Weitere Informationen zum Einstieg finden Sie unter [dieses Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+Weitere Informationen zu den ersten Schritten finden Sie in [diesem Salesforce-Dokument](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
 
-### Lesen von Beispiel-API-Aufrufen
+### Verwenden von Platform-APIs
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-### Sammeln von Werten für erforderliche Kopfzeilen
+## Basisverbindung erstellen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Salesforce]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
-
-* `Content-Type: application/json`
-
-## Verbindung erstellen
-
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Salesforce]-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
 
 **API-Format**
 
@@ -74,7 +61,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine [!DNL Salesforce]-POST zu erstellen, muss die eindeutige Verbindungs-ID als Teil der Verbindungsanforderung angegeben werden. Die Verbindungs-Spezifikations-ID für [!DNL Salesforce] ist `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`.
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Salesforce]:
 
 ```shell
 curl -X POST \
@@ -104,14 +91,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.username` | Der mit Ihrem [!DNL Salesforce]-Konto verknüpfte Benutzername. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Salesforce]-Konto zugeordnet ist. |
 | `auth.params.password` | Das Ihrem [!DNL Salesforce]-Konto zugeordnete Kennwort. |
-| `auth.params.securityToken` | Das mit Ihrem [!DNL Salesforce]-Konto verknüpfte Sicherheits-Token. |
-| `connectionSpec.id` | Die Verbindungsspezifikation `id` Ihres [!DNL Salesforce]-Kontos, die im vorherigen Schritt abgerufen wurde. |
+| `auth.params.securityToken` | Das Sicherheitstoken, das mit Ihrem [!DNL Salesforce]-Konto verknüpft ist. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL Salesforce]: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung einschließlich der eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um Ihr CRM-System im nächsten Schritt zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihr CRM-System im nächsten Schritt zu untersuchen.
 
 ```json
 {
@@ -122,4 +109,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung einschließlich der 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine [!DNL Salesforce]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu lernen, wie Sie CRM-Systeme mithilfe der Flow Service API](../../explore/crm.md) untersuchen.[
+In diesem Tutorial haben Sie eine [!DNL Salesforce]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie [CRM-Systeme mithilfe der Flow Service-API](../../explore/crm.md) untersuchen.
