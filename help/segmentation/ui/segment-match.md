@@ -2,12 +2,12 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentübereinstimmung; Segmentübereinstimmung
 solution: Experience Platform
 title: Übersicht über Segmentübereinstimmungen
-topic: Übersicht
+topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
-source-git-commit: 481160f83e82c80ea5b73e9b56003dc625a34b5e
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '1901'
-ht-degree: 5%
+source-wordcount: '1900'
+ht-degree: 6%
 
 ---
 
@@ -71,7 +71,7 @@ Als letzte Voraussetzung müssen Sie eine neue Datennutzungsbezeichnung konfigur
 
 Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Experience Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen.
 
-[!DNL Segment Match] verwendet die C11-Beschriftung, eine spezielle Vertragsbeschriftung,  [!DNL Segment Match] die Sie manuell zu Datensätzen oder Attributen hinzufügen können, um sicherzustellen, dass sie vom  [!DNL Segment Match] Partnerfreigabeprozess ausgeschlossen sind. Die Bezeichnung C11 bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus [!DNL Segment Match] ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom [!DNL Segment Match]-Workflow erzwungen. [!DNL Segment Match] aktiviert automatisch die Core-Richtlinie  [!UICONTROL Datenfreigabe beschränken ] . Spezifische Anweisungen zum Anwenden von Datennutzungsbezeichnungen auf Datensätze finden Sie im Tutorial zum Verwalten von Datennutzungsbezeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md).[
+[!DNL Segment Match] verwendet die C11-Beschriftung, eine spezielle Vertragsbeschriftung,  [!DNL Segment Match] die Sie manuell zu Datensätzen oder Attributen hinzufügen können, um sicherzustellen, dass sie vom  [!DNL Segment Match] Partnerfreigabeprozess ausgeschlossen sind. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus [!DNL Segment Match] ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom [!DNL Segment Match]-Workflow erzwungen. [!DNL Segment Match] aktiviert automatisch die Core-Richtlinie  [!UICONTROL Datenfreigabe beschränken ] . Spezifische Anweisungen zum Anwenden von Datennutzungsbezeichnungen auf Datensätze finden Sie im Tutorial zum Verwalten von Datennutzungsbezeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md).[
 
 Eine Liste der Datennutzungsbezeichnungen und deren Definitionen finden Sie im Glossar [Datennutzungsbezeichnungen](../../data-governance/labels/reference.md). Informationen zu Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md).
 
@@ -191,4 +191,4 @@ Durch Lesen dieses Dokuments haben Sie Verständnis für [!DNL Segment Match], s
 
 * [[!DNL Segmentation Service]](../home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile]Übersicht](../../profile/home.md)
+* [[!DNL Real-time Customer Profile] Übersicht](../../profile/home.md)
