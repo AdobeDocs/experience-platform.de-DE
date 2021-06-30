@@ -5,9 +5,9 @@ title: ServiceNow Source Connector - Übersicht
 topic-legacy: overview
 description: Erfahren Sie, wie Sie ServiceNow über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 4aed960fb3873e604efb36268887ac36a7331064
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '224'
 ht-degree: 8%
 
 ---
@@ -26,11 +26,11 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von API
 
 ## Verbinden Sie [!DNL ServiceNow] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer Quellverbindung des ServiceNow mithilfe der Flow Service-API](../../tutorials/api/create/customer-success/servicenow.md)
-- [Erkunden eines Kundenerfolgssystems mithilfe der Flow Service-API](../../tutorials/api/explore/customer-success.md)
-- [Erfassen von Daten aus einem Customer Success System mithilfe der Flow Service-API](../../tutorials/api/collect/customer-success.md)
+- [Erstellen einer ServiceNow-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/customer-success/servicenow.md)
+- [Datenstruktur und Inhalt einer Kundenerfolgsquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/customer-success.md)
+- [Erstellen eines Datenflusses für eine Kundenerfolgsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/customer-success.md)
 
 ## Verbinden Sie [!DNL ServiceNow] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer Quellverbindung von ServiceNow über die Benutzeroberfläche](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Datenfluss für eine Kundenerfolgsverbindung in der Benutzeroberfläche konfigurieren](../../tutorials/ui/dataflow/customer-success.md)
+- [Erstellen Sie einen Datenfluss für eine Kundenerfolgsquellenverbindung in der Benutzeroberfläche.](../../tutorials/ui/dataflow/customer-success.md)
