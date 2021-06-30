@@ -5,9 +5,9 @@ title: azure synapse Analytics Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure synapse Analytics mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '297'
 ht-degree: 9%
 
 ---
@@ -30,11 +30,11 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von API
 
 ## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer Azure synapse Analytics-Quellverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/synapse-analytics.md)
-- [Durchsuchen eines Datenbanksystems mithilfe der Flow Service-API](../../tutorials/api/explore/database-nosql.md)
-- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
+- [Erstellen einer Basisverbindung für Azure synapse Analytics mithilfe der Flow Service-API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Datenstruktur und Inhalt einer Datenbankquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/database-nosql.md)
+- [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden Sie [!DNL Azure Synapse Analytics] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer Azure synapse Analytics-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
