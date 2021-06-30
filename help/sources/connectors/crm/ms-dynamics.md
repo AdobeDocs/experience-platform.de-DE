@@ -1,41 +1,40 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamik;Dynamik;Dynamik
+keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Microsoft Dynamics;Microsoft Dynamics;Dynamik
 solution: Experience Platform
-title: Übersicht über Microsoft Dynamics Source Connector
+title: Microsoft Dynamics Source Connector - Überblick
 topic-legacy: overview
-description: Erfahren Sie, wie Sie Microsoft Dynamics mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Microsoft Dynamics mit Adobe Experience Platform verbinden.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 8%
+source-wordcount: '279'
+ht-degree: 7%
 
 ---
 
 # Microsoft Dynamics-Connector
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] unterstützt die Erfassung von Daten aus einem CRM-System eines Drittanbieters. Zu den CRM-Anbietern zählen [!DNL Microsoft Dynamics].
+[!DNL Experience Platform] unterstützt die Aufnahme von Daten aus einem Drittanbieter-CRM-System. Unterstützung für CRM-Anbieter ist [!DNL Microsoft Dynamics].
 
-## Zulassungsliste der IP-Adresse
+## IP-Adressen-Zulassungsliste
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
 >[!IMPORTANT]
 >
->Der [!DNL Microsoft Dynamics]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
+>Der Quell-Connector [!DNL Microsoft Dynamics] unterstützt derzeit keine Verbindung zwischen denselben Regionen und Platform. Wenn Ihre Azure-Instanz also denselben Netzwerkbereich wie Platform verwendet, kann keine Verbindung zu Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Microsoft Dynamics] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL Microsoft Dynamics] und [!DNL Platform] herstellen:
 
 ## Verbinden Sie [!DNL Microsoft Dynamics] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer Microsoft Dynamics-Quellverbindung mithilfe der Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
-- [CRM-System mit der Flow Service API erkunden](../../tutorials/api/explore/crm.md)
-- [CRM-Daten mithilfe der Flow Service API erfassen](../../tutorials/api/collect/crm.md)
+- [Erstellen einer Microsoft Dynamics-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Datenstruktur und Inhalt einer CRM-Quelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/crm.md)
+- [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
-## Verbinden Sie [!DNL Microsoft Dynamics] mit [!DNL Platform] mithilfe der Benutzeroberfläche
+## Verbinden Sie [!DNL Microsoft Dynamics] mit [!DNL Platform] über die Benutzeroberfläche
 
-- [Erstellen einer Microsoft Dynamics-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/crm/dynamics.md)
-- [Konfigurieren eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
+- [Erstellen einer Quellverbindung mit Microsoft Dynamics in der Benutzeroberfläche](../../tutorials/ui/create/crm/dynamics.md)
+- [Erstellen eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
