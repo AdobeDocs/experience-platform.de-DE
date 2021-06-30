@@ -1,68 +1,53 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
+keywords: Experience Platform; home; beliebte Themen; Apache Hadoop Distributed File System; Apache hadoop; hdfs; HDFS
 solution: Experience Platform
-title: Erstellen einer Apache HDFS-Quellverbindung mit der Flow Service API
+title: Erstellen einer Apache HDFS-Basisverbindung mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie ein Apache Hadoop Distributed File System mithilfe der Flow Service API mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API ein Apache Hadoop Distributed File System mit Adobe Experience Platform verbinden.
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 26%
+source-wordcount: '465'
+ht-degree: 12%
 
 ---
 
-# Erstellen Sie eine [!DNL Apache]-HDFS-Quellverbindung mit der [!DNL Flow Service]-API
+# Erstellen Sie eine [!DNL Apache] HDFS-Basisverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der Apache HDFS-Anschluss befindet sich in der Beta-Version. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
+>Der Apache HDFS-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
 
-[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen verwendet, um sie in Adobe Experience Platform zu importieren. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Lernprogramm verwendet die API [!DNL Flow Service], um Sie durch die Schritte zu führen, mit denen Sie ein Apache Hadoop Distributed File System (im Folgenden &quot;HDFS&quot; genannt) mit [!DNL Experience Platform] verbinden können.
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Apache Hadoop Distributed File System] (nachfolgend &quot;a1/>&quot;genannt) mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).[!DNL HDFS]
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der API [!DNL Flow Service] erfolgreich eine Verbindung zu HDFS herzustellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu [!DNL HDFS] herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `url` | Die URL definiert Authentifizierungsparameter, die für eine anonyme Verbindung mit HDFS erforderlich sind. Weitere Informationen zum Abrufen dieses Werts finden Sie in [diesem HDFS-Dokument](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
-| `connectionSpec.id` | Der zum Erstellen einer Verbindung erforderliche Bezeichner. Die feste Verbindungs-spec-ID für HDFS ist `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `url` | Die URL definiert Authentifizierungsparameter, die für die anonyme Verbindung mit [!DNL HDFS] erforderlich sind. Weitere Informationen zum Abrufen dieses Werts finden Sie unter [this [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL AdWords] lautet: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
-### Lesen von Beispiel-API-Aufrufen
+### Verwenden von Platform-APIs
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-### Sammeln von Werten für erforderliche Kopfzeilen
+## Basisverbindung erstellen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
-
-* `Content-Type: application/json`
-
-## Verbindung erstellen
-
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro HDFS-Konto ist nur eine Verbindung erforderlich, da sie zur Erstellung mehrerer Quellschnittstellen verwendet werden kann, um verschiedene Daten einzubringen.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL HDFS]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -72,7 +57,7 @@ POST /connections
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird eine neue HDFS-Verbindung erstellt, die von den in der Payload bereitgestellten Eigenschaften konfiguriert wird:
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL HDFS]:
 
 ```shell
 curl -X POST \
@@ -100,12 +85,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `auth.params.url` | Die URL, die Authentifizierungsparameter definiert, die für die anonyme Verbindung mit HDFS erforderlich sind |
-| `connectionSpec.id` | Die HDFS-Verbindungs-ID: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | Die URL, die Authentifizierungsparameter definiert, die für die anonyme Verbindung mit [!DNL HDFS] erforderlich sind |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL HDFS]: `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -116,4 +101,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine HDFS-Verbindung mit der API [!DNL Flow Service] erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Lernprogramm verwenden, um zu lernen, wie [eine Cloud-Datenspeicherung von Drittanbietern mithilfe der Flow Service API](../../explore/cloud-storage.md) erkunden wird.
+In diesem Tutorial haben Sie eine [!DNL HDFS]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie [einen Drittanbieter-Cloud-Speicher mithilfe der Flow Service-API](../../explore/cloud-storage.md) untersuchen.
