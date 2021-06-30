@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Oracle;oracle
+keywords: Experience Platform; Homepage; beliebte Themen; Oracle; oracle
 solution: Experience Platform
-title: Übersicht über den oracle Source Connector
+title: Oracle Source Connector - Übersicht
 topic-legacy: overview
-description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie Oracle über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
-# [!DNL Oracle] connector
+# [!DNL Oracle] Connector
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform] übertragen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
-Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Die Unterstützung für Datenbankanbieter umfasst [!DNL Oracle].
+Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter beinhaltet [!DNL Oracle].
 
-## Zulassungsliste der IP-Adresse
+## IP-Adressen-Zulassungsliste
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Oracle] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL Oracle] und [!DNL Platform] herstellen:
 
 ## Verbinden Sie [!DNL Oracle] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer Oracle-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/oracle.md)
-- [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Erstellen einer Oracle-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/databases/oracle.md)
+- [Datenstruktur und Inhalt einer Datenbankquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/database-nosql.md)
+- [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden Sie [!DNL Oracle] mit [!DNL Platform] mithilfe der Benutzeroberfläche
+## Verbinden Sie [!DNL Oracle] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer Oracle-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/oracle.md)
-- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
