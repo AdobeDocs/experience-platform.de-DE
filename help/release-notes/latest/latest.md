@@ -1,80 +1,27 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweisehinweise zu Experience Platform vom 26. Mai 2021.
+description: Experience Platform - Versionshinweise für den 30. Juni 2021.
 doc-type: release notes
-last-update: May 26, 2021
-author: ens72741
+last-update: June 30, 2021
+author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 487d6dbef21459a7ce78cdc70215ad46e06ba892
+source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
 workflow-type: tm+mt
-source-wordcount: '1306'
-ht-degree: 100%
+source-wordcount: '530'
+ht-degree: 68%
 
 ---
 
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 26. Mai 2021**
-
-Neue Funktionen in Adobe Experience Platform:
-
-- [Dashboards](#dashboards)
+**Releasedatum: 30. Juni 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
 - [Sandboxes](#sandboxes)
 - [Quellen](#sources)
-
-## Dashboards {#dashboards}
-
-Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Profileinblicke | Das Profil-Dashboard bietet einen täglichen Überblick über die Echtzeit-Kundenprofil-Metriken für jede organisatorische Zusammenführungsrichtlinie in Experience Platform. Diese Profileinblicke stehen allen Benutzern zur Verfügung, die in Platform auf Profildaten zugreifen und diese anzeigen können. |
-| Zielgruppeneinblicke | Das Segment-Dashboard bietet zielgruppenbezogene Einblicke für alle Benutzer, die Zugriff auf Segmente in Platform haben. Das Dashboard bietet einen täglichen Überblick über die Zielgruppenmetriken für Zielgruppen, die mit der Segment Builder-Benutzeroberfläche erstellt oder aus Adobe Audience Manager importiert wurden. |
-| Aktivierungseinblicke | Das Ziel-Dashboard steht allen Benutzern mit der Möglichkeit zum Zugriff auf und zur Ansicht von Zielen zur Verfügung. Das Dashboard bietet einen täglichen Überblick über die Aktivierungsmetriken für Aktivierungen in allen Zielen. |
-| Benutzerspezifische Einblicke | Das Erscheinungsbild von Dashboards kann von jedem Benutzer personalisiert werden, einschließlich der Möglichkeit, das Layout des Dashboards durch Hinzufügen, Entfernen, Ändern der Größe und Neuanordnen von Widgets zu ändern. |
-| Erstellung von Widgets &amp; Verwaltung | Alle standardmäßigen und benutzerdefinierten Widgets stehen Marketing-Experten in einem zentralen Repository zur Demokratisierung der Erstellung und Freigabe von Insights zur Verfügung:<br/><ul><li>Die Standardregisterkarte enthält von Adoben bereitgestellte Widgets, auf die im Dashboard-Kontext zugegriffen werden kann. </li><li>Die benutzerdefinierte Registerkarte enthält benutzerdefinierte Widgets, die von der Organisation erstellt wurden, einschließlich einer Option zum Ausblenden von Widgets für die Ansicht.</li><li>Der Workflow zur Erstellung von Widgets innerhalb von Profilen und Zielgruppeneinblicken ermöglicht die Bearbeitung, Auswahl, Vorschau und Veröffentlichung benutzerdefinierter Widgets.</li></ul> |
-| Benutzerspezifische Einblicke | Mit Zugriffsberechtigungen können Dateningenieure und Marketing-Experten Profilattribute anpassen, die für die Widget-Erstellung verfügbar sind. |
-
-Weitere Informationen zu Dashboards, einschließlich der Gewährung von Zugriffsberechtigungen und der Erstellung benutzerdefinierter Widgets, erhalten Sie in der [Übersicht über Dashboards](../../dashboards/home.md).
-
-## [!DNL Data Prep] {#data-prep}
-
-[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Warnhinweise bei unbekannten Fehlern | Die Fehlermeldungen von Data Prep Mapper sind jetzt milder, da sie Warnungen anstelle von Fehlern zusammen mit teilweise umgewandelten Zeilen enthalten. |
-| Neue Funktionen | Funktionen wurden hinzugefügt, mit denen Schlüssel abgerufen, Elemente an ein vorhandenes Array angehängt, Elemente aus mehreren Arrays an ein vorhandenes Array angehängt, Objekte zum Erstellen von Arrays verwendet und der Name des JSON-Objekts als Zeichenfolgenliteral verwendet werden kann. |
-
-Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
-
-## [!DNL Destinations] {#destinations}
-
-[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Verbesserte Überwachung (Beta) | Verbesserte Funktionen zur Überwachung von Zielen, einschließlich Informationen für Batch- und Streaming-Ziele |
-| [Schnellerer inkrementeller Dateiexport (Beta)](../../destinations/ui/activate-destinations.md#export-incremental-files) | Es wurde die Möglichkeit hinzugefügt, inkrementelle Dateien alle 3, 6, 8 oder 12 Stunden an Ziele zu exportieren. <br> <br>Diese Funktion befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Nicht-Beta-Kunden können inkrementelle Dateien einmal täglich exportieren. |
-| [Unterstützung von Deduplizierungsschlüsseln (Beta)](../../destinations/ui/activate-destinations.md#deduplication-keys) | Die Funktion zum Festlegen von Identitäts-Namespaces oder Profilattributen als Deduplizierungsschlüssel wurde hinzugefügt. Deduplizierungsschlüssel verhindern die Möglichkeit, mehrere Datensätze desselben Profils in einer Exportdatei zu haben. <br> <br>Diese Funktion befindet sich derzeit in der Beta-Phase und steht nur einer ausgewählten Anzahl von Kunden zur Verfügung. |
-
-Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
-
-## [!DNL Experience Data Model (XDM)] {#xdm}
-
-Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu dient, die Leistung digitaler Erlebnisse zu verbessern. Es stellt allgemeine Strukturen und Definitionen für Anwendungen bereit, die mit Diensten in Adobe Experience Platform kommunizieren. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Schemafeldgruppen | Der Begriff „Mixin“ wurde in „Feldergruppe“ aktualisiert. Diese Änderung spiegelt sich in der Adobe Experience Platform-Benutzeroberfläche wider. Darüber hinaus verfügt die Schema Registry-API über einen neuen [Feldergruppen-Endpunkt](../../xdm/api/field-groups.md), während der Mixins-Endpunkt als Legacy-Endpunkt veraltet ist. Weitere Informationen finden Sie in der [XDM-Dokumentation](../../xdm/home.md). |
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -82,27 +29,20 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Bericht zur Datensatzüberschneidung | Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers, indem er die Datensätze verfügbar macht, die am meisten zur adressierbaren Zielgruppe beitragen. Dieser Bericht bietet nicht nur Einblicke in Profildaten, sondern ermöglicht Benutzern auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer Beschränkung der Lebensdauer bestimmter Daten. Weiterführende Informationen dazu finden Sie im Tutorial zum [Generieren des Berichts zur Datensatzüberlappung](../../profile/tutorials/dataset-overlap-report.md). |
+| Aktualisierungen des Arbeitsablaufs für Zusammenführungsrichtlinien | Beim Erstellen und Aktualisieren von Zusammenführungsrichtlinien in der Benutzeroberfläche können Benutzer jetzt anhand des Vereinigungsschemas eine Vorschau von 20 Beispielprofilen anzeigen. Auf diese Weise können Benutzer eine Vorschau davon anzeigen, wie Kundenprofile aussehen, bevor sie Zusammenführungsrichtlinienkonfigurationen speichern. Weitere Informationen finden Sie im [UI-Handbuch für Zusammenführungsrichtlinien](../../profile/merge-policies/ui-guide.md). |
+| Bericht zur Identitätsüberschneidung | Der Bericht zur Identitätsüberschneidung ist Teil der Echtzeit-Kundenprofil-API und bietet Einblick in die Zusammensetzung des Profilspeichers. Mithilfe des Endpunkts `/previewsamplestatus` stellt der Bericht zur Identitätsüberschneidung die Identitäten bereit, die am meisten zur adressierbaren Zielgruppe beitragen. Weitere Informationen finden Sie im [Beispiel-Status-API-Endpunkt-Handbuch](../../profile/api/preview-sample-status.md) zur Vorschau . |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
 
-## [!DNL Sandboxes] {#sandboxes}
+## Sandboxes {#sandboxes}
 
 Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf globaler Ebene anzureichern. Oft führen Unternehmen verschiedene Programme für digitale Erlebnisse parallel aus und müssen diese Programme entwickeln, testen und implementieren, während gleichzeitig die Einhaltung betrieblicher Vorschriften gewährleistet werden muss. Darum stellt Experience Platform Sandboxes bereit, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Mehrere Produktions-Sandboxes | Sie können jetzt mehrere Produktions-Sandboxes in Ihrer IMS-Organisation erstellen und verwalten und bestimmte Produktions-Sandboxes unterschiedlichen Geschäftsbereichen, Marken, Projekten oder Regionen zuweisen. Weitere Informationen finden Sie in den Tutorials zum Erstellen eines Cloud-Datenspeicherungs-Datenflusses [in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) oder [mit der API](../../sandboxes/api/overview.md). |
+| Produktions-Sandbox Verbesserungen beim Zurücksetzen | Sie können jetzt Produktions-Sandboxes zurücksetzen, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden. Dies kann entweder über die Benutzeroberfläche oder mithilfe der neuen Parameter `validationOnly` und `ignoreWarnings` in der API erfolgen. Weitere Informationen finden Sie in den Tutorials zu [Zurücksetzen einer Sandbox in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) und zum Zurücksetzen einer Sandbox in der API](../../sandboxes/api/sandboxes.md) .[ |
 
-### Bekannte Einschränkungen
-
-- Jede Experience Cloud-Organisation verfügt über eine vordefinierte standardmäßige Produktions-Sandbox. Diese Sandbox fungiert als Standardziel für alle Anfragen, die von einer anderen Adobe App oder Nicht-Adobe App an Platform gesendet werden, die (noch) nicht Sandbox-kompatibel ist. Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
-- Produktions-Sandboxes, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden, können weder zurückgesetzt noch gelöscht werden.
-- Mit Ausnahme der standardmäßigen Produktions-Sandbox können alle vom Benutzer erstellten Produktions- und Entwicklungs-Sandboxes gelöscht werden.
-
-Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../../sandboxes/home.md).
-
-## [!DNL Sources] {#sources}
+## Quellen {#sources}
 
 Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
@@ -110,7 +50,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| API-Unterstützung für die Erfassung komprimierter Dateien | Sie können komprimierte JSON- oder durch Trennzeichen getrennte Dateien mithilfe von Cloud-Speicherquellen nun in einer Vorschau anzeigen und erfassen. Weitere Informationen finden Sie im Tutorial zum [Konfigurieren eines Datenflusses für Cloud-Speicher-Connectoren in der Benutzeroberfläche](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
-| Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
+| [!DNL Veeva CRM] (Beta) | Sie können [!DNL Veeva CRM] jetzt über die [!DNL Flow Service]-API oder die Benutzeroberfläche mit der Experience Platform verbinden. Weiterführende Informationen dazu finden Sie unter [[!DNL Veeva CRM] Connectoren – Übersicht](../../sources/connectors/crm/veeva.md). |
+| Unterstützung für die Überwachung von Streaming-Datenflüssen | Sie können jetzt den Arbeitsbereich der Quellenbenutzeroberfläche verwenden, um Datenerfassungsaktivitäten aus Streaming-Quellen mit entsprechenden Metriken und Status zu überwachen. Weitere Informationen finden Sie im Tutorial zu [Überwachung von Streaming-Datenflüssen](../../sources/tutorials/ui/monitor-streaming.md) . |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
