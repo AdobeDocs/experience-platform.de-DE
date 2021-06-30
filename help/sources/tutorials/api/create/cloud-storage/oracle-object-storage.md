@@ -1,31 +1,32 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Oracle-Objekt-Datenspeicherung;oracle-Objekt-Datenspeicherung
+keywords: Experience Platform; Homepage; beliebte Themen; Oracle-Objektspeicher; oracle-Objektspeicher
 solution: Experience Platform
-title: Erstellen einer Oracle Object Datenspeicherung Source Connection mithilfe der Flow Service API
+title: Erstellen einer Oracle-Objektspeicher-Basisverbindung mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und Oracle Object Datenspeicherung herstellen.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Oracle-Objektspeicher verbinden.
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 59a8e2aa86508e53f181ac796f7c03f9fcd76158
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 28%
+source-wordcount: '559'
+ht-degree: 10%
 
 ---
 
-# Erstellen einer [!DNL Oracle Object Storage]-Quellverbindung mit der [!DNL Flow Service]-API
+# Erstellen einer [!DNL Oracle Object Storage]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
-Dieses Lernprogramm verwendet die API[[!DNL Flow Service] um Sie durch die Schritte zur Verbindung von Adobe Experience Platform mit [!DNL Oracle Object Storage] zu führen.](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
+Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
+
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Oracle Object Storage] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um eine Verbindung mit [!DNL Oracle Object Storage] mithilfe der [!DNL Flow Service]-API herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu [!DNL Oracle Object Storage] herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln
 
@@ -33,37 +34,24 @@ Damit [!DNL Flow Service] eine Verbindung zu [!DNL Oracle Object Storage] herste
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `serviceUrl` | Der [!DNL Oracle Object Storage]-Endpunkt, der für die Authentifizierung erforderlich ist. Das Endpunktformat lautet: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
-| `accessKey` | Die [!DNL Oracle Object Storage]-Zugriffsschlüssel-ID, die für die Authentifizierung erforderlich ist. |
+| `serviceUrl` | Der für die Authentifizierung erforderliche [!DNL Oracle Object Storage]-Endpunkt. Das Endpunktformat lautet: `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `accessKey` | Die für die Authentifizierung erforderliche Zugriffsschlüssel-ID [!DNL Oracle Object Storage]. |
 | `secretKey` | Das für die Authentifizierung erforderliche [!DNL Oracle Object Storage]-Kennwort. |
-| `bucketName` | Der zulässige Behältername ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. Der Behältername muss zwischen drei und 63 Zeichen lang sein, er muss entweder mit einem Buchstaben oder einer Zahl beginnen und enden und darf nur Kleinbuchstaben, Zahlen oder Bindestriche (`-`) enthalten. Der Behältername kann nicht wie eine IP-Adresse formatiert werden. |
+| `bucketName` | Der zulässige Behältername, der erforderlich ist, wenn der Benutzer eingeschränkten Zugriff hat. Der Behältername muss zwischen drei und 63 Zeichen lang sein. Er muss entweder mit einem Buchstaben oder einer Zahl beginnen und enden und darf nur Kleinbuchstaben, Zahlen oder Bindestriche (`-`) enthalten. Der Behältername kann nicht wie eine IP-Adresse formatiert werden. |
 | `folderPath` | Der zulässige Ordnerpfad, der erforderlich ist, wenn der Benutzer eingeschränkten Zugriff hat. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Oracle Object Storage] lautet: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-Weitere Informationen zum Abrufen dieser Werte finden Sie im Handbuch [Oracle Object Datenspeicherung authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Weitere Informationen zum Abrufen dieser Werte finden Sie im [Handbuch zur Authentifizierung bei der Oracle-Objektspeicherung](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### Lesen von Beispiel-API-Aufrufen
+### Verwenden von Platform-APIs
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für Experience Platform.
+Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-### Sammeln von Werten für erforderliche Kopfzeilen
+## Basisverbindung erstellen
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
-
-* `Content-Type: application/json`
-
-## Verbindung erstellen
-
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL Oracle Object Storage]-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Oracle Object Storage]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -73,7 +61,7 @@ POST /connections
 
 **Anfrage**
 
-Um eine [!DNL Oracle Object Storage]-POST zu erstellen, muss die zugehörige eindeutige Verbindungs-spec-ID als Teil der Verbindungsanforderung angegeben werden. Die Verbindungs-Spec-ID für [!DNL Oracle Object Storage] ist `c85f9425-fb21-426c-ad0b-405e9bd8a46c`.
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL Oracle Object Storage]:
 
 ```shell
 curl -X POST \
@@ -105,16 +93,16 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.serviceUrl` | Der [!DNL Oracle Object Storage]-Endpunkt, der für die Authentifizierung erforderlich ist. |
-| `auth.params.accessKey` | Die [!DNL Oracle Object Storage]-Zugriffsschlüssel-ID, die für die Authentifizierung erforderlich ist. |
+| `auth.params.serviceUrl` | Der für die Authentifizierung erforderliche [!DNL Oracle Object Storage]-Endpunkt. |
+| `auth.params.accessKey` | Die für die Authentifizierung erforderliche Zugriffsschlüssel-ID [!DNL Oracle Object Storage]. |
 | `auth.params.secretKey` | Das für die Authentifizierung erforderliche [!DNL Oracle Object Storage]-Kennwort. |
-| `auth.params.bucketName` | Der zulässige Behältername ist erforderlich, wenn der Benutzer eingeschränkten Zugriff hat. |
+| `auth.params.bucketName` | Der zulässige Behältername, der erforderlich ist, wenn der Benutzer eingeschränkten Zugriff hat. |
 | `auth.params.folderPath` | Der zulässige Ordnerpfad, der erforderlich ist, wenn der Benutzer eingeschränkten Zugriff hat. |
-| `connectionSpec.id` | Die [!DNL Oracle Object Storage]-Verbindungs-Spec-ID: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
+| `connectionSpec.id` | Die [!DNL Oracle Object Storage] Verbindungsspezifikations-ID: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Verbindungs-ID der neu erstellten Verbindung zurück. Diese ID ist erforderlich, um Ihre Cloud-Datenspeicherung-Daten im nächsten Lernprogramm zu untersuchen.
+Eine erfolgreiche Antwort gibt die Verbindungs-ID der neu erstellten Verbindung zurück. Diese ID ist erforderlich, um Ihre Cloud-Speicherdaten im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -125,4 +113,4 @@ Eine erfolgreiche Antwort gibt die Verbindungs-ID der neu erstellten Verbindung 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine [!DNL Oracle Object Storage]-Verbindung mit der [!DNL Flow Service]-API erstellt und die eindeutige Verbindungs-ID erhalten. Sie können diese Verbindungs-ID verwenden, um Cloud-Datenspeicherung mithilfe der Flow Service API](../../explore/cloud-storage.md) zu untersuchen.[
+In diesem Tutorial haben Sie eine [!DNL Oracle Object Storage]-Verbindung mit der [!DNL Flow Service]-API erstellt und die eindeutige Verbindungs-ID erhalten. Sie können diese Verbindungs-ID verwenden, um [Cloud-Speicher mithilfe der Flow Service-API](../../explore/cloud-storage.md) zu untersuchen.
