@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Datenaufnahme, Quellen
-source-git-commit: 2b2dcf51098f8263044d56bf65a00d1d48ceddd8
+source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '619'
 ht-degree: 17%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 17%
    - Streaming {#streaming}
       - [HTTP-API-Connector](connectors/streaming/http.md)
 - API-Tutorials {#api-tutorials}
-   - Erstellen einer Quellverbindung {#create}
+   - Basisverbindung erstellen {#create}
       - Werbung {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud-Speicher {#cloud-storage}
@@ -138,7 +138,7 @@ ht-degree: 17%
       - [Cloud-Speicherdaten durchsuchen](tutorials/api/explore/cloud-storage.md)
       - [CRM-Daten durchsuchen](tutorials/api/explore/crm.md)
       - [Kundenerfolgsdaten](tutorials/api/explore/customer-success.md)
-      - [Datenbank oder NoSQL-Daten durchsuchen](tutorials/api/explore/database-nosql.md)
+      - [Durchsuchen von Datenbankdaten](tutorials/api/explore/database-nosql.md)
       - [eCommerce-Daten durchsuchen](tutorials/api/explore/ecommerce.md)
       - [Daten zur Marketing-Automatisierung](tutorials/api/explore/marketing-automation.md)
       - [Zahlungsdaten durchsuchen](tutorials/api/explore/payments.md)
@@ -148,7 +148,7 @@ ht-degree: 17%
       - [Cloud-Speicherdaten erfassen](tutorials/api/collect/cloud-storage.md)
       - [CRM-Daten erfassen](tutorials/api/collect/crm.md)
       - [Erfassen von Kundenerfolgsdaten](tutorials/api/collect/customer-success.md)
-      - [Datenbank- oder NoSQL-Daten erfassen](tutorials/api/collect/database-nosql.md)
+      - [Erfassen von Datenbankdaten](tutorials/api/collect/database-nosql.md)
       - [Erfassen von eCommerce-Daten](tutorials/api/collect/ecommerce.md)
       - [Erfassen von Daten zur Marketing-Automatisierung](tutorials/api/collect/marketing-automation.md)
       - [Zahlungsdaten erfassen](tutorials/api/collect/payments.md)
