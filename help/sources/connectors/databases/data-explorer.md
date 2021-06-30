@@ -1,14 +1,13 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Azurblauer Data Explorer;Azure Data Explorer
+keywords: Experience Platform; Startseite; beliebte Themen; Azure Data Explorer; Azure Data Explorer
 solution: Experience Platform
-title: Übersicht über den Avocent Data Explorer Source Connector
+title: Azure Data Explorer Source Connector - Übersicht
 topic-legacy: overview
-description: Erfahren Sie, wie Sie Azurblase-Data Explorer mit APIs oder der Benutzeroberfläche mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Azure Data Explorer über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -17,29 +16,29 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Der [!DNL Azure Data Explorer]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../home.md#terms-and-conditions).
+>Der Connector [!DNL Azure Data Explorer] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../home.md#terms-and-conditions) .
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten von diesen Systemen in [!DNL Platform] übertragen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
-Es werden verschiedene Arten von Drittanbieter-Datenbanken unterstützt, einschließlich relationaler Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Die Unterstützung für Datenbankanbieter umfasst [!DNL Azure Data Explorer].
+Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter beinhaltet [!DNL Azure Data Explorer].
 
-## Zulassungsliste der IP-Adresse
+## IP-Adressen-Zulassungsliste
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Zulassungsliste [IP-Adresse](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
 >[!IMPORTANT]
 >
->Der [!DNL Azure Data Explorer]-Quellanschluss unterstützt derzeit keine Verbindung mit Plattform für dieselbe Region. Das bedeutet, dass eine Verbindung zu Plattformquellen nicht hergestellt werden kann, wenn Ihre Azurblase-Instanz denselben Netzwerkbereich wie Platform verwendet. Derzeit wird nur die regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
+>Der Quell-Connector [!DNL Azure Data Explorer] unterstützt derzeit keine Verbindung zwischen denselben Regionen und Platform. Wenn Ihre Azure-Instanz also denselben Netzwerkbereich wie Platform verwendet, kann keine Verbindung zu Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
-Die nachstehende Dokumentation enthält Informationen dazu, wie [!DNL Azure Data Explorer] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL Azure Data Explorer] und [!DNL Platform] herstellen:
 
 ## Verbinden Sie [!DNL Azure Data Explorer] mit [!DNL Platform] mithilfe von APIs
 
-- [Erstellen einer Azurblauer Data Explorer-Quellverbindung mit der Flow Service API](../../tutorials/api/create/databases/data-explorer.md)
-- [Durchsuchen eines Datenbanksystems mit der Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Erfassen von Daten aus einer Datenbank mithilfe der Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Erstellen einer Azure Data Explorer-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/databases/data-explorer.md)
+- [Datenstruktur und Inhalt einer Datenbankquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/database-nosql.md)
+- [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden Sie [!DNL Azure Data Explorer] mit [!DNL Platform] mithilfe der Benutzeroberfläche
+## Verbinden Sie [!DNL Azure Data Explorer] mit [!DNL Platform] über die Benutzeroberfläche
 
-- [Erstellen einer Azurblauer Data Explorer-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/data-explorer.md)
-- [Konfigurieren eines Datenflusses für eine Datenbankverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
+- [Erstellen einer Quell-Verbindung aus Azure Data Explorer in der Benutzeroberfläche](../../tutorials/ui/create/databases/data-explorer.md)
+- [Erstellen eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)
