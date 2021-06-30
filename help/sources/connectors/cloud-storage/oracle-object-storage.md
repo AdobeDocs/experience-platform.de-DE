@@ -1,50 +1,49 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Oracle-Objekt-Datenspeicherung;oracle-Objekt-Datenspeicherung
+keywords: Experience Platform; Homepage; beliebte Themen; Oracle-Objektspeicher; oracle-Objektspeicher
 solution: Experience Platform
-title: Oracle Object Datenspeicherung Source Connector - Übersicht
+title: Oracle Object Storage Source Connector - Übersicht
 topic-legacy: overview
-description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle Object Datenspeicherung und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle-Objektspeicher und Adobe Experience Platform herstellen.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '425'
 ht-degree: 3%
 
 ---
 
-# Oracle Object Datenspeicherung Connector
+# Oracle Object Storage-Connector
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform], damit Sie Daten von diesen Systemen zur Verwendung in nachgelagerten Diensten und Zielen in Plattform importieren können.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Diensten und Zielen in Platform importieren können.
 
-Cloud-Datenspeicherung-Quellen können Ihre Daten in eine Plattform übertragen, ohne dass Sie sie herunterladen, formatieren oder hochladen müssen. Ingetierte Daten können als XDM-JSON, XDM-Parquet oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses ist in den Quellarbeitsablauf integriert. Mit der Plattform können Sie Daten von [!DNL Oracle Object Storage] durch Stapel importieren.
+Cloud-Speicher-Quellen können Ihre Daten in Platform übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Ursprungs-Workflow integriert. Mit Platform können Sie Daten von [!DNL Oracle Object Storage] durch Batches einbringen.
 
-## Zulassungsliste der IP-Adresse
+## IP-Adressen-Zulassungsliste
 
-Eine Liste von IP-Adressen muss einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quellschnittstellen arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie im Dokument [IP-Adresse Zulassungsliste](../../ip-address-allow-list.md).
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie im Dokument [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
-## Benennungsbeschränkungen für Dateien und Ordner
+## Namensbeschränkungen für Dateien und Ordner
 
-Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung der Cloud-Datenspeicherung-Datei bzw. des Verzeichnisses berücksichtigen müssen:
+Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennung Ihrer Cloud-Speicherdatei oder Ihres Verzeichnisses berücksichtigen müssen:
 
-- Name der Verzeichnis- und Dateikomponenten darf 255 Zeichen nicht überschreiten.
-- Ordner- und Dateinamen können nicht mit einem Schrägstrich (`/`) enden. Sofern vorhanden, wird sie automatisch entfernt.
-- Die folgenden Zeichen für die reservierte URL müssen ordnungsgemäß mit Escape-Zeichen versehen sein: `! ' ( ) ; @ & = + $ , % # [ ]`
+- Die Namen von Verzeichnis- und Dateikomponenten dürfen 255 Zeichen nicht überschreiten.
+- Verzeichnis- und Dateinamen können nicht mit einem Schrägstrich (`/`) enden. Wenn angegeben, wird sie automatisch entfernt.
+- Die folgenden Zeichen der reservierten URL müssen ordnungsgemäß maskiert sein: `! ' ( ) ; @ & = + $ , % # [ ]`
 - Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
-- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen nicht zulässig, z. B. Steuerzeichen (0x00 bis 0x1F, \u0081 usw.). Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundlegende Regeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, Punkt (.) und zwei Punkt (..).
+- Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000` sind zwar in NTFS-Dateinamen gültig, aber keine gültigen Unicode-Zeichen. Darüber hinaus sind einige ASCII- oder Unicode-Zeichen nicht zulässig, z. B. Steuerzeichen (0x00 bis 0x1F, \u0081 usw.). Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie in [RFC 2616, Abschnitt 2.2: Grundregeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, PRN, AUX, NUL, CON, CLOCK$, Punkt (..) und zwei Zeichen (..).
 
-## [!DNL Oracle Object Storage] an Plattform anschließen
+## Verbinden von [!DNL Oracle Object Storage] mit Platform
 
-Die nachstehende Dokumentation enthält Informationen zum Verbinden der Oracle Object-Datenspeicherung mit Adobe Experience Platform mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen Oracle-Objektspeicher und Adobe Experience Platform herstellen:
 
-### APIs verwenden
+### Verwenden von APIs
 
-- [Erstellen einer Oracle Object Datenspeicherung-Quellverbindung mit der Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
-- [Kennenlernen eines Cloud-Datenspeicherung-Systems mithilfe der Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Erfassen von Cloud-Datenspeicherung-Daten mithilfe der Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Erstellen einer Basisverbindung für Oracle-Objektspeicher mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [Datenstruktur und Inhalt einer Cloud-Speicherquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/cloud-storage.md)
+- [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
-- [Erstellen einer Oracle Object Datenspeicherung-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
-- [Konfigurieren eines Datenflusses für eine Cloud-Datenspeicherung-Verbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen einer Quellverbindung der Oracle-Objektspeicherung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/oracle-object-storage.md)
+- [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
