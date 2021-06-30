@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;MariaDB;Mariadb
+keywords: Experience Platform; Startseite; beliebte Themen; MariaDB; Mariadb
 solution: Experience Platform
-title: Erstellen einer MariaDB-Quellverbindung mit der Flow Service API
+title: Erstellen einer MariaDB-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mit der Flow Service API eine Verbindung zwischen Adobe Experience Platform und MariaDB herstellen.
-translation-type: tm+mt
-source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
+description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und MariaDB herstellen.
+exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
+source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 27%
+source-wordcount: '447'
+ht-degree: 12%
 
 ---
 
+# Erstellen einer [!DNL MariaDB]-Basisverbindung mithilfe der [!DNL Flow Service]-API
 
-# Erstellen einer [!DNL MariaDB]-Quellverbindung mit der [!DNL Flow Service]-API
+Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
-
-In diesem Lernprogramm wird die API [!DNL Flow Service] verwendet, um Sie durch die Schritte zur Verbindung [!DNL Experience Platform] mit [!DNL MariaDB] zu führen.
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL MariaDB] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um eine Verbindung mit [!DNL MariaDB] mithilfe der [!DNL Flow Service]-API herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu [!DNL MariaDB] herstellen zu können.
 
 ### Erforderliche Anmeldedaten sammeln
 
@@ -35,44 +34,30 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL MariaDB] herstellen kann, m�
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die mit Ihrer [!DNL MariaDB]-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Verbindungszeichenfolgen-Muster [!DNL MariaDB] lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die ID, mit der eine Verbindung generiert wird. Die feste Verbindungs-Spec-ID für [!DNL MariaDB] ist `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionString` | Die mit Ihrer [!DNL MariaDB]-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Verbindungszeichenfolgenmuster [!DNL MariaDB] lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL MariaDB] ist `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in [diesem MariaDB-Dokument](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie in diesem [[!DNL MariaDB] Dokument](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
-### Lesen von Beispiel-API-Aufrufen
+### Verwenden von Platform-APIs
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-### Sammeln von Werten für erforderliche Kopfzeilen
+## Basisverbindung erstellen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche Medientyp-Kopfzeile erforderlich:
-
-* `Content-Type: application/json`
-
-## Verbindung erstellen
-
-Eine Verbindung gibt eine Quelle an und enthält Ihre Anmeldeinformationen für diese Quelle. Pro [!DNL MariaDB]-Konto ist nur eine Verbindung erforderlich, da sie zum Erstellen mehrerer Quell-Connectors verwendet werden kann, um verschiedene Daten einzubringen.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL MariaDB]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
-```http
+```https
 POST /connections
 ```
 
 **Anfrage**
 
-Um eine [!DNL MariaDB]-POST zu erstellen, muss die zugehörige eindeutige Verbindungs-spec-ID als Teil der Verbindungsanforderung angegeben werden. Die Verbindungs-Spec-ID für [!DNL MariaDB] ist `3000eb99-cd47-43f3-827c-43caf170f015`.
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL MariaDB]:
 
 ```shell
 curl -X POST \
@@ -100,12 +85,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.connectionString` | Die mit Ihrer [!DNL MariaDB]-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Verbindungszeichenfolgen-Muster [!DNL MariaDB] lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die [!DNL MariaDB]-Verbindungs-spec-ID lautet: `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `auth.params.connectionString` | Die mit Ihrer [!DNL MariaDB]-Authentifizierung verknüpfte Verbindungszeichenfolge. Das Verbindungszeichenfolgenmuster [!DNL MariaDB] lautet: `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL MariaDB] lautet: `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist erforderlich, um Ihre Datenbank im nächsten Schritt zu untersuchen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Datenbank im nächsten Schritt zu untersuchen.
 
 ```json
 {
@@ -116,4 +101,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung einsch
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine [!DNL MariaDB]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Lernprogramm verwenden, um zu erfahren, wie Sie mit der Flow Service API](../../explore/database-nosql.md)Datenbanken oder NoSQL-Systeme untersuchen.[
+In diesem Tutorial haben Sie eine [!DNL MariaDB]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie mit der Flow Service-API](../../explore/database-nosql.md)Datenbanken oder NoSQL-Systeme analysieren können.[
