@@ -1,51 +1,51 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen
+keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
-title: Konfigurieren eines Datasets zur Erfassung von Einwilligungs- und Vorgabedaten
+title: Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten
 topic-legacy: getting started
-description: Erfahren Sie, wie Sie ein Experience Data Model (XDM)-Schema und einen Dataset konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
+description: Erfahren Sie, wie Sie ein Experience-Datenmodell (XDM)-Schema und einen -Datensatz konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 20adb26fbd55302ac8005978968a0d69bdda8755
+source-git-commit: 3f6191bb3ddfdd24b1c2ed19ba4293402f56d2e5
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 3%
+source-wordcount: '1482'
+ht-degree: 4%
 
 ---
 
-# Dataset zur Erfassung von Einwilligungs- und Präferenzdaten konfigurieren
+# Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten
 
-Damit Adobe Experience Platform Ihre Daten zur Kundengenehmigung bzw. -präferenz verarbeiten kann, müssen diese Daten an ein Dataset gesendet werden, dessen Schema die Felder für die Zustimmung und andere Berechtigungen enthält. Insbesondere muss dieser Datensatz auf der [!DNL XDM Individual Profile]-Klasse basieren und für die Verwendung in [!DNL Real-time Customer Profile] aktiviert sein.
+Damit Adobe Experience Platform Ihre Zustimmungs-/Präferenzdaten von Kunden verarbeiten kann, müssen diese Daten an einen Datensatz gesendet werden, dessen Schema Felder enthält, die mit Zustimmung und anderen Berechtigungen zusammenhängen. Insbesondere muss dieser Datensatz auf der [!DNL XDM Individual Profile]-Klasse basieren und für die Verwendung in [!DNL Real-time Customer Profile] aktiviert sein.
 
-In diesem Dokument werden Schritte zum Konfigurieren eines Datensatzes zur Verarbeitung von Genehmigungsdaten in der Experience Platform beschrieben. Einen Überblick über den vollständigen Arbeitsablauf zur Verarbeitung von Einwilligungs-/Voreinstellungsdaten in der Plattform finden Sie in der [Übersicht zur Verarbeitung der Einwilligung](./overview.md).
+In diesem Dokument werden Schritte zum Konfigurieren eines Datensatzes zur Verarbeitung von Einwilligungsdaten in Experience Platform beschrieben. Einen Überblick über den gesamten Workflow zur Verarbeitung von Zustimmungs-/Voreinstellungsdaten in Platform finden Sie in der [Übersicht zur Zustimmungsverarbeitung](./overview.md).
 
 >[!IMPORTANT]
 >
->Die Beispiele in diesem Handbuch verwenden einen standardisierten Satz von Feldern, um die Werte für die Zustimmung des Kunden zu repräsentieren, wie durch den XDM-Datentyp [Zustimmung und Voreinstellungen](../../../../xdm/data-types/consents.md) definiert. Die Struktur dieser Felder soll ein effizientes Datenmodell bieten, das viele gängige Nutzungsszenarien für die Einholung von Genehmigungen abdeckt.
+>Die Beispiele in diesem Handbuch verwenden einen standardisierten Satz von Feldern, um Kundenzustimmungswerte darzustellen, wie durch den XDM-Datentyp [Einwilligungen und Voreinstellungen ](../../../../xdm/data-types/consents.md) definiert. Die Struktur dieser Felder soll ein effizientes Datenmodell für viele gängige Nutzungsszenarien bei der Einwilligungserfassung bieten.
 >
->Sie können jedoch auch eigene Feldgruppen definieren, die die Zustimmung gemäß Ihren eigenen Datenmodellen darstellen. Bitte wenden Sie sich an Ihr Juristenteam, um die Genehmigung für ein Datenmodell für die Zustimmung zu erhalten, das Ihren geschäftlichen Anforderungen entspricht. Die folgenden Optionen sind verfügbar:
+>Sie können jedoch auch Ihre eigenen Feldergruppen definieren, um die Zustimmung gemäß Ihren eigenen Datenmodellen darzustellen. Wenden Sie sich an Ihr Rechtsteam, um die Genehmigung für ein Datenmodell zur Einwilligung zu erhalten, das Ihren geschäftlichen Anforderungen entspricht. Mögliche Optionen sind:
 >
->* Die standardisierte Einverständnisfeldgruppe
->* Eine von Ihrer Organisation erstellte benutzerspezifische Gruppe für ein Einwilligungsfeld
->* Eine Kombination aus der standardisierten Feldgruppe für die Zustimmung und zusätzlichen Feldern, die von einer Gruppe für ein Feld für die benutzerdefinierte Zustimmung bereitgestellt werden
+>* Die standardisierte Einwilligungsfeldgruppe
+>* Eine benutzerdefinierte Einwilligungsfeldgruppe, die von Ihrer Organisation erstellt wurde
+>* Eine Kombination aus der standardisierten Einwilligungsfeldgruppe und zusätzlichen Feldern, die von einer benutzerdefinierten Einwilligungsfeldgruppe bereitgestellt werden
 
 
-## Voraussetzungen 
+## Voraussetzungen   
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Experience-Datenmodell (XDM)](../../../../xdm/home.md)[!DNL Experience Platform]: Das standardisierte Framework, mit dem Kundenerlebnisdaten organisiert.
+* [Experience-Datenmodell (XDM)](../../../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Erfahren Sie mehr über die Grundbausteine von XDM-Schemas.
-* [Echtzeit-Profil](../../../../profile/home.md): Fasst Kundendaten aus unterschiedlichen Quellen in eine vollständige, einheitliche Ansicht zusammen und bietet gleichzeitig ein umsetzbares Zeitstempelkonto für jede Kundeninteraktion.
+* [Echtzeit-Kundenprofil](../../../../profile/home.md): Fasst Kundendaten aus unterschiedlichen Quellen in einer vollständigen, einheitlichen Ansicht zusammen und bietet gleichzeitig eine verwertbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion.
 
 >[!IMPORTANT]
 >
->In diesem Lernprogramm wird davon ausgegangen, dass Sie das [!DNL Profile]-Schema in Platform kennen, mit dem Sie Kundenattributinformationen erfassen möchten. Unabhängig von der Methode, die Sie zur Erfassung von Genehmigungsdaten verwenden, muss dieses Schema für Echtzeit-Kundendaten](../../../../xdm/ui/resources/schemas.md#profile) aktiviert sein. [ Darüber hinaus kann die primäre Identität des Schemas kein direkt identifizierbares Feld sein, das für interessensbasierte Werbung wie eine E-Mail-Adresse nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie nicht sicher sind, welche Felder eingeschränkt sind.
+>In diesem Tutorial wird davon ausgegangen, dass Sie das [!DNL Profile]-Schema in Platform kennen, das Sie zum Erfassen von Kundenattributinformationen verwenden möchten. Unabhängig von der Methode, mit der Sie Einwilligungsdaten erfassen, muss dieses Schema für das Echtzeit-Kundenprofil ](../../../../xdm/ui/resources/schemas.md#profile)aktiviert sein. [ Darüber hinaus darf die primäre Identität des Schemas nicht ein direkt identifizierbares Feld sein, das in interessensbasierter Werbung, wie z. B. einer E-Mail-Adresse, nicht verwendet werden darf. Wenden Sie sich an Ihren Rechtsbeistand, wenn Sie sich nicht sicher sind, welche Felder eingeschränkt sind.
 
-## Struktur der Feldgruppen &quot;Inhalt und Voreinstellungen&quot; {#structure}
+## Feldgruppenstruktur für Zustimmung und Voreinstellungen {#structure}
 
-Die Feldgruppe [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (nachfolgend &quot;Consents &amp; Preferences field group&quot;) stellt standardisierte Felder für die Zustimmung zu einem Schema bereit. Diese Feldgruppe ist derzeit nur mit Schemas kompatibel, die auf der [!DNL XDM Individual Profile]-Klasse basieren.
+Die Feldergruppe [!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnisse)] (nachfolgend &quot;Feldergruppe &quot;Einwilligungen und Voreinstellungen&quot;) stellt standardisierte Einwilligungsfelder für ein Schema bereit. Derzeit ist diese Feldergruppe nur mit Schemas kompatibel, die auf der [!DNL XDM Individual Profile]-Klasse basieren.
 
-Die Feldgruppe stellt ein einzelnes Objekt-Typ-Feld bereit, `consents`, dessen Untereigenschaften einen Satz standardisierter Felder für die Zustimmung erfassen. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `consents` bei der Datenerfassung erwartet:
+Die Feldergruppe stellt ein einzelnes Objekt-Feld bereit, `consents`, dessen Untereigenschaften eine Reihe standardisierter Zustimmungsfelder erfassen. Die folgende JSON-Datei ist ein Beispiel für die Art von Daten, die `consents` bei der Datenerfassung erwartet:
 
 ```json
 {
@@ -92,39 +92,39 @@ Die Feldgruppe stellt ein einzelnes Objekt-Typ-Feld bereit, `consents`, dessen U
 
 >[!NOTE]
 >
->Weitere Informationen zur Struktur und Bedeutung der Untereigenschaften in `consents` finden Sie in der Übersicht zum Datentyp [Einwilligungen und Voreinstellungen](../../../../xdm/data-types/consents.md).
+>Weitere Informationen zur Struktur und Bedeutung der Untereigenschaften in `consents` finden Sie in der Übersicht zum Datentyp [Einverständnisse und Voreinstellungen](../../../../xdm/data-types/consents.md).
 
-## hinzufügen Sie die Feldgruppe &quot;Zustimmung und Voreinstellungen&quot;auf Ihr [!DNL Profile]-Schema {#add-field-group}
+## Fügen Sie die Feldergruppe &quot;Einwilligungen und Voreinstellungen&quot;Ihrem [!DNL Profile]-Schema hinzu. {#add-field-group}
 
-Wählen Sie in der Benutzeroberfläche &quot;Plattform&quot;in der linken Navigation **[!UICONTROL Schema]** und wählen Sie dann die Registerkarte **[!UICONTROL Durchsuchen]**, um eine Liste der vorhandenen Schema anzuzeigen. Wählen Sie hier den Namen des [!DNL Profile]-aktivierten Schemas aus, dem Sie die Felder für die Zustimmung hinzufügen möchten. Die Screenshots in diesem Abschnitt verwenden das Schema &quot;Treuemitglieder&quot;, das im Tutorial [Erstellung von Schemas](../../../../xdm/tutorials/create-schema-ui.md) erstellt wurde.
+Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Schemas]** und dann den Tab **[!UICONTROL Durchsuchen]** aus, um eine Liste der vorhandenen Schemas anzuzeigen. Wählen Sie hier den Namen des [!DNL Profile]-aktivierten Schemas aus, dem Sie Einwilligungsfelder hinzufügen möchten. Die Screenshots in diesem Abschnitt verwenden als Beispiel das Schema &quot;Loyalty Members&quot;, das im Tutorial [zur Schemaerstellung](../../../../xdm/tutorials/create-schema-ui.md) erstellt wurde.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
 >[!TIP]
 >
->Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um Ihr Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch [XDM-Ressourcen](../../../../xdm/ui/explore.md) zu erkunden.
+>Sie können die Such- und Filterfunktionen des Arbeitsbereichs verwenden, um Ihr Schema leichter zu finden. Weitere Informationen finden Sie im Handbuch [Erkunden von XDM-Ressourcen](../../../../xdm/ui/explore.md) .
 
-Das Symbol [!DNL Schema Editor] wird angezeigt und zeigt die Struktur des Schemas auf der Arbeitsfläche an. Wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Hinzufügen]** unter dem Abschnitt **[!UICONTROL Feldgruppen]**.
+Der [!DNL Schema Editor] wird angezeigt, der die Struktur des Schemas auf der Arbeitsfläche anzeigt. Wählen Sie auf der linken Seite der Arbeitsfläche **[!UICONTROL Hinzufügen]** unter dem Abschnitt **[!UICONTROL Feldergruppen]** aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-Das Dialogfeld **[!UICONTROL Hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Zusätze)]** aus der Liste. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzuschränken, um die Feldgruppe einfacher zu finden. Wählen Sie nach Auswahl der Feldgruppe **[!UICONTROL Hinzufügen Feldgruppe]**.
+Das Dialogfeld **[!UICONTROL Feldergruppe hinzufügen]** wird angezeigt. Wählen Sie von hier aus **[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnis)]** aus der Liste aus. Sie können optional die Suchleiste verwenden, um Ergebnisse einzugrenzen und die Feldergruppe leichter zu finden. Nachdem die Feldergruppe ausgewählt wurde, wählen Sie **[!UICONTROL Feldergruppe hinzufügen]** aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consents`-Objekt zur Schema-Struktur hinzugefügt wurde. Wenn Sie zusätzliche Felder für die Zustimmung und Voreinstellung benötigen, die nicht von der Standardfeldgruppe erfasst werden, finden Sie weitere Informationen im Anhang zu [Hinzufügen von Feldern für die benutzerdefinierte Zustimmung und Voreinstellung zum Schema](#custom-consent). Andernfalls wählen Sie **[!UICONTROL Speichern]**, um die Änderungen am Schema abzuschließen.
+Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consents`-Objekt zur Schemastruktur hinzugefügt wurde. Wenn Sie zusätzliche Einverständnisfelder und Voreinstellungsfelder benötigen, die nicht von der Standardfeldgruppe erfasst werden, lesen Sie den Anhang unter [Hinzufügen benutzerdefinierter Einwilligungs- und Präferenzfelder zum Schema](#custom-consent). Klicken Sie andernfalls auf **[!UICONTROL Speichern]** , um die Änderungen am Schema abzuschließen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Wenn das bearbeitete Schema von dem [!UICONTROL Profil-Datensatz] verwendet wird, der in Ihrer Platform Web SDK-Edge-Konfiguration angegeben ist, enthält dieser Datensatz jetzt die neuen Zustimmungsfelder. Sie können nun zum Handbuch [Verarbeitung der Einwilligung](./overview.md#merge-policies) zurückkehren, um die Konfiguration der Experience Platform zur Verarbeitung der Einwilligungsdaten fortzusetzen.
+Wenn das bearbeitete Schema von dem [!UICONTROL Profildatensatz] verwendet wird, der in Ihrer Platform Web SDK-Edge-Konfiguration angegeben ist, enthält dieser Datensatz jetzt die neuen Einwilligungsfelder. Sie können jetzt zum [Handbuch zur Verarbeitung von Einwilligungen](./overview.md#merge-policies) zurückkehren, um die Konfiguration der Experience Platform zur Verarbeitung von Einwilligungsdaten fortzusetzen.
 
 Wenn Sie keinen Datensatz für dieses Schema erstellt haben, führen Sie die Schritte im nächsten Abschnitt aus.
 
-## Erstellen Sie einen Datensatz basierend auf Ihrem Schema zur Einwilligung {#dataset}
+## Datensatz basierend auf Ihrem Einverständnisschema erstellen {#dataset}
 
-Nachdem Sie ein Schema mit Einwilligungsfeldern erstellt haben, müssen Sie einen Datensatz erstellen, der letztendlich die Einwilligungsdaten Ihrer Kunden erfasst. Dieser Datensatz muss für [!DNL Real-time Customer Profile] aktiviert werden.
+Nachdem Sie ein Schema mit Einverständnisfeldern erstellt haben, müssen Sie einen Datensatz erstellen, in dem letztendlich die Einwilligungsdaten Ihrer Kunden erfasst werden. Dieser Datensatz muss für [!DNL Real-time Customer Profile] aktiviert sein.
 
-Wählen Sie zunächst **[!UICONTROL Datensätze]** in der linken Navigation und dann **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke aus.
+Wählen Sie zunächst **[!UICONTROL Datensätze]** im linken Navigationsbereich und dann **[!UICONTROL Datensatz erstellen]** in der oberen rechten Ecke aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/create-dataset.png)
 
@@ -132,73 +132,73 @@ Wählen Sie auf der nächsten Seite **[!UICONTROL Datensatz aus Schema]** erstel
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/from-schema.png)
 
-Der Arbeitsablauf **[!UICONTROL Datensatz aus Schema]** erstellen wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Schema auswählen]**. Suchen Sie in der bereitgestellten Liste nach einem der Schema für die Zustimmung, die Sie zuvor erstellt haben. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzugrenzen und Ihr Schema einfacher zu finden. Klicken Sie auf das Optionsfeld neben dem gewünschten Schema und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
+Der Workflow **[!UICONTROL Datensatz aus Schema]** erstellen wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Schema]** auswählen . Suchen Sie in der bereitgestellten Liste eines der zuvor erstellten Einwilligungsschemas. Sie können optional die Suchleiste verwenden, um Ergebnisse einzuschränken und Ihr Schema leichter zu finden. Wählen Sie das Optionsfeld neben dem gewünschten Schema aus und wählen Sie dann **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-dataset-schema.png)
 
-Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen eindeutigen, leicht identifizierbaren Namen und eine Beschreibung für den Datensatz ein, bevor Sie **[!UICONTROL Fertigstellen]** auswählen.
+Der Schritt **[!UICONTROL Datensatz konfigurieren]** wird angezeigt. Geben Sie einen eindeutigen, leicht identifizierbaren Namen und eine Beschreibung für den Datensatz ein, bevor Sie **[!UICONTROL Finish]** auswählen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
-Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihen-Schema basiert, ist der Vorgang abgeschlossen. Wenn der Datensatz auf Ihrem Record-Schema basiert, besteht der letzte Schritt darin, den Datensatz für die Verwendung in [!DNL Real-time Customer Profile] zu aktivieren.
+Die Detailseite für den neu erstellten Datensatz wird angezeigt. Wenn der Datensatz auf Ihrem Zeitreihenschema basiert, ist der Prozess abgeschlossen. Wenn der Datensatz auf Ihrem Datensatzschema basiert, besteht der letzte Schritt im Prozess darin, den Datensatz zur Verwendung in [!DNL Real-time Customer Profile] zu aktivieren.
 
-Wählen Sie in der rechten Leiste den Umschalter **[!UICONTROL Profil]**.
+Wählen Sie in der rechten Leiste den Umschalter **[!UICONTROL Profil]** aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/profile-toggle.png)
 
-Wählen Sie schließlich **[!UICONTROL Aktivieren]** im Bestätigungs-Popup, um das Schema für [!DNL Profile] zu aktivieren.
+Wählen Sie abschließend **[!UICONTROL Aktivieren]** im Bestätigungs-Popup aus, um das Schema für [!DNL Profile] zu aktivieren.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, mit dem Platform Web SDK Genehmigungsdaten an Profil zu senden, müssen Sie diesen Datensatz beim Einrichten Ihrer [Edge-Konfiguration](../../../../edge/fundamentals/datastreams.md) als [!UICONTROL Profil-Datensatz] auswählen.
+Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, das Platform Web SDK zum Senden von Zustimmungsdaten an Profile zu verwenden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] auswählen, wenn Sie Ihre [Edge-Konfiguration](../../../../edge/fundamentals/datastreams.md) einrichten.
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie einem [!DNL Profile]-aktivierten Schema Zustimmungsfelder hinzugefügt, deren Dataset zum Erfassen von Einwilligungsdaten mit dem Platform Web SDK oder der direkten XDM-Erfassung verwendet wird.
+In diesem Tutorial haben Sie Einwilligungsfelder zu einem [!DNL Profile]-aktivierten Schema hinzugefügt, dessen Datensatz verwendet wird, um Einwilligungsdaten mithilfe des Platform Web SDK oder der direkten XDM-Erfassung zu erfassen.
 
-Sie können nun zur Übersicht zur Verarbeitung der Einwilligung [zurückkehren, um die Konfiguration der Experience Platform zur Verarbeitung der Einwilligungsdaten fortzusetzen.](./overview.md#merge-policies)
+Sie können jetzt zur [Übersicht über die Zustimmungsverarbeitung](./overview.md#merge-policies) zurückkehren, um mit der Konfiguration der Experience Platform zur Verarbeitung von Zustimmungsdaten fortzufahren.
 
 ## Anhang
 
-Der folgende Abschnitt enthält weitere Informationen zum Erstellen eines Datensatzes zum Erfassen von Daten zur Kundengenehmigung und zu den Kundenpräferenzen.
+Der folgende Abschnitt enthält zusätzliche Informationen zum Erstellen eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten von Kunden.
 
-### hinzufügen benutzerdefinierte Felder für die Zustimmung und die Voreinstellung zum Schema {#custom-consent}
+### Hinzufügen benutzerdefinierter Einverständnisfelder und Präferenzfelder zum Schema {#custom-consent}
 
-Wenn Sie zusätzliche Zustimmungssignale außerhalb der von der standardmäßigen [!DNL Consents & Preferences]-Feldgruppe repräsentierten Signalen erfassen müssen, können Sie benutzerdefinierte XDM-Komponenten verwenden, um Ihr Schema für die Zustimmung entsprechend Ihren jeweiligen Geschäftsanforderungen zu verbessern. In diesem Abschnitt werden die Grundprinzipien erläutert, wie Sie Ihr Schema für die Zustimmung so anpassen können, dass es mit den Befehlen zur Änderung der Zustimmung, die von Adobe Experience Platform Mobile- und Web-SDKs ausgeführt werden, kompatibel ist.
+Wenn Sie zusätzliche Zustimmungssignale außerhalb der von der standardmäßigen [!DNL Consents & Preferences] -Feldergruppe repräsentierten Signale erfassen müssen, können Sie benutzerdefinierte XDM-Komponenten verwenden, um Ihr Einwilligungsschema entsprechend Ihren jeweiligen Geschäftsanforderungen zu erweitern. In diesem Abschnitt werden die grundlegenden Prinzipien erläutert, wie Sie Ihr Einverständnisschema anpassen können, um diese Signale in das Profil aufzunehmen.
 
 >[!IMPORTANT]
 >
->Sie müssen die Feldgruppe [!DNL Consents & Preferences] als Grundlage für die Struktur Ihrer Genehmigungsdaten verwenden und bei Bedarf weitere Felder hinzufügen, anstatt zu versuchen, die gesamte Struktur von Grund auf zu erstellen.
+>Die Platform Web- und Mobile-SDKs unterstützen keine benutzerdefinierten Felder in ihren Befehlen zur Änderung der Zustimmung. Derzeit ist die einzige Möglichkeit, benutzerdefinierte Einwilligungsfelder in Profile zu erfassen, über [Batch-Erfassung](../../../../ingestion/batch-ingestion/overview.md) oder eine [Quellverbindung](../../../../sources/home.md).
 
-Um der Struktur einer Standardfeldgruppe benutzerdefinierte Felder hinzuzufügen, müssen Sie zunächst eine benutzerspezifische Feldgruppe erstellen. Nachdem Sie die Feldgruppe [!DNL Consents & Preferences] zum Schema hinzugefügt haben, wählen Sie das Symbol **plus (+)** im Abschnitt **[!UICONTROL Feldgruppen]** und klicken Sie dann auf **[!UICONTROL Neue Feldgruppe]** erstellen. Geben Sie einen Namen und eine optionale Beschreibung für die Feldgruppe ein und wählen Sie dann **[!UICONTROL Hinzufügen Feldgruppe]**.
+Es wird dringend empfohlen, die Feldergruppe [!DNL Consents & Preferences] als Grundlage für die Struktur Ihrer Zustimmungsdaten zu verwenden und nach Bedarf zusätzliche Felder hinzuzufügen, anstatt zu versuchen, die gesamte Struktur von Grund auf neu zu erstellen.
+
+Um der Struktur einer Standardfeldgruppe benutzerdefinierte Felder hinzuzufügen, müssen Sie zunächst eine benutzerdefinierte Feldergruppe erstellen. Nachdem Sie die Feldergruppe [!DNL Consents & Preferences] zum Schema hinzugefügt haben, wählen Sie das Symbol **plus (+)** im Abschnitt **[!UICONTROL Feldergruppen]** aus und wählen Sie dann **[!UICONTROL Neue Feldergruppe]** erstellen. Geben Sie einen Namen und eine optionale Beschreibung für die Feldergruppe ein und wählen Sie dann **[!UICONTROL Feldergruppe hinzufügen]** aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-Das Element [!DNL Schema Editor] wird erneut angezeigt, wobei die neue benutzerdefinierte Feldgruppe in der linken Leiste ausgewählt ist. Auf der Arbeitsfläche werden Steuerelemente angezeigt, mit denen Sie benutzerdefinierte Felder zur Schema-Struktur hinzufügen können. Um ein neues Feld für die Zustimmung oder Voreinstellung hinzuzufügen, wählen Sie das Symbol **plus (+)** neben dem Objekt `consents` aus.
+Das [!DNL Schema Editor] wird wieder angezeigt, wobei die neue benutzerdefinierte Feldergruppe in der linken Leiste ausgewählt ist. Auf der Arbeitsfläche werden Steuerelemente angezeigt, mit denen Sie benutzerdefinierte Felder zur Schemastruktur hinzufügen können. Um ein neues Einverständnis- oder Präferenzfeld hinzuzufügen, wählen Sie das Symbol **plus (+)** neben dem Objekt `consents` aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
-Innerhalb des Objekts `consents` wird ein neues Feld angezeigt. Da Sie ein benutzerdefiniertes Feld zu einem Standard-XDM-Objekt hinzufügen, wird das neue Feld unter einem Objekt erstellt, das Ihrer Mandant-ID zugeordnet ist.
+Innerhalb des Objekts `consents` wird ein neues Feld angezeigt. Da Sie ein benutzerdefiniertes Feld zu einem Standard-XDM-Objekt hinzufügen, wird das neue Feld unter einem Objekt erstellt, das mit Ihrer Mandanten-ID benannt ist.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/nested-tenantId.png)
 
-Geben Sie in der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** einen Namen und eine Beschreibung für das Feld ein. Bei der Auswahl des Felds **[!UICONTROL Typ]** müssen Sie den entsprechenden Standarddatentyp für ein benutzerspezifisches Einwilligungs- oder Vorgabefeld verwenden:
+Geben Sie in der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** einen Namen und eine Beschreibung für das Feld ein. Bei der Auswahl des Felds **[!UICONTROL Typ]** müssen Sie den entsprechenden Standarddatentyp für ein benutzerdefiniertes Einwilligungs- oder Präferenzfeld verwenden:
 
-* [[!UICONTROL Allgemeines Feld für Zustimmung]](../../../../xdm/data-types/consent-field.md)
-* [[!UICONTROL Feld für allgemeine Marketingpräferenzen]](../../../../xdm/data-types/marketing-field.md)
-* [[!UICONTROL Allgemeines Feld für Marketingpräferenzen mit Abonnements]](../../../../xdm/data-types/marketing-field-subscriptions.md)
+* [[!UICONTROL Generisches Einverständnisfeld]](../../../../xdm/data-types/consent-field.md)
+* [[!UICONTROL Feld für allgemeine Marketing-Voreinstellungen]](../../../../xdm/data-types/marketing-field.md)
+* [[!UICONTROL Allgemeines Marketing-Präferenzfeld mit Abonnements]](../../../../xdm/data-types/marketing-field-subscriptions.md)
 * [[!UICONTROL Feld für allgemeine Personalisierungseinstellungen]](../../../../xdm/data-types/personalization-field.md)
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Apply]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
 
-Das Feld &quot;Zustimmung&quot;oder &quot;Präferenz&quot;wird der Schema-Struktur hinzugefügt. Beachten Sie, dass der in der rechten Leiste angezeigte [!UICONTROL Pfad] den Namensraum `_tenantId` enthält. Dieser Namensraum muss immer dann einbezogen werden, wenn Sie in Ihren Datenvorgängen auf den Pfad zu diesem Feld verweisen.
+Das Einverständnis- oder Präferenzfeld wird der Schemastruktur hinzugefügt. Beachten Sie, dass der in der rechten Leiste angezeigte [!UICONTROL Pfad] den Namespace `_tenantId` enthält. Dieser Namespace muss immer dann enthalten sein, wenn Sie in Ihren Datenvorgängen auf den Pfad zu diesem Feld verweisen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 
-Gehen Sie wie oben beschrieben vor, um die erforderlichen Felder für die Zustimmung und die Voreinstellung hinzuzufügen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]**, um Ihre Änderungen zu bestätigen.
+Führen Sie die oben beschriebenen Schritte aus, um mit dem Hinzufügen der erforderlichen Zustimmungs- und Voreinstellungsfelder fortzufahren. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen zu bestätigen.
 
-Wenn das bearbeitete Schema von dem [!UICONTROL Profil-Datensatz] verwendet wird, der in Ihrer Platform Web SDK-Edge-Konfiguration angegeben ist, enthält dieser Datensatz jetzt die neuen Zustimmungsfelder. Sie können nun zum Handbuch [Verarbeitung der Einwilligung](./overview.md#merge-policies) zurückkehren, um die Konfiguration der Experience Platform zur Verarbeitung der Einwilligungsdaten fortzusetzen.
-
-Wenn Sie für dieses Schema keinen Datensatz erstellt haben, fahren Sie mit dem Abschnitt [Erstellen eines Datensatzes](#dataset) fort.
+Wenn Sie keinen Datensatz für dieses Schema erstellt haben, fahren Sie mit dem Abschnitt [Erstellen eines Datensatzes](#dataset) fort.
