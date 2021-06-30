@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Profil;Echtzeit-Kundenprofil;Fehlerbehebung;API;Einheitliches Profil;Einheitliches Profil;Profil;RTCP;XDM-Diagramme
 title: Übersicht über Funktionen zur Barrierefreiheit in der Experience Platform
-topic: Handbuch
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform möchte allen Einzelpersonen barrierefreie und inklusive Funktionen bieten.
-source-git-commit: 81db01c3e8d332e1fc8127d779c3a584bb498858
+source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
-source-wordcount: '312'
-ht-degree: 8%
+source-wordcount: '311'
+ht-degree: 7%
 
 ---
 
