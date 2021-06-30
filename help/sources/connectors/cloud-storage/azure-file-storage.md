@@ -5,9 +5,9 @@ title: Azure File Storage Source Connector - Übersicht
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure File Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: e150f05df2107d7b3a2e95a55dc4ad072294279e
+source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '459'
 ht-degree: 3%
 
 ---
@@ -43,11 +43,11 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von API
 
 ### Verwenden von APIs
 
-- [Erstellen einer Azure File Storage-Quellverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
-- [Erkunden eines Cloud-Speichersystems mithilfe der Flow Service-API](../../tutorials/api/explore/cloud-storage.md)
-- [Erfassen von Cloud-Speicherdaten mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
+- [Erstellen einer Azure File Storage-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/azure-file-storage.md)
+- [Datenstruktur und Inhalt einer Cloud-Speicherquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/cloud-storage.md)
+- [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Verwenden der UI
 
 - [Erstellen einer Azure File Storage-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/azure-file-storage.md)
-- [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
