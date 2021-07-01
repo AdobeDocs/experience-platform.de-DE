@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profile
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 95%
+source-wordcount: '139'
+ht-degree: 97%
 
 ---
 
@@ -15,8 +15,9 @@ ht-degree: 95%
 
 * [[!DNL Profile]Übersicht](home.md)
 * [Profilüberblick (Video)](video/profile-overview.md)
-* [[!DNL Profile] Limits und SegmentierungsLimits](guardrails.md)
+* [[!DNL Profile] und Segmentierungsleitplanken](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
+* [Time-to-Live (TTL) für Datensätze](apply-ttl.md)
 * [!DNL Profile] API {#api}
    * [Übersicht](api/overview.md)
    * [Erste Schritte](api/getting-started.md)
