@@ -4,9 +4,9 @@ description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 27b26605cd03ff6d83a9a5bd308e55fcdc955da6
+source-git-commit: 17ebf50965136f2c075f21eb3ecdcb1ce6da0b7d
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '595'
 ht-degree: 4%
 
 ---
@@ -24,6 +24,7 @@ Sendet ein Ereignis an die Adobe [!DNL Experience Platform], damit Adobe Experie
 Es gibt einige weitere Felder im Aktionstyp Ereignis senden , die je nach Implementierung ebenfalls nützlich sein können. Bitte beachten Sie, dass alle diese Felder optional sind.
 
 - **Typ:** Mit diesem Feld können Sie einen Ereignistyp angeben, der in Ihrem XDM-Schema aufgezeichnet wird. Weitere Informationen zu den standardmäßigen Ereignistypen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) .
+- **Daten:** Daten, die nicht mit einem XDM-Schema übereinstimmen, können mit diesem Feld gesendet werden. Dieses Feld ist nützlich, wenn Sie versuchen, ein Adobe Target-Profil zu aktualisieren oder Target Recommendations-Attribute zu senden. Beispiele finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en).
 - **Zusammenführungs-ID:** Wenn Sie eine  [Zusammenführungs-](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) ID für Ihr Ereignis angeben möchten, können Sie dies in diesem Feld tun. Beachten Sie, dass die nachfolgenden Lösungen Ihre Ereignisdaten derzeit nicht zusammenführen können.
 - **Datensatz-ID:** Wenn Sie Daten an einen Datensatz senden müssen, der nicht von Ihnen im Datensatz angegeben wurde, können Sie diese Datensatz-ID hier angeben.
 - **Dokument wird entladen:** Wenn Sie sicherstellen möchten, dass die Ereignisse den Server erreichen, auch wenn der Benutzer von der Seite weg navigiert, aktivieren Sie das Kontrollkästchen  **[!UICONTROL Dokument wird]** entladen . Dadurch können Ereignisse den Server erreichen, Antworten werden jedoch ignoriert.
