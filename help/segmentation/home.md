@@ -1,165 +1,166 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Segmentierung;Segmentierung;Segmentdienst;Segment;Segmente;Segmente
+keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentdienst; Segment; Segment; Segmente; Segmente
 solution: Experience Platform
-title: Übersicht über den Segmentdienst
+title: Übersicht über den Segmentierungsdienst
 topic-legacy: overview
-description: Erfahren Sie mehr über den Adobe Experience Platform Segmentation Service und seine Rolle im Plattform-Ökosystem.
+description: Erfahren Sie mehr über den Segmentierungsdienst von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 3e92494351e487468e6292c34763e5b2281fd6c5
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1616'
 ht-degree: 7%
 
 ---
 
-# [!DNL Segmentation Service]Übersicht
+# [!DNL Segmentation Service] Übersicht
 
-Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und Audiencen aus Ihren [!DNL Real-time Customer Profile]-Daten generieren können. Diese Segmente werden zentral konfiguriert und auf [!DNL Platform] gepflegt und sind für jede Adobe leicht zugänglich.
+Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral auf [!DNL Platform] konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung.
 
-Dieses Dokument gibt einen Überblick über [!DNL Segmentation Service] und die Rolle, die es in Adobe Experience Platform spielt.
+Dieses Dokument bietet einen Überblick über [!DNL Segmentation Service] und die Rolle, die es in Adobe Experience Platform spielt.
 
 ## Erste Schritte mit [!DNL Segmentation Service]
 
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
-- **Segmentierung**: Die Unterteilung einer großen Gruppe von Einzelpersonen (z. B. Kunden, Potenzieller Kunde, Benutzer oder Organisationen) in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich wie Marketingstrategien reagieren.
-- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe-Audience verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen.
+- **Segmentierung**: Die Unterteilung einer großen Gruppe von Einzelanwendern (z. B. Kunden, Interessenten, Benutzer oder Organisationen) in kleinere Gruppen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+- **Segmentdefinition**: Der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen.
 - **Audience**: Der resultierende Satz von Profilen, die den Kriterien einer Segmentdefinition entsprechen.
 
 ## Funktionsweise der Segmentierung
 
 Bei Segmentierung handelt es sich um den Prozess der Definition spezifischer Attribute oder Verhaltensweisen, die von einer Untergruppe von Profilen in Ihrem Profilspeicher geteilt werden, sodass Sie eine vermarktbare Gruppe von Personen aus Ihrem Kundenstamm ermitteln können. In einer E-Mail-Kampagne mit dem Namen „Haben Sie vergessen, Schuhe zu kaufen?“ wollen Sie möglicherweise eine Zielgruppe aller Anwender auswählen, die in den letzten 30 Tagen nach Laufschuhen gesucht haben, den Kauf jedoch nicht abgeschlossen haben.
 
-Sobald ein Segment konzeptionell definiert wurde, wird es in [!DNL Experience Platform] erstellt. In der Regel werden Segmente vom Marketingspezialisten oder Audiencen-Spezialisten erstellt, obwohl einige Unternehmen es vorziehen, dass sie in Zusammenarbeit mit ihren Datenanalysten von ihrer Marketingabteilung erstellt werden. Bei der Überprüfung der an [!DNL Platform] gesendeten Daten stellt der Datenanalyst die Segmentdefinition zusammen, indem er bestimmt, welche Felder und Werte zum Aufbau der Regeln oder Bedingungen des Segments verwendet werden. Dies erfolgt entweder über die Benutzeroberfläche oder die API.
+Nachdem ein Segment konzeptionell definiert wurde, wird es in [!DNL Experience Platform] erstellt. In der Regel werden Segmente vom Marketing- oder Zielgruppenspezialisten erstellt, obwohl einige Unternehmen es vorziehen, dass sie in Zusammenarbeit mit ihren Datenanalysten von ihrer Marketing-Abteilung erstellt werden. Nach Überprüfung der an [!DNL Platform] gesendeten Daten stellt der Datenanalyst die Segmentdefinition zusammen, indem er auswählt, welche Felder und Werte zum Erstellen der Regeln oder Bedingungen des Segments verwendet werden. Dies erfolgt über die Benutzeroberfläche oder die API.
 
 ## Segmente erstellen
 
-Unabhängig davon, ob sie mit der API oder mit [!DNL Segment Builder] erstellt wurden, werden Segmente letztendlich mit [!DNL Profile Query Language] (PQL) definiert. Hier wird die Definition des konzeptionellen Segments in der Sprache beschrieben, die zum Abrufen von Profilen erstellt wurde, die den Kriterien entsprechen. Weitere Informationen finden Sie unter [PQL overview](./pql/overview.md).
+Unabhängig davon, ob sie mit der API oder mit [!DNL Segment Builder] erstellt wurden, werden Segmente letztendlich mit [!DNL Profile Query Language] (PQL) definiert. Hier wird die Definition des konzeptionellen Segments in der Sprache beschrieben, die zum Abrufen von Profilen erstellt wurde, die den Kriterien entsprechen. Weitere Informationen finden Sie in der [PQL-Übersicht](./pql/overview.md).
 
-Informationen zum Erstellen und Verwenden von Segmenten im [!DNL Segment Builder] (UI-Implementierung von [!DNL Segmentation Service]) finden Sie im Handbuch [Segmentaufbau](./ui/overview.md).
+Informationen zum Erstellen und Verwenden von Segmenten im [!DNL Segment Builder] (UI-Implementierung von [!DNL Segmentation Service]) finden Sie im [Segment Builder-Handbuch](./ui/overview.md).
 
-Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Lernprogramm zum Erstellen von Segmenten mit der Audience mit der API](./tutorials/create-a-segment.md).[
+Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie im Tutorial zum Erstellen von Zielgruppensegmenten mithilfe der API](./tutorials/create-a-segment.md).[
 
 >[!NOTE]
 >
->In dem Ereignis, in dem ein Schema erweitert wird, müssen alle zukünftigen Uploads neu hinzugefügte Felder entsprechend aktualisieren. Weitere Informationen zum Anpassen von [!DNL Experience Data Model] (XDM) finden Sie im Tutorial [Schema-Editor](../xdm/tutorials/create-schema-ui.md).
+>Bei einer Erweiterung eines Schemas müssen alle zukünftigen Uploads neu hinzugefügte Felder entsprechend aktualisiert werden. Weitere Informationen zum Anpassen von [!DNL Experience Data Model] (XDM) finden Sie im Tutorial [Schema Editor](../xdm/tutorials/create-schema-ui.md).
+>
+>Wenn die Time-to-Live (TTL) für den Datensatz aktiviert ist, könnte sich dies auf die Mitgliedschaft des erstellten Segments auswirken. Weitere Informationen zu TTL und wie sie sich auf die Segmentierung auswirken können, finden Sie im [TTL-Handbuch für den Profildienst](../profile/apply-ttl.md).
 
 ## Segmente bewerten
 
-Die Plattform unterstützt derzeit drei Methoden zur Bewertung von Segmenten: Streaming-Segmentierung, Stapelsegmentierung und Kantensegmentierung.
+Platform unterstützt derzeit drei Methoden zum Auswerten von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Kantensegmentierung.
 
 ### Streaming-Segmentierung
 
-Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente entsprechend der Aktivität des Benutzers aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten auf [!DNL Real-time Customer Profile] angewendet. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Audience der Zielgruppe relevant bleibt.
+Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten auf [!DNL Real-time Customer Profile] angewendet. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
 
-Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Streaming-Segmentierungsdokumentation](./api/streaming-segmentation.md).
+Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentation zur Streaming-Segmentierung](./api/streaming-segmentation.md).
 
-### Stapelsegmentierung
+### Batch-Segmentierung
 
-Als Alternative zu einem laufenden Datenauswahlprozess verschiebt die Stapelsegmentierung alle Profil-Daten gleichzeitig durch Segmentdefinitionen, um entsprechende Audiencen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert und gespeichert, damit Sie es zur Verwendung exportieren können.
+Als Alternative zu einem laufenden Datenauswahlprozess verschiebt die Batch-Segmentierung alle Profildaten gleichzeitig durch Segmentdefinitionen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert, sodass Sie es zur Verwendung exportieren können.
 
 **Inkrementelle Segmentierung (Beta)**
 
-Stapelsegmente werden alle 24 Stunden ausgewertet. Bei vorhandenen Segmenten hält die inkrementelle Segmentierung Segmente jedoch bis zu einer Stunde frisch.
+Batch-Segmente werden alle 24 Stunden ausgewertet. Bei vorhandenen Segmenten bleiben die Segmente jedoch durch die inkrementelle Segmentierung bis zu einer Stunde frisch.
 
-Die inkrementelle Segmentierung wird mit neuen Daten ausgeführt, die in den Profil Store gelangen. Für die inkrementelle Segmentierung gelten jedoch die folgenden Einschränkungen:
+Inkrementelle Segmentierung wird für neue Daten ausgeführt, die in den Profilspeicher gelangen. Die folgenden Einschränkungen gelten jedoch für die inkrementelle Segmentierung:
 
-- Bei neuen oder kürzlich geänderten Segmenten werden Profil mit neuen Daten im nächsten inkrementellen Beginn qualifiziert. Profil ohne Änderungen werden jedoch im nächsten vollständigen Stapelsegmentierungsauftrag nachgeholt.
-- Segmente mit mehreren Entitäten werden in der inkrementellen Segmentierung aktualisiert. Wenn Entitätsaktualisierungen vorhanden sind, werden Profil mit neuen Daten im nächsten inkrementellen Beginn verwendet. Profil ohne Änderungen werden jedoch im nächsten vollständigen Stapelsegmentierungsauftrag nachgeholt.
-- Ereignis, die das Zeitfenster eines Segments verlassen, werden im nächsten vollständigen Stapelsegmentierungsauftrag abgeglichen.
+- Bei neuen oder kürzlich geänderten Segmenten werden Profile mit neuen Daten im nächsten inkrementellen Lauf qualifiziert. Profile ohne Änderungen werden jedoch im nächsten vollständigen Batch-Segmentierungsauftrag nachgeholt.
+- Bei der inkrementellen Segmentierung werden Segmente mit mehreren Entitäten aktualisiert. Im Falle von Entitätsaktualisierungen werden alle Profile mit neuen Daten diese im nächsten inkrementellen Verlauf verwenden. Profile ohne Änderungen werden jedoch beim nächsten vollständigen Batch-Segmentierungsauftrag nachgeholt.
+- Ereignisse, die aus dem Zeitfenster eines Segments entfernt werden, werden im nächsten vollständigen Batch-Segmentierungsauftrag abgestimmt.
 
-Informationen zur Bewertung von Segmenten finden Sie im Lehrgang [Segmentbewertung](./tutorials/evaluate-a-segment.md).
+Informationen zum Auswerten von Segmenten finden Sie im [Tutorial zur Segmentbewertung](./tutorials/evaluate-a-segment.md).
 
-### Kantensegmentierung
+### Edge-Segmentierung
 
-Bei der Edge-Segmentierung können Segmente direkt am Rand in der Plattform ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
+Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
-Weitere Informationen zur Kantensegmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder in der [UI-Dokumentation](./ui/edge-segmentation.md).
+Weitere Informationen zur Kantensegmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder der [Benutzeroberflächen-Dokumentation](./ui/edge-segmentation.md).
 
 ## Zugriff auf Segmentierungsergebnisse
 
-Informationen zum Zugriff auf ein exportiertes Segment finden Sie im Lehrgang [Segmentbewertung](./tutorials/evaluate-a-segment.md).
+Informationen zum Zugriff auf ein exportiertes Segment finden Sie im Tutorial [Segmentbewertung](./tutorials/evaluate-a-segment.md).
 
 ## Segmentmetadaten
 
-Segmentmetadaten erleichtern die Indexierung im Ereignis, in dem alle Segmente wiederverwendet und/oder kombiniert werden sollen.
+Segmentmetadaten erleichtern die Indizierung für den Fall, dass eines Ihrer Segmente wiederverwendet und/oder kombiniert werden soll.
 
-Zum Erstellen Ihrer Segmente (entweder über die API oder [!DNL Segment Builder]) müssen Sie einen Segmentnamen und eine Richtlinie zum Zusammenführen definieren.
+Zum Erstellen Ihrer Segmente (entweder über die API oder [!DNL Segment Builder]) müssen Sie einen Segmentnamen und eine Zusammenführungsrichtlinie definieren.
 
 ### Segmentnamen
 
-Beim Erstellen eines neuen Segments müssen Sie einen Segmentnamen angeben. Der Segmentname wird verwendet, um ein bestimmtes Segment in der von [!DNL Segmentation Service] erstellten Sammlung zu identifizieren. Segmentnamen sollten daher beschreibend, knapp und eindeutig sein.
+Beim Erstellen eines neuen Segments müssen Sie einen Segmentnamen angeben. Der Segmentname wird verwendet, um ein bestimmtes Segment aus der von [!DNL Segmentation Service] erstellten Sammlung zu identifizieren. Segmentnamen sollten daher beschreibend, kurz und eindeutig sein.
 
 >[!NOTE]
 >
->Denken Sie beim Planen eines Segments daran, dass Segmente aus einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden können. Berücksichtigen Sie bei der Auswahl eines Namens die Möglichkeit, dass Ihr Segment wiederverwendbare Teile enthalten kann.
+>Beachten Sie bei der Planung eines Segments, dass Segmente aus einem beliebigen anderen Segment referenziert und mit ihm kombiniert werden können. Erwägen Sie bei der Auswahl eines Namens die Möglichkeit, dass Ihr Segment wiederverwendbare Teile enthalten kann.
 
 ### Zusammenführungsrichtlinien
 
-Merge-Richtlinien sind Regeln, die von [!DNL Profile] verwendet werden, um zu bestimmen, wie Daten priorisiert und unter bestimmten Bedingungen zu einer einheitlichen Ansicht kombiniert werden.
-Wenn keine Richtlinie zum Zusammenführen definiert ist, wird die standardmäßige [!DNL Platform]-Richtlinie zum Zusammenführen verwendet. Wenn Sie lieber eine für Ihr Unternehmen spezifische Richtlinie zum Zusammenführen verwenden möchten, können Sie eine eigene Richtlinie erstellen und diese als Standard Ihres Unternehmens markieren.
+Zusammenführungsrichtlinien sind Regeln, die von [!DNL Profile] verwendet werden, um zu bestimmen, wie Daten priorisiert und unter bestimmten Bedingungen zu einer einheitlichen Ansicht kombiniert werden.
+Wenn keine Zusammenführungsrichtlinie definiert ist, wird die standardmäßige Zusammenführungsrichtlinie [!DNL Platform] verwendet. Wenn Sie lieber eine für Ihre Organisation spezifische Zusammenführungsrichtlinie verwenden möchten, können Sie eine eigene erstellen und diese als Standard für Ihre Organisation markieren.
 
-Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Handbuch [Richtlinien zusammenführen](../profile/api/merge-policies.md).
+Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im [Leitfaden zu Zusammenführungsrichtlinien](../profile/api/merge-policies.md).
 
 >[!NOTE]
 >
->Die Schätzung der Audience basiert auf der standardmäßigen Profil-Zusammenführungs-Richtlinie des Unternehmens.
+>Die Schätzung der Zielgruppengrößen basiert auf der standardmäßigen Profilzusammenführungsrichtlinie des Unternehmens.
 
 ### Andere Segmentmetadaten
 
-Neben der Segmentnamen- und der Zusammenführungsrichtlinie gibt [!DNL Segment Builder] Ihnen ein weiteres Metadatenfeld &quot;Segmentbeschreibung&quot;ein, in dem Sie den Zweck Ihrer Segmentdefinition zusammenfassen können.
+Zusätzlich zur Segmentname- und Zusammenführungsrichtlinie bietet Ihnen [!DNL Segment Builder] ein zusätzliches Metadatenfeld &quot;Segmentbeschreibung&quot;, in dem Sie den Zweck Ihrer Segmentdefinition zusammenfassen können.
 
 ## Erweiterte Segmentierungsfunktionen
 
-Segmente können so konfiguriert werden, dass sie eine Audience fortlaufend generieren, indem [Streaming-Datenerfassung](../ingestion/streaming-ingestion/overview.md) mit einer der folgenden erweiterten Segmentierungsfunktionen kombiniert wird:
+Segmente können so konfiguriert werden, dass sie kontinuierlich eine Zielgruppe generieren, indem [Streaming-Datenerfassung](../ingestion/streaming-ingestion/overview.md) mit einer der folgenden erweiterten Segmentierungsfunktionen kombiniert wird:
 - [Sequenzielle Segmentierung](#sequential)
 - [Dynamische Segmentierung](#dynamic)
-- [Segmentierung mehrerer Entitäten](#multi-entity)
+- [Segmentierung mit mehreren Entitäten](#multi-entity)
 
 Diese erweiterten Funktionen werden in den folgenden Abschnitten ausführlicher erläutert.
 
 ## Sequenzielle Segmentierung {#sequential}
 
-Eine Standard-Journey ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, die diese Journey widerspiegelt. Dadurch werden Sequenzen von Ereignissen beim Auftreten erfasst. Sie können die Ereignis in der gewünschten Reihenfolge anordnen, indem Sie die Zeitleiste des visuellen Ereignisses in [!DNL Segment Builder] verwenden.
+Eine Standardbenutzer-Journey ist sequenziell. Mit Adobe Experience Platform können Sie eine geordnete Segmentreihe definieren, um diese Journey widerzuspiegeln und somit Ereignissequenzen zu erfassen. Sie können Ereignisse in der gewünschten Reihenfolge anordnen, indem Sie die visuelle Ereignis-Timeline in [!DNL Segment Builder] verwenden.
 
-Ein Beispiel für eine Journey eines Kunden, für die eine sequenzielle Segmentierung erforderlich wäre, wäre die Ansicht des Produkts > Hinzufügen des Produkts > Kassengang > Kein Kauf.
+Ein Beispiel für eine Journey eines Kunden, für das eine sequenzielle Segmentierung erforderlich wäre, wäre Produktansicht > Produktangebot > Checkout > Kein Kauf.
 
 ## Dynamische Segmentierung {#dynamic}
 
-Die dynamische Segmentierung löst die Skalierbarkeitsprobleme, mit denen Marketingexperten beim Aufbau von Segmenten für Marketing-Kampagnen konfrontiert sind.
+Die dynamische Segmentierung löst die Skalierbarkeitsprobleme, die Marketingexperten beim Erstellen von Segmenten für Marketing-Kampagnen traditionell haben.
 
 Im Gegensatz zur statischen Segmentierung, bei der Sie jeden möglichen Anwendungsfall explizit und wiederholt erfassen müssen, verwendet die dynamische Segmentierung Variablen, um die Regellogik zu erstellen und Beziehungen dynamisch auszudrücken.
 
-### Verwendungsfall: Kunden suchen, die außerhalb ihres Heimatstaates Einkäufe tätigen
+### Anwendungsfall: Suchen nach Kunden, die Käufe außerhalb ihres Heimatlandes tätigen
 
-Um den Wert dieser erweiterten Segmentierungsfunktion zu veranschaulichen, sollten Sie einen Datenarchitekten erwägen, der mit einem Marketingspezialisten zusammenarbeitet, um Kunden zu identifizieren, die Käufe außerhalb ihres Heimatstaates getätigt haben.
+Um den Wert dieser erweiterten Segmentierungsfunktion zu veranschaulichen, sollten Sie einen Datenarchitekten erwägen, der mit einem Marketing-Experten zusammenarbeitet, um Kunden zu identifizieren, die außerhalb ihres Heimatstaates Einkäufe getätigt haben.
 
 **Das Problem**
 
-Bei der statischen Segmentierung müssen Sie einzelne Segmente mit einem eindeutigen Attribut des Startstatus definieren, bevor Sie nach Ereignissen filtern, die nicht dem Startstatus entsprechen. Ein explizites Segment dieses Typs würde lauten: &quot;Ich suche Leute aus Utah, deren Kaufstatus nicht Utah ist.&quot; Wenn Sie eine Audience mit dieser Methode erstellen, müssen Sie für jeden US-Bundesstaat ein Segment für insgesamt 50 Segmente definieren.
+Für die statische Segmentierung müssen Sie einzelne Segmente mit einem eindeutigen Stammstatusattribut definieren, bevor Sie nach Kaufereignissen filtern, die nicht dem Startstatus entsprechen. Ein explizites Segment dieses Typs würde lauten: &quot;Ich suche nach Personen aus Utah, deren Kaufstatus nicht Utah ist&quot;. Wenn Sie mit dieser Methode eine Zielgruppe erstellen, müssen Sie für jeden US-Bundesstaat ein Segment für insgesamt 50 Segmente definieren.
 
-Infolge der unterschiedlichen Segmentkombinationen, die beim Skalieren unvermeidlich auftreten, wird der manuelle Prozess für die statische Segmentierung zeitaufwendiger, was Ihre Effizienz insgesamt reduziert.
+Aufgrund der verschiedenen Segmentkombinationen, die sich unweigerlich bei der Skalierung ergeben, wird der manuelle Prozess, der für die statische Segmentierung erforderlich ist, zeitaufwendiger, wodurch sich Ihre Gesamteffizienz verringert.
 
 **Die Lösung**
 
-Indem Sie dem Attribut &quot;Kaufstatus&quot;eine Variable zuweisen, wird Ihr dynamisches Segment vereinfacht, um &quot;einen Kauf zu finden, bei dem der Status dieses Kaufs nicht dem Herkunftsstatus des Kunden entspricht&quot;. Auf diese Weise können Sie dann 50 statische Segmente zu einem einzigen dynamischen Segment zusammenfassen.
+Indem Sie dem Kaufstatusattribut eine Variable zuweisen, vereinfacht sich Ihr dynamisches Segment, &quot;einen Kauf zu finden, bei dem der Status dieses Kaufs nicht mit dem Herkunftsstatus des Kunden übereinstimmt&quot;. Auf diese Weise können Sie dann 50 statische Segmente zu einem einzigen dynamischen Segment zusammenfassen.
 
 ## Segmentierung mit mehreren Entitäten {#multi-entity}
 
-Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie [!DNL Real-time Customer Profile]-Daten um zusätzliche Daten erweitern, die auf Produkten, Stores oder anderen Nicht-Personen basieren, die auch als &quot;Dimensionsentitäten&quot;bezeichnet werden. Daher kann [!DNL Segmentation Service] während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie nativ im [!DNL Profile]-Datenspeicher. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Audiencen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Handbuch zur Segmentierung mehrerer Entitäten](multi-entity-segmentation.md).
+Mit der erweiterten Segmentierungsfunktion für mehrere Entitäten können Sie [!DNL Real-time Customer Profile]-Daten um zusätzliche Daten erweitern, die auf Produkten, Geschäften oder anderen Nicht-Personen-Entitäten basieren, die auch als &quot;Dimensionsentitäten&quot;bezeichnet werden. Daher kann [!DNL Segmentation Service] während der Segmentdefinition auf zusätzliche Felder zugreifen, als wären sie im [!DNL Profile]-Datenspeicher nativ. Die Segmentierung mehrerer Entitäten bietet Flexibilität bei der Identifizierung von Zielgruppen anhand von Daten, die für Ihre individuellen Geschäftsanforderungen relevant sind. Weitere Informationen, einschließlich Anwendungsfällen und Workflows, finden Sie im [Handbuch zur Segmentierung mehrerer Entitäten](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] Datentypen
 
-[!DNL Segmentation Service] unterstützt eine Vielzahl von primitiven und komplexen Datentypen. Detaillierte Informationen, einschließlich einer Liste der unterstützten Datentypen, finden Sie im Handbuch [Unterstützte Datentypen](./data-types.md).
+[!DNL Segmentation Service] unterstützt eine Vielzahl von primitiven und komplexen Datentypen. Detaillierte Informationen, einschließlich einer Liste der unterstützten Datentypen, finden Sie im [Handbuch zu unterstützten Datentypen](./data-types.md).
 
 ## Nächste Schritte
 
-[!DNL Segmentation Service] bietet einen konsolidierten Arbeitsablauf zum Erstellen von Segmenten aus  [!DNL Real-time Customer Profile] Daten. Zusammenfassung:
+[!DNL Segmentation Service] bietet einen konsolidierten Workflow zum Erstellen von Segmenten aus  [!DNL Real-time Customer Profile] Daten. Zusammenfassung:
 
-- [!DNL Segmentation] ist der Prozess der Definition einer Untergruppe von Profilen aus Ihrem Profil Store, mit dem Sie Verhalten oder Attribute einer gewünschten marktfähigen Gruppe charakterisieren können. [!DNL Segmentation Service] macht diesen Prozess möglich.
-- Denken Sie beim Planen eines Segments daran, dass ein Segment aus einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden kann.
-- Ein Profil kann anhand von Regeln erstellt werden, die auf den Daten der zugehörigen Zeitreihen oder beidem basieren.
-- Segmente können entweder bei Bedarf oder kontinuierlich ausgewertet werden. Bei einer bedarfsgerechten Bewertung werden alle Profil-Daten gleichzeitig durch die Segmentdefinitionen weitergeleitet. Wenn Daten kontinuierlich ausgewertet werden, werden sie durch Segmentdefinitionen gestreamt, die [!DNL Platform] eingeben.
+- [!DNL Segmentation] ist der Prozess der Definition einer Teilmenge von Profilen aus Ihrem Profilspeicher, sodass Sie das Verhalten oder die Attribute einer gewünschten marktfähigen Gruppe charakterisieren können. [!DNL Segmentation Service] ermöglicht diesen Prozess.
+- Beachten Sie bei der Planung eines Segments, dass ein Segment aus einem beliebigen anderen Segment referenziert und mit diesem kombiniert werden kann.
+- Ein Segment kann aus Regeln basierend auf Profildaten, verwandten Zeitreihendaten oder beidem erstellt werden.
+- Segmente können entweder bei Bedarf oder kontinuierlich ausgewertet werden. Bei der bedarfsgerechten Auswertung werden alle Profildaten gleichzeitig durch die Segmentdefinitionen weitergeleitet. Wenn Daten kontinuierlich ausgewertet werden, werden sie durch Segmentdefinitionen gestreamt, die in [!DNL Platform] eingegeben werden.
 
-Informationen zum Definieren von Segmenten in der Benutzeroberfläche finden Sie im Handbuch [Segmentaufbau](./ui/overview.md). Informationen zum Erstellen von Segmentdefinitionen mit der API finden Sie im Tutorial zum Erstellen von Segmenten mit der API](./tutorials/create-a-segment.md).[
+Informationen zum Definieren von Segmenten in der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](./ui/overview.md). Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie im Tutorial zum Erstellen von Segmenten mithilfe der API](./tutorials/create-a-segment.md).[
