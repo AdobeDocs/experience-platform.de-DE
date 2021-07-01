@@ -1,26 +1,25 @@
 ---
 title: Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
 description: Erfahren Sie mehr über die Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK.
-keywords: Erstanbieterdomäne;CNAME;Schema;Schema erstellen;Start;aep-Web-SDK-Erweiterung;Erweiterung;Konfigurations-ID;Konfigurationstool;Datenelement;Datenelement erstellen;XDM-Objekt;sendEvent;Ereignis senden;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+keywords: Erstanbieterdomäne;CNAME;Schema;Schema erstellen;Launch;AEP Web SDK-Erweiterung;Erweiterung;Konfigurations-ID;Konfigurationstool;Datenelement erstellen;Datenelement erstellen;XDM-Objekt;sendEvent;Ereignis senden;
+exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
+source-git-commit: 5f3b82edbc52d96cad13932be1d201e275780f3c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 4%
+source-wordcount: '318'
+ht-degree: 1%
 
 ---
 
-
 # Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
 
-Zur Verwendung des Platform Web SDK müssen Sie zunächst:
+Um das Platform Web SDK zu verwenden, müssen Sie zunächst:
 
-- Lassen Sie sich diese Funktion von Ihrem Unternehmen bereitstellen. (Der Zugriff auf das Platform Web SDK ist kostenlos. Wenn Sie Zugriff haben möchten, wenden Sie sich bitte an Ihren Customer Success Manager (CSM).
-- Sie benötigen eine aktivierte Erstanbieter-Domäne (CNAME). Wenn Sie bereits einen CNAME für Adobe Analytics haben, sollten Sie diesen verwenden. Tests in der Entwicklung funktionieren ohne CNAME, Sie benötigen jedoch einen, bevor Sie zur Produktion gehen.
+- Lassen Sie Ihre Organisation diese Funktion bereitstellen. (Der Zugriff auf das Platform Web SDK ist kostenlos. Wenn Sie Zugriff erhalten möchten, wenden Sie sich an Ihren Customer Success Manager (CSM).)
+- Es wird empfohlen, die Erstanbieterdomäne (CNAME) zu aktivieren. Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, sollten Sie diesen verwenden. Tests in der Entwicklung funktionieren ohne CNAME. Adobe empfiehlt jedoch, einen vor der Produktion zu verwenden. Obwohl eine CNAME-Implementierung keine Vorteile in Bezug auf die Cookie-Lebensdauer bietet, kann sie verhindern, dass bestimmte Anzeigensperren und seltener verwendete Browser SDK-Anforderungen blockieren. In diesen Fällen kann die Verwendung eines CNAME verhindern, dass die Datenerfassung für Benutzer, die diese Tools verwenden, unterbrochen wird.
 
 >[!IMPORTANT]
 >
->**Bitte beachten Sie, dass CNAME-Implementierungen von Erstanbietern ab dem 10.11.20 auf allen Safari-Browsern und mobilen iOS-Geräten eine Laufzeit von 7 Tagen haben.**
+>**Bitte beachten Sie, dass CNAME-Implementierungen von Erstanbietern ab dem 10.11.20 auf allen Safari-Browsern und mobilen iOS-Geräten eine Gültigkeit von 7 Tagen haben.**
 
-- Berechtigung für Adobe Experience Platform. Wenn Sie Adobe Experience Platform nicht gekauft haben, bietet Ihnen die Adobe den erforderlichen Zugriff, um das SDK in begrenzter Weise ohne Aufpreis zu verwenden.
-- Wenn Ihre Website bereits den [Experience Cloud-ID-Dienst](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) auf Ihrer Website verwendet - entweder über die Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung in Adobe Experience Platform Launch - und Sie ihn während der Migration zum Adobe Experience Platform Web SDK weiter verwenden möchten, müssen Sie die neueste Version der Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung verwenden. Weitere Informationen finden Sie unter [ID-Migration](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity).
+- Berechtigung für Adobe Experience Platform. Wenn Sie Adobe Experience Platform noch nicht erworben haben, bietet Adobe Ihnen den erforderlichen Zugriff, um das SDK in begrenztem Umfang und ohne Aufpreis verwenden zu können.
+- Wenn Ihre Website bereits den [Experience Cloud-ID-Dienst](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) auf Ihrer Website verwendet - entweder über die Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung in Adobe Experience Platform Launch - und Sie ihn bei der Migration zum Adobe Experience Platform Web SDK weiterhin verwenden möchten, müssen Sie die neueste Version der Besucher-API oder die Experience Cloud-ID-Dienst-Erweiterung verwenden. Weitere Informationen finden Sie unter [ID-Migration](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) .
