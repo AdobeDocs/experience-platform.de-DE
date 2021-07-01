@@ -3,9 +3,9 @@ title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 3f5f17275e28ba35a302a42d66b151c4234bc79c
+source-git-commit: a6fca344e6b307e503e29ca7dda3534cdea62f53
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1460'
 ht-degree: 43%
 
 ---
@@ -17,7 +17,7 @@ Um Ereignisdaten an Adobe Experience Cloud zu senden, verwenden Sie den Befehl `
 An Adobe Experience Cloud gesendete Daten gehören zwei Kategorien an:
 
 * XDM-Daten
-* Nicht-XDM-Daten (derzeit nicht unterstützt)
+* Nicht-XDM-Daten
 
 ## Senden von XDM-Daten
 
@@ -75,7 +75,7 @@ In diesem Beispiel wird die Datenschicht geklont, indem sie in JSON serialisiert
 >Die Daten, die in jedem Ereignis im XDM-Feld gesendet werden können, sind auf 32 KB begrenzt.
 
 
-### Senden von Nicht-XDM-Daten
+## Senden von Nicht-XDM-Daten
 
 Daten, die nicht mit einem XDM-Schema übereinstimmen, sollten mit der `data`-Option des Befehls `sendEvent` gesendet werden. Diese Funktion wird in den Versionen 2.5.0 und höher des Web SDK unterstützt.
 
@@ -85,7 +85,7 @@ Zukünftig können Sie Ihre gesamte Datenschicht unter der Option `data` senden 
 
 **So senden Sie Profil- und Recommendations-Attribute an Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -101,7 +101,7 @@ alloy("sendEvent", {
 ```
 
 
-### Einstellung `eventType` {#event-types}
+### Einstellen von `eventType` {#event-types}
 
 In einem XDM-Erlebnisereignis gibt es ein optionales Feld `eventType` . Dies enthält den primären Ereignistyp für den Datensatz. Die Festlegung eines Ereignistyps kann Ihnen dabei helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistypen, die von XDM bereitgestellt werden. [Weitere Informationen finden Sie im öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
