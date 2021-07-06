@@ -3,9 +3,9 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: da069c6c931bfd2af38b40fc061d5eb633aba9ea
+source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1548'
 ht-degree: 3%
 
 ---
@@ -52,9 +52,11 @@ Für einige Ziele in der Experience Platform gelten bestimmte Regeln und Pflicht
 
 **Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im  [!DNL Google Customer Match] Ziel verwendet werden.
 
-## [!DNL Google Customer Match] Kontovoraussetzungen  {#google-account-prerequisites}
+## [!DNL Google Customer Match] Kontovoraussetzungen {#google-account-prerequisites}
 
 Bevor Sie ein [!DNL Google Customer Match]-Ziel in Experience Platform einrichten, sollten Sie die Google-Richtlinien zur Verwendung von [!DNL Customer Match] lesen und einhalten, die in der [Google-Support-Dokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben sind.
+
+Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder eine höhere Zugriffsstufe konfiguriert ist. Weitere Informationen finden Sie in der [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
 
 ### Zulassungsliste {#allowlist}
 
@@ -68,7 +70,7 @@ Kunden mit kompatiblen Konten werden von Google automatisch auf die Zulassungsli
 
 Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-## Anforderungen an das Hashing von Telefonnummern {#phone-number-hashing-requirements}
+## Hash-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer Match]:
 
@@ -79,7 +81,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer
 >
 >Telefonnummern, die in den Namespace `Phone` aufgenommen werden, können in [!DNL Google Customer Match] nicht aktiviert werden.
 
-## Anforderungen an den E-Mail-Hashing {#hashing-requirements}
+## Anforderungen an das E-Mail-Hashing {#hashing-requirements}
 
 Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und [!DNL Platform] bei Aktivierung hash-Adressen einrichten.
 
