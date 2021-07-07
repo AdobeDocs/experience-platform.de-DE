@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schemafeldgruppe für Commerce-Details
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe Commerce-Details .
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '184'
 ht-degree: 4%
@@ -31,5 +31,5 @@ ht-degree: 4%
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
-* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.example.1.json)
-* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.schema.json)
+* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.example.1.json)
+* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-commerce.schema.json)
