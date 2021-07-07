@@ -5,7 +5,7 @@ title: Feldergruppe "Persönliche Kontaktdetails"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe Persönliche Kontaktdetails .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '169'
 ht-degree: 10%
@@ -35,5 +35,5 @@ ht-degree: 10%
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
-* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
-* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)
+* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
