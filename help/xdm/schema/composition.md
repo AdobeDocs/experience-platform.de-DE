@@ -5,7 +5,7 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '3726'
 ht-degree: 32%
@@ -167,7 +167,7 @@ Der folgende Screenshot zeigt, wie Feldgruppen in der Platform-Benutzeroberfläc
 
 ![](../images/schema-composition/field-group.png)
 
-Die aktuellste Liste der verfügbaren Standard-XDM-Feldgruppen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/mixins). Sie können auch das Handbuch [Erkunden von XDM-Komponenten](../ui/explore.md) lesen, wenn Sie lieber Ressourcen in der Benutzeroberfläche anzeigen möchten.
+Die aktuellste Liste der verfügbaren Standard-XDM-Feldgruppen finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Sie können auch das Handbuch [Erkunden von XDM-Komponenten](../ui/explore.md) lesen, wenn Sie lieber Ressourcen in der Benutzeroberfläche anzeigen möchten.
 
 ### Datentyp {#data-type}
 
