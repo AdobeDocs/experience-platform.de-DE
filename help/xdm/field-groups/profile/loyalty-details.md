@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Schemafeldgruppe "Loyalitätsdetails"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Loyalitätsdetails".
-source-git-commit: fe49560a69c4c02835f00e4ebc0a5b9dc88eae90
+source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 4%
@@ -38,5 +38,5 @@ ht-degree: 4%
 
 Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repository:
 
-* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-loyalty-details.example.1.json)
-* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-loyalty-details.schema.json)
+* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.example.1.json)
+* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-loyalty-details.schema.json)
