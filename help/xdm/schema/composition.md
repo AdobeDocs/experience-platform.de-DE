@@ -5,10 +5,10 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
 workflow-type: tm+mt
-source-wordcount: '3726'
-ht-degree: 32%
+source-wordcount: '3629'
+ht-degree: 30%
 
 ---
 
@@ -161,6 +161,12 @@ Feldergruppen definieren, mit welchen Klassen sie kompatibel sind, basierend auf
 
 Um beispielsweise Details wie &quot;[!UICONTROL Vorname]&quot;und &quot;[!UICONTROL Privatadresse]&quot;für Ihr Schema &quot;[!UICONTROL Mitglieder des Treueprogramms]&quot;zu erfassen, können Sie Standardfeldgruppen verwenden, die diese gemeinsamen Konzepte definieren. Für Konzepte, die für weniger häufige Anwendungsfälle spezifisch sind (z. B. &quot;[!UICONTROL Treueprogramm-Ebene]&quot;), gibt es jedoch häufig keine vordefinierte Feldergruppe. In diesem Fall müssen Sie Ihre eigene Feldergruppe definieren, um diese Informationen zu erfassen.
 
+>[!NOTE]
+>
+>Es wird dringend empfohlen, Standardfeldgruppen nach Möglichkeit in Ihren Schemas zu verwenden, da diese Felder implizit von [!DNL Experience Platform]-Diensten verstanden werden und eine größere Konsistenz bei der Verwendung über [!DNL Platform]-Komponenten hinweg bieten.
+>
+>Felder, die von Standardkomponenten bereitgestellt werden (z. B. &quot;Vorname&quot;und &quot;E-Mail-Adresse&quot;), enthalten zusätzliche Konnotationen, die über die grundlegenden Skalarfeldtypen hinausgehen und [!DNL Platform] darauf hinweisen, dass sich alle Felder, die denselben Datentyp aufweisen, genauso verhalten. Dieses Verhalten kann als konsistent betrachtet werden, unabhängig davon, woher die Daten stammen oder in welchem [!DNL Platform]-Dienst die Daten verwendet werden.
+
 Beachten Sie, dass Schemas aus &quot;null oder mehr&quot;Feldergruppen bestehen. Dies bedeutet, dass Sie ein gültiges Schema erstellen können, ohne überhaupt Feldgruppen zu verwenden.
 
 Der folgende Screenshot zeigt, wie Feldgruppen in der Platform-Benutzeroberfläche dargestellt werden. In diesem Beispiel wird einem Schema eine Feldergruppe ([!UICONTROL Demografische Details]) hinzugefügt, die eine Gruppierung der Felder zur Schemastruktur bietet.
@@ -209,24 +215,6 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 >[!NOTE]
 >
 > Der Feldtyp „Karte“ ermöglicht Daten für Schlüssel-Wertepaare, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten können nur auf Systemebene definiert werden, d. h. Sie können in einem branchen- oder herstellerdefinierten Schema auf eine Karte stoßen, diese steht jedoch nicht für die Verwendung in von Ihnen definierten Feldern zur Verfügung. Das [Entwicklerhandbuch für Schema-Registry-API](../api/getting-started.md) enthält weitere Informationen zum Definieren von Feldtypen.
-
-Einige Datenoperationen, die von nachgeschalteten Diensten und Anwendungen verwendet werden, erzwingen Einschränkungen für bestimmte Feldtypen. Betroffene Dienste sind u. a., aber nicht ausschließlich:
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-Bevor Sie ein Schema für die Verwendung in nachgelagerten Diensten erstellen, lesen Sie bitte die entsprechende Dokumentation für diese Dienste, um die Feldanforderungen und Einschränkungen für die Datenoperationen, für die das Schema bestimmt ist, besser zu verstehen.
-
-### XDM-Felder
-
-Zusätzlich zu den grundlegenden Feldern und der Möglichkeit, eigene Datentypen zu definieren, bietet XDM einen Standardsatz von Feldern und Datentypen, die implizit von [!DNL Experience Platform]-Diensten verstanden werden, und bietet eine größere Konsistenz bei der Verwendung über [!DNL Platform]-Komponenten hinweg.
-
-Diese Felder wie &quot;Vorname&quot;und &quot;E-Mail-Adresse&quot;enthalten zusätzliche Konnotationen, die über die grundlegenden Skalarfeldtypen hinausgehen. Sie weisen [!DNL Platform] darauf hin, dass sich alle Felder, die denselben XDM-Datentyp nutzen, auf dieselbe Weise verhalten. Dieses Verhalten kann als konsistent betrachtet werden, unabhängig davon, woher die Daten stammen oder in welchem [!DNL Platform]-Dienst die Daten verwendet werden.
-
-Eine vollständige Liste der verfügbaren XDM-Felder finden Sie im [XDM-Feldwörterbuch](field-dictionary.md). Es wird empfohlen, wann immer möglich XDM-Felder und Datentypen zu verwenden, um Konsistenz und Standardisierung über [!DNL Experience Platform] hinweg zu unterstützen.
 
 ## Kompositionsbeispiel
 
