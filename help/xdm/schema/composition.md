@@ -5,9 +5,9 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7158ae97d0260111b76edddbd447e6b302ddeb77
+source-git-commit: 2781825bf48940d0aa0a38485006263bfc8ac474
 workflow-type: tm+mt
-source-wordcount: '3708'
+source-wordcount: '3726'
 ht-degree: 32%
 
 ---
@@ -32,7 +32,7 @@ Die Standardisierung ist ein Schlüsselkonzept hinter [!DNL Experience Platform]
 
 Die als [!DNL XDM System] bekannte Infrastruktur, auf der [!DNL Experience Platform] erstellt wird, erleichtert schemabasierte Workflows und umfasst die Muster [!DNL Schema Registry], [!DNL Schema Editor], Schemadaten und Dienstnutzung. Weitere Informationen finden Sie in der [XDM-Systemübersicht](../home.md).
 
-Das Erstellen und Verwenden von Schemas in [!DNL Experience Platform] bietet verschiedene wichtige Vorteile. Erstens ermöglichen Schemata eine bessere Data Governance und eine bessere Datenminimierung, was besonders bei Datenschutzbestimmungen wichtig ist. Zweitens ermöglicht das Erstellen von Schemas mit Standardkomponenten von Adobe vordefinierte Einblicke und die Verwendung von KI-/ML-Diensten mit minimalen Anpassungen. Schließlich bieten Schemas eine Infrastruktur für Erkenntnisse über die Datenweitergabe und eine effiziente Orchestrierung.
+Die Nutzung von Schemas in [!DNL Experience Platform] bietet verschiedene wichtige Vorteile. Erstens ermöglichen Schemata eine bessere Data Governance und eine bessere Datenminimierung, was besonders bei Datenschutzbestimmungen wichtig ist. Zweitens ermöglicht das Erstellen von Schemas mit Standardkomponenten von Adobe vordefinierte Einblicke und die Verwendung von KI-/ML-Diensten mit minimalen Anpassungen. Schließlich bieten Schemas eine Infrastruktur für Erkenntnisse über die Datenweitergabe und eine effiziente Orchestrierung.
 
 ## Planen Ihres Schemas
 
@@ -111,7 +111,7 @@ Wie das obige Beispiel zeigt, stellt jeder Schlüssel im `identityMap` -Objekt e
 
 In dem Maße, wie sich die Art der digitalen Erfahrungen weiterentwickelt, müssen sich auch die Schemas, die zu ihrer Darstellung verwendet werden, weiterentwickeln. Ein gut entworfenes Schema ist daher in der Lage, sich bei Bedarf anzupassen und weiterzuentwickeln, ohne destruktive Änderungen an früheren Versionen des Schemas zu verursachen.
 
-Da die Beibehaltung der Abwärtskompatibilität für die Schemaentwicklung von entscheidender Bedeutung ist, erzwingt [!DNL Experience Platform] ein rein additives Versionierungsprinzip, um sicherzustellen, dass alle Änderungen am Schema nur zu zerstörungsfreien Aktualisierungen und Änderungen führen. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
+Da die Beibehaltung der Abwärtskompatibilität für die Schemaentwicklung von entscheidender Bedeutung ist, erzwingt [!DNL Experience Platform] ein rein additives Versionierungsprinzip. Dieser Grundsatz stellt sicher, dass alle Änderungen am Schema nur zu zerstörungsfreien Aktualisierungen und Änderungen führen. Mit anderen Worten: **brechende Änderungen werden nicht unterstützt.**
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ In der folgenden Tabelle werden die Änderungen aufgeschlüsselt, die beim Bearb
 
 | Unterstützte Änderungen | Brechende Änderungen (nicht unterstützt) |
 | --- | --- |
-| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Definieren eines obligatorischen Felds als optional</li><li>Anzeigename und Beschreibung der Ressource ändern</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Einführen neuer obligatorischer Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben von Attributen an eine andere Position in der Baumstruktur</li></ul> |
+| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Definieren eines obligatorischen Felds als optional</li><li>Anzeigename und Beschreibung der Ressource ändern</li><li>Aktivieren des Schemas zur Teilnahme am Profil</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Einführen neuer obligatorischer Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben vorhandener Felder an eine andere Position im Baum</li><li>Löschen des Schemas</li><li>Deaktivieren der Teilnahme des Schemas am Profil</li></ul> |
 
 ### Schemas und Datenerfassung
 
