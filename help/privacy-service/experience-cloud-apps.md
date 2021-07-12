@@ -5,10 +5,10 @@ title: Privacy Service- und Experience Cloud-Anwendungen
 topic-legacy: overview
 description: Dieses Dokument bietet eine Referenz zum Konfigurieren verschiedener Experience Cloud-Anwendungen für datenschutzbezogene Vorgänge.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+source-git-commit: 55d6d8ad7b0fc5457dc0fdc981aaa92717adbe68
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 16%
+source-wordcount: '600'
+ht-degree: 15%
 
 ---
 
@@ -36,7 +36,7 @@ Im Folgenden finden Sie eine Liste der [!DNL Experience Cloud]-Anwendungen, die 
 | Adobe-Kundenattribute (CRS) | verwalten | K. A. | <ul><li>[Dokumentation zur DSGVO aufrufen/löschen](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>Kundenattribute können keine Daten übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
 | Adobe Experience Platform | verwalten | verwalten | <ul><li>[Zugriff/Löschung der Dokumentation für den Data Lake](../catalog/privacy.md)</li><li>[Dokumentation für Echtzeit-Kundenprofil aufrufen/löschen](../profile/privacy.md)</li><li>[!DNL Experience Platform] berücksichtigt  [Opt-out-Anfragen für Zielgruppensegmente](../segmentation/consents.md).</li></ul> |
 | Adobe Primetime-Authentifizierung | verwalten | K. A. | <ul><li>[Dokumentation aufrufen/löschen](http://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>[!DNL Primetime] verfügt nicht über die Möglichkeit, Daten zu übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
-| Adobe Target | verwalten | K. A. | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] verfügt nicht über die Möglichkeit, Daten zu übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
+| Adobe Target | verwalten | K. A. | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=de)</li><li>[!DNL Target] verfügt nicht über die Möglichkeit, Daten zu übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -46,9 +46,12 @@ Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud] -Anwendungen, die
 
 | Anwendung | Dokumentationsbeschreibung |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/DE/ACC_GDPR.html) | Eine Übersicht über die DSGVO-Funktionen für Adobe Campaign Classic. |
-| [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | Ein Überblick darüber, wie ein Datenschutzadministrator oder AEM Administrator DSGVO-Anfragen verarbeiten kann. |
+| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Eine Übersicht über die DSGVO-Funktionen für Adobe Campaign Classic. |
+| [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Ein Überblick darüber, wie ein Datenschutzadministrator oder AEM Administrator DSGVO-Anfragen verarbeiten kann. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Schritte zum Ausführen von DSGVO-Zugriffs- und -Löschanfragen mit Livefyre. |
-| [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | Anleitung für Entwickler zur Verwendung von Erweiterungen und Rule Builder zum Definieren von Opt-in- und Opt-out-Lösungen. |
+| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | Anleitung für Entwickler zur Verwendung von Erweiterungen und Rule Builder zum Definieren von Opt-in- und Opt-out-Lösungen. |
+| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Stellen Sie sicher, dass Ihre Magento Commerce-Installationen den Anforderungen der jeweiligen Datenschutzgesetze entsprechen. |
+| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Erfahren Sie, wie die Datenschutzbestimmungen für Marketo gelten. |
+| [Workfront](https://www.workfront.com/privacy-notice) | Erfahren Sie, wie Workfront personenbezogene Daten erfasst und wie ein Datensubjekt über ein Formular eine Datenschutzanfrage senden kann. |
 
 {style=&quot;table-layout:auto&quot;}
