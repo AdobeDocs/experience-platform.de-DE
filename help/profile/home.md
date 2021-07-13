@@ -5,9 +5,9 @@ topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1779'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -61,7 +61,7 @@ Bei der Kommunikation mit Kunden gilt es, diese in einer auf sie persönlich abg
 
 Um ein umfassendes Bild jedes Ihrer Kunden zu zeichnen, werden Daten aus verschiedenen Quellen zusammengeführt und kombiniert. Zusammenführungsrichtlinien stellen dabei die Regeln, nach denen [!DNL Platform] bestimmt, wie Daten priorisiert und welche Daten zur Erstellung dieser zentralen Sicht verwendet werden.
 
-Wenn Daten aus mehreren Datensätzen miteinander in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, wie diese Daten behandelt werden sollen und welcher Wert verwendet werden soll. Über RESTful-APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen.
+Wenn Daten aus mehreren Datensätzen miteinander in Konflikt stehen, bestimmt die Zusammenführungsrichtlinie, wie diese Daten behandelt werden und welcher Wert verwendet werden soll. Über die RESTful APIs oder die Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen einrichten.
 
 Um mehr über Zusammenführungsrichtlinien und ihre Rolle in der Experience Platform zu erfahren, lesen Sie zunächst die [Übersicht über Zusammenführungsrichtlinien](merge-policies/overview.md).
 
