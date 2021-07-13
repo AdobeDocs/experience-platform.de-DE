@@ -1,91 +1,92 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Segmentierungsdienst;Segmentierung;Segmentierung;Erstellen eines Datensatzes;Exportsegments für Audiencen;Exportsegment;
+keywords: Experience Platform; Startseite; beliebte Themen; Segmentierungsdienst; Segmentierung; Segmentierung; Datensatz erstellen; Zielgruppensegment exportieren; Segment exportieren
 solution: Experience Platform
-title: Erstellen eines Datensatzes zum Exportieren eines Segments für Audiencen
+title: Erstellen eines Datensatzes zum Exportieren eines Zielgruppensegments
 topic-legacy: tutorial
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments für Audiencen mithilfe der Benutzeroberfläche für Experience Platformen verwendet werden kann.
+description: Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Zielgruppensegments mithilfe der Experience Platform-Benutzeroberfläche verwendet werden kann.
 exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 44d7e11e79ed0e6041ff2e4438ddb7141ae3532d
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 23%
+source-wordcount: '714'
+ht-degree: 15%
 
 ---
 
-# Erstellen eines Datensatzes zum Exportieren eines Segments für eine Audience
+# Datensatz zum Exportieren eines Zielgruppensegments erstellen
 
-[!DNL Adobe Experience Platform] ermöglicht die einfache Segmentierung von Kundenattributen in Audiencen. Nachdem Segmente erstellt wurden, können Sie diese Audience in ein Dataset exportieren, in dem sie aufgerufen und bearbeitet werden kann. Damit der Export erfolgreich sein kann, muss der Datensatz ordnungsgemäß konfiguriert werden.
+[!DNL Adobe Experience Platform] ermöglicht die Segmentierung von Kundenprofilen in Zielgruppen basierend auf bestimmten Attributen. Nachdem ein Segment erstellt wurde, können Sie diese Zielgruppe in einen Datensatz exportieren, in dem darauf zugegriffen und darauf reagiert werden kann. Damit der Export erfolgreich ist, muss der Datensatz ordnungsgemäß konfiguriert werden.
 
-In diesem Lernprogramm werden die Schritte erläutert, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Segments mit der Audience [!DNL Experience Platform] verwendet werden kann.
+Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines Datensatzes erforderlich sind, der zum Exportieren eines Zielgruppensegments mithilfe der [!DNL Experience Platform] -Benutzeroberfläche verwendet werden kann.
 
-Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial für [Evaluierung und Zugriff auf Segmentergebnisse](./evaluate-a-segment.md) beschrieben werden. Das Evaluierungstraining für ein Segment enthält Schritte zum Erstellen eines Datensatzes mit der API [!DNL Catalog Service], während dieses Lernprogramm Schritte zum Erstellen eines Datensatzes mit der Oberfläche [!DNL Experience Platform] beschreibt.
+Dieses Tutorial steht in direktem Zusammenhang zu den Schritten, die im Tutorial zum [Auswerten und Zugreifen auf Segmentergebnisse](./evaluate-a-segment.md) beschrieben werden. Das Tutorial zur Segmentbewertung enthält Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Catalog Service]-API, während in diesem Tutorial Schritte zum Erstellen eines Datensatzes mithilfe der [!DNL Experience Platform]-Benutzeroberfläche beschrieben werden.
 
 ## Erste Schritte
 
-Um ein Segment zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile Union Schema] basieren. Ein Vereinigung-Schema ist ein vom System generiertes schreibgeschütztes Schema, das die Felder aller Schema, die dieselbe Klasse teilen, in diesem Fall die [!DNL XDM Individual Profile]-Klasse, Aggregat. Weitere Informationen zu Schemas der Vereinigung Ansicht finden Sie im Abschnitt [Kundenkonto in Echtzeit im Schema Registry Developer Guide](../../xdm/schema/composition.md#union).
+Um ein Segment zu exportieren, muss der Datensatz auf dem [!DNL XDM Individual Profile Union Schema] basieren. Ein Vereinigungsschema ist ein systemgeneriertes, schreibgeschütztes Schema, das die Felder aller Schemas aggregiert, die dieselbe Klasse aufweisen. Weiterführende Informationen zu Vereinigungsschemata finden Sie im Handbuch [Grundlagen der Schemakomposition](../../xdm/schema/composition.md#union).
 
-Klicken Sie zur Ansicht der Schemas in der Benutzeroberfläche auf **[!UICONTROL Profil]** in der linken Navigation und dann auf die Registerkarte **[!UICONTROL Vereinigung Schema]**, wie unten dargestellt.
+Um Vereinigungsschemas in der Benutzeroberfläche anzuzeigen, wählen Sie **[!UICONTROL Profile]** im linken Navigationsbereich und dann **[!UICONTROL Vereinigungsschema]** wie unten dargestellt aus.
 
-![Registerkarte &quot;Vereinigung Schema&quot;in der Benutzeroberfläche der Experience Platform](../images/tutorials/segment-export-dataset/union-schema-ui.png)
+![Registerkarte &quot;Vereinigungsschema&quot;in der Experience Platform-Benutzeroberfläche](../images/tutorials/segment-export-dataset/union.png)
 
 
 ## Arbeitsbereich „Datensätze“
 
-Der Arbeitsbereich &quot;Datensätze&quot;in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung aller von Ihrem IMS-Unternehmen erstellten Datensätze sowie die Erstellung neuer Datensätze.
+Im Arbeitsbereich [!UICONTROL Datensätze] können Sie alle Datensätze für Ihr Unternehmen anzeigen und verwalten.
 
-Klicken Sie zur Ansicht des Datensatzarbeitsbereichs in der linken Navigation auf **[!UICONTROL Datensätze]** und dann auf die Registerkarte **[!UICONTROL Durchsuchen]**. Der Arbeitsbereich &quot;Datensätze&quot;enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, dem Erstellungsdatum (Datum und Uhrzeit), der Quelle, dem Schema und dem Status des letzten Stapels sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes. Je nach Breite der einzelnen Spalten müssen Sie ggf. nach links oder rechts blättern, um alle Spalten anzuzeigen.
+Wählen Sie **[!UICONTROL Datensätze]** im linken Navigationsbereich aus, um auf den Arbeitsbereich zuzugreifen, und wählen Sie dann **[!UICONTROL Durchsuchen]** aus. Auf dieser Registerkarte wird eine Liste der Datensätze und deren Details angezeigt. Je nach Breite der einzelnen Spalten müssen Sie ggf. nach links oder rechts scrollen, um alle Spalten anzuzeigen.
 
 >[!NOTE]
 >
->Klicken Sie auf das Filtersymbol neben der Suchleiste, um Filterfunktionen zu verwenden, um nur die für [!DNL Real-time Customer Profile] aktivierten Datensätze Ansicht.
+>Wählen Sie das Filtersymbol neben der Suchleiste aus, um Filterfunktionen zu verwenden und nur die Datensätze anzuzeigen, die für [!DNL Real-time Customer Profile] aktiviert sind.
 
-![Alle Datensätze anzeigen](../images/tutorials/segment-export-dataset/datasets-workspace.png)
+![Anzeigen von Datensätzen](../images/tutorials/segment-export-dataset/browse.png)
 
 ## Erstellen eines Datensatzes
 
-Um einen Datensatz zu erstellen, klicken Sie in der oberen rechten Ecke des Arbeitsbereichs „Datensätze“ auf **[!UICONTROL Datensatz erstellen]**.****
+Um einen Datensatz zu erstellen, wählen Sie **[!UICONTROL Datensatz erstellen]** aus.
 
-![Klicken Sie auf Datensatz erstellen](../images/tutorials/segment-export-dataset/dataset-click-create.png)
+![Datensatz erstellen auswählen](../images/tutorials/segment-export-dataset/create-dataset.png)
 
-Klicken Sie im Bildschirm **[!UICONTROL Datensatz erstellen]** auf **[!UICONTROL Datensatz aus Schema]** erstellen, um fortzufahren.
+Wählen Sie im nächsten Bildschirm **[!UICONTROL Datensatz aus Schema]** erstellen aus.
 
-![Datenquelle auswählen](../images/tutorials/segment-export-dataset/create-dataset.png)
+![Datenquelle auswählen](../images/tutorials/segment-export-dataset/create-from-schema.png)
 
-## XDM Individuelles Profil Vereinigung Schema auswählen
+## XDM Individual Profile Union Schema auswählen
 
-Um [!DNL XDM Individual Profile Union Schema] zur Verwendung in Ihrem Datensatz auszuwählen, suchen Sie im Bildschirm **[!UICONTROL Schema auswählen]** das Schema &quot;[!UICONTROL XDM Individuelles Profil]&quot;mit dem Typ &quot;[!UICONTROL Vereinigung]&quot;.
+Um das [!DNL XDM Individual Profile Union Schema] zur Verwendung in Ihrem Datensatz auszuwählen, suchen Sie das Schema &quot;[!UICONTROL XDM Individual Profile]&quot;auf dem Bildschirm **[!UICONTROL Schema]** auswählen. Nachdem Sie das Schema ausgewählt haben, können Sie in der rechten Leiste unter **[!UICONTROL API-Nutzung]** bestätigen, ob es sich um das Vereinigungsschema handelt. Wenn der Pfad [!UICONTROL Schema] mit `_union` endet, handelt es sich um ein Vereinigungsschema.
 
-Markieren Sie das Optionsfeld neben **[!UICONTROL XDM Individuelles Profil]** und klicken Sie dann in der oberen rechten Ecke auf **[!UICONTROL Weiter]**.
+>[!NOTE]
+>
+>Obwohl Vereinigungsschemas per Definition am Echtzeit-Kundenprofil teilnehmen, werden sie als &quot;Nicht aktiviert&quot;aufgeführt, da sie nicht wie herkömmliche Schemas für Profil aktiviert sind.
+
+Wählen Sie das Optionsfeld neben **[!UICONTROL XDM Individual Profile]** und wählen Sie dann **[!UICONTROL Weiter]** aus.
 
 ![Schema auswählen](../images/tutorials/segment-export-dataset/select-schema.png)
 
 ## Datensatz konfigurieren
 
-Im Bildschirm **[!UICONTROL Datensatz konfigurieren]** müssen Sie dem Datensatz einen Namen geben und möglicherweise auch eine Beschreibung des Datensatzes angeben.
+Im nächsten Bildschirm müssen Sie Ihrem Datensatz einen Namen geben. Sie können auch eine optionale Beschreibung hinzufügen.
 
 **Hinweise zu Datensatznamen:**
-- Datensatznamen sollten kurz und beschreibend sein, damit sich der Datensatz in der Bibliothek später leicht finden lässt.
-- Datensatznamen müssen eindeutig sein, d. h. sie müssen spezifisch genug sein, damit sie in Zukunft nicht wiederverwendet werden.
-- Es empfiehlt sich, mithilfe des Beschreibungsfelds zusätzliche Informationen zum Datensatz anzugeben, um anderen Benutzern in Zukunft dabei zu helfen, zwischen Datensätzen zu unterscheiden.
+* Datensatznamen sollten kurz und beschreibend sein, damit sich der Datensatz in der Bibliothek später leicht finden lässt.
+* Datensatznamen müssen eindeutig sein, d. h. sie sollten so spezifisch sein, dass sie in Zukunft nicht wiederverwendet werden.
+* Es empfiehlt sich, mithilfe des Beschreibungsfelds zusätzliche Informationen zum Datensatz anzugeben, um anderen Benutzern in Zukunft dabei zu helfen, zwischen Datensätzen zu unterscheiden.
 
-Sobald der Datensatz einen Namen und eine Beschreibung aufweist, klicken Sie auf **[!UICONTROL Fertig stellen]**.
+Sobald der Datensatz einen Namen und eine Beschreibung aufweist, wählen Sie **[!UICONTROL Finish]** aus.
 
 ![Datensatz konfigurieren](../images/tutorials/segment-export-dataset/configure-dataset.png)
 
 ## Datensatzaktivität
 
-Es wurde nun ein leerer Datensatz erstellt und Sie befinden sich wieder auf der Registerkarte **[!UICONTROL Datensatzaktivität]** im Arbeitsbereich „Datensätze“.**** Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
+Nachdem der Datensatz erstellt wurde, erhalten Sie die Aktivitätsseite für diesen Datensatz. Sie sollten oben links im Arbeitsbereich den Namen des Datensatzes sowie eine Benachrichtigung sehen, die Ihnen mitteilt, dass keine Batches hinzugefügt wurden. Das ist zu erwarten, da Sie dem Datensatz noch keine Batches hinzugefügt haben.
 
-Auf der rechten Seite des Datensatzarbeitsbereichs sehen Sie die Registerkarte **[!UICONTROL Info]** mit Informationen zu Ihrem neuen Datensatz, wie z. B. Dataset-ID, Name, Beschreibung, Tabellenname, Schema, Streaming und Quelle. Die Registerkarte **[!UICONTROL Info]** enthält auch Informationen zum Zeitpunkt der Erstellung und zum Datum der letzten Änderung des Datensatzes.
+Die rechte Leiste enthält Informationen zu Ihrem neuen Datensatz, wie z. B. Datensatz-ID, Name, Beschreibung, Schema und mehr. Beachten Sie die **[!UICONTROL Datensatz-ID]**, da dieser Wert erforderlich ist, um den Export-Workflow für Zielgruppensegmente abzuschließen.
 
-Bitte beachten Sie die **[!UICONTROL Datenbestand-ID]**, da dieser Wert erforderlich ist, um den Exportarbeitsablauf für Audiencen-Segmente abzuschließen.
-
-![Datensatzaktivität](../images/tutorials/segment-export-dataset/dataset-activity.png)
+![Datensatzaktivität](../images/tutorials/segment-export-dataset/activity.png)
 
 ## Nächste Schritte
 
-Nachdem Sie nun einen Datensatz auf Basis von [!DNL XDM Individual Profile Union Schema] erstellt haben, können Sie die Dataset-ID verwenden, um mit dem Lehrgang [Bewertung und Zugriff auf Segmentergebnisse](./evaluate-a-segment.md) fortzufahren.
+Nachdem Sie nun einen Datensatz basierend auf [!DNL XDM Individual Profile Union Schema] erstellt haben, können Sie die Datensatz-ID verwenden, um das Tutorial [Auswerten und Aufrufen von Segmentergebnissen](./evaluate-a-segment.md) fortzusetzen.
 
-Kehren Sie zu diesem Zeitpunkt zum Tutorial zu den ausgewerteten Segmentergebnissen zurück und nehmen Sie die Informationen im Schritt [Generieren von Profilen für Audiencen](./evaluate-a-segment.md#generate-profiles) des Exportierens eines Segmentarbeitsablaufs entgegen.
+Kehren Sie zu diesem Zeitpunkt zum Tutorial zum Bewerten der Segmentergebnisse zurück und wählen Sie den Schritt [Generieren von Profilen für Zielgruppenmitglieder](./evaluate-a-segment.md#generate-profiles) des Segmentexports aus.
