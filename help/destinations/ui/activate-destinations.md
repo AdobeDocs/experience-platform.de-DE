@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 73a8d65255359de6cff6a9410310554ca419fe1c
+source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
 workflow-type: tm+mt
-source-wordcount: '2806'
+source-wordcount: '2928'
 ht-degree: 12%
 
 ---
@@ -152,6 +152,9 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, damit Ihre e
 3. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
 4. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
 
+>[!IMPORTANT]
+>
+>Wenn Sie den Zeitplan für den Dateiexport von einer beliebigen Zeitplankonfiguration zum vollständigen Dateiexport ändern, wobei **[!UICONTROL Häufigkeit]** für Segmente, die bereits exportiert wurden, auf **[!UICONTROL Einmal]** gesetzt ist, wird keine neue Aufstockungsdatei exportiert. Um eine neue Aufstockungsdatei mit einem anderen Zeitplan zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 ### Inkrementelle Dateien exportieren {#export-incremental-files}
 
@@ -178,6 +181,10 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]** aus, damit Ihre e
 
 3. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
 4. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
+
+>[!IMPORTANT]
+>
+>Wenn Sie den Zeitplan für den Dateiexport von einer beliebigen Zeitplankonfiguration zum vollständigen Dateiexport ändern, wobei **[!UICONTROL Häufigkeit]** für Segmente, die bereits exportiert wurden, auf **[!UICONTROL Einmal]** gesetzt ist, wird keine neue Aufstockungsdatei exportiert. Um eine neue Aufstockungsdatei mit einem anderen Zeitplan zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 ### Dateinamen konfigurieren {#file-names}
 
