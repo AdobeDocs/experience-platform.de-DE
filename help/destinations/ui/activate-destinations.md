@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: a451e462ac38d157335568310e26cf6375699c6b
+source-git-commit: 4ad261c4ca5878f7ef5abb2c2957b5714cf3101a
 workflow-type: tm+mt
-source-wordcount: '2928'
+source-wordcount: '2888'
 ht-degree: 12%
 
 ---
@@ -154,7 +154,7 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, damit Ihre e
 
 >[!IMPORTANT]
 >
->Wenn Sie den Zeitplan für den Dateiexport von einer beliebigen Zeitplankonfiguration zum vollständigen Dateiexport ändern, wobei **[!UICONTROL Häufigkeit]** für Segmente, die bereits exportiert wurden, auf **[!UICONTROL Einmal]** gesetzt ist, wird keine neue Aufstockungsdatei exportiert. Um eine neue Aufstockungsdatei mit einem anderen Zeitplan zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+>Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits exportiert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 ### Inkrementelle Dateien exportieren {#export-incremental-files}
 
@@ -184,7 +184,7 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]** aus, damit Ihre e
 
 >[!IMPORTANT]
 >
->Wenn Sie den Zeitplan für den Dateiexport von einer beliebigen Zeitplankonfiguration zum vollständigen Dateiexport ändern, wobei **[!UICONTROL Häufigkeit]** für Segmente, die bereits exportiert wurden, auf **[!UICONTROL Einmal]** gesetzt ist, wird keine neue Aufstockungsdatei exportiert. Um eine neue Aufstockungsdatei mit einem anderen Zeitplan zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+>Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits exportiert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 ### Dateinamen konfigurieren {#file-names}
 
