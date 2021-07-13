@@ -7,145 +7,145 @@ description: Erfahren Sie mehr über die benutzerdefinierten Barrierefreiheitsl�
 source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
 workflow-type: tm+mt
 source-wordcount: '1531'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Benutzerdefinierte Barrierefreiheitslösungen für Experience Platformen
+# Benutzerdefinierte Barrierefreiheitslösungen für Experience Platform
 
-Adobe Experience Platform wird kontinuierlich verbessert, um den Anforderungen aller Benutzertypen gerecht zu werden und den weltweiten Standards zu entsprechen, zu denen auch Personen mit Sehbehinderungen, Hörgeschäften, Mobilitäten oder anderen Beeinträchtigungen gehören. In diesem Dokument werden benutzerdefinierte Barrierefreiheitslösungen in der Benutzeroberfläche von Experience Platform beschrieben.
+Adobe Experience Platform wird kontinuierlich verbessert, um die Bedürfnisse aller Arten von Benutzern zu erfüllen und die weltweiten Standards einzuhalten, die Einzelanwender mit visuellen, auditiven, Mobilitäts- oder anderen Beeinträchtigungen einschließen. In diesem Dokument werden benutzerdefinierte Barrierefreiheitslösungen innerhalb der Benutzeroberfläche von Experience Platform beschrieben.
 
 ## Übersicht über Startseite und Benutzeroberfläche
 
-Die Benutzeroberfläche der Experience Platform erfüllt die erforderlichen Kontrastverhältnisse für Standardtext-, Grafik- und Benutzeroberflächenkomponenten. Die Farben der Benutzeroberfläche wurden ebenfalls ausgewählt, um die Barrierefreiheit für alle Benutzer zu unterstützen, auch für Benutzer mit visuellen Behinderungen.
+Die Benutzeroberfläche von Experience Platform erfüllt die erforderlichen Kontrastverhältnisse für Standardtext, Grafiken und Benutzeroberflächenkomponenten. Die Farben der Benutzeroberfläche wurden ebenfalls so ausgewählt, dass sie die Barrierefreiheit für alle Benutzer unterstützen, auch für Benutzer mit visuellen Beeinträchtigungen.
 
-In Platform können Benutzeroberflächen-Elemente, die mit einem Zeiger angeklickt oder bearbeitet werden können, auch über eine Tastatur interagiert werden. Dazu gehören die linke Navigation, Videoplayer, Tabellen und mehr.
+Auf viele Elemente der Benutzeroberfläche von Platform, die mit dem Mauszeiger angeklickt oder bearbeitet werden können, kann auch mit der Tastatur zugegriffen werden. Dazu gehören die linke Navigation, Video-Player, Tabellen und mehr.
 
-Experience Platform strebt die Einhaltung internationaler Barrierefreiheitsstandards an, einschließlich der Web Content Accessibility Guidelines 2.1 Level A und Level AA sowie der Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) Web Standards.
+Experience Platform strebt die Einhaltung internationaler Barrierefreiheitsstandards an, einschließlich der Web Content Accessibility Guidelines 2.1 Level A und Level AA sowie der Web-Standards der Web Accessibility Initiative – Accessible Rich Internet Applications (WAI-ARIA).
 
 ![Die Startseite der Adobe Experience Platform-Benutzeroberfläche.](images/homepage.png)
 
 ## Linke Navigation
 
-Die linke Navigation in der Experience Platform-Benutzeroberfläche ist über die Tastatur zugänglich und bietet Farbkontrast in normalen, Hover- und Auswahlstatus, die den Barrierefreiheitsstandards entsprechen.
+Die linke Navigation in der Experience Platform-Benutzeroberfläche ist über die Tastatur zugänglich und bietet im normalen, Hover- und Auswahlstatus Farbkontraste, die den Barrierefreiheitsstandards entsprechen.
 
-Auf dem Startbildschirm können Benutzer die Tabulatortaste zur linken Navigation drücken. Wenn Sie **Umschalt + Tab** auswählen, wird der Benutzer zum Startbildschirm zurückgeleitet.
+Vom Startbildschirm aus können Benutzer durch die Tabulatortaste die linke Navigation erreichen. Durch Auswählen von **Umschalt- + Tabulatortaste** wird der Benutzer zum Startbildschirm zurückgeleitet.
 
-![Die Experience Platform verließ die Navigation.](images/left-navigation-select.png)
+![Die linke Navigation.von Experience Platform.](images/left-navigation-select.png)
 
-Da die linke Navigation im Fokus ist, bringt **Tab** Benutzer zur Interaktion &quot;Erweitern und Reduzieren&quot;. Die Möglichkeit zum Erweitern oder Reduzieren der linken Navigation wird mit **Eingabetaste (Return)** aktiviert.
+Wenn die linke Navigation im Fokus ist, bringt die **Tabulatortaste** den Benutzer zur Interaktion mit Erweitern und Reduzieren. Die Möglichkeit zum Erweitern oder Reduzieren der linken Navigation wird mit der **Eingabetaste** aktiviert.
 
-![Die Navigation links in der Experience Platform wurde reduziert.](images/left-navigation-collapse.png)
+![Die linke Navigation von Experience Platform in reduziertem Zustand.](images/left-navigation-collapse.png)
 
-Wenn die linke Navigation im Fokus ist, navigieren die Nach-oben- und Nach-unten-Pfeiltasten zu jedem Element in der Navigation und der Zyklus kontinuierlich (d. h. der Fokus wechselt nicht weg, bis der Benutzer die linke Navigation mit der Tabulatortaste verlässt). Der Fokus wird für Navigationselemente angezeigt, wenn diese ausgewählt sind. Die aktuelle Auswahl wird mit einem hervorgehobenen und fett hervorgehobenen Text angezeigt. Bei Auswahl eines linken Navigationselements öffnet **Enter (Return)** das ausgewählte UI-Element im rechten Bereich. Der Fokus bleibt jedoch im linken Navigationsbereich, bis der Benutzer die Tabulatortaste loslässt.
+Wenn der linke Navigationsbereich im Fokus ist, erlauben es die Pfeiltasten nach oben und unten, zu jedem Element in dem Navigationsbereich zu navigieren, wobei ein kontinuierlicher Zyklus durchlaufen wird (mit anderen Worten, der Fokus ändert sich erst, wenn der Benutzer den linken Navigationsbereich verlässt). Der Fokus wird für Navigationselemente angezeigt, wenn diese ausgewählt sind. Die aktuelle Auswahl wird mit hervorgehobenen Text im Fettdruck angezeigt. Bei Auswahl eines Elements des linken Navigationsbereichs wird durch Drücken der **Eingabetaste** das ausgewählte UI-Element im rechten Bereich geöffnet. Der Fokus bleibt jedoch im linken Navigationsbereich, bis der Benutzer mit der Tabulatortaste davon weg navigiert.
 
-![Die Experience Platform hat die Navigation mit den ausgewählten Quellen verlassen.](images/left-navigation-sources.png)
+![Der linke Navigationsbereich von Experience Platform mit ausgewählten Quellen.](images/left-navigation-sources.png)
 
-Einige Funktionen in Platform sind nicht für alle Benutzer aktiviert. Diese Elemente werden in der Navigation angezeigt, können jedoch nicht ausgewählt werden. Beim Navigieren mit einer Tastatur werden diese Elemente während der Pfeilnavigation übersprungen und können nicht mit **Eingabetaste (Return)** ausgewählt werden.
+Einige Funktionen in Platform sind nicht für alle Benutzer aktiviert. Diese Elemente werden in der Navigation angezeigt, können jedoch nicht ausgewählt werden. Beim Navigieren mit der Tastatur werden diese Elemente während der Pfeiltasten-Navigation übersprungen und können nicht mit der **Eingabetaste** ausgewählt werden.
 
-![Abschnitte der linken Navigationsleiste der Experience Platform, die für den Benutzer nicht aktiviert sind, können nicht ausgewählt werden.](images/left-navigation-sections-disabled.png)
+![Abschnitte des linken Navigationsbereichs von Experience Platform, die für den Benutzer nicht aktiviert sind, können nicht ausgewählt werden.](images/left-navigation-sections-disabled.png)
 
-## Dialogfeld &quot;Eingebettetes Video&quot;
+## Dialogfeld „Eingebettetes Video“
 
-Videos können in Experience Platform über die Tastaturnavigation angezeigt werden, um einen verfügbaren Videolink hervorzuheben und auszuwählen. Dadurch wird ein eingebettetes Videodialogfeld in der Platform-Benutzeroberfläche geöffnet.
+Videos können in Experience Platform über die Tastaturnavigation angezeigt werden, indem ein verfügbarer Video-Link hervorgehoben und ausgewählt wird. Dadurch wird ein eingebettetes Videodialogfeld in der Platform-Benutzeroberfläche geöffnet.
 
-![Ein blauer Rahmen, der um ein ausgewähltes Element herum angezeigt wird und angibt, dass der Fokus angewendet wird.](images/profile-overview-tab.png)
+![Ein blauer Rahmen wird um ein ausgewähltes Element herum angezeigt, um anzugeben, dass es sich im Fokus befindet.](images/profile-overview-tab.png)
 
-## Tastaturzugriff für das Video-Dialogfeld
+## Tastaturzugriff für das Videodialogfeld
 
-Das eingebettete Videodialogfeld kann auch über die Tastatur navigiert werden. In der folgenden Tabelle wird die vollständige Tastaturnavigation beschrieben, die für das eingebettete Videodialogfeld verfügbar ist.
+Die Navigation im eingebetteten Videodialogfeld ist auch über die Tastatur möglich. In der folgenden Tabelle wird die vollständige Tastaturnavigation beschrieben, die für das eingebettete Videodialogfeld verfügbar ist.
 
 | Dialogelement | Tastaturzugriff | Beschreibung |
 |---|---|---|
-| Wiedergabe und Pause | Tab<br/>Leertaste | Verwenden Sie **Tab**, um den Fokus auf die Wiedergabeschaltfläche zu legen. **** Leertaste beginnt mit der Videowiedergabe und setzt die Videowiedergabe an. |
-| Scrubber | Tab<br/>Linkspfeil<br/>Rechtspfeil | Wenn das Video wiedergegeben wird, verwenden Sie **Tab**, um den Scrubber zu fokussieren. Wenn der Scrubber im Fokus ist, überspringen die **Nach-links- und Nach-rechts-Pfeiltasten** die Videowiedergabe 5 Sekunden lang voraus bzw. zurück. |
-| Stummschaltung | Tab<br/>Leertaste | Verwenden Sie **Tab**, um das Lautstärkepegel zu fokussieren. Verwenden Sie **Leertaste**, um die Videowiedergabe zu stummschalten oder zu deaktivieren. |
-| Volumen | Tab<br/>Linkspfeil<br/>Rechtspfeil | Verwenden Sie **Tab**, um sich auf das Lautstärkepegel zu konzentrieren. **Nach-links- bzw. Nach-rechts-** Taste wird die Lautstärke nach oben bzw. unten verschoben. |
-| [!UICONTROL Geschlossene Untertitel]  (&quot;cc&quot;) | Tab<br/>Enter<br/>Nach-oben-Pfeil<br/>Nach-unten-Pfeil | **** Element &quot; [!UICONTROL Geschlossene Untertitel] &quot;(&quot;cc&quot;). Verwenden Sie **Enter**, um das Menü zu öffnen, und **Nach-oben- und Nach-unten-Pfeiltasten**, um eine Sprache für Beschriftungen auszuwählen. **** Bestätigen Sie Ihre Auswahl. |
-| [!UICONTROL Qualität] | Tab<br/>Enter<br/>Nach-oben-Pfeil<br/>Nach-unten-Pfeil | Verwenden Sie **Tab**, um das Element [!UICONTROL Qualität] zu fokussieren. Verwenden Sie **Enter**, um das Menü zu öffnen, und die **Nach-oben- und Nach-unten-Pfeiltasten**, um die Videoqualität auszuwählen. **** Bestätigen Sie Ihre Auswahl. |
-| Vollbild | Registerkarte<br/>Leertaste oder Eingabetaste<br/>Escape | Verwenden Sie **Tab**, um das Vollbildelement zu fokussieren. Verwenden Sie **Leertaste oder Enter**, um die Vollbildansicht zu aktivieren. **Escape** (&quot;esc&quot;) beendet den Vollbildmodus. |
-| Schließen | Registerkarte<br/>Leertaste oder Eingabetaste | Verwenden Sie **Tab**, um die Schließen-Schaltfläche zu fokussieren. Verwenden Sie die **Leertaste oder die Eingabetaste**-Taste, um das Videodialogfeld zu verlassen. |
+| Wiedergabe und Pause | Tabulatortaste<br/>Leertaste | Verwenden Sie die **Tabulatortaste**, um den Fokus auf die Wiedergabeschaltfläche zu legen. Durch Drücken der **Leertaste** beginnt die Videowiedergabe oder sie wird pausiert. |
+| Scrubber | Tabulatortaste<br/>Nach links<br/>Nach rechts | Während das Video wiedergegeben wird, verwenden Sie die **Tabulatortaste**, um den Scrubber zu fokussieren. Wenn der Scrubber im Fokus ist, springt durch Drücken der Tasten **Nach links oder Nach rechts** die Videowiedergabe um 5 Sekunden vorwärts bzw. zurück. |
+| Stummschaltung | Tabulatortaste<br/>Leertaste | Verwenden Sie die **Tabulatortaste**, um den Fokus auf das Element „Stummschaltung“ zu setzen. Verwenden Sie die **Leertaste**, um die Stummschaltung für die Videowiedergabe zu aktivieren oder zu deaktivieren. |
+| Volumen | Tabulatortaste<br/>Nach links<br/>Nach rechts | Verwenden Sie die **Tabulatortaste**, um den Lautstärkepegel zu steuern. Mit den Tasten **Nach links bzw. Nach rechts** wird die Lautstärke erhöht bzw. verringert. |
+| [!UICONTROL Untertitel] | Tabulatortaste<br/>Eingabetaste<br/>Nach oben<br/>Nach unten | **Tabulatortaste** zu [!UICONTROL Untertiteln]. Verwenden Sie die **Eingabetaste**, um das Menü zu öffnen, und die Tasten **Nach oben und Nach unten**, um eine Sprache für Untertitel auszuwählen. Bestätigen Sie Ihre Auswahl mit der **Eingabetaste**. |
+| [!UICONTROL Qualität] | Tabulatortaste<br/>Eingabetaste<br/>Nach oben<br/>Nach unten | Verwenden Sie die **Tabulatortaste**, um das Element [!UICONTROL Qualität] in den Fokus zu bringen. Verwenden Sie die **Eingabetaste**, um das Menü zu öffnen, und die Tasten **Nach oben bzw. Nach unten**, um die Videoqualität auszuwählen. Bestätigen Sie Ihre Auswahl mit der **Eingabetaste**. |
+| Vollbild | Tabulatortaste<br/>Leertaste oder Eingabetaste<br/>Esc | Verwenden Sie die **Tabulatortaste**, um das Vollbildelement zu fokussieren. Verwenden Sie die **Leertaste oder Eingabetaste**, um die Vollbildansicht zu aktivieren. **Esc** beendet den Vollbildmodus. |
+| Schließen | Tabulatortaste<br/>Leertaste oder Eingabetaste | Verwenden Sie die **Tabulatortaste**, um die Schaltfläche „Schließen“ in den Fokus zu bringen. Verwenden Sie die **Leertaste oder Eingabetaste**, um das Videodialogfeld zu verlassen. |
 
 >[!NOTE]
 >
->Während der Wiedergabe kann jederzeit der Esc-Schlüssel (&quot;esc&quot;) verwendet werden, um das eingebettete Videodialogfeld zu schließen.
+>Während der Wiedergabe können Sie jederzeit die Esc-Taste verwenden, um das eingebettete Videodialogfeld zu schließen.
 
 ![Das eingebettete Videodialogfeld mit Zahlen zur Identifizierung von Tastaturnavigationselementen.](images/video-dialog.png)
 
-## Drag &amp; Drop von Dateien
+## Drag-and-Drop von Dateien
 
-In Experience Platform können Sie über die Tastatur auf alle Drag &amp; Drop-Bereiche der Dateiauswahl zugreifen. Wenn Sie **Tab** verwenden, um **[!UICONTROL Dateien auswählen]** hervorzuheben, und **Enter oder Leertaste** verwenden, wird die Dateiauswahloberfläche des Betriebssystems aufgerufen.
+In Experience Platform können Sie über die Tastatur auf alle Drag-and-Drop-Bereiche der Dateiauswahl zugreifen. Wenn Sie die **Tabulatortaste** verwenden, um **[!UICONTROL Dateien auswählen]** zu markieren, und diese Option über die **Eingabetaste oder Leertaste** auswählen, wird die Dateiauswahloberfläche des Betriebssystems aufgerufen.
 
-Nachdem eine Datei hochgeladen wurde, kann über ein Löschsymbol über die Tastatur navigiert werden, um die ausgewählte Datei zu entfernen und eine neue hochzuladen. Benutzer können **Tab** verwenden, um sich auf das Löschsymbol zu konzentrieren, und **Eingabetaste oder Leertaste**, um es auszuwählen. Nachdem die Datei entfernt wurde, ist **[!UICONTROL Dateien auswählen]** automatisch im Fokus und kann ausgewählt werden.
+Nachdem eine Datei hochgeladen wurde, können Sie über die Tastatur zum Symbol „Löschen“ navigieren, um die ausgewählte Datei zu entfernen und eine neue hochzuladen. Benutzer können über die **Tabulatortaste** zum Symbol „Löschen“ navigieren und diese Option über die **Eingabetaste oder Leertaste** auswählen. Nachdem die Datei entfernt wurde, ist die Option **[!UICONTROL Dateien auswählen]** automatisch im Fokus und kann ausgewählt werden.
 
 Wenn die hochgeladene Datei nicht das richtige Format aufweist, wird ein Fehlersymbol mit einer Fehlermeldung angezeigt und die Schaltfläche **[!UICONTROL Dateien auswählen]** ist im Fokus und kann ausgewählt werden.
 
-![Eine Drag &amp; Drop-Zone für Dateien mit einer Fehlermeldung und der Schaltfläche Dateien auswählen im Fokus.](images/drag-and-drop.png)
+![Ein Drag-and-Drop-Bereich für Dateien mit einer Fehlermeldung und Fokus auf der Schaltfläche „Dateien auswählen“.](images/drag-and-drop.png)
 
-Wenn Sie die Drag &amp; Drop-Zone mit der Maus auswählen, wird auch die Benutzeroberfläche für die Dateiauswahl aufgerufen. Alternativ kann ein Mausbenutzer eine Datei auswählen und auf den Bereich ziehen, um mit dem Upload zu beginnen.
+Wenn Sie den Drag-and-Drop-Bereich mit der Maus auswählen, wird auch die Benutzeroberfläche für die Dateiauswahl aufgerufen. Alternativ kann ein Mausbenutzer eine Datei auswählen und auf den Bereich ziehen, um mit dem Upload zu beginnen.
 
-![Ein DateiDrag-and-Drop-Bereich im Fokus, während ein Mausbenutzer eine Datei in den Bereich zieht.](images/drag-and-drop-mouse-over.png)
+![Ein Drag-and-Drop-Bereich für Dateien im Fokus, während ein Mausbenutzer eine Datei in den Bereich zieht.](images/drag-and-drop-mouse-over.png)
 
-## Tabellendurchsuchen
+## Durchsuchen von Tabellen
 
 Auf alle Tabellen in der Experience Platform-Benutzeroberfläche kann über die Tastatur zugegriffen werden. Das Durchsuchen und Interagieren mit Tabellenzeilen und -spalten ist über eine Reihe von Tastaturbefehlen möglich:
 
-* Verwenden Sie in der Tabellenüberschrift den **Abwärtspfeil**, um die Tabelle zu durchsuchen. Tabellenüberschriften können beim Navigieren über **Tab** ausgewählt werden. Außerdem können Sie die Sortierreihenfolge mit **Leertaste** ändern.
-* **Nach-oben- und Nach-unten-** Tasten werden durch die Zeilen in der Tabelle nach oben und unten gerodet.
-* Wenn eine Zeile ausgewählt oder im Fokus ist, werden mit **Enter** in der Zeile Details in der rechten Leiste bereitgestellt.
-* Wenn eine Zeile ausgewählt oder im Fokus ist, verwenden Sie **Pfeiltasten**, um durch jedes Element in der Zeile zu navigieren.
-* Verwenden Sie **Enter**, um ein Element in der Zeile auszuwählen. Benutzer mit Bildschirmlesehilfen werden benachrichtigt, wenn ein neues Fenster geöffnet werden muss.
+* Verwenden Sie in der Tabellenüberschrift die Taste **Nach unten**, um die Tabelle zu durchsuchen. Tabellenüberschriften können beim Navigieren über die **Tabulatortaste** ausgewählt werden. Außerdem können Sie die Sortierreihenfolge mit der **Leertaste** ändern.
+* Mit den Tasten **Nach oben und Nach unten** können Sie nach oben und unten durch die Zeilen navigieren.
+* Wenn eine Zeile ausgewählt oder im Fokus ist, können Sie über die **Eingabetaste** in der Zeile Details in der rechten Leiste aufrufen.
+* Wenn eine Zeile ausgewählt oder im Fokus ist, verwenden Sie die **Pfeiltasten**, um durch sämtliche Elemente in der Zeile zu navigieren.
+* Verwenden Sie die **Eingabetaste**, um ein Element in der Zeile auszuwählen. Benutzer mit Bildschirmlesehilfen werden benachrichtigt, wenn ein neues Fenster geöffnet werden muss.
 
-### Barrierefreiheit der Tabelle durchsuchen
+### Barrierefreiheit beim Durchsuchen von Tabellen
 
 | Tastaturzugriff | Beschreibung |
 |---|---|
-| HOME (Funktion + Linkspfeil) | Führt Benutzer beim Fokussieren der Zeile zum ersten Element in der Zeile |
-| END (Funktion + Pfeil nach rechts) | Wenn die Zeile zentriert ist, gelangen Benutzer zum letzten Element in der Zeile |
-| Seite nach oben | Durchsucht zehn Zeilen in der Tabelle (pro Seite) |
-| Seite nach unten | Durchläuft 10 Zeilen in der Tabelle (pro Seite) |
-| Steuerung + HOME | Wechselt zur ersten Zeile in der Tabelle |
-| Steuerung + Ende | Wechselt in Tabelle pro Seite zur ersten Arbeit |
+| Pos1 (Funktion + Nach links) | Führt den Benutzer, wenn die Zeile den Fokus hat, zum ersten Element in der Zeile |
+| Ende (Funktion + Nach rechts) | Führt den Benutzer, wenn die Zeile den Fokus hat, zum letzten Element in der Zeile |
+| Bild auf | Geht in der Tabelle zehn Zeilen nach oben (pro Seite) |
+| Bild ab | Geht in der Tabelle zehn Zeilen nach unten (pro Seite) |
+| Strg+Pos1 | Wechselt zur ersten Zeile in der Tabelle |
+| Strg+Ende | Wechselt in der Tabelle zum ersten Wort pro Seite |
 
-## Benutzeroberfläche des Schema Editors
+## Benutzeroberfläche des Schema-Editors
 
 Die Benutzeroberfläche des Schema-Editors wird durch die folgenden Funktionen zugänglich gemacht:
 
-* Der Schema Editor unterstützt die Tastaturnavigation, einschließlich der Verwendung von **Tab** zur Navigation durch Benutzeroberflächenelemente.
-* **** Tabulatoren geben das Suchfeld ein und wechseln dann in die Schemastruktur.
-* Die Schemastruktur unterstützt die Verwendung von Pfeiltasten zum Navigieren durch die Benutzeroberfläche der Schemastruktur
-   * **Mithilfe von Nach-oben- und Nach-unten-** Pfeilern kann die Baumstruktur durchlaufen werden.
-   * **Mit dem linken und rechten** Pfeil können Sie Knoten erweitern und reduzieren oder zwischen Inline-Aktionen in der Schemastruktur wechseln.
-* **Enter (Return)** aktiviert die einzelnen Knotendetails im Detailbereich auf der rechten Seite.
-* Der Schlüssel **Home** kehrt zum Anfang des Baums zurück.
-* Der Schlüssel **End** navigiert zum unteren Ende des Baums.
+* Der Schema-Editor unterstützt die Tastaturnavigation, einschließlich der Verwendung der **Tabulatortaste** zum Navigieren durch Benutzeroberflächenelemente.
+* Durch Drücken der **Tabulatortaste** wird zum Suchfeld navigiert, dann in die Schemastruktur.
+* Die Schemastruktur unterstützt die Verwendung der Pfeiltasten zum Navigieren durch die Benutzeroberfläche der Schemastruktur
+   * Mit den Tasten **Nach oben und Nach unten** kann die Schemastruktur durchlaufen werden.
+   * Mit den Tasten **Nach links und Nach rechts** können Knoten erweitert und reduziert werden oder es kann zwischen Inline-Aktionen in der Schemastruktur gewechselt werden.
+* Die **Eingabetaste** aktiviert die einzelnen Knotendetails im Detailbereich auf der rechten Seite.
+* Die Taste **Pos1** kehrt zum Anfang der Struktur zurück.
+* Die Taste **Ende** navigiert zum unteren Ende der Struktur.
 * Die Schemastruktur enthält auch ARIA-Beschriftungen für Bildschirmlesehilfen.
 
 ## Benutzeroberfläche von Segment Builder
 
-Wenn Sie die Segment Builder-Benutzeroberfläche zum Erstellen, Bearbeiten und Interagieren mit Segmenten in Experience Platform verwenden, verbessern die folgenden Funktionen die Barrierefreiheit:
+Wenn Sie die Benutzeroberfläche von Segment Builder zum Erstellen und Bearbeiten von Segmenten in Experience Platform bzw. zur Interaktion mit diesen verwenden, verbessern die folgenden Funktionen die Barrierefreiheit:
 
-* Auf die Segment Builder-Benutzeroberfläche kann über die Tastaturnavigation zugegriffen werden.
+* Auf die Benutzeroberfläche von Segment Builder kann über die Tastaturnavigation zugegriffen werden.
 * Bildschirmlesehilfen sollten Markup-Tags für Überschriften erkennen und die Überschrift zusammen mit ihrer Ebene ankündigen.
-* Andere Hilfstechnologien können die visuelle Anzeige einer Seite ändern, indem sie ordnungsgemäß kodierte Überschriften verwenden, um einen Umriss oder eine alternative Ansicht anzuzeigen.
+* Andere Hilfstechnologien können die visuelle Anzeige einer Seite ändern, indem sie ordnungsgemäß codierte Überschriften verwenden, um eine Konturschrift oder eine alternative Ansicht anzuzeigen.
 
-## Query Service Editor
+## Abfrage-Service-Editor
 
-Die folgenden Barrierefreiheitsfunktionen sind im Abfragedienst-Editor verfügbar:
+Die folgenden Barrierefreiheitsfunktionen sind im Abfrage-Service-Editor verfügbar:
 
-* Der Farbkontrast in der Benutzeroberfläche des Abfragedienst-Editors entspricht der Barrierefreiheit.
+* Der Farbkontrast in der Benutzeroberfläche des Abfrage-Service-Editors entspricht den Regeln der Barrierefreiheit.
 * Die Tastaturnavigation wird außerhalb der Editor-Benutzeroberfläche unterstützt. Die Editor-Benutzeroberfläche ist ein eingebetteter Code-Mirror.
 
-## Registerkarte &quot;Systemansicht&quot;in &quot;Quellen und Ziele&quot;
+## Registerkarte „Systemansicht“ in „Quellen und Ziele“
 
-Beim Durchsuchen der **[!UICONTROL Systemansicht]** in Quellen und Zielen verbessert die folgende Funktion die Barrierefreiheit:
+Beim Durchsuchen der **[!UICONTROL Systemansicht]** in „Quellen und Ziele“ verbessert die folgende Funktion die Barrierefreiheit:
 
-* **** Tablet-Sets konzentrieren sich auf die erste Quell-Verbindungskarte
-   * **** Drücken Sie die Tabulatortaste, um sich auf die Schaltfläche innerhalb der Karte zu konzentrieren.
-   * Wählen Sie **Enter** aus, um die Aktionsaufruf-Schaltfläche in der Karte zu aktivieren.
-* Wenn Sie auf der Verbindungskarte **Enter** auswählen, werden auch weitere Details in der rechten Leiste aktiviert
-   * Wenn die rechte Leiste aktiviert ist, wird der Fokus auf diesen Bereich gesetzt. **** Tabs konzentrieren sich auf  **** Schließen für den rechten Schienenbereich. Wenn Sie **Tab** auswählen, wird der Fokus erneut durch das Bedienfeld in der rechten Leiste bewegt
-   * Wenn mehr als eine Quellverbindungskarte vorhanden ist, durchläuft **Tab** die Verbindungen.
-   * Verwenden Sie die **Pfeiltasten (oben, unten, links und rechts)**, um durch die Liste der Quellen zu navigieren.
-   * Wählen Sie **Tab** aus, um den Fokus auf das Bedienfeld in der rechten Leiste festzulegen.
+* Drücken der **Tabulatortaste** setzt den Fokus auf die erste Quellverbindungskarte.
+   * Drücken Sie die **Tabulatortaste** erneut, um den Fokus auf die Schaltfläche innerhalb der Karte zu setzen.
+   * Wählen Sie die **Eingabetaste** aus, um die Aktions-Schaltfläche in der Karte zu aktivieren.
+* Wenn Sie auf der Verbindungskarte die **Eingabetaste** auswählen, werden auch weitere Details in der rechten Leiste aktiviert
+   * Wenn die rechte Leiste aktiviert ist, wird der Fokus auf diesen Bereich gesetzt. Drücken der **Tabulatortaste** setzt den Fokus auf **Schließen** für den Bereich der rechten Leiste. Wenn Sie die **Tabulatortaste** auswählen, wird der Fokus erneut durch den Bereich der rechten Leiste bewegt
+   * Wenn mehr als eine Quellverbindungskarte vorhanden ist, können Sie mit der **Tabulatortaste** durch die Verbindungen navigieren.
+   * Verwenden Sie die Tasten **Nach oben, Nach unten, Nach links, Nach rechts**, um durch die Liste der Quellen zu navigieren.
+   * Wählen Sie die **Tabulatortaste** aus, um den Fokus auf den Bereich in der rechten Leiste zu legen.
