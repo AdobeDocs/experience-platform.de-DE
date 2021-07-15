@@ -5,9 +5,9 @@ title: Einverständnis in Segmenten
 topic-legacy: overview
 description: Erfahren Sie, wie Sie die Zustimmungseinstellungen von Kunden für die Erfassung und Freigabe personenbezogener Daten in Segmentvorgängen berücksichtigen.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: 6d11a94d45b4a089ca6960aaf1ce78ae654ebc3f
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Die Einhaltung der Zustimmungswerte von Kunden erfordert ein Verständnis der ve
 
 ## Einverständnisschemafelder
 
-Um Kundenzustimmungen und -einstellungen zu berücksichtigen, muss eines der Schemas, das Teil Ihres [!UICONTROL XDM Individual Profile] Vereinigungsschemas ist, die Standardfeldgruppe **[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnis)]** enthalten.
+Um Kundeneinwilligungen und -einstellungen zu berücksichtigen, muss eines der Schemas, das Teil Ihres Vereinigungsschemas [!UICONTROL XDM Individual Profile] ist, die Standardfeldgruppe **[!UICONTROL Einverständnisse und Voreinstellungen]** enthalten.
 
 Weitere Informationen zur Struktur und zum vorgesehenen Anwendungsfall der einzelnen Attribute, die von der Feldergruppe bereitgestellt werden, finden Sie im Referenzhandbuch [Einverständnisse und Voreinstellungen](../xdm/field-groups/profile/consents.md). Eine schrittweise Anleitung zum Hinzufügen einer Feldergruppe zu einem Schema finden Sie im [Handbuch zur XDM-Benutzeroberfläche](../xdm/ui/resources/schemas.md#add-field-groups).
 
