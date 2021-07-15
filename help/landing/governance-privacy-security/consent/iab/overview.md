@@ -5,9 +5,9 @@ title: IAB TCF 2.0-Unterstützung für Experience Platform
 topic-legacy: privacy events
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schemata konfigurieren, um bei der Aktivierung von Segmenten für Ziele in Adobe Experience Platform Auswahlmöglichkeiten für die Kundenzustimmung zu vermitteln.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: 11e8acc3da7f7540421b5c7f3d91658c571fdb6f
+source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
 workflow-type: tm+mt
-source-wordcount: '2476'
+source-wordcount: '2564'
 ht-degree: 0%
 
 ---
@@ -74,7 +74,7 @@ Sobald die TCF-Zustimmungsdaten erfolgreich erfasst wurden, finden die folgenden
 
 Die übrigen Abschnitte in diesem Dokument enthalten Anleitungen dazu, wie Sie Platform und Ihre Datenvorgänge so konfigurieren, dass die oben beschriebenen Anforderungen an die Erfassung und Durchsetzung erfüllt werden.
 
-## Ermitteln, wie Sie in Ihrer CMP Einwilligungsdaten für Kunden generieren{#consent-data}
+## Ermitteln, wie Sie in Ihrem CMP Kundenzustimmungsdaten generieren {#consent-data}
 
 Da jedes CMP-System einzigartig ist, müssen Sie festlegen, wie Ihre Kunden bei der Interaktion mit Ihrem Dienst am besten ihre Zustimmung erteilen können. Eine gängige Methode, dies zu erreichen, ist die Verwendung eines Cookie-Einverständnisdialogfelds, ähnlich dem folgenden Beispiel:
 
@@ -97,9 +97,9 @@ Zustimmungszeichenfolgen dürfen nur von einer CMP erstellt werden, die beim IAB
 
 ## Erstellen von Datensätzen mit TCF-Einwilligungsfeldern {#datasets}
 
-Die Daten zur Kundenzustimmung müssen an Datensätze gesendet werden, deren Schemas TCF-Einwilligungsfelder enthalten. Informationen zum Erstellen der beiden erforderlichen Datensätze finden Sie im Tutorial [Erstellen von Datensätzen zur Erfassung der TCF 2.0-Zustimmung](./dataset.md) , bevor Sie mit diesem Handbuch fortfahren.
+Die Daten zur Kundenzustimmung müssen an Datensätze gesendet werden, deren Schemas TCF-Einwilligungsfelder enthalten. Informationen zum Erstellen des erforderlichen Profildatensatzes (und eines optionalen Experience Event-Datensatzes) finden Sie im Tutorial zu [Erstellen von Datensätzen zur Erfassung der TCF 2.0-Zustimmung](./dataset.md) , bevor Sie mit diesem Handbuch fortfahren.
 
-## Aktualisieren Sie [!DNL Profile] Zusammenführungsrichtlinien, um Zustimmungsdaten einzuschließen {#merge-policies}
+## Aktualisieren Sie die [!DNL Profile]-Zusammenführungsrichtlinien, um Einwilligungsdaten einzuschließen. {#merge-policies}
 
 Nachdem Sie einen [!DNL Profile]-aktivierten Datensatz für die Erfassung von Zustimmungsdaten erstellt haben, müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert wurden, dass immer TCF-Einwilligungsfelder in Ihre Kundenprofile aufgenommen werden. Dazu gehört das Festlegen der Datensatzpriorität, sodass Ihr Einwilligungsdatensatz Vorrang vor anderen möglicherweise in Konflikt stehenden Datensätzen erhält.
 
@@ -127,8 +127,8 @@ Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, wäh
 | --- | --- |
 | [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../../sandboxes/home.md), die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten der Edge-Konfiguration enthält. |
 | [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für die Experience Platform. Lesen Sie das Tutorial zu [Erstellen einer Streaming-Verbindung](../../../../ingestion/tutorials/create-streaming-connection-ui.md) , wenn Sie keinen vorhandenen Streaming-Inlet haben. |
-| [!UICONTROL Ereignis-Datensatz] | Wählen Sie den Datensatz [!DNL XDM ExperienceEvent] aus, der im [vorherigen Schritt](#datasets) erstellt wurde. |
-| [!UICONTROL Profildatensatz] | Wählen Sie den Datensatz [!DNL XDM Individual Profile] aus, der im [vorherigen Schritt](#datasets) erstellt wurde. |
+| [!UICONTROL Ereignis-Datensatz] | Wählen Sie den Datensatz [!DNL XDM ExperienceEvent] aus, der im [vorherigen Schritt](#datasets) erstellt wurde. Wenn Sie die Feldergruppe [[!UICONTROL IAB TCF 2.0 Consent] ](../../../../xdm/field-groups/event/iab.md) im Schema dieses Datensatzes eingeschlossen haben, können Sie Einwilligungsänderungsereignisse im Laufe der Zeit mithilfe des Befehls [`sendEvent`](#sendEvent) verfolgen und diese Daten in diesem Datensatz speichern. Beachten Sie, dass die in diesem Datensatz gespeicherten Zustimmungswerte **nicht** in automatischen Durchsetzungs-Workflows verwendet werden. |
+| [!UICONTROL Profildatensatz] | Wählen Sie den Datensatz [!DNL XDM Individual Profile] aus, der im [vorherigen Schritt](#datasets) erstellt wurde. Wenn Sie mit dem Befehl [`setConsent`](#setConsent) auf CMP-Zustimmungs-Change-Hooks reagieren, werden die erfassten Daten in diesem Datensatz gespeichert. Da dieser Datensatz profilaktiviert ist, werden die in diesem Datensatz gespeicherten Zustimmungswerte bei automatischen Durchsetzungs-Workflows berücksichtigt. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -142,7 +142,7 @@ Nachdem Sie die im vorherigen Abschnitt beschriebene Edge-Konfiguration erstellt
 >
 >Eine Einführung in die allgemeine Syntax für alle Platform SDK-Befehle finden Sie im Dokument zu [Ausführen von Befehlen](../../../../edge/fundamentals/executing-commands.md).
 
-#### Verwenden von CMP-Zustimmungs-Change-Hooks
+#### Verwenden von CMP-Zustimmungs-Change-Hooks {#setConsent}
 
 Viele CMPs bieten vordefinierte Hooks, die Zustimmungsänderungs-Ereignisse überwachen. Wenn diese Ereignisse eintreten, können Sie den Befehl `setConsent` verwenden, um die Einwilligungsdaten dieses Kunden zu aktualisieren.
 
@@ -189,7 +189,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Ereignisse verwenden
+#### Ereignisse verwenden {#sendEvent}
 
 Sie können auch mithilfe des Befehls `sendEvent` TCF 2.0-Zustimmungsdaten für jedes in Platform ausgelöste Ereignis erfassen.
 
@@ -245,7 +245,7 @@ Für TCF 2.0 muss außerdem die Datenquelle die Berechtigung des Zielanbieters �
 >
 >Alle Segmente, die für Adobe Audience Manager freigegeben werden, enthalten dieselben TCF 2.0-Zustimmungswerte wie ihre Platform-Gegenstücke. Da [!DNL Audience Manager] dieselbe Anbieter-ID wie Platform (565) verwendet, sind dieselben Zwecke und die Berechtigung des Anbieters erforderlich. Weitere Informationen finden Sie im Dokument zum [Adobe Audience Manager-Plug-in für IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) .
 
-## Testen Sie Ihre Implementierung {#test-implementation}
+## Implementierung testen {#test-implementation}
 
 Nachdem Sie Ihre TCF 2.0-Implementierung konfiguriert und Segmente an Ziele exportiert haben, werden keine Daten exportiert, die nicht den Zustimmungsanforderungen entsprechen. Um jedoch zu sehen, ob die richtigen Kundenprofile während des Exports gefiltert wurden, müssen Sie die Datenspeicher Ihrer Ziele manuell überprüfen, um festzustellen, ob die Zustimmung ordnungsgemäß durchgesetzt wurde.
 
