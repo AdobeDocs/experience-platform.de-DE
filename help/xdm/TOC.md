@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 9b6352eec56cf32e58d49be4d72b2fb4cf933b89
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 43%
+source-wordcount: '311'
+ht-degree: 45%
 
 ---
 
@@ -30,13 +30,14 @@ ht-degree: 43%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinition](./classes/segment-definition.md)
-* Schemafeldergruppen {#field-groups}
+* Schemafeldgruppen {#field-groups}
    * Profilfeldgruppen {#profile}
       * [Demografische Details](./field-groups/profile/demographic-details.md)
+      * [IAB TCF 2.0-Zustimmung](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
       * [Treuedetails](./field-groups/profile/loyalty-details.md)
       * [Persönliche Kontaktangaben](./field-groups/profile/personal-contact-details.md)
-      * [Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnis)](./field-groups/profile/consents.md)
+      * [Einverständnis und Voreinstellungen](./field-groups/profile/consents.md)
       * [Details zur Segmentzugehörigkeit](./field-groups/profile/segmentation.md)
       * [Kontaktangaben für Arbeitskontakte](./field-groups/profile/work-contact-details.md)
    * Ereignisfeldgruppen {#event}
@@ -45,6 +46,7 @@ ht-degree: 43%
       * [Commerce-Details](./field-groups/event/commerce-details.md)
       * [Details zur Endbenutzer-ID](./field-groups/event/enduserids.md)
       * [Umgebungsdetails](./field-groups/event/environment-details.md)
+      * [IAB TCF 2.0-Zustimmung](./field-groups/event/iab.md)
       * [Webdetails](./field-groups/event/web-details.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
@@ -52,6 +54,7 @@ ht-degree: 43%
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
    * [Handel](./data-types/commerce.md)
+   * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Einverständnisse und Voreinstellungen](./data-types/consents.md)
    * [Gerät](./data-types/device.md)
    * [E-Mail  Adresse](./data-types/email-address.md)
