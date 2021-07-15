@@ -4,9 +4,9 @@ title: Datentyp für generische Marketing-Voreinstellungsfelder
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp des generischen Marketing-Voreinstellungsfelds.
 exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '539'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnisse)]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
 >
 >Wenn Sie eine `subscriptions`-Zuordnung für ein bestimmtes Marketing-Präferenzfeld benötigen, müssen Sie stattdessen das Marketing-Feld [mit dem Abonnementdatentyp](./marketing-field-subscriptions.md) verwenden.
 
