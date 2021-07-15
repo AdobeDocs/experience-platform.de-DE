@@ -4,9 +4,9 @@ title: Feld für allgemeine Marketing-Voreinstellungen mit Abonnementdatentyp
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über das Feld "Allgemeine Marketing-Voreinstellung"mit dem XDM-Datentyp "Abonnements".
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '736'
 ht-degree: 3%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Datenschutz/Personalisierung/Marketing-Voreinstellungen (Einverständnisse)]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
 >
 >Wenn Sie für ein bestimmtes Marketing-Voreinstellungsfeld keine `subscriptions`-Zuordnung benötigen, können Sie stattdessen den [grundlegenden Marketing-Felddatentyp](./marketing-field.md) verwenden.
 
