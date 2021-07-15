@@ -4,18 +4,18 @@ title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
 workflow-type: tm+mt
-source-wordcount: '1868'
+source-wordcount: '1904'
 ht-degree: 3%
 
 ---
 
-# [!DNL Consents & Preferences] Datentyp
+# [!UICONTROL Datentyp &quot;Zustimmungen und ] Voreinstellungen&quot;
 
-Der Datentyp [!UICONTROL Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen] (im Folgenden &quot;Datentyp[!DNL Consents & Preferences]&quot;genannt) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -präferenzen unterstützt, die von Consent Management Platform (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
+Der Datentyp [!UICONTROL Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen] (nachfolgend als &quot;Datentyp[!UICONTROL Einverständnisse und Voreinstellungen]&quot;bezeichnet) ist ein [!DNL Experience Data Model] (XDM)-Datentyp, der die Erfassung von Kundenberechtigungen und -präferenzen unterstützt, die von Consent Management Platform (CMPs) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 
-Dieses Dokument behandelt die Struktur und die vorgesehene Verwendung der Felder, die vom Datentyp [!DNL Consents & Preferences] bereitgestellt werden.
+Dieses Dokument behandelt die Struktur und die vorgesehene Verwendung der Felder, die vom Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] bereitgestellt werden.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -28,9 +28,9 @@ Dieses Dokument erfordert ein Verständnis von XDM und die Verwendung der Schema
 
 >[!IMPORTANT]
 >
->Der Datentyp [!DNL Consents & Preferences] wurde für eine Reihe von Nutzungsszenarien im Zusammenhang mit der Einwilligungs- und Vorzugsverwaltung entwickelt. In diesem Dokument wird daher die Verwendung der Felder des Datentyps allgemein beschrieben und es werden nur Vorschläge zur Interpretation der Verwendung dieser Felder gemacht. Wenden Sie sich an Ihr Datenschutzrechtsteam, um die Struktur des Datentyps an die Interpretation und Präsentation dieser Zustimmungs- und Auswahlmöglichkeiten für Ihre Kunden anzupassen.
+>Der Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] wurde entwickelt, um eine Reihe von Anwendungsfällen für die Einwilligungs- und Vorgabenverwaltung abzudecken. In diesem Dokument wird daher die Verwendung der Felder des Datentyps allgemein beschrieben und es werden nur Vorschläge zur Interpretation der Verwendung dieser Felder gemacht. Wenden Sie sich an Ihr Datenschutzrechtsteam, um die Struktur des Datentyps an die Interpretation und Präsentation dieser Zustimmungs- und Auswahlmöglichkeiten für Ihre Kunden anzupassen.
 
-Der Datentyp [!DNL Consents & Preferences] stellt mehrere Felder bereit, mit denen **consent** und **Preferences** Informationen erfasst werden.
+Der Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält mehrere Felder, mit denen **Einverständnis** und **Voreinstellungen** erfasst werden.
 
 Eine Einwilligung ist eine Option, mit der ein Kunde festlegen kann, wie seine Daten verwendet werden können. Die meisten Einverständniserklärungen haben einen rechtlichen Aspekt, da in einigen Rechtsordnungen eine Erlaubnis erforderlich ist, bevor Daten in einer bestimmten Weise verwendet werden können, oder der Kunde die Möglichkeit hat, diese Verwendung zu stoppen (Opt-out), wenn keine Zustimmung erforderlich ist.
 
@@ -47,7 +47,7 @@ Der folgende Screenshot zeigt, wie die Struktur des Datentyps in der Platform-Be
 >
 >Anweisungen zum Suchen nach einer beliebigen XDM-Ressource und zum Überprüfen ihrer Struktur in der Platform-Benutzeroberfläche finden Sie im Handbuch zu [XDM-Ressourcen](../ui/explore.md) zu .
 
-Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp [!DNL Consents & Preferences] , den der Datentyp verarbeiten kann. Informationen zur spezifischen Verwendung dieser Felder finden Sie in den folgenden Abschnitten.
+Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] , der verarbeitet werden kann. Informationen zur spezifischen Verwendung dieser Felder finden Sie in den folgenden Abschnitten.
 
 ```json
 {
@@ -251,12 +251,12 @@ Wenn ein Kunde beispielsweise das Direktmarketing für alle Kanäle ablehnt (üb
 
 ## Daten mithilfe des Datentyps erfassen {#ingest}
 
-Um den Datentyp [!DNL Consents & Preferences] verwenden zu können, um Einwilligungsdaten von Ihren Kunden zu erfassen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
+Um den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] zum Erfassen von Einwilligungsdaten von Ihren Kunden zu verwenden, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
 
-Anweisungen zum Zuweisen von Datentypen zu Feldern finden Sie im Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . [ Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!DNL Consents & Preferences] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zum Datensatz und befolgen Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema.
+Anweisungen zum Zuweisen von Datentypen zu Feldern finden Sie im Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . [ Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zum Datensatz und befolgen Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema.
 
 >[!IMPORTANT]
-Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den Datentyp [!DNL Consents & Preferences] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
+Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
 Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) .
 
 ## Handhabung von Zustimmungs- und Vorgabenänderungen
@@ -265,9 +265,9 @@ Wenn ein Kunde seine Zustimmung oder Voreinstellungen auf Ihrer Website ändert,
 
 ## Anhang {#appendix}
 
-Die folgenden Abschnitte enthalten zusätzliche Referenzinformationen zum Datentyp [!DNL Consents & Preferences].
+Die folgenden Abschnitte enthalten zusätzliche Referenzinformationen zum Datentyp [!UICONTROL Einverständnisse und Voreinstellungen].
 
-### Akzeptierte Werte für `val` {#choice-values}
+### Zulässige Werte für `val` {#choice-values}
 
 In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
@@ -285,13 +285,13 @@ In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
 {style=&quot;table-layout:auto&quot;}
 
-### Akzeptierte Werte für `preferred` {#preferred-values}
+### Zulässige Werte für `preferred` {#preferred-values}
 
 In der folgenden Tabelle sind die für `preferred` zulässigen Werte aufgeführt:
 
 | Wert | Beschreibung |
 | --- | --- |
-| `email` | E-Mail-Nachrichten. |
+| `email` | E-Mail  Nachrichten. |
 | `push` | Push-Benachrichtigungen. |
 | `inApp` | In-App-Nachrichten. |
 | `sms` | SMS-Nachrichten. |
@@ -307,6 +307,6 @@ In der folgenden Tabelle sind die für `preferred` zulässigen Werte aufgeführt
 
 {style=&quot;table-layout:auto&quot;}
 
-### Vollständiges [!DNL Consents & Preferences]-Schema {#full-schema}
+### Vollständiges Schema [!UICONTROL Einverständnisse und Voreinstellungen] {#full-schema}
 
-Das vollständige Schema für den Datentyp [!DNL Consents & Preferences] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Das vollständige Schema für den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
