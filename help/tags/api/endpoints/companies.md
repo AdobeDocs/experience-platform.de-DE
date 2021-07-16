@@ -1,0 +1,184 @@
+---
+title: Firmen-Endpunkt
+description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /companies in der Reactor-API vornehmen.
+source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+workflow-type: tm+mt
+source-wordcount: '247'
+ht-degree: 6%
+
+---
+
+# Firmen-Endpunkt
+
+Ein Unternehmen repräsentiert eine Kundenorganisation, normalerweise ein Unternehmen. In der Reactor-API stimmen diese Unternehmen 1:1 mit der IMS-Organisations-ID überein. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben. Ein Unternehmen kann viele [Eigenschaften](./properties.md) enthalten. Eine Eigenschaft gehört genau einem Unternehmen.
+
+Mit dem Endpunkt `/companies` in der Reactor-API können Sie die Unternehmen programmgesteuert abrufen, auf die Sie in Ihrer Erlebnisanwendung Zugriff haben.
+
+## Erste Schritte
+
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+
+## Liste von Unternehmen abrufen {#list}
+
+Sie können die Unternehmen, für die Sie berechtigt sind, auflisten, indem Sie eine GET-Anfrage an den Endpunkt `/companies` stellen. In den meisten Fällen gibt es genau einen.
+
+**API-Format**
+
+```http
+GET /companies
+```
+
+>[!NOTE]
+>
+>Mithilfe von Abfrageparametern können börsennotierte Unternehmen anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+
+**Anfrage**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/companies \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt eine Liste von Unternehmen zurück, auf die Sie Zugriff haben.
+
+```json
+{
+  "data": [
+    {
+      "id": "COdb0cd64ad4524440be94b8496416ec7d",
+      "type": "companies",
+      "attributes": {
+        "created_at": "2020-08-13T17:13:30.667Z",
+        "name": "Example Company",
+        "org_id": "{IMS_ORG}",
+        "updated_at": "2020-08-13T17:13:30.667Z",
+        "token": "d5a4f682bbae",
+        "cjm_enabled": false,
+        "edge_enabled": false,
+        "edge_events_allotment": null,
+        "edge_fanout_ratio": null
+      },
+      "relationships": {
+        "properties": {
+          "links": {
+            "related": "https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d/properties"
+          }
+        }
+      },
+      "links": {
+        "self": "https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d",
+        "properties": "https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d/properties"
+      },
+      "meta": {
+        "rights": [
+          "develop_extensions",
+          "manage_properties"
+        ],
+        "platform_rights": {
+          "web": [
+            "develop_extensions",
+            "manage_properties"
+          ],
+          "mobile": [
+            "develop_extensions",
+            "manage_properties"
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "current_page": 1,
+      "next_page": null,
+      "prev_page": null,
+      "total_pages": 1,
+      "total_count": 1
+    }
+  }
+}
+```
+
+## Unternehmen nachschlagen {#lookup}
+
+Sie können ein bestimmtes Unternehmen nachschlagen, indem Sie dessen Kennung in den Pfad einer GET-Anfrage einschließen.
+
+**API-Format**
+
+```http
+GET /companies/{COMPANY_ID}
+```
+
+| Parameter | Beschreibung |
+| --- | --- |
+| `{COMPANY_ID}` | Der `id`-Wert des Unternehmens, das Sie nachschlagen möchten. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Anfrage**
+
+```shell
+curl -X GET \
+  https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Accept: application/vnd.api+json;revision=1'
+```
+
+**Antwort**
+
+Eine erfolgreiche Antwort gibt die Details des Unternehmens zurück.
+
+```json
+{
+  "data": {
+    "id": "COdb0cd64ad4524440be94b8496416ec7d",
+    "type": "companies",
+    "attributes": {
+      "created_at": "2020-08-13T17:13:30.667Z",
+      "name": "Example Company",
+      "org_id": "{IMS_ORG}",
+      "updated_at": "2020-08-13T17:13:30.667Z",
+      "token": "d5a4f682bbae",
+      "cjm_enabled": false,
+      "edge_enabled": false,
+      "edge_events_allotment": null,
+      "edge_fanout_ratio": null
+    },
+    "relationships": {
+      "properties": {
+        "links": {
+          "related": "https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d/properties"
+        }
+      }
+    },
+    "links": {
+      "self": "https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d",
+      "properties": "https://reactor.adobe.io/companies/COdb0cd64ad4524440be94b8496416ec7d/properties"
+    },
+    "meta": {
+      "rights": [
+        "develop_extensions",
+        "manage_properties"
+      ],
+      "platform_rights": {
+        "web": [
+          "develop_extensions",
+          "manage_properties"
+        ],
+        "mobile": [
+          "develop_extensions",
+          "manage_properties"
+        ]
+      }
+    }
+  }
+}
+```
