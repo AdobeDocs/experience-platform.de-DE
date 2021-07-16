@@ -4,9 +4,9 @@ user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profile
 source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '139'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
