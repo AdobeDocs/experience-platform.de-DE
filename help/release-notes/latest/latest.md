@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Experience Platform - Versionshinweise für den 30. Juni 2021.
+description: Versionshinweise zu Experience Platform vom 30. Juni 2021.
 doc-type: release notes
 last-update: June 30, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Aktualisierungen des Arbeitsablaufs für Zusammenführungsrichtlinien | Beim Erstellen und Aktualisieren von Zusammenführungsrichtlinien in der Benutzeroberfläche können Benutzer jetzt anhand des Vereinigungsschemas eine Vorschau von 20 Beispielprofilen anzeigen. Auf diese Weise können Benutzer eine Vorschau davon anzeigen, wie Kundenprofile aussehen, bevor sie Zusammenführungsrichtlinienkonfigurationen speichern. Weitere Informationen finden Sie im [UI-Handbuch für Zusammenführungsrichtlinien](../../profile/merge-policies/ui-guide.md). |
-| Bericht zur Identitätsüberschneidung | Der Bericht zur Identitätsüberschneidung ist Teil der Echtzeit-Kundenprofil-API und bietet Einblick in die Zusammensetzung des Profilspeichers. Mithilfe des Endpunkts `/previewsamplestatus` stellt der Bericht zur Identitätsüberschneidung die Identitäten bereit, die am meisten zur adressierbaren Zielgruppe beitragen. Weitere Informationen finden Sie im [Beispiel-Status-API-Endpunkt-Handbuch](../../profile/api/preview-sample-status.md) zur Vorschau . |
+| Bericht zur Identitätsüberschneidung | Der Bericht zur Identitätsüberschneidung ist Teil der Echtzeit-Kundenprofil-API und bietet Einblick in die Zusammensetzung des Profilspeichers. Mithilfe des Endpunkts `/previewsamplestatus` stellt der Bericht zur Identitätsüberschneidung die Identitäten bereit, die am meisten zur adressierbaren Zielgruppe beitragen. Weitere Informationen finden Sie im [Handbuch zum Vorschaubeispielstatus-API-Endpunkt](../../profile/api/preview-sample-status.md). |
 
 Weitere Informationen zum Echtzeit-Kundenprofil, einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie im [Überblick über das Echtzeit-Kundenprofil](../../profile/home.md).
 
@@ -40,7 +40,7 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Produktions-Sandbox Verbesserungen beim Zurücksetzen | Sie können jetzt Produktions-Sandboxes zurücksetzen, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden. Dies kann entweder über die Benutzeroberfläche oder mithilfe der neuen Parameter `validationOnly` und `ignoreWarnings` in der API erfolgen. Weitere Informationen finden Sie in den Tutorials zu [Zurücksetzen einer Sandbox in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) und zum Zurücksetzen einer Sandbox in der API](../../sandboxes/api/sandboxes.md) .[ |
+| Produktions-Sandbox Verbesserungen beim Zurücksetzen | Sie können jetzt Produktions-Sandboxes zurücksetzen, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet werden. Dies kann entweder über die Benutzeroberfläche oder durch Verwenden der neuen Parameter `validationOnly` und `ignoreWarnings` in der API erfolgen. Weitere Informationen finden Sie in den Tutorials zum [Zurücksetzen einer Sandbox in der Benutzeroberfläche](../../sandboxes/ui/user-guide.md) und zum [Zurücksetzen einer Sandbox in der API](../../sandboxes/api/sandboxes.md). |
 
 ## Quellen {#sources}
 
@@ -50,7 +50,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (Beta) | Sie können [!DNL Veeva CRM] jetzt über die [!DNL Flow Service]-API oder die Benutzeroberfläche mit der Experience Platform verbinden. Weiterführende Informationen dazu finden Sie unter [[!DNL Veeva CRM] Connectoren – Übersicht](../../sources/connectors/crm/veeva.md). |
-| Unterstützung für die Überwachung von Streaming-Datenflüssen | Sie können jetzt den Arbeitsbereich der Quellenbenutzeroberfläche verwenden, um Datenerfassungsaktivitäten aus Streaming-Quellen mit entsprechenden Metriken und Status zu überwachen. Weitere Informationen finden Sie im Tutorial zu [Überwachung von Streaming-Datenflüssen](../../sources/tutorials/ui/monitor-streaming.md) . |
+| [!DNL Veeva CRM] (Beta) | Sie können [!DNL Veeva CRM] jetzt über die [!DNL Flow Service]-API oder die Benutzeroberfläche mit Experience Platform verbinden. Weiterführende Informationen dazu finden Sie unter [[!DNL Veeva CRM] Connectoren – Übersicht](../../sources/connectors/crm/veeva.md). |
+| Unterstützung für die Überwachung von Streaming-Datenflüssen | Sie können jetzt den Arbeitsbereich der Quellenbenutzeroberfläche verwenden, um Datenaufnahmeaktivitäten aus Streaming-Quellen mit entsprechenden Metriken und Status zu überwachen. Weitere Informationen finden Sie im Tutorial zur [Überwachung von Streaming-Datenflüssen](../../sources/tutorials/ui/monitor-streaming.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
