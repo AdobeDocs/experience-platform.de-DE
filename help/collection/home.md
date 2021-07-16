@@ -5,10 +5,10 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: a150c23dffde9431953a019509e9554159052d21
-workflow-type: ht
-source-wordcount: '320'
-ht-degree: 100%
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+workflow-type: tm+mt
+source-wordcount: '313'
+ht-degree: 95%
 
 ---
 
@@ -43,6 +43,6 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 
 ## Schnelles und sicheres Transformieren, Erweitern und Senden von Daten
 
-[Adobe Experience Platform Launch Server Side](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=de) kann einen beliebigen Plattformdatenstrom nutzen. Daten mit extrem niedriger Latenz können an Ziele ohne Adobe transformiert, angereichert und gesendet werden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, was eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
+[Die Ereignisweiterleitung in Adobe Experience ](../tags/ui/event-forwarding/overview.md) Platform kann in einen beliebigen Platform-Datenstrom tippen. Daten mit extrem niedriger Latenz können an Ziele ohne Adobe transformiert, angereichert und gesendet werden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, was eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
 
 ![](./images/launch.png)
