@@ -4,7 +4,7 @@ user-guide-title: Adobe Experience Platform – Versionshinweise
 breadcrumb-title: Platform – Versionshinweise
 user-guide-description: Monatliche Versionshinweise für Adobe Experience Platform.
 source-git-commit: fc916f87bf07e5eabf7d1681059406e2fea362e0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '51'
 ht-degree: 100%
 
