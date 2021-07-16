@@ -2,9 +2,9 @@
 title: Unterstützte Anwendungsfälle mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, welche Anwendungsfälle vom Adobe Experience Platform Web SDK unterstützt werden.
 keywords: Web SDK;Anwendungsfälle
-source-git-commit: da305a65a7d5fc3d8214f1d046181b463d324ee0
+source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: '565'
 ht-degree: 16%
 
 ---
@@ -43,7 +43,7 @@ Auf dieser Seite werden die unterstützten Anwendungsfälle für das Web SDK mit
 | Wenn der Datensatz für das Profil aktiviert ist, Möglichkeit, Daten in Echtzeit an das Echtzeit-Kundendatenprofil zu senden |  |
 | Senden von Daten an Customer Journey Analytics in Echtzeit |  |
 | Einverständnis zum Profil schreiben | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| Übermitteln von Daten Server-seitig in Echtzeit an Dritte | [Dokumentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| Übermitteln von Daten Server-seitig in Echtzeit an Dritte | [Dokumentation](../../tags/ui/event-forwarding/overview.md) |
 | Unterstützung von Identitäts-Namespaces |  |
 
 {style=&quot;table-layout:auto&quot;}
