@@ -1,14 +1,22 @@
 ---
 title: Versionshinweise zur Common Analytics Plugins-Erweiterung
 description: Die aktuellen Versionshinweise für die allgemeine Analytics-Plug-in-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 94%
+source-wordcount: '314'
+ht-degree: 92%
 
 ---
 
 # Common Analytics Plugins – Versionshinweise
+
+## 23. Juni 2021
+
+### Allgemeine Analytics-Plug-ins-Erweiterung 3.0.6
+
+#### Fehlerkorrekturen
+
+* Es wurde ein Problem behoben, bei dem getPercentPageViewed bei der Verwendung von Sonderzeichen fehlschlug.
 
 ## 20. Mai 2021
 
