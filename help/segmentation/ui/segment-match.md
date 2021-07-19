@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1900'
+source-wordcount: '1901'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ Die Opt-in- und Opt-out-Einverständnisprüfung bestimmt, ob Sie mit der Einwill
 
 Die standardmäßige Zustimmungskonfiguration für [!DNL Segment Match] ist auf `opt-out` festgelegt. Um ein Anmeldemodell für Ihre Daten zu erzwingen, senden Sie bitte eine E-Mail-Anfrage an Ihren Adobe Account Manager.
 
-Weitere Informationen zum Attribut `share`, das zum Festlegen des Zustimmungswerts für die Datenfreigabe verwendet wird, finden Sie in der folgenden Dokumentation zu [Feldergruppe für Datenschutz und Einverständniserklärungen](../../xdm/field-groups/profile/consents.md). Informationen zu der spezifischen Feldergruppe, mit der die Einwilligung der Verbraucher zur Erfassung und Verwendung von Daten im Zusammenhang mit Datenschutz, Personalisierung und Marketing-Voreinstellungen erfasst wird, finden Sie im folgenden [GitHub-Beispiel für Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
+Weitere Informationen zum Attribut `share`, das zum Festlegen des Zustimmungswerts für die Datenfreigabe verwendet wird, finden Sie in der folgenden Dokumentation zu [Feldergruppe für Datenschutz und Einverständniserklärungen](../../xdm/field-groups/profile/consents.md). Informationen zu der spezifischen Feldergruppe, mit der die Einwilligung der Verbraucher zur Erfassung und Verwendung von Daten im Zusammenhang mit Datenschutz, Personalisierung und Marketing-Voreinstellungen erfasst wird, finden Sie im folgenden [GitHub-Beispiel für Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Datennutzungsbezeichnungen konfigurieren
 
@@ -73,7 +73,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 [!DNL Segment Match] verwendet die C11-Beschriftung, eine spezielle Vertragsbeschriftung,  [!DNL Segment Match] die Sie manuell zu Datensätzen oder Attributen hinzufügen können, um sicherzustellen, dass sie vom  [!DNL Segment Match] Partnerfreigabeprozess ausgeschlossen sind. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus [!DNL Segment Match] ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom [!DNL Segment Match]-Workflow erzwungen. [!DNL Segment Match] aktiviert automatisch die Core-Richtlinie  [!UICONTROL Datenfreigabe beschränken ] . Spezifische Anweisungen zum Anwenden von Datennutzungsbezeichnungen auf Datensätze finden Sie im Tutorial zum Verwalten von Datennutzungsbezeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md).[
 
-Eine Liste der Datennutzungsbezeichnungen und deren Definitionen finden Sie im Glossar [Datennutzungsbezeichnungen](../../data-governance/labels/reference.md). Informationen zu Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md).
+Eine Liste der Datennutzungsbezeichnungen und ihrer Definitionen finden Sie im Glossar [Datennutzungsbezeichnungen](../../data-governance/labels/reference.md). Informationen zu Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md).
 
 ## [!DNL Segment Match] End-to-End-Workflow
 
