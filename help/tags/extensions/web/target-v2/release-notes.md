@@ -1,9 +1,9 @@
 ---
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Die neuesten Versionshinweise für die Adobe Target v2-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '438'
 ht-degree: 78%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 78%
 
 ### Adobe Target v2-Erweiterung 0.14
 
-- Es wurde die neue Aktion „Target mit [On-Device Decisioning](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=de#load-target-with-on-device-decisioning) laden“ hinzugefügt, die at.js 2.5 mit Funktionen für On-Device Decisioning lädt.
+- Es wurde die neue Aktion „Target mit [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning) laden“ hinzugefügt, die at.js 2.5 mit Funktionen für On-Device Decisioning lädt.
 - „at.js“ wurde auf 2.5 aktualisiert.
 
 
