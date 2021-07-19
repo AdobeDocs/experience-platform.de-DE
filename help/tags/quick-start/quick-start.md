@@ -1,10 +1,10 @@
 ---
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie in Adobe Experience Platform schnell mit Tags arbeiten können.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '1562'
-ht-degree: 45%
+source-wordcount: '1533'
+ht-degree: 44%
 
 ---
 
@@ -134,8 +134,6 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 ## Zusätzliche Ressourcen
 
 Weitere Informationen zu Tags finden Sie in diesen Ressourcen:
-
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk), wo Sie auch Fragen beantworten, Ideen einreichen und über die Ideen anderer Benutzer abstimmen können. Melden Sie sich mit Ihrer Adobe ID an.
 
 * **[Datenerfassungs-Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer Benutzer ab. Melden Sie sich mit Ihrer Adobe ID an.
 * **[Entwicklerdokumente](https://developer.adobelaunch.com/)**: Einbindung in die -Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die -Tags-APIs zu verwenden
