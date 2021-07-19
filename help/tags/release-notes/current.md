@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise
 description: Die aktuellen Versionshinweise für Tags in Adobe Experience Platform.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 67%
+source-wordcount: '498'
+ht-degree: 54%
 
 ---
 
@@ -13,6 +13,14 @@ ht-degree: 67%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+
+## 19. Juli 2021
+
+**Anpassungen der Berechtigung**  &quot;Eigenschaften verwalten&quot;- Bei der Berechtigung &quot;Eigenschaften verwalten&quot;trat ein Problem auf, bei dem ein Benutzer berechtigt war, eine neue Eigenschaft zu erstellen, sie jedoch nach der Erstellung nicht sehen konnte (wie  [hier](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176) im Community-Thread beschrieben). Eine Korrektur ist jetzt live mit Berechtigungen, die erzwungen werden, wie im Artikel beschrieben.
+
+>[!NOTE]
+>
+>Wenn Sie einer Benutzergruppe die neue Berechtigung &quot;Eigenschaft bearbeiten&quot;zuweisen, wird die Benutzeroberfläche nicht aktualisiert, um die Felder im Eigenschaftenkonfigurationsbildschirm zu aktivieren. Eine Korrektur dieses Problems wird in einer kommenden Version implementiert.
 
 ## 17. Mai 2021
 
