@@ -3,10 +3,10 @@ keywords: Launch-Erweiterungen; Launch-Erweiterung; Launch-Ziele; platform launc
 title: Adobe Experience Platform Launch-Erweiterung
 description: Adobe Experience Platform Launch markiert die nächste Generation der Funktionen von Adobe für das Tag-Management. Platform Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 20a9103dd96116f3099bccc9eeb678be5ac2bb79
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 48%
+source-wordcount: '600'
+ht-degree: 50%
 
 ---
 
@@ -18,7 +18,7 @@ Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten 
 Eine Einführung in die Funktionen von Experience Platform Launch finden Sie in den folgenden Ressourcen:
 
 - Adobe Experience Platform Launch [documentation](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=de)
-- Adobe Experience Platform Launch [Schnellstartvideos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Beginnen Sie mit [Einführung in Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) und [Übersicht über den Veröffentlichungsprozess](https://helpx.adobe.com/de/analytics/how-to/adobe-launch-publishing-process.html) und fahren Sie dann mit den nächsten Konzepten fort.
+- Adobe Experience Platform Launch [Schnellstartvideos](../../../tags/quick-start/videos.md). Beginnen Sie mit [Einführung in Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) und [Übersicht über den Veröffentlichungsprozess](https://helpx.adobe.com/de/analytics/how-to/adobe-launch-publishing-process.html) und fahren Sie dann mit den nächsten Konzepten fort.
 
 ## Suchen der Platform launch-Erweiterungen in der Platform-Oberfläche {#how-to-find-extensions-in-interface}
 
@@ -34,7 +34,7 @@ platform launch Extensions leiten Rohdaten von Ereignissen an verschiedene Zielt
 
 ![Experience Platform Launch-Erweiterungen im Vergleich zu anderen Zielen](../../assets/common/launch-and-other-destinations.png)
 
-## Vorteile der Verwendung von Platform launch Extensions {#extensions-benefits}
+## Vorteile der Verwendung von Platform launch-Erweiterungen {#extensions-benefits}
 
 Adobe Experience Platform Launch ist für Bestandskunden von Experience Cloud kostenlos. platform launch vereinfacht die Tag-Implementierung auf Ihrer Website mithilfe benutzerfreundlicher Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. platform launch hat einen geringen Platzbedarf auf Ihrer Website und ermöglicht Ihnen, Ihre Seiten schnell zu laden.
 
@@ -42,7 +42,7 @@ Adobe Experience Platform Launch ist für Bestandskunden von Experience Cloud ko
 >
 >Sie können zwar keine Segmente für Platform launch-Erweiterungen aktivieren, aber Sie können Regeln einrichten, um Ereignisdaten nur in bestimmten Situationen weiterzuleiten. Weitere Informationen finden Sie unten.
 
-Sie können *Regeln* erstellen, die bestimmen, wann Ereignisdaten an Erweiterungen weitergeleitet werden. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen finden Sie unter Regeln in der [Adobe Experience Platform Launch-Dokumentation](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+Sie können *Regeln* erstellen, die bestimmen, wann Ereignisdaten an Erweiterungen weitergeleitet werden. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen finden Sie unter Regeln in der [Adobe Experience Platform Launch-Dokumentation](../../../tags/ui/managing-resources/rules.md).
 
 ## Anwendungsbeispiele für Platform launch-Erweiterungen {#extensions-use-cases}
 
