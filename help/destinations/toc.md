@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Ziele
-source-git-commit: 47b3ef28281e3480e8b194486845f4fb4326b7d4
+source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '481'
 ht-degree: 58%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 58%
    * [ (Alpha) HTTP-Verbindung](./catalog/http-destination.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
+      * [(Beta) Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Segmentfreigabe in Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
@@ -134,5 +135,5 @@ ht-degree: 58%
       * [Invoca Tags-Erweiterung](./catalog/voice/invoca.md)
       * [Medallia-Erweiterung](./catalog/voice/medallia.md)
       * [Talk URL Inbox-Erweiterung](./catalog/voice/talkurl.md)
-* [Häufig gestellte Fragen ](./destinations-faq.md)
+* [Häufig gestellte Fragen](./destinations-faq.md)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
