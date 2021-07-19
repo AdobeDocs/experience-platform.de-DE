@@ -3,10 +3,10 @@ title: Installieren des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie das Experience Platform Web SDK installieren.
 keywords: Web SDK-Installation;Web SDK installieren;Internet Explorer;Zusage;npm-Paket
 exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: fccad34ad4ad028c7b34356dec7bb34892396317
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 30%
+source-wordcount: '928'
+ht-degree: 31%
 
 ---
 
@@ -20,7 +20,7 @@ Es werden drei Möglichkeiten zur Verwendung des Adobe Experience Platform Web S
 
 ## Option 1: Installieren der Adobe Experience Platform Launch-Erweiterung
 
-Informationen zur Adobe Experience Platform Launch-Erweiterung finden Sie in der [Launch-Dokumentation](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+Informationen zur Adobe Experience Platform Launch-Erweiterung finden Sie in der [Launch-Dokumentation](../../tags/extensions/web/sdk/overview.md)
 
 ## Option 2: Installieren der vordefinierten eigenständigen Version
 
@@ -35,7 +35,7 @@ Beispiel:
 * Nicht minimiert: [https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.5.0/alloy.js)
 
 
-### Code {#adding-the-code} hinzufügen
+### Code hinzufügen {#adding-the-code}
 
 Die vordefinierte eigenständige Version erfordert einen &quot;Basis-Code&quot;, der direkt zur Seite hinzugefügt wird. Kopieren Sie den folgenden &quot;Basis-Code&quot;so weit wie möglich in das `<head>` -Tag Ihres HTML-Codes:
 
