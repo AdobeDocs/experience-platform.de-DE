@@ -3,9 +3,9 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 6b3548e2db596d56aeacec8f2d5cdd29ddc09bf2
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '779'
 ht-degree: 9%
 
 ---
@@ -65,7 +65,7 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Befolgen Sie die Anweisungen unter [Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. Hier finden Sie eine [Schnellstartanleitung zum Platform launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
+1. Befolgen Sie die Anweisungen unter [Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. Hier finden Sie eine [Schnellstartanleitung zum Platform launch](../../../tags/quick-start/quick-start.md)).
 1. [Konfigurieren Sie das ](../../fundamentals/configuring-the-sdk.md) SDK für Offer decisioning. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
 
    * Eigenständig installiertes SDK
@@ -83,26 +83,26 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
          ```
    * platform launch installiertes SDK
 
-      1. [Erstellen einer Platform launch-Eigenschaft](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      1. [Erstellen einer Platform launch-Eigenschaft](../../../tags/ui/administration/companies-and-properties.md)
       1. [Platform launch-Einbettungscode hinzufügen](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem soeben erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen finden Sie in der Dokumentation zu [extensions](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
+      1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem soeben erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen finden Sie in der Dokumentation zu [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Erstellen Sie die erforderlichen [Datenelemente](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html). Sie müssen mindestens eine Platform Web SDK Identity Map und ein Platform Web SDK XDM Object -Datenelement erstellen.
+      1. Erstellen Sie die erforderlichen [Datenelemente](../../../tags/ui/managing-resources/data-elements.md). Sie müssen mindestens eine Platform Web SDK Identity Map und ein Platform Web SDK XDM Object -Datenelement erstellen.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
 
-      1. Erstellen Sie Ihre [Regeln](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+      1. Erstellen Sie Ihre [Regeln](../../../tags/ui/managing-resources/rules.md).
 
          * Fügen Sie die Aktion &quot;Ereignis senden&quot;des Platform Web SDK hinzu und fügen Sie die relevante `decisionScopes` zur Konfiguration dieser Aktion hinzu.
 
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [Erstellen und veröffentlichen Sie eine ](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) Bibliothek mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
+      1. [Erstellen und veröffentlichen Sie eine ](../../../tags/ui/publishing/libraries.md) Bibliothek mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
 
 
 
@@ -140,7 +140,7 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
 | Eigenschaft | Erforderlich | Beschreibung | Beschränkungen | Beispiel |
 |---|---|---|---|---|
 | `identityMap` | Ja | Weitere Informationen finden Sie in der [Dokumentation zum Identity Service](../../identity/overview.md). | Eine Identität pro Anfrage. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
-| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximal 30 `decisionScopes` pro Anfrage. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximal 30 `decisionScopes` pro Anforderung. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Antwort**
 
