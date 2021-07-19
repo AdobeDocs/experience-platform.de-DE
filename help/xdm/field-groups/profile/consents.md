@@ -4,9 +4,9 @@ title: Einverständnis und Voreinstellungsfeldgruppe
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Einwilligungen und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '2316'
+source-wordcount: '2317'
 ht-degree: 2%
 
 ---
@@ -401,4 +401,4 @@ In der folgenden Tabelle sind die für `preferred` zulässigen Werte aufgeführt
 
 ### Vollständiges Schema [!UICONTROL Einverständnisse und Voreinstellungen] {#full-schema}
 
-Das vollständige Schema für die Feldergruppe [!UICONTROL Einverständnisse und Voreinstellungen] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+Das vollständige Schema für die Feldergruppe [!UICONTROL Einverständnisse und Voreinstellungen] finden Sie im [offiziellen XDM-Repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
