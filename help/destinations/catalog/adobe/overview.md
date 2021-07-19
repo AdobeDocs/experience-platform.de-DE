@@ -1,44 +1,44 @@
 ---
-keywords: Ziele;Erlebnis-Cloud-Lösungen; Zielgruppe;Bestimmungsort der Zielgruppe; Anzeigenwolke; Werbekloud; Audience-Manager; Zielort der adobe-Zielgruppe; Zielgruppe; Bestimmungsort des Audience-Managers;
+keywords: Ziele; Experience Cloud-Lösungen; Zielgruppe; Zielbestimmung; Adcloud; Werbe-Cloud; Audience Manager; Adobe Target-Ziel; Zielgruppe; Audience Manager-Ziel;
 title: Adobe-Ziele – Übersicht
-description: Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
-translation-type: tm+mt
-source-git-commit: 48c5f6d6a45de5f7982543f7a43cb4ece8cf3a9f
+description: Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
+exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
+source-git-commit: d42756bcfaa4c420362e60672b097ae667a8782b
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 23%
+source-wordcount: '223'
+ht-degree: 26%
 
 ---
 
-
 # Adobe-Ziele – Übersicht {#adobe-destinations}
 
-Verwalten Sie Ihre Kundenerfahrung, indem Sie Ihre Daten in Adobe Experience Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
+Verwalten Sie Ihr Kundenerlebnis, indem Sie Ihre Daten in Adobe Experience Platform mit anderen Adobe Experience Cloud-Lösungen für Anzeigen-Targeting, Personalisierung, Marketing-Automatisierung und mehr verbinden.
 
 ## Verbindungen
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite &quot;Zieltypen und Kategorien&quot;.
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Verbindungen](../../destination-types.md#connections) auf der Seite Zieltypen und -kategorien .
 
 - [Adobe Campaign-Verbindung](../email-marketing/adobe-campaign.md)
+- [Marketo Engage-Verbindung](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ## Erweiterungen
 
-Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Erweiterungen](../../destination-types.md#extensions) auf der Seite &quot;Zieltypen und Kategorien&quot;.
+Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie unter [Erweiterungen](../../destination-types.md#extensions) auf der Seite Zieltypen und Kategorien .
 
-- [Adobe Advertising Cloud-Erweiterung](../advertising/adobe-advertising-cloud.md)
+- [Adobe Advertising Cloud-Erweiterung](../advertising/adobe-advertising-cloud.md)
 - [Adobe Analytics-Erweiterung](../analytics/adobe-analytics.md)
 - [Adobe Livefyre-Erweiterung](../social/adobe-livefyre.md)
-- [Adobe Media Analytics für Audio und Video – Erweiterung](../analytics/adobe-video-analytics.md)
+- [Adobe Media Analytics für Audio und Video-Erweiterung](../analytics/adobe-video-analytics.md)
 - [Adobe Target-Erweiterung](../personalization/adobe-target.md)
 - [Adobe Target v2-Erweiterung](../personalization/adobe-target-v2.md)
 - [Audience Manager DIL-Erweiterung](../data-management/aam-dil-extension.md)
-- [Experience Cloud ID Service-Erweiterung](../personalization/adobe-ecid.md)
+- [Experience Cloud ID-Diensterweiterung](../personalization/adobe-ecid.md)
 - [Marketo-Erweiterung](../email/marketo.md)
 - [Marketo Munchkin-Erweiterung](../email/marketo-munchkin.md)
 - [Marketo Web Personalization-Erweiterung](../personalization/marketo-web-personalization.md)
 
-## Segmentfreigabe für Experience Platformen
+## Segmentfreigabe in Experience Platformen
 
-Verwenden Sie die Segmentfreigabefunktion für Experience Platformen, um Ihre Experience Platformen an weitere Adoben freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Dokumentationsportal zum Audience Manager geöffnet):
+Verwenden Sie die Segmentfreigabe-Funktion der Experience Platform, um Ihre Experience Platform-Segmente für zusätzliche Adobe-Ziele freizugeben. Weitere Informationen finden Sie auf der folgenden Seite (wird im Audience Manager-Dokumentationsportal geöffnet):
 
-- [Segmentfreigabe für Experience Platformen mit Adobe Audience Manager, Adobe Advertising Cloud und Adobe Target über die Core Services-Integration](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+- [Segmentfreigabe in Experience Platform mit Adobe Audience Manager, Adobe Advertising Cloud und Adobe Target über die Integration von Core Services](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
