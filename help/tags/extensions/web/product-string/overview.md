@@ -1,9 +1,9 @@
 ---
 title: Adobe Analytics Product String-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Adobe Analytics Product String-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '524'
 ht-degree: 95%
 
 ---
@@ -93,4 +93,4 @@ Diese Aktion muss von der Aktion „Adobe Analytics - Set Variables“ begleitet
 ### Anforderungen
 
 * Eine objektbasierte [Datenschicht](https://theblog.adobe.com/data-layers-buzzword-best-practice/) mit Variablen für alle produktbezogenen Daten (wie Produkt-ID, Menge, Preis). Diese Erweiterung funktioniert nicht mit Array-basierten Datenschichten.
-* Die [Adobe Analytics](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html?lang=de)-Erweiterung muss installiert sein.
+* Die [Adobe Analytics](../analytics/overview.md)-Erweiterung muss installiert sein.
