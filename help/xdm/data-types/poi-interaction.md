@@ -5,9 +5,9 @@ title: POI-Interaktionsdatentyp
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp von POI Interaction.
 exl-id: 398f56d9-1802-458d-b565-4096beb5b014
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '188'
 ht-degree: 4%
 
 ---
@@ -28,5 +28,5 @@ ht-degree: 4%
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
-* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)
