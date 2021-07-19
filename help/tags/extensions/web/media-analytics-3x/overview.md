@@ -1,10 +1,10 @@
 ---
-title: Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung Übersicht
+title: Adobe Medien Analytics (3.x SDK) for Audio and Video - Übersicht
 description: Erfahren Sie mehr über die Adobe Medien Analytics (3.x SDK) for Audio and Video-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 573c13f5136a4efc3accf2838783a91ea914e949
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 89%
+source-wordcount: '768'
+ht-degree: 88%
 
 ---
 
@@ -51,7 +51,7 @@ Nachdem Sie alle drei der oben erwähnten Erweiterungen in Ihr Projekt mit aktiv
 | Export APIs to Window Object | Aktivieren oder Deaktivieren des Exports von Media Analytics-APIs für einen globalen Umfang |
 | Variable Name | Eine Variable, die Sie zum Exportieren von Media Analytics-APIs unter dem `window`-Objekt verwenden |
 
-**Erinnerung:** Für die MA-Erweiterung sind die [Analytics](../analytics/overview.md)- und [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html?lang=de)-Erweiterungen erforderlich. Sie müssen diese Erweiterungen auch Ihrer Erweiterungseigenschaft hinzufügen und konfigurieren.
+**Erinnerung:** Für die MA-Erweiterung sind die [Analytics](../analytics/overview.md)- und [Experience Cloud ID](../id-service/overview.md)-Erweiterungen erforderlich. Sie müssen diese Erweiterungen auch Ihrer Erweiterungseigenschaft hinzufügen und konfigurieren.
 
 ## Verwenden der MA-Erweiterung
 
@@ -109,4 +109,4 @@ Die MA-Erweiterung stellt `media` als gemeinsames Modul für andere Erweiterunge
 
 >[!NOTE]
 >
->**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [ Platform ](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
+>**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [ Platform ](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
