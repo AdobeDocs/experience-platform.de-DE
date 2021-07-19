@@ -5,10 +5,10 @@ title: Datentyp der Postanschrift
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für Postadresse.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 25%
+source-wordcount: '341'
+ht-degree: 24%
 
 ---
 
@@ -44,5 +44,5 @@ ht-degree: 25%
 
 Weitere Informationen zum Datentyp der Postanschrift finden Sie im öffentlichen XDM-Repository:
 
-* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
-* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
+* [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)
