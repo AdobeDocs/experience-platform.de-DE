@@ -3,10 +3,10 @@ title: Konfigurieren Ihres Datenspeichers für das Experience Platform Web SDK
 description: 'Erfahren Sie, wie Sie die Datenströme konfigurieren. '
 keywords: Konfiguration; Datastreams; datastreamId; edge; Edge; Edge-Konfigurations-ID; Umgebungseinstellungen; edgeConfigId; Identität; ID-Synchronisierung aktiviert; ID-Sync-Container-ID; Sandbox; Streaming-Inlet; Ereignis-Datensatz; Target; Client-Code; Eigenschaften-Token; Target-Umgebungs-ID; Cookie-Ziele; URL-Ziele; Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c3d66e50f647c2203fcdd5ad36ad86ed223733e3
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 0%
+source-wordcount: '896'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ Datenspeicher können in Adobe [!DNL Experience Platform Launch] mithilfe des Ko
 
 >[!NOTE]
 >
->Das Konfigurationstool für Datastreams steht Kunden auf der Zulassungsliste zur Verfügung, unabhängig davon, ob sie [!DNL Experience Platform Launch] als Tag-Manager verwenden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Experience Platform Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) in der [!DNL Experience Platform Launch] -Dokumentation.
+>Das Konfigurationstool für Datastreams steht Kunden auf der Zulassungsliste zur Verfügung, unabhängig davon, ob sie [!DNL Experience Platform Launch] als Tag-Manager verwenden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Experience Platform Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](../../tags/ui/administration/user-permissions.md) in der [!DNL Experience Platform Launch] -Dokumentation.
 
 Erstellen Sie einen Datastream, indem Sie oben rechts im Bildschirm auf **[!UICONTROL Neuer Datastream]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt. Die verfügbaren Einstellungen werden nachfolgend beschrieben.
 
@@ -83,7 +83,7 @@ Die eindeutige ID für ein Zielkonto. Um dies zu finden, navigieren Sie zu [!UIC
 
 ### [!UICONTROL Eigenschafts-Token]
 
-[!DNL Target] ermöglicht es Kunden, Berechtigungen durch die Verwendung von Eigenschaften zu steuern. Details finden Sie im Abschnitt [Unternehmensberechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) der [!DNL Target] -Dokumentation.
+[!DNL Target] ermöglicht es Kunden, Berechtigungen durch die Verwendung von Eigenschaften zu steuern. Details finden Sie im Abschnitt [Unternehmensberechtigungen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=de) der [!DNL Target] -Dokumentation.
 
 Das Eigenschafts-Token finden Sie unter [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Eigenschaften]
 
