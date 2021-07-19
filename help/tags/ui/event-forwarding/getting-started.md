@@ -1,9 +1,9 @@
 ---
 title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '906'
 ht-degree: 48%
 
 ---
@@ -110,7 +110,7 @@ Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und ko
 
 1. Wählen Sie die Edge-Domäne aus.
 
-Weitere Konfigurationsoptionen finden Sie in der [Dokumentation zur Web SDK-Erweiterung](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html?lang=de).
+Weitere Konfigurationsoptionen finden Sie in der [Dokumentation zur Web SDK-Erweiterung](../../extensions/web/sdk/overview.md).
 
 ## Erstellen einer Tag-Regel zum Senden von Daten an das Platform Web SDK
 
