@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: daefd977cd09bd9cd7f8d6101b45be98f30d24ae
-workflow-type: ht
-source-wordcount: '437'
-ht-degree: 100%
+source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+workflow-type: tm+mt
+source-wordcount: '492'
+ht-degree: 88%
 
 ---
 
@@ -24,6 +24,10 @@ Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Date
 - Vorschau der Daten, wie sie in der Datenvorbereitung bearbeitet werden
 
 Die Datenvorbereitung wendet außerdem mehrere intrinsische Datenvalidierungen an, um sicherzustellen, dass die Integrität der Daten bei der Aufnahme erhalten bleibt. Sofern möglich, ordnet die Datenvorbereitung die eingehenden Daten-Schemas automatisch XDM zu. Dateningenieure können die vorgeschlagenen Zuordnungen ändern, korrigieren und löschen und sie gegebenenfalls durch andere Zuordnungen ersetzen.
+
+>[!NOTE]
+>
+>Sofern die resultierende Nachricht kein ungültiges XDM ist, führen Transformationsfehler in der Datenvorbereitung dazu, dass diese Attribute auf `null` gesetzt werden, während der Rest der Zeile erfasst wird. Wenn die Zeile nicht zu ungültigem XDM aufgelöst wird, wird die Zeile **nicht** erfasst. In beiden Fällen wird der Fehler dokumentiert.
 
 ## Zuordnung
 
