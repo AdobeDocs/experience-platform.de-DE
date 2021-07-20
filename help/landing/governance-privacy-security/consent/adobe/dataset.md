@@ -5,9 +5,9 @@ title: Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Prä
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie ein Experience-Datenmodell (XDM)-Schema und einen -Datensatz konfigurieren, um Einwilligungs- und Präferenzdaten in Adobe Experience Platform zu erfassen.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: ff793c207a181ca6d2486e7fd6ef5c4f57744fba
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1482'
+source-wordcount: '1480'
 ht-degree: 4%
 
 ---
@@ -116,7 +116,7 @@ Die Arbeitsfläche wird wieder angezeigt und zeigt an, dass das `consents`-Objek
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-Wenn das bearbeitete Schema von dem [!UICONTROL Profildatensatz] verwendet wird, der in Ihrer Platform Web SDK-Edge-Konfiguration angegeben ist, enthält dieser Datensatz jetzt die neuen Einwilligungsfelder. Sie können jetzt zum [Handbuch zur Verarbeitung von Einwilligungen](./overview.md#merge-policies) zurückkehren, um die Konfiguration der Experience Platform zur Verarbeitung von Einwilligungsdaten fortzusetzen.
+Wenn das bearbeitete Schema vom [!UICONTROL Profildatensatz] verwendet wird, der im Datastream des Platform Web SDK angegeben ist, enthält dieser Datensatz jetzt die neuen Einwilligungsfelder. Sie können jetzt zum [Handbuch zur Verarbeitung von Einwilligungen](./overview.md#merge-policies) zurückkehren, um die Konfiguration der Experience Platform zur Verarbeitung von Einwilligungsdaten fortzusetzen.
 
 Wenn Sie keinen Datensatz für dieses Schema erstellt haben, führen Sie die Schritte im nächsten Abschnitt aus.
 
@@ -150,7 +150,7 @@ Wählen Sie abschließend **[!UICONTROL Aktivieren]** im Bestätigungs-Popup aus
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, das Platform Web SDK zum Senden von Zustimmungsdaten an Profile zu verwenden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] auswählen, wenn Sie Ihre [Edge-Konfiguration](../../../../edge/fundamentals/datastreams.md) einrichten.
+Der Datensatz wird jetzt gespeichert und für die Verwendung in [!DNL Profile] aktiviert. Wenn Sie planen, das Platform Web SDK zum Senden von Zustimmungsdaten an Profile zu verwenden, müssen Sie diesen Datensatz als [!UICONTROL Profildatensatz] beim Einrichten Ihres [Datastreams](../../../../edge/fundamentals/datastreams.md) auswählen.
 
 ## Nächste Schritte
 
