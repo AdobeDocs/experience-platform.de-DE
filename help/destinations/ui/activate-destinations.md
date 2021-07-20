@@ -6,10 +6,10 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 7a1cd379eb002f92c19fbe0e569d5fac90ab5334
+source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
 workflow-type: tm+mt
-source-wordcount: '2888'
-ht-degree: 12%
+source-wordcount: '3054'
+ht-degree: 11%
 
 ---
 
@@ -143,6 +143,21 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, damit Ihre e
 ![Exportieren von vollständigen Dateien](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Verwenden Sie den Selektor **[!UICONTROL Häufigkeit]**, um zwischen einmaligen (**[!UICONTROL Einmal]**) oder **[!UICONTROL Täglichen]** Exporten zu wählen. Durch den Export einer vollständigen Datei **[!UICONTROL Täglich]** wird die Datei täglich vom Startdatum bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST) exportiert.
+
+   >[!IMPORTANT]
+   >
+   >Beim Festlegen des Start- und Enddatums gibt das **[!UICONTROL Startdatum]** an, wann die Dateiexporte planmäßig beginnen sollen, und das **[!UICONTROL Enddatum]** gibt an, wann die Dateiexporte angehalten werden sollen. Die Dateiexporte beginnen am **[!UICONTROL Startdatum]**, enthalten jedoch nicht das **[!UICONTROL Enddatum]**.
+   >
+   >Wenn Sie beispielsweise den folgenden Zeitplan festlegen:
+   >
+   >* Export: Inkrementell alle 3 Stunden
+   >* Startdatum: 19.07.19
+   >* Enddatum: 21.07.21
+
+   >
+   >Der Export der Dateien beginnt am 19.7.2019 und endet am 20.7.20 um 23:59:59 UTC. Am 21.7.2010 werden keine Dateien bereitgestellt.
+
+
 2. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll. Durch den Export einer Datei **[!UICONTROL Täglich]** wird die Datei täglich vom Startdatum bis zum Enddatum zum ausgewählten Zeitpunkt exportiert.
 
    >[!IMPORTANT]
@@ -167,11 +182,27 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]** aus, damit Ihre e
 ![Inkrementelle Dateien exportieren](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. Verwenden Sie den Selektor **[!UICONTROL Häufigkeit]**, um zwischen **[!UICONTROL täglichen]** oder **[!UICONTROL stündlichen]** Exporten zu wählen. Durch den Export einer inkrementellen Datei **[!UICONTROL Täglich]** wird die Datei täglich vom Startdatum bis zum Enddatum um 22:00 Uhr UTC (07:00 Uhr EST) exportiert.
+
+
+   >[!IMPORTANT]
+   >
+   >Beim Festlegen des Start- und Enddatums gibt das **[!UICONTROL Startdatum]** an, wann die Dateiexporte planmäßig beginnen sollen, und das **[!UICONTROL Enddatum]** gibt an, wann die Dateiexporte angehalten werden sollen. Die Dateiexporte beginnen am **[!UICONTROL Startdatum]**, enthalten jedoch nicht das **[!UICONTROL Enddatum]**.
+   >
+   >Wenn Sie beispielsweise den folgenden Zeitplan festlegen:
+   >
+   >* Export: Inkrementell alle 3 Stunden
+   >* Startdatum: 19.07.19
+   >* Enddatum: 21.07.21
+
+   >
+   >Der Export der Dateien beginnt am 19.7.2019 und endet am 20.7.20 um 23:59:59 UTC. Am 21.7.2010 werden keine Dateien bereitgestellt.
+
    * Verwenden Sie bei der Auswahl von **[!UICONTROL Stündlich]** den Selektor **[!UICONTROL Jedes]**, um zwischen den Optionen **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]** und **[!UICONTROL 12]** zu wählen.
 
       >[!IMPORTANT]
       >
       >Die Option, inkrementelle Dateien alle 3, 6, 8 oder 12 Stunden zu exportieren, befindet sich derzeit in der Beta-Phase und steht nur einer bestimmten Anzahl von Kunden zur Verfügung. Nicht-Beta-Kunden können inkrementelle Dateien einmal täglich exportieren.
+
 
 2. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll.
 
