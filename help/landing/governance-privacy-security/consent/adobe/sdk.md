@@ -1,111 +1,110 @@
 ---
-title: Verarbeiten von Kundenbestätigungsdaten mit dem Adobe Experience Platform Web SDK
+title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platform Web SDK
 topic-legacy: getting started
-description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK zur Verarbeitung von Daten zur Kundengenehmigung in Adobe Experience Platform mit dem Adobe 2.0-Standard integrieren.
+description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform mit dem Adobe 2.0-Standard zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '1243'
-ht-degree: 0%
+source-wordcount: '1237'
+ht-degree: 3%
 
 ---
 
-# Integrieren Sie das Platform Web SDK, um Daten zur Kundeneinwilligung unter Verwendung des Adobe 2.0-Standards zu verarbeiten.
+# Integrieren des Platform Web SDK zur Verarbeitung von Kundeneinwilligungsdaten mithilfe des Adobe 2.0-Standards
 
-Mit dem Adobe Experience Platform Web SDK können Sie von CMPs (Consent Management Platforms) generierte Zustimmungssignale abrufen und sie an Adobe Experience Platform senden, sobald ein Ereignis zur Änderung der Einwilligung eintritt.
+Mit dem Adobe Experience Platform Web SDK können Sie von Consent Management Platforms (CMP) generierte Zustimmungssignale von Kunden abrufen und an Adobe Experience Platform senden, sobald ein Zustimmungsänderungsereignis eintritt.
 
-**Das SDK kann nicht standardmäßig mit CMPs verknüpft werden**. Es liegt an Ihnen, zu bestimmen, wie das SDK in Ihre Website integriert werden soll, auf Änderungen der Zustimmung im CMP zu hören und den entsprechenden Befehl aufzurufen. Dieses Dokument enthält allgemeine Anleitungen zur Integration des CMP in das Platform Web SDK.
+**Das SDK verfügt nicht standardmäßig** über eine Schnittstelle mit CMPs. Sie müssen bestimmen, wie das SDK in Ihre Website integriert werden kann, auf Zustimmungsänderungen in der CMP warten und den entsprechenden Befehl aufrufen. Dieses Dokument enthält allgemeine Anleitungen zur Integration Ihres CMP mit dem Platform Web SDK.
 
 ## Voraussetzungen
 
-In diesem Lernprogramm wird davon ausgegangen, dass Sie bereits ermittelt haben, wie in Ihrem CMP Genehmigungsdaten generiert werden, und dass Sie einen Datensatz mit Einwilligungsfeldern erstellt haben, die für das Echtzeit-Profil von Kunden aktiviert wurden. Weitere Informationen zu diesen Schritten finden Sie in der Übersicht über die [Verarbeitung der Einwilligung in Experience Platform](./overview.md), bevor Sie zu diesem Handbuch zurückkehren.
+In diesem Tutorial wird davon ausgegangen, dass Sie bereits ermittelt haben, wie Einwilligungsdaten in Ihrer CMP generiert werden, und einen Datensatz mit Einwilligungsfeldern erstellt haben, der für das Echtzeit-Kundenprofil aktiviert wurde. Weitere Informationen zu diesen Schritten finden Sie in der Übersicht über die [Verarbeitung der Einwilligung in Experience Platform](./overview.md) , bevor Sie zu diesem Handbuch zurückkehren.
 
-Darüber hinaus erfordert dieses Handbuch ein Verständnis der Adobe Experience Platform Launch-Erweiterungen und ihrer Installation in Webanwendungen. Weitere Informationen finden Sie in der folgenden Dokumentation:
+Darüber hinaus setzt dieses Handbuch ein Verständnis der Adobe Experience Platform Launch-Erweiterungen und deren Installation in Webanwendungen voraus. Weitere Informationen finden Sie in der folgenden Dokumentation:
 
-* [platform launch - Übersicht](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Schnellstartanleitung](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
-* [Veröffentlichungsübersicht](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
+* [platform launch - Übersicht](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=de)
+* [Schnellstartanleitung](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html?lang=de)
+* [Veröffentlichungsübersicht](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=de)
 
-## Einrichten einer Edge-Konfiguration
+## Einrichten eines Datastreams
 
-Damit das SDK Daten an die Experience Platform senden kann, müssen Sie über eine in Adobe Experience Platform Launch eingerichtete Edge-Konfiguration für die Plattform verfügen. Darüber hinaus müssen die für die Konfiguration ausgewählten [!UICONTROL Profil-Dataset] standardisierte Kennwortfelder enthalten.
+Damit das SDK Daten an Experience Platform senden kann, muss in Adobe Experience Platform Launch ein vorhandener Datastream für Platform eingerichtet sein. Darüber hinaus muss der [!UICONTROL Profildatensatz], den Sie für die Konfiguration auswählen, standardisierte Einwilligungsfelder enthalten.
 
-Nachdem Sie eine neue Konfiguration erstellt oder eine vorhandene zur Bearbeitung ausgewählt haben, klicken Sie auf die Umschalter neben **[!UICONTROL Adobe Experience Platform]**. Verwenden Sie anschließend die unten aufgeführten Werte, um das Formular auszufüllen.
+Nachdem Sie eine neue Konfiguration erstellt oder eine vorhandene zur Bearbeitung ausgewählt haben, wählen Sie die Umschalter-Schaltfläche neben **[!UICONTROL Adobe Experience Platform]** aus. Verwenden Sie anschließend die unten aufgeführten Werte, um das Formular auszufüllen.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Edge-Konfigurationsfeld | Wert |
+| Datenspeicherfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../../sandboxes/home.md), die die erforderliche Streaming-Verbindung und die zum Einrichten der Edge-Konfiguration erforderlichen Datensätze enthält. |
-| [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung zur Experience Platform. Sehen Sie sich das Lernprogramm unter [Erstellen einer Streaming-Verbindung](../../../../ingestion/tutorials/create-streaming-connection-ui.md) an, wenn Sie keinen vorhandenen Streaming-Einlass haben. |
-| [!UICONTROL Ereignis DataSet] | Ein [!DNL XDM ExperienceEvent]-Datensatz, den Sie planen, Ereignis-Daten an die Verwendung des SDK zu senden. Sie müssen zwar einen Ereignis-Datensatz bereitstellen, um eine Plattformedge-Konfiguration zu erstellen, beachten Sie jedoch, dass das Senden von Genehmigungsdaten direkt über Ereignis derzeit nicht unterstützt wird. |
-| [!UICONTROL Profil DataSet] | Der [!DNL Profile]-aktivierte Datensatz mit den zuvor erstellten Feldern zur Kundengenehmigung. |
+| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../../sandboxes/home.md), die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
+| [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für die Experience Platform. Lesen Sie das Tutorial zu [Erstellen einer Streaming-Verbindung](../../../../ingestion/tutorials/create-streaming-connection-ui.md) , wenn Sie keinen vorhandenen Streaming-Inlet haben. |
+| [!UICONTROL Ereignis-Datensatz] | Ein [!DNL XDM ExperienceEvent] -Datensatz, an den Sie Ereignisdaten mit dem SDK senden möchten. Sie müssen zwar einen Ereignis-Datensatz bereitstellen, um einen Platform-Datenspeicher zu erstellen, beachten Sie jedoch, dass das direkte Senden von Zustimmungsdaten über Ereignisse derzeit nicht unterstützt wird. |
+| [!UICONTROL Profildatensatz] | Der [!DNL Profile]-aktivierte Datensatz mit Feldern zur Kundenzustimmung, den Sie zuvor erstellt haben. |
 
-Wenn Sie fertig sind, wählen Sie unten im Bildschirm **[!UICONTROL Speichern]** und folgen Sie den weiteren Eingabeaufforderungen, um die Konfiguration abzuschließen.
+Wählen Sie nach Abschluss des Vorgangs **[!UICONTROL Speichern]** am unteren Bildschirmrand aus und folgen Sie den weiteren Anweisungen, um die Konfiguration abzuschließen.
 
 
 ## Installieren und Konfigurieren der Platform Web SDK-Erweiterung
 
-Nachdem Sie eine Edge-Konfiguration wie im vorherigen Abschnitt beschrieben erstellt haben, müssen Sie die Platform Web SDK-Erweiterung konfigurieren, die Sie letztendlich auf Ihrer Site bereitstellen werden. Wenn die SDK-Erweiterung nicht auf Ihrer Platform launch-Eigenschaft installiert ist, wählen Sie **[!UICONTROL Erweiterungen]** in der linken Navigation und anschließend die Registerkarte **[!UICONTROL Katalog]**. Wählen Sie dann **[!UICONTROL Install]** unter der Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen.
+Nachdem Sie einen Datenspeicher erstellt haben, wie im vorherigen Abschnitt beschrieben, müssen Sie die Platform Web SDK-Erweiterung konfigurieren, die Sie letztendlich auf Ihrer Site bereitstellen werden. Wenn die SDK-Erweiterung nicht auf Ihrer Platform launch-Eigenschaft installiert ist, wählen Sie im linken Navigationsbereich **[!UICONTROL Erweiterungen]** und dann die Registerkarte **[!UICONTROL Katalog]** aus. Wählen Sie dann **[!UICONTROL Install]** unter der Platform SDK-Erweiterung in der Liste der verfügbaren Erweiterungen aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-Wählen Sie beim Konfigurieren des SDK unter **[!UICONTROL Edge Configurations]** die Konfiguration aus, die Sie im vorherigen Schritt erstellt haben.
+Wählen Sie beim Konfigurieren des SDK unter **[!UICONTROL Edge-Konfigurationen]** den Datastream aus, den Sie im vorherigen Schritt erstellt haben.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
-Wählen Sie **[!UICONTROL Speichern]**, um die Erweiterung zu installieren.
+Wählen Sie **[!UICONTROL Save]** aus, um die Erweiterung zu installieren.
 
-### Datenelement zum Festlegen der Standardgenehmigung erstellen
+### Erstellen eines Datenelements zum Festlegen der Standardzustimmung
 
-Wenn die SDK-Erweiterung installiert ist, können Sie ein Datenelement erstellen, das den standardmäßigen Datenerfassungs-Zustimmungswert (`collect.val`) für Ihre Benutzer darstellt. Dies kann nützlich sein, wenn Sie je nach Benutzer unterschiedliche Standardwerte haben möchten, z. B. `pending` für Benutzer europäischer Vereinigungen und `in` für Benutzer in Nordamerika.
+Wenn die SDK-Erweiterung installiert ist, können Sie ein Datenelement erstellen, das den standardmäßigen Datenerfassungs-Zustimmungswert (`collect.val`) für Ihre Benutzer darstellt. Dies kann nützlich sein, wenn Sie je nach Benutzer unterschiedliche Standardwerte haben möchten, z. B. `pending` für Benutzer der Europäischen Union und `in` für Benutzer in Nordamerika.
 
-In diesem Anwendungsfall können Sie Folgendes implementieren, um die Standardgenehmigung basierend auf der Region des Benutzers festzulegen:
+In diesem Anwendungsfall können Sie Folgendes implementieren, um die Standardzustimmung auf Grundlage der Region des Benutzers festzulegen:
 
-1. Legen Sie die Region des Benutzers auf dem Webserver fest.
-1. Richten Sie vor dem Platform launch-Skript-Tag (Einbettungscode) auf der Webseite ein separates Skript-Tag aus, das die Variable `adobeDefaultConsent` auf Grundlage der Benutzerregion festlegt.
-1. Richten Sie ein Datenelement ein, das die JavaScript-Variable `adobeDefaultConsent` verwendet, und verwenden Sie dieses Datenelement als Standardwert für die Zustimmung des Benutzers.
+1. Bestimmen Sie die Region des Benutzers auf dem Webserver.
+1. Rendern Sie vor dem Platform launch-Skript-Tag (Einbettungscode) auf der Web-Seite ein separates Skript-Tag, das eine `adobeDefaultConsent` -Variable basierend auf der Region des Benutzers festlegt.
+1. Richten Sie ein Datenelement ein, das die JavaScript-Variable `adobeDefaultConsent` verwendet, und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
 
-Wenn die Region des Benutzers durch einen CMP bestimmt wird, können Sie stattdessen die folgenden Schritte durchführen:
+Wenn die Region des Benutzers durch eine CMP bestimmt wird, können Sie stattdessen die folgenden Schritte verwenden:
 
 1. Behandeln Sie das Ereignis &quot;CMP geladen&quot;auf der Seite.
-1. Legen Sie im Ereignis-Handler die Variable `adobeDefaultConsent` auf Grundlage des Benutzerbereichs fest und laden Sie dann das Platform launch-Bibliotheksskript mit JavaScript.
-1. Richten Sie ein Datenelement ein, das die JavaScript-Variable `adobeDefaultConsent` verwendet, und verwenden Sie dieses Datenelement als Standardwert für die Zustimmung des Benutzers.
+1. Legen Sie im Ereignishandler eine `adobeDefaultConsent` -Variable auf Grundlage der Region des Benutzers fest und laden Sie dann das Platform launch-Bibliotheksskript mit JavaScript.
+1. Richten Sie ein Datenelement ein, das die JavaScript-Variable `adobeDefaultConsent` verwendet, und verwenden Sie dieses Datenelement als standardmäßigen Zustimmungswert für den Benutzer.
 
-Um ein Datenelement in der Platform launch-Benutzeroberfläche zu erstellen, wählen Sie **[!UICONTROL Datenelemente]** in der linken Navigation und dann **[!UICONTROL Hinzufügen Datenelement]**, um zum Dialogfeld zur Datenelementerstellung zu navigieren.
+Um ein Datenelement in der Platform launch-Benutzeroberfläche zu erstellen, wählen Sie im linken Navigationsbereich **[!UICONTROL Datenelemente]** und dann **[!UICONTROL Datenelement hinzufügen]** aus, um zum Dialogfeld für die Datenelementerstellung zu navigieren.
 
 Von hier aus müssen Sie ein [!UICONTROL JavaScript-Variable]-Datenelement erstellen, das auf `adobeDefaultConsent` basiert. Wählen Sie **[!UICONTROL Speichern]**, wenn Sie fertig sind.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfigurationsseite der Web SDK-Erweiterung. Wählen Sie im Abschnitt [!UICONTROL Datenschutz] **[!UICONTROL Von Datenelement]** bereitgestellt und wählen Sie im bereitgestellten Dialogfeld das zuvor erstellte Datenelement für die Standardgenehmigung aus.
+Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfigurationsseite der Web SDK-Erweiterung . Wählen Sie im Abschnitt [!UICONTROL Datenschutz] die Option **[!UICONTROL Wird durch Datenelement]** bereitgestellt und wählen Sie im bereitgestellten Dialogfeld das zuvor erstellte standardmäßige Datenelement für die Einwilligung aus.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### Bereitstellen der Erweiterung auf Ihrer Website
 
-Nachdem Sie die Erweiterung konfiguriert haben, kann sie in Ihre Website integriert werden. Detaillierte Informationen zum Bereitstellen des aktualisierten Bibliotheksaufbaus finden Sie im Handbuch [Veröffentlichung](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in der Platform launch.
+Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Detaillierte Informationen zum Bereitstellen des aktualisierten Bibliotheks-Builds finden Sie im [Publishing-Handbuch](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in der Platform launch-Dokumentation.
 
-## Befehle zum Ändern der Zustimmung
+## Festlegen von Befehlen zur Änderung der Zustimmung
 
-Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie Beginn mit dem Platform Web SDK `setConsent`-Befehl ausführen, um Genehmigungsdaten an die Plattform zu senden.
+Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit der Verwendung des Befehls `setConsent` des Platform Web SDK beginnen, um Zustimmungsdaten an Platform zu senden.
 
 Es gibt zwei Szenarien, in denen `setConsent` auf Ihrer Site aufgerufen werden sollte:
 
 1. Wenn die Einwilligung auf der Seite geladen wird (d. h. bei jedem Laden der Seite)
-1. Als Teil eines CMP-Haken- oder Ereignis-Listeners, der Änderungen in den Einstellungen für die Zustimmung erkennt
+1. Als Teil eines CMP-Hooks oder Ereignis-Listeners, der Änderungen in den Zustimmungseinstellungen erkennt
 
 >[!NOTE]
 >
->Eine Einführung in die gebräuchliche Syntax für Platform SDK-Befehle finden Sie im Dokument zu [Ausführen von Befehlen](../../../../edge/fundamentals/executing-commands.md).
+>Eine Einführung in die allgemeine Syntax für Platform SDK-Befehle finden Sie im Dokument zu [Ausführen von Befehlen](../../../../edge/fundamentals/executing-commands.md).
 
 Der Befehl `setConsent` erwartet zwei Argumente:
 
-1. Eine Zeichenfolge, die den Befehlstyp angibt (in diesem Fall `"setConsent"`)
-1. Ein Payload-Objekt, das eine einzelne Array-Eigenschaft enthält: `consent`. Das `consent`-Array muss mindestens ein Objekt enthalten, das die erforderlichen Felder für die Zustimmung für den Adobe-Standard bereitstellt.
+1. Eine Zeichenfolge, die den Befehlstyp angibt (in diesem Fall `"setConsent"`).
+1. Ein Payload-Objekt, das eine einzelne Eigenschaft vom Typ Array enthält: `consent`. Das Array `consent` muss mindestens ein Objekt enthalten, das die erforderlichen Einwilligungsfelder für den Adobe-Standard bereitstellt.
 
-Die erforderlichen Felder für die Zustimmung zum Standardaufruf der Adobe sind im folgenden Beispiel dargestellt:`setConsent`
+Die erforderlichen Einwilligungsfelder für den Adobe-Standard sind im folgenden Beispiel für den Aufruf `setConsent` dargestellt:
 
 ```js
 alloy("setConsent", {
@@ -135,14 +134,14 @@ alloy("setConsent", {
 | Payload-Eigenschaft | Beschreibung |
 | --- | --- |
 | `standard` | Der verwendete Zustimmungsstandard. Für den Adobe-Standard muss dieser Wert auf `Adobe` gesetzt werden. |
-| `version` | Die Versionsnummer des Zustimmungsstandards, die unter `standard` angegeben ist. Dieser Wert muss auf `2.0` gesetzt werden, damit die Adobe-Standard-Verarbeitung der Zustimmung ausgeführt werden kann. |
-| `value` | Die aktualisierten Informationen zum Einverständnis des Kunden, die als XDM-Objekt bereitgestellt werden, das der Struktur der Einwilligungsfelder des Profil-aktivierten Datensatzes entspricht. |
+| `version` | Die Versionsnummer des Zustimmungsstandards, angegeben unter `standard`. Dieser Wert muss auf `2.0` gesetzt werden, damit die Zustimmungsverarbeitung nach Adobe-Standard erfolgt. |
+| `value` | Die aktualisierten Zustimmungsinformationen des Kunden, die als XDM-Objekt bereitgestellt werden, das der Struktur der Einwilligungsfelder des Profilaktivierten Datensatzes entspricht. |
 
 >[!NOTE]
 >
->Wenn Sie andere Zustimmungsstandards in Verbindung mit `Adobe` (z. B. `IAB TCF`) verwenden, können Sie dem `consent`-Array für jeden Standard weitere Objekte hinzufügen. Jedes Objekt muss geeignete Werte für `standard`, `version` und `value` für den von ihnen repräsentierten Zustimmungsstandard enthalten.
+>Wenn Sie andere Zustimmungsstandards zusammen mit `Adobe` verwenden (z. B. `IAB TCF`), können Sie dem `consent`-Array für jeden Standard zusätzliche Objekte hinzufügen. Jedes Objekt muss die entsprechenden Werte für `standard`, `version` und `value` für den Zustimmungsstandard enthalten, den sie darstellen.
 
-Das folgende JavaScript zeigt eine Funktion, die Änderungen der Voreinstellungen für die Einwilligung auf einer Website verarbeitet, die als Rückruf in einem Ereignis-Listener oder CMP-Haken verwendet werden kann:
+Das folgende JavaScript zeigt ein Beispiel für eine Funktion, die Änderungen der Zustimmungsvoreinstellungen auf einer Website verarbeitet, die als Rückruf in einem Ereignis-Listener oder CMP-Erweiterungspunkt verwendet werden kann:
 
 ```js
 var setConsent = function () {
@@ -186,8 +185,8 @@ var setConsent = function () {
 
 ## Umgang mit SDK-Antworten
 
-Alle [!DNL Platform SDK]-Befehle geben Versprechungen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsmeldungen an den Kunden. Genaue Beispiele finden Sie im Abschnitt [Handhabung von Erfolg oder Fehler](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) im Handbuch zum Ausführen von SDK-Befehlen.
+Alle [!DNL Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Spezifische Beispiele finden Sie im Abschnitt [Umgang mit Erfolg oder Fehler](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) im Handbuch zum Ausführen von SDK-Befehlen .
 
 ## Nächste Schritte
 
-Durch Befolgen dieses Handbuchs haben Sie die Plattform Web SDK-Erweiterung so konfiguriert, dass die Genehmigungsdaten an die Experience Platform gesendet werden. Sie können nun zur Übersicht über die Verarbeitung der Einwilligung zurückkehren, um Anweisungen zum [Testen Ihrer Implementierung](./overview.md#test-implementation) zu erhalten.
+In diesem Handbuch haben Sie die Platform Web SDK-Erweiterung so konfiguriert, dass Einwilligungsdaten an Experience Platform gesendet werden. Sie können jetzt zur Übersicht über die Zustimmungsverarbeitung zurückkehren, um zu erfahren, wie Sie Ihre Implementierung testen können.](./overview.md#test-implementation)[
