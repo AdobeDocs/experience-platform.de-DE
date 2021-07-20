@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Die neuesten Versionshinweise für die Adobe Target v2-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: ae6b69ecea54942c1bbf8a2765768bac50a8b930
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 78%
+source-wordcount: '572'
+ht-degree: 62%
 
 ---
 
@@ -13,6 +13,30 @@ ht-degree: 78%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 20. Juli 2021
+
+### Adobe Target v2-Erweiterung 0.15.1
+
+- Fehlerkorrektur - Es wurde ein Problem mit einem &quot;`stringify`&quot;-Funktionsnamen behoben, das dazu führte, dass falsche UUID-Werte für `sessionId`, `requestId` usw. generiert wurden.
+
+## 16. Juli 2021
+
+### Adobe Target v2-Erweiterung 0.15.0
+
+- Fügen Sie das Attribut secure zu Cookies hinzu, sobald die Einstellungen von at.js secureOnly auf true festgelegt sind.
+- Antwort-Token sind jetzt bei Verwendung von `triggerView()` verfügbar
+- Es wurde ein Fehler im Zusammenhang mit dem `CONTENT_RENDERING_NO_OFFERS`-Ereignis behoben. Jetzt wird sie korrekt ausgelöst, wenn kein Inhalt von Target zurückgegeben wird
+- Details zu A4T-Klickmetriken werden bei der Verwendung von Vorabruf-Anfragen korrekt zurückgegeben
+- Die UUID-Generierung verwendet nicht mehr `Math.random()`, sondern verlässt sich auf `window.crypto`
+- `sessionId` Cookie-Ablauf wird bei jedem Netzwerkaufruf korrekt verlängert
+- Die Initialisierung des SPA-Cache wird jetzt korrekt verarbeitet und berücksichtigt `viewsEnable`-Einstellungen
+
+## 2. Juni 2021
+
+### Adobe Target v2-Erweiterung 0.14.2
+
+- Behebung eines Fehlers, durch den das endgültige Launch-Bundle zwei at.js-Versionen enthält, eine mit On-Device Decisioning und eine ohne.
 
 ## 19. Mai 2021
 
