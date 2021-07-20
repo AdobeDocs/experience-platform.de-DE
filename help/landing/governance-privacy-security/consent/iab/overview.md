@@ -5,9 +5,9 @@ title: IAB TCF 2.0-Unterstützung für Experience Platform
 topic-legacy: privacy events
 description: Erfahren Sie, wie Sie Ihre Datenvorgänge und Schemata konfigurieren, um bei der Aktivierung von Segmenten für Ziele in Adobe Experience Platform Auswahlmöglichkeiten für die Kundenzustimmung zu vermitteln.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: a3468d55d95b89c075abf91391bd7dfaa974742c
+source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
 workflow-type: tm+mt
-source-wordcount: '2564'
+source-wordcount: '2559'
 ht-degree: 0%
 
 ---
@@ -117,15 +117,15 @@ Nachdem Sie Ihre CMP zur Generierung von Zustimmungszeichenfolgen konfiguriert h
 
 **Das SDK verfügt nicht standardmäßig** über eine Schnittstelle mit CMPs. Sie müssen bestimmen, wie das SDK in Ihre Website integriert werden kann, auf Zustimmungsänderungen in der CMP warten und den entsprechenden Befehl aufrufen.
 
-### Neue Edge-Konfiguration erstellen
+### Neuen Datastream erstellen
 
-Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst eine neue Edge-Konfiguration für Platform in [!DNL Adobe Experience Platform Launch] erstellen. Spezifische Schritte zum Erstellen einer neuen Konfiguration finden Sie in der [SDK-Dokumentation](../../../../edge/fundamentals/datastreams.md).
+Damit das SDK Daten an Experience Platform senden kann, müssen Sie zunächst einen neuen Datastream für Platform in [!DNL Adobe Experience Platform Launch] erstellen. Spezifische Schritte zum Erstellen einer neuen Konfiguration finden Sie in der [SDK-Dokumentation](../../../../edge/fundamentals/datastreams.md).
 
 Nachdem Sie einen eindeutigen Namen für die Konfiguration angegeben haben, wählen Sie die Umschalter-Schaltfläche neben **[!UICONTROL Adobe Experience Platform]** aus. Verwenden Sie als Nächstes die folgenden Werte, um den Rest des Formulars auszufüllen:
 
-| Edge-Konfigurationsfeld | Wert |
+| Datenspeicherfeld | Wert |
 | --- | --- |
-| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../../sandboxes/home.md), die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten der Edge-Konfiguration enthält. |
+| [!UICONTROL Sandbox] | Der Name der Plattform [Sandbox](../../../../sandboxes/home.md), die die erforderliche Streaming-Verbindung und Datensätze zum Einrichten des Datastreams enthält. |
 | [!UICONTROL Streaming-Inlet] | Eine gültige Streaming-Verbindung für die Experience Platform. Lesen Sie das Tutorial zu [Erstellen einer Streaming-Verbindung](../../../../ingestion/tutorials/create-streaming-connection-ui.md) , wenn Sie keinen vorhandenen Streaming-Inlet haben. |
 | [!UICONTROL Ereignis-Datensatz] | Wählen Sie den Datensatz [!DNL XDM ExperienceEvent] aus, der im [vorherigen Schritt](#datasets) erstellt wurde. Wenn Sie die Feldergruppe [[!UICONTROL IAB TCF 2.0 Consent] ](../../../../xdm/field-groups/event/iab.md) im Schema dieses Datensatzes eingeschlossen haben, können Sie Einwilligungsänderungsereignisse im Laufe der Zeit mithilfe des Befehls [`sendEvent`](#sendEvent) verfolgen und diese Daten in diesem Datensatz speichern. Beachten Sie, dass die in diesem Datensatz gespeicherten Zustimmungswerte **nicht** in automatischen Durchsetzungs-Workflows verwendet werden. |
 | [!UICONTROL Profildatensatz] | Wählen Sie den Datensatz [!DNL XDM Individual Profile] aus, der im [vorherigen Schritt](#datasets) erstellt wurde. Wenn Sie mit dem Befehl [`setConsent`](#setConsent) auf CMP-Zustimmungs-Change-Hooks reagieren, werden die erfassten Daten in diesem Datensatz gespeichert. Da dieser Datensatz profilaktiviert ist, werden die in diesem Datensatz gespeicherten Zustimmungswerte bei automatischen Durchsetzungs-Workflows berücksichtigt. |
@@ -136,7 +136,7 @@ Wählen Sie nach Abschluss des Vorgangs **[!UICONTROL Speichern]** am unteren Bi
 
 ### Festlegen von Befehlen zur Änderung der Zustimmung
 
-Nachdem Sie die im vorherigen Abschnitt beschriebene Edge-Konfiguration erstellt haben, können Sie mit der Verwendung von SDK-Befehlen beginnen, um Zustimmungsdaten an Platform zu senden. Die folgenden Abschnitte enthalten Beispiele dafür, wie die einzelnen SDK-Befehle in verschiedenen Szenarien verwendet werden können.
+Nachdem Sie den im vorherigen Abschnitt beschriebenen Datastream erstellt haben, können Sie mit der Verwendung von SDK-Befehlen beginnen, um Zustimmungsdaten an Platform zu senden. Die folgenden Abschnitte enthalten Beispiele dafür, wie die einzelnen SDK-Befehle in verschiedenen Szenarien verwendet werden können.
 
 >[!NOTE]
 >
