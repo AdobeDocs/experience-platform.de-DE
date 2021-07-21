@@ -1,10 +1,10 @@
 ---
 title: Übersicht über Web SDK-Erweiterung
 description: Erfahren Sie mehr über die Web SDK-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: de35da5a2c59b3df310b928265f2acc3648e66e5
+source-git-commit: 934e74528a5bde72f3cbd216f56157b18f884cba
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 79%
+source-wordcount: '126'
+ht-degree: 77%
 
 ---
 
@@ -16,4 +16,4 @@ ht-degree: 79%
 
 Die Adobe Experience Platform Web SDK-Erweiterung sendet Daten aus Web-Eigenschaften über Adobe Experience Platform Edge Network an Adobe Experience Cloud. Die Platform Web SDK-Erweiterung ermöglicht das Streamen von Daten zu Platform, die Synchronisierung von Identitäten, das Opt-in und die automatische Erfassung von Kontextdaten.
 
-Weitere Informationen zum Konfigurieren der Platform Web-SDK-Erweiterung finden Sie in der [Dokumentation zu Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=de#extension).
+Weitere Informationen zum Konfigurieren der Platform Web-SDK-Erweiterung finden Sie in der [Dokumentation zu Adobe Experience Platform Web SDK](../../../../edge/extension/web-sdk-extension-configuration.md).
