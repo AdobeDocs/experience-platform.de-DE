@@ -1,9 +1,9 @@
 ---
 title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2646'
 ht-degree: 76%
 
 ---
@@ -22,7 +22,7 @@ Ein Erweiterungsmanifest muss Folgendes enthalten:
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Name der Erweiterung. Er muss sich von allen anderen Reactor-Erweiterungen unterscheiden und den [Benennungsregeln](#naming-rules) entsprechen. **Dies wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung Ihrer Erweiterung nicht mehr geändert werden.** |
+| `name` | Name der Erweiterung. Sie muss von allen anderen Erweiterungen eindeutig sein und den [Benennungsregeln](#naming-rules) entsprechen. **Dies wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung Ihrer Erweiterung nicht mehr geändert werden.** |
 | `platform` | Die Plattform für die Erweiterung. Der einzige Wert, der im Moment akzeptiert wird, lautet `web`. |
 | `version` | Die Version der Erweiterung. Sie muss dem Versionierungsformat [semver](http://semver.org/) entsprechen. Dies entspricht dem [npm-Feld version](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Der für Menschen lesbare Name der Erweiterung. Dies wird Platform-Benutzern angezeigt. Es ist nicht erforderlich, &quot;Tags&quot;oder &quot;Erweiterung&quot;zu erwähnen. -Benutzer wissen bereits, dass sie eine Tag-Erweiterung betrachten. |
