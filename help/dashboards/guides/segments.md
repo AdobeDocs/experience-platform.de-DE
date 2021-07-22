@@ -4,10 +4,10 @@ title: Segmente-Dashboard
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 2%
+source-wordcount: '982'
+ht-degree: 6%
 
 ---
 
@@ -39,9 +39,9 @@ Um in der Platform-Benutzeroberfläche zum Dashboard [!UICONTROL Segmente] zu na
 
 ### Ändern des Dashboards [!UICONTROL Segmente]
 
-Sie können das Erscheinungsbild des Dashboards [!UICONTROL Segmente] ändern, indem Sie **[!UICONTROL Dashboard ändern]** auswählen. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die [!UICONTROL Widget-Bibliothek] zugreifen, um verfügbare Widgets zu untersuchen und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
+Sie können das Erscheinungsbild des Dashboards [!UICONTROL Segmente] ändern, indem Sie **[!UICONTROL Dashboard ändern]** auswählen. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** zugreifen, um verfügbare Widgets zu untersuchen und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
 
-Weitere Informationen finden Sie in der Dokumentation [Dashboards ändern](../modify.md) und der [Widget-Bibliothek](../widget-library.md) .
+Weitere Informationen finden Sie in der Dokumentation [Dashboards ändern](../customize/modify.md) und [Widget-Bibliothek - Übersicht](../customize/widget-library.md) .
 
 ## Segment auswählen
 
@@ -61,9 +61,11 @@ Das Datum und die Uhrzeit der letzten Aktualisierung eines Widgets zeigen an, wa
 
 ![](../images/segments/widget-timestamp.png)
 
-## Verfügbare Widgets
+## Standard-Widgets
 
-Experience Platform bietet mehrere Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihrem Segment visualisieren können. Wählen Sie unten den Namen eines Widgets aus, um mehr zu erfahren:
+Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Segmenten visualisieren können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek] verwenden. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst die [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
+
+Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [[!UICONTROL Zielgruppengröße]](#audience-size)
 * [[!UICONTROL Zielgruppengrößentrend]](#audience-size-trend)
