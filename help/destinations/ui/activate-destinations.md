@@ -6,7 +6,7 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: 0162ec101c820c4870dea0f2c2bc09523eca862a
+source-git-commit: a28dc64cfe7f352a023aa2a5bd1156307bbad39f
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 11%
@@ -169,7 +169,7 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, damit Ihre e
 
 >[!IMPORTANT]
 >
->Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits exportiert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+>Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits gespeichert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 ### Inkrementelle Dateien exportieren {#export-incremental-files}
 
@@ -215,7 +215,7 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]** aus, damit Ihre e
 
 >[!IMPORTANT]
 >
->Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits exportiert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+>Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits gespeichert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 ### Dateinamen konfigurieren {#file-names}
 
