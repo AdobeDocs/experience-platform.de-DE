@@ -4,10 +4,10 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 6%
+source-wordcount: '895'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über da
 
 Eine Übersicht über Ziele sowie einen Katalog aller in Experience Platform verfügbaren Ziele finden Sie in der [Dokumentation zu Zielen](../../destinations/home.md).
 
-##  Dashboard-Zieldaten  {#destinations-dashboard-data}
+##  Dashboard-Zieldaten {#destinations-dashboard-data}
 
 Das Dashboard [!UICONTROL Ziele] zeigt eine Momentaufnahme der Ziele an, die Ihr Unternehmen in Experience Profile aktiviert hat. Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnappschussaufnahme aufgetreten sind. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und das Ziel-Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -35,9 +35,17 @@ Um in der Benutzeroberfläche von Platform zum Dashboard für Ziele zu navigiere
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Verfügbare Widgets
+### Ändern des Ziel-Dashboards
 
-Experience Platform bietet mehrere Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Zielen visualisieren können. Wählen Sie unten den Namen eines Widgets aus, um mehr zu erfahren:
+Sie können das Erscheinungsbild des Ziel-Dashboards ändern, indem Sie **[!UICONTROL Dashboard ändern]** auswählen. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** zugreifen, um verfügbare Widgets zu untersuchen und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
+
+Weitere Informationen finden Sie in der Dokumentation [Dashboards ändern](../customize/modify.md) und [Widget-Bibliothek - Übersicht](../customize/widget-library.md) .
+
+## Standard-Widgets
+
+Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenhang mit Ihren Zielen visualisieren können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek] verwenden. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst die [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
+
+Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [[!UICONTROL Am häufigsten verwendete Ziele]](#most-used-destinations)
 * [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
