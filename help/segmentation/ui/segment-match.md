@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 6%
@@ -12,11 +12,11 @@ ht-degree: 6%
 ---
 
 
-# (Alpha) [!DNL Segment Match] - Übersicht
+# (Beta) [!DNL Segment Match] - Übersicht
 
 >[!IMPORTANT]
 >
->[!DNL Segment Match] befindet sich derzeit in der Alpha-Phase. Die Dokumentation und Funktionalität können sich ändern.
+>[!DNL Segment Match] befindet sich derzeit in der Beta-Phase. Die Dokumentation und Funktionalität können sich ändern.
 
 Adobe Experience Platform Segment Match ist ein Dienst zur Segmentfreigabe, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können. [!DNL Segment Match] verwendet Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs.
 
