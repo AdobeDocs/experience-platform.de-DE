@@ -1,19 +1,18 @@
 ---
-title: Senden von Daten an Adobe Analytics mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Daten mit dem Adobe Experience Platform Web SDK an Adobe Analytics gesendet werden.
-keywords: adobe analytics;analytics;mapped data;mapped vars;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Senden von Daten an Adobe Analytics mithilfe des Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
+keywords: Adobe Analytics;Analytics;zugeordnete Daten;zugeordnete Vars;
+exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
+source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 61%
 
 ---
 
+# Senden von Daten an Adobe Analytics
 
-# Daten an Adobe Analytics senden
-
-Das Adobe Experience Platform [!DNL Web SDK] kann Daten an Adobe Analytics senden. Dies funktioniert durch die Übersetzung von `xdm` in ein Format, das Adobe Analytics verwenden kann.
+Die Adobe Experience Platform [!DNL Web SDK] kann Daten an Adobe Analytics senden. Dies funktioniert durch die Übersetzung von `xdm` in ein Format, das Adobe Analytics verwenden kann.
 
 ## Einrichten
 
@@ -21,7 +20,7 @@ Adobe Analytics nimmt die gesendeten Daten automatisch auf, wenn in der Benutzer
 
 ## Automatisch zugeordnete Daten
 
-Das Adobe Experience Platform [!DNL Edge Network] ordnet automatisch viele XDM-Variablen zu. Die vollständige Liste dieser Variablen ist [hier](automatically-mapped-vars.md) aufgeführt.
+Die Adobe Experience Platform [!DNL Edge Network] ordnet automatisch viele XDM-Variablen zu. Die vollständige Liste dieser Variablen ist [hier](automatically-mapped-vars.md) aufgeführt.
 
 ## Manuell zugeordnete Daten
 
@@ -67,4 +66,4 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 Hier ein Beispiel für eine Verarbeitungsregel, die diese Daten verwenden würde.
 
-![Benutzeroberfläche für Verarbeitungsregeln](../../../assets/edge_analytics_processing_rules.png)
+![Benutzeroberfläche für Verarbeitungsregeln](./assets/edge_analytics_processing_rules.png)
