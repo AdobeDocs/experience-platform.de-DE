@@ -1,43 +1,42 @@
 ---
 title: Automatisch zugeordnete Adobe Analytics-Variablen im Adobe Experience Platform Web SDK
 description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Experience Platform Web SDK zugeordnet werden.
-seo-description: Erfahren Sie, welche Variablen in Adobe Analytics mit dem Adobe Experience Platform Web SDK automatisch zugeordnet werden.
-keywords: adobe analytics;variables;analytics;automate map;automatisch zugeordnet;
+seo-description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit dem Adobe Experience Platform Web SDK zugeordnet werden.
+keywords: Adobe Analytics; Variablen; Analytics; automatische Zuordnung; automatisch zugeordnet;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-translation-type: tm+mt
-source-git-commit: 7a6a9f1ee764ab614fa163f90a2051bd35b76b7f
+source-git-commit: 2e004fdd87c8a74eb161ef7af93c7102953ea85c
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '708'
 ht-degree: 35%
 
 ---
 
-# Variablen werden automatisch in [!DNL Analytics] zugeordnet
+# Automatisch in [!DNL Analytics] zugeordnete Variablen
 
-Nachfolgend finden Sie eine Liste von Variablen, die Adobe Experience Platform Edge Network automatisch Adobe Analytics zuordnet.
+Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platform Edge Network automatisch Adobe Analytics zuordnet. Ausführliche Informationen zu den Adobe Analytics-Datenerfassungs-Abfrageparametern finden Sie im [Analytics-Implementierungshandbuch](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
 
 | XDM-Feldpfad | [!DNL Analytics Query String] / HTTP-Header | Beschreibung |
 | ---------- | ------------------------- | ----------------------------------------- |
 | `application.id` | `c.a.appid` | AppMeasurement-Kontextdatenzuordnung `c.a.appid`. |
 | `application.launches.value` | `c.a.launches` | AppMeasurement-Kontextdatenzuordnung `c.a.launches`. |
-| `commerce.checkouts.id` | `events` | `scCheckout` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.checkouts.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_CHECKOUT unter Verwendung des Trennzeichens `,`. |
+| `commerce.checkouts.id` | `events` | `scCheckout` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht zu ersetzenden Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.checkouts.value` | `events` | AppMeasurement Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_CHECKOUT, unter Verwendung des Trennzeichens `,`. |
 | `commerce.order.currencyCode` | `cc` | AppMeasurement-Abfrageparameter, CURRENCY-Zuordnung. |
 | `commerce.order.purchaseID` | `pi` | AppMeasurement Abfrageparameter, PURCHASEID-Zuordnung. |
-| `commerce.productListAdds.id` | `events` | `scAdd` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.productListAdds.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_HINZUFÜGEN unter Verwendung des Trennzeichens `,`. |
-| `commerce.productListOpens.id` | `events` | `scOpen` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.productListOpens.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_OPEN unter Verwendung des Trennzeichens `,`. |
-| `commerce.productListRemovals.id` | `events` | `scRemove` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.productListRemovals.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_REMOVE unter Verwendung des Trennzeichens `,`. |
-| `commerce.productListViews.id` | `events` | `scView` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.productListViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit der KonversionsCOMMERCE_SC_ANSICHT unter Verwendung des Trennzeichens `,`. |
-| `commerce.productViews.id` | `events` | `prodView` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht mehr verwendeten Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
-| `commerce.productViews.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit KonversionsCOMMERCE_Referrer_ANSICHT unter Verwendung des Trennzeichens `,`. |
-| `commerce.purchases.value` | `events` | AppMeasurement-Abfrage-Parameter EREIGNIS_LISTE_FULL-Zuordnung mit KonversionsCOMMERCE_PURCHASE unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListAdds.id` | `events` | `scAdd` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht zu ersetzenden Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListAdds.value` | `events` | AppMeasurement Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_ADD, unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListOpens.id` | `events` | `scOpen` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht zu ersetzenden Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListOpens.value` | `events` | AppMeasurement Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_OPEN, unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListRemovals.id` | `events` | `scRemove` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht zu ersetzenden Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListRemovals.value` | `events` | AppMeasurement Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_REMOVE, unter Verwendung des Trennzeichens `,`. |
+| `commerce.productListViews.id` | `events` | `scView` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht zu ersetzenden Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productListViews.value` | `events` | AppMeasurement Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_SC_VIEW, unter Verwendung des Trennzeichens `,`. |
+| `commerce.productViews.id` | `events` | `prodView` Ereignis-Serialisierung. Wenn dieses Feld ausgeschlossen wird (d. h. bei nicht zu ersetzenden Ereignissen), generiert das System einen eigenen ID-Wert und weist ihn der Entität zu. |
+| `commerce.productViews.value` | `events` | AppMeasurement-Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_PROD_VIEW, unter Verwendung des Trennzeichens `,`. |
+| `commerce.purchases.value` | `events` | AppMeasurement Abfrageparameter, EVENT_LIST_FULL-Zuordnung mit der Konvertierung COMMERCE_PURCHASE, unter Verwendung des Trennzeichens `,`. |
 | `device.colorDepth` | `c` | AppMeasurement-Abfrageparameter, C_COLOR-Zuordnung. |
-| `device.screenHeight` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
-| `device.screenWidth` | `s` | AppMeasurement Abfrage-Parameterzuordnung Bildschirmauflösung. |
+| `device.screenHeight` | `s` | AppMeasurement-Abfrageparameter, Bildschirmauflösungszuordnung. |
+| `device.screenWidth` | `s` | AppMeasurement-Abfrageparameter, Bildschirmauflösungszuordnung. |
 | `environment.browserDetails.acceptLanguage` | `Accept-Language` | Dies ist eine HTTP-Kopfzeilen-Zuordnung, HEADER_ACCEPT_LANGUAGE. |
 | `environment.browserDetails.cookiesEnabled` | `k` | AppMeasurement-Abfrageparameter, COOKIES-Zuordnung mit der Konvertierung BOOLEAN_TO_YN. |
 | `environment.browserDetails.javaEnabled` | `v` | AppMeasurement-Abfrageparameter, JAVA_ENABLED-Zuordnung mit der Konvertierung BOOLEAN_TO_YN. |
@@ -67,7 +66,7 @@ Nachfolgend finden Sie eine Liste von Variablen, die Adobe Experience Platform E
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier` | `a.media.name` | AppMeasurement-Kontextdatenzuordnung `a.media.name`. |
 | `media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name` | `c.a.media.show` | AppMeasurement-Kontextdatenzuordnung `c.a.media.show`. |
 | `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement-Kontextdatenzuordnung `c.a.media.type` mit Konvertierung VEDIO_SHOW_TYPE. |
-| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement-Kontextdaten `c.a.media.type`-Zuordnung mit KonversionsVIDEO_SHOW_TYPE. |
+| `media.mediaTimed.primaryAssetReference.showType` | `c.a.media.type` | AppMeasurement-Kontextdaten `c.a.media.type`-Zuordnung mit der Konvertierung VIDEO_SHOW_TYPE. |
 | `media.mediaTimed.primaryAssetReference.xmpDM:duration` | `c.a.media.length` | AppMeasurement-Kontextdatenzuordnung `c.a.media.length`. |
 | `media.mediaTimed.primaryAssetViewDetails.@id` | `c.a.media.vsid` | AppMeasurement-Kontextdaten. |
 | `media.mediaTimed.primaryAssetViewDetails.broadcastChannel` | `c.a.media.channel` | AppMeasurement-Kontextdatenzuordnung `c.a.media.channel`. |
@@ -89,19 +88,19 @@ Nachfolgend finden Sie eine Liste von Variablen, die Adobe Experience Platform E
 | `placeContext.geo.longitude` | `lon` | AppMeasurement Abfrageparameter, LONGITUDE-Zuordnung. |
 | `placeContext.geo.postalCode` | `zip` | AppMeasurement Abfrageparameter, ZIP-Zuordnung. |
 | `placeContext.geo.stateProvince` | `state` | AppMeasurement Abfrageparameter, STATE-Zuordnung. |
-| `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement Abfrage-Parameter Produktvermarktungs-Ereignis/eVars-Zuordnung. |
-| `productlistitems.[N].name` | `products` | AppMeasurement Abfrage Parameter Produktnamenzuordnung. |
-| `productlistitems.[N].priceTotal` | `products` | AppMeasurement Abfrage-Parameter Produktpreiszuordnung. |
-| `productlistitems.[N].quantity` | `products` | AppMeasurement Abfrage-Parameter Produktmengenzuordnung. |
-| `web.webInteraction.URL` | `pev1` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR1-Zuordnung. |
-| `web.webInteraction.name` | `pev2` | AppMeasurement-Abfrage-Parameter PAGE_EREIGNIS_VAR2-Zuordnung. |
+| `productlistitems.[N]._[NAME_SPACE].*` | `products` | AppMeasurement-Abfrageparameter, Produkte Merchandise-Ereignisse/eVars-Zuordnung. |
+| `productlistitems.[N].name` | `products` | AppMeasurement Abfrageparameter, Produktnamenzuordnung. |
+| `productlistitems.[N].priceTotal` | `products` | AppMeasurement Abfrageparameter, Produktpreiszuordnung. |
+| `productlistitems.[N].quantity` | `products` | AppMeasurement-Abfrageparameter, Produktquantitätszuordnung. |
+| `web.webInteraction.URL` | `pev1` | AppMeasurement-Abfrageparameter, PAGE_EVENT_VAR1-Zuordnung. |
+| `web.webInteraction.name` | `pev2` | AppMeasurement-Abfrageparameter, PAGE_EVENT_VAR2-Zuordnung. |
 | `web.webInteraction.type` | `pe` | `web.webInteraction.type=other` nach  `pe=lnk_o`;  `web.webInteraction.type=download` nach  `pe=lnk_d`;  `web.webInteraction.type=exit` nach  `pe=lnk_e` |
 | `web.webPageDetails.URL` | `g` | AppMeasurement Abfrageparameter, PAGE_URL-Zuordnung. |
-| `web.webPageDetails.errorPage` | `pageType` | AppMeasurement-Abfrage-Parameter PAGE_TYPE_FULL-Zuordnung mit Konversion ERROR_PAGE_TYPE. |
+| `web.webPageDetails.errorPage` | `pageType` | AppMeasurement-Abfrageparameter, PAGE_TYPE_FULL-Zuordnung mit Konvertierung ERROR_PAGE_TYPE. |
 | `web.webPageDetails.homePage` | `hp` | AppMeasurement-Abfrageparameter, HOMEPAGE-Zuordnung mit der Konvertierung BOOLEAN_TO_YN. |
 | `web.webPageDetails.name` | `gn` | AppMeasurement Abfrageparameter, PAGENAME-Zuordnung. |
 | `web.webPageDetails.server` | `sv` | AppMeasurement Abfrageparameter, USER_SERVER-Zuordnung. |
-| `web.webPageDetails.siteSection` | `ch` | AppMeasurement Abfrage-Parameterzuordnung für KANAL. |
+| `web.webPageDetails.siteSection` | `ch` | AppMeasurement Abfrageparameter, KANALzuordnung. |
 | `web.webReferrer.URL` | `r` | AppMeasurement Abfrageparameter, REFERRER-Zuordnung. |
 
 {style=&quot;table-layout:auto&quot;}
