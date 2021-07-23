@@ -4,9 +4,9 @@ title: Übersicht über Branchendatenmodelle
 topic-legacy: overview
 description: Erfahren Sie mehr über die standardisierten Datenmodelle für verschiedene vertikale Branchen, die mit standardmäßigen XDM-Komponenten (Experience-Datenmodell) erstellt werden können.
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 4ff97408659559174110a2234b24e9433007c9dc
+source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Je nach Branche, in der Ihr Unternehmen tätig ist, sind einige XDM-Komponenten 
 
 Um Ihre Datenmodellierungsstrategie basierend auf Ihrer Branche zu steuern, bietet dieses Handbuch eine Referenz zu Entitätsbeziehungsdiagrammen (ERDs) für verschiedene unterstützte Branchen-Vertikale.
 
-## Voraussetzungen  
+## Voraussetzungen
 
 Um die in diesem Handbuch referenzierten ERDs zu lesen, müssen Sie wissen, wie XDM-Komponenten mit Formularschemata interagieren und wie XDM-Schemas in der Experience Platform als Ganzes funktionieren. Stellen Sie sicher, dass Sie die folgende Übersichtsdokumentation gelesen haben, bevor Sie fortfahren:
 
@@ -38,6 +38,7 @@ ERDs werden für die folgenden vertikalen Industrien bereitgestellt:
 
 * [[!UICONTROL Einzelhandel]](./retail.md)
 * [[!UICONTROL Finanzdienstleistungen]](./financial.md)
+* [[!UICONTROL Telekommunikation]](./telecom.md)
 * [[!UICONTROL Reise und Gastfreundschaft]](./travel-hospitality.md)
 
 ## Nächste Schritte
