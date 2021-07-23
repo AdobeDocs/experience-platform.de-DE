@@ -1,10 +1,10 @@
 ---
 title: Adobe Medien Analytics (3.x SDK) for Audio and Video - Übersicht
 description: Erfahren Sie mehr über die Adobe Medien Analytics (3.x SDK) for Audio and Video-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 88%
+source-wordcount: '763'
+ht-degree: 87%
 
 ---
 
@@ -84,7 +84,7 @@ Sie können den Beispielplayer hier abrufen: [MA Sample Player](https://github.c
 
 ### Verwendung in anderen Erweiterungen
 
-Die MA-Erweiterung stellt `media` als gemeinsames Modul für andere Erweiterungen bereit. (Weitere Informationen zu freigegebenen Modulen finden Sie in der [Dokumentation zu freigegebenen Modulen](https://developer.adobelaunch.com/extensions/shared_modules/).)
+Die MA-Erweiterung stellt `media` als gemeinsames Modul für andere Erweiterungen bereit. (Weitere Informationen zu freigegebenen Modulen finden Sie in der [Dokumentation zu freigegebenen Modulen](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
