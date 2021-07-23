@@ -2,10 +2,10 @@
 title: Unterstützte Anwendungsfälle mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, welche Anwendungsfälle vom Adobe Experience Platform Web SDK unterstützt werden.
 keywords: Web SDK;Anwendungsfälle
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 16%
+source-wordcount: '555'
+ht-degree: 15%
 
 ---
 
@@ -29,7 +29,7 @@ Auf dieser Seite werden die unterstützten Anwendungsfälle für das Web SDK mit
 | Senden von Daten an mehrere Organisationen auf der Seite | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Detaillierte Fehlerberichte und -protokolle |  |
 | Clientseitige und serverseitige Trace-Anforderungen |  |
-| Adobe Experience Platform Launch-Erweiterung | [Dokumente zur Web SDK-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension) |
+| Adobe Experience Platform Launch-Erweiterung | [Dokumente zur Web SDK-Erweiterung](../../tags/extensions/web/sdk/overview.md) |
 | Debugging-Tools verfügbar | [Debugger-](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) Erweiterung und  [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style=&quot;table-layout:auto&quot;}
