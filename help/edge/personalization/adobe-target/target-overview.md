@@ -1,11 +1,11 @@
 ---
 title: Verwenden von Adobe Target mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Experience Platform Web SDK mit Adobe Target rendern
-keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema;
+keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: c83b6ea336cfe5d6d340a2dbbfb663b6bec84312
+source-git-commit: c99bc94226b296463e92340723d1318e0775f6a7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1223'
 ht-degree: 6%
 
 ---
