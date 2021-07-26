@@ -4,9 +4,9 @@ title: Datenmodell der Finanzdienstleistungsbranche
 topic-legacy: overview
 description: Zeigen Sie ein Entitätsbeziehungsdiagramm (ERD) an, in dem ein standardisiertes Datenmodell für die Bank-, Finanz- und Versicherungsbranche (BFSI) beschrieben wird. Dieses Datenmodell ist mit dem Experience-Datenmodell (XDM) für die Verwendung in Adobe Experience Platform kompatibel.
 exl-id: 2e8f6b2a-10e7-4394-b45f-c03db0f25400
-source-git-commit: 88c17992a391b24a76c3e387d3033df4c75a6aa6
+source-git-commit: 38fa2345cb87e50bd4c8788996f03939fb199cf9
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # [!UICONTROL Datenmodell ] der Finanzdienstleistungsbranche ERD
 
 Das folgende Entitätsbeziehungsdiagramm (ERD) stellt ein standardisiertes Datenmodell für den Banken-, Finanz- und Versicherungssektor (BFSI) dar. Der ERD wird absichtlich denormalisiert und unter Berücksichtigung der Art und Weise, wie Daten in Adobe Experience Platform gespeichert werden, präsentiert.
+
+>[!NOTE]
+>
+>Der ERD wie beschrieben ist eine Empfehlung, wie Sie Ihre Daten für diesen branchenspezifischen Anwendungsfall modellieren sollten. Um dieses Datenmodell in Platform nutzen zu können, müssen Sie die empfohlenen Schemas und deren Beziehungen selbst erstellen. Weitere Informationen finden Sie in den Handbüchern zum Verwalten von [Schemas](../../ui/resources/schemas.md) und [Beziehungen](../../tutorials/relationship-ui.md) in der Benutzeroberfläche.
 
 Verwenden Sie die folgende Legende, um diese ERD zu interpretieren:
 
