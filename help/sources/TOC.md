@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Datenaufnahme, Quellen
-source-git-commit: e04df6e2ffabac6e70164dfccbad8440976b2755
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 17%
+source-wordcount: '628'
+ht-degree: 18%
 
 ---
 
@@ -75,6 +75,7 @@ ht-degree: 17%
       - [Shopify Connector](connectors/ecommerce/shopify.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
    - Protokolle {#protocols}
@@ -127,6 +128,7 @@ ht-degree: 17%
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+         - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
       - Protokolle {#protocols}
@@ -214,6 +216,7 @@ ht-degree: 17%
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protokolle {#protocols}
