@@ -5,7 +5,7 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8236fb3a5786a6990fe85482c2fee0eda48bcf1f
+source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 57%
@@ -109,6 +109,7 @@ Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieter-
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL HubSpot] Connector](connectors/marketing-automation/hubspot.md)
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Zahlungen
 
