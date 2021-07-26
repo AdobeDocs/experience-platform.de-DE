@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: e44da39dcdd4af4ab883b3ff8f61ca2fd44adb0b
+source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '320'
 ht-degree: 44%
 
 ---
@@ -40,11 +40,13 @@ ht-degree: 44%
       * [Persönliche Kontaktangaben](./field-groups/profile/personal-contact-details.md)
       * [Einverständnis und Voreinstellungen](./field-groups/profile/consents.md)
       * [Details zur Segmentzugehörigkeit](./field-groups/profile/segmentation.md)
+      * [Telekom-Abonnement](./field-groups/profile/telecom-subscription.md)
       * [Kontaktangaben für Arbeitskontakte](./field-groups/profile/work-contact-details.md)
    * Ereignisfeldgruppen {#event}
       * [Kampagnen-Marketingdetails](./field-groups/event/campaign-marketing-details.md)
       * [Kanaldetails](./field-groups/event/channel-details.md)
       * [Commerce-Details](./field-groups/event/commerce-details.md)
+      * [Details zum Gerätehandel](./field-groups/event/device-trade-in-details.md)
       * [Details zur Endbenutzer-ID](./field-groups/event/enduserids.md)
       * [Umgebungsdetails](./field-groups/event/environment-details.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/event/iab.md)
@@ -57,6 +59,7 @@ ht-degree: 44%
    * [Handel](./data-types/commerce.md)
    * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Einverständnisse und Voreinstellungen](./data-types/consents.md)
+   * [Währung](./data-types/currency.md)
    * [Gerät](./data-types/device.md)
    * [E-Mail  Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
@@ -85,6 +88,7 @@ ht-degree: 44%
    * [Produktlistenelement](./data-types/product-list-item.md)
    * [Durchsuchen](./data-types/search.md)
    * [Abonnement](./data-types/subscription.md)
+   * [Telekom-Abonnement](./data-types/telecom-subscription.md)
    * [Webinformationen](./data-types/web-information.md)
    * [Webinteraktion](./data-types/web-interaction.md)
    * [Webseitendetails](./data-types/webpage-details.md)
