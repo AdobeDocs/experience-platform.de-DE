@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Azure Table Storage mit Adobe Experience Platform verbinden.
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
-source-git-commit: 5fb5f0ce8bd03ba037c6901305ba17f8939eb9ce
+source-git-commit: 7af79b9e0d6ed29b796ac7c98b4df1dda09f3513
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 12%
@@ -39,7 +39,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Azure Table Storage] herstel
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
 | `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit einer [!DNL Azure Table Storage]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL Azure Table Storage] lautet: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Azure Table Storage] ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Azure Table Storage] ist `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 Weitere Informationen zum Abrufen einer Verbindungszeichenfolge finden Sie unter [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
