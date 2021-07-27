@@ -1,26 +1,35 @@
 ---
 title: Datenelementtypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ "Datenelement"für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 70%
+source-wordcount: '595'
+ht-degree: 58%
 
 ---
 
-# Datenelementtypen für Edge-Erweiterungen
+# Datenelementtypen für Web-Erweiterungen
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Ein Datenelementtyp-Bibliotheksmodul dient dem Abrufen von Daten. Die Methode für diesen Abruf kann angepasst werden. Verschiedene Datenelementtypen ermöglichen es Adobe Experience Platform-Benutzern, Daten aus dem lokalen Speicher, einem Cookie oder einem DOM-Element abzurufen.
+In Datenerfassungs-Tags sind Datenelemente im Wesentlichen Aliase zu Datenteilen auf einer Seite. Diese Daten finden Sie in Abfragezeichenfolgenparametern, Cookies, DOM-Elementen oder anderen Speicherorten. Ein Datenelement kann durch Regeln referenziert werden und dient als Abstraktion für den Zugriff auf diese Daten.
+
+Datenelementtypen werden von Erweiterungen bereitgestellt und ermöglichen es Benutzern, Datenelemente so zu konfigurieren, dass sie auf bestimmte Datenteile zugreifen können. Beispielsweise könnte eine Erweiterung einen Datenelementtyp &quot;Lokales Datenspeicherungselement&quot;bereitstellen, in dem der Benutzer einen Elementnamen für die lokale Datenspeicherung angeben könnte. Wenn das Datenelement durch eine Regel referenziert wird, kann die Erweiterung den Elementwert der lokalen Datenspeicherung mithilfe des Elementnamens der lokalen Datenspeicherung nachschlagen, den der Benutzer beim Konfigurieren des Datenelements angegeben hat.
+
+In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Web-Erweiterung in Adobe Experience Platform definieren.
 
 >[!IMPORTANT]
 >
->Dieses Dokument enthält Informationen zu Datenelementtypen für Web-Erweiterungen. Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Datenelementtypen für Kantenerweiterungen](../edge/data-element-types.md).
+>Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Datenelementtypen für Kantenerweiterungen](../edge/data-element-types.md) .
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Tag-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+
+Datenelementtypen bestehen in der Regel aus Folgendem:
+
+1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
+2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und Datenteile abzurufen.
 
 Stellen Sie sich eine Situation vor, in der Sie den Benutzern erlauben möchten, ein Datenelement aus einem lokalen Speicherelement namens `productName` abzurufen. Ihr Modul könnte wie folgt aussehen:
 
