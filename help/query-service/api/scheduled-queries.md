@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;geplante Abfragen;geplante Abfrage
+keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; geplante Abfragen; geplante Abfrage;
 solution: Experience Platform
-title: API-Endpunkt für terminierte Abfragen
+title: API-Endpunkt für geplante Abfragen
 topic-legacy: scheduled queries
-description: Die folgenden Abschnitte führen Sie durch die verschiedenen API-Aufrufe, die Sie für geplante Abfragen mit der Abfrage Service API durchführen können.
+description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für geplante Abfragen mit der Query Service-API ausführen können.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: e99b57706bb5bdb0abaf4209a259b478d9406783
 workflow-type: tm+mt
-source-wordcount: '977'
-ht-degree: 44%
+source-wordcount: '1010'
+ht-degree: 42%
 
 ---
 
-# Endpunkt für terminierte Abfragen
+# Endpunkt für geplante Abfragen
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der API [!DNL Query Service] durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit Aufrufen an die [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
-### Liste der geplanten Abfragen abrufen
+### Liste geplanter Abfragen abrufen
 
-Sie können eine Liste aller geplanten Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET an den `/schedules`-Endpunkt anfordern.
+Sie können eine Liste aller geplanten Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/schedules` stellen.
 
 **API-Format**
 
@@ -36,18 +35,18 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **Abfrageparameter**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfrage-Parameter für die Auflistung geplanter Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihr Unternehmen verfügbaren geplanten Abfragen abgerufen.
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflistung geplanter Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren geplanten Abfragen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
 | `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als) und `==` (gleich). `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt beispielsweise alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben angegeben ist. |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Unterstützte Felder sind `created`, `templateId` und `userId`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als) und `==` (gleich). `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt beispielsweise alle geplanten Abfragen zurück, bei denen die Benutzer-ID wie angegeben ist. |
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird die neueste geplante Abfrage abgerufen, die für Ihr IMS-Unternehmen erstellt wurde.
+Mit der folgenden Anfrage wird die neueste geplante Abfrage abgerufen, die für Ihre IMS-Organisation erstellt wurde.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -59,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste geplanter Abfragen für die angegebene IMS-Organisation zurück. Die folgende Antwort gibt die neueste geplante Abfrage zurück, die für Ihr IMS-Unternehmen erstellt wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste geplanter Abfragen für die angegebene IMS-Organisation zurück. Die folgende Antwort gibt die neueste geplante Abfrage zurück, die für Ihre IMS-Organisation erstellt wurde.
 
 ```json
 {
@@ -125,7 +124,7 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit einer Liste geplanter Abfrage
 
 ### Neue geplante Abfrage erstellen
 
-Sie können eine neue geplante Abfrage erstellen, indem Sie eine POST an den `/schedules`-Endpunkt anfordern.
+Sie können eine neue geplante Abfrage erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/schedules` senden. Wenn Sie eine geplante Abfrage in der API erstellen, wird sie auch im Abfrage-Editor angezeigt. Weitere Informationen zu geplanten Abfragen in der Benutzeroberfläche finden Sie in der [Dokumentation zum Abfrage-Editor](../ui/user-guide.md#scheduled-queries).
 
 **API-Format**
 
@@ -159,15 +158,15 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `query.dbName` | Der Datenbankname, für den Sie eine geplante Abfrage erstellen. |
+| `query.dbName` | Der Name der Datenbank, für die Sie eine geplante Abfrage erstellen. |
 | `query.sql` | Die SQL-Abfrage, die Sie erstellen möchten. |
 | `query.name` | Der Name der geplanten Abfrage. |
-| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet &quot;30 * * * *&quot;, dass die Abfrage stündlich mit 30 Minuten ausgeführt wird. |
-| `schedule.startDate` | Das Datum des Beginns für Ihre geplante Abfrage, geschrieben als UTC-Zeitstempel. |
+| `schedule.schedule` | Der Cron-Zeitplan für die Abfrage. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). In diesem Beispiel bedeutet &quot;30 * * * *&quot;, dass die Abfrage stündlich mit der 30-Minuten-Markierung ausgeführt wird. |
+| `schedule.startDate` | Das Startdatum für Ihre geplante Abfrage, geschrieben als UTC-Zeitstempel. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten geplanten Abfrage zurück. Nach der Aktivierung der geplanten Abfrage ändert sich `state` von `REGISTERING` in `ENABLED`.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten geplanten Abfrage zurück. Sobald die geplante Abfrage aktiviert wurde, ändert sich `state` von `REGISTERING` in `ENABLED`.
 
 ```json
 {
@@ -220,11 +219,11 @@ Eine erfolgreiche Antwort gibt HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` bis [zum Löschen Ihrer erstellten geplanten Abfrage](#delete-a-specified-scheduled-query) verwenden.
+>Sie können den Wert von `_links.delete` bis [Ihre erstellte geplante Abfrage](#delete-a-specified-scheduled-query) löschen.
 
-### Details zu einer bestimmten geplanten Abfrage anfordern
+### Anforderungsdetails einer angegebenen geplanten Abfrage
 
-Sie können Informationen zu einer bestimmten geplanten Abfrage abrufen, indem Sie eine GET an den Endpunkt `/schedules` anfordern und die entsprechende ID im Anforderungspfad angeben.
+Sie können Informationen für eine bestimmte geplante Abfrage abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/schedules` senden und im Anfragepfad die entsprechende Kennung angeben.
 
 **API-Format**
 
@@ -248,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules/e95186d65a
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur angegebenen geplanten Abfrage zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen geplanten Abfrage zurück.
 
 ```json
 {
@@ -303,15 +302,15 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 mit Details zur angegebenen gepla
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.delete` bis [zum Löschen Ihrer erstellten geplanten Abfrage](#delete-a-specified-scheduled-query) verwenden.
+>Sie können den Wert von `_links.delete` bis [Ihre erstellte geplante Abfrage](#delete-a-specified-scheduled-query) löschen.
 
-### Details zu einer bestimmten geplanten Abfrage aktualisieren
+### Aktualisieren der Details einer angegebenen geplanten Abfrage
 
-Sie können die Details für eine angegebene geplante Abfrage aktualisieren, indem Sie eine PATCH-Anforderung an den `/schedules`-Endpunkt senden und dessen ID im Anforderungspfad angeben.
+Sie können die Details für eine bestimmte geplante Abfrage aktualisieren, indem Sie eine PATCH-Anfrage an den Endpunkt `/schedules` senden und im Anfragepfad die entsprechende Kennung angeben.
 
 Für die PATCH-Anfrage werden zwei Pfade unterstützt: `/state` und `/schedule/schedule`.
 
-### Status der geplanten Abfrage aktualisieren
+### Aktualisierung des geplanten Abfragestatus
 
 Sie können `/state` verwenden, um den Status der ausgewählten geplanten Abfrage zu aktualisieren - AKTIVIERT oder DEAKTIVIERT. Geben Sie zur Aktualisierung des Status den Wert `enable` oder `disable` an.
 
@@ -349,8 +348,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `path` | Der Pfad des Werts, den Sie ändern möchten. In diesem Fall müssen Sie, da Sie den Status der geplanten Abfrage aktualisieren, den Wert von `path` auf `/state` setzen. |
-| `value` | Der aktualisierte Wert von `/state`. Dieser Wert kann entweder als `enable` oder `disable` eingestellt werden, um die geplante Abfrage zu aktivieren oder zu deaktivieren. |
+| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` auf `/state` setzen. |
+| `value` | Der aktualisierte Wert von `/state`. Dieser Wert kann entweder auf `enable` oder `disable` gesetzt werden, um die geplante Abfrage zu aktivieren oder zu deaktivieren. |
 
 **Antwort**
 
@@ -363,7 +362,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgende
 }
 ```
 
-### Zeitplan für geplante Abfragen aktualisieren
+### Geplanten Abfragezeitplan aktualisieren
 
 Sie können `/schedule/schedule` verwenden, um den Cron-Zeitplan der geplanten Abfrage zu aktualisieren. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
@@ -400,8 +399,8 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/schedules/e95186d6
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `path` | Der Pfad des Werts, den Sie ändern möchten. In diesem Fall müssen Sie, da Sie den Zeitplan der geplanten Abfrage aktualisieren, den Wert von `path` auf `/schedule/schedule` setzen. |
-| `value` | Der aktualisierte Wert von `/schedule`. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird die geplante Abfrage stündlich mit 45 Minuten ausgeführt. |
+| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Zeitplan der geplanten Abfrage aktualisieren, müssen Sie den Wert von `path` auf `/schedule/schedule` setzen. |
+| `value` | Der aktualisierte Wert von `/schedule`. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird die geplante Abfrage also stündlich mit der 45-Minuten-Markierung ausgeführt. |
 
 **Antwort**
 
@@ -414,13 +413,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit der folgende
 }
 ```
 
-### Eine angegebene geplante Abfrage löschen
+### Bestimmte geplante Abfrage löschen
 
-Sie können eine angegebene geplante Abfrage löschen, indem Sie eine DELETE-Anforderung an den Endpunkt `/schedules` senden und die ID der geplanten Abfrage angeben, die Sie im Anforderungspfad löschen möchten.
+Sie können eine angegebene geplante Abfrage löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/schedules` senden und im Anfragepfad die Kennung der geplanten Abfrage angeben, die Sie löschen möchten.
 
 >[!NOTE]
 >
->Der Zeitplan **muss vor dem Löschen deaktiviert werden.**
+>Der Zeitplan **muss** vor dem Löschen deaktiviert werden.
 
 **API-Format**
 
