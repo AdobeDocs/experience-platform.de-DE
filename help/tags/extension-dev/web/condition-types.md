@@ -1,10 +1,10 @@
 ---
 title: Bedingungstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ Bedingung für eine Tag-Erweiterung in einer Webeigenschaft definieren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 80%
+source-wordcount: '497'
+ht-degree: 59%
 
 ---
 
@@ -14,13 +14,24 @@ ht-degree: 80%
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Ein Bibliotheksmodul für einen Bedingungstyp dient einem einzigen Ziel: auswerten, ob etwas wahr oder falsch ist. Was es auswertet, legen Sie fest.
+Im Kontext einer Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Die Ausnahme besteht, wenn Benutzer Bedingungen explizit in einem &quot;Ausnahme&quot;-Behälter platzieren. In diesem Fall müssen alle Bedingungen im Behälter &quot;false&quot;zurückgeben, damit die Regel weiter verarbeitet werden kann.
+
+Beispielsweise könnte eine Erweiterung einen Bedingungstyp &quot;Viewport enthält&quot;bereitstellen, in dem der Benutzer einen CSS-Selektor angeben könnte. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
+
+In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Web-Erweiterung in Adobe Experience Platform definieren.
 
 >[!NOTE]
 >
->In diesem Dokument werden Bedingungstypen für Web-Erweiterungen behandelt. Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Bedingungstypen für Kantenerweiterungen](../edge/condition-types.md).
+>Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Bedingungstypen für Kantenerweiterungen](../edge/condition-types.md).
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Tag-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+
+Bedingungstypen bestehen in der Regel aus Folgendem:
+
+1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
+2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und eine Bedingung zu bewerten.
+
+Ein Bibliotheksmodul vom Typ Bedingung hat ein Ziel: beurteilen, ob etwas wahr oder falsch ist. Was es auswertet, legen Sie fest.
 
 Wenn Sie z. B. prüfen möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen:
 
