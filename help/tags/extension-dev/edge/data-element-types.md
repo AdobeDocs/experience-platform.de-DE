@@ -1,26 +1,35 @@
 ---
 title: Datenelementtypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ "Datenelement"für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 49%
+source-wordcount: '434'
+ht-degree: 28%
 
 ---
 
-# Datenelementtypen in Randerweiterungen
+# Datenelementtypen in Edge-Erweiterungen
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Ein Bibliotheksmodul vom Datenelementtyp ruft ein Datenelement ab. Der Modulautor bestimmt, wie dieses Datenelement abgerufen wird. Sie können beispielsweise einen Datenelementtyp verwenden, um Adobe Experience Platform-Benutzern zu ermöglichen, ein Datenelement aus der XDM-Ebene oder ihrer benutzerdefinierten Datenschicht abzurufen.
+In -Tags sind Datenelemente Aliase für Datenelemente auf einer Web- oder mobilen Seite, unabhängig davon, wo sich diese Daten innerhalb des vom Server empfangenen Ereignisses befinden. Ein Datenelement kann durch Regeln referenziert werden und dient als Abstraktion für den Zugriff auf diese Daten. Wenn sich der Speicherort der Daten in Zukunft ändert (z. B. beim Ändern des Ereignisschlüssels, der den Wert enthält), kann ein einzelnes Datenelement neu konfiguriert werden, während alle Regeln, die auf dieses Datenelement verweisen, unverändert bleiben können.
+
+Datenelementtypen werden von Erweiterungen bereitgestellt und der Erweiterungsautor bestimmt, wie diese Datenelemente abgerufen werden. Sie können beispielsweise einen Datenelementtyp verwenden, um Adobe Experience Platform-Benutzern zu ermöglichen, ein Datenelement aus der XDM-Ebene oder ihrer benutzerdefinierten Datenschicht abzurufen.
+
+In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Edge-Erweiterung in Adobe Experience Platform definieren.
 
 >[!IMPORTANT]
 >
->In diesem Dokument werden Datenelementtypen für Randerweiterungen behandelt. Wenn Sie eine Web-Erweiterung entwickeln, lesen Sie das Handbuch zu [Datenelementtypen für Web-Erweiterungen](../web/data-element-types.md).
+>Wenn Sie eine Web-Erweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Datenelementtypen für Web-Erweiterungen](../web/data-element-types.md) .
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Tag-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Edge-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+
+Datenelementtypen bestehen in der Regel aus Folgendem:
+
+1. Eine Ansicht, die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
+2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und Datenteile abzurufen.
 
 Wenn Sie Benutzern erlauben möchten, ein Datenelement aus der benutzerdefinierten Datenschicht abzurufen, könnte Ihr Modul wie im folgenden Beispiel aussehen.
 
