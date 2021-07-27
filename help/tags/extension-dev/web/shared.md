@@ -1,10 +1,10 @@
 ---
 title: Gemeinsam genutzte Module in Web-Erweiterungen
 description: Erfahren Sie, wie Sie gemeinsame Bibliotheksmodule für Web-Erweiterungen in Adobe Experience Platform definieren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 78%
+source-wordcount: '271'
+ht-degree: 72%
 
 ---
 
@@ -14,12 +14,18 @@ ht-degree: 78%
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Ein gemeinsames Modul ist ein Mechanismus, der Ihnen ermöglicht, mit anderen Erweiterungen zu kommunizieren. In JavaScript-Implementierungen werden alle gemeinsam genutzten Module mit der [`getSharedModule`](../turbine.md#shared)-Methode instanziiert, die von der freien Variable `turbine` bereitgestellt wird.
+Ein gemeinsames Modul ist ein Mechanismus, der Ihnen ermöglicht, mit anderen Erweiterungen zu kommunizieren. Beispielsweise kann Erweiterung A ein Datenelement asynchron laden und es über ein [Versprechen](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) für Erweiterung B verfügbar machen.
 
-Bei der Entwicklung Ihrer eigenen Tag-Erweiterung können Sie alle freigegebenen Module definieren, die Sie damit bereitstellen möchten. Sie können beispielsweise ein Modul erstellen, das eine User-ID asynchron lädt und dann diese User-ID über ein [Versprechen](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) mit einer anderen Erweiterung teilt:
+In JavaScript-Implementierungen werden alle gemeinsam genutzten Module mit der [`getSharedModule`](../turbine.md#shared)-Methode instanziiert, die von der freien Variable `turbine` bereitgestellt wird.
+
+Gemeinsame Module werden in Tag-Bibliotheken eingeschlossen, selbst wenn sie nie aus anderen Erweiterungen heraus aufgerufen werden. Um die Bibliotheksgröße nicht unnötig zu erhöhen, sollten Sie vorsichtig damit sein, was Sie als gemeinsames Modul bereitstellen.
+
+Gemeinsame Module verfügen nicht über eine Ansicht-Komponente.
+
+Bei der Entwicklung Ihrer eigenen Tag-Erweiterung können Sie alle freigegebenen Module definieren, die Sie damit bereitstellen möchten. Sie können beispielsweise ein Modul erstellen, das eine User-ID asynchron lädt und dann diese User-ID über ein Versprechen mit einer anderen Erweiterung teilt:
 
 ```javascript
-var userIdPromise = new Promise(/* load user id, then resolve promise */);
+var userIdPromise = new Promise(/* load user ID, then resolve promise */);
 module.exports = userIdPromise;
 ```
 
