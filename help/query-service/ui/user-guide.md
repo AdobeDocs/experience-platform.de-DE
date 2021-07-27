@@ -5,10 +5,10 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 51%
+source-wordcount: '1572'
+ht-degree: 33%
 
 ---
 
@@ -80,7 +80,57 @@ Während Sie eine Abfrage in [!DNL Query Editor] anzeigen, bietet das Bedienfeld
 
 ![Bild](../images/ui/query-editor/query-details.png)
 
-In diesem Bedienfeld können Sie ein Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und den SQL-Code in einem einfach zu kopierenden Format auf der Registerkarte **[!UICONTROL SQL-Abfrage]** anzeigen. In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Um einen Datensatz zu generieren, wählen Sie **[!UICONTROL Ausgabedatensatz]** aus. Das Dialogfeld **[!UICONTROL Ausgabedatensatz]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie dann **[!UICONTROL Abfrage ausführen]** aus. Der neue Datensatz wird auf der Registerkarte **[!UICONTROL Datensätze]** der [!DNL Query Service]-Benutzeroberfläche unter [!DNL Platform] angezeigt.
+In diesem Bedienfeld können Sie einen Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und der Abfrage einen Zeitplan hinzufügen.
+
+In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Um einen Datensatz zu generieren, wählen Sie **[!UICONTROL Ausgabedatensatz]** aus. Das Dialogfeld **[!UICONTROL Ausgabedatensatz]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie dann **[!UICONTROL Abfrage ausführen]** aus. Der neue Datensatz wird auf der Registerkarte **[!UICONTROL Datensätze]** der [!DNL Query Service]-Benutzeroberfläche unter [!DNL Platform] angezeigt.
+
+### Geplante Abfragen {#scheduled-queries}
+
+>[!NOTE]
+>
+> Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Außerdem können Sie **nicht** einen Zeitplan zu einer parametrisierten Abfrage hinzufügen.
+
+Um einen Zeitplan zu einer Abfrage hinzuzufügen, wählen Sie **[!UICONTROL Zeitplan hinzufügen]** aus.
+
+![Bild](../images/ui/query-editor/add-schedule.png)
+
+Die Seite **[!UICONTROL Details des Zeitplans]** wird angezeigt. Auf dieser Seite können Sie die Häufigkeit der geplanten Abfrage, das Datum der Ausführung der geplanten Abfrage sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll.
+
+![Bild](../images/ui/query-editor/schedule-details.png)
+
+Sie können die folgenden Optionen für **[!UICONTROL Häufigkeit]** auswählen:
+
+- **[!UICONTROL Stündlich]**: Die geplante Abfrage wird für den ausgewählten Datumsbereich stündlich ausgeführt.
+- **[!UICONTROL Täglich]**: Die geplante Abfrage wird alle X Tage zum ausgewählten Zeitpunkt und zum ausgewählten Zeitraum ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
+- **[!UICONTROL Wöchentlich]**: Die ausgewählte Abfrage wird an den Wochentagen, zur Uhrzeit und zum ausgewählten Datumsbereich ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
+- **[!UICONTROL Monatlich]**: Die ausgewählte Abfrage wird jeden Monat am Tag, zur Uhrzeit und zum ausgewählten Datumsbereich ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
+- **[!UICONTROL Jährlich]**: Die ausgewählte Abfrage wird jedes Jahr an dem von Ihnen ausgewählten Tag, Monat, Uhrzeit und Zeitraum ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
+
+Für den Datensatz haben Sie die Möglichkeit, entweder einen vorhandenen Datensatz zu verwenden oder einen neuen Datensatz zu erstellen.
+
+>[!IMPORTANT]
+>
+> Da Sie einen vorhandenen Datensatz verwenden oder einen neuen erstellen, müssen Sie **not** entweder `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil der Abfrage einbeziehen, da die Datensätze bereits festgelegt sind. Wenn Sie `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil Ihrer geplanten Abfragen einbeziehen, wird ein Fehler ausgegeben.
+
+Nachdem Sie alle diese Details bestätigt haben, wählen Sie **[!UICONTROL Speichern]** aus, um einen Zeitplan zu erstellen.
+
+Die Seite mit den Abfragedetails wird erneut angezeigt und zeigt nun die Details des neu erstellten Zeitplans einschließlich der Zeitplan-ID, des Zeitplans selbst und des Ausgabedatensatzes des Zeitplans an. Sie können die Zeitplan-ID verwenden, um weitere Informationen zu den Ausführungen der geplanten Abfrage selbst zu erhalten. Weiterführende Informationen finden Sie im [Handbuch zu geplanten Abfrage-Run-Endpunkten](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> Sie können die Abfragevorlage **eine** nur mithilfe der Benutzeroberfläche planen. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn mit der API bereits ein Zeitplan hinzugefügt wurde, können Sie **not** zusätzliche Zeitpläne über die Benutzeroberfläche hinzufügen. Wenn bereits mehrere Zeitpläne an eine Abfragevorlage angehängt sind, wird nur der älteste Zeitplan angezeigt. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im [Handbuch zum geplanten Abfrageendpunkt](../api/scheduled-queries.md).
+>
+> Darüber hinaus sollten Sie die Seite aktualisieren, wenn Sie sicherstellen möchten, dass Sie über den neuesten Status für den Zeitplan verfügen, den Sie anzeigen.
+
+#### Zeitplan löschen
+
+Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL einen Zeitplan löschen]** auswählen.
+
+![Bild](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> Wenn Sie einen Zeitplan für eine Abfrage löschen möchten, müssen Sie den Zeitplan zuerst deaktivieren.
 
 ### Speichern von Abfragen
 
