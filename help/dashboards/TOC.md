@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Dashboards-Hilfe
 breadcrumb-title: Dashboards-Handbuch
 user-guide-description: Visualisieren Sie Experience Platform-Daten auf anpassbaren Dashboards.
 feature: Data Management
-source-git-commit: bf09332681d309b41a924c4c29ee8f66078816f9
+source-git-commit: 168960692605b96324533ca295544c2f855481b1
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 85%
+source-wordcount: '60'
+ht-degree: 83%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 85%
 
 * [Dashboards – Übersicht](home.md)
 * [Dashboard-Zugriffsberechtigungen](permissions.md)
+* [Herunterladen von Dashboards in PDF](download.md)
 * Verfügbare Dashboards {#guides}
    * [Profile](guides/profiles.md)
    * [Segmente](guides/segments.md)
