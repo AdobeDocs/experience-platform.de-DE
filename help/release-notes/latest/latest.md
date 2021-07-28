@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
+source-git-commit: ab868a813815e10b520cda2a0abe76e3acdd2ac6
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 65%
+source-wordcount: '531'
+ht-degree: 53%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 65%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Data Science Workspace](#dsw)
+- [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Quellen](#sources)
 
@@ -34,6 +35,17 @@ Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um
 | Bibliotheks- und Betriebssystem-Updates | Data Science Workspace hat umfangreiche Bibliotheks- und Betriebssystemaktualisierungen vorgenommen, um die Funktionalität und Benutzerfreundlichkeit zu verbessern. Dazu gehören JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 mit CUDA 11- und CUDNN 8-Unterstützung und mehr. Informationen zum Anzeigen der verfügbaren Bibliotheken in JupyterLab finden Sie im Abschnitt [Unterstützte Bibliotheken](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) in der JupyterLab Notebook-Übersichtsdokumentation. |
 
 Weitere allgemeine Informationen zu Data Science Workspace finden Sie im Abschnitt [Übersicht über Data Science Workspace](../../data-science-workspace/home.md).
+
+## Ziele {#destinations}
+
+Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [Schnellere inkrementelle Dateiexporte](../../destinations/ui/activate-destinations.md#export-incremental-files) | Sie können jetzt alle 3, 6, 8 und 12 Stunden inkrementelle Dateiexporte für dateibasierte Ziele planen. Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits gespeichert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird. |
+| [Unterstützung für Deduplizierungsschlüssel](../../destinations/ui/activate-destinations.md#deduplication-keys) | Beseitigen Sie mehrere Datensätze desselben Profils in den Exportdateien, indem Sie einen Deduplizierungsschlüssel auswählen. Sie können einen einzelnen Namespace oder bis zu zwei XDM-Schemaattribute als Deduplizierungsschlüssel auswählen. |
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
