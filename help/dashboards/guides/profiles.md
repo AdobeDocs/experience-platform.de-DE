@@ -4,10 +4,10 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
+source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
 workflow-type: tm+mt
-source-wordcount: '1234'
-ht-degree: 7%
+source-wordcount: '1496'
+ht-degree: 6%
 
 ---
 
@@ -43,7 +43,7 @@ Sie können das Erscheinungsbild des Dashboards [!UICONTROL Profile] ändern, in
 
 Weitere Informationen finden Sie in der Dokumentation [Dashboards ändern](../customize/modify.md) und [Widget-Bibliothek - Übersicht](../customize/widget-library.md) .
 
-## Zusammenführungsrichtlinien
+## Zusammenführungsrichtlinien {#merge-policies}
 
 Die im Dashboard [!UICONTROL Profile] angezeigten Metriken basieren auf Zusammenführungsrichtlinien, die auf Ihre Echtzeit-Kundenprofildaten angewendet werden. Wenn Daten aus mehreren Quellen zusammengeführt werden, um das Kundenprofil zu erstellen, können die Daten widersprüchliche Werte enthalten (z. B. kann ein Datensatz einen Kunden als &quot;einzeln&quot;auflisten, während ein anderer Datensatz den Kunden als &quot;verheiratet&quot;auflisten kann). Es ist der Auftrag der Zusammenführungsrichtlinie, zu bestimmen, welche Daten als Teil des Profils priorisiert und angezeigt werden sollen.
 
@@ -79,29 +79,39 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 Das Widget **[!UICONTROL Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile im Profildatenspeicher zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen.
 
-Weitere Informationen zu Fragmenten und zusammengeführten Profilen finden Sie im Abschnitt *Profilfragmente im Vergleich zu zusammengeführten Profilen* der [Übersicht zum Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen finden Sie im Abschnitt [zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) .
+
+>[!NOTE]
+>
+>Das Widget [!UICONTROL Profilanzahl] kann aus mehreren Gründen eine andere Zahl anzeigen als die Profilanzahl, die auf der Registerkarte [!UICONTROL Durchsuchen] im Abschnitt [!UICONTROL Profile] der Benutzeroberfläche angezeigt wird. Der häufigste Grund ist, dass der Tab [!UICONTROL Durchsuchen] die Gesamtzahl der zusammengeführten Profile basierend auf der standardmäßigen Zusammenführungsrichtlinie Ihres Unternehmens referenziert, während das Widget [!UICONTROL Profilanzahl] die Gesamtanzahl der zusammengeführten Profile basierend auf der Zusammenführungsrichtlinie referenziert, die Sie im Dashboard anzeigen möchten.
+>
+>Ein weiterer häufiger Grund sind die Unterschiede zwischen der Zeit, zu der der Dashboard-Schnappschuss erstellt wird, und der Zeit, zu der der Beispielauftrag für die Registerkarte [!UICONTROL Durchsuchen] ausgeführt wird. Sie können sehen, wann das Widget [!UICONTROL Profilanzahl] zuletzt aktualisiert wurde, indem Sie sich den Zeitstempel im Widget ansehen. Weitere Informationen dazu, wie der Beispielauftrag auf der Registerkarte [!UICONTROL Durchsuchen] ausgelöst wird, finden Sie im Abschnitt [Profilanzahl im Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=en#profile-count).
 
 ![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Hinzugefügte Profile] {#profiles-added}
 
-Das Widget **[!UICONTROL hinzugefügte Profile]** zeigt die Gesamtzahl der zusammengeführten Profile an, die zum Profildatenspeicher hinzugefügt wurden, nachdem der letzte Schnappschuss erstellt wurde. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen.
+Das Widget **[!UICONTROL hinzugefügte Profile]** zeigt die Gesamtzahl der zusammengeführten Profile an, die zum Profildatenspeicher hinzugefügt wurden, nachdem der letzte Schnappschuss erstellt wurde. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
 
-Mit der Dropdown-Auswahl können Sie die Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
+>[!NOTE]
+>
+>Das Widget [!UICONTROL hinzugefügte Profile] gibt die Anzahl der Profile an, die dem System nach der ersten Konfiguration Ihres Unternehmens hinzugefügt wurden. Wenn beispielsweise während der Konfiguration vier Millionen Profile hinzugefügt wurden und Sie in den letzten 30 Tagen eine weitere Million Profile hinzugefügt haben, würde das Widget [!UICONTROL hinzugefügte Profile] &quot;1.000.000&quot;anzeigen, während das Widget [!UICONTROL Profilanzahl] &quot;5.000.000&quot;anzeigen würde.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Trend der Profilanzahl] {#profiles-count-trend}
 
-Das Widget **[!UICONTROL Trend der Profilanzahl]** zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profildatenspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn die Momentaufnahme erstellt wird. Wenn Sie also Profile in Platform aufnehmen möchten, wird die Anzahl der Profile erst angezeigt, wenn die nächste Momentaufnahme erfolgt.
+Das Widget **[!UICONTROL Trend der Profilanzahl]** zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profildatenspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn die Momentaufnahme erstellt wird. Wenn Sie also Profile in Platform aufnehmen möchten, wird die Anzahl der Profile erst angezeigt, wenn die nächste Momentaufnahme erfolgt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
 
-Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
+Weitere Informationen finden Sie im Abschnitt [zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) .
 
 ![](../images/profiles/profile-count-trend.png)
 
 ### [!UICONTROL Profile nach Identität] {#profiles-by-identity}
 
 Das Widget **[!UICONTROL Profile nach Identität]** zeigt die Aufschlüsselung der Identitäten für alle zusammengeführten Profile in Ihrem Profilspeicher an. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
+
+Weitere Informationen finden Sie im Abschnitt [zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) .
 
 Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum Adobe Experience Platform Identity Service](../../identity-service/home.md).[
 
@@ -111,9 +121,9 @@ Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum Adobe 
 
 Das Widget **[!UICONTROL Identitätsüberschneidung]** zeigt ein Venn-Diagramm oder Set-Diagramm an, das die Überschneidung von Profilen in Ihrem Profilspeicher mit mehreren Identitäten anzeigt.
 
-Nachdem Sie die zu vergleichenden Identitäten mithilfe der Dropdown-Menüs im Widget ausgewählt haben, werden Kreise angezeigt, die die relative Größe jeder Identität anzeigen. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt.
+Nachdem Sie die zu vergleichenden Identitäten mithilfe der Dropdown-Menüs im Widget ausgewählt haben, werden Kreise angezeigt, die die relative Größe jeder Identität anzeigen. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt. Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
 
-Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
+Weitere Informationen zu Profilfragmenten finden Sie im Abschnitt [Profilfragmente im Vergleich zu zusammengeführten Profilfragmenten](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-fragments-vs-merged-profiles) in der Übersicht zum Echtzeit-Kundenprofil.
 
 Weitere Informationen zu Identitäten finden Sie in der Dokumentation zum Adobe Experience Platform Identity Service](../../identity-service/home.md).[
 
