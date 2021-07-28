@@ -6,7 +6,7 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 029e990f5b30713ceea5da80ace8002368ac5652
+source-git-commit: 96855ec4e42e7adb17dc36a734561f63f926693b
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 4%
@@ -117,7 +117,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Dashboard &quot;Ziele überwachen&quot;
+## Dashboard &quot;Ziele überwachen&quot; {#monitoring-destinations-dashboard}
 
 Um auf das Dashboard [!UICONTROL Monitoring] zuzugreifen, wählen Sie **[!UICONTROL Monitoring]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)
 ) in der linken Navigation. Wählen Sie auf der Seite [!UICONTROL Monitoring] [!UICONTROL Ziele] aus. Das Dashboard [!UICONTROL Monitoring] enthält Metriken und Informationen zu den Zielausführungsaufträgen.
