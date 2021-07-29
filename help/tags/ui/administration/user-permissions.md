@@ -1,7 +1,7 @@
 ---
 title: Benutzerberechtigungen
 description: Erfahren Sie mehr über die verschiedenen verfügbaren Tag-Berechtigungen für Adobe Experience Platform-Benutzer.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 ## Berechtigungstypen
 
@@ -76,7 +76,7 @@ Unternehmensrechte gelten für Berechtigungen, die mehrere Properties umfassen. 
 
 * **Eigenschaften verwalten:** Ermöglicht Ihnen das Erstellen neuer Eigenschaften in der Datenerfassungs-Benutzeroberfläche und das Ändern der Metadaten und Einstellungen auf Eigenschaftsebene. Sie können auch Properties löschen. Weitere Informationen finden Sie in der [Eigenschaftendokumentation](companies-and-properties.md) . In der Regel führen Administratoren diese Rolle aus.
 * 
-* Ermöglicht die Erstellung neuer Eigenschaften in [!DNL Platform Launch] und die Änderung der Metadaten und Einstellungen auf Eigenschaftsebene. Sie können auch Properties löschen. Weitere Informationen zu Properties finden Sie [hier](companies-and-properties.md). In der Regel führen Administratoren diese Rolle aus.
+* Ermöglicht die Erstellung neuer Eigenschaften und die Änderung der Metadaten und Einstellungen auf Eigenschaftsebene. Sie können auch Properties löschen. Weitere Informationen zu Properties finden Sie [hier](companies-and-properties.md). In der Regel führen Administratoren diese Rolle aus.
 * **Erweiterungen entwickeln:** Ermöglicht die Erstellung und Änderung von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung.
 * **Mobile-App-Konfigurationen verwalten:** Dies ist nur für Kunden verfügbar, die Adobe Journey Optimizer lizenziert haben, oder für andere Lösungen, mit denen sie Zugriff auf In-App- und Push-Messaging für Mobile Apps erhalten.  Auf diese Weise können Sie Apps verwalten, von denen Experience Cloud Kenntnis hat, sowie die erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Dienst und dem Apple Push Notification Service erforderlich sind.
 
