@@ -3,9 +3,9 @@ keywords: Marketo;Marketo;Marketo-Erweiterung;Marketo-Erweiterung
 title: Marketo-Erweiterung
 description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '471'
 ht-degree: 21%
 
 ---
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im Katalog [!DNL Destinations] für alle Kunden verfügbar, die Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Adobe Experience Platform. Tags, die Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion angeboten werden. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf Tags zu erhalten, und bitten Sie ihn, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können. und bitten Sie sie, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Adobe Experience Platform. Tags werden Adobe Experience Cloud-Kunden als zusätzliche, Mehrwert bietende Funktion angeboten. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf Tags zu erhalten, und bitten Sie ihn, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können. und bitten Sie sie, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
