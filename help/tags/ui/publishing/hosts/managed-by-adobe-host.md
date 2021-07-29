@@ -1,10 +1,10 @@
 ---
 title: Übersicht über von Adobe verwaltete Hosts
 description: Erfahren Sie mehr über die standardmäßige Hosting-Option für die Bereitstellung von Tag-Bibliothek-Builds in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 66%
+source-wordcount: '1175'
+ht-degree: 65%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Hosts, die von der Adobe verwaltet werden, sind die Standardeinstellung für die Bereitstellung Ihrer Tag-Bibliothek-Builds in Adobe Experience Platform. Wenn Sie über die Datenerfassungs-Benutzeroberfläche eine neue Eigenschaft erstellen, wird ein von der Adobe verwalteter Standardhost für Sie erstellt.
 
@@ -89,7 +89,7 @@ Cache-Control-Header werden nur auf den Hauptbibliotheks-Build angewendet. Alle 
 
 ## Verwenden von Adobe-verwaltetem Hosting in der Datenerfassungs-Benutzeroberfläche
 
-Wenn Sie zum ersten Mal eine Eigenschaft in der [Datenerfassungs-Benutzeroberfläche](http://launch.adobe.com/de) erstellen, wird automatisch ein von der Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen mit sofort verwendbaren Eigenschaften werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
+Wenn Sie zum ersten Mal eine Eigenschaft in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) erstellen, wird automatisch ein von der Adobe verwalteter Host erstellt. Alle verfügbaren Umgebungen mit sofort verwendbaren Eigenschaften werden standardmäßig auch dem von Adobe verwalteten Host zugewiesen.
 
 >[!NOTE]
 >
