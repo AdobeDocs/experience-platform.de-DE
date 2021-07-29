@@ -1,12 +1,11 @@
 ---
 title: Adobe-Erweiterungen
-seo-title: Adobe-Erweiterungen in Adobe Experience Platform Launch
 description: Dokumentation für Tag-Erweiterungen in Adobe Experience Platform.
-seo-description: Dokumentation für die Adobe Experience Platform Launch-Erweiterungen, die von Adobe-Lösungen bereitgestellt werden.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+seo-description: Dokumentation für die von Adobe-Lösungen bereitgestellten Tag-Erweiterungen.
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 62%
+source-wordcount: '81'
+ht-degree: 24%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 62%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Erfahren Sie mehr über die verfügbaren Tag-Erweiterungen in der [!DNL Adobe Experience Platform]-Erweiterungsbibliothek.
 
