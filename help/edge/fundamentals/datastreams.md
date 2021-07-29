@@ -3,9 +3,9 @@ title: Konfigurieren Ihres Datenspeichers für das Experience Platform Web SDK
 description: 'Erfahren Sie, wie Sie die Datenströme konfigurieren. '
 keywords: Konfiguration; Datastreams; datastreamId; edge; datastream id; Umgebungseinstellungen; edgeConfigId; identity; ID-Synchronisierung aktiviert; ID-Sync-Container-ID; Sandbox; Streaming-Inlet; Ereignis-Datensatz; Target; Client-Code; Eigenschaften-Token; Target-Umgebungs-ID; Cookie-Ziele; URL-Ziele; Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 3a1d08a4ea87ee3db7a2a8b048d5721fa679c372
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
@@ -19,17 +19,17 @@ Ihre Organisation muss für diese Funktion freigeschaltet sein. Wenden Sie sich 
 
 ## Erstellen einer Datenspeicherkonfiguration
 
-Datenspeicher können in Adobe [!DNL Experience Platform Launch] mithilfe des Konfigurationstools Datastream erstellt werden.
+Datenspeicher können in der Datenerfassungs-Benutzeroberfläche mithilfe des Konfigurationstools Datastream erstellt werden.
 
 ![Tool-Navigation mit Datenspeichern](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->Das Konfigurationstool für Datastreams steht Kunden auf der Zulassungsliste zur Verfügung, unabhängig davon, ob sie [!DNL Experience Platform Launch] als Tag-Manager verwenden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen in [!DNL Experience Platform Launch]. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](../../tags/ui/administration/user-permissions.md) in der [!DNL Experience Platform Launch] -Dokumentation.
+>Das Konfigurationswerkzeug für Datenspeicher steht Kunden auf der Zulassungsliste zur Verfügung, unabhängig davon, ob sie Platform als Tag-Manager verwenden. Darüber hinaus benötigen Benutzer Entwicklungsberechtigungen. Weitere Informationen finden Sie im Artikel [Benutzerberechtigungen](../../tags/ui/administration/user-permissions.md) in der Tag-Dokumentation.
 
 Erstellen Sie einen Datastream, indem Sie oben rechts im Bildschirm auf **[!UICONTROL Neuer Datastream]** klicken. Nachdem Sie einen Namen und eine Beschreibung angegeben haben, werden Sie nach den Standardeinstellungen für jede Umgebung gefragt. Die verfügbaren Einstellungen werden nachfolgend beschrieben.
 
-Beim Erstellen eines Datastreams werden drei Umgebungen automatisch mit identischen Einstellungen erstellt. Diese drei Umgebungen sind *dev*, *stage* und *prod*. Sie entsprechen den drei Standardumgebungen in [!DNL Experience Platform Launch]. Wenn Sie eine [!DNL Experience Platform Launch]-Bibliothek in einer Entwicklungsumgebung erstellen, verwendet die Bibliothek automatisch die Entwicklungsumgebung aus Ihrer Konfiguration. Sie können Einstellungen in einzelnen Umgebungen beliebig bearbeiten.
+Beim Erstellen eines Datastreams werden drei Umgebungen automatisch mit identischen Einstellungen erstellt. Diese drei Umgebungen sind *dev*, *stage* und *prod*. Sie entsprechen den drei Standardumgebungen für Tags. Wenn Sie eine Tag-Bibliothek in einer Entwicklungsumgebung erstellen, verwendet die Bibliothek automatisch die Entwicklungsumgebung aus Ihrer Konfiguration. Sie können Einstellungen in einzelnen Umgebungen beliebig bearbeiten.
 
 Die im SDK als `edgeConfigId` verwendete ID ist eine zusammengesetzte ID, die die Konfiguration und die Umgebung angibt (z. B. `1c86778b-cdba-4684-9903-750e52912ad1:stage`). Wenn in der zusammengesetzten ID keine Umgebung vorhanden ist (im vorherigen Beispiel z. B. `stage` ), wird die Produktionsumgebung verwendet.
 
