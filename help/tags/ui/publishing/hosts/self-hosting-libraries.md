@@ -1,10 +1,10 @@
 ---
 title: Self-Hosting von Bibliotheken
 description: Erfahren Sie, wie Sie Self-Hosting für Ihre Tag-Bibliothek-Builds in Adobe Experience Platform implementieren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '494'
-ht-degree: 74%
+source-wordcount: '495'
+ht-degree: 71%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Tags in Adobe Experience Platform ermöglichen die Erstellung eines Dateiensatzes namens [build](../builds.md). Dieser Dateisatz steuert das Verhalten Ihrer Anwendung zur Laufzeit.
 
