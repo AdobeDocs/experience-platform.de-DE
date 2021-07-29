@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise zur AEM Asset Insights-Erweiterung
 description: Die neuesten Versionshinweise für die AEM Asset Insights-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 55%
+source-wordcount: '137'
+ht-degree: 42%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 9. September 2020
 
