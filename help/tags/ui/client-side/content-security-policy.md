@@ -1,10 +1,10 @@
 ---
 title: Unterstützung einer Content Security Policy (CSP)
 description: Erfahren Sie, wie Sie bei der Integration Ihrer Website mit Tags in Adobe Experience Platform mit Einschränkungen der Content Security Policy (CSP) umgehen.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 58%
+source-wordcount: '1080'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Eine Content Security Policy (CSP) ist eine Sicherheitsfunktion, die Cross-Site-Scripting-Angriffe (XSS) verhindert. Dies geschieht, wenn der Browser dazu gebracht wird, schädliche Inhalte auszuführen, die scheinbar von einer vertrauenswürdigen Quelle stammen, aber tatsächlich von einer anderen Quelle stammen. Mit CSPs kann der Browser (im Namen des Benutzers) überprüfen, ob das Skript tatsächlich von einer vertrauenswürdigen Quelle stammt.
 
