@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform Web SDK-Konfiguration
-description: Erfahren Sie mehr über die Adobe Experience Platform Web SDK-Erweiterung für Adobe Experience Platform Launch
+description: Erfahren Sie mehr über die Adobe Experience Platform Web SDK-Tag-Erweiterung.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: e5b43a65bb9907f333f1ffedfbeed00f02f8ef39
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1034'
 ht-degree: 8%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 8%
 
 Die Adobe Experience Platform Web SDK-Erweiterung sendet Daten aus Webeigenschaften über das Adobe Experience Platform Edge Network an Adobe Experience Cloud. Mit der Erweiterung können Sie Daten in Platform streamen, Identitäten synchronisieren, Zustimmungssignale von Kunden verarbeiten und automatisch Kontextdaten erfassen.
 
-In diesem Dokument wird beschrieben, wie Sie die Erweiterung in der Benutzeroberfläche von Adobe Experience Platform Launch konfigurieren.
+In diesem Dokument wird beschrieben, wie Sie die Erweiterung in der Datenerfassungs-Benutzeroberfläche konfigurieren.
 
 ## Konfigurieren Sie die Erweiterung
 
-Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Platform launch-Benutzeroberfläche und wählen Sie die Registerkarte **[!UICONTROL Erweiterungen]** aus. Wählen Sie unter dem Platform Web SDK **[!UICONTROL Configure]** aus.
+Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Datenerfassungs-Benutzeroberfläche und wählen Sie die Registerkarte **[!UICONTROL Erweiterungen]** aus. Wählen Sie unter dem Platform Web SDK **[!UICONTROL Configure]** aus.
 
 ![](../images/extension/overview/configure.png)
 
@@ -35,7 +35,7 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 
 ### [!UICONTROL Name]
 
-Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer einzigen Platform launch-Konfiguration an mehrere Unternehmen zu senden.
+Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden.
 
 Der Name der Erweiterung wird standardmäßig auf &quot;[!DNL alloy]&quot;festgelegt. Sie können den Instanznamen jedoch in einen beliebigen anderen gültigen JavaScript-Objektnamen ändern.
 
