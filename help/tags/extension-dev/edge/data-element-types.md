@@ -1,10 +1,10 @@
 ---
 title: Datenelementtypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ "Datenelement"für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 28%
+source-wordcount: '435'
+ht-degree: 24%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 28%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In -Tags sind Datenelemente Aliase für Datenelemente auf einer Web- oder mobilen Seite, unabhängig davon, wo sich diese Daten innerhalb des vom Server empfangenen Ereignisses befinden. Ein Datenelement kann durch Regeln referenziert werden und dient als Abstraktion für den Zugriff auf diese Daten. Wenn sich der Speicherort der Daten in Zukunft ändert (z. B. beim Ändern des Ereignisschlüssels, der den Wert enthält), kann ein einzelnes Datenelement neu konfiguriert werden, während alle Regeln, die auf dieses Datenelement verweisen, unverändert bleiben können.
 
