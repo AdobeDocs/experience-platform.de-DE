@@ -1,10 +1,10 @@
 ---
 title: Freie turbine-Variable
 description: Erfahren Sie mehr über das Turbinenobjekt, eine freie Variable, die Informationen und Dienstprogramme bereitstellt, die für die Adobe Experience Platform-Tag-Laufzeit spezifisch sind.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 58%
+source-wordcount: '577'
+ht-degree: 51%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Das `turbine`-Objekt ist eine „freie Variable“ im Gültigkeitsbereich der Bibliotheksmodule Ihrer Erweiterung. Es stellt Informationen und Dienstprogramme bereit, die spezifisch für die Tag-Laufzeit von Adobe Experience Platform sind, und ist immer für Bibliotheksmodule verfügbar, ohne `require()` zu verwenden.
 
@@ -90,7 +90,7 @@ Ruft ein Modul ab, das von einer anderen Erweiterung freigegeben wurde. Wenn kei
 turbine.logger.error('Error!');
 ```
 
-Das Protokollierungsdienstprogramm wird verwendet, um Meldungen in der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debugging-Modus besteht darin, [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda) oder [ Launch und DTM Switch](https://chrome.google.com/webstore/detail/adobe-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk) als Chrome-Erweiterung zu verwenden. Alternativ kann der Benutzer den folgenden Befehl `_satellite.setDebug(true)` in der Browser-Entwicklerkonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
+Das Protokollierungsdienstprogramm wird verwendet, um Meldungen in der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Cloud-Debuggers](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Alternativ kann der Benutzer den folgenden Befehl `_satellite.setDebug(true)` in der Browser-Entwicklerkonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
 
 * `logger.log(message: string)`: Protokolliert eine Meldung auf der Browser-Konsole.
 * `logger.info(message: string)`: Protokolliert eine Informationsmeldung auf der Konsole.
