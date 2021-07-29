@@ -3,7 +3,7 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 9%
@@ -65,10 +65,10 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Befolgen Sie die Anweisungen unter [Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über [Adobe Experience Platform Launch](http://launch.adobe.com/de) installiert werden. Hier finden Sie eine [Schnellstartanleitung zum Platform launch](../../../tags/quick-start/quick-start.md)).
+1. Befolgen Sie die Anweisungen unter [Installieren des SDK](../../fundamentals/installing-the-sdk.md) (Das SDK kann eigenständig oder über die [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installiert werden. Weitere Informationen finden Sie in der [Tags-Schnellstartanleitung](../../../tags/quick-start/quick-start.md)).
 1. [Konfigurieren Sie das ](../../fundamentals/configuring-the-sdk.md) SDK für Offer decisioning. Weitere Offer decisioning-spezifische Schritte finden Sie unten.
 
-   * Eigenständig installiertes SDK
+   * Installieren des eigenständigen SDK
 
       1. Konfigurieren Sie die Aktion &quot;sendEvent&quot;mit `decisionScopes` .
 
@@ -81,10 +81,10 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
              ]
           })
          ```
-   * platform launch installiertes SDK
+   * SDK über Tags installieren
 
-      1. [Erstellen einer Platform launch-Eigenschaft](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Platform launch-Einbettungscode hinzufügen](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Tag-Eigenschaft erstellen](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Hinzufügen des Einbettungscodes](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem soeben erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen finden Sie in der Dokumentation zu [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -140,7 +140,7 @@ Um Offer decisioning zu aktivieren, müssen Sie die folgenden Schritte ausführe
 | Eigenschaft | Erforderlich | Beschreibung | Beschränkungen | Beispiel |
 |---|---|---|---|---|
 | `identityMap` | Ja | Weitere Informationen finden Sie in der [Dokumentation zum Identity Service](../../identity/overview.md). | Eine Identität pro Anfrage. | `{ "identityMap": { "ECID": [ { "id": "91133425615229052182584359620783097099" } ] } }` |
-| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximal 30 `decisionScopes` pro Anforderung. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
+| `decisionScopes` | Ja | Ein Array Base64-kodierter Zeichenfolgen von JSON, die die Aktivitäts- und Platzierungs-IDs enthalten. | Maximal 30 `decisionScopes` pro Anfrage. | `"decisionScopes": ["eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="]` |
 
 **Antwort**
 
