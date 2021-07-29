@@ -1,9 +1,9 @@
 ---
 title: Ansichten in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2062'
+source-wordcount: '2063'
 ht-degree: 76%
 
 ---
@@ -12,7 +12,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Jedes Ereignis, jede Bedingung, jede Aktion und jeder Datenelementtyp kann eine Ansicht bieten, die es dem Benutzer ermöglicht, Einstellungen bereitzustellen. Die Erweiterung kann auch über eine übergeordnete [Erweiterungskonfigurationsansicht](../configuration.md) verfügen, in der Benutzer globale Einstellungen für die gesamte Erweiterung angeben können. Der Vorgang zum Erstellen einer Ansicht ist bei allen Arten von Ansichten identisch.
 
