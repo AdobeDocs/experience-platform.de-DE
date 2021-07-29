@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '979'
-ht-degree: 57%
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in fo
 
 ### Adobe-Anwendungen
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Adobe-Anwendungen wie Adobe Analytics, Adobe Audience Manager und [!DNL Experience Platform Launch]. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe Apps, einschließlich Adobe Analytics und Adobe Audience Manager. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [Übersicht über den Adobe Audience Manager-Connector](connectors/adobe-applications/audience-manager.md)
 - [Erstellen einer Adobe Audience Manager-Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
