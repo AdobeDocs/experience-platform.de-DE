@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Ziele
-source-git-commit: 3ab15ceaf33a33f8bbda80cbf09228d16ce5a374
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '476'
 ht-degree: 58%
 
 ---
@@ -100,8 +100,8 @@ ht-degree: 58%
       * [Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-Verbindung](./catalog/email-marketing/oracle-responsys.md)
       * [Salesforce-Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
-   * Experience Platform Launch-Erweiterungen {#launch-extensions}
-      * [Übersicht über die Adobe Experience Platform Launch-Erweiterung](./catalog/launch-extensions/overview.md)
+   * Tag-Erweiterungen {#launch-extensions}
+      * [Übersicht über die Tag-Erweiterung](./catalog/launch-extensions/overview.md)
    * Mobile Interaktionsziele {#mobile-engagement}
       * [Mobile Interaktionsziele - Übersicht](./catalog/mobile-engagement/overview.md)
       * [(Beta) Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
