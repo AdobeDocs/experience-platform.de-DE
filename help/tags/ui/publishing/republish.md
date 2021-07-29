@@ -1,10 +1,10 @@
 ---
 title: Bibliothek erneut veröffentlichen
 description: Erfahren Sie, wie Sie eine vorherige Tag-Bibliothek in Adobe Experience Platform erneut veröffentlichen.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 60%
+source-wordcount: '650'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Die fünf zuletzt in Ihrer Produktionsumgebung auf einer Web-Eigenschaft veröffentlichten Bibliotheken können zu einem späteren Zeitpunkt abgerufen werden. Diese Funktion ist hilfreich, wenn Sie einen Fehler in Ihrer Produktionsbibliothek finden und unmittelbar einen funktionierenden Zustand wiederherstellen müssen.
 
