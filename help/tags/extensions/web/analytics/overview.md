@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Adobe Analytics-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2201'
-ht-degree: 95%
+source-wordcount: '2202'
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zum Konfigurieren der Adobe Analytics-Erweiterung und den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
