@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Adobe Target v2-Tag-Erweiterung in Adobe Experience Platform.
-source-git-commit: 8384249069af2df053e88694315ba83241f88460
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1362'
-ht-degree: 72%
+source-wordcount: '1363'
+ht-degree: 71%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 72%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
