@@ -1,10 +1,10 @@
 ---
 title: Drittanbietererweiterungen
 description: Erfahren Sie mehr über Drittanbietererweiterungen für Adobe Experience Platform.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 60%
+source-wordcount: '141'
+ht-degree: 47%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 60%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Neben den Erweiterungen, die von Adobe-Lösungen bereitgestellt werden, stehen auch Erweiterungen von Drittanbietern für Adobe Experience Platform zur Verfügung.
 
