@@ -1,10 +1,10 @@
 ---
 title: Erstellen einer Exchange-Liste für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung zum öffentlichen Katalog in Adobe Experience Platform hinzufügen.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1162'
-ht-degree: 61%
+ht-degree: 58%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Adobe Experience Platform verfügt über einen einzigen einheitlichen Katalog, in dem Benutzer Tag-Erweiterungen anzeigen können, die für die Installation verfügbar sind. Dieser Katalog ist innerhalb des Produkts verfügbar und enthält Erweiterungen von drei Typen:
 
@@ -44,7 +44,6 @@ Wenn Sie bereits über ein Firmenkonto verfügen oder noch nicht planen, Ihren E
    >[!NOTE]
    >
    >Dies ist ein anderes Dateiformat als im Erweiterungscode verwendet. Die Erweiterung selbst enthält eine SVG-Datei als [Symbol](../manifest.md).
-   
    - **Vorgestelltes Bild**  - Erhalten Sie Ihre Aufmerksamkeit durch die Verwendung eines Bildes, das alleine stehen kann und Ihre Marke zeigt und Ihre Anwendung hervorhebt. Das präsentierte Bild wird angezeigt, wenn ein Benutzer einen Link zu Ihrer Exchange-Liste oder zu Social Media-Beiträgen darüber teilt. Es muss daher eine Modelldarstellung Ihrer Marke sein.
    - **Logo des App-Herausgebers**: Dies ist Ihr Firmenlogo. Vergewissern Sie sich, dass das Symbol die entsprechenden Abmessungen von 1280 x 720 oder 2560 x 1440 (16:9) im PNG- oder JPG-Format aufweist.
    - **Konfigurationsanweisungen**  - Informieren Sie Kunden darüber, wie Sie Ihre Adobe Experience Platform-Erweiterung konfigurieren. Vergewissern Sie sich, dass sie alle erforderlichen Einstellungen und die nächsten Schritte verstehen, wenn die [Konfigurationsansicht](../configuration.md) unmittelbar nach der Installation Ihrer Erweiterung in einer Eigenschaft angezeigt wird. 
@@ -69,4 +68,4 @@ Wenn Sie Ihre Erweiterung oder auch lediglich Ihre Exchange-Liste aktualisieren 
 
 ## Verknüpfen Sie Ihr Erweiterungspaket mit Ihrem Eintrag.
 
-Nachdem Ihr Eintrag genehmigt wurde und öffentlich verfügbar ist, empfehlen wir, im Feld `exchange_url` der Datei `extension.json` innerhalb Ihres Erweiterungspakets einen Link zum öffentlichen Eintrag anzugeben.  Dadurch wird ein Link „Weitere Informationen“ im Platform Launch-Erweiterungskatalog erstellt, über den Anwender im Produkt Ihren Eintrag finden und zusätzliche Informationen erhalten können.
+Nachdem Ihr Eintrag genehmigt wurde und öffentlich verfügbar ist, empfehlen wir, im Feld `exchange_url` der Datei `extension.json` innerhalb Ihres Erweiterungspakets einen Link zum öffentlichen Eintrag anzugeben.  Dadurch wird ein &quot;Mehr Infos&quot;-Link im Tag-Erweiterungskatalog erstellt, über den Benutzer innerhalb des Produkts Ihre Liste finden und zusätzliche Informationen erhalten können.
