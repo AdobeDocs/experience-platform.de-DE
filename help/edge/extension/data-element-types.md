@@ -1,17 +1,17 @@
 ---
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
-description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
+description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 5a295a1f6e64c33ac4a48e1d74253d0527f495f9
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 47%
+source-wordcount: '293'
+ht-degree: 49%
 
 ---
 
 # Datenelementtypen
 
-Nachdem Sie die [Aktionstypen](action-types.md) in der [Adobe Experience Platform Web SDK-Erweiterung](web-sdk-extension-configuration.md) für [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html) festgelegt haben, konfigurieren Sie Ihre Datenelementtypen.
+Nachdem Sie die [Aktionstypen](action-types.md) in der [Adobe Experience Platform Web SDK-Tag-Erweiterung](web-sdk-extension-configuration.md) festgelegt haben, konfigurieren Sie Ihre Datenelementtypen.
 
 Auf dieser Seite werden die verfügbaren Datenelementtypen beschrieben.
 
