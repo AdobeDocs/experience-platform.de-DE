@@ -1,18 +1,17 @@
 ---
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
-description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
-seo-description: Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch
+description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: dfcfdf90ae857e6a6ff0ddc7810cb6a6939c9758
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 56%
+source-wordcount: '1071'
+ht-degree: 52%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
-In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Erweiterung für Adobe Experience Platform Launch behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
 ## Version 2.6.0 - 27. Juli 2021
 
@@ -103,14 +102,14 @@ Diese Entscheidungen werden nur dann vom `sendEvent`-Befehl zurückgegeben, wenn
 * Während der ID-Migration gestellte Anfragen werden an den demdex-Endpunkt gesendet, um die domänenübergreifende Identifizierung zu verbessern, wenn kein demdex-Cookie gesetzt wurde.
 * Bei der ID-Migration gestellte Anfragen erwarten immer eine Antwort, um sicherzustellen, dass Identitäts-Cookies gesetzt werden.
 * Beim Ausführen eines ungültigen Befehls wird eine Liste mit gültigen Befehlsnamen in der Konsole protokolliert.
-* Es wurde ein Kontrollkästchen zum Umschalten zwischen Drittanbieter-Cookie-Unterstützung und der Adobe Experience Platform Launch-Erweiterung hinzugefügt. Dadurch werden Aufrufe von demdex.net deaktiviert.
+* Es wurde ein Kontrollkästchen zum Umschalten zwischen Drittanbieter-Cookie-Unterstützung und der Tag-Erweiterung hinzugefügt. Dadurch werden Aufrufe von demdex.net deaktiviert.
 
 ## Version 0.0.5 - 20. Dezember 2019
 
-* Hinzufügen von Activity Tracker-Konfigurationen zur Platform Launch-Erweiterung
+* Hinzufügen von Activity Tracker-Konfigurationen zur Tag-Erweiterung
 * Anzeigen von EventType und EventMergeId beim Ereignisbefehl
-* Hinzufügen von onBeforeEventSend-Konfiguration zur Platform Launch-Erweiterung
-* Hinzufügen von edgeBasePath-Konfiguration zur Platform Launch-Erweiterung
+* Hinzufügen von onBeforeEventSend-Konfiguration zur Tag-Erweiterung
+* Hinzufügen von edgeBasePath config zur Tag-Erweiterung
 
 ## Version 0.0.3 - 25. November 2019
 
