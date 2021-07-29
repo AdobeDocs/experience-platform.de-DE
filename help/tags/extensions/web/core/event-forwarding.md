@@ -1,10 +1,10 @@
 ---
 title: Übersicht über die Hauptereignisweiterungserweiterung
 description: Erfahren Sie mehr über die Hauptereignisweiterungserweiterung in Adobe Experience Platform.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 94%
+source-wordcount: '1724'
+ht-degree: 92%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Hauptereignis-Weiterleitungs-Erweiterung stellt die Standardereignisse, Bedingungen und Datentypen für die Ereignisweiterleitung in Adobe Experience Platform bereit.
 
@@ -165,7 +165,7 @@ Der Zugriff auf den Wert eines Datenelements in benutzerdefiniertem Code erfolgt
 getDataElementValue('productName') 
 ```
 
-In Platform Launch Server Side werden Aktionen der Reihe nach ausgeführt. Zudem kann der von einer Aktion in benutzerspezifischem Code zurückgegebene Wert in einer auf diese folgende Aktion verwendet werden. Der zurückgegebene Wert kann aus dem Code innerhalb dieser Aktion oder aus dem über einen Aufruf einer externen Quelle erhaltenen Antworttext stammen. Um auf Daten aus einer zuvor ausgeführten Aktion innerhalb einer einzelnen Regel zu verweisen, bei der die Core-Erweiterung verwendet wird, erstellen Sie ein Datenelement vom Typ `Path` und verwenden Sie den folgenden Pfad, um auf den Wert einer Variablen mit dem Namen `productCategory` zu verweisen, die im benutzerdefinierten Code innerhalb der Core-Erweiterung definiert ist:
+Die Ereignisweiterleitungsaktionen werden sequenziell ausgeführt. Zudem kann der von einer Aktion in benutzerspezifischem Code zurückgegebene Wert in einer auf diese folgende Aktion verwendet werden. Der zurückgegebene Wert kann aus dem Code innerhalb dieser Aktion oder aus dem über einen Aufruf einer externen Quelle erhaltenen Antworttext stammen. Um auf Daten aus einer zuvor ausgeführten Aktion innerhalb einer einzelnen Regel zu verweisen, bei der die Core-Erweiterung verwendet wird, erstellen Sie ein Datenelement vom Typ `Path` und verwenden Sie den folgenden Pfad, um auf den Wert einer Variablen mit dem Namen `productCategory` zu verweisen, die im benutzerdefinierten Code innerhalb der Core-Erweiterung definiert ist:
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 
