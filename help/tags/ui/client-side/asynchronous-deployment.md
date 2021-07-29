@@ -1,10 +1,10 @@
 ---
 title: Asynchrone Implementierung
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Tag-Bibliotheken asynchron auf Ihrer Website bereitstellen.
-source-git-commit: 5f810ada57eeb12a56de603d974a091b888dc9d2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 59%
+source-wordcount: '1010'
+ht-degree: 57%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Die Leistung und nicht blockierende Bereitstellung der für unsere Produkte erforderlichen JavaScript-Bibliotheken wird für Adobe Experience Cloud-Benutzer immer wichtiger. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen Benutzern, die Art und Weise der Bereitstellung der Adobe-Bibliotheken auf ihrer Site zu ändern. In diesem Artikel wird erläutert, wie Sie die JavaScript-Bibliotheken der Adobe asynchron verwenden.
 
