@@ -3,9 +3,9 @@ title: IAB TCF 2.0-Unterstützung im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie IAB TCF 2.0-Zustimmungsvoreinstellungen mithilfe des Adobe Experience Platform Web SDK unterstützen.
 keywords: Einverständnis; setConsent; Profildatenfeldgruppe; Erlebnisereignis-Datenschutzfeldgruppe; Datenschutzfeldgruppe; IAB TCF 2.0; Echtzeit-Kundendatenplattform; Echtzeit-Kundendatenprofil
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
@@ -14,10 +14,10 @@ ht-degree: 0%
 
 Das Adobe Experience Platform Web SDK unterstützt das Interactive Advertising Bureau Transparency &amp; Consent Framework, Version 2.0 (IAB TCF 2.0). In diesem Handbuch werden die Anforderungen für die Unterstützung von IAB TCF 2.0 über das Adobe Experience Platform Web SDK erläutert, das mit der Echtzeit-Kundendatenplattform, dem Audience Manager, Experience Events, Adobe Analytics und Experience Edge integriert wird.
 
-Darüber hinaus stehen die folgenden Handbücher zur Verfügung, mit denen Sie lernen können, wie IAB TCF 2.0 mit und ohne Adobe Experience Platform Launch integriert wird.
+Darüber hinaus stehen die folgenden Handbücher zur Verfügung, mit denen Sie lernen können, wie IAB TCF 2.0 mit und ohne Tags integriert wird.
 
-- [Mit Adobe Experience Platform Launch](./with-launch.md)
-- [Ohne Adobe Experience Platform Launch](./without-launch.md)
+- [Mit Tags](./with-launch.md)
+- [Ohne Tags](./without-launch.md)
 
 ## Erste Schritte
 
@@ -90,4 +90,4 @@ Weitere Informationen zum Befehl `sendEvent` finden Sie in der Dokumentation zu 
 
 ## Nächste Schritte
 
-Nachdem Sie jetzt ein grundlegendes Verständnis des IAB Transparency &amp; Consent Framework 2.0 haben, lesen Sie eines der Leitfäden zur Verwendung von IAB TCF 2.0 [mit Adobe Experience Platform Launch](./with-launch.md) oder [ohne Adobe Experience Platform Launch](./without-launch.md).
+Nachdem Sie jetzt ein grundlegendes Verständnis des IAB Transparency &amp; Consent Framework 2.0 haben, lesen Sie eines der Leitfäden zur Verwendung von IAB TCF 2.0 [mit Tags](./with-launch.md) oder [ohne Tags](./without-launch.md).
