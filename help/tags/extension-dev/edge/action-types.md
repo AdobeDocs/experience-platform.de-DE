@@ -1,10 +1,10 @@
 ---
 title: Aktionstypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul für Aktionstyp für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 45%
+source-wordcount: '382'
+ht-degree: 41%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In einer Tag-Regel wird eine Aktion ausgeführt, nachdem die Auswertung der Regelbedingungen abgeschlossen wurde. Aktionstypen werden von Erweiterungen bereitgestellt und ihre Auswirkungen werden vollständig vom Autor der Erweiterung definiert.
 
