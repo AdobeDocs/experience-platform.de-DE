@@ -1,10 +1,10 @@
 ---
 title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
-source-git-commit: 421d1d0660c4c9c7280974f8a812a8f0e4f7cbea
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 76%
+source-wordcount: '2647'
+ht-degree: 75%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Im Basisverzeichnis der Erweiterung müssen Sie eine Datei mit dem Namen `extension.json` erstellen. Sie enthält wichtige Details zu Ihrer Erweiterung, die es Adobe Experience Platform ermöglichen, diese ordnungsgemäß zu nutzen. Einige Inhalte sind nach dem Vorbild von [npm `package.json`](https://docs.npmjs.com/files/package.json) gestaltet.
 
