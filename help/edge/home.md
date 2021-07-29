@@ -3,22 +3,22 @@ title: Übersicht über das Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Platform-Funktionen in Ihre Website integrieren können.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '664'
 ht-degree: 14%
 
 ---
 
 # Übersicht über das Adobe Experience Platform Web SDK
 
-Das Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, mit der Kunden von Adobe Experience Cloud über das Adobe Experience Platform Edge Network mit den verschiedenen Diensten im [!DNL Experience Cloud] interagieren können. Zusätzlich zur JavaScript-Bibliothek gibt es eine [Experience Platform Launch-Erweiterung](../tags/extensions/web/sdk/overview.md), die Ihnen bei Ihren Web SDK-Konfigurationen hilft.
+Das Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, mit der Kunden von Adobe Experience Cloud über das Adobe Experience Platform Edge Network mit den verschiedenen Diensten im [!DNL Experience Cloud] interagieren können. Zusätzlich zur JavaScript-Bibliothek gibt es eine [Tag-Erweiterung](../tags/extensions/web/sdk/overview.md), die Ihnen bei Ihren Web SDK-Konfigurationen hilft.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] ist Teil der Sammlung, aus der Experience Edge besteht. Experience Edge umfasst drei Technologien:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** Ein JavaScript-SDK und eine  [!DNL Experience Platform Launch] Erweiterung zur drastischen Vereinfachung der Bereitstellung von  [!DNL Adobe] Technologien
+* **[!DNL Adobe Experience Platform Web SDK]:** Ein JavaScript-SDK und eine Tag-Erweiterung zur drastischen Vereinfachung der Bereitstellung von  [!DNL Adobe] Technologien
 * **Adobe Experience Platform Mobile SDK:**  Eine Erweiterung des Mobile SDK v5, um Kunden die Verwendung der neuen Bereitstellungsmethode zu ermöglichen
 * **[!DNL Adobe Experience Platform Edge Network]:** Ein globales Netzwerk verteilter Server, das eine neue Methode zur Bereitstellung von  [!DNL Adobe] Produkten ermöglicht
 
