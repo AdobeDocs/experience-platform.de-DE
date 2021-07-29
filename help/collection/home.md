@@ -5,9 +5,9 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: da7696d288543abd21ff8a1402e81dcea32efbc2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '304'
 ht-degree: 84%
 
 ---
@@ -25,7 +25,8 @@ Die Datenerfassung wird für die folgenden Client-seitigen Quellen unterstützt:
 Von Experience Platform bereitgestellte Datenerfassungstechnologien konzentrieren sich auf die Entdeckung und Zugänglichkeit von aufgenommenen Datensätzen. Diese Technologien umfassen Folgendes:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=de)
-* [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=de)
+* [Tags](../tags/home.md)
+* [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
 
@@ -37,7 +38,7 @@ Adobe Experience Platform Web- und Mobile-SDKs reduzieren und komprimieren alle 
 
 ## Schnelle Bereitstellung der Adobe-Technologie
 
-Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Platform launch können Sie [datastreams](../edge/fundamentals/datastreams.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten, mit denen Sie diese Produkte serverseitig aktivieren können, ohne den clientseitigen Code zu ändern.
+Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mithilfe von Tags können Sie [datastreams](../edge/fundamentals/datastreams.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten, mit denen Sie diese Produkte serverseitig aktivieren können, ohne den clientseitigen Code zu ändern.
 
 ![](./images/deploy.png)
 
