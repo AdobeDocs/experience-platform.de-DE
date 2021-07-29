@@ -1,10 +1,10 @@
 ---
 title: Aktionstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul für einen Aktionstyp für eine Tag-Erweiterung in einer Webeigenschaft definieren.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 53%
+source-wordcount: '408'
+ht-degree: 49%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 53%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Im Kontext von Datenerfassungs-Tags wird eine Aktion ausgeführt, nachdem ein Regelereignis aufgetreten ist und alle Bedingungen die Auswertung bestanden haben.
 
