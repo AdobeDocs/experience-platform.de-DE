@@ -1,10 +1,10 @@
 ---
 title: Cloud Connector-Erweiterung – Übersicht
 description: Erfahren Sie mehr über die Erweiterung der Cloud Connector-Ereignisweiterleitung in Adobe Experience Platform.
-source-git-commit: 1d3415146335d3011963c969d5b6aeea1f1a51d0
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 92%
+source-wordcount: '1616'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Mit der Ereignisweiterleitungs-Erweiterung &quot;Cloud Connector&quot;können Sie benutzerdefinierte HTTP-Anforderungen erstellen, um Daten an ein Ziel zu senden oder Daten von einem Ziel abzurufen. Die Cloud Connector-Erweiterung ist wie Postman für das Adobe Experience Platform Edge Network und kann verwendet werden, um Daten an einen Endpunkt zu senden, der noch keine dedizierte Erweiterung hat.
 
