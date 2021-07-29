@@ -1,10 +1,10 @@
 ---
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 79%
+source-wordcount: '1631'
+ht-degree: 78%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 
@@ -38,8 +38,6 @@ Datenelemente enthalten Daten, wenn sie in Regeln verwendet oder manuell in eine
 
 1. [Erstellen Sie ein Datenelement](#create-a-data-element), falls noch keines vorhanden ist.
 1. Verwenden Sie das Datenelement in einer [-Regel](./rules.md) oder einem benutzerdefinierten Skript.
-
-Ein Einführungsvideo finden Sie unter [Datenelemente](../../quick-start/videos.md).
 
 ## Verwendung von Datenelementen
 
