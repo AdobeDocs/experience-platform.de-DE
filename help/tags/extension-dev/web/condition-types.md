@@ -1,10 +1,10 @@
 ---
 title: Bedingungstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ Bedingung für eine Tag-Erweiterung in einer Webeigenschaft definieren.
-source-git-commit: 99780f64c8f09acea06e47ebf5cabc762e05cab2
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 59%
+source-wordcount: '498'
+ht-degree: 56%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Im Kontext einer Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Die Ausnahme besteht, wenn Benutzer Bedingungen explizit in einem &quot;Ausnahme&quot;-Behälter platzieren. In diesem Fall müssen alle Bedingungen im Behälter &quot;false&quot;zurückgeben, damit die Regel weiter verarbeitet werden kann.
 
