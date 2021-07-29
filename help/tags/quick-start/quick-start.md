@@ -1,10 +1,10 @@
 ---
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie in Adobe Experience Platform schnell mit Tags arbeiten können.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '1533'
-ht-degree: 44%
+source-wordcount: '1532'
+ht-degree: 42%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Tags sind die nächste Generation der Tag-Management-Technologie von Adobe Experience Platform. Es wurde von Grund auf neu erstellt, um ein offenes und nachhaltiges Ökosystem zu unterstützen, in dem jeder seine eigenen Integrationen erstellen kann, die Adobe-Kunden auf ihren Sites bereitstellen können. Es handelt sich um eine API-First-Anwendung, sodass alle möglichen Aktionen auf der Benutzeroberfläche auch programmgesteuert über eine API erfolgen können.
 
@@ -26,8 +26,6 @@ Der grundlegende Tags-Workflow:
 6. Testen in Ihrer Entwicklungsumgebung.
 7. Weiterleiten an Produktion.
 
-Ein Einführungsvideo finden Sie in der [Einführungsvideos](videos.md) -Dokumentation.
-
 ## 1. Einrichten von Gruppen und Benutzern
 
 Tags sind vollständig in Ihre Adobe ID integriert. Benutzerberechtigungen werden über die Admin Console mit anderen Adobe-Produkten und -Lösungen aus dem Experience Cloud [!DNL Creative Cloud], [!DNL Document Cloud] und verwaltet.
@@ -38,7 +36,7 @@ Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Bildschirm [Experience Cloud login](https://experiencecloud.adobe.com) und wählen Sie **[!UICONTROL Launch/Data Collection]** auf der Registerkarte Schnellzugriff .
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldungsbildschirm [Experience Cloud](https://experiencecloud.adobe.com) und wählen Sie die Datenerfassungs-Benutzeroberfläche auf der Registerkarte Schnellzugriff aus.
 
 >[!NOTE]
 >
@@ -56,7 +54,7 @@ Eine Erweiterung ist eine Integration, die von Adobe oder einem Adobe-Partner er
 
 Für alle neuen Eigenschaften ist die [Core-Erweiterung](../extensions/web/core/overview.md) installiert. Mobile Eigenschaften enthalten zusätzliche Erweiterungen. Die Haupterweiterung wird von Adobe erstellt, um einen robusten Standardsatz von Datenelementtypen für Ihre Datenschicht und Ereignistypen für Ihre Regeln bereitzustellen. Die meisten Aktionen, die Sie durchführen (Abrufen einer ECID, Senden von [!DNL Adobe Analytics]-Signalen, Laden der globalen [!DNL Target] Mbox usw.), stammen aus Erweiterungen, die Sie über den Katalog installieren.
 
-Was Tags in Platform wirklich einzigartig macht, ist, dass diese Erweiterungen von jedem erstellt werden können. Sie müssen ein Facebook-Remarketing-Pixel auf Ihrer Site ablegen? Sehen Sie sich die von Facebook erstellte Erweiterung an. Hätten Sie gerne dasselbe für Twitter oder Linked In? Verwenden Sie diese Erweiterungen. Sie müssen eine Umfrage ausführen? Sehen Sie sich Question Pro oder Foresee an. Müssen Sie den Datenschutz und die Einwilligung Ihrer Endbenutzer verwalten, um mit [!DNL GDPR] zu helfen? Sehen Sie sich Evidon und Trust Arc genau an. Möchten Sie detaillierte Einblicke in das Verhalten einzelner Benutzer auf Ihrer Site erhalten? Sehen Sie sich doch einmal Clicktale an. Weitere Informationen finden Sie unter [Hinzufügen neuer Erweiterungen](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Was Tags in Platform wirklich einzigartig macht, ist, dass diese Erweiterungen von jedem erstellt werden können. Sie müssen ein Facebook-Remarketing-Pixel auf Ihrer Site ablegen? Sehen Sie sich die von Facebook erstellte Erweiterung an. Hätten Sie gerne dasselbe für Twitter oder Linked In? Verwenden Sie diese Erweiterungen. Sie müssen eine Umfrage ausführen? Sehen Sie sich Question Pro oder Foresee an. Müssen Sie den Datenschutz und die Einwilligung Ihrer Endbenutzer verwalten, um mit [!DNL GDPR] zu helfen? Sehen Sie sich Evidon und Trust Arc genau an. Möchten Sie detaillierte Einblicke in das Verhalten einzelner Benutzer auf Ihrer Site erhalten? Sehen Sie sich doch einmal Clicktale an. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Erstellen von Datenelementen und Regeln
 
