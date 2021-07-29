@@ -1,12 +1,12 @@
 ---
 title: Automatisch erfasste Informationen im Adobe Experience Platform Web SDK
-description: Eine Übersicht über alle Informationen, die das Adobe Experience Platform SDK automatisch erfasst.
-keywords: Informationen erfassen;Kontext;konfigurieren;Gerät;Bildschirmhöhe;Bildschirmausrichtung;Bildschirmbreite;Bildschirmbreite;Umgebung;ViewportHeight;Viewport-Höhe;Viewport-Breite;Viewport-Breite;Viewport-Breite;Browserdetails;Browserdetails;Implementierungsdetails;Name;Version;OrtContext;localTime;localTimeOffset;LocalTimeOffset Local TimeZone Offset;timestamp;web;url;webPageDetails;Webseitendetails;webReferrer;web Werber;landscape;portrait;
+description: Eine Übersicht über die einzelnen Informationen, die das Adobe Experience Platform SDK automatisch erfasst.
+keywords: Informationen erfassen;Kontext;Konfigurieren;Gerät;Bildschirmhöhe;Bildschirmhöhe;Bildschirmausrichtung;Bildschirmausrichtung;Bildschirmbreite;Bildschirmbreite;Umgebung;ViewportHeight;Viewport-Höhe;ViewportWidth;Viewport-Breite;Browserdetails;Browserdetails;Implementierungsdetails;Implementierungsdetails;Name;Version;Ortszeit;localTime;localZoneOffset;local Zeitzonenversatz;Zeitstempel;Web;url;webPageDetails;Web-Seitendetails;webReferrer;Web Referrer;landscape;Hochformat;
 exl-id: 901df786-df36-4986-9c74-a32d29c11b71
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 58%
+source-wordcount: '511'
+ht-degree: 59%
 
 ---
 
@@ -54,7 +54,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser` |
 
-Die Art der Umgebung, durch die das Erlebnis auftrat. Adobe Experience Platform Web SDK setzt dies immer auf `browser`.
+Die Art der Umgebung, in der das Erlebnis auftauchte. Adobe Experience Platform Web SDK setzt dies immer auf `browser`.
 
 ### Viewport-Höhe
 
@@ -82,7 +82,7 @@ Informationen zum SDK, das zum Erfassen des Ereignisses verwendet wird.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Wenn die eigenständige Bibliothek verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Platform launch-Erweiterung verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy+reactor`.
+Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen URI, um die Eindeutigkeit der Kennungen zu verbessern, die von verschiedenen Software-Bibliotheken bereitgestellt werden. Wenn die eigenständige Bibliothek verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy`. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, ist der Wert `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -90,7 +90,7 @@ Die Kennung des Software Development Kits (SDK).  Dieses Feld verwendet einen UR
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0` |
 
-Wenn die Standalone-Bibliothek verwendet wird, ist der Wert einfach die Bibliotheksversion. Wenn die Bibliothek als Teil der Platform launch-Erweiterung verwendet wird, ist dies die Bibliotheksversion und die Platform launch-Erweiterungsversion mit einem &quot;+&quot; verbunden. Wenn die Bibliotheksversion beispielsweise 2.1.0 und die Platform launch-Erweiterungsversion 2.1.3 wäre, wäre der Wert `2.1.0+2.1.3`.
+Wenn die eigenständige Bibliothek verwendet wird, ist der Wert einfach die Bibliotheksversion. Wenn die Bibliothek als Teil der Tag-Erweiterung verwendet wird, ist dies die Bibliotheksversion und die Tag-Erweiterungsversion mit einem &quot;+&quot;verbunden. Wenn die Bibliotheksversion beispielsweise 2.1.0 wäre und die Tag-Erweiterungsversion 2.1.3 wäre, wäre der Wert `2.1.0+2.1.3`.
 
 ### Umgebung
 
