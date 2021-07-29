@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 52%
+source-wordcount: '1093'
+ht-degree: 53%
 
 ---
 
@@ -13,7 +13,13 @@ ht-degree: 52%
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.6.1 - 29. Juli 2021
+
+Enthält Version 2.6.1 der Adobe Experience Platform Web SDK-Bibliothek.
+
 ## Version 2.6.0 - 27. Juli 2021
+
+Enthält Version 2.6.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 * Beschriftungen, Beschreibungen und Fehlermeldungen, die den Begriff &quot;Edge-Konfiguration&quot;verwenden, wurden geändert, um den Begriff &quot;Datastream&quot;zur Anpassung an die neueste Adobe Experience Platform-Terminologie zu verwenden.
 * In der Erweiterungskonfigurationsansicht wurde Unterstützung für die Verarbeitung einer großen Anzahl von Datastreams und Datastream-Umgebungen hinzugefügt.
