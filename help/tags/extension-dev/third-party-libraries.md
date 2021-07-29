@@ -1,10 +1,10 @@
 ---
 title: Implementieren von Bibliotheken von Drittanbietern
 description: Erfahren Sie mehr über die verschiedenen Methoden zum Hosten von Drittanbieter-Bibliotheken in Ihren Adobe Experience Platform-Tag-Erweiterungen.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 69%
+source-wordcount: '1330'
+ht-degree: 67%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Eines der Hauptziele von Tag-Erweiterungen in Adobe Experience Platform besteht darin, Ihnen die einfache Implementierung vorhandener Marketing-Technologien (Bibliotheken) in Ihre Website zu ermöglichen. Durch die Verwendung von Erweiterungen können Sie Bibliotheken implementieren, die von Inhaltsversandnetzwerken (Content Delivery Network, CDN) von Drittanbietern bereitgestellt werden, ohne die HTML-Daten Ihrer Website manuell bearbeiten zu müssen.
 
