@@ -1,12 +1,12 @@
 ---
 title: Debugging im Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie die Debugging-Funktionen im Web SDK der Experience Platform umschalten.
-keywords: Debugging von Web SDK;Debugging;Konfigurieren;Befehl;Debugging-Befehl;edgeConfigId;setDebug;debugEnabled;Debuggen;
+description: Erfahren Sie, wie Sie Debugging-Funktionen im Experience Platform Web SDK umschalten.
+keywords: Debugging von Web SDK;Debugging;Konfigurieren;Befehl konfigurieren;Debugging-Befehl;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 0f671a967a67761e0cfef6fa0d022e3c3790c2d8
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 73%
+source-wordcount: '441'
+ht-degree: 74%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 73%
 
 Wenn das Debugging aktiviert ist, gibt das SDK Meldungen an die Browser-Konsole aus, die beim Debugging Ihrer Implementierung und beim Verständnis des Verhaltens des SDK hilfreich sein können. Das Debuggen führt auch zu einer Server-seitigen synchronen Überprüfung der Daten, die für das von Ihnen konfigurierte Schema erfasst werden.
 
-Das Debuggen ist standardmäßig deaktiviert, kann jedoch auf drei verschiedene Arten aktiviert werden:
+Das Debugging ist standardmäßig deaktiviert, kann jedoch auf drei verschiedene Arten aktiviert werden:
 
 * `configure`-Befehl
 * `setDebug`-Befehl
@@ -78,4 +78,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Derzeit enthält das bereitgestellte `libraryInfo`-Objekt die folgenden Eigenschaften:
 
-* `version` Dies ist die Version der geladenen Bibliothek. Wenn die Version der Bibliothek, die geladen wird, beispielsweise 1.0.0 wäre, wäre der Wert `1.0.0`. Wenn die Bibliothek innerhalb der Adobe Experience Platform Launch-Erweiterung (mit dem Namen &quot;AEP Web SDK&quot;) ausgeführt wird, ist die Version die Bibliotheksversion und die Platform launch-Erweiterungsversion mit einem &quot;+&quot;-Zeichen verbunden. Wenn beispielsweise die Bibliotheksversion 1.0.0 und die Platform launch-Erweiterung 1.2.0 wäre, wäre der Wert `1.0.0+1.2.0`.
+* `version` Dies ist die Version der geladenen Bibliothek. Wenn die Version der Bibliothek, die geladen wird, beispielsweise 1.0.0 wäre, wäre der Wert `1.0.0`. Wenn die Bibliothek innerhalb der Tag-Erweiterung (mit dem Namen &quot;AEP Web SDK&quot;) ausgeführt wird, ist die Version die Bibliotheksversion und die Tag-Erweiterungsversion wurde mit einem &quot;+&quot;-Zeichen verbunden. Wenn die Version der Bibliothek beispielsweise 1.0.0 wäre und die Version der Tag-Erweiterung 1.2.0 wäre, wäre der Wert `1.0.0+1.2.0`.
