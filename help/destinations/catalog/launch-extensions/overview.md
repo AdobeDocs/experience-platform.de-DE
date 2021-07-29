@@ -1,60 +1,55 @@
 ---
-keywords: Launch-Erweiterungen; Launch-Erweiterung; Launch-Ziele; platform launch-Erweiterungen;platform launch-Erweiterung;platform launch-Ziele
-title: Adobe Experience Platform Launch-Erweiterung
-description: Adobe Experience Platform Launch markiert die nächste Generation der Funktionen von Adobe für das Tag-Management. Platform Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
+keywords: Tag-Erweiterungen; Tag-Erweiterung; Launch-Ziele; Platform-Tag-Erweiterungen;Plattform-Tag-Erweiterung;platform launch-Ziele
+title: Tag-Erweiterungen in Adobe Experience Platform
+description: Adobe Experience Platform bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 50%
+source-wordcount: '514'
+ht-degree: 33%
 
 ---
 
-# Adobe Experience Platform Launch-Erweiterungen
+# Tag-Erweiterungen in Adobe Experience Platform
 
-Adobe Experience Platform Launch ist die nächste Generation der Tag-Management-Funktionen von Adobe. Platform
-Launch bietet Kunden eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.  Platform Launch ist für Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion verfügbar.
+Adobe Experience Platform bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind. Tags werden Adobe Experience Cloud-Kunden als zusätzliche, Mehrwert bietende Funktion angeboten.
 
-Eine Einführung in die Funktionen von Experience Platform Launch finden Sie in den folgenden Ressourcen:
+Eine Einführung in Tags finden Sie in den folgenden Ressourcen:
 
-- Adobe Experience Platform Launch [documentation](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=de)
-- Adobe Experience Platform Launch [Schnellstartvideos](../../../tags/quick-start/videos.md). Beginnen Sie mit [Einführung in Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) und [Übersicht über den Veröffentlichungsprozess](https://helpx.adobe.com/de/analytics/how-to/adobe-launch-publishing-process.html) und fahren Sie dann mit den nächsten Konzepten fort.
+- [Übersicht über Tags](https://experienceleague.adobe.com/docs/launch/using/home.html?lang=de)
+- [Schnellstartanleitung](../../../tags/quick-start/quick-start.md)
 
-## Suchen der Platform launch-Erweiterungen in der Platform-Oberfläche {#how-to-find-extensions-in-interface}
+## Suchen von Tag-Erweiterungen in der Platform-Oberfläche {#how-to-find-extensions-in-interface}
 
-Um die Platform launch-Erweiterungen in der Platform-Oberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Typen]** aus.
+Um die Erweiterungen in der Platform-Oberfläche zu finden, navigieren Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** und wählen Sie **[!UICONTROL Erweiterungen]** im Filter **[!UICONTROL Typen]** aus.
 
 ![Erweiterungsfilter in der Benutzeroberfläche](../../assets/catalog/launch-extensions/filter.png)
 
-## Funktionsweise von Platform launch-Erweiterungen {#how-extensions-work}
+## Funktionsweise von Tag-Erweiterungen {#how-extensions-work}
 
-platform launch Extensions leiten Rohdaten von Ereignissen an verschiedene Zieltypen weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](../personalization/gainsight.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](../voice/confirmit-digital-feedback.md).
+Erweiterungen leiten Rohdaten von Ereignissen an verschiedene Zieltypen weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](../personalization/gainsight.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](../voice/confirmit-digital-feedback.md).
 
 **Profil-/Segmentexportziele in Adobe Experience Platform erfassen** Ereignisdaten, kombinieren sie mit anderen Datenquellen, wenden die Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele. Beispiele hierfür sind das [Amazon S3 Cloud-Speicher-Ziel](../cloud-storage/amazon-s3.md) oder das [Google Display &amp; Video 360-Werbeziel](../advertising/google-dv360.md).
 
-![Experience Platform Launch-Erweiterungen im Vergleich zu anderen Zielen](../../assets/common/launch-and-other-destinations.png)
+![Tag-Erweiterungen im Vergleich zu anderen Zielen](../../assets/common/launch-and-other-destinations.png)
 
-## Vorteile der Verwendung von Platform launch-Erweiterungen {#extensions-benefits}
+## Vorteile der Verwendung von Tag-Erweiterungen {#extensions-benefits}
 
-Adobe Experience Platform Launch ist für Bestandskunden von Experience Cloud kostenlos. platform launch vereinfacht die Tag-Implementierung auf Ihrer Website mithilfe benutzerfreundlicher Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. platform launch hat einen geringen Platzbedarf auf Ihrer Website und ermöglicht Ihnen, Ihre Seiten schnell zu laden.
+Die Tag-Funktionen von Platform sind für Bestandskunden von Experience Cloud kostenlos. Das System vereinfacht die Tag-Implementierung auf Ihrer Website mithilfe benutzerfreundlicher Erweiterungen, die Sie installieren, konfigurieren, aktualisieren und löschen können. Tags hinterlassen einen geringen Platzbedarf auf Ihrer Website und ermöglichen es Ihnen, Ihre Seiten schnell zu laden.
 
->[!IMPORTANT]
->
->Sie können zwar keine Segmente für Platform launch-Erweiterungen aktivieren, aber Sie können Regeln einrichten, um Ereignisdaten nur in bestimmten Situationen weiterzuleiten. Weitere Informationen finden Sie unten.
+Sie können zwar keine Segmente für Tag-Erweiterungen aktivieren, aber Sie können Regeln einrichten, um Ereignisdaten nur in bestimmten Situationen weiterzuleiten. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen finden Sie in der [Tag-Dokumentation](../../../tags/ui/managing-resources/rules.md) unter Regeln.
 
-Sie können *Regeln* erstellen, die bestimmen, wann Ereignisdaten an Erweiterungen weitergeleitet werden. Mit dieser leistungsstarken Funktion können Sie Ereignisdaten nur in bestimmten Situationen weiterleiten, anstatt Ereignisdaten bei jeder Interaktion zu senden. Weitere Informationen finden Sie unter Regeln in der [Adobe Experience Platform Launch-Dokumentation](../../../tags/ui/managing-resources/rules.md).
+## Anwendungsbeispiele für Erweiterungen {#extensions-use-cases}
 
-## Anwendungsbeispiele für Platform launch-Erweiterungen {#extensions-use-cases}
-
-Mit platform launch-Erweiterungen können Sie verschiedene Anwendungsfälle für Kunden erfüllen. Einige Anwendungsbeispiele für die Verwendung von Platform launch-Erweiterungen sind:
+Erweiterungen ermöglichen es Ihnen, verschiedene Anwendungsfälle von Kunden zu erfüllen. Beispiele für Anwendungsfälle für die Verwendung von Erweiterungen:
 
 - Sie können Website- oder native App-Daten über die Facebook Pixel-Erweiterung an Facebook senden. Facebook Pixel gibt an, zu welchen Teilen Ihrer Website oder App ein Besucher navigiert hat, leitet diese Informationen an Facebook weiter und Sie können Ihren Besucher über Facebook erneut ansprechen.
 - Sie können Ereignisdaten von Ihren Websites und Apps an Google Analytics weiterleiten, um diese Daten zu analysieren und Entscheidungen zu treffen.
-- Sie können eine Client-seitige Chatbox-App zum richtigen Zeitpunkt aktivieren, je nachdem, wie Ihre Benutzer mit Ihren Seiten interagieren, entsprechend den Regeln, die Sie unter Platform launch eingerichtet haben.
+- Sie können eine Client-seitige Chatbox-App zum richtigen Zeitpunkt aktivieren, je nachdem, wie Ihre Benutzer mit Ihren Seiten interagieren, gemäß den von Ihnen festgelegten Regeln.
 
 ## Erweiterungskategorien {#extension-categories}
 
-platform launch-Erweiterungen können in Platform unter die folgenden Kategorien fallen:
+Erweiterungen können in Platform unter die folgenden Kategorien fallen:
 
 - [Werbung](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)
