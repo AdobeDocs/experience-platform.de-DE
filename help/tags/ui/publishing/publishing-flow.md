@@ -1,10 +1,10 @@
 ---
 title: Publishing-Ablauf
 description: Erfahren Sie mehr über den Prozess zum Erstellen von Bibliotheken, Testen von Builds und Genehmigen für die Produktion in Adobe Experience Platform.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1498'
-ht-degree: 91%
+source-wordcount: '1499'
+ht-degree: 90%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Der Veröffentlichungsfluss von Tags in Adobe Experience Platform bezieht sich auf den Prozess der Erstellung von Bibliotheken, des Testens von Builds und der Genehmigung für die Produktion.
 
@@ -63,7 +63,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, die für eine Bibliothek
 | [!UICONTROL Senden und für Staging erstellen] | Dies kann nur von einem Anwender mit den Berechtigungen „Entwickeln“ und „Genehmigen“ durchgeführt werden. Durch diese Aktion wird die Zuweisung der Bibliothek zur Entwicklungsumgebung aufgehoben, die Bibliothek zum Status [!UICONTROL Gesendet] verschoben und die Bibliothek in der Staging-Umgebung erstellt. Diese Option wird nur aktiviert, wenn der letzte Build für die Bibliothek erfolgreich ist. |
 | [!UICONTROL Zur Veröffentlichung genehmigen] | Dies kann nur von einem Anwender mit den Berechtigungen „Entwickeln“ und „Genehmigen“ durchgeführt werden. Durch diese Aktion wird die Zuweisung der Bibliothek aus der Entwicklungsumgebung aufgehoben und sie in den Status [!UICONTROL Genehmigt] verschoben - Staging-Umgebung und Status [!UICONTROL Gesendet] werden vollständig übersprungen. Diese Option wird nur aktiviert, wenn der letzte Build für die Bibliothek erfolgreich ist. |
 | [!UICONTROL Genehmigen und in Produktion veröffentlichen] | Dies kann nur von einem Anwender mit den Berechtigungen „Entwickeln“, „Genehmigen“ und „Veröffentlichen“ durchgeführt werden. Durch diese Aktion wird die Zuweisung der Bibliothek aus der Entwicklungsumgebung aufgehoben, sie in den Status [!UICONTROL Genehmigt] verschoben und in der Produktion veröffentlicht. Nach Abschluss des Produktions-Builds wechselt die Bibliothek in den Status [!UICONTROL Veröffentlicht]. Diese Option wird nur aktiviert, wenn der letzte Build für die Bibliothek erfolgreich ist. |
-| [!UICONTROL Löschen] | Entfernen Sie die Bibliothek aus Platform Launch. Damit wird der Build nicht aus der Umgebung entfernt. |
+| [!UICONTROL Löschen] | Entfernen Sie die Bibliothek aus dem System. Damit wird der Build nicht aus der Umgebung entfernt. |
 
 ### [!UICONTROL Gesendet] {#submitted}
 
