@@ -1,10 +1,10 @@
 ---
 title: Erweiterungen
 description: Erfahren Sie, wie Tag-Erweiterungen in Adobe Experience Platform funktionieren.
-source-git-commit: 5b8ef30b1d0e6d682c94453117677c806eba1e02
+source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 77%
+source-wordcount: '497'
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 77%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert.
 
@@ -26,15 +26,13 @@ Erweiterungen bestimmen die Elemente, die beim Erstellen von Properties, Regeln 
 
 Verwenden Sie die Links oben in der Liste „Erweiterungen“, um installierte Erweiterungen, den Katalog oder Updates anzuzeigen.
 
-Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Konfigurieren], um die Einstellungen der Erweiterung anzuzeigen und zu ändern. Weitere Informationen zu Erweiterungsoptionen finden Sie unter [Hinzufügen neuer Erweiterungen](#add-a-new-extension).
+Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Konfigurieren], um die Einstellungen der Erweiterung anzuzeigen und zu ändern. Weitere Informationen zu Erweiterungsoptionen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](#add-a-new-extension) .
 
 >[!IMPORTANT]
 >
 >Änderungen werden erst wirksam, nachdem sie [veröffentlicht](../../publishing/overview.md) wurden.
 
 Standardmäßig bietet Adobe Erweiterungen, die gängige Integrationen unterstützen. Erweiterungen können mit benutzerdefinierten Konfigurationen angepasst werden. Konfigurationen werden über die Erweiterungen bereitgestellt. Klicken Sie zum Erstellen einer Konfiguration auf die Erweiterungskarte und dann auf **[!UICONTROL Neue Konfiguration hinzufügen]**.
-
-Ein Einführungsvideo finden Sie unter [Erweiterungen](../../../quick-start/videos.md).
 
 ## Erweiterungskatalog
 
