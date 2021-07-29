@@ -1,9 +1,9 @@
 ---
 title: Erste Schritte mit der Reactor-API
 description: Erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1064'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,7 @@ Im nächsten Bildschirm werden Sie aufgefordert, ein oder mehrere Produktprofile
 
 >[!NOTE]
 >
->Produktprofile werden von Ihrem Unternehmen über die Adobe Admin Console verwaltet und enthalten bestimmte Berechtigungssätze für granulare Funktionen in Adobe Experience Platform Launch. Produktprofile und ihre Berechtigungen können nur von Benutzern mit Administratorrechten innerhalb Ihres Unternehmens verwaltet werden. Wenn Sie sich nicht sicher sind, welche Produktprofile für die API ausgewählt werden sollen, wenden Sie sich an Ihren Administrator.
+>Produktprofile werden von Ihrem Unternehmen über die Adobe Admin Console verwaltet und enthalten bestimmte Berechtigungssätze für granulare Funktionen. Produktprofile und ihre Berechtigungen können nur von Benutzern mit Administratorrechten innerhalb Ihres Unternehmens verwaltet werden. Wenn Sie sich nicht sicher sind, welche Produktprofile für die API ausgewählt werden sollen, wenden Sie sich an Ihren Administrator.
 
 Wählen Sie die gewünschten Produktprofile aus der Liste aus und klicken Sie dann auf **Konfigurierte API speichern** , um die API-Registrierung abzuschließen.
 
@@ -98,7 +98,7 @@ Es wird ein neues Zugriffstoken generiert und eine Schaltfläche zum Kopieren de
 
 #### Zugriffstoken programmgesteuert generieren {#program}
 
-Wenn Sie Ihre Launch-Integration für eine Anwendung verwenden, können Sie über API-Anfragen programmgesteuert Zugriffstoken generieren. Um dies zu erreichen, müssen Sie die folgenden Werte abrufen:
+Wenn Sie Ihre Integration für eine Anwendung verwenden, können Sie über API-Anfragen programmgesteuert Zugriffstoken generieren. Um dies zu erreichen, müssen Sie die folgenden Werte abrufen:
 
 * Client-ID (`{API_KEY}`)
 * Client-Geheimnis (`{SECRET}`)
