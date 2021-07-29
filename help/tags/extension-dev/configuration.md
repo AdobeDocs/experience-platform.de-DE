@@ -1,10 +1,10 @@
 ---
 title: Erweiterungskonfiguration
 description: Erfahren Sie, wie Sie eine Tag-Erweiterung konfigurieren, um globale Einstellungen von einem Benutzer in der Datenerfassungs-Benutzeroberfläche von Adobe Experience Platform zu erfassen.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 70%
+source-wordcount: '273'
+ht-degree: 64%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Über die Erweiterungskonfiguration erfasst eine Erweiterung globale Einstellungen von einem Benutzer. Betrachten Sie beispielsweise eine Erweiterung, die es dem Benutzer ermöglicht, ein Beacon mit der Aktion „Beacon senden“ zu senden, wobei das Beacon immer eine Konto-ID enthalten muss. Wir möchten den Benutzern ersparen, dass sie jedes Mal, wenn sie eine Aktion „Beacon senden“ konfigurieren, zur Eingabe der Konto-ID aufgefordert werden. Stattdessen sollte die Erweiterung die Konto-ID einmal in der Erweiterungskonfigurationsansicht abfragen. Jedes Mal, wenn ein Beacon gesendet werden soll, kann das Bibliotheksmodul für die Aktion „Beacon senden“ die Konto-ID aus der Erweiterungskonfiguration abrufen und dem Beacon hinzufügen.
 
