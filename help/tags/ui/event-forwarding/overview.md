@@ -1,10 +1,10 @@
 ---
 title: Übersicht über die Ereignisweiterleitung
 description: Erfahren Sie mehr über die Ereignisweiterleitung in Adobe Experience Platform, mit der Sie mit dem Platform Edge Network Aufgaben ausführen können, ohne die Tag-Implementierung zu ändern.
-source-git-commit: 7a6bec77895458cf1735bc7a00d16b78df9776a5
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 42%
+source-wordcount: '547'
+ht-degree: 39%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Die Ereignisweiterleitung in Adobe Experience Platform verringert die Web- und App-Gewichtung, indem Adobe Experience Platform Edge Network verwendet wird, um Aufgaben auszuführen, die normalerweise auf dem Client ausgeführt werden. Mit Regeln für die Ereignisweiterleitung können Daten umgewandelt und an neue Ziele gesendet werden, ohne die clientseitigen Implementierungen zu ändern.
 
