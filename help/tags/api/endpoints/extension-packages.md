@@ -1,7 +1,7 @@
 ---
 title: Endpunkt von Erweiterungspaketen
 description: Erfahren Sie, wie Sie den Endpunkt /extension_packages in der Reactor-API aufrufen.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '741'
 ht-degree: 8%
@@ -364,7 +364,7 @@ Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, einsc
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
@@ -597,7 +597,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Erweiterungspakets
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
@@ -834,7 +834,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Erweiterungspakets
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
@@ -1081,7 +1081,7 @@ Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück.
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
