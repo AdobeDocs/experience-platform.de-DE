@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 90%
+source-wordcount: '1210'
+ht-degree: 86%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 20. Mai 2021
 
@@ -103,7 +103,7 @@ v1.6.2
 
 v1.6.1
 
-* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Falls konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Durch diese Änderung wird die Verwendung einer CSP mit einer Nonce unterstützt, sodass Platform Launch-Skripte weiterhin in einer CSP-Umgebung geladen werden. Weitere Informationen zur Verwendung von Platform Launch mit einer CSP finden Sie [hier](../../../ui/client-side/content-security-policy.md).
+* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Falls konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Diese Änderung unterstützt die Verwendung einer Content Security Policy mit einer Nonce, sodass Tag-Skripte weiterhin in einer CSP-Umgebung geladen werden können. Weitere Informationen zur Verwendung von Tags mit einer CSP [finden Sie hier](../../../ui/client-side/content-security-policy.md).
 
 ## 18. Juni 2019
 
