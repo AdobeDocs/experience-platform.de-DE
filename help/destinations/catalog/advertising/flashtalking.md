@@ -3,9 +3,9 @@ keywords: Flashspeak OneTag-Erweiterungen;Flashspeak OneTag-Erweiterung;Flashspe
 title: Flashspeak OneTag-Erweiterung
 description: Die Flashspeak OneTag-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '487'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 ## Übersicht {#overview}
 
-Die Tag-Erweiterung [!DNL Flashtalking OneTag] erleichtert die Zuordnung von Site-Aktionen zu Anzeige-, Video- und mobilen Anzeigenaktivitäten. Stellen Sie [!DNL Flashtalking OneTag] mithilfe von Launch in Ihren Web-Eigenschaften bereit.
+Die Tag-Erweiterung [!DNL Flashtalking OneTag] erleichtert die Zuordnung von Site-Aktionen zu Anzeige-, Video- und mobilen Anzeigenaktivitäten. Stellen Sie [!DNL Flashtalking OneTag] mithilfe von Tags in Ihren Web-Eigenschaften bereit.
 
 [!DNL Flashtalking OneTag] ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im Katalog [!DNL Destinations] für alle Kunden verfügbar, die Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Adobe Experience Platform. Tags, die Adobe Experience Cloud-Kunden als integrierte, Mehrwert bietende Funktion angeboten werden. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf Tags zu erhalten, und bitten Sie ihn, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können. und bitten Sie sie, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Adobe Experience Platform. Tags werden Adobe Experience Cloud-Kunden als zusätzliche, Mehrwert bietende Funktion angeboten. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf Tags zu erhalten, und bitten Sie ihn, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können. und bitten Sie sie, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 
