@@ -3,14 +3,18 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e158b8129fe5afe71af48b7c64ca34b00e79965c
+source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '670'
 ht-degree: 5%
 
 ---
 
 # Versionshinweise
+
+## Version 2.6.1 - 29. Juli 2021
+
+* Es wurde ein Problem behoben, bei dem beim Rendern der Personalisierung für eine Einzelseiten-App-Ansicht ohne Personalisierungsinhalt ein Fehler ausgegeben wurde und das vom Befehl `sendEvent` zurückgegebene Promise abgelehnt wurde.
 
 ## Version 2.6.0 - 27. Juli 2021
 
