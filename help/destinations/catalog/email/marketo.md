@@ -3,10 +3,10 @@ keywords: Marketo;Marketo;Marketo-Erweiterung;Marketo-Erweiterung
 title: Marketo-Erweiterung
 description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
 source-wordcount: '471'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 [!DNL Marketo]Die leistungsstarke Marketing-Automatisierungs-Software hilft Marketern, die Kunst und Wissenschaft des digitalen Marketings Übergeordnet zu gestalten, um Kunden und Interessenten zu binden.
 
-[!DNL Marketo] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der [Seite der Erweiterung auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der [Seite der Erweiterung auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -38,7 +38,7 @@ So installieren Sie die [!DNL Marketo]-Erweiterung:
 4. Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie im Abschnitt [Eigenschaftenseite](../../../tags/ui/administration/companies-and-properties.md#properties-page) der in der Tag-Dokumentation.
 5. Der Workflow führt Sie durch die Schritte zum Abschluss der Installation.
 
-Weitere Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der [Marketo-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+Weitere Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der [Marketo-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 
