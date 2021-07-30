@@ -1,7 +1,7 @@
 ---
 title: Benutzerberechtigungen
 description: Erfahren Sie mehr über die verschiedenen verfügbaren Tag-Berechtigungen für Adobe Experience Platform-Benutzer.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e93cb075dc8c8d01fcda3edf0014f86a47b5b710
 workflow-type: tm+mt
 source-wordcount: '2397'
 ht-degree: 74%
@@ -75,7 +75,6 @@ Die in dieser Gruppe verfügbaren Berechtigungen sind:
 Unternehmensrechte gelten für Berechtigungen, die mehrere Properties umfassen. Zur Zeit gibt es drei:
 
 * **Eigenschaften verwalten:** Ermöglicht Ihnen das Erstellen neuer Eigenschaften in der Datenerfassungs-Benutzeroberfläche und das Ändern der Metadaten und Einstellungen auf Eigenschaftsebene. Sie können auch Properties löschen. Weitere Informationen finden Sie in der [Eigenschaftendokumentation](companies-and-properties.md) . In der Regel führen Administratoren diese Rolle aus.
-* 
 * Ermöglicht die Erstellung neuer Eigenschaften und die Änderung der Metadaten und Einstellungen auf Eigenschaftsebene. Sie können auch Properties löschen. Weitere Informationen zu Properties finden Sie [hier](companies-and-properties.md). In der Regel führen Administratoren diese Rolle aus.
 * **Erweiterungen entwickeln:** Ermöglicht die Erstellung und Änderung von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung.
 * **Mobile-App-Konfigurationen verwalten:** Dies ist nur für Kunden verfügbar, die Adobe Journey Optimizer lizenziert haben, oder für andere Lösungen, mit denen sie Zugriff auf In-App- und Push-Messaging für Mobile Apps erhalten.  Auf diese Weise können Sie Apps verwalten, von denen Experience Cloud Kenntnis hat, sowie die erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Dienst und dem Apple Push Notification Service erforderlich sind.
