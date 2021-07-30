@@ -3,10 +3,10 @@ keywords: PebblePost;Pebblepost;PebblePost Programmatic Direct Mail;Pebblepost P
 title: PebblePost-Erweiterung
 description: Die PebblePost-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '507'
-ht-degree: 24%
+source-wordcount: '485'
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 24%
 
 [!DNL PebblePost's Programmatic Direct Mail®] -Lösung hilft digitalen Marketingexperten, Online-Interesse und -Absicht mit offline, greifbaren Medien zu verbinden, die konvertieren. Die Marketing-Experten können die in Adobe erstellten benutzerdefinierten Datensegmente nutzen, um Kunden jetzt mit relevanten, länger anhaltenden Eindrücken über Medien zu Hause anzusprechen. Analysieren Sie die Leistung in Echtzeit basierend auf der Aktivität des Antwortpfads und den Konversionen vor Ort.
 
-[!DNL PebblePost] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu PebblePost finden Sie im [Integrations-Blogpost](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann **[!UICONTROL
 Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie im Abschnitt [Eigenschaftenseite](../../../tags/ui/administration/companies-and-properties.md#properties-page) der in der Tag-Dokumentation.
 
 Der Workflow führt Sie durch die Schritte zum Abschluss der Installation.
-
-Informationen zu den Konfigurationsoptionen der Erweiterung und zur Installationsunterstützung finden Sie auf der [Seite von PebblePost auf Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 
