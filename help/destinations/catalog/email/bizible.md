@@ -3,10 +3,10 @@ keywords: bizible;bizible Erweiterung;bizible Ziel
 title: Bizible-Erweiterung
 description: Die Bizible-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 27%
+source-wordcount: '446'
+ht-degree: 13%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 27%
 
 ## Übersicht {#overview}
 
-[!DNL Bizible] ist die branchenführende B2B-Attributionslösung, die für unvergleichliche Sichtbarkeit Ihrer Daten sorgt, sodass Sie intelligente Entscheidungen für mehr Wachstum treffen können.
+[!DNL Bizible] ist die branchenführende B2B-Attributionslösung, die Ihnen eine unvergleichliche Sichtbarkeit Ihrer Daten bietet, sodass Sie intelligente Entscheidungen treffen können, die Wachstum fördern.
 
-[!DNL Bizible] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] ist eine E-Mail-Erweiterung in Adobe Experience Platform. Weitere Informationen zu Bizible finden Sie unter [Marketing-Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) in den Ressourcen Bizible-Übersicht .
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -41,8 +41,6 @@ Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann **[!UICONTROL
 Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie in der [Tag-Dokumentation](../../../tags/ui/administration/companies-and-properties.md).
 
 Der Workflow leitet Sie zur Datenerfassungs-Benutzeroberfläche weiter, um die Installation abzuschließen.
-
-Informationen zu den Konfigurationsoptionen und zur Installationsunterstützung von Erweiterungen finden Sie auf der [Bizible-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch zu [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) .
 
