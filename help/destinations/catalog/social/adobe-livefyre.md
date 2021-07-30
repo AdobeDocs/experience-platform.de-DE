@@ -3,10 +3,10 @@ keywords: livefyre;livefyre-Erweiterung
 title: Adobe Livefyre-Erweiterung
 description: Die Adobe Livefyre-Erweiterung ist ein Social-Media-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 29%
+source-wordcount: '452'
+ht-degree: 21%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 Mit Adobe Livefyre können Sie einen konstanten Fluss von anwendergenerierten Inhalten auf Ihrer Website erkunden, organisieren und veröffentlichen, um für authentische und hochpersonalisierte Erlebnisse zu sorgen.
 
-Adobe Livefyre ist eine soziale Erweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre ist eine soziale Erweiterung in Adobe Experience Platform. Weitere Informationen zur Adobe Livefyre finden Sie im [Livefyre-Implementierungshandbuch](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
@@ -42,10 +42,7 @@ Wählen Sie die Tag-Eigenschaft aus, in der Sie die Erweiterung installieren mö
 
 Der Workflow leitet Sie zur Datenerfassungs-Benutzeroberfläche weiter, um die Installation abzuschließen.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der [Seite zu Adobe Livefyre in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
-
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Handbuch zu [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) .
-
 
 ## Verwenden der Erweiterung {#how-to-use}
 
