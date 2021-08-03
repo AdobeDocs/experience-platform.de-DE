@@ -3,14 +3,18 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c6feab3c9cda479c7dabdbf0533145fdcaa36ab1
+source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
 workflow-type: tm+mt
-source-wordcount: '670'
-ht-degree: 5%
+source-wordcount: '714'
+ht-degree: 4%
 
 ---
 
 # Versionshinweise
+
+## Version 2.6.2 - 4. August 2021
+
+* Es wurde ein Problem behoben, bei dem eine Warnung zur Einstellung von `result.decisions` (bereitgestellt vom `sendEvent`-Befehl) in der Konsole protokolliert wurde, selbst wenn nicht auf die `result.decisions`-Eigenschaft zugegriffen wurde. Beim Zugriff auf die Eigenschaft `result.decisions` wird keine Warnung protokolliert, die Eigenschaft wird jedoch weiterhin nicht mehr unterstützt.
 
 ## Version 2.6.1 - 29. Juli 2021
 
