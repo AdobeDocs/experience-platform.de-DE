@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform;Zuordnungs-Hilfe;Zugriffszahlen;beliebte Themen;Download-Bewertungen;Zuordnungsai-Bewertungen;Export;Export
+keywords: Experience Platform; Attribution-Hilfe; auf Bewertungen zugreifen; beliebte Themen; Download-Bewertungen; Attributionsai-Bewertungen; Export; Export
 solution: Experience Platform, Intelligent Services
-title: Herunterladen von Ergebnissen in Attribution AI
+title: Herunterladen von Bewertungen in Attribution AI
 topic-legacy: Downloading scores
-description: Dieses Dokument dient als Anleitung zum Herunterladen von Punktzahlen für Attribution AIS.
+description: Dieses Dokument dient als Anleitung zum Herunterladen von Bewertungen für Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7219c44e1d8812506ee97367f27076b55a40203b
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 67%
+source-wordcount: '1053'
+ht-degree: 68%
 
 ---
 
-# Herunterladen von Punktzahlen in Attribution AI
+# Herunterladen von Bewertungen in Attribution AI
 
-Dieses Dokument dient als Anleitung zum Herunterladen von Punktzahlen für Attribution AIS.
+Dieses Dokument dient als Anleitung zum Herunterladen von Bewertungen für Attribution AI.
 
 ## Erste Schritte
 
-Mit Attribution AI können Sie Partituren im Parquet-Dateiformat herunterladen. Für dieses Lernprogramm müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Ergebnissen im Handbuch [Erste Schritte](./getting-started.md) gelesen und abgeschlossen haben.
+Mit Attribution AI können Sie Bewertungen im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Bewertungen im Handbuch [Erste Schritte](./getting-started.md) gelesen und abgeschlossen haben.
 
-Darüber hinaus benötigen Sie eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus, um auf die Ergebnisse für Attribution AI zugreifen zu können. Um eine neue Dienstinstanz zu erstellen, besuchen Sie das [Attribution AI-Benutzerhandbuch](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
+Um auf Bewertungen für Attribution AI zugreifen zu können, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie das [Attribution AI-Benutzerhandbuch](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
 ## Ermitteln Ihrer Datensatz-ID {#dataset-id}
 
-Klicken Sie in Ihrer Dienstinstanz für Attribution AI-Einblicke auf das Dropdown-Menü *Mehr Aktionen* in der Navigation oben rechts und wählen Sie **[!UICONTROL Zugriffsergebnisse]**.
+Klicken Sie in Ihrer Dienstinstanz für Attribution AI-Einblicke in das Dropdown-Menü *Mehr Aktionen* oben rechts und wählen Sie dann **[!UICONTROL Auf Bewertungen zugreifen]** aus.
 
 ![Mehr Aktionen](./images/download-scores/more-actions.png)
 
@@ -35,7 +34,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um anstelle einer Liste von Stapeln, die zu Ihrem Unternehmen gehören, den letzten erfolgreichen Batch zurückzugeben. Um weitere Stapel zurückzugeben, erhöhen Sie die Anzahl für den Parameter `limit` Abfrage auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../catalog/api/filter-data.md).
+Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Abfrageparameter `limit` auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -59,11 +58,11 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Stapel-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Batch-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
 
 >[!NOTE]
 >
-> In der folgenden Antwort wurde das `tags`-Objekt zur Lesbarkeit reformiert.
+> In der folgenden Antwort wurde das `tags` -Objekt zur Lesbarkeit reformiert.
 
 ```json
 {
@@ -166,7 +165,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein `_links`-Objekt ent
 }
 ```
 
-## Abrufen Ihrer Dateien  {#retrieving-your-files}
+## Abrufen Ihrer Dateien {#retrieving-your-files}
 
 Verwenden Sie den `href`-Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, und stellen Sie eine neue GET-Anfrage, um Ihr Dateiverzeichnis abzurufen.
 
@@ -261,19 +260,19 @@ Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. 
 
 ![Endgerät](./images/download-scores/terminal-output.png)
 
-Die heruntergeladenen Partituren werden im Parquet-Format vorliegen und benötigen entweder einen [!DNL Spark]-shell- oder Parquet-Reader zur Ansicht der Punktzahlen. Für die Anzeige des Rohwerts können Sie die Werkzeuge [Apache Parquet](https://github.com/apache/parquet-mr/tree/master/parquet-tools) verwenden. Die Parquet-Tools können die Daten mit [!DNL Spark] analysieren.
+Die heruntergeladenen Bewertungen werden im Parquet-Format angezeigt und benötigen entweder einen [!DNL Spark]-shell- oder Parquet-Reader, um die Bewertungen anzuzeigen. Für die Rohwertanzeige können Sie [Apache Parquet Tools](https://parquet.apache.org/documentation/latest/) verwenden. Parquet-Tools können die Daten mit [!DNL Spark] analysieren.
 
 ## Nächste Schritte
 
-In diesem Dokument werden die zum Herunterladen von Attribution AI-Scores erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie in der Dokumentation [Attribution AI input and output](./input-output.md).
+In diesem Dokument wurden die zum Herunterladen von Attribution AI-Bewertungen erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie in der Dokumentation [Attribution AI-Eingabe und -Ausgabe](./input-output.md) .
 
-## Zugreifen auf Ergebnisse mit Snowflake
+## Aufrufen von Bewertungen mithilfe von Snowflake
 
 >[!IMPORTANT]
 >
->Weitere Informationen zum Zugriff auf Ergebnisse mit Snowflake erhalten Sie unter attributionai-support@adobe.com.
+>Weitere Informationen zum Zugriff auf Bewertungen mithilfe von Snowflake erhalten Sie unter attributionai-support@adobe.com .
 
-Sie können über Snowflake auf aggregierte Attribution AIS zugreifen. Derzeit müssen Sie sich per E-Mail an den Adobe-Support unter attributionai-support@adobe.com wenden, um die Zugangsdaten zu Ihrem Leserkonto für Snowflake einzurichten und zu erhalten.
+Sie können über Snowflake auf aggregierte Attribution AI-Bewertungen zugreifen. Derzeit müssen Sie sich per E-Mail an den Adobe-Support unter attributionai-support@adobe.com wenden, um die Zugangsdaten zu Ihrem Leserkonto für Snowflake einzurichten und zu erhalten.
 
 Sobald der Adobe-Support Ihre Anfrage bearbeitet hat, erhalten Sie eine URL für das Leserkonto für Snowflake und die entsprechenden Zugangsdaten unten:
 
@@ -285,7 +284,7 @@ Sobald der Adobe-Support Ihre Anfrage bearbeitet hat, erhalten Sie eine URL für
 >
 >Das Leserkonto dient zum Abfragen der Daten mithilfe von SQL-Clients, Arbeitsblättern und BI-Lösungen, die den JDBC-Connector unterstützen.
 
-Sobald Sie über Ihre Anmeldeinformationen und Ihre URL verfügen, können Sie die Modelltabellen nach Touchpoint-Datum oder Konvertierungsdatum aggregieren.
+Sobald Sie über Ihre Anmeldedaten und Ihre URL verfügen, können Sie die Modelltabellen abfragen, aggregiert nach Touchpoint-Datum oder Konversionsdatum.
 
 ### Auffinden Ihres Schemas in Snowflake
 
