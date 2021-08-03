@@ -2,10 +2,10 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 49%
+source-wordcount: '292'
+ht-degree: 43%
 
 ---
 
@@ -14,6 +14,7 @@ ht-degree: 49%
 Nachdem Sie die [Aktionstypen](action-types.md) in der [Adobe Experience Platform Web SDK-Tag-Erweiterung](web-sdk-extension-configuration.md) festgelegt haben, konfigurieren Sie Ihre Datenelementtypen.
 
 Auf dieser Seite werden die verfügbaren Datenelementtypen beschrieben.
+
 
 ## Zusammenführungs-ID eines Ereignisses
 
@@ -31,7 +32,7 @@ Verwenden Sie das XDM-Format, um Daten an das Adobe Experience Platform Web SDK 
 
 ![](./assets/XDM-object.png)
 
-Beachten Sie, dass beim Öffnen bestimmter Felder Ihres Schemas wie `web.webPageDetails.URL` einige Elemente automatisch erfasst werden. Obwohl mehrere Elemente automatisch erfasst werden, können Sie bei Bedarf alle Elemente überschreiben. Alle Werte können manuell oder mithilfe anderer Datenelemente ausgefüllt werden.
+Beachten Sie, dass beim Öffnen bestimmter Felder Ihres Schemas, z. B. `web.webPageDetails.URL`, einige Elemente automatisch erfasst werden. Obwohl mehrere Elemente automatisch erfasst werden, können Sie bei Bedarf alle Elemente überschreiben. Alle Werte können manuell oder mithilfe anderer Datenelemente ausgefüllt werden.
 
 >[!NOTE]
 >
