@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die verschiedenen Aktionstypen, die von der
 solution: Experience Platform
 feature: Web SDK
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 4%
@@ -16,6 +16,7 @@ ht-degree: 4%
 Nachdem Sie die Tag-Erweiterung [Adobe Experience Platform Web SDK](web-sdk-extension-configuration.md) konfiguriert haben, konfigurieren Sie Ihre Aktionstypen.
 
 Auf dieser Seite werden die verfügbaren Aktionstypen beschrieben.
+
 
 ## Ereignis senden
 
