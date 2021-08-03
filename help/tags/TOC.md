@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Tags
 breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Datenerfassung
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: bddad4476d6943c7549028e93c84c8ca29059dc0
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 80%
+source-wordcount: '385'
+ht-degree: 81%
 
 ---
 
@@ -88,6 +88,9 @@ ht-degree: 80%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Übersicht](./extensions/web/asset-insights/overview.md)
          * [Versionshinweise](./extensions/web/asset-insights/release-notes.md)
+      * Adobe Experience Manager Forms {#forms}
+         * [Übersicht](./extensions/web/forms/overview.md)
+         * [Versionshinweise](./extensions/web/forms/release-notes.md)
       * Adobe Medien Analytics für Audio und Video {#media-analytics}
          * [Übersicht](./extensions/web/media-analytics/overview.md)
          * [Versionshinweise](./extensions/web/media-analytics/release-notes.md)
