@@ -3,7 +3,7 @@ keywords: Zielerweiterung; Ziel
 title: Adobe Target-Erweiterung
 description: Die Adobe Target-Erweiterung ist ein Personalisierungsziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 62f8c641-7942-41d5-bd86-681c2c5efa6c
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 26%
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 Installieren der Adobe Target -Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](http://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
