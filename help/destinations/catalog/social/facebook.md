@@ -3,9 +3,9 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 41cfa5b30d8816baf55b8b4e1609ca724e9efe24
+source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1176'
 ht-degree: 8%
 
 ---
@@ -69,7 +69,7 @@ Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sic
 
 Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-## Anforderungen an das Hashing von Telefonnummern {#phone-number-hashing-requirements}
+## Hash-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
@@ -81,7 +81,7 @@ Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 >Telefonnummern, die in den Namespace `Phone` aufgenommen werden, können in [!DNL Facebook] nicht aktiviert werden.
 
 
-## Anforderungen an den E-Mail-Hashing {#email-hashing-requirements}
+## Anforderungen an das E-Mail-Hashing {#email-hashing-requirements}
 
 Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und [!DNL Platform] bei Aktivierung hash-Adressen einrichten.
 
@@ -112,7 +112,7 @@ Bevor Sie den Namespace `Extern_ID` verwenden können, um Daten an [!DNL Faceboo
 
 Informationen zum Herstellen einer Verbindung zum [!DNL Facebook]-Ziel finden Sie unter [Authentifizierungs-Workflow für Ziele in sozialen Netzwerken](./workflow.md).
 
-Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Facebook]-Ziels und zum Aktivieren von Segmenten.
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines sozialen Ziels und zum Aktivieren von Segmenten. In diesem Video wird LinkedIn als Beispiel verwendet, die Schritte sind jedoch bei allen sozialen Zielen ähnlich.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
