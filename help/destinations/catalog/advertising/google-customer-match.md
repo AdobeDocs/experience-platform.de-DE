@@ -3,9 +3,9 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 4fed44edb3e201422f765493c9019be1cddffccc
+source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
 workflow-type: tm+mt
-source-wordcount: '1548'
+source-wordcount: '1568'
 ht-degree: 3%
 
 ---
@@ -108,7 +108,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Ziel konfigurieren - Videoeinführung {#video}
 
-Das folgende Video zeigt die Schritte zum Konfigurieren eines [!DNL Google Customer Match]-Ziels und zum Aktivieren von Segmenten. Die Schritte werden auch nacheinander in den nächsten Abschnitten beschrieben.
+Das folgende Video zeigt die Schritte zum Konfigurieren eines sozialen Ziels und zum Aktivieren von Segmenten. In diesem Video wird LinkedIn als Beispiel verwendet, die Schritte sind jedoch bei allen sozialen Zielen, einschließlich [!DNL Google Customer Match], ähnlich. Die Schritte im Video werden in den nächsten Abschnitten ebenfalls sequenziell angeordnet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
