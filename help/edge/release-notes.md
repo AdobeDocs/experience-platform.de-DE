@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 165c9bce5dabce9704202ebab6b97a4a30e4ca00
+source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '717'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 ## Version 2.6.0 - 27. Juli 2021
 
-* Bietet mehr Personalisierungsinhalte im aufgelösten Versprechen `sendEvent`, einschließlich Adobe Target-Antwort-Token. Wenn der Befehl `sendEvent` ausgeführt wird, wird ein Promise zurückgegeben, das schließlich mit einem `result` -Objekt aufgelöst wird, das Informationen enthält, die vom Server empfangen wurden. Dieses Ergebnisobjekt enthält eine Eigenschaft mit dem Namen `decisions`. Diese `decisions` -Eigenschaft wird nicht mehr unterstützt. Eine neue Eigenschaft, `propositions`, wurde hinzugefügt. Diese neue Eigenschaft bietet Kunden Zugriff auf mehr Personalisierungsinhalte, einschließlich Antwort-Token. Weitere Dokumentationen werden in Kürze verfügbar sein.
+* Bietet mehr Personalisierungsinhalte im aufgelösten Versprechen `sendEvent`, einschließlich Adobe Target-Antwort-Token. Wenn der Befehl `sendEvent` ausgeführt wird, wird ein Promise zurückgegeben, das schließlich mit einem `result` -Objekt aufgelöst wird, das Informationen enthält, die vom Server empfangen wurden. Zuvor enthielt dieses Ergebnisobjekt eine Eigenschaft mit dem Namen `decisions`. Diese `decisions` -Eigenschaft wird nicht mehr unterstützt. Eine neue Eigenschaft, `propositions`, wurde hinzugefügt. Diese neue Eigenschaft bietet Kunden Zugriff auf mehr Personalisierungsinhalte, einschließlich [Antwort-Token](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html).
 
 ## Version 2.5.0 - Juni 2021
 
