@@ -3,7 +3,7 @@ keywords: foresee; Erweiterung vorsehen; Ziel vorhersehen
 title: Foresee-Erweiterungsziel
 description: Die Foresee-Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 3eca9e2e-fd41-4dca-a38f-8e281c45a01b
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 18%
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 So installieren Sie die [!DNL Foresee]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](http://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
