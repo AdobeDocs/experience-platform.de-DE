@@ -3,7 +3,7 @@ keywords: Qualtrics;Qualtrics;Qualtrics Website Feedback;Qualtrics Website Feedb
 title: Qualtrics Website Feedback-Erweiterung
 description: Die Qualtrics Website Feedback-Erweiterung ist ein Umfrageziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 30%
@@ -34,7 +34,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 So installieren Sie die [!DNL Qualtrics Website Feedback]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](http://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
