@@ -3,9 +3,9 @@ keywords: TMMData;tmm data;tmmdata;TMM-Daten
 title: TMMData-Erweiterung
 description: Die TMMData-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: b90428845412613d59f3c5091ad7c1398ead9f6a
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '500'
 ht-degree: 14%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 14%
 
 [!DNL TMMData's] Die Foundation-Plattform für Adobe Marketing Cloud bietet Marketing-Teams die Tools, um auf alle wichtigen Datenquellen - einschließlich interner/externer und Online-/Offline-Daten - zuzugreifen und diese miteinander zu kombinieren, um eine sichere, umfassende kanalübergreifende Analyse mit automatisierter Kampagneneinrichtung und direktem Import in Adobe und andere Analyse- und BI-Tools zu ermöglichen.
 
-[!DNL TMMData] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] ist eine Analyseerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise von Tag-Erweiterungen in Platform finden Sie unter [Tag-Erweiterungen - Übersicht](../launch-extensions/overview.md).
 
