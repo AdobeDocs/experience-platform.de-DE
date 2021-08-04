@@ -3,7 +3,7 @@ keywords: Marketo;Marketo;Marketo-Erweiterung;Marketo-Erweiterung
 title: Marketo-Erweiterung
 description: Die Marketo-Erweiterung ist ein E-Mail-Ziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
-source-git-commit: 967a287852ce4f479f658900593aed1f1f2bc0ad
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '471'
 ht-degree: 19%
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 So installieren Sie die [!DNL Marketo]-Erweiterung:
 
-1. Gehen Sie in der [Platform-Oberfläche](http://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+1. Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 2. Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 3. Klicken Sie auf das Ziel, um es zu markieren, und wählen Sie dann **[!UICONTROL Konfigurieren]** in der rechten Leiste aus. Wenn das Steuerelement **[!UICONTROL Konfigurieren]** ausgegraut ist, fehlt Ihnen die Berechtigung **[!UICONTROL manage_properties]**. Siehe [Voraussetzungen](#prerequisites).
 4. Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchten. Sie können auch eine neue Eigenschaft erstellen. Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Informationen zu Eigenschaften finden Sie im Abschnitt [Eigenschaftenseite](../../../tags/ui/administration/companies-and-properties.md#properties-page) der in der Tag-Dokumentation.
