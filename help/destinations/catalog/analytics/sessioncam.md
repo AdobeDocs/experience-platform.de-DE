@@ -3,7 +3,7 @@ keywords: SessionCam;SessionCam;sessioncam
 title: SessionCam-Erweiterung
 description: Die SessionCam-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 67d7b206-d6ed-47f5-9c04-67562ccd1644
-source-git-commit: 6bbccf6751240637c861c2962b64e5247d8abb43
+source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '469'
 ht-degree: 25%
@@ -32,7 +32,7 @@ Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Ad
 
 So installieren Sie die [!DNL SessionCam]-Erweiterung:
 
-Gehen Sie in der [Platform-Oberfläche](http://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
+Gehen Sie in der [Platform-Oberfläche](https://platform.adobe.com/) zu **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]**.
 
 Wählen Sie die Erweiterung aus dem Katalog aus oder verwenden Sie die Suchleiste.
 
