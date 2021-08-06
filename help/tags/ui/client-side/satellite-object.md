@@ -1,14 +1,14 @@
 ---
-title: Tags-Satellitenobjektreferenz
-description: Erfahren Sie mehr über das clientseitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Adobe Experience Platform ausführen können.
-source-git-commit: 309a2f4de25eeb174f6ac50996bd735ccdc2393d
+title: Satellitenobjektreferenz
+description: Erfahren Sie mehr über das clientseitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in -Tags ausführen können.
+source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1251'
 ht-degree: 43%
 
 ---
 
-# Adobe Experience Platform tags Satellite object reference
+# Satellitenobjektreferenz
 
 >[!NOTE]
 >
