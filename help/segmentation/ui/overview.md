@@ -5,9 +5,9 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1577'
 ht-degree: 22%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 [!DNL Adobe Experience Platform Segmentation Service] bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 
-## Erste Schritte
+## Erste Schritte 
 
 Das Arbeiten mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die mit der Segmentierung verbunden sind. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
@@ -37,7 +37,7 @@ Wählen Sie in der Experience Platform-Benutzeroberfläche im linken Navigations
 >
 >Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, ist das Dashboard [!UICONTROL Segmente] nicht sichtbar. Stattdessen zeigt der Tab [!UICONTROL Übersicht] Links und Dokumentation an, die Ihnen bei den ersten Schritten mit Segmenten helfen.
 
-###  Segmente-Dashboard  {#segments-dashboard}
+###  Segmente-Dashboard {#segments-dashboard}
 
 Das Dashboard **[!UICONTROL Segmente]** enthält Schlüsselmetriken, die sich auf die Segmentdaten Ihres Unternehmens beziehen.
 
@@ -82,6 +82,10 @@ Die rechte Seitenleiste enthält Informationen zu allen Segmenten innerhalb der 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
 Die Auswahl der Zeile der Segmentdefinition bietet eine Zusammenfassung der Segmentdefinition, einschließlich Optionen zum Bearbeiten oder Löschen des Segments, der qualifizierten Zielgruppe für das Segment, der Gesamtgröße der Zielgruppe, zusätzlich zum Namen, der Beschreibung, der Auswertungsmethode, dem erstellten Datum und dem Datum der letzten Änderung.
+
+>[!NOTE]
+>
+> **not** können ein Segment löschen, das in einer Zielaktivierung verwendet wird.
 
 ![](../images/ui/overview/segment-browse-details.png)
 
@@ -169,7 +173,7 @@ Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweis
 
 ## Streaming-Segmentierung {#streaming-segmentation}
 
-Streaming-Segmentierung ist die Möglichkeit, die Segmentierung für [!DNL Platform] nahezu in Echtzeit durchzuführen, während der Schwerpunkt auf Datenreichweite liegt. Mit Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in [!DNL Platform] landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen.
+Streaming-Segmentierung ist die Möglichkeit, die Segmentierung für [!DNL Platform] in nahezu Echtzeit durchzuführen, während der Schwerpunkt auf Datenreichweite liegt. Mit Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten in [!DNL Platform] landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen.
 
 Weitere Informationen zur Streaming-Segmentierung finden Sie im [Benutzerhandbuch zur Streaming-Segmentierung](./streaming-segmentation.md).
 
