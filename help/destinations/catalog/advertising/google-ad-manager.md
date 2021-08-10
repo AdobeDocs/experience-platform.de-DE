@@ -3,10 +3,10 @@ keywords: Google Ad Manager;Google Ad Manager;DoubleClick;DoubleClick AdX;Double
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 4df2e7ce9c7e94da4ea0be50ba21232c639e2587
+source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
 workflow-type: tm+mt
-source-wordcount: '754'
-ht-degree: 25%
+source-wordcount: '732'
+ht-degree: 20%
 
 ---
 
@@ -41,7 +41,7 @@ Beachten Sie die folgenden Details, die speziell für [!DNL Google Ad Manager]-Z
 
 **Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel.
 
-## Voraussetzungen  
+## Voraussetzungen
 
 Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] erstellen möchten und die [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) im Experience Cloud-ID-Dienst noch nicht aktiviert haben (mit Audience Manager oder anderen Anwendungen), wenden Sie sich an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Google] -Integrationen in Audience Manager eingerichtet haben, werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
 
@@ -53,8 +53,8 @@ Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] erstellen möchten und die
 
 Bevor Sie das [!DNL Google Ad Manager]-Ziel in Platform erstellen, müssen Sie sich an [!DNL Google] wenden, damit die Adobe auf die Liste der zulässigen Datenanbieter gesetzt und Ihr Konto zur Zulassungsliste hinzugefügt werden kann. Kontaktieren Sie [!DNL Google] und geben Sie die folgenden Informationen ein:
 
-* **Kontokennung**: Dies ist die Adobe-Kontokennung bei [!DNL Google]. Wenden Sie sich an die Kundenunterstützung von Adobe oder Ihren Adobe-Support-Mitarbeiter, um diese Kennung zu erhalten.
-* **Kundenkennung**: Dies ist die Adobe-Kundenkontokennung bei [!DNL Google]. Wenden Sie sich an die Kundenunterstützung von Adobe oder Ihren Adobe-Support-Mitarbeiter, um diese Kennung zu erhalten.
+* **Konto-ID**: Kontokennung der Adobe bei Google. Konto-ID: 87933855.
+* **Kunden-ID**: Kundenkonto-ID der Adobe bei Google. Kunden-ID: 89690775.
 * **Netzwerkkennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
 * **Zielgruppenverknüpfungskennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
 * Ihr Kontotyp. DFP von Google oder AdX Buyer.
