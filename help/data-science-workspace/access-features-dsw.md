@@ -5,9 +5,9 @@ title: Zugriff auf Data Science Workspace und Funktionen
 topic-legacy: Access and features for data science workspace
 description: Im folgenden Dokument werden die Berechtigungen von Data Science Workspace und der Zugriff auf Funktionen beschrieben.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 319cdb13c965010062aa9179b197d6f5b6a20287
+source-git-commit: 2ff2721f5420483ddc5caffd1eb0532df729e01b
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '684'
 ht-degree: 12%
 
 ---
@@ -63,7 +63,7 @@ Um Data Science Workspace verwenden zu können, muss die Berechtigung &quot;Data
 
 ## Sandbox-Unterstützung
 
-Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Platform-Instanz unterstützt mehrere Produktions-Sandboxes und Nicht-Produktions-Sandboxes, von denen jede eine eigene Bibliothek mit Platform-Ressourcen unterhält. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandboxes zu beeinträchtigen. Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
+Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Experience Platform. Jede Platform-Instanz unterstützt mehrere Produktions- und Nicht-Produktions-Sandboxes, von denen jede eine eigene Bibliothek mit Platform-Ressourcen unterhält. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandboxes zu beeinträchtigen. Weiterführende Informationen finden Sie in der [Sandbox-Übersicht](../sandboxes/home.md).
 
 Derzeit gilt für Data Science Workspace die folgende Sandbox-Beschränkung:
 
