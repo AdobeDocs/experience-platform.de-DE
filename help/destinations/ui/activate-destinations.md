@@ -6,9 +6,9 @@ seo-title: Profile und Segmente für ein Ziel aktivieren
 description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 seo-description: Aktivieren Sie die Daten, die Sie in Adobe Experience Platform haben, indem Sie Segmente Zielen zuordnen. Gehen Sie dazu wie folgt vor.
 exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
-source-git-commit: bbb33287b82d348811852f4ad17a9c7b24a33b44
+source-git-commit: dd9e822fd485d26d5101e12e241465c354db5ad3
 workflow-type: tm+mt
-source-wordcount: '2960'
+source-wordcount: '2957'
 ht-degree: 11%
 
 ---
@@ -52,7 +52,7 @@ Wählen Sie im Workflow **[!UICONTROL Ziel aktivieren]** auf der Seite **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Umwandlung anwenden"
->abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern (wie *personalEmail.address* **personalEmail.address** `personalEmail.address`), damit Adobe Experience Platform sie bei Aktivierung automatisch hasst."
+>abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern, damit Adobe Experience Platform sie bei Aktivierung automatisch hash."
 
 Gilt für: Social-Ziele und Werbeziel für Google-Kundenabgleich
 
