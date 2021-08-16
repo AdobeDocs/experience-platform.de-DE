@@ -1,7 +1,7 @@
 ---
 title: Hosts-Endpunkt
 description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /hosts in der Reactor-API vornehmen.
-source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 8%
@@ -22,7 +22,7 @@ Ein Host gehört genau zu einer [Eigenschaft](./properties.md), während eine Ei
 
 Ein Host kann von mehr als einer Umgebung innerhalb einer Eigenschaft verwendet werden. Es ist üblich, einen einzelnen Host für eine Eigenschaft zu haben, und alle Umgebungen für diese Eigenschaft verwenden denselben Host.
 
-## Erste Schritte
+## Erste Schritte 
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
@@ -54,6 +54,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -131,6 +132,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -293,7 +295,7 @@ PATCH /hosts/{HOST_ID}
 Die folgende Anfrage aktualisiert die `name` für einen vorhandenen Host.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/hosts/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -417,6 +419,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
