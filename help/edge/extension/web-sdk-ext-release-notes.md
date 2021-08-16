@@ -2,16 +2,24 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 7c30df7ea126ec7c7c794b8daaf3d2b813873b98
+source-git-commit: 40d280eb1d9810d679428ffd42c88035459f2b7d
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 53%
+source-wordcount: '1173'
+ht-degree: 51%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in den [Versionshinweisen zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.7.0 - 16. August 2021
+
+Enthält Version 2.6.3 der Adobe Experience Platform Web SDK-Bibliothek.
+
+* Bei Verwendung des Datenelementtyps Identity Map werden IDs, deren IDs in Werte aufgelöst werden, die nicht ausgefüllte Zeichenfolgen sind, jetzt automatisch aus der Identitätszuordnung entfernt.
+* Fehlerkorrektur - beim Versuch, ein Datenelement mit dem Datenelementtyp &quot;XDM-Objekt&quot;zu speichern, tritt kein Fehler mehr auf und es wurde kein Schema ausgewählt.
+* Verbesserte Typografie der Benutzeroberfläche.
 
 ## Version 2.6.2 - 4. August 2021
 
