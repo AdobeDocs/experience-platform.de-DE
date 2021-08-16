@@ -3,14 +3,18 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f3821176b0cbc4ad07fbd2e0e20caa1205324a44
+source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '738'
 ht-degree: 4%
 
 ---
 
 # Versionshinweise
+
+## Version 2.6.3 - 16. August 2021
+
+* Es wurde ein Problem behoben, bei dem Objekte, die nicht für die öffentliche Verwendung vorgesehen waren, über das aufgelöste Promise des Befehls `configure` bereitgestellt wurden.
 
 ## Version 2.6.2 - 4. August 2021
 
