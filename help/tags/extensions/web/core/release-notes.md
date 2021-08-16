@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
-source-wordcount: '1210'
-ht-degree: 86%
+source-wordcount: '1293'
+ht-degree: 81%
 
 ---
 
@@ -13,6 +13,16 @@ ht-degree: 86%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 11. August 2021
+
+v3.0.0
+
+* PDCL-6153: Unterstützt das zuverlässige Abrufen der vollständig qualifizierten URL für zwischengespeicherte benutzerdefinierte Code-Aktionen.
+
+Version 3.0.0 der Haupterweiterung ist mit Änderungen in [v27.2.0 der Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0) verknüpft, die es Benutzern ermöglichen, ihre Bibliothek in viele von Adoben verwaltete Hostregionen zu laden, wenn das Benutzerunternehmen Premium CDN unterstützt.
+
+Dieses Upgrade ist optional und abwärtskompatibel für Benutzer ohne Premium-CDN und für Kunden, die Premium-CDN in ihrem Unternehmen aktiviert haben, obligatorisch.
 
 ## 20. Mai 2021
 
