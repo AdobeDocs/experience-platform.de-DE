@@ -1,7 +1,7 @@
 ---
 title: Endpunkt "Profile"
 description: Erfahren Sie, wie Sie den Endpunkt /profiles in der Reactor-API aufrufen.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 6%
@@ -14,7 +14,7 @@ In der Reactor-API stellt ein Profil einen Adobe Experience Platform-Benutzer da
 
 Ein Profil enthält alle Informationen zum angemeldeten Benutzer, einschließlich aller IMS-Organisationen, zu denen er gehört, der Produktprofile, zu denen er in jeder Organisation gehört, und der Rechte, die ihm aus jedem Produktprofil zugewiesen sind.
 
-## Erste Schritte
+## Erste Schritte 
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
@@ -36,6 +36,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
