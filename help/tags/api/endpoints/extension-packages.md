@@ -1,10 +1,10 @@
 ---
 title: Endpunkt von Erweiterungspaketen
 description: Erfahren Sie, wie Sie den Endpunkt /extension_packages in der Reactor-API aufrufen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 8%
+source-wordcount: '955'
+ht-degree: 7%
 
 ---
 
@@ -20,9 +20,35 @@ Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzer
 
 Ein Erweiterungspaket gehört zum [Unternehmen](./companies.md) des Entwicklers, der es erstellt hat.
 
-## Erste Schritte
+## Erste Schritte 
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+
+Neben dem Verständnis, wie Aufrufe an die Reactor-API durchgeführt werden, ist es auch wichtig zu verstehen, wie die Attribute `status` und `availability` eines Erweiterungspakets beeinflussen, welche Aktionen Sie darauf durchführen können. Diese werden in den folgenden Abschnitten erläutert.
+
+### Status
+
+Erweiterungspakete haben drei potenzielle Status: `pending`, `succeeded` und `failed`.
+
+| Status | Beschreibung |
+| --- | --- |
+| `pending` | Wenn ein Erweiterungspaket erstellt wird, wird sein `status` auf `pending` gesetzt. Dies gibt an, dass das System die Informationen für das Erweiterungspaket erhalten hat und mit der Verarbeitung beginnt. Erweiterungspakete mit dem Status `pending` sind nicht verfügbar. |
+| `succeeded` | Der Status eines Erweiterungspakets wird auf `succeeded` aktualisiert, wenn die Verarbeitung erfolgreich abgeschlossen wurde. |
+| `failed` | Der Status eines Erweiterungspakets wird auf `failed` aktualisiert, wenn die Verarbeitung nicht erfolgreich abgeschlossen wird. Ein Erweiterungspaket mit dem Status `failed` kann aktualisiert werden, bis die Verarbeitung erfolgreich ist. Erweiterungspakete mit dem Status `failed` sind nicht verfügbar. |
+
+### Verfügbarkeit
+
+Es gibt Verfügbarkeitsstufen für ein Erweiterungspaket: `development`, `private` und `public`.
+
+| Verfügbarkeit | Beschreibung |
+| --- | --- |
+| `development` | Ein Erweiterungspaket in `development` ist nur für das Unternehmen sichtbar und innerhalb dessen verfügbar, das Eigentümer des Pakets ist. Darüber hinaus kann sie nur für Eigenschaften verwendet werden, die für die Erweiterungsentwicklung konfiguriert sind. |
+| `private` | Ein `private`-Erweiterungspaket ist nur für das Unternehmen sichtbar, das Eigentümer des Pakets ist, und kann nur für Eigenschaften installiert werden, die dem Unternehmen gehören. |
+| `public` | Ein `public` Erweiterungspaket ist sichtbar und steht allen Unternehmen und Eigenschaften zur Verfügung. |
+
+>[!NOTE]
+>
+>Wenn ein Erweiterungspaket erstellt wird, wird `availability` auf `development` gesetzt. Nach Abschluss des Tests können Sie das Erweiterungspaket auf `private` oder `public` umstellen.
 
 ## Abrufen einer Liste von Erweiterungspaketen {#list}
 
@@ -46,6 +72,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -231,6 +258,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -441,11 +469,11 @@ Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, einsc
 }
 ```
 
-## Erstellen oder Aktualisieren eines Erweiterungspakets {#create}
+## Erstellen eines Erweiterungspakets {#create}
 
 Erweiterungspakete werden mit einem Strukturvorlagen-Tool von Node.js erstellt und auf Ihrem lokalen Computer gespeichert, bevor sie an die Reactor-API gesendet werden. Weitere Informationen zum Konfigurieren eines Erweiterungspakets finden Sie im Handbuch [Erste Schritte mit der Erweiterungsentwicklung](../../extension-dev/getting-started.md).
 
-Nachdem Sie die Package-Datei für die Erweiterung erstellt haben, können Sie sie über eine POST-Anfrage an die Reactor-API senden. Wenn das Erweiterungspaket bereits in der API vorhanden ist, aktualisiert dieser Aufruf das Paket auf eine neue Version.
+Nachdem Sie die Package-Datei für die Erweiterung erstellt haben, können Sie sie über eine POST-Anfrage an die Reactor-API senden.
 
 **API-Format**
 
@@ -676,12 +704,12 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Erweiterungspakets
 
 ## Erweiterungspaket aktualisieren {#update}
 
-Sie können ein Erweiterungspaket aktualisieren, indem Sie dessen ID in den Pfad einer POST-Anfrage einschließen.
+Sie können ein Erweiterungspaket aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen.
 
 **API-Format**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | Parameter | Beschreibung |
@@ -695,7 +723,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 Wie bei [Erstellen eines Erweiterungspakets](#create) muss eine lokale Version des aktualisierten Pakets über Formulardaten hochgeladen werden.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -934,7 +962,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Eine private Veröffentlichung wird erreicht, indem ein `action` mit dem Wert `release_private` im `meta` der Anfragedaten bereitgestellt wird.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1179,7 +1207,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 Eine private Veröffentlichung wird erreicht, indem ein `action` mit dem Wert `release_private` im `meta` der Anfragedaten bereitgestellt wird.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1275,6 +1303,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
