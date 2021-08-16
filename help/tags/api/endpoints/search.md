@@ -1,9 +1,9 @@
 ---
 title: Suchendpunkt
 description: Erfahren Sie, wie Sie Aufrufe an den /search-Endpunkt in der Reactor-API durchführen.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
+source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '662'
 ht-degree: 2%
 
 ---
@@ -39,29 +39,19 @@ Alle Abfragen beziehen sich auf Ihr aktuelles Unternehmen und auf verfügbare Ei
 
 Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie im [Suchleitfaden](../guides/search.md).
 
-## Erste Schritte
+## Erste Schritte 
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Regeln abrufen {#list}
+## Durchführen einer Suche {#perform}
 
-Sie können eine Liste von Regeln abrufen, die zu einer Eigenschaft gehören, indem Sie eine GET-Anfrage ausführen.
+Sie können eine Suche durchführen, indem Sie eine POST-Anfrage stellen.
 
 **API-Format**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Parameter | Beschreibung |
-| --- | --- |
-| `PROPERTY_ID` | Die `id` der Eigenschaft, deren Komponenten Sie auflisten möchten. |
-
-{style=&quot;table-layout:auto&quot;}
-
->[!NOTE]
->
->Mithilfe von Abfrageparametern können aufgelistete Regeln anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
 
 **Anfrage**
 
@@ -71,6 +61,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
