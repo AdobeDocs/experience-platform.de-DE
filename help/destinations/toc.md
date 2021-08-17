@@ -4,17 +4,17 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Ziele
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 58%
+source-wordcount: '467'
+ht-degree: 59%
 
 ---
 
 
 # Ziele {#destinations}
 
-* [Ziele Übersicht](./home.md)
+* [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
 * API-Tutorials {#api}
    * [Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API aktivieren](./api/streaming-destinations.md)
@@ -79,7 +79,6 @@ ht-degree: 58%
       * [Yext Conversion Tracking-Erweiterung](./catalog/analytics/yext.md)
    * Cloud-Speicher-Ziele {#cloud-storage}
       * [Übersicht über Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
-      * [Erstellen eines Cloud-Speicher-Ziels](./catalog/cloud-storage/workflow.md)
       * [(Beta) Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
@@ -119,7 +118,6 @@ ht-degree: 58%
       * [Marketo Web Personalization-Erweiterung](./catalog/personalization/marketo-web-personalization.md)
    * Social-Ziele{#social}
       * [Social-Ziele - Übersicht](./catalog/social/overview.md)
-      * [Social-Ziel erstellen](./catalog/social/workflow.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
       * [Verbindung zwischen linkedIn Matched Audiences](./catalog/social/linkedin.md)
