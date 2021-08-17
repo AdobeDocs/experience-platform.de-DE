@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
 seo-description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: 65e74041aeb285cb80c67e47ccdaca18de9889fa
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1165'
 ht-degree: 4%
 
 ---
@@ -42,6 +42,11 @@ Verwenden Sie die Kontrollkästchen links neben den Segmentnamen, um die Segment
 ![Segmente auswählen](../assets/ui/activate-segment-streaming-destinations/select-segments.png)
 
 ## Zuordnen von Attributen und Identitäten {#mapping}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Umwandlung anwenden"
+>abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern, damit Adobe Experience Platform sie bei Aktivierung automatisch hash."
 
 >[!IMPORTANT]
 >
