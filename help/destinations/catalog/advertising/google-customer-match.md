@@ -3,10 +3,10 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 8a521b2b846c953b74b8e48fb76b94966a652318
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 3%
+source-wordcount: '1250'
+ht-degree: 1%
 
 ---
 
@@ -106,54 +106,32 @@ Bevor Sie den Namespace `User_ID` verwenden können, um Daten an Google zu sende
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-## Ziel konfigurieren - Videoeinführung {#video}
+<!-- ## Configure destination - video walkthrough {#video}
 
-Das folgende Video zeigt die Schritte zum Konfigurieren eines sozialen Ziels und zum Aktivieren von Segmenten. In diesem Video wird LinkedIn als Beispiel verwendet, die Schritte sind jedoch bei allen sozialen Zielen, einschließlich [!DNL Google Customer Match], ähnlich. Die Schritte im Video werden in den nächsten Abschnitten ebenfalls sequenziell angeordnet.
+The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## Mit Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Scrollen Sie in **[!UICONTROL Ziele]** > **[!UICONTROL Katalog]** zur Kategorie **[!UICONTROL Werbung]**. Wählen Sie [!DNL Google Customer Match] und dann **[!UICONTROL Konfigurieren]** aus.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-![Verbindung zum Google-Kundenabgleichziel herstellen](../../assets/catalog/advertising/google-customer-match/connect.png)
+### Verbindungsparameter {#parameters}
 
->[!NOTE]
->
->Wenn eine Verbindung mit diesem Ziel vorhanden ist, können Sie auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** sehen. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Activate]** und **[!UICONTROL Configure]** finden Sie im Abschnitt [Catalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Ziel-Workspace.
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-Wenn Sie im Schritt **Konto** zuvor eine Verbindung zu Ihrem [!DNL Google Customer Match]-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie Ihre vorhandene Verbindung aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung zu [!DNL Google Customer Match] einzurichten. Um sich anzumelden und Adobe Experience Cloud mit Ihrem [!DNL Google Ad]-Konto zu verbinden, wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
-
->[!NOTE]
->
->Experience Platform unterstützt die Berechtigungsprüfung im Authentifizierungsprozess. Es wird eine Fehlermeldung angezeigt, wenn Sie falsche Anmeldeinformationen in Ihr [!DNL Google Ad]-Konto eingeben, um sicherzustellen, dass Sie den Workflow nicht mit falschen Anmeldeinformationen abschließen.
-
-![Verbindung zum Google-Kundenabgleich-Ziel herstellen - Authentifizierungsschritt](../../assets/catalog/advertising/google-customer-match/connection.png)
-
-Nachdem Ihre Anmeldedaten bestätigt wurden und Adobe Experience Cloud mit Ihrem Google-Konto verbunden ist, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Schritt **[!UICONTROL Authentifizierung]** fortzufahren.
-
-![Anmeldedaten bestätigt](../../assets/catalog/advertising/google-customer-match/connection-success.png)
-
-Geben Sie im Schritt **[!UICONTROL Authentifizierung]** einen **[!UICONTROL Namen]** und eine **[!UICONTROL Beschreibung]** für Ihren Aktivierungsfluss ein und geben Sie Ihre Google **[!UICONTROL Konto-ID]** ein.
-
-In diesem Schritt können Sie auch beliebige **[!UICONTROL Marketing-Aktionen]** auswählen, die für dieses Ziel gelten. Marketing-Aktionen geben den Intent an, für den die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketing-Aktionen auswählen oder eine eigene Marketing-Aktion erstellen. Weitere Informationen zu Marketing-Aktionen finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../../data-governance/policies/overview.md).
-
-Wählen Sie **[!UICONTROL Ziel erstellen]** aus, nachdem Sie die obigen Felder ausgefüllt haben.
+* **[!UICONTROL Name]**: Namen für diese Zielverbindung angeben
+* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für diese Zielverbindung ein
+* **[!UICONTROL Konto-ID]**: Ihre Google-Kunden-ID. Das Format der ID ist xxx-xxx-xxxx.
 
 >[!IMPORTANT]
 >
 > * Die Marketing-Aktion **[!UICONTROL Kombinieren mit PII]** ist standardmäßig für das [!DNL Google Customer Match]-Ziel ausgewählt und kann nicht entfernt werden.
-> * Für [!DNL Google Customer Match] -Ziele. **[!UICONTROL Kontokennung]** ist Ihre Kunden-ID bei Google. Das Format der ID ist xxx-xxx-xxxx.
 
 
-![Google-Kundenabgleich verbinden - Authentifizierungsschritt](../../assets/catalog/advertising/google-customer-match/authentication.png)
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Ihr Ziel wird jetzt erstellt. Sie können **[!UICONTROL Speichern und beenden]** auswählen, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** wählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen sehen Sie sich den nächsten Abschnitt [Aktivieren von Segmenten für  [!DNL Google Customer Match]](#activate-segments) an, in dem der restliche Workflow beschrieben wird.
-
-## Aktivieren von Segmenten für [!DNL Google Customer Match] {#activate-segments}
-
-Anweisungen zum Aktivieren von Segmenten für [!DNL Google Customer Match] finden Sie unter [Daten für Ziele aktivieren](../../ui/activate-destinations.md).
-
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 Im Schritt **[!UICONTROL Segment schedule]** müssen Sie die [!UICONTROL App-ID] angeben, wenn Sie [!DNL IDFA]- oder [!DNL GAID]-Segmente an [!DNL Google Customer Match] senden.
 
