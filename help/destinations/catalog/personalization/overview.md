@@ -2,26 +2,29 @@
 keywords: Personalisierung;Personalisierung
 title: Personalisierungsziele – Übersicht
 description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
-translation-type: tm+mt
-source-git-commit: e13a19640208697665b0a7e0106def33fd1e456d
+exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 92%
+source-wordcount: '136'
+ht-degree: 90%
 
 ---
 
-
 # Personalisierungsziele – Übersicht {#personalization-destinations}
+
+## Übersicht {#overview}
 
 Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 
+## Unterstützte Personalisierungsziele {#supported-destinations}
+
 Derzeit unterstützt Platform die unten aufgeführten Personalisierungsziele. Informationen zum Herstellen einer Verbindung mit diesen Zielen finden Sie unter den einzelnen Links:
 
-* [Adobe Target-Erweiterung](./adobe-target.md)
-* [Adobe Target v2-Erweiterung](./adobe-target-v2.md)
-* [Beemray-Erweiterung](./beemray.md)
-* [D&amp;B Visitor Intelligence-Erweiterung](./dnb.md)
-* [Experience Cloud ID Service-Erweiterung](./adobe-ecid.md)
-* [Gainsight-Erweiterung](./gainsight.md)
-* [Kickfire-Erweiterung](./kickfire.md)
-* [Marketo Web Personalization-Erweiterung](./marketo-web-personalization.md)
+* [Adobe Target-Erweiterung](adobe-target.md)
+* [Adobe Target v2-Erweiterung](adobe-target-v2.md)
+* [Beemray-Erweiterung](beemray.md)
+* [D&amp;B Visitor Intelligence-Erweiterung](dnb.md)
+* [Experience Cloud ID-Diensterweiterung](adobe-ecid.md)
+* [Gainsight-Erweiterung](gainsight.md)
+* [Kickfire-Erweiterung](kickfire.md)
+* [Marketo Web Personalization-Erweiterung](marketo-web-personalization.md)
