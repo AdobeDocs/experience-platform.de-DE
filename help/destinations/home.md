@@ -5,10 +5,10 @@ seo-title: Ziele – Übersicht
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Ziele für kanalübergreifende Marketing-Kampagnen, E-Mails, zielgruppengerechte Werbung und mehr aktivieren.
 seo-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in der Adobe Experience Platform verwenden, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 35%
+source-wordcount: '507'
+ht-degree: 34%
 
 ---
 
@@ -25,7 +25,7 @@ Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieterdaten zu er
 ## Ziele – Schritte {#steps}
 
 * Wählen Sie aus einem [Self-Service-Katalog](./catalog/overview.md) aller in Platform verfügbaren Ziele aus.
-* Verwenden Sie Ziele zu [activate](./ui/activate-destinations.md) und senden Sie Profile oder Segmente an Plattformen zur Marketing-Automatisierung, digitale Werbung und mehr.
+* Verwenden Sie Ziele, um Profile oder Segmente an Plattformen zur Marketing-Automatisierung, digitale Werbeplattformen und mehr zu senden.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
 ## Steuerelemente {#controls}
@@ -66,4 +66,8 @@ Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow &quot;Ziel 
 * [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
 * [Social-Ziele](./catalog/social/overview.md)
 
-Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie im Schritt Überprüfen unter [Profile und Segmente für ein Ziel aktivieren](./ui/activate-destinations.md#review).
+Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie im Schritt Überprüfen in den folgenden Handbüchern:
+
+* [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md#review)
+* [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](./ui/activate-streaming-profile-destinations.md#review)
+* [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](./ui/activate-batch-profile-destinations.md#review)
