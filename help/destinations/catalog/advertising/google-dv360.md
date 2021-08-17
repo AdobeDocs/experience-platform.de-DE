@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick Bid Manager;DoubleClick;Display & 
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 39%
+source-wordcount: '673'
+ht-degree: 38%
 
 ---
 
@@ -80,7 +80,7 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
 
 ## Exportierte Daten
 
