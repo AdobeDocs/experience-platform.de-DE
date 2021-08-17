@@ -3,10 +3,10 @@ keywords: Google Ads; Google Ads; Google AdWords; Google AdWords; Google AdWords
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: ca388912d6634f72cab15a6bfb3e9f92264e52db
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 14%
+source-wordcount: '637'
+ht-degree: 15%
 
 ---
 
@@ -66,29 +66,22 @@ Bevor Sie das [!DNL Google Ads]-Ziel in Platform erstellen, müssen Sie sich an 
 * Ihr Kontotyp: **AdWords**
 * **Google AdWords-ID**: Dies ist Ihre ID mit  [!DNL Google]. Das Format der Kennung lautet in der Regel 123-456-7890.
 
-## Ziel konfigurieren
+## Mit Ziel verbinden {#connect}
 
-Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL Google Ads] und klicken Sie auf **[!UICONTROL Konfigurieren]**.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-![Google Ads-Ziel verbinden](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### Verbindungsparameter {#parameters}
 
->[!NOTE]
->
->Wenn bereits eine Verbindung mit diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Activate]** und **[!UICONTROL Configure]** finden Sie im Abschnitt [Catalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Ziel-Workspace.
-
-Füllen Sie im Schritt **Setup** des Workflows zum Erstellen des Ziels den Eintrag [!UICONTROL Grundlegende Informationen] für das Ziel aus.
-
-![Google Ads-Basisinformationen ](../../assets/catalog/advertising/google-ads-destination/setup.png)
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Kontotyp]**: AdWords ist die einzige verfügbare Option.
 * **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID  [!DNL Google Ads]ein. Das Format der Kennung lautet in der Regel 123-456-7890.
-* **[!UICONTROL Marketing-Aktion]**: Marketing-Aktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketing-Aktionen auswählen oder eine eigene Marketing-Aktion erstellen. Weitere Informationen zu Marketing-Aktionen finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../../data-governance/policies/overview.md).
 
-## Aktivieren von Segmenten für [!DNL Google Ads]
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Segmenten für [!DNL Google Ads] finden Sie unter [Daten für Ziele aktivieren](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 ## Exportierte Daten
 
