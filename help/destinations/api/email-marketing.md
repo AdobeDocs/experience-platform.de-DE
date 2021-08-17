@@ -6,9 +6,9 @@ description: In diesem Dokument wird die Erstellung von E-Mail-Marketing-Zielen 
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1705'
 ht-degree: 73%
 
 ---
@@ -21,7 +21,7 @@ In dieser Anleitung wird für alle Beispiele das Ziel „Adobe Campaign“ verwe
 
 ![Übersicht – Schritte zum Erstellen eines Ziels und Aktivieren von Segmenten](../assets/api/email-marketing/overview.png)
 
-Wenn Sie lieber die Benutzeroberfläche in Platform zum Verbinden eines Ziels und Aktivieren von Daten verwenden möchten, finden Sie weitere Informationen in den Tutorials [Ziel](../ui/connect-destination.md) verbinden und [Profile und Segmente für ein Ziel aktivieren](../ui/activate-destinations.md) .
+Wenn Sie lieber die Benutzeroberfläche in Platform zum Verbinden eines Ziels und Aktivieren von Daten verwenden möchten, finden Sie weitere Informationen in den Tutorials [Ziel](../ui/connect-destination.md) verbinden[Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../ui/activate-batch-profile-destinations.md) .
 
 ## Erste Schritte
 
