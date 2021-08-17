@@ -1,10 +1,10 @@
 ---
 title: 'Zugreifen auf die ECID '
 description: Adobe Experience Platform Web SDK-Erweiterung mit ECID in Tags
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: befe1efa884706165b8d65803d06f6370a8a60f2
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 9%
+source-wordcount: '124'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 9%
 
 Für den Zugriff auf die ECID innerhalb von Tags empfiehlt Adobe Folgendes:
 
-1. Stellen Sie sicher, dass Ihre Eigenschaft mit der aktivierten [Sequenzierung von Regelkomponenten](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing) konfiguriert ist.
+1. Stellen Sie sicher, dass Ihre Eigenschaft mit der aktivierten [Sequenzierung von Regelkomponenten](../../tags/ui/managing-resources/rules.md#sequencing) konfiguriert ist.
 1. Erstellen Sie eine neue Regel.
 1. Fügen Sie der Regel das Ereignis [!UICONTROL Bibliothek geladen] hinzu.
 1. Fügen Sie der Regel eine Aktion [!UICONTROL Benutzerdefinierte Bedingung] mit folgendem Code hinzu (vorausgesetzt, der für die SDK-Instanz konfigurierte Name ist `alloy`):
