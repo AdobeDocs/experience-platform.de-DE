@@ -3,10 +3,10 @@ keywords: mobil; einatmen; Messaging;
 title: Bremsverbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 66c3e81dfdbf6f6c3ff9a127fbca8943c0e32279
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 4%
+source-wordcount: '789'
+ht-degree: 2%
 
 ---
 
@@ -51,37 +51,24 @@ Als Marketer möchte ich Benutzer in einem Ziel für mobile Interaktionen anspre
 **[!DNL Profile-based]** - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.
 [!DNL Adobe Experience Platform] -Segmente werden  [!DNL Braze] unter dem - `AdobeExperiencePlatformSegments` Attribut nach exportiert.
 
-## Mit Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL Braze] und klicken Sie auf **[!UICONTROL Konfigurieren]**.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-![Konfigurieren des Braze-Ziels](../../assets/catalog/mobile-engagement/braze/configure.png)
+### Verbindungsparameter {#parameters}
 
->[!NOTE]
->
->Wenn bereits eine Verbindung mit diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Activate]** und **[!UICONTROL Configure]** finden Sie im Abschnitt [Catalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Ziel-Workspace.
->
->![Braze Destination aktivieren](../../assets/catalog/mobile-engagement/braze/activate.png)
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-Im Schritt [!UICONTROL Konto] müssen Sie Ihr [!DNL Braze]-Konto-Token angeben. Dies ist Ihr [!DNL Braze] [!DNL API] -Schlüssel. Ausführliche Anweisungen zum Abrufen Ihres [!DNL API]-Schlüssels finden Sie hier: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Geben Sie das Token ein und klicken Sie auf **[!UICONTROL Mit Ziel verbinden]**.
-
-![Schritt &quot;Ziel-Konto löschen&quot;](../../assets/catalog/mobile-engagement/braze/account.png)
-
-Klicken Sie auf **[!UICONTROL Weiter]**. Geben Sie im Schritt [!UICONTROL Authentifizierung] die Verbindungsdetails [!DNL Braze] ein:
+* **[!UICONTROL Braze-Konto-Token]**: Das ist dein  [!DNL Braze] [!DNL API] Schlüssel. Ausführliche Anweisungen zum Abrufen Ihres [!DNL API]-Schlüssels finden Sie hier: [REST API Key Overview](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
 * **[!UICONTROL Endpunktinstanz]**: Fragen Sie Ihren  [!DNL Braze] Kundenbetreuer, welche Endpunktinstanz Sie verwenden sollten.
-* **[!UICONTROL Marketing-Aktion]**: Marketing-Aktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketing-Aktionen auswählen oder eine eigene Marketing-Aktion erstellen. Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Informationen zu den einzelnen von der Adobe definierten Marketing-Aktionen finden Sie unter [Übersicht über Datennutzungsrichtlinien](../../../data-governance/policies/overview.md).
 
-![Authentifizierungsschritt &quot;Blitzen&quot;](../../assets/catalog/mobile-engagement/braze/authentication.png)
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Klicken Sie auf **[!UICONTROL Ziel erstellen]**. Ihr Ziel wird jetzt erstellt. Sie können auf **[!UICONTROL Speichern und beenden]** klicken, wenn Sie Segmente später aktivieren möchten, oder Sie können **[!UICONTROL Weiter]** auswählen, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen finden Sie den Rest des Workflows im nächsten Abschnitt [Segmente aktivieren](#activate-segments).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
-## Aktivieren von Segmenten {#activate-segments}
-
-Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-destinations.md#select-attributes).
-
-## Feldzuordnung {#field-mapping}
+## Zuordnungsüberlegungen {#mapping-considerations}
 
 Um Ihre Zielgruppendaten korrekt von [!DNL Adobe Experience Platform] an das [!DNL Braze]-Ziel zu senden, müssen Sie den Schritt für die Feldzuordnung durchlaufen.
 
@@ -135,7 +122,7 @@ Angenommen, Ihr XDM-Profilschema und Ihre [!DNL Braze]-Instanz enthalten die fol
 |  | XDM-Profilschema | [!DNL Braze] Instanz |
 |---|---|---|
 | Attribute | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>PhoneNumber</code></li></ul> |
-| Identitäten | <ul><li>E-Mail </code></li><li>Google Ad ID (GAID)</code></li><li>Apple-ID für Advertiser (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Identitäten | <ul><li>E-Mail</code></li><li>Google Ad ID (GAID)</code></li><li>Apple-ID für Advertiser (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 Die korrekte Zuordnung würde wie folgt aussehen:
 
@@ -145,6 +132,6 @@ Die korrekte Zuordnung würde wie folgt aussehen:
 
 Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] -Segmente werden  [!DNL Braze] unter dem - `AdobeExperiencePlatformSegments` Attribut nach exportiert.
 
-## Datennutzung und Governance {#data-usage-governance}
+## Datennutzung und -verwaltung {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] Data Governance durchsetzt, finden Sie unter [Übersicht über Data Governance](../../../data-governance/home.md).
