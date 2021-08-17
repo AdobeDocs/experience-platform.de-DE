@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-Klasse
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ecb9c9a4158f3d2981ab60ee3bf419464ac7b8f1
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1573'
 ht-degree: 4%
 
 ---
@@ -53,7 +53,7 @@ Bestimmte Interaktionen in Ihren Erlebnisanwendungen können zu mehreren verwand
 
 [Adobe Experience Platform-Daten ](../../data-prep/home.md) Vorbereiten ermöglicht die Zuordnung, Umwandlung und Validierung von Daten zu und von XDM. Mithilfe der verfügbaren [Zuordnungsfunktionen](../../data-prep/functions.md), die vom Dienst bereitgestellt werden, können Sie logische Operatoren aufrufen, um bei der Erfassung in Experience Platform Daten aus Datensätzen mit mehreren Ereignissen zu priorisieren, umzuwandeln und/oder zu konsolidieren. Im obigen Beispiel könnten Sie `eventType` als berechnetes Feld festlegen, bei dem eine &quot;Produktansicht&quot;Vorrang vor einer &quot;Seitenansicht&quot;hat, wann immer beide auftreten.
 
-Wenn Sie Daten manuell über die Benutzeroberfläche in Platform erfassen, finden Sie im Handbuch [Zuordnen einer CSV-Datei zu XDM](../../ingestion/tutorials/map-a-csv-file.md) spezifische Schritte zum Erstellen berechneter Felder.
+Wenn Sie Daten manuell über die Benutzeroberfläche in Platform erfassen, finden Sie im Handbuch [Handbuch zu berechneten Feldern](../../data-prep/calculated-fields.md) genaue Anweisungen zum Erstellen berechneter Felder.
 
 Wenn Sie Daten mithilfe einer Quellverbindung an Platform streamen, können Sie die Quelle so konfigurieren, dass stattdessen berechnete Felder verwendet werden. Eine Anleitung zur Implementierung berechneter Felder beim Konfigurieren der Verbindung finden Sie in der [Dokumentation für Ihre jeweilige Quelle](../../sources/home.md) .
 
