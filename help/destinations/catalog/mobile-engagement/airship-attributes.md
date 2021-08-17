@@ -3,9 +3,9 @@ keywords: Luftschiffsattribute;Luftschiffsziel
 title: Verbindung zu Luftverkehrsattributen
 description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting innerhalb von Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '726'
 ht-degree: 2%
 
 ---
@@ -69,7 +69,7 @@ Nutzen Sie Attribute aus Adobe Experience Platform, um [!DNL Airship]-Profile we
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
 
 ### Verbindungsparameter {#parameters}
 
@@ -82,7 +82,7 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
