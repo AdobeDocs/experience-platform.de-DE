@@ -3,10 +3,10 @@ keywords: Google Ad Manager;Google Ad Manager;DoubleClick;DoubleClick AdX;Double
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 7e2f6f54e754c52c8de7f98372d041b2a6520d46
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 20%
+source-wordcount: '651'
+ht-degree: 22%
 
 ---
 
@@ -59,19 +59,13 @@ Bevor Sie das [!DNL Google Ad Manager]-Ziel in Platform erstellen, müssen Sie s
 * **Zielgruppenverknüpfungskennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
 * Ihr Kontotyp. DFP von Google oder AdX Buyer.
 
-## Ziel konfigurieren
+## Mit Ziel verbinden {#connect}
 
-Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option **[!DNL Google Ad Manager]** und klicken Sie auf **[!UICONTROL Konfigurieren]**.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-![Mit Google Ad Manager-Ziel verbinden](../../assets/catalog/advertising/google-ad-manager/catalog.png)
+### Verbindungsparameter {#parameters}
 
->[!NOTE]
->
->Wenn bereits eine Verbindung mit diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Activate]** und **[!UICONTROL Configure]** finden Sie im Abschnitt [Catalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Ziel-Workspace.
-
-Füllen Sie im Schritt **Setup** des Workflows zum Erstellen des Ziels den Eintrag [!UICONTROL Grundlegende Informationen] für das Ziel aus.
-
-![Grundlegende Informationen – Google Ad Manager](../../assets/catalog/advertising/google-ad-manager/setup.png)
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
@@ -79,15 +73,14 @@ Füllen Sie im Schritt **Setup** des Workflows zum Erstellen des Ziels den Eintr
    * Verwenden Sie `DFP by Google` für for Publishers.[!DNL DoubleClick]
    * `AdX buyer` für [!DNL Google AdX] verwenden
 * **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID  [!DNL Google]ein. Dies kann Ihre Netzwerkkennung oder Ihre Zielgruppenverknüpfungskennung sein. Normalerweise ist dies eine achtstellige Kennung.
-* **[!UICONTROL Marketing-Aktion]**: Marketing-Aktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketing-Aktionen auswählen oder eine eigene Marketing-Aktion erstellen. Weitere Informationen zu Marketing-Aktionen finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../../data-governance/policies/overview.md).
 
 >[!NOTE]
 >
 >Wenden Sie sich beim Einrichten eines [!DNL Google Ad Manager]-Ziels an Ihren [!DNL Google Account Manager]- oder Kundenbetreuer, um zu erfahren, welchen Kontotyp Sie haben.
 
-## Aktivieren von Segmenten für [!DNL Google Ad Manager]
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Segmenten für [!DNL Google Ad Manager] finden Sie unter [Daten für Ziele aktivieren](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 ## Exportierte Daten
 
