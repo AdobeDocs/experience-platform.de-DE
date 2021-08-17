@@ -3,10 +3,10 @@ keywords: LinkedIn-Verbindung; LinkedIn-Verbindung; LinkedIn-Ziele; LinkedIn;
 title: Verbindung von LinkedIn mit übereinstimmenden Zielgruppen
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 8ec6f1eb38f4865daaa4fe4cd749a9014742dce6
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '677'
-ht-degree: 4%
+source-wordcount: '766'
+ht-degree: 3%
 
 ---
 
@@ -51,7 +51,7 @@ Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerbere
 
 Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-## Anforderungen an den E-Mail-Hashing {#email-hashing-requirements}
+## Anforderungen an das E-Mail-Hashing {#email-hashing-requirements}
 
 Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und [!DNL Platform] bei Aktivierung hash-Adressen einrichten.
 
@@ -59,12 +59,12 @@ Weitere Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform fi
 
 Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
-- Schneiden Sie alle führenden und nachfolgenden Leerzeichen aus der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
-- Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hash;
-   - Beispiel: `example@email.com`, nicht `EXAMPLE@EMAIL.COM`;
-- Stellen Sie sicher, dass der Hash-String nur in Kleinbuchstaben geschrieben wird.
-   - Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- Salz die Zeichenfolge nicht.
+* Schneiden Sie alle führenden und nachfolgenden Leerzeichen aus der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
+* Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hash;
+   * Beispiel: `example@email.com`, nicht `EXAMPLE@EMAIL.COM`;
+* Stellen Sie sicher, dass der Hash-String nur in Kleinbuchstaben geschrieben wird.
+   * Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Salz die Zeichenfolge nicht.
 
 >[!NOTE]
 >
@@ -77,17 +77,29 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 
 ![Identity Mapping Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## Mit Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Informationen zum Herstellen einer Verbindung zum [!DNL LinkedIn Matched Audiences]-Ziel finden Sie unter [Authentifizierungs-Workflow für Ziele in sozialen Netzwerken](./workflow.md).
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
 Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences]-Ziels und zum Aktivieren von Segmenten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Aktivieren von Segmenten für [!DNL LinkedIn Matched Audiences] {#activate-segments}
+>[!NOTE]
+>
+>Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
-Anweisungen zum Aktivieren von Segmenten für [!DNL LinkedIn Matched Audiences] finden Sie unter [Daten für Ziele aktivieren](../../ui/activate-destinations.md).
+### Verbindungsparameter {#parameters}
+
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+
+* **[!UICONTROL Name]**: einen Namen, mit dem Sie dieses Ziel in Zukunft erkennen werden.
+* **[!UICONTROL Beschreibung]**: eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Konto-ID]**: Ihr  [!DNL LinkedIn Campaign Manager Account ID]. Sie finden diese ID in Ihrem [!DNL LinkedIn Campaign Manager] -Konto.
+
+## Aktivieren von Segmenten für dieses Ziel {#activate}
+
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 ## Exportierte Daten {#exported-data}
 
