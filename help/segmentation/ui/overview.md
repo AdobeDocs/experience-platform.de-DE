@@ -5,9 +5,9 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 265607b3b21fda48a92899ec3d750058ca48868a
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '1577'
+source-wordcount: '1570'
 ht-degree: 22%
 
 ---
@@ -115,7 +115,7 @@ Im Abschnitt **[!UICONTROL Aktivierte Ziele]** werden die Ziele angezeigt, für 
 
 >[!NOTE]
 >
-> Ziele sind eine Funktion, die mit [!DNL Real-time Customer Data Platform] verfügbar ist und mit der Sie Daten auf externe Plattformen exportieren können. Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../../destinations/home.md). Informationen zum Aktivieren eines Segments für ein Ziel finden Sie in der [Anleitung zum Aktivieren von Segmenten für ein Ziel](../../destinations/ui/activate-destinations.md).
+> Ziele sind eine Funktion, die mit [!DNL Real-time Customer Data Platform] verfügbar ist und mit der Sie Daten auf externe Plattformen exportieren können. Weitere Informationen zu Zielen finden Sie in der [Zielübersicht](../../destinations/home.md). Informationen zum Aktivieren eines Segments für ein Ziel finden Sie unter [Aktivierungsübersicht](../../destinations/ui/activation-overview.md).
 
 ### Profilbeispiele
 
