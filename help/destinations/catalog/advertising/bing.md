@@ -3,14 +3,14 @@ keywords: 'Werbung; Schläuche; '
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising ausführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 2931efa6f67a042255fb1d31c0683f73d817b55b
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 5%
+source-wordcount: '382'
+ht-degree: 1%
 
 ---
 
-# [!DNL Microsoft Bing] connection  {#bing-destination}
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 ## Übersicht {#overview}
 
@@ -42,38 +42,25 @@ Beim Konfigurieren des Ziels müssen Sie die folgenden Informationen angeben:
 
 * [!UICONTROL Konto-ID]: Dies ist Ihr  [!DNL Bing Ads CID]ganzzahliges Format.
 
-## Mit Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** die Option [!DNL Microsoft Bing] und klicken Sie auf **[!UICONTROL Konfigurieren]**.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-![Microsoft Bing-Ziel konfigurieren](../../assets/catalog/advertising/bing/configure.png)
+### Verbindungsparameter {#parameters}
 
-Wenn bereits eine Verbindung mit diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen **[!UICONTROL Activate]** und **[!UICONTROL Configure]** finden Sie im Abschnitt [Catalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Ziel-Workspace.
-
-![Microsoft Bing-Ziel aktivieren](../../assets/catalog/advertising/bing/activate.png)
-
-## Authentifizierungsschritt {#authentication}
-
-Im Schritt **[!UICONTROL Authentifizierung]** müssen Sie die Details der Zielverbindung eingeben:
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
 * **[!UICONTROL Konto-ID]**: Ihr  [!DNL Bing Ads CID].
-* **[!UICONTROL Marketing-Aktion]**: Marketing-Aktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketing-Aktionen auswählen oder eine eigene Marketing-Aktion erstellen. Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Informationen zu den einzelnen von der Adobe definierten Marketing-Aktionen finden Sie unter [Übersicht über Datennutzungsrichtlinien](../../../data-governance/policies/overview.md).
 
-![Microsoft Bing Destination Authentication](../../assets/catalog/advertising/bing/authentication.png)
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Klicken Sie auf **[!UICONTROL Ziel erstellen]**. Ihr Ziel wird jetzt erstellt. Sie können auf [!UICONTROL Speichern und beenden] klicken, wenn Sie Segmente später aktivieren möchten, oder Sie können auf [!UICONTROL Weiter] klicken, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. In beiden Fällen finden Sie den Rest des Workflows im nächsten Abschnitt [Segmente aktivieren](#activate-segments).
-
-## Aktivieren von Segmenten {#activate-segments}
-
-Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-destinations.md#select-attributes).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 Im Schritt [Segment schedule](../../ui/activate-destinations.md#segment-schedule) müssen Sie Ihre Segmente manuell ihrer entsprechenden ID oder dem Anzeigenamen im Ziel zuordnen.
 
 Für die Zuordnung von Segmenten empfehlen wir, den Segmentnamen [!DNL Platform] oder eine kürzere Form zu verwenden, um die Verwendung zu vereinfachen. Die Segment-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der ID in Ihrem [!DNL Platform]-Konto übereinstimmen. Alle Werte, die Sie in das Zuordnungsfeld einfügen, werden vom Ziel übernommen.
-
-![Segmentzuordnungs-ID](../../assets/common/segment-mapping-id.png)
 
 ## Exportierte Daten {#exported-data}
 
