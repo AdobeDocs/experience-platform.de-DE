@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
-workflow-type: ht
-source-wordcount: '712'
-ht-degree: 100%
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+workflow-type: tm+mt
+source-wordcount: '713'
+ht-degree: 98%
 
 ---
 
@@ -49,7 +49,7 @@ Weitere Informationen finden Sie unter [[!DNL Data Prep] Übersicht](../../data-
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Erweiterter ID-Abgleich | Die Möglichkeiten der Übereinstimmungsrate von Zielgruppen in [!DNL Facebook Custom Audiences] und [!DNL Google Customer Match] wurden verbessert, indem nun auch weitere Parameter zur Identitätszuordnungen, wie externe IDs, Telefonnummern und IDs von Smartphones und Tablets unterstützt werden. Weiterführende Informationen finden Sie in der folgenden Dokumentation: <ul><li>[Facebook-Ziel](../../destinations/catalog/social/facebook.md)</li><li>[Ziel von Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Profile und Segmente für ein Ziel aktivieren](../../destinations/ui/activate-destinations.md)</li></ul> |
+| Erweiterter ID-Abgleich | Die Möglichkeiten der Übereinstimmungsrate von Zielgruppen in [!DNL Facebook Custom Audiences] und [!DNL Google Customer Match] wurden verbessert, indem nun auch weitere Parameter zur Identitätszuordnungen, wie externe IDs, Telefonnummern und IDs von Smartphones und Tablets unterstützt werden. Weiterführende Informationen finden Sie in der folgenden Dokumentation: <ul><li>[Facebook-Ziel](../../destinations/catalog/social/facebook.md)</li><li>[Ziel von Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
 Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/home.md).
 
