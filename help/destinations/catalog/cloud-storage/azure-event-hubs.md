@@ -1,72 +1,64 @@
 ---
-keywords: Azurblauer Ereignis Hub Destination;Azurer Ereignis Hub;Azurabend
-title: (Beta) !DNL-Ereignis-Hubs]-Verbindung
-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrer !DNL-Ereignis-Hubs]-Datenspeicherung, um Daten von der Experience Platform zu streamen.
+keywords: Azure Event Hub-Ziel; Azure Event Hub; Azure Event Event Event Hub
+title: (Beta) !DNL Azure Event Hubs]-Verbindung
+description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem !DNL Azure Event Hubs]-Speicher, um Daten von Experience Platform zu streamen.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7f15da092928ed09f898c9197c4679e834b11779
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 6%
+source-wordcount: '474'
+ht-degree: 3%
 
 ---
 
-# (Beta) [!DNL Azure Event Hubs]-Verbindung
+# (Beta) [!DNL Azure Event Hubs] Verbindung
 
 ## Übersicht {#overview}
 
 >[!IMPORTANT]
 >
->Das [!DNL Azure Event Hubs]-Ziel in der Plattform befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
+>Das [!DNL Azure Event Hubs]-Ziel in Platform befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
 
-[!DNL Azure Event Hubs] ist eine große Datenstreaming-Plattform und ein Ereignis-Erfassungsdienst. Es kann Millionen von Ereignissen pro Sekunde empfangen und verarbeiten. Daten, die an einen Ereignis-Hub gesendet werden, können mithilfe eines beliebigen Echtzeitanalyseanbieters oder von Batch-/Datenspeicherung-Adaptern transformiert und gespeichert werden.
+[!DNL Azure Event Hubs] ist eine Big-Data-Streaming-Plattform und ein Event-Erfassungsdienst. Es kann Millionen von Ereignissen pro Sekunde empfangen und verarbeiten. An einen Ereignis-Hub gesendete Daten können mithilfe eines beliebigen Echtzeit-Analytics-Anbieters oder von Batch-/Speicheradaptern umgewandelt und gespeichert werden.
 
-Sie können eine ausgehende Echtzeitverbindung zu Ihrer [!DNL Azure Event Hubs]-Datenspeicherung erstellen, um Daten von Adobe Experience Platform zu streamen.
+Sie können eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Azure Event Hubs]-Speicher erstellen, um Daten von Adobe Experience Platform zu streamen.
 
 * Weitere Informationen zu [!DNL Azure Event Hubs] finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* Informationen zum programmgesteuerten Herstellen einer Verbindung mit [!DNL Azure Event Hubs] finden Sie im Lehrgang [Streaming-Ziel-API](../../api/streaming-destinations.md).
-* Informationen zum Herstellen einer Verbindung mit [!DNL Azure Event Hubs] mithilfe der Plattform-Benutzeroberfläche finden Sie in den folgenden Abschnitten.
+* Informationen zum programmgesteuerten Herstellen einer Verbindung zu [!DNL Azure Event Hubs] finden Sie im [Tutorial zur Streaming-Ziel-API](../../api/streaming-destinations.md).
+* Informationen zum Herstellen einer Verbindung zu [!DNL Azure Event Hubs] mithilfe der Benutzeroberfläche von Platform finden Sie in den folgenden Abschnitten.
 
 ![AWS Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Nutzungsszenarien {#use-cases}
+## Nutzungsszenarios {#use-cases}
 
-Durch die Verwendung von Streaming-Zielen wie [!DNL Azure Event Hubs] können Sie einfach hochwertige Segmentierungssysteme und zugehörige Profil-Attribute in Ihre bevorzugten Ereignis einspeisen.
+Durch die Verwendung von Streaming-Zielen wie [!DNL Azure Event Hubs] können Sie einfach hochwertige Segmentierungsereignisse und zugehörige Profilattribute in Ihre bevorzugten Systeme einspeisen.
 
-Beispielsweise hat ein Potenzieller Kunde ein White Paper heruntergeladen, das sie in ein &quot;hohes Konversionssegment&quot;einordnet. Wenn Sie das Segment zuordnen, in das der Potenzieller Kunde zum [!DNL Azure Event Hubs]-Ziel gehört, erhalten Sie dieses Ereignis in [!DNL Azure Event Hubs]. Dort können Sie einen Do-it-self-Ansatz verwenden und die Geschäftslogik über das Ereignis beschreiben, da Sie denken, dass dies am besten mit Ihren IT-Systemen im Unternehmen funktionieren würde.
+Beispielsweise hat ein Interessent ein Whitepaper heruntergeladen, das ihn in ein Segment mit hoher Konversionsneigung qualifiziert. Wenn Sie das Segment zuordnen, in das der Interessent zum [!DNL Azure Event Hubs]-Ziel gehört, erhalten Sie dieses Ereignis in [!DNL Azure Event Hubs]. Dort können Sie zusätzlich zu dem Ereignis einen &quot;do-it-self&quot;-Ansatz verwenden und die Geschäftslogik beschreiben, da Sie denken, dass dies am besten mit Ihren Enterprise-IT-Systemen funktionieren würde.
 
 ## Exporttyp {#export-type}
 
-**Profil-basiert** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die  [Ziel-Aktivierung](../../ui/activate-destinations.md#select-attributes) ausgewählt.
+**Profilbasiert**  - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des  [Zielaktivierungs-Workflows](../../ui/activate-destinations.md#select-attributes) ausgewählt.
 
-## Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Datenspeicherung-Zielen, einschließlich [!DNL Azure Event Hubs], finden Sie unter [Arbeitsablauf für Cloud-Datenspeicherung-Ziele ](./workflow.md).
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-Geben Sie für [!DNL Azure Event Hubs]-Ziele im Arbeitsablauf zum Erstellen von Zielen die folgenden Informationen ein:
+### Verbindungsparameter {#parameters}
 
-## Kontoschritt {#account-step}
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL SAS-Key-]** Namen und  **[!UICONTROL SAS-Schlüssel]**: Geben Sie den Namen und die Taste Ihres SAS-Schlüssels ein. Erfahren Sie mehr über die Authentifizierung für [!DNL Azure Event Hubs] mit SAS-Schlüsseln in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Namensraum]**: Füllen Sie Ihren  [!DNL Azure Event Hubs] Namensraum aus. Erfahren Sie mehr über die [!DNL Azure Event Hubs]-Namensraum in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL SAS-]** Schlüsselname und  **[!UICONTROL SAS-Schlüssel]**: Geben Sie Ihren SAS-Schlüsselnamen und -Schlüssel ein. Informationen zur Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]**: Füllen Sie Ihren  [!DNL Azure Event Hubs] Namespace aus. Weitere Informationen zu [!DNL Azure Event Hubs]-Namespaces finden Sie in der [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Name]**: Geben Sie einen Namen für die Verbindung zu  [!DNL Azure Event Hubs]ein.
+* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung der Verbindung an.  Beispiele: &quot;Premium-Tier-Kunden&quot;, &quot;Männchen für Kitesurfen interessiert&quot;.
+* **[!UICONTROL eventHubName]**: Geben Sie einen Namen für den Stream an Ihr  [!DNL Azure Event Hubs] Ziel an.
 
-![Im Kontoschritt erforderliche Eingabe](../../assets/catalog/cloud-storage/event-hubs/account.png)
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-## Authentifizierungsschritt {#authentication-step}
-
-* **[!UICONTROL Name]**: Geben Sie einen Namen für die Verbindung ein  [!DNL Azure Event Hubs].
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung der Verbindung ein.  Beispiele: &quot;Premium-Tier-Kunden&quot;, &quot;Männer, die am Kitesurfen interessiert sind&quot;.
-* **[!UICONTROL eventHubName]**: Geben Sie einen Namen für den Stream zu Ihrem  [!DNL Azure Event Hubs] Ziel ein.
-* **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie auf der Seite [Datenverwaltung in Adobe Experience Platform](../../../data-governance/policies/overview.md). Informationen zu den einzelnen, von der Adobe definierten Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
-
-![Im Authentifizierungsschritt erforderliche Daten](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
-
-## Aktivieren von Segmenten {#activate-segments}
-
-Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 ## Exportierte Daten {#exported-data}
 
-Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format. [!DNL Azure Event Hubs] Das folgende Ereignis enthält beispielsweise das Segmentattribut &quot;E-Mail-Adresse&quot;einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
+Ihre exportierten [!DNL Experience Platform]-Daten werden im JSON-Format [!DNL Azure Event Hubs] angezeigt. Beispielsweise enthält das nachstehende Ereignis das E-Mail-Adressen-Profilattribut einer Zielgruppe, die sich für ein bestimmtes Segment qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Interessenten sind ECID und E-Mail.
 
 ```json
 {
@@ -109,7 +101,7 @@ Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format. [!DNL 
 
 >[!MORELIKETHIS]
 >
->* [Stellen Sie eine Verbindung zu den Ereignis-Hubs her und aktivieren Sie Daten mithilfe der Flow Service API](../../api/streaming-destinations.md)
+>* [Verbindung zu Azure Event Hubs herstellen und Daten mithilfe der Flow Service-API aktivieren](../../api/streaming-destinations.md)
 * [AWS Kinesis-Ziel](./amazon-kinesis.md)
 * [Zieltypen und Kategorien](../../destination-types.md)
 
