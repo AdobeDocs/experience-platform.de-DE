@@ -1,22 +1,29 @@
 ---
-keywords: soziale;soziale Ziele;Livefyre;facebook;Facebook
+keywords: Social; soziale Ziele; Livefyre; facebook; Facebook
 title: Social-Ziele - Übersicht
-description: Mit Social-Zielen können Sie Profil für Ihre Kampagnen aktivieren, um auf der Grundlage von Hash-E-Mails Audiencen-Targeting, Personalisierung und Unterdrückung zu ermöglichen.
+description: Mit Social-Zielen können Sie Profile für Ihre Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails aktivieren.
 exl-id: c5da8dae-c1ff-45a8-b769-037d7bb7947a
-translation-type: tm+mt
-source-git-commit: 805cb72e91e6446f74cc3461d39841740eb576c7
+source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 5%
+source-wordcount: '109'
+ht-degree: 4%
 
 ---
 
-# Übersicht über Social-Ziele {#social-network-destinations}
+# Social-Ziele - Übersicht {#social-network-destinations}
 
-Mit Social-Zielen können Sie Profil für Ihre Kampagnen aktivieren, um auf der Grundlage von Hash-E-Mails Audiencen-Targeting, Personalisierung und Unterdrückung zu ermöglichen.
+## Übersicht {#overview}
+
+Mit Social-Zielen können Sie Profile für Ihre Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails aktivieren.
+
+## Unterstützte soziale Ziele {#supported-destinations}
 
 Adobe Experience Platform unterstützt derzeit die folgenden sozialen Ziele:
 
-- [Adobe Livefyre-Erweiterung](./adobe-livefyre.md)
-- [[!DNL Facebook] -Erweiterung ](./facebook.md)
-- [Verbindung zu LinkedIn-Audiencen](./linkedin.md)
+* [Adobe Livefyre-Erweiterung](adobe-livefyre.md)
+* [[!DNL Facebook]-Erweiterung ](facebook.md)
+* [Verbindung von LinkedIn mit übereinstimmenden Zielgruppen](linkedin.md)
+
+## Verbindung zu einem neuen sozialen Ziel herstellen {#connect-destination}
+
+Um für Ihre Kampagnen Segmente an soziale Ziele zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Detaillierte Informationen zum Einrichten eines neuen Ziels finden Sie im [Tutorial zur Zielerstellung](../../ui/connect-destination.md) .
