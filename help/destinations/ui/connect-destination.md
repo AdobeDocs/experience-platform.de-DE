@@ -4,7 +4,7 @@ title: Neue Zielverbindung erstellen
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Herstellen einer Verbindung zu einem Ziel in Adobe Experience Platform aufgeführt
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 1c67d9eb1b7762ecfcad5b0b7db5c317621f144e
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 1%
@@ -65,4 +65,4 @@ Geben Sie die Verbindungsdetails der Zielplattform ein und wählen Sie dann **[!
 
    ![Mit Ziel verbinden](../assets/ui/connect-destinations/connect-destination.png)
 
-1. Wählen Sie **[!UICONTROL Speichern und beenden]**, um die Zielkonfiguration zu speichern, oder wählen Sie **[!UICONTROL Weiter]** aus, um mit den Zielgruppendaten [Aktivierungsfluss](activate-destinations.md) fortzufahren.
+1. Wählen Sie **[!UICONTROL Speichern und beenden]**, um die Zielkonfiguration zu speichern, oder wählen Sie **[!UICONTROL Weiter]** aus, um mit den Zielgruppendaten [Aktivierungsfluss](activation-overview.md) fortzufahren.
