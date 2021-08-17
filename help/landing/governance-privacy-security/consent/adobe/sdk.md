@@ -3,10 +3,10 @@ title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platfor
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform mit dem Adobe 2.0-Standard zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1254'
-ht-degree: 2%
+source-wordcount: '1247'
+ht-degree: 1%
 
 ---
 
@@ -93,7 +93,7 @@ Nachdem das Datenelement erstellt wurde, navigieren Sie zurück zur Konfiguratio
 
 ### Bereitstellen der Erweiterung auf Ihrer Website
 
-Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Ausführliche Informationen zum Bereitstellen des aktualisierten Bibliotheks-Builds finden Sie im [Publishing-Handbuch](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html?lang=de) in der Tag-Dokumentation.
+Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in Ihre Website integriert werden. Ausführliche Informationen zum Bereitstellen des aktualisierten Bibliotheks-Builds finden Sie im [Publishing-Handbuch](../../../../tags/ui/publishing/overview.md) in der Tag-Dokumentation.
 
 ## Festlegen von Befehlen zur Änderung der Zustimmung {#commands}
 
