@@ -3,9 +3,9 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Adobe Campaign; Kampagne
 title: Adobe Campaign-Verbindung
 description: Adobe Campaign umfasst verschiedene Lösungen, mit denen Sie Kampagnen über alle Ihre Online- und Offline-Kanäle hinweg personalisieren und bereitstellen können.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '722'
 ht-degree: 17%
 
 ---
@@ -20,7 +20,7 @@ Um Segmentdaten an Adobe Campaign zu senden, müssen Sie zunächst [das Ziel](#c
 
 ## Exporttyp {#export-type}
 
-**Profilbasiert**  - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Schritt  **[!UICONTROL Auswählen von]** Attributen im  [Zielaktivierungs-Workflow](../../ui/activate-destinations.md#select-attributes) ausgewählt.
+**Profilbasiert**  - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Schritt  **[!UICONTROL Auswählen von]** Attributen im Workflow für die  [Zielgruppenaktivierung](../../ui/activate-batch-profile-destinations.md#select-attributes) ausgewählt.
 
 ## IP-Adressen-Zulassungsliste {#allow-list}
 
@@ -59,15 +59,15 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../../ui/activate-batch-profile-destinations.md) .
 
-## Zielattribute {#destination-attributes}
+### Zielattribute {#destination-attributes}
 
-Wenn Sie [Segmente](../../ui/activate-destinations.md) für dieses Ziel aktivieren, empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Auswählen, welche Schemafelder in Ihren exportierten Dateien als Zielattribute verwendet werden sollen](./overview.md#destination-attributes).
+Beim Aktivieren von Segmenten für dieses Ziel empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Best Practices beim Aktivieren von Zielgruppen für E-Mail-Marketing-Ziele](overview.md#best-practices).
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Platform] eine tabulatorgetrennte `.csv`-Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentaktivierung.
+Für [!DNL Adobe Campaign]-Ziele erstellt [!DNL Platform] eine tabulatorgetrennte `.csv`-Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Segmentaktivierung überprüfen](../../ui/activate-batch-profile-destinations.md#verify) im Tutorial zur Segmentaktivierung.
 
 ## Datenimport in Adobe Campaign einrichten {#import-data-into-campaign}
 
