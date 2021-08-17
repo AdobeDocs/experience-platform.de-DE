@@ -1,10 +1,10 @@
 ---
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
-source-git-commit: 9b1c805f0717d0ed2c5759420d20abf5dcdeaabc
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 4%
+source-wordcount: '325'
+ht-degree: 3%
 
 ---
 
@@ -36,6 +36,14 @@ Segmentexport: Sie exportieren alle Segmentmitglieder (Zielgruppe) mit den IDs (
 
 Anweisungen zum Einrichten des Ziels [finden Sie hier](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en).
 
+## Mit Ziel verbinden {#connect}
+
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+
 ## Datennutzung und -verwaltung {#data-usage-governance}
 
 Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] Data Governance durchsetzt, finden Sie unter [Übersicht über Data Governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+## Aktivieren von Segmenten für dieses Ziel {#activate}
+
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
