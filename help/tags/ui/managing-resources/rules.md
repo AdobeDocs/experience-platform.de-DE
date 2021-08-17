@@ -1,7 +1,7 @@
 ---
 title: Regeln
 description: Erfahren Sie, wie Tag-Erweiterungen in Adobe Experience Platform funktionieren.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1977'
 ht-degree: 82%
@@ -168,7 +168,7 @@ Adobe kann nicht garantieren, dass andere Regeln tatsächlich ausgelöst werden 
 * **JavaScript:** Das JavaScript-Skript wird vom Server als normaler Text geladen, in ein Skript-Tag eingeschlossen und mit Postscribe dem Dokument hinzugefügt. Wenn die Regel mehrere benutzerdefinierte JavaScript-Skripte enthält, werden diese parallel vom Server geladen, aber in der Reihenfolge ausgeführt, die in der Regel konfiguriert wurde.
 * **HTML:** Der HTML-Code wird vom Server geladen und mit Postscribe zum Dokument hinzugefügt. Wenn die Regel mehrere benutzerdefinierte HTML-Skripte enthält, werden diese parallel vom Server geladen, aber in der Reihenfolge ausgeführt, die in der Regel konfiguriert wurde.
 
-## Sequenzierung von Regelkomponenten
+## Sequenzierung von Regelkomponenten {#sequencing}
 
 Das Verhalten der Tag-Laufzeitumgebung hängt davon ab, ob **[!UICONTROL Regelkomponenten in der Sequenz]** für Ihre Eigenschaft aktiviert oder deaktiviert ist.
 
