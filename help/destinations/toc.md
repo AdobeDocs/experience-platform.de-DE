@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Ziele
-source-git-commit: f73598224d527535aaf9ecb2aa1c26786cae2d82
+source-git-commit: 0fef443c1979fec0c0d239a0b630cb3a0a134402
 workflow-type: tm+mt
-source-wordcount: '467'
-ht-degree: 59%
+source-wordcount: '492'
+ht-degree: 54%
 
 ---
 
@@ -21,9 +21,13 @@ ht-degree: 59%
    * [Verbindung zu E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren](./api/email-marketing.md)
 * Benutzeroberflächen-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
-   * [Mit Ziel verbinden](./ui/connect-destination.md)
+   * [Neue Zielverbindung erstellen](./ui/connect-destination.md)
+   * Aktivieren von Zielgruppendaten für Ziele{#activate}
+      * [Übersicht über Activation](./ui/activation-overview.md)
+      * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md)
+      * [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](./ui/activate-streaming-profile-destinations.md)
+      * [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](./ui/activate-batch-profile-destinations.md)
    * [Zieldetails anzeigen](./ui/destination-details-page.md)
-   * [Profile und Segmente für ein Ziel aktivieren](./ui/activate-destinations.md)
    * [Zielkonten aktualisieren](./ui/update-accounts.md)
    * [Bearbeiten von Aktivierungsflüssen](./ui/edit-activation.md)
    * [Ziele löschen](./ui/delete-destinations.md)
