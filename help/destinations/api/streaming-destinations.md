@@ -6,9 +6,9 @@ description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilf
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0bc85d79bab690d433dc29d558a4d9caf086586d
+source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
 workflow-type: tm+mt
-source-wordcount: '2024'
+source-wordcount: '2025'
 ht-degree: 55%
 
 ---
@@ -25,7 +25,7 @@ In diesem Tutorial wird in allen Beispielen das Ziel [!DNL Amazon Kinesis] verwe
 
 ![Übersicht - Schritte zum Erstellen eines Streaming-Ziels und Aktivieren von Segmenten](../assets/api/streaming-destination/overview.png)
 
-Wenn Sie lieber die Benutzeroberfläche in Platform verwenden möchten, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Ein Ziel verbinden](../ui/connect-destination.md) und [Profile und Segmente für ein Ziel aktivieren](../ui/activate-destinations.md) .
+Wenn Sie lieber die Benutzeroberfläche in Platform zum Herstellen einer Verbindung zu einem Ziel und Aktivieren von Daten verwenden möchten, finden Sie weitere Informationen in den Tutorials [Ziel](../ui/connect-destination.md) verbinden und [Zielgruppendaten für Streaming-Segmentexportziele aktivieren](../ui/activate-segment-streaming-destinations.md) .
 
 ## Erste Schritte
 
