@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 764b8e8a120ab53e7d39202b47d7c6f0195193a2
+source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 88%
+source-wordcount: '547'
+ht-degree: 80%
 
 ---
 
@@ -34,6 +34,12 @@ Die Datenvorbereitung wendet außerdem mehrere intrinsische Datenvalidierungen a
 „Zuordnung“ bezeichnet hier die Zuordnung eines Eingabeattributs oder berechneten Felds zu einem XDM-Attribut. Ein einzelnes Attribut kann mehreren XDM-Attributen zugeordnet werden, indem einzelne Zuordnungen erstellt werden.
 
 Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [Handbuch zu den Zuordnungsfunktionen](./functions.md).
+
+### Berechnete Felder
+
+Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
+
+Weiterführende Informationen zu berechneten Feldern finden Sie im [Handbuch zu berechneten Feldern](./functions.md#calculated-fields).
 
 ## Zuordnungssatz
 
