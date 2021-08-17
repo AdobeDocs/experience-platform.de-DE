@@ -3,9 +3,9 @@ keywords: Luftschiff-Tags; Luftschiff-Ziel
 title: Verbindung von Airship Tags
 description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
+source-git-commit: e413933920028e3239f6044111d9cf215c865eba
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '705'
 ht-degree: 2%
 
 ---
@@ -92,7 +92,7 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
