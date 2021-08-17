@@ -3,9 +3,9 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 8d1594aeb1d6671eec187643245d940ed3ff74cd
+source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Tre
 
 ## Exporttyp {#export-type}
 
-**Profilbasiert**  - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des  [Zielaktivierungs-Workflows](../../ui/activate-destinations.md#select-attributes) ausgewählt.
+**Profilbasiert**  - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des  [Zielaktivierungs-Workflows](../../ui/activate-batch-profile-destinations.md) ausgewählt.
 
 ![SFTP-profilbasierter Exporttyp](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
@@ -45,7 +45,7 @@ Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, 
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL SFTP]-Ziele erstellt Platform eine tabulatorgetrennte `.csv`-Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentaktivierung.
+Für [!DNL SFTP]-Ziele erstellt Platform eine tabulatorgetrennte `.csv`-Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../../ui/activate-batch-profile-destinations.md) im Tutorial zur Segmentaktivierung.
 
 ## IP-Adressen-Zulassungsliste
 
