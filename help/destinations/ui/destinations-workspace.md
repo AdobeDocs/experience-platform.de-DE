@@ -4,10 +4,10 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste die Option Ziele aus, um auf den Arbeitsbereich "Ziele"zuzugreifen.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2791c32abe582d51d05d4bf0488ba82dfadfd053
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 20%
+source-wordcount: '861'
+ht-degree: 19%
 
 ---
 
@@ -72,7 +72,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
-> * Verwenden Sie die Schaltfläche ![Segmente hinzufügen](../assets/ui/workspace/add-data-symbol.png) in der Spalte **[!UICONTROL Name]**, um [Aktivieren](activate-destinations.md) weitere Segmente für dieses Ziel zu aktivieren.
+> * Verwenden Sie die Schaltfläche ![Segmente hinzufügen](../assets/ui/workspace/add-data-symbol.png) in der Spalte **[!UICONTROL Name]** , um Segmente an dieses Ziel zu senden.
 > * Verwenden Sie die Schaltfläche ![Ziele löschen](../assets/ui/workspace/delete-destination-symbol.png) in der Spalte **[!UICONTROL Name]** , um [Löschen](delete-destinations.md) eine vorhandene Verbindung zu einem Ziel zu löschen.
 
 
@@ -88,7 +88,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 | [!UICONTROL Benutzername] | Die Kontoanmeldedaten, die Sie für den Zielfluss ausgewählt haben. |
 | [!UICONTROL Aktivierungsdaten] | Gibt die Anzahl der Segmente an, die für dieses Ziel aktiviert werden. Wählen Sie dieses Steuerelement aus, um mehr über die aktivierten Segmente zu erfahren. Weitere Informationen zu den aktivierten Segmenten finden Sie unter [Aktivierungsdaten](/help/destinations/ui/destination-details-page.md#activation-data) auf der Seite mit den Zieldetails . |
 | [!UICONTROL Erstellt] | Datum und Uhrzeit (UTC) der Erstellung des Aktivierungsflusses zum Ziel. |
-| [!UICONTROL Status] | `Active` oder `Inactive`. Gibt an, ob für dieses Ziel Daten aktiviert werden. Informationen zum Bearbeiten des Status finden Sie unter [Aktivierung deaktivieren](./activate-destinations.md#disable-activation). |
+| [!UICONTROL Status] | `Active` oder `Inactive`. Gibt an, ob für dieses Ziel Daten aktiviert werden. |
 
 Klicken Sie auf eine Zielzeile, um weitere Informationen zum Ziel in der rechten Leiste anzuzeigen.
 
