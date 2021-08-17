@@ -3,9 +3,9 @@ keywords: Streaming;
 title: HTTP-Verbindung
 description: Mit dem HTTP-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '357'
 ht-degree: 9%
 
 ---
@@ -56,11 +56,11 @@ Während [Einrichten](../ui/connect-destination.md) dieses Ziels müssen Sie die
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../ui/activate-destinations.md#select-attributes) .
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Profilexport-Ziele](../ui/activate-streaming-profile-destinations.md) .
 
-## Zielattribute {#attributes}
+### Zielattribute {#attributes}
 
-Im Schritt [[!UICONTROL Attribute]](../ui/activate-destinations.md#select-attributes) auswählen empfiehlt Adobe beim Aktivieren von Segmenten](../ui/activate-destinations.md) zu einem [!DNL HTTP]-Ziel, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. [ Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
+Im Schritt [[!UICONTROL Attribute]](../ui/activate-streaming-profile-destinations.md#select-attributes) auswählen empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
 
 ## Exportierte Daten {#exported-data}
 
