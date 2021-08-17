@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mithilfe Ihres Cloud-Speicherkontos beschrieben.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 5478143e681257c6885d99d83380a35de263ed3d
+source-git-commit: df6ddf52f5cab7e5faae591594f060d641977783
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2001'
 ht-degree: 4%
 
 ---
@@ -128,7 +128,7 @@ Das Dialogfeld **[!UICONTROL Schema auswählen]** wird angezeigt. Wählen Sie da
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Je nach Bedarf können Sie Felder direkt zuordnen oder Zuordnungsfunktionen verwenden, um Quelldaten umzuwandeln und berechnete oder berechnete Werte abzuleiten. Weiterführende Informationen zu Datenzuordnungs- und Zuordnungsfunktionen finden Sie im Tutorial zum [Zuordnen von CSV-Daten zu XDM-Schemafeldern](../../../../../ingestion/tutorials/map-a-csv-file.md).
+Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weiterführende Informationen zu Zuordnungsfunktionen und berechneten Feldern finden Sie im [Handbuch zu Datenvorbereitung-Funktionen](../../../../../data-prep/functions.md) oder im Handbuch [Berechnete Felder](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -217,8 +217,8 @@ Sie können Datenflüsse löschen, die nicht mehr erforderlich sind oder falsch 
 
 In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem externen Cloud-Speicher einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Um mehr über die Erstellung von Datenflüssen zu erfahren, ergänzen Sie Ihr Lernen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile]Übersicht](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace]Übersicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] Übersicht](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
