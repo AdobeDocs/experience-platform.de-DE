@@ -1,31 +1,31 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Marketo Engage;Marketing für Interaktion;Marketo;Zuordnung
+keywords: Experience Platform; Startseite; beliebte Themen; Marketo Engage; Marketo Interaction; Marketo; Mapping
 solution: Experience Platform
 title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 178c0c4079d620b9a8380fcfcdd90cb74eb24bbb
+source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
 workflow-type: tm+mt
 source-wordcount: '333'
-ht-degree: 4%
+ht-degree: 13%
 
 ---
 
-# (Beta) [!DNL Marketo Engage]-Feldzuordnungen
+# (Beta) [!DNL Marketo Engage] Feldzuordnungen
 
 >[!IMPORTANT]
 >
->Die [!DNL Marketo Engage]-Quelle befindet sich derzeit in der Betaphase. Seine Funktionen und die Dokumentation können sich ändern.
+>Die Quelle [!DNL Marketo Engage] befindet sich derzeit in der Beta-Phase. Die Funktionen und die Dokumentation können sich ändern.
 
-Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neun Datasets [!DNL Marketo] und den zugehörigen XDM-Feldern (Experience Data Model).
+Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neun Datensätzen [!DNL Marketo] und den entsprechenden Feldern des Experience-Datenmodells (XDM).
 
 ## Aktivitäten {#activities}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
-| `personID` | `personID` | Primär |
+| `personID` | `personID` | Primäre Identität |
 | `eventType` | `eventType` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
@@ -92,10 +92,10 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Programme {#programs}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignID` | Primär |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Sekundär |
+| `id` | `campaignID` | Primäre Identität |
+| `sfdcId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -111,11 +111,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 {style=&quot;table-layout:auto&quot;}
 
-## Programm-Mitgliedschaft {#program-memberships}
+## Programmmitgliedschaften {#program-memberships}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignMemberID` | Primär |
+| `id` | `campaignMemberID` | Primäre Identität |
 | `programId` | `campaignID` | Beziehung |
 | `leadId` | `personID` | Beziehung |
 | `acquiredByCampaignID` | `acquiredByCampaignID` |
@@ -140,10 +140,10 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Firmen {#companies}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primär |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Sekundär |
+| `id` | `accountID` | Primäre Identität |
+| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -166,9 +166,9 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Statische Listen {#static-lists}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `marketingListID` | Primär |
+| `id` | `marketingListID` | Primäre Identität |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -178,25 +178,25 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Mitgliedschaft in statischen Listen {#static-list-memnberships}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `staticListMemberID` | `marketingListMemberID` | Primär |
+| `staticListMemberID` | `marketingListMemberID` | Primäre Identität |
 | `staticListID` | `marketingListID` | Beziehung |
 | `personID` | `personID` | Beziehung |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Benannte Konten {#named-accounts}
+## Spezifische Konten {#named-accounts}
 
 >[!IMPORTANT]
 >
->Der benannte Kontodatensatz ist nur mit der Kontoverwaltungsfunktion von Marketo erforderlich. Wenn Sie ABM nicht verwenden, müssen Sie keine Zuordnungen für benannte Konten einrichten.
+>Der Datensatz mit benannten Konten ist nur mit der ABM-Funktion (Account-based Marketing) von Marketo erforderlich. Wenn Sie ABM nicht verwenden, müssen Sie keine Zuordnungen für benannte Konten einrichten.
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primär |
-| `crmGuid` | `extSourceSystemAudit.externalID` | Sekundär |
+| `id` | `accountID` | Primäre Identität |
+| `crmGuid` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -215,10 +215,10 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Chancen {#opportunities}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | Primär |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Sekundär |
+| `id` | `opportunityID` | Primäre Identität |
+| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
 | `mktoCdpAccountOrgId` | `accountID` | Beziehung |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -244,12 +244,12 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 {style=&quot;table-layout:auto&quot;}
 
-## Kontaktrollen {#opportunity-contact-roles}
+## Kontaktrollen bei Chancen {#opportunity-contact-roles}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | Primär |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Sekundär |
+| `id` | `opportunityPersonID` | Primäre Identität |
+| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
 | `mktoCdpOpptyId` | `opportunityID` | Beziehung |
 | `leadId` | `personID` | Beziehung |
 | `role` | `personRole` |
@@ -261,9 +261,9 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 ## Personen {#persons}
 
-| Quell-Datensatz | XDM-Zielgruppe | Anmerkungen |
+| Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | Primär |
+| `id` | `personID` | Primäre Identität |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -275,7 +275,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Sekundär |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -310,8 +310,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 >[!NOTE]
 >
->Das `to_object('ECID',arrays_to_objects('id',explode(ecids)))`-Quellfeld ist ein berechnetes Feld, das mithilfe der Option [!UICONTROL Hinzufügen berechneten Feld] in der Plattform-Benutzeroberfläche hinzugefügt werden muss. Weitere Informationen finden Sie im Tutorial [Hinzufügen berechneter Felder](../../../../ingestion/tutorials/map-a-csv-file.md).
+>Das Quellfeld `to_object('ECID',arrays_to_objects('id',explode(ecids)))` ist ein berechnetes Feld, das mithilfe der Option [!UICONTROL Berechnetes Feld hinzufügen] in der Platform-Benutzeroberfläche hinzugefügt werden muss. Weitere Informationen finden Sie im Tutorial zum Hinzufügen von berechneten Feldern](../../../../data-prep/calculated-fields.md) .[
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie Einblicke in die Zuordnungsbeziehung zwischen Ihren [!DNL Marketo]-Datensätzen und den zugehörigen XDM-Feldern erhalten. Sehen Sie sich das Lernprogramm unter [Erstellen einer  [!DNL Marketo] Quellverbindung](../../../tutorials/ui/create/adobe-applications/marketo.md) an, um Ihren [!DNL Marketo]-Datendurchlauf abzuschließen.
+Durch Lesen dieses Dokuments haben Sie Einblicke in die Zuordnungsbeziehung zwischen Ihren [!DNL Marketo]-Datensätzen und den zugehörigen XDM-Feldern erhalten. Lesen Sie das Tutorial zu [Erstellen einer [!DNL Marketo] Quellverbindung](../../../tutorials/ui/create/adobe-applications/marketo.md) , um Ihren [!DNL Marketo]-Datenfluss abzuschließen.
