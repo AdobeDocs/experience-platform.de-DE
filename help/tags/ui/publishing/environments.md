@@ -1,9 +1,9 @@
 ---
 title: Umgebungen
 description: Erfahren Sie mehr über das Konzept von Tag-Umgebungen und ihre Funktionsweise in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1468'
 ht-degree: 81%
 
 ---
@@ -128,7 +128,7 @@ Weitere Informationen zu dieser Einstellung finden Sie im Handbuch zur [asynchro
 
 #### Synchrone Implementierung
 
-Wenn der Browser einen Einbettungscode mithilfe der synchronen Implementierung liest, ruft er die Tag-Bibliothek ab und führt sie aus, bevor er die Seite weiter lädt. So funktioniert auch das [Dynamic Tag Management (DTM)](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html).
+Wenn der Browser einen Einbettungscode mithilfe der synchronen Implementierung liest, ruft er die Tag-Bibliothek ab und führt sie aus, bevor er die Seite weiter lädt.
 
 Synchrone Einbettungs-Codes bestehen aus zwei `<script>`-Tags, die in den HTML-Code Ihrer Website eingefügt werden müssen. Ein `<script>`-Tag muss im Dokument-`<head>` platziert werden, das andere muss direkt vor dem schließenden `</body>`-Tag platziert werden.
 
