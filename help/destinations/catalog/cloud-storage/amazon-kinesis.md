@@ -3,10 +3,10 @@ keywords: Amazon Kinesis; Kinesis-Ziel; Kinesis
 title: Amazon Kinesis-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem Amazon Kinesis-Speicher, um Daten von Adobe Experience Platform zu streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 4febcef82c6da4534051cbe68820984814786224
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 5%
+source-wordcount: '550'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ Sie können eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Amazon Kinesis]-Sp
 
 ![Amazon Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-## Nutzungsszenarien {#use-cases}
+## Anwendungsbeispiele {#use-cases}
 
 Durch die Verwendung von Streaming-Zielen wie [!DNL Amazon Kinesis] können Sie einfach hochwertige Segmentierungsereignisse und zugehörige Profilattribute in Ihre bevorzugten Systeme einspeisen.
 
@@ -77,27 +77,19 @@ Im folgenden Beispiel werden die Mindestzugriffsrechte angezeigt, die erforderli
 
 Weitere Informationen zum Steuern des Zugriffs für [!DNL Kinesis]-Datenströme finden Sie im folgenden [[!DNL Kinesis] Dokument](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Anweisungen zum Herstellen einer Verbindung mit Ihren Cloud-Speicher-Zielen, einschließlich der von [!DNL Amazon] unterstützten Ziele, finden Sie unter [Workflow für Cloud-Speicher ](./workflow.md).
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-Geben Sie für [!DNL Amazon Kinesis]-Ziele im Workflow &quot;Ziel erstellen&quot;die folgenden Informationen ein:
+### Verbindungsparameter {#parameters}
 
-## Kontoschritt {#account-step}
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: Generieren Sie  [!DNL Amazon Web Services]in ein  `access key - secret access key` Paar, um Platform Zugriff auf Ihr  [!DNL Amazon Kinesis] Konto zu gewähren. Weitere Informationen finden Sie in der [Dokumentation zu Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Geben Sie an, zu welcher  [!DNL Amazon Web Services] Region Daten gestreamt werden sollen.
-
-![Eingabefelder im Kontoschritt](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
-
-## Authentifizierungsschritt {#authentication-step}
-
 * **Name**: Geben Sie einen Namen für Ihre Verbindung an  [!DNL Amazon Kinesis]
 * **Beschreibung**: Geben Sie eine Beschreibung für Ihre Verbindung zu  [!DNL Amazon Kinesis]an.
 * **stream**: Geben Sie den Namen eines vorhandenen Datenstreams in Ihrem  [!DNL Amazon Kinesis] Konto an. Platform exportiert Daten in diesen Stream.
-* **[!UICONTROL Marketing-Aktionen]**: Marketing-Aktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketing-Aktionen auswählen oder eine eigene Marketing-Aktion erstellen. Weitere Informationen zu Marketing-Aktionen finden Sie auf der Seite [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) . Informationen zu den einzelnen von der Adobe definierten Marketing-Aktionen finden Sie unter [Übersicht über Datennutzungsrichtlinien](../../../data-governance/policies/overview.md).
-
-![Eingabefelder im Authentifizierungsschritt](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -107,9 +99,9 @@ Geben Sie für [!DNL Amazon Kinesis]-Ziele im Workflow &quot;Ziel erstellen&quot
 
 -->
 
-## Aktivieren von Segmenten {#activate-segments}
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 ## Exportierte Daten {#exported-data}
 
