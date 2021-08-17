@@ -1,12 +1,12 @@
 ---
-keywords: E-Mail;E-Mail;E-Mail-Ziele;oracle eloqua;oracle
+keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; oracle eloqua; oracle
 title: Oracle Eloqua-Verbindung
 description: Oracle Eloqua ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von Oracle, die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 70be44e919070df910d618af4507b600ad51123c
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '672'
-ht-degree: 29%
+source-wordcount: '500'
+ht-degree: 26%
 
 ---
 
@@ -14,47 +14,47 @@ ht-degree: 29%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)[!DNL Oracle] ist eine Software-as-a-Service (SaaS)-Plattform für Marketing-Automatisierung von , die B2B-Marketer und -Teams bei der Verwaltung von Marketing-Kampagnen und Lead-Generierung für den Vertrieb unterstützt.
 
-Um Segmentdaten an [!DNL Oracle Eloqua] zu senden, müssen Sie zunächst [das Ziel](#connect-destination) in Adobe Experience Platform verbinden und dann [einen Datenimport](#import-data-into-eloqua) von Ihrem Speicherort in [!DNL Oracle Eloqua] einrichten.
+Um Segmentdaten an [!DNL Oracle Eloqua] zu senden, müssen Sie zunächst [das Ziel](#connect-destination) in Adobe Experience Platform verbinden und dann [einen Datenimport](#import-data-into-eloqua) von Ihrem Speicherort zu [!DNL Oracle Eloqua] einrichten.
 
 ## Exporttyp {#export-type}
 
-**Profil-basiert** : Sie exportieren alle Segmentmitglieder zusammen mit den gewünschten Segmentfeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des Arbeitsablaufs für die  [Ziel-Aktivierung](../../ui/activate-destinations.md#select-attributes) ausgewählt.
+**Profilbasiert**  - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;des  [Zielaktivierungs-Workflows](../../ui/activate-destinations.md#select-attributes) ausgewählt.
 
-## IP-Adresse Zulassungsliste {#allow-list}
+## IP-Adressen-Zulassungsliste {#allow-list}
 
-Beim Einrichten von E-Mail-Marketingzielen mit der SFTP-Datenspeicherung empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
+Beim Einrichten von E-Mail-Marketing-Zielen mit SFTP-Speicher empfiehlt Adobe, bestimmte IP-Bereiche zu Ihrer Zulassungsliste hinzuzufügen.
 
-Informationen zum Hinzufügen von IPs zur Zulassungsliste finden Sie unter [IP-Adresse für Cloud-Datenspeicherung-Ziele](../cloud-storage/ip-address-allow-list.md).
+Informationen zum Hinzufügen von Adobe-IPs zu Ihrer Zulassungsliste finden Sie unter [IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele](../cloud-storage/ip-address-allow-list.md) .
 
-## Mit Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Wählen Sie unter **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** [!DNL Oracle Eloqua] und dann **[!UICONTROL Konfigurieren]**.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
->[!NOTE]
->
->Wenn bereits eine Verbindung zu diesem Ziel besteht, wird auf der Zielkarte die Schaltfläche **[!UICONTROL Aktivieren]** angezeigt. Weitere Informationen zum Unterschied zwischen [!UICONTROL Aktivieren] und [!UICONTROL Konfigurieren] finden Sie im Abschnitt [Katalog](../../ui/destinations-workspace.md#catalog) der Dokumentation zum Zielarbeitsbereich.
+Dieses Ziel unterstützt die folgenden Verbindungstypen:
 
-![Mit Eloqua verbinden](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
+* **[!UICONTROL SFTP mit Kennwort]**
+* **[!UICONTROL SFTP mit SSH-Schlüssel]**
 
-Wenn Sie im Schritt **[!UICONTROL Konto]** bereits eine Verbindung zu Ihrem Cloud-Datenspeicherung-Ziel eingerichtet haben, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie eine Ihrer bestehenden Verbindungen aus. Sie können auch **[!UICONTROL Neues Konto]** auswählen, um eine neue Verbindung einzurichten. Geben Sie die Anmeldedaten für die Kontoauthentifizierung ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus. Für [!DNL Oracle Eloqua] können Sie zwischen **[!UICONTROL SFTP mit Kennwort]** und **[!UICONTROL SFTP mit SSH-Schlüssel]** wählen.
+### Verbindungsparameter {#parameters}
 
-![Eloqua-Konto verbinden](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-Füllen Sie je nach Verbindungstyp die folgenden Informationen aus und wählen Sie **[!UICONTROL Mit Ziel verbinden]** aus.
+* Für Verbindungen des Typs **[!UICONTROL SFTP mit Kennwort]** müssen Sie Folgendes angeben:
+   * [!UICONTROL Domäne]
+   * [!UICONTROL Port]
+   * [!UICONTROL Benutzername]
+   * [!UICONTROL Passwort]
+* Für Verbindungen des Typs **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie Folgendes angeben:
+   * [!UICONTROL Domäne]
+   * [!UICONTROL Port]
+   * [!UICONTROL Benutzername]
+   * [!UICONTROL SSH-Schlüssel]
 
-- Bei Verbindungen mit **[!UICONTROL SFTP mit Kennwort]** müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername] und [!UICONTROL Kennwort] angeben.
-- Bei Verbindungen mit **[!UICONTROL SFTP mit SSH-Schlüssel]** müssen Sie [!UICONTROL Domäne], [!UICONTROL Port], [!UICONTROL Benutzername] und [!UICONTROL SSH-Schlüssel] angeben.
-
-Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um unter dem Abschnitt **[!UICONTROL Schlüssel]** eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierte Zeichenfolge geschrieben werden.
-
-![Eloqua-Verbindung zum Ziel](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
-
-Geben Sie im Schritt **[!UICONTROL Authentifizierung]** die relevanten Informationen für Ihr Ziel wie folgt ein:
-- **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
-- **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
-- **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad in Ihrer Datenspeicherung an, in dem die Plattform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegt.
-- **[!UICONTROL Dateiformat]**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
-- **[!UICONTROL Marketingaktionen]**: Marketingaktionen geben die Absicht an, für die Daten an das Ziel exportiert werden. Sie können aus von der Adobe definierten Marketingaktionen auswählen oder eine eigene Marketingaktion erstellen. Weitere Informationen zu Marketingaktionen finden Sie unter [Übersicht über Datenverwendungsrichtlinien](../../../data-governance/policies/overview.md).
+* Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um eine Verschlüsselung mit PGP/GPG zu Ihren exportierten Dateien im Abschnitt **[!UICONTROL Schlüssel]** hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierte Zeichenfolge geschrieben werden.
+* **[!UICONTROL Name]**: Wählen Sie einen passenden Namen für Ihr Ziel.
+* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein.
+* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad an Ihrem Speicherort an, an dem Platform Ihre Exportdaten als CSV- oder tabulatorgetrennte Dateien hinterlegt.
+* **[!UICONTROL Dateiformat]**: **CSV** oder **TAB_DELIMITED**. Wählen Sie das Dateiformat aus, mit dem Sie an Ihren Speicherort exportieren möchten.
 
 <!--
 
@@ -64,22 +64,18 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Eloqua-Basisinformationen](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Klicken Sie auf **[!UICONTROL Ziel erstellen]**, nachdem Sie die oben stehenden Felder ausgefüllt haben. Ihr Ziel wird jetzt erstellt und Sie können [Segmente](../../ui/activate-destinations.md) bis zum Ziel aktivieren.
-
-## Aktivieren von Segmenten {#activate-segments}
-
-Informationen zum Workflow für die Segmentaktivierung finden Sie unter [Profile und Segmente für ein Ziel aktivieren](../../ui/activate-destinations.md).
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 ## Zielattribute {#destination-attributes}
 
-Wenn Sie [segmente](../../ui/activate-destinations.md) in das [!DNL Oracle Eloqua]-Ziel aktivieren, empfiehlt Adobe, im [Vereinigung-Schema](../../../profile/home.md#profile-fragments-and-union-schemas) einen eindeutigen Bezeichner auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Wählen Sie, welche Schema-Felder als Zielattribute in den exportierten Dateien verwendet werden sollen](./overview.md#destination-attributes).
+Wenn Sie [Segmente](../../ui/activate-destinations.md) für dieses Ziel aktivieren, empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten. Weitere Informationen finden Sie unter [Auswählen, welche Schemafelder in Ihren exportierten Dateien als Zielattribute verwendet werden sollen](./overview.md#destination-attributes).
 
 ## Exportierte Daten {#exported-data}
 
-Für [!DNL Oracle Eloqua]-Ziele erstellt Platform eine tabulatorgetrennte `.csv`-Datenspeicherung im angegebenen Speicherort. Weitere Informationen zu den Aktivierungen finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Datenspeicherung-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentbildung.
+Für [!DNL Oracle Eloqua]-Ziele erstellt Platform eine tabulatorgetrennte `.csv`-Datei am von Ihnen angegebenen Speicherort. Weitere Informationen zu den Dateien finden Sie unter [E-Mail-Marketing-Ziele und Cloud-Speicher-Ziele](../../ui/activate-destinations.md#esp-and-cloud-storage) im Tutorial zur Segmentaktivierung.
 
-## Einrichten des Datenimports in [!DNL Oracle Eloqua] {#import-data-into-eloqua}
+## Datenimport in [!DNL Oracle Eloqua] einrichten {#import-data-into-eloqua}
 
-Nachdem Sie [!DNL Platform] mit der [!DNL SFTP]-Datenspeicherung verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort in [!DNL Oracle Eloqua] einrichten. Weitere Informationen dazu finden Sie unter [Importieren von Kontakten oder Konten](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in [!DNL Oracle Eloqua Help Center].
+Nachdem Sie [!DNL Platform] mit Ihrem [!DNL SFTP]-Speicher verbunden haben, müssen Sie den Datenimport von Ihrem Speicherort zu [!DNL Oracle Eloqua] einrichten. Weitere Informationen dazu finden Sie unter [Importieren von Kontakten oder Konten](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCAA/Help/DataImportExport/Tasks/ImportingContactsOrAccounts.htm) in der [!DNL Oracle Eloqua Help Center].
