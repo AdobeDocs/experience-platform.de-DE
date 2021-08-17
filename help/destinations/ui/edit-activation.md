@@ -1,28 +1,27 @@
 ---
 keywords: Aktivierung bearbeiten, Ziel bearbeiten, Ziel bearbeiten
-title: Aktivierungen bearbeiten
+title: Bearbeiten von Aktivierungsflüssen
 type: Tutorial
-seo-title: Aktivierungen bearbeiten
-description: Führen Sie die in diesem Artikel beschriebenen Schritte aus, um eine vorhandene Aktivierung in Adobe Experience Platform zu bearbeiten.
-seo-description: Führen Sie die in diesem Artikel beschriebenen Schritte aus, um eine vorhandene Aktivierung in Adobe Experience Platform zu bearbeiten.
+seo-title: Bearbeiten von Aktivierungsflüssen
+description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsfluss in Adobe Experience Platform zu bearbeiten.
+seo-description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-translation-type: tm+mt
-source-git-commit: 5b72433fcf2318f98538278c6d2650b366e391a2
+source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '191'
 ht-degree: 1%
 
 ---
 
-# Aktivierungen bearbeiten {#edit-activation-flows}
+# Bearbeiten von Aktivierungsflüssen {#edit-activation-flows}
 
-Gehen Sie wie folgt vor, um die vorhandenen Aktivierungen in Adobe Experience Platform zu bearbeiten:
+Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in Adobe Experience Platform zu bearbeiten:
 
-1. Melden Sie sich bei [Experience Platform UI](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** in der linken Navigationsleiste aus. Wählen Sie **[!UICONTROL Durchsuchen]** aus der oberen Kopfzeile, um Ihre bestehenden Ziele Ansicht.
+1. Melden Sie sich bei [Experience Platform UI](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Ziele]** aus der linken Navigationsleiste aus. Wählen Sie **[!UICONTROL Browse]** aus der oberen Kopfzeile aus, um Ihre vorhandenen Ziele anzuzeigen.
 
    ![Ziele durchsuchen](../assets/ui/edit-activation/browse-destinations.png)
 
-2. Wählen Sie oben links das Filtersymbol ![Filtersymbol](../assets/ui/edit-activation/filter.png) aus, um das Sortierfeld zu starten. Der Bereich &quot;Sortieren&quot;enthält eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl an Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
+2. Wählen Sie oben links das Filtersymbol ![Filtersymbol](../assets/ui/edit-activation/filter.png) aus, um das Sortierungsfenster zu öffnen. Das Sortierungsfenster bietet eine Liste aller Ziele. Sie können mehr als ein Ziel aus der Liste auswählen, um eine gefilterte Auswahl von Datenflüssen anzuzeigen, die mit dem ausgewählten Ziel verknüpft sind.
 
    ![Ziele filtern](../assets/ui/edit-activation/filter-destinations.png)
 
@@ -30,8 +29,8 @@ Gehen Sie wie folgt vor, um die vorhandenen Aktivierungen in Adobe Experience Pl
 
    ![Ziel auswählen](../assets/ui/edit-activation/destination-select.png)
 
-4. Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeigt. Wählen Sie **[!UICONTROL Aktivieren]** in der rechten Leiste, um zu ändern, welche Segmente an das Ziel gesendet werden sollen.
+4. Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeigt. Wählen Sie **[!UICONTROL Aktivieren]** in der rechten Leiste, um zu ändern, welche Segmente an das Ziel gesendet werden.
 
    ![Zieldetails](../assets/ui/edit-activation/destination-details.png)
 
-5. Weitere Informationen zum Aktivieren neuer Profil finden Sie unter [Aktivieren von Segmenten an ein Ziel](activate-destinations.md).
+5. Weitere Informationen zum Aktivieren neuer Segmente finden Sie unter [Aktivierungsübersicht](activation-overview.md) .
