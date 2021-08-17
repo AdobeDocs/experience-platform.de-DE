@@ -3,10 +3,10 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 32da733eda61049738e87bce48978196a1fea96d
+source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 8%
+source-wordcount: '1257'
+ht-degree: 7%
 
 ---
 
@@ -56,12 +56,12 @@ Anschließend können sie ihre Offline-Daten einschließlich der zugehörigen Mi
 
 Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sicherstellen, dass Sie die folgenden Voraussetzungen erfüllen:
 
-- Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]**-Berechtigung für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-- Das Geschäftskonto **Adobe Experience Cloud** muss in Ihrem [!DNL Facebook Ad Account] als Werbepartner hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
+* Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]**-Berechtigung für das Werbekonto aktiviert sein, das Sie verwenden möchten.
+* Das Geschäftskonto **Adobe Experience Cloud** muss in Ihrem [!DNL Facebook Ad Account] als Werbepartner hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
    >[!IMPORTANT]
    >
    > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Die Berechtigung ist für die Integration von [!DNL Adobe Experience Platform] erforderlich.
-- Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, wobei `accountID` Ihr [!DNL Facebook Ad Account ID] ist.
+* Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, wobei `accountID` Ihr [!DNL Facebook Ad Account ID] ist.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
@@ -73,8 +73,8 @@ Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müsse
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Facebook]:
 
-- **Rohe Telefonnummern** erfassen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in aufnehmen  [!DNL Platform]. Sie sind bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den Namespace `Phone_E.164` aufzunehmen.
-- **Hash-Telefonnummern** erfassen: Sie können Ihre Telefonnummern vorab hash, bevor Sie sie in  [!DNL Platform]aufnehmen. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in den Namespace `Phone_SHA256` aufzunehmen.
+* **Rohe Telefonnummern** erfassen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in aufnehmen  [!DNL Platform]. Sie sind bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den Namespace `Phone_E.164` aufzunehmen.
+* **Hash-Telefonnummern** erfassen: Sie können Ihre Telefonnummern vorab hash, bevor Sie sie in  [!DNL Platform]aufnehmen. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in den Namespace `Phone_SHA256` aufzunehmen.
 
 >[!NOTE]
 >
@@ -89,12 +89,12 @@ Weitere Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform fi
 
 Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
-- Entfernen Sie alle Leerzeichen am Anfang und am Ende der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
-- Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hash;
-   - Beispiel: `example@email.com`, nicht `EXAMPLE@EMAIL.COM`;
-- Stellen Sie sicher, dass der Hash-String nur in Kleinbuchstaben geschrieben wird.
-   - Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- Salz die Zeichenfolge nicht.
+* Entfernen Sie alle Leerzeichen am Anfang und am Ende der E-Mail-Zeichenfolge. Beispiel: `johndoe@example.com`, nicht `<space>johndoe@example.com<space>`;
+* Achten Sie beim Hashing der E-Mail-Zeichenfolgen darauf, die Zeichenfolge in Kleinbuchstaben zu hash;
+   * Beispiel: `example@email.com`, nicht `EXAMPLE@EMAIL.COM`;
+* Stellen Sie sicher, dass der Hash-String nur in Kleinbuchstaben geschrieben wird.
+   * Beispiel: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, nicht `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Salz die Zeichenfolge nicht.
 
 >[!NOTE]
 >
@@ -108,17 +108,29 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 
 Bevor Sie den Namespace `Extern_ID` verwenden können, um Daten an [!DNL Facebook] zu senden, stellen Sie sicher, dass Sie Ihre eigenen Kennungen mit [!DNL Facebook Pixel] synchronisieren. Detaillierte Informationen finden Sie in der [offiziellen Facebook-Dokumentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers).
 
-## Mit Ziel verbinden {#connect-destination}
+## Mit Ziel verbinden {#connect}
 
-Informationen zum Herstellen einer Verbindung zum [!DNL Facebook]-Ziel finden Sie unter [Authentifizierungs-Workflow für Ziele in sozialen Netzwerken](./workflow.md).
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
 
-Das folgende Video zeigt auch die Schritte zum Konfigurieren eines sozialen Ziels und zum Aktivieren von Segmenten. In diesem Video wird LinkedIn als Beispiel verwendet, die Schritte sind jedoch bei allen sozialen Zielen ähnlich.
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Facebook]-Ziels und zum Aktivieren von Segmenten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Aktivieren von Segmenten für [!DNL Facebook] {#activate-segments}
+>[!NOTE]
+>
+>Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
-Anweisungen zum Aktivieren von Segmenten für [!DNL Facebook] finden Sie unter [Daten für Ziele aktivieren](../../ui/activate-destinations.md).
+### Verbindungsparameter {#parameters}
+
+Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+
+* **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
+* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Konto-ID]**: Ihr  [!DNL Facebook Ad Account ID]. Sie finden diese ID in Ihrem [!DNL Facebook Ads Manager] -Konto. Wenn Sie diese ID eingeben, fügen Sie ihr immer das Präfix `act_` hinzu.
+
+## Aktivieren von Segmenten für dieses Ziel {#activate}
+
+Anweisungen zum Aktivieren von Zielgruppensegmenten für Ziele finden Sie unter [Aktivieren von Profilen und Segmenten für ein Ziel](../../ui/activate-destinations.md) .
 
 Im Schritt **[!UICONTROL Segmentplan]** müssen Sie den [!UICONTROL Ursprung der Zielgruppe] angeben, wenn Segmente an [!DNL Facebook Custom Audiences] gesendet werden.
 
