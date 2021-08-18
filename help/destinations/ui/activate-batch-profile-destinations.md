@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: f814f11db0a258d1c5265206d6ec61c27ad2ee7d
 workflow-type: tm+mt
-source-wordcount: '2011'
+source-wordcount: '2008'
 ht-degree: 7%
 
 ---
@@ -270,7 +270,7 @@ Betrachten wir die beiden folgenden Profile.
 }
 ```
 
-### Nutzungsszenario 1: Deduplizierung keine Deduplizierung
+### Nutzungsszenario 1: Deduplizierung keine Deduplizierung {#deduplication-use-case-1}
 
 Ohne Deduplizierung würde die Exportdatei die folgenden Einträge enthalten.
 
@@ -280,7 +280,7 @@ Ohne Deduplizierung würde die Exportdatei die folgenden Einträge enthalten.
 | johndoe@example.com | John | D |
 
 
-### Anwendungsfall 2: Deduplizierung Deduplizierung basierend auf Identitäts-Namespace
+### Anwendungsfall 2: Deduplizierung Deduplizierung basierend auf Identitäts-Namespace {#deduplication-use-case-2}
 
 Unter der Annahme einer Deduplizierung durch den Namespace [!DNL Email] enthält die Exportdatei die folgenden Einträge. Profil B ist das neueste Profil, das sich für das Segment qualifiziert hat. Daher wird nur dieses exportiert.
 
@@ -289,7 +289,7 @@ Unter der Annahme einer Deduplizierung durch den Namespace [!DNL Email] enthält
 | johndoe_1@example.com | johndoe@example.com | John | D |
 | johndoe_2@example.com | johndoe@example.com | John | D |
 
-### Nutzungsszenario 3: Deduplizierung Deduplizierung basierend auf einem einzelnen Profilattribut
+### Nutzungsszenario 3: Deduplizierung Deduplizierung basierend auf einem einzelnen Profilattribut {#deduplication-use-case-3}
 
 Unter der Annahme einer Deduplizierung durch das Attribut `personal Email` würde die Exportdatei den folgenden Eintrag enthalten. Profil B ist das neueste Profil, das sich für das Segment qualifiziert hat. Daher wird nur dieses exportiert.
 
@@ -298,7 +298,7 @@ Unter der Annahme einer Deduplizierung durch das Attribut `personal Email` würd
 | johndoe@example.com | John | D |
 
 
-### Anwendungsfall 4: Deduplizierung Deduplizierung basierend auf zwei Profilattributen (zusammengesetzter Deduplizierungsschlüssel)
+### Anwendungsfall 4: Deduplizierung Deduplizierung basierend auf zwei Profilattributen {#deduplication-use-case-4}
 
 Bei Deduplizierung durch den zusammengesetzten Schlüssel `personalEmail + lastName` enthält die Exportdatei die folgenden Einträge.
 
