@@ -4,9 +4,9 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste die Option Ziele aus, um auf den Arbeitsbereich "Ziele"zuzugreifen.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '873'
 ht-degree: 19%
 
 ---
@@ -72,8 +72,8 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
-> * Verwenden Sie die Schaltfläche ![Segmente hinzufügen](../assets/ui/workspace/add-data-symbol.png) in der Spalte **[!UICONTROL Name]** , um Segmente an dieses Ziel zu senden.
-> * Verwenden Sie die Schaltfläche ![Ziele löschen](../assets/ui/workspace/delete-destination-symbol.png) in der Spalte **[!UICONTROL Name]** , um [Löschen](delete-destinations.md) eine vorhandene Verbindung zu einem Ziel zu löschen.
+> * Wählen Sie die drei Punkte in der Spalte [!UICONTROL Name] aus und verwenden Sie die Schaltfläche ![Segmente hinzufügen](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**, um Segmente an dieses Ziel zu senden.
+> * Wählen Sie die drei Punkte in der Spalte [!UICONTROL Name] aus und verwenden Sie die Schaltfläche ![Ziele löschen](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**, um [eine vorhandene Verbindung zu einem Ziel zu entfernen](delete-destinations.md).
 
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
@@ -102,6 +102,6 @@ Auf der Registerkarte **[!UICONTROL Systemansicht]** wird eine grafische Darstel
 
 ![Datenflüsse1](../assets/ui/workspace/data-flows1.png)
 
-Wählen Sie eines der Ziele aus, die auf der Seite angezeigt werden, und klicken Sie auf **[!UICONTROL Fluss anzeigen]**, um Informationen zu allen Verbindungen anzuzeigen, die Sie für jedes Ziel eingerichtet haben.
+Wählen Sie eines der Ziele aus, die auf der Seite angezeigt werden, und klicken Sie auf **[!UICONTROL Datenflüsse anzeigen]**, um Informationen zu allen Verbindungen anzuzeigen, die Sie für jedes Ziel eingerichtet haben.
 
 ![Datenflüsse2](../assets/ui/workspace/data-flows2.png)
