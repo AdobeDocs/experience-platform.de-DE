@@ -4,9 +4,9 @@ title: Ziele löschen
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Löschen eines vorhandenen Ziels in der Adobe Experience Platform-Benutzeroberfläche aufgeführt
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: 84deb9d1eecee8ec4369915a0b3c1eb810fd7c9b
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -40,10 +40,10 @@ Gehen Sie wie folgt vor, um ein Ziel auf der Registerkarte [!UICONTROL Durchsuch
 
    ![Ziele filtern](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Wählen Sie die Schaltfläche ![Löschen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Löschen]** in der Spalte **[!UICONTROL Plattform]** aus, um ein vorhandenes Ziel zu entfernen.
+3. Wählen Sie die Schaltfläche ![Mehr in der Spalte Name und dann ![Schaltfläche Löschen](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Löschen]** aus, um eine vorhandene Zielverbindung zu entfernen.](../assets/ui/delete-destinations/more-icon.png)
    ![Ziele löschen](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Wählen Sie **[!UICONTROL Löschen]** aus, um die Entfernung des Ziels zu bestätigen.
+4. Wählen Sie **[!UICONTROL Löschen]** aus, um das Entfernen der Zielverbindung zu bestätigen.
 
    ![Löschziel bestätigen](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
