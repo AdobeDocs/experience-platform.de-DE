@@ -6,10 +6,10 @@ seo-title: Bearbeiten von Aktivierungsflüssen
 description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsfluss in Adobe Experience Platform zu bearbeiten.
 seo-description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsfluss in Adobe Experience Platform zu bearbeiten.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
+source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 1%
+source-wordcount: '204'
+ht-degree: 0%
 
 ---
 
@@ -29,8 +29,10 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsflüsse in Adobe Experience P
 
    ![Ziel auswählen](../assets/ui/edit-activation/destination-select.png)
 
-4. Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeigt. Wählen Sie **[!UICONTROL Aktivieren]** in der rechten Leiste, um zu ändern, welche Segmente an das Ziel gesendet werden.
+4. Die Seite **[!UICONTROL Datenfluss wird]** für das Ziel ausgeführt und zeigt die verfügbaren Steuerelemente an. Wählen Sie **[!UICONTROL Aktivieren]** in der rechten Leiste, um zu ändern, welche Segmente an das Ziel gesendet werden.
+
+   Darüber hinaus können Sie den Zielnamen und die Beschreibung bearbeiten.
 
    ![Zieldetails](../assets/ui/edit-activation/destination-details.png)
 
-5. Weitere Informationen zum Aktivieren neuer Segmente finden Sie unter [Aktivierungsübersicht](activation-overview.md) .
+5. Weitere Informationen zum Aktivieren neuer Segmente für Ihre Ziele finden Sie unter [Aktivierungsübersicht](activation-overview.md) .
