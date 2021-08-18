@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;GDPR;gdpr;CCPA;ccpa;PDPA;PDPA;LGPD;lgpd;overview;Overview;Regulation;Regulation;Regulations;Regulations;Privacy;Privacy;
+keywords: Experience Platform; Startseite; beliebte Themen; DSGVO; DSGVO; DSGVO; CCPA; ccpa; PDPA; pdpa; LGPD; lgpd; Übersicht; Übersicht; Regulierung; Vorschriften; Verordnungen; Datenschutz; Datenschutz
 solution: Experience Platform
 title: Terminologie der Datenschutzbestimmungen
 topic-legacy: troubleshooting
-description: Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
+description: Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47b5ad7fa9300772e0d2742c94021cf18d13313b
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 3%
@@ -15,63 +14,63 @@ ht-degree: 3%
 
 # Terminologie der Datenschutzbestimmungen
 
-Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
+Dieses Dokument enthält Definitionen für Schlüsselbegriffe im Zusammenhang mit Datenschutzbestimmungen, die von Adobe Experience Cloud unterstützt werden.
 
 ## A
 
 ## B
 
-**BCR (BCR)**: Eine Reihe verbindlicher Vorschriften soll es multinationalen Firmen und Organisationen ermöglichen, personenbezogene Daten, die sie kontrollieren, von der EU an ihre Tochtergesellschaften außerhalb der EU (aber innerhalb der Organisation) zu übermitteln.
+**BCR-Regeln (BCR) binden**: Eine Reihe verbindlicher Regeln, die multinationale Unternehmen und Organisationen in die Lage versetzen, personenbezogene Daten, die sie von der EU kontrollieren, an ihre Tochterunternehmen außerhalb der EU (aber innerhalb der Organisation) zu übermitteln.
 
-**Biometrische** DatenPersonenbezogene Daten, die sich auf die physischen, physiologischen oder verhaltensbezogenen Merkmale einer Person beziehen und deren eindeutige Identifizierung ermöglichen.
+**Biometrische** Daten: personenbezogene Daten, die sich auf die physischen, physiologischen oder Verhaltenscharakteristika einer Person beziehen und die ihre eindeutige Identifizierung ermöglichen.
 
 ## C
 
-**CCPA**: Die  [!DNL California Consumer Privacy Act] (CCPA) gibt kalifornischen Einwohnern mehr Kontrolle über die persönlichen Daten, die Unternehmen von da an sammeln. Das Gesetz sieht mehrere neue Rechte für Verbraucher vor, darunter das Recht auf Zugang und die von ihnen gesammelten personenbezogenen Daten sowie das Recht auf Opt-out des Verkaufs ihrer personenbezogenen Daten an Dritte.
+**CCPA**: Der  [!DNL California Consumer Privacy Act] (CCPA) gibt kalifornischen Einwohnern mehr Kontrolle über die personenbezogenen Daten, die Unternehmen ab diesem Zeitpunkt erfassen. Das Gesetz sieht mehrere neue Rechte für Verbraucher vor, darunter das Recht auf Zugang und die von ihnen erhobenen personenbezogenen Daten sowie das Recht, sich vom Verkauf ihrer personenbezogenen Daten an Dritte abzumelden.
 
-**Zustimmung**: Einwilligung in eine Erklärung oder Handlung, die die Verarbeitung ihrer personenbezogenen Daten zum Gegenstand hat, ausdrücklich, auf Kenntnis der Sachlage und ausdrücklich gestattet.
+**Einverständnis**: Freie, spezifische, informierte und ausdrückliche Einwilligung durch Aussagen oder Maßnahmen, die eine Zustimmung zur Verarbeitung ihrer personenbezogenen Daten darstellen.
 
 ## D
 
-**Gesundheitsdaten**: Personenbezogene Daten, die sich auf die körperliche oder geistige Gesundheit einer Person oder die Erbringung von Gesundheitsdienstleistungen für diese beziehen.
+**Gesundheitsdaten**: Alle personenbezogenen Daten, die sich auf die körperliche oder geistige Gesundheit einer Person oder die Erbringung von Gesundheitsdienstleistungen für diese beziehen.
 
-**Datencontroller**: Die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt.
+**Datenverantwortlicher**: Die Stelle, die die Ziele, Bedingungen und Wege der Verarbeitung personenbezogener Daten bestimmt.
 
-**Datenlöschung**: Das Recht, vergessen zu werden, berechtigt die betroffene Person, ihre personenbezogenen Daten zu löschen, die weitere Verbreitung der Daten einzustellen und Dritten die Verarbeitung der Daten möglicherweise einzustellen.
+**Datenlöschung**: Das Recht auf Vergessenwerden wird auch als &quot;Recht auf Vergessenwerden&quot;bezeichnet und ermöglicht es dem Datenverantwortlichen, seine personenbezogenen Daten zu löschen, die weitere Verbreitung der Daten einzustellen und Dritte dazu zu bewegen, die Verarbeitung der Daten einzustellen.
 
-**Datenübertragbarkeit**: Die Verpflichtung der für die Verarbeitung Verantwortlichen, der betroffenen Person eine Kopie ihrer Daten in einem Format zur Verfügung zu stellen, das eine einfache Verwendung mit einem anderen Verantwortlichen ermöglicht.
+**Datenübertragbarkeit**: Die Anforderung an die für die Verarbeitung Verantwortlichen, der betroffenen Person eine Kopie ihrer Daten in einem Format zur Verfügung zu stellen, das die einfache Verwendung mit einem anderen Verantwortlichen ermöglicht.
 
-**Datenprozessor**: Die Entität, die Daten im Auftrag des Data Controllers verarbeitet.
+**Datenverarbeiter**: Die Entität, die Daten im Auftrag des Datenverantwortlichen verarbeitet.
 
-**Datenschutzbehörde**: Die für den Schutz der Daten und der Privatsphäre sowie die Überwachung und Durchsetzung der Datenschutzbestimmungen in der Vereinigung zuständigen einzelstaatlichen Behörden.
+**Datenschutzbehörde**: Nationale Behörden, die mit dem Schutz von Daten und Privatsphäre sowie der Überwachung und Durchsetzung der Datenschutzbestimmungen in der Union betraut sind.
 
-**Datenschutzbeauftragter**: Ein Sachverständiger für den Datenschutz, der unabhängig arbeitet, um sicherzustellen, dass ein Unternehmen die im GDPR festgelegten Richtlinien und Verfahren einhält.
+**Datenschutzbeauftragter**: Ein Experte für Datenschutz, der unabhängig arbeitet, um sicherzustellen, dass eine Organisation die in der DSGVO festgelegten Richtlinien und Verfahren einhält.
 
-**Betroffene** Daten: Eine natürliche Person, deren personenbezogene Daten von einem Verantwortlichen oder Auftragsverarbeiter verarbeitet werden.
+**Datensubjekt**: Eine natürliche Person, deren personenbezogene Daten von einem Verantwortlichen oder Auftragsverarbeiter verarbeitet werden.
 
-**Delegierte Rechtsakte**: Nicht-legislative Rechtsakte, die erlassen wurden, um bestehende Rechtsvorschriften zu ergänzen und Kriterien oder Klarheit zu schaffen.
+**Delegierte Rechtsakte**: Nichtlegislative Rechtsakte, die zur Ergänzung bestehender Rechtsvorschriften und zur Bereitstellung von Kriterien oder Klarheit erlassen wurden.
 
-**Ausnahmeregelung**: Eine Befreiung von einem Gesetz.
+**Ausnahmeregelung**: Eine Ausnahme von einem Gesetz.
 
-**Richtlinie**: Ein Rechtsakt, der ein Ziel festlegt, das alle EU-Länder durch ihre eigenen nationalen Gesetze erreichen müssen.
+**Richtlinie**: Ein legislativer Rechtsakt, der ein Ziel festlegt, das alle EU-Länder durch ihre eigenen nationalen Gesetze erreichen müssen.
 
 ## E
 
-**Verschlüsselte Daten**: Personenbezogene Daten, die durch technische Maßnahmen geschützt werden, um sicherzustellen, dass die Daten nur für Personen mit bestimmtem Zugriff zugänglich/lesbar sind.
+**Verschlüsselte Daten**: Personenbezogene Daten, die durch technologische Maßnahmen geschützt werden, um sicherzustellen, dass die Daten nur für Personen mit bestimmtem Zugriff zugänglich/lesbar sind.
 
-**Unternehmen**: Jede juristische Person, die eine wirtschaftliche Aktivität ausübt, unabhängig von ihrer Rechtsform, einschließlich Personen, Personengesellschaften, Vereinigungen usw.
+**Enterprise**: Jede juristische Person, die eine wirtschaftliche Tätigkeit ausübt, unabhängig von der Rechtsform, einschließlich Personen, Partnerschaften, Vereinigungen usw.
 
-**Explizite Zustimmung**: Eine Norm der Zustimmung, die eine spezifische, informierte und eindeutige Angabe der Wünsche der betroffenen Person in mündlicher oder schriftlicher Form umfasst. Einfach ausgedrückt, muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot; sagen, damit die Einwilligung als explizit gilt. Darüber hinaus muss es genauso einfach sein, die Zustimmung zurückzuziehen, wie sie zu geben ist.
+**Explizite Zustimmung**: Ein Einverständnisstandard, der einen spezifischen, informierten und eindeutigen Hinweis auf die Wünsche der betroffenen Person in mündlicher oder schriftlicher Form beinhaltet. Einfach ausgedrückt muss die betroffene Person buchstäblich und explizit &quot;Ich stimme zu&quot;oder &quot;Ich stimme zu&quot;, damit die Einwilligung als explizit betrachtet wird. Darüber hinaus muss es so einfach sein, die Zustimmung zurückzuziehen, wie sie sein muss.
 
 ## F
 
-**Dateisystem**: Jeder spezifische Satz personenbezogener Daten, auf den nach bestimmten Kriterien zugegriffen werden kann oder der abgefragt werden kann.
+**Dateisystem**: Alle spezifischen personenbezogenen Daten, auf die nach bestimmten Kriterien zugegriffen werden kann oder die abgefragt werden können.
 
 ## G
 
-**GDPR**: Der  [!DNL General Data Protection Regulation] (GDPR) ist ein Rechtsrahmen, der Leitlinien für die Erhebung und Verarbeitung personenbezogener Daten innerhalb der Europäischen Vereinigung (EU) festlegt. Der GDPR legt die Grundsätze für das Data Management und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Das GDPR deckt alle Firmen ab, die mit den Daten der EU-Bürger zu tun haben. Daher ist es eine wichtige Regelung für die Compliance von Unternehmen bei Banken, Versicherern und anderen finanziellen Firmen.
+**DSGVO**: Die  [!DNL General Data Protection Regulation] (DSGVO) ist ein Rechtsrahmen, der Richtlinien für die Erhebung und Verarbeitung personenbezogener Daten von Einzelpersonen in der Europäischen Union (EU) festlegt. Die DSGVO legt die Grundsätze für das Datenmanagement und die Rechte des Einzelnen fest und verhängt auch Geldbußen, die einnahmenbasiert sein können. Die DSGVO gilt für alle Unternehmen, die mit den Daten von EU-Bürgern umgehen. Daher handelt es sich um eine wichtige Vorschrift für Compliance-Verantwortliche von Unternehmen bei Banken, Versicherern und anderen Finanzunternehmen.
 
-**Genetische Daten**: Daten über die Merkmale einer Person, die geerbt oder erworben werden und die eindeutige Informationen über die Gesundheit oder Physiologie der Person geben.
+**Genetische Daten**: Daten über die Eigenschaften einer vererbten oder erworbenen Person, die eindeutige Informationen über die Gesundheit oder Physiologie der Person liefern.
 
 **Unternehmensgruppe**: Ein herrschendes Unternehmen und seine kontrollierten Unternehmen.
 
@@ -79,11 +78,11 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## I
 
-**Identity Management Services (IMS)**: Die Adobe Implementierung von Federated ID und OAuth 2.0 für die Authentifizierung von Adobe ID-Benutzern und die Autorisierung von Adoben-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Die Benutzer können sich direkt bei Renga (dem Identitäts-Service-Provider der Adobe) anmelden oder sich über eine vertrauenswürdige Drittanbieter-Authentifizierungsdomäne (z. B. [!DNL Google], [!DNL Facebook] oder ein Unternehmens-/Organisations-LDAP) anmelden.
+**Identity Management Services (IMS)**: Die Implementierung der Adobe von Federated ID und OAuth 2.0 für die Authentifizierung von Adobe ID-Benutzern und die Autorisierung von Adobe-Ressourcen. Sie müssen IMS in Ihre Adobe-Anwendung oder Ihren -Service integrieren, damit sich Ihre Benutzer bei den Adobe-Services anmelden und diese nutzen können. Benutzer können sich direkt bei Renga (dem Anbieter von Identitätsdiensten für Adoben) anmelden oder sich über eine vertrauenswürdige Drittanbieter-Authentifizierungsdomäne anmelden (z. B. [!DNL Google], [!DNL Facebook] oder ein Unternehmens-LDAP).
 
-**Implizite Zustimmung**: Auch als eindeutige Einwilligung bezeichnet, bezieht sich dies auf eine Einwilligung, die nicht ausdrücklich von der betroffenen Person erteilt wurde, aber dennoch eindeutig ist. Beispielsweise wird während des Anmeldeprozesses für eine Website der Firma darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu bestimmten Angeboten zustimmt. Wenn die betroffene Person die Mitteilung liest, reicht die positive Handlung der Eingabe ihrer E-Mail aus, um als implizite Zustimmung betrachtet zu werden.
+**Implizite Zustimmung**: Dies wird auch als eindeutige Einwilligung bezeichnet und bezieht sich auf eine Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch von Natur aus eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass das Datensubjekt durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als implizite Zustimmung betrachtet zu werden.
 
-**IMS-Organisations-ID**: Bezieht sich auf ein Adoben-Autorisierungstoken für die Dienst-zu-Dienst-Authentifizierung, für das keine Benutzeranmeldung erforderlich ist. Es wird an einen IMS-Client ausgegeben und hat keinen zugehörigen Benutzer. Ein IMS-Client benötigt ein Service-Token, um Back-Kanal-Anfragen zwischen Diensten zu autorisieren. (Gelegentlich wird für Servicetoken auch der Begriff „Systemtoken“ verwendet.)
+**Kennung der IMS-Organisation**: Bezieht sich auf ein Adobe Autorisierungstoken für Service-to-Service-Authentifizierung, für das keine Benutzeranmeldung erforderlich ist. Sie wird an einen IMS-Client ausgegeben und hat keinen zugehörigen Benutzer. Ein IMS-Client benötigt ein Service-Token, um Back-Channel-Anfragen zwischen Diensten zu autorisieren. (Gelegentlich wird für Servicetoken auch der Begriff „Systemtoken“ verwendet.)
 
 ## J
 
@@ -91,11 +90,11 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## L
 
-**LGPD**: Das  [!DNL Lei Geral de Proteção de Dados] (LGPD) zielt darauf ab, die Behandlung von personenbezogenen Daten aller Personen oder natürlichen Personen in Brasilien zu regeln. Die LGPD verleiht brasilianischen Bürgern das Recht, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen, zu wissen, ob ihre personenbezogenen Daten verkauft oder offen gelegt werden (und wem), und das Recht, ihre Daten an Dritte zu verkaufen Opt-out.
+**LGPD**: Das  [!DNL Lei Geral de Proteção de Dados] (LGPD) soll die Behandlung personenbezogener Daten aller Personen oder natürlichen Personen in Brasilien regeln. Das LGPD verleiht brasilianischen Bürgern das Recht, auf ihre personenbezogenen Daten zuzugreifen und sie zu löschen, um zu erfahren, ob ihre personenbezogenen Daten verkauft oder weitergegeben werden (und an wen), und das Recht, sich gegen den Verkauf ihrer Daten an Dritte zu entscheiden.
 
 ## M
 
-**Hauptniederlassung**: der Ort innerhalb der Vereinigung, an dem die wichtigsten Entscheidungen über die Datenverarbeitung getroffen werden; in Bezug auf den Prozessor.
+**Hauptniederlassung**: Ort innerhalb der Union, an dem die wichtigsten Entscheidungen über die Datenverarbeitung getroffen werden; in Bezug auf den Prozessor.
 
 ## N
 
@@ -103,51 +102,51 @@ Dieses Dokument enthält Definitionen zu Schlüsselbegriffen im Zusammenhang mit
 
 ## P
 
-**PDPA**: Der  [!DNL Personal Data Protection Act] von Thailand (PDPA) wurde eingeführt, um die thailändischen Dateneigner vor der illegalen Erhebung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Auf der Grundlage des GDPR der Europäischen Vereinigung gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen.
+**PDPA**: Die  [!DNL Personal Data Protection Act] thailändische Datenschutzbehörde (PDPA) wurde eingeführt, um die thailändischen Dateneigner vor der illegalen Erhebung, Verwendung oder Weitergabe ihrer personenbezogenen Daten zu schützen. Inspiriert durch die DSGVO der Europäischen Union gewährt die Verordnung den thailändischen Bürgern das Recht, Zugang zu ihren gespeicherten personenbezogenen Daten oder deren Löschung zu beantragen.
 
-**Persönliche Daten**: Alle Informationen, die sich auf eine natürliche Person oder &quot;Datensubjekt&quot; beziehen und die zur direkten oder indirekten Identifizierung der Person verwendet werden können.
+**Personenbezogene Daten**: Alle Informationen, die eine natürliche Person (das &quot;Datensubjekt&quot;) betreffen und die zur direkten oder indirekten Identifikation dieser Person verwendet werden können.
 
-**Verletzung** der personenbezogenen Daten: Eine Verletzung der Sicherheit, die zu einem unbeabsichtigten oder unrechtmäßigen Zugang zu, Zerstörung, Missbrauch usw. führt. personenbezogene Daten.
+**Verletzung** personenbezogener Daten: Eine Verletzung der Sicherheit, die zu einem zufälligen oder rechtswidrigen Zugang, zur Zerstörung, zum Missbrauch usw. führt. der personenbezogenen Daten.
 
-**Datenschutz nach Design**: Ein Grundsatz, der die Einbeziehung des Datenschutzes ab dem Beginn der Systementwicklung anstelle einer Ergänzung vorsieht.
+**Datenschutz per Design**: Ein Grundsatz, der die Einbeziehung des Datenschutzes von Beginn an und nicht von einer Hinzufügung verlangt.
 
-**Datenschutz-Folgenabschätzung**: Ein Tool zur Identifizierung und Verringerung der Datenschutzrisiken von Unternehmen durch Analyse der verarbeiteten personenbezogenen Daten und der geltenden Datenschutzrichtlinien.
+**Datenschutz-Folgenabschätzung**: Ein Tool, mit dem die Datenschutzrisiken von Organisationen/Personen ermittelt und verringert werden, indem die verarbeiteten personenbezogenen Daten und die zum Schutz der Daten geltenden Richtlinien analysiert werden.
 
-**Verarbeitung**: Jeder Vorgang, der an personenbezogenen Daten durchgeführt wird, unabhängig davon, ob er automatisiert erfolgt oder nicht, einschließlich der Erhebung, Verwendung, Aufzeichnung usw.
+**Verarbeitung**: Alle Vorgänge, die an personenbezogenen Daten durchgeführt werden, unabhängig davon, ob sie automatisiert erfolgen oder nicht, einschließlich Erfassung, Verwendung, Aufzeichnung usw.
 
-**Profiling**: Jede automatisierte Verarbeitung personenbezogener Daten zur Bewertung, Analyse oder Vorhersage des Verhaltens der betroffenen Personen.
+**Profiling**: Jede automatisierte Verarbeitung personenbezogener Daten zur Bewertung, Analyse oder Vorhersage des Verhaltens des Datensubjekts.
 
-**Pseudonymisierung**: Die Verarbeitung personenbezogener Daten, die ohne die Verwendung zusätzlicher Daten nicht mehr einer einzigen betroffenen Person zugeordnet werden kann, solange diese zusätzlichen Daten getrennt bleiben, um die Nichtzuweisung zu gewährleisten.
+**Pseudonymisierung**: Die Verarbeitung personenbezogener Daten in einer Weise, dass sie ohne die Verwendung zusätzlicher Daten nicht mehr einem einzelnen Datensubjekt zugeordnet werden können, sofern diese zusätzlichen Daten gesondert aufbewahrt werden.
 
 ## Q
 
 ## R
 
-**Empfänger**: Stelle, an die die personenbezogenen Daten weitergegeben werden.
+**Empfänger**: Stelle, der die personenbezogenen Daten offen gelegt werden.
 
-**Verordnung**: Ein verbindlicher Rechtsakt, der in seiner Gesamtheit in der Vereinigung angewendet werden muss.
+**Verordnung**: Ein bindender legislativer Rechtsakt, der in der gesamten Union angewendet werden muss.
 
-**Vertreter**: Jede Person in der Vereinigung, die ausdrücklich von dem für die Verarbeitung Verantwortlichen benannt wurde und von den Aufsichtsbehörden angesprochen werden soll.
+**Vertreter**: Jede Person in der Union, die explizit vom für die Verarbeitung Verantwortlichen benannt wird und von den Aufsichtsbehörden angesprochen werden soll.
 
-**Recht auf Vergessenheit**: Sie wird auch als Datenlöschung bezeichnet und berechtigt die betroffene Person, ihre personenbezogenen Daten löschen zu lassen, die weitere Verbreitung der Daten einzustellen und Dritten die Verarbeitung der Daten möglicherweise einzustellen.
+**Recht auf Vergessenwerden**: Sie wird auch als Datenlöschung bezeichnet und ermöglicht dem Datenverantwortlichen, seine personenbezogenen Daten zu löschen, die weitere Verbreitung der Daten einzustellen und Dritte dazu zu bewegen, die Datenverarbeitung einzustellen.
 
-**Zugangsrecht**: Die betroffene Person hat das Recht, Zugang zu den sie betreffenden personenbezogenen Daten und Informationen über diese Daten zu erhalten.
+**Recht auf Zugriff**: Sie wird auch als Zugriffsrecht des Datensubjekts bezeichnet und ermöglicht es dem Datensubjekt, auf die personenbezogenen Daten zuzugreifen und Informationen über die Daten zu erhalten, die ein Verantwortlicher zu ihm hat.
 
 ## S
 
-**Sensible Daten**: Personenbezogene Daten, die sich auf rassische oder ethnische Herkünfte, politische Meinungen, religiöse oder philosophische Überzeugungen, sexuelles Verhalten, Strafregister, Gesundheitsdaten, Behinderung, Informationen zur Vereinigung des Handels, genetische Daten, biometrische Daten oder alle Daten beziehen, die die betroffene Person betreffen können.
+**Sensible Daten**: personenbezogene Daten, die die Rasse oder die ethnische Herkunft, politische Meinungen, Religionen oder philosophische Überzeugungen, sexuelles Verhalten, Strafregister, Gesundheitsdaten, Behinderung, Gewerkschaftsinformationen, genetische Daten, biometrische Daten oder Daten betreffen, die die betroffene Person betreffen können.
 
-**Zugriffsrecht** für Betreff: Das Recht auf Zugang wird auch als Zugangsrecht bezeichnet und berechtigt die betroffene Person, Zugang zu den sie betreffenden personenbezogenen Daten und Informationen darüber zu erhalten, die ihr Verantwortlicher hat.
+**Zugriffsrecht** des Betreffs: Sie wird auch als Recht auf Zugriff bezeichnet und ermöglicht es dem Datensubjekt, auf die personenbezogenen Daten zuzugreifen und Informationen über die Daten zu erhalten, die ein Verantwortlicher zu ihm hat.
 
 **Aufsichtsbehörde**: Eine Behörde, die von einem Mitgliedstaat gemäß Artikel 46 eingerichtet wird.
 
 ## T
 
-**Triloge**: Informelle Verhandlungen zwischen der Europäischen Kommission, dem Europäischen Parlament und dem Rat der Europäischen Vereinigung fanden in der Regel nach der ersten Lesung der vorgeschlagenen Rechtsvorschriften statt, um rascher zu einer Einigung über einen zu verabschiedenden Kompromisstext zu gelangen.
+**Triloge**: Informelle Verhandlungen zwischen der Europäischen Kommission, dem Europäischen Parlament und dem Rat der Europäischen Union fanden in der Regel nach den ersten Lesungen der vorgeschlagenen Rechtsvorschriften statt, um schneller zu einer Einigung über einen zu verabschiedenden Kompromisstext zu gelangen.
 
 ## U
 
-**Eindeutige Zustimmung**: Auch als implizite Einwilligung bezeichnet, bezieht sich dies auf eine Einwilligung, die nicht ausdrücklich von der betroffenen Person erteilt wurde, aber dennoch eindeutig ist. Beispielsweise wird während des Anmeldeprozesses für eine Website der Firma darauf hingewiesen, dass die betroffene Person durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu bestimmten Angeboten zustimmt. Wenn die betroffene Person die Mitteilung liest, reicht die positive Handlung der Eingabe ihrer E-Mail aus, um als eindeutige Zustimmung zu gelten.
+**Eindeutige Zustimmung**: Dies wird auch als implizite Einwilligung bezeichnet und bezieht sich auf die Einwilligung, die nicht explizit vom Datensubjekt erteilt wurde, jedoch eindeutig ist. Während des Anmeldeprozesses für eine Unternehmens-Website wird beispielsweise darauf hingewiesen, dass das Datensubjekt durch Angabe einer E-Mail-Adresse dem Empfang von E-Mails zu Sonderangeboten zustimmt. Wenn das Datensubjekt den Hinweis liest, reicht die positive Aktion der Eingabe seiner E-Mail aus, um als eindeutige Einwilligung betrachtet zu werden.
 
 ## V
 
