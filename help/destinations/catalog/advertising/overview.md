@@ -5,7 +5,7 @@ seo-title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 seo-description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 802b1844bec1e577e978da5d5a69de87278c04b9
+source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 35%
@@ -48,7 +48,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Google Ads-Erweiterung](google-ads-extension.md)
 * [Google gtag-Erweiterung](gtag-advertising.md)
 * [LinkedIn Insight-Tag-Erweiterung](linkedin.md)
-* [Pinterest Conversion Tracking-Erweiterung](pinterest.md)
+* [Pinterest Conversion Tracking-Erweiterung](pinterest-extension.md)
 * [Twitter Universal Website Tag-Erweiterung](twitter-uwt.md)
 
 ## Mit einem neuen Werbeziel verbinden {#connect-destination}
