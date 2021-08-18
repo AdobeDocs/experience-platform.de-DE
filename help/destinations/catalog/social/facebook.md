@@ -3,10 +3,10 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 7%
+source-wordcount: '1498'
+ht-degree: 6%
 
 ---
 
@@ -135,6 +135,35 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 Im Schritt **[!UICONTROL Segmentplan]** müssen Sie den [!UICONTROL Ursprung der Zielgruppe] angeben, wenn Segmente an [!DNL Facebook Custom Audiences] gesendet werden.
 
 ![Facebook-Ursprung der Zielgruppe](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+
+### Zuordnungsbeispiel: Aktivieren von Zielgruppendaten in [!DNL Facebook Custom Audience] {#example-facebook}
+
+Nachstehend finden Sie ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung von Zielgruppendaten in [!DNL Facebook Custom Audience].
+
+Auswählen von Quellfeldern:
+
+* Wählen Sie den Namespace `Email` als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht sind.
+* Wählen Sie den Namespace `Email_LC_SHA256` als Quellidentität aus, wenn Sie Kunden-E-Mail-Adressen bei der Datenerfassung in [!DNL Platform] gehasht haben, gemäß [!DNL Facebook] [E-Mail-Hashing-Anforderungen](#email-hashing-requirements).
+* Wählen Sie den Namespace `PHONE_E.164` als Quellkennung aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] werden die Telefonnummern hash, um die  [!DNL Facebook] Anforderungen zu erfüllen.
+* Wählen Sie den Namespace `Phone_SHA256` als Quellidentität aus, wenn Sie bei der Datenerfassung Telefonnummern gemäß [!DNL Facebook] [ [!DNL Platform]Anforderungen an das Hashing von Telefonnummern](#phone-number-hashing-requirements) gehasht haben.
+* Wählen Sie den Namespace `IDFA` als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
+* Wählen Sie den Namespace `GAID` als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
+* Wählen Sie den Namespace `Custom` als Quellidentität aus, wenn Ihre Daten aus einem anderen Kennungstyp bestehen.
+
+Zielgruppenfelder auswählen:
+
+* Wählen Sie den Namespace `Email_LC_SHA256` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `Email` oder `Email_LC_SHA256` lauten.
+* Wählen Sie den Namespace `Phone_SHA256` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `PHONE_E.164` oder `Phone_SHA256` lauten.
+* Wählen Sie die Namespaces `IDFA` oder `GAID` als Zielidentität aus, wenn Ihre Quell-Namespaces `IDFA` oder `GAID` lauten.
+* Wählen Sie den Namespace `Extern_ID` als Zielidentität aus, wenn Ihr Quellnamespace ein benutzerdefinierter Namespace ist.
+
+>[!IMPORTANT]
+>
+>Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DNL Platform] gehasht.
+> 
+>Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash.
+
+![Identitätszuordnung](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Exportierte Daten {#exported-data}
 
