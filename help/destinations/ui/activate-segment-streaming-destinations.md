@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
 seo-description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
-source-git-commit: 0d5e0d57d209e4cf9a832531676e836add4256d0
+source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '740'
 ht-degree: 6%
 
 ---
@@ -43,14 +43,9 @@ Verwenden Sie die Kontrollkästchen links neben den Segmentnamen, um die Segment
 
 ## Zuordnen von Attributen und Identitäten {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Umwandlung anwenden"
->abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern, damit Adobe Experience Platform sie bei Aktivierung automatisch hash."
-
 >[!IMPORTANT]
 >
->Dieser Schritt gilt nur für einige Segment-Streaming-Ziele. Wenn für Ihre Ziele kein Schritt **[!UICONTROL Mapping]** vorhanden ist, überspringen Sie zu [Segmentexport planen](#scheduling).
+>Dieser Schritt gilt nur für einige Segment-Streaming-Ziele. Wenn für Ihr Ziel kein Schritt **[!UICONTROL Zuordnung]** vorhanden ist, überspringen Sie zu [Segmentexport planen](#scheduling).
 
 Bei einigen Segmentstreaming-Zielen müssen Sie Quellattribute oder Identitäts-Namespaces auswählen, um sie als Zielidentitäten im Ziel zuzuordnen.
 
@@ -76,8 +71,17 @@ Bei einigen Segmentstreaming-Zielen müssen Sie Quellattribute oder Identitäts-
 
 1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 5.
 
+### Umwandlung anwenden {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Umwandlung anwenden"
+>abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern, damit Adobe Experience Platform sie bei Aktivierung automatisch hash."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Weitere Informationen finden Sie in der Dokumentation ."
 
+Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
+
+![Identitätszuordnung](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 
 ## Segmentexport planen {#scheduling}
