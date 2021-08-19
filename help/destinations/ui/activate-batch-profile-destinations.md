@@ -5,10 +5,10 @@ type: Tutorial
 seo-title: Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
-source-git-commit: b1d9b03af1d5266a03d0f16c6a9803a08f19b7bd
+source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
 workflow-type: tm+mt
-source-wordcount: '1990'
-ht-degree: 6%
+source-wordcount: '1933'
+ht-degree: 7%
 
 ---
 
@@ -64,10 +64,10 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, um den Datei
 
 1. Verwenden Sie den Selektor **[!UICONTROL Häufigkeit]** , um die Exportfrequenz auszuwählen:
 
-   * **[!UICONTROL Einmal]**: einen einmaligen On-Demand-Dateiexport planen.
-   * **[!UICONTROL Täglich]**: Planen Sie die vollständigen Dateiexporte einmal täglich vom Startdatum bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST).
+   * **[!UICONTROL Einmal]**: einen einmaligen vollständigen Dateiexport bei Bedarf planen.
+   * **[!UICONTROL Täglich]**: planen Sie vollständige Dateiexporte einmal täglich, jeden Tag und zum angegebenen Zeitpunkt.
 
-1. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll. Durch den Export einer Datei **[!UICONTROL Täglich]** wird die Datei täglich vom Startdatum bis zum Enddatum zum ausgewählten Zeitpunkt exportiert.
+1. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll.
 
    >[!IMPORTANT]
    >
@@ -89,14 +89,14 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien]** exportieren, um einen Export 
 
 1. Verwenden Sie den Selektor **[!UICONTROL Häufigkeit]** , um die Exportfrequenz auszuwählen:
 
-   * **[!UICONTROL Täglich]**: den inkrementellen Dateiexport einmal täglich vom Startdatum bis zum Enddatum um 12:00 Uhr UTC (19:00 Uhr EST) planen.
+   * **[!UICONTROL Täglich]**: planen Sie den inkrementellen Dateiexport einmal täglich zum angegebenen Zeitpunkt.
    * **[!UICONTROL Stündlich]**: planen inkrementelle Dateiexporte alle 3,6,7 oder 12 Stunden.
 
 2. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll.
 
    >[!IMPORTANT]
    >
-   >Die Option zur Auswahl der Tageszeit für den Export ist nur für eine ausgewählte Anzahl von Kunden verfügbar. <br> <br> Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten.  <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
 
 3. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
 4. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
