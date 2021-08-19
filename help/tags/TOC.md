@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Tags
 breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Datenerfassung
-source-git-commit: 3658384ec39226f457fd9cea86d1838613a9508c
+source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '380'
 ht-degree: 80%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 80%
    * [Übersicht](./ui/administration/overview.md)
    * [Unternehmen und Eigenschaften](./ui/administration/companies-and-properties.md)
    * [Benutzerberechtigungen](./ui/administration/user-permissions.md)
+   * [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md)
 * Erweiterungen {#extensions}
    * [Übersicht](./extensions/overview.md)
    * Adobe-Erweiterungen {#adobe}
