@@ -1,10 +1,10 @@
 ---
-title: FAQs
+title: Handbuch zur Fehlerbehebung bei Tags
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 30%
+source-wordcount: '1055'
+ht-degree: 26%
 
 ---
 
@@ -92,6 +92,16 @@ Die meisten Adobe-Clients nutzen modernere Webplattformfunktionen in aktuellen B
 ## Funktionieren Tags in nativen mobilen Apps?
 
 Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfigurationen für die neuen Adobe Experience Platform [Mobile SDKs](https://sdkdocs.com), um die Datenerfassung und -bereitstellung in einer nativen mobilen App-Umgebung zu implementieren. Weitere Informationen finden Sie in der [Dokumentation](https://sdkdocs.com).
+
+## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
+
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto nicht zu Produktprofilen für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu gewähren, finden Sie im Handbuch zu [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md) .
+
+## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
+
+Wenn Sie keine neuen Eigenschaften erstellen können, wenn Sie bei der Datenerfassungs-Benutzeroberfläche angemeldet sind, bedeutet dies, dass Ihr Konto nicht zu einem Produktprofil gehört, das über das Recht &quot;Eigenschaften verwalten&quot;verfügt.
+
+Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um das Recht &quot;Eigenschaften verwalten&quot;zu gewähren, finden Sie im Handbuch zu [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md) . Weitere Informationen zu den unterschiedlichen Berechtigungen für Tags finden Sie in der Übersicht zu [Benutzerberechtigungen für Tags](./ui/administration/user-permissions.md).
 
 ## Was ist, wenn ich weitere Fragen habe?
 
