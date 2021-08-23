@@ -1,10 +1,10 @@
 ---
 title: Common Analytics-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die allgemeine Analytics-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Common Analytics“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 66%
+ht-degree: 96%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diesen Abschnitt, um Informationen zum Konfigurieren der allgemeinen Analytics-Plug-in-Erweiterung und zu den Optionen zu beziehen, die verfügbar werden, wenn diese Erweiterung zusätzlich zur [!DNL Adobe Analytics]-Erweiterung verwendet wird.
 
@@ -61,32 +61,32 @@ In diesem Abschnitt werden die in der allgemeinen Analytics-Plug-in-Erweiterung 
 
 ### getGeoCoordinates
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche in Adobe Experience Platform zum Einrichten und Konfigurieren des Plug-ins getGeoCoordinates .
+Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche in Adobe Experience Platform zum Einrichten und Konfigurieren des Plug-ins „getGeoCoordinates“.
 
 ### getNewRepeat
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getNewRepeat .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getNewRepeat“ zu nutzen.
 
 ### getPageName
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getPageName .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getPageName“ zu nutzen.
 
 ### getResponsiveLayout
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getResponsiveLayout .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getResponsiveLayout“ zu nutzen.
 
 ### getTimeParting
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getTimeParting .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getTimeParting“ zu nutzen.
 
 ### getTimeSinceLastVisit
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getTimeSinceLastVisit .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getTimeSinceLastVisit“ zu nutzen.
 
 ### getVisitDuration
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getVisitDuration .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getVisitDuration“ zu nutzen.
 
 ### getVisitNum
 
-Ermöglicht Benutzern die Nutzung der nativen Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins getVisitNum .
+Ermöglicht es Benutzern, die native Datenerfassungs-Benutzeroberfläche zum Einrichten und Konfigurieren des Plug-ins „getVisitNum“ zu nutzen.
