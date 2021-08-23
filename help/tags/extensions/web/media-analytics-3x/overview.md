@@ -1,10 +1,10 @@
 ---
-title: Adobe Medien Analytics (3.x SDK) for Audio and Video - Übersicht
-description: Erfahren Sie mehr über die Adobe Medien Analytics (3.x SDK) for Audio and Video-Tag-Erweiterung in Adobe Experience Platform.
+title: Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung  Übersicht
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '764'
-ht-degree: 85%
+ht-degree: 97%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 85%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 In dieser Dokumentation finden Sie Informationen zum Installieren, Konfigurieren und Implementieren der „Adobe Media Analytics (3.x SDK) for Audio and Video“-Erweiterung (Media Analytics-Erweiterung). Darin enthalten sind neben Beispielen und Links zu Mustern die verfügbaren Optionen bei Verwendung dieser Erweiterung zum Erstellen einer Regel.
 
-Durch die Media Analytics (MA)-Erweiterung wird das JavaScript-Media-SDK (Media 3.x-SDK) hinzugefügt. Diese Erweiterung bietet die Funktionalität zum Hinzufügen der Tracker-Instanz `Media` zu einer Tagaktivierten Site oder einem Projekt. Für die MA-Erweiterung sind zwei weitere Erweiterungen erforderlich:
+Durch die Media Analytics (MA)-Erweiterung wird das JavaScript-Media-SDK (Media 3.x-SDK) hinzugefügt. Diese Erweiterung bietet die Funktionalität zum Hinzufügen der `Media`-Tracker-Instanz zu einer Site oder einem Projekt mit Tag-Aktivierung. Für die MA-Erweiterung sind zwei weitere Erweiterungen erforderlich:
 
 * [Analytics-Erweiterung](../analytics/overview.md)
 * [Experience Cloud ID-Erweiterung](../id-service/overview.md)
@@ -25,7 +25,7 @@ Durch die Media Analytics (MA)-Erweiterung wird das JavaScript-Media-SDK (Media�
 >
 >Diese Erweiterung wird mit dem Media 3.x SDK bereitgestellt, das nicht abwärtskompatibel mit dem Media 2.x SDK ist. Wenn Ihre Seite bereits Media 2.x SDK verwendet, verwenden Sie anstelle dieser Erweiterung die [Adobe Media Analytics for Audio and Video-Erweiterung](../media-analytics/overview.md).
 
-Nachdem Sie alle drei der oben erwähnten Erweiterungen in Ihr Projekt mit aktivierten Tags eingefügt haben, haben Sie zwei Möglichkeiten, den Vorgang fortzusetzen:
+Nachdem Sie alle drei der zuvor erwähnten Erweiterungen in Ihr Projekt mit Tag-Aktivierung eingefügt haben, haben Sie zwei Möglichkeiten, den Vorgang fortzusetzen:
 
 * Verwenden Sie `Media`-APIs aus Ihrer Web-Anwendungserweiterung
 * Integrieren oder erstellen Sie eine Player-spezifische Erweiterung, die bestimmte Medienplayer-Ereignisse den APIs der `Media`-Tracker-Instanz zuordnet. Diese Instanz wird über die MA-Erweiterung offengelegt.
@@ -45,7 +45,7 @@ Nachdem Sie alle drei der oben erwähnten Erweiterungen in Ihr Projekt mit aktiv
 | Collection API Server | Definiert den Media Collection-API-Server (wenden Sie sich an Ihren Adobe-Support-Mitarbeiter, um diesen Server zu erhalten) |
 | Application Version | Medienplayer-App-/Medienplayer-SDK-Version |
 | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. |
-| Channel | Kanalnamen-Eigenschaft |
+| Kanal | Kanalnamen-Eigenschaft |
 | Debug Logging | Aktivieren oder Deaktivieren der Protokollierung |
 | Enable SSL | Aktivieren oder Deaktivieren des Sendens von Pings über HTTPS |
 | Export APIs to Window Object | Aktivieren oder Deaktivieren des Exports von Media Analytics-APIs für einen globalen Umfang |
@@ -84,7 +84,7 @@ Sie können den Beispielplayer hier abrufen: [MA Sample Player](https://github.c
 
 ### Verwendung in anderen Erweiterungen
 
-Die MA-Erweiterung stellt `media` als gemeinsames Modul für andere Erweiterungen bereit. (Weitere Informationen zu freigegebenen Modulen finden Sie in der [Dokumentation zu freigegebenen Modulen](../../../extension-dev/web/shared.md).)
+Die MA-Erweiterung stellt `media` als freigegebenes Modul anderen Erweiterungen zur Verfügung. (Weitere Informationen zu freigegebenen Modulen finden Sie in der [Dokumentation zu freigegebenen Modulen](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
@@ -92,7 +92,7 @@ Die MA-Erweiterung stellt `media` als gemeinsames Modul für andere Erweiterunge
 
 1. **Media-APIs:** `media` Freigegebenes Modul
 
-   Dadurch werden alle APIs und Konstanten vom Media SDK verfügbar gemacht: [https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
+   Dadurch werden alle APIs und Konstanten aus dem Media SDK verfügbar gemacht: [https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
 
 1. Erstellen Sie die Media-Tracker-Instanz wie folgt:
 
@@ -109,4 +109,4 @@ Die MA-Erweiterung stellt `media` als gemeinsames Modul für andere Erweiterunge
 
 >[!NOTE]
 >
->**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [ Platform ](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
+>**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [Platform](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
