@@ -2,9 +2,9 @@
 title: Unterstützte Anwendungsfälle mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, welche Anwendungsfälle vom Adobe Experience Platform Web SDK unterstützt werden.
 keywords: Web SDK;Anwendungsfälle
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: e012e12a8cadb8c13781b0380d84652c23567180
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '565'
 ht-degree: 15%
 
 ---
@@ -66,7 +66,7 @@ Auf dieser Seite werden die unterstützten Anwendungsfälle für das Web SDK mit
 | Benutzerspezifische Links/Downloadlinks |  |
 | Status- und Aktionsverfolgung |  |
 | Ereignis-Serialisierung für Standardereignisse |  |
-| Variable „products“  | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
+| Variable „products“ | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -91,6 +91,7 @@ Auf dieser Seite werden die unterstützten Anwendungsfälle für das Web SDK mit
 | Aktualisieren des Target-Profils | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Empfehlungen |  |
 | mBox-Drittanbieter-ID |  |
+| Antwort-Token | [Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style=&quot;table-layout:auto&quot;}
 
