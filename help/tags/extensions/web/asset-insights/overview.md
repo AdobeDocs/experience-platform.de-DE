@@ -1,10 +1,10 @@
 ---
 title: AEM Asset Insights-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die AEM Asset Insights-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „AEM Asset Insights“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1118'
-ht-degree: 88%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Diese Erweiterung sollte zusammen mit [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=de) verwendet werden. Genauer gesagt ersetzt es den „pageTracker“-Prozess und den Einbettungscode. Wenn diese Erweiterung konfiguriert ist, sendet sie Metriken bezüglich *Impressionen* und *Klicks* auf Kreativelemente an Adobe Analytics. Danach werden diese in AEM Asset Insights-Berichte importiert. Die Asset-Metriken können dann entweder über AEM Asset Insights oder Adobe Analytics Project Workspaces in Berichten dargestellt werden.
 
@@ -32,7 +32,7 @@ Es gibt auch zwei Metriken:
 
 Diese Berichte müssen unter Verwendung von Analytics Administrator aktiviert werden (klicken Sie auf **[!UICONTROL Analytics] > [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Einstellungen bearbeiten] > [!UICONTROL AEM] > [!UICONTROL AEM Assets-Berichte]**). Danach können sie über diese Erweiterung befüllt werden.
 
-Die Tag-Erweiterung &quot;*Adobe Analytics*&quot;für Adobe Experience Platform muss in derselben Webeigenschaft installiert sein.
+Die Tag-Erweiterung *Adobe Analytics* für Adobe Experience Platform muss in dieselbe Web-Eigenschaft installiert werden.
 
 ### Adobe Experience Manager (AEM)
 
@@ -48,15 +48,15 @@ Die Tag-Erweiterung &quot;*Adobe Analytics*&quot;für Adobe Experience Platform 
 
 ## Konfigurieren von Adobe Experience Manager (AEM)
 
-In diesem Abschnitt wird beschrieben, wie Sie AEM mit Tags in Adobe Experience Platform konfigurieren, wie Sie Asset Insight in AEM aktivieren und wie Sie die UUID-Verfolgung für Assets aktivieren.
+In diesem Abschnitt wird beschrieben, wie Sie AEM mit Tags in Adobe Experience Platform konfigurieren, wie Sie Asset Insight in AEM aktivieren und wie Sie das UUID-Tracking für Assets aktivieren.
 
-### AEM mit Tags integrieren
+### Integrieren von AEM mit Tags
 
-Die empfohlene Integration von [Platform ](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de) mit Adobe Experience Manager erfolgt über Adobe I/O.
+Die empfohlene Integration von [Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de) mit Adobe Experience Manager erfolgt über Adobe I/O.
 
-1. [Verbinden Sie AEM mithilfe von Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=de) mit Tags.
+1. [Verbinden von AEM mit Tags über Adobe I/O](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/connect-aem-launch-adobe-io.html?lang=de).
 
-2. [Erstellen Sie eine Adobe Experience Platform Cloud Service-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=de).
+2. [Erstellen einer Adobe Experience Platform Cloud Service-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=de).
 
 ### Aktivieren von Asset Insight in AEM
 
@@ -86,7 +86,7 @@ Diese Erweiterung umfasst zwei Ereignisse und eine Aktion.
 
 ### Kreativelement-Impressionen
 
-Fügen Sie die Aktion &quot;Set AA Variables&quot;zu einer neuen oder vorhandenen Tag-Regel hinzu, die auf jeder Seite ausgelöst wird und eine Analytics-Bildanforderung sendet. Die Aktion „Set AA Variables“ muss **vor** der Aktion „Adobe Analytics - Send Beacon“ angezeigt werden. Bei Bedarf können weitere Aktionen hinzugefügt werden.
+Fügen Sie die Aktion „Set AA Variables“ einer neuen oder vorhandenen Tag-Regel hinzu, die auf jeder Seite ausgelöst wird und eine Analytics-Bildanforderung sendet. Die Aktion „Set AA Variables“ muss **vor** der Aktion „Adobe Analytics - Send Beacon“ angezeigt werden. Bei Bedarf können weitere Aktionen hinzugefügt werden.
 
 Wählen Sie auf der Konfigurationsseite **[Set AA Variables]** die Option **[Viewed Assets]** (Standard). Dadurch wird nur das Impressionsereignis für Kreativelemente ausgewählt, die vom Besucher tatsächlich gesehen werden.
 
