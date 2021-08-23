@@ -1,10 +1,10 @@
 ---
 title: Gemeinsam genutzte Module für die Adobe Analytics-Erweiterung
-description: Erfahren Sie mehr über die freigegebenen Bibliotheksmodule, die von der Adobe Analytics-Tag-Erweiterung in Adobe Experience Platform bereitgestellt werden.
+description: Machen Sie sich mit den von der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform bereitgestellten Modulen für die gemeinsame Bibliothek vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '431'
-ht-degree: 74%
+ht-degree: 95%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die [Adobe Analytics-Erweiterung](./overview.md) stellt zwei [gemeinsam genutzte Module](../../../extension-dev/web/shared.md) für die Integration in Ihre Erlebnisanwendung zur Auswahl. Diese Module werden im Folgenden erläutert.
 
@@ -46,12 +46,12 @@ if (getTracker) {
 }
 ```
 
-Wenn `getTracker` `undefined` ist, ist die Adobe Analytics-Erweiterung nicht in der Tag-Bibliothek vorhanden. Sie können die Formulierung der Meldung so anpassen, dass sie genau vermittelt, welche Funktionen verloren gehen, wenn Adobe Analytics nicht installiert ist.
+Wenn `getTracker` den Wert `undefined` hat, ist die Adobe Analytics-Erweiterung ist in der Tag-Bibliothek nicht vorhanden. Sie können die Formulierung der Meldung so anpassen, dass sie genau vermittelt, welche Funktionen verloren gehen, wenn Adobe Analytics nicht installiert ist.
 
 
 ## [!DNL augment-tracker]
 
-Nach Initialisierung des Tracker-Objekts besteht der nächsten Schritt im Prozess in der Augmentation. Dieser Schritt ermöglicht es Ihrer Erweiterung, den Tracker um alles zu erweitern, was erforderlich ist, bevor Variablen aus der Adobe Analytics-Erweiterungskonfiguration angewendet wurden oder bevor Beacons gesendet wurden.
+Nach Initialisierung des Tracker-Objekts besteht der nächsten Schritt im Prozess in der Augmentation. Mit diesem Schritt kann Ihre Erweiterung den Tracker mit allem Notwendigen erweitern, bevor Variablen aus der Adobe Analytics-Erweiterungskonfiguration angewendet oder Beacons gesendet wurden.
 
 Darüber hinaus ist Ihre Erweiterung in der Lage, den Initialisierungsprozess des Trackers anzuhalten, während sie eine eigene asynchrone Aufgabe ausführt (z. B. das Abrufen von Daten oder JavaScript von einem Server).
 
