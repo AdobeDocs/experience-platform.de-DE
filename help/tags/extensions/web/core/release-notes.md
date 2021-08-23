@@ -4,15 +4,15 @@ description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience 
 source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
 workflow-type: tm+mt
 source-wordcount: '1293'
-ht-degree: 81%
+ht-degree: 89%
 
 ---
 
-# Core-Erweiterung – Versionshinweise
+# Versionshinweise zur Erweiterung „Core“
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 11. August 2021
 
@@ -49,7 +49,7 @@ v2.0.4
 
 * Unterstützung von Datenelementen für verschiedene Felder hinzugefügt – Die Unterstützung von Datenelementen wurde den folgenden Ereignissen hinzugefügt: „Zeit auf Seite“, „Betreten des Viewports“, „Hover“ und „Abgespielte Medienzeit“. Zusätzlich zu den folgenden Bedingungen: „Besuchszeit pro Site“ und „Vergleich von Werten“
 * Fügt Unterstützung für das Standardverhalten von Strg/Befehlstaste+Klick und auch Mittelmausklick bei Verwendung der Linkverzögerung hinzu.
-* **Die Linkverzögerung im Klickereignis wurde als „nicht mehr unterstützt“ gekennzeichnet.** - Weitere Informationen finden Sie im  [Datenerfassungs-](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) Blogger für Adobe Experience Platform
+* **Die Linkverzögerung im Klickereignis wurde als „nicht mehr unterstützt“ gekennzeichnet.** – Weitere Informationen finden Sie im [Datenerfassungs-Blog](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) für Adobe Experience Platform
 
 ## 6. Januar 2021
 
@@ -87,7 +87,7 @@ v1.8.1
 v1.8.0
 
 * **Promises in benutzerspezifischem Code** – Bedingungen für benutzerspezifischen Code und JavaScript-Aktionen, die nicht global ausgeführt werden, können jetzt Promises zurückgeben. Sie können sie verwenden, damit nachfolgende Bedingungen und Aktionen auf den Abschluss eines asynchronen Prozesses in Ihrem benutzerspezifischen Code warten, bevor Sie mit dem nächsten Element fortfahren.
-* **Rückrufe in Aktionen mit benutzerdefiniertem HTML-Code** – Sie können dasselbe in Aktionen mit benutzerdefiniertem HTML-Code erreichen, indem Sie die Rückrufe `onCustomCodeSuccess()` und `onCustomCodeFailure()` verwenden.
+* **Callbacks in Aktionen mit benutzerdefiniertem HTML-Code** – Sie können dasselbe in Aktionen mit benutzerdefiniertem HTML-Code erreichen, indem Sie die Callbacks `onCustomCodeSuccess()` und `onCustomCodeFailure()` verwenden.
 
 Weitere Informationen finden Sie im [Referenzdokument zur Haupterweiterung](./overview.md) unter Bedingungen > Benutzerspezifischer Code und Aktionen > Benutzerspezifischer Code.
 
@@ -128,7 +128,7 @@ v1.4.3
 * **Eingabefelder** – Eingabefelder sind nun viel länger.
 * **Benutzerdefiniertes Ereignis** – Der benutzerdefinierte Ereignistyp kann nun mit Ereignissen verwendet werden, die außerhalb des Fensters abgesendet werden.
 * **Fehlerbehebung** – Behebung eines Fehlers, durch den die Wertvergleichsbedingung keinen 0-Wert enthalten konnte.
-* **Fehlerbehebung** – Aktualisierung des Felds exchange\_url, sodass nun die Haupterweiterungsliste in Adobe Exchange angezeigt wird.
+* **Fehlerbehebung** – Aktualisierung des Felds exchange\_url, sodass nun der Listeneintrag der Haupterweiterung in Adobe Exchange angezeigt wird.
 
 ## 8. Januar 2019
 
@@ -141,8 +141,8 @@ v1.4.2
 ## 8. November 2018
 
 * **Option „Kohorte beibehalten“** – Die Option, eine Kohorte dauerhaft beizubehalten, wurde zur Sampling-Bedingung hinzugefügt. Dadurch wird die Beispielkohorte für einen Benutzer sitzungsübergreifend beibehalten oder beendet. Wenn beispielsweise das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für einen bestimmten Besucher „true“ zurückgibt, gibt sie in allen nachfolgenden Ausführungen der Bedingung für denselben Besucher ebenfalls „true“ zurück. Wenn das Kontrollkästchen „Kohorte beibehalten“ aktiviert ist und die Bedingung bei der ersten Ausführung für einen bestimmten Besucher „false“ zurückgibt, gibt sie gleichermaßen in allen nachfolgenden Ausführungen der Bedingung für denselben Besucher ebenfalls „false“ zurück.
-* **Fehlerbehebung**  - Es wurde ein Problem behoben, durch das eine Regel, die ein Seitenende-Ereignis und eine Aktion mit benutzerspezifischem Code auf einer Seite verwendet, auf der Tags zwar synchron geladen, aber nicht ordnungsgemäß installiert wurden (kein Aufruf von  `_satellite.pageBottom()`), den Website-Inhalt gelöscht hat.
-* **Fehlerbehebung**  - Es wurde ein Problem behoben, bei dem der Viewport-Aufruf nicht funktionierte, wenn die Tag-Bibliothek asynchron geladen wurde und das Laden abgeschlossen wurde, nachdem das DOMContentLoaded-Ereignis des Browsers ausgelöst wurde.
+* **Fehlerbehebung** – Es wurde ein Problem behoben, durch das eine Regel mithilfe eines Seitenende-Ereignisses und einer benutzerdefinierten Code-Aktion auf einer Seite, auf der Tags zwar synchron geladen, aber nicht ordnungsgemäß installiert wurden (kein Aufruf von `_satellite.pageBottom()`), Inhalte der Website gelöscht hat.
+* **Fehlerbehebung** – Es wurde ein Problem behoben, bei dem Enters Viewport nicht funktionierte, wenn die Tag-Bibliothek asynchron geladen wurde und das Laden abgeschlossen wurde, nachdem das DOMContentLoaded-Ereignis des Browsers ausgelöst wurde.
 
 ## 24. Mai 2018
 
