@@ -1,10 +1,10 @@
 ---
 title: Übersicht über Tags
-description: Tags in Adobe Experience Platform sind die nächste Generation von Tag-Management-Funktionen von Adobe. Mit Tags können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die zur Unterstützung entsprechender Kundenerlebnisse erforderlich sind.
+description: Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 59%
+ht-degree: 96%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
 
-Tags in Adobe Experience Platform sind die nächste Generation von Tag-Management-Funktionen von Adobe. Mit Tags können Kunden alle Analyse-, Marketing- und Werbe-Tags bereitstellen und verwalten, die zur Unterstützung entsprechender Kundenerlebnisse erforderlich sind.
+Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
 
-Mit Tags kann jeder eigene Integrationen erstellen und verwalten, die *extensions* genannt werden. Diese Erweiterungen stehen [!DNL Adobe Experience Cloud]-Kunden in einer App-Store-Oberfläche zur Verfügung, damit sie ihre Tags schnell installieren, konfigurieren und bereitstellen können.
+Tags ermöglichen jedem das Aufbauen und Verwalten eigener Integrationen (auch *Erweiterungen* genannt). Diese Erweiterungen stehen [!DNL Adobe Experience Cloud]-Kunden in einer App-Store-Oberfläche zur Verfügung, damit sie ihre Tags schnell installieren, konfigurieren und bereitstellen können.
 
-Tags werden [!DNL Adobe Experience Cloud]-Kunden als integrierte Mehrwertfunktion angeboten.
+Tags werden [!DNL Adobe Experience Cloud]-Kunden als inbegriffene Mehrwertfunktion angeboten.
 
 ## Wesentliche Vorteile
 
@@ -30,7 +30,7 @@ Tags werden [!DNL Adobe Experience Cloud]-Kunden als integrierte Mehrwertfunktio
 
 ### Erweiterungen
 
-Eine Erweiterung ist ein Paket mit Code (JavaScript, HTML und CSS), das die Tag-Funktion erweitert. Erstellen, verwalten und aktualisieren Sie Ihre Integrationen mithilfe einer praktischen Self-Service-Oberfläche. Sie können sich Erweiterungen als Apps vorstellen, mit denen Sie Ihre Aufgaben erledigen.
+Eine Erweiterung ist ein Paket mit Code (JavaScript, HTML und CSS) zur Erweiterung der Tag-Funktionalität. Erstellen, verwalten und aktualisieren Sie Ihre Integrationen mithilfe einer praktischen Self-Service-Oberfläche. Sie können sich Erweiterungen als Programme vorstellen, mit denen Sie Ihre Aufgaben erledigen.
 
 ### Erweiterungskatalog
 
@@ -55,20 +55,20 @@ Sie können Daten für webbasierte Marketing- und Werbetechnologie erfassen, org
 
 ### Veröffentlichung für Unternehmen
 
-Durch den Veröffentlichungsprozess können Teams Code auf Seiten veröffentlichen. Verschiedene Personen können eine Implementierung erstellen, genehmigen und auf Ihren Seiten veröffentlichen.
+Durch den Veröffentlichungsprozess können Teams Code auf Seiten veröffentlichen. Unterschiedliche Personen können eine Implementierung erstellen, genehmigen und auf Ihren Seiten veröffentlichen.
 
-* Änderungen an Ihrem Code werden in den von Ihnen definierten Bibliotheken eingekapselt.
+* Änderungen an Ihrem Code werden in von Ihnen definierten Bibliotheken gekapselt.
 * Sie geben an, wo und wann Ihr Code bereitgestellt werden soll.
 * Mehrere Bibliotheken können gleichzeitig von verschiedenen Teams erstellt werden.
 * Unbegrenzte Entwicklungsumgebungen&#x200B;
-* Ein vorsätzlicher, berechtigungsbasierter Prozess zum Zusammenführen von Bibliotheken.
+* Ein absichtlicher, berechtigungsbasierter Prozess zum Zusammenführen von Bibliotheken.
 
 ### Sie können APIs öffnen
 
-Automatisieren Sie Implementierungen einzelner Technologien oder einer Gruppe von Technologien.
+Sie können Implementierungen einzelner Technologien oder einer Gruppe von Technologien automatisieren.
 
 * Tags interagieren mit der Reactor-API.
-* Bereitstellungen können über APIs automatisiert werden.
+* Implementierungen können über APIs automatisiert werden.
 * Integrieren Sie die -APIs in Ihre eigenen internen Systeme.
 * Sie können bei Bedarf Ihre eigene Benutzeroberfläche erstellen.
 
@@ -78,7 +78,7 @@ Der Inhalt Ihres Containers wird minimiert, einschließlich Ihres benutzerspezif
 
 ## Weitere Besonderheiten
 
-Tags bieten verschiedene Verbesserungen im Vergleich zu ähnlichen Systemen, darunter:
+Tags bieten verschiedene Verbesserungen im Vergleich zu ähnlichen Systemen. Dazu zählen unter anderem folgende:
 
 * Keine Verwendung von `document.write ()`, wo Chrome dies nicht zulässt
 * Die Regeln „Seitenanfang“ und „Seitenende“ sind in der Hauptbibliothek gebündelt, um unnötige HTTP-Aufrufe zu minimieren.
