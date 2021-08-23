@@ -1,10 +1,10 @@
 ---
 title: Die wichtigsten Bibliotheksmodule für Web-Erweiterungen
-description: Erfahren Sie mehr über die Kernbibliotheksmodule, die Sie in Ihren Web-Erweiterungen verwenden können.
+description: Erfahren Sie mehr über die wichtigsten Bibliotheksmodule, die Sie in Ihren Web-Erweiterungen verwenden können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '350'
-ht-degree: 87%
+ht-degree: 94%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 87%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Dieses Dokument enthält eine Liste der wichtigsten Module, die Sie in Ihren Web-Erweiterungen verwenden können. Sie können mit `require('@adobe/{MODULE}')` auf diese Module zugreifen, wobei `{MODULE}` für den Namen des zu verwendenden Hauptmoduls steht.
 
@@ -38,7 +38,7 @@ cookie.remove('foo');
 
 ### [!DNL reactor-document]
 
-`reactor-document` stellt das [`Document`](https://developer.mozilla.org/de-DE/docs/Web/API/Document)-Objekt dar. Dies kann beim Testen des Moduls nützlich sein, weil damit Tests ein nachgeahmtes `document`-Objekt mithilfe von Dienstprogrammen wie [`inject-loader`](https://www.npmjs.com/package/inject-loader) injizieren können.
+`reactor-document` stellt das [`Document`](https://developer.mozilla.org/de-DE/docs/Web/API/Document)-Objekt dar. Dies kann beim Testen des Moduls nützlich sein, da Tests die Imitation eines `document`-Objekts mithilfe von Dienstprogrammen wie [`inject-loader`](https://www.npmjs.com/package/inject-loader) injizieren können.
 
 ```javascript
 var document = require('@adobe/reactor-document');
