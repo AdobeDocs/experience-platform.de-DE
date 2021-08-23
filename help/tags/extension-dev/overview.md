@@ -1,10 +1,10 @@
 ---
 title: Überblick zum Entwickeln von Erweiterungen
-description: Erfahren Sie mehr über die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Entwicklungsprozess für Erweiterungen in Adobe Experience Platform.
+description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Prozess der Erweiterungsentwicklung in Adobe Experience Platform kennen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '948'
-ht-degree: 19%
+ht-degree: 26%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 19%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Eines der Hauptziele von Tags in Adobe Experience Platform besteht darin, ein offenes Ökosystem zu schaffen, in dem Ingenieure außerhalb von Adobe zusätzliche Funktionen auf ihren Websites und mobilen Anwendungen verfügbar machen können. Dies wird durch Tag-Erweiterungen erreicht. Sobald eine Erweiterung in einer Tag-Eigenschaft installiert wurde, steht die Funktionalität dieser Erweiterung allen Benutzern der Eigenschaft zur Verfügung.
 
@@ -30,11 +30,11 @@ Eine Manifestdatei ([`extension.json`](./manifest.md)) muss im Stammverzeichnis 
 
 Bibliotheksmodule sind die Dateien, die die verschiedenen [Komponenten](#components) beschreiben, die eine Erweiterung bereitstellt (d. h. die Logik, die in der Tag-Laufzeitbibliothek ausgegeben werden soll). Der Inhalt jeder Bibliotheksmoduldatei muss dem [CommonJS-Modulstandard](http://wiki.commonjs.org/wiki/Modules/1.1.1) entsprechen.
 
-Wenn Sie beispielsweise einen Aktionstyp namens &quot;Signal senden&quot;erstellen, müssen Sie über eine Datei verfügen, die die Logik zum Senden des Beacons enthält. Bei Verwendung von JavaScript könnte die Datei `sendBeacon.js` heißen. Der Inhalt dieser Datei wird in der Tag-Laufzeitbibliothek ausgegeben.
+Wenn Sie beispielsweise einen Aktionstyp namens &quot;Signal senden&quot;erstellen, müssen Sie über eine Datei verfügen, die die Logik zum Senden des Beacons enthält. Bei Verwendung von JavaScript könnte die Datei `sendBeacon.js` heißen. Der Inhalt dieser Datei wird innerhalb der Tag-Laufzeitbibliothek ausgegeben.
 
 Sie können Bibliotheksmoduldateien an einer beliebigen Stelle im Erweiterungsordner ablegen, sofern Sie deren Speicherorte in `extension.json` beschreiben.
 
-### Ansichten
+### Ansichten 
 
 Eine Ansicht ist eine HTML-Datei, die in ein [`iframe`-Element](https://developer.mozilla.org/de-DE/docs/Web/HTML/Element/iframe) innerhalb der Tags-Anwendung geladen werden kann, insbesondere über die Datenerfassungs-Benutzeroberfläche. Die Ansicht muss ein von der Erweiterung bereitgestelltes Skript enthalten und mit einer kleinen API konform sein, um mit der Anwendung kommunizieren zu können.
 
@@ -42,7 +42,7 @@ Die wichtigste Ansichtsdatei für eine Erweiterung ist ihre Konfiguration. Weite
 
 Es gibt keine Einschränkungen hinsichtlich der Verwendung von Bibliotheken in Ihren Ansichten. Mit anderen Worten: Sie können jQuery, Underscore, React, Angular, Bootstrap oder andere verwenden. Es wird jedoch dennoch empfohlen, dafür zu sorgen, dass Ihre Erweiterung ein ähnliches Erscheinungsbild wie die Datenerfassungs-Benutzeroberfläche hat.
 
-Es wird empfohlen, alle ansichtsbezogenen Dateien (HTML, CSS, JavaScript) in einem einzigen Unterverzeichnis abzulegen, das von den Bibliotheksmoduldateien getrennt ist. In `extension.json` können Sie beschreiben, wo sich dieser Unterordner für Ansichten befindet. Platform beliefert dann dieses Unterverzeichnis (und nur dieses Unterverzeichnis) von seinen Webservern.
+Es wird empfohlen, alle ansichtsbezogenen Dateien (HTML, CSS, JavaScript) in einem einzigen Unterverzeichnis abzulegen, das von den Bibliotheksmoduldateien getrennt ist. In `extension.json` können Sie beschreiben, wo sich dieser Unterordner für Ansichten befindet. Platform bedient dann dieses Unterverzeichnis (und nur dieses Unterverzeichnis) von seinen Webservern aus.
 
 ## Bibliothekskomponenten {#components}
 
