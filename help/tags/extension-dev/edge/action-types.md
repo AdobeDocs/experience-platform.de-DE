@@ -1,10 +1,10 @@
 ---
 title: Aktionstypen für Edge-Erweiterungen
-description: Erfahren Sie, wie Sie ein Bibliotheksmodul für Aktionstyp für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
+description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type“ für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '382'
-ht-degree: 41%
+ht-degree: 66%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In einer Tag-Regel wird eine Aktion ausgeführt, nachdem die Auswertung der Regelbedingungen abgeschlossen wurde. Aktionstypen werden von Erweiterungen bereitgestellt und ihre Auswirkungen werden vollständig vom Autor der Erweiterung definiert.
 
@@ -48,7 +48,7 @@ module.exports = (context) {
 };
 ```
 
-Wenn Sie möchten, dass der Endpunkt vom Benutzer konfiguriert werden kann, und die Eingabe und Persistenz eines Endpunkts für das settings-Objekt innerhalb des Moduls zulassen möchten, würde das Objekt in etwa so aussehen.
+Wenn Sie möchten, dass der Endpunkt vom Benutzer konfiguriert werden kann, und die Eingabe und Persistenz eines Endpunkts für das Einstellungsobjekt innerhalb des Moduls zulassen möchten, würde das Objekt in etwa so aussehen.
 
 ```json
 {
@@ -56,7 +56,7 @@ Wenn Sie möchten, dass der Endpunkt vom Benutzer konfiguriert werden kann, und 
 }
 ```
 
-Um mit dem benutzerdefinierten Endpunkt arbeiten zu können, muss Ihr Modul in das folgende Beispiel geändert werden.
+Damit es mit dem benutzerdefinierten Endpunkt arbeiten kann, muss Ihr geändertes Modul wie folgt aussehen.
 
 ```js
 module.exports = (context) {
