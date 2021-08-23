@@ -1,45 +1,45 @@
 ---
-title: Umgebungs-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /environment in der Reactor-API durchführen.
+title: Environments-Endpunkt
+description: Erfahren Sie, wie Sie den /environments-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1042'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# Umgebungs-Endpunkt
+# Environments-Endpunkt
 
-Wenn eine [Bibliothek](./libraries.md) in einer [Build](./builds.md) der Reactor-API kompiliert wird, hängt der genaue Inhalt des Builds von den Umgebungseinstellungen und den in der Bibliothek enthaltenen Ressourcen ab. Die Umgebung bestimmt insbesondere Folgendes:
+Wenn eine [Bibliothek](./libraries.md) in der Reactor-API in einen [Build](./builds.md) kompiliert wird, hängt der genaue Inhalt des Builds von den Umgebungseinstellungen und den in der Bibliothek enthaltenen Ressourcen ab. Die Umgebung bestimmt insbesondere Folgendes:
 
-1. **Ziel**: Der Speicherort, an dem der Build bereitgestellt werden soll. Dies wird durch die Auswahl eines [Host](./hosts.md) für die zu verwendende Umgebung gesteuert.
+1. **Ziel**: Dies ist der Ort, an dem Ihr Build bereitgestellt werden soll. Sie steuern dies durch die Auswahl des [Hosts](./hosts.md), den die Umgebung nutzen soll.
 1. **Archivieren**: Sie können den Build als bereitstellbaren Dateisatz abrufen oder in einem ZIP-Archivformat komprimieren lassen. Dies wird durch die Einstellung `archive` in der Umgebung gesteuert.
 
-Das von der Umgebung konfigurierte Ziel- und Archivformat ändert die Art und Weise, wie Sie auf den Build in Ihrer Anwendung verweisen (dieser Verweis ist ein [Einbettungscode](../../ui/publishing/environments.md#embed-code)). Wenn Sie Änderungen am Ziel- oder Dateiformat vornehmen, müssen Sie eine entsprechende Aktualisierung an Ihrer Anwendung vornehmen, um die neue Referenz zu verwenden.
+Das von der Umgebung konfigurierte Ziel- und Archivformat ändert die Art und Weise, wie Sie auf in Ihrem Programm auf den Build verweisen (dieser Verweis ist ein [Einbettungs-Code](../../ui/publishing/environments.md#embed-code)). Wenn Sie Änderungen am Ziel- oder Dateiformat vornehmen, müssen Sie eine entsprechende Aktualisierung an Ihrem Programm vornehmen, um die neue Referenz zu verwenden.
 
-Umgebungen weisen drei Typen (oder Phasen) auf, wobei jeder Typ eine andere Begrenzung hat als die Gesamtzahl, die Sie haben können:
+Umgebungen weisen drei Typen (oder Phasen) auf, wobei für jeden Typ unterschiedliche Begrenzungen für die Gesamtzahl gelten:
 
 | Umgebungstyp | Zulässige Zahl |
 | --- | --- |
 | Entwicklung | (Keine Begrenzung) |
-| Staging | One |
-| Produktion | One |
+| Staging | Eine |
+| Produktion | Eine |
 
 {style=&quot;table-layout:auto&quot;}
 
-Diese Umgebungstypen weisen ein ähnliches Verhalten auf, werden jedoch in verschiedenen Phasen des [Tag Publishing-Workflows](../../ui/publishing/publishing-flow.md) verwendet.
+Diese Umgebungstypen weisen ein ähnliches Verhalten auf, werden jedoch in verschiedenen Phasen des [Tag-Veröffentlichungs-Workflows](../../ui/publishing/publishing-flow.md) verwendet.
 
-Eine Umgebung gehört genau zu einer [Eigenschaft](./properties.md).
+Eine Umgebung gehört zu genau einer [Eigenschaft](./properties.md).
 
-Allgemeine Informationen zu Umgebungen finden Sie im Abschnitt zu [Umgebungen](../../ui/publishing/environments.md) in den Veröffentlichungsdokumenten.
+Allgemeine Informationen zu Umgebungen finden Sie im Abschnitt zu [Umgebungen](../../ui/publishing/environments.md) in den Dokumenten zur Veröffentlichung.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Umgebungen abrufen {#list}
+## Abrufen einer Liste von Umgebungen {#list}
 
-Sie können eine Liste der Umgebungen für eine Eigenschaft abrufen, indem Sie die Kennung der Eigenschaft in den Pfad einer GET-Anfrage einschließen.
+Sie können eine Liste der Umgebungen für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -55,7 +55,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Umgebungen anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Umgebungen anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -163,7 +163,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Umgebungen für die angegebene Eig
 
 ## Suchen einer Umgebung {#lookup}
 
-Sie können eine Umgebung nachschlagen, indem Sie ihre Kennung im Pfad einer GET-Anfrage angeben.
+Sie können eine Umgebung suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -173,7 +173,7 @@ GET /environments/{ENVIRONMENT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `ENVIRONMENT_ID` | Die `id` der Umgebung, die Sie nachschlagen möchten. |
+| `ENVIRONMENT_ID` | Die `id` der Umgebung, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -272,7 +272,7 @@ Eine erfolgreiche Antwort gibt die Details der Umgebung zurück.
 
 ## Erstellen einer Umgebung {#create}
 
-Sie können eine neue Umgebung erstellen, indem Sie eine POST anfordern.
+Sie können eine neue Umgebung erstellen, indem Sie eine POST-Anfrage stellen.
 
 **API-Format**
 
@@ -288,7 +288,7 @@ POST /properties/{PROPERTY_ID}/environments
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Umgebung für die angegebene Eigenschaft. Der Aufruf verknüpft die Umgebung auch mit einem vorhandenen Host über die Eigenschaft `relationships` . Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md) .
+Die folgende Anfrage erstellt eine neue Umgebung für die angegebene Eigenschaft. Der Aufruf verknüpft die Umgebung auch mit einem vorhandenen Host über die Eigenschaft `relationships`. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -322,11 +322,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für die Umgebung. |
-| `attributes.archive` | Ein boolean -Wert, der angibt, ob der Build im Archivformat vorliegt. |
+| `attributes.archive` | Ein booleschern Wert, der angibt, ob der Build im Archivformat vorliegt. |
 | `attributes.archive_passphrase` | Ein Zeichenfolgenkennwort, mit dem die Archivdatei entsperrt werden kann. |
 | `attributes.path` | Ein Pfad von der Host-URL für die Umgebung. |
 | `attributes.stage` | Die Phase für die Umgebung (Entwicklung, Staging oder Produktion). |
-| `id` | Die `id` der Umgebung, die Sie aktualisieren möchten. Dies sollte mit dem Wert `{ENVIRONMENT_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` der Umgebung, die Sie aktualisieren möchten. Diese sollte mit dem `{ENVIRONMENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `environments` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -412,9 +412,9 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Umgebung zurück.
 }
 ```
 
-## Umgebung aktualisieren {#update}
+## Aktualisieren einer Umgebung {#update}
 
-Sie können eine Umgebung aktualisieren, indem Sie ihre ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können eine Umgebung aktualisieren, indem Sie ihre ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -430,7 +430,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` für eine bestehende Umgebung.
+Die folgende Anfrage aktualisiert den `name` für eine bestehende Umgebung.
 
 ```shell
 curl -X PATCH \
@@ -452,8 +452,8 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für die Umgebung aktualisiert werden sollen. Die folgenden Umgebungsattribute können aktualisiert werden: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Siehe Beispielaufruf für [Erstellen einer Umgebung](#create) für eine Liste der Attribute und ihres Anwendungsfalls. |
-| `id` | Die `id` der Umgebung, die Sie aktualisieren möchten. Dies sollte mit dem Wert `{ENVIRONMENT_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für die Umgebung aktualisiert werden sollen. Die folgenden Umgebungsattribute können aktualisiert werden: <ul><li>`archive`</li><li>`archive_passphrase`</li><li>`include_debug_library`</li><li>`name`</li><li>`path`</li></ul> Im Beispielaufruf für das [Erstellen einer Umgebung](#create) finden Sie eine Liste der Attribute und ihres Anwendungsfalls. |
+| `id` | Die `id` der Umgebung, die Sie aktualisieren möchten. Diese sollte mit dem `{ENVIRONMENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `environments` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -541,7 +541,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Umgebung zurück.
 
 ## Löschen einer Umgebung
 
-Sie können eine Umgebung löschen, indem Sie ihre ID in den Pfad einer DELETE-Anfrage einschließen.
+Sie können eine Umgebung löschen, indem Sie ihre ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -571,9 +571,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttex
 
 ## Abrufen verwandter Ressourcen für eine Umgebung {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Umgebung abrufen. Wenn [nach einer Umgebung](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Umgebung abrufen. Beim [Suchen nach einer Umgebung](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
 ### Auflisten der zugehörigen Builds für eine Umgebung {#builds}
 
@@ -688,13 +688,13 @@ Eine erfolgreiche Antwort gibt eine Liste von Builds zurück, die die angegebene
 }
 ```
 
-### Nachschlagen des zugehörigen Hosts nach einer Umgebung {#host}
+### Suchen des zugehörigen Hosts für eine Umgebung {#host}
 
-Sie können den Host nachschlagen, der eine Umgebung verwendet, indem Sie `/host` an den Pfad einer GET-Anfrage anhängen.
+Sie können den Host suchen, der eine Umgebung verwendet, indem Sie `/host` an den Pfad einer GET-Anfrage anhängen.
 
 >[!NOTE]
 >
->Sie können das Host-Beziehungsobjekt selbst über einen [separaten Aufruf](#host-relationship) nachschlagen.
+>Sie können das Host-Beziehungsobjekt selbst über einen [separaten Aufruf](#host-relationship) suchen.
 
 **API-Format**
 
@@ -704,7 +704,7 @@ GET  /environments/{ENVIRONMENT_ID}/host
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Host Sie nachschlagen möchten. |
+| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Host Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -759,9 +759,9 @@ Eine erfolgreiche Antwort gibt die Details des Hosts zurück, der die angegebene
 }
 ```
 
-### Nachschlagen der zugehörigen Bibliothek für eine Umgebung {#library}
+### Suchen der zugehörigen Bibliothek für eine Umgebung {#library}
 
-Sie können die Bibliothek nachschlagen, die eine Umgebung verwendet, indem Sie `/library` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Bibliothek suchen, die eine Umgebung verwendet, indem Sie `/library` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -771,7 +771,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Bibliothek Sie nachschlagen möchten. |
+| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Bibliothek Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -876,7 +876,7 @@ Eine erfolgreiche Antwort gibt die Details der Bibliothek zurück, die die angeg
 
 ### Suchen nach der zugehörigen Eigenschaft für eine Umgebung {#property}
 
-Sie können die Eigenschaft nachschlagen, der eine Umgebung gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Eigenschaft suchen, der eine Umgebung gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -886,7 +886,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Eigenschaft Sie nachschlagen möchten. |
+| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
