@@ -1,20 +1,20 @@
 ---
-title: Übersicht über die Hauptereignisweiterungserweiterung
-description: Erfahren Sie mehr über die Hauptereignisweiterungserweiterung in Adobe Experience Platform.
+title: Hauptereignisweiterleitungserweiterung – Übersicht
+description: Machen Sie sich mit der Ereignisweiterleitungserweiterung „Core“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1724'
-ht-degree: 92%
+ht-degree: 98%
 
 ---
 
-# Übersicht über die Hauptereignisweiterungserweiterung
+# Hauptereignisweiterleitungserweiterung – Übersicht
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Die Hauptereignis-Weiterleitungs-Erweiterung stellt die Standardereignisse, Bedingungen und Datentypen für die Ereignisweiterleitung in Adobe Experience Platform bereit.
+Die Hauptereignisweiterleitungserweiterung stellt die Standardereignisse, Bedingungen und Datentypen für die Ereignisweiterleitung in Adobe Experience Platform bereit.
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -22,7 +22,7 @@ Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim
 
 In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Bedingungstypen beschrieben. Diese Bedingungstypen können entweder mit dem Logiktyp „normal“ oder „Ausnahme“ verwendet werden.
 
-### Custom Code
+### Benutzerspezifischer Code
 
 Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss. Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor. Die Ereignisweiterleitung in Adobe Experience Platform unterstützt ES6.
 
@@ -179,7 +179,7 @@ Datenelementtypen werden durch die Erweiterung bestimmt. Die erstellbaren Typen 
 
 In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Datenelementtypen beschrieben. In anderen Erweiterungen werden andere Datenelementtypen verwendet.
 
-### Custom Code
+### Benutzerspezifischer Code
 
 Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf **[!UICONTROL Editor öffnen]** klicken und den Code in das Editor-Fenster einfügen.
 
@@ -224,4 +224,4 @@ arc.event.xdm.page.pageName
 
 >[!NOTE]
 >
->Der `interact`-Aufruf des Clients hat `events`, aber für die Ereignisweiterleitung benötigen Sie `event`. Dies liegt daran, dass die Ereignisweiterleitung jedes Ereignis einzeln prüft und nicht als Batch mehrerer Ereignisse, wie auf dem Client gezeigt.
+>Der `interact`-Aufruf des Clients enthält `events`, aber für die Ereignisweiterleitung benötigen Sie `event`. Der Grund dafür ist, dass die Ereignisweiterleitung jedes Ereignis einzeln prüft, während auf dem Client die Prüfung für einen Batch mehrerer Ereignisse erfolgt (wie dargestellt).
