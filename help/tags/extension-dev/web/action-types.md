@@ -1,10 +1,10 @@
 ---
 title: Aktionstypen für Web-Erweiterungen
-description: Erfahren Sie, wie Sie ein Bibliotheksmodul für einen Aktionstyp für eine Tag-Erweiterung in einer Webeigenschaft definieren.
+description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 49%
+ht-degree: 70%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 49%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Im Kontext von Datenerfassungs-Tags wird eine Aktion ausgeführt, nachdem ein Regelereignis aufgetreten ist und alle Bedingungen die Auswertung bestanden haben.
 
@@ -37,7 +37,7 @@ module.exports = function(settings) {
 };
 ```
 
-Damit die Nachricht beispielsweise vom Adobe Experience Platform-Benutzer konfiguriert werden kann, können Sie dem Benutzer die Eingabe und Speicherung einer Nachricht im settings-Objekt ermöglichen. Das Objekt sieht ungefähr so aus:
+Damit die Nachricht beispielsweise vom Adobe Experience Platform-Benutzer konfiguriert werden kann, können Sie dem Benutzer die Eingabe und Speicherung einer Nachricht im Einstellungsobjekt ermöglichen. Das Objekt sieht ungefähr so aus:
 
 ```json
 {
