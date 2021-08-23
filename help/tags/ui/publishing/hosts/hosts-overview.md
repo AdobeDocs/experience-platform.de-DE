@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die verschiedenen Hosting-Optionen in Adobe
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 81%
+ht-degree: 89%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Erweiterungen, Regeln und Datenelemente sind Bausteine. Wenn die Anwendung eine Aktion ausführen soll, werden diese Bausteine den Bibliotheken hinzugefügt. Anschließend wird in einem Build eine Bibliothek „erstellt“. Diese Builds werden an einem gehosteten Speicherort bereitgestellt.
 
