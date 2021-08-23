@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über das Kontextobjekt und die Rolle, die es bei
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '747'
-ht-degree: 82%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 82%
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+> Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Für alle Bibliotheksmodule in Edge-Erweiterungen wird beim Ausführen ein `context`-Objekt bereitgestellt. Dieses Dokument behandelt die Eigenschaften des `context`-Objekts und die Rolle, die sie in Bibliotheksmodulen spielen.
 
@@ -95,15 +95,15 @@ Bei der ersten Ausführung dieser Aktion ist `ruleStash` im Zustand `undefined` 
 
 >[!NOTE]
 >
->Achten Sie bei Verwendung dieser Strategie darauf, immer den vollständigen Stash der Erweiterungsregel zurückzugeben. Wenn Sie stattdessen nur einen Wert zurückgeben, werden alle anderen Eigenschaften überschrieben, die Sie festgelegt haben.
+>Achten Sie darauf, bei dieser Methode immer den vollständigen Erweiterungsregel-Stash zurückzugeben. Wenn Sie stattdessen nur einen Wert zurückgeben, werden alle anderen zuvor festgelegten Eigenschaften überschrieben.
 
 ## Hilfsprogramme
 
-Die `utils` -Eigenschaft stellt ein Objekt dar, das Dienstprogramme bereitstellt, die spezifisch für die Tag-Laufzeit sind.
+Die `utils`-Eigenschaft stellt ein Objekt zur Bereitstellung von Dienstprogrammen dar, die spezifisch für die Tag-Laufzeit sind.
 
 ### [!DNL logger]
 
-Mit dem Dienstprogramm `logger` können Sie Meldungen protokollieren, die während Debugging-Sitzungen angezeigt werden, wenn Sie [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) verwenden.
+Mit dem Dienstprogramm `logger` können Sie Meldungen protokollieren, die während Debugging-Sitzungen angezeigt werden, wenn Sie den [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) verwenden.
 
 ```js
 context.utils.logger.error('Error!');
