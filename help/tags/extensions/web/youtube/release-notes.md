@@ -1,18 +1,18 @@
 ---
 title: YouTube Video Tracking-Erweiterung – Versionshinweise
-description: Die neuesten Versionshinweise für die YouTube-Tag-Erweiterung für die Videoverfolgung in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '130'
-ht-degree: 56%
+ht-degree: 86%
 
 ---
 
-# YouTube Video Tracking-Erweiterung – Versionshinweise
+# Versionshinweise zur Erweiterung „YouTube Video Tracking“
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 4. Juni 2021
 
