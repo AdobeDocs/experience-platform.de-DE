@@ -1,10 +1,10 @@
 ---
 title: Self-Hosting von Bibliotheken
-description: Erfahren Sie, wie Sie Self-Hosting für Ihre Tag-Bibliothek-Builds in Adobe Experience Platform implementieren.
+description: Hier erfahren Sie, wie Sie Self-Hosting für Ihre Builds von Tag-Bibliotheken in Adobe Experience Platform implementieren können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '495'
-ht-degree: 71%
+ht-degree: 96%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Tags in Adobe Experience Platform ermöglichen die Erstellung eines Dateiensatzes namens [build](../builds.md). Dieser Dateisatz steuert das Verhalten Ihrer Anwendung zur Laufzeit.
+Tags in Adobe Experience Platform ermöglichen die Erstellung eines Dateisatzes, der als ein [Build](../builds.md) bezeichnet wird. Dieser Dateisatz steuert das Verhalten Ihres Programms zur Laufzeit.
 
 Builds müssen an einer anderen Stelle gehostet werden, damit sie zur Laufzeit bei Bedarf von Clientgeräten abgerufen werden können.
 
@@ -24,7 +24,7 @@ Platform kann entweder das Hosting dieser Dateien für Sie verwalten, oder Sie t
 
 Adobe ist nicht im Bereich Web-Hosting tätig. Wenn Sie sich dafür entscheiden, Adobe das Hosting zu überlassen, werden Ihre Builds an ein Drittanbieter-Netzwerk zur Inhaltsbereitstellung (Content Delivery Network, CDN) übergeben, mit dem wir einen Vertrag abgeschlossen haben.
 
-Derzeit ist der primäre CDN-Anbieter Akamai. Die auf Akamai gehosteten Dateien haben die Domäne `assets.adobedtm.com`.
+Derzeit ist der primäre CDN-Anbieter Akamai. Die auf Akamai gehosteten Dateien haben die Domain `assets.adobedtm.com`.
 
 ### Gründe für die Verwendung des verwalteten Hostings
 
@@ -32,17 +32,17 @@ Der primäre Grund für die Verwendung von verwaltetem Hosting ist der Komfort. 
 
 ## Selbstständiges Hosting
 
-Wenn Adobe Ihre gehosteten Dateien nicht verwalten soll, müssen Sie sie selbst hosten. Zum Hosten Ihrer Dateien müssen Sie die fertigen Builds von Platform abrufen und dafür verantwortlich sein, die Dateien über den Versionszyklus Ihres Unternehmens auf vom Unternehmen verwaltete Server abzurufen.
+Wenn Adobe Ihre gehosteten Dateien nicht verwalten soll, müssen Sie sie selbst hosten. Zum Hosten Ihrer Dateien müssen Sie die fertigen Builds von Platform abrufen. Zudem sind Sie dafür verantwortlich, die Dateien über den Versionszyklus Ihres Unternehmens auf vom Unternehmen verwaltete Server abzurufen.
 
 ### Gründe für die Verwendung des selbstständigen Hostings
 
 Es gibt mehrere Gründe dafür, Ihre eigenen Build-Dateien zu hosten.
 
-* Einige Browser blockieren die Domäne „assets.adobedtm.com“ aufgrund der Datenschutzeinstellungen, die der Endbenutzer konfiguriert hat.
+* Einige Browser blockieren die Domain „assets.adobedtm.com“ aufgrund der Datenschutzeinstellungen, die der Endbenutzer konfiguriert hat.
 * Das selbstständige Hosting reduziert die erforderliche Anzahl an DNS-Suchvorgängen.
 * Sie benötigen die Verwendung von HTTP/2
 * Sie verfügen über bestimmte Header für die Sicherheit.
-* Ihre Anforderungen an die Cache-Steuerung unterscheiden sich von den Standardeinstellungen der Adobe
+* Ihre Anforderungen für die Cache-Steuerung unterscheiden sich von den Standardeinstellungen von Adobe.
 * Sie möchten mehr Kontrolle über den Speicherort der Edge-Knoten haben.
 * Ihre Organisation verfügt über Sicherheits- und rechtliche Anforderungen, die die Verwendung der Option zur Verwaltung durch Adobe verhindern.
 
