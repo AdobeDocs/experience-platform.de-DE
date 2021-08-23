@@ -1,10 +1,10 @@
 ---
 title: Adobe Target v2-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Adobe Target v2-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1363'
-ht-degree: 71%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 71%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -30,21 +30,21 @@ Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Ei
 
 ### at.js-Einstellungen
 
-Alle Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie zum ersten Mal hinzugefügt wird. Daher sollten alle Einstellungen in der Datenerfassungs-Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
+All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie erstmalig hinzugefügt wird. Daher sollten alle Einstellungen in der Datenerfassungs-Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
 
 Die folgenden Konfigurationsoptionen sind verfügbar:
 
 #### Clientcode
 
-Der Client-Code ist die Kontokennung von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Sie kann mithilfe von Datenelementen geändert werden.
+Der Client-Code ist die Kontokennung von Target. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Er kann mithilfe von Datenelementen geändert werden.
 
 #### Organisations-ID
 
-Diese ID ordnet die Implementierung Ihrem Adobe Experience Cloud-Konto zu. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Sie kann mithilfe von Datenelementen geändert werden.
+Diese ID ordnet die Implementierung Ihrem Adobe Experience Cloud-Konto zu. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Er kann mithilfe von Datenelementen geändert werden.
 
-#### Serverdomäne
+#### Server-Domain
 
-Die Serverdomäne bezieht sich auf die Domäne, an die die Target-Anforderungen gesendet werden. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
+Die Server-Domain bezieht sich auf die Domain, an die die Target-Anforderungen gesendet werden. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
 
 #### DSGVO-Opt-in
 
@@ -64,35 +64,35 @@ Die Target-Erweiterung enthält die folgenden Aktionen im Then-Teil einer Regel:
 
 ### Target laden
 
-Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es im Kontext Ihrer Regel sinnvoll ist, Target zu laden. Dadurch wird die at.js-Bibliothek in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
+Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es sinnvoll ist, Target im Kontext Ihrer Regel zu laden. Dadurch wird die at.js-Bibliothek in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
 
 Es ist keine Konfiguration erforderlich.
 
 ### Laden von Target mit On-Device Decisioning
 
-Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es sinnvoll ist, Target zu laden, wobei [On-Device Decisioning](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=de) im Kontext Ihrer Regel aktiviert ist. Dadurch wird die at.js-Bibliothek mit aktiviertem On-Device Decisioning in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target mit On-Device Decisioning laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
+Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es im Kontext Ihrer Regel sinnvoll ist, Target mit [Entscheidungsfindung auf dem Gerät](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=de) zu laden. Dadurch wird die at.js-Bibliothek mit aktiviertem On-Device Decisioning in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden. Adobe empfiehlt, die Aktion „Target mit On-Device Decisioning laden“ nur zu verwenden, wenn ihr ein Target-Aufruf vorangestellt ist. Andernfalls könnten Fehler auftreten, wie z. B. die Verzögerung des Analytics-Aufrufs.
 
 Es ist keine Konfiguration erforderlich.
 
 ### Hinzufügen von Parametern zu allen Anfragen
 
-Dieser Aktionstyp ermöglicht das Hinzufügen von Parametern zu allen Target-Anforderungen. Die Aktion „Target laden“ muss vorher verwendet werden.
+Dieser Aktionstyp ermöglicht das Hinzufügen von Parametern zu allen Target-Anfragen. Die Aktion „Target laden“ muss vorher verwendet werden.
 
 1. Geben Sie den Namen und den Wert eines beliebigen Parameters an, den Sie hinzufügen möchten.
 1. Klicken Sie auf das Symbol zum Hinzufügen, um weitere Parameter hinzuzufügen.
 
 ### Hinzufügen von Parametern zur Seitenladeanfrage
 
-Mit diesem Aktionstyp können Parameter speziell zu Ihren Seitenladeanfragen hinzugefügt werden. Die Aktion „Target laden“ muss vorher verwendet werden.
+Mit diesem Aktionstyp können Parameter gezielt zu Ihren Seitenladeanfragen hinzugefügt werden. Die Aktion „Target laden“ muss vorher verwendet werden.
 
 1. Geben Sie den Namen und den Wert eines beliebigen Parameters an, den Sie hinzufügen möchten.
 1. Klicken Sie auf das Symbol zum Hinzufügen, um weitere Parameter hinzuzufügen.
 
 ### Auslösen einer Seitenladeanforderung
 
-Mit diesem Aktionstyp kann Target eine Anforderung auslösen, wenn Ihre Seite geladen wird. Die Aktion „Target laden“ muss vorher verwendet werden.
+Mit diesem Aktionstyp kann Target eine Anfrage auslösen, wenn Ihre Seite geladen wird. Die Aktion „Target laden“ muss vorher verwendet werden.
 
-Sie müssen angeben, ob die Ausblendung des Textkörpers aktiviert werden soll, um Flackern zu verhindern, und den Stil angeben, der beim Ausblenden des Textkörperelements verwendet wird. Die folgenden Optionen sind verfügbar:
+Geben Sie an, ob Sie die Ausblendung des Textkörpers aktivieren möchten, um Flimmern zu verhindern. Geben Sie außerdem den Stil an, der beim Ausblenden des Textkörperelements verwendet wird. Die folgenden Optionen sind verfügbar:
 
 * **Ausblendung des Textkörpers:** Sie können diese Einstellung aktivieren oder deaktivieren. Der Standardwert lautet „Aktiviert“, was bedeutet, dass der HTML-TEXTKÖRPER ausgeblendet wird.
 * **Ausgeblendeter Textkörperstil:** Der Standardwert lautet „body{opacity:0}“. Dieser Wert kann abgeändert werden, beispielsweise zu body{display:none}.
@@ -101,7 +101,7 @@ Weitere Informationen finden Sie in der [Onlinehilfe zu Target](https://experien
 
 ### Auslösen einer Ansicht
 
-Die Aktion &quot;Trigger-Ansicht&quot;kann immer dann aufgerufen werden, wenn eine neue Seite geladen oder eine Komponente auf einer Seite erneut gerendert wird. Die Trigger-Ansicht sollte für Einzelseiten-Apps implementiert werden.
+Die Aktion „Auslösen einer Ansicht“ kann immer aufgerufen werden, wenn eine neue Seite geladen wird oder wenn eine Komponente auf einer Seite erneut gerendert wird. Das Auslösen einer Ansicht sollte für Single Page Applications implementiert werden.
 
 1. Geben Sie den Namen der Ansicht an, die ausgelöst werden muss.
 1. Geben Sie an, ob das Auslösen der Ansicht einer Impression für das Reporting zugewiesen werden soll, indem Sie das Seitenkontrollkästchen markieren. Wenn die Ansicht mit einer Komponente korreliert wird, die erneut gerendert wird, und nicht einer Impression für das Reporting zugeschrieben wird, lassen Sie das Seitenkontrollkästchen deaktiviert.
@@ -116,24 +116,24 @@ Eine Target-Regel mit dieser grundlegenden Implementierung sieht folgendermaßen
 
 ![](../../../images/targetv2deploy.png)
 
-Nachdem Sie diese Regel gespeichert haben, müssen Sie sie zu einer Bibliothek hinzufügen und erstellen/bereitstellen, damit Sie das Verhalten testen können.
+Nach dem Speichern dieser Regel müssen Sie sie einer Bibliothek hinzufügen und erstellen/bereitstellen, damit Sie das Verhalten testen können.
 
 ## Adobe Target-Erweiterung mit einer asynchronen Implementierung
 
-Tags können asynchron bereitgestellt werden. Wenn Sie die Tag-Bibliothek asynchron mit Target darin laden, wird Target auch asynchron geladen. Dieses Szenario wird vollständig unterstützt. Es muss jedoch eine weitere Tatsache beachtet werden.
+Tags können asynchron bereitgestellt werden. Wenn Sie die Tag-Bibliothek asynchron laden, in der sich Target befindet, wird Target ebenfalls asynchron geladen. Dieses Szenario wird vollständig unterstützt. Es muss jedoch eine weitere Tatsache beachtet werden.
 
-In asynchronen Implementierungen ist es möglich, dass die Seite das Rendern der Standardinhalte fertig stellt, bevor die Target-Bibliothek vollständig geladen wurde und den Tausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern vermeiden möchten, empfehlen wir, einen vorab ausgeblendeten Ausschnitt zu verwenden und das Tag-Bundle asynchron zu laden, um ein Flackern der Inhalte zu vermeiden.
+In asynchronen Implementierungen ist es möglich, dass die Seite das Rendern der Standardinhalte fertig stellt, bevor die Target-Bibliothek vollständig geladen wurde und den Tausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern verhindern möchten, empfehlen wir, ein spezielles Code-Fragment zu verwenden, das den Seiteninhalt vorab ausblendet, und das Tag-Bundle asynchron zu laden.
 
 Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab ausgeblendeten Ausschnitts beachten sollten:
 
-* Das Snippet muss vor dem Laden des Tag-Header-Einbettungscodes hinzugefügt werden.
-* Dieser Code kann nicht von -Tags verwaltet werden. Daher muss er der Seite direkt hinzugefügt werden.
+* Das Fragment muss vor dem Laden des Einbettungs-Codes für den Tag-Header hinzugefügt werden.
+* Dieser Code kann von Tags nicht verwaltet werden. Daher muss er der Seite direkt hinzugefügt werden.
 * Die Seite wird angezeigt, wenn das früheste der folgenden Ereignisse eintritt:
    * Wenn die globale Seitenladeantwort empfangen wurde
    * Wenn für die Seitenladeanfrage eine Zeitüberschreitung eintritt
    * Wenn für den Ausschnitt selbst eine Zeitüberschreitung eintritt
 * Die Aktion „Seitenladeanfrage auslösen“ sollte auf allen Seiten verwendet werden, bei denen der vorab ausgeblendete Ausschnitt zum Einsatz kommt, um die Dauer der Vorab-Ausblendung zu minimieren.
-* Das Ausblenden des Textkörpers muss auch in der Aktion &quot;Seitenladeanforderung&quot;der Seitenladeregel aktiviert sein, die Sie für Target in der Datenerfassungs-Benutzeroberfläche verwenden. Andernfalls bleiben alle Seitenladevorgänge für die Timeout-Zeit ausgeblendet.
+* Das Ausblenden des Textkörpers muss auch in der Seitenladeregel in der Aktion „Seitenladeanfrage“ aktiviert sein, die Sie für die Target-Komponente in der Datenerfassungs-Benutzeroberfläche verwenden. Andernfalls bleiben alle Seitenladevorgänge während der Zeitüberschreitung ausgeblendet.
 
 Der vorab ausgeblendete Codeausschnitt lautet wie folgt und kann minimiert werden. Die konfigurierbaren Optionen befinden sich am Ende:
 
