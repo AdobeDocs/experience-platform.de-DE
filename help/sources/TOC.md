@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Datenaufnahme, Quellen
-source-git-commit: 031849fcc351794e7eb1da691bd4015368a043b6
+source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '639'
 ht-degree: 18%
 
 ---
@@ -73,6 +73,8 @@ ht-degree: 18%
       - [PostgreSQL-Connector](connectors/databases/postgres.md)
    - E-Commerce {#ecommerce}
       - [Shopify Connector](connectors/ecommerce/shopify.md)
+   - Lokales System {#local-system}
+      - [Lokaler Datei-Upload-Connector](connectors/local-system/local-file-upload.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -134,7 +136,7 @@ ht-degree: 18%
       - Protokolle {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
       - Streaming {#streaming}
-         - [-HTTP-API ](tutorials/api/create/streaming/http.md)
+         - [HTTP-API](tutorials/api/create/streaming/http.md)
    - Daten erkunden {#explore}
       - [Werbedaten durchsuchen](tutorials/api/explore/advertising.md)
       - [Cloud-Speicherdaten durchsuchen](tutorials/api/explore/cloud-storage.md)
@@ -214,6 +216,8 @@ ht-degree: 18%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
       - E-Commerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+      - Lokales System {#local-system}
+         - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -222,7 +226,7 @@ ht-degree: 18%
       - Protokolle {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
-         - [-HTTP-API ](tutorials/ui/create/streaming/http.md)
+         - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Datenfluss konfigurieren {#dataflow}
       - [Datenfluss der Werbeverbindung](tutorials/ui/dataflow/advertising.md)
       - [Datenfluss der Batch-Cloud-Speicherverbindung](tutorials/ui/dataflow/batch/cloud-storage.md)
