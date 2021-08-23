@@ -1,10 +1,10 @@
 ---
 title: Gemeinsam genutzte Module in Web-Erweiterungen
-description: Erfahren Sie, wie Sie gemeinsame Bibliotheksmodule für Web-Erweiterungen in Adobe Experience Platform definieren.
+description: Erfahren Sie, wie Sie in Adobe Experience Platform gemeinsame Bibliotheksmodule für Web-Erweiterungen definieren können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '272'
-ht-degree: 65%
+ht-degree: 81%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Ein gemeinsames Modul ist ein Mechanismus, der Ihnen ermöglicht, mit anderen Erweiterungen zu kommunizieren. Beispielsweise kann Erweiterung A ein Datenelement asynchron laden und es über ein [Versprechen](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) für Erweiterung B verfügbar machen.
 
@@ -22,7 +22,7 @@ Gemeinsame Module werden in Tag-Bibliotheken eingeschlossen, selbst wenn sie nie
 
 Gemeinsame Module verfügen nicht über eine Ansicht-Komponente.
 
-Bei der Entwicklung Ihrer eigenen Tag-Erweiterung können Sie alle freigegebenen Module definieren, die Sie damit bereitstellen möchten. Sie können beispielsweise ein Modul erstellen, das eine User-ID asynchron lädt und dann diese User-ID über ein Versprechen mit einer anderen Erweiterung teilt:
+Wenn Sie eine eigene Tag-Erweiterung entwickeln, können Sie alle gemeinsamen Module definieren, die Sie mit ihr bereitstellen möchten. Sie können beispielsweise ein Modul erstellen, das eine User-ID asynchron lädt und dann diese User-ID über ein Versprechen mit einer anderen Erweiterung teilt:
 
 ```javascript
 var userIdPromise = new Promise(/* load user ID, then resolve promise */);
