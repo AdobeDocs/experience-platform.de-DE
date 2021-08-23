@@ -1,18 +1,18 @@
 ---
 title: Versionshinweise zur Adobe Target v2-Erweiterung
-description: Die neuesten Versionshinweise für die Adobe Target v2-Tag-Erweiterung in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '572'
-ht-degree: 61%
+ht-degree: 77%
 
 ---
 
-# Versionshinweise zur Adobe Target v2-Erweiterung
+# Versionshinweise zur Erweiterung „Adobe Target v2“
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 20. Juli 2021
 
@@ -32,7 +32,7 @@ ht-degree: 61%
 - `sessionId` Cookie-Ablauf wird bei jedem Netzwerkaufruf korrekt verlängert
 - Die Initialisierung des SPA-Cache wird jetzt korrekt verarbeitet und berücksichtigt `viewsEnable`-Einstellungen
 
-## 2. Juni 2021
+## 2. Juni 2021
 
 ### Adobe Target v2-Erweiterung 0.14.2
 
@@ -57,7 +57,7 @@ ht-degree: 61%
 ### Adobe Target v2-Erweiterung 0.13.7
 
 - Es wurde ein Problem behoben, bei dem `targetPageParams` in Mbox-Anforderungen enthalten war. `targetPageParams` sollten nur in `pageLoad`-Anforderungen aufgenommen werden.
-- Es wurde ein Problem mit globalen Dokumenten- und Fensterobjekten in der Tag-Erweiterung behoben, indem globale Objektabhängigkeiten durch direkte Verweise auf sie ersetzt wurden.
+- Es wurde ein Problem mit globalen Dokument- und Fensterobjekten in der Tag-Erweiterung behoben, indem die globalen Objektabhängigkeiten durch direkte Verweise darauf ersetzt wurden.
 - „at.js“ wurde auf 2.4.1 aktualisiert.
 
 ## 25. Januar 2021
@@ -88,8 +88,8 @@ ht-degree: 61%
 
 ### Adobe Target v2-Erweiterung 0.13.2
 
-- Es wurde ein Fehler bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 1.x fälschlicherweise die Serverdomäne erstellte, wodurch die Target-Anfrage fehlschlug.
-- Es wurde ein Problem behoben, bei dem Target bei Verwendung der v2-Tag-Erweiterung für die Target- und Adobe Analytics-Tag-Erweiterung den Analytics-Aufruf &quot;sendBeacon&quot;verzögerte.
+- Es wurde ein Fehler bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 1.x fälschlicherweise die Server-Domain erstellte, wodurch die Target-Anfrage fehlschlug.
+- Es wurde ein Problem behoben, bei dem bei Verwendung der v2-Tag-Erweiterung für Target und Adobe Analytics Target den sendBeacon-Aufruf an Analytics verzögerte.
 - Die `deviceIdLifetime` Einstellung wurde verbessert, indem sie durch `targetGlobalSettings` überschrieben werden kann.
 
 ## 25. März 2020
@@ -109,7 +109,7 @@ ht-degree: 61%
 - Zuvor führte die ECID-Bibliothek zwei Sperraufrufe durch, bevor at.js Erlebnisse abrufen konnte. Dies wurde auf einen einzigen Aufruf reduziert, wodurch die Leistung deutlich verbessert wird.
 
 >[!NOTE]
->Bitte aktualisieren Sie Ihre ECID-Tag-Erweiterung auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
+>Aktualisieren Sie Ihre ECID-Tag-Erweiterung auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
 
 ## 31. Juli 2019
 
