@@ -1,18 +1,18 @@
 ---
 title: Versionshinweise für die Adobe Analytics-Erweiterung
-description: Die neuesten Versionshinweise für die Adobe Analytics-Tag-Erweiterung in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1221'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
-# Adobe Analytics-Erweiterung – Versionshinweise
+# Versionshinweise zur Erweiterung „Adobe Analytics“
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 6. August 2020
 
@@ -33,7 +33,7 @@ ht-degree: 94%
 
 #### Fehlerkorrekturen
 
-* Es wurde ein Fehler behoben, durch den die Warenkorbereignisse (prodView, scAdd, scView usw.) nicht im Ereignis-Dropdownmenü angezeigt wurden. All diese Optionen sollten jetzt aus der Dropdownliste ausgewählt werden können.
+* Es wurde ein Fehler behoben, durch den die Warenkorbereignisse (prodView, scAdd, scView usw.) nicht im Ereignis-Dropdown-Menü angezeigt wurden. All diese Optionen sollten jetzt aus der Dropdown-Liste ausgewählt werden können.
 
 #### Funktionen
 
@@ -135,7 +135,7 @@ ht-degree: 94%
 #### Funktionen
 
 * Aktualisierung der Adobe Analytics-Erweiterung auf [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.14.0), die unter anderem ein bekanntes clearVars-Problem behebt
-* Hinzufügung eines Exchange-Links zur Erweiterung. Die Exchange-Liste kann über die Option „Erweiterungsinfo“ im Dropdown-Menü aufgerufen werden.
+* Hinzufügung eines Exchange-Links zur Erweiterung. Der Exchange-Listeneintrag kann über die Option „Erweiterungsinfo“ im Dropdown-Menü aufgerufen werden.
 
 #### Fehlerkorrekturen
 
@@ -230,13 +230,13 @@ ht-degree: 94%
 
 #### **Funktionen**
 
-* Unterstützung von AppMeasurement 2.9.
-* Hinzufügung der Funktion „Tracker global zugänglich machen“, wodurch der Tracker unter `windows.s` global geladen werden kann.
+* Aktualisierung der Adobe Analytics-Erweiterung zur Unterstützung von AppMeasurement 2.9.
+* Hinzufügung der Funktion „Tracker global zugänglich machen“ in der Adobe Analytics-Erweiterung, wodurch der Tracker unter `windows.s` global geladen werden kann.
 
 #### **Fehlerkorrekturen**
 
 * Behebung eines Fehlers, durch den die Listenansicht beim Zurückkehren aus der Detailansicht zurückgesetzt wurde
-* Behebung einiger Fehler, um das Laden von Ressourcen in der Überarbeitungsauswahl zu verbessern
+* Behebung einiger Fehler, um das Laden von Ressourcen in der Revisionsauswahl zu verbessern
 * Behebung eines Fehlers, durch den s.events von mehreren Regeln in der Adobe Analytics-Erweiterung überschrieben wurden.
 
 ## 20. März 2018
@@ -246,7 +246,7 @@ ht-degree: 94%
 #### **Funktionen**
 
 * Aktualisierung von AppMeasurement.js auf Version 2.8.0.
-* Fügt Unterstützung für serverseitige Weiterleitung hinzu
+* Fügt Unterstützung für Server-seitige Weiterleitung hinzu
 
 ## 8. Februar 2018
 
@@ -255,7 +255,7 @@ ht-degree: 94%
 #### **Funktionen**
 
 * Aktualisierung von AppMeasurement auf Version 2.6.
-* Der initialisierte Analytics-Tracker wird jetzt über ein freigegebenes Modul in der Adobe Experience Platform-Tag-Erweiterung verfügbar gemacht, sodass andere Erweiterungen Code zur Interaktion mit ihm enthalten können.
+* Der initialisierte Analytics-Tracker wird jetzt über ein freigegebenes Modul in der Adobe Experience Platform-Tag-Erweiterung offengelegt, sodass andere Erweiterungen Code zur Interaktion mir ihr enthalten können.
 
 #### **Fehlerkorrekturen**
 
