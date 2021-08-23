@@ -1,10 +1,10 @@
 ---
 title: Umgebungen
-description: Erfahren Sie mehr über das Konzept von Tag-Umgebungen und ihre Funktionsweise in Adobe Experience Platform.
+description: Erfahren Sie mehr über das Konzept von Tag-Umgebungen und darüber, wie sie in Adobe Experience Platform funktionieren.
 source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
 workflow-type: tm+mt
 source-wordcount: '1468'
-ht-degree: 81%
+ht-degree: 98%
 
 ---
 
@@ -12,17 +12,17 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Tag-Umgebungen definieren mehrere wichtige Aspekte der Bibliotheks-Builds, die Sie auf Ihrer Website oder in Ihrer App bereitstellen:
+Tag-Umgebungen definieren mehrere Hauptaspekte der Bibliotheks-Builds, die Sie auf Ihrer Website oder in Ihrer Mobile App bereitstellen:
 
 * Den Dateinamen des Builds
 * Die Domain und den Pfad des Builds, je nach zugewiesenem Host der Umgebung
 * Das Dateiformat des Builds, je nach ausgewählter Archivierungsoption
 
-Wenn Sie einen Bibliotheks-Build  erstellen, müssen Sie ihn einer Umgebung zuweisen. Die Erweiterungen, Regeln und Datenelemente des Builds werden dann kompiliert und in die zugewiesene Umgebung eingefügt. Jede Umgebung bietet einen eindeutigen Einbettungs-Code, mit dem Sie den zugewiesenen Build in Ihre Website integrieren können.
+Wenn Sie einen Bibliotheks-Build erstellen, müssen Sie ihn einer Umgebung zuweisen. Die Erweiterungen, Regeln und Datenelemente des Builds werden dann kompiliert und in die zugewiesene Umgebung eingefügt. Jede Umgebung bietet einen eindeutigen Einbettungs-Code, mit dem Sie den zugewiesenen Build in Ihre Website integrieren können.
 
-In jeder Umgebung können verschiedene Artefakte vorhanden sein. Dadurch können Sie verschiedene Bibliotheken in verschiedenen Umgebungen testen, während Sie Ihren Workflow durchlaufen.
+In den einzelnen Umgebungen können verschiedene Artefakte vorhanden sein. Dadurch können Sie verschiedene Bibliotheken in verschiedenen Umgebungen testen, während Sie Ihren Workflow durchlaufen.
 
 In diesem Dokument wird beschrieben, wie Sie verschiedene Umgebungen in der Datenerfassungs-Benutzeroberfläche installieren, konfigurieren und erstellen.
 
@@ -36,7 +36,7 @@ Tags unterstützen drei verschiedene Umgebungstypen, die jeweils einem anderen S
 | Staging | Diese Umgebung entspricht den Spalten **Gesendet** und **Genehmigt** im Publishing-Workflow. |
 | Produktion | Diese Umgebung entspricht der Spalte **Veröffentlicht** im Publishing-Workflow. |
 
-In den einzelnen Umgebungen können verschiedene -Artefakte vorhanden sein. Dadurch können Sie verschiedene Bibliotheken in verschiedenen Umgebungen testen, während Sie den Publishing-Workflow durchlaufen.
+In den einzelnen Umgebungen können verschiedene Artefakte vorhanden sein. Dadurch können Sie verschiedene Bibliotheken in verschiedenen Umgebungen testen, während Sie den Publishing-Workflow durchlaufen.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Wenn Sie eine Web-Eigenschaft verwenden, erhalten Sie einen Einbettungs-Code, de
 
 ![](./images/environments/web-instructions.png)
 
-Wenn Sie eine mobile Eigenschaft verwenden, erhalten Sie separate Anweisungen zum Installieren von Abhängigkeiten für Android (über [Gradle](https://gradle.org/)) und iOS (über [CocoaPods](https://cocoapods.org/)).
+Wenn Sie eine Mobile-Eigenschaft verwenden, erhalten Sie separate Anweisungen zum Installieren von Abhängigkeiten für Android (über [Gradle](https://gradle.org/)) und iOS (über [CocoaPods](https://cocoapods.org/)).
 
 ![](./images/environments/mobile-instructions.png)
 
@@ -74,7 +74,7 @@ Weitere Informationen finden Sie in der Übersicht zu [Hosts](./hosts/hosts-over
 
 ## Web-Konfiguration
 
-Die Einstellungen aus der zugewiesenen Umgebung bestimmen Folgendes für Webeigenschaften:
+Die Einstellungen aus der zugewiesenen Umgebung bestimmen Folgendes für Web-Eigenschaften:
 
 * **Host**: Der Server-Speicherort, auf dem der Build bereitgestellt werden soll.
 * **Archiveinstellung**: Gibt an, ob das System bereitstellbare Dateien ausgeben oder in einem Archivformat komprimieren soll.
@@ -90,13 +90,13 @@ Klicken Sie auf **[!UICONTROL Host]**, um einen vorkonfigurierten Host für die 
 
 ![](./images/environments/select-host.png)
 
-Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Hosts in der Datenerfassungs-Benutzeroberfläche finden Sie in der [hosts - Übersicht](./hosts/hosts-overview.md).
+Wenn ein Build erstellt wird, wird dieser Build an dem Speicherort bereitgestellt, den Sie für den zugewiesenen Host angegeben haben. Informationen zum Erstellen und Konfigurieren von Hosts in der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Hosts](./hosts/hosts-overview.md).
 
 ### Archivierungseinstellungen {#archive}
 
 Die meisten Builds bestehen aus mehreren Dateien. Aus mehreren Dateien bestehende Builds enthalten eine Hauptbibliotheksdatei (verknüpft im Einbettungs-Code), die interne Verweise auf die anderen Dateien aufweist, die nach Bedarf aufgerufen werden.
 
-Mit der Schaltfläche **[!UICONTROL Archiv erstellen]** können Sie die Archivierungseinstellung der Umgebung umschalten. Standardmäßig ist die Archivierungsoption deaktiviert und der Build wird in einem Format bereitgestellt, das wie vorgesehen ausgeführt wird (JavaScript für Web-Eigenschaften und JSON für mobile Eigenschaften).
+Mit der Schaltfläche **[!UICONTROL Archiv erstellen]** können Sie die Archivierungseinstellung der Umgebung umschalten. Standardmäßig ist die Archivierungsoption deaktiviert und der Build wird in einem Format bereitgestellt, das wie vorgesehen ausgeführt wird (JavaScript für Web-Eigenschaften und JSON für Mobile-Eigenschaften).
 
 Wenn Sie die Archivierungseinstellung aktivieren, werden in der Benutzeroberfläche zusätzliche Konfigurationseinstellungen angezeigt, mit denen Sie optional die Archivdatei verschlüsseln und einen Pfad zur Bibliothek definieren können, wenn Sie Self-Hosting verwenden.
 
@@ -112,13 +112,13 @@ Wenn Sie die Archivierungsoption verwenden, werden alle Build-Dateien stattdesse
 
 ### Einbettungs-Code {#embed-code}
 
-Ein Einbettungs-Code ist ein `<script>`-Tag, das die `<head>`-Abschnitte Ihrer Web-Seiten eingefügt werden muss, um den von Ihnen erstellten Code in  zu laden und auszuführen. Jede Umgebungskonfiguration generiert automatisch einen eigenen Einbettungscode, sodass Sie ihn nur kopieren und auf den Seiten einfügen müssen, auf denen die Tags ausgeführt werden sollen.
+Ein Einbettungs-Code ist ein `<script>`-Tag, das die `<head>`-Abschnitte Ihrer Web-Seiten eingefügt werden muss, um den von Ihnen erstellten Code zu laden und auszuführen. Jede Umgebungskonfiguration erzeugt automatisch einen eigenen Einbettungs-Code, sodass Sie ihn nur kopieren und auf den Seiten einfügen müssen, auf denen Tags ausgeführt werden sollen.
 
-Bei der Ansicht der Installationsanweisungen können Sie festlegen, ob das Skript die Bibliotheksdateien synchron oder asynchron laden soll. Diese Einstellung ist nicht persistent und gibt nicht an, wie Sie auf Ihrer Site Tags tatsächlich implementiert haben. Vielmehr soll nur gezeigt werden, wie die Umgebung richtig installiert werden kann.
+Bei der Ansicht der Installationsanweisungen können Sie festlegen, ob das Skript die Bibliotheksdateien synchron oder asynchron laden soll. Diese Einstellung ist nicht beständig und spiegelt nicht wider, wie Sie Tags auf Ihrer Site tatsächlich implementiert haben. Vielmehr soll nur gezeigt werden, wie die Umgebung richtig installiert werden kann.
 
 >[!WARNING]
 >
->Je nach Inhalt Ihrer Tag-Bibliothek kann sich das Verhalten Ihrer Regeln und anderer Elemente zwischen der synchronen und der asynchronen Implementierung ändern. Es ist daher wichtig, alle Änderungen, die Sie vornehmen, gründlich zu testen.
+>Je nach Inhalt der Tag-Bibliothek kann sich das Verhalten der Regeln und anderer Elemente zwischen der synchronen und der asynchronen Implementierung ändern. Es ist daher wichtig, alle Änderungen, die Sie vornehmen, gründlich zu testen.
 
 #### Asynchrone Implementierung
 
@@ -128,7 +128,7 @@ Weitere Informationen zu dieser Einstellung finden Sie im Handbuch zur [asynchro
 
 #### Synchrone Implementierung
 
-Wenn der Browser einen Einbettungscode mithilfe der synchronen Implementierung liest, ruft er die Tag-Bibliothek ab und führt sie aus, bevor er die Seite weiter lädt.
+Wenn der Browser einen Einbettungs-Code mithilfe der synchronen Implementierung liest, ruft er die Tag-Bibliothek ab und führt sie aus, bevor er die Seite weiter lädt.
 
 Synchrone Einbettungs-Codes bestehen aus zwei `<script>`-Tags, die in den HTML-Code Ihrer Website eingefügt werden müssen. Ein `<script>`-Tag muss im Dokument-`<head>` platziert werden, das andere muss direkt vor dem schließenden `</body>`-Tag platziert werden.
 
@@ -142,7 +142,7 @@ Da Einbettungs-Codes basierend auf Ihren Umgebungskonfigurationen generiert werd
 
 >[!WARNING]
 >
->Wenn sich der Einbettungscode einer Tag-Umgebung ändert, müssen Sie die Einbettungscodes in Ihrem HTML-Code manuell aktualisieren. Um kostenaufwändige Wartungsarbeiten zu vermeiden, sollten Sie Ihre Einbettungs-Codes nur dann aktualisieren, wenn dies unbedingt erforderlich ist.
+>Wenn sich der Einbettungs-Code einer Tag-Umgebung ändert, müssen Sie die Einbettungs-Codes im HTML-Code manuell aktualisieren. Um kostenaufwändige Wartungsarbeiten zu vermeiden, sollten Sie Ihre Einbettungs-Codes nur dann aktualisieren, wenn dies unbedingt erforderlich ist.
 
 ## Erstellen einer Umgebung
 
