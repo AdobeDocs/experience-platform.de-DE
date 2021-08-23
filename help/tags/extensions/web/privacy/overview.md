@@ -1,10 +1,10 @@
 ---
 title: Adobe-Datenschutzerweiterung – Übersicht
-description: Erfahren Sie mehr über die Adobe Privacy Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Privacy“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 92%
+ht-degree: 96%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 92%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Adobe-Datenschutzerweiterung bietet Funktionen zum Erfassen und Entfernen von Benutzer-IDs, die Endbenutzern von Adobe-Lösungen zugewiesen wurden.
 
