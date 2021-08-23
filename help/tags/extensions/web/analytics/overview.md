@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Adobe Analytics-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 94%
+ht-degree: 99%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zum Konfigurieren der Adobe Analytics-Erweiterung und den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -88,7 +88,7 @@ Ermöglicht das Einfügen des Kern-Codes [AppMeasurement.js](https://experiencel
 
 >[!NOTE]
 >
->Der im Code-Editor für Tags verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Tag-Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
+>Der im Tag-Editor verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Tag-Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
 
 #### Folgende Report Suites für Tracker festlegen
 
@@ -110,12 +110,12 @@ Wählen Sie im Bereich „Allgemein“ der Konfigurationsseite eine Option aus. 
 
 Dadurch wird das Tracking auf der Grundlage des Cookies zum Datenschutz in der EU aktiviert oder deaktiviert.
 
-Wenn Sie das Kontrollkästchen „EU-Konformität“ aktivieren, wird das Feld [!UICONTROL Tracking Cookie Name] angezeigt. Das Tracking-Cookie überschreibt den standardmäßigen Tracking-Cookie-Namen. Sie können den von Tags verwendeten Namen anpassen, um Ihren Opt-out-Status beim Empfang anderer Cookies zu verfolgen.
+Wenn Sie das Kontrollkästchen „EU-Konformität“ aktivieren, wird das Feld [!UICONTROL Tracking Cookie Name] angezeigt. Das Tracking-Cookie überschreibt den standardmäßigen Tracking-Cookie-Namen. Sie können den von Tags verwendeten Namen zur Verfolgung Ihres Opt-out-Status für den Erhalt anderer Cookies anpassen.
 
 Wenn eine Seite geladen wird, überprüft das System, ob ein Cookie mit dem Namen „sat\_track“ festgelegt ist (oder das benutzerdefinierte Cookie mit dem Namen, der auf der Seite „Eigenschaft bearbeiten“ angegeben wurde). Die folgenden Informationen sind zu berücksichtigen:
 
-* Wenn das Cookie nicht vorhanden ist oder wenn das Cookie vorhanden und auf einen anderen Wert als „true“ festgelegt ist, wird das Laden des Tools übersprungen, wenn diese Einstellung aktiviert ist. Das bedeutet, dass der Teil der Regel, der sich auf das Tool stützt, keine Anwendung findet. Wenn eine Regel Analysen mit EU-Konformität für Drittanbietercode umfasst und das Cookie auf „false“ festgelegt wird, wird der Drittanbietercode dennoch ausgeführt. Die Analysevariablen werden jedoch nicht festgelegt.
-* Wenn das Cookie vorhanden ist, jedoch auf „true“ festgelegt ist, wird das Tool normal geladen.
+* Wenn das Cookie nicht vorhanden ist oder wenn das Cookie vorhanden und auf einen anderen Wert als  „true“ festgelegt ist, wird das Laden des Tools übersprungen, wenn diese Einstellung aktiviert ist. Das bedeutet, dass der Teil der Regel, der sich auf das Tool stützt, keine Anwendung findet. Wenn eine Regel Analysen mit EU-Konformität für Drittanbietercode umfasst und das Cookie auf „false“ festgelegt wird, wird der Drittanbietercode dennoch ausgeführt. Die Analysevariablen werden jedoch nicht festgelegt.
+* Wenn das Cookie vorhanden ist, jedoch auf  „true“ festgelegt ist, wird das Tool normal geladen.
 
 Sie sind dafür verantwortlich, das Cookie „sat\_track“ (oder das Cookie mit benutzerdefiniertem Namen) auf „false“ festzulegen, wenn ein Besucher eine Abwahl trifft. Dazu können Sie den folgenden benutzerdefinierten Code verwenden:
 
@@ -123,7 +123,7 @@ Sie sind dafür verantwortlich, das Cookie „sat\_track“ (oder das Cookie mit
 _satellite.cookie.set("sat_track", "false");
 ```
 
-Sie müssen außerdem über einen Mechanismus verfügen, mit dem dieses Cookie auf „true“ festgelegt wird, wenn ein Benutzer es später aktivieren können soll:
+Sie müssen außerdem über einen Mechanismus verfügen, mit dem dieses Cookie auf  „true“ festgelegt wird, wenn ein Benutzer es später aktivieren können soll:
 
 ```javascript
 _satellite.cookie.set("sat_track", "true");
@@ -224,19 +224,19 @@ Siehe [visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-
 
 ### Besucher-Namespace
 
-Variable zur Angabe der Domäne, bei der Cookies gesetzt werden.
+Variable zur Angabe der Domain, bei der Cookies gesetzt werden.
 
 Siehe [visitorNamespace](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitornamespace.html?lang=de).
 
 ### Domain Periods
 
-Die Domäne, in der die Analytics-Cookies `s_cc` und `s_sq` abgelegt sind. Es wird bestimmt, wie viele Punkte sich in der Domäne der Seiten-URL befinden. Diese Variable wird auch von Plug-ins zur Bestimmung der richtigen Domäne für Cookies der Plug-ins verwendet.
+Die Domain, in der die Analytics-Cookies `s_cc` und `s_sq` abgelegt sind. Es wird bestimmt, wie viele Punkte sich in der Domain der Seiten-URL befinden. Diese Variable wird auch von Plug-ins zur Bestimmung der richtigen Domain für Cookies der Plug-ins verwendet.
 
 Siehe [s.cookieDomainPeriods](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookiedomainperiods.html?lang=de).
 
-### Erstanbieter-Domänenpunkte
+### Zeiträume für Erstanbieter-Domain
 
-Die `fpCookieDomainPeriods`-Variable ist für Cookies bestimmt, die von JavaScript festgelegt werden (`s_sq`, `s_cc`, Plug-ins) und von Erstanbietern stammen, selbst wenn Ihre Implementierung die Domänen „2o7.net“ oder „omtrdc.net“ von Drittanbietern verwendet.
+Die `fpCookieDomainPeriods`-Variable ist für Cookies bestimmt, die von JavaScript festgelegt werden (`s_sq`, `s_cc`, Plug-ins) und von Erstanbietern stammen, selbst wenn Ihre Implementierung die Domains „2o7.net“ oder „omtrdc.net“ von Drittanbietern verwendet.
 
 Siehe [s.fpCookieDomainPeriods](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/fpcookiedomainperiods.html?lang=de).
 
@@ -267,13 +267,13 @@ Die folgenden Optionen werden angezeigt:
 
 ![](../../../images/an-ext-aam.png)
 
-Die Audience Manager-Subdomäne wird von Adobe Audience Manager zugewiesen. Dies wird mitunter als „Partnername“ oder „Partnerunterdomäne“ bezeichnet. Wenden Sie sich an Ihren Adobe-Berater oder an die Kundenunterstützung, wenn Sie Ihren Partnernamen nicht kennen.
+Die Audience Manager-Subdomain wird von Adobe Audience Manager zugewiesen. Dies wird mitunter als „Partnername“ oder „Partner-Subdomain“ bezeichnet. Wenden Sie sich an Ihren Adobe-Berater oder an die Kundenunterstützung, wenn Sie Ihren Partnernamen nicht kennen.
 
-Sie können erweiterte Einstellungen konfigurieren, indem Sie **Erweiterte Einstellungen anzeigen** auswählen und Ihre Voreinstellungen eingeben.
+Sie können erweiterte Einstellungen konfigurieren, indem Sie **Erweiterte Einstellungen anzeigen** auswählen und Ihre Präferenzen eingeben.
 
 ![](../../../images/an-ext-aam-adv.png)
 
-Über das der jeweiligen Einstellung zugehörige Infosymbol können Sie Details zu dieser anzeigen. Weitere Informationen zu diesen Einstellungen finden Sie außerdem in der [Dokumentation zu Adobe Audience Manager](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html).
+Über das der jeweiligen Einstellung zugehörige Infosymbol können Sie Details zu dieser anzeigen. Weitere Informationen zu diesen Einstellungen finden Sie außerdem in der [Dokumentation zu Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de).
 
 ## Aktionstypen für die Analytics-Erweiterung
 
