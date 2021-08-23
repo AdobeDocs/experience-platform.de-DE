@@ -1,28 +1,28 @@
 ---
-title: Endpunkt von Erweiterungspaketen
-description: Erfahren Sie, wie Sie den Endpunkt /extension_packages in der Reactor-API aufrufen.
+title: Extension packages-Endpunkt
+description: Erfahren Sie, wie Sie den /extension_packages-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '955'
-ht-degree: 7%
+ht-degree: 73%
 
 ---
 
-# Endpunkt von Erweiterungspaketen
+# Extension packages-Endpunkt
 
 >[!WARNING]
 >
->Die Implementierung des Endpunkts `/extension_packages` ist im Fluss, da Funktionen hinzugefügt, entfernt und überarbeitet werden.
+>Die Implementierung des `/extension_packages`-Endpunkts ist im Fluss, da Funktionen hinzugefügt, entfernt und überarbeitet werden.
 
 Ein Erweiterungspaket stellt eine [Erweiterung](./extensions.md) dar, die von einem Erweiterungsentwickler verfasst wurde. Ein Erweiterungspaket definiert zusätzliche Funktionen, die Tag-Benutzern zur Verfügung gestellt werden können. In den meisten Fällen sind diese Funktionen in Form von [Regelkomponenten](./rule-components.md) (Ereignisse, Bedingungen und Aktionen) und [Datenelementen](./data-elements.md) verfügbar, können aber auch Hauptmodule und freigegebene Module enthalten.
 
-Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche angezeigt, damit Benutzer diese installieren können. Das Hinzufügen eines Erweiterungspakets zu einer Eigenschaft wird erreicht, indem eine Erweiterung mit einem Link zum Erweiterungspaket erstellt wird.
+Erweiterungspakete werden im Erweiterungskatalog in der Datenerfassungs-Benutzeroberfläche angezeigt, sodass Benutzer sie installieren können. Das Hinzufügen eines Erweiterungspakets zu einer Eigenschaft wird erreicht, indem eine Erweiterung mit einem Link zum Erweiterungspaket erstellt wird.
 
-Ein Erweiterungspaket gehört zum [Unternehmen](./companies.md) des Entwicklers, der es erstellt hat.
+Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers, der es erstellt hat.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 Neben dem Verständnis, wie Aufrufe an die Reactor-API durchgeführt werden, ist es auch wichtig zu verstehen, wie die Attribute `status` und `availability` eines Erweiterungspakets beeinflussen, welche Aktionen Sie darauf durchführen können. Diese werden in den folgenden Abschnitten erläutert.
 
@@ -62,7 +62,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Erweiterungspakete anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Erweiterungspakete anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -234,9 +234,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 }
 ```
 
-## Nachschlagen eines Erweiterungspakets {#lookup}
+## Suchen eines Erweiterungspakets {#lookup}
 
-Sie können nach einem Erweiterungspaket suchen, indem Sie dessen Kennung im Pfad einer GET-Anfrage angeben.
+Sie können nach einem Erweiterungspaket suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -246,7 +246,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie nachschlagen möchten. |
+| `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -264,7 +264,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, einschließlich der Delegierungsressourcen wie `actions`, `conditions`, `data_elements` und mehr. Die folgende Beispielantwort wurde aus Platzgründen abgeschnitten.
+Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, einschließlich der Delegaten-Ressourcen wie `actions`, `conditions`, `data_elements` und mehr. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -471,9 +471,9 @@ Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, einsc
 
 ## Erstellen eines Erweiterungspakets {#create}
 
-Erweiterungspakete werden mit einem Strukturvorlagen-Tool von Node.js erstellt und auf Ihrem lokalen Computer gespeichert, bevor sie an die Reactor-API gesendet werden. Weitere Informationen zum Konfigurieren eines Erweiterungspakets finden Sie im Handbuch [Erste Schritte mit der Erweiterungsentwicklung](../../extension-dev/getting-started.md).
+Erweiterungspakete werden mit einem Node.js-Strukturvorlagen-Tool erstellt und auf Ihrem lokalen Computer gespeichert, bevor sie an die Reactor-API gesendet werden. Weitere Informationen zum Konfigurieren eines Erweiterungspakets finden Sie im Handbuch [Erste Schritte bei der Erweiterungsentwicklung](../../extension-dev/getting-started.md).
 
-Nachdem Sie die Package-Datei für die Erweiterung erstellt haben, können Sie sie über eine POST-Anfrage an die Reactor-API senden.
+Nachdem Sie die Paketdatei für die Erweiterung erstellt haben, können Sie sie über eine POST-Anfrage an die Reactor-API senden.
 
 **API-Format**
 
@@ -483,7 +483,7 @@ POST /extension_packages
 
 **Anfrage**
 
-Die folgende Anfrage erstellt ein neues Erweiterungspaket. Der lokale Pfad zur hochgeladenen Paketdatei wird als Formulardaten (`package`) referenziert, weshalb dieser Endpunkt eine `Content-Type`-Kopfzeile von `multipart/form-data` erfordert.
+Die folgende Anfrage erstellt ein neues Erweiterungspaket. Der lokale Pfad zur hochgeladenen Paketdatei wird als Formulardaten (`package`) referenziert, weshalb dieser Endpunkt einen `Content-Type`-Header von `multipart/form-data` erfordert.
 
 ```shell
 curl -X POST \
@@ -702,7 +702,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Erweiterungspakets
 }
 ```
 
-## Erweiterungspaket aktualisieren {#update}
+## Aktualisieren eines Erweiterungspakets {#update}
 
 Sie können ein Erweiterungspaket aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen.
 
@@ -720,7 +720,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Anfrage**
 
-Wie bei [Erstellen eines Erweiterungspakets](#create) muss eine lokale Version des aktualisierten Pakets über Formulardaten hochgeladen werden.
+Wie beim [Erstellen eines Erweiterungspakets](#create) muss eine lokale Version des aktualisierten Pakets über Formulardaten hochgeladen werden.
 
 ```shell
 curl -X PATCH \
@@ -941,9 +941,9 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Erweiterungspakets
 
 ## Privates Freigeben eines Erweiterungspakets {#private-release}
 
-Nachdem Sie das Testen des Erweiterungspakets abgeschlossen haben, können Sie es privat freigeben. Dadurch wird sie für alle Properties in Ihrem Unternehmen verfügbar.
+Nachdem Sie das Testen des Erweiterungspakets abgeschlossen haben, können Sie es privat freigeben. Dadurch wird es für alle Eigenschaften in Ihrem Unternehmen verfügbar.
 
-Nachdem Sie die Veröffentlichung privat durchgeführt haben, können Sie den Prozess der öffentlichen Veröffentlichung starten, indem Sie das Anforderungsformular [Öffentliche Freigabe](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U) ausfüllen.
+Nachdem Sie die Veröffentlichung privat durchgeführt haben, können Sie den Prozess der öffentlichen Veröffentlichung starten, indem Sie das [Anfrageformular für die öffentliche Freigabe](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=7DRB5U) ausfüllen.
 
 **API-Format**
 
@@ -959,7 +959,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 **Anfrage**
 
-Eine private Veröffentlichung wird erreicht, indem ein `action` mit dem Wert `release_private` im `meta` der Anfragedaten bereitgestellt wird.
+Eine private Veröffentlichung wird erreicht, indem eine `action` mit dem Wert `release_private` in den `meta` der Anfragedaten bereitgestellt wird.
 
 ```shell
 curl -X PATCH \
@@ -1186,7 +1186,7 @@ Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück.
 }
 ```
 
-## Erweiterungspaket beenden {#discontinue}
+## Beenden eines Erweiterungspakets {#discontinue}
 
 Sie können ein Erweiterungspaket beenden, indem Sie das Attribut `discontinued` über eine PATCH-Anfrage auf `true` setzen.
 
@@ -1198,13 +1198,13 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie einstellen möchten. |
+| `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, das Sie beenden möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Eine private Veröffentlichung wird erreicht, indem ein `action` mit dem Wert `release_private` im `meta` der Anfragedaten bereitgestellt wird.
+Eine private Veröffentlichung wird erreicht, indem eine `action` mit dem Wert `release_private` in den `meta` der Anfragedaten bereitgestellt wird.
 
 ```shell
 curl -X PATCH \
@@ -1291,7 +1291,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/versions
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | Das `id` des Erweiterungspakets, dessen Versionen Sie auflisten möchten. |
+| `EXTENSION_PACKAGE_ID` | Die `id` des Erweiterungspakets, dessen Versionen Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
