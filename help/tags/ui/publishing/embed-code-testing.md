@@ -4,7 +4,7 @@ description: Hier erfahren Sie, wie Sie mit Platform Debugger verschiedene Einbe
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 82%
+ht-degree: 96%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Wenn Sie Änderungen an Ihren Tag-Bibliotheks-Builds in Adobe Experience Platform vornehmen, sollten Sie diese Änderungen testen, bevor Sie den Build in Ihrer Produktionsumgebung bereitstellen. Wenn Sie keine dedizierte Staging- oder Entwicklungs-Umgebung für Ihre Website haben, können Sie mit Adobe Experience Platform Debugger verschiedene Einbettungscodes lokal auf Ihrer Site testen.
+Wenn Sie Änderungen an Ihren Tag-Bibliotheks-Builds in Adobe Experience Platform vornehmen, sollten Sie diese Änderungen testen, bevor Sie den Build in Ihrer Betreibungsumgebung bereitstellen. Wenn Sie keine dedizierte Staging- oder Entwicklungs-Umgebung für Ihre Website haben, können Sie mit Adobe Experience Platform Debugger verschiedene Einbettungscodes lokal auf Ihrer Site testen.
 
 ## Voraussetzungen
 
-Dieses Tutorial setzt ein grundlegendes Verständnis der Verwendung von Umgebungen und Einbettungscodes in der Datenerfassungs-Benutzeroberfläche voraus. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
+Dieses Tutorial erfordert ein grundlegendes Verständnis der Verwendung von Umgebungen und Einbettungs-Codes in der Datenerfassungs-Benutzeroberfläche. Weitere Informationen dazu finden Sie in der [Übersicht zu Umgebungen](./environments.md).
 
 Für dieses Tutorial muss außerdem die Browser-Erweiterung „Platform Debugger“ installiert sein. Platform Debugger ist nur für Chrome- und Firefoxbrowser verfügbar. Verwenden Sie einen der folgenden Links, um die Erweiterung zu installieren, bevor Sie mit dem Tutorial beginnen:
 
@@ -27,7 +27,7 @@ Für dieses Tutorial muss außerdem die Browser-Erweiterung „Platform Debugger
 
 ## Öffnen von Platform Debugger auf Ihrer Website
 
-Navigieren Sie mit dem Browser Ihrer Wahl zu Ihrer Website und öffnen Sie die Platform Debugger-Erweiterung. Die Site, mit der Platform Debugger derzeit verbunden ist, wird unten im Fenster angezeigt. Wenn Tags derzeit auf Ihrer Site ausgeführt werden, wird sie auf der Registerkarte [!UICONTROL Zusammenfassung] aufgeführt.
+Navigieren Sie mit dem Browser Ihrer Wahl zu Ihrer Website und öffnen Sie die Platform Debugger-Erweiterung. Die Site, mit der Platform Debugger derzeit verbunden ist, wird unten im Fenster angezeigt. Wenn auf Ihrer Website derzeit Tags ausgeführt werden, werden sie auf der Registerkarte [!UICONTROL Zusammenfassung] aufgeführt.
 
 ![](./images/embed-code-testing/summary.png)
 
