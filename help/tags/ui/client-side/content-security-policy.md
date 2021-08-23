@@ -1,10 +1,10 @@
 ---
 title: Unterstützung einer Content Security Policy (CSP)
-description: Erfahren Sie, wie Sie bei der Integration Ihrer Website mit Tags in Adobe Experience Platform mit Einschränkungen der Content Security Policy (CSP) umgehen.
+description: Erfahren Sie, wie Sie mit den Einschränkungen der Content Security Policy (CSP) umgehen, wenn Sie Ihre Website mit Tags in Adobe Experience Platform integrieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1080'
-ht-degree: 57%
+ht-degree: 98%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 57%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Eine Content Security Policy (CSP) ist eine Sicherheitsfunktion, die Cross-Site-Scripting-Angriffe (XSS) verhindert. Dies geschieht, wenn der Browser dazu gebracht wird, schädliche Inhalte auszuführen, die scheinbar von einer vertrauenswürdigen Quelle stammen, aber tatsächlich von einer anderen Quelle stammen. Mit CSPs kann der Browser (im Namen des Benutzers) überprüfen, ob das Skript tatsächlich von einer vertrauenswürdigen Quelle stammt.
+Eine Content Security Policy (CSP) ist eine Sicherheitsfunktion, die Cross-Site-Scripting-Angriffe (XSS) verhindert. Bei Cross-Site Scripting wird der Browser dazu gebracht, schädliche Inhalte auszuführen, die scheinbar aus vertrauenswürdigen Quellen stammen, die aber in Wahrheit von woanders her stammen. Mit CSPs kann der Browser (im Namen des Benutzers) überprüfen, ob das Skript tatsächlich von einer vertrauenswürdigen Quelle stammt.
 
 CSPs werden implementiert, indem Sie Ihren Server-Antworten einen `Content-Security-Policy`-HTTP-Header hinzufügen oder indem Sie ein konfiguriertes `<meta>`-Element im `<head>`-Abschnitt Ihrer HTML-Dateien hinzufügen.
 
@@ -22,18 +22,18 @@ CSPs werden implementiert, indem Sie Ihren Server-Antworten einen `Content-Secur
 >
 > Weitere Informationen zu CSP finden Sie in den [MDN-Webdocs](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP).
 
-Tags in Adobe Experience Platform sind ein Tag-Management-System, mit dem Skripte dynamisch auf Ihre Website geladen werden können. Eine Standard-CSP blockiert diese dynamisch geladenen Skripte aufgrund potenzieller Sicherheitsprobleme. Dieses Dokument enthält Anleitungen zum Konfigurieren Ihrer CSP, um dynamisch geladene Skripte von Tags zu ermöglichen.
+Tags in Adobe Experience Platform sind ein Tag-Management-System, das dazu dient, Skripte auf Ihrer Website dynamisch zu laden. Eine Standard-CSP blockiert diese dynamisch geladenen Skripte aufgrund potenzieller Sicherheitsprobleme. Dieses Dokument enthält Anleitungen zum Konfigurieren Ihres CSP, um dynamisch geladene Skripte aus Tags zu ermöglichen.
 
-Wenn Sie möchten, dass Tags mit Ihrem CSP zusammenarbeiten, müssen Sie sicherstellen, dass zwei Voraussetzungen erfüllt sind:
+Wenn Sie möchten, dass Tags mit Ihrem CSP zusammenarbeiten, müssen Sie sicherstellen, dass zwei Bedingungen erfüllt sind:
 
 * **Die Quelle für Ihre Tag-Bibliothek muss als vertrauenswürdig eingestuft werden.** Wenn diese Bedingung nicht erfüllt ist, werden die Tag-Bibliothek und andere erforderliche JavaScript-Dateien vom Browser blockiert und nicht auf der Seite geladen.
 * **Inline-Skripte müssen erlaubt sein.** Wenn diese Bedingung nicht erfüllt ist, werden auf Regeln von benutzerspezifischem Code basierende Aktionen auf der Seite blockiert und nicht ordnungsgemäß ausgeführt.
 
-Erhöhte Sicherheit erfordert ein höheres Arbeitsvolumen im Auftrag des Erstellers von Inhalten. Wenn Sie Tags verwenden möchten und ein CSP vorhanden ist, müssen Sie beide Probleme beheben, ohne andere Skripte fälschlicherweise als sicher zu kennzeichnen. Der Rest dieses Dokuments enthält Anleitungen, wie Sie dies erreichen können.
+Erhöhte Sicherheit erfordert einen erhöhten Arbeitsaufwand auf Seiten des Erstellers von Inhalten. Wenn Sie Tags verwenden möchten und ein CSP vorhanden ist, müssen Sie beide Voraussetzungen schaffen, ohne andere Skripte fälschlicherweise als sicher zu kennzeichnen. Der Rest dieses Dokuments enthält Anleitungen, wie Sie dies erreichen können.
 
 ## Hinzufügen von Tags als vertrauenswürdige Quelle
 
-Bei Verwendung eines CSP müssen Sie alle vertrauenswürdigen Domains in den Wert der `Content-Security-Policy`-Kopfzeile einschließen. Der Wert, den Sie für Tags angeben müssen, hängt vom verwendeten Hosting-Typ ab.
+Bei Verwendung eines CSP müssen Sie alle vertrauenswürdigen Domains in den Wert des `Content-Security-Policy`-Headers einschließen. Der Wert, den Sie für Tags angeben müssen, hängt vom verwendeten Hosting-Typ ab.
 
 ### Selbstständiges Hosting
 
@@ -53,7 +53,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Adobe-verwaltetes Hosting
 
-Wenn Sie einen von [Adobe verwalteten Host](../publishing/hosts/managed-by-adobe-host.md) verwenden, wird Ihr Build auf `assets.adobedtm.com` aufbewahrt. Sie sollten `self` als sichere Domäne angeben, damit Sie keine Skripte beschädigen, die bereits geladen werden. Sie müssen aber auch `assets.adobedtm.com` als sicher angeben, da ansonsten Ihre Tag-Bibliothek nicht auf der Seite geladen wird. In diesem Fall sollten Sie die folgende Konfiguration verwenden:
+Wenn Sie einen von [Adobe verwalteten Host](../publishing/hosts/managed-by-adobe-host.md) verwenden, wird Ihr Build auf `assets.adobedtm.com` aufbewahrt. Sie sollten `self` als sichere Domain angeben, damit Sie keine Skripte beschädigen, die bereits geladen werden. Zusätzlich muss `assets.adobedtm.com` als sicher angegeben werden, da ansonsten Ihre Tag-Bibliothek nicht auf der Seite geladen wird. In diesem Fall sollten Sie die folgende Konfiguration verwenden:
 
 **HTTP-Header**
 
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>`-Tag**
 
 
-Es gibt eine sehr wichtige Voraussetzung: Sie müssen die Tag-Bibliothek [asynchron](./asynchronous-deployment.md) laden. Dies funktioniert nicht bei synchronem Laden der Tag-Bibliothek (was zu Konsolenfehlern und nicht ordnungsgemäß ausgeführten Regeln führt).
+Es gibt eine sehr wichtige Voraussetzung: Sie müssen die Tag-Bibliothek [asynchron](./asynchronous-deployment.md) laden. Dies funktioniert nicht mit einem synchronen Laden der Tag-Bibliothek (was zu Konsolenfehlern und nicht ordnungsgemäßer Ausführung von Regeln führt).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">
@@ -81,7 +81,7 @@ CSP deaktiviert Inline-Skripte standardmäßig und muss daher manuell konfigurie
 
 >[!NOTE]
 >
->Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes mit Tags in Platform finden Sie im Handbuch [Subresource Integrity (SRI)](./sri.md).
+>Die CSP-Spezifikation enthält Details zu einer dritten Option mit Hashes, aber dieser Ansatz ist nicht möglich, wenn Tag-Management-Systeme wie Tags verwendet werden. Weitere Informationen zu den Einschränkungen bei der Verwendung von Hashes in mit Tags in Platform finden Sie im [Handbuch zu Subresource Integrity (SRI)](./sri.md).
 
 ### Mit Nonce zulassen {#nonce}
 
@@ -105,7 +105,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-Nachdem Sie den Header oder das HTML-Tag konfiguriert haben, müssen Sie dem Tag mitteilen, wo die Nonce beim Laden eines Inline-Skripts zu finden ist. Damit ein Tag die Nonce beim Laden des Skripts verwendet, müssen Sie:
+Sobald Sie Ihren Header oder Ihr HTML-Tag konfiguriert haben, müssen Sie dem Tag mitteilen, wo es die Nonce beim Laden eines Inline-Skripts findet. Damit ein Tag beim Laden des Skripts die Nonce verwenden kann, ist Folgendes erforderlich:
 
 1. Erstellen Sie ein Datenelement, das auf die Position der Nonce in Ihrer Datenschicht verweist.
 1. Konfigurieren Sie die Haupterweiterung und spezifizieren Sie, welches Datenelement Sie verwendet haben.
@@ -113,7 +113,7 @@ Nachdem Sie den Header oder das HTML-Tag konfiguriert haben, müssen Sie dem Tag
 
 >[!NOTE]
 >
->Der obige Prozess behandelt nur das Laden Ihres benutzerspezifischen Codes, nicht aber was dieser benutzerspezifische Code tut. Wenn ein Inline-Skript benutzerdefinierten Code enthält, der nicht mit Ihrem CSP konform ist, hat das CSP Vorrang. Wenn Sie beispielsweise benutzerdefinierten Code verwenden, um ein Inline-Skript zu laden, indem Sie es an das DOM anhängen, kann das Tag die Nonce nicht korrekt hinzufügen. Daher funktioniert diese spezifische Aktion für benutzerspezifischen Code nicht erwartungsgemäß.
+>Der obige Prozess behandelt nur das Laden Ihres benutzerspezifischen Codes, nicht aber was dieser benutzerspezifische Code tut. Wenn ein Inline-Skript benutzerdefinierten Code enthält, der nicht mit Ihrem CSP konform ist, hat das CSP Vorrang. Wenn Sie beispielsweise benutzerdefinierten Code zum Laden von Inline-Skripten verwenden, indem Sie ihn an das DOM anhängen, kann das Tag die Nonce nicht korrekt hinzufügen, sodass diese bestimmte benutzerdefinierte Code-Aaktion nicht wie erwartet funktioniert.
 
 ### Alle Inline-Skripte zulassen {#unsafe-inline}
 
@@ -155,6 +155,6 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie Sie Ihren CSP-Header so konfigurieren können, dass die Tag-Bibliotheksdatei und Inline-Skripte akzeptiert werden.
+Durch Lesen dieses Dokuments sollten Sie jetzt verstehen, wie Sie Ihren CSP-Header so konfigurieren können, dass er die Tag-Bibliotheksdatei und Inline-Skripte akzeptiert.
 
-Als zusätzliche Sicherheitsmaßnahme können Sie auch Subresource Integrity (SRI) verwenden, um abgerufene Bibliotheks-Builds zu validieren. Diese Funktion weist jedoch einige wesentliche Einschränkungen auf, wenn sie mit Tag-Management-Systemen wie Tags verwendet wird. Weitere Informationen finden Sie im Handbuch zur [SRI-Kompatibilität in Platform](./sri.md).
+Als zusätzliche Sicherheitsmaßnahme können Sie auch Subresource Integrity (SRI) verwenden, um abgerufene Bibliotheks-Builds zu validieren. Diese Funktion hat jedoch einige große Einschränkungen, wenn sie mit Tag-Management-Systemen wie Tags verwendet wird. Weitere Informationen finden Sie im Handbuch zur [SRI-Kompatibilität in Platform](./sri.md).
