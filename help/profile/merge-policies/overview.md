@@ -3,10 +3,10 @@ keywords: Experience Platform, Profil, Kundenprofil in Echtzeit, Zusammenführun
 title: Zusammenführungsrichtlinien – Übersicht
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Datenfragmente aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über Ihre einzelnen Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht zu schaffen.
-source-git-commit: c2cc1428e3a70cf987adab583e9f9fb5d5140c74
-workflow-type: ht
-source-wordcount: '1492'
-ht-degree: 100%
+source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
+workflow-type: tm+mt
+source-wordcount: '1252'
+ht-degree: 99%
 
 ---
 
@@ -22,7 +22,7 @@ Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusamm
 Dieses Handbuch setzt ein Grundverständnis für mehrere wichtige [!DNL Experience Platform]-Funktionen voraus. Bevor Sie dieses Handbuch befolgen und mit Zusammenführungsrichtlinien arbeiten, überprüfen Sie bitte die Dokumentation für die folgendenen Services:
 
 * [Echtzeit-Kundenprofil](../home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in [!DNL Platform] erfasst werden.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Ermöglicht es Echtzeit-Kundenprofil, Identitäten aus unterschiedlichen Datenquellen zu verbinden, die in erfasst werden. [!DNL Platform].
 * [Experience-Datenmodell (XDM)](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 ## Zusammenführungsrichtlinien verstehen
@@ -44,8 +44,7 @@ Wenn Sie eine Zusammenführungsmethode auswählen, können Sie angeben, welche D
 Für Zusammenführungsrichtlinien stehen zwei mögliche Zusammenführungsmethoden zur Verfügung. Jede dieser Methoden wird im Folgenden mit zusätzlichen Details in den folgenden Abschnitten zusammengefasst:
 
 * **[!UICONTROL Datensatzpriorität]:** Geben Sie im Falle eines Konflikts den Profilfragmenten Priorität, basierend auf dem Datensatz, aus dem sie stammen. Wenn Sie diese Option wählen, müssen Sie die zugehörigen Datensätze und deren Prioritätsreihenfolge auswählen. Weitere Informationen über die Zusammenführungsmethode [Datensatzpriorität](#dataset-precedence).
-* **[!UICONTROL Zeitstempel geordnet]:** Im Fall eines Konflikts wird dem zuletzt aktualisierten Profilfragment Priorität eingeräumt. Weitere Informationen über die Zusammenführungsmethode [Zeitstempel geordnet](#timestamp-ordered).
-   * **Benutzerdefinierte Zeitstempel:** Die Methode zur sortierten Zeitstempelzusammenführung unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Daten innerhalb desselben Datensatzes (mehrere Identitäten) oder über Datensätze hinweg Priorität vor Systemzeitstempeln haben. Weitere Informationen finden Sie im Abschnitt [Verwenden benutzerdefinierter Zeitstempel](#custom-timestamps).
+* **[!UICONTROL Zeitstempel geordnet]:** Im Fall eines Konflikts wird dem zuletzt aktualisierten Profilfragment Priorität eingeräumt. Erfahren Sie mehr über die Zusammenführungsmethode [Zeitstempel ordered](#timestamp-ordered) .
 
 ### Datensatzpriorität {#dataset-precedence}
 
@@ -56,22 +55,6 @@ Um eine Zusammenführungsrichtlinie mit **[!UICONTROL Datensatzpriorität]** zu 
 ### Zeitstempel geordnet {#timestamp-ordered}
 
 Bei der Aufnahme von Profildatensätzen in Experience Platform wird ein Systemzeitstempel zum Zeitpunkt der Aufnahme ermittelt und dem Datensatz hinzugefügt. Wenn **[!UICONTROL Zeitstempel ordered]** als Zusammenführungsmethode für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profile basierend auf dem Systemzeitstempel zusammengeführt. Das heißt, das Zusammenführen erfolgt auf Basis des Zeitstempels, an dem der Datensatz in Platform aufgenommen wurde.
-
-#### Verwenden benutzerdefinierter Zeitstempel {#custom-timestamps}
-
-Gelegentlich kann es zu Anwendungsfällen kommen, in denen es erforderlich ist, einen benutzerdefinierten Zeitstempel anzugeben und die Zusammenführungsrichtlinie den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen zu lassen. Beispiele dafür sind das Aufstocken von Daten oder die Sicherstellung der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge erfasst werden.
-
-Um einen benutzerdefinierten Zeitstempel zu verwenden, muss die Schemafeldgruppe ****[!UICONTROL  Externe Quellsystem-Prüfungsdetails] zu Ihrem Profilschema hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz aufgenommen wird und das Feld `lastUpdatedDate` ausgefüllt ist, verwendet Experience Platform dieses Feld, um Datensätze über Datensätze hinweg zusammenzuführen. Wenn `lastUpdatedDate` nicht vorhanden oder nicht ausgefüllt ist, verwendet Platform weiterhin den Systemzeitstempel.
-
->[!NOTE]
->
->Sie müssen sicherstellen, dass der Zeitstempel `lastUpdatedDate` beim Aufnehmen einer Aktualisierung für denselben Datensatz gefüllt wird.
-
-Im folgenden Screenshot werden die Felder in der Feldergruppe [!UICONTROL Audit-Details des externen Quellsystems] angezeigt. Eine schrittweise Anleitung zum Arbeiten mit Schemas unter Verwendung der Platform-Benutzeroberfläche, einschließlich des Hinzufügens von Feldergruppen zu Schemas, finden Sie im [Tutorial zum Erstellen eines Schemas mithilfe der Benutzeroberfläche](../../xdm/tutorials/create-schema-ui.md).
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der API finden Sie im Abschnitt [Endpunkt-Handbuch zu Zusammenführungsrichtlinien zur Verwendung benutzerdefinierter Zeitstempel](../api/merge-policies.md#custom-timestamps).
 
 ## Identitätszuordnung {#id-stitching}
 
