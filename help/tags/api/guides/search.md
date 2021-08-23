@@ -1,20 +1,20 @@
 ---
 title: Suchen von Ressourcen in der Reactor-API
-description: Erfahren Sie, wie Sie in der Reactor-API nach Ressourcen suchen.
+description: Hier erfahren Sie, wie Sie in der Reactor-API nach Ressourcen suchen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '260'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Suchen von Ressourcen in der Reactor-API
 
-Mit dem Endpunkt `/search` in der Reactor-API können Sie strukturierte Abfragen zu gespeicherten Ressourcen durchführen. Dieses Dokument enthält Beispiele für verschiedene Suchanfragen für verschiedene gängige Anwendungsfälle.
+Mit dem `/search`-Endpunkt in der Reactor-API können Sie strukturierte Abfragen zu gespeicherten Ressourcen durchführen. Dieses Dokument enthält Beispiele für verschiedene Suchanfragen für diverse gängige Anwendungsfälle.
 
 >[!NOTE]
 >
->Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [Suchendpoint-Handbuch](../endpoints/search.md) , um Informationen zur akzeptierten Abfragesyntax und anderen Nutzungsrichtlinien zu erhalten.
+>Bevor Sie dieses Handbuch lesen, lesen Sie das [Handbuch zum Suchen von Endpunkten](../endpoints/search.md), um Informationen zur akzeptierten Abfragesyntax und anderen Nutzungsrichtlinien zu erhalten.
 
 ## Grundlegende Abfragestrategien
 
@@ -38,9 +38,9 @@ Eine Suche kann über mehrere Felder hinweg mithilfe von Platzhaltern im Feldnam
 
 >[!IMPORTANT]
 >
->Normalerweise müssen die Suchwerte mit dem Typ der gesuchten Daten übereinstimmen. Beispielsweise würde ein Abfragewert `evar7` für ein ganzzahliges Feld fehlschlagen. Bei der Suche über mehrere Felder hinweg wird die Abfragetypanforderung nachsichtig gemacht, um Fehler zu vermeiden, kann aber zu unerwünschten Ergebnissen führen.
+>Normalerweise müssen die Suchwerte mit dem Typ der gesuchten Daten übereinstimmen. Beispielsweise würde ein Abfragewert `evar7` für ein ganzzahliges Feld fehlschlagen. Bei der Suche über mehrere Felder wird die Anforderung an den Abfragetyp gelockert, um Fehler zu vermeiden, was jedoch zu unerwünschten Ergebnissen führen kann.
 
-### Abfragen zum Umfang bestimmter Ressourcentypen
+### Beschränken von Abfragen auf bestimmte Ressourcentypen
 
 Sie können eine Suche auf einen bestimmten Ressourcentyp beschränken, indem Sie in der Anfrage `resource_types` angeben. So suchen Sie beispielsweise nach `data_elements` und `rule_components`:
 
@@ -62,7 +62,7 @@ Sie können eine Suche auf einen bestimmten Ressourcentyp beschränken, indem Si
 }
 ```
 
-### Antworten sortieren
+### Sortieren von Antworten
 
 Die Eigenschaft `sort` kann zum Sortieren von Antworten verwendet werden. Beispiel: Sortieren nach `created_at` mit dem neuesten zuerst:
 
@@ -89,9 +89,9 @@ Die Eigenschaft `sort` kann zum Sortieren von Antworten verwendet werden. Beispi
 }
 ```
 
-## Allgemeine Suchbeispiele
+## Gängige Suchbeispiele
 
-Im folgenden Beispiel werden zusätzliche allgemeine Suchmuster veranschaulicht.
+Im folgenden Beispiel werden zusätzliche gängige Suchmuster veranschaulicht.
 
 ### Jede Ressource mit einem bestimmten Namen
 
@@ -114,7 +114,7 @@ curl -X POST \
       }'
 ```
 
-### Jede Ressource mit Verweis auf &quot;evar7&quot;
+### Jede Ressource mit Verweis auf „evar7“
 
 ```shell
 curl -X POST \
@@ -135,7 +135,7 @@ curl -X POST \
       }'
 ```
 
-### Datenelemente eines Delegatyps vom Typ &quot;benutzerspezifischer Code&quot;
+### Datenelemente eines Delegatentyps „benutzerspezifischer Code“
 
 ```shell
 curl -X POST \
@@ -201,7 +201,7 @@ curl -X POST \
       }'
 ```
 
-### Ressource nach ID suchen
+### Suchen einer Ressource nach ID
 
 ```shell
 curl -X POST \
@@ -222,7 +222,7 @@ curl -X POST \
       }'
 ```
 
-### Führen Sie eine Suche mithilfe der &quot;ODER&quot;-Begriffslogik durch.
+### Durchführen einer Suche mit „OR“-Begriffslogik
 
 ```shell
 curl -X POST \
