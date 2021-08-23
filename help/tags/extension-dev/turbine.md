@@ -1,10 +1,10 @@
 ---
 title: Freie turbine-Variable
-description: Erfahren Sie mehr über das Turbinenobjekt, eine freie Variable, die Informationen und Dienstprogramme bereitstellt, die für die Adobe Experience Platform-Tag-Laufzeit spezifisch sind.
+description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 51%
+ht-degree: 94%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
-Das `turbine`-Objekt ist eine „freie Variable“ im Gültigkeitsbereich der Bibliotheksmodule Ihrer Erweiterung. Es stellt Informationen und Dienstprogramme bereit, die spezifisch für die Tag-Laufzeit von Adobe Experience Platform sind, und ist immer für Bibliotheksmodule verfügbar, ohne `require()` zu verwenden.
+Das `turbine`-Objekt ist eine „freie Variable“ im Gültigkeitsbereich der Bibliotheksmodule Ihrer Erweiterung. Es stellt Informationen und Dienstprogramme bereit, die für die Tag-Laufzeit von Adobe Experience Platform spezifisch sind, und ist ohne Verwendung von `require()` für Bibliotheksmodule immer verfügbar.
 
 ## [!DNL buildInfo]
 
@@ -45,7 +45,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 
 Gibt an, ob das Tag-Debugging derzeit aktiviert ist.
 
-Wenn Sie einfach Meldungen protokollieren möchten, ist es unwahrscheinlich, dass Sie dies verwenden müssen. Protokollieren Sie stattdessen Nachrichten immer mit `turbine.logger`, um sicherzustellen, dass Ihre Nachrichten nur dann in der Konsole gedruckt werden, wenn das Tag-Debugging aktiviert ist.
+Wenn Sie einfach Meldungen protokollieren möchten, ist es unwahrscheinlich, dass Sie dies verwenden müssen. Stattdessen sollten Sie Meldungen immer mit `turbine.logger` protokollieren, um sicherzustellen, dass Ihre Meldungen nur auf der Konsole ausgegeben werden, wenn Tag-Debugging aktiviert ist.
 
 ### [!DNL getDataElementValue]
 
@@ -61,9 +61,9 @@ Gibt den Wert eines Datenelements zurück.
 var extensionSettings = turbine.getExtensionSettings();
 ```
 
-Gibt das settings-Objekt zurück, das zuletzt in der Ansicht für die [Erweiterungskonfiguration](./configuration.md) gespeichert wurde.
+Gibt das Einstellungsobjekt zurück, das zuletzt in der Ansicht für die [Erweiterungskonfiguration](./configuration.md) gespeichert wurde.
 
-Beachten Sie, dass die Werte in den zurückgegebenen settings-Objekten möglicherweise von Datenelementen stammen. Deshalb kann der Aufruf von `getExtensionSettings()` zu unterschiedlichen Zeitpunkten zu unterschiedlichen Ergebnissen führen, wenn sich die Werte der Datenelemente geändert haben. Um die aktuellsten Werte zu erhalten, warten Sie so lange wie möglich, bevor Sie `getExtensionSettings()` aufrufen.
+Beachten Sie, dass die Werte in den zurückgegebenen Einstellungsobjekten möglicherweise von Datenelementen stammen. Deshalb kann der Aufruf von `getExtensionSettings()` zu unterschiedlichen Zeitpunkten zu unterschiedlichen Ergebnissen führen, wenn sich die Werte der Datenelemente geändert haben. Um die aktuellsten Werte zu erhalten, warten Sie mit dem Aufruf von `getExtensionSettings()` so lange wie möglich.
 
 ### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
 
@@ -74,7 +74,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 })
 ```
 
-Die Eigenschaft [hostedLibFiles](./manifest.md) kann innerhalb des Erweiterungsmanifests definiert werden, um verschiedene Dateien zusammen mit der Tag-Laufzeitbibliothek zu hosten. Dieses Modul gibt die URL zurück, unter der die angegebene Bibliotheksdatei gehostet wird.
+Die Eigenschaft [hostedLibFiles](./manifest.md) kann im Erweiterungsmanifest definiert werden, um verschiedene Dateien zusammen mit der Tag-Laufzeitbibliothek zu hosten. Dieses Modul gibt die URL zurück, unter der die angegebene Bibliotheksdatei gehostet wird.
 
 ### [!DNL getSharedModule] {#shared}
 
@@ -90,7 +90,7 @@ Ruft ein Modul ab, das von einer anderen Erweiterung freigegeben wurde. Wenn kei
 turbine.logger.error('Error!');
 ```
 
-Das Protokollierungsdienstprogramm wird verwendet, um Meldungen in der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Cloud-Debuggers](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Alternativ kann der Benutzer den folgenden Befehl `_satellite.setDebug(true)` in der Browser-Entwicklerkonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
+Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole zu protokollieren. Meldungen werden nur dann auf der Konsole angezeigt, wenn der Benutzer den Debugging-Modus aktiviert hat. Die empfohlene Methode zum Aktivieren des Debuggens besteht in der Verwendung des [Adobe Experience Cloud-Debuggers](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Alternativ kann der Benutzer den Befehl `_satellite.setDebug(true)` in der Browser-Entwicklungskonsole ausführen. Die logger-Funktion verfügt über die folgenden Methoden:
 
 * `logger.log(message: string)`: Protokolliert eine Meldung auf der Browser-Konsole.
 * `logger.info(message: string)`: Protokolliert eine Informationsmeldung auf der Konsole.
@@ -100,9 +100,9 @@ Das Protokollierungsdienstprogramm wird verwendet, um Meldungen in der Konsole z
 
 ### [!DNL onDebugChanged]
 
-Durch Übergabe einer Rückruffunktion an `turbine.onDebugChanged` rufen Tags Ihren Rückruf auf, sobald das Debugging umgeschaltet wird. Tags übergeben der Callback-Funktion einen booleschen Wert. Dieser lautet true (wahr), wenn das Debugging aktiviert war, und false (falsch), wenn das Debugging deaktiviert war.
+Wenn eine Callback-Funktion an `turbine.onDebugChanged` übergeben wird, ruft Tags diesen Callback auf, sobald der Debugging-Modus aktiviert bzw. deaktiviert wird. Tags übergibt der Callback-Funktion einen booleschen Wert. Bei aktiviertem Debugging lautet dieser Wert „true“ und bei deaktiviertem Debugging „false“.
 
-Wenn Sie einfach Meldungen protokollieren möchten, ist es unwahrscheinlich, dass Sie dies verwenden müssen. Stattdessen protokollieren Sie Meldungen immer mit `turbine.logger` und -Tags, um sicherzustellen, dass Ihre Nachrichten nur dann in der Konsole gedruckt werden, wenn das Tag-Debugging aktiviert ist.
+Wenn Sie einfach Meldungen protokollieren möchten, ist es unwahrscheinlich, dass Sie dies verwenden müssen. Stattdessen sollten Sie Meldungen immer mit `turbine.logger` protokollieren. Tags stellt dann sicher, dass die Meldungen nur dann auf der Konsole ausgegeben werden, wenn der Tag-Debugging-Modus aktiviert ist.
 
 ### [!DNL propertySettings] {#property-settings}
 
@@ -114,7 +114,7 @@ Ein Objekt, das die folgenden Einstellungen enthält, die vom Benutzer für die 
 
 * `propertySettings.domains: Array<String>`
 
-   Ein Array von Domänen, die von der Eigenschaft abgedeckt werden.
+   Ein Array von Domains, die von der Eigenschaft abgedeckt werden.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
