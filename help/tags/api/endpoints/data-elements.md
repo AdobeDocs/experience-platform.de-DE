@@ -1,30 +1,30 @@
 ---
-title: Datenelement-Endpunkt
-description: Erfahren Sie, wie Sie den Endpunkt /data_elements in der Reactor-API aufrufen.
+title: Data elements-Endpunkt
+description: Erfahren Sie, wie Sie den /data_elements-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1415'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Datenelement-Endpunkt
+# Data elements-Endpunkt
 
-Ein Datenelement dient als Variable, die auf ein wichtiges Datenelement in Ihrer Anwendung verweist. Datenelemente werden in den Konfigurationen [rules](./rules.md) und [extension](./extensions.md) verwendet. Wenn eine Regel zur Laufzeit in einem Browser oder einer Anwendung ausgelöst wird, wird der Wert des Datenelements aufgelöst und innerhalb der Regel verwendet. Datenelemente funktionieren bei Erweiterungskonfigurationen genauso.
+Ein Datenelement fungiert als Variable, die auf wichtige Daten innerhalb Ihres Programms verweist. Datenelemente werden in [Regel-](./rules.md) und [Erweiterungskonfigurationen](./extensions.md) verwendet. Wenn eine Regel zur Laufzeit in einem Browser oder einem Programm ausgelöst wird, wird der Wert des Datenelements aufgelöst und innerhalb der Regel verwendet. Datenelemente funktionieren bei Erweiterungskonfigurationen genauso.
 
-Die Verwendung mehrerer Datenelemente führt zu einem Datenwörterbuch oder einer Datenzuordnung. Dieses Wörterbuch stellt die Daten dar, von denen Adobe Experience Platform weiß und die es nutzen kann.
+Die Verwendung mehrerer Datenelemente führt zu einem Datenwörterbuch oder einer Datenzuordnung. Dieses Wörterbuch stellt die Daten dar, die Adobe Experience Platform kennt und nutzen kann.
 
-Ein Datenelement gehört genau zu einer [Eigenschaft](./properties.md). Eine Eigenschaft kann viele Datenelemente enthalten.
+Ein Datenelement gehört zu genau einer [Eigenschaft](./properties.md). Eine Eigenschaft kann dagegen viele Datenelemente enthalten.
 
-Allgemeine Informationen zu Datenelementen und deren Verwendung in Tags finden Sie im [Handbuch zu Datenelementen](../../ui/managing-resources/data-elements.md) in der UI-Dokumentation.
+Allgemeine Informationen zu Datenelementen und deren Verwendung in Tags finden Sie im [Handbuch zu Datenelementen](../../ui/managing-resources/data-elements.md) in der Benutzeroberflächen-Dokumentation.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste mit Datenelementen abrufen {#list}
+## Abrufen einer Liste mit Datenelementen {#list}
 
-Sie können eine Liste von Datenelementen für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft in den Pfad einer GET-Anfrage einschließen.
+Sie können eine Liste mit Datenelementen für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -34,13 +34,13 @@ GET /properties/{PROPERTY_ID}/data_elements
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `PROPERTY_ID` | Die `id` der Eigenschaft, der die Datenelemente gehören. |
+| `PROPERTY_ID` | Die `id` der Eigenschaft, zu der die Datenelemente gehören. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Datenelemente anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Datenelemente anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -167,13 +167,13 @@ Eine erfolgreiche Antwort gibt eine Liste von Datenelementen für die angegebene
 }
 ```
 
-## Nachschlagen eines Datenelements {#lookup}
+## Suchen eines Datenelements {#lookup}
 
-Sie können ein Datenelement nachschlagen, indem Sie dessen Kennung im Pfad einer GET-Anfrage angeben.
+Sie können ein Datenelement suchen, indem Sie dessen ID im Pfad einer GET-Anfrage angeben.
 
 >[!NOTE]
 >
->Wenn Datenelemente gelöscht werden, werden sie als gelöscht markiert, aber nicht tatsächlich aus dem System entfernt. Daher ist es möglich, ein gelöschtes Datenelement nachzuschlagen. Gelöschte Datenelemente können durch ein `data.meta.deleted_at` -Attribut identifiziert werden.
+>Wenn Datenelemente gelöscht werden, werden sie als gelöscht markiert, aber nicht tatsächlich aus dem System entfernt. Daher ist es möglich, ein gelöschtes Datenelement zu suchen. Gelöschte Datenelemente können anhand des Attributs `data.meta.deleted_at` identifiziert werden.
 
 **API-Format**
 
@@ -183,7 +183,7 @@ GET /data_elements/{DATA_ELEMENT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `DATA_ELEMENT_ID` | Der `id` des Datenelements, das Sie nachschlagen möchten. |
+| `DATA_ELEMENT_ID` | Die `id` des Datenelements, das Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -301,7 +301,7 @@ Eine erfolgreiche Antwort gibt die Details des Datenelements zurück.
 }
 ```
 
-## ein Datenelement erstellen {#create}
+## Erstellen eines Datenelements {#create}
 
 Sie können ein neues Datenelement erstellen, indem Sie eine POST-Anfrage stellen.
 
@@ -319,7 +319,7 @@ POST /properties/{PROPERTY_ID}/data_elements
 
 **Anfrage**
 
-Die folgende Anfrage erstellt ein neues Datenelement für die angegebene Eigenschaft. Der Aufruf verknüpft das Datenelement auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships` . Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md) .
+Die folgende Anfrage erstellt ein neues Datenelement für die angegebene Eigenschaft. Der Aufruf verknüpft das Datenelement auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships`. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -355,12 +355,12 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für das Datenelement. |
-| `attributes.delegate_descriptor_id` | **(Erforderlich)** Eine formatierte Zeichenfolge, die das Datenelement mit einem Erweiterungspaket verknüpft. Alle Datenelemente müssen bei der ersten Erstellung mit einem Erweiterungspaket verknüpft werden, da jedes Erweiterungspaket die kompatiblen Typen für die delegierten Datenelemente sowie das beabsichtigte Verhalten definiert. Weitere Informationen finden Sie im Handbuch zu [Delegate-Deskriptor-IDs](../guides/delegate-descriptor-ids.md) . |
-| `attributes.settings` | Ein settings-JSON-Objekt, das als Zeichenfolge dargestellt wird. |
-| `attributes.default_value` | Ein Standardwert, der zurückgegeben wird, wenn das Datenelement `undefined` ausgewertet wird. |
-| `attributes.enabled` | Ein boolean -Wert, der angibt, ob das Datenelement aktiviert ist. |
-| `attributes.force_lower_case` | Ein boolean -Wert, der angibt, ob der Datenelementwert vor der Speicherung in Kleinbuchstaben konvertiert werden soll. |
-| `attributes.clean_text` | Ein boolean -Wert, der angibt, ob vor dem Speichern Whitespace- oder -nachfolgende Leerzeichen aus dem Datenelementwert entfernt werden sollen. |
+| `attributes.delegate_descriptor_id` | **(Erforderlich)** Eine formatierte Zeichenfolge, die das Datenelement mit einem Erweiterungspaket verknüpft. Alle Datenelemente müssen bei der ersten Erstellung mit einem Erweiterungspaket verknüpft werden, da jedes Erweiterungspaket für die delegierten Datenelemente die kompatiblen Typen sowie das beabsichtigte Verhalten definiert. Weitere Informationen finden Sie im Handbuch zu [Delegaten-Deskriptor-IDs](../guides/delegate-descriptor-ids.md). |
+| `attributes.settings` | Ein JSON-Objekt vom Typ „settings“, das als Zeichenfolge dargestellt wird. |
+| `attributes.default_value` | Ein Standardwert, der zurückgegeben wird, wenn das Datenelement als `undefined` ausgewertet wird. |
+| `attributes.enabled` | Ein boolescher Wert, der angibt, ob das Datenelement aktiviert ist. |
+| `attributes.force_lower_case` | Ein boolescher Wert, der angibt, ob der Datenelementwert vor der Speicherung in Kleinbuchstaben konvertiert werden soll. |
+| `attributes.clean_text` | Ein boolescher Wert, der angibt, ob vor dem Speichern Leerzeichen am Anfang oder Ende aus dem Datenelementwert entfernt werden sollen. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `data_elements` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -467,9 +467,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Datenelements zur�
 }
 ```
 
-## Datenelement aktualisieren {#update}
+## Aktualisieren eines Datenelements {#update}
 
-Sie können ein Datenelement aktualisieren, indem Sie dessen Kennung in den Pfad einer PATCH-Anfrage einschließen.
+Sie können ein Datenelement aktualisieren, indem Sie dessen ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -485,7 +485,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` für ein vorhandenes Datenelement.
+Die folgende Anfrage aktualisiert den `name` für ein vorhandenes Datenelement.
 
 ```shell
 curl -X PATCH \
@@ -507,8 +507,8 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für das Datenelement aktualisiert werden sollen. Alle Datenelementattribute können aktualisiert werden. Siehe Beispielaufruf für [Erstellen eines Datenelements](#create) für eine Liste von Attributen und deren Anwendungsfall. |
-| `id` | Die `id` des Datenelements, das Sie aktualisieren möchten. Dies sollte mit dem Wert `{DATA_ELEMENT_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für das Datenelement aktualisiert werden sollen. Alle Datenelementattribute können aktualisiert werden. Siehe den Beispielaufruf zum [Erstellen eines Datenelements](#create) für eine Liste von Attributen und deren Anwendungsfall. |
+| `id` | Die `id` des Datenelements, das Sie aktualisieren möchten. Diese sollte mit dem `{DATA_ELEMENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `data_elements` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -615,11 +615,11 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Datenelements zur�
 }
 ```
 
-## Datenelement überprüfen {#revise}
+## Überarbeiten eines Datenelements {#revise}
 
-Wenn Sie ein Datenelement überarbeiten, wird eine neue Revision des Datenelements mit der aktuellen (head) Revision erstellt. Jede Revision eines Datenelements verfügt über eine eigene ID. Das ursprüngliche Datenelement kann über einen Ursprungs-Link erkannt werden.
+Wenn Sie ein Datenelement überarbeiten, wird eine neue Revision des Datenelements mit der aktuellen Revision (head) erstellt. Jede Revision eines Datenelements verfügt über eine eigene ID. Das ursprüngliche Datenelement kann über einen Ursprungs-Link erkannt werden.
 
-Sie können ein Datenelement überarbeiten, indem Sie eine `meta.action` -Eigenschaft mit dem Wert `revise` im Hauptteil einer PATCH-Anfrage angeben.
+Sie können ein Datenelement überarbeiten, indem Sie eine Eigenschaft `meta.action` mit dem Wert `revise` im Hauptteil einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -658,9 +658,9 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für das Datenelement aktualisiert werden sollen. Alle Datenelementattribute können aktualisiert werden. Siehe Beispielaufruf für [Erstellen eines Datenelements](#create) für eine Liste von Attributen und deren Anwendungsfall. |
+| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für das Datenelement aktualisiert werden sollen. Alle Datenelementattribute können aktualisiert werden. Siehe den Beispielaufruf zum [Erstellen eines Datenelements](#create) für eine Liste von Attributen und deren Anwendungsfall. |
 | `meta.action` | Wenn diese Eigenschaft mit dem Wert `revise` enthalten ist, bedeutet dies, dass eine neue Revision für das Datenelement erstellt werden soll. |
-| `id` | Das `id` des Datenelements, das Sie überarbeiten möchten. Dies sollte mit dem Wert `{DATA_ELEMENT_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` des Datenelements, das Sie überarbeiten möchten. Diese sollte mit dem `{DATA_ELEMENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der Ressource, die überarbeitet wird. Für diesen Endpunkt muss der Wert `data_elements` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -767,9 +767,9 @@ Eine erfolgreiche Antwort gibt die Details der neuen Revision für das Datenelem
 }
 ```
 
-## Datenelement löschen
+## Löschen eines Datenelements
 
-Sie können ein Datenelement löschen, indem Sie dessen Kennung in den Pfad einer DELETE-Anfrage einschließen.
+Sie können ein Datenelement löschen, indem Sie seine ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -795,21 +795,21 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt an, dass das Datenelement gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück, was anzeigt, dass das Datenelement gelöscht wurde.
 
-## Hinweise für ein Datenelement verwalten {#notes}
+## Verwalten von Anmerkungen für ein Datenelement {#notes}
 
-Datenelemente sind &quot;wichtige&quot;Ressourcen, d. h. Sie können für jede einzelne Ressource textbasierte Notizen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Datenelemente und andere kompatible Ressourcen finden Sie im [Notes-Endpunkthandbuch](./notes.md) .
+Sie können für jedes einzelne Datenelement textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Datenelemente und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
-## Abrufen verwandter Ressourcen für ein Datenelement {#related}
+## Abrufen zugehöriger Ressourcen für ein Datenelement {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für ein Datenelement abrufen. Wenn [nach einem Datenelement](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für ein Datenelement abrufen. Beim [Suchen eines Datenelements](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Zugehörige Bibliotheken für ein Datenelement auflisten {#libraries}
+### Auflisten der zugehörigen Bibliotheken für ein Datenelement {#libraries}
 
-Sie können die Bibliotheken, die ein Datenelement verwenden, auflisten, indem Sie `/libraries` an den Pfad einer Suchanfrage anhängen.
+Sie können die Bibliotheken auflisten, die ein Datenelement verwenden, indem Sie `/libraries` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -1163,9 +1163,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Revisionen für das angegebene Dat
 }
 ```
 
-### Nachschlagen der zugehörigen Erweiterung für ein Datenelement {#extension}
+### Suchen der zugehörigen Erweiterung für ein Datenelement {#extension}
 
-Sie können die Erweiterung nachschlagen, die ein Datenelement verwendet, indem Sie `/extension` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Erweiterung suchen, die ein Datenelement verwendet, indem Sie `/extension` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -1175,7 +1175,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/extension
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | Die `id` des Datenelements, dessen Erweiterung Sie nachschlagen möchten. |
+| `{DATA_ELEMENT_ID}` | Die `id` des Datenelements, dessen Erweiterung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1283,9 +1283,9 @@ Eine erfolgreiche Antwort gibt die Details der Erweiterung zurück, die das ange
 }
 ```
 
-### Nachschlagen der zugehörigen Herkunft für ein Datenelement {#origin}
+### Suchen des zugehörigen Ursprungs für ein Datenelement {#origin}
 
-Sie können die Herkunft eines Datenelements nachschlagen, indem Sie `/origin` an den Pfad einer GET-Anfrage anhängen. Der Ursprung eines Datenelements ist die vorherige Revision, die zur Erstellung der aktuellen Revision aktualisiert wurde.
+Sie können den Ursprung eines Datenelements suchen, indem Sie `/origin` an den Pfad einer GET-Anfrage anhängen. Der Ursprung eines Datenelements ist die vorherige Revision, die zur Erstellung der aktuellen Revision aktualisiert wurde.
 
 **API-Format**
 
@@ -1295,7 +1295,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/origin
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | Die `id` des Datenelements, dessen Herkunft Sie nachschlagen möchten. |
+| `{DATA_ELEMENT_ID}` | Die `id` des Datenelements, dessen Ursprung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1313,7 +1313,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Herkunft des angegebenen Datenelements zurück.
+Eine erfolgreiche Antwort gibt die Details des Ursprungs des angegebenen Datenelements zurück.
 
 ```json
 {
@@ -1413,9 +1413,9 @@ Eine erfolgreiche Antwort gibt die Details der Herkunft des angegebenen Datenele
 }
 ```
 
-### Nachschlagen der zugehörigen Eigenschaft für ein Datenelement {#property}
+### Suchen der zugehörigen Eigenschaft für ein Datenelement {#property}
 
-Sie können die Eigenschaft nachschlagen, der ein Datenelement gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Eigenschaft suchen, der ein Datenelement gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -1425,7 +1425,7 @@ GET  /data_elements/{DATA_ELEMENT_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{DATA_ELEMENT_ID}` | Die `id` des Datenelements, dessen Eigenschaft Sie nachschlagen möchten. |
+| `{DATA_ELEMENT_ID}` | Die `id` des Datenelements, dessen Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1443,7 +1443,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Eigenschaft zurück, der das angegebene Datenelement gehört.
+Eine erfolgreiche Antwort gibt die Details der Eigenschaft zurück, zu der das angegebene Datenelement gehört.
 
 ```json
 {
