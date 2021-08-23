@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über das clientseitige _satellite-Objekt und die
 source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
 workflow-type: tm+mt
 source-wordcount: '1251'
-ht-degree: 43%
+ht-degree: 84%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 43%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Dieses Dokument dient als Referenz für das clientseitige `_satellite`-Objekt und die verschiedenen Funktionen, die Sie damit ausführen können.
+Dieses Dokument dient als Referenz für das Client-seitige `_satellite`-Objekt und die verschiedenen Funktionen, die Sie damit ausführen können.
 
 ## `track`
 
@@ -30,7 +30,7 @@ _satellite.track(identifier: string [, detail: *] )
 _satellite.track('contact_submit', { name: 'John Doe' });
 ```
 
-`track` löst alle Regeln mit dem Direktaufruf-Ereignistyp aus, der mit der angegebenen Kennung aus der Core-Tag-Erweiterung konfiguriert wurde. Das obige Beispiel löst alle Regeln aus, die einen Direktaufruf-Ereignistyp verwenden, bei dem die konfigurierte ID `contact_submit` lautet. Darüber hinaus wird ein optionales Objekt übergeben, das zugehörige Informationen enthält. Sie können auf das Detailobjekt zugreifen, indem Sie `%event.detail%` in ein Textfeld innerhalb einer Bedingung/Aktion eingeben oder `event.detail` im Code-Editor in einer Bedingung/Aktion für benutzerspezifischen Code eingeben.
+`track` löst alle Regeln mit dem Ereignistyp „Direktaufruf“ aus, der mit der angegebenen Kennung aus der Core-Tag-Erweiterung konfiguriert wurde. Das obige Beispiel löst alle Regeln aus, die einen Direktaufruf-Ereignistyp verwenden, bei dem die konfigurierte ID `contact_submit` lautet. Darüber hinaus wird ein optionales Objekt übergeben, das zugehörige Informationen enthält. Sie können auf das Detailobjekt zugreifen, indem Sie `%event.detail%` in ein Textfeld innerhalb einer Bedingung/Aktion eingeben oder `event.detail` im Code-Editor in einer Bedingung/Aktion für benutzerspezifischen Code eingeben.
 
 ## `getVar`
 
@@ -46,9 +46,9 @@ _satellite.getVar(name: string) => *
 var product = _satellite.getVar('product');
 ```
 
-Wenn im angegebenen Beispiel ein Datenelement mit einem übereinstimmenden Namen vorhanden ist, wird der Wert des Datenelements zurückgegeben. Wenn kein passendes Datenelement vorhanden ist, wird überprüft, ob zuvor über `_satellite.setVar()` eine benutzerdefinierte Variable mit dem jeweiligen Namen festgelegt wurde. Wenn eine passende benutzerdefinierte Variable gefunden wird, wird ihr Wert zurückgegeben.
+Wenn ein Datenelement mit dem entsprechenden Namen vorhanden ist, wird der Wert des Datenelements zurückgegeben. Wenn kein passendes Datenelement vorhanden ist, wird überprüft, ob zuvor über `_satellite.setVar()` eine benutzerdefinierte Variable mit dem jeweiligen Namen festgelegt wurde. Wenn eine passende benutzerdefinierte Variable gefunden wird, wird ihr Wert zurückgegeben.
 
-Beachten Sie, dass Sie in vielen Formularfeldern der Datenerfassungs-Benutzeroberfläche die `%%`-Syntax verwenden können, um Variablen zu referenzieren, wodurch `_satellite.getVar()` weniger aufgerufen werden muss. Beispielsweise dient %product% dem Zugriff auf den Wert des Produktdatenelements oder der benutzerdefinierten Variable.
+Beachten Sie, dass Sie in vielen Formularfeldern in der Datenerfasslungs-Benutzeroberfläche die `%%` Syntax zum Referenzieren von Variablen `_satellite.getVar()` verwenden können, wodurch die Notwendigkeit von Aufrufen reduziert wird. Beispielsweise dient %product% dem Zugriff auf den Wert des Produktdatenelements oder der benutzerdefinierten Variable.
 
 ## `setVar`
 
@@ -64,7 +64,7 @@ _satellite.setVar(name: string, value: *)
 _satellite.setVar('product', 'Circuit Pro');
 ```
 
-`setVar()` legt eine benutzerdefinierte Variable mit einem angegebenen Namen und Wert fest. Der Wert der Variablen kann später mithilfe von `_satellite.getVar()` abgerufen werden.
+`setVar()` legt eine benutzerdefinierte Variable mit dem angegebenen Namen und Wert fest. Der Wert der Variablen kann später mithilfe von `_satellite.getVar()` abgerufen werden.
 
 Sie können optional mehrere Variablen auf einmal festlegen, indem Sie ein Objekt übergeben, in dem die Schlüssel die Variablennamen und die Werte die zugehörigen Variablenwerte darstellen.
 
@@ -86,7 +86,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Wenn die [!DNL Adobe Experience Cloud ID]-Erweiterung in der Property installiert ist, gibt diese Methode die Besucher-ID-Instanz zurück. Weitere Informationen finden Sie in der [Dokumentation zum Experience Cloud ID-Dienst](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de).
+Wenn die [!DNL Adobe Experience Cloud ID]-Erweiterung in der Eigenschaft installiert ist, gibt diese Methode die Besucher-ID-Instanz zurück. Weitere Informationen finden Sie in der [Dokumentation zum Experience Cloud ID-Dienst](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de).
 
 ## `logger`
 
@@ -114,7 +114,7 @@ _satellite.logger.error(message: string)
 _satellite.logger.error('No product ID found.');
 ```
 
-Das `logger` -Objekt ermöglicht die Protokollierung einer Nachricht in der Browser-Konsole. Die Nachricht wird nur angezeigt, wenn das Tag-Debugging vom Benutzer aktiviert wurde (durch Aufruf von `_satellite.setDebug(true)` oder Verwendung einer entsprechenden Browser-Erweiterung).
+Das `logger`-Objekt ermöglicht die Protokollierung einer Nachricht in der Browser-Konsole. Die Meldung wird nur dann angezeigt, wenn das Tag-Debugging durch den Benutzer aktiviert wird (per Aufruf von `_satellite.setDebug(true)` oder Verwendung einer entsprechenden Browser-Erweiterung).
 
 ### Protokollierung von Warnmeldungen zu veralteten Dokumenten
 
@@ -128,11 +128,11 @@ _satellite.logger.deprecation(message: string)
 _satellite.logger.deprecation('This method is no longer supported, please use [new example] instead.');
 ```
 
-Dadurch wird eine Warnung an die Browser-Konsole protokolliert. Die Meldung wird unabhängig davon angezeigt, ob der Benutzer das Tag-Debugging aktiviert hat.
+Protokolliert eine Warnung in der Browser-Konsole. Die Meldung wird unabhängig davon angezeigt, ob der Benutzer das Tag-Debugging aktiviert hat.
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` enthält Funktionen zum Lesen und Schreiben von Cookies. Es handelt sich um eine offen gelegte Kopie des JS-Cookies der Drittanbieterbibliothek. Weitere Informationen zur erweiterten Verwendung dieser Bibliothek finden Sie in der [js-cookie-Dokumentation](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` enthält Funktionen zum Lesen und Schreiben von Cookies. Dies ist eine offengelegte Kopie des „js-cookie“ der Drittanbieter-Bibliothek. Weitere Informationen zur erweiterten Verwendung dieser Bibliothek finden Sie in der [js-cookie-Dokumentation](https://www.npmjs.com/package/js-cookie#basic-usage).
 
 ### Cookie setzen {#cookie-set}
 
@@ -204,7 +204,7 @@ Dieses Objekt enthält Informationen zum Build der aktuellen Tag-Laufzeitbibliot
 
 ### `turbineVersion`
 
-Dadurch wird die in der aktuellen Bibliothek verwendete [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)-Version bereitgestellt.
+Stellt die [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)-Version bereit, die in der aktuellen Bibliothek verwendet wird.
 
 ### `turbineBuildDate`
 
@@ -251,9 +251,9 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` protokolliert eine Meldung in der Browser-Konsole. Die Nachricht wird nur angezeigt, wenn das Tag-Debugging vom Benutzer aktiviert wurde (durch Aufruf von `_satellite.setDebug(true)` oder Verwendung einer entsprechenden Browser-Erweiterung).
+`notify` protokolliert eine Nachricht in der Browser-Konsole. Die Meldung wird nur dann angezeigt, wenn das Tag-Debugging durch den Benutzer aktiviert wird (per Aufruf von `_satellite.setDebug(true)` oder Verwendung einer entsprechenden Browser-Erweiterung).
 
-Es kann eine optionale Protokollierungsstufe übergeben werden, die sich auf die Formatierung und Filterung der protokollierten Nachricht auswirkt. Folgende Ebenen werden unterstützt:
+Eine optionale Protokollebene kann übergeben werden, die sich auf die Formatierung und Filterung der protokollierten Nachricht auswirkt. Folgende Ebenen werden unterstützt:
 
 3 – Informationsmeldungen
 
@@ -281,7 +281,7 @@ _satellite.setCookie(name: string, value: string, days: number)
 _satellite.setCookie('product', 'Circuit Pro', 3);
 ```
 
-Dadurch wird ein Cookie im Browser des Benutzers gesetzt. Das Cookie wird über die angegebene Anzahl an Tagen gespeichert.
+Erstellt ein Cookie im Browser des Benutzers. Das Cookie wird über die angegebene Anzahl an Tagen gespeichert.
 
 ## `readCookie`
 
@@ -301,7 +301,7 @@ _satellite.readCookie(name: string) => string
 var product = _satellite.readCookie('product');
 ```
 
-Dadurch wird ein Cookie aus dem Browser des Benutzers gelesen.
+Liest ein Cookie im Browser des Benutzers aus.
 
 ## `removeCookie`
 
@@ -321,11 +321,11 @@ _satellite.removeCookie(name: string)
 _satellite.removeCookie('product');
 ```
 
-Dadurch wird ein Cookie aus dem Browser des Benutzers entfernt.
+Entfernt ein Cookie aus dem Browser des Benutzers.
 
 ## Debugging-Funktionen
 
-Der Zugriff auf die folgenden Funktionen sollte nicht über den Produktionscode erfolgen. Sie dienen nur Debugging-Zwecken und ändern sich mit der Zeit nach Bedarf.
+Der Zugriff auf die folgenden Funktionen sollte nicht über den Produktions-Code erfolgen. Sie dienen nur Debugging-Zwecken und ändern sich mit der Zeit nach Bedarf.
 
 ### `container`
 
@@ -339,7 +339,7 @@ _satellite._container
 
 >[!IMPORTANT]
 >
->Der Zugriff auf diese Funktion sollte nicht über den Produktionscode erfolgen. Sie dient lediglich Debugging-Prozessen und ändert sich bei Bedarf im Laufe der Zeit.
+>Der Zugriff auf diese Funktion sollte nicht über den Produktions-Code erfolgen. Sie dient lediglich Debugging-Prozessen und ändert sich bei Bedarf im Laufe der Zeit.
 
 ### `monitor`
 
@@ -353,11 +353,11 @@ _satellite._monitors
 
 >[!IMPORTANT]
 >
->Der Zugriff auf diese Funktion sollte nicht über den Produktionscode erfolgen. Sie dient lediglich Debugging-Prozessen und ändert sich bei Bedarf im Laufe der Zeit.
+>Der Zugriff auf diese Funktion sollte nicht über den Produktions-Code erfolgen. Sie dient lediglich Debugging-Prozessen und ändert sich bei Bedarf im Laufe der Zeit.
 
 **Beispiel**
 
-Fügen Sie auf Ihrer Webseite, auf der eine Tag-Bibliothek ausgeführt wird, einen Codeausschnitt zu Ihrem HTML-Code hinzu. In der Regel wird der Code in das Element `<head>` vor dem Element `<script>` eingefügt, das die Tag-Bibliothek lädt. Dadurch kann der Monitor die frühesten Systemereignisse erfassen, die in der Tag-Bibliothek auftreten. Beispiel:
+Fügen Sie auf Ihrer Web-Seite, auf der eine Tag-Bibliothek ausgeführt wird, dem HTML-Code ein Code-Fragment hinzu. In der Regel wird der Code in das Element `<head>` vor dem Element `<script>` eingefügt, das die Tag-Bibliothek lädt. Dadurch kann der Monitor die frühesten Systemereignisse in der Tag-Bibliothek erfassen. Beispiel:
 
 ```html
 <!DOCTYPE html>
@@ -399,19 +399,19 @@ Fügen Sie auf Ihrer Webseite, auf der eine Tag-Bibliothek ausgeführt wird, ein
 </html>
 ```
 
-Da die Tag-Bibliothek noch nicht geladen wurde, wird im ersten Skriptelement das erste `_satellite` -Objekt erstellt und ein Array unter `_satellite._monitors` initialisiert. Das Skript fügt diesem Array dann ein Monitorobjekt hinzu. Das Monitorobjekt kann die folgenden Methoden angeben, die später von der Tag-Bibliothek aufgerufen werden:
+Da die Tag-Bibliothek noch nicht geladen wurde, wird im ersten Skriptelement das anfängliche `_satellite`-Objekt erstellt und ein Array wird auf `_satellite._monitors` initialisiert. Das Skript fügt diesem Array dann ein Monitorobjekt hinzu. Das Monitorobjekt kann die folgenden Methoden angeben, die später von der Tag-Bibliothek aufgerufen werden:
 
 ### `ruleTriggered`
 
-Diese Funktion wird aufgerufen, nachdem ein Ereignis eine Regel Trigger hat, jedoch bevor die Regelbedingungen und -aktionen verarbeitet wurden. Das Ereignisobjekt, das an `ruleTriggered` übergeben wird, enthält Informationen zu der ausgelösten Regel.
+Die Funktion wird aufgerufen, nachdem ein Ereignis eine Regel ausgelöst hat, aber bevor die Bedingungen und Aktionen der Regel verarbeitet wurden. Das Ereignisobjekt, das an `ruleTriggered` übergeben wird, enthält Informationen zu der ausgelösten Regel.
 
 ### `ruleCompleted`
 
-Diese Funktion wird aufgerufen, nachdem eine Regel vollständig verarbeitet wurde. Das heißt, das Ereignis ist eingetreten, alle Bedingungen wurden erfüllt und alle Aktionen wurden ausgeführt. Das Ereignisobjekt, das an `ruleCompleted` übergeben wird, enthält Informationen zu der abgeschlossenen Regel.
+Diese Funktion wird aufgerufen, nachdem eine Regel vollständig verarbeitet wurde. Das heißt, das Ereignis ist eingetreten, alle Bedingungen wurden übergeben und alle Aktionen ausgeführt. Das an `ruleCompleted` übergebene Ereignisobjekt enthält Informationen über die abgeschlossene Regel.
 
 ### `ruleConditionFailed`
 
-Diese Funktion wird aufgerufen, nachdem eine Regel ausgelöst wurde und eine ihrer Bedingungen fehlgeschlagen ist. Das Ereignisobjekt, das an `ruleConditionFailed` übergeben wird, enthält Informationen zu der ausgelösten Regel und der fehlgeschlagenen Bedingung.
+Diese Funktion wird aufgerufen, nachdem eine Regel ausgelöst wurde und eine der Bedingungen fehlgeschlagen ist. Das Ereignisobjekt, das an `ruleConditionFailed` übergeben wird, enthält Informationen zu der ausgelösten Regel und der fehlgeschlagenen Bedingung.
 
 Wenn `ruleTriggered` aufgerufen wird, werden kurz darauf auch `ruleCompleted` oder `ruleConditionFailed` aufgerufen.
 
@@ -430,4 +430,4 @@ Wenn Sie die Seite in [!DNL Chrome] öffnen, die Browser-Konsole öffnen und auf
 
 ![](../../images/debug.png)
 
-Diesen Handlern können bei Bedarf zusätzliche Hooks oder Informationen hinzugefügt werden.
+Sie können diesen Handlern nach Bedarf zusätzliche Hooks und Informationen hinzufügen.
