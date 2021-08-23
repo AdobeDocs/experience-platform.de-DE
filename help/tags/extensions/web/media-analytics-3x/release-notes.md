@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise zur Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung
-description: Die neuesten Versionshinweise für die Adobe Medien Analytics (3.x SDK) für Audio- und Video-Tag-Erweiterung in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 61%
+ht-degree: 89%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 61%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 5. April 2021
 
 ### Adobe Media Analytics (3.x SDK) for Audio and Video – Erweiterung 3.0.2
 
-* Korrigieren Sie die HTTP-Kopfzeile „Content-Type“ in den Anfragen der Media Collection API.
+* Korrigieren Sie den HTTP-Header „Content-Type“ in den Anfragen der Media Collection API.
 
 ## 10. Mai 2020
 
@@ -28,4 +28,4 @@ ht-degree: 61%
 * Verwendet die Media-Collection-API zum Medien-Tracking
 * Unterstützung des Player-Status-Trackings
 
-Mit der [Adobe Media Analytics-SDK (3.x) for Audio and Video-Erweiterung](./overview.md) wird die Core Media Analytics 3.x-JavaScript-Bibliothek hinzugefügt. Diese Bibliothek bietet die Funktionalität zum Verfolgen von Medien auf einer Tags-aktivierten Site oder in einem Projekt.
+Mit der [Adobe Media Analytics-SDK (3.x) for Audio and Video-Erweiterung](./overview.md) wird die Core Media Analytics 3.x-JavaScript-Bibliothek hinzugefügt. Diese Bibliothek bietet die Funktionalität zum Tracking von Medien zu einer Tag-fähigen Site oder einem Projekt.
