@@ -8,7 +8,7 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
 workflow-type: tm+mt
 source-wordcount: '332'
-ht-degree: 77%
+ht-degree: 81%
 
 ---
 
@@ -48,6 +48,6 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 
 ## Schnelles und sicheres Transformieren, Erweitern und Senden von Daten
 
-[Die Ereignisweiterleitung in Adobe Experience ](../tags/ui/event-forwarding/overview.md) Platform kann in einen beliebigen Platform-Datenstrom tippen. Daten mit extrem niedriger Latenz können an Ziele ohne Adobe transformiert, angereichert und gesendet werden, ohne dem Client-Gerät Drittanbieter-Code hinzuzufügen, was eine schnellere und sicherere Datenerfassung und -verteilung ermöglicht.
+Die [Ereignisweiterleitung in Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) kann auf einen beliebigen Platform-Datenstrom zugreifen. Daten mit extrem niedriger Latenz können transformiert, angereichert und an Drittanbieter-Ziele gesendet werden, ohne dass dem Client-Gerät Drittanbieter-Code hinzugefügt werden muss. Dies ermöglicht eine schnellere und sicherere Datenerfassung und -verteilung.
 
 ![](./images/launch.png)
