@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Cloud Identity Service-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Adobe Experience Cloud Identity Service-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 In dieser Referenz finden Sie Informationen dazu, wie Sie die Adobe Experience Cloud ID-Erweiterung konfigurieren, sowie zu den Optionen, die für die Erstellung einer Regel mithilfe dieser Erweiterung zur Verfügung stehen.
 
@@ -48,7 +48,7 @@ Klicken Sie auf **[!UICONTROL Hinzufügen]**, um einen weiteren Pfad auszuschlie
 
 Verwenden Sie die Opt-in-Optionen, um festzulegen, ob für Besucher ein Opt-in für Adobe-Dienste auf Ihrer Site erforderlich ist, was auch die Festlegung beinhaltet, ob Cookies zum Tracking der Besucheraktivität erstellt werden sollen.
 
-Das Opt-in ist der zentrale Bezugspunkt für alle clientseitigen Bibliotheken, wenn es darum geht, festzulegen, ob Cookies beim Besuch Ihrer Site auf dem Gerät oder Browser eines Benutzers erstellt werden können. Das Opt-in bietet keine Unterstützung für die Erfassung oder Speicherung von Voreinstellungen bezüglich der Benutzerzustimmung.
+Das Opt-in ist der zentrale Bezugspunkt für alle Client-seitigen Bibliotheken, wenn es darum geht, festzulegen, ob Cookies beim Besuch Ihrer Site auf dem Gerät oder Browser eines Benutzers erstellt werden können. Das Opt-in bietet keine Unterstützung für die Erfassung oder Speicherung von Voreinstellungen bezüglich der Benutzerzustimmung.
 
 **Opt-in aktivieren?**
 
@@ -62,11 +62,11 @@ Es gibt drei Möglichkeiten:
 
 **Ist Opt-in-Speicher aktiviert?**
 
-Sofern aktiviert, wird die Zustimmung in einem Erstanbieter-Cookie in Ihrer Domäne gespeichert. Wenn die Option nicht aktiviert ist, werden die Einstellungen zur Zustimmung im CMP oder in einem von Ihnen verwalteten Cookie bewahrt.
+Sofern aktiviert, wird die Zustimmung in einem Erstanbieter-Cookie in Ihrer Domain gespeichert. Wenn die Option nicht aktiviert ist, werden die Einstellungen zur Zustimmung im CMP oder in einem von Ihnen verwalteten Cookie bewahrt.
 
-**Opt-in-Cookie-Domäne?**
+**Opt-in-Cookie-Domain?**
 
-Verwenden Sie diese optionale Einstellung, um die Domäne anzugeben, in der das Opt-in-Cookie gespeichert wird, wenn die Speicherung aktiviert ist. Sie können eine Domäne eingeben oder ein Datenelement auswählen, das die Domäne enthält.
+Verwenden Sie diese optionale Einstellung, um die Domain anzugeben, in der das Opt-in-Cookie gespeichert wird, wenn die Speicherung aktiviert ist. Sie können eine Domain eingeben oder ein Datenelement auswählen, das die Domain enthält.
 
 **Ablaufdatum des Opt-in-Speichers?**
 
