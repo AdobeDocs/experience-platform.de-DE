@@ -1,10 +1,10 @@
 ---
 title: Hosts-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /hosts in der Reactor-API vornehmen.
+description: Erfahren Sie, wie Sie den /hosts-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '769'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
@@ -12,23 +12,23 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->In diesem Dokument wird beschrieben, wie Hosts in der Reactor-API verwaltet werden. Weitere allgemeine Informationen zu Hosts für Tags finden Sie im Handbuch zu [Hosts - Übersicht](../../ui/publishing/hosts/hosts-overview.md) in der Veröffentlichungsdokumentation.
+>Dieses Dokument beschreibt, wie Hosts in der Reactor-API verwaltet werden. Weitere allgemeine Informationen zu Hosts für Tags finden Sie im Handbuch [Hosts – Übersicht](../../ui/publishing/hosts/hosts-overview.md) in der Publishing-Dokumentation.
 
-In der Reactor-API definiert ein Host ein Ziel, an dem [build](./builds.md) bereitgestellt werden kann.
+In der Reactor-API definiert ein Host ein Ziel, an dem ein [Build](./builds.md) bereitgestellt werden kann.
 
-Wenn ein Build von einem Tag-Benutzer in Adobe Experience Platform angefordert wird, überprüft das System die Bibliothek, um zu bestimmen, in welcher [Umgebung](./environments.md) die Bibliothek erstellt werden soll. Jede Umgebung hat eine Beziehung zu einem Host, der angibt, wo der Build bereitgestellt werden soll.
+Wenn ein Build von einem Tags-Benutzer in Adobe Experience Platform angefordert wird, überprüft das System die Bibliothek, um zu bestimmen, in welcher [Umgebung](./environments.md) die Bibliothek erstellt werden soll. Jede Umgebung hat eine Beziehung zu einem Host, die angibt, wo der Build bereitgestellt werden soll.
 
-Ein Host gehört genau zu einer [Eigenschaft](./properties.md), während eine Eigenschaft über viele Hosts verfügen kann. Eine Eigenschaft muss über mindestens einen Host verfügen, bevor Sie veröffentlichen können.
+Ein Host gehört genau zu einer [Eigenschaft](./properties.md), während eine Eigenschaft über viele Hosts verfügen kann. Eine Eigenschaft muss über mindestens einen Host verfügen, damit Sie veröffentlichen können.
 
-Ein Host kann von mehr als einer Umgebung innerhalb einer Eigenschaft verwendet werden. Es ist üblich, einen einzelnen Host für eine Eigenschaft zu haben, und alle Umgebungen für diese Eigenschaft verwenden denselben Host.
+Ein Host kann von mehr als einer Umgebung innerhalb einer Eigenschaft verwendet werden. Es ist üblich, nur einen einzelnen Host in einer Eigenschaft zu haben, und alle Umgebungen in dieser Eigenschaft verwenden denselben Host.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Abrufen einer Hostliste {#list}
+## Abrufen einer Liste von Hosts {#list}
 
-Sie können eine Hostliste für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft in den Pfad einer GET-Anfrage einschließen.
+Sie können eine Liste von Hosts für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -38,13 +38,13 @@ GET /properties/{PROPERTY_ID}/hosts
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `PROPERTY_ID` | Die `id` der Eigenschaft, der die Hosts gehören. |
+| `PROPERTY_ID` | Die `id` der Eigenschaft, zu der die Hosts gehören. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Hosts anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können die aufgelisteten Hosts anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`type_of`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -108,9 +108,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Hosts für die angegebene Eigensch
 }
 ```
 
-## Host nachschlagen {#lookup}
+## Suchen eines Hosts {#lookup}
 
-Sie können einen Host nachschlagen, indem Sie dessen ID im Pfad einer GET-Anfrage angeben.
+Sie können einen Host suchen, indem Sie dessen ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -120,7 +120,7 @@ GET /hosts/{HOST_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `HOST_ID` | Die `id` des Hosts, den Sie nachschlagen möchten. |
+| `HOST_ID` | Die `id` des Hosts, den Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -193,7 +193,7 @@ POST /properties/{PROPERTY_ID}/hosts
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen neuen Host für die angegebene Eigenschaft. Der Aufruf verknüpft den Host auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships` . Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md) .
+Die folgende Anfrage erstellt einen neuen Host für die angegebene Eigenschaft. Der Aufruf verknüpft den Host auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships`. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -221,10 +221,10 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für den Host. |
-| `attributes.type_of` | **(Erforderlich)** Der Host-Typ. Kann eine von zwei Optionen sein: <ul><li>`akamai` für von  [Adobe verwaltete Hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` für  [SFTP-Hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
-| `attributes.encrypted_private_key` | Ein optionaler privater Schlüssel, der für die Hostauthentifizierung verwendet werden soll. |
+| `attributes.type_of` | **(Erforderlich)** Der Host-Typ. Kann eine von zwei Optionen sein: <ul><li>`akamai` für [von Adobe verwaltete Hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` für [SFTP-Hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.encrypted_private_key` | Ein optionaler privater Schlüssel, der für die Host-Authentifizierung verwendet werden soll. |
 | `attributes.path` | Der Pfad, der an die URL `server` angehängt werden soll. |
-| `attributes.port` | Eine Ganzzahl, die den zu verwendenden Serveranschluss angibt. |
+| `attributes.port` | Eine Ganzzahl, die den zu verwendenden Serverport angibt. |
 | `attributes.server` | Die Host-URL für den Server. |
 | `attributes.username` | Ein optionaler Benutzername für die Authentifizierung. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `hosts` lauten. |
@@ -276,7 +276,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Hosts zurück.
 >
 >Nur SFTP-Hosts können aktualisiert werden.
 
-Sie können einen Host aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können einen Host aktualisieren, indem Sie seine ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -292,7 +292,7 @@ PATCH /hosts/{HOST_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` für einen vorhandenen Host.
+Die folgende Anfrage aktualisiert den `name` für einen vorhandenen Host.
 
 ```shell
 curl -X PATCH \
@@ -315,7 +315,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für den Host aktualisiert werden sollen. Die folgenden Attribute können für einen Host aktualisiert werden: <ul><li>`encrypted_private_key`</li><li>`name`</li><li>`path`</li><li>`port`</li><li>`server`</li><li>`type_of`</li><li>`username`</li></ul> |
-| `id` | Die `id` des Hosts, den Sie aktualisieren möchten. Dies sollte mit dem Wert `{HOST_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` des Hosts, den Sie aktualisieren möchten. Diese sollte mit dem `{HOST_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `hosts` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -361,7 +361,7 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Hosts zurück.
 
 ## Löschen eines Hosts
 
-Sie können einen Host löschen, indem Sie dessen ID in den Pfad einer DELETE-Anfrage einschließen.
+Sie können einen Host löschen, indem Sie dessen ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -391,13 +391,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttex
 
 ## Abrufen verwandter Ressourcen für einen Host {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für einen Host abrufen. Wenn [nach einem Host](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für einen Host abrufen. Bei der [Suche nach einem Host](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Nachschlagen der zugehörigen Eigenschaft für einen Host {#property}
+### Suchen der zugehörigen Eigenschaft für einen Host {#property}
 
-Sie können die Eigenschaft nachschlagen, der ein Host gehört, indem Sie `/property` an den Pfad einer Suchanfrage anhängen.
+Sie können die Eigenschaft suchen, der ein Host gehört, indem Sie `/property` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -407,7 +407,7 @@ GET /hosts/{HOST_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{HOST_ID}` | Die `id` des Hosts, dessen Eigenschaft Sie nachschlagen möchten. |
+| `{HOST_ID}` | Die `id` des Hosts, dessen Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
