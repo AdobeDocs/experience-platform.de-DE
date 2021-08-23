@@ -1,10 +1,10 @@
 ---
 title: Publishing-Ablauf
-description: Erfahren Sie mehr über den Prozess zum Erstellen von Bibliotheken, Testen von Builds und Genehmigen für die Produktion in Adobe Experience Platform.
+description: Erfahren Sie mehr über den Prozess der Erstellung von Bibliotheken, das Testen von Builds und die Freigabe für die Produktion in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1499'
-ht-degree: 90%
+ht-degree: 98%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Der Veröffentlichungsfluss von Tags in Adobe Experience Platform bezieht sich auf den Prozess der Erstellung von Bibliotheken, des Testens von Builds und der Genehmigung für die Produktion.
+Der Veröffentlichungsablauf für Tags in Adobe Experience Platform bezieht sich auf den Prozess der Erstellung von Bibliotheken, des Testens von Builds und der Freigabe für die Produktion.
 
 Welche Aktionen Sie mit einer Bibliothek ausführen können, hängt vom Status der Bibliothek und der Berechtigungsstufe ab. Darüber hinaus wirkt sich der Status einer Bibliothek auch auf die darin enthaltenen Ressourcen (Regeln, Datenelemente und Erweiterungen) aus, je nachdem, was im Publishing-Ablauf vorangeht.
 
@@ -28,9 +28,9 @@ Es gibt verschiedene Stufen von Benutzerberechtigungen, die für den Publishing-
 * **[!UICONTROL Genehmigen]**: Umfasst die Möglichkeit, Builds für das Staging zu erstellen und gestaffelte Builds zu genehmigen.
 * **[!UICONTROL Veröffentlichen]**: Umfasst die Fähigkeit, eine genehmigte Bibliothek zu veröffentlichen.
 
-Diese Berechtigungen beinhalten nicht die jeweils untergeordneten Rechte. Damit eine Person den Workflow von Anfang bis Ende ausführen kann, müssen dieser Person alle drei Berechtigungen für die jeweilige Property gewährt werden.
+Diese Berechtigungen beinhalten nicht die jeweils untergeordneten Rechte. Damit eine Person den Workflow von Anfang bis Ende ausführen kann, müssen dieser Person alle drei Berechtigungen für die jeweilige Eigenschaft gewährt werden.
 
-Weitere Informationen zum Verwalten von Berechtigungen für Tags finden Sie im [Benutzerhandbuch zu Berechtigungen](../administration/user-permissions.md) .
+Weitere Informationen zum Verwalten von Berechtigungen für Tags finden Sie im [Handbuch zu Benutzerberechtigungen](../administration/user-permissions.md).
 
 ## Bibliotheksstatus {#state}
 
@@ -41,7 +41,7 @@ Was den Publishing-Ablauf betrifft, gibt es vier Grundzustände, in denen sich e
 * [[!UICONTROL Genehmigt]](#approved)
 * [[!UICONTROL Veröffentlicht]](#published)
 
-Diese vier Status werden als Spalten auf der Registerkarte **[!UICONTROL Veröffentlichungsfluss]** der Datenerfassungs-Benutzeroberfläche dargestellt.
+Diese vier Status werden auf der Registerkarte **[!UICONTROL Veröffentlichungsablauf]** der Datenerfassungs-Benutzeroberfläche als Spalten dargestellt.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -111,7 +111,7 @@ Was im Upstream enthalten ist, hängt vom aktuellen Stand der Bibliothek ab. Bei
 
 ![](./images/approval-workflow/upstream.png)
 
-Wenn Sie eine Bibliothek in der Datenerfassungs-Benutzeroberfläche bearbeiten, werden alle Ressourcen, die von den Upstream übernommen werden, im Abschnitt **[!UICONTROL Ressourcen Upstream]** dargestellt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
+Wenn Sie eine Bibliothek in der Datenerfassungs-Benutzeroberfläche bearbeiten, werden alle Ressourcen, die von Upstream-Elementen übernommen werden, im Abschnitt **[!UICONTROL Upstream-Ressourcen]** angezeigt. Um diese Ressourcen anzuzeigen, wählen Sie den Tab „Erweitern“ unter der Abschnittsüberschrift aus.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 
@@ -121,4 +121,4 @@ Der Abschnitt wird erweitert, um die einzelnen Ressourcen anzuzeigen, die vom Up
 
 ## Nächste Schritte
 
-Dieses Handbuch bietet einen allgemeinen Überblick über den Veröffentlichungsfluss für Bibliotheken in Adobe Experience Platform. Weitere Informationen zum Veröffentlichen von Bibliotheken finden Sie unter [Übersicht über das Veröffentlichen](./overview.md).
+Dieses Handbuch bietet einen Überblick über den Veröffentlichungsablauf für Bibliotheken in Adobe Experience Platform. Weitere Informationen zum Veröffentlichen von Bibliotheken finden Sie unter [Übersicht über das Veröffentlichen](./overview.md).
