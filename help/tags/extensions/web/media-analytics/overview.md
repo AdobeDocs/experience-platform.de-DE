@@ -1,10 +1,10 @@
 ---
 title: Adobe Media Analytics for Audio and Video-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Tag-Erweiterung "Adobe Medien Analytics for Audio and Video"in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '987'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 In dieser Dokumentation finden Sie Informationen zum Installieren, Konfigurieren und Implementieren der „Adobe Media Analytics für Audio und Video“-Erweiterung (Media Analytics-Erweiterung). Darin enthalten sind neben Beispielen und Links zu Mustern die verfügbaren Optionen bei Verwendung dieser Erweiterung zum Erstellen einer Regel.
 
-Durch die Media Analytics (MA)-Erweiterung wird das JavaScript-Media-SDK (Media 2.x-SDK) hinzugefügt. Diese Erweiterung bietet die Funktionalität zum Hinzufügen der Tracker-Instanz `MediaHeartbeat` zu einer Tag-Site oder einem Projekt. Für die MA-Erweiterung sind zwei weitere Erweiterungen erforderlich:
+Durch die Media Analytics (MA)-Erweiterung wird das JavaScript-Media-SDK (Media 2.x-SDK) hinzugefügt. Diese Erweiterung bietet die Funktionalität zum Hinzufügen der `MediaHeartbeat`-Tracker-Instanz zu einer Tag-Site oder einem Projekt. Für die MA-Erweiterung sind zwei weitere Erweiterungen erforderlich:
 
 * [Analytics-Erweiterung](../analytics/overview.md)
 * [Experience Cloud ID-Erweiterung](../id-service/overview.md)
@@ -25,7 +25,7 @@ Durch die Media Analytics (MA)-Erweiterung wird das JavaScript-Media-SDK (Media�
 >
 >Für das Audio-Tracking ist die Analytics-Erweiterung Version 1.6 oder höher erforderlich.
 
-Nachdem Sie alle drei der oben erwähnten Erweiterungen in Ihr Tag-Projekt eingefügt haben, haben Sie zwei Möglichkeiten, den Vorgang fortzusetzen:
+Nachdem Sie alle drei der zuvor erwähnten Erweiterungen in Ihr Tag-Projekt eingefügt haben, haben Sie zwei Möglichkeiten, den Vorgang fortzusetzen:
 
 * Verwenden Sie `MediaHeartbeat`-APIs aus Ihrer Web-Anwendungserweiterung
 * Integrieren oder erstellen Sie eine Player-spezifische Erweiterung, die bestimmte Medienplayer-Ereignisse den APIs der `MediaHeartbeat`-Tracker-Instanz zuordnet. Diese Instanz wird über die MA-Erweiterung offengelegt.
@@ -45,7 +45,7 @@ Nachdem Sie alle drei der oben erwähnten Erweiterungen in Ihr Tag-Projekt einge
 | Tracking Server | Definiert den Server für das Tracking von Medientakten (dies ist nicht derselbe Server wie Ihr Analyse-Tracking-Server) |
 | Application Version | Medienplayer-App-/Medienplayer-SDK-Version |
 | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. |
-| Channel | Kanalnamen-Eigenschaft |
+| Kanal | Kanalnamen-Eigenschaft |
 | Online Video Provider | Name der Online-Videoplattform, über die der Inhalt verteilt wird |
 | Debug Logging | Aktivieren oder Deaktivieren der Protokollierung |
 | Enable SSL | Aktivieren oder Deaktivieren des Sendens von Pings über HTTPS |
@@ -62,7 +62,7 @@ Die MA-Erweiterung exportiert die MediaHeartbeat-APIs im globalen Fensterobjekt,
 
 >[!IMPORTANT]
 >
->Die MA-Erweiterung exportiert die APIs nur, wenn `window["CONFIGURED_VARIABLE_NAME"]` nicht definiert ist und vorhandene Variablen nicht überschrieben werden.
+>Die MA-Erweiterung exportiert die APIs nur, wenn `window["CONFIGURED_VARIABLE_NAME"]` nicht definiert ist, und vorhandene Variablen werden nicht überschrieben.
 
 1. **MediaHeartbeat-Instanz erstellen:** `window["CONFIGURED_VARIABLE_NAME"].MediaHeartbeat.getInstance`
 
@@ -176,7 +176,7 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
 
 >[!NOTE]
 >
->**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [ Platform ](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
+>**Testen:** Um Ihre Erweiterung zu testen, müssen Sie sie in [Platform](../../../extension-dev/submit/upload-and-test.md) hochladen, wo Sie Zugriff auf alle abhängigen Erweiterungen haben.
 
 
 <!--
