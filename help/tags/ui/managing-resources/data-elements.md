@@ -4,7 +4,7 @@ description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre D
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 78%
+ht-degree: 98%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 78%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 
-Ein einzelnes Datenelement ist eine Variable, deren Wert Abfragezeichenfolgen, URLs, Cookie-Werten, JavaScript-Variablen usw. zugeordnet werden kann. Sie können diesen Wert anhand seines Variablennamens in Adobe Experience Platform referenzieren. Diese Sammlung von Datenelementen wird zum Wörterbuch definierter Daten, mit deren Hilfe Sie eigene Regeln erstellen können (Ereignisse, Bedingungen und Aktionen). Dieses Datenwörterbuch ist über Tags hinweg für die Verwendung mit allen Erweiterungen freigegeben, die Sie Ihrer Eigenschaft hinzugefügt haben.
+Ein einzelnes Datenelement ist eine Variable, deren Wert Abfragezeichenfolgen, URLs, Cookie-Werten, JavaScript-Variablen usw. zugeordnet werden kann. Sie können diesen Wert anhand des zugehörigen Variablennamens in Adobe Experience Platform referenzieren. Diese Sammlung von Datenelementen wird zum Wörterbuch definierter Daten, mit deren Hilfe Sie eigene Regeln erstellen können (Ereignisse, Bedingungen und Aktionen). Dieses Datenwörterbuch ist überall in Tags für die Verwendung mit beliebigen Erweiterungen verfügbar, die Sie Ihrer Eigenschaft hinzugefügt haben.
 
 >[!IMPORTANT]
 >
@@ -26,7 +26,7 @@ Nutzen Sie Datenelemente so weit wie möglich für die Erstellung von Regeln, f�
 
 Das Konzept wiederverwendbarer Datenelemente ist ein sehr leistungsstarkes und sollte in die Best Practices übernommen werden.
 
-Wenn Sie beispielsweise auf eine bestimmte Weise auf Seitennamen oder Produkt-IDs verweisen oder Informationen aus Abfragezeichenfolgen-Parametern aus zugehörigen Marketinglinks oder [!DNL AdWords] abrufen, können Sie ein Datenwörterbuch (Datenelemente) erstellen, indem Informationen aus der zugehörigen Quelle abgerufen und in verschiedenen Tag-Regeln verwendet werden.
+Wenn Sie beispielsweise auf eine bestimmte Weise auf Seitennamen oder Produkt-IDs verweisen oder Informationen aus Abfragezeichenfolgenparametern von einem Affiliate-Marketing-Link oder von [!DNL AdWords] abrufen, etc. können Sie ein Datenwörterbuch (Datenelemente) erstellen, indem Sie Informationen aus seiner Quelle abrufen und diese Daten dann in verschiedenen Tag-Regeln verwenden.
 
 Hier das Beispiel „Seitennamen“: Nehmen wir an, dass Sie ein bestimmtes Seitennamensschema durch Referenzierung einer Datenschicht, eines `document.title`-Elements oder eines Überschrift-Tags auf der Website verwenden. Mit Tags in Adobe Experience Platform können Sie ein Datenelement erstellen, das für diesen Datenpunkt als alleiniger Bezugspunkt dient. Anschließend können Sie das Datenelement in allen Regeln verwenden, die auf den Seitennamen verweisen sollen. Sollten Sie sich in Zukunft dafür entscheiden, die Referenzierung des Seitennamens zu ändern (Sie haben beispielsweise bisher mit `document.title` gearbeitet, möchten nun aber auf eine bestimmte Datenschicht umstellen), müssen Sie nur eine einzige Regel bearbeiten, um die Referenzierung anzupassen. Ändern Sie einfach die eine Referenz im Datenelement, und alle Regeln, die dieses Datenelement nutzen, werden automatisch aktualisiert.
 
@@ -59,7 +59,7 @@ Datenelemente stellen die Bausteine zum Erstellen von Regeln dar. Dank Datenelem
 1. Benennen Sie das Datenelement.
 1. Wählen Sie eine Erweiterung und einen Typ aus.
 
-   Die verfügbaren Datenelementtypen werden durch die Erweiterung bestimmt. Informationen zu den für die Core-Tag-Erweiterung verfügbaren Typen finden Sie unter [Datenelementtypen](data-elements.md#types-of-data-elements).
+   Die verfügbaren Datenelementtypen werden durch die Erweiterung bestimmt. Informationen zu den mit der Haupt-Tag-Erweiterung verfügbaren Typen finden Sie unter [Typen von Datenelementen](data-elements.md#types-of-data-elements).
 
 1. Stellen Sie in den vorhandenen Feldern die angeforderten Informationen zum ausgewählten Typ bereit.
 1. (Optional) Geben Sie einen Standardwert ein.
@@ -86,7 +86,7 @@ Datenelemente stellen die Bausteine zum Erstellen von Regeln dar. Dank Datenelem
 
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
-Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibliothek](../publishing/libraries.md#active-library) speichern und Erstellungen vornehmen. Dadurch werden Ihre Änderungen direkt in Ihrer Bibliothek gespeichert, und ein Build wird ausgeführt. Der Build-Status wird angezeigt. Sie können auch eine neue Bibliothek aus dem Dropdown-Menü [!UICONTROL Aktive Bibliothek] erstellen.
+Beim Erstellen oder Bearbeiten von Elementen können Sie in Ihrer [aktiven Bibliothek](../publishing/libraries.md#active-library) speichern und Erstellungen vornehmen. Dadurch werden Ihre Änderungen direkt in Ihrer Bibliothek gespeichert, und ein Build wird ausgeführt. Der Build-Status wird angezeigt. Sie können auch eine neue Bibliothek über das Dropdown-Feld [!UICONTROL Aktive Bibliothek] erstellen.
 
 ## Datenelement-Typen {#types-of-data-elements}
 
@@ -96,13 +96,13 @@ In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Dat
 
 ### Cookie
 
-Jedes verfügbare Domänen-Cookie kann im Cookie-Namensfeld referenziert werden.
+Jedes verfügbare Domain-Cookie kann im  Cookie-Namensfeld referenziert werden.
 
 #### Beispiel:
 
 `cookieName`
 
-### Custom Code
+### Benutzerspezifischer Code
 
 Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf [!UICONTROL Editor öffnen] klicken und den Code in das Editor-Fenster einfügen.
 
@@ -133,7 +133,7 @@ Mithilfe der `_satellite`-Objektsyntax können Sie dies dann in benutzerdefinier
 
 `_satellite.getVar('data element name', event);`
 
-Bei Verwendung der `%..%`-Notation müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
+Bei Verwendung mit der Notation `%..%` müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
 
 `%data element name%`
 
@@ -143,7 +143,7 @@ Es kann ein beliebiger Elementwert abgerufen werden, z. B. „div“ oder H1-Ta
 
 #### Beispiel:
 
-CSS-Selektor-Kette:
+CSS-Auswahlkette:
 
 `id#dc logo img`
 
@@ -155,7 +155,7 @@ Wert abrufen von:
 
 Verfügbare JavaScript-Objekte oder -Variablen können mit dem Pfadfeld referenziert werden.
 
-Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement in allen Ihren Regeln referenzieren. Wenn sich die Datenquelle der Daten jemals ändert, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle in der Datenerfassungs-Benutzeroberfläche ändern.
+Wenn Sie JavaScript-Variablen oder Objekteigenschaften in Ihrem Markup erfassen und diese mit Ihren Erweiterungen oder Regeln verwenden möchten, können Datenelemente zum Erfassen dieser Werte verwendet werden. Auf diese Weise können Sie das Datenelement in allen Ihren Regeln referenzieren, und sollte sich die Quelle der Daten jemals ändern, müssen Sie nur den Verweis auf die Quelle (das Datenelement) an einer Stelle in der Datenerfassungs-Benutzeroberfläche ändern.
 
 Nehmen wir beispielsweise an, das Markup enthält eine JavaScript-Variable namens `Page_Name` wie hier gezeigt:
 
@@ -178,7 +178,7 @@ Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwen
 
 Geben Sie den Namen Ihres lokalen Speicherelements im Feld [!UICONTROL Name des lokalen Speicherelements] an.
 
-Der lokale Speicher bietet Browsern die Möglichkeit, Informationen seitenweise zu speichern ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Lokaler Speicher ähnelt Cookies sehr, ist jedoch viel größer und flexibler.
+Der lokale Speicher bietet Browsern die Möglichkeit, Informationen seitenweise zu speichern ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Die Funktion des lokalen Speichers ähnelt der von Cookies sehr stark. Er ist jedoch deutlich größer und bietet mehr Flexibilität.
 
 Geben Sie in dem bereitgestellten Feld den Wert an, den Sie für ein lokales Speicherelement erstellt haben, z. B. `lastProductViewed.`
 
@@ -230,7 +230,7 @@ Der Sitzungsspeicher ähnelt dem lokalen Speicher. Der Unterschied besteht darin
 
 ### Besucherverhalten
 
-Ähnlich wie bei Seiteninformationen verwendet dieses Datenelement allgemeine Verhaltenstypen, um Logik innerhalb von Regeln oder anderen Platform-Lösungen anzureichern.
+Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Verhaltenstypen zur Erweiterung der Logik in Regeln oder anderen Platform-Lösungen.
 
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 
@@ -247,7 +247,7 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 * Anzeigen einer Umfrage, nachdem ein Besucher fünf Minuten auf der Site war
 * Wenn dies die Landingpage für den Besuch ist, füllen Sie eine [!DNL Analytics]-Metrik
 * Anzeigen eines neuen Angebots für den Besucher nach X Sitzungen
-* Anzeige einer Newsletter-Anmeldung, wenn es sich um einen erstmaligen Besucher handelt
+* Anzeigen einer Newsletter-Registrierung, wenn es sich um einen erstmaligen Besucher handelt
 
 ## Integrierte Datenelemente
 
