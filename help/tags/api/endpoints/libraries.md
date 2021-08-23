@@ -1,28 +1,28 @@
 ---
-title: Bibliotheks-Endpunkt
-description: Erfahren Sie, wie Sie in der Reactor-API Aufrufe an den Endpunkt /libraries durchführen.
+title: Libraries-Endpunkt
+description: Erfahren Sie, wie Sie in der Reactor-API Aufrufe an den /libraries-Endpunkt durchführen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1588'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# Bibliotheks-Endpunkt
+# Libraries-Endpunkt
 
-Eine Bibliothek ist eine Sammlung von Tag-Ressourcen ([extensions](./extensions.md), [rules](./rules.md) und [Datenelemente](./data-elements.md)), die das gewünschte Verhalten einer [Eigenschaft](./properties.md) darstellen. Mit dem Endpunkt `/libraries` in der Reactor-API können Sie Bibliotheken in Ihren Tag-Eigenschaften programmgesteuert verwalten.
+Eine Bibliothek ist eine Sammlung von Tag-Ressourcen ([Erweiterungen](./extensions.md), [Regeln](./rules.md) und [Datenelementen](./data-elements.md)), die das gewünschte Verhalten einer [Eigenschaft](./properties.md) darstellen. Mit dem `/libraries`-Endpunkt in der Reactor-API können Sie Bibliotheken in Ihren Tag-Eigenschaften programmgesteuert verwalten.
 
-Eine Bibliothek gehört genau zu einer Eigenschaft. Eine Eigenschaft kann über viele Bibliotheken verfügen.
+Eine Bibliothek gehört zu genau einer Eigenschaft. Eine Eigenschaft kann viele Bibliotheken haben.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-Bevor Sie mit Bibliotheken in der Reactor-API arbeiten, müssen Sie wissen, welche Rollen Bibliotheksstatus und Umgebungen spielen, um zu bestimmen, welche Aktionen Sie für eine bestimmte Bibliothek durchführen können. Weitere Informationen finden Sie im Handbuch zum [Veröffentlichungsfluss für Bibliotheken](../../ui/publishing/publishing-flow.md).
+Bevor Sie mit Bibliotheken in der Reactor-API arbeiten, müssen Sie wissen, welche Rollen Bibliotheksstatus und Umgebungen spielen, um zu bestimmen, welche Aktionen Sie für eine bestimmte Bibliothek durchführen können. Weitere Informationen finden Sie im Handbuch zum [Veröffentlichungsablauf für Bibliotheken](../../ui/publishing/publishing-flow.md).
 
 ## Abrufen einer Liste von Bibliotheken {#list}
 
-Sie können eine Liste von Bibliotheken für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft in den Pfad einer GET-Anfrage einschließen.
+Sie können eine Liste von Bibliotheken für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -38,7 +38,7 @@ GET /properties/{PROPERTY_ID}/libraries
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Bibliotheken anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Bibliotheken anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -146,9 +146,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Bibliotheken für die angegebene E
 }
 ```
 
-## Bibliothek nachschlagen {#lookup}
+## Suchen einer Bibliothek {#lookup}
 
-Sie können eine Bibliothek nachschlagen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Bibliothek suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -158,7 +158,7 @@ GET /libraries/{LIBRARY_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `LIBRARY_ID` | Die `id` der Bibliothek, die Sie nachschlagen möchten. |
+| `LIBRARY_ID` | Die `id` der Bibliothek, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -275,7 +275,7 @@ POST /properties/{PROPERTY_ID}/libraries
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Bibliothek für die angegebene Eigenschaft. Beim ersten Erstellen einer Bibliothek kann nur das zugehörige Attribut `name` konfiguriert werden. Um Datenelemente, Erweiterungen und Regeln zur Bibliothek hinzuzufügen, müssen Sie Beziehungen erstellen. Weitere Informationen finden Sie im Abschnitt [Verwalten von Bibliotheksressourcen](#resources) .
+Die folgende Anfrage erstellt eine neue Bibliothek für die angegebene Eigenschaft. Beim ersten Erstellen einer Bibliothek kann nur das zugehörige Attribut `name` konfiguriert werden. Um Datenelemente, Erweiterungen und Regeln zur Bibliothek hinzuzufügen, müssen Sie Beziehungen erstellen. Weitere Informationen finden Sie im Abschnitt zum [Verwalten von Bibliotheksressourcen](#resources).
 
 ```shell
 curl -X POST \
@@ -409,7 +409,7 @@ Die Datenelemente, Erweiterungen, Regeln und Umgebungen, die mit einer Bibliothe
 
 ### Hinzufügen von Ressourcen zu einer Bibliothek {#add-resources}
 
-Sie können einer Bibliothek Ressourcen hinzufügen, indem Sie `/relationships` an den Pfad einer POST-Anforderung anhängen, gefolgt vom Ressourcentyp.
+Sie können Ressourcen zu einer Bibliothek hinzufügen, indem Sie `/relationships`, gefolgt vom Ressourcentyp, an den Pfad einer POST-Anfrage anhängen.
 
 **API-Format**
 
@@ -482,7 +482,7 @@ Eine erfolgreiche Antwort gibt die Details der hinzugefügten Beziehungen zurüc
 
 ### Ersetzen der Ressourcen für eine Bibliothek {#replace-resources}
 
-Sie können alle vorhandenen Ressourcen eines bestimmten Typs für eine Bibliothek ersetzen, indem Sie `/relationships` an den Pfad einer PATCH-Anfrage anhängen, gefolgt vom Ressourcentyp, den Sie ersetzen.
+Sie können alle vorhandenen Ressourcen eines bestimmten Typs für eine Bibliothek ersetzen, indem Sie `/relationships`, gefolgt vom zu ersetzenden Ressourcentyp, an den Pfad einer PATCH-Anfrage anhängen.
 
 **API-Format**
 
@@ -499,7 +499,7 @@ PATCH /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Anfrage**
 
-Die folgende Anfrage ersetzt die Erweiterungen für eine Bibliothek durch die im Array `data` bereitgestellten.
+Die folgende Anfrage ersetzt die Erweiterungen für eine Bibliothek durch die im `data`-Array bereitgestellten.
 
 ```shell
 curl -X PATCH \
@@ -528,7 +528,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen zurück. Wenn Sie eine [Suchanfrage](#lookup) für die Bibliothek ausführen, werden die Beziehungen unter der Eigenschaft `relationships` angezeigt.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehung zurück. Wenn Sie eine [Suchanfrage](#lookup) für die Bibliothek ausführen, werden die Beziehungen unter der Eigenschaft `relationships` angezeigt.
 
 ```json
 {
@@ -545,9 +545,9 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen zurüc
 }
 ```
 
-### Entfernen von Ressourcen für eine Bibliothek {#remove-resources}
+### Entfernen von Ressourcen aus einer Bibliothek {#remove-resources}
 
-Sie können vorhandene Ressourcen aus einer Bibliothek entfernen, indem Sie `/relationships` an den Pfad einer DELETE-Anforderung anhängen, gefolgt vom Ressourcentyp, den Sie entfernen.
+Sie können vorhandene Ressourcen aus einer Bibliothek entfernen, indem Sie `/relationships`, gefolgt vom zu entfernenden Ressourcentyp, an den Pfad einer DELETE-Anfrage anhängen.
 
 **API-Format**
 
@@ -564,7 +564,7 @@ DELETE /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird eine Regel aus einer Bibliothek entfernt. Vorhandene Regeln, die nicht im Array `data` enthalten sind, werden nicht gelöscht.
+Mit der folgenden Anfrage wird eine Regel aus einer Bibliothek entfernt. Vorhandene Regeln, die nicht im `data`-Array enthalten sind, werden nicht gelöscht.
 
 ```shell
 curl -X DELETE \
@@ -593,7 +593,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen für den Ressourcentyp zurück. Wenn für diesen Ressourcentyp keine Beziehungen vorhanden sind, wird die Eigenschaft `data` als leeres Array zurückgegeben. Wenn Sie eine [Suchanfrage](#lookup) für die Bibliothek ausführen, werden die Beziehungen unter der Eigenschaft `relationships` angezeigt.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen für den Ressourcentyp zurück. Wenn für diesen Ressourcentyp keine Beziehungen vorhanden sind, wird die `data`-Eigenschaft als leeres Array zurückgegeben. Wenn Sie eine [Suchanfrage](#lookup) für die Bibliothek ausführen, werden die Beziehungen unter der Eigenschaft `relationships` angezeigt.
 
 ```json
 {
@@ -609,7 +609,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen für d
 
 ## Zuweisen einer Bibliothek zu einer Umgebung {#environment}
 
-Sie können einer Umgebung `/relationships/environment` eine Bibliothek zuweisen, die dem Pfad einer POST-Anfrage entspricht.
+Sie können einer `/relationships/environment`-Umgebung eine Bibliothek zum Pfad einer POST-Anfrage zuweisen.
 
 **API-Format**
 
@@ -644,7 +644,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Die ID der Umgebung, der Sie die Bibliothek zuweisen. |
-| `type` | Muss auf `environments` gesetzt werden. |
+| `type` | Muss auf `environments` festgelegt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -665,9 +665,9 @@ Eine erfolgreiche Antwort gibt die Details der Beziehung zurück. Wenn Sie eine 
 }
 ```
 
-## Übergang zu einer Bibliothek {#transition}
+## Übergeben einer Bibliothek {#transition}
 
-Sie können eine Bibliothek in einen anderen Veröffentlichungsstatus umwandeln, indem Sie ihre ID in den Pfad einer PATCH-Anfrage einschließen und einen entsprechenden `meta.action` -Wert in die Payload eingeben.
+Sie können eine Bibliothek in einen anderen Veröffentlichungsstatus übergeben, indem Sie ihre ID im Pfad einer PATCH-Anfrage angeben und einen entsprechenden `meta.action`-Wert in die Payload eingeben.
 
 **API-Format**
 
@@ -683,7 +683,7 @@ PATCH /libraries/{LIBRARY_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird der Status einer vorhandenen Bibliothek basierend auf dem in der Payload angegebenen Wert von `meta.action` umgestellt. Die verfügbaren Aktionen für eine Bibliothek hängen vom aktuellen Veröffentlichungsstatus ab, wie im [Veröffentlichungsfluss](../../ui/publishing/publishing-flow.md#state) beschrieben.
+Mit der folgenden Anfrage wird der Status einer vorhandenen Bibliothek basierend auf dem in der Payload angegebenen Wert von `meta.action` übergeben. Die verfügbaren Aktionen für eine Bibliothek hängen vom aktuellen Veröffentlichungsstatus ab, wie im [Veröffentlichungsablauf](../../ui/publishing/publishing-flow.md#state) beschrieben.
 
 ```shell
 curl -X PATCH \
@@ -705,8 +705,8 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `meta.action` | Die spezifische Übergangsaktion, die Sie für die Bibliothek durchführen möchten. Je nach dem aktuellen Veröffentlichungsstatus der Bibliothek sind die folgenden Aktionen verfügbar: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | Die `id` der Bibliothek, die Sie aktualisieren möchten. Dies sollte mit dem Wert `{LIBRARY_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `meta.action` | Die spezifische Übergabe-Aktion, die Sie für die Bibliothek durchführen möchten. Je nach dem aktuellen Veröffentlichungsstatus der Bibliothek sind die folgenden Aktionen verfügbar: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
+| `id` | Die `id` der Bibliothek, die Sie aktualisieren möchten. Diese sollte mit dem `{LIBRARY_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `libraries` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -797,7 +797,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Bibliothek zurück
 }
 ```
 
-## Bibliothek veröffentlichen {#publish}
+## Veröffentlichen einer Bibliothek {#publish}
 
 >[!NOTE]
 >
@@ -902,17 +902,17 @@ curl -X POST \
 }
 ```
 
-## Notizen für eine Bibliothek verwalten {#notes}
+## Verwalten von Anmerkungen für eine Bibliothek {#notes}
 
-Bibliotheken sind &quot;wichtige&quot;Ressourcen, d. h. Sie können für jede einzelne Ressource textbasierte Notizen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Bibliotheken und andere kompatible Ressourcen finden Sie im [Notes-Endpunkthandbuch](./notes.md) .
+Sie können für jede einzelne Bibliothek textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Bibliotheken und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Bibliothek {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Bibliothek abrufen. Wenn [nach einer Bibliothek](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Bibliothek abrufen. Beim [Suchen einer Bibliothek](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgelistet.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Zugehörige Datenelemente für eine Bibliothek auflisten {#data-elements}
+### Auflisten der zugehörigen Datenelemente für eine Bibliothek {#data-elements}
 
 Sie können die von einer Bibliothek verwendeten Datenelemente auflisten, indem Sie `/data_elements` an den Pfad einer Suchanfrage anhängen.
 
@@ -1184,7 +1184,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungen zurück, die die ang
 }
 ```
 
-### Zugehörige Regeln für eine Bibliothek auflisten {#rules}
+### Auflisten der zugehörigen Regeln für eine Bibliothek {#rules}
 
 Sie können die von einer Bibliothek verwendeten Regeln auflisten, indem Sie `/rules` an den Pfad einer Suchanfrage anhängen.
 
@@ -1297,9 +1297,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Regeln zurück, die die angegebene
 }
 ```
 
-### Suchen der zugehörigen Umgebung nach einer Bibliothek {#related-environment}
+### Suchen der zugehörigen Umgebung einer Bibliothek {#related-environment}
 
-Sie können die Umgebung nachschlagen, der eine Bibliothek zugewiesen ist, indem Sie `/environment` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Umgebung suchen, der eine Bibliothek zugewiesen ist, indem Sie `/environment` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -1309,7 +1309,7 @@ GET  /libraries/{LIBRARY_ID}/environment
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Umgebung Sie nachschlagen möchten. |
+| `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Umgebung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1409,9 +1409,9 @@ Eine erfolgreiche Antwort gibt die Details der Umgebung zurück, der die angegeb
 }
 ```
 
-### Suchen nach der zugehörigen Eigenschaft für eine Bibliothek {#property}
+### Suchen der zugehörigen Eigenschaft für eine Bibliothek {#property}
 
-Sie können die Eigenschaft nachschlagen, der eine Bibliothek gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Eigenschaft suchen, der eine Bibliothek gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -1421,7 +1421,7 @@ GET  /libraries/{LIBRARY_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Eigenschaft Sie nachschlagen möchten. |
+| `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1532,9 +1532,9 @@ Eine erfolgreiche Antwort gibt die Details der Eigenschaft zurück, der die ange
 }
 ```
 
-### Nachschlagen des Upstream nach einer Bibliothek {#upstream}
+### Suchen des Upstreams einer Bibliothek {#upstream}
 
-Sie können die nächste Bibliothek in vorgelagerten Bibliotheken nachschlagen, indem Sie `/upstream_library` an den Pfad einer GET-Anfrage anhängen.
+Sie können die nächste Upstream-Bibliothek einer Bibliothek suchen, indem Sie `/upstream_library` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -1544,7 +1544,7 @@ GET  /libraries/{LIBRARY_ID}/upstream_library
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Upstream-Bibliothek Sie nachschlagen möchten. |
+| `{LIBRARY_ID}` | Die `id` der Bibliothek, deren Upstream-Bibliothek Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
