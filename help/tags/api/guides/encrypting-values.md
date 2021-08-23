@@ -1,30 +1,30 @@
 ---
 title: Verschlüsseln von Werten
-description: Erfahren Sie, wie Sie bei Verwendung der Reactor-API sensible Werte verschlüsseln.
+description: Hier erfahren Sie, wie Sie bei Verwendung der Reactor-API sensible Werte verschlüsseln können.
 source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '395'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Verschlüsseln von Werten
 
-Bei der Verwendung von Tags in Adobe Experience Platform erfordern einige Workflows die Bereitstellung sensibler Werte (z. B. die Bereitstellung eines privaten Schlüssels bei der Bereitstellung von Bibliotheken an Umgebungen über Hosts). Die Vertraulichkeit dieser Berechtigungen erfordert
+Bei der Verwendung von Tags in Adobe Experience Platform erfordern einige Workflows die Bereitstellung sensibler Werte (z. B. das Angeben eines privaten Schlüssels bei der Bereitstellung von Bibliotheken an Umgebungen über Hosts). Die Vertraulichkeit dieser Zugangsdaten erfordert
 sichere Übertragung und Speicherung.
 
-In diesem Dokument wird beschrieben, wie vertrauliche Werte mit [GnuPG-Verschlüsselung](https://www.gnupg.org/gph/en/manual/x110.html) (auch als GPG bezeichnet) verschlüsselt werden, sodass nur das Tag-System sie lesen kann.
+In diesem Dokument wird beschrieben, wie vertrauliche Werte mit [GnuPG-Verschlüsselung](https://www.gnupg.org/gph/en/manual/x110.html) (auch als GPG bezeichnet) verschlüsselt werden können, sodass nur das Tag-System sie lesen kann.
 
 ## Abrufen des öffentlichen GPG-Schlüssels und der Prüfsumme
 
-Nachdem Sie [](https://gnupg.org/download/) heruntergeladen und die neueste Version von GPG installiert haben, müssen Sie den öffentlichen GPG-Schlüssel für die Tags-Produktionsumgebung abrufen:
+Nachdem Sie die neueste Version von GPG [heruntergeladen](https://gnupg.org/download/) und installiert haben, müssen Sie den öffentlichen GPG-Schlüssel für die Produktionsumgebung der Tags abrufen:
 
 * [GPG-Schlüssel](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg)
 * [Prüfsumme](https://github.com/adobe/reactor-developer-docs/blob/master/files/launch%40adobe.com_pub.gpg.sum)
 
-## Importieren des Schlüssels in Ihre Schlüsselkette
+## Importieren des Schlüssels in Ihren Schlüsselbund
 
-Sobald Sie den Schlüssel auf Ihrem Computer gespeichert haben, besteht der nächste Schritt darin, ihn zu Ihrem GPG-Schlüsselbund hinzuzufügen.
+Wenn Sie den Schlüssel auf Ihrem Computer gespeichert haben, besteht der nächste Schritt darin, ihn zu Ihrem GPG-Schlüsselbund hinzuzufügen.
 
 **Syntax**
 
@@ -44,7 +44,7 @@ gpg --import {KEY_NAME}
 gpg --import launch@adobe.com_pub.gpg
 ```
 
-## Werte verschlüsseln
+## Verschlüsseln von Werten
 
 Nachdem Sie den Schlüssel zu Ihrem Schlüsselbund hinzugefügt haben, können Sie mit der Verschlüsselung von Werten mit dem Flag `--encrypt` beginnen. Das folgende Skript zeigt, wie dieser Befehl funktioniert:
 
@@ -55,13 +55,13 @@ echo -n 'Example value' | gpg --armor --encrypt -r "Tags Data Encryption <launch
 Dieser Befehl kann wie folgt aufgeschlüsselt werden:
 
 * Die Eingabe wird dem Befehl `gpg` bereitgestellt.
-* `--armor` erstellt eine ASCII-gepanzerte Ausgabe anstelle der Binärdatei. Dies vereinfacht die Übertragung des Werts über JSON.
+* `--armor` erstellt eine ASCII-armierte Ausgabe statt einer binären. Dies vereinfacht die Übertragung des Wertes über JSON.
 * `--encrypt` weist GPG an, die Daten zu verschlüsseln.
-* `-r` legt den Empfänger für die Daten fest. Nur der Empfänger (der Inhaber des privaten Schlüssels, der dem öffentlichen Schlüssel entspricht) kann die Daten entschlüsseln. Der Empfängername des gewünschten Schlüssels kann durch die Untersuchung der Ausgabe von `gpg --list-keys` gefunden werden.
+* `-r` legt den Empfänger für die Daten fest. Nur der Empfänger (der Inhaber des privaten Schlüssels, der dem öffentlichen Schlüssel entspricht) kann die Daten entschlüsseln. Der Empfängername des gewünschten Schlüssels kann durch die Überprüfung der Ausgabe von `gpg --list-keys` gefunden werden.
 
-Der obige Befehl verwendet den öffentlichen Schlüssel für `Tags Data Encryption <launch@adobe.com>`, um den Wert `Example value` im ASCII-gepanzerten Format zu verschlüsseln.
+Der obige Befehl verwendet den öffentlichen Schlüssel für `Tags Data Encryption <launch@adobe.com>`, um den Wert `Example value` im ASCII-armierten Format zu verschlüsseln.
 
-Die Ausgabe des Befehls würde wie folgt aussehen:
+Die Ausgabe des Befehls würde in etwa wie folgt aussehen:
 
 ```shell
 -----BEGIN PGP MESSAGE-----
@@ -83,11 +83,10 @@ OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 -----END PGP MESSAGE-----
 ```
 
-Diese Ausgabe kann nur von Systemen entschlüsselt werden, die über den privaten Schlüssel verfügen, der
-entspricht dem öffentlichen Schlüssel `Tags Data Encryption <launch@adobe.com>`.
+Diese Ausgabe kann nur von Systemen entschlüsselt werden, die über den privaten Schlüssel verfügen, der dem öffentlichen Schlüssel `Tags Data Encryption <launch@adobe.com>` entspricht.
 
-Diese Ausgabe ist der Wert, der in einer bereitgestellt werden sollte, wenn Daten an die Reactor-API gesendet werden. Das System speichert diese verschlüsselte Ausgabe und entschlüsselt sie vorübergehend nach Bedarf. Beispielsweise entschlüsselt das System Host-Anmeldeinformationen lange genug, um eine Verbindung zum Server herzustellen, und entfernt dann sofort alle Traces des entschlüsselten Werts.
+Diese Ausgabe ist der Wert, der bereitgestellt werden muss, wenn Daten an die Reactor-API gesendet werden. Das System speichert diese verschlüsselte Ausgabe und entschlüsselt sie vorübergehend nach Bedarf. Beispielsweise entschlüsselt das System Host-Anmeldeinformationen lange genug, um eine Verbindung zum Server herzustellen, und entfernt dann sofort alle Spuren des entschlüsselten Werts.
 
 >[!NOTE]
 >
->Das Format des gepanzerten, verschlüsselten Werts ist wichtig. Stellen Sie sicher, dass Zeilenumbrüche in dem in der Anfrage angegebenen Wert ordnungsgemäß maskiert sind.
+>Das Format des armierten, verschlüsselten Werts ist wichtig. Stellen Sie sicher, dass Zeilenumbrüche in dem in der Anfrage angegebenen Wert ordnungsgemäß umbrochen sind.
