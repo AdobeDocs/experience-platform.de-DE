@@ -1,26 +1,26 @@
 ---
-title: Endpunkt "Profile"
-description: Erfahren Sie, wie Sie den Endpunkt /profiles in der Reactor-API aufrufen.
+title: Profiles-Endpunkt
+description: Erfahren Sie, wie Sie den /profiles-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Profil-Endpunkt
 
-In der Reactor-API stellt ein Profil einen Adobe Experience Platform-Benutzer dar. Die Reactor-API unterhält keine eigene Benutzer- und Berechtigungsdatenbank und verlässt sich stattdessen auf Adobe-IDs, die vom Identitätsverwaltungssystem (IMS)](https://helpx.adobe.com/de/enterprise/using/identity.html) der Adobe verwaltet werden.[
+In der Reactor-API stellt ein Profil einen Adobe Experience Platform-Benutzer dar. Die Reactor-API unterhält keine eigene Benutzer- und Berechtigungsdatenbank und verlässt sich stattdessen auf Adobe IDs, die vom [Identity Management System (IMS) von Adobe](https://helpx.adobe.com/de/enterprise/using/identity.html) verwaltet werden.
 
 Ein Profil enthält alle Informationen zum angemeldeten Benutzer, einschließlich aller IMS-Organisationen, zu denen er gehört, der Produktprofile, zu denen er in jeder Organisation gehört, und der Rechte, die ihm aus jedem Produktprofil zugewiesen sind.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Aktuelles Profil abrufen {#lookup}
+## Abrufen des aktuellen Profils {#lookup}
 
-Sie können die Details des aktuell angemeldeten Profils abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/profile` stellen.
+Sie können die Details des aktuell angemeldeten Profils abrufen, indem Sie eine GET-Anfrage an den `/profile`-Endpunkt stellen.
 
 **API-Format**
 
