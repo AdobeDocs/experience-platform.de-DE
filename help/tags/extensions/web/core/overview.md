@@ -1,105 +1,105 @@
 ---
-title: Core-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Core-Tag-Erweiterung in Adobe Experience Platform.
+title: Haupterweiterung – Übersicht
+description: Machen Sie sich mit der Tag-Erweiterung „Core“ in Adobe Experience Platform vertraut.
 source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
 workflow-type: tm+mt
 source-wordcount: '4905'
-ht-degree: 75%
+ht-degree: 98%
 
 ---
 
-# Core-Erweiterung – Übersicht
+# Haupterweiterung – Übersicht
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Die Core Tag-Erweiterung ist die mit Adobe Experience Platform veröffentlichte Standarderweiterung.
+Die Haupt-Tag-Erweiterung ist die mit Adobe Experience Platform veröffentlichte Standarderweiterung.
 
 Dieses Dokument enthält Informationen zu den verfügbaren Optionen bei der Verwendung der Haupterweiterung zum Erstellen einer Regel.
 
 ## Ereignistypen für die Haupterweiterung {#core-extension-event-types}
 
-In diesem Thema werden die in der Haupterweiterung verfügbaren Ereignistypen beschrieben. Informationen zu den Optionen, die für verschiedene Ereignistypen festgelegt werden können, finden Sie im Abschnitt [Optionen](#options) .
+In diesem Thema werden die in der Haupterweiterung verfügbaren Ereignistypen beschrieben. Informationen zu den Optionen, die für verschiedene Ereignistypen festgelegt werden können, finden Sie im Abschnitt [Optionen](#options).
 
-### Browserbasierte Ereignisse
+### Browser-basierte Ereignisse
 
 #### Tab Blur
 
-Das Ereignis &quot;tab-blur&quot;Trigger die Aktion, wenn eine Registerkarte den Fokus verliert. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis „tab-blur“ löst die Aktion aus, wenn eine Registerkarte den Fokus verliert. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 #### Tab Focus
 
-Das Ereignis &quot;tab-focus&quot;Trigger die Aktion, wenn eine Registerkarte den Fokus erhält. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis „tab-focus“ löst die Aktion aus, wenn eine Registerkarte den Fokus erhält. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 ### Formular
 
 #### Blur
 
-Das Weichzeichenereignis Trigger die Aktion, wenn ein Formular den Fokus verliert. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis „blur“ löst die Aktion aus, wenn ein Formular den Fokus verliert. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Focus
 
-Das Fokusereignis Trigger die Aktion, wenn ein Formular den Fokus erhält. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis „focus“ löst die Aktion aus, wenn ein Formular den Fokus erhält. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Submit
 
-Das submit -Ereignis Trigger die Aktion, wenn ein Formular gesendet wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis „submit“ löst die Aktion aus, wenn ein Formular gesendet wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 ### Tastaturgesteuerte Ereignisse
 
 #### Key Press
 
-Das Ereignis wird Trigger, wenn eine Taste gedrückt wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn eine Taste gedrückt wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 ### Medienbasierte Ereignisse
 
 #### Media Ended
 
-Das Ereignis wird Trigger, wenn das Medium beendet wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn das Medium beendet wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Mediengeladene Daten
 
-Das Ereignis wird Trigger, wenn das Medium Daten lädt. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgeslöst, wenn Daten durch das Medium geladen werden. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Media Pause
 
-Das Ereignis wird Trigger, wenn das Medium angehalten wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn das Medium pausiert wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Media Play
 
-Das Ereignis wird Trigger, wenn das Medium wiedergegeben wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn das Medium wiedergegeben wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Media Stalled
 
-Das Ereignis wird Trigger, wenn die Medien anhalten. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn das Medium angehalten wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
-#### Medienwiedergabe
+#### Dauer der Medienwiedergabe
 
-Das Ereignis wird Trigger, wenn das Medium für eine bestimmte Zeitdauer wiedergegeben wird. Sie müssen die Wiedergabedauer festlegen, für die das Medium wiedergegeben werden muss, um das Ereignis Trigger. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn das Medium für eine bestimmte Zeitdauer wiedergegeben wird. Sie müssen die Dauer festlegen, für die das Medium wiedergegeben werden muss, damit das Ereignis ausgelöst wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 
-#### Medienvolumen geändert
+#### Medienlautstärke geändert
 
-Das Ereignis wird Trigger, wenn die Lautstärke erhöht oder verringert wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn die Lautstärke erhöht oder verringert wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 ### Mobilgeräteorientierte Ereignisse
 
-#### Orientation Change
+#### Ausrichtungsänderung
 
-Das Ereignis wird Trigger, wenn sich die Ausrichtung des Geräts ändert. Sie müssen die Dauer angeben, für die die Ausrichtung geändert werden muss, damit das Ereignis Trigger wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn sich die Ausrichtung des Geräts ändert. Sie müssen die Dauer angeben, für die die Ausrichtung geändert werden muss, damit das Ereignis ausgelöst wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Zoom Change
+#### Zoom-Änderung
 
-Das Ereignis wird Trigger, wenn der Benutzer vergrößert oder verkleinert. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn der Benutzer die Ansicht vergrößert oder verkleinert. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 ### Mausgesteuerte Ereignisse
 
-#### Click
+#### Klick
 
-Das Ereignis wird Trigger, wenn das angegebene Element ausgewählt (angeklickt) wurde. Optional können Sie Eigenschaftswerte angeben, die für das Element „true“ sein müssen, bevor das Ereignis ausgelöst wird.
+Das Ereignis wird ausgelöst, wenn das angegebene Element ausgewählt (angeklickt) wird. Optional können Sie Eigenschaftswerte angeben, die für das Element „true“ sein müssen, bevor das Ereignis ausgelöst wird.
 
-Wenn das Element ein Anker-Tag (`<a>`) für verknüpfte Inhalte ist, können Sie auch angeben, ob die Navigation für einen bestimmten Zeitraum verzögert werden soll. Dies kann nützlich sein, wenn die Ausführung Ihrer Regel mehr Zeit erfordert und normalerweise nicht abgeschlossen würde, bevor die Seitennavigation stattfindet.
+Wenn das Element ein Anker-Tag (`<a>`) zu verlinkten Inhalten ist, können Sie auch angeben, ob die Navigation für einen bestimmten Zeitraum verzögert werden soll. Dies kann nützlich sein, wenn die Ausführung Ihrer Regel mehr Zeit erfordert und normalerweise nicht abgeschlossen würde, bevor die Seitennavigation stattfindet.
 
 >[!WARNING]
 >
@@ -107,65 +107,65 @@ Wenn das Element ein Anker-Tag (`<a>`) für verknüpfte Inhalte ist, können Sie
 
 Wenn Sie die Link-Verzögerung verwenden, verhindert Platform tatsächlich, dass der Browser von der Seite weg navigiert. Anschließend führt es nach der angegebenen Zeitüberschreitung eine JavaScript-Umleitung zum ursprünglichen Ziel durch. Dies ist besonders dann problematisch, wenn Ihr Seiten-Markup `<a>`-Tags enthält, bei denen die vorgesehene Funktion den Benutzer nicht tatsächlich weg von der Seite navigieren lässt. Wenn Sie Ihr Problem nicht anders lösen können, sollten Sie mit der Definition Ihrer Auswahl sehr genau umgehen, damit dieses Ereignis nur genau dort ausgelöst wird, wo Sie es brauchen, und sonst nirgends.
 
-Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer auf die angegebene Dauer warten und in keiner Weise mit der Ausführung der Regelaktionen verbunden sind. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger zu warten als nötig, und dass die Verzögerung möglicherweise trotz allem nicht lang genug ist, sodass alle Aktionen der Regel erfolgreich abgeschlossen werden. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlimmern aber auch das Benutzererlebnis.
+Der Standardwert für die Link-Verzögerung ist 100 Millisekunden. Beachten Sie, dass Tags immer die angegebene Zeitdauer abwarten und in keiner Weise mit der Ausführung der Regelaktionen in Verbindung stehen. Es ist möglich, dass die Verzögerung den Benutzer zwingt, länger zu warten als nötig, und dass die Verzögerung möglicherweise trotz allem nicht lang genug ist, sodass alle Aktionen der Regel erfolgreich abgeschlossen werden. Größere Verzögerungen bieten mehr Zeit für die Regelausführung, verschlechtern aber auch das Benutzererlebnis.
 
-Um die Verzögerung zu implementieren, müssen sowohl das ausgewählte Element, das das Ereignis Trigger, als auch der spezifische Zeitraum angegeben werden, bevor das Ereignis ausgelöst wird.
+Um die Verzögerung zu implementieren, müssen sowohl das ausgewählte Element, das das Ereignis auslöst, als auch der spezifische Zeitraum angegeben werden, bevor das Ereignis ausgelöst wird.
 
-Weitere Informationen zu den erweiterten Optionen finden Sie im Abschnitt [Optionen](#options) .
+Weitere Informationen zu den erweiterten Optionen finden Sie im Abschnitt [Optionen](#options).
 
 #### Hover
 
-Das Ereignis wird Trigger, wenn der Benutzer den Mauszeiger über ein bestimmtes Element bewegt. Sie müssen auch konfigurieren, ob die Regel sofort oder nach einer bestimmten Anzahl von Millisekunden ausgelöst wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn der Benutzer den Mauszeiger über ein angegebenes Element bewegt. Konfigurieren Sie zudem, ob die Regel sofort oder nach einer angegebenen Anzahl Millisekunden ausgelöst wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 ### Andere Ereignisse
 
-#### Custom Event
+#### Benutzerspezifisches Ereignis
 
-Das Ereignis wird Trigger, wenn ein benutzerspezifischer Ereignistyp auftritt. Benannte JavaScript-Funktionen, die an anderer Stelle in der Codebase definiert sind, können als benutzerdefinierter Ereignistyp verwendet werden. Sie müssen den Namen des benutzerdefinierten Ereignistyps angeben und alle anderen Einstellungen konfigurieren, wie im Abschnitt [Optionen](#options) unten beschrieben.
+Das Ereignis wird ausgelöst, wenn ein benutzerspezifischer Ereignistyp eintritt. Benannte JavaScript-Funktionen, die an anderer Stelle in der Code-Basis definiert sind, können als benutzerdefinierter Ereignistyp verwendet werden. Sie müssen den Namen des benutzerdefinierten Ereignistyps angeben und alle anderen Einstellungen konfigurieren, wie im Abschnitt [Optionen](#options) unten beschrieben.
 
-#### Data Element Changed
+#### Datenelement geändert
 
-Das Ereignis wird Trigger, wenn sich ein bestimmtes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und aus einer Liste wählen, die im angezeigten Dialogfeld bereitgestellt wird.
+Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und aus einer Liste wählen, die im angezeigten Dialogfeld bereitgestellt wird.
 
-#### Direct Call
+#### Direkter Aufruf
 
-Das Direktaufruferereignis umgeht die Ereigniserkennung und Suchsysteme. Direktaufrufregeln eignen sich optimal für Situationen, in denen Sie Platform genau mitteilen möchten, was vor sich geht. Außerdem eignen sich Regeln dieses Typs ideal für Fälle, in denen Platform kein Ereignis im DOM erkennen kann (z. B. bei Adobe Flash). Geben Sie die Zeichenfolge `_satellite.track` im Textfeld &quot;Kennung&quot;an.
+Das Ereignis „direct-call“ umgeht die Ereigniserkennung und Suchsysteme. Direktaufruf-Regeln eignen sich optimal für Situationen, in denen Sie Platform explizit vorgeben möchten, was passieren soll. Außerdem eignen sich Regeln dieses Typs ideal für Fälle, in denen Platform kein Ereignis im DOM erkennen kann (z. B. bei Adobe Flash). Geben Sie die Zeichenfolge `_satellite.track` im Textfeld „Kennung“ an.
 
-#### Element Exists
+#### Element vorhanden
 
-Das Ereignis wird Trigger, wenn ein angegebenes Element vorhanden ist. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Das Ereignis wird ausgelöst, wenn ein angegebenes Element vorhanden ist. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Enters Viewport
 
-Das Ereignis wird Trigger, wenn der Benutzer einen bestimmten Viewport aufruft. Sie müssen einen CSS-Selektor als Kriterium für das Targeting von übereinstimmenden Elementen bereitstellen. Sie müssen außerdem konfigurieren, ob die Regel sofort oder nach einer bestimmten Anzahl von Millisekunden ausgelöst wird und ob das Ereignis bei jedem Auftreten des Ereignisses oder nur beim ersten Mal Trigger werden soll.
+Das Ereignis wird ausgelöst, wenn der Benutzer einen angegebenen Viewport aufruft. Sie müssen eine CSS-Auswahl als Kriterium für das Targeting von übereinstimmenden Elementen bereitstellen. Sie müssen außerdem konfigurieren, ob die Regel sofort oder nach einer bestimmten Anzahl von Millisekunden ausgelöst wird und ob das Ereignis bei jedem Auftreten des Ereignisses oder nur beim ersten Mal ausgelöst werden soll.
 
-Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options) .
+Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
-#### History Change
+#### Verlaufsänderung
 
-Das Ereignis wird Trigger, wenn ein pushState- oder ein hashchange-Ereignis auftritt. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn ein pushState- oder ein hashchange-Ereignis auftritt. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 #### Besuchszeit pro Seite
 
-Das Ereignis wird Trigger, wenn der Benutzer eine bestimmte Anzahl von Sekunden lang auf der Seite bleibt. Sie müssen die Anzahl der Sekunden angeben, die vergehen müssen, bevor das Ereignis ausgelöst wird.
+Das Ereignis wird ausgelöst, wenn der Benutzer für eine bestimmte Anzahl Sekunden auf der Seite bleibt. Geben Sie die Anzahl Sekunden an, die vergehen müssen, bevor das Ereignis ausgelöst wird.
 
 ### Seitenladereignisse
 
-#### DOM Ready
+#### DOM-bereit
 
-Das Ereignis wird Trigger, wenn das DOM bereit ist und der Benutzer mit der Seite interagieren kann. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn das DOM bereit ist und wenn der Benutzer mit der Seite interagieren kann. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Library Loaded (Page Top) {#library-loaded-page-top}
+#### Bibliothek geladen (Seitenanfang) {#library-loaded-page-top}
 
-Das Ereignis wird Trigger, sobald die Tag-Bibliothek geladen wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, sobald die Tag-Bibliothek geladen wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Page Bottom {#page-bottom}
+#### Seitenende {#page-bottom}
 
-Die Ereignis-Trigger, sobald `_satellite.pageBottom();` aufgerufen wurde. Beim asynchronen Laden der Tag-Bibliothek sollte dieser Ereignistyp nicht verwendet werden. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn `_satellite.pageBottom();` aufgerufen wurde. Beim asynchronen Laden der Tag-Bibliothek sollte dieser Ereignistyp nicht verwendet werden. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Window Loaded
+#### Fenster geladen
 
-Das Ereignis wird Trigger, wenn onLoad vom Browser aufgerufen wird und die Seite fertig geladen wurde. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
+Das Ereignis wird ausgelöst, wenn onLoad vom Browser aufgerufen wird und die Seite fertig geladen wurde. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 ### Optionen {#options}
 
@@ -176,11 +176,11 @@ Für die einzelnen Formularereignistypen werden die folgenden Einstellungen verw
 * Wenn Sie **[!UICONTROL Bestimmte Elemente]** auswählen, werden die Optionen zum Auswählen der Elemente und Eigenschaftswerte angezeigt.
 * Wenn Sie **[!UICONTROL Beliebiges Element]** auswählen, sind keine weiteren Optionen erforderlich, um die Elemente einzugrenzen.
 
-#### Elements matching the CSS selector
+#### Mit der CSS-Auswahl übereinstimmende Elemente
 
-Geben Sie den CSS-Selektor zur Identifizierung der Elemente ein, anhand deren das Ereignis ausgelöst wird.
+Geben Sie die CSS-Auswahl zur Identifizierung der Elemente ein, anhand deren das Ereignis ausgelöst wird.
 
-#### And having certain property values
+#### Mit bestimmten Eigenschaftswerten
 
 Wenn Sie diese Option auswählen, werden folgende Parameter verfügbar:
 
@@ -196,7 +196,7 @@ Wenn Sie diese Option auswählen, werden folgende Parameter verfügbar:
 
    Fügen Sie ein weiteres `property=value`-Paar hinzu.
 
-#### Advanced options (Bubbling)
+#### Erweiterte Optionen (Bubbling)
 
 * Führen Sie diese Regel auch dann aus, wenn das Ereignis aus einem nachkommenden Element stammt
 * Lassen Sie die Ausführung dieser Regel auch dann zu, wenn durch das Ereignis bereits eine Regel ausgelöst wurde, die auf ein nachkommendes Element abzielt
@@ -216,7 +216,7 @@ Geben Sie den Cookie-Namen und -Wert an, der für ein Ereignis vorhanden sein mu
 1. Geben Sie den Wert ein, der im Cookie vorhanden sein muss, wenn das Ereignis eine Aktion auslösen soll.
 1. (Optional) Aktivieren Sie reguläre Ausdrücke, wenn dies ein regulärer Ausdruck ist.
 
-#### Custom Code
+#### Benutzerspezifischer Code
 
 Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss. Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor.
 
@@ -237,7 +237,7 @@ Führen Sie die Regel in einem Browser aus und überprüfen Sie das aufgezeichne
 
 Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Bedingung eine asynchrone Aufgabe ausführt.
 
-Wenn die Bedingung einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) zurückgibt, wird die nächste Bedingung in der Regel erst ausgeführt, nachdem der zurückgegebene Promise eingelöst wurde. Wenn der Promise abgelehnt wird, betrachtet Tags diese Bedingung als fehlgeschlagen und es werden keine weiteren Bedingungen oder Aktionen dieser Regel ausgeführt.
+Wenn die Bedingung einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) zurückgibt, wird die nächste Bedingung in der Regel erst ausgeführt, nachdem der zurückgegebene Promise eingelöst wurde. Wenn die Zusage abgelehnt wird, betrachtet Tags diese Bedingung als fehlgeschlagen und es werden keine weiteren Bedingungen oder Aktionen aus dieser Regel ausgeführt
 
 Beispiel einer Bedingung, die einen Promise zurückgibt:
 
@@ -435,7 +435,7 @@ Wählen Sie die Fenstergröße aus, die Besucher auf ihren Geräten verwenden m�
 
 #### Domain
 
-Geben Sie die Domäne des Besuchers an.
+Geben Sie die Domains des Besuchers an.
 
 #### Hash
 
@@ -449,7 +449,7 @@ Geben Sie ein oder mehrere Hash-Muster an, die in der URL vorhanden sein müssen
 1. (Optional) Aktivieren Sie reguläre Ausdrücke, wenn dies ein regulärer Ausdruck ist.
 1. Fügen Sie beliebige weitere Hash-Muster hinzu.
 
-#### Path And Query String
+#### Path  And Query String
 
 Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen. Dazu gehören der Pfad und die Abfragezeichenfolge.
 
@@ -492,15 +492,15 @@ Geben Sie den in der URL verwendeten URL-Parameter an.
 
 #### Subdomain
 
-Geben Sie eine oder mehrere Unterdomänen an, die in der URL vorhanden sein müssen.
+Geben Sie eine oder mehrere Subdomains an, die in der URL vorhanden sein müssen.
 
 >[!NOTE]
 >
->Mehrere Subdomänen werden durch ein OR verbunden.
+>Mehrere Subdomains werden durch ein OR verbunden.
 
-1. Geben Sie die Unterdomäne an.
+1. Geben Sie die Subdomain an.
 1. (Optional) Aktivieren Sie reguläre Ausdrücke, wenn dies ein regulärer Ausdruck ist.
-1. Fügen Sie beliebige weitere Unterdomänen hinzu.
+1. Fügen Sie beliebige weitere Subdomains hinzu.
 
 ### Sonstige
 
@@ -559,7 +559,7 @@ Die für alle Adobe Experience Platform-Benutzer verfügbare Haupterweiterung en
 
 #### Regeln mit Seitenanfangs- oder Seitenende-Ereignissen
 
-Der Code aus benutzerdefinierten Aktionen wird in die Haupt-Tag-Bibliothek eingebettet. Der Code wird mithilfe von „document.write“ in das Dokument geschrieben. Wenn eine Regel mehrere Aktionen mit benutzerspezifischem Code enthält, wird der Code in der Reihenfolge geschrieben, die in der Regel konfiguriert ist.
+Der Code aus benutzerspezifischen Aktionen wird in die Tag-Hauptbibliothek eingebettet. Der Code wird mithilfe von „document.write“ in das Dokument geschrieben. Wenn eine Regel mehrere Aktionen mit benutzerspezifischem Code enthält, wird der Code in der Reihenfolge geschrieben, die in der Regel konfiguriert ist.
 
 #### Regeln mit anderen Ereignissen als Seitenanfang oder Seitenende
 
@@ -569,7 +569,7 @@ Während die Verwendung von „document.write“ nach dem Laden einer Seite norm
 
 #### Validierung von benutzerspezifischem Code
 
-Der im Code-Editor für Tags verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
+Der im Tag-Editor verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
 
 #### Aktionssequenzierung
 
@@ -581,7 +581,7 @@ Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie eine
 
 >[!NOTE]
 >
->Dies funktioniert nur, wenn JavaScript nicht für die globale Ausführung konfiguriert ist. Wenn Sie Ihre benutzerdefinierte Code-Aktion im globalen Gültigkeitsbereich ausführen, behandeln Tags das Promise als sofort aufgelöst und fahren mit dem nächsten Element in der Verarbeitungswarteschlange fort.
+>Dies funktioniert nur, wenn JavaScript nicht für die globale Ausführung konfiguriert ist. Wenn Sie Ihre benutzerdefinierte Code-Aktion global ausführen, wird die Zusage von Tags als sofort eingelöst erachtet und es wird zum nächsten Element in der Verarbeitungswarteschlange übergegangen.
 
 Beispiel für eine JavaScript-Aktion mit benutzerdefiniertem Code, die einen Promise zurückgibt:
 
@@ -599,9 +599,9 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Beim Erstellen einer Aktion mit benutzerdefiniertem HTML-Code ist eine Funktion namens `onCustomCodeSuccess()` verfügbar, die in Ihrem benutzerspezifischen Code verwendet werden kann. Sie können diese Funktion aufrufen, um anzugeben, dass Ihr benutzerdefinierter Code abgeschlossen ist und dass Tags mit nachfolgenden Aktionen fortfahren können. Wenn Ihr benutzerdefinierter Code jedoch fehlschlägt, kann `onCustomCodeFailure()` aufrufen werden. Dadurch werden Tags informiert, damit die nachfolgenden Aktionen dieser Regel nicht ausgeführt werden.
+Beim Erstellen einer Aktion mit benutzerdefiniertem HTML-Code ist eine Funktion namens `onCustomCodeSuccess()` verfügbar, die in Ihrem benutzerspezifischen Code verwendet werden kann. Sie können diese Funktion aufrufen, um anzugeben, dass Ihr benutzerdefinierter Code abgeschlossen ist und Tags mit den nachfolgenden Aktionen fortfahren kann. Wenn Ihr benutzerdefinierter Code jedoch fehlschlägt, kann `onCustomCodeFailure()` aufrufen werden. Dadurch wird Tags informiert, dass die nachfolgenden Aktionen dieser Regel nicht ausgeführt werden sollen.
 
-Beispiel für eine HTML-Aktion mit benutzerdefiniertem Code, bei der die neuen Rückrufe verwendet werden:
+Beispiel für eine HTML-Aktion mit benutzerdefiniertem Code, bei der die neuen Callbacks verwendet werden:
 
 ```html
 <script>
@@ -623,7 +623,7 @@ In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Dat
 
 ### Cookie
 
-Jedes verfügbare Domänen-Cookie kann im Cookie-Namensfeld referenziert werden.
+Jedes verfügbare Domain-Cookie kann im  Cookie-Namensfeld referenziert werden.
 
 #### Beispiel:
 
@@ -637,7 +637,7 @@ Ein konstanter Zeichenfolgenwert, der in Aktionen oder Bedingungen referenziert 
 
 `string`
 
-### Custom Code
+### Benutzerspezifischer Code
 
 Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf „Editor öffnen“ klicken und den Code in das Editor-Fenster einfügen.
 
@@ -669,7 +669,7 @@ Es kann ein beliebiger Elementwert abgerufen werden, z. B. „div“ oder H1-Ta
 
 #### Beispiel:
 
-CSS-Selektor-Kette:
+CSS-Auswahlkette:
 
 `id#dc logo img`
 
@@ -694,7 +694,7 @@ Im folgenden Beispiel enthält das Markup eine JavaScript-Variable namens `Page_
 
 Wenn Sie das Datenelement in der Datenerfassungs-Benutzeroberfläche erstellen, geben Sie einfach den Pfad zu dieser Variablen an.
 
-Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie Punktnotation im Pfad, um auf das Objekt und die Eigenschaft zu verweisen, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` usw.
+Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwenden Sie die Punktnotation im Pfad, um auf das Objekt und die Eigenschaft zu verweisen, die Sie im Datenelement erfassen möchten, z. B. `_myData.pageName` oder `digitalData.pageName` und so weiter.
 
 #### Beispiel:
 
@@ -702,7 +702,7 @@ Wenn Sie ein Datenerfassungsobjekt als Teil Ihrer Datenschicht verwenden, verwen
 
 ### Lokaler Speicher
 
-Geben Sie den Namen Ihres lokalen Speicherelements im Feld „Local Storage Item Name“ an.
+Geben Sie den Namen Ihres lokalen Speicherelements im Feld „Name des lokalen Speicherelements“ an.
 
 Der lokale Speicher bietet Browsern die Möglichkeit, Informationen seitenweise zu speichern ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Die Funktion des lokalen Speichers ähnelt der von Cookies sehr stark. Er ist jedoch deutlich größer und bietet mehr Flexibilität.
 
@@ -750,13 +750,13 @@ Maximum: 1000000000
 
 ### Sitzungsspeicher
 
-Geben Sie den Namen Ihres Sitzungsspeicherelements im Feld „Session Storage Item Name“ an.
+Geben Sie den Namen Ihres Sitzungsspeicherelements im Feld „Name des Sitzungsspeicherelements“ an.
 
 Der Sitzungsspeicher ähnelt dem lokalen Speicher. Der Unterschied besteht darin, dass die Daten nach Ende der Sitzung verworfen werden. Beim lokalen Speicher oder einem Cookie bleiben die Daten hingegen möglicherweise gespeichert.
 
 ### Besucherverhalten
 
-Ähnlich wie bei Seiteninformationen verwendet dieses Datenelement allgemeine Verhaltenstypen, um Logik innerhalb von Regeln und anderen Platform-Lösungen anzureichern.
+Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Verhaltenstypen zur Erweiterung der Logik in Regeln und anderen Platform-Lösungen.
 
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 
