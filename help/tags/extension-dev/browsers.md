@@ -1,10 +1,10 @@
 ---
 title: Unterstützte Browser
-description: Eine Liste mehrerer Browser, die mit einer Adobe Experience Platform-Tag-Laufzeit kompatibel sind.
+description: Eine Liste mehrerer Browser, die mit der Tag-Laufzeit in Adobe Experience Platform kompatibel sind.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 39%
+ht-degree: 87%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Die Tag-Laufzeit in Adobe Experience Platform (bereitgestellt auf den Websites von Kunden) ist mit mehreren Browsern kompatibel:
 
@@ -33,4 +33,4 @@ Die Datenerfassungs-Benutzeroberfläche unterstützt die folgenden Browser:
 - Firefox (neueste Version)
 - Edge (neueste Version)
 
-Jeder Erweiterungscode, der in der Datenerfassungs-Benutzeroberfläche angezeigt wird, sollte ebenfalls versuchen, diese Browser zu unterstützen.
+Jeder Erweiterungs-Code, der innerhalb der Datenerfassungs-Benutzeroberfläche angezeigt wird, sollte ebenfalls möglichst diese Browser unterstützen.
