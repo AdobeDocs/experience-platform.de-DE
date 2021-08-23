@@ -1,20 +1,20 @@
 ---
-title: Antworten in der Reactor-API filtern
-description: Erfahren Sie, wie Sie bei der Auflistung von Ressourcen in der Reactor-API Ergebnisse filtern können.
+title: Filtern von Antworten in der Reactor-API
+description: Hier erfahren Sie, wie Sie bei der Auflistung von Ressourcen in der Reactor-API Ergebnisse filtern können.
 source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '556'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Antworten in der Reactor-API filtern
+# Filtern von Antworten in der Reactor-API
 
-Bei Verwendung von list-Endpunkten (GET) in der Reactor-API kann es erforderlich sein, die zurückgegebenen Ergebnisse auf eine Untergruppe von Datensätzen zu beschränken. Zu diesem Zweck unterstützen viele Listenendpunkte der API die Möglichkeit, nach bestimmten Attributen zu filtern. Wenn Sie stattdessen strukturierte Abfragen an die API richten möchten, lesen Sie das Handbuch zu [Suchen](./search.md).
+Bei Verwendung von Listenendpunkten (GET) in der Reactor-API kann es erforderlich sein, die zurückgegebenen Ergebnisse auf eine Untergruppe von Datensätzen zu beschränken. Zu diesem Zweck unterstützen viele Listenendpunkte der API die Möglichkeit, nach bestimmten Attributen zu filtern. Wenn Sie stattdessen strukturierte Abfragen an die API richten möchten, finden Sie weitere Informationen im Benutzerhandbuch zum Thema [Suchen](./search.md).
 
-## Filtersyntax
+## Filter-Syntax
 
-Im folgenden Beispiel wird erläutert, wie Sie Filter für Ihre GET-Anforderungen implementieren.
+Das folgende Beispiel erläutert, wie Sie Filter für Ihre GET-Anfragen implementieren.
 
 **API-Format**
 
@@ -22,7 +22,7 @@ Um die Antwort nach einem bestimmten Listenendpunkt zu filtern, müssen Sie eine
 
 >[!NOTE]
 >
->Die folgende Vorlage verwendet eckige Klammern (`[]`) und Leerzeichen, um lesbar zu sein. In der Praxis müssen diese Zeichen URI-kodiert sein, wie in [RFC 3986](https://tools.ietf.org/html/rfc3986) beschrieben. Ein Beispiel für einen ordnungsgemäß kodierten Anfragepfad finden Sie weiter unten in diesem Handbuch.
+>Die folgende Vorlage verwendet eckige Klammern (`[]`) und Leerzeichen für bessere Lesbarkeit. In der Praxis müssen diese Zeichen URI-kodiert sein, wie in [RFC 3986](https://tools.ietf.org/html/rfc3986) beschrieben. Ein Beispiel für einen ordnungsgemäß kodierten Anfragepfad finden Sie weiter unten in diesem Handbuch.
 >
 >Beachten Sie, dass bei falscher Filterstruktur keine Filter angewendet werden und der vollständige Ergebnissatz zurückgegeben wird.
 
@@ -34,8 +34,8 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE}
 | --- | --- |
 | `{ENDPOINT}` | Ein Auflistungsendpunkt in der Reactor-API, der Filterparameter unterstützt. |
 | `{ATTRIBUTE_NAME}` | Der Name eines bestimmten Attributs, nach dem Ergebnisse gefiltert werden sollen. Beachten Sie, dass verschiedene Endpunkte unterschiedliche Attribute für die Filterung unterstützen. Eine Liste der verfügbaren Filterattribute finden Sie im Referenzhandbuch für den Endpunkt, mit dem Sie arbeiten. |
-| `{OPERATOR}` | Der Operator, der bestimmt, wie die Ergebnisse mit dem bereitgestellten `{VALUE}` bewertet werden. Die unterstützten Operatoren sind im Abschnitt [Anhang](#supported-operators) aufgeführt. |
-| `{VALUE}` | Der Wert, mit dem die zurückgegebenen Ergebnisse verglichen werden sollen. Beim Vergleich für Gleichheit mit dem Operator `EQ` muss der Wert eine exakte Übereinstimmung sein, bei der zwischen Groß- und Kleinschreibung unterschieden werden muss, damit er in die Antwort aufgenommen werden kann. |
+| `{OPERATOR}` | Der Operator, der bestimmt, wie die Ergebnisse anhand des bereitgestellten `{VALUE}` ausgewertet werden. Die unterstützten Operatoren sind im [Anhang](#supported-operators) aufgeführt. |
+| `{VALUE}` | Der Wert, mit dem die zurückgegebenen Ergebnisse verglichen werden sollen. Beim Vergleich auf Gleichheit mit dem Operator `EQ` muss der Wert eine exakte Übereinstimmung sein, bei der Groß- und Kleinschreibung berücksichtigt werden, damit er in die Antwort aufgenommen werden kann. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -67,7 +67,7 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME}]={OPERATOR} {VALUE_1},{VALUE_2}
 
 ## Verwenden mehrerer Filter
 
-Um Filter für mehrere Attribute anzuwenden, geben Sie für jedes Attribut einen Parameter `filter` an. Die Parameter müssen durch kaufmännische Und-Zeichen (`&`) getrennt werden.
+Um Filter für mehrere Attribute anzuwenden, geben Sie für jedes Attribut einen `filter`-Parameter an. Die Parameter müssen durch kaufmännische Und-Zeichen (`&`) getrennt werden.
 
 ```http
 GET {ENDPOINT}?filter[{ATTRIBUTE_NAME_1}]={OPERATOR} {VALUE}&filter[{ATTRIBUTE_NAME_2}]={OPERATOR} {VALUE}
@@ -75,21 +75,21 @@ GET {ENDPOINT}?filter[{ATTRIBUTE_NAME_1}]={OPERATOR} {VALUE}&filter[{ATTRIBUTE_N
 
 >[!NOTE]
 >
->Wenn Sie dasselbe Attribut in mehreren Filtern für dieselbe Anforderung angeben, wird nur der zuletzt angegebene Filter für dieses Attribut angewendet.
+>Wenn Sie dasselbe Attribut in mehreren Filtern für dieselbe Anfrage angeben, wird nur der zuletzt angegebene Filter für dieses Attribut angewendet.
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen zum Arbeiten mit Filtern in der Reactor-API.
+Der folgende Abschnitt enthält eine zusätzliche Information für die Arbeit mit Filtern in der Reactor-API.
 
 ### Unterstützte Filteroperatoren {#operators}
 
-In der folgenden Tabelle sind die unterstützten Operatorwerte für Filterparameter aufgeführt. Beachten Sie, dass je nach Attribut, nach dem Sie filtern, nicht alle verfügbaren Filteroperatoren anwendbar sind, z. B. die Verwendung der Operatoren &quot;kleiner als&quot;oder &quot;größer als&quot;für Zeichenfolgenattribute.
+In der folgenden Tabelle sind die unterstützten Operatorwerte für Filterparameter aufgeführt. Beachten Sie, dass je nach Attribut, nach dem Sie filtern, nicht alle verfügbaren Filteroperatoren anwendbar sind, wie die Verwendung der Operatoren „kleiner als“ oder „größer als“ für Zeichenfolgenattribute.
 
 | Operator | Beschreibung |
 | --- | --- |
 | `EQ` | Das Attribut muss dem bereitgestellten Wert entsprechen. |
-| `NOT` | Das Attribut darf nicht mit dem bereitgestellten Wert übereinstimmen. |
+| `NOT` | Das Attribut darf dem bereitgestellten Wert nicht entsprechen. |
 | `LT` | Das Attribut muss kleiner als der angegebene Wert sein. |
 | `GT` | Das Attribut muss größer als der angegebene Wert sein. |
 | `BETWEEN` | Das Attribut muss innerhalb eines bestimmten Wertebereichs liegen. Bei Verwendung dieses Operators müssen [zwei Werte](#multiple-values) angegeben werden, um die Mindest- und Höchstwerte für den gewünschten Bereich anzugeben. |
-| `CONTAINS` | Das Attribut muss den angegebenen Wert enthalten, z. B. einen Zeichensatz innerhalb eines Zeichenfolgenattributs. |
+| `CONTAINS` | Das Attribut muss den angegebenen Wert enthalten, wie einen Zeichensatz innerhalb eines Zeichenfolgenattributs. |
