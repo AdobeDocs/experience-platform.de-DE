@@ -1,10 +1,10 @@
 ---
-title: Marketo Munchkin-Erweiterung Übersicht
-description: Erfahren Sie mehr über die Marketo Munchkin-Tag-Erweiterung in Adobe Experience Platform.
+title: Marketo Munchkin-Erweiterung  Übersicht
+description: Machen Sie sich mit der Tag-Erweiterung „Marketo Munchkin“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 80%
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 80%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Erweiterung, um den JavaScript-Trackingcode für [!DNL Marketo Munchkin] in Ihre Eigenschaft zu integrieren. Mit [!DNL Marketo Munchkin]-JavaScript können Sie Seitenbesuche und -klicks von Endbenutzern auf Ihren Marketo-Landingpages und externen Web-Seiten verfolgen.
 
