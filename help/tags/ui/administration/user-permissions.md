@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die verschiedenen Arten von Berechtigungen,
 source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 17%
+ht-degree: 24%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 17%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Benutzerberechtigungen für Tags in Adobe Experience Platform werden Benutzern über Adobe Admin Console zugewiesen. Anstatt einzelnen Benutzern zugewiesen zu werden, werden unterschiedliche Berechtigungssätze separat als Produktprofile konfiguriert. Benutzer werden dann diesen Produktprofilen zugewiesen, um die Berechtigungen zu erhalten, für die sie konfiguriert wurden.
 
@@ -33,7 +33,7 @@ In einem Produktprofil sind die Berechtigungen für Tags in vier Kategorien unte
 
 ### Plattformen
 
-Jede Tag-Eigenschaft verfügt über eine Plattform. Es gibt derzeit zwei Plattformen, die Sie für Tags verwenden können: Web und Mobile. Mit diesem Berechtigungstyp können Sie den Zugriff auf einen bestimmten Eigenschaftstyp einschränken oder gewähren. Dies kann nützlich sein, wenn sich das Team, das Ihre mobilen Apps verwaltet, von dem unterscheidet, das Ihre Websites verwaltet.
+Jede Tag-Eigenschaft verfügt über eine Plattform. Derzeit gibt es zwei Plattformen, die Sie für Tags verwenden können: Web und Mobile. Mit diesem Berechtigungstyp können Sie den Zugriff auf einen bestimmten Eigenschaftstyp einschränken oder gewähren. Dies kann nützlich sein, wenn sich das Team, das Ihre mobilen Apps verwaltet, von dem unterscheidet, das Ihre Websites verwaltet.
 
 ### Eigenschaften
 
@@ -51,23 +51,23 @@ In der folgenden Tabelle sind die verfügbaren Eigenschaftsrechte und die Funkti
 
 | Eigenschaftsrecht | Beschreibung |
 | --- | --- |
-| **Entwickeln** | Auf diese Weise können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen Sie Bibliotheken und erstellen Sie sie in bestehenden Entwicklungsumgebungen</li><li>Bibliothek zur Genehmigung übermitteln</li></ul>Die meisten täglichen Aufgaben in der Datenerfassungs-Benutzeroberfläche erfordern dieses Recht. |
+| **Entwickeln** | Auf diese Weise können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen Sie Bibliotheken und erstellen Sie sie in bestehenden Entwicklungsumgebungen</li><li>Bibliothek zur Genehmigung übermitteln</li></ul>Die meisten alltäglichen Aufgaben in der Datenerfassungs-Benutzeroberfläche erfordern diese Berechtigung. |
 | **Genehmigen** | Dadurch können Sie eine gesendete Bibliothek in die Staging-Umgebung erstellen. Sie können eine Bibliothek auch für die Veröffentlichung genehmigen, nachdem die nötigen Tests abgeschlossen wurden. |
 | **Veröffentlichen** | Dadurch können Sie genehmigte Bibliotheken in der Produktionsumgebung veröffentlichen. |
-| **Erweiterungen verwalten** | Auf diese Weise können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>Weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md) finden Sie in der Dokumentation zur Übersicht über Erweiterungen für [. Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |
-| **Umgebungen verwalten** | Auf diese Weise können Sie Umgebungen erstellen und ändern. Weitere Informationen finden Sie in der [Dokumentation zu Umgebungen](../publishing/environments.md) . Diese Rolle gehört normalerweise zur IT-Gruppe. |
+| **Erweiterungen verwalten** | Auf diese Weise können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>In der Übersichtsdokumentation zu Erweiterungen finden Sie [weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md). Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |
+| **Umgebungen verwalten** | Auf diese Weise können Sie Umgebungen erstellen und ändern. Konsultieren Sie die [Dokumentation zu Umgebungen](../publishing/environments.md) für weitere Informationen. Diese Rolle gehört normalerweise zur IT-Gruppe. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Unternehmensrechte
 
-Unternehmensrechte gelten für Berechtigungen, die mehrere Properties umfassen. Diese sind in der folgenden Tabelle aufgeführt:
+Unternehmensrechte gelten für Berechtigungen, die mehrere Eigenschaften umfassen. Diese sind in der folgenden Tabelle aufgeführt:
 
 | Unternehmensrecht | Beschreibung |
 | --- | --- |
 | **Eigenschaften verwalten** | Auf diese Weise können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen neuer Eigenschaften</li><li>Ändern von Metadaten und Einstellungen auf Eigenschaftsebene</li><li>Eigenschaften löschen</li></ul>In der Regel führen Administratoren diese Rolle aus. Weitere Informationen finden Sie in der [Eigenschaftendokumentation](companies-and-properties.md) . |
 | **Entwickeln von Erweiterungen** | Ermöglicht das Erstellen und Ändern von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung. |
-| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Auf diese Weise können Sie Apps verwalten, von denen Experience Cloud Kenntnis hat, sowie die erforderlichen Push-Anmeldeinformationen, die für die Kommunikation mit dem Firebase Cloud Messaging-Dienst und dem Apple Push Notification Service erforderlich sind. |
+| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
