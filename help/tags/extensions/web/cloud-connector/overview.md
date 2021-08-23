@@ -1,10 +1,10 @@
 ---
 title: Cloud Connector-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Erweiterung der Cloud Connector-Ereignisweiterleitung in Adobe Experience Platform.
+description: Machen Sie sich mit der Ereignisweiterleigungserweiterung „Cloud Connector“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1616'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 91%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Mit der Ereignisweiterleitungs-Erweiterung &quot;Cloud Connector&quot;können Sie benutzerdefinierte HTTP-Anforderungen erstellen, um Daten an ein Ziel zu senden oder Daten von einem Ziel abzurufen. Die Cloud Connector-Erweiterung ist wie Postman für das Adobe Experience Platform Edge Network und kann verwendet werden, um Daten an einen Endpunkt zu senden, der noch keine dedizierte Erweiterung hat.
+Mit der Cloud Connector-Ereignisweiterleitungserweiterung können Sie benutzerdefinierte HTTP-Anfragen erstellen, um Daten an ein Ziel zu senden oder Daten von einem Ziel abzurufen. Die Cloud Connector-Erweiterung ist wie Postman für das Adobe Experience Platform Edge Network und kann verwendet werden, um Daten an einen Endpunkt zu senden, der noch keine dedizierte Erweiterung hat.
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -44,13 +44,13 @@ Verwenden Sie die einzelnen Registerkarten (Abfrageparameter, Header und Nachric
 
 #### Abfrageparameter
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Abfragezeichenfolge-Parameter senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung mit geschweiften Klammern für die Ereignisweiterleitung. Um auf den Wert eines Datenelements mit dem Namen „siteSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{siteSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Abfragezeichenfolge-Parameter senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „siteSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{siteSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
 Um weitere Abfrageparameter hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
 
 #### Header
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Header senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung mit geschweiften Klammern für die Ereignisweiterleitung. Um auf den Wert eines Datenelements mit dem Namen „pageName“ als Schlüssel oder Wert zu verweisen, geben Sie `{{pageName}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie als Header senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „pageName“ als Schlüssel oder Wert zu verweisen, geben Sie `{{pageName}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
 Um weitere Header hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
 
@@ -103,13 +103,13 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 
 #### Nachrichtenkörper als JSON
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung mit geschweiften Klammern für die Ereignisweiterleitung. Um auf den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen.
 
 Um weitere Schlüssel-Wert-Paare hinzuzufügen, wählen Sie **[!UICONTROL Weitere hinzufügen]** aus.
 
 #### Nachrichtenkörper als Rohtext
 
-Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung mit geschweiften Klammern für die Ereignisweiterleitung. Um auf den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen. Sie können ein oder mehrere Datenelemente hinzufügen.
+Definieren Sie einen Schlüssel und einen Wert für jedes Schlüssel-Wert-Paar, das Sie im Nachrichtenkörper der Anfrage senden möchten. Um ein Datenelement manuell einzugeben, verwenden Sie die Datenelement-Tokenisierung für die Ereignisweiterleitung mit geschweiften Klammern. Um auf den Wert eines Datenelements mit dem Namen „appSection“ als Schlüssel oder Wert zu verweisen, geben Sie `{{appSection}}` ein. Sie können auch das zuvor erstellte Datenelement wählen, indem Sie es im Dropdown-Menü auswählen. Sie können ein oder mehrere Datenelemente hinzufügen.
 
 ### Erweitert
 
