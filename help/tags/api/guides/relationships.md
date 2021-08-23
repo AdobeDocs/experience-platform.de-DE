@@ -1,32 +1,32 @@
 ---
 title: Beziehungen in der Reactor-API
-description: Erfahren Sie, wie Ressourcenbeziehungen in der Reactor-API hergestellt werden, einschließlich der Beziehungsanforderungen für jede Ressource.
+description: Lernen Sie, wie Ressourcenbeziehungen in der Reactor-API hergestellt werden, einschließlich der Beziehungsanforderungen für jede Ressource.
 source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '798'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # Beziehungen in der Reactor-API
 
-Ressourcen in der Reactor-API sind häufig miteinander verbunden. Dieses Dokument bietet einen Überblick darüber, wie Ressourcenbeziehungen in der API hergestellt werden, und über die Beziehungsanforderungen der einzelnen Ressourcentypen.
+Ressourcen in der Reactor-API stehen häufig in Beziehung zueinander. Dieses Dokument gibt einen Überblick darüber, wie Ressourcenbeziehungen in der API hergestellt werden und welche Anforderungen die einzelnen Ressourcentypen an die Beziehungen stellen.
 
-Je nach Ressourcentyp sind einige Beziehungen erforderlich. Eine erforderliche Beziehung bedeutet, dass die übergeordnete Ressource nicht ohne die Beziehung vorhanden sein kann. Alle anderen Beziehungen sind optional.
+Je nach Art der betreffenden Ressource sind einige Beziehungen erforderlich. Eine erforderliche Beziehung impliziert, dass die übergeordnete Ressource nicht ohne die Beziehung existieren kann. Alle anderen Beziehungen sind optional.
 
-Unabhängig davon, ob sie erforderlich oder optional sind, werden Beziehungen entweder automatisch vom System bei der Erstellung relevanter Ressourcen hergestellt oder müssen manuell erstellt werden. Bei manueller Erstellung von Beziehungen gibt es je nach Ressource zwei Möglichkeiten:
+Unabhängig davon, ob sie erforderlich oder optional sind, werden Beziehungen entweder automatisch vom System erstellt, wenn relevante Ressourcen angelegt werden, oder sie müssen manuell erstellt werden. Beim manuellen Erstellen von Beziehungen gibt es je nach Ressource zwei mögliche Methoden:
 
-* [Erstellen nach Nutzlast](#payload)
-* [Erstellen nach URL](#url)  (nur für Bibliotheken)
+* [Erstellen nach Payload](#payload)
+* [Erstellen nach URL](#url) (nur für Bibliotheken)
 
-Eine Liste der kompatiblen Beziehungen für jeden Ressourcentyp und gegebenenfalls die erforderlichen Methoden zur Herstellung dieser Beziehungen finden Sie im Abschnitt [Beziehungsanforderungen](#requirements) .
+Eine Liste der kompatiblen Beziehungen für jeden Ressourcentyp und gegebenenfalls die erforderlichen Methoden zur Herstellung dieser Beziehungen finden Sie im Abschnitt [Beziehungsanforderungen](#requirements).
 
-## Erstellen einer Beziehung anhand der Payload {#payload}
+## Erstellen einer Beziehung nach Payload {#payload}
 
-Einige Beziehungen müssen bei der anfänglichen Erstellung einer Ressource manuell hergestellt werden. Dazu müssen Sie beim ersten Erstellen der übergeordneten Ressource ein `relationship` -Objekt in der Anfrage-Payload angeben. Beispiele für diese Beziehungen sind:
+Einige Beziehungen müssen beim erstmaligen Erstellen einer Ressource manuell eingerichtet werden. Dazu müssen Sie beim ersten Erstellen der übergeordneten Ressource ein `relationship`-Objekt in der Anfrage-Payload angeben. Beispiele für diese Beziehungen sind:
 
-* [Erstellen eines Datenelements ](../endpoints/data-elements.md#create) mit den erforderlichen Erweiterungen
-* [Erstellen einer ](../endpoints/environments.md#create) Umgebung mit der erforderlichen Hostbeziehung
+* [Erstellen eines Datenelements](../endpoints/data-elements.md#create) mit den erforderlichen Erweiterungen
+* [Erstellen einer Umgebung](../endpoints/environments.md#create) mit der erforderlichen Host-Beziehung
 
 **API-Format**
 
@@ -37,13 +37,13 @@ POST /properties/{PROPERTY_ID}/{RESOURCE_TYPE}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{PROPERTY_ID}` | Die ID der Eigenschaft, zu der die Ressource gehört. |
-| `{RESOURCE_TYPE}` | Der Typ der zu erstellenden Ressource. |
+| `{RESOURCE_TYPE}` | Die Art der zu erstellenden Ressource. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage erstellt ein neues `rule_component`, das Beziehungen zu `rules` und einem `extension` herstellt.
+Die folgende Anfrage erstellt eine neue `rule_component`, die Beziehungen zu `rules` und einer `extension` herstellt.
 
 ```shell
 curl -X POST \
@@ -83,10 +83,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `relationships` | Ein Objekt, das beim Erstellen von Beziehungen durch Payload bereitgestellt werden muss. Jeder Schlüssel in diesem Objekt stellt einen bestimmten Beziehungstyp dar. Im obigen Beispiel werden `extension` und `rules` Beziehungen hergestellt, die speziell für `rule_components` gelten. Weitere Informationen zu kompatiblen Beziehungstypen für verschiedene Ressourcen finden Sie im Abschnitt zu [Beziehungsanforderungen nach Ressource](#relationship-requirements-by-resource). |
-| `data` | Jeder Beziehungstyp, der unter dem `relationship`-Objekt bereitgestellt wird, muss eine `data`-Eigenschaft enthalten, die auf die `id`- und `type`-Eigenschaft der Ressource verweist, mit der eine Beziehung hergestellt wird. Sie können eine Beziehung mit mehreren Ressourcen desselben Typs erstellen, indem Sie die `data` -Eigenschaft als Array von Objekten formatieren, wobei jedes Objekt die `id` und `type` einer entsprechenden Ressource enthält. |
-| `id` | Die eindeutige Kennung einer Ressource. Jeder `id` muss eine gleichrangige `type` -Eigenschaft hinzugefügt werden, die den Typ der betreffenden Ressource angibt. |
-| `type` | Der Ressourcentyp, der durch ein gleichrangiges `id` -Feld referenziert wird. Zu den zulässigen Werten gehören `data_elements`, `rules`, `extensions` und `environments`. |
+| `relationships` | Ein Objekt, das beim Anlegen von Beziehungen per Payload bereitgestellt werden muss. Jeder Schlüssel in diesem Objekt repräsentiert einen bestimmten Beziehungstyp. Im obigen Beispiel werden `extension`- und `rules`-Beziehungen hergestellt, die speziell für `rule_components` gelten. Weitere Informationen zu kompatiblen Beziehungstypen für verschiedene Ressourcen finden Sie im Abschnitt zu [Beziehungsanforderungen nach Ressource](#relationship-requirements-by-resource). |
+| `data` | Jeder Beziehungstyp, der unter dem `relationship`-Objekt bereitgestellt wird, muss eine `data`-Eigenschaft enthalten, die auf die `id`- und `type`-Eigenschaft der Ressource verweist, mit der eine Beziehung hergestellt wird. Sie können eine Beziehung mit mehreren Ressourcen desselben Typs erstellen, indem Sie die `data`-Eigenschaft als Array von Objekten formatieren, wobei jedes Objekt `id` und `type` einer entsprechenden Ressource enthält. |
+| `id` | Die eindeutige ID einer Ressource. Jeder `id` muss eine gleichrangige `type`-Eigenschaft hinzugefügt werden, die den Typ der betreffenden Ressource angibt. |
+| `type` | Der Ressourcentyp, der durch ein gleichrangiges `id`-Feld referenziert wird. Akzeptierte Werte umfassen `data_elements`, `rules`, `extensions` und `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -95,7 +95,7 @@ curl -X POST \
 Im Gegensatz zu anderen Ressourcen erstellen Bibliotheken Beziehungen über ihre eigenen dedizierten `/relationship`-Endpunkte. Zu den Beispielen gehören:
 
 * [Hinzufügen von Erweiterungen, Datenelementen und Regeln zu einer Bibliothek](../endpoints/libraries.md#add-resources)
-* [Zuweisen einer Bibliothek zu einer Umgebung](../endpoints/libraries.md#environment)
+* [Zuordnen einer Bibliothek zu einer Umgebung](../endpoints/libraries.md#environment)
 
 **API-Format**
 
@@ -107,7 +107,7 @@ POST /properties/{PROPERTY_ID}/libraries/{LIBRARY_ID}/relationships/{RESOURCE_TY
 | --- | --- |
 | `{PROPERTY_ID}` | Die ID der Eigenschaft, zu der die Bibliothek gehört. |
 | `{LIBRARY_ID}` | Die ID der Bibliothek, für die Sie eine Beziehung erstellen möchten. |
-| `{RESOURCE_TYPE}` | Der Ressourcentyp, auf den sich die Beziehung bezieht. Zu den verfügbaren Werten gehören `environment`, `data_elements`, `extensions` und `rules`. |
+| `{RESOURCE_TYPE}` | Der Typ der Ressource, auf die die Beziehung abzielt. Zu den verfügbaren Werten gehören `environment`, `data_elements`, `extensions` und `rules`. |
 
 **Anfrage**
 
@@ -131,9 +131,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `data` | Ein Objekt, das die `id` und `type` der Zielressource für die Beziehung referenziert. Wenn Sie eine Beziehung mit mehreren Ressourcen desselben Typs erstellen (z. B. `extensions` und `rules`), muss die `data`-Eigenschaft als Array von Objekten formatiert sein, wobei jedes Objekt die `id` und `type` einer entsprechenden Ressource enthält. |
-| `id` | Die eindeutige Kennung einer Ressource. Jeder `id` muss eine gleichrangige `type` -Eigenschaft hinzugefügt werden, die den Typ der betreffenden Ressource angibt. |
-| `type` | Der Ressourcentyp, der durch ein gleichrangiges `id` -Feld referenziert wird. Zu den zulässigen Werten gehören `data_elements`, `rules`, `extensions` und `environments`. |
+| `data` | Ein Objekt, das `id` und `type` der Zielressource für die Beziehung referenziert. Wenn Sie eine Beziehung mit mehreren Ressourcen desselben Typs erstellen (z. B. `extensions` und `rules`), muss die `data`-Eigenschaft als Array von Objekten formatiert sein, wobei jedes Objekt `id` und `type` einer entsprechenden Ressource enthält. |
+| `id` | Die eindeutige ID einer Ressource. Jeder `id` muss eine gleichrangige `type`-Eigenschaft hinzugefügt werden, die den Typ der betreffenden Ressource angibt. |
+| `type` | Der Ressourcentyp, der durch ein gleichrangiges `id`-Feld referenziert wird. Akzeptierte Werte umfassen `data_elements`, `rules`, `extensions` und `environments`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -145,39 +145,39 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 >
 >Wenn eine Beziehung nicht als von Payload oder URL erstellt aufgeführt wird, wird sie automatisch vom System zugewiesen.
 
-### Prüfereignisse
+### Audit-Ereignisse
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | verwalten |  |  |
-| `entity` | verwalten |  |  |
+| `property` | ✓ |  |  |
+| `entity` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Builds
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
 | `rules` |  |  |  |
-| `environment` | verwalten |  |  |
-| `library` | verwalten |  |  |
-| `property` | verwalten |  |  |
+| `environment` | ✓ |  |  |
+| `library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
-### Rückrufe
+### Callbacks
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | verwalten |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Firmen
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `properties` |  |  |  |
 
@@ -185,81 +185,81 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 ### Datenelemente
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | verwalten |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | verwalten |  |  |
-| `origin` | verwalten |  |  |
-| `extension` | verwalten | verwalten |  |
-| `updated_with_extension` | verwalten |  |  |
-| `updated_with_extension_package` | verwalten |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
+| `updated_with_extension` | ✓ |  |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Umgebungen
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
-| `host` | verwalten | verwalten |  |
-| `property` | verwalten |  |  |
+| `host` | ✓ | ✓ |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Erweiterungen
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | verwalten |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | verwalten |  |  |
-| `origin` | verwalten |  |  |
-| `extension_package` | verwalten | verwalten |  |
-| `updated_with_extension_package` | verwalten |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension_package` | ✓ | ✓ |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Hosts
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | verwalten |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Bibliotheken
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
-| `environment` |  |  | verwalten |
-| `data_elements` |  |  | verwalten |
-| `extensions` |  |  | verwalten |
-| `rules` |  |  | verwalten |
+| `environment` |  |  | ✓ |
+| `data_elements` |  |  | ✓ |
+| `extensions` |  |  | ✓ |
+| `rules` |  |  | ✓ |
 | `notes` |  |  |  |
-| `upstream_library` | verwalten |  |  |
-| `property` | verwalten |  |  |
+| `upstream_library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Anmerkungen
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | verwalten |  |  |
+| `resource` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Eigenschaften
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `company` | verwalten |  |  |
+| `company` | ✓ |  |  |
 | `callbacks` |  |  |  |
 | `environments` |  |  |  |
 | `libraries` |  |  |  |
@@ -269,28 +269,28 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 {style=&quot;table-layout:auto&quot;}
 
-### Regel Komponenten
+### Regel  Komponenten
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | verwalten |  |  |
-| `updated_with_extension` | verwalten |  |  |
-| `extension` | verwalten | verwalten |  |
+| `updated_with_extensions_package` | ✓ |  |  |
+| `updated_with_extension` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
 | `notes` |  |  |  |
-| `origin` | verwalten |  |  |
-| `property` | verwalten |  |  |
-| `rules` | verwalten | verwalten |  |
-| `revisions` | verwalten |  |  |
+| `origin` | ✓ |  |  |
+| `property` | ✓ |  |  |
+| `rules` | ✓ | ✓ |  |
+| `revisions` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Regeln
 
-| Beziehung | Erforderlich | Erstellen nach Nutzlast | Erstellen nach URL |
+| Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | verwalten |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | verwalten |  |  |
-| `origin` | verwalten |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
 | `rule_components` |  |  |  |
