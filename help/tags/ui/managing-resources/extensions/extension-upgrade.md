@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Erweiterungs-Upgrades im Erweiterungskatalog verp
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 90%
+ht-degree: 97%
 
 ---
 
@@ -12,15 +12,15 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben regelmäßig Fehler. Diese Aktualisierungen werden in neuen Versionen einer Erweiterung zusammengefasst und im Erweiterungskatalog als Aktualisierungen bereitgestellt.
+Erweiterungsentwickler fügen ihren Erweiterungen kontinuierlich neue Funktionen hinzu und beheben regelmäßig Fehler. Diese Aktualisierungen werden in neuen Versionen der jeweiligen Erweiterung zusammengefasst und im Erweiterungskatalog als Upgrade bereitgestellt.
 
 ## Erweiterungskatalog
 
 Wenn ein Erweiterungsentwickler eine neue Version der Erweiterung bereitgestellt hat, wird diese neue Version im Erweiterungskatalog verfügbar. Der Katalog zeigt nur die neueste Version der jeweiligen Erweiterung an. Es ist nicht möglich, eine andere Erweiterungsversion als `latest` zu installieren.
 
-Wenn Sie eine Erweiterung in Ihrer Property installieren, wird die derzeit verfügbare Version installiert und die Property weist ab diesem Zeitpunkt diese Version auf – auch wenn dem Katalog neuere Versionen hinzugefügt werden.
+Wenn Sie eine Erweiterung in Ihrer Eigenschaft installieren, wird die derzeit verfügbare Version installiert und die Eigenschaft weist ab diesem Zeitpunkt diese Version auf – auch wenn dem Katalog neuere Versionen hinzugefügt werden.
 
 ## Upgrade-Benachrichtigungen
 
@@ -32,9 +32,9 @@ Außerdem wird ein Hinweis angezeigt, wenn Sie Ressourcen bearbeiten, die von di
 
 Wenn Sie ein Upgrade auf eine neuere Version im Katalog durchführen möchten, müssen Sie dieses Upgrade selbst installieren. Upgrades sind Änderungen, die einer Bibliothek hinzugefügt, getestet und veröffentlicht werden müssen, bevor sie sich auf die bereitgestellten Tags auswirken.
 
-Upgrades müssen sorgfältig geplant werden. Führen Sie keine Upgrades durch, wenn Sie nicht darauf vorbereitet sind, die neue Erweiterung zu testen und bereitzustellen. Nachdem das Upgrade Ihrer Property hinzugefügt wurde, muss es in alle Bibliotheken eingefügt werden. Bei allen Bibliotheken, die nicht die aktualisierte Erweiterung enthalten, schlägt die Erstellung fehl.
+Upgrades müssen sorgfältig geplant werden. Führen Sie keine Upgrades durch, wenn Sie nicht darauf vorbereitet sind, die neue Erweiterung zu testen und bereitzustellen. Nachdem das Upgrade Ihrer Eigenschaft hinzugefügt wurde, muss es in alle Bibliotheken eingefügt werden. Bei allen Bibliotheken, die nicht die aktualisierte Erweiterung enthalten, schlägt die Erstellung fehl.
 
-Es gibt derzeit keine Möglichkeit, Erweiterungen auf eine frühere Version herabzustufen. Nach dem Upgrade der Erweiterung (egal, ob veröffentlicht oder nicht) wird die neue Erweiterungsversion in Ihrer Property gespeichert.
+Es gibt derzeit keine Möglichkeit, Erweiterungen auf eine frühere Version herabzustufen. Nach dem Upgrade der Erweiterung (egal, ob veröffentlicht oder nicht) wird die neue Erweiterungsversion in Ihrer Eigenschaft gespeichert.
 
 ## Upgradeprozess
 
@@ -50,7 +50,7 @@ Erweiterungs-Upgrades sind nicht zulässig, wenn Sie eine Bibliothek im Status `
 
 ## Veröffentlichen eines Upgrades
 
-Nach der Installation der aktualisierten Erweiterung auf Ihrer Eigenschaft bzw. „Property“ müssen Sie sie fortan in alle Bibliotheken einfügen. Für alle Bibliotheken, in der sie nicht enthalten ist, wird eine Fehlermeldung angezeigt.
+Nach der Installation der aktualisierten Erweiterung auf Ihrer Eigenschaft müssen Sie sie fortan in alle Bibliotheken einfügen. Für alle Bibliotheken, in der sie nicht enthalten ist, wird eine Fehlermeldung angezeigt.
 
 Davon abgesehen ähnelt das Hinzufügen der aktualisierten Erweiterung zu Ihrer Bibliothek dem [Hinzufügen anderer Änderungen](../../publishing/libraries.md) zu einer Bibliothek.
 
