@@ -1,26 +1,26 @@
 ---
-title: Firmen-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /companies in der Reactor-API vornehmen.
+title: Companies-Endpunkt
+description: Erfahren Sie, wie Sie den /companies-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '247'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Firmen-Endpunkt
+# Companies-Endpunkt
 
-Ein Unternehmen repräsentiert eine Kundenorganisation, normalerweise ein Unternehmen. In der Reactor-API stimmen diese Unternehmen 1:1 mit der IMS-Organisations-ID überein. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben. Ein Unternehmen kann viele [Eigenschaften](./properties.md) enthalten. Eine Eigenschaft gehört genau einem Unternehmen.
+Bei einem Unternehmen handelt es sich um eine Kundenorganisation, typischerweise eine Firma. In der Reactor-API stimmen diese Unternehmen 1:1 mit der IMS-Organisations-ID überein. API-Benutzer haben nur Einblick in die Unternehmen, auf die sie Zugriff haben. Ein Unternehmen kann über viele [Eigenschaften](./properties.md) verfügen. Eine Eigenschaft gehört zu genau einem Unternehmen.
 
-Mit dem Endpunkt `/companies` in der Reactor-API können Sie die Unternehmen programmgesteuert abrufen, auf die Sie in Ihrer Erlebnisanwendung Zugriff haben.
+Mit dem `/companies`-Endpunkt in der Reactor-API können Sie die Unternehmen programmgesteuert abrufen, auf die Sie in Ihrer Erlebnisanwendung Zugriff haben.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Unternehmen abrufen {#list}
+## Abrufen einer Liste von Unternehmen {#list}
 
-Sie können die Unternehmen, für die Sie berechtigt sind, auflisten, indem Sie eine GET-Anfrage an den Endpunkt `/companies` stellen. In den meisten Fällen gibt es genau einen.
+Sie können die Unternehmen, zu deren Nutzung Sie berechtigt sind, auflisten, indem Sie eine GET-Anfrage an den `/companies`-Endpunkt stellen. In den meisten Fällen gibt es genau eines.
 
 **API-Format**
 
@@ -30,7 +30,7 @@ GET /companies
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können börsennotierte Unternehmen anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können gelistete Unternehmen anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`org_id`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Unternehmen zurück, auf die Sie Zugriff haben.
+Eine erfolgreiche Antwort liefert eine Liste von Firmen, auf die Sie Zugriff haben.
 
 ```json
 {
@@ -106,9 +106,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Unternehmen zurück, auf die Sie Z
 }
 ```
 
-## Unternehmen nachschlagen {#lookup}
+## Suchen eines Unternehmens {#lookup}
 
-Sie können ein bestimmtes Unternehmen nachschlagen, indem Sie dessen Kennung in den Pfad einer GET-Anfrage einschließen.
+Sie können ein bestimmtes Unternehmen suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -118,7 +118,7 @@ GET /companies/{COMPANY_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{COMPANY_ID}` | Der `id`-Wert des Unternehmens, das Sie nachschlagen möchten. |
+| `{COMPANY_ID}` | Die `id` Wert des Unternehmens, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -136,7 +136,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Unternehmens zurück.
+Eine erfolgreiche Antwort gibt die Details der Firma zurück.
 
 ```json
 {
