@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise zur Adobe Target-Erweiterung
-description: Die neuesten Versionshinweise für die Adobe Target-Tag-Erweiterung in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 74%
+ht-degree: 96%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 24. Juli 2020
 
@@ -24,7 +24,7 @@ ht-degree: 74%
 
 ### Adobe Target-Erweiterung 0.11.2
 
-* Es wurde ein Fehler bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 1.x fälschlicherweise die Serverdomäne erstellte, wodurch die Target-Anfrage fehlschlug.
+* Es wurde ein Fehler bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 1.x fälschlicherweise die Server-Domain erstellte, wodurch die Target-Anfrage fehlschlug.
 
 ## 25. März 2020
 
@@ -42,7 +42,7 @@ ht-degree: 74%
 * Zuvor führte die ECID-Bibliothek zwei Sperraufrufe durch, bevor at.js Erlebnisse abrufen konnte. Dies wurde auf einen einzigen Aufruf reduziert, wodurch die Leistung deutlich verbessert wird.
 
 >[!NOTE]
->Bitte aktualisieren Sie Ihre ECID-Tag-Erweiterung für Adobe Experience Platform auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
+>Aktualisieren Sie Ihre ECID-Tag-Erweiterung für Adobe Experience Platform auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
 
 ## 31. Juli 2019
 
@@ -74,7 +74,7 @@ ht-degree: 74%
 
 #### **Funktionen**
 
-* Aktualisierung der Erweiterung für die Verwendung von at.js 1.7.0, bei dem die Opt-in-Datenschutzfunktion über -Tags unterstützt wird, um zu steuern, wie und wann das Target-Tag ausgelöst wird. Informationen zum Einrichten Ihrer Opt-in-Implementierung finden Sie in der Dokumentation zu Tags . Hinzufügung der Anpassungsmöglichkeit, ob ein Mbox-Parameter mit einem leeren Wert an Target gesendet werden soll oder nicht.
+* Aktualisierung der Erweiterung für die Verwendung von at.js 1.7.0, bei dem die Opt-in-Datenschutzfunktion über Tags unterstützt wird, um zu steuern, wie und wann das Target-Tag ausgelöst wird. In der Tag-Dokumentation finden Sie weitere Informationen zur Einrichtung Ihrer Opt-in-Implementierung. Hinzufügung der Anpassungsmöglichkeit, ob ein Mbox-Parameter mit einem leeren Wert an Target gesendet werden soll oder nicht.
 
 ## 23. Januar 2019
 
@@ -135,12 +135,12 @@ ht-degree: 74%
 
 #### **Funktionen**
 
-* Hinzufügung der Adobe Exchange-Liste zu extension.json.
+* Hinzufügung des Adobe Exchange-Listeneintrags zu extension.json.
 * Hinzufügung der Prüfung, ob Target deaktiviert und ob Authoring aktiviert ist.
 
 #### **Fehlerkorrekturen**
 
-* Es wurde ein Fehler in der Adobe Target-Erweiterung behoben, der verhinderte, dass der Visual Experience Composer die Ausblendung der Seite aufhebt, wenn diese über Tags bereitgestellt wurde.
+* Behebung eines Fehlers in der Adobe Target-Erweiterung, der verhinderte, dass der Visual Experience Composer die Ausblendung der Seite bei Bereitstellung durch Tags aufhebt.
 
 ## 8. Februar 2018
 
