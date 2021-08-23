@@ -1,18 +1,18 @@
 ---
-title: Suchendpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den /search-Endpunkt in der Reactor-API durchführen.
+title: Search-Endpunkt
+description: Erfahren Sie, wie Sie den /search-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '662'
-ht-degree: 2%
+ht-degree: 98%
 
 ---
 
-# Suchendpunkt
+# Search-Endpunkt
 
-Der Endpunkt `/search` in der Reactor-API bietet eine Möglichkeit, Ressourcen zu finden, die den gewünschten Kriterien entsprechen, ausgedrückt als Abfrage.
+Der `/search`-Endpunkt in der Reactor-API bietet eine Möglichkeit, Ressourcen zu finden, die den gewünschten Kriterien entsprechen, ausgedrückt als Abfrage.
 
-Die folgenden API-Ressourcentypen sind durchsuchbar und verwenden dieselbe Datenstruktur wie die ressourcenbasierten Dokumente, die über die API zurückgegeben werden:
+Die folgenden Typen von API-Ressourcen sind durchsuchbar und verwenden dieselbe Datenstruktur wie die ressourcenbasierten Dokumente, die über die API zurückgegeben werden:
 
 * `audit_events`
 * `builds`
@@ -27,21 +27,21 @@ Die folgenden API-Ressourcentypen sind durchsuchbar und verwenden dieselbe Daten
 * `rule_components`
 * `rules`
 
-Alle Abfragen beziehen sich auf Ihr aktuelles Unternehmen und auf verfügbare Eigenschaften.
+Alle Abfragen sind auf Ihre aktuelle Firma und die zugänglichen Eigenschaften beschränkt.
 
 >[!IMPORTANT]
 >
 >Die Suchfunktion hat die folgenden Einschränkungen und Ausnahmen:
 >* Meta ist nicht durchsuchbar und wird nicht in den Suchergebnissen zurückgegeben.
->* Schemafelder für Delegates von Erweiterungspaketen (Aktionen, Bedingungen usw.) sind als Text durchsuchbar, nicht als verschachtelte Datenstruktur.
+>* Schemafelder für Delegaten von Erweiterungspaketen (Aktionen, Bedingungen usw.) sind als Text durchsuchbar, nicht als verschachtelte Datenstruktur.
 >* Bereichsabfragen unterstützen derzeit nur Ganzzahlen.
 
 
 Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie im [Suchleitfaden](../guides/search.md).
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Durchführen einer Suche {#perform}
 
@@ -93,9 +93,9 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `from` | Die Anzahl der Ergebnisse, um die die Antwort versetzt werden soll. |
+| `from` | Die Anzahl der Ergebnisse, um die die Antwort verschoben werden soll. |
 | `size` | Die maximale Anzahl an zurückzugebenden Ergebnissen. Die Ergebnisse dürfen 100 Elemente nicht überschreiten. |
-| `query` | Ein Objekt, das die Suchabfrage darstellt. Für jede Eigenschaft in diesem Objekt muss der Schlüssel einen Feldpfad für die Abfrage darstellen und der Wert muss ein Objekt sein, dessen Untereigenschaften bestimmen, wonach abgefragt werden soll.<br><br>Für jeden Feldpfad können Sie die folgenden Untereigenschaften verwenden:<ul><li>`exists`: Gibt &quot;true&quot;zurück, wenn das Feld in der Ressource vorhanden ist.</li><li>`value`: Gibt &quot;true&quot;zurück, wenn der Wert des Felds mit dem Wert dieser Eigenschaft übereinstimmt.</li><li>`value_operator`: Boolesche Logik, die verwendet wird, um zu bestimmen, wie eine  `value` Abfrage verarbeitet werden soll. Zulässige Werte sind `AND` und `OR`. Wenn diese Option ausgeschlossen ist, wird von der Logik `AND` ausgegangen. Weitere Informationen finden Sie im Abschnitt [Wertoperator-Logik](#value-operator) .</li><li>`range` Gibt &quot;true&quot;zurück, wenn der Wert des Felds in einen bestimmten numerischen Bereich fällt. Der Bereich selbst wird durch die folgenden Untereigenschaften bestimmt:<ul><li>`gt`: Größer als der angegebene Wert, nicht inklusive.</li><li>`gte`: Größer oder gleich dem bereitgestellten Wert.</li><li>`lt`: Niedriger als der angegebene Wert (ohne Angabe).</li><li>`lte`: Kleiner oder gleich dem bereitgestellten Wert.</li></ul></li></ul> |
+| `query` | Ein Objekt, das die Suchabfrage darstellt. Für jede Eigenschaft in diesem Objekt muss der Schlüssel einen Feldpfad für die Abfrage darstellen und der Wert muss ein Objekt sein, dessen Untereigenschaften bestimmen, wonach abgefragt werden soll.<br><br>Für jeden Feldpfad können Sie die folgenden Untereigenschaften verwenden:<ul><li>`exists`: Gibt „true“ zurück, wenn das Feld in der Ressource vorhanden ist.</li><li>`value`: Gibt „true“ zurück, wenn der Wert des Felds mit dem Wert dieser Eigenschaft übereinstimmt.</li><li>`value_operator`: Boolesche Logik, die verwendet wird, um zu bestimmen, wie eine `value`-Abfrage verarbeitet werden soll. Die zulässigen Werte sind `AND` und `OR`. Wenn diese Option ausgeschlossen ist, wird von der Logik `AND` ausgegangen. Weitere Informationen finden Sie im Abschnitt [Wertoperator-Logik](#value-operator).</li><li>`range` Gibt „true“ zurück, wenn der Wert des Felds in einen bestimmten numerischen Bereich fällt. Der Bereich selbst wird durch die folgenden Untereigenschaften bestimmt:<ul><li>`gt`: Größer als der angegebene Wert, nicht gleich.</li><li>`gte`: Größer oder gleich dem angegebenen Wert.</li><li>`lt`: Kleiner als der angegebene Wert, nicht gleich.</li><li>`lte`: Kleiner oder gleich dem angegebenen Wert.</li></ul></li></ul> |
 | `sort` | Ein Array von Objekten, das die Reihenfolge angibt, in der Ergebnisse sortiert werden sollen. Jedes Objekt muss eine einzelne Eigenschaft enthalten: Der Schlüssel stellt den Feldpfad dar, nach dem sortiert werden soll, und der Wert stellt die Sortierreihenfolge (`asc` für aufsteigende, `desc` für absteigende Werte) dar. |
 | `resource_types` | Ein Array von Zeichenfolgen, die die zu suchenden Ressourcentypen angeben. |
 
@@ -103,7 +103,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste mit übereinstimmenden Ressourcen für die Abfrage zurück. Weitere Informationen dazu, wie die API Übereinstimmungen für bestimmte Werte ermittelt, finden Sie im Anhang zu [Übereinstimmungen](#conventions).
+Eine erfolgreiche Antwort gibt eine Liste mit übereinstimmenden Ressourcen für die Abfrage zurück. Weitere Informationen dazu, wie die API Übereinstimmungen für bestimmte Werte ermittelt, finden Sie im Anhang zu [Konventionen zum Abgleichen](#conventions).
 
 ```json
 {
@@ -210,37 +210,37 @@ Eine erfolgreiche Antwort gibt eine Liste mit übereinstimmenden Ressourcen für
 
 ## Anhang
 
-Der folgende Abschnitt enthält zusätzliche Informationen zur Verwendung des Endpunkts `/search`.
+Der folgende Abschnitt enthält zusätzliche Informationen zur Verwendung des `/search`-Endpunkts.
 
 ### Wertoperator-Logik {#value-operator}
 
-Suchabfragewerte werden in Begriffe aufgeteilt, um sie mit indizierten Dokumenten abzugleichen. Zwischen jedem Begriff wird eine `AND`-Beziehung angenommen.
+Suchabfragewerte werden in Begriffe aufgeteilt, damit sie mit indizierten Dokumenten abgeglichen werden können. Zwischen jedem Begriff wird eine `AND`-Beziehung angenommen.
 
 Bei Verwendung von `AND` als `value_operator` wird der Abfragewert `My Rule Holiday Sale` als Dokumente mit einem Feld interpretiert, das `My AND Rule AND Holiday AND Sale` enthält.
 
-Bei Verwendung von `OR` als `value_operator` wird der Abfragewert `My Rule Holiday Sale` als Dokumente mit einem Feld interpretiert, das `My OR Rule OR Holiday OR Sale` enthält. Je mehr Begriffe übereinstimmen, desto höher ist `match_score`. Wenn aufgrund der Art der Teillwortzuordnung nichts dem gewünschten Wert entspricht, können Sie eine Ergebnismenge abrufen, bei der der Wert nur auf einer sehr einfachen Ebene übereinstimmt, z. B. einige Textzeichen.
+Bei Verwendung von `OR` als `value_operator` wird der Abfragewert `My Rule Holiday Sale` als Dokumente mit einem Feld interpretiert, das `My OR Rule OR Holiday OR Sale` enthält. Je mehr Begriffe übereinstimmen, desto höher ist der `match_score`. Wenn aufgrund der Art der teilweisen Zuordnung nichts dem gewünschten Wert entspricht, können Sie eine Ergebnismenge abrufen, bei der der Wert nur auf einem sehr einfachen Niveau übereinstimmt, z. B. nur einige Textzeichen.
 
-### Übereinstimmungskonventionen {#conventions}
+### Konventionen für den Abgleich {#conventions}
 
-Bei der Suche geht es um die Beantwortung der Frage, wie relevant ein Dokument für eine bereitgestellte Abfrage ist. Die Art und Weise, wie Dokumentdaten analysiert und indiziert werden, wirkt sich direkt darauf aus.
+Bei einer Suche geht es um die Beantwortung der Frage, wie relevant ein Dokument für eine Abfrage ist. Die Art und Weise, wie Dokumentdaten analysiert und indiziert werden, wirkt sich direkt darauf aus.
 
-In der folgenden Tabelle werden die Übereinstimmungskonventionen für allgemeine Feldtypen aufgeschlüsselt:
+In der folgenden Tabelle werden die Konventionen für den Abgleich für allgemeine Feldtypen aufgeschlüsselt:
 
-| Feldtyp | Übereinstimmungskonventionen |
+| Feldtyp | Konventionen für den Abgleich |
 | --- | --- |
-| Zeichenfolgen | Text mit partieller Begriffsanalyse, nicht zwischen Groß- und Kleinschreibung |
-| Enum-Werte | Exakte Übereinstimmung, Groß-/Kleinschreibung beachten |
+| Zeichenfolgen | Text mit partieller Begriffsanalyse, ohne Unterscheidung zwischen Groß- und Kleinschreibung |
+| Enum-Werte | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung |
 | Ganzzahlen | Exakte Übereinstimmung |
-| Floats | Exakte Übereinstimmung |
+| Fließkommazahlen | Exakte Übereinstimmung |
 | Zeitstempel | Exakte Übereinstimmung (DateTime-Format) |
-| Anzeigenamen | Text mit partieller Begriffsanalyse, nicht zwischen Groß- und Kleinschreibung |
+| Anzeigenamen | Text mit partieller Begriffsanalyse, ohne Unterscheidung zwischen Groß- und Kleinschreibung |
 
 Es gibt zusätzliche Konventionen für bestimmte Felder, die in der API angezeigt werden:
 
-| Feld | Übereinstimmungskonventionen |
+| Feld | Konventionen für den Abgleich |
 | --- | --- |
-| `id` | Exakte Übereinstimmung, Groß-/Kleinschreibung beachten |
-| `delegate_descriptor_id` | Exakte Übereinstimmung, Groß-/Kleinschreibung beachten, wobei die Begriffe auf `::` aufgeteilt sind |
-| `name` | Exakte Übereinstimmung, Groß-/Kleinschreibung beachten |
-| `settings` | Text mit partieller Begriffsanalyse, nicht zwischen Groß- und Kleinschreibung |
-| `type` | Exakte Übereinstimmung, Groß-/Kleinschreibung beachten |
+| `id` | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung |
+| `delegate_descriptor_id` | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung, wobei die Begriffe mit `::` aufgeteilt sind |
+| `name` | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung |
+| `settings` | Text mit partieller Begriffsanalyse, ohne Unterscheidung zwischen Groß- und Kleinschreibung |
+| `type` | Exakte Übereinstimmung unter Berücksichtigung von Groß- und Kleinschreibung |
