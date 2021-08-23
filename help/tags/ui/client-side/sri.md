@@ -1,10 +1,10 @@
 ---
 title: Unterstützung von Subresource Integrity (SRI)
-description: Erfahren Sie, wie die SRI (Subresource Integrity) in Adobe Experience Platform unterstützt wird.
+description: Erfahren Sie, wie die Subresource-Integrität (SRI) in Adobe Experience Platform unterstützt wird.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '601'
-ht-degree: 74%
+ht-degree: 97%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 74%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-In diesem Dokument wird beschrieben, wie Subresource Integrity (SRI) in Adobe Experience Platform unterstützt wird.
+Dieses Dokument beschreibt, wie die Subresource-Integrität (SRI) in Adobe Experience Platform unterstützt wird.
 
 Moderne Websites werden durch Verweise auf Bilder, Inhalte und Skripten aus verschiedenen Bereichen des Internets erstellt. Mit SRI kann ein Browser überprüfen, ob der Inhalt einer angeforderten Datei nicht unerwartet geändert wurde.
 
@@ -33,11 +33,11 @@ Der SRI-Validierungsprozess lässt sich wie folgt zusammenfassen:
 
 ## Einschränkungen in Tag-Management-Systemen
 
-Als Tag-Management-System (TMS) bieten Tags in Adobe Experience Platform einen kompilierten JavaScript-Bibliotheks-Build, den Sie mit einem einzigen `<script>` -Element (Einbettungscode) auf Ihre Seiten laden können. Die dynamische Funktionalität, die das TMS bietet, wird erreicht, indem der Inhalt dieses Skripts dynamisch ausgetauscht wird, ohne dass Sie andere Änderungen vornehmen müssen.
+Als Tag-Management-System (TMS) bieten Tags in Adobe Experience Platform eine kompilierte JavaScript-Bibliothek, die Sie mit einem einzigen `<script>`-Element (Einbettungs-Code) auf Ihre Seiten laden können. Die dynamische Funktionalität, die das TMS bietet, wird erreicht, indem der Inhalt dieses Skripts dynamisch ausgetauscht wird, ohne dass Sie andere Änderungen vornehmen müssen.
 
 Wenn sich der Skriptinhalt ändert, ändert sich aber auch der kryptografische Hash dieser Inhalte. Die einzige Möglichkeit, dass SRI mit einem TMS funktioniert, besteht daher darin, Ihren Einbettungs-Code gleichzeitig mit der Veröffentlichung eines neuen Builds zu aktualisieren. Für viele wird dadurch der primäre Zweck, ein TMS zu verwenden, von vornherein zunichte gemacht.
 
-Die nächste beste Sicherheitsoption für Tags ist die Implementierung einer Content Security Policy. Weitere Informationen finden Sie im Handbuch zu [CSPs und Tags](./content-security-policy.md).
+Die nächstbeste Sicherheitsoption für Tags ist die Implementierung einer Content Security Policy. Weitere Informationen finden Sie im Handbuch zu [CSPs und Tags](./content-security-policy.md).
 
 ## Integration von SRI in die Build-Implementierung
 
@@ -55,4 +55,4 @@ Die Automatisierung des Aktualisierungsprozesses Ihres Einbettungs-Codes hängt 
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Einschränkungen bei der Verwendung von SRI mit Tags und die Schritte erläutert, die trotz dieser Einschränkungen zur Integration in Ihre Bibliotheks-Build-Implementierungen erforderlich sind. Wenn Sie dies noch nicht getan haben, wird dringend empfohlen, das Handbuch zu [CSPs und Tags](./content-security-policy.md) für eine alternative Sicherheitsoption zu lesen.
+Dieses Dokument behandelt die Einschränkungen bei der Verwendung von SRI mit Tags und die Schritte, die erforderlich sind, um es trotz dieser Einschränkungen in Ihre Bibliotheks-Build-Implementierungen zu integrieren. Wenn Sie dies noch nicht getan haben, wird dringend empfohlen, das Handbuch zu [CSPs und Tags](./content-security-policy.md) für eine alternative Sicherheitsoption zu lesen.
