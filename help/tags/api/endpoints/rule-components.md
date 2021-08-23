@@ -1,42 +1,42 @@
 ---
-title: Endpunkt der Regelkomponenten
-description: Erfahren Sie, wie Sie den Endpunkt /rule_components in der Reactor-API aufrufen.
+title: Rule components-Endpunkt
+description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1211'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Endpunkt der Regelkomponenten
+# Rule components-Endpunkt
 
-In Datenerfassungs-Tags steuern [rules](./rules.md) das Verhalten der Ressourcen in einer bereitgestellten [Bibliothek](./libraries.md). **Regelkomponenten** sind die einzelnen Teile, aus denen eine Regel besteht. Wenn eine Regel ein Rezept ist, ist eine Regelkomponente eine der Inhaltskomponenten. Mit dem Endpunkt `/rule_components` in der Reactor-API können Sie Regelkomponenten programmgesteuert verwalten.
+In Datenerfassungs-Tags steuern [Regeln](./rules.md) das Verhalten der Ressourcen in einer bereitgestellten [Bibliothek](./libraries.md). **Regelkomponenten** sind die einzelnen Teile, aus denen eine Regel besteht. Wenn eine Regel ein Rezept ist, ist eine Regelkomponente eine der Zutaten. Mit dem Endpunkt `/rule_components` in der Reactor-API können Sie Regelkomponenten programmgesteuert verwalten.
 
 >[!NOTE]
 >
->In diesem Dokument wird beschrieben, wie Sie Regelkomponenten in der Reactor-API verwalten. Weitere Informationen zur Interaktion mit Regeln und Regelkomponenten in der Datenerfassungs-Benutzeroberfläche finden Sie im [UI-Handbuch](../../ui/managing-resources/rules.md).
+>In diesem Dokument wird beschrieben, wie Sie Regelkomponenten in der Reactor-API verwalten. Weitere Informationen zur Interaktion mit Regeln und Regelkomponenten in der Datenerfassungs-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](../../ui/managing-resources/rules.md).
 
 Regelkomponenten haben drei grundlegende Typen:
 
-| Komponententyp Regel | Beschreibung |
+| Komponententyp „Regel“ | Beschreibung |
 | --- | --- |
-| Ereignisse | Ein Ereignis ist der Trigger für eine Regel. Die Regel beginnt, wenn das Ereignis zur Laufzeit auf dem Client-Gerät auftritt. Beispiele für Ereignisse sind &quot;[!UICONTROL Library Load]&quot;, &quot;[!UICONTROL Page Top]&quot;und &quot;[!UICONTROL Click]&quot;. |
+| Ereignisse | Ein Ereignis ist der Auslöser für eine Regel. Die Regel beginnt, wenn das Ereignis zur Laufzeit auf dem Client-Gerät auftritt. Beispiele für Ereignisse sind [!UICONTROL Bibliothek laden], [!UICONTROL Seitenanfang] und [!UICONTROL Klick]. |
 | Bedingungen | Eine Bedingung ist eine Bewertung, ob bestimmte Kriterien erfüllt sind, bevor Aktionen ausgeführt werden. Sobald ein Ereignis eintritt, werden die Bedingungen ausgewertet. Die Aktionen der Regel werden nur ausgeführt, wenn alle Bedingungen erfüllt sind. |
 | Aktionen | Dies sind die Aktionen, die die Regel tatsächlich durchführen soll, z. B. das Senden eines Adobe Analytics-Beacons, das Abrufen einer benutzerdefinierten Besucher-ID oder das Auslösen einer bestimmten Mbox. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Eine Regelkomponente gehört genau zu einer Regel. Eine Regel kann (und sollte) viele Regelkomponenten enthalten.
+Eine Regelkomponente gehört zu genau einer Regel. Eine Regel kann (und sollte) viele Regelkomponenten enthalten.
 
-Eine Regelkomponente wird von genau einer [Erweiterung](./extensions.md) bereitgestellt. Erweiterungen können viele Regelkomponenten bereitstellen.
+Eine Regelkomponente wird von genau einer [Erweiterung](./extensions.md) bereitgestellt. Erweiterungen können viele Regelkomponententypen bereitstellen.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Regelkomponenten abrufen {#list}
+## Abrufen einer Liste von Regelkomponenten {#list}
 
-Sie können eine Liste von Regelkomponenten abrufen, die zu einer Regel gehören, indem Sie die Kennung der Regel in den Pfad einer GET-Anfrage einschließen.
+Sie können eine Liste von Regelkomponenten abrufen, die zu einer Regel gehören, indem Sie die ID der Regel im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -52,7 +52,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Regelkomponenten anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Regelkomponenten anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -173,9 +173,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Regelkomponenten für die angegebe
 }
 ```
 
-## Nachschlagen einer Regelkomponente {#lookup}
+## Suchen einer Regelkomponente {#lookup}
 
-Sie können eine Regelkomponente nachschlagen, indem Sie ihre Kennung im Pfad einer GET-Anfrage angeben.
+Sie können eine Regelkomponente suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -185,7 +185,7 @@ GET /rule_components/{RULE_COMPONENT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `RULE_COMPONENT_ID` | Die `id` der Regelkomponente, die Sie nachschlagen möchten. |
+| `RULE_COMPONENT_ID` | Die `id` der Regelkomponente, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -203,7 +203,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Regelkomponente zurück.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Regelkomponente zurück.
 
 ```json
 {
@@ -315,7 +315,7 @@ POST /rules/{RULE_ID}/rule_components
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Regelkomponente für die angegebene Regel. Der Aufruf verknüpft die Regelkomponente auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships` . Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md) .
+Die folgende Anfrage erstellt eine neue Regelkomponente für die angegebene Regel. Der Aufruf verknüpft die Regelkomponente auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships`. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -358,14 +358,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes.delegate_descriptor_id` | **(Erforderlich)** Die Typen von Regelkomponenten, die Sie definieren können, werden von  [Erweiterungspaketen](./extension-packages.md) bereitgestellt. Wenn Sie eine neue Regelkomponente erstellen, müssen Sie eine Delegate-Deskriptor-ID angeben, um anzugeben, auf welchem Erweiterungspaket diese Regelkomponente basiert, den Typ der Komponente (Ereignis, Bedingung oder Aktion) und den Namen der spezifischen Komponente, wie durch die Erweiterung definiert (z. B. das &quot;Klick&quot;-Ereignis in der Haupterweiterung).<br><br>Weitere Informationen finden Sie im Handbuch zu  [Delegate-Deskriptor-](../guides/delegate-descriptor-ids.md) IDs . |
+| `attributes.delegate_descriptor_id` | **(Erforderlich)** Die Typen von Regelkomponenten, die Sie definieren können, werden von [Erweiterungspaketen](./extension-packages.md) bereitgestellt. Wenn Sie eine neue Regelkomponente erstellen, müssen Sie eine Delegaten-Deskriptor-ID angeben, um Folgendes anzugeben: auf welchem Erweiterungspaket diese Regelkomponente basiert, den Typ der Komponente (Ereignis, Bedingung oder Aktion) und den Namen der spezifischen Komponente, wie durch die Erweiterung definiert (z. B. das „Klick“-Ereignis in der Haupterweiterung).<br><br>Weitere Informationen finden Sie im Handbuch zu [Delegaten-Deskriptor-IDs](../guides/delegate-descriptor-ids.md). |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für die Regelkomponente. |
 | `attributes.delay_next` | Ein boolescher Wert, der anzeigt, ob spätere Aktionen verzögert werden sollen. |
 | `attributes.order` | Eine Ganzzahl, die die Reihenfolge angibt, in der die Komponente nach Typ geladen werden soll. |
 | `attributes.rule_order` | Eine Ganzzahl, die die Priorität angibt, mit der die verknüpfte Regel ausgelöst werden soll. |
-| `attributes.settings` | Ein settings-JSON-Objekt, das als Zeichenfolge dargestellt wird. |
+| `attributes.settings` | Ein JSON-Objekt vom Typ „settings“, das als Zeichenfolge dargestellt wird. |
 | `attributes.timeout` | Eine Ganzzahl, die die Zeitüberschreitung der Aktion angibt, die nacheinander ausgeführt wird. |
-| `relationships` | Ein Objekt, das die erforderlichen Beziehungen für die Regelkomponente herstellt. Es müssen zwei Beziehungen hergestellt werden: <ol><li>`extension`: Die Erweiterung, die diese Regelkomponente definiert. Dies muss dieselbe Erweiterung sein, deren Erweiterungspaket durch das `delegate_descriptor_id` gekennzeichnet ist.</li><li>`rules`: Die Regel, unter der diese Komponente definiert wird. Muss dieselbe Regel-ID sein wie im Anfragepfad angegeben.</li></ol>Allgemeine Informationen zu Beziehungen finden Sie im [Beziehungshandbuch](../guides/relationships.md). |
+| `relationships` | Ein Objekt, das die erforderlichen Beziehungen für die Regelkomponente herstellt. Es müssen zwei Beziehungen hergestellt werden: <ol><li>`extension`: Die Erweiterung, die diese Regelkomponente definiert. Dies muss dieselbe Erweiterung sein, deren Erweiterungspaket durch die `delegate_descriptor_id` gekennzeichnet ist.</li><li>`rules`: Die Regel, unter der diese Komponente definiert wird. Muss dieselbe Regel-ID sein wie im Anfragepfad angegeben.</li></ol>Allgemeine Informationen zu Beziehungen finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md). |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -468,7 +468,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Regelkomponente zu
 
 ## Aktualisieren einer Regelkomponente {#update}
 
-Sie können eine Regelkomponente aktualisieren, indem Sie ihre ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können eine Regelkomponente aktualisieren, indem Sie ihre ID im Pfad einer PATCH-Anfrage angeben.
 
 >[!NOTE]
 >
@@ -512,7 +512,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes` | Ein Objekt, dessen Regelkomponenten die Attribute darstellen, die für die Regelkomponente aktualisiert werden sollen. Die folgenden Attribute können für eine Regelkomponente aktualisiert werden: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | Die `id` der Regelkomponente, die Sie aktualisieren möchten. Dies sollte mit dem Wert `{RULE_COMPONENT_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` der Regelkomponente, die Sie aktualisieren möchten. Diese sollte mit dem `{RULE_COMPONENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -615,7 +615,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Regelkomponente zu
 
 ## Löschen einer Regelkomponente
 
-Sie können eine Regelkomponente löschen, indem Sie die zugehörige ID in den Pfad einer DELETE-Anfrage einschließen.
+Sie können eine Regelkomponente löschen, indem Sie ihre ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -643,17 +643,17 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt an, dass die Regelkomponente gelöscht wurde.
 
-## Hinweise für eine Regelkomponente verwalten {#notes}
+## Verwalten von Hinweisen für eine Regelkomponente {#notes}
 
-Regelkomponenten sind &quot;wichtige&quot;Ressourcen, d. h. Sie können textbasierte Notizen für jede einzelne Ressource erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Regelkomponenten und andere kompatible Ressourcen finden Sie im [Notes-Endpunkthandbuch](./notes.md) .
+Sie können für jede einzelne Regelkomponente textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Regelkomponenten und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Regelkomponente {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Regelkomponente abrufen. Wenn [nach einer Regelkomponente](#lookup) sucht, werden diese Beziehungen unter der Regelkomponente `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Regelkomponente abrufen. Beim [Suchen nach einer Regelkomponente](#lookup) werden diese Beziehungen unter der Regelkomponente `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Zugehörige Regeln für eine Regelkomponente auflisten {#rules}
+### Auflisten der zugehörigen Regeln für eine Regelkomponente {#rules}
 
 Sie können die Regeln auflisten, die eine bestimmte Regelkomponente verwenden, indem Sie `/rules` an den Pfad einer Suchanfrage anhängen.
 
@@ -757,9 +757,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Regeln zurück, die die angegebene
 }
 ```
 
-### Nachschlagen der zugehörigen Erweiterung für eine Regelkomponente {#extension}
+### Suchen der zugehörigen Erweiterung für eine Regelkomponente {#extension}
 
-Sie können die Erweiterung nachschlagen, die eine Regelkomponente bereitstellt, indem Sie `/extension` an den Pfad einer Suchanfrage anhängen.
+Sie können die Erweiterung suchen, die eine Regelkomponente bereitstellt, indem Sie `/extension` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -769,7 +769,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/extension
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Erweiterung Sie nachschlagen möchten. |
+| `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Erweiterung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -877,9 +877,9 @@ Eine erfolgreiche Antwort gibt die Details der Erweiterung der angegebenen Regel
 }
 ```
 
-### Nachschlagen der zugehörigen Herkunft für eine Regelkomponente {#origin}
+### Suchen des zugehörigen Ursprungs für eine Regelkomponente {#origin}
 
-Sie können die Herkunft (vorherige Revision) einer Regelkomponente nachschlagen, indem Sie `/origin` an den Pfad einer Suchanfrage anhängen.
+Sie können den Ursprung (vorherige Revision) einer Regelkomponente suchen, indem Sie `/origin` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -889,7 +889,7 @@ GET /rule_components/{RULE_COMPONENT_ID}/origin
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Ursprung Sie nachschlagen möchten. |
+| `{RULE_COMPONENT_ID}` | Die `id` der Regelkomponente, deren Ursprung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -907,7 +907,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Herkunft der angegebenen Regelkomponente zurück.
+Eine erfolgreiche Antwort gibt die Details des Ursprungs der angegebenen Regelkomponente zurück.
 
 ```json
 {
