@@ -1,10 +1,10 @@
 ---
 title: Adobe ContextHub-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Adobe ContextHub-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe ContextHub“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '222'
-ht-degree: 73%
+ht-degree: 91%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 73%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zum Konfigurieren der Adobe ContextHub-Erweiterung und den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -30,7 +30,7 @@ Wählen Sie den ContextHub-Typ aus. Die folgenden Konfigurationsoptionen sind ve
 
 ### Standardmäßige ContextHub-Datenschicht
 
-Verwenden Sie diese Option, wenn Sie möchten, dass Tags auf das standardmäßige ContextHub-Schema für diese Integration verweisen. Sollten Sie am ContextHub-Schema Änderungen vorgenommen haben oder eine andere Datenschicht verwenden wollen, arbeiten Sie mit der personalisierten Version.
+Verwenden Sie diese Option, wenn Sie möchten, dass Tags das ContextHub-Standardschema für diese Integration referenzieren. Sollten Sie am ContextHub-Schema Änderungen vorgenommen haben oder eine andere Datenschicht verwenden wollen, arbeiten Sie mit der personalisierten Version.
 
 ### Angepasste ContextHub-Datenschicht
 
