@@ -1,40 +1,40 @@
 ---
-title: Eigenschaftenendpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /properties in der Reactor-API durchführen.
+title: Properties-Endpunkt
+description: Erfahren Sie, wie Sie den /properties-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '1150'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# Eigenschaftenendpunkt
+# Properties-Endpunkt
 
-Eine Eigenschaft ist ein Container-Konstrukt, das die meisten anderen Ressourcen enthält, die in der Reactor-API verfügbar sind. Sie verwalten Eigenschaften programmgesteuert mithilfe des Endpunkts `/properties` .
+Eine Eigenschaft ist ein Container-Konstrukt, das die meisten anderen Ressourcen enthält, die in der Reactor-API verfügbar sind. Sie verwalten Eigenschaften programmgesteuert mithilfe des `/properties`-Endpunkts.
 
 In der Ressourcenhierarchie ist eine Eigenschaft der Eigentümer der folgenden Elemente:
 
 * [Builds](./builds.md)
-* [Rückrufe](./callbacks.md)
+* [Callbacks](./callbacks.md)
 * [Datenelemente](./data-elements.md)
 * [Umgebungen](./environments.md)
 * [Erweiterungen](./extensions.md)
 * [Hosts](./properties.md)
 * [Bibliotheken](./libraries.md)
-* [Regel Komponenten](./rule-components.md)
+* [Regel  Komponenten](./rule-components.md)
 * [Regeln](./rules.md)
 
-Eine Eigenschaft gehört genau zu einem [Unternehmen](./companies.md). Ein Unternehmen kann über viele Eigenschaften verfügen.
+Eine Eigenschaft gehört zu genau einem [Unternehmen](./companies.md). Ein Unternehmen kann über viele Eigenschaften verfügen.
 
-Allgemeine Informationen zu Eigenschaften und ihrer Rolle im Tag-Management finden Sie in der Übersicht zu [Unternehmen und Eigenschaften](../../ui/administration/companies-and-properties.md).
+Weitere allgemeine Informationen zu Eigenschaften und ihrer Rolle im Tag-Management finden Sie in der Übersicht zu [Unternehmen und Eigenschaften](../../ui/administration/companies-and-properties.md).
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Eigenschaften {#list}
 
-Sie können eine Liste von Eigenschaften abrufen, die zu einem Unternehmen gehören, indem Sie die Kennung des Unternehmens in den Pfad einer GET-Anfrage einschließen.
+Sie können eine Liste von Eigenschaften abrufen, die zu einem Unternehmen gehören, indem Sie die ID des Unternehmens im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -50,7 +50,7 @@ GET /companies/{COMPANY_ID}/properties
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Eigenschaften anhand der folgenden Attribute gefiltert werden:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Eigenschaften anhand der folgenden Attribute gefiltert werden:<ul><li>`copying`</li><li>`created_at`</li><li>`enabled`</li><li>`name`</li><li>`platform`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -256,9 +256,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Eigenschaften für das angegebene 
 }
 ```
 
-## Suchen nach einer Eigenschaft {#lookup}
+## Suchen einer Eigenschaft {#lookup}
 
-Sie können eine Eigenschaft nachschlagen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Eigenschaft suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -268,7 +268,7 @@ GET /properties/{PROPERTY_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `PROPERTY_ID` | Die `id` der Eigenschaft, die Sie nachschlagen möchten. |
+| `PROPERTY_ID` | Die `id` der Eigenschaft, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -397,7 +397,7 @@ POST /company/{COMPANY_ID}/properties
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Eigenschaft für die angegebene Eigenschaft. Der Aufruf verknüpft die Eigenschaft auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships` . Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md) .
+Die folgende Anfrage erstellt eine neue Eigenschaft für die angegebene Eigenschaft. Der Aufruf verknüpft die Eigenschaft auch mit einer vorhandenen Erweiterung über die Eigenschaft `relationships`. Weitere Informationen finden Sie im Handbuch zu [Beziehungen](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -427,8 +427,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für die Eigenschaft. |
-| `attributes.platform` | **(Erforderlich)** Die Plattform für die Eigenschaft. Kann für Webeigenschaften entweder `web` oder für mobile Eigenschaften `mobile` oder `edge` sein. |
-| `attributes.domains` | **(Erforderlich für Webeigenschaften)** Ein Array von URL-Domänen für die Eigenschaft. |
+| `attributes.platform` | **(Erforderlich)** Die Plattform für die Eigenschaft. Kann entweder `web` für Web-Eigenschaften sein oder `mobile` oder `edge` für Mobile-Eigenschaften. |
+| `attributes.domains` | **(Erforderlich für Web-Eigenschaften)** Ein Array von URL-Domains für die Eigenschaft. |
 | `attributes.development` | Ein boolescher Wert, der anzeigt, ob es sich um eine Entwicklungseigenschaft handelt. |
 | `attributes.privacy` | Eine Zeichenfolge, die verwendet werden kann, um datenschutzbezogene Überlegungen für die Eigenschaft zu referenzieren. |
 | `attributes.rule_component_sequencing_enabled` | Ein boolescher Wert, der angibt, ob die Sequenzierung von Regelkomponenten für diese Eigenschaft aktiviert werden soll. |
@@ -535,7 +535,7 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Eigenschaft zurüc
 
 ## Aktualisieren einer Eigenschaft {#update}
 
-Sie können eine Eigenschaft aktualisieren, indem Sie ihre ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können eine Eigenschaft aktualisieren, indem Sie deren ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -551,7 +551,7 @@ PATCH /properties/{PROPERTY_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` und `domains` für eine vorhandene Eigenschaft.
+Die folgende Anfrage aktualisiert den `name` und die `domains` für eine vorhandene Eigenschaft.
 
 ```shell
 curl -X PATCH \
@@ -577,7 +577,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für die Eigenschaft aktualisiert werden sollen. Die folgenden Attribute können für eine Eigenschaft aktualisiert werden: <ul><li>`development`</li><li>`domains`</li><li>`name`</li><li>`platform`</li><li>`privacy`</li><li>`rule_component_sequencing_enabled`</li><li>`ssl_enabled`</li><li>`undefined_vars_return_empty`</li></ul> |
-| `id` | Die `id` der Eigenschaft, die Sie aktualisieren möchten. Dies sollte mit dem Wert `{PROPERTY_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` der Eigenschaft, die Sie aktualisieren möchten. Diese sollte mit dem `{PROPERTY_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `properties` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -677,9 +677,9 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Eigenschaft zurüc
 }
 ```
 
-## Löschen von Properties
+## Löschen von Eigenschaften
 
-Sie können eine Eigenschaft löschen, indem Sie ihre ID in den Pfad einer DELETE-Anfrage einschließen.
+Sie können eine Eigenschaft löschen, indem Sie deren ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -707,17 +707,17 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt an, dass die Eigenschaft gelöscht wurde.
 
-## Hinweise für eine Eigenschaft verwalten {#notes}
+## Verwalten von Hinweisen für eine Eigenschaft {#notes}
 
-Eigenschaften sind &quot;bemerkenswerte&quot;Ressourcen, d. h. Sie können für jede einzelne Ressource textbasierte Notizen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Eigenschaften und andere kompatible Ressourcen finden Sie im [Notes-Endpunkthandbuch](./notes.md) .
+Sie können für jede einzelne Eigenschaft textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Eigenschaften und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Eigenschaft {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Eigenschaft abrufen. Wenn [nach einer Eigenschaft](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Eigenschaft abrufen. Beim [Suchen nach einer Eigenschaft](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Auflisten der zugehörigen Rückrufe für eine Eigenschaft {#callbacks}
+### Auflisten der zugehörigen Callbacks für eine Eigenschaft {#callbacks}
 
 Sie können die in einer Eigenschaft registrierten [Callbacks](./callbacks.md) auflisten, indem Sie `/callbacks` an den Pfad einer Suchanfrage anhängen.
 
@@ -729,7 +729,7 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Rückrufe Sie auflisten möchten. |
+| `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Callbacks Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -747,7 +747,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Rückrufen zurück, die der angegebenen Eigenschaft gehören.
+Eine erfolgreiche Antwort gibt eine Liste von Callbacks zurück, die der angegebenen Eigenschaft gehören.
 
 ```json
 {
@@ -1186,7 +1186,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungen zurück, die der ang
 
 ### Auflisten der zugehörigen Hosts für eine Eigenschaft {#hosts}
 
-Sie können die von einer Eigenschaft verwendeten [hosts](./hosts.md) auflisten, indem Sie `/hosts` an den Pfad einer Suchanfrage anhängen.
+Sie können die von einer Eigenschaft verwendeten [Hosts](./hosts.md) auflisten, indem Sie `/hosts` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -1262,7 +1262,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Hosts zurück, die von einer angeg
 }
 ```
 
-### Zugehörige Regeln für eine Eigenschaft auflisten {#rules}
+### Auflisten der zugehörigen Regeln für eine Eigenschaft {#rules}
 
 Sie können die von einer Eigenschaft verwendeten [Regeln](./rules.md) auflisten, indem Sie `/rules` an den Pfad einer Suchanfrage anhängen.
 
@@ -1375,9 +1375,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Regeln zurück, die von einer ange
 }
 ```
 
-### Nachschlagen des verbundenen Unternehmens nach einer Eigenschaft {#company}
+### Suchen des verbundenen Unternehmens für eine Eigenschaft {#company}
 
-Sie können das Unternehmen nachschlagen, dem eine Eigenschaft gehört, indem Sie `/company` an den Pfad einer Suchanfrage anhängen.
+Sie können das Unternehmen suchen, dem eine Eigenschaft gehört, indem Sie `/company` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -1387,7 +1387,7 @@ GET /properties/{PROPERTY_ID}/company
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Unternehmen Sie nachschlagen möchten. |
+| `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Unternehmen Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
