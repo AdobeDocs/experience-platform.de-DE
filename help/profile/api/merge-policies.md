@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: acf88ba3c4181fce85ffec3b0041a30b7bb14cef
 workflow-type: tm+mt
-source-wordcount: '2590'
-ht-degree: 65%
+source-wordcount: '2263'
+ht-degree: 73%
 
 ---
 
@@ -135,7 +135,7 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
-* **`timestampOrdered`**: (Standard) Priorität vor dem zuletzt aktualisierten Profil. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich. `timestampOrdered` unterstützt auch benutzerdefinierte Zeitstempel, die beim Zusammenführen von Profilfragmenten in oder über Datensätze hinweg Vorrang haben. Weitere Informationen finden Sie im Abschnitt Anhang zu [Verwenden benutzerdefinierter Zeitstempel](#custom-timestamps).
+* **`timestampOrdered`**: (Standard) Priorität vor dem zuletzt aktualisierten Profil. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
 * **`dataSetPrecedence`** : Profilfragmente erhalten je nach dem Datensatz, aus dem sie stammen, Priorität. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
    * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, muss ein  `order` Array mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
@@ -738,40 +738,6 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppensegmente aus Ihren [!DNL Real-time Customer Profile] -Daten zu erstellen. Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+Nachdem Sie nun wissen, wie Sie Zusammenführungsrichtlinien für Ihr Unternehmen erstellen und konfigurieren, können Sie diese verwenden, um die Ansicht von Kundenprofilen in Platform anzupassen und Zielgruppensegmente aus Ihren [!DNL Real-time Customer Profile] -Daten zu erstellen.
 
-## Anhang
-
-Dieser Abschnitt enthält zusätzliche Informationen zum Arbeiten mit Zusammenführungsrichtlinien.
-
-### Verwenden benutzerdefinierter Zeitstempel {#custom-timestamps}
-
-Da Datensätze in Experience Platform erfasst werden, wird zum Zeitpunkt der Erfassung ein Systemzeitstempel abgerufen und zum Datensatz hinzugefügt. Wenn `timestampOrdered` als Typ `attributeMerge` für eine Zusammenführungsrichtlinie ausgewählt ist, werden Profile anhand des Systemzeitstempels zusammengeführt. Das heißt, das Zusammenführen erfolgt auf Basis des Zeitstempels, an dem der Datensatz in Platform aufgenommen wurde.
-
-Gelegentlich kann es zu Anwendungsfällen kommen, z. B. zum Aufstocken von Daten oder zum Sicherstellen der richtigen Reihenfolge von Ereignissen, wenn Datensätze nicht in der richtigen Reihenfolge erfasst werden. Dabei ist es erforderlich, einen benutzerdefinierten Zeitstempel anzugeben und die Zusammenführungsrichtlinie den benutzerdefinierten Zeitstempel und nicht den Systemzeitstempel berücksichtigen zu lassen.
-
-Um einen benutzerdefinierten Zeitstempel zu verwenden, muss Ihrem Profilschema die Schemafeldergruppe [[!DNL External Source System Audit Details] schema](#field-group-details) hinzugefügt werden. Nach dem Hinzufügen kann der benutzerdefinierte Zeitstempel mithilfe des Felds `xdm:lastUpdatedDate` ausgefüllt werden. Wenn ein Datensatz mit dem ausgefüllten `xdm:lastUpdatedDate`-Feld erfasst wird, verwendet Experience Platform dieses Feld, um Datensätze oder Profilfragmente innerhalb und über Datensätze hinweg zusammenzuführen. Wenn `xdm:lastUpdatedDate` nicht vorhanden oder nicht ausgefüllt ist, verwendet Platform weiterhin den Systemzeitstempel.
-
->[!NOTE]
->
->Sie müssen sicherstellen, dass der Zeitstempel `xdm:lastUpdatedDate` beim Senden einer PATCH auf demselben Datensatz ausgefüllt wird.
-
-Eine schrittweise Anleitung zum Arbeiten mit Schemas mithilfe der Schema Registry-API, einschließlich des Hinzufügens von Feldergruppen zu Schemas, finden Sie im [Tutorial zum Erstellen eines Schemas mit der API](../../xdm/tutorials/create-schema-api.md).
-
-Informationen zum Arbeiten mit benutzerdefinierten Zeitstempeln mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Verwenden benutzerdefinierter Zeitstempel](../merge-policies/overview.md#custom-timestamps) in der Übersicht über Zusammenführungsrichtlinien ](../merge-policies/overview.md).[
-
-#### [!DNL External Source System Audit Details] Feldergruppendetails {#field-group-details}
-
-Das folgende Beispiel zeigt die korrekt ausgefüllten Felder in der Feldergruppe [!DNL External Source System Audit Details] . Die vollständige Feldergruppe JSON kann auch im [öffentlichen Experience-Datenmodell (XDM)-Repository](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) auf GitHub angezeigt werden.
-
-```json
-{
-  "xdm:createdBy": "{CREATED_BY}",
-  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
-  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
- }
-```
+Informationen zum Definieren und Verwenden von Segmenten finden Sie in der Dokumentation zu [Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
