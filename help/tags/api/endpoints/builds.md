@@ -1,34 +1,34 @@
 ---
 title: Builds-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /builds in der Reactor-API durchführen.
+description: Erfahren Sie, wie Sie den /builds-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '837'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # Builds-Endpunkt
 
-Erweiterungen, Regeln und Datenelemente sind die Bausteine von Tags in Adobe Experience Platform. Wenn Sie Ihre Anwendung dazu bringen möchten, etwas zu tun, werden diese Bausteine einer [Bibliothek](./libraries.md) hinzugefügt. Um eine Bibliothek in Ihrer Erlebnisanwendung bereitzustellen, wird die Bibliothek in einen Build kompiliert. Mit dem Endpunkt `/builds` in der Reactor-API können Sie Builds in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Erweiterungen, Regeln und Datenelemente sind die Bausteine der Tags in Adobe Experience Platform. Wenn Sie möchten, dass Ihr Programm etwas tut, werden diese Bausteine zu einer [Bibliothek](./libraries.md) hinzugefügt. Um eine Bibliothek in Ihrem Erlebnisprogramm bereitzustellen, wird die Bibliothek zu einem Build kompiliert. Der `/builds`-Endpunkt in der Reactor-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Builds in Ihrem Erlebnisprogramm.
 
-Ein Build ist die eigentliche Datei (oder Dateien), die in Ihre Web- und Mobile App geladen wird. Der Inhalt der einzelnen Builds variiert je nach den folgenden Faktoren:
+Ein Build ist die eigentliche Datei (oder Dateien), die in Ihr Web-Programm und Mobile App geladen wird. Der Inhalt jedes Builds hängt von den folgenden Faktoren ab:
 
-* Die in der Bibliothek enthaltenen Ressourcen
-* Die Konfiguration der [Umgebung](./environments.md), in der die Bibliothek erstellt wird
-* Die Plattform der [Eigenschaft](./properties.md), zu der der Build gehört
+* In der Bibliothek enthaltene Ressourcen
+* Konfiguration der [Umgebung](./environments.md), in der die Bibliothek erstellt wird
+* Plattform der [Eigenschaft](./properties.md), zu der der Build gehört
 
 Ein Build gehört genau zu einer Bibliothek. Eine Bibliothek kann über viele Builds verfügen.
 
-Allgemeine Informationen zu Builds und deren Anpassung an den Veröffentlichungs-Workflow für Tags finden Sie in der [Veröffentlichungsübersicht](../../ui/publishing/overview.md).
+Weitere allgemeine Informationen zu Builds und wie sie in den Veröffentlichungs-Workflow für Tags passen, finden Sie in der [Veröffentlichungsübersicht](../../ui/publishing/overview.md).
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Builds {#list}
 
-Sie können die Builds für eine bestimmte Bibliothek auflisten, indem Sie die ID der Bibliothek in den Pfad einer GET-Anfrage einschließen.
+Sie können die Builds für eine bestimmte Bibliothek auflisten, indem Sie die ID der Bibliothek im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -44,7 +44,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Builds anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Builds basierend auf den folgenden Attributen gefiltert werden:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -143,9 +143,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Builds für die angegebene Bibliot
 }
 ```
 
-## Build nachschlagen {#lookup}
+## Suchen eines Builds {#lookup}
 
-Sie können einen Build nachschlagen, indem Sie dessen Kennung im Pfad einer GET-Anfrage angeben.
+Sie können einen Build suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -155,7 +155,7 @@ GET /builds/{BUILD_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `BUILD_ID` | Die `id` des Builds, den Sie nachschlagen möchten. |
+| `BUILD_ID` | Die `id` des Builds, den Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -247,7 +247,7 @@ Eine erfolgreiche Antwort gibt die Details des Builds zurück.
 
 ## Erstellen eines Builds {#create}
 
-Sie können einen Build für eine Bibliothek erstellen, der die Bibliotheks-ID im Pfad einer POST-Anfrage enthält.
+Sie können einen Build für eine Bibliothek erstellen, der die ID der Bibliothek im Pfad einer POST-Anfrage enthält.
 
 **API-Format**
 
@@ -263,7 +263,7 @@ POST /libraries/{LIBRARY_ID}/builds
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen neuen Build für die Bibliothek, die im Anfragepfad angegeben ist. Es ist keine Anfrage-Payload erforderlich.
+Die folgende Anfrage erstellt einen neuen Build für die im Anfragepfad angegebene Bibliothek. Es ist keine Anfrage-Payload erforderlich.
 
 ```shell
 curl -X POST \
@@ -347,9 +347,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Builds zurück.
 }
 ```
 
-## Build erneut veröffentlichen {#republish}
+## Erneutes Veröffentlichen eines Builds {#republish}
 
-Sie können einen Build aus einer [veröffentlichten Bibliothek](./libraries.md#publish) erneut veröffentlichen, indem Sie dessen Kennung in den Pfad einer PATCH-Anfrage einschließen.
+Sie können einen Build aus einer [veröffentlichten Bibliothek](./libraries.md#publish) erneut veröffentlichen, indem Sie dessen ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -365,7 +365,7 @@ PATCH /builds/{BUILD_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `app_id` für eine vorhandene App-Konfiguration.
+Die folgende Anfrage aktualisiert die `app_id` für eine vorhandene Mobile-App-Konfiguration.
 
 ```shell
 curl -X PATCH \
@@ -387,9 +387,9 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die `id` des Builds, den Sie aktualisieren möchten. Dies sollte mit dem Wert `{BUILD_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` des Builds, den Sie aktualisieren möchten. Diese sollte mit dem `{BUILD_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `builds` lauten. |
-| `meta.action` | Die Art der auszuführenden PATCH-Aktion. Muss auf `republish` gesetzt werden. |
+| `meta.action` | Der Typ der auszuführenden PATCH-Aktion. Muss auf `republish` festgelegt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -468,11 +468,11 @@ Eine erfolgreiche Antwort gibt die Details des erneut veröffentlichten Builds z
 }
 ```
 
-## Abrufen verwandter Ressourcen für einen Build {#related}
+## Abrufen von zugehörigen Ressourcen für einen Build {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für einen Build abrufen. Wenn [nach einem Build](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe veranschaulichen, wie die zugehörigen Ressourcen für einen Build abgerufen werden. Beim [Suchen eines Builds](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgelistet.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
 ### Auflisten der zugehörigen Datenelemente für einen Build {#data-elements}
 
@@ -504,7 +504,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Datenelementen zurück, die mit dem Build verbunden sind.
+Eine erfolgreiche Antwort gibt eine Liste von Datenelementen zurück, die zum Build gehören.
 
 ```json
 {
@@ -645,7 +645,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Erweiterungen zurück, die mit dem Build zusammenhängen.
+Eine erfolgreiche Antwort gibt eine Liste von Erweiterungen zurück, die zum Build gehören.
 
 ```json
 {
@@ -746,7 +746,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungen zurück, die mit dem
 }
 ```
 
-### Zugehörige Regeln für einen Build auflisten {#rules}
+### Auflisten der zugehörigen Regeln für einen Build {#rules}
 
 Sie können die zugehörigen Regeln für einen Build auflisten, indem Sie `/rules` an den Pfad einer Suchanfrage anhängen.
 
@@ -776,7 +776,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Regeln zurück, die mit dem Build zusammenhängen.
+Eine erfolgreiche Antwort gibt eine Liste von Regeln zurück, die zum Build gehören.
 
 ```json
 {
@@ -859,7 +859,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Regeln zurück, die mit dem Build 
 }
 ```
 
-### Nachschlagen der zugehörigen Bibliothek nach einem Build {#library}
+### Suchen der zugehörigen Bibliothek für einen Build {#library}
 
 Sie können die zugehörige Bibliothek für einen Build abrufen, indem Sie `/library` an den Pfad einer Suchanfrage anhängen.
 
@@ -871,7 +871,7 @@ GET  /builds/{BUILD_ID}/library
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BUILD_ID}` | Die `id` des Builds, dessen Bibliothek Sie nachschlagen möchten. |
+| `{BUILD_ID}` | Die `id` des Builds, dessen Bibliothek Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -972,7 +972,7 @@ curl -X GET \
 }
 ```
 
-### Nachschlagen der zugehörigen Umgebung nach einem Build {#environment}
+### Suchen der zugehörigen Umgebung für einen Build {#environment}
 
 Sie können die zugehörige Umgebung für einen Build abrufen, indem Sie `/environment` an den Pfad einer Suchanfrage anhängen.
 
@@ -984,7 +984,7 @@ GET  /builds/{BUILD_ID}/environment
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{BUILD_ID}` | Die `id` des Builds, dessen Umgebung Sie nachschlagen möchten. |
+| `{BUILD_ID}` | Die `id` des Builds, dessen Umgebung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
