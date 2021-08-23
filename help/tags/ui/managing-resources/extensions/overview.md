@@ -1,10 +1,10 @@
 ---
 title: Erweiterungen
-description: Erfahren Sie, wie Tag-Erweiterungen in Adobe Experience Platform funktionieren.
+description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
 workflow-type: tm+mt
 source-wordcount: '497'
-ht-degree: 70%
+ht-degree: 93%
 
 ---
 
@@ -12,13 +12,13 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Eine Erweiterung ist ein gepackter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert.
+Eine Erweiterung ist ein gebündelter Code-Satz, der die von Tags oder der Ereignisweiterleitung bereitgestellten Funktionen erweitert.
 
 Durch Hinzufügen einer Erweiterung werden neue Datenelemente und neue Optionen zum Erstellen von Regeln hinzugefügt.
 
-Erweiterungen bestimmen die Elemente, die beim Erstellen von Properties, Regeln und Datenelementen verfügbar sind. Sie bieten Folgendes:
+Erweiterungen bestimmen die Elemente, die beim Erstellen von Eigenschaften, Regeln und Datenelementen verfügbar sind. Sie bieten Folgendes:
 
 * Ereignisse, Bedingungen und Ausnahmen
 * Datenelemente
@@ -32,11 +32,11 @@ Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Konfigurieren],
 >
 >Änderungen werden erst wirksam, nachdem sie [veröffentlicht](../../publishing/overview.md) wurden.
 
-Standardmäßig bietet Adobe Erweiterungen, die gängige Integrationen unterstützen. Erweiterungen können mit benutzerdefinierten Konfigurationen angepasst werden. Konfigurationen werden über die Erweiterungen bereitgestellt. Klicken Sie zum Erstellen einer Konfiguration auf die Erweiterungskarte und dann auf **[!UICONTROL Neue Konfiguration hinzufügen]**.
+Standardmäßig stellt Adobe Erweiterungen bereit, die gängige Integrationen unterstützen. Erweiterungen können mit benutzerdefinierten Konfigurationen angepasst werden. Konfigurationen werden über die Erweiterungen bereitgestellt. Klicken Sie zum Erstellen einer Konfiguration auf die Erweiterungskarte und dann auf **[!UICONTROL Neue Konfiguration hinzufügen]**.
 
 ## Erweiterungskatalog
 
-Verwenden Sie den Erweiterungskatalog zum Durchsuchen, Konfigurieren und Bereitstellen von Marketing- und Werbetechnologien, die von unabhängigen Softwareanbietern entwickelt und gepflegt werden, sowie Erweiterungen für Adobe-Lösungen.
+Verwenden Sie den Erweiterungskatalog, um Marketing- und Werbetechnologien, die von unabhängigen Software-Anbietern entwickelt und gepflegt werden, sowie Erweiterungen für Adobe-Lösungen zu durchsuchen, zu konfigurieren und bereitzustellen.
 
 Die Seite „Erweiterungen“ bietet drei Ansichten:
 
@@ -52,11 +52,11 @@ Die Seite „Erweiterungen“ bietet drei Ansichten:
 
 Klicken Sie auf **[!UICONTROL Erweiterungen]**, um alle installierten Erweiterungen anzuzeigen. Sie können den Katalog auch verwenden, um eine Liste aller verfügbaren Erweiterungen anzuzeigen und zu ermitteln, welche Erweiterungen verfügbar sind.
 
-Weitere Informationen zu den Adobe-eigenen Erweiterungen finden Sie unter [Erweiterungsreferenz](../../../extensions/web/overview.md) .
+Ausführliche Informationen zu Adobe-eigenen Erweiterungen finden Sie in der [Erweiterungsreferenz](../../../extensions/web/overview.md).
 
 ## Hinzufügen neuer Erweiterungen {#add-a-new-extension}
 
-Tags sind stark erweiterbar. Erweiterungen fügen Tags Kernfunktionen hinzu. Erweiterungen werden häufig verwendet, um Integrationen in andere Anwendungen zu schaffen.
+Tags sind extrem erweiterbar. Erweiterungen fügen Tags Kernfunktionen hinzu. Erweiterungen werden häufig verwendet, um Integrationen in andere Anwendungen zu schaffen.
 
 1. Öffnen Sie auf der Übersichtsseite einer Eigenschaft die Registerkarte **[!UICONTROL Erweiterungen]**.
 1. Wählen Sie eine Erweiterung aus.
@@ -71,7 +71,7 @@ Tags sind stark erweiterbar. Erweiterungen fügen Tags Kernfunktionen hinzu. Erw
 
    * Standardereignis
    * Standardbedingungen und -ausnahmen
-   * Standardmäßiger clientseitiger Code
+   * Standardmäßiger Client-seitiger Code
 
    Diese Standardeinstellungen sind die Grundlage für die benutzerdefinierten Regeln, die Sie für Ihre Erweiterung erstellen.
 
@@ -85,4 +85,4 @@ Bewegen Sie den Mauszeiger über eine installierte Erweiterung und klicken Sie a
 >
 >Einige Erweiterungen erfordern keine Konfiguration und bieten keine Konfigurationsoptionen.
 
-Jede konfigurierbare Erweiterung verfügt über individuelle Optionen. Informationen zu den für die einzelnen Adobe-Erweiterungen verfügbaren Optionen finden Sie unter [Erweiterungsreferenz](../../../extensions/web/overview.md) .
+Jede konfigurierbare Erweiterung verfügt über individuelle Optionen. Informationen zu den für die verschiedenen Adobe-Erweiterungen verfügbaren Optionen finden Sie in der [Erweiterungsreferenz](../../../extensions/web/overview.md).
