@@ -1,10 +1,10 @@
 ---
 title: Vergleichen von Ressourcenrevisionen
-description: Erfahren Sie, wie Sie den Verlauf der Revisionen für eine Tag-Ressource in Adobe Experience Platform anzeigen können.
+description: Erfahren Sie, wie Sie in Adobe Experience Platform den Revisionsverlauf für eine Ressource anzeigen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 94%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Vergleichen Sie Ressourcenversionen, um den Verlauf einzelner Ressource anzuzeigen. Sie können den aktuellen Status der Ressource mit älteren Versionen oder die derzeit veröffentlichte Version einer Ressource mit den neuesten gespeicherten Änderungen vergleichen.
 
@@ -79,7 +79,7 @@ Der erste Bildschirm zeigt eine allgemeine Ansicht, die Änderungen an der Anord
 Oben können Sie die folgenden Änderungen sehen:
 
 * Der Regelname wurde von „Analytics“ zu „Baseline Analytics“ geändert, wie durch die orangefarbene Leiste angegeben.
-* Die Bedingung „Core – Domäne“ wurde hinzugefügt, wie durch das orangefarbene Plussymbol und die rechts hinzugefügte Komponente angegeben.
+* Die Bedingung „Core – Domain“ wurde hinzugefügt, wie durch das orangefarbene Plussymbol und die rechts hinzugefügte Komponente angegeben.
 * Die Aktion „[!DNL Adobe Analytics] – Variablen löschen“ wurde entfernt, wie durch das orangefarbene Symbol und die rechts fehlende Komponente angegeben.
 * Die Aktion „[!DNL Adobe Analytics] – Variablen festlegen“ wurde geändert, wie durch die orangefarbene Linie zwischen den Komponentenversionen auf der linken und der rechten Seite angegeben. Diese Linie ist gerade, wenn die Komponentenreihenfolge nicht geändert wurde.
 * Die Reihenfolge der Aktionen „[!DNL Adobe Analytics] – Variablen festlegen“ und „[!DNL Adobe Analytics] – Beacon senden“ wurde geändert. Dies wird durch die gekrümmten Linien angegeben, die die verschiedenen Komponentenversionen links und rechts miteinander verbinden.
@@ -94,6 +94,6 @@ Der Vergleich einer einzelnen Regelkomponente verhält sich genauso wie der Verg
 
 Oben können Sie die folgende Änderung sehen:
 
-* Die Regelkomponente wurde geändert, um eVar 2 mit dem Wert „1“ hinzuzufügen.
+* Die Regelkomponente wurde geändert, um eVar2 mit dem Wert „1“ hinzuzufügen.
 
 Im Fall eines umfangreichen Einstellungsblocks können Sie den Einstellungsbereich erweitern, um ihn besser sehen zu können.
