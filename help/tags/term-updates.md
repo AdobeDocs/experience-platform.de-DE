@@ -2,9 +2,9 @@
 title: Aktualisierungen der Terminologie
 description: Eine vollständige Liste der Begriffe und UI-Elemente, die vom Rebranding von Adobe Experience Platform Launch betroffen sind.
 source-git-commit: 39d9468e5d512c75c9d540fa5d2bcba4967e2881
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '134'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -18,6 +18,6 @@ In der folgenden Tabelle sind die Begriffe aufgeführt, die in der Produktdokume
 
 | Vorheriger Begriff | Aktualisierter Begriff |
 |---|---|
-| platform launch (Client-seitig) | [Tags](./home.md) |
+| Platform Launch Client Side | [Tags](./home.md) |
 | Platform Launch Server Side | [Ereignisweiterleitung](./ui/event-forwarding/overview.md) |
 | Edge-Konfigurationen | [Datenströme](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=de) |
