@@ -1,10 +1,10 @@
 ---
 title: Implementieren von Bibliotheken von Drittanbietern
-description: Erfahren Sie mehr über die verschiedenen Methoden zum Hosten von Drittanbieter-Bibliotheken in Ihren Adobe Experience Platform-Tag-Erweiterungen.
+description: Machen Sie sich mit den verschiedenen Methoden zum Hosten von Drittanbieterbibliotheken in Ihren Adobe Experience Platform-Tag-Erweiterungen vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1330'
-ht-degree: 67%
+ht-degree: 98%
 
 ---
 
@@ -12,19 +12,19 @@ ht-degree: 67%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
-Eines der Hauptziele von Tag-Erweiterungen in Adobe Experience Platform besteht darin, Ihnen die einfache Implementierung vorhandener Marketing-Technologien (Bibliotheken) in Ihre Website zu ermöglichen. Durch die Verwendung von Erweiterungen können Sie Bibliotheken implementieren, die von Inhaltsversandnetzwerken (Content Delivery Network, CDN) von Drittanbietern bereitgestellt werden, ohne die HTML-Daten Ihrer Website manuell bearbeiten zu müssen.
+Eines der Hauptziele von Tag-Erweiterungen in Adobe Experience Platform ist es, Ihnen die einfache Implementierung vorhandener Marketing-Technologien (Bibliotheken) in Ihre Website zu ermöglichen. Durch die Verwendung von Erweiterungen können Sie Bibliotheken implementieren, die von Inhaltsversandnetzwerken (Content Delivery Network, CDN) von Drittanbietern bereitgestellt werden, ohne die HTML-Daten Ihrer Website manuell bearbeiten zu müssen.
 
-Es gibt verschiedene Methoden zum Hosten von Drittanbieter-Bibliotheken in Ihren Erweiterungen. Dieses Dokument bietet einen Überblick über diese verschiedenen Implementierungsmethoden einschließlich der Vor- und Nachteile jeder Methode.
+Es gibt mehrere Methoden, Bibliotheken von Drittanbietern innerhalb Ihrer Erweiterungen zu hosten. Dieses Dokument bietet einen Überblick über diese verschiedenen Implementierungsmethoden einschließlich der Vor- und Nachteile jeder Methode.
 
 ## Voraussetzungen
 
-Dieses Dokument setzt ein Verständnis der Erweiterungen innerhalb von Tags voraus, einschließlich dessen, was sie tun können und wie sie zusammengestellt werden. Weiterführende Informationen dazu finden Sie unter [Erweiterungsentwicklung – Übersicht](./overview.md).
+Dieses Dokument erfordert ein Verständnis der Erweiterungen in Tags, einschließlich dessen, wozu sie fähig sind und wie sie zusammengestellt werden. Weiterführende Informationen dazu finden Sie unter [Erweiterungsentwicklung – Übersicht](./overview.md).
 
 ## Ladevorgang für Basis-Code
 
-Außerhalb des Kontexts von Tags ist es wichtig zu verstehen, wie Marketing-Technologien normalerweise auf einer Website geladen werden. Drittanbieter von Bibliotheken stellen einen Code-Ausschnitt (den so genannten Basis-Code) bereit, der in den HTML-Code Ihrer Website eingebettet werden muss, damit die Funktionen der Bibliothek geladen werden können.
+Außerhalb des Kontexts von Tags ist es wichtig zu verstehen, wie Marketing-Technologien typischerweise auf einer Website geladen werden. Drittanbieter von Bibliotheken stellen einen Code-Ausschnitt (den so genannten Basis-Code) bereit, der in den HTML-Code Ihrer Website eingebettet werden muss, damit die Funktionen der Bibliothek geladen werden können.
 
 Im Allgemeinen führen Basis-Codes für Marketing-Technologien beim Laden auf Ihrer Website einen Prozess ähnlich dem folgenden aus:
 
@@ -32,13 +32,13 @@ Im Allgemeinen führen Basis-Codes für Marketing-Technologien beim Laden auf Ih
 1. Laden Sie die Bibliothek des Anbieters.
 1. Führen Sie zu Konfigurations- und Tracking-Zwecken eine Reihe von in die Warteschlange gestellten Erstaufrufen an die globale Funktion aus.
 
-Wenn die globale Funktion zum ersten Mal eingerichtet ist, können Sie die Funktion noch aufrufen, bevor das Laden der Bibliothek abgeschlossen ist. Alle von Ihnen ausgeführten Aufrufe werden zum Warteschlangenmechanismus des Basis-Codes hinzugefügt und nach dem Laden der Bibliothek in sequenzieller Reihenfolge ausgeführt.
+Wenn die globale Funktion zum ersten Mal eingerichtet ist, können Sie die Funktion noch aufrufen, bevor das Laden der Bibliothek abgeschlossen ist. Alle von Ihnen ausgeführten Aufrufe werden dem Warteschlangenmechanismus des Basis-Codes hinzugefügt und in sequenzieller Reihenfolge ausgeführt, sobald die Bibliothek geladen wird.
 
 Nach dem Laden der Bibliothek wird die globale Funktion durch eine neue ersetzt, die die Warteschlange umgeht und stattdessen alle zukünftigen Aufrufe der Funktion sofort verarbeitet.
 
 ### Beispiel für Basis-Code
 
-Das folgende JavaScript ist ein Beispiel für einen nicht minimierten Basis-Code für das [Pinterest-Konversions-Tag](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), der später in diesem Dokument referenziert wird, um zu veranschaulichen, wie der Basis-Code für verschiedene Implementierungsstrategien mit Tags angepasst werden kann:
+Das folgende JavaScript ist ein Beispiel für einen nicht minimierten Basis-Code für das [Pinterest-Konvertierungs-Tag](https://developers.pinterest.com/docs/ad-tools/conversion-tag/?), auf das später in diesem Dokument verwiesen wird, um zu demonstrieren, wie der Basis-Code mit Tags für verschiedene Implementierungsstrategien angepasst wird:
 
 ```js
 !function(scriptUrl) {
@@ -83,11 +83,11 @@ Der Basis-Code erstellt ein Skriptelement, legt es so fest, dass es asynchron ge
 
 ## Implementierungsoptionen für Tags
 
-In den folgenden Abschnitten werden die verschiedenen Möglichkeiten zum Laden von Bibliotheken von Anbietern in Erweiterungen anhand des zuvor gezeigten Pinterest-Basis-Codes veranschaulicht. Bei jedem dieser Beispiele wird ein [Aktionstyp für eine Web-Erweiterung](./web/action-types.md) erstellt, der die Bibliothek auf Ihre Website lädt.
+In den folgenden Abschnitten werden die verschiedenen Möglichkeiten zum Laden von Bibliotheken von Anbietern in Erweiterungen anhand des zuvor gezeigten Pinterest-Basis-Codes veranschaulicht. Jedes dieser Beispiele beinhaltet die Erstellung eines [Aktionstyps für eine Web-Erweiterung](./web/action-types.md), der die Bibliothek auf Ihrer Website lädt.
 
 >[!NOTE]
 >
->In den folgenden Beispielen werden zwar Aktionstypen für Demonstrationszwecke verwendet, Sie können aber dieselben Prinzipien auf alle Funktionen anwenden, die die Tag-Bibliothek auf Ihre Site laden.
+>Die folgenden Beispiele zeigen Aktionstypen für Demonstrationszwecke. Sie können dieselben Prinzipien auf alle Funktionen anwenden, die die Tag-Bibliothek auf Ihre Website laden.
 
 
 Die folgenden Methoden werden behandelt:
@@ -98,7 +98,7 @@ Die folgenden Methoden werden behandelt:
       - [Beispiel für Basis-Code](#base-code-example)
    - [Implementierungsoptionen für Tags](#tags-implementation-options)
       - [Laden zur Laufzeit vom Anbieter-Host {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
-      - [Zur Laufzeit vom Tag-Bibliotheks-Host laden](#load-at-runtime-from-the-tag-library-host)
+      - [Laden zur Laufzeit vom Host der Tag-Bibliothek](#load-at-runtime-from-the-tag-library-host)
       - [Bibliothek direkt einbetten](#embed-the-library-directly)
    - [Nächste Schritte](#next-steps)
 
@@ -106,7 +106,7 @@ Die folgenden Methoden werden behandelt:
 
 Die am häufigsten verwendete Methode zum Hosten von Bibliotheken von Anbietern ist die Verwendung des CDN (Content Delivery Network) des Anbieters. Da der Basis-Code für die meisten Bibliotheken von Anbietern bereits so konfiguriert ist, dass die Bibliothek vom CDN des Anbieters geladen wird, können Sie Ihre Erweiterung so einrichten, dass die Bibliothek vom selben Speicherort geladen wird.
 
-Dieser Ansatz ist in der Regel am einfachsten zu verwalten, da alle Aktualisierungen, die an der Datei im CDN vorgenommen werden, automatisch von der Erweiterung geladen werden.
+Dieser Ansatz ist in der Regel am einfachsten zu pflegen, da alle Aktualisierungen, die im CDN an der Datei vorgenommen werden, automatisch von der Erweiterung geladen werden.
 
 Bei Verwendung dieser Methode können Sie den gesamten Basis-Code einfach direkt in einen Aktionstyp wie folgt einfügen:
 
@@ -138,7 +138,7 @@ module.exports = function() {
 
 Optional können Sie weitere Schritte unternehmen, um diese Implementierung zu überarbeiten. Da die Variablen `scriptElement` und `firstScriptElement` jetzt auf die exportierte Funktion übertragen werden, können Sie die IIFE entfernen, da diese Variablen nicht das Risiko bergen, global zu werden.
 
-Darüber hinaus stellen Tags mehrere [Kernmodule](./web/core.md) bereit, bei denen es sich um Hilfsprogramme handelt, die von jeder beliebigen Erweiterung verwendet werden können. Das Modul `@adobe/reactor-load-script` lädt ein Skript von einem Remote-Speicherort, indem ein Skriptelement erstellt und zum Dokument hinzugefügt wird. Mithilfe dieses Moduls für den Ladevorgang des Skripts können Sie den Aktions-Code noch weiter umgestalten:
+Darüber hinaus bieten Tags mehrere [Kernmodule](./web/core.md). Dabei handelt es sich um Dienstprogramme, die jede Erweiterung verwenden kann. Das Modul `@adobe/reactor-load-script` lädt ein Skript von einem Remote-Speicherort, indem ein Skriptelement erstellt und zum Dokument hinzugefügt wird. Mithilfe dieses Moduls für den Ladevorgang des Skripts können Sie den Aktions-Code noch weiter umgestalten:
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -159,11 +159,11 @@ module.exports = function() {
 };
 ```
 
-### Zur Laufzeit vom Tag-Bibliotheks-Host laden
+### Laden zur Laufzeit vom Host der Tag-Bibliothek
 
 Die Verwendung des CDN eines Anbieters für das Hosten von Bibliotheken birgt mehrere Risiken: das CDN kann ausfallen, die Datei kann jederzeit mit einem kritischen Fehler aktualisiert werden oder die Datei kann zu unguten Zwecken kompromittiert werden.
 
-Um diese Bedenken auszuräumen, können Sie die Bibliothek des Anbieters als separate Datei in Ihre Erweiterung aufnehmen. Die Erweiterung kann dann so konfiguriert werden, dass die Datei neben der Haupt-Tag-Bibliothek gehostet wird. Zur Laufzeit lädt die Erweiterung dann die Bibliothek des Anbieters von dem Server, der die Hauptbibliothek für die Website bereitgestellt hat.
+Um diese Bedenken auszuräumen, können Sie die Bibliothek des Anbieters als separate Datei in Ihre Erweiterung aufnehmen. Die Erweiterung kann dann so konfiguriert werden, dass die Datei zusammen mit der Haupt-Tag-Bibliothek gehostet wird. Zur Laufzeit lädt die Erweiterung dann die Bibliothek des Anbieters von dem Server, der die Hauptbibliothek für die Website bereitgestellt hat.
 
 >[!IMPORTANT]
 >
@@ -171,7 +171,7 @@ Um diese Bedenken auszuräumen, können Sie die Bibliothek des Anbieters als sep
 
 Um dies zu implementieren, müssen Sie zunächst die Bibliothek des Anbieters auf Ihren Computer herunterladen. Bei Pinterest befindet sich die Bibliothek des Anbieters unter [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js). Nachdem Sie die Datei heruntergeladen haben, müssen Sie sie in Ihrem Erweiterungsprojekt ablegen. Im folgenden Beispiel erhält die Datei den Namen `pinterest.js` und befindet sich in einem Ordner `vendor` im Projektverzeichnis.
 
-Sobald sich die Bibliotheksdatei in Ihrem Projekt befindet, müssen Sie Ihr [Erweiterungsmanifest](./manifest.md) (`extension.json`) aktualisieren, um anzugeben, dass die Bibliothek des Anbieters zusammen mit der Haupt-Tag-Bibliothek bereitgestellt werden soll. Dazu fügen Sie den Pfad zur Bibliotheksdatei in einem `hostedLibFiles`-Array hinzu:
+Sobald sich die Bibliotheksdatei in Ihrem Projekt befindet, müssen Sie Ihr [Erweiterungsmanifest](./manifest.md) (`extension.json`) aktualisieren, um anzugeben, dass die Anbieterbibliothek zusammen mit der Haupt-Tag-Bibliothek bereitgestellt werden soll. Dazu fügen Sie den Pfad zur Bibliotheksdatei in einem `hostedLibFiles`-Array hinzu:
 
 ```json
 {
@@ -200,11 +200,11 @@ module.exports = function() {
 };
 ```
 
-Beachten Sie, dass Sie bei Verwendung dieser Methode Ihre heruntergeladene Datei des Anbieters manuell aktualisieren müssen, sobald die Bibliothek auf seinem CDN aktualisiert wird, und die Änderungen an einer neuen Version Ihrer Erweiterung freigeben müssen.
+Beachten Sie, dass Sie bei Verwendung dieser Methode Ihre heruntergeladene Anbieterdatei jedes Mal manuell aktualisieren müssen, wenn die Bibliothek in seinem CDN aktualisiert wird, und die Änderungen jeweils in einer neuen Version Ihrer Erweiterung veröffentlichen müssen.
 
 ### Bibliothek direkt einbetten
 
-Sie können das vollständige Laden der Bibliothek des Anbieters umgehen, indem Sie den Bibliotheks-Code direkt in den Aktionscode selbst einbetten, wodurch er effektiv Teil der Haupt-Tag-Bibliothek wird. Diese Methode erhöht zwar die Größe der Hauptbibliothek, vermeidet aber die Notwendigkeit einer zusätzlichen HTTP-Anfrage zum Abrufen einer separaten Datei.
+Sie können das Laden der Anbieterbibliothek umgehen, indem Sie den Bibliotheks-Code direkt in den Aktions-Code selbst einbetten, wodurch er effektiv Teil der Haupt-Tag-Bibliothek wird. Diese Methode erhöht zwar die Größe der Hauptbibliothek, vermeidet aber die Notwendigkeit einer zusätzlichen HTTP-Anfrage zum Abrufen einer separaten Datei.
 
 Mithilfe des im [vorherigen Abschnitt](#vendor-host) erstellten Aktions-Codes können Sie die Zeile, in der das Skript geladen wird, durch den Inhalt des Skripts selbst ersetzen:
 
@@ -227,6 +227,6 @@ module.exports = function() {
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die verschiedenen Methoden zum Hosten von Drittanbieter-Bibliotheken in Ihren Tag-Erweiterungen. Während sich die gegebenen Beispiele auf Bibliotheken konzentriert haben, gelten diese Verfahren für jeden Code, den Ihre Erweiterung verwenden kann.
+Dieses Dokument bietet einen Überblick über die verschiedenen Methoden zum Hosten von Drittanbieterbibliotheken in Ihren Tag-Erweiterungen. Während sich die gegebenen Beispiele auf Bibliotheken konzentriert haben, gelten diese Verfahren für jeden Code, den Ihre Erweiterung verwenden kann.
 
 Weitere Informationen zu den Werkzeugen zum Konfigurieren der Erweiterungen, einschließlich Aktionstypen, dem Erweiterungsmanifest, Kernmodulen und dem Turbinenobjekt, finden Sie in der Dokumentation, die in diesem Handbuch verlinkt ist.
