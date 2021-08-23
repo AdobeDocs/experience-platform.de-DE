@@ -1,10 +1,10 @@
 ---
 title: Bedingungstypen für Web-Erweiterungen
-description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ Bedingung für eine Tag-Erweiterung in einer Webeigenschaft definieren.
+description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „condition-type“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 56%
+ht-degree: 69%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 56%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Im Kontext einer Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Die Ausnahme besteht, wenn Benutzer Bedingungen explizit in einem &quot;Ausnahme&quot;-Behälter platzieren. In diesem Fall müssen alle Bedingungen im Behälter &quot;false&quot;zurückgeben, damit die Regel weiter verarbeitet werden kann.
 
-Beispielsweise könnte eine Erweiterung einen Bedingungstyp &quot;Viewport enthält&quot;bereitstellen, in dem der Benutzer einen CSS-Selektor angeben könnte. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
+Beispielsweise könnte eine Erweiterung einen Bedinungstyp „Viewport enthält“ bereitstellen, bei dem der Benutzer eine CSS-Auswahl angeben kann. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
 
 In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Web-Erweiterung in Adobe Experience Platform definieren.
 
@@ -41,7 +41,7 @@ module.exports = function(settings) {
 };
 ```
 
-Betrachten Sie nun eine Situation, in der Sie den Hostnamen vom Adobe Experience Platform-Benutzer konfigurierbar machen möchten. Sie können dem Benutzer erlauben, einen Hostnamen einzugeben, und dann den Hostnamen im settings-Objekt speichern. Das Objekt könnte etwa so aussehen:
+Betrachten Sie nun eine Situation, in der Sie dem Adobe Experience Platform-Benutzer das Konfigurieren des Host-Namens erlauben möchten. Sie können dem Benutzer erlauben, einen Hostnamen einzugeben, und dann den Hostnamen im Einstellungsobjekt speichern. Das Objekt könnte etwa so aussehen:
 
 ```js
 {
