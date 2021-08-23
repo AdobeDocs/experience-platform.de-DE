@@ -1,28 +1,28 @@
 ---
-title: Endpunkt "Regeln"
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /rules in der Reactor-API durchführen.
+title: Rules-Endpunkt
+description: Erfahren Sie, wie Sie den /rules-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '937'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# Endpunkt &quot;Regeln&quot;
+# Rules-Endpunkt
 
-Im Kontext von Datenerfassungs-Tags steuern Regeln das Verhalten der Ressourcen in einer bereitgestellten Bibliothek. Eine Regel besteht aus einer oder mehreren [Regelkomponenten](./rule-components.md), die vorhanden sind, um die Regelkomponenten logisch miteinander zu verknüpfen. Mit dem Endpunkt `/rules` in der Reactor-API können Sie Tag-Regeln programmgesteuert verwalten.
+Im Kontext von Datenerfassungs-Tags steuern Regeln das Verhalten der Ressourcen in einer bereitgestellten Bibliothek. Eine Regel besteht aus einer oder mehreren [Regelkomponenten](./rule-components.md), die dazu dienen, die Regelkomponenten logisch miteinander zu verknüpfen. Mit dem `/rules`-Endpunkt in der Reactor-API können Sie Tag-Regeln programmgesteuert verwalten.
 
 >[!NOTE]
 >
->In diesem Dokument wird beschrieben, wie Sie Regeln in der Reactor-API verwalten. Informationen zur Interaktion mit Regeln in der Datenerfassungs-Benutzeroberfläche finden Sie im [UI-Handbuch](../../ui/managing-resources/rules.md).
+>In diesem Dokument wird beschrieben, wie Sie Regeln in der Reactor-API verwalten. Informationen zur Interaktion mit Regeln in der Datenerfassungs-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche](../../ui/managing-resources/rules.md).
 
-Eine Regel gehört genau zu einer [Eigenschaft](./properties.md). Eine Eigenschaft kann über viele Regeln verfügen.
+Eine Regel gehört zu genau einer [Eigenschaft](./properties.md). Eine Eigenschaft kann über viele Regeln verfügen.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Regeln abrufen {#list}
+## Abrufen einer Liste von Regeln {#list}
 
 Sie können eine Liste von Regeln abrufen, die zu einer Eigenschaft gehören, indem Sie eine GET-Anfrage ausführen.
 
@@ -40,7 +40,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Regeln anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Regeln anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -139,13 +139,13 @@ Eine erfolgreiche Antwort gibt eine Liste von Regeln für die angegebene Eigensc
 }
 ```
 
-## Regel nachschlagen {#lookup}
+## Suchen einer Regel {#lookup}
 
-Sie können eine Regel nachschlagen, indem Sie ihre Kennung im Pfad einer GET-Anfrage angeben.
+Sie können eine Regel suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 >[!NOTE]
 >
->Wenn Regeln gelöscht werden, werden sie als gelöscht markiert, aber nicht tatsächlich aus dem System entfernt. Daher ist es möglich, eine gelöschte Regel abzurufen. Gelöschte Regeln können durch das Vorhandensein einer `meta.deleted_at` -Eigenschaft identifiziert werden.
+>Wenn Regeln gelöscht werden, werden sie als gelöscht markiert, aber nicht tatsächlich aus dem System entfernt. Daher ist es möglich, eine gelöschte Regel abzurufen. Gelöschte Regeln können durch das Vorhandensein einer `meta.deleted_at`-Eigenschaft identifiziert werden.
 
 **API-Format**
 
@@ -155,7 +155,7 @@ GET /rules/{RULE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `RULE_ID` | Die `id` der Regel, die Sie nachschlagen möchten. |
+| `RULE_ID` | Die `id` der Regel, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -284,7 +284,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für die Regel. |
-| `attributes.enabled` | Ein boolean -Wert, der angibt, ob die Regel aktiviert ist. |
+| `attributes.enabled` | Ein boolescher Wert, der angibt, ob die Regel aktiviert ist. |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Endpunkt muss der Wert `rules` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -365,11 +365,11 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Regel zurück.
 
 ## Hinzufügen von Ereignissen, Bedingungen und Aktionen zu einer Regel {#components}
 
-Nachdem Sie [eine Regel](#create) erstellt haben, können Sie mit der Erstellung der Logik beginnen, indem Sie Ereignisse, Bedingungen und Aktionen hinzufügen (zusammen als Regelkomponenten bezeichnet). Weitere Informationen dazu finden Sie im Abschnitt [Erstellen einer Regelkomponente](./rule-components.md#create) im `/rule_components`-Endpunkthandbuch.
+Nachdem Sie [eine Regel erstellt](#create) haben, können Sie mit der Erstellung der Logik beginnen, indem Sie Ereignisse, Bedingungen und Aktionen hinzufügen (zusammen als Regelkomponenten bezeichnet). Weitere Informationen dazu finden Sie im Abschnitt [Erstellen einer Regelkomponente](./rule-components.md#create) im Handbuch zum `/rule_components`-Endpunkt.
 
-## Regel aktualisieren {#update}
+## Aktualisieren einer Regel {#update}
 
-Sie können die Attribute einer Regel aktualisieren, indem Sie ihre Kennung in den Pfad einer PATCH-Anfrage einschließen.
+Sie können die Attribute einer Regel aktualisieren, indem Sie deren ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -385,7 +385,7 @@ PATCH /rules/{RULE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die `name` einer vorhandenen Regel.
+Die folgende Anfrage aktualisiert den `name` einer vorhandenen Regel.
 
 ```shell
 curl -X PATCH \
@@ -408,7 +408,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes` | Ein Objekt, dessen Regeln die Attribute darstellen, die für die Regel aktualisiert werden sollen. Die folgenden Attribute können für eine Regel aktualisiert werden: <ul><li>`name`</li><li>`enabled`</li></ul> |
-| `id` | Die `id` der Regel, die Sie aktualisieren möchten. Dies sollte mit dem Wert `{RULE_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `id` | Die `id` der Regel, die Sie aktualisieren möchten. Diese sollte mit dem `{RULE_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `rules` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -487,9 +487,9 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Regel zurück.
 }
 ```
 
-## Regel löschen
+## Löschen einer Regel
 
-Sie können eine Regel löschen, indem Sie ihre Kennung in den Pfad einer DELETE-Anfrage einschließen.
+Sie können eine Regel löschen, indem Sie deren ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -517,17 +517,17 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt an, dass die Regel gelöscht wurde.
 
-## Hinweise für eine Regel verwalten {#notes}
+## Verwalten von Anmerkungen für eine Regel {#notes}
 
-Regeln sind &quot;bemerkenswerte&quot;Ressourcen, d. h. Sie können für jede einzelne Ressource textbasierte Notizen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Regeln und andere kompatible Ressourcen finden Sie im [Notes-Endpunkthandbuch](./notes.md) .
+Sie können für jede einzelne Regel textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Regeln und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Regel {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Regel abrufen. Wenn [nach einer Regel](#lookup) sucht, werden diese Beziehungen unter der Regel `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Regel abrufen. Beim [Suchen einer Regel](#lookup) werden diese Beziehungen unter der Regel `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Zugehörige Bibliotheken für eine Regel auflisten {#libraries}
+### Auflisten der zugehörigen Bibliotheken für eine Regel {#libraries}
 
 Sie können die Bibliotheken auflisten, die eine bestimmte Regel verwenden, indem Sie `/libraries` an den Pfad einer Suchanfrage anhängen.
 
@@ -827,9 +827,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Revisionen zurück, die die angege
 }
 ```
 
-### Nachschlagen des zugehörigen Ursprungs für eine Regel {#origin}
+### Suchen des zugehörigen Ursprungs für eine Regel {#origin}
 
-Sie können den Ursprung (frühere Version) einer Regel nachschlagen, indem Sie `/origin` an den Pfad einer Suchanfrage anhängen.
+Sie können den Ursprung (frühere Version) einer Regel suchen, indem Sie `/origin` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -839,7 +839,7 @@ GET /rules/{RULE_ID}/origin
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RULE_ID}` | Die `id` der Regel, deren Ursprung Sie nachschlagen möchten. |
+| `{RULE_ID}` | Die `id` der Regel, deren Ursprung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -929,9 +929,9 @@ Eine erfolgreiche Antwort gibt die Details der Erweiterung der angegebenen Regel
 }
 ```
 
-### Nachschlagen der zugehörigen Eigenschaft für eine Regel {#property}
+### Suchen der zugehörigen Eigenschaft für eine Regel {#property}
 
-Sie können die Eigenschaft nachschlagen, der eine Regel gehört, indem Sie `/property` an den Pfad einer Suchanfrage anhängen.
+Sie können die Eigenschaft suchen, der eine Regel gehört, indem Sie `/property` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -941,7 +941,7 @@ GET /rules/{RULE_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RULE_ID}` | Die `id` der Regel, deren Eigenschaft Sie nachschlagen möchten. |
+| `{RULE_ID}` | Die `id` der Regel, nach deren Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
