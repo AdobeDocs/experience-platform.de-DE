@@ -1,10 +1,10 @@
 ---
 title: Adobe Audience Manager-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Adobe Audience Manager-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Audience Manager“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 82%
+ht-degree: 96%
 
 ---
 
@@ -12,9 +12,9 @@ ht-degree: 82%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-Mit der Audience Manager-Tag-Erweiterung können Sie den von Audience Manager verwendeten DIL-Code in Ihre Eigenschaften in Adobe Experience Platform integrieren.
+Mit der Audience Manager-Tag-Erweiterung können Sie den von Audience Manager verwendeten DIL-Code mit Ihren Eigenschaften in Adobe Experience Platform integrieren.
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
