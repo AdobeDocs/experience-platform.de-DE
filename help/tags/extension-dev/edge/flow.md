@@ -4,7 +4,7 @@ description: Erfahren Sie, wie die Komponenten einer Edge-Erweiterung in Adobe E
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 51%
+ht-degree: 93%
 
 ---
 
@@ -12,11 +12,11 @@ ht-degree: 51%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In Edge-Erweiterungen verfügt jede Bedingung, jede Aktion und jeder Datenelementtyp über eine Ansicht, die den Benutzern das Ändern von Einstellungen ermöglicht, und über ein Bibliotheksmodul, in dem diese benutzerdefinierten Einstellungen verwendet werden.
 
-Wie das folgende allgemeine Diagramm zeigt, wird die Aktionstypansicht der Erweiterung in einem iframe innerhalb der in Adobe Experience Platform integrierten Anwendung angezeigt. Die Ansicht wird dann verwendet, um Einstellungen zu ändern, die dann in Platform gespeichert werden. Wenn die Tag-Laufzeitbibliothek erstellt wird, werden sowohl das Aktionstyp-Bibliotheksmodul der Erweiterung als auch die benutzerdefinierten Einstellungen in die Laufzeitbibliothek aufgenommen, die auf dem Edge-Knoten bereitgestellt wird. Benutzerdefinierte Einstellungen von Platform werden zur Laufzeit in das Bibliotheksmodul eingefügt.
+Wie das folgende Übersichtsdiagramm zeigt, wird die Aktionstypansicht der Erweiterung in einem iframe innerhalb des in Adobe Experience Platform integrierten Programms angezeigt. Die Ansicht wird dann verwendet, um Einstellungen zu ändern, die dann in Platform gespeichert werden. Beim Erstellen der Tag-Laufzeitbibliothek werden sowohl das Aktionstyp-Bibliotheksmodul der Erweiterung als auch die benutzerdefinierten Einstellungen in die Laufzeitbibliothek aufgenommen, die auf dem Edge-Knoten bereitgestellt wird. Benutzerdefinierte Einstellungen von Platform werden zur Laufzeit in das Bibliotheksmodul eingefügt.
 
 ![Flussdiagramm der Erweiterung](../images/flow/edge/event-processing-flow.png)
 
