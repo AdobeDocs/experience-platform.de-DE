@@ -1,10 +1,10 @@
 ---
 title: Bibliotheken
-description: Erfahren Sie mehr über das Konzept von Tag-Bibliotheken und ihre Funktionsweise in Adobe Experience Platform.
+description: Machen Sie sich mit dem Konzept und der Funktionsweise von Tag-Bibliotheken in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '791'
-ht-degree: 76%
+ht-degree: 97%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 76%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Eine Bibliothek ist eine Reihe von Anweisungen, die spezifizieren, wie Erweiterungen, Datenelemente und Regeln nach deren Bereitstellung miteinander interagieren. Beim Erstellen einer Bibliothek geben Sie die Änderungen an, die Sie in Ihrer Bibliothek vornehmen möchten. Zum Zeitpunkt der Erstellung werden diese Änderungen mit allen Elementen kombiniert, die in früheren Bibliotheken übermittelt, genehmigt oder veröffentlicht wurden.
 
@@ -28,7 +28,7 @@ Bibliotheken müssen einer Umgebung zugewiesen werden, bevor sie in einen Build 
 
 Um eine Bibliothek zu erstellen, führen Sie die folgenden Schritte aus.
 
-1. Öffnen Sie die Registerkarte [!UICONTROL Veröffentlichen].
+1. Öffnen Sie die Registerkarte [!UICONTROL Veröffentlichung].
 
    Auf der Seite [!UICONTROL Veröffentlichen] werden die Entwicklungsbibliotheken aufgelistet und die Möglichkeiten geboten, sie zur Genehmigung einzureichen, zum Staging zu verschieben oder sie in der Produktion zu veröffentlichen.
 
@@ -72,7 +72,7 @@ Um eine Bibliothek hinzuzufügen, führen Sie die folgenden Schritte aus.
 
 1. Installieren Sie die [Erweiterungen](../managing-resources/extensions/overview.md), die Sie hinzufügen möchten.
 1. Erstellen Sie die [Datenelemente](../managing-resources/data-elements.md) und Regeln, die Sie hinzufügen möchten.
-1. Öffnen Sie die Registerkarte **[!UICONTROL Veröffentlichen]**.
+1. Öffnen Sie die Registerkarte **[!UICONTROL Veröffentlichung]**.
 1. Wählen Sie die zu ändernde [Bibliothek](libraries.md) aus und klicken Sie auf **[!UICONTROL Bearbeiten]**.
 1. Verwenden Sie die Schaltflächen „Regeln“, „Datenelemente“ und „Erweiterungen“, um die Elemente auszuwählen, die Sie der Bibliothek hinzufügen möchten.
 1. Speichern Sie die Änderungen.
@@ -106,7 +106,7 @@ Um Bibliotheksoptionen zu bearbeiten, führen Sie die folgenden Schritte aus.
 
    ![](../../images/library-contents-revision.jpg)
 
-1. Wählen Sie aus, ob **Alle** Elemente oder **Geänderte** Elemente angezeigt werden sollen.
+1. Wählen Sie aus, ob **alle** oder **geänderte** Artikel angezeigt werden sollen.
 1. Wählen Sie die Revision aus und klicken Sie auf **[!UICONTROL Revision auswählen]**.
 1. Wählen Sie entweder **[!UICONTROL Änderung hinzufügen]** oder **[!UICONTROL Alle geänderten Ressourcen hinzufügen]**.
 
@@ -114,7 +114,7 @@ Um Bibliotheksoptionen zu bearbeiten, führen Sie die folgenden Schritte aus.
 
 Bibliotheken enthalten eine Reihe von Änderungen, die Sie an Ihrem bereitgestellten Code vornehmen möchten. Die aktive Bibliothek erleichtert dies, sodass Sie Änderungen schnell durchsuchen und sich die Auswirkungen ansehen können.
 
-Erweiterungen, Regeln und Datenelemente können jetzt direkt in der Bibliothek gespeichert werden, an der Sie gerade arbeiten. Bei Bedarf kann auch ein neuer Build erstellt werden oder sogar eine neue Bibliothek aus der Dropdown-Liste [!UICONTROL Aktive Bibliothek].
+Erweiterungen, Regeln und Datenelemente können jetzt direkt in der Bibliothek gespeichert werden, an der Sie gerade arbeiten. Bei Bedarf kann aus der Dropdown-Liste [!UICONTROL Aktive Bibliothek] auch ein neuer Build oder sogar eine neue Bibliothek erstellt werden.
 
 Die folgende Liste enthält weitere Informationen zum Verwalten einer aktiven Bibliothek.
 
