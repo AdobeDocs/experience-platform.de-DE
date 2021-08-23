@@ -1,14 +1,14 @@
 ---
 title: Versionshinweise für die Adobe Client-Datenschicht-Erweiterung
-description: Die neuesten Versionshinweise für die Adobe Client-Datenschicht-Tag-Erweiterung in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Client Data Layer“ in Adobe Experience Platform.
 source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
 ht-degree: 100%
 
 ---
 
-# Versionshinweise zur Adobe Client-Datenschicht-Erweiterung
+# Versionshinweise zur Erweiterung „Adobe Client Data Layer“
 
 ## Version 2.0.2
 
