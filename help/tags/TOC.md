@@ -7,7 +7,7 @@ feature: Datenerfassung
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
 workflow-type: tm+mt
 source-wordcount: '380'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -89,10 +89,10 @@ ht-degree: 80%
       * Adobe Experience Manager Asset Insights {#asset-insights}
          * [Übersicht](./extensions/web/asset-insights/overview.md)
          * [Versionshinweise](./extensions/web/asset-insights/release-notes.md)
-      * Adobe Medien Analytics für Audio und Video {#media-analytics}
+      * Adobe Media Analytics for Audio and Video {#media-analytics}
          * [Übersicht](./extensions/web/media-analytics/overview.md)
          * [Versionshinweise](./extensions/web/media-analytics/release-notes.md)
-      * Adobe Medien Analytics (3.x SDK) {#media-analytics-3x}
+      * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Übersicht](./extensions/web/media-analytics-3x/overview.md)
          * [Versionshinweise](./extensions/web/media-analytics-3x/release-notes.md)
       * Adobe Privacy {#privacy}
@@ -103,7 +103,7 @@ ht-degree: 80%
       * Adobe Target v2 {#target-v2}
          * [Übersicht](./extensions/web/target-v2/overview.md)
          * [Versionshinweise](./extensions/web/target-v2/release-notes.md)
-      * Allgemeine Analytics-Plug-ins {#plugins}
+      * Common Analytics Plugins {#plugins}
          * [Übersicht](./extensions/web/plugins/overview.md)
          * [Versionshinweise](./extensions/web/plugins/release-notes.md)
       * Core {#core}
@@ -113,7 +113,7 @@ ht-degree: 80%
       * [!DNL Marketo Munchkin] {#marketo}
          * [Übersicht](./extensions/web/marketo/overview.md)
          * [Versionshinweise](./extensions/web/marketo/release-notes.md)
-      * [!DNL BrightCove] Video-Tracking  {#brightcove}
+      * [!DNL BrightCove]-Video-Tracking {#brightcove}
          * [Übersicht](./extensions/web/brightcove/overview.md)
          * [Versionshinweise](./extensions/web/brightcove/release-notes.md)
       * [!DNL YouTube] Video-Tracking-Erweiterung {#youtube}
@@ -129,7 +129,7 @@ ht-degree: 80%
       * [Einrichten einer Firma](./extension-dev/submit/setup.md)
       * [Gewähren von Benutzerzugriff](./extension-dev/submit/access.md)
       * [Entwickeln einer Erweiterung](./extension-dev/submit/develop.md)
-      * [Erstellen einer Exchange-Liste](./extension-dev/submit/create-listing.md)
+      * [Erstellen eines Exchange-Listeneintrags](./extension-dev/submit/create-listing.md)
       * [Hochladen und Implementieren von End-to-End-Tests](./extension-dev/submit/upload-and-test.md)
       * [Freigeben einer Erweiterung](./extension-dev/submit/release.md)
    * [Erweiterungskonfiguration](./extension-dev/configuration.md)
@@ -162,26 +162,26 @@ ht-degree: 80%
       * [Eigenschaften](./api/endpoints/properties.md)
       * [Datenelemente](./api/endpoints/data-elements.md)
       * [Regeln](./api/endpoints/rules.md)
-      * [Regel Komponenten](./api/endpoints/rule-components.md)
+      * [Regel  Komponenten](./api/endpoints/rule-components.md)
       * [Erweiterungspakete](./api/endpoints/extension-packages.md)
       * [Erweiterungen](./api/endpoints/extensions.md)
       * [Bibliotheken](./api/endpoints/libraries.md)
       * [Builds](./api/endpoints/builds.md)
       * [Umgebungen](./api/endpoints/environments.md)
       * [Hosts](./api/endpoints/hosts.md)
-      * [App-Konfigurationen](./api/endpoints/app-configurations.md)
-      * [Prüfereignisse](./api/endpoints/audit-events.md)
-      * [Rückrufe](./api/endpoints/callbacks.md)
+      * [Programmkonfigurationen](./api/endpoints/app-configurations.md)
+      * [Audit-Ereignisse](./api/endpoints/audit-events.md)
+      * [Callbacks](./api/endpoints/callbacks.md)
       * [Anmerkungen](./api/endpoints/notes.md)
       * [Profil](./api/endpoints/profile.md)
       * [Durchsuchen](./api/endpoints/search.md)
    * Handbücher {#guides}
-      * [Deskriptor-IDs delegieren](./api/guides/delegate-descriptor-ids.md)
+      * [Delegaten-Deskriptor-IDs](./api/guides/delegate-descriptor-ids.md)
       * [Verschlüsseln von Werten](./api/guides/encrypting-values.md)
       * [Umgang mit Fehlern](./api/guides/error-handling.md)
-      * [Antworten filtern](./api/guides/filtering.md)
+      * [Filtern von Antworten](./api/guides/filtering.md)
       * [Paginieren von Antworten](./api/guides/pagination.md)
-      * [Antworten sortieren](./api/guides/sorting.md)
+      * [Sortieren von Antworten](./api/guides/sorting.md)
       * [Beziehungen](./api/guides/relationships.md)
       * [Suchen nach Ressourcen](./api/guides/search.md)
 * [FAQs](./faq.md)
