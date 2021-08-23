@@ -1,10 +1,10 @@
 ---
 title: Versionshinweise für die Erweiterung von Adobe Media Analytics für Audio und Video
-description: Die neuesten Versionshinweise für die Tag-Erweiterung "Adobe Medien Analytics for Audio and Video"in Adobe Experience Platform.
+description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 66%
+ht-degree: 90%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 66%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 25. Oktober 2019
 
@@ -41,7 +41,7 @@ ht-degree: 66%
 
 #### **Funktionen**
 
-Durch die [Adobe Analytics für Video-Erweiterung](../media-analytics/overview.md) wird die Video Analytics-JavaScript-Hauptbibliothek hinzugefügt. Diese Bibliothek bietet die Funktionalität zum Hinzufügen der mediaHeartbeat-Instanz zu einer Tags-aktivierten Site oder einem Projekt. Für die Adobe Analytics für Video-Erweiterung (VA-Erweiterung) sind zwei zusätzliche Erweiterungen erforderlich:
+Durch die [Adobe Analytics für Video-Erweiterung](../media-analytics/overview.md) wird die Video Analytics-JavaScript-Hauptbibliothek hinzugefügt. Diese Bibliothek stellt die Funktionalität zum Hinzufügen der mediaHeartbeat-Instanz zu einer Tag-fähigen Site bzw. einem Tag-fähigen Projekt bereit. Für die Adobe Analytics für Video-Erweiterung (VA-Erweiterung) sind zwei zusätzliche Erweiterungen erforderlich:
 
 * Analytics-Erweiterung
 * Experience Cloud ID-Erweiterung
