@@ -1,24 +1,24 @@
 ---
-title: Erweiterungs-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /extensions in der Reactor-API durchführen.
+title: Extensions-Endpunkt
+description: Erfahren Sie, wie den /extensions-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# Erweiterungs-Endpunkt
+# Extensions-Endpunkt
 
-In der Reactor-API stellt eine Erweiterung die installierte Instanz eines [Erweiterungspakets](./extension-packages.md) dar. Eine Erweiterung stellt die durch ein Erweiterungspaket definierten Funktionen einer [Eigenschaft](./properties.md) zur Verfügung. Diese Funktionen werden beim Erstellen von [Erweiterungen](./data-elements.md) und [Regelkomponenten](./rule-components.md) genutzt.
+In der Reactor-API stellt eine Erweiterung die installierte Instanz eines [Erweiterungspakets](./extension-packages.md) dar. Eine Erweiterung stellt die durch ein Erweiterungspaket definierten Funktionen für eine [Eigenschaft](./properties.md) zur Verfügung. Diese Funktionen werden beim Erstellen von [Erweiterungen](./data-elements.md) und [Regelkomponenten](./rule-components.md) genutzt.
 
-Eine Erweiterung gehört genau zu einer Eigenschaft. Eine Eigenschaft kann über viele Erweiterungen verfügen, jedoch nicht mehr als eine installierte Instanz eines bestimmten Erweiterungspakets.
+Eine Erweiterung gehört zu genau einer Eigenschaft. Eine Eigenschaft kann über viele Erweiterungen verfügen, jedoch nicht über mehr als eine installierte Instanz eines bestimmten Erweiterungspakets.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Erweiterungen abrufen {#list}
+## Abrufen einer Liste von Erweiterungen {#list}
 
 Sie können eine Liste von Erweiterungen für eine Eigenschaft abrufen, indem Sie eine GET-Anfrage ausführen.
 
@@ -36,7 +36,7 @@ GET properties/{PROPERTY_ID}/extensions
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Erweiterungen anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können aufgelistete Erweiterungen anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`display_name`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li><li>`version`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -153,13 +153,13 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungen zurück, die unter d
 }
 ```
 
-## Nachschlagen einer Erweiterung {#lookup}
+## Suchen einer Erweiterung {#lookup}
 
-Sie können eine Erweiterung nachschlagen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Erweiterung suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 >[!NOTE]
 >
->Wenn Erweiterungen gelöscht werden, werden sie im System als gelöscht gekennzeichnet, aber nicht tatsächlich entfernt. Daher ist es möglich, eine gelöschte Erweiterung abzurufen. Gelöschte Erweiterungen können durch das Vorhandensein einer `deleted_at` -Eigenschaft im `meta` der zurückgegebenen Erweiterungsdaten identifiziert werden.
+>Wenn Erweiterungen gelöscht werden, werden sie im System als gelöscht gekennzeichnet, aber nicht tatsächlich entfernt. Daher ist es möglich, eine gelöschte Erweiterung abzurufen. Gelöschte Erweiterungen können anhand einer `deleted_at`-Eigenschaft in den `meta` der zurückgegebenen Erweiterungsdaten identifiziert werden.
 
 **API-Format**
 
@@ -169,7 +169,7 @@ GET /extensions/{EXTENSION_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `EXTENSION_ID` | Die `id` der Erweiterung, die Sie nachschlagen möchten. |
+| `EXTENSION_ID` | Die `id` der Erweiterung, die Sie suchen möchten |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -325,9 +325,9 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `relationships.extension_package` | **(Erforderlich)** Ein Objekt, das auf die ID des installierten Erweiterungspakets verweist. |
-| `attributes.delegate_descriptor_id` | Wenn Ihre Erweiterung benutzerdefinierte Einstellungen erfordert, ist auch eine Delegate-Deskriptor-ID erforderlich. Weitere Informationen finden Sie im Handbuch zu [Delegate-Deskriptor-IDs](../guides/delegate-descriptor-ids.md) . |
+| `attributes.delegate_descriptor_id` | Wenn Ihre Erweiterung benutzerdefinierte Einstellungen erfordert, ist auch eine Delegaten-Deskriptor-ID erforderlich. Weitere Informationen finden Sie im Handbuch zu [Delegaten-Deskriptor-IDs](../guides/delegate-descriptor-ids.md). |
 | `attributes.enabled` | Ein boolescher Wert, der angibt, ob die Erweiterung aktiviert ist. |
-| `attributes.settings` | Ein settings-JSON-Objekt, das als Zeichenfolge dargestellt wird. |
+| `attributes.settings` | Ein JSON-Objekt vom Typ „settings“, das als Zeichenfolge dargestellt wird. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -423,9 +423,9 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Erweiterung zurüc
 }
 ```
 
-## Ändern einer Erweiterung {#revise}
+## Überarbeiten einer Erweiterung {#revise}
 
-Sie können eine Erweiterung überarbeiten, indem Sie ihre ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können eine Erweiterung überarbeiten, indem Sie ihre ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -441,7 +441,7 @@ PATCH /extensions/{EXTENSION_ID}
 
 **Anfrage**
 
-Wie bei [Erstellen einer Erweiterung](#create) muss eine lokale Version des überarbeiteten Pakets über Formulardaten hochgeladen werden.
+Wie beim [Erstellen einer Erweiterung](#create) muss eine lokale Version des überarbeiteten Pakets über Formulardaten hochgeladen werden.
 
 ```shell
 curl -X PATCH \
@@ -473,7 +473,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der überarbeiteten Erweiterung zurück, wobei die `meta.latest_revision_number` -Eigenschaft um 1 erhöht wird.
+Eine erfolgreiche Antwort gibt die Details der überarbeiteten Erweiterung zurück, wobei die `meta.latest_revision_number`-Eigenschaft um 1 erhöht wird.
 
 ```json
 {
@@ -565,7 +565,7 @@ Eine erfolgreiche Antwort gibt die Details der überarbeiteten Erweiterung zurü
 
 ## Löschen einer Erweiterung {#private-release}
 
-Sie können eine Erweiterung löschen, indem Sie ihre ID in den Pfad einer DELETE-Anfrage einschließen.
+Sie können eine Erweiterung löschen, indem Sie ihre ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -593,15 +593,15 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt an, dass die Erweiterung gelöscht wurde.
 
-## Anmerkungen für eine Erweiterung verwalten {#notes}
+## Verwalten von Anmerkungen für eine Erweiterung {#notes}
 
-Erweiterungen sind &quot;wichtige&quot;Ressourcen, d. h. Sie können für jede einzelne Ressource textbasierte Notizen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Erweiterungen und andere kompatible Ressourcen finden Sie im [Notes-Endpunkthandbuch](./notes.md) .
+Sie können für jede einzelne Erweiterung textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Erweiterungen und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Erweiterung {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Erweiterung abrufen. Wenn [nach einer Erweiterung](#lookup) sucht, werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Erweiterung abrufen. Beim [Suchen nach einer Erweiterung](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgeführt.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Beziehungshandbuch](../guides/relationships.md) .
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
 ### Auflisten der zugehörigen Bibliotheken für eine Erweiterung {#libraries}
 
@@ -727,7 +727,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Bibliotheken zurück, die die ange
 
 ### Auflisten der zugehörigen Revisionen für eine Erweiterung {#revisions}
 
-Sie können die vorherigen Versionen einer Erweiterung auflisten, indem Sie `/revisions` an den Pfad einer Suchanfrage anhängen.
+Sie können die vorherigen Revisionen einer Erweiterung auflisten, indem Sie `/revisions` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -939,9 +939,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Revisionen für die angegebene Erw
 }
 ```
 
-### Nachschlagen des zugehörigen Erweiterungspakets für eine Erweiterung {#extension}
+### Suchen des zugehörigen Erweiterungspakets für eine Erweiterung {#extension}
 
-Sie können das Erweiterungspaket nachschlagen, auf dem eine Erweiterung basiert, indem Sie `/extension_package` an den Pfad einer GET-Anfrage anhängen.
+Sie können das Erweiterungspaket suchen, auf dem eine Erweiterung basiert, indem Sie `/extension_package` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -951,7 +951,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Erweiterung Sie nachschlagen möchten. |
+| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Erweiterung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -969,7 +969,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, auf dem die angegebene Erweiterung basiert. Die folgende Beispielantwort wurde aus Platzgründen abgeschnitten.
+Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, auf dem die angegebene Erweiterung basiert. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -1174,9 +1174,9 @@ Eine erfolgreiche Antwort gibt die Details des Erweiterungspakets zurück, auf d
 }
 ```
 
-### Nachschlagen der zugehörigen Herkunft für eine Erweiterung {#origin}
+### Suchen des zugehörigen Ursprungs für eine Erweiterung {#origin}
 
-Sie können den Ursprung einer Erweiterung nachschlagen, indem Sie `/origin` an den Pfad einer GET-Anfrage anhängen. Der Ursprung einer Erweiterung ist die vorherige Revision, die aktualisiert wurde, um die aktuelle Revision zu erstellen.
+Sie können den Ursprung einer Erweiterung suchen, indem Sie `/origin` an den Pfad einer GET-Anfrage anhängen. Der Ursprung einer Erweiterung ist die vorherige Revision, die aktualisiert wurde, um die aktuelle Revision zu erstellen.
 
 **API-Format**
 
@@ -1186,7 +1186,7 @@ GET  /extensions/{EXTENSION_ID}/origin
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Ursprung Sie nachschlagen möchten. |
+| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Ursprung Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -1294,9 +1294,9 @@ Eine erfolgreiche Antwort gibt die Details des Ursprungs der angegebenen Erweite
 }
 ```
 
-### Nachschlagen der zugehörigen Eigenschaft für eine Erweiterung {#property}
+### Suchen der zugehörigen Eigenschaft für eine Erweiterung {#property}
 
-Sie können die Eigenschaft nachschlagen, der eine Erweiterung gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
+Sie können die Eigenschaft suchen, der eine Erweiterung gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -1306,7 +1306,7 @@ GET  /extensions/{EXTENSION_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Eigenschaft Sie nachschlagen möchten. |
+| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
