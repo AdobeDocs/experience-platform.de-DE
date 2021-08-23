@@ -1,10 +1,10 @@
 ---
 title: Adobe Target-Erweiterung – Übersicht
-description: Erfahren Sie mehr über die Tag-Erweiterung für Adobe Target in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '1194'
-ht-degree: 79%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 79%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -30,7 +30,7 @@ Wenn die Adobe Target-Erweiterung noch nicht installiert ist, öffnen Sie die Ei
 
 ### at.js-Einstellungen
 
-Alle Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur Einstellungen von der Target-Benutzeroberfläche ab, wenn sie zum ersten Mal hinzugefügt wird. Daher sollten alle Einstellungen in der Datenerfassungs-Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
+All Ihre at.js-Einstellungen mit Ausnahme der Zeitüberschreitung werden automatisch aus Ihrer at.js-Konfiguration in der Target-Benutzeroberfläche abgerufen. Die Erweiterung ruft nur dann Einstellungen aus der Target-Benutzeroberfläche ab, wenn sie erstmalig hinzugefügt wird. Daher sollten alle Einstellungen in der Datenerfassungs-Benutzeroberfläche verwaltet werden, wenn zusätzliche Aktualisierungen erforderlich sind.
 
 Die folgenden Konfigurationsoptionen sind verfügbar:
 
@@ -52,16 +52,16 @@ Zeigt den Namen Ihrer globalen Target-Anfrage an. Standardmäßig lautet dieser 
 
 Kann mithilfe von Datenelementen geändert werden.
 
-#### Serverdomäne
+#### Server-Domain
 
-Die Domäne, an die Target-Anfragen gesendet werden. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
+Die Domain, an die Target-Anfragen gesendet werden. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
 
-#### Domänenübergreifend
+#### Domain-übergreifend
 
 Legt fest, wo Target Cookies in den Browsern einrichtet.
 
-* **Deaktiviert:** Legt die Cookies nur für die Erstanbieterdomäne fest. Dies ist die typische Einstellung.
-* **Aktiviert:** Richtet Cookies sowohl auf der Erstanbieterdomäne als auch auf der Target-Drittanbieterdomäne (der „Serverdomäne“) ein.
+* **Deaktiviert:** Legt die Cookies nur für die Erstanbieter-Domain fest. Dies ist die typische Einstellung.
+* **Aktiviert:** Richtet Cookies sowohl auf der Erstanbieter-Domain als auch auf der Target-Drittanbieter-Domain (der „Server-Domain“) ein.
 
 #### Zeitüberschreitung (ms)
 
@@ -71,10 +71,10 @@ Weitere Informationen zur Funktionsweise der Zeitüberschreitungseinstellung fin
 
 #### Weitere auf der Target-Benutzeroberfläche verfügbare at.js-Einstellungen
 
-Einige Einstellungen, die auf der Seite [!UICONTROL at.js-Einstellungen bearbeiten] der Target-Benutzeroberfläche verfügbar sind, sind nicht Teil der Target-Erweiterung. Die Vorschläge für die Problemumgehung lauten wie folgt:
+Verschiedene Einstellungen, die auf der Seite [!UICONTROL at.js-Einstellungen bearbeiten] der Target-Benutzeroberfläche verfügbar sind, sind nicht Teil der Target-Erweiterung. Die Vorschläge für die Problemumgehung lauten wie folgt:
 
 * Globale Mbox automatisch erstellen – Diese Einstellung wird durch die Aktion „Globale Mbox auslösen“ in der Target-Erweiterung ersetzt.
-* Bibliothekskopfzeile – Diese Einstellung ist nicht Teil der Target-Erweiterung. Fügen Sie vor der Verwendung der Aktion „Target laden“ Code, der vor at.js geladen werden muss, in eine Aktion vom Typ „Haupterweiterung>Benutzerdefinierter Code“ ein.
+* Bibliotheks-Header – Diese Einstellung ist nicht Teil der Target-Erweiterung. Fügen Sie vor der Verwendung der Aktion „Target laden“ Code, der vor at.js geladen werden muss, in eine Aktion vom Typ „Haupterweiterung>Benutzerdefinierter Code“ ein.
 * Bibliotheksfußfzeile – Diese Einstellung ist nicht Teil der Target-Erweiterung. Fügen Sie nach Verwendung der Aktion „Target laden“ Code, der nach at.js geladen werden muss, in eine Aktion vom Typ „Haupterweiterung>Benutzerdefinierter Code“ ein.
 
 ## Aktionstypen für die Target-Erweiterung
@@ -85,7 +85,7 @@ Die Target-Erweiterung enthält die folgenden Aktionen im Then-Teil einer Regel:
 
 ### Target laden
 
-Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es im Kontext Ihrer Regel sinnvoll ist, Target zu laden. Dadurch wird die at.js-Bibliothek in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden.
+Fügen Sie diese Aktion Ihrer Tag-Regel hinzu, wenn es sinnvoll ist, Target im Kontext Ihrer Regel zu laden. Dadurch wird die at.js-Bibliothek in die Seite geladen. Bei den meisten Implementierungen sollte Target auf jeder Seite Ihrer Site geladen werden.
 
 Es ist keine Konfiguration erforderlich.
 
@@ -128,14 +128,14 @@ Nach dem Speichern dieser Regel müssen Sie sie einer Bibliothek hinzufügen und
 
 ## Adobe Target-Erweiterung mit einer asynchronen Implementierung
 
-Tags können asynchron bereitgestellt werden. Wenn Sie die Tag-Bibliothek asynchron mit Target darin laden, wird Target auch asynchron geladen. Dieses Szenario wird vollständig unterstützt. Es muss jedoch eine weitere Tatsache beachtet werden.
+Tags können asynchron bereitgestellt werden. Wenn Sie die Tag-Bibliothek asynchron laden, in der sich Target befindet, wird Target ebenfalls asynchron geladen. Dieses Szenario wird vollständig unterstützt. Es muss jedoch eine weitere Tatsache beachtet werden.
 
-In asynchronen Implementierungen kann die Seite das Rendern des Standardinhalts abschließen, bevor die Target-Bibliothek vollständig geladen ist und den Inhaltsaustausch durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern vermeiden möchten, empfehlen wir, einen vorab ausgeblendeten Ausschnitt zu verwenden und das Tag-Bundle asynchron zu laden, um ein Flackern der Inhalte zu vermeiden.
+In asynchronen Implementierungen ist es möglich, dass die Seite das Rendern der Standardinhalte beendet, bevor die Target-Bibliothek vollständig geladen wurde und den Austausch des Inhalts durchgeführt hat. Dies kann zum so genannten „Flimmern“ führen. Dabei wird der Standardinhalt kurz angezeigt, bevor er durch den von Target angegebenen personalisierten Inhalt ersetzt wird. Wenn Sie dieses Flimmern verhindern möchten, empfehlen wir, ein spezielles Code-Fragment zu verwenden, das den Seiteninhalt vorab ausblendet, und das Tag-Bundle asynchron zu laden.
 
 Nachfolgend werden einige Aspekte aufgeführt, die Sie bei Verwendung des vorab ausgeblendeten Ausschnitts beachten sollten:
 
-* Das Snippet muss vor dem Laden des Tag-Header-Einbettungscodes hinzugefügt werden.
-* Dieser Code kann nicht von -Tags verwaltet werden. Daher muss er der Seite direkt hinzugefügt werden.
+* Das Fragment muss vor dem Laden des Einbettungs-Codes für den Tag-Header hinzugefügt werden.
+* Dieser Code kann von Tags nicht verwaltet werden. Daher muss er der Seite direkt hinzugefügt werden.
 * Die Seite wird angezeigt, wenn das früheste der folgenden Ereignisse eintritt:
    * Wenn die globale Mbox-Antwort empfangen wurde
    * Wenn für die globale Mbox-Anfrage eine Zeitüberschreitung eintritt
