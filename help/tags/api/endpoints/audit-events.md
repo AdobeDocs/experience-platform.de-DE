@@ -1,20 +1,20 @@
 ---
-title: Endpunkt "Audit events"
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /audit_events in der Reactor-API durchführen.
+title: Audit events-Endpunkt
+description: Erfahren Sie, wie Sie den /audit_events-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '266'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Endpunkt &quot;Audit events&quot;
+# Audit events-Endpunkt
 
 >[!WARNING]
 >
->Die Implementierung des Endpunkts `/audit_events` ist im Fluss, da Funktionen hinzugefügt, entfernt und überarbeitet werden.
+>Die Implementierung des `/audit_events`-Endpunkts ist im Fluss, da Funktionen hinzugefügt, entfernt und überarbeitet werden.
 
-Ein Prüfereignis ist ein Datensatz einer bestimmten Änderung an einer anderen Ressource in der Reactor-API, die zum Zeitpunkt der Änderung generiert wird. Dies sind Systemereignisse, die über einen [callback](./callbacks.md) abonniert werden können. Mit dem Endpunkt `/audit_events` in der Reactor-API können Sie Prüfereignisse in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Ein Audit-Ereignis ist eine Aufzeichnung einer bestimmten Änderung an einer anderen Ressource in der Reactor-API, die zum Zeitpunkt der Änderung erzeugt wird. Dies sind Systemereignisse, die über einen [Callback](./callbacks.md) abonniert werden können. Mit dem `/audit_events`-Endpunkt in der Reactor-API können Sie Audit-Ereignisse in Ihrem Erlebnisprogramm programmgesteuert verwalten.
 
 Audit-Ereignisse sind in Form von `{RESOURCE_TYPE}.{EVENT}` strukturiert, z. B. `build.created` oder `rule.updated`.
 
@@ -36,13 +36,13 @@ Die folgenden Ereignisse werden für jeden Ressourcentyp unterstützt:
 * `updated`
 * `deleted`
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Abrufen einer Liste von Prüfereignissen {#list}
+## Abrufen einer Liste von Audit-Ereignissen {#list}
 
-Sie können eine Liste von Prüfereignissen für alle Eigenschaften abrufen, die Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den Endpunkt `/audit_events` stellen.
+Sie können eine Liste von Audit-Ereignissen für alle Eigenschaften abrufen, die Ihrem Unternehmen gehören, indem Sie eine GET-Anfrage an den `/audit_events`-Endpunkt stellen.
 
 **API-Format**
 
@@ -64,7 +64,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Prüfereignissen zurück. Die folgende Beispielantwort wurde aus Platzgründen abgeschnitten.
+Eine erfolgreiche Antwort gibt eine Liste von Audit-Ereignissen zurück. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -157,9 +157,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Prüfereignissen zurück. Die folg
 }
 ```
 
-## Prüfereignis nachschlagen {#lookup}
+## Suchen eines Audit-Ereignisses {#lookup}
 
-Sie können ein Prüfereignis nachschlagen, indem Sie dessen ID im Pfad einer GET-Anfrage angeben.
+Sie können ein Audit-Ereignis suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -169,7 +169,7 @@ GET /audit_events/{AUDIT_EVENT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `AUDIT_EVENT_ID` | Die `id` des Audit-Ereignisses, das Sie nachschlagen möchten. |
+| `AUDIT_EVENT_ID` | Die `id` des Audit-Ereignisses, das Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -187,7 +187,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Prüfereignisses zurück.
+Eine erfolgreiche Antwort gibt die Details des Audit-Ereignisses zurück.
 
 ```json
 {
