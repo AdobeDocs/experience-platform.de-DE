@@ -1,20 +1,20 @@
 ---
 title: Callback-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den /callbacks-Endpunkt in der Reactor-API durchführen.
+description: Erfahren Sie, wie Sie den /callback-Endpunkt in der Reactor-API aufrufen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '625'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
 # Callback-Endpunkt
 
-Ein Rückruf ist eine Nachricht, die die Reactor-API an eine bestimmte URL sendet (normalerweise eine URL, die von Ihrem Unternehmen gehostet wird).
+Ein Callback ist eine Nachricht, die die Reactor-API an eine bestimmte URL sendet (normalerweise eine, die von Ihrer Organisation gehostet wird).
 
-Rückrufe sollen zusammen mit [Prüfereignissen](./audit-events.md) verwendet werden, um Aktivitäten in der Reactor-API zu verfolgen. Jedes Mal, wenn ein Prüfereignis eines bestimmten Typs generiert wird, kann ein Rückruf eine passende Nachricht an die angegebene URL senden.
+Callbacks sind dazu gedacht, in Verbindung mit [Audit-Ereignissen](./audit-events.md) verwendet zu werden, um Aktivitäten in der Reactor-API zu verfolgen. Jedes Mal, wenn ein Audit-Ereignis eines bestimmten Typs erzeugt wird, kann ein Callback eine passende Nachricht an die angegebene URL senden.
 
-Der Dienst hinter der im Rückruf angegebenen URL muss mit dem HTTP-Status-Code 200 (OK) oder 201 (Erstellt) antworten. Wenn der Dienst mit keinem dieser Status-Codes antwortet, wird der Nachrichtenversand in den folgenden Intervallen wiederholt:
+Der Service hinter der im Callback angegebenen URL muss mit dem HTTP-Status-Code 200 (OK) oder 201 (Erstellt) antworten. Wenn der Service nicht mit einem dieser Status-Codes antwortet, wird die Nachrichtenzustellung in den folgenden Abständen erneut versucht:
 
 * 1 Minute
 * 5 Minuten
@@ -26,19 +26,19 @@ Der Dienst hinter der im Rückruf angegebenen URL muss mit dem HTTP-Status-Code 
 
 >[!NOTE]
 >
->Wiederholungsintervalle sind relativ zum vorherigen Intervall. Wenn beispielsweise der Neuversuch mit einer Minute fehlschlägt, wird der nächste Versuch für fünf Minuten nach dem fehlgeschlagenen einmaligen Versuch (sechs Minuten nach der Erstellung der Nachricht) geplant.
+>Wiederholungsintervalle sind relativ zum vorherigen Intervall. Wenn z. B. der Wiederholungsversuch nach einer Minute fehlschlägt, wird der nächste Versuch für fünf Minuten nach dem fehlgeschlagenen einminütigen Versuch geplant (sechs Minuten, nachdem die Nachricht generiert wurde).
 
-Wenn alle Versandversuche nicht erfolgreich sind, wird die Nachricht verworfen.
+Wenn alle Zustellversuche erfolglos sind, wird die Nachricht verworfen.
 
-Ein Rückruf gehört genau zu einer [Eigenschaft](./properties.md). Eine Eigenschaft kann viele Rückrufe aufweisen.
+Ein Callback gehört zu genau einer [Eigenschaft](./properties.md). Eine Eigenschaft kann viele Callbacks haben.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Auflisten von Callbacks {#list}
 
-Sie können alle Rückrufe unter einer Eigenschaft auflisten, indem Sie eine GET-Anfrage ausführen.
+Sie können alle Callbacks unter einer Eigenschaft auflisten, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -48,13 +48,13 @@ GET  /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Rückrufe Sie auflisten möchten. |
+| `{PROPERTY_ID}` | Die `id` der Eigenschaft, deren Callbacks Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Rückrufe anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zu [Filterantworten](../guides/filtering.md) .
+>Mithilfe von Abfrageparametern können die aufgelisteten Callbacks anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -70,7 +70,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Rückrufen für die angegebene Eigenschaft zurück.
+Eine erfolgreiche Antwort gibt eine Liste von Callbacks für die angegebene Eigenschaft zurück.
 
 ```json
 {
@@ -115,9 +115,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Rückrufen für die angegebene Eig
 }
 ```
 
-## Rückruf nachschlagen {#lookup}
+## Suchen eines Callbacks {#lookup}
 
-Sie können einen Rückruf nachschlagen, indem Sie dessen Kennung im Pfad einer GET-Anfrage angeben.
+Sie können einen Callback suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -127,7 +127,7 @@ GET /callbacks/{CALLBACK_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `CALLBACK_ID` | Die `id` des Rückrufs, den Sie nachschlagen möchten. |
+| `CALLBACK_ID` | Die `id` des Callbacks, den Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -145,7 +145,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Rückrufs zurück.
+Eine erfolgreiche Antwort gibt die Details des Callbacks zurück.
 
 ```json
 {
@@ -179,9 +179,9 @@ Eine erfolgreiche Antwort gibt die Details des Rückrufs zurück.
 }
 ```
 
-## Callback erstellen {#create}
+## Erstellen eines Callbacks {#create}
 
-Sie können einen neuen Rückruf erstellen, indem Sie eine POST-Anfrage stellen.
+Sie können einen neuen Callback erstellen, indem Sie eine POST-Anfrage stellen.
 
 **API-Format**
 
@@ -191,7 +191,7 @@ POST /properties/{PROPERTY_ID}/callbacks
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `PROPERTY_ID` | Die `id` der [Eigenschaft](./properties.md), unter der Sie den Rückruf definieren. |
+| `PROPERTY_ID` | Die `id` der [Eigenschaft](./properties.md), unter der Sie den Callback definieren. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -218,14 +218,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `url` | Das URL-Ziel für die Rückruffunktion. Die URL muss die HTTPS-Protokollerweiterung verwenden. |
-| `subscriptions` | Ein Array von Zeichenfolgen, das die Prüfereignistypen angibt, die den Rückruf Trigger. Eine Liste der möglichen Ereignistypen finden Sie im [Endpunktleitfaden zu Prüfereignissen](./audit-events.md) . |
+| `url` | Das URL-Ziel für die Callback-Nachricht. Die URL muss die HTTPS-Protokollerweiterung verwenden. |
+| `subscriptions` | Ein Array von Strings, das die Audit-Ereignistypen angibt, die den Callback auslösen werden. Eine Liste der möglichen Ereignistypen finden Sie im [Handbuch zum audit events-Endpunkt](./audit-events.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten Rückrufs zurück.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten Callbacks zurück.
 
 ```json
 {
@@ -259,9 +259,9 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Rückrufs zurück.
 }
 ```
 
-## Callback aktualisieren
+## Aktualisieren eines Callbacks
 
-Sie können einen Rückruf aktualisieren, indem Sie dessen ID in den Pfad einer PUT-Anfrage einschließen.
+Sie können einen Callback aktualisieren, indem Sie seine ID im Pfad einer PUT-Anfrage angeben.
 
 **API-Format**
 
@@ -271,13 +271,13 @@ PUT /callbacks/{CALLBACK_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `CALLBACK_ID` | Die `id` des Rückrufs, den Sie aktualisieren möchten. |
+| `CALLBACK_ID` | Die `id` des Callbacks, den Sie aktualisieren möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert das `subscriptions` -Array für einen vorhandenen Rückruf.
+Die folgende Anfrage aktualisiert das `subscriptions`-Array für einen vorhandenen Callback.
 
 ```shell
 curl -X PUT \
@@ -302,15 +302,15 @@ curl -X PUT \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Ein Objekt, dessen Eigenschaften die Attribute darstellen, die für den Rückruf aktualisiert werden sollen. Jeder Schlüssel stellt das betreffende Callback-Attribut dar, das aktualisiert werden soll, sowie den entsprechenden Wert, auf den es aktualisiert werden soll.<br><br>Die folgenden Attribute können für Rückrufe aktualisiert werden:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
-| `id` | Die `id` des Rückrufs, den Sie aktualisieren möchten. Dies sollte mit dem Wert `{CALLBACK_ID}` übereinstimmen, der im Anfragepfad bereitgestellt wird. |
+| `attributes` | Ein Objekt, dessen Eigenschaften die zu aktualisierenden Attribute für den Callback darstellen. Jeder Schlüssel steht für das jeweilige Callback-Attribut, das aktualisiert werden soll, zusammen mit dem entsprechenden Wert, auf den es aktualisiert werden soll.<br><br>Die folgenden Attribute können für Callbacks aktualisiert werden:<ul><li>`subscriptions`</li><li>`url`</li></ul> |
+| `id` | Die `id` des Callbacks, den Sie aktualisieren möchten. Diese sollte mit dem `{CALLBACK_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `callbacks` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Rückrufs zurück.
+Eine erfolgreiche Antwort gibt die Details des aktualisierten Callbacks zurück.
 
 ```json
 {
@@ -345,9 +345,9 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Rückrufs zurück.
 }
 ```
 
-## Callback löschen
+## Löschen eines Callbacks
 
-Sie können einen Callback löschen, indem Sie dessen ID in den Pfad einer DELETE-Anfrage einschließen.
+Sie können einen Callback löschen, indem Sie seine ID im Pfad einer DELETE-Anfrage angeben.
 
 **API-Format**
 
@@ -357,7 +357,7 @@ DELETE /callbacks/{CALLBACK_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `CALLBACK_ID` | Die `id` des Rückrufs, den Sie löschen möchten. |
+| `CALLBACK_ID` | Die `id` des Callbacks, den Sie löschen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -373,4 +373,4 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt an, dass der Rückruf gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttext zurück und zeigt damit an, dass der Callback gelöscht wurde.
