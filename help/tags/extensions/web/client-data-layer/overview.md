@@ -1,8 +1,8 @@
 ---
 title: Adobe Client-Datenschicht-Erweiterung
-description: Erfahren Sie mehr über die Adobe Client-Datenschicht-Tag-Erweiterung in Adobe Experience Platform.
+description: Machen Sie sich mit der Tag-Erweiterung „Adobe Client Data Layer“ in Adobe Experience Platform vertraut.
 source-git-commit: 8dfb7bdc16d0654ee1d76dc5f5af50938b122d33
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '643'
 ht-degree: 100%
 
