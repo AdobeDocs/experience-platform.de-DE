@@ -1,24 +1,24 @@
 ---
-title: Anmerkungen-Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe an den Endpunkt /notes in der Reactor-API durchführen.
+title: Notes-Endpunkt
+description: Erfahren Sie, wie Sie den /notes-Endpunkt in der Reactor-API abrufen.
 source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
 workflow-type: tm+mt
 source-wordcount: '530'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Anmerkungen-Endpunkt
+# Notes-Endpunkt
 
-In der Reactor-API sind Notizen Kommentare in Textform, die Sie bestimmten Ressourcen hinzufügen können. Anmerkungen sind im Wesentlichen Kommentare zu ihren jeweiligen Ressourcen. Der Inhalt von Notizen hat keine Auswirkungen auf das Ressourcenverhalten und kann für verschiedene Anwendungsfälle verwendet werden, darunter die folgenden:
+In der Reactor-API sind Anmerkungen textuelle Kommentare, die Sie zu bestimmten Ressourcen hinzufügen können. Anmerkungen sind im Wesentlichen Kommentare zu ihren jeweiligen Ressourcen. Der Inhalt von Anmerkungen hat keinen Einfluss auf das Verhalten von Ressourcen und kann für eine Vielzahl von Anwendungsfällen verwendet werden, z. B. für die folgenden:
 
 * Bereitstellung von Hintergrundinformationen
-* Funktionsweise von Aufgabenlisten
-* Weitergeben von Ratschlägen zur Ressourcennutzung
-* Anweisungen für andere Teammitglieder geben
-* Verlaufskontext aufzeichnen
+* Funktion als To-Do-Listen
+* Weitergabe von Hinweisen zur Ressourcenverwendung
+* Erteilen von Anweisungen an andere Team-Mitglieder
+* Aufzeichnung von historischem Kontext
 
-Mit dem Endpunkt `/notes` in der Reactor-API können Sie diese Notizen programmgesteuert verwalten.
+Der `/notes`-Endpunkt in der Reactor-API erlaubt es Ihnen, diese Anmerkungen programmgesteuert zu verwalten.
 
 Anmerkungen können auf die folgenden Ressourcen angewendet werden:
 
@@ -26,24 +26,24 @@ Anmerkungen können auf die folgenden Ressourcen angewendet werden:
 * [Erweiterungen](./extensions.md)
 * [Bibliotheken](./libraries.md)
 * [Eigenschaften](./properties.md)
-* [Regel Komponenten](./rule-components.md)
+* [Regel  Komponenten](./rule-components.md)
 * [Regeln](./rules.md)
 
-Diese sechs Typen werden zusammen als &quot;bemerkenswerte&quot;Ressourcen bezeichnet. Wenn eine wichtige Ressource gelöscht wird, werden auch die zugehörigen Hinweise gelöscht.
+Diese sechs Typen sind Ressourcen, die mit Anmerkungen versehen werden können. Wenn Ressource, die mit Anmerkungen versehen werden kann, gelöscht wird, werden auch die zugehörigen Anmerkungen gelöscht.
 
 >[!NOTE]
 >
->Für Ressourcen, die mehrere Revisionen aufweisen können, müssen alle Notizen für die aktuelle (head) Revision erstellt werden. Sie dürfen nicht an andere Revisionen angehängt werden.
+>Bei Ressourcen, die mehrere Revisionen haben können, müssen alle Anmerkungen in der aktuellen (Haupt-)Revision erstellt werden. Sie dürfen nicht an andere Revisionen angehängt werden.
 >
->Anmerkungen können jedoch weiterhin aus Revisionen gelesen werden. In solchen Fällen gibt die API nur die Hinweise zurück, die vor der Erstellung der Revision existierten. Sie zeigen eine Momentaufnahme der Anmerkungen an, die zum Zeitpunkt der Kürzung der Revision vorgenommen wurden. Im Gegensatz dazu werden beim Lesen von Notizen aus der aktuellen (head-)Revision alle zugehörigen Anmerkungen zurückgegeben.
+>Anmerkungen können jedoch weiterhin aus Revisionen gelesen werden. In solchen Fällen gibt die API nur die Anmerkungen zurück, die vor der Erstellung der Revision existierten. Sie bieten eine Momentaufnahme der Anmerkungen, wie sie zum Zeitpunkt der Kürzung der Revision aussahen. Im Gegensatz dazu werden beim Lesen von Anmerkungen aus der aktuellen (Haupt-)Revision alle Anmerkungen zurückgegeben.
 
-## Erste Schritte 
+## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md) , um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste mit Anmerkungen abrufen {#list}
+## Abrufen einer Liste von Anmerkungen {#list}
 
-Sie können eine Liste mit Hinweisen für eine Ressource abrufen, indem Sie `/notes` an den Pfad einer Ressourcenanforderung für die betreffende GET anhängen.
+Sie können eine Liste mit Anmerkungen für eine Ressource abrufen, indem Sie `/notes` an den Pfad einer GET-Anfrage für die betreffende Ressource anhängen.
 
 **API-Format**
 
@@ -53,14 +53,14 @@ GET /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `RESOURCE_TYPE` | Der Ressourcentyp, für den Sie Notizen abrufen. Muss einer der folgenden Werte sein: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_TYPE` | Der Typ der Ressource, für die Sie Anmerkungen abrufen. Muss einer der folgenden Werte sein: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
 | `RESOURCE_ID` | Die `id` der spezifischen Ressource, deren Anmerkungen Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage listet die Anmerkungen auf, die an eine Bibliothek angehängt sind.
+Die folgende Abfrage listet die Anmerkungen auf, die an eine Bibliothek angehängt sind.
 
 ```shell
 curl -X GET \
@@ -74,7 +74,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste mit Anmerkungen zurück, die an die angegebene Ressource angehängt sind.
+Eine erfolgreiche Antwort gibt eine Liste von Anmerkungen zurück, die an die angegebene Ressource angehängt sind.
 
 ```json
 {
@@ -117,9 +117,9 @@ Eine erfolgreiche Antwort gibt eine Liste mit Anmerkungen zurück, die an die an
 }
 ```
 
-## Notiz nachschlagen {#lookup}
+## Suchen einer Anmerkung {#lookup}
 
-Sie können eine Notiz nachschlagen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Anmerkung suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -129,7 +129,7 @@ GET /notes/{NOTE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `NOTE_ID` | Die `id` der Anmerkung, die Sie nachschlagen möchten. |
+| `NOTE_ID` | Die `id` der Anmerkung, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -147,7 +147,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der Notiz zurück.
+Eine erfolgreiche Antwort gibt die Details der Anmerkung zurück.
 
 ```json
 {
@@ -183,9 +183,9 @@ Eine erfolgreiche Antwort gibt die Details der Notiz zurück.
 
 >[!WARNING]
 >
->Beachten Sie vor der Erstellung einer neuen Notiz, dass Notizen nicht bearbeitbar sind. Sie können sie nur löschen, indem Sie die entsprechende Ressource löschen.
+>Bevor Sie eine neue Anmerkung erstellen, bedenken Sie, dass Anmerkungen nicht bearbeitet werden können und die einzige Möglichkeit, sie zu löschen, darin besteht, die zugehörige Ressource zu löschen.
 
-Sie können eine neue Anmerkung erstellen, indem Sie `/notes` an den Pfad einer Ressourcenanforderung für die betreffende POST anhängen.
+Sie können eine neue Anmerkung anlegen, indem Sie `/notes` an den Pfad einer POST-Anfrage für die betreffende Ressource anhängen.
 
 **API-Format**
 
@@ -195,14 +195,14 @@ POST /{RESOURCE_TYPE}/{RESOURCE_ID}/notes
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `RESOURCE_TYPE` | Der Ressourcentyp, für den Sie eine Notiz erstellen. Muss einer der folgenden Werte sein: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
-| `RESOURCE_ID` | Die `id` der spezifischen Ressource, für die Sie eine Notiz erstellen möchten. |
+| `RESOURCE_TYPE` | Der Typ der Ressource, für die Sie eine Anmerkung erstellen. Muss einer der folgenden Werte sein: <ul><li>`data_elements`</li><li>`extensions`</li><li>`libraries`</li><li>`properties`</li><li>`rule_components`</li><li>`rules`</li></ul> |
+| `RESOURCE_ID` | Die `id` der spezifischen Ressource, für die Sie eine Anmerkung erstellen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Notiz für eine Eigenschaft.
+Die folgende Anfrage erstellt eine neue Anmerkung für eine Eigenschaft.
 
 ```shell
 curl -X POST \
@@ -224,13 +224,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `type` | **(Erforderlich)** Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `notes` lauten. |
-| `attributes.text` | **(Erforderlich)** Der Text, der die Notiz enthält. Jeder Hinweis ist auf 512 Unicode-Zeichen begrenzt. |
+| `attributes.text` | **(Erforderlich)** Der Text, aus dem die Anmerkung besteht. Jede Anmerkung ist auf 512 Unicode-Zeichen begrenzt. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Notiz zurück.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Anmerkung zurück.
 
 ```json
 {
