@@ -5,10 +5,10 @@ title: Observability Insights – Übersicht
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights ist eine RESTful-API, mit der Sie Schlüsselmetriken zu Platform-Aktivitäten bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '223'
-ht-degree: 100%
+source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
+workflow-type: tm+mt
+source-wordcount: '290'
+ht-degree: 56%
 
 ---
 
@@ -22,11 +22,17 @@ Die [!DNL Observability Insights]-API ist eine RESTful-API, mit der Sie Schlüss
 
 Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observability Insights] API-Entwicklerhandbuch](./api/overview.md).
 
-## Ereignis-Benachrichtigungen
+## Warnhinweise (Beta)
 
-Mit [!DNL Observability Insights] können Sie Ereignis-Benachrichtigungen zu Adobe Experience Platform-Aktivitäten abonnieren. Durch das Abonnieren von Ereignissen können Sie eigene nachgelagerte Protokolle einrichten, um festzustellen, wann ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder ob während des Vorgangs Fehler aufgetreten sind.
+>[!IMPORTANT]
+>
+>Warnhinweise in Adobe Experience Platform stehen noch nicht allen Benutzern zur Verfügung. Diese Funktion befindet sich in der Beta-Phase und wird noch getestet. Dieser Abschnitt kann sich ändern.
 
-Weitere Informationen finden Sie in der Übersicht zu [Ereignis-Benachrichtigungen](./notifications/overview.md).
+Mit Experience Platform können Sie Warnungen auf der Grundlage spezifischer Beobachtbarkeitsmetriken abonnieren, wenn in Ihren Platform-Vorgängen ein bestimmter Bedingungssatz erreicht wird. Ein Warnhinweis kann in Form einer einmaligen Benachrichtigung oder in einem vordefinierten Zeitintervall wiederholt werden, bis die Bedingungen, die den Warnhinweis ausgelöst haben, behoben sind.
+
+Durch Abonnieren von Warnhinweisen können Sie eigene nachgelagerte Protokolle für den Zeitpunkt einrichten, zu dem ein Auftrag abgeschlossen wurde, ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder Fehler während des Prozesses aufgetreten sind.
+
+Weitere Informationen finden Sie in der Übersicht zu [Warnhinweise](./alerts/overview.md) .
 
 ## Nächste Schritte
 
