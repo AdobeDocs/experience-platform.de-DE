@@ -44,6 +44,7 @@ Wenn Sie bereits über ein Firmenkonto verfügen oder noch nicht planen, Ihren E
    >[!NOTE]
    >
    >Dies ist ein anderes Dateiformat als das in Ihrem Erweiterungs-Code verwendete. Die Erweiterung selbst enthält eine SVG-Datei als [Symbol](../manifest.md).
+
    - **Angezeigtes Bild** – Ziehen Sie Aufmerksamkeit auf sich, indem Sie ein Bild verwenden, dass aussagekräftig ist, Ihre Marke zeigt und Ihr Programm hervorhebt. Das angezeigte Bild ist zu sehen, wenn ein Benutzer einen Link zu Ihrem Exchange-Listeneintrag oder zu Social-Media-Beiträgen darüber teilt. Es muss daher eine ideale Präsentation Ihrer Marke sein.
    - **Logo des App-Herausgebers**: Dies ist Ihr Firmenlogo. Vergewissern Sie sich, dass das Symbol die entsprechenden Abmessungen von 1280 x 720 oder 2560 x 1440 (16:9) im PNG- oder JPG-Format aufweist.
    - **Konfigurationsanweisungen** – Informieren Sie Kunden darüber, wie Ihre Adobe Experience Platform-Erweiterung konfiguriert werden kann. Vergewissern Sie sich, dass sie alle erforderlichen Einstellungen und die nächsten Schritte verstehen, wenn die [Konfigurationsansicht](../configuration.md) unmittelbar nach der Installation Ihrer Erweiterung in einer Eigenschaft angezeigt wird. 
