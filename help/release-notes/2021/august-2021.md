@@ -4,10 +4,10 @@ description: Versionshinweise zur Experience Platform für den 25. August 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 94933392fafdf645a44a2702780ac1f02ea8760b
+source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 41%
+source-wordcount: '300'
+ht-degree: 30%
 
 ---
 
@@ -18,7 +18,20 @@ ht-degree: 41%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Observability Insights](#observability)
 - [Echtzeit-Kundenprofil](#profile)
+
+## Observability Insights {#observability}
+
+Observability Insights ermöglicht es Ihnen, Platform-Aktivitäten mithilfe statistischer Metriken und Ereignisbenachrichtigungen zu überwachen.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Warnhinweise | Sie können nun wichtige Warnhinweise zu Workflows abonnieren, die auf Platform ausgeführt werden. Nach dem Abonnieren bestimmter Warnungsregeln erhalten Sie Benachrichtigungen und E-Mails in der Benutzeroberfläche, wenn ein wichtiges Lebenszyklusereignis auftritt (z. B. bei erfolgreicher Datenerfassung) oder wenn Probleme auftreten, die Ihre Aufmerksamkeit erfordern (z. B. ein Fehler bei der Aufnahme oder ein länger als erwartet dauernder Segmentauftrag). Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../observability/alerts/overview.md). |
+
+Weitere Informationen zum Dienst finden Sie unter [Übersicht über Observability Insights](../../observability/home.md) .
 
 ## Echtzeit-Kundenprofil {#profile}
 
@@ -26,6 +39,6 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Profile nach Zusammenführungsrichtlinie oder Identität durchsuchen | Beim Durchsuchen von Profilen in Experience Platform können Benutzer jetzt nach Zusammenführungsrichtlinien suchen, um anhand der ausgewählten Zusammenführungsrichtlinie eine Vorschau von 20 Beispielprofilen anzuzeigen. Benutzer können auch nach Identität suchen, um mithilfe eines Identitäts-Namespace und des zugehörigen Identitätswerts nach einem bestimmten Profil zu suchen. Weitere Informationen finden Sie im Handbuch [Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md). |
+| Profile nach Zusammenführungsrichtlinie oder Identität durchsuchen | Beim Durchsuchen von Profilen in Experience Platform können Sie jetzt nach Zusammenführungsrichtlinien suchen, um anhand der ausgewählten Zusammenführungsrichtlinie eine Vorschau von 20 Beispielprofilen anzuzeigen. Sie können auch nach Identität suchen, um mithilfe eines Identitäts-Namespace und des zugehörigen Identitätswerts nach einem bestimmten Profil zu suchen. Weitere Informationen finden Sie im Handbuch [Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md). |
 
 Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
