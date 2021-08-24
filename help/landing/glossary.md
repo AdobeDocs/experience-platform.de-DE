@@ -5,9 +5,9 @@ title: Adobe Experience Platform-Glossar
 topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
 workflow-type: tm+mt
-source-wordcount: '7225'
+source-wordcount: '7386'
 ht-degree: 3%
 
 ---
@@ -144,6 +144,8 @@ ht-degree: 3%
 
 ## D
 
+**Täglich**: Im Rahmen geplanter Dateiexporte werden vollständige oder inkrementelle Dateiexporte einmal täglich vom Startdatum bis zum Enddatum zu dem vom Benutzer angegebenen Zeitpunkt geplant.
+
 **Datenwörterbuch**: Im Kontext von Tags ist ein Datenwörterbuch (auch als Datenkarte bezeichnet) ein Satz von Datenelementen, die in einer Eigenschaft definiert sind.
 
 **Datenelement**: Im Kontext von Tags ist ein Datenelement ein Zeiger, der in Regeln und Erweiterungen verwendet wird, um auf ein bestimmtes Datenelement zu verweisen, das auf dem Client-Gerät vorhanden ist.
@@ -179,6 +181,8 @@ ht-degree: 3%
 **Datensatz-ID**: Eine von der Adobe generierte Kennung für einen erfassten Datensatz.
 
 **Datensatzausgabe**: Die Datensatzausgabe bietet einen Mechanismus, um zu bestimmen, welche Option &quot;Tabelle als Auswahl erstellen&quot;für eine bestimmte  [!DNL Query Service] Ausführung verwendet wird.
+
+**Deduplizierungsschlüssel**: Ein benutzerdefinierter Primärschlüssel, der die Identität bestimmt, anhand derer Benutzer ihre Profile deduplizieren möchten. &#x200B;
 
 **Delta-Spalte**: In einer Delta-Spalte können Sie ein Quelldatenfeld auswählen, das einen Zeitstempel für die inkrementelle Erfassung darstellt.
 
@@ -224,6 +228,10 @@ ht-degree: 3%
 
 **Erlebnisereignis**: Ein Erlebnisereignis stellt eine Momentaufnahme des Systems dar, wenn eine Interaktion oder ein Ereignis im Zusammenhang mit einem Kundenerlebnis stattfindet. Erlebnisereignisse sind unveränderliche Tatsacheneinträge darüber, was passiert ist, und stellen dar, was ohne Aggregation oder Interpretation passiert ist. Im Experience-Datenmodell (XDM) wird dieses Konzept von der Klasse [!DNL XDM ExperienceEvent] erfasst.
 
+**Vollständige Datei exportieren**: Eine Exportdatei mit einer vollständigen Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment.
+
+**Inkrementelle Dateien exportieren**: Eine Reihe exportierter Dateien, bei denen die erste Datei eine vollständige Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment darstellt und nachfolgende Dateien seit dem vorherigen Export inkrementelle Profilqualifikationen sind.
+
 **Erweiterung**: Im Kontext von Tags ist eine Erweiterung ein Funktionspaket, das einer Tag-Eigenschaft hinzugefügt wird. Eine Erweiterung konzentriert sich in der Regel auf eine bestimmte Marketing- oder Analyselösung und bietet die Tools, die zum Bereitstellen dieser Technologie in einer Client-Umgebung erforderlich sind.
 
 **Erweiterungspaket**: Im Kontext von Tags ist ein Erweiterungspaket eine ZIP-Datei, die von einem Erweiterungsentwickler erstellt und hochgeladen wurde und alle erforderlichen Informationen für Tags bereitstellt, damit Benutzer die Erweiterung in ihrer Eigenschaft installieren können. Ein Erweiterungspaket enthält ein Manifest mit Informationen zur Erweiterung, dem HTML/JavaScript, das für Endbenutzer zum Konfigurieren des Verhaltens der Tag-Erweiterung erforderlich ist, und dem ausführbaren JavaScript, das an die Client-Umgebung gesendet wird (falls erforderlich).
@@ -253,6 +261,8 @@ ht-degree: 3%
 ## H
 
 **Host**: Im Kontext von Tags gibt ein Host den Speicherort, die Domäne und die Benutzeranmeldeinformationen an, die erforderlich sind, damit das System einen Build bereitstellen kann.
+
+**Stündlich**: Im Rahmen geplanter Dateiexporte werden inkrementelle Dateiexporte alle 3, 6, 7 oder 12 Stunden geplant.
 
 ## I
 
@@ -314,6 +324,8 @@ ht-degree: 3%
 
 **Modell für maschinelles Lernen**: Ein Modell für maschinelles Lernen ist eine Instanz eines Rezepts für maschinelles Lernen, das mithilfe von historischen Daten und Konfigurationen zur Lösung eines geschäftlichen Anwendungsfalls trainiert wird. In Adobe Experience Platform Data Science Workspace werden Modelle für maschinelles Lernen als Rezepte bezeichnet.
 
+**Obligatorisches Attribut**: Ein vom Benutzer aktiviertes Kontrollkästchen, mit dem sichergestellt wird, dass alle Profildatensätze das ausgewählte Attribut enthalten. Beispiel: alle exportierten Profile eine E-Mail-Adresse enthalten.
+
 **Zuordnung**: Beim Daten-Mapping werden Quelldatenfelder den zugehörigen Zielfeldern in einem Ziel zugeordnet.
 
 **Marketing-Aktion**: Im Data Governance-Framework ist eine Marketing-Aktion (auch als Marketing-Anwendungsfall bezeichnet) eine Aktion, die ein Datennutzer von Experience Platform durchführt und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
@@ -343,6 +355,8 @@ ht-degree: 3%
 **Marketing-Aktion** zur Personalisierung auf der Site: Eine Marketing-Aktion, die Daten für die Personalisierung von Inhalten auf der Site verwendet. Bei der On-site-Personalisierung handelt es sich um Daten, die dazu dienen, Rückschlüsse auf die Interessen der Benutzer zu ziehen, und anhand derer anhand dieser Rückschlüsse ausgewählt wird, welche Inhalte oder Anzeigen bereitgestellt werden.
 
 **Marketing-Aktion** für On-site-Targeting: Eine Marketing-Aktion, bei der Daten für On-site-Anzeigen verwendet werden, einschließlich der Auswahl und Bereitstellung von Werbung auf den Websites oder Apps Ihres Unternehmens, oder um die Bereitstellung und Effektivität solcher Werbung zu messen.
+
+**Einmal**: Im Zusammenhang mit geplanten Dateiexporten wird ein einmaliger, bedarfsorientierter vollständiger Dateiexport geplant.
 
 **Speicherstrategie überschreiben**: Die Speicherstrategie &quot;Überschreiben&quot;ist eine Option zur Aufnahme von Drittanbieterdaten über eine Verbindung, bei der Sie angeben können, ob erfasste Daten in einem bestimmten Zeitplan überschrieben werden.
 
