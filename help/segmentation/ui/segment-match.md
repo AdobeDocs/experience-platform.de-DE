@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
-source-git-commit: d6eefc8c10a44fd31eaed00f22d09ee8a300db83
+source-git-commit: ee59da6c075573af366403e1059b5318fb924d21
 workflow-type: tm+mt
-source-wordcount: '1901'
+source-wordcount: '1982'
 ht-degree: 6%
 
 ---
@@ -74,6 +74,17 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 [!DNL Segment Match] verwendet die C11-Beschriftung, eine spezielle Vertragsbeschriftung,  [!DNL Segment Match] die Sie manuell zu Datensätzen oder Attributen hinzufügen können, um sicherzustellen, dass sie vom  [!DNL Segment Match] Partnerfreigabeprozess ausgeschlossen sind. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus [!DNL Segment Match] ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom [!DNL Segment Match]-Workflow erzwungen. [!DNL Segment Match] aktiviert automatisch die Core-Richtlinie  [!UICONTROL Datenfreigabe beschränken ] . Spezifische Anweisungen zum Anwenden von Datennutzungsbezeichnungen auf Datensätze finden Sie im Tutorial zum Verwalten von Datennutzungsbezeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md).[
 
 Eine Liste der Datennutzungsbezeichnungen und ihrer Definitionen finden Sie im Glossar [Datennutzungsbezeichnungen](../../data-governance/labels/reference.md). Informationen zu Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md).
+
+### Grundlagen zu [!DNL Segment Match]-Berechtigungen
+
+[!DNL Segment Match] ist mit zwei Berechtigungen verknüpft:
+
+| Berechtigung | Beschreibung |
+| --- | --- |
+| Verbindungen für Zielgruppenfreigabe verwalten | Mit dieser Berechtigung können Sie den Handshake-Prozess für Partner abschließen, der zwei IMS-Organisationen verbindet, um [!DNL Segment Match]-Flüsse zu aktivieren. |
+| Verwalten von Zielgruppenfreigaben | Mit dieser Berechtigung können Sie Feeds (das Datenpaket, das für [!DNL Segment Match] verwendet wird) mit aktiven Partnern (Partnern, die vom Admin-Benutzer mit **[!UICONTROL Zielgruppen-Share-Verbindungen]**-Zugriff verbunden wurden) erstellen, bearbeiten und veröffentlichen. |
+
+Weitere Informationen zur Zugriffskontrolle und zu Berechtigungen finden Sie in der [Übersicht zur Zugriffskontrolle](../../access-control/home.md) .
 
 ## [!DNL Segment Match] End-to-End-Workflow
 
