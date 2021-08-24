@@ -5,9 +5,9 @@ title: 'Edge-Segmentierung mithilfe der API '
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 3de00fb9ae5348b129a499cfd81d8db6dbac2d46
+source-git-commit: af1eee8787d7fa2ae2d56e541823100d2620dd2d
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '633'
 ht-degree: 17%
 
 ---
@@ -38,8 +38,8 @@ Damit ein Segment mithilfe der Kantensegmentierung bewertet werden kann, muss di
 | ---------- | ------- |
 | Eingehender Treffer | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
 | Eingehender Treffer, der sich auf ein Profil bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. |
-| Frequenzabfrage | Jede Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen stattfindet. |
-| Frequenzabfrage, die sich auf ein Profil bezieht | Jede Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen stattfindet und mindestens ein Profilattribut aufweist. |
+| Eingehender Treffer mit einem Zeitfenster von 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden verweist |
+| Eingehender Treffer, der sich auf ein Profil mit einem Zeitfenster von 24 Stunden bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden und ein oder mehrere Profilattribute verweist. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -47,9 +47,9 @@ Die folgenden Abfragetypen werden derzeit von der Kantensegmentierung unterstüt
 
 | Abfragetyp | Details |
 | ---------- | ------- |
-| Relatives Zeitfenster | Wenn sich eine Abfrage auf ein Zeitfenster bezieht, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
-| Negation | Wenn eine Abfrage eine Negation oder ein `not` -Ereignis enthält, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
 | Mehrere Ereignisse | Wenn eine Abfrage mehr als ein Ereignis enthält, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
+| Frequenzabfrage | Jede Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen stattfindet. |
+| Frequenzabfrage, die sich auf ein Profil bezieht | Jede Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen stattfindet und mindestens ein Profilattribut aufweist. |
 
 {style=&quot;table-layout:auto&quot;}
 
