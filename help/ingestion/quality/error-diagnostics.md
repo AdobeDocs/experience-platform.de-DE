@@ -1,58 +1,57 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Partielle Erfassung;Partielle Erfassung;Fehler abrufen;Fehler abrufen;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Stapelverarbeitung;Partielle Erfassung;Ingestion;Fehlerdiagnose;Fehlerdiagnose;Fehlerdiagnose;Fehlerdiagnose;Fehler abruf;Fehler abrufen;
+keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; partielle Erfassung; partielle Erfassung; Fehler abrufen; Fehler abrufen; partielle Batch-Erfassung; partielle Batch-Erfassung; Teil; Erfassung; Erfassung; Fehlerdiagnose; Fehlerdiagnose abrufen; Fehlerdiagnose erhalten; Fehler erhalten; Fehler abrufen; Fehler abrufen; Fehler abrufen; Fehler abrufen;
 solution: Experience Platform
-title: Fehlerdiagnose beim Abrufen der Dateneinlastung
+title: Fehlerdiagnose beim Abrufen der Datenerfassung
 topic-legacy: overview
-description: Dieses Dokument enthält Informationen zur Überwachung der Stapelverarbeitung, zur Verwaltung von Fehlern bei der Partiellen Stapelverarbeitung sowie eine Referenz für Stapelverarbeitungsarten.
+description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 35%
+source-wordcount: '979'
+ht-degree: 40%
 
 ---
 
-# Fehlerdiagnose beim Abrufen der Datenerfassung
+# Fehlerdiagnose bei der Datenerfassung abrufen
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder die Streaming-Erfassung, mit der Sie ihre Daten mit Streaming-Endpunkten in Echtzeit an [!DNL Platform] einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
 
-Dieses Dokument enthält Informationen zur Überwachung der Stapelverarbeitung, zur Verwaltung von Fehlern bei der Partiellen Stapelverarbeitung sowie eine Referenz für Stapelverarbeitungsarten.
+Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Die Methoden, mit denen Daten gesendet werden können  [!DNL Experience Platform].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Die Methoden, mit denen Daten an [!DNL Experience Platform] gesendet werden können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Schema Registry] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Herunterladen der Fehlerdiagnose {#download-diagnostics}
 
-Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird bis zu 30 Tage lang innerhalb von [!DNL Platform] aufbewahrt.
+Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Platform] bis zu 30 Tage aufbewahrt.
 
-### Liste-Eingabedateien {#list-files}
+### Eingabedateien auflisten {#list-files}
 
-Mit der folgenden Anforderung wird eine Liste aller in einem finalisierten Stapel bereitgestellten Dateien abgerufen.
+Mit der folgenden Anfrage wird eine Liste aller Dateien abgerufen, die in einem finalisierten Batch bereitgestellt werden.
 
 **API-Format**
 
@@ -76,7 +75,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden JSON-Objekte zurückgegeben, die detailliert angeben, wo die Diagnose gespeichert wurde.
+Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die detailliert angeben, wo die Diagnose gespeichert wurde.
 
 ```json
 {
@@ -107,9 +106,9 @@ Bei einer erfolgreichen Antwort werden JSON-Objekte zurückgegeben, die detailli
 }
 ```
 
-### Diagnose der Eingabedatei abrufen {#retrieve-diagnostics}
+### Diagnose von Eingabedateien abrufen {#retrieve-diagnostics}
 
-Nachdem Sie eine Liste der verschiedenen Eingabedateien abgerufen haben, können Sie die Diagnose der einzelnen Datei mithilfe der folgenden Anforderung abrufen.
+Nachdem Sie eine Liste aller Eingabedateien abgerufen haben, können Sie die Diagnose der einzelnen Datei mit der folgenden Anfrage abrufen.
 
 **API-Format**
 
@@ -134,30 +133,32 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden JSON-Objekte zurückgegeben, die `path`-Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die Objekte `path` im Format [JSON-Zeilen](https://jsonlines.org/) zurück.
+Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` -Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path`-Objekte im Format [JSON-Zeilen](https://jsonlines.org/) zurück.
 
 ```json
 {"path": "F1.json"}
 {"path": "etc/F2.json"}
 ```
 
-## Stapelverarbeitungsfehler {#retrieve-errors} abrufen
+## Fehler bei der Batch-Erfassung abrufen {#retrieve-errors}
 
-Wenn Stapel Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut erfassen können.
+Wenn Batches Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern abrufen, damit Sie die Daten erneut erfassen können.
 
 ### Status prüfen {#check-status}
 
-Um den Status des erfassten Batch zu überprüfen, müssen Sie im Pfad einer GET-Anfrage die Kennung des Batch angeben.
+Um den Status des erfassten Batch zu überprüfen, müssen Sie im Pfad einer GET-Anfrage die Kennung des Batch angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im [Katalog-Endpunkt-Handbuch](../../catalog/api/list-objects.md).
 
 **API-Format**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BATCH_ID}` | Der `id`-Wert des Batch, dessen Status Sie überprüfen möchten. |
+| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch zum Filtern von Katalogdaten [a1/>.](../../catalog/api/filter-data.md) |
 
 **Anfrage**
 
@@ -171,7 +172,7 @@ curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2
 
 **Antwort ohne Fehler**
 
-Eine erfolgreiche Antwort mit detaillierten Informationen zum Status des Stapels wird zurückgegeben.
+Eine erfolgreiche Antwort gibt detaillierte Informationen zum Status des Batches zurück.
 
 ```json
 {
@@ -214,11 +215,11 @@ Eine erfolgreiche Antwort mit detaillierten Informationen zum Status des Stapels
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion von `inputRecordCount` von `outputRecordCount` abgeleitet werden. Dieser Wert wird für alle Stapel generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem `inputRecordCount` von `outputRecordCount` subtrahiert wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
 
-**Antwort mit Fehlern**
+**Fehlerbehebung**
 
-Wenn der Stapel einen oder mehrere Fehler enthält und die Fehlerdiagnose aktiviert ist, gibt die Antwort weitere Informationen zu den Fehlern zurück, sowohl innerhalb der Payload selbst als auch in einer herunterladbaren Fehlerdatei. Beachten Sie, dass der Status eines Stapels, der Fehler enthält, immer noch den Status Erfolg hat.
+Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktiviert ist, gibt die Antwort mehr Informationen über die Fehler zurück, sowohl in der Payload selbst als auch in einer herunterladbaren Fehlerdatei. Beachten Sie, dass der Status eines Batches, der Fehler enthält, weiterhin einen Erfolgsstatus aufweisen kann.
 
 ```json
 {
@@ -277,12 +278,12 @@ Wenn der Stapel einen oder mehrere Fehler enthält und die Fehlerdiagnose aktivi
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion von `inputRecordCount` von `outputRecordCount` abgeleitet werden. Dieser Wert wird für alle Stapel generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem `inputRecordCount` von `outputRecordCount` subtrahiert wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
 | `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **nur** generiert, wenn `errorDiagnostics` aktiviert ist. |
 
 >[!NOTE]
 >
->Wenn keine Fehlerdiagnose verfügbar ist, wird stattdessen die folgende Fehlermeldung angezeigt:
+>Wenn die Fehlerdiagnose nicht verfügbar ist, wird stattdessen die folgende Fehlermeldung angezeigt:
 >
 ```json
 >{
@@ -295,15 +296,15 @@ Wenn der Stapel einen oder mehrere Fehler enthält und die Fehlerdiagnose aktivi
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Lernprogramm wurde beschrieben, wie Sie Fehler bei der Partiellen Stapelverarbeitung überwachen. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
+In diesem Tutorial wurde beschrieben, wie Sie Fehler bei der partiellen Batch-Erfassung überwachen. Weiterführende Informationen zur Batch-Erfassung finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../batch-ingestion/api-overview.md).
 
 ## Anhang {#appendix}
 
-Dieser Abschnitt enthält zusätzliche Informationen zu den Fehlertypen bei der Aufnahme.
+Dieser Abschnitt enthält zusätzliche Informationen zu Fehlertypen bei der Aufnahme.
 
 ### Fehlertypen bei der partiellen Batch-Erfassung {#partial-ingestion-types}
 
-Bei der Partiellen Stapelverarbeitung gibt es beim Erfassen von Daten drei verschiedene Fehlertypen:
+Bei der partiellen Batch-Erfassung gibt es bei der Datenaufnahme drei verschiedene Fehlertypen:
 
 - [Unlesbare Dateien](#unreadable)
 - [Ungültige Schemas oder Kopfzeilen](#schemas-headers)
@@ -319,7 +320,7 @@ Wenn der erfasste Batch ein ungültiges Schema oder ungültige Kopfzeilen enthä
 
 ### Nicht analysierbare Zeilen {#unparsable}
 
-Wenn der von Ihnen erfasste Stapel über nicht trennbare Zeilen verfügt, können Sie die folgende Anforderung verwenden, um eine Liste von Dateien mit Fehlermeldungen Ansicht.
+Wenn der erfasste Batch nicht analysierbare Zeilen enthält, können Sie die folgende Anfrage verwenden, um eine Liste der Dateien anzuzeigen, die Fehler enthalten.
 
 **API-Format**
 
@@ -374,9 +375,9 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien mit Fehlern zurück.
 }
 ```
 
-Mithilfe des [Diagnostics-Abrufendpunkts](#retrieve-diagnostics) können Sie dann detaillierte Informationen zu den Fehlern abrufen.
+Anschließend können Sie mit dem [Diagnostics-Abrufendpunkt](#retrieve-diagnostics) detaillierte Informationen zu den Fehlern abrufen.
 
-Nachstehend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
+Nachfolgend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 
 ```json
 {
