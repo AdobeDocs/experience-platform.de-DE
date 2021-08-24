@@ -4,10 +4,10 @@ title: Zieltypen und Kategorien
 seo-title: Zieltypen und Kategorien
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 19%
+source-wordcount: '534'
+ht-degree: 11%
 
 ---
 
@@ -23,17 +23,28 @@ In Adobe Experience Platform unterscheiden wir zwischen zwei Zieltypen: Verbindu
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profile]** Exporte und  **[!UICONTROL Segmentexportziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das]** Echtzeit-Kundenprofil [ ](../profile/home.md) zu bilden, wenden Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele.
+**[!UICONTROL Profile]** Exportieren und  **[!UICONTROL Streaming-Segmentexportziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um das]** Echtzeit-Kundenprofil [ ](../profile/home.md) zu bilden, wenden Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele.
 
 ## Profilexportziele
 
-Profilexportziele generieren eine Datei, die Profile und/oder Attribute enthält. Diese Ziele nutzen Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Das Cloud-Speicher-Ziel [Amazon S3](./catalog/cloud-storage/amazon-s3.md) ist ein Beispiel für ein Ziel, an dem Sie Dateien mit Profilexporten hinterlegen können.
+Profilexportziele erhalten Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Experience Platform unterstützt derzeit zwei Typen von Profilexportzielen:
 
-## Segmentexportziele
+* [Export-Ziele für Streaming-Profile](#streaming-profile-export)
+* [Dateibasierte Ziele](#file-based)
 
-Segmentexportziele senden die Profile und Segmente, für die sie qualifiziert sind, an Zielplattformen. Diese Ziele nutzen Segmentkennungen oder Anwenderkennungen. Werbeziele wie [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) oder [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) sind Beispiele für diese Zieltypen.
+### Export-Ziele für Streaming-Profile {#streaming-profile-export}
 
-## Profilexport- und Segmentexportziele - Videoübersicht
+Streaming-Profil-Export-Ziele empfangen Segment- und Profildaten als Experience Platform-Datenströme. [Beispiele für solche Ziele sind Amazon ](catalog/cloud-storage/amazon-kinesis.md) Kinesiens und  [Azure Event ](catalog/cloud-storage/azure-event-hubs.md) Hubs.
+
+### Dateibasierte Ziele {#file-based}
+
+Dateibasierte Ziele erhalten `.csv` Dateien mit Profilen und/oder Attributen. [Amazon S3](catalog/cloud-storage/amazon-s3.md) ist ein Beispiel für ein Ziel, an dem Sie Dateien mit Profilexporten hinterlegen können.
+
+## Export-Ziele für Streaming-Segmente
+
+Segmentexportziele erhalten Daten zu Experience Platform-Segmenten. Diese Ziele verwenden Segment-IDs oder Benutzer-IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) und  [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) sind Beispiele für solche Ziele.
+
+## Export- und Segmentexportziele - Videoübersicht
 
 Im folgenden Video werden Sie durch die Besonderheiten der beiden Zieltypen geführt:
 
