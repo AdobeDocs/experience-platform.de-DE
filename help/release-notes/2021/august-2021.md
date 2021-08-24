@@ -4,10 +4,10 @@ description: Versionshinweise zur Experience Platform für den 25. August 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: 17d4e91aeeca988f5b047007f87062872f36365c
+source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
 workflow-type: tm+mt
-source-wordcount: '300'
-ht-degree: 30%
+source-wordcount: '457'
+ht-degree: 42%
 
 ---
 
@@ -20,6 +20,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Observability Insights](#observability)
 - [Echtzeit-Kundenprofil](#profile)
+- [Quellen](#sources)
 
 ## Observability Insights {#observability}
 
@@ -42,3 +43,15 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 | Profile nach Zusammenführungsrichtlinie oder Identität durchsuchen | Beim Durchsuchen von Profilen in Experience Platform können Sie jetzt nach Zusammenführungsrichtlinien suchen, um anhand der ausgewählten Zusammenführungsrichtlinie eine Vorschau von 20 Beispielprofilen anzuzeigen. Sie können auch nach Identität suchen, um mithilfe eines Identitäts-Namespace und des zugehörigen Identitätswerts nach einem bestimmten Profil zu suchen. Weitere Informationen finden Sie im Handbuch [Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md). |
 
 Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+
+## Quellen {#sources}
+
+Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+
+Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Quell-Connector für lokales Hochladen von Dateien | Die Kategorie der Dateierfassung wurde in ein lokales System umbenannt, sodass Sie lokale Dateien über den lokalen Dateiupload-Connector direkt in Platform übertragen können. Die über diesen Connector erfassten Daten können über das Monitoring-Dashboard überwacht werden. Weitere Informationen finden Sie unter [Übersicht über die lokale Datei-Upload-Quelle](../../sources/connectors/local-system/local-file-upload.md) . |
+
+Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
