@@ -2,12 +2,12 @@
 keywords: Segmentstreaming-Ziele aktivieren; Segmentstreaming-Ziele aktivieren; Daten aktivieren
 title: Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
 type: Tutorial
-seo-title: Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
+seo-title: Activate audience data to streaming segment export destinations
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
-seo-description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
-source-git-commit: c3e273c66ffe0542258e5418104e0bcf154f5235
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '740'
+source-wordcount: '781'
 ht-degree: 6%
 
 ---
@@ -25,13 +25,17 @@ Um Daten für Ziele aktivieren zu können, müssen Sie über eine erfolgreiche [
 
 ## Ziel auswählen {#select-destination}
 
-1. Gehen Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus.
+1. Gehen Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus.
 
-   ![Registerkarte &quot;Ziel durchsuchen&quot;](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+   ![Registerkarte &quot;Zielkatalog&quot;](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Wählen Sie die Schaltfläche **[!UICONTROL Segmente hinzufügen]** aus, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
+1. Wählen Sie **[!UICONTROL Segmente aktivieren]** auf der Karte aus, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltflächen aktivieren](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+   ![Schaltflächen aktivieren](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Segmente verwenden möchten, und wählen Sie dann **[!UICONTROL Weiter]** aus.
+
+   ![Ziel auswählen](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Navigieren Sie zum nächsten Abschnitt [wählen Sie Ihre Segmente](#select-segments) aus.
 
@@ -81,10 +85,17 @@ Bei einigen Segmentstreaming-Zielen müssen Sie Quellattribute oder Identitäts-
 
 Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), aktivieren Sie die Option **Umwandlung anwenden**, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
 
-![Identitätszuordnung](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![Identitätszuordnung](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Segmentexport planen {#scheduling}
+
+Standardmäßig zeigt die Seite [!UICONTROL Segmentzeitplan] nur die neu ausgewählten Segmente an, die Sie im aktuellen Aktivierungsfluss ausgewählt haben.
+
+![Neue Segmente](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+Um alle für Ihr Ziel aktivierten Segmente anzuzeigen, verwenden Sie die Filteroption und deaktivieren Sie den Filter **[!UICONTROL Nur neue Segmente anzeigen]** .
+
+![Alle Segmente](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. Wählen Sie auf der Seite **[!UICONTROL Segment schedule]** jedes Segment aus und konfigurieren Sie dann mithilfe der Selektoren **[!UICONTROL Startdatum]** und **[!UICONTROL Enddatum]** das Zeitintervall für das Senden von Daten an Ihr Ziel.
 
@@ -120,7 +131,7 @@ Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTRO
 
 ## Segmentaktivierung überprüfen {#verify}
 
-Überprüfen Sie Ihr Zielkonto. Bei erfolgreicher Aktivierung werden Zielgruppen in Ihre Zielplattform eingefügt.
+Detaillierte Informationen zur Überwachung des Datenflusses zu Ihren Zielen finden Sie in der [Dokumentation zur Zielüberwachung](../../dataflows/ui/monitor-destinations.md) .
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
