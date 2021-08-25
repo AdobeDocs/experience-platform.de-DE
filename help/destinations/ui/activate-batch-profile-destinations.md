@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
+source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1925'
 ht-degree: 7%
 
 ---
@@ -25,13 +25,17 @@ Um Daten für Ziele aktivieren zu können, müssen Sie über eine erfolgreiche [
 
 ## Ziel auswählen {#select-destination}
 
-1. Gehen Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus.
+1. Gehen Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus.
 
-   ![Registerkarte &quot;Ziel durchsuchen&quot;](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
+   ![Registerkarte &quot;Zielkatalog&quot;](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Wählen Sie die Schaltfläche **[!UICONTROL Segmente hinzufügen]** aus, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
+1. Wählen Sie **[!UICONTROL Segmente aktivieren]** auf der Karte aus, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltflächen aktivieren](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
+   ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+
+1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Segmente verwenden möchten, und wählen Sie dann **[!UICONTROL Weiter]** aus.
+
+   ![Ziel auswählen](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Navigieren Sie zum nächsten Abschnitt [wählen Sie Ihre Segmente](#select-segments) aus.
 
@@ -144,9 +148,7 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 
    ![Quellfeldseite auswählen](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-
 1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 3.
-
 
 >[!NOTE]
 >
