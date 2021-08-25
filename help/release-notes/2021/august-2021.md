@@ -4,10 +4,10 @@ description: Versionshinweise zur Experience Platform für den 25. August 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
-source-git-commit: bd3d60e1960b1f4c32ade8c4070d7c1b01e5ba07
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 42%
+source-wordcount: '534'
+ht-degree: 44%
 
 ---
 
@@ -18,9 +18,22 @@ ht-degree: 42%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Ziele](#destinations)
 - [Observability Insights](#observability)
 - [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
+
+## Ziele {#destinations}
+
+Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [Verbesserungen der Benutzerfreundlichkeit für Ziele](../../destinations/ui/activation-overview.md) | Dank Verbesserungen der Benutzerfreundlichkeit an Zielen können Marketing-Experten Segmente nahtlos für vorhandene Ziele aktivieren. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Observability Insights {#observability}
 
