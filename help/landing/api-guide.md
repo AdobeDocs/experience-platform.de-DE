@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Adobe Experience Platform;API-Handbuch;Plattform-API-Handbuch;Einführung in die Plattform;Entwicklerhandbuch
+keywords: Experience Platform; Startseite; beliebte Themen; Adobe Experience Platform; API-Handbuch; Plattform-API-Handbuch; Einführung in die Plattform; Entwicklerhandbuch
 solution: Experience Platform
-title: Erste Schritte mit Adobe Experience Platform APIs
+title: Erste Schritte mit Adobe Experience Platform-APIs
 topic-legacy: api guide
-description: Adobe Experience Platform stellt API-Dienste bereit, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
+description: Adobe Experience Platform bietet API-Dienste, die eng miteinander verbunden sind. Dieses Handbuch enthält Informationen zu den verfügbaren Diensten, erforderlichen Kopfzeilen für CRUD-Vorgänge, Fehlermeldungen, Postman-Sammlungen und Beispiel-API-Aufrufen.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
 workflow-type: tm+mt
 source-wordcount: '1425'
-ht-degree: 26%
+ht-degree: 29%
 
 ---
 
-# Erste Schritte mit Adobe Experience Platform APIs
+# Erste Schritte mit Adobe Experience Platform-APIs
 
-Adobe Experience Platform wird unter der Philosophie &quot;API first&quot;entwickelt. Mithilfe von Plattform-APIs können Sie grundlegende CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren, Löschen) programmgesteuert für Daten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Daten/Entitäten, den Export von Daten, das Löschen nicht benötigter Daten oder Stapel usw.
+Adobe Experience Platform wird unter der Philosophie &quot;API first&quot;entwickelt. Mit Platform-APIs können Sie programmatisch grundlegende CRUD-Vorgänge (Erstellen, Lesen, Aktualisieren, Löschen) für Daten durchführen, z. B. die Konfiguration berechneter Attribute, den Zugriff auf Daten/Entitäten, den Export von Daten, das Löschen nicht benötigter Daten oder Batches und mehr.
 
-Die APIs für jeden Experience Platform-Dienst verwenden alle denselben Satz von Authentifizierungs-Headern und verwenden ähnliche Syntaxen für ihre CRUD-Vorgänge. In der folgenden Anleitung werden die erforderlichen Schritte für die ersten Schritte mit Plattform-APIs beschrieben.
+Die APIs für jeden Experience Platform-Dienst verwenden alle denselben Satz von Authentifizierungskopfzeilen und verwenden ähnliche Syntaxen für ihre CRUD-Vorgänge. Im folgenden Handbuch werden die erforderlichen Schritte für die ersten Schritte mit Platform-APIs beschrieben.
 
 ## Authentifizierung und Kopfzeilen
 
-Damit Sie erfolgreich Aufrufe an Plattform-Endpunkte vornehmen können, müssen Sie das [Authentifizierungstutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Platform-Endpunkte erfolgreich aufrufen zu können, müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -37,27 +36,27 @@ Weitere Informationen zu Sandboxes in Platform finden Sie in der [Sandbox-Übers
 
 ### Content-Type-Kopfzeile
 
-Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufrufe) müssen eine `Content-Type`-Kopfzeile enthalten. Akzeptierte Werte sind für jeden API-Endpunkt spezifisch. Wenn ein bestimmter `Content-Type`-Wert für einen Endpunkt benötigt wird, wird sein Wert in den Beispiel-API-Anforderungen angezeigt, die von den [API-Handbüchern für einzelne Plattformdienste](#api-guides) bereitgestellt werden.
+Alle Anfragen mit einer Payload im Anfragetext (wie POST-, PUT- und PATCH-Aufrufe) müssen eine `Content-Type`-Kopfzeile enthalten. Akzeptierte Werte sind für jeden API-Endpunkt spezifisch. Wenn ein bestimmter `Content-Type` -Wert für einen Endpunkt benötigt wird, wird sein Wert in den Beispiel-API-Anfragen angezeigt, die von den [API-Handbüchern für einzelne Platform-Dienste](#api-guides) bereitgestellt werden.
 
 ## Grundlagen der Experience Platform-API
 
-Adobe Experience Platform-APIs setzen verschiedene zugrunde liegende Technologien und Syntaxen ein, die für eine effiziente Verwaltung der Plattformressourcen wichtig sind.
+Adobe Experience Platform-APIs setzen verschiedene zugrunde liegende Technologien und Syntaxen ein, die für eine effektive Verwaltung von Platform-Ressourcen wichtig sind.
 
-Weitere Informationen zu den zugrunde liegenden API-Technologien, einschließlich JSON-Schema-Beispielobjekten, finden Sie im Handbuch [Experience Platform API-Grundlagen](api-fundamentals.md).
+Weitere Informationen zu den zugrunde liegenden API-Technologien, die von Platform verwendet werden, einschließlich Beispiel-JSON-Schemaobjekten, finden Sie im Handbuch [Grundlagen der Experience Platform-API](api-fundamentals.md) .
 
 ## Postman-Sammlungen für Experience Platform-APIs
 
-Postman ist eine Kooperationsplattform für die API-Entwicklung, mit der Sie Umgebung mit voreingestellten Variablen einrichten, API-Sammlungen freigeben, CRUD-Anforderungen optimieren und mehr. Die meisten Plattform-API-Dienste verfügen über Postman-Sammlungen, mit denen API-Aufrufe durchgeführt werden können.
+Postman ist eine Kooperationsplattform für die API-Entwicklung, mit der Sie Umgebungen mit vordefinierten Variablen einrichten, API-Sammlungen freigeben, CRUD-Anforderungen optimieren und vieles mehr. Die meisten Platform-API-Dienste verfügen über Postman-Sammlungen, die beim Ausführen von API-Aufrufen verwendet werden können.
 
-Weitere Informationen zu Postman, einschließlich der Einrichtung einer Umgebung, einer Liste verfügbarer Sammlungen und dem Importieren von Sammlungen, finden Sie in der [Platform Postman-Dokumentation](postman.md).
+Weitere Informationen zu Postman, einschließlich der Einrichtung einer Umgebung, einer Liste der verfügbaren Sammlungen und des Imports von Sammlungen, finden Sie in der [Platform Postman-Dokumentation](postman.md).
 
 ## Lesen von Beispiel-API-Aufrufen {#sample-api}
 
 Anfrageformate variieren je nach der verwendeten Platform-API. Am einfachsten erfahren Sie, wie Sie API-Aufrufe strukturieren können, indem Sie sich die in der Dokumentation die für einzelne Platform-Dienste angegebenen Beispiele ansehen.
 
-Die Dokumentation für [!DNL Experience Platform] zeigt Beispiel-API-Aufrufe auf zwei verschiedene Arten an. Zunächst wird der Aufruf im **API-Format** dargestellt, wobei es sich um eine Vorlagendarstellung handelt, die nur den Vorgang (GET, POST, PUT, PATCH, DELETE) und den verwendeten Endpunkt (z. B. `/global/classes`) zeigt. Manche Vorlagen zeigen auch die Stelle von Variablen an, um zu veranschaulichen, wie ein Aufruf formuliert werden sollte, z. B. `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
+Die Dokumentation für [!DNL Experience Platform] zeigt Beispiel-API-Aufrufe auf zwei verschiedene Arten. Zunächst wird der Aufruf im **API-Format** dargestellt, wobei es sich um eine Vorlagendarstellung handelt, die nur den Vorgang (GET, POST, PUT, PATCH, DELETE) und den verwendeten Endpunkt (z. B. `/global/classes`) zeigt. Manche Vorlagen zeigen auch die Stelle von Variablen an, um zu veranschaulichen, wie ein Aufruf formuliert werden sollte, z. B. `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-Die Aufrufe werden dann als cURL-Befehle in einer **Anfrage** angezeigt, die die erforderlichen Kopfzeilen und den vollständigen „Basispfad“ enthält, die für eine erfolgreiche Interaktion mit der API erforderlich sind. Der Basispfad sollte allen Endpunkten vorangestellt werden. Der oben genannte Endpunkt `/global/classes` beispielsweise ändert sich in `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Sie sehen das API-Format/Anforderungsmuster in der gesamten Dokumentation und müssen den vollständigen Pfad verwenden, der in der Beispielanforderung angezeigt wird, wenn Sie Ihre eigenen Aufrufe an Plattform-APIs durchführen.
+Die Aufrufe werden dann als cURL-Befehle in einer **Anfrage** angezeigt, die die erforderlichen Kopfzeilen und den vollständigen „Basispfad“ enthält, die für eine erfolgreiche Interaktion mit der API erforderlich sind. Der Basispfad sollte allen Endpunkten vorangestellt werden. Der oben genannte Endpunkt `/global/classes` beispielsweise ändert sich in `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. Sie sehen das API-Format/Anforderungsmuster in der gesamten Dokumentation und sollten den vollständigen Pfad verwenden, der in der Beispielanfrage angezeigt wird, wenn Sie eigene Aufrufe an Platform-APIs durchführen.
 
 ### Beispiel-API-Anfrage
 
@@ -73,7 +72,7 @@ GET /{CONTAINER_ID}/classes
 
 **Anfrage**
 
-In dieser Beispielanfrage werden den Variablen aus dem API-Format tatsächliche Werte im Anfragepfad zugewiesen. Darüber hinaus werden alle erforderlichen Header entweder als Beispiel-Header-Werte oder als Variablen angezeigt, in die vertrauliche Informationen (wie Sicherheits-Token und Zugriffs-IDs) einbezogen werden sollten.
+In dieser Beispielanfrage werden den Variablen aus dem API-Format tatsächliche Werte im Anfragepfad zugewiesen. Darüber hinaus werden alle erforderlichen Kopfzeilen entweder als Beispiel-Kopfzeilenwerte oder Variablen angezeigt, in die vertrauliche Informationen (wie Sicherheits-Token und Zugriffs-IDs) einbezogen werden sollen.
 
 ```shell
 curl -X GET \
@@ -111,39 +110,39 @@ Die Antwort zeigt, was Sie nach einem erfolgreichen Aufruf an die API erwarten w
 
 ## Fehlermeldungen
 
-Das Handbuch [Plattformfehlerbehebung](troubleshooting.md#errors-and-troubleshooting) enthält eine Liste von Fehlern, die bei der Verwendung eines Experience Platform-Dienstes auftreten können.
+Das [Handbuch zur Fehlerbehebung bei Platform](troubleshooting.md#errors-and-troubleshooting) enthält eine Liste von Fehlern, die bei der Verwendung von Experience Platform-Diensten auftreten können.
 
-Hinweise zur Fehlerbehebung bei einzelnen Plattformdiensten finden Sie im Ordner [Dienstfehlerbehebung](troubleshooting.md#service-troubleshooting-directory).
+Informationen zur Fehlerbehebung bei einzelnen Platform-Diensten finden Sie im Ordner [zur Fehlerbehebung bei Diensten](troubleshooting.md#service-troubleshooting-directory).
 
-Weitere Informationen zu bestimmten Endpunkten in Plattform-APIs, einschließlich der erforderlichen Kopfzeilen und Anforderungskörper, finden Sie in den [Plattform-API-Handbüchern](#api-guides).
+Weitere Informationen zu bestimmten Endpunkten in Platform-APIs, einschließlich erforderlicher Kopfzeilen und Anfragetexte, finden Sie in den [Plattform-API-Handbüchern](#api-guides).
 
-## API-Handbücher für Plattformen {#api-guides}
+## Handbuch zur Platform-API {#api-guides}
 
 | API-Handbuch | Beschreibung |
 | --- | --- |
-| [[!DNL Access Control] API-Handbuch](.././access-control/api/getting-started.md) | Der API-Endpunkt [!DNL Access Control] kann aktuelle Richtlinien abrufen, die für einen Benutzer bei bestimmten Ressourcen in einer angegebenen Sandbox gültig sind. Alle anderen Funktionen der Zugriffskontrolle werden über das [Adobe Admin Console](https://adminconsole.adobe.com/) bereitgestellt. |
-| [Handbuch zur Batchaufnahme-API](.././ingestion/batch-ingestion/api-overview.md) | Mit der API Adobe Experience Platform [!DNL Data Ingestion] können Sie Daten als Batch-Dateien in Plattform erfassen. Daten, die erfasst werden, können die Profil-Daten aus einer einfachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Schema Registry (XDM) entsprechen. |
-| [[!DNL Catalog Service] API-Handbuch](.././catalog/api/getting-started.md) | Die [!DNL Catalog Service]-API ermöglicht Entwicklern die Verwaltung von DataSet-Metadaten in Adobe Experience Platform. Dazu gehören Datenspeicherorte, Verarbeitungsstufen, während der Verarbeitung aufgetretene Fehler und Datenberichte. |
-| [[!DNL Data Access] API-Handbuch](.././data-access/api.md) | Die [!DNL Data Access]-API ermöglicht es Entwicklern, Informationen zu erfassten Datensätzen innerhalb der Experience Platform abzurufen. Dazu gehören der Zugriff auf und das Herunterladen von Datensatzdateien, das Abrufen von Header-Informationen, das Auflisten fehlgeschlagener und erfolgreicher Stapel und das Herunterladen von CSV-/Parquet-Vorschauen. |
-| [[!DNL Dataset Service] API-Handbuch](.././data-governance/labels/dataset-api.md) | Mit der DataSet-Dienst-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Es gehört zu den Funktionen des Adobe Experience Platform-Datenkatalogs, ist jedoch von der Katalogdienst-API getrennt, die die Metadaten des Datensatzes verwaltet. |
-| [[!DNL Flow Service] API-Handbuch](.././sources/tutorials/api/create-dataset-base-connection.md) <br>  (Quellen und Ziele) | Die [!DNL Flow Service]-API wird zur Erfassung und Zentralisierung Ihrer Daten aus verschiedenen Quellen verwendet und dient zur Erstellung und Aktivierung von Daten an verschiedene Ziele in Adobe Experience Platform. Der Dienst stellt eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können. |
-| [[!DNL Identity Service] API-Handbuch](.././identity-service/api/getting-started.md) | Die [!DNL Identity Service]-API ermöglicht es Entwicklern, geräteübergreifende, geräteübergreifende Kanal- und Echtzeitidentifizierung Ihrer Kunden mithilfe von Identitätsdiagrammen in Adobe Experience Platform zu verwalten. |
-| [[!DNL Observability Insights] API-Handbuch](.././observability/api/overview.md) | [!DNL Observability Insights] ist eine RESTful-API, mit der Entwickler wichtige Kennzeichnungsmetriken in Adobe Experience Platform verfügbar machen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen. |
-| [[!DNL Policy Service] API-Handbuch](.././data-governance/api/overview.md) <br>  (Datenverwaltung) | Mit der API [!DNL Policy Service] können Sie Datenverwendungsbeschriftungen und -richtlinien erstellen und verwalten, um festzustellen, welche Marketingaktionen für Daten mit bestimmten Datenverwendungsbeschriftungen durchgeführt werden können. Informationen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im Handbuch [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) |
-| [[!DNL Privacy Service] API-Handbuch](.././privacy-service/api/getting-started.md) | Die [!DNL Privacy Service]-API ermöglicht es Entwicklern, Kundenanfragen zu erstellen und zu verwalten, um ihre personenbezogenen Daten in allen Experience Cloud-Anwendungen abzurufen oder zu löschen. Dabei gelten die gesetzlichen Datenschutzbestimmungen. |
-| [[!DNL Query Service] API-Handbuch](.././query-service/api/getting-started.md) | Die [!DNL Query Service]-API ermöglicht Entwicklern die Abfrage ihrer Adobe Experience Platform-Daten mit Standard-SQL. |
-| [[!DNL Real-time Customer Profile] API-Handbuch](.././profile/api/overview.md) | Die Echtzeit-Client-Profil-API ermöglicht es Entwicklern, Profil-Daten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Sampling-Profil-Daten und Löschen von Profil-Daten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. |
-| [Handbuch zur Sandbox-API](.././sandboxes/api/getting-started.md) | Die Sandbox-API ermöglicht es Entwicklern, isolierte Virtual Sandbox-Umgebung in Adobe Experience Platform programmgesteuert zu verwalten. |
-| [[!DNL Schema Registry] API-Handbuch](.././xdm/api/overview.md) <br>  (XDM) | Die [!DNL Schema Registry]-API ermöglicht es Entwicklern, alle Schema und zugehörigen XDM-Ressourcen (Experience Data Model) innerhalb von Adobe Experience Platform programmatisch zu verwalten. |
-| [[!DNL Segmentation Service] API-Handbuch](.././segmentation/api/overview.md) | Die [!DNL Segmentation Service]-API ermöglicht es Entwicklern, Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert zu verwalten. Dazu gehören das Erstellen von Segmenten und das Generieren von Audiencen aus Ihren Echtzeit-Daten zum Profil von Kunden. |
-| [[!DNL Sensei Machine Learning] API-Handbuch](.././data-science-workspace/api/getting-started.md) <br>  (Data Science Workspace) | Die [!DNL Sensei Machine Learning]-API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von XML-Diensten (maschinelles Lernen), von der Algorithmusüberwachung über Experimentierung bis zur Dienstbereitstellung. |
+| [[!DNL Access Control] API-Handbuch](.././access-control/api/getting-started.md) | Der API-Endpunkt [!DNL Access Control] kann aktuelle Richtlinien abrufen, die für einen Benutzer für bestimmte Ressourcen innerhalb einer angegebenen Sandbox gelten. Alle anderen Zugriffssteuerungsfunktionen werden über [Adobe Admin Console](https://adminconsole.adobe.com/) bereitgestellt. |
+| [Handbuch zur Batch-Aufnahme-API](.././ingestion/batch-ingestion/api-overview.md) | Mit der Adobe Experience Platform [!DNL Data Ingestion]-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Schema Registry (XDM) entsprechen. |
+| [[!DNL Catalog Service] API-Handbuch](.././catalog/api/getting-started.md) | Mit der API [!DNL Catalog Service] können Entwickler Datensatzmetadaten in Adobe Experience Platform verwalten. Dazu gehören Datenspeicherorte, Verarbeitungsphasen, während der Verarbeitung aufgetretene Fehler und Datenberichte. |
+| [[!DNL Data Access] API-Handbuch](.././data-access/api.md) | Mit der API [!DNL Data Access] können Entwickler Informationen zu erfassten Datensätzen in Experience Platform abrufen. Dazu gehören der Zugriff auf und das Herunterladen von Datensatzdateien, das Abrufen von Kopfzeileninformationen, das Auflisten fehlgeschlagener und erfolgreicher Batches sowie das Herunterladen von CSV-/Parquet-Vorschaudateien. |
+| [[!DNL Dataset Service] API-Handbuch](.././data-governance/labels/dataset-api.md) | Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet. |
+| [[!DNL Flow Service] API-Handbuch](.././sources/tutorials/api/create-dataset-base-connection.md) <br>  (Quellen und Ziele) | Die [!DNL Flow Service]-API wird verwendet, um Ihre Daten aus verschiedenen Quellen zu sammeln und zu zentralisieren und um Daten für verschiedene Ziele in Adobe Experience Platform zu erstellen und zu aktivieren. Der Dienst bietet eine RESTful-API, über die alle unterstützten Quellen verbunden werden können. |
+| [[!DNL Identity Service] API-Handbuch](.././identity-service/api/getting-started.md) | Mit der [!DNL Identity Service]-API können Entwickler die geräteübergreifende, kanalübergreifende und nahezu echtzeitübergreifende Identifizierung Ihrer Kunden mithilfe von Identitätsdiagrammen in Adobe Experience Platform verwalten. |
+| [[!DNL Observability Insights] API-Handbuch](.././observability/api/overview.md) | [!DNL Observability Insights] ist eine RESTful-API, mit der Entwickler wichtige Beobachtbarkeitsmetriken in Adobe Experience Platform verfügbar machen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen. |
+| [[!DNL Policy Service] API-Handbuch](.././data-governance/api/overview.md) <br>  (Data Governance) | Mit der API [!DNL Policy Service] können Sie Datennutzungsbezeichnungen und -richtlinien erstellen und verwalten, um zu bestimmen, welche Marketing-Aktionen für Daten mit bestimmten Datennutzungsbezeichnungen durchgeführt werden können. Informationen zum Anwenden von Bezeichnungen auf Datensätze und Felder finden Sie im [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md)-Handbuch |
+| [[!DNL Privacy Service] API-Handbuch](.././privacy-service/api/getting-started.md) | Die [!DNL Privacy Service]-API ermöglicht es Entwicklern, Kundenanfragen für den Zugriff auf oder die Löschung ihrer personenbezogenen Daten in allen Experience Cloud-Applikationen gemäß den gesetzlichen Datenschutzbestimmungen zu erstellen und zu verwalten. |
+| [[!DNL Query Service] API-Handbuch](.././query-service/api/getting-started.md) | Die [!DNL Query Service]-API ermöglicht es Entwicklern, ihre Adobe Experience Platform-Daten mithilfe von Standard-SQL abzufragen. |
+| [[!DNL Real-time Customer Profile] API-Handbuch](.././profile/api/overview.md) | Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und damit zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Sampling von Profildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. |
+| [Handbuch zur Sandbox-API](.././sandboxes/api/getting-started.md) | Mit der Sandbox-API können Entwickler isolierte virtuelle Sandbox-Umgebungen in Adobe Experience Platform programmgesteuert verwalten. |
+| [[!DNL Schema Registry] API-Handbuch](.././xdm/api/overview.md) <br>  (XDM) | Mit der API [!DNL Schema Registry] können Entwickler alle Schemas und zugehörigen XDM-Ressourcen (Experience-Datenmodell) in Adobe Experience Platform programmgesteuert verwalten. |
+| [[!DNL Segmentation Service] API-Handbuch](.././segmentation/api/overview.md) | Mit der API [!DNL Segmentation Service] können Entwickler Segmentierungsvorgänge in Adobe Experience Platform programmgesteuert verwalten. Dazu gehört das Erstellen von Segmenten und das Generieren von Zielgruppen aus Ihren Echtzeit-Kundenprofildaten. |
+| [[!DNL Sensei Machine Learning] API-Handbuch](.././data-science-workspace/api/getting-started.md) <br>  (Data Science Workspace) | Die [!DNL Sensei Machine Learning]-API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von ML-Diensten (Machine Learning), von der Onboarding von Algorithmen, Experimentieren und der Bereitstellung von Diensten. |
 
-Weitere Informationen zu spezifischen Endpunkten und Vorgängen, die für jeden Dienst verfügbar sind, finden Sie in der [API-Referenzdokumentation](http://www.adobe.com/go/platform-api-reference-en) zur Adobe I/O.
+Weitere Informationen zu bestimmten Endpunkten und Vorgängen, die für jeden Dienst verfügbar sind, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en) auf der Adobe I/O.
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die erforderlichen Kopfzeilen und verfügbaren Handbücher vorgestellt und ein API-Beispielaufruf bereitgestellt. Nachdem Sie die erforderlichen Header-Werte für API-Aufrufe unter Adobe Experience Platform verwendet haben, wählen Sie in der Tabelle [Plattform-API-Leitfäden](#api-guides) einen API-Endpunkt aus, den Sie untersuchen möchten.
+In diesem Dokument wurden die erforderlichen Kopfzeilen und verfügbaren Handbücher vorgestellt und ein Beispiel für einen API-Aufruf bereitgestellt. Nachdem Sie nun über die erforderlichen Kopfzeilenwerte verfügen, um API-Aufrufe in Adobe Experience Platform durchzuführen, wählen Sie einen API-Endpunkt, den Sie untersuchen möchten, in der Tabelle [Platform-API-Handbücher](#api-guides) aus.
 
-Antworten auf häufig gestellte Fragen finden Sie im Handbuch [Plattformfehlerbehebung](troubleshooting.md).
+Antworten auf häufig gestellte Fragen finden Sie im [Handbuch zur Fehlerbehebung bei Plattformen](troubleshooting.md).
 
-Um eine Postman-Umgebung einzurichten und die verfügbaren Postman-Sammlungen zu erkunden, lesen Sie das [Platform Postman Guide](postman.md).
+Informationen zum Einrichten einer Postman-Umgebung und zum Erkunden der verfügbaren Postman-Sammlungen finden Sie im [Platform Postman-Handbuch](postman.md).
