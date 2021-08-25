@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines Exchange-Listeneintrags für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung dem öffentlichen Katalog in Adobe Experience Platform hinzufügen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c8705cfa65cb1d3a738610821ece827c2af33615
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 96%
@@ -41,9 +41,9 @@ Wenn Sie bereits über ein Firmenkonto verfügen oder noch nicht planen, Ihren E
 1. Geben Sie die Informationen für Ihren Eintrag ein. Ausführliche Informationen zum App Manager finden Sie im vollständigen [Artikel](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). Die Informationen für den Eintrag sollten sehr klar beschreiben, was die Erweiterung tut und warum sie nützlich ist. Der Listeneintrag dient als Marketing-Bereich für Ihre Mobile App. Werben Sie hier mit klaren Beschreibungen, Links zu Landingpages auf Ihrer Site, Links zu Hilfedokumenten oder Support-E-Mail-Adressen usw. für Ihre Erweiterung. Auch wenn der Platz in den Erweiterungsansichten begrenzt ist, bietet der Exchange-Listeneintrag eine Möglichkeit, sowohl Ihre Erweiterung als auch Ihr Unternehmen zu bewerben. Im Folgenden finden Sie Vorschläge zur Verbesserung der Bewerbung Ihrer Erweiterung:
    - **App-Symbol**: Stellen Sie sicher, dass das Symbol für den Exchange-Listeneintrag die entsprechenden Abmessungen (512 x 512 für PNG oder 1:1-Seitenverhältnis für JPG) hat.
 
-   >[!NOTE]
-   >
-   >Dies ist ein anderes Dateiformat als das in Ihrem Erweiterungs-Code verwendete. Die Erweiterung selbst enthält eine SVG-Datei als [Symbol](../manifest.md).
+      >[!NOTE]
+      >
+      >Dies ist ein anderes Dateiformat als das in Ihrem Erweiterungs-Code verwendete. Die Erweiterung selbst enthält eine SVG-Datei als [Symbol](../manifest.md).
 
    - **Angezeigtes Bild** – Ziehen Sie Aufmerksamkeit auf sich, indem Sie ein Bild verwenden, dass aussagekräftig ist, Ihre Marke zeigt und Ihr Programm hervorhebt. Das angezeigte Bild ist zu sehen, wenn ein Benutzer einen Link zu Ihrem Exchange-Listeneintrag oder zu Social-Media-Beiträgen darüber teilt. Es muss daher eine ideale Präsentation Ihrer Marke sein.
    - **Logo des App-Herausgebers**: Dies ist Ihr Firmenlogo. Vergewissern Sie sich, dass das Symbol die entsprechenden Abmessungen von 1280 x 720 oder 2560 x 1440 (16:9) im PNG- oder JPG-Format aufweist.
