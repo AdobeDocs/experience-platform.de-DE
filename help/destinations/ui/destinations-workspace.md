@@ -2,11 +2,11 @@
 keywords: Plattform; Ziele; Arbeitsbereich "Ziele"; Arbeitsbereich; UI; Ziele in der Benutzeroberfläche; Katalog; Zielkatalog;
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
-seo-description: Wählen Sie in Adobe Experience Platform in der linken Navigationsleiste die Option Ziele aus, um auf den Arbeitsbereich "Ziele"zuzugreifen.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
+source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '858'
 ht-degree: 19%
 
 ---
@@ -40,14 +40,14 @@ Die Benutzeroberfläche [!DNL Platform] bietet mehrere Such- und Filteroptionen 
 * Zwischen [!UICONTROL Alle Ziele] und [!UICONTROL Meine Ziele] wechseln. Wenn Sie **[!UICONTROL Alle Ziele]** auswählen, werden alle verfügbaren [!DNL Platform] Ziele angezeigt. Wenn Sie **[!UICONTROL Meine Ziele]** auswählen, können Sie nur die Ziele sehen, mit denen Sie eine Verbindung hergestellt haben.
 * Wählen Sie diese Option, um **[!UICONTROL Verbindungen]** und/oder **[!UICONTROL Erweiterungen]** anzuzeigen. Informationen zum Unterschied zwischen den beiden Kategorien finden Sie unter [Zieltypen und -kategorien](../destination-types.md).
 
-![Filtern und Suchdemo von Zielen](../assets/ui/workspace/destinations-search-and-filter.gif)
+![Katalog](../assets/ui/workspace/catalog.png)
 
-Die Zielkarten enthalten entweder ein **[!UICONTROL Configure]**- oder ein **[!UICONTROL Activate]**-Steuerelement und ein sekundäres Steuerelement, das weitere Optionen anzeigt. Diese Steuerelemente werden nachfolgend beschrieben:
+Die Zielkarten enthalten entweder ein Steuerelement **[!UICONTROL Einrichten]** oder ein Steuerelement **[!UICONTROL Aktivieren von Segmenten]** und ein sekundäres Steuerelement, das weitere Optionen anzeigt. Diese Steuerelemente werden nachfolgend beschrieben:
 
 | Kontrolle | Beschreibung |
 |---------|----------|
-| [!UICONTROL Konfigurieren von] | Ermöglicht die Erstellung einer Verbindung zum Ziel. |
-| [!UICONTROL Aktivieren] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
+| [!UICONTROL Einrichten] | Ermöglicht die Erstellung einer Verbindung zum Ziel. |
+| [!UICONTROL Aktivieren von Segmenten] | Nachdem Sie eine Verbindung zum Ziel hergestellt haben, können Sie Segmente aktivieren. |
 | [!UICONTROL Konto anzeigen] | Zeigen Sie die Konten an, mit denen Sie eine Verbindung zu einem Ziel hergestellt haben. |
 | [!UICONTROL Datenflüsse anzeigen] | Zeigen Sie die Datenaktivierungsflüsse an, die für ein Ziel vorhanden sind. |
 | [!UICONTROL Dokumentation anzeigen] | Öffnet einen Link zur Dokumentationsseite für dieses spezifische Ziel, um weitere Informationen zu erhalten und Sie bei der Einrichtung zu unterstützen. |
@@ -72,7 +72,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 
 >[!TIP]
 >
-> * Wählen Sie die drei Punkte in der Spalte [!UICONTROL Name] aus und verwenden Sie die Schaltfläche ![Segmente hinzufügen](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Aktivieren ]**, um Segmente an dieses Ziel zu senden.
+> * Wählen Sie die drei Punkte in der Spalte [!UICONTROL Name] aus und verwenden Sie die Schaltfläche ![Segmente hinzufügen](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Segmente aktivieren ]**, um Segmente an dieses Ziel zu senden.
 > * Wählen Sie die drei Punkte in der Spalte [!UICONTROL Name] aus und verwenden Sie die Schaltfläche ![Ziele löschen](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**, um [eine vorhandene Verbindung zu einem Ziel zu entfernen](delete-destinations.md).
 
 
