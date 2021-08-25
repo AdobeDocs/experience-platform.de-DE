@@ -2,12 +2,12 @@
 keywords: Profilattribute aktivieren; Ziele aktivieren; Daten aktivieren; E-Mail-Marketing-Ziele aktivieren; Aktivieren von Cloud-Speicher-Zielen
 title: Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele
 type: Tutorial
-seo-title: Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele
+seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
-seo-description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
-source-git-commit: eebebcdc5e5f94d90eceb291dfe487fcd0f8c254
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1905'
 ht-degree: 7%
 
 ---
@@ -90,7 +90,7 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien]** exportieren, um einen Export 
 1. Verwenden Sie den Selektor **[!UICONTROL Häufigkeit]** , um die Exportfrequenz auszuwählen:
 
    * **[!UICONTROL Täglich]**: planen Sie den inkrementellen Dateiexport einmal täglich zum angegebenen Zeitpunkt.
-   * **[!UICONTROL Stündlich]**: planen inkrementelle Dateiexporte alle 3,6,7 oder 12 Stunden.
+   * **[!UICONTROL Stündlich]**: planen inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
 
 2. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll.
 
@@ -320,8 +320,7 @@ Adobe empfiehlt die Auswahl eines Identitäts-Namespace wie [!DNL CRM ID] oder e
 >* Die Felder werden als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
 
 >
-> 
-Wenn beispielsweise das Feld `person.name.firstName` bestimmte Datennutzungsbezeichnungen enthält, die mit der Marketing-Aktion des Ziels in Konflikt stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Wenn beispielsweise das Feld `person.name.firstName` bestimmte Datennutzungsbezeichnungen enthält, die mit der Marketing-Aktion des Ziels in Konflikt stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ## Überprüfung {#review}
 
