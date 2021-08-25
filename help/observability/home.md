@@ -5,10 +5,10 @@ title: Observability Insights – Übersicht
 topic-legacy: overview
 description: Adobe Experience Platform Observability Insights ist eine RESTful-API, mit der Sie Schlüsselmetriken zu Platform-Aktivitäten bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
-source-git-commit: 0a64737c805f5e1a4856aa49084a61e64e401ed6
+source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 56%
+source-wordcount: '262'
+ht-degree: 62%
 
 ---
 
@@ -22,11 +22,7 @@ Die [!DNL Observability Insights]-API ist eine RESTful-API, mit der Sie Schlüss
 
 Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observability Insights] API-Entwicklerhandbuch](./api/overview.md).
 
-## Warnhinweise (Beta)
-
->[!IMPORTANT]
->
->Warnhinweise in Adobe Experience Platform stehen noch nicht allen Benutzern zur Verfügung. Diese Funktion befindet sich in der Beta-Phase und wird noch getestet. Dieser Abschnitt kann sich ändern.
+## Warnhinweise
 
 Mit Experience Platform können Sie Warnungen auf der Grundlage spezifischer Beobachtbarkeitsmetriken abonnieren, wenn in Ihren Platform-Vorgängen ein bestimmter Bedingungssatz erreicht wird. Ein Warnhinweis kann in Form einer einmaligen Benachrichtigung oder in einem vordefinierten Zeitintervall wiederholt werden, bis die Bedingungen, die den Warnhinweis ausgelöst haben, behoben sind.
 
