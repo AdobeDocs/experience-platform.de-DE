@@ -3,16 +3,16 @@ title: Debugging im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Debugging-Funktionen im Experience Platform Web SDK umschalten.
 keywords: Debugging von Web SDK;Debugging;Konfigurieren;Befehl konfigurieren;Debugging-Befehl;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 74%
+source-wordcount: '422'
+ht-degree: 73%
 
 ---
 
 # Debugging
 
-Wenn das Debugging aktiviert ist, gibt das SDK Meldungen an die Browser-Konsole aus, die beim Debugging Ihrer Implementierung und beim Verständnis des Verhaltens des SDK hilfreich sein können. Das Debuggen führt auch zu einer Server-seitigen synchronen Überprüfung der Daten, die für das von Ihnen konfigurierte Schema erfasst werden.
+Wenn das Debugging aktiviert ist, gibt das SDK Meldungen an die Browser-Konsole aus, die beim Debugging Ihrer Implementierung und beim Verständnis des Verhaltens des SDK hilfreich sein können.
 
 Das Debugging ist standardmäßig deaktiviert, kann jedoch auf drei verschiedene Arten aktiviert werden:
 
