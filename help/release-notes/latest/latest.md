@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
+source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 44%
+source-wordcount: '536'
+ht-degree: 45%
 
 ---
 
@@ -16,9 +16,22 @@ ht-degree: 44%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Ziele](#destinations)
 - [Observability Insights](#observability)
 - [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
+
+## Ziele {#destinations}
+
+Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| [Verbesserungen der Benutzerfreundlichkeit für Ziele](../../destinations/ui/activation-overview.md) | Dank Verbesserungen der Benutzerfreundlichkeit an Zielen können Marketing-Experten Segmente nahtlos für vorhandene Ziele aktivieren. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Observability Insights {#observability}
 
