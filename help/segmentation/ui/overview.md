@@ -5,10 +5,10 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: fc59ad026a746bc75192fc6b314989894f8f6c45
 workflow-type: tm+mt
-source-wordcount: '1570'
-ht-degree: 22%
+source-wordcount: '1613'
+ht-degree: 21%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 [!DNL Adobe Experience Platform Segmentation Service] bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 
-## Erste Schritte 
+## Erste Schritte
 
 Das Arbeiten mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste, die mit der Segmentierung verbunden sind. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
@@ -81,7 +81,7 @@ Die rechte Seitenleiste enthält Informationen zu allen Segmenten innerhalb der 
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-Die Auswahl der Zeile der Segmentdefinition bietet eine Zusammenfassung der Segmentdefinition, einschließlich Optionen zum Bearbeiten oder Löschen des Segments, der qualifizierten Zielgruppe für das Segment, der Gesamtgröße der Zielgruppe, zusätzlich zum Namen, der Beschreibung, der Auswertungsmethode, dem erstellten Datum und dem Datum der letzten Änderung.
+Die Auswahl der Zeile der Segmentdefinition bietet eine Zusammenfassung der Segmentdefinition, einschließlich Optionen zum Bearbeiten oder Löschen des Segments, zum Aktivieren des Segments für ein Ziel, der qualifizierten Zielgruppe für das Segment, der Gesamtgröße der Zielgruppe, zusätzlich zum Namen, der Beschreibung, der Auswertungsmethode, dem erstellten Datum und dem Datum der letzten Änderung.
 
 >[!NOTE]
 >
@@ -101,7 +101,13 @@ Die Seite mit den Segmentdetails wird angezeigt. Oben finden Sie eine Zusammenfa
 
 Der Abschnitt **[!UICONTROL Segmentzusammenfassung]** enthält Informationen wie die ID, den Namen, die Beschreibung und Details der Attribute.
 
-Darüber hinaus haben Sie die Möglichkeit, das Segment zu bearbeiten. Wenn Sie **[!UICONTROL Segment bearbeiten]** auswählen, gelangen Sie zum [!DNL Segment Builder]. Weitere Informationen zur Verwendung des Arbeitsbereichs [!DNL Segment Builder] finden Sie im [[!DNL Segment Builder] Benutzerhandbuch](./segment-builder.md).
+Darüber hinaus haben Sie die Möglichkeit, das Segment entweder für ein Ziel zu aktivieren oder es zu bearbeiten. Wenn Sie **[!UICONTROL Auf Ziel aktivieren]** auswählen, können Sie das Segment für ein Ziel aktivieren. Weitere Informationen zum Aktivieren eines Segments für ein Ziel finden Sie in der [Aktivierungsübersicht](../../destinations/ui/activation-overview.md).
+
+![](../images/ui/overview/segment-details-activate.png)
+
+Wenn Sie **[!UICONTROL Segment bearbeiten]** auswählen, gelangen Sie zum [!DNL Segment Builder]. Weitere Informationen zur Verwendung des Arbeitsbereichs [!DNL Segment Builder] finden Sie im [[!DNL Segment Builder] Benutzerhandbuch](./segment-builder.md).
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### Gesamtzielgruppe im Segment
 
