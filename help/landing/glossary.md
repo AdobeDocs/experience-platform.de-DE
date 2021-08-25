@@ -5,7 +5,7 @@ title: Adobe Experience Platform-Glossar
 topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 83efc9f3c203cf4743514dc4b7a480715dadb19a
+source-git-commit: bd93c21ae439a8802218b8d664b7109467f8a013
 workflow-type: tm+mt
 source-wordcount: '7386'
 ht-degree: 3%
@@ -262,7 +262,7 @@ ht-degree: 3%
 
 **Host**: Im Kontext von Tags gibt ein Host den Speicherort, die Domäne und die Benutzeranmeldeinformationen an, die erforderlich sind, damit das System einen Build bereitstellen kann.
 
-**Stündlich**: Im Rahmen geplanter Dateiexporte werden inkrementelle Dateiexporte alle 3, 6, 7 oder 12 Stunden geplant.
+**Stündlich**: Im Rahmen geplanter Dateiexporte werden inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden geplant.
 
 ## I
 
