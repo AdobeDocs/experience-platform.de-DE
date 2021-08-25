@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Adobe Experience Platform – Versionshinweise
 breadcrumb-title: Platform – Versionshinweise
 user-guide-description: Monatliche Versionshinweise für Adobe Experience Platform.
-source-git-commit: dc01e03975fdda375b31f44edc8459fa32b5a61b
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '53'
 ht-degree: 100%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 100%
 
 * [Aktuelle Versionshinweise zu Platform](latest/latest.md)
 * 2021 {#2021}
+   * [August 2021](2021/august-2021.md)
    * [Juli 2021](2021/july-2021.md)
    * [Juni 2021](2021/june-2021.md)
    * [Mai 2021](2021/may-2021.md)
