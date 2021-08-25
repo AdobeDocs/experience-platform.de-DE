@@ -4,7 +4,7 @@ description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit d
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 46%
+ht-degree: 94%
 
 ---
 
@@ -12,25 +12,25 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen Daten mit einer oder mehreren der folgenden drei Optionen an das Adobe Experience Platform Edge Network gesendet werden:
 
 * [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
-* [Server-zu-Server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
+* [Server-zu-Server-API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=de)
 
 >[!NOTE]
->Das Platform Web SDK und Platform Mobile SDK erfordern keine Implementierung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
+>Das Platform Web SDK und das Platform Mobile SDK erfordern keine Implementierung über Tags in Adobe Experience Platform. Es wird jedoch empfohlen, Tags zur Bereitstellung dieser SDKs zu verwenden.
 
-Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lösungen einschalten, um Daten dorthin zu senden. Um Daten an eine Nicht-Adobe-Lösung zu senden, richten Sie diese in der Ereignisweiterleitung ein.
+Nachdem Sie Daten an das Edge-Netzwerk gesendet haben, können Sie die Adobe-Lösungen einschalten, um Daten dorthin zu senden. Um Daten an eine Drittanbieter-Lösung zu senden, richten Sie diese in der Ereignisweiterleitung ein.
 
 ## Voraussetzungen
 
 * Adobe Experience Platform Collection Enterprise (Preise erhalten Sie von Ihrem Account Manager)
 * Ereignisweiterleitung in Adobe Experience Platform
 * Adobe Experience Platform Web oder Mobile SDK, konfiguriert zum Senden von Daten an Edge Network
-* Daten dem Experience-Datenmodell (XDM) zuordnen (diese Zuordnung kann mithilfe von Tags erfolgen)
+* Zuordnen von Daten zum Experience-Datenmodell (XDM) (diese Zuordnung kann über Tags erfolgen)
 
 ## Erstellen eines XDM-Schemas
 
@@ -40,19 +40,19 @@ Erstellen Sie in Adobe Experience Platform Ihr Schema.
 
 1. Versehen Sie das Schema mit einem Namen und einer Kurzbeschreibung.
 
-1. Sie können die Feldergruppe &quot;ExperienceEvent web details&quot;hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]** auswählen.
+1. Sie können die Feldgruppe „ExperienceEvent-Web-Details“ hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldgruppen]** auswählen.
 
    >[!NOTE]
    >
-   >Bei Bedarf können mehrere Feldergruppen hinzugefügt werden.
+   >Bei Bedarf können mehrere Feldgruppen hinzugefügt werden.
 
 1. Speichern Sie das Schema und notieren Sie sich den Namen, den Sie ihm gegeben haben.
 
-Weitere Informationen zu Schemata finden Sie unter [Experience-Datenmodell (XDM) – Systemhilfe](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de).
+Weitere Informationen zu Schemas finden Sie unter [Experience-Datenmodell (XDM) – Systemhilfe](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de).
 
 ## Erstellen einer Ereignisweiterleitungseigenschaft
 
-Erstellen Sie in der Datenerfassungs-Benutzeroberfläche eine Eigenschaft vom Typ &quot;Edge&quot;.
+Erstellen Sie in der Datenerfassungs-Benutzeroberfläche eine Eigenschaft vom Typ „Edge“.
 
 1. Wählen Sie **[!UICONTROL Neue Eigenschaft]** aus.
 
@@ -65,13 +65,13 @@ Erstellen Sie in der Datenerfassungs-Benutzeroberfläche eine Eigenschaft vom Ty
 Nachdem Sie die Eigenschaft erstellt haben, wechseln Sie zum Tab **[!UICONTROL Umgebungen]** für die neue Eigenschaft und
 notieren Sie sich die Umgebungs-IDs. Wenn sich die im Datastream verwendete Adobe Org von der in der Ereignisweiterleitung verwendeten Adobe unterscheidet, können Sie die Umgebungs-ID aus dem Tab **[!UICONTROL Umgebungen]** kopieren und beim Erstellen eines Datastreams einfügen. Andernfalls können Sie die Umgebung aus einem Dropdown-Menü auswählen.
 
-## Erstellen eines Datenspeichers
+## Erstellen eines Daten-Streams
 
-Verwenden Sie zum Erstellen Ihres Datenspeichers in Adobe Experience Platform die Umgebungs-ID, die beim Erstellen der Ereignisweiterleitungseigenschaft generiert wurde.
+Verwenden Sie zum Erstellen Ihres Daten-Streams in Adobe Experience Platform die Umgebungs-ID, die beim Erstellen der Ereignisweiterleitungseigenschaft generiert wurde.
 
-1. Verwenden Sie den Link in der linken Leiste der Datenerfassungs-Benutzeroberfläche, um die Oberfläche für Datastraams zu öffnen.
+1. Verwenden Sie den Link in der linken Leiste der Datenerfassungs-Benutzeroberfläche, um die Oberfläche für Daten-Streams zu öffnen.
 
-1. Wählen Sie **[!UICONTROL Datastreams]** aus.
+1. Wählen Sie **[!UICONTROL Daten-Streams]** aus.
 
 1. Benennen Sie die Konfiguration und geben Sie eine optionale Beschreibung ein.
 Die Beschreibung hilft, Konfigurationen in einer Liste mehrerer Konfigurationen zu identifizieren.
@@ -80,15 +80,15 @@ Die Beschreibung hilft, Konfigurationen in einer Liste mehrerer Konfigurationen 
 
 
 
-## Ereignisweiterleitung aktivieren
+## Aktivieren der Ereignisweiterleitung
 
-Konfigurieren Sie als Nächstes das Edge Network, um Daten an die Ereignisweiterleitung und an andere Adobe-Produkte zu senden.
+Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleitung und andere Adobe-Produkte zu senden.
 
-1. Wählen Sie in der Benutzeroberfläche &quot;datastreams&quot;die von Ihnen erstellte Eigenschaft aus.
+1. Wählen Sie in der Daten-Streams-Benutzeroberfläche die von Ihnen erstellte Eigenschaft aus.
 
 1. Wählen Sie die Entwicklungs-, Betreibungs- oder Staging-Umgebung.
 
-   Wenn Sie Daten auch an eine Ereignisweiterleitungsumgebung außerhalb der Adobe-Organisation senden möchten, wählen Sie **[!UICONTROL Wechseln Sie in den erweiterten Modus]** und fügen Sie eine ID ein. Die ID wird bereitgestellt, wenn Sie eine Ereignisweiterleitungs-Eigenschaft erstellen.
+   Oder wählen Sie, um Daten an eine Ereignisweiterleitungsumgebung außerhalb der Adobe-Organisation zu senden, **[!UICONTROL In den fortgeschrittenen Modus wechseln]** aus und fügen Sie eine ID ein. Die ID wird bereitgestellt, wenn Sie eine Ereignisweiterleitungseigenschaft erstellen.
 
 1. Schalten Sie die erforderlichen Werkzeuge ein und konfigurieren Sie sie nach Bedarf.
 
@@ -98,9 +98,9 @@ Konfigurieren Sie als Nächstes das Edge Network, um Daten an die Ereignisweiter
 
 Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigenschaft.
 
-## Konfigurieren der Web SDK-Erweiterung des Tags, um Daten an den zuvor erstellten Datastream zu senden
+## Konfigurieren der Web SDK-Erweiterung des Tags, um Daten an den zuvor erstellten Daten-Stream zu senden
 
-Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und konfigurieren Sie sie dann mit der Adobe Experience Platform Web SDK-Erweiterung.
+Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und konfigurieren Sie sie dann mit der Web SDK-Erweiterung von Adobe Experience Platform.
 
 1. Benennen Sie die Eigenschaft.
 
@@ -108,13 +108,13 @@ Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und ko
 
 1. Wählen Sie die Org-ID aus.
 
-1. Wählen Sie die Edge-Domäne aus.
+1. Wählen Sie die Edge-Domain aus.
 
 Weitere Konfigurationsoptionen finden Sie in der [Dokumentation zur Web SDK-Erweiterung](../../extensions/web/sdk/overview.md).
 
 ## Erstellen einer Tag-Regel zum Senden von Daten an das Platform Web SDK
 
-Erstellen Sie nach dem oben beschriebenen Verfahren Datendefinitionen, Regeln usw., die die Ereignisweiterleitung und -tags verwenden, aber nur eine einzige Anfrage von der Seite benötigen.
+Nachdem alle oben genannten Elemente eingerichtet sind, können Sie die erforderlichen Datendefinitionen, Regeln usw. erstellen, die sowohl Ereignisweiterleitung als auch Tags nutzen, für die jedoch nur eine einzige Anfrage von der Seite benötigt wird.
 
 Erstellen Sie eine Seitenladeregel mit der Platform Web SDK-Erweiterung und dem Aktionstyp „Ereignis senden“:
 
@@ -134,9 +134,9 @@ Sie können beispielsweise eine Regel erstellen, die die Datenschicht an Edge se
 
 ## Zusammenfassung
 
-Nachdem Sie Folgendes eingerichtet haben, können Sie nun Ereignisweiterleitungsregeln erstellen, um Daten an Nicht-Adobe-Ziele weiterzuleiten.
+Wenn Folgendes eingerichtet ist, können Sie jetzt Ereignisweiterleitungsregeln erstellen, um Daten an Drittanbieter-Ziele weiterzuleiten.
 
 * Schema des Experience-Datenmodells (notieren Sie sich den Namen, den Sie ihm gegeben haben).
-* Eine Ereignisweiterleitungseigenschaft (verfolgen Sie die Eigenschaften-ID und Umgebungs-IDs.)
-* Ein Datastream (Beachten Sie die Umgebungs-ID, nicht zu verwechseln mit der Umgebungs-ID aus der Ereignisweiterleitung.)
+* Eine Ereignisweiterleitungseigenschaft (verfolgen Sie die Eigenschaften-ID und die Umgebungs-IDs.)
+* Ein Daten-Stream (beachten Sie die Umgebungs-ID, nicht zu verwechseln mit der Umgebungs-ID aus der Ereignisweiterleitung.)
 * Eine Tag-Eigenschaft
