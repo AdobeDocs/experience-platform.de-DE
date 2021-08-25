@@ -1,13 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Experience Platform - Versionshinweise für den 28. Juli 2021.
-doc-type: release notes
-last-update: July 28, 2021
-author: ens60013
+description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d6402a35e1813b94af866d7aaea975d4f103906
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '459'
 ht-degree: 44%
 
 ---
@@ -15,77 +12,35 @@ ht-degree: 44%
 
 # Adobe Experience Platform – Versionshinweise
 
-**Versionsdatum: 28. Juli 2021**
+**Release-Datum: 25. August 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [Data Science Workspace](#dsw)
-- [Datenflüsse](#destinations)
-- [Ziele](#destinations)
-- [Experience-Datenmodell (XDM)](#xdm)
-- [Query Service](#query)
+- [Observability Insights](#observability)
+- [Echtzeit-Kundenprofil](#profile)
 - [Quellen](#sources)
 
-## Data Science Workspace {#dsw}
+## Observability Insights {#observability}
 
-Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um Erkenntnisse aus Ihren Daten zu gewinnen. Data Science Workspace ist in Adobe Experience Platform integriert und hilft Ihnen bei der Erstellung von Prognosen auf der Basis Ihrer Inhalts- und Datenelemente in allen Adobe-Lösungen.
+Observability Insights ermöglicht es Ihnen, Platform-Aktivitäten mithilfe statistischer Metriken und Ereignisbenachrichtigungen zu überwachen.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Bibliotheks- und Betriebssystem-Updates | Data Science Workspace hat umfangreiche Bibliotheks- und Betriebssystemaktualisierungen vorgenommen, um die Funktionalität und Benutzerfreundlichkeit zu verbessern. Dazu gehören JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 mit CUDA 11- und CUDNN 8-Unterstützung und mehr. Informationen zum Anzeigen der verfügbaren Bibliotheken in JupyterLab finden Sie im Abschnitt [Unterstützte Bibliotheken](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) in der JupyterLab Notebook-Übersichtsdokumentation. |
+| Warnhinweise | Sie können nun wichtige Warnhinweise zu Workflows abonnieren, die auf Platform ausgeführt werden. Nach dem Abonnieren bestimmter Warnungsregeln erhalten Sie Benachrichtigungen und E-Mails in der Benutzeroberfläche, wenn ein wichtiges Lebenszyklusereignis auftritt (z. B. bei erfolgreicher Datenerfassung) oder wenn Probleme auftreten, die Ihre Aufmerksamkeit erfordern (z. B. ein Fehler bei der Aufnahme oder ein länger als erwartet dauernder Segmentauftrag). Weitere Informationen finden Sie unter [Warnhinweise - Übersicht](../../observability/alerts/overview.md). |
 
-Weitere allgemeine Informationen zu Data Science Workspace finden Sie im Abschnitt [Übersicht über Data Science Workspace](../../data-science-workspace/home.md).
+Weitere Informationen zum Dienst finden Sie unter [Übersicht über Observability Insights](../../observability/home.md) .
 
-## Datenflüsse {#dataflows}
+## Echtzeit-Kundenprofil {#profile}
 
-In Platform werden Daten aus vielen verschiedenen Quellen erfasst, innerhalb des Systems analysiert und für eine Vielzahl von Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
-
-Datenflüsse sind eine Darstellung von Aufträgen, die Daten über Platform verschieben. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie von Identity Service und vom Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
-
-**Neue Funktionen**
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das Echtzeit-Kundenprofil liefert eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen und anderen Kanälen miteinander kombiniert. Mit Profil können Sie Kundendaten in einer einheitlichen Ansicht zusammenfassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Dashboard &quot;Ziele&quot; | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse für Ziele zu überwachen. Weitere Informationen finden Sie im Tutorial zu [Überwachungszielen in der Benutzeroberfläche](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
+| Profile nach Zusammenführungsrichtlinie oder Identität durchsuchen | Beim Durchsuchen von Profilen in Experience Platform können Sie jetzt nach Zusammenführungsrichtlinien suchen, um anhand der ausgewählten Zusammenführungsrichtlinie eine Vorschau von 20 Beispielprofilen anzuzeigen. Sie können auch nach Identität suchen, um mithilfe eines Identitäts-Namespace und des zugehörigen Identitätswerts nach einem bestimmten Profil zu suchen. Weitere Informationen finden Sie im Handbuch [Benutzeroberfläche des Echtzeit-Kundenprofils](../../profile/ui/user-guide.md). |
 
-Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht zu Datenflüssen](../../dataflows/home.md). Weitere Informationen zu Zielen finden Sie unter [Ziele - Übersicht](../../destinations/home.md).
-
-## Ziele {#destinations}
-
-Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| --- | --- |
-| [Schnellere inkrementelle Dateiexporte](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | Sie können jetzt alle 3, 6, 8 und 12 Stunden inkrementelle Dateiexporte für dateibasierte Ziele planen. Das Ändern des Zeitplans für den Dateiexport für Segmente, die bereits gespeichert wurden, wird derzeit nicht unterstützt. Um Segmente mit einem anderen Zeitplan erneut zu exportieren, müssen Sie eine neue Zielinstanz erstellen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird. |
-| [Unterstützung für Deduplizierungsschlüssel](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Beseitigen Sie mehrere Datensätze desselben Profils in den Exportdateien, indem Sie einen Deduplizierungsschlüssel auswählen. Sie können einen einzelnen Namespace oder bis zu zwei XDM-Schemaattribute als Deduplizierungsschlüssel auswählen. |
-
-## Experience-Datenmodell (XDM) {#xdm}
-
-Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu dient, die Leistung digitaler Erlebnisse zu verbessern. Es bietet gemeinsame Strukturen und Definitionen für Daten in Form von Schemas, die es jeder Anwendung ermöglichen, mit Platform-Diensten zu kommunizieren.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Filter für die Telekommunikationsbranche | Beim Hinzufügen von Feldergruppen zu einem Schema in der Benutzeroberfläche können Sie jetzt nach der Telekommunikationsbranche filtern. Im [Entitätsdiagramm zur Telekommunikationsbranche (ERD)](../../xdm/schema/industries/telecom.md) finden Sie ein empfohlenes Datenmodell für Telekommunikationsanwendungsfälle. |
-
-Allgemeine Informationen zu XDM in Platform finden Sie in der [XDM-Systemübersicht](../../xdm/home.md).
-
-## Query Service {#query}
-
-Query Service ermöglicht die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform und unterstützt eine Vielzahl von Anwendungsfällen für Analyse und Datenverwaltung. Es ist ein Server-loses Tool, mit dem Sie Datensätze aus dem Data Lake verbinden und die Abfrageergebnisse als neuen Datensatz erfassen können, der in Berichten, Data Science Workspace oder zur Erfassung in Echtzeit-Kundenprofil verwendet werden kann.
-
-Sie können Query Service verwenden, um Ökosysteme für die Datenanalyse zu erstellen und ein Bild von Kunden über ihre verschiedenen Interaktionskanäle hinweg zu erstellen. Diese Kanäle können Point-of-Sale-, Web-, Mobile- oder CRM-Systeme umfassen.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-| ------- | ----------- |
-| Geplante Abfragen | Sie können jetzt Abfragen in Platform mit dem Abfrage-Editor planen. Weitere Informationen finden Sie in der Dokumentation zum [Abfrage-Editor](../../query-service/ui/user-guide.md#scheduled-queries). |
-
-Weitere Informationen finden Sie in der [Dokumentation zum Query Service](../../query-service/home.md).
+Um mehr über das Echtzeit-Kundenprofil zu erfahren, einschließlich Tutorials und Best Practices für die Arbeit mit Profildaten, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Quellen {#sources}
 
@@ -95,7 +50,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
-| [!DNL Salesforce Marketing Cloud] (Beta) | Sie können [!DNL Salesforce Marketing Cloud] jetzt über die [!DNL Flow Service]-API oder die Benutzeroberfläche mit Experience Platform verbinden. Weiterführende Informationen dazu finden Sie unter [[!DNL Salesforce Marketing Cloud] Connectoren – Übersicht](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md). |
+| Quell-Connector für lokales Hochladen von Dateien | Die Kategorie der Dateierfassung wurde in ein lokales System umbenannt, sodass Sie lokale Dateien über den lokalen Dateiupload-Connector direkt in Platform übertragen können. Die über diesen Connector erfassten Daten können über das Monitoring-Dashboard überwacht werden. Weitere Informationen finden Sie unter [Übersicht über die lokale Datei-Upload-Quelle](../../sources/connectors/local-system/local-file-upload.md) . |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
