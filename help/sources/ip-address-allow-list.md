@@ -5,10 +5,10 @@ solution: Experience Platform
 title: IP-Adressen-Zulassungsliste für Quellverbindungen
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: fcdf6209ef3fa7c4685fadd3322f631b608e4605
+source-git-commit: d6926fb32a5c14ef7c6eec4c7c28c2fd46d52f3a
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 2%
+source-wordcount: '111'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
-## VA7
+## VA7: Nordamerika
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -31,7 +31,7 @@ Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren.
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## NLD2
+## NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -41,7 +41,7 @@ Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren.
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## AUS5
+## AUS5: Australien
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
