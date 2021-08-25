@@ -2,12 +2,12 @@
 keywords: Profilattribute aktivieren; Ziele aktivieren; Daten aktivieren; E-Mail-Marketing-Ziele aktivieren; Aktivieren von Cloud-Speicher-Zielen
 title: Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele
 type: Tutorial
-seo-title: Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele
+seo-title: Activate audience data to streaming profile export destinations
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Segmente an profilbasierte Ziele senden.
-seo-description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Segmente an profilbasierte Ziele senden.
-source-git-commit: f0c854e1b6b89d499c720328fa5054611147772f
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
+source-git-commit: d13920250fafd2ba4ff37dd5d4a45d417ed3ecc7
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '524'
 ht-degree: 7%
 
 ---
@@ -25,13 +25,17 @@ Um Daten für Ziele aktivieren zu können, müssen Sie über eine erfolgreiche [
 
 ## Ziel auswählen {#select-destination}
 
-1. Gehen Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus.
+1. Gehen Sie zu **[!UICONTROL Verbindungen > Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus.
 
-   ![Registerkarte &quot;Ziel durchsuchen&quot;](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
+   ![Registerkarte &quot;Zielkatalog&quot;](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Wählen Sie die Schaltfläche **[!UICONTROL Segmente hinzufügen]** aus, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
+1. Wählen Sie **[!UICONTROL Segmente aktivieren]** auf der Karte aus, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltflächen aktivieren](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
+   ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+
+1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Segmente verwenden möchten, und wählen Sie dann **[!UICONTROL Weiter]** aus.
+
+   ![Ziel auswählen](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
 1. Navigieren Sie zum nächsten Abschnitt [wählen Sie Ihre Segmente](#select-segments) aus.
 
