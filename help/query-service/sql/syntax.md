@@ -5,9 +5,9 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 26bd2abc998320245091b0917fb6f236ed09b95c
+source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
 workflow-type: tm+mt
-source-wordcount: '2066'
+source-wordcount: '2154'
 ht-degree: 13%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 13%
 
 Adobe Experience Platform Query Service bietet die Möglichkeit, Standard-ANSI-SQL für `SELECT`-Anweisungen und andere eingeschränkte Befehle zu verwenden. Dieses Dokument behandelt die von [!DNL Query Service] unterstützte SQL-Syntax.
 
-## SELECT-Abfragen {#select-queries}
+## Abfragen auswählen {#select-queries}
 
 Die folgende Syntax definiert eine `SELECT`-Abfrage, die von [!DNL Query Service] unterstützt wird:
 
@@ -117,6 +117,15 @@ SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Cus
 Beachten Sie, dass eine `SNAPSHOT`-Klausel mit einem Tabellen- oder Tabellenalias arbeitet, jedoch nicht über einer Unter-Abfrage oder Ansicht. Eine `SNAPSHOT`-Klausel funktioniert überall dort, wo eine `SELECT`-Abfrage auf einer Tabelle angewendet werden kann.
 
 Darüber hinaus können Sie `HEAD` und `TAIL` als spezielle Offset-Werte für Momentaufnahmen-Klauseln verwenden. Die Verwendung von `HEAD` bezieht sich auf einen Offset vor dem ersten Snapshot, während `TAIL` auf einen Offset nach dem letzten Snapshot verweist.
+
+>[!NOTE]
+>
+>Wenn Sie zwischen zwei Snapshot-IDs abfragen und der Start-Snapshot abgelaufen ist, können die beiden folgenden Szenarien eintreten, je nachdem, ob das optionale Fallback-Verhalten-Flag (`resolve_fallback_snapshot_on_failure`) gesetzt ist:
+>
+>- Wenn das optionale Fallback-Verhalten-Flag gesetzt ist, wählt Query Service den frühesten verfügbaren Snapshot aus, legt ihn als Start-Snapshot fest und gibt die Daten zwischen dem frühesten verfügbaren Snapshot und dem angegebenen End-Snapshot zurück. Diese Daten sind **einschließlich** der frühesten verfügbaren Momentaufnahme.
+>
+>- Wenn das optionale Fallback-Verhalten-Flag nicht gesetzt ist, wird ein Fehler zurückgegeben.
+
 
 ### WHERE-Klausel
 
