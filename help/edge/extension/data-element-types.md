@@ -2,10 +2,10 @@
 title: Datenelementtypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie mehr über die verschiedenen Datenelementtypen, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
+source-git-commit: 4caab19e1f58fc5cec5a3c56c43e47786d49c3dc
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 43%
+source-wordcount: '511'
+ht-degree: 19%
 
 ---
 
@@ -22,7 +22,19 @@ Dieses Datenelement stellt die Zusammenführungs-ID eines Ereignisses bereit, fa
 
 ## Identitätszuordnung
 
-Mit dem Datenelement „Identitätszuordnung“ können Sie Identitäten aus anderen Datenelementen oder anderen von Ihnen angegebenen Werten erstellen. Alle von Ihnen erstellten Identitäten müssen an einen entsprechenden Namensraum zurückgebunden werden. Dieses Datenelement bietet eine Dropdown-Liste, die alle standardmäßigen Namespaces und alle von Ihnen erstellten Namespaces anzeigt.
+Mit einer Identitätszuordnung können Sie Identitäten für den Besucher Ihrer Webseite festlegen. Eine Identitätszuordnung besteht aus Namespaces wie _phone_ oder _email_, wobei jeder Namespace eine oder mehrere Identifikatoren enthält. Wenn beispielsweise die Person auf Ihrer Website zwei Telefonnummern angegeben hat, sollte Ihr Smartphone-Namespace zwei Kennungen enthalten.
+
+Im Datenelement [!UICONTROL Identitätszuordnung] geben Sie für jede Kennung die folgenden Informationen an:
+
+* **[!UICONTROL ID]**: Der Wert, der den Besucher identifiziert. Wenn die Kennung beispielsweise zum Namespace _phone_ gehört, kann die [!UICONTROL ID] _555-555-555_ lauten. Dieser Wert wird in der Regel aus einer JavaScript-Variablen oder einem anderen Datenelement auf Ihrer Seite abgeleitet. Daher ist es am besten, ein Datenelement zu erstellen, das auf die Seitendaten verweist, und dann im Datenelement [!UICONTROL ID] im Feld [!UICONTROL Identitätszuordnung] auf das Datenelement zu verweisen. Wenn der ID-Wert bei der Ausführung auf Ihrer Seite etwas Anderes als eine ausgefüllte Zeichenfolge ist, wird der Bezeichner automatisch aus der Identitätszuordnung entfernt.
+* **[!UICONTROL Authentifizierter Status]**: Eine Auswahl, die angibt, ob der Besucher authentifiziert ist.
+* **[!UICONTROL Primär]**: Eine Auswahl, die angibt, ob die Kennung als primäre Kennung für die Person verwendet werden soll. Wenn keine Kennung als primär markiert ist, wird die ECID als primäre Kennung verwendet.
+
+Sie sollten beim Erstellen einer Identitätszuordnung keine ECID angeben. Bei Verwendung des SDK wird automatisch eine ECID auf dem Server generiert und in die Identitätszuordnung aufgenommen.
+
+Das Datenelement &quot;Identitätszuordnung&quot;wird oft zusammen mit dem Datenelementtyp [[!UICONTROL XDM-Objekt] und dem Aktionstyp [[!UICONTROL Einverständnis festlegen]](action-types.md#set-consent) verwendet.](#xdm-object)
+
+Weitere Informationen zu [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=de).
 
 ![](./assets/identity-map-data-element.png)
 
