@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Das Echtzeit-Kundenprofil ermöglicht es Ihnen, innerhalb von Adobe Experience Platform eine zentrale Ansicht einzelner Kunden zu erstellen, indem es Daten aus verschiedenen Quellen zusammenführt, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1526'
-ht-degree: 11%
+source-wordcount: '1521'
+ht-degree: 10%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 [!DNL Real-time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise können Zielgruppensegmente aus [!DNL Profile]-Daten zur Aktivierung exportiert und Profilattribute zur Berichterstellung exportiert werden.
 
-Dieses Dokument enthält schrittweise Anweisungen zum Erstellen und Verwalten von Exportaufträgen mithilfe der [Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Dieses Dokument enthält schrittweise Anweisungen zum Erstellen und Verwalten von Exportaufträgen mithilfe der [Profil-API](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >

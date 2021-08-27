@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
 title: API-Endpunkt für berechnete Attribute
 topic-legacy: guide
 type: Documentation
-description: In Adobe Experience Platform sind berechnete Attribute Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. In diesem Handbuch wird das Erstellen, Ansicht, Aktualisieren und Löschen von berechneten Attributen mithilfe der Echtzeit-Customer Profil API beschrieben.
+description: In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. In diesem Handbuch erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '2277'
-ht-degree: 61%
+source-wordcount: '2272'
+ht-degree: 63%
 
 ---
 
@@ -19,31 +18,31 @@ ht-degree: 61%
 >
 >Die in diesem Dokument beschriebene Funktion für berechnete Attribute ist derzeit als Alphaversion erhältlich und steht nicht allen Benutzern zur Verfügung. Dokumentation und Funktionalität können sich ändern.
 
-Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe für die Durchführung grundlegender CRUD-Vorgänge mit dem Endpunkt `/computedAttributes`.
+Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. Dieses Handbuch enthält Beispiel-API-Aufrufe zum Ausführen grundlegender CRUD-Vorgänge mithilfe des Endpunkts `/computedAttributes` .
 
 Um mehr über berechnete Attribute zu erfahren, lesen Sie zunächst die [Übersicht über berechnete Attribute](overview.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Client-Profil-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [Echtzeit-Kundenprofil-API](https://www.adobe.com/go/profile-apis-en).
 
-Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Profil-API - Erste Schritte](../api/getting-started.md) nach Links zur empfohlenen Dokumentation, einem Leitfaden zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer beliebigen Experience Platformen-API erforderlich sind.
+Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch zur Profil-API](../api/getting-started.md) , um Links zur empfohlenen Dokumentation zu erhalten, eine Anleitung zum Lesen der in diesem Dokument angezeigten Beispiel-API-Aufrufe und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
-## Berechnete Attributfelder konfigurieren
+## Konfigurieren eines berechneten Feldnamenfelds
 
 Um ein berechnetes Attribut zu erstellen, müssen Sie zunächst das Feld in einem Schema identifizieren, das den berechneten Attributwert enthält.
 
-Informationen zum Erstellen eines berechneten Attributfelds in einem Schema finden Sie in der Dokumentation zu [Konfigurieren eines berechneten Attributs](configure-api.md).
+Weitere Informationen zum Erstellen eines berechneten Attributfelds in einem Schema finden Sie in der Dokumentation zu [Konfigurieren eines berechneten Attributs](configure-api.md) für eine vollständige End-to-End-Anleitung.
 
 >[!WARNING]
 >
->Um mit dem API-Handbuch fortzufahren, müssen Sie über ein Feld für berechnete Attribute verfügen.
+>Damit Sie mit dem API-Handbuch fortfahren können, müssen Sie über ein berechnetes Attributfeld verfügen.
 
 ## Berechnetes Attribut erstellen {#create-a-computed-attribute}
 
-Wenn Ihr berechnetes Attributfeld im aktivierten Schema Ihres Profils definiert ist, können Sie jetzt ein berechnetes Attribut konfigurieren. Wenn Sie dies noch nicht getan haben, befolgen Sie bitte den in der Dokumentation [Konfigurieren eines berechneten Attributs](configure-api.md) beschriebenen Arbeitsablauf.
+Mit dem berechneten Attributfeld, das in Ihrem Profil-aktivierten Schema definiert ist, können Sie jetzt ein berechnetes Attribut konfigurieren. Wenn Sie dies noch nicht getan haben, folgen Sie dem Workflow, der in der [Dokumentation zum Konfigurieren eines berechneten Attributs](configure-api.md) beschrieben ist.
 
-Um ein berechnetes Attribut zu erstellen, starten Sie zunächst eine Anforderung an den `/config/computedAttributes`-Endpunkt mit einem Anforderungstext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
+Um ein berechnetes Attribut zu erstellen, stellen Sie zunächst eine POST-Anfrage an den `/config/computedAttributes`-Endpunkt mit einem Anfragetext, der die Details des berechneten Attributs enthält, das Sie erstellen möchten.
 
 **API-Format**
 
@@ -84,7 +83,7 @@ curl -X POST \
 | `path` | Pfad zum Feld mit dem berechneten Attribut. Dieser Pfad befindet sich im `properties`-Attribut des Schemas und sollte NICHT den Feldnamen im Pfad beinhalten. Lassen Sie beim Schreiben des Pfads die verschiedenen Ebenen von `properties`-Attributen weg. |
 | `{TENANT_ID}` | Wenn Sie Ihre Mandantenkennung nicht kennen, lesen Sie bitte die Anleitung zum Finden Ihrer Mandantenkennung im [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn verschiedene berechnete Attribute definiert wurden, da sie Kollegen in Ihrer IMS-Organisation hilft, das gewünschte berechnete Attribut zu finden. |
-| `expression.value` | Ein gültiger Ausdruck [!DNL Profile Query Language] (PQL). Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max und boolean. Eine Liste von Beispieldokumenten finden Sie in der [Beispiel-PQL-Ausdruck](expressions.md)-Dokumentation. |
+| `expression.value` | Ein gültiger [!DNL Profile Query Language] (PQL)-Ausdruck. Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max, and boolean. Eine Liste der Beispielausdrücke finden Sie in der Dokumentation [Beispiel-PQL-Ausdrücke](expressions.md) . |
 | `schema.name` | Die Klasse, auf der das Schema mit dem berechneten Attributfeld basiert. Beispiel: `_xdm.context.experienceevent` bei einem Schema, das auf der XDM ExperienceEvent-Klasse basiert. |
 
 **Antwort**
@@ -147,9 +146,9 @@ Ein erfolgreich erstelltes berechnetes Attribut gibt den HTTP-Status 200 (OK) un
 | `type` | Der Typ der erstellten Ressource; in diesem Fall ist „ComputedAttribute“ der Standardwert. |
 | `createEpoch` und `updateEpoch` | Der Zeitpunkt, zu dem das berechnete Attribut erstellt bzw. zuletzt aktualisiert wurde. |
 
-## Erstellen Sie ein berechnetes Attribut, das auf vorhandene berechnete Attribute verweist
+## Berechnetes Attribut erstellen, das auf vorhandene berechnete Attribute verweist
 
-Es ist auch möglich, ein berechnetes Attribut zu erstellen, das auf vorhandene berechnete Attribute verweist. Dazu müssen Sie zunächst eine POST an den `/config/computedAttributes`-Endpunkt anfordern. Der Anforderungstext enthält Verweise auf die berechneten Attribute im Feld `expression.value`, wie im folgenden Beispiel gezeigt.
+Es ist auch möglich, ein berechnetes Attribut zu erstellen, das auf vorhandene berechnete Attribute verweist. Dazu stellen Sie zunächst eine POST-Anfrage an den Endpunkt `/config/computedAttributes`. Der Anfragetext enthält Verweise auf die berechneten Attribute im Feld `expression.value` , wie im folgenden Beispiel gezeigt.
 
 **API-Format**
 
@@ -162,9 +161,9 @@ POST /config/computedAttributes
 In diesem Beispiel wurden bereits zwei berechnete Attribute erstellt, die zur Definition eines dritten Attributs verwendet werden. Die vorhandenen berechneten Attribute sind:
 
 * **`totalSpend`:** Erfasst den Gesamtdollarbetrag, den ein Kunde ausgegeben hat.
-* **`countPurchases`:** Zählt die Anzahl der Käufe, die ein Kunde getätigt hat.
+* **`countPurchases`:** Zählt die Anzahl der Käufe eines Kunden.
 
-Die unten stehende Anforderung verweist auf die beiden vorhandenen berechneten Attribute, wobei gültige PQL verwendet werden, um das neue `averageSpend`-Attribut zu dividieren.
+Die folgende Anfrage verweist auf die beiden vorhandenen berechneten Attribute, wobei gültige PQL verwendet wird, um das neue `averageSpend` berechnete Attribut zu teilen.
 
 ```shell
 curl -X POST \
@@ -197,7 +196,7 @@ curl -X POST \
 | `path` | Pfad zum Feld mit dem berechneten Attribut. Dieser Pfad befindet sich im `properties`-Attribut des Schemas und sollte NICHT den Feldnamen im Pfad beinhalten. Lassen Sie beim Schreiben des Pfads die verschiedenen Ebenen von `properties`-Attributen weg. |
 | `{TENANT_ID}` | Wenn Sie Ihre Mandantenkennung nicht kennen, lesen Sie bitte die Anleitung zum Finden Ihrer Mandantenkennung im [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md#know-your-tenant_id). |
 | `description` | Eine Beschreibung des berechneten Attributs. Dies ist besonders nützlich, wenn verschiedene berechnete Attribute definiert wurden, da sie Kollegen in Ihrer IMS-Organisation hilft, das gewünschte berechnete Attribut zu finden. |
-| `expression.value` | Ein gültiger PQL-Ausdruck. Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max und boolean. Eine Liste von Beispieldokumenten finden Sie in der [Beispiel-PQL-Ausdruck](expressions.md)-Dokumentation.<br/><br/>In diesem Beispiel verweist der Ausdruck auf zwei vorhandene berechnete Attribute. Auf die Attribute wird mit den Werten `path` und `name` des berechneten Attributs verwiesen, wie sie in dem Schema angezeigt werden, in dem die berechneten Attribute definiert wurden. Beispiel: Das `path` des ersten referenzierten berechneten Attributs ist `_{TENANT_ID}.purchaseSummary` und das `name` ist `totalSpend`. |
+| `expression.value` | Ein gültiger PQL-Ausdruck. Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max, and boolean. Eine Liste der Beispielausdrücke finden Sie in der Dokumentation [Beispiel-PQL-Ausdrücke](expressions.md) .<br/><br/>In diesem Beispiel verweist der Ausdruck auf zwei vorhandene berechnete Attribute. Die Attribute werden mit dem `path` und dem `name` des berechneten Attributs referenziert, wie sie im Schema angezeigt werden, in dem die berechneten Attribute definiert wurden. Beispielsweise ist das `path` des ersten referenzierten berechneten Attributs `_{TENANT_ID}.purchaseSummary` und das `name` ist `totalSpend`. |
 | `schema.name` | Die Klasse, auf der das Schema mit dem berechneten Attributfeld basiert. Beispiel: `_xdm.context.experienceevent` bei einem Schema, das auf der XDM ExperienceEvent-Klasse basiert. |
 
 **Antwort**
@@ -279,12 +278,12 @@ Ein erfolgreich erstelltes berechnetes Attribut gibt den HTTP-Status 200 (OK) un
 
 Beim Arbeiten mit berechneten Attributen unter Verwendung der API gibt es zwei Optionen zum Aufrufen berechneter Attribute, die Ihre Organisation definiert hat. Die erste besteht im Auflisten aller berechneten Attribute, die zweite im Anzeigen eines bestimmten berechneten Attributs anhand seiner eindeutigen `id`.
 
-Die Schritte für beide Zugriffsmuster werden in diesem Dokument beschrieben. Wählen Sie zu Beginn eine der folgenden Optionen aus:
+Die Schritte für beide Zugriffsmuster werden in diesem Dokument beschrieben. Wählen Sie eine der folgenden Optionen aus, um zu beginnen:
 
-* **[Liste aller vorhandenen berechneten Attribute](#list-all-computed-attributes):** Geben Sie eine Liste aller von Ihrem Unternehmen erstellten berechneten Attribute zurück.
-* **[Ansicht eines bestimmten berechneten Attributs](#view-a-computed-attribute):** Geben Sie die Details eines einzelnen berechneten Attributs zurück, indem Sie seine ID während der Anforderung angeben.
+* **[Liste aller vorhandenen berechneten Attribute](#list-all-computed-attributes):** Gibt eine Liste aller vorhandenen berechneten Attribute zurück, die Ihre Organisation erstellt hat.
+* **[Bestimmtes berechnetes Attribut anzeigen](#view-a-computed-attribute):** Geben Sie die Details eines einzelnen berechneten Attributs zurück, indem Sie seine Kennung während der Anfrage angeben.
 
-### Liste aller berechneten Attribute {#list-all-computed-attributes}
+### Alle berechneten Attribute auflisten {#list-all-computed-attributes}
 
 Ihre IMS-Organisation kann mehrere berechnete Attribute erstellen; durch Richten einer GET-Anfrage an den `/config/computedAttributes`-Endpunkt können Sie alle vorhandenen berechneten Attribute für Ihre Organisation auflisten.
 
@@ -309,7 +308,7 @@ curl -X GET \
 
 Eine erfolgreiche Antwort umfasst ein `_page`-Attribut, das die Gesamtzahl der berechneten Attribute (`totalCount`) und die Zahl der berechneten Attribute auf der Seite (`pageSize`) angibt.
 
-Die Antwort enthält auch ein `children`-Array, das aus einem oder mehreren Objekten besteht, von denen jedes die Details zu einem berechneten Attribut enthält. Wenn Ihr Unternehmen über keine berechneten Attribute verfügt, sind `totalCount` und `pageSize` 0 (null) und das `children`-Array leer.
+Die Antwort enthält auch ein `children`-Array, das aus einem oder mehreren Objekten besteht, von denen jedes die Details zu einem berechneten Attribut enthält. Wenn Ihr Unternehmen über keine berechneten Attribute verfügt, sind `totalCount` und `pageSize` 0 (null) und das `children`-Array ist leer.
 
 ```json
 {
@@ -424,7 +423,7 @@ Die Antwort enthält auch ein `children`-Array, das aus einem oder mehreren Obje
 
 ### Berechnetes Attribut anzeigen {#view-a-computed-attribute}
 
-Sie können ein bestimmtes berechnetes Attribut Ansicht haben, indem Sie eine GET an den Endpunkt `/config/computedAttributes` anfordern und die berechnete Attribut-ID in den Anforderungspfad aufnehmen.
+Sie können ein bestimmtes berechnetes Attribut anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `/config/computedAttributes` stellen und die Kennung des berechneten Attributs in den Anfragepfad einschließen.
 
 **API-Format**
 
@@ -535,7 +534,7 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `{NEW_EXPRESSION_VALUE}` | Ein gültiger Ausdruck [!DNL Profile Query Language] (PQL). Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max und boolean. Eine Liste von Beispieldokumenten finden Sie in der [Beispiel-PQL-Ausdruck](expressions.md)-Dokumentation. |
+| `{NEW_EXPRESSION_VALUE}` | Ein gültiger [!DNL Profile Query Language] (PQL)-Ausdruck. Berechnete Attribute unterstützen derzeit die folgenden Funktionen: sum, count, min, max, and boolean. Eine Liste der Beispielausdrücke finden Sie in der Dokumentation [Beispiel-PQL-Ausdrücke](expressions.md) . |
 
 **Antwort**
 
@@ -574,13 +573,13 @@ curl -X DELETE \
 
 Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer Antworttext zurückgegeben. Um sicherzugehen, dass der Löschvorgang erfolgreich war, können Sie eine GET-Anfrage ausführen und das berechnete Attribut anhand seiner Kennung nachschlagen. Wenn das Attribut gelöscht wurde, erhalten Sie den HTTP-Fehlerstatus 404 (Nicht gefunden).
 
-## Erstellen einer Segmentdefinition, die auf ein berechnetes Attribut verweist
+## Erstellen einer Segmentdefinition mit Verweis auf ein berechnetes Attribut
 
-Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition enthält einen Ausdruck, der eine in PQL geschriebene Abfrage kapselt. Diese Ausdruck können auch auf berechnete Attribute verweisen.
+Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe spezifischer Attribute oder Verhaltensweisen aus einer Gruppe von Profilen definieren. Eine Segmentdefinition enthält einen Ausdruck, der eine in PQL geschriebene Abfrage enthält. Diese Ausdrücke können auch auf berechnete Attribute verweisen.
 
-Im folgenden Beispiel wird eine Segmentdefinition erstellt, die auf ein vorhandenes berechnetes Attribut verweist. Weitere Informationen zu Segmentdefinitionen und deren Verwendung in der Segmentierungsdienst-API finden Sie im Handbuch [API-Endpunkt für Segmentdefinitionen](../../segmentation/api/segment-definitions.md).
+Im folgenden Beispiel wird eine Segmentdefinition erstellt, die auf ein vorhandenes berechnetes Attribut verweist. Weitere Informationen zu Segmentdefinitionen und deren Verwendung in der Segmentation Service-API finden Sie im [API-Endpunkthandbuch für Segmentdefinitionen](../../segmentation/api/segment-definitions.md).
 
-Erstellen Sie zunächst eine POST an den `/segment/definitions`-Endpunkt und geben Sie das berechnete Attribut im Anforderungstext an.
+Senden Sie zunächst eine POST-Anfrage an den Endpunkt `/segment/definitions` und geben Sie das berechnete Attribut im Anfrageinhalt an.
 
 **API-Format**
 
@@ -620,17 +619,17 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | -------- | ----------- |
 | `name` | Ein eindeutiger Name für das Segment als Zeichenfolge. |
 | `description` | Eine für Menschen lesbare Beschreibung der Definition. |
-| `schema.name` | Das Schema, das den Entitäten im Segment zugeordnet ist. Besteht aus einem `id`- oder `name`-Feld. |
+| `schema.name` | Das mit den Entitäten im Segment verknüpfte Schema. Besteht aus einem `id`- oder `name`-Feld. |
 | `expression` | Ein Objekt, das Felder mit Informationen zur Segmentdefinition enthält. |
-| `expression.type` | Gibt den Ausdruck-Typ an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
-| `expression.format` | Gibt die Wertstruktur des Ausdrucks an. Derzeit wird nur `pql/text` unterstützt. |
+| `expression.type` | Gibt den Ausdruckstyp an. Derzeit wird nur &quot;PQL&quot;unterstützt. |
+| `expression.format` | Gibt die Struktur des Ausdrucks in Wert an. Derzeit wird nur `pql/text` unterstützt. |
 | `expression.value` | Ein gültiger PQL-Ausdruck, in diesem Beispiel enthält er einen Verweis auf ein vorhandenes berechnetes Attribut. |
 
-Weitere Informationen zu Segmentdefinitionsattributen finden Sie in den Beispielen, die im API-Endpunktleitfaden [für Segmentdefinitionen](../../segmentation/api/segment-definitions.md) bereitgestellt werden.
+Weiterführende Informationen zu Schemadefinitionsattributen finden Sie in den Beispielen im [API-Endpunktleitfaden für Segmentdefinitionen](../../segmentation/api/segment-definitions.md).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Segmentdefinition zurück. Weitere Informationen zu Antwortobjekten der Segmentdefinition finden Sie im Handbuch [API-Endpunkt für Segmentdefinitionen](../../segmentation/api/segment-definitions.md).
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Segmentdefinition zurück. Weitere Informationen zu Antwortobjekten der Segmentdefinition finden Sie im [API-Endpunkthandbuch für Segmentdefinitionen](../../segmentation/api/segment-definitions.md).
 
 ```json
 {

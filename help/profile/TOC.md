@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
-feature: Profile
-source-git-commit: e56898542bc9cd305173fc2d7f3b6dd53dca7eb2
-workflow-type: ht
-source-wordcount: '139'
-ht-degree: 100%
+feature: Profiles
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+workflow-type: tm+mt
+source-wordcount: '133'
+ht-degree: 96%
 
 ---
 
@@ -49,5 +49,5 @@ ht-degree: 100%
    * [Weitere Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)
 * [[!DNL Profile] Handbuch zur Fehlerbehebung](troubleshooting.md)
-* [Profil-API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
-* [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Profil-API-Referenz](https://www.adobe.com/go/profile-apis-en)
+* [Platform – Versionshinweise](https://www.adobe.com/go/platform-release-notes-en)

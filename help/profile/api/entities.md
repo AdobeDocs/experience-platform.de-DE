@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
-title: Entitäten (Profil Access) API-Endpunkt
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+title: API-Endpunkt "Entitäten (Profilzugriff)"
 topic-legacy: guide
 type: Documentation
-description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofil-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen, die häufiger als "Profil"bezeichnet werden.
+description: Mit Adobe Experience Platform können Sie über RESTful-APIs oder die Benutzeroberfläche auf Echtzeit-Kundenprofil-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der Profil-API auf Entitäten zugreifen, die häufiger als "Profile"bezeichnet werden.
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 87%
+source-wordcount: '1732'
+ht-degree: 90%
 
 ---
 
-# Entitätsendpunkt (Profil-Zugriff)
+# Entitäten-Endpunkt (Profilzugriff)
 
-Mit Adobe Experience Platform können Sie mithilfe von RESTful-APIs oder der Benutzeroberfläche auf [!DNL Real-time Customer Profile]-Daten zugreifen. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weitere Informationen zum Zugriff auf Profil mit der [!DNL Platform]-Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
+Adobe Experience Platform ermöglicht den Zugriff auf [!DNL Real-time Customer Profile]-Daten mithilfe von RESTful-APIs oder der Benutzeroberfläche. In diesem Handbuch wird beschrieben, wie Sie mithilfe der API auf Entitäten, meist als „Profile“ bezeichnet, zugreifen können. Weiterführende Informationen zum Zugriff auf Profile mithilfe der [!DNL Platform]-Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, schauen Sie bitte im Handbuch in [Erste Schritte](getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Zugriff auf Profildaten nach Identität
 
-Sie können auf eine [!DNL Profile]-Entität zugreifen, indem Sie eine GET an den `/access/entities`-Endpunkt anfordern und die Entität als eine Reihe von Abfragen-Parametern bereitstellen. Diese Identität besteht aus einem ID-Wert (`entityId`) und dem Identitäts-Namespace (`entityIdNS`).
+Sie können auf eine [!DNL Profile]-Entität zugreifen, indem Sie eine GET-Anfrage an den `/access/entities`-Endpunkt senden und die Identität der Entität als Reihe von Abfrageparametern angeben. Diese Identität besteht aus einem ID-Wert (`entityId`) und dem Identitäts-Namespace (`entityIdNS`).
 
 Die im Anfragepfad bereitgestellten Abfrageparameter geben an, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -778,7 +777,7 @@ Mithilfe dieser Payload im Anfragetext können Sie eine weitere POST-Anfrage an 
 
 ## Zeitreihenereignisse in mehreren Schemaentitäten aufrufen
 
-Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [deskriptors endpoint guide](../../xdm/api/descriptors.md).
+Sie können auf mehrere Entitäten zugreifen, die über einen Beziehungsdeskriptor miteinander verbunden sind. Im folgenden Beispiel-API-Aufruf wird davon ausgegangen, dass bereits eine Beziehung zwischen zwei Schemas definiert wurde. Weitere Informationen zu Beziehungsdeskriptoren finden Sie im [!DNL Schema Registry] API-Entwicklerhandbuch [Deskriptoren-Endpunkthandbuch](../../xdm/api/descriptors.md).
 
 Sie können in den Anfragepfad Abfrageparameter einbeziehen, um anzugeben, auf welche Daten zugegriffen werden soll. Sie können mehrere Parameter einschließen, getrennt durch ein kaufmännisches Und-Zeichen (&amp;). Eine vollständige Liste der gültigen Parameter finden Sie im Abschnitt [Abfrageparameter](#query-parameters) des Anhangs.
 
@@ -888,11 +887,11 @@ Ergebnisse werden beim Abrufen von Zeitreihenereignissen paginiert. Wenn es weit
 
 ## Nächste Schritte
 
-In diesem Handbuch haben Sie erfolgreich auf [!DNL Real-time Customer Profile]-Datenfelder, Profil und Zeitreihendaten zugegriffen. Informationen zum Zugriff auf andere in [!DNL Platform] gespeicherte Datenressourcen finden Sie unter [Übersicht über den Datenzugriff](../../data-access/home.md).
+In diesem Handbuch haben Sie erfolgreich auf [!DNL Real-time Customer Profile] Datenfelder, Profile und Zeitreihendaten zugegriffen. Informationen zum Zugriff auf andere in [!DNL Platform] gespeicherte Datenressourcen finden Sie unter [Übersicht über den Datenzugriff](../../data-access/home.md).
 
 ## Anhang {#appendix}
 
-Der folgende Abschnitt enthält zusätzliche Informationen zum Zugriff auf [!DNL Profile]-Daten mithilfe der API.
+Im folgenden Abschnitt finden Sie zusätzliche Informationen zum Zugriff auf [!DNL Profile]-Daten mithilfe der API.
 
 ### Abfrageparameter {#query-parameters}
 
@@ -912,5 +911,5 @@ Die folgenden Parameter werden im Pfad für GET-Anfragen an den `/access/entitie
 | `startTime` | Geben Sie die Startzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `startTime=1539838505` |
 | `endTime` | Geben Sie die Endzeit zum Filtern von Zeitreihenobjekten an (in Millisekunden). | `endTime=1539838510` |
 | `limit` | Numerischer Wert, der die maximale Anzahl der zurückzugebenden Objekte angibt. Standardwert: „1000“. | `limit=100` |
-| `property` | Filter nach dem Eigenschaftswert. Unterstützt die folgenden Bewerter: =, !=, &lt;, &lt;=, >, >=. Kann nur mit Erlebnis-Ereignissen verwendet werden, wobei maximal drei Eigenschaften unterstützt werden. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
+| `property` | Filtert nach dem Eigenschaftswert. Unterstützt die folgenden Auswerter: =, !=, &lt;, &lt;=, >, >=. Kann nur mit Erlebnisereignissen verwendet werden, wobei maximal drei Eigenschaften unterstützt werden. | `property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"` |
 | `withCA` | Feature Flag zur Aktivierung berechneter Attribute für das Nachschlagen. Standardwert: „false“. | `withCA=true` |

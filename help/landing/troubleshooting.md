@@ -7,10 +7,10 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: a0f4e49192a54075ce7c48620c9729e61ecdfdac
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 69%
+source-wordcount: '1763'
+ht-degree: 68%
 
 ---
 
@@ -205,5 +205,5 @@ Im Folgenden finden Sie eine Liste von Handbüchern zur Fehlerbehebung und API-R
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) |  |
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) | [[!DNL XDM System] FAQs und Handbuch zur Fehlerbehebung](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] und [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
-| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
+| [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Handbuch zur Fehlerbehebung bei Sandboxes](../sandboxes/troubleshooting-guide.md) |

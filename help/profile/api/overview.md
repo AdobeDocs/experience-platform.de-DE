@@ -3,10 +3,10 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Beispielprofildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 1c2e4cd2b4070f3844a9848b5574e9d5b1688926
+source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 22%
+source-wordcount: '886'
+ht-degree: 23%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 
 Die [!DNL Real-time Customer Profile]-API enthält mehrere Endpunkte, wie unten dargestellt. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](getting-started.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie den [Real-time Customer Profile API Reference Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie den [Real-time Customer Profile API Reference Swagger](https://www.adobe.com/go/profile-apis-en).
 
 Eine Anleitung zum Arbeiten mit [!DNL Real-time Customer Profile]-Daten in der [!DNL Experience Platform]-Benutzeroberfläche finden Sie im [Profil-Benutzerhandbuch](../ui/user-guide.md).
 
@@ -46,7 +46,7 @@ Die Adobe Experience Platform ermöglicht eine Personalisierung von Kundenerlebn
 
 ## Zusammenführungsrichtlinien {#merge-policies}
 
-Beim Zusammenführen von Daten aus mehreren Quellen in [!DNL Experience Platform] dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um individuelle Kundenprofile zu erstellen. Mit der API [!DNL Real-time Customer Profile] können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der API finden Sie im [Endpunktleitfaden für Zusammenführungsrichtlinien](merge-policies.md).
+Beim Zusammenführen von Daten aus mehreren Quellen in [!DNL Experience Platform] dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um individuelle Kundenprofile zu erstellen. Mit der API [!DNL Real-time Customer Profile] können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festlegen. Informationen zum Arbeiten mit Zusammenführungsrichtlinien mithilfe der finden Sie im [API-Endpunkthandbuch für Zusammenführungsrichtlinien](merge-policies.md).
 
 Um mehr über Zusammenführungsrichtlinien und ihre Rolle in Platform zu erfahren, lesen Sie zunächst den [Überblick über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
