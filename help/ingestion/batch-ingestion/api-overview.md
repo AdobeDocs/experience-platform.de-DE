@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Stapelverarbeitung;Stapelverarbeitung;Erfassung;Entwicklerhandbuch;API-Handbuch;Hochladen;Parquet erfassen;JSON erfassen;
+keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; Erfassung; Entwicklerhandbuch; API-Handbuch; Hochladen; Parquet erfassen; JSON erfassen erfassen;
 solution: Experience Platform
-title: Handbuch zur Batch Ingestion API
+title: Handbuch zur Batch Ingestion-API
 topic-legacy: developer guide
 description: Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von APIs für die Batch-Erfassung.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2556'
-ht-degree: 89%
+source-wordcount: '2552'
+ht-degree: 90%
 
 ---
 
-# Handbuch zur Batchaufnahme-API
+# Handbuch zur Batch-Aufnahme-API
 
-Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von [APIs für die Batch-Erfassung](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von [APIs für die Batch-Erfassung](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Erfassung verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
 
@@ -29,37 +28,37 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 - [Batch-Erfassung](./overview.md): Erlaubt Ihnen das Erfassen von Daten in Adobe Experience Platform in Form von Batch-Dateien.
 - [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten  [!DNL Experience Platform] organisiert werden.
-- [[!DNL Sandboxes]](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Anfragen, die eine Payload enthalten (POST, PUT, PATCH), erfordern möglicherweise eine zusätzliche `Content-Type`-Kopfzeile. Die für einzelne Aufrufe zulässigen Werte werden in den Aufrufparametern angegeben.
 
 ## Typen
 
-Beim Eingeben von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model] (XDM)-Schema funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
+Beim Erfassen von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model] (XDM)-Schemas funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
 
 Bei der Erfassung von Daten gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Zielschema übereinstimmt, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
 
-Beispielsweise verfügen weder JSON noch CSV über einen Datums- oder Datum/Uhrzeit-Typ. Daher werden diese Werte mit [ISO 8061-formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) („2018-07-10T15:05:59.000-08:00“) oder mit Unix-Zeit in Millisekunden ausgedrückt (1531263959000) und zum Erfassungszeitpunkt in den XDM-Zieltyp konvertiert.
+Beispielsweise verfügen weder JSON noch CSV über einen Datums- oder Datum/Uhrzeit-Typ. Daher werden diese Werte mit [ISO 8061 formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit ausgedrückt und in Millisekunden formatiert (1531263 959000) und werden zur Erfassungszeit in den Ziel-XDM-Typ konvertiert.
 
 Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterstützt werden.
 
@@ -70,7 +69,7 @@ Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterst�
 | Kurz | X | X | X | X | X | X |  |  |  |  |
 | Ganzzahl | X | X | X | X | X | X |  |  |  |  |
 | Lang | X | X | X | X | X | X | X | X |  |  |
-| Dublette | X | X | X | X | X | X |  |  |  |  |
+| Double | X | X | X | X | X | X |  |  |  |  |
 | Datum |  |  |  |  |  |  | X |  |  |  |
 | Datum/Uhrzeit |  |  |  |  |  |  |  | X |  |  |
 | Objekt |  |  |  |  |  |  |  |  | X | X |
@@ -967,7 +966,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Datenumwandlung für die Batch-Erfassung
 
-Um eine Datendatei in [!DNL Experience Platform] zu erfassen, muss die hierarchische Dateistruktur dem Schema [Erlebnisdatenmodell (XDM)](../../xdm/home.md) entsprechen, das mit dem hochgeladenen Datensatz verknüpft ist.
+Um eine Datendatei in [!DNL Experience Platform] aufzunehmen, muss die hierarchische Dateistruktur dem Schema [Experience-Datenmodell (XDM)](../../xdm/home.md) entsprechen, das mit dem hochgeladenen Datensatz verknüpft ist.
 
 Informationen dazu, wie Sie eine CSV-Datei einem XDM-Schema konform zuordnen, finden Sie im Dokument mit [Beispielumwandlungen](../../etl/transformations.md). Hier finden Sie außerdem ein Beispiel für eine richtig formatierte JSON-Datendatei. Im Dokument bereitgestellte Beispieldateien finden Sie hier:
 

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b672eab481a8286f92741a971991c7f83102acf7
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1111'
-ht-degree: 16%
+source-wordcount: '1107'
+ht-degree: 17%
 
 ---
 
@@ -152,7 +152,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einsch
 
 ## Zieldatensatz erstellen
 
-Mit einem erstellten Ziel-XDM-Schema und seinem eindeutigen `$id` können Sie jetzt einen Zieldatensatz erstellen, der Ihre Quelldaten enthält. Um einen Zieldatensatz zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `dataSets` der [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) und geben Sie dabei die ID des Zielschemas in der Payload an.
+Mit einem erstellten Ziel-XDM-Schema und seinem eindeutigen `$id` können Sie jetzt einen Zieldatensatz erstellen, der Ihre Quelldaten enthält. Um einen Zieldatensatz zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `dataSets` der [Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/) und geben Sie dabei die ID des Zielschemas in der Payload an.
 
 **API-Format**
 
@@ -191,7 +191,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name des zu erstellenden Datensatzes. |
 | `schemaRef.id` | Der URI `$id` für das XDM-Schema, auf dem der Datensatz basieren soll. |
-| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. Weitere Informationen finden Sie im Abschnitt zu [Schemaversionierung](../../../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
 
 **Antwort**
 

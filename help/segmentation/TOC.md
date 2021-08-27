@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Hilfe zum Adobe Experience Platform-Segmentierungs-Service
 breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
-feature: Segmente
-source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
+feature: Segments
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 75%
+source-wordcount: '159'
+ht-degree: 72%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 75%
    - [Zuordnungsfunktionen](pql/map-functions.md)
    - [Zeichenfolgen-Funktionen](pql/string-functions.md)
    - [Objektfunktionen](pql/object-functions.md)
-   - [Arithmetische Funktionen](pql/arithmetic-functions.md)
+   - [Arithmetische Funktionen ](pql/arithmetic-functions.md)
    - [Aggregationsfunktionen](pql/aggregation-functions.md)
    - [Datums- und Uhrzeitfunktionen](pql/datetime-functions.md)
    - [Filterfunktionen](pql/filter-functions.md)
@@ -61,5 +61,5 @@ ht-degree: 75%
    - [Importieren und Verwenden externer Zielgruppen](tutorials/using-external-audiences.md)
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Einhalten der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
-- [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
+- [API-Referenz](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

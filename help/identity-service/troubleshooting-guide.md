@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Identitäts-Namensraum;Identitäts-Namensraum
+keywords: Experience Platform; Startseite; beliebte Themen; Identitäts-Namespace; Identitäts-Namespace
 solution: Experience Platform
-title: Handbuch zur Fehlerbehebung beim Identitätsdienst
+title: Handbuch zur Fehlerbehebung bei Identity Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2185'
 ht-degree: 82%
 
 ---
 
 # Handbuch zur Fehlerbehebung bei Identity Service
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Identity Service] sowie eine Anleitung zur Fehlerbehebung für häufige Fehler. Fragen und Fehlerbehebung zu [!DNL Platform]-APIs im Allgemeinen finden Sie im Handbuch [Adobe Experience Platform API zur Fehlerbehebung](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform [!DNL Identity Service] sowie eine Anleitung zur Fehlerbehebung bei häufigen Fehlern. Fragen und die Fehlerbehebung für [!DNL Platform]-APIs im Allgemeinen finden Sie im [Handbuch zur Fehlerbehebung bei Adobe Experience Platform-API](../landing/troubleshooting.md).
 
-Daten, die eine Identifizierung einzelner Kunden erlauben, sind häufig auf die verschiedenen Geräte und Systeme verteilt, die Kunden zur Interaktion mit Ihrer Marke verwenden. [!DNL Identity Service] sammelt diese fragmentierten Identitäten zusammen, was ein vollständiges Verständnis des Kundenverhaltens ermöglicht, sodass Sie effektive digitale Erlebnisse in Echtzeit bereitstellen können. Weiterführende Informationen finden Sie in der [Identity Service – Übersicht](./home.md).
+Daten, die eine Identifizierung einzelner Kunden erlauben, sind häufig auf die verschiedenen Geräte und Systeme verteilt, die Kunden zur Interaktion mit Ihrer Marke verwenden. [!DNL Identity Service] erfasst diese fragmentierten Identitäten und erleichtert so ein vollständiges Verständnis des Kundenverhaltens, sodass Sie in Echtzeit effektive digitale Erlebnisse bereitstellen können. Weiterführende Informationen finden Sie in der [Identity Service – Übersicht](./home.md).
 
 ## FAQs
 
@@ -41,7 +40,7 @@ Eine anonyme Identität bezieht sich auf einen Identitätswert, der sich nicht a
 
 Ein privates Identitätsdiagramm ist eine private Zuordnung von Beziehungen zwischen zusammengefügten und verknüpften Identitäten, die nur für Ihre Organisation sichtbar ist.
 
-Wenn mehr als eine Identität in Daten enthalten ist, die von einem Streaming-Endpunkt erfasst oder an einen Datensatz gesendet werden, der für [!DNL Identity Service] aktiviert ist, werden diese Identitäten im Diagramm für die private Identität verknüpft. [!DNL Identity Service] nutzt dieses Diagramm, um Identitäten für einen bestimmten Verbraucher oder eine bestimmte Entität zu sammeln, damit sich Identitäten zusammenfügen und Profile zusammenführen lassen.
+Wenn mehr als eine Identität in Daten enthalten ist, die von einem Streaming-Endpunkt erfasst oder an einen Datensatz gesendet werden, der für [!DNL Identity Service] aktiviert ist, werden diese Identitäten im privaten Identitätsdiagramm verknüpft. [!DNL Identity Service] nutzt dieses Diagramm, um Identitäten für einen bestimmten Verbraucher oder eine bestimmte Entität zu sammeln, damit sich Identitäten zusammenfügen und Profile zusammenführen lassen.
 
 ## Wie erstelle ich in einem XDM-Schema mehrere Identitätsfelder?
 
@@ -75,7 +74,7 @@ Eine schrittweise Anleitung zum Definieren eines Namespace beim Erstellen eines 
 
 ## Welche Identitäts-Namespaces stellt Experience Platform standardmäßig bereit? {#standard-namespaces}
 
-Standardidentitäts-Namensraum sind Namensraum, die allen Unternehmen zur Verfügung stehen. Eine vollständige Liste der verfügbaren Standard-Namensraum finden Sie unter [Übersicht über Identitäts-Namensraum](./namespaces.md).
+Standardmäßige Identitäts-Namespaces sind Namespaces, die für alle Organisationen verfügbar sind. Eine vollständige Liste der verfügbaren Standard-Namespaces finden Sie unter [Übersicht über Identitäts-Namespaces](./namespaces.md) .
 
 ## Wo finde ich die Liste der verfügbaren Namespaces für meine Organisation?
 
@@ -123,11 +122,11 @@ Internal solutions|Preferred|Common
 
 ## Fehlerbehebung
 
-Der folgende Abschnitt enthält Vorschläge zur Fehlerbehebung für bestimmte Fehlercodes und unerwartetes Verhalten, auf das Sie bei der Arbeit mit der [!DNL Identity Service]-API stoßen können.
+Im folgenden Abschnitt finden Sie Vorschläge zur Fehlerbehebung für bestimmte Fehlercodes und unerwartetes Verhalten, auf die Sie beim Arbeiten mit der [!DNL Identity Service]-API stoßen können.
 
 ## [!DNL Identity Service] Fehlermeldungen
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen, die Sie möglicherweise bei Verwendung der [!DNL Identity Service]-API erhalten.
+Im Folgenden finden Sie eine Liste von Fehlermeldungen, die bei Verwendung der [!DNL Identity Service]-API auftreten können.
 
 ### Erforderlicher Abfrageparameter fehlt
 
@@ -159,7 +158,7 @@ Vergewissern Sie sich, dass Sie den angegebenen Parameter im Anfragepfad ordnung
 }
 ```
 
-[!DNL Identity Service] entfernt Daten, die älter als 180 Tage sind. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
+[!DNL Identity Service] löscht Daten, die älter als 180 Tage sind. Diese Fehlermeldung wird angezeigt, wenn Sie versuchen, auf ältere Daten zuzugreifen.
 
 ### Es gilt eine Beschränkung von 1.000 XIDs in einem einzelnen Aufruf.
 
@@ -220,7 +219,7 @@ Diese Fehlermeldung wird angezeigt, wenn Ihre IMS-Organisation nicht über die e
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, um weiterhin [!DNL Platform]-APIs verwenden zu können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, um weiterhin [!DNL Platform]-APIs zu verwenden. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis).
 
 ### Token für Autorisierungsdienst ist ungültig.
 
@@ -232,7 +231,7 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, um weiterhin [!DNL Platform]-APIs verwenden zu können. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 Stunden ab und müssen neu generiert werden, um weiterhin [!DNL Platform]-APIs zu verwenden. Anweisungen zum Generieren neuer Zugriffstoken finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ### Anwender-Token weist keinen gültigen Produktkontext auf.
 
@@ -244,7 +243,7 @@ Bei diesem Fehler ist Ihr Zugriffstoken ungültig. Zugriffstoken laufen alle 24 
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einer [!DNL Experience Platform]-Integration generiert wurde. Anweisungen zum Generieren neuer Zugriffstoken für eine [!DNL Experience Platform]-Integration finden Sie im [Authentifizierungstutorial](https://www.adobe.com/go/platform-api-authentication-en).
+Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einer [!DNL Experience Platform] -Integration generiert wurde. Anweisungen zum Generieren neuer Zugriffstoken für eine [!DNL Experience Platform] -Integration finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) .
 
 ### Interner Fehler beim Abrufen der nativen XID aus dem Identitäts- und Namespace-Code.
 
@@ -256,9 +255,9 @@ Diese Fehlermeldung wird angezeigt, wenn Ihr Zugriffstoken nicht aus einer [!DNL
 }
 ```
 
-Wenn [!DNL Identity Service] eine Identität beibehält, wird der ID der Identität und der zugehörigen Namensraum-ID eine eindeutige ID zugewiesen, die als XID bezeichnet wird. Diese Meldung wird angezeigt, wenn bei der Suche nach einer XID für einen angegebenen ID-Wert und Namespace ein Fehler auftritt.
+Wenn [!DNL Identity Service] eine Identität persistiert, wird der ID der Identität und der zugehörigen Namespace-ID eine eindeutige Kennung zugewiesen, die als XID bezeichnet wird. Diese Meldung wird angezeigt, wenn bei der Suche nach einer XID für einen angegebenen ID-Wert und Namespace ein Fehler auftritt.
 
-### Das IMS-Org ist nicht für die [!DNL Identity Service]-Verwendung vorgesehen.
+### Die IMS-Organisation ist nicht für die Verwendung von [!DNL Identity Service] vorgesehen.
 
 ```json
 {
@@ -286,7 +285,7 @@ Dieser Fehler wird angezeigt, wenn bei der Ausführung eines Dienstaufrufs [!DNL
 
 [!DNL Identity Service] erfasst Identitätsdaten aus Datensatz- und Zeitreihendaten, die mithilfe der Batch-Erfassung in hochgeladen werden.[!DNL Platform] Da die Batch-Erfassung ein asynchroner Vorgang ist, müssen Sie die Details für einen Batch anzeigen, um Fehler zu prüfen. Während der Batch-Verarbeitung werden Fehler gesammelt, bis der Batch abgeschlossen ist.
 
-Im Folgenden finden Sie eine Liste von Fehlermeldungen zu [!DNL Identity Service], auf die Sie bei Verwendung der [Dateneinbetungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) stoßen können.
+Im Folgenden finden Sie eine Liste von Fehlermeldungen im Zusammenhang mit [!DNL Identity Service], die bei der Verwendung der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) auftreten können.
 
 ### Unbekanntes XDM-Schema
 
@@ -298,7 +297,7 @@ Im Folgenden finden Sie eine Liste von Fehlermeldungen zu [!DNL Identity Service
 }
 ```
 
-[!DNL Identity Service] Verwendet nur Identitäten für Datensatz- oder Zeitreihendaten, die den  [!DNL Profile] bzw.  [!DNL ExperienceEvent] Klassen entsprechen. Wenn Sie versuchen, Daten für [!DNL Identity Service] zu erfassen, die keiner der beiden Klassen entsprechen, wird dieser Fehler Trigger.
+[!DNL Identity Service] verwendet nur Identitäten für Datensatz- oder Zeitreihendaten, die den  [!DNL Profile] bzw. den  [!DNL ExperienceEvent] Klassen entsprechen. Wenn Sie versuchen, Daten für [!DNL Identity Service] zu erfassen, die keiner der beiden Klassen entsprechen, wird dieser Fehler Trigger.
 
 ### Es gab 0 gültige Identitäten in den ersten 100 Zeilen des verarbeiteten Batch.
 
@@ -346,7 +345,7 @@ Dieser Fehler wird angezeigt, wenn ein erfasster Eintrag eine Identität enthäl
 }
 ```
 
-Beim Erfassen von Stapeldaten wird diese Fehlermeldung angezeigt, wenn Ihr IMS-Unternehmen nicht über die erforderlichen Berechtigungen für [!DNL Identity Service] verfügt. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
+Beim Erfassen von Batch-Daten wird diese Fehlermeldung angezeigt, wenn Ihre IMS-Organisation nicht über die erforderlichen Berechtigungen für [!DNL Identity Service] verfügt. Wenden Sie sich an Ihren Systemadministrator, um das Problem zu beheben.
 
 ### Interner Fehler
 

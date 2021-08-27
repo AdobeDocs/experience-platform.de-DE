@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Anleitung zu Katalog und Datensätzen
 user-guide-description: Informieren Sie sich über Datenlinien, Metadaten, Dateibeschreibungen, Verzeichnissen und Datensätzen im Data Lake.
 feature: Data Management
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '108'
-ht-degree: 100%
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 95%
 
 ---
 
@@ -33,5 +33,5 @@ ht-degree: 100%
    * [Erstellen und Ausfüllen eines Datensatzes mithilfe von APIs](datasets/create.md)
 * [Verarbeitung von Datenschutzanfragen im Data Lake](privacy.md)
 * [Datenschutz in Experience Platform](data-protection.md)
-* [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [API-Referenz](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

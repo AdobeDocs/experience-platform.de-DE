@@ -5,16 +5,16 @@ title: Datenerfassungsbenachrichtigungen
 topic-legacy: overview
 description: Um die Überwachung des Aufnahmevorgangs zu unterstützen, ermöglicht es Adobe Experience Platform, eine Reihe von Ereignissen zu abonnieren, die von jedem Prozessschritt veröffentlicht werden. Dadurch werden Sie über den Status der aufgenommenen Daten und mögliche Fehler informiert.
 exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 29%
+source-wordcount: '677'
+ht-degree: 27%
 
 ---
 
 # Benachrichtigungen zur Datenerfassung
 
-Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in [!DNL Platform] aufgenommen werden müssen, beginnt der Aufnahmevorgang und jeder Schritt erfolgt nacheinander, bis die Daten erfolgreich erfasst wurden oder fehlschlagen. Der Erfassungsvorgang kann mit der [Adobe Data Ingestion-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) oder über die Experience Platform-Benutzeroberfläche eingeleitet werden.[!DNL Experience Platform]
+Der Prozess der Datenaufnahme in Adobe Experience Platform besteht aus mehreren Schritten. Sobald Sie Datendateien identifiziert haben, die in [!DNL Platform] aufgenommen werden müssen, beginnt der Aufnahmevorgang und jeder Schritt erfolgt nacheinander, bis die Daten erfolgreich erfasst wurden oder fehlschlagen. Der Erfassungsvorgang kann mit der [Adobe Data Ingestion-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) oder über die Experience Platform-Benutzeroberfläche eingeleitet werden.[!DNL Experience Platform]
 
 Daten, die in [!DNL Platform] geladen werden, müssen mehrere Schritte durchlaufen, um ihr Ziel, den [!DNL Data Lake]- oder den [!DNL Real-time Customer Profile]-Datenspeicher, zu erreichen. Jeder Schritt umfasst die Verarbeitung der Daten, die Validierung der Daten und dann die Speicherung der Daten, bevor sie an den nächsten Schritt weitergeleitet werden. Je nachdem, wie viele Daten aufgenommen werden, kann dies ein zeitaufwendiger Prozess sein und es besteht immer die Möglichkeit, dass der Prozess aufgrund von Validierungs-, Semantik- oder Verarbeitungsfehlern fehlschlägt. Im Fall eines Fehlers müssen die Datenprobleme behoben werden und dann der gesamte Aufnahmevorgang mit den korrigierten Datendateien neu gestartet werden.
 

@@ -1,37 +1,36 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Erfassen von Zahlungsdaten;Zahlungsdaten
+keywords: Experience Platform; Startseite; beliebte Themen; Zahlungsdaten erfassen; Zahlungsdaten
 solution: Experience Platform
-title: Erfassen von Zahlungsdaten mithilfe von Quell-Connectors und APIs
+title: Erfassen von Zahlungsdaten mithilfe von Quell-Connectoren und APIs
 topic-legacy: overview
 type: Tutorial
-description: Dieses Lernprogramm beschreibt die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und zum Integrieren in die Plattform mithilfe von Quellschnittstellen und APIs.
+description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1598'
-ht-degree: 19%
+source-wordcount: '1594'
+ht-degree: 20%
 
 ---
 
-# Erfassen von Zahlungsdaten mithilfe von Quellschnittstellen und APIs
+# Erfassen von Zahlungsdaten über Quell-Connectoren und APIs
 
-In diesem Lernprogramm werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Zahlungsanwendung und zum Integrieren dieser Daten in die Plattform über Quellschnittstellen und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Zahlungsanwendung und deren Aufnahme in Platform über Quell-Connectoren und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
 
 ## Erste Schritte
 
-Dieses Lernprogramm erfordert den Zugriff auf einen Zahlungsantrag über eine gültige Verbindung sowie Informationen über die Datei, die Sie in Platform einbringen möchten (einschließlich Pfad und Struktur der Datei). Wenn Sie diese Informationen nicht haben, lesen Sie das Tutorial zu [Eine Zahlungsanwendung mit der Flow Service API](../explore/payments.md), bevor Sie dieses Tutorial ausprobieren.
+Für dieses Tutorial benötigen Sie Zugriff auf eine Zahlungsanwendung über eine gültige Verbindung sowie Informationen über die Datei, die Sie in Platform einbringen möchten (einschließlich Pfad und Struktur der Datei). Wenn Sie nicht über diese Informationen verfügen, lesen Sie das Tutorial zum [Erkunden einer Zahlungsanwendung mithilfe der Flow Service-API](../explore/payments.md) , bevor Sie dieses Tutorial ausführen.
 
-Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
+Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Entwicklerhandbuch](../../../../xdm/api/getting-started.md) zur Schema-Registrierung: Enthält wichtige Informationen, die Sie zur erfolgreichen Durchführung von Aufrufen der Schema Registry API kennen müssen. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
+   * [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist „System of Record“ für die Position und Herkunft von Daten in Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Stapeleinbetungs-API können Sie Daten als Batch-Dateien in die Experience Platform aufnehmen.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
 * [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mit der [!DNL Flow Service]-API eine Verbindung zu einer Zahlungsanwendung herzustellen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu einer Zahlungsanwendung herstellen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -39,13 +38,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in Experience Platform, einschließlich der Ressourcen von [!DNL Flow Service], werden zu bestimmten virtuellen Sandboxen isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in der Experience Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,21 +52,21 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * `Content-Type: application/json`
 
-## Erstellen einer Quellverbindung {#source}
+## Quellverbindung erstellen {#source}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST an die API [!DNL Flow Service] anfordern. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungs-Spec-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API richten. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
-Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformatattribut definieren.
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
 
-Verwenden Sie die folgenden Enum-Werte für dateibasierte Connectors:
+Verwenden Sie die folgenden Enum-Werte für dateibasierte Connectoren:
 
 | Datenformat | Enum-Wert |
 | ----------- | ---------- |
 | Getrennt | `delimited` |
 | JSON | `json` |
-| Parkett | `parquet` |
+| Parquet | `parquet` |
 
-Legen Sie für alle tabellenbasierten Connectors den Wert auf `tabular` fest.
+Setzen Sie für alle tabellenbasierten Connectoren den Wert auf `tabular`.
 
 **API-Format**
 
@@ -139,11 +138,11 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | Die eindeutige Verbindungs-ID der Zahlungsanwendung eines Drittanbieters, auf die Sie zugreifen. |
 | `params.path` | Der Pfad der Quelldatei. |
-| `connectionSpec.id` | Die Verbindungs-spec-ID Ihres Zahlungsantrags. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Zahlungsanwendung. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in späteren Schritten erforderlich, um eine Zielgruppe zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in späteren Schritten zum Erstellen einer Zielverbindung erforderlich.
 
 ```json
 {
@@ -152,11 +151,11 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-## Zielgruppe-XDM-Schema {#target-schema} erstellen
+## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielgruppe-Schema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Mit dem Schema Zielgruppe wird dann ein Plattformdataset erstellt, in dem die Quelldaten enthalten sind. Diese Zielgruppe XDM-Schema erweitert auch die XDM [!DNL Individual Profile]-Klasse.
+Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind. Dieses Ziel-XDM-Schema erweitert auch die XDM-Klasse [!DNL Individual Profile] .
 
-Ein Zielgruppe-XDM-Schema kann erstellt werden, indem eine POST an die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) angefordert wird.
+Ein Ziel-XDM-Schema kann durch Ausführung einer POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) erstellt werden.
 
 **API-Format**
 
@@ -166,7 +165,7 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanforderung erstellt ein XDM-Schema, das die XDM [!DNL Individual Profile]-Klasse erweitert.
+Die folgende Beispielanfrage erstellt ein XDM-Schema, das die XDM-Klasse [!DNL Individual Profile] erweitert.
 
 ```shell
 curl -X POST \
@@ -203,7 +202,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich seiner eindeutigen Kennung (`$id`) zurück. Diese ID ist in späteren Schritten erforderlich, um einen Zielgruppe-Datensatz, eine Zuordnung und einen Datendurchlauf zu erstellen.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einschließlich der eindeutigen Kennung (`$id`). Diese ID ist in späteren Schritten erforderlich, um einen Zieldatensatz, eine Zielzuordnung und einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -267,9 +266,9 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich
 }
 ```
 
-## Zielgruppen-Dataset erstellen
+## Zieldatensatz erstellen
 
-Ein Zielgruppen-Datensatz kann erstellt werden, indem eine POST an die [Katalogdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) angefordert wird und die ID des Zielgruppe-Schemas innerhalb der Nutzlast angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/) gesendet wird, wobei die Kennung des Zielschemas in der Payload angegeben wird.
 
 **API-Format**
 
@@ -298,12 +297,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `schemaRef.id` | Das `$id` des Ziel-XDM-Schemas. |
 | `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Zielgruppe-Dataset-ID wie in den späteren Schritten zum Erstellen einer Zielgruppe- und eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Ziel-Datensatz-ID so, wie es in späteren Schritten erforderlich ist, um eine Zielverbindung und einen Datenfluss zu erstellen.
 
 ```json
 [
@@ -311,11 +310,11 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des neu erstellten 
 ]
 ```
 
-## Erstellen einer Zielgruppe-Verbindung {#target-connection}
+## Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielgruppe-Verbindung stellt die Verbindung mit dem Ziel dar, in dem die erfassten Daten landen. Um eine Verbindung zur Zielgruppe herzustellen, müssen Sie die mit dem Data Lake verknüpfte eindeutige Verbindungsspezifikations-ID angeben. Diese Verbindungs-Spec-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in dem die aufgenommenen Daten landen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie haben jetzt die eindeutigen Bezeichner, ein Zielgruppe-Schema, einen Zielgruppe-Datensatz und die Verbindungsspezifikations-ID zum Datensee. Mithilfe der API [!DNL Flow Service] können Sie eine Zielgruppe-Verbindung herstellen, indem Sie diese IDs zusammen mit dem Datensatz angeben, der die eingehenden Quelldaten enthalten soll.
+Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Mit der API [!DNL Flow Service] können Sie eine Zielverbindung erstellen, indem Sie diese Kennungen zusammen mit dem Datensatz angeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -354,14 +353,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.schema.id` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `data.schema.id` | Das `$id` des Ziel-XDM-Schemas. |
 | `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
-| `params.dataSetId` | Die ID des Zielgruppe-Datensatzes. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die zum Herstellen einer Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `params.dataSetId` | Die ID des Zieldatensatzes. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbindung (`id`) zurück. Dieser Wert ist in einem späteren Schritt erforderlich, um einen Datenflug zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`) zurück. Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
@@ -372,7 +371,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielgruppe-Verbi
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zielgruppe-Datensatz aufgenommen werden können, müssen sie zunächst dem Zielgruppe-Schema zugeordnet werden, dem der Zielgruppe-Datensatz entspricht. Dies wird erreicht, indem eine POST an die [Konvertierungsdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) mit Datenzuordnungen ausgeführt wird, die innerhalb der Anforderungsnutzlast definiert sind.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht. Dies wird erreicht, indem eine POST-Anfrage an die [Konvertierungsdienst-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mapping-service-api.yaml) mit Datenzuordnungen ausgeführt wird, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -434,11 +433,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `xdmSchema` | Die `$id` des Zielgruppe XDM-Schemas. |
+| `xdmSchema` | Das `$id` des Ziel-XDM-Schemas. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließlich ihrer eindeutigen Kennung (`id`) zurück. Diese ID ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Mapping zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -451,9 +450,9 @@ Eine erfolgreiche Antwort gibt Details der neu erstellten Zuordnung einschließl
 }
 ```
 
-## Nachschlagen von Datennachrichtenspezifikationen {#specs}
+## Datenflussspezifikationen nachschlagen {#specs}
 
-Ein Datennachweis ist dafür verantwortlich, Daten aus Quellen zu sammeln und sie in Plattform zu bringen. Um einen Datenflug zu erstellen, müssen Sie zunächst die Datenaflow-Spezifikationen abrufen, indem Sie eine GET an die [!DNL Flow Service]-API senden. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
+Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API richten. Dataflow-Spezifikationen sind für die Erfassung von Daten aus einer externen Datenbank oder einem NoSQL-System verantwortlich.
 
 **API-Format**
 
@@ -473,7 +472,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation zurückgegeben, die für das Übertragen von Daten aus Ihrer Quelle in die Plattform verantwortlich ist. Die Antwort enthält die eindeutige Flussspezifikation `id`, die zum Erstellen eines neuen Datenflusses erforderlich ist.
+Bei einer erfolgreichen Antwort werden die Details der Datenflug-Spezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform zuständig ist. Die Antwort enthält die eindeutige Flussspezifikation `id`, die zum Erstellen eines neuen Datenflusses erforderlich ist.
 
 ```json
 {
@@ -704,16 +703,16 @@ Bei einer erfolgreichen Antwort werden die Details der Datenaflow-Spezifikation 
 
 ## Datenfluss erstellen
 
-Der letzte Schritt zur Datenerfassung besteht darin, einen Datenflug zu erstellen. An dieser Stelle sollten die folgenden erforderlichen Werte vorbereitet sein:
+Der letzte Schritt bei der Datenerfassung besteht darin, einen Datenfluss zu erstellen. An dieser Stelle sollten die folgenden erforderlichen Werte vorbereitet werden:
 
-* [Quell-Verbindungs-ID](#source)
-* [Zielgruppen-Verbindungs-ID](#target)
+* [Quellverbindungs-ID](#source)
+* [Target-Verbindungs-ID](#target)
 * [Mapping-ID](#mapping)
-* [Dataflow-Spezifikation-ID](#specs)
+* [Dataflow-Spezifikations-ID](#specs)
 
-Ein Datenaflow ist für die Planung und Erfassung von Daten aus einer Quelle zuständig. Sie können einen Datenflug erstellen, indem Sie eine POST anfordern und dabei die zuvor genannten Werte in der Nutzlast angeben.
+Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Erfassung zu planen, müssen Sie zunächst den Zeitwert des Beginns auf Epochenzeit in Sekunden festlegen. Dann müssen Sie den Frequenzwert auf eine der fünf Optionen einstellen: `once`, `minute`, `hour`, `day` oder `week`. Der Wert &quot;interval&quot;gibt den Zeitraum zwischen zwei aufeinander folgenden Aufrufen an. Für die Erstellung einer einmaligen Erfassung ist kein Intervall erforderlich. Bei allen anderen Frequenzen muss der Intervallwert auf &lt; oder größer als `15` eingestellt werden.
+Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen an und bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf `15` oder größer gesetzt werden.
 
 **API-Format**
 
@@ -772,15 +771,15 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `flowSpec.id` | Die [Flussspec-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
+| `flowSpec.id` | Die [Flussspezifikations-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
 | `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) wurde in einem früheren Schritt abgerufen. |
-| `targetConnectionIds` | Die [Zielgruppe-Verbindungs-ID](#target-connection) wurde in einem früheren Schritt abgerufen. |
-| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) wurde in einem früheren Schritt abgerufen. |
-| `transformations.params.deltaColum` | Die angegebene Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Datumsformat für `deltaColumn` ist `yyyy-MM-dd HH:mm:ss`. |
-| `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
-| `scheduleParams.startTime` | Die Beginn-Zeit für den Datenflug in Epochenzeit. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zu den zulässigen Werten gehören: `once`, `minute`, `hour`, `day` oder `week`. |
-| `scheduleParams.interval` | Das Intervall gibt den Zeitraum zwischen zwei aufeinander folgenden Flussläufen an. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Frequenz auf `once` eingestellt ist und bei anderen Frequenzwerten größer oder gleich `15` sein sollte. |
+| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection), die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.deltaColum` | Die benannte Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Datumsformat für `deltaColumn` ist `yyyy-MM-dd HH:mm:ss`. |
+| `transformations.params.mappingId` | Die Ihrer Datenbank zugeordnete Zuordnungs-ID. |
+| `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` gesetzt ist, und sollte für andere Frequenzwerte größer oder gleich `15` sein. |
 
 **Antwort**
 
@@ -793,13 +792,13 @@ Eine erfolgreiche Antwort gibt die ID `id` des neu erstellten Datenflusses zurü
 }
 ```
 
-## Überwachen des Datenflusses
+## Überwachen Ihres Datenflusses
 
-Nachdem der Datenfluss erstellt wurde, können Sie die Daten überwachen, die durch ihn erfasst werden, um Informationen zu den Flussläufen, zum Abschlussstatus und zu Fehlern anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Lernprogramm zu [Überwachungsdataflows in der API ](../monitor.md)
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die erfassten Daten überwachen, um Informationen über die Durchsatzausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial zum [Überwachen von Datenflüssen in der API ](../monitor.md)
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie einen Quell-Connector erstellt, um Daten aus einer Zahlungsanwendung planmäßig zu erfassen. Eingehende Daten können jetzt von nachgeschalteten Plattformdiensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus einer Zahlungsanwendung auf geplanter Basis zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-* [Übersicht über den Data Science Workspace](../../../../data-science-workspace/home.md)
+* [Data Science Workspace – Übersicht](../../../../data-science-workspace/home.md)

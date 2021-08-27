@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Batch;Stapel;Datensatz aktivieren;Stapelverarbeitungsübersicht;Übersicht;Stapelverarbeitungsübersicht; Stapelverarbeitungsübersicht;
+keywords: Experience Platform; Startseite; beliebte Themen; Datenerfassung; Batch; Batch; Datensatz aktivieren; Batch-Erfassung - Übersicht; Batch-Erfassung - Übersicht; Batch-Erfassung - Übersicht;
 solution: Experience Platform
-title: Batch Ingestion - Übersicht
+title: Batch-Erfassung - Übersicht
 topic-legacy: overview
-description: Mit der Adobe Experience Platform Data Ingestion API können Sie Daten als Batch-Dateien in Plattform erfassen. Daten, die erfasst werden, können Profil-Daten aus einer reduzierten Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der XDM-Registrierung (Experience Data Model) entsprechen.
+description: Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 75%
+source-wordcount: '1218'
+ht-degree: 79%
 
 ---
 
-# Überblick über die Stapelverarbeitung
+# Batch-Erfassung - Übersicht
 
-Mit der Adobe Experience Platform Data Ingestion API können Sie Daten als Batch-Dateien in Plattform erfassen. Daten, die erfasst werden, können die Profil-Daten aus einer einfachen Datei in einem CRM-System (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der [!DNL Experience Data Model]-Registrierung (XDM) entsprechen.
+Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der [!DNL Experience Data Model] (XDM)-Registry entsprechen.
 
-Der [Datenaufnahme-API-Verweis](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) enthält weitere Informationen zu diesen API-Aufrufen.
+Der [Datenaufnahme-API-Verweis](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) enthält weitere Informationen zu diesen API-Aufrufen.
 
 Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
@@ -25,7 +24,7 @@ Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
 ## Verwenden der API
 
-Mit der API [!DNL Data Ingestion] können Sie Daten als Stapel (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als einzelne Einheit aufgenommen werden sollen) in drei grundlegende Schritte in [!DNL Experience Platform] aufnehmen:
+Mit der API [!DNL Data Ingestion] können Sie Daten in drei grundlegenden Schritten als Batches (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als Einheit erfasst werden sollen) in [!DNL Experience Platform] erfassen:
 
 1. Erstellen eines neuen Batches.
 2. Hochladen von Dateien in einen angegebenen Datensatz, der dem XDM-Schema der Daten entspricht.
@@ -48,23 +47,23 @@ Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleine
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform] werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 
@@ -238,7 +237,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. Auf diese Weise werden die Einträge [!DNL Catalog] DataSetFile für die abgeschlossenen Dateien erstellt und mit dem oben generierten Stapel verknüpft. Anschließend wird der [!DNL Catalog]-Stapel als erfolgreich markiert, der von den Triggern nach unten fließt, um die verfügbaren Daten zu erfassen.
+Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. Auf diese Weise werden die [!DNL Catalog] DataSetFile -Einträge für die abgeschlossenen Dateien erstellt und mit dem oben generierten Batch verknüpft. Der [!DNL Catalog]-Batch wird dann als erfolgreich markiert, wodurch bei nachgelagerten Flüssen die Aufnahme der verfügbaren Daten ausgelöst wird.
 
 **Anfrage**
 
@@ -389,10 +388,10 @@ Das `"status"`-Feld zeigt den aktuellen Status des angeforderten Batches an. Die
 | Status | Beschreibung |
 | ------ | ----------- |
 | Vorzeitig beendet | Der Batch wurde nicht im erwarteten Zeitrahmen fertiggestellt. |
-| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Wenn sich der Stapel im Status &quot;geladen&quot;befindet, kann er nicht abgebrochen werden. |
+| Abgebrochen | Für den angegebenen Stapel wurde **explizit** ein Unterbrechungsvorgang (über die Batch-Aufnahme-API) aufgerufen. Sobald sich der Batch im Status &quot;Geladen&quot;befindet, kann er nicht mehr abgebrochen werden. |
 | Aktiv | Der Batch wurde erfolgreich gefördert und steht für den nachgelagerten Verbrauch zur Verfügung. Dieser Status kann synonym mit &quot;Erfolg&quot;verwendet werden. |
 | Gelöscht | Die Daten für den Batch wurden vollständig entfernt. |
-| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit &quot;Failure&quot;verwendet werden. |
+| Fehlgeschlagen | Ein Terminal-Status, der entweder auf eine fehlerhafte Konfiguration und/oder auf fehlerhafte Daten zurückzuführen ist. Daten für einen fehlgeschlagenen Batch werden **nicht** angezeigt. Dieser Status kann synonym mit &quot;Fehler&quot;verwendet werden. |
 | Inaktiv | Der Batch wurde erfolgreich gefördert, wurde jedoch zurückgesetzt oder ist abgelaufen. Der Batch ist nicht mehr für den nachgelagerten Verbrauch verfügbar. |
 | Geladen | Die Daten für den Batch sind abgeschlossen und der Stapel kann gefördert werden. |
 | Wird geladen | Daten für diesen Batch werden hochgeladen und der Batch kann derzeit noch **nicht** gefördert werden. |

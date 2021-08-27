@@ -1,52 +1,51 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Überwachen von Datenflüssen;Flussdienst-API;Flussdienst
+keywords: Experience Platform; Startseite; beliebte Themen; Überwachen von Datenflüssen; Flussdienst-API; Flussdienst
 solution: Experience Platform
-title: Überwachen von Datenflüssen mit der Flussdienst-API
+title: Überwachen von Datenflüssen mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: In diesem Lernprogramm werden die Schritte zur Überwachung von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service API beschrieben.
+description: In diesem Tutorial werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service-API beschrieben.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 20%
+source-wordcount: '718'
+ht-degree: 28%
 
 ---
 
-# Überwachen von Datenflüssen mithilfe der Flow Service API
+# Überwachen von Datenflüssen mithilfe der Flow Service-API
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken. Darüber hinaus ermöglicht die Experience Platform die Aktivierung von Daten an externe Partner.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken. Darüber hinaus ermöglicht Experience Platform die Aktivierung von Daten für externe Partner.
 
-[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen und Ziele verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen und Ziele miteinander verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mit dem [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
+In diesem Tutorial werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mit [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 
-Für dieses Lernprogramm müssen Sie über den ID-Wert eines gültigen Datenflusses verfügen. Wenn Sie keine gültige DataFlow-ID haben, wählen Sie den gewünschten Connector aus dem [sources overview](../../sources/home.md) oder [destination overview](../../destinations/catalog/overview.md) und befolgen Sie die Schritte, die vor dem Versuch dieses Lernprogramms beschrieben werden.
+Für dieses Tutorial müssen Sie über den ID-Wert eines gültigen Datenflusses verfügen. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellenübersicht](../../sources/home.md) oder [Zielübersicht](../../destinations/catalog/overview.md) aus und befolgen Sie die Schritte, die vor dem Versuch dieses Tutorials beschrieben werden.
 
-Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
+Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
-- [Ziele](../../destinations/home.md): Ziele sind vorgefertigte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten von Platform für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle ermöglichen.
-- [Quellen](../../sources/home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-- [Sandboxen](../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+- [Ziele](../../destinations/home.md): Ziele sind vordefinierte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten aus Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
+- [Quellen](../../sources/home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie zur erfolgreichen Überwachung von Flussläufen mit der API [!DNL Flow Service] kennen müssen.
+In den folgenden Abschnitten finden Sie zusätzliche Informationen, die Sie benötigen, um die Flussläufe mithilfe der [!DNL Flow Service]-API erfolgreich überwachen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,9 +53,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 - `Content-Type: application/json`
 
-## Monitorfluss
+## Durchfluss überwachen
 
-Nachdem Sie einen Datenflug durchgeführt haben, führen Sie eine GET an die API [!DNL Flow Service] aus.
+Nachdem Sie einen Datenfluss erstellt haben, führen Sie eine GET-Anfrage an die [!DNL Flow Service]-API aus.
 
 **API-Format**
 
@@ -66,11 +65,11 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige Wert `id` für den Datendurchlauf, den Sie überwachen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id` -Wert für den Datenfluss, den Sie überwachen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft die Spezifikationen für einen vorhandenen Datendurchlauf ab.
+Mit der folgenden Anfrage werden die Spezifikationen für einen vorhandenen Datenfluss abgerufen.
 
 ```shell
 curl -X GET \
@@ -83,7 +82,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zu Ihrem Flusslauf zurück, einschließlich Informationen zum Erstellungsdatum, zu Quell- und Zielgruppe-Verbindungen sowie zur eindeutigen Kennung des Flusslaufs (`id`).
+Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurückgegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung der Flussausführung (`id`).
 
 ```json
 {
@@ -190,16 +189,16 @@ Eine erfolgreiche Antwort gibt Details zu Ihrem Flusslauf zurück, einschließli
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `items` | Enthält eine einzige Nutzlast von Metadaten, die mit Ihrer spezifischen Flussausführung verknüpft sind. |
+| `items` | Enthält eine einzige Payload von Metadaten, die mit Ihrem spezifischen Flusslauf verknüpft sind. |
 | `metrics` | Die Eigenschaften der Daten im Fluss werden ausgeführt. |
-| `activities` | Zeigt, wie die Daten transformiert werden. |
-| `durationSummary` | Beginn und Endzeit des Flusses. |
+| `activities` | Zeigt an, wie die Daten transformiert werden. |
+| `durationSummary` | Die Start- und Endzeit des Flusslaufs. |
 | `sizeSummary` | Die Datenmenge in Byte. |
-| `recordSummary` | Die Datensatzzählung der Daten. |
-| `fileSummary` | Die Datei zählt die Daten. |
-| `fileSummary.extensions` | Enthält Informationen, die für die Aktivität spezifisch sind. `manifest` ist beispielsweise nur Teil der &quot;Promotion-Aktivität&quot;und ist daher im `extensions`-Objekt enthalten. |
-| `statusSummary` | Zeigt an, ob es sich bei der Ausführung des Flusses um einen Erfolg oder einen Fehler handelt. |
+| `recordSummary` | Die Datensatzanzahl der Daten. |
+| `fileSummary` | Die Dateianzahl der Daten. |
+| `fileSummary.extensions` | Enthält Informationen, die spezifisch für die Aktivität sind. `manifest` ist beispielsweise nur Teil der &quot;Promotion-Aktivität&quot;, daher ist sie im `extensions` -Objekt enthalten. |
+| `statusSummary` | Zeigt an, ob es sich bei der Flussausführung um einen Erfolg oder einen Fehler handelt. |
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie mithilfe der API [!DNL Flow Service] Metriken und Fehlerinformationen zu Ihrem Datendurchlauf abgerufen. Sie können jetzt Ihren Datenflug abhängig von Ihrem Aufnahmeplan weiter überwachen, um dessen Status und die Erfassungsraten zu verfolgen. Informationen zum Überwachen von Datenflüssen auf Quellen finden Sie im Lehrgang [Überwachungsdataflows für Quellen, das die Benutzeroberfläche](../ui/monitor-sources.md) verwendet. Weitere Informationen zum Überwachen von Datenflüssen nach Zielen finden Sie im Lehrgang [Überwachung von Datenflüssen für Ziele mithilfe der Benutzeroberfläche](../ui/monitor-destinations.md).
+In diesem Tutorial haben Sie mithilfe der API [!DNL Flow Service] Metriken und Fehlerinformationen zu Ihrem Datenfluss abgerufen. Sie können jetzt Ihren Datenfluss abhängig von Ihrem Erfassungszeitplan weiter überwachen, um dessen Status und Erfassungsraten zu verfolgen. Informationen zum Überwachen von Datenflüssen auf Quellen finden Sie im Tutorial [Überwachung von Datenflüssen für Quellen mithilfe der Benutzeroberfläche](../ui/monitor-sources.md). Weitere Informationen zum Überwachen von Datenflüssen für Ziele finden Sie im Tutorial [Überwachen von Datenflüssen für Ziele mithilfe der Benutzeroberfläche](../ui/monitor-destinations.md).

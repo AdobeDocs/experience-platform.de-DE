@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Adobe Experience Platform Segmentation Service-API Segmente auswerten und auf Segmentergebnisse zugreifen.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 453e120fa20232533289ee5ff34821ce8c0c310b
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 18%
+source-wordcount: '1548'
+ht-degree: 17%
 
 ---
 
@@ -223,7 +223,7 @@ Ausführlichere Informationen zur Verwendung dieses Endpunkts finden Sie im [End
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Ordner [!DNL Data Lake] in [!DNL Experience Platform] verfügbar. Sie können dann [[!DNL Data Access API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) verwenden, um mit dem mit dem Export verknüpften `batchId` auf die Daten zuzugreifen. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Ordner [!DNL Data Lake] in [!DNL Experience Platform] verfügbar. Sie können dann [[!DNL Data Access API]](https://www.adobe.io/experience-platform-apis/references/data-access/) verwenden, um mit dem mit dem Export verknüpften `batchId` auf die Daten zuzugreifen. Je nach Größe des Segments können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Verwenden der [!DNL Data Access]-API für den Zugriff auf und den Download von Batch-Dateien finden Sie im [Tutorial zum Datenzugriff](../../data-access/tutorials/dataset-data.md).
 

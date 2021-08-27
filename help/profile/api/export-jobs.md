@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Das Echtzeit-Kundenprofil ermöglicht es Ihnen, innerhalb von Adobe Experience Platform eine zentrale Ansicht einzelner Kunden zu erstellen, indem es Daten aus verschiedenen Quellen zusammenführt, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b47a52920f82a962ff044a0dacf9777b6eeae447
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 10%
+source-wordcount: '1517'
+ht-degree: 9%
 
 ---
 
@@ -433,7 +433,7 @@ Eine erfolgreiche Löschanfrage gibt den HTTP-Status 204 (Kein Inhalt) und einen
 
 ## Nächste Schritte
 
-Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake in Experience Platform verfügbar. Anschließend können Sie mit der [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` verwenden. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
+Nach erfolgreichem Abschluss des Exports sind Ihre Daten im Data Lake in Experience Platform verfügbar. Anschließend können Sie mit der [Data Access API](https://www.adobe.io/experience-platform-apis/references/data-access/) auf die Daten zugreifen, indem Sie die mit dem Export verknüpfte `batchId` verwenden. Je nach Größe des Exports können die Daten in Blöcken vorliegen und der Batch kann aus mehreren Dateien bestehen.
 
 Eine schrittweise Anleitung zum Verwenden der Data Access API für den Zugriff auf und den Download von Batch-Dateien finden Sie im [Tutorial zum Datenzugriff](../../data-access/tutorials/dataset-data.md).
 

@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Flow Service-API verwendet, um Sie durch die Schritte zur Aufnahme von Apache Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem zu führen.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: d3e1bc9bc075117dcc96c85b8b9c81d6ee617d29
+source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
 workflow-type: tm+mt
-source-wordcount: '1099'
-ht-degree: 25%
+source-wordcount: '1095'
+ht-degree: 24%
 
 ---
 
@@ -266,7 +266,7 @@ Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine B
 
 ## Zieldatensatz erstellen
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) gesendet wird, wobei die Kennung des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/) gesendet wird, wobei die Kennung des Zielschemas in der Payload angegeben wird.
 
 **API-Format**
 
