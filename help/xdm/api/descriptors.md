@@ -5,10 +5,10 @@ title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 56%
+source-wordcount: '1630'
+ht-degree: 55%
 
 ---
 
@@ -24,7 +24,7 @@ Mit dem Endpunkt `/descriptors` in der API [!DNL Schema Registry] können Sie De
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
 ## Abrufen einer Liste von Deskriptoren {#list}
 
@@ -315,7 +315,7 @@ Ein Identitätsdeskriptor signalisiert, dass das &quot;[!UICONTROL sourcePropert
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein wird. Der Pfad sollte mit einem „/“ beginnen und nicht mit einem enden. Schließen Sie „properties“ nicht in den Pfad ein (verwenden Sie z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
-| `xdm:namespace` | Der `id`- oder `code`-Wert des Identitäts-Namespace. Eine Liste von Namespaces finden Sie mit [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). |
+| `xdm:namespace` | Der `id`- oder `code`-Wert des Identitäts-Namespace. Eine Liste von Namespaces finden Sie mit [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
 | `xdm:property` | Entweder `xdm:id` oder `xdm:code`, je nach verwendetem `xdm:namespace`. |
 | `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn „true“, wird das Feld als primäre Identität angezeigt. Schemas dürfen nur eine primäre Identität enthalten. |
 

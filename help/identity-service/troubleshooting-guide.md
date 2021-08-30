@@ -5,9 +5,9 @@ title: Handbuch zur Fehlerbehebung bei Identity Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2185'
+source-wordcount: '2177'
 ht-degree: 82%
 
 ---
@@ -78,11 +78,11 @@ Standardmäßige Identitäts-Namespaces sind Namespaces, die für alle Organisat
 
 ## Wo finde ich die Liste der verfügbaren Namespaces für meine Organisation?
 
-Mit der [Identity Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) können Sie alle für Ihre Organisation verfügbaren Identitäts-Namespaces auflisten, indem Sie eine GET-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Auflisten der verfügbaren Namespaces](./api/list-namespaces.md) in der Übersicht zur Identity Service-API.
+Mit der [Identity Service-API](https://www.adobe.io/experience-platform-apis/references/identity-service) können Sie alle für Ihre Organisation verfügbaren Identitäts-Namespaces auflisten, indem Sie eine GET-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Auflisten der verfügbaren Namespaces](./api/list-namespaces.md) in der Übersicht zur Identity Service-API.
 
 ## Wie erstelle ich für meine Organisation einen benutzerspezifischen Namespace?
 
-Mit der [Identity Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) können Sie einen benutzerdefinierten Identitäts-Namespace für Ihre Organisation einrichten, indem Sie eine POST-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Erstellen eines benutzerdefinierten Namespace](./api/create-custom-namespace.md) in der Übersicht zur Identity Service-API.
+Mit der [Identity Service-API](https://www.adobe.io/experience-platform-apis/references/identity-service) können Sie einen benutzerdefinierten Identitäts-Namespace für Ihre Organisation einrichten, indem Sie eine POST-Anfrage an den `/idnamespace/identities`-Endpunkt senden. Weiterführende Informationen finden Sie im Abschnitt [Erstellen eines benutzerdefinierten Namespace](./api/create-custom-namespace.md) in der Übersicht zur Identity Service-API.
 
 ## Was sind zusammengesetzte Identitäten und XIDs?
 

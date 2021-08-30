@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte dazu erläutert, wie mithilfe der Schema Registry-API ein Schema unter Verwendung einer Standardklasse erstellt wird.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '2426'
+source-wordcount: '2422'
 ht-degree: 50%
 
 ---
@@ -176,7 +176,7 @@ Das Format der Antwort hängt von der in der Anfrage verwendeten Accept-Kopfzeil
 }
 ```
 
-### Feldergruppe {#add-a-field-group} hinzufügen
+### Feldergruppe hinzufügen {#add-a-field-group}
 
 Nachdem das &quot;Loyalty Members&quot;-Schema erstellt und bestätigt wurde, können Feldergruppen hinzugefügt werden.
 
@@ -996,7 +996,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Sie können verfügbare &quot;xdm:namespace&quot;-Werte auflisten oder neue erstellen, indem Sie [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) verwenden. Je nachdem, welcher „xdm:namespace“ verwendet wird, kann der Wert für „xdm:property“ entweder „xdm:code“ oder „xdm:id“ lauten.
+>Sie können verfügbare &quot;xdm:namespace&quot;-Werte auflisten oder neue erstellen, indem Sie [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) verwenden. Je nachdem, welcher „xdm:namespace“ verwendet wird, kann der Wert für „xdm:property“ entweder „xdm:code“ oder „xdm:id“ lauten.
 
 **Antwort**
 

@@ -7,9 +7,9 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1735'
 ht-degree: 66%
 
 ---
@@ -199,7 +199,7 @@ Im Folgenden finden Sie eine Liste von Handbüchern zur Fehlerbehebung und API-R
 | Datenerfassung in Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Erfassung - ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Handbuch zur Fehlerbehebung bei der Streaming-Erfassung](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
-| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml) | [[!DNL Identity Service] Handbuch zur Fehlerbehebung](../identity-service/troubleshooting-guide.md) |
+| Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] Handbuch zur Fehlerbehebung](../identity-service/troubleshooting-guide.md) |
 | Query Service von Adobe Experience Platform | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | [[!DNL Query Service] Handbuch zur Fehlerbehebung](../query-service/troubleshooting-guide.md) |
 | Adobe Experience Platform-Segmentierung | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/) |  |
