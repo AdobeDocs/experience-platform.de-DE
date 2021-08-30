@@ -5,10 +5,10 @@ title: API-Endpunkt für Marketing-Aktionen
 topic-legacy: developer guide
 description: Eine Marketing-Aktion bezeichnet im Kontext des Data Governance-Frameworks eine Aktion, die ein Datennutzer von Adobe Experience Platform ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '734'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 99%
 
 ---
 
@@ -20,7 +20,7 @@ Sie können Marketing-Aktionen für Ihr Unternehmen mithilfe des `/marketingActi
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] -API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, lesen Sie im Handbuch [Erste Schritte](./getting-started.md) die Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] -API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Bevor Sie fortfahren, lesen Sie im Handbuch [Erste Schritte](./getting-started.md) die Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Abrufen einer Liste von Marketing-Aktionen {#list}
 

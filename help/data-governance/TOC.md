@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Data Governance
 breadcrumb-title: Data Governance-Anleitung
 user-guide-description: Beschränken Sie die Datennutzung durch die Verwendung von Bezeichnungen, Marketing-Aktionen und Richtlinien.
 feature: Data Governance
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '100'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 94%
 
 ---
 
@@ -35,5 +35,5 @@ ht-degree: 100%
    * [Richtlinien](api/policies.md)
    * [Marketing-Aktionen](api/marketing-actions.md)
    * [Auswertung](api/evaluation.md)
-* [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [API-Referenz](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

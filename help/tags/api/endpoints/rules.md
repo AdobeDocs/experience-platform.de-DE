@@ -1,10 +1,10 @@
 ---
 title: Rules-Endpunkt
 description: Erfahren Sie, wie Sie den /rules-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 100%
+source-wordcount: '933'
+ht-degree: 99%
 
 ---
 
@@ -20,7 +20,7 @@ Eine Regel gehört zu genau einer [Eigenschaft](./properties.md). Eine Eigenscha
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Regeln {#list}
 
@@ -40,7 +40,7 @@ GET /properties/{PROPERTY_ID}/rules
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Regeln anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mithilfe von Abfrageparametern können aufgelistete Regeln anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie in der Anleitung zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -139,7 +139,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Regeln für die angegebene Eigensc
 }
 ```
 
-## Suchen einer Regel {#lookup}
+## Suchen einer Entscheidungsregel {#lookup}
 
 Sie können eine Regel suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
@@ -523,7 +523,7 @@ Sie können für jede einzelne Regel textbasierte Anmerkungen erstellen und abru
 
 ## Abrufen verwandter Ressourcen für eine Regel {#related}
 
-Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Regel abrufen. Beim [Suchen einer Regel](#lookup) werden diese Beziehungen unter der Regel `relationships` aufgeführt.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für eine Regel abrufen. Beim [Suchen nach einer Regel](#lookup) werden diese Beziehungen unter der Regel `relationships` aufgeführt.
 
 Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
@@ -941,7 +941,7 @@ GET /rules/{RULE_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RULE_ID}` | Die `id` der Regel, nach deren Eigenschaft Sie suchen möchten. |
+| `{RULE_ID}` | Die `id` der Regel, deren Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 

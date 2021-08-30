@@ -1,10 +1,10 @@
 ---
 title: Libraries-Endpunkt
 description: Erfahren Sie, wie Sie in der Reactor-API Aufrufe an den /libraries-Endpunkt durchführen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1588'
-ht-degree: 100%
+source-wordcount: '1584'
+ht-degree: 99%
 
 ---
 
@@ -16,7 +16,7 @@ Eine Bibliothek gehört zu genau einer Eigenschaft. Eine Eigenschaft kann viele 
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 Bevor Sie mit Bibliotheken in der Reactor-API arbeiten, müssen Sie wissen, welche Rollen Bibliotheksstatus und Umgebungen spielen, um zu bestimmen, welche Aktionen Sie für eine bestimmte Bibliothek durchführen können. Weitere Informationen finden Sie im Handbuch zum [Veröffentlichungsablauf für Bibliotheken](../../ui/publishing/publishing-flow.md).
 
@@ -38,7 +38,7 @@ GET /properties/{PROPERTY_ID}/libraries
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Bibliotheken anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mithilfe von Abfrageparametern können aufgelistete Bibliotheken anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`name`</li><li>`published_at`</li><li>`stale`</li><li>`state`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -593,7 +593,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen für den Ressourcentyp zurück. Wenn für diesen Ressourcentyp keine Beziehungen vorhanden sind, wird die `data`-Eigenschaft als leeres Array zurückgegeben. Wenn Sie eine [Suchanfrage](#lookup) für die Bibliothek ausführen, werden die Beziehungen unter der Eigenschaft `relationships` angezeigt.
+Eine erfolgreiche Antwort gibt die Details der aktualisierten Beziehungen für den Ressourcentyp zurück. Wenn für diesen Ressourcentyp keine Beziehungen vorhanden sind, wird die `data`-Eigenschaft als leeres Array zurückgegeben. Wenn Sie eine [Suchanfrage](#lookup) für die Bibliothek ausführen, werden die Beziehungen unter der `relationships`-Eigenschaft angezeigt.
 
 ```json
 {
@@ -706,7 +706,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `meta.action` | Die spezifische Übergabe-Aktion, die Sie für die Bibliothek durchführen möchten. Je nach dem aktuellen Veröffentlichungsstatus der Bibliothek sind die folgenden Aktionen verfügbar: <ul><li>`develop`</li><li>`submit`</li><li>`approve`</li><li>`reject`</li></ul> |
-| `id` | Die `id` der Bibliothek, die Sie aktualisieren möchten. Diese sollte mit dem `{LIBRARY_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
+| `id` | Die `id` der Bibliothek, die Sie aktualisieren möchten. Dies sollte mit dem `{LIBRARY_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `libraries` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -1409,7 +1409,7 @@ Eine erfolgreiche Antwort gibt die Details der Umgebung zurück, der die angegeb
 }
 ```
 
-### Suchen der zugehörigen Eigenschaft für eine Bibliothek {#property}
+### Suchen nach der zugehörigen Eigenschaft für eine Bibliothek {#property}
 
 Sie können die Eigenschaft suchen, der eine Bibliothek gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
 

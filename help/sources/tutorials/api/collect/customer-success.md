@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und dessen Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1575'
-ht-degree: 20%
+source-wordcount: '1571'
+ht-degree: 19%
 
 ---
 
@@ -154,7 +154,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Ein Ziel-XDM-Schema kann durch Ausführung einer POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) erstellt werden.
+Ein Ziel-XDM-Schema kann durch Ausführung einer POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) erstellt werden.
 
 **API-Format**
 

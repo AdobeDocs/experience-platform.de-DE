@@ -1,18 +1,18 @@
 ---
 title: Builds-Endpunkt
 description: Erfahren Sie, wie Sie den /builds-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 100%
+source-wordcount: '833'
+ht-degree: 99%
 
 ---
 
 # Builds-Endpunkt
 
-Erweiterungen, Regeln und Datenelemente sind die Bausteine der Tags in Adobe Experience Platform. Wenn Sie möchten, dass Ihr Programm etwas tut, werden diese Bausteine zu einer [Bibliothek](./libraries.md) hinzugefügt. Um eine Bibliothek in Ihrem Erlebnisprogramm bereitzustellen, wird die Bibliothek zu einem Build kompiliert. Der `/builds`-Endpunkt in der Reactor-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Builds in Ihrem Erlebnisprogramm.
+Erweiterungen, Regeln und Datenelemente sind die Bausteine der Tags in Adobe Experience Platform. Wenn Sie möchten, dass Ihre Anwendung etwas tut, werden diese Bausteine zu einer [Bibliothek](./libraries.md) hinzugefügt. Um eine Bibliothek in Ihrer Erlebnisanwendung bereitzustellen, wird die Bibliothek zu einem Build kompiliert. Der `/builds`-Endpunkt in der Reactor-API ermöglicht Ihnen die programmgesteuerte Verwaltung von Builds in Ihrer Erlebnisanwendung.
 
-Ein Build ist die eigentliche Datei (oder Dateien), die in Ihr Web-Programm und Mobile App geladen wird. Der Inhalt jedes Builds hängt von den folgenden Faktoren ab:
+Ein Build ist die eigentliche Datei (oder Dateien), die in Ihre Web- und Mobilanwendung geladen werden. Der Inhalt jedes Builds hängt von den folgenden Faktoren ab:
 
 * In der Bibliothek enthaltene Ressourcen
 * Konfiguration der [Umgebung](./environments.md), in der die Bibliothek erstellt wird
@@ -24,7 +24,7 @@ Weitere allgemeine Informationen zu Builds und wie sie in den Veröffentlichungs
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Builds {#list}
 
@@ -44,7 +44,7 @@ GET /libraries/{LIBRARY_ID}/builds
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Builds basierend auf den folgenden Attributen gefiltert werden:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mithilfe von Abfrageparametern können aufgelistete Builds basierend auf den folgenden Attributen gefiltert werden:<ul><li>`created_at`</li><li>`status`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -349,7 +349,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Builds zurück.
 
 ## Erneutes Veröffentlichen eines Builds {#republish}
 
-Sie können einen Build aus einer [veröffentlichten Bibliothek](./libraries.md#publish) erneut veröffentlichen, indem Sie dessen ID im Pfad einer PATCH-Anfrage angeben.
+Sie können einen Build aus einer [veröffentlichten Bibliothek](./libraries.md#publish) erneut veröffentlichen, indem Sie seine ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -387,9 +387,9 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die `id` des Builds, den Sie aktualisieren möchten. Diese sollte mit dem `{BUILD_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
+| `id` | Die `id` des Builds, den Sie aktualisieren möchten. Dieser sollte mit dem `{BUILD_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `builds` lauten. |
-| `meta.action` | Der Typ der auszuführenden PATCH-Aktion. Muss auf `republish` festgelegt werden. |
+| `meta.action` | Der Typ der auszuführenden PATCH-Aktion. Muss auf `republish` festgelegt sein. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -468,11 +468,11 @@ Eine erfolgreiche Antwort gibt die Details des erneut veröffentlichten Builds z
 }
 ```
 
-## Abrufen von zugehörigen Ressourcen für einen Build {#related}
+## Abrufen von verwandten Ressourcen für einen Build {#related}
 
 Die folgenden Aufrufe veranschaulichen, wie die zugehörigen Ressourcen für einen Build abgerufen werden. Beim [Suchen eines Builds](#lookup) werden diese Beziehungen unter der Eigenschaft `relationships` aufgelistet.
 
-Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
+Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md). 
 
 ### Auflisten der zugehörigen Datenelemente für einen Build {#data-elements}
 

@@ -1,10 +1,10 @@
 ---
 title: Environments-Endpunkt
 description: Erfahren Sie, wie Sie den /environments-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 100%
+source-wordcount: '1038'
+ht-degree: 99%
 
 ---
 
@@ -22,8 +22,8 @@ Umgebungen weisen drei Typen (oder Phasen) auf, wobei für jeden Typ unterschied
 | Umgebungstyp | Zulässige Zahl |
 | --- | --- |
 | Entwicklung | (Keine Begrenzung) |
-| Staging | Eine |
-| Produktion | Eine |
+| Staging | Eins |
+| Produktion | Eins |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -35,11 +35,11 @@ Allgemeine Informationen zu Umgebungen finden Sie im Abschnitt zu [Umgebungen](.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Umgebungen {#list}
 
-Sie können eine Liste der Umgebungen für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft im Pfad einer GET-Anfrage angeben.
+Sie können eine Liste der Umgebungen für eine Eigenschaft abrufen, indem Sie die ID der Eigenschaft in den Pfad einer GET-Anfrage einschließen.
 
 **API-Format**
 
@@ -55,7 +55,7 @@ GET /properties/{PROPERTY_ID}/environments
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Umgebungen anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mithilfe von Abfrageparametern können aufgelistete Umgebungen anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -163,7 +163,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Umgebungen für die angegebene Eig
 
 ## Suchen einer Umgebung {#lookup}
 
-Sie können eine Umgebung suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Umgebung suchen, indem Sie ihre Kennung im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -771,7 +771,7 @@ GET  /environments/{ENVIRONMENT_ID}/library
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Bibliothek Sie suchen möchten. |
+| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Bibliothek Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -886,7 +886,7 @@ GET  /environments/{ENVIRONMENT_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Eigenschaft Sie suchen möchten. |
+| `{ENVIRONMENT_ID}` | Die `id` der Umgebung, deren Eigenschaft Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 

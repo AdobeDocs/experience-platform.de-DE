@@ -1,16 +1,16 @@
 ---
 title: Erste Schritte mit der Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 98%
+source-wordcount: '1060'
+ht-degree: 97%
 
 ---
 
 # Erste Schritte mit der Reactor-API
 
-Um die [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml) verwenden zu können, muss jede Anfrage die folgenden Authentifizierungs-Header enthalten:
+Um die [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/) verwenden zu können, muss jede Anfrage die folgenden Authentifizierungs-Header enthalten:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -20,7 +20,7 @@ In diesem Handbuch wird beschrieben, wie Sie die Adobe-Entwicklerkonsole verwend
 
 ## Erhalten von Entwicklerzugriff auf Adobe Experience Platform
 
-Bevor Sie Authentifizierungswerte für die Reactor-API generieren können, müssen Sie über Entwicklerzugriff auf Experience Platform verfügen. Um Entwicklerzugriff zu erhalten, führen Sie die ersten Schritte im [Authentifizierungs-Tutorial für Experience Platform](http://www.adobe.com/go/platform-api-authentication-en?lang=de) aus. Sobald Sie den Schritt „Anmeldeinformationen in der Adobe-Entwicklerkonsole generieren“ erreicht haben, kehren Sie zu diesem Tutorial zurück, um die spezifischen Anmeldeinformationen für die Reactor-API zu generieren.
+Bevor Sie Authentifizierungswerte für die Reactor-API generieren können, müssen Sie über Entwicklerzugriff auf Experience Platform verfügen. Um Entwicklerzugriff zu erhalten, führen Sie die ersten Schritte im [Authentifizierungs-Tutorial für Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) aus. Sobald Sie den Schritt „Anmeldeinformationen in der Adobe-Entwicklerkonsole generieren“ erreicht haben, kehren Sie zu diesem Tutorial zurück, um die spezifischen Anmeldeinformationen für die Reactor-API zu generieren.
 
 ## Generieren von Zugriffsberechtigungen
 
@@ -145,7 +145,7 @@ Eine erfolgreiche Antwort gibt ein neues Zugriffs-Token sowie die Anzahl der Sek
 
 | Eigenschaft | Beschreibung |
 | :-- | :-- |
-| `access_token` | Der Wert des neu generierten Zugriffs-Tokens. Dieser Wert wird für den erforderlichen `Authorization`-Header verwendet und muss im Format `Bearer {ACCESS_TOKEN}` angegeben werden. |
+| `access_token` | Der neu generierte Wert des Zugriffs-Tokens. Dieser Wert wird für den erforderlichen `Authorization`-Header verwendet und muss im Format `Bearer {ACCESS_TOKEN}` angegeben werden. |
 | `expires_in` | Die verbleibende Zeit bis zum Ablauf des Tokens in Millisekunden. Sobald ein Token abläuft, muss ein neues generiert werden. |
 
 {style=&quot;table-layout:auto&quot;}

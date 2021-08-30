@@ -4,10 +4,10 @@ solution: Experience Platform
 title: 'Verwalten von Datennutzungsbeschriftungen mit APIs '
 topic-legacy: developer guide
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1145'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1141'
+ht-degree: 99%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 In diesem Dokument wird beschrieben, wie Sie Datennutzungsbeschriftungen mit der [!DNL Policy Service]-API und der [!DNL Dataset Service]-API verwalten.
 
-Die [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) stellt mehrere Endpunkte bereit, mit denen Sie Datennutzungsbeschriftungen für Ihr Unternehmen erstellen und verwalten können.
+Die [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) stellt mehrere Endpunkte bereit, mit denen Sie Datennutzungsbeschriftungen für Ihr Unternehmen erstellen und verwalten können.
 
 Mit der [!DNL Dataset Service]-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der [!DNL Catalog Service]-API getrennt, die Datensatz-Metadaten verwaltet.
 
@@ -228,7 +228,7 @@ Eine erfolgreiche Antwort gibt die Details der benutzerdefinierten Beschriftung 
 }
 ```
 
-## Suchen Sie nach Beschriftungen für einen Datensatz {#look-up-dataset-labels}
+## Suchen nach Kennzeichnungen für einen Datensatz {#look-up-dataset-labels}
 
 Sie können die Datennutzungskennzeichnungen nachschlagen, die auf einen vorhandenen Datensatz angewendet wurden, indem Sie eine GET-Anfrage an die [!DNL Dataset Service]-API stellen.
 

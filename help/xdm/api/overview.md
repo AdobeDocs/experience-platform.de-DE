@@ -5,10 +5,10 @@ title: Handbuch zur Schema Registry-API
 description: Mit der Schema Registry-API können Entwickler alle Schemas und zugehörigen Experience-Datenmodell (XDM)-Ressourcen in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 topic-legacy: developer guide
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: c2ca679e046f59d05e2d12ca83bc1b2496b2288f
+source-git-commit: 6ba8da07a4fb36c6e8bd2ede8ac415edaabe0ef6
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 10%
+source-wordcount: '983'
+ht-degree: 9%
 
 ---
 
@@ -24,7 +24,7 @@ Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforde
 >
 >XDM verwendet die JSON-Schema-Formatierung, um die Struktur der erfassten Kundenerlebnisdaten zu beschreiben und zu validieren. Bevor Sie mit der Schema Registry-API arbeiten, wird dringend empfohlen, die [offizielle JSON-Schema-Dokumentation](https://json-schema.org/) zu lesen, um ein besseres Verständnis dieser zugrunde liegenden Technologie zu erhalten.
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Schema Registry-API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, besuchen Sie die [Schema Registry-API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 ## Schemas
 

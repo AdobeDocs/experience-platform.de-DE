@@ -5,10 +5,10 @@ title: API-Endpunkte für die Richtlinienauswertung
 topic-legacy: developer guide
 description: Nachdem Marketing-Aktionen erstellt und Richtlinien definiert wurden, können Sie mit der Policy Service-API bewerten, ob Richtlinien durch bestimmte Aktionen verletzt werden. Die zurückgegebenen Beschränkungen bestehen aus einer Reihe von Richtlinien, gegen die verstoßen werden würde, wenn die Marketing-Aktion für die angegebenen Daten mit Datennutzungsbezeichnungen ausgeführt wird.
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1544'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1540'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ Bewertungsanfragen können auf drei Arten gestellt werden:
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] -API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml). Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](./getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Policy Service] -API](https://www.adobe.io/experience-platform-apis/references/policy-service/). Bevor Sie fortfahren, werfen Sie im Handbuch [Erste Schritte](./getting-started.md) einen Blick auf die Informationen zu Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Auswerten auf Richtlinienverletzungen mithilfe von Datennutzungskennzeichnungen {#labels}
 

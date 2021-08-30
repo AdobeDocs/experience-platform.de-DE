@@ -1,10 +1,10 @@
 ---
 title: Notes-Endpunkt
 description: Erfahren Sie, wie Sie den /notes-Endpunkt in der Reactor-API abrufen.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 100%
+source-wordcount: '526'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ In der Reactor-API sind Anmerkungen textuelle Kommentare, die Sie zu bestimmten 
 * Erteilen von Anweisungen an andere Team-Mitglieder
 * Aufzeichnung von historischem Kontext
 
-Der `/notes`-Endpunkt in der Reactor-API erlaubt es Ihnen, diese Anmerkungen programmgesteuert zu verwalten.
+Der `/notes`-Endpunkt in der Reactor-API erlaubt es Ihnen, diese Notizen programmgesteuert zu verwalten.
 
 Anmerkungen können auf die folgenden Ressourcen angewendet werden:
 
@@ -35,11 +35,11 @@ Diese sechs Typen sind Ressourcen, die mit Anmerkungen versehen werden können. 
 >
 >Bei Ressourcen, die mehrere Revisionen haben können, müssen alle Anmerkungen in der aktuellen (Haupt-)Revision erstellt werden. Sie dürfen nicht an andere Revisionen angehängt werden.
 >
->Anmerkungen können jedoch weiterhin aus Revisionen gelesen werden. In solchen Fällen gibt die API nur die Anmerkungen zurück, die vor der Erstellung der Revision existierten. Sie bieten eine Momentaufnahme der Anmerkungen, wie sie zum Zeitpunkt der Kürzung der Revision aussahen. Im Gegensatz dazu werden beim Lesen von Anmerkungen aus der aktuellen (Haupt-)Revision alle Anmerkungen zurückgegeben.
+>Anmerkungen können jedoch weiterhin aus Revisionen gelesen werden. In solchen Fällen gibt die API nur die Notizen zurück, die vor der Erstellung der Revision existierten. Sie bieten eine Momentaufnahme der Anmerkungen, wie sie zum Zeitpunkt der Kürzung der Revision aussahen. Im Gegensatz dazu werden beim Lesen von Anmerkungen aus der aktuellen (Haupt-)Revision alle Anmerkungen zurückgegeben.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Anmerkungen {#list}
 
@@ -119,7 +119,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Anmerkungen zurück, die an die an
 
 ## Suchen einer Anmerkung {#lookup}
 
-Sie können eine Anmerkung suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Anmerkung nachschlagen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -129,7 +129,7 @@ GET /notes/{NOTE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `NOTE_ID` | Die `id` der Anmerkung, die Sie suchen möchten. |
+| `NOTE_ID` | Die `id` der Anmerkung, die Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 

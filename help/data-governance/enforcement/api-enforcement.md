@@ -6,16 +6,16 @@ topic-legacy: guide
 type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1006'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1002'
+ht-degree: 99%
 
 ---
 
 # Durchsetzen von Datennutzungsrichtlinien mit der [!DNL Policy Service]-API
 
-Nachdem Sie Datennutzungskennzeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Kennzeichnungen erstellt haben, können Sie mit der [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Kennzeichnungen ausgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
+Nachdem Sie Datennutzungskennzeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Kennzeichnungen erstellt haben, können Sie mit der [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Kennzeichnungen ausgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 
 >[!NOTE]
 >

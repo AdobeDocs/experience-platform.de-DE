@@ -1,10 +1,10 @@
 ---
 title: Handbuch zur Reactor-API
 description: Mit der Reactor-API können Entwickler alle Ressourcen für Tags in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
-source-wordcount: '1039'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1035'
+ht-degree: 99%
 
 ---
 
@@ -14,7 +14,7 @@ Die Reactor-API bietet mehrere Endpunkte, mit denen Sie alle Ressourcen für Tag
 
 Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zur Authentifizierung bei der API finden Sie in den Handbüchern zu den einzelnen Endpunkten und im [Erste Schritte-Handbuch](./getting-started.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, konsultieren Sie die [Reactor API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge anzuzeigen, konsultieren Sie die [Reactor API-Referenz](https://www.adobe.io/experience-platform-apis/references/reactor/).
 
 ## Firmen
 
@@ -30,7 +30,7 @@ Informationen zum Verwalten von Eigenschaften in der API finden Sie im [Handbuch
 
 ## Datenelemente
 
-Ein Datenelement fungiert als Variable, die auf wichtige Daten innerhalb Ihres Programms verweist. Datenelemente werden in Regel- und Erweiterungskonfigurationen verwendet. Wenn die Regel zur Laufzeit in einem Browser oder einem Programm ausgelöst wird, wird der Wert des Datenelements aufgelöst und innerhalb der Regel verwendet.
+Ein Datenelement fungiert als Variable, die auf wichtige Daten innerhalb Ihres Programms verweist. Datenelemente werden in Regeln und Erweiterungskonfigurationen verwendet. Wenn die Regel zur Laufzeit in einem Browser oder einem Programm ausgelöst wird, wird der Wert des Datenelements aufgelöst und innerhalb der Regel verwendet.
 
 Informationen zum Verwalten von Datenelementen in der API finden Sie im [Handbuch zu data elements-Endpunkt](./endpoints/data-elements.md).
 
@@ -92,7 +92,7 @@ App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldeinformatio
 
 ## Audit-Ereignisse
 
-Ein Audit-Ereignis ist ein Datensatz einer bestimmten Änderung an einer anderen Tag-Ressource, der zum Zeitpunkt der Änderung generiert wird. Dies sind Systemereignisse, die über eine Callback-Funktion abonniert werden können.
+Ein Prüfereignis ist ein Datensatz einer bestimmten Änderung an einer anderen Tag-Ressource, der zum Zeitpunkt der Änderung generiert wird. Dies sind Systemereignisse, die über eine Callback-Funktion abonniert werden können.
 
 Informationen zum Verwalten von Audit-Ereignissen in der API finden Sie im [Handbuch zum audit events-Endpunkt](./endpoints/audit-events.md).
 
@@ -102,7 +102,7 @@ Ein Callback ist eine Nachricht, die Platform bei der Erstellung eines neuen Aud
 
 ## Anmerkungen
 
-Anmerkungen sind Kommentare in Textform, die Sie bestimmten Tag-Ressourcen hinzufügen können, z. B. Datenelementen, Erweiterungen, Bibliotheken, Eigenschaften, Regeln und Regelkomponenten. Informationen zum Verwalten von Anmerkungen in der API finden Sie im [Handbuch zum notes-Endpunkt](./endpoints/notes.md).
+Anmerkungen sind Kommentare in Textform, die Sie bestimmten Tag-Ressourcen hinzufügen können, z. B. Datenelementen, Erweiterungen, Bibliotheken, Eigenschaften, Regeln und Regelkomponenten. Informationen zum Verwalten von Notizen in der API finden Sie im [Handbuch zum notes-Endpunkt](./endpoints/notes.md).
 
 ## Profil
 

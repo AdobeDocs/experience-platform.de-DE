@@ -1,9 +1,9 @@
 ---
 title: Extension packages-Endpunkt
 description: Erfahren Sie, wie Sie den /extension_packages-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '955'
+source-wordcount: '951'
 ht-degree: 73%
 
 ---
@@ -22,7 +22,7 @@ Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers,
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 Neben dem Verständnis, wie Aufrufe an die Reactor-API durchgeführt werden, ist es auch wichtig zu verstehen, wie die Attribute `status` und `availability` eines Erweiterungspakets beeinflussen, welche Aktionen Sie darauf durchführen können. Diese werden in den folgenden Abschnitten erläutert.
 
@@ -62,7 +62,7 @@ GET /extension_packages
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Erweiterungspakete anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mithilfe von Abfrageparametern können aufgelistete Erweiterungspakete anhand der folgenden Attribute gefiltert werden:<ul><li>`archive`</li><li>`created_at`</li><li>`name`</li><li>`stage`</li><li>`token`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -236,7 +236,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Erweiterungspaketen zurück.
 
 ## Suchen eines Erweiterungspakets {#lookup}
 
-Sie können nach einem Erweiterungspaket suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
+Sie können nach einem Erweiterungspaket suchen, indem Sie dessen ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 

@@ -1,22 +1,22 @@
 ---
 title: Extensions-Endpunkt
 description: Erfahren Sie, wie den /extensions-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 100%
+source-wordcount: '977'
+ht-degree: 99%
 
 ---
 
 # Extensions-Endpunkt
 
-In der Reactor-API stellt eine Erweiterung die installierte Instanz eines [Erweiterungspakets](./extension-packages.md) dar. Eine Erweiterung stellt die durch ein Erweiterungspaket definierten Funktionen für eine [Eigenschaft](./properties.md) zur Verfügung. Diese Funktionen werden beim Erstellen von [Erweiterungen](./data-elements.md) und [Regelkomponenten](./rule-components.md) genutzt.
+In der Reactor-API stellt eine Erweiterung die installierte Instanz eines [Erweiterungspakets](./extension-packages.md) dar. Eine Erweiterung stellt die durch ein Erweiterungspaket definierten Funktionen einer [Eigenschaft](./properties.md) zur Verfügung. Diese Funktionen werden beim Erstellen von [Erweiterungen](./data-elements.md) und [Regelkomponenten](./rule-components.md) genutzt.
 
 Eine Erweiterung gehört zu genau einer Eigenschaft. Eine Eigenschaft kann über viele Erweiterungen verfügen, jedoch nicht über mehr als eine installierte Instanz eines bestimmten Erweiterungspakets.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Erweiterungen {#list}
 
@@ -327,7 +327,7 @@ curl -X POST \
 | `relationships.extension_package` | **(Erforderlich)** Ein Objekt, das auf die ID des installierten Erweiterungspakets verweist. |
 | `attributes.delegate_descriptor_id` | Wenn Ihre Erweiterung benutzerdefinierte Einstellungen erfordert, ist auch eine Delegaten-Deskriptor-ID erforderlich. Weitere Informationen finden Sie im Handbuch zu [Delegaten-Deskriptor-IDs](../guides/delegate-descriptor-ids.md). |
 | `attributes.enabled` | Ein boolescher Wert, der angibt, ob die Erweiterung aktiviert ist. |
-| `attributes.settings` | Ein JSON-Objekt vom Typ „settings“, das als Zeichenfolge dargestellt wird. |
+| `attributes.settings` | Ein JSON-Objekt vom Typ „Einstellungen“, das als Zeichenfolge dargestellt wird. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -467,7 +467,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes` | Die Attribute, die Sie überarbeiten möchten. Für Erweiterungen können Sie die zugehörigen Attribute `delegate_descriptor_id`, `enabled` und `settings` überarbeiten. |
-| `meta.action` | Muss bei einer Revision mit dem Wert `revise` enthalten sein. |
+| `meta.action` | Muss bei einer Überarbeitung mit dem Wert `revise` enthalten sein. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -595,7 +595,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttex
 
 ## Verwalten von Anmerkungen für eine Erweiterung {#notes}
 
-Sie können für jede einzelne Erweiterung textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Erweiterungen und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
+Sie können für jede einzelne Erweiterung textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Erweiterungen und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Erweiterung {#related}
 
@@ -725,9 +725,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Bibliotheken zurück, die die ange
 }
 ```
 
-### Auflisten der zugehörigen Revisionen für eine Erweiterung {#revisions}
+### Auflisten der zugehörigen Überarbeitungen für eine Erweiterung {#revisions}
 
-Sie können die vorherigen Revisionen einer Erweiterung auflisten, indem Sie `/revisions` an den Pfad einer Suchanfrage anhängen.
+Sie können die vorherigen Überarbeitungen einer Erweiterung auflisten, indem Sie `/revisions` an den Pfad einer Suchanfrage anhängen.
 
 **API-Format**
 
@@ -737,7 +737,7 @@ GET  /extensions/{EXTENSION_ID}/revisions
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Revisionen Sie auflisten möchten. |
+| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Überarbeitungen Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -755,7 +755,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Revisionen für die angegebene Erweiterung zurück.
+Eine erfolgreiche Antwort gibt eine Liste von Überarbeitungen für die angegebene Erweiterung zurück.
 
 ```json
 {
@@ -951,7 +951,7 @@ GET  /extensions/{EXTENSION_ID}/extension_package
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Erweiterung Sie suchen möchten. |
+| `{EXTENSION_ID}` | Die `id` der Erweiterung, deren Erweiterung Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 

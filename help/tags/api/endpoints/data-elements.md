@@ -1,16 +1,16 @@
 ---
 title: Data elements-Endpunkt
 description: Erfahren Sie, wie Sie den /data_elements-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1415'
-ht-degree: 100%
+source-wordcount: '1411'
+ht-degree: 99%
 
 ---
 
 # Data elements-Endpunkt
 
-Ein Datenelement fungiert als Variable, die auf wichtige Daten innerhalb Ihres Programms verweist. Datenelemente werden in [Regel-](./rules.md) und [Erweiterungskonfigurationen](./extensions.md) verwendet. Wenn eine Regel zur Laufzeit in einem Browser oder einem Programm ausgelöst wird, wird der Wert des Datenelements aufgelöst und innerhalb der Regel verwendet. Datenelemente funktionieren bei Erweiterungskonfigurationen genauso.
+Ein Datenelement fungiert als Variable, die auf wichtige Daten innerhalb Ihres Programms verweist. Datenelemente werden in den Konfigurationen [Regeln](./rules.md) und [Erweiterung](./extensions.md) verwendet. Wenn eine Regel zur Laufzeit in einem Browser oder einem Programm ausgelöst wird, wird der Wert des Datenelements aufgelöst und innerhalb der Regel verwendet. Datenelemente funktionieren bei Erweiterungskonfigurationen genauso.
 
 Die Verwendung mehrerer Datenelemente führt zu einem Datenwörterbuch oder einer Datenzuordnung. Dieses Wörterbuch stellt die Daten dar, die Adobe Experience Platform kennt und nutzen kann.
 
@@ -20,7 +20,7 @@ Allgemeine Informationen zu Datenelementen und deren Verwendung in Tags finden S
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste mit Datenelementen {#list}
 
@@ -301,7 +301,7 @@ Eine erfolgreiche Antwort gibt die Details des Datenelements zurück.
 }
 ```
 
-## Erstellen eines Datenelements {#create}
+## ein Datenelement erstellen {#create}
 
 Sie können ein neues Datenelement erstellen, indem Sie eine POST-Anfrage stellen.
 
@@ -355,8 +355,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes.name` | **(Erforderlich)** Ein für Menschen lesbarer Name für das Datenelement. |
-| `attributes.delegate_descriptor_id` | **(Erforderlich)** Eine formatierte Zeichenfolge, die das Datenelement mit einem Erweiterungspaket verknüpft. Alle Datenelemente müssen bei der ersten Erstellung mit einem Erweiterungspaket verknüpft werden, da jedes Erweiterungspaket für die delegierten Datenelemente die kompatiblen Typen sowie das beabsichtigte Verhalten definiert. Weitere Informationen finden Sie im Handbuch zu [Delegaten-Deskriptor-IDs](../guides/delegate-descriptor-ids.md). |
-| `attributes.settings` | Ein JSON-Objekt vom Typ „settings“, das als Zeichenfolge dargestellt wird. |
+| `attributes.delegate_descriptor_id` | **(Erforderlich)** Eine formatierte Zeichenfolge, die das Datenelement mit einem Erweiterungspaket verknüpft. Alle Datenelemente müssen bei der ersten Erstellung mit einem Erweiterungspaket verknüpft werden, da jedes Erweiterungspaket für die delegierten Datenelemente die kompatiblen Typen sowie das beabsichtigte Verhalten definiert. Weitere Informationen finden Sie im Handbuch zu [Delegierten-Deskriptor-IDs](../guides/delegate-descriptor-ids.md). |
+| `attributes.settings` | Ein JSON-Objekt vom Typ „Einstellungen“, das als Zeichenfolge dargestellt wird. |
 | `attributes.default_value` | Ein Standardwert, der zurückgegeben wird, wenn das Datenelement als `undefined` ausgewertet wird. |
 | `attributes.enabled` | Ein boolescher Wert, der angibt, ob das Datenelement aktiviert ist. |
 | `attributes.force_lower_case` | Ein boolescher Wert, der angibt, ob der Datenelementwert vor der Speicherung in Kleinbuchstaben konvertiert werden soll. |

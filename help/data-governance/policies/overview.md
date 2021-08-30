@@ -5,10 +5,10 @@ title: Datennutzungsrichtlinien – Übersicht
 topic-legacy: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 4aeb12aec026ab2dc29133dd44e54b453fb71fe3
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1077'
-ht-degree: 100%
+source-wordcount: '1073'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz
 >
 >Marketing-Aktionen allein schränken die Datennutzung nicht ein. Sie müssen in aktivierten Datennutzungsrichtlinien eingeschlossen sein, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
 
-Wenn die Nutzung von Daten im Dienst Ihres Unternehmens stattfindet, sollten relevante Marketing-Aktionen angezeigt werden, damit etwaige Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die [Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
+Wenn die Nutzung von Daten im Dienst Ihres Unternehmens stattfindet, sollten relevante Marketing-Aktionen angezeigt werden, damit etwaige Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
 
 >[!NOTE]
 >

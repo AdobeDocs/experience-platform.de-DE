@@ -1,10 +1,10 @@
 ---
 title: App configurations-Endpunkt
 description: Lernen Sie, wie Sie den /app_configurations-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '590'
-ht-degree: 100%
+source-wordcount: '586'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ App-Konfigurationen ermöglichen das Speichern und Abrufen von Anmeldeinformatio
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von App-Konfigurationen {#list}
 
@@ -36,7 +36,7 @@ GET /companies/{COMPANY_ID}/app_configurations
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können die aufgelisteten App-Konfigurationen anhand der folgenden Attribute gefiltert werden:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mit Hilfe von Abfrageparametern können die aufgelisteten App-Konfigurationen anhand der folgenden Attribute gefiltert werden:<ul><li>`app_id`</li><li>`created_at`</li><li>`key_type`</li><li>`messaging_service`</li><li>`name`</li><li>`platform`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -163,7 +163,7 @@ Eine erfolgreiche Antwort gibt die Details der App-Konfiguration zurück.
 }
 ```
 
-## Erstellen einer App-Konfiguration {#create}
+## Erstellen einer App-Konfiguration  {#create}
 
 Sie können eine neue App-Konfiguration erstellen, indem Sie eine POST-Anfrage stellen.
 
@@ -210,8 +210,8 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `platform` | Die Plattform, auf der die App läuft (Web oder Mobile). Damit wird festgelegt, welche Messaging-Services verfügbar sind. |
-| `messaging_service` | Der mit der App verknüpfte Messaging-Service, z. B. [Apple Push Notification Service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) und [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Damit wird festgelegt, welche Tastentypen verwendet werden können. |
+| `platform` | Die Plattform, auf der die Anwendung läuft (Web oder Mobile). Damit wird festgelegt, welche Messaging-Services verfügbar sind. |
+| `messaging_service` | Der mit der Anwendung verknüpfte Messaging-Service, z. B. [Apple Push Notification Service (APNs)](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html) und [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging). Damit wird festgelegt, welche Tastentypen verwendet werden können. |
 | `key_type` | Stellt das Protokoll dar, das ein Push-Service-Anbieter unterstützt, und bestimmt das Format des Objekts `push_credential`. Bei der Weiterentwicklung der Protokolle für Messaging-Services werden neue `key_type`-Werte erstellt, die die aktualisierten Protokolle unterstützen. |
 | `push_credential` | Der eigentliche Anmeldeinformationswert, der im Ruhezustand verschlüsselt wird. Dieses Feld wird normalerweise nicht entschlüsselt oder in API-Antworten aufgenommen. Nur bestimmte Adobe-Services können eine Antwort erhalten, die eine entschlüsselte Push-Anmeldeinformation enthält. |
 

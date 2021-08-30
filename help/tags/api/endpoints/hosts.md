@@ -1,10 +1,10 @@
 ---
 title: Hosts-Endpunkt
 description: Erfahren Sie, wie Sie den /hosts-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 100%
+source-wordcount: '765'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ Ein Host kann von mehr als einer Umgebung innerhalb einer Eigenschaft verwendet 
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Hosts {#list}
 
@@ -276,7 +276,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Hosts zurück.
 >
 >Nur SFTP-Hosts können aktualisiert werden.
 
-Sie können einen Host aktualisieren, indem Sie seine ID im Pfad einer PATCH-Anfrage angeben.
+Sie können einen Host aktualisieren, indem Sie dessen ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -407,7 +407,7 @@ GET /hosts/{HOST_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{HOST_ID}` | Die `id` des Hosts, dessen Eigenschaft Sie suchen möchten. |
+| `{HOST_ID}` | Die `id` des Hosts, dessen Eigenschaft Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 

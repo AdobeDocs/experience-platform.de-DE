@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1107'
-ht-degree: 17%
+source-wordcount: '1103'
+ht-degree: 16%
 
 ---
 
@@ -44,7 +44,7 @@ Für dieses Tutorial benötigen Sie außerdem eine gültige Quell-Verbindungs-ID
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind. Dieses Ziel-XDM-Schema erweitert auch die XDM-Klasse [!DNL Individual Profile] .
 
-Um ein Ziel-XDM-Schema zu erstellen, stellen Sie eine POST-Anfrage an den `/schemas`-Endpunkt der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Um ein Ziel-XDM-Schema zu erstellen, stellen Sie eine POST-Anfrage an den `/schemas`-Endpunkt der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API-Format**
 

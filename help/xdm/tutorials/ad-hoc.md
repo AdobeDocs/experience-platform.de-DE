@@ -6,10 +6,10 @@ description: Unter bestimmten Umständen kann es erforderlich sein, ein (Experie
 topic-legacy: tutorial
 type: Tutorial
 exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
-source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 14%
+source-wordcount: '828'
+ht-degree: 13%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 14%
 
 Unter bestimmten Umständen kann es erforderlich sein, ein [!DNL Experience Data Model] (XDM)-Schema mit Feldern zu erstellen, deren Namespace nur für die Verwendung durch einen einzigen Datensatz vorgesehen ist. Ein solches Schema wird als Ad-hoc-Schema bezeichnet. Ad-hoc-Schemata werden in verschiedenen Datenerfassungs-Workflows für [!DNL Experience Platform] verwendet, einschließlich der Aufnahme von CSV-Dateien und der Erstellung bestimmter Arten von Quellverbindungen.
 
-Dieses Dokument enthält allgemeine Schritte zum Erstellen eines Ad-hoc-Schemas mit der [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Sie ist für die Verwendung in Verbindung mit anderen [!DNL Experience Platform]-Tutorials vorgesehen, für die im Rahmen ihres Workflows ein Ad-hoc-Schema erstellt werden muss. Jedes dieser Dokumente enthält detaillierte Informationen zur ordnungsgemäßen Konfiguration eines Ad-hoc-Schemas für den jeweiligen Anwendungsfall.
+Dieses Dokument enthält allgemeine Schritte zum Erstellen eines Ad-hoc-Schemas mit der [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Sie ist für die Verwendung in Verbindung mit anderen [!DNL Experience Platform]-Tutorials vorgesehen, für die im Rahmen ihres Workflows ein Ad-hoc-Schema erstellt werden muss. Jedes dieser Dokumente enthält detaillierte Informationen zur ordnungsgemäßen Konfiguration eines Ad-hoc-Schemas für den jeweiligen Anwendungsfall.
 
 ## Erste Schritte
 
@@ -228,7 +228,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Schemas zurück, e
 
 >[!NOTE]
 >
-> Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Tutorials zum Abschnitt [Nächste Schritte](#next-steps) überspringen.
+>Dieser Schritt ist optional. Wenn Sie die Feldstruktur Ihres Ad-hoc-Schemas nicht überprüfen möchten, können Sie am Ende dieses Tutorials zum Abschnitt [Nächste Schritte](#next-steps) überspringen.
 
 Nachdem das Ad-hoc-Schema erstellt wurde, können Sie eine Nachschlageanfrage (GET) stellen, um das Schema in seiner erweiterten Form anzuzeigen. Dies geschieht mithilfe der entsprechenden Accept-Kopfzeile in der GET-Anfrage, wie unten dargestellt.
 

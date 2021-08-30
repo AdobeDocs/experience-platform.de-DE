@@ -6,9 +6,9 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1369'
+source-wordcount: '1365'
 ht-degree: 36%
 
 ---
@@ -19,7 +19,7 @@ Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit 
 
 Während Schemabeziehungen durch die Verwendung des Vereinigungsschemas und [!DNL Real-time Customer Profile] abgeleitet werden können, gilt dies nur für Schemas, die dieselbe Klasse aufweisen. Um eine Beziehung zwischen zwei Schemas herzustellen, die zu verschiedenen Klassen gehören, muss einem Quellschema ein dediziertes Beziehungsfeld hinzugefügt werden, das auf die Identität eines Zielschemas verweist.
 
-Dieses Dokument enthält eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrer Organisation mithilfe von [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) definiert wurden.
+Dieses Dokument enthält eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrer Organisation mithilfe von [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) definiert wurden.
 
 ## Erste Schritte
 
@@ -32,7 +32,7 @@ Dieses Tutorial setzt ein grundlegendes Verständnis von [!DNL Experience Data M
 
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte das [Entwicklerhandbuch](../api/getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die [!DNL Schema Registry]-API erfolgreich aufrufen zu können. Dazu gehören Ihr `{TENANT_ID}`, das Konzept von &quot;Containern&quot;und die erforderlichen Kopfzeilen für Anfragen (mit besonderem Augenmerk auf die [!DNL Accept]-Kopfzeile und deren mögliche Werte).
 
-## Quell- und Zielschema definieren {#define-schemas}
+## Quell- und Zielschemas definieren {#define-schemas}
 
 Wir gehen davon aus, dass Sie die beiden Schemas, die in der Beziehung definiert werden sollen, bereits erstellt haben. In diesem Tutorial wird eine Beziehung zwischen Mitgliedern des aktuellen Treueprogramms einer Organisation (definiert in einem Schema &quot;[!DNL Loyalty Members]&quot;) und ihren Lieblingshotels (definiert in einem Schema &quot;[!DNL Hotels]&quot;) hergestellt.
 

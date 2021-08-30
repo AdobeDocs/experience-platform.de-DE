@@ -1,10 +1,10 @@
 ---
 title: Audit events-Endpunkt
 description: Erfahren Sie, wie Sie den /audit_events-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 100%
+source-wordcount: '262'
+ht-degree: 98%
 
 ---
 
@@ -38,7 +38,7 @@ Die folgenden Ereignisse werden für jeden Ressourcentyp unterstützt:
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Audit-Ereignissen {#list}
 
@@ -159,7 +159,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Audit-Ereignissen zurück. Die fol
 
 ## Suchen eines Audit-Ereignisses {#lookup}
 
-Sie können ein Audit-Ereignis suchen, indem Sie seine ID im Pfad einer GET-Anfrage angeben.
+Sie können ein Audit-Ereignis suchen, indem Sie dessen ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 

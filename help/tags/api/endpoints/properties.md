@@ -1,10 +1,10 @@
 ---
 title: Properties-Endpunkt
 description: Erfahren Sie, wie Sie den /properties-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 100%
+source-wordcount: '1146'
+ht-degree: 99%
 
 ---
 
@@ -30,7 +30,7 @@ Weitere allgemeine Informationen zu Eigenschaften und ihrer Rolle im Tag-Managem
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Eigenschaften {#list}
 
@@ -677,7 +677,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Eigenschaft zurüc
 }
 ```
 
-## Löschen von Eigenschaften
+## Löschen von Properties
 
 Sie können eine Eigenschaft löschen, indem Sie deren ID im Pfad einer DELETE-Anfrage angeben.
 
@@ -709,7 +709,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttex
 
 ## Verwalten von Hinweisen für eine Eigenschaft {#notes}
 
-Sie können für jede einzelne Eigenschaft textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Eigenschaften und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
+Sie können für jede einzelne Eigenschaft textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Eigenschaften und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Eigenschaft {#related}
 

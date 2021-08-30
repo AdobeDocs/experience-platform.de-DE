@@ -1,24 +1,23 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 solution: Experience Platform
-title: Handbuch zur Observability Insights API
+title: Observability Insights-API-Anleitung
 topic-legacy: developer guide
-description: Observability Insights ist eine RESTful-API, mit der Entwickler wichtige Kennzeichnungsmetriken in Adobe Experience Platform bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
+description: Observability Insights ist eine RESTful-API, mit der Entwickler wichtige Beobachtbarkeitsmetriken in Adobe Experience Platform verfügbar machen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
 exl-id: 3dee20e2-0551-43db-ba89-bc049b56af08
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '159'
-ht-degree: 20%
+source-wordcount: '155'
+ht-degree: 27%
 
 ---
 
-# [!DNL Observability Insights] API-Handbuch
+# [!DNL Observability Insights]-API-Handbuch
 
-Die [!DNL Observability Insights]-API stellt einen Endpunkt bereit, mit dem Sie Metrikdaten für verschiedene Adobe Experience Platform-Funktionen programmgesteuert abrufen und überwachen können. Dieser Endpunkt wird nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie im Handbuch [Erste Schritte](./getting-started.md).
+Die [!DNL Observability Insights]-API bietet einen Endpunkt, mit dem Sie Metrikdaten programmgesteuert für verschiedene Adobe Experience Platform-Funktionen abrufen und überwachen können. Dieser Endpunkt wird unten beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie im Handbuch [Erste Schritte](./getting-started.md) .
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge Ansicht, besuchen Sie den [[!DNL Observability Insights] API-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Observability Insights] API-Swagger](https://www.adobe.io/experience-platform-apis/references/observability-insights/).
 
 ## Metriken
 
-Beobachtungsmetriken bieten Einblicke in Nutzungsstatistiken, historische Trends und Leistungsindikatoren für verschiedene Funktionen in Adobe Experience Platform. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Metriken-Endpunktleitfaden](./metrics.md).
+Beobachtbarkeitsmetriken bieten Einblicke in Nutzungsstatistiken, historische Trends und Leistungsindikatoren für verschiedene Funktionen in Adobe Experience Platform. Informationen zum Abrufen von Metriken mithilfe der API finden Sie im [Metriken-Endpunkthandbuch](./metrics.md).

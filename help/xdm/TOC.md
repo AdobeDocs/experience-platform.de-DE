@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 44%
+source-wordcount: '315'
+ht-degree: 41%
 
 ---
 
@@ -61,7 +61,7 @@ ht-degree: 44%
    * [Einverständnisse und Voreinstellungen](./data-types/consents.md)
    * [Währung](./data-types/currency.md)
    * [Gerät](./data-types/device.md)
-   * [E-Mail  Adresse](./data-types/email-address.md)
+   * [E-Mail Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
    * [Experience-Kanal](./data-types/experience-channel.md)
    * [Generisches Einverständnisfeld](./data-types/consent-field.md)
@@ -133,5 +133,5 @@ ht-degree: 44%
    * [Definieren einer Beziehung zwischen zwei Schemata (API)](tutorials/relationship-api.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-* [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

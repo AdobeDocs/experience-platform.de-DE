@@ -5,10 +5,10 @@ title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
 topic-legacy: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '4083'
-ht-degree: 98%
+source-wordcount: '4075'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erste
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Authentifizierung und Autorisierung für Experience Platform-APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Dieses Handbuch beinhaltet außerdem Beispiele für die zur Erstellung eines ETL-Connectors zu verwendenden API-Aufrufe sowie Links zu Dokumentationen, in denen die einzelnen [!DNL Experience Platform]-Services einschließlich der Arbeit mit der ihnen jeweils zugehörigen API erläutert werden.
 
@@ -257,7 +257,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/xdms/context/pers
 
 >[!NOTE]
 >
->Wenn das Feld „schema“ leer oder überhaupt nicht vorhanden ist, sollte der Connector das Feld „schemaRef“ lesen und die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) verwenden, wie in den vorherigen Schritten zum [Anzeigen eines Datensatzschemas](#view-dataset-schema) ausgeführt.
+>Wenn das Feld „schema“ leer oder überhaupt nicht vorhanden ist, sollte der Connector das Feld „schemaRef“ lesen und die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) verwenden, wie in den vorherigen Schritten zum [Anzeigen eines Datensatzschemas](#view-dataset-schema) ausgeführt.
 
 ### Die Eigenschaft „observableSchema“
 

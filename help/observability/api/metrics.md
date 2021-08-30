@@ -1,36 +1,35 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen
+keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
 title: Metrik-API-Endpunkt
 topic-legacy: developer guide
-description: Erfahren Sie, wie Sie mithilfe der Observability Insights API in Experience Platform beobachtbare Metriken abrufen.
+description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '2054'
-ht-degree: 40%
+source-wordcount: '2050'
+ht-degree: 44%
 
 ---
 
-# Metrik-Endpunkt
+# Endpunkt &quot;Metriken&quot;
 
-Beobachtungsmetriken bieten Einblicke in Nutzungsstatistiken, historische Trends und Leistungsindikatoren für verschiedene Funktionen in Adobe Experience Platform. Mit dem `/metrics`-Endpunkt in [!DNL Observability Insights API] können Sie Metrikdaten für die Aktivität Ihres Unternehmens in [!DNL Platform] programmgesteuert abrufen.
+Beobachtbarkeitsmetriken bieten Einblicke in Nutzungsstatistiken, historische Trends und Leistungsindikatoren für verschiedene Funktionen in Adobe Experience Platform. Mit dem Endpunkt `/metrics` im [!DNL Observability Insights API] können Sie Metrikdaten für die Aktivität Ihres Unternehmens in [!DNL Platform] programmgesteuert abrufen.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Observability Insights] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml). Bevor Sie fortfahren, lesen Sie bitte im Handbuch [Erste Schritte](./getting-started.md) nach Links zu entsprechenden Dokumentationen, einem Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtigen Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Observability Insights] API](https://www.adobe.io/experience-platform-apis/references/observability-insights/). Bevor Sie fortfahren, lesen Sie im Handbuch [Erste Schritte](./getting-started.md) die Links zu entsprechenden Dokumentationen, den Leitfaden zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu Kopfzeilen, die für das erfolgreiche Aufrufen einer [!DNL Experience Platform]-API erforderlich sind.
 
 ## Beobachtbarkeitsmetriken abrufen
 
-Es gibt zwei unterstützte Methoden zum Abrufen von Metrikdaten mit der API:
+Es gibt zwei unterstützte Methoden zum Abrufen von Metrikdaten mithilfe der API:
 
-* [Version 1](#v1): Geben Sie Metriken mithilfe von Abfragen-Parametern an.
-* [Version 2](#v2): Geben Sie mithilfe einer JSON-Nutzlast Filter an und wenden Sie sie auf Metriken an.
+* [Version 1](#v1): Geben Sie Metriken mithilfe von Abfrageparametern an.
+* [Version 2](#v2): Geben Sie mithilfe einer JSON-Payload Filter an und wenden Sie sie auf Metriken an.
 
 ### Version 1 {#v1}
 
-Sie können Metrikdaten abrufen, indem Sie eine GET an den `/metrics`-Endpunkt senden und Metriken mithilfe von Abfragen-Parametern angeben.
+Sie können Metrikdaten abrufen, indem Sie eine GET-Anfrage an den `/metrics`-Endpunkt senden und Metriken mithilfe von Abfrageparametern angeben.
 
 **API-Format**
 
@@ -47,7 +46,7 @@ GET /metrics?metric={METRIC}&metric={METRIC_2}&id={ID}&dateRange={DATE_RANGE}
 | Parameter | Beschreibung |
 | --- | --- |
 | `{METRIC}` | Die Metrik, die Sie verfügbar machen möchten. Wenn Sie mehrere Metriken in einem einzelnen Aufruf kombinieren, müssen Sie kaufmännische Und-Zeichen (`&`) verwenden, um einzelne Metriken voneinander zu trennen. Beispiel: `metric={METRIC_1}&metric={METRIC_2}`. |
-| `{ID}` | Der Bezeichner für eine bestimmte [!DNL Platform]-Ressource, deren Metriken Sie bereitstellen möchten. Diese Kennung kann je nach verwendeter Metrik optional, erforderlich oder nicht anwendbar sein. Eine Liste der verfügbaren Metriken, einschließlich der unterstützten IDs (sowohl erforderlich als auch optional) für jede Metrik finden Sie im Anhang [.](#available-metrics) |
+| `{ID}` | Die Kennung für eine bestimmte [!DNL Platform]-Ressource, deren Metriken Sie verfügbar machen möchten. Diese Kennung kann je nach verwendeter Metrik optional, erforderlich oder nicht anwendbar sein. Eine Liste der verfügbaren Metriken, einschließlich der unterstützten (erforderlichen und optionalen) IDs für jede Metrik finden Sie im [Anhang](#available-metrics) . |
 | `{DATE_RANGE}` | Der Datumsbereich für die Metriken, die Sie verfügbar machen möchten, im ISO 8601-Format (z. B. `2018-10-01T07:00:00.000Z/2018-10-09T07:00:00.000Z`). |
 
 **Anfrage**
@@ -63,7 +62,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Objekten zurück, jeweils mit einem Zeitstempel innerhalb des angegebenen `dateRange` und den entsprechenden Werten für die im Anfragepfad angegebenen Metriken. Wenn `id` einer [!DNL Platform]-Ressource im Anforderungspfad enthalten ist, gelten die Ergebnisse nur für diese bestimmte Ressource. Wenn die `id` weggelassen wird, gelten die Ergebnisse für alle anwendbaren Ressourcen in Ihrer IMS-Organisation.
+Eine erfolgreiche Antwort gibt eine Liste von Objekten zurück, jeweils mit einem Zeitstempel innerhalb des angegebenen `dateRange` und den entsprechenden Werten für die im Anfragepfad angegebenen Metriken. Wenn die `id` einer [!DNL Platform] -Ressource im Anfragepfad enthalten ist, gelten die Ergebnisse nur für diese Ressource. Wenn die `id` weggelassen wird, gelten die Ergebnisse für alle anwendbaren Ressourcen in Ihrer IMS-Organisation.
 
 ```json
 {
@@ -117,7 +116,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Objekten zurück, jeweils mit eine
 
 ### Version 2 {#v2}
 
-Sie können Metrikdaten abrufen, indem Sie eine POST an den `/metrics`-Endpunkt anfordern und die Metriken angeben, die Sie in der Nutzlast abrufen möchten.
+Sie können Metrikdaten abrufen, indem Sie eine POST-Anfrage an den `/metrics`-Endpunkt senden und die Metriken angeben, die Sie in der Payload abrufen möchten.
 
 **API-Format**
 
@@ -169,20 +168,20 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `start` | Das früheste Datum/die früheste Uhrzeit, ab der Metrikdaten abgerufen werden. |
-| `end` | Das aktuelle Datum/die Uhrzeit, ab dem Metrikdaten abgerufen werden. |
-| `granularity` | Ein optionales Feld, das das Zeitintervall angibt, nach dem die Metrikdaten dividiert werden sollen. Beispielsweise gibt der Wert `DAY` Metriken für jeden Tag zwischen dem `start`- und dem `end`-Datum zurück, während bei einem Wert von `MONTH` die Metrikergebnisse stattdessen nach Monat gruppiert werden. Bei Verwendung dieses Felds muss auch eine entsprechende `downsample`-Eigenschaft angegeben werden, mit welcher Aggregationsfunktion Daten gruppiert werden. |
-| `metrics` | Ein Array von Objekten, eines für jede abzurufende Metrik. |
-| `name` | Der Name einer Metrik, die von Observability Insights erkannt wird. Eine vollständige Liste der zulässigen Metriknamen finden Sie im Anhang [.](#available-metrics) |
-| `filters` | Ein optionales Feld, mit dem Sie Metriken nach bestimmten Datensätzen filtern können. Das Feld ist ein Array von Objekten (eines für jeden Filter), wobei jedes Objekt die folgenden Eigenschaften enthält: <ul><li>`name`: Der Typ der Entität, nach der Metriken gefiltert werden sollen. Derzeit wird nur `dataSets` unterstützt.</li><li>`value`: Die ID eines oder mehrerer Datensätze. Es können mehrere Datenset-IDs als einzelne Zeichenfolge angegeben werden, wobei jede ID durch vertikale Balkenzeichen (`|`) getrennt wird.</li><li>`groupBy`: Wenn &quot;true&quot;festgelegt ist, gibt dies an, dass die entsprechenden Datensätze mehrere Datensätze  `value` darstellen, deren Metrikergebnisse separat zurückgegeben werden sollten. Bei der Einstellung false werden die Metrikergebnisse für diese Datensätze gruppiert.</li></ul> |
-| `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren von Datensätzen mit mehreren Serien zu einzelnen Ergebnissen verwendet werden soll. Ausführliche Informationen zu verfügbaren Aggregatoren finden Sie in der [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Abtastrate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für die Neuberechnung wird durch die `granularity`-Eigenschaft bestimmt. Ausführliche Informationen zum Downsampling finden Sie in der [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `start` | Das früheste Datum/die früheste Uhrzeit, ab dem/der Metrikdaten abgerufen werden sollen. |
+| `end` | Das aktuelle Datum/die aktuelle Uhrzeit, ab dem/der Metrikdaten abgerufen werden sollen. |
+| `granularity` | Ein optionales Feld, das das Zeitintervall angibt, nach dem Metrikdaten geteilt werden sollen. Beispielsweise gibt der Wert `DAY` Metriken für jeden Tag zwischen dem `start`- und dem `end`-Datum zurück, während bei einem Wert von `MONTH` die Metrikergebnisse stattdessen nach Monat gruppiert werden. Bei Verwendung dieses Felds muss auch eine entsprechende `downsample` -Eigenschaft angegeben werden, um die Aggregationsfunktion anzugeben, mit der Daten gruppiert werden sollen. |
+| `metrics` | Ein Array von Objekten, eines für jede Metrik, die Sie abrufen möchten. |
+| `name` | Der Name einer Metrik, die von Observability Insights erkannt wird. Eine vollständige Liste der akzeptierten Metriknamen finden Sie im [Anhang](#available-metrics) . |
+| `filters` | Ein optionales Feld, mit dem Sie Metriken nach bestimmten Datensätzen filtern können. Das Feld ist ein Array von Objekten (eines für jeden Filter), wobei jedes Objekt die folgenden Eigenschaften enthält: <ul><li>`name`: Der Typ der Entität, nach der Metriken gefiltert werden sollen. Derzeit wird nur `dataSets` unterstützt.</li><li>`value`: Die ID eines oder mehrerer Datensätze. Es können mehrere Datensatz-IDs als einzelne Zeichenfolge angegeben werden, wobei jede ID durch vertikale Balkenzeichen (`|`) getrennt ist.</li><li>`groupBy`: Gibt bei Festlegung auf &quot;true&quot;an, dass die entsprechende  `value` mehrere Datensätze darstellt, deren Metrikergebnisse separat zurückgegeben werden sollen. Wenn der Wert auf &quot;false&quot;gesetzt ist, werden die Metrikergebnisse für diese Datensätze gruppiert.</li></ul> |
+| `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Ausführliche Informationen zu verfügbaren Aggregatoren finden Sie in der [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
+| `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Sampling-Rate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für das Downsampling wird durch die Eigenschaft `granularity` bestimmt. Ausführliche Informationen zum Downsampling finden Sie in der [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der Anforderung angegebenen Metriken und Filter zurück.
+Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der Anfrage angegebenen Metriken und Filter zurück.
 
 ```json
 {
@@ -265,32 +264,32 @@ Eine erfolgreiche Antwort gibt die resultierenden Datenpunkte für die in der An
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `metricResponses` | Ein Array, dessen Objekte jede der in der Anforderung angegebenen Metriken darstellen. Jedes Objekt enthält Informationen zur Filterkonfiguration und zurückgegebene Metrikdaten. |
-| `metric` | Der Name einer der in der Anforderung bereitgestellten Metriken. |
+| `metricResponses` | Ein Array, dessen Objekte jede der in der Anfrage angegebenen Metriken darstellen. Jedes Objekt enthält Informationen zur Filterkonfiguration und die zurückgegebenen Metrikdaten. |
+| `metric` | Der Name einer der in der Anfrage angegebenen Metriken. |
 | `filters` | Die Filterkonfiguration für die angegebene Metrik. |
-| `datapoints` | Ein Array, dessen Objekte die Ergebnisse der angegebenen Metrik und der angegebenen Filter darstellen. Die Anzahl der Objekte im Array hängt von den Filteroptionen ab, die in der Anforderung bereitgestellt werden. Wenn keine Filter angegeben wurden, enthält das Array nur ein einzelnes Objekt, das alle Datensätze darstellt. |
-| `groupBy` | Wenn mehrere Datensätze in der `filter`-Eigenschaft für eine Metrik angegeben wurden und die `groupBy`-Option in der Anforderung auf &quot;true&quot;gesetzt wurde, enthält dieses Objekt die ID des Datensatzes, für das die entsprechende `dps`-Eigenschaft gilt.<br><br>Wenn dieses Objekt in der Antwort leer angezeigt wird, gilt die entsprechende  `dps` Eigenschaft für alle im  `filters` Array bereitgestellten Datensätze (bzw. für alle Datensätze, in denen  [!DNL Platform] keine Filter angegeben wurden). |
-| `dps` | Die zurückgegebenen Daten für die angegebene Metrik, den Filter und den Zeitraum. Jeder Schlüssel in diesem Objekt stellt einen Zeitstempel mit einem entsprechenden Wert für die angegebene Metrik dar. Der Zeitraum zwischen den einzelnen Datenpunkten hängt vom `granularity`-Wert ab, der in der Anforderung angegeben ist. |
+| `datapoints` | Ein Array, dessen Objekte die Ergebnisse der angegebenen Metrik und Filter darstellen. Die Anzahl der Objekte im Array hängt von den in der Anfrage angegebenen Filteroptionen ab. Wenn keine Filter angegeben wurden, enthält das Array nur ein einzelnes Objekt, das alle Datensätze darstellt. |
+| `groupBy` | Wenn mehrere Datensätze in der Eigenschaft `filter` für eine Metrik angegeben wurden und die Option `groupBy` in der Anforderung auf &quot;true&quot;gesetzt wurde, enthält dieses Objekt die ID des Datensatzes, für den die entsprechende Eigenschaft `dps` gilt.<br><br>Wenn dieses Objekt in der Antwort leer angezeigt wird, gilt die entsprechende  `dps` Eigenschaft für alle im  `filters` Array bereitgestellten Datensätze (oder für alle Datensätze in ,  [!DNL Platform] wenn keine Filter bereitgestellt wurden). |
+| `dps` | Die zurückgegebenen Daten für die angegebene Metrik, den Filter und den Zeitraum. Jeder Schlüssel in diesem Objekt stellt einen Zeitstempel mit einem entsprechenden Wert für die angegebene Metrik dar. Der Zeitraum zwischen den einzelnen Datenpunkten hängt vom in der Anfrage angegebenen `granularity` -Wert ab. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Anhang
 
-Der folgende Abschnitt enthält weitere Informationen zum Arbeiten mit dem `/metrics`-Endpunkt.
+Der folgende Abschnitt enthält zusätzliche Informationen zum Arbeiten mit dem Endpunkt `/metrics`.
 
 ### Verfügbare Metriken {#available-metrics}
 
-In den folgenden Tabellen werden alle Metriken Liste, die von [!DNL Observability Insights] bereitgestellt werden, aufgeschlüsselt nach [!DNL Platform]-Dienst. Jede Metrik enthält eine Beschreibung und einen akzeptierten ID-Abfrageparameter.
+In den folgenden Tabellen sind alle Metriken aufgeführt, die von [!DNL Observability Insights] bereitgestellt werden, aufgeschlüsselt nach [!DNL Platform]-Dienst. Jede Metrik enthält eine Beschreibung und einen akzeptierten ID-Abfrageparameter.
 
 >[!NOTE]
 >
->Alle aufgelisteten ID-Abfragen sind optional, sofern nicht anders angegeben.
+>Alle aufgelisteten ID-Abfrageparameter sind optional, sofern nicht anders angegeben.
 
 #### [!DNL Data Ingestion] {#ingestion}
 
 In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL Data Ingestion] aufgeführt. Metriken in **Fettdruck** sind Streaming-Erfassungsmetriken.
 
-| Insight-Metrik | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.ingestion.dataset.new.count | Gesamtzahl der erstellten Datensätze. | K. A. |
 | timeseries.ingestion.dataset.size | Kumulative Größe aller Daten, die für einen Datensatz oder für alle Datensätze erfasst werden. | Datensatz-ID |
@@ -320,10 +319,10 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 
 In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL Identity Service] aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
-| timeseries.identity.dataset.recordsuccess.count | Anzahl der Datensätze, die von [!DNL Identity Service] für einen Datensatz oder alle Datensätze in ihre Datenquelle geschrieben wurden. | Datensatz-ID |
-| timeseries.identity.dataset.recordfailed.count | Anzahl der Datensätze fehlgeschlagen von [!DNL Identity Service], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
+| timeseries.identity.dataset.recordsuccess.count | Anzahl der Einträge, die für einen Datensatz oder alle Datensätze von [!DNL Identity Service] in ihre Datenquelle geschrieben wurden. | Datensatz-ID |
+| timeseries.identity.dataset.recordfailed.count | Anzahl der fehlgeschlagenen Einträge von [!DNL Identity Service], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
 | timeseries.identity.dataset.namespacecode.recordsuccess.count | Anzahl der Identitätseinträge, die für einen Namespace erfolgreich erfasst wurden. | Namespace-ID (**erforderlich**) |
 | timeseries.identity.dataset.namespacecode.recordfailed.count | Anzahl der Identitätseinträge, die aufgrund eines Namespace fehlgeschlagen sind. | Namespace-ID (**erforderlich**) |
 | timeseries.identity.dataset.namespacecode.recordskipped.count | Anzahl der Identitätseinträge, die von einem Namespace übersprungen wurden. | Namespace-ID (**erforderlich**) |
@@ -338,7 +337,7 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 
 In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL Privacy Service] aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.gdpr.jobs.totaljobs.count | Gesamtzahl der erstellten Aufträge von DSGVO. | ENV (**erforderlich**) |
 | timeseries.gdpr.jobs.completedjobs.count | Gesamtzahl der abgeschlossenen Aufträge von DSGVO. | ENV (**erforderlich**) |
@@ -350,7 +349,7 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 
 In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL Query Service] aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
 | timeseries.queryservice.query.scheduleonce.count | Gesamtanzahl der einmaligen geplanten Abfragen. | K. A. |
 | timeseries.queryservice.query.scheduledrecurring.count | Gesamtanzahl der wiederkehrenden geplanten Abfragen. | K. A. |
@@ -365,13 +364,13 @@ In der folgenden Tabelle sind die Metriken für Adobe Experience Platform [!DNL 
 
 In der folgenden Tabelle sind die Metriken für [!DNL Real-time Customer Profile] aufgeführt.
 
-| Insight-Metrik | Beschreibung | ID-Abfrageparameter |
+| Insights-Metrik | Beschreibung | ID-Abfrageparameter |
 | ---- | ---- | ---- |
-| timeseries.profiles.dataset.recordread.count | Anzahl der Datensätze, die von [!DNL Data Lake] von [!DNL Profile], für einen Datensatz oder für alle Datensätze gelesen werden. | Datensatz-ID |
-| timeseries.profiles.dataset.recordsuccess.count | Anzahl der Datensätze, die von [!DNL Profile], für einen Datensatz oder für alle Datensätze in ihre Datenquelle geschrieben wurden. | Datensatz-ID |
-| timeseries.profiles.dataset.recordfailed.count | Anzahl der Datensätze fehlgeschlagen von [!DNL Profile], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
-| timeseries.profiles.dataset.batchsuccess.count | Anzahl der für einen Datensatz oder für alle Datensätze erfassten [!DNL Profile]-Stapel. | Datensatz-ID |
-| timeseries.profiles.dataset.batchfailed.count | Anzahl der [!DNL Profile]-Stapel bei einem Datensatz oder bei allen Datensätzen fehlgeschlagen. | Datensatz-ID |
+| timeseries.profiles.dataset.recordread.count | Anzahl der Einträge, die von [!DNL Data Lake] von [!DNL Profile] für einen Datensatz oder für alle Datensätze gelesen werden. | Datensatz-ID |
+| timeseries.profiles.dataset.recordsuccess.count | Anzahl der Einträge, die für einen Datensatz oder für alle Datensätze von [!DNL Profile] in ihre Datenquelle geschrieben wurden. | Datensatz-ID |
+| timeseries.profiles.dataset.recordfailed.count | Anzahl der fehlgeschlagenen Einträge von [!DNL Profile], für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
+| timeseries.profiles.dataset.batchsuccess.count | Anzahl der [!DNL Profile] Batches, die für einen Datensatz oder für alle Datensätze erfasst werden. | Datensatz-ID |
+| timeseries.profiles.dataset.batchfailed.count | Anzahl der [!DNL Profile] fehlgeschlagenen Batches für einen Datensatz oder für alle Datensätze. | Datensatz-ID |
 | platform.ups.ingest.streaming.request.m1_rate | Rate eingehender Anfragen. | IMS-Organisation (**Erforderlich**) |
 | platform.ups.ingest.streaming.access.put.success.m1_rate | Erfolgsrate der Aufnahme. | IMS-Organisation (**Erforderlich**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Rate der neuen Einträge, die für einen Datensatz erfasst werden. | Datensatz-ID (**Erforderlich**) |
@@ -414,19 +413,19 @@ Antworten vom `/metrics`-Endpunkt können unter bestimmten Bedingungen Fehlermel
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `title` | Eine Zeichenfolge, die die Fehlermeldung und den potenziellen Grund für den Fehler enthält. |
-| `report` | Enthält Kontextinformationen zum Fehler, einschließlich der Sandbox und des IMS-Orgs, die bei dem Vorgang verwendet werden, der ihn ausgelöst hat. |
+| `title` | Eine Zeichenfolge, die die Fehlermeldung und den möglichen Grund für den Fehler enthält. |
+| `report` | Enthält Kontextdaten zum Fehler, einschließlich der Sandbox und der IMS-Organisation, die in dem Vorgang verwendet werden, der den Fehler ausgelöst hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
-In der folgenden Tabelle werden die verschiedenen Fehlercodes Liste, die von der API zurückgegeben werden können:
+In der folgenden Tabelle sind die verschiedenen Fehlercodes aufgeführt, die von der API zurückgegeben werden können:
 
 | Fehler-Code | Titel | Beschreibung |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Fehlerhafte Anforderungs-Nutzlast | Irgendetwas stimmt nicht mit der Anforderungs-Nutzlast. Stellen Sie sicher, dass Sie die Payload-Formatierung genau wie [über](#v2) einhalten. Dieser Fehler kann auf eine der folgenden Ursachen Trigger haben:<ul><li>Fehlende erforderliche Felder wie `aggregator`</li><li>Ungültige Metriken</li><li>Die Anforderung enthält einen ungültigen Aggregator</li><li>Ein Beginn-Datum findet nach einem Enddatum statt</li></ul> |
-| `INSGHT-1001-400` | Abfrage von Metriken fehlgeschlagen | Beim Versuch, die Metrikendatenbank Abfrage, ist ein Fehler aufgetreten, da eine fehlerhafte Anforderung oder die Abfrage selbst nicht zu partikelbar war. Vergewissern Sie sich, dass Ihre Anforderung korrekt formatiert ist, bevor Sie es erneut versuchen. |
-| `INSGHT-1001-500` | Abfrage von Metriken fehlgeschlagen | Beim Versuch, die Metrikdatenbank Abfrage, ist aufgrund eines Serverfehlers ein Fehler aufgetreten. Versuchen Sie es erneut, und wenn das Problem weiterhin besteht, wenden Sie sich an den Support der Adobe. |
-| `INSGHT-1002-500` | Dienstfehler | Die Anforderung konnte aufgrund eines internen Fehlers nicht verarbeitet werden. Versuchen Sie es erneut, und wenn das Problem weiterhin besteht, wenden Sie sich an den Support der Adobe. |
-| `INSGHT-1003-401` | Sandbox-Überprüfungsfehler | Die Anforderung konnte aufgrund eines Sandbox-Validierungsfehlers nicht verarbeitet werden. Stellen Sie sicher, dass der im Header `x-sandbox-name` angegebene Sandbox-Name eine gültige, aktivierte Sandbox für Ihre IMS-Organisation darstellt, bevor Sie die Anforderung erneut versuchen. |
+| `INSGHT-1000-400` | Schlechte Anfrage-Payload | Mit der Anfrage-Payload ist etwas nicht in Ordnung. Stellen Sie sicher, dass Sie die Payload-Formatierung genau wie [über](#v2) anzeigen. Dieser Fehler kann aus allen möglichen Gründen Trigger werden:<ul><li>Erforderliche Felder fehlen, z. B. `aggregator`</li><li>Ungültige Metriken</li><li>Die Anfrage enthält einen ungültigen Aggregator</li><li>Ein Startdatum liegt nach dem Enddatum</li></ul> |
+| `INSGHT-1001-400` | Metrikabfrage fehlgeschlagen | Beim Versuch, die Metrikdatenbank abzufragen, trat ein Fehler auf, da eine ungültige Anforderung oder die Abfrage selbst nicht analysierbar war. Stellen Sie sicher, dass Ihre Anforderung korrekt formatiert ist, bevor Sie es erneut versuchen. |
+| `INSGHT-1001-500` | Metrikabfrage fehlgeschlagen | Beim Versuch, die Metrikdatenbank abzufragen, trat aufgrund eines Serverfehlers ein Fehler auf. Versuchen Sie es erneut. Wenn das Problem weiterhin auftritt, wenden Sie sich an den Support von Adobe. |
+| `INSGHT-1002-500` | Dienstfehler | Die Anfrage konnte aufgrund eines internen Fehlers nicht verarbeitet werden. Versuchen Sie es erneut. Wenn das Problem weiterhin auftritt, wenden Sie sich an den Support von Adobe. |
+| `INSGHT-1003-401` | Sandbox-Validierungsfehler | Die Anfrage konnte aufgrund eines Sandbox-Validierungsfehlers nicht verarbeitet werden. Stellen Sie sicher, dass der Sandbox-Name, den Sie in der Kopfzeile `x-sandbox-name` angegeben haben, eine gültige, aktivierte Sandbox für Ihre IMS-Organisation darstellt, bevor Sie die Anfrage erneut ausführen. |
 
 {style=&quot;table-layout:auto&quot;}

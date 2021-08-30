@@ -1,10 +1,10 @@
 ---
 title: Rule components-Endpunkt
 description: Erfahren Sie, wie Sie den /rule_components-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 53612919dc040a8a3ad35a3c5c0991554ffbea7c
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
-source-wordcount: '1211'
-ht-degree: 100%
+source-wordcount: '1207'
+ht-degree: 99%
 
 ---
 
@@ -32,7 +32,7 @@ Eine Regelkomponente wird von genau einer [Erweiterung](./extensions.md) bereitg
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Regelkomponenten {#list}
 
@@ -52,7 +52,7 @@ GET /rules/{RULE_ID}/rule_components
 
 >[!NOTE]
 >
->Mithilfe von Abfrageparametern können aufgelistete Regelkomponenten anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
+>Mithilfe von Abfrageparametern können aufgelistete Regelkomponenten anhand der folgenden Attribute gefiltert werden:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`negate`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>Weitere Informationen finden Sie im Handbuch zum [Filtern von Antworten](../guides/filtering.md).
 
 **Anfrage**
 
@@ -175,7 +175,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Regelkomponenten für die angegebe
 
 ## Suchen einer Regelkomponente {#lookup}
 
-Sie können eine Regelkomponente suchen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
+Sie können eine Regelkomponente suchen, indem Sie ihre Kennung im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -363,7 +363,7 @@ curl -X POST \
 | `attributes.delay_next` | Ein boolescher Wert, der anzeigt, ob spätere Aktionen verzögert werden sollen. |
 | `attributes.order` | Eine Ganzzahl, die die Reihenfolge angibt, in der die Komponente nach Typ geladen werden soll. |
 | `attributes.rule_order` | Eine Ganzzahl, die die Priorität angibt, mit der die verknüpfte Regel ausgelöst werden soll. |
-| `attributes.settings` | Ein JSON-Objekt vom Typ „settings“, das als Zeichenfolge dargestellt wird. |
+| `attributes.settings` | Ein JSON-Objekt vom Typ „Einstellungen“, das als Zeichenfolge dargestellt wird. |
 | `attributes.timeout` | Eine Ganzzahl, die die Zeitüberschreitung der Aktion angibt, die nacheinander ausgeführt wird. |
 | `relationships` | Ein Objekt, das die erforderlichen Beziehungen für die Regelkomponente herstellt. Es müssen zwei Beziehungen hergestellt werden: <ol><li>`extension`: Die Erweiterung, die diese Regelkomponente definiert. Dies muss dieselbe Erweiterung sein, deren Erweiterungspaket durch die `delegate_descriptor_id` gekennzeichnet ist.</li><li>`rules`: Die Regel, unter der diese Komponente definiert wird. Muss dieselbe Regel-ID sein wie im Anfragepfad angegeben.</li></ol>Allgemeine Informationen zu Beziehungen finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md). |
 | `type` | Der Typ der zu erstellenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
@@ -512,7 +512,7 @@ curl -X PATCH \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `attributes` | Ein Objekt, dessen Regelkomponenten die Attribute darstellen, die für die Regelkomponente aktualisiert werden sollen. Die folgenden Attribute können für eine Regelkomponente aktualisiert werden: <ul><li>`delay_next`</li><li>`delegate_descriptor_id`</li><li>`name`</li><li>`order`</li><li>`rule_order`</li><li>`settings`</li><li>`timeout`</li></ul> |
-| `id` | Die `id` der Regelkomponente, die Sie aktualisieren möchten. Diese sollte mit dem `{RULE_COMPONENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
+| `id` | Die `id` der Regelkomponente, die Sie aktualisieren möchten. Dies sollte mit dem `{RULE_COMPONENT_ID}`-Wert übereinstimmen, der im Anfragepfad angegeben ist. |
 | `type` | Der Typ der zu aktualisierenden Ressource. Für diesen Endpunkt muss der Wert `rule_components` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -645,7 +645,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) ohne Antworttex
 
 ## Verwalten von Hinweisen für eine Regelkomponente {#notes}
 
-Sie können für jede einzelne Regelkomponente textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Anmerkungen für Regelkomponenten und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
+Sie können für jede einzelne Regelkomponente textbasierte Anmerkungen erstellen und abrufen. Weitere Informationen zum Verwalten von Notizen für Regelkomponenten und andere kompatible Ressourcen finden Sie im [Handbuch zum notes-Endpunkt](./notes.md).
 
 ## Abrufen verwandter Ressourcen für eine Regelkomponente {#related}
 
@@ -877,7 +877,7 @@ Eine erfolgreiche Antwort gibt die Details der Erweiterung der angegebenen Regel
 }
 ```
 
-### Suchen des zugehörigen Ursprungs für eine Regelkomponente {#origin}
+### Suchen der zugehörigen Herkunft für eine Regelkomponente {#origin}
 
 Sie können den Ursprung (vorherige Revision) einer Regelkomponente suchen, indem Sie `/origin` an den Pfad einer Suchanfrage anhängen.
 
@@ -907,7 +907,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Ursprungs der angegebenen Regelkomponente zurück.
+Eine erfolgreiche Antwort gibt die Details der Herkunft der angegebenen Regelkomponente zurück.
 
 ```json
 {

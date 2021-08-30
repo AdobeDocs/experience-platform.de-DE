@@ -6,16 +6,16 @@ topic-legacy: policies
 type: Tutorial
 description: Mit der Policy Service-API können Sie Datennutzungsrichtlinien erstellen und verwalten, die bestimmen, welche Marketing-Aktionen für Daten entsprechend deren Datennutzungskennzeichnungen durchgeführt werden können. Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Datennutzungsrichtlinie mithilfe der Policy Service-API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '1219'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '1215'
+ht-degree: 99%
 
 ---
 
 # Eine Datennutzungsrichtlinie in der API erstellen
 
-Mit der [Policy Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) können Sie Datennutzungsrichtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten Datennutzungskennzeichnungen ausgeführt werden können.
+Mit der [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) können Sie Datennutzungsrichtlinien erstellen und verwalten, um festzulegen, welche Marketing-Aktionen für Daten mit bestimmten Datennutzungskennzeichnungen ausgeführt werden können.
 
 Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Datennutzungsrichtlinie mithilfe der [!DNL Policy Service]-API. Eine genauere Anleitung zu den verschiedenen in der API verfügbaren Vorgängen finden Sie im [Entwicklerhandbuch für Policy Service](../api/getting-started.md).
 

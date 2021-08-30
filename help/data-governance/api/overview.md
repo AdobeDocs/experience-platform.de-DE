@@ -5,10 +5,10 @@ title: Handbuch zur Richtlinien-Service-API
 topic-legacy: developer guide
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '504'
-ht-degree: 100%
+source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten ver
 
 Die [!DNL Policy Service]-API bietet mehrere Endpunkte, mit denen Sie Datennutzungskennzeichnungen und -richtlinien programmgesteuert verwalten und Marketing-Aktionen für Richtlinienverletzungen auswerten können. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
-Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Policy Service] API-Swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml).
+Um alle verfügbaren Endpunkte und CRUD-Vorgänge zu sehen, besuchen Sie den [[!DNL Policy Service] API-Swagger](https://www.adobe.io/experience-platform-apis/references/policy-service/).
 
 ## Beschriftungen
 
