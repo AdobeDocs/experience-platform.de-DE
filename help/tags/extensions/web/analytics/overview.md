@@ -1,10 +1,10 @@
 ---
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 90dece1054cf54d40a62093990a034ee5f3bccaf
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 99%
+ht-degree: 98%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zum Konfigurieren der Adobe Analytics-Erweiterung und den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -88,7 +88,7 @@ Ermöglicht das Einfügen des Kern-Codes [AppMeasurement.js](https://experiencel
 
 >[!NOTE]
 >
->Der im Tag-Editor verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Tag-Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
+>Der im Tag-Editor von Launch verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Tag-Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
 
 #### Folgende Report Suites für Tracker festlegen
 
@@ -366,7 +366,7 @@ Passen Sie mithilfe des Editors den benutzerdefinierten Seiten-Code an.
 
 Wählen Sie aus, ob Sie eine Seitenansicht inkrementieren möchten.
 
-#### Seitenansicht nicht inkrementieren – s.t()
+#### Seitenansicht nicht inkrementieren - s.tl()
 
 Wählen Sie aus, ob Sie keine Seitenansicht inkrementieren möchten.
 
