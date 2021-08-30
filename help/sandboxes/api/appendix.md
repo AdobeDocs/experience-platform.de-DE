@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Anhang zum Sandbox-API-Handbuch
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Sandbox-API.
 topic-legacy: developer guide
-source-git-commit: e4067f79e9da106fe2d2a86fa0024c2e5fe5d0ba
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 10%
+source-wordcount: '124'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der [!DNL S
 
 ## Verwenden von Abfrageparametern {#query}
 
-Die [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) unterstützt die Verwendung von Abfrageparametern zur Seite und Filterung von Ergebnissen bei der Auflistung von Sandboxes.
+Die [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) unterstützt die Verwendung von Abfrageparametern zur Seite und Filterung von Ergebnissen bei der Auflistung von Sandboxes.
 
 >[!NOTE]
 >

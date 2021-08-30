@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Sandboxes in Adobe Experience Platform
 breadcrumb-title: Sandboxes-Anleitung
 user-guide-description: Partitionieren einer Platform-Instanz in virtuellen Umgebungen für Entwicklung, Tests und zur Anwendungsimplementierung.
 feature: Data Management
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 90%
+source-wordcount: '60'
+ht-degree: 81%
 
 ---
 
@@ -26,5 +26,5 @@ ht-degree: 90%
    * [Sandbox-Typen](api/types.md)
    * [Anhang](api/appendix.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-* [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [API-Referenz](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

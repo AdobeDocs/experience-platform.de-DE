@@ -7,10 +7,10 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
 workflow-type: tm+mt
-source-wordcount: '1735'
-ht-degree: 66%
+source-wordcount: '1731'
+ht-degree: 65%
 
 ---
 
@@ -206,4 +206,4 @@ Im Folgenden finden Sie eine Liste von Handbüchern zur Fehlerbehebung und API-R
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQs und Handbuch zur Fehlerbehebung](../xdm/troubleshooting-guide.md) |
 | [!DNL Flow Service] ([!DNL Sources] und [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) |  |
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en) | [[!DNL Profile] Handbuch zur Fehlerbehebung](../profile/troubleshooting.md) |
-| Sandboxes | [Sandbox-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Handbuch zur Fehlerbehebung bei Sandboxes](../sandboxes/troubleshooting-guide.md) |
+| Sandboxes | [Sandbox-API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Handbuch zur Fehlerbehebung bei Sandboxes](../sandboxes/troubleshooting-guide.md) |
