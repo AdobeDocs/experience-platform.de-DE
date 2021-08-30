@@ -1,42 +1,41 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Tableau;Tableau;Abfrage-Dienst;Abfrage-Dienst;Verbindung mit Abfrage-Dienst herstellen
+keywords: Experience Platform; Startseite; beliebte Themen; Tableau; Tableau; Abfragedienst; Query Service; Verbindung zum Abfragedienst herstellen
 solution: Experience Platform
-title: Anschluss von Tableau an den Abfrage-Dienst
+title: Verbinden von Tableau mit dem Abfrage-Service verbinden
 topic-legacy: connect
-description: Dieses Dokument führt Sie durch die Schritte, um Tableau mit dem Adobe Experience Platform Abfrage Service zu verbinden.
+description: In diesem Dokument werden die Schritte zum Verbinden von Tableau mit Adobe Experience Platform Query Service beschrieben.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 11%
+source-wordcount: '208'
+ht-degree: 3%
 
 ---
 
-# Verbinden Sie [!DNL Tableau] mit dem Abfrage-Dienst
+# Verbinden von [!DNL Tableau] mit Query Service
 
-Dieses Dokument beschreibt die Schritte zum Verbinden von Tableau mit Adobe Experience Platform [!DNL Query Service].
+In diesem Dokument werden die Schritte zum Verbinden von Tableau mit Adobe Experience Platform [!DNL Query Service] beschrieben.
 
 >[!NOTE]
 >
-> Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL Tableau] haben und mit der Navigation in der Oberfläche vertraut sind. Weitere Informationen zu [!DNL Tableau] finden Sie in der [offiziellen  [!DNL Tableau] Dokumentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
+> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL Tableau] haben und mit der Navigation in der Benutzeroberfläche vertraut sind. Weitere Informationen zu [!DNL Tableau] finden Sie in der [offiziellen [!DNL Tableau] Dokumentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-Um [!DNL Tableau] mit [!DNL Query Service] zu verbinden, öffnen Sie [!DNL Tableau] und wählen Sie im Abschnitt **[!DNL To a Server]** **[!DNL More]**, gefolgt von **[!DNL PostgreSQL]**
+Um [!DNL Tableau] mit [!DNL Query Service] zu verbinden, öffnen Sie [!DNL Tableau] und wählen Sie im Abschnitt **[!DNL To a Server]** die Option **[!DNL More]** gefolgt von **[!DNL PostgreSQL]** aus.
 
 ![](../images/clients/tableau/open-connection.png)
 
-Sie können jetzt Werte eingeben, um eine Verbindung mit Adobe Experience Platform herzustellen.  Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]** und anschließend **[!UICONTROL Anmeldeinformationen]**.
+Sie können jetzt Werte eingeben, um eine Verbindung mit Adobe Experience Platform herzustellen. Weitere Informationen zum Auffinden Ihrer Datenbanknamen, Host-, Port- und Anmeldedaten finden Sie im Handbuch [Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
-Vergewissern Sie sich, dass Sie das Feld **[!UICONTROL SSL Erforderlich]** markiert haben, bevor Sie versuchen, eine Verbindung herzustellen.
+Stellen Sie sicher, dass Sie das Kontrollkästchen **[!UICONTROL SSL Erforderlich]** aktiviert haben, bevor Sie versuchen, eine Verbindung herzustellen.
 
-Nachdem Sie alle Ihre Anmeldedaten eingegeben haben, wählen Sie **[!DNL Sign In]** aus, um fortzufahren.
+Nachdem Sie alle Ihre Anmeldedaten ausgefüllt haben, wählen Sie **[!DNL Sign In]** aus, um fortzufahren.
 
 ![](../images/clients/tableau/sign-in.png)
 
-Sie haben jetzt eine Verbindung zu Adobe Experience Platform hergestellt, wobei eine Liste der Tabellen auf der Seite angezeigt wird.
+Sie haben jetzt eine Verbindung mit Adobe Experience Platform hergestellt, wobei eine Liste Ihrer Tabellen auf der Seite angezeigt wird.
 
 ![](../images/clients/tableau/connected.png)
 
 ## Nächste Schritte
 
-Nachdem Sie eine Verbindung mit [!DNL Query Service] hergestellt haben, können Sie [!DNL Tableau] verwenden, um Abfragen zu schreiben. Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Leitfaden zu [laufenden Abfragen](../best-practices/writing-queries.md).
+Nachdem Sie sich mit [!DNL Query Service] angemeldet haben, können Sie [!DNL Tableau] verwenden, um Abfragen zu schreiben. Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch zu [laufenden Abfragen](../best-practices/writing-queries.md).

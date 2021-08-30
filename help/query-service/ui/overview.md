@@ -5,9 +5,9 @@ title: UI-Anleitung für Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 483bcea231ed5f25c76771d0acba7e0c62dfed16
+source-git-commit: 30c3ca4aa3e8f42140566c8fdf9fbc855ec72e1b
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -57,7 +57,7 @@ Der Tab **[!UICONTROL Protokoll]** enthält eine Liste der Abfragen, die bereits
 
 ## Anmeldeinformationen
 
-Auf der Registerkarte **[!UICONTROL Anmeldedaten]** werden Ihre [!DNL Postgres]-Anmeldedaten angezeigt. Wählen Sie das Symbol **[!UICONTROL Kopieren]** neben einem beliebigen Feld aus, um dessen Inhalt in Ihrem Tastaturpuffer zu speichern. Weitere Informationen zur Verwendung dieser Anmeldedaten für die Verbindung mit externen Clients finden Sie im Handbuch [Verbindung mit Clients herstellen](../clients/overview.md).
+Auf der Registerkarte **[!UICONTROL Anmeldedaten]** werden Ihre ablaufenden und nicht ablaufenden Anmeldedaten angezeigt. Weitere Informationen zur Verwendung dieser Anmeldedaten für die Verbindung mit externen Clients finden Sie im [Handbuch zu Zugangsdaten](../clients/overview.md).
 
 ![Bild](../images/ui/overview/credentials.png)
 

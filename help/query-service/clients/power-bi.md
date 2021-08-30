@@ -5,10 +5,10 @@ title: Power BI zu Query Service verbinden
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von Power BI mit Adobe Experience Platform Query Service erläutert.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2109abd02b9c6c321c21a8fe3826509d22b1c2e2
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '468'
-ht-degree: 6%
+source-wordcount: '463'
+ht-degree: 1%
 
 ---
 
@@ -42,7 +42,7 @@ Wählen Sie **[!DNL PostgreSQL database]**, gefolgt von **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-Sie können jetzt Werte für den Server und die Datenbank eingeben.  Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
+Sie können jetzt Werte für den Server und die Datenbank eingeben. Weitere Informationen zum Auffinden Ihrer Datenbanknamen, Host-, Port- und Anmeldedaten finden Sie im Handbuch [Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 **[!DNL Server]** ist der Host, der unter den Verbindungsdetails gefunden wird. Fügen Sie für die Produktion Port `:80` am Ende der Host-Zeichenfolge hinzu. **[!DNL Database]** kann entweder &quot;all&quot;oder ein Datensatztabellenname sein.
 

@@ -1,31 +1,30 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;RStudio;Studio;Verbindung mit Abfrage-Dienst;
+keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; RStudio; Studio; Verbindung mit Query Service;
 solution: Experience Platform
-title: Verbinden von RStudio mit dem Abfrage-Dienst
+title: RStudio mit Query Service verbinden
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von R Studio mit Adobe Experience Platform Query Service beschrieben.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 910a38ccb556ec427584d9b522e29f6877d1c987
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 18%
+source-wordcount: '362'
+ht-degree: 12%
 
 ---
 
-# Verbinden Sie [!DNL RStudio] mit dem Abfrage-Dienst
+# Verbinden von [!DNL RStudio] mit Query Service
 
-Dieses Dokument führt Sie durch die Schritte zum Verbinden von [!DNL RStudio] mit Adobe Experience Platform [!DNL Query Service].
+In diesem Dokument werden die Schritte zum Verbinden von [!DNL RStudio] mit Adobe Experience Platform [!DNL Query Service] erläutert.
 
 >[!NOTE]
 >
-> Dieses Handbuch setzt voraus, dass Sie bereits Zugriff auf [!DNL RStudio] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL RStudio] finden Sie in der [offiziellen  [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
+> In diesem Handbuch wird davon ausgegangen, dass Sie bereits Zugriff auf [!DNL RStudio] haben und mit dessen Verwendung vertraut sind. Weitere Informationen zu [!DNL RStudio] finden Sie in der [offiziellen [!DNL RStudio] Dokumentation](https://rstudio.com/products/rstudio/).
 > 
-> Außerdem müssen Sie den PostgreSQL JDBC 4.2-Treiber installieren, um RStudio mit Abfrage Service zu verwenden. Sie können den JDBC-Treiber von der [offiziellen PostgreSQL-Site](https://jdbc.postgresql.org/download.html) herunterladen.
+> Um RStudio mit Query Service zu verwenden, müssen Sie außerdem den PostgreSQL JDBC 4.2-Treiber installieren. Sie können den JDBC-Treiber von der [offiziellen PostgreSQL-Website](https://jdbc.postgresql.org/download.html) herunterladen.
 
-## [!DNL Query Service]-Verbindung in der [!DNL RStudio]-Schnittstelle erstellen
+## Erstellen einer [!DNL Query Service]-Verbindung in der [!DNL RStudio]-Benutzeroberfläche
 
-Nach der Installation von [!DNL RStudio] müssen Sie das RJDBC-Paket installieren. Wechseln Sie zum Bereich **[!DNL Packages]** und wählen Sie **[!DNL Install]**.
+Nach der Installation von [!DNL RStudio] müssen Sie das RJDBC-Paket installieren. Gehen Sie zum Bereich **[!DNL Packages]** und wählen Sie **[!DNL Install]** aus.
 
 ![](../images/clients/rstudio/install-package.png)
 
@@ -35,15 +34,15 @@ Es wird ein Popup mit dem Bildschirm **[!DNL Install Packages]** angezeigt. Stel
 
 Nachdem das RJDBC-Paket installiert wurde, starten Sie RStudio neu, um den Installationsprozess abzuschließen.
 
-Nach dem Neustart von RStudio können Sie nun eine Verbindung zum Abfrage Service herstellen. Wählen Sie im Bereich **[!DNL Packages]** das **[!DNL RJDBC]**-Paket aus und geben Sie den folgenden Befehl in die Konsole ein:
+Nach dem Neustart von RStudio können Sie jetzt eine Verbindung zu Query Service herstellen. Wählen Sie das Paket **[!DNL RJDBC]** im Bereich **[!DNL Packages]** aus und geben Sie den folgenden Befehl in die Konsole ein:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Dabei stellt {PATH TO THE POSTGRESQL JDBC JAR} den Pfad zur PostgreSQL JDBC JAR dar, die auf Ihrem Computer installiert wurde.
+Wobei {PATH TO THE POSTGRESQL JDBC JAR} den Pfad zur PostgreSQL JDBC JAR darstellt, die auf Ihrem Computer installiert wurde.
 
-Sie können jetzt Ihre Verbindung mit dem Abfrage Service herstellen, indem Sie den folgenden Befehl in der Konsole eingeben:
+Jetzt können Sie Ihre Verbindung zu Query Service erstellen, indem Sie den folgenden Befehl in die Konsole eingeben:
 
 ```console
 qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
@@ -51,7 +50,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!NOTE]
 >
-> Weiterführende Informationen zum Finden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie auf der Seite [Anmeldedaten in Platform](https://platform.adobe.com/query/configuration). Melden Sie sich zur Suche nach Ihren Anmeldeinformationen bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]** und anschließend **[!UICONTROL Anmeldeinformationen]**.
+>Weitere Informationen zum Auffinden Ihrer Datenbanknamen, Host-, Port- und Anmeldedaten finden Sie im Handbuch [Anmeldeinformationen](../ui/credentials.md). Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei [!DNL Platform] an, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
 ![](../images/clients/rstudio/connection-rjdbc.png)
 
@@ -59,7 +58,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 Nachdem Sie eine Verbindung zu [!DNL Query Service] hergestellt haben, können Sie Abfragen schreiben, um SQL-Anweisungen auszuführen und zu bearbeiten. Beispielsweise können Sie `dbGetQuery(con, sql)` zum Durchführen von Abfragen verwenden, bei denen `sql` die SQL-Abfrage ist, die Sie ausführen möchten.
 
-Die folgende Abfrage verwendet einen Datensatz, der [Erlebnis-Ereignis](../best-practices/experience-event-queries.md) enthält, und erstellt ein Histogramm der Ansichten einer Website, je nach Bildschirmhöhe des Geräts.
+Die folgende Abfrage verwendet einen Datensatz, der [Erlebnisereignisse](../best-practices/experience-event-queries.md) enthält, und erstellt ein Histogramm mit Seitenansichten einer Website, je nach Bildschirmhöhe des Geräts.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -96,4 +95,4 @@ df_pageviews
 
 ## Nächste Schritte
 
-Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Leitfaden zu [laufenden Abfragen](../best-practices/writing-queries.md).
+Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch zu [laufenden Abfragen](../best-practices/writing-queries.md).
