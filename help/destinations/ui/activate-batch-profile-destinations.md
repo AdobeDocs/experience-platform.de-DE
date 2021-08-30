@@ -5,9 +5,9 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
-source-git-commit: 7c10f39e7452481a00fb4269925c80aab34a7319
+source-git-commit: 99835d0b3d8ab64422be7f878cf556ac8890b123
 workflow-type: tm+mt
-source-wordcount: '1925'
+source-wordcount: '1959'
 ht-degree: 7%
 
 ---
@@ -75,9 +75,12 @@ Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]** aus, um den Datei
 
    >[!IMPORTANT]
    >
-   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Diese Einschränkung wird in zukünftigen Versionen behoben.
 
 1. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
+   >[!TIP]
+   >
+   > Legen Sie für tägliche Exporte Ihr Start- und Enddatum so fest, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
 1. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
 
 
@@ -96,14 +99,17 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien]** exportieren, um einen Export 
    * **[!UICONTROL Täglich]**: planen Sie den inkrementellen Dateiexport einmal täglich zum angegebenen Zeitpunkt.
    * **[!UICONTROL Stündlich]**: planen inkrementelle Dateiexporte alle 3, 6, 8 oder 12 Stunden.
 
-2. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll.
+1. Verwenden Sie die Auswahl **[!UICONTROL Zeit]** , um die Tageszeit im Format [!DNL UTC] festzulegen, zu der der Export erfolgen soll.
 
    >[!IMPORTANT]
    >
-   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Dies ist eine Einschränkung, die in zukünftigen Versionen behoben wird.
+   >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Diese Einschränkung wird in zukünftigen Versionen behoben.
 
-3. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
-4. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
+1. Verwenden Sie den Selektor **[!UICONTROL Datum]** , um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
+   >[!TIP]
+   >
+   >Legen Sie Ihr Start- und Enddatum so fest, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+1. Wählen Sie **[!UICONTROL Erstellen]** aus, um den Zeitplan zu speichern.
 
 ### Dateinamen konfigurieren {#file-names}
 
