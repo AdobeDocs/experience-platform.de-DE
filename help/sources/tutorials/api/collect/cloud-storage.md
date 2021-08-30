@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Cloud-Speicher und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1792'
 ht-degree: 17%
 
 ---
 
 # Cloud-Speicherdaten mithilfe von Quell-Connectoren und APIs erfassen
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Cloud-Speicher und zum Einbringen dieser Daten über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) in Platform beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Cloud-Speicher und zum Einbringen dieser Daten über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) in Platform beschrieben.
 
 ## Erste Schritte
 

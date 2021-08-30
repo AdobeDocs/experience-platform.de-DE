@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Zahlungsanwendung und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1586'
 ht-degree: 19%
 
 ---
 
 # Erfassen von Zahlungsdaten über Quell-Connectoren und APIs
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Zahlungsanwendung und deren Aufnahme in Platform über Quell-Connectoren und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Zahlungsanwendung und deren Aufnahme in Platform über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 

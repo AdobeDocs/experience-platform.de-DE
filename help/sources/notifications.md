@@ -5,10 +5,10 @@ solution: Experience Platform
 title: Flusslaufbenachrichtigungen
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 6%
+source-wordcount: '782'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen in  [!DNL Platform]. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) -APIs dienen zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen in  [!DNL Platform]. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
 Mit Adobe I/O Events können Sie  abonnieren und Webhooks verwenden, um Benachrichtigungen über den Ausführungsstatus zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehler einer Ausführung beigetragen haben.
 

@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Marketing-Automatisierungssystem und zum Einbringen dieser Daten in Adobe Experience Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 20%
+source-wordcount: '1564'
+ht-degree: 19%
 
 ---
 
 # Erfassen von Daten zur Marketing-Automatisierung mithilfe von Quell-Connectoren und APIs
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Marketing-Automatisierungssystem und dessen Aufnahme in Platform über Quell-Connectoren und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Marketing-Automatisierungssystem und dessen Aufnahme in Platform über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 

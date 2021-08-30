@@ -1,51 +1,50 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Flussdienst;Konten löschen;Löschen;API
+keywords: Experience Platform;Startseite;beliebte Themen;Flussdienst;Konten löschen;löschen;API
 solution: Experience Platform
-title: Ein Konto mithilfe der Flow Service API löschen
+title: Konto mithilfe der Flow Service-API löschen
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie ein Konto mit der Flow Service API löschen.
+description: Erfahren Sie, wie Sie ein Konto mithilfe der Flow Service-API löschen.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 27%
+source-wordcount: '589'
+ht-degree: 37%
 
 ---
 
-# Ein Konto mithilfe der Flow Service API löschen
+# Konto mithilfe der Flow Service-API löschen
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Flow Service] wird zur Erfassung und Zentralisierung von Kundendaten aus unterschiedlichen Quellen innerhalb von Adobe Experience Platform verwendet. Der Dienst stellt eine Benutzeroberfläche und eine RESTful-API bereit, über die alle unterstützten Quellen verbunden werden können.
+[!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Lernprogramm werden die Schritte zum Löschen mit [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
+In diesem Tutorial werden die Schritte zum Löschen mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 
-Für dieses Lernprogramm ist eine gültige Verbindungs-ID erforderlich. Wenn Sie keine gültige Verbindungs-ID haben, wählen Sie den gewünschten Connector aus der [Sources-Übersicht](../../home.md) und befolgen Sie die Schritte, die Sie vor dem Versuch dieses Lernprogramms beschrieben haben.
+Für dieses Tutorial benötigen Sie eine gültige Verbindungs-ID. Wenn Sie keine gültige Verbindungs-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellen-Übersicht](../../home.md) aus und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben werden.
 
-Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
+Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
-* [Quellen](../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern.
-* [Sandboxen](../../../sandboxes/home.md):  [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne  [!DNL Platform] Instanz in separate virtuelle Umgebung unterteilen, um Anwendungen für digitale Erlebnisse zu entwickeln und weiterzuentwickeln.
+* [Quellen](../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine Verbindung mit der [!DNL Flow Service]-API erfolgreich zu löschen.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine Verbindung mithilfe der [!DNL Flow Service]-API erfolgreich löschen zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Flow Service] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,12 +52,12 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * `Content-Type: application/json`
 
-## Verbindungsdetails suchen
+## Verbindungsdetails nachschlagen
 
 >[!NOTE]
->In diesem Lernprogramm wird der [Azurblase-Quellanschluss](../../connectors/cloud-storage/blob.md) als Beispiel verwendet, aber die beschriebenen Schritte gelten für alle [verfügbaren Quellschnittstellen](../../home.md).
+>In diesem Tutorial wird der [Azure Blob-Quell-Connector](../../connectors/cloud-storage/blob.md) als Beispiel verwendet. Die beschriebenen Schritte gelten jedoch für alle [verfügbaren Quell-Connectoren](../../home.md).
 
-Der erste Schritt beim Aktualisieren Ihrer Verbindungsinformationen besteht darin, Verbindungsdetails mit Ihrer Verbindungs-ID abzurufen.
+Der erste Schritt bei der Aktualisierung Ihrer Verbindungsinformationen besteht darin, Verbindungsdetails mithilfe Ihrer Verbindungs-ID abzurufen.
 
 **API-Format**
 
@@ -68,7 +67,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Der eindeutige Wert `id` für die Verbindung, die Sie abrufen möchten. |
+| `{CONNECTION_ID}` | Der eindeutige `id` -Wert für die Verbindung, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -122,7 +121,7 @@ Eine erfolgreiche Antwort gibt die aktuellen Details Ihrer Verbindung zurück, e
 
 ## Verbindung löschen
 
-Nachdem Sie über eine Verbindungs-ID verfügen, führen Sie eine DELETE-Anforderung an die [!DNL Flow Service]-API durch.
+Nachdem Sie über eine Verbindungs-ID verfügen, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API aus.
 
 **API-Format**
 
@@ -132,7 +131,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Der eindeutige Wert `id` für die Verbindung, die Sie löschen möchten. |
+| `{CONNECTION_ID}` | Der eindeutige `id` -Wert für die Verbindung, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -149,10 +148,10 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Verbindung senden.
+Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für die Verbindung ausführen.
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie die [!DNL Flow Service]-API erfolgreich zum Löschen vorhandener Konten verwendet.
+In diesem Tutorial haben Sie die [!DNL Flow Service]-API erfolgreich zum Löschen vorhandener Konten verwendet.
 
-Anweisungen zum Ausführen dieser Vorgänge mithilfe der Benutzeroberfläche finden Sie im Tutorial zum [Löschen von Konten in der Benutzeroberfläche](../../tutorials/ui/delete-accounts.md)
+Anweisungen zum Ausführen dieser Vorgänge mithilfe der Benutzeroberfläche finden Sie im Tutorial zum Löschen von Konten in der Benutzeroberfläche](../../tutorials/ui/delete-accounts.md)[

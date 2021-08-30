@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Werbeanwendung und deren Aufnahme in Platform mithilfe von Quell-Connectoren und der Flow Service-API beschrieben.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 20%
+source-wordcount: '1539'
+ht-degree: 19%
 
 ---
 
 # Erfassen von Werbedaten mithilfe von Quell-Connectoren und APIs
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und deren Aufnahme in Adobe Experience Platform über Quell-Connectoren und die API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Werbeanwendung eines Drittanbieters und deren Aufnahme in Adobe Experience Platform über Quell-Connectoren und die API [[!DNL Flow Service]](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 

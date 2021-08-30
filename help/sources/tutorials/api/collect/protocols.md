@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1539'
+source-wordcount: '1535'
 ht-degree: 20%
 
 ---
 
 # Erfassen von Protokolldaten mithilfe von Quell-Connectoren und APIs
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Protokollanwendung eines Drittanbieters und dessen Aufnahme in Adobe Experience Platform über Quell-Connectoren und die API [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Drittanbieter-Protokollanwendung und deren Aufnahme in Adobe Experience Platform über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 

@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Kundenerfolgssystem und dessen Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '1571'
-ht-degree: 19%
+source-wordcount: '1567'
+ht-degree: 18%
 
 ---
 
 # Erfassen von Daten aus einem Customer Success System mithilfe von Quell-Connectoren und APIs
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Erfolgssystem von Drittanbietern und deren Aufnahme in [!DNL Platform] über Quell-Connectoren und die [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)-API beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Erfolgssystem von Drittanbietern und deren Aufnahme in [!DNL Platform] über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 

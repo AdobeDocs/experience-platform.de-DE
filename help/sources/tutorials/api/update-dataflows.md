@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Flussdienst;Datenflüsse aktualisieren
+keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; Datenflüsse aktualisieren
 solution: Experience Platform
-title: Aktualisieren von Datenflüssen mithilfe der Flussdienst-API
+title: Aktualisieren von Datenflüssen mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Dieses Lernprogramm beschreibt die Schritte zum Aktualisieren eines Datenflusses, einschließlich seines Namens, seiner Beschreibung und seines Zeitplans, mithilfe der Flow Service API.
+description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusses beschrieben, einschließlich seines Namens, seiner Beschreibung und seines Zeitplans mithilfe der Flow Service-API.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-translation-type: tm+mt
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '611'
 ht-degree: 33%
 
 ---
 
-# Aktualisieren von Datenflüssen mithilfe der Flow Service API
+# Aktualisieren von Datenflüssen mithilfe der Flow Service-API
 
-In diesem Lernprogramm werden die Schritte zum Aktualisieren eines Datenflusses beschrieben, einschließlich Name, Beschreibung und Zeitplan mit der [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusses beschrieben, einschließlich Name, Beschreibung und Zeitplan mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
-Für dieses Lernprogramm ist eine gültige Fluss-ID erforderlich. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihren gewünschten Connector aus dem [Sources-Überblick](../../home.md) und befolgen Sie die Schritte, die vor dem Versuch dieses Lernprogramms beschrieben werden.
+Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellenübersicht](../../home.md) aus und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben werden.
 
-Für dieses Lernprogramm müssen Sie außerdem die folgenden Komponenten von Adobe Experience Platform kennen:
+Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen müssen, um Ihren Datenpfad mit der [!DNL Flow Service]-API erfolgreich aktualisieren zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich aktualisieren zu können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -35,13 +34,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in Experience Platform, einschließlich der Ressourcen von [!DNL Flow Service], werden zu bestimmten virtuellen Sandboxen isoliert. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in der Experience Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,9 +48,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 * `Content-Type: application/json`
 
-## Nachschlagen von Datenaflodetails
+## Nachschlagen von Datenflussdetails
 
-Der erste Schritt bei der Aktualisierung Ihres Datenflusses besteht darin, Datenflussdetails mit Ihrer Fluss-ID abzurufen. Sie können die aktuellen Details eines vorhandenen Datenflusses durch eine GET an den `/flows`-Endpunkt Ansicht werden.
+Der erste Schritt bei der Aktualisierung Ihres Datenflusses besteht darin, Datenflussdetails mit Ihrer Fluss-ID abzurufen. Sie können die aktuellen Details eines vorhandenen Datenflusses anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `/flows` stellen.
 
 **API-Format**
 
@@ -61,11 +60,11 @@ GET /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige Wert `id` des Datenflusses, den Sie abrufen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id` -Wert für den Datenfluss, den Sie abrufen möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung ruft aktualisierte Informationen zu Ihrer Fluss-ID ab.
+Mit der folgenden Anfrage werden aktualisierte Informationen zu Ihrer Fluss-ID abgerufen.
 
 ```shell
 curl -X GET \
@@ -78,7 +77,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück, einschließlich Version, Zeitplan und eindeutiger Kennung (`id`).
+Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück, einschließlich der Version, des Zeitplans und der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -190,13 +189,13 @@ Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück,
 }
 ```
 
-## Aktualisierung des Datenflusses
+## Aktualisieren des Datenflusses
 
-Führen Sie zur Aktualisierung des Ablaufplans, des Namens und der Beschreibung Ihres Datenflusses eine PATCH-Anforderung an die [!DNL Flow Service]-API durch, während Sie Ihre Fluss-ID, Version und den neuen Zeitplan angeben, den Sie verwenden möchten.
+Um den Ausführungsplan, Namen und die Beschreibung Ihres Datenflusses zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durch und geben Sie dabei Ihre Fluss-ID, -Version und den neuen Zeitplan an, den Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die `If-Match`-Kopfzeile ist bei einer PATCH-Anforderung erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -206,7 +205,7 @@ PATCH /flows/{FLOW_ID}
 
 **Anfrage**
 
-Die folgende Anforderung aktualisiert Ihren Ablaufplan sowie den Namen und die Beschreibung Ihres Datenflusses.
+Mit der folgenden Anfrage werden Ihr Ablaufplan für den Fluss sowie der Name und die Beschreibung Ihres Datenflusses aktualisiert.
 
 ```shell
 curl -X PATCH \
@@ -243,7 +242,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes Tag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET an die [!DNL Flow Service]-API anfordern und dabei Ihre Fluss-ID angeben.
+Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API richten und dabei Ihre Fluss-ID angeben.
 
 ```json
 {
@@ -254,4 +253,4 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes Tag 
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie den Ausführungszeitplan, den Namen und die Beschreibung Ihres Datenflusses mit der API [!DNL Flow Service] aktualisiert. Weitere Informationen zur Verwendung von Quellschnittstellen finden Sie unter [Quellübersicht](../../home.md).
+In diesem Tutorial haben Sie den Zeitplan, den Namen und die Beschreibung Ihres Datenflusses mit der [!DNL Flow Service]-API aktualisiert. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie in der [Quellenübersicht](../../home.md).

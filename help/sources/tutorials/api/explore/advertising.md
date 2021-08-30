@@ -5,10 +5,10 @@ title: Erkunden eines Werbesystems mithilfe der Flow Service-API
 topic-legacy: overview
 description: Mit Flow Service werden Kundendaten aus verschiedenen Quellen in Adobe Experience Platform erfasst und zentralisiert. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können. In diesem Tutorial wird die Flow Service-API verwendet, um Werbetechnologien zu untersuchen.
 exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
-source-git-commit: 8aa8dfcc4f8a36d0898a9cc079bd98b89e3589a1
+source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 11%
+source-wordcount: '502'
+ht-degree: 10%
 
 ---
 
@@ -16,12 +16,11 @@ ht-degree: 11%
 
 Nachdem eine Basisverbindung erstellt wurde, können Sie jetzt die eindeutige Kennung der Basisverbindung verwenden, um die Datenstruktur und den Inhalt Ihrer Quelle zu navigieren und zu untersuchen. Auf diese Weise können Sie bestimmte Elemente sowie ihre jeweiligen Datentypen und Formate identifizieren, bevor Sie einen Datenfluss erstellen und ihn an Adobe Experience Platform übermitteln.
 
-In diesem Tutorial wird die [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) verwendet. Erkundung von Werbesystemen.
+In diesem Tutorial wird die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) verwendet, um Werbesysteme zu untersuchen.
 
 ## Erste Schritte
 
 >[!IMPORTANT]
-
 Für dieses Tutorial benötigen Sie die eindeutige Basis-Verbindungs-ID für Ihre Werbequelle. Wenn Sie diese ID nicht haben, lesen Sie das Tutorial zum Verbinden einer Werbequelle mit Platform](../../api/create/advertising/ads.md) .[
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
