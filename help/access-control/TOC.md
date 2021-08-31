@@ -3,11 +3,11 @@ audience: user
 user-guide-title: Hilfe zur Zugriffskontrolle in Adobe Experience Platform
 breadcrumb-title: Zugangssteuerungsanleitung
 user-guide-description: Nutzen Sie die Produktprofile in Adobe Admin Console, um Benutzer mit Berechtigungen und Sandboxes zu verknüpfen.
-feature: Zugriffskontrolle
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '100'
-ht-degree: 100%
+feature: Access Control
+source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
+workflow-type: tm+mt
+source-wordcount: '94'
+ht-degree: 94%
 
 ---
 
@@ -27,5 +27,5 @@ ht-degree: 100%
    * [Berechtigungsnamen und Ressourcentypen auflisten](api/permissions-and-resource-types.md)
    * [Anzeigen effektiver Richtlinien](api/effective-policies.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
-* [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
+* [API-Referenz](https://www.adobe.io/experience-platform-apis/references/access-control/)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)

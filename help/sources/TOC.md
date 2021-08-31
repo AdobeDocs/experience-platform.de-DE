@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
-feature: Datenaufnahme, Quellen
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+feature: Data Ingestion, Sources
+source-git-commit: ebe620b078096349c514420746902ce406a910d1
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '643'
 ht-degree: 18%
 
 ---
@@ -136,7 +136,7 @@ ht-degree: 18%
       - Protokolle {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
       - Streaming {#streaming}
-         - [HTTP-API](tutorials/api/create/streaming/http.md)
+         - [-HTTP-API](tutorials/api/create/streaming/http.md)
    - Daten erkunden {#explore}
       - [Werbedaten durchsuchen](tutorials/api/explore/advertising.md)
       - [Cloud-Speicherdaten durchsuchen](tutorials/api/explore/cloud-storage.md)
@@ -226,7 +226,7 @@ ht-degree: 18%
       - Protokolle {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
-         - [HTTP-API](tutorials/ui/create/streaming/http.md)
+         - [-HTTP-API](tutorials/ui/create/streaming/http.md)
    - Datenfluss konfigurieren {#dataflow}
       - [Datenfluss der Werbeverbindung](tutorials/ui/dataflow/advertising.md)
       - [Datenfluss der Batch-Cloud-Speicherverbindung](tutorials/ui/dataflow/batch/cloud-storage.md)
@@ -248,4 +248,5 @@ ht-degree: 18%
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
+- [API-Referenz](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
