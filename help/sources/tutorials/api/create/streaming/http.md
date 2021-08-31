@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 42b8710cf6c04fabf7df1f005fae6b3828eeee49
+source-git-commit: 0ff93d580482f44954321089659bd2fc062f3f61
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 37%
+source-wordcount: '1268'
+ht-degree: 35%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 37%
 
 Mit Flow Service werden Kundendaten aus verschiedenen Quellen in Adobe Experience Platform erfasst und zentralisiert. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Sie durch die Schritte zum Erstellen einer Streaming-Verbindung mithilfe der Flow Service-API zu führen.
+In diesem Tutorial werden die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) verwendet, um Sie durch die Schritte zum Erstellen einer Streaming-Verbindung mithilfe der Flow Service-API zu führen.
 
 ## Erste Schritte
 
@@ -295,7 +295,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit detaillierten Information
 
 ## Erstellen einer Zielverbindung
 
-Nachdem Sie die Quellverbindung erstellt haben, können Sie eine Zielverbindung erstellen. Beim Erstellen Ihrer Zielverbindung benötigen Sie den `id`-Wert Ihres zuvor erstellten Datensatzes.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in dem die aufgenommenen Daten landen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Mithilfe dieser Kennungen können Sie mithilfe der API [!DNL Flow Service] eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
