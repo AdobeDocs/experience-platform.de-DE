@@ -3,9 +3,9 @@ keywords: Google Ads; Google Ads; Google AdWords; Google AdWords; Google AdWords
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '698'
 ht-degree: 15%
 
 ---
@@ -53,7 +53,7 @@ Beachten Sie die folgenden Details, die speziell für [!DNL Google Ads]-Ziele ge
 >
 > [!DNL Google] hat keine neuen  [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern mehr unterstützt. Um die im nächsten Abschnitt beschriebenen Zulassungslisten durchzuführen, müssen Sie über eine bestehende Integration mit [!DNL Google Ads] verfügen. Daher wird für die Verwendung von [!DNL Google Ads] empfohlen, eine [!DNL Google Customer Match] -Integration einzurichten. Weitere Informationen zum Erstellen einer [!DNL Google Customer Match]-Integration finden Sie im Tutorial zum Erstellen einer [[!DNL Google Customer Match]](./google-customer-match.md)-Verbindung.
 
-### Zulassungsliste
+### Zulassungsauflistung {#allow-listing}
 
 >[!NOTE]
 >
@@ -83,7 +83,20 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
 
-
 ## Exportierte Daten
 
 Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Google Ads]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Google Ads]-Konto. Bei erfolgreicher Aktivierung werden Zielgruppen in Ihr Konto eingetragen.
+
+## Fehlerbehebung {#troubleshooting}
+
+### 400 Fehlermeldung &quot;Bad Request&quot; {#bad-request}
+
+Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezeigt:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+Dieser Fehler tritt auf, wenn Kunden versuchen, das Ziel ohne vorhandenes [!DNL Google Ads]-Konto zu konfigurieren.
+
+[!DNL Google] hat keine neuen  [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern mehr unterstützt. Um die Schritte [allow-list](#allow-listing) durchzuführen, müssen Sie über eine vorhandene Integration mit [!DNL Google Ads] verfügen.
+
+Der empfohlene Ansatz für die Verwendung von [!DNL Google Ads] ist das Einrichten einer [[!DNL Google Customer Match]](google-customer-match.md) -Integration.

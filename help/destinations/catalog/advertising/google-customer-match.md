@@ -3,9 +3,9 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '1494'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 ![Google-Kundenabgleich-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Anwendungsbeispiele
+## Anwendungsfälle
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann das [!DNL Google Customer Match]-Ziel verwendet werden sollte, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
@@ -56,7 +56,7 @@ Für einige Ziele in der Experience Platform gelten bestimmte Regeln und Pflicht
 
 Bevor Sie ein [!DNL Google Customer Match]-Ziel in Experience Platform einrichten, sollten Sie die Google-Richtlinien zur Verwendung von [!DNL Customer Match] lesen und einhalten, die in der [Google-Support-Dokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben sind.
 
-Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder eine höhere Zugriffsstufe konfiguriert ist. Weitere Informationen finden Sie in der [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
+Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder eine höhere Berechtigungsebene konfiguriert ist. Weitere Informationen finden Sie in der [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
 
 ### Zulassungsliste {#allowlist}
 
@@ -174,6 +174,17 @@ Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrem **[!UICONTROL Goog
 
 Wenn Sie ein Segment sowohl [!DNL IDFA] als auch [!DNL GAID] mobile IDs zuordnen, erstellt [!DNL Google Customer Match] für jede ID-Zuordnung ein eigenes Segment. Ihr [!DNL Google Ads]-Konto zeigt zwei verschiedene Segmente an, eines für [!DNL IDFA] und eines für das [!DNL GAID]-Mapping.
 
+## Fehlerbehebung {#troubleshooting}
+
+### 400 Fehlermeldung &quot;Bad Request&quot; {#bad-request}
+
+Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezeigt:
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites) nicht erfüllen. Um dieses Problem zu beheben, wenden Sie sich an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
+
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Google-Kundenabgleich integrieren - Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

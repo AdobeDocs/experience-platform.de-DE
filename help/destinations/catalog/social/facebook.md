@@ -3,7 +3,7 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 183aff5a3b6bcc1635ae7b4b0e503a9d4b6d4d31
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
 source-wordcount: '1498'
 ht-degree: 6%
@@ -20,7 +20,7 @@ Sie können dieses Ziel für Zielgruppen-Targeting in [!DNL Facebook’s]-Apps v
 
 ![Facebook-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/facebook/catalog.png)
 
-## Anwendungsbeispiele
+## Anwendungsfälle
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann das [!DNL Facebook]-Ziel verwendet werden sollte, finden Sie hier zwei Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
@@ -177,7 +177,7 @@ Bei [!DNL Facebook] bedeutet eine erfolgreiche Aktivierung, dass eine [!DNL Face
 
 ### 400 Fehlermeldung &quot;Bad Request&quot; {#bad-request}
 
-Beim Aktivieren von Segmenten für [!DNL Facebook] erhalten Sie möglicherweise den folgenden Fehler:
+Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezeigt:
 
 `{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 

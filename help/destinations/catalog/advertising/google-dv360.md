@@ -3,9 +3,9 @@ keywords: DoubleClick Bid Manager;DoubleClick Bid Manager;DoubleClick;Display & 
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '709'
 ht-degree: 38%
 
 ---
@@ -45,13 +45,13 @@ Beachten Sie die folgenden Details, die speziell für [!DNL Google Display & Vid
 
 **Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel.
 
-## Voraussetzungen
+## Voraussetzungen {#prerequisites}
 
-### Zulassungsliste
+### Zulassungsauflistung
 
 >[!NOTE]
 >
->Die Zulassungsliste ist obligatorisch, bevor Sie Ihr erstes [!DNL Google Display & Video 360]-Ziel in Platform einrichten. Stellen Sie sicher, dass die unten beschriebene Zulassungsliste von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Zulassungsauflistung ist vor der Einrichtung Ihres ersten [!DNL Google Display & Video 360]-Ziels in Platform obligatorisch. Stellen Sie sicher, dass der unten beschriebene Genehmigungsprozess von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
 
 Bevor Sie das [!DNL Google Display & Video 360]-Ziel in Platform erstellen, müssen Sie sich an Google wenden und darum bitten, die Adobe auf die Liste der zulässigen Datenanbieter zu setzen und Ihr Konto der Zulassungsliste hinzuzufügen. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
@@ -85,3 +85,13 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 ## Exportierte Daten
 
 Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Google Display & Video 360]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Google Display & Video 360]-Konto. Bei erfolgreicher Aktivierung werden Zielgruppen in Ihr Konto eingetragen.
+
+## Fehlerbehebung {#troubleshooting}
+
+### 400 Fehlermeldung &quot;Bad Request&quot; {#bad-request}
+
+Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezeigt:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#prerequisites) nicht erfüllen. Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf die Zulassungsliste gesetzt ist.
