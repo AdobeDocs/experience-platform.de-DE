@@ -3,9 +3,9 @@ keywords: Google Ads; Google Ads; Google AdWords; Google AdWords; Google AdWords
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: f04ea9aed586c8582286de82bfeee3f6f04cc360
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '708'
 ht-degree: 15%
 
 ---
@@ -45,7 +45,7 @@ Beachten Sie die folgenden Details, die speziell für [!DNL Google Ads]-Ziele ge
 
 **Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel.
 
-## Voraussetzungen
+## Voraussetzungen {#prerequisites}
 
 ### Vorhandenes [!DNL Google Ads]-Konto
 
@@ -95,7 +95,7 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kunden versuchen, das Ziel ohne vorhandenes [!DNL Google Ads]-Konto zu konfigurieren.
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#prerequisites) nicht erfüllen oder Kunden versuchen, das Ziel ohne vorhandenes [!DNL Google Ads]-Konto zu konfigurieren.
 
 [!DNL Google] hat keine neuen  [!DNL Google Ads] Cookie-Integrationen mit Drittanbietern mehr unterstützt. Um die Schritte [allow-list](#allow-listing) durchzuführen, müssen Sie über eine vorhandene Integration mit [!DNL Google Ads] verfügen.
 
