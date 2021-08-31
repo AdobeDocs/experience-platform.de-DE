@@ -5,7 +5,7 @@ title: Zustimmungsverarbeitung in Adobe Experience Platform
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Details zu diesen Methoden finden Sie in den folgenden Unterabschnitten.
 
 ### Experience Platform Web SDK zur Verarbeitung von Zustimmungsdaten konfigurieren {#web-sdk}
 
-Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Zustimmungsänderungsereignisse auf Ihrer Website überwacht, können Sie das Experience Platform Web SDK integrieren, um die aktualisierten Zustimmungseinstellungen zu erhalten und sie bei jedem Seitenladevorgang und bei jedem Einverständnisänderungsereignis an Platform zu senden. Weitere Informationen finden Sie im Handbuch zum [Konfigurieren des Web SDK für die Verarbeitung von Kundenzustimmungsdaten](./sdk.md).
+Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Zustimmungsänderungsereignisse auf Ihrer Website überwacht, können Sie das Experience Platform Web SDK integrieren, um die aktualisierten Zustimmungseinstellungen zu erhalten und sie bei jedem Seitenladevorgang und bei jedem Einverständnisänderungsereignis an Platform zu senden. Weitere Informationen finden Sie im Handbuch zum [Konfigurieren des Web SDK für die Verarbeitung von Kundenzustimmungsdaten](../sdk.md).
 
 ### Experience Platform Mobile SDK für die Verarbeitung von Zustimmungsdaten konfigurieren {#mobile-sdk}
 
