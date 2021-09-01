@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
-feature: Ziele
-source-git-commit: 9c9ea0d9e8247dbc4a1a4078dbdba2ae80ed70ef
+feature: Destinations
+source-git-commit: 316bad8b7b33d212c7ec304c064edb9f2c17859a
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '494'
 ht-degree: 54%
 
 ---
@@ -60,6 +60,7 @@ ht-degree: 54%
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
       * [Verbindung zum Trade Desk](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
+      * [Yahoo/Verizon DataX](./catalog/advertising/datax.md)
    * Analyseziele {#analytics}
       * [Analyseziele – Übersicht](./catalog/analytics/overview.md)
       * [Adform Website Tracking-Erweiterung](./catalog/analytics/adform.md)
