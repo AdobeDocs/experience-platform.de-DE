@@ -3,9 +3,9 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 2faf27495c3785a27613db917c7416e1d7b08c4d
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1521'
 ht-degree: 6%
 
 ---
@@ -62,6 +62,9 @@ Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sic
    >
    > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Die Berechtigung ist für die Integration von [!DNL Adobe Experience Platform] erforderlich.
 * Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Gehen Sie dazu zu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, wobei `accountID` Ihr [!DNL Facebook Ad Account ID] ist.
+   >[!IMPORTANT]
+   >
+   >Stellen Sie beim Signieren der [!DNL Facebook Custom Audiences]-Nutzungsbedingungen sicher, dass Sie dasselbe Benutzerkonto verwenden, das Sie für die Authentifizierung in der Facebook-API verwendet haben.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
