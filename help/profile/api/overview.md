@@ -3,9 +3,9 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Beispielprofildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 23%
 
 ---
@@ -52,7 +52,7 @@ Um mehr über Zusammenführungsrichtlinien und ihre Rolle in Platform zu erfahre
 
 ## Musterstatus der Vorschau ([!DNL Profile]-Vorschau) {#profile-preview}
 
-Da für Profil aktivierte Daten in Experience Platform erfasst werden, werden sie im Profildatenspeicher gespeichert. Da die Anzahl der Datensätze im Profilspeicher zunimmt oder sinkt, wird ein Beispielauftrag ausgeführt, der Informationen darüber enthält, wie viele Profilfragmente und zusammengeführte Profile sich im Datenspeicher befinden. Mithilfe der Profil-API können Sie eine Vorschau des neuesten erfolgreichen Beispiels anzeigen sowie die Profilverteilung nach Datensatz und Identitäts-Namespace auflisten. Informationen zum Einstieg in die Verwendung des Endpunkts `/profilepreviewstatus` finden Sie im [Handbuch zum Beispiel-Status-Endpunkt für die Vorschau](preview-sample-status.md).
+Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um die Profilanzahl und andere datenbezogene Metriken des Echtzeit-Kundenprofils zu aktualisieren. Die Ergebnisse dieses Beispielauftrags können mit dem Endpunkt `/previewsamplestatus` angezeigt werden, der Teil der Echtzeit-Kundenprofil-API ist. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten und mehrere Berichte zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten.  Informationen zum Einstieg in die Verwendung des Endpunkts `/profilepreviewstatus` finden Sie im [Handbuch zum Beispiel-Status-Endpunkt für die Vorschau](preview-sample-status.md).
 
 ## Profilsystemaufträge {#profile-system-jobs}
 

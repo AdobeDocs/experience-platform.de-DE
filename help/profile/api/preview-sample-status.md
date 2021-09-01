@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API; Vorschau; Beispiel
 title: API-Endpunkt "Vorschaustatus"(Profilvorschau)
-description: Mithilfe des Statusendpunkts für die Vorschau, der Teil der Echtzeit-Kundenprofil-API ist, können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und einen Bericht zur Datensatzüberlappung generieren.
+description: Mithilfe des Statusendpunkts für die Vorschau, der Teil der Echtzeit-Kundenprofil-API ist, können Sie eine Vorschau des neuesten erfolgreichen Beispiels Ihrer Profildaten anzeigen, die Profilverteilung nach Datensatz und Identität auflisten und Berichte mit Datensatzüberschneidungen, Identitätsüberschneidungen und unbekannten Profilen erstellen.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 0c7dc02ed0bacf7e0405b836f566149a872fc31a
+source-git-commit: 8b1ba51f1f59b88a85d103cc40c18ac15d8648f6
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2882'
 ht-degree: 5%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 5%
 
 Mit Adobe Experience Platform können Sie Kundendaten aus verschiedenen Quellen erfassen, um ein robustes, einheitliches Profil für jeden Ihrer Kunden zu erstellen. Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um die Profilanzahl und andere datenbezogene Metriken des Echtzeit-Kundenprofils zu aktualisieren.
 
-Die Ergebnisse dieses Beispielauftrags können mit dem Endpunkt `/previewsamplestatus` angezeigt werden, der Teil der Echtzeit-Kundenprofil-API ist. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten sowie einen Bericht zur Datensatzüberlappung und einen Bericht zur Identitätsüberlappung zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten. In diesem Handbuch werden die Schritte erläutert, die zur Ansicht dieser Metriken mithilfe des API-Endpunkts `/previewsamplestatus` erforderlich sind.
+Die Ergebnisse dieses Beispielauftrags können mit dem Endpunkt `/previewsamplestatus` angezeigt werden, der Teil der Echtzeit-Kundenprofil-API ist. Dieser Endpunkt kann auch verwendet werden, um Profilverteilungen nach Datensatz und Identitäts-Namespace aufzulisten und mehrere Berichte zu generieren, um Einblicke in die Zusammensetzung des Profilspeichers Ihres Unternehmens zu erhalten. In diesem Handbuch werden die Schritte erläutert, die zur Ansicht dieser Metriken mithilfe des API-Endpunkts `/previewsamplestatus` erforderlich sind.
 
 >[!NOTE]
 >
@@ -303,7 +303,7 @@ Die Antwort enthält ein `data` -Array mit einzelnen Objekten, die die Details f
 
 ## Erstellen eines Berichts zur Datensatzüberschneidung
 
-Der Bericht zur Datensatzüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer TTL für bestimmte Datensätze.
+Der Bericht zur Datensatzüberschneidung bietet einen Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Datensätze verfügbar macht, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dieser Bericht bietet nicht nur Einblicke in Ihre Daten, sondern ermöglicht Ihnen auch Maßnahmen zur Optimierung der Lizenznutzung, z. B. die Festlegung einer TTL für bestimmte Datensätze.
 
 Sie können den Bericht zur Datensatzüberlappung generieren, indem Sie eine GET-Anfrage an den Endpunkt `/previewsamplestatus/report/dataset/overlap` senden.
 
@@ -363,22 +363,23 @@ Die Ergebnisse des Berichts können aus den Datensätzen und Profilzahlen in der
 ```
 
 Dieser Bericht enthält die folgenden Informationen:
+
 * Es gibt 123 Profile, die aus Daten aus den folgenden Datensätzen bestehen: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * Es gibt 454.412 Profile, die aus Daten aus diesen beiden Datensätzen bestehen: `5d92921872831c163452edc8` und `5eb2cdc6fa3f9a18a7592a98`.
 * Es gibt 107 Profile, die nur aus Daten aus dem Datensatz `5eeda0032af7bb19162172a7` bestehen.
 * Insgesamt gibt es 454.642 Profile in der Organisation.
 
-## Bericht zur Identitätsüberschneidung erstellen
+## Bericht zur Identitäts-Namespace-Überschneidung erstellen
 
-Der Bericht zur Identitätsüberschneidung bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Identitäten offenlegt, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dazu gehören sowohl die von Adobe bereitgestellten Standardidentitäten als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäten.
+Der Bericht zur Überschneidung von Identitäts-Namespaces bietet Einblick in die Zusammensetzung des Profilspeichers Ihres Unternehmens, indem er die Identitäts-Namespaces offenlegt, die am meisten zu Ihrer adressierbaren Zielgruppe (zusammengeführten Profilen) beitragen. Dazu gehören sowohl die von Adobe bereitgestellten standardmäßigen Identitäts-Namespaces als auch die von Ihrem Unternehmen definierten benutzerdefinierten Identitäts-Namespaces.
 
-Sie können den Bericht zur Identitätsüberschneidung generieren, indem Sie eine GET-Anfrage an den Endpunkt `/previewsamplestatus/report/identity/overlap` senden.
+Sie können den Bericht zur Identitäts-Namespace-Überschneidung generieren, indem Sie eine GET-Anfrage an den Endpunkt `/previewsamplestatus/report/namespace/overlap` senden.
 
 **API-Format**
 
 ```http
-GET /previewsamplestatus/report/identity/overlap
-GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+GET /previewsamplestatus/report/namespace/overlap
+GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 ```
 
 | Parameter | Beschreibung |
@@ -391,7 +392,7 @@ Die folgende Anfrage verwendet den Parameter `date` , um den letzten Bericht fü
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -399,7 +400,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Identitätsüberschneidung zurück.
+Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Identitäts-Namespace-Überschneidung zurück.
 
 ```json
 {
@@ -446,7 +447,7 @@ Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zur Iden
 | Namespace-Codes | `code` ist ein Kurzformular für jeden Identitäts-Namespace-Namen. Eine Zuordnung jedes `code` zu seinem `name` kann mithilfe der [Adobe Experience Platform Identity Service-API](../../identity-service/api/list-namespaces.md) gefunden werden. Das `code` wird in der Experience Platform-Benutzeroberfläche auch als [!UICONTROL Identitätssymbol] bezeichnet. Weitere Informationen finden Sie unter [Übersicht über Identitäts-Namespaces](../../identity-service/namespaces.md). |
 | `reportTimestamp` | Der Zeitstempel des Berichts. Wenn während der Anfrage ein Parameter `date` angegeben wurde, wird der zurückgegebene Bericht für das angegebene Datum ausgegeben. Wenn kein `date` -Parameter angegeben wird, wird der neueste Bericht zurückgegeben. |
 
-### Interpretieren des Berichts zur Identitätsüberschneidung
+### Interpretieren des Berichts zur Identitäts-Namespace-Überschneidung
 
 Die Ergebnisse des Berichts können aus den Identitäten und Profilzahlen in der Antwort interpretiert werden. Der numerische Wert jeder Zeile gibt an, wie viele Profile aus dieser exakten Kombination aus standardmäßigen und benutzerdefinierten Identitäts-Namespaces bestehen.
 
@@ -459,11 +460,137 @@ Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
 ```
 
 Dieser Bericht enthält die folgenden Informationen:
+
 * Es gibt 142 Profile, die aus den Standardidentitäten `AAID`, `ECID` und `Email` sowie einem benutzerdefinierten Identitäts-Namespace `crmid` bestehen.
 * Es gibt 24 Profile, die aus den Identitäts-Namespaces `AAID` und `ECID` bestehen.
 * Es gibt 6.565 Profile, die nur eine `ECID` -Identität enthalten.
 
+## Bericht zu unbekannten Profilen erstellen
+
+Über den Bericht zu unbekannten Profilen können Sie die Zusammensetzung des Profilspeichers Ihres Unternehmens besser einsehen. Ein &quot;unbekanntes Profil&quot;bezieht sich auf jedes Profil, das für einen bestimmten Zeitraum sowohl deaktiviert als auch inaktiv ist. Ein Profil &quot;nicht zugeordnet&quot; ist ein Profil, das nur ein Profilfragment enthält, während ein &quot;inaktives&quot;Profil jedes Profil ist, das für den angegebenen Zeitraum keine neuen Ereignisse hinzugefügt hat. Der Bericht zu unbekannten Profilen enthält eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+
+Sie können den Bericht zu unbekannten Profilen generieren, indem Sie eine GET an den Endpunkt `/previewsamplestatus/report/unknownProfiles` senden.
+
+**API-Format**
+
+```http
+GET /previewsamplestatus/report/unknownProfiles
+```
+
+**Anfrage**
+
+Die folgende Anfrage gibt den Bericht zu unbekannten Profilen zurück.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Antwort**
+
+Eine erfolgreiche Anfrage gibt den HTTP-Status 200 (OK) und den Bericht zu unbekannten Profilen zurück.
+
+>[!NOTE]
+>
+>Für die Zwecke dieses Leitfadens wurde der Bericht abgeschnitten und umfasst nur die Zeiträume `"120days"` und &quot;`7days`&quot;. Der vollständige Bericht zu unbekannten Profilen enthält eine Aufschlüsselung der Profile für einen Zeitraum von 7, 30, 60, 90 und 120 Tagen.
+
+```json
+{
+  "data": {
+      "totalNumberOfProfiles": 63606,
+      "totalNumberOfEvents": 130977,
+      "unknownProfiles": {
+          "120days": {
+              "countOfProfiles": 1644,
+              "eventsAssociated": 26824,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 18,
+                      "eventsAssociated": 95
+                  },
+                  "loyal": {
+                      "countOfProfiles": 26,
+                      "eventsAssociated": 71
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1600,
+                      "eventsAssociated": 26658
+                  }
+              }
+          },
+          "7days": {
+              "countOfProfiles": 1782,
+              "eventsAssociated": 29151,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 19,
+                      "eventsAssociated": 97
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1734,
+                      "eventsAssociated": 28591
+                  },
+                  "loyal": {
+                      "countOfProfiles": 29,
+                      "eventsAssociated": 463
+                  }
+              }
+          }
+      }
+  },
+  "reportTimestamp": "2025-08-25T22:14:55.186"
+}
+```
+
+| Eigenschaft | Beschreibung |
+|---|---|
+| `data` | Das `data` -Objekt enthält die für den Bericht zu unbekannten Profilen zurückgegebenen Informationen. |
+| `totalNumberOfProfiles` | Die Gesamtzahl der eindeutigen Profile im Profilspeicher. Dies entspricht der Anzahl der adressierbaren Zielgruppen. Es enthält sowohl bekannte als auch unbekannte Profile. |
+| `totalNumberOfEvents` | Die Gesamtzahl der ExperienceEvents im Profilspeicher. |
+| `unknownProfiles` | Ein Objekt, das eine Aufschlüsselung unbekannter Profile (nicht zugeordnet und inaktiv) nach Zeiträumen enthält. Der Bericht zu unbekannten Profilen enthält eine Aufschlüsselung der Profile für 7-, 30-, 60-, 90- und 120-tägige Zeiträume. |
+| `countOfProfiles` | Die Anzahl unbekannter Profile für den Zeitraum oder die Anzahl unbekannter Profile für den Namespace. |
+| `eventsAssociated` | Die Anzahl der ExperienceEvents für den Zeitraum oder die Anzahl der Ereignisse für den Namespace. |
+| `nsDistribution` | Ein Objekt, das individuelle Identitäts-Namespaces mit der Verteilung unbekannter Profile und Ereignisse für jeden Namespace enthält. Hinweis: Wenn Sie die Summe `countOfProfiles` für jeden Identitäts-Namespace im `nsDistribution` -Objekt addieren, entspricht dies der `countOfProfiles` für den Zeitraum. Dasselbe gilt für `eventsAssociated` pro Namespace und die Summe `eventsAssociated` pro Zeitraum. |
+| `reportTimestamp` | Der Zeitstempel des Berichts. |
+
+### Interpretieren des Berichts &quot;Unbekannte Profile&quot;
+
+Die Ergebnisse des Berichts können Aufschluss darüber geben, wie viele nicht zugewiesene und inaktive Profile Ihr Unternehmen im Profilspeicher hat.
+
+Betrachten Sie den folgenden Auszug aus dem `data` -Objekt:
+
+```json
+  "7days": {
+    "countOfProfiles": 1782,
+    "eventsAssociated": 29151,
+    "nsDistribution": {
+      "Email": {
+        "countOfProfiles": 19,
+        "eventsAssociated": 97
+      },
+      "ECID": {
+        "countOfProfiles": 1734,
+        "eventsAssociated": 28591
+      },
+      "loyal": {
+        "countOfProfiles": 29,
+        "eventsAssociated": 463
+      }
+    }
+  }
+```
+
+Dieser Bericht enthält die folgenden Informationen:
+
+* Es gibt 1.782 Profile, die nur ein Profilfragment enthalten und in den letzten sieben Tagen keine neuen Ereignisse haben.
+* Den 1.782 unbekannten Profilen sind 29.151 ExperienceEvents zugeordnet.
+* Es gibt 1.734 unbekannte Profile, die ein einzelnes Profilfragment aus dem Identitäts-Namespace von ECID enthalten.
+* Den 1.734 unbekannten Profilen sind 28.591 Ereignisse zugeordnet, die ein einzelnes Profilfragment aus dem Identitäts-Namespace von ECID enthalten.
+
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Beispieldaten im Profilspeicher in der Vorschau anzeigen und mehrere Überschneidungsberichte ausführen, können Sie auch die Schätzungs- und Vorschau-Endpunkte der Segmentation Service-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen anzuzeigen. Diese Informationen helfen Ihnen dabei sicherzustellen, dass Sie die erwartete Zielgruppe in Ihrem Segment isolieren. Weitere Informationen zum Arbeiten mit Segmentvorschauen und Schätzungen mithilfe der Segmentation-API finden Sie im Handbuch [Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
+Nachdem Sie nun wissen, wie Sie Beispieldaten im Profilspeicher in der Vorschau anzeigen und mehrere Berichte zu den Daten ausführen, können Sie auch die Schätzungs- und Vorschau-Endpunkte der Segmentation Service-API verwenden, um Informationen auf Zusammenfassungsebene zu Ihren Segmentdefinitionen anzuzeigen. Diese Informationen helfen Ihnen dabei sicherzustellen, dass Sie die erwartete Zielgruppe in Ihrem Segment isolieren. Weitere Informationen zum Arbeiten mit Segmentvorschauen und Schätzungen mithilfe der Segmentation-API finden Sie im Handbuch [Vorschau und Schätzung von Endpunkten](../../segmentation/api/previews-and-estimates.md).
 
