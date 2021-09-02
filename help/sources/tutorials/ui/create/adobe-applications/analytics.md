@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Adobe Analytics-Quellverbindung in der Benutzeroberfläche erstellen, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: e28158bbd4e89e5fcf19f4dc89f266d737b34e65
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 8%
+source-wordcount: '1493'
+ht-degree: 7%
 
 ---
 
@@ -30,7 +30,7 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dokument verwendet werden:
 
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert sind. Sie enthalten dieselbe Bedeutung für alle Kunden und sind in den [!DNL Analytics] Quelldaten und den [!DNL Analytics] Schemafeldgruppen verfügbar.
-* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind beliebige Attribute in der benutzerdefinierten Dimensionshierarchie in  [!DNL Analytics]. Sie gehören auch zu den von der Adobe definierten Schemata, können jedoch von verschiedenen Kunden unterschiedlich interpretiert werden. Zu den benutzerdefinierten Attributen gehören eVars, Props und Listen. Weitere Informationen zu eVars finden Sie in der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
+* **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind beliebige Attribute in der benutzerdefinierten Variablenhierarchie in  [!DNL Analytics]. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Sie können sich bei ihrer Verwendung von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Props und Listen. Weitere Informationen zu eVars finden Sie in der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
 * **Jedes Attribut in benutzerdefinierten Feldergruppen**: Attribute, die aus von Kunden erstellten Feldergruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
 * **Anzeigenamen**: Anzeigenamen sind von Menschen bereitgestellte Beschriftungen für benutzerdefinierte Variablen in einer  [!DNL Analytics] Implementierung. Weitere Informationen zu Anzeigenamen finden Sie in der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) .
 
@@ -46,15 +46,15 @@ Wählen Sie unter der Kategorie **[!UICONTROL Adobe Applications]** die Option *
 
 ### Daten auswählen
 
-Der Schritt **[!UICONTROL Analytics source add data]** wird angezeigt. Wählen Sie **[!UICONTROL Report Suite]** aus, um eine Quellverbindung für Analytics-Report Suite-Daten zu erstellen, und wählen Sie dann die Report Suite aus, die Sie aufnehmen möchten. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Der Schritt **[!UICONTROL Analytics source add data]** wird angezeigt. Wählen Sie **[!UICONTROL Report Suite]** aus, um eine Quellverbindung für Analytics Report Suite-Daten zu erstellen, und wählen Sie dann die Report Suite aus, die Sie aufnehmen möchten. Report Suites, die nicht auswählbar sind, wurden bereits aufgenommen, entweder in dieser Sandbox oder in einer anderen Sandbox. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
 >[!NOTE]
 >
->Es können mehrere eingehende Verbindungen zu einer Quelle hergestellt werden, um verschiedene Daten einzubringen.
+>Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites einzuführen. Es kann jedoch jeweils nur eine Report Suite mit der Echtzeit-Kundendatenplattform verwendet werden.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Zuordnung
 
@@ -74,9 +74,9 @@ Im Abschnitt [!UICONTROL Standardfelder zuordnen] werden Bedienfelder für [!UIC
 
 | Standardfelder zuordnen | Beschreibung |
 | --- | --- |
-| [!UICONTROL Angewandte Standard-Zuordnungen] | Im Bedienfeld [!UICONTROL Angewandte Standardzuordnungen] wird die Gesamtzahl der zugeordneten Standardattribute angezeigt. Standardzuordnungen beziehen sich auf Zuordnungssätze zwischen Standardattributen in den Quelldaten [!DNL Analytics] und Standardattributen in der Feldergruppe [!DNL Analytics]. Diese sind vorab zugeordnet und können nicht bearbeitet werden. |
-| [!UICONTROL Nicht übereinstimmende Standardzuordnungen] | Das Bedienfeld [!UICONTROL Nicht übereinstimmende Standardzuordnungen] bezieht sich auf die Anzahl der zugeordneten Standardattribute, die benutzerfreundliche Namenskonflikte enthalten. Diese Konflikte treten auf, wenn Sie ein Schema wiederverwenden, das bereits über einen befüllten Satz von Felddeskriptoren verfügt. Sie können mit Ihrem [!DNL Analytics]-Datenfluss fortfahren, auch mit benutzerfreundlichen Namenskonflikten. |
-| [!UICONTROL Benutzerdefinierte Zuordnungen] | Im Bedienfeld [!UICONTROL Benutzerdefinierte Zuordnungen] wird die Anzahl der zugeordneten benutzerdefinierten Attribute angezeigt, einschließlich eVars, Props und Listen. Benutzerdefinierte Zuordnungen beziehen sich auf Zuordnungssätze zwischen benutzerdefinierten Attributen in den Quelldaten [!DNL Analytics] und benutzerdefinierten Attributen in der Feldergruppe [!DNL Analytics]. Benutzerdefinierte Attribute können anderen benutzerdefinierten Attributen sowie Standardattributen zugeordnet werden. |
+| [!UICONTROL Angewandte Standard-Zuordnungen] | Das Bedienfeld [!UICONTROL Angewandte Standardzuordnungen] zeigt die Gesamtzahl der zugeordneten Attribute an. Standardzuordnungen beziehen sich auf Zuordnungssätze zwischen allen Attributen in den Quelldaten [!DNL Analytics] und den entsprechenden Attributen in der Feldergruppe [!DNL Analytics]. Diese sind vorab zugeordnet und können nicht bearbeitet werden. |
+| [!UICONTROL Nicht übereinstimmende Standardzuordnungen] | Das Bedienfeld [!UICONTROL Nicht übereinstimmende Standardzuordnungen] bezieht sich auf die Anzahl der zugeordneten Attribute, die Konflikte mit Anzeigenamen enthalten. Diese Konflikte treten auf, wenn Sie ein Schema wiederverwenden, das bereits über einen befüllten Satz von Felddeskriptoren aus einer anderen Report Suite verfügt. Sie können mit Ihrem [!DNL Analytics]-Datenfluss fortfahren, auch mit benutzerfreundlichen Namenskonflikten. |
+| [!UICONTROL Benutzerdefinierte Zuordnungen] | Im Bedienfeld [!UICONTROL Benutzerdefinierte Zuordnungen] wird die Anzahl der zugeordneten benutzerdefinierten Attribute angezeigt, einschließlich eVars, Props und Listen. Benutzerdefinierte Zuordnungen beziehen sich auf Zuordnungssätze zwischen benutzerdefinierten Attributen in den Quelldaten [!DNL Analytics] und Attributen in benutzerdefinierten Feldergruppen, die im ausgewählten Schema enthalten sind. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -92,7 +92,7 @@ Platform erkennt Ihre Zuordnungssätze automatisch für Konflikte mit benutzerfr
 
 ![Mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-Wenn in Ihren Zuordnungssets Konflikte mit benutzerfreundlichen Namen auftreten, können Sie mit Ihrem [!DNL Analytics]-Datenfluss fortfahren, wobei Sie anerkennen, dass die Felddeskriptoren identisch sind. Alternativ können Sie auch ein neues Schema mit einem leeren Satz von Deskriptoren erstellen.
+Wenn Konflikte mit benutzerfreundlichen Namen zwischen Ihrer Quell-Report Suite und Ihrem ausgewählten Schema auftreten, können Sie weiterhin mit Ihrem [!DNL Analytics]-Datenfluss fortfahren, wobei bestätigt wird, dass die Felddeskriptoren nicht geändert werden. Alternativ können Sie auch ein neues Schema mit einem leeren Satz von Deskriptoren erstellen.
 
 Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 
@@ -181,7 +181,7 @@ Um einen Datenfluss zu löschen, rufen Sie die Seite [!UICONTROL Datenflüsse] a
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Nach der Erstellung der Verbindung werden automatisch ein Zielschema und ein Datenfluss erstellt, die die eingehenden Daten enthalten. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und erfasst. Wenn die erste Aufnahme abgeschlossen ist, können [!DNL Analytics] Daten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und Segmentation Service verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Nach der Erstellung der Verbindung wird der Datenfluss automatisch erstellt, um die eingehenden Daten zu enthalten und einen Datensatz mit Ihrem ausgewählten Schema zu füllen. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und erfasst. Wenn die erste Aufnahme abgeschlossen ist, können [!DNL Analytics] Daten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und Segmentation Service verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] Übersicht](../../../../../segmentation/home.md)
