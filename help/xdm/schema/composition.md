@@ -5,9 +5,9 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 7d05b5d57ec4597b168be0261e75da5f243cb660
+source-git-commit: 2bd7c12209a1944aa954ba4490bb0c57f2a5ea61
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3684'
 ht-degree: 30%
 
 ---
@@ -68,7 +68,11 @@ Es gibt zwei Möglichkeiten, Identitätsdaten an Platform zu senden:
 
 `identityMap` ist ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Dieses Feld kann verwendet werden, um Identitätsinformationen für Ihre Schemas bereitzustellen, anstatt Identitätswerte innerhalb der Struktur des Schemas selbst zu definieren.
 
-Der größte Nachteil der Verwendung von `identityMap` besteht darin, dass Identitäten in die Daten eingebettet und dadurch weniger sichtbar werden. Wenn Sie Rohdaten erfassen, sollten Sie stattdessen einzelne Identitätsfelder innerhalb der tatsächlichen Schemastruktur definieren. Schemas, die `identityMap` verwenden, können auch nicht an Beziehungen teilnehmen.
+Der größte Nachteil der Verwendung von `identityMap` besteht darin, dass Identitäten in die Daten eingebettet und dadurch weniger sichtbar werden. Wenn Sie Rohdaten erfassen, sollten Sie stattdessen einzelne Identitätsfelder innerhalb der tatsächlichen Schemastruktur definieren.
+
+>[!NOTE]
+>
+>Ein Schema, das `identityMap` verwendet, kann als Quellschema in einer Beziehung verwendet werden, kann jedoch nicht als Zielschema verwendet werden. Dies liegt daran, dass alle Zielschemas über eine sichtbare Identität verfügen müssen, die in einem Referenzfeld innerhalb des Quellschemas zugeordnet werden kann. Weitere Informationen zu den Anforderungen von Quell- und Zielschemas finden Sie im UI-Handbuch zu [Beziehungen](../tutorials/relationship-ui.md) .
 
 Identitätszuordnungen können jedoch besonders nützlich sein, wenn Sie Daten aus Quellen zusammenführen, die Identitäten speichern (z. B. [!DNL Airship] oder Adobe Audience Manager), oder wenn für ein Schema eine variable Anzahl von Identitäten vorhanden ist. Darüber hinaus sind Identitätszuordnungen erforderlich, wenn Sie das [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) verwenden.
 
