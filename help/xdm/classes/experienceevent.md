@@ -5,10 +5,10 @@ title: XDM ExperienceEvent-Klasse
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
 workflow-type: tm+mt
-source-wordcount: '1573'
-ht-degree: 4%
+source-wordcount: '1745'
+ht-degree: 3%
 
 ---
 
@@ -82,18 +82,18 @@ In der folgenden Tabelle sind die für `eventType` zulässigen Werte sowie deren
 
 | Wert | Definition |
 | --- | --- |
-| `advertising.completes` | Ein zeitgesteuertes Medien-Asset wurde bis zum Ende angesehen. Das bedeutet nicht unbedingt, dass der Betrachter das gesamte Video angesehen hat, da der Betrachter voraus hätte überspringen können. |
-| `advertising.timePlayed` | Beschreibt die Zeit, die ein Benutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbringt. |
-| `advertising.federated` | Gibt an, ob ein Erlebnisereignis über eine Datenverknüpfung (Datenfreigabe zwischen Kunden) erstellt wurde. |
 | `advertising.clicks` | Klicken Sie auf eine(n) Aktion(en) für eine Anzeige. |
+| `advertising.completes` | Ein zeitgesteuertes Medien-Asset wurde bis zum Ende angesehen. Das bedeutet nicht unbedingt, dass der Betrachter das gesamte Video angesehen hat, da der Betrachter voraus hätte überspringen können. |
 | `advertising.conversions` | Vordefinierte Aktion(en), die von einem Kunden durchgeführt wird, der ein Ereignis zur Leistungsbewertung Trigger. |
+| `advertising.federated` | Gibt an, ob ein Erlebnisereignis über eine Datenverknüpfung (Datenfreigabe zwischen Kunden) erstellt wurde. |
 | `advertising.firstQuartiles` | Eine digitale Videoanzeige hat 25 % ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben. |
 | `advertising.impressions` | Impression(en) einer Anzeige für einen Kunden mit dem Potenzial, angezeigt zu werden. |
 | `advertising.midpoints` | Eine digitale Videoanzeige hat 50% ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben. |
 | `advertising.starts` | Die Wiedergabe einer digitalen Videoanzeige hat begonnen. |
 | `advertising.thirdQuartiles` | Eine digitale Videoanzeige hat 75% ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben. |
-| `web.webpagedetails.pageViews` | Eine Webseite hat eine oder mehrere Ansichten erhalten. |
-| `web.webinteraction.linkClicks` | Ein Link wurde mindestens einmal ausgewählt. |
+| `advertising.timePlayed` | Beschreibt die Zeit, die ein Benutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbringt. |
+| `application.close` | Eine Anwendung wurde geschlossen oder in den Hintergrund gestellt. |
+| `application.launch` | Eine Anwendung wurde gestartet oder in den Vordergrund gestellt. |
 | `commerce.checkouts` | Für eine Produktliste ist ein Checkout-Ereignis aufgetreten. Es kann mehr als ein Checkout-Ereignis geben, wenn ein Checkout-Prozess mehrere Schritte umfasst. Wenn mehrere Schritte vorhanden sind, werden der Zeitstempel und die referenzierte Seite/das referenzierte Erlebnis für jedes Ereignis verwendet, um jedes einzelne Ereignis (Schritt) zu identifizieren, das in der angegebenen Reihenfolge dargestellt wird. |
 | `commerce.productListAdds` | Ein Produkt wurde zur Produktliste oder zum Warenkorb hinzugefügt. |
 | `commerce.productListOpens` | Eine neue Produktliste (Warenkorb) wurde initialisiert oder erstellt. |
@@ -103,9 +103,32 @@ In der folgenden Tabelle sind die für `eventType` zulässigen Werte sowie deren
 | `commerce.productViews` | Ein Produkt hat eine oder mehrere Ansichten erhalten. |
 | `commerce.purchases` | Eine Bestellung wurde angenommen. Dies ist die einzige erforderliche Aktion bei einer Commerce-Konversion. Auf ein Kaufereignis muss eine Produktliste verwiesen werden. |
 | `commerce.saveForLaters` | Eine Produktliste wurde für die zukünftige Verwendung gespeichert, z. B. eine ProduktWunschliste. |
+| `decisioning.propositionDisplay` | Eine Person wurde ein Entscheidungsvorschlag angezeigt. |
+| `decisioning.propositionInteract` | Eine Person hat mit einem Entscheidungsvorschlag interagiert. |
 | `delivery.feedback` | Feedback-Ereignisse für einen Versand, z. B. ein E-Mail-Versand. |
+| `directMarketing.emailBounced` | Eine E-Mail an eine Person mit Absprung. |
+| `directMarketing.emailBouncedSoft` | Eine E-Mail an eine Person mit Softbounce. |
+| `directMarketing.emailClicked` | Eine Person hat auf einen Link in einer Marketing-E-Mail geklickt. |
+| `directMarketing.emailDelivered` | Eine E-Mail wurde dem E-Mail-Dienst einer Person erfolgreich zugestellt |
+| `directMarketing.emailOpened` | Eine Person hat eine Marketing-E-Mail geöffnet. |
+| `directMarketing.emailUnsubscribed` | Eine Person hat sich von einer Marketing-E-Mail abgemeldet. |
+| `leadOperation.convertLead` | Ein Lead wurde konvertiert. |
+| `leadOperation.interestingMoment` | Ein interessanter Moment wurde für eine Person aufgezeichnet. |
+| `leadOperation.newLead` | Ein Lead wurde erstellt. |
+| `leadOperation.scoreChanged` | Der Wert des Ergebnisattributs des Leads wurde geändert. |
+| `leadOperation.statusInCampaignProgressionChanged` | Der Status eines Leads in einer Kampagne hat sich geändert. |
+| `listOperation.addToList` | Eine Person wurde zu einer Marketingliste hinzugefügt. |
+| `listOperation.removeFromList` | Eine Person wurde aus einer Marketing-Liste entfernt. |
 | `message.feedback` | Feedback-Ereignisse wie Senden/Bounce/Fehler für Nachrichten, die an einen Kunden gesendet werden. |
 | `message.tracking` | Tracking von Ereignissen wie Öffnen/Klicken/benutzerdefinierten Aktionen für Nachrichten, die an einen Kunden gesendet werden. |
+| `opportunityEvent.addToOpportunity` | Eine Person wurde zu einer Gelegenheit hinzugefügt. |
+| `opportunityEvent.opportunityUpdated` | Eine Gelegenheit wurde aktualisiert. |
+| `opportunityEvent.removeFromOpportunity` | Eine Person wurde aus einer Gelegenheit entfernt. |
+| `pushTracking.applicationOpened` | Eine Person hat eine Anwendung über eine Push-Benachrichtigung geöffnet. |
+| `pushTracking.customAction` | Eine Person hat in einer Push-Benachrichtigung auf eine benutzerdefinierte Aktion geklickt. |
+| `web.formFilledOut` | Eine Person hat ein Formular auf einer Webseite ausgefüllt. |
+| `web.webinteraction.linkClicks` | Ein Link wurde mindestens einmal ausgewählt. |
+| `web.webpagedetails.pageViews` | Eine Webseite hat eine oder mehrere Ansichten erhalten. |
 
 {style=&quot;table-layout:auto&quot;}
 

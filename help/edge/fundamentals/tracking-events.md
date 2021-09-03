@@ -3,10 +3,10 @@ title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 53a14b2b7d7ca8bdd278f2aeec2c2e8a30fdac7b
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 43%
+source-wordcount: '1082'
+ht-degree: 34%
 
 ---
 
@@ -103,34 +103,7 @@ alloy("sendEvent", {
 
 ### Einstellen von `eventType` {#event-types}
 
-In einem XDM-Erlebnisereignis gibt es ein optionales Feld `eventType` . Dies enthält den primären Ereignistyp für den Datensatz. Die Festlegung eines Ereignistyps kann Ihnen dabei helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Nachfolgend finden Sie eine Liste aller vordefinierten Ereignistypen, die von XDM bereitgestellt werden. [Weitere Informationen finden Sie im öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
-
-
-| **Ereignistyp:** | **Definition:** |
-| ---------------------------------- | ------------ |
-| advertising.completes | Gibt an, ob ein zeitgesteuertes Medienelement bis zum Abschluss angesehen wurde. Dies bedeutet nicht unbedingt, dass der Betrachter das gesamte Video angesehen hat. Der Betrachter hätte vorausspringen können |
-| advertising.timePlayed | Beschreibt die Zeit, die ein Benutzer mit einem bestimmten zeitgesteuerten Medien-Asset verbringt |
-| advertising.federated | Gibt an, ob ein Erlebnisereignis über eine Datenverknüpfung (Datenfreigabe zwischen Kunden) erstellt wurde |
-| advertising.clicks | Klickaktionen für eine Anzeige |
-| advertising.conversions | Vom Kunden vordefinierte Aktionen, die ein Ereignis zur Leistungsbewertung auslösen |
-| advertising.firstQuartiles | Eine digitale Videoanzeige hat 25 % ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben |
-| advertising.impressions | Impression(en) einer Anzeige für einen Endbenutzer mit dem Potenzial, angezeigt zu werden |
-| advertising.midpoints | Eine digitale Videoanzeige hat 50% ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben |
-| advertising.starts | Die Wiedergabe einer digitalen Videoanzeige hat begonnen |
-| advertising.thirdQuartiles | Eine digitale Videoanzeige hat 75% ihrer Laufzeit mit normaler Geschwindigkeit wiedergegeben |
-| web.webpagedetails.pageViews | Eine Webseite wurde angezeigt |
-| web.webinteraction.linkClicks | Ein Weblink wurde geklickt |
-| commerce.checkouts | Eine Aktion während eines Checkout-Prozesses einer Produktliste. Es kann mehr als ein Checkout-Ereignis geben, wenn ein Checkout-Prozess mehrere Schritte umfasst. Bei mehreren Schritten werden die Zeitinformationen des Ereignisses und die referenzierte Seite oder das referenzierte Ereignis verwendet, um den Schritt zu identifizieren, den einzelne Ereignisse der Reihe nach darstellen |
-| commerce.productListAdds | Aufnahme eines Produkts in die Produktliste. Beispiel: Ein Produkt wird dem Warenkorb hinzugefügt |
-| commerce.productListOpens | Initialisierungen einer neuen Produktliste. Beispiel: Ein Warenkorb wird erstellt |
-| commerce.productListRemovals | Entfernen eines Produkteintrags aus einer Produktliste. Beispiel: Ein Produkt wird aus dem Warenkorb entfernt |
-| commerce.productListReopens | Eine Produktliste, die nicht mehr zugänglich (aufgegeben) war, wurde vom Benutzer erneut aktiviert. Beispielsweise über eine Re-Marketing-Aktivität |
-| commerce.productListViews | Eine Produktliste wurde angezeigt |
-| commerce.productViews | Ein Produkt wurde angezeigt |
-| commerce.purchases | Eine Bestellung wurde angenommen. Der Kauf ist die einzige erforderliche Aktion bei einer Handelskonversion. Für den Kauf muss eine Produktliste angegeben sein |
-| commerce.saveForLaters | Die Liste des Produkts wird für die zukünftige Verwendung gespeichert. Beispiel: Eine Produktwunschliste |
-| delivery.feedback | Feedback-Ereignisse für einen Versand. Beispiel-Feedback-Ereignisse für einen E-Mail-Versand |
-
+In XDM ExperienceEvent-Schemata gibt es ein optionales `eventType` -Feld. Dies enthält den primären Ereignistyp für den Datensatz. Die Festlegung eines Ereignistyps kann Ihnen dabei helfen, zwischen den verschiedenen Ereignissen zu unterscheiden, die Sie senden werden. XDM bietet verschiedene vordefinierte Ereignistypen, die Sie verwenden können oder Sie immer eigene benutzerdefinierte Ereignistypen für Ihre Anwendungsfälle erstellen. Eine [Liste aller vordefinierten Ereignistypen](../../xdm/classes/experienceevent.md#eventType) finden Sie in der XDM-Dokumentation .
 
 Diese Ereignistypen werden in einer Dropdown-Liste angezeigt, wenn Sie die Tag-Erweiterung verwenden oder sie immer ohne Tags übergeben können. Sie können als Teil der `xdm`-Option übergeben werden.
 
