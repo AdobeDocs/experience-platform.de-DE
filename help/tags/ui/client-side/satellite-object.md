@@ -1,10 +1,11 @@
 ---
 title: Satellitenobjektreferenz
 description: Erfahren Sie mehr über das clientseitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in -Tags ausführen können.
-source-git-commit: 5adb3ed403bddd3b985d0a790eca117fb2f39288
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 84%
+source-wordcount: '1285'
+ht-degree: 83%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 84%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Dieses Dokument dient als Referenz für das Client-seitige `_satellite`-Objekt und die verschiedenen Funktionen, die Sie damit ausführen können.
 
@@ -48,7 +49,7 @@ var product = _satellite.getVar('product');
 
 Wenn ein Datenelement mit dem entsprechenden Namen vorhanden ist, wird der Wert des Datenelements zurückgegeben. Wenn kein passendes Datenelement vorhanden ist, wird überprüft, ob zuvor über `_satellite.setVar()` eine benutzerdefinierte Variable mit dem jeweiligen Namen festgelegt wurde. Wenn eine passende benutzerdefinierte Variable gefunden wird, wird ihr Wert zurückgegeben.
 
-Beachten Sie, dass Sie in vielen Formularfeldern in der Datenerfasslungs-Benutzeroberfläche die `%%` Syntax zum Referenzieren von Variablen `_satellite.getVar()` verwenden können, wodurch die Notwendigkeit von Aufrufen reduziert wird. Beispielsweise dient %product% dem Zugriff auf den Wert des Produktdatenelements oder der benutzerdefinierten Variable.
+Beachten Sie, dass Sie in vielen Formularfeldern in der Datenerfasslungs-Benutzeroberfläche die Syntax `%%` zum Referenzieren von Variablen verwenden können, wodurch die Notwendigkeit von Aufrufen von `_satellite.getVar()` reduziert wird. Beispielsweise dient %product% dem Zugriff auf den Wert des Produktdatenelements oder der benutzerdefinierten Variable.
 
 ## `setVar`
 
@@ -214,11 +215,35 @@ Das ISO-8601-Datum, an dem die im aktuellen Container verwendete [Turbine](https
 
 Das ISO-8601-Datum, an dem die aktuelle Bibliothek erstellt wurde.
 
-### `environment`
+Dieses Beispiel zeigt die Objektwerte:
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Code**
+
+```javascript
+_satellite.environment
+```
+
+Dieses Objekt enthält Informationen über die Umgebung, in der die aktuelle Tag-Laufzeitbibliothek bereitgestellt wird. Das Objekt enthält die folgenden Eigenschaften:
+
+### `id`
+
+Die ID der Umgebung.
+
+### `stage`
 
 Die Umgebung, für die diese Bibliothek erstellt wurde. Die möglichen Werte sind:
 
-* development
+* entwicklung
 * staging
 * production
 
@@ -226,10 +251,8 @@ Dieses Beispiel zeigt die Objektwerte:
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 
@@ -251,7 +274,7 @@ _satellite.notify(message: string[, level: number])
 _satellite.notify('Hello world!');
 ```
 
-`notify` protokolliert eine Nachricht in der Browser-Konsole. Die Meldung wird nur dann angezeigt, wenn das Tag-Debugging durch den Benutzer aktiviert wird (per Aufruf von `_satellite.setDebug(true)` oder Verwendung einer entsprechenden Browser-Erweiterung).
+`notify` protokolliert eine Nachricht in der Browser-Konsole. Die Meldung wird nur angezeigt, wenn das Tag-Debugging vom Benutzer aktiviert wurde (durch Abrufen von `_satellite.setDebug(true)` oder mit einer entsprechenden Browser-Erweiterung).
 
 Eine optionale Protokollebene kann übergeben werden, die sich auf die Formatierung und Filterung der protokollierten Nachricht auswirkt. Folgende Ebenen werden unterstützt:
 

@@ -1,10 +1,11 @@
 ---
 title: Freie turbine-Variable
 description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
+source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 94%
+source-wordcount: '598'
+ht-degree: 91%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Das `turbine`-Objekt ist eine „freie Variable“ im Gültigkeitsbereich der Bibliotheksmodule Ihrer Erweiterung. Es stellt Informationen und Dienstprogramme bereit, die für die Tag-Laufzeit von Adobe Experience Platform spezifisch sind, und ist ohne Verwendung von `require()` für Bibliotheksmodule immer verfügbar.
 
@@ -28,8 +29,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -38,7 +38,27 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | Die in der aktuellen Bibliothek verwendete [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)-Version. |
 | `turbineBuildDate` | Das ISO-8601-Datum, an dem die im aktuellen Container verwendete [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine)-Version erstellt wurde. |
 | `buildDate` | Das ISO-8601-Datum, an dem die aktuelle Bibliothek erstellt wurde. |
-| `environment` | Die Umgebung, für die diese Bibliothek erstellt wurde. Zulässige Werte sind `development`, `staging` und `production`. |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` ist ein Objekt, das Informationen über die Umgebung enthält, in der die Bibliothek bereitgestellt wird.
+
+```js
+{
+    id: "EN123456...",
+    stage: "development"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `id` | Die ID der Umgebung. |
+| `stage` | Die Umgebung, für die diese Bibliothek erstellt wurde. Zulässige Werte sind `development`, `staging` und `production`. |
 
 
 ## [!DNL debugEnabled]
@@ -100,7 +120,7 @@ Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole 
 
 ### [!DNL onDebugChanged]
 
-Wenn eine Callback-Funktion an `turbine.onDebugChanged` übergeben wird, ruft Tags diesen Callback auf, sobald der Debugging-Modus aktiviert bzw. deaktiviert wird. Tags übergibt der Callback-Funktion einen booleschen Wert. Bei aktiviertem Debugging lautet dieser Wert „true“ und bei deaktiviertem Debugging „false“.
+Wenn eine Callback-Funktion an `turbine.onDebugChanged` übergeben wird, ruft Tags diesen Rückruf auf, sobald der Debugging-Modus aktiviert bzw. deaktiviert wird. Tags übergibt der Callback-Funktion einen booleschen Wert. Bei aktiviertem Debugging lautet dieser Wert „true“ und bei deaktiviertem Debugging „false“.
 
 Wenn Sie einfach Meldungen protokollieren möchten, ist es unwahrscheinlich, dass Sie dies verwenden müssen. Stattdessen sollten Sie Meldungen immer mit `turbine.logger` protokollieren. Tags stellt dann sicher, dass die Meldungen nur dann auf der Konsole ausgegeben werden, wenn der Tag-Debugging-Modus aktiviert ist.
 
