@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 09bae0d24eead5f0b6533ba5b89e1fc87c8c71b5
+source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 53%
 
 ---
@@ -58,6 +58,7 @@ ht-degree: 53%
       * [LinkedIn Insight-Tag-Erweiterung](./catalog/advertising/linkedin.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
+      * [Pinterest-Kundenlistenverbindung](./catalog/advertising/pinterest.md)
       * [Verbindung zum Trade Desk](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-Verbindung](./catalog/advertising/datax.md)
@@ -108,9 +109,9 @@ ht-degree: 53%
       * [Übersicht über die Tag-Erweiterung](./catalog/launch-extensions/overview.md)
    * Mobile Interaktionsziele {#mobile-engagement}
       * [Mobile Interaktionsziele - Übersicht](./catalog/mobile-engagement/overview.md)
-      * [(Beta) Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
-      * [(Beta) Verbindung von Airship Tags](./catalog/mobile-engagement/airship-tags.md)
-      * [(Beta) Verbindung brennen](./catalog/mobile-engagement/braze.md)
+      * [Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
+      * [Verbindung von Airship Tags](./catalog/mobile-engagement/airship-tags.md)
+      * [Bremsverbindung](./catalog/mobile-engagement/braze.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [Adobe Target-Erweiterung](./catalog/personalization/adobe-target.md)
