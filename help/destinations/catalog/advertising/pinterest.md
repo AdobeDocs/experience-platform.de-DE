@@ -1,7 +1,7 @@
 ---
 title: Pinterest-Kundenlistenverbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
-source-git-commit: 9bd309ae9d9edf56de855422abd109af1a10cffc
+source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 5%
@@ -21,8 +21,8 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 ## Voraussetzungen {#prerequisites}
 
-* Der Benutzer muss sich mit einem Pinterest-Konto authentifizieren, das Zugriff auf das Advertiser-Konto hat, dem er eine Zielgruppe hinzufügen möchte. Details zur Freigabe von Advertiser-Konten finden Sie hier: https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts Insbesondere benötigt der Benutzer die Zugriffsebene &quot;Zielgruppe&quot;.
-* Details zu Identitätsformaten der Kundenliste finden Sie hier: https://help.pinterest.com/en/business/article/audience-targeting
+* Der Benutzer muss sich mit einem Pinterest-Konto authentifizieren, das Zugriff auf das Advertiser-Konto hat, dem er eine Zielgruppe hinzufügen möchte. Details zur Freigabe von Advertiser-Konten finden Sie [hier](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Insbesondere benötigt der Benutzer die Zugriffsebene &quot;Zielgruppe&quot;.
+* Details zu Identitätsformaten der Kundenliste finden Sie [hier](https://help.pinterest.com/en/business/article/audience-targeting).
 
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -76,4 +76,4 @@ Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Date
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Weitere Informationen finden Sie auf der Pinterest Help Center-Seite (https://help.pinterest.com/en/business/article/audience-targeting).
+Weitere Informationen finden Sie auf der [Pinterest Help Center-Seite](https://help.pinterest.com/en/business/article/audience-targeting) .
