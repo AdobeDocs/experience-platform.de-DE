@@ -3,14 +3,18 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 2be9d262a699861c01011c59358751e6406f3770
+source-git-commit: f5d3c5911357d4b76e4d38564bf637e2549469d6
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '771'
 ht-degree: 4%
 
 ---
 
 # Versionshinweise
+
+## Version 2.6.4 - 7. September 2021
+
+* Es wurde ein Problem behoben, bei dem HTML-Adobe Target-Aktionen, die auf das `head` -Element angewendet wurden, den gesamten `head` -Inhalt ersetzten. Nun werden HTML-Aktionen festgelegt, die auf das `head`-Element angewendet werden, und an HTML angehängt.
 
 ## Version 2.6.3 - 16. August 2021
 
