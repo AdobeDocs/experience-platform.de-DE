@@ -5,9 +5,9 @@ topic-legacy: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 6ecfad588f97474988b86199c008953714a3bed8
+source-git-commit: 13055c9b569a67b5b44a90ac2b40776e271db008
 workflow-type: tm+mt
-source-wordcount: '1363'
+source-wordcount: '1375'
 ht-degree: 95%
 
 ---
@@ -103,6 +103,7 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
 | [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Für diese Zugriffsberechtigung ist es erforderlich, dass dem Benutzer, der die Ziele aktiviert, entweder „Ziele anzeigen“ oder [!UICONTROL Ziele verwalten] gewährt wird. |
+| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Möglichkeit, Ziele mithilfe von [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Zugriff auf das Erstellen, Akzeptieren und Ablehnen von Partnerhandshakes, um zwei IMS-Organisationen zu verbinden und [!DNL Segment Match]-Flüsse zu aktivieren. |
