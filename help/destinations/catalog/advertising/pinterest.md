@@ -1,15 +1,15 @@
 ---
 title: Pinterest-Kundenlistenverbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
-source-git-commit: dc7e43a16923cb17a39a8ddb4ba114c0e9c0cc39
+exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '516'
 ht-degree: 5%
 
 ---
 
-
-# Pinterest-Kundenlistenverbindung
+# [!DNL Pinterest Customer List] connection
 
 ## Übersicht {#overview}
 
@@ -27,14 +27,14 @@ Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besuch
 
 ## Unterstützte Identitäten {#supported-identities}
 
-Das Pinterest-Kundenlistenziel unterstützt die Aktivierung von Identitäten, die in der folgenden Tabelle beschrieben sind. Erfahren Sie mehr über [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
+Das [!DNL Pinterest Customer List]-Ziel unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erfahren Sie mehr über [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
 
 Ordnen Sie im Schritt [Zuordnen](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) des Zielaktivierungs-Workflows die gewünschten Identitäten dem Zielfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst.
 
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | Google Advertising ID | Ordnen Sie den Quell-Identitäts-Namespace *GAID* dem Zielidentitätsfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
-| IDFA | Apple ID für Advertiser | Ordnen Sie den Quell-Identitäts-Namespace *IDFA* dem Zielidentitätsfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
+| GAID | [!DNL Google Advertising ID] | Ordnen Sie den Quell-Identitäts-Namespace *GAID* dem Zielidentitätsfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
+| IDFA | [!DNL Apple ID for Advertisers] | Ordnen Sie den Quell-Identitäts-Namespace *IDFA* dem Zielidentitätsfeld *pinterest_audience* zu. Identitäten werden bei der Datenerfassung in Pinterest identifiziert und aufgelöst. |
 | E-MAIL | E-Mail-Adressen (Klartext oder Hash mit dem SHA256-Algorithmus) | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. <br> Ordnen Sie den  ** E-Mail- *E-Mail_LC_SHA256* -Quell-Identitäts-Namespace dem Zielidentitätsfeld  *pinterest_audience* zu. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -45,7 +45,7 @@ Ordnen Sie im Schritt [Zuordnen](/help/destinations/ui/activate-segment-streamin
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Pinterest-Kundenlistenziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Pinterest Customer List]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 
 ### Anwendungsfall 1

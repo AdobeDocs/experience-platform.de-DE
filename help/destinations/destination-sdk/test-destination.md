@@ -1,9 +1,10 @@
 ---
-description: 'Als Teil des Destination SDK stellt Adobe Entwicklertools bereit, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. '
+description: Als Teil des Destination SDK stellt Adobe Entwicklertools bereit, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen.
 title: Testen der Zielkonfiguration
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '484'
 ht-degree: 1%
 
 ---
@@ -228,4 +229,4 @@ Beschreibungen der Anforderungs- und Antwortparameter finden Sie unter [API-Vorg
 
 ## Nächste Schritte
 
-Nachdem Sie bestätigt haben, dass Ihr Ziel richtig konfiguriert ist, verwenden Sie die Adobe [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Dokumentationsseite für Ihr Ziel zu erstellen.
+Nachdem Sie Ihr Ziel getestet und bestätigt haben, dass es korrekt konfiguriert ist, verwenden Sie die [API zur Zielveröffentlichung](./destination-publish-api.md), um Ihre Konfiguration zur Überprüfung an Adobe zu senden.

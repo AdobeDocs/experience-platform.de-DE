@@ -3,18 +3,14 @@ keywords: mobil; einatmen; Messaging;
 title: Bremsverbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 2%
+source-wordcount: '757'
+ht-degree: 1%
 
 ---
 
-# (Beta) [!DNL Braze] Verbindung
-
->[!IMPORTANT]
->
->Das Ziel &quot;Braze&quot;in Adobe Experience Platform befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern.
+# [!DNL Braze] connection
 
 ## Übersicht {#overview}
 
@@ -34,7 +30,7 @@ Beachten Sie die folgenden Details, die speziell für das Ziel [!DNL Braze] gelt
 >
 >Beachten Sie, dass das Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] zu einem Anstieg des [!DNL Braze] Datenpunktverbrauchs führen kann. Wenden Sie sich an Ihren [!DNL Braze]-Kundenbetreuer, bevor Sie zusätzliche benutzerdefinierte Attribute senden.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Als Marketer möchte ich Benutzer in einem Ziel für mobile Interaktionen ansprechen, wobei Segmente in [!DNL Adobe Experience Platform] integriert sind. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse basierend auf Attributen aus ihren [!DNL Adobe Experience Platform]-Profilen bereitstellen, sobald Segmente und Profile in [!DNL Adobe Experience Platform] aktualisiert werden.
 
@@ -99,11 +95,9 @@ Klicken Sie im Abschnitt [!UICONTROL Zielfeld] auf das Zuordnungssymbol rechts n
 
 ![Zielgruppen-Mapping für Braze](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Im Fenster [!UICONTROL Zielfeld] auswählen können Sie zwischen drei Kategorien von Zielfeldern wählen:
-* [!UICONTROL Attribute auswählen]: Verwenden Sie diese Option, um Ihre XDM-Attribute Standardattributen  [!DNL Braze] zuzuordnen.
+Im Fenster [!UICONTROL Zielfeld] auswählen können Sie zwischen zwei Kategorien von Zielfeldern wählen:
 * [!UICONTROL Identitäts-Namespace] auswählen: Verwenden Sie diese Option, um  [!DNL Platform] Identitäts-Namespaces  [!DNL Braze] Identitäts-Namespaces zuzuordnen.
-* [!UICONTROL Wählen Sie benutzerdefinierte Attribute] aus: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten  [!DNL Braze] Attributen zuzuordnen, die Sie in Ihrem  [!DNL Braze] Konto definiert haben.
-* Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Braze] umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Braze] zuordnen, wird das `Last_Name`-Attribut in [!DNL Braze] erstellt, sofern es noch nicht vorhanden ist, und das `lastName`-XDM-Attribut zugeordnet.
+* [!UICONTROL Wählen Sie benutzerdefinierte Attribute] aus: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten  [!DNL Braze] Attributen zuzuordnen, die Sie in Ihrem  [!DNL Braze] Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in  [!DNL Braze]umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Braze] zuordnen, wird das `Last_Name`-Attribut in [!DNL Braze] erstellt, sofern es noch nicht vorhanden ist, und das `lastName`-XDM-Attribut zugeordnet.
 
 ![Zielgruppen-Mapping-Felder von Braze Destination](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
@@ -122,7 +116,7 @@ Angenommen, Ihr XDM-Profilschema und Ihre [!DNL Braze]-Instanz enthalten die fol
 |  | XDM-Profilschema | [!DNL Braze] Instanz |
 |---|---|---|
 | Attribute | <ul><li>person.name.firstName</code></li><li>person.name.lastName</code></li><li>mobilePhone.number</code></li></ul> | <ul><li>FirstName</code></li><li>LastName</code></li><li>PhoneNumber</code></li></ul> |
-| Identitäten | <ul><li>E-Mail</code></li><li>Google Ad ID (GAID)</code></li><li>Apple-ID für Advertiser (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
+| Identitäten | <ul><li>E-Mail </code></li><li>Google Ad ID (GAID)</code></li><li>Apple-ID für Advertiser (IDFA)</code></li></ul> | <ul><li>external_id</code></li></ul> |
 
 Die korrekte Zuordnung würde wie folgt aussehen:
 
