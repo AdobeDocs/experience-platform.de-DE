@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 6b688b88dc111cfb638ae71d9b43276e93eff28b
+source-git-commit: 834814cc2929c618b9f41c0fcf3ef79a831a969d
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 53%
+source-wordcount: '627'
+ht-degree: 44%
 
 ---
 
@@ -139,5 +139,38 @@ ht-degree: 53%
       * [Invoca Tags-Erweiterung](./catalog/voice/invoca.md)
       * [Medallia-Erweiterung](./catalog/voice/medallia.md)
       * [Talk URL Inbox-Erweiterung](./catalog/voice/talkurl.md)
+* Destination SDK {#destination-sdk}
+   * [Übersicht](./destination-sdk/overview.md)
+   * [Integrationsvoraussetzungen](./destination-sdk/integration-prerequisites.md)
+   * [Erste Schritte](./destination-sdk/getting-started.md)
+   * Ziel-SDK-Funktionalität {#functionality}
+      * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
+      * [Zielkonfiguration](./destination-sdk/destination-configuration.md)
+      * [Server- und Vorlagenspezifikationen](./destination-sdk/server-and-template-configuration.md)
+      * [Nachrichtenformat](./destination-sdk/message-format.md)
+      * [Zielgruppen-Metadatenverwaltung](./destination-sdk/audience-metadata-management.md)
+      * [Authentifizierungskonfiguration](./destination-sdk/credentials-configuration.md)
+      * [OAuth 2-Authentifizierung](./destination-sdk/oauth2-authentication.md)
+      * Entwicklertools {#developer-tools}
+         * [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./destination-sdk/create-template.md)
+         * [Testen der Zielkonfiguration](./destination-sdk/test-destination.md)
+   * API-Referenz {#api-reference}
+      * [API-Vorgänge für Ziel-Endpunkte](./destination-sdk/destination-configuration-api.md)
+      * [API-Vorgänge für Ziel-Server-Endpunkte](./destination-sdk/destination-server-api.md)
+      * [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./destination-sdk/audience-metadata-api.md)
+      * [API-Vorgänge für Anmeldeendpunkte](./destination-sdk/credentials-configuration-api.md)
+      * [API-Vorgänge für Veröffentlichungsendpunkte](./destination-sdk/destination-publish-api.md)
+      * Referenz zu Entwicklertools {#developer-tools-reference}
+         * [Abrufen von Beispielvorlagen-API-Vorgängen](./destination-sdk/sample-template-api.md)
+         * [API-Vorgänge für Rendervorlagen](./destination-sdk/render-template-api.md)
+         * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
+         * [API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
+   * Handbücher {#guides}
+      * [Verwenden des Ziel-SDK zum Konfigurieren Ihres Ziels](./destination-sdk/configure-destination-instructions.md)
+   * Dokumentieren Sie Ihr Ziel {#document-destination}
+      * [Ziel in Adobe Experience Platform dokumentieren](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Verwenden Sie die GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Zieldokumentationsseite zu erstellen.](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Vorlage für Dokumentations-Self-Service](./destination-sdk/docs-framework/self-service-template.md)
 * [Häufig gestellte Fragen](./destinations-faq.md)
 * [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
