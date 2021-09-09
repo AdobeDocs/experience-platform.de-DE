@@ -3,18 +3,14 @@ keywords: Luftschiff-Tags; Luftschiff-Ziel
 title: Verbindung von Airship Tags
 description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: e413933920028e3239f6044111d9cf215c865eba
+source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt
-source-wordcount: '705'
-ht-degree: 2%
+source-wordcount: '685'
+ht-degree: 0%
 
 ---
 
-# (Beta) [!DNL Airship Tags] Verbindung {#airship-tags-destination}
-
->[!IMPORTANT]
->
->Das [!DNL Airship Tags]-Ziel in Adobe Experience Platform befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
+# [!DNL Airship Tags] connection {#airship-tags-destination}
 
 ## Übersicht
 
@@ -62,7 +58,7 @@ Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Ziel 
 
 Klicken Sie auf **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
 
-## Anwendungsbeispiele
+## Anwendungsfälle
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Airship Tags]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 

@@ -2,9 +2,9 @@
 title: Satellitenobjektreferenz
 description: Erfahren Sie mehr über das clientseitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in -Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 57b4d11d0a7fd587dc45066737726a52533e33f0
+source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1279'
 ht-degree: 83%
 
 ---
@@ -227,34 +227,27 @@ Dieses Beispiel zeigt die Objektwerte:
 
 ## `environment`
 
+Dieses Objekt enthält Informationen über die Umgebung, in der die aktuelle Tag-Laufzeitbibliothek bereitgestellt wird.
+
 **Code**
 
 ```javascript
 _satellite.environment
 ```
 
-Dieses Objekt enthält Informationen über die Umgebung, in der die aktuelle Tag-Laufzeitbibliothek bereitgestellt wird. Das Objekt enthält die folgenden Eigenschaften:
-
-### `id`
-
-Die ID der Umgebung.
-
-### `stage`
-
-Die Umgebung, für die diese Bibliothek erstellt wurde. Die möglichen Werte sind:
-
-* entwicklung
-* staging
-* production
-
-Dieses Beispiel zeigt die Objektwerte:
+Das Objekt enthält die folgenden Eigenschaften:
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `id` | Die ID der Umgebung. |
+| `stage` | Die Umgebung, für die diese Bibliothek erstellt wurde. Die möglichen Werte sind `development`, `staging` und `production`. |
 
 ## `notify`
 
