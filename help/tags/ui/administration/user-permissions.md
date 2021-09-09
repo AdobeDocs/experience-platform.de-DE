@@ -1,7 +1,8 @@
 ---
 title: Benutzerberechtigungen für Tags
 description: Erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
-source-git-commit: acef25fe46f0ac0c45c18d4590be4af95ad5e0ab
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
+source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 24%
@@ -12,7 +13,7 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Benutzerberechtigungen für Tags in Adobe Experience Platform werden Benutzern über Adobe Admin Console zugewiesen. Anstatt einzelnen Benutzern zugewiesen zu werden, werden unterschiedliche Berechtigungssätze separat als Produktprofile konfiguriert. Benutzer werden dann diesen Produktprofilen zugewiesen, um die Berechtigungen zu erhalten, für die sie konfiguriert wurden.
 
@@ -39,7 +40,7 @@ Jede Tag-Eigenschaft verfügt über eine Plattform. Derzeit gibt es zwei Plattfo
 
 Standardmäßig gewähren Produktprofile Zugriff auf alle Eigenschaften, die in Ihrem Unternehmen vorhanden sind, sowohl derzeit als auch in Zukunft. Mit diesem Berechtigungstyp können Sie den Zugriff auf bestimmte vorhandene Eigenschaften anhand des Namens einschränken oder gewähren.
 
-### Eigenschaftsrechte
+### Eigenschaftsrechte {#property-rights}
 
 Jede Eigenschaft, die Sie in der Datenerfassungs-Benutzeroberfläche erstellen, steht in Admin Console zur Verfügung, sodass Sie die Eigenschaft mit bestimmten Eigenschaftsrechten im selben Produktprofil gruppieren können.
 
