@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Währungs-Datentyp
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Währungs-XDM-Datentyp.
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
+source-git-commit: 5e92b288bb8c996cfcf343d8ac1ab1665b0d3ad0
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 30%
+source-wordcount: '127'
+ht-degree: 7%
 
 ---
 
@@ -19,9 +20,9 @@ ht-degree: 30%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `amount` | Double | Die Anzahl der Farben, die die Anzeige darstellen kann. |
-| `conversionDate` | DateTime | Die Anzahl der Farben, die die Anzeige darstellen kann. |
-| `currencyCode` | Zeichenfolge | Die Anzahl der Farben, die die Anzeige darstellen kann. |
+| `amount` | Double | Der Betrag der Währung, wie er durch `currencyCode` definiert wird. |
+| `conversionDate` | DateTime | Ein Zeitstempel, der angibt, wann die Währungsumrechnung durchgeführt wurde. |
+| `currencyCode` | Zeichenfolge | Ein ISO 4217-Code, der den Typ der Währung angibt, die `amount` darstellt. |
 
 {style=&quot;table-layout:auto&quot;}
 
