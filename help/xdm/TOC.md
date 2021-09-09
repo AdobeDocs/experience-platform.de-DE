@@ -4,7 +4,7 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 6b3a1cc4cfba5475aba781a1d0511a59e399135f
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 41%
@@ -61,7 +61,7 @@ ht-degree: 41%
    * [Einverständnisse und Voreinstellungen](./data-types/consents.md)
    * [Währung](./data-types/currency.md)
    * [Gerät](./data-types/device.md)
-   * [E-Mail Adresse](./data-types/email-address.md)
+   * [E-Mail  Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
    * [Experience-Kanal](./data-types/experience-channel.md)
    * [Generisches Einverständnisfeld](./data-types/consent-field.md)
