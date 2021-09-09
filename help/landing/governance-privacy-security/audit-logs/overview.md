@@ -1,9 +1,10 @@
 ---
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Auditprotokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
-source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
+source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '469'
 ht-degree: 5%
 
 ---
@@ -36,7 +37,7 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei auftretenden Aktivitäten automatisch Prüfprotokolle erfasst. Sie müssen die Protokollerfassung nicht manuell aktivieren.
 
-Um Prüfprotokolle anzeigen und exportieren zu können, müssen Sie über die Zugriffssteuerungsberechtigung &quot;Prüfprotokolle anzeigen&quot;verfügen. Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffskontrolle](../../../access-control/home.md).
+Um Prüfprotokolle anzeigen und exportieren zu können, müssen Sie über die Zugriffssteuerungsberechtigung &quot;Audit-Protokolle anzeigen&quot;verfügen (zu finden unter der Kategorie &quot;Data Governance&quot;). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffskontrolle](../../../access-control/home.md).
 
 ## Verwalten von Prüfprotokollen in der Benutzeroberfläche
 
