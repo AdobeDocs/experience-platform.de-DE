@@ -1,16 +1,16 @@
 ---
-title: Adobe Experience Platform-Datenerfassung - End-to-End-Übersicht
-description: Eine allgemeine Übersicht darüber, wie Sie mit der Adobe Experience Platform-Datenerfassung Ereignisdaten an Adobe Experience Cloud-Lösungen senden.
-source-git-commit: b14d592c8beb5fc545ae0682000e4e05b6dac3a0
+title: Datenerfassung - End-to-End-Übersicht
+description: Ein allgemeiner Überblick darüber, wie Sie Ereignisdaten mithilfe der von Adobe Experience Platform bereitgestellten Datenerfassungstechnologien an Adobe Experience Cloud-Lösungen senden können.
+source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2568'
 ht-degree: 1%
 
 ---
 
-# Übersicht über die End-to-End-Datenerfassung in Adobe Experience Platform
+# Übersicht über Ende-zu-Ende-Datenerfassung
 
-Die Adobe Experience Platform-Datenerfassung bietet mehrere Technologien, die zusammenarbeiten, um die Übertragung Ihrer Daten an andere Adobe-Produkte oder Ziele von Drittanbietern zu erfassen. Um Ereignisdaten von Ihrer Anwendung an das Adobe Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
+In Adobe Experience Platform bezieht sich die Datenerfassung auf mehrere Technologien, die zusammenarbeiten, um Ihre Daten an andere Adobe-Produkte oder Drittanbieterziele zu übertragen. Um Ereignisdaten von Ihrer Anwendung an das Adobe Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
 Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe von Datenerfassungstechnologien. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Adobe Experience Platform Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche durch.
 
