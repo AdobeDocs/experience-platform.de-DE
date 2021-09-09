@@ -2,13 +2,14 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 title: Warnhinweise - Überblick
 description: Erfahren Sie mehr über Warnhinweise in Adobe Experience Platform, einschließlich der Struktur der Definition von Warnhinweisregeln.
-source-git-commit: 5fabf5fa12f0a117a50bf694dea5118e5ea03500
+feature: Alerts
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '740'
 ht-degree: 4%
 
 ---
-
 
 # Warnhinweise - Übersicht
 
@@ -56,6 +57,10 @@ Warnhinweise können über zwei Kanäle empfangen und verwaltet werden:
 Warnhinweise können an einen konfigurierten Webhook gesendet werden, um eine effiziente Automatisierung der Aktivitätsüberwachung zu ermöglichen. Um Warnhinweise über Webhook zu erhalten, müssen Sie Ihren Webhook für Plattformwarnungen in der Adobe Developer Console registrieren. Spezifische Schritte finden Sie im Handbuch [Abonnieren von Adobe I/O Event-Benachrichtigungen](./subscribe.md) .
 
 ### Platform-Benutzeroberfläche {#ui}
+
+Über die Platform-Benutzeroberfläche können Sie die empfangenen Warnungen anzeigen und Warnungsregeln verwalten. Das folgende Video bietet eine Einführung in diese Funktionen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 Um mit Warnhinweisen in der Platform-Benutzeroberfläche zu arbeiten, müssen Sie die folgenden Zugriffssteuerungsberechtigungen über Adobe Admin Console aktiviert haben:
 

@@ -5,9 +5,9 @@ title: XDM ExperienceEvent-Klasse
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ff446e2b9a2573889bcd1a5ab0933f60e871c353
+source-git-commit: 5405a2e2312e81db210a97a759681f66faa8b1fa
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1759'
 ht-degree: 3%
 
 ---
@@ -68,8 +68,14 @@ Adobe stellt mehrere Standardfeldgruppen für die Verwendung mit der Klasse [!DN
 * [[!UICONTROL Kampagnen-Marketingdetails]](../field-groups/event/campaign-marketing-details.md)
 * [[!UICONTROL Kanaldetails]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Commerce-Details]](../field-groups/event/commerce-details.md)
+* [[!UICONTROL Details zum Gerätehandel]](../field-groups/event/device-trade-in-details.md)
+* [[!UICONTROL Speisereservierung]](../field-groups/event/dining-reservation.md)
 * [[!UICONTROL Details zur Endbenutzer-ID]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Umgebungsdetails]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Flugreservierung]](../field-groups/event/flight-reservation.md)
+* [[!UICONTROL IAB TCF 2.0-Zustimmung]](../field-groups/event/iab.md)
+* [[!UICONTROL Unterkunftsreservierung]](../field-groups/event/lodging-reservation.md)
+* [[!UICONTROL Buchungsdetails]](../field-groups/event/reservation-details.md)
 * [[!UICONTROL Webdetails]](../field-groups/event/web-details.md)
 
 ## Anhang

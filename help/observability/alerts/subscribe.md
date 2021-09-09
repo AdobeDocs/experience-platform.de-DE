@@ -2,8 +2,9 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 title: Abonnieren von Adobe I/O-Ereignisbenachrichtigungen
 description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbenachrichtigungen für Adobe Experience Platform-Dienste abonnieren. Es werden auch Referenzinformationen zu verfügbaren Ereignistypen sowie Links zu weiteren Dokumentationen zur Interpretation der zurückgegebenen Ereignisdaten für jeden anwendbaren [!DNL Platform] Dienst bereitgestellt.
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8c00fb98a213b578f6970c1e1978f0159f8f38df
+source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 8%
@@ -58,8 +59,8 @@ Im nächsten Bildschirm wird eine Liste der Ereignistypen angezeigt, die abonnie
 >Wenn Sie sich nicht sicher sind, bei welchen Ereignissen Sie sich für den Dienst anmelden möchten, lesen Sie die dienstspezifische Benachrichtigungsdokumentation:
 >
 >* [[!DNL Privacy Service] Benachrichtigungen](../../privacy-service/privacy-events.md)
-* [[!DNL Data Ingestion] Benachrichtigungen](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service (sources)] Benachrichtigungen](../../sources/notifications.md)
+>* [[!DNL Data Ingestion] Benachrichtigungen](../../ingestion/quality/subscribe-events.md)
+>* [[!DNL Flow Service (sources)] Benachrichtigungen](../../sources/notifications.md)
 
 
 ![](../images/notifications/choose-event-subscriptions.png)
