@@ -4,9 +4,8 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-translation-type: ht
-source-git-commit: 1305d789c68ac8f84d5a5f82d8f17035e56ef712
-workflow-type: ht
+source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 100%
 

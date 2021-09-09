@@ -1,14 +1,14 @@
 ---
 keywords: RTCDP;CDP;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;Echtzeit-CDP;cdp;Kunden-KI
 title: Real-Time Customer Data Platform – Übersicht
-seo-title: Real-Time Customer Data Platform – Übersicht
+seo-title: Real-time Customer Data Platform Overview
 description: Echtzeit-Kundendatenplattform – Übersicht
-seo-description: Echtzeit-Kundendatenplattform – Übersicht
+seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
-workflow-type: ht
-source-wordcount: '306'
-ht-degree: 100%
+source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
