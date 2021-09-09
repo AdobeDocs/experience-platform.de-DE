@@ -2,10 +2,10 @@
 title: Freie turbine-Variable
 description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 89%
+source-wordcount: '619'
+ht-degree: 86%
 
 ---
 
@@ -117,6 +117,7 @@ Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole 
 * `logger.warn(message: string)`: Protokolliert eine Warnmeldung auf der Konsole.
 * `logger.error(message: string)`: Protokolliert eine Fehlermeldung auf der Konsole.
 * `logger.debug(message: string)`: Protokolliert eine Debug-Meldung auf der Konsole. (Nur sichtbar, wenn der Protokollierungsmodus `verbose` in der Browser-Konsole aktiviert ist.)
+* `logger.deprecation(message: string)`: Protokolliert eine Warnmeldung auf der Konsole, unabhängig davon, ob der Benutzer das Tag-Debugging aktiviert hat.
 
 ### `onDebugChanged`
 
