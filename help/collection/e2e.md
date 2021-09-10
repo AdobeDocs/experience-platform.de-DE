@@ -2,9 +2,9 @@
 title: Datenerfassung - End-to-End-Übersicht
 description: Ein allgemeiner Überblick darüber, wie Sie Ereignisdaten mithilfe der von Adobe Experience Platform bereitgestellten Datenerfassungstechnologien an Adobe Experience Cloud-Lösungen senden können.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
+source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
 workflow-type: tm+mt
-source-wordcount: '2619'
+source-wordcount: '2618'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Informationen zum Gewähren von Berechtigungen für Platform-Funktionen für Ben
 
 ## Prozesszusammenfassung
 
-Der Prozess der Konfiguration des Edge-Netzwerks für Ihre Website kann wie folgt zusammengefasst werden:
+Der Prozess der Konfiguration der Datenerfassung für Ihre Website kann wie folgt zusammengefasst werden:
 
 1. [Erstellen Sie ein ](#schema) Schema, um zu bestimmen, wie Ihre Daten strukturiert sind, wenn sie an das Edge-Netzwerk gesendet werden.
 1. [Erstellen Sie einen ](#datastream) Datenspeicher, um zu konfigurieren, an welche Ziele Ihre Daten gesendet werden sollen.
