@@ -1,9 +1,10 @@
 ---
 title: Datenerfassung - End-to-End-Übersicht
 description: Ein allgemeiner Überblick darüber, wie Sie Ereignisdaten mithilfe der von Adobe Experience Platform bereitgestellten Datenerfassungstechnologien an Adobe Experience Cloud-Lösungen senden können.
-source-git-commit: 2bcb42b83020a9ce620cb8162b7fc072b72ff23e
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
+source-git-commit: 1b2c0c2e5b05e30b6cf0e284f15f28989c580efe
 workflow-type: tm+mt
-source-wordcount: '2568'
+source-wordcount: '2619'
 ht-degree: 1%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 1%
 
 In Adobe Experience Platform bezieht sich die Datenerfassung auf mehrere Technologien, die zusammenarbeiten, um Ihre Daten an andere Adobe-Produkte oder Drittanbieterziele zu übertragen. Um Ereignisdaten von Ihrer Anwendung an das Adobe Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
-Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe von Datenerfassungstechnologien. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Adobe Experience Platform Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche durch.
+Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe von Datenerfassungstechnologien. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Adobe Experience Platform Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
 
 >[!NOTE]
 >
@@ -179,9 +180,26 @@ Nachdem Sie die Zuordnung Ihrer Daten zum Schema abgeschlossen haben, geben Sie 
 
 Nach dem Speichern des Datenelements besteht der nächste Schritt darin, eine Regel zu erstellen, die es an das Edge-Netzwerk sendet, sobald ein bestimmtes Ereignis auf Ihrer Website eintritt (z. B. wenn ein Kunde einem Warenkorb ein Produkt hinzufügt).
 
-In diesem Abschnitt wird beispielsweise gezeigt, wie eine Regel erstellt wird, die Trigger wird, wenn ein Kunde einem Warenkorb einen Artikel hinzufügt. Sie können jedoch Regeln für praktisch jedes Ereignis einrichten, das auf Ihrer Website auftreten kann.
+Sie können Regeln für praktisch jedes Ereignis einrichten, das auf Ihrer Website auftreten kann. In diesem Abschnitt wird beispielsweise gezeigt, wie eine Regel erstellt wird, die beim Senden eines Formulars durch einen Kunden Trigger wird. Der folgende HTML-Code stellt eine einfache Webseite mit dem Formular &quot;Zum Warenkorb hinzufügen&quot;dar, die Gegenstand der Regel sein wird:
 
-Wählen Sie **[!UICONTROL Regeln]** im linken Navigationsbereich und dann **[!UICONTROL Neue Regel erstellen]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+Wählen Sie in der Datenerfassungs-Benutzeroberfläche **[!UICONTROL Regeln]** im linken Navigationsbereich und dann **[!UICONTROL Neue Regel erstellen]** aus.
 
 ![Regeln](./images/e2e/rules.png)
 
@@ -189,13 +207,13 @@ Geben Sie im nächsten Bildschirm einen Namen für die Regel ein. Von hier aus b
 
 ![Namensregel](./images/e2e/name-rule.png)
 
-Die Seite zur Ereigniskonfiguration wird angezeigt. Um ein Ereignis zu konfigurieren, müssen Sie zunächst den Ereignistyp auswählen. Ereignistypen werden durch Erweiterungen bereitgestellt. Um beispielsweise ein &quot;Formular senden&quot;-Ereignis einzurichten, wählen Sie die Erweiterung **[!UICONTROL Core]** und dann den Ereignistyp **[!UICONTROL Submit]** unter der Kategorie **[!UICONTROL Formular]** aus. Im angezeigten Konfigurationsdialogfeld können Sie den CSS-Selektor für das bestimmte Formular bereitstellen, für das diese Regel ausgelöst werden soll.
+Die Seite zur Ereigniskonfiguration wird angezeigt. Um ein Ereignis zu konfigurieren, müssen Sie zunächst den Ereignistyp auswählen. Ereignistypen werden durch Erweiterungen bereitgestellt. Um beispielsweise ein &quot;Formular senden&quot;-Ereignis einzurichten, wählen Sie die Erweiterung **[!UICONTROL Core]** und dann den Ereignistyp **[!UICONTROL Submit]** unter der Kategorie **[!UICONTROL Formular]** aus.
 
 >[!NOTE]
 >
 >Weitere Informationen zu den verschiedenen Ereignistypen, die von Adobe-Web-Erweiterungen bereitgestellt werden, einschließlich ihrer Konfiguration, finden Sie unter [Adobe Extensions-Referenz](../tags/extensions/web/overview.md) in der Tag-Dokumentation.
 
-Wählen Sie **[!UICONTROL Keep Changes]** aus, um das Ereignis zur Regel hinzuzufügen.
+Mit dem Formularübermittlungsereignis können Sie einen [CSS-Selektor](https://www.w3schools.com/css/css_selectors.asp) verwenden, um auf ein bestimmtes Element zu verweisen, in dem die Regel ausgelöst werden soll. Im folgenden Beispiel wird die ID `add-to-cart-form` verwendet, sodass diese Regel nur für das Formular &quot;Zum Warenkorb hinzufügen&quot;ausgelöst wird. Wählen Sie **[!UICONTROL Keep Changes]** aus, um das Ereignis zur Regel hinzuzufügen.
 
 ![Ereigniskonfiguration](./images/e2e/event-config.png)
 
