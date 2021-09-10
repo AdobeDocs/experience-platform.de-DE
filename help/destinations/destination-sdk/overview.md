@@ -2,9 +2,9 @@
 description: Das Adobe Experience Platform Destination SDK ist eine Reihe von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für die Experience Platform konfigurieren können, um Zielgruppen- und Profildaten an Ihren Endpunkt zu senden. Dies basiert auf Daten- und Authentifizierungsformaten Ihrer Wahl. Die Konfigurationen werden in Experience Platform gespeichert und können über API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 2841adc0ce212a945c35ba38209d4c00c519ad7b
+source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '702'
 ht-degree: 4%
 
 ---
@@ -63,8 +63,8 @@ Der Ziel-SDK-Zugriff variiert je nach Ihrem Status als Partner oder Experience P
 ---------|----------|
 | Unabhängiger Software-Anbieter (ISV) | Treten Sie dem [Adobe Exchange-Programm](https://partners.adobe.com/exchangeprogram/experiencecloud.html) bei und fordern Sie auf, eine Experience Platform-Sandbox für den Zugriff auf das Destination SDK bereitzustellen. |
 | Systemintegrator (SI) | Sie müssen entweder auf Gold- oder Platinebene im [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html) sein, und Sie erhalten eine Experience Platform-Sandbox, die bereitgestellt wird, sowie Zugriff auf das Ziel-SDK. |
-| Experience Platform-Kunde im Aktivierungspaket | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Ziel-SDK. |
-| Experience Platform-Kunde im Echtzeit-CDP-Paket | Sie haben keinen Zugriff auf das Ziel-SDK, sondern Zugriff auf alle produktiven Ziele, die von anderen Unternehmen mithilfe des Ziel-SDK konfiguriert und in Experience Platform-Unternehmen veröffentlicht wurden. |
+| Experience Platform-Kunde für das [Aktivierungspaket](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | Standardmäßig erhalten Sie Zugriff auf Experience Platform-Sandboxes und Ziel-SDK. |
+| Experience Platform-Kunde auf dem [Echtzeit-CDP-Paket](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Sie haben keinen Zugriff auf das Ziel-SDK, sondern Zugriff auf alle produktiven Ziele, die von anderen Unternehmen mithilfe des Ziel-SDK konfiguriert und in Experience Platform-Unternehmen veröffentlicht wurden. |
 
 {style=&quot;table-layout:auto&quot;}
 
