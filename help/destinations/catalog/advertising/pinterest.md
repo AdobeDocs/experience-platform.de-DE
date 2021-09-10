@@ -1,7 +1,7 @@
 ---
 title: Pinterest-Kundenlistenverbindung
 description: Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+source-git-commit: 96086324e644d4e2b2b2a3d03dce393c49c2d52e
 workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 5%
