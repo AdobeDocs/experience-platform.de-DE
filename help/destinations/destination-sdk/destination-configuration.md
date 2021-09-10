@@ -1,10 +1,11 @@
 ---
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Zielkonfigurationsoptionen für Ziel-SDK
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '1506'
-ht-degree: 5%
+source-wordcount: '1527'
+ht-degree: 6%
 
 ---
 
@@ -123,6 +124,8 @@ Nachfolgend finden Sie eine Beispielkonfiguration für ein fiktives Ziel, Movies
 | `description` | Zeichenfolge | Geben Sie eine Beschreibung ein, die Adobe im Zielkatalog der Experience Platform für Ihre Zielkarte verwendet. Ziel für maximal 4-5 Sätze. |
 | `status` | Zeichenfolge | Gibt den Lebenszyklusstatus der Zielkarte an. Zulässige Werte sind `TEST`, `PUBLISHED` und `DELETED`. Verwenden Sie `TEST`, wenn Sie Ihr Ziel zum ersten Mal konfigurieren. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Benutzerauthentifizierungskonfigurationen {#customer-authentication-configurations}
 
 Dieser Abschnitt generiert die Kontoseite in der Experience Platform-Benutzeroberfläche, auf der Benutzer die Experience Platform mit den Konten verbinden, die sie mit Ihrem Ziel haben. Je nachdem, welche Authentifizierungsoption Sie im Feld `authType` angeben, wird die Experience Platform für die Benutzer wie folgt generiert:
@@ -145,6 +148,8 @@ Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authent
 | `customerAuthenticationConfigurations` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kunden auf Ihrem Server verwendet wird. Zulässige Werte finden Sie unten unter `authType` . |
 | `authType` | Zeichenfolge | Akzeptierte Werte sind `OAUTH2, BEARER`. <br><ul><li> Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, wählen Sie den Wert `OAUTH2` aus und fügen Sie die erforderlichen Felder für OAuth 2 hinzu, wie auf der Authentifizierungsseite des Destination SDK OAuth 2 dargestellt. Außerdem sollten Sie `authenticationRule=CUSTOMER_AUTHENTICATION` im Abschnitt [Zielversand](./destination-configuration.md) auswählen. </li><li>Wählen Sie für die Trägerauthentifizierung `BEARER` und dann `authenticationRule=CUSTOMER_AUTHENTICATION` im Abschnitt [Zielversand](./destination-configuration.md) aus.</li></ul> |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Kundendatenfelder {#customer-data-fields}
 
 In diesem Abschnitt können Partner benutzerdefinierte Felder einführen. In der obigen Beispielkonfiguration erfordert `customerDataFields`, dass Benutzer einen Endpunkt im Authentifizierungsfluss auswählen und ihre Kunden-ID mit dem Ziel angeben. Die Konfiguration spiegelt sich im Authentifizierungsfluss wider, wie unten dargestellt:
@@ -161,6 +166,8 @@ In diesem Abschnitt können Partner benutzerdefinierte Felder einführen. In der
 | `enum` | Zeichenfolge | Rendert das benutzerdefinierte Feld als Dropdown-Menü und listet die für den Benutzer verfügbaren Optionen auf. |
 | `pattern` | Zeichenfolge | Erzwingt bei Bedarf ein Muster für das benutzerdefinierte Feld. Verwenden Sie reguläre Ausdrücke, um ein Muster zu erzwingen. Wenn Ihre Kunden-IDs beispielsweise keine Zahlen oder Unterstriche enthalten, geben Sie `^[A-Za-z]+$` in dieses Feld ein. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Benutzeroberflächenattribute {#ui-attributes}
 
 Dieser Abschnitt bezieht sich auf die UI-Elemente in der obigen Konfiguration, die von Adobe für Ihr Ziel in der Adobe Experience Platform-Benutzeroberfläche verwendet werden sollte. Siehe unten:
@@ -171,6 +178,8 @@ Dieser Abschnitt bezieht sich auf die UI-Elemente in der obigen Konfiguration, d
 | `category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | Zeichenfolge | `Server-to-server` ist derzeit die einzige verfügbare Option. |
 | `frequency` | Zeichenfolge | `Streaming` ist derzeit die einzige verfügbare Option. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Schemakonfiguration im Zuordnungsschritt {#schema-configuration}
 
@@ -184,6 +193,8 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 | `profileRequired` | Boolesch | Verwenden Sie `true` , wenn Benutzer Profilattribute von der Experience Platform benutzerdefinierten Attributen auf der Zielseite zuordnen können sollen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
 | `identityRequired` | Boolesch | Verwenden Sie `true` , wenn Benutzer Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuordnen können sollen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Identitäten und Attribute {#identities-and-attributes}
 
@@ -205,6 +216,8 @@ Weitere Informationen finden Sie in der [Übersicht über Identity-Namespace](ht
 | `allowedAttributesTransformation` | Zeichenfolge | *Wird in der Beispielkonfiguration* nicht angezeigt. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut hat und Ihre Plattform nur Hash-E-Mails akzeptiert. Hier geben Sie die Konvertierung an, die angewendet werden muss (konvertieren Sie beispielsweise die E-Mail in Kleinbuchstaben und dann den Hash). |
 | `acceptedGlobalNamespaces` | – | *Wird in der Beispielkonfiguration* nicht angezeigt. Wird in Fällen verwendet, in denen Ihre Plattform [standardmäßige Identitäts-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) akzeptiert (z. B. IDFA), sodass Sie Platform-Benutzer auf die Auswahl dieser Identitäts-Namespaces beschränken können. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Zielversand {#destination-delivery}
 
 | Parameter | Typ | Beschreibung |
@@ -212,6 +225,8 @@ Weitere Informationen finden Sie in der [Übersicht über Identity-Namespace](ht
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION` , wenn sich Platform-Kunden über einen Benutzernamen und ein Kennwort, ein Trägertoken oder eine andere Authentifizierungsmethode bei Ihrem System anmelden. Sie würden diese Option beispielsweise auswählen, wenn Sie auch `authType: OAUTH2` oder `authType:BEARER` in `customerAuthenticationConfigurations` ausgewählt haben. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel vorhanden ist und der [!DNL Platform]-Kunde keine Authentifizierungsberechtigungen angeben muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe der Konfiguration [Credentials](./credentials-configuration.md) ein Anmeldedatenobjekt erstellen. </li><li>Verwenden Sie `NONE` , wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` der [Zielserverkonfiguration](./destination-server-api.md), die für dieses Ziel verwendet wird. |
 | `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. <br> <ul><li> `true`:  [!DNL Platform] sendet die historischen Benutzerprofile, die sich für das Segment qualifiziert haben, bevor das Segment aktiviert wird. </li><li> `false`:  [!DNL Platform] enthält nur Benutzerprofile, die sich für das Segment qualifizieren, nachdem das Segment aktiviert wurde. </li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Konfiguration der Segmentzuordnung {#segment-mapping}
 

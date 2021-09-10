@@ -1,9 +1,10 @@
 ---
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts "/authoring/testing/template/render"ausführen können, um exportierte Daten für Ihr Ziel basierend auf Ihrer Nachrichtenumwandlungsvorlage zu rendern.
 title: API-Vorgänge für Rendervorlagen
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '523'
 ht-degree: 2%
 
 ---
@@ -42,6 +43,8 @@ POST authoring/testing/template/render
 | `destinationId` | Die ID der Zielkonfiguration, für die Sie exportierte Daten rendern. |
 | `template` | Die mit Zeichen versehene Version der Vorlage, basierend auf der exportierten Daten gerendert werden. |
 | `profiles` | Wenn Sie Profile zum Hauptteil des Aufrufs hinzufügen möchten, können Sie einige mithilfe der [API zur Profilerstellung](./sample-profile-generation-api.md) generieren. |
+
+{style=&quot;table-layout:auto&quot;}
 
 
 Sie können exportierte Daten wie in den folgenden Beispielen rendern:

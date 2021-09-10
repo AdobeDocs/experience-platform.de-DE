@@ -1,9 +1,10 @@
 ---
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/testing/destinationInstance/"ausführen können, um zu testen, ob Ihr Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen.
 title: API-Vorgänge für Zieltests
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '657'
 ht-degree: 2%
 
 ---
@@ -158,6 +159,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der API-Antwort 
 | `results.httpCalls.response` | Enthält die Antwort, die die Adobe von Ihrem Ziel erhalten hat. |
 | `inputProfiles` | Umfasst die Profile, die beim Aufruf an Ihr Ziel exportiert wurden. Die Profile stimmen mit Ihrem Quellschema überein. |
 
+{style=&quot;table-layout:auto&quot;}
 
 ## Testen Sie Ihre Zielkonfiguration mit Profilen, die zum Aufruf hinzugefügt wurden. {#test-with-added-profiles}
 

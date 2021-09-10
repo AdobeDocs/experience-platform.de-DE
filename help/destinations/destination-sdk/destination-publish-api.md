@@ -1,10 +1,11 @@
 ---
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destinations/publish"ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
+source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
 workflow-type: tm+mt
-source-wordcount: '772'
-ht-degree: 5%
+source-wordcount: '775'
+ht-degree: 6%
 
 ---
 
@@ -123,6 +124,8 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
 | `publishDetailsList.allowedOrgs` | Zeichenfolge | Gibt die Organisationen der Experience Platform zurück, für die das Ziel verfügbar sein soll. |
 | `publishDetailsList.status` | Zeichenfolge | Der Status Ihrer Ziel-Veröffentlichungsanforderung. Mögliche Werte `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
 | `publishDetailsList.publishedDate` | Zeichenfolge | Das Datum, an dem das Ziel zur Veröffentlichung gesendet wurde, in Epochenzeit. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Vorhandene Ziel-Veröffentlichungsanforderung aktualisieren {#update}
 
