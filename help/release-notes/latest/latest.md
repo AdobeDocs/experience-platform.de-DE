@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: b1dca51264582788ccbde005b063c57e2f3edc8f
+source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 45%
+source-wordcount: '711'
+ht-degree: 35%
 
 ---
 
@@ -25,10 +25,22 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 
+**Neue Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | Das zuvor in der Beta-Version enthaltene Ziel für Airship Attributes ist jetzt allgemein verfügbar. |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | Das zuvor in der Beta-Phase befindliche Airship Tags-Ziel ist jetzt allgemein verfügbar. |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | Das zuvor in der Betaphase enthaltene Ziel Braze ist jetzt allgemein verfügbar. |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | Mit dem Pinterest-Ziel &quot;Kundenliste&quot;können Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen erstellen, die bereits mit Ihren Inhalten in Pinterest interagiert haben. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Richten Sie Ihre bestehenden Follower und Kunden in Twitter ein und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren. |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX ist eine aggregierte Verizon Media-/Yahoo-Infrastruktur, die verschiedene Komponenten hostet, mit denen Verizon Media/Yahoo Daten mit externen Partnern auf sichere, automatisierte und skalierbare Weise austauschen kann. |
+
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Das Adobe Experience Platform Destination SDK ist eine Suite von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für die Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über API für zusätzliche Aktualisierungen abgerufen werden. |
 | [Verbesserungen der Benutzerfreundlichkeit für Ziele](../../destinations/ui/activation-overview.md) | Dank Verbesserungen der Benutzerfreundlichkeit an Zielen können Marketing-Experten Segmente nahtlos für vorhandene Ziele aktivieren. |
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
