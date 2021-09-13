@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destination-servers"ausführen können. Die Server- und Vorlagenspezifikationen für Ihr Ziel können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt "/authoring/destination-servers"konfiguriert werden.
 title: API-Vorgänge für Ziel-Server-Endpunkte
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 3ab19995d9520c35701912087158bf63755c55c8
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '837'
 ht-degree: 5%
 
 ---
@@ -70,8 +70,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `destinationServerType` | Zeichenfolge | `URL_BASED` ist derzeit die einzige verfügbare Option. |
 | `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1` , wenn die Adobe die URL im unten stehenden Feld `value` transformieren muss. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwenden Sie `NONE` , wenn keine Transformation auf der Adobe-Seite erforderlich ist, z. B. wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Zeichenfolge | Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
-| `urlBasedDestination.maxUsersPerRequest` | Ganzzahl | Adobe kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. Geben Sie die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine Aggregation mit dem besten Aufwand ist. Wenn Sie beispielsweise den Wert 100 angeben, sendet Adobe möglicherweise eine beliebige Anzahl von Profilen, die kleiner als 100 sind, bei einem Aufruf. <br> Wenn Ihr Server nicht mehrere Benutzer pro Anforderung akzeptiert, setzen Sie diesen Wert auf 1. |
-| `urlBasedDestination.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true` , wenn Ihr Server für einen bestimmten Namespace nur eine Identität pro Aufruf akzeptiert. |
 | `httpTemplate.httpMethod` | Zeichenfolge | Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Die Optionen sind `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | Verwenden Sie `PEBBLE_V1`. |
 | `httpTemplate.requestBody.value` | Zeichenfolge | Diese Zeichenfolge ist die mit Zeichen versehene Version, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Dienst erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Vorlagen verwenden](./message-format.md#using-templating). </li><li> Weitere Informationen zum Escapen von Zeichen finden Sie im [RFC JSON-Standard, Abschnitt sieben](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie in der Umwandlung [Profilattribute](./message-format.md#attributes) . </li></ul> |
