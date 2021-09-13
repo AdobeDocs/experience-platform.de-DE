@@ -1,18 +1,28 @@
 ---
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
+source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
 workflow-type: tm+mt
-source-wordcount: '1221'
-ht-degree: 98%
+source-wordcount: '1249'
+ht-degree: 97%
 
 ---
 
-# Versionshinweise zur Erweiterung „Adobe Analytics“
+# Adobe Analytics-Erweiterung – Versionshinweise
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 24. August 2021
+
+### Adobe Analytics-Erweiterung 1.8.6
+
+#### Fehlerkorrekturen
+
+* [AppMeasurement wurde auf v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) aktualisiert.
+* Der Fallback-linkName wurde aktualisiert und spiegelt nun die Activity Map-Logik statt der Verwendung von innerHTML wider.
 
 ## 6. August 2020
 
@@ -24,7 +34,7 @@ ht-degree: 98%
 
 #### Funktionen
 
-* AppMeasurement wurde aktualisiert auf [Version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de).
+* AppMeasurement wurde aktualisiert auf [Version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Geringfügige Änderung an der Benutzeroberfläche: Die zusätzliche Einstellung wird jetzt in einem Accordion konsolidiert angezeigt anstatt in einem Kontrollkästchen.
 
 ## 2. Juni 2020
@@ -77,7 +87,7 @@ ht-degree: 98%
 
 #### Fehlerkorrekturen
 
-* Es wurde ein Fehler behoben, durch den Premium-eVars und -Props nicht gespeichert wurden.
+* Es wurde ein Fehler behoben, durch den Premium-eVar und -Props nicht gespeichert wurden.
 
 ## 1. November 2019
 
@@ -90,7 +100,7 @@ ht-degree: 98%
 
 #### Funktionen
 
-* Numerische Sortierung von eVars, Props und Ereignissen in der Erweiterungsansicht
+* Numerische Sortierung von eVar, Props und Ereignissen in der Erweiterungsansicht
 * Änderungen am Backend-Schema zur Unterstützung von Magento-Kontextdaten
 
 ## 6. September 2019
