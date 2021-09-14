@@ -2,9 +2,9 @@
 title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
