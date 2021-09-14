@@ -2,9 +2,9 @@
 title: Adobe Media Analytics for Audio and Video-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '987'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -129,8 +129,8 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
 
       | Eigenschaft | Beschreibung | Erforderlich |
       | :--- | :--- | :--- |
-      | Online-Videoanbieter | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
-      | Player-Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+      | Online Video Provider | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+      | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
       | Kanal | Kanalnamen-Eigenschaft | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
    **Wert zurückgeben:** Eine Zusage, die entweder mit einer `MediaHeartbeat`-Instanz aufgelöst oder mit einer Fehlermeldung zurückgewiesen wird.
 
