@@ -5,9 +5,9 @@ breadcrumb-title: Dashboards-Handbuch
 user-guide-description: Visualisieren Sie Experience Platform-Daten auf anpassbaren Dashboards.
 feature: Data Management
 source-git-commit: 168960692605b96324533ca295544c2f855481b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '60'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -16,14 +16,14 @@ ht-degree: 83%
 
 * [Dashboards – Übersicht](home.md)
 * [Dashboard-Zugriffsberechtigungen](permissions.md)
-* [Herunterladen von Dashboards in PDF](download.md)
+* [Herunterladen von Dashboards als PDF](download.md)
 * Verfügbare Dashboards {#guides}
    * [Profile](guides/profiles.md)
    * [Segmente](guides/segments.md)
    * [Ziele](guides/destinations.md)
    * [Lizenznutzung](guides/license-usage.md)
 * Anpassen von Dashboards {#customize}
-   * [Anpassungsübersicht](customize/overview.md)
+   * [Anpassung – Übersicht](customize/overview.md)
    * [Ändern von Dashboards](customize/modify.md)
    * [Widget-Bibliothek](customize/widget-library.md)
    * [Standard-Widgets](customize/standard-widgets.md)
