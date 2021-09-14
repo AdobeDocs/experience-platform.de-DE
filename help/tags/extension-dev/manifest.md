@@ -2,9 +2,9 @@
 title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2647'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ Ein Erweiterungsmanifest muss Folgendes enthalten:
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Name der Erweiterung. Sie muss von allen anderen Erweiterungen eindeutig sein und den [Benennungsregeln](#naming-rules) entsprechen. **Er wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung der Erweiterung nicht geändert werden.** |
+| `name` | Name der Erweiterung. Dies muss sich von allen anderen Erweiterungen unterscheiden und den [Benennungsregeln](#naming-rules) entsprechen. **Er wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung der Erweiterung nicht geändert werden.** |
 | `platform` | Die Plattform für die Erweiterung. Der einzige Wert, der im Moment akzeptiert wird, lautet `web`. |
 | `version` | Die Version der Erweiterung. Sie muss dem Versionierungsformat [semver](http://semver.org/) entsprechen. Dies entspricht dem [npm-Feld version](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Der für Menschen lesbare Name der Erweiterung. Er wird Platform-Benutzern angezeigt. Es ist nicht erforderlich, „Tags“ oder „Erweiterung“ zu erwähnen, da die Benutzer bereits wissen, dass sie eine Tag-Erweiterung vor sich haben. |
@@ -142,7 +142,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
       "minimum": 1
     }
   },
-  "erforderlich": [
+  "required": [
     "delay"
   ],
   "additionalProperties": false
