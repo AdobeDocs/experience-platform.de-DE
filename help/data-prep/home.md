@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '547'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Die Datenvorbereitung wendet außerdem mehrere intrinsische Datenvalidierungen a
 
 >[!NOTE]
 >
->Sofern die resultierende Nachricht kein ungültiges XDM ist, führen Transformationsfehler in der Datenvorbereitung dazu, dass diese Attribute auf `null` gesetzt werden, während der Rest der Zeile erfasst wird. Wenn die Zeile nicht zu ungültigem XDM aufgelöst wird, wird die Zeile **nicht** erfasst. In beiden Fällen wird der Fehler dokumentiert.
+>Sofern die resultierende Nachricht kein ungültiges XDM ist, führen Umwandlungsfehler in der Datenvorbereitung dazu, dass diese Attribute auf `null` gesetzt werden, während der Rest der Zeile erfasst wird. Wenn die Zeile nicht zu ungültigem XDM aufgelöst wird, wird die Zeile **nicht** erfasst. In beiden Fällen wird der Fehler dokumentiert.
 
 ## Zuordnung
 
