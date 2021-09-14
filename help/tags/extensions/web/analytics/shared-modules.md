@@ -2,9 +2,9 @@
 title: Gemeinsam genutzte Module für die Adobe Analytics-Erweiterung
 description: Machen Sie sich mit den von der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform bereitgestellten Modulen für die gemeinsame Bibliothek vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '431'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
