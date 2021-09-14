@@ -2,9 +2,9 @@
 title: BrightCove Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „BrightCove Video Tracking“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '915'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
