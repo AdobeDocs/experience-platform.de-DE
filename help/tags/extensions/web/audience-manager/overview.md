@@ -2,9 +2,9 @@
 title: Adobe Audience Manager-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Audience Manager“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '496'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ Fügen Sie die von [DIL.create](https://experiencecloud.adobe.com/resources/help
 
 Wählen Sie **[!UICONTROL Element auswählen]**, um weitere Eigenschaften hinzuzufügen.
 
-Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html).
+Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/de_DE/aam/r_dil_create.html).
 
 Klicken Sie auf **[!UICONTROL Speichern]**, wenn Sie mit der Konfiguration der Erweiterung fertig sind.
 
