@@ -2,9 +2,9 @@
 title: Gemeinsam genutzte Module in Web-Erweiterungen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform gemeinsame Bibliotheksmodule für Web-Erweiterungen definieren können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '272'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Ein gemeinsames Modul ist ein Mechanismus, der Ihnen ermöglicht, mit anderen Er
 
 In JavaScript-Implementierungen werden alle gemeinsam genutzten Module mit der [`getSharedModule`](../turbine.md#shared)-Methode instanziiert, die von der freien Variable `turbine` bereitgestellt wird.
 
-Gemeinsame Module werden in Tag-Bibliotheken eingeschlossen, selbst wenn sie nie aus anderen Erweiterungen heraus aufgerufen werden. Um die Bibliotheksgröße nicht unnötig zu erhöhen, sollten Sie vorsichtig damit sein, was Sie als gemeinsames Modul bereitstellen.
+Gemeinsame Module werden auch dann in Tag-Bibliotheken eingeschlossen, wenn sie nie von anderen Erweiterungen aus aufgerufen werden. Um die Bibliotheksgröße nicht unnötig zu erhöhen, sollten Sie vorsichtig damit sein, was Sie als gemeinsames Modul bereitstellen.
 
 Gemeinsame Module verfügen nicht über eine Ansicht-Komponente.
 
