@@ -2,9 +2,9 @@
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '785'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
