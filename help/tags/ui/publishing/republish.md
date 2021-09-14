@@ -2,9 +2,9 @@
 title: Bibliothek erneut veröffentlichen
 description: Erfahren Sie, wie Sie eine frühere Tag-Bibliothek in Adobe Experience Platform erneut veröffentlichen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '650'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -58,7 +58,7 @@ Im Bildschirm „Veröffentlichen“:
 1. Wählen Sie die Auslassungspunkte (`...`) in der oberen rechten Ecke der Bibliothekskarte aus.
 1. Wählen Sie **[!UICONTROL Neu veröffentlichen]** aus.
 
-## Herunterladen
+## Download
 
 Das Herunterladen einer archivierten Bibliothek ist einfacher. Auf diese ZIP-Dateien wird nirgendwo direkt verwiesen, daher können Sie die ältere Bibliothek einfach auf Ihren Computer herunterladen und den üblichen Prozess ausführen.
 
