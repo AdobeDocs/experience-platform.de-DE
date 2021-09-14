@@ -2,9 +2,9 @@
 title: Veröffentlichungsübersicht
 description: Erfahren Sie mehr über die Veröffentlichung von Änderungen an Ihren Tag-Management-Code-Bibliotheken in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '609'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
