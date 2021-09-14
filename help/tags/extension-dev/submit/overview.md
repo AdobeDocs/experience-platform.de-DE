@@ -2,9 +2,9 @@
 title: Übersicht über den Prozess zur Übermittlung von Erweiterungen
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform übermitteln – alle Schritte von der Entwicklung bis zur Veröffentlichung.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
