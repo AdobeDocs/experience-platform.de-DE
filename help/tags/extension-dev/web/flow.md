@@ -2,9 +2,9 @@
 title: Web-Erweiterungsfluss
 description: Hier erfahren Sie, wie Web-Erweiterungskomponenten in Adobe Experience Platform zur Laufzeit miteinander interagieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
