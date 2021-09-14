@@ -2,9 +2,9 @@
 title: Einrichten der Experience Cloud-Organisation
 description: Hier erfahren Sie, wie Sie eine Adobe Experience Cloud-Organisation registrieren, um mit der Entwicklung von Erweiterungen für Adobe Experience Platform zu beginnen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '608'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
