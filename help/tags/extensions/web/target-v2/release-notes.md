@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '572'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -18,25 +18,25 @@ ht-degree: 77%
 
 ### Adobe Target v2-Erweiterung 0.15.1
 
-- Fehlerkorrektur - Es wurde ein Problem mit einem &quot;`stringify`&quot;-Funktionsnamen behoben, das dazu führte, dass falsche UUID-Werte für `sessionId`, `requestId` usw. generiert wurden.
+- Es wurde ein Problem mit einem `stringify`-Funktionsnamen behoben, das dazu führte, dass falsche UUID-Werte für `sessionId`, `requestId` usw. generiert wurden.
 
 ## 16. Juli 2021
 
 ### Adobe Target v2-Erweiterung 0.15.0
 
-- Fügen Sie das Attribut secure zu Cookies hinzu, sobald die Einstellungen von at.js secureOnly auf true festgelegt sind.
-- Antwort-Token sind jetzt bei Verwendung von `triggerView()` verfügbar
-- Es wurde ein Fehler im Zusammenhang mit dem `CONTENT_RENDERING_NO_OFFERS`-Ereignis behoben. Jetzt wird sie korrekt ausgelöst, wenn kein Inhalt von Target zurückgegeben wird
-- Details zu A4T-Klickmetriken werden bei der Verwendung von Vorabruf-Anfragen korrekt zurückgegeben
+- Das Sichern-Attribut wird zu Cookies hinzugefügt, wenn die at.js-Einstellung „secureOnly“ auf „Wahr“ gesetzt ist
+- Es sind jetzt Response-Token verfügbar, wenn man `triggerView()` verwendet
+- Es wurde ein Fehler im Zusammenhang mit dem `CONTENT_RENDERING_NO_OFFERS`-Ereignis behoben. Es wird nun korrekt ausgelöst, wenn keine Inhalte von Target zurückgegeben werden
+- Details zur A4T-Klickmetrik werden bei der Verwendung von Prefetch-Anfragen korrekt zurückgegeben
 - Die UUID-Generierung verwendet nicht mehr `Math.random()`, sondern beruht auf `window.crypto`
-- `sessionId` Cookie-Ablauf wird bei jedem Netzwerkaufruf korrekt verlängert
-- Die Initialisierung des SPA-Cache wird jetzt korrekt verarbeitet und berücksichtigt `viewsEnable`-Einstellungen
+- Der Verfall des `sessionId`-Cookies wird bei jedem Netzwerkaufruf korrekt verlängert
+- Die Cache-Initialisierung der SPA-Ansicht wird jetzt korrekt verarbeitet und berücksichtigt die `viewsEnable`-Einstellungen
 
 ## 2. Juni 2021
 
 ### Adobe Target v2-Erweiterung 0.14.2
 
-- Beheben Sie einen Fehler, durch den das endgültige Bundle zwei at.js-Versionen enthält, eine mit On-Device Decisioning und eine ohne.
+- Behebung eines Fehlers, durch den das finale Bundle zwei at.js-Versionen enthält, eine mit On-Device Decisioning und eine ohne.
 
 ## 19. Mai 2021
 
