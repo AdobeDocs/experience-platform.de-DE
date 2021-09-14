@@ -2,9 +2,9 @@
 title: Versionshinweise zur Common Analytics Plugins-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Common Analytics Plugins“ in Adobe Experience Platform.
 source-git-commit: cce218d984bae92428c7d48aefcd0f57dab837ea
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
