@@ -2,9 +2,9 @@
 title: Publishing-Ablauf
 description: Erfahren Sie mehr über den Prozess der Erstellung von Bibliotheken, das Testen von Builds und die Freigabe für die Produktion in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1499'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
