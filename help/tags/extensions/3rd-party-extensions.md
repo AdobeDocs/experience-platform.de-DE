@@ -2,9 +2,9 @@
 title: Erweiterungen von Drittanbietern
 description: Machen Sie sich mit den Erweiterungen von Drittanbietern für Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '141'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
