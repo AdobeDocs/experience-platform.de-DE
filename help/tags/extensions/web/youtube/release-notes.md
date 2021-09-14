@@ -2,9 +2,9 @@
 title: YouTube Video Tracking-Erweiterung – Versionshinweise
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
