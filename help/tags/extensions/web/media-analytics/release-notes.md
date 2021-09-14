@@ -2,9 +2,9 @@
 title: Versionshinweise für die Erweiterung von Adobe Media Analytics für Audio und Video
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '199'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
