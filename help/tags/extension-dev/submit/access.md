@@ -2,9 +2,9 @@
 title: Gewähren von Benutzerzugriff
 description: Richten Sie die Tag-Benutzerkonten und -Berechtigungen Ihrer Team-Mitglieder in Adobe Experience Platform ein.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '738'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ Einige von Ihnen haben möglicherweise Zugriff auf mehr als ein Unternehmen (Org
 
 Ein Produktprofil ist eine Gruppe. Produktprofilen werden individuelle Rechte zugewiesen und alle Benutzer im Profil erben diese Rechte.
 
-Wählen Sie oben den Link **[!UICONTROL Produkte]** und links **[!UICONTROL Experience Cloud]**. Wenn die Datenerfassungs-Benutzeroberfläche nicht aufgelistet ist, sollten sich Kunden an ihr Account-Team wenden und Partner sollten <ExchangeTechEC@adobe.com> per E-Mail versenden.
+Wählen Sie oben den Link **[!UICONTROL Produkte]** und links **[!UICONTROL Experience Cloud]**. Wenn die Datenerfassungs-Benutzeroberfläche nicht aufgelistet ist, sollten sich Kunden an ihr Konto-Team wenden und Partner sollten eine E-Mail an <ExchangeTechEC@adobe.com> senden.
 
 ![Registerkarte „Produkte“ in der Admin Console](../images/getting-started/admin-console-products-launch.png)
 
