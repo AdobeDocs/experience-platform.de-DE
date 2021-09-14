@@ -2,9 +2,9 @@
 title: Die wichtigsten Bibliotheksmodule für Web-Erweiterungen
 description: Erfahren Sie mehr über die wichtigsten Bibliotheksmodule, die Sie in Ihren Web-Erweiterungen verwenden können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '350'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -78,7 +78,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise` ist ein Konstruktor, der die native [Promise-API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in ECMAScript 6 imitiert. Wenn die native Promise-API verfügbar ist, wird sie stattdessen zurückgegeben.
+`reactor-promise` ist ein Konstruktor, der die native [Promise-API](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in ECMAScript 6 imitiert. Wenn die native Promise-API verfügbar ist, wird sie stattdessen zurückgegeben.
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');
