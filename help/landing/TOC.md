@@ -6,7 +6,7 @@ user-guide-description: Erfahren Sie, wie Sie Ihren Kunden mithilfe von Experien
 source-git-commit: a154ff9dd2a2091a427f7e650a9cb6bc57cbdfb5
 workflow-type: tm+mt
 source-wordcount: '197'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ ht-degree: 98%
          * [Übersicht](./governance-privacy-security/consent/iab/overview.md)
          * [Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten](./governance-privacy-security/consent/iab/dataset.md)
       * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
-   * Auditprotokolle (Beta) {#audit-logs}
+   * Audit-Protokolle (Beta) {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
 * [Dashboard zur Lizenzverwendung](license-usage-dashboard.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting.md)

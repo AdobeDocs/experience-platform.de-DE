@@ -1,34 +1,34 @@
 ---
-keywords: Experience Platform; Benutzeroberfläche; Benutzeroberfläche; Dashboards; Dashboard; Profile; Segmente; Ziele; Lizenzverwendung; Widgets; Metriken;
+keywords: Experience Platform;Benutzeroberfläche;UI;Dashboards;Dashboard;Profile;Segmente;Ziele;Lizenznutzung;Widgets;Metriken;
 title: Erstellen benutzerdefinierter Widgets für Dashboards
-description: 'Dieses Handbuch enthält schrittweise Anweisungen zum Erstellen benutzerdefinierter Widgets zur Verwendung in Adobe Experience Platform-Dashboards. '
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen benutzerdefinierter Widgets zur Verwendung in Adobe Experience Platform-Dashboards.
+exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
+source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
 workflow-type: tm+mt
 source-wordcount: '902'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
-
 
 # Erstellen benutzerdefinierter Widgets für Dashboards
 
 In Adobe Experience Platform können Sie die Daten Ihres Unternehmens mithilfe mehrerer Dashboards anzeigen und damit interagieren. Sie können bestimmte Dashboards auch aktualisieren, indem Sie Ihrer Dashboard-Ansicht neue Widgets hinzufügen. Zusätzlich zu den von Adobe bereitgestellten Standard-Widgets können Sie auch benutzerdefinierte Widgets erstellen und diese in Ihrem gesamten Unternehmen freigeben.
 
-Dieses Handbuch enthält schrittweise Anweisungen zum Erstellen und Hinzufügen benutzerdefinierter Widgets zu den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
+Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen und Hinzufügen benutzerdefinierter Widgets zu den Dashboards [!UICONTROL Profile], [!UICONTROL Segmente] und [!UICONTROL Ziele] in der Platform-Benutzeroberfläche.
 
-Weiterführende Informationen zu Standard-Widgets finden Sie im Handbuch zum Hinzufügen von Standard-Widgets zu Dashboards](standard-widgets.md).[
+Weiterführende Informationen zu Standard-Widgets finden Sie im Handbuch zum [Hinzufügen von Standard-Widgets zu Ihren Dashboards](standard-widgets.md).
 
 >[!NOTE]
 >
->Die im Dashboard [!UICONTROL Lizenznutzung] angezeigten Widgets können nicht angepasst werden. Weitere Informationen zu diesem eindeutigen Dashboard finden Sie in der [Dashboard-Dokumentation zur Lizenzverwendung](../guides/license-usage.md).
+>Die im Dashboard [!UICONTROL Lizenznutzung] angezeigten Widgets können nicht angepasst werden. Weitere Informationen zu diesem speziellen Dashboard finden Sie in der [Dokumentation zum Lizenznutzungs-Dashboard](../guides/license-usage.md).
 
 ## Widget-Bibliothek {#widget-library}
 
-Dieses Handbuch erfordert Zugriff auf die [!UICONTROL Widget-Bibliothek] in Experience Platform. Um mehr über die Widget-Bibliothek und den Zugriff darauf über die Benutzeroberfläche zu erfahren, lesen Sie zunächst die [Übersicht über die Widget-Bibliothek](widget-library.md).
+Dieses Handbuch erfordert Zugriff auf die [!UICONTROL Widget-Bibliothek] in Experience Platform. Um mehr über die Widget-Bibliothek und den Zugriff darauf über die Benutzeroberfläche zu erfahren, lesen Sie zunächst den [Überblick über die Widget-Bibliothek](widget-library.md).
 
 ## Erste Schritte mit benutzerdefinierten Widgets
 
-Innerhalb der Widget-Bibliothek können Sie mit dem Tab **[!UICONTROL Benutzerdefiniert]** Widgets erstellen und für andere Benutzer in Ihrer Organisation freigeben, um das Erscheinungsbild Ihrer Dashboards anzupassen.
+Innerhalb der Widget-Bibliothek können Sie mithilfe der Registerkarte **[!UICONTROL Benutzerdefiniert]** Widgets erstellen und für andere Benutzer in Ihrer Organisation freigeben, um das Erscheinungsbild Ihrer Dashboards anzupassen.
 
 >[!IMPORTANT]
 >
@@ -38,9 +38,9 @@ Wählen Sie die Registerkarte **[!UICONTROL Benutzerdefiniert]** aus, um mit der
 
 ![](../images/customization/custom-widgets.png)
 
-## Benutzerdefiniertes Widget erstellen
+## Erstellen eines benutzerdefinierten Widgets
 
-Um ein benutzerdefiniertes Widget zu erstellen, wählen Sie **[!UICONTROL Widget erstellen]** aus der oberen rechten Ecke der Widget-Bibliothek oder, wenn dies das erste benutzerdefinierte Widget Ihres Unternehmens ist, wählen Sie **[!UICONTROL Erstellen]** aus der Mitte der Widget-Bibliothek.
+Um ein benutzerdefiniertes Widget zu erstellen, wählen Sie **[!UICONTROL Widget erstellen]** in der oberen rechten Ecke der Widget-Bibliothek oder, falls dies das erste benutzerdefinierte Widget Ihres Unternehmens ist, wählen Sie **[!UICONTROL Erstellen]** in der Mitte der Widget-Bibliothek.
 
 ![](../images/customization/create-widget.png)
 
@@ -54,20 +54,20 @@ Um ein Attribut auszuwählen, wählen Sie das Optionsfeld neben dem Attribut aus
 
 >[!NOTE]
 >
->Pro Widget kann nur ein Attribut ausgewählt und pro Attribut kann nur ein Widget erstellt werden. Wenn bereits ein Widget für ein Attribut erstellt wurde, wird das Attribut grau ausgeblendet angezeigt.
+>Pro Widget kann nur ein Attribut ausgewählt und pro Attribut kann nur ein Widget erstellt werden. Wenn bereits ein Widget für ein Attribut erstellt wurde, wird das Attribut ausgegraut angezeigt.
 
 ![](../images/customization/create-widget-dialog.png)
 
 ## Auswählen einer Visualisierung
 
-Nach Auswahl eines Attributs wird eine Vorschau des neuen Widgets im Dialogfeld angezeigt. Künstliche Intelligenz wird verwendet, um automatisch eine Visualisierung auszuwählen, die den Attributdaten am besten entspricht, und um zusätzliche Visualisierungsoptionen bereitzustellen, die Sie manuell auswählen können.
+Nach Auswahl eines Attributs wird im Dialogfeld eine Vorschau des neuen Widgets angezeigt. Es wird Künstliche Intelligenz verwendet, um automatisch eine Visualisierung auszuwählen, die den Attributdaten am besten entspricht, und um zusätzliche Visualisierungsoptionen bereitzustellen, unter denen Sie manuell wählen können.
 
 Je nach Attribut empfiehlt die KI verschiedene Visualisierungsoptionen. Die vollständige Liste der Visualisierungen umfasst:
 
-* Horizontales Balkendiagramm: Horizontale Linien dienen zur Darstellung von Werten.
+* Horizontales Balkendiagramm: Zur Darstellung von Werten werden horizontale Linien verwendet.
 * Vertikales Balkendiagramm: Zur Darstellung von Werten werden vertikale Linien verwendet.
 * Ringdiagramm: Ähnlich wie bei einem Tortendiagramm werden Werte als Teile oder Teile eines Ganzen angezeigt.
-* Streudiagramm: Verwendet eine horizontale und vertikale Achse zur Angabe von Werten.
+* Streudiagramm: Verwendet eine horizontale und eine vertikale Achse zur Angabe von Werten.
 * Liniendiagramm: Die Werte werden in einer einzelnen Zeile angezeigt, um Änderungen über einen bestimmten Zeitraum hinweg anzuzeigen.
 * Zahlenkarte: Zeigt eine Zusammenfassungsnummer an, die einen einzelnen Schlüsselwert darstellt.
 * Datentabelle: Werte werden als Zeilen in einer Tabelle angezeigt.
@@ -82,7 +82,7 @@ Um Ihr neues Widget zu speichern und zur Registerkarte [!UICONTROL Benutzerdefin
 
 ![](../images/customization/create-widget-select-attribute.png)
 
-Ihr neues Widget kann jetzt zu einem Dashboard hinzugefügt werden, indem Sie das Widget aus der Bibliothek auswählen und **[!UICONTROL Widget hinzufügen]** auswählen.
+Ihr neues Widget kann jetzt zu einem Dashboard hinzugefügt werden, indem Sie das Widget aus der Bibliothek auswählen und auf **[!UICONTROL Widget hinzufügen]** klicken.
 
 ![](../images/customization/custom-widgets-new.png)
 
@@ -90,28 +90,28 @@ Ihr neues Widget kann jetzt zu einem Dashboard hinzugefügt werden, indem Sie da
 
 Nachdem ein Widget zur Bibliothek hinzugefügt wurde, kann es ausgeblendet werden, indem Sie die Auslassungszeichen (`...`) auf der Widget-Karte auswählen und dann **[!UICONTROL Widget ausblenden]** auswählen. Sie können das Widget auch in derselben Dropdown-Liste in der Vorschau anzeigen und bearbeiten.
 
-Um ausgeblendete Widgets anzuzeigen, wählen Sie **[!UICONTROL Verborgene Widgets anzeigen]** aus der oberen rechten Ecke der Widget-Bibliothek aus.
+Um ausgeblendete Widgets anzuzeigen, wählen Sie **[!UICONTROL Ausgeblendete Widgets anzeigen]** in der rechten oberen Ecke der Widget-Bibliothek aus.
 
 >[!WARNING]
 >
->Durch das Ausblenden eines Widgets in der Bibliothek wird das Widget nicht aus den Dashboards einzelner Benutzer entfernt. Sollte ein Widget nicht mehr in Ihrer Organisation verwendet werden, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da das Widget aus ihren Dashboards entfernt werden muss.
+>Durch das Ausblenden eines Widgets in der Bibliothek wird das Widget nicht aus den Dashboards einzelner Benutzer entfernt. Sollte ein Widget nicht mehr in Ihrer Organisation verwendet werden, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da sie das Widget aus ihren Dashboards entfernen müssen.
 
 ![](../images/customization/hide-widget.png)
 
-## Benutzerdefiniertes Widget bearbeiten
+## Bearbeiten eines benutzerdefinierten Widgets
 
 Sie können benutzerdefinierte Widgets in der Widget-Bibliothek bearbeiten, indem Sie die Auslassungszeichen (`...`) auf der Widget-Karte auswählen und dann **[!UICONTROL Bearbeiten]** aus dem Dropdown-Menü auswählen.
 
 ![](../images/customization/custom-widget-edit.png)
 
-Im Dialogfeld **[!UICONTROL Widget bearbeiten]** können Sie den Titel und die Beschreibung des Widgets bearbeiten sowie eine Vorschau anzeigen und verschiedene Visualisierungen auswählen. Nachdem Sie Ihre Änderungen vorgenommen haben, wählen Sie **[!UICONTROL Speichern]** aus, um Ihre Änderungen zu speichern und zur Registerkarte &quot;Benutzerdefinierte Widgets&quot;zurückzukehren.
+Im Dialogfeld **[!UICONTROL Widget bearbeiten]** können Sie den Titel und die Beschreibung des Widgets bearbeiten sowie eine Vorschau anzeigen und verschiedene Visualisierungen auswählen. Nachdem Sie Ihre Änderungen vorgenommen haben, klicken Sie auf **[!UICONTROL Speichern]**, um Ihre Änderungen zu speichern und zur Registerkarte „Benutzerdefinierte Widgets“ zurückzukehren.
 
 >[!WARNING]
 >
->Beim Bearbeiten eines Widgets in der Bibliothek wird das Widget nicht für einzelne Benutzer aktualisiert. Wenn ein Widget aktualisiert wurde, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da diese das veraltete Widget aus ihren Dashboards entfernen und dann das aktualisierte Widget auswählen und aus der Widget-Bibliothek hinzufügen müssen.
+>Beim Bearbeiten eines Widgets in der Bibliothek wird das Widget nicht für einzelne Benutzer aktualisiert. Wenn ein Widget aktualisiert wurde, stellen Sie sicher, dass Sie dies allen Platform-Benutzern direkt mitteilen, da diese das veraltete Widget aus ihren Dashboards entfernen und dann das aktualisierte Widget aus der Widget-Bibliothek auswählen und hinzufügen müssen.
 
 ![](../images/customization/edit-widget.png)
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments können Sie auf die Widget-Bibliothek zugreifen und sie zum Erstellen und Hinzufügen benutzerdefinierter Widgets für Ihre Organisation verwenden. Informationen zum Ändern der Größe und Position von Widgets, die im Dashboard angezeigt werden, finden Sie im Handbuch [Dashboards ändern](modify.md).
+Nach dem Lesen dieses Dokuments wissen Sie, wie Sie auf die Widget-Bibliothek zugreifen und sie zum Erstellen und Hinzufügen benutzerdefinierter Widgets für Ihre Organisation verwenden können. Informationen zum Ändern der Größe und Position von Widgets, die im Dashboard angezeigt werden, finden Sie im [Handbuch zum Ändern von Dashboards](modify.md).

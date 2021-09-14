@@ -1,11 +1,11 @@
 ---
 title: Satellitenobjektreferenz
-description: Erfahren Sie mehr über das clientseitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in -Tags ausführen können.
+description: Hier erfahren Sie mehr über das Client-seitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
 workflow-type: tm+mt
 source-wordcount: '1279'
-ht-degree: 83%
+ht-degree: 97%
 
 ---
 
@@ -133,9 +133,9 @@ Protokolliert eine Warnung in der Browser-Konsole. Die Meldung wird unabhängig 
 
 ## `cookie` {#cookie}
 
-`_satellite.cookie` enthält Funktionen zum Lesen und Schreiben von Cookies. Dies ist eine offengelegte Kopie des „js-cookie“ der Drittanbieter-Bibliothek. Weitere Informationen zur erweiterten Verwendung dieser Bibliothek finden Sie in der [js-cookie-Dokumentation](https://www.npmjs.com/package/js-cookie#basic-usage).
+`_satellite.cookie` enthält Funktionen zum Lesen und Schreiben von Cookies. Dies ist eine offengelegte Kopie des „js-cookie“ der Drittanbieter-Bibliothek. Weitere Informationen zur weitergehenden Verwendung dieser Bibliothek finden Sie in der [js-cookie-Dokumentation](https://www.npmjs.com/package/js-cookie#basic-usage).
 
-### Cookie setzen {#cookie-set}
+### Setzen eines Cookies {#cookie-set}
 
 Um ein Cookie zu setzen, verwenden Sie `_satellite.cookie.set()`.
 
@@ -147,7 +147,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Bei der alten Methode [`setCookie`](#setCookie) zum Setzen von Cookies war das dritte (optionale) Argument für diesen Funktionsaufruf eine Ganzzahl, die die Time-to-Live (TTL) des Cookies in Tagen angibt. In dieser neuen Methode wird stattdessen ein &quot;attributes&quot;-Objekt als drittes Argument akzeptiert. Um eine TTL für ein Cookie mithilfe der neuen Methode festzulegen, müssen Sie im Attributobjekt die Eigenschaft `expires` angeben und sie auf den gewünschten Wert setzen. Dies wird im folgenden Beispiel veranschaulicht.
+>Bei der alten Methode [`setCookie`](#setCookie) zum Setzen von Cookies war das dritte (optionale) Argument für diesen Funktionsaufruf eine Ganzzahl, die die Lebensdauer (Time-to-Live, TTL) des Cookies in Tagen angab. In dieser neuen Methode wird stattdessen ein Objekt „attributes“ als drittes Argument akzeptiert. Um eine TTL für ein Cookie mithilfe der neuen Methode festzulegen, müssen Sie im Attributobjekt die Eigenschaft `expires` angeben und sie auf den gewünschten Wert setzen. Dies wird im folgenden Beispiel demonstriert.
 
 **Beispiel**
 
@@ -157,7 +157,7 @@ Der folgende Funktionsaufruf schreibt ein Cookie, das in einer Woche abläuft.
 _satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
 ```
 
-### Cookie abrufen {#cookie-get}
+### Abrufen eines Cookies {#cookie-get}
 
 Um ein Cookie abzurufen, verwenden Sie `_satellite.cookie.get()`.
 
@@ -169,13 +169,13 @@ _satellite.cookie.get(name: string) => string
 
 **Beispiel**
 
-Der folgende Funktionsaufruf liest ein zuvor eingesetztes Cookie.
+Der folgende Funktionsaufruf liest ein zuvor festgelegtes Cookie.
 
 ```javascript
 var product = _satellite.cookie.get('product');
 ```
 
-### Cookie entfernen {#cookie-remove}
+### Entfernen eines Cookies {#cookie-remove}
 
 Um ein Cookie zu entfernen, verwenden Sie `_satellite.cookie.remove()`.
 
@@ -187,7 +187,7 @@ _satellite.cookie.remove(name: string)
 
 **Beispiel**
 
-Mit dem folgenden Funktionsaufruf wird ein zuvor eingesetztes Cookie entfernt.
+Mit dem folgenden Funktionsaufruf wird ein zuvor festgelegtes Cookie entfernt.
 
 ```javascript
 _satellite.cookie.remove('product');

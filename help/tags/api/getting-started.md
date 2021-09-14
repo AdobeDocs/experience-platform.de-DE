@@ -1,10 +1,11 @@
 ---
 title: Erste Schritte mit der Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1060'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -98,7 +99,7 @@ Es wird ein neues Zugriffs-Token generiert und eine Schaltfläche zum Kopieren d
 
 #### Programmgesteuertes Generieren von Zugriffs-Token {#program}
 
-Wenn Sie Ihre Integration für eine Anwendung verwenden, können Sie über API-Anfragen programmgesteuert Zugriffstoken generieren. Um dies zu erreichen, müssen Sie die folgenden Werte abrufen:
+Wenn Sie Ihre Integration für ein Programm verwenden, können Sie über API-Anfragen programmgesteuert Zugriffs-Token generieren. Um dies zu erreichen, müssen Sie die folgenden Werte abrufen:
 
 * Client-ID (`{API_KEY}`)
 * Client-Geheimnis (`{SECRET}`)

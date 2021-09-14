@@ -1,10 +1,11 @@
 ---
 title: Builds
 description: Machen Sie sich mit dem Konzept und der Funktionsweise von Builds in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,13 +13,13 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Bei einem Build handelt es sich um eine Gruppe von Dateien, die sämtlichen Code enthalten, der auf dem Clientgerät ausgeführt wird.
 
 Es ist eine Zusammenstellung der Änderungen, die Sie in Ihrer Bibliothek festgelegt haben, sowie aller zuvor eingereichten, genehmigten oder veröffentlichten Elemente.
 
-Der Build besteht aus Client-seitigen Code-Dateien, die sich gegenseitig referenzieren. Diese Dateien werden mithilfe der Umgebung und des Hosts, den Sie für Ihre Bibliothek ausgewählt haben, an Ihren Hosting-Standort übertragen. Der Code, den Sie auf Ihrer Site bereitstellen, verweist auf denselben Speicherort, damit die Dateien geladen werden können, wenn ein Benutzer auf Ihre Site oder Anwendung zugreift.
+Der Build besteht aus Client-seitigen Codedateien, die sich gegenseitig referenzieren. Diese Dateien werden mithilfe der Umgebung und des Hosts, den Sie für Ihre Bibliothek ausgewählt haben, an Ihren Hosting-Standort übertragen. Der Code, den Sie auf Ihrer Site bereitstellen, verweist auf denselben Speicherort, damit die Dateien geladen werden können, wenn ein Benutzer auf Ihre Site oder Anwendung zugreift.
 
 ## Dateiinhalt
 
@@ -41,7 +42,7 @@ Die kleineren Dateien enthalten den Code und die Konfiguration für einzelne Akt
 
 Das Standarddateiformat für Builds ist ein Paket von Dateien, die den gesamten Code enthalten, damit Ihre Erweiterungen, Datenelemente und Regeln auf die gewünschte Weise ausgeführt werden können.
 
-In bestimmten Fällen empfiehlt sich jedoch ein ZIP-Archiv der Dateien anstelle der ausführbaren Client-seitigen Code-Datei. Beispiel: Ein Archiv ist sinnvoll, wenn Sie Ihren Build selbst hosten und den Build in einer anderen Implementierung verwenden möchten. Wenn Sie im Feld für den selbst gehosteten Pfad zur Bibliothek einen Wert angeben, können Sie Ihre Umgebung speichern. Neben Ihrem neuen Code wird ein Link zum archivierten Download verfügbar. Nachdem die Bibliothek erstellt wurde, haben Sie die Möglichkeit, eine ZIP-Datei auf Akamai bereitzustellen und sie von `assets.adobedtm.com/...` herunterzuladen.
+In bestimmten Fällen empfiehlt sich jedoch ein ZIP-Archiv der Dateien anstelle der ausführbaren Client-seitigen Codedatei. Beispiel: Ein Archiv ist sinnvoll, wenn Sie Ihren Build selbst hosten und den Build in einer anderen Implementierung verwenden möchten. Wenn Sie im Feld für den selbst gehosteten Pfad zur Bibliothek einen Wert angeben, können Sie Ihre Umgebung speichern. Neben Ihrem neuen Code wird ein Link zum archivierten Download verfügbar. Nachdem die Bibliothek erstellt wurde, haben Sie die Möglichkeit, eine ZIP-Datei auf Akamai bereitzustellen und sie von `assets.adobedtm.com/...` herunterzuladen.
 
 >[!NOTE]
 >

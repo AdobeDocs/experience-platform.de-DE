@@ -1,10 +1,11 @@
 ---
 title: SFTP-Hosts
 description: Erfahren Sie, wie Sie Tags in Adobe Experience Platform so konfigurieren, dass Bibliotheks-Builds auf einem gesicherten, selbstgehosteten SFTP-Server bereitgestellt werden.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Wenn Sie nicht möchten, dass Ihre gehosteten Bibliotheken von Adobe verwaltet werden, besteht die Möglichkeit, die Builds von Adobe Experience Platform an einen gesicherten SFTP-Server übermitteln zu lassen, den Sie selbst hosten.
 
@@ -53,7 +54,7 @@ Detaillierte Informationen finden Sie im folgenden Artikel von Medium zum [Einri
 
    >[!NOTE]
    >
-   >Als bewährte Sicherheitsmethode beschränkt Adobe die Anzahl der Ports, die für den ausgehenden Datenverkehr verwendet werden können. Die ausgewählten Ports werden im Allgemeinen durch die Firewalls des Unternehmens zugelassen. Außerdem gewährleisten sie Flexibilität durch zusätzliche Bereiche.
+   >Als Best Practice im Hinblick auf die Sicherheit beschränkt Adobe die Anzahl der Ports, die für den ausgehenden Datenverkehr verwendet werden können. Die ausgewählten Ports werden im Allgemeinen durch die Firewalls des Unternehmens zugelassen. Außerdem gewährleisten sie Flexibilität durch zusätzliche Bereiche.
 
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 

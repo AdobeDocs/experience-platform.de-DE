@@ -1,10 +1,11 @@
 ---
 title: Aktionstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -12,9 +13,9 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Im Kontext von Datenerfassungs-Tags wird eine Aktion ausgeführt, nachdem ein Regelereignis aufgetreten ist und alle Bedingungen die Auswertung bestanden haben.
+Im Kontext von Datenerfassungs-Tags wird eine Aktion ausgeführt, nachdem ein Regelereignis aufgetreten ist und bei der Auswertung alle Bedingungen erfüllt waren.
 
 Beispielsweise könnte eine Erweiterung einen Aktionstyp „Support-Chat anzeigen“ bereitstellen, der einen Dialog mit dem Support-Chat anzeigen könnte, um Benutzern zu helfen, die beim Auschecken Probleme haben.
 
@@ -24,12 +25,12 @@ In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Web-Erweiter
 >
 >In diesem Dokument werden Aktionstypen für Web-Erweiterungen behandelt. Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Aktionstypen für Kantenerweiterungen](../edge/action-types.md).
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird auch davon ausgegangen, dass Sie mit Bibliotheks-Modulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
 
-Aktionstypen bestehen in der Regel aus den folgenden:
+Aktionstypen bestehen in der Regel aus dem Folgenden:
 
 1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion zu ändern.
-2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
+2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
 
 ```js
 module.exports = function(settings) {

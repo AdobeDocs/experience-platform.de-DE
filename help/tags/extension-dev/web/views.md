@@ -1,10 +1,11 @@
 ---
 title: Ansichten  in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '2063'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 99%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Jedes Ereignis, jede Bedingung, jede Aktion und jeder Datenelementtyp kann eine Ansicht bieten, die es dem Benutzer ermöglicht, Einstellungen bereitzustellen. Die Erweiterung kann auch über eine übergeordnete [Erweiterungskonfigurationsansicht](../configuration.md) verfügen, in der Benutzer globale Einstellungen für die gesamte Erweiterung angeben können. Der Vorgang zum Erstellen einer Ansicht ist bei allen Arten von Ansichten identisch.
 
@@ -24,7 +25,7 @@ Stellen Sie sicher, dass Sie ein `doctype`-Tag in Ihre HTML-Datei aufnehmen. Nor
 <!DOCTYPE html>
 ```
 
-## Einschließen des iframe-Skripts für Tags
+## Einschließen des iFrame-Skripts für Tags
 
 Schließen Sie das iframe-Skript für Tags in den HTML-Code der Ansicht ein:
 
@@ -34,7 +35,7 @@ Schließen Sie das iframe-Skript für Tags in den HTML-Code der Ansicht ein:
 
 Dieses Skript stellt eine Kommunikations-API bereit, mit der die Ansicht mit dem Tag-Programm kommunizieren kann.
 
-## Registrieren bei der Kommunikations-API extensionBridge
+## Registrieren bei der extensionBridge der Kommunikations-API
 
 Nachdem das iframe-Skript geladen wurde, müssen Sie einige Methoden für Tags bereitstellen, die für die Kommunikation verwendet werden. Rufen Sie `window.extensionBridge.register` auf und übergeben Sie in diesem Aufruf wie folgt ein Objekt:
 
@@ -95,7 +96,7 @@ Die Methode `getSettings` wird aufgerufen, nachdem der Benutzer auf den Button �
 * Ein Objekt mit Einstellungen, die auf der Benutzereingabe basieren.
 * Ein promise-Objekt, das später mit einem Objekt, das auf der Benutzereingabe basierende Einstellungen enthält, aufgelöst werden soll.
 
-Dieses Einstellungsobjekt wird später in die Tag-Laufzeitbibliothek ausgegeben. Der Inhalt dieses Objekts liegt in Ihrem Ermessen. Das Objekt muss in JSON serialisierbar und aus JSON deserialisierbar sein. Werte wie Funktionen oder [RegExp](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/RegExp)-Instanzen erfüllen diese Kriterien nicht und sind daher nicht zulässig.
+Dieses settings-Objekt wird später in die Tag-Laufzeitbibliothek ausgegeben. Der Inhalt dieses Objekts liegt in Ihrem Ermessen. Das Objekt muss in JSON serialisierbar und aus JSON deserialisierbar sein. Werte wie Funktionen oder [RegExp](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/RegExp)-Instanzen erfüllen diese Kriterien nicht und sind daher nicht zulässig.
 
 ## Nutzung freigegebener Ansichten
 
@@ -129,7 +130,7 @@ Durch den Aufruf dieser Methode wird ein modales Element angezeigt, in dem der B
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `pattern` | Das Muster des regulären Ausdrucks, das als Ausgangswert des Musterfelds im Tester verwendet werden soll. Diese Eigenschaft wird normalerweise bereitgestellt, wenn der Benutzer einen vorhandenen regulären Ausdruck bearbeitet. Wenn sie nicht angegeben wird, ist das Musterfeld zunächst leer. |
-| `flags` | Die Flags des regulären Ausdrucks, die vom Tester verwendet werden sollten. Beispiel: `gi` gibt das Flag für globale Übereinstimmung und das Flag zum Ignorieren der Groß-/Kleinschreibung an. Diese Flags können vom Benutzer im Tester nicht geändert werden, sie veranschaulichen jedoch die spezifischen Flags, die die Erweiterung beim Ausführen des regulären Ausdrucks verwendet. Wenn diese Eigenschaft nicht angegeben wird, werden im Tester keine Flags verwendet. Weitere Informationen zu Flags für reguläre Ausdrücke finden Sie in der [RegExp-Dokumentation von MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Ein gängiges Szenario ist eine Erweiterung, mit der Benutzer umschalten können, ob bei einem regulären Ausdruck die Groß-/Kleinschreibung ignoriert wird oder nicht. Dazu stellt die Erweiterung meist ein Kontrollkästchen in der Ansicht der Erweiterung bereit, das bei Aktivierung die Option zum Ignorieren der Groß-/Kleinschreibung (dargestellt durch die Kennzeichnung `i`) einschaltet. Das von der Ansicht gespeicherte Einstellungsobjekt muss darstellen, ob das Kontrollkästchen aktiviert wurde, damit das Bibliotheksmodul, das den regulären Ausdruck ausführt, erfährt, ob das Flag `i` verwendet werden soll. Wenn die Ansicht der Erweiterung den Tester für reguläre Ausdrücke öffnen möchte, muss die Kennzeichnung `i` übergeben werden, sobald das Kontrollkästchen zum Ignorieren der Groß-/Kleinschreibung aktiviert wird. Dadurch kann der Benutzer den regulären Ausdruck ordnungsgemäß testen, wobei die Groß-/Kleinschreibung nicht berücksichtigt wird. |
+| `flags` | Die Flags des regulären Ausdrucks, die vom Tester verwendet werden sollten. Beispiel: `gi` gibt das Flag für globale Übereinstimmung und das Flag zum Ignorieren der Groß-/Kleinschreibung an. Diese Flags können vom Benutzer im Tester nicht geändert werden, sie veranschaulichen jedoch die spezifischen Flags, die die Erweiterung beim Ausführen des regulären Ausdrucks verwendet. Wenn diese Eigenschaft nicht angegeben wird, werden im Tester keine Flags verwendet. Weitere Informationen zu Flags für reguläre Ausdrücke finden Sie in der [RegExp-Dokumentation von MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Ein gängiges Szenario ist eine Erweiterung, mit der Benutzer umschalten können, ob bei einem regulären Ausdruck die Groß-/Kleinschreibung ignoriert wird oder nicht. Dazu stellt die Erweiterung meist ein Kontrollkästchen in der Ansicht der Erweiterung bereit, das bei Aktivierung die Option zum Ignorieren der Groß-/Kleinschreibung (dargestellt durch die Kennzeichnung `i`) einschaltet. Das von der Ansicht gespeicherte settings-Objekt muss darstellen, ob das Kontrollkästchen aktiviert wurde, damit das Bibliotheksmodul, das den regulären Ausdruck ausführt, erfährt, ob das Flag `i` verwendet werden soll. Wenn die Ansicht der Erweiterung den Tester für reguläre Ausdrücke öffnen möchte, muss die Kennzeichnung `i` übergeben werden, sobald das Kontrollkästchen zum Ignorieren der Groß-/Kleinschreibung aktiviert wird. Dadurch kann der Benutzer den regulären Ausdruck ordnungsgemäß testen, wobei die Groß-/Kleinschreibung nicht berücksichtigt wird. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -157,7 +158,7 @@ Wenn ein Benutzer das Datenelement mit dem Namen `productname` für den Produktn
 }
 ```
 
-Zur Laufzeit wird vor Übergabe des Einstellungsobjekts an Ihr Bibliotheksmodul das Einstellungsobjekt gescannt und alle Datenelement-Token werden durch die entsprechenden Werte ersetzt. Wenn zur Laufzeit der Wert des `productname`-Datenelements `Ceiling Medallion Pro 2000` war, würde das Einstellungsobjekt, das an Ihr Bibliotheksmodul übergeben wird, wie folgt aussehen:
+Zur Laufzeit wird vor Übergabe des settings-Objekts an Ihr Bibliotheksmodul das settings-Objekt gescannt und alle Datenelement-Token werden durch die entsprechenden Werte ersetzt. Wenn zur Laufzeit der Wert des `productname`-Datenelements `Ceiling Medallion Pro 2000` war, würde das Einstellungsobjekt, das an Ihr Bibliotheksmodul übergeben wird, wie folgt aussehen:
 
 ```js
 {

@@ -1,11 +1,11 @@
 ---
 title: Benutzerberechtigungen für Tags
-description: Erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
+description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
 workflow-type: tm+mt
 source-wordcount: '1307'
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ Dieses Handbuch bietet einen Überblick über die verschiedenen Arten von Berech
 
 >[!NOTE]
 >
->Anweisungen zum Konfigurieren von Berechtigungen für Benutzer, die Admin Console verwenden, finden Sie im Tutorial zum Verwalten von Berechtigungen für Tags](./manage-permissions.md).[
+>Anweisungen zum Konfigurieren von Berechtigungen für Benutzer, die Admin Console verwenden, finden Sie im Tutorial zum [Verwalten von Berechtigungen für Tags](./manage-permissions.md).
 
 ## Berechtigungstypen
 
-In einem Produktprofil sind die Berechtigungen für Tags in vier Kategorien unterteilt:
+Innerhalb eines Produktprofils sind die Berechtigungen für Tags in vier Kategorien unterteilt:
 
 1. Plattformen
 1. Eigenschaften
@@ -34,7 +34,7 @@ In einem Produktprofil sind die Berechtigungen für Tags in vier Kategorien unte
 
 ### Plattformen
 
-Jede Tag-Eigenschaft verfügt über eine Plattform. Derzeit gibt es zwei Plattformen, die Sie für Tags verwenden können: Web und Mobile. Mit diesem Berechtigungstyp können Sie den Zugriff auf einen bestimmten Eigenschaftstyp einschränken oder gewähren. Dies kann nützlich sein, wenn sich das Team, das Ihre mobilen Apps verwaltet, von dem unterscheidet, das Ihre Websites verwaltet.
+Jede Tag-Eigenschaft verfügt über eine Plattform. Derzeit gibt es zwei Plattformen, die Sie für Tags verwenden können: Web und Mobile. Mit diesem Berechtigungstyp können Sie den Zugriff auf einen bestimmten Eigenschaftstyp einschränken oder gewähren. Dies kann nützlich sein, wenn sich das Team, das Ihre Mobile Apps verwaltet, von dem für die Verwaltung Ihrer Websites unterscheidet.
 
 ### Eigenschaften
 
@@ -44,19 +44,19 @@ Standardmäßig gewähren Produktprofile Zugriff auf alle Eigenschaften, die in 
 
 Jede Eigenschaft, die Sie in der Datenerfassungs-Benutzeroberfläche erstellen, steht in Admin Console zur Verfügung, sodass Sie die Eigenschaft mit bestimmten Eigenschaftsrechten im selben Produktprofil gruppieren können.
 
-Wenn beispielsweise ein bestimmtes Produktprofil keinen Zugriff auf Property A1 hat, können Benutzer, die zu diesem Profil gehören, keine Einstellungen in Property A1 anzeigen oder ändern.
+Wenn ein Produktprofil nicht auf Eigenschaft A1 zugreifen kann, können Benutzer, die zu diesem Profil gehören, keine Einstellungen innerhalb der Eigenschaft A1 anzeigen oder ändern.
 
-Wenn ein Benutzer zu einem Profil gehört, das Zugriff auf Property A1 hat, werden die Aktionen, die er in Property A1 ausführen kann, durch die Rechte bestimmt, die ihm von diesem Profil gewährt wurden. Wenn ein Benutzer über Berechtigungen für Eigenschaft A1 verfügt, aber keine Rechte zugewiesen sind, hat er schreibgeschützten Zugriff für diese Eigenschaft.
+Wenn ein Benutzer zu einem Profil gehört, das Zugriff auf Eigenschaft A1 hat, werden die Aktionen, die er in Eigenschaft A1 ausführen kann, durch die Rechte bestimmt, die ihm von diesem Profil gewährt wurden. Wenn ein Benutzer über Berechtigungen für Eigenschaft A1 verfügt, aber keine Rechte zugewiesen sind, hat er schreibgeschützten Zugriff für diese Eigenschaft.
 
 In der folgenden Tabelle sind die verfügbaren Eigenschaftsrechte und die Funktionen aufgeführt, auf die sie Zugriff gewähren:
 
 | Eigenschaftsrecht | Beschreibung |
 | --- | --- |
-| **Entwickeln** | Auf diese Weise können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen Sie Bibliotheken und erstellen Sie sie in bestehenden Entwicklungsumgebungen</li><li>Bibliothek zur Genehmigung übermitteln</li></ul>Die meisten alltäglichen Aufgaben in der Datenerfassungs-Benutzeroberfläche erfordern diese Berechtigung. |
-| **Genehmigen** | Dadurch können Sie eine gesendete Bibliothek in die Staging-Umgebung erstellen. Sie können eine Bibliothek auch für die Veröffentlichung genehmigen, nachdem die nötigen Tests abgeschlossen wurden. |
-| **Veröffentlichen** | Dadurch können Sie genehmigte Bibliotheken in der Produktionsumgebung veröffentlichen. |
-| **Erweiterungen verwalten** | Auf diese Weise können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>In der Übersichtsdokumentation zu Erweiterungen finden Sie [weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md). Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |
-| **Umgebungen verwalten** | Auf diese Weise können Sie Umgebungen erstellen und ändern. Konsultieren Sie die [Dokumentation zu Umgebungen](../publishing/environments.md) für weitere Informationen. Diese Rolle gehört normalerweise zur IT-Gruppe. |
+| **Entwickeln** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen von Regeln und Datenelementen</li><li>Erstellen von Bibliotheken und Einbauen von Bibliotheken in bestehende Entwicklungsumgebungen </li><li>Eine Bibliothek zur Genehmigung einreichen</li></ul>Die meisten alltäglichen Aufgaben in der Datenerfassungs-Benutzeroberfläche erfordern diese Berechtigung. |
+| **Genehmigen** | Dies ermöglicht es Ihnen, eingereichte Bibliotheken in die Staging-Umgebung einzubauen. Sie können eine Bibliothek auch für die Veröffentlichung genehmigen, nachdem die nötigen Tests abgeschlossen wurden. |
+| **Veröffentlichen** | Dies ermöglicht Ihnen die Veröffentlichung genehmigter Bibliotheken in der Produktionsumgebung. |
+| **Erweiterungen verwalten** | Hiermit können Sie die folgenden Aktionen durchführen: <ul><li>Installieren neuer Erweiterungen für eine Eigenschaft</li><li>Ändern der Konfiguration für eine bereits installierte Erweiterung</li><li>Löschen einer Erweiterung</li></ul>In der Übersichtsdokumentation zu Erweiterungen finden Sie [weitere Informationen zu Erweiterungen](../managing-resources/extensions/overview.md). Diese Rolle gehört normalerweise zu IT oder Marketing, je nach Aufbau Ihrer Organisation. |
+| **Umgebungen verwalten** | Hiermit können Sie Umgebungen erstellen und ändern. Konsultieren Sie die [Dokumentation zu Umgebungen](../publishing/environments.md) für weitere Informationen. Diese Rolle gehört normalerweise zur IT-Gruppe. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -66,56 +66,56 @@ Unternehmensrechte gelten für Berechtigungen, die mehrere Eigenschaften umfasse
 
 | Unternehmensrecht | Beschreibung |
 | --- | --- |
-| **Eigenschaften verwalten** | Auf diese Weise können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen neuer Eigenschaften</li><li>Ändern von Metadaten und Einstellungen auf Eigenschaftsebene</li><li>Eigenschaften löschen</li></ul>In der Regel führen Administratoren diese Rolle aus. Weitere Informationen finden Sie in der [Eigenschaftendokumentation](companies-and-properties.md) . |
-| **Entwickeln von Erweiterungen** | Ermöglicht das Erstellen und Ändern von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung. |
-| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt.  Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
+| **Eigenschaften verwalten** | Hiermit können Sie die folgenden Aktionen durchführen:<ul><li>Erstellen neuer Eigenschaften</li><li>Ändern von Metadaten und Einstellungen auf Eigenschaftsebene</li><li>Löschen von Eigenschaften</li></ul>In der Regel führen Administratoren diese Rolle aus. Weitere Informationen finden Sie in der [Dokumentation zu Eigenschaften](companies-and-properties.md). |
+| **Entwickeln von Erweiterungen** | Ermöglicht die Erstellung und Änderung von Erweiterungspaketen, die dem Unternehmen gehören, einschließlich privater Versionen und Anfragen zur Veröffentlichung. |
+| **Mobile-App-Konfigurationen verwalten** | Dies ist nur verfügbar, wenn Sie über eine Lizenz für Adobe Journey Optimizer oder eine andere Lösung verfügen, die Zugriff auf mobile In-App- und Push-Nachrichten gewährt. Damit können Sie die Mobile Apps verwalten, die Experience Cloud bekannt sind, zusammen mit den notwendigen Push-Zugangsdaten, die für die Kommunikation mit dem Firebase Cloud Messaging-Service und dem Apple Push Notification Service benötigt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Gesamt-Benutzerberechtigungen
 
-Die Gesamtberechtigungen eines einzelnen Benutzers werden durch die Gesamtmitgliedschaft eines Benutzers in verschiedenen Produktprofilen bestimmt. Wenn ein Benutzer mehreren Produktprofilen angehört, werden die Berechtigungen der einzelnen Profile zusammen hinzugefügt anstatt multipliziert.
+Die Gesamtberechtigungen eines einzelnen Benutzers werden durch seine Zugehörigkeit zu den verschiedenen Produktprofilen bestimmt. Wenn ein Benutzer mehreren Produktprofilen angehört, werden die Berechtigungen der einzelnen Profile zusammengerechnet und nicht multipliziert.
 
-Beispielsweise gewährt Ihnen das Produktprofil A das Entwicklungsrecht für Property 1. Produktprofil B gewährt Ihnen das Veröffentlichungsrecht für Property 2. In diesem Fall können Sie in Property 1 entwickeln und in Property 2 veröffentlichen. Sie können jedoch nicht in Property 1 veröffentlichen oder in Property 2 entwickeln, da Ihnen hierfür keine expliziten Rechte erteilt wurden.
+Beispiel: Produktprofil A gewährt Ihnen das Entwicklungsrecht für Eigenschaft 1. Produktprofil B gewährt Ihnen das Veröffentlichungsrecht für Eigenschaft 2. In dem Fall können Sie in Eigenschaft 1 entwickeln und in Eigenschaft 2 veröffentlichen, jedoch nicht in Eigenschaft 1 veröffentlichen oder in Eigenschaft 2 entwickeln, da Ihnen hierzu keine expliziten Rechte erteilt wurden.
 
 ## Rechteszenarien
 
-Verschiedene Unternehmen haben unterschiedliche Anforderungen bei der Erstellung neuer Produktprofile. Diese Anforderungen variieren je nach Unternehmensgröße, Organisationsstruktur, Anzahl der Sites, Anzahl der Personen, die an der Verwaltung von Tags beteiligt sind usw.
+Unternehmen haben beim Erstellen neuer Produktprofile unterschiedliche Anforderungen. Diese Anforderungen variieren je nach Unternehmensgröße, Organisationsstruktur, Anzahl der Sites, Anzahl der Personen, die an der Verwaltung von Tags beteiligt sind usw.
 
-Im Folgenden finden Sie einige gängige Szenarien und einen empfohlenen Ausgangspunkt für die Erstellung von Produktprofilen und das Hinzufügen von Benutzern zu diesen Profilen.
+Im Folgenden finden Sie einige gängige Szenarien sowie den jeweiligen empfohlenen Ausgangspunkt zum Erstellen von Produktprofilen und Hinzufügen von Benutzern.
 
 ### One-Man-Show
 
-Wenn Sie ein kleines Unternehmen betreiben, für das eine Person für alles verantwortlich ist, gewähren Sie diesem Benutzer Berechtigungen für alle Eigenschaften und weisen Sie ihm alle oben aufgeführten Rechte zu.
+Wenn Sie ein kleines Unternehmen leiten, in dem eine Person für alles verantwortlich ist, gewähren Sie dieser Person die Berechtigung für alle Eigenschaften und weisen Sie ihr alle oben aufgeführten Rechte zu.
 
 ### Aufgabentrennung
 
-Stellen Sie sich eine Situation vor, in der viele Personen in Ihrer Organisation am Tagging beteiligt sind. Sie verfügen über eine Gruppe von Personen (z. B. einen externen Berater), die Regeln und Datenelemente erstellen, aber nicht möchten, dass sie Zugriff auf die Produktionsumgebung haben. In diesem Fall möchten Sie sicherstellen, dass außer dem IT-Team niemand für die Produktion bereitgestellt wird.
+Stellen Sie sich jetzt eine Situation vor, in der viele Personen in Ihrer Organisation am Tagging beteiligt sind. Bei Ihnen erstellen mehrere Personen (etwa externe Berater) Regeln und Datenelemente. Sie wollen jedoch nicht, dass diese alle Zugriff auf die Produktionsumgebung erhalten. In diesem Fall möchten Sie sicherstellen, dass nur das IT-Team etwas für die Produktion bereitstellen kann.
 
 Gehen Sie dazu folgendermaßen vor:
 
-1. Erstellen Sie ein Konto für Ihre Berater und gewähren Sie ihnen nur das Recht Entwickeln .
+1. Erstellen Sie ein Konto für Ihre Berater und weisen Sie ihnen nur das Entwicklungsrecht zu.
 1. So erstellen und testen Berater innerhalb der von Ihnen festgelegten Grenzen.
-1. Wenn der Berater eine neue Erweiterung wünscht oder bereit ist, live zu gehen, führt ein Mitarbeiter Ihrer Organisation (mit den entsprechenden Rechten) diese Aktionen durch.
+1. Wenn der Berater eine neue Erweiterung braucht oder für die Veröffentlichung bereit ist, führt ein Vertreter Ihrer Organisation (mit den entsprechenden Rechten) diese Aktionen durch.
 
 ### Großunternehmen
 
 Großunternehmen betreiben häufig mehrere Sites geografisch verteilt, wobei verschiedene Teams für die jeweilige Region verantwortlich sind. Innerhalb dieser Teams entwickeln und veröffentlichen verschiedene Personen.
 
-Dies ähnelt „Aufgabentrennung“, ist jedoch nach geografischen Bereichen organisiert. Sie können beispielsweise ein Profil &quot;Entwickeln&quot;und ein Profil &quot;Veröffentlichen&quot;für Nordamerika erstellen und separate Gruppen &quot;Entwickeln&quot;und &quot;Veröffentlichen&quot;für Europa erstellen.
+Dies ähnelt „Aufgabentrennung“, ist jedoch nach geografischen Bereichen organisiert. Sie können beispielsweise ein Profil „Entwickeln“ und ein Profil „Veröffentlichen“ für Nordamerika erstellen und separate Gruppen „Entwickeln“ und „Veröffentlichen“ für Europa erstellen.
 
 ## Beispielrollen
 
-In der folgenden Tabelle finden Sie einige Beispiele für die Rollen, die Sie in Ihrem Unternehmen möglicherweise verwenden und die Sie ihnen zuweisen sollten:
+In der folgenden Tabelle finden Sie einige Beispiele für die Rollentypen, die Sie in Ihrem Unternehmen möglicherweise verwenden, und die Berechtigungen, die Sie ihnen zuweisen sollten:
 
 | Rolle | Beschreibung | Eigenschaften | Eigenschaftsrechte | Unternehmensrechte |
 | --- | --- | --- | --- | --- |
 | Manager | Möchte sehen, was im System passiert, sollte jedoch keine Änderungen vornehmen können. | Automatisch einfügen | (Keine) | (Keine) |
-| Vermarkter | Kann Erweiterungen installieren und neue Tags für vorhandene Eigenschaften einrichten, aber nicht in der Staging- oder Produktionsumgebung veröffentlichen. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Erweiterungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
-| App-Entwickler | ist für die Implementierung von Adobe- und Drittanbieterlösungen in einer nativen mobilen App verantwortlich. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Erweiterungen verwalten</li></ul> | <li>Eigenschaften verwalten</li><li>Mobile-App-Konfigurationen verwalten</li> |
-| IT-Team | Ändert keine Tags, aber sie haben die volle Kontrolle über die Staging- und Produktionsumgebungen und deren Inhalt. | Automatisch einfügen | (Keine) | <ul><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Umgebungen verwalten</li></ul> |
-| Erweiterungsentwickler | Entwickelt Erweiterungen und kann zur Genehmigung gesendet werden, sie können jedoch nicht veröffentlichen oder zu vorhandenen Eigenschaften hinzufügen. | Automatisch einfügen | <ul><li>Entwickeln</li></ul> | <ul><li>Eigenschaften verwalten</li><li>Entwickeln von Erweiterungen</li></ul> |
-| Der Superuser | Macht alles. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Erweiterungen verwalten</li><li>Umgebungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
+| Vermarkter | Kann Erweiterungen installieren und neue Tags für vorhandene Eigenschaften einrichten, aber kann nicht in Staging- oder Produktionsumgebungen veröffentlichen. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Erweiterungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
+| App-Entwickler | Ist für die Implementierung von Adobe- und Drittanbieterlösungen in nativen Mobile Apps verantwortlich. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Erweiterungen verwalten</li></ul> | <li>Eigenschaften verwalten</li><li>Mobile-App-Konfigurationen verwalten</li> |
+| IT-Team | Ändert zwar keine Tags, hat jedoch volle Kontrolle über die Staging- und die Produktionsumgebung und deren Inhalte. | Automatisch einfügen | (Keine) | <ul><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Umgebungen verwalten</li></ul> |
+| Erweiterungsentwickler | Entwickelt Erweiterungen und kann sie zur Genehmigung einreichen, kann sie jedoch nicht veröffentlichen oder zu vorhandenen Eigenschaften hinzufügen. | Automatisch einfügen | <ul><li>Entwickeln</li></ul> | <ul><li>Eigenschaften verwalten</li><li>Entwickeln von Erweiterungen</li></ul> |
+| Der Super-Anwender | Macht alles. | Automatisch einfügen | <ul><li>Entwickeln</li><li>Genehmigen</li><li>Veröffentlichen Sie</li><li>Erweiterungen verwalten</li><li>Umgebungen verwalten</li></ul> | <ul><li>Eigenschaften verwalten</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 

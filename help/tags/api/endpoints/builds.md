@@ -1,7 +1,8 @@
 ---
 title: Builds-Endpunkt
 description: Erfahren Sie, wie Sie den /builds-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 99%

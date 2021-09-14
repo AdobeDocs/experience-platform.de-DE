@@ -1,10 +1,11 @@
 ---
 title: Handbuch zur Fehlerbehebung bei Tags
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
-source-git-commit: dc957372e5e8c6f034f2e0cd0283e0e997501ba8
+exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1055'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -12,13 +13,13 @@ ht-degree: 83%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
 
 ## Was sind Tags?
 
-Tags sind die in Adobe Experience Platform integrierten Tag-Management-Funktionen der nächsten Generation von Adobe. Tags bieten folgende Möglichkeiten:
+Tags sind die in Adobe Experience Platform integrierten Tag-Management-Funktionen der nächsten Generation von Adobe. Tags bieten Clients folgende Möglichkeiten:
 
 - Client-seitige Web-Produkte unter Verwendung von Integrationen, die als *Erweiterungen* bezeichnet werden, bereitstellen
 - Konfigurationen zur Aktualisierung von Client-Implementierungen in nativen Apps dynamisch bereitstellen
@@ -28,7 +29,7 @@ Tags sind ein erweitertes Bereitstellungssystem für Code und Konfiguration, das
 
 ## Welche Kosten fallen für Tags an?
 
-Für Tags entstehen Ihnen keine zusätzlichen Kosten. Sie stehen jedem [!DNL Adobe Experience Cloud]-Kunden zur Verfügung.
+Durch Tags entstehen Ihnen keine zusätzlichen Kosten. Sie stehen jedem [!DNL Adobe Experience Cloud]-Kunden zur Verfügung.
 
 ## Ich habe gehört, dass es jetzt Plug-ins gibt. Was hat es damit auf sich?
 
@@ -91,17 +92,17 @@ Die meisten Adobe-Kunden nutzen mittlerweile modernere Web-Plattformfunktionen i
 
 ## Funktionieren Tags in nativen Mobile Apps?
 
-Ja! Tags unterstützen jetzt Mobile-Eigenschaften und Konfiguration für die neuen Adobe Experience Platform [Mobile SDKs](https://sdkdocs.com), um die Datenerfassung und -bereitstellung in einer nativen Mobile-App-Umgebung zu implementieren. Weitere Informationen finden Sie in der [Dokumentation](https://sdkdocs.com).
+Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfiguration für die neuen Adobe Experience Platform [Mobile SDKs](https://sdkdocs.com), um die Datenerfassung und -bereitstellung in einer nativen Mobile-App-Umgebung zu implementieren. Weitere Informationen finden Sie in der [Dokumentation](https://sdkdocs.com).
 
 ## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
 
-Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto nicht zu Produktprofilen für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu gewähren, finden Sie im Handbuch zu [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md) .
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md).
 
 ## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
 
-Wenn Sie keine neuen Eigenschaften erstellen können, wenn Sie bei der Datenerfassungs-Benutzeroberfläche angemeldet sind, bedeutet dies, dass Ihr Konto nicht zu einem Produktprofil gehört, das über das Recht &quot;Eigenschaften verwalten&quot;verfügt.
+Wenn Sie bei der Datenerfassungs-Benutzeroberfläche angemeldet sind und keine neuen Eigenschaften erstellen können, bedeutet dies, dass Ihr Konto zu keinem Produktprofil gehört, das über das Recht „Eigenschaften verwalten“ verfügt.
 
-Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um das Recht &quot;Eigenschaften verwalten&quot;zu gewähren, finden Sie im Handbuch zu [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md) . Weitere Informationen zu den unterschiedlichen Berechtigungen für Tags finden Sie in der Übersicht zu [Benutzerberechtigungen für Tags](./ui/administration/user-permissions.md).
+Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um das Recht „Eigenschaften verwalten“ zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](./ui/administration/manage-permissions.md). Weitere Informationen zu den unterschiedlichen Rechten für Tags finden Sie in der Übersicht zu [Benutzerberechtigungen für Tags](./ui/administration/user-permissions.md).
 
 ## Was ist, wenn ich weitere Fragen habe?
 
