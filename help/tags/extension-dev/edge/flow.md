@@ -2,9 +2,9 @@
 title: Edge-Erweiterungsfluss
 description: Erfahren Sie, wie die Komponenten einer Edge-Erweiterung in Adobe Experience Platform zur Laufzeit miteinander interagieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '277'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
