@@ -2,9 +2,9 @@
 title: Umgebungen
 description: Erfahren Sie mehr über das Konzept von Tag-Umgebungen und darüber, wie sie in Adobe Experience Platform funktionieren.
 source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1468'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
