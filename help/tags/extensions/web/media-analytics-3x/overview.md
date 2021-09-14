@@ -2,9 +2,9 @@
 title: Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung  Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '764'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
