@@ -2,9 +2,9 @@
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
 source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2392'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -199,7 +199,7 @@ Installationsanweisungen finden Sie auf der Registerkarte „Umgebung“. Auf di
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-Das Dialogfeld **Web Install Instructions** für die Entwicklungsumgebung wird angezeigt. Wählen Sie das Kopiersymbol aus, um das gesamte Tag `<script>` zu kopieren.
+Das **Web-Installationsanweisungs**-Dialogfeld für die Entwicklungsumgebung wird angezeigt. Wählen Sie das Kopiersymbol aus, um das gesamte Tag `<script>` zu kopieren.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
