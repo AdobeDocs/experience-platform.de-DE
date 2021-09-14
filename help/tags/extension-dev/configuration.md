@@ -2,9 +2,9 @@
 title: Erweiterungskonfiguration
 description: Erfahren Sie, wie Sie eine Tag-Erweiterung konfigurieren, um globale Einstellungen von einem Benutzer in der Datenerfassungs-Benutzeroberfläche von Adobe Experience Platform zu erfassen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '273'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
