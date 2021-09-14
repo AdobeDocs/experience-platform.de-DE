@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
