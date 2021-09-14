@@ -2,9 +2,9 @@
 title: Testen von Einbettungs-Codes mit Adobe Experience Platform Debugger
 description: Hier erfahren Sie, wie Sie mit Platform Debugger verschiedene Einbettungs-Codes für Adobe Experience Platform lokal auf Ihrer Website testen können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '516'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
