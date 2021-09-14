@@ -2,9 +2,9 @@
 title: Versionshinweise
 description: Die neuesten Versionshinweise für Tags in Adobe Experience Platform.
 source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '498'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 80%
 
 ## 19. Juli 2021
 
-**Anpassungen der Berechtigung**  &quot;Eigenschaften verwalten&quot;- Bei der Berechtigung &quot;Eigenschaften verwalten&quot;trat ein Problem auf, bei dem ein Benutzer berechtigt war, eine neue Eigenschaft zu erstellen, sie jedoch nach der Erstellung nicht sehen konnte (wie  [hier](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176) im Community-Thread beschrieben). Eine Korrektur ist jetzt live mit Berechtigungen, die erzwungen werden, wie im Artikel beschrieben.
+**Anpassungen des Rechts „Eigenschaften verwalten“**: Bei dem Recht „Eigenschaften verwalten“ trat ein Problem auf, bei dem ein Benutzer berechtigt war, eine neue Eigenschaft zu erstellen, sie jedoch nach der Erstellung nicht sehen konnte (wie [hier](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176?profile.language=de) im Community-Thread beschrieben). Eine Korrektur ist jetzt verfügbar mit Berechtigungen, die erzwungen werden, wie im Artikel beschrieben.
 
 >[!NOTE]
 >
->Wenn Sie einer Benutzergruppe die neue Berechtigung &quot;Eigenschaft bearbeiten&quot;zuweisen, wird die Benutzeroberfläche nicht aktualisiert, um die Felder im Eigenschaftenkonfigurationsbildschirm zu aktivieren. Eine Korrektur dieses Problems wird in einer kommenden Version implementiert.
+>Wenn Sie einer Benutzergruppe das neue Recht „Eigenschaft bearbeiten“ zuweisen, wird die Benutzeroberfläche nicht aktualisiert, um die Felder im Eigenschaftenkonfigurations-Bildschirm zu aktivieren. Eine Korrektur dieses Problems wird in einer kommenden Version implementiert.
 
 ## 17. Mai 2021
 
