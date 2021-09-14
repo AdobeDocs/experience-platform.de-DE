@@ -2,9 +2,9 @@
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1532'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Detaillierte Anweisungen zum Erstellen von Gruppen und Hinzufügen von Benutzern
 
 ## 2. Anmelden
 
-Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum Anmeldungsbildschirm [Experience Cloud](https://experiencecloud.adobe.com) und wählen Sie die Datenerfassungs-Benutzeroberfläche auf der Registerkarte Schnellzugriff aus.
+Nachdem Sie Ihrer Adobe ID Tag-Rechte hinzugefügt haben, müssen Sie sich bei der Datenerfassungs-Benutzeroberfläche anmelden. Navigieren Sie dazu direkt zum [Experience Cloud-Anmeldebildschirm](https://experiencecloud.adobe.com) und wählen Sie auf der Registerkarte „Schnellzugriff“ die Datenerfassungs-Benutzeroberfläche.
 
 >[!NOTE]
 >
