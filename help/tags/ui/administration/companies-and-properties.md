@@ -2,9 +2,9 @@
 title: Eigenschaften
 description: Erfahren Sie, wie Erweiterungen, Umgebung und Bibliotheken für Ihr Unternehmen in Adobe Experience Platform organisiert und gruppiert werden.
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1178'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
