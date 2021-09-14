@@ -2,9 +2,9 @@
 title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1977'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
