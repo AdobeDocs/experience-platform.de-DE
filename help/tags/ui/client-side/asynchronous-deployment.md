@@ -2,9 +2,9 @@
 title: Asynchrone Implementierung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1010'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -66,8 +66,8 @@ Regel A → Regel B → Regel C → Regel D
 Obwohl die Reihenfolge immer durchgesetzt wird, können einige Regeln sofort nach dem Laden der Tag-Bibliothek ausgeführt werden, während andere möglicherweise erst später ausgeführt werden. Folgendes tritt auf, wenn die Tag-Bibliothek geladen wird:
 
 1. Regel A wird sofort ausgeführt.
-1. Wenn das Browserereignis `DOMContentLoaded` (DOM bereit) bereits eingetreten ist, werden Regeln B und C sofort ausgeführt. Andernfalls werden Regel B und Regel C später ausgeführt, wenn das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) eintritt.
-1. Wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) (Fenster geladen) bereits eingetreten ist, wird Regel D sofort ausgeführt. Andernfalls wird Regel D später ausgeführt, wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) eintritt. Beachten Sie, dass – wenn Sie die Tag-Bibliothek gemäß Anweisungen installiert haben – der Ladevorgang der Tag-Bibliothek *immer* abgeschlossen wird, bevor das Browser-Ereignis [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) auftritt.
+1. Wenn das Browserereignis `DOMContentLoaded` (DOM bereit) bereits eingetreten ist, werden Regeln B und C sofort ausgeführt. Andernfalls werden Regel B und Regel C später ausgeführt, wenn das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/de-DE/docs/Web/Events/DOMContentLoaded) eintritt.
+1. Wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) (Fenster geladen) bereits eingetreten ist, wird Regel D sofort ausgeführt. Andernfalls wird Regel D später ausgeführt, wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) eintritt. Beachten Sie, dass – wenn Sie die Tag-Bibliothek gemäß Anweisungen installiert haben – der Ladevorgang der Tag-Bibliothek *immer* abgeschlossen wird, bevor das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) auftritt.
 
 Beachten Sie beim Anwenden dieser Prinzipien auf Ihre eigene Website folgende Punkte:
 
