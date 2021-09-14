@@ -2,9 +2,9 @@
 title: Haupterweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Core“ in Adobe Experience Platform vertraut.
 source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4905'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -125,7 +125,7 @@ Das Ereignis wird ausgelöst, wenn ein benutzerspezifischer Ereignistyp eintritt
 
 #### Datenelement geändert
 
-Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und aus einer Liste wählen, die im angezeigten Dialogfeld bereitgestellt wird.
+Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und im angezeigten Dialogfeld aus einer Liste wählen.
 
 #### Direkter Aufruf
 
@@ -513,7 +513,7 @@ Geben Sie einen Datumsbereich an. Wählen Sie das Datum und die Uhrzeit aus, nac
 Geben Sie an, wie oft die Bedingung „true“ zurückgibt. Sie können aus den folgenden Optionen auswählen:
 
 * Page view
-* Sitzungen
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -577,7 +577,7 @@ Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinste
 
 *JavaScript*
 
-Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
+Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
 
 >[!NOTE]
 >
@@ -717,7 +717,7 @@ Sie können eines der folgenden Seitenattribute auswählen, um es in Ihrem Daten
 * URL
 * Hostname
 * Pathname
-* Protokoll
+* Protocol
 * Referrer
 * Title
 
