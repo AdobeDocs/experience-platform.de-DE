@@ -2,9 +2,9 @@
 title: Versionshinweise für die BrightCove Video Tracking-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „BrightCove Video Tracking“ in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '123'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
