@@ -2,9 +2,9 @@
 title: Implementierungshandbücher
 description: Erfahren Sie, wie Sie Adobe Experience Cloud-Lösungen mit Tags implementieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '115'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
