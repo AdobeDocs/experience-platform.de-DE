@@ -2,9 +2,9 @@
 title: Implementierung von JavaScript-Tags zur Verwaltung des Einverständnisses von Kunden
 description: Erfahren Sie, wie Sie die Opt-in- und Opt-out-Signale von Kunden für verschiedene Adobe-Lösungen in Adobe Experience Platform verwalten.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '651'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Integrationen mit Zustimmungsmanagern (wie OneTrust) können die Zustimmungscook
 
 ## Audience Manager
 
-Die DIL wird derzeit automatisch ausgelöst, wenn sie auf einer Kundenseite platziert wird. Erwägen Sie, das Auslösen dieses Tags mithilfe des [Adobe-Anmeldeobjekts](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) in Übereinstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
+Die DIL wird derzeit automatisch ausgelöst, wenn sie auf einer Kundenseite platziert wird. Erwägen Sie, das Auslösen dieses Tags mithilfe des [Adobe-Anmeldeobjekts](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=de) in Übereinstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
 
 [!DNL Adobe] empfiehlt, die Server-seitige Weiterleitung in [!DNL Analytics] zu verwenden.
 
@@ -51,12 +51,12 @@ Die DIL wird derzeit automatisch ausgelöst, wenn sie auf einer Kundenseite plat
 
 Die [!DNL Experience Cloud ID] wird derzeit automatisch ausgelöst, wenn sie auf einer Kundenseite platziert wird.
 
-Erwägen Sie, das Auslösen dieses Tags mithilfe des [Adobe-Anmeldeobjekts](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) in Übereinstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
+Erwägen Sie, das Auslösen dieses Tags mithilfe des [Adobe-Anmeldeobjekts](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=de) in Übereinstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
 
 ## Target
 
 Adobe Experience Platform löst [!DNL Target] nicht automatisch aus. [!DNL Target] wird nur dann ausgelöst, wenn Sie dies in einer Regelaktion speziell festlegen. Bestimmen Sie mithilfe der Regelbedingungen, was wann ausgelöst werden soll. Wenn Sie beispielsweise Cookies zur Bestimmung des Anmeldestatus verwenden möchten, legen Sie ein Datenelement fest, das dieses Cookie ausliest, und verwenden Sie es in der Regel als Bedingung, um zu bestimmen, wann die erste „[!DNL Target] laden“-Aktion ausgelöst werden soll.
 
-Sie können auch erwägen, das [Adobe-Anmeldeobjekt](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html) zu verwenden, um die Auslösung dieses Tags in Abstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
+Sie können auch erwägen, das [Adobe-Anmeldeobjekt](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=de) zu verwenden, um die Auslösung dieses Tags in Abstimmung mit Ihrer Einwilligungsverwaltungs-Plattform zu steuern.
 
 Integrationen mit Zustimmungsmanagern (wie OneTrust) können die Zustimmungscookies für Kunden festlegen und verfolgen. Diese können dann im Regel-Builder verwendet werden.
