@@ -2,9 +2,9 @@
 title: Self-Hosting von Bibliotheken
 description: Hier erfahren Sie, wie Sie Self-Hosting für Ihre Builds von Tag-Bibliotheken in Adobe Experience Platform implementieren können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '495'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Es gibt mehrere Gründe dafür, Ihre eigenen Build-Dateien zu hosten.
 
 * Einige Browser blockieren die Domain „assets.adobedtm.com“ aufgrund der Datenschutzeinstellungen, die der Endbenutzer konfiguriert hat.
 * Das selbstständige Hosting reduziert die erforderliche Anzahl an DNS-Suchvorgängen.
-* Sie benötigen die Verwendung von HTTP/2
+* Sie benötigen die Verwendung von HTTP/2.
 * Sie verfügen über bestimmte Header für die Sicherheit.
 * Ihre Anforderungen für die Cache-Steuerung unterscheiden sich von den Standardeinstellungen von Adobe.
 * Sie möchten mehr Kontrolle über den Speicherort der Edge-Knoten haben.
