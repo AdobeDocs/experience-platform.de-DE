@@ -2,9 +2,9 @@
 title: Erweiterungs-Upgrades
 description: Erfahren Sie, wie Erweiterungs-Upgrades im Erweiterungskatalog verpackt und dargestellt werden.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '682'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
