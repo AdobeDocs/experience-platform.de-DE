@@ -2,9 +2,9 @@
 title: Aktionstypen für Edge-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „action-type“ für eine Tag-Erweiterung in einer Edge-Eigenschaft definieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '382'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -14,22 +14,22 @@ ht-degree: 66%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-In einer Tag-Regel wird eine Aktion ausgeführt, nachdem die Auswertung der Regelbedingungen abgeschlossen wurde. Aktionstypen werden von Erweiterungen bereitgestellt und ihre Auswirkungen werden vollständig vom Autor der Erweiterung definiert.
+Eine Regelaktion ist eine Aktion, die ausgeführt wird, nachdem die Auswertung der Regelbedingungen erfolgreich war. Aktionstypen werden von Erweiterungen bereitgestellt und ihre Auswirkungen werden vollständig vom Autor der Erweiterung definiert.
 
 Beispielsweise könnte eine Erweiterung einen Aktionstyp „Support-Chat anzeigen“ bereitstellen, der einen Dialog mit dem Support-Chat anzeigen könnte, um Benutzern zu helfen, die beim Auschecken Probleme haben.
 
-In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Kantenerweiterung in Adobe Experience Platform definieren.
+In diesem Dokument wird beschrieben, wie Sie Aktionstypen für eine Browser-Erweiterung in Adobe Experience Platform definieren.
 
 >[!IMPORTANT]
 >
 >Wenn Sie eine Web-Erweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Aktionstypen für Web-Erweiterungen](../web/action-types.md).
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Edge-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird auch davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Edge-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
 
-Aktionstypen bestehen in der Regel aus den folgenden:
+Aktionstypen bestehen in der Regel aus dem Folgenden:
 
-1. Eine Ansicht, die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion zu ändern.
-2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
+1. Eine Ansicht, die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Aktion anzupassen.
+2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Aktion durchzuführen.
 
 Ein Modul zum Weiterleiten einiger Daten an einen Drittanbieter-Endpunkt könnte beispielsweise wie folgt aussehen:
 
