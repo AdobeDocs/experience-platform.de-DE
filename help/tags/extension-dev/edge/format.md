@@ -2,9 +2,9 @@
 title: Bibliotheksmodule in Edge-Erweiterungen
 description: Formatieren Sie Bibliotheksmodule für Tag-Erweiterungen in einer Edge-Eigenschaft.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '306'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
