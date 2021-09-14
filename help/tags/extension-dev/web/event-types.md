@@ -2,9 +2,9 @@
 title: Ereignistypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „event-type“ für eine Web-Erweiterung in Adobe Experience Platform definieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1048'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 71%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-In einer Tag-Regel ist ein Ereignis eine Aktivität, die auftreten muss, damit eine Regel ausgelöst wird. Beispielsweise könnte eine Web-Erweiterung einen Ereignistyp &quot;Geste&quot;bereitstellen, der überwacht, ob eine bestimmte Maus- oder Berührungsgeste auftritt. Sobald die Geste auftritt, löst die Logik dieses Ereignisses die Regel aus.
+In einer Tag-Regel ist ein Ereignis eine Aktivität, die auftreten muss, damit eine Regel ausgelöst wird. Beispielsweise könnte eine Erweiterung einen Ereignistyp „Geste“ bereitstellen, der überwacht, ob eine bestimmte Maus- oder Touch-Geste auftritt. Sobald die Geste auftritt, löst die Logik dieses Ereignisses die Regel aus.
 
-Ein Ereignistyp-Bibliotheksmodul dient dazu, zu erkennen, wann eine Aktivität auftritt, und dann eine Funktion aufzurufen, um eine zugehörige Regel auszulösen. Das erkannte Ereignis kann angepasst werden. Beispielsweise kann erkennen, wenn ein Benutzer eine bestimmte Geste durchführt, schnell scrollt oder mit etwas interagiert.
+Ein Ereignistyp-Bibliotheksmodul dient dazu, zu erkennen, wann eine Aktivität auftritt, und dann eine Funktion aufzurufen, um eine zugehörige Regel auszulösen. Das erkannte Ereignis kann angepasst werden. Er könnte etwa erkennen, wann ein Benutzer eine bestimmte Geste macht, schnell scrollt oder mit etwas interagiert.
 
 In diesem Dokument wird beschrieben, wie Sie Ereignistypen für eine Web-Erweiterung in Adobe Experience Platform definieren.
 
@@ -27,7 +27,7 @@ In diesem Dokument wird beschrieben, wie Sie Ereignistypen für eine Web-Erweite
 Ereignistypen werden durch Erweiterungen definiert und bestehen normalerweise aus folgenden Elementen:
 
 1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Ereignis zu ändern.
-2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und zu überwachen, ob eine bestimmte Aktivität eintritt.
+2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und um zu überwachen, ob eine bestimmte Aktivität eintritt.
 
 `module.exports` akzeptieren die Parameter `settings` und `trigger`. Dies ermöglicht die Anpassung des Ereignistyps.
 
@@ -104,9 +104,9 @@ trigger({
 
 ## Einhalten der Regelreihenfolge
 
-Mit Tags können Benutzer Regeln anordnen. Zum Beispiel könnte ein Benutzer zwei Regeln erstellen, die beide den Ereignistyp „Orientierungsänderung“ nutzen, und der Benutzer möchte die Reihenfolge, in der die Regeln ausgelöst werden, anpassen können. Angenommen, der Adobe Experience Platform-Benutzer gibt für das Orientierungsänderungsereignis in Regel A den Anordnungswert `2` und für das Orientierungsänderungsereignis in Regel B den Anordnungswert `1` an. Dies bedeutet, dass Regel B vor Regel A ausgelöst werden sollte, wenn sich die Ausrichtung auf einem Mobilgerät ändert (Regeln mit Werten der niedrigeren Reihenfolge werden zuerst ausgelöst).
+Mit Tags können Benutzer Regeln anordnen. Zum Beispiel könnte ein Benutzer zwei Regeln erstellen, die beide den Ereignistyp „Orientierungsänderung“ nutzen, und der Benutzer möchte die Reihenfolge, in der die Regeln ausgelöst werden, anpassen können. Angenommen, der Adobe Experience Platform-Benutzer gibt einen Ordnungswert von `2` für das Ausrichtungsänderungsereignis in Regel A und einen Ordnungswert von `1` für das Ausrichtungsänderungsereignis in Regel B an. Dies bedeutet, dass bei einer Ausrichtungsänderung auf einem Mobilgerät Regel B vor Regel A ausgelöst werden soll (Regeln mit Werten niedrigerer Ordnung werden zuerst ausgelöst).
 
-Wie bereits erwähnt, wird die Exportfunktion in unserem Ereignismodul für jede Regel, die für die Verwendung unseres Ereignistyps konfiguriert wurde, genau einmal aufgerufen. Bei jedem Aufruf der exportierten Funktion wird eine eindeutige `trigger`-Funktion übergeben, die mit einer bestimmten Regel verknüpft ist. Im oben beschriebenen Szenario wird unsere exportierte Funktion einmal mit einer `trigger` -Funktion aufgerufen, die an Regel B gebunden ist, und dann erneut mit einer `trigger` -Funktion, die an Regel A gebunden ist. Regel B kommt zuerst, da der Benutzer ihr einen Wert mit niedrigerer Reihenfolge als Regel A gegeben hat. Wenn unser Bibliotheksmodul eine Änderung der Ausrichtung erkennt, ist es wichtig, dass wir die `trigger`-Funktionen in der gleichen Reihenfolge aufrufen, in der sie dem Bibliotheksmodul bereitgestellt wurden.
+Wie bereits erwähnt, wird die Exportfunktion in unserem Ereignismodul für jede Regel, die für die Verwendung unseres Ereignistyps konfiguriert wurde, genau einmal aufgerufen. Bei jedem Aufruf der exportierten Funktion wird eine eindeutige `trigger`-Funktion übergeben, die mit einer bestimmten Regel verknüpft ist. Im oben beschriebenen Szenario wird unsere exportierte Funktion einmal mit einer `trigger`-Funktion aufgerufen, die an Regel B gebunden ist, und dann erneut mit einer `trigger`-Funktion, die an Regel A gebunden ist. Regel B kommt zuerst, weil der Benutzer ihr einen geringeren Anordnungswert als Regel A gegeben hat. Wenn unser Bibliotheksmodul eine Änderung der Ausrichtung erkennt, ist es wichtig, dass die `trigger`-Funktionen in der gleichen Reihenfolge aufgerufen werden, in der sie dem Bibliotheksmodul bereitgestellt wurden.
 
 Beachten Sie im folgenden Beispiel-Code, dass bei Erkennung einer Ausrichtungsänderung die Auslöserfunktionen in der gleichen Reihenfolge aufgerufen werden, in der sie für unsere Exportfunktion bereitgestellt wurden:
 
