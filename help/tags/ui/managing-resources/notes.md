@@ -2,9 +2,9 @@
 title: Anmerkungen
 description: Erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform mit Textanmerkungen versehen können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '309'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
