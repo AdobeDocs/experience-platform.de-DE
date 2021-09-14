@@ -2,9 +2,9 @@
 title: Erste Schritte bei der Entwicklung von Erweiterungen
 description: So beginnen Sie mit der Entwicklung Ihrer eigenen Tag-Erweiterungen in Adobe Experience Platform.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '430'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
