@@ -2,9 +2,9 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1631'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -254,5 +254,5 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 Sie müssen in der Datenerfassungs-Benutzeroberfläche ein benutzerdefiniertes Datenelement erstellen, wenn Sie zuvor eines der folgenden Datenelemente verwendet haben:
 
 * URI
-* Protokoll
+* Protocol
 * Hostname
