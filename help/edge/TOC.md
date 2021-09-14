@@ -6,9 +6,9 @@ breadcrumb-title: Web SDK-Anleitung
 user-guide-description: Interagieren Sie mit Experience Cloud-Diensten über das Edge-Netzwerk.
 feature: Data Management
 source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '144'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -51,8 +51,8 @@ ht-degree: 90%
    * [Unterstützen von Zustimmung](consent/supporting-consent.md)
    * IAB-Transparenz und -Einverständnis – Framework 2.0 {#iab-tcf}
       * [Übersicht](consent/iab-tcf/overview.md)
-      * [Mit Tags integrieren](consent/iab-tcf/with-launch.md)
-      * [Ohne Tags integrieren](consent/iab-tcf/without-launch.md)
+      * [Integrieren mit Tags](consent/iab-tcf/with-launch.md)
+      * [Integrieren ohne Tags](consent/iab-tcf/without-launch.md)
 * Web SDK-Tag-Erweiterung {#extension}
    * [Web SDK-Erweiterung](extension/web-sdk-extension-configuration.md)
    * [Ereignistypen](extension/event-types.md)
