@@ -2,9 +2,9 @@
 title: Entfernen von Ressourcen aus einer Bibliothek
 description: Erfahren Sie, wie Sie Ressourcen aus einer Tag-Bibliothek entfernen können.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
