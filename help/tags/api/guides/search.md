@@ -1,8 +1,8 @@
 ---
 title: Suchen von Ressourcen in der Reactor-API
 description: Hier erfahren Sie, wie Sie in der Reactor-API nach Ressourcen suchen.
-source-git-commit: 59592154eeb8592fa171b5488ecb0385e0e59f39
-workflow-type: tm+mt
+source-git-commit: 448b6c02ec1aa45ba6559123496c75b29efff2b8
+workflow-type: ht
 source-wordcount: '260'
 ht-degree: 100%
 
