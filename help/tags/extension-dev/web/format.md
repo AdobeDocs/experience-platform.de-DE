@@ -2,9 +2,9 @@
 title: Bibliotheksmodule in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Bibliotheksmodule für Web-Erweiterungen in Adobe Experience Platform formatieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '377'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
