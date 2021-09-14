@@ -2,9 +2,9 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1293'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -18,11 +18,11 @@ ht-degree: 89%
 
 v3.0.0
 
-* PDCL-6153: Unterstützt das zuverlässige Abrufen der vollständig qualifizierten URL für zwischengespeicherte benutzerdefinierte Code-Aktionen.
+* PDCL-6153: Unterstützt das zuverlässige Abrufen von vollständig qualifizierten URLs für zwischengespeicherte benutzerdefinierte Code-Aktionen.
 
-Version 3.0.0 der Haupterweiterung ist mit Änderungen in [v27.2.0 der Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0) verknüpft, die es Benutzern ermöglichen, ihre Bibliothek in viele von Adoben verwaltete Hostregionen zu laden, wenn das Benutzerunternehmen Premium CDN unterstützt.
+Version 3.0.0 der Haupterweiterung ist mit Änderungen in [Version 27.2.0 der Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0) verknüpft, die es Benutzern ermöglichen, ihre Bibliothek in viele von Adobe verwaltete Host-Regionen zu laden, wenn das Unternehmen des Benutzers Premium CDN unterstützt.
 
-Dieses Upgrade ist optional und abwärtskompatibel für Benutzer ohne Premium-CDN und für Kunden, die Premium-CDN in ihrem Unternehmen aktiviert haben, obligatorisch.
+Dieses Upgrade ist optional und abwärtskompatibel für Benutzer ohne Premium-CDN. Für Kunden, die Premium-CDN in ihrem Unternehmen aktiviert haben, ist es obligatorisch.
 
 ## 20. Mai 2021
 
@@ -113,7 +113,7 @@ v1.6.2
 
 v1.6.1
 
-* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Falls konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Diese Änderung unterstützt die Verwendung einer Content Security Policy mit einer Nonce, sodass Tag-Skripte weiterhin in einer CSP-Umgebung geladen werden können. Weitere Informationen zur Verwendung von Tags mit einer CSP [finden Sie hier](../../../ui/client-side/content-security-policy.md).
+* **Unterstützung von CSP mit einer Nonce** – Die Haupterweiterung hat jetzt einen optionalen Konfigurationsparameter. Sie können damit ein Datenelement hinzufügen, das eine Nonce referenziert. Falls konfiguriert, verwenden alle Inline-Skripte, die ein Tag zur Seite hinzufügt, die von Ihnen konfigurierte Nonce. Durch diese Änderung wird die Verwendung einer CSP mit einer Nonce unterstützt, sodass Launch-Skripte weiterhin in einer CSP-Umgebung geladen werden. Weitere Informationen zur Verwendung von Tags mit einer CSP finden Sie [hier](../../../ui/client-side/content-security-policy.md).
 
 ## 18. Juni 2019
 
