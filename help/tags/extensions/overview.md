@@ -1,11 +1,11 @@
 ---
 title: Adobe-Erweiterungen
 description: Dokumentation für Tag-Erweiterungen in Adobe Experience Platform.
-seo-description: Dokumentation für die von Adobe-Lösungen bereitgestellten Tag-Erweiterungen.
+seo-description: Dokumentation für die Tag-Erweiterungen von Adobe Solutions
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '81'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
