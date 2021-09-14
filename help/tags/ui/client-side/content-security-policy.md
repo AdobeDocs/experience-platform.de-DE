@@ -2,9 +2,9 @@
 title: Unterstützung einer Content Security Policy (CSP)
 description: Erfahren Sie, wie Sie mit den Einschränkungen der Content Security Policy (CSP) umgehen, wenn Sie Ihre Website mit Tags in Adobe Experience Platform integrieren.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1080'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
