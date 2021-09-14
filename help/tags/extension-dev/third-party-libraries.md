@@ -2,9 +2,9 @@
 title: Implementieren von Bibliotheken von Drittanbietern
 description: Machen Sie sich mit den verschiedenen Methoden zum Hosten von Drittanbieterbibliotheken in Ihren Adobe Experience Platform-Tag-Erweiterungen vertraut.
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1330'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
