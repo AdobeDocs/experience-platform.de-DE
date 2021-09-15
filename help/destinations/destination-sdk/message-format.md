@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
+source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
 workflow-type: tm+mt
-source-wordcount: '1982'
+source-wordcount: '1972'
 ht-degree: 3%
 
 ---
@@ -779,7 +779,7 @@ Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Da
 
 Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die Umwandlungsvorlage der Nachricht bearbeiten, um die in Ihr Ziel exportierten Profile basierend auf Kriterien wie Segmentkennung, Segmentalias, Segmentzugehörigkeit oder Identitäts-Namespaces zu gruppieren, wie in den Beispielen unten dargestellt.
 
-#### Beispiel für die Verwendung des Segment-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
+#### Verwenden des Segment-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
 
 Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie `segmentId` in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren:
 
@@ -942,7 +942,7 @@ Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Segment-ID in zwe
 }
 ```
 
-#### Beispiel für die Verwendung des Segmentalias-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-alias}
+#### Segmentalias-Aggregationsschlüssel in der Vorlage verwenden {#aggregation-key-segment-alias}
 
 Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie den Segmentalias in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren.
 
@@ -952,7 +952,7 @@ Fügen Sie die folgende Zeile zur Vorlage hinzu, um exportierte Profile basieren
 "customerList={{input.aggregationKey.segmentAlias}}"
 ```
 
-#### Beispiel für die Verwendung des Segmentstatus-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-status}
+#### Segmentstatus-Aggregationsschlüssel in der Vorlage verwenden {#aggregation-key-segment-status}
 
 Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;setzen, können Sie den Segmentstatus in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten basierend darauf zu gruppieren, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
 
@@ -968,7 +968,7 @@ Fügen Sie die unten stehende Zeile zur Vorlage hinzu, um Profile aus Segmenten 
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
 ```
 
-#### Beispiel für die Verwendung des Aggregationsschlüssels für Identitäts-Namespaces in der Vorlage {#aggregation-key-identity}
+#### Verwenden Sie den Identitäts-Namespace-Aggregationsschlüssel in der Vorlage. {#aggregation-key-identity}
 
 Nachstehend finden Sie ein Beispiel, bei dem die konfigurierbare Aggregation [a1/> in der Zielkonfiguration auf die Aggregation exportierter Profile anhand von Identitäts-Namespaces im Format `"identityNamespaces": ["email", "phone"]` eingestellt ist.](./destination-configuration.md#configurable-aggregation)
 
@@ -1071,7 +1071,7 @@ Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Da
 }
 ```
 
-#### Beispiel für die Verwendung des Aggregationsschlüssels in einer URL-Vorlage
+#### Verwenden des Aggregationsschlüssels in einer URL-Vorlage
 
 Beachten Sie, dass Sie je nach Anwendungsfall auch die hier beschriebenen Aggregationsschlüssel in einer URL verwenden können, wie unten dargestellt:
 
