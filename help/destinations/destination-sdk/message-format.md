@@ -4,9 +4,9 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 91228b5f2008e55b681053296e8b3ff4448c92db
+source-git-commit: add6c7c4f3a60bd9ee2c2b77a8a242c4df03377b
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '2056'
 ht-degree: 3%
 
 ---
@@ -775,17 +775,22 @@ Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Da
 }
 ```
 
-### Aggregationsschlüssel in Ihre Vorlage aufnehmen, um exportierte Profile nach verschiedenen Kriterien zu gruppieren {#template-aggregation-key}
+### Aggregationsschlüssel in Ihre Vorlage aufnehmen, um auf exportierte Profile zuzugreifen, die nach verschiedenen Kriterien gruppiert sind {#template-aggregation-key}
 
-Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die Umwandlungsvorlage der Nachricht bearbeiten, um die in Ihr Ziel exportierten Profile basierend auf Kriterien wie Segmentkennung, Segmentalias, Segmentzugehörigkeit oder Identitäts-Namespaces zu gruppieren, wie in den Beispielen unten dargestellt.
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die in Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentalias, Segmentmitgliedschaft oder Identitäts-Namespaces gruppieren.
+
+In der Vorlage für die Nachrichtenumwandlung können Sie auf die oben erwähnten Aggregationsschlüssel zugreifen, wie in den Beispielen in den folgenden Abschnitten dargestellt. Auf diese Weise können Sie die aus Experience Platform exportierte HTTP-Nachricht so formatieren, dass sie dem von Ihrem Ziel erwarteten Format entspricht.
 
 #### Verwenden des Segment-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
 
-Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie `segmentId` in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren:
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, werden die Profile in den an Ihr Ziel exportierten HTTP-Nachrichten nach Segment-ID gruppiert. Unten sehen Sie, wie Sie auf die Segment-ID in der Vorlage zugreifen können.
 
 **Eingabe**
 
-Betrachten wir die vier Profile unten, bei denen die ersten beiden Teil des Segments mit der Segment-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` und die beiden anderen Teil des Segments mit der Segment-ID `8f812592-3f06-416b-bd50-e7831848a31a` sind.
+Betrachten Sie die folgenden vier Profile, bei denen:
+* die ersten beiden sind Teil des Segments mit der Segment-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3`
+* das dritte Profil ist Teil des Segments mit der Segment-ID `8f812592-3f06-416b-bd50-e7831848a31a`
+* Das vierte Profil ist Teil beider oben genannten Segmente.
 
 Profil 1:
 
@@ -873,6 +878,10 @@ Profil 4:
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -885,24 +894,18 @@ Profil 4:
 >
 >Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Beachten Sie unten, wie `audienceId` in der Vorlage für den Zugriff auf Segment-IDs verwendet wird. Dies setzt voraus, dass Sie `audienceId` für die Segmentzugehörigkeit in Ihrer Zieltaxonomie verwenden. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -912,49 +915,53 @@ Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Segment-ID in zwe
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### Segmentalias-Aggregationsschlüssel in der Vorlage verwenden {#aggregation-key-segment-alias}
 
-Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie den Segmentalias in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren.
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie auch auf den Segmentalias in der Vorlage zugreifen.
 
-Fügen Sie die folgende Zeile zur Vorlage hinzu, um exportierte Profile basierend auf dem Segmentalias zu gruppieren.
+Fügen Sie der Vorlage die folgende Zeile hinzu, um auf die exportierten Profile zuzugreifen, die nach Segmentalias gruppiert sind.
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### Segmentstatus-Aggregationsschlüssel in der Vorlage verwenden {#aggregation-key-segment-status}
 
-Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;setzen, können Sie den Segmentstatus in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten basierend darauf zu gruppieren, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;setzen, können Sie auf den Segmentstatus in der Vorlage zugreifen, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren, je nachdem, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
 
 Mögliche Werte:
 
@@ -962,10 +969,10 @@ Mögliche Werte:
 * vorhandene
 * beendet
 
-Fügen Sie die unten stehende Zeile zur Vorlage hinzu, um Profile aus Segmenten hinzuzufügen oder daraus zu entfernen, basierend auf den oben genannten Werten.:
+Fügen Sie der Vorlage die folgende Zeile hinzu, um Profile aus Segmenten hinzuzufügen oder daraus zu entfernen, basierend auf den oben stehenden Werten:
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### Verwenden Sie den Identitäts-Namespace-Aggregationsschlüssel in der Vorlage. {#aggregation-key-identity}
@@ -1024,6 +1031,8 @@ Profil 2:
 >
 >Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Beachten Sie, dass `input.aggregationKey.identityNamespaces` in der unten stehenden Vorlage verwendet wird.
+
 ```python
 {
             "profiles": [
@@ -1071,7 +1080,7 @@ Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Da
 }
 ```
 
-#### Verwenden des Aggregationsschlüssels in einer URL-Vorlage
+#### Verwenden des Aggregationsschlüssels in einer URL-Vorlage {#aggregation-key-url-template}
 
 Beachten Sie, dass Sie je nach Anwendungsfall auch die hier beschriebenen Aggregationsschlüssel in einer URL verwenden können, wie unten dargestellt:
 
