@@ -2,9 +2,9 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Zielkonfigurationsoptionen für Ziel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1557'
 ht-degree: 6%
 
 ---
@@ -247,6 +247,8 @@ In diesem Abschnitt können Sie die Aggregationsrichtlinien festlegen, die Exper
 Eine Aggregationsrichtlinie bestimmt, wie die exportierten Profile in den Datenexporten kombiniert werden. Verfügbare Optionen sind:
 * Aggregation des besten Aufwands
 * Konfigurierbare Aggregation (siehe Konfiguration oben)
+
+Lesen Sie den Abschnitt [Verwendung der Vorlage](./message-format.md#using-templating) und die [Beispiele für Aggregationsschlüssel](./message-format.md#template-aggregation-key) , um zu verstehen, wie Sie die Aggregationsrichtlinie basierend auf Ihrer ausgewählten Aggregationsrichtlinie in Ihre Nachrichtenumwandlungsvorlage aufnehmen können.
 
 ### Aggregation des besten Aufwands {#best-effort-aggregation}
 

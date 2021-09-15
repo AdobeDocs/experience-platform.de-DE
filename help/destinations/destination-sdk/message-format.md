@@ -3,9 +3,10 @@ description: Verwenden Sie den Inhalt auf dieser Seite zusammen mit den restlich
 seo-description: Use the content on this page together with the rest of the configuration options for partner destinations. This page addresses the messaging format of data exported from Adobe Experience Platform to destinations, while the other page addresses specifics about connecting and authenticating to your destination.
 seo-title: Message format
 title: Nachrichtenformat
-source-git-commit: d60933d2083b7befcfa8beba4b1630f372c08cfa
+exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
+source-git-commit: 63fe3b7cc429a1c18cebe998bc82fdea99a6679b
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1982'
 ht-degree: 3%
 
 ---
@@ -93,17 +94,15 @@ In diesem Abschnitt finden Sie mehrere Beispiele dafür, wie diese Umwandlungen 
 
 1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlagenerstellung mit einfachen Transformationen für die Felder [Profilattribute](./message-format.md#attributes), [Segmentzugehörigkeit](./message-format.md#segment-membership) und [Identität](./message-format.md#identities) funktioniert.
 2. Beispiele für komplexere Vorlagen, die die oben genannten Felder kombinieren: [Erstellen Sie eine Vorlage, die Segmente und Identitäten sendet](./message-format.md#segments-and-identities) und [Erstellen Sie eine Vorlage, die Segmente, Identitäten und Profilattribute sendet](./message-format.md#segments-identities-attributes).
-3. Tief eintauchen, zwei Beispiele von Vorlagen von Branchenpartnern.
+3. Vorlagen enthalten den Aggregationsschlüssel. Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die an Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentstatus oder Identitäts-Namespaces.
 
 ### Profilattribute {#attributes}
 
 Informationen zum Transformieren der in Ihr Ziel exportierten Profilattribute finden Sie in den JSON- und Codebeispielen unten.
 
-
 >[!IMPORTANT]
 >
 >Eine Liste aller in Adobe Experience Platform verfügbaren Profilattribute finden Sie im [XDM-Feldwörterbuch](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
-
 
 
 **Eingabe**
@@ -776,7 +775,311 @@ Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Da
 }
 ```
 
-### Referenz: Kontext und Funktionen, die in Umwandlungsvorlagen verwendet werden
+### Aggregationsschlüssel in Ihre Vorlage aufnehmen, um exportierte Profile nach verschiedenen Kriterien zu gruppieren {#template-aggregation-key}
+
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die Umwandlungsvorlage der Nachricht bearbeiten, um die in Ihr Ziel exportierten Profile basierend auf Kriterien wie Segmentkennung, Segmentalias, Segmentzugehörigkeit oder Identitäts-Namespaces zu gruppieren, wie in den Beispielen unten dargestellt.
+
+#### Beispiel für die Verwendung des Segment-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
+
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie `segmentId` in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren:
+
+**Eingabe**
+
+Betrachten wir die vier Profile unten, bei denen die ersten beiden Teil des Segments mit der Segment-ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` und die beiden anderen Teil des Segments mit der Segment-ID `8f812592-3f06-416b-bd50-e7831848a31a` sind.
+
+Profil 1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profil 2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profil 3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profil 4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**Vorlage**
+
+>[!IMPORTANT]
+>
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**Ergebnis**
+
+Beim Export in Ihr Ziel werden die Profile basierend auf ihrer Segment-ID in zwei Gruppen aufgeteilt.
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
+
+#### Beispiel für die Verwendung des Segmentalias-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-alias}
+
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` auf &quot;true&quot;setzen, können Sie den Segmentalias in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren.
+
+Fügen Sie die folgende Zeile zur Vorlage hinzu, um exportierte Profile basierend auf dem Segmentalias zu gruppieren.
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### Beispiel für die Verwendung des Segmentstatus-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-status}
+
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;setzen, können Sie den Segmentstatus in der Vorlage verwenden, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten basierend darauf zu gruppieren, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
+
+Mögliche Werte:
+
+* realisiert
+* vorhandene
+* beendet
+
+Fügen Sie die unten stehende Zeile zur Vorlage hinzu, um Profile aus Segmenten hinzuzufügen oder daraus zu entfernen, basierend auf den oben genannten Werten.:
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### Beispiel für die Verwendung des Aggregationsschlüssels für Identitäts-Namespaces in der Vorlage {#aggregation-key-identity}
+
+Nachstehend finden Sie ein Beispiel, bei dem die konfigurierbare Aggregation [a1/> in der Zielkonfiguration auf die Aggregation exportierter Profile anhand von Identitäts-Namespaces im Format `"identityNamespaces": ["email", "phone"]` eingestellt ist.](./destination-configuration.md#configurable-aggregation)
+
+**Eingabe**
+
+Profil 1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+Profil 2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
+```
+
+**Vorlage**
+
+>[!IMPORTANT]
+>
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**Ergebnis**
+
+Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Daten dar.
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+#### Beispiel für die Verwendung des Aggregationsschlüssels in einer URL-Vorlage
+
+Beachten Sie, dass Sie je nach Anwendungsfall auch die hier beschriebenen Aggregationsschlüssel in einer URL verwenden können, wie unten dargestellt:
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### Referenz: Kontext und Funktionen, die in Umwandlungsvorlagen verwendet werden {#reference}
 
 Der der Vorlage bereitgestellte Kontext enthält `input` (die Profile/Daten, die in diesen Aufruf exportiert werden) und `destination` (Daten über das Ziel, an das die Adobe Daten sendet, gültig für alle Profile).
 
