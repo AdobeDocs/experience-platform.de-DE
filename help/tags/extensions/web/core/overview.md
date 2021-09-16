@@ -2,10 +2,10 @@
 title: Haupterweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
-source-wordcount: '5130'
-ht-degree: 95%
+source-wordcount: '5257'
+ht-degree: 93%
 
 ---
 
@@ -708,6 +708,61 @@ Geben Sie den Namen Ihres lokalen Speicherelements im Feld „Name des lokalen S
 Der lokale Speicher bietet Browsern die Möglichkeit, Informationen seitenweise zu speichern ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). Die Funktion des lokalen Speichers ähnelt der von Cookies sehr stark. Er ist jedoch deutlich größer und bietet mehr Flexibilität.
 
 Geben Sie in dem bereitgestellten Feld den Wert an, den Sie für ein lokales Speicherelement erstellt haben, z. B. `lastProductViewed.`
+
+### Zusammengeführte Objekte
+
+Wählen Sie mehrere Datenelemente aus, die jeweils ein Objekt bereitstellen. Diese Objekte werden tief (rekursiv) zusammengeführt, um ein neues Objekt zu erstellen. Die Quellobjekte werden nicht geändert. Wenn sich eine Eigenschaft an derselben Stelle in mehreren Quellobjekten befindet, wird der Wert des letzteren Objekts verwendet. Wenn der Wert der Quelleigenschaft `undefined` lautet, wird ein Wert aus einem vorherigen Quellobjekt nicht überschrieben. Wenn sich Arrays an derselben Stelle in mehreren Quellobjekten befinden, werden die Arrays verkettet.
+
+Angenommen, Sie wählen ein Datenelement aus, das das folgende Objekt bereitstellt:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Angenommen, Sie wählen auch ein anderes Datenelement aus, das das folgende Objekt bereitstellt:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+Das Ergebnis des Datenelements Zusammengeführte Objekte wäre das folgende Objekt:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
 
 ### Seiteninfo
 
