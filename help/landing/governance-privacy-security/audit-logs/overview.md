@@ -2,14 +2,14 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Auditprotokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: df269a30251cb17e337ec25787d6a1eed41e9c0b
+source-git-commit: 4dc49c7219ebb613c74e5960f1f8d477dc1b7605
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 5%
+source-wordcount: '598'
+ht-degree: 7%
 
 ---
 
-# Auditprotokolle (Beta)
+# Audit-Protokolle (Beta)
 
 >[!IMPORTANT]
 >
@@ -21,16 +21,18 @@ Grundsätzlich gibt ein Auditprotokoll **Wer** **was** und **wann** ausgeführt 
 
 In diesem Dokument werden Auditprotokolle in Platform behandelt, einschließlich der Anzeige und Verwaltung in der Benutzeroberfläche oder API.
 
-## Von Prüfprotokollen erfasste Ereignistypen
+## Von Prüfprotokollen erfasste Ereignistypen {#category}
 
 In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in Auditprotokollen aufgezeichnet werden:
 
 | Ressource | Aktionen |
 | --- | --- |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellung</li><li>Update</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
-| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li></ul> |
+| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li></ul> |
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Datentyp](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
 | [Ziel](../../../destinations/home.md) | <ul><li>Aktivieren</li></ul> |
 
 ## Zugriff auf Prüfprotokolle
@@ -50,6 +52,23 @@ Das System zeigt nur Prüfprotokolle aus dem letzten Jahr an. Alle Protokolle, d
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
 ![Ereignisdetails](../../images/audit-logs/select-event.png)
+
+Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)) aus, um eine Liste mit Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
+
+![Filter](../../images/audit-logs/filters.png)
+
+Die folgenden Filter sind für Prüfereignisse in der Benutzeroberfläche verfügbar:
+
+| Filter | Beschreibung |
+| --- | --- |
+| [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach [category](#category) zu filtern. |
+| [!UICONTROL Aktion] | Nach Aktion filtern. Derzeit können nur die Aktionen [!UICONTROL Erstellen] und [!UICONTROL Löschen] gefiltert werden. |
+| [!UICONTROL Zugriffssteuerungsstatus] | Filtern Sie danach, ob die Aktion aufgrund fehlender [Zugriffssteuerungsberechtigungen](../../../access-control/home.md) zulässig (abgeschlossen) oder verweigert wurde. |
+| [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. |
+
+Um einen Filter zu entfernen, wählen Sie das &quot;X&quot;auf dem Pillensymbol für den betreffenden Filter oder klicken Sie auf **[!UICONTROL Alle löschen]**, um alle Filter zu entfernen.
+
+![Filter löschen](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log
