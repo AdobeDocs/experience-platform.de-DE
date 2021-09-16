@@ -4,9 +4,9 @@ description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit d
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: Adobe Analytics; Variablen; Analytics; automatische Zuordnung; automatisch zugeordnet;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: b2d949232674bb4c4ebcb7754726730b966a0e02
+source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '907'
 ht-degree: 35%
 
 ---
@@ -88,9 +88,8 @@ Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platfo
 | placeContext.geo.longitude | lon | AppMeasurement Abfrageparameter, LONGITUDE-Zuordnung. |
 | placeContext.geo.postalCode | zip | AppMeasurement Abfrageparameter, ZIP-Zuordnung. |
 | placeContext.geo.stateProvince | state | AppMeasurement Abfrageparameter, STATE-Zuordnung. |
-| productListitems.[N]._[NAME_SPACE].* | products | AppMeasurement-Abfrageparameter, Produkte Merchandise-Ereignisse/eVars-Zuordnung. |
-| productListItems[N].lineItemId | products | AppMeasurement Abfrageparameter, Produktnamenzuordnung. |
-| productListitems.[N].name | products | AppMeasurement-Abfrageparameter, Produktkategorie-Zuordnung. |
+| productListItems[N].lineItemId | products | AppMeasurement-Abfrageparameter, Produktkategorie-Zuordnung. |
+| productListitems.[N].name | products | AppMeasurement Abfrageparameter, Produktnamenzuordnung. |
 | productListitems.[N].priceTotal | products | AppMeasurement Abfrageparameter, Produktpreiszuordnung. |
 | productListitems.[N].quantity | products | AppMeasurement-Abfrageparameter, Produktquantitätszuordnung. |
 | web.webInteraction.URL | pev1 | AppMeasurement-Abfrageparameter, PAGE_EVENT_VAR1-Zuordnung. |
