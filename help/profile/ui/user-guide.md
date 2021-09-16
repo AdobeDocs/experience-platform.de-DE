@@ -4,9 +4,9 @@ title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: ad5690997b079dbc064775ef1c4fdbe3770ff424
+source-git-commit: b5e6376b54fe8b53fbabf85a2909293cebd93ccc
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1568'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 [!DNL Real-time Customer Profile] erstellt eine ganzheitliche Ansicht Ihrer einzelnen Kunden, wobei Daten aus mehreren Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombiniert werden. Dieses Dokument dient als Leitfaden für die Interaktion mit [!DNL Real-time Customer Profile]-Daten in der Adobe Experience Platform-Benutzeroberfläche.
 
-## Erste Schritte 
+## Erste Schritte
 
 Dieses UI-Handbuch setzt ein Verständnis der verschiedenen [!DNL Experience Platform]-Dienste voraus, die mit der Verwaltung von [!DNL Real-time Customer Profiles] verbunden sind. Bevor Sie dieses Handbuch lesen oder in der Benutzeroberfläche arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
@@ -75,15 +75,21 @@ Die Metrik **[!UICONTROL Profile nach Namespace]** zeigt die Gesamtanzahl und Au
 
 Auf dem Tab **[!UICONTROL Durchsuchen]** können Sie Beispielprofile mithilfe einer Zusammenführungsrichtlinie anzeigen oder mithilfe eines Identitäts-Namespace und -Werts nach bestimmten Profilen suchen.
 
-![](../images/user-guide/browse-by-dropdown.png)
+![](../images/user-guide/browse-by-none-selected.png)
 
 ### Durchsuchen nach [!UICONTROL Zusammenführungsrichtlinie]
 
-Der Selektor **[!UICONTROL Durchsuchen nach]** ist standardmäßig auf [!UICONTROL Zusammenführungsrichtlinie] und die ausgewählte **[!UICONTROL Zusammenführungsrichtlinie]** ist die standardmäßige Zusammenführungsrichtlinie für Ihre Organisation.
+Die Registerkarte **[!UICONTROL Durchsuchen]** ist standardmäßig auf die standardmäßige Zusammenführungsrichtlinie für Ihre Organisation festgelegt. Um eine andere Zusammenführungsrichtlinie auszuwählen, wählen Sie `X` neben dem Namen der Zusammenführungsrichtlinie aus und öffnen Sie dann mithilfe des Selektors das Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]**.
 
-Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
+>[!NOTE]
+>
+>Wenn keine Zusammenführungsrichtlinie ausgewählt ist, verwenden Sie die Auswahlschaltfläche neben dem Feld **[!UICONTROL Zusammenführungsrichtlinie]** , um das Auswahldialogfeld zu öffnen.
 
 ![](../images/user-guide/browse-by-merge-policy.png)
+
+Um eine Zusammenführungsrichtlinie aus dem Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]** auszuwählen, wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]**, um zur Registerkarte [!UICONTROL Durchsuchen] zurückzukehren. Sie können dann **[!UICONTROL Ansicht]** auswählen, um die Beispielprofile zu aktualisieren und eine Auswahl von Profilen mit der neuen angewendeten Zusammenführungsrichtlinie anzuzeigen.
+
+![](../images/user-guide/select-merge-policy-dialog.png)
 
 Die angezeigten Profile stellen ein Beispiel von bis zu 20 Profilen aus dem Profilspeicher Ihres Unternehmens dar, nachdem die ausgewählte Zusammenführungsrichtlinie angewendet wurde. Die Beispielprofile für die ausgewählte Zusammenführungsrichtlinie werden aktualisiert, wenn dem Profilspeicher Ihres Unternehmens neue Daten hinzugefügt werden.
 
@@ -91,21 +97,16 @@ Um die Details eines der Beispielprofile anzuzeigen, wählen Sie die **[!UICONTR
 
 ![](../images/user-guide/sample-profiles.png)
 
-Um eine andere Zusammenführungsrichtlinie auszuwählen, wählen Sie `X` neben dem Namen der Zusammenführungsrichtlinie aus und öffnen Sie dann mithilfe des Selektors das Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]**.
+Weitere Informationen zu Zusammenführungsrichtlinien und ihrer Rolle in Platform finden Sie unter [Übersicht über Zusammenführungsrichtlinien](../merge-policies/overview.md).
 
-![](../images/user-guide/merge-policy-select.png)
-
-Um eine Zusammenführungsrichtlinie aus dem Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]** auszuwählen, wählen Sie das Optionsfeld neben dem Richtliniennamen aus und verwenden Sie dann **[!UICONTROL Auswählen]**, um zur Registerkarte [!UICONTROL Durchsuchen] zurückzukehren. Sie können dann **[!UICONTROL Ansicht]** auswählen, um die Beispielprofile zu aktualisieren und eine Auswahl von Profilen mit der neuen angewendeten Zusammenführungsrichtlinie anzuzeigen.
-
-![](../images/user-guide/select-merge-policy-dialog.png)
 
 ### Durchsuchen nach [!UICONTROL Identität]
 
-Mit dem Selektor **[!UICONTROL Durchsuchen nach]** können Sie [!UICONTROL Identität] auswählen, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie außerdem eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** können Sie einen Identitäts-Namespace verwenden, um ein bestimmtes Profil nach einem Identitätswert zu suchen. Für das Durchsuchen nach einer Identität müssen Sie eine Zusammenführungsrichtlinie, einen Identitäts-Namespace und einen Identitätswert angeben.
 
 ![](../images/user-guide/browse-by-identity.png)
 
-Verwenden Sie den Selektor **[!UICONTROL Zusammenführungsrichtlinie]** , um das Dialogfeld **[!UICONTROL Wählen Sie Zusammenführungsrichtlinie]** aus und wählen Sie die gewünschte Zusammenführungsrichtlinie aus.
+Verwenden Sie bei Bedarf den Selektor **[!UICONTROL Zusammenführungsrichtlinie]** , um das Dialogfeld **[!UICONTROL Zusammenführungsrichtlinie auswählen]** zu öffnen und die gewünschte Zusammenführungsrichtlinie auszuwählen.
 
 ![](../images/user-guide/select-merge-policy-dialog.png)
 
