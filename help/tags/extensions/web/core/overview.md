@@ -1,18 +1,19 @@
 ---
 title: Haupterweiterung – Übersicht
-description: Machen Sie sich mit der Tag-Erweiterung „Core“ in Adobe Experience Platform vertraut.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
-workflow-type: ht
-source-wordcount: '4905'
-ht-degree: 100%
+description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+workflow-type: tm+mt
+source-wordcount: '5130'
+ht-degree: 95%
 
 ---
 
-# Haupterweiterung – Übersicht
+# Core-Erweiterung – Übersicht
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Haupt-Tag-Erweiterung ist die mit Adobe Experience Platform veröffentlichte Standarderweiterung.
 
@@ -60,7 +61,7 @@ Das Ereignis wird ausgelöst, wenn das Medium beendet wird. Weitere Informatione
 
 #### Mediengeladene Daten
 
-Das Ereignis wird ausgeslöst, wenn Daten durch das Medium geladen werden. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
+Das Ereignis wird ausgeslöst, wenn Daten durch Medien geladen werden. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Media Pause
 
@@ -85,17 +86,17 @@ Das Ereignis wird ausgelöst, wenn die Lautstärke erhöht oder verringert wird.
 
 ### Mobilgeräteorientierte Ereignisse
 
-#### Ausrichtungsänderung
+#### Orientation Change
 
 Das Ereignis wird ausgelöst, wenn sich die Ausrichtung des Geräts ändert. Sie müssen die Dauer angeben, für die die Ausrichtung geändert werden muss, damit das Ereignis ausgelöst wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Zoom-Änderung
+#### Zoom Change
 
 Das Ereignis wird ausgelöst, wenn der Benutzer die Ansicht vergrößert oder verkleinert. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
 ### Mausgesteuerte Ereignisse
 
-#### Klick
+#### Click
 
 Das Ereignis wird ausgelöst, wenn das angegebene Element ausgewählt (angeklickt) wird. Optional können Sie Eigenschaftswerte angeben, die für das Element „true“ sein müssen, bevor das Ereignis ausgelöst wird.
 
@@ -115,33 +116,33 @@ Weitere Informationen zu den erweiterten Optionen finden Sie im Abschnitt [Optio
 
 #### Hover
 
-Das Ereignis wird ausgelöst, wenn der Benutzer den Mauszeiger über ein angegebenes Element bewegt. Konfigurieren Sie zudem, ob die Regel sofort oder nach einer angegebenen Anzahl Millisekunden ausgelöst wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
+Das Ereignis wird ausgelöst, wenn der Benutzer den Mauszeiger über ein angegebenes Element bewegt. Konfigurieren Sie zudem, ob die Regel sofort oder nach einer angegebenen Anzahl Millisekunden ausgelöst wird. Im Abschnitt [Optionen](#options) finden Sie weitere Informationen zu anpassbaren Ereigniseinstellungen.
 
 ### Andere Ereignisse
 
-#### Benutzerspezifisches Ereignis
+#### Custom Event
 
 Das Ereignis wird ausgelöst, wenn ein benutzerspezifischer Ereignistyp eintritt. Benannte JavaScript-Funktionen, die an anderer Stelle in der Code-Basis definiert sind, können als benutzerdefinierter Ereignistyp verwendet werden. Sie müssen den Namen des benutzerdefinierten Ereignistyps angeben und alle anderen Einstellungen konfigurieren, wie im Abschnitt [Optionen](#options) unten beschrieben.
 
-#### Datenelement geändert
+#### Data Element Changed
 
 Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und im angezeigten Dialogfeld aus einer Liste wählen.
 
-#### Direkter Aufruf
+#### Direct Call
 
 Das Ereignis „direct-call“ umgeht die Ereigniserkennung und Suchsysteme. Direktaufruf-Regeln eignen sich optimal für Situationen, in denen Sie Platform explizit vorgeben möchten, was passieren soll. Außerdem eignen sich Regeln dieses Typs ideal für Fälle, in denen Platform kein Ereignis im DOM erkennen kann (z. B. bei Adobe Flash). Geben Sie die Zeichenfolge `_satellite.track` im Textfeld „Kennung“ an.
 
-#### Element vorhanden
+#### Element Exists
 
 Das Ereignis wird ausgelöst, wenn ein angegebenes Element vorhanden ist. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 #### Enters Viewport
 
-Das Ereignis wird ausgelöst, wenn der Benutzer einen angegebenen Viewport aufruft. Sie müssen eine CSS-Auswahl als Kriterium für das Targeting von übereinstimmenden Elementen bereitstellen. Sie müssen außerdem konfigurieren, ob die Regel sofort oder nach einer bestimmten Anzahl von Millisekunden ausgelöst wird und ob das Ereignis bei jedem Auftreten des Ereignisses oder nur beim ersten Mal ausgelöst werden soll.
+Das Ereignis wird ausgelöst, wenn der Benutzer einen angegebenen Viewport aufruft. Sie müssen einen CSS-Selektor als Kriterium für das Targeting von übereinstimmenden Elementen bereitstellen. Sie müssen außerdem konfigurieren, ob die Regel sofort oder nach einer bestimmten Anzahl von Millisekunden ausgelöst wird und ob das Ereignis bei jedem Auftreten des Ereignisses oder nur beim ersten Mal ausgelöst werden soll.
 
 Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
-#### Verlaufsänderung
+#### History Change
 
 Das Ereignis wird ausgelöst, wenn ein pushState- oder ein hashchange-Ereignis auftritt. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
@@ -151,15 +152,15 @@ Das Ereignis wird ausgelöst, wenn der Benutzer für eine bestimmte Anzahl Sekun
 
 ### Seitenladereignisse
 
-#### DOM-bereit
+#### DOM Ready
 
 Das Ereignis wird ausgelöst, wenn das DOM bereit ist und wenn der Benutzer mit der Seite interagieren kann. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Bibliothek geladen (Seitenanfang) {#library-loaded-page-top}
+#### Library Loaded (Page Top) {#library-loaded-page-top}
 
 Das Ereignis wird ausgelöst, sobald die Tag-Bibliothek geladen wird. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Seitenende {#page-bottom}
+#### Page Bottom {#page-bottom}
 
 Das Ereignis wird ausgelöst, wenn `_satellite.pageBottom();` aufgerufen wurde. Beim asynchronen Laden der Tag-Bibliothek sollte dieser Ereignistyp nicht verwendet werden. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
@@ -513,7 +514,7 @@ Geben Sie einen Datumsbereich an. Wählen Sie das Datum und die Uhrzeit aus, nac
 Geben Sie an, wie oft die Bedingung „true“ zurückgibt. Sie können aus den folgenden Optionen auswählen:
 
 * Page view
-* Sessions
+* Sitzungen
 * Visitor
 * Seconds
 * Minutes
@@ -569,7 +570,7 @@ Während die Verwendung von „document.write“ nach dem Laden einer Seite norm
 
 #### Validierung von benutzerspezifischem Code
 
-Der im Tag-Editor verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
+Der im Tag-Editor von Launch verwendete Validator dient der Identifizierung von Problemen mit Code, der von Entwicklern geschrieben wurde. Code, der einen Minimierungsprozess durchlaufen hat, z. B. der vom Code-Manager heruntergeladene AppMeasurement.js-Code, wird unter Umständen fälschlicherweise vom Validator als fehlerbehaftet markiert. Im Normalfall können Sie dies ignorieren.
 
 #### Aktionssequenzierung
 
@@ -577,11 +578,11 @@ Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinste
 
 *JavaScript*
 
-Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
+Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
 
 >[!NOTE]
 >
->Dies funktioniert nur, wenn JavaScript nicht für die globale Ausführung konfiguriert ist. Wenn Sie Ihre benutzerdefinierte Code-Aktion global ausführen, wird die Zusage von Tags als sofort eingelöst erachtet und es wird zum nächsten Element in der Verarbeitungswarteschlange übergegangen.
+>Hinweis: Dies funktioniert nur, wenn JavaScript nicht für die globale Ausführung konfiguriert ist. Wenn Sie Ihre benutzerdefinierte Code-Aktion global ausführen, wird die Zusage von Tags als sofort eingelöst erachtet und es wird zum nächsten Element in der Verarbeitungswarteschlange übergegangen.
 
 Beispiel für eine JavaScript-Aktion mit benutzerdefiniertem Code, die einen Promise zurückgibt:
 
@@ -717,7 +718,7 @@ Sie können eines der folgenden Seitenattribute auswählen, um es in Ihrem Daten
 * URL
 * Hostname
 * Pathname
-* Protocol
+* Protokoll
 * Referrer
 * Title
 
@@ -774,3 +775,36 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 * Füllen der Analytics-Metrik, wenn dies die Landingpage für den Besuch ist
 * Anzeigen eines neuen Angebots für den Besucher nach X Sitzungen
 * Anzeigen einer Newsletter-Registrierung, wenn es sich um einen erstmaligen Besucher handelt
+
+### Bedingter Wert
+
+Ein Wrapper für die Bedingung [Wertvergleich](#value-comparison-value-comparison) . Basierend auf dem Ergebnis des Vergleichs gibt einen der beiden verfügbaren Werte im Formular zurück. Kann damit &quot;If.. Dann... Sonst...&quot; Szenarien ohne zusätzliche Regeln.
+
+### Laufzeitumgebung
+
+Ermöglicht die Auswahl einer der folgenden Variablen:
+
+* Umgebungsphase - Gibt `_satellite.environment.stage` zurück, um zwischen Entwicklungs-/Staging-/Produktionsumgebungen zu unterscheiden.
+* Bibliotheks-Build-Datum - Gibt `turbine.buildInfo.buildDate` zurück, das denselben Wert wie `_satellite.buildInfo.buildDate` enthält.
+* Eigenschaftsname - Gibt `_satellite.property.name` zurück, um den Namen der Launch-Eigenschaft abzurufen.
+* Eigenschaft-ID - Gibt `_satellite.property.id` zurück, um die ID der Launch-Eigenschaft abzurufen
+* Regelname - Gibt `event.$rule.name` zurück, der den Namen der ausgeführten Regel enthält.
+* Regel-ID - Gibt `event.$rule.id` zurück, die die Kennung der ausgeführten Regel enthält.
+* Ereignistyp - Gibt `event.$type` zurück, der den Ereignistyp enthält, der die Regel ausgelöst hat.
+* Payload der Ereignisdetails - Gibt `event.detail` zurück, die die Payload einer benutzerspezifischen Ereignis- oder Direktaufrufregel enthält.
+* Kennung des direkten Aufrufs - Gibt `event.identifier` zurück, die die Kennung einer Direktaufrufregel enthält.
+
+### Geräteattribute
+
+Gibt eines der folgenden Besuchergeräteattribute zurück:
+
+* Browserfenstergröße
+* Bildschirmgröße
+
+### JavaScript-Tools
+
+Dies ist ein Wrapper für gängige JavaScript-Vorgänge. Sie erhält ein Datenelement als Eingabe. Es wird das Ergebnis einer der folgenden Umwandlungen des Datenelementwerts zurückgegeben:
+
+* Grundlegende String-Manipulation (Ersetzen, Teilzeichenfolge, Regex-Übereinstimmung, erster und letzter Index, Aufspaltung, Ausschnitt)
+* Grundlegende Array-Vorgänge (Slice, join, pop, shift)
+* Grundlegende universelle Vorgänge (Slice, length)

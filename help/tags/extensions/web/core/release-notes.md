@@ -1,18 +1,31 @@
 ---
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
-source-git-commit: cef9f9e403328418d26935bf3ee45e9068b7177e
-workflow-type: ht
-source-wordcount: '1293'
-ht-degree: 100%
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
+source-git-commit: 9624b42f58384c1b54a6ee55e272a97d6fff5fde
+workflow-type: tm+mt
+source-wordcount: '1417'
+ht-degree: 91%
 
 ---
 
-# Versionshinweise zur Erweiterung „Core“
+# Core-Erweiterung – Versionshinweise
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 16. September 2021
+
+v3.1.0
+
+Neue Datenelemente wurden hinzugefügt:
+
+* Zusammengeführtes Objekt - Wählen Sie mehrere Datenelemente aus, die jeweils ein Objekt bereitstellen. Diese Objekte werden tief (rekursiv) zusammengeführt, um ein neues Objekt zu erstellen.
+* Bedingter Wert - Gibt einen von zwei Werten (ConditionalValue oder fallbackValue) basierend auf dem Ergebnis des Vergleichs zurück.
+* Laufzeitumgebung - Gibt eine der folgenden Launch-Umgebungsvariablen zurück: Umgebungs-Staging, Bibliotheks-Build-Datum, Eigenschaftsname, Eigenschafts-ID, Regelname, Regel-ID, Ereignistyp, Payload der Ereignisdetails, ID des direkten Aufrufs.
+* JavaScript-Tools - Wrapper für gängige JavaScript-Vorgänge: grundlegende String-Manipulation (Ersetzen, Teilzeichenfolge, Regex-Übereinstimmung, erster und letzter Index, Aufspaltung, Segment), grundlegende Array-Vorgänge (Slice, Join, Pop, Shift) und grundlegende universelle Vorgänge (Slice, Länge).
+* Geräteattribute - Gibt Geräteattribute wie Fenstergröße oder Bildschirmgröße zurück.
 
 ## 11. August 2021
 
