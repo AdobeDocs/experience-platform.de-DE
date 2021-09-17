@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden die verschiedenen OAuth 2-Authentifizierungsflüsse beschrieben, die vom Destination SDK unterstützt werden, und es finden Sie Anweisungen zum Einrichten der OAuth 2-Authentifizierung für Ihr Ziel.
 title: OAuth 2-Authentifizierung
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: e8625d6de7707b3a159f95d4471a73cbbed25d21
 workflow-type: tm+mt
-source-wordcount: '2119'
+source-wordcount: '2110'
 ht-degree: 6%
 
 ---
@@ -21,18 +21,15 @@ Auf dieser Seite werden die verschiedenen OAuth 2-Authentifizierungsflüsse besc
 
 ### Voraussetzungen in Ihrem System {#prerequisites}
 
-Als ersten Schritt müssen Sie eine App in Ihrem System für Adobe Experience Platform erstellen oder anderweitig die Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren der Experience Platform für Ihr Ziel erforderlich sind. Als Teil dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experience Platform OAuth 2-Umleitungs-/Callback-URL, die Sie aus der folgenden Tabelle erhalten können.
+Als ersten Schritt müssen Sie eine App in Ihrem System für Adobe Experience Platform erstellen oder anderweitig die Experience Platform in Ihrem System registrieren. Das Ziel besteht darin, eine Client-ID und ein Client-Geheimnis zu generieren, die zum Authentifizieren der Experience Platform für Ihr Ziel erforderlich sind. Im Rahmen dieser Konfiguration in Ihrem System benötigen Sie die Adobe Experience Platform OAuth 2-Umleitungs-/Callback-URLs, die Sie aus der folgenden Liste erhalten können.
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >Der Schritt zum Registrieren einer Umleitungs-/Callback-URL für Adobe Experience Platform in Ihrem System ist nur für den Grant-Typ [OAuth 2 mit Autorisierungscode](./oauth2-authentication.md#authorization-code) erforderlich. Für die beiden anderen unterstützten Grant-Typen (Kennwort und Client-Anmeldeinformationen) können Sie diesen Schritt überspringen.
-
-| Umleitungs-/Rückruf-URL | Umgebung |
-|---------|----------|
-| `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | Produktion |
-| `https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | Staging |
-
-{style=&quot;table-layout:auto&quot;}
 
 Am Ende dieses Schritts sollten Sie Folgendes haben:
 * eine Client-ID;
@@ -466,7 +463,7 @@ Abhängig von Ihrer Authentifizierungsanpassung müssen Sie möglicherweise auf 
 | response.body | HTTP-Antworttext | ``{{ response.body.access_token }}`` |
 | response.status | HTTP-Antwortstatus | ``{{ response.status }}`` |
 | response.headers | HTTP-Antwortheader | ``{{ response.headers.server[0] }}`` |
-| authContext | Auf Informationen zum aktuellen Authentifizierungsversuch zugreifen | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | Auf Informationen zum aktuellen Authentifizierungsversuch zugreifen | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
