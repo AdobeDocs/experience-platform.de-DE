@@ -2,7 +2,7 @@
 title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
 description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+source-git-commit: 396b9a9ec1509abedba96797f68ad3e5aa2e5988
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 3%
@@ -58,7 +58,6 @@ ht-degree: 3%
 ## Anwendungsfälle
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das Ziel *YOURDESTINATION* verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
-
 
 ### Anwendungsfall 1
 
