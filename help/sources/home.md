@@ -5,9 +5,9 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5f5e4f91862fe4ec8840224a9bdb5dc6d7338288
+source-git-commit: 048b3bbbe170a892eedc9f8ee0e130fcbfad6b86
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 56%
 
 ---
@@ -38,7 +38,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe Apps, e
 - [[!DNL Marketo Engage] Connector - Übersicht](connectors/adobe-applications/marketo/marketo.md)
 - [Erstellen einer [!DNL Marketo Engage] Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Werbung
+### Adobe Advertising Cloud
 
 Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieter-Werbe-System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
@@ -97,6 +97,7 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 - [[!DNL Oracle] Connector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] Connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] Connector](connectors/databases/postgres.md)
+- [[!DNL Snowflake] Connector](connectors/databases/snowflake.md)
 
 ### E-Commerce
 

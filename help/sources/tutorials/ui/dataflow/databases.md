@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mithilfe Ihres Datenbankkontos beschrieben.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: b0b993842b1015f5503fe2ae5a23d9188eeaad48
 workflow-type: tm+mt
-source-wordcount: '1450'
+source-wordcount: '1451'
 ht-degree: 4%
 
 ---
@@ -28,11 +28,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 Außerdem müssen Sie für dieses Tutorial bereits ein Datenbankkonto erstellt haben. Eine Liste der Tutorials zum Erstellen verschiedener Datenbank-Connectoren in der Benutzeroberfläche finden Sie in der [Übersicht über Quell-Connectoren](../../../home.md).
 
-## Daten auswählen
+## Daten hinzufügen
 
-Nach der Erstellung Ihres Datenbankkontos wird der Schritt **[!UICONTROL Daten auswählen]** angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Datenbankhierarchie untersuchen können.
+Nach der Erstellung Ihres Datenbankkontos wird der Schritt **[!UICONTROL Daten hinzufügen]** angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Datenbankhierarchie untersuchen können.
 
-- In der linken Hälfte der Benutzeroberfläche befindet sich ein Browser, in dem die Datenbankliste Ihres Kontos angezeigt wird.
+- In der linken Hälfte der Benutzeroberfläche befindet sich ein Browser, in dem die Liste der Datentabellen Ihres Kontos angezeigt wird.
 - In der rechten Hälfte der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen anzeigen.
 
 Sie können die Option **[!UICONTROL Suchen]** oben auf der Seite verwenden, um die Quelldaten, die Sie verwenden möchten, schnell zu identifizieren.
@@ -41,7 +41,7 @@ Sie können die Option **[!UICONTROL Suchen]** oben auf der Seite verwenden, um 
 >
 >Die Option Suchquellendaten ist für alle tabellarischen Quell-Connectoren mit Ausnahme der Connectoren für Analytics, Classifications, Event Hubs und Kinesis verfügbar.
 
-Nachdem Sie die Quelldaten gefunden haben, wählen Sie das Verzeichnis aus und klicken Sie auf **[!UICONTROL Weiter]**.
+Nachdem Sie die Quelldaten gefunden haben, wählen Sie die Tabelle aus und klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 

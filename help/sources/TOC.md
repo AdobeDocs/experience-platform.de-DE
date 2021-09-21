@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Data Ingestion, Sources
-source-git-commit: ebe620b078096349c514420746902ce406a910d1
+source-git-commit: e85980565889dd66f7dbd93749e013f77e434b74
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 18%
+source-wordcount: '647'
+ht-degree: 19%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 18%
          - [Marketo Engage-Connector](connectors/adobe-applications/marketo/marketo.md)
          - [Handbuch zur Marketo Engage-Authentifizierung](connectors/adobe-applications/marketo/marketo-auth.md)
          - [Marketo Engage-Namespaces und -Schemata](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Werbung {#advertising}
+   - Adobe Advertising Cloud {#advertising}
       - [Google AdWords-Connector](connectors/advertising/ads.md)
    - Cloud-Speicher {#cloud-storage}
       - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
@@ -71,6 +71,7 @@ ht-degree: 18%
       - [Oracle-Connector](connectors/databases/oracle.md)
       - [Phoenix-Connector](connectors/databases/phoenix.md)
       - [PostgreSQL-Connector](connectors/databases/postgres.md)
+      - [Snowflake-Connector](connectors/databases/snowflake.md)
    - E-Commerce {#ecommerce}
       - [Shopify Connector](connectors/ecommerce/shopify.md)
    - Lokales System {#local-system}
@@ -86,7 +87,7 @@ ht-degree: 18%
       - [HTTP-API-Connector](connectors/streaming/http.md)
 - API-Tutorials {#api-tutorials}
    - Basisverbindung erstellen {#create}
-      - Werbung {#advertising}
+      - Adobe Advertising Cloud {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud-Speicher {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
@@ -125,6 +126,7 @@ ht-degree: 18%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+         - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [SQL -Server](tutorials/api/create/databases/sql-server.md)
       - E-Commerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -173,7 +175,7 @@ ht-degree: 18%
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - Werbung {#create}
+      - Adobe Advertising Cloud {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloud-Speicher {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
@@ -214,6 +216,7 @@ ht-degree: 18%
          - [Oracle](tutorials/ui/create/databases/oracle.md)
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+         - [Snowflake](tutorials/ui/create/databases/snowflake.md)
       - E-Commerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Lokales System {#local-system}
