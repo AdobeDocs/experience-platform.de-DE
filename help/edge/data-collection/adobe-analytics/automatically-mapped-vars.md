@@ -4,7 +4,7 @@ description: Erfahren Sie, welche Variablen in Adobe Analytics automatisch mit d
 seo-description: Learn which variables are automatically mapped in Adobe Analytics with the Adobe Experience Platform Web SDK
 keywords: Adobe Analytics; Variablen; Analytics; automatische Zuordnung; automatisch zugeordnet;
 exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
-source-git-commit: f5cd00c9639bde3b36b8ef9825148725ff9f89c1
+source-git-commit: 7809e64abab80f72af979e685f268c0799e74eca
 workflow-type: tm+mt
 source-wordcount: '907'
 ht-degree: 35%
@@ -46,7 +46,7 @@ Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platfo
 | environment.browserDetails.viewportWidth | bw | AppMeasurement-Abfrageparameter, BROWSER_WIDTH-Zuordnung. |
 | environment.connectionType | ct | AppMeasurement-Abfrageparameter, CT_CONNECT_TYPE-Zuordnung. |
 | environment.ipV4 | X-Forwarded-For | Dies ist eine HTTP-Header-Zuordnung, X-FORWARDED-FOR. |
-| identityMap.ECID.[0].id | mid | AppMeasurement-Abfrageparameter, MID-Zuordnung. |
+| identityMap.ECID[0].id | mid | AppMeasurement-Abfrageparameter, MID-Zuordnung. |
 | marketing.trackingCode | v0 | AppMeasurement Abfrageparameter, CAMPAIGN-Zuordnung. |
 | media.mediaTimed.completes.value | c.a.media.complete | AppMeasurement-Kontextdaten. |
 | media.mediaTimed.dropBeforeStart.value | c.a.media.view, c.a.media.timePlayed, c.a.media.play | AppMeasurement-Kontextdaten. |
@@ -58,10 +58,10 @@ Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platfo
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | AppMeasurement-Kontextdatenzuordnung `c.a.media.pauseCount`. |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset | AppMeasurement-Kontextdaten. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | AppMeasurement-Kontextdatenzuordnung `c.a.media.friendlyName`. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurement-Kontextdaten. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurement-Kontextdaten. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | AppMeasurement-Kontextdatenzuordnung `c.a.media.episode`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | AppMeasurement-Kontextdaten. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurement-Kontextdaten. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurement-Kontextdaten. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | AppMeasurement-Kontextdatenzuordnung `c.a.media.season`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | AppMeasurement-Kontextdatenzuordnung `a.media.name`. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | AppMeasurement-Kontextdatenzuordnung `c.a.media.show`. |
@@ -89,9 +89,9 @@ Nachstehend finden Sie eine Liste der Variablen, die das Adobe Experience Platfo
 | placeContext.geo.postalCode | zip | AppMeasurement Abfrageparameter, ZIP-Zuordnung. |
 | placeContext.geo.stateProvince | state | AppMeasurement Abfrageparameter, STATE-Zuordnung. |
 | productListItems[N].lineItemId | products | AppMeasurement-Abfrageparameter, Produktkategorie-Zuordnung. |
-| productListitems.[N].name | products | AppMeasurement Abfrageparameter, Produktnamenzuordnung. |
-| productListitems.[N].priceTotal | products | AppMeasurement Abfrageparameter, Produktpreiszuordnung. |
-| productListitems.[N].quantity | products | AppMeasurement-Abfrageparameter, Produktquantitätszuordnung. |
+| productlistitems[N].name | products | AppMeasurement Abfrageparameter, Produktnamenzuordnung. |
+| productlistitems[N].priceTotal | products | AppMeasurement Abfrageparameter, Produktpreiszuordnung. |
+| productlistitems[N].quantity | products | AppMeasurement-Abfrageparameter, Produktquantitätszuordnung. |
 | web.webInteraction.URL | pev1 | AppMeasurement-Abfrageparameter, PAGE_EVENT_VAR1-Zuordnung. |
 | web.webInteraction.name | pev2 | AppMeasurement-Abfrageparameter, PAGE_EVENT_VAR2-Zuordnung. |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` nach  `pe=lnk_o`;  `web.webInteraction.type=download` nach  `pe=lnk_d`;  `web.webInteraction.type=exit` nach  `pe=lnk_e` |
