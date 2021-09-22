@@ -3,9 +3,9 @@ title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platfor
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 1780e08a9e45fd87891bbb1727c464aadb0e9b31
+source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
 workflow-type: tm+mt
-source-wordcount: '1270'
+source-wordcount: '1330'
 ht-degree: 1%
 
 ---
@@ -97,6 +97,10 @@ Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in I
 ## Festlegen von Befehlen zur Änderung der Zustimmung {#commands}
 
 Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit der Verwendung des Befehls `setConsent` des Platform Web SDK beginnen, um Zustimmungsdaten an Platform zu senden.
+
+>[!IMPORTANT]
+>
+>Der Befehl `setConsent` aktualisiert nur Daten direkt im Profilspeicher und sendet keine Daten an den Data Lake.
 
 Es gibt zwei Szenarien, in denen `setConsent` auf Ihrer Site aufgerufen werden sollte:
 
@@ -194,6 +198,8 @@ var setConsent = function () {
 ## Umgang mit SDK-Antworten
 
 Alle [!DNL Platform SDK]-Befehle geben Zusagen zurück, die angeben, ob der Aufruf erfolgreich war oder fehlgeschlagen ist. Sie können diese Antworten dann für zusätzliche Logik verwenden, z. B. für die Anzeige von Bestätigungsnachrichten an den Kunden. Spezifische Beispiele finden Sie im Abschnitt [Umgang mit Erfolg oder Fehler](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) im Handbuch zum Ausführen von SDK-Befehlen .
+
+Nachdem Sie mit dem SDK erfolgreich `setConsent`-Aufrufe durchgeführt haben, können Sie mit dem Profil-Viewer in der Platform-Benutzeroberfläche überprüfen, ob Daten im Profilspeicher landen. Weitere Informationen finden Sie im Abschnitt [Browsing profiles by identity](../../../profile/ui/user-guide.md#browse-identity) .
 
 ## Nächste Schritte
 
