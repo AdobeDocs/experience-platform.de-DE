@@ -2,10 +2,10 @@
 description: Die Server- und Vorlagenspezifikationen können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt "/authoring/destination-servers"konfiguriert werden.
 title: Konfigurationsoptionen für Server- und Vorlagenspezifikationen im Destination SDK
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 7%
+source-wordcount: '419'
+ht-degree: 9%
 
 ---
 
@@ -48,10 +48,10 @@ Dieser Prozess stellt Benutzerdaten als eine Reihe von HTTP-Nachrichten an Ihre 
 
 | Parameter | Typ | Beschreibung |
 |---|---|---|
-| `name` | Zeichenfolge | Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist für Partner oder Kunden nicht sichtbar. Beispiel `Moviestar destination server`. |
-| `destinationServerType` | Zeichenfolge | `URL_BASED` ist derzeit die einzige verfügbare Option. |
-| `templatingStrategy` | Zeichenfolge | <ul><li>Verwenden Sie `PEBBLE_V1` , wenn die Adobe die URL im unten stehenden Feld `value` transformieren muss. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Verwenden Sie `NONE` , wenn keine Transformation auf der Adobe-Seite erforderlich ist, z. B. wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | Zeichenfolge | Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
+| `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist für Partner oder Kunden nicht sichtbar. Beispiel `Moviestar destination server`. |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* `URL_BASED` ist derzeit die einzige verfügbare Option. |
+| `templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1` , wenn die Adobe die URL im unten stehenden Feld `value` transformieren muss. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/{{customerData.region}}/items` </li><li> Verwenden Sie `NONE` , wenn keine Transformation auf der Adobe-Seite erforderlich ist, z. B. wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,10 +83,10 @@ Mit der Vorlagenspezifikation können Sie konfigurieren, wie Sie die exportierte
 
 | Parameter | Typ | Beschreibung |
 |---|---|---|
-| `httpMethod` | Zeichenfolge | Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Die Optionen sind `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `templatingStrategy` | Zeichenfolge | Verwenden Sie `PEBBLE_V1`. |
-| `value` | Zeichenfolge | Diese Zeichenfolge ist die mit Zeichen versehene Version, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Dienst erwartet. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt  [Vorlage verwenden](./message-format.md#using-templating). <br> Weiterführende Informationen zur Maskierung von Zeichen finden Sie im  [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein Beispiel für eine einfache Umwandlung finden Sie im Abschnitt  [Profil - ](./message-format.md#attributes) Attribution - Umwandlung. |
-| `contentType` | Zeichenfolge | Der Inhaltstyp, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
+| `httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Die Optionen sind `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
+| `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die mit Zeichen versehene Version, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Dienst erwartet. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt  [Vorlage verwenden](./message-format.md#using-templating). <br> Weiterführende Informationen zur Maskierung von Zeichen finden Sie im  [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein Beispiel für eine einfache Umwandlung finden Sie im Abschnitt  [Profil - ](./message-format.md#attributes) Attribution - Umwandlung. |
+| `contentType` | Zeichenfolge | *Erforderlich.* Der Inhaltstyp, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 

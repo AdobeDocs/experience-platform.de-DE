@@ -1,9 +1,10 @@
 ---
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/testing/template/sample"ausführen können, um eine Vorlage zur Testnachrichten-Transformation für Ihr Ziel zu erhalten.
 title: Abrufen von Beispielvorlagen-API-Vorgängen
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '401'
 ht-degree: 2%
 
 ---
@@ -58,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Beispielvorlage zurück, die Sie bearbeiten können, um Ihrem erwarteten Datenformat zu entsprechen.
 
-Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit `maxUsersPerRequest=1` entspricht, gibt die Anforderung eine Beispielvorlage zurück, die der folgenden ähnelt:
+Wenn die von Ihnen angegebene Ziel-ID einer Zielkonfiguration mit [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) und `maxUsersPerRequest=1` in der Aggregationsrichtlinie entspricht, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -91,7 +92,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit `maxUsersPerRe
 }
 ```
 
-Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit `maxUsersPerRequest` größer als 1 entspricht, gibt die Anforderung eine Beispielvorlage zurück, die der folgenden ähnelt:
+Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit [konfigurierbarer Aggregation](./destination-configuration.md#configurable-aggregation) oder [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) mit `maxUsersPerRequest` größer als 1 entspricht, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}

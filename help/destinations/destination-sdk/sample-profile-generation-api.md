@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/sample-profiles"ausführen können, um Beispielprofile zu generieren, die für Zieltests verwendet werden können.
 title: API-Vorgänge zur Profilerstellung
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '833'
 ht-degree: 3%
 
 ---
@@ -28,6 +28,10 @@ Sie können Beispielprofile auf Grundlage des Adobe-XDM-Quellschemas oder des vo
 Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dazu gehören das Abrufen der erforderlichen Zielerstellungsberechtigung und der erforderlichen Kopfzeilen.
 
 ## Generieren von Beispielprofilen basierend auf dem Quellschema {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Fügen Sie die hier generierten Beispielprofile zu HTTP-Aufrufen hinzu, wenn Sie [Ihr Ziel testen](./test-destination.md).
 
 Sie können Beispielprofile basierend auf dem Quellschema generieren, indem Sie eine GET-Anfrage an den Endpunkt `authoring/sample-profiles/` senden und die Kennung einer Zielinstanz angeben, die Sie basierend auf der Zielkonfiguration erstellt haben, die Sie testen möchten.
 
@@ -176,6 +180,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 {style=&quot;table-layout:auto&quot;}
 
 ## Erstellen von Beispielprofilen basierend auf dem Zielschema {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Verwenden Sie die Beispielprofile, die hier beim Erstellen Ihrer Vorlage generiert werden, im Schritt [Rendervorlage ](./render-template-api.md#multiple-profiles-with-body) .
 
 Sie können Beispielprofile generieren, die auf dem Zielschema basieren, das eine GET-Anfrage an den Endpunkt `authoring/sample-profiles/` sendet und die Ziel-ID der Zielkonfiguration angibt, basierend auf der Sie Ihre Vorlage erstellen.
 

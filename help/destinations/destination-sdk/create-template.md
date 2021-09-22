@@ -1,9 +1,10 @@
 ---
 description: Als Teil des Destination SDK stellt Adobe Entwicklertools bereit, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Vorlage für die Nachrichtenumwandlung erstellen und testen.
 title: Erstellen und Testen einer Nachrichtenumwandlungsvorlage
-source-git-commit: cf6c6adf128ec867cd67af609a40b04d2c632bf9
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
+source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit `maxUsersPerRequest=1` entspricht, gibt die Anforderung eine Beispielvorlage zurück, die der folgenden ähnelt:
+Wenn die von Ihnen angegebene Ziel-ID einer Zielkonfiguration mit [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) und `maxUsersPerRequest=1` in der Aggregationsrichtlinie entspricht, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -101,7 +102,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit `maxUsersPerRe
 }
 ```
 
-Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit `maxUsersPerRequest` größer als 1 entspricht, gibt die Anforderung eine Beispielvorlage zurück, die der folgenden ähnelt:
+Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit [konfigurierbarer Aggregation](./destination-configuration.md#configurable-aggregation) oder [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) mit `maxUsersPerRequest` größer als 1 entspricht, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
