@@ -5,10 +5,10 @@ title: Handbuch zur Schema Registry-API
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Schema Registry-API.
 topic-legacy: developer guide
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: d70f297130ec04dd799d60c70b95777ee79bbfef
+source-git-commit: 403dcb75e43b5c7aa462495086e5a9e403ef6f5b
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 49%
+source-wordcount: '984'
+ht-degree: 38%
 
 ---
 
@@ -30,9 +30,9 @@ Zu den häufigsten Abfrageparametern für das Paging gehören:
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `start` | Geben Sie an, wo die aufgelisteten Ergebnisse beginnen sollen. Dieser Wert kann vom `_page.next` -Attribut einer Listenantwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der Wert `_page.next` null ist, ist keine zusätzliche Seite verfügbar. |
-| `limit` | Schränken Sie die Anzahl der zurückgegebenen Ressourcen ein. Beispiel: `limit=5` gibt eine Liste von fünf Ressourcen zurück. |
 | `orderby` | Sortieren Sie die Ergebnisse nach einer bestimmten Eigenschaft. Beispiel: `orderby=title` sortiert die Ergebnisse in aufsteigender Reihenfolge (A-Z) nach Titel. Durch Hinzufügen eines `-` vor dem Parameterwert (`orderby=-title`) werden die Elemente nach Titel in absteigender Reihenfolge sortiert (Z-A). |
+| `limit` | Bei Verwendung in Verbindung mit einem Parameter `orderby` beschränkt `limit` die maximale Anzahl von Elementen, die für eine bestimmte Anforderung zurückgegeben werden sollen. Dieser Parameter kann nur verwendet werden, wenn ein `orderby` -Parameter vorhanden ist.<br><br>Der  `limit` Parameter gibt eine positive Ganzzahl (zwischen  `0` und  `500`) als  ** Hinweis auf die maximale Anzahl der zurückzugebenden Elemente an. Beispielsweise gibt `limit=5` nur fünf Ressourcen in der Liste zurück. Dieser Wert wird jedoch nicht genau berücksichtigt. Die tatsächliche Antwortgröße kann kleiner oder größer sein, da eine Einschränkung in der Notwendigkeit besteht, den zuverlässigen Betrieb des Parameters `start` bereitzustellen, sofern einer angegeben wird. |
+| `start` | Bei Verwendung in Verbindung mit einem `orderby`-Parameter gibt `start` an, wo die untergeordnete Liste von Elementen beginnen soll. Dieser Parameter kann nur verwendet werden, wenn ein `orderby` -Parameter vorhanden ist. Dieser Wert kann vom `_page.next` -Attribut einer Listenantwort abgerufen und für den Zugriff auf die nächste Ergebnisseite verwendet werden. Wenn der Wert `_page.next` null ist, ist keine zusätzliche Seite verfügbar.<br><br>Normalerweise wird dieser Parameter weggelassen, um die erste Ergebnisseite zu erhalten. Danach sollte `start` auf den Maximalwert der primären Sortiereigenschaft des Felds `orderby` gesetzt werden, das auf der vorherigen Seite empfangen wurde. Die API-Antwort gibt dann Einträge zurück, die mit jenen beginnen, die eine primäre Sortiereigenschaft von `orderby` aufweisen, die strikt größer ist als (für aufsteigende Werte) oder strikt kleiner ist als (für absteigende Werte) der angegebene Wert.<br><br>Wenn der  `orderby` Parameter beispielsweise auf festgelegt ist, enthält  `orderby=name,firstname`der  `start` Parameter einen Wert für die  `name` Eigenschaft. Wenn Sie in diesem Fall die nächsten 20 Einträge einer Ressource direkt nach dem Namen &quot;Miller&quot;anzeigen möchten, verwenden Sie: `?orderby=name,firstname&start=Miller&limit=20`. |
 
 {style=&quot;table-layout:auto&quot;}
 
