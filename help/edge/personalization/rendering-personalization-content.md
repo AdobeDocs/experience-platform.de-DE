@@ -3,9 +3,9 @@ title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform W
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK rendern.
 keywords: personalization;renderDecisions;sendEvent;DecisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 5ae7488e715ff97d2b667c40505b79433eb74f49
+source-git-commit: 0246de5810c632134288347ac7b35abddf2d4308
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '701'
 ht-degree: 3%
 
 ---
@@ -45,7 +45,7 @@ alloy("sendEvent", {
     xdm: {}
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions
+      // Manually render propositions and send "display" event
     }
   });
 ```
@@ -71,6 +71,9 @@ Das `propositions`-Array kann in etwa wie im folgenden Beispiel aussehen:
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      ...
+    },
     "renderAttempted": false
   },
   {
@@ -88,6 +91,9 @@ Das `propositions`-Array kann in etwa wie im folgenden Beispiel aussehen:
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      ...
+    },
     "renderAttempted": false
   }
 ]
@@ -107,7 +113,7 @@ alloy("sendEvent", {
     decisionScopes: ['salutation', 'discount']
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions
+      // Manually render propositions and send "display" event
     }
   });
 ```
@@ -131,6 +137,12 @@ In diesem Beispiel werden Vorschläge, die dem Perimeter `salutation` oder `disc
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
+      "activity": {
+        "id": "384456"
+      }
+    },  
     "renderAttempted": false
   },
   {
@@ -147,6 +159,12 @@ In diesem Beispiel werden Vorschläge, die dem Perimeter `salutation` oder `disc
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
+      "activity": {
+        "id": "384457"
+      }
+    },
     "renderAttempted": false
   },
   {
@@ -164,6 +182,12 @@ In diesem Beispiel werden Vorschläge, die dem Perimeter `salutation` oder `disc
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:PyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ8",
+      "activity": {
+        "id": "384459"
+      }
+    },
     "renderAttempted": false
   },
   {
@@ -181,6 +205,12 @@ In diesem Beispiel werden Vorschläge, die dem Perimeter `salutation` oder `disc
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:PyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ8",
+      "activity": {
+        "id": "384459"
+      }
+    },
     "renderAttempted": false
   }
 ]
@@ -192,6 +222,7 @@ An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem
 1. Durchlaufen Sie jeden Vorschlag und suchen Sie nach dem Vorschlag mit einem Umfang von `discount`.
 1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
 1. Wenn Sie ein Element mit HTML-Inhalt finden, suchen Sie das Element `daily-special` auf der Seite und ersetzen Sie dessen HTML durch den personalisierten Inhalt.
+1. Nachdem der Inhalt wiedergegeben wurde, senden Sie ein `display` -Ereignis.
 
 Ihr Code würde wie folgt aussehen:
 
@@ -224,15 +255,31 @@ alloy("sendEvent", {
       var discountPropositionItem = discountProposition.items[i];
       if (discountPropositionItem.schema === "https://ns.adobe.com/personalization/html-content-item") {
         discountHtml = discountPropositionItem.data.content;
-        break;
+        // Render the content
+        var dailySpecialElement = document.getElementById("daily-special");
+        dailySpecialElement.innerHTML = discountHtml;
+        
+        // For this example, we assume there is only a signle place to update in the HTML.
+        break;  
       }
     }
-  }
-
-  if (discountHtml) {
-    // Discount HTML exists. Time to render it.
-    var dailySpecialElement = document.getElementById("daily-special");
-    dailySpecialElement.innerHTML = discountHtml;
+      // Send a "display" event 
+    alloy("sendEvent", {
+      xdm: {
+        eventType: "display",
+        _experience: {
+          decisioning: {
+            propositions: [
+              {
+                id: discountProposition.id,
+                scope: discountProposition.scope,
+                scopeDetails: discountProposition.scopeDetails
+              }
+            ]
+          }
+        }
+      }
+    });
   }
 });
 ```
