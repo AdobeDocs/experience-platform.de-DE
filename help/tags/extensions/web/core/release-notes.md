@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 29a238c517b6bd5a95284b4d6954fd14a1668f0e
+source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
 workflow-type: tm+mt
-source-wordcount: '1434'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 85%
 
 ---
 
@@ -15,7 +15,23 @@ ht-degree: 90%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-## 17. September 2021
+## 23. September 2021
+
+v3.2.1
+
+* Fehlerkorrektur - die Initialisierung der Datenelementansicht mit bedingtem Wert funktioniert jetzt, wenn die Feldwerte 0 betragen.
+
+## 23. September 2021
+
+v3.2.0
+
+Die folgenden Änderungen wurden im Datenelement &quot;Bedingter Wert&quot;eingeführt:
+
+* Fügen Sie eine Checkbox für die Bedingungs- und Fallback-Werte hinzu, mit der der Benutzer auswählen kann, ob nicht als zurückgegebener Wert definiert werden soll.
+* Zahlenwerte werden als Zahlen im settings-Objekt bereitgestellt.
+* Bedingter Wert ist nicht mehr erforderlich, damit er sich wie der Fallback-Wert verhalten kann.
+
+## 17. September 2021
 
 v3.1.1
 
