@@ -5,9 +5,9 @@ title: XDM Individual Profile Class
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Klasse "XDM Individual Profile".
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -42,12 +42,17 @@ Die [!DNL XDM Individual Profile]-Klasse stellt mehrere systemgenerierte Werte b
 
 Adobe stellt mehrere Standardfeldgruppen für die Verwendung mit der Klasse [!DNL XDM Individual Profile] bereit. Im Folgenden finden Sie eine Liste einiger häufig verwendeter Feldergruppen für die Klasse:
 
+* [[!UICONTROL Einverständnis und Voreinstellungen]](../field-groups/profile/consents.md)
 * [[!UICONTROL Demografische Details]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Treuedetails]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Persönliche Kontaktangaben]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Einverständnis und Voreinstellungen]](../field-groups/profile/consents.md)
 * [[!UICONTROL Details zur Segmentzugehörigkeit]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Telekom-Abonnement]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL Kontaktangaben für Arbeitskontakte]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL XDM Business Person-Komponenten]](../field-groups/profile/business-person-components.md)\*
+* [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
+
+*\*Diese Feldergruppe ist nur für Organisationen mit Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform verfügbar.*
 
 Eine vollständige Liste aller kompatiblen Feldergruppen für [!DNL XDM Individual Profile] finden Sie im [XDM GitHub-Repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

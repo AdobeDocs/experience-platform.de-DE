@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+source-git-commit: cf0f0a46cc337d21c47a9b3a2fc12f8a7a6cb828
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 40%
+source-wordcount: '375'
+ht-degree: 35%
 
 ---
 
@@ -31,6 +31,15 @@ ht-degree: 40%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinition](./classes/segment-definition.md)
+   * B2B-Klassen {#b2b}
+      * [XDM-Geschäftskonto](./classes/b2b/business-account.md)
+      * [Personenbeziehung zwischen XDM-Geschäftskonto](./classes/b2b/business-account-person-relation.md)
+      * [XDM Business Campaign](./classes/b2b/business-campaign.md)
+      * [XDM Business Campaign-Mitglieder](./classes/b2b/business-campaign-members.md)
+      * [XDM-Geschäftschancen](./classes/b2b/business-opportunity.md)
+      * [XDM Business Opportunity-Personenbeziehung](./classes/b2b/business-opportunity-person-relation.md)
+      * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
+      * [XDM Business Marketing List-Mitglieder](./classes/b2b/business-marketing-list-members.md)
 * Schemafeldgruppen {#field-groups}
    * Profilfeldgruppen {#profile}
       * [Demografische Details](./field-groups/profile/demographic-details.md)
@@ -42,6 +51,8 @@ ht-degree: 40%
       * [Details zur Segmentzugehörigkeit](./field-groups/profile/segmentation.md)
       * [Telekom-Abonnement](./field-groups/profile/telecom-subscription.md)
       * [Kontaktangaben für Arbeitskontakte](./field-groups/profile/work-contact-details.md)
+      * [XDM-Geschäftspersonenkomponenten](./field-groups/profile/business-person-components.md)
+      * [XDM-Geschäftspersonendetails](./field-groups/profile/business-person-details.md)
    * Ereignisfeldgruppen {#event}
       * [Kampagnen-Marketingdetails](./field-groups/event/campaign-marketing-details.md)
       * [Kanaldetails](./field-groups/event/channel-details.md)
@@ -60,6 +71,7 @@ ht-degree: 40%
    * [Anwendung](./data-types/application.md)
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
+   * [B2B-Quelle](./data-types/b2b-source.md)
    * [Handel](./data-types/commerce.md)
    * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Einverständnisse und Voreinstellungen](./data-types/consents.md)
@@ -68,6 +80,7 @@ ht-degree: 40%
    * [E-Mail  Adresse](./data-types/email-address.md)
    * [Umgebung](./data-types/environment.md)
    * [Experience-Kanal](./data-types/experience-channel.md)
+   * [Audit-Attribute des externen Quellsystems](./data-types/external-source-system-audit-attributes.md)
    * [Generisches Einverständnisfeld](./data-types/consent-field.md)
    * [Feld für allgemeine Marketing-Voreinstellungen](./data-types/marketing-field.md)
    * [Allgemeines Marketing-Präferenzfeld mit Abonnements](./data-types/marketing-field-subscriptions.md)
