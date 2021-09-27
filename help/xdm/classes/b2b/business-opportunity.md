@@ -1,10 +1,10 @@
 ---
 title: XDM Business Opportunity-Klasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Opportunity-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '176'
-ht-degree: 6%
+source-wordcount: '212'
+ht-degree: 5%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform haben.
+>Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die Echtzeit-Kundendatenplattform B2B Edition haben.
 
 [!UICONTROL XDM Business ] Opportunityist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die die erforderlichen Mindesteigenschaften einer Geschäftschance erfasst.
 
@@ -30,3 +30,5 @@ ht-degree: 6%
 | `opportunityName` | Zeichenfolge | Der Name der Gelegenheit. |
 | `opportunityStage` | Zeichenfolge | Die Verkaufsphase der Chance. |
 | `opportunityType` | Zeichenfolge | Die Art von Gelegenheit. |
+
+Informationen dazu, wie diese Klasse konzeptionell mit anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können, finden Sie im Handbuch zu [Schemabeziehungen in der Echtzeit-Kundendatenplattform B2B Edition](../../tutorials/relationship-b2b.md).

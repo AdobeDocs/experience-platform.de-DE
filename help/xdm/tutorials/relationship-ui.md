@@ -6,14 +6,18 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehun
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 497a515a872efdeeda270d0aa90b1fc99898ad4d
+source-git-commit: 2118dc175b421e856c6b0a33a83a7238f01b7ee3
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 25%
+source-wordcount: '1020'
+ht-degree: 24%
 
 ---
 
 # Definieren einer Beziehung zwischen zwei Schemas mithilfe von [!DNL Schema Editor]
+
+>[!NOTE]
+>
+>Wenn Sie die Echtzeit-Kundendatenplattform B2B Edition verwenden, lesen Sie stattdessen das Handbuch zum Erstellen von B2B-Beziehungen](./relationship-b2b.md).[
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Wenn Sie diese Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas definieren, erhalten Sie komplexe Einblicke in Ihre Kundendaten.
 

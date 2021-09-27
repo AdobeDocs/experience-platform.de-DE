@@ -1,10 +1,10 @@
 ---
 title: XDM Business Campaign-Mitgliederklasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Campaign Members-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 4%
+source-wordcount: '220'
+ht-degree: 3%
 
 ---
 
@@ -12,7 +12,7 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform haben.
+>Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die Echtzeit-Kundendatenplattform B2B Edition haben.
 
 [!UICONTROL XDM Business Campaign ] Membersis ist eine standardmäßige XDM-Klasse (Experience-Datenmodell), die einen Kontakt oder einen Lead beschreibt, der mit einer Geschäftskampagne verknüpft ist.
 
@@ -28,3 +28,5 @@ ht-degree: 4%
 | `campaignID` | Zeichenfolge | Eine eindeutige ID für die zugehörige Kampagne. |
 | `campaignMemberID` | Zeichenfolge | Eine eindeutige ID für die Kampagnenmitgliedschaft-Entität. |
 | `personId` | Zeichenfolge | Eine eindeutige ID für die Person, die Mitglied der zugehörigen Kampagne ist. |
+
+Informationen dazu, wie diese Klasse konzeptionell mit anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können, finden Sie im Handbuch zu [Schemabeziehungen in der Echtzeit-Kundendatenplattform B2B Edition](../../tutorials/relationship-b2b.md).
