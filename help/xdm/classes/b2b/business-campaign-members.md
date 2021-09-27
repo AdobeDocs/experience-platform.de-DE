@@ -1,18 +1,18 @@
 ---
 title: XDM Business Campaign-Mitgliederklasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Campaign Members-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 3%
+source-wordcount: '230'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL XDM Business Campaign ] Membersclass
+# [!UICONTROL XDM Business Campaign ] Membersclass (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die Echtzeit-Kundendatenplattform B2B Edition haben.
+>Diese Klasse ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Campaign ] Membersis ist eine standardmäßige XDM-Klasse (Experience-Datenmodell), die einen Kontakt oder einen Lead beschreibt, der mit einer Geschäftskampagne verknüpft ist.
 

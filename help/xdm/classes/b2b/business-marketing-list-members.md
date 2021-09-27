@@ -1,18 +1,18 @@
 ---
 title: XDM Business Marketing List-Member-Klasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Marketing List Members-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 3%
+source-wordcount: '236'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL XDM Business Marketing List ] Membersclass
+# [!UICONTROL XDM Business Marketing List ] Membersclass (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die Echtzeit-Kundendatenplattform B2B Edition haben.
+>Diese Klasse ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Marketing List ] Membersis ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die Mitglieder, Personen oder Kontakte beschreibt, die mit einer Marketingliste verknüpft sind.
 

@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 50ca41ac5adba60e4abb484c8689372d0de77571
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 34%
+source-wordcount: '391'
+ht-degree: 28%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 34%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinition](./classes/segment-definition.md)
-   * B2B-Klassen {#b2b}
+   * B2B-Klassen (Beta) {#b2b}
       * [XDM-Geschäftskonto](./classes/b2b/business-account.md)
       * [Personenbeziehung zwischen XDM-Geschäftskonto](./classes/b2b/business-account-person-relation.md)
       * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -145,11 +145,11 @@ ht-degree: 34%
    * [Mixins (überholt)](api/mixins.md)
    * [Anhang](api/appendix.md)
 * Tutorials {#tutorials}
-   * [Erstellen eines Schemas (Benutzeroberfläche)](tutorials/create-schema-ui.md)
-   * [Erstellen eines Schemas (API)](tutorials/create-schema-api.md)
-   * [Definieren einer Beziehung zwischen zwei Schemata (Benutzeroberfläche)](tutorials/relationship-ui.md)
-   * [Definieren einer Beziehung zwischen zwei Schemata (API)](tutorials/relationship-api.md)
-   * [Definieren einer Beziehung zwischen zwei Schemas (B2B)](tutorials/relationship-b2b.md)
+   * [Erstellen eines Schemas in der Benutzeroberfläche](tutorials/create-schema-ui.md)
+   * [Erstellen eines Schemas in der API](tutorials/create-schema-api.md)
+   * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
+   * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
+   * [Definieren einer Schemabeziehung in der Echtzeit-Kundendatenplattform B2B Edition (Beta)](tutorials/relationship-b2b.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

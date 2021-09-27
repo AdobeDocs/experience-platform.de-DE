@@ -1,18 +1,18 @@
 ---
 title: XDM Business Marketing List-Klasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Marketing List-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: 5fd82b02eb25f3d575de695c2f2b14a5e5b18400
+source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 4%
+source-wordcount: '210'
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL XDM Business Marketing ] Listclass
+# [!UICONTROL XDM Business Marketing ] Listclass (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Diese Klasse ist nur für Unternehmen verfügbar, die Zugriff auf die Echtzeit-Kundendatenplattform B2B Edition haben.
+>Diese Klasse ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Marketing ] Listet eine standardmäßige Experience-Datenmodell (XDM)-Klasse auf, die die erforderlichen Mindesteigenschaften einer Marketing-Liste erfasst. Marketinglisten ermöglichen es Ihnen, potenzielle Kunden zu priorisieren, die Ihr Produkt am ehesten kaufen.
 
