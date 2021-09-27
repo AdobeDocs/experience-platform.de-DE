@@ -1,7 +1,8 @@
 ---
 description: Verwenden Sie Zielgruppen-Metadatenvorlagen, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Adobe bietet eine Erweiterungsvorlage für Zielgruppen-Metadaten, die Sie anhand der Spezifikationen Ihrer Marketing-API konfigurieren können. Nachdem Sie die Vorlage definiert, getestet und gesendet haben, wird sie von Adobe verwendet, um die API-Aufrufe an Ihr Ziel zu strukturieren.
 title: Zielgruppen-Metadatenverwaltung
-source-git-commit: d2452bf0e59866d3deca57090001c4c5a0935525
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: 397c49284c30c648695a7a186d3f3e76a2675807
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 1%
@@ -54,7 +55,7 @@ Sie können die generische Vorlage verwenden, um [eine neue Zielgruppenvorlage](
 
 Das Adobe Engineering-Team kann mit Ihnen zusammenarbeiten, um die generische Vorlage mit benutzerdefinierten Feldern zu erweitern, wenn dies für Ihre Anwendungsfälle erforderlich ist.
 
-## Vorlagenbeispiele {#template-examples}
+## Konfigurationsbeispiele {#configuration-examples}
 
 Dieser Abschnitt enthält drei Beispiele für allgemeine Konfigurationen von Zielgruppen-Metadaten für Ihre Referenz sowie Beschreibungen der wichtigsten Abschnitte der Konfiguration. Beachten Sie, wie sich URL, Kopfzeilen, Anfrage- und Antworttext zwischen den drei Beispielkonfigurationen unterscheiden. Dies liegt an den unterschiedlichen Spezifikationen der Marketing-API der drei Beispielplattformen.
 
