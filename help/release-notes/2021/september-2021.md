@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: b616a0c0d49d980644f82bc3af5995b3b17b4c80
+source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 59%
+source-wordcount: '381'
+ht-degree: 50%
 
 ---
 
@@ -15,8 +15,21 @@ ht-degree: 59%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Datenaufnahme](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Quellen](#sources)
+
+## Datenaufnahme {#ingestion}
+
+Die Datenerfassung in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen Platform Daten aus verschiedenen Quellen erfasst, sowie die Art und Weise, wie diese Daten im Data Lake zur Verwendung durch nachgelagerte Platform-Dienste persistiert werden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+|------- | -----------|
+| Profildatensätze mithilfe der Batch-Erfassung aktualisieren oder patchen | Das Echtzeit-Kundenprofil ermöglicht nun über die Batch-Erfassung Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md). |
+
+Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
