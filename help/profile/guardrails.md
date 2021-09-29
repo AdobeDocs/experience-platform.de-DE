@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Adobe Experience Platform bietet eine Reihe von Limits, mit denen Sie verhindern können, dass Datenmodelle erstellt werden, die vom Echtzeit-Kundenprofil nicht unterstützt werden. In diesem Dokument werden Best Practices und Einschränkungen beschrieben, die bei der Modellierung von Profildaten beachtet werden müssen.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 441c2978b90a4703874787b3ed8b94c4a7779aa8
+source-git-commit: c351ee91367082cc5fbfc89da50aa2db5e415ea8
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1962'
 ht-degree: 4%
 
 ---
@@ -48,10 +48,6 @@ Das Store-Datenmodell [!DNL Profile] besteht aus zwei Kernentitätstypen:
 
    ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Profilfragmente
-
-Es gibt mehrere Limits in diesem Dokument, die auf &quot;Profilfragmente&quot;verweisen. Das Echtzeit-Kundenprofil besteht aus mehreren Profilfragmenten. Jedes Fragment stellt die Daten für die Identität aus einem Datensatz dar, in dem es die primäre Identität ist. Das bedeutet, dass ein Fragment eine primäre ID und Ereignisdaten (Zeitreihen) in einem XDM ExperienceEvent-Datensatz enthalten kann oder aus einer primären ID und Datensatzdaten (zeitunabhängige Attribute) in einem Datensatz &quot;XDM Individual Profile&quot;bestehen kann.
-
 ## Begrenzungstypen
 
 Bei der Definition Ihres Datenmodells wird empfohlen, sich an die bereitgestellten Limits zu halten, um eine ordnungsgemäße Leistung sicherzustellen und Systemfehler zu vermeiden.
@@ -62,6 +58,10 @@ Die in diesem Dokument bereitgestellten Limits umfassen zwei Begrenzungstypen:
 
 * **Hardlimit:** Eine feste Begrenzung bietet ein absolutes Maximum für das System. Wenn Sie eine feste Grenze überschreiten, führt dies zu Fehlern und Störungen, sodass das System nicht wie erwartet funktioniert.
 
+## Profilfragmente
+
+In diesem Dokument gibt es mehrere Limits, die auf &quot;Profilfragmente&quot;verweisen. In Experience Platform werden mehrere Profilfragmente zusammengeführt, um das Echtzeit-Kundenprofil zu bilden. Jedes Fragment stellt eine eindeutige primäre Identität und die entsprechenden Datensatz- oder Ereignisdaten für diese ID in einem bestimmten Datensatz dar. Weiterführende Informationen zu Profilfragmenten finden Sie in der [Profilübersicht](home.md#profile-fragments-vs-merged-profiles).
+
 ## Limits für Datenmodelle
 
 Die Einhaltung der folgenden Limits wird beim Erstellen eines Datenmodells zur Verwendung mit [!DNL Real-time Customer Profile] empfohlen.
@@ -70,11 +70,13 @@ Die Einhaltung der folgenden Limits wird beim Erstellen eines Datenmodells zur V
 
 | Guardrail | Limit | Begrenzungstyp | Beschreibung |
 | --- | --- | --- | --- |
-| Anzahl der empfohlenen Datensätze für den Beitrag zum Vereinigungsschema [!DNL Profile] | 20 | Soft | **Es werden maximal 20  [!DNL Profile]aktivierte Datensätze empfohlen.** Um einen anderen Datensatz für zu aktivieren,  [!DNL Profile]sollte zunächst ein vorhandener Datensatz entfernt oder deaktiviert werden. |
+| Anzahl der für Profile aktivierten Datensätze | 20 | Soft | **Maximal 20 Datensätze können zum  [!DNL Profile] Vereinigungsschema beitragen.** Um einen anderen Datensatz für zu aktivieren,  [!DNL Profile]sollte zunächst ein vorhandener Datensatz entfernt oder deaktiviert werden. Die Beschränkung von 20 Datensätzen umfasst Datensätze aus anderen Adobe-Lösungen (z. B. Adobe Analytics). |
+| Anzahl der für das Profil aktivierten Adobe Analytics Report Suite-Datensätze | 1 | Soft | **Es sollte maximal ein (1) Analytics Report Suite-Datensatz für Profil aktiviert werden.** Der Versuch, mehrere Analytics Report Suite-Datensätze für Profile zu aktivieren, kann unbeabsichtigte Auswirkungen auf die Datenqualität haben. Weitere Informationen finden Sie im Abschnitt zu [Adobe Analytics-Datensätzen](#aa-datasets) im Anhang zu diesem Dokument. |
 | Anzahl der empfohlenen Beziehungen mit mehreren Entitäten | 5 | Soft | **Es werden maximal 5 Beziehungen mit mehreren Entitäten empfohlen, die zwischen primären Entitäten und Dimensionsentitäten definiert sind.** Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
 | Maximale JSON-Tiefe für ID-Feld, das in der Beziehung mit mehreren Entitäten verwendet wird | 4 | Soft | **Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, beträgt 4.** Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
 | Array-Kardinalität in einem Profilfragment | &lt;=500 | Soft | **Die optimale Array-Kardinalität in einem Profilfragment (zeitunabhängige Daten) ist  &lt;>** |
 | Array-Kardinalität in ExperienceEvent | &lt;=10 | Soft | **Die optimale Array-Kardinalität in einem ExperienceEvent (Zeitreihendaten) ist  &lt;>** |
+| Identitätsanzahl-Limit für einzelnes Profil-Identitätsdiagramm | 50 | Hard | **Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Profil beträgt 50.** Alle Profile mit mehr als 50 Identitäten werden von der Segmentierung, dem Export und der Suche ausgeschlossen. |
 
 ### Limits für Entitäten in Dimensionen
 
@@ -98,8 +100,8 @@ Die folgenden Limits beziehen sich auf die Datengröße und werden empfohlen, um
 | --- | --- | --- | --- |
 | Maximale ExperienceEvent-Größe | 10 KB | Hard | **Die maximale Größe eines Ereignisses beträgt 10 KB.** Die Aufnahme wird fortgesetzt, jedoch werden alle Ereignisse, die größer als 10 KB sind, gelöscht. |
 | Maximale Profildatensatzgröße | 100 KB | Hard | **Die maximale Größe eines Profildatensatzes beträgt 100 KB.** Die Aufnahme wird fortgesetzt, Profildatensätze, die größer als 100 KB sind, werden jedoch gelöscht. |
-| Maximale Größe von Profilfragmenten | 50 MB | Hard | **Die maximale Größe eines Profilfragments beträgt 50 MB.** Die Segmentierung, der Export und die Suche können bei allen  [Profilfragmenten, die größer als 50 MB ](#profile-fragments) sind, fehlschlagen. |
-| Maximale Profilspeichergröße | 50 MB | Soft | **Die maximale Größe eines gespeicherten Profils beträgt 50 MB.** Das Hinzufügen neuer  [Profilfragmente zu ](#profile-fragments) einem Profil, das größer als 50 MB ist, wirkt sich auf die Systemleistung aus. |
+| Maximale Größe von Profilfragmenten | 50 MB | Hard | **Die maximale Größe eines einzelnen Profilfragments beträgt 50 MB.** Die Segmentierung, der Export und die Suche können bei allen  [Profilfragmenten, die größer als 50 MB ](#profile-fragments) sind, fehlschlagen. |
+| Maximale Profilspeichergröße | 50 MB | Soft | **Die maximale Größe eines gespeicherten Profils beträgt 50 MB.** Das Hinzufügen neuer  [Profilfragmente zu ](#profile-fragments) einem Profil, das größer als 50 MB ist, wirkt sich auf die Systemleistung aus. Beispielsweise könnte ein Profil ein einzelnes Fragment mit 50 MB enthalten oder mehrere Fragmente aus mehreren Datensätzen mit einer kombinierten Gesamtgröße von 50 MB enthalten. Der Versuch, ein Profil mit einem einzelnen Fragment, das größer als 50 MB ist, oder mehreren Fragmenten mit einer Gesamtgröße von mehr als 50 MB zu speichern, wirkt sich auf die Systemleistung aus. |
 | Anzahl der täglich erfassten Profil- oder ExperienceEvent-Batches | 90 | Soft | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag erfasst werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der täglich erfassten Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Die Aufnahme zusätzlicher Batches wirkt sich auf die Systemleistung aus. |
 
 ### Limits für Entitäten in Dimensionen
@@ -119,3 +121,13 @@ Die in diesem Abschnitt beschriebenen Limits beziehen sich auf die Anzahl und Ar
 | Maximale Segmentanzahl pro Sandbox | 10 K | Soft | **Die maximale Anzahl von Segmenten, die ein Unternehmen erstellen kann, beträgt 10.000 pro Sandbox.** Eine Organisation kann insgesamt über mehr als 10.000 Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 10.000 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
 | Maximale Anzahl von Streaming-Segmenten pro Sandbox | 500 | Soft | **Die maximale Anzahl von Streaming-Segmenten, die ein Unternehmen erstellen kann, beträgt 500 pro Sandbox.** Eine Organisation kann über mehr als 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
 | Maximale Anzahl an Batch-Segmenten pro Sandbox | 10 K | Soft | **Die maximale Anzahl von Batch-Segmenten, die ein Unternehmen erstellen kann, beträgt 10.000 pro Sandbox.** Eine Organisation kann insgesamt über mehr als 10.000 Batch-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 10.000 Batch-Segmente vorhanden sind. Der Versuch, zusätzliche Batch-Segmente zu erstellen, führt zu einer Beeinträchtigung der Systemleistung. |
+
+## Anhang
+
+Dieser Abschnitt enthält zusätzliche Details zu einzelnen Limits.
+
+### Adobe Analytics Report Suite-Datensätze in Platform {#aa-datasets}
+
+Es sollte maximal ein (1) Adobe Analytics Report Suite-Datensatz für das Profil aktiviert werden. Dies ist eine weiche Begrenzung, d. h. Sie können mehr als einen Analytics-Datensatz für das Profil aktivieren. Es wird jedoch nicht empfohlen, da dies unbeabsichtigte Auswirkungen auf Ihre Daten haben kann. Dies liegt an den Unterschieden zwischen Experience-Datenmodell (XDM)-Schemas, die die semantische Datenstruktur in der Experience Platform bereitstellen und eine konsistente Datenauswertung ermöglichen, und der anpassbaren Natur von eVars und Konversionsvariablen in Adobe Analytics.
+
+So kann beispielsweise eine Organisation in Adobe Analytics über mehrere Report Suites verfügen. Wenn Report Suite A eVar 4 als &quot;internen Suchbegriff&quot;bezeichnet und Report Suite B eVar 4 als &quot;Referrer-Domäne&quot;bezeichnet, werden beide Werte in dasselbe Feld im Profil aufgenommen, was zu Verwirrung und Verschlechterung der Datenqualität führt.

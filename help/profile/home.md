@@ -4,10 +4,10 @@ title: Echtzeit-Kundenprofil – Übersicht
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7ebd84f31161b45c2904545a2310c8b1f7831593
-workflow-type: ht
-source-wordcount: '1779'
-ht-degree: 100%
+source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+workflow-type: tm+mt
+source-wordcount: '1810'
+ht-degree: 92%
 
 ---
 
@@ -43,13 +43,15 @@ Die Benutzeroberfläche von Experience Platform bietet ein Dashboard, mit dem Si
 
 Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer einzigen Ansicht dieses Kunden zusammengefügt wurden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht.
 
-Wenn die Daten aus mehreren Quellen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die [Zusammenführungsrichtlinie](#merge-policies), welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen. Daher ist die Gesamtanzahl der Fragmente innerhalb von Platform wahrscheinlich höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil aus mehreren Fragmenten besteht.
+Mit anderen Worten: Profilfragmente stellen eine eindeutige primäre Identität und die entsprechenden [record](#record-data)- oder [event](#time-series-events)-Daten für diese ID in einem bestimmten Datensatz dar.
 
-### Daten aufzeichnen
+Wenn die Daten aus mehreren Datensätzen in Konflikt stehen (z. B. listet ein Fragment den Kunden als &quot;einzeln&quot;auf, während der andere den Kunden als &quot;verheiratet&quot;auflistet), bestimmt die [Zusammenführungsrichtlinie](#merge-policies), welche Informationen priorisiert und in das Profil für den Kontakt aufgenommen werden sollen. Daher ist die Gesamtanzahl der Profilfragmente in Platform wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil in der Regel aus mehreren Fragmenten aus mehreren Datensätzen besteht.
+
+### Daten aufzeichnen {#record-data}
 
 Ein Profil ist eine Darstellung eines Subjekts, einer Organisation oder einer Einzelperson, die aus vielen Attributen besteht (auch als Datensatzdaten bezeichnet). So kann etwa ein Produktprofil eine SKU und eine Beschreibung enthalten, während in einem Personenprofil Informationen wie Vorname, Nachname und E-Mail-Adresse erfasst sind. Mit [!DNL Experience Platform] können Sie Profile so anpassen, dass die für Ihr Unternehmen relevanten Daten verwendet werden. Die standardmäßige Klasse, das [!DNL Experience Data Model] (XDM), [!DNL XDM Individual Profile], ist die bevorzugte Klasse für die Erstellung eines Schemas zur Beschreibung von Kundendatensatzdaten und liefert eine Vielzahl von für die Interaktionen zwischen Platform-Services essentiellen Daten. Lesen Sie zum Einstieg in die Arbeit mit Schemas in [!DNL Experience Platform] zunächst die [Übersicht über das XDM-System](../xdm/home.md) durch.
 
-### Zeitreihen-Ereignisse
+### Zeitreihen-Ereignisse {#time-series-events}
 
 Zeitreihendaten liefern eine Momentaufnahme des Systems zu dem Zeitpunkt, an dem ein Subjekt direkt oder indirekt eine Aktion ausgeführt hat, sowie Daten mit Details zu dem Ereignis selbst. Zeitreihendaten werden im Schema anhand der Standardklasse XDM ExperienceEvent dargestellt. Sie beschreiben Ereignisse wie etwa das Hinzufügen eines Artikels zu einem Warenkorb, das Klicken auf einen Link, das Abspielen eines Videos usw. Auf Grundlage von Zeitreihendaten können Segmentierungsregeln eingerichtet werden. Die einzelnen Ereignisse sind dabei im Kontext eines Profils abrufbar.
 
@@ -108,6 +110,7 @@ Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adob
 [!DNL Data governance] umfasst eine Reihe von Strategien und Technologien, mittels derer Kundendaten so verwaltet werden können, dass die Einhaltung gesetzlicher Bestimmungen, Einschränkungen und Richtlinien zu ihrer Nutzung gewährleistet bleibt.
 
 Da es um Datenzugriff geht, nimmt die Data Governance in [!DNL Experience Platform] eine zentrale Rolle ein, und zwar auf verschiedenen Ebenen:
+
 * Datennutzungsbeschriftungen
 * Datenzugriffsrichtlinien
 * Kontrollmechanismen für den Datenzugriff für Marketing-Aktivitäten
@@ -120,4 +123,4 @@ Die Umsetzung von [!DNL Data governance] erfolgt an mehreren Stellen. So wird et
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Um mehr über die Verwendung von [!DNL Real-time Customer Profile]-Daten mithilfe der Benutzeroberfläche von Experience Platform oder der Profil-API zu erfahren, lesen Sie zunächst das [Handbuch zur Profil-Benutzeroberfläche](ui/user-guide.md) bzw. das [API-Entwicklerhandbuch](api/overview.md).
+Um mehr über die Arbeit mit Echtzeit-Kundenprofildaten mithilfe der Experience Platform-Benutzeroberfläche oder der Profil-API zu erfahren, lesen Sie zunächst das [Profil-UI-Handbuch](ui/user-guide.md) bzw. das [API-Entwicklerhandbuch](api/overview.md).

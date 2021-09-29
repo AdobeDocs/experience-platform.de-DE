@@ -1,10 +1,11 @@
 ---
 title: XDM Business Marketing List-Member-Klasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Marketing List Members-Klasse im Experience-Datenmodell (XDM).
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 6%
+source-wordcount: '239'
+ht-degree: 7%
 
 ---
 
@@ -28,5 +29,7 @@ ht-degree: 6%
 | `marketingListID` | Zeichenfolge | Eine eindeutige ID für die Marketing-Liste. |
 | `marketingListMemberID` | Zeichenfolge | Eine eindeutige ID für die Entität der Mitgliedschaft in der Marketing-Liste. |
 | `personId` | Zeichenfolge | Eine eindeutige ID für die Person. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Informationen dazu, wie diese Klasse konzeptionell mit anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können, finden Sie im Handbuch zu [Schemabeziehungen in der Echtzeit-Kundendatenplattform B2B Edition](../../tutorials/relationship-b2b.md).

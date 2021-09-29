@@ -1,19 +1,19 @@
 ---
 title: XDM Business Person Details Schema Field Group
 description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe "XDM Business Person Details".
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
+source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 9%
+source-wordcount: '562'
+ht-degree: 11%
 
 ---
 
+# [!UICONTROL XDM Business Person ] DetailsSchema-Feldergruppe (Beta)
 
-# [!UICONTROL XDM Business Person ] Detaisschema-Feldergruppe
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Diese Feldergruppe steht nur Unternehmen zur Verfügung, die Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform haben.
+>Diese Feldergruppe ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Person ] Details ist eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die Informationen über eine Person im Kontext eines B2B-Unternehmens (Business-to-Business) erfasst.
 

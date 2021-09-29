@@ -1,18 +1,19 @@
 ---
 title: B2B-Quelldatentyp
 description: Dieses Dokument bietet einen Überblick über den Datentyp des B2B-Quell-Experience-Datenmodells (XDM).
-source-git-commit: 19bb39b66f3a3eb93fd0138ac021568021d77b0f
+exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 3%
+source-wordcount: '302'
+ht-degree: 6%
 
 ---
 
-# [!UICONTROL B2B-] Quelldatentyp
+# [!UICONTROL B2B-] Quelldatentyp (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform haben.
+>Dieser Datentyp ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL B2B ] Sources ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine zusammengesetzte Kennung für eine B2B-Entität darstellt (z. B. ein  [Konto](../classes/b2b/business-account.md), eine  [Gelegenheit](../classes/b2b/business-opportunity.md) oder eine  [Kampagne](../classes/b2b/business-campaign.md)).
 

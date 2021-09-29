@@ -3,12 +3,12 @@ keywords: Experience Platform;Startseite;beliebte Themen;Namespace;Namespace;Nam
 solution: Experience Platform
 title: Identity Namespace - Überblick
 topic-legacy: overview
-description: Identitäts-Namespaces sind eine Komponente des Identity Service, die als Indikatoren für den Kontext dient, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
+description: Identity-Namespaces sind Komponenten des Identity Service, die als Indikatoren für den Kontext dienen, auf den sich eine Identität bezieht. Sie unterscheiden beispielsweise den Wert "name@email.com"als E-Mail-Adresse oder "443522"als numerische CRM-ID.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 700012988fd46e835dcbc441c39f08e4c172ef0f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 20%
+source-wordcount: '1598'
+ht-degree: 21%
 
 ---
 
@@ -79,7 +79,7 @@ Um Identitäts-Namespaces in der Benutzeroberfläche anzuzeigen, wählen Sie im 
 
 ![durchsuchen](./images/browse.png)
 
-Auf der Hautoberfläche der Seite wird eine Liste von Identitäts-Namespaces angezeigt, die Informationen zu ihren Namen, Identitätssymbolen, dem letzten aktualisierten Datum und dazu enthalten, ob es sich um einen Standard- oder einen benutzerdefinierten Namespace handelt. Die rechte Leiste enthält Informationen zu [!UICONTROL Eindeutige Identitäten] und [!UICONTROL Stärke des Identitätsdiagramms]. [!UICONTROL Eindeutige ] Identitäten beziehen sich auf die Anzahl der Identitäten, die in der von Ihnen verwendeten Sandbox vorhanden sind, während die Stärke des  [!UICONTROL Identitätsdiagramms Informationen zur Anzahl der Cookie- und Nicht-Cookie-IDs in Ihrer Sandbox ] anzeigt.
+Auf der Hautoberfläche der Seite wird eine Liste von Identitäts-Namespaces angezeigt, die Informationen zu ihren Namen, Identitätssymbolen, dem letzten aktualisierten Datum und dazu enthalten, ob es sich um einen Standard- oder einen benutzerdefinierten Namespace handelt. Die rechte Leiste enthält Informationen zu [!UICONTROL Stärke des Identitätsdiagramms].
 
 ![identities](./images/identities.png)
 

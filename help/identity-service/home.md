@@ -5,9 +5,9 @@ title: Identity Service – Übersicht
 topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 947d8803416cee584b35a8d480929e2684d0057f
+source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1792'
 ht-degree: 57%
 
 ---
@@ -35,7 +35,6 @@ Bevor wir in die Details von [!DNL Identity Service] eintauchen, hier eine kurze
 | Identitäts-Namespace | Ein Identitäts-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität &quot;name<span>@email.com&quot;als E-Mail-Adresse oder &quot;443522&quot;als numerische CRM-ID. Identitäts-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identitäts-Namespace `email` aufweisen, tatsächlich dieselbe Person sind. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
 | Identitätsdiagramm | Ein Identitätsdiagramm ist eine Zusammenstellung von Beziehungen zwischen verschiedenen Identitäten, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zu [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md) . |
 | Persönlich identifizierbare Informationen (PII) | PII sind Informationen, mit denen ein Kunde direkt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Telefonnummer. PII-Werte werden häufig zur Übereinstimmung verwendet. die verschiedenen Identitäten eines Kunden in verschiedenen Systemen. |
-| Eindeutige Identität | Eine eindeutige Identität ist eine Identität, die nur in einer bestimmten Sandbox vorhanden ist. |
 | Unbekannte oder anonyme Identitäten | Unbekannte oder anonyme Identitäten sind Indikatoren, die Geräte isolieren, ohne die tatsächliche Person zu identifizieren, die das Gerät verwendet. Unbekannte und anonyme Identitäten umfassen Informationen wie die IP-Adresse und Cookie-ID eines Besuchers. Unbekannte und anonyme Identitäten können zwar Verhaltensdaten bereitstellen, sind jedoch begrenzt, bis ein Kunde seine personenbezogenen Daten bereitstellt. |
 
 ## Was ist [!DNL Identity Service]?

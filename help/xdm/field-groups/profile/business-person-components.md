@@ -1,19 +1,19 @@
 ---
 title: XDM Business Person Components Schema Field Group
 description: Dieses Dokument bietet einen Überblick über die Schemakomponentenfeldgruppe "XDM Business Person Components".
-source-git-commit: 319d508925d22e76a3d75ae473f6ea000b5c655b
+exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
+source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 4%
+source-wordcount: '441'
+ht-degree: 5%
 
 ---
 
+# [!UICONTROL Feldergruppe &quot;XDM Business Person ] Components&quot;(Beta)
 
-# [!UICONTROL Feldergruppe &quot;XDM Business Person ] Components&quot;
-
->[!NOTE]
+>[!IMPORTANT]
 >
->Diese Feldergruppe steht nur Unternehmen zur Verfügung, die Zugriff auf die B2B-Version der Echtzeit-Kundendatenplattform (Echtzeit-Kundendatenplattform) haben.
+>Diese Feldergruppe ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Person ] Component ist eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die mehrere Quelldatensätze für eine Person und andere Attribute erfasst, die für die Personensegmentierung erforderlich sind.
 

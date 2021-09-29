@@ -5,10 +5,10 @@ title: 'Edge-Segmentierung mithilfe der API '
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: f92b12d343584f33870dd42288977e7b6e446b0f
+source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
 workflow-type: tm+mt
-source-wordcount: '633'
-ht-degree: 17%
+source-wordcount: '636'
+ht-degree: 12%
 
 ---
 
@@ -28,7 +28,7 @@ Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Adobe E
 - [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren  [!DNL Real-time Customer Profile] Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
-Lesen Sie für erfolgreiche Aufrufe an [!DNL Data Prep]-API-Endpunkte das Handbuch für [Erste Schritte mit Platform-APIs](../../landing/api-guide.md), um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
+Um erfolgreich Aufrufe an Experience Platform-API-Endpunkte durchzuführen, lesen Sie das Handbuch [Erste Schritte mit Platform-APIs](../../landing/api-guide.md) , um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
 
 ## Kantensegmentierungs-Abfragetypen {#query-types}
 
