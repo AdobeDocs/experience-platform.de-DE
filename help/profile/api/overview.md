@@ -3,10 +3,10 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Handbuch zur Echtzeit-Kundenprofil-API
 description: Die Echtzeit-Kundenprofil-API ermöglicht es Entwicklern, Profildaten zu untersuchen und mit ihnen zu arbeiten, einschließlich Anzeigen von Profilen, Erstellen und Aktualisieren von Zusammenführungsrichtlinien, Exportieren oder Beispielprofildaten und Löschen von Profildaten, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: b2ae2b4ca2efe606aa148e06ca988a6285bedfee
+source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 23%
+source-wordcount: '963'
+ht-degree: 21%
 
 ---
 
@@ -57,6 +57,10 @@ Da Daten in Platform erfasst werden, wird ein Beispielauftrag ausgeführt, um di
 ## Profilsystemaufträge {#profile-system-jobs}
 
 Profilaktivierte Daten, die in [!DNL Platform] erfasst werden, werden im [!DNL Data Lake] sowie im [!DNL Real-time Customer Profile]-Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, einen Datensatz oder Batch aus dem [!DNL Profile]-Speicher zu löschen, um nicht mehr benötigte oder fehlerhaft hinzugefügte Daten zu entfernen. Dies erfordert die Verwendung der API zum Erstellen eines [!DNL Profile System Job], auch als &quot;[!DNL delete request]&quot;bezeichnet, das bei Bedarf geändert, überwacht oder gelöscht werden kann. Um zu erfahren, wie Sie Löschanfragen mithilfe des Endpunkts `/system/jobs` in der API [!DNL Real-time Customer Profile] verwenden, führen Sie die Schritte aus, die im Endpunkt [Profilsystemaufträge](profile-system-jobs.md) beschrieben sind.
+
+## Profilattribute aktualisieren {#update-profile}
+
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Möglicherweise müssen Sie Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch- oder Streaming-Erfassung erfolgen. Dazu ist ein Profil-aktivierter Datensatz erforderlich, der mit einem aktualisierten -Tag konfiguriert ist. Weitere Informationen zum Konfigurieren eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zum Aktivieren eines Datensatzes für Profil und zum Aktualisieren](../../catalog/datasets/enable-upsert.md).[
 
 ## Nächste Schritte {#next-steps}
 

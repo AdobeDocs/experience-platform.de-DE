@@ -2,90 +2,26 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Batch-Erfassung; Batch-Erfassung; Erfassung; Entwicklerhandbuch; API-Handbuch; Hochladen; Parquet erfassen; JSON erfassen erfassen;
 solution: Experience Platform
 title: Handbuch zur Batch Ingestion-API
-topic-legacy: developer guide
-description: Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von APIs für die Batch-Erfassung.
+description: Dieses Dokument enthält eine umfassende Anleitung für Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
-source-wordcount: '2552'
-ht-degree: 90%
+source-wordcount: '2373'
+ht-degree: 77%
 
 ---
 
-# Handbuch zur Batch-Aufnahme-API
+# Entwicklerhandbuch zur Batch-Erfassung
 
-Dieses Dokument bietet Ihnen einen umfassenden Überblick über die Verwendung von [APIs für die Batch-Erfassung](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
+Dieses Dokument enthält eine umfassende Anleitung zur Verwendung der [API-Endpunkte für die Batch-Erfassung](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie, wenn Sie die [Batch-Aufnahme-API-Übersicht](overview.md) lesen.
 
 Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Erfassung verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
 
 ## Erste Schritte
 
-Data Ingestion bietet eine RESTful-API, mit der Sie bei unterstützten Objekttypen grundlegende CRUD-Vorgänge durchführen können.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data Ingestion bietet eine RESTful-API, mit der Sie bei unterstützten Objekttypen grundlegende CRUD-Vorgänge durchführen können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Batch Ingestion-API erfolgreich aufrufen zu können.
-
-Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
-
-- [Batch-Erfassung](./overview.md): Erlaubt Ihnen das Erfassen von Daten in Adobe Experience Platform in Form von Batch-Dateien.
-- [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten  [!DNL Experience Platform] organisiert werden.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
-
-### Lesen von Beispiel-API-Aufrufen
-
-In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
-
-### Sammeln von Werten für erforderliche Kopfzeilen
-
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
-
-Anfragen, die eine Payload enthalten (POST, PUT, PATCH), erfordern möglicherweise eine zusätzliche `Content-Type`-Kopfzeile. Die für einzelne Aufrufe zulässigen Werte werden in den Aufrufparametern angegeben.
-
-## Typen
-
-Beim Erfassen von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model] (XDM)-Schemas funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
-
-Bei der Erfassung von Daten gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Zielschema übereinstimmt, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
-
-Beispielsweise verfügen weder JSON noch CSV über einen Datums- oder Datum/Uhrzeit-Typ. Daher werden diese Werte mit [ISO 8061 formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit ausgedrückt und in Millisekunden formatiert (1531263 959000) und werden zur Erfassungszeit in den Ziel-XDM-Typ konvertiert.
-
-Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterstützt werden.
-
-| Eingehend (Zeile) vs. Ziel (Spalte) | Zeichenfolge | Byte | Kurz | Ganzzahl | Lang | Double | Datum | Datum/Uhrzeit | Objekt | Zuordnung |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Zeichenfolge | X | X | X | X | X | X | X | X |  |  |
-| Byte | X | X | X | X | X | X |  |  |  |  |
-| Kurz | X | X | X | X | X | X |  |  |  |  |
-| Ganzzahl | X | X | X | X | X | X |  |  |  |  |
-| Lang | X | X | X | X | X | X | X | X |  |  |
-| Double | X | X | X | X | X | X |  |  |  |  |
-| Datum |  |  |  |  |  |  | X |  |  |  |
-| Datum/Uhrzeit |  |  |  |  |  |  |  | X |  |  |
-| Objekt |  |  |  |  |  |  |  |  | X | X |
-| Zuordnung |  |  |  |  |  |  |  |  | X | X |
-
->[!NOTE]
->
->Boolesche Werte und Arrays können nicht in andere Typen konvertiert werden.
-
-## Einschränkungen bei der Erfassung
-
-Die Erfassung von Batch-Daten unterliegt verschiedenen Einschränkungen:
-- Maximale Anzahl von Dateien pro Batch: 1.500
-- Maximale Batch-Größe: 100 GB
-- Maximale Anzahl von Eigenschaften oder Feldern pro Zeile: 10.000
-- Maximale Anzahl der Batches pro Minute und Anwender: 138
+Bevor Sie fortfahren, lesen Sie zunächst den [Überblick über die Batch-Aufnahme-API](overview.md) und den [Erste Schritte](getting-started.md) .
 
 ## JSON-Dateien erfassen
 
@@ -157,7 +93,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Dateien hochladen
 
-Nach dem Erstellen eines Batches können Sie die `batchId` verwenden, um Dateien in den Batch hochzuladen. Sie haben die Möglichkeit, mehrere Dateien in den Batch hochzuladen.
+Nachdem Sie einen Batch erstellt haben, können Sie die Batch-Kennung aus der Batch-Erstellungsantwort verwenden, um Dateien in den Batch hochzuladen. Sie haben die Möglichkeit, mehrere Dateien in den Batch hochzuladen.
 
 >[!NOTE]
 >
@@ -231,7 +167,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Parquet-Dateien erfassen
+## Parquet-Dateien erfassen {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -812,6 +748,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
+## Batch Patch
+
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Möglicherweise müssen Sie Datensätze korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt die Aktualisierung oder den Patch von Profilspeicherdaten durch eine Upstream-Aktion oder &quot;Patchen eines Batches&quot;.
+
+>[!NOTE]
+>
+>Diese Aktualisierungen sind nur für Profildatensätze zulässig, nicht für Erlebnisereignisse.
+
+Folgendes ist erforderlich, um einen Batch zu patchen:
+
+- **Ein für Profil- und Attributaktualisierungen aktivierter Datensatz.** Dies erfolgt über Datensatz-Tags und erfordert das Hinzufügen eines bestimmten  `isUpsert:true` Tags zum  `unifiedProfile` Array. Ausführliche Anweisungen zum Erstellen eines Datensatzes oder Konfigurieren eines vorhandenen Datensatzes für die Aktualisierung finden Sie im Tutorial zum Aktivieren eines Datensatzes für Profilaktualisierungen](../../catalog/datasets/enable-upsert.md).[
+- **Eine Parquet-Datei mit den zu patchierenden Feldern und Identitätsfeldern für das Profil.** Das Datenformat für das Patchen eines Batches ähnelt dem normalen Batch-Erfassungsvorgang. Die erforderliche Eingabe ist eine Parquet-Datei. Zusätzlich zu den zu aktualisierenden Feldern müssen die hochgeladenen Daten die Identitätsfelder enthalten, damit sie mit den Daten im Profilspeicher übereinstimmen.
+
+Nachdem Sie einen Datensatz für Profil und Upload aktiviert haben und eine Parquet-Datei mit den zu patchierenden Feldern sowie den erforderlichen Identitätsfeldern, können Sie die Schritte für [Erfassung von Parquet-Dateien](#ingest-parquet-files) ausführen, um den Patch über die Batch-Erfassung abzuschließen.
+
 ## Batch ersetzen
 
 Wenn Sie einen bereits erfassten Batch ersetzen möchten, können Sie dies mit „batch replace“ tun. Diese Aktion entspricht einem Löschen des alten Batches und dem Erfassen eines neuen Batches.
@@ -963,6 +914,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## Anhang
+
+Der folgende Abschnitt enthält zusätzliche Informationen zur Aufnahme von Daten in Experience Platform mithilfe der Batch-Erfassung.
 
 ### Datenumwandlung für die Batch-Erfassung
 

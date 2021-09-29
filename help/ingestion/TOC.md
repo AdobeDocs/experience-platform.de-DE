@@ -4,10 +4,10 @@ user-guide-title: Hilfe zur Datenerfassung in Adobe Experience Platform
 breadcrumb-title: Anleitung zur Datenaufnahme
 user-guide-description: Implementieren Sie Ihre Daten durch Batch- oder Streaming-Aufnahmen in Platform.
 feature: Data Ingestion
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 95%
+source-wordcount: '124'
+ht-degree: 88%
 
 ---
 
@@ -20,8 +20,9 @@ ht-degree: 95%
    - [Kafka-Connector](streaming-ingestion/kafka.md)
    - [Fehlerbehebung](streaming-ingestion/troubleshooting.md)
 - Batch-Erfassung {#batch}
-   - [Übersicht](batch-ingestion/overview.md)
-   - [Batch Ingestion-API](batch-ingestion/api-overview.md)
+   - [Erste Schritte mit Batch-Aufnahme-APIs](batch-ingestion/getting-started.md)
+   - [API-Übersicht](batch-ingestion/overview.md)
+   - [API-Entwicklerhandbuch](batch-ingestion/api-overview.md)
    - [Partielle Batch-Erfassung](batch-ingestion/partial.md)
    - [Fehlerbehebung](batch-ingestion/troubleshooting.md)
 - Tutorials {#tutorials}

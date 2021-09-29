@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Anleitung zum Echtzeit-Kundenprofil
 user-guide-description: Führen Sie Kundendaten zusammen, um eine einheitliche, kanalübergreifende Ansicht von Kundeninteraktionen zu erstellen.
 feature: Profiles
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 96%
+source-wordcount: '136'
+ht-degree: 93%
 
 ---
 
@@ -43,8 +43,8 @@ ht-degree: 96%
    * [Handbuch zur Vereinigungsschema-Benutzeroberfläche](ui/union-schema.md)
    * [Übersicht zum Vereinigungsschema (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
-   * [Hinzufügen von Daten zu  [!DNL Profile]](tutorials/add-profile-data.md)
-   * [Konfigurieren eines Datensatzes für  [!DNL Profile] & [!DNL Identity]  Service](tutorials/dataset-configuration.md)
+   * [Hinzufügen von Daten zum Echtzeit-Kundenprofil](tutorials/add-profile-data.md)
+   * [Datensatz für Profil konfigurieren](tutorials/dataset-configuration.md)
    * [Erstellen eines Berichts zur Datensatzüberschneidung](tutorials/dataset-overlap-report.md)
    * [Weitere Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)

@@ -4,10 +4,10 @@ title: Echtzeit-Kundenprofil – Übersicht
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 93a4cd5c86a715cd04cd2a553866bbb4e19f951a
+source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 92%
+source-wordcount: '1884'
+ht-degree: 89%
 
 ---
 
@@ -104,6 +104,10 @@ Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden üb
 ### Metriken zur Aufnahme von Profilen
 
 Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Leistungsindikatoren von [!DNL Experience Platform] für verschiedene [!DNL Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Datensätze und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofilmetriken finden Sie in der Dokumentation zu den [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
+
+## Profilspeicherdaten aktualisieren
+
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Möglicherweise müssen Sie Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch- oder Streaming-Erfassung erfolgen. Dazu ist ein Profil-aktivierter Datensatz erforderlich, der mit einem aktualisierten -Tag konfiguriert ist. Weitere Informationen zum Konfigurieren eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zum Aktivieren eines Datensatzes für Profil und zum Aktualisieren](../catalog/datasets/enable-upsert.md).[
 
 ## [!DNL Data governance] und [!DNL Privacy]
 
