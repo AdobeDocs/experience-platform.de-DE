@@ -1,12 +1,10 @@
 ---
 title: Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Zieldokumentationsseite zu erstellen.
-seo-title: Use a text editor in your local environment to create a destination documentation page
-description: Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwenden können, um in Ihrer lokalen Umgebung Dokumentation zu erstellen und eine Pull-Anforderung zu senden.
-seo-description: The instructions on this page show you how to use a text editor to work in your local environment to author documentation and submit a pull request.
+description: Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie mit einem Texteditor in Ihrer lokalen Umgebung eine Dokumentationsseite für Ihr Experience Platform-Ziel erstellen und zur Überprüfung senden können.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e1e7d2f70c032d02f96b3999e4fca736070c6ca9
+source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '871'
 ht-degree: 3%
 
 ---
@@ -28,7 +26,7 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`
 2. Um das Repository [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) zu verlassen, klicken Sie auf **Fork**, wie im Screenshot gezeigt.
 
-   ![Dokumentation zur Adobe von Verzweigungen](./assets/ssd-fork-repo.png)
+   ![Dokumentation zur Adobe von Verzweigungen](./assets/ssd-fork-repository.gif)
 
 3. Repository auf Ihren lokalen Computer klonen. Wählen Sie **Code > HTTPS > Öffnen mit GitHub Desktop** wie unten dargestellt. Vergewissern Sie sich, dass [GitHub Desktop](https://desktop.github.com/) installiert ist. Weitere Informationen finden Sie unter [Lokalen Klon des Repositorys erstellen](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) im Adobe Contributor Guide.
 
@@ -47,6 +45,10 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
 ## Übermitteln der Dokumentation zur Überprüfung {#submit-review}
 
+>[!TIP]
+>
+>Beachten Sie, dass hier nichts kaputt gemacht werden kann. Indem Sie den Anweisungen in diesem Abschnitt folgen, schlagen Sie einfach eine Aktualisierung der Dokumentation vor. Ihre vorgeschlagene Aktualisierung wird vom Dokumentationsteam von Adobe Experience Platform genehmigt oder bearbeitet.
+
 1. Erstellen Sie in GitHub Desktop eine Arbeitsverzweigung für Ihre Aktualisierungen und wählen Sie **Verzweigung veröffentlichen** aus, um die Verzweigung auf GitHub zu veröffentlichen.
 
 ![Neuer lokaler Zweig](./assets/new-branch-local.gif)
@@ -61,7 +63,7 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
 1. Öffnen Sie in der GitHub-Webschnittstelle eine Pull-Anfrage (PA), um Ihre Arbeitsverzweigung mit der Übergeordneten Verzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass der Zweig, an dem Sie gearbeitet haben, ausgewählt ist, und wählen Sie **Pull-Anforderung** aus.
 
-   ![Pull-Anforderung erstellen](./assets/ssd-create-pull-request-1.png)
+   ![Pull-Anforderung erstellen](./assets/ssd-create-pull-request-1.gif)
 
 1. Stellen Sie sicher, dass die Basis- und Vergleichsverzweigungen korrekt sind. Fügen Sie der PA einen Hinweis hinzu, beschreiben Sie Ihre Aktualisierung und wählen Sie **Pull-Anforderung erstellen** aus. Dadurch wird ein PR-Vorgang geöffnet, um die Arbeitsverzweigung Ihrer Verzweigung mit der Übergeordneten Verzweigung des Adobe-Repositorys zusammenzuführen.
    >[!TIP]
