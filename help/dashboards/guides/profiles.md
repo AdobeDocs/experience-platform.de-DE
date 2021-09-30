@@ -4,9 +4,9 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a63969075215a8f9884d2f41485194bd732694f1
+source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1513'
 ht-degree: 6%
 
 ---
@@ -95,7 +95,9 @@ Das Widget **[!UICONTROL hinzugefügte Profile]** zeigt die Gesamtzahl der zusam
 
 >[!NOTE]
 >
->Das Widget [!UICONTROL hinzugefügte Profile] gibt die Anzahl der Profile an, die dem System nach der ersten Konfiguration Ihres Unternehmens hinzugefügt wurden. Wenn beispielsweise während der Konfiguration vier Millionen Profile hinzugefügt wurden und Sie in den letzten 30 Tagen eine weitere Million Profile hinzugefügt haben, würde das Widget [!UICONTROL hinzugefügte Profile] &quot;1.000.000&quot;anzeigen, während das Widget [!UICONTROL Profilanzahl] &quot;5.000.000&quot;anzeigen würde.
+>Das Widget [!UICONTROL hinzugefügte Profile] gibt die Anzahl der Profile an, die dem System nach der ersten Konfiguration Ihres Unternehmens hinzugefügt wurden. Weitere Informationen zum Hinzufügen von Profilen zum Profilspeicher finden Sie in der [Dokumentation zum Echtzeit-Kundenprofil](../../profile/home.md).
+>
+>Wenn beispielsweise während der Konfiguration vier Millionen Profile hinzugefügt wurden und Sie in den letzten 30 Tagen eine weitere Million Profile hinzugefügt haben, würde das Widget [!UICONTROL hinzugefügte Profile] &quot;1.000.000&quot;anzeigen, während das Widget [!UICONTROL Profilanzahl] &quot;5.000.000&quot;anzeigen würde.
 
 ![](../images/profiles/profiles-added.png)
 

@@ -1,15 +1,15 @@
 ---
 solution: Experience Platform
-title: Rohdaten mit Experience Platform-Dashboards durchsuchen und verarbeiten
+title: Rohdaten mit Platform-Dashboards durchsuchen und verarbeiten
 type: Documentation
 description: Erfahren Sie, wie Sie mit Query Service Rohdatensätze untersuchen und verarbeiten können, die Profil-, Segment- und Ziel-Dashboards in Experience Platform unterstützen.
-source-git-commit: 1facf7079213918c2ef966b704319827eaa4a53d
-workflow-type: ht
-source-wordcount: '614'
-ht-degree: 100%
+exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
+source-git-commit: b9dd7584acc43b5946f8c0669d7a81001e44e702
+workflow-type: tm+mt
+source-wordcount: '738'
+ht-degree: 66%
 
 ---
-
 
 # Dashboard-Datensätze mithilfe von Query Service durchsuchen, überprüfen und verarbeiten
 
@@ -27,19 +27,36 @@ Sie können Query Service verwenden, um Raw-Datensätze für Profil-, Segment- u
 
 ### Profilattributdatensätze
 
-Für jede aktive Zusammenführungsrichtlinie im Echtzeit-Kundenprofil steht im Data Lake ein Datensatz mit Profilattributen zur Verfügung.
+Profil-Dashboard-Einblicke sind mit Zusammenführungsrichtlinien verknüpft, die von Ihrer Organisation definiert wurden. Für jede aktive Zusammenführungsrichtlinie ist ein Datensatz mit Profilattributen im Data Lake verfügbar.
 
-Die Namenskonvention für diese Datensätze lautet **Profilattribut**, gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+Die Namenskonvention für diese Datensätze lautet **Profil-Snapshot-Export** , gefolgt von einem systemgenerierten, zufälligen alphanumerischen Wert. Beispiel: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
 
-Um das vollständige Schema jedes Datensatzes zu verstehen, können Sie die Datensätze mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
+Um das vollständige Schema jedes Profil-Snapshot-Exportdatensatzes zu verstehen, können Sie die Datensätze [mit dem Datensatz-Viewer](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
+
+![](images/query/profile-attribute.png)
+
+#### Zuordnen von Profilattributdatensätzen zu Zusammenführungsrichtlinien-IDs
+
+Jeder Profilattribut-Datensatz erhält die Bezeichnung **Profil Snapshot Export** , gefolgt von einem systemgenerierten, zufälligen alphanumerischen Wert. Beispiel: `Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f`.
+
+Dieser alphanumerische Wert ist eine systemgenerierte, zufällige Zeichenfolge, die einer Zusammenführungsrichtlinien-ID einer der von Ihrer Organisation erstellten Zusammenführungsrichtlinien zugeordnet ist. Die Zuordnung jeder Zusammenführungsrichtlinien-ID zu der zugehörigen Datensatz-Zeichenfolge des Profilattributs wird im Datensatz `adwh_dim_merge_policies` beibehalten.
+
+Der Datensatz `adwh_dim_merge_policies` enthält die folgenden Felder:
+
+* `merge_policy_name`
+* `merge_policy_id`
+* `merge_policy`
+* `dataset_id`
+
+Dieser Datensatz kann mithilfe der Benutzeroberfläche des Abfrage-Editors in Experience Platform untersucht werden. Weitere Informationen zur Verwendung des Abfrage-Editors finden Sie im [UI-Handbuch für den Abfrage-Editor](../query-service/ui/user-guide.md).
 
 ### Datensatz für Segmentmetadaten
 
 Im Data Lake ist ein Segment-Metadaten-Datensatz verfügbar, der Metadaten für die einzelnen Segmente Ihres Unternehmens enthält.
 
-Die Namenskonvention für diesen Datensatz lautet **Profilsegmentdefinition**, gefolgt von einem alphanumerischen Wert. Beispiel: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+Die Namenskonvention für diesen Datensatz lautet **Segmentdefinition-Snapshot-Export** , gefolgt von einem alphanumerischen Wert. Beispiel: `Segmentdefinition-Snapshot-Export-acf28952-2b6c-47ed-8f7f-016ac3c6b4e7`
 
-Um das vollständige Schema des Datensatzes zu verstehen, können Sie das Schema mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
+Um das vollständige Schema der einzelnen Momentaufnahmen-Exportdatensätze der Segmentdefinition zu verstehen, können Sie die Datensätze [mit dem Datensatz-Viewer](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
 ![](images/query/segment-metadata.png)
 
@@ -49,7 +66,7 @@ Die Metadaten für alle aktivierten Ziele Ihres Unternehmens sind als Rohdatensa
 
 Die Namenskonvention dieses Datensatzes lautet **DIM_Destination**.
 
-Um das vollständige Schema des Datensatzes zu verstehen, können Sie das Schema mit dem Datensatz-Viewer in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
+Um das vollständige Schema des DIM-Ziel-Datensatzes zu verstehen, können Sie den Datensatz [mit dem Datensatz-Viewer](../catalog/datasets/user-guide.md) in der Experience Platform-Benutzeroberfläche in der Vorschau anzeigen und untersuchen.
 
 ![](images/query/destinations-metadata.png)
 
@@ -59,7 +76,11 @@ Die folgenden Beispielabfragen enthalten Beispiel-SQL, das in Query Service verw
 
 ### Anzahl der Profile nach Identität
 
-Dieser Profileinblick bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile im Datensatz hinweg. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
+Dieser Profileinblick bietet eine Aufschlüsselung der Identitäten über alle zusammengeführten Profile im Datensatz hinweg.
+
+>[!NOTE]
+>
+>Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
 
 **Abfrage**
 
@@ -72,7 +93,7 @@ Select
            Select
                explode(identitymap)
            from
-              profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+              Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
         )
      group by
         namespace;
@@ -96,7 +117,7 @@ Select
                   Select
                     explode(Segmentmembership)
                   from
-                    profile_attribute_14adf268-2a20-4dee-bee6-a6b0e34616a9
+                    Profile-Snapshot-Export-abbc7093-80f4-4b49-b96e-e743397d763f
               )
         )
       group by
