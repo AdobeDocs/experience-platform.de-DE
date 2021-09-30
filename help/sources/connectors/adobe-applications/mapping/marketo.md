@@ -5,18 +5,14 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 0af9290a3143b85311fbbd8d194f4799b0c9a873
+source-git-commit: 8680f0f3f67548cbf18c1aa0f0c68c5810c40f90
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 13%
+source-wordcount: '532'
+ht-degree: 9%
 
 ---
 
-# (Beta) [!DNL Marketo Engage] Feldzuordnungen
-
->[!IMPORTANT]
->
->Die Quelle [!DNL Marketo Engage] befindet sich derzeit in der Beta-Phase. Die Funktionen und die Dokumentation können sich ändern.
+# [!DNL Marketo Engage] Feldzuordnungen
 
 Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neun Datensätzen [!DNL Marketo] und den entsprechenden Feldern des Experience-Datenmodells (XDM).
 
@@ -25,8 +21,12 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
 | `_id` | `_id` |
-| `personID` | `personID` | Primäre Identität |
+| `"Marketo"` | `personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `personKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `personID` | `personKey.sourceID` |
+| `concat(personID,"@${MUNCHKIN_ID}.Marketo")` | `personKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
 | `eventType` | `eventType` |
+| `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
@@ -38,9 +38,9 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
 | `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` |
 | `web.webReferrer.URL` | `web.webReferrer.URL` |
-| `listOperations.listID` | `listOperations.listID` |
+| `iif(${listOperations\.listID} != null && ${listOperations\.listID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", ${listOperations\.listID}, "sourceKey", concat(${listOperations\.listID},"@${MUNCHKIN_ID}.Marketo")), null)` | `listOperations.listKey` |
 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `iif(${opportunityEvent\.opportunityID} != null && ${opportunityEvent\.opportunityID} != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID",${opportunityEvent\.opportunityID}, "sourceKey", concat(${opportunityEvent\.opportunityID},"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityEvent.opportunityKey` |
 | `opportunityEvent.role` | `opportunityEvent.role` |
 | `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` |
 | `leadOperation.newLead.formName` | `leadOperation.newLead.formName` |
@@ -53,6 +53,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
+| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
@@ -75,10 +76,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `leadOperation.changeScore.scoreAttributeID` | `leadOperation.changeScore.scoreAttributeID` |
 | `leadOperation.changeScore.scoreAttributeName` | `leadOperation.changeScore.scoreAttributeName` |
 | `leadOperation.changeScore.urgency` | `leadOperation.changeScore.urgency` |
-| `opportunityEvent.dataValueChanges.attributeName` | `opportunityEvent.dataValueChanges.attributeName` |
-| `opportunityEvent.dataValueChanges.newValue` | `opportunityEvent.dataValueChanges.newValue` |
-| `opportunityEvent.dataValueChanges.oldValue` | `opportunityEvent.dataValueChanges.oldValue` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `json_to_object(${opportunityEvent\.dataValueChanges})` | `opportunityEvent.dataValueChanges` |
+| `iif(${leadOperation\.campaignProgression\.campaignID} != null && ${leadOperation\.campaignProgression\.campaignID} != "" , to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", ${leadOperation\.campaignProgression\.campaignID}, "sourceKey", concat(${leadOperation\.campaignProgression\.campaignID},"@${MUNCHKIN_ID}.Marketo")), null)` | `leadOperation.campaignProgression.campaignKey` |
 | `leadOperation.campaignProgression.campaignID` | `leadOperation.campaignProgression.campaignID` |
 | `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` |
 | `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` |
@@ -87,6 +86,10 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` |
 | `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` |
 | `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` |
+| `leadOperation.interestingMoment.date` | `leadOperation.interestingMoment.date` |
+| `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` |
+| `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` |
+| `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -94,8 +97,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignID` | Primäre Identität |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
+| `"Marketo"` | `campaignKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `id` | `campaignKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `iif(sfdcId != null && sfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdcId, "sourceKey", concat(sfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -104,8 +110,12 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `cost` | `actualCost.amount` |
-| `parentProgramId` | `parentCampaignID` |
+| `iif(parentProgramId != null && parentProgramId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", parentProgramId, "sourceKey", concat(parentProgramId,"@${MUNCHKIN_ID}.Marketo")), null)` | `parentCampaignKey` |
 | `integrationPartner` | `integrationPartnerName` |
+| `webinarSessionName` | `webinarSessionName` |
+| `webinarSessionDescription` | `webinarSessionDescription` |
+| `webinarHistorySyncStatus` | `webinarHistorySyncStatus` |
+| `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
 
@@ -115,10 +125,13 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignMemberID` | Primäre Identität |
-| `programId` | `campaignID` | Beziehung |
-| `leadId` | `personID` | Beziehung |
-| `acquiredByCampaignID` | `acquiredByCampaignID` |
+| `"Marketo"` | `campaignMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `campaignMemberKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `id` | `campaignMemberKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `campaignMemberKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `iif(programId != null && programId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", programId, "sourceKey", concat(programId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Beziehung |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Beziehung |
+| `iif(acquiredByCampaignID != null && acquiredByCampaignID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", acquiredByCampaignID, "sourceKey", concat(acquiredByCampaignID,"@${MUNCHKIN_ID}.Marketo")), null)` | `acquiredByCampaignKey` |
 | `reachedSuccess` | `hasReachedSuccess` |
 | `isExhausted` | `isExhausted` |
 | `statusName` | `memberStatus` |
@@ -129,7 +142,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
-| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `iif(sfdc.crmId != null && sfdc.crmId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", sfdc.crmId, "sourceKey", concat(sfdc.crmId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
 | `sfdc.lastStatus` | `lastStatus` |
 | `sfdc.hasResponded` | `hasResponded` |
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
@@ -142,8 +155,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primäre Identität |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `concat(id, ".mkto_org")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | Sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -160,7 +176,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
-| `mktoCdpParentOrgId` | `accountParentID` |
+| `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -168,7 +184,10 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `marketingListID` | Primäre Identität |
+| `"Marketo"` | `marketingListKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` wird als Teil der Explore API ersetzt. |
+| `id` | `marketingListKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `marketingListKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -176,13 +195,16 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 {style=&quot;table-layout:auto&quot;}
 
-## Mitgliedschaft in statischen Listen {#static-list-memnberships}
+## Mitgliedschaft in statischen Listen {#static-list-memberships}
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `staticListMemberID` | `marketingListMemberID` | Primäre Identität |
-| `staticListID` | `marketingListID` | Beziehung |
-| `personID` | `personID` | Beziehung |
+| `"Marketo"` | `marketingListMemberKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `marketingListMemberKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `staticListMemberID` | `marketingListMemberKey.sourceID` |
+| `concat(staticListMemberID,"@${MUNCHKIN_ID}.Marketo")` | `marketingListMemberKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Beziehung |
+| `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Beziehung |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -195,8 +217,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primäre Identität |
-| `crmGuid` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -208,7 +233,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `logoUrl` | `accountOrganization.logoUrl` |
 | `numberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `name` | `accountName` |
-| `parentAccountId` | `accountParentID` |
+| `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
 
 {style=&quot;table-layout:auto&quot;}
@@ -217,9 +242,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | Primäre Identität |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
-| `mktoCdpAccountOrgId` | `accountID` | Beziehung |
+| `"Marketo"` | `opportunityKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `id` | `opportunityKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -237,7 +264,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | Wird nur empfohlen, wenn Sie die Salesforce-Integration verwenden. |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | Dieser Quelldatensatz steht nur Benutzern mit der Integration [!DNL Salesforce] zur Verfügung. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -248,10 +275,13 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | Primäre Identität |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
-| `mktoCdpOpptyId` | `opportunityID` | Beziehung |
-| `leadId` | `personID` | Beziehung |
+| `"Marketo"` | `opportunityPersonKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `id` | `opportunityPersonKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird im Rahmen der Explore API ersetzt. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Sekundäre Identität. Die Werte für `{CRM_ORG_ID}` und `{CRM_TYPE}` werden automatisch ersetzt. |
+| `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Beziehung |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Beziehung |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -263,8 +293,13 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | Primäre Identität |
-| `contactCompany` | `b2b.accountID` |
+| `"Marketo"` | `b2b.personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `id` | `b2b.personKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | Primäre Identität. Der Wert für `"${MUNCHKIN_ID}"` wird automatisch ersetzt. |
+| `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | Wenn die Abmeldung `true` lautet (z. B. Wert = `1`), setzen Sie `consents.marketing.email.val` auf (`n`). Wenn die Abmeldung `false` lautet (z. B. Wert = `0`), setzen Sie `consents.marketing.email.val` auf `null`. |
+| `unsubscribedReason` | `consents.marketing.email.reason` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
 | `leadScore` | `b2b.personScore` |
@@ -272,10 +307,9 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `leadStatus` | `b2b.personStatus` |
 | `personType` | `b2b.personType` |
 | `leadPartitionId` | `b2b.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Sekundäre Identität |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | `extSourceSystemAudit.externalKey` ist die sekundäre Identität. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -298,13 +332,12 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den neu
 | `leadStatus` | `personComponents.personStatus` |
 | `personType` | `personComponents.personType` |
 | `leadPartitionId` | `personComponents.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
-| `contactCompany` | `personComponents.sourceAccountID` |
-| `sfdcContactId` | `personComponents.sourceExternalID` | Wird nur empfohlen, wenn Sie die Salesforce-Integration verwenden. |
-| `id` | `personComponents.sourcePersonID` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `personComponents.sourceExternalKey` |
+| `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
+| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Dies ist ein berechnetes Feld. |
 
 {style=&quot;table-layout:auto&quot;}
 

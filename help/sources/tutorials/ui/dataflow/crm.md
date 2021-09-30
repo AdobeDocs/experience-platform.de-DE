@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe Ihres CRM-Kontos einen neuen Datenfluss konfigurieren.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: 46fb08a10bc05dc758bdcb025693f819b980b41a
+source-git-commit: cd9b28c66f6cc841e46e797b39db838a83e727e3
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 5%
+source-wordcount: '1387'
+ht-degree: 4%
 
 ---
 
 # Konfigurieren eines Datenflusses für eine CRM-Verbindung in der Benutzeroberfläche
 
-Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen [!DNL Platform] -Datensatz erfasst. In diesem Tutorial erfahren Sie, wie Sie mithilfe Ihres CRM-Kontos einen neuen Datenfluss konfigurieren.
+Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial erfahren Sie, wie Sie mithilfe Ihres CRM-Kontos einen neuen Datenfluss konfigurieren.
 
 ## Erste Schritte
 
@@ -30,9 +30,9 @@ Außerdem müssen Sie für dieses Tutorial bereits ein CRM-Konto erstellt haben.
 
 ## Daten auswählen
 
-Nach der Erstellung Ihres CRM-Kontos wird der Schritt *Daten auswählen* angezeigt und bietet eine interaktive Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
+Nach der Erstellung Ihres CRM-Kontos wird der Schritt [!UICONTROL Daten auswählen] angezeigt und bietet eine Oberfläche, über die Sie Ihre Dateihierarchie untersuchen können.
 
-* Die linke Hälfte der Oberfläche ist ein Verzeichnisbrowser, der die Dateien und Verzeichnisse Ihres Servers anzeigt.
+* In der linken Hälfte der Benutzeroberfläche befindet sich ein Verzeichnisbrowser, in dem die Dateien und Verzeichnisse Ihres CRM-Systems angezeigt werden.
 * In der rechten Hälfte der Benutzeroberfläche können Sie eine Vorschau von bis zu 100 Datenzeilen aus einer kompatiblen Datei anzeigen.
 
 Sie können die Option **[!UICONTROL Suchen]** oben auf der Seite verwenden, um die Quelldaten, die Sie verwenden möchten, schnell zu identifizieren.
@@ -47,23 +47,23 @@ Nachdem Sie die Quelldaten gefunden haben, wählen Sie das Verzeichnis aus und k
 
 ## Zuordnen von Datenfeldern zu einem XDM-Schema
 
-Der Schritt **[!UICONTROL Mapping]** wird angezeigt und stellt eine interaktive Schnittstelle bereit, über die die Quelldaten einem [!DNL Platform]-Datensatz zugeordnet werden.
+Der Schritt **[!UICONTROL Zuordnung]** wird angezeigt und stellt eine Schnittstelle bereit, über die die Quelldaten einem Platform-Datensatz zugeordnet werden können.
 
 Wählen Sie einen Datensatz für eingehende Daten aus, die in aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
 
 ### Vorhandenen Datensatz verwenden
 
-Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandenen Datensatz verwenden]** und klicken Sie dann auf das Datensatzsymbol.
+Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandenen Datensatz]** und dann das Datensymbol ![data](../../../images/tutorials/dataflow/crm/data.png) neben der Eingabebar aus.
 
-![use-existing-dataset](../../../images/tutorials/dataflow/crm/use-existing-dataset.png)
+![existing-dataset](../../../images/tutorials/dataflow/crm/existing-dataset.png)
 
 Das Dialogfeld **[!UICONTROL Datensatz auswählen]** wird angezeigt. Suchen Sie den Datensatz, den Sie verwenden möchten, wählen Sie ihn aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![select-existing-dataset](../../../images/tutorials/dataflow/crm/select-existing-dataset.png)
+![select-dataset](../../../images/tutorials/dataflow/crm/select-dataset.png)
 
 ### Verwenden eines neuen Datensatzes
 
-Um Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuen Datensatz erstellen]** aus und geben Sie einen Namen und eine Beschreibung für den Datensatz in die bereitgestellten Felder ein.
+Um Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie einen Namen und eine Beschreibung für den Datensatz in die bereitgestellten Felder ein.
 
 Sie können ein Schemafeld anhängen, indem Sie einen Schemanamen in die Suchleiste **[!UICONTROL Schema auswählen]** eingeben. Sie können auch das Dropdown-Symbol auswählen, um eine Liste der vorhandenen Schemas anzuzeigen. Alternativ können Sie **[!UICONTROL Erweiterte Suche]** auswählen, um auf den Bildschirm vorhandener Schemas mit ihren jeweiligen Details zuzugreifen.
 
@@ -79,19 +79,27 @@ Das Dialogfeld **[!UICONTROL Schema auswählen]** wird angezeigt. Wählen Sie da
 
 Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weiterführende Informationen zu Zuordnungsfunktionen und berechneten Feldern finden Sie im [Handbuch zu Datenvorbereitung-Funktionen](../../../../data-prep/functions.md) oder im Handbuch [Berechnete Felder](../../../../data-prep/calculated-fields.md).
 
+<!--
 >[!TIP]
 >
->[!DNL Platform] bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
+>If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
+-->
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping.png)
+Platform bietet intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
 
 Wählen Sie **[!UICONTROL Vorschau der Daten]** aus, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz anzuzeigen.
 
+![](../../../images/tutorials/dataflow/crm/preview-data.png)
+
 Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da dies die wichtigsten Informationen ist, die bei der Validierung der Zuordnungsergebnisse erforderlich sind.
 
-![](../../../images/tutorials/dataflow/all-tabular/mapping-preview.png)
-
 Nachdem die Quelldaten zugeordnet wurden, wählen Sie **[!UICONTROL Close]** aus.
+
+![](../../../images/tutorials/dataflow/crm/preview.png)
+
+Wählen Sie anschließend im Bildschirm [!UICONTROL Mapping] die Option **[!UICONTROL Weiter]** aus, um fortzufahren.
+
+![](../../../images/tutorials/dataflow/crm/mapping.png)
 
 ## Erfassungsläufe planen
 
@@ -111,7 +119,7 @@ Passen Sie zum Festlegen der Startzeit für die Aufnahme das im Feld Startzeit a
 
 Wählen Sie **[!UICONTROL Inkrementelle Daten von]** laden aus, um die Delta-Spalte zuzuweisen. In diesem Feld wird zwischen neuen und vorhandenen Daten unterschieden.
 
-![](../../../images/tutorials/dataflow/databases/schedule-interval-on.png)
+![](../../../images/tutorials/dataflow/crm/scheduling.png)
 
 ### Einrichten eines Datenflusses zur einmaligen Erfassung
 
@@ -123,7 +131,7 @@ Um die einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die
 
 Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
-![schedule-once](../../../images/tutorials/dataflow/databases/schedule-once.png)
+![schedule-once](../../../images/tutorials/dataflow/crm/one-time-ingestion.png)
 
 ## Datenflussdetails angeben
 
@@ -133,15 +141,15 @@ Während dieses Prozesses können Sie auch **[!UICONTROL Partielle Erfassung]** 
 
 Geben Sie Werte für den Datenfluss ein und wählen Sie **[!UICONTROL Weiter]** aus.
 
-![dataflow-details](../../../images/tutorials/dataflow/all-tabular/dataflow-detail.png)
+![dataflow-details](../../../images/tutorials/dataflow/crm/dataflow-detail.png)
 
 ## Überprüfen Sie Ihren Datenfluss.
 
 Der Schritt *Überprüfen* wird angezeigt, mit dem Sie Ihren neuen Datenfluss überprüfen können, bevor er erstellt wird. Details werden in die folgenden Kategorien eingeteilt:
 
-* **[!UICONTROL Verbindungsdetails]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
-* **[!UICONTROL Zuordnungsdetails]**: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
-* **[!UICONTROL Planungsdetails]**: Zeigt den aktiven Zeitraum, die Häufigkeit und das Intervall des Aufnahmezeitplans an.
+* **[!UICONTROL Verbindung]**: Zeigt den Namen des Quellkontos, die Quellplattform, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
+* **[!UICONTROL Zuweisen von Datensatz- und Zuordnungsfeldern]**: Zeigt den Zieldatensatz an, in den die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
+* **[!UICONTROL Planung]**: Zeigt die Startzeit und Häufigkeit des Datenflusses an.
 
 Nachdem Sie Ihren Datenfluss überprüft haben, klicken Sie auf **[!UICONTROL Beenden]** und lassen Sie die Erstellung des Datenflusses etwas Zeit zu.
 
@@ -157,33 +165,13 @@ Sie können Datenflüsse löschen, die nicht mehr erforderlich sind oder falsch 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem CRM-System einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Um mehr über die Erstellung von Datenflüssen zu erfahren, ergänzen Sie Ihr Lernen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem CRM-System einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Um mehr über die Erstellung von Datenflüssen zu erfahren, ergänzen Sie Ihr Lernen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
 * [Data Science Workspace – Übersicht](../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> Die im folgenden Video angezeigte [!DNL Platform]-Benutzeroberfläche ist veraltet. In der obigen Dokumentation finden Sie die neuesten Screenshots und Funktionen der Benutzeroberfläche.
-
+> Die im folgenden Video dargestellte Platform-Benutzeroberfläche ist veraltet. In der obigen Dokumentation finden Sie die neuesten Screenshots und Funktionen der Benutzeroberfläche.
+>
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
-
-## Anhang
-
-Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit Quell-Connectoren.
-
-### Datenfluss deaktivieren
-
-Wenn ein Datenfluss erstellt wird, wird er sofort aktiv und erfasst Daten gemäß dem festgelegten Zeitplan. Sie können einen aktiven Datenfluss jederzeit deaktivieren, indem Sie die unten stehenden Anweisungen befolgen.
-
-Wählen Sie im Bildschirm **[!UICONTROL authentication]** den Namen der Verbindung aus, die mit dem Datenfluss verknüpft ist, den Sie deaktivieren möchten.
-
-![](../../../images/tutorials/dataflow/crm/monitor.png)
-
-Die Seite **Quellaktivität** wird angezeigt. Wählen Sie den aktiven Datenfluss aus der Liste aus, um die zugehörige Spalte **[!UICONTROL Eigenschaften]** auf der rechten Seite des Bildschirms zu öffnen, die die Schaltfläche **[!UICONTROL Aktiviert]** enthält. Klicken Sie auf den Umschalter, um den Datenfluss zu deaktivieren. Derselbe Umschalter kann verwendet werden, um einen Datenfluss erneut zu aktivieren, nachdem er deaktiviert wurde.
-
-![disable](../../../images/tutorials/dataflow/crm/disable.png)
-
-### Eingehende Daten für [!DNL Profile] Population aktivieren
-
-Eingehende Daten aus Ihrem Quell-Connector können zur Anreicherung und zum Ausfüllen Ihrer [!DNL Real-time Customer Profile] -Daten verwendet werden. Weitere Informationen zum Ausfüllen Ihrer [!DNL Real-time Customer Profile]-Daten finden Sie im Tutorial zu [Profilpopulation](../profile.md).
