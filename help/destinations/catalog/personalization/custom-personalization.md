@@ -1,10 +1,10 @@
 ---
 keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniertes Ziel der Erlebnisplattform;
-title: Benutzerdefiniertes Personalisierungsziel
+title: Benutzerdefinierte Personalisierungsverbindung (Beta)
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet 1:1-Echtzeit-Personalisierung und basiert auf der Segmentmitgliedschaft eines Benutzerprofils.
-source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 8%
 
 ---
@@ -25,11 +25,11 @@ Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../e
 
 ## Exporttyp {#export-type}
 
-**Profilanfrage** : Sie fordern alle Segmente an, die im benutzerdefinierten Personalisierungsziel für ein einzelnes Profil zugeordnet sind. Für verschiedene Datenerfassungs-Datenspeicher der Adobe können verschiedene benutzerdefinierte Personalisierungsziele eingerichtet werden.
+**Profilanfrage** : Sie fordern alle Segmente an, die im benutzerdefinierten Personalisierungsziel für ein einzelnes Profil zugeordnet sind. Für verschiedene [Datenerfassungs-Datenspeicher der Adobe](../../../edge/fundamentals/datastreams.md) können verschiedene benutzerdefinierte Personalisierungsziele eingerichtet werden.
 
 ## Anwendungsfälle {#use-cases}
 
-Dieses Ziel teilt Zielgruppen mit einem Adserver und Nicht-Adobe-Personalisierungsanwendungen, die in Echtzeit verwendet werden, um zu entscheiden, welche Advertising-Benutzer auf einer Website sehen sollen.
+Dieses Ziel teilt Zielgruppen mit Adservern und Nicht-Adobe-Personalisierungsanwendungen, die in Echtzeit verwendet werden, um zu entscheiden, welche Advertising-Benutzer auf einer Website sehen sollen.
 
 ### Anwendungsfall 1
 
@@ -62,7 +62,7 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 Wenn Sie [Adobe-Tags](../../../tags/home.md) zum Bereitstellen des Experience Platform Web SDK verwenden, verwenden Sie die Funktion [Ereignis-Abschluss senden](../../../edge/extension/event-types.md) und Ihre benutzerdefinierte Codeaktion verfügt über eine `event.destinations`-Variable, mit der Sie die exportierten Daten anzeigen können.
 
-Wenn Sie [Adobe-Tags](../../../tags/home.md) nicht zum Bereitstellen des Experience Platform Web SDK verwenden, verwenden Sie die [Funktion zum Verarbeiten von Antworten aus Ereignissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events).
+Wenn Sie [Adobe-Tags](../../../tags/home.md) nicht zum Bereitstellen des Experience Platform Web SDK verwenden, verwenden Sie die Funktion [Verarbeiten von Antworten aus Ereignissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events), um die exportierten Daten anzuzeigen.
 
 Die JSON-Antwort von Adobe Experience Platform kann analysiert werden, um den entsprechenden Integrationsalias der Anwendung zu finden, die Sie in Adobe Experience Platform integrieren. Die Segment-IDs können als Targeting-Parameter in den Code der Anwendung übergeben werden. Nachfolgend finden Sie ein Beispiel dafür, wie dies spezifisch für die Zielantwort aussehen würde.
 

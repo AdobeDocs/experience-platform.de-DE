@@ -1,13 +1,13 @@
 ---
 keywords: Aktivieren von Profilanforderungszielen; Aktivieren von Daten; Profilanforderungsziele
-title: Aktivieren von Zielgruppendaten für Profilanforderungsziele
+title: Aktivieren von Zielgruppendaten für Profilanforderungsziele (Beta)
 type: Tutorial
 seo-title: Activate audience data to profile request destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente Profilanfragezielen zuordnen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-source-git-commit: caccd096c9165139d9b966bbfcb311456276192a
+source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '474'
 ht-degree: 10%
 
 ---
@@ -28,7 +28,7 @@ Um Daten für Ziele aktivieren zu können, müssen Sie über eine erfolgreiche [
 
 ### Segmentzusammenführungsrichtlinie {#merge-policy}
 
-Profilanforderungsziele unterstützen derzeit nur die Aktivierung von Segmenten, die die standardmäßige Zusammenführungsrichtlinie verwenden. Der Versuch, Segmente mit einer anderen Zusammenführungsrichtlinie zu aktivieren, führt zu einem Fehler auf der Seite [[!UICONTROL Überprüfen]](#review).
+Derzeit unterstützen Profilanforderungsziele nur die Aktivierung von Segmenten, die die [standardmäßige Zusammenführungsrichtlinie](../../segmentation/ui/segment-builder.md#merge-policies) verwenden.
 
 ## Ziel auswählen {#select-destination}
 
