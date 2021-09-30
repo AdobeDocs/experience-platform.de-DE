@@ -5,35 +5,40 @@ title: Details und zusätzliche Services für ein Produktprofil verwalten
 topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Verwaltung der Einzelheiten und zusätzlichen Services für ein Produktprofil in Adobe Admin Console beschrieben. Über das Menü Profileinstellungen können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen.
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '213'
-ht-degree: 100%
+source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+workflow-type: tm+mt
+source-wordcount: '296'
+ht-degree: 49%
 
 ---
 
 # Details und zusätzliche Services für ein Produktprofil verwalten
 
-Über das Menü **[!UICONTROL Profileinstellungen]** können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen. Um das Menü aufzurufen, klicken Sie auf die Option **[!UICONTROL Einstellungen]** der Seite **[!UICONTROL Produktprofil]**.
+Über das Menü **[!UICONTROL Profileinstellungen]** können Sie die Details eines Profils konfigurieren und auf zusätzliche Dienste zugreifen. Um auf das Menü zuzugreifen, wählen Sie **[!UICONTROL Einstellungen]** auf der Seite **[!UICONTROL Produktprofil]** aus.
 
-![profile-settings](../images/profile-settings.png)
+![settings](../images/settings.png)
 
-Das Menü **[!UICONTROL Profileinstellungen]** wird auf dem Tab **[!UICONTROL Details]** angezeigt. Auf diesem Tab können Sie Ihren Profilnamen und die Beschreibung eingeben und bearbeiten. Außerdem können Sie Ihren Anzeigenamen sowie die E-Mail-Benachrichtigungseinstellungen für Ihr Konto ändern.
+Das Menü **[!UICONTROL Produktprofil bearbeiten]** wird angezeigt, beginnend mit der Registerkarte **[!UICONTROL Profildetails bearbeiten]** . Auf diesem Tab können Sie Ihren Profilnamen und die Beschreibung eingeben und bearbeiten. Außerdem können Sie Ihren Anzeigenamen sowie die E-Mail-Benachrichtigungseinstellungen für Ihr Konto ändern.
 
-![edit-details-settings](../images/edit-details-settings.png)
+![edit-product-profile](../images/edit-product-profile.png)
 
-Klicken Sie auf **[!UICONTROL Dienste]**, um auf die Seite **[!UICONTROL Dienste]** zu gelangen.
+Wählen Sie **[!UICONTROL Next]** aus, um auf die Seite **[!UICONTROL Enable services]** zuzugreifen.
 
-![services-page](../images/services-page.png)
-
-Im Menü **[!UICONTROL Services]** können Sie den Zugriff eines Profils auf zusätzliche [!DNL Platform]-Services, die beim Erstellen des Profils anfänglich konfiguriert wurden, ändern. Je nach Ihrem [!DNL Platform]-Abonnement können diese Services Folgendes umfassen:
+Im Menü **[!UICONTROL Dienste aktivieren]** können Sie den Zugriff eines Profils auf zusätzliche [!DNL Platform]-Dienste ändern, die beim Erstellen des Profils ursprünglich konfiguriert wurden. Je nach Ihrem [!DNL Platform]-Abonnement können diese Services Folgendes umfassen:
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
 - [!DNL Real-Time Customer Data Platform] Benutzeroberfläche (nur für Echtzeit-CDP)
+- B2B-Benutzeroberfläche
 
-Klicken Sie auf der rechten Seite eines bestimmten Diensts auf den Umschalter, um ihn zu aktivieren oder zu deaktivieren. Sie können auch auf das Kontrollkästchen **[!UICONTROL Alle ein]** klicken, um alle aufgelisteten Dienste zu aktivieren oder zu deaktivieren.
+Klicken Sie auf der rechten Seite eines bestimmten Diensts auf den Umschalter, um ihn zu aktivieren oder zu deaktivieren. Sie können auch das Kontrollkästchen **[!UICONTROL Alle auf]** aktivieren, um alle aufgelisteten Dienste zu aktivieren oder zu deaktivieren.
 
 Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
-![edit-additional-services](../images/edit-additional-services.png)
+![enable-services](../images/enable-services.png)
+
+Kunden mit Berechtigung für B2B oder B2P Edition haben Zugriff auf die B2B-Benutzeroberfläche. Die B2B-Benutzeroberfläche kann Benutzern über das Menü [!UICONTROL Dienste aktivieren] bereitgestellt werden. Wählen Sie den Umschalter neben [!UICONTROL B2B UI] aus, um den Dienst für ein bestimmtes Produktprofil zu aktivieren, und klicken Sie dann auf **[!UICONTROL Speichern]**.
+
+Der Umschalter für die B2B-Benutzeroberfläche ermöglicht es Benutzern, B2B-Workflows zur Verwaltung von Konten und Chancen sowie B2B-bezogene Segmente anzuzeigen.
+
+![enable-b2b](../images/enable-b2b.png)

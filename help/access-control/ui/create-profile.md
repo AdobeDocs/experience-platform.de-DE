@@ -5,28 +5,34 @@ title: Erstellen eines neuen Produktprofils in Adobe Admin Console
 topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Erstellung eines neuen Produktprofils in Adobe Admin Console beschrieben. Um mit dem Erstellen eines neuen Profils zu beginnen, gehen Sie zur Registerkarte „Produktprofile“ und klicken Sie auf „Neues Profil“.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '261'
-ht-degree: 100%
+source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+workflow-type: tm+mt
+source-wordcount: '315'
+ht-degree: 53%
 
 ---
 
 # Erstellen eines neuen Produktprofils in Adobe Admin Console
 
-Um mit dem Erstellen eines neuen Profils zu beginnen, gehen Sie zur Registerkarte **[!UICONTROL Produktprofile]** und klicken Sie auf **[!UICONTROL Neues Profil]**.
+Um mit der Erstellung eines neuen Profils zu beginnen, navigieren Sie zur Registerkarte **[!UICONTROL Produktprofile]** und wählen Sie **[!UICONTROL Neues Profil]** aus.
 
-![new-profile-button](../images/new-profile-button.png)
+![new-profile](../images/new-profile.png)
 
-Das Dialogfeld **[!UICONTROL Neues Profil erstellen]** wird angezeigt und Sie werden aufgefordert, einen Namen und eine Beschreibung für das neue Profil einzugeben. Wenn Sie für das Profil einen anderen Anzeigenamen verwenden möchten, deaktivieren Sie die Option **[!UICONTROL Wie Profilname]** und geben Sie den Anzeigenamen in das angezeigte Textfeld ein. Unter **[!UICONTROL Benutzerbenachrichtigungen]** können Sie einstellen, ob Benutzer per E-Mail benachrichtigt werden, wenn sie hinzugefügt oder aus dem Profil entfernt werden.
+Das Dialogfeld **[!UICONTROL Neues Produktprofil erstellen]** wird angezeigt und fordert Sie zur Eingabe eines Profils, eines optionalen Anzeigenamens und einer optionalen Beschreibung auf. Unter **[!UICONTROL Benutzerbenachrichtigungen]** können Sie einstellen, ob Benutzer per E-Mail benachrichtigt werden, wenn sie hinzugefügt oder aus dem Profil entfernt werden.
 
-Klicken Sie abschließend auf **[!UICONTROL Weiter]**.
+Wählen Sie nach Abschluss **[!UICONTROL Weiter]** aus.
 
-![new-profile-details](../images/new-profile-details.png)
+![create-new-product-profile](../images/create-new-product-profile.png)
 
-Im nächsten Bildschirm werden Sie aufgefordert, die [!DNL Platform]-Services auszuwählen, die in das Profil eingeschlossen werden sollen. Klicken Sie auf die Umschalttaste neben einem Service, um ihn zu deaktivieren. Wenn ein Service deaktiviert ist, stehen Benutzern, die diesem Produktprofil zugewiesen sind, sämtliche mit diesem Service verknüpften Funktionen nicht zur Verfügung. Klicken Sie abschließend auf **[!UICONTROL Fertig]**.
+Im nächsten Bildschirm werden Sie aufgefordert, zu wählen, welche Platform-Dienste in das Profil aufgenommen werden sollen. Wählen Sie die Umschalter-Schaltfläche neben einem Dienst aus, um ihn zu deaktivieren. Wenn ein Service deaktiviert ist, stehen Benutzern, die diesem Produktprofil zugewiesen sind, sämtliche mit diesem Service verknüpften Funktionen nicht zur Verfügung. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
-![new-profile-services](../images/new-profile-services.png)
+![enable-services](../images/enable-services.png)
+
+Kunden mit Berechtigung für B2B oder B2P Edition haben Zugriff auf die B2B-Benutzeroberfläche. Die B2B-Benutzeroberfläche kann Benutzern über das Menü [!UICONTROL Dienste aktivieren] bereitgestellt werden. Wählen Sie den Umschalter neben [!UICONTROL B2B UI] aus, um den Dienst für ein bestimmtes Produktprofil zu aktivieren, und klicken Sie dann auf **[!UICONTROL Speichern]**.
+
+Der Umschalter für die B2B-Benutzeroberfläche ermöglicht es Benutzern, B2B-Workflows zur Verwaltung von Konten und Chancen sowie B2B-bezogene Segmente anzuzeigen.
+
+![enable-b2b](../images/enable-b2b.png)
 
 Das neue Produktprofil wurde erfolgreich erstellt und Sie werden auf die [Seite zur Bearbeitung von Berechtigungen](#edit-permissions) des Profils weitergeleitet. Weitere Informationen zum Verwalten von Produktprofilen nach der Erstellung finden Sie in den Abschnitten zum [Verwalten von Berechtigungen](#manage-permissions-for-a-product-profile) und [Verwalten von Benutzern](#manage-users-for-a-product-profile).
 

@@ -5,7 +5,7 @@ topic-legacy: overview
 title: Zugriffskontrolle – Übersicht
 description: Die Zugriffssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
+source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
 ht-degree: 96%
@@ -72,7 +72,7 @@ Die Berechtigung „Sandbox-Verwaltung“ ermöglicht Benutzern das Verwalten, A
 
 Auf der Registerkarte Berechtigungen in einem Produktprofil werden die Sandboxes und Berechtigungen angezeigt, die für dieses Profil aktiv sind:
 
-![permissions-overview](./images/permissions-overview.png)
+![permissions-overview](./images/permissions.png)
 
 Berechtigungen, die über die [!DNL Admin Console] gewährt werden, werden nach Kategorie sortiert. Einige dieser Berechtigungen gewähren Zugriff auf verschiedene Funktionen auf niedriger Ebene.
 
