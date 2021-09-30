@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 9ec7bd591af6c76a794f83d5a984017330328238
+source-git-commit: 6c21398a3f2fb26cc925ca1f5dcbe92b306a8325
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '644'
 ht-degree: 44%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 # Ziele {#destinations}
 
-* [Ziele – Übersicht](./home.md)
+* [Ziele Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
 * API-Tutorials {#api}
    * [Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API aktivieren](./api/streaming-destinations.md)
@@ -27,6 +27,7 @@ ht-degree: 44%
       * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md)
       * [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](./ui/activate-streaming-profile-destinations.md)
       * [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](./ui/activate-batch-profile-destinations.md)
+      * [Aktivieren von Zielgruppendaten für Profilanforderungsziele (Beta)](./ui/activate-profile-request-destinations.md)
    * [Zieldetails anzeigen](./ui/destination-details-page.md)
    * [Zielkonten aktualisieren](./ui/update-accounts.md)
    * [Bearbeiten von Aktivierungsflüssen](./ui/edit-activation.md)
@@ -114,9 +115,11 @@ ht-degree: 44%
       * [Bremsverbindung](./catalog/mobile-engagement/braze.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
+      * [Adobe Target-Verbindung (Beta)](./catalog/personalization/adobe-target-connection.md)
       * [Adobe Target-Erweiterung](./catalog/personalization/adobe-target.md)
       * [Adobe Target v2-Erweiterung](./catalog/personalization/adobe-target-v2.md)
       * [Beemray-Erweiterung](./catalog/personalization/beemray.md)
+      * [Benutzerdefinierte Personalisierungsverbindung (Beta)](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence-Erweiterung](./catalog/personalization/dnb.md)
       * [Experience Cloud ID-Diensterweiterung](./catalog/personalization/adobe-ecid.md)
       * [Gainsight-Erweiterung](./catalog/personalization/gainsight.md)
