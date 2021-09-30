@@ -2,9 +2,9 @@
 title: Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Zieldokumentationsseite zu erstellen.
 description: Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie mit einem Texteditor in Ihrer lokalen Umgebung eine Dokumentationsseite für Ihr Experience Platform-Ziel erstellen und zur Überprüfung senden können.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '885'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 ## Stellen Sie eine Verbindung zu GitHub her und richten Sie Ihre lokale Authoring-Umgebung ein. {#set-up-environment}
 
 1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`
-2. Um das Repository [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) zu verlassen, klicken Sie auf **Fork**, wie im Screenshot gezeigt.
+2. Um das Repository [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) zu verlassen, klicken Sie auf **Fork** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
 
    ![Dokumentation zur Adobe von Verzweigungen](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie einen Texteditor verwende
 
    ![Übertragen](./assets/push-local-to-remote.png)
 
-1. Öffnen Sie in der GitHub-Webschnittstelle eine Pull-Anfrage (PA), um Ihre Arbeitsverzweigung mit der Übergeordneten Verzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass der Zweig, an dem Sie gearbeitet haben, ausgewählt ist, und wählen Sie **Pull-Anforderung** aus.
+1. Öffnen Sie in der GitHub-Webschnittstelle eine Pull-Anfrage (PA), um Ihre Arbeitsverzweigung mit der Übergeordneten Verzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass die Verzweigung, an der Sie gearbeitet haben, ausgewählt ist, und wählen Sie **Beitragen > Pull-Anforderung öffnen**.
 
    ![Pull-Anforderung erstellen](./assets/ssd-create-pull-request-1.gif)
 

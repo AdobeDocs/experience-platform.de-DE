@@ -2,9 +2,9 @@
 title: 'Verwenden Sie die GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen '
 description: Die Anweisungen auf dieser Seite zeigen Ihnen, wie Sie mit der GitHub-Web-Oberfläche eine Dokumentationsseite für Ihr Experience Platform-Ziel erstellen und zur Überprüfung senden können.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: 83539a9aa2fddcae0c9a44302d8bfa9d9f56de0c
+source-git-commit: 1bbff0fa54f1b7ef1ee70efd2a85cd43b34b2f5a
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '780'
 ht-degree: 2%
 
 ---
@@ -24,7 +24,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie mit der GitHub-Web-Oberfläche D
 ## GitHub-Authoring-Umgebung einrichten {#set-up-environment}
 
 1. Navigieren Sie im Browser zu `https://github.com/AdobeDocs/experience-platform.en`.
-2. Um das Repository [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) zu verlassen, klicken Sie auf **Fork**, wie in der Abbildung unten dargestellt.
+2. Um das Repository [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) zu verlassen, klicken Sie auf **Fork** wie unten dargestellt. Dadurch wird eine Kopie des Experience Platform-Repositorys in Ihrem eigenen GitHub-Konto erstellt.
 
    ![Dokumentation zur Adobe von Verzweigungen](./assets/ssd-fork-repository.gif)
 
@@ -61,7 +61,7 @@ Die folgenden Anweisungen zeigen Ihnen, wie Sie mit der GitHub-Web-Oberfläche D
 >
 >Beachten Sie, dass hier nichts kaputt gemacht werden kann. Indem Sie den Anweisungen in diesem Abschnitt folgen, schlagen Sie einfach eine Aktualisierung der Dokumentation vor. Ihre vorgeschlagene Aktualisierung wird vom Dokumentationsteam von Adobe Experience Platform genehmigt oder bearbeitet.
 
-1. Nachdem Sie die Datei gespeichert und die gewünschten Bilder hochgeladen haben, können Sie eine Pull-Anfrage (PA) öffnen, um Ihre Arbeitsverzweigung in die Übergeordnete Verzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass die Verzweigung, an der Sie gearbeitet haben, ausgewählt ist, und wählen Sie **Contribute > Pull request**.
+1. Nachdem Sie die Datei gespeichert und die gewünschten Bilder hochgeladen haben, können Sie eine Pull-Anfrage (PA) öffnen, um Ihre Arbeitsverzweigung in die Übergeordnete Verzweigung des Adobe-Dokumentations-Repositorys zusammenzuführen. Vergewissern Sie sich, dass die Verzweigung, an der Sie gearbeitet haben, ausgewählt ist, und wählen Sie **Beitragen > Pull-Anforderung öffnen**.
 
 ![Pull-Anforderung erstellen](./assets/ssd-create-pull-request-1.gif)
 
