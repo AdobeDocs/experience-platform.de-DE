@@ -1,14 +1,15 @@
 ---
 title: Definieren einer Beziehung zwischen zwei Schemas in der Echtzeit-Kundendatenplattform B2B Edition
 description: Erfahren Sie, wie Sie in der Echtzeit-Kundendatenplattform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
-source-git-commit: d83ad2870b6099d3c6359dcc7cd000ecad8a238f
+exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
+source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1221'
 ht-degree: 7%
 
 ---
 
-# Definieren einer Beziehung zwischen zwei Schemas in der Echtzeit-Kundendatenplattform B2B Edition
+# Definieren einer Beziehung zwischen zwei Schemas in der Echtzeit-Kundendatenplattform B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
