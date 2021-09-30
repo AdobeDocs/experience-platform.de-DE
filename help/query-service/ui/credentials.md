@@ -5,10 +5,10 @@ title: UI-Anleitung für Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: af122e5064fc5618266948d46c438d1776cdd0cf
+source-git-commit: 696db8081ab8225d79cd468b7435770d407d3e3d
 workflow-type: tm+mt
-source-wordcount: '1310'
-ht-degree: 0%
+source-wordcount: '1148'
+ht-degree: 1%
 
 ---
 
@@ -36,73 +36,28 @@ Der Abschnitt **[!UICONTROL Ablaufende Anmeldedaten]** enthält die folgenden In
 
 Sie können nicht ablaufende Anmeldedaten verwenden, um eine permanentere Verbindung zu einem externen Client einzurichten.
 
-Bevor Sie nicht ablaufende Anmeldeinformationen erstellen können, müssen Sie sowohl die Berechtigungen **Sandboxes** als auch die Berechtigungen **Query Service-Integration verwalten** für Ihre Organisation in der Adobe Admin Console konfigurieren.
+### Voraussetzungen
 
-Melden Sie sich bei [Adobe Admin Console](https://adminconsole.adobe.com/) an und wählen Sie in der oberen Navigationsleiste die entsprechende Organisation aus.
+Bevor Sie nicht ablaufende Anmeldeinformationen generieren können, müssen Sie die folgenden Schritte in Adobe Admin Console ausführen:
 
-Wählen Sie im Abschnitt [!UICONTROL Produkte und Dienste] von [!UICONTROL Übersicht] die Option **Adobe Experience Platform**.
+1. Melden Sie sich bei [Adobe Admin Console](https://adminconsole.adobe.com/) an und wählen Sie in der oberen Navigationsleiste die entsprechende Organisation aus.
+2. [Produktprofil auswählen.](../../access-control/ui/browse.md)
+3. [Konfigurieren Sie sowohl die Berechtigungen  **** Sandboxes als auch  **Query Service-** ](../../access-control/ui/permissions.md) Integrationen verwalten für das Produktprofil.
+4. [Fügen Sie einem Produktprofil einen neuen Benutzer hinzu, ](../../access-control/ui/users.md) wenn ihm die konfigurierten Berechtigungen erteilt wurden.
+5. [Fügen Sie den Benutzer als Produktprofiladministrator hinzu, ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) um die Erstellung eines Kontos für jedes aktive Produktprofil zu ermöglichen.
+6. [Fügen Sie den Benutzer als Produktprofilentwickler hinzu, ](https://helpx.adobe.com/de/enterprise/using/manage-developers.html) um eine Integration zu erstellen.
 
-![Adobe Admin Console-Dashboard](../images/ui/credentials/adobe-admin-console-dashboard.png)
-
-Die Seite &quot;Adobe Experience Platform-Details&quot;wird angezeigt. Erstellen Sie anschließend ein neues Profil. Wählen Sie [!UICONTROL **Neues Profil**] aus.
-
-![Adobe Experience Platform-Detailseite](../images/ui/credentials/aep-details.png)
-
-Ein Dialogfeld zur Profilerstellung wird angezeigt. Geben Sie einen beschreibenden Namen für das neue Profil ein und wählen Sie [!UICONTROL **Speichern**] aus. Die Seite [!UICONTROL Einstellungen] für Ihr neues Profil wird angezeigt. Wählen Sie die Registerkarte [!UICONTROL **Berechtigungen**] aus den verfügbaren Optionen aus.
-
-### Aktivieren von Query Service-Berechtigungen
-
-Um sicherzustellen, dass die richtigen Query Service-Berechtigungen für Ihre Organisation aktiviert sind, suchen und wählen Sie die Kategorie [!UICONTROL **Query Service**] aus der Liste aus.
-
-![Kategorie des Abfragedienstes &quot;Berechtigungen&quot; auf der Registerkarte &quot;Berechtigungen&quot; hervorgehoben](../images/ui/credentials/permissions-tab-query-service-category.png)
-
-Der Arbeitsbereich [!UICONTROL Berechtigungen bearbeiten] für Query Service wird angezeigt. Wählen Sie das Pluszeichen (**+**) für [!UICONTROL **Abfragen verwalten**] und [!UICONTROL **Integration von Query Service verwalten**] aus, um sie zur Spalte [!UICONTROL Eingeschlossene Berechtigungselemente] hinzuzufügen. Wählen Sie als Nächstes [!UICONTROL **Speichern**] aus, um Ihre Änderungen zu bestätigen.
-
-![Eingeschlossene Berechtigungselemente speichern](../images/ui/credentials/edit-permissions-for-query-service-profile.png)
-
-Hierdurch werden Sie zur Registerkarte Einstellungen > Berechtigungen zurückgeleitet.
-
-### Aktivieren von Sandbox-Berechtigungen
-
-Um sicherzustellen, dass die richtige Sandbox für Ihre Organisation ausgewählt ist, suchen Sie die Kategorie [!UICONTROL **Sandboxes**] und wählen Sie sie aus der Liste aus.
-
-![Registerkarte &quot;Berechtigungen&quot;Kategorie &quot;Sandboxes&quot;hervorgehoben](../images/ui/credentials/permissions-tab-sandboxes-category.png)
-
-Der Arbeitsbereich Sandboxes wird angezeigt. Suchen Sie in [!UICONTROL Verfügbare Berechtigungselemente] die entsprechende Sandbox, in diesem Bild ist es die Produkt-Sandbox. Wählen Sie das Pluszeichen (**+**) aus, um es zum [!UICONTROL Einbezogene Berechtigungselemente] hinzuzufügen. Wählen Sie als Nächstes [!UICONTROL **Speichern**] aus, um Ihre Änderungen zu bestätigen.
-
-![Berechtigung &quot;Prod-Sandbox hinzufügen&quot;](../images/ui/credentials/prod-sandbox.png)
-
-Hierdurch werden Sie zur Registerkarte Einstellungen > Berechtigungen zurückgeleitet.
-
-Es sind drei weitere Schritte erforderlich, um einem Benutzer Zugriff auf die Funktion für nicht ablaufende Konten zu gewähren.
-
-- Fügen Sie einen neuen Benutzer hinzu, dem die neu erstellten Berechtigungen erteilt werden sollen. Wählen Sie die Registerkarte [!UICONTROL **Benutzer**] und danach [!UICONTROL **Benutzer hinzufügen**].
-
-![Registerkarte &quot;Benutzer hinzufügen&quot;-Schaltfläche hervorgehoben](../images/ui/credentials/users-tab-new-user.png)
-
-Das Dialogfeld &quot;Benutzer erstellen&quot;wird angezeigt. Geben Sie einen Namen und eine E-Mail für den neuen Benutzer ein und wählen Sie [!UICONTROL **Speichern**] aus.
-
-- Der Benutzer muss dann als Administrator hinzugefügt werden, um die Erstellung eines Kontos für jedes aktive Produktprofil zu ermöglichen. So fügen Sie den neu erstellten Benutzer als Administrator hinzu. Wählen Sie die Registerkarte [!UICONTROL **Admins**], gefolgt von [!UICONTROL **Admins hinzufügen**].
-
-![Admin-Registerkarte Admin-Schaltfläche hinzufügen hervorgehoben](../images/ui/credentials/admins-tab-add-admin.png)
-
-Das Dialogfeld &quot;Admin hinzufügen&quot;wird angezeigt. Geben Sie die Details des neuen Administrators in die Textfelder ein und wählen Sie [!UICONTROL **Save**] aus.
-
-- Der Benutzer muss dann als Entwickler hinzugefügt werden, damit eine Integration erstellt werden kann. Wählen Sie die Registerkarte **Entwickler**, gefolgt von **Entwickler hinzufügen**.
-
-![Registerkarte &quot;Entwickler&quot;Schaltfläche &quot;Entwickler hinzufügen&quot;hervorgehoben](../images/ui/credentials/developers-tab-add-developer.png)
-
-Das Dialogfeld &quot;Entwickler hinzufügen&quot;wird angezeigt. Geben Sie die Details des neuen Entwicklers in die Textfelder ein und wählen Sie **Save** aus.
-
-Weitere Informationen zum Zuweisen von Berechtigungen finden Sie in der Dokumentation unter [Zugriffssteuerung](../../access-control/home.md).
+Weitere Informationen zum Zuweisen von Berechtigungen finden Sie in der Dokumentation zu [Zugriffskontrolle](../../access-control/home.md).
 
 Alle erforderlichen Berechtigungen werden jetzt in der Adobe Developer Console konfiguriert, damit der Benutzer die Funktion für ablaufende Anmeldedaten verwenden kann.
 
-Um einen Satz von nicht ablaufenden Anmeldeinformationen zu erstellen, wählen Sie im Arbeitsbereich &quot;Abfrage-Anmeldeinformationen&quot;die Option **[!UICONTROL Anmeldeinformationen generieren]** aus.
+### Anmeldeinformationen generieren
+
+Um einen Satz nicht ablaufender Anmeldedaten zu erstellen, kehren Sie zur Platform-Benutzeroberfläche zurück und wählen Sie **[!UICONTROL Abfragen]** aus dem linken Navigationsbereich aus, um auf den Arbeitsbereich [!UICONTROL Abfragen] zuzugreifen. Wählen Sie anschließend die Registerkarte **[!UICONTROL Anmeldeinformationen]** und anschließend die Registerkarte **[!UICONTROL Anmeldeinformationen generieren]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
-Das Modal zum Generieren von Anmeldeinformationen wird angezeigt. Um nicht ablaufende Anmeldedaten zu erstellen, müssen Sie die folgenden Details angeben:
+Es wird ein Dialogfeld angezeigt, in dem Sie Anmeldeinformationen generieren können. Um nicht ablaufende Anmeldedaten zu erstellen, müssen Sie die folgenden Details angeben:
 
 - **[!UICONTROL Name]**: Der Name der Anmeldeinformationen, die Sie generieren.
 - **[!UICONTROL Beschreibung]**: (Optional) Eine Beschreibung für die Anmeldeinformationen, die Sie generieren.
@@ -115,9 +70,9 @@ Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTR
 
 >[!IMPORTANT]
 >
->Sobald die Schaltfläche **[!UICONTROL Anmeldeinformationen generieren]** ausgewählt ist, wird eine JSON-Konfigurationsdatei auf Ihren lokalen Computer heruntergeladen. Da in Adobe **nicht** die generierten Anmeldedaten aufgezeichnet werden, müssen Sie **die heruntergeladene Datei sicher speichern und die Anmeldedaten speichern.**
+>Sobald die Schaltfläche **[!UICONTROL Anmeldeinformationen generieren]** ausgewählt ist, wird eine JSON-Konfigurationsdatei auf Ihren lokalen Computer heruntergeladen. Da in Adobe **nicht** die generierten Anmeldeinformationen aufgezeichnet werden, müssen Sie die heruntergeladene Datei sicher speichern und die Anmeldeinformationen aufbewahren.
 >
->Wenn die Anmeldeinformationen 90 Tage lang nicht verwendet werden, werden die Anmeldeinformationen ebenfalls aktualisiert.
+>Wenn die Anmeldeinformationen 90 Tage lang nicht verwendet werden, werden die Anmeldeinformationen ebenfalls gelöscht.
 
 Die JSON-Konfigurationsdatei enthält Informationen wie den Namen des technischen Kontos, die technische Konto-ID und die Anmeldedaten. Sie wird im folgenden Format bereitgestellt.
 
@@ -143,21 +98,25 @@ Nachdem Sie alle erforderlichen Details angegeben haben, wählen Sie **[!UICONTR
 
 ## Verwenden von Anmeldeinformationen zum Herstellen einer Verbindung zu externen Clients
 
-Sie können die ablaufenden oder nicht ablaufenden Anmeldedaten verwenden, um eine Verbindung mit externen Clients wie Aqua Data Studio, Looker oder Power BI herzustellen.
+Sie können die ablaufenden oder nicht ablaufenden Anmeldedaten verwenden, um eine Verbindung mit externen Clients wie Aqua Data Studio, Looker oder Power BI herzustellen. Die Eingabemethode für diese Anmeldeinformationen variiert je nach externem Client. Spezifische Anweisungen zur Verwendung dieser Anmeldeinformationen finden Sie in der Dokumentation des externen Kunden.
 
-Die nachstehende Tabelle enthält die Liste der Parameter und ihre Beschreibung, die normalerweise für die Verbindung mit externen Clients erforderlich sind.
+Das Bild zeigt den Speicherort der einzelnen Parameter in der Benutzeroberfläche an, mit Ausnahme des Kennworts der nicht ablaufenden Anmeldeinformationen. Während nicht ablaufende Anmeldeinformationen von ihren JSON-Konfigurationsdateien bereitgestellt werden, können Sie Ihre ablaufenden Anmeldeinformationen auf der Registerkarte **Anmeldedaten** in der Benutzeroberfläche anzeigen.
+
+![](../images/ui/credentials/expiring-credentials.png)
+
+In der folgenden Tabelle sind die Parameter aufgeführt, die normalerweise für die Verbindung mit externen Clients erforderlich sind.
 
 >[!NOTE]
 >
->Beim Herstellen einer Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen müssen weiterhin alle im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] aufgeführten Parameter verwendet werden, mit Ausnahme des Kennworts.
+>Beim Herstellen einer Verbindung zu einem Host mit nicht ablaufenden Anmeldeinformationen müssen weiterhin alle im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] aufgeführten Parameter verwendet werden, mit Ausnahme des Kennworts und des Benutzernamens.
 
 | Parameter | Beschreibung |
 |---|---|
-| **Server/Host** | Der Name des Servers/Hosts, mit dem Sie eine Verbindung herstellen. Dieser Wert hat die Form `server.adobe.io` und kann unter **[!UICONTROL Host]** gefunden werden. |
-| **Port** | Der Anschluss für den Server/Host, mit dem Sie eine Verbindung herstellen. Dieser Wert befindet sich unter **[!UICONTROL Port]**. Ein Beispielwert für den Port wäre `80`. |
-| **Datenbank** | Die Datenbank, mit der Sie eine Verbindung herstellen. Dieser Wert befindet sich unter **[!UICONTROL Database]**. Ein Beispielwert für die Datenbank wäre `prod:all`. |
-| **Benutzername** | Der Benutzername für den Benutzer, der eine Verbindung zum externen Client herstellt. Dies hat die Form einer alphanumerischen Zeichenfolge vor `@AdobeOrg`. Dieser Wert befindet sich unter **[!UICONTROL Benutzername]**. |
-| **Passwort** | Das Kennwort für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, finden Sie diese unter **[!UICONTROL Kennwort]** im Abschnitt für ablaufende Anmeldeinformationen.</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, besteht dieser Wert aus den Argumenten der technicalAccountID und der Berechtigung, die aus der JSON-Konfigurationsdatei übernommen wurden. Der Kennwortwert hat folgende Form: `{technicalAccountId}:{credential}`.</li></ul> |
+| Server/Host | Der Name des Servers/Hosts, mit dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird für ablaufende und nicht ablaufende Anmeldeinformationen verwendet und hat die Form `server.adobe.io`. Der Wert befindet sich unter **[!UICONTROL Host]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] .</ul></li> |
+| Port | Der Anschluss für den Server/Host, mit dem Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Port]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] . Ein Beispielwert für den Port wäre `80`.</ul></li> |
+| Datenbank | Die Datenbank, mit der Sie eine Verbindung herstellen. <ul><li>Dieser Wert wird sowohl für ablaufende als auch für nicht ablaufende Anmeldeinformationen verwendet und befindet sich unter **[!UICONTROL Database]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] . Ein Beispielwert für die Datenbank wäre `prod:all`.</ul></li> |
+| Benutzername | Der Benutzername für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, wird diese in Form einer alphanumerischen Zeichenfolge vor `@AdobeOrg` angezeigt. Dieser Wert befindet sich unter **[!UICONTROL Benutzername]**.</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, ist dies eine Zeichenfolge Ihrer Wahl, obwohl **nicht** derselbe Wert wie der `technicalAccountID`-Wert in der JSON-Konfigurationsdatei sein kann.</li></ul> |
+| Passwort | Das Kennwort für den Benutzer, der eine Verbindung zum externen Client herstellt. <ul><li>Wenn Sie ablaufende Anmeldeinformationen verwenden, finden Sie diese unter **[!UICONTROL Kennwort]** im Abschnitt [!UICONTROL EXPIRING CREDENTIALS] .</li><li>Wenn Sie nicht ablaufende Anmeldeinformationen verwenden, ist dieser Wert die verketteten Argumente aus der technicalAccountID und die Berechtigung aus der JSON-Konfigurationsdatei. Der Kennwortwert hat folgende Form: `{technicalAccountId}:{credential}`.</li></ul> |
 
 ## Nächste Schritte
 
