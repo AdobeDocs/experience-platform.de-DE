@@ -5,22 +5,22 @@ description: In diesem Dokument werden die von Experience Platform bereitgestell
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
 # Standardmäßige Warnhinweisregeln
 
-Adobe Experience Platform bietet mehrere vordefinierte Warnhinweisregeln, die Sie für Ihr Unternehmen aktivieren können. Die nachstehende Tabelle enthält die Einzelheiten dieser von der Adobe bereitgestellten Warnregeln. Allgemeine Informationen zu Warnhinweisen in Experience Platform finden Sie in der [Warnhinweise - Übersicht](./overview.md).
+Adobe Experience Platform bietet mehrere vordefinierte Warnhinweisregeln, die Sie für Ihr Unternehmen aktivieren können. Die nachstehende Tabelle enthält die Einzelheiten dieser von Adobe bereitgestellten Warnhinweisregeln. Allgemeine Informationen zu Warnhinweisen in Experience Platform finden Sie in der [Übersicht zu Warnhinweisen](./overview.md).
 
 | Regel  | Beschreibung | Auswertungsfrequenz | Wiederholungsfenster |
 | --- | --- | --- | --- |
-| Erfolgreiche Ausführung des Quellenflusses | Dieser Warnhinweis wird Trigger, wenn Daten erfolgreich aus einer Quellverbindung erfasst werden. | K. A. | K. A. |
-| Fehler beim Ausführen des Quellflusses | Dieser Warnhinweis wird Trigger, wenn bei der Aufnahme von Daten aus einer Quellverbindung ein Fehler auftritt. | K. A. | K. A. |
-| Verzögerung bei Segmentaufträgen | Dieser Warnhinweis wird Trigger, wenn der Abschluss von Segmentaufträgen länger als 150 Minuten dauert. | 30 Sekunden | 3 Stunden |
-| Segmentdefinition deaktiviert | Dieser Warnhinweis wird Trigger, wenn eine Segmentdefinition deaktiviert ist. | K. A. | K. A. |
+| Erfolgreiche Ausführung des Quellflusses | Dieser Warnhinweis wird ausgelöst, wenn Daten erfolgreich aus einer Quellverbindung aufgenommen werden. | K. A. | K. A. |
+| Fehler beim Ausführen des Quellflusses | Dieser Warnhinweis wird ausgelöst, wenn bei der Aufnahme von Daten aus einer Quellverbindung ein Fehler auftritt. | K. A. | K. A. |
+| Verzögerung bei Segmentaufträgen | Dieser Warnhinweis wird ausgelöst, wenn der Abschluss eines Segmentauftrags länger als 150 Minuten dauert. | 30 Sekunden | 3 Stunden |
+| Segmentdefinition deaktiviert | Dieser Warnhinweis wird ausgelöst, wenn eine Segmentdefinition deaktiviert ist. | K. A. | K. A. |
 
 {style=&quot;table-layout:auto&quot;}
 
