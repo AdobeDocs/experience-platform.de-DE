@@ -4,7 +4,7 @@ title: Bearbeiten eines Schemas, um benutzerdefinierte Dashboard-Widgets zu erst
 description: Dieses Handbuch enthält schrittweise Anweisungen zum Auswählen von Attributen und Konfigurieren des Schemas Ihres Unternehmens, um benutzerdefinierte Widgets für Adobe Experience Platform-Dashboards zu erstellen.
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '467'
 ht-degree: 100%
 
