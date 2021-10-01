@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Zugriffssteuerung;API;Erste Schritte
+keywords: Experience Platform;Startseite;beliebte Themen;Zugangssteuerung;API;Erste Schritte
 solution: Experience Platform
-title: Handbuch der Zugriffssteuerung-APIs
+title: Handbuch der Zugangssteuerungs-APIs
 topic-legacy: developer guide
-description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
+description: Mit der Zugangssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '385'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # [!DNL Access Control]-API-Handbuch
 
-[!DNL Access control] für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](../home.md).
+[!DNL Access control] für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../home.md).
 
 Dieses Entwicklerhandbuch enthält Informationen zum Formatieren Ihrer Anfragen an die [[!DNL Access Control API]](https://www.adobe.io/experience-platform-apis/references/access-control/) und behandelt die folgenden Vorgänge:
 
