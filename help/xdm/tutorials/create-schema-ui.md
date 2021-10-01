@@ -71,7 +71,7 @@ Bei der Entscheidung über einen Namen für Ihr Schema sind einige wichtige Aspe
 
 In diesem Tutorial wird ein Schema zum Erfassen von Daten zu Mitgliedern eines Treueprogramms zusammengestellt, weshalb das Schema &quot;Mitglieder des Treueprogramms&quot;heißt.
 
-## Feldergruppe {#field-group} hinzufügen
+## Feldergruppe hinzufügen {#field-group}
 
 Sie können nun mit dem Hinzufügen von Feldern zum Schema beginnen, indem Sie Feldergruppen hinzufügen. Eine Feldergruppe ist eine Gruppe aus einem oder mehreren Feldern, die häufig zusammen zur Beschreibung eines bestimmten Konzepts verwendet werden. In diesem Tutorial werden Feldgruppen verwendet, um die Mitglieder des Treueprogramms zu beschreiben und wichtige Informationen wie Name, Geburtstag, Telefonnummer, Adresse und mehr zu erfassen.
 
@@ -123,7 +123,7 @@ Nach dem Hinzufügen wird die Arbeitsfläche wieder angezeigt. &quot;[!UICONTROL
 
 ![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Benutzerdefinierte Feldergruppe {#define-field-group} definieren
+## Benutzerdefinierte Feldergruppe definieren {#define-field-group}
 
 Das Schema &quot;[!UICONTROL Mitglieder des Treueprogramms]&quot;ist dazu gedacht, Daten zu den Mitgliedern eines Treueprogramms zu erfassen, sodass es einige spezifische loyalitätsbezogene Felder erfordert.
 
@@ -139,7 +139,7 @@ Nennen Sie für dieses Tutorial die neue Feldergruppe &quot;Loyalitätsdetails&q
 
 Wählen Sie **[!UICONTROL Feldergruppe]** hinzufügen aus, um zum [!DNL Schema Editor] zurückzukehren. &quot;[!UICONTROL Loyalitätsdetails]&quot;sollte jetzt auf der linken Seite der Arbeitsfläche unter **[!UICONTROL Feldergruppen]** angezeigt werden. Es sind jedoch noch keine Felder damit verknüpft und daher werden keine neuen Felder unter **[!UICONTROL Struktur]** angezeigt.
 
-## Felder zur Feldergruppe {#field-group-fields} hinzufügen
+## Felder zur Feldergruppe hinzufügen {#field-group-fields}
 
 Nachdem Sie die Feldergruppe &quot;Loyalitätsdetails&quot;erstellt haben, ist es an der Zeit, die Felder zu definieren, die die Feldergruppe zum Schema beitragen wird.
 
@@ -178,7 +178,7 @@ Je nach ausgewähltem Datentyp stehen verschiedene Einschränkungsoptionen zur V
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Fügen Sie der Feldergruppe {#field-group-fields-2} weitere Felder hinzu.
+## Hinzufügen weiterer Felder zur Feldergruppe {#field-group-fields-2}
 
 Nachdem Sie jetzt das Feld `loyaltyId` hinzugefügt haben, können Sie zusätzliche Felder hinzufügen, um loyalitätsbezogene Informationen zu erfassen, z. B.:
 

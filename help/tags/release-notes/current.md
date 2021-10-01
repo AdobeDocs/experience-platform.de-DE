@@ -1,8 +1,9 @@
 ---
 title: Versionshinweise
 description: Die neuesten Versionshinweise für Tags in Adobe Experience Platform.
-source-git-commit: f1e6741de9aa00652e9af290a89f73788e0f1d83
-workflow-type: ht
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 ## 19. Juli 2021
 
@@ -34,7 +35,7 @@ ht-degree: 100%
 
 **Datenerfassung in Adobe Experience Platform** - Beim Senden von Daten an Adobe geht es nicht nur darum, Tags auf Ihrer Site bereitzustellen oder Ihre App zu konfigurieren.  Die Verwendung der Experience Platform-SDKs und von Edge Network erfordert Zugriff auf andere Funktionen von Platform. Dies erforderte früher die Anmeldung bei mehreren verschiedenen Tools; diese befinden sich nun alle an einem Ort.
 
-Die Datenerfassung in Platform umfasst sechs Funktionen. Ihre neu optimierte Navigation enthält nur die Elemente, auf die Ihr Unternehmen und Ihr Benutzerkonto Zugriff haben.  Einige der Funktionsnamen wurden ebenfalls aktualisiert, damit sie den üblichen Benennungsmustern von Experience Platform entsprechen.
+Die Datenerfassung in Platform umfasst sechs Funktionen. Ihre neu optimierte Navigation enthält nur die Elemente, auf die Ihr Unternehmen und Ihr Benutzerkonto Zugriff haben. Einige der Funktionsnamen wurden ebenfalls aktualisiert, damit sie den üblichen Benennungsmustern von Experience Platform entsprechen.
 
 * Client (zuvor als Client-Seite aufgerufen)
 * Datastreams (früher als Edge-Konfigurationen aufgerufen)

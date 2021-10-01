@@ -8,7 +8,7 @@ exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
 source-git-commit: a455134a45137b171636d6525ce9124bc95f4335
 workflow-type: tm+mt
 source-wordcount: '855'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -60,7 +60,7 @@ Weitere Informationen finden Sie in [Ziele – Übersicht](../../destinations/ho
 | --- | --- |
 | Adobe I/O-Ereignisbenachrichtigungen | [!DNL Observability Insights] nutzt Adobe I/O-Ereignisse , um Ereignisbenachrichtigungen für mehrere Experience Platform-Dienste zu erstellen. Benachrichtigungs-Payloads werden an einen konfigurierten Webhook gesendet, mit dem Sie dann weitere nachgelagerte Prozesse automatisieren können. |
 
-Weitere Informationen zum Dienst finden Sie unter [[!DNL Observability Insights] overview](../../observability/home.md) .
+Weitere Informationen zu dem Service finden Sie in der [[!DNL Observability Insights] Übersicht zu ](../../observability/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 

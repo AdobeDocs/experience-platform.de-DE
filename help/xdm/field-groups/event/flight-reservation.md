@@ -2,13 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Flug;
 title: Feldergruppe "Flugreservierungsschema"
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe Flugreservierungsschema .
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 5%
 
 ---
-
 
 # [!UICONTROL Feldergruppe ] &quot;Flugreservierung&quot;
 

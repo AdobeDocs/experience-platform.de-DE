@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Profil-Abfrage-Sprache;Zeichenfolgen-Funktionen;Zeichenfolge;
+keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profile Query Language; Zeichenfolgenfunktionen; Zeichenfolge;
 solution: Experience Platform
 title: PQL-Zeichenfolgen-Funktionen
 topic-legacy: developer guide
-description: Profil Abfrage Language (PQL)-Angebote erleichtern die Interaktion mit Zeichenfolgen.
+description: Profile Query Language (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '784'
-ht-degree: 10%
+ht-degree: 69%
 
 ---
 
 # Zeichenfolgen-Funktionen
 
-[!DNL Profile Query Language] (PQL) Angebot Funktionen, um die Interaktion mit Zeichenfolgen zu vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
+[!DNL Profile Query Language] (PQL) bietet Funktionen, die die Interaktion mit Zeichenfolgen vereinfachen. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
-## like
+## Ist wie
 
 Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge einem angegebenen Muster entspricht.
 
@@ -34,7 +33,7 @@ Mit der Funktion `like` wird bestimmt, ob eine Zeichenfolge einem angegebenen Mu
 
 **Beispiel**
 
-Die folgende PQL-Abfrage ruft alle Städte mit dem Muster &quot;es&quot;ab.
+Mit der folgenden PQL-Abfrage werden alle Städte abgerufen, die das Muster &quot;es&quot;enthalten.
 
 ```sql
 city like "%es%"
@@ -42,7 +41,7 @@ city like "%es%"
 
 ## Beginnt mit
 
-Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge Beginn.
+Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer angegebenen Unterzeichenfolge beginnt.
 
 **Format**
 
@@ -54,11 +53,11 @@ Mit der Funktion `startsWith` wird bestimmt, ob eine Zeichenfolge mit einer ange
 | --------- | ----------- |
 | `{STRING_1}` | Die Zeichenfolge, die überprüft werden soll. |
 | `{STRING_2}` | Die Zeichenfolge, nach der in der ersten Zeichenfolge gesucht werden soll. |
-| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf true festgelegt. |
+| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf „true“ gesetzt. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Name der Person mit &quot;Joe&quot;Beginn.
+Die folgende PQL-Abfrage bestimmt mit Groß-/Kleinschreibung, ob der Name der Person mit &quot;Joe&quot;beginnt.
 
 ```sql
 person.name.startsWith("Joe")
@@ -66,7 +65,7 @@ person.name.startsWith("Joe")
 
 ## Beginnt nicht mit
 
-Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge Beginn.
+Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mit einer angegebenen Unterzeichenfolge beginnt.
 
 **Format**
 
@@ -78,11 +77,11 @@ Mit der Funktion `doesNotStartWith` wird bestimmt, ob eine Zeichenfolge nicht mi
 | --------- | ----------- |
 | `{STRING_1}` | Die Zeichenfolge, die überprüft werden soll. |
 | `{STRING_2}` | Die Zeichenfolge, nach der in der ersten Zeichenfolge gesucht werden soll. |
-| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf true festgelegt. |
+| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf „true“ gesetzt. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Personenname nicht mit &quot;Joe&quot;Beginn.
+Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob der Name der Person nicht mit &quot;Joe&quot;beginnt.
 
 ```sql
 person.name.doesNotStartWith("Joe")
@@ -102,11 +101,11 @@ Mit der Funktion `endsWith` wird bestimmt, ob eine Zeichenfolge mit einer angege
 | --------- | ----------- |
 | `{STRING_1}` | Die Zeichenfolge, die überprüft werden soll. |
 | `{STRING_2}` | Die Zeichenfolge, nach der in der ersten Zeichenfolge gesucht werden soll. |
-| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf true festgelegt. |
+| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf „true“ gesetzt. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person mit &quot;.com&quot;endet.
+Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person auf &quot;.com&quot;endet.
 
 ```sql
 person.emailAddress.endsWith(".com")
@@ -126,17 +125,17 @@ Mit der Funktion `doesNotEndWith` wird bestimmt, ob eine Zeichenfolge nicht mit 
 | --------- | ----------- |
 | `{STRING_1}` | Die Zeichenfolge, die überprüft werden soll. |
 | `{STRING_2}` | Die Zeichenfolge, nach der in der ersten Zeichenfolge gesucht werden soll. |
-| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf true festgelegt. |
+| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf „true“ gesetzt. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person nicht mit &quot;.com&quot;endet.
+Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person nicht mit &quot;.com&quot;endet.
 
 ```sql
 person.emailAddress.doesNotEndWith(".com")
 ```
 
-## Contains
+## Enthält
 
 Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge enthält.
 
@@ -150,11 +149,11 @@ Mit der Funktion `contains` wird bestimmt, ob eine Zeichenfolge eine angegebene 
 | --------- | ----------- |
 | `{STRING_1}` | Die Zeichenfolge, die überprüft werden soll. |
 | `{STRING_2}` | Die Zeichenfolge, nach der in der ersten Zeichenfolge gesucht werden soll. |
-| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf true festgelegt. |
+| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf „true“ gesetzt. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot;enthält.
+Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot;enthält.
 
 ```sql
 person.emailAddress.contains("2010@gm")
@@ -162,7 +161,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Enthält nicht
 
-Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge keine angegebene Unterzeichenfolge enthält.
+Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge eine angegebene Unterzeichenfolge nicht enthält.
 
 **Format**
 
@@ -174,11 +173,11 @@ Mit der Funktion `doesNotContain` wird bestimmt, ob eine Zeichenfolge keine ange
 | --------- | ----------- |
 | `{STRING_1}` | Die Zeichenfolge, die überprüft werden soll. |
 | `{STRING_2}` | Die Zeichenfolge, nach der in der ersten Zeichenfolge gesucht werden soll. |
-| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf true festgelegt. |
+| `{BOOLEAN}` | Ein optionaler Parameter, mit dem bestimmt wird, ob bei der Prüfung die Groß-/Kleinschreibung beachtet wird. Standardmäßig ist dies auf „true“ gesetzt. |
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt unter Berücksichtigung der Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot;nicht enthält.
+Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob die E-Mail-Adresse der Person die Zeichenfolge &quot;2010@gm&quot;nicht enthält.
 
 ```sql
 person.emailAddress.doesNotContain("2010@gm")
@@ -186,7 +185,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Gleich
 
-Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge mit der angegebenen Zeichenfolge übereinstimmt.
+Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge gleich der angegebenen Zeichenfolge ist.
 
 **Format**
 
@@ -201,7 +200,7 @@ Mit der Funktion `equals` wird bestimmt, ob eine Zeichenfolge mit der angegebene
 
 **Beispiel**
 
-Mit der folgenden PQL-Abfrage wird unter Berücksichtigung der Groß-/Kleinschreibung bestimmt, ob der Name der Person &quot;John&quot;lautet.
+Die folgende PQL-Abfrage bestimmt mit Groß-/Kleinschreibung, ob der Name der Person &quot;John&quot; lautet.
 
 ```sql
 person.name.equals("John")
@@ -209,7 +208,7 @@ person.name.equals("John")
 
 ## Ungleich
 
-Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht mit der angegebenen Zeichenfolge übereinstimmt.
+Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht gleich der angegebenen Zeichenfolge ist.
 
 **Format**
 
@@ -224,7 +223,7 @@ Mit der Funktion `notEqualTo` wird bestimmt, ob eine Zeichenfolge nicht mit der 
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt bei Beachtung der Groß-/Kleinschreibung, ob der Name der Person nicht &quot;John&quot;lautet.
+Die folgende PQL-Abfrage ermittelt mit Groß-/Kleinschreibung, ob der Name der Person nicht &quot;John&quot;lautet.
 
 ```sql
 person.name.notEqualTo("John")
@@ -232,7 +231,7 @@ person.name.notEqualTo("John")
 
 ## Stimmt überein mit
 
-Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern in regulären Ausdrücken finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
+Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimmten regulären Ausdruck übereinstimmt. Weitere Informationen zu Übereinstimmungsmustern bei regulären Ausdrücken finden Sie in [diesem Dokument](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html).
 
 **Format**
 
@@ -242,13 +241,13 @@ Mit der Funktion `matches` wird bestimmt, ob eine Zeichenfolge mit einem bestimm
 
 **Beispiel**
 
-Die folgende PQL-Abfrage bestimmt, ob der Name der Person mit &quot;John&quot;Beginn, ohne dass die Groß-/Kleinschreibung beachtet wird.
+Die folgende PQL-Abfrage bestimmt, ohne die Groß-/Kleinschreibung zu beachten, ob der Name der Person mit &quot;John&quot;beginnt.
 
 ```sql
 person.name.matches("(?i)^John")
 ```
 
-## Regelmäßiger Ausdruck
+## Gruppe regelmäßiger Ausdrücke
 
 Die Funktion `regexGroup` wird verwendet, um spezifische Informationen basierend auf dem bereitgestellten regulären Ausdruck zu extrahieren.
 
@@ -268,4 +267,4 @@ emailAddress.regexGroup("@(\w+)", 1)
 
 ## Nächste Schritte
 
-Nachdem Sie nun von Zeichenfolgen-Funktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Nachdem Sie sich mit Zeichenfolgen-Funktionen vertraut gemacht haben, können Sie sie in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).

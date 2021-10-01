@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Anhang zum Sandbox-API-Handbuch
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Sandbox-API.
 topic-legacy: developer guide
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 4%

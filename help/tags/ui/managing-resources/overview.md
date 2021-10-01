@@ -1,10 +1,11 @@
 ---
 title: Verwalten von Ressourcen
 description: Erfahren Sie, wie Sie verschiedene Ressourcen in Adobe Experience Platform verwalten, einschließlich Erweiterungen, Datenelementen und Regeln.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 90%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Im Kontext von Tags in Experience Platform bezieht sich das Wort „Ressourcen“ auf einen der folgenden Punkte:
 

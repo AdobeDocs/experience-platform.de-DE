@@ -8,7 +8,7 @@ exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
 source-wordcount: '2563'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -62,7 +62,7 @@ Platform ermöglicht die Erfassung von Daten zur Einwilligung von Kunden mithilf
 
 Zusätzlich zu den SDK-Befehlen, die von CMP-Zustimmungs-Change-Hooks ausgelöst werden, können Zustimmungsdaten auch über alle kundengenerierten XDM-Daten in Experience Platform fließen, die direkt in einen [!DNL Profile]-aktivierten Datensatz hochgeladen werden.
 
-Alle Segmente, die von Adobe Audience Manager (über den Quell-Connector [!DNL Audience Manager] oder anderweitig) für Platform freigegeben werden, können auch Einwilligungsdaten enthalten, sofern die entsprechenden Felder über [!DNL Experience Cloud Identity Service] auf diese Segmente angewendet wurden. Weitere Informationen zum Erfassen von Einwilligungsdaten in [!DNL Audience Manager] finden Sie im Dokument zum [Adobe Audience Manager-Plug-in für IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Alle Segmente, die von Adobe Audience Manager (über den Quell-Connector [!DNL Audience Manager] oder anderweitig) für Platform freigegeben werden, können auch Einwilligungsdaten enthalten, sofern die entsprechenden Felder über [!DNL Experience Cloud Identity Service] auf diese Segmente angewendet wurden. Weitere Informationen zum Erfassen von Einwilligungsdaten in [!DNL Audience Manager] finden Sie im Dokument zum [Adobe Audience Manager-Plug-in für IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html?lang=de).
 
 ### Durchsetzung der nachgelagerten Zustimmung
 

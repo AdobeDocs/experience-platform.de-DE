@@ -51,9 +51,9 @@ In der folgenden Tabelle werden einige der wichtigsten Unterschiede für Data Sc
 | Tief lernende Unterstützung für TensorFlow-Modelle (GPU Compute). |  | X |
 | Spark-basierter verteilter Compute zum Trainieren und Scores für große Datensätze (10MM + Zeilen). |  | X |
 
-## Zugriffskontrolle
+## Zugangssteuerung
 
-Die Zugriffskontrolle für Experience Platform wird über die [Adobe Admin Console](https://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](../access-control/home.md).
+Die Zugriffskontrolle für Experience Platform wird über die [Adobe Admin Console](https://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen. Weiterführende Informationen dazu finden Sie unter [Zugangssteuerung – Übersicht](../access-control/home.md).
 
 Um Data Science Workspace verwenden zu können, muss die Berechtigung &quot;Data Science Workspace verwalten&quot;aktiviert sein. In der folgenden Tabelle werden die Auswirkungen der Aktivierung oder Deaktivierung dieser Berechtigung aufgeführt:
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Entwicklerhandbuch;Data Science Workspace;beliebte Themen;Echtzeit-maschinelles Lernen;Node-Referenz;
+keywords: Experience Platform; Entwicklerhandbuch; Data Science Workspace; beliebte Themen; Echtzeit-maschinelles Lernen; Knotenreferenz;
 solution: Experience Platform
-title: Referenz zum maschinellen Lernen in Echtzeit
+title: Referenz zum Knoten für maschinelles Lernen in Echtzeit
 topic-legacy: Nodes reference
-description: Eine Node ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe durch und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einer Node ausgeführte Aufgabe stellt einen Vorgang mit Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine maschinelle Lerninferenz. Die Node gibt den transformierten oder abgeleiteten Wert an die nächste(n) Node(s) aus.
+description: Ein Knoten ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang für Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine Inferenz für maschinelles Lernen. Der Knoten gibt den umgewandelten oder abgeleiteten Wert an die nächsten Knoten aus.
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '678'
@@ -13,19 +12,19 @@ ht-degree: 1%
 
 ---
 
-# Referenz zum Node für maschinelles Lernen in Echtzeit (Alpha)
+# Referenz zum Knoten für maschinelles Lernen in Echtzeit (Alpha)
 
 >[!IMPORTANT]
 >
->Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion ist alphanumerisch und wird noch getestet. Dieses Dokument kann sich ändern.
+>Das maschinelle Lernen in Echtzeit steht noch nicht allen Benutzern zur Verfügung. Diese Funktion befindet sich in der Alpha-Phase und wird noch getestet. Dieses Dokument kann sich ändern.
 
-Eine Node ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe durch und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einer Node ausgeführte Aufgabe stellt einen Vorgang mit Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine maschinelle Lerninferenz. Die Node gibt den transformierten oder abgeleiteten Wert an die nächste(n) Node(s) aus.
+Ein Knoten ist die grundlegende Einheit, aus der Diagramme gebildet werden. Jeder Knoten führt eine bestimmte Aufgabe aus und kann mithilfe von Links miteinander verkettet werden, um ein Diagramm zu bilden, das eine ML-Pipeline darstellt. Die von einem Knoten ausgeführte Aufgabe stellt einen Vorgang für Eingabedaten dar, z. B. eine Transformation von Daten oder Schemas oder eine Inferenz für maschinelles Lernen. Der Knoten gibt den umgewandelten oder abgeleiteten Wert an die nächsten Knoten aus.
 
-In der folgenden Anleitung werden die unterstützten Node-Bibliotheken für maschinelles Lernen in Echtzeit beschrieben.
+Im folgenden Handbuch werden die unterstützten Knotenbibliotheken für maschinelles Lernen in Echtzeit beschrieben.
 
-## Entdecken von Nodes zur Verwendung in Ihrer ML-Pipeline
+## Ermitteln von Knoten zur Verwendung in Ihrer ML-Pipeline
 
-Kopieren Sie den folgenden Code in ein [!DNL Python]-Notizbuch, um alle verfügbaren Nodes Ansicht.
+Kopieren Sie den folgenden Code in ein [!DNL Python]-Notebook, um alle Knoten anzuzeigen, die zur Verwendung verfügbar sind.
 
 ```python
 from pprint import pprint
@@ -55,11 +54,11 @@ pprint(nf.discover_nodes())
 
 ## Standardknoten
 
-Standardknoten bauen auf Open-Source-Datenwissenschaftsbibliotheken wie Pandas und ScikitLearn auf.
+Standardknoten basieren auf Open-Source-Datenwissenschaftsbibliotheken wie Pandas und ScikitLearn.
 
 ### ModelUpload
 
-Der Knoten ModelUpload ist ein interner Knoten für Adoben, der eine model_path akzeptiert und das Modell vom lokalen Modellpfad in den Real-time Machine Learning Blob Store hochlädt.
+Der Knoten ModelUpload ist ein interner Knoten für Adoben, der einen model_path akzeptiert und das Modell aus dem lokalen Modellpfad in den Blob Store für maschinelles Lernen in Echtzeit hochlädt.
 
 ```python
 model = ModelUpload(params={'model_path': model_path})
@@ -71,7 +70,7 @@ model_id = msg_model.model['model_id']
 
 ### ONNXNode
 
-ONNXNode ist ein interner Adobe-Knoten, der eine Modell-ID benötigt, um das vorab geschulte ONNX-Modell abzurufen, und es verwendet, um bei eingehenden Daten zu bewerten.
+ONNXNode ist ein interner Adobe-Knoten, der eine Modell-ID benötigt, um das vortrainierte ONNX-Modell abzurufen, und es verwendet, um eingehende Daten zu bewerten.
 
 >[!TIP]
 >
@@ -83,9 +82,9 @@ node_model_score = ONNXNode(params={"features": ['browser', 'device', 'login_pag
 
 ### Pandas {#pandas}
 
-Mit dem folgenden Pandas-Knoten können Sie eine beliebige `pd.DataFrame`-Methode oder eine beliebige allgemeine Pandas-Funktion auf oberster Ebene importieren. Weitere Informationen zu Pandas-Methoden finden Sie in der Dokumentation [Pandas-Methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Weitere Informationen zu Funktionen der obersten Ebene finden Sie im Handbuch [Pandas API-Referenz für allgemeine Funktionen](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
+Mit dem folgenden Pandas-Knoten können Sie eine beliebige `pd.DataFrame`-Methode oder eine beliebige allgemeine pandas-Funktion auf oberster Ebene importieren. Weitere Informationen zu Pandas-Methoden finden Sie in der [Dokumentation zu Pandas-Methoden](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). Weitere Informationen zu Funktionen der obersten Ebene finden Sie im [Pandas API-Referenzhandbuch für allgemeine Funktionen](https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html).
 
-Der unten stehende Knoten verwendet `"import": "map"`, um den Methodennamen als Zeichenfolge in die Parameter zu importieren, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird dies mit `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` durchgeführt. Nachdem Sie die Map platziert haben, haben Sie die Möglichkeit, `inplace` auf `True` oder `False` einzustellen. Stellen Sie `inplace` auf `True` oder `False` ein, je nachdem, ob Sie die Transformation anstelle der Transformation anwenden möchten oder nicht. Standardmäßig erstellt `"inplace": False` eine neue Spalte. Die Unterstützung für die Bereitstellung eines neuen Spaltennamens ist so eingestellt, dass er in einer späteren Version hinzugefügt wird. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Liste von Spalten sein. Geben Sie die Spalten an, auf die die Transformation angewendet werden soll. In diesem Beispiel wird `device` angegeben.
+Der folgende Knoten verwendet `"import": "map"`, um den Methodennamen als Zeichenfolge in die Parameter zu importieren, gefolgt von der Eingabe der Parameter als Zuordnungsfunktion. Im folgenden Beispiel wird `{"arg": {"Desktop": 1, "Mobile": 0}, "na_action": 0}` verwendet. Nachdem Sie die Zuordnung eingerichtet haben, können Sie `inplace` auf `True` oder `False` setzen. Setzen Sie `inplace` auf `True` oder `False`, je nachdem, ob Sie die Transformation anwenden möchten oder nicht. Standardmäßig erstellt `"inplace": False` eine neue Spalte. Die Unterstützung für die Bereitstellung eines neuen Spaltennamens ist so eingestellt, dass er in einer nachfolgenden Version hinzugefügt wird. Die letzte Zeile `cols` kann ein einzelner Spaltenname oder eine Spaltenliste sein. Geben Sie die Spalten an, auf die Sie die Transformation anwenden möchten. In diesem Beispiel ist `device` angegeben.
 
 ```python
 #  df["device"] = df["device"].map({"Desktop":1, "Mobile":0}, na_action=0)
@@ -106,7 +105,7 @@ node_browser_apply = Pandas(params={"import": "map",
 
 ### ScikitLearn
 
-Mit dem Knoten ScikitLearn können Sie beliebige ScikitLearn ML-Modelle oder -Skalierer importieren. Verwenden Sie die unten stehende Tabelle, um weitere Informationen zu einem der im Beispiel verwendeten Werte zu erhalten:
+Mit dem Knoten ScikitLearn können Sie beliebige ScikitLearn ML-Modelle oder -Skalatoren importieren. In der folgenden Tabelle finden Sie weitere Informationen zu den im Beispiel verwendeten Werten:
 
 ```python
 model_train = ScikitLearn(params={
@@ -123,17 +122,17 @@ msg6 = model_train.process(msg5)
 
 | Wert | Beschreibung |
 | --- | --- |
-| Funktionen | Eingabefunktionen für das Modell (Liste von Zeichenfolgen). <br> Beispiel: `browser`, `device`, `login_page`, `product_page`, `search_page` |
-| label | Spaltenname der Zielgruppe (Zeichenfolge). |
-| mode | Zug/Test (Zeichenfolge). |
-| model_path | Pfad zum gespeicherten Modell lokal im Format &quot;onnx&quot;. |
+| Funktionen | Eingabefunktionen für das Modell (Liste der Zeichenfolgen). <br> Beispiel: `browser`, `device`, `login_page`, `product_page`, `search_page` |
+| label | Name der Zielspalte (Zeichenfolge). |
+| mode | Trainieren/Test (Zeichenfolge). |
+| model_path | Pfad zum lokalen Speichermodell im Format &quot;onx&quot;. |
 | params.model | Absoluter Importpfad zum Modell (Zeichenfolge), z. B.: `sklearn.linear_model.LogisticRegression`. |
-| params.model_params | Modellhyperparameter finden Sie in der Dokumentation [sklearn API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) weitere Informationen. |
-| node_instance.process(data_message_from_previous_node) | Die Methode `process()` nimmt DataMsg vom vorherigen Knoten und wendet eine Transformation an. Dies hängt von der aktuell verwendeten Node ab. |
+| params.model_params | Modell-Hyperparameter finden Sie in der Dokumentation zur [sklearn-API (map/dict)](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) . |
+| node_instance.process(data_message_from_previous_node) | Die Methode `process()` übernimmt DataMsg aus dem vorherigen Knoten und wendet die Transformation an. Dies hängt vom aktuellen verwendeten Knoten ab. |
 
-### Split
+### Teilen
 
-Verwenden Sie den folgenden Knoten, um den Dataframe in Zug zu teilen und zu testen, indem Sie `train_size` oder `test_size` übergeben. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mit dem folgenden Beispiel `msg5.data.xs(“train”)` auf Zug- und Testdataframes zugreifen.
+Verwenden Sie den folgenden Knoten, um Ihren Dataframe in Zug zu teilen und zu testen, indem Sie `train_size` oder `test_size` übergeben. Dadurch wird ein Dataframe mit einem Multi-Index zurückgegeben. Sie können mithilfe des folgenden Beispiels `msg5.data.xs(“train”)` auf Dataframes von Trainings- und Testzwecken zugreifen.
 
 ```python
 splitter = Split(params={"train_size": 0.7})
@@ -142,4 +141,4 @@ msg5 = splitter.process(msg4)
 
 ## Nächste Schritte
 
-Der nächste Schritt besteht darin, Nodes zur Verwendung bei der Bewertung eines Echtzeit-maschinellen Lernmodells zu erstellen. Weitere Informationen finden Sie im Benutzerhandbuch für das Notebook [Echtzeit-Lernen für Maschinen](./rtml-authoring-notebook.md).
+Der nächste Schritt besteht darin, Knoten zur Verwendung beim Scoring eines Modells für maschinelles Lernen in Echtzeit zu erstellen. Weitere Informationen finden Sie im Benutzerhandbuch für Notebooks für maschinelles Lernen in Echtzeit](./rtml-authoring-notebook.md).[

@@ -1,8 +1,9 @@
 ---
 title: Implementieren von Bibliotheken von Drittanbietern
 description: Machen Sie sich mit den verschiedenen Methoden zum Hosten von Drittanbieterbibliotheken in Ihren Adobe Experience Platform-Tag-Erweiterungen vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Eines der Hauptziele von Tag-Erweiterungen in Adobe Experience Platform ist es, Ihnen die einfache Implementierung vorhandener Marketing-Technologien (Bibliotheken) in Ihre Website zu ermöglichen. Durch die Verwendung von Erweiterungen können Sie Bibliotheken implementieren, die von Inhaltsversandnetzwerken (Content Delivery Network, CDN) von Drittanbietern bereitgestellt werden, ohne die HTML-Daten Ihrer Website manuell bearbeiten zu müssen.
 
@@ -138,7 +139,7 @@ module.exports = function() {
 
 Optional können Sie weitere Schritte unternehmen, um diese Implementierung zu überarbeiten. Da die Variablen `scriptElement` und `firstScriptElement` jetzt auf die exportierte Funktion übertragen werden, können Sie die IIFE entfernen, da diese Variablen nicht das Risiko bergen, global zu werden.
 
-Darüber hinaus bieten Tags mehrere [Kernmodule](./web/core.md). Dabei handelt es sich um Dienstprogramme, die jede Erweiterung verwenden kann. Das Modul `@adobe/reactor-load-script` lädt ein Skript von einem Remote-Speicherort, indem ein Skriptelement erstellt und zum Dokument hinzugefügt wird. Mithilfe dieses Moduls für den Ladevorgang des Skripts können Sie den Aktions-Code noch weiter umgestalten:
+Darüber hinaus bieten Tags mehrere[Kernmodule](./web/core.md). Dabei handelt es sich um Dienstprogramme, die jede Erweiterung verwenden kann. Das Modul `@adobe/reactor-load-script` lädt ein Skript von einem Remote-Speicherort, indem ein Skriptelement erstellt und zum Dokument hinzugefügt wird. Mithilfe dieses Moduls für den Ladevorgang des Skripts können Sie den Aktions-Code noch weiter umgestalten:
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');

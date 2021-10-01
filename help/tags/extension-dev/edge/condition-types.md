@@ -1,10 +1,11 @@
 ---
 title: Bedingungstypen für Edge-Erweiterungen
-description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ Bedingung für eine Kantenerweiterung in Adobe Experience Platform definieren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Erfahren Sie, wie Sie in Adobe Experience Platform ein Bibliotheksmodul des Typs „condition-type“ für eine Edge-Erweiterung definieren.
+exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '408'
-ht-degree: 44%
+ht-degree: 88%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 44%
 
 In einer Tag-Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Bedingungstypen werden von Erweiterungen bereitgestellt und bewerten, ob etwas wahr oder falsch ist, wobei ein boolescher Wert zurückgegeben wird.
 
-Beispielsweise könnte eine Erweiterung einen Bedingungstyp &quot;Viewport enthält&quot;bereitstellen, in dem der Benutzer einen CSS-Selektor angeben könnte. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
+Beispielsweise könnte eine Erweiterung einen Bedinungstyp „Viewport enthält“ bereitstellen, bei dem der Benutzer einen CSS-Selektor angeben kann. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
 
 In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Kantenerweiterung in Adobe Experience Platform definieren.
 
@@ -24,14 +25,14 @@ In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Kantenerw
 >
 >Wenn Sie eine Web-Erweiterung entwickeln, lesen Sie das Handbuch zu [Bedingungstypen für Web-Erweiterungen](../web/condition-types.md).
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Edge-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird auch davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Edge-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
 
 Bedingungstypen bestehen in der Regel aus Folgendem:
 
 1. Eine Ansicht, die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
-2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und eine Bedingung zu bewerten.
+2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
-Wenn Sie beispielsweise prüfen möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen.
+Wenn Sie z. B. prüfen möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen.
 
 ```js
 module.exports = (context) => {
@@ -40,7 +41,7 @@ module.exports = (context) => {
 };
 ```
 
-Wenn Sie möchten, dass der Hostname vom Benutzer konfiguriert werden kann, um die Eingabe eines Hostnamens zuzulassen und ihn im settings-Objekt zu speichern, könnte das Objekt in etwa wie im folgenden Beispiel aussehen.
+Wenn Sie möchten, dass der Host-Name vom Benutzer konfiguriert werden kann, um die Eingabe eines Host-Namens zuzulassen und ihn im settings-Objekt zu speichern, könnte das Objekt in etwa wie im folgenden Beispiel aussehen.
 
 ```js
 {

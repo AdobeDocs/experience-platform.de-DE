@@ -3,9 +3,10 @@ title: Ereignistypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie Ereignistypen verwenden, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
 solution: Experience Platform
 feature: Web SDK
-source-git-commit: 4bddd9f23ae885468148d1592af219290d6fafd9
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '1026'
+source-wordcount: '1024'
 ht-degree: 1%
 
 ---
@@ -85,7 +86,7 @@ Das `propositions`-Array könnte in etwa wie im folgenden Beispiel aussehen:
 ]
 ```
 
-Beim Senden des Ereignisses wurde das Kontrollkästchen [!UICONTROL Renderentscheidungen] nicht aktiviert, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, wenn Sie dies möchten. Beachten Sie, dass für jedes Vorschlagsobjekt die Eigenschaft `renderAttempted` auf `false` festgelegt ist.
+Beim Senden des Ereignisses wurde das Kontrollkästchen [!UICONTROL Renderentscheidungen] nicht aktiviert, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, sofern dies gewünscht ist. Beachten Sie, dass für jedes Vorschlagsobjekt die Eigenschaft `renderAttempted` auf `false` festgelegt ist.
 
 Hätten Sie beim Senden des Ereignisses stattdessen das Kontrollkästchen [!UICONTROL Renderentscheidungen] aktiviert, hätte das SDK versucht, alle Vorschläge wiederzugeben, die für das automatische Rendering infrage kommen. Daher wird für jedes der Vorschlagsobjekte die Eigenschaft `renderAttempted` auf `true` gesetzt. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
 
@@ -260,8 +261,3 @@ if (propositions) {
   // them in some other way.
 }
 ```
-
-
-
-
-

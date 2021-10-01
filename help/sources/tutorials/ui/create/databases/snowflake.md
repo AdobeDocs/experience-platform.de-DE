@@ -4,7 +4,8 @@ title: Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
-source-git-commit: 2e717f33b487430220bd3bb7812558cde81d8852
+exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
+source-git-commit: db483110b8bfd5290f6a9a30fdb008f478fdbbf4
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 10%

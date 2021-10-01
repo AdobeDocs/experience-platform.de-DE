@@ -1,14 +1,14 @@
 ---
 keywords: Data Governance rtcdp;rtcdp Data Governance;Echtzeit-Data Profil Data Governance;Datenschutz rtcdp;rtcdp privacy
 title: Datenschutz in der Echtzeit-Kundendatenplattform
-seo-title: Datenschutz in der Echtzeit-Kundendatenplattform
+seo-title: Privacy in Real-time Customer Data Platform
 description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess optimieren, Ihre Datenvorgänge mit Datenschutzbestimmungen konform zu halten.
-seo-description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess optimieren, Ihre Datenvorgänge mit Datenschutzbestimmungen konform zu halten.
+seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 6%
+source-wordcount: '365'
+ht-degree: 7%
 
 ---
 

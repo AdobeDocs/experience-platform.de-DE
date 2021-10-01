@@ -8,7 +8,7 @@ exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
 workflow-type: tm+mt
 source-wordcount: '1097'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
@@ -164,7 +164,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Ganzzahl] | Typ: `INT32`<br>Anmerkung: `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Kurz] | Typ: `INT32`<br>Anmerkung: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Typ: `INT32`<br>Anmerkung: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Datum ] | Typ: `INT32`<br>Anmerkung: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Datum] | Typ: `INT32`<br>Anmerkung: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Typ: `INT64`<br>Anmerkung: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Boolesch] | Typ: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br> (`<key-type>` muss  `STRING`sein) | `MapType`<br><br>(`keyType` muss  `StringType`) | `java.util.Map` |
@@ -181,7 +181,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Ganzzahl] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Kurz] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Datum ] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Datum] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL Boolesch] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Landkarte] | `Map` | (Nicht angegeben) | `object` |
@@ -198,7 +198,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Ganzzahl] | `int` | `Integer` | `int32` |
 | [!UICONTROL Kurz] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Datum ] | `date` | `Integer`<br>(Unix-Millisekunden) | `int64`<br>(Unix-Millisekunden) |
+| [!UICONTROL Datum] | `date` | `Integer`<br>(Unix-Millisekunden) | `int64`<br>(Unix-Millisekunden) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix-Millisekunden) | `int64`<br>(Unix-Millisekunden) |
 | [!UICONTROL Boolesch] | `bool` | `Integer`<br>(0/1 binär) | `bool` |
 | [!UICONTROL Landkarte] | `object` | `map` | `map<key_type, value_type>` |
@@ -369,9 +369,9 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
     <td>
       <pre class="JSON language-JSON hljs">
 "sampleField": {
-          "type": "string",
-          "format": "date-time",
-          "examples": ["2004-10-23T12:00:00-06:00"]
+  "type": "string",
+  "format": "date-time",
+  "example": ["2004-10-23T12:00:00-06:00"]
 }</pre>
     </td>
   </tr>

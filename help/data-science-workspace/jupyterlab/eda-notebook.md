@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;JupyterLab;Notebooks;Data Science Workspace;beliebte Themen;Datenhefte analysieren;eda;Analyse von Forschungsdaten;Datenwissenschaften
+keywords: Experience Platform; JupyterLab; Notebooks; Data Science Workspace; beliebte Themen; Datennotebooks analysieren; eda; Datenanalyse; Datenwissenschaft
 solution: Experience Platform
-title: EDA-Notebook (Exploration Data Analyse)
+title: Notebook zur Sondierungsdatenanalyse (EDA)
 topic-legacy: overview
 type: Tutorial
-description: Dieser Leitfaden konzentriert sich auf die Verwendung des EDA-Notebooks (Exploratory Data Analyse), um Muster in Webdaten zu entdecken, Aggregat-Ereignis mit einem Prognoseziel, saubere aggregierte Daten und einen Einblick in die Beziehung zwischen Vorhersagern und einem Ziel.
+description: In diesem Handbuch wird beschrieben, wie Sie mit dem Notebook "Exploratory Data Analysis"(EDA) Muster in Webdaten erkennen, Ereignisse mit einem Prognoseziel aggregieren, aggregierte Daten bereinigen und die Beziehung zwischen Vorhersagen und Zielen verstehen können.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2760'
@@ -14,29 +13,29 @@ ht-degree: 1%
 
 ---
 
-# Webbasierte Daten für Prognosemodelle mithilfe des EDA-Notebooks (Exploratory Data Analyse)
+# Webbasierte Daten für Vorhersagemodelle mithilfe des Notebooks zur Datenanalyse (EDA)
 
-Das EDA-Notizbuch (Exploratory Data Analyse) hilft Ihnen bei der Erkennung von Datenmustern, der Überprüfung der Datensicherheit und der Zusammenfassung der relevanten Daten für Prognosemodelle.
+Das Notebook &quot;Exploratory Data Analysis&quot;(EDA) soll Ihnen dabei helfen, Datenmuster zu erkennen, die Datensicherheit zu überprüfen und die relevanten Daten für Vorhersagemodelle zusammenzufassen.
 
-Das EDA Notebook-Beispiel wurde mit Blick auf webbasierte Daten optimiert und besteht aus zwei Teilen. Teil 1: Beginn mit Abfrage Service zur Ansicht von Trends und Daten-Snapshots. Als Nächstes werden die Daten mit Blick auf die Analyse der Forschungsdaten auf der Ebene des Profils und des Besuchers aggregiert.
+Das EDA Notebook-Beispiel wurde mit Blick auf webbasierte Daten optimiert und besteht aus zwei Teilen. Teil 1 beginnt mit der Verwendung von Query Service zum Anzeigen von Trends und Daten-Momentaufnahmen. Als Nächstes werden die Daten mit dem Ziel der explorativen Datenanalyse auf Profil- und Besucherebene aggregiert.
 
-Teil zwei Beginn durch die Durchführung beschreibender Analysen über aggregierte Daten mit Python-Bibliotheken. Dieses Notebook zeigt Visualisierungen wie Histogramme, Streudiagramme, Box-Diagramme und eine Korrelationsmatrix, um umsetzbare Einblicke zu gewinnen, mit denen bestimmt wird, welche Funktionen bei der Vorhersage eines Ziels am ehesten hilfreich sind.
+Teil 2 beginnt mit der deskriptiven Analyse aggregierter Daten mithilfe von Python-Bibliotheken. Dieses Notebook enthält Visualisierungen wie Histogramme, Streudiagramme, Box-Diagramme und eine Korrelationsmatrix, um praktische Einblicke zu erhalten, mit denen bestimmt wird, welche Funktionen bei der Vorhersage eines Ziels am ehesten hilfreich sein dürften.
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md), um eine allgemeine Einführung zu [!DNL JupyterLab] und dessen Rolle innerhalb des Data Science Workspace zu erhalten. Wenn Sie Ihre eigenen Daten verwenden, lesen Sie bitte die Dokumentation für [Datenzugriff in [!DNL Jupyterlab] Notebooks](./access-notebook-data.md). Dieser Leitfaden enthält wichtige Informationen zu den Beschränkungen für Notebooks.
+Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) , um eine allgemeine Einführung in [!DNL JupyterLab] und dessen Rolle in Data Science Workspace zu erhalten. Wenn Sie außerdem Ihre eigenen Daten verwenden, lesen Sie bitte die Dokumentation für [Datenzugriff in [!DNL Jupyterlab] Notebooks](./access-notebook-data.md). Dieses Handbuch enthält wichtige Informationen zu Einschränkungen für Notebook-Daten.
 
-Dieses Notebook verwendet einen Midvalues-Datensatz in Form von Adobe Analytics Experience Ereignisses-Daten, die im Analytics Analysis Workspace gefunden werden. Zur Verwendung des EDA-Notebooks müssen Sie Ihre Datentabelle mit den folgenden Werten definieren: `target_table` und `target_table_id`. Es können alle Midvalues-Datensätze verwendet werden.
+Dieses Notebook verwendet einen Midvalues-Datensatz in Form von Adobe Analytics-Erlebnisereignisdaten aus Analytics Analysis Workspace. Um das EDA-Notebook zu verwenden, müssen Sie Ihre Datentabelle mit den folgenden Werten definieren: `target_table` und `target_table_id`. Es können beliebige Midvalues-Datensätze verwendet werden.
 
-Um diese Werte zu finden, führen Sie die Schritte aus, die im Abschnitt [Schreiben in einen Datensatz in Python](./access-notebook-data.md#write-python) des JupyterLab-Datenzugriffshandbuchs beschrieben sind. Der Dataset-Name (`target_table`) befindet sich im Ordner &quot;dataset&quot;. Wenn Sie mit der rechten Maustaste auf den Datensatz klicken, um Daten in ein Notebook zu untersuchen oder zu schreiben, wird eine Dataset-ID (`target_table_id`) im Eintrag für den ausführbaren Code angegeben.
+Um diese Werte zu finden, führen Sie die Schritte aus, die im Abschnitt [Schreiben in einen Datensatz in python](./access-notebook-data.md#write-python) des JupyterLab-Datenzugriffshandbuchs beschrieben sind. Der Datensatzname (`target_table`) befindet sich im Datensatzverzeichnis. Sobald Sie mit der rechten Maustaste auf den Datensatz klicken, um Daten in ein Notebook zu untersuchen oder zu schreiben, wird im ausführbaren Code-Eintrag eine Datensatz-ID (`target_table_id`) angegeben.
 
-## Datenerfassung
+## Datenerkennung
 
-Dieser Abschnitt enthält Konfigurationsschritte und Beispielprodukte, die zur Ansicht von Trends verwendet werden, z. B. &quot;Top Ten Cities by user Aktivität&quot;oder &quot;Top Ten Viewers&quot;.
+Dieser Abschnitt enthält Konfigurationsschritte und Beispielabfragen, mit denen Trends wie die &quot;Top zehn Städte nach Benutzeraktivität&quot;oder &quot;Top zehn angezeigte Produkte&quot;angezeigt werden.
 
-### Bibliothekskonfiguration
+### Konfiguration von Bibliotheken
 
-JupyterLab unterstützt mehrere Bibliotheken. Der folgende Code kann eingefügt und in eine Codezelle ausgeführt werden, um alle in diesem Beispiel verwendeten erforderlichen Pakete zu erfassen und zu installieren. Sie können zusätzliche oder alternative Analysen außerhalb dieses Beispiels für Ihre eigene Datendatei verwenden. Für eine Liste der unterstützten Pakete kopieren Sie `!pip list --format=columns` in eine neue Zelle.
+JupyterLab unterstützt mehrere Bibliotheken. Der folgende Code kann eingefügt und in eine Code-Zelle ausgeführt werden, um alle in diesem Beispiel verwendeten erforderlichen Pakete zu erfassen und zu installieren. Sie können außerhalb dieses Beispiels zusätzliche oder alternative Packages für Ihre eigene Datenanalyse verwenden. Für eine Liste der unterstützten Pakete kopieren Sie `!pip list --format=columns` und fügen Sie  in eine neue Zelle ein.
 
 ```python
 !pip install colorama
@@ -64,11 +63,11 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### Verbinden mit Adobe Experience Platform [!DNL Query Service]
+### Verbindung zu Adobe Experience Platform herstellen [!DNL Query Service]
 
-[!DNL JupyterLab] auf Plattform können Sie SQL in einem  [!DNL Python] Notebook verwenden, um über den  [Abfrage Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html) auf Daten zuzugreifen. Der Zugriff auf Daten über [!DNL Query Service] kann aufgrund der höheren Laufzeiten für die Behandlung großer Datensätze nützlich sein. Beachten Sie, dass die Datenabfrage mit [!DNL Query Service] eine Verarbeitungszeit von 10 Minuten hat.
+[!DNL JupyterLab] In Platform können Sie SQL in einem  [!DNL Python] Notebook verwenden, um über  [Query Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html) auf Daten zuzugreifen. Der Zugriff auf Daten über [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Verarbeitung großer Datensätze nützlich sein. Beachten Sie, dass die Abfrage von Daten mit [!DNL Query Service] eine Verarbeitungszeitbegrenzung von zehn Minuten hat.
 
-Bevor Sie [!DNL Query Service] in [!DNL JupyterLab] verwenden, sollten Sie sich mit der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md) vertraut machen.
+Bevor Sie [!DNL Query Service] in [!DNL JupyterLab] verwenden, müssen Sie über ein Verständnis der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md) verfügen.
 
 Um Query Service in JupyterLab zu nutzen, müssen Sie zunächst eine Verbindung zwischen Ihrem ausgeführten Python-Notebook und Query Service herstellen. Dies kann durch Ausführen der folgenden Zelle erreicht werden.
 
@@ -76,9 +75,9 @@ Um Query Service in JupyterLab zu nutzen, müssen Sie zunächst eine Verbindung 
 qs_connect()
 ```
 
-### Definieren des Datenbestands für die Ermittlung von Mittelwerten
+### Datensatz mit Mittelwerten für die Exploration definieren
 
-Um Daten abfragen und überprüfen zu können, muss eine Tabelle mit dem Datensatz für Zwischenwerte bereitgestellt werden. Kopieren Sie die Werte `table_name` und `table_id` und ersetzen Sie sie durch Ihre eigenen Datentabellenwerte.
+Um Daten abfragen und analysieren zu können, muss eine Tabelle mit midvalues-Datensätzen bereitgestellt werden. Kopieren Sie die Werte `table_name` und `table_id` und ersetzen Sie sie durch Ihre eigenen Datentabellenwerte.
 
 ```python
 target_table = "table_name"
@@ -92,9 +91,9 @@ target_table = "cross_industry_demo_midvalues"
 target_table_id = "5f7c40ef488de5194ba0157a"
 ```
 
-### Den Datensatz für verfügbare Daten entdecken
+### Datensatz für verfügbare Daten durchsuchen
 
-Mithilfe der unten angegebenen Zelle können Sie den Datumsbereich, der in der Tabelle behandelt wird, Ansicht werden. Die Untersuchung der Anzahl der Tage, des ersten und des letzten Datums dient der Auswahl eines Datumsbereichs für die weitere Analyse.
+Mithilfe der unten angegebenen Zelle können Sie den in der Tabelle erfassten Datumsbereich anzeigen. Die Untersuchung der Anzahl der Tage, des ersten Datums und des letzten Datums dient der Auswahl eines Datumsbereichs für die weitere Analyse.
 
 ```python
 %%read_sql -c QS_CONNECTION
@@ -106,11 +105,11 @@ order by Year, Month;
 
 Beim Ausführen der Zelle wird die folgende Ausgabe erzeugt:
 
-![Ausgabe des Abfrage-Datums](../images/jupyterlab/eda/query-date-output.PNG)
+![Ausgabe des Abfragedatums](../images/jupyterlab/eda/query-date-output.PNG)
 
-### Datumsangaben für die Datensatzerkennung konfigurieren
+### Datum für die Erkennung von Datensätzen konfigurieren
 
-Nach der Bestimmung der verfügbaren Daten für die Datensatzerkennung müssen die folgenden Parameter aktualisiert werden. Die in dieser Zelle konfigurierten Daten werden nur zur Datenerkennung in Form von Abfragen verwendet. Die Daten werden später in diesem Handbuch erneut auf geeignete Bereiche für die Analyse von Forschungsdaten aktualisiert.
+Nachdem Sie die verfügbaren Daten für die Datensatzerkennung ermittelt haben, müssen die folgenden Parameter aktualisiert werden. Die in dieser Zelle konfigurierten Daten werden nur zur Datenerkennung in Form von Abfragen verwendet. Die Daten werden später in diesem Handbuch erneut in geeignete Bereiche für die Analyse von Forschungsdaten aktualisiert.
 
 ```python
 target_year = "2020" ## The target year
@@ -118,9 +117,9 @@ target_month = "02" ## The target month
 target_day = "(01,02,03)" ## The target days
 ```
 
-### Dataset-Erkennung
+### Datensatz-Erkennung
 
-Nachdem Sie alle Parameter konfiguriert haben, [!DNL Query Service] gestartet haben und einen Datumsbereich haben, können Sie mit dem Lesen von Datenzeilen beginnen. Sie sollten die Anzahl der Zeilen, die Sie lesen, begrenzen.
+Nachdem Sie alle Ihre Parameter konfiguriert, [!DNL Query Service] gestartet und einen Datumsbereich festgelegt haben, können Sie mit dem Lesen von Datenzeilen beginnen. Sie sollten die Anzahl der Zeilen begrenzen, die Sie lesen.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -130,21 +129,21 @@ dataset_reader = DatasetReader(PLATFORM_SDK_CLIENT_CONTEXT, dataset_id=target_ta
 Table = dataset_reader.limit(5).read()
 ```
 
-Um die Anzahl der im Datensatz verfügbaren Spalten Ansicht, verwenden Sie die folgende Zelle:
+Verwenden Sie die folgende Zelle, um die Anzahl der im Datensatz verfügbaren Spalten anzuzeigen:
 
 ```python
 print("\nNumber of columns:",len(Table.columns))
 ```
 
-Um die Zeilen des Datensatzes Ansicht, verwenden Sie die folgende Zelle. In diesem Beispiel ist die Anzahl der Zeilen auf fünf begrenzt.
+Verwenden Sie die folgende Zelle, um die Zeilen des Datensatzes anzuzeigen. In diesem Beispiel ist die Anzahl der Zeilen auf fünf begrenzt.
 
 ```python
 Table.head(5)
 ```
 
-![Tabellenzeilenausgabe](../images/jupyterlab/eda/data-table-overview.PNG)
+![Ausgabe der Tabellenzeile](../images/jupyterlab/eda/data-table-overview.PNG)
 
-Sobald Sie wissen, welche Daten im Datensatz enthalten sind, können Sie den Datensatz weiter unterteilen. In diesem Beispiel werden die Spaltennamen und Datentypen für jede der Spalten aufgelistet, während die Ausgabe verwendet wird, um zu prüfen, ob der Datentyp korrekt ist oder nicht.
+Sobald Sie wissen, welche Daten im Datensatz enthalten sind, kann es nützlich sein, den Datensatz weiter aufzuschlüsseln. In diesem Beispiel werden die Spaltennamen und Datentypen für jede Spalte aufgelistet, während die Ausgabe verwendet wird, um zu überprüfen, ob der Datentyp korrekt ist oder nicht.
 
 ```python
 ColumnNames_Types = pd.DataFrame(Table.dtypes)
@@ -153,15 +152,15 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![Spaltenname und Datentypen Liste](../images/jupyterlab/eda/data-columns.PNG)
+![Spaltenname und Datentypliste](../images/jupyterlab/eda/data-columns.PNG)
 
-### Trendforschung im Datenbestand
+### Dataset-Trendforschung
 
-Der folgende Abschnitt enthält vier Beispieldaten, mit denen Trends und Datenmuster untersucht werden. Die folgenden Beispiele sind nicht erschöpfend, decken aber einige der am häufigsten untersuchten Funktionen ab.
+Der folgende Abschnitt enthält vier Beispielabfragen, mit denen Trends und Muster in Daten untersucht werden. Die folgenden Beispiele sind nicht vollständig, decken jedoch einige der am häufigsten betrachteten Funktionen ab.
 
-**Stündliche Aktivität für einen bestimmten Tag**
+**Stündliche Aktivitätsanzahl für einen bestimmten Tag**
 
-Diese Abfrage analysiert die tägliche Anzahl von Aktionen und Klicks. Die Ausgabe wird in Form einer Tabelle mit Metriken zur Anzahl der Aktivitäten pro Tagesstunde dargestellt.
+Diese Abfrage analysiert die Anzahl der Aktionen und Klicks über den ganzen Tag. Die Ausgabe wird in Form einer Tabelle mit Metriken zur Aktivitätsanzahl für jede Stunde des Tages dargestellt.
 
 ```sql
 %%read_sql query_2_df -c QS_CONNECTION
@@ -176,9 +175,9 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![Ausgabe der Abfrage 1](../images/jupyterlab/eda/hour-count-raw.PNG)
+![Abfrage 1 Ausgabe](../images/jupyterlab/eda/hour-count-raw.PNG)
 
-Nach der Bestätigung der Abfrage können die Daten in einem einheitlichen Plot-Histogramm dargestellt werden, um die Visualisierung zu gewährleisten.
+Nach Bestätigung der Funktion der Abfrage können die Daten in einem einheitlichen Zeichensatz-Histogramm dargestellt werden, um die visuelle Klarheit zu verbessern.
 
 ```python
 trace = go.Bar(
@@ -199,11 +198,11 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![Balkendiagramm-Ausgabe für Abfrage 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
+![Balkendiagrammausgabe für Abfrage 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
 **Top 10 der angezeigten Seiten für einen bestimmten Tag**
 
-Diese Abfrage analysiert, welche Seiten an einem bestimmten Tag am häufigsten angezeigt werden. Die Ausgabe wird in Form einer Tabelle dargestellt, die Metriken zum Seitennamen und zur Seitenanzahl enthält.
+Diese Abfrage analysiert, welche Seiten an einem bestimmten Tag am häufigsten angezeigt wurden. Die Ausgabe wird in Form einer Tabelle dargestellt, die Metriken zum Seitennamen und zur Anzahl der Seitenansichten enthält.
 
 ```sql
 %%read_sql query_4_df -c QS_CONNECTION
@@ -219,7 +218,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-Nach der Bestätigung der Abfrage können die Daten in einem einheitlichen Plot-Histogramm dargestellt werden, um die Visualisierung zu gewährleisten.
+Nach Bestätigung der Funktion der Abfrage können die Daten in einem einheitlichen Zeichensatz-Histogramm dargestellt werden, um die visuelle Klarheit zu verbessern.
 
 ```python
 trace = go.Bar(
@@ -240,9 +239,9 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![Top 10 angezeigte Seiten](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
+![Top 10 der angezeigten Seiten](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
-**Die zehn beliebtesten Städte gruppiert nach Aktivität der Benutzer**
+**Top 10 Städte nach Benutzeraktivität gruppiert**
 
 Diese Abfrage analysiert, aus welchen Städten die Daten stammen.
 
@@ -260,7 +259,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-Nach der Bestätigung der Abfrage können die Daten in einem einheitlichen Plot-Histogramm dargestellt werden, um die Visualisierung zu gewährleisten.
+Nach Bestätigung der Funktion der Abfrage können die Daten in einem einheitlichen Zeichensatz-Histogramm dargestellt werden, um die visuelle Klarheit zu verbessern.
 
 ```python
 trace = go.Bar(
@@ -283,9 +282,9 @@ iplot(fig)
 
 ![Top zehn Städte](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
-**Die zehn beliebtesten Produkte**
+**Die zehn häufigsten angezeigten Produkte**
 
-Diese Abfrage bietet eine Liste der zehn am häufigsten angezeigten Produkte. Im folgenden Beispiel wird die Funktion `Explode()` verwendet, um jedes Produkt im `productlistitems`-Objekt in eine eigene Zeile zurückzugeben. Dadurch können Sie eine verschachtelte Abfrage zum Aggregat von Ansichten für verschiedene SKUs durchführen.
+Diese Abfrage enthält eine Liste der zehn am häufigsten angezeigten Produkte. Im folgenden Beispiel wird die Funktion `Explode()` verwendet, um jedes Produkt im `productlistitems`-Objekt in eine eigene Zeile zurückzugeben. Auf diese Weise können Sie eine verschachtelte Abfrage ausführen, um Produktansichten für verschiedene SKUs zu aggregieren.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -304,7 +303,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-Nach der Bestätigung der Abfrage können die Daten in einem einheitlichen Plot-Histogramm dargestellt werden, um die Visualisierung zu gewährleisten.
+Nach Bestätigung der Funktion der Abfrage können die Daten in einem einheitlichen Zeichensatz-Histogramm dargestellt werden, um die visuelle Klarheit zu verbessern.
 
 ```python
 trace = go.Bar(
@@ -325,33 +324,33 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![Top 10 Ansichten](../images/jupyterlab/eda/top-ten-viewed-products.png)
+![Top 10 Produktansichten](../images/jupyterlab/eda/top-ten-viewed-products.png)
 
-Nachdem Sie die Trends und Muster der Daten untersucht haben, sollten Sie wissen, welche Funktionen Sie für die Prognose eines Ziels erstellen möchten. Durch Tabellen blättern können Sie schnell die Form der einzelnen Datenattribute, offensichtliche Fehldarstellungen und große Ausreißer in Werten und Beginn hervorheben, um Beziehungen zwischen Attributen anzudeuten.
+Nachdem Sie die Trends und Muster der Daten untersucht haben, sollten Sie eine gute Vorstellung davon haben, welche Funktionen Sie für die Vorhersage eines Ziels erstellen möchten. Beim Durchblättern von Tabellen kann die Form jedes Datenattributs, offensichtliche Fehldarstellungen und große Ausreißer in den Werten schnell hervorgehoben werden. Außerdem können Sie damit beginnen, Beziehungen zwischen den Attributen vorzuschlagen, um diese zu untersuchen.
 
-## Analyse der Sondierungsdaten
+## Analyse der Versuchsdaten
 
-Mithilfe der Analyse von Forschungsdaten können Sie Ihr Verständnis der Daten verfeinern und eine Intuition für ansprechende Fragen entwickeln, die als Grundlage für Ihre Modellierung verwendet werden können.
+Die Analyse von Explorationsdaten wird verwendet, um Ihr Verständnis der Daten zu verfeinern und eine Intuition für überzeugende Fragen zu erstellen, die als Grundlage für Ihre Modellierung verwendet werden können.
 
-Nachdem Sie den Schritt zur Datenerkennung abgeschlossen haben, haben Sie die Daten auf Ereignis-Ebene mit einigen Aggregationen auf Ereignis-, Stadt- oder Benutzer-ID-Ebene untersucht, um Trends für einen Tag zu sehen. Obwohl diese Daten wichtig sind, geben sie kein vollständiges Bild. Sie verstehen immer noch nicht, was zu einem Kauf auf Ihrer Website führt.
+Nachdem Sie den Schritt zur Datenerkennung abgeschlossen haben, haben Sie auf Ereignisebene Daten mit einigen Aggregationen auf Ereignis-, Stadt- oder Benutzer-ID-Ebene untersucht, um Trends für einen Tag anzuzeigen. Diese Daten sind zwar wichtig, geben aber kein vollständiges Bild. Sie verstehen immer noch nicht, was einen Kauf auf Ihrer Website auslöst.
 
-Um dies zu verstehen, müssen Sie Daten auf Profil-/Besucher-Ebene Aggregat, ein Kaufziel definieren und statistische Konzepte wie Korrelationen, Box-Diagramme und Streudiagramme anwenden. Diese Methoden werden verwendet, um Muster von Aktivitäten für Käufer und Nicht-Käufer im von Ihnen definierten Prognosefenster zu vergleichen.
+Um dies zu verstehen, müssen Sie Daten auf Profil-/Besucherebene aggregieren, ein Kaufziel definieren und statistische Konzepte wie Korrelation, Box-Diagramme und Streudiagramme anwenden. Diese Methoden werden verwendet, um die Aktivitätsmuster von Käufern und Nicht-Käufern im von Ihnen definierten Prognosefenster zu vergleichen.
 
 Die folgenden Funktionen werden in diesem Abschnitt erstellt und untersucht:
 
-- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: Die Anzahl der erworbenen Einzelprodukte.
+- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: Die Anzahl der gekauften Einzelprodukte.
 - `COUNT_CHECK_OUTS`: Die Anzahl der Kassengänge.
 - `COUNT_PURCHASES`: Die Anzahl der Käufe.
-- `COUNT_INSTANCE_PRODUCTADDS`: Die Anzahl der Produktzusatzinstanzen.
+- `COUNT_INSTANCE_PRODUCTADDS`: Die Anzahl der Produktadd-Instanzen.
 - `NUMBER_VISITS` : Die Anzahl der Besuche.
-- `COUNT_PAID_SEARCHES`: Die Anzahl der gebührenpflichtigen Suchen.
+- `COUNT_PAID_SEARCHES`: Die Anzahl der gebührenpflichtigen Suchvorgänge.
 - `DAYS_SINCE_VISIT`: Die Anzahl der Tage seit dem letzten Besuch.
-- `TOTAL_ORDER_REVENUE`: Der Gesamtumsatz der Bestellung.
+- `TOTAL_ORDER_REVENUE`: Der Gesamtbestellumsatz.
 - `DAYS_SINCE_PURCHASE`: Die Anzahl der Tage seit dem vorherigen Kauf.
 - `AVG_GAP_BETWEEN_ORDERS_DAYS`: Die durchschnittliche Lücke zwischen Käufen in Tagen.
-- `STATE_CITY`: Enthält Staat und Stadt.
+- `STATE_CITY`: Enthält den Staat und die Stadt.
 
-Bevor Sie mit der Datenaggregation fortfahren, müssen Sie die Parameter für die Vorhersagevariable definieren, die bei der Analyse von Forschungsdaten verwendet wird. Mit anderen Worten, was möchten Sie von Ihrem Datenwissenschaftsmodell? Zu den gebräuchlichsten Parametern gehören ein Ziel, ein Prognosezeitraum und ein Zeitraum für die Analyse.
+Bevor Sie mit der Datenaggregation fortfahren, müssen Sie die Parameter für die Vorhersagevariable definieren, die in der explorativen Datenanalyse verwendet wird. Mit anderen Worten, was möchten Sie von Ihrem Datenwissenschaftsmodell? Zu den gebräuchlichen Parametern gehören ein Ziel, ein Prognosezeitraum und ein Analysezeitraum.
 
 Wenn Sie das EDA-Notebook verwenden, müssen Sie die unten stehenden Werte ersetzen, bevor Sie fortfahren.
 
@@ -367,9 +366,9 @@ analysis_period_day_end = "2020-02-28" #### YYYY-MM-DD
 threshold = 1
 ```
 
-### Datenaggregation für Feature- und Zielerstellung
+### Datenaggregation für die Erstellung von Funktionen und Zielen
 
-Um mit der Analyse zu beginnen, müssen Sie ein Ziel auf der Ebene des Profils erstellen und anschließend Ihren Datensatz aggregieren. In diesem Beispiel werden zwei Abfragen bereitgestellt. Die erste Abfrage enthält die Erstellung eines Ziels. Die zweite Abfrage muss aktualisiert werden, um andere Variablen als die in der ersten Abfrage einzuschließen. Möglicherweise möchten Sie das `limit` für Ihre Abfrage aktualisieren. Nach der Durchführung der folgenden Abfragen stehen nun aggregierte Daten zur Erforschung zur Verfügung.
+Um mit der explorativen Analyse zu beginnen, müssen Sie ein Ziel auf Profilebene erstellen und dann Ihren Datensatz aggregieren. In diesem Beispiel werden zwei Abfragen bereitgestellt. Die erste Abfrage enthält die Erstellung eines Ziels. Die zweite Abfrage muss dahingehend aktualisiert werden, dass sie alle anderen Variablen als die in der ersten Abfrage enthält. Sie können die `limit` für Ihre Abfrage aktualisieren. Nach Durchführung der folgenden Abfragen stehen nun aggregierte Daten zur Exploration zur Verfügung.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -444,7 +443,7 @@ limit 500000;
 
 ### Zusammenführen der Funktionen im aggregierten Datensatz mit einem Ziel
 
-Die folgende Zelle wird verwendet, um die Funktionen im aggregierten Datensatz, der im vorherigen Beispiel erläutert wurde, mit Ihrem Prognoseziel zusammenzuführen.
+Die folgende Zelle wird verwendet, um die im vorherigen Beispiel beschriebenen Funktionen im aggregierten Datensatz mit Ihrem Prognoseziel zusammenzuführen.
 
 ```python
 Data = pd.merge(agg_data,target_df, on='ID',how='left')
@@ -453,7 +452,7 @@ Data['TARGET'].fillna(0, inplace=True)
 
 Die nächsten drei Beispielzellen werden verwendet, um sicherzustellen, dass die Zusammenführung erfolgreich war.
 
-`Data.shape` gibt die Anzahl der Spalten gefolgt von der Anzahl der Zeilen zurück, z. B.: (1913, 12).
+`Data.shape` gibt die Anzahl der Spalten gefolgt von der Anzahl der Zeilen zurück, z. B.: (11913, 12).
 
 ```python
 Data.shape
@@ -467,7 +466,7 @@ Data.head(5)
 
 ![Beispieltabelle](../images/jupyterlab/eda/raw-aggregate-data.PNG)
 
-Diese Zelle gibt die Anzahl der eindeutigen Profil aus.
+In dieser Zelle wird die Anzahl der eindeutigen Profile gedruckt.
 
 ```python
 print("Count of unique profiles :", (len(Data)))
@@ -475,13 +474,13 @@ print("Count of unique profiles :", (len(Data)))
 
 ### Erkennen fehlender Werte und Ausreißer
 
-Nachdem Sie die Datenaggregation abgeschlossen und sie mit Ihrem Ziel zusammengeführt haben, müssen Sie die Daten überprüfen, die gelegentlich als Datengesundheitsüberprüfung bezeichnet werden.
+Nachdem Sie Ihre Datenaggregation abgeschlossen und mit Ihrem Ziel zusammengeführt haben, müssen Sie die Daten überprüfen, die manchmal auch als Konsistenzprüfung bezeichnet werden.
 
-Dieser Prozess umfasst die Identifizierung fehlender Werte und Ausreißer. Wenn Probleme festgestellt werden, wird die nächste Aufgabe konkrete Strategien für ihre Behandlung entwickeln.
+Dieser Prozess umfasst die Identifizierung fehlender Werte und Ausreißer. Wenn Probleme erkannt werden, besteht die nächste Aufgabe darin, spezifische Strategien für deren Bewältigung zu entwickeln.
 
 >[!NOTE]
 >
->Während dieses Schritts können Sie Fehler in den Werten erkennen, die einen Fehler bei der Datenprotokollierung signalisieren können.
+>Während dieses Schritts können Sie Beschädigungen der Werte feststellen, die auf einen Fehler im Datenprotokollierungsprozess hinweisen können.
 
 ```python
 Missing = pd.DataFrame(round(Data.isnull().sum()*100/len(Data),2))
@@ -489,7 +488,7 @@ Missing.columns =['Percentage_missing_values']
 Missing['Features'] = Missing.index
 ```
 
-Die folgende Zelle dient zur Visualisierung der fehlenden Werte.
+Die folgende Zelle wird verwendet, um die fehlenden Werte zu visualisieren.
 
 ```python
 trace = go.Bar(
@@ -511,13 +510,13 @@ iplot(fig)
 
 ![Fehlende Werte](../images/jupyterlab/eda/missing-values.png)
 
-Nach Erkennung fehlender Werte ist es wichtig, Ausreißer zu identifizieren. Parametrische Statistiken wie Mittelwert, Standardabweichung und Korrelation sind hochgradig anfällig für Ausreißer. Darüber hinaus basieren die Annahmen gemeinsamer statistischer Verfahren wie etwa linearer Regressionen ebenfalls auf diesen Statistiken. Das bedeutet, dass Ausreißer eine Analyse wirklich zerschlagen können.
+Nach Erkennung fehlender Werte ist es wichtig, Ausreißer zu identifizieren. Parametrische Statistiken wie Mittelwert, Standardabweichung und Korrelation sind äußerst empfindlich gegenüber Ausreißern. Darüber hinaus basieren die Annahmen gemeinsamer statistischer Verfahren wie etwa linearen Regressionen ebenfalls auf diesen Statistiken. Das bedeutet, dass Ausreißer eine Analyse wirklich vermissen können.
 
-Zur Identifizierung von Ausreißern verwendet dieses Beispiel den Bereich zwischen Quartilen. Der Interquartilbereich (IQR) ist der Bereich zwischen dem ersten und dem dritten Quartil (25. und 75. Perzentil). In diesem Beispiel werden alle Datenpunkte erfasst, die entweder unter das 1,5-fache des IQR unter das 25. Perzentil oder unter das 1,5-fache des IQR über das 75. Perzentil fallen. Werte, die unter einen dieser Werte fallen, werden in der folgenden Zelle als Ausreißer definiert.
+Um Ausreißer zu identifizieren, verwendet dieses Beispiel den Bereich zwischen Quartilen. Der Interquartilbereich (IQR) ist der Bereich zwischen dem ersten und dritten Quartil (25. und 75. Perzentil). In diesem Beispiel werden alle Datenpunkte erfasst, die entweder unter das 1,5-fache der IQR unter das 25. Perzentil fallen, oder 1,5-fache der IQR über dem 75. Perzentil. Werte, die unter diese Werte fallen, werden in der folgenden Zelle als Ausreißer definiert.
 
 >[!TIP]
 >
->Um Ausreißer zu korrigieren, müssen Sie wissen, in welchem Geschäft und in welcher Branche Sie arbeiten. Manchmal kann man eine Beobachtung nicht einfach deshalb fallen lassen, weil es sich um einen Ausreißer handelt. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten. Weitere Informationen zum Ablegen von Ausreißern finden Sie im Schritt [optionale Datenbereinigung](#optional-data-clean).
+>Die Korrektur von Ausreißern erfordert ein Verständnis des Geschäfts und der Branche, in der Sie arbeiten. Manchmal kann man eine Beobachtung nicht fallen lassen, nur weil sie ausreißender ist. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten. Weitere Informationen zum Ablegen von Ausreißern finden Sie im Schritt [Optionale Datenbereinigung](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -562,9 +561,9 @@ iplot(fig)
 
 ### Einheitliche Analyse
 
-Sobald Ihre Daten auf fehlende Werte und Ausreißer korrigiert wurden, können Sie Ihre Analyse Beginn haben. Es gibt drei Arten von Analysen: univariate, bivariate und multivariate Analyse. Bei der Analyse &quot;Univariate&quot;werden Daten erfasst, Zusammenfassungen vorgenommen und Muster in den Daten mithilfe einzelner Variablenbeziehungen gefunden. Bivariate-Analysen betrachten mehrere Variablen gleichzeitig, während die Multivarianz-Analyse drei oder mehr Variablen gleichzeitig betrachtet.
+Nachdem Ihre Daten auf fehlende Werte und Ausreißer korrigiert wurden, können Sie Ihre Analyse starten. Es gibt drei Arten von Analysen: Univariate-, Bivariate- und Multivarianzanalyse. Die Univariate-Analyse nimmt Daten auf, fasst sie zusammen und findet Muster in den Daten anhand einzelner Variablenbeziehungen. Die Bivariate-Analyse betrachtet mehrere Variablen auf einmal, während die Multivarianz-Analyse drei oder mehr Variablen auf einmal betrachtet.
 
-Im folgenden Beispiel wird eine Tabelle zur Darstellung der Verteilung der Funktionen erstellt.
+Im folgenden Beispiel wird eine Tabelle erstellt, um die Verteilung der Funktionen zu visualisieren.
 
 ```python
 Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
@@ -578,7 +577,7 @@ distribution
 
 ![Verteilung der Funktionen](../images/jupyterlab/eda/distribution-of-features.PNG)
 
-Sobald Sie über eine Verteilung der Funktionen verfügen, können Sie visuelle Datendiagramme mit einem Array erstellen. Die folgenden Zellen werden zur Visualisierung der oben stehenden Tabelle mit numerischen Daten verwendet.
+Sobald Sie über eine Verteilung der Funktionen verfügen, können Sie visualisierte Datendiagramme mithilfe eines Arrays erstellen. Die folgenden Zellen werden verwendet, um die obige Tabelle mit numerischen Daten zu visualisieren.
 
 ```python
 A = sns.palplot(sns.color_palette("Blues"))
@@ -591,11 +590,11 @@ for column in Data_numerical.columns[0:]:
     sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
 ```
 
-![Diagramme für numerische Daten](../images/jupyterlab/eda/univaiate-graphs.png)
+![numerische Datendiagramme](../images/jupyterlab/eda/univaiate-graphs.png)
 
 ### Kategorische Daten
 
-Die Gruppierung kategorischer Daten wird verwendet, um die Werte zu verstehen, die in den einzelnen Spalten aggregierter Daten und deren Verteilung enthalten sind. In diesem Beispiel werden die 10 wichtigsten Kategorien verwendet, um die Darstellung der Distributionen zu unterstützen. Beachten Sie, dass eine Spalte Tausende von eindeutigen Werten enthalten kann. Sie wollen keine überfüllte Plotte machen, die sie unleserlich macht. Mit Blick auf Ihr Geschäftsziel erzielen Sie mit der Gruppierung von Daten aussagekräftigere Ergebnisse.
+Kategorische Gruppierungsdaten werden verwendet, um die in den einzelnen Spalten aggregierter Daten enthaltenen Werte und deren Verteilung zu verstehen. In diesem Beispiel werden die Top-10-Kategorien verwendet, um bei der Erstellung der Verteilungen zu helfen. Beachten Sie, dass in einer Spalte Tausende einmaliger Werte enthalten sein können. Sie wollen kein überfülltes Diagramm machen, das es unleserlich macht. Mit Blick auf Ihr Geschäftsziel liefert die Gruppierung von Daten aussagekräftigere Ergebnisse.
 
 ```python
 Data_categorical = Data.select_dtypes(include='object')
@@ -612,11 +611,11 @@ for column in Data_categorical.columns[0:]:
         sns.countplot(x=column, data = Data_categorical, palette="Set2");
 ```
 
-![Katagorische Spalten](../images/jupyterlab/eda/graph-category.PNG)
+![Katagoralspalten](../images/jupyterlab/eda/graph-category.PNG)
 
 ### Entfernen von Spalten mit nur einem eindeutigen Wert
 
-Spalten, die nur den Wert 1 aufweisen, fügen der Analyse keine Informationen hinzu und können entfernt werden.
+Spalten, die nur den Wert eins aufweisen, fügen der Analyse keine Informationen hinzu und können entfernt werden.
 
 ```python
 for col in Data.columns:
@@ -630,14 +629,14 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Nachdem Sie Spalten mit einem Wert entfernt haben, überprüfen Sie die verbleibenden Spalten auf Fehler mit dem Befehl `Data.columns` in einer neuen Zelle.
+Nachdem Sie Einzelwertspalten entfernt haben, überprüfen Sie die verbleibenden Spalten auf Fehler mithilfe des Befehls `Data.columns` in einer neuen Zelle.
 
-### Für fehlende Werte korrigieren
+### Richtig für fehlende Werte
 
-Der folgende Abschnitt enthält einige Beispielansätze zur Korrektur fehlender Werte. Ereignis: In den obigen Daten fehlte nur eine Spalte, die Beispielzellen darunter stimmen für alle Datentypen. Dazu gehören:
+Im folgenden Abschnitt finden Sie einige Beispielansätze zur Korrektur fehlender Werte. Ereignis obwohl in den oben genannten Daten nur eine Spalte einen fehlenden Wert enthielt, die nachfolgenden Beispielzellen korrekte Werte für alle Datentypen. Dazu gehören:
 
-- Numerische Datentypen: input 0 oder max.
-- Kategorische Datentypen: Eingabemodalwert
+- Numerische Datentypen: Eingabe 0 oder max.
+- Kategorische Datentypen: Modaleingabewert
 
 ```python
 #### Select only numerical data
@@ -670,23 +669,23 @@ for column in Missing_cat:
     Data[column].fillna(Data[column].mode()[0], inplace=True)
 ```
 
-Nach Abschluss des Vorgangs können die sauberen Daten bivariabel Analyse werden.
+Sobald die sauberen Daten fertig sind, können sie analysiert werden.
 
 ### Bivariate-Analyse
 
-Bivariate-Analyse wird verwendet, um die Beziehung zwischen zwei Wertesätzen zu verstehen, z. B. Ihren Funktionen und einer Zielgruppe-Variablen. Da verschiedene Diagramme zu kategorischen und numerischen Datentypen passen, sollte diese Analyse für jeden Datentyp separat erfolgen. Die folgenden Diagramme werden für die Bivariate-Analyse empfohlen:
+Die Bivariate-Analyse wird verwendet, um die Beziehung zwischen zwei Wertesätzen zu verstehen, z. B. Ihren Funktionen und einer Zielvariablen. Da verschiedene Diagramme kategorischen und numerischen Datentypen entsprechen, sollte diese Analyse für jeden Datentyp separat durchgeführt werden. Die folgenden Diagramme werden für die bivariate-Analyse empfohlen:
 
-- **Korrelation**: Ein Korrelationskoeffizient ist der Messwert der Stärke eines Verhältnisses zwischen zwei Merkmalen. Korrelation hat Werte zwischen -1 und 1, wobei: 1 bedeutet eine starke positive Beziehung, -1 bedeutet eine starke negative Beziehung, und ein Ergebnis von Null deutet überhaupt auf keine Beziehung hin.
-- **Paardiagramm**: Pair-Plots sind eine einfache Möglichkeit, Beziehungen zwischen den einzelnen Variablen zu visualisieren. Es wird eine Matrix der Beziehungen zwischen den einzelnen Variablen in den Daten erstellt.
+- **Korrelation**: Ein Korrelationskoeffizient ist der Messwert der Stärke einer Beziehung zwischen zwei Eigenschaften. Die Korrelation weist Werte zwischen -1 und 1 auf, wobei: 1 steht für eine starke positive Beziehung, -1 für eine starke negative Beziehung und ein Ergebnis von null zeigt überhaupt keine Beziehung an.
+- **Pair Plot**: Paardiagramme sind eine einfache Möglichkeit, Beziehungen zwischen den einzelnen Variablen zu visualisieren. Es erzeugt eine Matrix von Beziehungen zwischen den einzelnen Variablen in den Daten.
 - **Heatmap**: Heatmaps sind der Korrelationskoeffizient für alle Variablen im Datensatz.
-- **Boxplotten**: Box-Parzellen sind eine standardisierte Methode zur Anzeige der Datenverteilung, die auf einer Fünf-Zahlen-Zusammenfassung (Minimum, First Quartile (Q1), Median, drittes Quartil (Q3) und Maximum) basiert.
-- **Zählerdiagramm**: Ein Zähldiagramm ist wie ein Histogramm oder ein Balkendiagramm für einige kategorische Merkmale. Er zeigt die Anzahl der Vorkommen eines Elements auf Grundlage einer bestimmten Kategorie an.
+- **Box-Diagramme**: Box-Diagramme sind eine standardisierte Methode zur Anzeige der Datenverteilung basierend auf einer Fünf-Zahlen-Zusammenfassung (Minimum, First Quartile (Q1), Median, drittes Quartil (Q3) und Maximum).
+- **Diagramm** Zählung: Ein Zähldiagramm ist wie ein Histogramm oder ein Balkendiagramm für einige kategorische Merkmale. Sie zeigt die Anzahl der Vorkommnisse eines Elements basierend auf einem bestimmten Typ von Kategorie an.
 
-Um die Beziehung zwischen der &quot;target&quot;-Variablen und den Prädiktoren/Funktionen zu verstehen, werden Diagramme basierend auf Datentypen verwendet. Für numerische Funktionen sollten Sie einen Box-Plot verwenden, wenn die &#39;target&#39;-Variable kategorisch ist, sowie einen Pairplot und eine Heatmap, wenn die &#39;target&#39;-Variable numerisch ist.
+Um die Beziehung zwischen der &quot;Ziel&quot;-Variablen und den Prädiktoren/Funktionen zu verstehen, werden Diagramme basierend auf Datentypen verwendet. Für numerische Merkmale sollten Sie ein Box-Diagramm verwenden, wenn die &#39;Ziel&#39;-Variable kategorisch ist, sowie ein paarweise und heatmap , wenn die &#39;Ziel&#39;-Variable numerisch ist.
 
-Für kategorische Merkmale sollten Sie einen Zählerplan verwenden, wenn die Variable &#39;target&#39; kategorisch ist, sowie einen Box-Plot, wenn die Variable &#39;target&#39; numerisch ist. Die Verwendung dieser Methoden hilft, Beziehungen zu verstehen. Diese Beziehungen können in Form von Funktionen, oder Predictors und ein Ziel sein.
+Für kategorische Merkmale sollten Sie einen Countplot verwenden, wenn die &#39;Ziel&#39;-Variable kategorisch ist, sowie einen Box-Diagramm, wenn die &#39;Ziel&#39;-Variable numerisch ist. Die Verwendung dieser Methoden hilft beim Verständnis von Beziehungen. Diese Beziehungen können in Form von Funktionen, Prognosen und Zielen erfolgen.
 
-**Numerische Prognosen**
+**Numerische Eigenschaften**
 
 ```python
 if len(Data) == 1:
@@ -721,15 +720,15 @@ else:
         corr = Data_numerical.corr()
 ```
 
-Wenn Sie die Zelle ausführen, werden die folgenden Ausgaben generiert:
+Das Ausführen der Zelle erzeugt die folgenden Ausgaben:
 
 ![Grundstücke](../images/jupyterlab/eda/bivariant-graphs.png)
 
 ![Heatmap](../images/jupyterlab/eda/bi-graph10.PNG)
 
-**Kategorische Prognosen**
+**Kategorische Eigenschaften**
 
-Im folgenden Beispiel werden die Häufigkeitsdiagramme für die 10 Kategorien der obersten Kategorienvariablen grafisch dargestellt und Ansicht.
+Das folgende Beispiel wird verwendet, um die Häufigkeitsangaben für die 10 wichtigsten Kategorien jeder kategorischen Variablen darzustellen und anzuzeigen.
 
 ```python
 if len(Data) == 1:
@@ -765,11 +764,11 @@ else:
 
 Beim Ausführen der Zelle wird die folgende Ausgabe erzeugt:
 
-![Beziehung Kategorie](../images/jupyterlab/eda/categorical-predictor.PNG)
+![Kategoriebeziehung](../images/jupyterlab/eda/categorical-predictor.PNG)
 
 ### Wichtige numerische Funktionen
 
-Mithilfe der Korrelationsmethode können Sie eine Liste der zehn wichtigsten numerischen Merkmale erstellen. Diese Funktionen können alle verwendet werden, um die Funktion &#39;target&#39; vorherzusagen. Diese Liste kann als Feature-Liste verwendet werden, wenn Sie mit dem Erstellen des Beginns beginnen.
+Mithilfe der Korrelationsanalyse können Sie eine Liste der zehn wichtigsten numerischen Merkmale erstellen. Diese Funktionen können alle verwendet werden, um die Funktion &quot;Ziel&quot;vorherzusagen. Diese Liste kann als Funktionsliste für verwendet werden, wenn Sie mit der Erstellung Ihres Modells beginnen.
 
 ```python
 if len(Data) == 1:
@@ -790,7 +789,7 @@ else:
 
 ### Beispielinhalt
 
-Während Sie Ihre Daten analysieren, ist es nicht ungewöhnlich, Erkenntnisse zu entdecken. Das folgende Beispiel zeigt eine Einsicht, die die Neuigkeit und den Geldwert für ein Zielgruppe-Ereignis zuordnet.
+Während Sie Ihre Daten analysieren, ist es nicht ungewöhnlich, Einblicke zu finden. Das folgende Beispiel zeigt einen Einblick, der die Neuigkeit und den Geldwert für ein Zielereignis zuordnet.
 
 ```python
 # Proxy for monetary value is TOTAL_ORDER_REVENUE and proxy for frequency is NUMBER_VISITS
@@ -802,15 +801,15 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![example insight](../images/jupyterlab/eda/insight.PNG)
+![Beispiel-Insight](../images/jupyterlab/eda/insight.PNG)
 
 ## Optionaler Datenbereinigungsschritt {#optional-data-clean}
 
-Um Ausreißer zu korrigieren, müssen Sie wissen, in welchem Geschäft und in welcher Branche Sie arbeiten. Manchmal kann man eine Beobachtung nicht einfach deshalb fallen lassen, weil es sich um einen Ausreißer handelt. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten.
+Die Korrektur von Ausreißern erfordert ein Verständnis des Geschäfts und der Branche, in der Sie arbeiten. Manchmal kann man eine Beobachtung nicht fallen lassen, nur weil sie ausreißender ist. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten.
 
-Weitere Informationen zu Ausreißern und dazu, ob sie abgelegt werden sollen oder nicht, finden Sie in diesem Eintrag unter [Analyse factor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Weitere Informationen zu Ausreißern und dazu, ob sie abgelegt werden sollen oder nicht, finden Sie in diesem Eintrag aus dem [Analysefaktor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-Im folgenden Beispiel werden Datenpunkte für Zellkappen und Fußböden, die Ausreißer sind, mithilfe von [interquartilen Bereich](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244) platziert.
+Im folgenden Beispiel werden Datenpunkte, die Ausreißer sind, mithilfe von [Interquartilbereich](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244) begrenzt und geschliffen.
 
 ```python
 TARGET = Data.TARGET
@@ -830,6 +829,6 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 ## Nächste Schritte
 
-Nachdem Sie die Analyse der Forschungsdaten abgeschlossen haben, können Sie mit der Erstellung eines Modells beginnen. Alternativ können Sie die abgeleiteten Daten und Erkenntnisse verwenden, um ein Dashboard mit Tools wie Power BI zu erstellen.
+Nachdem Sie die explorative Datenanalyse abgeschlossen haben, können Sie mit der Erstellung eines Modells beginnen. Alternativ können Sie die von Ihnen abgeleiteten Daten und Erkenntnisse verwenden, um ein Dashboard mit Tools wie Power BI zu erstellen.
 
-Adobe Experience Platform trennt den Modellerstellungsprozess in zwei verschiedene Phasen, Rezepte (eine Modellinstanz) und Modelle. Um mit der Rezepterstellung zu beginnen, lesen Sie die Dokumentation für [Erstellen eines Skripts in JupyerLab-Notebooks](./create-a-recipe.md). Dieses Dokument enthält Informationen und Beispiele zum Erstellen, Training und Scoring eines Skripts in &lt; a0/>-Notebooks.[!DNL JupyterLab]
+Adobe Experience Platform unterteilt den Modellerstellungsprozess in zwei unterschiedliche Phasen: Rezepte (eine Modellinstanz) und Modelle. Um den Prozess der Rezepterstellung zu starten, besuchen Sie die Dokumentation zum Erstellen eines Rezepts in JupyerLab Notebooks](./create-a-recipe.md). [ Dieses Dokument enthält Informationen und Beispiele zum Erstellen, Trainieren und Scoring, einem Rezept in [!DNL JupyterLab] Notebooks.

@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Schema-Feldergruppe "Device Trade-in-Details"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemakonferenz für das Schema "Device Trade-In Details".
-source-git-commit: 2592d4f494d4d3dcfba63eb539498416fbdf6707
+exl-id: 744557be-0297-453f-9134-9d0f4ef2df4d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 5%

@@ -1,20 +1,19 @@
 ---
-keywords: Datensätze;rtcdp-Datensätze
+keywords: Datensätze; rtcdp-Datensätze
 title: Datensätze in der Echtzeit-Kundendatenplattform
-seo-title: Übersicht über Datensätze in Adobe Experience Platform
+seo-title: Overview of datasets in Adobe Experience Platform
 description: Übersicht über Datensätze in Adobe Experience Platform
-seo-description: Übersicht über Datensätze in Adobe Experience Platform
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+seo-description: Overview of datasets in Adobe Experience Platform
+exl-id: 86df38d4-820a-4767-a9ed-3b50b2ae709c
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 51%
+source-wordcount: '109'
+ht-degree: 44%
 
 ---
 
-
 # Datensätze in der Echtzeit-Kundendatenplattform
 
-Mit der Benutzeroberfläche von Adobe Experience Platform können Sie alle Datensätze, die Ihre IMS-Organisation erstellt hat, anzeigen und verwalten bzw. neue Datensätze erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Die Registerkarte **[!UICONTROL Durchsuchen]** enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, dem Erstellungsdatum (Datum und Uhrzeit), der Quelle, dem Schema und dem Status des letzten Stapels sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes.
+Mit der Benutzeroberfläche von Adobe Experience Platform können Sie alle Datensätze, die Ihre IMS-Organisation erstellt hat, anzeigen und verwalten bzw. neue Datensätze erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Der Tab **[!UICONTROL Durchsuchen]** enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, der erstellten (Datum und Uhrzeit), der Quelle, dem Schema und dem letzten Batch-Status sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes.
 
-Informationen zu Datasets in [!DNL Experience Platform] erhalten Sie, indem Sie die [Übersicht über Datasets](../../catalog/datasets/overview.md) lesen.
+Informationen zu Datensätzen in [!DNL Experience Platform] erhalten Sie, indem Sie die [Übersicht über Datensätze](../../catalog/datasets/overview.md) lesen.

@@ -4,7 +4,7 @@ title: Standard-Dashboard-Widgets
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Hinzufügen von Standard-Widgets zu Ihren Adobe Experience Platform-Dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 100%
 

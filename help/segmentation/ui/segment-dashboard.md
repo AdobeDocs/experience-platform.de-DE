@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-#  Segmente-Dashboard  {#segment-dashboard}
+#  Segmente-Dashboard {#segment-dashboard}
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren Segmenten anzeigen können, die während einer täglichen Momentaufnahme erfasst werden.
 

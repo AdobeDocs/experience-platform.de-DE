@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Sandbox-API-Anleitung
 topic-legacy: developer guide
 description: Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 26%

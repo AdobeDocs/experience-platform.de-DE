@@ -1,8 +1,9 @@
 ---
 title: Adobe Target v2-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Verwenden Sie diese Referenz, um Informationen zu den verfügbaren Optionen beim Erstellen einer Regel mithilfe dieser Erweiterung zu erhalten.
 
@@ -42,9 +43,9 @@ Der Client-Code ist die Kontokennung von Target. Der entsprechende Wert sollte n
 
 Diese ID ordnet die Implementierung Ihrem Adobe Experience Cloud-Konto zu. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden. Er kann mithilfe von Datenelementen geändert werden.
 
-#### Server-Domain
+#### Serverdomäne
 
-Die Server-Domain bezieht sich auf die Domain, an die die Target-Anforderungen gesendet werden. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
+Die Serverdomain bezieht sich auf die Domain, an die die Target-Anforderungen gesendet werden. Der entsprechende Wert sollte nahezu immer als Standardwert beibehalten werden.
 
 #### DSGVO-Opt-in
 

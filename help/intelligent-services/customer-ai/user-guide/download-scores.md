@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Download-Punkte;Kundenwerbung;beliebte Themen;Exportieren;Exportieren;Download der Kundenwerbung;Punktzahlen der Kundenwerbung
+keywords: Experience Platform; Herunterladen von Bewertungen; Kundenunterstützung; beliebte Themen; Exportieren; Exportieren; Herunterladen von Kundenai; Bewertung von Kundenai
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Herunterladen von Ergebnissen in der Kunden-API
+title: Herunterladen von Bewertungen in Customer AI
 topic-legacy: Downloading scores
-description: Mit der Kunden-API können Sie Ergebnisse im Parquet-Dateiformat herunterladen.
+description: Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat herunterladen.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '961'
@@ -13,15 +12,15 @@ ht-degree: 85%
 
 ---
 
-# Herunterladen von Punktzahlen in der Kunden-API
+# Herunterladen von Bewertungen in Customer AI
 
 Dieses Dokument dient als Anleitung zum Herunterladen von Ergebnissen für Customer AI.
 
 ## Erste Schritte
 
-Mit der Kunden-API können Sie Ergebnisse im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
+Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Customer AI-Bewertungen in den [Ersten Schritten](../getting-started.md) gelesen und abgeschlossen haben.
 
-Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
+Um auf Bewertungen für Customer AI zuzugreifen, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie [Konfigurieren einer Customer AI-Instanz](./configure.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
 Derzeit gibt es zwei Möglichkeiten, Customer AI-Bewertungen herunterzuladen:
 
@@ -40,7 +39,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Parameter für die Abfrage verwendet, um anstelle einer Liste von Stapeln, die zu Ihrem Unternehmen gehören, den letzten erfolgreichen Batch zurückzugeben. Um weitere Stapel zurückzugeben, erhöhen Sie die Anzahl für den Parameter &quot;Abfrage begrenzen&quot;auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
+Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Parameter limit query auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -64,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Stapel-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt enthält. In diesem Beispiel ist der Schlüsselwert für das zurückgegebene Objekt die Batch-ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Kopieren Sie Ihre Batch-Kennung, um sie beim nächsten API-Aufruf zu verwenden.
 
 ```json
 {
@@ -113,7 +112,7 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die ein Batch-ID-Objekt en
 }
 ```
 
-## Abrufen des nächsten API-Aufrufs mit Ihrer Batch-Kennung  {#retrieve-the-next-api-call-with-your-batch-id}
+## Abrufen des nächsten API-Aufrufs mit Ihrer Batch-Kennung {#retrieve-the-next-api-call-with-your-batch-id}
 
 Sobald Sie über eine Batch-Kennung verfügen, können Sie eine neue GET-Anfrage an `/batches` vornehmen. Die Anfrage gibt einen Link zurück, der als die nächste API-Anfrage verwendet wird.
 
@@ -167,7 +166,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein `_links`-Objekt ent
 }
 ```
 
-## Abrufen Ihrer Dateien  {#retrieving-your-files}
+## Abrufen Ihrer Dateien {#retrieving-your-files}
 
 Verwenden Sie den `href`-Wert, den Sie im vorherigen Schritt als API-Aufruf erhalten haben, und stellen Sie eine neue GET-Anfrage, um Ihr Dateiverzeichnis abzurufen.
 

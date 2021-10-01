@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Schemafeldgruppe "Loyalitätsdetails"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Loyalitätsdetails".
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Feldergruppe ] &quot;Loyalitätsdetails&quot;
 

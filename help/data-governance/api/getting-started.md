@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Mit der Policy Service-API können Sie verschiedene Ressourcen im Zusammenhang mit der Data Governance von Adobe Experience Platform erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Policy Service-API durchführen.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 100%
 

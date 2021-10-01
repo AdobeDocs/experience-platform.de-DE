@@ -5,10 +5,11 @@ title: Erstellen eines Connectors für lokale Datei-Upload-Quelle in der Benutze
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien auf Platform zu bringen.
-source-git-commit: 1bf112db27b534e2ec977be7b47e3becf75ee066
+exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1271'
-ht-degree: 5%
+ht-degree: 16%
 
 ---
 
@@ -101,15 +102,15 @@ Wählen Sie die Schaltfläche **[!UICONTROL Berechnetes Feld hinzufügen]** aus,
 
 ![add-calculated-field](../../../../images/tutorials/create/local/add-calculated-field.png)
 
-Das Bedienfeld [!UICONTROL Berechnetes Feld erstellen] wird angezeigt. Das linke Dialogfeld enthält die Felder, Funktionen und Operatoren, die in berechneten Feldern unterstützt werden. Wählen Sie eine der Registerkarten aus, um dem Ausdruckseditor Funktionen, Felder oder Operatoren hinzuzufügen.
+Das Bedienfeld [!UICONTROL Berechnetes Feld erstellen] wird angezeigt. Das linke Dialogfeld enthält die Felder, Funktionen und Operatoren, die in berechneten Feldern unterstützt werden. Wählen Sie eine der Registerkarten aus, um Funktionen, Felder oder Operatoren zum Ausdruckseditor hinzuzufügen.
 
 ![create-calculated-field](../../../../images/tutorials/create/local/create-calculated-field.png)
 
 | Tab | Beschreibung |
 | --------- | ----------- |
-| Funktion | Im Tab Funktionen werden die Funktionen aufgelistet, die zur Transformation der Daten verfügbar sind. Weitere Informationen zu den Funktionen, die Sie in berechneten Feldern verwenden können, finden Sie im Handbuch [Verwendung der Datenvorbereitung (Mapper)-Funktionen](../../../../../data-prep/functions.md). |
-| Feld | Auf der Registerkarte Felder werden die im Quellschema verfügbaren Felder und Attribute aufgelistet. |
-| Operator | Im Tab Operatoren werden die zur Transformation der Daten verfügbaren Operatoren aufgelistet. |
+| Funktion | Auf der Registerkarte „Funktionen“ werden die Funktionen aufgelistet, die zur Transformation der Daten verfügbar sind. Weitere Informationen zu den Funktionen, die Sie in berechneten Feldern verwenden können, finden Sie im Handbuch [Verwendung der Funktionen zur Datenvorbereitung (Mapper)](../../../../../data-prep/functions.md). |
+| Feld | Auf der Registerkarte „Felder“ werden die im Quellschema verfügbaren Felder und Attribute aufgelistet. |
+| Operator | Auf der Registerkarte „Operatoren“ werden die zur Transformation der Daten verfügbaren Operatoren aufgelistet. |
 
 Wählen Sie den Ausdruckseditor aus, um Felder, Funktionen und Operatoren manuell hinzuzufügen. Nachdem Sie ein berechnetes Feld erstellt haben, wählen Sie **[!UICONTROL Speichern]** aus, um fortzufahren.
 

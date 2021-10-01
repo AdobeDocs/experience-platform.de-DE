@@ -1,18 +1,19 @@
 ---
-title: Hauptereignisweiterleitungserweiterung – Übersicht
-description: Machen Sie sich mit der Ereignisweiterleitungserweiterung „Core“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+title: Übersicht über die Hauptereignisweiterleitungserweiterung
+description: Machen Sie sich mit der Hauptereignisweiterleitungserweiterung in Adobe Experience Platform vertraut.
+exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1724'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
-# Hauptereignisweiterleitungserweiterung – Übersicht
+# Übersicht über die Hauptereignisweiterleitungserweiterung
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Hauptereignisweiterleitungserweiterung stellt die Standardereignisse, Bedingungen und Datentypen für die Ereignisweiterleitung in Adobe Experience Platform bereit.
 

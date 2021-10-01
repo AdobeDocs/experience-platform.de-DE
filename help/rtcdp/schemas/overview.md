@@ -1,7 +1,8 @@
 ---
 title: Schemata in der Echtzeit-Kundendatenplattform
 description: Eine Übersicht über die Rolle von Experience-Datenmodell (XDM)-Schemas in der Echtzeit-Kundendatenplattform.
-source-git-commit: fb2dc2b7e63f41102c0c20ba106ae4571a4a1363
+exl-id: e56873d2-825d-4c0f-a0fe-1ae6e83438f0
+source-git-commit: 65afc75d89a4183d0ad03200f6c08c72dd104180
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 0%

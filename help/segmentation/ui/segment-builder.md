@@ -12,7 +12,7 @@ ht-degree: 42%
 
 ---
 
-#  Handbuch für die [!DNL Segment Builder]-Benutzeroberfläche
+# Handbuch für die [!DNL Segment Builder]-Benutzeroberfläche
 
 [!DNL Segment Builder] bietet einen umfassenden Arbeitsbereich, in dem Sie mit  [!DNL Profile] Datenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 
@@ -116,7 +116,7 @@ Die Aggregation wird jetzt hinzugefügt. Jetzt können Sie die Aggregationsfunkt
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Zählfunktionen {#count-functions}
+### Count-Funktionen {#count-functions}
 
 Mit den Count-Funktionen in Segment Builder können Sie nach bestimmten Ereignissen suchen und zählen, wie oft sie durchgeführt wurden. Die unterstützten Zählerfunktionen im Segmentaufbau sind &quot;Mindestens&quot;, &quot;höchstens&quot;, &quot;Genau&quot;, &quot;Zwischen&quot;und &quot;Alle&quot;.
 

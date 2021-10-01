@@ -1,11 +1,11 @@
 ---
-description: Das Adobe Experience Platform Destination SDK ist eine Reihe von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für die Experience Platform konfigurieren können, um Zielgruppen- und Profildaten an Ihren Endpunkt zu senden. Dies basiert auf Daten- und Authentifizierungsformaten Ihrer Wahl. Die Konfigurationen werden in Experience Platform gespeichert und können über API für zusätzliche Aktualisierungen abgerufen werden.
+description: Das Adobe Experience Platform Destination SDK ist eine Reihe von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für die Experience Platform konfigurieren können, um Zielgruppen- und Profildaten an Ihren Endpunkt zu senden. Dies basiert auf Daten- und Authentifizierungsformaten Ihrer Wahl. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 source-git-commit: bd65cfa557fb42d23022578b98bc5482e8bd50b1
 workflow-type: tm+mt
 source-wordcount: '702'
-ht-degree: 4%
+ht-degree: 14%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 ## Übersicht {#destinations-sdk}
 
-Das Adobe Experience Platform Destination SDK ist eine Suite von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für die Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über API für zusätzliche Aktualisierungen abgerufen werden.
+Das Adobe Experience Platform Destination SDK ist eine Suite von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 
 Die Dokumentation zum Ziel-SDK enthält Anweisungen zur Verwendung des Adobe Experience Platform Destination SDK zum Konfigurieren, Testen und Veröffentlichen einer produktiven Zielintegration mit Adobe Experience Platform und dazu, dass Ihr Ziel Teil des ständig wachsenden Zielkatalogs wird.
 

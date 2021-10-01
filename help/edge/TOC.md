@@ -6,8 +6,8 @@ breadcrumb-title: Web SDK-Anleitung
 user-guide-description: Interagieren Sie mit Experience Cloud-Diensten über das Edge-Netzwerk.
 feature: Data Management
 source-git-commit: 2f9ff95529c907cfc28bc98198eca9fcfc21e9b9
-workflow-type: ht
-source-wordcount: '144'
+workflow-type: tm+mt
+source-wordcount: '142'
 ht-degree: 100%
 
 ---

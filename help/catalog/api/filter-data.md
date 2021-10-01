@@ -1,27 +1,26 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Filter;Filter;Filterdaten;Daten filtern;Datumsbereich
+keywords: Experience Platform; Startseite; beliebte Themen; Filter; Filtern; Daten filtern; Daten filtern; Datumsbereich
 solution: Experience Platform
-title: Filtern von Katalogdaten mithilfe von Abfragen-Parametern
+title: Filtern von Katalogdaten mithilfe von Abfrageparametern
 topic-legacy: developer guide
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '2121'
-ht-degree: 87%
+ht-degree: 88%
 
 ---
 
-# Filtern von [!DNL Catalog]-Daten mithilfe von Abfragen
+# Daten mithilfe von Abfrageparametern filtern[!DNL Catalog]
 
-Die [!DNL Catalog Service]-API ermöglicht das Filtern von Antwortdaten mithilfe von Anforderungsparametern für die Abfrage. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Belastung der API verringern und die Gesamtleistung verbessern.
+Mit der API [!DNL Catalog Service] können Antwortdaten mithilfe von Abfrageparametern für Anfragen gefiltert werden. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Auslastung der API reduzieren und die Gesamtleistung verbessern.
 
-In diesem Dokument werden die am häufigsten verwendeten Methoden zum Filtern von [!DNL Catalog]-Objekten in der API beschrieben. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] Weitere allgemeine Informationen zu [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] overview](../home.md).
+In diesem Dokument werden die gängigsten Methoden zum Filtern von [!DNL Catalog]-Objekten in der API beschrieben. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] Weitere allgemeine Informationen zu [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] overview](../home.md).
 
 ## Zurückgegebene Objekte begrenzen
 
-Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] Antworten werden automatisch entsprechend den konfigurierten Beschränkungen gemessen:
+Der Abfrageparameter `limit` begrenzt die Zahl der in einer Antwort zurückgegebenen Objekte. [!DNL Catalog] -Antworten werden automatisch entsprechend den konfigurierten Beschränkungen gemessen:
 
 * Wenn kein `limit`-Parameter angegeben ist, beträgt die maximale Zahl von Objekten pro Antwort-Payload 20.
 * Bei Datensatzabfragen beträgt die maximale Zahl der zurückgegebenen Datensätze 20, wenn `observableSchema` mit dem `properties`-Abfrageparameter angefragt wird.
@@ -107,7 +106,7 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 | --- | --- |
 | `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Der Name eines Attributs, das im Antworttext enthalten sein soll. |
-| `{OBJECT_ID}` | Der eindeutige Bezeichner eines bestimmten [!DNL Catalog]-Objekts, das abgerufen wird. |
+| `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten [!DNL Catalog]-Objekts, das abgerufen wird. |
 
 **Anfrage**
 
@@ -124,7 +123,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog]-Objekten zurück, wobei nur die angeforderten Eigenschaften angezeigt werden.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten zurück, wobei nur die angeforderten Eigenschaften angezeigt werden.
 
 ```json
 {
@@ -158,7 +157,7 @@ Auf Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
 
 >[!NOTE]
 >
->In der Eigenschaft `schemaRef` für jeden Datensatz gibt die Versionsnummer die neueste Nebenversion des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API.
+>In der Eigenschaft `schemaRef` für jeden Datensatz gibt die Versionsnummer die neueste Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch.
 
 ## Startindex von Antwortliste versetzen
 
@@ -210,7 +209,7 @@ Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 * Die einzigen Catalog-Objekte, die derzeit Tags unterstützen, sind Datensätze, Batches und Verbindungen.
 * Tag-Namen sind für Ihre IMS-Organisation eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
-* Die folgenden Tag-Namen sind für die Verwendung in [!DNL Experience Platform] reserviert und können daher nicht als Tag-Name für Ihr Unternehmen deklariert werden:
+* Die folgenden Tag-Namen sind für die Verwendung in [!DNL Experience Platform] reserviert und können daher nicht als Tag-Name für Ihre Organisation deklariert werden:
    * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-time Customer Profile]](../../profile/home.md) erfasst werden sollen.
    * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) erfasst werden sollen.
 
@@ -337,7 +336,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
 
 ## Nach Datumsbereich filtern
 
-Einige Endpunkte in der [!DNL Catalog]-API verfügen über Abfrage-Parameter, die für Abfragen in einem bestimmten Bereich geeignet sind, meist bei Datumsangaben.
+Einige Endpunkte in der API [!DNL Catalog] verfügen über Abfrageparameter, die Abfragen in einem bestimmten Bereich ermöglichen, meist bei Datumsangaben.
 
 **API-Format**
 
@@ -364,7 +363,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog]-Objekten, die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
@@ -432,7 +431,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog]-Objekten, die gemäß dem Parameter `orderBy` sortiert werden. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die nach dem Parameter `orderBy` sortiert sind. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {

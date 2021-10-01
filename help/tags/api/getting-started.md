@@ -3,7 +3,7 @@ title: Erste Schritte mit der Reactor-API
 description: Hier erfahren Sie, wie Sie mit der Reactor-API beginnen, einschließlich der Schritte zum Generieren erforderlicher Zugriffsberechtigungen.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 100%
 

@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 100%
 

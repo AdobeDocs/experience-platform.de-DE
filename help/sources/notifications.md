@@ -8,7 +8,7 @@ exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ In diesem Dokument erfahren Sie, wie Sie Ereignisse abonnieren, Webhooks registr
 
 In diesem Tutorial wird davon ausgegangen, dass Sie bereits mindestens eine Quellverbindung erstellt haben, deren Fluss überwacht werden soll. Wenn Sie noch keine Quellverbindung konfiguriert haben, gehen Sie zunächst zur [Quellenübersicht](./home.md), um die Quelle Ihrer Wahl zu konfigurieren, bevor Sie zu diesem Handbuch zurückkehren.
 
-Dieses Dokument setzt auch ein Verständnis der Webhooks voraus und wie ein Webhook von einer Anwendung zur anderen verbunden werden kann. Eine Einführung in Webhooks finden Sie in der [[!DNL I/O Events] Dokumentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) .
+Dieses Dokument setzt auch ein Verständnis der Webhooks voraus und wie ein Webhook von einer Anwendung zur anderen verbunden werden kann. Eine Einführung in Webhooks finden Sie in der [[!DNL I/O Events] Dokumentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
 
 ## Webhook für Fluss-Ausführungsbenachrichtigungen registrieren
 

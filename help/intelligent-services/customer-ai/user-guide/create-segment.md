@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Einblicke;Kundenwerbung;beliebte Themen;Kundendienstsegmente
+keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundendatensegmente
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Erstellen von Kundensegmenten mit prognostizierten Ergebnissen
+title: Kundensegmente mit prognostizierten Werten erstellen
 topic-legacy: Create a segment
 description: Nach Abschluss einer Prognose werden die prognostizierten Tendenzwerte von Profilen automatisch übernommen. Ein Anreichern von Profilen mit Customer AI-Werten ermöglicht eine Erstellung von Kundensegmenten, die Zielgruppen basierend auf ihren Tendenzwerten finden. In diesem Abschnitt werden Schritte zum Erstellen von Segmenten mit Segment Builder beschrieben.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '318'
@@ -35,10 +34,10 @@ Geben Sie in der rechten Spalte *Segmenteigenschaften* einen Namen für das Segm
 
 ![](../images/user-guide/properties.png)
 
-Klicken Sie über der Spalte *Felder* auf das Symbol **Zahnrad** und wählen Sie aus der Dropdownliste eine *Richtlinie zusammenführen*. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
+Klicken Sie über der linken Spalte *Felder* auf das Symbol **Zahnrad** und wählen Sie eine *Zusammenführungsrichtlinie* aus der Dropdown-Liste aus. Klicken Sie auf **[!UICONTROL Speichern]**, um das Segment zu erstellen.
 
 ![](../images/user-guide/merge_policy.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe des Segmentaufbaus Audiencen anhand ihrer Tendenzwerte erfolgreich gefunden. Sie können nun Ihre Zielgruppen ansprechen, indem Sie diese für Ziele aktivieren. Weiterführende Informationen dazu finden Sie unter [Ziele – Übersicht](../../../destinations/home.md).
+In diesem Tutorial haben Sie mithilfe von Segment Builder erfolgreich Zielgruppen basierend auf ihren Tendenzwerten gefunden. Sie können nun Ihre Zielgruppen ansprechen, indem Sie diese für Ziele aktivieren. Weiterführende Informationen dazu finden Sie unter [Ziele – Übersicht](../../../destinations/home.md).

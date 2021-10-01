@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Übersicht über Zuordnungssätze
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Zuordnungssätze mit der Funktion zur Datenvorbereitung von Adobe Experience Platform verwenden.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
-workflow-type: ht
+exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 100%
 
 ---
-
 
 # Übersicht über Zuordnungssätze
 

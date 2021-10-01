@@ -28,7 +28,7 @@ Sie können eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Azure Event Hubs]-
 
 ![AWS Kinesis in der Benutzeroberfläche](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
-## Nutzungsszenarios {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Durch die Verwendung von Streaming-Zielen wie [!DNL Azure Event Hubs] können Sie einfach hochwertige Segmentierungsereignisse und zugehörige Profilattribute in Ihre bevorzugten Systeme einspeisen.
 
@@ -102,6 +102,6 @@ Ihre exportierten [!DNL Experience Platform]-Daten werden im JSON-Format [!DNL A
 >[!MORELIKETHIS]
 >
 >* [Verbindung zu Azure Event Hubs herstellen und Daten mithilfe der Flow Service-API aktivieren](../../api/streaming-destinations.md)
-* [AWS Kinesis-Ziel](./amazon-kinesis.md)
-* [Zieltypen und Kategorien](../../destination-types.md)
+>* [AWS Kinesis-Ziel](./amazon-kinesis.md)
+>* [Zieltypen und Kategorien](../../destination-types.md)
 

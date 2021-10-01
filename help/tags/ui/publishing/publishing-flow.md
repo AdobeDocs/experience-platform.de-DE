@@ -1,8 +1,9 @@
 ---
 title: Publishing-Ablauf
 description: Erfahren Sie mehr über den Prozess der Erstellung von Bibliotheken, das Testen von Builds und die Freigabe für die Produktion in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1499'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Der Veröffentlichungsablauf für Tags in Adobe Experience Platform bezieht sich auf den Prozess der Erstellung von Bibliotheken, des Testens von Builds und der Freigabe für die Produktion.
 

@@ -1,8 +1,9 @@
 ---
 title: Unterstützung einer Content Security Policy (CSP)
 description: Erfahren Sie, wie Sie mit den Einschränkungen der Content Security Policy (CSP) umgehen, wenn Sie Ihre Website mit Tags in Adobe Experience Platform integrieren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1080'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Eine Content Security Policy (CSP) ist eine Sicherheitsfunktion, die Cross-Site-Scripting-Angriffe (XSS) verhindert. Bei Cross-Site Scripting wird der Browser dazu gebracht, schädliche Inhalte auszuführen, die scheinbar aus vertrauenswürdigen Quellen stammen, die aber in Wahrheit von woanders her stammen. Mit CSPs kann der Browser (im Namen des Benutzers) überprüfen, ob das Skript tatsächlich von einer vertrauenswürdigen Quelle stammt.
 
@@ -33,7 +34,7 @@ Erhöhte Sicherheit erfordert einen erhöhten Arbeitsaufwand auf Seiten des Erst
 
 ## Hinzufügen von Tags als vertrauenswürdige Quelle
 
-Bei Verwendung eines CSP müssen Sie alle vertrauenswürdigen Domains in den Wert des `Content-Security-Policy`-Headers einschließen. Der Wert, den Sie für Tags angeben müssen, hängt vom verwendeten Hosting-Typ ab.
+Bei Verwendung eines CSP müssen Sie alle vertrauenswürdigen Domains in den Wert der `Content-Security-Policy`-Kopfzeile einschließen. Der Wert, den Sie für Tags angeben müssen, hängt vom verwendeten Hosting-Typ ab.
 
 ### Selbstständiges Hosting
 

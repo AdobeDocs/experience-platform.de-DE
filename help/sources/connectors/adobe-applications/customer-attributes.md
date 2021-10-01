@@ -8,7 +8,7 @@ exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
 source-git-commit: 541cc87f218a6ef3dcca37573f6d0f9cf560edfb
 workflow-type: tm+mt
 source-wordcount: '411'
-ht-degree: 11%
+ht-degree: 19%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) in Experience Cloud können Sie Ihre erfassten Unternehmensdaten aus einer CRM-Datenbank (Customer Relationship Management) hochladen. Sie können die Daten in eine Kundenattribut-Datenquelle im Experience Cloud hochladen und dann die Daten in Adobe Analytics und Adobe Target verwenden.
+[[!DNL Customer Attributes]](https://experienceleague.adobe.com/docs/core-services/interface/services/customer-attributes/attributes.html?lang=en) in Experience Cloud können Sie Ihre erfassten Unternehmensdaten aus einer CRM-Datenbank (Customer Relationship Management) hochladen. Sie können die Daten in eine Datenquelle für Kundenattribute in Experience Cloud hochladen und dann die Daten in Adobe Analytics und Adobe Target verwenden.
 
 Experience Platform unterstützt die Aufnahme von [!DNL Customer Attributes]-Profildaten in Adobe Experience Platform.
 
@@ -32,7 +32,7 @@ Bei Verwendung der Quelle [!DNL Customer Attributes] können Sie keinen vorhande
 
 Damit [!DNL Customer Attributes]-Daten mit anderen [!DNL Profile]-Datensätzen verknüpft werden können, müssen ihre Daten und Identitäten mit einer Experience Cloud-ID übereinstimmen können.
 
-Sie können den Namespace `CORE` einrichten, indem Sie die Experience Cloud-ID für den Besucher mithilfe von [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity) oder der [Experience Cloud-ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en) festlegen.
+Sie können den Namespace `CORE` einrichten, indem Sie die Experience Cloud-ID für den Besucher mithilfe von [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity) oder der [Experience Cloud-ID-Dienst-API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de) festlegen.
 
 Die [!DNL Customer Attributes]-Datei füllt keine anderen Identitätsbeziehungen weiter. Wenn beispielsweise ein [!DNL Customer Attributes]-Quelldatensatz ein **E-Mail**- und ein **Loyalitäts-ID**-Feld enthält, müssen diese Felder im Schema als Identitätsfelder gekennzeichnet werden, damit sie in [!DNL Identity Service] verarbeitet werden können.
 

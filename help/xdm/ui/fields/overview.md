@@ -22,7 +22,7 @@ Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Eine Einführung 
 
 Für dieses Handbuch ist zwar nicht erforderlich, Sie sollten jedoch auch das Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) befolgen, um sich mit den verschiedenen Funktionen von [!DNL Schema Editor] vertraut zu machen.[
 
-## Wählen Sie eine Ressource aus, um Felder zu {#select-resource} hinzuzufügen.
+## Ressource auswählen, der Felder hinzugefügt werden sollen {#select-resource}
 
 Um neue XDM-Felder in der Benutzeroberfläche zu definieren, müssen Sie zunächst ein Schema innerhalb von [!DNL Schema Editor] öffnen. Je nachdem, welche Schemas Ihnen derzeit im [!DNL Schema Library] zur Verfügung stehen, können Sie [ein neues Schema](../resources/schemas.md#create) oder [ erstellen und ein vorhandenes Schema auswählen, um](../resources/schemas.md#edit) zu bearbeiten.
 

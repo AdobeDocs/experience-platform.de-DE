@@ -21,7 +21,7 @@ Adobe Experience Platform bietet viele Standarddatentypen, mit denen eine Vielza
 
 In diesem Tutorial werden die Schritte zum Erstellen und Bearbeiten benutzerdefinierter Datentypen in der Benutzeroberfläche von Platform beschrieben.
 
-## Voraussetzungen  
+## Voraussetzungen
 
 Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem finden Sie in der [XDM-Übersicht](../../home.md) und in den [Grundlagen der Schemakomposition](../../schema/composition.md) , wie Datentypen zu XDM-Schemas beitragen.
 
@@ -64,7 +64,7 @@ Wählen Sie in der Liste den zu bearbeitenden Datentyp aus, um die rechte Leiste
 
 ![](../../images/ui/resources/data-types/edit.png)
 
-## Felder zum Datentyp {#add-fields} hinzufügen
+## Felder zum Datentyp hinzufügen {#add-fields}
 
 Um dem Datentyp Felder hinzuzufügen, wählen Sie auf der Arbeitsfläche das Symbol **plus (+)** neben dem Feld auf der Stammebene aus. Unten wird ein neues Feld angezeigt und die rechte Leiste wird aktualisiert, um Steuerelemente für das neue Feld anzuzeigen.
 

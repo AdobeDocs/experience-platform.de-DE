@@ -6,7 +6,7 @@ topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet Ihnen einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 100%
 

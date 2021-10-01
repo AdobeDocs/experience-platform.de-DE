@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activation overview
 description: Erfahren Sie, wie Sie die Zielgruppendaten, die Sie in Adobe Experience Platform haben, für verschiedene Zieltypen aktivieren.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform to various types of destinations.
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 1%
+ht-degree: 9%
 
 ---
-
 
 # Übersicht über Activation
 

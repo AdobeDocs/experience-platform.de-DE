@@ -1,133 +1,132 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Identitätsdiagramm-Viewer;Identitätsdiagramm-Viewer;Diagramm-Viewer;Namensraum;Identitäts-Namensraum;Identität;Identitätsdienst;Identitätsdienst;Identitätsdienst
+keywords: Experience Platform; Startseite; beliebte Themen; Identitätsdiagramm-Viewer; Identitätsdiagramm-Viewer; Diagramm-Viewer; Graph-Viewer; Identitäts-Namespace; Identität; Identität; Identity Service; Identitätsdienst
 solution: Experience Platform
-title: Übersicht über den Identitätsdiagramm-Viewer
+title: Identitätsdiagramm-Viewer - Übersicht
 topic-legacy: tutorial
-description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg.
+description: Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten für einen bestimmten Kunden und bietet Ihnen eine visuelle Darstellung, wie Ihr Kunde über verschiedene Kanäle hinweg mit Ihrer Marke interagiert.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 3%
+ht-degree: 9%
 
 ---
 
 # Übersicht über den Identitätsdiagramm-Viewer
 
-Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten eines bestimmten Kunden und bietet Ihnen eine visuelle Darstellung der Interaktion Ihres Kunden mit Ihrer Marke über verschiedene Kanal hinweg. Alle Kundenidentitätsdiagramme werden von Adobe Experience Platform Identity Service in Echtzeit verwaltet und aktualisiert, um die Aktivität der Kunden zu gewährleisten.
+Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäten für einen bestimmten Kunden und bietet Ihnen eine visuelle Darstellung, wie Ihr Kunde über verschiedene Kanäle hinweg mit Ihrer Marke interagiert. Alle Identitätsdiagramme werden von Adobe Experience Platform Identity Service bei Kundenaktivität nahezu in Echtzeit verwaltet und aktualisiert.
 
-Mit dem Identitätsdiagramm-Viewer in der Benutzeroberfläche der Plattform können Sie visualisieren und besser verstehen, welche Kundenidentitäten zusammengeführt werden und auf welche Weise. Mit dem Viewer können Sie verschiedene Teile des Diagramms ziehen und mit ihnen interagieren. So können Sie komplexe Identitätsbeziehungen untersuchen, effizienter debuggen und von einer größeren Transparenz bei der Verwendung von Informationen profitieren.
+Mit dem Identitätsdiagramm-Viewer in der Benutzeroberfläche von Platform können Sie visualisieren und besser verstehen, welche Kundenidentitäten zusammengeführt werden und auf welche Weise. Mit dem Viewer können Sie verschiedene Teile des Diagramms per Drag-and-drop verschieben und mit ihnen interagieren, sodass Sie komplexe Identitätsbeziehungen untersuchen, Fehler effizient beheben und von einer erhöhten Transparenz bei der Verwendung von Informationen profitieren können. 
 
-## Tutorial
+## Anleitungsvideo
 
-Das folgende Video soll Ihnen das Verständnis des Identitätsdiagramm-Viewers erleichtern.
+Das folgende Video soll Ihr Verständnis des Identitätsdiagramm-Viewers unterstützen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Erste Schritte
 
-Die Arbeit mit dem Identitätsdiagramm-Viewer erfordert ein Verständnis der verschiedenen beteiligten Adobe Experience Platform-Dienste. Bevor Sie mit der Arbeit mit dem Identitätsdiagramm-Viewer beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Die Arbeit mit dem Identitätsdiagramm-Viewer erfordert ein Verständnis der verschiedenen beteiligten Adobe Experience Platform-Dienste. Bevor Sie mit dem Identitätsdiagramm-Viewer arbeiten, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [[!DNL Identity Service]](../home.md): Sorgt für eine bessere Darstellung einzelner Kunden und deren Verhalten, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
 
 ### Terminologie
 
-- **Identität (Node):** Eine Identität oder eine Node sind Daten, die für eine Entität, normalerweise eine Person, eindeutig sind. Eine Identität besteht aus einem Namensraum und einem Identitätswert.
-- **Verknüpfung (Kante):** Ein Link oder eine Kante stellt die Verbindung zwischen Identitäten dar.
-- **Diagramm (Cluster):** Ein Diagramm oder ein Cluster ist eine Gruppe von Identitäten und Links, die eine Person repräsentieren.
+- **Identität (Knoten):** Eine Identität oder ein Knoten ist Daten, die für eine Entität, normalerweise eine Person, eindeutig sind. Eine Identität besteht aus einem Namespace und einem Identitätswert.
+- **Verknüpfung (Kante):** Ein Link oder ein Edge stellt die Verbindung zwischen Identitäten dar.
+- **Diagramm (Cluster):**  Ein Diagramm oder ein Cluster ist eine Gruppe von Identitäten und Links, die eine Person darstellen.
 
 ## Zugriff auf den Identitätsdiagramm-Viewer
 
-Um den Identitätsdiagramm-Viewer in der Benutzeroberfläche zu verwenden, wählen Sie **[!UICONTROL Identities]** in der linken Navigation und dann die Registerkarte **[!UICONTROL Identitätsdiagramm]**. Klicken Sie im Bildschirm **[!UICONTROL Identity Namensraum]** auf das Symbol **[!UICONTROL Identität auswählen]**, um nach dem Namensraum zu suchen, den Sie verwenden möchten.
+Um den Identitätsdiagramm-Viewer in der Benutzeroberfläche zu verwenden, wählen Sie im linken Navigationsbereich **[!UICONTROL Identitäten]** und dann die Registerkarte **[!UICONTROL Identitätsdiagramm]** aus. Klicken Sie im Bildschirm **[!UICONTROL Identity-Namespace]** auf das Symbol **[!UICONTROL Identitäts-Namespace]** auswählen , um nach dem Namespace zu suchen, den Sie verwenden möchten.
 
-![Namensraum-Screen](../images/identity-graph-viewer/identity-namespace.png)
+![namespace-screen](../images/identity-graph-viewer/identity-namespace.png)
 
-Das Bedienfeld **[!UICONTROL Identität auswählen]** wird angezeigt. Dieser Bildschirm enthält eine Liste von Namensräumen, die für Ihr Unternehmen zur Verfügung stehen, einschließlich Informationen zu den folgenden Elementen: **[!UICONTROL Anzeigename]**, **[!UICONTROL Identitätssymbol]**, **[!UICONTROL Inhaber]**, **[!UICONTROL Letzte Aktualisierung]** und **[!UICONTROL Beschreibung]**. Sie können einen beliebigen Namensraum verwenden, sofern ein gültiger Identitätswert mit ihm verbunden ist.
+Das Bedienfeld **[!UICONTROL Identitäts-Namespace auswählen]** wird angezeigt. Dieser Bildschirm enthält eine Liste der für Ihr Unternehmen verfügbaren Namespaces, einschließlich Informationen zu den **[!UICONTROL Anzeigenamen]**, **[!UICONTROL Identitätssymbol]**, **[!UICONTROL Inhaber]**, **[!UICONTROL Letzte Aktualisierung]** und **[!UICONTROL Beschreibung]**. Sie können einen beliebigen der bereitgestellten Namespaces verwenden, sofern ein gültiger Identitätswert mit ihm verbunden ist.
 
-Wählen Sie den gewünschten Namensraum aus und klicken Sie auf **[!UICONTROL Wählen Sie]**, um fortzufahren.
+Wählen Sie den Namespace aus, den Sie verwenden möchten, und klicken Sie auf **[!UICONTROL Auswählen]**, um fortzufahren.
 
-![select-identity-Namensraum](../images/identity-graph-viewer/select-identity-namespace.png)
+![select-identity-namespace](../images/identity-graph-viewer/select-identity-namespace.png)
 
-Wenn Sie einen Namensraum ausgewählt haben, geben Sie den entsprechenden Kundenwert in das Textfeld **[!UICONTROL Identitätswert]** ein und wählen Sie **[!UICONTROL Ansicht]**.
+Nachdem Sie einen Namespace ausgewählt haben, geben Sie dessen entsprechenden Wert für einen bestimmten Kunden in das Textfeld **[!UICONTROL Identitätswert]** ein und wählen Sie **[!UICONTROL Ansicht]** aus.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
 
-### Zugriff auf den Identitätsdiagramm-Viewer von Datasets
+### Zugriff auf den Identitätsdiagramm-Viewer aus Datensätzen
 
-Sie können auch über die DataSets-Oberfläche auf den Identitätsdiagramm-Viewer zugreifen. Wählen Sie auf der Seite &quot;Datensätze [!UICONTROL Durchsuchen]&quot;einen Datensatz, mit dem Sie interagieren möchten, und wählen Sie **[!UICONTROL Vorschau-Datensatz]**.
+Sie können auch über die Oberfläche für Datensätze auf den Viewer für Identitätsdiagramme zugreifen. Wählen Sie auf der Seite [!UICONTROL Durchsuchen] einen Datensatz aus, mit dem Sie interagieren möchten, und wählen Sie dann **[!UICONTROL Datensatz-Vorschau]** aus.
 
-![Vorschau-Datensatz](../images/identity-graph-viewer/preview-dataset.png)
+![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
 
-Wählen Sie im Fenster &quot;Vorschau&quot;ein Fingerabdrucksymbol aus, um die Identitäten im Identitätsdiagramm-Viewer anzuzeigen.
+Wählen Sie im Vorschaufenster ein Fingerabdrucksymbol aus, um die Identitäten anzuzeigen, die durch den Identitätsdiagramm-Viewer dargestellt werden.
 
 >[!TIP]
 >
 >Das Symbol &quot;Fingerabdruck&quot;wird nur angezeigt, wenn der Datensatz zwei oder mehr Identitäten aufweist.
 
-![Fingerprint](../images/identity-graph-viewer/fingerprint.png)
+![Fingerabdruck](../images/identity-graph-viewer/fingerprint.png)
 
-Der Identitätsdiagramm-Viewer wird angezeigt. Auf der linken Seite des Bildschirms befindet sich das Identitätsdiagramm mit allen Identitäten, die mit dem ausgewählten Namensraum verknüpft sind, sowie dem eingegebenen Identitätswert. Jeder Identitätsknoten besteht aus einem Namensraum und dem zugehörigen ID-Wert. Sie können eine beliebige Identität auswählen und halten, um das Diagramm zu ziehen und mit ihm zu interagieren. Alternativ können Sie den Mauszeiger über eine Identität bewegen, um Informationen zum ID-Wert anzuzeigen. Die Diagrammausgabe wird auch als eingebrachte Liste in der Mitte des Bildschirms angezeigt.
+Der Identitätsdiagramm-Viewer wird angezeigt. Auf der linken Seite des Bildschirms befindet sich das Identitätsdiagramm, das alle Identitäten anzeigt, die mit dem ausgewählten Namespace verknüpft sind, sowie den eingegebenen Identitätswert. Jeder Identitätsknoten besteht aus einem Namespace und dem zugehörigen ID-Wert. Sie können eine beliebige Identität auswählen und speichern, um sie per Drag-and-Interaktion mit dem Diagramm zu verwenden. Alternativ können Sie den Mauszeiger über eine Identität bewegen, um Informationen zum ID-Wert anzuzeigen. Die Diagrammausgabe wird auch als eingereichte Liste in der Mitte des Bildschirms angezeigt.
 
 >[!IMPORTANT]
 >
->Ein Identitätsdiagramm erfordert mindestens zwei verknüpfte Identitäten sowie ein gültiges Namensraum- und ID-Paar. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 150. Weitere Informationen finden Sie im Abschnitt [Anhang](#appendix).
+>Für ein Identitätsdiagramm müssen mindestens zwei verknüpfte Identitäten generiert werden, sowie ein gültiges Namespace- und ID-Paar. Die maximale Anzahl von Identitäten, die der Diagramm-Viewer anzeigen kann, beträgt 150. Weitere Informationen finden Sie unten im Abschnitt [Anhang](#appendix) .
 
 ![identity-graph](../images/identity-graph-viewer/graph-viewer.png)
 
-Wählen Sie eine Identität aus, um die hervorgehobene Zeile in der Tabelle **[!UICONTROL Identities]** zu aktualisieren und die Informationen in der rechten Leiste zu aktualisieren. Dazu gehören **[!UICONTROL Wert]**, **[!UICONTROL Stapel-ID]** und das **[!UICONTROL Letzte aktualisierte]** Datum.
+Wählen Sie eine Identität aus, um die markierte Zeile in der Tabelle **[!UICONTROL Identitäten]** zu aktualisieren und die Informationen in der rechten Leiste zu aktualisieren, die die Werte **[!UICONTROL Wert]**, **[!UICONTROL Batch-Kennung]** und das Datum **[!UICONTROL Letzte Aktualisierung]** enthalten.
 
 ![select-identity](../images/identity-graph-viewer/select-identity.png)
 
-Mit der Sortieroption über der Tabelle **[!UICONTROL Identities]** können Sie durch ein Diagramm filtern und einen bestimmten Namensraum isolieren. Wählen Sie im Dropdownmenü den Namensraum aus, den Sie markieren möchten.
+Sie können ein Diagramm durchfiltern und einen bestimmten Namespace mithilfe der Sortieroption über der Tabelle **[!UICONTROL Identitäten]** isolieren. Wählen Sie im Dropdown-Menü den Namespace aus, den Sie hervorheben möchten.
 
-![filter-by-Namensraum](../images/identity-graph-viewer/filter-namespace.png)
+![filter-by-namespace](../images/identity-graph-viewer/filter-namespace.png)
 
-Der Diagramm-Viewer gibt den ausgewählten Namensraum wieder. Mit der Filteroption wird auch die Tabelle **[!UICONTROL Identities]** aktualisiert, sodass nur Informationen für den ausgewählten Namensraum zurückgegeben werden.
+Der Diagramm-Viewer gibt zurück und hebt den ausgewählten Namespace hervor. Die Filteroption aktualisiert auch die Tabelle **[!UICONTROL Identitäten]**, sodass nur Informationen für den ausgewählten Namespace zurückgegeben werden.
 
-![gefiltert](../images/identity-graph-viewer/filtered.png)
+![filtern](../images/identity-graph-viewer/filtered.png)
 
-Die obere rechte Ecke des Diagrammansichtsfelds enthält Optionen zur Vergrößerung. Wählen Sie das Symbol **(+)**, um in das Diagramm zu zoomen, oder das Symbol **(-)**, um es auszuzoomen.
+Oben rechts im Viewer-Feld für Diagramme enthält Optionen zur Vergrößerung. Wählen Sie das Symbol **(+)** aus, um in das Diagramm zu zoomen, oder das Symbol **(-)** , um auszuzoomen.
 
-![zoomen](../images/identity-graph-viewer/zoom.png)
+![Zoom](../images/identity-graph-viewer/zoom.png)
 
-Sie können weitere Informationen zu Stapeln durch Auswahl von **[!UICONTROL Datenquelle]** in der Kopfzeile Ansicht haben. Die Tabelle **[!UICONTROL Datenquelle]** zeigt eine Liste von **[!UICONTROL Stapel-IDs]**, die mit dem Diagramm verknüpft sind, sowie deren **[!UICONTROL Verknüpfte IDs]**, Quell-Schema und das Erfassungsdatum.
+Sie können weitere Informationen zu Batches anzeigen, indem Sie die **[!UICONTROL Datenquelle]** aus der Kopfzeile auswählen. Die Tabelle **[!UICONTROL Datenquelle]** enthält eine Liste der **[!UICONTROL Batch-IDs]**, die mit dem Diagramm verknüpft sind, sowie die zugehörigen **[!UICONTROL Verknüpften IDs]**, das Quellschema und das Datum der Aufnahme.
 
 ![data-source](../images/identity-graph-viewer/data-source-table.png)
 
-Sie können einen der Links in einem Identitätsdiagramm auswählen, um alle Quellstapel anzuzeigen, die zu dem Link beigetragen haben.
+Sie können einen beliebigen Link in einem Identitätsdiagramm auswählen, um alle Quell-Batches anzuzeigen, die zum Link beigetragen haben.
 
 ![select-links](../images/identity-graph-viewer/select-edge.png)
 
-Alternativ können Sie einen Stapel auswählen, um alle Links anzuzeigen, zu denen dieser Stapel beigetragen hat.
+Alternativ können Sie einen Batch auswählen, um alle Links anzuzeigen, zu denen dieser Batch beigetragen hat.
 
 ![select-links](../images/identity-graph-viewer/select-batch.png)
 
-Identitätsdiagramme mit größeren Gruppen von Identitäten können auch über den Identitätsdiagramm-Viewer aufgerufen werden.
+Identitätsdiagramme mit größeren Identitätsclustern sind auch über den Identitätsdiagramm-Viewer verfügbar.
 
 ![Großcluster](../images/identity-graph-viewer/large-cluster.png)
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie weitere Informationen zum Arbeiten mit dem Identitätsdiagramm-Viewer.
+Im folgenden Abschnitt finden Sie zusätzliche Informationen zum Arbeiten mit dem Identitätsdiagramm-Viewer.
 
-### Fehlermeldungen
+### Grundlagen zu Fehlermeldungen
 
-Fehler können beim Zugriff auf den Identitätsdiagramm-Viewer auftreten. Im Folgenden finden Sie eine Liste der Voraussetzungen und Einschränkungen, die beim Arbeiten mit dem Identitätsdiagramm-Viewer zu beachten sind.
+Beim Zugriff auf den Identitätsdiagramm-Viewer können Fehler auftreten. Im Folgenden finden Sie eine Liste von Voraussetzungen und Einschränkungen, die bei der Arbeit mit dem Identitätsdiagramm-Viewer zu beachten sind.
 
-- Im ausgewählten Namensraum muss ein Identitätswert vorhanden sein.
-- Für den Identitätsdiagramm-Viewer sind mindestens zwei verknüpfte Identitäten erforderlich. Es ist möglich, dass es nur einen Identitätswert und keine verknüpften Identitäten gibt. In diesem Fall wäre der Wert nur im Viewer [!DNL Profile] vorhanden.
-- Der Identitätsdiagramm-Viewer darf nicht länger als 150 Identitäten sein.
+- Im ausgewählten Namespace muss ein Identitätswert vorhanden sein.
+- Der Identitätsdiagramm-Viewer erfordert mindestens zwei verknüpfte Identitäten, die generiert werden müssen. Es ist möglich, dass es nur einen Identitätswert und keine verknüpften Identitäten gibt. In diesem Fall wäre der Wert nur im Viewer [!DNL Profile] vorhanden.
+- Der Identitätsdiagramm-Viewer darf die maximal 150 Identitäten nicht überschreiten.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie gelernt, wie Sie die Identitätsdiagramme Ihrer Kunden in der Plattform-Benutzeroberfläche erkunden können. Weitere Informationen zu Identitäten in der Plattform finden Sie unter [Übersicht über den Identitätsdienst](../home.md)
+Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie die Identitätsdiagramme Ihrer Kunden in der Platform-Benutzeroberfläche untersuchen. Weiterführende Informationen zu Identitäten in Platform finden Sie in der [Übersicht über Identity Service](../home.md)
 
 ## Änderungsprotokoll
 
 | Datum | Aktion |
 | ---- | ------ |
-| 2021-01 | <ul><li>Unterstützung für Streaming von erfassten Daten und Nicht-Produktions-Sandbox hinzugefügt.</li><li>Geringfügige Fehlerbehebungen.</li></ul> |
-| 2021-02 | <ul><li>Der Identitätsdiagramm-Viewer wird über die DataSet-Vorschau zugänglich gemacht.</li><li>Geringfügige Fehlerbehebungen.</li><li>Der Identitätsdiagramm-Viewer ist im Allgemeinen verfügbar.</li></ul> |
+| 01.2021 | <ul><li>Unterstützung für Streaming von erfassten Daten und Nicht-Produktions-Sandbox hinzugefügt.</li><li>Geringfügige Fehlerbehebungen.</li></ul> |
+| 2021-02 | <ul><li>Der Identitätsdiagramm-Viewer wird über die Datensatzvorschau verfügbar gemacht.</li><li>Geringfügige Fehlerbehebungen.</li><li>Der Identitätsdiagramm-Viewer wird allgemein verfügbar gemacht.</li></ul> |

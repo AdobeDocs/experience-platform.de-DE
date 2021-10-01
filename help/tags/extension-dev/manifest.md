@@ -1,8 +1,9 @@
 ---
 title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '2647'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Im Basisverzeichnis der Erweiterung müssen Sie eine Datei mit dem Namen `extension.json` erstellen. Sie enthält wichtige Details zu Ihrer Erweiterung, die es Adobe Experience Platform ermöglichen, diese ordnungsgemäß zu nutzen. Einige Inhalte sind nach dem Vorbild von [npm `package.json`](https://docs.npmjs.com/files/package.json) gestaltet.
 
@@ -111,7 +112,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
   <tbody>
     <tr>
       <td><code>name</code></td>
-      <td>Name des Typs. Dies muss ein eindeutiger Name innerhalb der Erweiterung sein. Der Name muss den <a href="#naming-rules">Benennungsregeln</a> entsprechen. <strong>Er wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung der Erweiterung nicht geändert werden.</strong></td>
+      <td>Name des Typs. Dies muss ein eindeutiger Name innerhalb der Erweiterung sein. Der Name muss den <a href="#naming-rules">Benennungsregeln</a> entsprechen. <strong>Er wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung Ihrer Erweiterung nicht geändert werden.</strong></td>
     </tr>
     <tr>
       <td><code>displayName</code></td>
@@ -131,7 +132,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Ein Objekt vom Typ <a href="http://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Einstellungsobjekts beschreibt, das vom Benutzer gespeichert werden kann. Die Einstellungen werden normalerweise von einem Benutzer über die Datenerfassungs-Benutzeroberfläche konfiguriert und gespeichert. In diesen Fällen kann die Ansicht der Erweiterung die erforderlichen Schritte zur Überprüfung der vom Benutzer bereitgestellten Einstellungen durchführen. Auf der anderen Seite entscheiden sich einige Benutzer dafür, Tag-APIs direkt ohne die Hilfe einer Benutzeroberfläche zu verwenden. Mit diesem Schema wird Platform in die Lage versetzt, genau zu überprüfen, ob die von den Benutzern gespeicherten Einstellungsobjekte unabhängig davon, ob eine Benutzeroberfläche verwendet wird, in einem Format vorliegen, das mit dem Bibliotheksmodul kompatibel ist, das zur Laufzeit das Einstellungsobjekt verarbeitet.<br><br>Ein Beispiel für ein schema-Objekt:<br>
+      <td>Ein Objekt vom Typ <a href="http://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Einstellungsobjekts beschreibt, das vom Benutzer gespeichert werden kann. Die Einstellungen werden normalerweise von einem Benutzer über die Datenerfassungs-Benutzeroberfläche konfiguriert und gespeichert. In diesen Fällen kann die Ansicht der Erweiterung die erforderlichen Schritte zur Überprüfung der vom Benutzer bereitgestellten Einstellungen durchführen. Auf der anderen Seite entscheiden sich einige Benutzer dafür, Tag-APIs direkt ohne die Hilfe einer Benutzeroberfläche zu verwenden. Mit diesem Schema wird Platform in die Lage versetzt, genau zu überprüfen, ob die von den Benutzern gespeicherten settings-Objekte unabhängig davon, ob eine Benutzeroberfläche verwendet wird, in einem Format vorliegen, das mit dem Bibliotheksmodul kompatibel ist, das zur Laufzeit das settings-Objekt verarbeitet.<br><br>Ein Beispiel für ein schema-Objekt:<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -139,10 +140,10 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
   "properties": {
     "delay": {
       "type": "number",
-      "minimum": 1
+      "minimum": 3
     }
   },
-  "required": [
+  "erforderlich": [
     "delay"
   ],
   "additionalProperties": false
@@ -161,7 +162,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
 
 Für bestimmte spezifische Anwendungsfälle müssen für Erweiterungen die in einer Ansicht gespeicherten Einstellungsobjekte aus Platform transformiert werden, bevor sie in die Tag-Laufzeitbibliothek ausgegeben werden. Sie können anfordern, dass eine oder mehrere dieser Transformationen durchgeführt werden, indem Sie die `transforms`-Eigenschaft beim Definieren einer Typdefinition in `extension.json` festlegen. Die `transforms`-Eigenschaft ist ein Array von Objekten, wobei jedes Objekt eine auszuführende Transformation darstellt.
 
-Alle Transformationen benötigen einen `type`-Wert und einen `propertyPath`-Wert. Der Wert von `type` muss `function`, `remove` oder `file` lauten. Er beschreibt, welche Transformation von Platform auf das Einstellungsobjekt angewendet werden soll. Der `propertyPath` ist eine durch Punkte getrennte Zeichenfolge, die Tags mitteilt, wo die zu ändernde Eigenschaft im Einstellungsobjekt zu finden ist. Es folgen ein Beispiel für ein Einstellungsobjekt und einige Angaben für `propertyPath`:
+Alle Transformationen benötigen einen `type`-Wert und einen `propertyPath`-Wert. Der Wert von `type` muss `function`, `remove` oder `file` lauten. Er beschreibt, welche Transformation von Platform auf das settings-Objekt angewendet werden soll. Der `propertyPath` ist eine durch Punkte getrennte Zeichenfolge, die Tags mitteilt, wo die zu ändernde Eigenschaft im Einstellungsobjekt zu finden ist. Es folgen ein Beispiel für ein Einstellungsobjekt und einige Angaben für `propertyPath`:
 
 ```js
 {
@@ -208,7 +209,7 @@ Wenn der Benutzer die Regel speichert, kann das von der Ansicht gespeicherte Ein
 
 Wenn eine Regel, die unsere Aktion verwendet, in der Tag-Laufzeitbibliothek ausgelöst wird, soll der Code des Benutzers ausgeführt und ihm ein Benutzername übergeben werden.
 
-Wenn das Einstellungsobjekt aus der Ansicht des Aktionstyps gespeichert wird, ist der Benutzercode einfach eine Zeichenfolge. Dies ist gut, da es ordnungsgemäß zu und von JSON serialisiert werden kann. Es ist jedoch auch schlecht, da es in der Tag-Laufzeitbibliothek normalerweise auch als Zeichenfolge und nicht als ausführbare Funktion ausgegeben wird. Obwohl Sie versuchen könnten, den Code innerhalb des Bibliotheksmoduls Ihres Aktionstyps mit [`eval`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) oder einem [Function-Konstruktor](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Function) auszuführen, wird davon dringend abgeraten, weil [Sicherheitsrichtlinien für Inhalte](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) die Ausführung potenziell blockieren können.
+Wenn das settings-Objekt aus der Ansicht des Aktionstyps gespeichert wird, ist der Benutzercode einfach eine Zeichenfolge. Dies ist gut, da es ordnungsgemäß zu und von JSON serialisiert werden kann. Es ist jedoch auch schlecht, da es in der Tag-Laufzeitbibliothek normalerweise auch als Zeichenfolge und nicht als ausführbare Funktion ausgegeben wird. Obwohl Sie versuchen könnten, den Code innerhalb des Bibliotheksmoduls Ihres Aktionstyps mit [`eval`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) oder einem [Function-Konstruktor](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Function) auszuführen, wird davon dringend abgeraten, weil [Sicherheitsrichtlinien für Inhalte](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) die Ausführung potenziell blockieren können.
 
 Um diese Situation zu umgehen, erhält Platform bei Verwendung der Funktionstransformation die Anweisung, den Code des Benutzers in eine ausführbare Funktion einzuschließen, wenn er in der Tag-Laufzeitbibliothek ausgegeben wird. Zur Lösung unseres Beispielproblems würden wir die Transformation in der Typdefinition in `extension.json` wie folgt definieren:
 
@@ -225,7 +226,7 @@ Um diese Situation zu umgehen, erhält Platform bei Verwendung der Funktionstran
 ```
 
 * `type` definiert den Typ der Transformation, die auf das Einstellungsobjekt angewendet werden soll.
-* `propertyPath` ist eine Zeichenfolge mit Punkt als Trennzeichen, die Platform angibt, wo sich die Eigenschaft befindet, die im Einstellungsobjekt geändert werden muss.
+* `propertyPath` ist eine Zeichenfolge mit Punkt als Trennzeichen, die Platform angibt, wo sich die Eigenschaft befindet, die im settings-Objekt geändert werden muss.
 * `parameters` ist ein Array von Parameternamen, die in die Signatur der Wrapping-Funktion aufgenommen werden sollen.
 
 Wenn das Einstellungsobjekt in der Tag-Laufzeitbibliothek ausgegeben wird, wird es wie folgt umgewandelt:
@@ -274,7 +275,7 @@ Wir möchten, dass der Code des Benutzers in einer separaten Datei platziert wir
 ```
 
 * `type` definiert den Typ der Transformation, die auf das Einstellungsobjekt angewendet werden soll.
-* `propertyPath` ist eine Zeichenfolge mit Punkt als Trennzeichen, die Platform angibt, wo sich die Eigenschaft befindet, die im Einstellungsobjekt geändert werden muss.
+* `propertyPath` ist eine Zeichenfolge mit Punkt als Trennzeichen, die Platform angibt, wo sich die Eigenschaft befindet, die im settings-Objekt geändert werden muss.
 
 Wenn das Einstellungsobjekt in der Tag-Laufzeitbibliothek ausgegeben wird, wird es wie folgt umgewandelt:
 
@@ -320,7 +321,7 @@ Wir möchten die Eigenschaft `bar` nicht in die Tag-Laufzeitbibliothek einschlie
 ```
 
 * `type` definiert den Typ der Transformation, die auf das Einstellungsobjekt angewendet werden soll.
-* `propertyPath` ist eine Zeichenfolge mit Punkt als Trennzeichen, die Platform angibt, wo sich die Eigenschaft befindet, die im Einstellungsobjekt geändert werden muss.
+* `propertyPath` ist eine Zeichenfolge mit Punkt als Trennzeichen, die Platform angibt, wo sich die Eigenschaft befindet, die im settings-Objekt geändert werden muss.
 
 Wenn das Einstellungsobjekt in der Tag-Laufzeitbibliothek ausgegeben wird, wird es wie folgt umgewandelt:
 
@@ -331,4 +332,4 @@ Wenn das Einstellungsobjekt in der Tag-Laufzeitbibliothek ausgegeben wird, wird 
 }
 ```
 
-In diesem Fall wurde der Wert von `foo.bar` aus dem Einstellungsobjekt entfernt.
+In diesem Fall wurde der Wert von `foo.bar` aus dem settings-Objekt entfernt.

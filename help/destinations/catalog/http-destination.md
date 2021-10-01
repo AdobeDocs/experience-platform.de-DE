@@ -22,7 +22,7 @@ Das [!DNL HTTP]-Ziel ist ein [!DNL Adobe Experience Platform]-Streaming-Ziel, mi
 
 Um Profildaten an [!DNL HTTP]-Endpunkte zu senden, müssen Sie zunächst in [[!DNL Adobe Experience Platform]](#connect-destination) eine Verbindung zum Ziel herstellen.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Das [!DNL HTTP]-Ziel richtet sich an Kunden, die XDM-Profildaten und Zielgruppensegmente in allgemeine [!DNL HTTP]-Endpunkte exportieren müssen.
 

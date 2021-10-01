@@ -1,18 +1,19 @@
 ---
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '572'
 ht-degree: 100%
 
 ---
 
-# Versionshinweise zur Erweiterung „Adobe Target v2“
+# Versionshinweise zur Adobe Target v2-Erweiterung
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 20. Juli 2021
 
@@ -57,7 +58,7 @@ ht-degree: 100%
 ### Adobe Target v2-Erweiterung 0.13.7
 
 - Es wurde ein Problem behoben, bei dem `targetPageParams` in Mbox-Anforderungen enthalten war. `targetPageParams` sollten nur in `pageLoad`-Anforderungen aufgenommen werden.
-- Es wurde ein Problem mit globalen Dokument- und Fensterobjekten in der Tag-Erweiterung behoben, indem die globalen Objektabhängigkeiten durch direkte Verweise darauf ersetzt wurden.
+- Es wurde ein Problem mit globalen Dokument- und Fensterobjekten in der Tag-Erweiterung behoben, indem die globalen Objektabhängigkeiten von Platform Launch durch direkte Verweise darauf ersetzt wurden.
 - „at.js“ wurde auf 2.4.1 aktualisiert.
 
 ## 25. Januar 2021
@@ -89,7 +90,7 @@ ht-degree: 100%
 ### Adobe Target v2-Erweiterung 0.13.2
 
 - Es wurde ein Fehler bei der Verwendung von CNAME und Edge Override behoben, bei dem at.js 1.x fälschlicherweise die Server-Domain erstellte, wodurch die Target-Anfrage fehlschlug.
-- Es wurde ein Problem behoben, bei dem bei Verwendung der v2-Tag-Erweiterung für Target und Adobe Analytics Target den sendBeacon-Aufruf an Analytics verzögerte.
+- Es wurde ein Problem behoben, bei dem Target bei Verwendung der v2-Tag-Erweiterung für die Tag-Erweiterung von Target und Adobe Analytics den Analytics-Aufruf „sendBeacon“ verzögerte.
 - Die `deviceIdLifetime` Einstellung wurde verbessert, indem sie durch `targetGlobalSettings` überschrieben werden kann.
 
 ## 25. März 2020

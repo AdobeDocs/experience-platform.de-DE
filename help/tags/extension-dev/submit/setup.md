@@ -1,8 +1,9 @@
 ---
 title: Einrichten der Experience Cloud-Organisation
 description: Hier erfahren Sie, wie Sie eine Adobe Experience Cloud-Organisation registrieren, um mit der Entwicklung von Erweiterungen für Adobe Experience Platform zu beginnen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ee36319d-5de8-462e-879b-311445cf334c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Um Tag-Erweiterungen in Adobe Experience Platform entwickeln zu können, müssen Sie eine Adobe Experience Cloud-Organisation registrieren.
 
@@ -22,7 +23,7 @@ Kunden von Experience Cloud wird eine Organisation zugewiesen, wenn Verträge un
 
 Dieses Programm ist für Partner gedacht, die über Technologien verfügen, die Adobe ergänzen und mit Adobe-Technologien zusammenarbeiten können, um einen Mehrwert für unsere gemeinsamen Kunden zu schaffen. In diesem Programm wird ein [Marktplatz](https://www.adobeexchange.com/experiencecloud.html) beibehalten, in dem Partner Listeneinträge erstellen können, die ihre Integrationen bewerben. Sie können [hier](https://partners.adobe.com/exchangeprogram/experiencecloud/reg-guide.html) den Registrierungsleitfaden einsehen und [hier](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) Ihre Registrierung beginnen.
 
-Sie müssen Abonnent dieses Programms sein, um öffentlich aufgelistete Tag-Erweiterungen für Adobe Experience Platform erstellen zu können, die auf dem Marktplatz angezeigt werden.
+Sie müssen Abonnent dieses Programms sein, um öffentlich aufgelistete Tag-Erweiterungen für Adobe Experience Platform erstellen zu können, die auf dem Marketplace angezeigt werden.
 
 >[!WARNING]
 >

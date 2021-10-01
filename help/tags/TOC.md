@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Hilfe zu Tags
 breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
-feature: Datenerfassung
+feature: Data Collection
 source-git-commit: d2df8ac5edca32ac9228cb7db1810763c57de0b3
-workflow-type: ht
-source-wordcount: '380'
+workflow-type: tm+mt
+source-wordcount: '378'
 ht-degree: 100%
 
 ---
@@ -119,7 +119,7 @@ ht-degree: 100%
       * [!DNL YouTube] Video-Tracking-Erweiterung {#youtube}
          * [Übersicht](./extensions/web/youtube/overview.md)
          * [Versionshinweise](./extensions/web/youtube/release-notes.md)
-   * [Erweiterungen von Drittanbietern](./extensions/3rd-party-extensions.md)
+   * [Drittanbietererweiterungen](./extensions/3rd-party-extensions.md)
 * Entwickeln von Erweiterungen {#extension-dev}
    * [Übersicht](./extension-dev/overview.md)
    * [Erste Schritte](./extension-dev/getting-started.md)

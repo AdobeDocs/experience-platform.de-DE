@@ -8,7 +8,7 @@ exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '1536'
-ht-degree: 19%
+ht-degree: 18%
 
 ---
 
@@ -27,7 +27,7 @@ Mit dem Endpunkt `/classes` in der API [!DNL Schema Registry] können Sie Klasse
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
 ## Liste von Klassen abrufen {#list}
 

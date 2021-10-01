@@ -6,8 +6,8 @@ topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Salesforce-Quellfeldern und den entsprechenden XDM-Feldern.
 source-git-commit: 00207ae10979b48d190cbda63aecf55e0f6d0f9c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 

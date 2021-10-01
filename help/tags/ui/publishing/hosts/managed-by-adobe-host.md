@@ -1,10 +1,11 @@
 ---
 title: Übersicht über von Adobe verwaltete Hosts
 description: Erfahren Sie mehr über die Standard-Hosting-Option für die Bereitstellung von Tag-Bibliotheks-Builds in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1175'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Von Adobe verwaltete Hosts sind die Standard-Host-Einstellung für die Bereitstellung Ihrer Tag-Bibliotheks-Builds in Adobe Experience Platform. Wenn Sie eine neue Eigenschaft über die Datenerfassungs-Benutzeroberfläche erstellen, wird ein von Adobe verwalteter Standard-Host für Sie erstellt.
 
@@ -99,8 +100,7 @@ Wenn Sie zum ersten Mal eine Eigenschaft in der [Datenerfassungs-Benutzeroberfl�
 >1. Geben Sie einen Namen für den Host ein, wählen Sie als Host-Typ **[!UICONTROL Verwaltet von Adobe]** aus und wählen Sie dann **[!UICONTROL Speichern]**.
 
 >
->
-Anschließend können Sie Ihre Umgebung nach Bedarf dem von Adobe verwalteten Host erneut zuweisen.
+>Anschließend können Sie Ihre Umgebung nach Bedarf dem von Adobe verwalteten Host erneut zuweisen.
 
 ## Nächste Schritte
 

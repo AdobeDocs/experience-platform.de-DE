@@ -4,7 +4,7 @@ title: Tag-Erweiterungen in Adobe Experience Platform
 description: Adobe Experience Platform verfügt über die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
 source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 100%
 

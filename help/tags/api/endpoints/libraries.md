@@ -5,7 +5,7 @@ exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1584'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ Eine Bibliothek gehört zu genau einer Eigenschaft. Eine Eigenschaft kann viele 
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 Bevor Sie mit Bibliotheken in der Reactor-API arbeiten, müssen Sie wissen, welche Rollen Bibliotheksstatus und Umgebungen spielen, um zu bestimmen, welche Aktionen Sie für eine bestimmte Bibliothek durchführen können. Weitere Informationen finden Sie im Handbuch zum [Veröffentlichungsablauf für Bibliotheken](../../ui/publishing/publishing-flow.md).
 

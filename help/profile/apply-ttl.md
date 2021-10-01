@@ -3,13 +3,13 @@ keywords: Experience Platform; Startseite; beliebte Themen; Datensatz; Datensät
 solution: Experience Platform
 title: Time-to-Live für Datensätze
 description: Dieses Dokument enthält allgemeine Anleitungen zu Time-to-Live (TTL) für Datensätze im Profilspeicher für Adobe Experience Platform.
-source-git-commit: 878c04c688268f8cf1850c3e8d40f958a6d2d69b
-workflow-type: ht
+exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 100%
 
 ---
-
 
 # Time-to-Live (TTL) des Profil-Service
 
@@ -43,4 +43,3 @@ Wenn Sie beispielsweise am 15. Mai einen TTL-Wert von 30 Tagen angewendet haben,
 1. Für alle neuen Ereignisse wird bei der Aufnahme ein TTL-Wert von 30 Tagen angewendet.
 2. Alle vorhandenen Ereignisse mit einem Zeitstempel, der älter als der 15. April ist, werden mit dem Systemauftrag sofort gelöscht.
 3. Alle vorhandenen Ereignisse mit einem Zeitstempel, der neuer als der 15. April ist, haben einen TTL-Ablaufwert von 30 Tagen nach ihrem Ereignis-Zeitstempel. Wenn ein Ereignis also einen Zeitstempel vom 18. April hat, wird es dreißig Tage nach dem Datum dieses Zeitstempels gelöscht, also am 18. Mai.
-

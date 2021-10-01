@@ -1,6 +1,6 @@
 ---
-title: Dynamisches Segment in Adobe Experience Platform erstellen
-description: In diesem Video erhalten Sie grundlegende Informationen zum Erstellen eines dynamischen Segments mithilfe der Plattform-Benutzeroberfläche.
+title: Erstellen eines dynamischen Segments in Adobe Experience Platform
+description: In diesem Video erhalten Sie grundlegende Informationen zum Erstellen eines dynamischen Segments mithilfe der Platform-Benutzeroberfläche.
 product: experience platform
 type: Documentation
 solution: Experience Platform
@@ -9,23 +9,22 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: null
-translation-type: tm+mt
-source-git-commit: d06e3c979b9279c6178e5049442fa009927bbb11
+exl-id: 62345f9d-11fe-4659-a513-ee15938f0c85
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
 
 ---
 
+# Dynamisches Segment in der Experience Platform-Benutzeroberfläche erstellen
 
-# Erstellen eines dynamischen Segments in der Benutzeroberfläche der Experience Platform
+Das folgende Video soll Sie bei der Erstellung dynamischer Segmente unterstützen. Er zeigt ein Beispiel für ein Kundenerlebnis, gefolgt von einer kurzen Übersicht über die wichtigsten Funktionen in der [!DNL Platform]-Benutzeroberfläche. Weitere Informationen zur Segmentierung und zum Erstellen von Segmenten in der Benutzeroberfläche finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
 
-Das folgende Video soll Ihnen beim Erstellen dynamischer Segmente helfen. Es zeigt ein Beispiel für ein Kundenerlebnis, gefolgt von einem kurzen Überblick über die wichtigsten Funktionen in der [!DNL Platform]-Oberfläche. Weitere Informationen zur Segmentierung und zum Erstellen von Segmenten in der Benutzeroberfläche finden Sie im Handbuch [Segmentaufbau](../ui/segment-builder.md).
-
-Wenn Sie ein Segment mithilfe der Segmentierungs-API erstellen möchten, lesen Sie bitte den Leitfaden [Erstellen Sie eine Segment-API](../tutorials/create-a-segment.md).
+Wenn Sie ein Segment mithilfe der Segmentation-API erstellen möchten, lesen Sie [Erstellen Sie ein Segment-API-Handbuch](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung des Videos geändert haben. Die aktuellsten Informationen finden Sie im Handbuch [Segmentaufbau](../ui/segment-builder.md).
+>Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Segment Builder-Handbuch](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

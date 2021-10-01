@@ -5,7 +5,8 @@ title: Erstellen einer VEC CRM-Quellverbindung in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung mit dem VEE CRM erstellen.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
+source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 13%

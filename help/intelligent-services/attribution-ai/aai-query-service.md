@@ -1,11 +1,10 @@
 ---
-keywords: Einblicke;Zuordnungsai;Zuordnungs-ai-Einblicke;AAI-Abfrage-Dienst;Zuordnungs-Abfragen;Zuordnungswerte
+keywords: Einblicke; Attributionsai; Attributionsai-Einblicke; AAI-Abfragedienst; Attributionsabfragen; Attributionsbewertungen
 solution: Intelligent Services, Experience Platform
-title: Analysieren von Zuordnungswerten mithilfe des Abfrage Service
+title: Analyse von Attributionsbewertungen mithilfe von Query Service
 topic-legacy: Attribution AI queries
-description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Abfrage Service Attribution AI-Ergebnisse analysieren können.
+description: Erfahren Sie, wie Sie mit Adobe Experience Platform Query Service Attribution AI-Bewertungen analysieren können.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '589'
@@ -13,61 +12,61 @@ ht-degree: 0%
 
 ---
 
-# Analysieren von Zuordnungswerten mithilfe des Abfrage Service
+# Analyse von Attributionswerten mithilfe von Query Service
 
-Jede Zeile in den Daten stellt eine Konversion dar, bei der Informationen für verwandte Touchpoints als Strukturarray unter der Spalte `touchpointsDetail` gespeichert werden.
+Jede Zeile in den Daten stellt eine Konversion dar, in der Informationen für verwandte Touchpoints als Array von Strukturen unter der Spalte `touchpointsDetail` gespeichert werden.
 
 | Touchpoint-Informationen | Spalte |
 | ---------------------- | ------ |
 | Touchpoint-Name | `touchpointsDetail. touchpointName` |
 | Touchpoint-Kanal | `touchpointsDetail.touchPoint.mediaChannel` |
-| Algorithmische Ergebnisse des Touchpoint-Attribution AIS | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Algorithmische Werte für Touchpoint-Attribution AI | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
-## Suchen von Datenpfaden
+## Suchen nach Datenpfaden
 
-Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche in der linken Navigation **[!UICONTROL Datensätze]**. Die Seite **[!UICONTROL Datensätze]** wird angezeigt. Wählen Sie anschließend die Registerkarte **[!UICONTROL Durchsuchen]** und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Ergebnisse.
+Wählen Sie in der Adobe Experience Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Datensätze]** aus. Die Seite **[!UICONTROL Datensätze]** wird angezeigt. Wählen Sie anschließend die Registerkarte **[!UICONTROL Durchsuchen]** aus und suchen Sie den Ausgabedatensatz für Ihre Attribution AI-Bewertungen.
 
 ![Zugreifen auf Ihre Instanz](./images/aai-query/datasets_browse.png)
 
-Wählen Sie Ihren Ausgabedatensatz aus. Die Seite zur Aktivität des Datensatzes wird angezeigt.
+Wählen Sie Ihren Ausgabedatensatz aus. Die Seite mit der Datensatzaktivität wird angezeigt.
 
-![Dataset-Aktivität](./images/aai-query/select_preview.png)
+![Datensatzaktivität-Seite](./images/aai-query/select_preview.png)
 
-Wählen Sie auf der Seite &quot;Aktivität des Datensatzes&quot;in der rechten oberen Ecke **[!UICONTROL Vorschau-Datensatz]** aus, um Ihre Daten Vorschau und sicherzustellen, dass sie erwartungsgemäß aufgenommen wurden.
+Wählen Sie auf der Seite mit der Datensatzaktivität **[!UICONTROL Datensatz-Vorschau]** in der oberen rechten Ecke aus, um Ihre Daten in der Vorschau anzuzeigen und sicherzustellen, dass sie erwartungsgemäß erfasst wurden.
 
-![Vorschau DataSet](./images/aai-query/preview_dataset.JPG)
+![Vorschau-Datensatz](./images/aai-query/preview_dataset.JPG)
 
-Wählen Sie nach der Vorschau Ihrer Daten das Schema in der rechten Leiste aus. Es wird ein Popup mit dem Namen und der Beschreibung des Schemas angezeigt. Wählen Sie den Hyperlink &quot;Schema-Name&quot;, um zum bewerteten Schema umzuleiten.
+Wählen Sie nach der Vorschau Ihrer Daten das Schema in der rechten Leiste aus. Es wird ein Popover mit dem Schemanamen und der Beschreibung angezeigt. Wählen Sie den Hyperlink für den Schemanamen aus, um zum Scoring-Schema umzuleiten.
 
 ![Schema auswählen](./images/aai-query/select_schema.png)
 
-Mithilfe des Schemas &quot;Bewertung&quot;können Sie einen Wert auswählen oder suchen. Nach der Auswahl wird die Seitenleiste **[!UICONTROL Feldeigenschaften]** geöffnet, damit Sie den Pfad kopieren können, der zum Erstellen von Abfragen verwendet werden soll.
+Mithilfe des Scoring-Schemas können Sie einen Wert auswählen oder suchen. Nach der Auswahl wird die Seitenleiste **[!UICONTROL Feldeigenschaften]** geöffnet, mit der Sie den Pfad kopieren können, der zum Erstellen von Abfragen verwendet werden soll.
 
-![den Pfad kopieren](./images/aai-query/copy_path.png)
+![Pfad kopieren](./images/aai-query/copy_path.png)
 
-## Abfrage-Dienst aufrufen
+## Zugriff auf Query Service
 
-Um von der Plattformbenutzeroberfläche aus auf den Abfrage-Dienst zuzugreifen, wählen Sie im Beginn **[!UICONTROL Abfragen]** in der linken Navigation und dann die Registerkarte **[!UICONTROL Durchsuchen]**. Eine Liste der zuvor gespeicherten Abfragen wird geladen.
+Um über die Platform-Benutzeroberfläche auf Query Service zuzugreifen, wählen Sie zunächst **[!UICONTROL Abfragen]** im linken Navigationsbereich und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus. Eine Liste der zuvor gespeicherten Abfragen wird geladen.
 
-![Durchsuchen des Abfrage-Dienstes](./images/aai-query/query_tab.png)
+![Query Service Browse](./images/aai-query/query_tab.png)
 
-Wählen Sie dann **[!UICONTROL Abfrage]** oben rechts aus. Der Abfragen-Editor wird geladen. Mit dem Abfragen-Editor können Sie mit der Erstellung von Abfragen mit Ihren Bewertungsdaten beginnen.
+Wählen Sie als Nächstes **[!UICONTROL Abfrage erstellen]** in der oberen rechten Ecke aus. Der Abfrage-Editor wird geladen. Mithilfe des Abfrage-Editors können Sie mit der Erstellung von Abfragen mit Ihren Scoring-Daten beginnen.
 
-![Abfrage-Editor](./images/aai-query/query_example.png)
+![Abfrageeditor](./images/aai-query/query_example.png)
 
-Weitere Informationen zum Abfragen-Editor finden Sie im Benutzerhandbuch [Abfrage-Editor](../../query-service/ui/user-guide.md).
+Weitere Informationen zum Abfrage-Editor finden Sie im Benutzerhandbuch für den Abfrage-Editor ](../../query-service/ui/user-guide.md).[
 
-## Abfrage-Vorlagen für die Analyse des Zuordnungswerts
+## Abfragevorlagen für die Attributionswertanalyse
 
-Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analyse des Punktwerts verwendet werden. Sie müssen die Werte `_tenantId` und `your_score_output_dataset` durch die entsprechenden Werte in Ihrem bewerteten Schema ersetzen.
+Die folgenden Abfragen können als Vorlage für verschiedene Bewertungsanalyseszenarien verwendet werden. Sie müssen die Werte `_tenantId` und `your_score_output_dataset` durch die entsprechenden Werte im Scoring-Ausgabeschema ersetzen.
 
 >[!NOTE]
 >
-> Je nachdem, wie Ihre Daten erfasst wurden, können die unten verwendeten Werte wie `timestamp` in einem anderen Format verwendet werden.
+> Je nachdem, wie Ihre Daten erfasst wurden, können die unten verwendeten Werte wie `timestamp` in einem anderen Format vorliegen.
 
-### Überprüfungsbeispiele
+### Validierungsbeispiele
 
-**Gesamtanzahl der Konversionen nach Konversions-Ereignis (innerhalb eines Konvertierungsfensters)**
+**Gesamtanzahl der Konversionen nach Konversionsereignis (innerhalb eines Konvertierungsfensters)**
 
 ```sql
     SELECT conversionName,
@@ -90,7 +89,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analy
         conversionName
 ```
 
-**Gesamtanzahl der Ereignis, die nur Konversionen durchführen (innerhalb eines Konvertierungsfensters)**
+**Gesamtanzahl der reinen Konversionsereignisse (innerhalb eines Konvertierungsfensters)**
 
 ```sql
     SELECT
@@ -129,7 +128,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analy
     LIMIT 20
 ```
 
-### Beispiel für die Distribution-Analyse
+### Beispiel einer Verteilungsanalyse
 
 **Anzahl der Touchpoints auf Konversionspfaden nach definiertem Typ (innerhalb eines Konvertierungsfensters)**
 
@@ -157,7 +156,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analy
 
 ### Beispiele zur Insight-Generierung
 
-**Inkrementelle Einheiten nach Touchpoint- und Konvertierungsdatum (innerhalb eines Konvertierungsfensters)**
+**Inkrementelle Aufschlüsselung nach Touchpoint und Konversionsdatum (innerhalb eines Konvertierungsfensters)**
 
 ```sql
     SELECT conversionName,
@@ -182,7 +181,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analy
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Inkrementelle Einheiten nach Touchpoint- und Touchpoint-Datum (innerhalb eines Konvertierungsfensters)**
+**Inkrementelle Aufschlüsselung nach Touchpoint- und Touchpoint-Datum (in einem Konvertierungsfenster)**
 
 ```sql
     SELECT conversionName,
@@ -208,7 +207,7 @@ Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analy
     LIMIT 20
 ```
 
-**Aggregierte Ergebnisse für einen bestimmten Touchpoint-Typ für alle Bewertungsmodelle (innerhalb eines Konvertierungsfensters)**
+**Aggregierte Werte für einen bestimmten Touchpoint-Typ für alle Scoring-Modelle (innerhalb eines Konvertierungsfensters)**
 
 ```sql
     SELECT
@@ -239,9 +238,9 @@ Die folgenden Abfragen können als Vorlage für verschiedene Szenarien zur Analy
         conversionName, touchpointName
 ```
 
-**Erweitert - Analyse der Pfadlänge**
+**Erweitert - Pfadlängenanalyse**
 
-Abrufen einer Pfadlängenverteilung für jeden Konversions-Ereignistyp:
+Rufen Sie eine Pfadlängenverteilung für jeden Konversionsereignistyp ab:
 
 ```sql
     WITH agg_path AS (
@@ -270,9 +269,9 @@ Abrufen einer Pfadlängenverteilung für jeden Konversions-Ereignistyp:
         conversionName, path_length
 ```
 
-**Erweitert - eindeutige Anzahl von Touchpoints auf der Analyse von Konversionspfaden**
+**Erweitert - eindeutige Anzahl von Touchpoints bei der Analyse von Konversionspfaden**
 
-Rufen Sie die Verteilung für die Anzahl der verschiedenen Touchpoints auf einem Konversionspfad für jeden Konvertierungs-Ereignistyp ab:
+Rufen Sie die Verteilung für die Anzahl unterschiedlicher Touchpoints auf einem Konversionspfad für jeden Konversionsereignistyp ab:
 
 ```sql
     WITH agg_path AS (
@@ -301,13 +300,13 @@ Rufen Sie die Verteilung für die Anzahl der verschiedenen Touchpoints auf einem
         conversionName, num_dist_tp
 ```
 
-### Beispiel zum Reduzieren und Explodieren von Schemas
+### Beispiel für Schema-Abflachung und -Explosion
 
-Diese Abfrage reduziert die Strukturspalte in mehrere Einzelspalten und explodiert Arrays in mehrere Zeilen. Auf diese Weise können Sie Zuordnungswerte in ein CSV-Format umwandeln. Die Ausgabe dieser Abfrage enthält eine Konvertierung und einen der Touchpoints, die dieser Konvertierung in jeder Zeile entsprechen.
+Diese Abfrage reduziert die Strukturspalte in mehrere Einzelspalten und explodiert Arrays in mehrere Zeilen. Dies hilft beim Transformieren von Attributionswerten in ein CSV-Format. Die Ausgabe dieser Abfrage weist in jeder Zeile eine Konversion und einen der Touchpoints auf, die dieser Konversion entsprechen.
 
 >[!TIP]
 >
-> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset` ersetzen. Die Variable `COLUMN_NAME` kann die Werte der optionalen Übergabe durch Spaltennamen (Berichte-Spalten) annehmen, die während der Konfiguration der Attribution AI-Instanz hinzugefügt wurden. Bitte überprüfen Sie Ihr Schema für die Bewertungsausgabe, um die `{COLUMN_NAME}`-Werte zu finden, die zum Abschluss dieser Abfrage erforderlich sind.
+> In diesem Beispiel müssen Sie `{COLUMN_NAME}` zusätzlich zu `_tenantId` und `your_score_output_dataset` ersetzen. Die Variable `COLUMN_NAME` kann die optionale Übergabe der Spaltennamen (Berichtsspalten) übernehmen, die beim Konfigurieren Ihrer Attribution AI-Instanz hinzugefügt wurden. Überprüfen Sie Ihr Scoring-Ausgabeschema, um die `{COLUMN_NAME}`-Werte zu finden, die zum Abschließen dieser Abfrage erforderlich sind.
 
 ```sql
 SELECT 

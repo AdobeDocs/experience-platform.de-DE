@@ -7,7 +7,7 @@ type: Tutorial
 description: Nachdem Sie Datennutzungsbezeichnungen für Ihre Daten sowie Nutzungsrichtlinien für Marketing-Aktionen hinsichtlich dieser Bezeichnungen erstellt haben, können Sie mit der Policy Service-API bewerten, ob eine Marketing-Aktion, die für einen Datensatz oder eine beliebige Gruppe von Bezeichnungen durchgeführt wird, eine Richtlinienverletzung darstellt. Sie können dann eigene interne Protokolle einrichten, um mit Richtlinienverletzungen je nach API-Antwort umzugehen.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 100%
 

@@ -1,8 +1,9 @@
 ---
 title: Verwalten von Berechtigungen für Tags
 description: Hier erfahren Sie, wie Sie in Adobe Experience Platform Berechtigungen für Tags erteilen.
-source-git-commit: 72d2e9328bcfb6abf0a7f8f0c5113f021a112a35
-workflow-type: ht
+exl-id: b0439909-c515-4829-82b9-267da8862cba
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Um Tags in Adobe Experience Platform verwenden zu können, muss Ihnen über Adobe Admin Console Zugriff auf mindestens ein Adobe Experience Cloud-Produkt gewährt werden. Darüber hinaus müssen Sie auch Berechtigungen für Tags auf der Ebene des Produktprofils besitzen, damit Sie bestimmte Aktionen ausführen können, wenn Sie über die Datenerfassungs-Benutzeroberfläche angemeldet sind.
 

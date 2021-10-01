@@ -1,13 +1,13 @@
 ---
 keywords: Ziele; Ziel; Zieltypen
 title: Zieltypen und Kategorien
-seo-title: Zieltypen und Kategorien
+seo-title: Destination types and categories
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
 source-git-commit: 5a6f14ba65584a6bd61d62c4fb0b46e8f9e8e96d
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 11%
+source-wordcount: '530'
+ht-degree: 12%
 
 ---
 

@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Feldgruppe "Webdetails-Schema"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe Webdetails .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '144'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Feldergruppe &quot;Web-] Details-Schema&quot;
 

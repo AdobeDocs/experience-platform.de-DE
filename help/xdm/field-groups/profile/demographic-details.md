@@ -26,7 +26,7 @@ ht-degree: 22%
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `person.name` | [Personenname](../../data-types/person-name.md) | Ein Objekt, dessen Unterfelder verschiedene Elemente des Namens einer Person beschreiben. |
-| `person.birthDate` | Datum  | Das vollständige Datum, an dem eine Person geboren wurde, in Form eines ISO 8601-Zeitstempels. |
+| `person.birthDate` | Datum | Das vollständige Datum, an dem eine Person geboren wurde, in Form eines Zeitstempels nach ISO 8601. |
 | `person.birthDayAndMonth` | Zeichenfolge | Der Tag und Monat, an dem eine Person geboren wurde, im Format MM-TT. Dieses Feld sollte verwendet werden, wenn der Geburtstag und -monat bekannt sind, nicht aber das Jahr. |
 | `person.birthYear` | Ganzzahl | Das Jahr, in dem eine Person geboren wurde, einschließlich des Jahrhunderts (wie 1989). Dieses Feld sollte verwendet werden, wenn nur das Alter der Person bekannt ist, nicht das vollständige Geburtsdatum. |
 | `person.gender` | Zeichenfolge | Die Geschlechtsidentität der Person. |

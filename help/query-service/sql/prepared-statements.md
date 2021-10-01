@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;vorbereitete Anweisungen;Vorbereitung;SQL
+keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; vorbereitete Anweisungen; vorbereitet; sql
 solution: Experience Platform
-title: Vorbereitende Anweisungen im Abfrage-Dienst
+title: Vorbereitete Anweisungen in Query Service
 topic-legacy: prepared statements
-description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen der Vorlage zuzuordnen. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen durch Einsatz einer parametrisierten Abfrage.
+description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen als Vorlage zu verwenden. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen durch Einsatz einer parametrisierten Abfrage.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '381'
@@ -106,14 +105,14 @@ EXECUTE getIdRange(10000, 10005);
 
 Bei diesem Aufruf sehen Sie genau die gleichen Ergebnisse wie zuvor:
 
-| id | firstname | lastname | Geburtstag | email | Ort | country |
+| id | firstname | lastname | birthdate | email | city | country |
 |--- | --------- | -------- | --------- | ----- | ------- | ---- |
-| 10000 | Alexander | davis | 15.09.1993 | example@example.com | Vancouver | Kanada |
+| 10000 | alexander | davis | 15.09.1993 | example@example.com | Vancouver | Kanada |
 | 10001 | Antoine | dubois | 14.03.1967 | example2@example.com | Paris | Frankreich |
-| 10002 | kyoko | Sakura | 26.11.1999 | example3@example.com | Tokio | Japan |
-| 10003 | Linus | Pettersson | 03.06.1982 | example4@example.com | Stockholm | Schweden |
-| 10004 | aasir | Waithaka | 17.12.1976 | example5@example.com | Nairobi | Kenia |
-| 10005 | Farando | Rios | 30.07.2002 | example6@example.com | Santiago | Chile |
+| 10002 | kyoko | sakura | 26.11.1999 | example3@example.com | Tokio | Japan |
+| 10003 | linus | pettersson | 03.06.1982 | example4@example.com | Stockholm | Schweden |
+| 10004 | aasir | waithaka | 17.12.1976 | example5@example.com | Nairobi | Kenia |
+| 10005 | fernando | rios | 30.07.2002 | example6@example.com | Santiago | Chile |
 
 Nachdem Sie die vorbereitete Anweisung fertig verwendet haben, können Sie die Zuweisung mithilfe des folgenden Aufrufs aufheben:
 

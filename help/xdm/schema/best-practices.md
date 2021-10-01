@@ -76,7 +76,7 @@ Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Enti
 | --- | --- | --- | --- | --- |
 | 1234567 | Addieren | 275098 | 2 | 1. Oktober 10:32 Uhr |
 | 1234567 | Entfernen | 275098 | 1 | 1. Oktober 10:33 Uhr |
-| 1234567 | Addieren | 486502 | 1 | 1. Oktober 10:41 Uhr |
+| 1234567 | Addieren | 486502 | 3 | 1. Oktober 10:41 Uhr |
 | 1234567 | Addieren | 910482 | 5 | 3. Oktober, 14:15 |
 
 {style=&quot;table-layout:auto&quot;}
@@ -135,7 +135,7 @@ In diesem Szenario hat das Unternehmen zwei Möglichkeiten, die Abonnements eine
 1. [Profilattribute verwenden](#profile-approach)
 1. [Ereignisentitäten verwenden](#event-approach)
 
-#### Ansatz 1: Profilattribute {#profile-approach} verwenden
+#### Ansatz 1: Profilattribute verwenden {#profile-approach}
 
 Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die Profilentität für Kunden aufzunehmen. Objekte in diesem Array enthalten Felder für `category`, `status`, `planName`, `startDate` und `endDate`.
 
@@ -151,7 +151,7 @@ Der erste Ansatz besteht darin, ein Array von Abonnements als Attribute in die P
 * Das gesamte Array muss jedes Mal neu gekennzeichnet werden, wenn Änderungen an einem Feld im Array auftreten.
 * Wenn verschiedene Datenquellen oder Geschäftseinheiten Daten in das Array einspeisen, wird es schwierig, das neueste aktualisierte Array über alle Kanäle hinweg zu synchronisieren.
 
-#### Ansatz 2: Verwenden Sie Ereignisentitäten {#event-approach}
+#### Ansatz 2: Ereignisentitäten verwenden {#event-approach}
 
 Der zweite Ansatz besteht darin, Ereignisschemata zur Darstellung von Abonnements zu verwenden. Dazu müssen dieselben Abonnementfelder wie beim ersten Ansatz erfasst werden, wobei eine Anmelde-ID, eine Kunden-ID und ein Zeitstempel hinzugefügt werden, aus denen hervorgeht, wann das Abonnementereignis eingetreten ist.
 

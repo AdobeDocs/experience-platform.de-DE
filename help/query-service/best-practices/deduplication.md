@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Daten-Deduplizierung-Duplikate;Deduplizierung-Duplikate
+keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Datendeduplizierung; Deduplizierung;
 solution: Experience Platform
-title: Data Deduplizierung-Duplikate im Abfrage-Dienst
+title: Datendeduplizierung in Query Service
 topic-legacy: queries
 type: Tutorial
-description: In diesem Dokument werden Beispiele für die Unter-Auswahl- und vollständige Abfrage von Beispielen für die Deduplizierung von drei gängigen Anwendungsfällen erläutert. Erlebnis-Ereignis, Käufe und Metriken.
+description: In diesem Dokument werden Beispiele für die Unter-Auswahl und vollständige Beispielabfrage zur Deduplizierung von drei gängigen Anwendungsfällen, Erlebnisereignisse, Käufe und Metriken, vorgestellt.
 exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '494'
@@ -14,35 +13,35 @@ ht-degree: 0%
 
 ---
 
-# Data Deduplizierung-Duplikate in [!DNL Query Service]
+# Datendeduplizierung in [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] unterstützt Data Deduplizierung-Duplikate. Das Deduplizierung-Duplikate von Daten kann ausgeführt werden, wenn eine ganze Zeile aus einer Berechnung entfernt oder ein bestimmter Feldsatz ignoriert werden muss, da nur ein Teil der Daten in der Zeile Duplikat-Informationen ist.
+Adobe Experience Platform [!DNL Query Service] unterstützt die Datendeduplizierung. Eine Datendeduplizierung kann durchgeführt werden, wenn eine ganze Zeile aus einer Berechnung entfernt oder ein bestimmter Satz von Feldern ignoriert werden muss, da nur ein Teil der Daten in der Zeile doppelte Informationen enthält.
 
-Deduplizierung-Duplikate umfasst in der Regel die Verwendung der Funktion `ROW_NUMBER()` für eine ID (oder mehrere IDs) über einen bestimmten Zeitraum hinweg, wodurch ein neues Feld zurückgegeben wird, das die Anzahl der Erkennung eines Duplikats darstellt. Die Zeit wird häufig mithilfe des Felds [!DNL Experience Data Model] (XDM) `timestamp` dargestellt.
+Eine Deduplizierung umfasst in der Regel die Verwendung der Funktion `ROW_NUMBER()` in einem Fenster für eine ID (oder ein Paar von IDs) über einen bestimmten Zeitraum, wodurch ein neues Feld zurückgegeben wird, das die Anzahl der erkannten Duplikate darstellt. Die Zeit wird häufig mithilfe des Felds [!DNL Experience Data Model] (XDM) `timestamp` dargestellt.
 
-Wenn der Wert von `ROW_NUMBER()` `1` ist, bezieht er sich auf die ursprüngliche Instanz. Im Allgemeinen ist dies die Instanz, die Sie verwenden möchten. Dies erfolgt meist innerhalb einer Unterauswahl, bei der das Deduplizierung-Duplikate in einer höheren Ebene (`SELECT`) ausgeführt wird, wie bei einer Aggregat-Zählung.
+Wenn der Wert von `ROW_NUMBER()` `1` ist, bezieht er sich auf die ursprüngliche Instanz. Im Allgemeinen ist dies die Instanz, die Sie verwenden möchten. Dies geschieht meistens innerhalb einer Unterauswahl, bei der die Deduplizierung auf einer höheren Ebene erfolgt, nämlich `SELECT`, wie bei einer Aggregat-Zählung.
 
-Anwendungsfälle von Deduplizierung-Duplikaten können entweder global sein oder auf eine einzelne Benutzer- oder Endbenutzer-ID innerhalb des `identityMap` beschränkt sein.
+Anwendungsfälle für die Deduplizierung können entweder global sein oder auf eine einzelne Benutzer- oder Endbenutzer-ID innerhalb von `identityMap` beschränkt sein.
 
-In diesem Dokument wird erläutert, wie Deduplizierung-Duplikate in drei gängigen Anwendungsfällen durchgeführt wird: Erlebnis-Ereignis, Käufe und Metriken.
+In diesem Dokument wird die Deduplizierung für drei gängige Anwendungsfälle beschrieben: Erlebnisereignisse, Käufe und Metriken.
 
-Zu jedem Deduplizierung-Duplikate gehören Scope, Window-Key, ein Überblick über die SQL-Abfrage.
+Zu jedem Beispiel gehören der Perimeter, der Fensterschlüssel, ein Entwurf der Deduplizierungsmethode sowie die vollständige SQL-Abfrage.
 
-## Experience Ereignisses {#experience-events}
+## Erlebnisereignisse {#experience-events}
 
-Bei Duplikat Experience Ereignisses sollten Sie die gesamte Zeile ignorieren.
+Bei doppelten Erlebnisereignissen sollten Sie wahrscheinlich die gesamte Zeile ignorieren.
 
 >[!CAUTION]
 >
->Für viele Datensätze in [!DNL Experience Platform], einschließlich der vom Adobe Analytics Data Connector erstellten, wurde bereits ein Deduplizierung-Duplikate auf Erlebnis-Ereignis-Ebene angewendet. Daher ist eine erneute Anwendung dieser Deduplizierung-Duplikate-Ebene nicht erforderlich und wird Ihre Abfrage verlangsamen.
+>Bei vielen Datensätzen in [!DNL Experience Platform], einschließlich der vom Adobe Analytics Data Connector erstellten, wird bereits eine Deduplizierung auf Erlebnisebene angewendet. Daher ist eine erneute Anwendung dieser Deduplizierungsstufe nicht erforderlich und verlangsamt Ihre Abfrage.
 >
->Es ist wichtig, die Quelle Ihrer Datensätze zu verstehen und zu wissen, ob Deduplizierung-Duplikate auf Erlebnis-Ereignis-Ebene bereits angewendet wurde. Bei allen Streaming-Datensätzen (z. B. von Adobe Target) müssen Sie **ein Deduplizierung-Duplikate auf Erlebnis-Ereignis-Ebene anwenden, da diese Datenquellen &quot;mindestens einmal&quot;Semantik haben.**
+>Es ist wichtig, die Quelle Ihrer Datensätze zu verstehen und zu wissen, ob die Deduplizierung auf Erlebnis-Ereignis-Ebene bereits angewendet wurde. Für alle gestreamten Datensätze (z. B. solche aus Adobe Target) müssen Sie **eine Deduplizierung auf Erlebnis-Ereignisebene anwenden, da diese Datenquellen eine &quot;mindestens einmalige&quot;Semantik aufweisen.**
 
-**Bereich:** Global
+**Umfang:** Global
 
-**Fensterschlüssel:** `id`
+**Window key:** `id`
 
-### Deduplizierung-Duplikate-Beispiel
+### Beispiel einer Deduplizierung
 
 ```sql
 SELECT *,
@@ -68,13 +67,13 @@ SELECT COUNT(*) AS num_events FROM (
 
 ## Käufe {#purchases}
 
-Wenn Sie Duplikat-Käufe haben, möchten Sie wahrscheinlich den Großteil der Experience Ereignis-Zeile behalten, jedoch die mit dem Kauf verknüpften Felder ignorieren (z. B. die Metrik `commerce.orders`). Käufe enthalten ein spezielles Feld für die Kauf-ID, das `commerce.order.purchaseID` lautet.
+Wenn Sie doppelte Käufe haben, möchten Sie wahrscheinlich den Großteil der Zeile &quot;Erlebnisereignis&quot;beibehalten, jedoch die mit dem Kauf verbundenen Felder ignorieren (z. B. die Metrik `commerce.orders` ). Käufe enthalten ein spezielles Feld für die Kauf-ID, nämlich `commerce.order.purchaseID`.
 
-**Bereich:** Besucher
+**Umfang:** Besucher
 
-**Window key:** identityMap[$NAMENSRAUM].id &amp; commerce.order.purchaseID
+**Fensterschlüssel:** identityMap[$NAMESPACE].id &amp; commerce.order.purchaseID
 
-### Deduplizierung-Duplikate-Beispiel
+### Beispiel einer Deduplizierung
 
 ```sql
 SELECT *,
@@ -108,15 +107,15 @@ SELECT SUM(commerce.purchases.value) AS num_purchases FROM (
 
 ## Metriken {#metrics}
 
-Wenn Sie eine Metrik verwenden, die die optionale eindeutige ID verwendet, und ein Duplikat dieser ID angezeigt wird, sollten Sie diesen Metrikwert ignorieren und den Rest des Experience Ereignisses beibehalten.
+Wenn Sie eine Metrik haben, die die optionale eindeutige ID verwendet, und ein Duplikat dieser ID angezeigt wird, sollten Sie diesen Metrikwert ignorieren und den Rest des Erlebnisereignisses beibehalten.
 
-In XDM verwenden fast alle Metriken den Datentyp `Measure`, der ein optionales Feld `id` enthält, das Sie zum Deduplizierung-Duplikate verwenden können.
+In XDM verwenden fast alle Metriken den Datentyp `Measure` , der ein optionales Feld `id` enthält, das Sie zur Deduplizierung verwenden können.
 
-**Bereich:** Besucher
+**Umfang:** Besucher
 
-**Window key:** identityMap[$NAMENSRAUM].id &amp; id of Measurement-Objekt
+**Window key:** identityMap[$NAMESPACE].id &amp; id of Measure object
 
-### Deduplizierung-Duplikate-Beispiel
+### Beispiel einer Deduplizierung
 
 ```sql
 SELECT *,
@@ -150,4 +149,4 @@ SELECT SUM(application.launches.value) AS num_launches FROM (
 
 ## Nächste Schritte
 
-In diesem Dokument werden die Ausführung von Data Deduplizierung-Duplikate im Abfrage Service sowie Beispiele für das Data Deduplizierung-Duplikate beschrieben. Weitere Best Practices beim Schreiben von Abfragen mit dem Abfrage Service finden Sie im Handbuch [Abfragen schreiben](./writing-queries.md).
+In diesem Dokument wurde beschrieben, wie Daten in Query Service dedupliziert werden können, sowie Beispiele für die Deduplizierung von Daten. Weitere Best Practices beim Schreiben von Abfragen mit Query Service finden Sie im [Handbuch zum Schreiben von Abfragen](./writing-queries.md).

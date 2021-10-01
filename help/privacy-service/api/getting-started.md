@@ -8,7 +8,7 @@ exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
 workflow-type: tm+mt
 source-wordcount: '787'
-ht-degree: 33%
+ht-degree: 36%
 
 ---
 
@@ -58,7 +58,7 @@ Die Schritte zum Generieren dieser Werte werden im Folgenden detailliert beschri
 
 #### Einmalige Einrichtung
 
-Wechseln Sie zur [Adobe-Entwicklerkonsole](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die im Tutorial [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) beschriebenen Schritte in der Dokumentation zur Adobe Developer Console aus.
+Wechseln Sie zur [Adobe-Entwicklerkonsole](https://www.adobe.com/go/devs_console_ui) und melden Sie sich mit Ihrer Adobe ID an. Führen Sie anschließend die Schritte aus, die im Tutorial [Erstellen eines leeren Projekts](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in der Dokumentation zu Adobe Developer Console beschrieben werden.
 
 Nachdem Sie ein neues Projekt erstellt haben, wählen Sie **[!UICONTROL API]** hinzufügen im Bildschirm **[!UICONTROL Project Overview]** aus.
 

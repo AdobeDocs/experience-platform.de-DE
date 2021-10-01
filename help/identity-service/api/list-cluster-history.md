@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Identitäten;Clusterverlauf
+keywords: Experience Platform; Startseite; beliebte Themen; Identitäten; Cluster-Verlauf
 solution: Experience Platform
 title: Abrufen des Cluster-Verlaufs einer Identität
 topic-legacy: API guide
-description: Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme verschieben. Der Identitätsdienst ermöglicht die Sichtbarkeit der Clusterzuordnungen einer bestimmten Identität im Laufe der Zeit.
+description: Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. Identity Service bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '337'
@@ -13,16 +12,16 @@ ht-degree: 48%
 
 ---
 
-# Abrufen des Clusterverlaufs einer Identität
+# Abrufen des Cluster-Verlaufs einer Identität
 
-Identitäten können Cluster über den Verlauf verschiedener Gerätediagramme verschieben. [!DNL Identity Service] ermöglicht die Sichtbarkeit der Clusterzuordnungen einer bestimmten Identität im Laufe der Zeit.
+Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. [!DNL Identity Service] bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
 
 Verwenden Sie den optionalen Parameter `graph-type`, um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
 
-- `None` - Keine Identitätszuordnung durchführen.
-- `Private Graph` - Führen Sie Identitätszuordnungen auf Basis Ihres persönlichen Identitätsdiagramms durch. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
+- `None` - Keine Identitätszusammenfügung durchführen.
+- `Private Graph` - Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
 
-## Abrufen des Clusterverlaufs einer einzelnen Identität
+## Abrufen des Cluster-Verlaufs einer einzelnen Identität
 
 **API-Format**
 
@@ -65,9 +64,9 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-## Abrufen des Clusterverlaufs von mehreren Identitäten
+## Abrufen des Cluster-Verlaufs mehrerer Identitäten
 
-Verwenden Sie die `POST`-Methode als Stapeläquivalent der oben beschriebenen `GET`-Methode, um die Cluster-Historien mehrerer Identitäten zurückzugeben.
+Verwenden Sie die Methode `POST` als Batch-Äquivalent der oben beschriebenen `GET`-Methode, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
 
 >[!NOTE]
 >
@@ -81,7 +80,7 @@ POST https://platform-va7.adobe.io/data/core/identity/clusters/history
 
 **Anfrageinhalt**
 
-Option 1: Geben Sie eine Liste von XIDs an, für die Clustermitglieder abgerufen werden sollen.
+Option 1: Geben Sie eine Liste von XIDs an, für die Cluster-Mitglieder abgerufen werden sollen.
 
 ```shell
 {
@@ -90,7 +89,7 @@ Option 1: Geben Sie eine Liste von XIDs an, für die Clustermitglieder abgerufen
 }
 ```
 
-Option 2: Geben Sie eine Liste von Identitäten als Composite-IDs an, wobei jeder den ID-Wert und den Namensraum nach Namensraum-Code benennt.
+Option 2: Geben Sie eine Liste von Identitäten als zusammengesetzte IDs an, wobei jeder den ID-Wert und den Namespace nach Namespace-Code benennt.
 
 ```shell
 {
@@ -167,7 +166,7 @@ curl -X POST \
       }' | json_pp
 ```
 
-**Reaktion**
+**Respomse**
 
 ```json
 {
@@ -219,4 +218,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Lernprogramm zu [Listen-Identitätszuordnungen](./list-identity-mappings.md) fort
+Fahren Sie mit dem nächsten Tutorial zu [Listen-Identitätszuordnungen](./list-identity-mappings.md) fort.

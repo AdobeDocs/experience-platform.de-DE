@@ -2,13 +2,13 @@
 keywords: Zielpersonalisierung; Bestimmungsort; Ziel der Erlebnisplattform; Adobe Target-Ziel;
 title: Adobe Target-Verbindung (Beta)
 description: Adobe Target ist eine Anwendung, die eine Echtzeit-, 1:1- und KI-gestützte Personalisierung und Experimentierung bei allen eingehenden Kundeninteraktionen über Websites, mobile Apps und mehr hinweg ermöglicht.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
+source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 11%
 
 ---
-
 
 # Adobe Target-Verbindung (Beta) {#adobe-target-connection}
 

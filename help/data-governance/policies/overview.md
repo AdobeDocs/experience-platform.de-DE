@@ -6,7 +6,7 @@ topic-legacy: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 100%
 

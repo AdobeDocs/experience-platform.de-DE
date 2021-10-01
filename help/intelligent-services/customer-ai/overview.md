@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Übersicht;Kundenberatung;beliebte Themen;Kundenübersicht
+keywords: Experience Platform; Übersicht; Kundenunterstützung; beliebte Themen; Überblick über Kundenai
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI – Übersicht
 topic-legacy: Customer AI Overview
@@ -41,7 +41,7 @@ Customer AI erlaubt Folgendes nicht:
 - Customer AI kann nicht vorhersagen, in welcher Phase der Kaufs-Journey sich der Kunde befindet, z. B. ob er sich in der Phase „Aufmerksamkeit“, „Prüfung“, „Kauf“ oder „Bindung“ befindet.
 - Verwenden Sie Customer AI nicht, um Kunden zu ermitteln, die wahrscheinlich ein Produkt kaufen werden, das in der Zukunft auf den Markt kommt. Dies erfordert, dass bestimmte Erfolgsereignisse in der Vergangenheit vorhanden sind, damit Customer AI den Algorithmus für maschinelles Lernen erfolgreich auf Ihre Daten trainieren kann.
 
-Das folgende Video unterstützt Sie dabei, die Kundentechnik zu verstehen.
+Das folgende Video soll Ihr Verständnis von Customer AI unterstützen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
@@ -51,4 +51,4 @@ Customer AI analysiert vorhandene Kundenerlebnis-Ereignisdaten, um Tendenzwerte 
 
 ## Nächste Schritte
 
-Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieser Leitfaden führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für die Kundenaktivität. Wenn Sie bereits über alle Ihre Anmeldedaten und Daten verfügen, besuchen Sie [Konfigurieren einer Kunden-AI-Instanz](./user-guide/configure.md). Es enthält Schritte zur Verwendung der Kunden-API.
+Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieses Handbuch führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für Customer AI. Wenn Sie bereits alle Ihre Anmeldedaten und Daten bereit haben, besuchen Sie [Konfigurieren einer Customer AI-Instanz](./user-guide/configure.md). Es enthält Schritte zur Verwendung von Customer AI.

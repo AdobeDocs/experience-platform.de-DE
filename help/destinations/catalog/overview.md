@@ -1,14 +1,14 @@
 ---
 keywords: Katalog; Katalog
 title: Zielkatalog – Übersicht
-seo-title: Zielkatalog – Übersicht
+seo-title: Destinations catalog overview
 description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adobe-Lösungen, Werbeplattformen, Umfrageplattformen, E-Mail-Marketing-Plattformen und mehr.
-seo-description: Der Zielkatalog enthält eine Liste der verfügbaren Ziele, die zum Empfang von Daten bereit sind. Zu diesen Zielen gehören Adobe-Lösungen, Werbeplattformen, Umfrageplattformen, E-Mail-Marketing-Plattformen und mehr.
+seo-description: The Destinations catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 source-git-commit: 15ea3ab9370541c35b874414a8753e8812eea9c6
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 36%
+source-wordcount: '165'
+ht-degree: 41%
 
 ---
 

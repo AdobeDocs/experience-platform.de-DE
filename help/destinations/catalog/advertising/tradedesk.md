@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Um Profildaten an [!DNL Trade Desk] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Als Marketer möchte ich Segmente verwenden können, die aus [!DNL Trade Desk IDs] oder Geräte-IDs erstellt wurden, um Retargeting oder zielgruppenorientierte digitale Kampagnen zu erstellen.
 

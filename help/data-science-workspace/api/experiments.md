@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Experimente;sensei-maschinelles Lernen API
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Experimente; Sensei-API für maschinelles Lernen
 solution: Experience Platform
 title: Experiment-API-Endpunkt
 topic-legacy: Developer guide
-description: Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Läufen besteht.
+description: Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '783'
@@ -13,17 +12,17 @@ ht-degree: 17%
 
 ---
 
-# Experimentendpunkt
+# Experiment-Endpunkt
 
-Modellentwicklung und Schulung erfolgen auf Experimentebene, bei denen ein Experiment aus einer MLInstanz, Trainingsläufen und Scoring-Läufen besteht.
+Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
 
 ## Erstellen eines Experiments {#create-an-experiment}
 
-Sie können ein Experiment erstellen, indem Sie eine Anforderung zur POST ausführen und gleichzeitig einen Namen und eine gültige MLInstance-ID in der Anforderungs-Nutzlast angeben.
+Sie können ein Experiment erstellen, indem Sie eine POST-Anfrage ausführen und in der Anfrage-Payload einen Namen und eine gültige MLInstance-ID angeben.
 
 >[!NOTE]
 >
->Im Gegensatz zur Modellschulung in der Benutzeroberfläche wird beim Erstellen eines Experiments durch einen expliziten API-Aufruf nicht automatisch ein Schulungslauf erstellt und ausgeführt.
+>Im Gegensatz zur Modellschulung in der Benutzeroberfläche wird beim Erstellen eines Experiments über einen expliziten API-Aufruf nicht automatisch ein Trainings-Lauf erstellt und ausgeführt.
 
 **API-Format**
 
@@ -49,12 +48,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der gewünschte Name für das Experiment. Der diesem Experiment entsprechende Schulungslauf erbt diesen Wert, der in der Benutzeroberfläche als Name der Schulungsausführung angezeigt wird. |
+| `name` | Der gewünschte Name für das Experiment. Der diesem Experiment entsprechende Trainings-Lauf übernimmt diesen Wert, der in der Benutzeroberfläche als Trainings-Lauf-Name angezeigt werden soll. |
 | `mlInstanceId` | Eine gültige MLInstance-ID. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält.
 
 ```json
 {
@@ -70,9 +69,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu er
 }
 ```
 
-## Erstellen und Ausführen einer Schulung oder einer Bewertungsausführung {#experiment-training-scoring}
+## Erstellen und Ausführen eines Trainings- oder Scoring-Laufs {#experiment-training-scoring}
 
-Sie können Schulungs- oder Bewertungsabläufe erstellen, indem Sie eine POST anfordern, eine gültige Experiment-ID bereitstellen und die ausgeführte Aufgabe angeben. Bewertungsläufe können nur erstellt werden, wenn das Experiment über einen vorhandenen und erfolgreichen Schulungslauf verfügt. Durch die erfolgreiche Erstellung eines Schulungslaufs wird der Modellschulungsvorgang initialisiert, und der erfolgreiche Abschluss führt zu einem geschulten Modell. Das Generieren geschulter Modelle ersetzt alle bereits vorhandenen Modelle, sodass ein Experiment zu jeder Zeit nur ein einziges trainiertes Modell verwenden kann.
+Sie können Trainings- oder Scoring-Läufe erstellen, indem Sie eine POST-Anfrage ausführen, eine gültige Experiment-ID angeben und die Ausführungsaufgabe angeben. Scoring-Läufe können nur erstellt werden, wenn das Experiment über einen vorhandenen und erfolgreichen Trainings-Lauf verfügt. Wenn Sie einen Trainings-Lauf erfolgreich erstellen, wird das Trainings-Verfahren für das Modell initialisiert und nach erfolgreichem Abschluss wird ein trainiertes Modell generiert. Durch das Generieren trainierter Modelle werden alle bereits vorhandenen ersetzt, sodass ein Experiment immer nur ein trainiertes Modell verwenden kann.
 
 **API-Format**
 
@@ -101,11 +100,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `{TASK}` | Gibt die Aufgabe des Vorgangs an. Legen Sie für diesen Wert entweder `train` für die Schulung, `score` für die Bewertung oder `featurePipeline` für die Feature-Pipeline fest. |
+| `{TASK}` | Gibt die Aufgabe der Ausführung an. Legen Sie diesen Wert entweder auf `train` für die Schulung, `score` für die Auswertung oder auf `featurePipeline` für die Feature-Pipeline fest. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Ausführung einschließlich der geerbten Standard-Schulungs- oder Bewertungsparameter und der eindeutigen ID der Ausführung (`{RUN_ID}`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Ausführung einschließlich der geerbten standardmäßigen Trainings- oder Scoring-Parameter und der eindeutigen Kennung der Ausführung (`{RUN_ID}`) enthält.
 
 ```json
 {
@@ -132,9 +131,9 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu er
 }
 ```
 
-## Abrufen einer Liste von Experimenten
+## Liste von Experimenten abrufen
 
-Sie können eine Liste von Experimenten abrufen, die zu einer bestimmten MLInstanz gehören, indem Sie eine einzige GET anfordern und eine gültige MLInstance-ID als Parameter für die Abfrage angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
+Sie können eine Liste von Experimenten abrufen, die zu einer bestimmten MLInstance gehören, indem Sie eine einzige GET-Anfrage ausführen und eine gültige MLInstance-ID als Abfrageparameter angeben. Eine Liste der verfügbaren Abfragen finden Sie im Anhang zu den [Abfrageparametern für den Asset-Abruf](./appendix.md#query).
 
 
 **API-Format**
@@ -146,7 +145,7 @@ GET /experiments?property=mlInstanceId=={MLINSTANCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{MLINSTANCE_ID}` | Geben Sie eine gültige MLInstance-ID an, um eine Liste von Experimenten abzurufen, die zu dieser bestimmten MLInstanz gehören. |
+| `{MLINSTANCE_ID}` | Stellen Sie eine gültige MLInstance-ID bereit, um eine Liste der Experimente abzurufen, die zu dieser bestimmten MLInstance gehören. |
 
 **Anfrage**
 
@@ -161,7 +160,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Experimenten mit derselben MLInstance-ID (`{MLINSTANCE_ID}`) zurück.
+Eine erfolgreiche Antwort gibt eine Liste von Experimenten zurück, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`) aufweisen.
 
 ```json
 {
@@ -200,7 +199,7 @@ Eine erfolgreiche Antwort gibt eine Liste von Experimenten mit derselben MLInsta
 
 ## Abrufen eines bestimmten Experiments {#retrieve-specific}
 
-Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET anfordern, die die ID des gewünschten Experiments im Anforderungspfad enthält.
+Sie können die Details eines bestimmten Experiments abrufen, indem Sie eine GET-Anfrage ausführen, die die Kennung des gewünschten Experiments im Anfragepfad enthält.
 
 **API-Format**
 
@@ -225,7 +224,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details des angeforderten Experiments zurück.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des angeforderten Experiments enthält.
 
 ```json
 {
@@ -243,11 +242,11 @@ Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details des angeforderten E
 
 ## Abrufen einer Liste von Experimentabläufen
 
-Sie können eine Liste von Schulungs- oder Bewertungsabläufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine einzige GET anfordern und eine gültige Experiment-ID angeben. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine vollständige Liste der verfügbaren Abfrage-Parameter finden Sie im Anhang zu [Abfrage-Parametern für das Abrufen von Assets](./appendix.md#query).
+Sie können eine Liste von Trainings- oder Scoring-Läufen abrufen, die zu einem bestimmten Experiment gehören, indem Sie eine einzige GET-Anfrage ausführen und eine gültige Experiment-ID angeben. Sie können die Ergebnisse filtern, indem Sie im Anfragepfad Abfrageparameter angeben. Eine vollständige Liste der verfügbaren Abfrageparameter finden Sie im Anhang unter [Abfrageparameter für den Asset-Abruf](./appendix.md#query).
 
 >[!NOTE]
 >
->Beim Kombinieren mehrerer Abfragen-Parameter müssen diese durch das kaufmännische Und (&amp;) getrennt werden.
+>Wenn mehrere Abfrageparameter kombiniert werden, müssen diese durch das kaufmännische Und-Zeichen (&amp;) getrennt werden.
 
 **API-Format**
 
@@ -260,12 +259,12 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschreibung |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Eine gültige Experiment-ID. |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrage-Parameter](./appendix.md#query), der zum Filtern der Ergebnisse verwendet wird. |
-| `{VALUE}` | Der Wert für den Parameter der vorherigen Abfrage. |
+| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern von Ergebnissen verwendet wird. |
+| `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
 
-Die folgende Anforderung enthält eine Abfrage und ruft eine Liste von Schulungsabläufen ab, die zu einem Experiment gehören.
+Die folgende Anfrage enthält eine Abfrage und ruft eine Liste von Trainings-Läufen ab, die zu einem Experiment gehören.
 
 ```shell
 curl -X GET \
@@ -278,7 +277,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste der Ausführung und deren Details einschließlich der Experiment-Ausführen-ID (`{RUN_ID}`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die eine Liste von Ausführungen und deren Details einschließlich ihrer Experimentablauf-ID (`{RUN_ID}`) enthält.
 
 ```json
 {
@@ -304,13 +303,13 @@ Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die eine Liste der Ausfüh
 
 ## Experiment aktualisieren
 
-Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anforderung überschreiben, die die ID des Zielgruppen-Experiments im Anforderungspfad enthält und eine JSON-Nutzlast mit aktualisierten Eigenschaften bereitstellt.
+Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaften durch eine PUT-Anfrage überschreiben, die die Kennung des Zielexperiments im Anfragepfad enthält, und eine JSON-Payload mit aktualisierten Eigenschaften bereitstellen.
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anforderung sicherzustellen, wird empfohlen, zunächst eine GET an [das Experiment nach ID](#retrieve-specific) abzurufen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [zum Abrufen des Experiments nach ID](#retrieve-specific) durchzuführen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
-Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments, während diese Eigenschaften zunächst verwendet werden:
+Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments und weist zunächst diese Eigenschaften auf:
 
 ```json
 {
@@ -373,9 +372,9 @@ Bei erfolgreicher Antwort wird eine Payload mit den aktualisierten Details des E
 }
 ```
 
-## Experimente löschen
+## Löschen eines Experiments
 
-Sie können ein einzelnes Experiment löschen, indem Sie eine DELETE-Anforderung ausführen, die die ID des Zielgruppen-Experiments im Anforderungspfad enthält.
+Sie können ein einzelnes Experiment löschen, indem Sie eine DELETE-Anfrage ausführen, die die Kennung des Zielexperiments im Anfragepfad enthält.
 
 **API-Format**
 
@@ -408,9 +407,9 @@ curl -X DELETE \
 }
 ```
 
-## Experimente nach MLInstance-ID löschen
+## Löschen von Experimenten nach MLInstance-ID
 
-Sie können alle Experimente, die zu einer bestimmten MLInstanz gehören, löschen, indem Sie eine DELETE-Anforderung ausführen, die die MLInstance-ID als Abfrage-Parameter enthält.
+Sie können alle Experimente löschen, die zu einer bestimmten MLInstance gehören, indem Sie eine DELETE-Anfrage ausführen, die die MLInstance-ID als Abfrageparameter enthält.
 
 **API-Format**
 

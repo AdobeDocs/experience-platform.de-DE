@@ -2,13 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Reservierungsdetails;
 title: Feldergruppe "Buchungsdetails"
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Buchungsdetails".
-source-git-commit: 295dc040f3af7342226e3d78d0ae21e73db58d57
+exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Feldergruppe ] &quot;Reservierungsdetails&quot;
 

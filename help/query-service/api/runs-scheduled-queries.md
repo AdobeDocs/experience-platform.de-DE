@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Ausführen geplanter Abfragen;Ausführen geplanter Abfragen;Abfrage-Dienst;Geplante Abfragen;Geplante Abfrage
+keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; geplante Abfragen ausführen; geplante Abfrage ausführen; Abfragedienst; geplante Abfragen; geplante Abfrage
 solution: Experience Platform
-title: API-Endpunkt für terminierte Abfrage ausgeführt
+title: API-Endpunkt für geplante Abfragen - Ausführungen
 topic-legacy: runs for scheduled queries
-description: Die folgenden Abschnitte führen Sie durch die verschiedenen API-Aufrufe, die Sie für die Ausführung geplanter Abfragen mit der Abfrage Service API durchführen können.
+description: In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie für die Ausführung geplanter Abfragen mit der Query Service-API ausführen können.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '696'
@@ -13,11 +12,11 @@ ht-degree: 88%
 
 ---
 
-# Endpunkt der geplanten Abfrage wird ausgeführt
+# Endpunkt für geplante Abfragevorgänge
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie wissen, welche Header verwendet werden sollen, können Sie mit dem Aufrufen der [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der API [!DNL Query Service] durchführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit Aufrufen an die [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Liste aller ausgeführten Vorgänge für eine bestimmte geplante Abfrage abrufen
 

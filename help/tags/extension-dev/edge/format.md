@@ -1,8 +1,9 @@
 ---
 title: Bibliotheksmodule in Edge-Erweiterungen
 description: Formatieren Sie Bibliotheksmodule für Tag-Erweiterungen in einer Edge-Eigenschaft.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 100%
 
@@ -12,13 +13,13 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 >[!IMPORTANT]
 >
 >Dieses Dokument behandelt das Bibliotheksmodulformat für Edge-Erweiterungen. Wenn Sie eine Web-Erweiterung entwickeln, lesen Sie stattdessen das Handbuch für das [Formatieren von Web-Erweiterungsmodulen](../web/format.md).
 
-Ein Bibliotheksmodul ist wiederverwendbarer Code, der von einer Erweiterung bereitgestellt wird, die in der Tag-Laufzeitbibliothek von Adobe Experience Platform (der Bibliothek, die auf dem Edge-Knoten ausgeführt wird) ausgegeben wird. Ein `sendBeacon`-Aktionstyp verfügt beispielsweise über ein Bibliotheksmodul, das auf dem Edge-Knoten ausgeführt wird und einen Beacon sendet.
+Ein Bibliotheksmodul ist wiederverwendbarer Code, der von einer Erweiterung bereitgestellt wird, die in der Tag-Laufzeitbibliothek (der Bibliothek, die auf dem Edge-Knoten ausgeführt wird) ausgegeben wird. Ein `sendBeacon`-Aktionstyp verfügt beispielsweise über ein Bibliotheksmodul, das auf dem Edge-Knoten ausgeführt wird und einen Beacon sendet.
 
 Das Bibliotheksmodul hat die Struktur eines [CommonJS-Moduls](http://wiki.commonjs.org/wiki/Modules/1.1.1). In einem CommonJS-Modul stehen die folgenden Variablen zur Verwendung zur Verfügung:
 

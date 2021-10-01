@@ -89,7 +89,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp [!UICONTROL Einvers
 >Sie können JSON-Beispieldaten für jedes XDM-Schema generieren, das Sie in Experience Platform definieren, um zu veranschaulichen, wie Ihre Kundenzustimmungs- und -bevorzugte Daten zugeordnet werden sollen. Weitere Informationen finden Sie in der folgenden Dokumentation:
 >
 >* [Generieren von Beispieldaten in der Benutzeroberfläche](../ui/sample.md)
-* [Beispieldaten in der API generieren](../api/sample-data.md)
+>* [Beispieldaten in der API generieren](../api/sample-data.md)
 
 
 ## `consents` {#choices}
@@ -179,8 +179,10 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp [!UICONTROL Einvers
 `personalize` erfasst Kundenpräferenzen darüber, auf welche Weise ihre Daten für die Personalisierung verwendet werden können. Kunden können bestimmte Anwendungsfälle der Personalisierung deaktivieren oder die Personalisierung vollständig deaktivieren.
 
 >[!IMPORTANT]
-`personalize` umfasst keine Marketing-Anwendungsfälle. Wenn beispielsweise ein Kunde die Personalisierung für alle Kanäle ablehnt, sollte er nicht aufhören, Nachrichten über diese Kanäle zu empfangen. Stattdessen sollten die Nachrichten, die sie empfangen, generisch sein und nicht auf ihrem Profil basieren.
-Wenn ein Kunde beispielsweise das Direktmarketing für alle Kanäle ablehnt (über `marketing`, wie im [nächsten Abschnitt](#marketing) erläutert), sollte dieser Kunde keine Nachrichten erhalten, selbst wenn eine Personalisierung zulässig ist.
+>
+>`personalize` umfasst keine Marketing-Anwendungsfälle. Wenn beispielsweise ein Kunde die Personalisierung für alle Kanäle ablehnt, sollte er nicht aufhören, Nachrichten über diese Kanäle zu empfangen. Stattdessen sollten die Nachrichten, die sie empfangen, generisch sein und nicht auf ihrem Profil basieren.
+>
+>Wenn ein Kunde beispielsweise das Direktmarketing für alle Kanäle ablehnt (über `marketing`, wie im [nächsten Abschnitt](#marketing) erläutert), sollte dieser Kunde keine Nachrichten erhalten, selbst wenn eine Personalisierung zulässig ist.
 
 ```json
 "personalize": {
@@ -256,8 +258,10 @@ Um den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] zum Erfassen
 Anweisungen zum Zuweisen von Datentypen zu Feldern finden Sie im Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . [ Nachdem Sie ein Schema erstellt haben, das ein Feld mit dem Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zum Datensatz und befolgen Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema.
 
 >[!IMPORTANT]
-Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
-Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) .
+>
+>Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die den Datentyp [!UICONTROL Einverständnisse und Voreinstellungen] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
+>
+>Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../rtcdp/profile/merge-policies.md) .
 
 ## Handhabung von Zustimmungs- und Vorgabenänderungen
 
@@ -291,7 +295,7 @@ In der folgenden Tabelle sind die für `preferred` zulässigen Werte aufgeführt
 
 | Wert | Beschreibung |
 | --- | --- |
-| `email` | E-Mail  Nachrichten. |
+| `email` | E-Mail-Nachrichten. |
 | `push` | Push-Benachrichtigungen. |
 | `inApp` | In-App-Nachrichten. |
 | `sms` | SMS-Nachrichten. |

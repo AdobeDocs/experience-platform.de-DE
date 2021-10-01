@@ -2,14 +2,14 @@
 keywords: Aktivierung bearbeiten, Ziel bearbeiten, Ziel bearbeiten
 title: Bearbeiten von Aktivierungsflüssen
 type: Tutorial
-seo-title: Bearbeiten von Aktivierungsflüssen
+seo-title: Edit activation flows
 description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsfluss in Adobe Experience Platform zu bearbeiten.
-seo-description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsfluss in Adobe Experience Platform zu bearbeiten.
+seo-description: Follow the steps in this article to edit an existing activation flow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 source-git-commit: a97b235e2d8834f6be002923be9cdbca5f08495b
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 0%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
 

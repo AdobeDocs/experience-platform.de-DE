@@ -1,23 +1,22 @@
 ---
-title: Senden von Daten an Adobe Analytics mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Daten mit dem Adobe Experience Platform Web SDK an Adobe Analytics gesendet werden.
-keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;webInteraction;page-Ansichten;Link-Verfolgung;Links;track-Links;clickCollection;click-Auflistung;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+title: Senden von Daten an Adobe Analytics mithilfe des Adobe Experience Platform Web SDK
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
+keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;Web Interaction;Seitenansichten;Linktracking;Links;Link verfolgen;ClickCollection;ClickCollection;Sammlung;
+exl-id: cec4a9eb-2079-4386-88da-9b995e0673e6
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%
 
 ---
 
+# Senden von Daten an Adobe Analytics
 
-# Daten an Adobe Analytics senden
+Während es in der Vergangenheit verschiedene Funktionen gab, um zwischen einer Seitenansicht und einem Link zu unterscheiden (z. B. `s.t(), s.tl()`), gibt es im Web SDK nur den Befehl `sendEvent`. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Seitenansicht oder einen Link handeln soll. [Erfahren Sie mehr über Tracking-Links](../track-links.md).
 
-Während in der Vergangenheit verschiedene Funktionen zur Unterscheidung zwischen einer Ansicht und einem Link (z. B. `s.t(), s.tl()`) vorhanden waren, gibt es im Web SDK nur den Befehl `sendEvent`. Die Daten, die Sie mit einem Ereignis senden, bestimmen, ob es sich um eine Ansicht oder einen Link handeln soll. [Weitere Informationen zur Verfolgung von Links](../track-links.md).
+## Senden einer Seitenansicht
 
-## Senden einer Ansicht
-
-Sie können eine Ansicht angeben, indem Sie die Variable `web.webPageDetails.pageViews.value=1` festlegen.
+Sie können eine Seitenansicht angeben, indem Sie die Variable `web.webPageDetails.pageViews.value=1` festlegen.
 
 ```javascript
 alloy("sendEvent", {
@@ -33,4 +32,4 @@ alloy("sendEvent", {
 });
 ```
 
-Obwohl Analytics eine Seitenvariable technisch aufzeichnet, auch wenn diese nicht festgelegt ist, empfiehlt es sich, diese Ansicht immer dann einzustellen, wenn Sie eine Seitenvariable aufzeichnen möchten, damit sie in Ihren Daten explizit angegeben ist und in Zukunft Testversand zu Ihrer Implementierung führt.
+Obwohl Analytics technisch eine Seitenansicht aufzeichnet, auch wenn diese Variable nicht festgelegt ist, empfiehlt es sich, diese Variable immer dann festzulegen, wenn Sie eine Seitenansicht aufzeichnen möchten, die in Ihren Daten explizit ist, und Ihre Implementierung in Zukunft zu testen.

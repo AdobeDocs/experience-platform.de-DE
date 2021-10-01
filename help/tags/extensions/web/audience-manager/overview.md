@@ -1,8 +1,9 @@
 ---
 title: Adobe Audience Manager-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Audience Manager“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Mit der Audience Manager-Tag-Erweiterung können Sie den von Audience Manager verwendeten DIL-Code mit Ihren Eigenschaften in Adobe Experience Platform integrieren.
 
@@ -66,7 +67,7 @@ Fügen Sie die von [DIL.create](https://experiencecloud.adobe.com/resources/help
 
 Wählen Sie **[!UICONTROL Element auswählen]**, um weitere Eigenschaften hinzuzufügen.
 
-Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/de_DE/aam/r_dil_create.html).
+Bewegen Sie den Mauszeiger über die „i“-Symbole, um zu erfahren, welche Funktion die einzelnen Eigenschaften haben. Weitere Informationen zu den Eigenschaften finden Sie in der [Audience Manager-DIL-Dokumentation](https://experiencecloud.adobe.com/resources/help/en_US/aam/r_dil_create.html).
 
 Klicken Sie auf **[!UICONTROL Speichern]**, wenn Sie mit der Konfiguration der Erweiterung fertig sind.
 

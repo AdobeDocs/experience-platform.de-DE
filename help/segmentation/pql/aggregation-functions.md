@@ -1,21 +1,20 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Aggregationsfunktionen;Aggregation;
+keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profile Query Language; Aggregationsfunktionen; Aggregation;
 solution: Experience Platform
 title: PQL-Aggregationsfunktionen
 topic-legacy: developer guide
-description: Aggregationsfunktionen werden verwendet, um mehrere Werte in PQL-Arrays (Profil Abfrage Language) zu gruppieren und so einen Zusammenfassungswert zu bilden.
+description: Aggregationsfunktionen dienen dazu, mehrere Werte innerhalb von PQL-Arrays (Profile Query Language) zu gruppieren, um einen einzigen Zusammenfassungswert zu bilden.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 13%
+ht-degree: 71%
 
 ---
 
 # Aggregationsfunktionen
 
-Aggregationsfunktionen werden verwendet, um mehrere Werte innerhalb von [!DNL Profile Query Language] (PQL)-Arrays zu gruppieren, um einen einzigen Zusammenfassungswert zu bilden. Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
+Aggregationsfunktionen werden verwendet, um mehrere Werte innerhalb von [!DNL Profile Query Language] (PQL)-Arrays zu gruppieren, um einen einzigen Zusammenfassungswert zu bilden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
 ## Anzahl
 
@@ -35,7 +34,7 @@ Die folgende PQL-Abfrage gibt die Anzahl der Bestellungen im Array zurück.
 orders.count()
 ```
 
-## Sum
+## Summe
 
 Die Funktion `sum` gibt die Summe aller ausgewählten Werte im Array zurück.
 
@@ -47,13 +46,13 @@ Die Funktion `sum` gibt die Summe aller ausgewählten Werte im Array zurück.
 
 **Beispiel**
 
-Die folgende PQL-Abfrage gibt die Summe aller Bestellpreise zurück.
+Die folgende PQL-Abfrage gibt die Summe aller Angebotspreise zurück.
 
 ```sql
 orders.sum(order.price)
 ```
 
-## Durchschnittlicher
+## Durchschnitt
 
 Die Funktion `average` gibt das arithmetische Mittel aller ausgewählten Werte im Array zurück.
 
@@ -73,7 +72,7 @@ orders.average(order.price)
 
 ## Minimum
 
-Die Funktion `min` gibt die kleinsten aller ausgewählten Werte im Array zurück.
+Die Funktion `min` gibt den kleinsten aller ausgewählten Werte im Array zurück.
 
 **Format**
 
@@ -109,4 +108,4 @@ orders.max(order.price)
 
 ## Nächste Schritte
 
-Nachdem Sie nun von Aggregationsfunktionen Kenntnis erhalten haben, können Sie diese in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).
+Nachdem Sie sich mit Aggregationsfunktionen vertraut gemacht haben, können Sie diese nun in Ihren PQL-Abfragen verwenden. Weitere Informationen zu anderen PQL-Funktionen finden Sie in [Profil Query Language – Übersicht](./overview.md).

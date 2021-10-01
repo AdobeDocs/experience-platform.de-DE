@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # [!UICONTROL Feldergruppe &quot;Einwilligungen und ] Voreinstellungen&quot;
 
-[!UICONTROL Zustimmung und ]Voreinstellung sind eine Standardfeldgruppe für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md), die zum Erfassen der Kundenzustimmung und der Präferenzinformationen verwendet wird.
+[!UICONTROL Zustimmung und ]Voreinstellungen sind eine Standardfeldgruppe für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md), die zum Erfassen der Kundenzustimmung und der Präferenzinformationen verwendet wird.
 
 >[!NOTE]
 >
@@ -107,7 +107,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, den die Feldergrup
 >Sie können JSON-Beispieldaten für jedes XDM-Schema generieren, das Sie in Experience Platform definieren, um zu veranschaulichen, wie Ihre Kundenzustimmungs- und -bevorzugte Daten zugeordnet werden sollen. Weitere Informationen finden Sie in der folgenden Dokumentation:
 >
 >* [Generieren von Beispieldaten in der Benutzeroberfläche](../../ui/sample.md)
-* [Beispieldaten in der API generieren](../../api/sample-data.md)
+>* [Beispieldaten in der API generieren](../../api/sample-data.md)
 
 
 ## Anwendungsfälle für Felder
@@ -151,8 +151,10 @@ Die vorgesehenen Anwendungsfälle für jedes dieser Felder finden Sie in den fol
 `personalize` erfasst Kundenpräferenzen darüber, auf welche Weise ihre Daten für die Personalisierung verwendet werden können. Kunden können bestimmte Anwendungsfälle der Personalisierung deaktivieren oder die Personalisierung vollständig deaktivieren.
 
 >[!IMPORTANT]
-`personalize` umfasst keine Marketing-Anwendungsfälle. Wenn beispielsweise ein Kunde die Personalisierung für alle Kanäle ablehnt, sollte er nicht aufhören, Nachrichten über diese Kanäle zu empfangen. Stattdessen sollten die Nachrichten, die sie empfangen, generisch sein und nicht auf ihrem Profil basieren.
-Wenn ein Kunde beispielsweise das Direktmarketing für alle Kanäle ablehnt (über `marketing`, wie im [nächsten Abschnitt](#marketing) erläutert), sollte dieser Kunde keine Nachrichten erhalten, selbst wenn eine Personalisierung zulässig ist.
+>
+>`personalize` umfasst keine Marketing-Anwendungsfälle. Wenn beispielsweise ein Kunde die Personalisierung für alle Kanäle ablehnt, sollte er nicht aufhören, Nachrichten über diese Kanäle zu empfangen. Stattdessen sollten die Nachrichten, die sie empfangen, generisch sein und nicht auf ihrem Profil basieren.
+>
+>Wenn ein Kunde beispielsweise das Direktmarketing für alle Kanäle ablehnt (über `marketing`, wie im [nächsten Abschnitt](#marketing) erläutert), sollte dieser Kunde keine Nachrichten erhalten, selbst wenn eine Personalisierung zulässig ist.
 
 ```json
 "personalize": {
@@ -272,9 +274,11 @@ Die Eigenschaften `email`, `push` und `sms` des Objekts `marketing` können Kund
 `idSpecific` kann verwendet werden, wenn eine bestimmte Zustimmung oder Voreinstellung nicht allgemein für einen Kunden gilt, sondern auf ein einzelnes Gerät oder eine einzelne ID beschränkt ist. Beispielsweise kann ein Kunde den Erhalt von E-Mails an eine Adresse deaktivieren und gleichzeitig E-Mails an eine andere Adresse zulassen.
 
 >[!IMPORTANT]
-Die Zustimmung und Voreinstellungen auf Kanalebene (d. h. die unter `consents` außerhalb von `idSpecific` bereitgestellten Voreinstellungen) gelten für IDs innerhalb dieses Kanals. Daher wirken sich alle Zustimmung und Voreinstellungen auf Kanalebene direkt darauf aus, ob entsprechende ID- oder gerätespezifische Einstellungen berücksichtigt werden:
-* Wenn der Kunde sich auf Kanalebene abgemeldet hat, werden alle entsprechenden Zustimmungen oder Voreinstellungen in `idSpecific` ignoriert.
-* Wenn die Zustimmung oder Voreinstellung auf Kanalebene nicht festgelegt ist oder der Kunde sich angemeldet hat, werden die entsprechenden Zustimmungen oder Voreinstellungen in `idSpecific` berücksichtigt.
+>
+>Die Zustimmung und Voreinstellungen auf Kanalebene (d. h. die unter `consents` außerhalb von `idSpecific` bereitgestellten Voreinstellungen) gelten für IDs innerhalb dieses Kanals. Daher wirken sich alle Zustimmung und Voreinstellungen auf Kanalebene direkt darauf aus, ob entsprechende ID- oder gerätespezifische Einstellungen berücksichtigt werden:
+>
+>* Wenn der Kunde sich auf Kanalebene abgemeldet hat, werden alle entsprechenden Zustimmungen oder Voreinstellungen in `idSpecific` ignoriert.
+>* Wenn die Zustimmung oder Voreinstellung auf Kanalebene nicht festgelegt ist oder der Kunde sich angemeldet hat, werden die entsprechenden Zustimmungen oder Voreinstellungen in `idSpecific` berücksichtigt.
 
 
 Jeder Schlüssel im `idSpecific`-Objekt stellt einen bestimmten Identitäts-Namespace dar, der vom Adobe Experience Platform Identity Service erkannt wird. Sie können Ihre eigenen benutzerdefinierten Namespaces definieren, um verschiedene IDs zu kategorisieren. Es wird jedoch empfohlen, einen der Standard-Namespaces zu verwenden, die von Identity Service bereitgestellt werden, um die Speichergrößen für das Echtzeit-Kundenprofil zu reduzieren. Weitere Informationen zu Identitäts-Namespaces finden Sie unter [Übersicht über Identitäts-Namespaces](../../../identity-service/namespaces.md) in der Dokumentation zu Identity Service.
@@ -339,7 +343,8 @@ Das `adID`-Einverständnis stellt die Einwilligung des Kunden dar, ob eine Adver
 ```
 
 >[!NOTE]
-Es wird nicht erwartet, dass Sie diesen Wert direkt festlegen, da das Adobe Experience Platform Mobile-SDK ihn gegebenenfalls automatisch festlegt.
+>
+>Es wird nicht erwartet, dass Sie diesen Wert direkt festlegen, da das Adobe Experience Platform Mobile-SDK ihn gegebenenfalls automatisch festlegt.
 
 ## Erfassen von Daten mithilfe der Feldergruppe {#ingest}
 
@@ -348,8 +353,10 @@ Um die Feldergruppe [!UICONTROL Einverständnisse und Voreinstellungen] zum Erfa
 Anweisungen zum Zuweisen von Feldergruppen zu Feldern finden Sie im Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) . [ Nachdem Sie ein Schema mit einem Feld mit der Feldergruppe [!UICONTROL Einverständnisse und Voreinstellungen] erstellt haben, lesen Sie den Abschnitt [Erstellen eines Datensatzes](../../../catalog/datasets/user-guide.md#create) im Benutzerhandbuch zum Datensatz und befolgen Sie die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema.
 
 >[!IMPORTANT]
-Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die die Feldergruppe [!UICONTROL Einverständnisse und Voreinstellungen] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
-Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../../rtcdp/profile/merge-policies.md) .
+>
+>Wenn Sie Einwilligungsdaten an [!DNL Real-time Customer Profile] senden möchten, müssen Sie ein [!DNL Profile]-aktiviertes Schema erstellen, das auf der [!DNL XDM Individual Profile]-Klasse basiert, die die Feldergruppe [!UICONTROL Einverständnisse und Voreinstellungen] enthält. Der Datensatz, den Sie auf Grundlage dieses Schemas erstellen, muss auch für [!DNL Profile] aktiviert sein. Spezifische Schritte bezüglich der [!DNL Real-time Customer Profile]-Anforderungen für Schemas und Datensätze finden Sie in den oben genannten Tutorials.
+>
+>Darüber hinaus müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass sie die Datensätze priorisieren, die die neuesten Zustimmungs- und Voreinstellungsdaten enthalten, damit Kundenprofile korrekt aktualisiert werden. Weitere Informationen finden Sie in der Übersicht zu [Zusammenführungsrichtlinien](../../../rtcdp/profile/merge-policies.md) .
 
 ## Handhabung von Zustimmungs- und Vorgabenänderungen
 
@@ -383,7 +390,7 @@ In der folgenden Tabelle sind die für `preferred` zulässigen Werte aufgeführt
 
 | Wert | Beschreibung |
 | --- | --- |
-| `email` | E-Mail  Nachrichten. |
+| `email` | E-Mail-Nachrichten. |
 | `push` | Push-Benachrichtigungen. |
 | `inApp` | In-App-Nachrichten. |
 | `sms` | SMS-Nachrichten. |

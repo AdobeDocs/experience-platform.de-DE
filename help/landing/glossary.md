@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Glossar zu Adobe Experience Platform {#adobe-experience-platform-glossary}
 
-## A
+## A 
 
 **Zugriffskontrolle**: Die rollenbasierte Zugriffskontrolle ermöglicht es Administratoren, Experience Platform-Benutzern Zugriff und Berechtigungen zuzuweisen. Zu den Berechtigungen gehört die Möglichkeit, Funktionen der Experience Platform anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen.
 

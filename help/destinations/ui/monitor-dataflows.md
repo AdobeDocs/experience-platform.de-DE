@@ -1,23 +1,22 @@
 ---
-keywords: Experience Platform, Home, beliebte Themen, Konten überwachen, Datenflüsse überwachen, Datenflüsse, Ziele
-description: Ziele sind vordefinierte Integrationen mit Zielplattformen, die die nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele verwenden, um bekannte und unbekannte Daten für Cross-Kanal-Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle zu aktivieren.
+keywords: Experience Platform, Startseite, beliebte Themen, Konten überwachen, Datenflüsse überwachen, Datenflüsse, Ziele
+description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
 solution: Experience Platform
-title: Datenflüsse überwachen
+title: Überwachen von Datenflüssen
 topic-legacy: overview
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-translation-type: tm+mt
 source-git-commit: 63158e7322ae91d5b36a7b2aa22fd93512f9bebb
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 0%
+ht-degree: 34%
 
 ---
 
 # Überwachen von Datenflüssen
 
-[!UICONTROL Mit ] Destinationen können Sie Ihre Daten von Adobe Experience Platform an unzählige externe Partner aktivieren.
+ Mit Zielen können Sie Ihre Daten von Adobe Experience Platform für unzählige externe Partner aktivieren.
 
-Datenflüsse sind eine Darstellung von Datenaufträgen, die Daten über [!DNL Platform] verschieben. Diese Datenflüsse werden über verschiedene Dienste konfiguriert und unterstützen Sie dabei, Daten von Quell-Connectors zu Zielgruppen-Datasets zu verschieben, wo sie dann von [!DNL Identity Service] und[!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich zu Zielen aktiviert werden.
+Datenflüsse sind eine Darstellung von Datenaufträgen, die Daten über [!DNL Platform] verschieben. Diese Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen dabei, Daten aus Quell-Connectoren in Zieldatensätze zu verschieben, wo sie dann von [!DNL Identity Service] und[!DNL Real-time Customer Profile] verwendet werden, bevor sie schließlich für Ziele aktiviert werden.
 
-Weitere Informationen zum Überwachen von Datenflüssen für Ziele finden Sie im Lehrgang [Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche](../../dataflows/ui/monitor-destinations.md).
+Weitere Informationen zur Überwachung von Datenflüssen für Ziele finden Sie im Tutorial [Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche](../../dataflows/ui/monitor-destinations.md).

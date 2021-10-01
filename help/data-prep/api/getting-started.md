@@ -5,7 +5,7 @@ topic-legacy: guide
 description: Erfahren Sie mehr über die wichtigsten Konzepte und grundlegenden Funktionen, die Sie benötigen, um die Datenvorbereitungs-API-Endpunkte zum Ausführen grundlegender CRUD-Vorgänge für die Verwendung mit Mapper verwenden zu können.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 100%
 

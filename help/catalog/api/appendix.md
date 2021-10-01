@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Katalogdienst;Katalogdatei;Anhang
+keywords: Experience Platform; Startseite; beliebte Themen; Catalog Service; Katalog-API; Anhang
 solution: Experience Platform
-title: Handbuch zur API für Katalogdienst
+title: Anhang zum Catalog Service API-Handbuch
 topic-legacy: developer guide
-description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Katalog-API in Adobe Experience Platform unterstützen.
+description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Catalog-API in Adobe Experience Platform unterstützen.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '920'
@@ -13,7 +12,7 @@ ht-degree: 79%
 
 ---
 
-# [!DNL Catalog Service] API-Handbuch
+# [!DNL Catalog Service] Anhang zum API-Handbuch
 
 Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der [!DNL Catalog]-API unterstützen.
 
@@ -93,9 +92,9 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
 
 ## Mehrere Anfragen in einem einzelnen Aufruf stellen
 
-Der Stamm-Endpunkt der [!DNL Catalog]-API ermöglicht es, mehrere Anforderungen innerhalb eines einzelnen Aufrufs zu stellen. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
+Der Root-Endpunkt der API [!DNL Catalog] ermöglicht es, mehrere Anfragen innerhalb eines einzelnen Aufrufs zu stellen. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
 
-Wenn es sich bei diesen Anforderungen um Änderungen oder Ergänzungen von [!DNL Catalog] handelt und eine der Änderungen fehlschlägt, werden alle Änderungen zurückgesetzt.
+Wenn es sich bei diesen Anforderungen um Änderungen oder Ergänzungen zu [!DNL Catalog] handelt und eine der Änderungen fehlschlägt, werden alle Änderungen zurückgesetzt.
 
 **API-Format**
 
@@ -146,13 +145,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Vom Anwender angegebene Kennung, die an das Antwortobjekt angehängt wird, damit Sie Anfragen Antworten zuordnen können. [!DNL Catalog] speichert diesen Wert nicht und gibt ihn in der Antwort lediglich zu Referenzzwecken zurück. |
-| `resource` | Der Ressourcenpfad relativ zum Stammordner der [!DNL Catalog]-API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Dieser Ressourcenpfad ist nicht mit dem vom Benutzer bereitgestellten `id` zu verwechseln, sondern verwendet die ID des [!DNL Catalog]-Objekts selbst (z. B. `resource: "/dataSets/1234567890"`). |
+| `resource` | Der Ressourcenpfad relativ zum Stamm der [!DNL Catalog]-API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Dieser Ressourcenpfad ist nicht mit dem vom Benutzer angegebenen `id` zu verwechseln. Er verwendet die Kennung des [!DNL Catalog]-Objekts selbst (z. B. `resource: "/dataSets/1234567890"`). |
 | `method` | Der Name der Methode (GET, PUT, POST, PATCH oder DELETE), die mit der in der Anfrage ausgeführten Aktion verknüpft ist. |
 | `body` | Das JSON-Dokument, das in einer POST-, PUT- oder PATCH-Anfrage normalerweise als Payload übergeben wird. Diese Eigenschaft ist bei GET- oder DELETE-Anfragen nicht erforderlich. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Da die drei Musteranforderungen alle neue Objekte erstellen sollten, ist das `body` jedes Objekts ein Array, das nur die ID des neu erstellten Objekts enthält, ebenso wie der Standard mit den erfolgreichsten Antworten auf die POST in [!DNL Catalog].
+Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Da bei allen drei Beispielanfragen neue Objekte erstellt werden sollten, ist das `body` jedes Objekts ein Array, das nur die ID des neu erstellten Objekts enthält, genau wie bei den meisten erfolgreichen POST-Antworten in [!DNL Catalog] der Standard.
 
 ```json
 [
@@ -193,6 +192,6 @@ Es kann vorkommen, dass Sie ein Objekt prüfen möchten, ohne die Informationen 
 
 ## Datenkomprimierung
 
-Compaction ist ein [!DNL Experience Platform]-Dienst, der Daten aus kleinen Dateien in größere Dateien zusammenführt, ohne Daten zu ändern. Aus Leistungsgründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
+Komprimierung ist ein [!DNL Experience Platform]-Dienst, der Daten aus kleinen Dateien in größeren Dateien zusammenführt, ohne Daten zu ändern. Aus Leistungsgründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
 
-Wenn die Dateien in einem erfassten Stapel komprimiert wurden, wird das zugehörige [!DNL Catalog]-Objekt zu Überwachungszwecken aktualisiert.
+Wenn die Dateien in einem erfassten Batch komprimiert wurden, wird das zugehörige [!DNL Catalog]-Objekt zu Überwachungszwecken aktualisiert.

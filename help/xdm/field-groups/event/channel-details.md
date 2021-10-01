@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Feldergruppe "Kanaldetails"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe Kanal-Details .
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+exl-id: b8ec2f57-6882-466e-9b22-61fb2178fb1e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 4%
 
 ---
-
 
 # [!UICONTROL Feldergruppe ] &quot;Channel Details Schema&quot;
 

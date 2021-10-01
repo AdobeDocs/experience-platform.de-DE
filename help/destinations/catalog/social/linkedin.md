@@ -18,7 +18,7 @@ Aktivieren Sie Profile für Ihre [!DNL LinkedIn]-Kampagnen für Zielgruppen-Targ
 
 ![linkedIn-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/linkedin/catalog.png)
 
-## Anwendungsbeispiele
+## Anwendungsfälle
 
 Um Ihnen zu helfen, besser zu verstehen, wie und wann das [!DNL LinkedIn Matched Audiences]-Ziel verwendet werden soll, finden Sie hier einen Anwendungsfall, den Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 

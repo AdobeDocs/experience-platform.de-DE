@@ -1,8 +1,9 @@
 ---
 title: YouTube Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '891'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 **Voraussetzungen**
 
@@ -28,7 +29,7 @@ Die Erweiterungsversion 2.0.1 unterstützt das Einbetten eines oder mehrerer You
 
 `<iframe id="player1" width="560" height="315" src="https://www.youtube.com/embed/xpatB77BzYE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-Beachten Sie, dass diese Erweiterung auch dazu konzipiert ist, dynamisch nach einem eindeutigen ID-Attributwert wie `player1` zu suchen und zu prüfen, ob die Abfragezeichenfolgenparameter `enablejsapi` und `rel` vorhanden sind und ob die erwarteten Werte korrekt sind. Daher kann das YouTube-Skript-Tag zu einer Website mit oder ohne das `id`-Attribut hinzugefügt werden und unabhängig davon, ob die Abfragezeichenfolgenparameter `enablejsapi` und `rel` enthalten sind oder nicht.
+Beachten Sie, dass diese Erweiterung auch dazu konzipiert ist, dynamisch nach einem eindeutigen ID-Attributwert wie `player1` zu suchen und zu prüfen, ob die Abfragezeichenfolgenparameter `enablejsapi` und `rel` vorhanden sind und ob die erwarteten Werte korrekt sind. Daher kann das YouTube-Skript-Tag zu einer Web-Seite mit oder ohne das `id`-Attribut hinzugefügt werden und unabhängig davon, ob die Abfragezeichenfolgenparameter `enablejsapi` und `rel` enthalten sind oder nicht.
 
 >[!NOTE]
 >
@@ -47,7 +48,7 @@ Daher tritt nach dem Laden der Seite ein leichtes Flackern auf. Dieses Verhalten
 
 Innerhalb der Erweiterung sind sechs Datenelemente verfügbar, von denen keines konfiguriert werden muss.
 
-* **Abspielposition:** Zeichnet die Abspielposition auf der Video-Zeitleiste in Sekunden auf, wenn es in einer Tag-Regel aufgerufen wird.
+* **Abspielposition:** Zeichnet die Abspielposition auf der Video-Timeline in Sekunden auf, wenn es in einer Tag-Regel aufgerufen wird.
 * **Video-ID:** Gibt die mit dem Video verknüpfte YouTube-ID an.
 * **Videoname:** Gibt den beschreibenden oder Anzeigenamen des Videos an.
 * **Video-URL:** Gibt die URL von YouTube.com für das derzeit geladene/wiedergegebene Video zurück.
@@ -63,7 +64,7 @@ In der Erweiterung sind acht Ereignisse verfügbar, von denen nur das benutzerde
 * **Erneute Videowiedergabe:** Wird ausgelöst, wenn das Video angezeigt und nach dem ersten Beginn erneut abgespielt wird. Dieser Trigger wird bei jeder erneuten Wiedergabe ausgelöst.
 * **Video-Pause:** Wird ausgelöst, wenn das Video angehalten wird.
 * **Videofortsetzung:** Wird ausgelöst, wenn das Video fortgesetzt wird und wenn `player.getCurrentTime() !== 0`
-* **Benutzerspezifisches Cue-Punkt-Tracking:** Wird ausgelöst, wenn das Video den vorgegebenen Video-Schwellenwert erreicht. Wenn ein Video beispielsweise 60 Sekunden dauert und der vorgegebene Cue-Punkt bei 50 % liegt, wird das Ereignis ausgelöst, sobald die Abspielposition 30 Sekunden beträgt. Das Cue-Punkt-Tracking gilt sowohl für die Erstwiedergabe als auch für eine Wiederholung. Beachten Sie, dass das Ereignis nicht ausgelöst wird, wenn ein Benutzer über einen Cue-Punkt hinweg sucht. Cue-Punkt-Ereignisse werden nur ausgelöst, wenn die Abspielposition die berechnete Position des Cue-Punkts in der Zeitleiste passiert, während der Video-Player läuft.
+* **Benutzerspezifisches Cue-Punkt-Tracking:** Wird ausgelöst, wenn das Video den vorgegebenen Video-Schwellenwert erreicht. Wenn ein Video beispielsweise 60 Sekunden dauert und der vorgegebene Cue-Punkt bei 50 % liegt, wird das Ereignis ausgelöst, sobald die Abspielposition 30 Sekunden beträgt. Das Cue-Punkt-Tracking gilt sowohl für die Erstwiedergabe als auch für eine Wiederholung. Beachten Sie, dass das Ereignis nicht ausgelöst wird, wenn ein Benutzer über einen Cue-Punkt hinweg sucht. Cue-Punkt-Ereignisse werden nur ausgelöst, wenn die Abspielposition die berechnete Position des Cue-Punkts in der Timeline passiert, während der Video-Player läuft.
 * **Videopuffer:** Wird ausgelöst, wenn der Player eine bestimmte Datenmenge herunterlädt, bevor die Wiedergabe des Videos beginnt.
 * **Video beendet:** Wird ausgelöst, wenn ein Video abgeschlossen ist.
 
@@ -85,7 +86,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
 * **Bedingung**: Keine
 
-* **Aktionen**:  Verwenden Sie die **Analytics-Erweiterung** für die Aktion „Variablen festlegen“, um Folgendes zuzuordnen:
+* **Aktionen**:   Verwenden Sie die **Analytics-Erweiterung** für die Aktion „Variablen festlegen“, um Folgendes zuzuordnen:
 
    * Das Ereignis für Videostart,
    * Eine prop/eVar für das Datenelement „Videodauer“

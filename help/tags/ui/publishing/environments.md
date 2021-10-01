@@ -1,8 +1,9 @@
 ---
 title: Umgebungen
-description: Erfahren Sie mehr über das Konzept von Tag-Umgebungen und darüber, wie sie in Adobe Experience Platform funktionieren.
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
-workflow-type: ht
+description: Hier erfahren Sie mehr über das Konzept von Tag-Umgebungen und wie sie in Adobe Experience Platform funktionieren.
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 100%
 
@@ -12,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Tag-Umgebungen definieren mehrere Hauptaspekte der Bibliotheks-Builds, die Sie auf Ihrer Website oder in Ihrer Mobile App bereitstellen:
+Tag-Umgebungen definieren mehrere Hauptaspekte der Bibliotheks-Builds, die Sie auf Ihrer Website oder in Ihrer App bereitstellen:
 
 * Den Dateinamen des Builds
 * Die Domain und den Pfad des Builds, je nach zugewiesenem Host der Umgebung
@@ -112,7 +113,7 @@ Wenn Sie die Archivierungsoption verwenden, werden alle Build-Dateien stattdesse
 
 ### Einbettungs-Code {#embed-code}
 
-Ein Einbettungs-Code ist ein `<script>`-Tag, das die `<head>`-Abschnitte Ihrer Web-Seiten eingefügt werden muss, um den von Ihnen erstellten Code zu laden und auszuführen. Jede Umgebungskonfiguration erzeugt automatisch einen eigenen Einbettungs-Code, sodass Sie ihn nur kopieren und auf den Seiten einfügen müssen, auf denen Tags ausgeführt werden sollen.
+Ein Einbettungs-Code ist ein `<script>`-Tag, das die `<head>`-Abschnitte Ihrer Web-Seiten eingefügt werden muss, um den von Ihnen erstellten Code in zu laden und auszuführen. Jede Umgebungskonfiguration erzeugt automatisch einen eigenen Einbettungs-Code, sodass Sie ihn nur kopieren und auf den Seiten einfügen müssen, auf denen Tags ausgeführt werden sollen.
 
 Bei der Ansicht der Installationsanweisungen können Sie festlegen, ob das Skript die Bibliotheksdateien synchron oder asynchron laden soll. Diese Einstellung ist nicht beständig und spiegelt nicht wider, wie Sie Tags auf Ihrer Site tatsächlich implementiert haben. Vielmehr soll nur gezeigt werden, wie die Umgebung richtig installiert werden kann.
 

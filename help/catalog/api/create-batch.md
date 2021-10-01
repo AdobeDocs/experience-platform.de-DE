@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Stapel erstellen;Katalogdienst;API
+keywords: Experience Platform; Startseite; beliebte Themen; Batch erstellen; Katalogdienst; API
 solution: Experience Platform
-title: Erstellen eines Stapels in der API
+title: Erstellen eines Batches in der API
 topic-legacy: developer guide
-description: Sie können einen Stapel erstellen, indem Sie eine POST an den Endpunkt "/batches"in der Katalog-API anfordern.
+description: Sie können einen Batch erstellen, indem Sie eine POST-Anfrage an den Endpunkt /batches in der Catalog Service API richten.
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '117'

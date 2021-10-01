@@ -1,8 +1,9 @@
 ---
 title: Testen von Einbettungs-Codes mit Adobe Experience Platform Debugger
 description: Hier erfahren Sie, wie Sie mit Platform Debugger verschiedene Einbettungs-Codes für Adobe Experience Platform lokal auf Ihrer Website testen können.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '516'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Wenn Sie Änderungen an Ihren Tag-Bibliotheks-Builds in Adobe Experience Platform vornehmen, sollten Sie diese Änderungen testen, bevor Sie den Build in Ihrer Betreibungsumgebung bereitstellen. Wenn Sie keine dedizierte Staging- oder Entwicklungs-Umgebung für Ihre Website haben, können Sie mit Adobe Experience Platform Debugger verschiedene Einbettungscodes lokal auf Ihrer Site testen.
 

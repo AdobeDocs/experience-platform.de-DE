@@ -6,7 +6,7 @@ topic-legacy: data protection
 description: Alle im Data Lake persistierten Daten werden in einem für Ihre Organisation eindeutigen, isolierten Microsoft Azure Data Lake Storage-Konto verschlüsselt, gespeichert und verwaltet. Das folgende Prozessflussdiagramm veranschaulicht, wie Daten von Experience Platform erfasst, verarbeitet, verschlüsselt und persistiert werden.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 100%
 

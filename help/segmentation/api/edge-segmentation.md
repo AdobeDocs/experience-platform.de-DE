@@ -248,6 +248,6 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition 
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Segmente mit aktivierter Kantensegmentierung erstellen, können Sie sie verwenden, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu aktivieren.
+Nachdem Sie nun wissen, wie Sie Segmente mit aktivierter Kantensegmentierung erstellen, können Sie diese verwenden, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu aktivieren.
 
 Weiterführende Informationen zum Durchführen ähnlicher Aktionen und zum Verwenden von Segmenten unter Einsatz der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).

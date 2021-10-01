@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Sandbox-Management-API-Endpunkt
 topic-legacy: developer guide
 description: Mit dem Endpunkt /sandboxes in der Sandbox-API können Sie Sandboxes in Adobe Experience Platform programmgesteuert verwalten.
-source-git-commit: f5ce7b7f09c624c53065757bb8a9b09f989dce0a
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 44%

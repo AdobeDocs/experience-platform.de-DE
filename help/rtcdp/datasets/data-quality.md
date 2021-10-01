@@ -1,19 +1,18 @@
 ---
-keywords: Datenqualität;rtcdp-Datenqualität
-title: Datenqualität in Echtzeit-Datenplattform
-seo-title: Datenqualität in der Echtzeit-Kundendatenplattform
+keywords: Datenqualität; rtcdp-Datenqualität
+title: Datenqualität in der Echtzeit-Kundendatenplattform
+seo-title: Data quality on Real-time Customer Data Platform
 description: Ein Dokument zur Datenqualität in der Echtzeit-Kundendatenplattform
-seo-description: Ein Dokument, das beschreibt, wie Datenqualität bei Batch- und Datenerfassung in der Echtzeit-Kundendatenplattform von sichergestellt wird
-translation-type: tm+mt
-source-git-commit: 8d403e73a804953f9584d6a72f945d4444e65d11
+seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
+exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 87%
+source-wordcount: '126'
+ht-degree: 84%
 
 ---
 
-
-# Datenqualität in Echtzeit-Kundendatenplattform
+# Datenqualität in der Echtzeit-Kundendatenplattform
 
 Mit der Echtzeit-Kundendatenplattform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, um für ein koordiniertes und konsistentes Kundenerlebnis zu sorgen. Darum müssen Sie unbedingt sicherstellen, dass Ihre Daten vollständig, präzise und übersichtlich sind.
 

@@ -1,8 +1,9 @@
 ---
 title: Eigenschaften
 description: Erfahren Sie, wie Erweiterungen, Umgebung und Bibliotheken für Ihr Unternehmen in Adobe Experience Platform organisiert und gruppiert werden.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: ht
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1178'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 ## Web-Eigenschaften
 
@@ -66,11 +67,11 @@ Wenn Sie z. B. [!DNL Adobe Analytics], [!DNL Target] sowie dieselben Drittanbie
 
 Benötigen die Personen, Teams und Organisationen, die in Adobe Experience Platform arbeiten, Zugriff auf all Ihre Websites und Programme, auf einige oder nur auf eine(s)?
 
-Mit der Funktion „User Management“ können Sie verschiedenen Personen unterschiedliche Rollen zuweisen – entweder für alle oder für einzelne Eigenschaften. Wenn jemand über ausreichende Rechte verfügt, kann diese Person administrative Aktionen für alle Eigenschaften in diesem Platform-IMS-Unternehmen durchführen. Alle anderen Rollen können pro Eigenschaft zugewiesen werden. Sie können eine Eigenschaft sogar für bestimmte Benutzer (nicht Administratoren) ausblenden, indem Sie ihnen in der betreffenden Eigenschaft keine Rolle zuweisen.
+Mit der User-Management-Funktion können Sie verschiedenen Personen unterschiedliche Rollen zuweisen – entweder für alle oder für einzelne Properties. Wenn jemand über ausreichende Rechte verfügt, kann diese Person administrative Aktionen für alle Eigenschaften in diesem Platform-IMS-Unternehmen durchführen. Alle anderen Rollen können pro Eigenschaft zugewiesen werden. Sie können eine Eigenschaft sogar für bestimmte Benutzer (nicht Administratoren) ausblenden, indem Sie ihnen in der betreffenden Eigenschaft keine Rolle zuweisen.
 
 ## Eigenschaften-Seite
 
-Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Für das Web gibt es nur einen Einbettungs-Code für die Veröffentlichung. Für Mobile gibt es eine Konfigurations-App-ID pro Eigenschaft.
+Eine Eigenschaft ist eine Sammlung von Regeln, Datenelementen, konfigurierten Erweiterungen, Umgebungen und Bibliotheken. Bei Web-Eigenschaften gibt es nur einen Einbettungs-Code für die Veröffentlichung. Bei Mobile gibt es eine Konfigurations-App-ID pro Eigenschaften.
 
 Es kann sich bei einer Eigenschaft um eine beliebige Gruppierung einer oder mehrerer Domains bzw. Subdomains handeln. Sie können diese Assets auf ähnliche Weise verwalten und verfolgen. Angenommen, Sie haben mehrere Websites, die auf einer Vorlage basieren, und Sie möchten auf all diesen Websites dieselben Assets verfolgen. Sie können eine Eigenschaft auf mehrere Domains anwenden.
 
@@ -100,7 +101,7 @@ Navigieren Sie zu Ihrer Firmenseite und klicken Sie auf **[!UICONTROL Eigenschaf
 
 ![](../../images/property-settings.png)
 
-### Bei Web-Eigenschaften
+### Bei Web-Properties
 
 Befolgen Sie die Anweisungen zum Erstellen einer Web-Eigenschaft.
 
@@ -115,7 +116,7 @@ Befolgen Sie die Anweisungen zum Erstellen einer Web-Eigenschaft.
 1. (Erweitert) **[!UICONTROL Für die Entwicklung von Erweiterungen konfigurieren:]** Aktivieren Sie dieses Kontrollkästchen, wenn Sie Entwicklungserweiterungen installieren möchten, die aktiv von Ihrem Unternehmen entwickelt werden.
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
-### Bei Mobile-Eigenschaften
+### Bei mobilen Properties
 
 Befolgen Sie die Anweisungen zum Erstellen einer Mobile-Eigenschaft.
 
@@ -134,7 +135,7 @@ Befolgen Sie die Anweisungen zum Erstellen einer Mobile-Eigenschaft.
 
 Nachdem Sie die Eigenschaft erstellt haben, fügt Platform automatisch einen Standard-Host, die nötigen Umgebungen (Entwicklung, Staging und Produktion) sowie die Standarderweiterungen hinzu.
 
-## Löschen von Eigenschaften
+## Löschen von Properties
 
 Gehen Sie wie folgt vor, um eine Tag-Eigenschaft zu löschen.
 

@@ -6,7 +6,7 @@ last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1140'
 ht-degree: 100%
 
@@ -102,7 +102,7 @@ Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besser
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Identitätsdiagramm Ansicht | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, wodurch Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
+| Identitätsdiagramm-Viewer | Mit dem Identitätsdiagramm-Viewer können Sie Identitäten, die in der Benutzeroberfläche zusammengefügt sind, überprüfen und visualisieren, wodurch Debugging und Transparenz verbessert werden können. Weitere Informationen finden Sie im Dokument [Identitätsdiagramm-Viewer](../../identity-service/ui/identity-graph-viewer.md). |
 
 Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Identity Service – Übersicht](../../identity-service/home.md).
 

@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Erhalten & Gewähren von Zugriffsberechtigungen für Experience Platform-Dashboards
 type: Documentation
 description: Gewähren Sie Benutzern die Möglichkeit, Experience Platform-Dashboards mithilfe von Adobe Admin Console anzuzeigen, zu bearbeiten und zu aktualisieren.
-source-git-commit: 36aaccddeb207e22a22d5124ec8592ac8dddf8bc
-workflow-type: ht
+exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '536'
 ht-degree: 100%
 
 ---
-
 
 # Zugriffsberechtigungen für Dashboards
 

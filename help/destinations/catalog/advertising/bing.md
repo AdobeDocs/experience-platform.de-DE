@@ -18,7 +18,7 @@ Mit dem [!DNL Microsoft Bing]-Ziel können Sie Profildaten an [!DNL Microsoft Di
 
 Um Profildaten an [!DNL Microsoft Bing] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
-## Anwendungsbeispiele {#use-cases}
+## Anwendungsfälle {#use-cases}
 
 Als Marketer möchte ich in der Lage sein, aus [!DNL Microsoft Advertising IDs] erstellte Segmente zu verwenden, um Benutzer über Display-Werbung über [!DNL Microsoft Advertising]-Kanäle hinweg anzusprechen.
 

@@ -8,7 +8,7 @@ exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 source-git-commit: a5cc688357e4750dee73baf3fc9af02a9f2e49e3
 workflow-type: tm+mt
 source-wordcount: '978'
-ht-degree: 7%
+ht-degree: 9%
 
 ---
 
@@ -47,7 +47,7 @@ Die Stichprobengröße der Prüfung hängt von der Gesamtanzahl der Entitäten i
 >
 >Die Ausführung von Schätzungen dauert in der Regel 10 bis 15 Sekunden, beginnend mit einer groben Schätzung und einer Verfeinerung, da mehr Datensätze gelesen werden.
 
-## Erstellen einer neuen Vorschau {#create-preview}
+## Neue Vorschau erstellen {#create-preview}
 
 Sie können eine neue Vorschau erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/preview` senden.
 
@@ -105,7 +105,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) mit Details zur ne
 | `state` | Der aktuelle Status des Vorschauauftrags. Nach der anfänglichen Erstellung befindet er sich im Status &quot;NEU&quot;. Anschließend befindet er sich im Status &quot;WIRD AUSGEFÜHRT&quot;, bis die Verarbeitung abgeschlossen ist. Anschließend wird er zu &quot;RESULT_READY&quot;oder &quot;FEHLGESCHLAGEN&quot;. |
 | `previewId` | Die ID des Vorschauauftrags, die für Nachschlagezwecke bei der Anzeige einer Schätzung oder Vorschau verwendet wird, wie im nächsten Abschnitt beschrieben. |
 
-## Abrufen der Ergebnisse einer bestimmten Vorschau {#get-preview}
+## Ergebnisse einer bestimmten Vorschau abrufen {#get-preview}
 
 Sie können detaillierte Informationen zu einer bestimmten Vorschau abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/preview` senden und im Anfragepfad die Vorschau-ID angeben.
 

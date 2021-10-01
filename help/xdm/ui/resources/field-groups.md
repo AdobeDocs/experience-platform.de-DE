@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Schemafeldgruppen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 topic-legacy: user guide
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%
 
 ---
-
 
 # Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche
 
@@ -20,7 +20,7 @@ Eine Feldergruppe definiert, mit welcher Klasse(n) sie kompatibel ist, basierend
 
 Adobe Experience Platform bietet viele Standardfeldgruppen, die eine Vielzahl von Marketing-Anwendungsfällen abdecken. Sie können jedoch auch eigene benutzerdefinierte Feldergruppen erstellen und bearbeiten, um zusätzliche Konzepte zu Ihrem Unternehmen in Ihren XDM-Schemas zu definieren. Dieses Handbuch bietet einen Überblick darüber, wie Sie benutzerdefinierte Feldergruppen für Ihre Organisation in der Platform-Benutzeroberfläche erstellen, bearbeiten und verwalten.
 
-## Voraussetzungen   
+## Voraussetzungen
 
 Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem finden Sie in der [XDM-Übersicht](../../home.md) und in den [Grundlagen der Schemakomposition](../../schema/composition.md) , wie Feldgruppen zu XDM-Schemas beitragen.
 

@@ -70,7 +70,7 @@ Weitere Informationen finden Sie unter [Übersicht über Metriken der Echtzeit-K
 
 Mit der November-Version unterstützt die Echtzeit-Kundendatenplattform von Adobe die folgenden Ziele:
 
-* Werbung: [!DNL Google]
+* Adobe Advertising Cloud: [!DNL Google]
 * E-Mail-Marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
 Weitere Informationen zu den einzelnen Zielen finden Sie im [Zielkatalog](../../destinations/catalog/overview.md) .

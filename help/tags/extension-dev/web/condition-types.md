@@ -1,10 +1,11 @@
 ---
 title: Bedingungstypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „condition-type“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 69%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Im Kontext einer Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Die Ausnahme besteht, wenn Benutzer Bedingungen explizit in einem &quot;Ausnahme&quot;-Behälter platzieren. In diesem Fall müssen alle Bedingungen im Behälter &quot;false&quot;zurückgeben, damit die Regel weiter verarbeitet werden kann.
+Im Kontext einer Regel wird eine Bedingung ausgewertet, nachdem ein Ereignis aufgetreten ist. Alle Bedingungen müssen „true“ zurückgeben, damit die Regel weiter verarbeitet wird. Eine Ausnahme besteht, wenn Benutzer Bedingungen explizit in einem „Ausnahme“-Bereich platzieren. In diesem Fall müssen alle Bedingungen innerhalb dieses Bereichs „false“ zurückgeben, damit die Regel weiter verarbeitet werden kann.
 
-Beispielsweise könnte eine Erweiterung einen Bedinungstyp „Viewport enthält“ bereitstellen, bei dem der Benutzer eine CSS-Auswahl angeben kann. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
+Beispielsweise könnte eine Erweiterung einen Bedinungstyp „Viewport enthält“ bereitstellen, bei dem der Benutzer einen CSS-Selektor angeben kann. Wenn diese Bedingung auf der Website des Kunden ausgewertet wird, kann die Erweiterung nach Elementen suchen, die mit der CSS-Auswahl übereinstimmen, und die Information zurückgeben, ob sich eines davon im Ansichtsfenster des Benutzers befindet.
 
 In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Web-Erweiterung in Adobe Experience Platform definieren.
 
@@ -29,9 +30,9 @@ In diesem Dokument wird beschrieben, wie Sie Bedingungstypen für eine Web-Erwei
 Bedingungstypen bestehen in der Regel aus Folgendem:
 
 1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für die Bedingung zu ändern.
-2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und eine Bedingung zu bewerten.
+2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und eine Bedingung auszuwerten.
 
-Ein Bibliotheksmodul vom Typ Bedingung hat ein Ziel: beurteilen, ob etwas wahr oder falsch ist. Was es auswertet, legen Sie fest.
+Ein Bibliotheksmodul vom Bedingungstyp dient einem einzigen Ziel: auswerten, ob etwas wahr oder falsch ist. Was es auswertet, legen Sie fest.
 
 Wenn Sie z. B. prüfen möchten, ob sich der Benutzer auf dem Host `example.com` befindet, könnte Ihr Modul wie folgt aussehen:
 

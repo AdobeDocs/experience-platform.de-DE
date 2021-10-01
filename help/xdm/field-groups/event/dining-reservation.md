@@ -2,13 +2,13 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; Reservierung; Speisen;
 title: Definieren der Feldergruppe "Reservierungsschema"
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe Buchungs-Schema definieren.
-source-git-commit: d230cfa9e74eb96aa44e8b83ca8f2306db4ba4ec
+exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
+source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
 workflow-type: tm+mt
 source-wordcount: '462'
 ht-degree: 6%
 
 ---
-
 
 # [!UICONTROL Definieren ] der Feldergruppe &quot;Reservationschema&quot;
 

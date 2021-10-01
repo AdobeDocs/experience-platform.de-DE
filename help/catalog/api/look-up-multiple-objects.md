@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Katalog;Suche nach mehreren Objekten;API
+keywords: Experience Platform; Startseite; beliebte Themen; Katalog; Suche mehrerer Objekte; API
 solution: Experience Platform
-title: Mehrere Katalogobjekte suchen
+title: Suchen nach mehreren Katalogobjekten
 topic-legacy: developer guide
 description: Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine Anfrage pro Objekt zu stellen, bietet der Katalog eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '237'
@@ -13,13 +12,13 @@ ht-degree: 54%
 
 ---
 
-# Mehrere Katalogobjekte suchen
+# Suchen nach mehreren Katalogobjekten
 
-Wenn Sie anstelle einer Anforderung pro Objekt mehrere bestimmte Objekte Ansicht haben möchten, stellt [!DNL Catalog] eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs bereit. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
+Wenn Sie mehrere bestimmte Objekte anzeigen möchten, anstatt eine Anfrage pro Objekt zu stellen, bietet [!DNL Catalog] eine einfache Verknüpfung zum Anfordern mehrerer Objekte desselben Typs. Sie können eine GET-Anfrage verwenden, um mehrere bestimmte Objekte zurückzugeben, indem Sie eine durch Komma getrennte Liste von IDs einschließen.
 
 >[!NOTE]
 >
->Auch wenn Sie bestimmte [!DNL Catalog]-Objekte anfordern, ist es immer noch empfehlenswert, den Parameter `properties` &quot;Abfrage&quot;so zu verwenden, dass nur die benötigten Eigenschaften zurückgegeben werden.
+>Auch wenn Sie bestimmte [!DNL Catalog]-Objekte anfordern, empfiehlt es sich weiterhin, den `properties`-Abfrageparameter so zu verwenden, dass nur die benötigten Eigenschaften zurückgegeben werden.
 
 **API-Format**
 
@@ -52,7 +51,7 @@ Eine erfolgreiche Antwort gibt eine Liste der angegebenen Datensätze zurück, d
 
 >[!NOTE]
 >
->Wenn ein zurückgegebenes Objekt nicht mehr als eine der angeforderten Eigenschaften enthält, die durch die `properties`-Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die darin enthalten sind, wie unten unter ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** dargestellt.
+>Wenn ein zurückgegebenes Objekt eine oder mehrere der angeforderten Eigenschaften nicht enthält, die durch die `properties`-Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten dargestellt.
 
 ```json
 {

@@ -1,8 +1,9 @@
 ---
 title: Kopieren von Ressourcen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform eine neue Tag-Ressource mit den Einstellungen einer schon vorhandenen Tag-Ressource erstellen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Manchmal ist es praktisch, eine neue Ressource mithilfe der Einstellungen einer vorhandenen Ressource zu erstellen. In diesen Fällen können Sie eine Kopie erstellen.
 
@@ -61,7 +62,7 @@ Wenn Sie eine Erweiterung in eine andere Eigenschaft kopieren, müssen Sie Folge
 
 Alle Regeln und Datenelemente werden von einer Erweiterung bereitgestellt. Wenn Sie also Eigenschaften-übergreifend kopieren, muss die Platform zugrunde liegende Erweiterungen berücksichtigen.
 
-![Kopieren einer Regel in die Demo-Eigenschaft](../../images/copy-rules-dialog1.png)
+![Kopieren einer Regel in meine Demo-Property](../../images/copy-rules-dialog1.png)
 
 Das Dialogfeld „Kopieren“ enthält eine Erläuterung dessen, was genau vor dem Kopieren ausgeführt wird. Das Dialogfeld oben ist für eine Regel vorgesehen. Dasselbe gilt jedoch für Datenelemente.
 

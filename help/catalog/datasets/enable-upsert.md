@@ -3,13 +3,13 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Datensatz für Profil-Updates mithilfe von APIs aktivieren
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
-source-git-commit: 3b34cf37182ae98545651a7b54f586df7d811f34
+exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 22%
 
 ---
-
 
 # Datensatz für Profilaktualisierungen mithilfe von APIs aktivieren
 

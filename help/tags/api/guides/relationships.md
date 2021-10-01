@@ -1,8 +1,9 @@
 ---
 title: Beziehungen in der Reactor-API
 description: Lernen Sie, wie Ressourcenbeziehungen in der Reactor-API hergestellt werden, einschließlich der Beziehungsanforderungen für jede Ressource.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
+exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 100%
 
@@ -150,7 +151,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
-| `entity` | ✓ |  |  |
+| `entity` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -161,9 +162,9 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
 | `rules` |  |  |  |
-| `environment` | ✓ |  |  |
-| `library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `environment` | verwalten |  |  |
+| `library` | verwalten |  |  |
+| `property` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -171,7 +172,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -188,13 +189,13 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
+| `revisions` | verwalten |  |  |
 | `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
-| `updated_with_extension` | ✓ |  |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `property` | verwalten |  |  |
+| `origin` | verwalten |  |  |
+| `extension` | verwalten | verwalten |  |
+| `updated_with_extension` | verwalten |  |  |
+| `updated_with_extension_package` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -204,8 +205,8 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
-| `host` | ✓ | ✓ |  |
-| `property` | ✓ |  |  |
+| `host` | verwalten | verwalten |  |
+| `property` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -214,12 +215,12 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
+| `revisions` | verwalten |  |  |
 | `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
-| `extension_package` | ✓ | ✓ |  |
-| `updated_with_extension_package` | ✓ |  |  |
+| `property` | verwalten |  |  |
+| `origin` | verwalten |  |  |
+| `extension_package` | verwalten | verwalten |  |
+| `updated_with_extension_package` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -227,7 +228,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | ✓ |  |  |
+| `property` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -236,13 +237,13 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
-| `environment` |  |  | ✓ |
-| `data_elements` |  |  | ✓ |
-| `extensions` |  |  | ✓ |
-| `rules` |  |  | ✓ |
+| `environment` |  |  | verwalten |
+| `data_elements` |  |  | verwalten |
+| `extensions` |  |  | verwalten |
+| `rules` |  |  | verwalten |
 | `notes` |  |  |  |
-| `upstream_library` | ✓ |  |  |
-| `property` | ✓ |  |  |
+| `upstream_library` | verwalten |  |  |
+| `property` | verwalten |  |  |
 | `last_build` |  |  |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -251,7 +252,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | ✓ |  |  |
+| `resource` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -259,7 +260,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `company` | ✓ |  |  |
+| `company` | verwalten |  |  |
 | `callbacks` |  |  |  |
 | `environments` |  |  |  |
 | `libraries` |  |  |  |
@@ -273,14 +274,14 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | ✓ |  |  |
-| `updated_with_extension` | ✓ |  |  |
-| `extension` | ✓ | ✓ |  |
+| `updated_with_extensions_package` | verwalten |  |  |
+| `updated_with_extension` | verwalten |  |  |
+| `extension` | verwalten | verwalten |  |
 | `notes` |  |  |  |
-| `origin` | ✓ |  |  |
-| `property` | ✓ |  |  |
-| `rules` | ✓ | ✓ |  |
-| `revisions` | ✓ |  |  |
+| `origin` | verwalten |  |  |
+| `property` | verwalten |  |  |
+| `rules` | verwalten | verwalten |  |
+| `revisions` | verwalten |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -289,8 +290,8 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | ✓ |  |  |
+| `revisions` | verwalten |  |  |
 | `notes` |  |  |  |
-| `property` | ✓ |  |  |
-| `origin` | ✓ |  |  |
+| `property` | verwalten |  |  |
+| `origin` | verwalten |  |  |
 | `rule_components` |  |  |  |

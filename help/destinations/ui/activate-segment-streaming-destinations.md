@@ -5,13 +5,13 @@ type: Tutorial
 seo-title: Activate audience data to streaming segment export destinations
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
-source-git-commit: f4721d3f114357b25517e4e66f1f626f82621c34
+exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '781'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
-
 
 # Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
 

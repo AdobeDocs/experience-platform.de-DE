@@ -6,7 +6,7 @@ topic-legacy: schemas
 description: Sie können den Endpunkt „/features“ in der Adobe Experience Platform-API verwenden, um Ihre Zuordnungsausdrücke zu validieren und die verfügbaren Zuordnungssatzfunktionen aufzulisten.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 100%
 

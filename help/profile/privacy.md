@@ -8,7 +8,7 @@ exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
 workflow-type: tm+mt
 source-wordcount: '1173'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -22,7 +22,7 @@ In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutza
 >
 >In diesem Handbuch wird nur beschrieben, wie Sie Datenschutzanfragen für den Profildatenspeicher in Experience Platform stellen. Wenn Sie auch Datenschutzanfragen für den Platform Data Lake planen, lesen Sie zusätzlich zu diesem Tutorial das Handbuch zur Verarbeitung von Datenschutzanfragen im Data Lake](../catalog/privacy.md).[
 >
->Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Anwendungen finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
+>Anweisungen zum Ausführen von Datenschutzanfragen für andere Adobe Experience Cloud-Programme finden Sie in der [Privacy Service-Dokumentation](../privacy-service/experience-cloud-apps.md).
 
 ## Erste Schritte
 

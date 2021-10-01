@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Tutorial;Feature-Pipeline;Data Science Workspace;beliebte Themen
-title: Erstellen einer Feature Pipeline mit dem Modell-Authoring-SDK
+keywords: Experience Platform; Tutorial; Feature Pipeline; Data Science Workspace; beliebte Themen
+title: Erstellen einer Feature Pipeline mit dem Model Authoring SDK
 topic-legacy: tutorial
 type: Tutorial
-description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime umfangreiche Funktionen zu entwickeln. Dieses Dokument beschreibt die verschiedenen Klassen, die in einer Feature-Pipeline gefunden wurden, und bietet eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Feature-Pipeline mit dem Model Authoring-SDK in PySpark.
+description: Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe von Sensei Machine Learning Framework Runtime Funktionen bedarfsgerecht zu entwickeln. In diesem Dokument werden die verschiedenen Klassen in einer Feature Pipeline beschrieben und ein schrittweises Tutorial zum Erstellen einer benutzerdefinierten Feature Pipeline mit dem Model Authoring SDK in PySpark bereitgestellt.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1441'
@@ -13,39 +12,39 @@ ht-degree: 27%
 
 ---
 
-# Erstellen einer Feature-Pipeline mit dem Modell-Authoring-SDK
+# Erstellen einer Funktions-Pipeline mit dem Model Authoring SDK
 
 >[!IMPORTANT]
 >
-> Funktionserweiterungen sind derzeit nur über API verfügbar.
+> Feature Pipelines sind derzeit nur über API verfügbar.
 
-Mit Adobe Experience Platform können Sie benutzerdefinierte Funktionenpipelines erstellen und erstellen, um durch die Sensei Machine Learning Framework Runtime (im Folgenden &quot;Runtime&quot; genannt) im Maßstab Funktionstechnik durchzuführen.
+Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot;genannt) Funktionen bedarfsgerecht zu entwickeln.
 
-Dieses Dokument beschreibt die verschiedenen Klassen, die in einer Feature-Pipeline zu finden sind, und bietet eine schrittweise Anleitung zum Erstellen einer benutzerdefinierten Feature-Pipeline mit dem [Modell-Authoring-SDK](./sdk.md) in PySpark.
+In diesem Dokument werden die verschiedenen Klassen in einer Feature Pipeline beschrieben und ein schrittweises Tutorial zum Erstellen einer benutzerdefinierten Feature Pipeline mit dem [Model Authoring SDK](./sdk.md) in PySpark bereitgestellt.
 
-Der folgende Arbeitsablauf findet statt, wenn eine Feature-Pipeline ausgeführt wird:
+Der folgende Workflow erfolgt bei Ausführung einer Feature Pipeline:
 
 1. Das Rezept lädt den Datensatz in eine Pipeline.
-2. Die Merkmalumwandlung erfolgt auf dem Datensatz und wird an Adobe Experience Platform zurückgeschrieben.
-3. Die transformierten Daten werden zur Schulung geladen.
-4. Die Feature-Pipeline definiert die Schritte mit dem Verlaufsverstärkungs-Regressor als ausgewähltes Modell.
-5. Die Pipeline wird verwendet, um die Schulungsdaten anzupassen und das geschulte Modell wird erstellt.
-6. Das Modell wird mit dem Bewertungsdatensatz transformiert.
-7. Interessante Spalten der Ausgabe werden dann ausgewählt und mit den zugehörigen Daten wieder auf [!DNL Experience Platform] gespeichert.
+2. Die Merkmalumwandlung erfolgt im Datensatz und wird zurück in Adobe Experience Platform geschrieben.
+3. Die umgewandelten Daten werden für das Training geladen.
+4. Die Funktions-Pipeline definiert die Bühnen mit dem Gradient Boosting Regressor als ausgewähltes Modell.
+5. Die Pipeline wird verwendet, um die Trainings-Daten anzupassen, und das trainierte Modell wird erstellt.
+6. Das Modell wird mit dem Scoring-Datensatz transformiert.
+7. Interessante Spalten der Ausgabe werden dann ausgewählt und mit den zugehörigen Daten wieder in [!DNL Experience Platform] gespeichert.
 
 ## Erste Schritte
 
-Um ein Rezept in einem Unternehmen auszuführen, ist Folgendes erforderlich:
-- Ein Eingabedataset.
+Um ein Rezept in einer Organisation auszuführen, ist Folgendes erforderlich:
+- Ein Eingabedatensatz.
 - Das Schema des Datensatzes.
 - Ein transformiertes Schema und ein leerer Datensatz, der auf diesem Schema basiert.
-- Ein Output-Schema und ein leerer Datensatz, der auf diesem Schema basiert.
+- Ein Ausgabeschema und ein leerer Datensatz, der auf diesem Schema basiert.
 
-Alle oben genannten Datensätze müssen in die [!DNL Platform]-Benutzeroberfläche hochgeladen werden. Verwenden Sie zum Einrichten dieses Skripts die Adobe [bootstrap script](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
+Alle oben genannten Datensätze müssen in die [!DNL Platform] -Benutzeroberfläche hochgeladen werden. Verwenden Sie dazu das von der Adobe bereitgestellte [Bootstrap-Skript](https://github.com/adobe/experience-platform-dsw-reference/tree/master/bootstrap).
 
-## Funktionsbereitstellungsklassen
+## Feature Pipeline-Klassen
 
-Die folgende Tabelle beschreibt die wichtigsten abstrakten Klassen, die Sie erweitern müssen, um eine Feature-Pipeline zu erstellen:
+In der folgenden Tabelle werden die wichtigsten abstrakten Klassen beschrieben, die Sie erweitern müssen, um eine Funktions-Pipeline zu erstellen:
 
 | Abstrakte Klasse | Beschreibung |
 | -------------- | ----------- |
@@ -54,7 +53,7 @@ Die folgende Tabelle beschreibt die wichtigsten abstrakten Klassen, die Sie erwe
 | FeaturePipelineFactory | Eine FeaturePipelineFactory-Klasse erstellt eine Spark-Pipeline, die aus einer Reihe von Spark-Transformatoren besteht, um Funktions-Engineering durchzuführen. Sie können festlegen, dass keine FeaturePipelineFactory-Klasse bereitgestellt und Ihr Funktions-Engineering stattdessen in die DatasetTransformer-Klasse implementiert wird. |
 | DataSaver | Eine DataSaver-Klasse stellt die Logik für die Datenspeicherung eines Funktionsdatensatzes bereit. |
 
-Wenn ein Funktionspipelineauftrag initiiert wird, führt die Laufzeitumgebung zunächst den DataLoader aus, um Eingabedaten als DataFrame zu laden, und ändert dann den DataFrame, indem entweder DataTransformer, FeaturePipelineFactory oder beides ausgeführt wird. Schließlich wird der sich ergebende Funktionsdatensatz über den DataSaver gespeichert.
+Wenn ein Feature Pipeline-Auftrag initiiert wird, führt Runtime zunächst den DataLoader aus, um Eingabedaten als DataFrame zu laden, und ändert dann den DataFrame, indem entweder DatasetTransformer, FeaturePipelineFactory oder beide ausgeführt werden. Schließlich wird der sich ergebende Funktionsdatensatz über den DataSaver gespeichert.
 
 Das folgende Flussdiagramm zeigt die Ausführungsreihenfolge der Laufzeitumgebung:
 
@@ -65,13 +64,13 @@ Das folgende Flussdiagramm zeigt die Ausführungsreihenfolge der Laufzeitumgebun
 
 Die folgenden Abschnitte enthalten Details und Beispiele zur Implementierung der erforderlichen Klassen für eine Feature Pipeline.
 
-### Definieren der Variablen in der JSON-Konfigurationsdatei  {#define-variables-in-the-configuration-json-file}
+### Definieren der Variablen in der JSON-Konfigurationsdatei {#define-variables-in-the-configuration-json-file}
 
 Die JSON-Konfigurationsdatei besteht aus Schlüsselwert-Paaren und dient zum Angeben von Variablen, die später während der Laufzeit definiert werden sollen. Diese Schlüsselwert-Paare können Eigenschaften wie den Speicherort des Eingabedatasets, die ID des Ausgabedatasets, die Mandanten-ID, Spaltenüberschriften usw. definieren.
 
-Das folgende Beispiel zeigt Schlüssel/Wert-Paare, die in einer Konfigurationsdatei gefunden wurden:
+Das folgende Beispiel zeigt Schlüssel-Wert-Paare, die in einer Konfigurationsdatei gefunden werden:
 
-**Configuration JSON-Beispiel**
+**Beispiel für JSON-Konfiguration**
 
 ```json
 [
@@ -103,13 +102,13 @@ Sie können auf die Konfigurations-JSON über jede Klassenmethode zugreifen, die
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Ein detaillierteres Konfigurationsbeispiel finden Sie in der Datei [ipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) von Data Science Workspace.
+Ein detaillierteres Konfigurationsbeispiel finden Sie in der Datei [pipeline.json](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) von Data Science Workspace .
 
 ### Vorbereiten der Eingabedaten mit DataLoader {#prepare-the-input-data-with-dataloader}
 
 DataLoader ist für das Abrufen und Filtern von Eingabedaten zuständig. Ihre Implementierung von DataLoader muss die abstrakte Klasse `DataLoader` erweitern und die abstrakte Methode `load` überschreiben.
 
-Im folgenden Beispiel wird ein [!DNL Platform]-Datensatz nach ID abgerufen und als DataFrame zurückgegeben, wobei die DataSet-ID (`dataset_id`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
+Im folgenden Beispiel wird ein [!DNL Platform]-Datensatz nach ID abgerufen und als DataFrame zurückgegeben, wobei die Datensatz-ID (`dataset_id`) eine definierte Eigenschaft in der Konfigurationsdatei ist.
 
 **PySpark-Beispiel**
 
@@ -162,7 +161,7 @@ class MyDataLoader(DataLoader):
 
 Ein DatasetTransformer stellt die Logik zum Transformieren eines Eingangs-DataFrames bereit und gibt einen neuen abgeleiteten DataFrame zurück. Diese Klasse kann implementiert werden, um entweder gemeinsam mit einer FeaturePipelineFactory zu arbeiten, als einzige Funktions-Engineering-Komponente zu arbeiten, oder Sie können festlegen, dass diese Klasse nicht implementiert wird.
 
-Im folgenden Beispiel wird die DataSetTransformer-Klasse erweitert:
+Im folgenden Beispiel wird die DatasetTransformer-Klasse erweitert:
 
 **PySpark-Beispiel**
 
@@ -222,7 +221,7 @@ class MyDatasetTransformer(DatasetTransformer):
 
 Mit einer FeaturePipelineFactory können Sie Ihre Funktions-Engineering-Logik implementieren, indem Sie eine Reihe von Spark-Transformatoren über eine Spark-Pipeline definieren und verketten. Diese Klasse kann implementiert werden, um entweder mit einem DatasetTransformer zusammenzuarbeiten, als einzige Komponente der Funktions-Engineering-Komponente zu arbeiten, oder Sie können festlegen, dass diese Klasse nicht implementiert wird.
 
-Im folgenden Beispiel wird die FeaturePipelineFactory-Klasse erweitert:
+Im folgenden Beispiel wird die FeaturePipelineFactory -Klasse erweitert:
 
 **PySpark-Beispiel**
 
@@ -285,9 +284,9 @@ class MyFeaturePipelineFactory(FeaturePipelineFactory):
 
 ### Speichern Sie Ihren Funktionsdatensatz mit DataSaver {#store-your-feature-dataset-with-datasaver}
 
-Der DataSaver ist für das Speichern der sich ergebenden Funktionsdatensätze in einer Datenspeicherung zuständig. Ihre Implementierung von DataSaver muss die abstrakte Klasse `DataSaver` erweitern und die abstrakte Methode `save` überschreiben.
+Der DataSaver ist für die Speicherung Ihrer resultierenden Funktionsdatensätze an einem Speicherort verantwortlich. Ihre Implementierung von DataSaver muss die abstrakte Klasse `DataSaver` erweitern und die abstrakte Methode `save` überschreiben.
 
-Im folgenden Beispiel wird die DataSaver-Klasse, die Daten speichert, nach ID auf ein [!DNL Platform]-Dataset erweitert, wobei die Dataset-ID (`featureDatasetId`) und die Pächter-ID (`tenantId`) Eigenschaften in der Konfiguration sind.
+Im folgenden Beispiel wird die DataSaver-Klasse erweitert, die Daten nach ID in einem [!DNL Platform]-Datensatz speichert, wobei die Datensatz-ID (`featureDatasetId`) und die Mandanten-ID (`tenantId`) definierte Eigenschaften in der Konfiguration sind.
 
 **PySpark-Beispiel**
 
@@ -353,9 +352,9 @@ class MyDataSaver(DataSaver):
 
 ### Geben Sie Ihre implementierten Klassennamen in der Anwendungsdatei an {#specify-your-implemented-class-names-in-the-application-file}
 
-Nachdem Sie die Klassen für Ihre Funktionen definiert und implementiert haben, müssen Sie die Namen Ihrer Klassen in der YAML-Anwendungsdatei angeben.
+Nachdem Sie Ihre Feature Pipeline-Klassen definiert und implementiert haben, müssen Sie die Namen Ihrer Klassen in der YAML-Anwendungsdatei angeben.
 
-In den folgenden Beispielen werden implementierte Klassennamen angegeben:
+Die folgenden Beispiele geben implementierte Klassennamen an:
 
 **PySpark-Beispiel**
 
@@ -386,56 +385,56 @@ scoring.dataLoader: ScoringDataLoader
 scoring.dataSaver: MyDatasetSaver
 ```
 
-## Erstellen Sie Ihre Feature-Pipeline-Engine mit der API {#create-feature-pipeline-engine-api}
+## Erstellen der Funktions-Pipeline-Engine mit der API {#create-feature-pipeline-engine-api}
 
-Nachdem Sie Ihre Feature-Pipeline erstellt haben, müssen Sie ein Docker-Bild erstellen, um die Feature-Pipeline-Endpunkte in der [!DNL Sensei Machine Learning]-API aufzurufen. Sie benötigen eine Docker-Bild-URL, um die Feature-Pipeline-Endpunkte aufzurufen.
+Nachdem Sie Ihre Feature Pipeline erstellt haben, müssen Sie ein Docker-Bild erstellen, um die Funktions-Pipeline-Endpunkte in der API [!DNL Sensei Machine Learning] aufzurufen. Sie benötigen eine Docker-Bild-URL, um die Endpunkte der Feature Pipeline aufrufen zu können.
 
 >[!TIP]
 >
->Wenn Sie keine Docker-URL haben, besuchen Sie das Tutorial [Quelldateien in ein Rezept](../models-recipes/package-source-files-recipe.md), um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
+>Wenn Sie keine Docker-URL haben, finden Sie im Tutorial [Quelldateien in einem Rezept](../models-recipes/package-source-files-recipe.md) eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL.
 
-Optional können Sie auch die folgende Postman-Sammlung verwenden, um den Workflow der Feature Pipeline-API abzuschließen:
+Optional können Sie auch die folgende Postman-Sammlung verwenden, um den Workflow der Funktions-Pipeline-API abzuschließen:
 
 https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
-### Erstellen einer Feature-Pipeline-Engine {#create-engine-api}
+### Erstellen einer Funktions-Pipeline-Engine {#create-engine-api}
 
-Sobald Sie Ihren Docker-Bildspeicherort haben, können Sie [eine Feature-Pipeline-Engine](../api/engines.md#feature-pipeline-docker) mithilfe der [!DNL Sensei Machine Learning]-API erstellen, indem Sie eine POST zu `/engines` durchführen. Durch das erfolgreiche Erstellen einer Feature Pipeline-Engine erhalten Sie eine eindeutige Engine-ID (`id`). Achten Sie darauf, diesen Wert zu speichern, bevor Sie fortfahren.
+Sobald Sie Ihren Docker-Image-Speicherort haben, können Sie [eine Feature Pipeline-Engine](../api/engines.md#feature-pipeline-docker) mithilfe der [!DNL Sensei Machine Learning]-API erstellen, indem Sie eine POST zu `/engines` durchführen. Durch die erfolgreiche Erstellung einer Funktions-Pipeline-Engine erhalten Sie eine eindeutige Engine-Kennung (`id`). Achten Sie darauf, diesen Wert zu speichern, bevor Sie fortfahren.
 
 ### Erstellen einer MLInstance {#create-mlinstance}
 
-Mit dem neu erstellten `engineID` müssen Sie [eine MLIstance](../api/mlinstances.md#create-an-mlinstance) erstellen, indem Sie eine POST an den `/mlInstance`-Endpunkt anfordern. Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten MLInstanz einschließlich ihrer eindeutigen Kennung (`id`) enthält, die im nächsten API-Aufruf verwendet wird.
+Mit Ihrem neu erstellten `engineID` müssen Sie [eine MLIstance](../api/mlinstances.md#create-an-mlinstance) erstellen, indem Sie eine POST-Anfrage an den `/mlInstance`-Endpunkt senden. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten MLInstance einschließlich ihrer eindeutigen Kennung (`id`) enthält, die im nächsten API-Aufruf verwendet wird.
 
 ### Erstellen eines Experiments {#create-experiment}
 
-Als Nächstes müssen Sie [ein Experiment](../api/experiments.md#create-an-experiment) erstellen. Um ein Experiment zu erstellen, müssen Sie Ihren eindeutigen MLIstance-Bezeichner (`id`) haben und eine POST an den `/experiment`-Endpunkt anfordern. Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält, die im nächsten API-Aufruf verwendet wird.
+Als Nächstes müssen Sie [ein Experiment](../api/experiments.md#create-an-experiment) erstellen. Um ein Experiment zu erstellen, müssen Sie die eindeutige MLIstance-Kennung (`id`) haben und eine POST-Anfrage an den Endpunkt `/experiment` stellen. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält, die im nächsten API-Aufruf verwendet wird.
 
-### Geben Sie die Pipeline-Aufgabe für die Experimentausführungsfunktion {#specify-feature-pipeline-task} an
+### Geben Sie die Pipeline-Aufgabe für die Experimentablauf-Funktion an {#specify-feature-pipeline-task}
 
-Nach dem Erstellen eines Experiments müssen Sie den Modus des Experiments in `featurePipeline` ändern. Um den Modus zu ändern, führen Sie eine zusätzliche POST zu [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) mit `EXPERIMENT_ID` und senden Sie im Textkörper `{ "mode":"featurePipeline"}`, um einen Funktionspipelinement-Experimentlauf anzugeben.
+Nach dem Erstellen eines Experiments müssen Sie den Modus des Experiments in `featurePipeline` ändern. Um den Modus zu ändern, führen Sie mit `EXPERIMENT_ID` eine zusätzliche POST zu [`experiments/{EXPERIMENT_ID}/runs`](../api/experiments.md#experiment-training-scoring) durch und senden Sie im Textkörper `{ "mode":"featurePipeline"}` , um einen Funktions-Pipeline-Experimentablauf anzugeben.
 
-Nach Abschluss des Vorgangs müssen Sie eine GET an `/experiments/{EXPERIMENT_ID}` bis [anfordern, den Experimentstatus](../api/experiments.md#retrieve-specific) abzurufen, und warten, bis der Experimentstatus aktualisiert wurde.
+Stellen Sie nach dem Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` bis [rufen Sie den Experimentstatus](../api/experiments.md#retrieve-specific) ab und warten Sie, bis der Experimentstatus aktualisiert wurde.
 
-### Geben Sie die Aufgabe für die Testausführung {#training} an
+### Festlegen der Trainings-Aufgabe für die Experimentausführung {#training}
 
-Als Nächstes müssen Sie [die Aufgabe für die Ausführung der Schulung](../api/experiments.md#experiment-training-scoring) angeben. Erstellen Sie eine POST auf `experiments/{EXPERIMENT_ID}/runs` und setzen Sie im Textkörper den Modus auf `train` und senden Sie ein Array von Aufgaben, die Ihre Schulungsparameter enthalten. Eine erfolgreiche Antwort gibt eine Nutzlast mit den Details des angeforderten Experiments zurück.
+Als Nächstes müssen Sie [die Aufgabe für den Trainings-Lauf](../api/experiments.md#experiment-training-scoring) angeben. Nehmen Sie eine POST zu `experiments/{EXPERIMENT_ID}/runs` vor, setzen Sie im Hauptteil den Modus auf `train` und senden Sie eine Reihe von Aufgaben, die Ihre Trainings-Parameter enthalten. Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des angeforderten Experiments enthält.
 
-Nach Abschluss des Vorgangs müssen Sie eine GET an `/experiments/{EXPERIMENT_ID}` bis [anfordern, den Experimentstatus](../api/experiments.md#retrieve-specific) abzurufen, und warten, bis der Experimentstatus aktualisiert wurde.
+Stellen Sie nach dem Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` bis [rufen Sie den Experimentstatus](../api/experiments.md#retrieve-specific) ab und warten Sie, bis der Experimentstatus aktualisiert wurde.
 
-### Geben Sie die Aufgabe für die Ergebnisauswertung des Experiments {#scoring} an
+### Festlegen der Scoring-Aufgabe für Experimentabläufe {#scoring}
 
 >[!NOTE]
 >
-> Um diesen Schritt abzuschließen, müssen Sie mindestens einen erfolgreichen Schulungslauf mit Ihrem Experiment verknüpfen.
+> Um diesen Schritt abzuschließen, muss Ihrem Experiment mindestens ein erfolgreicher Trainings-Lauf zugeordnet sein.
 
-Nach einem erfolgreichen Schulungslauf müssen Sie [die Aufgabe für die Bewertungsausführung ](../api/experiments.md#experiment-training-scoring) angeben. Führen Sie eine POST auf `experiments/{EXPERIMENT_ID}/runs` und setzen Sie im Textkörper das `mode`-Attribut auf &quot;score&quot;. Dies Beginn die Ausführung Ihres Bewertungsexperiments.
+Nach einem erfolgreichen Trainings-Lauf müssen Sie [die Scoring-Lauf-Aufgabe](../api/experiments.md#experiment-training-scoring) angeben. Nehmen Sie eine POST auf `experiments/{EXPERIMENT_ID}/runs` vor und setzen Sie im Hauptteil das `mode` -Attribut auf &quot;score&quot;. Dadurch wird Ihr Auswertungs-Experimentablauf gestartet.
 
-Nach Abschluss des Vorgangs müssen Sie eine GET an `/experiments/{EXPERIMENT_ID}` bis [anfordern, den Experimentstatus](../api/experiments.md#retrieve-specific) abzurufen, und warten, bis der Experimentstatus aktualisiert wurde.
+Stellen Sie nach dem Abschluss eine GET-Anfrage an `/experiments/{EXPERIMENT_ID}` bis [rufen Sie den Experimentstatus](../api/experiments.md#retrieve-specific) ab und warten Sie, bis der Experimentstatus aktualisiert wurde.
 
-Sobald die Bewertung abgeschlossen ist, sollte Ihre Feature-Pipeline betriebsbereit sein.
+Sobald die Auswertung abgeschlossen ist, sollte Ihre Feature Pipeline betriebsbereit sein.
 
 ## Nächste Schritte {#next-steps}
 
 [//]: # (Next steps section should refer to tutorials on how to score data using the feature pipeline Engine. Update this document once those tutorials are available)
 
-Durch Lesen dieses Dokuments haben Sie eine Feature-Pipeline mit dem Modell-Authoring-SDK erstellt, ein Docker-Bild erstellt und mit der Docker-Bild-URL ein Feature-Pipeline-Modell mithilfe der API [!DNL Sensei Machine Learning] erstellt. Sie sind jetzt bereit, mit dem [[!DNL Sensei Machine Learning API]](../api/getting-started.md) mit der Transformation von Datensätzen und der Extrahierung von Datenfunktionen im Maßstab fortzufahren.
+Durch Lesen dieses Dokuments haben Sie eine Feature Pipeline mit dem Model Authoring SDK erstellt, ein Docker-Bild erstellt und die Docker-Bild-URL verwendet, um mithilfe der API [!DNL Sensei Machine Learning] ein Feature Pipeline-Modell zu erstellen. Sie sind jetzt bereit, mit der Transformation von Datensätzen und dem Extrahieren von Datenfunktionen im Maßstab mit [[!DNL Sensei Machine Learning API]](../api/getting-started.md) fortzufahren.

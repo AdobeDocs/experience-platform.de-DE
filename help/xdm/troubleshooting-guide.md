@@ -16,7 +16,7 @@ ht-degree: 1%
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu [!DNL Experience Data Model] (XDM) und XDM System in Adobe Experience Platform, einschließlich einer Anleitung zur Fehlerbehebung bei häufigen Fehlern. Fragen und Fehlerbehebungen für andere Platform-Dienste finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schemas für das Customer Experience Management definiert. Die Methode, auf der [!DNL Experience Platform] basiert, **XDM-System**, stellt [!DNL Experience Data Model]-Schemas für die Verwendung durch [!DNL Platform]-Dienste bereit. **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf **[!DNL Schema Library]** innerhalb von [!DNL Experience Platform]. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md) .
+**[!DNL Experience Data Model](XDM)** ist eine Open-Source-Spezifikation, die standardisierte Schemas für das Customer Experience Management definiert. Die Methode, auf der [!DNL Experience Platform] basiert, **XDM-System**, stellt [!DNL Experience Data Model]-Schemas für die Verwendung durch [!DNL Platform]-Dienste bereit. **[!DNL Schema Registry]** bietet eine Benutzeroberfläche und eine RESTful-API für den Zugriff auf **[!DNL Schema Library]** innerhalb von [!DNL Experience Platform]. Weitere Informationen finden Sie in der [XDM-Dokumentation](home.md).
 
 ## FAQs
 
@@ -52,7 +52,7 @@ Weitere Informationen zu Feldtypen finden Sie im Dokument zu [XDM-Feldtypbegrenz
 
 ### Wie kann ich Identitäten für mein Schema definieren?
 
-In [!DNL Experience Platform] werden Identitäten verwendet, um ein Subjekt (normalerweise eine einzelne Person) unabhängig von den Datenquellen zu identifizieren, die interpretiert werden. Sie werden in Schemata definiert, indem Schlüsselfelder als &quot;Identität&quot;markiert werden. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM-ID und andere eindeutige ID-Felder.
+In [!DNL Experience Platform] werden Identitäten verwendet, um ein Subjekt (normalerweise eine einzelne Person) unabhängig von den Datenquellen zu identifizieren, die interpretiert werden. Sie werden in Schemata definiert, indem Schlüsselfelder als &quot;Identität&quot;markiert werden. Häufig verwendete Identitätsfelder sind E-Mail-Adresse, Telefonnummer, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=de), CRM-ID und andere eindeutige ID-Felder.
 
 Felder können entweder über die API oder die Benutzeroberfläche als Identitäten markiert werden.
 

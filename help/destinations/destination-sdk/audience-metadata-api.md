@@ -1,7 +1,8 @@
 ---
 description: Auf dieser Seite werden alle API-Vorgänge beschrieben, die Sie mit dem API-Endpunkt "/authoring/audience-templates"ausführen können.
 title: API-Vorgänge für Zielgruppen-Metadaten-Endpunkte
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 5%

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen;Motoren;sensei-API für maschinelles Lernen
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Engines; Sensei Machine Learning API
 solution: Experience Platform
-title: Engines API-Endpunkt
+title: Engines API Endpoint
 topic-legacy: Developer guide
 description: Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten Algorithmen für maschinelles Lernen, die bestimmte Probleme lösen, Pipelines zur Funktionsentwicklung aufweisen oder beides.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1165'
@@ -21,7 +20,7 @@ Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Worksp
 
 >[!TIP]
 >
->Wenn Sie keine Docker-URL haben, besuchen Sie das Tutorial [Quelldateien in ein Rezept](../models-recipes/package-source-files-recipe.md), um eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL zu erhalten.
+>Wenn Sie keine Docker-URL haben, finden Sie im Tutorial [Quelldateien in einem Rezept](../models-recipes/package-source-files-recipe.md) eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL.
 
 Ihre Anmeldedaten für die Docker-Registrierung benötigen Sie, um eine verpackte Rezeptdatei hochladen zu können, einschließlich Ihrer Docker-Host-URL, des Benutzernamens und des Passworts. Sie können diese Daten nachschlagen, indem Sie die folgende GET-Anfrage ausführen:
 
@@ -67,7 +66,7 @@ Sie können eine Engine erstellen, indem Sie eine POST-Anfrage ausführen und gl
 POST /engines
 ```
 
-**Python/R anfordern**
+**Anfrage Python/R**
 
 ```shell
 curl -X POST \
@@ -103,9 +102,9 @@ curl -X POST \
 | `artifacts.default.image.location` | Der Speicherort des Docker-Images, mit dem eine Docker-URL verknüpft ist. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Image beruht, und kann entweder „Python“, „R“ oder „TensorFlow“ lauten. |
 
-**Anfrage PySpark/Scala**
+**PySpark/Scala anfordern**
 
-Bei einer Anforderung für PySpark-Rezepte lautet das `executionType` und das `type` &quot;PySpark&quot;. Bei einer Anforderung für Scala-Rezepte lautet das `executionType`- und das `type`-Zeichen &quot;Spark&quot;. Im folgenden Scala-Rezept-Beispiel wird Spark verwendet:
+Wenn Sie eine Anfrage für PySpark-Rezepte stellen, lautet `executionType` und `type` &quot;PySpark&quot;. Bei einer Anforderung für Scala-Rezepte lautet `executionType` und `type` &quot;Spark&quot;. Das folgende Scala-Rezept-Beispiel verwendet Spark:
 
 ```shell
 curl -X POST \
@@ -137,14 +136,14 @@ curl -X POST \
 | --- | --- |
 | `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Der Wert kann auf Spark oder PySpark eingestellt werden. |
-| `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` eingestellt sein. |
-| `artifacts.default.image.location` | Die Position des Dockerbilds. Nur der ACR oder der öffentliche (nicht authentifizierte) Dockerhub wird unterstützt. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
+| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Der Wert kann auf Spark oder PySpark festgelegt werden. |
+| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` gesetzt werden. |
+| `artifacts.default.image.location` | Der Speicherort des Docker-Bildes. Nur Azure ACR oder Public (nicht authentifiziert) Dockerhub wird unterstützt. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine Python-Engine. Alle Engine-Antworten haben das folgende Format:
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort gilt für eine Python-Engine. Alle Engine-Antworten haben folgendes Format:
 
 ```json
 {
@@ -173,7 +172,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu ers
 
 ## Erstellen einer Feature Pipeline-Engine mit Docker-URLs {#feature-pipeline-docker}
 
-Sie können eine Feature Pipeline-Engine erstellen, indem Sie eine Anforderung zur POST ausführen und gleichzeitig die Metadaten und eine Docker-URL bereitstellen, die auf ein Dockerbild verweist.
+Sie können eine Funktions-Pipeline-Engine erstellen, indem Sie eine POST-Anfrage ausführen und dabei die zugehörigen Metadaten und eine Docker-URL angeben, die auf ein Docker-Bild verweist.
 
 **API-Format**
 
@@ -214,19 +213,19 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Der Wert kann auf Spark oder PySpark eingestellt werden. |
-| `algorithm` | Der verwendete Algorithmus setzt diesen Wert auf `fp` (Feature-Pipeline). |
+| `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Der Wert kann auf Spark oder PySpark festgelegt werden. |
+| `algorithm` | Setzen Sie den verwendeten Algorithmus auf `fp` (Feature Pipeline). |
 | `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `mlLibrary` | Ein Feld, das zum Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` eingestellt sein. |
-| `artifacts.default.image.location` | Die Position des Dockerbilds. Nur der ACR oder der öffentliche (nicht authentifizierte) Dockerhub wird unterstützt. |
-| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild aufgebaut ist. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
+| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` gesetzt werden. |
+| `artifacts.default.image.location` | Der Speicherort des Docker-Bildes. Nur Azure ACR oder Public (nicht authentifiziert) Dockerhub wird unterstützt. |
+| `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 | `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker` gesetzt werden. |
 | `artifacts.default.defaultMLInstanceConfigs` | Ihre Parameter für die Konfigurationsdatei `pipeline.json`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Nutzlast zurück, die die Details der neu erstellten Feature Pipeline Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine PySpark Feature Pipeline Engine.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Feature Pipeline-Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine PySpark-Feature-Pipeline-Engine.
 
 ```json
 {

@@ -1,10 +1,11 @@
 ---
 title: Löschen von Ressourcen
-description: Erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform löschen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+description: Hier erfahren Sie, wie Sie Tag-Ressourcen in Adobe Experience Platform löschen können.
+exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '550'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -14,9 +15,9 @@ ht-degree: 81%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn die Ressource weiterhin in der Benutzeroberfläche für die Datenerfassung, aber nicht in Ihrer Tag-Bibliothek angezeigt werden soll, finden Sie weitere Informationen unter [Entfernen von Ressourcen aus einer Bibliothek](remove-resources-from-library.md).
+Das Löschen einer Ressource entfernt diese Ressource dauerhaft aus Adobe Experience Platform. Wenn Sie möchten, dass die Ressource weiterhin in der Datenerfassungs-Benutzeroberfläche angezeigt wird, sich jedoch nicht in Ihrer Tag-Bibliothek befindet, finden Sie weitere Informationen unter [Entfernen von Ressourcen aus einer Bibliotheky](remove-resources-from-library.md).
 
-Sie können Datenelemente, Regeln, Erweiterungen, Hosts, Umgebungen und Properties löschen. Nach der Löschung sind diese Ressourcen nicht wiederherstellbar.
+Sie können Datenelemente, Regeln, Erweiterungen, Hosts, Umgebungen und Eigenschaften löschen. Nach der Löschung sind diese Ressourcen nicht wiederherstellbar.
 
 Bei Ressourcen, die zu Bibliotheken hinzugefügt werden (Datenelemente, Regeln und Erweiterungen), sind beim Löschen einige spezielle Punkte zu beachten.
 
@@ -41,7 +42,7 @@ Regeln hängen von anderen Ressourcen (Erweiterungen und Datenelementen) ab, ver
 
 Datenelemente hängen von Erweiterungen ab. Im Gegensatz zu Regeln können Datenelemente jedoch Regeln und Erweiterungen enthalten, die davon abhängen. Wenn Sie ein Datenelement löschen, wirkt sich dies auf alle von diesem Datenelement abhängigen Regeln oder Erweiterungen aus.
 
-Nach dem Löschen gibt das Datenelement zur Laufzeit keinen korrekten Wert mehr zurück. Entweder wird eine leere Zeichenfolge oder der Name des gelöschten Datenelements (eingeschlossen in %%) zurückgegeben. Beispiel: `%data-element-name%`. Dieses Verhalten kann in Property-Einstellungen konfiguriert werden.
+Nach dem Löschen gibt das Datenelement zur Laufzeit keinen korrekten Wert mehr zurück. Entweder wird eine leere Zeichenfolge oder der Name des gelöschten Datenelements (eingeschlossen in %%) zurückgegeben. Beispiel: `%data-element-name%`. Dieses Verhalten kann in Eigenschaften-Einstellungen konfiguriert werden.
 
 Sie können diese Abhängigkeiten vor oder nach dem Löschen des Datenelements aufheben.
 

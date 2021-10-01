@@ -1,10 +1,11 @@
 ---
 title: Übersicht über Tags
 description: Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](./term-updates.md).
 
 Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
 
@@ -68,7 +69,7 @@ Durch den Veröffentlichungsprozess können Teams Code auf Seiten veröffentlich
 Sie können Implementierungen einzelner Technologien oder einer Gruppe von Technologien automatisieren.
 
 * Tags interagieren mit der Reactor-API.
-* Implementierungen können über APIs automatisiert werden.
+* Bereitstellungen können über APIs automatisiert werden.
 * Integrieren Sie die -APIs in Ihre eigenen internen Systeme.
 * Sie können bei Bedarf Ihre eigene Benutzeroberfläche erstellen.
 

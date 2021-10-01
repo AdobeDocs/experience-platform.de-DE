@@ -1,10 +1,11 @@
 ---
 title: Datenelementtypen für Web-Erweiterungen
 description: Erfahren Sie, wie Sie ein Bibliotheksmodul vom Typ „data-element“ für eine Tag-Erweiterung in einer Web-Eigenschaft definieren.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '596'
-ht-degree: 70%
+ht-degree: 81%
 
 ---
 
@@ -12,11 +13,11 @@ ht-degree: 70%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 In Datenerfassungs-Tags sind Datenelemente im Wesentlichen Aliase zu Datenteilen auf einer Seite. Diese Daten finden Sie in Abfragezeichenfolgenparametern, Cookies, DOM-Elementen oder anderen Speicherorten. Ein Datenelement kann durch Regeln referenziert werden und dient als Abstraktion für den Zugriff auf diese Daten.
 
-Datenelementtypen werden von Erweiterungen bereitgestellt und ermöglichen es Benutzern, Datenelemente so zu konfigurieren, dass sie auf bestimmte Datenteile zugreifen können. Als Beispiel könnte eine Erweiterung einen Datenelementtyp „Lokales Speicherelement“ bereitstellen, bei dem der Benutzer einen lokalen Speicherelementnamen angeben kann. Wenn das Datenelement durch eine Regel referenziert wird, kann die Erweiterung den Elementwert der lokalen Datenspeicherung mithilfe des Elementnamens der lokalen Datenspeicherung suchen, den der Benutzer beim Konfigurieren des Datenelements angegeben hat.
+Datenelementtypen werden von Erweiterungen bereitgestellt und ermöglichen es Benutzern, Datenelemente so zu konfigurieren, dass sie auf bestimmte Datenteile zugreifen können. Als Beispiel könnte eine Erweiterung einen Datenelementtyp „Lokales Speicherelement“ bereitstellen, bei dem der Benutzer einen lokalen Speicherelementnamen angeben kann. Wenn das Datenelement durch eine Regel referenziert wird, kann die Erweiterung den Elementwert der lokalen Datenspeicherung mithilfe des Elementnamens der lokalen Datenspeicherung nachschlagen, den der Benutzer beim Konfigurieren des Datenelements angegeben hat.
 
 In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Web-Erweiterung in Adobe Experience Platform definieren.
 
@@ -24,12 +25,12 @@ In diesem Dokument wird beschrieben, wie Sie Datenelementtypen für eine Web-Erw
 >
 >Wenn Sie eine Kantenerweiterung entwickeln, lesen Sie stattdessen das Handbuch zu [Datenelementtypen für Kantenerweiterungen](../edge/data-element-types.md) .
 >
->In diesem Dokument wird außerdem davon ausgegangen, dass Sie mit Bibliotheksmodulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
+>In diesem Dokument wird auch davon ausgegangen, dass Sie mit Bibliotheks-Modulen und deren Integration in Web-Erweiterungen vertraut sind. Wenn Sie eine Einführung benötigen, lesen Sie die Übersicht über die [Formatierung von Bibliotheksmodulen](./format.md), bevor Sie zu diesem Handbuch zurückkehren.
 
 Datenelementtypen bestehen in der Regel aus Folgendem:
 
 1. Eine [Ansicht](./views.md), die in der Datenerfassungs-Benutzeroberfläche angezeigt wird und es Benutzern ermöglicht, die Einstellungen für das Datenelement zu ändern.
-2. Ein Bibliotheksmodul wird in der Tag-Laufzeitbibliothek ausgegeben, um die Einstellungen zu interpretieren und Datenteile abzurufen.
+2. Ein Bibliotheksmodul, das in der Tag-Laufzeitbibliothek ausgegeben wird, um die Einstellungen zu interpretieren und Datensegmente abzurufen.
 
 Stellen Sie sich eine Situation vor, in der Sie den Benutzern erlauben möchten, ein Datenelement aus einem lokalen Speicherelement namens `productName` abzurufen. Ihr Modul könnte wie folgt aussehen:
 

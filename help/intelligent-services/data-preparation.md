@@ -160,12 +160,12 @@ Vollständige Informationen zu den einzelnen erforderlichen Unterfeldern für `x
 
 Die folgende Tabelle enthält einige Beispiele für Marketingkanäle, die dem Schema `xdm:channel` zugeordnet sind:
 
-| Channel | `@type` | `mediaType` | `mediaAction` |
+| Kanal | `@type` | `mediaType` | `mediaAction` |
 | --- | --- | --- | --- |
 | Paid Search | https:/<span>/ns.adobe.com/xdm/channel-types/search | bezahlt | clicks |
 | Social - Marketing | https:/<span>/ns.adobe.com/xdm/channel-types/social | Earned | Klicks |
 | Anzeigen | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | Klicks |
-| E-Mail | https:/<span>/ns.adobe.com/xdm/channel-types/email | bezahlt | Klicks |
+| E-Mail  | https:/<span>/ns.adobe.com/xdm/channel-types/email | bezahlt | Klicks |
 | Interner Referrer | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | Klicks |
 | Display ViewThrough | https:/<span>/ns.adobe.com/xdm/channel-types/display | bezahlt | impressions |
 | QR-Code-Umleitung | https:/<span>/ns.adobe.com/xdm/channel-types/direct | Eigentümer | Klicks |

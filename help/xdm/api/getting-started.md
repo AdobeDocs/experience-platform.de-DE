@@ -179,7 +179,7 @@ POST /tenant/fieldgroups
 
 Wenn Sie eine Klasse, Feldergruppe, ein Schema oder einen Datentyp im `tenant`-Container erstellen, wird dieser in [!DNL Schema Registry] gespeichert und ein `$id` -URI zugewiesen, der Ihre `TENANT_ID` enthält. Diese `$id` wird in der gesamten API verwendet, um auf bestimmte Ressourcen zu verweisen. Beispiele für Werte der `$id` finden Sie im nächsten Abschnitt.
 
-## Resource identification {#resource-identification}
+## Ressourcenidentifizierung {#resource-identification}
 
 XDM-Ressourcen werden mit einem `$id` -Attribut in Form eines URI identifiziert, z. B. in den folgenden Beispielen:
 
@@ -232,8 +232,7 @@ Derzeit unterstützt Platform nur eine einzelne Hauptversion (`1`) für jedes Sc
 >* Der Datensatz wurde für die Verwendung im Echtzeit-Kundenprofil aktiviert (auch wenn keine Daten erfasst wurden).
 
 >
->
-Wenn das Schema keinem Datensatz zugeordnet wurde, der eines der oben genannten Kriterien erfüllt, kann es geändert werden. In allen Fällen bleibt die Komponente `version` jedoch weiterhin bei `1`.
+>Wenn das Schema keinem Datensatz zugeordnet wurde, der eines der oben genannten Kriterien erfüllt, kann es geändert werden. In allen Fällen bleibt die Komponente `version` jedoch weiterhin bei `1`.
 
 ## XDM-Feldbeschränkungen und Best Practices
 

@@ -1,8 +1,9 @@
 ---
 title: Umgang mit Fehlern
 description: Hier erfahren Sie, wie Fehler in der Reactor-API gehandhabt werden.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
+exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 100%
 
@@ -77,7 +78,7 @@ In der folgenden Tabelle sind die verschiedenen Fehler aufgeführt, die die API 
 | `ims-session-error` | Es gibt ein Problem mit der angemeldeten Sitzung. Melden Sie sich bitte ab und melden Sie sich erneut an. |
 | `internal-error` | Es ist ein interner Fehler aufgetreten. Warten Sie einige Minuten und versuchen Sie es erneut. Wenn das Problem weiterhin besteht, wenden Sie sich an die Kundenunterstützung. |
 | `invalid-data_element` | Ein ungültiges Datenelement kann nicht zu einer Bibliothek hinzugefügt werden. |
-| `invalid-embed_code` | Entweder handelt es sich um einen ungültigen Einbettungs-Code oder Sie versuchen, ihn mit einer Entwicklungs- oder Staging-Umgebung zu verknüpfen. Einbettungs-Codes für das dynamische Tag-Management (DTM) können nur mit Produktionsumgebungen verknüpft werden. |
+| `invalid-embed_code` | Entweder handelt es sich um einen ungültigen Einbettungs-Code oder Sie versuchen, ihn mit einer Entwicklungs- oder Staging-Umgebung zu verknüpfen. Einbettungs-Codes für das dynamische Tag-Management (Dynamic Tag Management, DTM) können nur mit Produktionsumgebungen verknüpft werden. |
 | `invalid-extension` | Eine ungültige Erweiterung kann nicht zu einer Bibliothek hinzugefügt werden. |
 | `invalid-extension_package_id` | Sie können nur einige der Objekteigenschaften eines Erweiterungspakets ändern. Sie haben versucht, eine der nicht zulässigen zu ändern. |
 | `invalid-new-owner-org-id` | Die Organisations-ID, die Sie zuweisen wollten, ist keine gültige Organisations-ID. |

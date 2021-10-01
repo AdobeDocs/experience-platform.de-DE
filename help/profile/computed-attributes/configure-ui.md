@@ -1,57 +1,56 @@
 ---
-keywords: Experience Platform;Profil;Echtzeit-Profil von Kunden;Fehlerbehebung;API
-title: Konfigurieren eines Felds für berechnete Attribute
+keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
+title: Konfigurieren eines berechneten Attributfelds
 topic-legacy: guide
 type: Documentation
-description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignis-Ebene in Attribute auf Profil-Ebene Aggregat werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Feldgruppe erstellt werden, um das Schema einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
-translation-type: tm+mt
+description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Schemafeldgruppe erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
 source-git-commit: 6e0f7578d0818f88e13b963f64cb2de6729f0574
 workflow-type: tm+mt
 source-wordcount: '859'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
 
-# (Alpha) Konfigurieren Sie ein Feld für ein berechnetes Attribut in der Benutzeroberfläche
+# (Alpha) Konfigurieren eines berechneten Attributfelds in der Benutzeroberfläche
 
 >[!IMPORTANT]
 >
 >Die Funktion für berechnete Attribute ist derzeit alphanumerisch und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
-Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Feldgruppe erstellt werden, um das Schema einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
+Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe einer Schemafeldgruppe erstellt werden, um das Feld einem vorhandenen Schema hinzuzufügen, oder durch Auswahl eines Felds, das Sie bereits in einem Schema definiert haben.
 
 >[!NOTE]
 >
->Berechnete Attribute können nicht zu Feldern innerhalb von Adoben-definierten Feldgruppen hinzugefügt werden. Das Feld muss sich im `tenant`-Namespace befinden, d. h. es muss ein Feld sein, das Sie definieren und einem Schema hinzufügen.
+>Berechnete Attribute können nicht zu Feldern in von der Adobe definierten Feldgruppen hinzugefügt werden. Das Feld muss sich im `tenant`-Namespace befinden, d. h. es muss ein Feld sein, das Sie definieren und einem Schema hinzufügen.
 
-Um ein berechnetes Attributfeld erfolgreich zu definieren, muss das Schema für [!DNL Profile] aktiviert sein und als Teil des Vereinigung-Schemas für die Klasse angezeigt werden, auf der das Schema basiert. Weitere Informationen zu [!DNL Profile]-aktivierten Schemas und Vereinigungen finden Sie im Abschnitt [!DNL Schema Registry] Entwicklerhandbuch unter [Aktivieren eines Schemas zum Profil und Anzeigen von Vereinigung-Schemas](../../xdm/api/getting-started.md). Außerdem empfehlen wir Ihnen, den [Abschnitt über Vereinigungen](../../xdm/schema/composition.md) in der Grundlagendokumentation zur Schemakomposition zu lesen.
+Um ein berechnetes Attributfeld erfolgreich zu definieren, muss das Schema für [!DNL Profile] aktiviert sein und als Teil des Vereinigungsschemas für die Klasse angezeigt werden, auf der das Schema basiert. Weitere Informationen zu [!DNL Profile]-aktivierten Schemata und Vereinigungen finden Sie im Abschnitt des [!DNL Schema Registry] Entwicklerhandbuchs zum Aktivieren eines Schemas für Profil und Anzeigen von Vereinigungsschemas](../../xdm/api/getting-started.md). [ Außerdem empfehlen wir Ihnen, den [Abschnitt über Vereinigungen](../../xdm/schema/composition.md) in der Grundlagendokumentation zur Schemakomposition zu lesen.
 
-Der Arbeitsablauf in diesem Lernprogramm verwendet ein [!DNL Profile]-aktiviertes Schema und führt die Schritte zum Definieren einer neuen Feldgruppe mit dem berechneten Attributfeld und zum Sicherstellen des richtigen Namensraums durch. Wenn Sie bereits über ein Feld verfügen, das sich in einem Profil-aktivierten Schema im richtigen Namespace befindet, können Sie direkt mit dem [Erstellen eines berechneten Attributs](#create-a-computed-attribute) fortfahren.
+Der Workflow in diesem Tutorial verwendet ein [!DNL Profile]-aktiviertes Schema und folgt den Schritten zum Definieren einer neuen Feldergruppe, die das berechnete Attributfeld enthält, und zum Sicherstellen, dass es der richtige Namespace ist. Wenn Sie bereits über ein Feld verfügen, das sich in einem Profil-aktivierten Schema im richtigen Namespace befindet, können Sie direkt mit dem [Erstellen eines berechneten Attributs](#create-a-computed-attribute) fortfahren.
 
 ## Schema anzeigen
 
-Die folgenden Schritte werden in der Adobe Experience Platform-Benutzeroberfläche ausgeführt, um ein Schema zu suchen, eine Feldgruppe hinzuzufügen und ein Feld zu definieren. Wenn Sie die API lieber verwenden möchten, lesen Sie das [Schema Registry-Entwicklerhandbuch](../../xdm/api/getting-started.md), um zu erfahren, wie Sie eine Feldgruppe erstellen, eine Feldgruppe zu einem Schema hinzufügen und ein Schema für [!DNL Real-time Customer Profile] aktivieren.[!DNL Schema Registry]
+Die folgenden Schritte verwenden die Adobe Experience Platform-Benutzeroberfläche, um ein Schema zu suchen, eine Feldergruppe hinzuzufügen und ein Feld zu definieren. Wenn Sie die API [!DNL Schema Registry] bevorzugen, lesen Sie das [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md) , um zu erfahren, wie Sie eine Feldergruppe erstellen, eine Feldergruppe zu einem Schema hinzufügen und ein Schema zur Verwendung mit [!DNL Real-time Customer Profile] aktivieren.
 
 Klicken Sie in der Benutzeroberfläche in der linken Leiste auf **[!UICONTROL Schemas]** und nutzen Sie die Suchleiste auf dem Tab **[!UICONTROL Durchsuchen]**, um das Schema, das Sie aktualisieren möchten, zu suchen.
 
 ![](../images/computed-attributes/Schemas-Browse.png)
 
-Nachdem Sie das Schema gefunden haben, klicken Sie auf seinen Namen, um das [!DNL Schema Editor] zu öffnen, in dem Sie Änderungen am Schema vornehmen können.
+Nachdem Sie das Schema gefunden haben, klicken Sie auf seinen Namen, um das [!DNL Schema Editor] zu öffnen, in dem Sie das Schema bearbeiten können.
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-## Erstellen einer Feldgruppe
+## Feldergruppe erstellen
 
-Um eine neue Feldgruppe zu erstellen, klicken Sie auf **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldgruppen]** im Abschnitt **[!UICONTROL Komposition]** links im Editor. Dadurch wird das Dialogfeld **[!UICONTROL Hinzufügen Feldgruppe]** geöffnet, in dem Sie die vorhandenen Feldgruppen sehen können. Klicken Sie auf das Optionsfeld für **[!UICONTROL Neue Feldgruppe]** erstellen, um Ihre neue Feldgruppe zu definieren.
+Um eine neue Feldergruppe zu erstellen, klicken Sie auf **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldergruppen]** im Abschnitt **[!UICONTROL Komposition]** auf der linken Seite des Editors. Dadurch wird das Dialogfeld **[!UICONTROL Feldergruppe hinzufügen]** geöffnet, in dem Sie vorhandene Feldergruppen sehen können. Klicken Sie auf die Optionsschaltfläche für **[!UICONTROL Neue Feldergruppe]** erstellen, um Ihre neue Feldergruppe zu definieren.
 
-Geben Sie der Feldgruppe einen Namen und eine Beschreibung ein und klicken Sie nach Abschluss auf **[!UICONTROL Hinzufügen Feldgruppe]**.
+Geben Sie der Feldergruppe einen Namen und eine Beschreibung und klicken Sie nach Abschluss auf **[!UICONTROL Feldergruppe hinzufügen]** .
 
 ![](../images/computed-attributes/Add-field-group.png)
 
 ## Berechnetes Attributfeld für das Schema hinzufügen
 
-Ihre neue Feldgruppe sollte nun im Abschnitt &quot;[!UICONTROL Feldgruppen]&quot;unter &quot;[!UICONTROL Zusammensetzung]&quot;angezeigt werden. Klicken Sie auf den Namen der Feldgruppe, und im Abschnitt **[!UICONTROL Struktur]** werden mehrere Schaltflächen **[!UICONTROL Hinzufügen Feld]** angezeigt.
+Ihre neue Feldergruppe sollte jetzt im Abschnitt &quot;[!UICONTROL Feldergruppen]&quot;unter &quot;[!UICONTROL Komposition]&quot;angezeigt werden. Klicken Sie auf den Namen der Feldergruppe und mehrere Schaltflächen **[!UICONTROL Feld hinzufügen]** werden im Abschnitt **[!UICONTROL Struktur]** des Editors angezeigt.
 
 Wählen Sie neben dem Namen des Schemas **[!UICONTROL Feld hinzufügen]**, um ein Feld der obersten Ebene hinzuzufügen. Alternativ können Sie das Feld an einer beliebigen Stelle im gewünschten Schema einfügen.
 
@@ -73,11 +72,11 @@ Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Übernehmen]**. Daraufhin we
 
 ## Schema für [!DNL Profile] aktivieren
 
-Bevor Sie fortfahren, stellen Sie sicher, dass das Schema für [!DNL Profile] aktiviert wurde. Klicken Sie im Bereich **[!UICONTROL Struktur]** des Editors auf den Namen des Schemas, um den Tab **[!UICONTROL Schemaeigenschaften]** anzuzeigen. Wenn der Schieberegler **[!UICONTROL Profil]** blau ist, wurde das Schema für [!DNL Profile] aktiviert.
+Bevor Sie fortfahren, stellen Sie sicher, dass das Schema für [!DNL Profile] aktiviert wurde. Klicken Sie im Bereich **[!UICONTROL Struktur]** des Editors auf den Namen des Schemas, um den Tab **[!UICONTROL Schemaeigenschaften]** anzuzeigen. Wenn der Regler **[!UICONTROL Profil]** blau ist, wurde das Schema für [!DNL Profile] aktiviert.
 
 >[!NOTE]
 >
->Die Aktivierung eines Schemas für [!DNL Profile] kann nicht rückgängig gemacht werden. Wenn Sie also auf den Schieberegler klicken, müssen Sie nicht riskieren, es zu deaktivieren.
+>Die Aktivierung eines Schemas für [!DNL Profile] kann nicht rückgängig gemacht werden. Wenn Sie also nach der Aktivierung auf den Schieberegler klicken, besteht nicht die Gefahr, dass dieser deaktiviert wird.
 
 ![](../images/computed-attributes/Profile.png)
 
@@ -85,4 +84,4 @@ Jetzt können Sie auf **[!UICONTROL Speichern]** klicken, um das aktualisierte S
 
 ## Nächste Schritte
 
-Nachdem Sie ein Feld erstellt haben, in dem der berechnete Attributwert gespeichert wird, können Sie das berechnete Attribut mit dem API-Endpunkt `/computedattributes` erstellen. Ausführliche Anweisungen zum Erstellen eines berechneten Attributs in der API finden Sie in der Anleitung [API-Endpunkt für berechnete Attribute](ca-api.md).
+Nachdem Sie jetzt ein Feld erstellt haben, in dem Ihr berechneter Attributwert gespeichert wird, können Sie das berechnete Attribut mithilfe des API-Endpunkts `/computedattributes` erstellen. Ausführliche Anweisungen zum Erstellen eines berechneten Attributs in der API finden Sie in den Schritten im [Handbuch zum API-Endpunkt für berechnete Attribute](ca-api.md).

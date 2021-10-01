@@ -1,18 +1,19 @@
 ---
 title: Versionshinweise zur Adobe Experience Cloud Identity Service-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '521'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# Versionshinweise zur Erweiterung „Adobe Experience Cloud Identity Service“
+# Adobe Experience Cloud Identity Service-Erweiterung – Versionshinweise
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Versionshinweise, die sich nicht nur auf die Adobe Experience Platform-Tag-Erweiterung beziehen, sondern auf Experience Cloud Identity Service selbst, finden Sie unter [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de)
 

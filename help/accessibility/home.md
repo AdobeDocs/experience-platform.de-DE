@@ -4,13 +4,13 @@ title: Übersicht über Funktionen zur Barrierefreiheit in Experience Platform
 topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform möchte allen Anwendern barrierefreie und inklusive Funktionen bieten.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 100%
 
 ---
-
 
 # Barrierefreiheit in Adobe Experience Platform
 

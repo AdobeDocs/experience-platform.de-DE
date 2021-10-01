@@ -3,7 +3,7 @@ title: Benutzerberechtigungen für Tags
 description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: 88593d921d6ad97fc4dfb059f0272817caee06c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 100%
 

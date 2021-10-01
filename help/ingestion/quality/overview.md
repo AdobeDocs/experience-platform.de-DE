@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Datenqualität;Qualität;Qualität;Unterstützte Validierung;Validierung;Unterstützte Validierung;
+keywords: Experience Platform; Startseite; beliebte Themen; Datenqualität; Qualität; Qualität; unterstützte Validierung; Validierung; unterstützte Validierung;
 solution: Experience Platform
 title: Datenqualität
 topic-legacy: overview
-description: Das folgende Dokument enthält eine Zusammenfassung der unterstützten Prüf- und Prüfverhaltensweisen für die Batch- und Streaming-Erfassung in Adobe Experience Platform.
+description: Das folgende Dokument bietet eine Zusammenfassung der unterstützten Prüf- und Validierungsverfahren für die Batch- und Streaming-Erfassung in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '317'
@@ -30,7 +29,7 @@ Adobe Experience Platform bietet klar definierte Garantien für Vollständigkeit
 
 ## Unterstützte Validierungsverfahren
 
-Sowohl die Batch- als auch die Streaming-Erfassung verhindern, dass fehlerhafte Daten nach unten gelangen, indem fehlerhafte Daten für den Abruf und die Analyse in [!DNL Data Lake] verschoben werden. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
+Sowohl die Batch- als auch die Streaming-Erfassung verhindern, dass fehlerhafte Daten nachgelagert werden, indem fehlerhafte Daten zum Abrufen und zur Analyse in [!DNL Data Lake] verschoben werden. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
 
 ### Batch-Erfassung
 
@@ -56,4 +55,4 @@ Die folgenden Validierungen werden für die Streaming-Erfassung durchgeführt:
 | Datensatz | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
 | Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben und gültig ist. |
 
-Weitere Informationen darüber, wie [!DNL Platform] Daten überwacht und validiert, finden Sie in der [Dokumentation zu Überwachungsdatenströmen](./monitor-data-ingestion.md).
+Weitere Informationen dazu, wie [!DNL Platform] Daten überwacht und validiert, finden Sie in der [Dokumentation zu Überwachungsdatenflüssen](./monitor-data-ingestion.md).

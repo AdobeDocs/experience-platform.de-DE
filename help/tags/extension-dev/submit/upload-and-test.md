@@ -1,8 +1,9 @@
 ---
 title: Hochladen und Implementieren von End-to-End-Tests für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform validieren, hochladen und testen können.
-source-git-commit: 41a394974153883dc300bdd8a00fc3106c4f0ac6
-workflow-type: ht
+exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Verwenden Sie zum Testen von Tag-Erweiterungen in Adobe Experience Platform die Tags-API und/oder die Befehlszeilen-Tools, um Ihre Erweiterungspakete hochzuladen. Verwenden Sie anschließend die Datenerfassungs-Benutzeroberfläche, um Ihr Erweiterungspaket in einer Eigenschaft zu installieren und seine Funktionen in einer Tag-Bibliothek und einem Build zu nutzen.
 
@@ -52,7 +53,7 @@ Nachdem Sie über die Berechtigungen verfügen, können Sie Ihr Erweiterungspake
 
 Wenn Sie das Erweiterungspaket zum ersten Mal hochladen, wird ihm der Status `development` zugewiesen. Das bedeutet, dass es nur für Ihr eigenes Unternehmen und nur bei einer Eigenschaft sichtbar ist, die für die Erweiterungsentwicklung markiert wurde.
 
-Verwenden Sie die Befehlszeile, um den folgenden Befehl in dem Ordner auszuführen, der Ihr ZIP-Paket enthält.
+Verwenden Sie die Befehlszeile, um den folgenden Befehl in dem Ordner auszuführen, der Ihr .zip-Paket enthält.
 
 ```bash
 npx @adobe/reactor-uploader
@@ -101,7 +102,7 @@ Der Bildschirm „Eigenschaften“ wird angezeigt. Wählen Sie den Namen der soe
 
 ## Installieren der Erweiterung {#install-extension}
 
-Um Ihre Erweiterung in dieser Eigenschaft zu installieren, klicken Sie in den Hauptnavigations-Links in der linken Spalte auf **Erweiterungen**. Die **Core**-Erweiterung wird auf dem Bildschirm **Installiert** angezeigt. Die Core-Erweiterung enthält alle Tag-Management-Funktionen in der Datenerfassung.
+Um Ihre Erweiterung in dieser Eigenschaft zu installieren, klicken Sie in den Hauptnavigations-Links in der linken Spalte auf **Erweiterungen**. Die **Core**-Erweiterung wird auf dem Bildschirm **Installiert** angezeigt. Die Core-Erweiterung enthält alle Tag-Management-Funktionen in der Datenerfassung. 
 
 ![](../images/getting-started/extensions.png)
 
@@ -219,7 +220,7 @@ Wenn Sie feststellen, dass Sie Änderungen an Ihrem Erweiterungspaket vornehmen 
 1. Vornehmen von Änderungen am Code des Projekts.
 1. Validieren der Änderungen mit dem Sandbox-Tool.
 1. Erstellen eines neuen ZIP-Pakets mit dem Packager-Tool
-1. Verwenden Sie das Uploader-Tool, um Ihr neues ZIP-Paket hochzuladen. Der Prozess folgt denselben Anweisungen wie beim ersten Upload. Sie werden jedoch feststellen, dass dieses neue Paket die ältere Version überschreibt, anstatt eine neue zu erstellen, da es bereits ein Erweiterungspaket mit diesem Namen im Entwicklungsmodus gibt.
+1. Verwenden Sie das Uploader-Tool, um Ihr neues .zip-Paket hochzuladen. Der Prozess folgt denselben Anweisungen wie beim ersten Upload. Sie werden jedoch feststellen, dass dieses neue Paket die ältere Version überschreibt, anstatt eine neue zu erstellen, da es bereits ein Erweiterungspaket mit diesem Namen im Entwicklungsmodus gibt.
 
    >[!NOTE]
    >

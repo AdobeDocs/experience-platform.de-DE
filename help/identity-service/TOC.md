@@ -5,7 +5,7 @@ breadcrumb-title: Anleitung zum Platform Identity Service
 user-guide-description: Verknüpfen Sie Kundenidentitäten zwischen Geräten und Systemen, um personalisierte digitale Erlebnisse bereitzustellen.
 feature: Identities
 source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 100%
 

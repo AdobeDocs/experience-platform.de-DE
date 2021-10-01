@@ -1,8 +1,9 @@
 ---
 title: Schnellstartanleitung
 description: Erfahren Sie, wie Sie mit Tags in Adobe Experience Platform schnell startklar werden.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: ht
+exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1532'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Tags sind die nächste Generation der Tag-Management-Technologie von Adobe Experience Platform. Sie wurde von Grund auf neu erstellt, um ein offenes und nachhaltiges Ökosystem zu unterstützen, in dem jeder seine eigenen Integrationen erstellen kann, die von Adobe-Kunden auf ihren Sites bereitgestellt werden können. Es handelt sich um eine API-First-Anwendung, sodass alle möglichen Aktionen auf der Benutzeroberfläche auch programmgesteuert über eine API erfolgen können.
 
@@ -133,6 +134,6 @@ Weitere Informationen zu den verschiedenen Status und Optionen, die während des
 
 Weitere Informationen zu Tags finden Sie in den folgenden Ressourcen:
 
-* **[Datenerfassungs-Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
+* **[Datensammlungs-Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Stellen und beantworten Sie Fragen, reichen Sie Ideen ein, stimmen Sie über die Ideen anderer ab. Melden Sie sich mit Ihrer Adobe ID an.
 * **[Entwicklerdokumente](https://developer.adobelaunch.com/)**: Beteiligen Sie sich an der Tag-Entwickler-Community, um Erweiterungen zu erstellen oder die Tag-APIs zu verwenden
 * **[Tutorials - Überblick](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=de)**: Diese Dokumente enthalten eine Einführung in Tag-Konzepte, einschließlich Ereignisweiterleitung und Mobile SDK in Android-Mobile-Apps.

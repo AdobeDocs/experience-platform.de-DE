@@ -1,11 +1,11 @@
 ---
 title: Integrieren der IAB TCF 2.0-Unterstützung mithilfe des Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie die IAB TCF 2.0-Unterstützung für Ihre Website einrichten, ohne Tags zu verwenden.
-seo-description: Erfahren Sie, wie Sie die IAB TCF 2.0-Zustimmung mit dem Adobe Experience Platform Web SDK einrichten.
+seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
 source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---

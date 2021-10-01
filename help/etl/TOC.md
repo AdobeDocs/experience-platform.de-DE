@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Adobe Experience Platform ETL-Anleitung
 breadcrumb-title: ETL-Anleitung
 user-guide-description: Erfahren Sie mehr über die allgemeinen Schritte zum Erstellen sicherer Hochleistungs-Connectoren für die Dateneingabe in die Plattform.
-feature: Daten-Management, Datenaufnahme
+feature: Data Management, Data Ingestion
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
-source-wordcount: '47'
+workflow-type: tm+mt
+source-wordcount: '43'
 ht-degree: 100%
 
 ---

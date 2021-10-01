@@ -14,7 +14,7 @@ ht-degree: 44%
 
 # Ziele {#destinations}
 
-* [Ziele Übersicht](./home.md)
+* [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
 * API-Tutorials {#api}
    * [Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API aktivieren](./api/streaming-destinations.md)

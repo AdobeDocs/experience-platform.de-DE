@@ -1,19 +1,18 @@
 ---
 title: Verwalten von Flackern für personalisierte Erlebnisse mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Flackern in der Benutzererfahrung verwalten können.
-keywords: Zielgruppe;Flackern;prehidingStyle;asynchron;asynchron;
-translation-type: tm+mt
-source-git-commit: 69f2e6069546cd8b913db453dd9e4bc3f99dd3d9
+description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Flackern bei Benutzererlebnissen verhindern können.
+keywords: target;flackern;prehidingStyle;asynchron;asynchron;
+exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 76%
 
 ---
 
+# Verwalten von Flackern
 
-# Flackern verwalten
-
-Beim Versuch, Personalisierungsinhalte zu rendern, muss das SDK sicherstellen, dass kein Flackern auftritt. Beim Flackern, auch FOOC (Flash des Originalinhalts) genannt, wird ein Originalinhalt kurz angezeigt, bevor die Alternative während des Tests/der Personalisierung angezeigt wird. Das SDK versucht, CSS-Stile auf Elemente der Seite anzuwenden, um sicherzustellen, dass diese Elemente ausgeblendet werden, bis der Personalisierungsinhalt erfolgreich gerendert wird.
+Beim Versuch, Personalisierungsinhalte zu rendern, muss das SDK sicherstellen, dass kein Flackern auftritt. Beim Flackern, auch FOOC (Flash des Originalinhalts) genannt, wird kurz ein Originalinhalt angezeigt, bevor die Alternative während des Tests/der Personalisierung angezeigt wird. Das SDK versucht, CSS-Stile auf Elemente der Seite anzuwenden, um sicherzustellen, dass diese Elemente ausgeblendet werden, bis der Personalisierungsinhalt erfolgreich gerendert wird.
 
 Die Funktion zum Beheben von Flackern umfasst einige Phasen:
 
@@ -23,9 +22,9 @@ Die Funktion zum Beheben von Flackern umfasst einige Phasen:
 
 ## Vorabausblenden
 
-Während der Vorabausblendungsphase verwendet das SDK die `prehidingStyle`-Konfigurationsoption, um ein HTML-Tag zu erstellen und es an die DOM anzuhängen, um sicherzustellen, dass große Teile der Seite ausgeblendet werden. Wenn Sie sich nicht sicher sind, welche Teile der Seite personalisiert werden, sollten Sie `prehidingStyle` auf `body { opacity: 0 !important }` einstellen. Dadurch wird sichergestellt, dass die gesamte Seite ausgeblendet wird. Dies führt jedoch zu einer schlechteren Seitenwiedergabeleistung, die von Tools wie Lighthouse, Webseitentests usw. gemeldet wird. Um die beste Leistung beim Seiten-Rendering zu erzielen, wird empfohlen, `prehidingStyle` auf eine Liste von Container-Elementen einzustellen, die die Seitenabschnitte enthalten, die personalisiert werden.
+Während der Vorabausblendungsphase verwendet das SDK die `prehidingStyle`-Konfigurationsoption, um ein HTML-Tag zu erstellen und es an die DOM anzuhängen, um sicherzustellen, dass große Teile der Seite ausgeblendet werden. Wenn Sie sich nicht sicher sind, welche Teile der Seite personalisiert werden, sollten Sie `prehidingStyle` auf `body { opacity: 0 !important }` einstellen. Dadurch wird sichergestellt, dass die gesamte Seite ausgeblendet wird. Dies hat jedoch den Nachteil, dass die Leistung beim Seiten-Rendering schlechter wird, was von Tools wie Lighthouse, Webseitentests usw. gemeldet wird. Um die beste Leistung beim Seiten-Rendering zu erzielen, wird empfohlen, `prehidingStyle` auf eine Liste von Container-Elementen einzustellen, die die Seitenabschnitte enthalten, die personalisiert werden.
 
-Wenn Sie eine HTML-Seite wie die unten stehende haben und Sie wissen, dass nur `bar`- und `bazz` Container-Elemente jemals personalisiert werden:
+Angenommen, Sie haben eine HTML-Seite wie die unten stehende und Sie wissen, dass nur `bar` - und `bazz` -Container-Elemente jemals personalisiert werden:
 
 ```html
 <html>
@@ -51,7 +50,7 @@ Dann sollte `prehidingStyle` auf einen Wert wie `#bar, #bazz { opacity: 0 !impor
 
 ## Vorverarbeitung
 
-Die Phase der Vorverarbeitung beginnt, sobald das SDK den personalisierten Inhalt vom Server erhalten hat. Während dieser Phase wird die Antwort vorverarbeitet, um sicherzustellen, dass Elemente, die personalisierte Inhalte enthalten müssen, ausgeblendet werden. Nachdem diese Elemente ausgeblendet wurden, wird das HTML-Tag, das anhand der `prehidingStyle`-Konfigurationsoption erstellt wurde, entfernt und der HTML-Textkörper oder die verborgenen Container-Elemente werden angezeigt.
+Die Vorverarbeitungsphase beginnt, sobald das SDK die personalisierten Inhalte vom Server erhalten hat. Während dieser Phase wird die Antwort vorverarbeitet, um sicherzustellen, dass Elemente, die personalisierte Inhalte enthalten müssen, ausgeblendet werden. Nachdem diese Elemente ausgeblendet wurden, wird das HTML-Tag, das anhand der `prehidingStyle`-Konfigurationsoption erstellt wurde, entfernt und der HTML-Textkörper oder die verborgenen Container-Elemente werden angezeigt.
 
 ## Rendern
 

@@ -22,7 +22,7 @@ Weitere Informationen finden Sie unter den Links in der Dokumentation zu den ein
 
 * [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html)
 * [Intelligent Services](https://experienceleague.adobe.com/docs/intelligent-services.html)
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/de-DE/experience-cloud/user-guides/home.translate.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=de)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=de)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 

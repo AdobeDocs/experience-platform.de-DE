@@ -1,51 +1,50 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Abrufen fehlgeschlagener Stapel;Fehlgeschlagene Stapel;Stapelverarbeitung;Stapelverarbeitung;Fehlgeschlagene Stapel;Abrufen fehlgeschlagener Stapel;Herunterladen fehlgeschlagener Stapel;Herunterladen fehlgeschlagener Stapel; Herunterladen fehlgeschlagener Stapel;
+keywords: Experience Platform; Startseite; beliebte Themen; Abrufen fehlgeschlagener Batches; fehlgeschlagene Batches; Batch-Erfassung; Batch-Erfassung; fehlgeschlagene Batches; Abrufen fehlgeschlagener Batches; Abrufen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches; Herunterladen fehlgeschlagener Batches;
 solution: Experience Platform
-title: Abrufen fehlgeschlagener Stapel mit der Datenzugriffs-API
+title: Abrufen fehlgeschlagener Batches mit der Data Access API
 topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial wird erläutert, wie Sie mithilfe von APIs für die Datenaufnahme Informationen aus einem fehlgeschlagenen Batch abrufen.
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '653'
-ht-degree: 76%
+ht-degree: 83%
 
 ---
 
-# Abrufen fehlgeschlagener Stapel mit der Datenzugriffs-API
+# Abrufen fehlgeschlagener Batches mit der Data Access API
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Stapelverarbeitung verwenden, mit der Sie ihre Daten mit verschiedenen Dateitypen (z. B. CSVs) einfügen können, oder Streaming, mit dem Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit an [!DNL Platform] einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um ihre Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
 
-In diesem Lernprogramm werden Schritte zum Abrufen von Informationen zu einem fehlgeschlagenen Stapel mit [!DNL Data Ingestion]-APIs beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Informationen zu einem fehlgeschlagenen Batch mithilfe von [!DNL Data Ingestion]-APIs beschrieben.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-- [[!DNL Data Ingestion]](../home.md): Die Methoden, mit denen Daten gesendet werden können  [!DNL Experience Platform].
+- [[!DNL Data Ingestion]](../home.md): Die Methoden, mit denen Daten an [!DNL Experience Platform] gesendet werden können.
 
 ### Lesen von Beispiel-API-Aufrufen
 
-In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Fehlerbehebungshandbuch für [!DNL Experience Platform]
+In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu [!DNL Schema Registry] gehören, werden zu bestimmten virtuellen Sandboxen isoliert. Für alle Anforderungen an [!DNL Platform]-APIs ist ein Header erforderlich, der den Namen der Sandbox angibt, in der der Vorgang ausgeführt wird in:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Weitere Informationen zu Sandboxen in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+>Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Kopfzeile erforderlich:
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Entwicklerhandbuch;Endpunkt;Data Science Workspace;beliebte Themen
+keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen
 solution: Experience Platform
-title: Sensei Machine Learning API - Handbuch
+title: Handbuch zur Sensei Machine Learning API - Anhang
 topic-legacy: Developer guide
 description: Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der Sensei Machine Learning API.
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '330'
@@ -13,30 +12,30 @@ ht-degree: 7%
 
 ---
 
-# [!DNL Sensei Machine Learning] API-Handbuch
+# [!DNL Sensei Machine Learning] Anhang zum API-Handbuch
 
 Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der [!DNL Sensei Machine Learning]-API.
 
-## Abfragen-Parameter für den Asset-Abruf {#query}
+## Abfrageparameter für den Asset-Abruf {#query}
 
-Die API [!DNL Sensei Machine Learning] unterstützt Abfragen beim Abrufen von Assets. Die verfügbaren Parameter für die Abfrage und ihre Verwendung werden in der folgenden Tabelle beschrieben:
+Die API [!DNL Sensei Machine Learning] unterstützt Abfrageparameter beim Abrufen von Assets. Die verfügbaren Abfrageparameter und ihre Verwendung werden in der folgenden Tabelle beschrieben:
 
 | Abfrageparameter | Beschreibung | Standardwert |
 | --------------- | ----------- | ------- |
 | `start` | Gibt den Startindex für die Paginierung an. | `start=0` |
 | `limit` | Gibt die maximale Anzahl der zurückzugebenden Ergebnisse an. | `limit=25` |
-| `orderby` | Gibt die Eigenschaften an, die für die Sortierung in der Reihenfolge der Priorität verwendet werden sollen. Fügen Sie vor dem Eigenschaftsnamen einen Bindestrich (**-**) ein, der in absteigender Reihenfolge sortiert werden soll. Andernfalls werden die Ergebnisse in aufsteigender Reihenfolge sortiert. | `orderby=created` |
-| `property` | Gibt den Vergleichs-Ausdruck an, den ein Objekt erfüllen muss, um zurückgegeben zu werden. | `property=deleted==false` |
+| `orderby` | Gibt die Eigenschaften an, die für die Sortierung in Prioritätsreihenfolge verwendet werden sollen. Fügen Sie vor dem Eigenschaftsnamen einen Bindestrich (**-**) ein, der in absteigender Reihenfolge sortiert werden soll. Andernfalls werden die Ergebnisse in aufsteigender Reihenfolge sortiert. | `orderby=created` |
+| `property` | Gibt den Vergleichsausdruck an, den ein Objekt erfüllen muss, damit es zurückgegeben werden kann. | `property=deleted==false` |
 
 >[!NOTE]
 >
->Beim Kombinieren mehrerer Abfrage-Parameter müssen diese durch ein kaufmännisches Und (**&amp;**) getrennt werden.
+>Beim Kombinieren mehrerer Abfrageparameter müssen diese durch kaufmännische Und-Zeichen (**&amp;**) getrennt werden.
 
-## Python CPU- und GPU-Konfigurationen {#cpu-gpu-config}
+## Python-CPU- und GPU-Konfigurationen {#cpu-gpu-config}
 
-Python Engines haben die Möglichkeit, entweder eine CPU oder eine GPU zu Trainings- oder Scoring-Zwecken zu wählen und wird auf einer [MLInstance](./mlinstances.md) als Aufgabe-Spezifikation (`tasks.specification`) definiert.
+Python Engines haben die Möglichkeit, für Trainings- oder Scoring-Zwecke entweder eine CPU oder eine GPU auszuwählen. Sie wird für eine [MLInstance](./mlinstances.md) als Aufgabenspezifikation (`tasks.specification`) definiert.
 
-Die folgende Beispielkonfiguration gibt die Verwendung einer CPU für Schulungen und einer GPU für die Bewertung an:
+Im Folgenden finden Sie eine Beispielkonfiguration, die angibt, wie eine CPU für Schulungen und eine GPU für Scoring verwendet wird:
 
 ```json
 [
@@ -71,21 +70,21 @@ Die folgende Beispielkonfiguration gibt die Verwendung einer CPU für Schulungen
 
 >[!NOTE]
 >
->Die Werte von `cpus` und `gpus` geben nicht die Anzahl der CPUs oder GPUs an, sondern die Anzahl der physischen Computer. Diese Werte sind zulässig `"1"` und lösen andernfalls eine Ausnahme aus.
+>Die Werte von `cpus` und `gpus` geben nicht die Anzahl der CPUs oder GPUs an, sondern die Anzahl der physischen Computer. Diese Werte sind möglicherweise `"1"` und geben andernfalls eine Ausnahme aus.
 
 ## PySpark- und Spark-Ressourcenkonfigurationen {#resource-config}
 
-Spark Engines haben die Möglichkeit, zu Schulungs- und Bewertungszwecken Computerressourcen zu ändern. Diese Ressourcen werden in der folgenden Tabelle beschrieben:
+Spark Engines haben die Möglichkeit, Rechenressourcen für Trainings- und Scoring-Zwecke zu ändern. Diese Ressourcen werden in der folgenden Tabelle beschrieben:
 
 | Ressource | Beschreibung | Typ |
 | -------- | ----------- | ---- |
 | driverMemory | Speicher für Treiber in Megabyte | int |
 | driverCores | Anzahl der vom Fahrer verwendeten Kerne | int |
-| executorMemory | Speicher für Führungskräfte in Megabyte | int |
+| executorMemory | Speicher für Executor in Megabyte | int |
 | executorCores | Anzahl der vom Executor verwendeten Kerne | int |
-| numExecutors | Anzahl der Führungskräfte | int |
+| numExecutors | Anzahl der Executor | int |
 
-Ressourcen können auf einer [MLInstance](./mlinstances.md) entweder als (A) individuelle Schulungs- oder Bewertungsparameter oder (B) als zusätzliches Spezifikationsobjekt (`specification`) angegeben werden. Beispielsweise sind die folgenden Ressourcenkonfigurationen für Schulung und Bewertung gleich:
+Ressourcen können in einer [MLInstance](./mlinstances.md) entweder als (A) individuelle Trainings- oder Scoring-Parameter oder (B) als zusätzliches Spezifikations-Objekt (`specification`) angegeben werden. Beispielsweise sind die folgenden Ressourcenkonfigurationen für Training und Scoring identisch:
 
 ```json
 [

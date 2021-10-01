@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Schulung und Auswertung;Data Science Workspace;beliebte Themen;Sensei-Maschinen-Learning-API
+keywords: Experience Platform; Schulung und Auswertung; Data Science Workspace; beliebte Themen; Sensei Machine Learning API
 solution: Experience Platform
-title: Ausbildung und Bewertung eines Modells mit der Sensei Machine Learning API
+title: Modell mithilfe der Sensei Machine Learning API trainieren und bewerten
 topic-legacy: tutorial
 type: Tutorial
-description: In diesem Lernprogramm erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning API-Aufrufen erstellen, ausbilden und auswerten können.
+description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-translation-type: tm+mt
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt
 source-wordcount: '1235'
@@ -14,7 +13,7 @@ ht-degree: 92%
 
 ---
 
-# Schulen und Auswerten eines Modells mithilfe der API[!DNL Sensei Machine Learning]
+# Modell mithilfe der [!DNL Sensei Machine Learning]-API trainieren und bewerten
 
 
 In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen erstellen, dazu schulen und auswerten. Eine detaillierte Liste der API-Dokumentation finden Sie in [diesem Dokument](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
@@ -23,7 +22,7 @@ In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von API-Aufrufen er
 
 Folgen Sie dem [Importieren eines verpackten Rezepts mit der API](./import-packaged-recipe-api.md) zum Erstellen einer Engine, die zur Schulung und Auswertung für ein Modell mit der API erforderlich ist.
 
-Folgen Sie dem Tutorial [Experience Platform API authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en), um Beginn API-Aufrufe durchzuführen.
+Folgen Sie dem [Experience Platform API-Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) , um API-Aufrufe durchzuführen.
 
 Sie sollten nun die folgenden Werte aus dem Tutorial haben:
 
@@ -126,7 +125,7 @@ curl -X POST \
 >
 > Im `{JSON_PAYLOAD}` definieren wir Parameter, die für Schulungen und Auswertungen im `tasks` Array verwendet werden. Die `{ENGINE_ID}` ist die ID der Engine, die Sie verwenden möchten, und das `tag`-Feld ist ein optionaler Parameter, der zur Identifizierung der Instanz verwendet wird.
 
-Die Antwort enthält die `{INSTANCE_ID}`, die die erstellte MLInstanz darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
+Die Antwort enthält die `{INSTANCE_ID}` , die die erstellte MLInstance darstellt. Es können mehrere MLInstances mit verschiedenen Konfigurationen erstellt werden.
 
 **Antwort**
 

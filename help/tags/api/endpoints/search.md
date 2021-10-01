@@ -3,7 +3,7 @@ title: Search-Endpunkt
 description: Erfahren Sie, wie Sie den /search-Endpunkt in der Reactor-API aufrufen.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 100%
 

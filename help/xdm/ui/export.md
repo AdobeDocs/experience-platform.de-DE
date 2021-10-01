@@ -22,7 +22,7 @@ Um dies zu erreichen, können Sie mit dem Arbeitsbereich [!UICONTROL Schemas] in
 >
 >Sie können die Schema Registry-API auch verwenden, um neben Schemas weitere Ressourcen zu exportieren, darunter Klassen, Schemafeldgruppen und Datentypen. Weitere Informationen finden Sie im Handbuch zu den [Export-/Import-Endpunkten](../api/export-import.md) .
 
-## Voraussetzungen  
+## Voraussetzungen
 
 Während die Platform-Benutzeroberfläche den Export von XDM-Ressourcen ermöglicht, müssen Sie die Schema Registry-API verwenden, um diese Ressourcen in andere Sandboxes oder IMS-Organisationen zu importieren und den Workflow abzuschließen. Wichtige Informationen zu erforderlichen Authentifizierungskopfzeilen finden Sie im [Erste Schritte mit der Schema Registry-API](../api/getting-started.md) , bevor Sie dieses Handbuch befolgen.
 

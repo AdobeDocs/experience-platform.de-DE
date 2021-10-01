@@ -7,7 +7,7 @@ exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
 workflow-type: tm+mt
 source-wordcount: '252'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -34,4 +34,4 @@ Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnapp
 
 Derzeit stehen in Experience Platform mehrere Dashboards zur Verfügung, die die Kundendaten Ihres Unternehmens transparent machen.
 
-Um mehr über diese Dashboards und ihre Metriken zu erfahren, wählen Sie in der Liste der verfügbaren Dashboards im Navigationsbereich der Dokumentation ein Dashboard aus.
+Um mehr über diese Dashboards und die darin verfügbaren Metriken zu erfahren, treffen Sie bitte eine entsprechende Auswahl aus der Liste der verfügbaren Dashboards in der Dokumentationsnavigation.

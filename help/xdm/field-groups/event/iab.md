@@ -4,13 +4,13 @@ solution: Experience Platform
 title: IAB TCF 2.0-Gruppe für Einverständnisschema-Feld
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Schemafeldgruppe für Einwilligungen für die XDM ExperienceEvent-Klasse.
-source-git-commit: 7a0ac3970713e95438c6f0fdbd6175545ea7fdd0
+exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 2%
 
 ---
-
 
 # [!UICONTROL IAB TCF 2.0-] Feldergruppe &quot;Einwilligungsschema&quot;
 

@@ -1,10 +1,11 @@
 ---
 title: Vergleichen von Ressourcenrevisionen
 description: Erfahren Sie, wie Sie in Adobe Experience Platform den Revisionsverlauf für eine Ressource anzeigen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Vergleichen Sie Ressourcenversionen, um den Verlauf einzelner Ressource anzuzeigen. Sie können den aktuellen Status der Ressource mit älteren Versionen oder die derzeit veröffentlichte Version einer Ressource mit den neuesten gespeicherten Änderungen vergleichen.
 

@@ -1,15 +1,14 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Sandbox-Fehlerbehebung
+keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Fehlerbehebung
 solution: Experience Platform
-title: Sandboxen - Fehlerbehebungshandbuch
+title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic-legacy: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '551'
-ht-degree: 90%
+ht-degree: 95%
 
 ---
 
@@ -32,7 +31,7 @@ In Experience Platform gibt es zwei Arten von Sandboxes:
 
 Experience Platform stellt eine einzige Produktions-Sandbox bereit, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox pro Platform-Instanz geben.
 
-Im Gegensatz dazu können Sandbox-Administratoren verschiedene Nicht-Produktions-Sandboxes für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platformen erhalten Sie fünf Sandboxen (eine Produktion und vier Nicht-Produktion). Sie können Pakete von zehn Nicht-Produktions-Sandboxen bis zu maximal 75 Sandboxen hinzufügen. Für weitere Informationen wenden Sie sich bitte an Ihren IMS-Organisationsadministrator oder Ihren Vertriebsmitarbeiter für Adoben.
+Im Gegensatz dazu können Sandbox-Administratoren verschiedene Nicht-Produktions-Sandboxes für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platform erhalten Sie fünf Sandboxes (eine zur Produktion und vier zur Nicht-Produktion). Sie können Packs von zehn Nicht-Produktions-Sandboxes bis zu maximal 75 Sandboxes insgesamt hinzufügen. Für weitere Informationen wenden Sie sich an Ihren IMS-Organisationsadministrator oder Ihren Adobe-Vertriebsmitarbeiter.
 
 Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](./home.md).
 

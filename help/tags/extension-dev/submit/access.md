@@ -1,8 +1,9 @@
 ---
 title: Gewähren von Benutzerzugriff
 description: Richten Sie die Tag-Benutzerkonten und -Berechtigungen Ihrer Team-Mitglieder in Adobe Experience Platform ein.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: c7235e50-13b3-4487-b171-873063875621
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Bevor Sie mit Ihrem „extension_package“ beginnen, müssen Sie für Ihre Team-Mitglieder Benutzerkonten und Berechtigungen einrichten. Sie verwenden dazu [Adobe Admin Console](https://adminconsole.adobe.com/).
 

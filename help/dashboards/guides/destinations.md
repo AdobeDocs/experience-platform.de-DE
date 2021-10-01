@@ -7,11 +7,11 @@ exl-id: 6a34a796-24a1-450a-af39-60113928873e
 source-git-commit: 41ef7a6e6d3b0ee9afe762b19c8c286ceb361dbb
 workflow-type: tm+mt
 source-wordcount: '895'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
-#  Ziel-Dashboard
+# [!UICONTROL Dashboard „Ziele“]
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie in der Benutzeroberfläche auf das Ziel-Dashboard zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Metriken.
 

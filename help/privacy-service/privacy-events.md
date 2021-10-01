@@ -31,7 +31,7 @@ In diesem Dokument werden Schritte zum Einrichten einer Ereignisregistrierung f�
 
 Lesen Sie die folgende Privacy Service-Dokumentation, bevor Sie mit diesem Tutorial beginnen:
 
-* [Übersicht über den Privacy Service](./home.md)
+* [Übersicht über Privacy Service](./home.md)
 * [Entwicklerhandbuch für die Privacy Service-API](./api/getting-started.md)
 
 ## Registrieren Sie einen Webhook bei [!DNL Privacy Service Events].

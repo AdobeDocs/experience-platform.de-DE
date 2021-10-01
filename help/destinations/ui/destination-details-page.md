@@ -2,11 +2,11 @@
 keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Zieldetails anzeigen
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. '
-seo-description: Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses.
+seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 source-git-commit: a619227de30513bb06a22ce7b4f2fc13847c1ab6
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '628'
 ht-degree: 6%
 
 ---

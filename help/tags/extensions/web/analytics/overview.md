@@ -3,7 +3,7 @@ title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2202'
 ht-degree: 100%
 
@@ -292,7 +292,7 @@ Wichtig: Die Verwendung einer „Variablen festlegen“-Aktion sendet das Signal
 
 #### eVars
 
-Legen Sie eine oder mehrere [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=de) fest.
+Legen Sie eine oder mehrere [eVars](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html) fest.
 
 1. Wählen Sie im Dropdown-Menü eine eVar aus.
 1. Geben Sie an, ob Sie die eVar als Wert festlegen (Festlegen als) oder eine andere eVar kopieren (Formular duplizieren) möchten.

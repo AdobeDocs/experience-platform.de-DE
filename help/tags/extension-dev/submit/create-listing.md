@@ -3,7 +3,7 @@ title: Erstellen eines Exchange-Listeneintrags für eine Erweiterung
 description: Erfahren Sie, wie Sie Ihre Erweiterung dem öffentlichen Katalog in Adobe Experience Platform hinzufügen.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 100%
 

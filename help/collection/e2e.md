@@ -3,7 +3,7 @@ title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der von Adobe Experience Platform bereitgestellten Datenerfassungstechnologien an Adobe Experience Cloud-Lösungen senden können.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 source-git-commit: 3f5a05068a24432237a5241dd20680d2f8ed0b55
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 100%
 

@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Filter;Filter;Daten filtern;Daten filtern;Daten filtern
+keywords: Experience Platform; Startseite; beliebte Themen; Filter; Filtern; Filtern von Daten; Filtern von Daten
 solution: Experience Platform
-title: Liste Catalog-Objekte
+title: Katalogobjekte auflisten
 topic-legacy: developer guide
 description: Sie können über einen einzigen API-Aufruf eine Liste aller verfügbaren Objekte eines bestimmten Typs abrufen. Es empfiehlt sich, Filter einzubeziehen, um die Größe der Antwort beschränken.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '242'
@@ -13,7 +12,7 @@ ht-degree: 53%
 
 ---
 
-# Liste Catalog-Objekte
+# Katalogobjekte auflisten
 
 Sie können über einen einzigen API-Aufruf eine Liste aller verfügbaren Objekte eines bestimmten Typs abrufen. Es empfiehlt sich, Filter einzubeziehen, um die Größe der Antwort beschränken.
 
@@ -26,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des anzuzeigenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des aufzulistenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](filter-data.md). |
 
 **Anfrage**
@@ -44,11 +43,11 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog]-Objekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anforderung bereitgestellten Abfragen. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel einen eindeutigen Bezeichner für das fragliche [!DNL Catalog]-Objekt dar, der dann in einem anderen Aufruf von [Ansicht dieses bestimmten Objekts](look-up-object.md) verwendet werden kann, um weitere Informationen zu erhalten.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anfrage angegebenen Abfrageparametern. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für das betreffende [!DNL Catalog]-Objekt dar, die dann in einem anderen Aufruf an [Anzeigen dieses bestimmten Objekts](look-up-object.md) für weitere Details verwendet werden kann.
 
 >[!NOTE]
 >
->Wenn ein zurückgegebenes Objekt keine oder mehrere der angeforderten Eigenschaften enthält, die durch die `properties`-Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die sie enthält, wie unten unter ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** dargestellt.
+>Wenn ein zurückgegebenes Objekt eine oder mehrere der angeforderten Eigenschaften nicht enthält, die durch die `properties`-Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten dargestellt.
 
 ```json
 {

@@ -1,8 +1,9 @@
 ---
 title: Verschlüsseln von Werten
 description: Hier erfahren Sie, wie Sie bei Verwendung der Reactor-API sensible Werte verschlüsseln können.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
+exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 100%
 

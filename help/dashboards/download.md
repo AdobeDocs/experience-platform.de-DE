@@ -3,13 +3,13 @@ solution: Experience Platform
 title: Herunterladen von Experience Platform-Dashboards als PDF
 type: Documentation
 description: Speichern Sie Kopien von Dashboard-Visualisierungen mithilfe der Funktion „Als PDF herunterladen“, die in der Experience Platform-Benutzeroberfläche verfügbar ist.
-source-git-commit: a95f77d048b5bb9562507122d249f592e68a1bcf
-workflow-type: ht
+exl-id: 838e98a0-ce2e-4dcd-8c8f-d28ef2cb8315
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '495'
 ht-degree: 100%
 
 ---
-
 
 # Herunterladen von Dashboards als PDF
 

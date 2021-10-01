@@ -4,8 +4,10 @@ title: Übersicht über die Echtzeit-Kundendatenplattform B2B Edition
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Übersicht über das B2B Edition-Konto der Echtzeit-Kundendatenplattform
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
+hide: true
+hidefromtoc: true
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: e54bd747a332e37920e24ce07602470f8ad74231
+source-git-commit: dbe0353bb3976dde20feddc4fd660d5590c51d5c
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 3%

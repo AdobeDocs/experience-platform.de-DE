@@ -1,8 +1,9 @@
 ---
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
-source-git-commit: 010e05968f1d7ad5675b0f0af43d9cfcc1f3a2ff
-workflow-type: ht
+exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1631'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 
@@ -254,5 +255,5 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 Sie müssen in der Datenerfassungs-Benutzeroberfläche ein benutzerdefiniertes Datenelement erstellen, wenn Sie zuvor eines der folgenden Datenelemente verwendet haben:
 
 * URI
-* Protocol
+* Protokoll
 * Hostname

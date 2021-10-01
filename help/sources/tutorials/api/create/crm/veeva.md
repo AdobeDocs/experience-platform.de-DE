@@ -5,10 +5,11 @@ title: Erstellen einer VEC CRM-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem VEC-CRM verbinden.
-source-git-commit: 3235c48ec1f449e45b3f4b096585b67e14600407
+exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
+source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
 workflow-type: tm+mt
 source-wordcount: '514'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 

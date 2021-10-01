@@ -1,24 +1,25 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Zugriffssteuerung;adobe Admin Console
+keywords: Experience Platform;Home;beliebte Themen;Zugangssteuerung;adobe Admin Console
 solution: Experience Platform
 topic-legacy: overview
-title: Zugriffskontrolle – Übersicht
-description: Die Zugriffssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+title: Zugangssteuerung – Übersicht
+description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 584461d3da5c5c39b9702b5d1dc1d1319568f695
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# Zugriffskontrolle – Übersicht
+# Zugangssteuerung – Übersicht
 
-Die Zugriffssteuerung für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) geboten. Diese Funktion nutzt Produktprofile in [!DNL Admin Console], um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+Die Zugangssteuerung für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) geboten. 
+Diese Funktion nutzt Produktprofile in [!DNL Admin Console], um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 
-## Zugriffskontrolle auf Hierarchie und Workflow
+## Zugangssteuerung zu Hierarchie und Workflow
 
-Zum Konfigurieren der Zugriffssteuerung für [!DNL Experience Platform] müssen Sie Administratorrechte für ein Unternehmen haben, das über eine [!DNL Experience Platform]-Produktintegration verfügt. Die Mindestrolle, die Berechtigungen erteilt oder entzieht, ist ein Produktprofil-Administrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Produktadministratoren (kann alle Profile innerhalb eines Produkts verwalten) und Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+Zum Konfigurieren der Zugangssteuerung für [!DNL Experience Platform] müssen Sie Administratorrechte für ein Unternehmen haben, das über eine [!DNL Experience Platform]-Produktintegration verfügt. Die Mindestrolle, die Berechtigungen erteilt oder entzieht, ist ein Produktprofil-Administrator. Andere Administratorrollen, die Berechtigungen verwalten können, sind Produktadministratoren (kann alle Profile innerhalb eines Produkts verwalten) und Systemadministratoren (keine Einschränkungen). Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
 >[!NOTE]
 >
@@ -33,7 +34,7 @@ Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen
 - Beim Erstellen oder Bearbeiten eines Profils fügt der Administrator dem Profil über den Tab **[!UICONTROL Benutzer]** Benutzer hinzu und gewährt diesen Benutzern Berechtigungen (wie z. B. [!UICONTROL Datensätze lesen] oder [!UICONTROL Schemas verwalten]), indem er auf den Tab **[!UICONTROL Berechtigungen]** zugreift. Ebenso kann der Administrator über die gleiche Registerkarte „ „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
 - Wenn sich Benutzer bei der Benutzeroberfläche von [!DNL Experience Platform] anmelden, wird ihr Zugriff auf [!DNL Platform]-Funktionen durch die Berechtigungen gesteuert, die ihnen in Schritt 2 erteilt wurden. Wenn ein Benutzer beispielsweise nicht über die Zugriffsberechtigung [!UICONTROL Datensätze anzeigen] verfügt, ist der Tab **[!UICONTROL Datensätze]** im Seitenmenü für diesen Benutzer nicht sichtbar.
 
-Detailliertere Anweisungen zum Verwalten der Zugriffssteuerung in [!DNL Experience Platform] finden Sie im [Benutzerhandbuch für die Zugriffssteuerung](./ui/overview.md).
+Detailliertere Anweisungen zum Verwalten der Zugangssteuerung in [!DNL Experience Platform] finden Sie im [Benutzerhandbuch für die Zugriffssteuerung](./ui/overview.md).
 
 Alle Aufrufe von [!DNL Experience Platform]-APIs werden auf Berechtigungen überprüft und geben Fehler zurück, wenn die entsprechenden Berechtigungen im aktuellen Benutzerkontext nicht gefunden wurden. In der Benutzeroberfläche werden Elemente je nach den dem aktuellen Benutzer zugewiesenen Berechtigungen ausgeblendet oder geändert.
 
@@ -62,7 +63,7 @@ Weitere Informationen zu Sandboxes in [!DNL Experience Platform] finden Sie in d
 
 ### Zugriff auf Sandboxes
 
-Der Zugriff auf Sandboxes wird über Produktprofile verwaltet. Ausführliche Anweisungen zum Aktivieren des Zugriffs auf eine Sandbox für ein Produktprofil finden Sie im [Benutzerhandbuch für die Zugriffskontrolle](./ui/overview.md).
+Der Zugriff auf Sandboxes wird über Produktprofile verwaltet. Ausführliche Anweisungen zum Aktivieren des Zugriffs auf eine Sandbox für ein Produktprofil finden Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md).
 
 Benutzern kann Zugriff auf eine oder mehrere Sandboxes innerhalb eines Profils gewährt werden. Wenn ein Benutzer in zwei oder mehr Produktprofilen enthalten ist, hat er Zugriff auf alle in diesen Profilen enthaltenen Sandboxes.
 
@@ -76,7 +77,7 @@ Auf der Registerkarte Berechtigungen in einem Produktprofil werden die Sandboxes
 
 Berechtigungen, die über die [!DNL Admin Console] gewährt werden, werden nach Kategorie sortiert. Einige dieser Berechtigungen gewähren Zugriff auf verschiedene Funktionen auf niedriger Ebene.
 
-In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL Admin Console] verfügbaren Berechtigungen mit Beschreibungen der spezifischen [!DNL Platform]-Funktionen aufgeführt, auf die sie Zugriff gewähren. Detaillierte Anweisungen zum Hinzufügen von Berechtigungen zu einem Produktprofil finden Sie im [Benutzerhandbuch für die Zugriffskontrolle](./ui/overview.md).
+In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL Admin Console] verfügbaren Berechtigungen mit Beschreibungen der spezifischen [!DNL Platform]-Funktionen aufgeführt, auf die sie Zugriff gewähren. Detaillierte Anweisungen zum Hinzufügen von Berechtigungen zu einem Produktprofil finden Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md).
 
 | Kategorie | Berechtigung | Beschreibung |
 | --- | --- | --- |
@@ -103,10 +104,10 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | [!DNL Destinations] | [!UICONTROL Verwalten von Zielen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Deaktivieren von Zielen. |
 | [!DNL Destinations] | [!UICONTROL Anzeigen von Zielen] | Schreibgeschützter Zugriff auf verfügbare Ziele auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Ziele auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
 | [!DNL Destinations] | [!UICONTROL Aktivieren von Zielen] | Fähigkeit zur Aktivierung von Daten an aktiven Zielen, die erstellt wurden. Für diese Zugriffsberechtigung ist es erforderlich, dass dem Benutzer, der die Ziele aktiviert, entweder „Ziele anzeigen“ oder [!UICONTROL Ziele verwalten] gewährt wird. |
-| [!DNL Destinations] | [!UICONTROL Destination Authoring] | Möglichkeit, Ziele mithilfe von [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |
+| [!DNL Destinations] | [!UICONTROL Ziel-Authoring] | Möglichkeit, Ziele mithilfe des [Adobe Experience Platform Destination SDK](../destinations/destination-sdk/overview.md) zu erstellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Verwalten von Quellen] | Zugriff zum Lesen, Erstellen, Bearbeiten und Deaktivieren von Quellen. |
 | [!DNL Data Ingestion] | [!UICONTROL Anzeigen von Quellen] | Schreibgeschützter Zugriff auf verfügbare Quellen auf der Registerkarte **[!UICONTROL Katalog]** und authentifizierte Quellen auf der Registerkarte **[!UICONTROL Durchsuchen]**. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Zugriff auf das Erstellen, Akzeptieren und Ablehnen von Partnerhandshakes, um zwei IMS-Organisationen zu verbinden und [!DNL Segment Match]-Flüsse zu aktivieren. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Zugriff auf das Erstellen, Akzeptieren und Ablehnen von Partner-Handshakes, um zwei IMS-Organisationen miteinander zu verbinden und [!DNL Segment Match]-Flüsse zu aktivieren. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Veröffentlichen von [!DNL Segment Match]-Feeds mit aktiven Partnern. |
 | [!DNL Data Science Workspace] | [!UICONTROL Verwalten des Data Science Workspace] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen in [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Anwenden von Datennutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
@@ -116,8 +117,8 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | [!DNL Dashboards] | [!UICONTROL Anzeigen des Dashboards zur Lizenznutzung] | Schreibgeschützter Zugriff zum Anzeigen des Dashboards zur Lizenznutzung. |
 | [!DNL Dashboards] | [!UICONTROL Standard-Dashboards verwalten] | Fügen Sie benutzerdefinierte Attribute hinzu, die sich noch nicht im Data Warehouse befinden. |
 | [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Platform-Daten. |
-| [!DNL Query Service] | [!UICONTROL Integration von Query Service verwalten] | Zugriff auf das Erstellen, Aktualisieren und Löschen nicht ablaufender Anmeldeinformationen für den Zugriff auf Query Service. |
+| [!DNL Query Service] | [!UICONTROL Verwalten der Integration des Abfrage-Service] | Zugriff auf das Erstellen, Aktualisieren und Löschen nicht ablaufender Anmeldeinformationen für den Zugriff auf den Abfrage-Service. |
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugriffssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugriffssteuerung](./ui/overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.
+Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen. 

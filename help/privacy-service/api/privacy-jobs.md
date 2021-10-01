@@ -1,33 +1,32 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen
+keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
-title: Endpunkt der Datenschutzauftrags-API
+title: Privacy Jobs API Endpoint
 topic-legacy: developer guide
-description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Anwendungen verwalten.
+description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für Experience Cloud-Apps verwalten.
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-translation-type: tm+mt
 source-git-commit: e226990fc84926587308077b32b128bfe334e812
 workflow-type: tm+mt
 source-wordcount: '1362'
-ht-degree: 65%
+ht-degree: 68%
 
 ---
 
 # Endpunkt &quot;Datenschutzaufträge&quot;
 
-In diesem Dokument wird beschrieben, wie Sie mit Datenschutzaufträgen mit API-Aufrufen arbeiten. Insbesondere wird die Verwendung des Endpunkts `/job` in der [!DNL Privacy Service]-API behandelt. Bevor Sie dieses Handbuch lesen, finden Sie im Abschnitt [Erste Schritte](./getting-started.md#getting-started) wichtige Informationen, die Sie kennen müssen, um die API erfolgreich aufzurufen, einschließlich erforderlicher Kopfzeilen und Anleitungen zum Lesen von Beispiel-API-Aufrufen.
+In diesem Dokument wird beschrieben, wie Sie mit Datenschutzaufträgen mit API-Aufrufen arbeiten. Insbesondere wird die Verwendung des Endpunkts `/job` in der [!DNL Privacy Service]-API behandelt. Bevor Sie dieses Handbuch lesen, finden Sie im Abschnitt [Erste Schritte](./getting-started.md#getting-started) wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 
 >[!NOTE]
 >
->Wenn Sie versuchen, Zustimmungs- oder Abmeldeanforderungen von Kunden zu verwalten, lesen Sie das [Endpunkthandbuch ](./consent.md).
+>Wenn Sie versuchen, Zustimmungs- oder Opt-out-Anfragen von Kunden zu verwalten, lesen Sie das [Endpoint-Handbuch](./consent.md).
 
 ## Alle Aufträge auflisten {#list}
 
-Sie können eine Liste aller in Ihrem Unternehmen verfügbaren Datenschutzaufträge erstellen, indem Sie eine GET an den `/jobs`-Endpunkt anfordern.
+Sie können eine Liste aller in Ihrem Unternehmen verfügbaren Datenschutzaufträge anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `/jobs` stellen.
 
 **API-Format**
 
-Dieses Anforderungsformat verwendet einen `regulation`-Parameter für die Abfrage am `/jobs`-Endpunkt. Daher beginnt es mit einem Fragezeichen (`?`), wie unten dargestellt. Die Antwort wird paginiert, sodass Sie andere Abfrageparameter (`page` und `size`) verwenden können, um die Antwort zu filtern. Sie können mehrere Parameter mithilfe von Ampersands (`&`) trennen.
+Dieses Anfrageformat verwendet einen `regulation`-Abfrageparameter am `/jobs`-Endpunkt. Daher beginnt es mit einem Fragezeichen (`?`), wie unten dargestellt. Die Antwort wird paginiert, sodass Sie andere Abfrageparameter (`page` und `size`) verwenden können, um die Antwort zu filtern. Sie können mehrere Parameter mithilfe von Ampersands (`&`) trennen.
 
 ```http
 GET /jobs?regulation={REGULATION}
@@ -38,7 +37,7 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`gdpr` (Europäische Vereinigung)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
+| `{REGULATION}` | Der Regelungstyp für die Abfrage. Zu den zulässigen Werten gehören: <ul><li>`gdpr` (Europäische Union)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (Neuseeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 | `{PAGE}` | Die Seite der anzuzeigenden Daten mit 0-basierter Nummerierung. Die Standardeinstellung lautet `0`. |
 | `{SIZE}` | Die Anzahl der Ergebnisse, die auf jeder Seite angezeigt werden sollen. Der Standardwert ist `1` und der Maximalwert ist `100`. Wenn Sie den Maximalwert überschreiten, gibt die API einen 400-Code-Fehler zurück. |
 
@@ -66,13 +65,13 @@ Um den nächsten Ergebnissatz in einer paginierten Antwort abzurufen, müssen Si
 
 ## Erstellen eines Datenschutzauftrags {#create-job}
 
-Bevor Sie eine neue Auftragsanfrage erstellen, müssen Sie zunächst identifizierende Informationen zu den betroffenen Personen erfassen, deren Daten Sie aufrufen, löschen oder für die Sie ein Opt-out aus dem Verkauf erwirken möchten. Sobald Sie über die erforderlichen Daten verfügen, müssen diese in der Nutzlast einer POST-Anforderung an den `/jobs`-Endpunkt bereitgestellt werden.
+Bevor Sie eine neue Auftragsanfrage erstellen, müssen Sie zunächst identifizierende Informationen zu den betroffenen Personen erfassen, deren Daten Sie aufrufen, löschen oder für die Sie ein Opt-out aus dem Verkauf erwirken möchten. Sobald Sie über die erforderlichen Daten verfügen, müssen diese in der Payload einer POST-Anfrage an den `/jobs`-Endpunkt bereitgestellt werden.
 
 >[!NOTE]
 >
-> Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von Datensubjekten. Weitere Informationen zu den erforderlichen Identifikatoren für Ihre Anwendungen finden Sie im Handbuch zu [Privacy Service und Experience Cloud-Anwendungen](../experience-cloud-apps.md). Weitere allgemeine Anleitungen zum Bestimmen, welche IDs an [!DNL Privacy Service] gesendet werden sollen, finden Sie im Dokument [Identitätsdaten in Datenschutzanforderungen](../identity-data.md).
+> Kompatible Adobe Experience Cloud-Anwendungen verwenden unterschiedliche Werte zur Identifizierung von Datensubjekten. Weitere Informationen zu den erforderlichen Identifikatoren für Ihre Anwendungen finden Sie im Handbuch zu [Privacy Service und Experience Cloud-Anwendungen](../experience-cloud-apps.md). Allgemeine Anleitungen zum Bestimmen, welche IDs an [!DNL Privacy Service] gesendet werden sollen, finden Sie im Dokument zu [Identitätsdaten in Datenschutzanfragen](../identity-data.md).
 
-Die API [!DNL Privacy Service] unterstützt zwei Arten von Auftragsanforderungen für persönliche Daten:
+Die [!DNL Privacy Service]-API unterstützt zwei Arten von Auftragsanfragen für personenbezogene Daten:
 
 * [Zugriff und/oder Löschen](#access-delete): Zugriff (lesen) oder Löschen personenbezogener Daten.
 * [Opt-out vom Verkauf](#opt-out): Markieren Sie persönliche Daten als nicht verkäuflich.
@@ -157,10 +156,10 @@ curl -X POST \
 | `companyContexts` **(Erforderlich)** | Ein Array mit Authentifizierungsinformationen für Ihr Unternehmen. Jeder aufgelistete Identifikator enthält die folgenden Attribute: <ul><li>`namespace`: Den Namensraum eines Identifikators.</li><li>`value`: Den Wert des Identifikators.</li></ul>Es ist **erforderlich**, dass einer der Identifikatoren `imsOrgId` als sein `namespace` verwendet wird, wobei sein `value` die eindeutige ID für Ihre IMS-Organisation enthält. <br/><br/>Zusätzliche IDs können produktspezifische Firmenqualifizierer sein (z. B. `Campaign`), die eine Integration mit einer Adobe-Anwendung Ihrer Organisation identifizieren. Mögliche Werte sind Kontonamen, Client-Codes, Mandanten-IDs oder andere Anwendungs-Identifikatoren. |
 | `users` **(Erforderlich)** | Ein Array mit einer Sammlung von mindestens einem Benutzer, auf den Sie zugreifen, oder den Sie löschen möchten. In einer einzigen Anfrage können maximal 1000 Benutzer-IDs bereitgestellt werden. Jedes Benutzerobjekt enthält die folgenden Informationen: <ul><li>`key`: Ein Identifikator für einen Benutzer, der verwendet wird, um die separaten Auftrags-Identifikatoren in den Antwortdaten zu qualifizieren. Es gilt als Best Practice, eine eindeutige, leicht identifizierbare Zeichenfolge für diesen Wert zu wählen, damit später einfach darauf verwiesen oder nachgeschlagen werden kann.</li><li>`action`: Ein Array, das die gewünschten Aktionen zur Übernahme der Benutzerdaten auflistet. Je nach den Aktionen, die Sie ausführen möchten, muss dieses Array `access`, `delete` oder beide enthalten.</li><li>`userIDs`: Eine Sammlung von Identitäten für den Benutzer. Die Anzahl der Identitäten, die ein einzelner Benutzer haben kann, ist auf neun begrenzt. Jede Identität besteht aus einem `namespace`, einem `value` und einem Namensraum-Qualifikator (`type`). Weitere Informationen zu diesen erforderlichen Eigenschaften finden Sie im [Anhang](appendix.md).</li></ul> Eine ausführlichere Erläuterung zu `users` und `userIDs` finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md#user-ids). |
 | `include` **(Erforderlich)** | Eine Reihe von Adobe-Produkten, die in Ihre Verarbeitung einbezogen werden sollen. Wenn dieser Wert fehlt oder auf andere Weise leer ist, wird die Anfrage zurückgewiesen. Schließen Sie nur Produkte ein, mit denen Ihr Unternehmen eine Integration hat. Weitere Informationen finden Sie im Abschnitt zu den [anerkannten Produktwerten](appendix.md) im Anhang. |
-| `expandIDs` | Eine optionale Eigenschaft, die bei Festlegung auf `true` eine Optimierung für die Verarbeitung der IDs in den Anwendungen darstellt (derzeit nur von [!DNL Analytics] unterstützt). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
+| `expandIDs` | Eine optionale Eigenschaft, die, wenn auf `true` festgelegt, eine Optimierung für die Verarbeitung der IDs in den Anwendungen darstellt (derzeit nur unterstützt von [!DNL Analytics]). Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 | `priority` | Eine optionale Eigenschaft, die von Adobe Analytics verwendet wird und die Priorität für die Verarbeitung von Anfragen festlegt. Die zulässigen Werte sind `normal` und `low`. Wenn keine `priority` angegeben wird, lautet das Standardverhalten `normal`. |
 | `analyticsDeleteMethod` | Eine optionale Eigenschaft, die angibt, wie Adobe Analytics mit den personenbezogenen Daten umgehen soll. Für dieses Attribut werden zwei mögliche Werte akzeptiert: <ul><li>`anonymize`: Alle Daten, auf die bei der angegebenen Sammlung von Benutzer-IDs verwiesen wird, werden anonym gemacht. Wenn `analyticsDeleteMethod` ausgelassen wird, ist dies das Standardverhalten.</li><li>`purge`: Alle Daten werden vollständig entfernt.</li></ul> |
-| `regulation` **(Erforderlich)** | Die Regelung für die Datenschutzfunktion. Die folgenden Werte werden akzeptiert: <ul><li>`gdpr` (Europäische Vereinigung)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (Neuseeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
+| `regulation` **(Erforderlich)** | Die Verordnung für den Datenschutzauftrag. Folgende Werte werden akzeptiert: <ul><li>`gdpr` (Europäische Union)</li><li>`ccpa` (Kalifornien)</li><li>`lgpd_bra` (Brasilien)</li><li>`nzpa_nzl` (Neuseeland)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -220,7 +219,7 @@ Nachdem Sie die Auftragsanfrage erfolgreich gesendet haben, können Sie mit dem 
 
 ## Status eines Auftrags überprüfen {#check-status}
 
-Sie können Informationen zu einem bestimmten Auftrag abrufen, z. B. dessen aktueller Verarbeitungsstatus, indem Sie `jobId` des Auftrags in den Pfad einer GET-Anforderung zum `/jobs`-Endpunkt einfügen.
+Sie können Informationen zu einem bestimmten Auftrag abrufen, z. B. dessen aktueller Verarbeitungsstatus, indem Sie den Auftrag `jobId` in den Pfad einer GET-Anfrage an den Endpunkt `/jobs` einfügen.
 
 >[!IMPORTANT]
 >
@@ -234,7 +233,7 @@ GET /jobs/{JOB_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten. Diese ID wird unter `jobId` in erfolgreichen API-Antworten für [Erstellen eines Auftrags](#create-job) und [zurückgegeben, in denen alle Aufträge](#list) aufgelistet werden. |
+| `{JOB_ID}` | Die ID des Auftrags, den Sie nachschlagen möchten. Diese ID wird unter `jobId` in erfolgreichen API-Antworten für [Erstellen eines Auftrags](#create-job) und [zurückgegeben und listet alle Aufträge](#list) auf. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -326,21 +325,21 @@ Eine erfolgreiche Antwort gibt die Details des angegebenen Auftrags zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `productStatusResponse` | Jedes Objekt im Array `productResponses` enthält Informationen zum aktuellen Status des Auftrags in Bezug auf eine bestimmte [!DNL Experience Cloud]-Anwendung. |
-| `productStatusResponse.status` | Die aktuelle Status-Kategorie des Auftrags. Die nachstehende Tabelle enthält eine Liste der verfügbaren Kategorien [und ihre entsprechende Bedeutung.](#status-categories) |
-| `productStatusResponse.message` | Der spezifische Status des Auftrags, der der Status-Kategorie entspricht. |
-| `productStatusResponse.responseMsgCode` | Ein Standardcode für Produktansprechmeldungen, die von [!DNL Privacy Service] empfangen werden. Die Details der Nachricht finden Sie unter `responseMsgDetail`. |
-| `productStatusResponse.responseMsgDetail` | Eine detailliertere Erläuterung des Auftragsstatus. Meldungen für ähnliche Status können je nach Produkt unterschiedlich sein. |
-| `productStatusResponse.results` | Bei bestimmten Statusangaben geben einige Produkte möglicherweise ein `results`-Objekt zurück, das zusätzliche Informationen bereitstellt, die nicht von `responseMsgDetail` abgedeckt werden. |
+| `productStatusResponse` | Jedes Objekt im Array `productResponses` enthält Informationen zum aktuellen Status des Auftrags in Bezug auf eine bestimmte [!DNL Experience Cloud] -Anwendung. |
+| `productStatusResponse.status` | Die aktuelle Statuskategorie des Auftrags. Die nachstehende Tabelle enthält eine Liste der [verfügbaren Statuskategorien](#status-categories) und deren entsprechende Bedeutungen. |
+| `productStatusResponse.message` | Der spezifische Status des Auftrags, der der Statuskategorie entspricht. |
+| `productStatusResponse.responseMsgCode` | Ein Standardcode für Produktreaktionsnachrichten, die von [!DNL Privacy Service] empfangen werden. Die Details der Nachricht finden Sie unter `responseMsgDetail`. |
+| `productStatusResponse.responseMsgDetail` | Eine detailliertere Erläuterung des Auftragsstatus. Nachrichten für ähnliche Status können von Produkt zu Produkt unterschiedlich sein. |
+| `productStatusResponse.results` | Bei bestimmten Status geben einige Produkte möglicherweise ein `results` -Objekt zurück, das zusätzliche Informationen bereitstellt, die nicht von `responseMsgDetail` abgedeckt werden. |
 | `downloadURL` | Ist der Auftragsstatus `complete`, stellt dieses Attribut eine URL zum Herunterladen der Auftragsergebnisse als ZIP-Datei bereit. Diese Datei kann bis zu 60 Tagen nach Abschluss des Auftrags heruntergeladen werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ### Auftragsstatus-Kategorien {#status-categories}
 
-In der folgenden Tabelle werden die verschiedenen Kategorien zum Auftragsstatus und ihre jeweilige Bedeutung Liste:
+In der folgenden Tabelle sind die verschiedenen möglichen Auftragsstatus-Kategorien und deren entsprechende Bedeutung aufgeführt:
 
-| Status-Kategorie | Bedeutung |
+| Statuskategorie | Bedeutung |
 | -------------- | -------- |
 | `complete` | Der Auftrag ist abgeschlossen und (falls erforderlich) werden Dateien von jeder Anwendung hochgeladen. |
 | `processing` | Anwendungen haben den Auftrag bestätigt und sind derzeit bei der Verarbeitung. |
@@ -351,8 +350,8 @@ In der folgenden Tabelle werden die verschiedenen Kategorien zum Auftragsstatus 
 
 >[!NOTE]
 >
->Ein gesendeter Auftrag kann im Status `processing` verbleiben, wenn er einen abhängigen untergeordneten Auftrag hat, der noch verarbeitet wird.
+>Ein gesendeter Auftrag kann sich im Status `processing` befinden, wenn er einen abhängigen untergeordneten Auftrag hat, der noch verarbeitet wird.
 
 ## Nächste Schritte
 
-Sie wissen jetzt, wie Sie mit der API [!DNL Privacy Service] Datenschutzaufträge erstellen und überwachen. Informationen zum Ausführen derselben Aufgaben über die Benutzeroberfläche finden Sie in der [Privacy Service – UI-Übersicht](../ui/overview.md).
+Sie wissen jetzt, wie Sie Datenschutzaufträge mit der [!DNL Privacy Service]-API erstellen und überwachen. Informationen zum Ausführen derselben Aufgaben über die Benutzeroberfläche finden Sie in der [Privacy Service – UI-Übersicht](../ui/overview.md).

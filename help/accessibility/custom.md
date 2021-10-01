@@ -4,13 +4,13 @@ title: Benutzerdefinierte Barrierefreiheitslösungen für Experience Platform
 topic-legacy: guide
 type: Documentation
 description: Erfahren Sie mehr über die benutzerdefinierten Barrierefreiheitslösungen in der Benutzeroberfläche von Adobe Experience Platform.
-source-git-commit: 97f803f649b2c42b0449a2f8f0cff370ed1aba93
+exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '1531'
 ht-degree: 100%
 
 ---
-
 
 # Benutzerdefinierte Barrierefreiheitslösungen für Experience Platform
 

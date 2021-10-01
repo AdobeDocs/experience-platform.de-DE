@@ -1,13 +1,13 @@
 ---
 title: Abrufen von Experience Cloud-IDs mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen.
-seo-description: Erfahren Sie, wie Sie die Adobe Experience Cloud ID abrufen.
+seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identität; Erstanbieter-Identität; Identity-Dienst; Drittanbieter-Identität; ID-Migration; Besucher-ID; Drittanbieter-Identität; thirdPartyCookiesEnabled; idMigrationEnabled; getIdentity; Syncing Identities; syncIdentity; sendEvent; identityMap; primary; ecid; Identity-Namespace; Namespace-ID; authenticationState; hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 5%
+source-wordcount: '1209'
+ht-degree: 6%
 
 ---
 
@@ -49,7 +49,7 @@ Wenn Sie derzeit die serverseitige Weiterleitung aktiviert haben und `appmeasure
 
 ## Abrufen der Besucher-ID und Regions-ID
 
-Wenn Sie die Unique Visitor-ID verwenden möchten, verwenden Sie den Befehl `getIdentity` . `getIdentity` gibt die vorhandene ECID für den aktuellen Besucher zurück. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück. Weitere Informationen finden Sie im [Adobe Audience Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html).
+Wenn Sie die Unique Visitor-ID verwenden möchten, verwenden Sie den Befehl `getIdentity` . `getIdentity` gibt die vorhandene ECID für den aktuellen Besucher zurück. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück. Weitere Informationen finden Sie im [Adobe Audience Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=de).
 
 >[!NOTE]
 >

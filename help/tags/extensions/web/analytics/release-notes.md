@@ -3,7 +3,7 @@ title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: cf0f8022e0a9ea115b1312d9988b3abb804d9b80
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1249'
 ht-degree: 100%
 
@@ -34,7 +34,7 @@ ht-degree: 100%
 
 #### Funktionen
 
-* AppMeasurement wurde aktualisiert auf [Version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de).
+* AppMeasurement wurde aktualisiert auf [Version 2.22.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
 * Geringfügige Änderung an der Benutzeroberfläche: Die zusätzliche Einstellung wird jetzt in einem Accordion konsolidiert angezeigt anstatt in einem Kontrollkästchen.
 
 ## 2. Juni 2020
@@ -62,7 +62,7 @@ ht-degree: 100%
 
 #### Funktionen
 
-* [AppMeasurement wurde auf Version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) aktualisiert.
+* [AppMeasurement wurde auf Version 2.20.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) aktualisiert.
 
 ## 2. März 2020
 
@@ -74,7 +74,7 @@ ht-degree: 100%
 
 #### Funktionen
 
-* [AppMeasurement wurde auf Version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de) aktualisiert.
+* [AppMeasurement wurde auf Version 2.18.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) aktualisiert.
 * DIL-Bibliothek im Audience Manager-Modul wurde auf Version 9.4 aktualisiert.
 * Länge der Eingabefelder in der Erweiterung wurde erhöht.
 * eVars und Props in den Erweiterungs- und Aktionskonfigurationen zeigen jetzt den Anzeigenamen von Analytics an.
@@ -135,7 +135,7 @@ ht-degree: 100%
 
 * Aktualisierung der Adobe Analytics-Erweiterung für die Unterstützung von DIL 9.2 für Audience Manager
 
-* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=de#version-2.15.0)
+* Aktualisierung der Erweiterung zur Unterstützung von [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
 * Entfernung des folgenden Kontrollkästchens, da es nicht mehr unterstützt wird: „Do not attach the destination publishing IFRAME to the DOM or fire destinations“
 
 ## 4. Juni 2019

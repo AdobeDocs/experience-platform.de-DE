@@ -3,7 +3,7 @@ title: Notes-Endpunkt
 description: Erfahren Sie, wie Sie den /notes-Endpunkt in der Reactor-API abrufen.
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 100%
 

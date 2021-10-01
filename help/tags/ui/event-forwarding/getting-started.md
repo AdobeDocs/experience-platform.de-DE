@@ -1,10 +1,11 @@
 ---
 title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: f82bfac9-dc2d-44de-a308-651300f107df
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 94%
+ht-degree: 96%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Um die Ereignisweiterleitung in Adobe Experience Platform zu verwenden, müssen Daten mit einer oder mehreren der folgenden drei Optionen an das Adobe Experience Platform Edge Network gesendet werden:
 
@@ -40,7 +41,7 @@ Erstellen Sie in Adobe Experience Platform Ihr Schema.
 
 1. Versehen Sie das Schema mit einem Namen und einer Kurzbeschreibung.
 
-1. Sie können die Feldgruppe „ExperienceEvent-Web-Details“ hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldgruppen]** auswählen.
+1. Sie können die Feldgruppe „ExperienceEvent-Web-Details“ hinzufügen, indem Sie **[!UICONTROL Hinzufügen]** neben **[!UICONTROL Feldgruppen]** auswählen. 
 
    >[!NOTE]
    >
@@ -48,7 +49,7 @@ Erstellen Sie in Adobe Experience Platform Ihr Schema.
 
 1. Speichern Sie das Schema und notieren Sie sich den Namen, den Sie ihm gegeben haben.
 
-Weitere Informationen zu Schemas finden Sie unter [Experience-Datenmodell (XDM) – Systemhilfe](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de).
+Weitere Informationen zu Schemata finden Sie unter [Experience-Datenmodell (XDM) – Systemhilfe](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de).
 
 ## Erstellen einer Ereignisweiterleitungseigenschaft
 
@@ -65,7 +66,7 @@ Erstellen Sie in der Datenerfassungs-Benutzeroberfläche eine Eigenschaft vom Ty
 Nachdem Sie die Eigenschaft erstellt haben, wechseln Sie zum Tab **[!UICONTROL Umgebungen]** für die neue Eigenschaft und
 notieren Sie sich die Umgebungs-IDs. Wenn sich die im Datastream verwendete Adobe Org von der in der Ereignisweiterleitung verwendeten Adobe unterscheidet, können Sie die Umgebungs-ID aus dem Tab **[!UICONTROL Umgebungen]** kopieren und beim Erstellen eines Datastreams einfügen. Andernfalls können Sie die Umgebung aus einem Dropdown-Menü auswählen.
 
-## Erstellen eines Daten-Streams
+## Erstellen eines Datenspeichers
 
 Verwenden Sie zum Erstellen Ihres Daten-Streams in Adobe Experience Platform die Umgebungs-ID, die beim Erstellen der Ereignisweiterleitungseigenschaft generiert wurde.
 

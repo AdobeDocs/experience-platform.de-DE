@@ -1,8 +1,9 @@
 ---
 title: Adobe Media Analytics (3.x SDK) for Audio and Video-Erweiterung  Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics (3.x SDK) for Audio and Video“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 In dieser Dokumentation finden Sie Informationen zum Installieren, Konfigurieren und Implementieren der „Adobe Media Analytics (3.x SDK) for Audio and Video“-Erweiterung (Media Analytics-Erweiterung). Darin enthalten sind neben Beispielen und Links zu Mustern die verfügbaren Optionen bei Verwendung dieser Erweiterung zum Erstellen einer Regel.
 

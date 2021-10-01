@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Erlebnisereignis-Abfragen;Erlebnis-Abfrage;Experience Ereignis-Abfrage
+keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Erlebnisereignisabfragen; Erlebnisereignisabfrage; Erlebnisereignisabfrage;
 solution: Experience Platform
-title: Beispielwerte für Abfragen für Experience Ereignisses
+title: Beispielabfragen für Erlebnisereignisse
 topic-legacy: queries
 type: Tutorial
-description: Das folgende Dokument enthält Beispiele für Abfragen, die Experience Ereignisses in Adobe Experience Platform Abfrage Service beinhalten.
+description: Das folgende Dokument enthält Beispiele für Abfragen, die Erlebnisereignisse in Adobe Experience Platform Query Service beinhalten.
 exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '320'
@@ -14,17 +13,17 @@ ht-degree: 58%
 
 ---
 
-# Abfragen für Muster für [!DNL Experience Events]
+# Beispielabfragen für [!DNL Experience Events]
 
-Zusätzlich zu den standardmäßigen SQL-Abfragen unterstützt Adobe Experience Platform [!DNL Query Service] das Schreiben von Abfragen mit [!DNL Experience Events]. Experience Ereignisses wird durch die Experience Data Model (XDM) ExperienceEvent-Klasse dargestellt, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert, und daher für die Analyse der Zeitdomäne verwendet werden kann.
+Zusätzlich zu Standard-SQL-Abfragen unterstützt Adobe Experience Platform [!DNL Query Service] das Schreiben von Abfragen mit [!DNL Experience Events]. Erlebnisereignisse werden durch die Experience-Datenmodell (XDM)-ExperienceEvent-Klasse repräsentiert, die einen unveränderlichen und nicht aggregierten Schnappschuss des Systems erfasst, wenn ein Benutzer mit einer Website oder einem Dienst interagiert, und daher für die Zeitbereichsanalyse verwendet werden kann.
 
-Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie im [[!DNL XDM System] overview](../../xdm/home.md). Durch die Kombination von [!DNL Query Service] und [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
+Weitere Informationen zu XDM und [!DNL Experience Events] finden Sie in der [[!DNL XDM System] Übersicht](../../xdm/home.md). Durch Kombination von [!DNL Query Service] mit [!DNL Experience Events] können Sie Verhaltenstrends unter Ihren Benutzern effektiv verfolgen. Das folgende Dokument enthält Beispiele für Abfragen mit [!DNL Experience Events].
 
 ## Erstellen eines Trendberichts mit Ereignissen nach Tagen über einen bestimmten Datumsbereich
 
 Im folgenden Beispiel wird ein Trendbericht mit Ereignissen über einen bestimmten Datumsbereich erstellt, der nach Datum gruppiert ist. Insbesondere werden verschiedene Analytics-Werte als A, B und C zusammengefasst und anschließend die Häufigkeit, mit der Parkas angezeigt wurden.
 
-Die Zeitstempelspalte in [!DNL Experience Event]-Datensätzen befindet sich in UTC. Im folgenden Beispiel wird die `from_utc_timestamp()`-Funktion verwendet, um den Zeitstempel von UTC in EDT umzuwandeln. Anschließend wird mit der `date_format()`-Funktion das Datum vom Rest des Zeitstempels getrennt.
+Die Zeitstempelspalte in [!DNL Experience Event] Datensätzen befindet sich in UTC. Im folgenden Beispiel wird die `from_utc_timestamp()`-Funktion verwendet, um den Zeitstempel von UTC in EDT umzuwandeln. Anschließend wird mit der `date_format()`-Funktion das Datum vom Rest des Zeitstempels getrennt.
 
 ```sql
 SELECT 

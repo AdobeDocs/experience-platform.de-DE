@@ -8,7 +8,7 @@ exl-id: b258c822-5182-4217-9d1b-8196d889740f
 source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
 workflow-type: tm+mt
 source-wordcount: '779'
-ht-degree: 21%
+ht-degree: 30%
 
 ---
 
@@ -68,7 +68,7 @@ Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite und d
 
 >[!IMPORTANT]
 >
->Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) verwendet wird.
+>Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
 
 Durch das Zurücksetzen einer Produktions- oder Entwicklungs-Sandbox werden alle mit dieser Sandbox verknüpften Ressourcen (Schemas, Datensätze usw.) gelöscht, wobei der Name der Sandbox und die zugehörigen Berechtigungen beibehalten werden. Diese „saubere“ Sandbox ist für Benutzer, die Zugriff darauf haben, unter demselben Namen weiter verfügbar.
 
@@ -116,7 +116,7 @@ Durch das Löschen einer Produktions- oder Entwicklungs-Sandbox werden alle mit 
 
 Wählen Sie die Sandbox aus, die Sie aus der Sandbox-Liste löschen möchten. Wählen Sie im sich öffnenden Navigationsfenster **[!UICONTROL Delete]** aus.
 
-![Löschen Sie](../images/ui/delete.png)
+![delete](../images/ui/delete.png)
 
 Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
 

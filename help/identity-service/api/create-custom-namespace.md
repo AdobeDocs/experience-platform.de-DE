@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Namensraum;Namensraum;Namensraum;Namensraum;Identitäts-Namensraum;Namensraum;Identität;Identität;Identität
+keywords: Experience Platform;Startseite;beliebte Themen;Namespace;Namespace;Namespaces;Namespaces;Identitäts-Namespace;Identitäts-Namespace;Identität;Identität
 solution: Experience Platform
-title: Erstellen eines benutzerspezifischen Namensraums in der Identitätsdienst-API
+title: Erstellen eines benutzerdefinierten Namespace in der Identity Service-API
 topic-legacy: API guide
-description: Mithilfe der Identitäts-Namensraum-API können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
+description: Mithilfe der Identity-Namespace-API können Sie einen benutzerdefinierten Identitäts-Namespace erstellen, der nur für Ihr Unternehmen verfügbar ist.
 exl-id: 6015a225-4508-49cc-9dda-fb9f73a8746c
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '120'
@@ -13,15 +12,15 @@ ht-degree: 5%
 
 ---
 
-# Erstellen eines benutzerdefinierten Namensraums in der Identitätsdienst-API
+# Erstellen eines benutzerdefinierten Namespace in der Identity Service-API
 
-Mit der API [!DNL Identity Namespace] können Sie einen benutzerdefinierten Identitäts-Namensraum erstellen, der nur für Ihr Unternehmen verfügbar ist.
+Mit der API [!DNL Identity Namespace] können Sie einen benutzerdefinierten Identitäts-Namespace erstellen, der nur für Ihr Unternehmen verfügbar ist.
 
-Empfehlungen zum Erstellen benutzerdefinierter Namensraum finden Sie in der [FAQ-Dokumentation zum Identitätsdienst](../troubleshooting-guide.md).
+Empfehlungen zum Erstellen benutzerdefinierter Namespaces finden Sie in der [FAQ-Dokumentation zum Identity Service](../troubleshooting-guide.md).
 
 >[!NOTE]
 >
->Namensraum sind ein Qualifikator für Identitäten. Daher kann ein Namensraum, sobald er erstellt wurde, nicht gelöscht werden.
+>Namespaces sind ein Qualifizierer für Identitäten. Daher kann ein Namespace nach seiner Erstellung nicht mehr gelöscht werden.
 
 **API-Format**
 
@@ -65,4 +64,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Lernprogramm fort, um [die native ID einer Identität](./list-native-id.md) zu Liste.
+Fahren Sie mit dem nächsten Tutorial zu [Auflisten der nativen ID einer Identität](./list-native-id.md) fort.

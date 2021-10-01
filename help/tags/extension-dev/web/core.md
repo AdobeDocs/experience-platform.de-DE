@@ -1,8 +1,9 @@
 ---
 title: Die wichtigsten Bibliotheksmodule für Web-Erweiterungen
-description: Erfahren Sie mehr über die wichtigsten Bibliotheksmodule, die Sie in Ihren Web-Erweiterungen verwenden können.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Hier erfahren Sie mehr über die wichtigsten Bibliotheksmodule, die Sie in Ihren Web-Erweiterungen verwenden können.
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Dieses Dokument enthält eine Liste der wichtigsten Module, die Sie in Ihren Web-Erweiterungen verwenden können. Sie können mit `require('@adobe/{MODULE}')` auf diese Module zugreifen, wobei `{MODULE}` für den Namen des zu verwendenden Hauptmoduls steht.
 
@@ -78,7 +79,7 @@ loadScript(url).then(function() {
 
 ### [!DNL reactor-promise]
 
-`reactor-promise` ist ein Konstruktor, der die native [Promise-API](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in ECMAScript 6 imitiert. Wenn die native Promise-API verfügbar ist, wird sie stattdessen zurückgegeben.
+`reactor-promise` ist ein Konstruktor, der die native [Promise-API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in ECMAScript 6 imitiert. Wenn die native Promise-API verfügbar ist, wird sie stattdessen zurückgegeben.
 
 ```javascript
 var Promise = require('@adobe/reactor-promise');

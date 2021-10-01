@@ -4,13 +4,13 @@ description: Versionshinweise zu Experience Platform vom 21. April 2021.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
-workflow-type: ht
+exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 100%
 
 ---
-
 
 # Adobe Experience Platform – Versionshinweise
 
@@ -93,7 +93,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | Sie können über die Benutzeroberfläche nun eine [!DNL Marketo Engage]-Quellverbindung erstellen, um B2B-Daten an Platform zu übertragen und mit Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand zu halten. Weitere Informationen finden Sie in der [[!DNL Marketo Engage] Quell-Connector-Dokumentation](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| [!DNL Marketo Engage] (Betaversion) | Sie können über die Benutzeroberfläche nun eine [!DNL Marketo Engage]-Quellverbindung erstellen, um B2B-Daten an Platform zu übertragen und mit Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand zu halten. Weitere Informationen finden Sie in der [[!DNL Marketo Engage] Quell-Connector-Dokumentation](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

@@ -4,14 +4,15 @@ solution: Experience Platform
 title: Salesforce Marketing Cloud Source - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Salesforce Marketing Cloud über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
-source-git-commit: f196da32f67578ad1d73f3200f6050a7ddab0d88
+exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 18%
 
 ---
 
-# (Beta) [!DNL Salesforce Marketing Cloud]
+# (Betaversion) [!DNL Salesforce Marketing Cloud]
 
 >[!NOTE]
 >

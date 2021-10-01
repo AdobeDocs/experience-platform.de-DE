@@ -3,7 +3,7 @@ title: Freie turbine-Variable
 description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 100%
 

@@ -1,7 +1,8 @@
 ---
 description: Diese Konfiguration bestimmt, wie Adobe Experience Platform-Benutzer sich bei Ihrem Ziel-Endpunkt authentifizieren, um Daten zu aktivieren.
 title: Konfigurationsoptionen für Anmeldedaten im Destination SDK
-source-git-commit: 11f6421665acc2041aa9483b1e0efb6fe48b6dfb
+exl-id: 33eaab24-f867-4744-b424-4ba71727373c
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%

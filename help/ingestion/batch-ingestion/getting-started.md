@@ -3,13 +3,13 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Erste Schritte mit der Data Ingestion-API
 type: Documentation
 description: Im Erste-Schritte-Handbuch zur Datenerfassungs-API werden die wichtigsten Konzepte und grundlegenden Funktionen vorgestellt, die Sie kennen müssen, bevor Sie Daten mithilfe von APIs in die Experience Platform aufnehmen können.
-source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
+exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 49%
 
 ---
-
 
 # Erste Schritte mit der Data Ingestion-API {#getting-started}
 

@@ -1,8 +1,9 @@
 ---
 title: Filtern von Antworten in der Reactor-API
 description: Hier erfahren Sie, wie Sie bei der Auflistung von Ressourcen in der Reactor-API Ergebnisse filtern können.
-source-git-commit: 6a1728bd995137a7cd6dc79313762ae6e665d416
-workflow-type: ht
+exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '556'
 ht-degree: 100%
 

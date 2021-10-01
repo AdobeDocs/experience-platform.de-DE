@@ -39,7 +39,7 @@ Nicht alle Spalten des Schemas [!DNL Consumer Experience Event] (CEE) sind für 
 | --- | --- |
 | Primäres Identitätsfeld | Touchpoint/Konversion |
 | Zeitstempel | Touchpoint/Konversion |
-| Channel._type | Touchpoint |
+| Kanal._type | Touchpoint |
 | Channel.mediaAction | Touchpoint |
 | Channel.mediaType | Touchpoint |
 | Marketing.trackingCode | Touchpoint |

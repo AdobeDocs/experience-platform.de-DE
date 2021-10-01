@@ -18,7 +18,7 @@ Mit Adobe Experience Platform können Sie Segmente erstellen, die eine Gruppe sp
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentdefinitionen und enthält Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
-## Erste Schritte 
+## Erste Schritte
 
 Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
 

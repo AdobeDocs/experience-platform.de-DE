@@ -1,8 +1,9 @@
 ---
 title: Asynchrone Implementierung
 description: Erfahren Sie, wie Sie Tag-Bibliotheken von Adobe Experience Platform asynchron auf Ihrer Website bereitstellen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 100%
 
@@ -12,9 +13,9 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
-Performance und blockierungsfreie Implementierung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Anwender zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Adobe-Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
+Performance und blockierungsfreie Implementierung der von unseren Produkten benötigten JavaScript-Bibliotheken sind für Adobe Experience Cloud-Anwender zunehmend wichtig. Tools wie [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) empfehlen, dass die Benutzer die Art und Weise der Bereitstellung der Bibliotheken auf ihrer Site ändern. Dieser Artikel erklärt, wie Sie die Adobe-JavaScript-Bibliotheken asynchron verwenden können.
 
 ## Synchron und asynchron im Vergleich
 
@@ -66,8 +67,8 @@ Regel A → Regel B → Regel C → Regel D
 Obwohl die Reihenfolge immer durchgesetzt wird, können einige Regeln sofort nach dem Laden der Tag-Bibliothek ausgeführt werden, während andere möglicherweise erst später ausgeführt werden. Folgendes tritt auf, wenn die Tag-Bibliothek geladen wird:
 
 1. Regel A wird sofort ausgeführt.
-1. Wenn das Browserereignis `DOMContentLoaded` (DOM bereit) bereits eingetreten ist, werden Regeln B und C sofort ausgeführt. Andernfalls werden Regel B und Regel C später ausgeführt, wenn das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/de-DE/docs/Web/Events/DOMContentLoaded) eintritt.
-1. Wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) (Fenster geladen) bereits eingetreten ist, wird Regel D sofort ausgeführt. Andernfalls wird Regel D später ausgeführt, wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) eintritt. Beachten Sie, dass – wenn Sie die Tag-Bibliothek gemäß Anweisungen installiert haben – der Ladevorgang der Tag-Bibliothek *immer* abgeschlossen wird, bevor das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) auftritt.
+1. Wenn das Browserereignis `DOMContentLoaded` (DOM bereit) bereits eingetreten ist, werden Regeln B und C sofort ausgeführt. Andernfalls werden Regel B und Regel C später ausgeführt, wenn das Browser-Ereignis [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) eintritt.
+1. Wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/de-DE/docs/Web/Events/load) (Fenster geladen) bereits eingetreten ist, wird Regel D sofort ausgeführt. Andernfalls wird Regel D später ausgeführt, wenn das Browser-Ereignis [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) eintritt. Beachten Sie, dass – wenn Sie die Tag-Bibliothek gemäß Anweisungen installiert haben – der Ladevorgang der Tag-Bibliothek *immer* abgeschlossen wird, bevor das Browser-Ereignis [`load`](https://developer.mozilla.org/en-US/docs/Web/Events/load) auftritt.
 
 Beachten Sie beim Anwenden dieser Prinzipien auf Ihre eigene Website folgende Punkte:
 

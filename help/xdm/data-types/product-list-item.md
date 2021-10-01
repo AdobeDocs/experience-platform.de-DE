@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Datentyp des Produktlistenelements
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp des Produktlistenelements.
-source-git-commit: b22dce52563d5f3bbd1796c11d7c7b2a49fa6d5f
+exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 14%

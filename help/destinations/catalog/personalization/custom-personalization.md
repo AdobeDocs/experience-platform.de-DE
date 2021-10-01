@@ -2,7 +2,8 @@
 keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniertes Ziel der Erlebnisplattform;
 title: Benutzerdefinierte Personalisierungsverbindung (Beta)
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet 1:1-Echtzeit-Personalisierung und basiert auf der Segmentmitgliedschaft eines Benutzerprofils.
-source-git-commit: 0635828cf3f637e67d2cabda860ca452e61892d4
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
+source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
 workflow-type: tm+mt
 source-wordcount: '578'
 ht-degree: 8%

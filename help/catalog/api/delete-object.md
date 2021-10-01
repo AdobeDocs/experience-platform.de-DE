@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Löschen eines Objekts;Katalogdienst;API
+keywords: Experience Platform; Startseite; beliebte Themen; Löschen eines Objekts; Katalogdienst; API
 solution: Experience Platform
 title: Löschen eines Objekts in der API
 topic-legacy: developer guide
 description: Sie können ein Katalogobjekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anfrage angeben.
 exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '207'
@@ -15,11 +14,11 @@ ht-degree: 47%
 
 # Löschen eines Objekts in der API
 
-Sie können ein [!DNL Catalog]-Objekt löschen, indem Sie dessen ID im Pfad einer DELETE-Anforderung angeben.
+Sie können ein [!DNL Catalog]-Objekt löschen, indem Sie dessen Kennung im Pfad einer DELETE-Anfrage angeben.
 
 >[!WARNING]
 >
->Seien Sie beim Löschen von Objekten besonders vorsichtig, da dies nicht rückgängig gemacht werden kann und andernorts in [!DNL Experience Platform] umbruchartige Änderungen hervorrufen kann.
+>Seien Sie besonders vorsichtig beim Löschen von Objekten, da dies nicht rückgängig gemacht werden kann und andernorts in [!DNL Experience Platform] zu unerwarteten Änderungen führen kann.
 
 **API-Format**
 
@@ -29,11 +28,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Der Endpunkt `DELETE /batches/{ID}` wurde nicht mehr unterstützt. Um einen Stapel zu löschen, sollten Sie die [Batch Ingestion API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) verwenden.
+>Der Endpunkt `DELETE /batches/{ID}` wird nicht mehr unterstützt. Um einen Batch zu löschen, sollten Sie die [Batch Ingestion-API](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch) verwenden.
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu löschenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu löschenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -61,4 +60,4 @@ Eine erfolgreiche Antwort gibt HTTP-Status 200 (OK) und ein Array mit der ID des
 
 >[!NOTE]
 >
->Wenn keine [!DNL Catalog]-Objekte mit der in Ihrer Anforderung angegebenen ID übereinstimmen, erhalten Sie möglicherweise trotzdem einen HTTP-Statuscode 200, aber das Antwortarray ist leer.
+>Wenn keine [!DNL Catalog] -Objekte mit der in Ihrer Anfrage angegebenen ID übereinstimmen, erhalten Sie möglicherweise weiterhin einen HTTP-Status-Code 200, das Antwort-Array ist jedoch leer.

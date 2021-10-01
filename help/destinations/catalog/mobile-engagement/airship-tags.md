@@ -1,7 +1,7 @@
 ---
 keywords: Luftschiff-Tags; Luftschiff-Ziel
 title: Verbindung von Airship Tags
-description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
+description: Nahtlose Weitergabe von Zielgruppendaten von Adobe an Airship als Zielgruppen-Tags für Targeting innerhalb von Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
 workflow-type: tm+mt

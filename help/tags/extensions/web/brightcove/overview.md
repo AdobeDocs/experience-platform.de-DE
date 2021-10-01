@@ -1,8 +1,9 @@
 ---
 title: BrightCove Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „BrightCove Video Tracking“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: d27eff21-2abf-4495-8382-08cab32742e0
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '915'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## Voraussetzungen
 
@@ -22,7 +23,7 @@ Für jede Tag-Eigenschaft in Adobe Experience Platform müssen die folgenden Erw
 * Experience Cloud-Besucher-ID-Service
 * Installierte Core-Erweiterungen
 
-Verwenden Sie das Code-Fragment „In-Page embed code (Advanced)“ im HTML-Code jeder Web-Seite, auf der ein Video-Player gerendert werden soll. Das HTML-Fragment „In-Page Embed code (Advanced)“ finden Sie in der [Brightcove-Dokumentation](https://de.studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Der folgende Link enthält weitere Informationen zum [Generieren von eingebettetem Code für Vorschau und veröffentlichte Video-Player](https://de.studio.support.brightcove.com/players/generating-player-embed-code.html).
+Verwenden Sie das Code-Fragment „In-Page embed code (Advanced)“ im HTML-Code jeder Web-Seite, auf der ein Video-Player gerendert werden soll. Das HTML-Fragment „In-Page Embed code (Advanced)“ finden Sie in der [Brightcove-Dokumentation](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). Der folgende Link enthält weitere Informationen zum [Generieren von eingebettetem Code für Vorschau und veröffentlichte Video-Player](https://de.studio.support.brightcove.com/players/generating-player-embed-code.html).
 
 Diese Erweiterungsversion 1.1.0 unterstützt das Einbetten mehrerer BrightCove-Videos auf einer einzelnen Web-Seite. Wenn es innerhalb der erweiterten Einbettungs-Tags mehrere `id`-Eigenschaften gibt, stellen Sie sicher, dass sie jeweils über eindeutige Werte verfügen. Beispielsweise `player1`, `player2` und so weiter.
 
@@ -38,7 +39,7 @@ Weitere Informationen zu den in dieser Erweiterung verwendeten Komponentenmethod
 
 Es sind sieben Datenelemente innerhalb der Erweiterung verfügbar, von denen keines konfiguriert werden muss.
 
-* **Abspielposition:** Wenn dieses Datenelement in einer Tag-Regel aufgerufen wird, wird in Sekunden der Ort der Abspielposition auf der Video-Zeitleiste aufgezeichnet.
+* **Abspielposition:** Wenn dieses Datenelement in einer Tag-Regel aufgerufen wird, wird in Sekunden der Ort der Abspielposition auf der Video-Timeline aufgezeichnet.
 * **Video-Account-ID:** Dieses Datenelement zeichnet die ID des Brightcove-Accounts auf, der das Video veröffentlicht hat.
 * **Videodauer:** Dieses Datenelement zeichnet die Gesamtdauer des Videoinhalts in Sekunden auf. Darüber hinaus kann in Analytics eine berechnete Metrik erstellt werden, um die Sekundenanzahl in Minuten oder Stunden umzurechnen.
 * **Unterstützung für Videoanzeigen:** Dieses Datenelement gibt an, ob Anzeigen innerhalb des Videos unterstützt werden oder nicht.
@@ -50,7 +51,7 @@ Es sind sieben Datenelemente innerhalb der Erweiterung verfügbar, von denen kei
 
 In der Erweiterung sind sieben Ereignisse verfügbar. Nur das benutzerdefinierte Cue-Punkt-Tracking muss konfiguriert werden.
 
-* **Benutzerdefiniertes Cue-Punkt-Tracking:** Dieses Ereignis wird ausgelöst, wenn das Video den angegebenen Videoschwellenprozentsatz erreicht. Wenn ein Video beispielsweise 60 Sekunden dauert und der vorgegebene Cue-Punkt bei 50 % liegt, wird das Ereignis an der 30-Sekunden-Markierung ausgelöst.
+* **Benutzerdefiniertes Cue-Punkt-Tracking:** Dieses Ereignis wird ausgelöst, wenn das Video den angegebenen Videoschwellenprozentsatz erreicht. Wenn ein Video beispielsweise 60 Sekunden dauert und der vorgegebene Cue-Punkt bei 50 % liegt, wird das Ereignis an der 30-Sekunden-Markierung ausgelöst. 
 
 >[!NOTE]
 >

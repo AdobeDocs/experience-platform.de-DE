@@ -1,8 +1,9 @@
 ---
 title: Überblick zum Entwickeln von Erweiterungen
 description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Prozess der Erweiterungsentwicklung in Adobe Experience Platform kennen.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: b72df3df-f206-488d-a690-0f086973c5b6
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Eines der Hauptziele von Tags in Adobe Experience Platform besteht darin, ein offenes Ökosystem zu schaffen, in dem Ingenieure außerhalb von Adobe zusätzliche Funktionen auf ihren Websites und mobilen Anwendungen verfügbar machen können. Dies wird durch Tag-Erweiterungen erreicht. Sobald eine Erweiterung auf einer Tag-Eigenschaft installiert wurde, werden die Funktionen dieser Erweiterung für alle Benutzer der Eigenschaft verfügbar.
 

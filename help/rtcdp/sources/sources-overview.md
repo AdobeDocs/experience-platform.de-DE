@@ -1,20 +1,19 @@
 ---
-keywords: rtcdp sources;sources rtcdp;Echtzeit-Kundendatenplattformen
-title: Quellen in Echtzeit-Kundendatenplattform
-seo-title: Quellen in Echtzeit-Kundendatenplattform
+keywords: rtcdp-Quellen;Quellen rtcdp;Echtzeit-Kundendatenplattformquellen
+title: Quellen in der Echtzeit-Kundendatenplattform
+seo-title: Sources in Real-time Customer Data Platform
 description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
-seo-description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
-translation-type: tm+mt
-source-git-commit: 36f63cecd49e6a6b39367359d50252612ea16d7a
+seo-description: This document provides an overview of Sources in Real-Time Customer Data Platform
+exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
+source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 38%
+source-wordcount: '100'
+ht-degree: 33%
 
 ---
 
+# Quellen in der Echtzeit-Kundendatenplattform
 
-# Quellen in Echtzeit-Kundendatenplattform
+[!DNL Real-Time Customer Data Platform] ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-[!DNL Real-Time Customer Data Platform] ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
-
-Für einen detaillierteren Überblick über die Quellen, einschließlich einer Liste der verfügbaren Quellen und Links zu Tutorials, lesen Sie bitte die [Quelldokumentation](../../sources/home.md).
+Eine detailliertere Übersicht der Quellen, einschließlich einer Liste der verfügbaren Quellen und Links zu Tutorials, finden Sie in der [Quelldokumentation](../../sources/home.md).

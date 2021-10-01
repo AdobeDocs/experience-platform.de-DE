@@ -1,8 +1,9 @@
 ---
 title: Adobe Media Analytics for Audio and Video-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Media Analytics for Audio and Video“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 In dieser Dokumentation finden Sie Informationen zum Installieren, Konfigurieren und Implementieren der „Adobe Media Analytics für Audio und Video“-Erweiterung (Media Analytics-Erweiterung). Darin enthalten sind neben Beispielen und Links zu Mustern die verfügbaren Optionen bei Verwendung dieser Erweiterung zum Erstellen einer Regel.
 
@@ -129,8 +130,8 @@ Die MA-Erweiterung legt die `get-instance` und die freigegebenen `media-heartbea
 
       | Eigenschaft | Beschreibung | Erforderlich |
       | :--- | :--- | :--- |
-      | Online Video Provider | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
-      | Player Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+      | Online-Videoanbieter | Name der Online-Videoplattform, über die der Inhalt verteilt wird. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
+      | Player-Name | Name des verwendeten Medienplayers, z. B. „AVPlayer“, „HTML5-Player“, „Mein anwenderspezifischer Player“. | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
       | Kanal | Kanalnamen-Eigenschaft | Nein. Überschreibt den während der Erweiterungskonfiguration definierten Wert, sofern vorhanden. |
    **Wert zurückgeben:** Eine Zusage, die entweder mit einer `MediaHeartbeat`-Instanz aufgelöst oder mit einer Fehlermeldung zurückgewiesen wird.
 

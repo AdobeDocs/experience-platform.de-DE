@@ -1,8 +1,9 @@
 ---
 title: Erste Schritte bei der Entwicklung von Erweiterungen
 description: So beginnen Sie mit der Entwicklung Ihrer eigenen Tag-Erweiterungen in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Um Ihnen den Einstieg und die Erstellung von Erweiterungen zu erleichtern, verwenden wir das Open-Source-Tool für Strukturvorlagen, das von Entwicklern von Adobe zur Verfügung gestellt wird, um die erforderlichen Dateien und Dateistrukturen für Ihr Erweiterungspaket zu erstellen, sodass Sie nur noch den entscheidenden Teil beitragen müssen: den eigentlichen Code schreiben.
 

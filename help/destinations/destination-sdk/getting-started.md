@@ -1,7 +1,8 @@
 ---
 description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und mit der Verwendung des Adobe Experience Platform Destination SDK beginnen. Es enthält Anweisungen zum Abrufen der Anmeldeinformationen für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffssteuerungsberechtigung für die Zielerstellung.
 title: Erste Schritte mit Destination SDK
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 7%

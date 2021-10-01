@@ -1,10 +1,11 @@
 ---
 title: Abwärtskompatibilitätsstandard
 description: Erfahren Sie mehr über den Abwärtskompatibilitätsstandard in Adobe Experience Platform, der sicherstellt, dass aktualisierte Versionen von Tag-Erweiterungen mit früheren Versionen kompatibel sind.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '833'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -12,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
 
 Aktualisierungen einer Tag-Erweiterung in Adobe Experience Platform müssen abwärtskompatibel mit früheren Versionen der Erweiterung sein. Das bedeutet:
 

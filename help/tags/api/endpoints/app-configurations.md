@@ -3,7 +3,7 @@ title: App configurations-Endpunkt
 description: Lernen Sie, wie Sie den /app_configurations-Endpunkt in der Reactor-API aufrufen.
 exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 100%
 

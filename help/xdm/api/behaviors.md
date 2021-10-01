@@ -8,7 +8,7 @@ exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 39d04cf482e862569277211d465bb2060a49224a
 workflow-type: tm+mt
 source-wordcount: '428'
-ht-degree: 8%
+ht-degree: 6%
 
 ---
 
@@ -29,7 +29,7 @@ Mit dem Endpunkt `/behaviors` in der API [!DNL Schema Registry] können Sie verf
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil der [[!DNL Schema Registry] ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
 ## Liste von Verhaltensweisen abrufen {#list}
 

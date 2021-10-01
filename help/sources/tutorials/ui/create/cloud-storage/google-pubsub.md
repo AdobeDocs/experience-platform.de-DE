@@ -1,12 +1,11 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Google PubSub;Google-Publikum
+keywords: Experience Platform; Homepage; beliebte Themen; Google PubSub; Google Publisub
 solution: Experience Platform
 title: Erstellen einer Google PubSub-Quellverbindung in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie einen Google PubSub-Quellanschluss mithilfe der Plattform-Benutzeroberfläche erstellen.
+description: Erfahren Sie, wie Sie einen Quell-Connector für Google PubSub über die Platform-Benutzeroberfläche erstellen.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '509'
@@ -18,60 +17,60 @@ ht-degree: 9%
 
 >[!NOTE]
 >
-> Der [!DNL Google PubSub]-Anschluss befindet sich in der Betaversion. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectors finden Sie unter [Sources overview](../../../../home.md#terms-and-conditions).
+> Der Connector [!DNL Google PubSub] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
 
-In diesem Lernprogramm werden Schritte zum Erstellen eines [!DNL Google PubSub] (nachfolgend als &quot;[!DNL PubSub]&quot;bezeichnet) mithilfe der Plattform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Google PubSub] (nachfolgend als &quot;[!DNL PubSub]&quot;bezeichnet) mithilfe der Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Wenn Sie bereits über eine gültige [!DNL PubSub]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial [Konfigurieren eines Datenniedrig](../../dataflow/batch/cloud-storage.md) fortfahren.
+Wenn Sie bereits über eine gültige [!DNL PubSub]-Verbindung verfügen, können Sie den Rest dieses Dokuments überspringen und mit dem Tutorial zum Konfigurieren eines Datenflusses [fortfahren.](../../dataflow/batch/cloud-storage.md)
 
 ### Erforderliche Anmeldedaten sammeln
 
-Um [!DNL PubSub] mit Platform zu verbinden, müssen Sie einen gültigen Wert für die folgenden Anmeldeinformationen angeben:
+Um [!DNL PubSub] mit Platform zu verbinden, müssen Sie einen gültigen Wert für die folgenden Anmeldedaten angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
 | `projectId` | Die Projekt-ID, die zum Authentifizieren von [!DNL PubSub] erforderlich ist. |
-| `credentials` | Die für die Authentifizierung von [!DNL PubSub] erforderliche Berechtigungs- oder private Schlüssel-ID. |
+| `credentials` | Die Kennung der Anmeldedaten oder des privaten Schlüssels, die für die Authentifizierung von [!DNL PubSub] erforderlich ist. |
 
-Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication). Wenn Sie die dienstkontobasierte Authentifizierung verwenden, finden Sie im folgenden Handbuch [PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) Anweisungen zum Generieren Ihrer Anmeldeinformationen.
+Weitere Informationen zu diesen Werten finden Sie im folgenden Dokument [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) . Wenn Sie die dienstkontenbasierte Authentifizierung verwenden, finden Sie im folgenden [PubSub-Handbuch](https://cloud.google.com/docs/authentication/production#create_service_account) Anweisungen zum Generieren Ihrer Anmeldeinformationen.
 
 >[!TIP]
 >
->Wenn Sie die kontobasierte Authentifizierung eines Dienstes verwenden, stellen Sie sicher, dass Sie ausreichend Benutzerzugriff auf Ihr Dienstkonto gewährt haben und dass keine zusätzlichen Leerzeichen im JSON vorhanden sind, wenn Sie Ihre Anmeldeinformationen kopieren und einfügen.
+>Wenn Sie auf Dienstkonten basierende Authentifizierung verwenden, stellen Sie sicher, dass Sie ausreichend Benutzerzugriff auf Ihr Dienstkonto gewährt haben und dass im JSON keine zusätzlichen Leerzeichen vorhanden sind, wenn Sie Ihre Anmeldeinformationen kopieren und einfügen.
 
-Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, führen Sie die folgenden Schritte aus, um Ihr [!DNL PubSub]-Konto mit der Plattform zu verknüpfen.
+Nachdem Sie die erforderlichen Anmeldedaten gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr [!DNL PubSub]-Konto mit Platform zu verknüpfen.
 
-## Verbinden Sie Ihr [!DNL PubSub]-Konto
+## Ihr [!DNL PubSub]-Konto verbinden
 
-Wählen Sie in der [Plattform-Benutzeroberfläche](https://platform.adobe.com) **[!UICONTROL Quellen]** in der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Reihe von Quellen an, für die Sie ein Konto erstellen können.
+Wählen Sie in der [Platform UI](https://platform.adobe.com) **[!UICONTROL Quellen]** aus der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] enthält eine Vielzahl von Quellen, für die Sie ein Konto erstellen können.
 
-Sie können die entsprechende Kategorie im Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die gewünschte Quelle über die Suchleiste finden.
+Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle über die Suchleiste finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Cloud-Datenspeicherung] **[!UICONTROL Google PubSub]** und dann **[!UICONTROL Hinzufügen data]**.
+Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicher] die Option **[!UICONTROL Google PubSub]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
-Die Seite **[!UICONTROL Verbindung mit Google PubSub]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldeinformationen verwenden.
+Die Seite **[!UICONTROL Verbindung zu Google PubSub]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL PubSub]-Konto, mit dem Sie einen neuen Datenflug erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Um ein vorhandenes Konto zu verwenden, wählen Sie das [!DNL PubSub]-Konto aus, mit dem Sie einen neuen Datenfluss erstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
 
-![existing](../../../../images/tutorials/create/google-pubsub/existing.png)
+![vorhandene](../../../../images/tutorials/create/google-pubsub/existing.png)
 
 ### Neues Konto
 
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre [!DNL PubSub]-Authentifizierungsdaten im Eingabedatum ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** und lassen Sie dann etwas Zeit für die Einrichtung der neuen Verbindung zu.
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und geben Sie dann einen Namen, eine optionale Beschreibung und Ihre [!DNL PubSub]-Authentifizierungsdaten im Formular ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Mit Quelle verbinden]** aus und lassen Sie dann etwas Zeit für die Einrichtung der neuen Verbindung zu.
 
 ![new](../../../../images/tutorials/create/google-pubsub/new.png)
 
 ## Nächste Schritte
 
-In diesem Lernprogramm haben Sie eine Verbindung zwischen Ihrem [!DNL PubSub]-Konto und Ihrer Plattform hergestellt. Sie können nun mit dem nächsten Lernprogramm fortfahren und [einen Datenpfad konfigurieren, um Streaming-Daten aus Ihrer Cloud-Datenspeicherung in Platform](../../dataflow/streaming/cloud-storage-streaming.md) zu übertragen.
+In diesem Tutorial haben Sie eine Verbindung zwischen Ihrem [!DNL PubSub]-Konto und Platform hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Streaming-Daten aus Ihrem Cloud-Speicher in Platform](../../dataflow/streaming/cloud-storage-streaming.md) zu übertragen.

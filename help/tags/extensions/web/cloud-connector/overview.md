@@ -1,8 +1,9 @@
 ---
 title: Cloud Connector-Erweiterung – Übersicht
-description: Machen Sie sich mit der Ereignisweiterleigungserweiterung „Cloud Connector“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+description: Erfahren Sie mehr über die Cloud Connector-Ereignisweiterleitungserweiterung in Adobe Experience Platform.
+exl-id: f3713652-ac32-4171-8dda-127c8c235849
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1616'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Mit der Cloud Connector-Ereignisweiterleitungserweiterung können Sie benutzerdefinierte HTTP-Anfragen erstellen, um Daten an ein Ziel zu senden oder Daten von einem Ziel abzurufen. Die Cloud Connector-Erweiterung ist wie Postman für das Adobe Experience Platform Edge Network und kann verwendet werden, um Daten an einen Endpunkt zu senden, der noch keine dedizierte Erweiterung hat.
 
@@ -63,12 +64,12 @@ In der folgenden Tabelle sind die vordefinierten Header aufgeführt. Sie sind ni
 | Header | Beschreibung |
 |---|---|
 | [A-IM](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) |  |
-| [Accept](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) |  |
+| [Accept](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) |  |
 | [Accept-Charset](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Charset) |  |
 | [Accept-Encoding](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding) |  |
 | [Accept-Language](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) |  |
-| [Accept-Datetime](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Accept) | Wird von einem Benutzeragenten zur Angabe übertragen, dass er auf einen früheren Zustand einer Originalressource zugreifen möchte. Zu diesem Zweck wird der `Accept-Datetime`-Header in einer HTTP-Anfrage an ein TimeGate für eine ursprüngliche Ressource übermittelt. Der Wert gibt den Zeitpunkt des gewünschten früheren Zustands der Originalressource an. |
-| Access-Control-Request-Headers | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Header](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers) der Client bei der eigentlichen Anfrage senden könnte. |
+| [Accept-Datetime](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) | Wird von einem Benutzeragenten zur Angabe übertragen, dass er auf einen früheren Zustand einer Originalressource zugreifen möchte. Zu diesem Zweck wird der `Accept-Datetime`-Header in einer HTTP-Anfrage an ein TimeGate für eine ursprüngliche Ressource übermittelt. Der Wert gibt den Zeitpunkt des gewünschten früheren Zustands der Originalressource an. |
+| Access-Control-Request-Headers | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers) der Client bei der eigentlichen Anfrage senden könnte. |
 | Access-Control-Request-Method | Wird von Browsern bei einer [Preflight-Anfrage](https://developer.mozilla.org/en-US/docs/Glossary/preflight_request) verwendet, um dem Server mitzuteilen, welche [HTTP-Methode](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Methods) bei der eigentlichen Anfrage verwendet wird. Dieser Header ist erforderlich, da die Preflight-Anfrage immer eine [OPTION](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) ist und nicht dieselbe Methode wie die eigentliche Anfrage verwendet. |
 | Authorization | Enthält die Anmeldeinformationen zum Authentifizieren eines Benutzeragenten bei einem Server. |
 | [Cache-Control](https://developer.mozilla.org/de-DE/docs/Web/HTTP/Headers/Cache-Control) | Anweisungen für Caching-Mechanismen sowohl in Anfragen als auch in Antworten. |

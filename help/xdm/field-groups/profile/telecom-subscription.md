@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Feldgruppe "Telecom Subscription Schema"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Telecom Subscription".
-source-git-commit: 19675e4042c28061a4b2ed4e68374d5e09216ba1
+exl-id: 00c20081-09d0-425c-9894-0f957558bd43
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 8%
@@ -109,4 +110,3 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 | `portedNumber` | Boolesch | Gibt an, ob der Kunde seine Nummer von einem anderen Netzbetreiber aus anbietet. |
 
 {style=&quot;table-layout:auto&quot;}
-

@@ -1,8 +1,9 @@
 ---
 title: Entwickeln einer Erweiterung
 description: Dieses Dokument bietet einen allgemeinen Überblick über den Entwicklungsprozess von Tag-Erweiterungen mit Links zu weiterführender Dokumentation für detailliertere Prozesse.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Eine Tag-Erweiterung sollte als (kleines) Produkt mit eigenen Anforderungen angesehen werden. Wenn Sie bestimmen, wie ein Benutzer von Adobe Experience Platform Ihre Erweiterung am besten verwendet, kann Ihnen dies dabei helfen, die Funktionen nach den Ereignistypen, Bedingungstypen, Aktionstypen und Datenelementtypen zu sortieren, die Ihre Erweiterung bereitstellen sollte.
 

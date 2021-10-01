@@ -8,7 +8,7 @@ exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 14%
+ht-degree: 16%
 
 ---
 
@@ -29,7 +29,7 @@ Im Folgenden finden Sie eine Liste der [!DNL Experience Cloud]-Anwendungen, die 
 
 | Anwendung | Zugriff/Löschen | Abmeldung vom Verkauf | Dokumentation und Überlegungen |
 | --- | :---: | :---: | --- |
-| Adobe Advertising Cloud | verwalten | verwalten | <ul><li>[Dokumentation zur DSGVO aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Dokumentation zum Opt-out-of-Sale für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
+| Adobe Advertising Cloud | ✓ | verwalten | <ul><li>[Dokumentation zur DSGVO aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Dokumentation zum Opt-out-of-Sale für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
 | Adobe Analytics | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=de)</li><li>[!DNL Analytics] verarbeitet Opt-out-Anfragen mithilfe von  [Datenschutzberichtsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)</li></ul> |
 | Adobe Audience Manager | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Opt-out-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Opt-out-Dokumentation](../segmentation/consents.md)</li></ul> |
@@ -46,7 +46,7 @@ Im Folgenden finden Sie eine Liste von [!DNL Experience Cloud] -Anwendungen, die
 
 | Anwendung | Dokumentationsbeschreibung |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | Eine Übersicht über die DSGVO-Funktionen für Adobe Campaign Classic. |
+| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html?lang=de) | Eine Übersicht über die DSGVO-Funktionen für Adobe Campaign Classic. |
 | [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Ein Überblick darüber, wie ein Datenschutzadministrator oder AEM Administrator DSGVO-Anfragen verarbeiten kann. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Schritte zum Ausführen von DSGVO-Zugriffs- und -Löschanfragen mit Livefyre. |
 | [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Stellen Sie sicher, dass Ihre Magento Commerce-Installationen den Anforderungen der jeweiligen Datenschutzgesetze entsprechen. |

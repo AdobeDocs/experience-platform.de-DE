@@ -1,18 +1,19 @@
 ---
 title: Versionshinweise zur Adobe Analytics Product String-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics Product String“ in Adobe Experience Platform.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 100%
 
 ---
 
-# Versionshinweise zur Erweiterung „Adobe Analytics Product String“
+# Versionshinweise zur Adobe Analytics Product String-Erweiterung
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 ## 31. Januar 2020
 

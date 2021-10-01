@@ -5,10 +5,11 @@ title: Erstellen einer Salesforce-Marketing Cloud-Basisverbindung mithilfe der F
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit Salesforce Marketing Cloud verbinden.
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 

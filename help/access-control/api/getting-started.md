@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Mit der Zugangssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können.
 exl-id: 6fd956fb-ade4-48d3-843f-4c9a605945c9
 source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 100%
 

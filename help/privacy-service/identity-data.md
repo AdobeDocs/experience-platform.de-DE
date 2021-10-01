@@ -8,7 +8,7 @@ exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 source-git-commit: d316c199c7e2d87d175015c1828af6fd0d57f32a
 workflow-type: tm+mt
 source-wordcount: '646'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform Identity Service verwaltet einen Speicher mit glob
 
 ## ECID- und Opt-in-Service
 
-Adobe Experience Cloud [!DNL Identity Service] dient als gemeinsames Identifizierungs-Framework für [!DNL Experience Cloud] und weist jedem Site-Besucher eine eindeutige, beständige ID zu. Die [!DNL Experience Cloud]-ID (ECID) verfolgt die Aktivität eines Kunden durch Verwendung eines Erstanbieter-Cookies, kann ein Gerät über mehrere Anwendungen hinweg eindeutig identifizieren und ermöglicht es Ihnen, denselben Site-Besucher und dessen Daten in verschiedenen [!DNL Experience Cloud]-Anwendungen zu identifizieren. Weitere Informationen finden Sie in [Experience Cloud Identity Service – Übersicht](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html).
+Adobe Experience Cloud [!DNL Identity Service] dient als gemeinsames Identifizierungs-Framework für [!DNL Experience Cloud] und weist jedem Site-Besucher eine eindeutige, beständige ID zu. Die [!DNL Experience Cloud]-ID (ECID) verfolgt die Aktivität eines Kunden durch Verwendung eines Erstanbieter-Cookies, kann ein Gerät über mehrere Anwendungen hinweg eindeutig identifizieren und ermöglicht es Ihnen, denselben Site-Besucher und dessen Daten in verschiedenen [!DNL Experience Cloud]-Anwendungen zu identifizieren. Weitere Informationen finden Sie in [Experience Cloud Identity Service – Übersicht](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=de).
 
 Mit Opt-in Service, einer Erweiterung von [!DNL Experience Cloud Identity Service], können Sie Protokolle in Ihrer Anwendung einrichten, mit denen Besucher bestimmen können, ob Sie ein Cookie auf dem Gerät oder Browser des Besuchers setzen können. Ausführlichere Informationen zu Opt-in Service, einschließlich der Einrichtung des Dienstes für Ihre Anwendung, finden Sie in der [Opt-in Service-Dokumentation](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=de).
 

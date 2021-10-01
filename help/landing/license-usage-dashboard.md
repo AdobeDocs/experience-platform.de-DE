@@ -11,7 +11,7 @@ ht-degree: 2%
 
 ---
 
-# Dashboard zur Lizenzverwendung {#license-usage-dashboard}
+# [!UICONTROL Dashboard zur Lizenzverwendung] {#license-usage-dashboard}
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden.
 

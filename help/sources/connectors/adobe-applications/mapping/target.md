@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Zielgruppen-Mapping;Zielgruppen-Mapping
+keywords: Experience Platform; Startseite; beliebte Themen; Zielgruppen-Mapping; Zielgruppen-Mapping
 solution: Experience Platform
-title: Zuordnen von Adobe Target-Ereignis-Daten zu XDM
+title: Zuordnen von Adobe Target-Ereignisdaten zu XDM
 topic-legacy: overview
-description: Erfahren Sie, wie Sie Adobe Target-Ereignis-Felder einem Experience Data Model (XDM)-Schema zuordnen, das in Adobe Experience Platform verwendet werden kann.
+description: Erfahren Sie, wie Sie Adobe Target-Ereignisfelder einem Experience-Datenmodell (XDM)-Schema zur Verwendung in Adobe Experience Platform zuordnen.
 exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
-translation-type: tm+mt
 source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
 workflow-type: tm+mt
 source-wordcount: '465'
@@ -13,25 +12,25 @@ ht-degree: 3%
 
 ---
 
-# Feldzuordnungen für Zielgruppen-Mappings
+# Zielgruppen-Mapping-Feldzuordnungen
 
-Mit Adobe Experience Platform können Sie Adobe Target-Daten über den Zielgruppen-Quellanschluss erfassen. Bei Verwendung des Connectors müssen alle Daten aus den Feldern der Zielgruppe den mit der XDM ExperienceEvent-Klasse verknüpften Feldern [Erlebnisdatenmodell (XDM)](../../../../xdm/home.md) zugeordnet werden.
+Mit Adobe Experience Platform können Sie Adobe Target-Daten über den Target-Quell-Connector erfassen. Bei Verwendung des Connectors müssen alle Daten aus Target-Feldern den Feldern [Experience-Datenmodell (XDM)](../../../../xdm/home.md) zugeordnet werden, die mit der XDM ExperienceEvent-Klasse verknüpft sind.
 
-In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (*XDM ExperienceEvent-Feld*) und die entsprechenden Felder für die Zielgruppe, denen sie zugeordnet werden sollen (*Feld für die Zielgruppe-Anforderung*), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
+In der folgenden Tabelle sind die Felder eines Experience Event-Schemas (*XDM ExperienceEvent-Feld*) und die entsprechenden Target-Felder, denen sie zugeordnet werden sollen (*Feld für Target-Anforderung*), aufgeführt. Zusätzliche Hinweise für einige Zuordnungen werden ebenfalls bereitgestellt.
 
 >[!NOTE]
 >
 >Bitte scrollen Sie nach links/rechts, um den gesamten Tabelleninhalt anzuzeigen.
 
-| XDM ExperienceEvent-Feld | Feld &quot;Zielgruppe anfordern&quot; | Anmerkungen |
+| XDM ExperienceEvent-Feld | Feld für Target-Anforderung | Anmerkungen |
 | ------------------------- | -------------------- | ----- |
 | **`id`** | Eine eindeutige Anforderungskennung |
 | **`dataSource`** |  | Für alle Clients auf &quot;1&quot;konfiguriert. |
-| `dataSource._id` | Ein systemgenerierter Wert, der nicht mit der Anforderung weitergegeben werden kann. | Die eindeutige ID dieser Datenquelle. Dies wird von der Person oder dem System bereitgestellt, die bzw. das die Datenquelle erstellt hat. |
-| `dataSource.code` | Ein systemgenerierter Wert, der nicht mit der Anforderung weitergegeben werden kann. | Eine Verknüpfung zur vollständigen @id. Es kann mindestens ein Code oder @id verwendet werden. Manchmal wird dieser Code als Datenquellen-Integrationscode bezeichnet. |
-| `dataSource.tags` | Ein systemgenerierter Wert, der nicht mit der Anforderung weitergegeben werden kann. | Tags werden verwendet, um anzugeben, wie die Aliase, die von einer Datenquelle dargestellt werden, von Anwendungen, die diese Aliase verwenden, interpretiert werden sollen.<br><br>Beispiele:<br><ul><li>`isAVID`: Datenquellen, die Analytics-Besucher-IDs darstellen.</li><li>`isCRSKey`: Datenquellen, die Aliase darstellen, die als Schlüssel in CRS verwendet werden sollten.</li></ul>Tags werden festgelegt, wenn die Datenquelle erstellt wird, aber sie werden auch in Pipelinemeldungen enthalten, wenn auf eine bestimmte Datenquelle verwiesen wird. |
-| **`timestamp`** | Ereignis-Zeitstempel |
-| **`channel`** | `context.channel` | Funktioniert nur mit Ansicht Versand. Die Optionen lauten &quot;web&quot;und &quot;mobile&quot;, wobei &quot;web&quot;die Standardeinstellung ist. |
+| `dataSource._id` | Ein systemgenerierter Wert, der nicht mit der Anfrage übergeben werden kann. | Die eindeutige ID dieser Datenquelle. Dies würde von der Person oder dem System bereitgestellt, die bzw. das die Datenquelle erstellt hat. |
+| `dataSource.code` | Ein systemgenerierter Wert, der nicht mit der Anfrage übergeben werden kann. | Eine Verknüpfung zur vollständigen @id. Es kann mindestens ein Code oder @id verwendet werden. Manchmal wird dieser Code als Integrationscode der Datenquelle bezeichnet. |
+| `dataSource.tags` | Ein systemgenerierter Wert, der nicht mit der Anfrage übergeben werden kann. | Tags werden verwendet, um anzugeben, wie die Aliase einer bestimmten Datenquelle von Anwendungen mithilfe dieser Aliase interpretiert werden sollen.<br><br>Beispiele:<br><ul><li>`isAVID`: Datenquellen, die Analytics-Besucher-IDs darstellen.</li><li>`isCRSKey`: Datenquellen, die Aliase darstellen, die als Schlüssel in CRS verwendet werden sollen.</li></ul>Tags werden festgelegt, wenn die Datenquelle erstellt wird, aber auch in Pipeline-Nachrichten eingeschlossen, wenn auf eine bestimmte Datenquelle verwiesen wird. |
+| **`timestamp`** | Ereigniszeitstempel |
+| **`channel`** | `context.channel` | Funktioniert nur mit der Anzeigebereitstellung. Die Optionen sind &quot;Web&quot;und &quot;Mobil&quot;, wobei &quot;Web&quot;die Standardeinstellung ist. |
 | **`endUserIds`** |
 | `endUserIds.experience.tntId` | `tntId/mboxPC` |
 | `endUserIds.experience.mcId` | `marketingCloudVisitorId` |
@@ -44,22 +43,22 @@ In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (*XDM
 | `environment.viewportHeight` | `mboxRequest.screenHeight` |
 | `environment.viewportWidth` | `mboxRequest.screenWidth` |
 | `environment.colorDepth` | `mboxRequest.colorDepth` |
-| `environment.carrier` | Der Name des Mobilnetzbetreibers wurde basierend auf der IP-Adresse der Anforderung aufgelöst. |
-| `environment.ipV4` | `mboxRequest.ipAddress` (im Format V4) |
+| `environment.carrier` | Der Name des Mobilnetzbetreibers wurde basierend auf der IP-Adresse der Anfrage aufgelöst. |
+| `environment.ipV4` | `mboxRequest.ipAddress` (im V4-Format) |
 | `environment.ipV6` | `mboxRequest.ipAddress` (im V6-Format) |
 | **`experience`** |
 | `experience.target.clientCode` | `mboxRequest.client` |
 | `experience.target.mboxName` | `mboxRequest.mboxName` |
 | `experience.target.mboxVersion` | `mboxRequest.mboxVersion` |
 | `experience.target.sessionId` | `mboxRequest.sessionId` |
-| `experience.target.environmentID` | Interne Zuordnung der Zielgruppe für kundenspezifische Umgebung (wie dev, qa oder prod). |
-| `experience.target.supplementalDataID` | Bezeichner, der zum Verbinden von Zielgruppe-Ereignissen mit Analytics-Ereignissen verwendet wird |
+| `experience.target.environmentID` | Internes Mapping von Target für kundendefinierte Umgebungen (z. B. dev, qa oder prod). |
+| `experience.target.supplementalDataID` | Bezeichner, der zum Zuordnen von Target-Ereignissen zu Analytics-Ereignissen verwendet wird |
 | `experience.target.pageDetails.pageId` | `mboxRequest.pageId` |
 | `experience.target.pageDetails.pageScore` | `mboxRequest.mboxPageValue` |
-| `experience.target.activities` | Liste (Array) der Aktivitäten, für die der Besucher sich qualifiziert hat |
-| `experience.target.activities[i].activityID` | Die ID einer Aktivität, für die der Besucher die Qualifikation für die |
-| `experience.target.activities[i].version` | Die Version einer bestimmten Aktivität, für die der Besucher qualifiziert ist |
-| `experience.target.activities[i].activityEvents` | Umfasst die Details der Ereignis der Aktivität, die der Benutzer mit diesem Ereignis getroffen hat. |
+| `experience.target.activities` | Liste (Array) der Aktivitäten, für die sich der Besucher qualifiziert hat |
+| `experience.target.activities[i].activityID` | Die ID einer bestimmten Aktivität, für die sich der Besucher qualifiziert hat |
+| `experience.target.activities[i].version` | Die Version einer bestimmten Aktivität, für die sich der Besucher qualifiziert hat |
+| `experience.target.activities[i].activityEvents` | Enthält Details zu Aktivitätsereignissen, die der Benutzer mit diesem Ereignis getroffen hat. |
 | **`device`** |
 | `device.typeIDService` | `XDMDevice.Device.TypeIDService.typeIDService_deviceatlas` |
 | `device.type` | Eine der folgenden Eigenschaften von `deviceAtlas` (oder NULL): <ul><li>`type_mobile`</li><li>`type_tablet`</li><li>`type_desktop`</li><li>`type_ereader`</li><li>`type_television`</li><li>`type_settop`</li><li>`type_mediaplayer`</li></ul> |
@@ -71,14 +70,14 @@ In der folgenden Tabelle sind die Felder eines Experience Ereignis-Schemas (*XDM
 | `device.screenWidth` | `deviceAtlas.displayWidth` |
 | `device.colorDepth` | `deviceAtlas.displayColorDepth` |
 | **`placeContext`** |
-| `placeContext.geo.id` | UUID (optional) |
-| `placeContext.geo.city` | Der Stadt-Name wurde basierend auf der IP-Adresse der Anforderung aufgelöst. |
-| `placeContext.geo.countryCode` | Ländercode basierend auf der IP-Adresse der Anforderung aufgelöst. |
-| `placeContext.geo.dmaId` | Code des angegebenen Marktbereichs, der auf der Grundlage der IP-Adresse der Anforderung aufgelöst wird. |
-| `placeContext.geo.postalCode` | Postleitzahl, die basierend auf der IP-Adresse der Anforderung aufgelöst wird. |
-| `placeContext.geo.stateProvince` | Bundesland oder Bundesland wurde auf der Grundlage der IP-Adresse des Antrags aufgelöst. |
+| `placeContext.geo.id` | Zufällige UID (erforderlich) |
+| `placeContext.geo.city` | Der Stadt-Name wird basierend auf der IP-Adresse der Anfrage aufgelöst. |
+| `placeContext.geo.countryCode` | Ländercode basierend auf der IP-Adresse der Anfrage aufgelöst. |
+| `placeContext.geo.dmaId` | Der angegebene Marktbereich-Code wurde basierend auf der IP-Adresse der Anfrage aufgelöst. |
+| `placeContext.geo.postalCode` | Postleitzahl basierend auf der IP-Adresse der Anfrage aufgelöst. |
+| `placeContext.geo.stateProvince` | Bundesland oder Bundesland basierend auf der IP-Adresse der Anfrage aufgelöst. |
 | `placeContext.localTime` | `mboxRequest.offsetTime` + `mboxRequest.currentServerTime` |
-| **`commerce`** |  | Wird nur eingestellt, wenn die Bestelldetails in der Anforderung vorhanden sind. |
+| **`commerce`** |  | Wird nur eingestellt, wenn Bestelldetails in der Anfrage vorhanden sind. |
 | `commerce.order.priceTotal` | `mboxRequest.orderTotal` |
 | `commerce.order.purchaseOrderNumber` | `mboxRequest.orderId` |
 | `commerce.order.purchaseID` | `mboxRequest.orderId` |

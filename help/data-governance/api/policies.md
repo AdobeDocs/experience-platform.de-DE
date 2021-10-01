@@ -6,7 +6,7 @@ topic-legacy: developer guide
 description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt „/policies“ wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datennutzungsrichtlinien verwendet.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 100%
 

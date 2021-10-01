@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Erste Schritte;Zuordnungs-Hilfe;beliebte Themen
+keywords: Experience Platform; Erste Schritte; Attribution; beliebte Themen
 solution: Experience Platform, Intelligent Services
 title: Erste Schritte mit Attribution AI
 topic-legacy: Getting started
 description: Folgende Handbücher setzen ein Verständnis der verschiedenen Adobe Experience Platform-Dienste voraus, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie folgende Dokumente.
 exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
-translation-type: tm+mt
 source-git-commit: d425dcd9caf8fccd0cb35e1bac73950a6042a0f8
 workflow-type: tm+mt
 source-wordcount: '538'
@@ -17,11 +16,11 @@ ht-degree: 71%
 
 Die folgenden Handbücher erfordern ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste, die mit der Verwendung von Attribution AI verbunden sind. Bevor Sie mit den Tutorials beginnen, lesen Sie folgende Dokumente:
 
-- [Systemübersicht](../../xdm/home.md) zum Erlebnis-Datenmodell (XDM): XDM ist das Fundament, das es ermöglicht,  [!DNL Adobe Experience Cloud]mit Experience Platform die richtige Botschaft an die richtige Person zu senden, am richtigen Kanal, genau zum richtigen Zeitpunkt. Das XDM-System ist die Methode, auf der Experience Platform basiert. Es stellt Experience-Datenmodell-Schemata zur Verwendung durch Platform-Dienste bereit.
-- [Grundlagen der Zusammensetzung](../../xdm/schema/composition.md) des Schemas: Dieses Dokument bietet eine Einführung in Experience Data Model-(XDM-)Schema und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in  [!DNL Adobe Experience Platform]verwendet werden sollen.
+- [Experience-Datenmodell (XDM) - Systemübersicht](../../xdm/home.md): XDM ist das grundlegende Framework, das es ermöglicht,  [!DNL Adobe Experience Cloud]mithilfe von Experience Platform genau zum richtigen Zeitpunkt die richtige Botschaft an die richtige Person, den richtigen Kanal zu senden. Das XDM-System ist die Methode, auf der Experience Platform basiert. Es stellt Experience-Datenmodell-Schemata zur Verwendung durch Platform-Dienste bereit.
+- [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Dieses Dokument bietet eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in verwendet werden  [!DNL Adobe Experience Platform]sollen.
 - [Erstellen von Schemas](../../xdm/tutorials/create-schema-ui.md): In diesem Tutorial werden die Schritte zum Erstellen eines Schemas mit dem Schema Editor in Experience Platform beschrieben.
 
-Attribution AI erfordert, dass die Datensätze dem Consumer Experience Ereignisses (CEE)-Schema entsprechen, bei dem es sich um eine [Erlebnisdatenmodell (XDM)](../../xdm/home.md)-Schema-Feldgruppe handelt. Wenden Sie sich bitte unter attributionai-support@adobe.com an den Support von Adobe, um die Daten zu implementieren oder zu ändern. Wenn Daten zu Medienausgaben vorhanden sind, können Sie weitere Analysen durchführen, z. B. zu inkrementellen Umsätzen und ROI. Wenn Kundenprofildaten verfügbar sind, können Sie Guthaben auf der Kundenebene genauer zuordnen.
+Attribution AI erfordert, dass Datensätze dem Schema Consumer Experience Events (CEE) entsprechen, bei dem es sich um eine Schemafeldgruppe [Experience-Datenmodell (XDM)](../../xdm/home.md) handelt. Wenden Sie sich bitte unter attributionai-support@adobe.com an den Support von Adobe, um die Daten zu implementieren oder zu ändern. Wenn Daten zu Medienausgaben vorhanden sind, können Sie weitere Analysen durchführen, z. B. zu inkrementellen Umsätzen und ROI. Wenn Kundenprofildaten verfügbar sind, können Sie Guthaben auf der Kundenebene genauer zuordnen.
 
 ## Terminologie
 
@@ -29,13 +28,13 @@ Attribution AI erfordert, dass die Datensätze dem Consumer Experience Ereigniss
 
 - **Touchpoint:** Alle digitalen Ereignisse oder Interaktionen, die Kunden auf dem Weg zu einem Ziel ausführen. Beispiele dafür sind Marketing-Maßnahmen vor dem Kauf, Impressions bei Display-Werbung oder Klicks auf Paid-Suchen.
 
-## Herunterladen von Attribution AI-Scores
+## Herunterladen von Attribution AI-Werten
 
 >[!NOTE]
 >
 >Wenn Sie keine Rohdaten herunterladen müssen, können Sie diesen Schritt überspringen und mit den [nächsten Schritten](#next-steps) fortfahren.
 
-Das Herunterladen von Attribution AI-Ergebnissen erfolgt über eine Kombination von API-Aufrufen. Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Das Herunterladen von Attribution AI-Werten erfolgt über eine Kombination von API-Aufrufen. Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

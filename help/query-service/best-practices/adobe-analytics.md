@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Abfrage-Dienst;Abfrage-Dienst;Abfragen-Beispiel;Abfrage;Adobe-Analyse;
+keywords: Experience Platform; Startseite; beliebte Themen; Query Service; Query Service; Beispielabfragen; Beispielabfrage; Adobe Analytics
 solution: Experience Platform
-title: Beispieldaten für Abfragen für Adobe Analytics-Daten
+title: Beispielabfragen für Adobe Analytics-Daten
 topic-legacy: queries
 description: Die Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und für Sie als Datensätze in Adobe Experience Platform aufgenommen. In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen diese Daten von Query Service von Adobe Experience Platform verwendet werden. Die enthaltenen Beispielabfragen sollten mit Ihren Adobe Analytics-Datensätzen funktionieren.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1021'
@@ -17,7 +16,7 @@ ht-degree: 58%
 
 Daten aus ausgewählten Adobe Analytics Report Suites werden in Daten umgewandelt, die der [!DNL XDM ExperienceEvent]-Klasse entsprechen, und als Datensätze in Adobe Experience Platform aufgenommen.
 
-In diesem Dokument werden eine Reihe von Anwendungsfällen erläutert, in denen Adobe Experience Platform [!DNL Query Service] diese Daten verwendet, einschließlich Beispieldaten, die mit Ihren Adobe Analytics-Datensätzen verwendet werden sollten. Weitere Informationen zur Zuordnung zu [!DNL Experience Events] finden Sie in der Dokumentation zu [Analytics-Feldzuordnung](../../sources/connectors/adobe-applications/mapping/analytics.md).
+In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Adobe Experience Platform [!DNL Query Service] diese Daten nutzt, einschließlich Beispielabfragen, die mit Ihren Adobe Analytics-Datensätzen funktionieren sollten. Weitere Informationen zur Zuordnung zu [!DNL Experience Events] finden Sie in der Dokumentation zu [Analytics-Feldzuordnung](../../sources/connectors/adobe-applications/mapping/analytics.md) .
 
 ## Erste Schritte
 
@@ -124,11 +123,11 @@ ORDER BY Hour;
 
 ### Produktsyntax
 
-In Adobe Analytics können benutzerspezifische Daten auf Produktebene über speziell konfigurierte Variablen, so genannte Merchandising-Variablen, erfasst werden. Diese basieren entweder auf einem eVar oder auf benutzerdefinierten Ereignissen. Der Unterschied zwischen diesen Variablen und ihrer Standardverwendung besteht darin, dass sie einen separaten Wert für jedes über den Treffer gefundene Produkt und nicht nur einen einzelnen Wert für den Treffer darstellen.
+In Adobe Analytics können benutzerdefinierte Daten auf Produktebene über speziell konfigurierte Variablen, so genannte Merchandising-Variablen, erfasst werden. Diese basieren entweder auf einem eVar oder auf benutzerdefinierten Ereignissen. Der Unterschied zwischen diesen Variablen und ihrer Standardverwendung besteht darin, dass sie einen separaten Wert für jedes über den Treffer gefundene Produkt und nicht nur einen einzelnen Wert für den Treffer darstellen.
 
-Diese Variablen werden als Produktsyntax-Merchandising-Variablen bezeichnet. Auf diese Weise können Informationen gesammelt werden, z. B. ein &quot;Rabatt&quot; pro Produkt oder Informationen über den &quot;Ort auf der Seite&quot; des Produkts in den Suchergebnissen des Kunden.
+Diese Variablen werden als Merchandising-Variablen mit Produktsyntax bezeichnet. Dies ermöglicht die Erfassung von Informationen, z. B. einen &quot;Rabattbetrag&quot;pro Produkt oder Informationen über die &quot;Position auf der Seite&quot;des Produkts in den Suchergebnissen des Kunden.
 
-Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation zu [Implementierung von eVars mit der Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
+Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
 Die folgenden Abschnitte beschreiben die XDM-Felder, die für den Zugriff auf die Merchandising-Variablen in Ihrem [!DNL Analytics]-Datensatz erforderlich sind:
 
@@ -139,7 +138,7 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
 - `#`: Der Index des Arrays, auf das Sie zugreifen.
-- `evar#`: Die spezifische eVar, auf die Sie zugreifen.
+- `evar#`: Die spezifische eVar-Variable, auf die Sie zugreifen.
 
 #### Benutzerspezifische Ereignisse
 
@@ -148,7 +147,7 @@ productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
 - `#`: Der Index des Arrays, auf das Sie zugreifen.
-- `event#`: Die spezifische Variable für benutzerspezifische Ereignis, auf die Sie zugreifen.
+- `event#`: Die spezifische benutzerspezifische Ereignisvariable, auf die Sie zugreifen.
 
 #### Beispielabfragen
 
@@ -166,7 +165,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-Diese nächste Abfrage explodiert das `productListItems`-Array und gibt jedes Merchandising-eVar und -Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Der Wert `_id` ist ein eindeutiger Primärschlüssel für den Datensatz.
+Diese nächste Abfrage explodiert das `productListItems`-Array und gibt jedes Merchandising-eVar und jedes Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Der Wert `_id` ist ein eindeutiger Primärschlüssel für den Datensatz.
 
 ```sql
 SELECT
@@ -188,16 +187,16 @@ LIMIT 20
 
 >[!NOTE]
 >
-> Wenn Sie versuchen, ein Feld abzurufen, das in Ihrem aktuellen Datensatz nicht vorhanden ist, tritt der Fehler &quot;Kein solches strukturiertes Feld&quot;auf. Bewerten Sie den in der Fehlermeldung zurückgegebenen Grund, um ein verfügbares Feld zu identifizieren, aktualisieren Sie dann Ihre Abfrage und führen Sie sie erneut aus.
+> Wenn Sie versuchen, ein Feld abzurufen, das in Ihrem aktuellen Datensatz nicht vorhanden ist, tritt der Fehler &quot;No such struct field&quot;auf. Werten Sie den in der Fehlermeldung zurückgegebenen Grund aus, um ein verfügbares Feld zu identifizieren, aktualisieren Sie dann Ihre Abfrage und führen Sie sie erneut aus.
 >
 >
 ```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 
-### Konvertierungssyntax
+### Konversionssyntax
 
-Eine weitere Merchandising-Variable in Adobe Analytics ist die Konvertierungssyntax. Bei der Produktsyntax wird der Wert gleichzeitig mit dem Produkt erfasst, dies erfordert jedoch, dass die Daten auf derselben Seite vorhanden sind. Es gibt Szenarien, in denen die Daten auf einer Seite erscheinen, bevor es zu der/dem mit dem Produkt zusammenhängenden Konversion/Ereignis kommt. Betrachten Sie zum Beispiel den Verwendungsfall für die Produktsuchmethode.
+Ein weiterer Typ von Merchandising-Variablen in Adobe Analytics ist die Konversionssyntax. Mit der Produktsyntax wird der Wert gleichzeitig mit dem Produkt erfasst. Dazu müssen die Daten jedoch auf derselben Seite vorhanden sein. Es gibt Szenarien, in denen die Daten auf einer Seite erscheinen, bevor es zu der/dem mit dem Produkt zusammenhängenden Konversion/Ereignis kommt. Betrachten Sie beispielsweise den Anwendungsfall für die Produktsuchmethode.
 
 1. Ein Benutzer führt eine interne Suche nach „Wintermütze“ durch, wodurch die für die Konversionssyntax aktivierte Merchandising-eVar6 auf „Interne Suche:Wintermütze“ gesetzt wird.
 2. Der Benutzer klickt auf „Waffelmütze“ und wird zur Produktdetailseite weitergeleitet.\
@@ -213,14 +212,14 @@ Eine weitere Merchandising-Variable in Adobe Analytics ist die Konvertierungssyn
 
 Beim Reporting werden Bestellungen, Umsatz, Produktansichten und Hinzufügen zum Warenkorb entsprechend der eVar6 gemeldet und sind an der Aktivität des gebundenen Produkts ausgerichtet.
 
-| eVar6 (Produktsuchmethode) | Umsatz | Bestellungen | Produktansichten | Hinzufügen zum Warenkorb |
+| eVar6 (Methode zur Produktsuche) | Umsatz | Bestellungen | Produktansichten | Hinzufügen zum Warenkorb |
 | ------------------------------ | ------- | ------ | ------------- | ----- |
-| Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
-| Interne Suche:Wintermütze | 12,99 | 3 | 1 | 1 |
+| Interne Suche:Sommerhemd | 19,99 | 1 | 3 | 3 |
+| Interne Suche:Wintermütze | 12,99 | 3 | 3 | 3 |
 
-Weitere Informationen zur Verwendung der Konversionssyntax finden Sie in der Adobe Analytics-Dokumentation zu [Implementieren von eVars mit Konvertierungssyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
+Weitere Informationen zur Verwendung der Konversionssyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Konversionssyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
-Im Folgenden finden Sie die XDM-Felder, um die Konvertierungssyntax in Ihrem [!DNL Analytics]-Datensatz zu erzeugen:
+Im Folgenden finden Sie die XDM-Felder, um die Konversionssyntax in Ihrem [!DNL Analytics] -Datensatz zu erzeugen:
 
 #### eVars
 
@@ -228,7 +227,7 @@ Im Folgenden finden Sie die XDM-Felder, um die Konvertierungssyntax in Ihrem [!D
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-- `evar#`: Die spezifische eVar, auf die Sie zugreifen.
+- `evar#`: Die spezifische eVar-Variable, auf die Sie zugreifen.
 
 #### Produkt
 

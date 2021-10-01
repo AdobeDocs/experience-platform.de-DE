@@ -1,8 +1,9 @@
 ---
 title: Adobe Analytics Product String-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics Product String“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 Die Variable `products` dient zur Verfolgung der Interaktionen von Besuchern mit Produkten auf einer Site. So kann zum Beispiel in der Variablen `products` verfolgt werden, wie oft ein Produkt angezeigt, in den Warenkorb gelegt, ausgecheckt und gekauft wird. Außerdem können Sie mit der Variablen auch die relative Effizienz von Merchandising-Kategorien auf Ihrer Site verfolgen.
 

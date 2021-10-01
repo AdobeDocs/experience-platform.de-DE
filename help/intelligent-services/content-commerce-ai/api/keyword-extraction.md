@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Erste Schritte;Inhaltshilfe;Commerce-Hilfe;Inhalts- und Commerce-Hilfe;Suchbegriff-Extraktion;Suchbegriff-Extraktion
+keywords: Experience Platform; Erste Schritte; Content-Hilfe; Commerce-API; Content- und Commerce-API; Keyword-Extraktion; Keyword-Extraktion
 solution: Experience Platform, Intelligent Services
-title: Extraktion des Suchbegriffs in der API für Inhalts- und Commerce
+title: Keyword-Extraktion in der Inhalts- und Commerce-API
 topic-legacy: Developer guide
-description: Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
+description: Der Suchbegriffextraktionsdienst extrahiert bei der Bereitstellung eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Entitäten (NER) und unbeaufsichtigten Keyword-Extraktion verwendet.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '1082'
@@ -13,33 +12,33 @@ ht-degree: 4%
 
 ---
 
-# Suchbegriff-Extraktion
+# Keyword-Extraktion
 
 >[!NOTE]
 >
->[!DNL Content and Commerce AI] in der Betaphase enthalten. Die Dokumentation kann geändert werden.
+>[!DNL Content and Commerce AI] ist in der Beta-Phase. Die Dokumentation kann sich ändern.
 
-Der Suchbegriff-Extraktion-Dienst extrahiert automatisch Suchbegriffe oder Schlüsselbegriffe, die das Dokument am besten beschreiben, wenn er ein Textfeld erhält. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Unternehmenserkennung (NER) und unbeaufsichtigten Suchbegriffserkennung (Keyword Extraktion) verwendet.
+Der Suchbegriffextraktionsdienst extrahiert bei der Bereitstellung eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Entitäten (NER) und unbeaufsichtigten Keyword-Extraktion verwendet.
 
 Die von [!DNL Content and Commerce AI] erkannten benannten Entitäten sind in der folgenden Tabelle aufgeführt:
 
 | Entitätsname | Beschreibung |
 | --- | --- |
-| PERSON | Leute, einschließlich fiktiv. |
+| PERSON | Menschen, einschließlich fiktionaler. |
 | NORP | Nationalitäten oder religiöse oder politische Gruppen. |
 | GPE | Länder, Städte und Staaten. |
-| LOC | Nicht-GPE-Standorte, Bergketten, Wasserkörper. |
+| LOC | Nicht-GPE-Orte, Gebirgszüge, Wasserkörper. |
 | FAC | Gebäude, Flughäfen, Autobahnen, Brücken usw. |
-| ORG | Firmen, Agenturen, Einrichtungen usw. |
-| PRODUKT | Objekte, Fahrzeuge, Lebensmittel usw. (Keine Dienstleistungen.) |
-| Ereignis | Benannte Hurrikane, Kämpfe, Kriege, Ereignisse usw. |
+| ORG | Unternehmen, Agenturen, Einrichtungen usw. |
+| PRODUKT | Objekte, Fahrzeuge, Lebensmittel usw. (Keine Dienste.) |
+| EREIGNIS | Benannte Hurrikane, Kämpfe, Kriege, Sportveranstaltungen usw. |
 | WORK_OF_ART | Titel von Büchern, Liedern usw. |
-| GESETZ | Benannte Dokumente, die in Gesetze umgewandelt wurden. |
+| GESETZ | Spezifische Dokumente, die in Gesetze umgewandelt wurden. |
 | SPRACHE | Jede benannte Sprache. |
 
 >[!NOTE]
 >
->Wenn Sie die Verarbeitung von PDF-Dateien planen, gehen Sie in diesem Dokument zu den Anweisungen für [PDF-Schlüsselwort-Extraktion](#pdf-extraction). Darüber hinaus wird die Unterstützung für weitere Dateitypen wie &quot;docx&quot;, &quot;ppt&quot;und &quot;amd xml&quot;so eingestellt, dass sie zu einem späteren Zeitpunkt veröffentlicht wird.
+>Wenn Sie die Verarbeitung von PDF-Dateien planen, überspringen Sie in diesem Dokument zu den Anweisungen für [Extraktion von PDF-Schlüsselwörtern](#pdf-extraction). Außerdem wird die Unterstützung für zusätzliche Dateitypen wie docx, ppt und amd xml so eingestellt, dass sie zu einem späteren Zeitpunkt veröffentlicht werden.
 
 **API-Format**
 
@@ -49,7 +48,7 @@ POST /services/v1/predict
 
 **Anfrage**
 
-Die folgende Anforderung extrahiert Suchbegriffe aus einem Dokument basierend auf den in der Nutzlast bereitgestellten Eingabeparametern.
+Die folgende Anfrage extrahiert Suchbegriffe aus einem Dokument basierend auf den in der Payload bereitgestellten Eingabeparametern.
 
 Vereinfachtes JSON der Eingabedatei:
 
@@ -74,11 +73,11 @@ Vereinfachtes JSON der Eingabedatei:
 }
 ```
 
-Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispielpayload.
+Weitere Informationen zu den angezeigten Eingabeparametern finden Sie in der Tabelle unter der Beispiel-Payload .
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Bitte überprüfen Sie, ob Sie die richtige `analyzer_id` haben, bevor Sie Ihre Anfrage machen. Für den Suchbegriff-Extraktion-Dienst lautet die `analyzer_id`-ID:
+>`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Vergewissern Sie sich, dass Sie über die richtige `analyzer_id` verfügen, bevor Sie Ihre Anfrage stellen. Für den Suchbegriffextraktionsdienst lautet die `analyzer_id`-ID:
 >`Feature:cintel-ner:Service-1a35aefb0f0f4dc0a3b5262370ebc709`
 
 ```SHELL
@@ -114,21 +113,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei]-Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `analyzer_id` | Die Dienst-ID [!DNL Sensei], unter der Ihre Anfrage bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das KI-Team von Content and Commerce, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
-| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können innerhalb von `data` überschrieben werden. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Jede der anderen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, kann von `data` aus überschrieben werden. | Ja |
 | `language` | Sprache des Eingabetexts. Der Standardwert lautet `en`. | Nein |
-| `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anforderungstextes oder einer signierten URL für einen S3-Behälter ist. Die Standardeinstellung für diese Eigenschaft ist `inline`. | Ja |
-| `encoding` | Das Kodierungsformat des Eingabetexts. Dies kann `utf-8` oder `utf-16` sein. Die Standardeinstellung für diese Eigenschaft ist `utf-8`. | Nein |
-| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
-| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden angegebenen Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
-| `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, um zu funktionieren. Weitere Informationen zu den benutzerspezifischen Parametern finden Sie im Anhang [.](#appendix) | Nein |
-| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Der vom Suchbegriff-Extraktion-Dienst verwendete Inhalt. Der Inhalt kann als Rohtext (&quot;inline&quot;-Inhaltstyp) verwendet werden. <br> Wenn es sich bei dem Inhalt um eine Datei unter S3 handelt (&#39;s3-bucket&#39; Content-Typ), übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anforderungskörpers ist, sollte die Liste der Datenelemente nur ein Objekt haben. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
+| `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anfragetexts oder einer signierten URL für einen S3-Behälter ist. Der Standardwert für diese Eigenschaft ist `inline`. | Ja |
+| `encoding` | Das Kodierungsformat des Eingabetexts. Dies kann `utf-8` oder `utf-16` sein. Der Standardwert für diese Eigenschaft ist `utf-8`. | Nein |
+| `threshold` | Der Schwellenwert des Punktes (0 bis 1), über dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Limits. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `custom` | Alle benutzerdefinierten Parameter, die weitergegeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, damit sie funktioniert. Weitere Informationen zu den benutzerdefinierten Parametern finden Sie im [Anhang](#appendix) . | Nein |
+| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht übergeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
+| `content` | Der vom Suchbegriffextraktionsdienst verwendete Inhalt. Der Inhalt kann als Rohtext (&quot;Inline&quot;-Inhaltstyp) verwendet werden. <br> Wenn der Inhalt eine Datei auf S3 ist (&#39;s3-bucket&#39; Inhaltstyp), übergeben Sie die signierte URL. Wenn Inhalt Teil des Anfragetexts ist, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Suchbegriffe im Array `response` enthält.
+Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüsselwörter im `response`-Array enthält.
 
 ```json
 {
@@ -228,9 +227,9 @@ Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Suchbegr
 }
 ```
 
-## PDF-Suchbegriff-Extraktion {#pdf-extraction}
+## Extraktion von PDF-Schlüsselwörtern {#pdf-extraction}
 
-Der Keyword-Extraktion-Dienst unterstützt PDFs. Sie müssen jedoch eine neue AnalyzerID für PDF- verwenden und den Dokument in PDF ändern. Weitere Informationen finden Sie im Beispiel unten.
+Der Suchbegriffextraktionsdienst unterstützt PDF-Dateien. Sie müssen jedoch eine neue Analyzer-ID für PDF-Dateien verwenden und den Dokumenttyp in PDF ändern. Weitere Informationen finden Sie im folgenden Beispiel.
 
 **API-Format**
 
@@ -240,11 +239,11 @@ POST /services/v1/predict
 
 **Anfrage**
 
-Die folgende Anforderung extrahiert Suchbegriffe aus einem PDF-Dokument basierend auf den in der Payload bereitgestellten Eingabeparametern.
+Die folgende Anfrage extrahiert Suchbegriffe aus einem PDF-Dokument basierend auf den in der Payload bereitgestellten Eingabeparametern.
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Bitte überprüfen Sie, ob Sie die richtige `analyzer_id` haben, bevor Sie Ihre Anfrage machen. Bei der Extraktion des PDF-Suchbegriffs lautet die `analyzer_id`-ID:
+>`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Vergewissern Sie sich, dass Sie über die richtige `analyzer_id` verfügen, bevor Sie Ihre Anfrage stellen. Für die Extraktion von PDF-Keywords lautet die `analyzer_id`-ID:
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -276,21 +275,21 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die [!DNL Sensei]-Dienst-ID, unter der Ihre Anforderung bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das Content and Commerce AI-Team, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `analyzer_id` | Die Dienst-ID [!DNL Sensei], unter der Ihre Anfrage bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das KI-Team von Content and Commerce, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
-| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Die übrigen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, können innerhalb von `data` überschrieben werden. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Dokument darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Jede der anderen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, kann von `data` aus überschrieben werden. | Ja |
 | `language` | Sprache der Eingabe. Der Standardwert ist `en` (Englisch). | Nein |
-| `content-type` | Dient zur Angabe des Eingabeinhaltstyps. Dies sollte auf `file` eingestellt werden. | Ja |
-| `encoding` | Das Kodierungsformat der Eingabe. Dies sollte auf `pdf` eingestellt werden. Weitere Kodierungstypen werden zu einem späteren Zeitpunkt unterstützt. | Ja |
-| `threshold` | Der Schwellenwert des Ergebnisses (0 bis 1), ab dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
-| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden angegebenen Grenzwerte. Die Standardeinstellung für diese Eigenschaft ist `0`. | Nein |
-| `custom` | Alle benutzerdefinierten Parameter, die übergeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, um zu funktionieren. Weitere Informationen zu den benutzerspezifischen Parametern finden Sie im Anhang [.](#appendix) | Nein |
-| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht weitergegeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Dies sollte auf `file` eingestellt werden. | Ja |
+| `content-type` | Wird verwendet, um den Typ des eingegebenen Inhalts anzugeben. Dies sollte auf `file` gesetzt werden. | Ja |
+| `encoding` | Das Kodierungsformat der Eingabe. Dies sollte auf `pdf` gesetzt werden. Weitere Kodierungstypen werden zu einem späteren Zeitpunkt unterstützt. | Ja |
+| `threshold` | Der Schwellenwert des Punktes (0 bis 1), über dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Limits. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `custom` | Alle benutzerdefinierten Parameter, die weitergegeben werden sollen. Für diese Eigenschaft ist ein gültiges JSON-Objekt erforderlich, damit sie funktioniert. Weitere Informationen zu den benutzerdefinierten Parametern finden Sie im [Anhang](#appendix) . | Nein |
+| `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht übergeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
+| `content` | Dies sollte auf `file` gesetzt werden. | Ja |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Suchbegriffe im Array `response` enthält.
+Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüsselwörter im `response`-Array enthält.
 
 ```json
 {
@@ -359,7 +358,7 @@ Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Suchbegr
 }
 ```
 
-Weitere Informationen und ein Beispiel zur Verwendung der PDF-Extraktion mit Anweisungen zum Einrichten, Bereitstellen und Integrieren des AEM Cloud-Dienstes. Gehen Sie zum [CCAI PDF Extraktion Worker github Repository](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
+Weitere Informationen und ein Beispiel zur Verwendung der PDF-Extraktion mit Anweisungen zum Einrichten, Bereitstellen und Integrieren des AEM Cloud Service finden Sie unter . Besuchen Sie das GitHub-Repository ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)CCAI PDF Extraktions-Worker[.
 
 ## Anhang {#appendix}
 
@@ -367,5 +366,5 @@ Die folgende Tabelle enthält die verfügbaren Parameter, die von `custom` aus v
 
 | Name | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `min-n` | Die Mindestanzahl von Wörtern, die in den Suchbegriffen erforderlich sind. | Nein |
-| `entity-types` | Typen der zurückzugebenden Entitäten. Siehe die benannte Entitätserkennungstabelle zu Beginn dieses Dokuments. | Nein |
+| `min-n` | Die Mindestanzahl von Wörtern, die für die Suchbegriffe erforderlich sind. | Nein |
+| `entity-types` | Typen der zurückzugebenden Entitäten. Siehe die benannte Entitätserkennungstabelle am Anfang dieses Dokuments. | Nein |

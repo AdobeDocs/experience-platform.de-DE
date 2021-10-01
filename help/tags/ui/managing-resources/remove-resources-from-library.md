@@ -1,8 +1,9 @@
 ---
 title: Entfernen von Ressourcen aus einer Bibliothek
 description: Erfahren Sie, wie Sie Ressourcen aus einer Tag-Bibliothek entfernen können.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../term-updates.md).
 
 Wenn eine Ressource keine Auswirkungen mehr innerhalb eines Builds haben soll, müssen Sie sie aus der Bibliothek entfernen, die diese Ressource enthält, und einen neuen Build erstellen.
 

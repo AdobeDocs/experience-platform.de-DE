@@ -1,25 +1,24 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Datensatz;Datensatz;Datensatz;Datensatz erstellen;Datensatz erstellen;Datensatz erstellen;Datenbestand aktivieren
+keywords: Experience Platform; Startseite; beliebte Themen; Datensatz; Datensatz; Datensatz; Datensatz erstellen; Datensatz erstellen; Datensatz erstellen; Datensatz aktivieren
 solution: Experience Platform
 title: Erstellen eines Datensatzes in der API
 topic-legacy: developer guide
-description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt in der Katalogdienst-API erstellen.
+description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt in der Catalog Service-API erstellen.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '254'
-ht-degree: 48%
+ht-degree: 57%
 
 ---
 
-# Erstellen eines Datensatzes in der API
+# Datensatz in der API erstellen
 
-Zum Erstellen eines Datensatzes mit der API [!DNL Catalog] müssen Sie den `$id`-Wert des [!DNL Experience Data Model] (XDM)-Schemas kennen, auf dem der Datensatz basieren soll. Nachdem Sie die Schema-ID haben, können Sie einen Datensatz erstellen, indem Sie eine POST an den `/datasets`-Endpunkt in der [!DNL Catalog]-API anfordern.
+Um einen Datensatz mit der API [!DNL Catalog] zu erstellen, müssen Sie den Wert `$id` des [!DNL Experience Data Model] (XDM)-Schemas kennen, auf dem der Datensatz basieren soll. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/datasets` in der API [!DNL Catalog] senden.
 
 >[!NOTE]
 >
->Dieses Dokument beschreibt nur, wie ein Datensatzobjekt in [!DNL Catalog] erstellt wird. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
+>In diesem Dokument wird nur die Erstellung eines Datensatzobjekts in [!DNL Catalog] beschrieben. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
 
 **API-Format**
 
@@ -52,7 +51,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name des zu erstellenden Datensatzes. |
 | `schemaRef.id` | Der URI-`$id`-Wert für das XDM-Schema, auf dem der Datensatz basieren soll. |
-| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zu [Schema versioning](../../xdm/api/getting-started.md#versioning) im Handbuch zur XDM-API. |
+| `schemaRef.contentType` | Gibt das Format und die Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
 
 >[!NOTE]
 >

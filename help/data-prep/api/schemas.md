@@ -5,7 +5,7 @@ title: API-Endpunkt für Schemas
 topic-legacy: schemas
 description: 'Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemas zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren. '
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 100%
 

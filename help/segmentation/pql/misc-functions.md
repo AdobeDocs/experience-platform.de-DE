@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;pql;PQL;Sprache der Profil-Abfrage;Verschiedene Funktionen;misc;
+keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; pql; PQL; Profile Query Language; verschiedene Funktionen; misc;
 solution: Experience Platform
-title: PQL Verschiedene Funktionen
+title: PQL - Verschiedene Funktionen
 topic-legacy: developer guide
 description: Die folgende Funktion ist eine sonstige Funktion für Profil Query Language (PQL).
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '132'
@@ -15,9 +14,9 @@ ht-degree: 68%
 
 # Sonstige Funktionen
 
-Die folgende Funktion ist eine verschiedene Funktion für [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie im [[!DNL Profile Query Language] overview](./overview.md).
+Die folgende Funktion ist eine sonstige Funktion für [!DNL Profile Query Language] (PQL). Weitere Informationen zu anderen PQL-Funktionen finden Sie in der [[!DNL Profile Query Language] Übersicht](./overview.md).
 
-## Let
+## Zulassen
 
 Die `let`-Funktion ermöglicht das Speichern eines Ausdrucks als Variable, die später in einer Abfrage verwendet werden kann.
 

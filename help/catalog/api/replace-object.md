@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Katalog;API;Objekt ersetzen
+keywords: Experience Platform; Startseite; beliebte Themen; Katalog; API; Objekt ersetzen
 solution: Experience Platform
 title: Katalogobjekt ersetzen
 topic-legacy: developer guide
-description: Sie können den Inhalt eines Katalogobjekts mit einer PUT-Anforderung überschreiben, bei der die gesamte Ressource durch die Anforderungs-Nutzlast ersetzt wird.
+description: Sie können den Inhalt eines Catalog-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-translation-type: tm+mt
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
 source-wordcount: '173'
@@ -13,13 +12,13 @@ ht-degree: 10%
 
 ---
 
-# Katalogobjekt ersetzen
+# Catalog-Objekt ersetzen
 
-Sie können den Inhalt eines [!DNL Catalog]-Objekts mit einer PUT-Anforderung überschreiben, bei der die gesamte Ressource durch die Anforderungs-Nutzlast ersetzt wird.
+Sie können den Inhalt eines [!DNL Catalog]-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 
 >[!NOTE]
 >
->Wenn Sie nur einige bestimmte Felder innerhalb eines [!DNL Catalog]-Objekts aktualisieren müssen, kann die Verwendung einer PATCH-Anforderung effizienter sein.
+>Wenn Sie nur einige bestimmte Felder in einem [!DNL Catalog] -Objekt aktualisieren müssen, kann die Verwendung einer PATCH-Anfrage effizienter sein.
 
 **API-Format**
 
@@ -29,12 +28,12 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu ersetzenden Objekts [!DNL Catalog]. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ des zu ersetzenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anforderung überschreibt einen Datensatz mit den Werten, die in der Payload bereitgestellt werden.
+Die folgende Anfrage überschreibt einen Datensatz mit den in der Payload angegebenen Werten.
 
 ```shell
 curl -X PUT \
@@ -59,7 +58,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die ID des überschriebenen Objekts enthält. Diese ID sollte mit der in der PUT-Anforderung gesendeten ID übereinstimmen. Die Ausführung einer GET-Anforderung für dieses Objekt zeigt jetzt, dass seine Details durch die Angaben in der Payload der vorherigen PUT-Anforderung ersetzt wurden.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des überschriebenen Objekts enthält. Diese ID sollte mit der in der PUT-Anfrage gesendeten ID übereinstimmen. Die Ausführung einer GET-Anfrage für dieses Objekt zeigt jetzt, dass seine Details durch die in der Payload der vorherigen PUT-Anfrage angegebenen ersetzt wurden.
 
 ```json
 [

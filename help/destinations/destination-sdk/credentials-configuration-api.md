@@ -1,7 +1,8 @@
 ---
 description: Auf dieser Seite werden alle API-Vorgänge beschrieben, die Sie mit dem API-Endpunkt "/authoring/credentials"ausführen können.
 title: API-Vorgänge für Anmeldeendpunkte
-source-git-commit: 19307fba8f722babe5b6d57e80735ffde00fc851
+exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
+source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%

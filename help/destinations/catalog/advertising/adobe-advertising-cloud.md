@@ -6,7 +6,7 @@ exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 17%
+ht-degree: 20%
 
 ---
 
@@ -26,7 +26,7 @@ Dieses Ziel ist eine Tag-Erweiterung. Weitere Informationen zur Funktionsweise v
 
 Diese Erweiterung ist im Zielkatalog für alle Kunden verfügbar, die Platform erworben haben.
 
-Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als zusätzliche, Mehrwert bietende Funktion angeboten. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie ihn, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
+Um diese Erweiterung verwenden zu können, benötigen Sie Zugriff auf Tags in Platform. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten. Wenden Sie sich an Ihren Organisationsadministrator, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu erhalten, und bitten Sie ihn, Ihnen die Berechtigung **[!UICONTROL manage_properties]** zu erteilen, damit Sie Erweiterungen installieren können.
 
 ## Installieren einer Erweiterung {#install-extension}
 

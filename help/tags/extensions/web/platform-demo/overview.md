@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform Demo-Erweiterung – Übersicht
 description: Machen Sie sich mit der Erweiterung „Adobe Experience Platform Demo“ in Adobe Experience Platform vertraut.
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
-workflow-type: ht
+exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 100%
 
@@ -12,7 +13,7 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere Terminologieänderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
 >[!NOTE]
 >
@@ -90,7 +91,7 @@ Die Erweiterung bietet außerdem die Möglichkeit, ein Zielschemafeld mithilfe e
 
 ### Identitätsfelder in Adobe Experience Platform
 
-Datensatz-Datenschemas und Zeitserien-Datenschemas können ein oder mehrere Identitätsfelder enthalten. Identitätsfelder werden zusammengeführt, um eine einzelne Identitätsdarstellung eines Subjekts zu bilden und Informationen wie CRM-Kennung, Experience Cloud ID (ECID), Browser-Cookie, AdvertisingId oder andere IDs in unterschiedlichen Domains einzuschließen.
+Datensatz-Datenschemata und Zeitserien-Datenschemata können ein oder mehrere Identitätsfelder enthalten. Identitätsfelder werden zusammengeführt, um eine einzelne Identitätsdarstellung eines Subjekts zu bilden und Informationen wie CRM-Kennung, Experience Cloud ID (ECID), Browser-Cookie, AdvertisingId oder andere IDs in unterschiedlichen Domains einzuschließen.
 
 Identitätsfelder können innerhalb des Schemas auf zwei Arten definiert werden:
 
@@ -125,6 +126,6 @@ Wenn Sie ein Schema mit einem `xdm:identityMap`-Feld haben und gleichzeitig ein 
 
 ### Erforderliche Felder
 
-Einige Schemas verfügen über erforderliche Felder auf höchster Ebene. Die häufigsten sind `timestamp` und `_id`. Ohne Definition dieser Felder schlägt das Signal fehl. Sie können sie im Abschnitt zur Schemazuordnung definieren.
+Einige Schemata verfügen über erforderliche Felder auf höchster Ebene. Die häufigsten sind `timestamp` und `_id`. Ohne Definition dieser Felder schlägt das Signal fehl. Sie können sie im Abschnitt zur Schemazuordnung definieren.
 
 Wenn Ihr Abschnitt zur Schemazuordnung `timestamp` oder `_id` nicht enthält, das Datensatzschema sie aber benötigt, sendet die Adobe Experience Platform-Erweiterung ein Signal mit automatisch generierten Werten, damit das Signal nicht fehlschlägt. Die automatisch generierten Werte werden den Signaldaten nur hinzugefügt, wenn Sie diese Felder im Abschnitt zur Schemazuordnung nicht definiert haben.

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-#  Profilesdashboard  {#profile-dashboard}
+#  Profilesdashboard {#profile-dashboard}
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zu Ihren [!DNL Real-time Customer Profile]-Daten anzeigen können, die in einem täglichen Schnappschuss erfasst werden.
 

@@ -1,19 +1,19 @@
 ---
 title: Verbindung von twitter Custom Audiences
-description: Richten Sie Ihre bestehenden Follower und Kunden in Twitter ein und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren.
-source-git-commit: 3ea3f9ed156ba3a1fbc790153a4b8fa193d5e2da
+description: Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren
+exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
+source-git-commit: 74c5924406797c30d53f91782e37ac5e953aab94
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 4%
+ht-degree: 12%
 
 ---
-
 
 # [!DNL Twitter Custom Audiences] connection
 
 ## Übersicht {#overview}
 
-Richten Sie Ihre bestehenden Follower und Kunden in Twitter ein und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren.
+Sprechen Sie Ihre bestehenden Follower und Kunden auf Twitter an und erstellen Sie relevante Remarketing-Kampagnen, indem Sie Ihre in Adobe Experience Platform erstellten Zielgruppen aktivieren.
 
 ## Voraussetzungen {#prerequisites}
 

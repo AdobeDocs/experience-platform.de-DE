@@ -4,7 +4,7 @@ title: Erstellen benutzerdefinierter Widgets für Dashboards
 description: Dieses Handbuch enthält Schritt-für-Schritt-Anweisungen zum Erstellen benutzerdefinierter Widgets zur Verwendung in Adobe Experience Platform-Dashboards.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
 source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '902'
 ht-degree: 100%
 

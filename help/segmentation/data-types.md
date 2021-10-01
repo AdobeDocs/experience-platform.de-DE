@@ -66,7 +66,7 @@ Zusätzlich zu den oben genannten Datentypen umfasst die Liste der unterstützte
 
 - Uniform resource identifier (URI)
 - Enum
-- Nummer
+- Zahl
 - Lang
 - Ganzzahl
 - Kurz

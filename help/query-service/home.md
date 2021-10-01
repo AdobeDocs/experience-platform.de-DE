@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '635'
 ht-degree: 100%
 

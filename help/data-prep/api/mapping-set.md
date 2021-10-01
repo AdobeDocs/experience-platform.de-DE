@@ -6,7 +6,7 @@ topic-legacy: mapping sets
 description: Sie können den Endpunkt „/mappingSets“ in der Adobe Experience Platform-API nutzen, um Zuordnungssätze programmgesteuert abzurufen, zu erstellen, zu aktualisieren und zu validieren.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '807'
 ht-degree: 100%
 

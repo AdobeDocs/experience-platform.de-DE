@@ -8,21 +8,21 @@ exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: 5373b8fcd84cee749a85bdb755a23eb7292cf352
 workflow-type: tm+mt
 source-wordcount: '1792'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
 # [!DNL Identity Service]Übersicht
 
-Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird schwieriger, wenn Ihre Kundendaten über verschiedene Systeme verteilt sind, wodurch jeder einzelne Kunde über mehrere &quot;Identitäten&quot;verfügt.
+Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint.
 
-Adobe Experience Platform Identity Service bietet Ihnen einen umfassenden Überblick über Ihre Kunden und ihr Verhalten, indem Identitäten zwischen Geräten und Systemen überbrückt werden, sodass Sie in Echtzeit für effektive, persönliche digitale Erlebnisse sorgen können.
+Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und deren Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle und persönliche digitale Erlebnisse sorgen.
 
 Mit [!DNL Identity Service] können Sie:
 
-- Stellen Sie sicher, dass Ihre Kunden durch jede Interaktion ein konsistentes, personalisiertes und relevantes Erlebnis erhalten.
-- Verbinden Sie mehrere Identitäten aus unterschiedlichen Quellen und erstellen Sie eine umfassende Ansicht Ihrer Kunden.
-- Verwenden Sie ein Identitätsdiagramm, um verschiedene Identitäts-Namespaces zuzuordnen. So erhalten Sie eine visuelle Darstellung der Interaktion Ihrer Kunden mit Ihrer Marke über verschiedene Kanäle hinweg.
+- Sicherstellen, dass Ihre Kunden durch jede Interaktion ein konsistentes, personalisiertes und relevantes Erlebnis erhalten.
+- Mehrere Identitäten aus unterschiedlichen Quellen verbinden und eine umfassende Ansicht Ihrer Kunden erstellen.
+- Ein Identitätsdiagramm verwenden, um verschiedene Identitäts-Namespaces zuzuordnen, wodurch Sie eine visuelle Darstellung der Interaktion Ihrer Kunden mit Ihrer Marke über verschiedene Kanäle hinweg erhalten.
 
 ## Erste Schritte
 
@@ -30,29 +30,29 @@ Bevor wir in die Details von [!DNL Identity Service] eintauchen, hier eine kurze
 
 | Begriff | Definition |
 | --- | --- |
-| Identität | Eine Identität besteht aus Daten, die für eine Entität (normalerweise eine Person) eindeutig sind. Eine Identität, z. B. eine Anmelde-ID, eine ECID oder eine Treueprogramm-ID, wird auch als &quot;bekannte Identität&quot;bezeichnet. |
-| ECID | Experience Cloud ID (ECID) ist ein freigegebener Identitäts-Namespace, der in Experience Platform- und Adobe Experience Cloud-Anwendungen verwendet wird. ECID bietet eine Grundlage für die Kundenidentität und wird als primäre ID für Geräte und als Basisknoten für Identitätsdiagramme verwendet. Weitere Informationen finden Sie in der [ECID-Übersicht](./ecid.md) . |
-| Identitäts-Namespace | Ein Identitäts-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität &quot;name<span>@email.com&quot;als E-Mail-Adresse oder &quot;443522&quot;als numerische CRM-ID. Identitäts-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identitäts-Namespace `email` aufweisen, tatsächlich dieselbe Person sind. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
-| Identitätsdiagramm | Ein Identitätsdiagramm ist eine Zusammenstellung von Beziehungen zwischen verschiedenen Identitäten, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zu [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md) . |
-| Persönlich identifizierbare Informationen (PII) | PII sind Informationen, mit denen ein Kunde direkt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Telefonnummer. PII-Werte werden häufig zur Übereinstimmung verwendet. die verschiedenen Identitäten eines Kunden in verschiedenen Systemen. |
-| Unbekannte oder anonyme Identitäten | Unbekannte oder anonyme Identitäten sind Indikatoren, die Geräte isolieren, ohne die tatsächliche Person zu identifizieren, die das Gerät verwendet. Unbekannte und anonyme Identitäten umfassen Informationen wie die IP-Adresse und Cookie-ID eines Besuchers. Unbekannte und anonyme Identitäten können zwar Verhaltensdaten bereitstellen, sind jedoch begrenzt, bis ein Kunde seine personenbezogenen Daten bereitstellt. |
+| Identität | Eine Identität besteht aus Daten, die für eine Entität (normalerweise eine Person) eindeutig sind. Eine Identität wie z. B. eine Anmeldekennung, eine ECID oder eine Kundentreue-ID wird als „bekannte Identität“ bezeichnet. |
+| ECID | Experience Cloud ID (ECID) ist ein geteilter Identity-Namespace, der in Programmen von Experience Platform und Adobe Experience Cloud verwendet wird. ECID bietet eine Grundlage für die Kundenidentität und wird als primäre ID für Geräte und als Basisknoten für Identitätsdiagramme verwendet. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](./ecid.md). |
+| Identity-Namespace | Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität zwischen „name<span>@email.com“ als E-Mail-Adresse und „443522“ als numerischer CRM-ID. Identity-Namespaces werden verwendet, um einzelne Identitäten nachzuschlagen und den Kontext für Identitätswerte bereitzustellen. Auf diese Weise können Sie etwa feststellen, dass zwei [!DNL Profile]-Fragmente, die unterschiedliche primäre IDs enthalten, aber denselben Wert für den Identity-Namespace `email` aufweisen, tatsächlich dieselbe Person betreffen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md). |
+| Identitätsdiagramm | Ein Identitätsdiagramm ist eine Zusammenstellung von Beziehungen zwischen verschiedenen Identitäten, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zur [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md). |
+| Persönlich identifizierbare Informationen (PII) | PII sind Informationen, mit denen ein Kunde direkt identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Telefonnummer. PII-Werte werden häufig verwendet, um die verschiedenen Identitäten eines Kunden in verschiedenen Systemen abzugleichen. |
+| Unbekannte oder anonyme Identitäten | Unbekannte oder anonyme Identitäten sind Indikatoren, die Geräte isolieren, ohne die tatsächliche Person zu identifizieren, die das Gerät verwendet. Unbekannte und anonyme Identitäten umfassen Informationen wie die IP-Adresse oder eine Cookie-ID eines Besuchers. Unbekannte und anonyme Identitäten können zwar Verhaltensdaten liefern, sind jedoch von begrenztem Nutzen, bis ein Kunde seine personenbezogenen Daten bereitstellt. |
 
 ## Was ist [!DNL Identity Service]?
 
-Jeden Tag interagieren Kunden mit Ihrem Unternehmen und gehen eine kontinuierlich wachsende Beziehung zu Ihrer Marke ein. Ein typischer Kunde kann in einer beliebigen Anzahl von Systemen in der Dateninfrastruktur Ihres Unternehmens tätig sein, z. B. in Ihren E-Commerce-, Treueprogramm- und Helpdesk-Systemen. Derselbe Kunde kann auch anonym über verschiedene Geräte interagieren. [!DNL Identity Service] Mit können Sie sich einen Überblick über Ihren Kunden verschaffen und mit ihm verbundene Daten zusammenfassen, die andernfalls auf Silos in verschiedenen Systemen verteilt wären.
+Jeden Tag interagieren Kunden mit Ihrem Unternehmen und gehen eine kontinuierlich wachsende Beziehung zu Ihrer Marke ein. Ein typischer Kunde kann in der Dateninfrastruktur Ihres Unternehmens in einer beliebigen Anzahl von Systemen aktiv sein, z. B. in Ihren E-Commerce-, Treueprogramm- und Helpdesk-Systemen. Derselbe Kunde kann auch anonym über verschiedene Geräte interagieren. [!DNL Identity Service] Mit können Sie sich einen Überblick über Ihren Kunden verschaffen und mit ihm verbundene Daten zusammenfassen, die andernfalls auf Silos in verschiedenen Systemen verteilt wären.
 
 Betrachten wir ein alltägliches Beispiel für die Beziehung eines Verbrauchers zu Ihrer Marke:
 
-- Maria hat auf Ihrer E-Commerce-Site ein Konto, auf dem sie bereits einige Bestellungen getätigt hat. Normalerweise verwendet sie ihren privaten Laptop zum Einkaufen und meldet sich jedes Mal an. Bei einem Besuch nutzt sie jedoch ihr Tablet, um Sandalen zu bestellen, gibt aber keine Bestellung auf und meldet sich auch nicht an.
+- Maria hat auf Ihrer E-Commerce-Website ein Konto, über das sie bereits mehrere Bestellungen getätigt hat. Normalerweise verwendet sie ihren privaten Laptop zum Einkaufen und meldet sich jedes Mal an. Bei einem Besuch nutzt sie jedoch ihr Tablet, um Sandalen zu bestellen, gibt aber keine Bestellung auf und meldet sich auch nicht an.
 - An dieser Stelle erscheint Marias Aktivität in zwei separaten Profilen:
    - Ihre E-Commerce-Anmeldung
-   - Ihr Tablet-Gerät, möglicherweise identifiziert durch Geräte-ID
-- Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Daher verknüpft [!DNL Identity Service] nun Marias Aktivität auf Tablet-Geräten mit ihrem E-Commerce-Kontoverlauf.
-- Beim nächsten Klick auf ihr Tablet könnten Ihre zielgerichteten Inhalte Marias gesamtes Profil und seinen Verlauf widerspiegeln, anstatt nur ein Tablet, das von einem unbekannten Käufer verwendet wird.
+   - Ihr Tablet-Gerät, möglicherweise identifiziert durch seine Geräte-ID
+- Maria setzt ihre Tablet-Sitzung später fort und gibt beim Abonnieren Ihres Newsletters ihre E-Mail-Adresse an. Im Anschluss daran fügt Streaming-Erfassung als Datensatzdaten in ihrem Profil eine neue Identität hinzu. Infolgedessen verknüpft [!DNL Identity Service] Marias Aktivitäten auf ihrem Tablet nun mit dem Verlauf ihres E-Commerce-Kontos.
+- Bis zum nächsten Klick auf ihr Tablet könnten Ihre Zielinhalte Marias gesamtes Profil inklusive Verlauf widerspiegeln, statt nur das Tablet eines unbekannten Erstkäufers.
 
 ![Identitätszusammenfügung in Platform](./images/identity-service-stitching.png)
 
-[!DNL Identity Service] ermöglicht es Ihnen im Wesentlichen, ein vollständiges Bild Ihres Kunden zusammenzustellen und damit verbundene Daten zu aggregieren, die andernfalls auf verschiedene Systeme verteilt wären. Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und pflegt, werden vom Echtzeit-Kundenprofil genutzt, um ein vollständiges Bild eines Kunden und seiner Interaktionen mit Ihrer Marke zu erstellen. Weiterführende Informationen finden Sie in der [Übersicht zu Echtzeit-Kundenprofil](../profile/home.md).
+Im Wesentlichen können Sie sich mit [!DNL Identity Service] ein vollständiges Bild von Ihrem Kunden machen, indem zusammengehörige Daten zusammengefasst werden, die andernfalls über verschiedene Systeme verstreut sein könnten. Die Identitätsbeziehungen, die [!DNL Identity Service] definiert und pflegt, werden vom Echtzeit-Kundenprofil genutzt, um das vollständige Bild eines Kunden und seiner Interaktionen mit Ihrer Marke zu erstellen. Weiterführende Informationen finden Sie in der [Übersicht zu Echtzeit-Kundenprofil](../profile/home.md).
 
 ### Anwendungsfälle
 
@@ -68,15 +68,15 @@ Zu den Beispielen für Implementierungen von [!DNL Identity Service] gehören:
 Wenn Sie eine Person ohne weiteren Kontext fragen würden, wie ihre Identität lautet, würde es ihr wahrscheinlich schwer fallen, eine sinnvolle Antwort zu geben. Nach der gleichen Logik ist ein Zeichenfolgenwert, der einen Identitätswert darstellt (unabhängig davon, ob es sich um eine vom System erzeugte Kennung oder eine E-Mail-Adresse handelt), nur dann vollständig, wenn ein Qualifizierer mit dem Kontext des Zeichenfolgenwerts angegeben wird: der Identitäts-Namespace.
 
 
-Ihre Kunden können mit Ihrer Marke über eine Kombination aus Online- und Offline-Kanälen interagieren, was die Herausforderung darstellt, diese fragmentierten Interaktionen mit einer einzigen Kundenidentität abzustimmen.
+Es ist möglich, dass Ihre Kunden mit Ihrer Marke über eine Kombination von Online- und Offline-Kanälen interagieren, was die Herausforderung mit sich bringt, diese fragmentierten Interaktionen zu einer einzigen Kundenidentität zusammenzuführen.
 
-Kunden über verschiedene Geräte und Kanäle hinweg zu verstehen, beginnt damit, dass Sie sie in jedem Kanal erkennen. Platform erreicht dies mithilfe von Identitäts-Namespaces. Ein Identitäts-Namespace ist eine Kennung wie E-Mail oder Telefon, die verwendet wird, um zusätzlichen Kontext für Kundenidentitäten bereitzustellen. Identitäts-Namespaces werden verwendet, um einzelne Identitäten zu suchen oder zu verknüpfen und Kontext für Identitätswerte bereitzustellen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md).
+Kunden über verschiedene Geräte und Kanäle hinweg zu verstehen, beginnt damit, dass Sie sie in jedem Kanal erkennen. Platform erlaubt das mithilfe von Identity-Namespaces. Ein Identity-Namespace ist eine Kennung wie eine E-Mail-Adresse oder Telefonnummer, die verwendet wird, um zusätzlichen Kontext für Kundenidentitäten bereitzustellen. Identity-Namespaces dienen zum Nachschlagen oder Verknüpfen einzelner Identitäten sowie zum Bereitstellen von Kontext für Identitätswerte. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](./namespaces.md).
 
 ## Identitätsdiagramme
 
-Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identitäts-Namespaces, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zu [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md) .
+Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identity-Namespaces, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zur [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md).
 
-Das folgende Video soll Ihnen das Verständnis von Identitäten und Identitätsdiagrammen erleichtern. Es umfasst die drei Funktionen der Identitätskollektion, Identitätsdiagramme und der API. Außerdem wird beschrieben, wie deterministische und probabilistische Algorithmen zum Erstellen privater Identitätsdiagramme verwendet werden, und ihre Rolle zusammen mit Diagrammen von Drittanbietern und dem Co-op-Diagramm des Adobe Experience Platform Identity Service erläutert.
+Das folgende Video soll Ihnen das Verständnis von Identitäten und Identitätsdiagrammen erleichtern. Es behandelt die drei Funktionen der Identitätssammlung, Identitätsdiagramme und die API. Außerdem wird beschrieben, wie deterministische und probabilistische Algorithmen zum Erstellen privater Identitätsdiagramme verwendet werden können, und es wird deren Rolle zusammen mit Diagrammen von Drittanbietern und dem Co-op-Diagramm von Adobe Experience Platform Identity Service erläutert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
@@ -102,7 +102,7 @@ Zwar bietet Experience Platform eine Vielzahl von Standard-Namespaces, doch müs
 
 ### Identitätsdaten in [!DNL Experience Data Model] (XDM) einschließen
 
-Als standardisiertes Framework, mit dem [!DNL Platform] Kundendaten organisiert, ermöglicht [!DNL Experience Data Model] (XDM) das Freigeben und Verstehen von Daten über Experience Platform und andere Dienste hinweg, die mit [!DNL Platform] interagieren. Weiterführende Informationen finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
+Als standardisiertes Framework, mit dem [!DNL Platform] Kundendaten organisiert, ermöglicht [!DNL Experience Data Model] (XDM) das Teilen und Verstehen von Daten über Experience Platform und andere Services hinweg, die mit [!DNL Platform] interagieren. Weiterführende Informationen finden Sie in der [XDM-Systemübersicht](../xdm/home.md).
 
 Sowohl Datensatz- als auch Zeitreihenschemas bieten die Möglichkeit, Identitätsdaten einzubeziehen. Beim Erfassen von Daten erstellt das Identitätsdiagramm neue Beziehungen zwischen Datenfragmenten aus verschiedenen Namespaces, wenn festgestellt wird, dass sie gemeinsame Identitätsdaten aufweisen.
 
@@ -143,4 +143,4 @@ Adobe Experience Platform wurde mit Blick auf Datenschutz entwickelt und umfasst
 
 ## Nächste Schritte
 
-Nachdem Sie nun die Schlüsselkonzepte von [!DNL Identity Service] und deren Rolle in der Experience Platform kennen, können Sie mit der Arbeit mit Ihrem Identitätsdiagramm mit [[!DNL Identity Service API]](./api/getting-started.md) beginnen.
+Sie kennen nun die Schlüsselkonzepte von [!DNL Identity Service] und dessen Rolle in Experience Platform und können als Nächstes erfahren, wie Sie Ihr Identitätsdiagramm mithilfe der [[!DNL Identity Service API]](./api/getting-started.md) verwenden.

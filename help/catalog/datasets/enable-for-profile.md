@@ -3,7 +3,8 @@ keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; AP
 title: Datensatz für Profil- und Identitätsdienst mithilfe von APIs aktivieren
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie einen Datensatz für die Verwendung mit Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
-source-git-commit: 244e09835cec4b15d6a96e7d615321513fa3b5aa
+exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
+source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 20%

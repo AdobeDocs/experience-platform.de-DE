@@ -20,7 +20,7 @@ Jeder unterstützte Kernel bietet native Funktionen, mit denen Sie Platform-Date
 
 Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) , um eine allgemeine Einführung in [!DNL JupyterLab] und dessen Rolle in Data Science Workspace zu erhalten.
 
-## Beschränkungen für Notebook-Daten {#notebook-data-limits}
+## Einschränkungen für Notebook-Daten {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
@@ -90,7 +90,7 @@ Beim Lesen von Datensätzen mit PySpark- und Scala-Notebooks haben Sie die Mögl
 | Interaktiver SDK-Modus (in Sekunden) | 28.2 Sek. | 18.6 Sek. | 20.8 Sek. | 20.9 Sek. | 23.8 Sek. | 21.7 Sek. | 24.7 Sek. | – | – | – | – | – |
 | SDK-Batch-Modus (in Sekunden) | 428.8 Sek. | 578.8 Sek. | 641.4 Sek. | 538.5 Sek. | 630.9 Sek. | 467.3 Sek. | 411 Sek. | 675 Sek. | 702 Sek. | 719.2 Sek. | 1022.1 Sek. | 1122.3 Sek. |
 
-### [!DNL Spark] (Scala-Kernel) Notebook-Datenbeschränkungen:  {#scala-data-limits}
+### [!DNL Spark] (Scala-Kernel) Notebook-Datenbeschränkungen: {#scala-data-limits}
 
 **XDM ExperienceEvent-Schema:** Im interaktiven Modus sollten Sie maximal 5 Millionen Zeilen (~13,42 GB Daten auf der Festplatte) von XDM-Daten in etwa 18 Minuten lesen können. Der interaktive Modus unterstützt nur bis zu 5 Millionen Zeilen. Wenn Sie größere Datensätze lesen möchten, wird empfohlen, in den Batch-Modus zu wechseln. Im Batch-Modus sollten Sie in der Lage sein, maximal 500 Millionen Zeilen (~1,31 TB-Daten auf der Festplatte) von XDM-Daten in etwa 14 Stunden zu lesen.
 
@@ -147,7 +147,7 @@ dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{D
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
-### Schreiben Sie in einen Datensatz in Python {#write-python}
+### Schreiben in einen Datensatz in Python {#write-python}
 
 Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste darauf. Wählen Sie dann die Option **[!UICONTROL Daten in Notebook schreiben]** aus dem Dropdown-Menü des Datensatzes aus, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
@@ -207,7 +207,7 @@ SELECT {table_columns}
 FROM {table_name}
 ```
 
-### Filtern [!DNL ExperienceEvent] Daten {#python-filter}
+### Daten filtern [!DNL ExperienceEvent] {#python-filter}
 
 Um auf einen [!DNL ExperienceEvent]-Datensatz in einem [!DNL Python]-Notebook zuzugreifen und ihn zu filtern, müssen Sie die Kennung des Datensatzes (`{DATASET_ID}`) zusammen mit den Filterregeln angeben, die mithilfe logischer Operatoren einen bestimmten Zeitraum definieren. Wenn ein Zeitraum definiert ist, wird jede angegebene Paginierung ignoriert und der gesamte Datensatz berücksichtigt.
 
@@ -283,7 +283,7 @@ dataset_reader <- DatasetReader(py$get_platform_sdk_client_context(), dataset_id
 df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 ```
 
-### Schreiben Sie in einen Datensatz in R {#write-r}
+### Schreiben in einen Datensatz in R {#write-r}
 
 Um in einen Datensatz in Ihrem JupyterLab-Notebook zu schreiben, wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datensymbol (unten hervorgehoben). Die Ordner **[!UICONTROL Datensätze]** und **[!UICONTROL Schemas]** werden angezeigt. Wählen Sie **[!UICONTROL Datensätze]** und klicken Sie mit der rechten Maustaste darauf. Wählen Sie dann die Option **[!UICONTROL Daten in Notebook schreiben]** aus dem Dropdown-Menü des Datensatzes aus, den Sie verwenden möchten. Unten im Notebook wird ein ausführbarer Code-Eintrag angezeigt.
 
@@ -301,7 +301,7 @@ dataset_writer <- psdk$dataset_writer$DatasetWriter(py$get_platform_sdk_client_c
 write_tracker <- dataset_writer$write(df, file_format='json')
 ```
 
-### Filtern [!DNL ExperienceEvent] Daten {#r-filter}
+### Daten filtern [!DNL ExperienceEvent] {#r-filter}
 
 Um auf einen [!DNL ExperienceEvent]-Datensatz in einem R-Notebook zuzugreifen und ihn zu filtern, müssen Sie die Kennung des Datensatzes (`{DATASET_ID}`) zusammen mit den Filterregeln angeben, die mithilfe logischer Operatoren einen bestimmten Zeitraum definieren. Wenn ein Zeitraum definiert ist, wird jede angegebene Paginierung ignoriert und der gesamte Datensatz berücksichtigt.
 
@@ -394,8 +394,7 @@ Ein benutzerdefinierter [!DNL Data Science Workspace] magischer Befehl zum Lesen
 > - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 
 > 
-> 
-Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
+> Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
 
 Sie können die oben genannten Beispiele automatisch im JupyterLab-Buy mit der folgenden Methode generieren:
 
@@ -406,7 +405,7 @@ Wählen Sie im linken Navigationsbereich von JupyterLab die Registerkarte Datens
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
-### Lokalen Dataframe {#pyspark-create-dataframe} erstellen
+### Lokalen Dataframe erstellen {#pyspark-create-dataframe}
 
 Verwenden Sie SQL-Abfragen, um einen lokalen Dataframe mit PySpark 3 zu erstellen. Beispiel:
 
@@ -437,7 +436,7 @@ sample_df = df.sample(fraction)
 >
 >Sie können auch ein optionales Seed-Beispiel angeben, z. B. einen booleschen withReplacement-, Double-Bruch- oder Long-Seed-Wert.
 
-### Filtern [!DNL ExperienceEvent] Daten {#pyspark-filter-experienceevent}
+### Daten filtern [!DNL ExperienceEvent] {#pyspark-filter-experienceevent}
 
 Zum Zugreifen auf und Filtern eines [!DNL ExperienceEvent]-Datensatzes in einem PySpark-Notebook müssen Sie die Datensatz-Identität (`{DATASET_ID}`), die IMS-Identität Ihrer Organisation und die Filterregeln angeben, die einen bestimmten Zeitraum definieren. Ein Filterzeitbereich wird mithilfe der Funktion `spark.sql()` definiert, wobei der Funktionsparameter eine SQL-Abfragezeichenfolge ist.
 
@@ -496,8 +495,7 @@ In Scala können Sie `clientContext` importieren, um Platform-Werte abzurufen un
 > - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 
 > 
-> 
-Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
+> Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -553,8 +551,7 @@ In Scala können Sie `clientContext` importieren, um Platform-Werte abzurufen un
 > - Schlechte Leistung beim Lesen und Schreiben von Datensätzen.
 
 > 
-> 
-Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
+> Weitere Informationen finden Sie im [Handbuch zur Fehlerbehebung](../troubleshooting-guide.md).
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -595,7 +592,7 @@ sparkdf.createOrReplaceTempView("sparkdf")
 val localdf = spark.sql("SELECT * FROM sparkdf LIMIT 1)
 ```
 
-### Filtern [!DNL ExperienceEvent] Daten {#scala-experienceevent}
+### Daten filtern [!DNL ExperienceEvent] {#scala-experienceevent}
 
 Zum Zugreifen auf und Filtern eines [!DNL ExperienceEvent]-Datensatzes in einem Scala-Notebook müssen Sie die Datensatz-Identität (`{DATASET_ID}`), die IMS-Identität Ihrer Organisation und die Filterregeln angeben, die einen bestimmten Zeitraum definieren. Ein Filterzeitbereich wird mithilfe der Funktion `spark.sql()` definiert, wobei der Funktionsparameter eine SQL-Abfragezeichenfolge ist.
 
