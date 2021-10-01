@@ -3,9 +3,9 @@ title: Builds-Endpunkt
 description: Erfahren Sie, wie Sie den /builds-Endpunkt in der Reactor-API aufrufen.
 exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '833'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Weitere allgemeine Informationen zu Builds und wie sie in den Veröffentlichungs
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Abrufen einer Liste von Builds {#list}
 
