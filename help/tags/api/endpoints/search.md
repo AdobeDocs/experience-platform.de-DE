@@ -3,9 +3,9 @@ title: Search-Endpunkt
 description: Erfahren Sie, wie Sie den /search-Endpunkt in der Reactor-API aufrufen.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '658'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie im [Such
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
 ## Durchführen einer Suche {#perform}
 
