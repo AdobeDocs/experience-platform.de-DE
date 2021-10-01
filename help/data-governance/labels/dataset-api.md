@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '957'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
