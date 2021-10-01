@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: 8030eb8798ffe2bc9cb299203bafb6c53a9edebc
+source-git-commit: 213f6f1cad7ab2bec6f62f292f3492bd9aefc69c
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 82%
+source-wordcount: '129'
+ht-degree: 80%
 
 ---
 
@@ -37,6 +37,7 @@ ht-degree: 82%
 * Segmente {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
+   * [B2B-Segmentierung](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Schemas {#schemas}
    * [Übersicht über Schemas](schemas/overview.md)
