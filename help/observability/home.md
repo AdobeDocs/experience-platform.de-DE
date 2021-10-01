@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform Observability Insights ist eine RESTful-API, mit der Sie Schlüsselmetriken zu Platform-Aktivitäten bereitstellen können. Diese Metriken liefern Einblicke in Statistiken zur Platform-Nutzung, Systemdiagnosen für Platform-Dienste, historische Trends und Leistungsindikatoren für verschiedene Platform-Funktionen.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 source-git-commit: 444f63054c1e4e429498c95c7bba8c4ddd612799
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '262'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -24,11 +24,11 @@ Weitere Informationen zum Arbeiten mit der API finden Sie im [[!DNL Observabilit
 
 ## Warnhinweise
 
-Mit Experience Platform können Sie Warnungen auf der Grundlage spezifischer Beobachtbarkeitsmetriken abonnieren, wenn in Ihren Platform-Vorgängen ein bestimmter Bedingungssatz erreicht wird. Ein Warnhinweis kann in Form einer einmaligen Benachrichtigung oder in einem vordefinierten Zeitintervall wiederholt werden, bis die Bedingungen, die den Warnhinweis ausgelöst haben, behoben sind.
+Mit Experience Platform können Sie Warnhinweise auf der Grundlage spezifischer Observability-Metriken abonnieren, wenn in Ihren Platform-Vorgängen ein bestimmter Satz von Bedingungen erfüllt wird. Ein Warnhinweis kann in Form einer einmaligen Benachrichtigung erfolgen oder in einem vordefinierten Zeitintervall wiederholt werden, bis die Bedingungen, die den Warnhinweis ausgelöst haben, aufgehoben sind.
 
-Durch Abonnieren von Warnhinweisen können Sie eigene nachgelagerte Protokolle für den Zeitpunkt einrichten, zu dem ein Auftrag abgeschlossen wurde, ein bestimmter Meilenstein innerhalb eines Workflows erreicht wurde oder Fehler während des Prozesses aufgetreten sind.
+Durch das Abonnieren von Warnhinweisen können Sie eigene nachgelagerte Protokolle einrichten, um festzustellen, wann ein Auftrag abgeschlossen wurde, ob ein bestimmter Meilenstein innerhalb eines Arbeitsablaufs erreicht wurde oder ob während des Vorgangs Fehler aufgetreten sind.
 
-Weitere Informationen finden Sie in der Übersicht zu [Warnhinweise](./alerts/overview.md) .
+Weitere Informationen finden Sie in der Übersicht zu [Warnhinweisen](./alerts/overview.md).
 
 ## Nächste Schritte
 
