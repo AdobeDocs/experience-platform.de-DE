@@ -3,9 +3,10 @@ title: Feldbasierte Workflows im Schema Editor (Beta)
 description: Erfahren Sie, wie Sie Ihren Experience-Datenmodell (XDM)-Schemas einzeln Felder aus vorhandenen Feldergruppen hinzufügen können.
 hide: true
 hidefromtoc: true
-source-git-commit: 139d453c3758f4f137cd1b31307b61dc777fc1c1
+exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
+source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -50,6 +51,26 @@ Die Arbeitsfläche wird nur mit den in der Schemastruktur ausgewählten Feldern 
 
 ![Felder hinzugefügt](../images/ui/field-based-workflows/fields-added.png)
 
+## Standardfelder direkt zu einem Schema hinzufügen
+
+Sie können Felder aus Standardfeldgruppen direkt zu einem Schema hinzufügen, ohne zuvor die entsprechende Feldergruppe kennen zu müssen. Um einem Schema ein Standardfeld hinzuzufügen, wählen Sie auf der Arbeitsfläche das Pluszeichen (**+**) neben dem Namen des Schemas aus. Ein Platzhalter **[!UICONTROL Unbenanntes Feld]** wird in der Schemastruktur angezeigt und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren des Felds anzuzeigen.
+
+![Feld-Platzhalter](../images/ui/field-based-workflows/root-custom-field.png)
+
+Geben Sie unter **[!UICONTROL Feldname]** den Namen des Felds ein, das Sie hinzufügen möchten. Das System sucht automatisch nach Standardfeldern, die mit der Abfrage übereinstimmen, und listet sie unter **[!UICONTROL Empfohlene Standardfelder]** auf, einschließlich der Feldergruppen, zu denen sie gehören.
+
+![Empfohlene Standardfelder](../images/ui/field-based-workflows/standard-field-search.png)
+
+Einige Standardfelder weisen denselben Namen auf, ihre Struktur kann jedoch je nach der Feldergruppe, aus der sie stammen, variieren. Wenn ein Standardfeld innerhalb eines übergeordneten Objekts in der Feldergruppenstruktur verschachtelt ist, wird das übergeordnete Feld auch im Schema enthalten sein, wenn das untergeordnete Feld hinzugefügt wird.
+
+Wählen Sie das Vorschausymbol (![Vorschau-Symbol](../images/ui/field-based-workflows/preview-icon.png)) neben einem Standardfeld aus, um die Struktur seiner Feldergruppe anzuzeigen und besser zu verstehen, wie sie verschachtelt sein könnte. Um das Standardfeld zum Schema hinzuzufügen, wählen Sie das Pluszeichen (![Plus-Symbol](../images/ui/field-based-workflows/add-icon.png)) aus.
+
+![Standardfeld hinzufügen](../images/ui/field-based-workflows/add-standard-field.png)
+
+Die Arbeitsfläche wird aktualisiert und zeigt das Standardfeld an, das dem Schema hinzugefügt wurde, einschließlich der übergeordneten Felder, unter denen es innerhalb der Feldergruppenstruktur verschachtelt ist. Der Name der Feldergruppe wird auch in der linken Leiste unter **[!UICONTROL Feldergruppen]** aufgeführt. Wenn Sie weitere Felder aus derselben Feldergruppe hinzufügen möchten, wählen Sie **[!UICONTROL Zugehörige Felder verwalten]** in der rechten Leiste aus.
+
+![Standardfeld hinzugefügt](../images/ui/field-based-workflows/standard-field-added.png)
+
 ## Benutzerdefinierte Felder direkt zu einem Schema hinzufügen
 
 Wenn Sie zuvor [benutzerdefinierte Feldergruppen](./resources/field-groups.md#create) erstellt haben, können Sie benutzerdefinierte Felder direkt zum Schema hinzufügen, ohne sie zuvor separat zu einer benutzerdefinierten Feldergruppe hinzufügen zu müssen.
@@ -62,7 +83,11 @@ Um der Stammebene eines Schemas Felder hinzuzufügen, wählen Sie auf der Arbeit
 
 ![Benutzerdefiniertes Stammfeld](../images/ui/field-based-workflows/root-custom-field.png)
 
-Verwenden Sie die Steuerelemente in der rechten Leiste, um einen Namen, einen Anzeigenamen und einen Datentyp für das Feld anzugeben. Wählen Sie unter **[!UICONTROL Feldergruppe zuweisen]** die benutzerdefinierte Feldergruppe aus, mit der das neue Feld verknüpft werden soll.
+Beginnen Sie mit der Eingabe des Namens des benutzerdefinierten Felds, das Sie hinzufügen möchten, und das System beginnt automatisch mit der Suche nach entsprechenden Standardfeldern. Um stattdessen ein neues benutzerdefiniertes Feld zu erstellen, wählen Sie die obere Option aus, die an **([!UICONTROL Neues Feld])** angehängt wird.
+
+![Neues Feld](../images/ui/field-based-workflows/custom-field-search.png)
+
+Geben Sie von hier aus einen Anzeigenamen und einen Datentyp für das Feld ein. Wählen Sie unter **[!UICONTROL Feldergruppe zuweisen]** die benutzerdefinierte Feldergruppe aus, mit der das neue Feld verknüpft werden soll.
 
 ![Feldgruppe auswählen](../images/ui/field-based-workflows/select-field-group.png)
 
@@ -78,7 +103,7 @@ Das neue Feld wird der Arbeitsfläche hinzugefügt und unter Ihrer [Mandanten-ID
 >
 >Die übrigen von der ausgewählten benutzerdefinierten Feldergruppe bereitgestellten Felder werden standardmäßig aus dem Schema entfernt. Wenn Sie einige dieser Felder zum Schema hinzufügen möchten, wählen Sie ein Feld aus, das zur Gruppe gehört, und wählen Sie dann **[!UICONTROL Zugehörige Felder verwalten]** in der rechten Leiste aus.
 
-### Felder zur Struktur von Standardfeldgruppen hinzufügen
+### Fügen Sie benutzerdefinierte Felder zur Struktur von Standardfeldgruppen hinzu
 
 Wenn das Schema, mit dem Sie arbeiten, ein Objekt enthält, das von einer Standardfeldgruppe bereitgestellt wird, können Sie diesem Standardobjekt eigene benutzerdefinierte Felder hinzufügen. Wählen Sie das Pluszeichen (**+**) neben dem Stamm des Objekts aus und geben Sie die Details des benutzerdefinierten Felds in der rechten Leiste an.
 
