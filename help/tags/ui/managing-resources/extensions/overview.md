@@ -3,9 +3,9 @@ title: Erweiterungen
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
 source-git-commit: f7edfa05e25c17f9ace34287c8a2d8426d0f36d4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '497'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Erweiterungen bestimmen die Elemente, die beim Erstellen von Eigenschaften, Rege
 
 Verwenden Sie die Links oben in der Liste „Erweiterungen“, um installierte Erweiterungen, den Katalog oder Updates anzuzeigen.
 
-Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Konfigurieren], um die Einstellungen der Erweiterung anzuzeigen und zu ändern. Weitere Informationen zu Erweiterungsoptionen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](#add-a-new-extension) .
+Wählen Sie eine Erweiterung aus und klicken Sie auf [!UICONTROL Konfigurieren], um die Einstellungen der Erweiterung anzuzeigen und zu ändern. Weitere Informationen zu Erweiterungsoptionen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](#add-a-new-extension).
 
 >[!IMPORTANT]
 >
