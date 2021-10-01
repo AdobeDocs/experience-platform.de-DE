@@ -5,10 +5,10 @@ title: Marketo Engage-Connector
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 14%
+source-wordcount: '474'
+ht-degree: 13%
 
 ---
 
@@ -70,3 +70,4 @@ Die folgende Dokumentation enthält weitere Informationen zum Erstellen einer [!
 * Informationen zur zugrunde liegenden Einrichtung für die B2B-Namespaces und -Schemas, die mit [!DNL Marketo] verwendet werden, finden Sie in der Dokumentation für [B2B-Namespaces und -Schemata](./marketo-namespaces.md).
 * Informationen zum Suchen Ihrer [!DNL Marketo]-Munchkin-ID und zum Generieren Ihrer Anmeldeinformationen finden Sie im [[!DNL Marketo] Authentifizierungshandbuch](./marketo-auth.md).
 * Informationen zu den spezifischen Zuordnungsregeln für [!DNL Marketo]-Datensätze finden Sie in der Dokumentation zu [[!DNL Marketo] Feldzuordnungen](../mapping/marketo.md).
+* Allgemeine Informationen zu [!DNL Real-time Customer Data Platform B2B Edition] und seinen Funktionen finden Sie in der Dokumentation zu [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

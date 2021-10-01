@@ -5,10 +5,10 @@ title: Erstellen eines neuen Produktprofils in Adobe Admin Console
 topic-legacy: user guide
 description: In diesem Dokument werden die erforderlichen Schritte zur Erstellung eines neuen Produktprofils in Adobe Admin Console beschrieben. Um mit dem Erstellen eines neuen Profils zu beginnen, gehen Sie zur Registerkarte „Produktprofile“ und klicken Sie auf „Neues Profil“.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 6228f499a42e61583abd1f7ff1e1af1fb90640c6
+source-git-commit: 2844ffd7270ffcc2fba4da08dda1aea238cf6c9f
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 53%
+source-wordcount: '322'
+ht-degree: 52%
 
 ---
 
@@ -30,7 +30,7 @@ Im nächsten Bildschirm werden Sie aufgefordert, zu wählen, welche Platform-Die
 
 Kunden mit Berechtigung für B2B oder B2P Edition haben Zugriff auf die B2B-Benutzeroberfläche. Die B2B-Benutzeroberfläche kann Benutzern über das Menü [!UICONTROL Dienste aktivieren] bereitgestellt werden. Wählen Sie den Umschalter neben [!UICONTROL B2B UI] aus, um den Dienst für ein bestimmtes Produktprofil zu aktivieren, und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
-Der Umschalter für die B2B-Benutzeroberfläche ermöglicht es Benutzern, B2B-Workflows zur Verwaltung von Konten und Chancen sowie B2B-bezogene Segmente anzuzeigen.
+Der Umschalter für die B2B-Benutzeroberfläche ermöglicht es Benutzern, B2B-Workflows zur Verwaltung von Konten und Chancen sowie B2B-bezogene Segmente anzuzeigen. Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
 
