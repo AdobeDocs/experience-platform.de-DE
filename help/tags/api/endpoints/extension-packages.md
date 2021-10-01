@@ -1,10 +1,11 @@
 ---
 title: Extension packages-Endpunkt
 description: Erfahren Sie, wie Sie den /extension_packages-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: ht
 source-wordcount: '951'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -22,9 +23,9 @@ Ein Erweiterungspaket gehört dem [Unternehmen](./companies.md) des Entwicklers,
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/experience-platform-apis/references/reactor/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-Neben dem Verständnis, wie Aufrufe an die Reactor-API durchgeführt werden, ist es auch wichtig zu verstehen, wie die Attribute `status` und `availability` eines Erweiterungspakets beeinflussen, welche Aktionen Sie darauf durchführen können. Diese werden in den folgenden Abschnitten erläutert.
+Sie müssen nicht nur verstehen, wie die Reactor API aufgerufen wird, sondern auch, wie die Attribute `status` und `availability` eines Erweiterungspakets beeinflussen, welche Aktionen Sie darauf durchführen können. Diese werden im Folgenden erläutert.
 
 ### Status
 
@@ -32,9 +33,9 @@ Erweiterungspakete haben drei potenzielle Status: `pending`, `succeeded` und `fa
 
 | Status | Beschreibung |
 | --- | --- |
-| `pending` | Wenn ein Erweiterungspaket erstellt wird, wird sein `status` auf `pending` gesetzt. Dies gibt an, dass das System die Informationen für das Erweiterungspaket erhalten hat und mit der Verarbeitung beginnt. Erweiterungspakete mit dem Status `pending` sind nicht verfügbar. |
+| `pending` | Wenn ein Erweiterungspaket erstellt wird, wird sein `status` auf `pending` gesetzt. Dies bedeutet, dass das System die Informationen für das Erweiterungspaket erhalten hat und mit der Verarbeitung beginnen wird. Erweiterungspakete mit dem Status `pending` können nicht verwendet werden. |
 | `succeeded` | Der Status eines Erweiterungspakets wird auf `succeeded` aktualisiert, wenn die Verarbeitung erfolgreich abgeschlossen wurde. |
-| `failed` | Der Status eines Erweiterungspakets wird auf `failed` aktualisiert, wenn die Verarbeitung nicht erfolgreich abgeschlossen wird. Ein Erweiterungspaket mit dem Status `failed` kann aktualisiert werden, bis die Verarbeitung erfolgreich ist. Erweiterungspakete mit dem Status `failed` sind nicht verfügbar. |
+| `failed` | Der Status eines Erweiterungspakets wird auf `failed` aktualisiert, wenn die Verarbeitung nicht erfolgreich abgeschlossen wurde. Ein Erweiterungspaket mit dem Status `failed` kann aktualisiert werden, bis die Verarbeitung erfolgreich ist. Erweiterungspakete mit dem Status `failed` können nicht verwendet werden. |
 
 ### Verfügbarkeit
 
@@ -42,9 +43,9 @@ Es gibt Verfügbarkeitsstufen für ein Erweiterungspaket: `development`, `privat
 
 | Verfügbarkeit | Beschreibung |
 | --- | --- |
-| `development` | Ein Erweiterungspaket in `development` ist nur für das Unternehmen sichtbar und innerhalb dessen verfügbar, das Eigentümer des Pakets ist. Darüber hinaus kann sie nur für Eigenschaften verwendet werden, die für die Erweiterungsentwicklung konfiguriert sind. |
-| `private` | Ein `private`-Erweiterungspaket ist nur für das Unternehmen sichtbar, das Eigentümer des Pakets ist, und kann nur für Eigenschaften installiert werden, die dem Unternehmen gehören. |
-| `public` | Ein `public` Erweiterungspaket ist sichtbar und steht allen Unternehmen und Eigenschaften zur Verfügung. |
+| `development` | Ein Erweiterungspaket in `development` ist nur für das Unternehmen sichtbar, das Eigentümer des Pakets ist, und nur innerhalb dieses Unternehmens verfügbar. Darüber hinaus kann es nur für Eigenschaften verwendet werden, die für die Erweiterungsentwicklung konfiguriert sind. |
+| `private` | Ein `private` Erweiterungspaket ist nur für das Unternehmen sichtbar, das Eigentümer des Pakets ist, und kann nur für Eigenschaften installiert werden, die dem Unternehmen gehören. |
+| `public` | Ein `public` Erweiterungspaket ist sichtbar und steht allen Unternehmen und für alle Eigenschaften zur Verfügung. |
 
 >[!NOTE]
 >
@@ -704,7 +705,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Erweiterungspakets
 
 ## Aktualisieren eines Erweiterungspakets {#update}
 
-Sie können ein Erweiterungspaket aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen.
+Sie können ein Erweiterungspaket aktualisieren, indem Sie seine ID in den Pfad einer PATCH-Anfrage aufnehmen.
 
 **API-Format**
 
