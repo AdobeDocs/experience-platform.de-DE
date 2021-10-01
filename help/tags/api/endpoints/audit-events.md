@@ -3,9 +3,9 @@ title: Audit events-Endpunkt
 description: Erfahren Sie, wie Sie den /audit_events-Endpunkt in der Reactor-API aufrufen.
 exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '262'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
