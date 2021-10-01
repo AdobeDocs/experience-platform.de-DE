@@ -6,9 +6,9 @@ topic-legacy: labels
 description: Mit Adobe Experience Platform Data Governance können Sie Datennutzungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren. Dieses Dokument bietet einen Überblick über Datennutzungsbeschriftungen in Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 937225ff08e2e02c5840f86d6ed50644e05bdfe5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '611'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
