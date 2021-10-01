@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4075'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -207,7 +207,7 @@ Das Format der Antwort hängt von der in der Anfrage verwendeten Accept-Kopfzeil
 
 >[!NOTE]
 >
->`application/vnd.adobe.xed-id+json` Die Accept-Kopfzeilen und `application/vnd.adobe.xed-full+json; version={major version}` werden am häufigsten verwendet. `application/vnd.adobe.xed-id+json` wird empfohlen, wenn eine Liste der in der [!DNL Schema Registry] enthaltenen Ressourcen angezeigt werden soll, da über sie nur Titel, ID und Version zurückgegeben werden.&quot; `application/vnd.adobe.xed-full+json; version={major version}` wird empfohlen, wenn nur eine einzelne Ressource (über ihre „id“) angezeigt werden soll, da über sie alle (unter „properties“ verschachtelten) Felder sowie Titel und Beschreibungen zurückgegeben werden.
+>`application/vnd.adobe.xed-id+json` Die Accept-Kopfzeilen und `application/vnd.adobe.xed-full+json; version={major version}` werden am häufigsten verwendet. `application/vnd.adobe.xed-id+json` wird empfohlen, wenn eine Liste der in der [!DNL Schema Registry] enthaltenen Ressourcen angezeigt werden soll, da über sie nur Titel, ID und Version zurückgegeben werden. `application/vnd.adobe.xed-full+json; version={major version}` wird empfohlen, wenn nur eine einzelne Ressource (über ihre „id“) angezeigt werden soll, da über sie alle (unter „properties“ verschachtelten) Felder sowie Titel und Beschreibungen zurückgegeben werden.
 
 **Antwort**
 
