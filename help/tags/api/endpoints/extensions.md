@@ -1,10 +1,11 @@
 ---
 title: Extensions-Endpunkt
 description: Erfahren Sie, wie den /extensions-Endpunkt in der Reactor-API aufrufen.
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
-workflow-type: tm+mt
+exl-id: cc02b2aa-d107-463a-930c-5a9fcc5b4a5a
+source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+workflow-type: ht
 source-wordcount: '977'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
