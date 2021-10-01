@@ -3,9 +3,9 @@ title: Freie turbine-Variable
 description: Machen Sie sich mit dem turbine-Objekt vertraut, einer freien Variablen, die Informationen und Dienstprogramme speziell für die Tag-Laufzeit in Adobe Experience Platform bereitstellt.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 source-git-commit: 86a009fd5c633ff45943d86b16c34a779d4141be
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '619'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -57,13 +57,13 @@ console.log(turbine.environment.stage);
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `id` | Die Kennung der Umgebung. |
-| `stage` | Die Umgebung, für die diese Bibliothek erstellt wurde. Mögliche Werte sind `development`, `staging` und `production`. |
+| `id` | Die ID der Umgebung. |
+| `stage` | Die Umgebung, für die diese Bibliothek erstellt wurde. Zu den möglichen Werten gehören `development`, `staging` und `production`. |
 
 
 ## `debugEnabled`
 
-Ein boolean -Wert, der angibt, ob das Tag-Debugging derzeit aktiviert ist.
+Ein boolescher Wert, der angibt, ob das Tag-Debugging derzeit aktiviert ist.
 
 Wenn Sie einfach Meldungen protokollieren möchten, ist es unwahrscheinlich, dass Sie dies verwenden müssen. Stattdessen sollten Sie Meldungen immer mit `turbine.logger` protokollieren, um sicherzustellen, dass Ihre Meldungen nur auf der Konsole ausgegeben werden, wenn Tag-Debugging aktiviert ist.
 
@@ -117,7 +117,7 @@ Das Protokollierungsdienstprogramm wird verwendet, um Meldungen auf der Konsole 
 * `logger.warn(message: string)`: Protokolliert eine Warnmeldung auf der Konsole.
 * `logger.error(message: string)`: Protokolliert eine Fehlermeldung auf der Konsole.
 * `logger.debug(message: string)`: Protokolliert eine Debug-Meldung auf der Konsole. (Nur sichtbar, wenn der Protokollierungsmodus `verbose` in der Browser-Konsole aktiviert ist.)
-* `logger.deprecation(message: string)`: Protokolliert eine Warnmeldung auf der Konsole, unabhängig davon, ob der Benutzer das Tag-Debugging aktiviert hat.
+* `logger.deprecation(message: string)`: Protokolliert eine Warnmeldung auf der Konsole, unabhängig davon, ob der Benutzer Tag-Debugging aktiviert hat.
 
 ### `onDebugChanged`
 
