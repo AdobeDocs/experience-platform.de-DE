@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datumsbereich
 title: Handbuch zur Warnhinweis-Benutzeroberfläche
-description: Erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
+description: Hier erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
 source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '240'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -17,15 +17,15 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie einen Verlauf d
 
 >[!NOTE]
 >
->Eine Einführung in Warnhinweise in Experience Platform finden Sie unter [Warnhinweise - Übersicht](./overview.md).
+>Eine Einführung in Warnhinweise in Experience Platform finden Sie unter [Warnhinweise – Übersicht](./overview.md).
 
-Wählen Sie zunächst **[!UICONTROL Warnhinweise]** im linken Navigationsbereich aus.
+Wählen Sie zunächst im linken Navigationsbereich **[!UICONTROL Warnhinweise]** aus.
 
 ![](../images/alerts/ui/workspace.png)
 
-## Verwalten von Warnregeln
+## Verwalten von Warnhinweisregeln
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die verfügbaren Regeln aufgelistet, die auf einen Warnhinweis Trigger werden können.
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die verfügbaren Regeln aufgelistet, die einen Warnhinweis auslösen können.
 
 ![](../images/alerts/ui/rules.png)
 
@@ -33,20 +33,20 @@ Wählen Sie eine Regel aus der Liste aus, um ihre Beschreibung und ihre Konfigur
 
 ![](../images/alerts/ui/rule-details.png)
 
-Wählen Sie die Auslassungspunkte (**...**) neben dem Namen einer Regel angezeigt. Eine Dropdown-Liste enthält Steuerelemente zum Aktivieren oder Deaktivieren des Warnhinweises (je nach aktuellem Status) sowie zum Abonnieren oder Abmelden von E-Mail-Benachrichtigungen für den Warnhinweis.
+Wählen Sie auf die Auslassungspunkte (**...**) neben dem Namen einer Regel klicken, zeigt eine Dropdown-Liste die Steuerelemente zum Aktivieren oder Deaktivieren des Warnhinweises (je nach seinem aktuellen Status) und zum Abonnieren oder Abbestellen von E-Mail-Benachrichtigungen für den Warnhinweis.
 
 ![](../images/alerts/ui/disable-subscribe.png)
 
-## Anzeigen des Warnverlaufs
+## Anzeigen des Warnhinweisverlaufs
 
-Der Tab **[!UICONTROL Verlauf]** zeigt den Verlauf der empfangenen Warnungen für Ihre Organisation, einschließlich der Regel, die den Warnhinweis ausgelöst hat, des Auslösedatums und des aufgelösten Datums (falls zutreffend).
+Die Registerkarte **[!UICONTROL Verlauf]** zeigt den Verlauf der empfangenen Warnhinweise für Ihre Organisation, einschließlich der Regel, die den jeweiligen Warnhinweis ausgelöst hat, des Auslösedatums und ggf. des Auflösungsdatums.
 
 ![](../images/alerts/ui/history.png)
 
-Wählen Sie einen aufgelisteten Warnhinweis aus und weitere Details werden in der rechten Leiste angezeigt, einschließlich einer kurzen Zusammenfassung des Ereignisses, das den Warnhinweis ausgelöst hat.
+Wenn Sie einen aufgelisteten Warnhinweis auswählen, werden weitere Details in der rechten Leiste angezeigt, einschließlich einer kurzen Zusammenfassung des Ereignisses, das den Warnhinweis ausgelöst hat.
 
 ![](../images/alerts/ui/history-details.png)
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick darüber, wie Warnhinweise in der Platform-Benutzeroberfläche angezeigt und verwaltet werden. Weitere Informationen zu den Funktionen des Dienstes finden Sie in der Übersicht zu [Observability Insights](../home.md) .
+Dieses Dokument bietet eine Übersicht darüber, wie Warnhinweise in der Platform-Benutzeroberfläche angezeigt und verwaltet werden. Weitere Informationen zu den Funktionen dieses Services finden Sie in der Übersicht zu [Observability Insights](../home.md).
