@@ -4,10 +4,10 @@ title: Handbuch zur Benutzeroberfläche des Echtzeit-Kundenprofils
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil erstellt eine ganzheitliche Sicht Ihrer einzelnen Kunden und fasst Daten aus mehreren Kanälen (einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten) zusammen. Dieses Dokument dient als Leitfaden für die Interaktion mit dem Echtzeit-Kundenprofil in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 69e510c9a0f477ad7cab530128c6728f68dfdab1
+source-git-commit: 771be1f5939066295c01eb573a13dbb740e8c776
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 12%
+source-wordcount: '1774'
+ht-degree: 10%
 
 ---
 
@@ -136,9 +136,33 @@ Die angezeigten Standardfelder können auch auf Organisationsebene geändert wer
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-Sie können zusätzliche Informationen zum jeweiligen Profil anzeigen, indem Sie eine andere der verfügbaren Registerkarten auswählen. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte Segmentmitgliedschaft , auf der die Segmente angezeigt werden, für die das Profil derzeit qualifiziert ist.
+Sie können zusätzliche Informationen zum individuellen Kundenprofil anzeigen, indem Sie auf eine andere der verfügbaren Registerkarten klicken. Diese Registerkarten umfassen Attribute, Ereignisse und die Registerkarte Segmentmitgliedschaft , auf der die Segmente angezeigt werden, für die das Profil derzeit qualifiziert ist.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
+
+### Registerkarte &quot;Attribute&quot;
+
+Die Registerkarte **[!UICONTROL Attribute]** bietet eine Listenansicht, die alle Attribute zusammenfasst, die zu einem einzelnen Profil gehören, nachdem die angegebene Zusammenführungsrichtlinie angewendet wurde.
+
+Diese Attribute können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]** auswählen. Dies ist hilfreich für alle Benutzer, die besser verstehen möchten, wie die Profilattribute in Platform erfasst werden.
+
+![](../images/user-guide/profiles-attributes.png)
+
+### Registerkarte &quot;Ereignisse&quot;
+
+Der Tab **[!UICONTROL Ereignisse]** enthält Daten zu ExperienceEvents, die mit dem Kunden verknüpft sind. Dazu können E-Mail-Öffnungen, Warenkorbaktivitäten, Seitenansichten und mehr gehören. Wenn Sie **[!UICONTROL Alle]** für jedes einzelne Ereignis anzeigen auswählen, werden zusätzliche Felder und Werte bereitgestellt, die im Rahmen des Ereignisses erfasst werden.
+
+Ereignisse können auch als JSON-Objekt angezeigt werden, indem Sie **[!UICONTROL JSON anzeigen]** auswählen. Dies ist hilfreich, um zu verstehen, wie Ereignisse in Platform erfasst werden.
+
+![](../images/user-guide/profiles-events.png)
+
+### Registerkarte Segmentmitgliedschaft
+
+Auf der Registerkarte **[!UICONTROL Segmentmitgliedschaft]** wird eine Liste mit dem Namen und der Beschreibung der Segmente angezeigt, zu denen das individuelle Kundenprofil derzeit gehört. Diese Liste wird automatisch aktualisiert, wenn das Profil für Segmente qualifiziert ist oder aus diesen abläuft. Die Gesamtanzahl der Segmente, für die das Profil derzeit qualifiziert ist, wird auf der rechten Seite des Tabs angezeigt.
+
+Weitere Informationen zur Segmentierung in Experience Platform finden Sie in der [Dokumentation zum Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+
+![](../images/user-guide/profiles-segment-membership.png)
 
 ## Zusammenführungsrichtlinien
 
