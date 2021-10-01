@@ -3,9 +3,9 @@ title: Callback-Endpunkt
 description: Erfahren Sie, wie Sie den /callback-Endpunkt in der Reactor-API aufrufen.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '621'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
