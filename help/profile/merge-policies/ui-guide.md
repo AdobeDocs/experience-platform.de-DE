@@ -5,7 +5,7 @@ type: Documentation
 description: Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform stellen Zusammenführungsrichtlinien die Regeln dar, die Platform verwendet, um festzulegen, wie Daten priorisiert werden und welche Daten bei der Erstellung einzelner Kundenprofile kombiniert werden. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2193'
 ht-degree: 100%
 
