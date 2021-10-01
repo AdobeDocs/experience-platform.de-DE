@@ -3,9 +3,9 @@ title: Satellitenobjektreferenz
 description: Hier erfahren Sie mehr über das Client-seitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1279'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
