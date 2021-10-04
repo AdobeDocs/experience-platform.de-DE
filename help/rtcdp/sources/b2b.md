@@ -2,14 +2,18 @@
 title: Quellen in der Echtzeit-Kundendatenplattform B2B Edition
 description: Ein Überblick über die Rolle von Quellen in der Echtzeit-Kundendatenplattform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: b8c14fc2e32a6a8f92309f4956cc5415d833a73f
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 0%
+source-wordcount: '179'
+ht-degree: 4%
 
 ---
 
 # Quellen in der Echtzeit-Kundendatenplattform B2B Edition
+
+>[!IMPORTANT]
+>
+>Die Echtzeit-Kundendatenplattform B2B Edition befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
 Mit der Echtzeit-Kundendatenplattform B2B Edition können Sie Ihre B2B-Daten über den Quell-Connector [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) übertragen und gleichzeitig eingehende Daten mithilfe von Diensten strukturieren, beschriften und erweitern.
 

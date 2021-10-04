@@ -6,14 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Marketo Engage in der Benutzeroberfläche beschrieben, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 9c8b63bf577a4258a7ef87c11bc8f87c1a01cc20
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1336'
-ht-degree: 5%
+source-wordcount: '1355'
+ht-degree: 6%
 
 ---
 
-# Erstellen eines Quell-Connectors [!DNL Marketo Engage] über die Benutzeroberfläche
+# (Beta) Erstellen eines Quell-Connectors [!DNL Marketo Engage] in der Benutzeroberfläche
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Marketo Engage] in Adobe Experience Platform befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
 In diesem Tutorial werden Schritte zum Erstellen eines Quell-Connectors für [!DNL Marketo Engage] (nachfolgend als &quot;[!DNL Marketo]&quot;bezeichnet) in der Benutzeroberfläche beschrieben, um B2B-Daten in Adobe Experience Platform zu importieren.
 

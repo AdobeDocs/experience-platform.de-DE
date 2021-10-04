@@ -1,14 +1,18 @@
 ---
 title: Zugriffskontrolle in der Echtzeit-Kundendatenplattform B2B Edition
 description: Ein Überblick über die Rolle der Zugriffskontrolle in der Echtzeit-Kundendatenplattform B2B Edition.
-source-git-commit: 4e52d77cce8fde1d0a9e8b86264f19e5db7ceef9
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 2%
+source-wordcount: '171'
+ht-degree: 7%
 
 ---
 
-# Zugriffskontrolle in der Echtzeit-Kundendatenplattform B2B Edition (Beta)
+# (Beta) Zugriffskontrolle in der Echtzeit-Kundendatenplattform B2B Edition
+
+>[!IMPORTANT]
+>
+>Die Echtzeit-Kundendatenplattform B2B Edition befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
 Die Zugriffskontrolle für die Echtzeit-CDP B2B Edition wird über [Adobe Admin Console](http://adminconsole.adobe.com) verwaltet. Diese Funktion nutzt Produktprofile in [!DNL Admin Console], sodass Sie Benutzer mit Berechtigungen und Sandboxes verknüpfen können. Mithilfe dieser Funktion können Administratoren bestimmten Benutzergruppen Zugriff auf bestimmte Funktionen der Echtzeit-Kundendatenplattform (z. B. die B2B-Benutzeroberfläche) gewähren oder vorenthalten.
 

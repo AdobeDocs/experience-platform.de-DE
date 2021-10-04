@@ -5,14 +5,18 @@ title: B2B-Namespaces und -Schemata
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines Quell-Connectors für B2B erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: a67e411c7d07bc5d94876b6bafbbea5056b7a9bc
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1588'
 ht-degree: 7%
 
 ---
 
-# B2B-Namespaces und -Schemata
+# (Beta) B2B-Namespaces und -Schemata
+
+>[!IMPORTANT]
+>
+>Diese Funktion befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
 
 Dieses Dokument enthält Informationen über die zugrunde liegende Einrichtung für Namespaces und Schemas, die mit B2B-Quellen verwendet werden sollen. In diesem Dokument finden Sie außerdem Informationen zum Einrichten Ihres Postman-Automatisierungsdienstprogramms, das zum Generieren von B2B-Namespaces und -Schemas erforderlich ist.
 

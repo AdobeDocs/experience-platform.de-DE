@@ -5,14 +5,18 @@ title: Authentifizieren des Marketo-Quell-Connectors
 topic-legacy: overview
 description: Dieses Dokument enthält Informationen zum Generieren Ihrer Marketo-Authentifizierungsberechtigungen.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 50e92ac8c1eccc9ccfb6b078ad8b996817a6d693
+source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 0%
+source-wordcount: '622'
+ht-degree: 2%
 
 ---
 
-# Authentifizieren des Quell-Connectors [!DNL Marketo Engage]
+# (Beta) Quellanschluss [!DNL Marketo Engage] authentifizieren
+
+>[!IMPORTANT]
+>
+>Die Quelle [!DNL Marketo Engage] in Adobe Experience Platform befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern.
 
 Bevor Sie einen Quell-Connector vom Typ [!DNL Marketo Engage] (nachfolgend als &quot;[!DNL Marketo]&quot;bezeichnet) erstellen können, müssen Sie zunächst einen benutzerdefinierten Dienst über die [!DNL Marketo]-Schnittstelle einrichten und Werte für Ihre Munchkin-ID, Client-ID und das Client-Geheimnis abrufen.
 
