@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/testing/destinationInstance/"ausführen können, um zu testen, ob Ihr Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen.
 title: API-Vorgänge für Zieltests
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '664'
 ht-degree: 2%
 
 ---
@@ -20,6 +20,8 @@ Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie 
 Sie stellen Anfragen an den Test-Endpunkt, mit oder ohne Profile zum Aufruf hinzuzufügen. Wenn Sie keine Profile für die Anfrage senden, generiert Adobe diese intern und fügt sie zur Anfrage hinzu.
 
 Sie können die API [Beispielprofilerstellung](./sample-profile-generation-api.md) verwenden, um Profile zu erstellen, die in Anforderungen an die Ziel-Test-API verwendet werden.
+
+## Abrufen der Ziel-Instanz-ID {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
