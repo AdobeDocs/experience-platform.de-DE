@@ -114,7 +114,6 @@ Nachdem Sie ein Schema und einen Datenstrom erstellt haben, müssen Sie das Plat
 >
 >* [Installieren des SDK](../edge/fundamentals/installing-the-sdk.md)
 >* [Konfigurieren des SDK](../edge/fundamentals/configuring-the-sdk.md)
-
 >
 >Beachten Sie außerdem, dass Sie, auch wenn Sie nur die Ereignisweiterleitung verwenden möchten, das SDK dennoch wie beschrieben installieren und konfigurieren müssen, bevor Sie die Ereignisweiterleitung in einem [späteren Schritt](#event-forwarding) konfigurieren.
 
