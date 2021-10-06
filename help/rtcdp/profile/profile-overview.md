@@ -1,37 +1,45 @@
 ---
 keywords: rtcdp profile; profile rtcdp; rtcdp identities; rtcdp-Zusammenführungsrichtlinien; Echtzeit-Kundenprofil
-title: Echtzeit-Kundenprofil – Übersicht
-seo-title: Real-time Customer Profile in Real-time Customer Data Platform
-description: Erfahren Sie, wie Sie mit der Echtzeit-Kundendatenplattform mithilfe von Echtzeit-Kundenprofilen koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden bereitstellen können.
-seo-description: Real-time Customer Data Platform, Profile, data, experiences, channels
+title: Verstehen des Echtzeit-Kundenprofils in der Echtzeit-Kundendatenplattform
+description: Erfahren Sie, wie Sie mit Real-time Customer Data Platform mithilfe des Echtzeit-Kundenprofils koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden bereitstellen können.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 37%
+source-wordcount: '475'
+ht-degree: 45%
 
 ---
 
-# [!DNL Real-time Customer Profile] Übersicht
+# Übersicht über das Echtzeit-Kundenprofil
 
-[!DNL Real-time Customer Profile] ermöglicht es Ihnen, eine ganzheitliche Sicht auf jeden einzelnen Kunden zu erhalten, indem Sie Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, kombinieren. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Mit dem Echtzeit-Kundenprofil erhalten Sie eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem Sie Daten aus verschiedenen Kanälen, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten, miteinander kombinieren. Jedes einzelne Kundenprofil ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zu bündeln, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 ## Profile in [!DNL Real-time Customer Data Platform]
 
-[!DNL Real-time Customer Data Platform] ermöglicht Ihnen, koordinierte und konsistente Erlebnisse für Ihre Kunden zu entwickeln, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Die Bereitstellung dieser personalisierten Erlebnisse, sodass sie sich als relevant und zeitnah erweisen, ist keine geringe Leistung, sondern kann mit [!DNL Real-time Customer Profile], Teil von Adobe Experience Platform, erreicht werden. Die Echtzeit-Kundendatenplattform basiert auf [!DNL Experience Platform] und nutzt viele Dienste und Funktionen von [!DNL Experience Platform], einschließlich der Erstellung von Profilen. In diesen aggregierten Ansichten einzelner Kunden werden Daten aus all Ihren Marketing-Kanälen und den verschiedenen Systemen zusammengeführt, die Ihr Unternehmen zur Speicherung von Kundendaten aktuell verwendet.
+[!DNL Real-time Customer Data Platform] ermöglicht Ihnen, koordinierte und konsistente Erlebnisse für Ihre Kunden zu entwickeln, unabhängig davon, wo und wann sie mit Ihrer Marke interagieren. Für personalisierte Erlebnisse zu sorgen, die relevant und zeitlich passend sind, ist keine leichte Aufgabe, wird aber mit dem Echtzeit-Kundenprofil, das Teil von Adobe Experience Platform ist, möglich.
+
+Die Echtzeit-Kundendatenplattform basiert auf Experience Platform und nutzt viele der wichtigsten Funktionen und Funktionen der Experience Platform, einschließlich der Erstellung von Profilen. In diesen aggregierten Ansichten einzelner Kunden werden Daten aus all Ihren Marketing-Kanälen und den verschiedenen Systemen zusammengeführt, die Ihr Unternehmen zur Speicherung von Kundendaten aktuell verwendet.
+
+## Profilverbesserungen für die Echtzeit-Kundendatenplattform, B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
+
+Zusätzlich zu den Profilfunktionen, die von der Echtzeit-Kundendatenplattform unterstützt werden, können Sie die Echtzeit-Kundendatenplattform, B2B Edition verwenden, um wichtige Informationen zu einer Person zu durchsuchen, z. B. ein Konto und Chancen. Um mehr über Profilverbesserungen für die Echtzeit-Kundendatenplattform zu erfahren, lesen Sie zunächst das [Profil-Browse-Handbuch](profile-browse.md).
 
 ## Identitäten und Identitäts-Namespaces
 
-Wenn Kundendaten erfasst werden, werden sie mithilfe von Identitäten zu einem einzigen Profil zusammengeführt. Zudem besteht die Möglichkeit, solche Identitäten zu verknüpfen, sobald mehr Informationen über den jeweiligen Kunden bekannt werden. Weiterführende Informationen zu Identitäten und Identitäts-Namespaces finden Sie unter [Identitäten – Übersicht](/help/rtcdp/profile/identities-overview.md).
+Wenn Kundendaten erfasst werden, werden sie mithilfe von Identitäten zu einem einzigen Profil zusammengeführt. Zudem besteht die Möglichkeit, solche Identitäten zu verknüpfen, sobald mehr Informationen über den jeweiligen Kunden bekannt werden. Weiterführende Informationen zu Identitäten und Identitäts-Namespaces finden Sie unter [Identitäten – Übersicht](identities-overview.md).
 
 ## Zusammenführungsrichtlinien
 
-Beim Zusammenführen von Kundendaten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](/help/rtcdp/profile/merge-policies.md).
+Beim Zusammenführen von Kundendaten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen. Weiterführende Informationen zu Zusammenführungsrichtlinien finden Sie unter [Zusammenführungsrichtlinien – Übersicht](merge-policies.md).
 
 ## Profilansicht
 
-[!DNL Platform] ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Weitere Informationen zum Anzeigen von Profilen in [!DNL Platform] finden Sie in der [Übersicht über den Profil-Viewer](/help/rtcdp/profile/profile-viewer.md).
+Platform ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Weitere Informationen zum Anzeigen von Profilen in Platform finden Sie in der [Übersicht über die Profilsuche](profile-browse.md).
 
 ## Nächste Schritte
 
-Nachdem Sie diese Übersicht gelesen haben, sollten Sie nun verstehen, wie die Echtzeit-Kundendatenplattform [!DNL Real-time Customer Profile] verwendet, um skaliert eine kanalübergreifende Personalisierung zu ermöglichen. Wenn Sie Identitäten aus verschiedenen Quellen zusammenführen, können Sie sich ein umfassendes Bild über einzelne Kunden verschaffen und Ihre Marketing-Kampagnen deutlich optimieren. Weitere Informationen, einschließlich Best Practices und Tutorials zum Arbeiten mit [!DNL Real-time Customer Profile]-Daten in der Benutzeroberfläche und über APIs, finden Sie in der [Dokumentation zum Echtzeit-Kundenprofil](../../profile/home.md).
+Wenn Sie Daten aus unterschiedlichen Quellen zusammenführen, erhalten Sie ein vollständiges Bild von jedem Ihrer Kunden, sodass Sie Ihre Marketing-Kampagnen auf eine ganz neue Ebene bringen können. Weiterführende Informationen, einschließlich Best Practices und Tutorials zum Arbeiten mit Echtzeit-Kundenprofil-Daten in der Benutzeroberfläche und via APIs, finden Sie in der [Echtzeit-Kundenprofil-Dokumentation](../../profile/home.md).

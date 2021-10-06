@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+source-git-commit: 8e7ceaa5f62ee7647b5a53c494c9b3acb43c14c7
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 70%
+source-wordcount: '160'
+ht-degree: 66%
 
 ---
 
@@ -24,19 +24,24 @@ ht-degree: 70%
       * [Erste Schritte mit der Echtzeit-Kundendatenplattform B2B Edition](./b2b-use-case.md)
 * Administration {#admin}
    * [Administration – Übersicht](administration/admin-overview.md)
+* Kontoprofile {#account}
+   * [Übersicht über Kontoprofile](accounts/account-profile-overview.md)
+   * [Handbuch zur Benutzeroberfläche des Kontoprofils](accounts/account-profile-ui-guide.md)
 * Datensätze {#datasets}
    * [Datensätze](datasets/dataset.md)
    * [Datenqualität in Platform](datasets/data-quality.md)
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
+* Identitäten {#identity}
+   * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
 * Datenschutz und Data Governance {#privacy}
    * [Datenschutz – Übersicht](privacy/privacy-overview.md)
    * [Data Governance – Übersicht](privacy/data-governance-overview.md)
+* Zusammenführungsrichtlinien {#merge-policies}
+   * [Zusammenführungsrichtlinien – Übersicht](profile/merge-policies.md)
 * Profile {#profile}
    * [Profil – Übersicht](profile/profile-overview.md)
-   * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
-   * [Zusammenführungsrichtlinien](profile/merge-policies.md)
-   * [Profilansicht](profile/profile-viewer.md)
+   * [Profil durchsuchen](profile/profile-browse.md)
 * Segmente {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)

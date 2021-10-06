@@ -1,18 +1,18 @@
 ---
 keywords: Zusammenführungsrichtlinien rtcdp;rtcdp-Zusammenführungsrichtlinien
-title: Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
+title: Zusammenführungsrichtlinien in Real-time Customer Data Platform
 description: Arbeiten mit Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
 exl-id: 1a9d9549-a7de-46d7-a23e-dd41829839c5
-source-git-commit: 36f64b3a1e75c9badaee29e28408504eabac64fe
+source-git-commit: 5611a5abc7d1ed7781108b6f263e7550092b715d
 workflow-type: tm+mt
-source-wordcount: '162'
-ht-degree: 17%
+source-wordcount: '156'
+ht-degree: 38%
 
 ---
 
-# Zusammenführungsrichtlinien in der Echtzeit-Kundendatenplattform
+# Zusammenführungsrichtlinien – Übersicht
 
-Basierend auf Adobe Experience Platform ermöglicht Ihnen [!DNL Real-time Customer Data Platform], Daten aus mehreren Quellen zusammenzuführen und zu kombinieren, um eine vollständige Ansicht Ihrer einzelnen Kunden zu erhalten. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Kundenansicht zu schaffen.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich einen kompletten Überblick über einzelne Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen [!DNL Platform] bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden sollen, um eine einheitliche Ansicht des Profils zu erstellen.
 
 Über eine RESTful-API und die Experience Platform-Benutzeroberfläche können Sie neue Zusammenführungsrichtlinien erstellen, vorhandene Richtlinien verwalten und eine standardmäßige Zusammenführungsrichtlinie für Ihr Unternehmen festlegen. Außerdem können Sie Voreinstellungen für Datenquellen definieren und festlegen, welche Daten beim Auftreten eines Konflikts beim Zusammenführen Priorität haben sollen.
 
