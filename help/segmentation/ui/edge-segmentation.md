@@ -5,16 +5,16 @@ title: UI-Anleitung zur Edge-Segmentierung
 topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: 6bb1f417b5856f153adebe4deaac4fab264ef3a8
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '417'
 ht-degree: 4%
 
 ---
 
 # Handbuch zur Edge-Segmentierungs-UI (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Die Edge-Segmentierung befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
 
@@ -22,7 +22,15 @@ Bei der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort 
 
 ## Kantensegmentierungs-Abfragetypen
 
-Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der folgenden Kriterien erfüllt:
+Derzeit können nur ausgewählte Abfragetypen mit Kantensegmentierung ausgewertet werden. Die folgenden Abschnitte enthalten eine Liste von Abfragetypen, die mit der Kantensegmentierung ausgewertet werden können und die derzeit nicht unterstützt werden.
+
+### Unterstützte Abfragetypen
+
+Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der in der folgenden Tabelle aufgeführten Kriterien erfüllt.
+
+>[!NOTE]
+>
+>Wenn die Abfrage mit einem der Abfragetypen in der folgenden Tabelle übereinstimmt, wird sie automatisch mithilfe der Kantensegmentierung ausgewertet. Das System bestimmt diese Fähigkeit automatisch anhand des Abfrageausdrucks.
 
 | Abfragetyp | Details | Beispiel |
 | ---------- | ------- | ------- |
@@ -31,7 +39,7 @@ Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der
 | Eingehender Treffer mit einem Zeitfenster von 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden verweist |  |
 | Eingehender Treffer, der sich auf ein Profil mit einem Zeitfenster von 24 Stunden bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden und ein oder mehrere Profilattribute verweist. |  |
 
-Wenn die Abfrage mit einem der oben genannten Abfragetypen übereinstimmt, wird sie automatisch mithilfe der Kantensegmentierung ausgewertet.
+### Derzeit nicht unterstützte Abfragetypen
 
 Die folgenden Abfragetypen werden derzeit für die Kantensegmentierung **nicht** unterstützt:
 
@@ -43,6 +51,4 @@ Die folgenden Abfragetypen werden derzeit für die Kantensegmentierung **nicht**
 
 ## Nächste Schritte
 
-In diesem Benutzerhandbuch wird erläutert, wie Sie Segmente mit Kantensegmentierung in Adobe Experience Platform auswerten können.
-
-Weitere Informationen zur Verwendung der Adobe Experience Platform-Benutzeroberfläche finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md). Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmenten mithilfe der Adobe Experience Platform-Benutzeroberfläche finden Sie im [Handbuch zur Edge-Segmentierungs-API](../api/edge-segmentation.md).
+In diesem Handbuch wird erläutert, wie Segmente mit Kantensegmentierung in Adobe Experience Platform ausgewertet werden. Weitere Informationen zur Verwendung der Experience Platform-Benutzeroberfläche finden Sie im [Benutzerhandbuch zur Segmentierung](./overview.md). Weitere Informationen zum Ausführen ähnlicher Aktionen und zum Arbeiten mit Segmenten mithilfe von Experience Platform-APIs finden Sie im [Handbuch zur Edge-Segmentierungs-API](../api/edge-segmentation.md).
