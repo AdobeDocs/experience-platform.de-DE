@@ -4,9 +4,9 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: d5c69972426008809c3fd0ac03be995efcc2f541
+source-git-commit: 05f2ba2e8e7abadeef18a908ba8b0e9a02d4c3f8
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1548'
 ht-degree: 6%
 
 ---
@@ -19,7 +19,7 @@ Einen Überblick über alle Profilfunktionen in der Experience Platform-Benutzer
 
 ## Profil-Dashboard-Daten
 
-Das Dashboard [!UICONTROL Profile] zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten) an, die Ihr Unternehmen im Profilspeicher in Experience Platform hat. Der Schnappschuss enthält keine Ereignisdaten (Zeitreihendaten).
+Das Dashboard [!UICONTROL Profile] zeigt eine Momentaufnahme der Attributdaten (Datensatzdaten), die Ihr Unternehmen im Profilspeicher in der Experience Platform hat. Der Schnappschuss enthält keine Ereignisdaten (Zeitreihendaten).
 
 Die Attributdaten im Snapshot zeigen die Daten exakt so an, wie sie zu dem Zeitpunkt angezeigt werden, zu dem die Momentaufnahme erstellt wurde. Mit anderen Worten, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten, und das Profil-Dashboard wird nicht in Echtzeit aktualisiert.
 
@@ -77,7 +77,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 ### [!UICONTROL Anzahl der Profile] {#profile-count}
 
-Das Widget **[!UICONTROL Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile im Profildatenspeicher zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen.
+Das Widget **[!UICONTROL Profilanzahl]** zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen.
 
 Weitere Informationen finden Sie im Abschnitt [zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) .
 
@@ -91,19 +91,17 @@ Weitere Informationen finden Sie im Abschnitt [zu Zusammenführungsrichtlinien w
 
 ### [!UICONTROL Hinzugefügte Profile] {#profiles-added}
 
-Das Widget **[!UICONTROL hinzugefügte Profile]** zeigt die Gesamtzahl der zusammengeführten Profile an, die zum Profildatenspeicher hinzugefügt wurden, nachdem der letzte Schnappschuss erstellt wurde. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
+Das Widget **[!UICONTROL hinzugefügte Profile]** zeigt die Gesamtzahl der zusammengeführten Profile an, die zum Profilspeicher hinzugefügt wurden, nachdem der letzte Schnappschuss erstellt wurde. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
 
 >[!NOTE]
 >
->Das Widget [!UICONTROL hinzugefügte Profile] gibt die Anzahl der Profile an, die dem System nach der ersten Konfiguration Ihres Unternehmens hinzugefügt wurden. Weitere Informationen zum Hinzufügen von Profilen zum Profilspeicher finden Sie in der [Dokumentation zum Echtzeit-Kundenprofil](../../profile/home.md).
->
->Wenn beispielsweise während der Konfiguration vier Millionen Profile hinzugefügt wurden und Sie in den letzten 30 Tagen eine weitere Million Profile hinzugefügt haben, würde das Widget [!UICONTROL hinzugefügte Profile] &quot;1.000.000&quot;anzeigen, während das Widget [!UICONTROL Profilanzahl] &quot;5.000.000&quot;anzeigen würde.
+>Das Widget [!UICONTROL Hinzugefügte Profile] gibt die Anzahl der Profile an, die hinzugefügt wurden, nachdem der Profilspeicher eingerichtet wurde und Profile erfasst wurden. Mit anderen Worten: Wenn Ihr Unternehmen den Profilspeicher eingerichtet und 4.000.000 an Tag 1 aufgenommen hat, wäre das Dashboard innerhalb von 24 Stunden verfügbar, das Widget [!UICONTROL hinzugefügte Profile] würde jedoch auf 0 gesetzt. Dies geschieht, um eine Spitze zu vermeiden, die mit der anfänglichen Aufnahme von Profilen in das System verbunden ist. In den nächsten 30 Tagen nimmt Ihr Unternehmen weitere 1.000.000 Profile in den Profilspeicher auf. Nach der nächsten Momentaufnahme würde das Widget [!UICONTROL hinzugefügte Profile] insgesamt 1.000.000 hinzugefügte Profile anzeigen, während das Widget [!UICONTROL Profilanzahl] insgesamt 5.000.000 Profile anzeigen würde.
 
 ![](../images/profiles/profiles-added.png)
 
 ### [!UICONTROL Trend der Profilanzahl] {#profiles-count-trend}
 
-Das Widget **[!UICONTROL Trend der Profilanzahl]** zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profildatenspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn die Momentaufnahme erstellt wird. Wenn Sie also Profile in Platform aufnehmen möchten, wird die Anzahl der Profile erst angezeigt, wenn die nächste Momentaufnahme erfolgt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
+Das Widget **[!UICONTROL Trend der Profilanzahl]** zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn die Momentaufnahme erstellt wird. Wenn Sie also Profile in Platform aufnehmen möchten, wird die Anzahl der Profile erst angezeigt, wenn die nächste Momentaufnahme erfolgt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
 
 Weitere Informationen finden Sie im Abschnitt [zu Zusammenführungsrichtlinien weiter oben in diesem Dokument](#merge-policies) .
 
