@@ -5,9 +5,9 @@ title: Azure Data Explorer Source Connector - Übersicht
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure Data Explorer über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: 446436346e3368d98eb990dba1000ac0974b84dc
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -25,10 +25,6 @@ Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, da
 ## IP-Adressen-Zulassungsliste
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
-
->[!IMPORTANT]
->
->Der Quell-Connector [!DNL Azure Data Explorer] unterstützt derzeit keine Verbindung zwischen denselben Regionen und Platform. Wenn Ihre Azure-Instanz also denselben Netzwerkbereich wie Platform verwendet, kann keine Verbindung zu Platform-Quellen hergestellt werden. Derzeit wird nur eine regionenübergreifende Konnektivität unterstützt. Weitere Informationen erhalten Sie von Ihrem Kundenbetreuer für Adoben.
 
 Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL Azure Data Explorer] und [!DNL Platform] herstellen:
 
