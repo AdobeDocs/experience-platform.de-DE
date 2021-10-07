@@ -4,10 +4,10 @@ seo-description: Use the content on this page together with the rest of the conf
 seo-title: Message format
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: a1e77520ba5555db42578eac261e01e77130aea2
+source-git-commit: c328293cf710ad8a2ddd2e52cb01c86d29c0b569
 workflow-type: tm+mt
-source-wordcount: '2090'
-ht-degree: 3%
+source-wordcount: '1995'
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,6 @@ Machen Sie sich mit den folgenden Konzepten der Experience Platform vertraut, um
 
 * **Experience-Datenmodell (XDM)**. [XDM-](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) Übersicht und   [Erstellen eines XDM-Schemas in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en).
 * **Klasse**. [Erstellen und bearbeiten Sie Klassen in der Benutzeroberfläche](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/classes.html?lang=en).
-* **Feldergruppe**. [Feldergruppendefinition ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#field-group) und  [weitere Informationen zu Feldergruppen](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#field-group).
 * **IdentityMap**. Die Identitätszuordnung stellt eine Zuordnung aller Endbenutzeridentitäten in Adobe Experience Platform dar. Siehe `xdm:identityMap` im [XDM-Feldwörterbuch](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 * **Segmentzugehörigkeit**. Das XDM-Attribut [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) informiert darüber, zu welchen Segmenten ein Profil gehört. Lesen Sie für die drei verschiedenen Werte im Feld `status` die Dokumentation zu [Schema-Feldergruppe &quot;Segmentzugehörigkeitsdetails](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
 
@@ -31,22 +30,26 @@ Adobe Experience Platform exportiert Daten in eine beträchtliche Anzahl von Zie
 
 Experience Platform kann das exportierte Nachrichtenformat an das erwartete Format auf Ihrer Seite anpassen. Um diese Anpassung zu verstehen, sind die folgenden Konzepte wichtig:
 * Das XDM-Quellschema (1) und das Ziel-Schema (2) in Adobe Experience Platform
-* Das Nachrichtenformat auf der Partnerseite (3) und
-* Die Transformationsebene zwischen den beiden, die Sie definieren können, indem Sie eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) erstellen.
+* Das erwartete Nachrichtenformat auf der Partnerseite (3) und
+* Die Transformationsebene zwischen dem XDM-Schema und dem erwarteten Nachrichtenformat, die Sie definieren können, indem Sie eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) erstellen.
 
 ![Umwandlung von Schemata in JSON](./assets/transformations-3-steps.png)
 
-Schemas dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten.
+Experience Platform verwendet XDM-Schemas, um die Datenstruktur konsistent und wiederverwendbar zu beschreiben.
 
-Benutzer, die Daten für Ihr Ziel aktivieren möchten, müssen die für ihre Datensätze verwendeten Felder in Experience Platform zu einem Schema zuordnen, das in das erwartete Zielformat übersetzt. Adobe erstellt eine benutzerdefinierte Feldergruppe für Ihr Unternehmen, die zum Zielschema hinzugefügt werden soll. Die Felder in der Feldergruppe hängen von den Profilattributfeldern ab, die Sie empfangen können.
+<!--
 
-**Quell-XDM-Schema (1)**: Dies bezieht sich auf das Schema, das ein Kunde in Experience Platform verwendet. In Experience Platform ordneten Kunden im [Zuordnungsschritt](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) des Zielaktivierungs-Workflows Felder aus ihrem Quellschema dem Zielschema Ihres Ziels zu (2).
+Users who want to activate data to your destination need to map the fields in their Experience Platform datasets to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Target-XDM-Schema (2)**: Basierend auf dem JSON-Standardschema (3), das Sie für Adobe freigeben, erstellt das Team in Adobe ein benutzerdefiniertes Schema für Ihr Ziel. Beachten Sie, dass Sie in einer [künftigen Phase des Projekts](./overview.md#phased-approach) das benutzerdefinierte Schema für Ihr Ziel selbst erstellen können.
+-->
 
-**JSON-Standardschema Ihrer Zielprofilattribute (3)**: Bitte geben Sie ein  [JSON-](https://json-schema.org/learn/miscellaneous-examples.html) Schema mit allen Profilattributen, die Ihre Plattform unterstützt, und deren Typen an (z. B.: -Objekt, -Zeichenfolge, -Array). Beispiele für Felder, die Ihr Ziel unterstützen könnte, sind `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` usw.
+**Quell-XDM-Schema (1)**: Dieses Element bezieht sich auf das Schema, das Kunden in Experience Platform verwenden. In Experience Platform ordneten Kunden im [Zuordnungsschritt](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) des Zielaktivierungs-Workflows Felder aus ihrem Quellschema dem Zielschema Ihres Ziels zu (2).
 
-Basierend auf den oben beschriebenen Schematransformationen wird hier gezeigt, wie sich die Struktur einer Nachricht zwischen dem Quell-XDM-Schema und dem Beispielschema auf der Partnerseite ändert:
+**Target-XDM-Schema (2)**: Basierend auf dem JSON-Standardschema (3) des erwarteten Formats Ihres Ziels können Sie Profilattribute und Identitäten in Ihrem Ziel-XDM-Schema definieren. Dies ist in der Zielkonfiguration in den Objekten [schemaConfig](./destination-configuration.md#schema-configuration) und [identityNamespaces](./destination-configuration.md#identities-and-attributes) möglich.
+
+**JSON-Standardschema Ihrer Zielprofilattribute (3)**: Dieses Element stellt ein  [JSON-](https://json-schema.org/learn/miscellaneous-examples.html) Schema mit allen Profilattributen dar, die Ihre Plattform unterstützt, und deren Typen (z. B.: -Objekt, -Zeichenfolge, -Array). Beispiele für Felder, die Ihr Ziel unterstützen könnte, sind `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` usw. Sie benötigen eine [Vorlage für die Nachrichtenumwandlung](./message-format.md#using-templating), um die aus der Experience Platform exportierten Daten an das gewünschte Format anzupassen.
+
+Basierend auf den oben beschriebenen Schematransformationen wird hier die Struktur einer Nachricht zwischen dem Quell-XDM-Schema und einem Beispielschema auf der Partnerseite geändert:
 
 ![Beispiel einer Umwandlungsmeldung](./assets/transformations-with-examples.png)
 
@@ -59,7 +62,7 @@ Zur Veranschaulichung des Umwandlungsprozesses verwendet das folgende Beispiel d
 
 >[!NOTE]
 >
->Der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche im Schritt **Mapping** des [Aktivieren des Ziel-Workflows](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html#mapping) zu.
+>Der Kunde ordnet die Attribute aus dem Quell-XDM-Schema dem Partner-XDM-Schema in der Adobe Experience Platform-Benutzeroberfläche im Schritt **Mapping** des [Aktivieren des Ziel-Workflows](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) zu.
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie:
 
@@ -94,7 +97,7 @@ In diesem Abschnitt finden Sie mehrere Beispiele dafür, wie diese Umwandlungen 
 
 1. Einfache Transformationsbeispiele. Erfahren Sie, wie die Vorlagenerstellung mit einfachen Transformationen für die Felder [Profilattribute](./message-format.md#attributes), [Segmentzugehörigkeit](./message-format.md#segment-membership) und [Identität](./message-format.md#identities) funktioniert.
 2. Beispiele für komplexere Vorlagen, die die oben genannten Felder kombinieren: [Erstellen Sie eine Vorlage, die Segmente und Identitäten sendet](./message-format.md#segments-and-identities) und [Erstellen Sie eine Vorlage, die Segmente, Identitäten und Profilattribute sendet](./message-format.md#segments-identities-attributes).
-3. Vorlagen enthalten den Aggregationsschlüssel. Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die an Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentstatus oder Identitäts-Namespaces.
+3. Vorlagen, die den Aggregationsschlüssel enthalten. Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, gruppiert Experience Platform die an Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentstatus oder Identitäts-Namespaces.
 
 ### Profilattribute {#attributes}
 
@@ -139,7 +142,7 @@ Profil 2:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -237,7 +240,7 @@ Profil 2:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -341,7 +344,7 @@ Profil 2:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -479,7 +482,7 @@ Profil 2:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -661,7 +664,7 @@ Profil 2:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 ```python
 {
@@ -779,7 +782,7 @@ Die nachstehende `json` stellt die aus Adobe Experience Platform exportierten Da
 
 Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) in der Zielkonfiguration verwenden, können Sie die in Ihr Ziel exportierten Profile anhand von Kriterien wie Segment-ID, Segmentalias, Segmentmitgliedschaft oder Identitäts-Namespaces gruppieren.
 
-In der Vorlage für die Nachrichtenumwandlung können Sie auf die oben erwähnten Aggregationsschlüssel zugreifen, wie in den Beispielen in den folgenden Abschnitten dargestellt. Auf diese Weise können Sie die aus Experience Platform exportierte HTTP-Nachricht so formatieren, dass sie dem von Ihrem Ziel erwarteten Format entspricht.
+In der Vorlage für die Nachrichtenumwandlung können Sie auf die oben erwähnten Aggregationsschlüssel zugreifen, wie in den Beispielen in den folgenden Abschnitten dargestellt. Verwenden Sie Aggregationsschlüssel, um die aus Experience Platform exportierte HTTP-Nachricht so zu strukturieren, dass sie den von Ihrem Ziel erwarteten Format- und Ratenbeschränkungen entspricht.
 
 #### Verwenden des Segment-ID-Aggregationsschlüssels in der Vorlage {#aggregation-key-segment-id}
 
@@ -880,9 +883,9 @@ Profil 4:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Beachten Sie unten, wie `audienceId` in der Vorlage für den Zugriff auf Segment-IDs verwendet wird. Dies setzt voraus, dass Sie `audienceId` für die Segmentzugehörigkeit in Ihrer Zieltaxonomie verwenden. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
+Beachten Sie unten, wie `audienceId` in der Vorlage für den Zugriff auf Segment-IDs verwendet wird. In diesem Beispiel wird davon ausgegangen, dass Sie `audienceId` für die Segmentzugehörigkeit in Ihrer Zieltaxonomie verwenden. Je nach Ihrer eigenen Taxonomie können Sie stattdessen einen beliebigen anderen Feldnamen verwenden.
 
 ```python
 {
@@ -944,7 +947,7 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 #### Segmentstatus-Aggregationsschlüssel in der Vorlage verwenden {#aggregation-key-segment-status}
 
-Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;setzen, können Sie auf den Segmentstatus in der Vorlage zugreifen, um Profile in den an Ihr Ziel exportierten HTTP-Nachrichten zu gruppieren, je nachdem, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
+Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) verwenden und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;setzen, können Sie in der Vorlage auf den Segmentstatus zugreifen. Auf diese Weise können Sie Profile in den an Ihr Ziel exportierten HTTP-Nachrichten gruppieren, je nachdem, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
 
 Mögliche Werte:
 
@@ -960,7 +963,7 @@ action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}AD
 
 #### Verwenden Sie den Identitäts-Namespace-Aggregationsschlüssel in der Vorlage. {#aggregation-key-identity}
 
-Im Folgenden finden Sie ein Beispiel, bei dem die konfigurierbare Aggregation [a1/> in der Zielkonfiguration auf die Aggregation exportierter Profile anhand von Identitäts-Namespaces in den Formaten `"namespaces": ["email", "phone"]` und `"namespaces": ["GAID", "IDFA"]` festgelegt ist. ](./destination-configuration.md#configurable-aggregation) Sehen Sie sich den Parameter `groups` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md) an, um zu erfahren, wie dies funktioniert.
+Im Folgenden finden Sie ein Beispiel, bei dem die konfigurierbare Aggregation [a1/> in der Zielkonfiguration auf die Aggregation exportierter Profile anhand von Identitäts-Namespaces in den Formaten `"namespaces": ["email", "phone"]` und `"namespaces": ["GAID", "IDFA"]` festgelegt ist. ](./destination-configuration.md#configurable-aggregation) Weitere Informationen zu dieser Gruppierung finden Sie im Parameter `groups` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md) .
 
 **Eingabe**
 
@@ -1032,7 +1035,7 @@ Profil 2:
 
 >[!IMPORTANT]
 >
->Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+>Bei allen von Ihnen verwendeten Vorlagen müssen Sie die unzulässigen Zeichen, z. B. doppelte Anführungszeichen `""`, vor dem Einfügen der Vorlage in die [Zielserverkonfiguration](./server-and-template-configuration.md#template-specs) umgehen. Weitere Informationen zum Maskieren doppelter Anführungszeichen finden Sie in Kapitel 9 des [JSON-Standards](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
 Beachten Sie, dass `input.aggregationKey.identityNamespaces` in der unten stehenden Vorlage verwendet wird.
 
@@ -1056,7 +1059,7 @@ Beachten Sie, dass `input.aggregationKey.identityNamespaces` in der unten stehen
 
 **Ergebnis**
 
-Beim Export in Ihr Ziel werden die Profile in zwei Gruppen unterteilt, die auf ihren Identitäts-Namespaces basieren (E-Mail und Telefon in einer Gruppe, GAID und IDFA in einer anderen).
+Beim Export in Ihr Ziel werden die Profile basierend auf ihren Identitäts-Namespaces in zwei Gruppen aufgeteilt. E-Mail und Telefon sind in einer Gruppe, während GAID und IDFA in einer anderen Gruppe sind.
 
 ```json
 {
@@ -1108,7 +1111,7 @@ Beim Export in Ihr Ziel werden die Profile in zwei Gruppen unterteilt, die auf i
 
 #### Verwenden des Aggregationsschlüssels in einer URL-Vorlage {#aggregation-key-url-template}
 
-Beachten Sie, dass Sie je nach Anwendungsfall auch die hier beschriebenen Aggregationsschlüssel in einer URL verwenden können, wie unten dargestellt:
+Je nach Anwendungsfall können Sie auch die hier beschriebenen Aggregationsschlüssel in einer URL verwenden, wie unten dargestellt:
 
 ```python
 https://api.example.com/audience/{{input.aggregationKey.segmentId}}
