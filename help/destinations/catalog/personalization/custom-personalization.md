@@ -3,9 +3,9 @@ keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniert
 title: Benutzerdefinierte Personalisierungsverbindung (Beta)
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet 1:1-Echtzeit-Personalisierung und basiert auf der Segmentmitgliedschaft eines Benutzerprofils.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
+source-git-commit: 398d591d66f4b579f75ef2b5eb0c10da9d7a83f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '586'
 ht-degree: 8%
 
 ---
@@ -62,6 +62,28 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 ## Exportierte Daten {#exported-data}
 
 Wenn Sie [Adobe-Tags](../../../tags/home.md) zum Bereitstellen des Experience Platform Web SDK verwenden, verwenden Sie die Funktion [Ereignis-Abschluss senden](../../../edge/extension/event-types.md) und Ihre benutzerdefinierte Codeaktion verfügt über eine `event.destinations`-Variable, mit der Sie die exportierten Daten anzeigen können.
+
+Hier finden Sie einen Beispielwert für die Variable `event.destinations` :
+
+```
+[
+   {
+      "type":"profileLookup",
+      "destinationId":"7bb4cb8d-8c2e-4450-871d-b7824f547111",
+      "alias":"personalizationAlias",
+      "segments":[
+         {
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         },
+         {
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
+            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+         }
+      ]
+   }
+]
+```
 
 Wenn Sie [Adobe-Tags](../../../tags/home.md) nicht zum Bereitstellen des Experience Platform Web SDK verwenden, verwenden Sie die Funktion [Verarbeiten von Antworten aus Ereignissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events), um die exportierten Daten anzuzeigen.
 
