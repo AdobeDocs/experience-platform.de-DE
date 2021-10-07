@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destinations"ausführen können.
 title: API-Endpunktvorgänge für Ziele
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: c334a11ff6a03b38883a5319bc41cbe3f93c0289
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2405'
 ht-degree: 6%
 
 ---
@@ -168,7 +168,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileRequired` | Boolesch | Verwenden Sie `true` , wenn Benutzer Profilattribute von der Experience Platform benutzerdefinierten Attributen auf der Zielseite zuordnen können sollen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `schemaConfig.segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
 | `schemaConfig.identityRequired` | Boolesch | Verwenden Sie `true` , wenn Benutzer Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuordnen können sollen. |
-| `aggregation.aggregationType` | – | Klicken Sie entweder auf `BEST_EFFORT` oder auf `CONFIGURABLE_AGGREGATION`. Die obige Beispielkonfiguration umfasst die Aggregation `BEST_EFFORT` . Ein Beispiel für `CONFIGURABLE_AGGREGATION` finden Sie in der Beispielkonfiguration im Dokument [Zielkonfiguration](./destination-configuration.md#example-configuration) . Beachten Sie, dass die für die konfigurierbare Aggregation relevanten Parameter unten in dieser Tabelle beschrieben werden. |
+| `aggregation.aggregationType` | – | Klicken Sie entweder auf `BEST_EFFORT` oder auf `CONFIGURABLE_AGGREGATION`. Die obige Beispielkonfiguration umfasst die Aggregation `BEST_EFFORT` . Ein Beispiel für `CONFIGURABLE_AGGREGATION` finden Sie in der Beispielkonfiguration im Dokument [Zielkonfiguration](./destination-configuration.md#example-configuration) . Die für die konfigurierbare Aggregation relevanten Parameter sind nachfolgend in dieser Tabelle beschrieben. |
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Ganzzahl | Experience Platform kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. Geben Sie die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine Aggregation mit dem besten Aufwand ist. Wenn Sie beispielsweise den Wert 100 angeben, kann Platform eine beliebige Anzahl von Profilen senden, die kleiner als 100 sind. <br> Wenn Ihr Server nicht mehrere Benutzer pro Anforderung akzeptiert, setzen Sie diesen Wert auf 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true` , wenn Ihr Server für einen bestimmten Namespace nur eine Identität pro Aufruf akzeptiert. |
 | `aggregation.configurableAggregation.splitUserById` | Boolesch | Siehe Parameter in Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true` , wenn Ihr Server für einen bestimmten Namespace nur eine Identität pro Aufruf akzeptiert. |

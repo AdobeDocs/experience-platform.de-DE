@@ -2,9 +2,9 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Zielkonfigurationsoptionen für Ziel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 32b61276f3fe81ffa82fec1debf335ea51020ccd
+source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1727'
 ht-degree: 6%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 6%
 
 ## Übersicht {#overview}
 
-Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
+Mit dieser Konfiguration können Sie wichtige Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
+
+Diese Konfiguration verbindet auch die anderen Konfigurationen, die erforderlich sind, damit Ihr Ziel funktioniert - Zielserver und Zielgruppen-Metadaten - mit dieser Konfiguration. Lesen Sie, wie Sie in einem [Abschnitt weiter unten](./destination-configuration.md#connecting-all-configurations) auf die beiden Konfigurationen verweisen können.
 
 Sie können die in diesem Dokument beschriebene Funktion mithilfe des API-Endpunkts `/authoring/destinations` konfigurieren. Eine vollständige Liste der Vorgänge, die Sie für den Endpunkt ausführen können, finden Sie unter [API-Endpunktoperationen für Ziele](./destination-configuration-api.md).
 
 ## Beispielkonfiguration  {#example-configuration}
 
-Nachfolgend finden Sie eine Beispielkonfiguration für ein fiktives Ziel, Moviestar, das Endpunkte an vier Orten auf der Welt hat. Das Ziel gehört zur Kategorie der mobilen Ziele . Die folgenden Abschnitte zeigen, wie diese Konfiguration aufgebaut ist.
+Unten finden Sie eine Beispielkonfiguration eines fiktiven Ziels, Moviestar, das Endpunkte an vier Orten auf der Welt hat. Das Ziel gehört zur Kategorie der mobilen Ziele . Die folgenden Abschnitte zeigen, wie diese Konfiguration aufgebaut ist.
 
 ```json
 {
@@ -118,14 +120,15 @@ Nachfolgend finden Sie eine Beispielkonfiguration für ein fiktives Ziel, Movies
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 ```
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `name` | Zeichenfolge | Gibt den Titel Ihres Ziels im Experience Platform-Katalog an. |
-| `description` | Zeichenfolge | Geben Sie eine Beschreibung ein, die Adobe im Zielkatalog der Experience Platform für Ihre Zielkarte verwendet. Ziel für maximal 4-5 Sätze. |
+| `description` | Zeichenfolge | Geben Sie im Zielkatalog der Experience Platform eine Beschreibung für Ihre Zielkarte ein. Ziel für maximal 4-5 Sätze. |
 | `status` | Zeichenfolge | Gibt den Lebenszyklusstatus der Zielkarte an. Zulässige Werte sind `TEST`, `PUBLISHED` und `DELETED`. Verwenden Sie `TEST`, wenn Sie Ihr Ziel zum ersten Mal konfigurieren. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -193,7 +196,7 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `profileFields` | Array | *Wird in der obigen Beispielkonfiguration nicht angezeigt.* Wenn Sie vordefinierte Attribute hinzufügen, haben  `profileFields`die Benutzer die Möglichkeit, die Attribute der Experience Platform den vordefinierten Attributen auf der Zielseite zuzuordnen. |
+| `profileFields` | Array | *Wird in der obigen Beispielkonfiguration nicht angezeigt.* Wenn Sie vordefinierte Attribute hinzufügen, haben  `profileFields`Experience Platform-Benutzer die Möglichkeit, Platform-Attribute den vordefinierten Attributen auf der Zielseite zuzuordnen. |
 | `profileRequired` | Boolesch | Verwenden Sie `true` , wenn Benutzer Profilattribute von der Experience Platform benutzerdefinierten Attributen auf der Zielseite zuordnen können sollen, wie in der obigen Beispielkonfiguration dargestellt. |
 | `segmentRequired` | Boolesch | Verwenden Sie immer `segmentRequired:true`. |
 | `identityRequired` | Boolesch | Verwenden Sie `true` , wenn Benutzer Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuordnen können sollen. |
@@ -204,7 +207,7 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 
 Die Parameter in diesem Abschnitt bestimmen, wie die Zielidentitäten und -attribute im Zuordnungsschritt der Experience Platform-Benutzeroberfläche ausgefüllt werden, wo Benutzer ihre XDM-Schemas dem Schema in Ihrem Ziel zuordnen.
 
-Adobe muss wissen, welche [!DNL Platform]-Identitäten Kunden in die Lage versetzen werden, nach Ihrem Ziel zu exportieren. Beispiele sind [!DNL Experience Cloud ID], Hash-E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind [!DNL Platform] Identitäts-Namespaces, die Kunden Identitäts-Namespaces von Ihrem Ziel aus zuordnen können.
+Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden zum Export in Ihr Ziel benötigen. Beispiele sind [!DNL Experience Cloud ID], Hash-E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind [!DNL Platform] Identitäts-Namespaces, die Kunden Identitäts-Namespaces von Ihrem Ziel aus zuordnen können.
 
 Identitäts-Namespaces erfordern keine 1:1-Korrespondenz zwischen [!DNL Platform] und Ihrem Ziel.
 Kunden können beispielsweise einen [!DNL Platform] [!DNL IDFA]-Namespace einem [!DNL IDFA]-Namespace von Ihrem Ziel zuordnen oder denselben [!DNL Platform] [!DNL IDFA]-Namespace einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
@@ -215,9 +218,9 @@ Weitere Informationen finden Sie in der [Übersicht über Identity-Namespace](ht
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `acceptsAttributes` | Boolesch | Gibt an, ob Ihr Ziel Standardprofilattribute akzeptiert. Normalerweise werden diese Attribute in der Dokumentation unserer Partner hervorgehoben. |
+| `acceptsAttributes` | Boolesch | Gibt an, ob Ihr Ziel Standardprofilattribute akzeptiert. Normalerweise werden diese Attribute in der Dokumentation der Partner hervorgehoben. |
 | `acceptsCustomNamespaces` | Boolesch | Gibt an, ob Kunden benutzerdefinierte Namespaces in Ihrem Ziel einrichten können. |
-| `allowedAttributesTransformation` | Zeichenfolge | *Wird in der Beispielkonfiguration* nicht angezeigt. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut hat und Ihre Plattform nur Hash-E-Mails akzeptiert. Hier geben Sie die Konvertierung an, die angewendet werden muss (konvertieren Sie beispielsweise die E-Mail in Kleinbuchstaben und dann den Hash). |
+| `allowedAttributesTransformation` | Zeichenfolge | *Wird in der Beispielkonfiguration* nicht angezeigt. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut hat und Ihre Plattform nur Hash-E-Mails akzeptiert. In diesem Objekt können Sie die Transformation durchführen, die angewendet werden muss (z. B. E-Mail in Kleinbuchstaben und dann Hash). Ein Beispiel finden Sie unter `requiredTransformation` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | – | Wird in Fällen verwendet, in denen Ihre Plattform [standardmäßige Identitäts-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) akzeptiert (z. B. IDFA), sodass Sie Platform-Benutzer auf die Auswahl dieser Identitäts-Namespaces beschränken können. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -242,11 +245,19 @@ Dieser Abschnitt der Zielkonfiguration bezieht sich darauf, wie Segmentmetadaten
 
 Die in der obigen Konfiguration angezeigten Parameter werden in der [Ziel-Endpunkt-API-Referenz](./destination-configuration-api.md) beschrieben.
 
+## Wie diese Konfiguration alle erforderlichen Informationen für Ihr Ziel verbindet {#connecting-all-configurations}
+
+Einige Einstellungen für Ihr Ziel können über den Zielserver oder den Zielmetadaten-Endpunkt konfiguriert werden. Der Endpunkt für die Zielkonfiguration verbindet alle diese Einstellungen, indem er auf die Konfigurationen wie folgt verweist:
+
+* Verwenden Sie `destinationServerId`, um auf den Zielserver und die Vorlagenkonfiguration zu verweisen, die für Ihr Ziel eingerichtet sind.
+* Verwenden Sie `audienceMetadataId`, um auf die für Ihr Ziel eingerichtete Konfiguration für Zielgruppen-Metadaten zu verweisen.
+
+
 ## Aggregationspolitik {#aggregation}
 
 ![Aggregationsrichtlinie in der Konfigurationsvorlage](./assets/aggregation-configuration.png)
 
-In diesem Abschnitt können Sie die Aggregationsrichtlinien festlegen, die Experience Platform beim Exportieren von Daten in Ihr Ziel verwendet.
+In diesem Abschnitt können Sie die Aggregationsrichtlinien festlegen, die Experience Platform beim Exportieren von Daten in Ihr Ziel verwenden sollte.
 
 Eine Aggregationsrichtlinie bestimmt, wie die exportierten Profile in den Datenexporten kombiniert werden. Verfügbare Optionen sind:
 * Aggregation des besten Aufwands
@@ -260,7 +271,7 @@ Lesen Sie den Abschnitt [Verwendung der Vorlage](./message-format.md#using-templ
 >
 >Verwenden Sie diese Option, wenn Ihr API-Endpunkt weniger als 100 Profile pro API-Aufruf akzeptiert.
 
-Diese Option eignet sich am besten für Ziele, die weniger Profile pro Anforderung bevorzugen und eher mehr Anforderungen mit weniger Daten als weniger Anforderungen mit mehr Daten benötigen.
+Diese Option eignet sich am besten für Ziele, die weniger Profile pro Anforderung bevorzugen und stattdessen mehr Anforderungen mit weniger Daten als weniger Anforderungen mit mehr Daten benötigen.
 
 Verwenden Sie den Parameter `maxUsersPerRequest` , um die maximale Anzahl von Profilen anzugeben, die Ihr Ziel in einer Anfrage aufnehmen kann.
 
@@ -277,10 +288,10 @@ Diese Option ermöglicht Ihnen Folgendes:
 
 Detaillierte Erläuterungen zu Aggregationsparametern finden Sie auf der Referenzseite [API-Endpunktoperationen für Ziele](./destination-configuration-api.md), auf der jeder Parameter beschrieben wird.
 
-<!--
+## Historische Profilqualifikationen
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+Sie können den Parameter `backfillHistoricalProfileData` in der Zielkonfiguration verwenden, um zu bestimmen, ob historische Profilqualifikationen an Ihr Ziel exportiert werden sollen.
 
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
+| Parameter | Typ | Beschreibung |
+|---------|----------|------|
+| `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. <br> <ul><li> `true`:  [!DNL Platform] sendet die historischen Benutzerprofile, die sich für das Segment qualifiziert haben, bevor das Segment aktiviert wird. </li><li> `false`:  [!DNL Platform] enthält nur Benutzerprofile, die sich für das Segment qualifizieren, nachdem das Segment aktiviert wurde. </li></ul> |
