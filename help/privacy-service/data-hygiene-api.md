@@ -3,10 +3,10 @@ title: Data Hygiene API (Alpha)
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 hide: true
 hidefromtoc: true
-source-git-commit: dfe9c1ef826bc769a82938223029cd41c066c221
+source-git-commit: dd8978566730975f0bde36f3af490cd33362b3ba
 workflow-type: tm+mt
-source-wordcount: '522'
-ht-degree: 18%
+source-wordcount: '525'
+ht-degree: 19%
 
 ---
 
@@ -106,6 +106,8 @@ curl -X POST \
 | --- | --- |
 | `companyContexts` | Ein Array mit Authentifizierungsinformationen für Ihr Unternehmen. Sie muss ein einzelnes Objekt mit den folgenden Eigenschaften enthalten: <ul><li>`namespace`: Muss auf  `imsOrgID`gesetzt werden.</li><li>`value`: Ihre IMS-Organisationskennung. Dies ist derselbe Wert, der in der `x-gw-ims-org-id` -Kopfzeile angegeben wird.</li></ul> |
 | `users` | Ein Array, das eine Sammlung von mindestens einem Benutzer enthält, dessen Informationen Sie löschen möchten. Jedes Benutzerobjekt enthält die folgenden Informationen: <ul><li>`key`: Ein Identifikator für einen Benutzer, der verwendet wird, um die separaten Auftrags-Identifikatoren in den Antwortdaten zu qualifizieren. Es empfiehlt sich, eine eindeutige, leicht identifizierbare Zeichenfolge für diesen Wert zu wählen, damit später darauf verwiesen oder nachgeschlagen werden kann.</li><li>`action`: Ein Array, das die gewünschten Aktionen zur Übernahme der Benutzerdaten auflistet. Muss einen einzelnen Zeichenfolgenwert enthalten: `delete`.</li><li>`userIDs`: Eine Sammlung von Identitäten für den Benutzer. Die Anzahl der Identitäten, die ein einzelner Benutzer haben kann, ist auf neun begrenzt. Jede Identität enthält die folgenden Eigenschaften: <ul><li>`namespace`: Das mit der ID verknüpfte  [Identitäts-](../identity-service/namespaces.md) Namespace. Dabei kann es sich um einen [Standard-Namespace](./api/appendix.md#standard-namespaces) handeln, der von Platform erkannt wird, oder um einen von Ihrem Unternehmen definierten benutzerdefinierten Namespace. Der Typ des verwendeten Namespace muss in der Eigenschaft `type` angegeben werden.</li><li>`value`: Der Identitätswert.</li><li>`type`: Muss auf gesetzt werden,  `standard` wenn Sie einen global erkannten Namespace verwenden oder  `custom` wenn Sie einen von Ihrem Unternehmen definierten Namespace verwenden.</li></ul></li></ul> |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
