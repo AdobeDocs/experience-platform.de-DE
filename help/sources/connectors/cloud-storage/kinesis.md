@@ -5,10 +5,10 @@ title: Übersicht über den Quell-Connector für Amazon Kinesis
 topic-legacy: overview
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Amazon Kinesis und Adobe Experience Platform herstellen.
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: af11bc966889be54fc27e02f3eee321519cef88f
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 1%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -17,10 +17,6 @@ ht-degree: 1%
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
 Cloud-Speicher-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus  [!DNL Amazon Kinesis] in Echtzeit einzubringen.
-
-## IP-Adressen-Zulassungsliste
-
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
 ## Voraussetzungen
 

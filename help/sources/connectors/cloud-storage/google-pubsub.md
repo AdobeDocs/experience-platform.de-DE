@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Google PubSub; Google Publisub
+keywords: Experience Platform;home;popular topics;Google PubSub;google pubsub
 solution: Experience Platform
-title: Übersicht über den Connector für Google PubSub-Quellen
+title: Google PubSub Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Google PubSub über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '191'
 ht-degree: 2%
 
 ---
@@ -22,20 +22,16 @@ Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie [
 
 Cloud-Speicher-Quellen können Ihre Daten in Platform übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Ursprungs-Workflow integriert. Mit Platform können Sie Daten von [!DNL Azure Event Hubs] in Echtzeit einbringen.
 
-## IP-Adressen-Zulassungsliste
-
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
-
 ## Verbinden von [!DNL Google PubSub] mit Platform
 
 Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung von [!DNL Google PubSub] mit Platform herstellen:
 
 ### Verwenden von APIs
 
-- [Erstellen einer Quell-Verbindung aus Google PubSub mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/google-pubsub.md)
+- [Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/google-pubsub.md)
 - [Erfassen von Streaming-Daten mithilfe der Flow Service-API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der UI
 
-- [Erstellen einer Quell-Verbindung zum Google PubSub über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
+- [Erstellen einer Google PubSub-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
 - [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

@@ -5,9 +5,9 @@ title: Azure Event Hubs Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure Event Hubs über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 6dac267be93241bffb4eb5092a6e8da5093c63a6
+source-git-commit: 481f72c5c630f6dbcbbfd3eee11c91787e780f3f
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '174'
 ht-degree: 2%
 
 ---
@@ -18,10 +18,6 @@ ht-degree: 2%
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform] und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
 Cloud-Speicher-Quellen können Ihre eigenen Daten in [!DNL Platform] übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Sources-Workflow integriert. [!DNL Platform] ermöglicht Ihnen, Daten aus  [!DNL Azure Event Hubs] in Echtzeit einzubringen.
-
-## IP-Adressen-Zulassungsliste
-
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
 ## Verbinden Sie [!DNL Azure Event Hubs] mit [!DNL Platform]
 
