@@ -2,10 +2,10 @@
 title: Erste Schritte mit der Ereignisweiterleitung
 description: In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie mit der Ereignisweiterleitung in Adobe Experience Platform beginnen.
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 406c7e90c315c1807f5f3dd2b32462868b312197
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 96%
+ht-degree: 94%
 
 ---
 
@@ -99,7 +99,7 @@ Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleit
 
 Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigenschaft.
 
-## Konfigurieren der Web SDK-Erweiterung des Tags, um Daten an den zuvor erstellten Daten-Stream zu senden
+## Konfigurieren der Platform Web SDK-Erweiterung zum Senden von Daten an den zuvor erstellten Datastream
 
 Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und konfigurieren Sie sie dann mit der Web SDK-Erweiterung von Adobe Experience Platform.
 
