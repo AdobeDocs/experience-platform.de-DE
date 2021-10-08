@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Ihren Experience-Datenmodell (XDM)-Schemas ei
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: b7c6f37d3e6d824465713647b624473cff188378
+source-git-commit: 0bac76ce754468bd7e5396b6f68fbcfc3d6e4aed
 workflow-type: tm+mt
-source-wordcount: '1175'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Die in diesem Dokument beschriebenen Workflows befinden sich derzeit in der Beta-Phase. Die Funktionalität und Dokumentation können sich ändern.
+>Die in diesem Dokument beschriebenen Workflows befinden sich derzeit in der Betaphase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
 
 Adobe Experience Platform bietet einen robusten Satz standardisierter [Feldergruppen](../schema/composition.md#field-group) zur Verwendung in Experience-Datenmodell (XDM)-Schemas. Die Struktur und die Semantik hinter diesen Feldergruppen sind sorgfältig darauf zugeschnitten, eine Vielzahl von Segmentierungsanwendungsfällen und anderen nachgelagerten Anwendungen in Platform zu erfüllen. Sie können auch eigene benutzerdefinierte Feldergruppen definieren, um individuelle Geschäftsanforderungen zu erfüllen.
 
@@ -43,7 +43,7 @@ Wenn Sie mehrere Felder entfernen möchten, können Sie die Feldergruppe als Gan
 
 ![Zugehörige Felder verwalten](../images/ui/field-based-workflows/manage-related-fields.png)
 
-Es wird ein Dialogfeld mit der Struktur der betreffenden Feldergruppe angezeigt. Hier können Sie die Kontrollkästchen verwenden, um die erforderlichen Felder auszuwählen oder die Auswahl aufzuheben. Wenn Sie zufrieden sind, wählen Sie **[!UICONTROL Felder hinzufügen]** aus.
+Es wird ein Dialogfeld mit der Struktur der betreffenden Feldergruppe angezeigt. Hier können Sie die Kontrollkästchen verwenden, um die erforderlichen Felder auszuwählen oder die Auswahl aufzuheben. Wenn Sie zufrieden sind, wählen Sie **[!UICONTROL Bestätigen]** aus.
 
 ![Felder aus Feldergruppe auswählen](../images/ui/field-based-workflows/select-fields.png)
 
@@ -73,23 +73,23 @@ Die Arbeitsfläche wird aktualisiert und zeigt das Standardfeld an, das dem Sche
 
 ## Benutzerdefinierte Felder direkt zu einem Schema hinzufügen
 
-Wenn Sie zuvor [benutzerdefinierte Feldergruppen](./resources/field-groups.md#create) erstellt haben, können Sie benutzerdefinierte Felder direkt zum Schema hinzufügen, ohne sie zuvor separat zu einer benutzerdefinierten Feldergruppe hinzufügen zu müssen.
-
->[!WARNING]
->
->Wenn Sie ein benutzerdefiniertes Feld zu einem Schema hinzufügen, müssen Sie weiterhin eine vorhandene benutzerdefinierte Feldergruppe auswählen, damit sie verknüpft werden kann. Damit Sie einem Schema benutzerdefinierte Felder direkt hinzufügen können, muss zuvor mindestens eine benutzerdefinierte Feldergruppe in der Sandbox definiert sein, in der Sie arbeiten. Darüber hinaus übernehmen alle anderen Schemas, die diese benutzerdefinierte Feldergruppe verwenden, auch das neu hinzugefügte Feld, nachdem Sie Ihre Änderungen gespeichert haben.
+Ähnlich wie beim Workflow für Standardfelder können Sie auch eigene benutzerdefinierte Felder direkt zu einem Schema hinzufügen.
 
 Um der Stammebene eines Schemas Felder hinzuzufügen, wählen Sie auf der Arbeitsfläche das Pluszeichen (**+**) neben dem Namen des Schemas aus. Ein Platzhalter **[!UICONTROL Unbenanntes Feld]** wird in der Schemastruktur angezeigt und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren des Felds anzuzeigen.
 
 ![Benutzerdefiniertes Stammfeld](../images/ui/field-based-workflows/root-custom-field.png)
 
-Beginnen Sie mit der Eingabe des Namens des benutzerdefinierten Felds, das Sie hinzufügen möchten, und das System beginnt automatisch mit der Suche nach entsprechenden Standardfeldern. Um stattdessen ein neues benutzerdefiniertes Feld zu erstellen, wählen Sie die obere Option aus, die an **([!UICONTROL Neues Feld])** angehängt wird.
+Beginnen Sie mit der Eingabe des Namens des Felds, das Sie hinzufügen möchten, und das System beginnt automatisch mit der Suche nach entsprechenden Standardfeldern. Um stattdessen ein neues benutzerdefiniertes Feld zu erstellen, wählen Sie die obere Option aus, die an **([!UICONTROL Neues Feld])** angehängt wird.
 
 ![Neues Feld](../images/ui/field-based-workflows/custom-field-search.png)
 
-Geben Sie von hier aus einen Anzeigenamen und einen Datentyp für das Feld ein. Wählen Sie unter **[!UICONTROL Feldergruppe zuweisen]** die benutzerdefinierte Feldergruppe aus, mit der das neue Feld verknüpft werden soll.
+Geben Sie von hier aus einen Anzeigenamen und einen Datentyp für das Feld ein. Unter **[!UICONTROL Feldergruppe zuweisen]** müssen Sie eine Feldergruppe auswählen, mit der das neue Feld verknüpft werden soll. Beginnen Sie mit der Eingabe des Namens der Feldergruppe. Wenn Sie zuvor [benutzerdefinierte Feldergruppen ](./resources/field-groups.md#create) erstellt haben, werden diese in der Dropdown-Liste angezeigt. Alternativ können Sie einen eindeutigen Namen in das Feld eingeben, um stattdessen eine neue Feldergruppe zu erstellen.
 
 ![Feldgruppe auswählen](../images/ui/field-based-workflows/select-field-group.png)
+
+>[!WARNING]
+>
+>Wenn Sie eine vorhandene benutzerdefinierte Feldergruppe auswählen, übernehmen alle anderen Schemas, die diese Feldergruppe verwenden, auch das neu hinzugefügte Feld, nachdem Sie Ihre Änderungen gespeichert haben. Wählen Sie daher nur dann eine existierende Feldergruppe aus, wenn Sie diese Art von Vermehrung wünschen. Andernfalls sollten Sie stattdessen eine neue benutzerdefinierte Feldergruppe erstellen.
 
 Wenn Sie fertig sind, wählen Sie **[!UICONTROL Apply]**.
 
@@ -110,6 +110,8 @@ Wenn das Schema, mit dem Sie arbeiten, ein Objekt enthält, das von einer Standa
 ![Feld zum Standardobjekt hinzufügen](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
 Nachdem Sie Ihre Änderungen angewendet haben, wird das neue Feld unter Ihrem Mandanten-ID-Namespace innerhalb des Standardobjekts angezeigt. Dieser verschachtelte Namespace verhindert Konflikte mit Feldnamen innerhalb der Feldergruppe selbst, um Änderungen in anderen Schemas zu vermeiden, die dieselbe Feldergruppe verwenden.
+
+![Feld zum Standardobjekt hinzugefügt](../images/ui/field-based-workflows/added-to-standard-object.png)
 
 ## Nächste Schritte
 
