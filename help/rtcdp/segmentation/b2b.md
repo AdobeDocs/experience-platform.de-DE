@@ -1,14 +1,15 @@
 ---
 title: Übersicht über die Anwendungsfälle der Segmentierung für die Echtzeit-Kundendatenplattform B2B Edition.
-description: Überblick über die verschiedenen Anwendungsfälle der Echtzeit-CDP B2B Edition.
-source-git-commit: e85d4b108e2d4a6a88772c071d9281603b695ada
+description: Ein Überblick über die verschiedenen Anwendungsfälle der Echtzeit-CDP B2B Edition.
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
+source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1122'
 ht-degree: 1%
 
 ---
 
-# Übersicht über die Anwendungsfälle der Segmentierung für die Echtzeit-Kundendatenplattform B2B Edition (Beta)
+# Übersicht über die Anwendungsfälle der Segmentierung für Real-time Customer Data Platform B2B Edition (Beta)
 
 <!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
@@ -20,7 +21,7 @@ Dieses Dokument enthält Beispiele zur Segmentierung, die für die Echtzeit-Kund
 
 >[!NOTE]
 >
->Die für diese Anwendungsfälle der Segmentierung erforderlichen Attribute stehen nur Kunden mit B2B Edition-Echtzeit-Kundendatenplattform zur Verfügung. Um mehr über die Echtzeit-Kundendatenplattform zu erfahren, einschließlich der für jeden Lizenztyp verfügbaren Funktionen, lesen Sie zunächst den [Überblick über die Echtzeit-Kundendatenplattform](../overview.md).
+>Die für diese Anwendungsfälle der Segmentierung erforderlichen Attribute stehen nur Kunden von Real-time Customer Data Platform B2B Edition zur Verfügung. Um mehr über die Echtzeit-Kundendatenplattform zu erfahren, einschließlich der für jeden Lizenztyp verfügbaren Funktionen, lesen Sie zunächst den [Überblick über die Echtzeit-Kundendatenplattform](../overview.md).
 
 ## Voraussetzungen
 
@@ -37,7 +38,7 @@ Sobald diese Anforderungen erfüllt sind, können Sie diese Attribute für gäng
 
 Sobald die Vereinigungsschemas für die B2B-Klassen Beziehungen hergestellt haben und zum Erfassen von Daten verwendet wurden, werden ihre Attribute in der linken Leiste des Segment Builder verfügbar gemacht.
 
-B2B-Klassen und ihre Attribute werden im Arbeitsbereich &quot;Segmentierung&quot;mit einer `B2B`-Beschriftung angehängt, um sie von denen zu unterscheiden, die in der Echtzeit-Kundendatenplattform standardmäßig verfügbar sind.
+B2B-Klassen und ihre Attribute werden im Segmentierungsarbeitsbereich mit einer `B2B`-Beschriftung angehängt, um sie von den in Real-time Customer Data Platform standardmäßig verfügbaren Klassen zu unterscheiden.
 
 Um Segmente für B2B-Anwendungsfälle effektiv erstellen zu können, ist es wichtig, über eine genaue Kenntnis des Schemas zu verfügen und zu verstehen, wie das Datenmodell aussieht. Beachten Sie auch den Pfad, den die Daten von einem Datenobjekt zum anderen führen.
 
@@ -55,7 +56,7 @@ Diese Beziehung spiegelt sich im Segment Builder durch die Verwendung von `Key` 
 
 ![Quellschlüsselbeispiel zur Verwendung des Segment-Builders im Segmentierungsarbeitsbereich](../assets/segmentation/source-key-segmentation-example.png)
 
-Weitere Informationen zu den verfügbaren B2B-Klassen finden Sie in der Dokumentation [Schemas in der Echtzeit-Kundendatenplattform B2B Edition](../schemas/b2b.md) .
+Weitere Informationen zu den verfügbaren B2B-Klassen finden Sie in der Dokumentation zu [Schemas in Real-time Customer Data Platform B2B Edition](../schemas/b2b.md).
 
 Die folgenden Anwendungsfälle liefern Informationen darüber, welche Klassen verwendet werden, um Beziehungen zwischen den verschiedenen Schemas herzustellen, um diese Ergebnisse zu erzielen. Diese Beispiele helfen Ihnen beim Erstellen eigener Segmente.
 

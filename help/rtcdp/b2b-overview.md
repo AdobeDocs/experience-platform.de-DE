@@ -1,26 +1,24 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;b2b;cdp;Customer AI
+keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kundendatenplattform;Echtzeit-Kundendatenplattform;b2b;cdp;Customer AI
 title: Übersicht über die Echtzeit-Kundendatenplattform B2B Edition
 seo-title: Real-time Customer Data Platform B2B Edition overview
-description: Übersicht über das B2B Edition-Konto der Echtzeit-Kundendatenplattform
+description: Übersicht über das Real-time Customer Data Platform B2B Edition-Konto
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
-hide: true
-hidefromtoc: true
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: dbe0353bb3976dde20feddc4fd660d5590c51d5c
+source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1057'
 ht-degree: 3%
 
 ---
 
-# Übersicht über die Echtzeit-Kundendatenplattform B2B Edition
+# Übersicht über Real-time Customer Data Platform B2B Edition
 
 >[!IMPORTANT]
 >
 >Die Echtzeit-CDP B2B Edition befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
 
-Die auf der Echtzeit-Kundendatenplattform (Echtzeit-Kundendatenplattform) aufbauende Echtzeit-Kundendatenplattform CDP B2B Edition wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Servicemodus arbeiten. Es führt Daten aus mehreren Quellen zusammen und kombiniert sie in einer einzigen Ansicht von Personen und Kontoprofilen. Diese einheitlichen Daten ermöglichen es Marketingexperten, spezifische Zielgruppen präzise anzusprechen und diese Zielgruppen über alle verfügbaren Kanäle hinweg zu erreichen.
+Die auf Real-time Customer Data Platform (Echtzeit-Kundendatenplattform) aufbauende Echtzeit-Kundendatenplattform B2B Edition ist speziell für Marketing-Experten konzipiert, die in einem Business-to-Business-Servicemodell arbeiten. Es führt Daten aus mehreren Quellen zusammen und kombiniert sie in einer einzigen Ansicht von Personen und Kontoprofilen. Diese einheitlichen Daten ermöglichen es Marketingexperten, spezifische Zielgruppen präzise anzusprechen und diese Zielgruppen über alle verfügbaren Kanäle hinweg zu erreichen.
 
 Es gibt Verbesserungen an einer Vielzahl von Adobe Experience Platform-Funktionen, die die Echtzeit-Kundendatenplattform B2B Edition von ihrem B2C-Gegenstück unterscheiden. Dazu gehören Verbesserungen am Experience-Datenmodell (XDM) für B2B-Anwendungsfälle, Upgrades zur Identitätsauflösung und Profilsegmentierung sowie ein benutzerdefinierter Connector und ein Ziel für [!DNL Marketo Engage]. Der Connector [!DNL Marketo] ermöglicht es B2B-Marken, ihre branchenführenden B2B-Interaktionsdaten mit Verhaltensinformationen zu verbinden, um Leads zu fördern und kontobasierte Marketingoperationen zu verbessern.
 
@@ -71,22 +69,16 @@ Bei ordnungsgemäßer Implementierung verfolgt das System Personen anhand eindeu
 >
 >Die [!DNL Marketo]-Quelle ist **nicht** erforderlich, um die Echtzeit-CDP B2B Edition zu verwenden.
 
-Weitere Informationen zu Marketo und das Einbringen von B2B-Daten in Platform finden Sie in den Quellen in der Dokumentation zur Echtzeit-Kundendatenplattform B2B Edition .
-
-<!-- PLACEHOLDER [sources in Real-time CDP B2B Edition](./sources/b2b) -->
+Weitere Informationen zu Marketo und zur Einbindung von B2B-Daten in Platform finden Sie in der Dokumentation [Quellen in der Echtzeit-Kundendatenplattform B2B Edition](./sources/b2b.md) .
 
 ## B2B-Ziele
 
-Alle Experience Platform-Ziele wie [!DNL Google], [!DNL Linkedin] oder [!DNL Facebook] sind verfügbar und werden von der Echtzeit-Kundendatenplattform B2B Edition vollständig unterstützt. Es gibt auch ein [!DNL Marketo Engage]-Ziel, das Daten aus [!DNL Marketo] oder aus Platform streamt und als Zielgruppen verfügbar macht.
+Experience Platform-Ziele wie Google, LinkedIn und Facebook sind verfügbar und werden von der Echtzeit-Kundendatenplattform B2B Edition vollständig unterstützt. Es gibt auch ein Marketo Engage-Ziel, das Segmentmitgliedsdaten aus Platform streamt und als Listen in Marketo verfügbar macht.
 
-Das [!DNL Marketo]-Ziel bietet eine nahtlose und schnelle Möglichkeit, Informationen aus der Experience Platform in [!DNL Marketo] zu ziehen. Mit dem Ziel können Marketing-Experten in Adobe Experience Platform erstellte Segmente per Push an [!DNL Marketo] übertragen. In [!DNL Marketo] sind diese Zielgruppen dann als statische Listen verfügbar.
-
-Für Unternehmen mit mehr als einem CRM bietet die Echtzeit-Kundendatenplattform B2B Edition die Möglichkeit, Ziel-Connectoren zu konfigurieren, um Instanzen von [!DNL Marketo] oder CRM zu trennen. Bei Bedarf können Sie Ziel-Connectoren für jede Instanz konfigurieren und Zielgruppen unabhängig an jede der CRM-Instanzen senden.
+Für Unternehmen mit mehr als einem CRM-System bietet die Echtzeit-Kundendatenplattform B2B Edition die Möglichkeit, Ziel-Connectoren für separate Instanzen von Marketo oder CRM zu konfigurieren. Bei Bedarf können Sie Ziel-Connectoren für jede Instanz konfigurieren und Zielgruppen unabhängig an jede der CRM-Instanzen senden.
 
 ## Nächste Schritte
 
 Jetzt, da Sie die Vorteile für Marketing-Experten, die die Echtzeit-Kundendatenplattform B2B Edition bietet, und die Unterschiede zwischen ihr und der Echtzeit-Kundendatenplattform besser verstehen, können Sie mehr darüber erfahren, wie Sie diese Funktionen auf Ihre eigene IMS-Organisation anwenden.
 
-<!-- PLACEHOLDER [example use case for Real-time CDP B2B Edition]() -->
-
-Um zu verstehen, wie die B2B Edition der Echtzeit-Kundendatenplattform Ihr Business-to-Business-Servicemodell nutzen kann, lesen Sie das Anwendungsbeispiel für die Echtzeit-Kundendatenplattform B2B Edition. Alternativ können Sie in der Dokumentation [Schemas in der Echtzeit-Kundendatenplattform B2B Edition](./schemas/b2b.md) genauere Anleitungen zum Erstellen von Schemas und zum Definieren von Beziehungen für wesentliche B2B-Datenentitäten finden.
+Um zu verstehen, wie die B2B Edition der Echtzeit-Kundendatenplattform Ihr Business-to-Business-Service-Modell nutzen kann, lesen Sie den [Beispielanwendungsfall für die Echtzeit-Kundendatenplattform B2B Edition](./b2b-use-case.md). Alternativ können Sie in der Dokumentation [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) genauere Anleitungen zum Erstellen von Schemas und zum Definieren von Beziehungen für wichtige B2B-Datenentitäten finden.

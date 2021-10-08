@@ -1,25 +1,25 @@
 ---
-keywords: RTCDP; CDP; Echtzeit-Kundendatenplattform; Echtzeit-Kundendatenplattform; Echtzeit-Kundendatenplattform; cdp; rtcdp
-title: Anwendungsbeispiel für die Echtzeit-Kundendatenplattform B2B Edition
-description: Dieses Beispielszenario bietet ein Beispiel für die Konfiguration Ihrer Implementierung der Echtzeit-Kundendatenplattform B2B Edition.
-source-git-commit: 30a4d2b27092f4706bb4f3f986a190502b184034
+keywords: RTCDP; CDP; Real-time Customer Data Platform; Echtzeit-Kundendatenplattform; Echtzeit-CDP; cdp; rtcdp
+title: Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition
+description: Dieses Beispielszenario bietet ein Beispiel für die Konfiguration Ihrer Implementierung von Real-time Customer Data Platform B2B Edition.
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
+source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
 
-# Anwendungsbeispiel für die Echtzeit-Kundendatenplattform B2B Edition
+# Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition
 
 >[!IMPORTANT]
 >
 >Die Echtzeit-CDP Business to Business Edition befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
 
-Die Echtzeit-Kundendatenplattform B2B Edition erweitert die bestehenden Angebote der Echtzeit-Kundendatenplattform und von Adobe Experience Platform, um B2B-Daten und -Workflows zu unterstützen. In diesem Dokument wird ein Anwendungsbeispiel vorgestellt, in dem die zusätzlichen Vorteile der B2B Edition veranschaulicht werden. Dazu gehören:
+Real-time Customer Data Platform B2B Edition erweitert die bestehenden Angebote der Echtzeit-Kundendatenplattform und Adobe Experience Platform, um B2B-Daten und -Workflows zu unterstützen. In diesem Dokument wird ein Anwendungsbeispiel vorgestellt, in dem die zusätzlichen Vorteile der B2B Edition veranschaulicht werden. Dazu gehören:
 
 - Kombinieren Sie Personen- und Kontodaten aus verschiedenen silodierten Datenquellen, um eine umfassende Ansicht zu erhalten, die ein besseres Verständnis der Kunden und eine präzisere Segmentierung ermöglicht. Weitere Informationen finden Sie in der Dokumentation zu [Erstellen von XDM-Schemabeziehungen](./schemas/b2b.md) zur Verwendung mit unterschiedlichen B2B-Quellen .
-- Segmentieren einer Zielgruppe basierend auf Attributen verwandter Entitäten. Dazu gehören Konten, Chancen, Kampagnen und Marketinglisten. Segmente sind nicht mehr nur auf Personen- und Erlebnisereignisse beschränkt. Weitere Beispiele zum Erstellen von B2B-spezifischen Zielgruppen finden Sie in der Dokumentation zur B2B-Segmentierung .
-   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
+- Segmentieren einer Zielgruppe basierend auf Attributen verwandter Entitäten. Dazu gehören Konten, Chancen, Kampagnen und Marketinglisten. Segmente sind nicht mehr nur auf Personen- und Erlebnisereignisse beschränkt. Weitere Beispiele zum Erstellen von B2B-spezifischen Zielgruppen finden Sie in der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) .
 - Nativ unterstützen den Anwendungsfall einer Person, die mit mehreren Konten in Verbindung steht.
 
 ## Anwendungsfall
@@ -97,12 +97,10 @@ Durch die Lektüre dieses Dokuments haben Sie sich nun mit den Zieltypen und Pro
 
 Die folgende Dokumentation wird empfohlen, um Ihr Verständnis der B2B-spezifischen Funktionen zu verbessern:
 
-<!-- - [Marketo connector]() -->
-- [Schemata in der Echtzeit-Kundendatenplattform B2B Edition](./schemas/b2b.md)
-- [Dokumentation zum Marketo Engage-Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html)
-- [LinkedIn Matched Audiences-Ziel konfigurieren](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/linkedin.html#connect)
-
-<!-- PLACEHOLDER -->
-<!-- - [Account Profiles]() -->
-<!-- - [B2B Segmentation examples]() -->
-<!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
+<!-- PLACEHOLDER Link to B2B tutorial required  -->
+- [Quellen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
+- [Schemata in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+- [Beispiele für B2B-Segmentierung](./segmentation/b2b.md)
+- [Übersicht über Kontoprofile](./accounts/account-profile-overview.md)
+- [Ziele in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
+- [LinkedIn Matched Audiences-Ziel konfigurieren](../destinations/catalog/social/linkedin.md)
