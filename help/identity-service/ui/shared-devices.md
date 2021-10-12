@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: Bei der Erkennung freigegebener Geräte werden verschiedene authentifizierte Benutzer desselben Geräts identifiziert, sodass Kundendaten in Identitätsdiagrammen genauer dargestellt werden können.
 hide: true
 hidefromtoc: true
-source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
+source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '660'
 ht-degree: 8%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 8%
 
 Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und ihr Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für effektive und persönliche digitale Erlebnisse sorgen.
 
-[!DNL Shared Device] bezeichnet Geräte, die von mehr als einer Person verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks. Durch die Funktion [!DNL Shared Device Detection] können unterschiedliche Benutzer desselben Geräts daran gehindert werden, zu einer einzelnen Identität zusammenzuführen, wodurch eine genauere Darstellung möglich ist.
+[!DNL Shared Device] bezeichnet Geräte, die von mehr als einer Person verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks. Durch die Funktion [!DNL Shared Device Detection] können unterschiedliche Benutzer desselben Geräts daran gehindert werden, in einer Identität zusammengeführt zu werden, wodurch eine genauere Darstellung einer Person ermöglicht wird.
 
 Mit [!DNL Shared Device Detection] können Sie:
 
@@ -31,7 +31,7 @@ Mit [!DNL Shared Device Detection] können Sie:
 
 >[!TIP]
 >
->Konfigurationen für [!DNL Shared Device Detection] müssen vor der Aktivierung von [!DNL Profile] für den Datensatz abgeschlossen sein, da Sie die Einstellungen nach der Erstellung von Diagrammen in [!DNL Identity Service] nicht mehr überarbeiten können.
+>Konfigurationen für [!DNL Shared Device Detection] müssen vor der Aktivierung des Profils für den Datensatz abgeschlossen sein, da Sie die Einstellungen nach der Erstellung von Diagrammen in [!DNL Identity Service] nicht mehr ändern können.
 
 ## Erste Schritte
 
