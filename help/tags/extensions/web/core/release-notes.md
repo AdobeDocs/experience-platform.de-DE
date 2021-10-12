@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 693da9aa012baa26dcff93f085dd6e763816e247
+source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
-source-wordcount: '1522'
-ht-degree: 85%
+source-wordcount: '1543'
+ht-degree: 84%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 85%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 8. Oktober 2021
+
+v3.2.2
+
+* Korrigieren Sie das JSON-Schema für das Datenelement &quot;Bedingungswert&quot;für alle verfügbaren Operatoren.
+* Fehlerbehebung https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23. September 2021
 
