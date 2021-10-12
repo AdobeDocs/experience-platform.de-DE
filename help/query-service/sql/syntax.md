@@ -5,7 +5,7 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 8dceab8cdba1ac6b4a649f0e01b2bbda5f025bef
+source-git-commit: 6f697bb249c50e58f9e8a5821fa71f2d4c9a7aac
 workflow-type: tm+mt
 source-wordcount: '2154'
 ht-degree: 13%
@@ -554,7 +554,7 @@ COPY query
 **Parameter**
 
 - `query`: Die Abfrage, die Sie kopieren möchten.
-- `format_name`: Das Format, in das Sie die Abfrage kopieren möchten. Das `format_name` kann eines von `parquet`, `csv` oder `json` sein. Der Standardwert ist `parquet`.
+- `format_name`: Das Format, in das die Abfrage kopiert werden soll. Das `format_name` kann eines von `parquet`, `csv` oder `json` sein. Der Standardwert ist `parquet`.
 
 >[!NOTE]
 >

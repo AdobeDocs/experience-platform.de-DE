@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Ereignistypen verwenden, die von der Adobe Ex
 solution: Experience Platform
 feature: Web SDK
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Ereignistypen
 
-Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden für [Build-Regeln](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) verwendet und sollten nicht mit dem [`eventType`-Feld in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de) verwechselt werden.
+Auf dieser Seite werden die Adobe Experience Platform-Ereignistypen beschrieben, die von der Adobe Experience Platform Web SDK-Tag-Erweiterung bereitgestellt werden. Diese werden für [Build-Regeln](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) verwendet und sollten nicht mit dem [`eventType`-Feld in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=de) verwechselt werden.
 
 ## [!UICONTROL Abschluss des Ereignisses senden]
 
@@ -174,7 +174,7 @@ An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem
 
 1. Entpacken Sie Vorschläge aus dem `event` -Objekt.
 1. Durchlaufen Sie jeden Vorschlag und suchen Sie nach dem Vorschlag mit einem Umfang von `discount`.
-1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
+1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag, suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
 1. Wenn Sie ein Element mit HTML-Inhalt finden, suchen Sie das Element `daily-special` auf der Seite und ersetzen Sie dessen HTML durch den personalisierten Inhalt.
 
 Ihr benutzerspezifischer Code innerhalb der Aktion [!UICONTROL Benutzerspezifischer Code] kann wie folgt aussehen:
