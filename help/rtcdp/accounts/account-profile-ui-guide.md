@@ -2,13 +2,13 @@
 keywords: rtcdp profile; profile rtcdp; rtcdp identities; rtcdp-Zusammenführungsrichtlinien; Echtzeit-Kundenprofil
 title: Handbuch zur Benutzeroberfläche des Kontoprofils
 description: Durch die Verwendung von Kontoprofilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Kontoinformationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Kontoprofilen in der Benutzeroberfläche von Adobe Experience Platform.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
+source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
-
 
 # Handbuch zur Benutzeroberfläche des Kontoprofils
 
@@ -24,7 +24,7 @@ Mit Kontoprofilen können Sie Kontoinformationen aus mehreren Quellen vereinheit
 
 ## Kontoprofile durchsuchen
 
-Um Kontoprofile zu durchsuchen, wählen Sie zunächst **[!UICONTROL Profile]** unter Konten im linken Navigationsbereich aus.
+Um Kontoprofile zu durchsuchen, wählen Sie zunächst **[!UICONTROL Profile]** unter [!UICONTROL Konten] im linken Navigationsbereich aus.
 
 ![](images/b2b-account-browse.png)
 
@@ -34,7 +34,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** können Sie Kontoprofile mith
 
 ### Durchsuchen nach [!UICONTROL Connected enterprise source]
 
-Um Kontoprofile nach einer verbundenen Unternehmensquelle zu durchsuchen, müssen Sie zunächst mithilfe der Selektor-Schaltfläche neben dem Feld **[!UICONTROL Quelle]** eine verbundene Quelle auswählen.
+Um Kontoprofile nach einer verbundenen Unternehmensquelle zu durchsuchen, wählen Sie **[!UICONTROL Connected enterprise source]** aus dem Dropdown-Menü **[!UICONTROL Durchsuchen nach]** und wählen Sie dann mithilfe der Selektor-Schaltfläche neben dem Feld **[!UICONTROL Quelle]** eine verbundene Quelle aus.
 
 ![](images/b2b-account-browse.png)
 
@@ -50,7 +50,7 @@ Weiterführende Informationen zum Verbinden von Unternehmensquellen finden Sie i
 
 Sie können eine Quelle auswählen, indem Sie das Optionsfeld neben dem Verbindungsnamen auswählen und dann **[!UICONTROL Select]** verwenden, um zur Registerkarte [!UICONTROL Durchsuchen] zurückzukehren.
 
-Bei ausgewählter Quelle müssen Sie nun eine **[!UICONTROL Konto-ID]** eingeben, die mit der Quelle verknüpft ist. Wenn Sie beispielsweise eine Salesforce-Quelle auswählen, müssen Sie eine Konto-ID aus der Salesforce-Instanz eingeben, um das mit dieser ID verknüpfte Kontoprofil anzuzeigen.
+Bei ausgewählter Quelle müssen Sie jetzt eine **[!UICONTROL Konto-ID]** eingeben, die mit der Quelle verknüpft ist. Wenn Sie beispielsweise eine Salesforce-Quelle auswählen, müssen Sie eine Konto-ID aus der Salesforce-Instanz eingeben, um das mit dieser ID verknüpfte Kontoprofil anzuzeigen.
 
 >[!NOTE]
 >
@@ -60,13 +60,15 @@ Bei ausgewählter Quelle müssen Sie nun eine **[!UICONTROL Konto-ID]** eingeben
 
 ![](images/b2b-account-browse-id.png)
 
-### Nach [!UICONTROL Other] durchsuchen
+### Nach [!UICONTROL Andere] durchsuchen
 
 Die Echtzeit-Kundendatenplattform B2B Edition unterstützt die Möglichkeit, eine direkte Suche durchzuführen, indem Sie einen **[!UICONTROL Quellnamen]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Konto-ID]** für ein Konto eingeben können, das Sie anzeigen möchten. Indem Sie den Quellnamen und die Instanz direkt eingeben, geben Sie den Kontext an, der für die Experience Platform erforderlich ist, um nach den richtigen Kontoprofildaten zu suchen und diese anzuzeigen.
 
 Die Möglichkeit, eine direkte Suche durchzuführen, ist unter Umständen nützlich, wenn eine direkte Quellverbindung zu den Daten nicht möglich ist. Wenn Ihr Unternehmen beispielsweise über Data Governance-Richtlinien verfügt, die eine direkte Verbindung zu einem CRM verhindern, können Sie diese Daten in ein Cloud-Speichersystem exportieren und dann in Experience Platform aufnehmen.
 
 Ein weiteres Beispiel könnte sein, dass Sie eine Transformation der Daten zwischen dem Verlassen eines Systems und dem Eintritt in Platform durchführen. Sie können die Funktion für die direkte Suche verwenden, um einen Kontext für die Daten bereitzustellen (z. B. um anzugeben, dass es sich um Marketo-Daten handelt, obwohl es beispielsweise von einem Amazon S3-Bucket stammt), sodass das System weiß, wo die Daten gesucht werden sollen und wie sie korrekt wiedergegeben werden.
+
+Um eine direkte Suche zu starten, wählen Sie **[!UICONTROL Sonstige]** aus dem Dropdown-Menü **[!UICONTROL Durchsuchen nach]** aus, geben Sie dann einen **[!UICONTROL Quellnamen]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Konto-ID]** für das Konto ein, das Sie anzeigen möchten.
 
 ![](images/b2b-account-browse-adhoc.png)
 
