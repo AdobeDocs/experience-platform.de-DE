@@ -6,9 +6,9 @@ topic-legacy: tutorial
 description: Bei der Erkennung freigegebener Geräte werden verschiedene authentifizierte Benutzer desselben Geräts identifiziert, sodass Kundendaten in Identitätsdiagrammen genauer dargestellt werden können.
 hide: true
 hidefromtoc: true
-source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
+source-git-commit: 9c0d360b39bf69a44ac6298724dbab0f8456dc90
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '656'
 ht-degree: 8%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 8%
 
 Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, sich einen besseren Überblick über Ihre Kunden und ihr Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für effektive und persönliche digitale Erlebnisse sorgen.
 
-[!DNL Shared Device Detection] sind Geräte, die von mehr als einer Person verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks. Durch [!DNL Shared Device Detection] können unterschiedliche Benutzer desselben Geräts daran gehindert werden, zu einer einzelnen Identität zusammenzuführen, was eine genauere Darstellung ermöglicht.
+[!DNL Shared Device] bezeichnet Geräte, die von mehr als einer Person verwendet werden. Beispiele für gemeinsam genutzte Geräte sind Tablets, Bibliothekscomputer und Kiosks. Durch die Funktion [!DNL Shared Device Detection] können unterschiedliche Benutzer desselben Geräts daran gehindert werden, zu einer einzelnen Identität zusammenzuführen, wodurch eine genauere Darstellung möglich ist.
 
 Mit [!DNL Shared Device Detection] können Sie:
 
@@ -31,7 +31,7 @@ Mit [!DNL Shared Device Detection] können Sie:
 
 >[!TIP]
 >
->Konfigurationen für [!DNL Shared Device Detection] müssen vor der Aktivierung von [!DNL Profile] für den Datensatz abgeschlossen sein, da Sie die Einstellungen nicht mehr überprüfen können, sobald Daten in [!DNL Identity Service] fließen.
+>Konfigurationen für [!DNL Shared Device Detection] müssen vor der Aktivierung von [!DNL Profile] für den Datensatz abgeschlossen sein, da Sie die Einstellungen nach der Erstellung von Diagrammen in [!DNL Identity Service] nicht mehr überarbeiten können.
 
 ## Erste Schritte
 
