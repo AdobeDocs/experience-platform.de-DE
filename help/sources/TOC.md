@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
-feature: Data Ingestion, Sources
-source-git-commit: fe024675e6337ebf9a401f65db939440f435053f
+feature: Sources
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 19%
@@ -65,9 +65,9 @@ ht-degree: 19%
       - [Google BigQuery-Connector](connectors/databases/bigquery.md)
       - [GreenPlum-Connector](connectors/databases/greenplum.md)
       - [HP Vertica-Connector](connectors/databases/hp-vertica.md)
-      - [IBM DB2 Connector](connectors/databases/ibm-db2.md)
+      - [IBM DB2-Connector](connectors/databases/ibm-db2.md)
       - [MariaDB-Connector](connectors/databases/mariadb.md)
-      - [Microsoft SQL Server Connector](connectors/databases/sql-server.md)
+      - [Microsoft SQL Server-Connector](connectors/databases/sql-server.md)
       - [MySQL-Connector](connectors/databases/mysql.md)
       - [Oracle-Connector](connectors/databases/oracle.md)
       - [Phoenix-Connector](connectors/databases/phoenix.md)

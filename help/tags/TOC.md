@@ -3,8 +3,8 @@ audience: user
 user-guide-title: Hilfe zu Tags
 breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
-feature: Data Collection
-source-git-commit: 549124c4c10677cc3691706c804894956c7ef592
+feature: Tags
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 100%

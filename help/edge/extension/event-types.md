@@ -2,9 +2,8 @@
 title: Ereignistypen in der Adobe Experience Platform Web SDK-Erweiterung
 description: Erfahren Sie, wie Sie Ereignistypen verwenden, die von der Adobe Experience Platform Web SDK-Erweiterung in Adobe Experience Platform Launch bereitgestellt werden.
 solution: Experience Platform
-feature: Web SDK
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 8f714933e23e281772cd8633d27096021de14c56
+source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 1%
@@ -86,7 +85,7 @@ Das `propositions`-Array könnte in etwa wie im folgenden Beispiel aussehen:
 ]
 ```
 
-Beim Senden des Ereignisses wurde das Kontrollkästchen [!UICONTROL Renderentscheidungen] nicht aktiviert, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, sofern dies gewünscht ist. Beachten Sie, dass für jedes Vorschlagsobjekt die Eigenschaft `renderAttempted` auf `false` festgelegt ist.
+Beim Senden des Ereignisses wurde das Kontrollkästchen [!UICONTROL Renderentscheidungen] nicht aktiviert, sodass das SDK nicht versucht hat, automatisch Inhalte zu rendern. Das SDK hat jedoch weiterhin automatisch die Inhalte abgerufen, die für das automatische Rendering infrage kommen, und Ihnen zur manuellen Wiedergabe bereitgestellt, wenn Sie dies möchten. Beachten Sie, dass für jedes Vorschlagsobjekt die Eigenschaft `renderAttempted` auf `false` festgelegt ist.
 
 Hätten Sie beim Senden des Ereignisses stattdessen das Kontrollkästchen [!UICONTROL Renderentscheidungen] aktiviert, hätte das SDK versucht, alle Vorschläge wiederzugeben, die für das automatische Rendering infrage kommen. Daher wird für jedes der Vorschlagsobjekte die Eigenschaft `renderAttempted` auf `true` gesetzt. In diesem Fall müssen diese Vorschläge nicht manuell gerendert werden.
 
