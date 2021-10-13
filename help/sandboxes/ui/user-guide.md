@@ -5,10 +5,10 @@ title: Handbuch zur Sandbox-UI
 topic-legacy: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 3b0f156d3d6a13fbad45a153749b81a0d6244283
+source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
 workflow-type: tm+mt
-source-wordcount: '779'
-ht-degree: 30%
+source-wordcount: '832'
+ht-degree: 28%
 
 ---
 
@@ -43,6 +43,10 @@ Sie können über die Suchfunktion im Menü Sandbox-Umschalter durch die Liste d
 ![](../images/ui/sandbox-search.png)
 
 ## Neue Sandbox erstellen
+
+>[!NOTE]
+>
+>Wenn eine neue Sandbox erstellt wird, müssen Sie diese neue Sandbox zunächst in [Adobe Admin Console](https://adminconsole.adobe.com/) zu Ihrem Produktprofil hinzufügen, bevor Sie mit der Verwendung der neuen Sandbox beginnen können. Informationen zur Bereitstellung einer Sandbox für ein Produktprofil finden Sie in der Dokumentation zu [Verwalten von Berechtigungen für ein Produktprofil](../../access-control/ui/permissions.md) .
 
 Im folgenden Video erhalten Sie einen schnellen Überblick über die Verwendung von Sandboxes in Experience Platform.
 
