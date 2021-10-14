@@ -4,8 +4,7 @@ audience: user
 user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Dienste, um Ergebnisse zu generieren, Einblicke zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
-feature: Data Science Workspace
-source-git-commit: 31b584d3e28a6f15254cf60fa673cd0c5c16ea73
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 100%

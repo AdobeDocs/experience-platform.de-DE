@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform; Erste Schritte; Kundenunterstützung; beliebte Themen; Eingabe der Kundenunterstützung; Ausgabe der Kundenai; Fehlerbehebung bei Kundenai; Fehler bei Kundenai
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Fehlerbehebung bei Customer AI
 topic-legacy: Getting started
 description: Hier finden Sie Antworten auf häufige Fehler in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%

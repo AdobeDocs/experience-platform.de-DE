@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Erste Schritte; Attribution ai; beliebte Themen; Attribution AI-Eingabe; Attribution AI-Ausgabe;
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: a49218103669758404a4ddf3f9833b8b2d9b7fc6
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '2230'
 ht-degree: 4%
@@ -45,7 +45,7 @@ Nicht alle Spalten des Schemas [!DNL Consumer Experience Event] (CEE) sind für 
 | Marketing.trackingCode | Touchpoint |
 | Marketing.campaignname | Touchpoint |
 | Marketing.campaigngroup | Touchpoint |
-| Handel | Konversion |
+| Commerce | Konversion |
 
 In der Regel wird die Attribution für Konversionsspalten wie Bestellung, Käufe und Checkouts unter &quot;Commerce&quot;ausgeführt. Die Spalten für &quot;channel&quot;und &quot;marketing&quot;werden verwendet, um Touchpoints für Attribution AI zu definieren (z. B. `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Für optimale Ergebnisse und Einblicke wird dringend empfohlen, so viele Konversions- und Touchpoint-Spalten wie möglich einzuschließen. Außerdem sind Sie nicht auf die oben genannten Spalten beschränkt. Sie können alle anderen empfohlenen oder benutzerdefinierten Spalten als Konversions- oder Touchpoint-Definition einbeziehen.
 

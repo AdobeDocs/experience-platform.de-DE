@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Benutzerhandbuch; Attribution; beliebte Themen; Region
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Benutzerhandbuch zu Attribution AI
 topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 6%
@@ -100,7 +100,7 @@ Durch Klicken auf **[!UICONTROL Ereignis hinzufügen]** werden zusätzliche Feld
 
 ![Ereignismenü hinzufügen](./images/user-guide/add_event_result.png)
 
-Wenn Sie auf **[!UICONTROL Gruppe hinzufügen]** klicken, können Sie zusätzliche Felder erstellen, die vom Original getrennt sind. Durch Hinzufügen von Gruppen wird eine blaue *Und*-Schaltfläche angezeigt. Durch Klicken auf **And** erhalten Sie eine Option, den Parameter so zu ändern, dass er &quot;Oder&quot;enthält. &quot;Oder&quot;wird verwendet, um mehrere erfolgreiche Konversionspfade zu definieren. &quot;Und&quot;erweitert den Konversionspfad um zusätzliche Bedingungen.
+Wenn Sie auf **[!UICONTROL Gruppe hinzufügen]** klicken, können Sie zusätzliche Felder erstellen, die vom Original getrennt sind. Durch Hinzufügen von Gruppen wird eine blaue *Und*-Schaltfläche angezeigt. Durch Klicken auf **Und** erhalten Sie eine Option, den Parameter so zu ändern, dass er &quot;Oder&quot;enthält. &quot;Oder&quot;wird verwendet, um mehrere erfolgreiche Konversionspfade zu definieren. &quot;Und&quot;erweitert den Konversionspfad um zusätzliche Bedingungen.
 
 ![und](./images/user-guide/and_or.png)
 
@@ -222,7 +222,7 @@ Nachdem Sie Ihr Schulungsfenster ausgewählt haben, klicken Sie in der oberen re
 
 In diesem Tutorial haben Sie erfolgreich eine Dienstinstanz in Attribution AI erstellt. Sobald die Instanz die Auswertung abgeschlossen hat (bis zu 24 Stunden erlaubt), können Sie [Attribution AI Insights](./discover-insights.md) ermitteln. Wenn Sie Ihre Scoring-Ergebnisse herunterladen möchten, besuchen Sie außerdem die Dokumentation [Herunterladen von Bewertungen](./download-scores.md) .
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Im folgenden Video wird ein durchgängiger Workflow zum Erstellen einer neuen Instanz in Attribution AI beschrieben.
 

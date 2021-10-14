@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundenai-Einblicke
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Insights mit Customer AI
 topic-legacy: Discovering insights
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1632'
 ht-degree: 10%
@@ -184,7 +185,7 @@ Je nachdem, ob Sie Abwanderung oder Konversion vorhersagen, zeigt das Diagramm [
 
 In diesem Dokument wurden die Einblicke einer Customer AI-Dienstinstanz beschrieben. Sie können jetzt mit dem Tutorial zum Herunterladen von Bewertungen in Customer AI](./download-scores.md) fortfahren oder die anderen verfügbaren [Adobe Intelligent Services](../../home.md)-Handbücher durchsuchen.[
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Im folgenden Video wird beschrieben, wie Sie mit Customer AI die Ausgabe der Modelle und Einflussfaktoren anzeigen können.
 

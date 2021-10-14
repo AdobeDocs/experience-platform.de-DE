@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Einblicke; Attributionsai; beliebte Themen; Attributionai-Einblicke
-solution: Intelligent Services, Experience Platform
+feature: Attribution AI
 title: Discover Insights in Attribution AI
 topic-legacy: Attribution AI insights
 description: Dieses Dokument dient als Handbuch für die Interaktion mit Einblicken der Dienstinstanz in der Benutzeroberfläche von Adobe Intelligent Services.
 exl-id: 6b8e51e7-1b56-4f4e-94cf-96672b426c88
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1656'
 ht-degree: 49%
@@ -190,7 +190,7 @@ Höhere Touchpoint-Volumen garantieren keine höhere Effizienz.
 
 Sobald Sie die Daten gefiltert haben und die entsprechenden Informationen anzeigen können, können Sie auf die Bewertungen zuzugreifen. Eine ausführliche Anleitung zum Zugriff auf Ihre Bewertungen finden Sie im [Tutorial für den Zugriff auf Bewertungen in Attribution AI](./download-scores.md). Darüber hinaus können Sie die Zusammenfassungsdaten herunterladen, wie in [Mehr Aktionen](#more-actions) angegeben. Wenn Sie „Zusammenfassungsdaten herunterladen“ auswählen, werden die nach Datumsangaben aggregierten Zusammenfassungsdaten heruntergeladen.
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Im folgenden Video erfahren Sie, wie Sie mithilfe der Attribution AI Insights-Seite den ROI von Marketingkanälen und Kampagnen nachvollziehen können.
 

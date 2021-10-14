@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; Attributionsai-Übersicht; beliebte Themen; Attribution ai; Attribution ai
-solution: Experience Platform, Intelligent Services
+feature: Attribution AI
 title: Attribution AI - Übersicht
 topic-legacy: Attribution AI
 description: Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
 landing-page-description: Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 37%

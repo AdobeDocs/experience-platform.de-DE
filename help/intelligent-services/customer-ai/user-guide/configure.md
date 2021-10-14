@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform; Benutzerhandbuch; Kundenunterstützung; beliebte Themen; Instanz konfigurieren; Instanz erstellen;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 topic-legacy: Instance creation
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: b6fff24d6298bad968e16516f2e555927c3a4a12
+source-git-commit: c3320f040383980448135371ad9fae583cfca344
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 26%
@@ -149,7 +150,7 @@ In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine
 
 In diesem Tutorial haben Sie erfolgreich eine Instanz von Customer AI konfiguriert und Tendenzwerte generiert. Sie können jetzt den Segment Builder verwenden, um [Kundensegmente mit prognostizierten Werten](./create-segment.md) oder [mit Customer AI](./discover-insights.md) zu erstellen.
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Das folgende Video unterstützt Sie beim Verständnis des Konfigurations-Workflows für Customer AI. Darüber hinaus werden Best Practices und Anwendungsfallbeispiele bereitgestellt.
 
