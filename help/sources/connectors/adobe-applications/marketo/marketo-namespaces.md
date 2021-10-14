@@ -5,9 +5,9 @@ title: B2B-Namespaces und -Schemata
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines Quell-Connectors für B2B erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 15fd870565d50bd4e320a1acf61413f45c1f537c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1679'
 ht-degree: 7%
 
 ---
@@ -87,6 +87,7 @@ Die folgende Tabelle enthält Informationen zum zugrunde liegenden Setup für B2
 | B2B Campaign-Mitglied | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
 | B2B-Marketingliste | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
 | B2B Marketing List Member | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
+| B2B-Konto-Personenbeziehung | `b2b_account_person_relation` | `B2B_ACCOUNT_PERSON` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -115,6 +116,7 @@ Die folgende Tabelle enthält Informationen zur zugrunde liegenden Einrichtung v
 | B2B-Marketingliste | XDM Business Marketing List | Keine | Aktiviert | `marketingListKey.sourceKey` in der Basisklasse | B2B-Marketingliste | Keine | Keine | Keine | Statische Liste wird nicht mit [!DNL Salesforce] synchronisiert und hat daher keine sekundäre Identität. |
 | B2B Marketing List Member | XDM Business Marketing List-Mitglieder | Keine | Aktiviert | `marketingListMemberKey.sourceKey` in der Basisklasse | B2B Marketing List Member | Keine | Keine | **Erste Beziehung**<ul><li>`PersonKey.sourceKey` in der Basisklasse</li><li>Typ: Viele-zu-eins</li><li>Referenzschema: B2B Person</li><li>Namespace: B2B Person</li><li>Ziel-Eigenschaft: `b2b.personKey.sourceKey`</li><li>Beziehungsname aus aktuellem Schema: Person</li><li>Beziehungsname aus Referenzschema: Marketinglisten</li></ul>**Zweite Beziehung**<ul><li>`marketingListKey.sourceKey` in der Basisklasse</li><li>Typ: Viele-zu-eins</li><li>Referenzschema: B2B-Marketingliste</li><li>Namespace: B2B-Marketingliste</li><li>Ziel-Eigenschaft: `marketingListKey.sourceKey`</li><li>Beziehungsname aus aktuellem Schema: Marketingliste</li><li>Beziehungsname aus Referenzschema: Personen</li></ul> | Statisches Listenelement wird nicht von [!DNL Salesforce] synchronisiert und hat daher keine sekundäre Identität. |
 | B2B-Aktivität | XDM ExperienceEvent | <ul><li>Website besuchen</li><li>Neuer Lead</li><li>Blei konvertieren</li><li>Zu Liste hinzufügen</li><li>Aus Liste löschen</li><li>Zu Chancen hinzufügen</li><li>Aus Opportunity entfernen</li><li>Ausgefülltes Formular</li><li>Link-Klicks</li><li>Zugestellt E-Mail</li><li>E-Mail geöffnet</li><li>E-Mail angeklickt</li><li>E-Mail Bounce</li><li>E-Mail-Bounce Soft</li><li>E-Mail-Abmeldung</li><li>Score geändert</li><li>Chancen aktualisiert</li><li>Status in Kampagnenfortschritt geändert</li><li>Personen-ID</li><li>Marketo Web URL</li><li>Interessanter Moment</li></ul> | Aktiviert | `personKey.sourceKey` Feldergruppe &quot;Person Identifier&quot; | B2B Person | Keine | Keine | **Erste Beziehung**<ul><li>`listOperations.listKey.sourceKey` field</li><li>Typ: Eins-zu-eins</li><li>Referenzschema: B2B-Marketingliste</li><li>Namespace: B2B-Marketingliste</li></ul>**Zweite Beziehung**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>Typ: Eins-zu-eins</li><li>Referenzschema: B2B-Chancen</li><li>Namespace: B2B-Chancen</li></ul>**Dritte Beziehung**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>Typ: Eins-zu-eins</li><li>Referenzschema: B2B-Kampagne</li><li>Namespace: B2B-Kampagne</li></ul> | `ExperienceEvent` unterscheidet sich von Entitäten. Die Identität des Erlebnisereignisses ist die Person, die die Aktivität durchgeführt hat. |
+| B2B-Konto-Personenbeziehung | Personenbeziehung zwischen XDM-Geschäftskonto | Identitätszuordnung | Aktiviert | `accountPersonKey.sourceKey` in der Basisklasse | B2B-Konto-Personenbeziehung | Keine | Keine | **Erste Beziehung**<ul><li>`personKey.sourceKey` in der Basisklasse</li><li>Typ: Viele-zu-eins</li><li>Referenzschema: B2B Person</li><li>Namespace: B2B Person</li><li>Ziel-Eigenschaft: `b2b.personKey.SourceKey`</li><li>Beziehungsname aus aktuellem Schema: Personen</li><li>Beziehungsname aus Referenzschema: Konto</li></ul>**Zweite Beziehung**<ul><li>`accountKey.sourceKey` in der Basisklasse</li><li>Typ: Viele-zu-eins</li><li>Referenzschema: B2B-Konto</li><li>Namespace: B2B-Konto</li><li>Ziel-Eigenschaft: `accountKey.sourceKey`</li><li>Beziehungsname aus aktuellem Schema: Konto</li><li>Beziehungsname aus Referenzschema: Personen</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
