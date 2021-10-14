@@ -12,7 +12,7 @@ ht-degree: 100%
 
 ---
 
-# [!DNL Identity Service]Übersicht
+# [!DNL Identity Service] – Übersicht
 
 Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Verständnis Ihres Kunden erforderlich. Dies wird erschwert, wenn Ihre Kundendaten über unterschiedliche Systeme hinweg fragmentiert sind, so dass jeder einzelne Kunde mehrere „Identitäten“ zu haben scheint.
 

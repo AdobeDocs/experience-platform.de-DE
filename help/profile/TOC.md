@@ -6,14 +6,14 @@ feature: Profiles
 source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
 # [!DNL Real-time Customer Profile] {#profile}
 
-* [[!DNL Profile]Übersicht](home.md)
+* [[!DNL Profile] – Übersicht](home.md)
 * [Profilüberblick (Video)](video/profile-overview.md)
 * [[!DNL Profile] und Segmentierungsleitplanken](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
@@ -44,7 +44,7 @@ ht-degree: 96%
    * [Übersicht zum Vereinigungsschema (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
    * [Hinzufügen von Daten zum Echtzeit-Kundenprofil](tutorials/add-profile-data.md)
-   * [Datensatz für Profil konfigurieren](tutorials/dataset-configuration.md)
+   * [Konfigurieren eines Datensatzes für Profil](tutorials/dataset-configuration.md)
    * [Erstellen eines Berichts zur Datensatzüberschneidung](tutorials/dataset-overlap-report.md)
    * [Weitere Tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de)
 * [Verarbeitung von Datenschutzanfragen](privacy.md)

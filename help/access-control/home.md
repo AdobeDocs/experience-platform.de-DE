@@ -14,8 +14,7 @@ ht-degree: 100%
 
 # Zugangssteuerung – Übersicht
 
-Die Zugangssteuerung für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) geboten. 
-Diese Funktion nutzt Produktprofile in [!DNL Admin Console], um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+Die Zugangssteuerung für [!DNL Experience Platform] wird über [Adobe Admin Console](https://adminconsole.adobe.com) geboten. Diese Funktion nutzt Produktprofile in [!DNL Admin Console], um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 
 ## Zugangssteuerung zu Hierarchie und Workflow
 
@@ -121,4 +120,4 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 
 ## Nächste Schritte
 
-Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen. 
+Durch das Lesen dieses Handbuchs haben Sie sich mit den Hauptgrundsätzen der Zugangssteuerung in [!DNL Experience Platform] vertraut gemacht. Nun können Sie im [Benutzerhandbuch für die Zugangssteuerung](./ui/overview.md) ausführliche Schritte nachlesen, wie Sie die [!DNL Admin Console] zur Erstellung von Produktprofilen und zur Erteilung von Berechtigungen für [!DNL Platform] nutzen.

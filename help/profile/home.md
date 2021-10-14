@@ -7,11 +7,11 @@ exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 2eac45cd4b053753f954bbaae999fc321c75bd9b
 workflow-type: tm+mt
 source-wordcount: '1884'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
-# [!DNL Real-time Customer Profile]Übersicht
+# [!DNL Real-time Customer Profile] – Übersicht
 
 Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Das [!DNL Real-time Customer Profile] ermöglicht Ihnen eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus Online- und Offline-Kanälen ebenso wie aus CRMs und Drittanbieter-Datenquellen sowie anderen Kanälen miteinander kombiniert. Mit dem [!DNL Profile] können Sie Ihre unterschiedlichen Kundendaten in einer zentralen Ansicht zusammenführen, die eine aussagekräftige, Darstellung jeder Kundeninteraktion mit Zeitstempel bietet. Diese Übersicht hilft Ihnen, die Rolle und Verwendung des [!DNL Real-time Customer Profile] in [!DNL Experience Platform] zu verstehen.
 
@@ -43,9 +43,9 @@ Die Benutzeroberfläche von Experience Platform bietet ein Dashboard, mit dem Si
 
 Jedes einzelne Kundenprofil besteht aus mehreren Profilfragmenten, die zu einer einzigen Ansicht dieses Kunden zusammengefügt wurden. Wenn ein Kunde beispielsweise über mehrere Kanäle mit Ihrer Marke interagiert, verfügt Ihr Unternehmen über mehrere Profilfragmente, die sich auf diesen einzelnen Kunden beziehen und in mehreren Datensätzen enthalten sind. Wenn diese Fragmente in Platform aufgenommen werden, werden sie zusammengeführt, sodass ein zentrales Profil für diesen Kunden entsteht.
 
-Mit anderen Worten: Profilfragmente stellen eine eindeutige primäre Identität und die entsprechenden [record](#record-data)- oder [event](#time-series-events)-Daten für diese ID in einem bestimmten Datensatz dar.
+Mit anderen Worten: Profilfragmente stellen eine eindeutige primäre Identität und die entsprechenden [Datensätze](#record-data) oder [Ereignisdaten](#time-series-events) für diese ID in einem bestimmten Datensatz dar.
 
-Wenn die Daten aus mehreren Datensätzen in Konflikt stehen (z. B. listet ein Fragment den Kunden als &quot;einzeln&quot;auf, während der andere den Kunden als &quot;verheiratet&quot;auflistet), bestimmt die [Zusammenführungsrichtlinie](#merge-policies), welche Informationen priorisiert und in das Profil für den Kontakt aufgenommen werden sollen. Daher ist die Gesamtanzahl der Profilfragmente in Platform wahrscheinlich immer höher als die Gesamtanzahl der zusammengeführten Profile, da jedes Profil in der Regel aus mehreren Fragmenten aus mehreren Datensätzen besteht.
+Wenn die Daten aus mehreren Datensätzen in Konflikt stehen (z. B. listet ein Fragment den Kunden als „ledig“ auf, während ein anderes den Kunden als „verheiratet“ auflistet), bestimmt die [Zusammenführungsrichtlinie](#merge-policies), welche Informationen priorisiert und in das Profil für die Einzelperson aufgenommen werden sollen. Da jedes Profil im Allgemeinen aus mehreren Fragmenten aus mehreren Datensätzen besteht, ist die Gesamtanzahl der Fragmente innerhalb von Platform wahrscheinlich höher als die Gesamtanzahl der zusammengeführten Profile.
 
 ### Daten aufzeichnen {#record-data}
 
@@ -105,9 +105,9 @@ Um koordinierte, konsistente und personalisierte Erlebnisse für Ihre Kunden üb
 
 Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adobe Experience Platform. Zusätzlich zu den in verfügbaren Nutzungsstatistiken und Leistungsindikatoren von [!DNL Experience Platform] für verschiedene [!DNL Platform]-Funktionalitäten können Sie verschiedene auf das Profil bezogene Metriken ermitteln, die Ihnen Aufschluss über die Rate eingehender Anfragen, erfolgreicher Datenaufnahmen, Größen der aufgenommenen Datensätze und mehr geben. Um mehr zu erfahren, lesen Sie zunächst die [Übersicht über die Observability Insights-API](../observability/api/overview.md). Eine vollständige Liste der Echtzeit-Kundenprofilmetriken finden Sie in der Dokumentation zu den [verfügbaren Metriken](../observability/api/metrics.md#available-metrics).
 
-## Profilspeicherdaten aktualisieren
+## Aktualisieren von Profilspeicherdaten
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Möglicherweise müssen Sie Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch- oder Streaming-Erfassung erfolgen. Dazu ist ein Profil-aktivierter Datensatz erforderlich, der mit einem aktualisierten -Tag konfiguriert ist. Weitere Informationen zum Konfigurieren eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zum Aktivieren eines Datensatzes für Profil und zum Aktualisieren](../catalog/datasets/enable-upsert.md).[
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch- oder Streaming-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../catalog/datasets/enable-upsert.md).
 
 ## [!DNL Data governance] und [!DNL Privacy]
 
@@ -127,4 +127,4 @@ Die Umsetzung von [!DNL Data governance] erfolgt an mehreren Stellen. So wird et
 
 ## Nächste Schritte und zusätzliche Ressourcen
 
-Um mehr über die Arbeit mit Echtzeit-Kundenprofildaten mithilfe der Experience Platform-Benutzeroberfläche oder der Profil-API zu erfahren, lesen Sie zunächst das [Profil-UI-Handbuch](ui/user-guide.md) bzw. das [API-Entwicklerhandbuch](api/overview.md).
+Um mehr über die Verwendung von Echtzeit-Kundenprofildaten mithilfe der Benutzeroberfläche von Experience Platform oder der Profil-API zu erfahren, lesen Sie zunächst das [Handbuch zur Profil-Benutzeroberfläche](ui/user-guide.md) beziehungsweise das [API-Entwicklerhandbuch](api/overview.md).

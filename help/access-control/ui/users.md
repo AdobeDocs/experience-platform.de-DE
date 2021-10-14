@@ -8,13 +8,13 @@ exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
 source-git-commit: 58655e5ff2c4d3a3b36c5067f2e99c021410c697
 workflow-type: tm+mt
 source-wordcount: '191'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
 # Benutzer für ein Produktprofil verwalten
 
-Um Benutzer einem Produktprofil zuzuweisen oder daraus zu entfernen, öffnen Sie die Detailseite des Profils und navigieren Sie zur Registerkarte **[!UICONTROL Benutzer]**. Wählen Sie hier **[!UICONTROL Benutzer hinzufügen]** aus.
+Um Benutzer einem Produktprofil zuzuweisen oder daraus zu entfernen, öffnen Sie die Detailseite des Profils und navigieren Sie zur Registerkarte **[!UICONTROL Benutzer]**. Wählen Sie hier **[!UICONTROL Benutzer hinzufügen]**.
 
 ![add-user](../images/add-user.png)
 
@@ -24,10 +24,10 @@ Das Dialogfeld **[!UICONTROL Benutzer hinzufügen]** wird angezeigt. Mithilfe de
 >
 >Wenn ein Benutzer nicht im Fenster zur automatischen Vervollständigung angezeigt wird, geben Sie seine vollständige E-Mail-Adresse in der Suchleiste ein. Es wird eine Einladung mit Anweisungen zur Einrichtung eines Adobe ID-Kontos an die E-Mail-Adresse gesendet.
 
-Nachdem Sie einen Benutzer ausgewählt haben, wählen Sie **[!UICONTROL Speichern]** aus, um ihn zum Produktprofil hinzuzufügen.
+Nachdem Sie einen Benutzer ausgewählt haben, klicken Sie auf **[!UICONTROL Speichern]**, um ihn zum Produktprofil hinzuzufügen.
 
 ![save-user](../images/save-user.png)
 
 ## Nächste Schritte
 
-Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Platform-Funktionen über [!DNL Admin Console] steuern können, finden Sie im Anhang unter [Übersicht über die Zugriffskontrolle](../home.md) weitere Informationen zu den einzelnen Berechtigungen und den Platform-Funktionen, auf die sie Zugriff gewähren.
+Nachdem Sie nun gelernt haben, wie Sie den Zugriff auf Funktionen über die [!DNL Admin Console] steuern können, finden Sie im Anhang zur [Übersicht über die Zugriffssteuerung](../home.md) weitere Informationen zu den einzelnen Berechtigungen und die Platform-Funktionen, auf die sie Zugriff gewähren.

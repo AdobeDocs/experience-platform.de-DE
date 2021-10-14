@@ -5,7 +5,7 @@ exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
 workflow-type: tm+mt
 source-wordcount: '5257'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ Das Ereignis wird ausgelöst, wenn eine Taste gedrückt wird. Weitere Informatio
 
 Das Ereignis wird ausgelöst, wenn das Medium beendet wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
-#### Mediengeladene Daten
+#### Media-Loaded Data
 
 Das Ereignis wird ausgeslöst, wenn Daten durch Medien geladen werden. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
@@ -75,12 +75,12 @@ Das Ereignis wird ausgelöst, wenn das Medium wiedergegeben wird. Weitere Inform
 
 Das Ereignis wird ausgelöst, wenn das Medium angehalten wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
-#### Dauer der Medienwiedergabe
+#### Media-Time Played
 
 Das Ereignis wird ausgelöst, wenn das Medium für eine bestimmte Zeitdauer wiedergegeben wird. Sie müssen die Dauer festlegen, für die das Medium wiedergegeben werden muss, damit das Ereignis ausgelöst wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
 
-#### Medienlautstärke geändert
+#### Media-Volume Changed
 
 Das Ereignis wird ausgelöst, wenn die Lautstärke erhöht oder verringert wird. Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschnitt [Optionen](#options).
 
@@ -146,7 +146,7 @@ Weitere Informationen zu anpassbaren Ereigniseinstellungen finden Sie im Abschni
 
 Das Ereignis wird ausgelöst, wenn ein pushState- oder ein hashchange-Ereignis auftritt. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Besuchszeit pro Seite
+#### Time-Spent on Page
 
 Das Ereignis wird ausgelöst, wenn der Benutzer für eine bestimmte Anzahl Sekunden auf der Seite bleibt. Geben Sie die Anzahl Sekunden an, die vergehen müssen, bevor das Ereignis ausgelöst wird.
 
@@ -164,7 +164,7 @@ Das Ereignis wird ausgelöst, sobald die Tag-Bibliothek geladen wird. Für diese
 
 Das Ereignis wird ausgelöst, wenn `_satellite.pageBottom();` aufgerufen wurde. Beim asynchronen Laden der Tag-Bibliothek sollte dieser Ereignistyp nicht verwendet werden. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
-#### Fenster geladen
+#### Window Loaded
 
 Das Ereignis wird ausgelöst, wenn onLoad vom Browser aufgerufen wird und die Seite fertig geladen wurde. Für diesen Ereignistyp sind keine Einstellungen vorhanden.
 
@@ -177,11 +177,11 @@ Für die einzelnen Formularereignistypen werden die folgenden Einstellungen verw
 * Wenn Sie **[!UICONTROL Bestimmte Elemente]** auswählen, werden die Optionen zum Auswählen der Elemente und Eigenschaftswerte angezeigt.
 * Wenn Sie **[!UICONTROL Beliebiges Element]** auswählen, sind keine weiteren Optionen erforderlich, um die Elemente einzugrenzen.
 
-#### Mit der CSS-Auswahl übereinstimmende Elemente
+#### Elements matching the CSS selector
 
 Geben Sie die CSS-Auswahl zur Identifizierung der Elemente ein, anhand deren das Ereignis ausgelöst wird.
 
-#### Mit bestimmten Eigenschaftswerten
+#### And having certain property values
 
 Wenn Sie diese Option auswählen, werden folgende Parameter verfügbar:
 
@@ -197,7 +197,7 @@ Wenn Sie diese Option auswählen, werden folgende Parameter verfügbar:
 
    Fügen Sie ein weiteres `property=value`-Paar hinzu.
 
-#### Erweiterte Optionen (Bubbling)
+#### Advanced options (Bubbling)
 
 * Führen Sie diese Regel auch dann aus, wenn das Ereignis aus einem nachkommenden Element stammt
 * Lassen Sie die Ausführung dieser Regel auch dann zu, wenn durch das Ereignis bereits eine Regel ausgelöst wurde, die auf ein nachkommendes Element abzielt
@@ -436,7 +436,7 @@ Wählen Sie die Fenstergröße aus, die Besucher auf ihren Geräten verwenden m�
 
 #### Domain
 
-Geben Sie die Domains des Besuchers an.
+Geben Sie die Domain des Besuchers an.
 
 #### Hash
 
@@ -452,7 +452,7 @@ Geben Sie ein oder mehrere Hash-Muster an, die in der URL vorhanden sein müssen
 
 #### Path  And Query String
 
-Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen. Dazu gehören der Pfad und die Abfragezeichenfolge.
+Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen.  Dazu gehören der Pfad und die Abfragezeichenfolge.
 
 >[!NOTE]
 >
@@ -464,7 +464,7 @@ Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen. Da
 
 #### Path Without Query String
 
-Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen. Dazu gehört der Pfad, jedoch nicht die Abfragezeichenfolge.
+Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen.  Dazu gehört der Pfad, jedoch nicht die Abfragezeichenfolge.
 
 >[!NOTE]
 >
@@ -574,7 +574,7 @@ Der im Tag-Editor von Launch verwendete Validator dient der Identifizierung von 
 
 #### Aktionssequenzierung
 
-Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Aktion eine asynchrone Aufgabe ausführt. Dies funktioniert bei benutzerdefiniertem JavaScript- und HTML-Code anders.
+Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinstellungen aktiviert ist, können Sie festlegen, dass die folgenden Regelkomponenten warten, während Ihre Aktion eine asynchrone Aufgabe ausführt.  Dies funktioniert bei benutzerdefiniertem JavaScript- und HTML-Code anders.
 
 *JavaScript*
 
@@ -624,7 +624,7 @@ In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Dat
 
 ### Cookie
 
-Jedes verfügbare Domain-Cookie kann im  Cookie-Namensfeld referenziert werden.
+Jedes verfügbare Domain-Cookie kann im Cookie-Namensfeld referenziert werden.
 
 #### Beispiel:
 
@@ -711,9 +711,9 @@ Geben Sie in dem bereitgestellten Feld den Wert an, den Sie für ein lokales Spe
 
 ### Zusammengeführte Objekte
 
-Wählen Sie mehrere Datenelemente aus, die jeweils ein Objekt bereitstellen. Diese Objekte werden tief (rekursiv) zusammengeführt, um ein neues Objekt zu erstellen. Die Quellobjekte werden nicht geändert. Wenn sich eine Eigenschaft an derselben Stelle in mehreren Quellobjekten befindet, wird der Wert des letzteren Objekts verwendet. Wenn der Wert der Quelleigenschaft `undefined` lautet, wird ein Wert aus einem vorherigen Quellobjekt nicht überschrieben. Wenn sich Arrays an derselben Stelle in mehreren Quellobjekten befinden, werden die Arrays verkettet.
+Wählen Sie mehrere Datenelemente aus, die jeweils ein Objekt bereitstellen sollen. Diese Objekte werden rekursiv zusammengeführt, um ein neues Objekt zu erzeugen. Die Quellobjekte werden nicht verändert. Wenn eine Eigenschaft an derselben Stelle in mehreren Quellobjekten gefunden wird, wird der Wert des letzten Objekts verwendet. Wenn eine Quelleigenschaft den Wert `undefined` hat, wird ein Wert aus einem früheren Quellobjekt nicht überschrieben. Wenn Arrays an derselben Stelle in mehreren Quellobjekten gefunden werden, werden die Arrays verkettet.
 
-Angenommen, Sie wählen ein Datenelement aus, das das folgende Objekt bereitstellt:
+Nehmen wir an, ein ausgewähltes Datenelement stellt das folgende Objekt bereit:
 
 ```
 {
@@ -728,7 +728,7 @@ Angenommen, Sie wählen ein Datenelement aus, das das folgende Objekt bereitstel
 }
 ```
 
-Angenommen, Sie wählen auch ein anderes Datenelement aus, das das folgende Objekt bereitstellt:
+Angenommen, ein weiteres ausgewähltes Datenelement stellt das folgende Objekt bereit:
 
 ```
 {
@@ -745,7 +745,7 @@ Angenommen, Sie wählen auch ein anderes Datenelement aus, das das folgende Obje
 }
 ```
 
-Das Ergebnis des Datenelements Zusammengeführte Objekte wäre das folgende Objekt:
+Das Ergebnis des Datenelements „Zusammengeführte Objekte“ wäre das folgende Objekt:
 
 ```
 {
@@ -833,33 +833,33 @@ Einige häufige Anwendungsfälle lauten wie folgt:
 
 ### Bedingter Wert
 
-Ein Wrapper für die Bedingung [Wertvergleich](#value-comparison-value-comparison) . Basierend auf dem Ergebnis des Vergleichs gibt einen der beiden verfügbaren Werte im Formular zurück. Kann damit &quot;If.. Dann... Sonst...&quot; Szenarien ohne zusätzliche Regeln.
+Ein Wrapper für die Bedingung [Wertvergleich](#value-comparison-value-comparison). Auf der Grundlage des Vergleichsergebnisses wird einer der beiden verfügbaren Werte in das Formular eingegeben. Kann dabei mit „If... Then... Else...“-Szenarien behandeln, ohne dass zusätzliche Regeln erforderlich sind.
 
 ### Laufzeitumgebung
 
-Ermöglicht die Auswahl einer der folgenden Variablen:
+Hier können Sie eine der folgenden Variablen auswählen:
 
-* Umgebungsphase - Gibt `_satellite.environment.stage` zurück, um zwischen Entwicklungs-/Staging-/Produktionsumgebungen zu unterscheiden.
-* Bibliotheks-Build-Datum - Gibt `turbine.buildInfo.buildDate` zurück, das denselben Wert wie `_satellite.buildInfo.buildDate` enthält.
-* Eigenschaftsname - Gibt `_satellite.property.name` zurück, um den Namen der Launch-Eigenschaft abzurufen.
-* Eigenschaft-ID - Gibt `_satellite.property.id` zurück, um die ID der Launch-Eigenschaft abzurufen
-* Regelname - Gibt `event.$rule.name` zurück, der den Namen der ausgeführten Regel enthält.
-* Regel-ID - Gibt `event.$rule.id` zurück, die die Kennung der ausgeführten Regel enthält.
-* Ereignistyp - Gibt `event.$type` zurück, der den Ereignistyp enthält, der die Regel ausgelöst hat.
-* Payload der Ereignisdetails - Gibt `event.detail` zurück, die die Payload einer benutzerspezifischen Ereignis- oder Direktaufrufregel enthält.
-* Kennung des direkten Aufrufs - Gibt `event.identifier` zurück, die die Kennung einer Direktaufrufregel enthält.
+* Umgebungsstufe - Gibt `_satellite.environment.stage` zurück, um zwischen Entwicklungs-/Staging-/Produktionsumgebung zu unterscheiden.
+* Bibliothekerstellungsdatum - Gibt `turbine.buildInfo.buildDate` zurück, das denselben Wert wie `_satellite.buildInfo.buildDate` enthält.
+* Eigenschaftsname - Gibt `_satellite.property.name` zurück, um den Namen der Launch-Eigenschaft zu erhalten.
+* Eigenschafts-ID - Gibt `_satellite.property.id` zurück, um die ID der Launch-Eigenschaft zu erhalten.
+* Regelname - Gibt `event.$rule.name` zurück, das den Namen der ausgeführten Regel enthält.
+* Regel-ID - Gibt `event.$rule.id` zurück, das die ID der ausgeführten Regel enthält.
+* Ereignistyp - Gibt `event.$type` mit dem Typ des Ereignisses zurück, das die Regel ausgelöst hat.
+* Ereignisdetail-Payload - Gibt `event.detail` zurück, das die Payload eines benutzerdefinierten Ereignisses oder einer Direktaufruf-Regel enthält.
+* Direktaufruf-Identifikator - Gibt `event.identifier` mit der Kennung einer Direktaufruf-Regel zurück.
 
-### Geräteattribute
+### Geräte-Attribute
 
-Gibt eines der folgenden Besuchergeräteattribute zurück:
+Gibt eines der folgenden Attribute für das Besuchergerät zurück:
 
-* Browserfenstergröße
+* Größe des Browser-Fensters
 * Bildschirmgröße
 
 ### JavaScript-Tools
 
-Dies ist ein Wrapper für gängige JavaScript-Vorgänge. Sie erhält ein Datenelement als Eingabe. Es wird das Ergebnis einer der folgenden Umwandlungen des Datenelementwerts zurückgegeben:
+Es ist ein Wrapper für gängige JavaScript-Operationen. Erhält ein Datenelement als Eingabe. Gibt das Ergebnis einer der folgenden Transformationen des Datenelementwerts zurück:
 
-* Grundlegende String-Manipulation (Ersetzen, Teilzeichenfolge, Regex-Übereinstimmung, erster und letzter Index, Aufspaltung, Ausschnitt)
-* Grundlegende Array-Vorgänge (Slice, join, pop, shift)
-* Grundlegende universelle Vorgänge (Slice, length)
+* Grundlegende String-Manipulation (replace, substring, regex match, first and last index, split, slice)
+* Grundlegende Array-Operationen (slice, join, pop, shift)
+* Universelle Grundoperationen (slice, lenth)

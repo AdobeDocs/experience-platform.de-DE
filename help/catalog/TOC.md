@@ -6,14 +6,14 @@ feature: Catalog
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 
 # Katalog und Datensätze {#catalog}
 
-* [Übersicht über den Katalog-Service](home.md)
+* [Katalog-Service – Übersicht](home.md)
 * Catalog Service-API {#api}
    * [Erste Schritte](api/getting-started.md)
    * [Catalog-Daten mithilfe von Abfrageparametern filtern](api/filter-data.md)
@@ -31,8 +31,8 @@ ht-degree: 87%
    * [Datensätze – Übersicht](datasets/overview.md)
    * [Benutzerhandbuch zu Datensätzen](datasets/user-guide.md)
    * [Erstellen und Ausfüllen eines Datensatzes mithilfe von APIs](datasets/create.md)
-   * [Datensatz für Profil und Identität aktivieren](datasets/enable-for-profile.md)
-   * [Datensatz für Profilaktualisierungen aktivieren (aktualisiert)](datasets/enable-upsert.md)
+   * [Aktivieren eines Datensatzes für Profil und Identität](datasets/enable-for-profile.md)
+   * [Aktivieren eines Datensatzes für Profilaktualisierungen (Upsert)](datasets/enable-upsert.md)
 * [Verarbeitung von Datenschutzanfragen im Data Lake](privacy.md)
 * [Datenschutz in Experience Platform](data-protection.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/catalog/)

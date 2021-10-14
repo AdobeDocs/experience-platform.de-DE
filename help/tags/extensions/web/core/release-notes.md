@@ -5,7 +5,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 84%
+ht-degree: 98%
 
 ---
 
@@ -26,23 +26,23 @@ v3.2.2
 
 v3.2.1
 
-* Fehlerkorrektur - die Initialisierung der Datenelementansicht mit bedingtem Wert funktioniert jetzt, wenn die Feldwerte 0 betragen.
+* Es wurde ein Fehler behoben, bei dem die Initialisierung der Ansicht für Datenelemente mit bedingtem Wert nicht richtig funktionierte, wenn die Feldwerte 0 waren.
 
 ## 23. September 2021
 
 v3.2.0
 
-Die folgenden Änderungen wurden im Datenelement &quot;Bedingter Wert&quot;eingeführt:
+Die folgenden Änderungen wurden im Datenelement „Bedingter Wert“ eingeführt:
 
-* Fügen Sie eine Checkbox für die Bedingungs- und Fallback-Werte hinzu, mit der der Benutzer auswählen kann, ob nicht als zurückgegebener Wert definiert werden soll.
-* Zahlenwerte werden als Zahlen im settings-Objekt bereitgestellt.
-* Bedingter Wert ist nicht mehr erforderlich, damit er sich wie der Fallback-Wert verhalten kann.
+* Fügen Sie ein Kontrollkästchen für die bedingten und Fallback-Werte hinzu, damit der Benutzer auswählen kann, ob der zurückgegebene Wert „Undefiniert“ lauten soll.
+* Zahlenwerte werden im Einstellungsobjekt als Zahlen dargestellt.
+* Der bedingte Wert ist nicht mehr erforderlich, sodass er sich genauso verhalten kann wie der Fallback-Wert.
 
 ## 17. September 2021
 
 v3.1.1
 
-* Korrektur eines JS-Fehlers, der das Laden der Bedingungsansicht für den Datumsbereich verhinderte.
+* Behebung eines JS-Fehlers, der verhinderte, dass die Ansicht für die Bedingung „Datumsbereich“ geladen werden konnte.
 
 ## 16. September 2021
 
@@ -50,11 +50,11 @@ v3.1.0
 
 Neue Datenelemente wurden hinzugefügt:
 
-* Zusammengeführtes Objekt - Wählen Sie mehrere Datenelemente aus, die jeweils ein Objekt bereitstellen. Diese Objekte werden tief (rekursiv) zusammengeführt, um ein neues Objekt zu erstellen.
-* Bedingter Wert - Gibt einen von zwei Werten (ConditionalValue oder fallbackValue) basierend auf dem Ergebnis des Vergleichs zurück.
-* Laufzeitumgebung - Gibt eine der folgenden Launch-Umgebungsvariablen zurück: Umgebungs-Staging, Bibliotheks-Build-Datum, Eigenschaftsname, Eigenschafts-ID, Regelname, Regel-ID, Ereignistyp, Payload der Ereignisdetails, ID des direkten Aufrufs.
-* JavaScript-Tools - Wrapper für gängige JavaScript-Vorgänge: grundlegende String-Manipulation (Ersetzen, Teilzeichenfolge, Regex-Übereinstimmung, erster und letzter Index, Aufspaltung, Segment), grundlegende Array-Vorgänge (Slice, Join, Pop, Shift) und grundlegende universelle Vorgänge (Slice, Länge).
-* Geräteattribute - Gibt Geräteattribute wie Fenstergröße oder Bildschirmgröße zurück.
+* Zusammengeführtes Objekt - Wählen Sie mehrere Datenelemente aus, die jeweils ein Objekt bereitstellen sollen. Diese Objekte werden rekursiv zusammengeführt, um ein neues Objekt zu erzeugen.
+* Bedingter Wert - Gibt einen von zwei Werten (conditionalValue oder fallbackValue) zurück, der auf dem Ergebnis des Vergleichs basiert.
+* Laufzeitumgebung - Rückgabe einer der folgenden Launch-Umgebungsvariablen: Umgebungsstufe, Bibliothekserstellungsdatum, Eigenschaftsname, Eigenschafts-ID, Regelname, Regel-ID, Ereignistyp, Ereignisdetail-Payload, Direktaufruf-Identifikator.
+* JavaScript-Tools - Wrapper für gängige JavaScript-Operationen: Grundlegende String-Manipulation (replace, substring, regex match, first and last index, split, slice), grundlegende Array-Operationen (slice, join, pop, shift) und grundlegende universelle Operationen (slice, length).
+* Geräteattribute - Rückgabe von Geräteattributen wie Fenstergröße oder Bildschirmgröße.
 
 ## 11. August 2021
 
@@ -97,7 +97,7 @@ v2.0.4
 
 v1.9.0
 
-* **Neue Aktion „Trigger Direct Call“** (Direktaufruf auslösen): Die Core-Erweiterung enthält jetzt einen neuen Aktionstyp namens `Trigger Direct Call`. Dieser kann verwendet werden, um eine Direktaufrufregel über eine Aktion aus einer anderen Regel auszulösen. Er wird direkt der Methode `_satellite.track()` zugeordnet. Vielen Dank an [Jan Exner](https://twitter.com/jexner) für diesen Beitrag.
+* **Neue Aktion „Trigger Direct Call“** (Direktaufruf auslösen): Die Core-Erweiterung enthält jetzt einen neuen Aktionstyp namens `Trigger Direct Call`.  Dieser kann verwendet werden, um eine Direktaufrufregel über eine Aktion aus einer anderen Regel auszulösen. Er wird direkt der Methode `_satellite.track()` zugeordnet. Vielen Dank an [Jan Exner](https://twitter.com/jexner) für diesen Beitrag.
 
 ## 8. Dezember 2020
 
@@ -128,7 +128,7 @@ v1.8.1
 
 v1.8.0
 
-* **Promises in benutzerspezifischem Code** – Bedingungen für benutzerspezifischen Code und JavaScript-Aktionen, die nicht global ausgeführt werden, können jetzt Promises zurückgeben. Sie können sie verwenden, damit nachfolgende Bedingungen und Aktionen auf den Abschluss eines asynchronen Prozesses in Ihrem benutzerspezifischen Code warten, bevor Sie mit dem nächsten Element fortfahren.
+* **Promises in benutzerspezifischem Code** – Bedingungen für benutzerspezifischen Code und JavaScript-Aktionen, die nicht global ausgeführt werden, können jetzt Promises zurückgeben.  Sie können sie verwenden, damit nachfolgende Bedingungen und Aktionen auf den Abschluss eines asynchronen Prozesses in Ihrem benutzerspezifischen Code warten, bevor Sie mit dem nächsten Element fortfahren.
 * **Callbacks in Aktionen mit benutzerdefiniertem HTML-Code** – Sie können dasselbe in Aktionen mit benutzerdefiniertem HTML-Code erreichen, indem Sie die Callbacks `onCustomCodeSuccess()` und `onCustomCodeFailure()` verwenden.
 
 Weitere Informationen finden Sie im [Referenzdokument zur Haupterweiterung](./overview.md) unter Bedingungen > Benutzerspezifischer Code und Aktionen > Benutzerspezifischer Code.
@@ -149,7 +149,7 @@ v1.7.0
 
 v1.6.2
 
-* **Neuer Datenelement-Typ „Konstante“** – Die Core-Erweiterung enthält jetzt das neue Datenelement `Constant`. Hiermit können Sie einen konstanten Wert speichern, der in verschiedenen Bedingungen, Aktionen oder benutzerdefiniertem Code referenziert wird. Vielen Dank an [Jan Exner](https://twitter.com/jexner) für diesen Beitrag.
+* **Neuer Datenelement-Typ „Konstante“** – Die Core-Erweiterung enthält jetzt das neue Datenelement `Constant`.  Hiermit können Sie einen konstanten Wert speichern, der in verschiedenen Bedingungen, Aktionen oder benutzerdefiniertem Code referenziert wird. Vielen Dank an [Jan Exner](https://twitter.com/jexner) für diesen Beitrag.
 
 ## 11. September 2019
 

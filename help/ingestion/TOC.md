@@ -7,7 +7,7 @@ feature: Data Ingestion
 source-git-commit: 19837e820ab3abdaa0bc8569ad78ce51dec1d21e
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 92%
    - [Kafka-Connector](streaming-ingestion/kafka.md)
    - [Fehlerbehebung](streaming-ingestion/troubleshooting.md)
 - Batch-Erfassung {#batch}
-   - [Erste Schritte mit Batch-Aufnahme-APIs](batch-ingestion/getting-started.md)
+   - [Erste Schritte mit APIs zur Batch-Aufnahme](batch-ingestion/getting-started.md)
    - [API-Übersicht](batch-ingestion/overview.md)
    - [API-Entwicklerhandbuch](batch-ingestion/api-overview.md)
    - [Partielle Batch-Erfassung](batch-ingestion/partial.md)

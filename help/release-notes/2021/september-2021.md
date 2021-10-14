@@ -5,7 +5,7 @@ exl-id: 96375409-803f-45af-805e-900207d972e4
 source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
 workflow-type: tm+mt
 source-wordcount: '381'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
@@ -21,13 +21,13 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Datenaufnahme {#ingestion}
 
-Die Datenerfassung in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen Platform Daten aus verschiedenen Quellen erfasst, sowie die Art und Weise, wie diese Daten im Data Lake zur Verwendung durch nachgelagerte Platform-Dienste persistiert werden.
+Datenerfassung in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen Platform Daten aus den Quellen aufnimmt, sowie die Art und Weise, wie die Daten im Data Lake zur Verwendung durch nachgelagerte Platform-Services persistiert werden.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |------- | -----------|
-| Profildatensätze mithilfe der Batch-Erfassung aktualisieren oder patchen | Das Echtzeit-Kundenprofil ermöglicht nun über die Batch-Erfassung Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md). |
+| Aktualisieren oder Patchen von Profildatensätzen mithilfe der Batch-Aufnahme | Das Echtzeit-Kundenprofil ermöglicht jetzt über die Batch-Aufnahme Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md). |
 
 Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 
@@ -39,9 +39,9 @@ Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Dat
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für Streaming-Datenflüsse | Sie können jetzt Datenvorbereitungsfunktionen beim Erstellen eines Streaming-Datenflusses für [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] und [!DNL Google PubSub] verwenden. Weitere Informationen finden Sie im Tutorial zum Erstellen eines Streaming-Datenflusses für Cloud-Speicherquellen](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) .[ |
+| Unterstützung für Streaming-Datenflüsse | Sie können jetzt Datenvorbereitungsfunktionen beim Erstellen eines Streaming-Datenflusses für [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] und [!DNL Google PubSub] verwenden. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Streaming-Datenflusses für Cloud-Speicherquellen](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md). |
 
-Weitere Informationen zu [!DNL Data Prep] finden Sie unter [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
+Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
 ## Quellen {#sources}
 
@@ -51,8 +51,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Data Landing Zone] | Sie können jetzt eine [!DNL Data Landing Zone] Quellverbindung mit der [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) erstellen. [!DNL Data Landing Zone] ist eine von Platform bereitgestellte  [!DNL Azure Blob] Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeicheranlage zugreifen können, um Dateien in und aus Platform aufzunehmen und zu extrahieren. Weitere Informationen finden Sie in der [[!DNL Data Landing Zone] Übersicht über ](../../sources/connectors/cloud-storage/data-landing-zone.md). |
-| [!DNL Snowflake] | Sie können jetzt eine [!DNL Snowflake] Quellverbindung mit der [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md) erstellen, um Daten aus Ihrer [!DNL Snowflake]-Datenbank in Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Snowflake] Übersicht über ](../../sources/connectors/databases/snowflake.md). |
-| [!DNL SFTP] Quellverbesserungen | Sie können beim Erstellen einer [!DNL SFTP]-Quellverbindung manuell eine benutzerdefinierte Portnummer festlegen. Weitere Informationen finden Sie in der [[!DNL SFTP] Übersicht über ](../../sources/connectors/cloud-storage/sftp.md). |
+| [!DNL Data Landing Zone] | Sie können jetzt eine [!DNL Data Landing Zone]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) erstellen. [!DNL Data Landing Zone] ist eine von Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeicheranlage zugreifen können, um Dateien in und aus Platform aufzunehmen und zu extrahieren. Weitere Informationen finden Sie in der [[!DNL Data Landing Zone] Übersicht über](../../sources/connectors/cloud-storage/data-landing-zone.md). |
+| [!DNL Snowflake] | Sie können jetzt eine [!DNL Snowflake]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md) erstellen, um Daten aus Ihrer [!DNL Snowflake]-Datenbank in Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Snowflake] Übersicht über](../../sources/connectors/databases/snowflake.md). |
+| [!DNL SFTP]-Quellverbesserungen | Sie können beim Erstellen einer [!DNL SFTP]-Quellverbindung manuell eine benutzerdefinierte Port-Nummer festlegen. Weitere Informationen finden Sie in der [[!DNL SFTP] Übersicht über](../../sources/connectors/cloud-storage/sftp.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).

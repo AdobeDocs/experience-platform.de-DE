@@ -8,13 +8,13 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 099bfc0098ebf5a2325f344215c6b21f1c347473
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
 # Berechtigungen für ein Produktprofil verwalten
 
-Unmittelbar nach der [Erstellung eines neuen Produktprofils](#create-a-new-product-profile) werden Sie dazu aufgefordert, die Berechtigungen für das Profil zu konfigurieren. Wenn Sie Berechtigungen für ein vorhandenes Profil bearbeiten, wählen Sie das Profil auf der Registerkarte **[!UICONTROL Produktprofile]** aus, um die Detailseite des Profils zu öffnen, und klicken Sie dann auf **[!UICONTROL Berechtigungen]**.
+Unmittelbar nach der [Erstellung eines neuen Produktprofils](#create-a-new-product-profile) werden Sie dazu aufgefordert, die Berechtigungen für das Profil zu konfigurieren. Wenn Sie Berechtigungen für ein vorhandenes Profil bearbeiten wollen, wählen Sie auf der Registerkarte **[!UICONTROL Produktprofile]** das gewünschte Profil aus, um die Detailseite des Profils zu öffnen. Klicken Sie dann auf **[!UICONTROL Berechtigungen]**.
 
 ![Berechtigungen](../images/permissions.png)
 
@@ -26,11 +26,11 @@ Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechti
 
 Auf der Seite **[!UICONTROL Berechtigungen bearbeiten]** gibt es einen Arbeitsbereich zum Hinzufügen und Entfernen von Berechtigungen für das ausgewählte Produktprofil. Auf der linken Seite des Bildschirms wird eine Liste mit Berechtigungskategorien angezeigt. Durch Klicken auf eine Kategorie ändert sich, welche Berechtigungen jeweils unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt werden.
 
-Um beispielsweise Berechtigungen für die Profilverwaltung zu aktualisieren, wählen Sie **[!UICONTROL Profil-Management]** aus.
+Um zum Beispiel die Berechtigungen für das Profil-Management zu aktualisieren, wählen Sie **[!UICONTROL Profil-Management]**.
 
 ![profile-management](../images/profile-management.png)
 
-Um eine Berechtigung hinzuzufügen, wählen Sie das Pluszeichen **(+)** neben dem Namen der Berechtigung aus. Alternativ können Sie auf **[!UICONTROL Alle hinzufügen]** klicken, um alle Berechtigungen in der aktuellen Kategorie zum Profil hinzuzufügen. Unter **[!UICONTROL Eingeschlossene Berechtigungselemente]** werden hinzugefügte Berechtigungen angezeigt.
+Um eine Berechtigung hinzuzufügen, klicken Sie auf das Pluszeichen **(+)** neben dem Namen der Berechtigung. Alternativ können Sie auf **[!UICONTROL Alle hinzufügen]** klicken, um alle Berechtigungen in der aktuellen Kategorie zum Profil hinzuzufügen. Unter **[!UICONTROL Eingeschlossene Berechtigungselemente]** werden hinzugefügte Berechtigungen angezeigt.
 
 ![add-permission](../images/add-permission.png)
 
@@ -42,7 +42,7 @@ Um eine Berechtigung zu entfernen, klicken Sie auf das Symbol **X** neben dem Na
 
 Fahren Sie mit den verfügbaren Kategorien fort und fügen Sie gewünschte Berechtigungen hinzu. Klicken Sie abschließend auf **[!UICONTROL Speichern]**.
 
-![remove-Permission](../images/remove-permission.png)
+![remove-permisson](../images/remove-permission.png)
 
 Die Registerkarte **[!UICONTROL Berechtigungen]** für das Produktprofil wird erneut angezeigt und meldet, dass die ausgewählten Berechtigungen jetzt aktiviert sind.
 
