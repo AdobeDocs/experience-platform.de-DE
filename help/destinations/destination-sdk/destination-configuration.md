@@ -2,9 +2,9 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Zielkonfigurationsoptionen für Ziel-SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 76a596166edcdbf141b5ce5dc01557d2a0b4caf3
+source-git-commit: fd025932b9210d61e986b252e8d977ce4b83f6ff
 workflow-type: tm+mt
-source-wordcount: '1727'
+source-wordcount: '1757'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 6%
 
 ## Übersicht {#overview}
 
-Mit dieser Konfiguration können Sie wichtige Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
+Mit dieser Konfiguration können Sie wichtige Informationen wie Ihren Zielnamen, Ihre Kategorie, eine Beschreibung und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 
 Diese Konfiguration verbindet auch die anderen Konfigurationen, die erforderlich sind, damit Ihr Ziel funktioniert - Zielserver und Zielgruppen-Metadaten - mit dieser Konfiguration. Lesen Sie, wie Sie in einem [Abschnitt weiter unten](./destination-configuration.md#connecting-all-configurations) auf die beiden Konfigurationen verweisen können.
 
@@ -135,17 +135,17 @@ Unten finden Sie eine Beispielkonfiguration eines fiktiven Ziels, Moviestar, das
 
 ## Benutzerauthentifizierungskonfigurationen {#customer-authentication-configurations}
 
-Dieser Abschnitt generiert die Kontoseite in der Experience Platform-Benutzeroberfläche, auf der Benutzer die Experience Platform mit den Konten verbinden, die sie mit Ihrem Ziel haben. Je nachdem, welche Authentifizierungsoption Sie im Feld `authType` angeben, wird die Experience Platform für die Benutzer wie folgt generiert:
+In diesem Abschnitt der Zielkonfiguration wird die Seite [Neues Ziel](/help/destinations/ui/connect-destination.md) in der Experience Platform-Benutzeroberfläche konfigurieren generiert, auf der Benutzer die Experience Platform mit den Konten verbinden, die sie mit Ihrem Ziel haben. Je nachdem, welche Authentifizierungsoption Sie im Feld `authType` angeben, wird die Experience Platform für die Benutzer wie folgt generiert:
 
 **Bearer-Authentifizierung**
 
-Benutzer müssen das Trägertoken eingeben, das sie von Ihrem Ziel erhalten.
+Wenn Sie den Authentifizierungstyp des Inhabers konfigurieren, müssen Benutzer das Trägertoken eingeben, das sie von Ihrem Ziel erhalten.
 
 ![UI-Rendering mit Trägerauthentifizierung](./assets/bearer-authentication-ui.png)
 
 **OAuth 2-Authentifizierung**
 
-Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss an Ihr Ziel Trigger.
+Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authentifizierungsfluss an Ihr Ziel Trigger, wie im folgenden Beispiel für das Twitter-Ziel für benutzerdefinierte Zielgruppen dargestellt. Ausführliche Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie auf der dedizierten OAuth 2-Authentifizierungsseite ](./oauth2-authentication.md)Ziel-SDK .[
 
 ![UI-Rendering mit OAuth 2-Authentifizierung](./assets/oauth2-authentication-ui.png)
 
@@ -153,7 +153,7 @@ Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authent
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kunden auf Ihrem Server verwendet wird. Zulässige Werte finden Sie unten unter `authType` . |
-| `authType` | Zeichenfolge | Akzeptierte Werte sind `OAUTH2, BEARER`. <br><ul><li> Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, wählen Sie den Wert `OAUTH2` aus und fügen Sie die erforderlichen Felder für OAuth 2 hinzu, wie auf der Authentifizierungsseite des Destination SDK OAuth 2 dargestellt. Außerdem sollten Sie `authenticationRule=CUSTOMER_AUTHENTICATION` im Abschnitt [Zielversand](./destination-configuration.md) auswählen. </li><li>Wählen Sie für die Trägerauthentifizierung `BEARER` und dann `authenticationRule=CUSTOMER_AUTHENTICATION` im Abschnitt [Zielversand](./destination-configuration.md) aus.</li></ul> |
+| `authType` | Zeichenfolge | Akzeptierte Werte sind `OAUTH2, BEARER`. <br><ul><li> Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, wählen Sie den Wert `OAUTH2` aus und fügen Sie die erforderlichen Felder für OAuth 2 hinzu, wie in der Authentifizierungsseite [Ziel-SDK OAuth 2](./oauth2-authentication.md) dargestellt. Außerdem sollten Sie `authenticationRule=CUSTOMER_AUTHENTICATION` im Abschnitt [Zielversand](./destination-configuration.md) auswählen. </li><li>Wählen Sie für die Trägerauthentifizierung `BEARER` und dann `authenticationRule=CUSTOMER_AUTHENTICATION` im Abschnitt [Zielversand](./destination-configuration.md) aus.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,9 +205,9 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 
 ## Identitäten und Attribute {#identities-and-attributes}
 
-Die Parameter in diesem Abschnitt bestimmen, wie die Zielidentitäten und -attribute im Zuordnungsschritt der Experience Platform-Benutzeroberfläche ausgefüllt werden, wo Benutzer ihre XDM-Schemas dem Schema in Ihrem Ziel zuordnen.
+Die Parameter in diesem Abschnitt bestimmen, welche Identitäten Ihr Ziel akzeptiert. Diese Konfiguration füllt auch die Zielidentitäten und -attribute im [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) der Experience Platform-Benutzeroberfläche, in dem Benutzer Identitäten und Attribute aus ihren XDM-Schemas dem Schema in Ihrem Ziel zuordnen.
 
-Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden zum Export in Ihr Ziel benötigen. Beispiele sind [!DNL Experience Cloud ID], Hash-E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind [!DNL Platform] Identitäts-Namespaces, die Kunden Identitäts-Namespaces von Ihrem Ziel aus zuordnen können.
+Sie müssen angeben, welche [!DNL Platform]-Identitäten Kunden zum Export in Ihr Ziel benötigen. Beispiele sind [!DNL Experience Cloud ID], Hash-E-Mail, Geräte-ID ([!DNL IDFA], [!DNL GAID]). Diese Werte sind [!DNL Platform] Identitäts-Namespaces, die Kunden Identitäts-Namespaces von Ihrem Ziel aus zuordnen können. Sie können auch angeben, ob Kunden benutzerdefinierte Namespaces Identitäten zuordnen können, die von Ihrem Ziel unterstützt werden.
 
 Identitäts-Namespaces erfordern keine 1:1-Korrespondenz zwischen [!DNL Platform] und Ihrem Ziel.
 Kunden können beispielsweise einen [!DNL Platform] [!DNL IDFA]-Namespace einem [!DNL IDFA]-Namespace von Ihrem Ziel zuordnen oder denselben [!DNL Platform] [!DNL IDFA]-Namespace einem [!DNL Customer ID]-Namespace in Ihrem Ziel zuordnen.
@@ -231,7 +231,6 @@ Weitere Informationen finden Sie in der [Übersicht über Identity-Namespace](ht
 |---------|----------|------|
 | `authenticationRule` | Zeichenfolge | Gibt an, wie [!DNL Platform]-Kunden eine Verbindung zu Ihrem Ziel herstellen. Akzeptierte Werte sind `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Verwenden Sie `CUSTOMER_AUTHENTICATION` , wenn sich Platform-Kunden über einen Benutzernamen und ein Kennwort, ein Trägertoken oder eine andere Authentifizierungsmethode bei Ihrem System anmelden. Sie würden diese Option beispielsweise auswählen, wenn Sie auch `authType: OAUTH2` oder `authType:BEARER` in `customerAuthenticationConfigurations` ausgewählt haben. </li><li> Verwenden Sie `PLATFORM_AUTHENTICATION`, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel vorhanden ist und der [!DNL Platform]-Kunde keine Authentifizierungsberechtigungen angeben muss, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe der Konfiguration [Credentials](./credentials-configuration.md) ein Anmeldedatenobjekt erstellen. </li><li>Verwenden Sie `NONE` , wenn keine Authentifizierung erforderlich ist, um Daten an Ihre Zielplattform zu senden. </li></ul> |
 | `destinationServerId` | Zeichenfolge | Die `instanceId` der [Zielserverkonfiguration](./destination-server-api.md), die für dieses Ziel verwendet wird. |
-| `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. <br> <ul><li> `true`:  [!DNL Platform] sendet die historischen Benutzerprofile, die sich für das Segment qualifiziert haben, bevor das Segment aktiviert wird. </li><li> `false`:  [!DNL Platform] enthält nur Benutzerprofile, die sich für das Segment qualifizieren, nachdem das Segment aktiviert wurde. </li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -244,14 +243,6 @@ Dieser Abschnitt der Zielkonfiguration bezieht sich darauf, wie Segmentmetadaten
 Über `audienceTemplateId` verknüpft dieser Abschnitt auch diese Konfiguration mit der [Konfiguration der Zielgruppen-Metadaten](./audience-metadata-management.md).
 
 Die in der obigen Konfiguration angezeigten Parameter werden in der [Ziel-Endpunkt-API-Referenz](./destination-configuration-api.md) beschrieben.
-
-## Wie diese Konfiguration alle erforderlichen Informationen für Ihr Ziel verbindet {#connecting-all-configurations}
-
-Einige Einstellungen für Ihr Ziel können über den Zielserver oder den Zielmetadaten-Endpunkt konfiguriert werden. Der Endpunkt für die Zielkonfiguration verbindet alle diese Einstellungen, indem er auf die Konfigurationen wie folgt verweist:
-
-* Verwenden Sie `destinationServerId`, um auf den Zielserver und die Vorlagenkonfiguration zu verweisen, die für Ihr Ziel eingerichtet sind.
-* Verwenden Sie `audienceMetadataId`, um auf die für Ihr Ziel eingerichtete Konfiguration für Zielgruppen-Metadaten zu verweisen.
-
 
 ## Aggregationspolitik {#aggregation}
 
@@ -280,18 +271,25 @@ Verwenden Sie den Parameter `maxUsersPerRequest` , um die maximale Anzahl von Pr
 Diese Option eignet sich am besten, wenn Sie lieber große Batches mit Tausenden von Profilen im selben Aufruf durchführen möchten. Mit dieser Option können Sie die exportierten Profile auch auf der Grundlage komplexer Aggregationsregeln aggregieren.
 
 Diese Option ermöglicht Ihnen Folgendes:
-* Legen Sie die maximale Zeit und Anzahl der Profile fest, die aggregiert werden sollen, bevor ein API-Aufruf an Ihr Ziel gesendet wird.
+* Legen Sie die maximale Zeit und maximale Anzahl von Profilen fest, die aggregiert werden sollen, bevor ein API-Aufruf an Ihr Ziel gesendet wird.
 * Aggregieren Sie die exportierten Profile, die dem Ziel zugeordnet sind, basierend auf:
-   * Segment-ID
-   * Segmentstatus
-   * Identität oder Identitätsgruppen
+   * Segment-ID;
+   * Segmentstatus;
+   * Identität oder Gruppen von Identitäten.
 
 Detaillierte Erläuterungen zu Aggregationsparametern finden Sie auf der Referenzseite [API-Endpunktoperationen für Ziele](./destination-configuration-api.md), auf der jeder Parameter beschrieben wird.
 
-## Historische Profilqualifikationen
+## Historische Profilqualifikationen {#profile-backfill}
 
 Sie können den Parameter `backfillHistoricalProfileData` in der Zielkonfiguration verwenden, um zu bestimmen, ob historische Profilqualifikationen an Ihr Ziel exportiert werden sollen.
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `backfillHistoricalProfileData` | Boolesch | Steuert, ob historische Profildaten exportiert werden, wenn Segmente für das Ziel aktiviert werden. <br> <ul><li> `true`:  [!DNL Platform] sendet die historischen Benutzerprofile, die sich für das Segment qualifiziert haben, bevor das Segment aktiviert wird. </li><li> `false`:  [!DNL Platform] enthält nur Benutzerprofile, die sich für das Segment qualifizieren, nachdem das Segment aktiviert wurde. </li></ul> |
+
+## Wie diese Konfiguration alle erforderlichen Informationen für Ihr Ziel verbindet {#connecting-all-configurations}
+
+Einige Ihrer Zieleinstellungen müssen über den [Zielserver](./server-and-template-configuration.md) oder die [Konfiguration der Zielmetadaten](./audience-metadata-management.md) konfiguriert werden. Die hier beschriebene Zielkonfiguration verbindet alle diese Einstellungen, indem sie wie folgt auf die beiden anderen Konfigurationen verweist:
+
+* Verwenden Sie `destinationServerId`, um auf den Zielserver und die Vorlagenkonfiguration zu verweisen, die für Ihr Ziel eingerichtet sind.
+* Verwenden Sie `audienceMetadataId`, um auf die für Ihr Ziel eingerichtete Konfiguration für Zielgruppen-Metadaten zu verweisen.

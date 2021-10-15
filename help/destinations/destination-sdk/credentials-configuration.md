@@ -1,10 +1,10 @@
 ---
-description: Diese Konfiguration bestimmt, wie Adobe Experience Platform-Benutzer sich bei Ihrem Ziel-Endpunkt authentifizieren, um Daten zu aktivieren.
-title: Konfigurationsoptionen für Anmeldedaten im Destination SDK
+description: Verwenden Sie die unterstützten Authentifizierungskonfigurationen im Adobe Experience Platform Destination SDK, um Benutzer zu authentifizieren und Daten für Ihren Ziel-Endpunkt zu aktivieren.
+title: Authentifizierungskonfiguration
 exl-id: 33eaab24-f867-4744-b424-4ba71727373c
-source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
+source-git-commit: 485c1359f8ef5fef0c5aa324cd08de00b0b4bb2f
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Unterstützte Authentifizierungstypen {#supported-authentication-types}
 
-Adobe Experience Platform unterstützt mehrere Authentifizierungstypen:
+Das Adobe Experience Platform Destination SDK unterstützt mehrere Authentifizierungstypen:
 
 * Bearer-Authentifizierung
 * OAuth 2 mit Autorisierungscode
