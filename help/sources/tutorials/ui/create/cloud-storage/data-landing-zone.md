@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform einen Quell-Connector für die Data Landing Zone erstellen.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 9%
+source-wordcount: '418'
+ht-degree: 10%
 
 ---
 
 # Verbinden von [!DNL Data Landing Zone] mit Platform über die Benutzeroberfläche
 
-[!DNL Data Landing Zone] ist eine Cloud-basierte Datenspeicheranlage für temporäre Dateispeicher, die mit Adobe Experience Platform bereitgestellt wird. [!DNL Data Landing Zone] wird ausschließlich für den Eingang und die Ausspeisung Ihrer Daten in und aus Platform verwendet. Daten werden nach sieben Tagen automatisch aus dem [!DNL Data Landing Zone] gelöscht.
+[!DNL Data Landing Zone] ist eine Cloud-basierte Datenspeicheranlage für temporäre Dateispeicher, die mit Adobe Experience Platform bereitgestellt wird. Daten werden nach sieben Tagen automatisch aus dem [!DNL Data Landing Zone] gelöscht.
 
 In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Data Landing Zone]-Quellverbindung mithilfe der Platform-Benutzeroberfläche beschrieben.
 
@@ -36,7 +36,7 @@ Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicher] die Option [!DNL Dat
 
 ![Katalog](../../../../images/tutorials/create/dlz/catalog.png)
 
-Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt und bietet Ihnen eine Oberfläche zur Auswahl und Vorschau der Daten, die Sie an Platform übermitteln möchten.
+Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt und bietet Ihnen eine Benutzeroberfläche zum Auswählen und Anzeigen einer Vorschau der Daten, die Sie an Platform übermitteln möchten.
 
 ![add-data](../../../../images/tutorials/create/dlz/add-data.png)
 
