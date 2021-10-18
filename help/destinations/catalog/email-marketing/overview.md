@@ -72,7 +72,7 @@ Lesen Sie die einzelnen Artikel zu E-Mail-Marketing-Zielen , um zu erfahren, wie
 
 Anweisungen zum Aktivieren von Segmenten für E-Mail-Marketing-Ziele finden Sie unter [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](../../ui/activate-batch-profile-destinations.md).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 * [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../../ui/activate-batch-profile-destinations.md)
 * [Erstellen von E-Mail-Marketing-Zielen und Aktivieren von Daten mithilfe der Flow Service-API](../../api/email-marketing.md)

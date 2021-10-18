@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Veröffentlichen eines Modells als Dienst mithilfe der Sensei Machine Learning API
 topic-legacy: tutorial
 type: Tutorial
-description: In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mithilfe der Sensei Machine Learning API behandelt.
+description: In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mit der Sensei Machine Learning-API behandelt.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
 workflow-type: tm+mt

@@ -12,7 +12,7 @@ ht-degree: 23%
 
 ---
 
-#  Bestelldatentyp
+#  orderdata type
 
  Bestellungen ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Reihenfolge beschreibt, die für eine Produktliste platziert wird.
 

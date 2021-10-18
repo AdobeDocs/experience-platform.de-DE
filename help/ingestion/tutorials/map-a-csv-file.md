@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei xdm zuordnen;CSV xdm zuordnen;ui-Handbuch
+keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei xdm zuordnen;CSV xdm zuordnen;UI-Handbuch
 solution: Experience Platform
 title: Zuordnen einer CSV-Datei zu einem XDM-Schema
 topic-legacy: tutorial

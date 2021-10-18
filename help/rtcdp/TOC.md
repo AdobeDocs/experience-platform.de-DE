@@ -7,15 +7,15 @@ user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unte
 source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 61%
+ht-degree: 74%
 
 ---
 
 
 # Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
 
-* [Übersicht über Real-Time CDP](overview.md)
-* [Übersicht über die B2B Edition der Echtzeit-Kundendatenplattform](b2b-overview.md)
+* [Real-Time CDP – Übersicht](overview.md)
+* [Real-time Customer Data Platform B2B Edition – Übersicht](b2b-overview.md)
 * Erste Schritte {#intro}
    * Echtzeit-CDP {#rtcdp-intro}
       * [Erste Schritte mit der Echtzeit-Kundendatenplattform](get-started.md)
@@ -50,9 +50,9 @@ ht-degree: 61%
    * [Customer AI](segmentation/customer-ai.md)
 * Schemas {#schemas}
    * [Übersicht über Schemas](schemas/overview.md)
-   * [Schemata in der Echtzeit-Kundendatenplattform B2B Edition](schemas/b2b.md)
+   * [Schemas in Real-time Customer Data Platform B2B Edition](schemas/b2b.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
-   * [Quellen in der Echtzeit-Kundendatenplattform B2B Edition](sources/b2b.md)
+   * [Quellen in Real-time Customer Data Platform B2B Edition](sources/b2b.md)
 * [Experience Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
 * [Glossar zu Experience Platform](https://docs.adobe.com/content/help/de-DE/experience-platform/landing/glossary.html)

@@ -1,6 +1,6 @@
 ---
 keywords: Datenqualität; rtcdp-Datenqualität
-title: Datenqualität in der Echtzeit-Kundendatenplattform
+title: Datenqualität in Real-time Customer Data Platform
 seo-title: Data quality on Real-time Customer Data Platform
 description: Ein Dokument zur Datenqualität in der Echtzeit-Kundendatenplattform
 seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
@@ -12,7 +12,7 @@ ht-degree: 84%
 
 ---
 
-# Datenqualität in der Echtzeit-Kundendatenplattform
+# Datenqualität in Real-time Customer Data Platform
 
 Mit der Echtzeit-Kundendatenplattform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, um für ein koordiniertes und konsistentes Kundenerlebnis zu sorgen. Darum müssen Sie unbedingt sicherstellen, dass Ihre Daten vollständig, präzise und übersichtlich sind.
 

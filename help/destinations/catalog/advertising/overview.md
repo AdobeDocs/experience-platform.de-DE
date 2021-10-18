@@ -29,7 +29,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 ### Verbindungen
 
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
-* [Google Ads-Verbindung](google-ads-destination.md)
+* [Verbindung zu Google Ads](google-ads-destination.md)
 * [Google Ad Manager-Verbindung](google-ad-manager.md)
 * [Google-Kundenabgleich-Verbindung](google-customer-match.md)
 * [Microsoft Bing-Verbindung](bing.md)

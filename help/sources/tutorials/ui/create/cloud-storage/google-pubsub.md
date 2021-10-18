@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Google PubSub; Google Publisub
+keywords: Experience Platform;home;popular topics;Google PubSub;google pubsub
 solution: Experience Platform
-title: Erstellen einer Google PubSub-Quellverbindung in der Benutzeroberfläche
+title: Erstellen einer Google PubSub-Source-Verbindung in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie einen Quell-Connector für Google PubSub über die Platform-Benutzeroberfläche erstellen.
+description: Erfahren Sie, wie Sie einen Google PubSub-Quell-Connector über die Platform-Benutzeroberfläche erstellen.
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt
@@ -57,7 +57,7 @@ Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicher] die Option **[!UICON
 
 ![Katalog](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
-Die Seite **[!UICONTROL Verbindung zu Google PubSub]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Verbindung mit Google PubSub]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 

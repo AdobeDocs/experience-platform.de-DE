@@ -1,6 +1,6 @@
 ---
 keywords: rtcdp Administration - Übersicht; Administration - Übersicht
-title: Administration der Echtzeit-Kundendatenplattform - Überblick
+title: Übersicht über die Real-time Customer Data Platform-Administration
 seo-title: Real-Time CDP administration overview
 description: 'Das vorliegende Dokument bietet Ihnen einen Überblick über die Verwaltungsfunktionen der Echtzeit-Kundendatenplattform, die auf Adobe Experience Platform basiert. '
 seo-description: seo description
@@ -12,7 +12,7 @@ ht-degree: 54%
 
 ---
 
-# Administration der Echtzeit-Kundendatenplattform - Überblick
+# Übersicht über die Real-time Customer Data Platform-Administration
 
 Dieses Dokument bietet einen Überblick über die Verwaltungsfunktionen von [!DNL Real-time Customer Data Platform], powered by Adobe Experience Platform.
 

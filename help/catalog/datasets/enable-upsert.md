@@ -220,7 +220,7 @@ curl -X PATCH \
 ```
 
 ****
-AntwortEine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Array mit der ID des aktualisierten Datensatzes zurück. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Das Tag `unifiedProfile` wurde jetzt deaktiviert.
+AntwortEine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurück. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Das Tag `unifiedProfile` wurde jetzt deaktiviert.
 
 ```json
 [
@@ -260,7 +260,7 @@ curl -X PATCH \
 ```
 
 ****
-AntwortEine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Array mit der ID des aktualisierten Datensatzes zurück. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Das Tag `unifiedProfile` wurde jetzt für Attributaktualisierungen aktiviert und konfiguriert.
+AntwortEine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurück. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Das Tag `unifiedProfile` wurde jetzt für Attributaktualisierungen aktiviert und konfiguriert.
 
 ```json
 [

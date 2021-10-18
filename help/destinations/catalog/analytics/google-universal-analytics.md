@@ -1,5 +1,5 @@
 ---
-keywords: Google Universal Analytics; Google Universal Analytics; Google Universal Analytics
+keywords: Google Universal Analytics;Google Universal Analytics;Google Universal Analytics
 title: Google Universal Analytics-Erweiterung
 description: Die Google Universal Analytics-Erweiterung ist ein Analyseziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4

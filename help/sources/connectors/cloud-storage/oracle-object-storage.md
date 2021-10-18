@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Oracle Object Storage-Connector
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Diensten und Zielen in Platform importieren können.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform], mit der Sie Daten aus diesen Systemen in Platform importieren und für nachgelagerte Dienste und Ziele verwenden können.
 
 Cloud-Speicher-Quellen können Ihre Daten in Platform übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Ursprungs-Workflow integriert. Mit Platform können Sie Daten von [!DNL Oracle Object Storage] durch Batches einbringen.
 

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
-title: IBM DB2 Source Connector - Überblick
+title: Übersicht über den Quell-Connector für IBM DB2
 topic-legacy: overview
-description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen IBM DB2 und Adobe Experience Platform herstellen.
+description: Erfahren Sie, wie Sie IBM DB2 mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
 workflow-type: tm+mt
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
 
-Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Unterstützung für Datenbankanbieter umfasst IBM DB2.
+Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Die Unterstützung für Datenbankanbieter umfasst IBM DB2.
 
 ## IP-Adressen-Zulassungsliste
 
 Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
 
-Die folgende Dokumentation enthält Informationen dazu, wie IBM DB2 mit [!DNL Platform] über APIs oder die Benutzeroberfläche mit  verbunden wird:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie IBM DB2 mit [!DNL Platform] über APIs oder die Benutzeroberfläche verbinden:
 
 ## Verbinden von IBM DB2 mit [!DNL Platform] mithilfe von APIs
 

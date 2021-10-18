@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Modell mithilfe der Sensei Machine Learning API trainieren und bewerten
 topic-legacy: tutorial
 type: Tutorial
-description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mithilfe von Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
+description: In diesem Tutorial erfahren Sie, wie Sie ein Modell mit Sensei Machine Learning-API-Aufrufen erstellen, trainieren und bewerten.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
 workflow-type: tm+mt

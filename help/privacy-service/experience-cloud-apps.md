@@ -8,7 +8,7 @@ exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 source-git-commit: 892bb4fa5302d63923c1a2e4759f0253955576e2
 workflow-type: tm+mt
 source-wordcount: '594'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -30,7 +30,7 @@ Im Folgenden finden Sie eine Liste der [!DNL Experience Cloud]-Anwendungen, die 
 | Anwendung | Zugriff/Löschen | Abmeldung vom Verkauf | Dokumentation und Überlegungen |
 | --- | :---: | :---: | --- |
 | Adobe Advertising Cloud | ✓ | verwalten | <ul><li>[Dokumentation zur DSGVO aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-access-delete.html)</li><li>[Dokumentation zum Opt-out-of-Sale für CCPA](https://experienceleague.adobe.com/docs/advertising-cloud/privacy/ad-cloud-ccpa-opt-out-of-sale.html)</li></ul> |
-| Adobe Analytics | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=de)</li><li>[!DNL Analytics] verarbeitet Opt-out-Anfragen mithilfe von  [Datenschutzberichtsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html)</li></ul> |
+| Adobe Analytics | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=de)</li><li>[!DNL Analytics] verarbeitet Opt-out-Anfragen mithilfe von  [Datenschutzberichtsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/consent-variables.html?lang=de)</li></ul> |
 | Adobe Audience Manager | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/data-privacy-requests.html)</li><li>[Opt-out-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/declared-ids.html)</li></ul> |
 | Adobe Campaign Standard | verwalten | verwalten | <ul><li>[Dokumentation aufrufen/löschen](https://docs.campaign.adobe.com/doc/standard/getting_started/de/ACS_GDPR.html)</li><li>[Opt-out-Dokumentation](../segmentation/consents.md)</li></ul> |
 | Adobe-Kundenattribute (CRS) | verwalten | K. A. | <ul><li>[Dokumentation zur DSGVO aufrufen/löschen](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[Dokumentation für CCPA aufrufen/löschen](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>Kundenattribute können keine Daten übertragen. Daher sind Opt-out-Anfragen für den Verkauf nicht möglich.</li></ul> |

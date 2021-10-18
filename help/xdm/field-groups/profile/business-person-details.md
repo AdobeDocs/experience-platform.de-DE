@@ -13,7 +13,7 @@ ht-degree: 11%
 
 >[!IMPORTANT]
 >
->Diese Feldergruppe ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
+>Diese Feldergruppe ist als Teil der Real-time Customer Data Platform B2B Edition verfügbar, die sich derzeit in der Beta-Phase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Person ] Details ist eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die Informationen über eine Person im Kontext eines B2B-Unternehmens (Business-to-Business) erfasst.
 

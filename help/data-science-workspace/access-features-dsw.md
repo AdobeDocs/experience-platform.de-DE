@@ -24,7 +24,7 @@ Im folgenden Dokument werden die Berechtigungen von Data Science Workspace und d
 
 Warum wird mir nur die Registerkarte &quot;Dienste&quot;angezeigt?
 
-- Ihr Unternehmen hat möglicherweise nur Zugriff auf die Echtzeit-Kundendatenplattform (RTCDP), die den Customer AI AI/ML-Dienst umfasst.
+- Ihr Unternehmen hat möglicherweise nur Berechtigung für Real-time Customer Data Platform (RTCDP), das den Customer AI AI/ML-Dienst umfasst.
 
 Wenn Sie die Registerkarten **Data Science** nicht sehen können und Data Science Workspace-Funktionen verwenden möchten, wenden Sie sich an Ihren Unternehmensadministrator, um zu überprüfen, ob Sie über eine Adobe Experience Platform Intelligence-Lizenz verfügen.
 
@@ -59,7 +59,7 @@ Um Data Science Workspace verwenden zu können, muss die Berechtigung &quot;Data
 
 | Berechtigung | Aktiviert | Deaktiviert |
 |---|---|---|
-| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste in Data Science Workspace. | Der API- und UI-Zugriff auf alle Dienste in Data Science Workspace ist deaktiviert. Bei Deaktivierung wird die Auswahl der Seiten **Notebooks**, **Modelle** und **Dienste** verhindert. <li>Der Zugriff auf **Dienste** ist möglicherweise weiterhin über die Echtzeit-Kundendatenplattform (RTCDP) verfügbar.</li> |
+| Verwalten des Data Science Workspace | Bietet Zugriff auf alle Dienste in Data Science Workspace. | Der API- und UI-Zugriff auf alle Dienste in Data Science Workspace ist deaktiviert. Bei Deaktivierung wird die Auswahl der Seiten **Notebooks**, **Modelle** und **Dienste** verhindert. <li>Der Zugriff auf **Dienste** ist möglicherweise weiterhin über Real-time Customer Data Platform (RTCDP) verfügbar.</li> |
 
 ## Sandbox-Unterstützung
 

@@ -37,7 +37,7 @@ Beispiel:
 
 ### Code hinzufügen {#adding-the-code}
 
-Die vordefinierte eigenständige Version erfordert einen &quot;Basis-Code&quot;, der direkt zur Seite hinzugefügt wird. Kopieren Sie den folgenden &quot;Basis-Code&quot;so weit wie möglich in das `<head>` -Tag Ihres HTML-Codes:
+Die vordefinierte eigenständige Version erfordert einen &quot;Basis-Code&quot;, der direkt zur Seite hinzugefügt wird. Kopieren Sie den folgenden &quot;Basis-Code&quot;so weit wie möglich in das `<head>` -Tag Ihrer HTML:
 
 ```markup
 <script>
@@ -95,7 +95,7 @@ Dieses Tag lädt ein Skript, das sicherstellt, dass `window.Promise` eine gülti
 
 ### Synchrones Laden der JavaScript-Datei {#loading-javascript-synchronously}
 
-Wie im Abschnitt [Hinzufügen des Codes](#adding-the-code) erläutert, lädt der Basis-Code, den Sie kopiert und in den HTML-Code Ihrer Website eingefügt haben, eine externe Datei. Die externe Datei enthält die Kernfunktionalität des SDK. Jeder Befehl, den Sie beim Laden dieser Datei ausführen möchten, wird in die Warteschlange gestellt und nach dem Laden der Datei verarbeitet. Das asynchrone Laden der Datei ist die leistungsfähigste Installationsmethode.
+Wie im Abschnitt [Hinzufügen des Codes](#adding-the-code) erläutert, lädt der Basiscode, den Sie kopiert und in die HTML Ihrer Website eingefügt haben, eine externe Datei. Die externe Datei enthält die Kernfunktionalität des SDK. Jeder Befehl, den Sie beim Laden dieser Datei ausführen möchten, wird in die Warteschlange gestellt und nach dem Laden der Datei verarbeitet. Das asynchrone Laden der Datei ist die leistungsfähigste Installationsmethode.
 
 Unter bestimmten Umständen möchten Sie die Datei jedoch möglicherweise synchron laden \(weitere Details zu diesen Umständen werden später dokumentiert\). Dadurch wird verhindert, dass der Rest des HTML-Dokuments vom Browser analysiert und gerendert wird, bis die externe Datei geladen und ausgeführt wurde. Diese zusätzliche Verzögerung vor der Anzeige von Primärinhalten für Nutzer wird in der Regel nicht empfohlen, kann aber je nach den Umständen sinnvoll sein.
 

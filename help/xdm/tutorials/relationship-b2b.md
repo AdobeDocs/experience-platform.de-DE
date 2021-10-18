@@ -1,6 +1,6 @@
 ---
-title: Definieren einer Beziehung zwischen zwei Schemas in der Echtzeit-Kundendatenplattform B2B Edition
-description: Erfahren Sie, wie Sie in der Echtzeit-Kundendatenplattform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
+title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
+description: Erfahren Sie, wie Sie in Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 2ad20a4c7a9d1cc71fc4e589de90d7eabf8c87b7
 workflow-type: tm+mt
@@ -9,17 +9,17 @@ ht-degree: 7%
 
 ---
 
-# Definieren einer Beziehung zwischen zwei Schemas in der Echtzeit-Kundendatenplattform B2B Edition (Beta)
+# Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
->Die Echtzeit-Kundendatenplattform B2B Edition befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
+>Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
 
 >[!NOTE]
 >
->Wenn Sie die Echtzeit-Kundendatenplattform B2B Edition nicht verwenden, lesen Sie stattdessen das Handbuch zum Erstellen einer Nicht-B2B-Beziehung](./relationship-ui.md) .[
+>Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie stattdessen das Handbuch zum Erstellen einer Nicht-B2B-Beziehung](./relationship-ui.md) .[
 
-Die Echtzeit-Kundendatenplattform B2B Edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, darunter [Konten](../classes/b2b/business-account.md), [Chancen](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md) und mehr. Indem Sie Schemas erstellen, die auf diesen Klassen basieren, und sie zur Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md) aktivieren, können Sie Daten aus unterschiedlichen Quellen zu einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
+Real-time Customer Data Platform B2B Edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, darunter [Konten](../classes/b2b/business-account.md), [Chancen](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md) und mehr. Indem Sie Schemas erstellen, die auf diesen Klassen basieren, und sie zur Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md) aktivieren, können Sie Daten aus unterschiedlichen Quellen zu einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
 
 Vereinigungsschemata dürfen jedoch nur Felder enthalten, die von Schemas erfasst werden, die dieselbe Klasse verwenden. Hier kommen die Schemabeziehungen an. Durch die Implementierung von Beziehungen in Ihre B2B-Schemas können Sie beschreiben, wie sich diese Geschäftsentitäten gegenseitig beeinflussen, und Attribute aus mehreren Klassen in Anwendungsfällen für nachgelagerte Segmentierung einbeziehen.
 

@@ -1,6 +1,6 @@
 ---
 keywords: Datensätze; rtcdp-Datensätze
-title: Datensätze in der Echtzeit-Kundendatenplattform
+title: Datensätze in Real-time Customer Data Platform
 seo-title: Overview of datasets in Adobe Experience Platform
 description: Übersicht über Datensätze in Adobe Experience Platform
 seo-description: Overview of datasets in Adobe Experience Platform
@@ -12,7 +12,7 @@ ht-degree: 44%
 
 ---
 
-# Datensätze in der Echtzeit-Kundendatenplattform
+# Datensätze in Real-time Customer Data Platform
 
 Mit der Benutzeroberfläche von Adobe Experience Platform können Sie alle Datensätze, die Ihre IMS-Organisation erstellt hat, anzeigen und verwalten bzw. neue Datensätze erstellen. Um in der Benutzeroberfläche nach Datensätzen zu suchen, wählen Sie im linken Navigationsbereich die Option **[!UICONTROL Datensätze]**. Der Tab **[!UICONTROL Durchsuchen]** enthält eine Liste von Datensätzen, einschließlich der Spalten mit dem Namen, der erstellten (Datum und Uhrzeit), der Quelle, dem Schema und dem letzten Batch-Status sowie dem Datum und der Uhrzeit der letzten Aktualisierung des Datensatzes.
 

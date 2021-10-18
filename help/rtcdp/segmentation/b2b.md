@@ -5,7 +5,7 @@ exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 source-git-commit: cc4bd6f3b70a90b53aaaf6a4c31d23fddd8a3f44
 workflow-type: tm+mt
 source-wordcount: '1122'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Die Echtzeit-CDP B2B Edition befindet sich derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
+>Real-time Customer Data Platform B2B Edition befindet sich derzeit im Beta-Stadium. Die Dokumentation und Funktionalität können sich ändern.
 
 Dieses Dokument enthält Beispiele zur Segmentierung, die für die Echtzeit-Kundendatenplattform B2B Edition verfügbar ist, und dazu, wie die verschiedenen Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können.
 

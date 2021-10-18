@@ -199,7 +199,7 @@ Weitere Informationen zur Kantensegmentierung finden Sie im [UI-Handbuch zur Kan
 >
 >Richtlinienverletzungen gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
 
-Nachdem Sie Ihr Segment erstellt haben, wird das Segment von Adobe Experience Platform Data Governance analysiert, um sicherzustellen, dass keine Richtlinienverletzungen innerhalb des Segments auftreten. Weitere Informationen finden Sie in der [[!DNL Data Governance] Übersicht über ](../../data-governance/home.md).
+Nachdem Sie Ihr Segment erstellt haben, wird das Segment von Adobe Experience Platform Data Governance analysiert, um sicherzustellen, dass keine Richtlinienverletzungen innerhalb des Segments auftreten. Weitere Informationen finden Sie in der [[!DNL Data Governance] Übersicht über](../../data-governance/home.md).
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

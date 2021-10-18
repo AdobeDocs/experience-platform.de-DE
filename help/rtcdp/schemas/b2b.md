@@ -1,21 +1,21 @@
 ---
-title: Schemata in der Echtzeit-Kundendatenplattform B2B Edition
-description: Eine Übersicht über die Rolle von Experience-Datenmodell (XDM)-Schemas in der Echtzeit-Kundendatenplattform B2B Edition.
+title: Schemas in Real-time Customer Data Platform B2B Edition
+description: Eine Übersicht über die Rolle von Experience-Datenmodell (XDM)-Schemas in Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 65afc75d89a4183d0ad03200f6c08c72dd104180
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
-# Schemata in der Echtzeit-Kundendatenplattform B2B Edition (Beta)
+# Schemata in Real-time Customer Data Platform B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
->Die Echtzeit-Kundendatenplattform B2B Edition befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
+>Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
 
-Die Echtzeit-Kundendatenplattform B2B Edition bietet mehrere standardmäßige [Experience-Datenmodell (XDM)-Klassen](../../xdm/schema/composition.md#class), die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. Darüber hinaus können Sie mit der Echtzeit-Kundendatenplattform B2B Edition zwischen diesen Schemas eine Vielzahl von Beziehungen definieren, sodass sie an erweiterten Anwendungsfällen zur Segmentierung teilnehmen können.
+Real-time Customer Data Platform B2B Edition bietet mehrere standardmäßige [Experience-Datenmodell (XDM)-Klassen](../../xdm/schema/composition.md#class), die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. Darüber hinaus können Sie mit der Echtzeit-Kundendatenplattform B2B Edition zwischen diesen Schemas eine Vielzahl von Beziehungen definieren, sodass sie an erweiterten Anwendungsfällen zur Segmentierung teilnehmen können.
 
 Die folgenden Standardklassen werden in der Echtzeit-CDP B2B Edition bereitgestellt:
 

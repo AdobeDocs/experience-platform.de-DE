@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
->Dieser Datentyp ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
+>Dieser Datentyp ist als Teil der Real-time Customer Data Platform B2B Edition verfügbar, die sich derzeit in der Beta-Phase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL B2B ] Sources ist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der eine zusammengesetzte Kennung für eine B2B-Entität darstellt (z. B. ein  [Konto](../classes/b2b/business-account.md), eine  [Gelegenheit](../classes/b2b/business-opportunity.md) oder eine  [Kampagne](../classes/b2b/business-campaign.md)).
 

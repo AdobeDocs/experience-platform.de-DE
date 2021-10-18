@@ -14,7 +14,7 @@ ht-degree: 18%
 
 #  Gerätetyp
 
- Geräte sind ein standardmäßiger XDM-Datentyp, der ein identifiziertes Gerät beschreibt. Ein Gerät ist eine Anwendung oder Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies.
+ DeviceEnthält einen Standard-XDM-Datentyp, der ein identifiziertes Gerät beschreibt. Ein Gerät ist eine Anwendung oder Browser-Instanz, die sitzungsübergreifend verfolgt werden kann, normalerweise durch Cookies.
 
 <img src="../images/data-types/device.png" width="450" /><br />
 
@@ -22,7 +22,7 @@ ht-degree: 18%
 | --- | --- | --- |
 | `colorDepth` | Ganzzahl | Die Anzahl der Farben, die die Anzeige darstellen kann. |
 | `manufacturer` | Zeichenfolge | Der Name der Organisation, der das Design und die Erstellung des Geräts gehören. |
-| `model` | Zeichenfolge | Der Name des Modells für das Gerät. Dies ist der gebräuchliche, für Menschen lesbare oder Marketing-Name des Geräts. Beispielsweise ist das &quot;iPhone 6S&quot;ein bestimmtes Mobiltelefonmodell. |
+| `model` | Zeichenfolge | Der Name des Modells für das Gerät. Dies ist der gebräuchliche, für Menschen lesbare oder Marketing-Name des Geräts. Beispielsweise ist &quot;iPhone 6S&quot;ein bestimmtes Mobiltelefonmodell. |
 | `modelNumber` | Zeichenfolge | Die eindeutige Modellnummer, die der Hersteller diesem Gerät zugewiesen hat. Modellnummern sind keine Versionen, sondern eindeutige Bezeichner, die eine bestimmte Modellkonfiguration identifizieren. |
 | `screenHeight` | Ganzzahl | Die Anzahl der vertikalen Pixel der aktiven Anzeige des Geräts in der Standardausrichtung. |
 | `screenOrientation` | Zeichenfolge | Die aktuelle Bildschirmausrichtung. Zu den zulässigen Werten gehören `portrait` und `landscape`. |

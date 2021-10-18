@@ -25,13 +25,13 @@ Marketing-Aktionen (auch als Marketing-Nutzungsszenarien bezeichnet) im Rahmen d
 1. Eine bestimmte Marketing-Aktion
 2. Die Datennutzungsbeschriftung(en), für die diese Aktion nicht ausgeführt werden darf
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. persönliche identifizierbare Informationen (PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine Kennzeichnung „I“ (Identitätsdaten) enthält, erhalten Sie eine Antwort von [!DNL Policy Service], in der Sie darauf hingewiesen werden, dass eine Datennutzungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen (z. B. persönliche identifizierbare Informationen (PII)) nicht exportiert werden können, und Sie versuchen, einen Datensatz zu exportieren, der eine Kennzeichnung „I“ (Identitätsdaten) enthält, erhalten Sie eine Antwort von [!DNL Policy Service], in der Sie darauf hingewiesen werden, dass eine Datennutzungsrichtlinie verletzt wurde.
 
 >[!NOTE]
 >
 >Marketing-Aktionen allein schränken die Datennutzung nicht ein. Sie müssen in aktivierten Datennutzungsrichtlinien eingeschlossen sein, damit diese Aktionen auf Richtlinienverletzungen hin bewertet werden können.
 
-Wenn die Nutzung von Daten im Dienst Ihres Unternehmens stattfindet, sollten relevante Marketing-Aktionen angezeigt werden, damit etwaige Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
+Wenn die Nutzung von Daten im Service Ihres Unternehmens stattfindet, sollten relevante Marketing-Aktionen angezeigt werden, damit etwaige Richtlinienverletzungen festgestellt werden können. Anschließend können Sie die [Policy Service-API](https://www.adobe.io/experience-platform-apis/references/policy-service/) verwenden, um Richtlinienverletzungen in Ihrer Integration zu prüfen.
 
 >[!NOTE]
 >

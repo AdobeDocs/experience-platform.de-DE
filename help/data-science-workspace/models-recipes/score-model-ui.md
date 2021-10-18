@@ -96,4 +96,4 @@ Wählen Sie für den vollständigen Satz der Scoring-Ergebnisse den Link **[!UIC
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie die Schritte zum Erfassen von Daten mithilfe eines trainierten Modells in [!DNL Data Science Workspace] durchlaufen. Befolgen Sie die Anleitung zum [Publizieren eines Modells als Dienst in der Benutzeroberfläche](./publish-model-service-ui.md), damit Benutzer in Ihrer Organisation Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst erhalten.
+In diesem Tutorial haben Sie die Schritte zum Erfassen von Daten mithilfe eines trainierten Modells in [!DNL Data Science Workspace] durchlaufen. Befolgen Sie die Anleitung zum [Publizieren eines Modells als Service in der Benutzeroberfläche](./publish-model-service-ui.md), damit Benutzer in Ihrer Organisation Daten bewerten können, indem sie einfachen Zugriff auf einen maschinellen Lerndienst erhalten.

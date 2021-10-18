@@ -14,7 +14,7 @@ ht-degree: 22%
 
 # Adobe-definierte SQL-Funktionen in Query Service
 
-Adobe-definierte Funktionen, hier ADFs genannt, sind vordefinierte Funktionen in Adobe Experience Platform Query Service, mit denen häufig geschäftsbezogene Aufgaben für [!DNL Experience Event]-Daten durchgeführt werden können. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) wie die in Adobe Analytics.
+Adobe-definierte Funktionen, hier ADFs genannt, sind vordefinierte Funktionen in Adobe Experience Platform Query Service, mit denen häufig geschäftsbezogene Aufgaben für [!DNL Experience Event]-Daten durchgeführt werden können. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie die in Adobe Analytics.
 
 Dieses Dokument enthält Informationen zu den in [!DNL Query Service] verfügbaren Adobe-definierten Funktionen.
 
@@ -882,7 +882,7 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `average_min
 
 Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mithilfe von [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zu Authoring-Abfragen in [!DNL Query Service] finden Sie in der Dokumentation zu [Erstellen von Abfragen](../best-practices/writing-queries.md).
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus werden im Video auch Beispiele für einzelne Eigenschaften in einem XDM-Objekt verwendet, Adobe-definierte Funktionen verwendet und CREATE TABLE AS SELECT (CTAS) verwendet.
 

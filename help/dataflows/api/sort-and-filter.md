@@ -1,7 +1,8 @@
 ---
 title: Sortieren und Filtern von Antworten in der Flow Service-API
 description: In diesem Tutorial wird die Syntax für das Sortieren und Filtern mithilfe von Abfrageparametern in der Flow Service-API behandelt, einschließlich einiger erweiterter Anwendungsfälle.
-source-git-commit: ccca81357bd7d7083abd3f395aa547c85ebf65fd
+exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
+source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 7%

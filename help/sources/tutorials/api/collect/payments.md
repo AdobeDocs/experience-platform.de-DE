@@ -137,12 +137,12 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `baseConnectionId` | Die eindeutige Verbindungs-ID der Zahlungsanwendung eines Drittanbieters, auf die Sie zugreifen. |
-| `params.path` | Der Pfad der Quelldatei. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Zahlungsanwendung. |
+| `params.path` | The path of the source file. |
+| `connectionSpec.id` | The connection spec ID of your payments application. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in späteren Schritten zum Erstellen einer Zielverbindung erforderlich.
+A successful response returns the unique identifier (`id`) of the newly created source connection. Diese ID ist in späteren Schritten zum Erstellen einer Zielverbindung erforderlich.
 
 ```json
 {
@@ -297,12 +297,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `schemaRef.id` | Das `$id` des Ziel-XDM-Schemas. |
-| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
+| `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Ziel-Datensatz-ID so, wie es in späteren Schritten erforderlich ist, um eine Zielverbindung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Store the target dataset ID as it is required in later steps to create a target connection and a dataflow.
 
 ```json
 [
@@ -712,7 +712,7 @@ Der letzte Schritt bei der Datenerfassung besteht darin, einen Datenfluss zu ers
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen an und bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf `15` oder größer gesetzt werden.
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. Für alle anderen Frequenzen muss der Intervallwert auf `15` oder größer gesetzt werden.
 
 **API-Format**
 
@@ -775,11 +775,11 @@ curl -X POST \
 | `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) wurde in einem früheren Schritt abgerufen. |
 | `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection), die in einem früheren Schritt abgerufen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
-| `transformations.params.deltaColum` | Die benannte Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Datumsformat für `deltaColumn` ist `yyyy-MM-dd HH:mm:ss`. |
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. The supported date format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. |
 | `transformations.params.mappingId` | Die Ihrer Datenbank zugeordnete Zuordnungs-ID. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` gesetzt ist, und sollte für andere Frequenzwerte größer oder gleich `15` sein. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval&#39;s value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Antwort**
 

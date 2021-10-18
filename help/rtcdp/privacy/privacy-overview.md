@@ -1,8 +1,8 @@
 ---
 keywords: Data Governance rtcdp;rtcdp Data Governance;Echtzeit-Data Profil Data Governance;Datenschutz rtcdp;rtcdp privacy
-title: Datenschutz in der Echtzeit-Kundendatenplattform
+title: Datenschutz in Real-time Customer Data Platform
 seo-title: Privacy in Real-time Customer Data Platform
-description: Mit der Echtzeit-Kundendatenplattform können Sie den Prozess optimieren, Ihre Datenvorgänge mit Datenschutzbestimmungen konform zu halten.
+description: Mit Real-time Customer Data Platform können Sie die Einhaltung von Datenschutzbestimmungen bei Ihren Datenvorgängen optimieren.
 seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 source-git-commit: f193787ac27e30c69d25418656ae9c59c89622dc
@@ -12,7 +12,7 @@ ht-degree: 7%
 
 ---
 
-# Datenschutz in der Echtzeit-Kundendatenplattform
+# Datenschutz in Real-time Customer Data Platform
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) hilft Marketing-Experten, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, sodass sie ihre Kunden besser identifizieren, verstehen und ansprechen können. Adobe betrachtet den Schutz von Kundendaten als grundlegendes Design-Prinzip und bietet verschiedene Steuerelemente, mit denen Marketer den Datenschutz von Kunden verwalten können.
 

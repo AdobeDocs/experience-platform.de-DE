@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Microsoft SQL;Microsoft SQL;SQL Server;SQL Server
+keywords: Experience Platform; Startseite; beliebte Themen; Microsoft SQL; Microsoft SQL; SQL Server; SQL Server
 solution: Experience Platform
 title: Erstellen einer SQL Server-Basisverbindung mit der Flow Service-API
 topic-legacy: overview

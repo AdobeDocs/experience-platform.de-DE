@@ -52,8 +52,8 @@ Folgende Namespaces werden unterstützt:
 | E-Mails (SHA256, in Kleinbuchstaben) | Ein Namespace für eine E-Mail-Adresse mit vorab gehashten Nachrichten. Die in diesem Namespace bereitgestellten Werte werden vor dem Hashing mit SHA256 in Kleinbuchstaben umgewandelt. Vor der Bereinigung einer E-Mail-Adresse müssen die Leerstellen am Anfang und am Ende abgeschnitten werden. Diese Einstellung kann nicht rückwirkend geändert werden. Weitere Informationen finden Sie im folgenden Dokument zu [SHA256-Hashing-Unterstützung](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) . |
 | Telefon (SHA256_E.164) | Ein Namespace, der rohe Telefonnummern darstellt, die im SHA256- und E.164-Format gehasht werden müssen. |
 | ECID | Ein Namespace, der einen Experience Cloud-ID-Wert (ECID) darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Weiterführende Informationen dazu finden Sie in der [ECID-Übersicht](../../identity-service/ecid.md). |
-| Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple-ID für Advertiser darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Interessensbasierte Anzeigen](https://support.apple.com/de-de/HT202074) . |
-| Google Ad-ID | Ein Namespace, der eine Google Advertising-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) . |
+| Apple IDFA (ID für Advertiser) | Ein Namespace, der die Apple ID für Advertiser darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Interessensbasierte Anzeigen](https://support.apple.com/de-de/HT202074) . |
+| Google Ad-ID | Ein Namespace, der eine Google Advertising-ID darstellt. Weitere Informationen finden Sie im folgenden Dokument zu [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en). |
 
 ### Einrichten der Zustimmungskonfiguration
 
@@ -73,7 +73,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 [!DNL Segment Match] verwendet die C11-Beschriftung, eine spezielle Vertragsbeschriftung,  [!DNL Segment Match] die Sie manuell zu Datensätzen oder Attributen hinzufügen können, um sicherzustellen, dass sie vom  [!DNL Segment Match] Partnerfreigabeprozess ausgeschlossen sind. Die Bezeichnung „C11“ bezeichnet Daten, die nicht in [!DNL Segment Match]-Prozessen verwendet werden sollten. Nachdem Sie ermittelt haben, welche Datensätze und/oder Felder Sie aus [!DNL Segment Match] ausschließen möchten, und die C11-Beschriftung entsprechend hinzugefügt haben, wird die Beschriftung automatisch vom [!DNL Segment Match]-Workflow erzwungen. [!DNL Segment Match] aktiviert automatisch die Core-Richtlinie  [!UICONTROL Datenfreigabe beschränken ] . Spezifische Anweisungen zum Anwenden von Datennutzungsbezeichnungen auf Datensätze finden Sie im Tutorial zum Verwalten von Datennutzungsbezeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md).[
 
-Eine Liste der Datennutzungsbezeichnungen und deren Definitionen finden Sie im Glossar [Datennutzungsbezeichnungen](../../data-governance/labels/reference.md). Informationen zu Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md).
+Eine Liste der Datennutzungsbezeichnungen und ihrer Definitionen finden Sie im Glossar [Datennutzungsbezeichnungen](../../data-governance/labels/reference.md). Informationen zu Datennutzungsrichtlinien finden Sie unter [Datennutzungsrichtlinien - Übersicht](../../data-governance/policies/overview.md).
 
 ### Grundlagen zu [!DNL Segment Match]-Berechtigungen
 
@@ -202,4 +202,4 @@ Durch Lesen dieses Dokuments haben Sie Verständnis für [!DNL Segment Match], s
 
 * [[!DNL Segmentation Service]](../home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Real-time Customer Profile] Übersicht](../../profile/home.md)
+* [[!DNL Real-time Customer Profile] – Übersicht](../../profile/home.md)

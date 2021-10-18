@@ -173,7 +173,7 @@ Geben Sie Werte für den Zeitplan ein und wählen Sie **[!UICONTROL Weiter]** au
 
 ### Einrichten eines Datenflusses zur einmaligen Erfassung
 
-Um die einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**. Sie können einen Datensatz weiterhin für eine einmalige Frequenzaufnahme bearbeiten, solange die Startzeit in der Zukunft bleibt. Nach Ablauf der Startzeit kann der Wert für die einmalige Häufigkeit nicht mehr bearbeitet werden. **** Intervalle und  **** Aufstockungen sind beim Einrichten eines einmaligen Aufnahme-Datenflusses nicht sichtbar.
+Um die einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die Häufigkeit aus und klicken Sie auf **[!UICONTROL Einmal]**. Sie können einen Datensatz weiterhin für eine einmalige Frequenzaufnahme bearbeiten, solange die Startzeit in der Zukunft bleibt. Nach Ablauf der Startzeit kann der Wert für die einmalige Häufigkeit nicht mehr bearbeitet werden. **** Bei der Einrichtung eines einmaligen Dataflows sind keine Intervaland- **** Rückfüllungen sichtbar.
 
 >[!IMPORTANT]
 >
@@ -217,8 +217,8 @@ Sie können Datenflüsse löschen, die nicht mehr erforderlich sind oder falsch 
 
 In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten aus einem externen Cloud-Speicher einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Um mehr über die Erstellung von Datenflüssen zu erfahren, ergänzen Sie Ihr Lernen, indem Sie sich das folgende Video ansehen. Darüber hinaus können eingehende Daten jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
-* [[!DNL Data Science Workspace] Übersicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+* [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >

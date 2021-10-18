@@ -18,7 +18,7 @@ ht-degree: 27%
 >
 > Feature Pipelines sind derzeit nur über API verfügbar.
 
-Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime (im Folgenden &quot;Laufzeit&quot;genannt) Funktionen bedarfsgerecht zu entwickeln.
+Mit Adobe Experience Platform können Sie benutzerdefinierte Funktions-Pipelines erstellen und erstellen, um mithilfe der Sensei Machine Learning Framework Runtime (nachfolgend &quot;Laufzeit&quot;genannt) Funktionen bedarfsgerecht zu entwickeln.
 
 In diesem Dokument werden die verschiedenen Klassen in einer Feature Pipeline beschrieben und ein schrittweises Tutorial zum Erstellen einer benutzerdefinierten Feature Pipeline mit dem [Model Authoring SDK](./sdk.md) in PySpark bereitgestellt.
 

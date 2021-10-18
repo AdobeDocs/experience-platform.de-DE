@@ -12,9 +12,9 @@ ht-degree: 15%
 
 ---
 
-#  Umgebungs-Datentyp
+#  Umgebungstyp
 
- Umgebungen sind ein standardmäßiger XDM-Datentyp, der die Umgebung eines beobachteten Ereignisses beschreibt, insbesondere mit detaillierten Informationen zu vorübergehenden Informationen wie Netzwerk- und Softwareversionen.
+ Umgebungen ein standardmäßiger XDM-Datentyp, der die Umgebung eines beobachteten Ereignisses beschreibt, insbesondere mit detaillierten Informationen zu vorübergehenden Informationen wie Netzwerk- und Softwareversionen.
 
 >[!IMPORTANT]
 >

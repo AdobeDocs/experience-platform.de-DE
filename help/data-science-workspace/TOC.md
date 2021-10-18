@@ -64,7 +64,7 @@ ht-degree: 100%
    * [Modell optimieren](models-recipes/optimize-model.md)
    * [Echtzeit-Kundenprofil mit Einblicken aus maschinellem Lernen anreichern](models-recipes/enrich-profile.md)
    * [Modell als Service veröffentlichen (Benutzeroberfläche)](models-recipes/publish-model-service-ui.md)
-   * [Veröffentlichen eines Modells als Dienst (API)](models-recipes/publish-model-service-api.md)
+   * [Veröffentlichen eines Modells als Service (API)](models-recipes/publish-model-service-api.md)
    * [Planen der automatisierten Schulung und Auswertung eines Services (Benutzeroberfläche)](models-recipes/schedule-models-ui.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)

@@ -1,7 +1,7 @@
 ---
 keywords: 'Werbung; Schläuche; '
 title: Microsoft Bing-Verbindung
-description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising ausführen.
+description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising durchführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
 workflow-type: tm+mt

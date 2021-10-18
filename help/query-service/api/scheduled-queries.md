@@ -35,7 +35,7 @@ GET /schedules?{QUERY_PARAMETERS}
 
 **Abfrageparameter**
 
-Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflistung geplanter Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren geplanten Abfragen abgerufen.
+Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter für die Auflistung geplanter Abfragen. Alle diese Parameter sind optional. Wenn Sie diesen Endpunkt ohne Parameter aufrufen, werden alle für Ihre Organisation verfügbaren geplanten Abfragen abgerufen.
 
 | Parameter | Beschreibung |
 | --------- | ----------- |

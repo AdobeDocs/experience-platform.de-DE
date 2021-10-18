@@ -116,7 +116,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->Wenn ein verwandtes Diagramm mehr als 50 Identitäten verknüpft, gibt dieser Dienst den HTTP-Status 422 und die Meldung „Zu viele verwandte Identitäten“ zurück. Wenn Sie diese Fehlermeldung erhalten, sollten Sie weitere Abfrageparameter hinzufügen, um die Suche einzuschränken.
+>Wenn ein verwandtes Diagramm mehr als 50 Identitäten verknüpft, gibt dieser Service den HTTP-Status 422 und die Meldung „Zu viele verwandte Identitäten“ zurück. Wenn Sie diese Fehlermeldung erhalten, sollten Sie weitere Abfrageparameter hinzufügen, um die Suche einzuschränken.
 
 ## Profildaten anhand von Liste mit Identitäten aufrufen
 

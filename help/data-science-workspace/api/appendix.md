@@ -3,7 +3,7 @@ keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Worksp
 solution: Experience Platform
 title: Handbuch zur Sensei Machine Learning API - Anhang
 topic-legacy: Developer guide
-description: Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der Sensei Machine Learning API.
+description: Die folgenden Abschnitte enthalten Referenzinformationen zu verschiedenen Funktionen der Sensei Machine Learning-API.
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
 source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
 workflow-type: tm+mt

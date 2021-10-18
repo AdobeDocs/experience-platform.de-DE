@@ -554,7 +554,7 @@ COPY query
 **Parameter**
 
 - `query`: Die Abfrage, die Sie kopieren möchten.
-- `format_name`: Das Format, in das die Abfrage kopiert werden soll. Das `format_name` kann eines von `parquet`, `csv` oder `json` sein. Der Standardwert ist `parquet`.
+- `format_name`: Das Format, in das Sie die Abfrage kopieren möchten. Das `format_name` kann eines von `parquet`, `csv` oder `json` sein. Der Standardwert ist `parquet`.
 
 >[!NOTE]
 >

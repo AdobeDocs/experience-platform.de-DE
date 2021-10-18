@@ -76,7 +76,7 @@ Wenn Sie analysieren möchten, wie sich bestimmte Attribute innerhalb einer Enti
 | --- | --- | --- | --- | --- |
 | 1234567 | Addieren | 275098 | 2 | 1. Oktober 10:32 Uhr |
 | 1234567 | Entfernen | 275098 | 1 | 1. Oktober 10:33 Uhr |
-| 1234567 | Addieren | 486502 | 3 | 1. Oktober 10:41 Uhr |
+| 1234567 | Addieren | 486502 | 1 | 1. Oktober 10:41 Uhr |
 | 1234567 | Addieren | 910482 | 5 | 3. Oktober, 14:15 |
 
 {style=&quot;table-layout:auto&quot;}

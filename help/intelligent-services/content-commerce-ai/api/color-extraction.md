@@ -152,4 +152,4 @@ Im ersten Beispielobjekt unten steht `feature_value` von `White,0.59,251,251,243
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `content_id` | Der Name des Bildes, das in Ihre Bildanforderung hochgeladen wurde. |
-| `feature_value` | Ein Array, dessen Objekte Schlüssel mit demselben Eigenschaftsnamen enthalten. Diese Schlüssel enthalten eine Zeichenfolge, die den Farbnamen darstellt, einen Prozentsatz, der diese Farbe im Verhältnis zum in `content_id` gesendeten Bild erscheint, und den RGB-Wert der Farbe. |
+| `feature_value` | Ein Array, dessen Objekte Schlüssel mit demselben Eigenschaftsnamen enthalten. Diese Schlüssel enthalten eine Zeichenfolge, die den Farbnamen darstellt, einen Prozentwert, der in Bezug auf das in `content_id` gesendete Bild angezeigt wird, und den RGB-Wert der Farbe. |

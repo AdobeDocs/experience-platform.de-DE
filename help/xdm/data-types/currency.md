@@ -12,7 +12,7 @@ ht-degree: 7%
 
 ---
 
-#  Währungs-Datentyp
+#  Typ der Währungs-Daten
 
  Währung ist ein standardmäßiger XDM-Datentyp, der einen Währungsbetrag beschreibt, einschließlich des Währungstyps und des Konversionsdatums.
 

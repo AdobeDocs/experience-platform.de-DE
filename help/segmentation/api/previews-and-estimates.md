@@ -16,9 +16,9 @@ ht-degree: 9%
 
 Bei der Entwicklung einer Segmentdefinition können Sie die Schätzungs- und Vorschau-Tools in Adobe Experience Platform verwenden, um Informationen auf Zusammenfassungsebene anzuzeigen und so sicherzustellen, dass Sie die erwartete Zielgruppe isolieren.
 
-* **** In der Vorschau werden paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition angezeigt, sodass Sie die Ergebnisse mit dem vergleichen können, was Sie erwarten.
+* **** In der Vorschau werden paginierte Listen mit qualifizierten Profilen für eine Segmentdefinition angezeigt, sodass Sie die Ergebnisse mit dem, was Sie erwarten, vergleichen können.
 
-* **** Schätzungen liefern statistische Informationen zu einer Segmentdefinition, z. B. die prognostizierte Zielgruppengröße, das Konfidenzintervall und die Fehler-Standardabweichung.
+* **** Schätzungen liefern statistische Informationen zu einer Segmentdefinition, z. B. die prognostizierte Zielgruppengröße, das Konfidenzintervall und die Standardabweichung von Fehlern.
 
 >[!NOTE]
 >

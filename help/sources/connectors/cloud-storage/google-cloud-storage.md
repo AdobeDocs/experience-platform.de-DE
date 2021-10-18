@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Google Cloud-Speicher; Google Cloud-Speicher
 solution: Experience Platform
-title: Übersicht über den Google Cloud Storage Source Connector
+title: Google Cloud Storage Source Connector - Überblick
 topic-legacy: overview
-description: Erfahren Sie, wie Sie mithilfe von APIs oder der Benutzeroberfläche Google Cloud Storage mit Adobe Experience Platform verbinden.
+description: Erfahren Sie, wie Sie Google Cloud Storage über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
 source-git-commit: 1f9948d6e419ee5d6a021a589378f7aa990b7291
 workflow-type: tm+mt
@@ -61,5 +61,5 @@ Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von API
 
 ### Verwenden der UI
 
-- [Erstellen einer Quell-Verbindung aus Google Cloud Storage über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Erstellen einer Quellverbindung für Google Cloud Storage über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)

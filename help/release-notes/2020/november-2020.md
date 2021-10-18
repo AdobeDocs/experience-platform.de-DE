@@ -27,7 +27,7 @@ Aktualisierungen vorhandener Funktionen:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Data Science Workspace]](#dsw)
-- [[!DNL Destinations] Dienst](#destinations)
+- [[!DNL Destinations] Service](#destinations)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
@@ -104,7 +104,7 @@ Data Science Workspace nutzt maschinelles Lernen und künstliche Intelligenz, um
 
 Weitere Informationen finden Sie im Dokument zum Erstellen eines Rezepts mit Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).[
 
-## [!DNL Destinations] Dienst {#destinations}
+## [!DNL Destinations] Diensleistung {#destinations}
 
 In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner auf nahtlose Weise aktivieren.
 
@@ -113,7 +113,7 @@ In der [ Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vord
 | Ziel | Beschreibung |
 | ----------- | ----------- |
 | Brase | Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht. |
-| Microsoft Bing | Das Microsoft Bing-Ziel hilft Ihnen beim Ausführen von Retargeting und zielgerichteten digitalen Kampagnen für Microsoft Display Advertising. |
+| Microsoft Bing | Das Microsoft Bing-Ziel unterstützt Sie beim Ausführen von digitalen Kampagnen mit Retargeting und Zielgruppen-Targeting für Microsoft Display Advertising. |
 | Handelsabteilung | Das Trade Desk ist eine Self-Service-Plattform für Anzeigenkäufer, mit der sie digitale Kampagnen für Zielgruppen und Zielgruppen aus Display-, Video- und mobilen Inventarquellen ausführen können. |
 
 **Neue Funktionen**

@@ -12,9 +12,9 @@ ht-degree: 11%
 
 ---
 
-#  Identitydata type
+#  IdentityDataType
 
- Die Identifizierung ist ein standardmäßiger XDM-Datentyp, mit dem Personen, die mit digitalen Erlebnissen interagieren, klar unterschieden werden. Die Identität wird von einem Identitäts-Provider festgelegt, der selbst in einem `namespace` -Attribut referenziert wird. Innerhalb jedes `namespace` ist die Identität eindeutig.
+ Identity ist ein standardmäßiger XDM-Datentyp, mit dem Personen, die mit digitalen Erlebnissen interagieren, klar unterschieden werden. Die Identität wird von einem Identitäts-Provider festgelegt, der selbst in einem `namespace` -Attribut referenziert wird. Innerhalb jedes `namespace` ist die Identität eindeutig.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 

@@ -42,7 +42,7 @@ Dieses Ziel unterstützt die folgenden Verbindungstypen:
 Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * Für Verbindungen des Typs **[!UICONTROL SFTP mit Kennwort]** müssen Sie Folgendes angeben:
-   * [!UICONTROL Domäne]
+   * [!UICONTROL Domain]
    * [!UICONTROL Port]
    * [!UICONTROL Benutzername]
    * [!UICONTROL Passwort]

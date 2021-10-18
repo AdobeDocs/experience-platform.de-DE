@@ -8,7 +8,7 @@ exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 source-git-commit: 696db8081ab8225d79cd468b7435770d407d3e3d
 workflow-type: tm+mt
 source-wordcount: '1148'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -44,7 +44,7 @@ Bevor Sie nicht ablaufende Anmeldeinformationen generieren können, müssen Sie 
 2. [Produktprofil auswählen.](../../access-control/ui/browse.md)
 3. [Konfigurieren Sie sowohl die Berechtigungen  **** Sandboxes als auch  **Query Service-** ](../../access-control/ui/permissions.md) Integrationen verwalten für das Produktprofil.
 4. [Fügen Sie einem Produktprofil einen neuen Benutzer hinzu, ](../../access-control/ui/users.md) wenn ihm die konfigurierten Berechtigungen erteilt wurden.
-5. [Fügen Sie den Benutzer als Produktprofiladministrator hinzu, ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) um die Erstellung eines Kontos für jedes aktive Produktprofil zu ermöglichen.
+5. [Fügen Sie den Benutzer als Produktprofiladministrator hinzu, ](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html) um die Erstellung eines Kontos für jedes aktive Produktprofil zu ermöglichen.
 6. [Fügen Sie den Benutzer als Produktprofilentwickler hinzu, ](https://helpx.adobe.com/de/enterprise/using/manage-developers.html) um eine Integration zu erstellen.
 
 Weitere Informationen zum Zuweisen von Berechtigungen finden Sie in der Dokumentation zu [Zugriffskontrolle](../../access-control/home.md).

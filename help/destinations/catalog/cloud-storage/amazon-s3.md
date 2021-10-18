@@ -30,7 +30,7 @@ Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, di
 
 Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!DNL Amazon S3]Zugriffsschlüssel** und  **[!DNL Amazon S3]geheimer Schlüssel**: Generieren Sie  [!DNL Amazon S3]in ein  `access key - secret access key` Paar, um Platform Zugriff auf Ihr  [!DNL Amazon S3] Konto zu gewähren. Weitere Informationen finden Sie in der [Dokumentation zu Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]Zugriffsschlüssel** und  **[!DNL Amazon S3]geheimer Schlüssel**: Generieren Sie  [!DNL Amazon S3]in ein  `access key - secret access key` Paar, um Platform Zugriff auf Ihr  [!DNL Amazon S3] Konto zu gewähren. Weitere Informationen finden Sie in der [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels hilft.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung dieses Ziels ein.
 * **[!UICONTROL Bucket-Name]**: Geben Sie den Namen des  [!DNL Amazon S3] Buckets ein, der von diesem Ziel verwendet werden soll.

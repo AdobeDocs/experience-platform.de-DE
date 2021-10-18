@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform; Entwicklerhandbuch; Endpunkt; Data Science Workspace; beliebte Themen; Datenwissenschaftsarbeitsbereich; Datenwissenschaft
 solution: Experience Platform
-title: Sensei Machine Learning API-Anleitung
+title: Handbuch zur Sensei Machine Learning API
 topic-legacy: Developer guide
 description: Mit der Sensei Machine Learning API können Entwickler CRUD-Vorgänge für verschiedene Data Science Workspace-Ressourcen durchführen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0

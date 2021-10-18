@@ -57,7 +57,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICO
 
 ![](../../../../images/tutorials/create/google-big-query/catalog.png)
 
-Die Seite **[!UICONTROL Verbindung zu Google Big Query]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Verbindung mit Google Big Query]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Neues Konto
 

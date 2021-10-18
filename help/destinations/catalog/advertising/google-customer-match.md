@@ -1,7 +1,7 @@
 ---
 keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google-Kundenabgleich-Verbindung
-description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
+description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
 workflow-type: tm+mt
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 ## Übersicht {#overview}
 
-[Google-Kundendaten ](https://support.google.com/google-ads/answer/6379332?hl=en) verwenden Sie Ihre Online- und Offline-Daten, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften hinweg zu erreichen und erneut mit ihnen zu interagieren, z. B.:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail] und  [!DNL YouTube].
+[Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchets, mit denen Sie Ihre Online- und Offline-Daten nutzen, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail] und  [!DNL YouTube].
 
-![Google-Kundenabgleich-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/advertising/google-customer-match/catalog.png)
+![Google Customer Match-Ziel in der Benutzeroberfläche von Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
 ## Anwendungsfälle
 
@@ -54,9 +54,9 @@ Für einige Ziele in der Experience Platform gelten bestimmte Regeln und Pflicht
 
 ## [!DNL Google Customer Match] Kontovoraussetzungen {#google-account-prerequisites}
 
-Bevor Sie ein [!DNL Google Customer Match]-Ziel in Experience Platform einrichten, sollten Sie die Google-Richtlinien zur Verwendung von [!DNL Customer Match] lesen und einhalten, die in der [Google-Support-Dokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben sind.
+Bevor Sie ein [!DNL Google Customer Match]-Ziel in Experience Platform einrichten, sollten Sie die Google-Richtlinie zur Verwendung von [!DNL Customer Match] lesen und befolgen, wie in der [Google-Support-Dokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben.
 
-Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder eine höhere Berechtigungsebene konfiguriert ist. Weitere Informationen finden Sie in der [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
+Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder eine höhere Berechtigungsebene konfiguriert ist. Weitere Informationen finden Sie in der [Google Ads-Dokumentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
 
 ### Zulassungsliste {#allowlist}
 
@@ -135,7 +135,7 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 Im Schritt **[!UICONTROL Segment schedule]** müssen Sie die [!UICONTROL App-ID] angeben, wenn Sie [!DNL IDFA]- oder [!DNL GAID]-Segmente an [!DNL Google Customer Match] senden.
 
-![Google-Kundenabgleich-App-ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![Google-Kunden-Match-App-ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 Weitere Informationen zum Auffinden des [!DNL App ID] finden Sie in der [offiziellen Google-Dokumentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
 
@@ -182,7 +182,7 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites) nicht erfüllen. Um dieses Problem zu beheben, wenden Sie sich an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1).
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites) nicht erfüllen. Um dieses Problem zu beheben, wenden Sie sich an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für ein [!DNL Standard] oder eine höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der [Google Ads-Dokumentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
 
 ## Zusätzliche Ressourcen {#additional-resources}
 

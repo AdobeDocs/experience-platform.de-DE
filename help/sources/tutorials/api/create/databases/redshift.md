@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; redshift; Redshift; Amazon Redshift; amazon redshift
+keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Erstellen einer Amazon Redshift-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
@@ -13,9 +13,9 @@ ht-degree: 11%
 
 ---
 
-# Erstellen einer [!DNL Amazon Redshift]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Create an [!DNL Amazon Redshift] base connection using the [!DNL Flow Service] API
 
-Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Amazon Redshift] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -23,7 +23,7 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu [!DNL Amazon Redshift] herstellen zu können.
@@ -34,13 +34,13 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Amazon Redshift] herstellen 
 
 | **Berechtigung** | **Beschreibung** |
 | -------------- | --------------- |
-| `server` | Der mit Ihrem [!DNL Amazon Redshift]-Konto verknüpfte Server. |
+| `server` | The server associated with your [!DNL Amazon Redshift] account. |
 | `username` | Der Benutzername, der Ihrem [!DNL Amazon Redshift]-Konto zugeordnet ist. |
 | `password` | Das Ihrem [!DNL Amazon Redshift]-Konto zugeordnete Kennwort. |
 | `database` | Die [!DNL Amazon Redshift]-Datenbank, auf die Sie zugreifen. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Amazon Redshift] ist `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie in diesem [[!DNL Amazon Redshift] Dokument](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+For more information about getting started, refer to this [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
 ### Verwenden von Platform-APIs
 
@@ -48,9 +48,9 @@ Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen k�
 
 ## Basisverbindung erstellen
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+A base connection retains information between your source and Platform, including your source&#39;s authentication credentials, the current state of the connection, and your unique base connection ID. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Amazon Redshift]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Amazon Redshift] authentication credentials as part of the request parameters.
 
 **API-Format**
 
@@ -91,15 +91,15 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | ------------- | --------------- |
-| `auth.params.server` | Ihr [!DNL Amazon Redshift]-Server. |
-| `auth.params.database` | Die mit Ihrem [!DNL Amazon Redshift]-Konto verknüpfte Datenbank. |
-| `auth.params.password` | Das Ihrem [!DNL Amazon Redshift]-Konto zugeordnete Kennwort. |
+| `auth.params.server` | Your [!DNL Amazon Redshift] server. |
+| `auth.params.database` | The database associated with your [!DNL Amazon Redshift] account. |
+| `auth.params.password` | The password associated with your [!DNL Amazon Redshift] account. |
 | `auth.params.username` | Der Benutzername, der Ihrem [!DNL Amazon Redshift]-Konto zugeordnet ist. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL Amazon Redshift]: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihre Daten im nächsten Tutorial zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). This ID is required to explore your data in the next tutorial.
 
 ```json
 {
@@ -110,4 +110,4 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Amazon Redshift]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie mit der Flow Service-API](../../explore/database-nosql.md)Datenbanken oder NoSQL-Systeme analysieren können.[
+By following this tutorial, you have created a [!DNL Amazon Redshift] connection using the [!DNL Flow Service] API, and have obtained the connection&#39;s unique ID value. Sie können diese Verbindungs-ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie mit der Flow Service-API](../../explore/database-nosql.md)Datenbanken oder NoSQL-Systeme analysieren können.[

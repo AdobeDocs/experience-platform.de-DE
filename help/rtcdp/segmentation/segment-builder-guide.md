@@ -1,6 +1,6 @@
 ---
 keywords: rtcdp-Segmente;Segment Builder rtcdp;rtcdp-Segment
-title: Segment Builder in der Echtzeit-Kundendatenplattform
+title: Segmentaufbau in Real-time Customer Data Platform
 seo-title: Using the Segmentation Service Segment Builder in Real-time Customer Data Platform
 description: Eine Anleitung zur Verwendung von Segment Builder.
 seo-description: A user guide describing how to use the Segmentation Service Segment Builder on Real-time Customer Data Platform.
@@ -12,7 +12,7 @@ ht-degree: 49%
 
 ---
 
-# Segment Builder in der Echtzeit-Kundendatenplattform
+# Segmentaufbau in Real-time Customer Data Platform
 
 Basierend auf Adobe Experience Platform kann [!DNL Real-time Customer Data Platform] die vollständigen Segmentaufbau-Funktionen nutzen, die Teil von [!DNL Experience Platform] sind. In der Benutzeroberfläche von Segment Builder können Sie neue Segmente erstellen, auf vorhandene Segmente zugreifen und vorhandene Segmente ändern.
 

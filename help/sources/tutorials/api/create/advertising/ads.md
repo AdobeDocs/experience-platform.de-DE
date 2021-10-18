@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Erstellen einer Google AdWords-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Adobe Experience Platform mit Google AdWords verbinden.
+description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Google AdWords verbinden.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt

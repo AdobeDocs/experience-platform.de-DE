@@ -52,13 +52,13 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ### regionenbasiertes Routing
 
-Die [!DNL Identity Service]-API verwendet regionsspezifische Endpunkte, für die die Einbeziehung von `{REGION}` als Teil des Anfragepfads erforderlich ist. Während der Bereitstellung Ihrer IMS-Organisation wird eine Region in Ihrem IMS-Org-Profil bestimmt und gespeichert. Durch Verwendung des richtigen Bereichs für jeden Endpunkt wird sichergestellt, dass alle Anfragen, die mit der [!DNL Identity Service]-API gestellt werden, an den entsprechenden Bereich weitergeleitet werden.
+The [!DNL Identity Service] API employs region-specific endpoints that require the inclusion of a `{REGION}` as part of the request path. Während der Bereitstellung Ihrer IMS-Organisation wird eine Region in Ihrem IMS-Org-Profil bestimmt und gespeichert. Using the correct region with each endpoint ensures that all requests made using the [!DNL Identity Service] API are routed to the appropriate region.
 
-Derzeit werden zwei Regionen von [!DNL Identity Service]-APIs unterstützt: VA7 und NLD2.
+There are two regions currently supported by [!DNL Identity Service] APIs: VA7 and NLD2.
 
 Die folgende Tabelle zeigt Beispielpfade mit Regionen:
 
-| Dienst | Region: VA7 | Region: NLD2 |
+| Service | Region: VA7 | Region: NLD2 |
 | ------ | -------- |--------- |
 | [!DNL Identity Service] API | https://</span>platform-va7.adobe.</span>io/data/core/identity/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/identity/{ENDPOINT} |
 | [!DNL Identity Namespace] API | https://</span>platform-va7.adobe.</span>io/data/core/idnamespace/{ENDPOINT} | https://</span>platform-nld2.adobe.</span>io/data/core/idnamespace{ENDPOINT} |
@@ -79,11 +79,11 @@ Wenn eine Identität persistiert wird, generiert [!DNL Identity Service] eine Ke
 
 Um die Payload in Antworten zu begrenzen, passen APIs ihre Antworten an den Typ des verwendeten Identitätskonstrukts an. Wenn Sie also XID übergeben, haben Ihre Antworten XIDs, wenn Sie zusammengesetzte Identitäten übergeben, folgt die Antwort der in der Anfrage verwendeten Struktur.
 
-Die Beispiele in diesem Dokument decken nicht die gesamte Funktionalität der [!DNL Identity Service]-API ab. Die vollständige API finden Sie in der [Swagger API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service).
+Die Beispiele in diesem Dokument decken nicht die gesamte Funktionalität der [!DNL Identity Service]-API ab. For the complete API, see the [Swagger API Reference](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >
->Alle zurückgegebenen Identitäten werden im nativen XID-Formular angezeigt, wenn in der Anfrage die native XID verwendet wird. Es wird empfohlen, das Formular ID/Namespace zu verwenden. Weitere Informationen finden Sie im Abschnitt [Abrufen der XID für eine Identität](./create-custom-namespace.md).
+>Alle zurückgegebenen Identitäten werden im nativen XID-Formular angezeigt, wenn in der Anfrage die native XID verwendet wird. Es wird empfohlen, das Formular ID/Namespace zu verwenden. For more information, see the section on [getting the XID for an identity](./create-custom-namespace.md).
 
 ## Nächste Schritte
 

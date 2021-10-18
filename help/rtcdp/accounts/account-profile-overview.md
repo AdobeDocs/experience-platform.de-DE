@@ -2,7 +2,8 @@
 keywords: rtcdp b2b; b2b; Konto; Kontoprofil; Kontoprofile rtcdp; Echtzeit-Kundendatenplattform;
 title: Kontoprofile in der Echtzeit-Kundendatenplattform B2B Edition
 description: Erfahren Sie, wie Sie mit Real-time Customer Data Platform B2B Edition Kontoinformationen aus mehreren Quellen mithilfe von Kontoprofilen vereinheitlichen können.
-source-git-commit: 5301cf870052f537a34913beb0b814212bdaadaa
+exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
+source-git-commit: 8115a8716abbe6260321ce57728d86a6cc94d19c
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 2%

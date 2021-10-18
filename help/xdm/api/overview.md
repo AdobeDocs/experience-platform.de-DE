@@ -46,7 +46,7 @@ Feldergruppen sind wiederverwendbare Komponenten, die ein oder mehrere Felder de
 
 ## Datentypen
 
-Datentypen werden in Klassen oder Feldergruppen auf die gleiche Weise wie grundlegende literale Felder als Referenztypen verwendet, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Weitere Informationen zum Arbeiten mit Datentypen in der API finden Sie im [Endpunkthandbuch zu Datentypen](./data-types.md) .
+Datentypen werden in Klassen oder Feldergruppen auf die gleiche Weise wie einfache literale Felder als Referenztypen verwendet, wobei der wesentliche Unterschied darin besteht, dass Datentypen mehrere Unterfelder definieren können. Auch wenn sie Feldgruppen insofern ähnlich sind, als sie die konsistente Verwendung einer Mehrfeld-Struktur ermöglichen, sind Datentypen flexibler, da sie an einer beliebigen Stelle in die Schemastruktur aufgenommen werden können, während Feldgruppen nur auf der Stammebene hinzugefügt werden können. Weitere Informationen zum Arbeiten mit Datentypen in der API finden Sie im [Endpunkthandbuch zu Datentypen](./data-types.md) .
 
 ## Deskriptoren
 

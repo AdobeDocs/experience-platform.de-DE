@@ -28,7 +28,7 @@ Beachten Sie, dass ein Block eine ausführbare Anweisung ist und daher in andere
 >
 > Es wird dringend empfohlen, Ihre Abfragen für kleinere Datensätze zu testen und sicherzustellen, dass sie erwartungsgemäß funktionieren. Wenn bei einer Abfrage ein Syntaxfehler auftritt, wird die Ausnahme ausgelöst und der gesamte Block wird abgebrochen. Nachdem Sie die Integrität der Abfragen überprüft haben, können Sie mit ihrer Verkettung beginnen. Dadurch wird sichergestellt, dass der Block wie erwartet funktioniert, bevor Sie ihn in Betrieb nehmen.
 
-## Anonyme Beispielabfragen
+## Anonyme Beispiel-Blockabfragen
 
 Die folgende Abfrage zeigt ein Beispiel für die Verkettung von SQL-Anweisungen. Weitere Informationen zur verwendeten SQL-Syntax finden Sie im Dokument [SQL-Syntax in Query Service](../sql/syntax.md) .
 

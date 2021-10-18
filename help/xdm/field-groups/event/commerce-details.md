@@ -24,7 +24,7 @@ ht-degree: 4%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `commerce` | [Handel](../../data-types/commerce.md) | Ein Objekt, das die Produktrückgabe, die Registrierung der Garantie und die Warenkorb-/Bestellvorgänge beschreibt. |
+| `commerce` | [Commerce](../../data-types/commerce.md) | Ein Objekt, das die Produktrückgabe, die Registrierung der Garantie und die Warenkorb-/Bestellvorgänge beschreibt. |
 | `productListItems` | Array von [Produktlistenelementen](../../data-types/product-list-item.md) | Eine Liste von Artikeln, die die von einem Kunden ausgewählten Produkte mit bestimmten Optionen und Preisen zu einem bestimmten Zeitpunkt darstellen (die vom Produktdatensatz abweichen können). |
 
 {style=&quot;table-layout:auto&quot;}

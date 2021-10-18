@@ -14,7 +14,7 @@ ht-degree: 18%
 
 ## Übersicht {#overview}
 
-Laden Sie die `gtag.js` von Google in Ihre Site, um Ereignisdaten an [!DNL Google Analytics], Google Ads und [!DNL Google Marketing Platform] zu senden. Diese Erweiterung fügt nur den gtag-Code zu Ihrer Site hinzu. Sie müssen andere Google-Erweiterungen verwenden, um Ereignisse und Aktionen hinzuzufügen, die gtag verwenden.
+Laden Sie Googles `gtag.js` in Ihre Site, um Ereignisdaten an [!DNL Google Analytics], Google Ads und [!DNL Google Marketing Platform] zu senden. Diese Erweiterung fügt nur den gtag-Code zu Ihrer Site hinzu. Sie müssen andere Google-Erweiterungen verwenden, um Ereignisse und Aktionen hinzuzufügen, die gtag verwenden.
 
 Google gtag ist eine Werbeerweiterung in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
@@ -42,7 +42,7 @@ Wählen Sie die Eigenschaft aus, in der Sie die Erweiterung installieren möchte
 
 Der Workflow führt Sie durch die Schritte zum Abschluss der Installation.
 
-Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der [Google-Tag-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
+Informationen zu den Konfigurationsoptionen für Erweiterungen und zur Installationsunterstützung finden Sie auf der [Google-Gtag-Seite in Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
 Sie können die Erweiterung auch direkt in der [Datenerfassungs-Benutzeroberfläche](https://experience.adobe.com/#/data-collection/) installieren. Weitere Informationen finden Sie im Abschnitt [Hinzufügen einer neuen Erweiterung](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in der Tag-Dokumentation.
 

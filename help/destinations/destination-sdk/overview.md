@@ -24,7 +24,7 @@ Die Dokumentation zum Ziel-SDK enthält Anweisungen zur Verwendung des Adobe Exp
 Als Ziel-SDK-Partner können Sie von der Hinzufügung Ihres produktionalisierten Ziels zum [Experience Platform-Katalog](/help/destinations/catalog/overview.md) profitieren:
 1. Standardisieren Sie die Integrationskonfigurationen für alle Kunden mit vorkonfigurierten Parametern und vereinfachen Sie das Setup-Erlebnis für Kunden.
 2. Stellen Sie im Zielkatalog der Experience Platform eine Zielkarte mit Branding vor, um die Kundeneinrichtung und das Kundenbewusstsein zu vereinfachen.
-3. Werden Sie als produktive Zielintegration in Adobe Experience Platform und die Echtzeit-Kundendatenplattform vorgestellt.
+3. Werden Sie als produktive Zielintegration mit Adobe Experience Platform und Real-time Customer Data Platform vorgestellt.
 
 Als Experience Platform-Kunde können Sie ein eigenes benutzerdefiniertes Ziel erstellen, das Ihren Aktivierungsanforderungen am besten entspricht.
 

@@ -52,7 +52,7 @@ curl -X POST https://platform.adobe.io/data/foundation/queryauth/accounts \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `accountName` | **** ErforderlichDer Name des Query Service-Integrationskontos. |
+| `accountName` | **** RequiredDer Name des Query Service-Integrationskontos. |
 | `assignedToUser` | **** ErforderlichDie Adobe ID, für die das Query Service-Integrationskonto erstellt wird. |
 | `credential` | *(Optional)* Die Berechtigung, die für die Query Service-Integration verwendet wird. Wenn kein Wert angegeben wird, generiert das System automatisch eine Berechtigung für Sie. |
 | `description` | *(Optional)* Eine Beschreibung für das Query Service-Integrationskonto. |

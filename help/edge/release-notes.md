@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Version 2.6.4 - 7. September 2021
 
-* Es wurde ein Problem behoben, bei dem HTML-Adobe Target-Aktionen, die auf das `head` -Element angewendet wurden, den gesamten `head` -Inhalt ersetzten. Nun werden HTML-Aktionen festgelegt, die auf das `head`-Element angewendet werden, und an HTML angehängt.
+* Es wurde ein Problem behoben, bei dem festgelegte HTML Adobe Target-Aktionen, die auf das `head` -Element angewendet wurden, den gesamten `head` -Inhalt ersetzten. Nun werden HTML-Aktionen festgelegt, die auf das Element `head` angewendet werden, und an HTML angehängt.
 
 ## Version 2.6.3 - 16. August 2021
 
@@ -61,7 +61,7 @@ ht-degree: 4%
 * Fehlerbehebung: `sendBeacon` wurde nicht verwendet, wenn `documentUnloading` auf `true` gesetzt war oder wenn Link-Klicks automatisch verfolgt wurden.
 * Fehlerbehebung: Ein Link wird nicht automatisch verfolgt, wenn das Ankerelement HTML-Inhalt enthält.
 * Fehlerbehebung: Bestimmte Browser-Fehler, die eine schreibgeschützte `message` -Eigenschaft enthalten, wurden nicht ordnungsgemäß verarbeitet, was dazu führte, dass dem Kunden ein anderer Fehler angezeigt wurde.
-* Fehlerbehebung: Wenn das SDK in einem iframe ausgeführt wird, tritt ein Fehler auf, wenn die HTML-Seite des iframe aus einer anderen Subdomäne stammt als die HTML-Seite des übergeordneten Fensters.
+* Fehlerbehebung: Wenn das SDK in einem iframe ausgeführt wird, tritt ein Fehler auf, wenn die HTML-Seite des iframe von einer anderen Subdomäne als der HTML-Seite des übergeordneten Fensters stammt.
 
 ## Version 2.2.0 - Oktober 2020
 

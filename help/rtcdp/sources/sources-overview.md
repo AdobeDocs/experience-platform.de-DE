@@ -1,6 +1,6 @@
 ---
 keywords: rtcdp-Quellen;Quellen rtcdp;Echtzeit-Kundendatenplattformquellen
-title: Quellen in der Echtzeit-Kundendatenplattform
+title: Quellen in Real-time Customer Data Platform
 seo-title: Sources in Real-time Customer Data Platform
 description: Dieses Dokument bietet Ihnen einen Überblick über Quellen in der Echtzeit-Kundendatenplattform.
 seo-description: This document provides an overview of Sources in Real-Time Customer Data Platform
@@ -12,7 +12,7 @@ ht-degree: 33%
 
 ---
 
-# Quellen in der Echtzeit-Kundendatenplattform
+# Quellen in Real-time Customer Data Platform
 
 [!DNL Real-Time Customer Data Platform] ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Lösungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 

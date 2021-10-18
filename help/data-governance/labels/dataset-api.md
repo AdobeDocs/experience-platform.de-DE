@@ -201,7 +201,7 @@ Der folgende Abschnitt enthält weitere Informationen zum Arbeiten mit Kennzeich
 
 ### [!DNL If-Match]-Kopfzeile {#if-match}
 
-Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines Datensatzes aktualisieren (PUT und DELETE), muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für die Datensatzkennzeichnung in Dataset Service angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Dienst die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
+Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines Datensatzes aktualisieren (PUT und DELETE), muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für die Datensatzkennzeichnung in Dataset Service angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Service die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
 
 >[!NOTE]
 >

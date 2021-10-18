@@ -74,7 +74,7 @@ ht-degree: 29%
    * [Beacon](./data-types/beacon.md)
    * [Browserdetails](./data-types/browser-details.md)
    * [B2B-Quelle](./data-types/b2b-source.md)
-   * [Handel](./data-types/commerce.md)
+   * [Commerce](./data-types/commerce.md)
    * [Zustimmungszeichenfolge](./data-types/consent-string.md)
    * [Einverständnisse und Voreinstellungen](./data-types/consents.md)
    * [Währung](./data-types/currency.md)

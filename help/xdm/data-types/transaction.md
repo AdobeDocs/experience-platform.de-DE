@@ -12,7 +12,7 @@ ht-degree: 11%
 
 #  Transaktionsdatentyp
 
- Transactionist ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der die Details einer Geldtransaktion beschreibt.
+ Transactionist ein standardmäßiger Experience-Datenmodell (XDM)-Datentyp, der die Details einer monetären Transaktion beschreibt.
 
 ![Transaktionsstruktur](../images/data-types/transaction.png)
 

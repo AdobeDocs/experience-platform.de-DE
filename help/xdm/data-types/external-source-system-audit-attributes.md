@@ -13,7 +13,7 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform haben.
+>Dieser Datentyp ist nur für Unternehmen verfügbar, die Zugriff auf die B2B-Edition von Real-time Customer Data Platform haben.
 
 [!UICONTROL Die ] Audit-Eigenschaft des externen Quellsystems ist ein standardmäßiger XDM-Datentyp (Experience Data Model), der Prüfdetails zu einem externen Quellsystem erfasst.
 

@@ -76,7 +76,7 @@ Weitere Informationen finden Sie in der Übersicht zu [Datennutzungskennzeichnun
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Dienst eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen, z. B. persönliche identifizierbare Informationen (PII), nicht exportiert werden können, und der Datensatz eine Kennzeichnung „I“ (Identitätsdaten) enthält, weist [!DNL Policy Service] Sie in einer Antwort darauf hin, dass eine Datennutzungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen, z. B. persönliche identifizierbare Informationen (PII), nicht exportiert werden können, und der Datensatz eine Kennzeichnung „I“ (Identitätsdaten) enthält, weist [!DNL Policy Service] Sie in einer Antwort darauf hin, dass eine Datennutzungsrichtlinie verletzt wurde.
 
 Sobald Datennutzungsbezeichnungen angewendet wurden, können Datenverwalter mithilfe der [!DNL Policy Service]-API oder der Benutzeroberfläche von [!DNL Experience Platform] Richtlinien erstellen.
 

@@ -22,7 +22,7 @@ ht-degree: 42%
 
 Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse auch als Komponenten für neue Definitionen verwendet werden.
 
-Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von sehen.[!DNL Segment Builder] **** Felder enthalten für jeden der Hauptbausteine eine Registerkarte: &quot;[!UICONTROL Attribute]&quot;, &quot;[!UICONTROL Ereignisse]&quot;und &quot;[!UICONTROL Zielgruppen]&quot;.
+Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von sehen.[!DNL Segment Builder] **** Die Felder enthalten einen Tab für jeden der Hauptbausteine: &quot;[!UICONTROL Attribute]&quot;, &quot;[!UICONTROL Ereignisse]&quot;und &quot;[!UICONTROL Zielgruppen]&quot;.
 
 ![](../images/ui/segment-builder/segment-fields.png)
 

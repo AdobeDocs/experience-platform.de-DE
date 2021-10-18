@@ -12,9 +12,9 @@ ht-degree: 2%
 
 ---
 
-# [!DNL Spark] SQL functions
+# [!DNL Spark] SQL-Funktionen
 
-Adobe Experience Platform Query Service bietet mehrere integrierte Spark-SQL-Funktionen, um die SQL-Funktionalität zu erweitern. This document lists the Spark SQL functions that are supported by Query Service.
+Adobe Experience Platform Query Service bietet mehrere integrierte Spark-SQL-Funktionen, um die SQL-Funktionalität zu erweitern. In diesem Dokument werden die Spark-SQL-Funktionen aufgelistet, die von Query Service unterstützt werden.
 
 Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und Beispielen, finden Sie in der [Dokumentation zur SQL-Funktion](https://spark.apache.org/docs/latest/api/sql/index.html).
 
@@ -40,8 +40,8 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | ----------------- | ----------- |
 | [`%`](https://spark.apache.org/docs/latest/api/sql/index.html#_2) | Gibt den Rest der beiden Zahlen aus |
 | [`*`](https://spark.apache.org/docs/latest/api/sql/index.html#_4) | Multipliziert die beiden Zahlen |
-| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Adds the two numbers |
-| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Subtracts the two numbers |
+| [`+`](https://spark.apache.org/docs/latest/api/sql/index.html#_5) | Fügt die beiden Zahlen hinzu |
+| [`-`](https://spark.apache.org/docs/latest/api/sql/index.html#_6) | Zieht die beiden Zahlen ab |
 | [`/`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Teilt die beiden Zahlen |
 | [`abs`](https://spark.apache.org/docs/latest/api/sql/index.html#abs) | Gibt den absoluten Wert der Eingabe aus |
 | [`acos`](https://spark.apache.org/docs/latest/api/sql/index.html#acos) | Gibt den umgekehrten Kosinuswert aus |
@@ -64,22 +64,22 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | [`expm1`](https://spark.apache.org/docs/latest/api/sql/index.html#expm1) | Gibt e bis zum Wert minus 1 aus |
 | [`factorial`](https://spark.apache.org/docs/latest/api/sql/index.html#factorial) | Gibt das Faktorium des Werts aus |
 | [`floor`](https://spark.apache.org/docs/latest/api/sql/index.html#floor) | Gibt die größte Ganzzahl aus, die nicht kleiner als der Wert ist |
-| [`greatest`](https://spark.apache.org/docs/latest/api/sql/index.html#greatest) | Returns the largest value of all the parameters |
+| [`greatest`](https://spark.apache.org/docs/latest/api/sql/index.html#greatest) | Gibt den größten Wert aller Parameter aus |
 | [`hypot`](https://spark.apache.org/docs/latest/api/sql/index.html#hypot) | Gibt die Hypotonie der beiden angegebenen Werte aus |
 | [`kurtosis`](https://spark.apache.org/docs/latest/api/sql/index.html#kurtosis) | Gibt den Kurtosis-Wert aus der Gruppe aus |
 | [`least`](https://spark.apache.org/docs/latest/api/sql/index.html#least) | Gibt den kleinsten Wert aller Parameter aus |
-| [`ln`](https://spark.apache.org/docs/latest/api/sql/index.html#ln) | Returns the natural logarithm of the value |
+| [`ln`](https://spark.apache.org/docs/latest/api/sql/index.html#ln) | Gibt den natürlichen Logarithmus des Werts aus |
 | [`log`](https://spark.apache.org/docs/latest/api/sql/index.html#log) | Gibt den Logarithmus des Werts aus |
-| [`log10`](https://spark.apache.org/docs/latest/api/sql/index.html#log10) | Returns the logarithm, in base 10, of the value |
+| [`log10`](https://spark.apache.org/docs/latest/api/sql/index.html#log10) | Gibt den Logarithmus (Basis 10) des Werts aus |
 | [`log1p`](https://spark.apache.org/docs/latest/api/sql/index.html#log1p) | Gibt den Logarithmus des Werts plus 1 aus |
-| [`log2`](https://spark.apache.org/docs/latest/api/sql/index.html#log2) | Returns the logarithm, in base 2, of the value |
+| [`log2`](https://spark.apache.org/docs/latest/api/sql/index.html#log2) | Gibt den Logarithmus (Basis 2) des Werts aus |
 | [`max`](https://spark.apache.org/docs/latest/api/sql/index.html#max) | Gibt den Maximalwert des Ausdrucks aus |
 | [`mean`](https://spark.apache.org/docs/latest/api/sql/index.html#mean) | Gibt den aus den Werten berechneten Mittelwert aus |
 | [`min`](https://spark.apache.org/docs/latest/api/sql/index.html#min) | Gibt den Mindestwert des Ausdrucks aus |
 | [`monotonically_increasing_id`](https://spark.apache.org/docs/latest/api/sql/index.html#monotonically_increasing_id) | Gibt monoton steigende IDs zurück |
 | [`negative`](https://spark.apache.org/docs/latest/api/sql/index.html#negative) | Gibt den negativen Wert aus |
 | [`percent_rank`](https://spark.apache.org/docs/latest/api/sql/index.html#percent_rank) | Gibt die prozentuale Rangfolge eines Werts aus |
-| [`percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile) | Returns the exact percentile at a given percentage |
+| [`percentile`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile) | Gibt das genaue Perzentil in Prozent aus |
 | [`percentile_approx`](https://spark.apache.org/docs/latest/api/sql/index.html#percentile_approx) | Gibt den Näherungswert des Perzentils in Prozent aus |
 | [`pi`](https://spark.apache.org/docs/latest/api/sql/index.html#pi) | Gibt pi zurück |
 | [`pmod`](https://spark.apache.org/docs/latest/api/sql/index.html#pmod) | Gibt das positive Modul zwischen zwei Werten aus |
@@ -120,14 +120,14 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | Gibt die allgemeinen Elemente aus |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | Legt fest, ob der Ausdruck wahr ist |
 | [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | Wenn der Ausdruck &quot;true&quot;ergibt, geben Sie den zweiten Ausdruck zurück. Geben Sie andernfalls den dritten Ausdruck zurück. |
-| [`ifnull`](https://spark.apache.org/docs/latest/api/sql/index.html#ifnull) | Wenn der Ausdruck null ist, wird der zweite Ausdruck zurückgegeben. Otherwise, it returns the first expression. |
+| [`ifnull`](https://spark.apache.org/docs/latest/api/sql/index.html#ifnull) | Wenn der Ausdruck null ist, wird der zweite Ausdruck zurückgegeben. Andernfalls wird der erste Ausdruck zurückgegeben. |
 | [`in`](https://spark.apache.org/docs/latest/api/sql/index.html#in) | Gibt &quot;true&quot;zurück, wenn der erste Ausdruck in einem der folgenden Ausdrücke enthalten ist. |
 | [`isnan`](https://spark.apache.org/docs/latest/api/sql/index.html#isnan) | Gibt &quot;true&quot;zurück, wenn der Wert keine Zahl ist |
-| [`isnotnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnotnull) | Returns true if the value is not null |
+| [`isnotnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnotnull) | Gibt &quot;true&quot;zurück, wenn der Wert nicht null ist |
 | [`isnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnull) | Gibt &quot;true&quot;zurück, wenn der Wert null ist |
 | [`nanvl`](https://spark.apache.org/docs/latest/api/sql/index.html#nanvl) | Gibt den ersten Ausdruck aus, wenn nicht eine Zahl, sonst den zweiten Ausdruck |
 | [`or`](https://spark.apache.org/docs/latest/api/sql/index.html#or) | Logisches Oder |
-| [`when`](https://spark.apache.org/docs/latest/api/sql/index.html#when) | When can be used to create branch conditions for comparison |
+| [`when`](https://spark.apache.org/docs/latest/api/sql/index.html#when) | Wann kann verwendet werden, um verzweigte Bedingungen für den Vergleich zu erstellen? |
 | [`xpath_boolean`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_boolean) | Gibt &quot;true&quot;zurück, wenn der XPath-Ausdruck &quot;true&quot;ergibt oder ein übereinstimmender Knoten gefunden wird |
 
 ### Funktionen für Datum/Uhrzeit {#datetime-functions}
@@ -138,9 +138,9 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | [`date_add`](https://spark.apache.org/docs/latest/api/sql/index.html#date_add) | Tage zum Datum hinzufügen |
 | [`date_format`](https://spark.apache.org/docs/latest/api/sql/index.html#date_format) | Datumsformat ändern |
 | [`date_sub`](https://spark.apache.org/docs/latest/api/sql/index.html#date_sub) | Tage vom Datum absetzen |
-| [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | Returns the date truncated to the specified unit |
+| [`date_trunc`](https://spark.apache.org/docs/latest/api/sql/index.html#date_trunc) | Gibt das Datum aus, das auf die angegebene Einheit gekürzt wurde |
 | [`datediff`](https://spark.apache.org/docs/latest/api/sql/index.html#datediff) | Gibt die Differenz zwischen den Daten in Tagen aus |
-| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day), [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Gibt den Tag des Monats aus |
+| [`day`](https://spark.apache.org/docs/latest/api/sql/index.html#day),  [`dayofmonth`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofmonth) | Gibt den Tag des Monats aus |
 | [`dayofweek`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofweek) | Gibt den Wochentag aus (1-7) |
 | [`dayofyear`](https://spark.apache.org/docs/latest/api/sql/index.html#dayofyear) | Gibt den Tag des Jahres aus |
 | [`from_unixtime`](https://spark.apache.org/docs/latest/api/sql/index.html#from_unixtime) | Gibt Datum in Unix-Zeit zurück |
@@ -187,13 +187,13 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | [`explode_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#explode_outer) | Trennen Sie Elemente des Arrays in mehrere Zeilen, einschließlich null. |
 | [`find_in_set`](https://spark.apache.org/docs/latest/api/sql/index.html#find_in_set) | Gibt die 1-basierte Position des Arrays aus |
 | [`flatten`](https://spark.apache.org/docs/latest/api/sql/index.html#flatten) | Reduziert ein Array von Arrays |
-| [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Separate array of structs into a table, excluding null |
+| [`inline`](https://spark.apache.org/docs/latest/api/sql/index.html#inline) | Trennen Sie ein Array von Strukturen in eine Tabelle, ohne Null |
 | [`inline_outer`](https://spark.apache.org/docs/latest/api/sql/index.html#inline_outer) | Trennen Sie das Array von Strukturen in eine Tabelle, einschließlich null. |
-| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Separate elements of array into multiple rows with positions, excluding null |
+| [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Trennen Sie Elemente des Arrays in mehrere Zeilen mit Positionen, ausgenommen Null |
 | [`posexplod`](https://spark.apache.org/docs/latest/api/sql/index.html#posexplod) | Trennen Sie Elemente des Arrays in mehrere Zeilen mit Positionen, einschließlich null |
 | [`reverse`](https://spark.apache.org/docs/latest/api/sql/index.html#reverse) | Umkehrelemente des Arrays |
 | [`shuffle`](https://spark.apache.org/docs/latest/api/sql/index.html#shuffle) | Zufällige Permutation des Arrays zurückgeben |
-| [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Subsets an array |
+| [`slice`](https://spark.apache.org/docs/latest/api/sql/index.html#slice) | Teilt ein Array ein |
 | [`sort_array`](https://spark.apache.org/docs/latest/api/sql/index.html#sort_array) | Sortieren eines Arrays in einer bestimmten Reihenfolge |
 | [`zip_with`](https://spark.apache.org/docs/latest/api/sql/index.html#zip_with) | Führt die beiden Arrays in einem Array zusammen, bevor eine Funktion angewendet wird |
 
@@ -268,13 +268,13 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | [`elt`](https://spark.apache.org/docs/latest/api/sql/index.html#elt) | [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)die Eingabe zurückgeben |
 | [`encode`](https://spark.apache.org/docs/latest/api/sql/index.html#encode) | Kodieren mit einem Zeichensatz |
 | [`first`](https://spark.apache.org/docs/latest/api/sql/index.html#first),  [`first_value`](https://spark.apache.org/docs/latest/api/sql/index.html#first_value) | Gibt den ersten Wert aus |
-| [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Indicates if a column is grouped |
-| [`grouping_id`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping_id) | Returns the level of grouping |
-| [`instr`](https://spark.apache.org/docs/latest/api/sql/index.html#instr) | Returns a 1-based index of character occurrence |
+| [`grouping`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping) | Gibt an, ob eine Spalte gruppiert ist |
+| [`grouping_id`](https://spark.apache.org/docs/latest/api/sql/index.html#grouping_id) | Gibt die Gruppierungsebene aus |
+| [`instr`](https://spark.apache.org/docs/latest/api/sql/index.html#instr) | Gibt einen 1-basierten Index des Vorkommens von Zeichen aus |
 | [`json_tuple`](https://spark.apache.org/docs/latest/api/sql/index.html#json_tuple) | Gibt einen Tupel aus einer JSON-Eingabe zurück |
 | [`lag`](https://spark.apache.org/docs/latest/api/sql/index.html#lag),  [`lead`](https://spark.apache.org/docs/latest/api/sql/index.html#lead) | Gibt den Wert vor dem Versatz aus |
 | [`last`](https://spark.apache.org/docs/latest/api/sql/index.html#last),  [`last_value`](https://spark.apache.org/docs/latest/api/sql/index.html#last_value) | Gibt den letzten Wert aus |
-| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Returns the first [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n) characters |
+| [`left`](https://spark.apache.org/docs/latest/api/sql/index.html#left) | Gibt die ersten [`n`](https://spark.apache.org/docs/latest/api/sql/index.html#n)-Zeichen aus |
 | [`length`](https://spark.apache.org/docs/latest/api/sql/index.html#length) | Gibt die Länge des Strings aus |
 | [`levenshtein`](https://spark.apache.org/docs/latest/api/sql/index.html#levenshtein) | Gibt den Levenshtein-Abstand zwischen Zeichenfolgen aus |
 | [`locate`](https://spark.apache.org/docs/latest/api/sql/index.html#locate),  [`position`](https://spark.apache.org/docs/latest/api/sql/index.html#position) | Gibt die Position des ersten Vorkommens einer Teilzeichenfolge aus |
@@ -327,4 +327,4 @@ Weitere Informationen zu den Funktionen, einschließlich Syntax, Verwendung und 
 | [`transform`](https://spark.apache.org/docs/latest/api/sql/index.html#transform) | Elemente in einem Array umwandeln |
 | [`exists`](https://spark.apache.org/docs/latest/api/sql/index.html#exists) | Überprüfen, ob Element vorhanden ist |
 | [`filter`](https://spark.apache.org/docs/latest/api/sql/index.html#filter) | Filtern des Eingabe-Arrays |
-| [`aggregate`](https://spark.apache.org/docs/latest/api/sql/index.html#aggregate) | Apply a binary operator to all elements |
+| [`aggregate`](https://spark.apache.org/docs/latest/api/sql/index.html#aggregate) | Anwenden eines binären Operators auf alle Elemente |

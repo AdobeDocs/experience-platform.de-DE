@@ -1,6 +1,6 @@
 ---
 keywords: Segmentierung; Segmentierungsrtcdp;Segmentierung der Echtzeit-Kundendatenplattform
-title: Segmentierungsdienst in der Echtzeit-Kundendatenplattform
+title: Segmentierungsdienst in Real-time Customer Data Platform
 seo-title: Segmentation Service in Real-time Customer Data Platform
 description: Die Echtzeit-Kundendatenplattform basiert auf Adobe Experience Platform und nutzt viele Dienste und Funktionen von Experience Platform. Mit dem Segmentierungsdienst können Sie für ein maßgeschneidertes Marketing sorgen, indem Sie Ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften aufteilen.
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
@@ -27,13 +27,13 @@ Bei Segmentierung handelt es sich um den Prozess der Definition spezifischer Att
 
 ## Customer AI
 
-Customer AI in der Echtzeit-Kundendatenplattform bietet Ihnen die Möglichkeit, Kundenprognosen auf individueller Ebene mit Erklärungen zu generieren.
+Die in Real-time Customer Data Platform enthaltene Customer AI bietet Ihnen die Möglichkeit, Kundenprognosen auf individueller Ebene mit Erläuterungen zu generieren.
 
 Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Sie von Prognosen und Einblicken von Customer AI profitieren, um Kundenerlebnisse zu personalisieren, indem Sie die am besten geeigneten Angebote und Botschaften bereitstellen. Customer AI kann bei Folgendem helfen:
 
 * Bereitstellung von hochpräzisen kundenspezifischen Tendenzmodellen für eine stärkere Segmentierung und Targeting.
 * Verstehen der Einflussfaktoren und Wahrscheinlichkeiten hinter bestimmten Kundenverhaltensweisen.
-* Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens
+* Bereitstellung anpassbarer Optionen für die einzigartigen Anwendungsfälle und Daten Ihres Unternehmens.
 * Verbesserung des Echtzeit-Kundenprofils mit kundenspezifischen Tendenzwerten wie Abwanderung und Konversion.
 * Verbesserung von Kundenprofilen mit Einflussfaktoren für Tendenzwerte.
 * Erstellen von Kundensegmenten basierend auf Einflussfaktoren und Tendenzwerten.

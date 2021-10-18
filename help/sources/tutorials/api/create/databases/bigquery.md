@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform; home; beliebte Themen; bigquery; Google; Google; Google BigQuery
+keywords: Experience Platform; Startseite; beliebte Themen; bigquery; Google; Google; Google BigQuery
 solution: Experience Platform
 title: Erstellen einer Google BigQuery-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Google BigQuery verbinden.
+description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Google BigQuery verbinden.
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
 workflow-type: tm+mt

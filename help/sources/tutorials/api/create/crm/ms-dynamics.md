@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Microsoft Dynamics;Microsoft Dynamics;Dynamik
+keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamics;dynamics;Dynamics
 solution: Experience Platform
-title: Erstellen einer Microsoft Dynamics-Basisverbindung mithilfe der Flow Service-API
+title: Erstellen einer Microsoft Dynamics-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Platform mit einem Microsoft Dynamics-Konto verbinden.

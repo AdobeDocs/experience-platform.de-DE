@@ -60,5 +60,5 @@ Der Schritt [!UICONTROL Überprüfen] wird angezeigt, mit dem Sie Ihren neuen Da
 
 Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der ersten Aufnahme können Kundenattributprofildaten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Segmentation Service] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] Übersicht](../../../../../segmentation/home.md)
+* [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] – Übersicht](../../../../../segmentation/home.md)

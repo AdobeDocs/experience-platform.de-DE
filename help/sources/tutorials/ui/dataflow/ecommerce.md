@@ -119,7 +119,7 @@ Um die einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die
 
 >[!TIP]
 >
->**** Intervalle und  **** Aufstockungen sind während einer einmaligen Erfassung nicht sichtbar.
+>**** Während einer einmaligen Erfassung sind keine  **** Aufstockungen sichtbar.
 
 Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]** aus.
 
@@ -159,5 +159,5 @@ Sie können Datenflüsse löschen, die nicht mehr erforderlich sind oder falsch 
 
 In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um **[!UICONTROL eCommerce]**-Daten einzubringen und Einblicke in die Überwachung von Datensätzen zu erhalten. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Real-time Customer Profile] Übersicht](../../../../profile/home.md)
-- [[!DNL Data Science Workspace] Übersicht](../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] – Übersicht](../../../../profile/home.md)
+- [[!DNL Data Science Workspace] – Übersicht](../../../../data-science-workspace/home.md)

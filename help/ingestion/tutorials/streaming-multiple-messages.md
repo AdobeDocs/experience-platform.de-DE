@@ -549,4 +549,4 @@ Die folgende Tabelle zeigt Status-Codes, die von erfolgreichen und fehlgeschlage
 | 413 | Payload zu groß – Wird ausgelöst, wenn die Payload-Anfrage insgesamt größer als 1 MB ist. |
 | 429 | Zu viele Anfragen innerhalb der angegebenen Zeitdauer. |
 | 500 | Fehler bei der Verarbeitung der Payload. Im Antworttext finden Sie eine spezifischere Fehlermeldung (z. B. das Nachrichten-Payload-Schema wurde nicht angegeben oder entsprach nicht der XDM-Definition in [!DNL Platform]). |
-| 503 | Der Dienst ist derzeit nicht verfügbar. Kunden sollten es mindestens dreimal mit einer exponentiellen Back-off-Strategie versuchen. |
+| 503 | Der Service ist derzeit nicht verfügbar. Kunden sollten es mindestens dreimal mit einer exponentiellen Back-off-Strategie versuchen. |

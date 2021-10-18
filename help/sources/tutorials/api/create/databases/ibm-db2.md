@@ -13,11 +13,11 @@ ht-degree: 6%
 
 ---
 
-# Erstellen einer IBM [!DNL IBM DB2]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Erstellen einer IBM [!DNL IBM DB2]-Basisverbindung mit der [!DNL Flow Service]-API
 
 >[!NOTE]
 >
->Der IBM [!DNL IBM DB2]-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
+>Der IBM [!DNL IBM DB2]-Connector befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 

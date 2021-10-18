@@ -85,7 +85,7 @@ Mit dieser Option kann das SDK versuchen, eine Benutzer-ID in einem Drittanbiete
 
 ![](../images/extension/overview/personalization.png)
 
-Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personalisierter Inhalte geladen wird, können Sie die Elemente angeben, die im Stil-Editor zum Vorab-Ausblenden ausgeblendet werden sollen. Anschließend können Sie das Ihnen bereitgestellte standardmäßige Codefragment zur Vorab-Ausblendung kopieren und in das `<head>`-Element Ihrer HTML-Site einfügen.
+Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personalisierter Inhalte geladen wird, können Sie die Elemente angeben, die im Stil-Editor zum Vorab-Ausblenden ausgeblendet werden sollen. Anschließend können Sie das Ihnen bereitgestellte standardmäßige Codefragment zur Vorab-Ausblendung kopieren und in das Element `<head>`Ihrer HTML-Site einfügen.
 
 ## [!UICONTROL Datenerfassung]
 

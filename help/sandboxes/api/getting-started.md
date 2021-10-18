@@ -12,7 +12,7 @@ ht-degree: 87%
 
 ---
 
-# Handbuch zur Sandbox-API
+# Sandbox API guide
 
 Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen.
 
@@ -20,7 +20,7 @@ In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie die Sandbox-AP
 
 ## Erste Schritte mit der Sandbox-API
 
-Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Benutzer ohne Zugriffsberechtigungen können den [verfügbaren Sandbox-Endpunkt](./available.md) nur verwenden, um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
+Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Users without access permissions can only use the [available sandboxes endpoint](./available.md) to list active sandboxes for the current user. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 

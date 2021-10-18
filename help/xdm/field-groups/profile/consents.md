@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # [!UICONTROL Feldergruppe &quot;Einwilligungen und ] Voreinstellungen&quot;
 
-[!UICONTROL Zustimmung und ]Voreinstellungen sind eine Standardfeldgruppe für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md), die zum Erfassen der Kundenzustimmung und der Präferenzinformationen verwendet wird.
+[!UICONTROL Zustimmung und ]Voreinstellung sind eine Standardfeldgruppe für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md), die zum Erfassen der Kundenzustimmung und der Präferenzinformationen verwendet wird.
 
 >[!NOTE]
 >

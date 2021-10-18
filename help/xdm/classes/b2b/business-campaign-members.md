@@ -13,7 +13,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Diese Klasse ist als Teil der Echtzeit-Kundendatenplattform B2B Edition verfügbar, die sich derzeit in der Betaphase befindet. Dokumentation und Funktionalität können sich ändern.
+>Diese Klasse ist als Teil der Real-time Customer Data Platform B2B Edition verfügbar, die sich derzeit in der Beta-Phase befindet. Dokumentation und Funktionalität können sich ändern.
 
 [!UICONTROL XDM Business Campaign ] Membersis ist eine standardmäßige XDM-Klasse (Experience-Datenmodell), die einen Kontakt oder einen Lead beschreibt, der mit einer Geschäftskampagne verknüpft ist.
 

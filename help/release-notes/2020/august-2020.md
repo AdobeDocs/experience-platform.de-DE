@@ -45,7 +45,7 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 | Ziel | Beschreibung |
 |--- | ---|
-| [!DNL Google Customer Match] | Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die von Google verwalteten und betriebenen Eigenschaften hinweg zu erreichen und erneut mit ihnen zu interagieren, z. B.: [!DNL Search], [!DNL Shopping], Gmail und YouTube. <br><br> Weitere Informationen zum Ziel und dessen Einrichtung in der Echtzeit-Kundendatenplattform finden Sie auf der  [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) Seite im Zielkatalog . |
+| [!DNL Google Customer Match] | Mit Google Customer Match können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut mit ihnen zu interagieren, z. B.: [!DNL Search], [!DNL Shopping], Gmail und YouTube. <br><br> Weitere Informationen zum Ziel und dessen Einrichtung in der Echtzeit-Kundendatenplattform finden Sie auf der  [!DNL Google Customer Match] [](../../destinations/catalog/advertising/google-customer-match.md) Seite im Zielkatalog . |
 
 **Neue Funktionen**
 
@@ -56,7 +56,7 @@ Es stehen neue Ziele zur Verfügung, für die Sie Ihre Adobe Experience Platform
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Basierend auf Experience Platform hilft die Echtzeit-Kundendatenplattform ([!DNL Real-time CDP]) Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
+Real-time Customer Data Platform ([!DNL Real-time CDP]) basiert auf Experience Platform und hilft Unternehmen dabei, bekannte und unbekannte Daten zusammenzuführen, um Kundenprofile durch intelligente Entscheidungen auf der gesamten Journey zu aktivieren. [!DNL Real-time CDP] kombiniert mehrere Unternehmensdatenquellen, um Kundenprofile in Echtzeit zu erstellen. Segmente, die aus diesen Profilen erstellt wurden, können dann an nachgelagerte Ziele gesendet werden, um eine Eins-zu-Eins-Kundenerfahrung über alle Kanäle und Geräte hinweg bereitzustellen.
 
 **Neue Funktionen**
 

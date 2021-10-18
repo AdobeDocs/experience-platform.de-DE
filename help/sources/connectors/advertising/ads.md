@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Google AdWords; Google AdWords
 solution: Experience Platform
-title: Übersicht über den Quell-Connector für Google AdWords
+title: Google AdWords Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Google AdWords über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c

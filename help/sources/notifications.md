@@ -16,7 +16,7 @@ ht-degree: 7%
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) -APIs dienen zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen in  [!DNL Platform]. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
+[[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/) APIs dienen zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen in  [!DNL Platform]. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
 Mit Adobe I/O Events können Sie  abonnieren und Webhooks verwenden, um Benachrichtigungen über den Ausführungsstatus zu erhalten. Diese Benachrichtigungen enthalten Informationen zum Erfolg Ihrer Flussausführung oder zu Fehlern, die zum Fehler einer Ausführung beigetragen haben.
 

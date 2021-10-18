@@ -6,7 +6,8 @@ topic-legacy: tutorial
 description: Bei der Erkennung freigegebener Geräte werden verschiedene authentifizierte Benutzer desselben Geräts identifiziert, sodass Kundendaten in Identitätsdiagrammen genauer dargestellt werden können.
 hide: true
 hidefromtoc: true
-source-git-commit: 1cdab6ce71c748ae174700ce50f50b143e46b40f
+exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
+source-git-commit: b948aef2032503bba763b9843402c27cbd747c0d
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 8%

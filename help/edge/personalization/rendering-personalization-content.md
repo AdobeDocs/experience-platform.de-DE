@@ -220,7 +220,7 @@ An dieser Stelle können Sie den Vorschlagsinhalt nach Bedarf rendern. In diesem
 
 1. Entpacken Sie Vorschläge aus dem `result` -Objekt.
 1. Durchlaufen Sie jeden Vorschlag und suchen Sie nach dem Vorschlag mit einem Umfang von `discount`.
-1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag und suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
+1. Wenn Sie einen Vorschlag finden, durchlaufen Sie jedes Element im Vorschlag, suchen Sie nach dem Element, das HTML-Inhalt ist. (Es ist besser zu überprüfen als anzunehmen.)
 1. Wenn Sie ein Element mit HTML-Inhalt finden, suchen Sie das Element `daily-special` auf der Seite und ersetzen Sie dessen HTML durch den personalisierten Inhalt.
 1. Nachdem der Inhalt wiedergegeben wurde, senden Sie ein `display` -Ereignis.
 

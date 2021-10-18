@@ -69,7 +69,7 @@ Jeder einzelne Datenfluss zeigt die folgenden Details an:
 - **[!UICONTROL Identitäten]** fehlgeschlagenDie Gesamtzahl der Profilidentitäten, die aufgrund von Fehlern nicht für das Ziel aktiviert werden.
 - **[!UICONTROL Aktivierungsrate]**: Der Prozentsatz der empfangenen Identitäten, die erfolgreich aktiviert oder übersprungen wurden. Die folgende Formel zeigt, wie dieser Wert berechnet wird:
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
-- **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder   Abgeschlossen oder  [!UICONTROL Verarbeitung].  Abgeschlossen bedeutet, dass alle Identitäten für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde erfasst wurden.  Verarbeitung bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
+- **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder   Abgeschlossen oder  [!UICONTROL Verarbeitung].  Abgeschlossen bedeutet, dass alle Identitäten für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde erfasst wurden.  Verarbeitung bedeutet, dass der Datenfluss noch nicht abgeschlossen ist.
 
 Um die Details eines bestimmten Datenfluss-Laufs anzuzeigen, wählen Sie die Startzeit der Ausführung aus der Liste aus.
 

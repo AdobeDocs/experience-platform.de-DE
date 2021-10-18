@@ -53,7 +53,7 @@ Wählen Sie den gewünschten Datenstrom aus und klicken Sie dann auf **[!UICONTR
 
 Nach dem Hochladen des Schemas wird die Vorschau-Oberfläche aktualisiert, um eine Vorschau des hochgeladenen Schemas anzuzeigen. Über die Vorschau-Oberfläche können Sie den Inhalt und die Struktur einer Datei überprüfen. Sie können auch das Dienstprogramm [!UICONTROL Suchfeld] verwenden, um auf bestimmte Elemente innerhalb Ihres Schemas zuzugreifen.
 
-Wählen Sie nach Abschluss **[!UICONTROL Weiter]** aus.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![schema-preview](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
 
@@ -138,5 +138,5 @@ Nachdem Ihr Streaming-Cloud-Speicher-Datenfluss erstellt wurde, können Sie die 
 
 In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um Daten von einer Cloud-Speicherquelle zu streamen. Eingehende Daten können jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
-- [[!DNL Data Science Workspace] Übersicht](../../../../../data-science-workspace/home.md)
+- [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+- [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)

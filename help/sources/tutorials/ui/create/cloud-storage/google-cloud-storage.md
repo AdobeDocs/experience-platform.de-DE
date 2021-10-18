@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Google Cloud-Speicher; Google Cloud-Speicher; GCS; Gcs
+keywords: Experience Platform;Startseite;beliebte Themen;Google Cloud-Speicher;Google Cloud-Speicher;GCS;Gcs
 solution: Experience Platform
 title: Erstellen einer Google Cloud-Speicherquellenverbindung in der Benutzeroberfläche
 topic-legacy: overview
@@ -45,7 +45,7 @@ Um auf Ihre GCS-Daten auf [!DNL Platform] zugreifen zu können, müssen Sie die 
 | Zugriffsschlüssel-ID | Eine alphanumerische Zeichenfolge mit 61 Zeichen, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. |
 | Geheimer Zugriffsschlüssel | Eine base-64-kodierte Zeichenfolge mit 40 Zeichen, die zur Authentifizierung Ihres [!DNL Google Cloud Storage]-Kontos bei Platform verwendet wird. |
 
-Weitere Informationen zu diesen Werten finden Sie im Handbuch [Google Cloud Storage HMAC-Schlüssel](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) . Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und des geheimen Zugriffsschlüssels finden Sie in der [[!DNL Google Cloud Storage] Übersicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
+Weitere Informationen zu diesen Werten finden Sie im Handbuch [Google Cloud-Speicher-HMAC-Schlüssel](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) . Anweisungen zum Generieren Ihrer eigenen Zugriffsschlüssel-ID und des geheimen Zugriffsschlüssels finden Sie in der [[!DNL Google Cloud Storage] Übersicht](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ## Ihr [!DNL Google Cloud Storage]-Konto verbinden
 
@@ -59,7 +59,7 @@ Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICO
 
 ![Katalog](../../../../images/tutorials/create/google-cloud-storage/catalog.png)
 
-Die Seite **[!UICONTROL Verbindung zu Google Cloud Storage]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die Seite **[!UICONTROL Verbindung mit Google Cloud Storage]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Neues Konto
 

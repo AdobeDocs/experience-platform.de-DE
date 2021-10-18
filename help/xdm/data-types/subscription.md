@@ -12,9 +12,9 @@ ht-degree: 25%
 
 ---
 
-#  Subscriptiondata-Typ
+#  Subscriptiondata type
 
- Abonnements sind ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der lizenzierte Berechtigungen für Software, Dienste oder Waren beschreibt, die basierend auf der Zeit oder Nutzung verwendet werden.
+ Abonnements sind ein standardmäßiger XDM-Datentyp (Experience-Datenmodell), der lizenzierte Berechtigungen für Software, Dienste oder Güter beschreibt, die basierend auf der Zeit oder Nutzung verwendet werden.
 
 <img src="../images/data-types/subscription-data-type.png" width="500" /><br />
 

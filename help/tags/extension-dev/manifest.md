@@ -140,7 +140,7 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
   "properties": {
     "delay": {
       "type": "number",
-      "minimum": 3
+      "minimum": 1
     }
   },
   "erforderlich": [

@@ -20,7 +20,7 @@ Dieses Dokument bietet einen Überblick darüber, wie Sie Ihre Datenvorgänge in
 
 >[!NOTE]
 >
->Dieses Dokument konzentriert sich auf die Verarbeitung von Einwilligungsdaten unter Verwendung des Adobe-Standards. Wenn Sie Einwilligungsdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 verarbeiten, lesen Sie das Handbuch zur [TCF 2.0-Unterstützung in der Echtzeit-Kundendatenplattform](../iab/overview.md).
+>Dieses Dokument konzentriert sich auf die Verarbeitung von Einwilligungsdaten unter Verwendung des Adobe-Standards. Wenn Sie Einwilligungsdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 verarbeiten, lesen Sie das Handbuch zum [TCF 2.0-Support in Real-time Customer Data Platform](../iab/overview.md).
 
 ## Voraussetzungen
 

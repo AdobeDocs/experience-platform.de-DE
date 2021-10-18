@@ -1,5 +1,5 @@
 ---
-keywords: Google Ads; Google Ads; Google Ads-Erweiterung; Google Ads-Erweiterung
+keywords: Google-Anzeigen;Google-Anzeigen;Google-Anzeigen-Erweiterung;Google Ads-Erweiterung
 title: Google Ads-Erweiterung
 description: Die Google Ads-Erweiterung ist ein Werbeziel in Adobe Experience Platform. Weitere Informationen zur Funktionalität der Erweiterung finden Sie auf der Seite der Erweiterung auf Adobe Exchange.
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a

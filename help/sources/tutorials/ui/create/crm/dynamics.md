@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Microsoft Dynamics;Microsoft Dynamics;Dynamics;Dynamik
+keywords: Experience Platform;Startseite;beliebte Themen;Microsoft Dynamics;Mikrosoft dynamics;Dynamics;Dynamik
 solution: Experience Platform
 title: Erstellen einer Microsoft Dynamics-Quellverbindung in der Benutzeroberfläche
 topic-legacy: overview
@@ -48,7 +48,7 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie **[!UICONTROL CRM]** **[!UICONTROL Microsoft Dynamics]** aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Klicken Sie andernfalls auf **[!UICONTROL Daten hinzufügen]** , um einen neuen [!DNL Dynamics]-Connector zu erstellen.
+Wählen Sie unter der Kategorie **[!UICONTROL CRM]** die Option **[!UICONTROL Microsoft Dynamics]** aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Klicken Sie andernfalls auf **[!UICONTROL Daten hinzufügen]** , um einen neuen [!DNL Dynamics]-Connector zu erstellen.
 
 ![Katalog](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 

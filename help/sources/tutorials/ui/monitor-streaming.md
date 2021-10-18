@@ -62,7 +62,7 @@ Jeder einzelne Datenfluss zeigt die folgenden Details an:
 * **[!UICONTROL Aufgenommene]** Datensätze: Die Gesamtzahl der erfassten Datensätze in  [!DNL Data Lake].
 * **[!UICONTROL Datensätze fehlgeschlagen]**: Die Anzahl der Datensätze, die  [!DNL Data Lake] aufgrund von Datenfehlern nicht in erfasst wurden.
 * **[!UICONTROL Aufnahmerate]**: Die Erfolgsrate der erfassten Datensätze  [!DNL Data Lake]. Diese Metrik ist anwendbar, wenn [!UICONTROL Partielle Erfassung] aktiviert ist.
-* **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder   Abgeschlossen oder  [!UICONTROL Verarbeitung].  Abgeschlossen bedeutet, dass alle Datensätze für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde verarbeitet wurden.  Verarbeitung bedeutet, dass die Ausführung des Datenflusses noch nicht abgeschlossen ist.
+* **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet: entweder   Abgeschlossen oder  [!UICONTROL Verarbeitung].  Abgeschlossen bedeutet, dass alle Datensätze für den entsprechenden Datenfluss innerhalb des Zeitraums von einer Stunde verarbeitet wurden.  Verarbeitung bedeutet, dass der Datenfluss noch nicht abgeschlossen ist.
 
 Standardmäßig enthalten die angezeigten Daten die Aufnahmeraten der letzten sieben Tage. Wählen Sie **[!UICONTROL Letzte 7 Tage]** aus, um den Zeitrahmen der angezeigten Datensätze anzupassen.
 

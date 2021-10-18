@@ -20,7 +20,7 @@ Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit A
 
 ### Verbindungsparameter anfordern
 
-Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/connection_parameters` stellen. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Dienst herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
+Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/connection_parameters` stellen. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
 
 **API-Format**
 

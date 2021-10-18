@@ -165,11 +165,11 @@ In diesem Abschnitt werden wir kurz einige Vorteile für die Verwendung der einz
 
 [](https://matplotlib.org/) Matplotlibis zum ältesten  [!DNL Python] Visualisierungspaket. Ihr Ziel ist es, &quot;einfache Dinge einfach und schwierige Dinge möglich zu machen&quot;. Dies trifft in der Regel zu, da das Paket sehr leistungsstark ist, aber auch mit Komplexität verbunden ist. Es ist nicht immer einfach, ein vernünftiges und aussehendes Diagramm zu erhalten, ohne viel Zeit und Mühe in Anspruch zu nehmen.
 
-[](https://pandas.pydata.org/) Pandasis wird hauptsächlich für sein DataFrame-Objekt verwendet, das Datenmanipulationen mit integrierter Indizierung ermöglicht. Pandas umfasst jedoch auch eine integrierte Plotting-Funktion, die auf matplotlib basiert.
+[](https://pandas.pydata.org/) Pandasis wird hauptsächlich für sein DataFrame-Objekt verwendet, das die Datenbearbeitung mit integrierter Indizierung ermöglicht. Pandas umfasst jedoch auch eine integrierte Plotting-Funktion, die auf matplotlib basiert.
 
-[](https://seaborn.pydata.org/) seabornis ein Paket Build auf der matplotlib. Ihr Hauptziel besteht darin, Standardgrafiken visueller ansprechender zu gestalten und die Erstellung komplexer Diagramme zu vereinfachen.
+[](https://seaborn.pydata.org/) seabornis ein Paket auf matplotlib aufbauen. Ihr Hauptziel besteht darin, Standardgrafiken visueller ansprechender zu gestalten und die Erstellung komplexer Diagramme zu vereinfachen.
 
-[](https://ggplot2.tidyverse.org/) ggplotis ein Paket, das auch auf matplotlib aufbaut. Der Hauptunterschied besteht jedoch darin, dass das Tool ein Port von ggplot2 für R ist. Ähnlich wie bei seaborn ist das Ziel, die matplotlib zu verbessern. Benutzer, die mit ggplot2 for R vertraut sind, sollten diese Bibliothek berücksichtigen.
+[](https://ggplot2.tidyverse.org/) ggplotis ein Paket auch auf matplotlib gebaut. Der Hauptunterschied besteht jedoch darin, dass das Tool ein Port von ggplot2 für R ist. Ähnlich wie bei seaborn ist das Ziel, die matplotlib zu verbessern. Benutzer, die mit ggplot2 for R vertraut sind, sollten diese Bibliothek berücksichtigen.
 
 
 ##### Eindimensionale Diagramme

@@ -50,7 +50,7 @@ ht-degree: 44%
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
       * [Flashspeak OneTag-Erweiterung](./catalog/advertising/flashtalking.md)
-      * [Google Ads-Verbindung](./catalog/advertising/google-ads-destination.md)
+      * [Verbindung zu Google Ads](./catalog/advertising/google-ads-destination.md)
       * [Google Ads-Erweiterung](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
       * [Google-Kundenabgleich-Verbindung](./catalog/advertising/google-customer-match.md)

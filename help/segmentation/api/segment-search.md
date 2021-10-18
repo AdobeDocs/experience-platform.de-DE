@@ -39,7 +39,7 @@ GET /search/namespaces?schema.name={SCHEMA}&s={SEARCH_TERM}
 | Parameter | Beschreibung |
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert darstellt, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
-| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der von Microsoft implementierten Suchsyntax von  [Lucene entspricht](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage darstellt, die der Microsoft-Implementierung der  [Suchsyntax](https://docs.microsoft.com/de-DE/azure/search/query-lucene-syntax) von Lucene entspricht. Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 
 **Anfrage**
 
@@ -100,7 +100,7 @@ GET /search/entities?schema.name={SCHEMA}&namespace={NAMESPACE}&entityId={ENTITY
 | ---------- | ----------- | 
 | `schema.name={SCHEMA}` | **(Erforderlich)** Wobei {SCHEMA} den Schemaklasse-Wert enthält, der mit den Suchobjekten verknüpft ist. Derzeit wird nur `_xdm.context.segmentdefinition` unterstützt. |
 | `namespace={NAMESPACE}` | **(Erforderlich)** Wobei {NAMESPACE} den Namespace enthält, in dem Sie suchen möchten. |
-| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der von Microsoft implementierten Suchsyntax von  [Lucene entspricht](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
+| `s={SEARCH_TERM}` | *(Optional)* Wobei {SEARCH_TERM} eine Abfrage enthält, die der Microsoft-Implementierung der  [Suchsyntax](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax) von Lucene entspricht. Wenn kein Suchbegriff angegeben ist, werden alle mit `schema.name` verknüpften Datensätze zurückgegeben. Eine detailliertere Erklärung finden Sie im [Anhang](#appendix) dieses Dokuments. |
 | `entityId={ENTITY_ID}` | *(Optional)* Beschränkt Ihre Suche auf den angegebenen Ordner, der mit {ENTITY_ID} angegeben wird. |
 | `limit={LIMIT}` | *(Optional)* Wobei {LIMIT} die Anzahl der zurückzugebenden Suchergebnisse darstellt. Der Standardwert lautet 50. |
 | `page={PAGE}` | *(Optional)* Wobei {PAGE} die Seitennummer darstellt, die zum Paginieren der Ergebnisse der gesuchten Abfrage verwendet wird. Beachten Sie, dass die Seitenzahl bei **0** beginnt. |
@@ -226,7 +226,7 @@ Nach dem Lesen dieses Handbuchs haben Sie jetzt ein besseres Verständnis davon,
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen zur Funktionsweise von Suchbegriffen. Suchabfragen werden wie folgt geschrieben: `s={FieldName}:{SearchExpression}`. Um beispielsweise nach einem Segment mit dem Namen AAM oder [!DNL Platform] zu suchen, würden Sie die folgende Suchabfrage verwenden: `s=segmentName:AAM%20OR%20Platform`.
 
-> !![NOTE] Für Best Practices sollte der Suchausdruck HTML-kodiert sein, wie im Beispiel oben gezeigt.
+> !![NOTE] Für Best Practices sollte der Suchausdruck wie im oben gezeigten Beispiel HTML-kodiert sein.
 
 ### Suchfelder {#search-fields}
 
@@ -245,7 +245,7 @@ In der folgenden Tabelle sind die Felder aufgeführt, die im Suchabfrageparamete
 
 In der folgenden Tabelle finden Sie die Details zur Funktionsweise von Suchabfragen bei der Verwendung der Segmentsuche-API.
 
->!![NOTE] Die folgenden Beispiele werden in einem nicht HTML-kodierten Format angezeigt, um eine bessere Übersichtlichkeit zu erzielen. Für Best Practices kodieren Sie HTML Ihren Suchausdruck.
+>!![NOTE] Die folgenden Beispiele werden in einem nicht-HTML-kodierten Format angezeigt, um eine bessere Übersichtlichkeit zu erzielen. Best Practices finden Sie unter HTML-Kodierung Ihres Suchausdrucks.
 
 | Beispielsuchausdruck | Beschreibung |
 | ------------------------- | ----------- |

@@ -50,7 +50,7 @@ Der Schritt **[!UICONTROL Analytics source add data]** wird angezeigt. Wählen S
 
 >[!NOTE]
 >
->Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites einzuführen. Es kann jedoch jeweils nur eine Report Suite mit der Echtzeit-Kundendatenplattform verwendet werden.
+>Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites einzuführen. Es kann jedoch jeweils nur eine Report Suite mit Real-time Customer Data Platform verwendet werden.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -183,10 +183,10 @@ Um einen Datenfluss zu löschen, rufen Sie die Seite [!UICONTROL Datenflüsse] a
 
 Nach der Erstellung der Verbindung wird der Datenfluss automatisch erstellt, um die eingehenden Daten zu enthalten und einen Datensatz mit Ihrem ausgewählten Schema zu füllen. Darüber hinaus werden bis zu 13 Monate historischer Daten aufgefüllt und erfasst. Wenn die erste Aufnahme abgeschlossen ist, können [!DNL Analytics] Daten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und Segmentation Service verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile] Übersicht](../../../../../profile/home.md)
-* [[!DNL Segmentation Service] Übersicht](../../../../../segmentation/home.md)
-* [[!DNL Data Science Workspace] Übersicht](../../../../../data-science-workspace/home.md)
-* [[!DNL Query Service] Übersicht](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] – Übersicht](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace] – Übersicht](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service] – Übersicht](../../../../../query-service/home.md)
 
 Das folgende Video soll Ihnen helfen, Daten mithilfe des Adobe Analytics Source Connectors zu erfassen:
 

@@ -31,7 +31,7 @@ ht-degree: 22%
 | `person.birthYear` | Ganzzahl | Das Jahr, in dem eine Person geboren wurde, einschließlich des Jahrhunderts (wie 1989). Dieses Feld sollte verwendet werden, wenn nur das Alter der Person bekannt ist, nicht das vollständige Geburtsdatum. |
 | `person.gender` | Zeichenfolge | Die Geschlechtsidentität der Person. |
 | `person.martialStatus` | Zeichenfolge | Beschreibt die Beziehung einer Person zu einer wichtigen anderen. |
-| `person.nationality` | Zeichenfolge | Die Rechtsbeziehung zwischen einer Person und ihrem Staat, der durch den ISO-3166-1-Alpha-2-Code repräsentiert wird. |
+| `person.nationality` | Zeichenfolge | Die Rechtsbeziehung zwischen einer Person und ihrem Staat, der anhand des ISO 3166-1 Alpha-2-Codes dargestellt wird. |
 | `person.taxId` | Zeichenfolge | Die Steuer-/Steuerkennung der Person, wie die TIN in den USA oder die CIF/NIF in Spanien. |
 
 {style=&quot;table-layout:auto&quot;}

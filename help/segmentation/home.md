@@ -12,7 +12,7 @@ ht-degree: 7%
 
 ---
 
-# [!DNL Segmentation Service] Übersicht
+# [!DNL Segmentation Service] – Übersicht
 
 Adobe Experience Platform [!DNL Segmentation Service] bietet eine Benutzeroberfläche und RESTful-API, mit der Sie Segmente erstellen und aus Ihren [!DNL Real-time Customer Profile]-Daten Zielgruppen generieren können. Diese Segmente werden zentral auf [!DNL Platform] konfiguriert und gepflegt und stehen für jede Adobe-Lösung zur Verfügung.
 

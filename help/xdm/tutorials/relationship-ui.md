@@ -17,7 +17,7 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->Wenn Sie die Echtzeit-Kundendatenplattform B2B Edition verwenden, lesen Sie stattdessen das Handbuch zum Erstellen von B2B-Beziehungen](./relationship-b2b.md).[
+>Wenn Sie Real-time Customer Data Platform B2B Edition verwenden, lesen Sie stattdessen das Handbuch zum Erstellen von B2B-Beziehungen](./relationship-b2b.md) .[
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Wenn Sie diese Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas definieren, erhalten Sie komplexe Einblicke in Ihre Kundendaten.
 

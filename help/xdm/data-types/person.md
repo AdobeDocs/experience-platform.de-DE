@@ -12,7 +12,7 @@ ht-degree: 17%
 
 ---
 
-#  Persondata-Typ
+#  Persondata type
 
  Personis a standard Experience Data Model (XDM) data type, der eine Person beschreibt. Dieser Datentyp kann eine Person darstellen, die in verschiedenen Rollen agiert, z. B. ein Kunde, ein Kontakt oder ein Eigentümer.
 
@@ -26,7 +26,7 @@ ht-degree: 17%
 | `birthYear` | Ganzzahl | Das Jahr, in dem eine Person geboren wurde, einschließlich des Jahrhunderts (z. B. `1983`). Dieses Feld sollte verwendet werden, wenn nur das Alter der Person bekannt ist und nicht das vollständige Geburtsdatum. Dieser Wert muss zwischen 1 und 32767 liegen. |
 | `gender` | Zeichenfolge | Die Geschlechtsidentität der Person. Der Wert dieser Eigenschaft muss mit einem der folgenden bekannten Enum-Werte übereinstimmen. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> Der Standardwert für diesen Wert ist `not_specified`. |
 | `maritalStatus` | Zeichenfolge | Beschreibt die Beziehung einer Person zu einer wichtigen anderen. Der Wert dieser Eigenschaft muss mit einem der folgenden Enum-Werte übereinstimmen. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> Der Standardwert für diesen Wert ist `not_specified`. |
-| `nationality` | Zeichenfolge | Die Rechtsbeziehung zwischen einer Person und ihrem Staat, der durch den ISO-3166-1-Alpha-2-Code repräsentiert wird. Das Format dieser Eigenschaft muss diesem regulären Ausdruck `^[A-Z]{2}$` entsprechen. |
+| `nationality` | Zeichenfolge | Die Rechtsbeziehung zwischen einer Person und ihrem Staat, der anhand des ISO 3166-1 Alpha-2-Codes dargestellt wird. Das Format dieser Eigenschaft muss diesem regulären Ausdruck `^[A-Z]{2}$` entsprechen. |
 | `taxId` | Zeichenfolge | Die Steuer- oder Steuerkennung der Person, wie z. B. die Identifikationsnummer des Steuerpflichtigen (TIN) in den USA oder das Certificate de Identificación Fiscal (CIF/NIF) in Spanien. |
 
 {style=&quot;table-layout:auto&quot;}

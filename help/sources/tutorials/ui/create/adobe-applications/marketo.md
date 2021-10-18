@@ -182,5 +182,5 @@ Sie können Datenflüsse löschen, die nicht mehr erforderlich sind oder falsch 
 
 In diesem Tutorial haben Sie erfolgreich einen Datenfluss erstellt, um [!DNL Marketo]-Daten einzubringen. Eingehende Daten können jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
-* [[!DNL Real-time Customer Profile] Übersicht](/help/profile/home.md)
-* [[!DNL Data Science Workspace] Übersicht](/help/data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] – Übersicht](/help/profile/home.md)
+* [[!DNL Data Science Workspace] – Übersicht](/help/data-science-workspace/home.md)

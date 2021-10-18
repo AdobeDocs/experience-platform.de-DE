@@ -39,7 +39,7 @@ Weitere Informationen finden Sie im [Profil-Dashboard-Handbuch](../../dashboards
 
 ![](../../dashboards/images/profiles/dashboard-overview.png)
 
-##  Metriken der Registerkarte &quot;Durchsuchen&quot;
+##  Metriken auf der Registerkarte &quot;Durchsuchen&quot;
 
 Wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus, um mehrere Metriken anzuzeigen, die sich auf die Profildaten Ihres Unternehmens beziehen. Sie können diese Registerkarte auch verwenden, um den Profilspeicher mithilfe einer Zusammenführungsrichtlinie oder einer Identität zu durchsuchen, wie im nächsten Abschnitt dieses Handbuchs beschrieben.
 

@@ -97,7 +97,7 @@ In den folgenden Abschnitten werden die in der Haupterweiterung verfügbaren Dat
 
 ### Cookie
 
-Jedes verfügbare Domain-Cookie kann im  Cookie-Namensfeld referenziert werden.
+Jedes verfügbare Domain-Cookie kann im Cookie-Namensfeld referenziert werden.
 
 #### Beispiel:
 

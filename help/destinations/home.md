@@ -12,7 +12,7 @@ ht-degree: 39%
 
 ---
 
-# [!DNL Destinations] Übersicht {#overview}
+# [!DNL Destinations] – Übersicht {#overview}
 
 ![Übersichtsbanner Ziele](./assets/overview/destinations-overview-banner.png)
 

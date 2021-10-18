@@ -56,7 +56,7 @@ GET /datasets?limit=36&start=10
 GET /batches?createdAfter=1559775880000&orderBy=desc:created
 ```
 
-Detaillierte Informationen dazu, welche Abfragen bei einem bestimmten Dienst oder Endpunkt verfügbar sind, finden Sie in der dienstspezifischen Dokumentation.
+Detaillierte Informationen dazu, welche Abfragen bei einem bestimmten Service oder Endpunkt verfügbar sind, finden Sie in der dienstspezifischen Dokumentation.
 
 ## Wie gebe ich ein JSON-Feld an, das in einer PATCH-Anfrage aktualisiert werden soll? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
@@ -191,9 +191,9 @@ Diese Fehlermeldung wird angezeigt, wenn Ihr Konto (wie durch die angegebenen Au
 
 ## Verzeichnis zur Fehlerbehebung bei Diensten {#service-troubleshooting-directory}
 
-Im Folgenden finden Sie eine Liste von Handbüchern zur Fehlerbehebung und API-Referenzdokumentation für [!DNL Experience Platform]-APIs. Jedes Handbuch zur Fehlerbehebung enthält Antworten auf häufig gestellte Fragen und Lösungen zu Problemen, die für einzelne [!DNL Platform]-Dienste spezifisch sind. API-Referenzdokumente bieten für jeden Dienst eine komplette Anleitung zu allen verfügbaren Endpunkten und umfassen Beispielanfragetexte, Antworten sowie Fehler-Codes, die Sie möglicherweise erhalten.
+Im Folgenden finden Sie eine Liste von Handbüchern zur Fehlerbehebung und API-Referenzdokumentation für [!DNL Experience Platform]-APIs. Jedes Handbuch zur Fehlerbehebung enthält Antworten auf häufig gestellte Fragen und Lösungen zu Problemen, die für einzelne [!DNL Platform]-Dienste spezifisch sind. API-Referenzdokumente bieten für jeden Service eine komplette Anleitung zu allen verfügbaren Endpunkten und umfassen Beispielanfragetexte, Antworten sowie Fehler-Codes, die Sie möglicherweise erhalten.
 
-| Dienst | API-Referenz | Fehlerbehebung |
+| Service | API-Referenz | Fehlerbehebung |
 | --- | --- | --- |
 | Zugangssteuerung | [Zugangssteuerungs-API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Handbuch zur Fehlerbehebung bei der Zugriffskontrolle](../access-control/troubleshooting-guide.md) |
 | Datenerfassung in Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Erfassung - ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Handbuch zur Fehlerbehebung bei der Streaming-Erfassung](../ingestion/streaming-ingestion/troubleshooting.md) |

@@ -77,7 +77,7 @@ Wählen Sie **[!UICONTROL Schema]** erstellen und dann **[!UICONTROL XDM Individ
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-Das Dialogfeld **[!UICONTROL Feldergruppen hinzufügen]** wird angezeigt, über das Sie sofort mit dem Hinzufügen von Feldergruppen zum Schema beginnen können. Wählen Sie von hier aus **[!UICONTROL IAB TCF 2.0 Consent Details]** aus der Liste aus. Sie können optional die Suchleiste verwenden, um Ergebnisse einzugrenzen und die Feldergruppe leichter zu finden.
+Das Dialogfeld **[!UICONTROL Feldergruppen hinzufügen]** wird angezeigt, über das Sie sofort mit dem Hinzufügen von Feldergruppen zum Schema beginnen können. Wählen Sie von hier aus **[!UICONTROL IAB TCF 2.0 Consent Details]** aus der Liste aus. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzugrenzen und die Feldergruppe leichter zu finden.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -131,7 +131,7 @@ Wählen Sie im Arbeitsbereich **[!UICONTROL Schemas]** die Option **[!UICONTROL 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-Das Dialogfeld **[!UICONTROL Feldgruppen hinzufügen]** wird angezeigt. Wählen Sie von hier aus **[!UICONTROL IAB TCF 2.0 Consent Details]** aus der Liste aus. Sie können optional die Suchleiste verwenden, um Ergebnisse einzugrenzen und die Feldergruppe leichter zu finden.
+Das Dialogfeld **[!UICONTROL Feldgruppen hinzufügen]** wird angezeigt. Wählen Sie von hier aus **[!UICONTROL IAB TCF 2.0 Consent Details]** aus der Liste aus. Sie können optional die Suchleiste verwenden, um die Ergebnisse einzugrenzen und die Feldergruppe leichter zu finden.
 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)

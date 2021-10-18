@@ -88,7 +88,7 @@ Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie 
 
 Bei Kennungen, die einem Kanal zugeordnet werden sollen, d. h. einem Gerät, müssen Sie basierend auf der Quelle dem entsprechenden Kanal zuordnen. Die folgenden Abbildungen zeigen, wie zwei Zuordnungen erstellt werden:
 
-* IDFA iOS-Advertising-ID für einen iOS-Kanal [!DNL Airship]
+* IDFA iOS Advertising-ID für einen iOS-Kanal [!DNL Airship]
 * Attribut Adobe `fullName` des Attributs [!DNL Airship] &quot;Vollständiger Name&quot;
 
 >[!NOTE]

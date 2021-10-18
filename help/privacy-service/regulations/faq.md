@@ -104,7 +104,7 @@ Wenn die Datenoperationen Ihres Unternehmens unter die gesetzlichen Bestimmungen
 
 ### Wie kann ich Datenschutzanfragen von Verbrauchern unterstützen, wenn ich Daten unterhalte, die unter Datenschutzbestimmungen fallen?
 
-Nachdem Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen von Verbrauchern an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht über ](../home.md). Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
+Nachdem Sie die erforderlichen Schritte zur Authentifizierung von Verbrauchern unternommen haben, die in die entsprechenden Rechtsordnungen fallen, können Sie mit Adobe Experience Platform Privacy Service Datenschutzanfragen von Verbrauchern an kompatible Experience Cloud-Apps senden. Weitere Informationen finden Sie in der [[!DNL Privacy Service] Übersicht über. ](../home.md) Informationen dazu, wie Ihre jeweiligen Experience Cloud-Anwendungen Datenschutzanfragen gerecht werden können, finden Sie im Handbuch zu [Privacy Service- und Experience Cloud-Anwendungen](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

@@ -127,7 +127,7 @@ Um die einmalige Erfassung einzurichten, wählen Sie den Dropdown-Pfeil für die
 
 >[!TIP]
 >
->**** Intervalle und  **** Aufstockungen sind während einer einmaligen Erfassung nicht sichtbar.
+>**** Während einer einmaligen Erfassung sind keine  **** Aufstockungen sichtbar.
 
 Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen Sie **[!UICONTROL Weiter]** aus.
 

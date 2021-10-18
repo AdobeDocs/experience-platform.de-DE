@@ -56,7 +56,7 @@ Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTRO
 
 ![select-new-dataset](../../../../images/tutorials/create/local/select-new-dataset.png)
 
-Geben Sie bei ausgewähltem Schema einen Namen für Ihren Datenfluss und eine optionale Beschreibung ein und wenden Sie dann die Einstellungen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Erfassung] an, die Sie für Ihren Datenfluss benötigen. Wählen Sie nach Abschluss **[!UICONTROL Weiter]** aus.
+Geben Sie bei ausgewähltem Schema einen Namen für Ihren Datenfluss und eine optionale Beschreibung ein und wenden Sie dann die Einstellungen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Erfassung] an, die Sie für Ihren Datenfluss benötigen. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ### Daten auswählen
 
@@ -74,7 +74,7 @@ Nach dem Hochladen Ihrer Datei wird die Vorschau-Oberfläche aktualisiert, um In
 
 Je nach Datei können Sie ein Spaltentrennzeichen wie Tabulatoren, Kommas, senkrechte Striche oder ein benutzerdefiniertes Spaltentrennzeichen für die Quelldaten auswählen. Wählen Sie den Dropdown-Pfeil **[!UICONTROL Trennzeichen]** aus und wählen Sie dann das entsprechende Trennzeichen aus dem Menü aus.
 
-Wählen Sie nach Abschluss **[!UICONTROL Weiter]** aus.
+Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![delimiter](../../../../images/tutorials/create/local/delimiter.png)
 

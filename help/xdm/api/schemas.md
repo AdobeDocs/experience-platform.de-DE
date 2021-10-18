@@ -26,7 +26,7 @@ Sie können alle Schemas unter dem Container `global` oder `tenant` auflisten, i
 
 >[!NOTE]
 >
->Bei der Auflistung von Ressourcen beschränkt die Schema Registry Ergebnissätze auf 300 Elemente. Um Ressourcen zurückzugeben, die über diese Grenze hinausgehen, müssen Sie Paging-Parameter verwenden. Es wird außerdem empfohlen, zusätzliche Abfrageparameter zu verwenden, um Ergebnisse zu filtern und die Anzahl der zurückgegebenen Ressourcen zu reduzieren. Weitere Informationen finden Sie im Abschnitt zu [Abfrageparametern](./appendix.md#query) im Anhang.
+>When listing resources, the Schema Registry limits result sets to 300 items. In order to return resources beyond this limit, you must use paging parameters. It is also recommended that you use additional query parameters to filter results and reduce the number of resources returned. See the section on [query parameters](./appendix.md#query) in the appendix document for more information.
 
 **API-Format**
 
@@ -66,7 +66,7 @@ Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesen
 
 **Antwort**
 
-In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Schema. Mit der anderen `Accept`-Kopfzeile (`application/vnd.adobe.xed+json`) werden alle Attribute jedes Schemas zurückgegeben. Wählen Sie je nach den Informationen, die Sie in Ihrer Antwort benötigen, die entsprechende `Accept`-Kopfzeile aus.
+In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `Accept` verwendet. Daher enthält die Antwort nur die Attribute `title`, `$id`, `meta:altId` und `version` für jedes Schema. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each schema. Wählen Sie je nach den Informationen, die Sie in Ihrer Antwort benötigen, die entsprechende `Accept`-Kopfzeile aus.
 
 ```json
 {
@@ -100,7 +100,7 @@ In der obigen Anfrage wurde die Kopfzeile `application/vnd.adobe.xed-id+json` `A
 
 ## Nachschlagen eines Schemas {#lookup}
 
-Sie können ein bestimmtes Schema nachschlagen, indem Sie eine GET anfordern, die die Kennung des Schemas im Pfad enthält.
+You can look up a specific schema by making a GET request that includes the schema&#39;s ID in the path.
 
 **API-Format**
 
@@ -110,8 +110,8 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{CONTAINER_ID}` | Der Container, der das Schema enthält, das Sie abrufen möchten: `global` für ein von einer Adobe erstelltes Schema oder `tenant` für ein Schema, das Ihrem Unternehmen gehört. |
-| `{SCHEMA_ID}` | Der `meta:altId` oder URL-kodierte `$id` des Schemas, das Sie nachschlagen möchten. |
+| `{CONTAINER_ID}` | The container that houses the schema you want to retrieve: `global` for an Adobe-created schema or `tenant` for a schema owned by your organization. |
+| `{SCHEMA_ID}` | The `meta:altId` or URL-encoded `$id` of the schema you want to look up. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -143,7 +143,7 @@ Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesen
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Schemas zurück. Die zurückgegebenen Felder hängen von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und zu bestimmen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
+Eine erfolgreiche Antwort gibt die Details des Schemas zurück. The fields that are returned depend on the `Accept` header sent in the request. Experimentieren Sie mit verschiedenen `Accept`-Kopfzeilen, um die Antworten zu vergleichen und zu bestimmen, welche Kopfzeile für Ihren Anwendungsfall am besten geeignet ist.
 
 ```json
 {
@@ -200,7 +200,7 @@ Der Prozess der Schemakomposition beginnt mit der Zuweisung einer Klasse. Die Kl
 
 >[!NOTE]
 >
->Der folgende Beispielaufruf ist nur ein grundlegendes Beispiel dafür, wie ein Schema in der API erstellt wird, mit den minimalen Kompositionserfordernissen einer Klasse und ohne Feldergruppen. Vollständige Schritte zum Erstellen eines Schemas in der API, einschließlich der Zuweisung von Feldern mithilfe von Feldergruppen und Datentypen, finden Sie im Tutorial zur Schemaerstellung](../tutorials/create-schema-api.md).[
+>The example call below is only a baseline example of how to create a schema in the API, with the minimal composition requirements of a class and no field groups. Vollständige Schritte zum Erstellen eines Schemas in der API, einschließlich der Zuweisung von Feldern mithilfe von Feldergruppen und Datentypen, finden Sie im Tutorial zur Schemaerstellung](../tutorials/create-schema-api.md).[
 
 **API-Format**
 
@@ -240,7 +240,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. Diese Werte sind schreibgeschützt und werden durch [!DNL Schema Registry] zugewiesen.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload mit den Details zum neu erstellten Schema zurück, einschließlich `$id`, `meta:altId` und `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -275,11 +275,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 }
 ```
 
-Wenn Sie eine GET-Anfrage an [list all schemas](#list) im Mandanten-Container ausführen, würde jetzt das neue Schema enthalten. Sie können eine [Nachschlageanfrage (GET)](#lookup) mit dem URL-kodierten `$id` -URI ausführen, um das neue Schema direkt anzuzeigen.
+Wenn Sie eine GET-Anfrage an [list all schemas](#list) im Mandanten-Container ausführen, würde jetzt das neue Schema enthalten. You can perform a [lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new schema directly.
 
 Um einem Schema zusätzliche Felder hinzuzufügen, können Sie einen [PATCH-Vorgang](#patch) ausführen, um den `allOf` - und `meta:extends` -Arrays des Schemas Feldergruppen hinzuzufügen.
 
-## Schema aktualisieren {#put}
+## Update a schema {#put}
 
 Sie können ein ganzes Schema durch einen PUT-Vorgang ersetzen und die Ressource im Wesentlichen neu schreiben. Beim Aktualisieren eines Schemas über eine PUT-Anfrage muss der Hauptteil alle Felder einschließen, die beim Erstellen eines neuen Schemas](#create) in einer POST-Anfrage erforderlich sind.[
 
@@ -384,7 +384,7 @@ PATCH /tenant/schema/{SCHEMA_ID}
 
 **Anfrage**
 
-Die folgende Beispielanfrage fügt einem Schema eine neue Feldergruppe hinzu, indem der Wert `$id` dieser Feldergruppe sowohl den Arrays `meta:extends` als auch `allOf` hinzugefügt wird.
+The example request below adds a new field group to a schema by adding that field group&#39;s `$id` value to both the `meta:extends` and `allOf` arrays.
 
 Der Anfragetext hat die Form eines Arrays, wobei jedes aufgelistete Objekt eine bestimmte Änderung an einem einzelnen Feld darstellt. Jedes Objekt enthält den auszuführenden Vorgang (`op`), das Feld, für das der Vorgang ausgeführt werden soll (`path`), und welche Informationen in diesem Vorgang enthalten sein sollen (`value`).
 
@@ -414,7 +414,7 @@ curl -X PATCH\
 
 **Antwort**
 
-Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. Die Feldergruppe `$id` wurde dem `meta:extends`-Array hinzugefügt und eine Referenz (`$ref`) zur Feldergruppe `$id` wird jetzt im `allOf`-Array angezeigt.
+Die Antwort zeigt, dass beide Vorgänge erfolgreich durchgeführt wurden. The field group `$id` has been added to the `meta:extends` array and a reference (`$ref`) to the field group `$id` now appears in the `allOf` array.
 
 ```JSON
 {
@@ -496,7 +496,7 @@ curl -X PATCH\
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück und zeigt an, dass das Array `meta:immutableTags` hinzugefügt wurde.
+A successful response returns the details of the updated schema, showing that the `meta:immutableTags` array has been added.
 
 ```JSON
 {
@@ -538,11 +538,11 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück un
 }
 ```
 
-Sie können jetzt die Vereinigung für die Klasse dieses Schemas anzeigen, um zu bestätigen, dass die Felder des Schemas dargestellt werden. Weitere Informationen finden Sie im [Vereinigungsendpunkt-Handbuch](./unions.md) .
+You can now view the union for this schema&#39;s class to confirm that the schema&#39;s fields are represented. Weitere Informationen finden Sie im [Vereinigungsendpunkt-Handbuch](./unions.md) .
 
 ## Schema löschen {#delete}
 
-Gelegentlich kann es erforderlich sein, ein Schema aus der Schema Registry zu entfernen. Dies geschieht durch Ausführen einer DELETE-Anfrage mit der Schema-ID, die im Pfad angegeben ist.
+It may occasionally be necessary to remove a schema from the Schema Registry. Dies geschieht durch Ausführen einer DELETE-Anfrage mit der Schema-ID, die im Pfad angegeben ist.
 
 **API-Format**
 

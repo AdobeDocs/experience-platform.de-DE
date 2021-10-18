@@ -20,7 +20,7 @@ Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experie
 
 >[!IMPORTANT]
 >
->Dieses Problem wurde behoben, konnte jedoch weiterhin im Google Chrome 80.x-Browser vorhanden sein. Stellen Sie sicher, dass Ihr Chrome-Browser aktuell ist.
+>Dieses Problem wurde behoben, konnte jedoch im Google Chrome 80.x-Browser noch vorhanden sein. Stellen Sie sicher, dass Ihr Chrome-Browser aktuell ist.
 
 Mit der Browser-Version 80.x von [!DNL Google Chrome] werden alle Drittanbieter-Cookies standardmäßig blockiert. Diese Richtlinie kann verhindern, dass [!DNL JupyterLab] in Adobe Experience Platform geladen wird.
 

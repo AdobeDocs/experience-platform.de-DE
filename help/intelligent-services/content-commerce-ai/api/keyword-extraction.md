@@ -38,7 +38,7 @@ Die von [!DNL Content and Commerce AI] erkannten benannten Entitäten sind in de
 
 >[!NOTE]
 >
->Wenn Sie die Verarbeitung von PDF-Dateien planen, überspringen Sie in diesem Dokument zu den Anweisungen für [Extraktion von PDF-Schlüsselwörtern](#pdf-extraction). Außerdem wird die Unterstützung für zusätzliche Dateitypen wie docx, ppt und amd xml so eingestellt, dass sie zu einem späteren Zeitpunkt veröffentlicht werden.
+>Wenn Sie die Verarbeitung von PDF planen, überspringen Sie in diesem Dokument die Anweisungen für die [PDF-Keyword-Extraktion](#pdf-extraction). Außerdem wird die Unterstützung für zusätzliche Dateitypen wie docx, ppt und amd xml so eingestellt, dass sie zu einem späteren Zeitpunkt veröffentlicht werden.
 
 **API-Format**
 
@@ -227,9 +227,9 @@ Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüss
 }
 ```
 
-## Extraktion von PDF-Schlüsselwörtern {#pdf-extraction}
+## PDF-Keyword-Extraktion {#pdf-extraction}
 
-Der Suchbegriffextraktionsdienst unterstützt PDF-Dateien. Sie müssen jedoch eine neue Analyzer-ID für PDF-Dateien verwenden und den Dokumenttyp in PDF ändern. Weitere Informationen finden Sie im folgenden Beispiel.
+Der Suchbegriffextraktionsdienst unterstützt PDF. Sie müssen jedoch eine neue Analyzer-ID für PDF-Dateien verwenden und den Dokumenttyp in PDF ändern. Weitere Informationen finden Sie im folgenden Beispiel.
 
 **API-Format**
 
@@ -243,7 +243,7 @@ Die folgende Anfrage extrahiert Suchbegriffe aus einem PDF-Dokument basierend au
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Vergewissern Sie sich, dass Sie über die richtige `analyzer_id` verfügen, bevor Sie Ihre Anfrage stellen. Für die Extraktion von PDF-Keywords lautet die `analyzer_id`-ID:
+>`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Vergewissern Sie sich, dass Sie über die richtige `analyzer_id` verfügen, bevor Sie Ihre Anfrage stellen. Für die PDF-Keyword-Extraktion lautet die `analyzer_id`-ID:
 >`Feature:cintel-ner:Service-7a87cb57461345c280b62470920bcdc5`
 
 ```SHELL
@@ -358,7 +358,7 @@ Eine erfolgreiche Antwort gibt ein JSON-Objekt zurück, das extrahierte Schlüss
 }
 ```
 
-Weitere Informationen und ein Beispiel zur Verwendung der PDF-Extraktion mit Anweisungen zum Einrichten, Bereitstellen und Integrieren des AEM Cloud Service finden Sie unter . Besuchen Sie das GitHub-Repository ](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract)CCAI PDF Extraktions-Worker[.
+Weitere Informationen und ein Beispiel für die Verwendung der PDF-Extraktion mit Anweisungen zum Einrichten, Bereitstellen und Integrieren des AEM Cloud Service. Besuchen Sie das [CCAI PDF Extraktions-GitHub-Repository](https://github.com/adobe/asset-compute-example-workers/tree/master/projects/worker-ccai-pdfextract).
 
 ## Anhang {#appendix}
 

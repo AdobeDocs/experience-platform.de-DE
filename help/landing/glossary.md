@@ -18,7 +18,7 @@ ht-degree: 3%
 
 **Zugriffskontrolle**: Die rollenbasierte Zugriffskontrolle ermöglicht es Administratoren, Experience Platform-Benutzern Zugriff und Berechtigungen zuzuweisen. Zu den Berechtigungen gehört die Möglichkeit, Funktionen der Experience Platform anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen.
 
-**Zugriffsschlüssel-ID**: Eine Zugriffsschlüssel-ID ist eine eindeutige Kennung, die mit einem geheimen Zugriffsschlüssel des  [!DNL Amazon] S3 verknüpft ist. Die Kennung des Zugriffsschlüssels und der geheime Zugriffsschlüssel werden zusammen verwendet, um [!DNL Amazon Web Services] (AWS)-Anfragen zu signieren.
+**Zugriffsschlüssel-ID**: Eine Zugriffsschlüssel-ID ist eine eindeutige Kennung, die mit einem geheimen Zugriffsschlüssel des  [!DNL Amazon] S3 verknüpft ist. Die Zugriffsschlüssel-ID und der geheime Zugriffsschlüssel werden zusammen verwendet, um [!DNL Amazon Web Services] (AWS)-Anfragen zu signieren.
 
 **Aktion**: Im Kontext von Tags ist eine Aktion ein bestimmter Typ von Regelkomponente, die definiert, was passieren soll, nachdem ein Ereignis auftritt und Bedingungen ausgewertet und übergeben werden.
 
@@ -208,7 +208,7 @@ ht-degree: 3%
 
 **Marketing-Aktion** für E-Mail-Targeting: Eine Marketing-Aktion, die Daten in E-Mail-Targeting-Kampagnen verwendet.
 
-**Einbettungscode**: Im Kontext von Tags ist der Einbettungscode ein Skript-Tag, das in den HTML-Code einer Site oder Umgebung eingefügt wird. Der Einbettungscode weist den Browser an, wo der Build abgerufen werden soll.
+**Einbettungscode**: Im Kontext von Tags ist der Einbettungscode ein Skript-Tag, das auf einer Site oder Umgebung auf der HTML platziert wird. Der Einbettungscode weist den Browser an, wo der Build abgerufen werden soll.
 
 **Auflistung**: Eine Auflistung (Enum) ist ein XDM-Feld, das auf einen Satz vordefinierter Werte beschränkt ist.
 
@@ -234,7 +234,7 @@ ht-degree: 3%
 
 **Erweiterung**: Im Kontext von Tags ist eine Erweiterung ein Funktionspaket, das einer Tag-Eigenschaft hinzugefügt wird. Eine Erweiterung konzentriert sich in der Regel auf eine bestimmte Marketing- oder Analyselösung und bietet die Tools, die zum Bereitstellen dieser Technologie in einer Client-Umgebung erforderlich sind.
 
-**Erweiterungspaket**: Im Kontext von Tags ist ein Erweiterungspaket eine ZIP-Datei, die von einem Erweiterungsentwickler erstellt und hochgeladen wurde und alle erforderlichen Informationen für Tags bereitstellt, damit Benutzer die Erweiterung in ihrer Eigenschaft installieren können. Ein Erweiterungspaket enthält ein Manifest mit Informationen zur Erweiterung, dem HTML/JavaScript, das für Endbenutzer zum Konfigurieren des Verhaltens der Tag-Erweiterung erforderlich ist, und dem ausführbaren JavaScript, das an die Client-Umgebung gesendet wird (falls erforderlich).
+**Erweiterungspaket**: Im Kontext von Tags ist ein Erweiterungspaket eine ZIP-Datei, die von einem Erweiterungsentwickler erstellt und hochgeladen wurde und alle erforderlichen Informationen für Tags bereitstellt, damit Benutzer die Erweiterung in ihrer Eigenschaft installieren können. Ein Erweiterungspaket enthält ein Manifest, das Informationen über die Erweiterung, das HTML/JavaScript, das zum Konfigurieren des Verhaltens der Tag-Erweiterung erforderlich ist, und das ausführbare JavaScript, das an die Client-Umgebung gesendet wird (falls erforderlich).
 
 ## F
 
@@ -296,7 +296,7 @@ ht-degree: 3%
 
 **Eingabefunktion**: Eine Eingabefunktion ist in der Funktionszuordnung angegeben und wird von einem Modell für maschinelles Lernen verwendet, um Prognosen zu erstellen.
 
-**[!DNL Intelligent Services]**:  [!DNL Intelligent Services] wie  [!DNL Attribution AI] und  [!DNL Customer AI] sind auf maschinellem Lernen basierende, auf künstlicher Intelligenz basierende Modelle, für die Experience Platform (oder auf Platform aufbauende Anwendungen wie die Echtzeit-Kundendatenplattform) erforderlich ist, um ausgeführt und betrieben zu werden.
+**[!DNL Intelligent Services]**:  [!DNL Intelligent Services] wie  [!DNL Attribution AI] und  [!DNL Customer AI] sind auf maschinellem Lernen basierende, auf künstlicher Intelligenz basierende Modelle, für deren Ausführung und Betrieb Experience Platform (oder auf Platform aufbauende Anwendungen wie Real-time Customer Data Platform) erforderlich sind.
 
 **Interessensbasiertes Targeting oder Personalisierung**: Eine interessensbasierte Zielgruppenbestimmung, auch Personalisierung genannt, tritt auf, wenn die folgenden drei Bedingungen erfüllt sind:
 
@@ -412,7 +412,7 @@ ht-degree: 3%
 
 ## R
 
-**Echtzeit-Kundendatenplattform**:  [!DNL Real-time Customer Data Platform] führt bekannte und unbekannte Kundendaten zusammen, um vertrauenswürdige Kundenprofile mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung über die digitale Journey zu erstellen.
+**Real-time Customer Data Platform**:  [!DNL Real-time Customer Data Platform] führt bekannte und unbekannte Kundendaten zusammen, um vertrauenswürdige Kundenprofile mit vereinfachter Integration, intelligenter Segmentierung und Echtzeit-Aktivierung über die digitale Journey zu erstellen.
 
 **Echtzeit-Kundenprofil**: Das Echtzeit-Kundenprofil (auch als Profil bezeichnet) bietet eine ganzheitliche Sicht auf jeden einzelnen Kunden, indem es Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Kanälen. Mit Profil können Sie Ihre Kundendaten in einzelne Profile konsolidieren, die umsetzbare, mit Zeitstempel versehene Konten für jede Kundeninteraktion bieten.
 

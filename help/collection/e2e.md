@@ -114,6 +114,7 @@ Nachdem Sie ein Schema und einen Datenstrom erstellt haben, müssen Sie das Plat
 >
 >* [Installieren des SDK](../edge/fundamentals/installing-the-sdk.md)
 >* [Konfigurieren des SDK](../edge/fundamentals/configuring-the-sdk.md)
+
 >
 >Beachten Sie außerdem, dass Sie, auch wenn Sie nur die Ereignisweiterleitung verwenden möchten, das SDK dennoch wie beschrieben installieren und konfigurieren müssen, bevor Sie die Ereignisweiterleitung in einem [späteren Schritt](#event-forwarding) konfigurieren.
 
@@ -130,7 +131,7 @@ Wählen Sie im linken Navigationsbereich **[!UICONTROL Tags]** aus, um eine List
 
 ![Eigenschaften](./images/e2e/properties.png)
 
-Wenn Sie eine neue Eigenschaft erstellen, geben Sie einen beschreibenden Namen an und setzen Sie den Parameter [!UICONTROL Platform] auf **[!UICONTROL Web]**. Geben Sie die vollständige Domäne für die Web-Eigenschaft an und klicken Sie dann auf **[!UICONTROL Speichern]**.
+Wenn Sie eine neue Eigenschaft erstellen, geben Sie einen beschreibenden Namen an und setzen Sie den Parameter [!UICONTROL Platform] auf **[!UICONTROL Web]**. Geben Sie die vollständige Domain für die Web-Eigenschaft an und klicken Sie dann auf **[!UICONTROL Speichern]**.
 
 ![Eigenschaft erstellen](./images/e2e/create-property.png)
 

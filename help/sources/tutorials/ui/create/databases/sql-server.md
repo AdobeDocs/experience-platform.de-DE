@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Microsoft SQL Server;SQL Server;SQL Server
+keywords: Experience Platform; Startseite; beliebte Themen; Microsoft SQL Server; SQL Server; SQL Server
 solution: Experience Platform
-title: Erstellen einer Quellverbindung für Microsoft SQL Server in der Benutzeroberfläche
+title: Erstellen einer Microsoft SQL Server-Quellverbindung in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Quellverbindung für Microsoft SQL Server erstellen.
+description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Microsoft SQL Server-Quellverbindung erstellen.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 source-git-commit: b2384bfe26fa3d111c342062b2d9bb37c4226857
 workflow-type: tm+mt
@@ -46,7 +46,7 @@ Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com) an u
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Microsoft SQL Server]**. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Klicken Sie andernfalls auf **[!UICONTROL Daten hinzufügen]** , um einen neuen [!DNL SQL Server]-Connector zu erstellen.
+Wählen Sie unter der Kategorie **[!UICONTROL Datenbanken]** die Option **[!UICONTROL Microsoft SQL Server]** aus. Wenn Sie diesen Connector zum ersten Mal verwenden, wählen Sie **[!UICONTROL Konfigurieren]** aus. Klicken Sie andernfalls auf **[!UICONTROL Daten hinzufügen]** , um einen neuen [!DNL SQL Server]-Connector zu erstellen.
 
 ![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 

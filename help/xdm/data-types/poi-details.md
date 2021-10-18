@@ -20,7 +20,7 @@ ht-degree: 15%
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Beschreibt die für die POI-Interaktion aktiven Beacon-Details. |
+| `beaconInteractionDetails` | [[!UICONTROL Beacon]](./beacon.md) | Beschreibt die Beacon-Details, die für die POI-Interaktion aktiv sind. |
 | `geoInteractionDetails` | [[!UICONTROL Details zur Geo-Interaktion]](./geo-interaction-details.md) | Beschreibt die für die POI-Interaktion aktiven Geodetails. |
 | `category` | Zeichenfolge | Eine allgemeine Kategorie, die vom Administrator der POI-Definitionen für die Organisation der POIs zugewiesen wurde. |
 | `distanceToPOICenter` | Double | Die geschätzte Entfernung vom POI-Zentrum in Metern. |

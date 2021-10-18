@@ -53,6 +53,6 @@ Adobe stellt mehrere Standardfeldgruppen für die Verwendung mit der Klasse [!DN
 * [[!UICONTROL XDM Business Person-Komponenten]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
 
-*\*Diese Feldergruppe ist nur für Organisationen mit Zugriff auf die B2B-Edition der Echtzeit-Kundendatenplattform verfügbar.*
+*\*Diese Feldergruppe steht nur Organisationen zur Verfügung, die Zugriff auf die B2B-Edition von Real-time Customer Data Platform haben.*
 
 Eine vollständige Liste aller kompatiblen Feldergruppen für [!DNL XDM Individual Profile] finden Sie im [XDM GitHub-Repository](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

@@ -7,7 +7,7 @@ exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
 workflow-type: tm+mt
 source-wordcount: '2373'
-ht-degree: 77%
+ht-degree: 78%
 
 ---
 
@@ -750,7 +750,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Batch Patch
 
-Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihres Unternehmens zu aktualisieren. Möglicherweise müssen Sie Datensätze korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt die Aktualisierung oder den Patch von Profilspeicherdaten durch eine Upstream-Aktion oder &quot;Patchen eines Batches&quot;.
+Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Adobe Experience Platform unterstützt die Aktualisierung oder den Patch von Profilspeicherdaten durch eine Upstream-Aktion oder &quot;Patchen eines Batches&quot;.
 
 >[!NOTE]
 >

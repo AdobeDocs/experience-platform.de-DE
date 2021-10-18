@@ -19,7 +19,7 @@ ht-degree: 11%
 >
 > Der IBM DB2-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
 
-Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines Quell-Connectors für IBM DB2 (im Folgenden &quot;DB2&quot;) mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.
+Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, extern bezogene Daten auf geplanter Basis zu erfassen. In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für IBM DB2 (im Folgenden &quot;DB2&quot;) mithilfe der [!DNL Platform]-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
 
@@ -45,7 +45,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötige
 
 Weitere Informationen zu den ersten Schritten finden Sie in [diesem DB2-Dokument](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
-## IBM DB2-Konto verbinden
+## Verbinden Ihres IBM DB2-Kontos
 
 Nachdem Sie die erforderlichen Anmeldeinformationen gesammelt haben, können Sie die folgenden Schritte ausführen, um Ihr DB2-Konto mit [!DNL Platform] zu verknüpfen.
 

@@ -21,7 +21,7 @@ ht-degree: 5%
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `address` | Die technische Adresse der E-Mail, wie sie üblicherweise in RFC2822 und nachfolgenden Standards definiert ist (z. B. `name@domain.com`). |
-| `label` | Zusätzliche verfügbare Anzeigeinformationen. Wenn eine E-Mail beispielsweise eine Rich-Adresse von Microsoft Outlook mit `John Smith smithjr@company.uk` aufweist, wird `John Smith` in dieses Feld eingefügt. |
+| `label` | Zusätzliche verfügbare Anzeigeinformationen. Wenn beispielsweise eine E-Mail eine Rich-Adresse in Microsoft Outlook von `John Smith smithjr@company.uk` aufweist, wird `John Smith` in dieses Feld eingefügt. |
 | `primary` | Gibt an, ob dies die primäre E-Mail-Adresse des Kontakts ist. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary` E-Mail-Adresse haben. |
 | `status` | Gibt an, ob die E-Mail-Adresse derzeit verwendet werden kann |
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |

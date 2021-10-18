@@ -13,7 +13,7 @@ ht-degree: 12%
 
 ---
 
-# Erstellen eines Schemas mit dem [!DNL Schema Editor]
+# Create a schema using the [!DNL Schema Editor]
 
 In der Adobe Experience Platform-Benutzeroberfläche können Sie [!DNL Experience Data Model] (XDM)-Schemata in einer interaktiven visuellen Arbeitsfläche namens [!DNL Schema Editor] erstellen und verwalten. In diesem Tutorial wird beschrieben, wie Sie ein Schema mit [!DNL Schema Editor] erstellen.
 
@@ -35,7 +35,7 @@ Dieses Tutorial setzt ein Verständnis der verschiedenen Aspekte von Adobe Exper
 
 Der Arbeitsbereich [!UICONTROL Schemas] in der [!DNL Platform]-Benutzeroberfläche bietet eine Visualisierung von [!DNL Schema Library], mit der Sie die für Ihr Unternehmen verfügbaren Schemata anzeigen können. Der Arbeitsbereich enthält auch die Arbeitsfläche [!DNL Schema Editor], auf der Sie in diesem Tutorial ein Schema erstellen können.
 
-Nachdem Sie sich bei [!DNL Experience Platform] angemeldet haben, wählen Sie **[!UICONTROL Schemas]** im linken Navigationsbereich aus, um den Arbeitsbereich **[!UICONTROL Schemas]** zu öffnen. Die Registerkarte **[!UICONTROL Durchsuchen]** enthält eine Liste von Schemas (eine Darstellung von [!DNL Schema Library]), die Sie anzeigen und anpassen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf denen das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
+After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. Die Registerkarte **[!UICONTROL Durchsuchen]** enthält eine Liste von Schemas (eine Darstellung von [!DNL Schema Library]), die Sie anzeigen und anpassen können. Die Liste umfasst den Namen, den Typ, die Klasse und das Verhalten (Datensatz oder Zeitreihen), auf denen das Schema basiert, sowie das Datum und die Uhrzeit der letzten Änderung des Schemas.
 
 Weitere Informationen finden Sie im Handbuch zum [Erkunden vorhandener XDM-Ressourcen in der Benutzeroberfläche](../ui/explore.md) .
 
@@ -87,15 +87,15 @@ Wenn Sie eine Feldergruppe aus der Liste auswählen, wird sie in der rechten Lei
 
 ![](../images/tutorials/create-schema/preview-field-group-button.png)
 
-Bei der Vorschau einer Feldergruppe wird in der rechten Leiste eine detaillierte Beschreibung des Schemas der Feldergruppe bereitgestellt. Sie können auch durch die Felder der Feldergruppe in der bereitgestellten Arbeitsfläche navigieren. Wenn Sie verschiedene Felder auswählen, wird die rechte Leiste aktualisiert, um Details zum betreffenden Feld anzuzeigen. Wählen Sie **[!UICONTROL Zurück]** aus, wenn Sie die Vorschau abgeschlossen haben, um zum Dialogfeld für die Feldergruppenauswahl zurückzukehren.
+Bei der Vorschau einer Feldergruppe wird in der rechten Leiste eine detaillierte Beschreibung des Schemas der Feldergruppe bereitgestellt. Sie können auch durch die Felder der Feldergruppe in der bereitgestellten Arbeitsfläche navigieren. Wenn Sie verschiedene Felder auswählen, wird die rechte Leiste aktualisiert, um Details zum betreffenden Feld anzuzeigen. Select **[!UICONTROL Back]** when you are finished previewing to return to the field group selection dialog.
 
 ![](../images/tutorials/create-schema/preview-field-group.png)
 
-Wählen Sie für dieses Tutorial die Feldergruppe **[!UICONTROL Demografische Details]** und dann **[!UICONTROL Feldergruppe hinzufügen]** aus.
+For this tutorial, select the **[!UICONTROL Demographic Details]** field group, then select **[!UICONTROL Add field group]**.
 
 ![](../images/tutorials/create-schema/demographic-details.png)
 
-Die Arbeitsfläche des Schemas wird wieder angezeigt. Der Abschnitt **[!UICONTROL Feldergruppen]** listet jetzt &quot;[!UICONTROL Demografische Details]&quot;auf und der Abschnitt **[!UICONTROL Struktur]** enthält die von der Feldergruppe hinzugefügten Felder. Sie können den Namen der Feldergruppe im Abschnitt **[!UICONTROL Feldergruppen]** auswählen, um die spezifischen Felder hervorzuheben, die sie auf der Arbeitsfläche bereitstellt.
+Die Arbeitsfläche des Schemas wird wieder angezeigt. The **[!UICONTROL Field groups]** section now lists &quot;[!UICONTROL Demographic Details]&quot; and the **[!UICONTROL Structure]** section includes the fields contributed by the field group. You can select the field group&#39;s name under the **[!UICONTROL Field groups]** section to highlight the specific fields it provides within the canvas.
 
 ![](../images/tutorials/create-schema/demographic-details-structure.png)
 
@@ -149,9 +149,9 @@ Wählen Sie zunächst den Feldergruppennamen im Abschnitt **[!UICONTROL Feldergr
 
 Wählen Sie das Symbol **plus (+)** neben &quot;[!DNL Loyalty Members]&quot;aus, um einen neuen Knoten in der Struktur zu erstellen. Dieser Knoten (in diesem Beispiel `_tenantId` genannt) stellt die Mandanten-ID Ihrer IMS-Organisation dar, der ein Unterstrich vorangestellt ist. Das Vorhandensein der Mandanten-ID zeigt an, dass die Felder, die Sie hinzufügen, im Namensraum Ihres Unternehmens enthalten sind.
 
-Die Felder, die Sie hinzufügen, sind für Ihre Organisation eindeutig und werden in [!DNL Schema Registry] in einem bestimmten Bereich gespeichert, der nur für Ihre Organisation zugänglich ist. Felder, die Sie definieren, müssen Ihrem Mandanten-Namespace immer hinzugefügt werden, um Kollisionen mit Namen anderer Standardklassen, Feldgruppen, Datentypen und Felder zu verhindern.
+In other words, the fields you are adding are unique to your organization and are going to be saved in the [!DNL Schema Registry] in a specific area accessible only to your organization. Fields you define must always be added to your tenant namespace to prevent collisions with names from other standard classes, field groups, data types, and fields.
 
-Innerhalb dieses Namensraum-Knotens befindet sich ein &quot;[!UICONTROL Neues Feld]&quot;. Dies ist der Anfang der Feldergruppe &quot;[!UICONTROL Loyalitätsdetails]&quot;.
+Inside that namespaced node is a &quot;[!UICONTROL New Field]&quot;. Dies ist der Anfang der Feldergruppe &quot;[!UICONTROL Loyalitätsdetails]&quot;.
 
 ![](../images/tutorials/create-schema/new_field_loyalty.png)
 
@@ -225,7 +225,7 @@ Wenn Sie alle Feldeigenschaften abgeschlossen haben, wählen Sie **[!UICONTROL A
 
 ## Konvertieren eines Objekts mit mehreren Feldern in einen Datentyp {#datatype}
 
-Das `loyalty` -Objekt enthält jetzt mehrere loyalitätsspezifische Felder und stellt eine gemeinsame Datenstruktur dar, die in anderen Schemas nützlich sein könnte. Mit dem [!DNL Schema Editor] können Sie wiederverwendbare Objekte mit mehreren Feldern einfach anwenden, indem Sie die Struktur dieser Objekte in Datentypen konvertieren.
+The `loyalty` object now contains several loyalty-specific fields, and represents a common data structure that could be useful in other schemas. Mit dem [!DNL Schema Editor] können Sie wiederverwendbare Objekte mit mehreren Feldern einfach anwenden, indem Sie die Struktur dieser Objekte in Datentypen konvertieren.
 
 Datentypen ermöglichen die konsistente Verwendung von Strukturen mit mehreren Feldern und bieten mehr Flexibilität als eine Feldergruppe, da sie überall in einem Schema verwendet werden können. Dazu legen Sie den Wert **[!UICONTROL Typ]** des Felds auf den Wert eines Datentyps fest, der in [!DNL Schema Registry] definiert ist.
 
@@ -291,7 +291,7 @@ Nach dem Anwenden der Änderung zeigt das Symbol für `loyaltyId` ein Fingerabdr
 
 Jetzt werden alle Daten, die in das Feld `loyaltyId` aufgenommen werden, verwendet, um diese Person zu identifizieren und eine einzige Ansicht dieses Kunden zuzuordnen. Weitere Informationen zum Arbeiten mit Identitäten in [!DNL Experience Platform] finden Sie in der [[!DNL Identity Service]](../../identity-service/home.md) -Dokumentation.
 
-## Aktivieren Sie das Schema zur Verwendung in [!DNL Real-time Customer Profile] {#profile}
+## Enable the schema for use in [!DNL Real-time Customer Profile] {#profile}
 
 [[!DNL Real-time Customer Profile]](../../profile/home.md) nutzt Identitätsdaten in ,  [!DNL Experience Platform] um eine ganzheitliche Sicht auf jeden einzelnen Kunden zu ermöglichen. Der Dienst erstellt robuste 360°-Profile mit Kundenattributen sowie mit Zeitstempel versehene Konten für jede Interaktion, die Kunden über ein mit [!DNL Experience Platform] integriertes System hatten.
 
@@ -355,4 +355,4 @@ Sie können die Klasse eines Schemas jederzeit während des anfänglichen Kompos
 >
 >Die Neuzuweisung der Klasse für ein Schema sollte mit äußerster Vorsicht erfolgen. Feldergruppen sind nur mit bestimmten Klassen kompatibel. Daher werden die Arbeitsfläche und alle von Ihnen hinzugefügten Felder durch Ändern der Klasse zurückgesetzt.
 
-Informationen zum Ändern der Klasse eines Schemas finden Sie im Handbuch zum Verwalten von Schemas in der Benutzeroberfläche](../ui/resources/schemas.md).[
+To learn how to change the class of a schema, see the guide on [managing schemas in the UI](../ui/resources/schemas.md).

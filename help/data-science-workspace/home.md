@@ -55,7 +55,7 @@ Bevor wir in die Details von [!DNL Data Science Workspace] eintauchen, hier eine
 | Training | Ein Training besteht aus dem Erlernen von Mustern und Insights auf Grundlage gekennzeichneter Daten. |
 | Schulungsmodell | Ein trainiertes Modell stellt die ausführbare Ausgabe eines Modellschulungsprozesses dar, bei dem eine Reihe von Trainings-Daten auf die Modellinstanz angewendet wurde. Ein trainiertes Modell behält einen Verweis auf jeden intelligenten Web-Service bei, der daraus erstellt wird. Das trainierte Modell eignet sich für die Bewertung und Erstellung eines intelligenten Web-Services. Änderungen an einem trainierten Modell können als neue Version nachverfolgt werden. |
 | Scoring | Beim Scoring werden mithilfe eines trainierten Modells Insights aus Daten generiert. |
-| Dienst | Ein bereitgestellter Service stellt Funktionen einer künstlichen Intelligenz, eines maschinellen Lernmodells oder eines erweiterten Algorithmus über eine API zur Verfügung, sodass sie von anderen Services oder Programmen genutzt werden können, um intelligente Apps zu erstellen. |
+| Service | Ein bereitgestellter Service stellt Funktionen einer künstlichen Intelligenz, eines maschinellen Lernmodells oder eines erweiterten Algorithmus über eine API zur Verfügung, sodass sie von anderen Services oder Programmen genutzt werden können, um intelligente Apps zu erstellen. |
 
 Das folgende Diagramm zeigt die hierarchische Beziehung zwischen Rezepten, Modellen, Schulungsübungen und Bewertungsläufen.
 

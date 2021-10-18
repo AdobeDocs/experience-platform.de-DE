@@ -96,7 +96,7 @@ Die folgende JSON-Datei stellt ein Beispiel-Marketing-Feld für einen Marketing-
 
 {style=&quot;table-layout:auto&quot;}
 
-## Zusätzliche Ressourcen
+## Weitere Ressourcen
 
 Weitere Informationen zum Datentyp finden Sie im öffentlichen XDM-Repository:
 
