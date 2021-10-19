@@ -1,71 +1,71 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; Snowflake
-title: Erstellen einer Snowflake-Quellverbindung in der Benutzeroberfläche
+keywords: Experience Platform;Home;beliebte Themen;Snowflake
+title: Snowflake-Quellverbindung in der Benutzeroberfläche erstellen
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Snowflake-Quellverbindung erstellen.
+description: Erfahren Sie, wie Sie eine Snowflake-Quellverbindung über die Adobe Experience Platform-Benutzeroberfläche erstellen.
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: db483110b8bfd5290f6a9a30fdb008f478fdbbf4
+source-git-commit: 76b3e3e9bcb27eb2bd6981ae6eb109410ae16336
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '461'
 ht-degree: 10%
 
 ---
 
-# Erstellen einer [!DNL Snowflake]-Quellverbindung in der Benutzeroberfläche
+# Erstellen Sie eine [!DNL Snowflake] Quellverbindung in der Benutzeroberfläche
 
 >[!NOTE]
 >
-> Der Connector [!DNL Snowflake] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
+> Die [!DNL Snowflake] Stecker befindet sich in Beta. Siehe [Quellübersicht](../../../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Steckverbindern.
 
-In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors [!DNL Snowflake] mithilfe der Adobe Experience Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Snowflake] Quellanschluss über die Adobe Experience Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu kennzeichnen und zu verbessern, indem Sie [!DNL Platform] Dienstleistungen.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Um auf Ihr Snowflake-Konto auf [!DNL Platform] zugreifen zu können, müssen Sie den folgenden Authentifizierungswert angeben:
+Um auf Ihr Snowflake-Konto zuzugreifen auf [!DNL Platform], müssen Sie den folgenden Authentifizierungswert angeben:
 
-| Berechtigung | Beschreibung |
+| Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| Konto | Das [!DNL Snowflake]-Konto, das Sie mit Platform verbinden möchten. |
-| Warehouse | Das [!DNL Snowflake]-Warehouse verwaltet den Abfrageausführungsprozess für die Anwendung. Jedes [!DNL Snowflake]-Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übermittelt werden. |
-| Datenbank | [!DNL Snowflake] enthält die Daten, die Sie an die Plattform übermitteln möchten. |
-| Benutzername | Der Benutzername für das [!DNL Snowflake]-Konto. |
-| Passwort | Das Kennwort für das [!DNL Snowflake]-Benutzerkonto. |
-| Verbindungszeichenfolge | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL Snowflake]-Instanz verwendet wird. Das Verbindungszeichenfolgen-Muster für [!DNL Snowflake] ist `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| Konto | Der vollständige Kontoname, der Ihrem [!DNL Snowflake] Konto. Eine vollqualifizierte [!DNL Snowflake] Der Kontoname enthält Ihren Kontonamen, Ihre Region und Ihre Cloud-Plattform. Beispiel: `cj12345.east-us-2.azure`. Weitere Informationen zu Kontonamen finden Sie in dieser [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
+| Warehouse | Die [!DNL Snowflake] warehouse verwaltet den Ausführungsprozess der Abfrage für die Anwendung. Jeden [!DNL Snowflake] Warehouse ist unabhängig voneinander und muss einzeln aufgerufen werden, wenn Daten an Platform übertragen werden. |
+| Datenbank | Die [!DNL Snowflake] -Datenbank enthält die Daten, die Sie zur Übertragung der Plattform benötigen. |
+| Benutzername | Der Benutzername für [!DNL Snowflake] Konto. |
+| Passwort | Das Kennwort für die [!DNL Snowflake] Benutzerkonto. |
+| Verbindungszeichenfolge | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrem [!DNL Snowflake] Instanz. Das Muster der Verbindungszeichenfolge für [!DNL Snowflake] ist `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
 
-Weitere Informationen zu diesen Werten finden Sie in [diesem Snowflake document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
+Weitere Informationen zu diesen Werten finden Sie unter [dieses Snowflake-Dokument](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
 
 ## Snowflake-Konto verbinden
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** aus dem linken Navigationsbereich aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] enthält eine Vielzahl von Quellen, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Plattform-Benutzeroberfläche **[!UICONTROL Quellen]** von der linken Navigation aus, um auf [!UICONTROL Quellen] Arbeitsbereich. Die [!UICONTROL Katalog] zeigt eine Reihe von Quellen an, mit denen Sie ein Konto erstellen können.
 
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle über die Suchleiste finden.
+Sie können die entsprechende Kategorie aus dem Katalog auf der linken Seite des Bildschirms auswählen. Alternativ können Sie die Quelle finden, an der Sie arbeiten möchten, indem Sie die Suchleiste verwenden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Datenbanken] die Option **[!UICONTROL Snowflake]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
+Im Rahmen der [!UICONTROL Datenbanken] Kategorie, auswählen **[!UICONTROL Snowflake]** und wählen Sie dann **[!UICONTROL Daten Hinzufügen]**.
 
 ![](../../../../images/tutorials/create/snowflake/catalog.png)
 
-Die Seite **[!UICONTROL Mit Snowflake verbinden]** wird angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
+Die **[!UICONTROL Mit Snowflake verbinden]** angezeigt. Auf dieser Seite können Sie entweder neue oder vorhandene Anmeldedaten verwenden.
 
 ### Vorhandenes Konto
 
-Um ein bestehendes Snowflake zu verbinden, wählen Sie das Konto aus, mit dem Sie eine Verbindung herstellen möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+Um ein bestehendes Konto zu verbinden, wählen Sie das Snowflake, mit dem Sie eine Verbindung herstellen möchten, und wählen Sie dann **[!UICONTROL Weiter]** um fortzufahren.
 
 ![](../../../../images/tutorials/create/snowflake/existing.png)
 
 ### Neues Konto
 
-Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]** aus. Geben Sie im angezeigten Formular einen Namen, eine optionale Beschreibung und Ihre Snowflake-Anmeldedaten ein. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbinden]** und lassen Sie dann etwas Zeit, bis die neue Verbindung hergestellt ist.
+Wenn Sie neue Anmeldedaten verwenden, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Eingabefeld einen Namen, eine optionale Beschreibung und Ihre Snowflake-Anmeldedaten ein. Wählen Sie nach Beendigung **[!UICONTROL Verbinden]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
 
 ![](../../../../images/tutorials/create/snowflake/new.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine Verbindung zu Ihrem Snowflake-Konto hergestellt. Sie können jetzt mit dem nächsten Tutorial fortfahren und [einen Datenfluss konfigurieren, um Daten in [!DNL Platform]](../../dataflow/databases.md) zu übertragen.
+Durch Befolgen dieses Tutorials haben Sie eine Verbindung zu Ihrem Snowflake-Konto hergestellt. Sie können nun mit dem nächsten Tutorial fortfahren und [Dataflow konfigurieren, um Daten in [!DNL Platform]](../../dataflow/databases.md).
