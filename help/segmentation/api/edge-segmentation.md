@@ -1,65 +1,62 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Kantensegmentierung; Edge-Segmentierung; Streaming-Edge
+keywords: Experience Platform;home;beliebte Themen;Segmentierung;Segmentierung;Segmentierungsdienst;Kantensegmentierung;Kantensegmentierung;Streaming-Kante;
 solution: Experience Platform
-title: 'Edge-Segmentierung mithilfe der API '
+title: 'Edge-Segmentierung mit der API '
 topic-legacy: developer guide
-description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
+description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c1dc75d94774eff8ad9a7374b1fa158f737dd5a4
+source-git-commit: c89971668839555347e9b84c7c0a4ff54a394c1a
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 12%
+source-wordcount: '917'
+ht-degree: 8%
 
 ---
 
-# Edge-Segmentierung (Beta)
+# Kantensegmentierung (Beta)
 
 >[!NOTE]
 >
->Im folgenden Dokument erfahren Sie, wie Sie die Kantensegmentierung mithilfe der API durchführen. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie im [UI-Handbuch zur Kantensegmentierung](../ui/edge-segmentation.md). Darüber hinaus befindet sich die Kantensegmentierung derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
+>Im folgenden Dokument wird erläutert, wie die Kantensegmentierung mithilfe der API durchgeführt wird. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie in der [Hilfslinie für die Benutzeroberfläche für Kantensegmentierung](../ui/edge-segmentation.md). Außerdem befindet sich die Edge-Segmentierung derzeit in der Beta-Phase. Die Dokumentation und Funktionalität können sich ändern.
 
-Bei der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+Mit der Edge-Segmentierung können Segmente in Adobe Experience Platform unmittelbar am Rand ausgewertet werden, sodass dieselben Anwendungsfälle für die Personalisierung der Seite und der nächsten Seite möglich sind.
 
 ## Erste Schritte
 
-Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste voraus, die mit der Kantensegmentierung verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Entwicklerleitfaden erfordert ein Arbeitsverständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die mit der Segmentierung von Kanten verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren  [!DNL Real-time Customer Profile] Daten.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein vereinheitlichtes Konsumentenkennwort in Echtzeit, basierend auf aggregierten Daten aus mehreren Quellen.
+- [[!DNL Segmentation]](../home.md): Ermöglicht das Erstellen von Segmenten und Audiencen aus Ihren [!DNL Real-time Customer Profile] Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
-Um erfolgreich Aufrufe an Experience Platform-API-Endpunkte durchzuführen, lesen Sie das Handbuch [Erste Schritte mit Platform-APIs](../../landing/api-guide.md) , um mehr über erforderliche Kopfzeilen und Beispiele für API-Aufrufe zu erfahren.
+Lesen Sie das Handbuch, um erfolgreich Aufrufe von API-Endpunkten der Experience Platform zu ermöglichen unter [Erste Schritte mit Plattform-APIs](../../landing/api-guide.md) um sich über erforderliche Kopfzeilen und das Lesen von Beispiel-API-Aufrufen zu informieren.
 
-## Kantensegmentierungs-Abfragetypen {#query-types}
+## Abfrage der Kantensegmentierung {#query-types}
 
 Damit ein Segment mithilfe der Kantensegmentierung bewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen:
 
-| Abfragetyp | Details |
-| ---------- | ------- |
-| Eingehender Treffer | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
-| Eingehender Treffer, der sich auf ein Profil bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. |
-| Eingehender Treffer mit einem Zeitfenster von 24 Stunden | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden verweist |
-| Eingehender Treffer, der sich auf ein Profil mit einem Zeitfenster von 24 Stunden bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden und ein oder mehrere Profilattribute verweist. |
+| Abfragetyp | Details | Beispiel |
+| ---------- | ------- | ------- |
+| Einzelnes Ereignis | Eine Segmentdefinition, die sich auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung bezieht. | Personen, die dem Warenkorb ein Artikel hinzugefügt haben. |
+| Einzelnes Ereignis, das sich auf ein Profil bezieht | Eine Segmentdefinition, die sich auf ein oder mehrere Profil-Attribute und ein einzelnes ankommendes Ereignis ohne Zeitbeschränkung bezieht. | Personen, die in den USA leben und die Homepage besucht haben. |
+| Negatives einzelnes Ereignis mit einem Profil-Attribut | Eine Segmentdefinition, die sich auf ein negatives eintreffendes Ereignis und ein oder mehrere Profil-Attribute bezieht | Menschen, die in den USA leben und **nicht** besuchte die Homepage. |
+| Einzelnes Ereignis innerhalb eines 24-Stunden-Fensters | Eine Segmentdefinition, die sich auf ein einzelnes ankommendes Ereignis innerhalb von 24 Stunden bezieht. | Personen, die die Homepage in den letzten 24 Stunden besucht haben. |
+| Einzelnes Ereignis mit einem Profil-Attribut und einem 24-Stunden-Zeitfenster | Eine Segmentdefinition, die sich auf ein oder mehrere Profil-Attribute und ein negiertes einzelnes ankommendes Ereignis innerhalb von 24 Stunden bezieht. | Personen, die in den USA leben und die Homepage in den letzten 24 Stunden besucht haben. |
+| Negiertes einzelnes Ereignis mit einem Profil-Attribut innerhalb eines 24-Stunden-Fensters | Eine Segmentdefinition, die sich auf ein oder mehrere Profil-Attribute und ein negiertes einzelnes ankommendes Ereignis innerhalb von 24 Stunden bezieht. | Menschen, die in den USA leben und **nicht** besuchte die Homepage in den letzten 24 Stunden. |
+| Häufigkeitsangaben innerhalb eines 24-Stunden-Ereignisses | Eine Segmentdefinition, die sich auf ein Ereignis bezieht, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Ereignissen aufweist. | Personen, die die Homepage besucht haben **mindestens** fünf Mal in den letzten 24 Stunden. |
+| Ereignis der Häufigkeit mit einem Profil-Attribut innerhalb eines 24-Stunden-Fensters | Eine Segmentdefinition, die sich auf ein oder mehrere Profil-Attribute bezieht und ein Ereignis, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Ereignissen aufnimmt. | Personen aus den USA, die die Homepage besucht haben **mindestens** fünf Mal in den letzten 24 Stunden. |
+| Negatives Frequenzfenster mit einem Profil innerhalb eines 24-Stunden-Ereignisses | Eine Segmentdefinition, die sich auf ein oder mehrere Profil-Attribute und ein negiertes Ereignis bezieht, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Ereignissen aufnimmt. | Personen, die die Startseite nicht besucht haben **mehr** in den letzten 24 Stunden mehr als fünf Mal. |
+| Mehrere eingehende Treffer innerhalb eines Profils von 24 Stunden | Eine Segmentdefinition, die sich auf mehrere Ereignis bezieht, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen, die die Homepage besucht haben **oder** hat die Checkout-Seite innerhalb der letzten 24 Stunden besucht. |
+| Mehrere Ereignisse mit einem Profil innerhalb eines 24-Stunden-Fensters | Eine Segmentdefinition, die sich auf ein oder mehrere Profil-Attribute und mehrere Ereignis bezieht, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen aus den USA, die die Homepage besucht haben **und** hat die Checkout-Seite innerhalb der letzten 24 Stunden besucht. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Die folgenden Abfragetypen werden derzeit von der Kantensegmentierung unterstützt: **nicht**:
+## Alle Segmente abrufen, die für die Kantensegmentierung aktiviert sind
 
-| Abfragetyp | Details |
-| ---------- | ------- |
-| Mehrere Ereignisse | Wenn eine Abfrage mehr als ein Ereignis enthält, kann sie nicht mithilfe der Kantensegmentierung ausgewertet werden. |
-| Frequenzabfrage | Jede Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen stattfindet. |
-| Frequenzabfrage, die sich auf ein Profil bezieht | Jede Segmentdefinition, die auf ein Ereignis verweist, das mindestens eine bestimmte Anzahl von Malen stattfindet und mindestens ein Profilattribut aufweist. |
-
-{style=&quot;table-layout:auto&quot;}
-
-## Alle für die Kantensegmentierung aktivierten Segmente abrufen
-
-Sie können eine Liste aller Segmente abrufen, die für die Kantensegmentierung in Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an den Endpunkt `/segment/definitions` stellen.
+Sie können eine Liste aller Segmente abrufen, die für die Kantensegmentierung in Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET an die `/segment/definitions` Endpunkt.
 
 **API-Format**
 
-Um für die Kantensegmentierung aktivierte Segmente abzurufen, müssen Sie den Abfrageparameter `evaluationInfo.synchronous.enabled=true` in den Anfragepfad einbeziehen.
+Um Segmente abzurufen, die für die Kantensegmentierung aktiviert sind, müssen Sie den Parameter &quot;Abfrage&quot;angeben. `evaluationInfo.synchronous.enabled=true` im Anforderungspfad.
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -78,7 +75,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer IMS-Organisation zurück, die für die Kantensegmentierung aktiviert sind. Detailliertere Informationen zur zurückgegebenen Segmentdefinition finden Sie im [Endpunktleitfaden für Segmentdefinitionen](./segment-definitions.md).
+Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer IMS-Organisation zurück, die für die Kantensegmentierung aktiviert sind. Ausführlichere Informationen zur zurückgegebenen Segmentdefinition finden Sie im [Endpunkt für Segmentdefinitionen](./segment-definitions.md).
 
 ```json
 {
@@ -165,9 +162,9 @@ Eine erfolgreiche Antwort gibt eine Reihe von Segmenten in Ihrer IMS-Organisatio
 }
 ```
 
-## Erstellen eines Segments, das für die Kantensegmentierung aktiviert ist
+## Segment erstellen, das für die Kantensegmentierung aktiviert ist
 
-Sie können ein Segment erstellen, das für die Kantensegmentierung aktiviert ist, indem Sie eine POST-Anfrage an den Endpunkt `/segment/definitions` stellen, der mit einem der oben aufgeführten [Kantensegmentierungs-Abfragetypen](#query-types) übereinstimmt.
+Sie können ein Segment erstellen, das für die Kantensegmentierung aktiviert ist, indem Sie eine POST an die `/segment/definitions` Endpunkt, der mit einem der [oben aufgeführte Abfragen zur Segmentierung von Kanten](#query-types).
 
 **API-Format**
 
@@ -179,7 +176,7 @@ POST /segment/definitions
 
 >[!NOTE]
 >
->Das folgende Beispiel stellt eine Standardanfrage zum Erstellen eines Segments dar. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zum Erstellen eines Segments](../tutorials/create-a-segment.md).[
+>Das Beispiel unten ist eine Standardanforderung zum Erstellen eines Segments. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial unter [ein Segment erstellen](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -248,6 +245,6 @@ Eine erfolgreiche Antwort gibt die Details der neu erstellten Segmentdefinition 
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, wie Sie Segmente mit aktivierter Kantensegmentierung erstellen, können Sie sie verwenden, um Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten zu aktivieren.
+Da Sie nun wissen, wie Sie Segmente mit aktivierter Kantensegmentierung erstellen, können Sie diese verwenden, um Anwendungsfälle für die Personalisierung derselben Seite und nächster Seite zu aktivieren.
 
 Weiterführende Informationen zum Durchführen ähnlicher Aktionen und zum Verwenden von Segmenten unter Einsatz der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
