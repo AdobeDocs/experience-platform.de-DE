@@ -2,10 +2,10 @@
 title: Versionshinweise
 description: Die neuesten Versionshinweise für Tags in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '578'
+ht-degree: 87%
 
 ---
 
@@ -14,6 +14,16 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wird als eine Suite von Datenerfassungstechnologien in Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../term-updates.md).
+
+## 21. Oktober 2021
+
+**Daten an authentifizierte Endpunkte bei der Weiterleitung von Ereignissen senden** - Sie können Daten mithilfe von Geheimnissen an Endpunkte senden, für die die folgenden Authentifizierungsprotokolle erforderlich sind:
+
+* **[!UICONTROL Token]**: Eine einzelne Zeichenfolge aus Zeichen, die einen Authentifizierungstoken-Wert darstellt.
+* **[!UICONTROL Einfaches HTTP]**: Enthält zwei Zeichenfolgenattribute für einen Benutzernamen und ein Kennwort.
+* **[!UICONTROL OAuth2]**: Enthält mehrere Attribute zur Unterstützung der [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) Spezifikation
+
+Weitere Informationen finden Sie in den Leitfäden auf [Verwalten von Geheimnissen in der Benutzeroberfläche der Datenerfassung](../ui/event-forwarding/secrets.md) oder [Verwalten von Geheimnissen in der Reaktor-API](../api/guides/secrets.md).
 
 ## 19. Juli 2021
 
