@@ -5,10 +5,10 @@ title: Handbuch zur Segmentierungsservice-UI
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche für das Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: d65bcf62f0de29dc293a1a1313178a408613a024
+source-git-commit: 8325ae6fd7d0013979e80d56eccd05b6ed6f5108
 workflow-type: tm+mt
-source-wordcount: '1667'
-ht-degree: 21%
+source-wordcount: '1691'
+ht-degree: 20%
 
 ---
 
@@ -20,10 +20,10 @@ ht-degree: 21%
 
 Die Arbeit mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen [!DNL Experience Platform] mit der Segmentierung verbundene Dienste. Bevor Sie dieses Benutzerhandbuch lesen, lesen Sie bitte die Dokumentation für folgende Dienste:
 
-- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] ermöglicht die Teilung von Daten, die in [!DNL Experience Platform] die sich auf Einzelpersonen (z. B. Kunden, Potenzieller Kunde, Nutzer oder Organisationen) in kleinere Gruppen bezieht.
+- [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] allows you to divide data stored in [!DNL Experience Platform] that relates to individuals (such as customers, prospects, users, or organizations) into smaller groups.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Ermöglicht die Erstellung von Profilen von Kunden durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, die in [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie sicher, dass Ihre Daten als Profil und Ereignis gemäß der [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
 
 Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
 - **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe verwendet wird.
@@ -60,7 +60,7 @@ In der Aufschlüsselung wird ein Balkendiagramm angezeigt, in dem der prozentual
 | Status | Beschreibung |
 | ------ | ----------- |
 | Realisiert | Ein neues Profil innerhalb des Segments. |
-| Vorhanden | Ein vorhandenes Profil, das innerhalb des Segments verbleibt. |
+| Vorhanden | An existing profile which has remained within the segment. |
 | Beenden | Ein bestehendes Profil, das das Segment verlässt. |
 
 Die Abwanderung stellt den Prozentsatz der Profil dar, die sich innerhalb einer Segmentdefinition im Vergleich zum letzten Segmentauftrag ändern, während die Segmentanzahl die Gesamtanzahl der Profil darstellt, die für das Profil infrage kommen.
@@ -131,9 +131,9 @@ Die Art und Weise, in der die Datenerfassung ausgelöst wird, hängt von der Art
 
 Bei der Stapelverarbeitung wird der Profil-Store alle fünfzehn Minuten automatisch gescannt, um festzustellen, ob ein neuer Stapel seit dem letzten Stichprobenauftrag erfolgreich erfasst wurde. Wenn das der Fall ist, wird der Profil-Store daraufhin gescannt, um zu sehen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingungen erfüllt sind, wird ein neuer Probenahmeauftrag ausgelöst.
 
-Für die Streaming-Aufnahme wird der Profil-Store stündlich automatisch gescannt, um festzustellen, ob sich die Anzahl der Datensätze um mindestens 5 % geändert hat. Wenn diese Bedingung erfüllt ist, wird ein neuer Stichprobenauftrag ausgelöst.
+For streaming ingestion, the profile store is automatically scanned every hour to see if there&#39;s been at least a 5% change in the number of records. Wenn diese Bedingung erfüllt ist, wird ein neuer Stichprobenauftrag ausgelöst.
 
-Die Stichprobengröße des Scanvorgangs hängt von der Gesamtanzahl der Entitäten in Ihrem Profil-Store ab. Diese Stichprobengrößen sind in der folgenden Tabelle dargestellt:
+The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 
 | Einrichtungen im Profil-Store | Stichprobengröße |
 | ------------------------- | ----------- |
@@ -167,7 +167,7 @@ Bei der On-Demand-Auswertung wird die API zur Durchführung von Auswertungen und
 
 ### Geplante Segmentierung aktivieren {#enable-scheduled-segmentation}
 
-Die Aktivierung Ihrer Segmentdefinitionen für eine geplante Auswertung kann über die Benutzeroberfläche oder die API erfolgen. Wechseln Sie in der Benutzeroberfläche zum **[!UICONTROL Durchsuchen]** Registerkarten innerhalb von **[!UICONTROL Segmente]** und einschalten **[!UICONTROL Alle Segmente planen Hinzufügen]**. Dadurch werden alle Segmente anhand des von Ihrer Organisation festgelegten Zeitplans evaluiert.
+Die Aktivierung Ihrer Segmentdefinitionen für eine geplante Auswertung kann über die Benutzeroberfläche oder die API erfolgen. In the UI, return to the **[!UICONTROL Browse]** tab within **[!UICONTROL Segments]** and toggle on **[!UICONTROL Add all segments to schedule]**. Dadurch werden alle Segmente anhand des von Ihrer Organisation festgelegten Zeitplans evaluiert.
 
 >[!NOTE]
 >
@@ -199,7 +199,7 @@ Weitere Informationen zur Segmentierung der Kante finden Sie im [Hilfslinie für
 >
 >Richtlinienverletzungen gelten nur, wenn Sie ein Segment erstellen, das einem Ziel zugewiesen wurde.
 
-Sobald Sie Ihr Segment erstellt haben, wird das Segment von Adobe Experience Platform Data Governance analysiert, um sicherzustellen, dass innerhalb des Segments keine Richtlinienverstöße vorliegen. Weitere Informationen finden Sie in der [[!DNL Data Governance] Übersicht über](../../data-governance/home.md).
+Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. Weitere Informationen finden Sie in der [[!DNL Data Governance] Übersicht über](../../data-governance/home.md).
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 
