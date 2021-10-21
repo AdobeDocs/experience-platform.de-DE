@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Tags
 breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 100%
+source-wordcount: '380'
+ht-degree: 99%
 
 ---
 
@@ -175,6 +175,7 @@ ht-degree: 100%
       * [Anmerkungen](./api/endpoints/notes.md)
       * [Profil](./api/endpoints/profile.md)
       * [Durchsuchen](./api/endpoints/search.md)
+      * [Geheimnisse](./api/endpoints/secrets.md)
    * Handbücher {#guides}
       * [Delegaten-Deskriptor-IDs](./api/guides/delegate-descriptor-ids.md)
       * [Verschlüsseln von Werten](./api/guides/encrypting-values.md)
@@ -184,6 +185,7 @@ ht-degree: 100%
       * [Sortieren von Antworten](./api/guides/sorting.md)
       * [Beziehungen](./api/guides/relationships.md)
       * [Suchen nach Ressourcen](./api/guides/search.md)
+      * [Geheimnisse](./api/guides/secrets.md)
 * [FAQs](./faq.md)
 * [Aktualisierungen der Terminologie](./term-updates.md)
 * Versionshinweise {#release-notes}

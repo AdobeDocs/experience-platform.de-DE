@@ -2,10 +2,10 @@
 title: Handbuch zur Reactor-API
 description: Mit der Reactor-API können Entwickler alle Ressourcen für Tags in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
 workflow-type: tm+mt
-source-wordcount: '1035'
-ht-degree: 100%
+source-wordcount: '1082'
+ht-degree: 95%
 
 ---
 
@@ -114,6 +114,10 @@ Weitere Informationen zum Anzeigen dieser Informationen in der API finden Sie im
 ## Durchsuchen
 
 Der `/search`-Endpunkt bietet eine Möglichkeit, Ressourcen zu finden, die den gewünschten Kriterien entsprechen und als Abfrage ausgedrückt werden. Alle Abfragen beziehen sich auf Ihr aktuelles Unternehmen und auf verfügbare Eigenschaften. Weitere Informationen zur Verwendung dieser Funktion finden Sie im [Handbuch zum search-Endpunkt](./endpoints/search.md).
+
+## Geheimnisse
+
+Ein geheimer Schlüssel enthält Anmeldedaten, mit denen sich das Ereignis für den sicheren Datenaustausch an ein anderes System authentifizieren kann. Siehe [Geheimtipp](./guides/secrets.md) für einen Überblick über die Funktionsweise von Geheimnissen in der Weiterleitung von Ereignissen und [Secrets-Endpunkt-Leitfaden](./endpoints/secrets.md) um zu erfahren, wie sie in der Reactor-API verwaltet werden.
 
 ## Nächste Schritte
 
