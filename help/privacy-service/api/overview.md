@@ -1,10 +1,10 @@
 ---
 title: Privacy Service-API-Handbuch
 description: Erfahren Sie, wie Sie mit der Privacy Service-API Datenschutzaufträge für unterstützte Adobe Experience Cloud-Anwendungen programmgesteuert verwalten.
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 196147e7691010707953561c110a3934fec8ba1b
 workflow-type: tm+mt
 source-wordcount: '265'
-ht-degree: 32%
+ht-degree: 21%
 
 ---
 
@@ -30,4 +30,4 @@ Bestimmte Bestimmungen bedürfen der ausdrücklichen Zustimmung des Kunden, bevo
 
 ## Nächste Schritte
 
-Um mit der Durchführung von Aufrufen mit der Schema Registry API zu beginnen, lesen Sie das [Erste-Schritte-Handbuch](./getting-started.md) und wählen Sie dann eines der Endpunkt-Handbücher aus, um zu erfahren, wie Sie bestimmte Endpunkte verwenden.
+Lesen Sie die folgenden Informationen, um mit dem Aufrufen der Privacy Service-API zu beginnen: [Erste Schritte](./getting-started.md) wählen Sie dann eine der Endpunkt-Hilfslinien aus, um zu erfahren, wie bestimmte Endpunkte verwendet werden.
