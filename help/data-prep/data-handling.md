@@ -5,10 +5,10 @@ title: Verarbeiten von Datenformaten mit der Datenvorbereitung
 topic-legacy: overview
 description: In diesem Dokument erhalten Sie einen Überblick darüber, wie verschiedene Datentypen von der Datenvorbereitung verarbeitet werden.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 100%
+source-wordcount: '568'
+ht-degree: 98%
 
 ---
 
@@ -41,7 +41,7 @@ date({DATE}, {FORMAT}, {DEFAULT_DATE})
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{DATE}` | Erforderlich. Die Zeichenfolge, die das Datum darstellt. |
-| `{FORMAT}` | Optional. Die Zeichenfolge, die das Format des Datums darstellt. Weitere Informationen zur Zeichenfolgenformatierung finden Sie im Abschnitt zu [Zeichenfolgen im Datums-/Zeitformat](#format). |
+| `{FORMAT}` | Optional. Die Zeichenfolge, die das Format des Quelldatums darstellt. Weitere Informationen zur Zeichenfolgenformatierung finden Sie im Abschnitt zu [Zeichenfolgen im Datums-/Zeitformat](#format). |
 | `{DEFAULT_DATE}` | Optional. Das Standarddatum, das zurückgegeben werden soll, wenn das angegebene Datum null ist. |
 
 Der Ausdruck `date(orderDate, "yyyy-MM-dd")` konvertiert den Wert `orderDate` beispielsweise von „31. Dezember 2020“ in den Datetime-Wert „2020-12-31“.
