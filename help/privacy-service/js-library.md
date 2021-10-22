@@ -1,36 +1,36 @@
 ---
 keywords: Experience Platform;Home;beliebte Themen
 solution: Experience Platform
-title: Übersicht über die Adobe Privacy JavaScript Library
+title: Übersicht über die JavaScript-Bibliothek zum Datenschutz in der Adobe
 topic-legacy: overview
-description: Mit der Adobe Privacy JavaScript Library können Sie Identitäten von Datensubjekten abrufen, die in Privacy Service verwendet werden können.
+description: Die Adobe Privacy JavaScript Library ermöglicht das Abrufen von Daten Betreff Identitäten zur Verwendung in Privacy Service.
 exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '944'
-ht-degree: 67%
+ht-degree: 66%
 
 ---
 
 # Übersicht über die Adobe Privacy JavaScript Library
 
-Als Datenverarbeiter verarbeitet Adobe personenbezogene Daten gemäß den Berechtigungen und Anweisungen Ihres Unternehmens. Als Datenverantwortlicher legen Sie fest, welche personenbezogenen Daten Adobe in Ihrem Namen verarbeitet und speichert. Je nach den Informationen, die Sie über Adobe Experience Cloud-Lösungen senden, kann Adobe private Informationen speichern, die für Datenschutzbestimmungen wie [!DNL General Data Protection Regulation] (DSGVO) und [!DNL California Consumer Privacy Act] (CCPA) gelten. Weiterführende Informationen zur Datenerfassung durch Experience Cloud-Lösungen finden Sie im Dokument zum [Datenschutz in Adobe Experience Cloud](https://www.adobe.com/de/privacy/experience-cloud.html).
+Als Datenverarbeiter verarbeitet Adobe personenbezogene Daten gemäß den Berechtigungen und Anweisungen Ihres Unternehmens. Als Datenverantwortlicher legen Sie fest, welche personenbezogenen Daten Adobe in Ihrem Namen verarbeitet und speichert. Je nach den Informationen, die Sie über Adobe Experience Cloud-Lösungen versenden, kann die Adobe private Informationen speichern, die für Datenschutzbestimmungen wie die [!DNL General Data Protection Regulation] (GDPR) und [!DNL California Consumer Privacy Act] (CCPA). Weiterführende Informationen zur Datenerfassung durch Experience Cloud-Lösungen finden Sie im Dokument zum [Datenschutz in Adobe Experience Cloud](https://www.adobe.com/de/privacy/experience-cloud.html).
 
-Die **Adobe Privacy JavaScript Library** ermöglicht es Datenverantwortlichen, den Abruf aller von [!DNL Experience Cloud]-Lösungen generierten Identitäten der betroffenen Personen für eine bestimmte Domäne zu automatisieren. Mithilfe der vom [Adobe Experience Platform Privacy Service](home.md) bereitgestellten API können diese Identitäten dann zum Erstellen von Zugriffs- und Löschanfragen für personenbezogene Daten der betroffenen Personen verwendet werden.
+Die **JavaScript Library zum Datenschutz der Adobe** ermöglicht es den Datenkontrolleuren, den Abruf aller von [!DNL Experience Cloud] Lösungen für eine bestimmte Domäne. Mithilfe der vom [Adobe Experience Platform Privacy Service](home.md) bereitgestellten API können diese Identitäten dann zum Erstellen von Zugriffs- und Löschanfragen für personenbezogene Daten der betroffenen Personen verwendet werden.
 
 >[!NOTE]
 >
->[!DNL Privacy JS Library] muss in der Regel nur auf datenschutzbezogenen Seiten installiert werden und nicht auf allen Seiten einer Website oder Domäne.
+>Die [!DNL Privacy JS Library] In der Regel muss nur auf datenschutzbezogenen Seiten installiert werden und muss nicht auf allen Seiten einer Website oder Domäne installiert werden.
 
 ## Funktionen
 
-[!DNL Privacy JS Library] bietet verschiedene Funktionen zum Verwalten von Identitäten in [!DNL Privacy Service]. Diese Funktionen können nur zur Verwaltung der Identitäten verwendet werden, die im Browser für einen bestimmten Besucher gespeichert sind. Sie können nicht verwendet werden, um Informationen direkt an [!DNL Experience Cloud Central Service] zu senden.
+Die [!DNL Privacy JS Library] bietet mehrere Funktionen zum Verwalten von Identitäten in [!DNL Privacy Service]. Diese Funktionen können nur zur Verwaltung der Identitäten verwendet werden, die im Browser für einen bestimmten Besucher gespeichert sind. Sie können nicht dazu verwendet werden, Informationen an die [!DNL Experience Cloud Central Service] direkt.
 
 In der folgenden Tabelle sind die verschiedenen Funktionen der Bibliothek aufgeführt:
 
 | Funktion | Beschreibung |
 | --- | --- |
-| `retrieveIdentities` | Gibt ein Array mit übereinstimmenden Identitäten (`validIds`) zurück, die von [!DNL Privacy Service] abgerufen wurden, sowie ein Array mit nicht gefundenen Identitäten (`failedIds`). |
+| `retrieveIdentities` | Gibt ein Array mit übereinstimmenden Identitäten zurück (`validIds`), die abgerufen wurden von [!DNL Privacy Service], sowie eine Reihe von nicht gefundenen Identitäten (`failedIds`). |
 | `removeIdentities` | Entfernt jede übereinstimmende (gültige) Identität aus dem Browser. Gibt eine Gruppe mit übereinstimmenden Identitäten (`validIds`) zurück, wobei jede Identität einen booleschen `isDeletedClientSide`-Wert enthält, der angibt, ob die Kennung gelöscht wurde. |
 | `retrieveThenRemoveIdentities` | Ruft eine Gruppe mit übereinstimmenden Identitäten (`validIds`) ab und entfernt diese dann aus dem Browser. Diese Funktion ähnelt zwar `removeIdentities`, eignet sich jedoch am besten, wenn die von Ihnen verwendete Adobe-Lösung eine Zugriffsanfrage erfordert, bevor Löschen möglich ist (wenn z. B. eine eindeutige Kennung abgerufen werden muss, bevor sie in einer Löschanfrage bereitgestellt wurde). |
 
@@ -43,15 +43,15 @@ Da alle drei Funktionen asynchrone Prozesse sind, müssen abgerufene Identitäte
 
 ## Installation
 
-Um mit der Verwendung von [!DNL Privacy JS Library] zu beginnen, müssen Sie sie mit einer der folgenden Methoden auf Ihrem Computer installieren:
+Zum Beginn mit [!DNL Privacy JS Library], müssen Sie es mit einer der folgenden Methoden auf Ihrem Computer installieren:
 
 * Installieren Sie die Software mithilfe von npm, indem Sie den folgenden Befehl ausführen: `npm install @adobe/adobe-privacy`
-* Installieren Sie die [Adobe Privacy Tag-Erweiterung](../tags/extensions/web/privacy/overview.md) unter dem Namen `AdobePrivacy` .
-* Laden Sie vom [Experience Cloud-GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy) herunter.
+* Installieren Sie [Adobe-Datenschutztag-Erweiterung](../tags/extensions/web/privacy/overview.md) unter dem Namen `AdobePrivacy`
+* Von [Experience Cloud-GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
-## [!DNL Privacy JS Library] instanziieren
+## Instantieren der [!DNL Privacy JS Library]
 
-Alle Apps, die [!DNL Privacy JS Library] verwenden, müssen ein neues `AdobePrivacy` -Objekt instanziieren, das für eine bestimmte Adobe-Lösung konfiguriert werden muss. Eine Instanziierung für Adobe Analytics würde beispielsweise wie folgt aussehen:
+Alle Apps, die die [!DNL Privacy JS Library] muss eine neue `AdobePrivacy` -Objekt, das auf eine bestimmte Adobe konfiguriert werden muss. Eine Instanziierung für Adobe Analytics würde beispielsweise wie folgt aussehen:
 
 ```js
 var adobePrivacy = new AdobePrivacy({
@@ -66,11 +66,11 @@ Eine vollständige Liste der unterstützten Parameter für verschiedene Adobe-L�
 
 ## Code-Beispiele
 
-Die folgenden Codebeispiele zeigen die Verwendung von [!DNL Privacy JS Library] für verschiedene gängige Szenarien, vorausgesetzt, Sie verwenden keine Tags.
+Die folgenden Codebeispiele veranschaulichen die Verwendung der [!DNL Privacy JS Library] für mehrere häufige Szenarien, sofern Sie keine Tags verwenden.
 
 ### Identitäten abrufen
 
-Dieses Beispiel zeigt, wie eine Liste von Identitäten von [!DNL Experience Cloud] abgerufen werden kann.
+In diesem Beispiel wird veranschaulicht, wie eine Liste von Identitäten abgerufen wird von [!DNL Experience Cloud].
 
 #### JavaScript
 
@@ -92,7 +92,7 @@ adobePrivacy.retrieveIdentities().then(handleRetrievedIDs);
 | Variable | Beschreibung |
 | --- | --- |
 | `validIds` | Ein JSON-Objekt, das alle Kennungen enthält, die erfolgreich abgerufen wurden. |
-| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, die nicht von [!DNL Privacy Service] abgerufen wurden oder anderweitig nicht gefunden werden konnten. |
+| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, von denen nicht abgerufen wurden [!DNL Privacy Service], oder auf andere Weise nicht gefunden werden konnte. |
 
 #### Ergebnis
 
@@ -141,7 +141,7 @@ adobePrivacy.removeIdentities().then(handleRemovedIDs)…
 | Variable | Beschreibung |
 | --- | --- |
 | `validIds` | Ein JSON-Objekt, das alle Kennungen enthält, die erfolgreich abgerufen wurden. |
-| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, die nicht von [!DNL Privacy Service] abgerufen wurden oder anderweitig nicht gefunden werden konnten. |
+| `failedIDs` | Ein JSON-Objekt, das alle IDs enthält, von denen nicht abgerufen wurden [!DNL Privacy Service], oder auf andere Weise nicht gefunden werden konnte. |
 
 #### Ergebnis
 
@@ -170,11 +170,11 @@ Wenn der Code erfolgreich ausgeführt wird, wird `validIDs` mit einer Liste der 
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments wurden Sie mit den Kernfunktionen von [!DNL Privacy JS Library] vertraut gemacht. Nachdem Sie die Bibliothek zum Abrufen einer Liste von Identitäten verwendet haben, können Sie diese Identitäten verwenden, um Datenzugriffs- und Löschanfragen an die [!DNL Privacy Service]-API zu erstellen. Weiterführende Informationen finden Sie im [Entwicklerhandbuch für Privacy Service](api/getting-started.md).
+Durch das Lesen dieses Dokuments wurden Sie in die Kernfunktionalitäten der [!DNL Privacy JS Library]. Nachdem Sie die Bibliothek zum Abrufen einer Liste von Identitäten verwendet haben, können Sie mithilfe dieser Identitäten Datenzugriff erstellen und Anforderungen an die [!DNL Privacy Service] API. Siehe [Privacy Service-API-Handbuch](api/overview.md) für weitere Informationen.
 
 ## Anhang
 
-Dieser Abschnitt enthält zusätzliche Informationen zur Verwendung von [!DNL Privacy JS Library].
+Dieser Abschnitt enthält ergänzende Informationen zur Anwendung der [!DNL Privacy JS Library].
 
 ### Konfigurationsparameter für Adobe-Lösungen
 

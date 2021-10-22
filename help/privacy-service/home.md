@@ -5,10 +5,10 @@ title: Übersicht über Privacy Service
 topic-legacy: overview
 description: Mit Privacy Service können Sie die automatische Einhaltung gesetzlicher Datenschutzbestimmungen bei der Handhabung von Daten in Experience Cloud erleichtern.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
-source-wordcount: '1390'
-ht-degree: 100%
+source-wordcount: '1389'
+ht-degree: 97%
 
 ---
 
@@ -73,7 +73,7 @@ Sobald Sie die Datenschutzanfragen für Ihr Unternehmen festgelegt und entschied
 
 #### Verwenden der API
 
-Der [[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) stellt mehrere Endpunkte zum Erstellen und Verwalten von Datenschutzaufträgen mit RESTful-API-Aufrufen bereit, mit denen Sie die Einhaltung der Datenschutzregeln für Ihre [!DNL Experience Cloud]-Programme programmgesteuert angehen können. Ausführliche Anweisungen zur Verwendung der API finden Sie im [API-Entwicklerhandbuch für Privacy Service](api/getting-started.md).
+Der [[!DNL Privacy Service API]](https://www.adobe.io/experience-platform-apis/references/privacy-service/) stellt mehrere Endpunkte zum Erstellen und Verwalten von Datenschutzaufträgen mit RESTful-API-Aufrufen bereit, mit denen Sie die Einhaltung der Datenschutzregeln für Ihre [!DNL Experience Cloud]-Programme programmgesteuert angehen können. Detaillierte Anweisungen zur Verwendung der API finden Sie in der [Privacy Service-API-Handbuch](api/overview.md).
 
 #### Verwenden der UI
 
@@ -90,7 +90,7 @@ Sobald Sie Datenschutzaufträge abgeschlossen haben, stehen Ihnen verschiedene O
 | Überwachungsmethode | Beschreibung |
 | --- | --- |
 | [!DNL Privacy Service] Benutzeroberfläche | Die Benutzeroberfläche von [!DNL Privacy Service] bietet ein Überwachungs-Dashboard, das Ihnen eine visuelle Darstellung des Status aller aktiven Anfragen zeigt. Weiterführende Informationen finden Sie im [Privacy Service-Benutzerhandbuch](ui/overview.md). |
-| [!DNL Privacy Service] API | Sie können den Status von Datenschutzaufträgen programmgesteuert überwachen, indem Sie die von der [!DNL Privacy Service]-API bereitgestellten Lookup-Endpunkte verwenden. Ausführliche Anweisungen zur Verwendung der API finden Sie im [Privacy Service-Entwicklerhandbuch](./api/getting-started.md). |
+| [!DNL Privacy Service] API | Sie können den Status von Datenschutzaufträgen programmgesteuert überwachen, indem Sie die von der [!DNL Privacy Service]-API bereitgestellten Lookup-Endpunkte verwenden. Siehe [Privacy Service-API-Handbuch](./api/overview.md) für detaillierte Schritte zur Verwendung der API. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] nutzt Adobe I/O Events, die an einen konfigurierten Webhook gesendet werden, um eine effiziente Auftragsautomatisierung zu ermöglichen. Sie verringern oder eliminieren die Notwendigkeit, die [!DNL Privacy Service]-API abzufragen, um zu prüfen, ob ein Auftrag abgeschlossen oder eine bestimmte Etappe in einem Workflow erreicht wurde. Weitere Informationen finden Sie im Tutorial zum [Abonnieren von Privacy Events](./privacy-events.md). |
 
 ## Nächste Schritte
