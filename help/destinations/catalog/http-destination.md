@@ -1,9 +1,9 @@
 ---
 keywords: Streaming;
 title: HTTP-Verbindung
-description: Mit dem HTTP-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
+description: Das HTTP-Ziel in Adobe Experience Platform ermöglicht das Senden von Profil-Daten an HTTP-Endpunkte von Drittanbietern.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 9%
@@ -14,62 +14,62 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->Das [!DNL HTTP]-Ziel in Platform befindet sich derzeit in der Alpha-Phase. Dokumentation und Funktionalität können sich ändern.
+>Die [!DNL HTTP] Ziel in Platform befindet sich derzeit in Alpha. Dokumentation und Funktionalität können sich ändern.
 
 ## Übersicht {#overview}
 
-Das [!DNL HTTP]-Ziel ist ein [!DNL Adobe Experience Platform]-Streaming-Ziel, mit dem Sie Profildaten an [!DNL HTTP]-Endpunkte von Drittanbietern senden können.
+Die [!DNL HTTP] Ziel ist ein [!DNL Adobe Experience Platform] Streaming-Ziel, mit dem Sie Profil-Daten an Dritte senden können [!DNL HTTP] Endpunkte.
 
-Um Profildaten an [!DNL HTTP]-Endpunkte zu senden, müssen Sie zunächst in [[!DNL Adobe Experience Platform]](#connect-destination) eine Verbindung zum Ziel herstellen.
+So senden Sie Profil-Daten an [!DNL HTTP] Endpunkte müssen Sie zunächst eine Verbindung zum Ziel herstellen in [[!DNL Adobe Experience Platform]](#connect-destination).
 
 ## Anwendungsfälle {#use-cases}
 
-Das [!DNL HTTP]-Ziel richtet sich an Kunden, die XDM-Profildaten und Zielgruppensegmente in allgemeine [!DNL HTTP]-Endpunkte exportieren müssen.
+Die [!DNL HTTP] Ziel ist auf Kunden ausgerichtet, die XDM-Profil-Daten und -Audiencen in generische Segmente exportieren müssen [!DNL HTTP] Endpunkte.
 
-[!DNL HTTP] Endpunkte können entweder die eigenen Systeme von Kunden oder Lösungen von Drittanbietern sein.
+[!DNL HTTP] Endpunkte können entweder eigene Systeme oder Lösungen von Drittanbietern sein.
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../ui/connect-destination.md) beschrieben sind.
+Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die in der [Übungen zur Zielkonfiguration](../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+Während [einrichten](../ui/connect-destination.md) an diesem Ziel angeben, müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL httpEndpoint]**: die  [!DNL URL] des HTTP-Endpunkts, an den Sie die Profildaten senden möchten.
-   * Optional können Sie Abfrageparameter zum [!UICONTROL httpEndpoint] [!DNL URL] hinzufügen.
-* **[!UICONTROL authEndpoint]**: die  [!DNL URL] des für die  [!DNL OAuth2] Authentifizierung verwendeten HTTP-Endpunkts.
-* **[!UICONTROL Client-ID]**: den  [!DNL clientID] Parameter, der in den  [!DNL OAuth2] Client-Anmeldeinformationen verwendet wird.
-* **[!UICONTROL Client Secret]**: den  [!DNL clientSecret] Parameter, der in den  [!DNL OAuth2] Client-Anmeldeinformationen verwendet wird.
+* **[!UICONTROL httpEndpoint]**: die [!DNL URL] des HTTP-Endpunkts, an den Sie die Profil-Daten senden möchten.
+   * Optional können Sie Abfragen-Parameter zu den [!UICONTROL httpEndpoint] [!DNL URL].
+* **[!UICONTROL authEndpoint]**: die [!DNL URL] des HTTP-Endpunkts, der für [!DNL OAuth2] Authentifizierung.
+* **[!UICONTROL Client-ID]**: die [!DNL clientID] Parameter, der in [!DNL OAuth2] Client-Anmeldedaten.
+* **[!UICONTROL Kundengeheimnis]**: die [!DNL clientSecret] Parameter, der in [!DNL OAuth2] Client-Anmeldedaten.
 
    >[!NOTE]
    >
-   >Derzeit werden nur Client-Anmeldedaten von [!DNL OAuth2] unterstützt.
+   >Nur [!DNL OAuth2] Clientberechtigungen werden derzeit unterstützt.
 
-* **[!UICONTROL Name]**: Geben Sie einen Namen ein, mit dem Sie dieses Ziel in Zukunft erkennen werden.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
-* **[!UICONTROL Benutzerdefinierte Kopfzeilen]**: Geben Sie alle benutzerdefinierten Header ein, die in die Zielaufrufe aufgenommen werden sollen, indem Sie folgendes Format verwenden:  `header1:value1,header2:value2,...headerN:valueN`.
+* **[!UICONTROL Name]**: Geben Sie einen Namen ein, unter dem Sie dieses Ziel in der Zukunft erkennen.
+* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Benutzerdefinierte Überschriften]**: Geben Sie benutzerdefinierte Kopfzeilen ein, die in die Zielaufrufe aufgenommen werden sollen, und verwenden Sie folgendes Format: `header1:value1,header2:value2,...headerN:valueN`.
 
    >[!IMPORTANT]
    >
-   >Für die aktuelle Implementierung ist mindestens eine benutzerdefinierte Kopfzeile erforderlich. Diese Einschränkung wird in einer zukünftigen Aktualisierung behoben.
+   >Für die aktuelle Implementierung ist mindestens ein benutzerdefinierter Header erforderlich. Diese Einschränkung wird in einer zukünftigen Aktualisierung behoben.
 
-## Aktivieren von Segmenten für dieses Ziel {#activate}
+## Segmente zu diesem Ziel aktivieren {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Profilexport-Ziele](../ui/activate-streaming-profile-destinations.md) .
+Siehe [Audience-Daten in Streaming-Profil-Exportziele aktivieren](../ui/activate-streaming-profile-destinations.md) für Anweisungen zum Aktivieren von Audiencen-Segmenten für dieses Ziel.
 
 ### Zielattribute {#attributes}
 
-Im Schritt [[!UICONTROL Attribute]](../ui/activate-streaming-profile-destinations.md#select-attributes) auswählen empfiehlt Adobe, eine eindeutige Kennung aus Ihrem [Vereinigungsschema](../../profile/home.md#profile-fragments-and-union-schemas) auszuwählen. Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
+In [[!UICONTROL Attribute auswählen]](../ui/activate-streaming-profile-destinations.md#select-attributes) Adobe empfiehlt, dass Sie eine eindeutige Kennung aus Ihrem [Vereinigung Schema](../../profile/home.md#profile-fragments-and-union-schemas). Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
 
 ## Exportierte Daten {#exported-data}
 
-Ihre exportierten [!DNL Experience Platform]-Daten landen im JSON-Format in Ihrem [!DNL HTTP]-Ziel. Beispielsweise enthält das nachstehende Ereignis das E-Mail-Adressen-Profilattribut einer Zielgruppe, die sich für ein bestimmtes Segment qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Interessenten sind [!DNL ECID] und E-Mail.
+Ihr exportiert [!DNL Experience Platform] Daten landen in Ihrer [!DNL HTTP] Ziel im JSON-Format. Das folgende Ereignis enthält beispielsweise das E-Mail-Adressattribut einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind [!DNL ECID] und E-Mail.
 
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.con"
+    "email": "yourstruly@adobe.com"
   },
   "segmentMembership": {
     "ups": {
