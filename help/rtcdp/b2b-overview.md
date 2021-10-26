@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Überblick über das Konto von Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
+source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
 workflow-type: tm+mt
-source-wordcount: '1057'
-ht-degree: 100%
+source-wordcount: '1079'
+ht-degree: 93%
 
 ---
 
@@ -73,7 +73,9 @@ Weitere Informationen zu Marketo und der Einbindung von B2B-Daten in Platform fi
 
 ## B2B-Ziele
 
-Alle Ziele von Experience Platform, wie z. B. Google, LinkedIn und Facebook, sind verfügbar und werden von Real-time Customer Data Platform B2B Edition voll unterstützt. Es gibt auch ein Marketo Engage-Ziel, das Segmentzugehörigkeitsdaten aus Platform streamt und als Listen in Marketo verfügbar macht.
+Experience Platform-Ziele wie Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager sind von der Echtzeit-Kundendatenplattform B2B Edition verfügbar und vollständig unterstützt. Das Marketo Engage-Ziel streamt auch Segmentmitgliedschaftsdaten aus Platform und stellt sie als Listen in Marketo zur Verfügung.
+
+Die Übersicht finden Sie auf der [Marketo Engage-Ziel](../destinations/catalog/adobe/marketo-engage.md) für weitere Informationen.
 
 Für Unternehmen mit mehr als einem CRM bietet Real-time Customer Data Platform B2B Edition die Möglichkeit, Ziel-Connectoren zu separaten Instanzen von Marketo oder CRM zu konfigurieren. Bei Bedarf können Sie Ziel-Connectoren für jede Instanz konfigurieren und Zielgruppen unabhängig voneinander an jede der CRM-Instanzen senden.
 
