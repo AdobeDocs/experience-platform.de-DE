@@ -7,7 +7,7 @@ feature: Identities
 source-git-commit: 205d9a8d0d5759e978604bef2b05664b1376d835
 workflow-type: tm+mt
 source-wordcount: '95'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 96%
    - [Native Kennung für eine Identität auflisten](api/list-native-id.md)
 - Benutzeroberfläche von Identity Service {#ui}
    - [Identitätsdiagramm-Viewer](ui/identity-graph-viewer.md)
-   - [Gemeinsame Geräteerkennung](ui/shared-devices.md)
+   - [Erkennung von gemeinsamen Geräten](ui/shared-devices.md)
 - [ECID-Übersicht](ecid.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service)

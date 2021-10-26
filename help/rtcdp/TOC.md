@@ -7,7 +7,7 @@ user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unte
 source-git-commit: 2d9b1df064f0e2a5aa981d0144fefecc9d0a4146
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -18,21 +18,21 @@ ht-degree: 74%
 * [Real-time Customer Data Platform B2B Edition – Übersicht](b2b-overview.md)
 * Erste Schritte {#intro}
    * Echtzeit-CDP {#rtcdp-intro}
-      * [Erste Schritte mit der Echtzeit-Kundendatenplattform](get-started.md)
+      * [Erste Schritte mit Real-time Customer Data Platform](get-started.md)
       * [Metriken – Übersicht](home-page-dashboards.md)
-   * Echtzeit-Kundendatenplattform B2B Edition {#rtcdpb2b-intro}
-      * [Erste Schritte mit der Echtzeit-Kundendatenplattform B2B Edition](./b2b-use-case.md)
+   * Real-time Customer Data Platform B2B Edition {#rtcdpb2b-intro}
+      * [Erste Schritte mit Real-time Customer Data Platform B2B Edition](./b2b-use-case.md)
 * Administration {#admin}
    * [Administration – Übersicht](administration/admin-overview.md)
-* Kontoprofile {#account}
-   * [Übersicht über Kontoprofile](accounts/account-profile-overview.md)
-   * [Handbuch zur Benutzeroberfläche des Kontoprofils](accounts/account-profile-ui-guide.md)
+* Account-Profile {#account}
+   * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
+   * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
 * Datensätze {#datasets}
    * [Datensätze](datasets/dataset.md)
    * [Datenqualität in Platform](datasets/data-quality.md)
 * Ziele {#destinations}
    * [Ziele – Übersicht](destinations/overview.md)
-   * [Ziele in der Echtzeit-Kundendatenplattform B2B Edition](destinations/b2b.md)
+   * [Ziele in Real-time Customer Data Platform B2B Edition](destinations/b2b.md)
 * Identitäten {#identity}
    * [Identitäten und Identity-Namespaces](profile/identities-overview.md)
 * Datenschutz und Data Governance {#privacy}
@@ -46,7 +46,7 @@ ht-degree: 74%
 * Segmente {#segmentation}
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
-   * [Segmentierung in der Echtzeit-Kundendatenplattform B2B Edition](segmentation/b2b.md)
+   * [Segmentierung in Real-time Customer Data Platform B2B Edition](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Schemas {#schemas}
    * [Übersicht über Schemas](schemas/overview.md)

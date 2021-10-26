@@ -6,7 +6,7 @@ exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: 4ebc3ef813c3c44aa2b8a7aab5ccabbcc3c332b2
 workflow-type: tm+mt
 source-wordcount: '1144'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 96%
 Real-time Customer Data Platform B2B Edition fügt zum schon bestehenden Angebot von Real-time CDP und Adobe Experience Platform die Unterstützung von B2B-Daten und -Workflows hinzu. Dieses Dokument enthält ein Beispiel für einen Anwendungsfall, der die zusätzlichen Vorteile von B2B Edition verdeutlicht. Dazu gehören:
 
 - Kombinieren Sie Personen- und Account-Daten aus verschiedenen isolierten Datenquellen, um eine umfassende Übersicht zu erhalten, die ein besseres Verständnis der Kunden und eine genauere Segmentierung ermöglicht. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung von XDM-Schema-Beziehungen](./schemas/b2b.md) zur Verwendung mit verschiedenen B2B-Quellen.
-- Segmentieren Sie eine Zielgruppe anhand von Attributen verwandter Entitäten. Dazu gehören Accounts, Opportunities, Kampagnen und Marketing-Listen. Segmente sind nicht mehr nur auf Personenattribute und Erlebnisereignisse beschränkt. Weitere Beispiele zum Erstellen von B2B-spezifischen Zielgruppen finden Sie in der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) .
+- Segmentieren Sie eine Zielgruppe anhand von Attributen verwandter Entitäten. Dazu gehören Accounts, Opportunities, Kampagnen und Marketing-Listen. Segmente sind nicht mehr nur auf Personenattribute und Erlebnisereignisse beschränkt. In der [Dokumentation zur B2B-Segmentierung](./segmentation/b2b.md) finden Sie weitere Beispiele für die Erstellung von B2B-spezifischen Zielgruppen.
 - Native Unterstützung für den Anwendungsfall, dass eine Person mit mehreren Accounts verbunden ist.
 
 ## Anwendungsfall
@@ -99,8 +99,8 @@ Zum besseren Verständnis der B2B-spezifischen Funktionen wird die folgende Doku
 
 <!-- PLACEHOLDER Link to B2B tutorial required  -->
 - [Quellen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
-- [Schemata in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+- [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [Beispiele für B2B-Segmentierung](./segmentation/b2b.md)
-- [Übersicht über Kontoprofile](./accounts/account-profile-overview.md)
+- [Übersicht über Account-Profile](./accounts/account-profile-overview.md)
 - [Ziele in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
 - [Konfigurieren eines Ziels für abgeglichene LinkedIn-Zielgruppen](../destinations/catalog/social/linkedin.md)

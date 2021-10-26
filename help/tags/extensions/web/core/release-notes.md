@@ -5,7 +5,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
 workflow-type: tm+mt
 source-wordcount: '1543'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 v3.2.2
 
-* Korrigieren Sie das JSON-Schema für das Datenelement &quot;Bedingungswert&quot;für alle verfügbaren Operatoren.
+* Korrigieren Sie das JSON-Schema für das Bedingungswert-Datenelement für alle verfügbaren Operatoren.
 * Fehlerbehebung https://github.com/adobe/reactor-extension-core/issues/64.
 
 ## 23. September 2021

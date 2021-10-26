@@ -1,16 +1,16 @@
 ---
-keywords: rtcdp b2b; b2b; Konto; Kontoprofil; Kontoprofile rtcdp; Echtzeit-Kundendatenplattform;
-title: Kontoprofile in der Echtzeit-Kundendatenplattform B2B Edition
-description: Erfahren Sie, wie Sie mit Real-time Customer Data Platform B2B Edition Kontoinformationen aus mehreren Quellen mithilfe von Kontoprofilen vereinheitlichen können.
+keywords: RTCDP B2B;B2B;Account;Account-Profil;Account-Profile RTCDP;Real-Time Customer Data Platform;
+title: Account-Profile in Real-time Customer Data Platform B2B Edition
+description: Erfahren Sie, wie Sie mit Real-Time Customer Data Platform B2B Edition Account-Informationen aus mehreren Quellen mithilfe von Account-Profilen vereinheitlichen können.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
 source-git-commit: 8115a8716abbe6260321ce57728d86a6cc94d19c
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Übersicht über Kontoprofile
+# Übersicht über Account-Profile
 
 >[!IMPORTANT]
 >
@@ -18,12 +18,12 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Kontoprofile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über die Echtzeit-Kundendatenplattform, B2B Edition und die verfügbaren Funktionen zu erfahren, lesen Sie zunächst die [Echtzeit-Kundendatenplattform, B2B Edition - Übersicht](../b2b-overview.md).
+>Account-Profile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über die Real-time Customer Data Platform B2B Edition und die verfügbaren Funktionen zu erfahren, lesen Sie zunächst die [Übersicht zu Real-time Customer Data Platform B2B Edition](../b2b-overview.md).
 
-Mit Kontoprofilen können Sie Kontoinformationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Kontos führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kundenkontodaten verwendet.
+Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. In diesen aggregierten Ansichten einzelner Accounts werden Daten aus all Ihren Marketing-Kanälen und den verschiedenen Systemen zusammengeführt, die Ihr Unternehmen zur Speicherung von Kundendaten aktuell verwendet.
 
-Durch die Zusammenführung von Kontodaten aus verschiedenen Quellen können Sie ein vollständiges Bild Ihrer Kundenkonten und der damit verbundenen Möglichkeiten und Kontakte sehen. Dadurch kann Ihr Unternehmen Ihre B2B-Marketingkampagnen auf eine neue Stufe bringen. Weitere Informationen zur Leistung der Echtzeit-Kundendatenplattform B2B Edition finden Sie im Anwendungsbeispiel [Echtzeit-Kundendatenplattform, B2B Edition](../b2b-use-case.md).
+Durch die Zusammenführung von Account-Daten aus verschiedenen Quellen können Sie ein vollständiges Bild Ihrer Kunden-Accounts und der damit verbundenen Opportunitys und Kontakte sehen. Dadurch kann Ihr Unternehmen Ihre B2B-Marketing-Kampagnen auf ein neues Level bringen. Weitere Informationen zur Leistungsfähigkeit von Real-time Customer Data Platform B2B Edition finden Sie im [Anwendungsbeispiel von Real-time Customer Data Platform B2B Edition](../b2b-use-case.md).
 
-## Kontoprofil-Viewer
+## Account-Profil-Viewer
 
-Mit der Echtzeit-Kundendatenplattform B2B Edition können Sie über die Experience Platform-Benutzeroberfläche Kontoprofile anzeigen und mithilfe einer Konto-ID aus einer verbundenen Unternehmensquelle suchen oder Quelldetails direkt eingeben. Weitere Informationen zum Anzeigen von Kontoprofilen in der Platform-Benutzeroberfläche finden Sie im [Benutzeroberflächenleitfaden für Kontoprofile](account-profile-ui-guide.md).
+Mit Real-time Customer Data Platform B2B Edition können Sie über die Experience Platform-Benutzeroberfläche Account-Profile anzeigen und mithilfe einer Account-ID aus einer verbundenen Unternehmensquelle oder durch die Eingabe von Quelldetails gezielt nach Accounts suchen. Weitere Informationen zum Anzeigen von Account-Profilen in der Platform-Benutzeroberfläche finden Sie im [Handbuch zur Benutzeroberfläche bei Account-Profilen](account-profile-ui-guide.md).

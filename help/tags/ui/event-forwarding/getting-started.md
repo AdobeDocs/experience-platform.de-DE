@@ -6,7 +6,7 @@ exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
 workflow-type: tm+mt
 source-wordcount: '907'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -65,7 +65,7 @@ Erstellen Sie in der Datenerfassungs-Benutzeroberfläche eine Eigenschaft vom Ty
 1. Wählen Sie **[!UICONTROL Speichern]** aus.
 
 Nachdem Sie die Eigenschaft erstellt haben, wechseln Sie zum Tab **[!UICONTROL Umgebungen]** für die neue Eigenschaft und
-notieren Sie sich die Umgebungs-IDs. Wenn sich die im Datastream verwendete Adobe Org von der in der Ereignisweiterleitung verwendeten Adobe unterscheidet, können Sie die Umgebungs-ID aus dem Tab **[!UICONTROL Umgebungen]** kopieren und beim Erstellen eines Datastreams einfügen. Andernfalls können Sie die Umgebung aus einem Dropdown-Menü auswählen.
+notieren Sie sich die Umgebungs-IDs. Wenn sich die im Daten-Stream verwendete Adobe-Organisation von der in der Ereignisweiterleitung verwendeten unterscheidet, können Sie die Umgebungs-ID aus der Registerkarte **[!UICONTROL Umgebungen]** kopieren und beim Erstellen eines Daten-Streams einfügen. Andernfalls können Sie die Umgebung aus einem Dropdown-Menü auswählen.
 
 ## Erstellen eines Datenspeichers
 
@@ -100,7 +100,7 @@ Konfigurieren Sie als Nächstes Edge Network, um Daten an die Ereignisweiterleit
 
 Notieren Sie sich nach der Konfiguration die Umgebungs-IDs für die neue Eigenschaft.
 
-## Konfigurieren der Platform Web SDK-Erweiterung zum Senden von Daten an den zuvor erstellten Datastream
+## Konfigurieren der Platform Web SDK-Erweiterung, um Daten an den zuvor erstellten Daten-Stream zu senden
 
 Erstellen Sie Ihre Eigenschaft in der Datenerfassungs-Benutzeroberfläche und konfigurieren Sie sie dann mit der Web SDK-Erweiterung von Adobe Experience Platform.
 

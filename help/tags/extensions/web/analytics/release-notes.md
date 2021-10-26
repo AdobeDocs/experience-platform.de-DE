@@ -5,7 +5,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
 workflow-type: tm+mt
 source-wordcount: '1262'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 99%
 #### Fehlerkorrekturen
 
 * AppMeasurement wurde auf Version 2.22.2 aktualisiert.
-* Nicht mehr unterstützte buildInfo.environment entfernt
+* Nicht mehr unterstützte Umgebung „buildInfo.environment“ entfernt
 
 ## 24. August 2021
 

@@ -7,7 +7,7 @@ feature: Privacy
 source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 95%
    * [Übersicht](./regulations/overview.md)
    * [FAQs](./regulations/faq.md)
    * [Terminologie](./regulations/terminology.md)
-* [Data Hygiene API (Alpha)](./data-hygiene-api.md)
+* [Data Hygiene-API (Alpha)](./data-hygiene-api.md)
 * [Handbuch zur Fehlerbehebung](./troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Versionshinweise](./release-notes.md)

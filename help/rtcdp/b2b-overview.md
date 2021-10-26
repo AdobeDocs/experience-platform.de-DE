@@ -1,6 +1,6 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kundendatenplattform;Real-time CDP;b2b;cdp;Kunden-KI
-title: Real-time CDP B2B Edition– Überblick
+title: Real-time Customer Data Platform B2B Edition – Übersicht
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Überblick über das Konto von Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
@@ -8,7 +8,7 @@ exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: 6b582683483046efaf880e46e33d7f30a44a61bf
 workflow-type: tm+mt
 source-wordcount: '1057'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -69,16 +69,16 @@ Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spez
 >
 >Die [!DNL Marketo]-Quelle ist **nicht** erforderlich, um Real-time CDP B2B Edition zu verwenden.
 
-Weitere Informationen zu Marketo und zur Einbindung von B2B-Daten in Platform finden Sie in der Dokumentation [Quellen in der Echtzeit-Kundendatenplattform B2B Edition](./sources/b2b.md) .
+Weitere Informationen zu Marketo und der Einbindung von B2B-Daten in Platform finden Sie in der Dokumentation zu den [Quellen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md).
 
 ## B2B-Ziele
 
-Experience Platform-Ziele wie Google, LinkedIn und Facebook sind verfügbar und werden von der Echtzeit-Kundendatenplattform B2B Edition vollständig unterstützt. Es gibt auch ein Marketo Engage-Ziel, das Segmentmitgliedsdaten aus Platform streamt und als Listen in Marketo verfügbar macht.
+Alle Ziele von Experience Platform, wie z. B. Google, LinkedIn und Facebook, sind verfügbar und werden von Real-time Customer Data Platform B2B Edition voll unterstützt. Es gibt auch ein Marketo Engage-Ziel, das Segmentzugehörigkeitsdaten aus Platform streamt und als Listen in Marketo verfügbar macht.
 
-Für Unternehmen mit mehr als einem CRM-System bietet die Echtzeit-Kundendatenplattform B2B Edition die Möglichkeit, Ziel-Connectoren für separate Instanzen von Marketo oder CRM zu konfigurieren. Bei Bedarf können Sie Ziel-Connectoren für jede Instanz konfigurieren und Zielgruppen unabhängig voneinander an jede der CRM-Instanzen senden.
+Für Unternehmen mit mehr als einem CRM bietet Real-time Customer Data Platform B2B Edition die Möglichkeit, Ziel-Connectoren zu separaten Instanzen von Marketo oder CRM zu konfigurieren. Bei Bedarf können Sie Ziel-Connectoren für jede Instanz konfigurieren und Zielgruppen unabhängig voneinander an jede der CRM-Instanzen senden.
 
 ## Nächste Schritte
 
 Jetzt, da Sie die Vorteile von Real-time CDP B2B Edition für Marketing-Experten und die Unterschiede zu Real-time CDP besser verstehen, können Sie mehr darüber erfahren, wie Sie diese Funktionen in Ihrer eigenen IMS-Organisation anwenden können.
 
-Um zu verstehen, wie die B2B Edition der Echtzeit-Kundendatenplattform Ihr Business-to-Business-Service-Modell nutzen kann, lesen Sie den [Beispielanwendungsfall für die Echtzeit-Kundendatenplattform B2B Edition](./b2b-use-case.md). Alternativ können Sie auch die Dokumentation [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) zu Rate ziehen, um eine genauere Anleitung zur Erstellung von Schemas und zur Definition von Beziehungen für wichtige B2B-Datenentitäten zu erhalten.
+Um zu verstehen, wie Real-time Customer Data Platform B2B Edition Ihr Business-to-Business-Service-Modell unterstützen kann, lesen Sie das [Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition](./b2b-use-case.md). Alternativ können Sie auch die Dokumentation [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) zu Rate ziehen, um eine genauere Anleitung zur Erstellung von Schemas und zur Definition von Beziehungen für wichtige B2B-Datenentitäten zu erhalten.
