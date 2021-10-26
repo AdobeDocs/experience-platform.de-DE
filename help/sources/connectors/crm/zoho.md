@@ -1,11 +1,10 @@
 ---
-keywords: Experience Platform;home;beliebte Themen;Zoho CRM;zoho crm;Zoho;Zoho
+keywords: Experience Platform; Startseite; beliebte Themen; Zoho CRM; Zoho crm; Zoho; Zoho
 solution: Experience Platform
-title: Übersicht über Zoho CRM Source Connector
+title: Zoho CRM Source Connector - Übersicht
 topic-legacy: overview
-description: Erfahren Sie, wie Sie Zoho CRM über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
-exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: 7a15090d8ed2c1016d7dc4d7d3d0656640c4785c
+description: Erfahren Sie, wie Sie das Zoho CRM mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
+source-git-commit: 030789af0a049b54d6e271410836c08456a83441
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 3%
@@ -16,47 +15,47 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Die [!DNL Zoho CRM] Quelle befindet sich in der Beta-Version. Siehe [Quellübersicht](../../home.md#terms-and-conditions) für weitere Informationen zur Verwendung von Beta-gekennzeichneten Steckverbindern.
+>Die [!DNL Zoho CRM] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Adobe Experience Platform ermöglicht die Erfassung von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Dienstleistungen. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern mithilfe von [!DNL Platform] Dienste. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt das Erfassen von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Zoho CRM].
+Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieter-CRM-System. Unterstützung für CRM-Anbieter umfasst [!DNL Zoho CRM].
 
-## IP-Adresse Zulassungsliste
+## IP-Adressen-Zulassungsliste
 
-Vor dem Arbeiten mit Quellschnittstellen muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regional spezifische IP-Adresse nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungsmängeln führen. Siehe [IP-Adresse Zulassungsliste](../../ip-address-allow-list.md) für weitere Informationen.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Siehe [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) für weitere Informationen.
 
-## Authentifizierungsinformationen abrufen für [!DNL Zoho CRM]
+## Abrufen Ihrer Authentifizierungsberechtigungen für [!DNL Zoho CRM]
 
-Bevor Sie Daten von [!DNL Zoho CRM] Konto auf Platform, müssen Sie zunächst Ihre Anmeldedaten abrufen, um Ihre [!DNL Zoho CRM] Quelle. Führen Sie die folgenden Schritte aus, um Ihre Client-ID, das Kundengeheimnis, das Zugriffstoken und das Aktualisierungstoken abzurufen.
+Bevor Sie Daten aus Ihrem [!DNL Zoho CRM] -Konto für Platform verwenden, müssen Sie zunächst Ihre Anmeldedaten abrufen, um Ihre [!DNL Zoho CRM] -Quelle. Gehen Sie wie folgt vor, um Ihre Client-ID, Ihr Client-Geheimnis, Ihr Zugriffstoken und Ihr Aktualisierungstoken abzurufen.
 
-### Anwendung registrieren
+### App registrieren
 
-Der erste Schritt beim Abrufen Ihrer Authentifizierungsberechtigungen besteht darin, Ihre Anwendung mit dem [[!DNL Zoho CRM] Entwicklerkonsole](https://accounts.zoho.com/). Um Ihre Anwendung zu registrieren, müssen Sie Ihren Clienttyp auswählen aus: JavaScript, webbasierte, mobile, mobile Anwendungen, mobile Anwendungen ohne Browser oder Selbstclient. Geben Sie als Nächstes Werte für den Namen der Anwendung, die URL Ihrer Webseite und eine autorisierte Umleitungs-URI an, die [!DNL Zoho CRM] können Sie dann mit einem Zuschuss-Token umleiten.
+Der erste Schritt beim Abrufen Ihrer Authentifizierungsberechtigungen besteht darin, Ihre Anwendung mit dem [[!DNL Zoho CRM] Entwicklerkonsole](https://accounts.zoho.com/). Um Ihre Anwendung zu registrieren, müssen Sie Ihren Client-Typ unter folgendem Pfad auswählen: JavaScript, webbasierte, mobile, mobile, mobile Anwendungen ohne Browser oder Self-Client. Geben Sie als Nächstes Werte für den Namen Ihrer Anwendung, die URL Ihrer Webseite und einen autorisierten Weiterleitungs-URI an, der Folgendes ermöglicht: [!DNL Zoho CRM] können Sie dann verwenden, um Sie mit einem Grant-Token umzuleiten.
 
-Bei erfolgreicher Registrierung werden Ihre Kunden-ID und das Kundengeheimnis zurückgegeben.
+Bei erfolgreicher Registrierung werden Ihre Client-ID und das Client-Geheimnis zurückgegeben.
 
-### Autorisierungsanforderung erstellen
+### Autorisierungsanfrage erstellen
 
-Als Nächstes müssen Sie eine [Autorisierungsanforderung](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) entweder mit einer webbasierten Anwendung oder mit einem Self-Client. Die Autorisierungsanfrage gibt Ihr Zuschuss-Token zurück, mit dem Sie wiederum Ihr Zugriffstoken abrufen können.
+Als Nächstes müssen Sie eine [Genehmigungsanfrage](https://www.zoho.com/crm/developer/docs/api/v2/auth-request.html) entweder mit einer webbasierten Anwendung oder einem Self-Client. Die Autorisierungsanfrage gibt Ihr Grant-Token zurück, mit dem Sie Ihr Zugriffstoken abrufen können.
 
-Bei der Erstellung einer Autorisierungsanforderung müssen Sie Werte für beide eingeben **Bereiche** und **Zugriffstyp**. Siehe [[!DNL Zoho CRM] Dokument](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) für weitere Informationen zu Bereichen, während **Zugriffstyp** sollte immer auf `offline`.
+Bei der Erstellung einer Autorisierungsanfrage müssen Sie Werte für **Bereiche** und **Zugriffstyp**. Siehe hierzu [[!DNL Zoho CRM] Dokument](https://www.zoho.com/crm/developer/docs/api/v2/scopes.html) Weitere Informationen zu Bereichen finden Sie in der **Zugriffstyp** sollte immer auf `offline`.
 
-### Zugriffstoken generieren und aktualisieren
+### Zugriffs- und Aktualisierungstoken erstellen
 
-Nachdem Sie Ihr ZuschussToken abgerufen haben, können Sie Ihr [Zugriffstoken und Aktualisierungstoken](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) , indem sie eine POST anfordern, `{ACCOUNTS_URL}/oauth/v2/token` , während Sie Ihre Client-ID, das Clientgeheimnis, das Grant-Token und die Umleitungs-URI angeben. In diesem Schritt müssen Sie `grant_type` als Parameter und legen Sie den Wert als `"authorization_code"`.
+Nachdem Sie Ihr Zuschuss-Token abgerufen haben, können Sie Ihre [Zugriffs- und Aktualisierungstoken](https://www.zoho.com/crm/developer/docs/api/v2/access-refresh.html) , indem Sie eine POST an `{ACCOUNTS_URL}/oauth/v2/token` bei der Bereitstellung Ihrer Client-ID, des Client-Geheimnisses, des Tokens für die Gewährung und der Weiterleitungs-URI. In diesem Schritt müssen Sie auch `grant_type` als Parameter verwenden und den Wert als `"authorization_code"`.
 
-Bei einer erfolgreichen Anforderung werden die Zugriffstoken und Aktualisierungstoken zurückgegeben, mit denen Sie sich dann authentifizieren können.
+Bei einer erfolgreichen Anfrage werden Ihre Zugriffs- und Aktualisierungstoken zurückgegeben, die Sie dann zur Authentifizierung verwenden können.
 
-Detaillierte Anweisungen zum Erwerb Ihrer Anmeldedaten finden Sie im [[!DNL Zoho CRM] Authentifizierungsleitfaden](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
+Ausführliche Anweisungen zum Erwerb Ihrer Anmeldedaten finden Sie in der [[!DNL Zoho CRM] Authentifizierungshandbuch](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-## Verbinden [!DNL Zoho CRM] nach [!DNL Platform] mit APIs
+## Verbinden [!DNL Zoho CRM] nach [!DNL Platform] Verwenden von APIs
 
-In der folgenden Dokumentation finden Sie Informationen zur Verbindungsherstellung [!DNL Zoho CRM] zur Plattform mit APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Zoho CRM] zur Plattform mithilfe von APIs oder der Benutzeroberfläche:
 
-- [Erstellen Sie eine [!DNL Zoho CRM] Basisverbindung mit der Flow Service API](../../tutorials/api/create/crm/zoho.md)
-- [Erforschen Sie die Datenstruktur und Inhalte einer CRM-Quelle mithilfe der Flow Service API.](../../tutorials/api/explore/crm.md)
-- [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service API](../../tutorials/api/collect/crm.md)
+- [Erstellen Sie eine [!DNL Zoho CRM] Basisverbindung mit der Flow Service-API](../../tutorials/api/create/crm/zoho.md)
+- [Datenstruktur und Inhalt einer CRM-Quelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/crm.md)
+- [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
 ## Verbinden [!DNL Zoho CRM] nach [!DNL Platform] über die Benutzeroberfläche
 
