@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 21a536d80f854a9e98452c78a8014df4cc43e125
+source-git-commit: f8cecdaaab3d98c7f6542b51dc764a019b04b0b1
 workflow-type: tm+mt
-source-wordcount: '644'
-ht-degree: 19%
+source-wordcount: '651'
+ht-degree: 21%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 19%
       - [Azure-Blob-Connector](connectors/cloud-storage/blob.md)
       - [Azure Ereignis Hubs Connector](connectors/cloud-storage/eventhub.md)
       - [Azure File Datenspeicherung Connector](connectors/cloud-storage/azure-file-storage.md)
-      - [Daten-Einstiegszone](connectors/cloud-storage/data-landing-zone.md)
+      - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [FTP-Anschluss](connectors/cloud-storage/ftp.md)
       - [Google Cloud-Datenspeicherung-Anschluss](connectors/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -51,6 +51,7 @@ ht-degree: 19%
       - [Microsoft Dynamics-Connector](connectors/crm/ms-dynamics.md)
       - [Salesforce-Anschluss](connectors/crm/salesforce.md)
       - [Veeva CRM-Anschluss](connectors/crm/veeva.md)
+      - [Zoho CRM-Anschluss](connectors/crm/zoho.md)
    - Kundenerfolg {#customer-success}
       - [Salesforce Service Cloud-Anschluss](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-Anschluss](connectors/customer-success/servicenow.md)
@@ -108,6 +109,7 @@ ht-degree: 19%
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Kundenerfolg {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -198,6 +200,7 @@ ht-degree: 19%
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
          - [Salesforce](tutorials/ui/create/crm/salesforce.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
+         - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Kundenerfolg {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
