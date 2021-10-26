@@ -5,10 +5,10 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f61a845b915df3d803085fbf528e014c8acd9dbd
+source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
 workflow-type: tm+mt
-source-wordcount: '332'
-ht-degree: 100%
+source-wordcount: '357'
+ht-degree: 96%
 
 ---
 
@@ -28,9 +28,14 @@ Von Experience Platform bereitgestellte Datenerfassungstechnologien konzentriere
 * [Tags](../tags/home.md)
 * [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
+* [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
+<!-- (Outdated terminology)
 ![](./images/Collection.png)
+-->
 
 ## Einfachere Implementierungen, schnellere Client-seitige Performance
 
@@ -40,7 +45,9 @@ Adobe Experience Platform Web- und Mobile-SDKs reduzieren und komprimieren alle 
 
 Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../edge/fundamentals/datastreams.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
 
+<!-- (Outdated terminology)
 ![](./images/deploy.png)
+-->
 
 >[!NOTE]
 >
@@ -50,4 +57,6 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 
 Die [Ereignisweiterleitung in Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) kann auf einen beliebigen Platform-Datenstrom zugreifen. Daten mit extrem niedriger Latenz können transformiert, angereichert und an Drittanbieter-Ziele gesendet werden, ohne dass dem Client-Gerät Drittanbieter-Code hinzugefügt werden muss. Dies ermöglicht eine schnellere und sicherere Datenerfassung und -verteilung.
 
+<!-- (Outdated terminology)
 ![](./images/launch.png)
+-->
