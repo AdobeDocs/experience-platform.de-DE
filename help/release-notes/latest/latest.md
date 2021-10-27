@@ -1,47 +1,34 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 4959b5227f777a2c8cab1317d67795678d1a6eea
+source-git-commit: f4e9750685d641c83b4ceed79af739de43343aef
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 100%
+source-wordcount: '315'
+ht-degree: 54%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Release-Datum: 29. September 2021**
+**Release-Datum: 27. Oktober 2021**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [Datenaufnahme](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Quellen](#sources)
-
-## Datenaufnahme {#ingestion}
-
-Datenerfassung in Adobe Experience Platform stellt die verschiedenen Methoden dar, mit denen Platform Daten aus den Quellen aufnimmt, sowie die Art und Weise, wie die Daten im Data Lake zur Verwendung durch nachgelagerte Platform-Services persistiert werden.
-
-**Neue Funktionen**
-
-| Funktion | Beschreibung |
-|------- | -----------|
-| Aktualisieren oder Patchen von Profildatensätzen mithilfe der Batch-Aufnahme | Das Echtzeit-Kundenprofil ermöglicht jetzt über die Batch-Aufnahme Aktualisierungen an Profilattributen in individuellen Profildatensatzdaten. Weitere Informationen finden Sie im [Entwicklerhandbuch zur Batch-Aufnahme](../../ingestion/batch-ingestion/api-overview.md). |
-
-Weitere Informationen zur Erfassung von Daten in Platform finden Sie in der [Datenerfassungsdokumentation](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
 
-**Neue Funktionen**
+**Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für Streaming-Datenflüsse | Sie können jetzt Datenvorbereitungsfunktionen beim Erstellen eines Streaming-Datenflusses für [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] und [!DNL Google PubSub] verwenden. Weitere Informationen finden Sie im Tutorial zum [Erstellen eines Streaming-Datenflusses für Cloud-Speicherquellen](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md). |
+| `contains_key`-Funktion | Die `contains_key` -Funktion eingeführt wurde, mit der Sie überprüfen können, ob das Objekt in der Quelle vorhanden ist. Diese Funktion ersetzt die `is_set` -Funktion, die jetzt nicht mehr unterstützt wird. |
+| Fehlermeldungen | Von der `/mappingSets/preview` -Endpunkt in der Data Prep-API ist nun mit den Fehlermeldungen konsistent, die während der Laufzeit generiert werden. |
 
-Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
+Siehe [[!DNL Data Prep] Übersicht](../../data-prep/home.md) , um mehr über diesen Dienst zu erfahren.
 
 ## Quellen {#sources}
 
@@ -51,8 +38,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [!DNL Data Landing Zone] | Sie können jetzt eine [!DNL Data Landing Zone]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) erstellen. [!DNL Data Landing Zone] ist eine von Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeicheranlage zugreifen können, um Dateien in und aus Platform aufzunehmen und zu extrahieren. Weitere Informationen finden Sie in der [[!DNL Data Landing Zone] Übersicht über](../../sources/connectors/cloud-storage/data-landing-zone.md). |
-| [!DNL Snowflake] | Sie können jetzt eine [!DNL Snowflake]-Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) oder der [Benutzeroberfläche](../../sources/tutorials/ui/create/databases/snowflake.md) erstellen, um Daten aus Ihrer [!DNL Snowflake]-Datenbank in Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Snowflake] Übersicht über](../../sources/connectors/databases/snowflake.md). |
-| [!DNL SFTP]-Quellverbesserungen | Sie können beim Erstellen einer [!DNL SFTP]-Quellverbindung manuell eine benutzerdefinierte Port-Nummer festlegen. Weitere Informationen finden Sie in der [[!DNL SFTP] Übersicht über](../../sources/connectors/cloud-storage/sftp.md). |
+| [!DNL Amazon S3]-Quellverbesserungen | Sie können jetzt die `s3SessionToken` Parameter zum Verbinden Ihrer [!DNL Amazon S3] -Konto für Platform mit temporären Sicherheitsberechtigungen erstellen. Mit diesem Token können Sie kurzfristigen, temporären Zugriff auf Ihre [!DNL Amazon S3] Ressourcen für Benutzer in nicht vertrauenswürdigen Umgebungen. Siehe [[!DNL Amazon S3] Dokumentation](../../sources/connectors/cloud-storage/s3.md#prerequisites) für weitere Informationen. |
+| [!DNL Generic REST API] (Betaversion) | Sie können jetzt eine [!DNL Generic REST API] Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) oder [Benutzeroberfläche](../../sources/tutorials/ui/create/protocols/generic-rest.md) , um Daten von einer generischen REST-Anwendung an Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Generic REST API] Übersicht über](../../sources/connectors/protocols/generic-rest.md). |
+| [!DNL Zoho CRM] (Betaversion) | Sie können jetzt eine [!DNL Zoho CRM] Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) oder [Benutzeroberfläche](../../sources/tutorials/ui/create/crm/zoho.md) Daten von [!DNL Zoho CRM] -Konto auf Platform. Weitere Informationen finden Sie in der [[!DNL Zoho CRM] Übersicht über](../../sources/connectors/crm/zoho.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
