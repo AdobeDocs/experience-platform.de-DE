@@ -2,10 +2,10 @@
 title: Haupterweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 3b023dde8189d3ca6f8525d1e3366874e4ea2c67
+source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
 workflow-type: tm+mt
-source-wordcount: '5257'
-ht-degree: 100%
+source-wordcount: '5292'
+ht-degree: 99%
 
 ---
 
@@ -219,7 +219,13 @@ Geben Sie den Cookie-Namen und -Wert an, der für ein Ereignis vorhanden sein mu
 
 #### Benutzerspezifischer Code
 
-Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss. Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor.
+Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses vorhanden sein muss.
+
+>[!NOTE]
+>
+>ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie bitte mit allen zu unterstützenden Webbrowsern.
+
+Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor:
 
 1. Wählen Sie **[!UICONTROL Editor öffnen]**.
 1. Geben Sie den benutzerspezifischen Code ein.
