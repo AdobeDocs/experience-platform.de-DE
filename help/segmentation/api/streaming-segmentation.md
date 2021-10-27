@@ -5,10 +5,10 @@ title: 'Bewerten von Ereignissen in nahezu Echtzeit mit Streaming-Segmentierung 
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung von Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: b4a04b52ff9a2b7a36fda58d70a2286fea600ff1
+source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 45%
+source-wordcount: '1411'
+ht-degree: 44%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 45%
 
 >[!NOTE]
 >
->Im folgenden Dokument wird die Verwendung der Streaming-Segmentierung mithilfe der API beschrieben. Informationen zur Verwendung der Streaming-Segmentierung mithilfe der Benutzeroberfläche finden Sie im [UI-Handbuch zur Streaming-Segmentierung](../ui/streaming-segmentation.md).
+>Im folgenden Dokument wird die Verwendung der Streaming-Segmentierung mithilfe der API beschrieben. Informationen zur Verwendung der Streaming-Segmentierung mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Streaming-Segmentierungsbenutzeroberfläche](../ui/streaming-segmentation.md).
 
-Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es Kunden, die Segmentierung nahezu in Echtzeit durchzuführen, während sie sich auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Streaming-Daten in [!DNL Platform] landen. So wird die Notwendigkeit zur Planung und Ausführung von Segmentierungsaufträgen verringert. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an [!DNL Platform] übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
+Streaming-Segmentierung in [!DNL Adobe Experience Platform] ermöglicht es Kunden, die Segmentierung nahezu in Echtzeit durchzuführen und sich dabei auf den Datenreichtum zu konzentrieren. Mit Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Streaming-Daten in [!DNL Platform], wodurch Segmentierungsaufträge einfacher geplant und ausgeführt werden müssen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an [!DNL Platform]bedeutet, dass die Segmentzugehörigkeit auf dem neuesten Stand gehalten wird, ohne dass geplante Segmentierungsaufträge ausgeführt werden.
 
 ![](../images/api/streaming-segment-evaluation.png)
 
@@ -28,13 +28,13 @@ Die Streaming-Segmentierung für [!DNL Adobe Experience Platform] ermöglicht es
 
 ## Erste Schritte
 
-Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform]-Dienste voraus, die mit Streaming-Segmentierung verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
+Dieses Entwicklerhandbuch setzt ein Verständnis der verschiedenen [!DNL Adobe Experience Platform] Dienste, die mit Streaming-Segmentierung verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren  [!DNL Real-time Customer Profile] Daten.
+- [[!DNL Segmentation]](../home.md): Ermöglicht die Erstellung von Segmenten und Zielgruppen aus Ihren [!DNL Real-time Customer Profile] Daten.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an [!DNL Platform]-APIs durchführen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an [!DNL Platform] APIs.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -66,22 +66,22 @@ Zum Ausführen spezifischer Anfragen können zusätzliche Kopfzeilen erforderlic
 
 >[!NOTE]
 >
->Sie müssen die geplante Segmentierung für die Organisation aktivieren, damit Streaming-Segmentierung funktioniert. Informationen zur Aktivierung der geplanten Segmentierung finden Sie im Abschnitt [Geplante Segmentierung aktivieren](#enable-scheduled-segmentation) .
+>Sie müssen die geplante Segmentierung für die Organisation aktivieren, damit Streaming-Segmentierung funktioniert. Informationen zur Aktivierung der geplanten Segmentierung finden Sie im Abschnitt [Abschnitt zur geplanten Segmentierung aktivieren](#enable-scheduled-segmentation)
 
 Damit ein Segment mithilfe der Streaming-Segmentierung bewertet werden kann, muss die Abfrage den folgenden Richtlinien entsprechen.
 
 | Abfragetyp | Details |
 | ---------- | ------- |
-| Eingehender Treffer | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
-| Eingehender Treffer innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. |
-| Eingehender Treffer mit einem Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. |
+| Einzelereignis | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. |
+| Einzelnes Ereignis innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis verweist. |
+| Einzelnes Ereignis mit Zeitfenster | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis mit einem Zeitfenster verweist. |
 | Nur Profil | Jede Segmentdefinition, die nur auf ein Profilattribut verweist. |
-| Eingehender Treffer, der sich auf ein Profil bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. |
-| Eingehender Treffer, der sich auf ein Profil innerhalb eines relativen Zeitfensters bezieht | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. |
-| Segment von Segmenten | Jede Segmentdefinition, die einen oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis:** Wenn ein Segment von Segmenten verwendet wird, erfolgt die Profildisqualifizierung  **alle 24 Stunden**. |
-| Mehrere Ereignisse, die auf ein Profil verweisen | Jede Segmentdefinition, die auf mehrere Ereignisse **innerhalb der letzten 24 Stunden** verweist und (optional) über ein oder mehrere Profilattribute verfügt. |
+| Einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung und ein oder mehrere Profilattribute verweist. **Hinweis:** Die Abfrage wird sofort ausgewertet, wenn das Ereignis eintritt. Im Fall eines Profilereignisses muss die Integration jedoch 24 Stunden warten. |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines relativen Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis und ein oder mehrere Profilattribute verweist. |
+| Segment von Segmenten | Jede Segmentdefinition, die einen oder mehrere Batch- oder Streaming-Segmente enthält. **Hinweis:** Wenn ein Segment von Segmenten verwendet wird, erfolgt eine Profildisqualifizierung **alle 24 Stunden**. |
+| Mehrere Ereignisse mit Profilattribut | Jede Segmentdefinition, die auf mehrere Ereignisse verweist **innerhalb der letzten 24 Stunden** und (optional) ein oder mehrere Profilattribute hat. |
 
-Eine Segmentdefinition wird **not** für Streaming-Segmentierung in den folgenden Szenarien aktiviert:
+Eine Segmentdefinition **not** für Streaming-Segmentierung in den folgenden Szenarien aktiviert werden:
 
 - Die Segmentdefinition umfasst Adobe Audience Manager-Segmente oder -Eigenschaften (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
@@ -91,11 +91,11 @@ Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
 | Abfragetyp | Richtlinie |
 | ---------- | -------- |
 | Einzelereignisabfrage | Das Lookback-Fenster ist nicht beschränkt. |
-| Abfrage mit Ereignisverlauf | <ul><li>Das Lookback-Fenster ist auf **einen Tag** beschränkt.</li><li>Zwischen den Ereignissen ist eine strikte Bedingung für die zeitliche Reihenfolge **must** vorhanden.</li><li>Abfragen mit mindestens einem negativen Ereignis werden unterstützt. Das gesamte Ereignis **kann jedoch nicht** eine Negation sein.</li></ul> |
+| Abfrage mit Ereignisverlauf | <ul><li>Das Lookback-Fenster ist auf **ein Tag**.</li><li>Eine strikte Bedingung für die Zeitreihenfolge **must** zwischen den Ereignissen vorhanden sind.</li><li>Abfragen mit mindestens einem negativen Ereignis werden unterstützt. Das gesamte Ereignis **cannot** eine Negation sein.</li></ul> |
 
 ## Alle für Streaming-Segmentierung aktivierten Segmente abrufen
 
-Sie können eine Liste aller Segmente abrufen, die für Streaming-Segmentierung innerhalb Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an den Endpunkt `/segment/definitions` stellen.
+Sie können eine Liste aller Segmente abrufen, die für die Streaming-Segmentierung innerhalb Ihrer IMS-Organisation aktiviert sind, indem Sie eine GET-Anfrage an die `/segment/definitions` -Endpunkt.
 
 **API-Format**
 
@@ -208,7 +208,7 @@ Eine erfolgreiche Antwort gibt eine Gruppe von Segmenten in Ihrer IMS-Organisati
 
 ## Streaming-fähiges Segment erstellen
 
-Ein Segment wird automatisch für Streaming aktiviert, wenn es mit einem der oben aufgeführten [Streaming-Segmentierungstypen](#streaming-segmentation-query-types) übereinstimmt.
+Ein Segment wird automatisch für Streaming aktiviert, wenn es mit einem der [oben aufgeführte Streaming-Segmentierungstypen](#streaming-segmentation-query-types).
 
 **API-Format**
 
@@ -243,7 +243,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dies ist eine Standardanfrage zum Erstellen eines Segments. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zum Erstellen eines Segments](../tutorials/create-a-segment.md).[
+>Dies ist eine Standardanfrage zum Erstellen eines Segments. Weitere Informationen zum Erstellen einer Segmentdefinition finden Sie im Tutorial zu [Erstellen eines Segments](../tutorials/create-a-segment.md).
 
 **Antwort**
 
@@ -293,7 +293,7 @@ Nach dem Aktivieren der Streaming-Auswertung muss eine Grundlinie eingerichtet w
 
 >[!NOTE]
 >
->Geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] aktiviert werden. Wenn Ihr Unternehmen innerhalb einer Sandbox-Umgebung über mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] verfügt, können Sie keine geplante Auswertung verwenden.
+>Die geplante Auswertung kann für Sandboxes mit maximal fünf (5) Zusammenführungsrichtlinien für [!DNL XDM Individual Profile]. Wenn Ihr Unternehmen mehr als fünf Zusammenführungsrichtlinien für [!DNL XDM Individual Profile] in einer Sandbox-Umgebung können Sie keine geplante Auswertung verwenden.
 
 ### Zeitplan erstellen
 
@@ -334,7 +334,7 @@ curl -X POST \
 | `type` | **(Erforderlich)** Der Auftragstyp im Zeichenfolgenformat. Die unterstützten Typen sind `batch_segmentation` und `export`. |
 | `properties` | **(Erforderlich)** Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
 | `properties.segments` | **(Erforderlich, wenn `type` gleich `batch_segmentation`)** Die Verwendung von `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
-| `schedule` | **(Erforderlich)** Eine Zeichenfolge, die den Auftragszeitplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Das folgende Beispiel (`0 0 1 * * ?`) bedeutet, dass der Auftrag jeden Tag um 1:00:00 UTC ausgelöst wird. Weiterführende Informationen finden Sie in der Dokumentation zum [Cron-Ausdrucksformat](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
+| `schedule` | **(Erforderlich)** Eine Zeichenfolge, die den Auftragszeitplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Das folgende Beispiel (`0 0 1 * * ?`) bedeutet, dass der Auftrag jeden Tag bei 1 ausgelöst wird.:00:00 UTC. Weiterführende Informationen finden Sie in der Dokumentation zum [Cron-Ausdrucksformat](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
 | `state` | *(Optional)* Zeichenfolge, die den Zeitplanstatus enthält. Verfügbare Werte: `active` und `inactive`. Der Standardwert ist `inactive`. Eine IMS-Organisation kann nur einen Zeitplan erstellen. Schritte zum Aktualisieren des Zeitplans finden Sie weiter unten in dieser Anleitung. |
 
 **Antwort**
