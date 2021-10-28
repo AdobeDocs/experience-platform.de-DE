@@ -1,37 +1,37 @@
 ---
-description: Diese Seite Liste und beschreibt die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Ziel-SDK.
-title: Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
+description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Ziel-SDK aufgeführt und beschrieben.
+title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
 
-# Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
+# Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
 
 ## Übersicht {#overview}
 
-Diese Seite beschreibt die Verwendung der Informationen in [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Ziel-SDK-Funktionen und API-Referenzfunktionen, um eine [Streaming-Ziel](/help/destinations/destination-types.md#streaming-destinations). Die Schritte sind in der folgenden Reihenfolge angeordnet.
+Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Ziel-SDK-Funktionen und API-Referenzdokumenten zum Konfigurieren eines [Streaming-Ziel](/help/destinations/destination-types.md#streaming-destinations). Die Schritte werden in der folgenden Reihenfolge angeordnet.
 
 >[!NOTE]
 >
->Das Konfigurieren eines Stapelziels über das Ziel-SDK wird derzeit nicht unterstützt.
+>Die Konfiguration eines Batch-Ziels über das Ziel-SDK wird derzeit nicht unterstützt.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie zu den unten dargestellten Schritten fortfahren, lesen Sie bitte die [Start des Ziel-SDK](./getting-started.md) Informationen zum Erhalt der erforderlichen Anmeldedaten für die Authentifizierung der Adobe I/O und anderer Voraussetzungen für die Arbeit mit Ziel-SDK-APIs.
+Bevor Sie mit den unten dargestellten Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit dem Ziel-SDK](./getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Ziel-SDK-APIs.
 
-## Schritte zum Verwenden der Konfigurationsoptionen im Ziel-SDK, um Ihr Ziel einzurichten {#steps}
+## Schritte zur Verwendung der Konfigurationsoptionen im Destination SDK zum Einrichten Ihres Ziels {#steps}
 
 ![Veranschaulichte Schritte zur Verwendung der Ziel-SDK-Endpunkte](./assets/destination-sdk-steps.png)
 
-## Schritt 1: Server- und Vorlagenkonfiguration erstellen {#create-server-template-configuration}
+## Schritt 1: Erstellen einer Server- und Vorlagenkonfiguration {#create-server-template-configuration}
 
-Beginn durch Erstellen einer Server- und Vorlagenkonfiguration mit `/destinations-server` Endpunkt (lesen [API-Verweis](./destination-server-api.md)). Weitere Informationen zur Server- und Vorlagenkonfiguration finden Sie unter [Server- und Vorlagenspezifikationen](./configuration-options.md#server-and-template) im Referenzabschnitt.
+Erstellen Sie zunächst einen Server und eine Vorlagenkonfiguration mit dem `/destinations-server` Endpunkt (lesen) [API-Referenz](./destination-server-api.md)). Weitere Informationen zur Server- und Vorlagenkonfiguration finden Sie unter [Server- und Vorlagenspezifikationen](./configuration-options.md#server-and-template) im Referenzabschnitt.
 
-Im Folgenden finden Sie eine Beispielkonfiguration. Beachten Sie, dass die Umwandlungsvorlage der Nachricht in `requestBody.value` Parameter wird in Schritt 3 angesprochen; [Umwandlungsvorlage erstellen](./configure-destination-instructions.md#create-transformation-template).
+Nachfolgend finden Sie eine Beispielkonfiguration. Beachten Sie, dass die Nachrichtenumwandlungsvorlage in `requestBody.value` -Parameter wird in Schritt 3 behandelt; [Umwandlungsvorlage erstellen](./configure-destination-instructions.md#create-transformation-template).
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destination-servers
@@ -58,9 +58,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Schritt 2: Zielkonfiguration erstellen {#create-destination-configuration}
 
-Unten wird eine Beispielkonfiguration für eine Zielvorlage angezeigt, die mithilfe der `/destinations` API-Endpunkt. Weitere Informationen zu dieser Vorlage finden Sie unter [Zielkonfiguration](./destination-configuration.md).
+Im Folgenden finden Sie eine Beispielkonfiguration für eine Zielvorlage, die mithilfe der `/destinations` API-Endpunkt. Weitere Informationen zu dieser Vorlage finden Sie unter [Zielkonfiguration](./destination-configuration.md).
 
-Um die Server- und Vorlagenkonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und der Vorlagenkonfiguration als `destinationServerId` hier.
+Um die Server- und Vorlagenkonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und die Vorlagenkonfiguration als `destinationServerId` hier.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -144,38 +144,38 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## Schritt 3: Umwandlungsvorlage zum Erstellen von Nachrichten - Verwenden Sie die Vorlagensprache, um das Format der Nachrichtenausgabe anzugeben. {#create-transformation-template}
+## Schritt 3: Vorlage für die Nachrichtenumwandlung erstellen - Verwenden Sie die Vorlagensprache, um das Ausgabeformat der Nachricht anzugeben. {#create-transformation-template}
 
-Basierend auf den Nutzlasten, die Ihr Ziel unterstützt, müssen Sie eine Vorlage erstellen, die das Format der exportierten Daten aus dem XDM-Format der Adobe in ein von Ihrem Ziel unterstütztes Format transformiert. Siehe Vorlagenbeispiele im Abschnitt [Verwenden einer Vorlagensprache für Identitäts-, Attribute- und Segmentmitgliedstransformationen](./message-format.md#using-templating) und verwenden Sie [Vorlagen-Authoring-Tool](./create-template.md) bereitgestellt von der Adobe.
+Basierend auf den Payloads, die Ihr Ziel unterstützt, müssen Sie eine Vorlage erstellen, die das Format der exportierten Daten aus dem Adobe-XDM-Format in ein von Ihrem Ziel unterstütztes Format umwandelt. Siehe Vorlagenbeispiele im Abschnitt . [Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten](./message-format.md#using-templating) und verwenden Sie [Vorlagen-Authoring-Tool](./create-template.md) von der Adobe bereitgestellt werden.
 
-Nachdem Sie eine für Sie funktionierende Umwandlungsvorlage erstellt haben, fügen Sie sie der in Schritt 1 erstellten Server- und Vorlagenkonfiguration hinzu.
+Nachdem Sie eine Vorlage für die Nachrichtenumwandlung erstellt haben, die für Sie funktioniert, fügen Sie sie zur Server- und Vorlagenkonfiguration hinzu, die Sie in Schritt 1 erstellt haben.
 
-## Schritt 4: Audience-Metadatenkonfiguration erstellen {#create-audience-metadata-configuration}
+## Schritt 4: Erstellen der Konfiguration von Zielgruppen-Metadaten {#create-audience-metadata-configuration}
 
-Für einige Ziele erfordert das Ziel-SDK die Konfiguration einer Audience-Metadatenkonfiguration, um Audiencen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Audience-Metadatenverwaltung](./audience-metadata-management.md) für Informationen darüber, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
+Für einige Ziele erfordert das Ziel-SDK, dass Sie eine Konfiguration für Zielgruppen-Metadaten konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
 
-Wenn Sie eine Audience-Metadatenkonfiguration verwenden, müssen Sie sie mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. hinzufügen Sie die Instanz-ID Ihrer Audience-Metadatenkonfiguration in Ihrer Zielkonfiguration als `audienceTemplateId`.
+Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie sie mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Audience-Metadatenkonfiguration Ihrer Zielkonfiguration als `audienceTemplateId`.
 
-## Schritt 5: Anmeldeinformationen erstellen/Authentifizierung einrichten {#set-up-authentication}
+## Schritt 5: Konfiguration von Anmeldedaten erstellen/Authentifizierung einrichten {#set-up-authentication}
 
-Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` in der oben stehenden Zielkonfiguration können Sie die Authentifizierung für Ihr Ziel einrichten, indem Sie `/destination` oder `/credentials` Endpunkt.
+Je nachdem, ob `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` In der obigen Zielkonfiguration können Sie die Authentifizierung für Ihr Ziel einrichten, indem Sie die `/destination` oder `/credentials` -Endpunkt.
 
-* **Häufigster Fall**: Bei Auswahl von `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in der Zielkonfiguration und Ihr Ziel unterstützt die OAuth 2-Authentifizierungsmethode, lesen Sie [OAuth 2-Authentifizierung](./oauth2-authentication.md).
-* Bei Auswahl von `"authenticationRule": "PLATFORM_AUTHENTICATION"`, verweisen auf [Anmeldeinformationen-Konfiguration](./credentials-configuration.md) in der Referenzdokumentation.
+* **häufigster Fall**: Wenn Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in der Zielkonfiguration enthalten sind und Ihr Ziel die OAuth 2-Authentifizierungsmethode unterstützt, lesen Sie [OAuth 2-Authentifizierung](./oauth2-authentication.md).
+* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"`, siehe [Authentifizierungskonfiguration](./authentication-configuration.md#when-to-use).
 
 ## Schritt 6: Ziel testen {#test-destination}
 
-Nachdem Sie Ihr Ziel mithilfe der Konfigurations-Endpunkte in den vorherigen Schritten eingerichtet haben, können Sie die [Ziel-Testwerkzeug](./create-template.md) um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
+Nachdem Sie Ihr Ziel mithilfe der Konfigurations-Endpunkte in den vorherigen Schritten eingerichtet haben, können Sie die [Zieltestwerkzeug](./create-template.md) , um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
 
-Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Benutzeroberfläche &quot;Experience Platform&quot;zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Weitere Informationen zum Erstellen von Segmenten in der Experience Platform finden Sie in den beiden folgenden Ressourcen:
+Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Segmenten in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
 
-* [Segmentdokumentationsseite erstellen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
-* [exemplarische Vorgehensweise für Segmentvideo erstellen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
+* [Erstellen einer Dokumentationsseite für Segmente](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
+* [Videoanleitung zum Erstellen eines Segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
 ## Schritt 7: Ziel veröffentlichen {#publish-destination}
 
-Verwenden Sie nach dem Konfigurieren und Testen des Ziels die [Ziel-Veröffentlichungs-API](./destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an die Adobe zu senden.
+Verwenden Sie nach dem Konfigurieren und Testen Ihres Ziels die [Zielpublikations-API](./destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
 
-## Schritt 8: Dokument Ihres Ziels {#document-destination}
+## Schritt 8: Ziel dokumentieren {#document-destination}
 
-Wenn Sie ein unabhängiger Software-Hersteller (ISV) oder System Integrator (SI) sind und eine [produktive Integration](./overview.md#productized-custom-integrations), verwenden Sie [Self-Service-Dokumentationsverfahren](./docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite für Ihr Ziel zu erstellen in [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md).
+Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und eine [produktive Integration](./overview.md#productized-custom-integrations), verwenden Sie die [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite für Ihr Ziel in der [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md).

@@ -4,7 +4,7 @@ seo-description: The destinations service in Adobe Experience Platform uses conf
 seo-title: Configuration options in Destination SDK
 title: Konfigurationsoptionen im Ziel-SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 9be8636b02a15c8f16499172289413bc8fb5b6f0
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 2%
@@ -20,9 +20,9 @@ Der Zieldienst in Adobe Experience Platform verwendet Konfigurationsvorlagen fü
 * **Zielkonfiguration**: Enthält grundlegende Informationen über Ihr Ziel. Diese Konfiguration umfasst die Identitätstypen, die Ihr Ziel unterstützen kann, und verschiedene Benutzeroberflächenattribute für Ihre Zielkarte in der Adobe Experience Platform-Benutzeroberfläche.
 * **Server- und Vorlagenspezifikationen**: Verbindet Informationen zu Ihren Serverspezifikationen und der von Adobe verwendeten Vorlage zum Übermitteln von Payloads an Ihr Ziel.
    * **Serverspezifikationen**: Eine Vorlage, in der Ihre Endpunktdetails gespeichert werden.
-   * **Vorlagenspezifikationen**: In dieser Vorlage können Sie definieren, wie Sie Profilattributfelder zwischen dem XDM-Schema und dem Format umwandeln können, das Ihre Plattform unterstützt. Detaillierte Informationen zu unterstützten Vorlagensprachen, Nachrichtenformaten und den Informationen, die die Adobe zur Einrichtung der Integration mit Ihrer Plattform benötigt, finden Sie unter [Nachrichtenformat](./message-format.md).
+   * **Vorlagenspezifikationen**: In dieser Vorlage können Sie definieren, wie Sie Profilattributfelder zwischen dem XDM-Schema und dem Format umwandeln können, das Ihre Plattform unterstützt. Detaillierte Informationen zu unterstützten Vorlagensprachen, Nachrichtenformaten und den Informationen, die die Adobe für die Einrichtung der Integration mit Ihrer Plattform benötigt, finden Sie unter [Nachrichtenformat](./message-format.md).
 * **Authentifizierungskonfiguration**: Diese Einstellungen definieren, wie Adobe Experience Platform-Benutzer eine Verbindung zu Ihrem Ziel herstellen.
-* **Konfiguration** von Zielgruppen-Metadaten: Mit dieser Vorlage können Sie konfigurieren, wie Zielgruppen/Segmente programmgesteuert in Ihrem Ziel erstellt, aktualisiert oder gelöscht werden.
+* **Konfiguration von Zielgruppen-Metadaten**: Mit dieser Vorlage können Sie konfigurieren, wie Zielgruppen/Segmente programmgesteuert in Ihrem Ziel erstellt, aktualisiert oder gelöscht werden.
 
 ![Ziel-SDK-Vorlagen und -Konfigurationen](./assets/self-service-configuration.png)
 
@@ -34,9 +34,9 @@ Auf den folgenden Seiten finden Sie weitere Details zu den im Destination SDK ve
 |--- |--- |
 | [Zielkonfiguration](./destination-configuration.md) | [API-Endpunktvorgänge für Ziele](./destination-configuration-api.md) |
 | [Server- und Vorlagenspezifikationen](./server-and-template-configuration.md) | [API-Endpunktvorgänge für Zielserver](./destination-server-api.md) |
-| [Authentifizierungskonfiguration](./credentials-configuration.md) | [API-Vorgänge für Anmeldeendpunkte](./credentials-configuration-api.md) |
+| [Authentifizierungskonfiguration](./authentication-configuration.md) | [API-Vorgänge für Anmeldeendpunkte](./credentials-configuration-api.md) |
 | [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) | [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./audience-metadata-api.md) |
-| [OAuth 2-Konfiguration](./oauth2-authentication.md) | Konfigurieren Sie die Konfiguration mithilfe des Parameters `customerAuthenticationConfigurations` im API-Endpunkt [/destinations](./destination-configuration-api.md). |
+| [OAuth 2-Konfiguration](./oauth2-authentication.md) | Konfigurieren Sie mithilfe des `customerAuthenticationConfigurations` -Parameter in der [/destinations-API-Endpunkt](./destination-configuration-api.md). |
 | [Nachrichtenformat](./message-format.md) | – |
 | [Zieltests](./test-destination.md) | [API-Vorgänge für Zieltests](./destination-testing-api.md) |
 | [Zielveröffentlichung](./configure-destination-instructions.md#publish-destination) | [API-Vorgänge für die Zielveröffentlichung](./destination-publish-api.md) |

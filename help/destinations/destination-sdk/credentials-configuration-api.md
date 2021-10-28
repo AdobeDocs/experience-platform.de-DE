@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden alle API-Vorgänge beschrieben, die Sie mit dem API-Endpunkt "/authoring/credentials"ausführen können.
 title: API-Vorgänge für Anmeldeendpunkte
 exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
-source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 6%
@@ -15,15 +15,15 @@ ht-degree: 6%
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt `/authoring/credentials` ausführen können.
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/credentials` API-Endpunkt.
 
-## Verwendung des API-Endpunkts `/credentials` {#when-to-use}
+## Verwendung der `/credentials` API-Endpunkt {#when-to-use}
 
 >[!IMPORTANT]
 >
->In den meisten Fällen müssen Sie *nicht* den API-Endpunkt `/credentials` verwenden. Stattdessen können Sie die Authentifizierungsinformationen für Ihr Ziel über die Parameter `customerAuthenticationConfigurations` des Endpunkts `/destinations` konfigurieren. Weitere Informationen finden Sie unter [Konfiguration der Anmeldedaten](./credentials-configuration.md) .
+>In den meisten Fällen *nicht* die `/credentials` API-Endpunkt. Stattdessen können Sie die Authentifizierungsinformationen für Ihr Ziel über die `customerAuthenticationConfigurations` Parameter der `/destinations` -Endpunkt. Lesen [Authentifizierungskonfiguration](./authentication-configuration.md#when-to-use) für weitere Informationen.
 
-Verwenden Sie diesen API-Endpunkt und wählen Sie `PLATFORM_AUTHENTICATION` in der [Zielkonfiguration](./destination-configuration.md#destination-delivery) aus, wenn ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel vorhanden ist. Der [!DNL Platform]-Kunde muss keine Authentifizierungsberechtigungen angeben, um eine Verbindung mit Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe des API-Endpunkts `/credentials` ein Anmeldedatenobjekt erstellen.
+Verwenden Sie diesen API-Endpunkt und wählen Sie `PLATFORM_AUTHENTICATION` im [Zielkonfiguration](./destination-configuration.md#destination-delivery) wenn es ein globales Authentifizierungssystem zwischen Adobe und Ihrem Ziel und der [!DNL Platform] Der Kunde muss keine Authentifizierungsberechtigungen bereitstellen, um eine Verbindung zu Ihrem Ziel herzustellen. In diesem Fall müssen Sie mithilfe der `/credentials` API-Endpunkt.
 
 <!--
 
@@ -146,11 +146,11 @@ The sections below list out the necessary parameters for each authentication typ
 
 ## Erste Schritte mit API-Vorgängen zur Konfiguration von Anmeldedaten {#get-started}
 
-Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dazu gehören das Abrufen der erforderlichen Zielerstellungsberechtigung und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
 ## Erstellen einer Konfiguration für Anmeldedaten {#create}
 
-Sie können eine neue Anmeldedaten-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/credentials` senden.
+Sie können eine neue Anmeldedaten-Konfiguration erstellen, indem Sie eine POST-Anfrage an die `/authoring/credentials` -Endpunkt.
 
 **API-Format**
 
@@ -161,7 +161,7 @@ POST /authoring/credentials
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Anmeldedaten-Konfiguration, die von den in der Payload bereitgestellten Parametern konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/credentials` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Anmeldedaten-Konfiguration, die von den in der Payload bereitgestellten Parametern konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/credentials` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -226,7 +226,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellte
 
 ## Berechtigungskonfigurationen auflisten {#retrieve-list}
 
-Sie können eine Liste aller Anmeldedaten-Konfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/credentials` stellen.
+Sie können eine Liste aller Anmeldekonfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an die `/authoring/credentials` -Endpunkt.
 
 **API-Format**
 
@@ -249,7 +249,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/credentials
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Anmeldekonfigurationen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. Ein `instanceId` entspricht der Vorlage für eine Anmeldedaten-Konfiguration. Die Antwort wird aus Gründen der Kürze abgeschnitten.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Anmeldekonfigurationen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. One `instanceId` entspricht der Vorlage für eine Anmeldedaten-Konfiguration. Die Antwort wird aus Gründen der Kürze abgeschnitten.
 
 ```json
 {
@@ -276,7 +276,7 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Anmeldekonfigu
 
 ## Vorhandene Anmeldekonfiguration aktualisieren {#update}
 
-Sie können eine vorhandene Berechtigungskonfiguration aktualisieren, indem Sie eine PUT-Anfrage an den `/authoring/credentials`-Endpunkt senden und die Instanz-ID der Berechtigungskonfiguration angeben, die Sie aktualisieren möchten. Geben Sie im Hauptteil des Aufrufs die aktualisierte Konfiguration der Anmeldedaten an.
+Sie können eine vorhandene Anmeldekonfiguration aktualisieren, indem Sie eine PUT-Anfrage an die `/authoring/credentials` -Endpunkt und die Instanz-ID der Anmeldeinformationen angeben, die Sie aktualisieren möchten. Geben Sie im Hauptteil des Aufrufs die aktualisierte Konfiguration der Anmeldedaten an.
 
 **API-Format**
 
@@ -324,7 +324,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 
 ## Bestimmte Anmeldeinformationen abrufen {#get}
 
-Sie können detaillierte Informationen zu einer bestimmten Berechtigungskonfiguration abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/credentials` senden und die Instanz-ID der Berechtigungskonfiguration angeben, die Sie aktualisieren möchten.
+Sie können detaillierte Informationen zu einer bestimmten Anmeldekonfiguration abrufen, indem Sie eine GET-Anfrage an die `/authoring/credentials` -Endpunkt und die Instanz-ID der Anmeldeinformationen angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -372,7 +372,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 ## Löschen einer bestimmten Konfiguration von Anmeldeinformationen {#delete}
 
-Sie können die angegebene Konfiguration der Anmeldeinformationen löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/authoring/credentials` senden und im Anfragepfad die Kennung der Anmeldeinformationen angeben, die Sie löschen möchten.
+Sie können die angegebene Konfiguration der Anmeldeinformationen löschen, indem Sie eine DELETE-Anfrage an die `/authoring/credentials` -Endpunkt und geben Sie die Kennung der Konfiguration der Anmeldeinformationen an, die Sie im Anfragepfad löschen möchten.
 
 **API-Format**
 
@@ -382,7 +382,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Die `id` der Anmeldeinformationen, die Sie löschen möchten. |
+| `{INSTANCE_ID}` | Die `id` der Konfiguration der Anmeldeinformationen, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -400,8 +400,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren HTT
 
 ## Umgang mit API-Fehlern
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Weitere Informationen finden Sie unter [API-Status-Codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anforderungsheader](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann der Anmeldeinformationen-Endpunkt verwendet und wie eine Konfiguration für Anmeldeinformationen mithilfe des API-Endpunkts `/authoring/credentials` oder des Endpunkts `/authoring/destinations` eingerichtet wird. Lesen Sie [wie Sie das Ziel-SDK verwenden, um Ihr Ziel zu konfigurieren](./configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wann der Anmeldeinformationen-Endpunkt verwendet und wie Sie eine Konfiguration mit Anmeldeinformationen mithilfe des `/authoring/credentials` API-Endpunkt oder `/authoring/destinations` -Endpunkt. Lesen [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md) um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

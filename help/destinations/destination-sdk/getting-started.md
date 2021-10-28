@@ -2,9 +2,9 @@
 description: Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und mit der Verwendung des Adobe Experience Platform Destination SDK beginnen. Es enthält Anweisungen zum Abrufen der Anmeldeinformationen für die Adobe I/O-Authentifizierung, eines Sandbox-Namens und der Zugriffssteuerungsberechtigung für die Zielerstellung.
 title: Erste Schritte mit Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: 6ff5fd0e80f7ca1015969e91cc23c88251509b61
+source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '540'
 ht-degree: 7%
 
 ---
@@ -17,13 +17,13 @@ Auf dieser Seite wird beschrieben, wie Sie sich authentifizieren und mit der Ver
 
 ## Terminologie {#terminology}
 
-In diesem Handbuch werden plattformspezifische Konzepte wie IMS-Organisation und Sandboxes verwendet. Im [Experience Platform-Glossar](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) finden Sie Definitionen zu diesen und anderen Begriffen.
+In diesem Handbuch werden plattformspezifische Konzepte wie IMS-Organisation und Sandboxes verwendet. Lesen Sie die [Glossar zur Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) für Definitionen dieser und anderer Begriffe.
 
 ## Erforderliche Authentifizierungsberechtigungen abrufen {#obtain-authentication-credentials}
 
-Das Ziel-SDK verwendet das Gateway [Adobe I/O](https://www.adobe.io/) für die Authentifizierung. Um API-Aufrufe an Ziel-SDK-Endpunkte durchzuführen, müssen Sie bestimmte Kopfzeilen in Ihren API-Aufrufen bereitstellen. Arbeiten Sie mit dem Adobe Exchange-Team zusammen, um die Authentifizierung für Sie in der [Adobe Developer Console](http://console.adobe.io/) einzurichten.
+Das Ziel-SDK verwendet die [Adobe I/O](https://www.adobe.io/) Gateway zur Authentifizierung. Um API-Aufrufe an Ziel-SDK-Endpunkte durchzuführen, müssen Sie bestimmte Kopfzeilen in Ihren API-Aufrufen bereitstellen. Arbeiten Sie mit dem Adobe Exchange-Team zusammen, um die Authentifizierung für die [Adobe Developer Console](http://console.adobe.io/).
 
-Um erfolgreich Aufrufe an Ziel-SDK-API-Endpunkte durchzuführen, folgen Sie dem [Tutorial zur Experience Platform-Authentifizierung](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Starten Sie das Tutorial im Schritt &quot;[API-Schlüssel, IMS-Organisations-ID und Client-Geheimnis](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret) generieren&quot;. Das Adobe Exchange-Team übernimmt die vorherigen Schritte für Sie. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Ziel-SDK-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um erfolgreich Aufrufe an Ziel-SDK-API-Endpunkte durchzuführen, folgen Sie dem [Tutorial zur Experience Platform-Authentifizierung](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de). Starten Sie das Tutorial über das[API-Schlüssel, Kennung der IMS-Organisation und Client-Geheimnis generieren](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;. Das Adobe Exchange-Team übernimmt die vorherigen Schritte für Sie. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in Ziel-SDK-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `x-api-key: {API_KEY}`, auch als Client-ID bezeichnet
 * `x-gw-ims-org-id: {IMS_ORG}`, auch als Organisations-ID bezeichnet
@@ -56,7 +56,7 @@ Das Adobe Exchange-Team stellt Ihnen Ihren Sandbox-Namen zur Verfügung, den Sie
 
 ## Rollenbasierte Zugriffssteuerung (RBAC) {#rbac}
 
-Um die in der [Referenzdokumentation](./configuration-options.md) beschriebenen Ziel-SDK-API-Endpunkte zu verwenden, benötigen Sie die Zugriffssteuerungsberechtigung **[!UICONTROL Destination Authoring]**. Wenden Sie sich an das Adobe Exchange-Team, um diese Berechtigung Ihnen in [Adobe Admin Console](https://adminconsole.adobe.com/) zuweisen zu können.
+So verwenden Sie die Ziel-SDK-API-Endpunkte, die im Abschnitt [Referenzdokumentation](./configuration-options.md), benötigen Sie die **[!UICONTROL Destination Authoring]** Zugriffssteuerungsberechtigung. Arbeiten Sie mit dem Adobe Exchange-Team zusammen, um diese Berechtigung Ihnen in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 ![Berechtigung zur Zielbearbeitung](./assets/destination-authoring-permission.png)
 
@@ -73,4 +73,6 @@ Weitere Informationen finden Sie in den folgenden Dokumenten zur Zugriffskontrol
 
 ## Nächste Schritte {#next-steps}
 
-Indem Sie die Schritte in diesem Artikel ausgeführt haben, haben Sie Authentifizierungsberechtigungen für Adobe I/O, einen Sandbox-Namen und die Zugriffssteuerungsberechtigung für die Zielerstellung erhalten. Als Nächstes können Sie ein Ziel mithilfe des Destination SDK einrichten. Lesen Sie [Verwenden Sie das Ziel-SDK, um Ihr Ziel](./configure-destination-instructions.md) für die nächsten Schritte zu konfigurieren.
+Indem Sie die Schritte in diesem Artikel ausgeführt haben, haben Sie Authentifizierungsberechtigungen für Adobe I/O, einen Sandbox-Namen und die Zugriffssteuerungsberechtigung für die Zielerstellung erhalten. Als Nächstes können Sie ein Ziel mithilfe des Destination SDK einrichten.
+* Lesen [Verwenden des Ziel-SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md) für die nächsten Schritte.
+* Informationen zu allen Vorgängen finden Sie im Abschnitt [Dokumentation zur Ziel-Authoring-API](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
