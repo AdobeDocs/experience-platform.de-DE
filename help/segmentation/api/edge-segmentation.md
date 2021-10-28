@@ -5,10 +5,10 @@ title: 'Edge-Segmentierung mithilfe der API '
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 8%
+source-wordcount: '942'
+ht-degree: 7%
 
 ---
 
@@ -48,7 +48,7 @@ Damit ein Segment mithilfe der Kantensegmentierung bewertet werden kann, muss di
 | Mehrere eingehende Treffer innerhalb eines Zeitprofils von 24 Stunden | Jede Segmentdefinition, die auf mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen, die die Homepage besucht haben **oder** die Checkout-Seite innerhalb der letzten 24 Stunden besucht haben. |
 | Mehrere Ereignisse mit einem Profil innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und mehrere Ereignisse verweist, die innerhalb eines Zeitfensters von 24 Stunden auftreten. | Personen aus den USA, die die Homepage besucht haben **und** die Checkout-Seite innerhalb der letzten 24 Stunden besucht haben. |
 
-{style=&quot;table-layout:auto&quot;}
+Zusätzlich wird das Segment **must** an eine Zusammenführungsrichtlinie gebunden sein, die an der Kante aktiv ist. Weitere Informationen zu Zusammenführungsrichtlinien finden Sie im Abschnitt [Leitfaden zu Zusammenführungsrichtlinien](../../profile/api/merge-policies.md).
 
 ## Alle für die Kantensegmentierung aktivierten Segmente abrufen
 
