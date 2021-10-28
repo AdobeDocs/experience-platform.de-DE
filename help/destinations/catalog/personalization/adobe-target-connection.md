@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung; Bestimmungsort; Ziel der Erlebnisplattform; Adob
 title: Adobe Target-Verbindung (Beta)
 description: Adobe Target ist eine Anwendung, die eine Echtzeit-, 1:1- und KI-gestützte Personalisierung und Experimentierung bei allen eingehenden Kundeninteraktionen über Websites, mobile Apps und mehr hinweg ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ba27484655438df654a1e062309ddd30638f62a5
+source-git-commit: fae3d9a5aff3e84354831026e9724e1c85d32b5c
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 11%
+source-wordcount: '453'
+ht-degree: 10%
 
 ---
 
@@ -24,11 +24,11 @@ Adobe Target ist eine Personalisierungsverbindung in Adobe Experience Platform.
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../edge/home.md). Sie müssen dieses SDK verwenden, um dieses Ziel zu verwenden.
+Diese Integration basiert auf der [Adobe Experience Platform Web SDK](../../../edge/home.md). Sie müssen dieses SDK verwenden, um dieses Ziel zu verwenden.
 
 ## Exporttyp {#export-type}
 
-**Profilanfrage** : Sie fordern alle Segmente an, die im Adobe Target-Ziel für ein einzelnes Profil zugeordnet sind.
+**Profilanfrage** - Sie fordern alle Segmente an, die im Adobe Target-Ziel für ein einzelnes Profil zugeordnet sind.
 
 ## Anwendungsfälle {#use-cases}
 
@@ -38,21 +38,27 @@ Ein häusliches Vermieter und Vertriebsunternehmen möchte seine Homepage mit ei
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+>[!CONTEXTUALHELP]
+>id="platform_destinations_target_datastream"
+>title="Über Datastream-IDs"
+>abstract="Diese Option bestimmt, in welchem Datenerfassungsdatenstrom die Segmente in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datastream konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Erfahren Sie, wie Sie einen Datastream konfigurieren."
+
+Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 Adobe Experience Platform stellt automatisch eine Verbindung zur Adobe Target-Instanz Ihres Unternehmens her. Es ist keine Authentifizierung erforderlich.
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
 * **Name**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **Beschreibung**: Geben Sie eine Beschreibung für Ihr Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
-* **Datastream-ID**: Dadurch wird bestimmt, in welchem Datenerfassungsdatenstrom die Segmente in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Zielkonfiguration aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren eines Datastreams](../../../edge/fundamentals/datastreams.md) .
+* **Datenspeicher-ID**: Dadurch wird bestimmt, in welchem Datenerfassungsdatenstrom die Segmente in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Zielkonfiguration aktiviert ist. Siehe [Konfigurieren eines Datastreams](../../../edge/fundamentals/datastreams.md) für weitere Details.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Profile und Segmente für Profilanfrageziele aktivieren](../../ui/activate-profile-request-destinations.md) .
+Lesen [Profile und Segmente für Profilanforderungsziele aktivieren](../../ui/activate-profile-request-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ## Exportierte Daten {#exported-data}
 
@@ -60,4 +66,4 @@ Adobe Target liest Profildaten aus dem Adobe Experience Platform Edge Network, s
 
 ## Datennutzung und -verwaltung {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] Data Governance durchsetzt, finden Sie unter [Übersicht über Data Governance](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alle [!DNL Adobe Experience Platform] Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, lesen Sie die [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
