@@ -4,10 +4,10 @@ title: Benutzerhandbuch für Benutzeroberfläche zu Zusammenführungsrichtlinien
 type: Documentation
 description: Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform stellen Zusammenführungsrichtlinien die Regeln dar, die Platform verwendet, um festzulegen, wie Daten priorisiert werden und welche Daten bei der Erstellung einzelner Kundenprofile kombiniert werden. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: a6a49b4cf9c89b5c6b4679f36daede93590ffb3c
+source-git-commit: e0a75a75e5dbb0318ec8785d887d7a156d28f5bd
 workflow-type: tm+mt
-source-wordcount: '2193'
-ht-degree: 100%
+source-wordcount: '2317'
+ht-degree: 94%
 
 ---
 
@@ -59,6 +59,7 @@ Im ersten Schritt des Workflows können Sie Ihre Zusammenführungsrichtlinie kon
    * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
 * **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn die Auswahl aktiviert ist, werden Sie in einer Warnung aufgefordert zu bestätigen, dass Sie die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation ändern möchten. Weitere Informationen zu standardmäßigen Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](overview.md).
    ![](../images/merge-policies/create-make-default.png)
+* **[!UICONTROL Richtlinie zur aktiven Zusammenführung auf Edge]**: Eine Umschalter-Schaltfläche, mit der Sie auswählen können, ob diese Zusammenführungsrichtlinie an der Kante aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer an Edges mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als aktiv am Rand markiert werden. Damit ein Segment an der Kante aktiviert werden kann (als Kantensegment markiert), muss es an eine Zusammenführungsrichtlinie gebunden sein, die als aktiv an der Kante markiert ist. Wenn ein Segment **not** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am -Edge markiert ist, wird das Segment nicht als aktiv am -Edge markiert und als Streaming-Segment markiert. Darüber hinaus kann jede IMS-Organisation nur über **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist.
 
 Nachdem die erforderlichen Felder ausgefüllt wurden, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Workflow fortzufahren.
 
