@@ -1,16 +1,16 @@
 ---
 keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsrichtlinie;Echtzeit-Kundenprofil
-title: Handbuch zur Benutzeroberfläche von Account-Profilen
+title: Handbuch zur Benutzeroberfläche von Account-Profilen (Betaversion)
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 5bd2afcc594d96878ee51af2e9e99d74b764009e
+source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
 workflow-type: tm+mt
-source-wordcount: '1191'
+source-wordcount: '1193'
 ht-degree: 100%
 
 ---
 
-# Handbuch zur Benutzeroberfläche von Account-Profilen
+# Handbuch zur Benutzeroberfläche von Account-Profilen (Betaversion)
 
 >[!IMPORTANT]
 >

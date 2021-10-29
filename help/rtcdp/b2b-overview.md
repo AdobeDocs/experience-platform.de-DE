@@ -1,18 +1,18 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kundendatenplattform;Real-time CDP;b2b;cdp;Kunden-KI
-title: Real-time Customer Data Platform B2B Edition – Übersicht
+title: Real-time Customer Data Platform B2B Edition – Übersicht (Betaversion)
 seo-title: Real-time Customer Data Platform B2B Edition overview
 description: Überblick über das Konto von Real-time Customer Data Platform B2B Edition
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
-source-git-commit: 4130528800a9219e0c9e12639f292a7f55f86d5e
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 93%
+source-wordcount: '1092'
+ht-degree: 91%
 
 ---
 
-# Überblick über Real-time Customer Data Platform B2B Edition
+# Überblick über Real-time Customer Data Platform B2B Edition (Betaversion)
 
 >[!IMPORTANT]
 >
@@ -83,4 +83,15 @@ Für Unternehmen mit mehr als einem CRM bietet Real-time Customer Data Platform 
 
 Jetzt, da Sie die Vorteile von Real-time CDP B2B Edition für Marketing-Experten und die Unterschiede zu Real-time CDP besser verstehen, können Sie mehr darüber erfahren, wie Sie diese Funktionen in Ihrer eigenen IMS-Organisation anwenden können.
 
-Um zu verstehen, wie Real-time Customer Data Platform B2B Edition Ihr Business-to-Business-Service-Modell unterstützen kann, lesen Sie das [Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition](./b2b-use-case.md). Alternativ können Sie auch die Dokumentation [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) zu Rate ziehen, um eine genauere Anleitung zur Erstellung von Schemas und zur Definition von Beziehungen für wichtige B2B-Datenentitäten zu erhalten.
+Um zu verstehen, wie die B2B Edition der Echtzeit-Kundendatenplattform Ihr Business-to-Business-Service-Modell nutzen kann, lesen Sie die folgende Dokumentation, die Ihnen bei den ersten Schritten hilft:
+
+* [Ein Anwendungsbeispiel für die Echtzeit-Kundendatenplattform B2B Edition](./b2b-use-case.md)
+* [So erfassen Sie Daten](./sources/b2b.md)
+* [So rufen Sie Profile auf](./profile/profile-overview.md)
+* [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+* [So erstellen Sie Segmente](./segmentation/b2b.md)
+* [So aktivieren Sie Segmente für Ziele](./destinations/b2b.md)
+* [So definieren und setzen Sie Data Governance-Richtlinien um](./privacy/data-governance-overview.md)
+
+<!-- PLACEHOLDER - page under construction -->
+<!-- * [Privacy in Real-time Customer Data Platform B2B Edition](./privacy/b2b.md) -->

@@ -1,15 +1,23 @@
 ---
-title: Ziele in Real-time Customer Data Platform B2B Edition
+title: Ziele in Real-time Customer Data Platform B2B Edition (Beta)
 description: Ein Überblick über die Rolle von Zielen in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 44d5abbc9644c4fc138aad3b3ad8eb106de159e9
+source-git-commit: fef18389f8e64bdf11fe93d4077eb0474abc4981
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 4%
+source-wordcount: '244'
+ht-degree: 7%
 
 ---
 
-# Ein Überblick über Ziele in Real-time Customer Data Platform B2B Edition
+# Ziele in Real-time Customer Data Platform B2B Edition (Beta)
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
+
+>[!NOTE]
+>
+>Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Übersicht über Ziele](../../destinations/home.md) anstatt.
 
 Zu den Experience Platform-Zielen, die vollständig von der Echtzeit-Kundendatenplattform B2B Edition unterstützt werden, gehören Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager.
 

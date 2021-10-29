@@ -5,7 +5,7 @@ title: Überblick über Adobe Experience Platform
 topic-legacy: getting started
 description: Mit Adobe Experience Platform können Unternehmen Kundendaten zentral zusammenführen und standardisieren. Zusätzlich können mithilfe von Datenwissenschaft und maschinellem Lernen die Gestaltung und Bereitstellung umfassender, personalisierter Erlebnisse erheblich verbessert werden.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: 7f694310b17ab257eae459003bb820f7221bb55e
+source-git-commit: 0e58db465b9e978d66325c4600ed78e81c03ae44
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 100%
@@ -32,6 +32,7 @@ Adobe hat mehrere Programm-Services auf Experience Platform aufgebaut. Die Dokum
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=de)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html?lang=de)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
+* [[!DNL Real-time Customer Data Platform (Real-time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 
 ## Tutorials zu [!DNL Experience Platform]
 

@@ -1,12 +1,12 @@
 ---
-keywords: rtcdp profile; profile rtcdp; rtcdp identities; rtcdp-Zusammenführungsrichtlinien; Echtzeit-Kundenprofil
+keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsrichtlinie;Echtzeit-Kundenprofil
 title: Verstehen des Echtzeit-Kundenprofils in der Echtzeit-Kundendatenplattform
 description: Erfahren Sie, wie Sie mit Real-time Customer Data Platform mithilfe des Echtzeit-Kundenprofils koordinierte, konsistente und relevante Erlebnisse für Ihre Kunden bereitstellen können.
 exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
-source-git-commit: 6579e371a8729e926b7061418c786150a27d4876
+source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 45%
+source-wordcount: '476'
+ht-degree: 50%
 
 ---
 
@@ -20,13 +20,13 @@ Mit dem Echtzeit-Kundenprofil erhalten Sie eine ganzheitliche Sicht auf jeden ei
 
 Die Echtzeit-Kundendatenplattform basiert auf Experience Platform und nutzt viele der wichtigsten Funktionen und Funktionen der Experience Platform, einschließlich der Erstellung von Profilen. In diesen aggregierten Ansichten einzelner Kunden werden Daten aus all Ihren Marketing-Kanälen und den verschiedenen Systemen zusammengeführt, die Ihr Unternehmen zur Speicherung von Kundendaten aktuell verwendet.
 
-## Profilverbesserungen für die Echtzeit-Kundendatenplattform, B2B Edition
+## Profilverbesserungen für die Echtzeit-Kundendatenplattform, B2B Edition (Beta)
 
 >[!IMPORTANT]
 >
 >Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
 
-Zusätzlich zu den Profilfunktionen, die von der Echtzeit-Kundendatenplattform unterstützt werden, können Sie die Echtzeit-Kundendatenplattform, B2B Edition verwenden, um wichtige Informationen zu einer Person zu durchsuchen, z. B. ein Konto und Chancen. Um mehr über Profilverbesserungen für die Echtzeit-Kundendatenplattform zu erfahren, lesen Sie zunächst das [Profil-Browse-Handbuch](profile-browse.md).
+Zusätzlich zu den Profilfunktionen, die von der Echtzeit-Kundendatenplattform unterstützt werden, können Sie die Echtzeit-Kundendatenplattform, B2B Edition verwenden, um wichtige Informationen zu einer Person zu durchsuchen, z. B. ein Konto und Chancen. Um mehr über Profilverbesserungen für die Echtzeit-Kundendatenplattform zu erfahren, lesen Sie zunächst den Abschnitt [Profil-Durchsuchen-Handbuch](profile-browse.md).
 
 ## Identitäten und Identitäts-Namespaces
 
@@ -38,7 +38,7 @@ Beim Zusammenführen von Kundendaten dienen Zusammenführungsrichtlinien als jen
 
 ## Profilansicht
 
-Platform ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Weitere Informationen zum Anzeigen von Profilen in Platform finden Sie in der [Übersicht über die Profilsuche](profile-browse.md).
+Platform ermöglicht es Ihnen, Kundenprofile bequem anzuzeigen und anhand verschiedener Attribute nach bestimmten Profilen zu suchen. Weitere Informationen zum Anzeigen von Profilen in Platform finden Sie unter [Übersicht über die Profilsuche](profile-browse.md).
 
 ## Nächste Schritte
 

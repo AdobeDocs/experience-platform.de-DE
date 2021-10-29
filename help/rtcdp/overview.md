@@ -5,10 +5,10 @@ seo-title: Real-time Customer Data Platform Overview
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 7dedc679ac4173ab3f782bc57517b2e66bc20844
+source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 100%
+source-wordcount: '421'
+ht-degree: 70%
 
 ---
 
@@ -26,6 +26,14 @@ Mit der Echtzeit-Kundendatenplattform können Sie:
 * Profile mit Steuerungs-Tools und Datenschutzkontrollen für bekannte und anonyme Kennungen verantwortungsvoll verwalten.
 * Erstellen Sie mit KI und maschinellem Lernen auf Basis von Adobe Sensei – entwickelt für Marketer – praktische Einblicke und skalieren Sie Zielgruppen.
 * Schaffen Sie in Echtzeit personalisierte Erlebnisse über alle Kanäle und Ziele hinweg.
+
+## Real-time Customer Data Platform B2B Edition (Beta)
+
+Es gibt auch eine andere Ausgabe der Echtzeit-Kundendatenplattform, die den organisatorischen Anforderungen von Unternehmen gerecht wird. Die Echtzeit-Kundendatenplattform B2B Edition wurde speziell entwickelt, um die Funktionalität der Echtzeit-Kundendatenplattform für Marketing-Experten zu erweitern. Es bietet verschiedene Funktionen, die innerhalb des Adobe Experience Platform-Ökosystems aktiviert wurden, um besser auf die Arbeit in einem Business-to-Business-Dienstleistungsmodell zugeschnitten zu sein.
+
+Mit der Echtzeit-Kundendatenplattform B2B Edition können Marketingexperten ganzheitliche Profile für Personen und Konten erstellen. Insbesondere können Sie all Ihre Cross-Source-Daten aus einem zentralen Speicher mit einheitlichen Kontoprofilen anreichern, segmentieren und exportieren. Diese Daten können mithilfe von Data Governance-Tools verwaltet werden, die in jedem Schritt des Zentralisierungsprozesses verfügbar sind.
+
+Siehe [Überblick über die Echtzeit-Kundendatenplattform B2B Edition](./b2b-overview.md) für umfassendere Informationen.
 
 ## Weitere Informationen
 
