@@ -5,9 +5,9 @@ title: Metrik-API-Endpunkt
 topic-legacy: developer guide
 description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 7dfc5115110ebdfa503e582b595191b17b0e46ed
+source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1864'
 ht-degree: 42%
 
 ---
@@ -80,10 +80,10 @@ curl -X POST \
 | --- | --- |
 | `start` | Das früheste Datum/die früheste Uhrzeit, ab dem/der Metrikdaten abgerufen werden sollen. |
 | `end` | Das aktuelle Datum/die aktuelle Uhrzeit, ab dem/der Metrikdaten abgerufen werden sollen. |
-| `granularity` | Ein optionales Feld, das das Zeitintervall angibt, nach dem Metrikdaten geteilt werden sollen. Beispielsweise wird der Wert `DAY` gibt Metriken für jeden Tag zwischen `start` und `end` Datum, während der Wert `MONTH` würde die Metrikergebnisse stattdessen nach Monat gruppieren. Bei Verwendung dieses Felds muss die `downsample` -Eigenschaft muss auch angegeben werden, mit welcher Aggregationsfunktion Daten gruppiert werden sollen. |
+| `granularity` | Ein optionales Feld, das das Zeitintervall angibt, nach dem die Metrikdaten geteilt werden sollen. Beispielsweise wird der Wert `DAY` gibt Metriken für jeden Tag zwischen `start` und `end` Datum, während der Wert `MONTH` würde die Metrikergebnisse stattdessen nach Monat gruppieren. Bei Verwendung dieses Felds muss die `downsample` -Eigenschaft muss auch angegeben werden, mit welcher Aggregationsfunktion Daten gruppiert werden sollen. |
 | `metrics` | Ein Array von Objekten, eines für jede Metrik, die Sie abrufen möchten. |
 | `name` | Der Name einer Metrik, die von Observability Insights erkannt wird. Siehe [Anhang](#available-metrics) für eine vollständige Liste der akzeptierten Metriknamen. |
-| `filters` | Ein optionales Feld, mit dem Sie Metriken nach bestimmten Datensätzen filtern können. Das Feld ist ein Array von Objekten (eines für jeden Filter), wobei jedes Objekt die folgenden Eigenschaften enthält: <ul><li>`name`: Der Typ der Entität, nach der Metriken gefiltert werden sollen. Derzeit wird nur `dataSets` unterstützt.</li><li>`value`: Die ID eines oder mehrerer Datensätze. Mehrere Datensatz-IDs können als einzelne Zeichenfolge angegeben werden, wobei jede ID durch vertikale Balkenzeichen (`|`).</li><li>`groupBy`: Wenn auf &quot;true&quot;gesetzt, zeigt an, dass die entsprechende `value` stellt mehrere Datensätze dar, deren Metrikergebnisse separat zurückgegeben werden sollten. Wenn der Wert auf &quot;false&quot;gesetzt ist, werden die Metrikergebnisse für diese Datensätze gruppiert.</li></ul> |
+| `filters` | Ein optionales Feld, mit dem Sie Metriken nach bestimmten Datensätzen filtern können. Das Feld ist ein Array von Objekten (eines für jeden Filter), wobei jedes Objekt die folgenden Eigenschaften enthält: <ul><li>`name`: Der Typ der Entität, nach der Metriken gefiltert werden sollen. Derzeit wird nur `dataSets` unterstützt.</li><li>`value`: Die ID eines oder mehrerer Datensätze. Mehrere Datensatz-IDs können als einzelne Zeichenfolge angegeben werden, wobei jede ID durch vertikale Balkenzeichen (`\|`).</li><li>`groupBy`: Wenn auf &quot;true&quot;gesetzt, zeigt an, dass die entsprechende `value` stellt mehrere Datensätze dar, deren Metrikergebnisse separat zurückgegeben werden sollten. Wenn der Wert auf &quot;false&quot;gesetzt ist, werden die Metrikergebnisse für diese Datensätze gruppiert.</li></ul> |
 | `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Detaillierte Informationen zu den verfügbaren Aggregatoren finden Sie im Abschnitt [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Sampling-Rate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für die Neuberechnung wird durch die `granularity` -Eigenschaft. Ausführliche Informationen zum Downsampling finden Sie im Abschnitt [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
