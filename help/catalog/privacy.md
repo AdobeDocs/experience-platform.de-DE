@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: e94482532e0c5698cfe5e51ba260f89c67fa64f0
+source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 100%
+source-wordcount: '1380'
+ht-degree: 92%
 
 ---
 
@@ -72,7 +72,7 @@ Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt
 >
 >In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mit der [!DNL Catalog Service]-API abrufen. Nachdem Sie den Abschnitt [Erste Schritte](./api/getting-started.md) des Entwicklerhandbuchs gelesen haben, führen Sie die Schritte aus, die unter [Auflistung](./api/list-objects.md) oder [Suchen](./api/look-up-object.md) von [!DNL Catalog]-Objekten beschrieben sind, um Ihren Datensatz zu finden. Die Schema-ID befindet sich unter `schemaRef.id`
 >
-> Dieser Abschnitt enthält Aufrufe der Schema Registry-API. Wichtige Informationen zur Verwendung der API, einschließlich Details über `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) des Entwicklerhandbuchs.
+>In diesem Abschnitt wird außerdem davon ausgegangen, dass Sie wissen, wie Sie Aufrufe an die Schema Registry-API tätigen können. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnis Ihrer `{TENANT_ID}` und das Konzept der Container, siehe [Erste Schritte](../xdm/api/getting-started.md) Abschnitt des API-Handbuchs.
 
 Sie können dem XDM-Schema eines Datensatzes einen Identitätsdeskriptor hinzufügen, indem Sie eine POST-Anfrage an den `/descriptors`-Endpunkt in der [!DNL Schema Registry]-API stellen.
 
@@ -90,10 +90,10 @@ Die folgende Anfrage definiert einen Identitätsdeskriptor für ein Feld „E-Ma
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
   -d '
       {
         "@type": "xdm:descriptorIdentity",
@@ -154,19 +154,19 @@ Wählen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche **[!U
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. Kennungen für [!DNL Data Lake] müssen bei `type` den Wert „Nicht registriert“ aufweisen sowie über einen `namespace`-Wert verfügen, der mit einer der [Datenschutzkennzeichnungen](#privacy-labels) übereinstimmt, die den entsprechenden Datensätzen hinzugefügt wurden.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für die [!DNL Data Lake] muss `unregistered` für `type` und einen `namespace` -Wert, der mit einem [Datenschutzbezeichnungen](#privacy-labels) die zu den entsprechenden Datensätzen hinzugefügt wurden.
 
 Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anfragen an [!DNL Data Lake] muss das Array den Wert `aepDataLake` enthalten.
 
-Die folgende Anfrage erstellt einen neuen Datenschutzauftrag für [!DNL Data Lake] mit dem nicht registrierten Namespace „email_label“. Sie enthält außerdem den Produktwert für [!DNL Data Lake] im `include`-Array:
+Die folgende Anfrage erstellt einen neuen Datenschutzauftrag für die [!DNL Data Lake]unter Verwendung der nicht registrierten `email_label` Namespace. Sie enthält außerdem den Produktwert für [!DNL Data Lake] im `include`-Array:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json' \
   -d '{
     "companyContexts": [
       {
@@ -198,6 +198,10 @@ curl -X POST \
     "regulation": "ccpa"
 }'
 ```
+
+>[!IMPORTANT]
+>
+>Platform verarbeitet Datenschutzanfragen für alle [Sandboxes](../sandboxes/home.md) , die zu Ihrer Organisation gehören. Daher kann jede `x-sandbox-name` -Kopfzeile, die in der Anfrage enthalten ist, wird vom System ignoriert.
 
 ## Verarbeitung von Löschanfragen
 
