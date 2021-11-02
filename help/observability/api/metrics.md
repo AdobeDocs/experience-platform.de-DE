@@ -5,9 +5,9 @@ title: Metrik-API-Endpunkt
 topic-legacy: developer guide
 description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 6c10413adf033d09a49088951c127fc6e6c5552f
+source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
 workflow-type: tm+mt
-source-wordcount: '1864'
+source-wordcount: '1866'
 ht-degree: 42%
 
 ---
@@ -18,7 +18,7 @@ Beobachtbarkeitsmetriken bieten Einblicke in Nutzungsstatistiken, historische Tr
 
 >[!NOTE]
 >
->Der Endpunkt der vorherigen Versionsmetriken (V1) wird nicht mehr unterstützt. Dieses Dokument konzentriert sich ausschließlich auf die aktuelle Version (V2). Weitere Informationen zum V1-Endpunkt für ältere Implementierungen finden Sie im Abschnitt [API-Referenz](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
+>Die vorherige Version des Metrik-Endpunkts (V1) wird nicht mehr unterstützt. Dieses Dokument konzentriert sich ausschließlich auf die aktuelle Version (V2). Weitere Informationen zum V1-Endpunkt für ältere Implementierungen finden Sie im Abschnitt [API-Referenz](https://www.adobe.io/experience-platform-apis/references/observability-insights/#operation/retrieveMetricsV1).
 
 ## Erste Schritte
 
