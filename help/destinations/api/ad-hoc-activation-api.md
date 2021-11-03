@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform; Ziel-API; Ad-hoc-Aktivierung; Ad-hoc-Aktivierung von Segmenten aktivieren
 solution: Experience Platform
-title: (Beta) Aktivieren von Zielgruppensegmenten über die Experience Platform Ad-hoc-Aktivierungs-API
-description: Dieser Artikel zeigt den End-to-End-Workflow zum Aktivieren von Segmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
+title: (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API
+description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivieren von Zielgruppensegmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
+source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1054'
 ht-degree: 12%
 
 ---
 
 
-# (Beta) Aktivieren von Zielgruppensegmenten über die Experience Platform Ad-hoc-Aktivierungs-API
+# (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API
 
 >[!IMPORTANT]
 >
@@ -35,16 +35,16 @@ Das folgende Diagramm zeigt den End-to-End-Workflow zum Aktivieren von Segmenten
 
 ### Flash-Verkäufe oder -Promotions
 
-Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API der Experience Platform kann das Marketing-Team Zielgruppensegmente bei Bedarf exportieren und Werbe-E-Mails schnell an die Kundenbasis senden.
+Ein Online-Händler bereitet einen begrenzten Flash-Verkauf vor und möchte Kunden kurzfristig benachrichtigen. Über die Ad-hoc-Aktivierungs-API der Experience Platform kann das Marketing-Team bei Bedarf Segmente exportieren und Werbe-E-Mails schnell an den Kundenstamm senden.
 
 
 ### Aktuelle Veranstaltungen oder aktuelle Nachrichten
 
-Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Zielgruppensegmente bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
+Ein Hotel erwartet ein schlechtes Wetter an den folgenden Tagen, und das Team möchte die ankommenden Gäste schnell informieren, damit sie entsprechend planen können. Das Marketing-Team kann die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Segmente bei Bedarf zu exportieren und die Gäste zu benachrichtigen.
 
 ### Integrationstests
 
-IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Zielgruppensegmente bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
+IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden, um Segmente bei Bedarf zu exportieren, sodass sie ihre benutzerdefinierte Integration mit Adobe Experience Platform testen und sicherstellen können, dass alles ordnungsgemäß funktioniert.
 
 
 ## Schutzschilde {#guardrails}
@@ -156,8 +156,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Zielgruppensegmente aktivieren möchten. |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Zielgruppensegmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Segmente aktivieren möchten. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Segmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
 | <ul><li>`exportId1`</li></ul> | Die in der Antwort der [Segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) Auftrag. Siehe [Schritt 4: Abrufen der neuesten Segmentexportauftrag-ID](#segment-export-id) für Anweisungen zum Auffinden dieser ID. |
 
 ### Antwort
