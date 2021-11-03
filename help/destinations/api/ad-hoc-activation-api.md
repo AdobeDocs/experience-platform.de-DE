@@ -5,7 +5,7 @@ title: (Beta) Aktivieren von Zielgruppensegmenten über die Experience Platform 
 description: Dieser Artikel zeigt den End-to-End-Workflow zum Aktivieren von Segmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: d5b383ec4e9f6e2f05a0e5834e3998789a67ce32
+source-git-commit: 0c8fbaec9a592c9d5c20c077f31279f732ec2a0d
 workflow-type: tm+mt
 source-wordcount: '1056'
 ht-degree: 12%
@@ -124,9 +124,9 @@ Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass 
 
 Nach Abschluss des Segmentexportauftrags können Sie die Aktivierung Trigger haben.
 
->[!WARNING]
+>[!NOTE]
 >
->Sie können pro Ad-hoc-Aktivierungsauftrag maximal 50 Segmente aktivieren. Wenn Sie versuchen, weitere Segmente zu aktivieren, schlägt der Auftrag fehl.
+>Sie können pro Ad-hoc-Aktivierungsauftrag maximal 20 Segmente aktivieren. Wenn Sie versuchen, weitere Segmente zu aktivieren, schlägt der Auftrag fehl.
 
 ### Anfrage
 
