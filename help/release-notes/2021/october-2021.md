@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 45c4486dc9860da13daa6984b23ef80038ea2f8d
+source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 39%
@@ -16,7 +16,7 @@ ht-degree: 39%
 
 Aktualisierungen der Experience Platform.
 
-### [Benutzeroberfläche] {#ui}
+### Benutzeroberfläche {#ui}
 
 Die Benutzeroberfläche wurde mit den folgenden Änderungen aktualisiert:
 
