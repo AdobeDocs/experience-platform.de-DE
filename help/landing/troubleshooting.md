@@ -7,38 +7,38 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: 2a73571d806f1653dad29d2c0b0067c5ce63e0e7
+source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 67%
+source-wordcount: '1758'
+ht-degree: 66%
 
 ---
 
 # [!DNL Platform] FAQs und Handbuch zur Fehlerbehebung
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform sowie eine allgemeine Anleitung zur Fehlerbehebung bei häufigen Fehlern, die in einer [!DNL Experience Platform]-API auftreten können. Eine Anleitung zur Fehlerbehebung bei einzelnen [!DNL Platform]-Diensten finden Sie unten im [Verzeichnis zur Fehlerbehebung bei Diensten](#service-troubleshooting-directory) .
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform sowie eine allgemeine Anleitung zur Fehlerbehebung bei häufigen Fehlern, die bei allen [!DNL Experience Platform] API. Informationen zur Fehlerbehebung bei einzelnen [!DNL Platform] Dienste, siehe [Verzeichnis zur Fehlerbehebung bei Diensten](#service-troubleshooting-directory) unten.
 
 ## FAQs {#faq}
 
 Im Folgenden finden Sie eine Liste von Antworten auf häufig gestellte Fragen zu Adobe Experience Platform.
 
-## Was sind [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
+## Was ist [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] bietet mehrere RESTful-APIs, die HTTP-Anfragen für den Zugriff auf  [!DNL Platform] Ressourcen verwenden. Diese Dienst-APIs machen jeweils verschiedene Endpunkte verfügbar und ermöglichen Ihnen das Auflisten (GET), Nachschlagen (GET), Bearbeiten (PUT und/oder PATCH) und Löschen (DELETE) von Ressourcen. Weiterführende Informationen zu einzelnen Endpunkten und Vorgängen, die bei den jeweiligen Diensten verfügbar sind, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en) in Adobe I/O.
+[!DNL Experience Platform] bietet mehrere RESTful-APIs, die HTTP-Anfragen für den Zugriff verwenden [!DNL Platform] Ressourcen. Diese Dienst-APIs machen jeweils verschiedene Endpunkte verfügbar und ermöglichen Ihnen das Auflisten (GET), Nachschlagen (GET), Bearbeiten (PUT und/oder PATCH) und Löschen (DELETE) von Ressourcen. Weiterführende Informationen zu einzelnen Endpunkten und Vorgängen, die bei den jeweiligen Diensten verfügbar sind, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en) in Adobe I/O.
 
 ## Wie kann ich eine API-Anfrage formatieren? {#how-do-i-format-an-api-request}
 
-Die Anforderungsformate variieren je nach verwendeter [!DNL Platform]-API. Am besten erfahren Sie, wie Sie Ihre API-Aufrufe strukturieren können, indem Sie den Beispielen in der Dokumentation für den jeweiligen [!DNL Platform]-Dienst folgen, den Sie verwenden.
+Die Anforderungsformate variieren je nach [!DNL Platform] API wird verwendet. Am besten erfahren Sie, wie Sie Ihre API-Aufrufe strukturieren können, indem Sie den Beispielen folgen, die in der Dokumentation für das betreffende [!DNL Platform] -Dienst verwenden.
 
-Weitere Informationen zum Erstellen von API-Anfragen finden Sie im Erste-Schritte-Handbuch zur Platform-API [Lesen Sie den Abschnitt mit Beispiel-API-Aufrufen](./api-guide.md#sample-api) .
+Weitere Informationen zum Erstellen von API-Anfragen finden Sie im Erste-Schritte-Handbuch zur Platform-API . [Beispielhafte API-Aufrufe lesen](./api-guide.md#sample-api) Abschnitt.
 
 ## Was ist meine IMS-Organisation? {#what-is-my-ims-organization}
 
-Eine IMS-Organisation ist eine Adobe-Darstellung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation über die Berechtigung [!DNL Experience Platform] verfügt, kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anfragen als Kopfzeile obligatorisch. Diese ID kann über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) gefunden werden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** für eine bestimmte Integration, um die Kennung unter **Client-Anmeldedaten** zu finden. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform] finden Sie im [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis).
+Eine IMS-Organisation ist eine Adobe-Darstellung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation berechtigt ist, [!DNL Experience Platform], kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anfragen als Kopfzeile obligatorisch. Diese ID kann über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): im **Integrationen** Registerkarte navigieren, navigieren Sie zum **Übersicht** für eine bestimmte Integration, um die ID unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren in [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis).
 
 ## Wo finde ich meinen API-Schlüssel? {#where-can-i-find-my-api-key}
 
-In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie finden sie über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration; Sie finden den Schlüssel dann unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform] finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie finden sie über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration; Sie finden den Schlüssel dann unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Woher bekomme ich ein Zugriffstoken? {#how-do-i-get-an-access-token}
 
@@ -60,19 +60,19 @@ Detaillierte Informationen dazu, welche Abfragen bei einem bestimmten Service od
 
 ## Wie gebe ich ein JSON-Feld an, das in einer PATCH-Anfrage aktualisiert werden soll? {#how-do-i-indicate-a-json-field-to-update-in-a-patch-request}
 
-Viele PATCH-Vorgänge in [!DNL Platform]-APIs verwenden [JSON Pointer](https://tools.ietf.org/html/rfc6901)-Zeichenfolgen, um anzugeben, welche JSON-Eigenschaften aktualisiert werden sollen. Diese werden normalerweise im [JSON Patch](https://tools.ietf.org/html/rfc6902)-Format in Anfrage-Payloads eingebunden. Weiterführende Informationen zur für diese Technologien erforderlichen Syntax finden Sie im [API-Grundlagenhandbuch](api-fundamentals.md).
+Viele PATCH-Vorgänge in [!DNL Platform] APIs verwenden [JSON Pointer](https://tools.ietf.org/html/rfc6901) -Zeichenfolgen, um anzugeben, welche JSON-Eigenschaften aktualisiert werden sollen. Diese werden normalerweise im [JSON Patch](https://tools.ietf.org/html/rfc6902)-Format in Anfrage-Payloads eingebunden. Weiterführende Informationen zur für diese Technologien erforderlichen Syntax finden Sie im [API-Grundlagenhandbuch](api-fundamentals.md).
 
-## Kann ich Postman verwenden, um [!DNL Platform]-APIs aufzurufen? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
+## Kann ich Postman verwenden, um Aufrufe an [!DNL Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) ist ein hilfreiches Tool zur Visualisierung von Aufrufen an RESTful-APIs. Das Erste-Schritte-Handbuch [Plattform-API](api-guide.md) enthält ein Video und Anweisungen zum Importieren von Postman-Sammlungen. Darüber hinaus wird für jeden Dienst eine Liste von Postman-Kollektionen bereitgestellt.
+[Postman](https://www.postman.com/) ist ein hilfreiches Tool zur Visualisierung von Aufrufen an RESTful-APIs. Die [Erste Schritte mit der Platform-API](api-guide.md) enthält ein Video und Anweisungen zum Importieren von Postman-Sammlungen. Darüber hinaus wird für jeden Dienst eine Liste von Postman-Kollektionen bereitgestellt.
 
 ## Welche Systemanforderungen gelten für [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
 Je nachdem, ob Sie die Benutzeroberfläche oder API verwenden, gelten die folgenden Systemanforderungen:
 
 **Für UI-basierte Vorgänge:**
-- Ein moderner, standardmäßiger Webbrowser. Obwohl die neueste Version von [!DNL Chrome] empfohlen wird, werden auch aktuelle und frühere Hauptversionen von [!DNL Firefox], [!DNL Internet Explorer] und Safari unterstützt.
-   - Jedes Mal, wenn eine neue Hauptversion veröffentlicht wird, beginnt [!DNL Platform], die neueste Version zu unterstützen, während die Unterstützung für die drittneueste Version eingestellt wird.
+- Ein moderner, standardmäßiger Webbrowser. Die neueste Version von [!DNL Chrome] wird empfohlen, aktuelle und vorherige Hauptversionen von [!DNL Firefox], [!DNL Internet Explorer], und Safari werden ebenfalls unterstützt.
+   - Jedes Mal, wenn eine neue Hauptversion veröffentlicht wird, [!DNL Platform] beginnt, die neueste Version zu unterstützen, während die Unterstützung für die drittneueste Version eingestellt wird.
 - Bei allen Browsern müssen Cookies und JavaScript aktiviert sein.
 
 **Für Interaktionen mit APIs und Entwicklern:**
@@ -80,11 +80,11 @@ Je nachdem, ob Sie die Benutzeroberfläche oder API verwenden, gelten die folgen
 
 ## Fehler und Fehlerbehebung {#errors-and-troubleshooting}
 
-Im Folgenden finden Sie eine Liste von Fehlern, die bei der Verwendung von [!DNL Experience Platform]-Diensten auftreten können. Eine Anleitung zur Fehlerbehebung bei einzelnen [!DNL Platform]-Diensten finden Sie unten im [Verzeichnis zur Fehlerbehebung bei Diensten](#service-troubleshooting-directory) .
+Im Folgenden finden Sie eine Liste von Fehlern, die bei der Verwendung von [!DNL Experience Platform] Dienst. Informationen zur Fehlerbehebung bei einzelnen [!DNL Platform] Dienste, siehe [Verzeichnis zur Fehlerbehebung bei Diensten](#service-troubleshooting-directory) unten.
 
 ## API-Status-Codes {#api-status-codes}
 
-Die folgenden Status-Codes können bei jeder [!DNL Experience Platform]-API auftreten. Jeder Code kann verschiedene Ursachen haben; daher sind die Erklärungen in diesem Abschnitt allgemein gehalten. Weitere Informationen zu spezifischen Fehlern in einzelnen [!DNL Platform]-Diensten finden Sie unten im [Verzeichnis zur Fehlerbehebung bei Diensten](#service-troubleshooting-directory) .
+Die folgenden Status-Codes können bei allen [!DNL Experience Platform] API. Jeder Code kann verschiedene Ursachen haben; daher sind die Erklärungen in diesem Abschnitt allgemein gehalten. Weitere Informationen zu bestimmten Fehlern im Einzelfall [!DNL Platform] Dienste, siehe [Verzeichnis zur Fehlerbehebung bei Diensten](#service-troubleshooting-directory) unten.
 
 | Status-Code | Beschreibung | Mögliche Ursachen |
 |--- | --- | ---|
@@ -92,11 +92,11 @@ Die folgenden Status-Codes können bei jeder [!DNL Experience Platform]-API auft
 | 401 | Authentifizierung fehlgeschlagen | Die Anfrage hat eine Authentifizierungsprüfung nicht bestanden. Ihr Zugriffstoken fehlt oder ist ungültig. Weiterführende Informationen finden Sie im Abschnitt [OAuth-Token-Fehler](#oauth-token-is-missing). |
 | 403 | Verboten | Die Ressource wurde zwar gefunden, Sie verfügen jedoch über nicht die richtigen Berechtigungen zur Anzeige. |
 | 404 | Nicht gefunden | Die angeforderte Ressource konnte auf dem Server nicht gefunden werden. Die Ressource wurde möglicherweise gelöscht oder der angefragte Pfad wurde falsch eingegeben. |
-| 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Weitere Informationen finden Sie im Unterhandbuch zum API-Entwicklerhandbuch zu [Filtern von Daten](../catalog/api/filter-data.md) .) [!DNL Catalog Service] Warten Sie kurz, bevor Sie Ihre Anfrage erneut testen, und wenden Sie sich an Ihren Administrator, wenn das Problem fortbesteht. |
+| 500 | Interner Server-Fehler | Dies ist ein Server-seitiger Fehler. Wenn Sie viele simultane Aufrufe ausführen, erreichen Sie möglicherweise das API-Limit und müssen Ihre Ergebnisse filtern. (Siehe [!DNL Catalog Service] Unterhandbuch für API-Entwickler zu [Filterdaten](../catalog/api/filter-data.md) weitere Informationen.) Warten Sie kurz, bevor Sie Ihre Anfrage erneut testen, und wenden Sie sich an Ihren Administrator, wenn das Problem fortbesteht. |
 
 ## Fehler in der Anfragekopfzeile {#request-header-errors}
 
-Für alle API-Aufrufe in [!DNL Platform] sind spezifische Anforderungsheader erforderlich. Informationen dazu, welche Kopfzeilen für einzelne Dienste benötigt werden, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en). Die Werte für die erforderlichen Authentifizierungskopfzeilen finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en). Wenn eine dieser Kopfzeilen beim Ausführen eines API-Aufrufs fehlt oder ungültig ist, können die folgenden Fehler auftreten.
+Alle API-Aufrufe in [!DNL Platform] erfordert bestimmte Anfragekopfzeilen. Informationen dazu, welche Kopfzeilen für einzelne Dienste benötigt werden, finden Sie in der [API-Referenzdokumentation](https://www.adobe.com/go/platform-api-reference-en). Die Werte für die erforderlichen Authentifizierungskopfzeilen finden Sie im [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en). Wenn eine dieser Kopfzeilen beim Ausführen eines API-Aufrufs fehlt oder ungültig ist, können die folgenden Fehler auftreten.
 
 ### OAuth-Token fehlt {#oauth-token-is-missing}
 
@@ -163,7 +163,7 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile fü
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn die Benutzer- oder Adobe I/O-Integration (identifiziert durch das [Zugriffstoken](#how-do-i-get-an-access-token) in der `Authorization`-Kopfzeile) nicht berechtigt ist, für die IMS-Org, die in der `x-gw-ims-org-id`-Kopfzeile angegeben ist, Aufrufe an [!DNL Experience Platform]-APIs durchzuführen. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige Kennung für Ihre IMS-Organisation eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
+Diese Fehlermeldung wird angezeigt, wenn der Benutzer bzw. die Adobe I/O (durch die Variable [Zugriffstoken](#how-do-i-get-an-access-token) im `Authorization` -Kopfzeile) nicht berechtigt ist, Aufrufe an [!DNL Experience Platform] APIs für die IMS-Organisation, die im Abschnitt `x-gw-ims-org-id` -Kopfzeile. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige Kennung für Ihre IMS-Organisation eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
 
 ### Kein gültiger Inhaltstyp angegeben
 
@@ -187,16 +187,18 @@ Diese Fehlermeldung wird angezeigt, wenn eine POST-, PUT- oder PATCH-Anfrage ein
 }
 ```
 
-Diese Fehlermeldung wird angezeigt, wenn Ihr Konto (wie durch die angegebenen Authentifizierungsberechtigungen dargestellt) nicht mit einem Produktprofil für die Experience Platform verknüpft ist. Führen Sie die Schritte unter [Generieren von Zugriffsberechtigungen](./api-authentication.md#authentication-for-each-session) im Platform API-Authentifizierungs-Tutorial aus, um Ihrem Konto Platform hinzuzufügen und Ihre Authentifizierungsberechtigungen entsprechend zu aktualisieren.
+Diese Fehlermeldung wird in einem der beiden folgenden Fälle angezeigt:
+- Wenn eine falsche oder falsche Kopfzeile der IMS-Organisation (`x-gw-ims-org-id`) wird in einer API-Anfrage übergeben. Stellen Sie sicher, dass die richtige Kennung Ihrer IMS-Organisation vorhanden ist, bevor Sie es erneut versuchen.
+- Wenn Ihr Konto (wie durch die angegebenen Authentifizierungsberechtigungen dargestellt) nicht mit einem Produktprofil für die Experience Platform verknüpft ist. Führen Sie die Schritte unter [Zugriffsberechtigungen generieren](./api-authentication.md#authentication-for-each-session) im Tutorial zur Platform-API-Authentifizierung , um Ihrem Konto Platform hinzuzufügen und Ihre Authentifizierungsberechtigungen entsprechend zu aktualisieren.
 
 ## Verzeichnis zur Fehlerbehebung bei Diensten {#service-troubleshooting-directory}
 
-Im Folgenden finden Sie eine Liste von Handbüchern zur Fehlerbehebung und API-Referenzdokumentation für [!DNL Experience Platform]-APIs. Jedes Handbuch zur Fehlerbehebung enthält Antworten auf häufig gestellte Fragen und Lösungen zu Problemen, die für einzelne [!DNL Platform]-Dienste spezifisch sind. API-Referenzdokumente bieten für jeden Service eine komplette Anleitung zu allen verfügbaren Endpunkten und umfassen Beispielanfragetexte, Antworten sowie Fehler-Codes, die Sie möglicherweise erhalten.
+Im Folgenden finden Sie eine Liste mit Handbüchern zur Fehlerbehebung und API-Referenzdokumenten für [!DNL Experience Platform] APIs. Jedes Handbuch zur Fehlerbehebung enthält Antworten auf häufig gestellte Fragen und Lösungen zu spezifischen Problemen [!DNL Platform] Dienste. API-Referenzdokumente bieten für jeden Service eine komplette Anleitung zu allen verfügbaren Endpunkten und umfassen Beispielanfragetexte, Antworten sowie Fehler-Codes, die Sie möglicherweise erhalten.
 
 | Service | API-Referenz | Fehlerbehebung |
 | --- | --- | --- |
 | Zugangssteuerung | [Zugangssteuerungs-API](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Handbuch zur Fehlerbehebung bei der Zugriffskontrolle](../access-control/troubleshooting-guide.md) |
-| Datenerfassung in Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Erfassung - ](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Handbuch zur Fehlerbehebung bei der Streaming-Erfassung](../ingestion/streaming-ingestion/troubleshooting.md) |
+| Datenerfassung in Adobe Experience Platform | [[!DNL Data Ingestion API]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) | [Handbuch zur Fehlerbehebung bei der Batch-Erfassung](../ingestion/batch-ingestion/troubleshooting.md)<br><br>[Handbuch zur Fehlerbehebung bei der Streaming-Erfassung](../ingestion/streaming-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Science Workspace | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | [[!DNL Data Science Workspace] Handbuch zur Fehlerbehebung](../data-science-workspace/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Governance | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Adobe Experience Platform Identity Service | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | [[!DNL Identity Service] Handbuch zur Fehlerbehebung](../identity-service/troubleshooting-guide.md) |
