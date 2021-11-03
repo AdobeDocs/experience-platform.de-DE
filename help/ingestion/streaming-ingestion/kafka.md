@@ -5,18 +5,14 @@ title: Kafka Connector
 topic-legacy: overview
 description: Der Stream-Connector für Adobe Experience Platform basiert auf Apache Kafka Connect. Mit dieser Bibliothek können Sie JSON-Ereignisse von Kafka-Themen in Ihrem Rechenzentrum direkt an die Experience Platform in Echtzeit streamen.
 exl-id: 062963e5-c727-4c2c-97db-8a9a5a7d903c
-source-git-commit: 5a3aa74ca7319235c10902422abc0e897ad823b8
+source-git-commit: 04a43df2da34c563b3c919115e271843a279ac56
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 23%
+source-wordcount: '188'
+ht-degree: 27%
 
 ---
 
-# [!DNL Kafka] Connector für Adobe Experience Platform (nicht mehr unterstützt)
-
->[!IMPORTANT]
->
->Der Kafka-Connector wird nicht mehr unterstützt. Informationen zum Erstellen einer Streaming-Verbindung und zum Übermitteln von Daten an Adobe Experience Platform finden Sie im Tutorial zu [Erstellen einer HTTP-API-Streaming-Verbindung](../../sources/connectors/streaming/http.md)
+# [!DNL Kafka] Connector für Adobe Experience Platform
 
 Der Stream-Connector für Adobe Experience Platform basiert auf [!DNL Apache Kafka Connect]. Diese Bibliothek kann zum Streamen von JSON-Ereignissen aus verwendet werden. [!DNL Kafka] Themen in Ihrem Rechenzentrum direkt zu [!DNL Experience Platform] in Echtzeit.
 
