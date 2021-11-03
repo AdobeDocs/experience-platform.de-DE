@@ -5,7 +5,7 @@ title: (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivieren von Zielgruppensegmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 12%
@@ -148,7 +148,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
          "segmentId3"
       ]
    },
-   "exportId":[
+   "exportIds":[
       "exportId1"
    ]
 }
