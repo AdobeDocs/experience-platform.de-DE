@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Fehlerbehebung
+keywords: Experience Platform;home;popular topics;sandbox troubleshooting
 solution: Experience Platform
 title: Handbuch zur Fehlerbehebung bei Sandboxes
 topic-legacy: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Sandboxes in Adobe Experience Platform.
 exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 2a7b2040c221ff039f17f78d9ca712032d9fc02c
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 95%
+source-wordcount: '815'
+ht-degree: 44%
 
 ---
 
@@ -26,12 +26,11 @@ Sandboxes sind virtuelle Partitionen innerhalb einer einzelnen Instanz von Exper
 
 In Experience Platform gibt es zwei Arten von Sandboxes:
 
-* Produktions-Sandbox
-* Nicht-Produktions-Sandboxes
-
-Experience Platform stellt eine einzige Produktions-Sandbox bereit, die weder gelöscht noch zurückgesetzt werden kann. Es kann nur eine Produktions-Sandbox pro Platform-Instanz geben.
-
-Im Gegensatz dazu können Sandbox-Administratoren verschiedene Nicht-Produktions-Sandboxes für eine Platform-Instanz erstellen. Mit Nicht-Produktions-Sandboxes können Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen, ohne die Produktions-Sandbox zu beeinträchtigen. Darüber hinaus verfügen Nicht-Produktions-Sandboxes über eine Funktion zum Zurücksetzen, mit der sich alle vom Kunden erstellten Ressourcen aus der Sandbox entfernen lassen. Nicht-Produktions-Sandboxes können nicht in Produktions-Sandboxes umgewandelt werden. Mit einer Standardlizenz für Experience Platform erhalten Sie fünf Sandboxes (eine zur Produktion und vier zur Nicht-Produktion). Sie können Packs von zehn Nicht-Produktions-Sandboxes bis zu maximal 75 Sandboxes insgesamt hinzufügen. Für weitere Informationen wenden Sie sich an Ihren IMS-Organisationsadministrator oder Ihren Adobe-Vertriebsmitarbeiter.
+* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform ermöglicht es Ihnen, mehrere Produktions-Sandboxes zu erstellen, um die richtigen Funktionen für Daten bereitzustellen und gleichzeitig die betriebliche Isolierung beizubehalten. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Produktions-Sandboxes unterstützen eine Vielzahl von Produktionsprofilen bis hin zu Ihren lizenzierten [!DNL Profile] Verpflichtung (kumulativ über alle Ihre autorisierten Produktions-Sandboxes gemessen). You are entitled to use licensed average profile per authorized [!DNL Profile] (measured cumulatively across all of your authorized production sandboxes).
+* **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Entwicklungs-Sandboxes unterstützen eine Anzahl von Nicht-Produktions-Profilen mit bis zu 10 % Ihrer lizenzierten Profile. [!DNL Profile] Verpflichtung (kumulativ über alle autorisierten Entwicklungs-Sandboxes gemessen). Sie haben Anspruch auf:
+   * Durchschnittliche Reichweite des Nicht-Produktionsprofils von 75 Kilobytes pro autorisiertem Nicht-Produktionsprofil (kumulativ gemessen in allen autorisierten Entwicklungs-Sandboxes);
+   * One batch segmentation job per day, per development sandbox;
+   * Ein Durchschnitt von 120 [!DNL Profile] API-Aufrufe pro [!DNL Profile], pro Jahr (kumulativ über alle Ihre autorisierten Entwicklungs-Sandboxes hinweg gemessen).
 
 Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](./home.md).
 
@@ -39,13 +38,29 @@ Weiterführende Informationen dazu finden Sie in der [Sandbox-Übersicht](./home
 
 Sandboxes sind voneinander isolierte Partitionen einer einzelnen Platform-Instanz, wobei jede Sandbox eine eigene unabhängige Ressourcenbibliothek unterhält. Eine Ressource, die in einer Sandbox vorhanden ist, kann unabhängig vom Sandbox-Typ (Produktion oder Nicht-Produktion) nicht von einer anderen Sandbox aus aufgerufen werden.
 
+## Was ist die standardmäßige Produktions-Sandbox?
+
+Die standardmäßige Produktions-Sandbox ist die erste Produktions-Sandbox, die erstellt wird, wenn eine IMS-Organisation zum ersten Mal bereitgestellt wird. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. The default production sandbox can be reset but not deleted.
+
 ## Wie viele Produktions-Sandboxes können wir nutzen?
 
-Experience Platform unterstützt nur eine Produktions-Sandbox pro IMS-Organisation; sie wird standardmäßig bereitgestellt. Die Produktions-Sandbox kann umbenannt, nicht aber gelöscht oder zurückgesetzt werden. Benutzer mit Sandbox-Administratorberechtigungen können ausschließlich Nicht-Produktions-Sandboxes erstellen, zurücksetzen und löschen.
+Eine Experience Platform-Instanz unterstützt mehrere Produktions- und Entwicklungs-Sandboxes, wobei jede Sandbox eine eigene unabhängige Bibliothek mit Platform-Ressourcen (einschließlich Schemas, Datensätzen und Profilen) unterhält.
 
-## Wie viele Nicht-Produktions-Sandboxes können wir nutzen?
+Mit einer Standardlizenz für Experience Platformen erhalten Sie insgesamt fünf Sandboxes, die Sie als  oder Entwicklung klassifizieren können. Sie können weitere Packs mit 10 Sandboxes bis zu insgesamt maximal 75 Sandboxes lizenzieren.
 
-Experience Platform unterstützt derzeit bis zu 15 Nicht-Produktions-Sandboxes, die in einer IMS-Organisation aktiv sein können.
+Produktions-Sandboxes können zurückgesetzt oder gelöscht werden, mit Ausnahme der Produktions-Sandboxes, die auch von Adobe Analytics für die [Geräteübergreifende Analyse (Cross Device Analytics, CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) oder wenn das innerhalb dieser Funktion gehostete Identitätsdiagramm auch von Adobe Audience Manager für die [Benutzerbasierte Ziele (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) Funktion.
+
+You can update the title of a production sandbox. Eine Produktions-Sandbox kann jedoch nicht umbenannt werden.
+
+>[!NOTE]
+>
+>Der Sandbox-Name wird für Suchzwecke in API-Aufrufen verwendet, während der Sandbox-Titel als Anzeigename verwendet wird.
+
+## How many development sandboxes can I have?
+
+In Experience Platform können derzeit maximal 75 Sandboxes (Produktion und Entwicklung) in einer IMS-Organisation aktiv sein.
+
+Development sandboxes support both reset and delete functionalities.
 
 ## Ich habe gerade eine Sandbox eingerichtet. Wie lege ich Berechtigungen für Benutzer fest, die mit dieser Sandbox arbeiten sollen?
 
