@@ -5,16 +5,16 @@ title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet Ihnen einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 100%
 
 ---
 
 # Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 
-Adobe Experience Platform [!DNL Data Governance] bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet Ihnen einen Überblick über die Aktionen, die Sie im Arbeitsbereich **Richtlinien** der [!DNL Experience Platform]-Benutzeroberfläche durchführen können.
+Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet Ihnen einen Überblick über die Aktionen, die Sie im Arbeitsbereich **Richtlinien** der [!DNL Experience Platform]-Benutzeroberfläche durchführen können.
 
 >[!IMPORTANT]
 >
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Data Governance] bietet eine Benutzeroberfläche
 
 Dieses Handbuch setzt ein Verständnis der folgenden [!DNL Experience Platform]-Konzepte voraus:
 
-- [[!DNL Data Governance]](../home.md)
+- [Data Governance](../home.md)
 - [Datennutzungsrichtlinien](./overview.md)
 
 ## Anzeigen bestehender Richtlinien {#view-policies}

@@ -5,16 +5,16 @@ title: Handbuch zur Richtlinien-Service-API
 topic-legacy: developer guide
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 100%
+source-wordcount: '504'
+ht-degree: 93%
 
 ---
 
 # [!DNL Policy Service]-API-Handbuch
 
-Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, beispielsweise bei der Katalogisierung, bei der Ermittlung der Datenherkunft, bei Datennutzungskennzeichnungen, bei Datennutzungsrichtlinien und bei der Steuerung der Nutzung von Daten für Marketing-Aktionen.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, beispielsweise bei der Katalogisierung, bei der Ermittlung der Datenherkunft, bei Datennutzungskennzeichnungen, bei Datennutzungsrichtlinien und bei der Steuerung der Nutzung von Daten für Marketing-Aktionen.
 
 Die [!DNL Policy Service]-API bietet mehrere Endpunkte, mit denen Sie Datennutzungskennzeichnungen und -richtlinien programmgesteuert verwalten und Marketing-Aktionen für Richtlinienverletzungen auswerten können. Diese Endpunkte werden nachfolgend beschrieben. Weitere Informationen zu erforderlichen Kopfzeilen, zum Lesen von Beispiel-API-Aufrufen und mehr finden Sie in den einzelnen Endpunkthandbüchern sowie in den [Ersten Schritten](./getting-started.md).
 
@@ -26,7 +26,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 ## Marketing-Aktionen
 
-Marketing-Aktionen (auch als Marketing-Anwendungsfälle bezeichnet) im Kontext des [!DNL Data Governance]-Frameworks sind Aktionen, die ein [!DNL Experience Platform]-Datenbenutzer ausführen kann und für die Ihr Unternehmen die Datennutzung einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketing-Aktionen finden Sie im [Endpunkthandbuch zu Marketing-Aktionen](./marketing-actions.md).
+Marketing-Aktionen (auch Marketing-Anwendungsfälle genannt) im Kontext des Data Governance-Frameworks sind Aktionen, die [!DNL Experience Platform] -Datenkonsumenten können dies tun, für die Ihr Unternehmen die Datennutzung einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketing-Aktionen finden Sie im [Endpunkthandbuch zu Marketing-Aktionen](./marketing-actions.md).
 
 ## Richtlinien
 

@@ -5,10 +5,10 @@ title: Data Governance – Übersicht
 topic-legacy: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1345'
-ht-degree: 100%
+source-wordcount: '1371'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Eine der Kernfunktionen von Adobe Experience Platform ist es, Daten aus verschiedenen Unternehmenssystemen zusammenzuführen, damit Marketing-Experten Kunden besser identifizieren, verstehen und ansprechen können. Diese Daten können Nutzungsbeschränkungen unterliegen, die von Ihrem Unternehmen oder durch gesetzliche Bestimmungen festgelegt werden. Daher müssen Sie dafür sorgen, dass Ihre Datenoperationen in [!DNL Platform] mit den Datennutzungsrichtlinien konform sind.
 
-Mit Adobe Experience Platform [!DNL Data Governance] können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von relevanten Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, beispielsweise bei der Katalogisierung, bei der Ermittlung der Datenherkunft, bei Datennutzungskennzeichnungen, bei Datennutzungsrichtlinien und bei der Steuerung der Nutzung von Daten für Marketing-Aktionen.
+Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in [!DNL Experience Platform] auf verschiedenen Ebenen eine wichtige Rolle, beispielsweise bei der Katalogisierung, bei der Ermittlung der Datenherkunft, bei Datennutzungskennzeichnungen, bei Datennutzungsrichtlinien und bei der Steuerung der Nutzung von Daten für Marketing-Aktionen.
 
 ## Data Governance-Rollen
 
@@ -42,11 +42,11 @@ Marketer befinden sich am Endpunkt von Data Governance. Sie fordern Daten von de
 * Marketing-Spezialisten und Erlebnis-Designer nutzen Daten, um neue Kundenerlebnisse zu gestalten.
 
 
-## [!DNL Data Governance]-Framework
+## Data Governance-Framework
 
-Das [!DNL Data Governance]-Framework vereinfacht und optimiert die Kategorisierung von Daten und die Erstellung von Datennutzungsrichtlinien. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
+Das Data Governance-Framework vereinfacht und optimiert die Kategorisierung von Daten und Erstellung von Datennutzungsrichtlinien. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
 
-Das [!DNL Data Governance]-Framework beinhaltet drei Kernelemente: Kennzeichnungen, Richtlinien und Durchsetzung.
+Das Data Governance-Framework umfasst drei Schlüsselelemente: Beschriftungen, Richtlinien und Durchsetzung.
 
 1. **Bezeichnungen:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
 1. **Richtlinien:** Beschreiben Sie, welche Arten von Marketing-Aktionen für welche Daten zulässig sind oder auch nicht.
@@ -54,9 +54,9 @@ Das [!DNL Data Governance]-Framework beinhaltet drei Kernelemente: Kennzeichnung
 
 ## Datennutzungsbezeichnungen
 
-[!DNL Data Governance] ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
+Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
 
-Das [!DNL Data Governance]-Framework beinhaltet vordefinierte Datennutzungskennzeichnungen, mit denen Daten auf vier Arten kategorisiert werden können:
+Das Data Governance-Framework umfasst vordefinierte Datennutzungsbezeichnungen, mit denen Daten auf drei Arten kategorisiert werden können:
 
 ![Kategorien an Datennutzungsbezeichnungen](./images/overview/label-categories.png)
 
@@ -88,15 +88,15 @@ Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden 
 
 ## Nächste Schritte
 
-In diesem Dokument haben Sie eine allgemeine Einführung zu [!DNL Data Governance] und zum [!DNL Data Governance]-Framework erhalten. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
+Dieses Dokument bietet eine allgemeine Einführung in Data Governance und das Data Governance-Framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie weitere Informationen zu [!DNL Data Governance].
+Im folgenden Abschnitt finden Sie weitere Informationen zu Data Governance.
 
-### [!DNL Data Governance]-Terminologie
+### Begriffe in Data Governance
 
-In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit [!DNL Data Governance] und dem [!DNL Data Governance]-Framework aufgeführt.
+The following table outlines key terms related to Data Governance and theData Governance framework.
 
 | Begriff | Definition |
 |---|---|
@@ -116,10 +116,10 @@ In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit [!DNL Data 
 
 ## Zusätzliche Ressourcen
 
-Im folgenden Video werden die Komponenten des [!DNL Data Governance]-Frameworks erklärt.
+Das folgende Video soll Ihr Verständnis des Data Governance-Frameworks unterstützen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Im folgenden Video werden verschiedene Funktionen von [!DNL Data Governance] in Experience Platform vorgestellt.
+Das folgende Video bietet eine Einführung in verschiedene Data Governance-Funktionen in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)

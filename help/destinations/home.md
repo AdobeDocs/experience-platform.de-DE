@@ -5,9 +5,9 @@ seo-title: Destinations overview
 description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Ziele für kanalübergreifende Marketing-Kampagnen, E-Mails, zielgruppengerechte Werbung und mehr aktivieren.
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: b7392596c7ed96032dc8ad6bb8e423640f562394
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 39%
 
 ---
@@ -20,11 +20,11 @@ ht-degree: 39%
 
 ## Ziele und Quellen {#destinations-and-sources}
 
-Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieterdaten zu erfassen und sie für Ihre geschäftlichen Anforderungen zu aktivieren. Verwenden Sie [sources](../sources/home.md), um Daten in Platform und Ziele aufzunehmen und Daten aus Platform zu exportieren.
+Eine der Kernfunktionen von Platform besteht darin, Ihre Erstanbieterdaten zu erfassen und sie für Ihre geschäftlichen Anforderungen zu aktivieren. Verwendung [sources](../sources/home.md) , um Daten in Platform und Ziele zu erfassen und sie aus Platform zu exportieren.
 
 ## Ziele – Schritte {#steps}
 
-* Wählen Sie aus einem [Self-Service-Katalog](./catalog/overview.md) aller in Platform verfügbaren Ziele aus.
+* Wählen Sie aus einer [Self-Service-Katalog](./catalog/overview.md) aller in Platform verfügbaren Ziele.
 * Verwenden Sie Ziele, um Profile oder Segmente an Plattformen zur Marketing-Automatisierung, digitale Werbeplattformen und mehr zu senden.
 * Planen Sie Datenexporte an Ihre bevorzugten Ziele zu regelmäßigen Zeiten.
 
@@ -40,7 +40,7 @@ Mit den Steuerelementen im [Arbeitsbereich „Ziele“](./ui/destinations-worksp
 
 ## Zieltypen und Kategorien {#types-and-categories}
 
-Detaillierte Informationen finden Sie unter [Übersicht über Zieltypen und Kategorien](./destination-types.md).
+Detaillierte Informationen finden Sie im Abschnitt [Zieltypen und Kategorien - Übersicht](./destination-types.md).
 
 ## Ziele und Zugriffskontrollen {#access-controls}
 
@@ -48,14 +48,14 @@ Die Zielfunktion in Platform funktioniert mit Zugriffssteuerungsberechtigungen v
 
 Weiterführende Informationen zu Zugangssteuerungen finden Sie im [Benutzerhandbuch zur Zugangssteuerung](../access-control/ui/overview.md).
 
-## [!DNL Data Governance] Einschränkungen bei der Datenaktivierung für Ziele {#data-governance}
+## Einschränkungen von Data Governance beim Aktivieren von Daten für Ziele {#data-governance}
 
 Data Governance wird für Platform-Ziele durchgesetzt durch:
 
-* *Marketing-* Aktionen, die Sie im Workflow Ziele erstellen auswählen können;
-* *Datennutzungsrichtlinien,* die die Aktivierung von Daten mit bestimmten Nutzungsbezeichnungen auf Ziele mit bestimmten Marketing-Aktionen beschränken.
+* *Marketing-Aktionen* die Sie im Workflow Ziele erstellen auswählen können;
+* *Datennutzungsrichtlinien* die die Aktivierung von Daten, die bestimmte Nutzungsbezeichnungen enthalten, auf Ziele mit bestimmten Marketing-Aktionen beschränkt.
 
-Weitere Informationen zu [Marketing-Aktionen](../data-governance/policies/overview.md) und [Beheben von Verstößen gegen Datenrichtlinien](../data-governance/enforcement/auto-enforcement.md) finden Sie in der Platform-Dokumentation unter [!DNL Data Governance] .
+Weitere Informationen finden Sie in der Dokumentation zu Data Governance in Platform . [Marketing-Aktionen](../data-governance/policies/overview.md) und [Beheben von Verstößen gegen Datenrichtlinien](../data-governance/enforcement/auto-enforcement.md).
 
 Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow &quot;Ziel erstellen&quot;finden Sie auf den folgenden Seiten für die verschiedenen Zieltypen in Platform:
 

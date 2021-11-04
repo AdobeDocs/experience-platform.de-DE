@@ -6,10 +6,10 @@ topic-legacy: policies
 type: Tutorial
 description: Mit der Policy Service-API können Sie Datennutzungsrichtlinien erstellen und verwalten, die bestimmen, welche Marketing-Aktionen für Daten entsprechend deren Datennutzungskennzeichnungen durchgeführt werden können. Dieses Dokument enthält eine schrittweise Anleitung zum Erstellen einer Datennutzungsrichtlinie mithilfe der Policy Service-API.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 100%
+source-wordcount: '1217'
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ Bevor Sie mit dieser Anleitung beginnen, lesen Sie das [Entwicklerhandbuch](../a
 
 ## Marketing-Aktion definieren {#define-action}
 
-Im [!DNL Data Governance]-Framework handelt es sich bei einer Marketing-Aktion um eine Aktion, die ein [!DNL Experience Platform]-Datennutzer durchführt und bei der überprüft werden muss, ob Datennutzungsrichtlinien verletzt werden.
+Im Data Governance-Framework ist eine Marketing-Aktion eine Aktion, die [!DNL Experience Platform] -Datennutzer verwendet, für die überprüft werden muss, ob Verstöße gegen Datennutzungsrichtlinien vorliegen.
 
 Der erste Schritt bei der Erstellung einer Datennutzungsrichtlinie besteht darin, zu bestimmen, welche Marketing-Aktion durch die Richtlinie bewertet werden soll. Dies kann mit einer der folgenden Optionen erledigt werden:
 

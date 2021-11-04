@@ -5,10 +5,10 @@ title: Datennutzungsrichtlinien – Übersicht
 topic-legacy: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '1073'
-ht-degree: 100%
+source-wordcount: '1075'
+ht-degree: 98%
 
 ---
 
@@ -61,7 +61,7 @@ Informationen zum Arbeiten mit Marketing-Aktionen und Richtlinien in der [!DNL P
 
 ## Nächste Schritte
 
-In diesem Dokument wurde eine Einführung in die Datennutzungsrichtlinien im [!DNL Data Governance]-Framework gegeben. Sie können nun mit dem Lesen der Prozessdokumentation fortfahren, auf die in diesem Handbuch mehrfach verwiesen wurde, um mehr darüber zu erfahren, wie Sie in der API und der Benutzeroberfläche mit Richtlinien arbeiten.
+Dieses Dokument bietet eine Einführung in Datennutzungsrichtlinien im Data Governance-Framework. Sie können nun mit dem Lesen der Prozessdokumentation fortfahren, auf die in diesem Handbuch mehrfach verwiesen wurde, um mehr darüber zu erfahren, wie Sie in der API und der Benutzeroberfläche mit Richtlinien arbeiten.
 
 ## Anhang
 

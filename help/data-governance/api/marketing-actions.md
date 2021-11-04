@@ -5,16 +5,16 @@ title: API-Endpunkt für Marketing-Aktionen
 topic-legacy: developer guide
 description: Eine Marketing-Aktion bezeichnet im Kontext des Data Governance-Frameworks eine Aktion, die ein Datennutzer von Adobe Experience Platform ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
 exl-id: bc16b318-d89c-4fe6-bf5a-1a4255312f54
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 100%
+source-wordcount: '732'
+ht-degree: 95%
 
 ---
 
 # Endpunkt der Marketing-Aktionen
 
-Eine Marketing-Aktion bezeichnet im Kontext von Adobe Experience Platform [!DNL Data Governance] eine Aktion, die ein Datennutzer von [!DNL Experience Platform] ergreift und bei der geprüft werden muss, ob gegen Datennutzungsrichtlinien verstoßen wurde.
+Eine Marketing-Aktion im Kontext von Adobe Experience Platform Data Governance ist eine Aktion, die [!DNL Experience Platform] -Datennutzer verwendet, für die überprüft werden muss, ob Verstöße gegen Datennutzungsrichtlinien vorliegen.
 
 Sie können Marketing-Aktionen für Ihr Unternehmen mithilfe des `/marketingActions`-Endpunkts in der Richtlinien-Service-API verwalten.
 
