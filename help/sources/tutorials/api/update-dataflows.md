@@ -6,27 +6,27 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusses beschrieben, einschließlich seines Namens, seiner Beschreibung und seines Zeitplans mithilfe der Flow Service-API.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 152ad198918f9cf0bea9dabd67886f5d56763ef8
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 34%
+source-wordcount: '767'
+ht-degree: 27%
 
 ---
 
 # Aktualisieren von Datenflüssen mithilfe der Flow Service-API
 
-In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusses beschrieben, einschließlich Name, Beschreibung und Zeitplan mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden die Schritte zum Aktualisieren eines Datenflusses beschrieben, einschließlich der grundlegenden Informationen, des Zeitplans und der Zuordnungssätze mit der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellenübersicht](../../home.md) aus und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben werden.
+Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellen - Übersicht](../../home.md) und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben wurden.
 
 Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
 * [Quellen](../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mithilfe der [!DNL Flow Service]-API erfolgreich aktualisieren zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Ihren Datenfluss mit der [!DNL Flow Service] API.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -40,7 +40,7 @@ Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizieru
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in der Experience Platform, einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in der Experience Platform, einschließlich derjenigen, die [!DNL Flow Service], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an Platform-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -50,7 +50,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Nachschlagen von Datenflussdetails
 
-Der erste Schritt bei der Aktualisierung Ihres Datenflusses besteht darin, Datenflussdetails mit Ihrer Fluss-ID abzurufen. Sie können die aktuellen Details eines vorhandenen Datenflusses anzeigen, indem Sie eine GET-Anfrage an den Endpunkt `/flows` stellen.
+Der erste Schritt bei der Aktualisierung Ihres Datenflusses besteht darin, Datenflussdetails mit Ihrer Fluss-ID abzurufen. Sie können die aktuellen Details eines vorhandenen Datenflusses anzeigen, indem Sie eine GET-Anfrage an die `/flows` -Endpunkt.
 
 **API-Format**
 
@@ -60,7 +60,7 @@ GET /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige `id` -Wert für den Datenfluss, den Sie abrufen möchten. |
+| `{FLOW_ID}` | Die eindeutige `id` für den Datenfluss, den Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück, einschließlich der Version, des Zeitplans und der eindeutigen Kennung (`id`).
+Bei einer erfolgreichen Antwort werden die aktuellen Details Ihres Datenflusses zurückgegeben, einschließlich der Version, des Zeitplans und der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -191,11 +191,11 @@ Eine erfolgreiche Antwort gibt die aktuellen Details Ihres Datenflusses zurück,
 
 ## Aktualisieren des Datenflusses
 
-Um den Ausführungsplan, Namen und die Beschreibung Ihres Datenflusses zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durch und geben Sie dabei Ihre Fluss-ID, -Version und den neuen Zeitplan an, den Sie verwenden möchten.
+Führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und des neuen Zeitplans, den Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
+>Die `If-Match` -Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten. Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert.
 
 **API-Format**
 
@@ -234,15 +234,15 @@ curl -X PATCH \
         ]'
 ```
 
-| Parameter | Beschreibung |
+| Eigenschaft | Beschreibung |
 | --------- | ----------- |
 | `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren des Datenflusses erforderliche Aktion definiert wird. Operationen umfassen: `add`, `replace` und `remove`. |
-| `path` | Der Pfad des zu aktualisierenden Parameters. |
+| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API richten und dabei Ihre Fluss-ID angeben.
+Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Fluss-ID.
 
 ```json
 {
@@ -251,6 +251,62 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
+## Aktualisierung der Zuordnung
+
+Sie können den Zuordnungssatz eines vorhandenen Datenflusses aktualisieren, indem Sie eine PATCH-Anfrage an die [!DNL Flow Service] API und Bereitstellung aktualisierter Werte für Ihre `mappingId` und `mappingVersion`.
+
+**API-Format**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Anfrage**
+
+Die folgende Anfrage aktualisiert den Zuordnungssatz Ihres Datenflusses.
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "50014cc8-0000-0200-0000-6036eb720000"' \
+    -d '[
+        {
+            "op": "replace",
+            "path": "/transformations/0",
+            "value": {
+                "name": "Mapping",
+                "params": {
+                    "mappingId": "c5f22f04e09f44498e528901546a83b1",
+                    "mappingVersion": 2
+                }
+            }
+        }
+    ]'
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren des Datenflusses erforderliche Aktion definiert wird. Operationen umfassen: `add`, `replace` und `remove`. |
+| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. In diesem Beispiel `transformations` wird aktualisiert. |
+| `value.name` | Der Name der Eigenschaft, die aktualisiert werden soll. |
+| `value.params.mappingId` | Die neue Zuordnungs-ID, die zum Aktualisieren des Zuordnungssatzes des Datenflusses verwendet werden soll. |
+| `value.params.mappingVersion` | Die neue Zuordnungsversion, die mit der aktualisierten Zuordnungs-ID verknüpft ist. |
+
+**Antwort**
+
+Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Fluss-ID.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie den Zeitplan, den Namen und die Beschreibung Ihres Datenflusses mit der [!DNL Flow Service]-API aktualisiert. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie in der [Quellenübersicht](../../home.md).
+In diesem Tutorial haben Sie die grundlegenden Informationen, den Zeitplan und die Zuordnungssätze Ihres Datenflusses mit dem [!DNL Flow Service] API. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie im Abschnitt [Quellen - Übersicht](../../home.md).
