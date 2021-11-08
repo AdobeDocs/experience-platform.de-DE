@@ -4,10 +4,10 @@ title: Dashboard zur Lizenznutzung
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen anzeigen können.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 47c4113d45b0101a761fa7d703013609e8729dbb
+source-git-commit: 87b6e12b33c49bdae49be45ce10f92b309a1e98e
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 4%
+source-wordcount: '837'
+ht-degree: 5%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Die Adobe Experience Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden. In diesem Handbuch wird beschrieben, wie Sie auf das Dashboard zur Lizenzverwendung in der Benutzeroberfläche zugreifen und mit ihm arbeiten können. Außerdem erhalten Sie weitere Informationen zu den im Dashboard angezeigten Visualisierungen.
 
-Eine allgemeine Übersicht über die Platform-Benutzeroberfläche finden Sie im [Handbuch zur Experience Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Eine allgemeine Übersicht über die Platform-Benutzeroberfläche finden Sie unter [Handbuch zur Benutzeroberfläche von Experience Platform](../../landing/ui-guide.md).
 
 ## Dashboard-Daten zur Lizenznutzung
 
@@ -27,19 +27,19 @@ Das Dashboard zur Lizenznutzung zeigt eine Momentaufnahme der lizenzbezogenen Da
 
 ## Dashboard zur Lizenznutzung
 
-Um in der Platform-Benutzeroberfläche zum Dashboard für die Lizenzverwendung zu navigieren, wählen Sie in der linken Leiste **[!UICONTROL Lizenzverwendung]** aus. Dadurch wird die Registerkarte **[!UICONTROL Übersicht]** geöffnet, auf der das Dashboard angezeigt wird.
+Um in der Platform-Benutzeroberfläche zum Dashboard zur Lizenzverwendung zu navigieren, wählen Sie **[!UICONTROL Lizenzverwendung]** in der linken Leiste. Dadurch wird die **[!UICONTROL Übersicht]** Registerkarte mit dem Dashboard angezeigt.
 
 >[!NOTE]
 >
->Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen zum Anzeigen des Dashboards zur Lizenznutzung finden Sie im [Dashboard-Berechtigungshandbuch](../permissions.md).
+>Das Dashboard zur Lizenznutzung ist standardmäßig nicht aktiviert. Benutzern muss die Berechtigung &quot;Dashboard zur Lizenznutzung anzeigen&quot;gewährt werden, damit sie das Dashboard anzeigen können. Anweisungen zum Gewähren von Zugriffsberechtigungen für die Anzeige des Dashboards zur Lizenznutzung finden Sie im Abschnitt [Dashboard-Berechtigungshandbuch](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
 ### Sandbox auswählen
 
-Um eine Sandbox auszuwählen, die im Dashboard angezeigt werden soll, wählen Sie entweder [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] aus. Die ausgewählte Sandbox wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
+Um eine Sandbox auszuwählen, die im Dashboard angezeigt werden soll, wählen Sie entweder [!UICONTROL Produktion] oder [!UICONTROL Entwicklung]. Die ausgewählte Sandbox wird durch das Optionsfeld neben dem Sandbox-Namen angezeigt.
 
-Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Mit anderen Worten: Durch die Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] werden Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereitgestellt.
+Die Verbrauchsberichte für Sandboxes sind kumulativ für alle Sandboxes desselben Typs. Anders ausgedrückt: durch Auswahl von [!UICONTROL Produktion] oder [!UICONTROL Entwicklung] stellt Verbrauchsberichte für alle Produktions- bzw. Entwicklungs-Sandboxes bereit.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -58,13 +58,13 @@ Nachdem Sie eine Sandbox ausgewählt haben, können Sie über das Dropdown-Menü
 
 ![](../images/license-usage/select-date-range.png)
 
-Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** auswählen, um den angezeigten Zeitraum auszuwählen.
+Sie können auch **[!UICONTROL Benutzerdefiniertes Datum]** , um den angezeigten Zeitraum auszuwählen.
 
 ![](../images/license-usage/select-custom-date.png)
 
 ## Widgets
 
-Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen enthalten. Die sichtbaren Metriken hängen von der spezifischen Lizenzierung Ihres Unternehmens ab (weitere Informationen finden Sie im Abschnitt [Verfügbare Metriken](#available-metrics) ).
+Das Dashboard zur Lizenznutzung besteht aus Widgets, die schreibgeschützte Metriken anzeigen, die wichtige Informationen zur Lizenzverwendung in Ihrem Unternehmen enthalten. Die sichtbaren Metriken hängen von der spezifischen Lizenzierung Ihres Unternehmens ab (siehe [verfügbare Metriken](#available-metrics) Details).
 
 Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für Ihr Unternehmen mit den im Rahmen der Lizenzierung Ihres Unternehmens insgesamt verfügbaren Zahlen verglichen werden, und zeigt einen Prozentsatz der Gesamtnutzung an.
 
@@ -72,20 +72,12 @@ Jedes Widget zeigt ein Liniendiagramm an, in dem die tatsächlichen Zahlen für 
 
 ## Verfügbare Metriken
 
-Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei in nachfolgenden Versionen weitere Metriken hinzugefügt werden müssen. Die verfügbaren Metriken sind unten aufgeführt.
-
->[!NOTE]
->
->Drei der verfügbaren Metriken befinden sich derzeit in der Beta-Phase.
+Das Dashboard zur Lizenznutzung enthält Berichte zu vier Schlüsselmetriken, wobei in nachfolgenden Versionen weitere Metriken hinzugefügt werden müssen. Die verfügbaren Metriken sind:
 
 * [!UICONTROL Addressable Audience]
-* [!UICONTROL Durchschnittliche Profilreichweite]  (Beta)
-* [!UICONTROL Daten gescannt pro Segmentierungsverhältnis]  (Beta)
-* [!UICONTROL Verbrauchter Gesamtspeicher]  (Beta)
-
->[!WARNING]
->
->Bekannte Einschränkung der Metrik [!UICONTROL Gesamter verbrauchter Speicher]: Beim Löschen von Batch-Daten wird dieser Batch für einen Zeitraum von 7 Tagen in einen weichen Löschstatus versetzt, um Anwendungsfälle für die Datenwiederherstellung zu unterstützen. Nach 7 Tagen wird der Batch in den Status &quot;Hard Delete&quot;verschoben. Die Berichterstellung zum insgesamt verbrauchten Speicher spiegelt keine Änderungen am Trenddiagramm wider, bis sich der Batch im Status &quot;Hard Delete&quot;befindet. Dieses Problem wird in einer zukünftigen Version behoben.
+* [!UICONTROL Durchschnittliche Profiltiefe]
+* [!UICONTROL Daten werden pro Segmentierungsverhältnis gescannt]
+* [!UICONTROL Verbrauchter Gesamtspeicher]
 
 Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metriken hängen von der von Ihrem Unternehmen erworbenen Lizenz ab. Detaillierte Definitionen der einzelnen Metriken finden Sie in der entsprechenden Dokumentation zur Produktbeschreibung:
 
@@ -105,4 +97,4 @@ Die Verfügbarkeit dieser Metriken und die spezifische Definition dieser Metrike
 
 Nach dem Lesen dieses Dokuments können Sie das Dashboard zur Lizenznutzung suchen und eine Sandbox auswählen, die angezeigt werden soll. Weitere Informationen zu verfügbaren Metriken für Ihr Unternehmen finden Sie auf der Grundlage der von Ihrem Unternehmen erworbenen Lizenz.
 
-Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
+Weitere Informationen zu anderen in der Experience Platform-Benutzeroberfläche verfügbaren Funktionen finden Sie im Abschnitt [Handbuch zur Platform-Benutzeroberfläche](../../landing/ui-guide.md).
