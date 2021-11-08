@@ -5,9 +5,9 @@ title: (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivieren von Zielgruppensegmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 96b0a2445eb2fd64ac8291cea6879f88d9f690ec
+source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1065'
 ht-degree: 12%
 
 ---
@@ -51,7 +51,7 @@ IT-Manager können die Ad-hoc-Aktivierungs-API der Experience Platform verwenden
 
 Beachten Sie bei der Verwendung der Ad-hoc-Aktivierungs-API die folgenden Limits.
 
-* Jeder Ad-hoc-Aktivierungsauftrag kann bis zu 20 Segmente aktivieren. Der Versuch, mehr als 20 Segmente pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt.
+* Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 20 Segmente aktivieren. Der Versuch, mehr als 20 Segmente pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
 * Ad-hoc-Aktivierungsvorgänge können nicht parallel zu geplanten Aktivitäten ausgeführt werden [Segmentexportaufträge](../../segmentation/api/export-jobs.md). Bevor Sie einen Ad-hoc-Aktivierungsauftrag ausführen, stellen Sie sicher, dass der geplante Segmentexportauftrag abgeschlossen ist. Siehe [Ziel-Datenfluss-Überwachung](../../dataflows/ui/monitor-destinations.md) Informationen zur Überwachung des Status der Aktivierungsflüsse. Wenn Ihr Aktivierungsdataflow beispielsweise eine **[!UICONTROL Verarbeitung]** -Status, warten Sie, bis sie abgeschlossen ist, bevor Sie den Ad-hoc-Aktivierungsauftrag ausführen.
 * Führen Sie nicht mehr als einen gleichzeitigen Ad-hoc-Aktivierungsauftrag pro Segment aus.
 
@@ -126,7 +126,7 @@ Nach Abschluss des Segmentexportauftrags können Sie die Aktivierung Trigger hab
 
 >[!NOTE]
 >
->Sie können pro Ad-hoc-Aktivierungsauftrag maximal 20 Segmente aktivieren. Wenn Sie versuchen, weitere Segmente zu aktivieren, schlägt der Auftrag fehl.
+>Derzeit kann jeder Ad-hoc-Aktivierungsauftrag bis zu 20 Segmente aktivieren. Der Versuch, mehr als 20 Segmente pro Auftrag zu aktivieren, führt dazu, dass der Auftrag fehlschlägt. Dieses Verhalten kann sich in zukünftigen Versionen ändern.
 
 ### Anfrage
 
@@ -166,20 +166,21 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück.
 
 ```shell
 {
-   "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered successfully",
-   "statusURLs":[
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
-      "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
+   "order":[
+      {
+         "segment":"db8961e9-d52f-45bc-b3fb-76d0382a6851",
+         "order":"ef2dcbd6-36fc-49a3-afed-d7b8e8f724eb",
+         "statusURL":"https://platform.adobe.io/data/foundation/flowservice/runs/88d6da63-dc97-460e-b781-fc795a7386d9"
+      }
    ]
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `code` | Der API-Antwort-Code. Ein erfolgreicher Aufruf gibt `DEST-ADH-200` (Status-Code 200), während ein falsch formatierter zurückgibt `DEST-ADH-400` (Statuscode 400). |
-| `message` | Die von der API zurückgegebene Erfolgs- oder Fehlermeldung. |
-| `statusURLs` | Die Status-URL des Aktivierungsflusses. Sie können den Flussfortschritt mithilfe der [Flussdienst-API](../../sources/tutorials/api/monitor.md). |
+| `segment` | Die ID des aktivierten Segments. |
+| `order` | Die ID des Ziels, für das das Segment aktiviert wurde. |
+| `statusURL` | Die Status-URL des Aktivierungsflusses. Sie können den Flussfortschritt mithilfe der [Flussdienst-API](../../sources/tutorials/api/monitor.md). |
 
 
 ## Umgang mit API-Fehlern
