@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+source-git-commit: 0c7bb3d6f0a1bc4154bff0e4d79cc4c3c0b0ab71
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '658'
 ht-degree: 20%
 
 ---
@@ -236,7 +236,6 @@ ht-degree: 20%
          - [PayPal](tutorials/ui/create/payments/paypal.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
-         - [Generische REST-API](tutorials/ui/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [-HTTP-API](tutorials/ui/create/streaming/http.md)
    - Datenfluss konfigurieren {#dataflow}

@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 0209d7ef1c82915bc11f07518194e3dd68c63de9
+source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '454'
 ht-degree: 39%
 
 ---
@@ -57,7 +57,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | [!DNL Amazon S3]-Quellverbesserungen | Sie können jetzt die `s3SessionToken` Parameter zum Verbinden Ihrer [!DNL Amazon S3] -Konto für Platform mit temporären Sicherheitsberechtigungen erstellen. Mit diesem Token können Sie kurzfristigen, temporären Zugriff auf Ihre [!DNL Amazon S3] Ressourcen für Benutzer in nicht vertrauenswürdigen Umgebungen. Siehe [[!DNL Amazon S3] Dokumentation](../../sources/connectors/cloud-storage/s3.md#prerequisites) für weitere Informationen. |
-| [!DNL Generic REST API] (Betaversion) | Sie können jetzt eine [!DNL Generic REST API] Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) oder [Benutzeroberfläche](../../sources/tutorials/ui/create/protocols/generic-rest.md) , um Daten von einer generischen REST-Anwendung an Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Generic REST API] Übersicht über](../../sources/connectors/protocols/generic-rest.md). |
+| [!DNL Generic REST API] (Betaversion) | Sie können jetzt eine [!DNL Generic REST API] Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) , um Daten von einer generischen REST-Anwendung an Platform zu übertragen. Weitere Informationen finden Sie in der [[!DNL Generic REST API] Übersicht über](../../sources/connectors/protocols/generic-rest.md). |
 | [!DNL Zoho CRM] (Betaversion) | Sie können jetzt eine [!DNL Zoho CRM] Quellverbindung mithilfe der [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) oder [Benutzeroberfläche](../../sources/tutorials/ui/create/crm/zoho.md) Daten von [!DNL Zoho CRM] -Konto auf Platform. Weitere Informationen finden Sie in der [[!DNL Zoho CRM] Übersicht über](../../sources/connectors/crm/zoho.md). |
 
 Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
