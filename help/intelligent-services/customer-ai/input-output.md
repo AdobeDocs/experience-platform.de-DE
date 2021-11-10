@@ -6,9 +6,9 @@ title: Eingabe und Ausgabe in Customer AI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Customer AI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
 workflow-type: tm+mt
-source-wordcount: '2971'
+source-wordcount: '3054'
 ht-degree: 13%
 
 ---
@@ -21,15 +21,18 @@ Im folgenden Dokument werden die verschiedenen erforderlichen Ereignisse, Eingab
 
 Customer AI analysiert einen der folgenden Datensätze, um Abwanderungs- oder Konversionsneigungswerte vorherzusagen:
 
+- Adobe Analytics-Daten mit [Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Adobe Audience Manager-Daten mit [Quell-Connector für Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- Datensatz für Erlebnisereignisse (EE)
 - Datensatz für Kundenerlebnis-Ereignisse (CEE)
-- Adobe Analytics-Daten mit dem [Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Adobe Audience Manager-Daten mit dem [Quell-Connector für Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+
+Sie können mehrere Datensätze aus verschiedenen Quellen hinzufügen, wenn jeder Datensatz denselben Identitätstyp (Namespace) wie eine ECID aufweist. Weitere Informationen zum Hinzufügen mehrerer Datensätze finden Sie unter [Benutzerhandbuch für Customer AI](./user-guide/configure.md#select-data)
 
 >[!IMPORTANT]
 >
->Die Aufstockung von Daten durch Quell-Connectoren dauert bis zu vier Wochen. Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Customer AI erforderliche Mindestlänge von Daten aufweist. Überprüfen Sie im Abschnitt [historische Daten](#data-requirements) , ob Sie über genügend Daten für Ihr Prognoseziel verfügen.
+>Die Aufstockung von Daten durch Quell-Connectoren dauert bis zu vier Wochen. Wenn Sie kürzlich einen Connector eingerichtet haben, sollten Sie sicherstellen, dass der Datensatz die für Customer AI erforderliche Mindestlänge von Daten aufweist. Lesen Sie die [historische Daten](#data-requirements) -Abschnitt, um sicherzustellen, dass Sie über genügend Daten für Ihr Prognoseziel verfügen.
 
-Dieses Dokument erfordert ein grundlegendes Verständnis des CEE-Schemas. Lesen Sie vor dem Fortfahren die Dokumentation [Intelligent Services-Datenvorbereitung](../data-preparation.md) .
+Dieses Dokument erfordert ein grundlegendes Verständnis des CEE-Schemas. Lesen Sie die [Datenvorbereitung für Intelligent Services](../data-preparation.md) Dokumentation erstellen, bevor Sie fortfahren.
 
 In der folgenden Tabelle sind einige häufig verwendete Begriffe in diesem Dokument aufgeführt:
 
@@ -38,7 +41,7 @@ In der folgenden Tabelle sind einige häufig verwendete Begriffe in diesem Dokum
 | [Experience-Datenmodell (XDM)](../../xdm/home.md) | XDM ist das grundlegende Framework, mit dem Adobe Experience Cloud mit Adobe Experience Platform genau zum richtigen Zeitpunkt die richtige Botschaft an die richtige Person auf dem richtigen Kanal senden kann. Das XDM-System ist die Methode, auf der Experience Platform basiert. Es stellt Experience-Datenmodell-Schemata zur Verwendung durch Platform-Dienste bereit. |
 | XDM-Schema | Schemas dienen in Experience Platform zur konsistenten und wiederverwendbaren Beschreibung der Struktur von Daten. Durch die systemübergreifende einheitliche Definition von Daten wird es einfacher, die Bedeutung beizubehalten und somit Wert aus Daten zu ziehen. Bevor Daten in Platform erfasst werden können, muss ein Schema erstellt werden, das die Datenstruktur beschreibt und Einschränkungen für den Datentyp enthält, der in jedem Feld enthalten sein kann. Schemas bestehen aus einer zugrunde liegenden XDM-Klasse und keiner oder mehr Schemafeldgruppen. |
 | XDM-Klasse | Alle XDM-Schemas beschreiben Daten, die als Datensatz- oder Zeitreihen kategorisiert werden können. Das Datenverhalten eines Schemas wird durch die Klasse des Schemas definiert, die einem Schema beim ersten Erstellen zugewiesen wird. XDM-Klassen beschreiben die kleinste Anzahl von Eigenschaften, die ein Schema enthalten muss, um ein bestimmtes Datenverhalten darzustellen. |
-| [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldergruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldergruppen sind nur mit bestimmten Klassen kompatibel, wie durch ihr `meta:intendedToExtend`-Attribut gekennzeichnet. |
+| [Feldergruppen](../../xdm/schema/composition.md) | Eine Komponente, die ein oder mehrere Felder in einem Schema definiert. Feldergruppen erzwingen, wie ihre Felder in der Hierarchie des Schemas angezeigt werden, und weisen daher in jedem Schema, in dem sie enthalten sind, dieselbe Struktur auf. Feldergruppen sind nur mit bestimmten Klassen kompatibel, die durch ihre `meta:intendedToExtend` -Attribut. |
 | [Datentyp](../../xdm/schema/composition.md) | Eine Komponente, die auch ein oder mehrere Felder für ein Schema bereitstellen kann. Im Gegensatz zu Feldergruppen sind Datentypen jedoch nicht auf eine bestimmte Klasse beschränkt. Dadurch sind Datentypen flexibler, um allgemeine Datenstrukturen zu beschreiben, die über mehrere Schemas mit potenziell unterschiedlichen Klassen hinweg wiederverwendet werden können. Die in diesem Dokument beschriebenen Datentypen werden sowohl von den CEE- als auch von Adobe Analytics-Schemata unterstützt. |
 | Abwanderung | Eine Messung des Prozentsatzes der Konten, die ihre Abonnements stornieren oder nicht verlängern. Eine hohe Abwanderungsrate kann sich negativ auf den monatlichen wiederkehrenden Umsatz (MRR) auswirken und auch auf Unzufriedenheit mit einem Produkt oder einer Dienstleistung hinweisen. |
 | [Echtzeit-Kundenprofil](../../profile/home.md) | Das Echtzeit-Kundenprofil bietet ein zentralisiertes Kundenprofil für zielgerichtetes und personalisiertes Erlebnismanagement. Jedes Profil enthält Daten, die systemübergreifend aggregiert werden, sowie umsetzbare Zeitstempelkonten für Ereignisse, an denen die Person beteiligt ist, die in einem der mit Experience Platform verwendeten Systeme stattgefunden haben. |
@@ -49,9 +52,9 @@ In der folgenden Tabelle sind einige häufig verwendete Begriffe in diesem Dokum
 >
 > Customer AI ermittelt automatisch, welche Ereignisse für Prognosen nützlich sind, und gibt eine Warnung aus, wenn die verfügbaren Daten nicht ausreichen, um Qualitätsprognosen zu generieren.
 
-Customer AI unterstützt CEE-, Adobe Analytics- und Adobe Audience Manager-Datensätze. Für das CEE-Schema müssen Sie während der Erstellung des Schemas Feldergruppen hinzufügen. Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Datensätze verwenden, ordnet der Quell-Connector während des Verbindungsprozesses direkt die Standardereignisse (Commerce, Webseitendetails, Anwendung und Suche) zu.
+Customer AI unterstützt die Datensätze Adobe Analytics, Adobe Audience Manager, Experience Event (EE) und Consumer Experience Event (CEE). Für das CEE-Schema müssen Sie während der Erstellung des Schemas Feldergruppen hinzufügen. Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Datensätze verwenden, ordnet der Quell-Connector während des Verbindungsprozesses direkt die Standardereignisse (Commerce, Webseitendetails, Anwendung und Suche) zu. Sie können mehrere Datensätze aus verschiedenen Quellen hinzufügen, wenn jeder Datensatz denselben Identitätstyp (Namespace) wie eine ECID aufweist.
 
-Weitere Informationen zur Zuordnung von Adobe Analytics-Daten oder Audience Manager-Daten finden Sie im Handbuch [Analytics-Feldzuordnungen](../../sources/connectors/adobe-applications/analytics.md) oder [Audience Manager-Feldzuordnungen](../../sources/connectors/adobe-applications/mapping/audience-manager.md) .
+Weitere Informationen zum Zuordnen von Adobe Analytics-Daten oder Audience Manager-Daten finden Sie im [Analytics-Feldzuordnungen](../../sources/connectors/adobe-applications/analytics.md) oder [Audience Manager-Feldzuordnungen](../../sources/connectors/adobe-applications/mapping/audience-manager.md) Handbuch.
 
 ### Standardereignisse, die von Customer AI verwendet werden {#standard-events}
 
@@ -63,9 +66,9 @@ Customer AI nutzt verschiedene Ereignistypen zum Erstellen von Modellfunktionen.
 >
 >Wenn Sie Adobe Analytics- oder Adobe Audience Manager-Daten verwenden, wird das Schema automatisch mit den erforderlichen Standardereignissen erstellt, die zum Erfassen Ihrer Daten erforderlich sind. Wenn Sie Ihr eigenes benutzerdefiniertes CEE-Schema zum Erfassen von Daten erstellen, müssen Sie überlegen, welche Feldergruppen zum Erfassen Ihrer Daten erforderlich sind.
 
-Es ist nicht erforderlich, Daten für jedes der unten aufgeführten Standardereignisse zu haben. Für bestimmte Szenarien sind jedoch bestimmte Ereignisse erforderlich. Wenn eine der standardmäßigen Ereignisdaten verfügbar ist, wird empfohlen, diese in Ihr Schema einzuschließen. Wenn Sie beispielsweise eine Customer AI-Anwendung zur Vorhersage von Kaufereignissen erstellen möchten, wäre es nützlich, Daten aus den Datentypen `Commerce` und `Web page details` zu haben.
+Es ist nicht erforderlich, Daten für jedes der unten aufgeführten Standardereignisse zu haben. Für bestimmte Szenarien sind jedoch bestimmte Ereignisse erforderlich. Wenn eine der standardmäßigen Ereignisdaten verfügbar ist, wird empfohlen, diese in Ihr Schema einzuschließen. Wenn Sie beispielsweise eine Customer AI-Anwendung für die Vorhersage von Kaufereignissen erstellen möchten, wäre es nützlich, Daten aus dem `Commerce` und `Web page details` Datentypen.
 
-Um eine Feldergruppe in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie in der linken Leiste die Registerkarte **[!UICONTROL Schemas]** und danach die Registerkarte **[!UICONTROL Feldergruppen]** aus.
+Um eine Feldergruppe in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie die **[!UICONTROL Schemas]** in der linken Leiste, gefolgt von der Auswahl der **[!UICONTROL Feldergruppen]** Registerkarte.
 
 | Feldergruppe | Ereignistyp | XDM-Feldpfad |
 | --- | --- | --- |
@@ -87,13 +90,13 @@ Um eine Feldergruppe in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL Suchdetails] | Suchen | search.keywords |
 
-Darüber hinaus kann Customer AI Abonnementdaten verwenden, um bessere Abwanderungsmodelle zu erstellen. Abonnementdaten werden für jedes Profil im Datentypformat [[!UICONTROL Abonnement]](../../xdm/data-types/subscription.md) benötigt. Die meisten Felder sind optional. Für ein optimales Abwanderungsmodell wird jedoch dringend empfohlen, Daten für so viele Felder wie möglich bereitzustellen, z. B. `startDate`, `endDate` und alle anderen relevanten Details.
+Darüber hinaus kann Customer AI Abonnementdaten verwenden, um bessere Abwanderungsmodelle zu erstellen. Abonnementdaten werden für jedes Profil benötigt, das die [[!UICONTROL Abonnement]](../../xdm/data-types/subscription.md) Datentypformat. Die meisten Felder sind optional. Für ein optimales Abwanderungsmodell wird jedoch dringend empfohlen, Daten für so viele Felder wie möglich bereitzustellen, z. B.: `startDate`, `endDate`und alle anderen relevanten Details.
 
-### Hinzufügen benutzerdefinierter Feldergruppen
+### Hinzufügen benutzerdefinierter Ereignisse und Profilattribute
 
-Wenn Sie über zusätzliche Informationen verfügen, sollten Sie zusätzlich zu den von Customer AI verwendeten [Standardereignisfeldern](#standard-events) weitere Informationen hinzufügen. Während der [Instanzkonfiguration](./user-guide/configure.md#custom-events) wird eine benutzerdefinierte Ereignisoption bereitgestellt.
+Wenn Sie über Informationen verfügen, die Sie zusätzlich zum [Standardereignisfelder](#standard-events) wird von Customer AI verwendet und es wird eine benutzerdefinierte Ereignis- und benutzerdefinierte Profilattributoption während Ihrer [Instanzenkonfiguration](./user-guide/configure.md#custom-events).
 
-Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, z. B. eine Hotel- oder Restaurantreservierung, die in Ihrem Schema definiert ist, können Sie sie zu Ihrer Instanz hinzufügen. Diese zusätzlichen benutzerspezifischen Ereignisse werden von Customer AI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
+Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse oder Profilattribute wie eine &quot;Hotelreservierung&quot;oder &quot;Mitarbeiter von X Unternehmen&quot;enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen. Diese zusätzlichen benutzerspezifischen Ereignisse und Profilattribute werden von Customer AI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
 
 ### Historische Daten {#data-requirements}
 
@@ -123,7 +126,7 @@ Zusätzlich zu den erforderlichen Mindestdaten funktioniert Customer AI auch am 
 
 ### Beispielszenarien
 
-In diesem Abschnitt werden verschiedene Szenarien für Customer AI-Instanzen sowie die erforderlichen und empfohlenen Ereignistypen beschrieben. Weitere Informationen zur Feldergruppe und zum Feldpfad finden Sie in der obigen Tabelle [Standardereignisse](#standard-events) .
+In diesem Abschnitt werden verschiedene Szenarien für Customer AI-Instanzen sowie die erforderlichen und empfohlenen Ereignistypen beschrieben. Siehe Abschnitt [Standardereignistabelle](#standard-events) weiter oben finden Sie weitere Informationen zur Feldergruppe und zum Feldpfad.
 
 >[!NOTE]
 >
@@ -131,7 +134,7 @@ In diesem Abschnitt werden verschiedene Szenarien für Customer AI-Instanzen sow
 
 ### Szenario 1: Kaufkonversion auf einer E-Commerce-Einzelhandelswebsite
 
-**Prognoseziel:** Prognostizieren Sie die Konversionsneigung, damit die berechtigten Profile einen bestimmten Kleidungsartikel auf einer Website kaufen können.
+**Prognoseziel:** Prognostizieren Sie die Konversionsneigung für die Profile, die zum Kauf eines bestimmten Kleidungsartikels auf einer Website berechtigt sind.
 
 **Erforderliche standardmäßige Ereignistypen:**
 
@@ -145,11 +148,11 @@ Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit dies
 
 **Zusätzliche empfohlene standardmäßige Ereignistypen:**
 
-Die verbleibenden [Ereignistypen](#standard-events) können je nach Komplexität Ihres Ziels und der in Frage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
+Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der Komplexität Ihres Ziels und der infrage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
 
 ### Szenario 2: Abonnementkonversion auf einer Medien-Streaming-Dienst-Website
 
-**Prognoseziel:** Prognostizieren Sie die Neigung zur Abonnementkonvertierung, damit sich die förderfähigen Profile auf eine bestimmte Abonnementebene wie einen Standard- oder Premium-Plan verpflichten.
+**Prognoseziel:** Prognostizieren Sie die Neigung zur Abonnementkonvertierung für die förderfähigen Profile, sich auf eine bestimmte Abonnementebene zu verpflichten, z. B. einen Standard- oder Premium-Plan.
 
 **Erforderliche standardmäßige Ereignistypen:**
 
@@ -161,13 +164,13 @@ Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit dies
 - webVisit
 - Suchen
 
-In diesem Beispiel werden `order`, `checkouts` und `purchases` verwendet, um anzugeben, dass ein Abonnement erworben wurde und dessen Typ ist.
+In diesem Beispiel `order`, `checkouts`und `purchases` werden verwendet, um anzugeben, dass ein Abonnement erworben wurde und dessen Typ ist.
 
-Außerdem wird für ein präzises Modell empfohlen, einige der verfügbaren Eigenschaften im [Abonnementdatentyp](../../xdm/data-types/subscription.md) zu verwenden.
+Außerdem wird für ein akkurates Modell empfohlen, einige der verfügbaren Eigenschaften in der [Abonnementdatentyp](../../xdm/data-types/subscription.md).
 
 **Zusätzliche empfohlene standardmäßige Ereignistypen:**
 
-Die verbleibenden [Ereignistypen](#standard-events) können je nach Komplexität Ihres Ziels und der in Frage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
+Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der Komplexität Ihres Ziels und der infrage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
 
 ### Szenario 3: Abwanderung auf einer E-Commerce-Einzelhandelswebsite
 
@@ -185,11 +188,11 @@ Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit dies
 
 **Zusätzliche empfohlene standardmäßige Ereignistypen:**
 
-Die verbleibenden [Ereignistypen](#standard-events) können je nach Komplexität Ihres Ziels und der in Frage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
+Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der Komplexität Ihres Ziels und der infrage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
 
 ### Szenario 4: Upsell von Konversionen auf einer E-Commerce-Einzelhandelswebsite
 
-**Prognoseziel:** Vorhersagen der Kaufneigung der Population, die ein bestimmtes Produkt gekauft hat, zum Kauf eines neuen verwandten Produkts.
+**Prognoseziel:** Prognostizieren Sie die Kaufneigung der Population, die ein bestimmtes Produkt gekauft hat, um ein neues verwandtes Produkt zu kaufen.
 
 **Erforderliche standardmäßige Ereignistypen:**
 
@@ -203,11 +206,11 @@ Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit dies
 
 **Zusätzliche empfohlene standardmäßige Ereignistypen:**
 
-Die verbleibenden [Ereignistypen](#standard-events) können je nach Komplexität Ihres Ziels und der in Frage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
+Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der Komplexität Ihres Ziels und der infrage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
 
 ### Szenario 5: Abmeldung (Abwanderung) über einen Online-Nachrichtenversand
 
-**Prognoseziel:** Prognostizieren Sie die Tendenz der förderfähigen Population, sich im nächsten Monat von einem Dienst abzumelden.
+**Prognoseziel:** Prognostizieren Sie die Neigung der förderfähigen Bevölkerung, sich im nächsten Monat von einem Dienst abzumelden.
 
 **Erforderliche standardmäßige Ereignistypen:**
 
@@ -216,15 +219,15 @@ Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit dies
 - webVisit
 - Suchen
 
-Außerdem wird für ein präzises Modell empfohlen, einige der verfügbaren Eigenschaften im [Abonnementdatentyp](../../xdm/data-types/subscription.md) zu verwenden.
+Außerdem wird für ein akkurates Modell empfohlen, einige der verfügbaren Eigenschaften in der [Abonnementdatentyp](../../xdm/data-types/subscription.md).
 
 **Zusätzliche empfohlene standardmäßige Ereignistypen:**
 
-Die verbleibenden [Ereignistypen](#standard-events) können je nach Komplexität Ihres Ziels und der in Frage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
+Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der Komplexität Ihres Ziels und der infrage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
 
 ### Szenario 6: Mobile App starten
 
-**Prognoseziel:** Prognostizieren Sie die Neigung der berechtigten Profile, eine gebührenpflichtige Mobile App in den nächsten X Tagen zu starten. Dies ähnelt der Vorhersage des KPI-Indikators (Key Performance Indicator) für &quot;Monatlich aktive Benutzer&quot;.
+**Prognoseziel:** Prognostizieren Sie die Neigung der in Frage kommenden Profile, in den nächsten X Tagen eine gebührenpflichtige Mobile App zu starten. Dies ähnelt der Vorhersage des KPI-Indikators (Key Performance Indicator) für &quot;Monatlich aktive Benutzer&quot;.
 
 **Erforderliche standardmäßige Ereignistypen:**
 
@@ -242,25 +245,25 @@ Die folgenden Ereignistypen sind für eine optimale Customer AI-Ausgabe mit dies
 - applicationLaunches
 - applicationUpgrades
 
-In diesem Beispiel werden `order`, `checkouts` und `purchases` verwendet, wenn eine Mobile App gekauft werden muss.
+In diesem Beispiel `order`, `checkouts`und `purchases` werden verwendet, wenn eine Mobile App gekauft werden muss.
 
 **Zusätzliche empfohlene standardmäßige Ereignistypen:**
 
-Die verbleibenden [Ereignistypen](#standard-events) können je nach Komplexität Ihres Ziels und der in Frage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
+Beliebige der übrigen [Ereignistypen](#standard-events) kann abhängig von der Komplexität Ihres Ziels und der infrage kommenden Population beim Konfigurieren Ihrer Customer AI-Instanz erforderlich sein. Wenn die Daten für einen bestimmten Datentyp verfügbar sind, wird empfohlen, diese Daten in Ihr Schema aufzunehmen.
 
 ### Szenario 7: Realisierte Eigenschaften (Adobe Audience Manager)
 
-**Prognoseziel:** Prognostizieren Sie die Tendenz, einige Eigenschaften zu realisieren.
+**Prognoseziel:** Prognostizieren Sie die Neigung, einige Eigenschaften zu realisieren.
 
 **Erforderliche standardmäßige Ereignistypen:**
 
-Um Eigenschaften aus Adobe Audience Manager verwenden zu können, müssen Sie eine Quellverbindung mit dem Quell-Connector [Audience Manager ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) erstellen. Der Quell-Connector erstellt das Schema automatisch mit den entsprechenden Feldergruppen. Sie müssen keine zusätzlichen Ereignistypen manuell hinzufügen, damit das Schema mit Customer AI verwendet werden kann.
+Um Eigenschaften aus Adobe Audience Manager verwenden zu können, müssen Sie eine Quellverbindung mit dem [Quell-Connector für Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). Der Quell-Connector erstellt das Schema automatisch mit den entsprechenden Feldergruppen. Sie müssen keine zusätzlichen Ereignistypen manuell hinzufügen, damit das Schema mit Customer AI verwendet werden kann.
 
-Wenn Sie eine neue Kunden-KI-Instanz konfigurieren, können `audienceName` und `audienceID` verwendet werden, um eine bestimmte Eigenschaft für die Auswertung beim Definieren Ihres Ziels auszuwählen.
+Wenn Sie eine neue Kunden-KI-Instanz konfigurieren, `audienceName` und `audienceID` kann verwendet werden, um eine bestimmte Eigenschaft für die Auswertung beim Definieren Ihres Ziels auszuwählen.
 
 ## Ausgabedaten von Customer AI
 
-Customer AI generiert mehrere Attribute für einzelne Profile, die als geeignet gelten. Es gibt zwei Möglichkeiten, die Punktzahl (Ausgabe) basierend auf dem, was Sie bereitgestellt haben, zu nutzen. Wenn Sie über einen Datensatz mit aktiviertem Echtzeit-Kundenprofil verfügen, können Sie Einblicke aus dem Echtzeit-Kundenprofil im [Segment Builder](../../segmentation/ui/segment-builder.md) nutzen. Wenn Sie keinen Datensatz mit aktiviertem Profil haben, können Sie [den Datensatz mit der Kunden-KI-Ausgabe](./user-guide/download-scores.md) herunterladen, der im Data Lake verfügbar ist.
+Customer AI generiert mehrere Attribute für einzelne Profile, die als geeignet gelten. Es gibt zwei Möglichkeiten, die Punktzahl (Ausgabe) basierend auf dem, was Sie bereitgestellt haben, zu nutzen. Wenn Sie über einen Datensatz mit aktiviertem Echtzeit-Kundenprofil verfügen, können Sie Einblicke aus dem Echtzeit-Kundenprofil im [Segment Builder](../../segmentation/ui/segment-builder.md). Wenn Sie keinen Datensatz mit aktiviertem Profil haben, können Sie [Customer AI-Ausgabe herunterladen](./user-guide/download-scores.md) Datensatz, der im Data Lake verfügbar ist.
 
 >[!NOTE]
 >
@@ -279,4 +282,4 @@ Die folgende Tabelle beschreibt die verschiedenen Attribute, die in der Ausgabe 
 
 ## Nächste Schritte {#next-steps}
 
-Nachdem Sie Ihre Daten vorbereitet und alle Ihre Anmeldedaten und Schemas eingerichtet haben, folgen Sie den Anweisungen im Handbuch [Konfigurieren einer Customer AI-Instanz](./user-guide/configure.md). Dieses Handbuch führt Sie durch die Erstellung einer Instanz für Customer AI.
+Nachdem Sie Ihre Daten vorbereitet und alle Ihre Anmeldedaten und Schemata eingerichtet haben, führen Sie die folgenden Schritte aus: [Konfigurieren einer Customer AI-Instanz](./user-guide/configure.md) Handbuch. Dieses Handbuch führt Sie durch die Erstellung einer Instanz für Customer AI.
