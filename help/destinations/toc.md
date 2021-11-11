@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 8cac961e1566c48bacc0ec2ab3414132f81232e2
+source-git-commit: 3e2382cf4b02ea4fd40e3638b52b4719938a2ea2
 workflow-type: tm+mt
-source-wordcount: '669'
+source-wordcount: '668'
 ht-degree: 42%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 42%
    * [ (Alpha) HTTP-Verbindung](./catalog/http-destination.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
-      * [(Beta) Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
+      * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
       * [Segmentfreigabe in Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
@@ -148,7 +148,7 @@ ht-degree: 42%
    * [Übersicht](./destination-sdk/overview.md)
    * [Integrationsvoraussetzungen](./destination-sdk/integration-prerequisites.md)
    * [Erste Schritte](./destination-sdk/getting-started.md)
-   * Ziel-SDK-Funktionalität {#functionality}
+   * Destination SDK-Funktionen {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
       * [Zielkonfiguration](./destination-sdk/destination-configuration.md)
       * [Server- und Vorlagenspezifikationen](./destination-sdk/server-and-template-configuration.md)
@@ -161,7 +161,7 @@ ht-degree: 42%
          * [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./destination-sdk/create-template.md)
          * [Testen der Zielkonfiguration](./destination-sdk/test-destination.md)
    * API-Vorgänge {#api}
-      * [API-Referenz für Ziel-SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Destination SDK-API-Referenz (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [API-Vorgänge für Ziel-Endpunkte](./destination-sdk/destination-configuration-api.md)
       * [API-Vorgänge für Ziel-Server-Endpunkte](./destination-sdk/destination-server-api.md)
       * [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./destination-sdk/audience-metadata-api.md)
@@ -173,7 +173,7 @@ ht-degree: 42%
          * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
          * [API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
    * Handbücher {#guides}
-      * [Verwenden des Ziel-SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
+      * [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
    * Ziel dokumentieren {#document-destination}
       * [Ziel in Adobe Experience Platform dokumentieren](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Verwenden Sie die GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
