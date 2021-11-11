@@ -4,10 +4,10 @@ solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: d83e51a5d45c92c9999c0f9ef469f83ffcf35d6e
+source-git-commit: 63d437db19c924bec05e7df99559b6bf2193ae5c
 workflow-type: tm+mt
-source-wordcount: '184'
-ht-degree: 95%
+source-wordcount: '192'
+ht-degree: 86%
 
 ---
 
@@ -21,7 +21,8 @@ ht-degree: 95%
       * [Erste Schritte mit Real-time Customer Data Platform](get-started.md)
       * [Metriken – Übersicht](home-page-dashboards.md)
    * Real-time Customer Data Platform B2B Edition {#rtcdpb2b-intro}
-      * [Erste Schritte mit Real-time Customer Data Platform B2B Edition (Betaversion)](./b2b-use-case.md)
+      * [Anwendungsbeispiel für die Echtzeit-Kundendatenplattform B2B Edition (Beta)](./b2b-use-case.md)
+      * [End-to-End-Tutorial (Beta) zur Echtzeit-CDP B2B Edition](./b2b-tutorial.md)
       * [Limits bei der Echtzeit-Kundendatenplattform B2B Edition](b2b-guardrails.md)
 * Kontoprofile (Beta) {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
