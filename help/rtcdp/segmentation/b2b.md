@@ -1,21 +1,15 @@
 ---
-title: Übersicht über die Anwendungsfälle der Segmentierung für die Echtzeit-Kundendatenplattform B2B Edition (Beta)
+title: Übersicht über die Anwendungsfälle der Segmentierung für die Echtzeit-Kundendatenplattform B2B Edition
 description: Ein Überblick über die verschiedenen Anwendungsfälle der Echtzeit-CDP B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 2%
+source-wordcount: '1096'
+ht-degree: 1%
 
 ---
 
-# Übersicht über die Anwendungsfälle der Segmentierung für Real-time Customer Data Platform B2B Edition (Beta)
-
-<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition befindet sich derzeit im Beta-Stadium. Die Dokumentation und Funktionalität können sich ändern.
+# Überblick über Anwendungsfälle zur Segmentierung für Real-time Customer Data Platform B2B Edition
 
 Dieses Dokument enthält Beispiele zur Segmentierung, die für die Echtzeit-Kundendatenplattform B2B Edition verfügbar ist, und dazu, wie die verschiedenen Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können.
 

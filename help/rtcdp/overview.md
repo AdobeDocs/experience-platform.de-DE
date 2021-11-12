@@ -5,9 +5,9 @@ seo-title: Real-time Customer Data Platform Overview
 description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: b77380b661f59363daeeefb186a94e3d62b47e27
+source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 70%
 
 ---
@@ -27,7 +27,7 @@ Mit der Echtzeit-Kundendatenplattform können Sie:
 * Erstellen Sie mit KI und maschinellem Lernen auf Basis von Adobe Sensei – entwickelt für Marketer – praktische Einblicke und skalieren Sie Zielgruppen.
 * Schaffen Sie in Echtzeit personalisierte Erlebnisse über alle Kanäle und Ziele hinweg.
 
-## Real-time Customer Data Platform B2B Edition (Beta)
+## Real-time Customer Data Platform B2B Edition
 
 Es gibt auch eine andere Ausgabe der Echtzeit-Kundendatenplattform, die den organisatorischen Anforderungen von Unternehmen gerecht wird. Die Echtzeit-Kundendatenplattform B2B Edition wurde speziell entwickelt, um die Funktionalität der Echtzeit-Kundendatenplattform für Marketing-Experten zu erweitern. Es bietet verschiedene Funktionen, die innerhalb des Adobe Experience Platform-Ökosystems aktiviert wurden, um besser auf die Arbeit in einem Business-to-Business-Dienstleistungsmodell zugeschnitten zu sein.
 
