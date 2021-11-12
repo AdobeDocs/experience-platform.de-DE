@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 4a74faad811d9b13f93799686df44f04a8d1b784
+source-git-commit: eea5cfe6111d25da4a7978d3924861250059cc7e
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '396'
 ht-degree: 29%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 29%
    * [XDM-Feldtypbegrenzungen](schema/field-constraints.md)
    * [Namespacing in XDM](./schema/namespaces.md)
    * [Wörterbuch der XDM-Felder](schema/field-dictionary.md)
-   * Datenmodelle für die Branche {#industries}
+   * Datenmodelle für Unternehmen {#industries}
       * [Übersicht](./schema/industries/overview.md)
       * [Einzelhandel](./schema/industries/retail.md)
       * [Finanzdienstleistungen](./schema/industries/financial.md)
@@ -31,7 +31,7 @@ ht-degree: 29%
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Segmentdefinition](./classes/segment-definition.md)
-   * B2B-Klassen (Beta) {#b2b}
+   * B2B-Klassen {#b2b}
       * [XDM-Geschäftskonto](./classes/b2b/business-account.md)
       * [Personenbeziehung zwischen XDM-Geschäftskonto](./classes/b2b/business-account-person-relation.md)
       * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -113,7 +113,7 @@ ht-degree: 29%
    * [Webinformationen](./data-types/web-information.md)
    * [Webinteraktion](./data-types/web-interaction.md)
    * [Webseitendetails](./data-types/webpage-details.md)
-*  SchemasUI  {#ui}
+* [!UICONTROL Schemas] Benutzeroberfläche {#ui}
    * [Übersicht](./ui/overview.md)
    * [XDM-Ressourcen](./ui/explore.md)
    * Erstellen und Bearbeiten von Ressourcen {#resources}
@@ -121,7 +121,7 @@ ht-degree: 29%
       * [Klassen](./ui/resources/classes.md)
       * [Feldergruppen](./ui/resources/field-groups.md)
       * [Datentypen](./ui/resources/data-types.md)
-   * Felder {#fields} definieren
+   * Felder definieren {#fields}
       * [Übersicht](./ui/fields/overview.md)
       * [Erforderliche Felder](./ui/fields/required.md)
       * [Objektfelder](./ui/fields/object.md)
@@ -153,7 +153,7 @@ ht-degree: 29%
    * [Erstellen eines Schemas in der API](tutorials/create-schema-api.md)
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
-   * [Definieren einer Schemabeziehung in der Echtzeit-Kundendatenplattform B2B Edition (Beta)](tutorials/relationship-b2b.md)
+   * [Definieren einer Schemabeziehung in der Echtzeit-Kundendatenplattform B2B Edition](tutorials/relationship-b2b.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)

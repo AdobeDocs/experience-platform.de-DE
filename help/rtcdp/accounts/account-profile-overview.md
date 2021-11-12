@@ -1,20 +1,16 @@
 ---
 keywords: RTCDP B2B;B2B;Account;Account-Profil;Account-Profile RTCDP;Real-Time Customer Data Platform;
-title: Account-Profile in Real-time Customer Data Platform B2B Edition (Betaversion)
+title: Account-Profile in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie mit Real-Time Customer Data Platform B2B Edition Account-Informationen aus mehreren Quellen mithilfe von Account-Profilen vereinheitlichen können.
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '254'
 ht-degree: 100%
 
 ---
 
-# Übersicht über Account-Profile (Betaversion)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
+# Übersicht über Account-Profile
 
 >[!NOTE]
 >

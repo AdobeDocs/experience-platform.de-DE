@@ -2,20 +2,16 @@
 title: XDM Business Person Details Schema Field Group
 description: Dieses Dokument bietet einen Überblick über die Schemakontrollgruppe "XDM Business Person Details".
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: 57370e4ed0807bcebf30c73af629671b5390d90d
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '562'
-ht-degree: 11%
+source-wordcount: '533'
+ht-degree: 10%
 
 ---
 
-# [!UICONTROL XDM Business Person ] DetailsSchema-Feldergruppe (Beta)
+# [!UICONTROL XDM-Geschäftspersonendetails] Schemafeldgruppe
 
->[!IMPORTANT]
->
->Diese Feldergruppe ist als Teil der Real-time Customer Data Platform B2B Edition verfügbar, die sich derzeit in der Beta-Phase befindet. Dokumentation und Funktionalität können sich ändern.
-
-[!UICONTROL XDM Business Person ] Details ist eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die Informationen über eine Person im Kontext eines B2B-Unternehmens (Business-to-Business) erfasst.
+[!UICONTROL XDM-Geschäftspersonendetails] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) die Informationen über eine Person im Kontext eines B2B-Unternehmens (Business-to-Business) erfasst.
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -40,7 +36,7 @@ ht-degree: 11%
 | `b2b.personType` | Zeichenfolge | Die Art der B2B-Person. |
 | `extSourceSystemAudit` | [Audit-Attribute des externen Quellsystems](../../data-types/external-source-system-audit-attributes.md) | Wenn die geschäftliche Personenbeziehung aus einem externen Quellsystem stammt, erfasst dieses Objekt Prüfattribute für dieses System. |
 | `extendedWorkDetails` | Objekt | Erfasst zusätzliche arbeitsbezogene Details über die Person. |
-| `extendedWorkDetails.assistantDetails` | Objekt | Erfasst die folgenden Attribute in Bezug auf die Assistenzkraft der Person: <ul><li>`name`: ([Name der Person](../../data-types/person-name.md)) Der vollständige Name der Assistenzkraft.</li><li>`phone`: ([Telefonnummer](../../data-types/phone-number.md)) Die Telefonnummer der Assistenzkraft.</li></ul> |
+| `extendedWorkDetails.assistantDetails` | Objekt | Erfasst die folgenden Attribute in Bezug auf die Assistenzkraft der Person: <ul><li>`name`: ([Personenname](../../data-types/person-name.md)) Der vollständige Name der Assistenzkraft.</li><li>`phone`: ([Telefonnummer](../../data-types/phone-number.md)) Die Telefonnummer der Assistenzkraft.</li></ul> |
 | `extendedWorkDetails.departments` | Zeichenfolgen-Array | Eine Liste der Abteilungsnamen, in denen die Person arbeitet. |
 | `extendedWorkDetails.jobTitle` | Zeichenfolge | Die Berufsbezeichnung der Person. |
 | `extendedWorkDetails.photoUrl` | Zeichenfolge | Eine URL zu einem Foto der Person. |
@@ -56,7 +52,7 @@ ht-degree: 11%
 | `workAddress` | [Postadresse](../../data-types/postal-address.md) | Die Arbeitsadresse der Person. |
 | `workEmail` | [E-Mail-Adresse](../../data-types/email-address.md) | Die geschäftliche E-Mail-Adresse der Person. |
 | `workPhone` | [Telefonnummer](../../data-types/phone-number.md) | Die Telefonnummer der Person am Arbeitsplatz. |
-| `identityMap` | Zuordnung | Ein map -Feld, das eine Reihe von Namespaced-Identitäten für die Person enthält. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld für [Echtzeit-Kundenprofil](../../../profile/home.md) richtig zu nutzen, sollten Sie nicht versuchen, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Weitere Informationen zu ihrem Anwendungsfall finden Sie im Abschnitt zu Identitätskarten in den  [Grundlagen der Schemakomposition ](../../schema/composition.md#identityMap) . |
+| `identityMap` | Zuordnung | Ein map -Feld, das eine Reihe von Namespaced-Identitäten für die Person enthält. Dieses Feld wird vom System automatisch aktualisiert, da Identitätsdaten erfasst werden. Um dieses Feld ordnungsgemäß zu verwenden, verwenden Sie [Echtzeit-Kundenprofil](../../../profile/home.md)versuchen Sie nicht, den Inhalt des Felds in Ihren Datenvorgängen manuell zu aktualisieren.<br /><br />Siehe Abschnitt zu Identitätskarten im Abschnitt [Grundlagen der Schemakomposition](../../schema/composition.md#identityMap) für weitere Informationen zu ihrem Anwendungsfall. |
 | `organizations` | Zeichenfolgen-Array | Eine Liste der Organisationsnamen, in denen die Person arbeitet. |
 
 {style=&quot;table-layout:auto&quot;}

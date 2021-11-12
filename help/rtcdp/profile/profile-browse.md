@@ -3,10 +3,10 @@ keywords: Anzeigen von Profilen rtcdp;rtcdp-Profilansicht;rtcdp-Profile
 title: Profile in Real-time Customer Data Platform durchsuchen
 description: Mit Real-time Customer Data Platform können Sie Echtzeit-Kundenprofildaten über die Adobe Experience Platform-Benutzeroberfläche durchsuchen.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: c15f59de49c60f55b432a39f30fb5f1865fd4671
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 24%
+source-wordcount: '533'
+ht-degree: 21%
 
 ---
 
@@ -19,15 +19,11 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie diese schreibge
 
 Real-time Customer Data Platform basiert auf Adobe Experience Platform und kann so die Funktionen zur Profilanzeige in der Experience Platform-Benutzeroberfläche nutzen. Eine ausführliche Anleitung zum Anzeigen von Kundenprofilen in der Benutzeroberfläche von Platform finden Sie im Abschnitt [Benutzerhandbuch zum Echtzeit-Kundenprofil](../../profile/ui/user-guide.md).
 
-## Profilverbesserungen für die Echtzeit-Kundendatenplattform, B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
+## Profilverbesserungen für die Echtzeit-Kundendatenplattform, B2B Edition
 
 Zusätzlich zu den von Adobe Experience Platform unterstützten Funktionen zum Durchsuchen von Profilen können Benutzer der Echtzeit-Kundendatenplattform und B2B Edition auf B2B-Attribute und -Ereignisse im Kundenprofil im [!UICONTROL Attribute] und [!UICONTROL Veranstaltungen] Registerkarten. B2B-Daten können auch für die Segmentierung verwendet werden, wobei diese Segmente unter dem [!UICONTROL Segmentmitgliedschaft] neben Nicht-B2B-Segmenten.
 
-Die Echtzeit-Kundendatenplattform B2B Edition ermöglicht Ihnen auch das Durchsuchen von [!UICONTROL Konten], [!UICONTROL Chancen]und [!UICONTROL Quelldatensätze] aus allen Quellen Ihres Unternehmens, die mit einem einzelnen Kunden verknüpft sind.
+Die Echtzeit-Kundendatenplattform B2B Edition ermöglicht Ihnen auch, [!UICONTROL Konten], [!UICONTROL Chancen]und [!UICONTROL Quelldatensätze] aus allen Quellen Ihres Unternehmens, die mit einem einzelnen Kunden verknüpft sind.
 
 Um diese Verbesserungen zu untersuchen, führen Sie zunächst die Schritte aus, die im Abschnitt [Benutzerhandbuch zum Echtzeit-Kundenprofil](../../profile/ui/user-guide.md) um ein Profil nach Zusammenführungsrichtlinie oder Identitäts-Namespace zu durchsuchen.
 

@@ -2,20 +2,16 @@
 title: XDM Business Opportunity Person Relation Class
 description: Dieses Dokument bietet einen Überblick über die XDM Business Opportunity Person Relation-Klasse im Experience-Datenmodell (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 7%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
-# [!UICONTROL XDM Business Opportunity Person ] Relationclass (Beta)
+# [!UICONTROL XDM Business Opportunity-Personenbeziehung] class
 
->[!IMPORTANT]
->
->Diese Klasse ist als Teil der Real-time Customer Data Platform B2B Edition verfügbar, die sich derzeit in der Beta-Phase befindet. Dokumentation und Funktionalität können sich ändern.
-
-[!UICONTROL XDM Business Opportunity Person ] Relationation ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die die erforderlichen Mindesteigenschaften einer Person erfasst, die mit einer Geschäftschance verknüpft ist.
+[!UICONTROL XDM Business Opportunity-Personenbeziehung] ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die die erforderlichen Mindesteigenschaften einer Person erfasst, die mit einer Geschäftschance verknüpft ist.
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)
 
@@ -34,4 +30,4 @@ ht-degree: 7%
 
 {style=&quot;table-layout:auto&quot;}
 
-Informationen dazu, wie diese Klasse konzeptionell mit anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können, finden Sie im Handbuch zu [Schemabeziehungen in der Echtzeit-Kundendatenplattform B2B Edition](../../tutorials/relationship-b2b.md).
+Siehe Handbuch unter [Schemabeziehungen in der Echtzeit-Kundendatenplattform B2B Edition](../../tutorials/relationship-b2b.md) um zu erfahren, wie diese Klasse konzeptionell mit den anderen B2B-Klassen in Beziehung steht und wie Sie diese Beziehungen in der Adobe Experience Platform-Benutzeroberfläche herstellen können.

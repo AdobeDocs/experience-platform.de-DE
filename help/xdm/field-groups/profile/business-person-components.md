@@ -2,24 +2,20 @@
 title: XDM Business Person Components Schema Field Group
 description: Dieses Dokument bietet einen Überblick über die Schemakomponentenfeldgruppe "XDM Business Person Components".
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: b5cdd72238f7b4519de1c789f4294b9698415327
+source-git-commit: edf7afc5db219430232a3226dc691570b50a32bd
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 5%
+source-wordcount: '412'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Feldergruppe &quot;XDM Business Person ] Components&quot;(Beta)
+# [!UICONTROL XDM-Geschäftspersonenkomponenten] Schemafeldgruppe
 
->[!IMPORTANT]
->
->Diese Feldergruppe ist als Teil der Real-time Customer Data Platform B2B Edition verfügbar, die sich derzeit in der Beta-Phase befindet. Dokumentation und Funktionalität können sich ändern.
+[!UICONTROL XDM-Geschäftspersonenkomponenten] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) , das mehrere Quelldatensätze für eine Person und andere Attribute erfasst, die für die Personensegmentierung erforderlich sind.
 
-[!UICONTROL XDM Business Person ] Component ist eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die mehrere Quelldatensätze für eine Person und andere Attribute erfasst, die für die Personensegmentierung erforderlich sind.
+Wenn ein Profil für eine Person durch erstellt wird [Echtzeit-Kundenprofil](../../../profile/home.md) in der B2B-Ausgabe der Echtzeit-Kundendatenplattform können die zur Erstellung dieses Profils verwendeten Informationen möglicherweise aus vielen Quelldatensätzen stammen. Wenn beispielsweise eine Person für zwei verschiedene Unternehmen arbeitet, erstellen viele CRM-Systeme eine absichtlich doppelte Kopie dieser Person, sodass eine Kopie mit Firma A verknüpft ist, die andere mit Firma B. Beim Importieren dieser Daten in Adobe Experience Platform wird diese Feldergruppe verwendet, um diese verschiedenen Quelldatensätze in einer Darstellung zusammenzuführen.
 
-Wenn ein Profil für eine Person über [Echtzeit-Kundenprofil](../../../profile/home.md) in der B2B-Ausgabe der Echtzeit-Kundendatenplattform erstellt wird, können die zum Erstellen dieses Profils verwendeten Informationen möglicherweise aus vielen Quelldatensätzen stammen. Wenn beispielsweise eine Person für zwei verschiedene Unternehmen arbeitet, erstellen viele CRM-Systeme eine absichtlich doppelte Kopie dieser Person, sodass eine Kopie mit Firma A verknüpft ist, die andere mit Firma B. Beim Importieren dieser Daten in Adobe Experience Platform wird diese Feldergruppe verwendet, um diese verschiedenen Quelldatensätze in einer Darstellung zusammenzuführen.
-
-Die Feldergruppe stellt ein `personComponents`-Feld auf der Stammebene bereit, bei dem es sich um ein Array von Objekten handelt. Jedes Objekt im Array stellt einen anderen Quelldatensatz dar.
+Die Feldergruppe stellt eine Stammebene bereit `personComponents` -Feld, das ein Array von Objekten ist. Jedes Objekt im Array stellt einen anderen Quelldatensatz dar.
 
 ![](../../images/field-groups/business-person-components.png)
 

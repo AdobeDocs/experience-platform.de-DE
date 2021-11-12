@@ -1,19 +1,15 @@
 ---
-title: Schemata in Real-time Customer Data Platform B2B Edition (Beta)
+title: Schemas in Real-time Customer Data Platform B2B Edition
 description: Eine Übersicht über die Rolle von Experience-Datenmodell (XDM)-Schemas in Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
-source-git-commit: 6f421a8ae77318ca2598d640cf7e27ea485ec9db
+source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 8%
+source-wordcount: '198'
+ht-degree: 9%
 
 ---
 
-# Schemata in Real-time Customer Data Platform B2B Edition (Beta)
-
->[!IMPORTANT]
->
->Real-time Customer Data Platform B2B Edition befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
+# Schemata in Real-time Customer Data Platform B2B Edition
 
 Real-time Customer Data Platform B2B Edition bietet mehrere Standardfunktionen [Experience-Datenmodell (XDM)-Klassen](../../xdm/schema/composition.md#class) , die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. Darüber hinaus können Sie mit der Echtzeit-Kundendatenplattform B2B Edition zwischen diesen Schemas eine Vielzahl von Beziehungen definieren, sodass sie an erweiterten Anwendungsfällen zur Segmentierung teilnehmen können.
 
