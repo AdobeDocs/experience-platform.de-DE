@@ -5,42 +5,38 @@ title: Authentifizieren des Marketo-Quell-Connectors
 topic-legacy: overview
 description: Dieses Dokument enthält Informationen zum Generieren Ihrer Marketo-Authentifizierungsberechtigungen.
 exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
-source-git-commit: 0661d124ffe520697a1fc8e2cae7b0b61ef4edfc
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '622'
-ht-degree: 2%
+source-wordcount: '603'
+ht-degree: 1%
 
 ---
 
-# (Beta) Quellanschluss [!DNL Marketo Engage] authentifizieren
+# Authentifizieren Sie Ihre [!DNL Marketo Engage] Quell-Connector
 
->[!IMPORTANT]
->
->Die Quelle [!DNL Marketo Engage] in Adobe Experience Platform befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern.
+Bevor Sie eine [!DNL Marketo Engage] (nachstehend &quot;genannt)[!DNL Marketo]&quot;) Quell-Connector müssen Sie zunächst einen benutzerdefinierten Dienst über die [!DNL Marketo] -Schnittstelle sowie Werte für Ihre Munchkin-ID, Client-ID und das Client-Geheimnis abrufen.
 
-Bevor Sie einen Quell-Connector vom Typ [!DNL Marketo Engage] (nachfolgend als &quot;[!DNL Marketo]&quot;bezeichnet) erstellen können, müssen Sie zunächst einen benutzerdefinierten Dienst über die [!DNL Marketo]-Schnittstelle einrichten und Werte für Ihre Munchkin-ID, Client-ID und das Client-Geheimnis abrufen.
-
-In der folgenden Dokumentation finden Sie Schritte zum Erwerb von Authentifizierungsberechtigungen, um einen [!DNL Marketo]-Quell-Connector zu erstellen.
+In der folgenden Dokumentation wird beschrieben, wie Sie Authentifizierungsberechtigungen erfassen, um eine [!DNL Marketo] Quell-Connector.
 
 ## Einrichten einer neuen Rolle
 
-Der erste Schritt beim Erwerb Ihrer Authentifizierungsberechtigungen besteht darin, über die [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1)-Schnittstelle eine neue Rolle einzurichten.
+Der erste Schritt beim Erwerb Ihrer Authentifizierungsberechtigungen besteht darin, eine neue Rolle über die [[!DNL Marketo]](https://app-sjint.marketo.com/#MM0A1) -Schnittstelle.
 
-Melden Sie sich bei [!DNL Marketo] an und wählen Sie **[!DNL Admin]** in der oberen Navigationsleiste aus.
+Anmelden bei [!DNL Marketo] und wählen Sie **[!DNL Admin]** über die Navigationsleiste am oberen Bildschirmrand.
 
 ![Administrator für eine neue Rolle](../images/marketo/home.png)
 
-Die Seite *[!DNL Users & Role]s* enthält Informationen zu Benutzern, Rollen und Anmeldungsverläufen. Um eine neue Rolle zu erstellen, wählen Sie **[!DNL Roles]** in der oberen Kopfzeile und dann **[!DNL New Role]** aus.
+Die *[!DNL Users & Role]s* Seite enthält Informationen zu Benutzern, Rollen und Anmeldeverlauf. Um eine neue Rolle zu erstellen, wählen Sie **[!DNL Roles]** aus der oberen Kopfzeile und wählen Sie **[!DNL New Role]**.
 
 ![new-role](../images/marketo/new-role.png)
 
 Das Dialogfeld **[!DNL Create New Role]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie dann die Berechtigungen aus, die Sie für diese Rolle gewähren möchten. Berechtigungen sind auf bestimmte Arbeitsbereiche beschränkt und Benutzer können nur Aktionen in Arbeitsbereichen durchführen, für die sie über Berechtigungen verfügen.
 
-Nachdem Sie die Berechtigungen ausgewählt haben, die Sie gewähren möchten, wählen Sie **[!DNL Create]** aus.
+Nachdem Sie die Berechtigungen ausgewählt haben, die Sie gewähren möchten, wählen Sie **[!DNL Create]**.
 
 ![create-new-role](../images/marketo/create-new-role.png)
 
-Beim Erstellen von Rollen mit [!DNL Marketo] können Sie eingeschränkte Berechtigungen für die API verwalten. Anstatt &quot;Access API&quot;auszuwählen, können Sie eine Rolle mit dem Mindestmaß an Zugriff bereitstellen, indem Sie die folgenden Berechtigungen auswählen:
+Sie können eingeschränkte Berechtigungen für die API verwalten, wenn Sie Rollen mit [!DNL Marketo]. Anstatt &quot;Access API&quot;auszuwählen, können Sie eine Rolle mit dem Mindestmaß an Zugriff bereitstellen, indem Sie die folgenden Berechtigungen auswählen:
 
 * [!DNL Read-Only Activity]
 * [!DNL Read-Only Assets]
@@ -56,11 +52,11 @@ Beim Erstellen von Rollen mit [!DNL Marketo] können Sie eingeschränkte Berecht
 
 ## Einrichten eines neuen Benutzers
 
-Ähnlich wie Rollen können Sie einen neuen Benutzer über die Seite **[!DNL Users & Roles]** einrichten. Die Seite **[!DNL Users]** enthält eine Liste der aktiven Benutzer, die derzeit in Marketo bereitgestellt werden. Wählen Sie **[!DNL Invite New User]** aus, um einen neuen Benutzer bereitzustellen.
+Ähnlich wie Rollen können Sie einen neuen Benutzer über die **[!DNL Users & Roles]** Seite. Die **[!DNL Users]** -Seite enthält eine Liste aktiver Benutzer, die derzeit in Marketo bereitgestellt werden. Auswählen **[!DNL Invite New User]** , um einen neuen Benutzer bereitzustellen.
 
 ![invited-new-user](../images/marketo/invite-new-user.png)
 
-Ein Popover-Dialogfeld wird angezeigt. Geben Sie die entsprechenden Informationen für Ihre E-Mail-Adresse, Vorname, Nachname und Grund an. In diesem Schritt können Sie auch ein Ablaufdatum für den Zugriff auf das neue Benutzerkonto festlegen, das Sie einladen. Wenn Sie fertig sind, wählen Sie **[!DNL Next]** aus.
+Ein Popover-Dialogfeld wird angezeigt. Geben Sie die entsprechenden Informationen für Ihre E-Mail-Adresse, Vorname, Nachname und Grund an. In diesem Schritt können Sie auch ein Ablaufdatum für den Zugriff auf das neue Benutzerkonto festlegen, das Sie einladen. Wenn Sie fertig sind, wählen Sie **[!DNL Next]**.
 
 >[!IMPORTANT]
 >
@@ -68,31 +64,31 @@ Ein Popover-Dialogfeld wird angezeigt. Geben Sie die entsprechenden Informatione
 
 ![user-info](../images/marketo/new-user-info.png)
 
-Wählen Sie die entsprechenden Felder im Schritt **[!DNL Permissions]** aus und aktivieren Sie dann das Kontrollkästchen **[!DNL API Only]** , um dem neuen Benutzer eine API-Rolle bereitzustellen. Wählen Sie **[!DNL Next]** aus, um fortzufahren.
+Wählen Sie die entsprechenden Felder im **[!DNL Permissions]** und wählen Sie dann **[!DNL API Only]** aktivieren, um dem neuen Benutzer eine API-Rolle bereitzustellen. Auswählen **[!DNL Next]** um fortzufahren.
 
 ![Berechtigungen](../images/marketo/permissions.png)
 
-Um den Prozess abzuschließen, wählen Sie **[!DNL Send]** aus.
+Um den Prozess abzuschließen, wählen Sie **[!DNL Send]**.
 
 ![angezeigt](../images/marketo/message.png)
 
 ## Einrichten eines benutzerdefinierten Dienstes
 
-Nachdem Sie einen neuen Benutzer eingerichtet haben, können Sie einen benutzerdefinierten Dienst einrichten, um Ihre neuen Anmeldedaten abzurufen. Wählen Sie auf der Admin-Seite **[!DNL LaunchPoint]** aus.
+Nachdem Sie einen neuen Benutzer eingerichtet haben, können Sie einen benutzerdefinierten Dienst einrichten, um Ihre neuen Anmeldedaten abzurufen. Wählen Sie auf der Admin-Seite **[!DNL LaunchPoint]**.
 
 ![admin-launchpoint](../images/marketo/admin-launchpoint.png)
 
-Die Seite **[!DNL Installed services]** enthält eine Liste der vorhandenen Dienste. Um einen neuen benutzerdefinierten Dienst zu erstellen, wählen Sie **[!DNL New]** und dann **[!DNL New Service]** aus.
+Die **[!DNL Installed services]** Seite enthält eine Liste der vorhandenen Dienste, um einen neuen benutzerdefinierten Dienst zu erstellen, wählen Sie **[!DNL New]** und wählen Sie **[!DNL New Service]**.
 
 ![new-service](../images/marketo/new-service.png)
 
-Geben Sie Ihrem neuen Dienst einen beschreibenden Anzeigenamen und wählen Sie dann **[!DNL Custom]** aus dem Dropdown-Menü **[!DNL Service]** aus. Geben Sie eine entsprechende Beschreibung ein und wählen Sie dann den Benutzer aus dem Dropdown-Menü **[!DNL API Only User]** aus, den Sie bereitstellen möchten. Nachdem Sie die erforderlichen Details ausgefüllt haben, wählen Sie **[!DNL Create]** aus, um Ihren neuen benutzerdefinierten Dienst zu erstellen.
+Geben Sie Ihrem neuen Dienst einen beschreibenden Anzeigenamen und wählen Sie **[!DNL Custom]** von **[!DNL Service]** Dropdown-Menü. Geben Sie eine entsprechende Beschreibung ein und wählen Sie dann den Benutzer aus, den Sie bereitstellen möchten, aus dem **[!DNL API Only User]** Dropdown-Menü. Nachdem Sie die erforderlichen Details ausgefüllt haben, wählen Sie **[!DNL Create]** , um Ihren neuen benutzerdefinierten Dienst zu erstellen.
 
 ![create](../images/marketo/create.png)
 
 ## Abrufen Ihrer Client-ID und des Client-Geheimnisses
 
-Mit einem neuen benutzerdefinierten Dienst können Sie jetzt Werte für Ihre Client-ID und Ihr Client-Geheimnis abrufen. Suchen Sie im Menü **[!DNL Installed Services]** den benutzerdefinierten Dienst, auf den Sie zugreifen möchten, und wählen Sie dann **[!DNL View Details]** aus.
+Mit einem neuen benutzerdefinierten Dienst können Sie jetzt Werte für Ihre Client-ID und Ihr Client-Geheimnis abrufen. Aus dem **[!DNL Installed Services]** , suchen Sie den benutzerdefinierten Dienst, auf den Sie zugreifen möchten, und wählen Sie **[!DNL View Details]**.
 
 ![view-details](../images/marketo/view-details.png)
 
@@ -102,12 +98,12 @@ Es wird ein Dialogfeld mit Ihrer Client-ID und dem Client-Geheimnis angezeigt.
 
 ## Munchkin-ID abrufen
 
-Der letzte Schritt, den Sie zum Authentifizieren Ihres [!DNL Marketo] Quell-Connectors durchführen müssen, besteht darin, Ihre Munchkin-ID abzurufen. Wählen Sie auf der Admin-Seite **[!DNL Munchkin]** unter dem Bedienfeld **[!DNL Integration]** aus.
+Der letzte Schritt, den Sie zum Authentifizieren Ihrer [!DNL Marketo] -Quell-Connector zum Abrufen Ihrer Munchkin-ID. Wählen Sie auf der Admin-Seite **[!DNL Munchkin]** unter **[!DNL Integration]** Bereich.
 
 ![admin-munchkin](../images/marketo/admin-munchkin.png)
 
-Die Seite *[!DNL Munchkin]* wird angezeigt, wobei Ihre eindeutige Munchkin-ID oben im Bedienfeld aufgelistet ist.
+Die *[!DNL Munchkin]* angezeigt, wobei Ihre eindeutige Munchkin-ID oben im Bedienfeld aufgelistet ist.
 
 ![munchkin-id](../images/marketo/munchkin-id.png)
 
-In Kombination mit Ihrer Client-ID und dem Client-Geheimnis können Sie Ihre Munchkin-ID verwenden, um ein neues Konto zu konfigurieren, und [eine neue [!DNL Marketo] Quellverbindung](../../../tutorials/ui/create/adobe-applications/marketo.md) auf der Experience Platform erstellen.
+In Kombination mit Ihrer Client-ID und dem Client-Geheimnis können Sie Ihre Munchkin-ID verwenden, um ein neues Konto zu konfigurieren und [eine neue [!DNL Marketo] Quellverbindung](../../../tutorials/ui/create/adobe-applications/marketo.md) auf Experience Platform.

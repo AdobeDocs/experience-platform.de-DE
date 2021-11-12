@@ -1,69 +1,65 @@
 ---
-keywords: Experience Platform;Startseite;beliebte Themen;Marketo Engage;Markieren
+keywords: Experience Platform; Startseite; beliebte Themen; Marketo Engage; Marketo Interaction; Marketo
 solution: Experience Platform
-title: Marketo Engage-Anschluss
+title: Marketo Engage-Connector
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quellanschluss, einschließlich Informationen über Authentifizierung, Zuordnung und Datenlatenz.
+description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: a36a4775c14e97df51f218cea3a083d29c7b69dc
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 13%
+source-wordcount: '529'
+ht-degree: 12%
 
 ---
 
-# (Beta) [!DNL Marketo Engage] Anschluss
-
->[!IMPORTANT]
->
->Die [!DNL Marketo Engage] Quelle in Adobe Experience Platform befindet sich derzeit in der Beta-Version. Dokumentation und Funktionalität können sich ändern.
+# [!DNL Marketo Engage] Connector
 
 Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) (nachstehend &quot;nachstehend &quot;nachstehend&quot; genannt[!DNL Marketo]&quot;) ist eine Komplettlösung für Lead-Management- und B2B-Marketingexperten, die Kundenerlebnisse verändern möchten, indem sie in alle Phasen komplexer Journey-Kaufprozesse eingebunden werden.
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) (nachstehend &quot;genannt)[!DNL Marketo]&quot;) ist eine Komplettlösung für das Lead-Management. B2B-Marketer können damit Kundenerlebnisse transformieren, indem sie in allen Phasen komplexer Journey Interaktionen ermöglichen.
 
-Mit [!DNL Marketo] Quellanschluss, von dem Sie B2B-Daten abrufen können [!DNL Marketo] , um diese Daten mit Anwendungen mit Plattformverbindung zu plattformübergreifend auf dem Laufenden zu halten.
+Mit dem [!DNL Marketo] Quell-Connector: Sie können B2B-Daten von [!DNL Marketo] zu Platform hinzufügen und diese Daten mithilfe von Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand zu halten.
 
-Dieses Dokument bietet einen Überblick über die [!DNL Marketo] Quellanschluss, einschließlich Informationen zur Authentifizierung des Connectors und zur Zuordnung [!DNL Marketo] Felder für Erlebnisdatenmodell (XDM) und die Datenlatenz des Connectors.
+Dieses Dokument bietet einen Überblick über die [!DNL Marketo] Quell-Connector, einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung [!DNL Marketo] -Felder auf das Experience-Datenmodell (XDM) und die Datenlatenz des Connectors hinzu.
 
-## Authentifizieren Sie Ihren [!DNL Marketo] Anschluss
+## Authentifizieren Sie Ihre [!DNL Marketo] Connector
 
-Zur Verbindung [!DNL Marketo] auf Platform setzen, müssen Sie zunächst Werte für `munchkinId`, `clientId`und `clientSecret`.
+Um eine Verbindung herzustellen [!DNL Marketo] in Platform müssen Sie zunächst Werte für Ihre `munchkinId`, `clientId`und `clientSecret`.
 
-Weitere Informationen finden Sie in den Schritten unter [Authentifizieren Sie Ihren Marketo-Quellanschluss.](./marketo-auth.md) Dokument zum Abrufen Ihrer Anmeldedaten.
+Siehe die Schritte, die im Abschnitt [Authentifizieren des Marketo-Quell-Connectors](./marketo-auth.md) Dokument zum Abrufen Ihrer Anmeldedaten.
 
-## Freigabe von Adobe Experience Cloud-Audiencen einrichten
+## Einrichten der Adobe Experience Cloud-Zielgruppenfreigabe
 
-Zuordnungssätze müssen erstellt werden für [!DNL Marketo], müssen Sie zuerst Adobe Experience Cloud Audience Sharing einrichten. Detaillierte Anweisungen dazu finden Sie im Handbuch zu [zur Einrichtung der Adobe Experience Cloud Audience Sharing für [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+Bevor Sie Zuordnungssätze für [!DNL Marketo]müssen Sie zunächst die Zielgruppenfreigabe in Adobe Experience Cloud einrichten. Ausführliche Anweisungen finden Sie im Handbuch unter [Einrichten der Adobe Experience Cloud-Zielgruppenfreigabe für [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
 
 ## Experience-Datenmodell (XDM)
 
-XDM ist eine öffentlich dokumentierte Spezifikation, die gemeinsame Strukturen und Definitionen bietet, mit denen Sie Daten von Drittanbieterquellen für die Verwendung in nachgeschalteten Plattformdiensten erfassen können.
+XDM ist eine öffentlich dokumentierte Spezifikation, die allgemeine Strukturen und Definitionen bietet, mit denen Sie Daten aus Drittanbieterquellen erfassen und in nachgelagerten Platform-Diensten verwenden können.
 
-Durch die Einhaltung der XDM-Standards können Daten einheitlich in das Platform-Ökosystem integriert werden, was die Bereitstellung von Daten und die Erfassung von Informationen erleichtert.
+Durch die Einhaltung von XDM-Standards können Daten einheitlich in das Platform-Ökosystem integriert werden, was die Bereitstellung von Daten und die Erfassung von Informationen erleichtert.
 
-Weitere Informationen zu XDM und seiner Rolle in der Plattform finden Sie im [XDM-Systemübersicht](../../../../xdm/home.md).
+Weitere Informationen zu XDM und seiner Rolle in Platform finden Sie unter [XDM-System - Übersicht](../../../../xdm/home.md).
 
-## Feldzuordnung aus [!DNL Marketo] nach XDM
+## Feldzuordnung aus [!DNL Marketo] in XDM
 
-So erstellen Sie eine Quellverbindung zwischen [!DNL Marketo] und Platform, müssen die Marketo-Quelldatenfelder den entsprechenden XDM-Feldern der Zielgruppe zugeordnet werden, bevor sie in Platform integriert werden können.
+So richten Sie eine Quellverbindung zwischen [!DNL Marketo] und Platform, müssen die Marketo-Quelldatenfelder ihren entsprechenden Ziel-XDM-Feldern zugeordnet werden, bevor sie in Platform erfasst werden.
 
-Im Folgenden finden Sie detaillierte Informationen zu den Regeln für die Feldzuordnung zwischen [!DNL Marketo] Datensätze und Plattform:
+Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Marketo] Datensätze und Plattform:
 
 * [Aktivitäten](../mapping/marketo.md#activities)
 * [Programme](../mapping/marketo.md#programs)
-* [Mitgliedschaft im Programm](../mapping/marketo.md#program-memberships)
+* [Programmmitgliedschaften](../mapping/marketo.md#program-memberships)
 * [Firmen](../mapping/marketo.md#companies)
 * [Statische Listen](../mapping/marketo.md#static-lists)
 * [Mitgliedschaft in statischen Listen](../mapping/marketo.md#static-list-memberships)
-* [Benannte Konten](../mapping/marketo.md#named-accounts)
-* [Gelegenheiten](../mapping/marketo.md#opportunities)
-* [Gelegenheits-Kontaktrollen](../mapping/marketo.md#opportunity-contact-roles)
+* [Spezifische Konten](../mapping/marketo.md#named-accounts)
+* [Chancen](../mapping/marketo.md#opportunities)
+* [Kontaktrollen bei Chancen](../mapping/marketo.md#opportunity-contact-roles)
 * [Personen](../mapping/marketo.md#persons)
 
-## Erwartete Latenz von [!DNL Marketo] Daten auf Plattform
+## Erwartete Latenz von [!DNL Marketo] Daten in Platform
 
-In der folgenden Tabelle wird die zu erwartende Wartezeit bei der Einführung von [!DNL Marketo] Daten in Plattform, basierend auf der Art der Aufnahme und dem gewünschten Ziel:
+In der folgenden Tabelle wird die erwartete Latenz für die [!DNL Marketo] Daten in Platform, basierend auf der Art der Aufnahme und dem gewünschten Ziel:
 
 | Ziel | Erwartete Latenz |
 | ----------- | ---------------- |
@@ -74,8 +70,8 @@ In der folgenden Tabelle wird die zu erwartende Wartezeit bei der Einführung vo
 
 Die folgende Dokumentation enthält weitere Informationen zum Erstellen eines [!DNL Marketo] Quellverbindung:
 
-* Weitere Informationen zum Herstellen einer Verbindung [!DNL Marketo] Daten zur Plattform finden Sie im Tutorial zu [Erstellen eines Marketo-Quellsteckers in der Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
-* Informationen über die zugrunde liegende Einrichtung für die B2B-Namensraum und -Schema [!DNL Marketo], lesen Sie die Dokumentation für [B2B-Namensraum und -Schema](./marketo-namespaces.md).
-* Informationen zum Auffinden Ihrer [!DNL Marketo] munchkin-ID und Generierung Ihrer Anmeldedaten finden Sie in der [[!DNL Marketo] Authentifizierungsleitfaden](./marketo-auth.md).
-* Informationen zu den spezifischen Zuordnungsregeln für [!DNL Marketo] Datensätze finden Sie in der Dokumentation zu [[!DNL Marketo] Feldzuordnungen](../mapping/marketo.md).
-* Allgemeine Informationen über [!DNL Real-time Customer Data Platform B2B Edition] und die zugehörigen Funktionen finden Sie in der Dokumentation auf [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).
+* Informationen zum Verbinden Ihrer [!DNL Marketo] Daten an Platform weiterleiten, siehe Tutorial zu [Erstellen eines Quell-Connectors für Marketo über die Benutzeroberfläche](../../../tutorials/ui/create/adobe-applications/marketo.md).
+* Informationen zur zugrunde liegenden Einrichtung für die B2B-Namespaces und -Schemata, die mit [!DNL Marketo]finden Sie in der Dokumentation für [B2B-Namespaces und -Schemata](./marketo-namespaces.md).
+* Informationen zum Auffinden Ihrer [!DNL Marketo] Munchkin-ID und Generieren Ihrer Anmeldeinformationen finden Sie im Abschnitt [[!DNL Marketo] Authentifizierungshandbuch](./marketo-auth.md).
+* Informationen zu den spezifischen Zuordnungsregeln für [!DNL Marketo] Datensätze finden Sie in der Dokumentation unter [[!DNL Marketo] Feldzuordnungen](../mapping/marketo.md).
+* Allgemeine Informationen [!DNL Real-time Customer Data Platform B2B Edition] und deren Funktionen finden Sie in der Dokumentation unter [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

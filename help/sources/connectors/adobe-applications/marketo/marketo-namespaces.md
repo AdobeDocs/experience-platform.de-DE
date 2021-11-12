@@ -3,20 +3,16 @@ keywords: Experience Platform; Startseite; beliebte Themen; Marketo-Quell-Connec
 solution: Experience Platform
 title: B2B-Namespaces und -Schemata
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines Quell-Connectors für B2B erforderlich sind.
+description: Dieses Dokument bietet einen Überblick über benutzerdefinierte Namespaces, die beim Erstellen eines B2B-Quell-Connectors erforderlich sind.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 0b9f8e9ca680e8e8e264276ac1254f3f1bb30073
+source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1664'
 ht-degree: 7%
 
 ---
 
-# (Beta) B2B-Namespaces und -Schemata
-
->[!IMPORTANT]
->
->Diese Funktion befindet sich derzeit in der Betaphase. Dokumentation und Funktionalität können sich ändern.
+# B2B-Namespaces und -Schemata
 
 Dieses Dokument enthält Informationen über die zugrunde liegende Einrichtung für Namespaces und Schemas, die mit B2B-Quellen verwendet werden sollen. In diesem Dokument finden Sie außerdem Informationen zum Einrichten Ihres Postman-Automatisierungsdienstprogramms, das zum Generieren von B2B-Namespaces und -Schemas erforderlich ist.
 
