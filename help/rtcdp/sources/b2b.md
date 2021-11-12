@@ -2,9 +2,9 @@
 title: Quellen in Real-time Customer Data Platform B2B Edition
 description: Ein Überblick über die Rolle der Quellen in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '275'
 ht-degree: 6%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 6%
 >
 >Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Quellen - Übersicht](./sources-overview.md) anstatt.
 
-Mit Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten durch die [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) Quell-Connector zur Verfügung, während Sie eingehende Daten mithilfe von Diensten strukturieren, beschriften und erweitern können.
+Real-time Customer Data Platform B2B Edition ermöglicht Ihnen, Ihre B2B-Daten aus verschiedenen Quellen zu übertragen, einschließlich der [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) Quell-Connector, Salesforce, Amazon S3 und ADLS. Dieser Bereich von Quellen bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von Diensten zu strukturieren, zu beschriften und zu erweitern.
 
 >[!TIP]
 >
