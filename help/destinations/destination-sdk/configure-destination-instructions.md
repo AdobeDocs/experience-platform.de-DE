@@ -1,31 +1,31 @@
 ---
-description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit dem Ziel-SDK aufgeführt und beschrieben.
-title: Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
+description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit Destination SDK aufgeführt und beschrieben.
+title: Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '663'
 ht-degree: 0%
 
 ---
 
-# Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels
+# Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Ziel-SDK-Funktionen und API-Referenzdokumenten zum Konfigurieren eines [Streaming-Ziel](/help/destinations/destination-types.md#streaming-destinations). Die Schritte werden in der folgenden Reihenfolge angeordnet.
+Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten zum Konfigurieren eines [Streaming-Ziel](/help/destinations/destination-types.md#streaming-destinations). Die Schritte werden in der folgenden Reihenfolge angeordnet.
 
 >[!NOTE]
 >
->Die Konfiguration eines Batch-Ziels über das Ziel-SDK wird derzeit nicht unterstützt.
+>Die Konfiguration eines Batch-Ziels über Destination SDK wird derzeit nicht unterstützt.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten dargestellten Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit dem Ziel-SDK](./getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Ziel-SDK-APIs.
+Bevor Sie mit den unten dargestellten Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](./getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
 
-## Schritte zur Verwendung der Konfigurationsoptionen im Destination SDK zum Einrichten Ihres Ziels {#steps}
+## Schritte zum Verwenden der Konfigurationsoptionen in Destination SDK zum Einrichten Ihres Ziels {#steps}
 
-![Veranschaulichte Schritte zur Verwendung der Ziel-SDK-Endpunkte](./assets/destination-sdk-steps.png)
+![Veranschaulichte Schritte zur Verwendung von Destination SDK-Endpunkten](./assets/destination-sdk-steps.png)
 
 ## Schritt 1: Erstellen einer Server- und Vorlagenkonfiguration {#create-server-template-configuration}
 
@@ -152,7 +152,7 @@ Nachdem Sie eine Vorlage für die Nachrichtenumwandlung erstellt haben, die für
 
 ## Schritt 4: Erstellen der Konfiguration von Zielgruppen-Metadaten {#create-audience-metadata-configuration}
 
-Für einige Ziele erfordert das Ziel-SDK, dass Sie eine Konfiguration für Zielgruppen-Metadaten konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
+Für einige Ziele erfordert Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
 
 Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie sie mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Audience-Metadatenkonfiguration Ihrer Zielkonfiguration als `audienceTemplateId`.
 
