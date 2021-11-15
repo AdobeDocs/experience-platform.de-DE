@@ -6,7 +6,7 @@ title: Konfigurieren einer Customer AI-Instanz
 topic-legacy: Instance creation
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 52ab1527d3021500d934afe56cfc751116f784a4
+source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
 workflow-type: tm+mt
 source-wordcount: '2299'
 ht-degree: 13%
@@ -74,7 +74,7 @@ Wählen Sie nach Auswahl der Datensätze, die Sie verwenden möchten, die **[!UI
 
 Infosymbol auswählen ![Infosymbol](../images/user-guide/info-icon.png) neben dem Datensatz öffnet das Popup-Fenster für die Datensatzvorschau.
 
-![Datensatz auswählen und suchen](../images/user-guide/dataset-info-2.png)
+![Datensatz auswählen und suchen](../images/user-guide/dataset-info.png)
 
 Die Datensatzvorschau enthält Daten wie die letzte Aktualisierungszeit, das Quellschema und eine Vorschau der ersten zehn Spalten.
 
@@ -85,8 +85,8 @@ In der Datensatzvorschau gibt es einen prozentualen Wert für die Vollständigke
 >[!NOTE]
 >
 >Die Vollständigkeit des Datensatzes wird mithilfe des maximalen Schulungsfensters für Customer AI (ein Jahr) berechnet. Das bedeutet, dass Daten, die älter als ein Jahr sind, bei der Anzeige Ihres Datensatzvollständigkeitswerts nicht berücksichtigt werden.
-<!-- training dataset completness needs to change -->
-![Datensatzvollständigkeit](../images/user-guide/dataset-info.png)
+
+![Datensatzvollständigkeit](../images/user-guide/dataset-info-2.png)
 
 ### Identität auswählen {#identity}
 
