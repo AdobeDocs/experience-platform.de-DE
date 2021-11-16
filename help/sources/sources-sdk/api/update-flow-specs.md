@@ -5,7 +5,7 @@ topic-legacy: developer guide
 description: Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der Flow Service-API für das Sources-SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 2%
@@ -616,4 +616,4 @@ Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flu
 
 ## Nächste Schritte
 
-Nachdem Ihre neue Verbindungsspezifikation der entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Siehe Handbuch unter [Testen und Senden einer neuen Quelle](./overview.md#submit) für weitere Informationen.
+Nachdem Ihre neue Verbindungsspezifikation der entsprechenden Flussspezifikation hinzugefügt wurde, können Sie jetzt mit dem Testen und Senden Ihrer neuen Quelle fortfahren. Siehe Handbuch unter [Testen und Senden einer neuen Quelle](./submit.md) für weitere Informationen.
