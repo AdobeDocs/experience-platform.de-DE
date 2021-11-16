@@ -5,7 +5,7 @@ topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
@@ -87,4 +87,4 @@ Mithilfe der Spezifikationen werden die Parameter definiert, die zum Erkunden un
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre Erkundungsspezifikationen ausgefüllt haben, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mit dem [!DNL Flow Service] API. Siehe [[!DNL Sources SDK] API-Handbuch](../api/api-overview.md) für weitere Informationen.
+Nachdem Sie Ihre Erkundungsspezifikationen ausgefüllt haben, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mit dem [!DNL Flow Service] API. Siehe [[!DNL Sources SDK] API-Handbuch](../api/overview.md) für weitere Informationen.

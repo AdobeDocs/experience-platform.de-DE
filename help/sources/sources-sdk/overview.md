@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Das Adobe Experience Platform Sources-SDK ist eine Reihe von Konfigurations-APIs, mit denen Sie eine REST-API-basierte Quelle mithilfe der Flow Service-API integrieren können, um Ihre Daten in die Experience Platform zu übertragen.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+source-git-commit: 4ce9eac605fb7c801852cd0e109448d314092603
 workflow-type: tm+mt
 source-wordcount: '529'
 ht-degree: 8%
@@ -41,17 +41,17 @@ Weitere Informationen zu Quellen und eine Liste der verschiedenen Quellen, die d
 
 Über das Sources-SDK können Sie Ihre eigene REST-API-basierte Quelle integrieren und Ihre Daten an Platform übertragen mit [!DNL Flow Service]. Mit dem Quellen-SDK können Sie eine neue Quelle in Platform integrieren, indem Sie neue Verbindungsspezifikationen über das [!DNL Flow Service] API.
 
-Siehe Handbuch unter [Erstellen einer neuen Verbindungsspezifikation](./api/api-overview.md) Informationen zur Integration einer neuen Quelle in Platform.
+Siehe Handbuch unter [Erstellen einer neuen Verbindungsspezifikation](./api/overview.md) Informationen zur Integration einer neuen Quelle in Platform.
 
 ## Quelle dokumentieren
 
-Nachdem die Quelle erstellt wurde, lesen Sie den Abschnitt [Handbuch](./documentation/doc-overview.md) Anweisungen zum Dokumentieren der Quelle über das [!DNL GitHub] Web-Oberfläche oder über Ihren eigenen Texteditor.
+Nachdem die Quelle erstellt wurde, lesen Sie den Abschnitt [Handbuch](./documentation/overview.md) Anweisungen zum Dokumentieren der Quelle über das [!DNL GitHub] Web-Oberfläche oder über Ihren eigenen Texteditor.
 
 ## Verfahren auf hoher Ebene
 
 Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle in Experience Platform ist unten beschrieben:
 
-* Lesen Sie die [API-Handbuch für Quellen-SDK](./api/api-overview.md);
+* Lesen Sie die [API-Handbuch für Quellen-SDK](./api/overview.md);
    * Lesen Sie die [Erste Schritte](./api/getting-started.md);
    * Folgen Sie dem Tutorial zu [Erstellen einer neuen Verbindungsspezifikation](./api/create.md);
    * Folgen Sie dem Tutorial zu [Aktualisieren der Verbindungsspezifikation](./api/update-connection-specs.md);
@@ -61,7 +61,7 @@ Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle in Experience Plat
    * Siehe Handbuch unter [Authentifizierungsspezifikationen konfigurieren](./config/authspec.md);
    * Siehe Handbuch unter [Quellspezifikationen konfigurieren](./config/sourcespec.md);
    * Siehe Handbuch unter [Konfigurieren von Discover-Spezifikationen](./config/explorespec.md);
-* Informationen zum Dokumentieren der Quelle finden Sie unter [Übersicht über das Erstellen der Dokumentation für das Quellen-SDK](./documentation/doc-overview.md)
+* Informationen zum Dokumentieren der Quelle finden Sie unter [Übersicht über das Erstellen der Dokumentation für das Quellen-SDK](./documentation/overview.md)
    * Sie können dies [Quelldokumentationsvorlage](./documentation/template.md) die Struktur der Dokumentation;
    * Siehe Handbuch unter [Verwenden der GitHub-Webschnittstelle](./documentation/github.md) Anweisungen zum Erstellen der Dokumentation mit GitHub;
    * Siehe Handbuch unter [mit einem Texteditor](./documentation/text-editor.md) Anweisungen zum Erstellen von Dokumentationen mit Ihrem lokalen Computer.
