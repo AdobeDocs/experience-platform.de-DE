@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 92b2dc869a659a030e1f13c83a0c5e3d707685c6
+source-git-commit: c178bf54bfdda54293cb4e06d452f82111690895
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 20%
+source-wordcount: '741'
+ht-degree: 19%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 20%
          - [Marketo Engage-Connector](connectors/adobe-applications/marketo/marketo.md)
          - [Handbuch zur Marketo Engage-Authentifizierung](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-Namespaces und -Schemata](connectors/adobe-applications/marketo/marketo-namespaces.md)
-   - Adobe Advertising Cloud {#advertising}
+   - Adobe Advertising {#advertising}
       - [Google AdWords-Connector](connectors/advertising/ads.md)
    - Cloud-Speicher {#cloud-storage}
       - [Amazon Kinesis Connector](connectors/cloud-storage/kinesis.md)
@@ -91,7 +91,7 @@ ht-degree: 20%
       - [HTTP-API-Connector](connectors/streaming/http.md)
 - API-Tutorials {#api-tutorials}
    - Basisverbindung erstellen {#create}
-      - Adobe Advertising Cloud {#advertising}
+      - Adobe Advertising {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
       - Cloud-Speicher {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
@@ -182,7 +182,7 @@ ht-degree: 20%
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - Adobe Advertising Cloud {#create}
+      - Adobe Advertising {#create}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
       - Cloud-Speicher {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
@@ -257,6 +257,25 @@ ht-degree: 20%
    - [Datenflüsse aktualisieren](tutorials/ui/update-dataflows.md)
    - [Konten löschen](tutorials/ui/delete-accounts.md)
    - [Datenflüsse löschen](tutorials/ui/delete.md)
+- [Quellen-SDK] {#sources-sdk}
+   - [Übersicht](sources-sdk/overview.md)
+   - [Quellen-SDK-Funktionalität] {#functionality}
+      - [Konfigurationsoptionen](sources-sdk/config/config.md)
+      - [Authentifizierungsspezifikation konfigurieren](sources-sdk/config/authspec.md)
+      - [Quellspezifikation konfigurieren](sources-sdk/config/sourcespec.md)
+      - [Konfigurieren der Analysespezifikation](sources-sdk/config/explorespec.md)
+   - [Quellen-SDK-API-Tutorials] {#sdk-tutorials}
+      - [Quellen-SDK-API - Übersicht](sources-sdk/api/overview.md)
+      - [Erste Schritte](sources-sdk/api/getting-started.md)
+      - [Verbindungsspezifikation erstellen](sources-sdk/api/create.md)
+      - [Verbindungsspezifikation aktualisieren](sources-sdk/api/update-connection-specs.md)
+      - [Flussspezifikation aktualisieren](sources-sdk/api/update-flow-specs.md)
+      - [Quelle senden](sources-sdk/api/submit.md)
+   - [Quelle dokumentieren] {#document}
+      - [Dokumentieren der Quelle in Adobe Experience Platform](sources-sdk/documentation/overview.md)
+      - [Verwenden Sie die GitHub-Web-Oberfläche, um eine Seite mit der Quellendokumentation zu erstellen](sources-sdk/documentation/github.md)
+      - [Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.](sources-sdk/documentation/text-editor.md)
+      - [Vorlage für Dokumentations-Self-Service](sources-sdk/documentation/template.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
