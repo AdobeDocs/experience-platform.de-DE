@@ -2,9 +2,9 @@
 title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '1969'
 ht-degree: 100%
 
 ---
@@ -155,10 +155,6 @@ Regelereignisse und -bedingungen werden immer in der Haupt-Tag-Bibliothek gebün
 Diese Ereignisse müssen fast immer ausgeführt werden (es sei denn, die Bedingungen werden nicht erfüllt). Aus Effizienzgründen werden sie in der Hauptbibliothek (der Datei, auf die Ihr Einbettungscode verweist.) gebündelt.
 
 * **JavaScript:** Das JavaScript ist in die Haupt-Tag-Bibliothek eingebettet. Das benutzerdefinierte Skript wird in ein Skript-Tag eingeschlossen und über `document.write` in das Dokument geschrieben. Wenn die Regel mehrere benutzerdefinierte Skripte enthält, werden sie der Reihe nach geschrieben.
-
-   >[!NOTE]
-   >
-   >Tags verwenden ES5-JavaScript. Die Ereignisweiterleitung verwendet ES6.
 
 * **HTML:** Der HTML-Code ist in die Haupt-Tag-Bibliothek eingebettet. `document.write` wird zum Schreiben des HTML-Codes in das Dokument verwendet. Wenn die Regel mehrere benutzerdefinierte Skripte enthält, werden sie der Reihe nach geschrieben.
 

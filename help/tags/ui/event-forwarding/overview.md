@@ -3,9 +3,9 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 5218e6cf82b74efbbbcf30495395a4fe2ad9fe14
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '533'
 ht-degree: 100%
 
 ---
@@ -61,9 +61,5 @@ Beachten Sie die folgenden Unterschiede zwischen Ereignisweiterleitung und Tags:
 * Sequenz von Regelaktionen
 
    Im Aktionsabschnitt einer Regel werden Regeln zur Ereignisweiterleitung immer nacheinander ausgeführt. Stellen Sie beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann nicht so gewählt werden, wie es mit Tags möglich ist.
-
-* JavaScript-Versionen mit benutzerdefiniertem Code
-
-   Tags verwenden die JavaScript-Version es5. Die Ereignisweiterleitung verwendet Version es6.
 
 <!--doc Adobe Cloud Connector extension, get from Jon-->

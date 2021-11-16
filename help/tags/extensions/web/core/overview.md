@@ -2,10 +2,10 @@
 title: Haupterweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 868239c84571ed4a274db6b2b49694489a17073e
+source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '5292'
-ht-degree: 99%
+source-wordcount: '5362'
+ht-degree: 98%
 
 ---
 
@@ -542,6 +542,10 @@ In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Aktionstypen
 
 ### Benutzerspezifischer Code
 
+>[!NOTE]
+>
+>ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie bitte mit allen zu unterstützenden Webbrowsern.
+
 Geben Sie den Code an, der ausgeführt wird, nachdem das Ereignis ausgelöst wurde und die Bedingungen ausgewertet wurden.
 
 1. Benennen Sie den Aktionscode.
@@ -645,6 +649,10 @@ Ein konstanter Zeichenfolgenwert, der in Aktionen oder Bedingungen referenziert 
 `string`
 
 ### Benutzerspezifischer Code
+
+>[!NOTE]
+>
+>ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie bitte mit allen zu unterstützenden Webbrowsern.
 
 Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf „Editor öffnen“ klicken und den Code in das Editor-Fenster einfügen.
 
