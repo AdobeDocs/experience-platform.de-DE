@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: b6f4c79df79ae20b8051b69ef34dd255df193454
+source-git-commit: da9204f1581832d6885acd64387cf7e83c4b012a
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 39%
@@ -22,7 +22,7 @@ Die Benutzeroberfläche wurde mit den folgenden Änderungen aktualisiert:
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Dunkles Thema | Verwenden Sie den Dark-Design-Schalter, um in der Platform-Oberfläche zwischen hellen und dunklen Themen umzuschalten. Der Schalter befindet sich im Benutzerprofil unter Benutzername und E-Mail. |
+| Dunkles Design | Verwenden Sie den Dark-Design-Schalter, um in der Platform-Oberfläche zwischen hellen und dunklen Themen umzuschalten. Der Schalter befindet sich im Benutzerprofil unter Benutzername und E-Mail. |
 | Navigation links umschalten | Verwenden Sie den verbesserten Navigations-Umschalter oben in der App-Kopfzeile, um das Menü mit den Funktionen Ihrer Experience Platform ein- oder auszublenden. Das System speichert Ihre letzte Auswahl und zeigt nur die Funktionen an, auf die Sie Zugriff haben. |
 | Sichtbarkeit des Zugriffs | In der linken Navigationsleiste werden nur die Funktionen angezeigt, auf die Sie zugreifen können. In früheren Versionen von Adobe Experience Platform waren nicht verfügbare Elemente sichtbar, selbst wenn Sie nicht darauf zugreifen konnten. |
 
