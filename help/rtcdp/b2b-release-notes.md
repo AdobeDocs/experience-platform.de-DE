@@ -3,7 +3,7 @@ product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 title: Versionshinweise zu Adobe Experience Platform Real-time Customer Data Platform B2B Edition
 description: Die neuesten Versionshinweise für Adobe Experience Platform Real-time Customer Data Platform B2B Edition.
-source-git-commit: 4417670d167d7390d0e82ac5c32a1a6b46a15226
+source-git-commit: b6bcd94130126d1d893621ae1ab4255c8a789a80
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 22%
@@ -26,7 +26,7 @@ Es gibt Verbesserungen bei einer Reihe von Funktionen von Adobe Experience Platf
 
 ## Neue B2B- und B2P-Editionen {#editions}
 
-**Neue B2B- und B2P-Editionen** die ABM-Daten und -Funktionen sowohl in der Echtzeit-Kundendatenplattform als auch in Platform Activation-Produkten bereitstellen, sind zum Kauf verfügbar.
+**Neue B2B- und B2P-Editionen** , die B2B-Daten und -Funktionen sowohl in der Echtzeit-Kundendatenplattform als auch in Platform Activation-Produkten enthalten, sind zum Kauf verfügbar.
 
 Weitere Informationen zur Echtzeit-Kundendatenplattform B2B Edition finden Sie unter [Übersicht](./b2b-overview.md)
 
