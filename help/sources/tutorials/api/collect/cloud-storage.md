@@ -6,14 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Cloud-Speicher und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f0bb779961e9387eab6a424461e35eba9ab48fe2
+source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
 workflow-type: tm+mt
-source-wordcount: '1792'
-ht-degree: 18%
+source-wordcount: '1835'
+ht-degree: 17%
 
 ---
 
-# Cloud-Speicherdaten mithilfe von Quell-Connectoren und APIs erfassen
+# Collect cloud storage data using source connectors and APIs
 
 In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Cloud-Speicher und zum Einbinden dieser Daten über Quell-Connectoren und die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -55,7 +55,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
-Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
+To create a source connection, you must also define an enum value for the data format attribute.
 
 Verwenden Sie die folgenden Enum-Werte für dateibasierte Quellen:
 
@@ -114,7 +114,7 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `baseConnectionId` | Die eindeutige Verbindungs-ID des Cloud-Speichersystems eines Drittanbieters, auf das Sie zugreifen. |
-| `data.format` | Ein enum -Wert, der das Datenformatattribut definiert. |
+| `data.format` | An enum value that defines the data format attribute. |
 | `data.columnDelimiter` | Sie können ein beliebiges Spaltentrennzeichen für einzelne Zeichen verwenden, um flache Dateien zu sammeln. Diese Eigenschaft ist nur bei der Aufnahme von CSV- oder TSV-Dateien erforderlich. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrem spezifischen Cloud-Speichersystem von Drittanbietern verknüpft ist. Siehe [Anhang](#appendix) für eine Liste der Verbindungsspezifikations-IDs. |
@@ -130,11 +130,11 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 }
 ```
 
-### Erstellen einer Quellverbindung mit komprimierten Dateien {#using-compressed-files}
+### Create a source connection using compressed files {#using-compressed-files}
 
 **Anfrage**
 
-Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien erfassen, indem Sie deren `compressionType` als Eigenschaft. Die Liste der unterstützten komprimierten Dateitypen lautet:
+You can also ingest compressed JSON or delimited files by specifying its `compressionType` as a property. Die Liste der unterstützten komprimierten Dateitypen lautet:
 
 - `bzip2`
 - `gzip`
@@ -331,11 +331,11 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `schemaRef.id` | Die ID des Ziel-XDM-Schemas. |
-| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss festgelegt werden `application/vnd.adobe.xed-full-notext+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. |
+| `schemaRef.contentType` | The version of the schema. Dieser Wert muss festgelegt werden `application/vnd.adobe.xed-full-notext+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Die Ziel-Datensatz-ID ist in späteren Schritten erforderlich, um eine Zielverbindung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. The target dataset ID is required in later steps to create a target connection and a dataflow.
 
 ```json
 [
@@ -347,7 +347,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstel
 
 Eine Zielverbindung stellt die Verbindung zum Ziel dar, in dem die aufgenommenen Daten landen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Mithilfe dieser Kennungen können Sie mithilfe der [!DNL Flow Service] API zum Angeben des Datensatzes, der die eingehenden Quelldaten enthält.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Mithilfe dieser Kennungen können Sie mithilfe der [!DNL Flow Service] API zum Angeben des Datensatzes, der die eingehenden Quelldaten enthält.
 
 **API-Format**
 
@@ -387,13 +387,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des Ziel-XDM-Schemas. |
-| `data.schema.version` | Die Version des Schemas. Dieser Wert muss festgelegt werden `application/vnd.adobe.xed-full+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. |
-| `params.dataSetId` | Die ID des Zieldatensatzes. |
+| `data.schema.version` | The version of the schema. Dieser Wert muss festgelegt werden `application/vnd.adobe.xed-full+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. |
+| `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | Die feste Verbindungsspezifikations-ID zum Data Lake. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`). Diese ID ist in späteren Schritten erforderlich.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`). This ID is required in later steps.
 
 ```json
 {
@@ -402,9 +402,9 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (
 }
 ```
 
-## Erstellen einer Zuordnung {#mapping}
+## Create a mapping {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht. Dies wird erreicht, indem eine POST-Anfrage an den Konvertierungsdienst mit Datenzuordnungen ausgeführt wird, die in der Anfrage-Payload definiert sind.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
 
 >[!TIP]
 >
@@ -462,7 +462,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `xdmSchema` | Die ID des Ziel-XDM-Schemas. |
+| `xdmSchema` | The ID of the target XDM schema. |
 
 **Antwort**
 
@@ -481,7 +481,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 
 ## Datenflussspezifikationen abrufen {#specs}
 
-Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von Cloud-Speicherdaten zuständig sind.
+A dataflow is responsible for collecting data from sources, and bringing them into Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von Cloud-Speicherdaten zuständig sind.
 
 **API-Format**
 
@@ -639,6 +639,10 @@ Der letzte Schritt bei der Erfassung von Cloud-Speicherdaten besteht darin, eine
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
+>[!NOTE]
+>
+>Bei der Batch-Erfassung wählt jeder darauf folgende Datenfluss Dateien aus, die basierend auf ihren **letzte Änderung** Zeitstempel. Das bedeutet, dass Batch-Datenflüsse ausgewählte Dateien aus der Quelle verwenden, die neu sind oder seit der letzten Ausführung des Datenflusses geändert wurden.
+
 Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day`oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen an und bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`.
 
 >[!IMPORTANT]
@@ -697,8 +701,8 @@ curl -X POST \
 | `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection) in einem früheren Schritt abgerufen. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) in einem früheren Schritt abgerufen. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` und sollte größer oder gleich sein als `15` für andere Frequenzwerte. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` und sollte größer oder gleich sein als `15` für andere Frequenzwerte. |
 
 **Antwort**
 
