@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom November 2021.
-source-git-commit: 4618d8d73beeb7e525b5681aaa119125adaf7883
+source-git-commit: 90e2bb00575cc0b38367d792c75e2b656491c49f
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: '325'
 ht-degree: 35%
 
 ---
@@ -26,7 +26,7 @@ Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Kon
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | Unterstützung für mehrere Datensätze | Attribution AI kann jetzt problemlos mehrere Datensätze direkt in der Benutzeroberfläche erfassen, ohne dass jeder Datensatz zugeordnet und zugeordnet werden muss. Diese neue Zeitersparnis-Funktion bietet leistungsfähigere und genauere Ergebnisse mit umfangreicheren Daten aus mehreren Datensätzen. |
-| Medienkanal- und Kampagnenfeldzuordnung | Attribution AI unterstützt jetzt die Zuordnung von Medienkanal- und Kampagnenfeldern. Die Zuordnung von Medienkanälen zwischen Datensätzen verbessert die aus Attribution AI gewonnenen Erkenntnisse und liefert klarere Ergebnisse, die einfach zu interpretieren sind. |
+| Medienkanal- und Kampagnenfeldzuordnung | Attribution AI unterstützt jetzt die Zuordnung von Medien- und Kampagnenfeldern. Die Zuordnung von Medienkanälen zwischen Datensätzen verbessert die aus Attribution AI gewonnenen Erkenntnisse und liefert klarere Ergebnisse, die einfach zu interpretieren sind. |
 
 Weitere Informationen zu Attribution AIS finden Sie im [Dokumentation zu Attribution AIS](../../intelligent-services/attribution-ai/overview.md).
 
