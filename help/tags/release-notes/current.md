@@ -3,9 +3,9 @@ title: Versionshinweise
 description: Die neuesten Versionshinweise für Tags in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 source-git-commit: cda34c08a53d084a92a07caa9a2b166e27d9e28c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '578'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 87%
 
 ## 21. Oktober 2021
 
-**Daten an authentifizierte Endpunkte bei der Weiterleitung von Ereignissen senden** - Sie können Daten mithilfe von Geheimnissen an Endpunkte senden, für die die folgenden Authentifizierungsprotokolle erforderlich sind:
+**Senden von Daten an authentifizierte Endpunkte bei der Ereignisweiterleitung**: Mithilfe von geheimen Daten können Sie Daten an Endpunkte senden, für die die folgenden Authentifizierungsprotokolle erforderlich sind:
 
-* **[!UICONTROL Token]**: Eine einzelne Zeichenfolge aus Zeichen, die einen Authentifizierungstoken-Wert darstellt.
-* **[!UICONTROL Einfaches HTTP]**: Enthält zwei Zeichenfolgenattribute für einen Benutzernamen und ein Kennwort.
-* **[!UICONTROL OAuth2]**: Enthält mehrere Attribute zur Unterstützung der [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749) Spezifikation
+* **[!UICONTROL Token]**: Eine einzelne Zeichenfolge, die den Wert eines Authentifizierungs-Token darstellt.
+* **[!UICONTROL Einfaches HTTP]**: Enthält zwei Zeichenfolgen-Attribute für einen Benutzernamen und ein Kennwort.
+* **[!UICONTROL OAuth2]**: Enthält mehrere Attribute zur Unterstützung der [OAuth2](https://datatracker.ietf.org/doc/html/rfc6749)-Spezifikation.
 
-Weitere Informationen finden Sie in den Leitfäden auf [Verwalten von Geheimnissen in der Benutzeroberfläche der Datenerfassung](../ui/event-forwarding/secrets.md) oder [Verwalten von Geheimnissen in der Reaktor-API](../api/guides/secrets.md).
+Weitere Informationen finden Sie in den Handbüchern unter [Verwalten von geheimen Daten in der Datenerfassungs-Benutzeroberfläche](../ui/event-forwarding/secrets.md) oder [Verwalten von geheimen Daten in der Reactor-API](../api/guides/secrets.md).
 
 ## 19. Juli 2021
 
@@ -35,15 +35,15 @@ Weitere Informationen finden Sie in den Leitfäden auf [Verwalten von Geheimniss
 
 ## 17. Mai 2021
 
-**Bessere Handhabung nicht gespeicherter Änderungen**: Jedes Mal, wenn Sie eine Einstellungsansicht verlassen haben (Erweiterungen, Datenelemente und Regelkomponenten), haben Sie eine Eingabeaufforderung mit der Frage erhalten, ob Sie Ihre Änderungen verwerfen möchten. Obwohl dies nicht logisch erschien, wurden meistens Änderungen gespeichert, auch wenn es keine gab.  Dieser Fehler wurde behoben.  Von jetzt sehen Sie diese Eingabeaufforderung nur mehr, wenn Sie tatsächlich Änderungen vorgenommen haben.
+**Bessere Handhabung nicht gespeicherter Änderungen**: Jedes Mal, wenn Sie eine Einstellungsansicht verlassen haben (Erweiterungen, Datenelemente und Regelkomponenten), haben Sie eine Eingabeaufforderung mit der Frage erhalten, ob Sie Ihre Änderungen verwerfen möchten. Obwohl dies nicht logisch erschien, wurden meistens Änderungen gespeichert, auch wenn es keine gab. Dieser Fehler wurde behoben. Von jetzt sehen Sie diese Eingabeaufforderung nur mehr, wenn Sie tatsächlich Änderungen vorgenommen haben.
 
 ## 10. Mai 2021
 
-**Vereinfachte Veröffentlichung**: Die Erstellung in der Staging-Umgebung ist nicht mehr erforderlich.  Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie den Status „Gesendet“ vollständig überspringen und direkt in der Entwicklungsumgebung veröffentlichen, solange Sie einen erfolgreichen Build haben und es keine anderen nachgelagerten Bibliotheken gibt.
+**Vereinfachte Veröffentlichung**: Die Erstellung in der Staging-Umgebung ist nicht mehr erforderlich. Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie den Status „Gesendet“ vollständig überspringen und direkt in der Entwicklungsumgebung veröffentlichen, solange Sie einen erfolgreichen Build haben und es keine anderen nachgelagerten Bibliotheken gibt.
 
 ## 22. April 2021
 
-**Datenerfassung in Adobe Experience Platform** - Beim Senden von Daten an Adobe geht es nicht nur darum, Tags auf Ihrer Site bereitzustellen oder Ihre App zu konfigurieren.  Die Verwendung der Experience Platform-SDKs und von Edge Network erfordert Zugriff auf andere Funktionen von Platform. Dies erforderte früher die Anmeldung bei mehreren verschiedenen Tools; diese befinden sich nun alle an einem Ort.
+**Datenerfassung in Adobe Experience Platform** - Beim Senden von Daten an Adobe geht es nicht nur darum, Tags auf Ihrer Site bereitzustellen oder Ihre App zu konfigurieren. Die Verwendung der Experience Platform-SDKs und von Edge Network erfordert Zugriff auf andere Funktionen von Platform. Dies erforderte früher die Anmeldung bei mehreren verschiedenen Tools; diese befinden sich nun alle an einem Ort.
 
 Die Datenerfassung in Platform umfasst sechs Funktionen. Ihre neu optimierte Navigation enthält nur die Elemente, auf die Ihr Unternehmen und Ihr Benutzerkonto Zugriff haben. Einige der Funktionsnamen wurden ebenfalls aktualisiert, damit sie den üblichen Benennungsmustern von Experience Platform entsprechen.
 
