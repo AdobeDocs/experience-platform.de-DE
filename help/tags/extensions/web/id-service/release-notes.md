@@ -2,7 +2,7 @@
 title: Versionshinweise zur Adobe Experience Cloud Identity Service-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 100%
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Versionshinweise, die sich nicht nur auf die Adobe Experience Platform-Tag-Erweiterung beziehen, sondern auf Experience Cloud Identity Service selbst, finden Sie unter [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de)
 
-## 3. November 2020
+## 3. November 2021
 
 ### Experience Cloud ID-Erweiterung 5.2.1
 
