@@ -1,26 +1,26 @@
 ---
-title: Geheimer Endpunkt
-description: Erfahren Sie, wie Sie Aufrufe des Endpunkts /geheimnisse in der Reactor-API durchführen.
+title: Secrets-Endpunkt
+description: Hier erfahren Sie, wie Sie den Endpunkt /secrets in der Reactor-API aufrufen.
 source-git-commit: 103ba74646a42fd62007f47df4d1a46caf25e3e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1187'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# Geheimer Endpunkt
+# Secrets-Endpunkt
 
-Ein Geheimnis ist eine Ressource, die nur in den Eigenschaften der Ereignis-Weiterleitung vorhanden ist (Eigenschaften mit `platform` Attribut festgelegt auf `edge`). Sie ermöglichen es der Ereignis-Weiterleitung, sich für einen sicheren Datenaustausch an ein anderes System zu authentifizieren.
+Geheime Daten sind Ressourcen, die nur in den Eigenschaften der Ereignisweiterleitung (Eigenschaften mit einem `platform`-Attribut, das auf `edge` gesetzt wurde) existieren. Sie ermöglichen die Authentifizierung der Ereignisweiterleitung an ein anderes System für den sicheren Datenaustausch.
 
-Dieses Handbuch zeigt Ihnen, wie Sie Aufrufe an die `/secrets` Endpunkt in der Reaktor-API. Eine detaillierte Erläuterung der verschiedenen geheimen Typen und ihre Verwendung finden Sie in der hochrangigen Übersicht unter [Geheimnisse](../guides/secrets.md) bevor Sie zu diesem Handbuch zurückkehren.
+In diesem Handbuch erfahren Sie, wie Sie Aufrufe an den Endpunkt `/secrets` in der Reactor-API durchführen. Lesen Sie eine ausführliche Erläuterung der verschiedenen Typen von geheimen Daten und deren Verwendung in der allgemeinen Übersicht zu [geheimen Daten](../guides/secrets.md), bevor Sie zu diesem Handbuch zurückkehren.
 
 ## Erste Schritte
 
 Der in diesem Handbuch verwendete Endpunkt ist Teil der [Reactor-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](../getting-started.md), um wichtige Informationen zur Authentifizierung bei der API zu erhalten.
 
-## Liste von Geheimnissen für eine Eigenschaft abrufen {#list-property}
+## Abrufen einer Liste von geheimen Daten für eine Eigenschaft {#list-property}
 
-Sie können die Geheimnisse einer Immobilie durch eine GET anfordern.
+Sie können die geheimen Daten auflisten, die zu einer Eigenschaft gehören, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -30,7 +30,7 @@ GET /properties/{PROPERTY_ID}/secrets
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PROPERTY_ID}` | Die ID der Eigenschaft, deren Geheimnisse Liste werden sollen. |
+| `{PROPERTY_ID}` | Die ID der Eigenschaft, deren geheime Daten Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -48,7 +48,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Geheimnissen der Immobilie zurück.
+Eine erfolgreiche Antwort gibt eine Liste von geheimen Daten zurück, die zur Eigenschaft gehören.
 
 ```json
 {
@@ -114,9 +114,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Geheimnissen der Immobilie zurück
 }
 ```
 
-## Liste von Geheimnissen für eine Umgebung abrufen {#list-environment}
+## Abrufen einer Liste von geheimen Daten für eine Umgebung {#list-environment}
 
-Sie können die Geheimnisse einer Umgebung Liste haben, indem Sie eine GET anfordern.
+Sie können die geheimen Daten auflisten, die zu einer Umgebung gehören, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -126,7 +126,7 @@ GET /environments/{ENVIRONMENT_ID}/secrets
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{ENVIRONMENT_ID}` | Die ID der Umgebung, deren Geheimnisse Sie Liste haben möchten. |
+| `{ENVIRONMENT_ID}` | Die ID der Umgebung, deren geheimen Daten Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -144,7 +144,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Geheimnissen der Umgebung zurück.
+Eine erfolgreiche Antwort gibt eine Liste von geheimen Daten zurück, die zu der Umgebung gehören.
 
 ```json
 {
@@ -210,9 +210,9 @@ Eine erfolgreiche Antwort gibt eine Liste von Geheimnissen der Umgebung zurück.
 }
 ```
 
-## Schlag ein Geheimnis auf {#lookup}
+## Nachschlagen geheimer Daten {#lookup}
 
-Sie können ein Geheimnis nachschlagen, indem Sie dessen ID in den Pfad einer GET-Anfrage einschließen.
+Sie können geheime Daten nachschlagen, indem Sie ihre ID im Pfad einer GET-Anfrage angeben.
 
 **API-Format**
 
@@ -222,7 +222,7 @@ GET /secrets/{SECRET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID des Geheimnisses, das Sie nachschlagen möchten. |
+| `{SECRET_ID}` | Die ID der geheimen Daten, die Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -240,7 +240,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Geheimnisses zurück.
+Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück.
 
 ```json
 {
@@ -295,13 +295,13 @@ Eine erfolgreiche Antwort gibt die Details des Geheimnisses zurück.
 }
 ```
 
-## Geheimnis erstellen {#create}
+## Erstellen geheimer Daten {#create}
 
-Sie können ein Geheimnis erstellen, indem Sie eine POST anfordern.
+Sie können neue geheime Daten erstellen, indem Sie eine POST-Anfrage ausführen.
 
 >[!NOTE]
 >
->Wenn Sie ein neues Geheimnis erstellen, gibt die API eine sofortige Antwort zurück, die Informationen zu dieser Ressource enthält. Gleichzeitig wird eine Aufgabe des geheimen Austausches ausgelöst, um zu testen, ob der Austausch von Anmeldeinformationen funktionsfähig ist. Diese Aufgabe wird asynchron verarbeitet und aktualisiert das Statusattribut des geheimen Elements auf `succeeded` oder `failed` je nach Ergebnis.
+>Wenn Sie neue geheime Daten erstellen, gibt die API eine sofortige Antwort zurück, die Informationen zu dieser Ressource enthält. Gleichzeitig wird eine Aufgabe für den Austausch geheimer Daten ausgelöst, um zu testen, ob der Austausch von Anmeldedaten funktioniert. Diese Aufgabe wird asynchron verarbeitet und aktualisiert das Statusattribut der geheimen Daten je nach Ergebnis auf `succeeded` oder `failed`.
 
 **API-Format**
 
@@ -311,7 +311,7 @@ POST /properties/{PROPERTY_ID}/secrets
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{PROPERTY_ID}` | Die ID der Eigenschaft, unter der das Geheimnis definiert werden soll. |
+| `{PROPERTY_ID}` | Die ID der Eigenschaft, unter der Sie die geheimen Daten definieren möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -350,17 +350,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Ein eindeutiger, beschreibender Name für das Geheimnis. |
-| `type_of` | Der Typ der Authentifizierungsberechtigung, den das Geheimnis darstellt. Hat drei akzeptierte Werte:<ul><li>`token`: Eine Tokenzeichenfolge.</li><li>`simple-http`: Ein Benutzername und ein Kennwort.</li><li>`oauth2`: Anmeldedaten, die dem OAuth-Standard entsprechen.</li></ul> |
-| `credentials` | Ein Objekt, das die Berechtigungswerte für das Geheimnis enthält. Je nach `type_of` -Attribut, müssen andere Eigenschaften angegeben werden. Siehe Abschnitt über [Anmeldedaten](../guides/secrets.md#credentials) im Leitfaden &quot;Geheimnisse&quot; Einzelheiten zu den Anforderungen für jeden Typ. |
-| `relationships.environment` | Jedes Geheimnis muss einer Umgebung zugeordnet sein, wenn es zum ersten Mal erstellt wird. Die `data` Objekt in dieser Eigenschaft muss Folgendes enthalten: `id` der Umgebung, der das Geheimnis zugewiesen wurde, zusammen mit `type` Wert von `environments`. |
-| `type` | Der Typ der zu erstellenden Ressource. Für diesen Aufruf muss der Wert `secrets`. |
+| `name` | Ein eindeutiger, beschreibender Name für die geheimen Daten. |
+| `type_of` | Der Typ der Authentifizierungsberechtigung, die die geheimen Daten darstellt. Hat drei akzeptierte Werte:<ul><li>`token`: Eine Token-Zeichenfolge.</li><li>`simple-http`: Ein Benutzername und ein Kennwort.</li><li>`oauth2`: Anmeldeinformationen, die dem OAuth-Standard entsprechen.</li></ul> |
+| `credentials` | Ein Objekt, das die Werte der Anmeldeinformationen für die geheimen Daten enthält. Je nach `type_of`-Attribut müssen verschiedene Eigenschaften angegeben werden. Im Abschnitt zu [Anmeldeinformationen](../guides/secrets.md#credentials) des Handbuchs zu geheimen Daten finden Sie Einzelheiten zu den Anforderungen für die einzelnen Typen. |
+| `relationships.environment` | Geheime Daten müssen bei der ersten Erstellung jeweils einer Umgebung zugeordnet werden. Das `data`-Objekt in dieser Eigenschaft muss die `id` der Umgebung, der die geheimen Daten zugewiesen werden, zusammen mit einem `type`-Wert von `environments` enthalten. |
+| `type` | Der Typ der zu erstellenden Ressource. Für diesen Aufruf muss der Wert `secrets` lauten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Geheimnisses zurück. Beachten Sie, dass je nach Geheimtyp einige Eigenschaften unter `credentials` kann ausgeblendet werden.
+Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück. Beachten Sie, dass je nach Art der geheimen Daten einige Eigenschaften unter `credentials` ausgeblendet sein können.
 
 ```json
 {
@@ -416,13 +416,13 @@ Eine erfolgreiche Antwort gibt die Details des Geheimnisses zurück. Beachten Si
 }
 ```
 
-## Testen `oauth2` geheim {#test}
+## Testen von geheimen Daten des Typs `oauth2` {#test}
 
 >[!NOTE]
 >
->Dieser Vorgang kann nur für Geheimnisse durchgeführt werden mit `type_of` Wert von `oauth2`.
+>Dieser Vorgang kann nur für geheime Daten mit einem `type_of`-Wert von `oauth2` ausgeführt werden.
 
-Sie können `oauth2` geheim, indem die ID in den Pfad einer PATCH-Anfrage aufgenommen wird. Der Testvorgang führt einen Austausch durch und beinhaltet die Antwort des Autorisierungsdienstes in `test_exchange` -Attribut im geheimen `meta` Objekt. Dieser Vorgang aktualisiert das Geheimnis selbst nicht.
+Sie können geheime Daten vom Typ `oauth2` testen, indem Sie ihre ID(s) im Pfad einer PATCH-Anfrage angeben. Der Testvorgang führt einen Austausch durch und schließt die Antwort des Autorisierungsdienstes in das Attribut `test_exchange` im `meta`-Objekt der geheimen Daten ein. Dieser Vorgang aktualisiert nicht die geheimen Daten selbst.
 
 **API-Format**
 
@@ -432,7 +432,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID der `oauth2` geheim, das Sie testen möchten. |
+| `{SECRET_ID}` | Die ID der geheimen Daten vom Typ `oauth2`, die Sie testen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -462,16 +462,16 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Muss Folgendes enthalten: `type_of` Eigenschaft mit einem Wert von `oauth2`. |
-| `meta` | Muss eine `action` Eigenschaft mit einem Wert von `test`. |
-| `id` | Die ID des Geheimtitels, das Sie testen. Diese muss mit der im Anfragepfad angegebenen ID übereinstimmen. |
-| `type` | Die Art der Ressource, auf der gearbeitet wird. Muss auf `secrets` festgelegt werden. |
+| `attributes` | Muss eine `type_of`-Eigenschaft mit dem Wert `oauth2` enthalten. |
+| `meta` | Muss eine `action`-Eigenschaft mit dem Wert `test` enthalten. |
+| `id` | Die ID der geheimen Daten, die Sie testen. Diese sollte mit der ID übereinstimmen, der im Anfragepfad angegeben ist. |
+| `type` | Der Typ der Ressource, für die der Vorgang ausgeführt wird. Muss auf `secrets` festgelegt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details des geheimen Geheims zurückgegeben, wobei die Antwort des Autorisierungsdienstes unter `meta.test_exchange`.
+Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück, wobei die Antwort des Autorisierungsdienstes unter `meta.test_exchange` enthalten ist.
 
 ```json
 { 
@@ -537,9 +537,9 @@ Bei einer erfolgreichen Antwort werden die Details des geheimen Geheims zurückg
 }
 ```
 
-## Geheimnis erneut versuchen {#retry}
+## Wiederholen von geheimen Daten {#retry}
 
-Ein Geheimnis erneut zu versuchen ist die Handauslösung des geheimen Austausches. Sie können ein Geheimnis erneut versuchen, indem Sie seine ID in den Pfad einer PATCH-Anforderung einschließen.
+Das Wiederholen von geheimen Daten ist die Aktion, den Austausch der geheimen Daten manuell auszulösen. Sie können geheime Daten neu testen, indem Sie ihre ID im Pfad einer PATCH-Anfrage angeben.
 
 **API-Format**
 
@@ -549,7 +549,7 @@ PATCH /secrets/{SECRET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID des geheimen Bereichs, das Sie erneut versuchen möchten. |
+| `{SECRET_ID}` | Die ID der geheimen Daten, die Sie neu testen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -579,16 +579,16 @@ curl -X PATCH \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `attributes` | Muss Folgendes enthalten: `type_of` Eigenschaft, die mit der des zu aktualisierenden geheimen Bereichs übereinstimmt (`token`, `simple-http`oder `oauth2`). |
-| `meta` | Muss eine `action` Eigenschaft mit einem Wert von `retry`. |
-| `id` | Die ID des Geheimtitels, das Sie erneut versuchen. Diese muss mit der im Anfragepfad angegebenen ID übereinstimmen. |
-| `type` | Die Art der Ressource, auf der gearbeitet wird. Muss auf `secrets` festgelegt werden. |
+| `attributes` | Muss eine `type_of`-Eigenschaft enthalten, die mit der der zu aktualisierenden geheimen Daten übereinstimmt (`token`, `simple-http` oder `oauth2`). |
+| `meta` | Muss eine `action`-Eigenschaft mit dem Wert `retry` enthalten. |
+| `id` | Die ID der geheimen Daten, die Sie erneut testen. Diese sollte mit der ID übereinstimmen, der im Anfragepfad angegeben ist. |
+| `type` | Der Typ der Ressource, für die der Vorgang ausgeführt wird. Muss auf `secrets` festgelegt werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des geheimen Geheims zurück, wobei der Status zurückgesetzt wird auf `pending`. Nach Abschluss des Austausches wird der geheime Status auf aktualisiert auf `succeeded` oder `failed` je nach Ergebnis.
+Eine erfolgreiche Antwort gibt die Details der geheimen Daten zurück, wobei der Status auf `pending` zurückgesetzt wird. Nach Abschluss des Austausches wird der Status der geheimen Daten je nach Ergebnis auf `succeeded` oder `failed` gesetzt.
 
 ```json
 {
@@ -643,15 +643,15 @@ Eine erfolgreiche Antwort gibt die Details des geheimen Geheims zurück, wobei d
 }
 ```
 
-## Geheimnis löschen {#delete}
+## Löschen von geheimen Daten {#delete}
 
-Sie können ein Geheimnis löschen, indem Sie dessen ID in den Pfad einer DELETE-Anforderung einschließen. Dies ist ein schwerer Löschvorgang mit sofortiger Wirkung und erfordert keine erneute Veröffentlichung der Bibliothek.
+Sie können geheime Daten löschen, indem Sie ihre ID im Pfad einer DELETE-Anfrage angeben. Dies ist ein harter Löschvorgang mit sofortiger Wirkung und erfordert keine erneute Veröffentlichung der Bibliothek.
 
-Dieser Vorgang entfernt das Geheimnis aus der Umgebung, auf die es sich bezieht, und die zugrunde liegende Ressource wird gelöscht.
+Dieser Vorgang entfernt die geheimen Daten aus der Umgebung, mit der sie verbunden sind, und die zugrunde liegende Ressource wird gelöscht.
 
 >[!WARNING]
 >
->Wenn Sie über bereitgestellte Regeln verfügen, die auf ein gelöschtes Geheimnis verweisen, funktionieren diese Regeln sofort nicht mehr. Alle Datenelemente, die auf dieses Geheimnis verweisen, müssen nachträglich aktualisiert oder entfernt werden.
+>Wenn Sie über bereitgestellte Regeln verfügen, die auf gelöschte geheime Daten verweisen, funktionieren diese Regeln ab sofort nicht mehr. Alle Datenelemente, die auf diese geheimen Daten verweisen, müssen nachträglich aktualisiert oder entfernt werden.
 
 **API-Format**
 
@@ -661,7 +661,7 @@ DELETE /secrets/{SECRET_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID des geheimen Rahmens, den Sie löschen möchten. |
+| `{SECRET_ID}` | Die ID der geheimen Daten, die Sie löschen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -679,17 +679,17 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und einen leeren Antworttext zurück, was darauf hinweist, dass das Geheimnis aus dem System gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und einen leeren Antworttext zurück, was angibt, dass die geheimen Daten aus dem System gelöscht wurden.
 
-## Liste der geheimen Hinweise {#notes}
+## Auflisten der Anmerkungen für geheime Daten {#notes}
 
-Die Reactor-API ermöglicht das Hinzufügen von Notizen zu bestimmten Ressourcen, einschließlich Geheimnissen. Hinweise sind Textkommentare, die sich nicht auf das Ressourcenverhalten auswirken und für eine Vielzahl von Anwendungsfällen verwendet werden können.
+Mit der Reactor-API können Sie zu bestimmten Ressourcen Anmerkungen hinzufügen, darunter auch zu geheimen Daten. Anmerkungen sind Kommentare in Textform, die sich nicht auf das Ressourcenverhalten auswirken und für verschiedene Anwendungsfälle verwendet werden können.
 
 >[!NOTE]
 >
->Siehe [Hinweis-Endpunkt-Handbuch](./notes.md) für Details zum Erstellen und Bearbeiten von Notizen für Reactor-API-Ressourcen.
+>Siehe das [Handbuch zum Anmerkungen-Endpunkt](./notes.md) für Details zum Erstellen und Bearbeiten von Anmerkungen für Reactor-API-Ressourcen.
 
-Sie können alle geheimen Hinweise abrufen, indem Sie eine GET anfordern.
+Sie können alle Hinweise zu geheimen Daten abrufen, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -699,7 +699,7 @@ GET /secrets/{SECRET_ID}/notes
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID des Geheimtitels, dessen Notizen Sie Liste wünschen. |
+| `{SECRET_ID}` | Die ID der geheimen Daten, deren Anmerkungen Sie auflisten möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -717,7 +717,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Notizen, die dem Geheimnis gehören.
+Eine erfolgreiche Antwort gibt eine Liste von Hinweisen zurück, die zu den geheimen Daten gehören.
 
 ```json
 {
@@ -760,15 +760,15 @@ Eine erfolgreiche Antwort gibt eine Liste von Notizen, die dem Geheimnis gehöre
 }
 ```
 
-## Zugehörige Ressourcen für ein Geheimnis abrufen {#related}
+## Abrufen zugehöriger Ressourcen für geheime Daten {#related}
 
-Die folgenden Aufrufe zeigen, wie die zugehörigen Ressourcen für ein Geheimnis abgerufen werden. Wann [Geheimnis nachschlagen](#lookup), werden diese Beziehungen unter `relationships` Eigenschaft.
+Die folgenden Aufrufe zeigen, wie Sie die zugehörigen Ressourcen für geheime Daten abrufen. Beim [Nachschlagen geheimer Daten](#lookup) werden diese Beziehungen unter der `relationships`-Eigenschaft aufgeführt.
 
 Weitere Informationen zu Beziehungen in der Reactor-API finden Sie im [Handbuch zu Beziehungen](../guides/relationships.md).
 
-### Die zugehörige Umgebung nach einem Geheimnis suchen {#environment}
+### Suchen der zugehörigen Umgebung von geheimen Daten {#environment}
 
-Sie können die Umgebung nachschlagen, die ein Geheimnis verwendet, indem Sie anhängen `/environment` zum Pfad einer GET.
+Sie können die Umgebung nachschlagen, die geheime Daten verwenden, indem Sie `/environment` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -778,7 +778,7 @@ GET /secrets/{SECRET_ID}/environment
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID des Geheimtitels, dessen Umgebung Sie nachschlagen möchten. |
+| `{SECRET_ID}` | Die ID der geheimen Daten, deren Umgebung Sie nachschlagen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -875,9 +875,9 @@ Eine erfolgreiche Antwort gibt die Details der Umgebung zurück.
 }
 ```
 
-### Verwandte Eigenschaft für ein Geheimnis nachschlagen {#property}
+### Nachschlagen der zugehörigen Eigenschaft für geheime Daten {#property}
 
-Sie können die Eigenschaft nachschlagen, der ein Geheimnis gehört, indem Sie anhängen `/property` zum Pfad einer GET.
+Sie können die Eigenschaft nachschlagen, zu der eine Bibliothek gehört, indem Sie `/property` an den Pfad einer GET-Anfrage anhängen.
 
 **API-Format**
 
@@ -887,7 +887,7 @@ GET /secrets/{SECRET_ID}/property
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{SECRET_ID}` | Die ID des geheimen Elements, dessen Eigenschaft Sie nachschlagen möchten. |
+| `{SECRET_ID}` | Die ID der geheimen Daten, deren Eigenschaft Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
