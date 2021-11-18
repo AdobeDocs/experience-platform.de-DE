@@ -3,9 +3,9 @@ title: Beziehungen in der Reactor-API
 description: Lernen Sie, wie Ressourcenbeziehungen in der Reactor-API hergestellt werden, einschließlich der Beziehungsanforderungen für jede Ressource.
 exl-id: 23976978-a639-4eef-91b6-380a29ec1c14
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '807'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -151,7 +151,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `property` | ✓ |  |  |
-| `entity` | Ar |  |  |
+| `entity` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -162,9 +162,9 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | `data_elements` |  |  |  |
 | `extensions` |  |  |  |
 | `rules` |  |  |  |
-| `environment` | Ar |  |  |
-| `library` | Ar |  |  |
-| `property` | Ar |  |  |
+| `environment` | ✓ |  |  |
+| `library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -172,7 +172,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | Ar |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -189,13 +189,13 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | Ar |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | Ar |  |  |
-| `origin` | Ar |  |  |
-| `extension` | Ar | Ar |  |
-| `updated_with_extension` | Ar |  |  |
-| `updated_with_extension_package` | Ar |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
+| `updated_with_extension` | ✓ |  |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -205,8 +205,8 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | :--- | :---: | :---: | :---: |
 | `library` |  |  |  |
 | `builds` |  |  |  |
-| `host` | Ar | Ar |  |
-| `property` | Ar |  |  |
+| `host` | ✓ | ✓ |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -215,12 +215,12 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | Ar |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | Ar |  |  |
-| `origin` | Ar |  |  |
-| `extension_package` | Ar | Ar |  |
-| `updated_with_extension_package` | Ar |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
+| `extension_package` | ✓ | ✓ |  |
+| `updated_with_extension_package` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -228,7 +228,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | Ar |  |  |
+| `property` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -237,13 +237,13 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `builds` |  |  |  |
-| `environment` |  |  | Ar |
-| `data_elements` |  |  | Ar |
-| `extensions` |  |  | Ar |
-| `rules` |  |  | Ar |
+| `environment` |  |  | ✓ |
+| `data_elements` |  |  | ✓ |
+| `extensions` |  |  | ✓ |
+| `rules` |  |  | ✓ |
 | `notes` |  |  |  |
-| `upstream_library` | Ar |  |  |
-| `property` | Ar |  |  |
+| `upstream_library` | ✓ |  |  |
+| `property` | ✓ |  |  |
 | `last_build` |  |  |  |
 
 {style=&quot;table-layout:auto&quot;}
@@ -252,7 +252,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `resource` | Ar |  |  |
+| `resource` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -260,7 +260,7 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `company` | Ar |  |  |
+| `company` | ✓ |  |  |
 | `callbacks` |  |  |  |
 | `environments` |  |  |  |
 | `libraries` |  |  |  |
@@ -270,18 +270,18 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 
 {style=&quot;table-layout:auto&quot;}
 
-### Regel  Komponenten
+### Regel Komponenten
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `updated_with_extensions_package` | Ar |  |  |
-| `updated_with_extension` | Ar |  |  |
-| `extension` | Ar | Ar |  |
+| `updated_with_extensions_package` | ✓ |  |  |
+| `updated_with_extension` | ✓ |  |  |
+| `extension` | ✓ | ✓ |  |
 | `notes` |  |  |  |
-| `origin` | Ar |  |  |
-| `property` | Ar |  |  |
-| `rules` | Ar | Ar |  |
-| `revisions` | Ar |  |  |
+| `origin` | ✓ |  |  |
+| `property` | ✓ |  |  |
+| `rules` | ✓ | ✓ |  |
+| `revisions` | ✓ |  |  |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -290,16 +290,16 @@ In den folgenden Tabellen werden die verfügbaren Beziehungen für jeden Ressour
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
 | `libraries` |  |  |  |
-| `revisions` | Ar |  |  |
+| `revisions` | ✓ |  |  |
 | `notes` |  |  |  |
-| `property` | Ar |  |  |
-| `origin` | Ar |  |  |
+| `property` | ✓ |  |  |
+| `origin` | ✓ |  |  |
 | `rule_components` |  |  |  |
 
-### Geheimnisse
+### Geheime Daten
 
 | Beziehung | Erforderlich | Erstellen nach Payload | Erstellen nach URL |
 | :--- | :---: | :---: | :---: |
-| `property` | Ar |  | Ar |
-| `environment` | Ar | Ar |  |
+| `property` | ✓ |  | ✓ |
+| `environment` | ✓ | ✓ |  |
 
