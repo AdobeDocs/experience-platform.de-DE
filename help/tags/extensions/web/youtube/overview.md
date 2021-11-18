@@ -3,7 +3,7 @@ title: YouTube Video Tracking-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „YouTube Video Tracking“ in Adobe Experience Platform vertraut.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
 source-git-commit: bbaf272313d5a8afe33178598063164792f4d8c0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
 ht-degree: 100%
 
@@ -23,7 +23,7 @@ Für jede Tag-Eigenschaft in Adobe Experience Platform müssen die folgenden Erw
 * Experience Cloud-Besucher-ID-Service
 * Haupterweiterung
 
-Verwenden Sie das Code-Fragment [Embed a player using an \&lt;iframe\> tag](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) aus den Google-Entwicklerdokumenten im HTML-Code jeder Web-Seite, auf der ein Video-Player gerendert werden soll.
+Verwenden Sie das Code-Fragment [Embed a player using an &lt;iframe\> tag](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) aus den Google-Entwicklerdokumenten im HTML-Code jeder Web-Seite, auf der ein Video-Player gerendert werden soll.
 
 Die Erweiterungsversion 2.0.1 unterstützt das Einbetten eines oder mehrerer YouTube-Videos auf einer einzelnen Website, indem ein `id`-Attribut mit einem eindeutigen Wert im iframe-Skript-Tag eingefügt und `enablejsapi=1` und `rel=0` an das Ende des `src`-Attributwerts angehängt werden, falls dies noch nicht der Fall ist. Beispiel:
 
@@ -86,7 +86,7 @@ Die folgenden Video-Erweiterungsobjekte sind einzuschließen.
 
 * **Bedingung**: Keine
 
-* **Aktionen**:   Verwenden Sie die **Analytics-Erweiterung** für die Aktion „Variablen festlegen“, um Folgendes zuzuordnen:
+* **Aktionen**: Verwenden Sie die **Analytics-Erweiterung** für die Aktion „Variablen festlegen“, um Folgendes zuzuordnen:
 
    * Das Ereignis für Videostart,
    * Eine prop/eVar für das Datenelement „Videodauer“
