@@ -4,44 +4,46 @@ title: Feld für allgemeine Marketing-Voreinstellungen mit Abonnementdatentyp
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über das Feld "Allgemeine Marketing-Voreinstellung"mit dem XDM-Datentyp "Abonnements".
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: bd312024a1a3fb6da840a38d6e9d19fcbd6eab5a
+source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 3%
+source-wordcount: '870'
+ht-degree: 2%
 
 ---
 
-# [!UICONTROL Generisches Feld für Marketing-Voreinstellungen mit Datentyp ] Abonnements
+# [!UICONTROL Allgemeines Marketing-Präferenzfeld mit Abonnements] Datentyp
 
-[!UICONTROL Generisches Feld für Marketing-Voreinstellungen mit ] Abonnements ist ein standardmäßiger XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Marketing-Voreinstellung beschreibt.
+[!UICONTROL Allgemeines Marketing-Präferenzfeld mit Abonnements] ist ein standardmäßiger XDM-Datentyp, der die Auswahl eines Kunden für eine bestimmte Marketing-Voreinstellung beschreibt.
 
 >[!NOTE]
 >
->Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Feldergruppe [[!UICONTROL Einverständnisse und Voreinstellungen]](../field-groups/profile/consents.md) als Grundlinie anzupassen.
+>Dieser Datentyp soll verwendet werden, um die Struktur der Einwilligungsschemas Ihres Unternehmens mithilfe der Variablen [[!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe](../field-groups/profile/consents.md) als Grundlinie.
 >
->Wenn Sie für ein bestimmtes Marketing-Voreinstellungsfeld keine `subscriptions`-Zuordnung benötigen, können Sie stattdessen den [grundlegenden Marketing-Felddatentyp](./marketing-field.md) verwenden.
+>Wenn Sie keine `subscriptions` Zuordnung für ein bestimmtes Marketing-Präferenzfeld verwenden Sie die [Datentyp für grundlegende Marketing-Felder](./marketing-field.md) anstatt.
 
 ![](../images/data-types/marketing-field-subscriptions.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `reason` | Zeichenfolge | Wenn ein Kunde einen Marketing-Anwendungsfall ablehnt, stellt dieses Zeichenfolgenfeld den Grund dar, warum der Kunde sich abgemeldet hat. |
-| `subscriptions` | Zuordnung | Eine Karte der Marketing-Voreinstellungen von Kunden für bestimmte Abonnements. Weitere Informationen finden Sie im Abschnitt [Abonnements](#subscriptions) . |
+| `subscriptions` | Zuordnung | Eine Karte der Marketing-Voreinstellungen von Kunden für bestimmte Abonnements. Siehe Abschnitt zu [subscriptions](#subscriptions) für weitere Informationen. |
 | `time` | DateTime | Ein ISO 8601-Zeitstempel, mit dem die Marketing-Voreinstellung geändert wurde (falls zutreffend). |
-| `val` | Zeichenfolge | Die vom Kunden bereitgestellte bevorzugte Auswahl für diesen Marketing-Anwendungsfall. Akzeptierte Werte und Definitionen finden Sie im [nächsten Abschnitt](#val) . |
+| `val` | Zeichenfolge | Die vom Kunden bereitgestellte bevorzugte Auswahl für diesen Marketing-Anwendungsfall. Siehe [nächster Abschnitt](#val) für akzeptierte Werte und Definitionen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## `val` {#val}
 
-In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
+In der folgenden Tabelle sind die für `val`:
 
 | Wert | Titel | Beschreibung |
 | --- | --- | --- |
-| `y` | Ja | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie stimmen **do** der Verwendung ihrer Daten zu, wie durch die betreffende Voreinstellung angegeben. |
-| `n` | Nein | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **stimmen nicht** der Verwendung ihrer Daten zu, wie durch die betreffende Voreinstellung angegeben. |
-| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` gesetzt, bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat. Anschließend wird die Zustimmung auf `y` aktualisiert.<br><br>Wenn diese Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, kann die  `p` Auswahl stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einwilligungsaufforderung reagiert hat. Sie können beispielsweise den Wert auf `p` automatisch auf der ersten Seite einer Website festlegen, bevor der Kunde auf die Einverständnisaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
+| `y` | Ja (Opt-in) | Der Kunde hat sich für die Präferenz entschieden. Mit anderen Worten, sie **do** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Präferenz angegeben. |
+| `n` | Nein (Opt-out) | Der Kunde hat sich gegen die Präferenz entschieden. Mit anderen Worten, sie **nicht** Zustimmung zur Verwendung ihrer Daten, wie durch die betreffende Präferenz angegeben. |
+| `p` | Ausstehende Überprüfung | Das System hat noch keinen endgültigen Präferenzwert erhalten. Dies wird meist im Rahmen einer Zustimmung verwendet, die eine zweistufige Überprüfung erfordert. Wenn sich ein Kunde beispielsweise für den Erhalt von E-Mails entscheidet, wird diese Zustimmung auf `p` bis er einen Link in einer E-Mail auswählt, um zu überprüfen, ob er die richtige E-Mail-Adresse angegeben hat; an diesem Punkt würde die Zustimmung auf `y`.<br><br>Wenn diese Voreinstellung keinen zweistufigen Überprüfungsprozess verwendet, wird die `p` choice kann stattdessen verwendet werden, um anzugeben, dass der Kunde noch nicht auf die Einverständnisaufforderung reagiert hat. Sie können beispielsweise den Wert automatisch auf `p` auf der ersten Seite einer Website, bevor der Kunde auf die Einwilligungsaufforderung reagiert hat. In Rechtsordnungen, die keine ausdrückliche Zustimmung erfordern, können Sie damit auch angeben, dass der Kunde sich nicht ausdrücklich abgemeldet hat (d. h., die Zustimmung wird angenommen). |
 | `u` | „Unbekannt“ | Die Präferenzinformationen des Kunden sind unbekannt. |
+| `dy` | Standardwert Ja (Opt-in) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-in (&quot;Ja&quot;) behandelt. Mit anderen Worten, die Zustimmung wird angenommen, bis der Kunde etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |
+| `dn` | Standardwert Nein (Opt-out) | Der Kunde hat selbst keinen Zustimmungswert angegeben und wird standardmäßig als Opt-out (&quot;Nein&quot;) behandelt. Mit anderen Worten, es wird angenommen, dass der Kunde die Zustimmung verweigert hat, bis er etwas Anderes angibt.<br><br>Beachten Sie, dass Sie alle Profile, die Standardwerte enthalten, manuell aktualisieren müssen, wenn die Datenschutzrichtlinien Ihres Unternehmens Änderungen an den Standardeinstellungen einiger oder aller Benutzer zur Folge haben. |
 | `LI` | Rechtliches Interesse | Das berechtigte geschäftliche Interesse, diese Daten für den angegebenen Zweck zu sammeln und zu verarbeiten, überwiegt den potenziellen Schaden, den sie für die Person darstellt. |
 | `CT` | Vertrag | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um vertragliche Verpflichtungen mit der Person zu erfüllen. |
 | `CP` | Erfüllung einer rechtlichen Verpflichtung | Die Erhebung von Daten für den angegebenen Zweck ist erforderlich, um die rechtlichen Verpflichtungen des Unternehmens zu erfüllen. |
@@ -54,7 +56,7 @@ In der folgenden Tabelle sind die für `val` zulässigen Werte aufgeführt:
 
 Einige Unternehmen ermöglichen es Kunden, sich für verschiedene Abonnements zu entscheiden, die mit einem bestimmten Marketing-Kanal verknüpft sind. Ein Bankunternehmen kann beispielsweise Kunden gestatten, Telefonwarnungen für überzogene Konten zu abonnieren oder Verkaufsanrufe für Treueprogramm-Angebote zu erhalten.
 
-Die folgende JSON-Datei stellt ein Beispiel-Marketing-Feld für einen Marketing-Kanal für Telefonanrufe dar, der eine `subscriptions` -Zuordnung enthält. Jeder Schlüssel im `subscriptions` -Objekt stellt ein individuelles Abonnement für den Marketing-Kanal dar. Jedes Abonnement enthält wiederum einen Opt-in-Wert (`val`).
+Die folgende JSON stellt ein Beispiel für ein Marketing-Feld für einen Marketing-Kanal für Telefonanrufe dar, der einen `subscriptions` map. Jeder Schlüssel im `subscriptions` -Objekt stellt ein individuelles Abonnement für den Marketing-Kanal dar. Jedes Abonnement enthält einen Opt-in-Wert (`val`).
 
 ```json
 "phone-marketing-field": {
