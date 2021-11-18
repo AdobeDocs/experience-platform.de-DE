@@ -2,9 +2,9 @@
 title: Marketo Engage-Ziel
 description: Marketo Engage ist die einzige End-to-End-Lösung für Customer Experience Management (CXM) für Marketing, Werbung, Analyse und Handel. Damit können Sie Aktivitäten von der CRM-Lead-Verwaltung über die Kundeninteraktion bis hin zur kontobasierten Marketing- und Umsatzzuordnung automatisieren und verwalten.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 9c5a5a49385baa7377ebdc806fd22918c39ad0b2
+source-git-commit: 05b97e8bdeb4ffb81a4a671d282d0d8ebc7e870a
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -35,6 +35,14 @@ Segmentexport: Sie exportieren alle Segmentmitglieder (Zielgruppe) mit den IDs (
 ## Einrichten des Ziels und Aktivieren von Segmenten {#set-up}
 
 Detaillierte Anweisungen zum Einrichten des Ziels und Aktivieren von Segmenten finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste pushen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in der Marketo-Dokumentation.
+
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines Marketo-Ziels und zum Aktivieren von Segmenten.
+
+>[!NOTE]
+>
+>Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im oben stehenden Handbuch.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 <!--
 
