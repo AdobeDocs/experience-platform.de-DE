@@ -3,9 +3,9 @@ title: Notes-Endpunkt
 description: Erfahren Sie, wie Sie den /notes-Endpunkt in der Reactor-API abrufen.
 exl-id: fa3bebc0-215e-4515-87b9-d195c9ab76c1
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '527'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -27,9 +27,9 @@ Anmerkungen können auf die folgenden Ressourcen angewendet werden:
 * [Erweiterungen](./extensions.md)
 * [Bibliotheken](./libraries.md)
 * [Eigenschaften](./properties.md)
-* [Regel  Komponenten](./rule-components.md)
+* [Regel Komponenten](./rule-components.md)
 * [Regeln](./rules.md)
-* [Geheimnisse](./secrets.md)
+* [Geheime Daten](./secrets.md)
 
 Diese sechs Typen sind Ressourcen, die mit Anmerkungen versehen werden können. Wenn Ressource, die mit Anmerkungen versehen werden kann, gelöscht wird, werden auch die zugehörigen Anmerkungen gelöscht.
 
