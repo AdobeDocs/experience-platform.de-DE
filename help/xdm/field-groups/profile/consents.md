@@ -4,9 +4,9 @@ title: Einverständnis und Voreinstellungsfeldgruppe
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Einwilligungen und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: d2c71423165776bf7c106a7503514c5acc284f8e
+source-git-commit: 6caece867afe3e6f3fd323843b753cce2319623c
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Die [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe stellt ein ei
 >
 >Siehe Handbuch unter [Erkunden von XDM-Ressourcen](../../ui/explore.md) zu finden, wie Sie eine beliebige XDM-Ressource nachschlagen und ihre Struktur in der Platform-Benutzeroberfläche überprüfen können.
 
-Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICONTROL Einverständnis und Voreinstellungen] -Feldergruppe kann verarbeitet werden. Informationen zur spezifischen Verwendung dieser Felder finden Sie in den folgenden Abschnitten.
+Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICONTROL Einverständnis und Voreinstellungen] -Feldergruppe kann verarbeitet werden. Informationen zur Verwendung der meisten von der Feldergruppe bereitgestellten Felder finden Sie im Handbuch im [Datentyp &quot;Einwilligungen und Voreinstellungen&quot;](../../data-types/consents.md). Die folgenden Unterabschnitte konzentrieren sich auf die eindeutigen Attribute, die die Feldergruppe zum Datentyp hinzufügt.
 
 ```json
 {
@@ -96,8 +96,6 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 >* [Generieren von Beispieldaten in der Benutzeroberfläche](../../ui/sample.md)
 >* [Beispieldaten in der API generieren](../../api/sample-data.md)
 
-
-Informationen zur Verwendung der meisten von der Feldergruppe bereitgestellten Felder finden Sie im Handbuch im [Datentyp &quot;Einwilligungen und Voreinstellungen&quot;](../../data-types/consents.md). Die folgenden Unterabschnitte konzentrieren sich auf die eindeutigen Attribute, die die Feldergruppe zum Datentyp hinzufügt.
 
 ### `idSpecific`
 
