@@ -3,9 +3,9 @@ title: Handbuch zur Reactor-API
 description: Mit der Reactor-API können Entwickler alle Ressourcen für Tags in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1082'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ Regeln steuern das Verhalten der Ressourcen, die in einer bereitgestellten Bibli
 
 Informationen zum Verwalten von Regeln in der API finden Sie im [Handbuch zum rules-Endpunkt](./endpoints/rules.md).
 
-## Regel  Komponenten
+## Regel Komponenten
 
 Regelkomponenten sind die einzelnen Elemente, aus denen eine Regel besteht. Regelkomponenten haben drei grundlegende Typen:
 
@@ -115,9 +115,9 @@ Weitere Informationen zum Anzeigen dieser Informationen in der API finden Sie im
 
 Der `/search`-Endpunkt bietet eine Möglichkeit, Ressourcen zu finden, die den gewünschten Kriterien entsprechen und als Abfrage ausgedrückt werden. Alle Abfragen beziehen sich auf Ihr aktuelles Unternehmen und auf verfügbare Eigenschaften. Weitere Informationen zur Verwendung dieser Funktion finden Sie im [Handbuch zum search-Endpunkt](./endpoints/search.md).
 
-## Geheimnisse
+## Geheime Daten
 
-Ein geheimer Schlüssel enthält Anmeldedaten, mit denen sich das Ereignis für den sicheren Datenaustausch an ein anderes System authentifizieren kann. Siehe [Geheimtipp](./guides/secrets.md) für einen Überblick über die Funktionsweise von Geheimnissen in der Weiterleitung von Ereignissen und [Secrets-Endpunkt-Leitfaden](./endpoints/secrets.md) um zu erfahren, wie sie in der Reactor-API verwaltet werden.
+Geheime Daten enthalten Anmeldeinformationen, mit denen sich die Ereignisweiterleitung für einen sicheren Datenaustausch bei einem anderen System authentifizieren kann. Im [Handbuch zu geheimen Daten](./guides/secrets.md) finden Sie einen Überblick darüber, wie geheime Daten in der Ereignisweiterleitung funktionieren. Zudem erhalten Sie im [Endpunktleitfaden für geheime Daten](./endpoints/secrets.md) weitere Informationen darüber, wie Sie geheime Daten in der Reactor-API verwalten.
 
 ## Nächste Schritte
 
