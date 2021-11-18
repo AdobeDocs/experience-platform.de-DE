@@ -8,7 +8,7 @@ exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
 workflow-type: tm+mt
 source-wordcount: '458'
-ht-degree: 52%
+ht-degree: 55%
 
 ---
 
@@ -30,11 +30,11 @@ Von Experience Platform bereitgestellte Datenerfassungstechnologien konzentriere
 * [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
-* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=de)
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-Dieses Handbuch bietet eine allgemeine Einführung in das Datenerfassungs-Framework und dessen Funktionsweise, Daten über das Platform Edge Network an Adobe Experience Cloud-Produkte und Nicht-Adobe-Anwendungen zu senden.
+Dieses Handbuch bietet eine allgemeine Einführung in das Datenerfassungs-Framework und dessen Funktionsweise, Daten über das Platform Edge Network an Adobe Experience Cloud-Produkte und Anwendungen ohne Adobe zu senden.
 
 ## Tags, Web SDK und Mobile SDK
 
