@@ -5,13 +5,13 @@ topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
 hide: true
 hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
+source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
 
 ---
-
 
 # Authentifizierungsspezifikationen für Quellen-SDK konfigurieren
 
@@ -180,7 +180,7 @@ Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilf
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `authSpec.name` | Zeigt den Namen des unterstützten Authentifizierungstyps an. | `Basic Authentication` |
-| `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `oAuth2-refresh-code` |
+| `authSpec.type` | Definiert den Authentifizierungstyp, der von der Quelle unterstützt wird. | `BasicAuthentication` |
 | `authSpec.spec` | Enthält Informationen zum Schema, Datentyp und Eigenschaften der Authentifizierung. |
 | `authSpec.spec.$schema` | Definiert das für die Authentifizierung verwendete Schema. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Definiert den Datentyp des Schemas. | `object` |
