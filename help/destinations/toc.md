@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: a01730fce4f7746389fc48e700c259567492d0ee
+source-git-commit: 320c95f894c75a7f52808730b0cac4bc1e4411e1
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '680'
 ht-degree: 42%
 
 ---
@@ -36,7 +36,6 @@ ht-degree: 42%
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
-   * [ (Alpha) HTTP-Verbindung](./catalog/http-destination.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
@@ -132,6 +131,8 @@ ht-degree: 42%
       * [Facebook-Verbindung](./catalog/social/facebook.md)
       * [Verbindung zwischen linkedIn Matched Audiences](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+   * Streaming-Ziele {#streaming}
+      * [ (Beta) HTTP-API-Verbindung](./catalog/streaming/http-destination.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
       * [Foresee-Erweiterungsziel](./catalog/survey/foresee.md)
