@@ -5,10 +5,10 @@ seo-title: Frequently asked questions
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 11%
+source-wordcount: '781'
+ht-degree: 10%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 11%
 
 ## Übersicht {#overview}
 
-Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform-Zielen. Fragen und Antworten zur Fehlerbehebung bei anderen [!DNL Platform]-Diensten, einschließlich der bei allen [!DNL Platform]-APIs aufgetretenen Probleme, finden Sie im [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
+Dieses Dokument enthält Antworten auf häufig gestellte Fragen zu Adobe Experience Platform-Zielen. Für Fragen und Fehlerbehebung im Zusammenhang mit anderen [!DNL Platform] Dienste, einschließlich der in allen [!DNL Platform] APIs, siehe [Handbuch zur Fehlerbehebung bei Experience Platformen](../landing/troubleshooting.md).
 
 ## Allgemeine Fragen zu Zielen {#general}
 
@@ -26,73 +26,77 @@ Dies ist ein normales Verhalten aufgrund der Art und Weise, wie Experience Platf
 
 Streaming-Segmentierung aktualisiert die Profilanzahl für Streaming-Segmente über den ganzen Tag, während die Batch-Segmentierung die Profilanzahl für Batch-Segmente einmal alle 24 Stunden aktualisiert.
 
-Wenn sich der Zeitplan für den Segmentexport von dem der Segmentierungsplanung unterscheidet, unterscheiden sich die Profilzahlen zwischen der Benutzeroberfläche und der exportierten [!DNL CSV]-Datei, insbesondere bei Streaming-Segmenten.
+Wenn der Segmentexportzeitplan vom Segmentierungsplan abweicht, zählt das Profil zwischen der Benutzeroberfläche und dem exportierten [!DNL CSV] -Datei anders aussehen, insbesondere wenn es um Streaming-Segmente geht.
 
-Weitere Informationen finden Sie in der [Dokumentation zum Segmentation Service](../segmentation/home.md).
+Siehe [Dokumentation zum Segmentierungsdienst](../segmentation/home.md) für weitere Details.
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
-**Was muss ich tun, bevor ich Zielgruppen in aktivieren kann  [!DNL Facebook Custom Audiences]?**
+**Was muss ich tun, bevor ich Zielgruppen in aktivieren kann? [!DNL Facebook Custom Audiences]?**
 
 Bevor Sie Zielgruppensegmente an [!DNL Facebook] senden können, müssen Sie sicherstellen, dass Sie die folgenden Voraussetzungen erfüllen:
 
-* Für Ihr [!DNL Facebook]-Benutzerkonto muss die **[!DNL Manage campaigns]**-Berechtigung für das Werbekonto aktiviert sein, das Sie verwenden möchten.
-* Das Geschäftskonto **Adobe Experience Cloud** muss in Ihrem [!DNL Facebook Ad Account] als Werbepartner hinzugefügt werden. Verwenden Sie `business ID=206617933627973`. Weitere Informationen finden Sie unter [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Facebook-Dokumentation.
+* Ihre [!DNL Facebook] Das Benutzerkonto muss über Folgendes verfügen: **[!DNL Manage campaigns]** -Berechtigung für das Werbekonto aktiviert wurde, das Sie verwenden möchten.
+* Die **Adobe Experience Cloud** Geschäftskonto muss als Werbepartner in Ihrem [!DNL Facebook Ad Account]. Verwenden Sie `business ID=206617933627973`. Siehe [Partner zu Ihrem Business Manager hinzufügen](https://www.facebook.com/business/help/1717412048538897) in der Dokumentation zu Facebook .
    >[!IMPORTANT]
    >
    > Beim Konfigurieren der Berechtigungen für Adobe Experience Cloud müssen Sie die Berechtigung **Kampagnen verwalten** aktivieren. Dies ist für die [!DNL Adobe Experience Platform]-Integration erforderlich.
 * Lesen und unterschreiben Sie die [!DNL Facebook Custom Audiences]-Nutzungsbedingungen. Rufen Sie dazu `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]` auf, wobei `accountID` Ihre [!DNL Facebook Ad Account ID] ist.
 
-**Muss ich meinem  [!DNL Facebook] Advertiser-Konto Apps oder Pixel hinzufügen?**
+**Muss ich irgendwelche Apps oder Pixel zu meiner [!DNL Facebook] Advertiser-Konto?**
 
 Nein. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie Ihrem Advertiser-Konto keine Pixel hinzufügen.
 
 **Wie lange dauert die Verarbeitung von Informationen aus Adobe Experience Platform in Facebook?**
 
-Ab März 2021 benötigt [!DNL Facebook Custom Audiences] bis zu eine Stunde, um Informationen zu verarbeiten, die von [!DNL Platform] empfangen wurden.
+Seit März 2021 [!DNL Facebook Custom Audiences] benötigt bis zu eine Stunde, um die von erhaltenen Informationen zu verarbeiten [!DNL Platform].
 
-**Kann ich  [!DNL Facebook Custom Audiences] für Zielgruppen-Targeting in anderen  [!DNL Facebook] Apps verwenden, z. B.  [!DNL Instagram]?**
+**Kann ich [!DNL Facebook Custom Audiences] für Zielgruppen-Targeting in anderen [!DNL Facebook] Apps, wie [!DNL Instagram]?**
 
-Sie können das [!DNL Facebook Custom Audiences]-Ziel für Zielgruppen-Targeting in der Facebook-Familie von Apps verwenden, die von [!DNL Facebook Custom Audiences] unterstützt werden, einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] und [!DNL Messenger]. Die Auswahl der App, für die Advertiser Kampagnen ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager] angezeigt.
+Sie können die [!DNL Facebook Custom Audiences] Ziel für Zielgruppen-Targeting in der Facebook-Familie von Apps, die von [!DNL Facebook Custom Audiences], einschließlich [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network]und [!DNL Messenger]. Die Auswahl der App, für die Advertiser Kampagnen ausführen möchten, wird auf der Platzierungsebene in [!DNL Facebook Ads Manager].
 
-**Was ist der Unterschied zwischen der  [!DNL Facebook Custom Audiences] Verbindung und der  [!DNL Facebook Pixel] Erweiterung?**
+**Was ist der Unterschied zwischen dem [!DNL Facebook Custom Audiences] Verbindung und [!DNL Facebook Pixel] Erweiterung?**
 
-Die Verbindung [!DNL Facebook Custom Audiences] verwendet beim Senden von Zielgruppen an [!DNL Facebook] [!DNL Platform] Identitäten, während die [[!DNL Facebook Pixel] Verbindung](../destinations/catalog/advertising/facebook-pixel.md) das in eine Website integrierte [!DNL Facebook]-Pixel verwendet.
+Die [!DNL Facebook Custom Audiences] Verbindungsnutzungen [!DNL Platform] Identitäten beim Senden von Zielgruppen an [!DNL Facebook], während die [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) verwendet die [!DNL Facebook] in eine Website integriert ist.
 
-Diese beiden Integrationen ergänzen sich. Sie können beide verwenden, um eine bessere Zielgruppenabdeckung sicherzustellen. Beispielsweise können Sie die [!DNL Facebook Pixel]-Erweiterung zum Anzeigen von Website-Besuchern verwenden, die kein Konto erstellt haben, während [!DNL Facebook Custom Audiences] Ihnen dabei helfen kann, bestehende Kunden anhand von [!DNL Platform]-Identitäten anzusprechen.
+Diese beiden Integrationen ergänzen sich. Sie können beide verwenden, um eine bessere Zielgruppenabdeckung sicherzustellen. Als Beispiel können Sie die [!DNL Facebook Pixel] Erweiterung für die Suche nach Website-Besuchern, die kein Konto erstellt haben, während [!DNL Facebook Custom Audiences] können Ihnen dabei helfen, bestehende Kunden auf Basis von [!DNL Platform] Identitäten.
 
-**Unterstützt die Adobe Experience Platform-Integration die  [!DNL Facebook Custom Audiences] Deaktivierung von Benutzern aus einer Zielgruppe, wenn diese sich nicht mehr dafür qualifizieren?**
+**Ist die Adobe Experience Platform-Integration mit [!DNL Facebook Custom Audiences] Unterstützung der Nichtqualifizierung von Benutzern von einer Zielgruppe, wenn sie sich nicht mehr dafür qualifizieren?**
 
-Ja, die Integration unterstützt das Entfernen von Benutzern aus [!DNL Facebook Custom Audiences], wenn sie sich nicht mehr qualifizieren.
+Ja, die Integration unterstützt das Entfernen von Benutzern aus [!DNL Facebook Custom Audiences] wenn sie sich nicht mehr qualifizieren.
 
-**Wie sollten die Zielgruppendaten gehasht werden, bevor sie an  [!DNL Facebook]gesendet werden?**
+**Wie sollen die Zielgruppendaten gehasht werden, bevor sie an gesendet werden? [!DNL Facebook]?**
 
-[!DNL Facebook] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher können die für [!DNL Facebook] aktivierten Zielgruppen von *Hash*-Identifikatoren wie E-Mail-Adressen oder Telefonnummern abgeleitet werden.
+[!DNL Facebook] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher werden die Zielgruppen für [!DNL Facebook] kann deaktiviert werden *Hash* Kennungen wie E-Mail-Adressen oder Telefonnummern.
 
-Ausführliche Erklärungen zu den Anforderungen für die ID-Zuordnung finden Sie unter [Anforderungen für die ID-Zuordnung](catalog/social/facebook.md#id-matching-requirements).
+Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie unter [Anforderungen an die ID-Übereinstimmung](catalog/social/facebook.md#id-matching-requirements).
 
-**In welcher Art von Identitäten kann ich  [!DNL Facebook Custom Audiences]aktivieren?**
+**Welche Identitäten kann ich aktivieren? [!DNL Facebook Custom Audiences]?**
 
-[!DNL Facebook Custom Audiences] unterstützt die Aktivierung der folgenden Identitäten: Hash-E-Mails, Hash-Telefonnummern  [!DNL GAID],  [!DNL IDFA]und benutzerdefinierte externe IDs.
+[!DNL Facebook Custom Audiences] unterstützt die Aktivierung der folgenden Identitäten: Hash-E-Mails, Hash-Telefonnummern, [!DNL GAID], [!DNL IDFA]und benutzerdefinierte externe IDs.
+
+**Kann ich mehrere Facebook-Ziele in der Platform-Benutzeroberfläche für separate Facebook-Konten erstellen?**
+
+Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Anzeigenkonto in Facebook. Sie können für jedes Facebook-Anzeigenkonto in Ihrem Unternehmen ein eigenes Facebook-Ziel erstellen. Befolgen Sie die [Tutorial zur Zielverbindung](/help/destinations/ui/connect-destination.md) und eine Verbindung zu einem separaten Facebook-Konto für jedes neue Facebook-Ziel in der Platform-Benutzeroberfläche herstellen.
 
 ## linkedIn Matched Audiences {#linkedin}
 
-**Muss ich meinem  [!DNL LinkedIn] Advertiser-Konto Apps oder Pixel hinzufügen?**
+**Muss ich irgendwelche Apps oder Pixel zu meiner [!DNL LinkedIn] Advertiser-Konto?**
 
 Nein. Da es sich hierbei nicht um eine pixelbasierte Integration handelt, müssen Sie Ihrem Advertiser-Konto keine Pixel hinzufügen.
 
-**Was muss ich tun, bevor ich Zielgruppen in aktivieren kann  [!DNL LinkedIn Matched Audiences]?**
+**Was muss ich tun, bevor ich Zielgruppen in aktivieren kann? [!DNL LinkedIn Matched Audiences]?**
 
-Bevor Sie das Ziel [!UICONTROL LinkedIn Matched Audience] verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto über die Berechtigungsebene [!DNL Creative Manager] oder höher verfügt.
+Bevor Sie die [!UICONTROL linkedIn Match Audience] Ziel, stellen Sie sicher, dass Ihre [!DNL LinkedIn Campaign Manager] -Konto hat [!DNL Creative Manager] Berechtigungsebene oder höher.
 
-Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Werbekonten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
+Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager] Benutzerberechtigungen, siehe [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Werbekonten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 
-**Wie sollten die Zielgruppendaten gehasht werden, bevor sie an  [!DNL LinkedIn]gesendet werden?**
+**Wie sollen die Zielgruppendaten gehasht werden, bevor sie an gesendet werden? [!DNL LinkedIn]?**
 
-[!DNL LinkedIn] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher können die für [!DNL LinkedIn] aktivierten Zielgruppen von *Hash*-Identifikatoren wie E-Mail-Adressen oder Telefonnummern abgeleitet werden.
+[!DNL LinkedIn] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher werden die Zielgruppen für [!DNL LinkedIn] kann deaktiviert werden *Hash* Kennungen wie E-Mail-Adressen oder Telefonnummern.
 
-Ausführliche Erklärungen zu den Anforderungen für die ID-Zuordnung finden Sie unter [Anforderungen für die ID-Zuordnung](catalog/social/linkedin.md#id-matching-requirements).
+Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie unter [Anforderungen an die ID-Übereinstimmung](catalog/social/linkedin.md#id-matching-requirements).
 
-**In welcher Art von Identitäten kann ich  [!DNL LinkedIn]aktivieren?**
+**Welche Identitäten kann ich aktivieren? [!DNL LinkedIn]?**
 
-[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: gehashte E-Mails,  [!DNL GAID]und  [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der folgenden Identitäten: gehashte E-Mails, [!DNL GAID]und [!DNL IDFA].
