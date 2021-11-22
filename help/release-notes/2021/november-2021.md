@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom November 2021.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 28%
+source-wordcount: '798'
+ht-degree: 25%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 28%
 Neue Funktionen in Adobe Experience Platform:
 
 - [Echtzeit-Kundendatenplattform B2B Edition](#B2B)
+- [(Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API](#ad-hoc-activation)
 
 ## Aktualisierungen vorhandener Funktionen
 
@@ -61,6 +63,10 @@ Standardmäßige B2B-XDM-Klassen, Feldergruppen und Datentypen sind für alle Pl
 | Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B Edition bietet verschiedene Standard-XDM, die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen, Kampagnen und mehr erfassen. |
 
 Siehe [Schemata in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) Dokumentation , um mehr über die Erfassung von B2B-Datenentitäten zu erfahren.
+
+### (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API {#ad-hoc-activation}
+
+Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppensegmente schnell und effizient für Situationen aktivieren, in denen eine sofortige Aktivierung erforderlich ist. Die Ad-hoc-Zielgruppenaktivierung wird nur von [Batch-dateibasierte Ziele](../../destinations/destination-types.md#file-based) und befindet sich derzeit in der Beta-Phase. Weitere Informationen finden Sie unter [Dokumentation zur Ad-hoc-Aktivierungs-API](../../destinations/api/ad-hoc-activation-api.md).
 
 ### Attribution AI {#attribution-ai}
 

@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: aa8cafc9a40748eda3098b2af732a828d39204b2
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
 workflow-type: tm+mt
-source-wordcount: '724'
-ht-degree: 29%
+source-wordcount: '798'
+ht-degree: 26%
 
 ---
 
@@ -17,6 +18,7 @@ ht-degree: 29%
 Neue Funktionen in Adobe Experience Platform:
 
 - [Echtzeit-Kundendatenplattform B2B Edition](#B2B)
+- [(Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API](#ad-hoc-activation)
 
 ## Aktualisierungen vorhandener Funktionen
 
@@ -62,6 +64,10 @@ Standardmäßige B2B-XDM-Klassen, Feldergruppen und Datentypen sind für alle Pl
 
 Siehe [Schemata in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) Dokumentation , um mehr über die Erfassung von B2B-Datenentitäten zu erfahren.
 
+### (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API {#ad-hoc-activation}
+
+Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppensegmente schnell und effizient für Situationen aktivieren, in denen eine sofortige Aktivierung erforderlich ist. Die Ad-hoc-Zielgruppenaktivierung wird nur von [Batch-dateibasierte Ziele](../../destinations/destination-types.md#file-based) und befindet sich derzeit in der Beta-Phase. Weitere Informationen finden Sie unter [Dokumentation zur Ad-hoc-Aktivierungs-API](../../destinations/api/ad-hoc-activation-api.md).
+
 ### Attribution AI {#attribution-ai}
 
 Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
@@ -85,3 +91,4 @@ In Real-time Customer Data Platform verfügbare Customer AI wird verwendet, um b
 | Benutzerdefinierte Profilattribute | Customer AI unterstützt jetzt die Definition benutzerdefinierter Profildatensatzfelder (mit Zeitstempeln) in Ihren Daten zusätzlich zu standardmäßigen Ereignisfeldern. Mit dieser Option können Sie zusätzliche Profilattribute hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann. |
 
 Weitere Informationen zu Customer AI finden Sie im [Dokumentation zu Customer AI](../../intelligent-services/customer-ai/overview.md).
+
