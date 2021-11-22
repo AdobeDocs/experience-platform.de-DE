@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit Destination SDK aufgeführt und beschrieben.
 title: Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
 workflow-type: tm+mt
 source-wordcount: '663'
 ht-degree: 0%
@@ -165,7 +165,7 @@ Je nachdem, ob `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenti
 
 ## Schritt 6: Ziel testen {#test-destination}
 
-Nachdem Sie Ihr Ziel mithilfe der Konfigurations-Endpunkte in den vorherigen Schritten eingerichtet haben, können Sie die [Zieltestwerkzeug](./create-template.md) , um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
+Nachdem Sie Ihr Ziel mithilfe der Konfigurations-Endpunkte in den vorherigen Schritten eingerichtet haben, können Sie die [Zieltestwerkzeug](./test-destination.md) , um die Integration zwischen Adobe Experience Platform und Ihrem Ziel zu testen.
 
 Im Rahmen des Testvorgangs Ihres Ziels müssen Sie die Experience Platform-Benutzeroberfläche zum Erstellen von Segmenten verwenden, die Sie für Ihr Ziel aktivieren. Anweisungen zum Erstellen von Segmenten in Experience Platform finden Sie in den beiden unten stehenden Ressourcen:
 
