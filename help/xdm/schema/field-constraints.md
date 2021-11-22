@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Schema; Feldergruppe; Feldergruppe; Feldergruppen; Feldergruppen; Feldergruppen; Datentyp; Datentypen; Datentypen; Datentyp; Datentyp; Schemata; Schemadesign; Schema-Design; map; Map; Map;
+keywords: Experience Platform; Startseite; beliebte Themen; Schema; Feldergruppe; Feldergruppe; Feldergruppen; Feldergruppen; Feldergruppen; Datentyp; Datentypen; Datentypen; Datentyp; Datentyp; Schemadesign; Schemadesign; Schemadesign; Zuordnung; Datentyp; Datentyp; Datentyp; Datentyp; Datentyp; Schemata; Schemas; Schemadesign; Map; Map
 solution: Experience Platform
 title: Einschränkungen für XDM-Feldtypen
 topic-legacy: overview
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren können.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 61025ada3a900a5bd7682e3bb7d4f6cd23347231
+source-git-commit: 684237122e7384f6c611e1c602c30af2518aba58
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 18%
+source-wordcount: '1153'
+ht-degree: 17%
 
 ---
 
@@ -18,9 +18,9 @@ In Experience-Datenmodell (XDM)-Schemas beschränkt der Typ eines Felds, welche 
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch verwenden, lesen Sie die [Grundlagen der Schemakomposition](./composition.md) , um eine Einführung in XDM-Schemas, Klassen und Schemafeldgruppen zu erhalten.
+Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schemakomposition](./composition.md) für eine Einführung in XDM-Schemas, Klassen und Schemafeldgruppen.
 
-Wenn Sie planen, Ihre eigenen Feldtypen in der API zu definieren, wird dringend empfohlen, mit dem [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) zu beginnen, um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingeschlossen werden. Wenn Sie zur Erstellung Ihrer Schemas die Experience Platform-Benutzeroberfläche verwenden, finden Sie im Handbuch zum Definieren von  in der Benutzeroberfläche](../ui/fields/overview.md) Informationen dazu, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.[
+Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, wird dringend empfohlen, mit der [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) , um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingefügt werden. Wenn Sie zur Erstellung Ihrer Schemas die Experience Platform-Benutzeroberfläche verwenden, finden Sie im Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md) um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.
 
 ## Basisstruktur und Beispiele
 
@@ -28,7 +28,7 @@ XDM basiert auf dem JSON-Schema und daher erben XDM-Felder bei der Definition ih
 
 >[!NOTE]
 >
->Weitere Informationen zum JSON-Schema und anderen zugrunde liegenden Technologien in Platform-APIs finden Sie im [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-schema) .
+>Siehe [API-Grundlagenhandbuch](../../landing/api-fundamentals.md#json-schema) Weitere Informationen zum JSON-Schema und anderen zugrunde liegenden Technologien in Platform-APIs.
 
 In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema dargestellt wird, zusammen mit einem Beispielwert, der dem Typ entspricht:
 
@@ -61,11 +61,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 9007199254740991,
-  "minimum": -9007199254740991
-}</pre>
+{ "type": "integer", "maximum": 9007199254740991, "Minimum": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -73,11 +69,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 2147483648,
-  "minimum": -2147483648
-}</pre>
+{ "type": "integer", "maximum": 2147483648, "Minimum": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -85,11 +77,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 32768,
-  "minimum": -32768
-}</pre>
+{ "type": "integer", "maximum": 32768, "Minimum": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -97,11 +85,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "integer",
-  "maximum": 128,
-  "minimum": -128
-}</pre>
+{ "type": "integer", "maximum": 128, "Minimum": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -109,10 +93,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL Datum]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "string",
-  "format": "date"
-}</pre>
+{ "type": "string", "format": "date" }</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -120,10 +101,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
-  "type": "string",
-  "format": "date-time"
-}</pre>
+{ "type": "string", "format": "date-time" }</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -138,7 +116,7 @@ In der folgenden Tabelle wird beschrieben, wie jeder XDM-Typ im JSON-Schema darg
   </tbody>
 </table>
 
-**Alle datumsformatierten Zeichenfolgen müssen dem ISO 8601-Standard ([RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)) entsprechen.*
+**Alle datumsformatierten Zeichenfolgen müssen dem ISO 8601-Standard ([RFC 3339, Abschnitt 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)).*
 
 ## Zuordnen von XDM-Typen zu anderen Formaten
 
@@ -150,7 +128,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 
 >[!IMPORTANT]
 >
->Unter den in den folgenden Tabellen aufgeführten Standard-XDM-Typen ist auch der Typ [!UICONTROL Map] enthalten. Maps werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel vernünftigerweise nicht in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
+>Unter den in den folgenden Tabellen aufgeführten Standard-XDM-Typen ist die [!UICONTROL Zuordnung] Typ ist ebenfalls enthalten. Maps werden in Standardschemata verwendet, wenn Daten als Schlüssel dargestellt werden, die bestimmten Werten zugeordnet sind, oder wenn Schlüssel vernünftigerweise nicht in ein statisches Schema aufgenommen werden können und als Datenwerte behandelt werden müssen.
 >
 >Felder vom Typ Zuordnung sind für die Verwendung des Branchen- und Händlerschemas reserviert und können daher nicht in von Ihnen definierten benutzerdefinierten Ressourcen verwendet werden. Die Einbindung des Zuordnungstyps in die folgenden Tabellen soll Ihnen nur bei der Bestimmung der Zuordnung Ihrer vorhandenen Daten zu XDM helfen, wenn diese derzeit in einem der unten aufgeführten Formate gespeichert sind.
 
@@ -167,7 +145,7 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 | [!UICONTROL Datum] | Typ: `INT32`<br>Anmerkung: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Typ: `INT64`<br>Anmerkung: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Boolesch] | Typ: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br> (`<key-type>` muss  `STRING`sein) | `MapType`<br><br>(`keyType` muss  `StringType`) | `java.util.Map` |
+| [!UICONTROL Landkarte] | `MAP`-kommentierte Gruppe<br><br>(`<key-type>` muss `STRING`) | `MapType`<br><br>(`keyType` muss `StringType`) | `java.util.Map` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -207,15 +185,15 @@ In den folgenden Abschnitten wird beschrieben, wie die einzelnen XDM-Typen ander
 
 ## Definieren von XDM-Feldtypen in der API {#define-fields}
 
-Alle XDM-Felder werden mit den standardmäßigen [JSON-Schema](https://json-schema.org/)-Einschränkungen definiert, die für ihren Feldtyp gelten, mit zusätzlichen Einschränkungen für Feldnamen, die von [!DNL Experience Platform] erzwungen werden. Mit der Schema Registry-API können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. XDM-Feldtypen werden durch das Attribut auf Feldebene verfügbar gemacht, `meta:xdmType`.
+Alle XDM-Felder werden mithilfe des Standards definiert [JSON-Schema](https://json-schema.org/) Einschränkungen, die für ihren Feldtyp gelten, mit zusätzlichen Einschränkungen für Feldnamen, die von [!DNL Experience Platform]. Mit der Schema Registry-API können Sie zusätzliche Feldtypen mithilfe von Formaten und optionalen Einschränkungen definieren. XDM-Feldtypen werden durch das Attribut auf Feldebene verfügbar gemacht, `meta:xdmType`.
 
 >[!NOTE]
 >
->`meta:xdmType` ist ein systemgenerierter Wert. Daher müssen Sie diese Eigenschaft bei Verwendung der API nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schematypen (wie `string` und `integer`) mit den entsprechenden Min-/Max-Einschränkungen zu verwenden, wie in der folgenden Tabelle definiert.
+>`meta:xdmType` ist ein systemgenerierter Wert. Daher müssen Sie diese Eigenschaft bei Verwendung der API nicht zum JSON für Ihr Feld hinzufügen. Es empfiehlt sich, JSON-Schematypen zu verwenden (z. B. `string` und `integer`) mit den entsprechenden Mindest-/Höchstbeschränkungen, wie in der folgenden Tabelle definiert.
 
 In der folgenden Tabelle wird die entsprechende Formatierung zum Definieren verschiedener Feldtypen einschließlich derjenigen mit optionalen Eigenschaften beschrieben. Weitere Informationen zu optionalen Eigenschaften und typspezifischen Suchbegriffen finden Sie in der Dokumentation zum [JSON-Schema](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anfrage für [Erstellen einer Feldergruppe](../api/field-groups.md#create) oder [Erstellen eines Datentyps](../api/data-types.md#create) bereitgestellt wird.
+Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode, der zum Erstellen Ihrer API-Anfrage für bereitgestellt wird. [Erstellen einer Feldergruppe](../api/field-groups.md#create) oder [Erstellen eines Datentyps](../api/data-types.md#create).
 
 <table style="table-layout:auto">
   <tr>
@@ -260,7 +238,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
         <li><code>meta:enum</code></li>
       </ul>
     </td>
-    <td>Begrenzte Enum-Werte werden unter dem Array <code>enum</code> bereitgestellt, während optionale kundenorientierte Beschriftungen für jeden Wert unter <code>meta:enum</code> bereitgestellt werden können:
+    <td>Begrenzte Enum-Werte werden unter der <code>enum</code> Array, während optionale kundenorientierte Beschriftungen für jeden Wert unter bereitgestellt werden können. <code>meta:enum</code>:
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "string",
@@ -276,6 +254,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
           },
           "default": "value1"
 }</pre>
+    <br>Beachten Sie Folgendes: <code>meta:enum</code> Wert: <strong>not</strong> Deklarieren Sie eine Auflistung oder führen Sie eine Datenvalidierung allein durch. In den meisten Fällen werden unter <code>meta:enum</code> werden auch <code>enum</code> , um sicherzustellen, dass die Daten begrenzt sind. Es gibt jedoch einige Anwendungsfälle, in denen <code>meta:enum</code> ohne entsprechende <code>enum</code> Array. Siehe Tutorial zu <a href="../tutorials/extend-soft-enum.md">Erweitern von Soft Enves</a> für weitere Informationen.
     </td>
   </tr>
   <tr>
@@ -368,11 +347,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
     <td></td>
     <td>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "string",
-  "format": "date-time",
-  "example": ["2004-10-23T12:00:00-06:00"]
-}</pre>
+"sampleField": { "type": "string", "format": "date-time", "example": ["2004-10-23T12:00:00-06:00"] }</pre>
     </td>
   </tr>
   <tr>
@@ -388,18 +363,13 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
 }</pre>
       Ein Array von Objekten, die durch ein anderes Schema definiert werden:<br/>
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "array",
-  "items": {
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
-  }
-}</pre>
+"sampleField": { "type": "array", "items": { "$ref": "https://ns.adobe.com/xdm/data/paymentitem" } }</pre>
     </td>
   </tr>
   <tr>
     <td>[!UICONTROL Objekt]</td>
     <td></td>
-    <td>Das Attribut <code>type</code> jedes unter <code>properties</code> definierten Unterfelds kann mit einem beliebigen Skalartyp definiert werden:
+    <td>Die <code>type</code> -Attribut jedes Unterfelds, das unter <code>properties</code> kann mit einem beliebigen Skalartyp definiert werden:
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -412,18 +382,15 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
     }
   }
 }</pre>
-      Objekttypfelder können definiert werden, indem auf die <code>$id</code> eines Datentyps verwiesen wird:
+      Objekttypfelder können definiert werden, indem auf die <code>$id</code> eines Datentyps:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction"
-}</pre>
+"sampleField": { "type": "object", "$ref": "https://ns.adobe.com/xdm/common/phoneinteraction" }</pre>
     </td>
   </tr>
   <tr>
     <td>[!UICONTROL Map]</td>
     <td></td>
-    <td>Eine Zuordnung <strong>darf keine</strong> Eigenschaften definieren. <strong>muss</strong> ein einzelnes <code>additionalProperties</code>-Schema definieren, um den Typ der in der Zuordnung enthaltenen Werte zu beschreiben (jede Zuordnung kann nur einen einzigen Datentyp enthalten). Werte können ein beliebiges gültiges XDM <code>type</code>-Attribut oder ein Verweis auf ein anderes Schema mit einem <code>$ref</code>-Attribut sein.<br/><br/>Ein Zuordnungsfeld mit Werten vom Typ Zeichenfolge:
+    <td>Karte <strong>darf nicht</strong> definieren beliebige Eigenschaften. Es <strong>must</strong> eine einzelne <code>additionalProperties</code> schema zur Beschreibung des Werttyps, der in der Zuordnung enthalten ist (jede Zuordnung kann nur einen einzigen Datentyp enthalten). Werte können beliebige gültige XDM-Werte sein. <code>type</code> -Attribut oder einen Verweis auf ein anderes Schema mithilfe eines <code>$ref</code> -Attribut.<br/><br/>Ein Zuordnungsfeld mit Werten vom Typ Zeichenfolge:
       <pre class="JSON language-JSON hljs">
 "sampleField": {
           "type": "object",
@@ -444,12 +411,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
 }</pre>
     Ein map -Feld, das auf einen anderen Datentyp verweist:
       <pre class="JSON language-JSON hljs">
-"sampleField": {
-  "type": "object",
-  "additionalProperties":{
-    "$ref": "https://ns.adobe.com/xdm/data/paymentitem"
-  }
-}</pre>
+"sampleField": { "type": "object", "additionalProperties":{ "$ref": "https://ns.adobe.com/xdm/data/paymentitem" } }</pre>
     </td>
   </tr>
 </table>

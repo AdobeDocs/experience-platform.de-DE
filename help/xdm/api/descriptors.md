@@ -5,7 +5,7 @@ title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: fecd57dde028dbcfa6b6f4481e6c2215ced36d4f
 workflow-type: tm+mt
 source-wordcount: '1630'
 ht-degree: 55%
@@ -20,15 +20,15 @@ Schemadeskriptoren sind Metadaten auf Mandantenebene, das heißt, sie sind für 
 
 Auf jedes Schema können eine oder mehrere Schemadeskriptorentitäten angewendet werden. Jede Schemadeskriptorentität enthält einen Deskriptor `@type` und das `sourceSchema`, auf das er angewendet wird. Nach der Anwendung gelten diese Deskriptoren für alle mit dem Schema erstellten Datensätze.
 
-Mit dem Endpunkt `/descriptors` in der API [!DNL Schema Registry] können Sie Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
+Die `/descriptors` -Endpunkt im [!DNL Schema Registry] Mit der API können Sie Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/class-registry.yaml). Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
 ## Abrufen einer Liste von Deskriptoren {#list}
 
-Sie können alle von Ihrem Unternehmen definierten Deskriptoren auflisten, indem Sie eine GET-Anfrage an `/tenant/descriptors` richten.
+Sie können alle von Ihrem Unternehmen definierten Deskriptoren auflisten, indem Sie eine GET-Anfrage an `/tenant/descriptors`.
 
 **API-Format**
 
@@ -48,18 +48,18 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
-Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesendet wird. Beachten Sie, dass der `/descriptors`-Endpunkt `Accept`-Kopfzeilen verwendet, die sich von allen anderen Endpunkten in der [!DNL Schema Registry]-API unterscheiden.
+Das Antwortformat hängt von der `Accept` -Kopfzeile, die in der Anfrage gesendet wird. Beachten Sie, dass `/descriptors` Endpunktverwendungen `Accept` Kopfzeilen, die sich von allen anderen Endpunkten im [!DNL Schema Registry] API.
 
 >[!IMPORTANT]
 >
->Deskriptoren erfordern eindeutige `Accept`-Kopfzeilen, die `xed` durch `xdm` ersetzen, und bieten außerdem eine `link`-Option, die für Deskriptoren eindeutig ist. Die richtigen `Accept`-Kopfzeilen wurden in den Beispielaufrufen unten aufgeführt. Achten Sie jedoch besonders darauf, sicherzustellen, dass beim Arbeiten mit Deskriptoren die richtigen Kopfzeilen verwendet werden.
+>Deskriptoren erfordern eindeutige `Accept` Header, die `xed` mit `xdm`, und bieten auch eine `link` -Option, die für Deskriptoren eindeutig ist. Die `Accept` -Kopfzeilen wurden in den Beispielaufrufen unten aufgeführt. Achten Sie jedoch besonders darauf, sicherzustellen, dass beim Arbeiten mit Deskriptoren die richtigen Kopfzeilen verwendet werden.
 
 | `Accept`-Kopfzeile | Beschreibung |
 | -------|------------ |
 | `application/vnd.adobe.xdm-id+json` | Gibt ein Array mit Deskriptorkennungen zurück |
 | `application/vnd.adobe.xdm-link+json` | Gibt ein Array mit Deskriptor-API-Pfaden zurück |
 | `application/vnd.adobe.xdm+json` | Gibt ein Array mit erweiterten Deskriptorobjekten zurück |
-| `application/vnd.adobe.xdm-v2+json` | Diese `Accept`-Kopfzeile muss verwendet werden, um Paging-Funktionen zu nutzen. |
+| `application/vnd.adobe.xdm-v2+json` | Diese `Accept` -Kopfzeile muss verwendet werden, um Paging-Funktionen nutzen zu können. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -67,7 +67,7 @@ Das Antwortformat hängt von der `Accept`-Kopfzeile ab, die in der Anfrage gesen
 
 Die Antwort enthält ein Array für jeden Deskriptortyp, der über definierte Deskriptoren verfügt. Wenn keine Deskriptoren eines bestimmten `@type` definiert sind, gibt die Registrierung also kein leeres Array für diesen Deskriptortyp zurück.
 
-Bei Verwendung der Kopfzeile `link` `Accept` wird jeder Deskriptor als Array-Element im Format `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}` angezeigt
+Bei Verwendung von `link` `Accept` -Kopfzeile wird jeder Deskriptor als Array-Element im Format angezeigt `/{CONTAINER}/descriptors/{DESCRIPTOR_ID}`
 
 ```JSON
 {
@@ -103,7 +103,7 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein Deskriptor anhand seines `@id` -Werts abgerufen. Deskriptoren werden nicht versioniert, daher ist in der Suchanfrage keine `Accept`-Kopfzeile erforderlich.
+Mit der folgenden Anfrage wird ein Deskriptor durch seine `@id` -Wert. Deskriptoren sind nicht versioniert, daher keine `Accept` -Kopfzeile ist in der Suchanfrage erforderlich.
 
 ```SHELL
 curl -X GET \
@@ -140,11 +140,11 @@ Eine erfolgreiche Antwort gibt die Details des Deskriptors zurück, einschließl
 
 ## Deskriptor erstellen {#create}
 
-Sie können einen neuen Deskriptor erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/tenant/descriptors` senden.
+Sie können einen neuen Deskriptor erstellen, indem Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
 
 >[!IMPORTANT]
 >
->[!DNL Schema Registry] ermöglicht die Definition verschiedener Deskriptortypen. Jeder Deskriptortyp erfordert eigene spezifische Felder, die im Anfragetext gesendet werden. Eine vollständige Liste der Deskriptoren und der zu ihrer Definition erforderlichen Felder finden Sie im [Anhang](#defining-descriptors) .
+>Die [!DNL Schema Registry] ermöglicht die Definition verschiedener Deskriptortypen. Jeder Deskriptortyp erfordert eigene spezifische Felder, die im Anfragetext gesendet werden. Siehe [Anhang](#defining-descriptors) für eine vollständige Liste der Deskriptoren und der für ihre Definition erforderlichen Felder.
 
 **API-Format**
 
@@ -154,7 +154,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage definiert einen Identitätsdeskriptor für ein Feld „E-Mail-Adresse“ in einem Beispielschema. Dadurch wird [!DNL Experience Platform] angewiesen, die E-Mail-Adresse als Kennung zu verwenden, um Informationen über die Person zusammenzufügen.
+Die folgende Anfrage definiert einen Identitätsdeskriptor für ein Feld „E-Mail-Adresse“ in einem Beispielschema. Diese Funktion [!DNL Experience Platform] , um die E-Mail-Adresse als Kennung zu verwenden, um Informationen über die Person zusammenzufügen.
 
 ```SHELL
 curl -X POST \
@@ -178,7 +178,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und die Details des neu erstellten Deskriptors zurück, einschließlich dessen `@id`. `@id` ist ein schreibgeschütztes Feld, das von [!DNL Schema Registry] zugewiesen und zum Verweisen auf den Deskriptor in der API verwendet wird.
+Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und die Details des neu erstellten Deskriptors zurück, einschließlich dessen `@id`. Die `@id` ist ein schreibgeschütztes Feld, das von der [!DNL Schema Registry] und verwendet, um auf den Deskriptor in der API zu verweisen.
 
 ```JSON
 {
@@ -196,7 +196,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und die Details de
 
 ## Deskriptor aktualisieren {#put}
 
-Sie können einen Deskriptor aktualisieren, indem Sie dessen `@id` in den Pfad einer PUT-Anfrage einschließen.
+Sie können einen Deskriptor aktualisieren, indem Sie dessen `@id` im Pfad einer PUT-Anfrage.
 
 **API-Format**
 
@@ -212,13 +212,13 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 
 **Anfrage**
 
-Bei dieser Anfrage wird der Deskriptor im Grunde neu geschrieben, sodass der Anfragetext alle Felder enthalten muss, die zur Definition eines Deskriptors dieses Typs erforderlich sind. Anders ausgedrückt: Die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors entspricht der Payload zum Erstellen (POST) eines Deskriptors](#create) desselben Typs durch [.
+Bei dieser Anfrage wird der Deskriptor im Grunde neu geschrieben, sodass der Anfragetext alle Felder enthalten muss, die zur Definition eines Deskriptors dieses Typs erforderlich sind. Anders ausgedrückt: Die Anfrage-Payload zum Aktualisieren (PUT) eines Deskriptors entspricht der Payload zu [Erstellen (POST) eines Deskriptors](#create) denselben Typ aufweisen.
 
 >[!IMPORTANT]
 >
->Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen erfordert jeder Deskriptortyp, dass eigene spezifische Felder in PUT-Anfrage-Payloads gesendet werden. Eine vollständige Liste der Deskriptoren und der zu ihrer Definition erforderlichen Felder finden Sie im [Anhang](#defining-descriptors) .
+>Wie beim Erstellen von Deskriptoren mithilfe von POST-Anfragen erfordert jeder Deskriptortyp, dass eigene spezifische Felder in PUT-Anfrage-Payloads gesendet werden. Siehe [Anhang](#defining-descriptors) für eine vollständige Liste der Deskriptoren und der für ihre Definition erforderlichen Felder.
 
-Im folgenden Beispiel wird ein Identitätsdeskriptor aktualisiert, um auf einen anderen `xdm:sourceProperty` (`mobile phone`) zu verweisen, und der `xdm:namespace` wird in `Phone` geändert.
+Im folgenden Beispiel wird ein Identitätsdeskriptor aktualisiert, um auf eine andere `xdm:sourceProperty` (`mobile phone`) und ändern Sie die `xdm:namespace` nach `Phone`.
 
 ```SHELL
 curl -X PUT \
@@ -249,11 +249,11 @@ Bei einer erfolgreichen Antwort werden der HTTP-Status 201 (Erstellt) und die `@
 }
 ```
 
-Wenn Sie eine [Nachschlageanfrage (GET)](#lookup) zum Anzeigen des Deskriptors ausführen, wird angezeigt, dass die Felder jetzt aktualisiert wurden, um die in der PUT-Anfrage gesendeten Änderungen widerzuspiegeln.
+Führen Sie eine [Anfrage zum Nachschlagen (GET)](#lookup) um den Deskriptor anzuzeigen, wird angezeigt, dass die Felder jetzt aktualisiert wurden, um die in der PUT-Anfrage gesendeten Änderungen widerzuspiegeln.
 
 ## Deskriptor löschen {#delete}
 
-Gelegentlich müssen Sie möglicherweise einen von Ihnen definierten Deskriptor aus [!DNL Schema Registry] entfernen. Dies erfolgt durch eine DELETE-Anfrage, die auf die `@id` des zu entfernenden Deskriptors verweist.
+Gelegentlich müssen Sie möglicherweise einen von Ihnen definierten Deskriptor aus der [!DNL Schema Registry]. Dies erfolgt durch eine DELETE-Anfrage, die auf die `@id` des zu entfernenden Deskriptors verweist.
 
 **API-Format**
 
@@ -282,11 +282,11 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Um zu bestätigen, dass der Deskriptor gelöscht wurde, können Sie eine [Suchanfrage](#lookup) für den Deskriptor `@id` ausführen. Die Antwort gibt den HTTP-Status 404 (Nicht gefunden) zurück, da der Deskriptor aus [!DNL Schema Registry] entfernt wurde.
+Um zu bestätigen, dass der Deskriptor gelöscht wurde, können Sie eine [Suchanfrage](#lookup) gegen den Deskriptor `@id`. Die Antwort gibt den HTTP-Status 404 (Nicht gefunden) zurück, da der Deskriptor aus der [!DNL Schema Registry].
 
 ## Anhang
 
-Im folgenden Abschnitt finden Sie zusätzliche Informationen zum Arbeiten mit Deskriptoren in der [!DNL Schema Registry]-API.
+Im folgenden Abschnitt finden Sie zusätzliche Informationen zum Arbeiten mit Deskriptoren im [!DNL Schema Registry] API.
 
 ### Deskriptoren definieren {#defining-descriptors}
 
@@ -294,7 +294,7 @@ Die folgenden Abschnitte bieten eine Übersicht über die verfügbaren Deskripto
 
 #### Identitätsdeskriptor
 
-Ein Identitätsdeskriptor signalisiert, dass das &quot;[!UICONTROL sourceProperty]&quot;des &quot;[!UICONTROL sourceSchema]&quot;ein [!DNL Identity]-Feld ist, wie unter [Adobe Experience Platform Identity Service](../../identity-service/home.md) beschrieben.
+Ein Identitätsdeskriptor signalisiert, dass der[!UICONTROL sourceProperty]&quot; der &quot;[!UICONTROL sourceSchema]&quot; ist ein [!DNL Identity] -Feld, beschrieben durch [Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ```json
 {
@@ -315,15 +315,15 @@ Ein Identitätsdeskriptor signalisiert, dass das &quot;[!UICONTROL sourcePropert
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein wird. Der Pfad sollte mit einem „/“ beginnen und nicht mit einem enden. Schließen Sie „properties“ nicht in den Pfad ein (verwenden Sie z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
-| `xdm:namespace` | Der `id`- oder `code`-Wert des Identitäts-Namespace. Eine Liste von Namespaces finden Sie mit [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
+| `xdm:namespace` | Der `id`- oder `code`-Wert des Identitäts-Namespace. Eine Liste von Namespaces finden Sie unter Verwendung der Variablen [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). |
 | `xdm:property` | Entweder `xdm:id` oder `xdm:code`, je nach verwendetem `xdm:namespace`. |
 | `xdm:isPrimary` | Ein optionaler boolescher Wert. Wenn „true“, wird das Feld als primäre Identität angezeigt. Schemas dürfen nur eine primäre Identität enthalten. |
 
 {style=&quot;table-layout:auto&quot;}
 
-#### Anzeigenamendeskriptor
+#### Anzeigenamendeskriptor {#friendly-name}
 
-Mit Anzeigenamendeskriptoren können Benutzer die Werte `title`, `description` und `meta:enum` der Schemafelder der Hauptbibliothek ändern. Besonders nützlich sind sie bei der Arbeit mit „eVars“ und anderen „generischen“ Feldern, um Felder zu kennzeichnen, die organisationsspezifische Daten enthalten. Die Benutzeroberfläche kann so einen benutzerfreundlicheren Namen anzeigen oder nur Felder mit einem Anzeigenamen anzeigen.
+Mit Anzeigenamendeskriptoren können Benutzer die `title`, `description`und `meta:enum` -Werte der Schemafelder der Hauptbibliothek. Besonders nützlich sind sie bei der Arbeit mit „eVars“ und anderen „generischen“ Feldern, um Felder zu kennzeichnen, die organisationsspezifische Daten enthalten. Die Benutzeroberfläche kann so einen benutzerfreundlicheren Namen anzeigen oder nur Felder mit einem Anzeigenamen anzeigen.
 
 ```json
 {
@@ -353,7 +353,7 @@ Mit Anzeigenamendeskriptoren können Benutzer die Werte `title`, `description` u
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein wird. Der Pfad sollte mit einem „/“ beginnen und nicht mit einem enden. Schließen Sie „properties“ nicht in den Pfad ein (verwenden Sie z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
 | `xdm:title` | Der neue Titel, den Sie für dieses Feld anzeigen möchten, geschrieben mit großem Anfangsbuchstaben. |
 | `xdm:description` | Zusammen mit dem Titel kann eine optionale Beschreibung hinzugefügt werden. |
-| `meta:enum` | Wenn das von `xdm:sourceProperty` angegebene Feld ein Zeichenfolgenfeld ist, bestimmt `meta:enum` die Liste der vorgeschlagenen Werte für das Feld in der [!DNL Experience Platform]-Benutzeroberfläche. Beachten Sie, dass `meta:enum` keine Auflistung deklariert oder keine Datenvalidierung für das XDM-Feld bereitstellt.<br><br>Dies sollte nur für von Adobe definierte Core-XDM-Felder verwendet werden. Wenn es sich bei der Quelleigenschaft um ein von Ihrem Unternehmen definiertes benutzerdefiniertes Feld handelt, sollten Sie stattdessen die Eigenschaft `meta:enum` des Felds direkt über eine PATCH-Anfrage an die übergeordnete Ressource des Felds bearbeiten. |
+| `meta:enum` | Wenn das Feld durch `xdm:sourceProperty` ein Zeichenfolgenfeld ist, `meta:enum` bestimmt die Liste der vorgeschlagenen Werte für das Feld im [!DNL Experience Platform] Benutzeroberfläche. Es ist wichtig festzustellen, dass `meta:enum` deklariert keine Auflistung oder stellt keine Datenvalidierung für das XDM-Feld bereit.<br><br>Dies sollte nur für von Adobe definierte Core-XDM-Felder verwendet werden. Wenn die Quelleigenschaft ein von Ihrer Organisation definiertes benutzerdefiniertes Feld ist, sollten Sie stattdessen die `meta:enum` -Eigenschaft direkt über eine PATCH-Anfrage an die übergeordnete Ressource des Felds. |
 
 {style=&quot;table-layout:auto&quot;}
 
