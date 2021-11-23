@@ -3,7 +3,7 @@ title: Erfassen von Commerce- und Produktinformationen mit dem Adobe Experience 
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten zu Produkten oder einem Warenkorb hinzufügen.
 keywords: Produkte;Commerce;Maßnahmen;Maßnahme;Bestellung;cartAbandons;Checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;Einkäufe;saveForLaters;currencyCode;Zahlungen;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 7d7502b238f96eda1a15b622ba10bbccc289b725
+source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
 workflow-type: tm+mt
 source-wordcount: '1324'
 ht-degree: 93%
@@ -14,7 +14,7 @@ ht-degree: 93%
 
 Wenn Sie Produkte auf Ihrer Site haben, ist dies ein Standardsatz, den Sie möglicherweise senden möchten, um die meisten Funktionen von Adobe zu aktivieren. Dies ist nur ein Vorschlag, Sie verfügen damit jedoch von Anfang an über einen sehr starken Datensatz.
 
-In diesem Dokument wird die Schemafeldgruppe [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) verwendet. Die Feldergruppe `commerce` ist in zwei Teile unterteilt: das `commerce`-Objekt und das `productListItems`-Array. Mit dem `commerce`-Objekt können Sie angeben, welche Aktionen auf das `productListItems`-Array angewendet werden.
+Dieses Dokument verwendet die [ExperienceEvent Commerce-Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) Schemafeldgruppe. Die `commerce` Die Feldergruppe besteht aus zwei Teilen: die `commerce` -Objekt und `productListItems` Array. Mit dem `commerce`-Objekt können Sie angeben, welche Aktionen auf das `productListItems`-Array angewendet werden.
 
 >[!TIP]
 >
@@ -123,7 +123,7 @@ Die Produktliste gibt an, welche Produkte mit der entsprechenden Aktion in Verbi
 
 ## Beispiele
 
-`productView`-Ereignis
+`productViews`-Ereignis
 
 ```javascript
 alloy("sendEvent",{
@@ -147,7 +147,7 @@ alloy("sendEvent",{
 });
 ```
 
-`productView`-Ereignis
+`productListAdds`-Ereignis
 
 ```javascript
 alloy("sendEvent",{
@@ -177,7 +177,7 @@ alloy("sendEvent",{
 });
 ```
 
-`checkout`-Ereignis
+`checkouts`-Ereignis
 
 ```javascript
 alloy("sendEvent",{
@@ -205,7 +205,7 @@ alloy("sendEvent",{
 });
 ```
 
-`purchase`-Ereignis
+`order`-Ereignis
 
 ```javascript
 alloy("sendEvent",{
