@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mithilfe Ihres Cloud-Speicherkontos beschrieben.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 10f04044e970158131677e0c630edf761d4577bd
+source-git-commit: aac052502ea9ac0d6fae5839d8af02a077c3d6db
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 4%
+source-wordcount: '2076'
+ht-degree: 3%
 
 ---
 
@@ -26,11 +26,11 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
    * [Tutorial zum Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
-Additionally, this tutorial requires that you have an established cloud storage account. Eine Liste der Tutorials zum Erstellen verschiedener Cloud-Speicher-Konten in der Benutzeroberfläche finden Sie im [Übersicht über Quell-Connectoren](../../../../home.md).
+Darüber hinaus erfordert dieses Tutorial, dass Sie über ein eingerichtetes Cloud-Speicher-Konto verfügen. Eine Liste der Tutorials zum Erstellen verschiedener Cloud-Speicher-Konten in der Benutzeroberfläche finden Sie im [Übersicht über Quell-Connectoren](../../../../home.md).
 
 ### Unterstützte Dateiformate
 
-[!DNL Experience Platform] supports the following file formats to be ingested from external storages:
+[!DNL Experience Platform] unterstützt die folgenden Dateiformate, die aus externen Speichern erfasst werden:
 
 * Trennzeichen (DSV): Jeder einzelne Wert kann als Trennzeichen für Datendateien im DSV-Format verwendet werden.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatierte Datendateien müssen XDM-konform sein.
@@ -124,7 +124,7 @@ Umschalten zwischen **[!UICONTROL Profildatensatz]** Schaltfläche zum Aktiviere
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/new-dataset.png)
 
-Die **[!UICONTROL Schema auswählen]** angezeigt. Select the schema you wish to apply to the new dataset, then select **[!UICONTROL Done]**.
+Die **[!UICONTROL Schema auswählen]** angezeigt. Wählen Sie das Schema aus, das Sie auf den neuen Datensatz anwenden möchten, und wählen Sie dann **[!UICONTROL Fertig]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
@@ -132,13 +132,13 @@ Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbere
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays You can also preview and map complex data types such as arrays in JSON files using a cloud storage source connector.
+Bei JSON-Dateien können Sie neben der direkten Zuordnung von Feldern zu anderen Feldern Objekte und Arrays anderen Objekten und Arrays direkt zuordnen. Außerdem können Sie komplexe Datentypen wie Arrays in JSON-Dateien mit einem Cloud-Speicher-Quell-Connector in der Vorschau anzeigen und zuordnen.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/target-field-json.png)
 
-Beachten Sie, dass Sie keine Zuordnung für verschiedene Typen erstellen können. For example, you cannot map an object to an array, or a field to an object.
+Beachten Sie, dass Sie keine Zuordnung für verschiedene Typen erstellen können. Sie können beispielsweise kein Objekt einem Array oder einem Feld einem Objekt zuordnen.
 
 >[!TIP]
 >
@@ -146,11 +146,11 @@ Beachten Sie, dass Sie keine Zuordnung für verschiedene Typen erstellen können
 
 Auswählen **[!UICONTROL Datenvorschau]** , um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz anzuzeigen.
 
-During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results.
+Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da dies die wichtigsten Informationen ist, die bei der Validierung der Zuordnungsergebnisse erforderlich sind.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping-preview.png)
 
-Once your source data is mapped, select **[!UICONTROL Close]**.
+Nachdem die Quelldaten zugeordnet wurden, wählen Sie **[!UICONTROL Schließen]**.
 
 ## Erfassungsläufe planen
 
@@ -188,6 +188,12 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
 ## Datenflussdetails angeben
+
+>[!CONTEXTUALHELP]
+>id="platform_sources_alerts_subscribe"
+>title="Warnhinweise für Quellen abonnieren"
+>abstract="Aktivieren Sie diese Option, um Benachrichtigungen für Ihren Datenfluss zu Quellen zu abonnieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Datenflussdetails]** angezeigt, sodass Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datenfluss eingeben können.
 
@@ -236,7 +242,7 @@ Die folgenden Abschnitte enthalten zusätzliche Informationen zum Arbeiten mit Q
 
 ### Datenfluss deaktivieren
 
-When a dataflow is created, it immediately becomes active and ingests data according to the schedule it was given. Sie können einen aktiven Datenfluss jederzeit deaktivieren, indem Sie die unten stehenden Anweisungen befolgen.
+Wenn ein Datenfluss erstellt wird, wird er sofort aktiv und erfasst Daten gemäß dem festgelegten Zeitplan. Sie können einen aktiven Datenfluss jederzeit deaktivieren, indem Sie die unten stehenden Anweisungen befolgen.
 
 Innerhalb der **[!UICONTROL Quellen]** Klicken Sie auf den **[!UICONTROL Durchsuchen]** Registerkarte. Klicken Sie anschließend auf den Namen des Kontos, das dem aktiven Datenfluss zugeordnet ist, den Sie deaktivieren möchten.
 
