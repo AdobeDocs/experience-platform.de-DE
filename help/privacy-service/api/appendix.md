@@ -5,10 +5,10 @@ title: Anhang zum Privacy Service-API-Handbuch
 topic-legacy: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen zum Arbeiten mit der Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 0d20da1264c20a5684c241a725041dd009f77b58
+source-git-commit: 445c8158dbf012defb32e9cd7aa4c27c6be1fb88
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 10%
+source-wordcount: '484'
+ht-degree: 9%
 
 ---
 
@@ -68,7 +68,7 @@ In der folgenden Tabelle sind die zulässigen Werte für die Angabe eines Adobe-
 | Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `campaign` |
-| Adobe Experience Platform | `AdobeCloudPlatform` |
+| Adobe Experience Platform (Data Lake) | `aepDataLake` |
 | Adobe Primetime-Authentifizierung | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Automatisierungsprodukt | `automationProduct` |
