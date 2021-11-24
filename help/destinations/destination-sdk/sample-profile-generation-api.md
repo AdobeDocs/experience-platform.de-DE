@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/sample-profiles"ausführen können, um Beispielprofile zu generieren, die für Zieltests verwendet werden können.
 title: API-Vorgänge zur Profilerstellung
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 7f0dcc916b72145705ecd09b45aadd40eac99b23
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '989'
 ht-degree: 3%
 
 ---
@@ -15,25 +15,34 @@ ht-degree: 3%
 >
 >**API-Endpunkt**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt `/authoring/sample-profiles` ausführen können.
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/sample-profiles` API-Endpunkt.
 
-Mit diesem API-Endpunkt können Sie Beispielprofile zur Verwendung generieren:
-* Beim Testen einer Nachrichtenumwandlungsvorlage. Weitere Informationen finden Sie unter [Erstellen und testen Sie eine Nachrichtenumwandlungsvorlage](./create-template.md).
-* Beim Testen, ob Ihr Ziel richtig konfiguriert ist. Weitere Informationen finden Sie unter [Testen der Zielkonfiguration](./test-destination.md).
-
-Sie können Beispielprofile auf Grundlage des Adobe-XDM-Quellschemas oder des von Ihrem Ziel unterstützten Zielschemas generieren. Um den Unterschied zwischen dem Adobe-XDM-Quellschema und dem Zielschema zu verstehen, lesen Sie den Artikel [Nachrichtenformat](./message-format.md) .
-
-## Erste Schritte mit API-Vorgängen zur Beispielprofilerstellung {#get-started}
-
-Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dazu gehören das Abrufen der erforderlichen Zielerstellungsberechtigung und der erforderlichen Kopfzeilen.
-
-## Generieren von Beispielprofilen basierend auf dem Quellschema {#generate-sample-profiles-source-schema}
+## Generieren verschiedener Profiltypen für verschiedene APIs {#different-profiles-different-apis}
 
 >[!IMPORTANT]
 >
->Fügen Sie die hier generierten Beispielprofile zu HTTP-Aufrufen hinzu, wenn Sie [Ihr Ziel testen](./test-destination.md).
+>Verwenden Sie diesen API-Endpunkt, um Beispielprofile für zwei verschiedene Anwendungsfälle zu generieren. Wählen Sie eine der folgenden Möglichkeiten aus:
+>* Generieren von Profilen, die verwendet werden, wenn [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./create-template.md) - durch Verwendung von *Ziel-ID* als Abfrageparameter.
+>* Profile generieren, die bei Aufrufen an [Testen, ob Ihr Ziel richtig konfiguriert ist](./test-destination.md) - durch Verwendung von *Zielinstanz-ID* als Abfrageparameter.
 
-Sie können Beispielprofile basierend auf dem Quellschema generieren, indem Sie eine GET-Anfrage an den Endpunkt `authoring/sample-profiles/` senden und die Kennung einer Zielinstanz angeben, die Sie basierend auf der Zielkonfiguration erstellt haben, die Sie testen möchten.
+
+Sie können Beispielprofile basierend entweder auf dem Adobe-XDM-Quellschema (das beim Testen Ihres Ziels verwendet werden soll) oder dem von Ihrem Ziel unterstützten Zielschema (das beim Erstellen Ihrer Vorlage verwendet werden soll) generieren. Um den Unterschied zwischen dem Adobe-XDM-Quellschema und dem Zielschema zu verstehen, lesen Sie den Übersichtsabschnitt des [Nachrichtenformat](./message-format.md) Artikel.
+
+Beachten Sie, dass die Zwecke, für die die Beispielprofile verwendet werden können, nicht austauschbar sind. Auf der Basis der Variablen *Ziel-ID* kann nur verwendet werden, um Vorlagen für die Nachrichtenumwandlung und Profile zu erstellen, die basierend auf dem *Zielinstanz-ID* kann nur zum Testen Ihres Ziel-Endpunkts verwendet werden.
+
+## Erste Schritte mit API-Vorgängen zur Beispielprofilerstellung {#get-started}
+
+Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+
+## Generieren von Beispielprofilen basierend auf dem Quellschema, das beim Testen Ihres Ziels verwendet werden soll {#generate-sample-profiles-source-schema}
+
+>[!IMPORTANT]
+>
+>Fügen Sie die hier generierten Beispielprofile zu HTTP-Aufrufen hinzu, wenn [Testen des Ziels](./test-destination.md).
+
+Sie können Beispielprofile basierend auf dem Quellschema generieren, indem Sie eine GET-Anfrage an die `authoring/sample-profiles/` -Endpunkt und die ID einer Zielinstanz angeben, die Sie basierend auf der Zielkonfiguration erstellt haben, die Sie testen möchten.
+
+Um die ID einer Zielinstanz abzurufen, müssen Sie zunächst in der Experience Platform-Benutzeroberfläche eine Verbindung zu Ihrem Ziel erstellen, bevor Sie versuchen, Ihr Ziel zu testen. Lesen Sie die [Ziel-Tutorial aktivieren](/help/destinations/ui/activation-overview.md) und lesen Sie den unten stehenden Tipp, wie Sie die Kennung der Zielinstanz abrufen können, die für diese API verwendet werden soll.
 
 >[!TIP]
 >
@@ -51,14 +60,14 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | Abfrageparameter | Beschreibung |
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | Die ID der Zielinstanz, basierend auf der Sie Beispielprofile generieren. |
-| `{COUNT}` | *Optional*. Die Anzahl der Beispielprofile, die Sie generieren. Der Parameter kann Werte zwischen `1 - 1000` annehmen. <br> Wenn der Parameter count nicht angegeben ist, wird die Standardanzahl der generierten Profile durch den  `maxUsersPerRequest` Wert in der  [Zielserverkonfiguration](./destination-server-api.md#create) bestimmt. Wenn diese Eigenschaft nicht definiert ist, generiert Adobe ein Beispielprofil. |
+| `{COUNT}` | *Optional*. Die Anzahl der Beispielprofile, die Sie generieren. Der Parameter kann Werte zwischen `1 - 1000`. <br> Wenn der Parameter count nicht angegeben ist, wird die Standardanzahl der generierten Profile durch die Variable `maxUsersPerRequest` Wert in [Zielserverkonfiguration](./destination-server-api.md#create). Wenn diese Eigenschaft nicht definiert ist, generiert Adobe ein Beispielprofil. |
 
 {style=&quot;table-layout:auto&quot;}
 
 
 **Anfrage**
 
-Die folgende Anfrage generiert Beispielprofile, die von den Abfrageparametern `{DESTINATION_INSTANCE_ID}` und `{COUNT}` konfiguriert werden.
+Die folgende Anfrage generiert Beispielprofile, die von der `{DESTINATION_INSTANCE_ID}` und `{COUNT}` Abfrageparameter.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationInstanceId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -172,24 +181,24 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `segmentMembership` | Ein map -Objekt, das die Segmentmitgliedschaften des Kontakts beschreibt. Weitere Informationen zu `segmentMembership` finden Sie unter [Details zur Segmentmitgliedschaft](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | Ein map -Objekt, das die Segmentmitgliedschaften des Kontakts beschreibt. Weitere Informationen finden Sie unter `segmentMembership`, lesen [Details zur Segmentzugehörigkeit](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
 | `xdm:status` | Gibt an, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
-| `identityMap` | Ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen zu `identityMap` finden Sie unter [Basis der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
+| `identityMap` | Ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen finden Sie unter `identityMap`, lesen [Grundlage der Schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Erstellen von Beispielprofilen basierend auf dem Zielschema {#generate-sample-profiles-target-schema}
+## Generieren von Beispielprofilen basierend auf dem Zielschema, das bei der Erstellung einer Nachrichtenumwandlungsvorlage verwendet werden soll {#generate-sample-profiles-target-schema}
 
 >[!IMPORTANT]
 >
->Verwenden Sie die Beispielprofile, die hier beim Erstellen Ihrer Vorlage generiert werden, im Schritt [Rendervorlage ](./render-template-api.md#multiple-profiles-with-body) .
+>Verwenden Sie die Beispielprofile, die hier beim Erstellen Ihrer Vorlage generiert werden, im [Schritt zum Rendern der Vorlage](./render-template-api.md#multiple-profiles-with-body).
 
-Sie können Beispielprofile generieren, die auf dem Zielschema basieren, das eine GET-Anfrage an den Endpunkt `authoring/sample-profiles/` sendet und die Ziel-ID der Zielkonfiguration angibt, basierend auf der Sie Ihre Vorlage erstellen.
+Sie können Beispielprofile generieren, die auf dem Zielschema basieren, das eine GET-Anfrage an die `authoring/sample-profiles/` -Endpunkt und die Ziel-ID der Zielkonfiguration angeben, basierend auf der Sie Ihre Vorlage erstellen.
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId` , die einer Zielkonfiguration entspricht, die mit dem Endpunkt `/destinations` erstellt wurde. Weitere Informationen finden Sie unter [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId` , die einer Zielkonfiguration entspricht, die mithilfe der `/destinations` -Endpunkt. Siehe Abschnitt [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
 
 
 **API-Format**
@@ -202,13 +211,13 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | Abfrageparameter | Beschreibung |
 | -------- | ----------- |
 | `{DESTINATION_ID}` | Die ID der Zielkonfiguration, basierend auf der Sie Beispielprofile generieren. |
-| `{COUNT}` | *Optional*. Die Anzahl der Beispielprofile, die Sie generieren. Der Parameter kann Werte zwischen `1 - 1000` annehmen. <br> Wenn der Parameter count nicht angegeben ist, wird die Standardanzahl der generierten Profile durch den  `maxUsersPerRequest` Wert in der  [Zielserverkonfiguration](./destination-server-api.md#create) bestimmt. Wenn diese Eigenschaft nicht definiert ist, generiert Adobe ein Beispielprofil. |
+| `{COUNT}` | *Optional*. Die Anzahl der Beispielprofile, die Sie generieren. Der Parameter kann Werte zwischen `1 - 1000`. <br> Wenn der Parameter count nicht angegeben ist, wird die Standardanzahl der generierten Profile durch die Variable `maxUsersPerRequest` Wert in [Zielserverkonfiguration](./destination-server-api.md#create). Wenn diese Eigenschaft nicht definiert ist, generiert Adobe ein Beispielprofil. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage generiert Beispielprofile, die von den Abfrageparametern `{DESTINATION_ID}` und `{COUNT}` konfiguriert werden.
+Die folgende Anfrage generiert Beispielprofile, die von der `{DESTINATION_ID}` und `{COUNT}` Abfrageparameter.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/sample-profiles?destinationId=49966037-32cd-4457-a105-2cbf9c01826a&count=3' \
@@ -366,8 +375,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Weitere Informationen finden Sie unter [API-Status-Codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anforderungsheader](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen für die Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Beispielprofile generieren, die beim [Testen einer Nachrichtenumwandlungsvorlage](./create-template.md) oder beim [Testen verwendet werden, ob Ihr Ziel korrekt konfiguriert ist](./test-destination.md).
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Beispielprofile generieren, die bei der [Testen einer Nachrichtenumwandlungsvorlage](./create-template.md) oder wenn [Testen, ob Ihr Ziel richtig konfiguriert ist](./test-destination.md).
