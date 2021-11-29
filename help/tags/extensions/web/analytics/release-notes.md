@@ -2,9 +2,9 @@
 title: Versionshinweise für die Adobe Analytics-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 83e9ebf65e904c6343fe44932a2b7b1a72039187
+source-git-commit: 73fe3c2e060dbdd7607ed3b54c5b8e9cca752d8f
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1272'
 ht-degree: 100%
 
 ---
@@ -14,6 +14,14 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 29. November 2021
+
+### Adobe Analytics-Erweiterung 1.8.8
+
+#### Fehlerkorrekturen
+
+* AppMeasurement wurde auf Version 2.22.3 aktualisiert.
 
 ## 16. September 2021
 
