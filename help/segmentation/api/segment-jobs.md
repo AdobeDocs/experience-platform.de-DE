@@ -5,22 +5,22 @@ title: API-Endpunkt für Segmentaufträge
 topic-legacy: developer guide
 description: Der Endpunkt für Segmentaufträge in der Segmentation Service-API von Adobe Experience Platform ermöglicht Ihnen die programmgesteuerte Verwaltung von Segmentaufträgen für Ihr Unternehmen.
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1168'
-ht-degree: 34%
+source-wordcount: '1169'
+ht-degree: 33%
 
 ---
 
 # Endpunkt der Segmentaufträge
 
-Ein Segmentauftrag ist ein asynchroner Vorgang, bei dem ein neues Zielgruppensegment erstellt wird. Er verweist auf eine [Segmentdefinition](./segment-definitions.md) sowie auf alle [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md), die steuern, wie [!DNL Real-time Customer Profile] überlappende Attribute über Ihre Profilfragmente hinweg zusammenführt. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
+Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Sie verweist auf eine [Segmentdefinition](./segment-definitions.md)sowie [Zusammenführungsrichtlinien](../../profile/api/merge-policies.md) Steuern der [!DNL Real-time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
 
 Dieses Handbuch enthält Informationen zum besseren Verständnis von Segmentaufträgen und umfasst Beispiel-API-Aufrufe zum Ausführen grundlegender Aktionen mit der API.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Liste mit Segmentaufträgen abrufen {#retrieve-list}
 
@@ -181,7 +181,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Segmentau
 
 ## Neuen Segmentauftrag erstellen {#create}
 
-Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an den `/segment/jobs`-Endpunkt senden und die Kennung der Segmentdefinition, aus der Sie eine neue Zielgruppe erstellen möchten, in den Hauptteil einschließen.
+Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an die `/segment/jobs` -Endpunkt und die Kennung der Segmentdefinition, aus der Sie eine neue Zielgruppe erstellen möchten, in den Text einschließen.
 
 **API-Format**
 
@@ -208,7 +208,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Diese Segmentdefinitionen können zu verschiedenen Zusammenführungsrichtlinien gehören. Weitere Informationen zu Segmentdefinitionen finden Sie im [Endpunktleitfaden zur Segmentdefinition](./segment-definitions.md). |
+| `segmentId` | Die ID der Segmentdefinition, für die Sie einen Segmentauftrag erstellen möchten. Diese Segmentdefinitionen können zu verschiedenen Zusammenführungsrichtlinien gehören. Weitere Informationen zu Segmentdefinitionen finden Sie im Abschnitt [Endpunktleitfaden für die Segmentdefinition](./segment-definitions.md). |
 
 **Antwort**
 
@@ -275,7 +275,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 
 ## Bestimmten Segmentauftrag abrufen {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/segment/jobs` senden und im Anfragepfad die Kennung des Segmentauftrags angeben, den Sie abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten Segmentauftrag abrufen, indem Sie eine GET-Anfrage an die `/segment/jobs` -Endpunkt und geben Sie die ID des Segmentauftrags an, den Sie im Anfragepfad abrufen möchten.
 
 **API-Format**
 
@@ -372,7 +372,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 ## Massenabruf von Segmentaufträgen {#bulk-get}
 
-Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST-Anfrage an den Endpunkt `/segment/jobs/bulk-get` senden und die `id`-Werte der Segmentaufträge im Anfrageinhalt angeben.
+Sie können detaillierte Informationen zu mehreren Segmentaufträgen abrufen, indem Sie eine POST-Anfrage an die `/segment/jobs/bulk-get` Endpunkt und Bereitstellung der  `id` -Werte der Segmentaufträge im Anfragetext.
 
 **API-Format**
 
@@ -478,7 +478,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 207 mit den angeforderten Segment
 
 ## Bestimmten Segmentauftrag abbrechen oder löschen {#delete}
 
-Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/segment/jobs` senden und im Anfragepfad die Kennung des Segmentauftrags angeben, den Sie löschen möchten.
+Sie können einen bestimmten Segmentauftrag löschen, indem Sie eine DELETE-Anfrage an die `/segment/jobs` -Endpunkt und geben Sie die ID des Segmentauftrags an, den Sie im Anfragepfad löschen möchten.
 
 >[!NOTE]
 >

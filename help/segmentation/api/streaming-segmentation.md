@@ -5,10 +5,10 @@ title: 'Bewerten von Ereignissen in nahezu Echtzeit mit Streaming-Segmentierung 
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung von Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: bb5a56557ce162395511ca9a3a2b98726ce6c190
+source-git-commit: 65ff1c34e12cc93f614c3c93c4e40e53f2bf51ff
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 44%
+source-wordcount: '1828'
+ht-degree: 34%
 
 ---
 
@@ -62,7 +62,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 Zum Ausführen spezifischer Anfragen können zusätzliche Kopfzeilen erforderlich sein. Die richtigen Kopfzeilen werden in jedem der Beispiele in diesem Dokument angezeigt. Achten Sie besonders auf die Beispielanfragen, um dafür zu sorgen, dass alle erforderlichen Kopfzeilen enthalten sind.
 
-### Für Streaming-Segmentierung aktivierte Abfragetypen {#streaming-segmentation-query-types}
+### Für Streaming-Segmentierung aktivierte Abfragetypen {#query-types}
 
 >[!NOTE]
 >
@@ -86,12 +86,16 @@ Eine Segmentdefinition **not** für Streaming-Segmentierung in den folgenden Sze
 - Die Segmentdefinition umfasst Adobe Audience Manager-Segmente oder -Eigenschaften (AAM).
 - Die Segmentdefinition umfasst mehrere Entitäten (Abfragen mit mehreren Entitäten).
 
-Darüber hinaus gelten einige Richtlinien für die Streaming-Segmentierung:
+Beachten Sie bei der Streaming-Segmentierung die folgenden Richtlinien:
 
 | Abfragetyp | Richtlinie |
 | ---------- | -------- |
 | Einzelereignisabfrage | Das Lookback-Fenster ist nicht beschränkt. |
 | Abfrage mit Ereignisverlauf | <ul><li>Das Lookback-Fenster ist auf **ein Tag**.</li><li>Eine strikte Bedingung für die Zeitreihenfolge **must** zwischen den Ereignissen vorhanden sind.</li><li>Abfragen mit mindestens einem negativen Ereignis werden unterstützt. Das gesamte Ereignis **cannot** eine Negation sein.</li></ul> |
+
+Wenn eine Segmentdefinition geändert wird, sodass sie die Kriterien für Streaming-Segmentierung nicht mehr erfüllt, wird die Segmentdefinition automatisch von &quot;Streaming&quot;zu &quot;Batch&quot;geändert.
+
+Darüber hinaus erfolgt die Aufhebung der Segmentqualifizierung, ähnlich wie bei der Segmentqualifizierung, in Echtzeit. Wenn sich eine Zielgruppe daher nicht mehr für ein Segment qualifiziert, wird sie sofort nicht qualifiziert. Wenn in der Segmentdefinition beispielsweise nach &quot;Alle Benutzer, die in den letzten drei Stunden rote Schuhe gekauft haben&quot;gefragt wird, werden nach drei Stunden alle Profile, die sich ursprünglich für die Segmentdefinition qualifiziert haben, nicht qualifiziert.
 
 ## Alle für Streaming-Segmentierung aktivierten Segmente abrufen
 
@@ -208,7 +212,7 @@ Eine erfolgreiche Antwort gibt eine Gruppe von Segmenten in Ihrer IMS-Organisati
 
 ## Streaming-fähiges Segment erstellen
 
-Ein Segment wird automatisch für Streaming aktiviert, wenn es mit einem der [oben aufgeführte Streaming-Segmentierungstypen](#streaming-segmentation-query-types).
+Ein Segment wird automatisch für Streaming aktiviert, wenn es mit einem der [oben aufgeführte Streaming-Segmentierungstypen](#query-types).
 
 **API-Format**
 
@@ -407,3 +411,31 @@ Derselbe Vorgang kann zum Deaktivieren eines Zeitplans verwendet werden, indem d
 Nachdem Sie sowohl neue als auch vorhandene Segmente für Streaming-Segmentierung aktiviert und die geplante Segmentierung aktiviert haben, um eine Grundlinie zu entwickeln und wiederkehrende Auswertungen durchzuführen, können Sie mit der Erstellung von Streaming-fähigen Segmenten für Ihre Organisation beginnen.
 
 Weiterführende Informationen zum Durchführen ähnlicher Aktionen und zum Verwenden von Segmenten unter Einsatz der Benutzeroberfläche von Adobe Experience Platform finden Sie im [Segment Builder-Benutzerhandbuch](../ui/segment-builder.md).
+
+## Anhang
+
+Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Streaming-Segmentierung:
+
+### Tritt die &quot;Nicht-Qualifizierung&quot;der Streaming-Segmentierung auch in Echtzeit auf?
+
+In den meisten Fällen wird die Qualifizierung der Streaming-Segmentierung in Echtzeit aufgehoben. Streaming-Segmente, die Segmente von Segmenten verwenden, tun dies jedoch **not** in Echtzeit nicht qualifizieren, anstatt die Qualifizierung nach 24 Stunden aufzuheben.
+
+### Auf welche Daten funktioniert Streaming-Segmentierung?
+
+Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Segmente, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind.
+
+### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
+
+Ein Segment wird entweder als Batch- oder Streaming-Segmentierung basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer definiert. Eine Liste der Segmente, die als Streaming-Segment ausgewertet werden, finden Sie im [Abschnitt zu Streaming-Segmentierungs-Abfragetypen](#query-types).
+
+### Kann ein Benutzer ein Segment als Batch- oder Streaming-Segmentierung definieren?
+
+Zu diesem Zeitpunkt kann der Benutzer nicht definieren, ob ein Segment mithilfe der Batch- oder Streaming-Erfassung ausgewertet wird, da das System automatisch bestimmt, mit welcher Methode das Segment ausgewertet wird.
+
+### Warum steigt die Anzahl der &quot;insgesamt qualifizierten&quot;Segmente weiterhin, während die Zahl unter &quot;Letzte X Tage&quot;im Abschnitt mit den Segmentdetails bei null bleibt?
+
+Die Anzahl der insgesamt qualifizierten Segmente wird aus dem täglichen Segmentierungsauftrag gezogen, der Zielgruppen enthält, die sich sowohl für Batch- als auch für Streaming-Segmente qualifizieren. Dieser Wert wird sowohl für Batch- als auch für Streaming-Segmente angezeigt.
+
+Die Zahl unter &quot;Letzte X Tage&quot; **only** umfasst Zielgruppen, die für Streaming-Segmentierung qualifiziert sind, und **only** erhöht sich, wenn Sie Daten in das System gestreamt haben, und zählt für diese Streaming-Definition. Dieser Wert ist **only** wird für Streaming-Segmente angezeigt. Daher wird dieser Wert **kann** als 0 für Batch-Segmente anzeigen.
+
+Wenn Sie also feststellen, dass die Zahl unter &quot;Letzte X Tage&quot;null ist und das Liniendiagramm ebenfalls null meldet, haben Sie **not** alle Profile in das System gestreamt, die für dieses Segment qualifiziert wären.

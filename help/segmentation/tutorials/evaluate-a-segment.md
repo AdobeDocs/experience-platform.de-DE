@@ -6,10 +6,10 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mithilfe der Adobe Experience Platform Segmentation Service-API Segmente auswerten und auf Segmentergebnisse zugreifen.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: 44644d786842564c76234bacb1f19815741b92ae
+source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
 workflow-type: tm+mt
-source-wordcount: '1572'
-ht-degree: 17%
+source-wordcount: '1595'
+ht-degree: 16%
 
 ---
 
@@ -86,12 +86,11 @@ Mit der On-Demand-Auswertung können Sie einen Segmentauftrag erstellen, um bei 
 
 ### Erstellen eines Segmentauftrags
 
-Ein Segmentauftrag ist ein asynchroner Vorgang, bei dem ein neues Zielgruppensegment erstellt wird. Er verweist auf eine Segmentdefinition sowie auf alle Zusammenführungsrichtlinien, die steuern, wie [!DNL Real-time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe.
+Ein Segmentauftrag ist ein asynchroner Prozess, der ein Zielgruppensegment bei Bedarf erstellt. Er verweist auf eine Segmentdefinition sowie auf alle Zusammenführungsrichtlinien, die steuern, wie [!DNL Real-time Customer Profile] Führt überlappende Attribute über Ihre Profilfragmente hinweg zusammen. Nach erfolgreichem Abschluss eines Segmentauftrags können Sie verschiedene Informationen über das Segment sammeln, z. B. Fehler, die bei der Verarbeitung aufgetreten sind, oder die endgültige Größe Ihrer Zielgruppe. Ein Segmentauftrag muss jedes Mal ausgeführt werden, wenn Sie die Zielgruppe aktualisieren möchten, die sich derzeit für die Segmentdefinition qualifiziert.
 
 Sie können einen neuen Segmentauftrag erstellen, indem Sie eine POST-Anfrage an die `/segment/jobs` -Endpunkt im [!DNL Real-time Customer Profile] API.
 
 Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Segmentaufträge](../api/segment-jobs.md#create)
-
 
 ### Status des Segmentauftrags nachschlagen
 
@@ -211,7 +210,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die schreibgeschützte, sy
 
 ### Generieren von Profilen für Zielgruppenmitglieder {#generate-profiles}
 
-Sobald Sie über einen Datensatz mit Vereinigungspersistenz verfügen, können Sie einen Exportauftrag erstellen, um die Mitglieder der Zielgruppe im Datensatz zu erhalten, indem Sie eine POST-Anfrage an die `/export/jobs` -Endpunkt im [!DNL Real-time Customer Profile] API und die Angabe der Datensatz-ID und der Segmentinformationen für die Segmente, die Sie exportieren möchten.
+Sobald Sie über einen Datensatz verfügen, der die Vereinigung beibehält, können Sie einen Exportauftrag erstellen, um die Mitglieder der Zielgruppe im Datensatz zu erhalten, indem Sie eine POST-Anfrage an die `/export/jobs` -Endpunkt im [!DNL Real-time Customer Profile] API und die Angabe der Datensatz-ID und der Segmentinformationen für die Segmente, die Sie exportieren möchten.
 
 Detailliertere Informationen zur Verwendung dieses Endpunkts finden Sie im Abschnitt [Endpunktleitfaden für Exportaufträge](../api/export-jobs.md#create)
 
