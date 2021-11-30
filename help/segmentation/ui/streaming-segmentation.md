@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung der Benutzeroberfläche
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an Platform übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 58b546ea83774672dd36ca6cd952e229410aa645
+source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
 workflow-type: tm+mt
-source-wordcount: '1200'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
@@ -85,8 +85,6 @@ In diesem Benutzerhandbuch wird erläutert, wie Streaming-fähige Segmentdefinit
 Weitere Informationen zur Verwendung der Adobe Experience Platform-Benutzeroberfläche finden Sie in der [Benutzerhandbuch zur Segmentierung](./overview.md).
 
 ## Anhang
-
-Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Streaming-Segmentierung:
 
 Im folgenden Abschnitt finden Sie häufig gestellte Fragen zur Streaming-Segmentierung:
 
