@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mithilfe Ihres Cloud-Speicherkontos beschrieben.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 85a68d49614f021ec7e4be2c11f91ef835e88929
+source-git-commit: 873a23d06696c98633f76e37a8b4a1d9b1d25c8b
 workflow-type: tm+mt
-source-wordcount: '2076'
-ht-degree: 3%
+source-wordcount: '2061'
+ht-degree: 4%
 
 ---
 
@@ -193,8 +193,7 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 >id="platform_sources_alerts_subscribe"
 >title="Warnhinweise für Quellen abonnieren"
 >abstract="Aktivieren Sie diese Option, um Benachrichtigungen für Ihren Datenfluss zu Quellen zu abonnieren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html?lang=en#provide-dataflow-details" text="Weitere Informationen finden Sie in der Dokumentation ."
-
+>text="Learn more in documentation"
 
 Die **[!UICONTROL Datenflussdetails]** angezeigt, sodass Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datenfluss eingeben können.
 
