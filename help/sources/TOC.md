@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
 workflow-type: tm+mt
-source-wordcount: '731'
+source-wordcount: '735'
 ht-degree: 19%
 
 ---
@@ -257,6 +257,7 @@ ht-degree: 19%
    - [Datenflüsse aktualisieren](tutorials/ui/update-dataflows.md)
    - [Konten löschen](tutorials/ui/delete-accounts.md)
    - [Datenflüsse löschen](tutorials/ui/delete.md)
+   - [Warnhinweise für Quellen abonnieren](tutorials/ui/alerts.md)
 - Quellen-SDK {#sdk}
    - [Übersicht](sources-sdk/overview.md)
    - [Konfigurationsoptionen](sources-sdk/config/config.md)
