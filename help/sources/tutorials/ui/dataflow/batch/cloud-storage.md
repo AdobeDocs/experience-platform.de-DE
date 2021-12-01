@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mithilfe Ihres Cloud-Speicherkontos beschrieben.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 82f02064477cc5336bf528a34284c9f4f7669c3d
+source-git-commit: db0c295777a98cc945d7c88f3e49eda3d2581f7b
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2045'
 ht-degree: 4%
 
 ---
@@ -187,13 +187,7 @@ Nachdem Sie die entsprechenden Werte für den Zeitplan angegeben haben, wählen 
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-once.png)
 
-## Datenflussdetails angeben {#provide-dataflow-details}
-
->[!CONTEXTUALHELP]
->id="platform_sources_alerts_subscribe"
->title="Warnhinweise für Quellen abonnieren"
->abstract="Wählen Sie die Option(en) aus, die Sie abonnieren möchten, um Benachrichtigungen für Ihre Datenflüsse zu erhalten."
->text="Learn more in documentation"
+## Datenflussdetails angeben
 
 Die **[!UICONTROL Datenflussdetails]** angezeigt, sodass Sie einen Namen eingeben und eine kurze Beschreibung zu Ihrem neuen Datenfluss eingeben können.
 
