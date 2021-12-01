@@ -3,10 +3,10 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: 357916aa925c7b3ada4abe64a2bc6ad090d70cc0
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 6%
+source-wordcount: '1589'
+ht-degree: 5%
 
 ---
 
@@ -138,6 +138,21 @@ while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie d
 >title="Ursprung der Zielgruppe"
 >abstract="Wählen Sie aus, wie die Kundendaten im Segment ursprünglich erfasst wurden. Die Daten werden in Facebook angezeigt, wenn ein Benutzer in die Zielgruppe des Segments fällt"
 >additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Weitere Informationen finden Sie in der Dokumentation ."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customers"
+>title="Ursprung der Zielgruppe"
+>abstract="Advertiser haben Daten direkt von Kunden erfasst."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_partners"
+>title="Ursprung der Zielgruppe"
+>abstract="Advertiser haben Daten direkt von ihren Partnern erfasst."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
+>title="Ursprung der Zielgruppe"
+>abstract="Advertiser haben Daten direkt von ihren Kunden und Partnern erfasst."
 
 Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
