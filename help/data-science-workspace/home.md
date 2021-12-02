@@ -5,7 +5,7 @@ title: Data Science Workspace – Übersicht
 topic-legacy: overview
 description: Dieser Leitfaden bietet eine Übersicht über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
 workflow-type: tm+mt
 source-wordcount: '2388'
 ht-degree: 100%

@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Handbuch wird beschrieben, wie Sie mit dem Notebook "Exploratory Data Analysis"(EDA) Muster in Webdaten erkennen, Ereignisse mit einem Prognoseziel aggregieren, aggregierte Daten bereinigen und die Beziehung zwischen Vorhersagen und Zielen verstehen können.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '2760'
 ht-degree: 1%
@@ -23,11 +23,11 @@ Teil 2 beginnt mit der deskriptiven Analyse aggregierter Daten mithilfe von Pyth
 
 ## Erste Schritte
 
-Bevor Sie dieses Handbuch lesen, lesen Sie bitte das [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) , um eine allgemeine Einführung in [!DNL JupyterLab] und dessen Rolle in Data Science Workspace zu erhalten. Wenn Sie außerdem Ihre eigenen Daten verwenden, lesen Sie bitte die Dokumentation für [Datenzugriff in [!DNL Jupyterlab] Notebooks](./access-notebook-data.md). Dieses Handbuch enthält wichtige Informationen zu Einschränkungen für Notebook-Daten.
+Bevor Sie dieses Handbuch lesen, lesen Sie bitte die [[!DNL JupyterLab] Benutzerhandbuch](./overview.md) für eine Einführung auf hoher Ebene in [!DNL JupyterLab] und seiner Rolle in Data Science Workspace. Wenn Sie außerdem Ihre eigenen Daten verwenden, lesen Sie bitte die Dokumentation für [Datenzugriff in [!DNL Jupyterlab] Notebooks](./access-notebook-data.md). Dieses Handbuch enthält wichtige Informationen zu Einschränkungen für Notebook-Daten.
 
-Dieses Notebook verwendet einen Midvalues-Datensatz in Form von Adobe Analytics-Erlebnisereignisdaten aus Analytics Analysis Workspace. Um das EDA-Notebook zu verwenden, müssen Sie Ihre Datentabelle mit den folgenden Werten definieren: `target_table` und `target_table_id`. Es können beliebige Midvalues-Datensätze verwendet werden.
+Dieses Notebook verwendet einen Midvalues-Datensatz in Form von Adobe Analytics-Erlebnisereignisdaten aus Analytics Analysis Workspace. Um das EDA-Notebook zu verwenden, müssen Sie Ihre Datentabelle mit den folgenden Werten definieren `target_table` und `target_table_id`. Es können beliebige Midvalues-Datensätze verwendet werden.
 
-Um diese Werte zu finden, führen Sie die Schritte aus, die im Abschnitt [Schreiben in einen Datensatz in python](./access-notebook-data.md#write-python) des JupyterLab-Datenzugriffshandbuchs beschrieben sind. Der Datensatzname (`target_table`) befindet sich im Datensatzverzeichnis. Sobald Sie mit der rechten Maustaste auf den Datensatz klicken, um Daten in ein Notebook zu untersuchen oder zu schreiben, wird im ausführbaren Code-Eintrag eine Datensatz-ID (`target_table_id`) angegeben.
+Um diese Werte zu finden, führen Sie die Schritte aus, die im Abschnitt [Schreiben in einen Datensatz in Python](./access-notebook-data.md#write-python) Abschnitt des JupyterLab-Datenzugriffshandbuchs. Der Datensatzname (`target_table`) befindet sich im Datensatzverzeichnis. Sobald Sie mit der rechten Maustaste auf den Datensatz klicken, um Daten in ein Notebook zu untersuchen oder zu schreiben, wird eine Datensatz-ID (`target_table_id`) wird im ausführbaren Code-Eintrag bereitgestellt.
 
 ## Datenerkennung
 
@@ -35,7 +35,7 @@ Dieser Abschnitt enthält Konfigurationsschritte und Beispielabfragen, mit denen
 
 ### Konfiguration von Bibliotheken
 
-JupyterLab unterstützt mehrere Bibliotheken. Der folgende Code kann eingefügt und in eine Code-Zelle ausgeführt werden, um alle in diesem Beispiel verwendeten erforderlichen Pakete zu erfassen und zu installieren. Sie können außerhalb dieses Beispiels zusätzliche oder alternative Packages für Ihre eigene Datenanalyse verwenden. Für eine Liste der unterstützten Pakete kopieren Sie `!pip list --format=columns` und fügen Sie  in eine neue Zelle ein.
+JupyterLab unterstützt mehrere Bibliotheken. Der folgende Code kann eingefügt und in eine Code-Zelle ausgeführt werden, um alle in diesem Beispiel verwendeten erforderlichen Pakete zu erfassen und zu installieren. Sie können außerhalb dieses Beispiels zusätzliche oder alternative Packages für Ihre eigene Datenanalyse verwenden. Für eine Liste der unterstützten Pakete kopieren und einfügen `!pip list --format=columns` in eine neue Zelle ein.
 
 ```python
 !pip install colorama
@@ -65,9 +65,9 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Verbindung zu Adobe Experience Platform herstellen [!DNL Query Service]
 
-[!DNL JupyterLab] In Platform können Sie SQL in einem  [!DNL Python] Notebook verwenden, um über  [Query Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html) auf Daten zuzugreifen. Der Zugriff auf Daten über [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Verarbeitung großer Datensätze nützlich sein. Beachten Sie, dass die Abfrage von Daten mit [!DNL Query Service] eine Verarbeitungszeitbegrenzung von zehn Minuten hat.
+[!DNL JupyterLab] In Platform können Sie SQL in einer [!DNL Python] Notebook für den Datenzugriff über [Query Service](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html). Zugriff auf Daten über [!DNL Query Service] kann aufgrund der kürzeren Ausführungszeiten bei der Verarbeitung großer Datensätze nützlich sein. Beachten Sie, dass die Datenabfrage mithilfe von [!DNL Query Service] hat eine Verarbeitungszeitbeschränkung von zehn Minuten.
 
-Bevor Sie [!DNL Query Service] in [!DNL JupyterLab] verwenden, müssen Sie über ein Verständnis der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md) verfügen.
+Vor der Verwendung von [!DNL Query Service] in [!DNL JupyterLab], stellen Sie sicher, dass Sie ein Verständnis der [[!DNL Query Service] SQL-Syntax](https://docs.adobe.com/content/help/de-DE/experience-platform/query/home.html#!api-specification/markdown/narrative/technical_overview/query-service/sql/syntax.md).
 
 Um Query Service in JupyterLab zu nutzen, müssen Sie zunächst eine Verbindung zwischen Ihrem ausgeführten Python-Notebook und Query Service herstellen. Dies kann durch Ausführen der folgenden Zelle erreicht werden.
 
@@ -77,7 +77,7 @@ qs_connect()
 
 ### Datensatz mit Mittelwerten für die Exploration definieren
 
-Um Daten abfragen und analysieren zu können, muss eine Tabelle mit midvalues-Datensätzen bereitgestellt werden. Kopieren Sie die Werte `table_name` und `table_id` und ersetzen Sie sie durch Ihre eigenen Datentabellenwerte.
+Um Daten abfragen und analysieren zu können, muss eine Tabelle mit midvalues-Datensätzen bereitgestellt werden. Kopieren und ersetzen Sie die `table_name` und `table_id` -Werte mit Ihren eigenen Datentabellenwerten.
 
 ```python
 target_table = "table_name"
@@ -119,7 +119,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Datensatz-Erkennung
 
-Nachdem Sie alle Ihre Parameter konfiguriert, [!DNL Query Service] gestartet und einen Datumsbereich festgelegt haben, können Sie mit dem Lesen von Datenzeilen beginnen. Sie sollten die Anzahl der Zeilen begrenzen, die Sie lesen.
+Nachdem Sie alle Parameter konfiguriert haben, starten Sie [!DNL Query Service]und über einen Datumsbereich verfügen, können Sie mit dem Lesen von Datenzeilen beginnen. Sie sollten die Anzahl der Zeilen begrenzen, die Sie lesen.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -284,7 +284,7 @@ iplot(fig)
 
 **Die zehn häufigsten angezeigten Produkte**
 
-Diese Abfrage enthält eine Liste der zehn am häufigsten angezeigten Produkte. Im folgenden Beispiel wird die Funktion `Explode()` verwendet, um jedes Produkt im `productlistitems`-Objekt in eine eigene Zeile zurückzugeben. Auf diese Weise können Sie eine verschachtelte Abfrage ausführen, um Produktansichten für verschiedene SKUs zu aggregieren.
+Diese Abfrage enthält eine Liste der zehn am häufigsten angezeigten Produkte. Im folgenden Beispiel wird die Variable `Explode()` -Funktion wird verwendet, um jedes Produkt im `productlistitems` -Objekt in eine eigene Zeile. Auf diese Weise können Sie eine verschachtelte Abfrage ausführen, um Produktansichten für verschiedene SKUs zu aggregieren.
 
 ```sql
 %%read_sql query_7_df -c QS_CONNECTION
@@ -368,7 +368,7 @@ threshold = 1
 
 ### Datenaggregation für die Erstellung von Funktionen und Zielen
 
-Um mit der explorativen Analyse zu beginnen, müssen Sie ein Ziel auf Profilebene erstellen und dann Ihren Datensatz aggregieren. In diesem Beispiel werden zwei Abfragen bereitgestellt. Die erste Abfrage enthält die Erstellung eines Ziels. Die zweite Abfrage muss dahingehend aktualisiert werden, dass sie alle anderen Variablen als die in der ersten Abfrage enthält. Sie können die `limit` für Ihre Abfrage aktualisieren. Nach Durchführung der folgenden Abfragen stehen nun aggregierte Daten zur Exploration zur Verfügung.
+Um mit der explorativen Analyse zu beginnen, müssen Sie ein Ziel auf Profilebene erstellen und dann Ihren Datensatz aggregieren. In diesem Beispiel werden zwei Abfragen bereitgestellt. Die erste Abfrage enthält die Erstellung eines Ziels. Die zweite Abfrage muss dahingehend aktualisiert werden, dass sie alle anderen Variablen als die in der ersten Abfrage enthält. Sie können die `limit` für Ihre Abfrage. Nach Durchführung der folgenden Abfragen stehen nun aggregierte Daten zur Exploration zur Verfügung.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -516,7 +516,7 @@ Um Ausreißer zu identifizieren, verwendet dieses Beispiel den Bereich zwischen 
 
 >[!TIP]
 >
->Die Korrektur von Ausreißern erfordert ein Verständnis des Geschäfts und der Branche, in der Sie arbeiten. Manchmal kann man eine Beobachtung nicht fallen lassen, nur weil sie ausreißender ist. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten. Weitere Informationen zum Ablegen von Ausreißern finden Sie im Schritt [Optionale Datenbereinigung](#optional-data-clean).
+>Die Korrektur von Ausreißern erfordert ein Verständnis des Geschäfts und der Branche, in der Sie arbeiten. Manchmal kann man eine Beobachtung nicht fallen lassen, nur weil sie ausreißender ist. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten. Weitere Informationen zum Ablegen von Ausreißern finden Sie unter [optionaler Datenbereinigungsschritt](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -629,7 +629,7 @@ for col in Data.columns:
             Data.drop(col,inplace=True,axis=1)
 ```
 
-Nachdem Sie Einzelwertspalten entfernt haben, überprüfen Sie die verbleibenden Spalten auf Fehler mithilfe des Befehls `Data.columns` in einer neuen Zelle.
+Nachdem Sie Einzelwertspalten entfernt haben, überprüfen Sie die übrigen Spalten auf Fehler, indem Sie die `Data.columns` in einer neuen Zelle.
 
 ### Richtig für fehlende Werte
 
@@ -676,10 +676,10 @@ Sobald die sauberen Daten fertig sind, können sie analysiert werden.
 Die Bivariate-Analyse wird verwendet, um die Beziehung zwischen zwei Wertesätzen zu verstehen, z. B. Ihren Funktionen und einer Zielvariablen. Da verschiedene Diagramme kategorischen und numerischen Datentypen entsprechen, sollte diese Analyse für jeden Datentyp separat durchgeführt werden. Die folgenden Diagramme werden für die bivariate-Analyse empfohlen:
 
 - **Korrelation**: Ein Korrelationskoeffizient ist der Messwert der Stärke einer Beziehung zwischen zwei Eigenschaften. Die Korrelation weist Werte zwischen -1 und 1 auf, wobei: 1 steht für eine starke positive Beziehung, -1 für eine starke negative Beziehung und ein Ergebnis von null zeigt überhaupt keine Beziehung an.
-- **Pair Plot**: Paardiagramme sind eine einfache Möglichkeit, Beziehungen zwischen den einzelnen Variablen zu visualisieren. Es erzeugt eine Matrix von Beziehungen zwischen den einzelnen Variablen in den Daten.
+- **Peildiagramm**: Paardiagramme sind eine einfache Möglichkeit, Beziehungen zwischen den einzelnen Variablen zu visualisieren. Es erzeugt eine Matrix von Beziehungen zwischen den einzelnen Variablen in den Daten.
 - **Heatmap**: Heatmaps sind der Korrelationskoeffizient für alle Variablen im Datensatz.
-- **Box-Diagramme**: Box-Diagramme sind eine standardisierte Methode zur Anzeige der Datenverteilung basierend auf einer Fünf-Zahlen-Zusammenfassung (Minimum, First Quartile (Q1), Median, drittes Quartil (Q3) und Maximum).
-- **Diagramm** Zählung: Ein Zähldiagramm ist wie ein Histogramm oder ein Balkendiagramm für einige kategorische Merkmale. Sie zeigt die Anzahl der Vorkommnisse eines Elements basierend auf einem bestimmten Typ von Kategorie an.
+- **Feldflächen**: Box-Diagramme sind eine standardisierte Methode zur Anzeige der Datenverteilung basierend auf einer Fünf-Zahlen-Zusammenfassung (Minimum, First Quartile (Q1), Median, drittes Quartil (Q3) und Maximum).
+- **Zählung**: Ein Zähldiagramm ist wie ein Histogramm oder ein Balkendiagramm für einige kategorische Merkmale. Sie zeigt die Anzahl der Vorkommnisse eines Elements basierend auf einem bestimmten Typ von Kategorie an.
 
 Um die Beziehung zwischen der &quot;Ziel&quot;-Variablen und den Prädiktoren/Funktionen zu verstehen, werden Diagramme basierend auf Datentypen verwendet. Für numerische Merkmale sollten Sie ein Box-Diagramm verwenden, wenn die &#39;Ziel&#39;-Variable kategorisch ist, sowie ein paarweise und heatmap , wenn die &#39;Ziel&#39;-Variable numerisch ist.
 
@@ -807,9 +807,9 @@ else:
 
 Die Korrektur von Ausreißern erfordert ein Verständnis des Geschäfts und der Branche, in der Sie arbeiten. Manchmal kann man eine Beobachtung nicht fallen lassen, nur weil sie ausreißender ist. Ausreißer können legitime Beobachtungen sein und sind oft die interessantesten.
 
-Weitere Informationen zu Ausreißern und dazu, ob sie abgelegt werden sollen oder nicht, finden Sie in diesem Eintrag aus dem [Analysefaktor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+Weitere Informationen zu Ausreißern und dazu, ob sie abgelegt werden sollen oder nicht, finden Sie in diesem Eintrag im [Analysefaktor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
-Im folgenden Beispiel werden Datenpunkte, die Ausreißer sind, mithilfe von [Interquartilbereich](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244) begrenzt und geschliffen.
+Im folgenden Beispiel werden Datenpunkte in Zellen, die Ausreißer sind, mithilfe von [Interquartilbereich](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
 
 ```python
 TARGET = Data.TARGET
@@ -831,4 +831,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 Nachdem Sie die explorative Datenanalyse abgeschlossen haben, können Sie mit der Erstellung eines Modells beginnen. Alternativ können Sie die von Ihnen abgeleiteten Daten und Erkenntnisse verwenden, um ein Dashboard mit Tools wie Power BI zu erstellen.
 
-Adobe Experience Platform unterteilt den Modellerstellungsprozess in zwei unterschiedliche Phasen: Rezepte (eine Modellinstanz) und Modelle. Um den Prozess der Rezepterstellung zu starten, besuchen Sie die Dokumentation zum Erstellen eines Rezepts in JupyerLab Notebooks](./create-a-recipe.md). [ Dieses Dokument enthält Informationen und Beispiele zum Erstellen, Trainieren und Scoring, einem Rezept in [!DNL JupyterLab] Notebooks.
+Adobe Experience Platform unterteilt den Modellerstellungsprozess in zwei unterschiedliche Phasen: Rezepte (eine Modellinstanz) und Modelle. Um mit der Rezepterstellung zu beginnen, lesen Sie die Dokumentation für [Erstellen eines Rezepts in JupyerLab Notebooks](./create-a-model.md). Dieses Dokument enthält Informationen und Beispiele zum Erstellen, Trainieren und Scoring, einem Rezept in [!DNL JupyterLab] Notebooks.

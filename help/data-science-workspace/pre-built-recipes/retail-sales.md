@@ -5,7 +5,7 @@ title: Rezept für Einzelhandelsumsätze
 topic-legacy: overview
 description: Mit dem Rezept "Einzelhandelsumsätze"können Sie eine Prognose für die Umsätze aller für einen bestimmten Zeitraum ausgelieferten Geschäfte erstellen. Mit einem präzisen Prognosemodell könnte der Einzelhändler das Verhältnis zwischen Nachfrage und Preispolitik ermitteln und optimierte Preisentscheidungen treffen, um Verkäufe und Umsätze zu optimieren.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 441d7822f287fabf1b06cdf3f6982f9c910387a8
+source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 21%
@@ -31,13 +31,13 @@ Das Rezept &quot;Retail Sales Forecasting&quot;verwendet maschinelles Lernen, um
 
 ## Wie sehen die ersten Schritte aus?
 
-Beginnen Sie mit diesem [Tutorial](../jupyterlab/create-a-recipe.md).
+Beginnen Sie mit diesem [Tutorial](../jupyterlab/create-a-model.md).
 
 In diesem Tutorial erfahren Sie, wie Sie das Rezept &quot;Einzelhandelsumsätze&quot;in einem Jupyter-Notebook erstellen und den Workflow Notebook an Rezept verwenden, um das Rezept in Adobe Experience Platform zu erstellen.
 
 ## Datenschema
 
-Dieses Rezept verwendet [XDM-Schemas](../../xdm/schema/field-dictionary.md) zum Modellieren der Daten. Das für dieses Rezept verwendete Schema ist unten dargestellt:
+Dieses Rezept verwendet [XDM-Schemata](../../xdm/schema/field-dictionary.md) , um die Daten zu modellieren. Das für dieses Rezept verwendete Schema ist unten dargestellt:
 
 | Feldname | Typ |
 | --- | --- |
@@ -56,7 +56,7 @@ Dieses Rezept verwendet [XDM-Schemas](../../xdm/schema/field-dictionary.md) zum 
 
 ## Algorithmus
 
-Zunächst wird der Trainings-Datensatz im Schema *DSWRetailSales* geladen. Von hier aus wird das Modell mit einem [Gradientenverstärkungs-Regressor-Algorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html) trainiert. Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die mindestens etwas besser sind als eine zufällige Chance) eine Abfolge von Lernenden bilden können, die sich auf die Verbesserung der Schwächen früherer Lernender konzentrieren. Gemeinsam können sie genutzt werden, um ein leistungsfähiges Vorhersagemodell zu erstellen.
+Zunächst der Trainings-Datensatz im *DSWRetailSales* -Schema geladen wird. Von hier aus wird das Modell mit einem [Gradientenverstärkungs-Regressor-Algorithmus](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html). Die Verlaufsverstärkung basiert auf der Vorstellung, dass schwache Lernende (die mindestens etwas besser sind als eine zufällige Chance) eine Abfolge von Lernenden bilden können, die sich auf die Verbesserung der Schwächen früherer Lernender konzentrieren. Gemeinsam können sie genutzt werden, um ein leistungsfähiges Vorhersagemodell zu schaffen.
 
 Der Prozess umfasst drei Elemente: eine Verlustfunktion, einen schwachen Lerner und ein additives Modell.
 

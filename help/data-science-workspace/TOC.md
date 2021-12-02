@@ -5,10 +5,10 @@ breadcrumb-title: Data Science Workspace-Anleitung
 user-guide-description: Nutzen Sie maschinelles Lernen, um Modelle und Rezepte mit Adobe Sensei- und JupyterLab-Notebooks zu entwickeln, zu trainieren und zu bewerten.
 feature: Data Science Workspace
 solution: Experience Platform, Intelligent Services
-source-git-commit: a26b07302a47ceb0ba2af5267e7995118b70683f
+source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 100%
+source-wordcount: '248'
+ht-degree: 94%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
    * [Analysieren Ihrer Daten](jupyterlab/analyze-your-data.md)
    * [Abfrage-Service](jupyterlab/query-service.md)
    * [Analyse der Sondierungsdaten](jupyterlab/eda-notebook.md)
-   * [Rezept erstellen](jupyterlab/create-a-recipe.md)
+   * [Erstellen eines Modells mit dem Rezept-Builder](jupyterlab/create-a-model.md)
    * [Zusammenarbeiten in JupyterLab mit Git](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning-API {#api}
    * [Erste Schritte](api/getting-started.md)
@@ -52,6 +52,7 @@ ht-degree: 100%
    * [Spark-Datenzugriff](authoring/spark.md)
 * Modell- und Rezept-Tutorials {#models-recipes}
    * [Erstellen und Veröffentlichen eines Modells für maschinelles Lernen](models-recipes/create-publish-model.md)
+   * [Erstellen von Demo-Luma-Schemata und -Datensätzen](models-recipes/create-luma-data.md)
    * [Erstellen eines Einzelhandels-Schemas und -Datensatzes](models-recipes/create-retails-sales-dataset.md)
    * [Vorschau auf Schemas und Datensätze](models-recipes/preview-schema-data.md)
    * [Packen von Quelldateien in ein Rezept](models-recipes/package-source-files-recipe.md)
