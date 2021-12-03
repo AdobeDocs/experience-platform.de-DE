@@ -7,7 +7,7 @@ user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unte
 source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 92%
       * [Erste Schritte mit Real-time Customer Data Platform](get-started.md)
       * [Metriken – Übersicht](home-page-dashboards.md)
    * Real-time Customer Data Platform B2B Edition {#rtcdpb2b-intro}
-      * [Anwendungsbeispiel](./b2b-use-case.md)
-      * [End-to-End-Tutorial](./b2b-tutorial.md)
-      * [Limits bei der Echtzeit-Kundendatenplattform B2B Edition](b2b-guardrails.md)
-* Kontoprofile {#account}
+      * [Beispielanwendungsfall](./b2b-use-case.md)
+      * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
+      * [Leitlinien für Real-time Customer Platform B2B Edition](b2b-guardrails.md)
+* Account-Profile {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
@@ -52,7 +52,7 @@ ht-degree: 92%
    * [Segmentierung – Übersicht](segmentation/segmentation-overview.md)
    * [Segment Builder-Handbuch](segmentation/segment-builder-guide.md)
    * [Segmentierung in Real-time Customer Data Platform B2B Edition](segmentation/b2b.md)
-   * [Customer AI](segmentation/customer-ai.md)
+   * [Kunden-KI](segmentation/customer-ai.md)
 * Quellen {#sources}
    * [Quellen – Übersicht](sources/sources-overview.md)
    * [Quellen in Real-time Customer Data Platform B2B Edition](sources/b2b.md)
