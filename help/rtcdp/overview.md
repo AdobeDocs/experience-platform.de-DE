@@ -6,9 +6,9 @@ description: Echtzeit-Kundendatenplattform – Übersicht
 seo-description: Overview of Real-time Customer Data Platform
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '420'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -29,11 +29,11 @@ Mit der Echtzeit-Kundendatenplattform können Sie:
 
 ## Real-time Customer Data Platform B2B Edition
 
-Es gibt auch eine andere Ausgabe der Echtzeit-Kundendatenplattform, die den organisatorischen Anforderungen von Unternehmen gerecht wird. Die Echtzeit-Kundendatenplattform B2B Edition wurde speziell entwickelt, um die Funktionalität der Echtzeit-Kundendatenplattform für Marketing-Experten zu erweitern. Es bietet verschiedene Funktionen, die innerhalb des Adobe Experience Platform-Ökosystems aktiviert wurden, um besser auf die Arbeit in einem Business-to-Business-Dienstleistungsmodell zugeschnitten zu sein.
+Es gibt auch eine andere Version von Real-time Customer Data Platform, die speziell für B2B-Anforderungen von Unternehmen geeignet ist. Real-time Customer Data Platform B2B Edition wurde entwickelt, um die Funktionalität von Real-time Customer Data Platform für Marketing-Experten zu erweitern. Im Adobe Experience Platform-Ökosystem wurden unterschiedliche Funktionen integriert, um den Anforderungen eines B2B-Dienstleistungsmodells besser gerecht zu werden.
 
-Mit der Echtzeit-Kundendatenplattform B2B Edition können Marketingexperten ganzheitliche Profile für Personen und Konten erstellen. Insbesondere können Sie all Ihre Cross-Source-Daten aus einem zentralen Speicher mit einheitlichen Kontoprofilen anreichern, segmentieren und exportieren. Diese Daten können mithilfe von Data Governance-Tools verwaltet werden, die in jedem Schritt des Zentralisierungsprozesses verfügbar sind.
+Mit Real-time Customer Data Platform B2B Edition können Marketing-Experten ganzheitliche Profile für Personen und Accounts erstellen. Insbesondere können Sie hier all Ihre quellenübergreifenden Daten anreichern, segmentieren und aus einem zentralen Speicher von einheitlichen Account-Profilen exportieren. Diese Daten können mithilfe von Data Governance-Werkzeugen verwaltet werden, die bei jedem Schritt des Zentralisierungsprozesses verfügbar sind.
 
-Siehe [Überblick über die Echtzeit-Kundendatenplattform B2B Edition](./b2b-overview.md) für umfassendere Informationen.
+Umfassendere Informationen erhalten Sie im [Überblick über Real-time Customer Data Platform B2B Edition](./b2b-overview.md).
 
 ## Weitere Informationen
 
