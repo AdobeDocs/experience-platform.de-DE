@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1371'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -44,9 +44,9 @@ Marketer befinden sich am Endpunkt von Data Governance. Sie fordern Daten von de
 
 ## Data Governance-Framework
 
-Das Data Governance-Framework vereinfacht und optimiert die Kategorisierung von Daten und Erstellung von Datennutzungsrichtlinien. Sobald Datenbezeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen ausgewertet werden, um eine korrekte Verwendung von Daten sicherzustellen.
+Das Data Governance-Framework vereinfacht und optimiert die Kategorisierung von Daten und die Erstellung von Datennutzungsrichtlinien. Wenn Datenkennzeichnungen und Datennutzungsrichtlinien angewendet werden, können Marketing-Aktionen evaluiert werden, um eine korrekte Verwendung von Daten sicherzustellen.
 
-Das Data Governance-Framework umfasst drei Schlüsselelemente: Beschriftungen, Richtlinien und Durchsetzung.
+Das Data Governance-Framework beinhaltet drei Kernelemente: Kennzeichnungen, Richtlinien und Durchsetzung.
 
 1. **Bezeichnungen:** Klassifizieren Sie Daten anhand datenschutzbezogener Aspekte und vertraglicher Bestimmungen, sodass sie Vorschriften und Richtlinien der Organisation einhalten.
 1. **Richtlinien:** Beschreiben Sie, welche Arten von Marketing-Aktionen für welche Daten zulässig sind oder auch nicht.
@@ -56,7 +56,7 @@ Das Data Governance-Framework umfasst drei Schlüsselelemente: Beschriftungen, R
 
 Data Governance ermöglicht es Data Stewards, Nutzungsbezeichnungen auf der Datensatz- und Feldebene anzuwenden, um Daten anhand der gültigen Richtlinien zu kategorisieren.
 
-Das Data Governance-Framework umfasst vordefinierte Datennutzungsbezeichnungen, mit denen Daten auf drei Arten kategorisiert werden können:
+Das Data Governance-Framework beinhaltet vordefinierte Datennutzungskennzeichnungen, mit denen Daten auf vier Arten kategorisiert werden können:
 
 ![Kategorien an Datennutzungsbezeichnungen](./images/overview/label-categories.png)
 
@@ -88,7 +88,7 @@ Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden 
 
 ## Nächste Schritte
 
-Dieses Dokument bietet eine allgemeine Einführung in Data Governance und das Data Governance-Framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
+Dieses Dokument liefert eine Einführung in die Data Governance und das Data Governance-Framework. Sie können nun mit dem [Benutzerhandbuch zu Datennutzungsbezeichnungen](labels/user-guide.md) fortfahren und Ihren Erlebnisdaten Nutzungsbezeichnungen hinzufügen.
 
 ## Anhang
 
@@ -96,7 +96,7 @@ Im folgenden Abschnitt finden Sie weitere Informationen zu Data Governance.
 
 ### Begriffe in Data Governance
 
-The following table outlines key terms related to Data Governance and theData Governance framework.
+In der folgenden Tabelle sind Schlüsselbegriffe im Zusammenhang mit der Data Governance und dem Data Governance-Framework aufgeführt.
 
 | Begriff | Definition |
 |---|---|
@@ -116,10 +116,10 @@ The following table outlines key terms related to Data Governance and theData Go
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video soll Ihr Verständnis des Data Governance-Frameworks unterstützen.
+Im folgenden Video werden die Komponenten des Data Governance-Frameworks erklärt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-Das folgende Video bietet eine Einführung in verschiedene Data Governance-Funktionen in Experience Platform.
+Im folgenden Video werden verschiedene Data Governance-Funktionen in Experience Platform vorgestellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&enable10seconds=on&speedcontrol=on)
