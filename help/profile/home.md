@@ -5,9 +5,9 @@ topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1890'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -109,17 +109,17 @@ Observability Insights ermöglicht die Ermittlung von Schlüsselmetriken in Adob
 
 Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisation zu aktualisieren. Vielleicht müssen Sie zum Beispiel Datensätze korrigieren oder einen Attributwert ändern. Dies kann durch Batch- oder Streaming-Aufnahme erfolgen und erfordert einen profilaktivierten Datensatz, der mit einem Upsert-Tag konfiguriert ist. Weitere Informationen zur Konfiguration eines Datensatzes für Attributaktualisierungen finden Sie im Tutorial zur [Aktivierung eines Datensatzes für Profil und Upsert](../catalog/datasets/enable-upsert.md).
 
-## Data Governance and [!DNL Privacy]
+## Data Governance und [!DNL Privacy]
 
-Data Governance ist eine Reihe von Strategien und Technologien, mit denen Kundendaten verwaltet und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datennutzung sichergestellt wird.
+Data Governance umfasst eine Reihe von Strategien und Technologien, mittels derer Kundendaten so verwaltet werden können, dass die Einhaltung gesetzlicher Bestimmungen, Einschränkungen und Richtlinien zur Nutzung dieser Daten gewährleistet bleibt.
 
 Da es um Datenzugriff geht, nimmt die Data Governance in [!DNL Experience Platform] eine zentrale Rolle ein, und zwar auf verschiedenen Ebenen:
 
 * Datennutzungsbeschriftungen
 * Datenzugriffsrichtlinien
-* Kontrollmechanismen für den Datenzugriff für Marketing-Aktivitäten
+* Zugangssteuerung für Marketing-Aktivitäten
 
-Data Governance is managed at several points. So wird etwa bestimmt, welche Daten in [!DNL Platform] aufgenommen werden und auf welche Daten nach ihrer Aufnahme für eine bestimmte Marketing-Aktivität zugegriffen werden kann. Gehen Sie für weitere Informationen hierzu zunächst die [Übersicht über Data Governance](../data-governance/home.md) durch.
+Die Umsetzung von Data Governance erfolgt an mehreren Stellen. So wird etwa bestimmt, welche Daten in [!DNL Platform] aufgenommen werden und auf welche Daten nach ihrer Aufnahme für eine bestimmte Marketing-Aktivität zugegriffen werden kann. Gehen Sie für weitere Informationen hierzu zunächst die [Übersicht über Data Governance](../data-governance/home.md) durch.
 
 ### Umgang mit Opt-out- und Datenschutzanfragen
 
