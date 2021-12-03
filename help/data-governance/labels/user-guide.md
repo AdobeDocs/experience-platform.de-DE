@@ -6,15 +6,15 @@ topic-legacy: labels
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1140'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 # Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 
-Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von [!DNL Experience Platform]. Bevor Sie das Handbuch verwenden, lesen Sie bitte die [Data Governance - Übersicht](../home.md) für eine solidere Einführung in das Data Governance-Framework.
+Dieses Benutzerhandbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, konsultieren Sie die [Übersicht zu Data Governance](../home.md), wo Sie eine detailliertere Einführung in das Data Governance-Framework erhalten.
 
 ## Verwalten von Beschriftungen auf der Datensatzebene
 
@@ -50,7 +50,7 @@ Die Seite **[!UICONTROL Datensatz-Aktivität]**, die Informationen zum neu erste
 
 ![Seite mit der Datensatz-Aktivität](../images/labels/dataset-created.png)
 
-### Hinzufügen von Datennutzungsbeschriftungen zum Datensatz {#add-labels}
+### Hinzufügen von Datennutzungskennzeichnungen zum Datensatz {#add-labels}
 
 Nachdem Sie einen neuen Datensatz erstellt oder einen vorhandenen Datensatz aus der Liste im Arbeitsbereich **[!UICONTROL Datensätze]** ausgewählt haben, wählen Sie **[!UICONTROL Data Governance]**, um den Arbeitsbereich **[!UICONTROL Data Governance]** zu öffnen. Der Arbeitsbereich ermöglicht Ihnen das Verwalten von Datennutzungsbeschriftungen auf Datensatz- und Feldebene.
 
@@ -132,6 +132,6 @@ Sie können jetzt auch Datennutzungsrichtlinien auf Basis der von Ihnen angewend
 
 ## Zusätzliche Ressourcen
 
-Das folgende Video soll Ihr Verständnis von Data Governance unterstützen und beschreibt, wie Sie Beschriftungen auf einen Datensatz und einzelne Felder anwenden.
+Das folgende Video hilft Ihnen, Data Governance besser zu verstehen, und beschreibt, wie Kennzeichnungen auf einen Datensatz und einzelne Felder angewendet werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on)
