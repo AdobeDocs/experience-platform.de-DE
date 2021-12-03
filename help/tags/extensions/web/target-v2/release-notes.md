@@ -3,9 +3,9 @@ title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 source-git-commit: 42a1ceac3de2244bef858bf03eabe4910ae597f8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '589'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 97%
 
 ### Adobe Target v2-Erweiterung 0.16.0
 
-- Aktualisierung auf die Unterstützung von at.js v2.7.0, jetzt für den Download von Adobe Target verfügbar.
+- Aktualisierung zur Unterstützung von at.js v2.7.0, jetzt zum Download von Adobe Target verfügbar.
 
 ## 20. Juli 2021
 
