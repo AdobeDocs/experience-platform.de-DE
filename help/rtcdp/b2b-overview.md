@@ -6,9 +6,9 @@ description: Überblick über das Konto von Real-time Customer Data Platform B2B
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1083'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ Das Identitätsauflösungssystem bietet die folgenden Funktionen:
 * Viele-zu-Viele-, Personen-zu-Account-Verbindungen
 * Personen- und Account-Identitäten werden in Echtzeit aufgelöst
 
-Das System zur Identitätsauflösung wurde erweitert, um eine vielseitigere Klassifizierung von Personen zu ermöglichen. Das System ermöglicht es, Personen sowohl als Geschäfts-Opportunities als auch als Kunden zu identifizieren.
+Das System zur Identitätsauflösung wurde erweitert, um eine vielseitigere Classification von Personen zu ermöglichen. Das System ermöglicht es, Personen sowohl als Geschäfts-Opportunities als auch als Kunden zu identifizieren.
 
 Account-Datensätze, die vom Quell-CRM synchronisiert und über mehrere Pfade innerhalb des Systems verbunden sind, werden von Platform zusammengeführt. Das System fasst die Personen, die mit Opportunities in Verbindung stehen, und die als Kunden erfassten Personen zusammen, ist aber auch in der Lage, die Unterscheidung zwischen ihnen als Attribut zu erhalten, wenn sie identifizierbar sind.
 
@@ -69,9 +69,9 @@ Weitere Informationen zu Marketo und der Einbindung von B2B-Daten in Platform fi
 
 ## B2B-Ziele
 
-Experience Platform-Ziele wie Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager sind von der Echtzeit-Kundendatenplattform B2B Edition verfügbar und vollständig unterstützt. Das Marketo Engage-Ziel streamt auch Segmentmitgliedschaftsdaten aus Platform und stellt sie als Listen in Marketo zur Verfügung.
+Experience Platform-Ziele wie Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager sind verfügbar und werden von Real-time Customer Data Platform B2B Edition vollständig unterstützt. Das Marketo Engage-Ziel streamt auch Segmentzugehörigkeitsdaten aus Platform und macht diese als Listen in Marketo verfügbar.
 
-Die Übersicht finden Sie auf der [Marketo Engage-Ziel](../destinations/catalog/adobe/marketo-engage.md) für weitere Informationen.
+Weitere informationen finden Sie in der Übersicht zum [Marketo Engage-Ziel](../destinations/catalog/adobe/marketo-engage.md).
 
 Für Unternehmen mit mehr als einem CRM bietet Real-time Customer Data Platform B2B Edition die Möglichkeit, Ziel-Connectoren zu separaten Instanzen von Marketo oder CRM zu konfigurieren. Bei Bedarf können Sie Ziel-Connectoren für jede Instanz konfigurieren und Zielgruppen unabhängig voneinander an jede der CRM-Instanzen senden.
 
@@ -79,10 +79,10 @@ Für Unternehmen mit mehr als einem CRM bietet Real-time Customer Data Platform 
 
 Jetzt, da Sie die Vorteile von Real-time CDP B2B Edition für Marketing-Experten und die Unterschiede zu Real-time CDP besser verstehen, können Sie mehr darüber erfahren, wie Sie diese Funktionen in Ihrer eigenen IMS-Organisation anwenden können.
 
-Um zu verstehen, wie die B2B Edition der Echtzeit-Kundendatenplattform Ihr Business-to-Business-Service-Modell nutzen kann, lesen Sie die folgende Dokumentation, die Ihnen bei den ersten Schritten hilft:
+Um zu verstehen, wie Ihr B2B-Service-Modell von Real-time Customer Data Platform B2B Edition profitieren kann, lesen Sie die folgende Dokumentation, die Ihnen bei den ersten Schritten hilft:
 
-* [Ein Anwendungsbeispiel für die Echtzeit-Kundendatenplattform B2B Edition](./b2b-use-case.md)
-* [Ein durchgängiges Tutorial für Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
+* [Ein Anwendungsbeispiel für Real-time Customer Data Platform B2B Edition](./b2b-use-case.md)
+* [Ein Tutorial mit allen Schritten von Anfang bis Ende für Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 * [So erfassen Sie Daten](./sources/b2b.md)
 * [So rufen Sie Profile auf](./profile/profile-overview.md)
 * [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
