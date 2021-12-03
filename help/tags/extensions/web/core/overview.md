@@ -1,11 +1,11 @@
 ---
-title: Haupterweiterung – Übersicht
+title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5362'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -223,7 +223,7 @@ Geben Sie einen benutzerspezifischen Code an, der als Bedingung des Ereignisses 
 
 >[!NOTE]
 >
->ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie bitte mit allen zu unterstützenden Webbrowsern.
+>ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie sie bitte mit allen zu unterstützenden Webbrowsern.
 
 Verwenden Sie für die Eingabe des benutzerspezifischen Codes den integrierten Code-Editor:
 
@@ -361,7 +361,7 @@ Konfigurieren Sie, wie lange der Besucher auf der Site bleiben muss, bevor die A
 1. Wählen Sie aus, ob die Anzahl Minuten, die sich der Besucher auf der Site befindet, größer, gleich oder kleiner als der angegebene Wert sein muss.
 1. Geben Sie die Anzahl Minuten an, mit deren Hilfe bestimmt wird, ob die Bedingung erfüllt ist.
 
-#### Traffic Source
+#### Traffic-Quelle
 
 Lösen Sie die Aktion aus, wenn die Anzahl der Sitzungen des Benutzers die angegebenen Kriterien erfüllt.
 
@@ -520,7 +520,7 @@ Geben Sie einen Datumsbereich an. Wählen Sie das Datum und die Uhrzeit aus, nac
 Geben Sie an, wie oft die Bedingung „true“ zurückgibt. Sie können aus den folgenden Optionen auswählen:
 
 * Page view
-* Sitzungen
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -544,7 +544,7 @@ In diesem Abschnitt werden die in der Haupterweiterung verfügbaren Aktionstypen
 
 >[!NOTE]
 >
->ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie bitte mit allen zu unterstützenden Webbrowsern.
+>ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie sie bitte mit allen zu unterstützenden Webbrowsern.
 
 Geben Sie den Code an, der ausgeführt wird, nachdem das Ereignis ausgelöst wurde und die Bedingungen ausgewertet wurden.
 
@@ -588,7 +588,7 @@ Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinste
 
 *JavaScript*
 
-Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
+Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
 
 >[!NOTE]
 >
@@ -652,7 +652,7 @@ Ein konstanter Zeichenfolgenwert, der in Aktionen oder Bedingungen referenziert 
 
 >[!NOTE]
 >
->ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie bitte mit allen zu unterstützenden Webbrowsern.
+>ES6+ JavaScript wird jetzt in benutzerdefiniertem Code unterstützt. Beachten Sie, dass einige ältere Browser ES6+ nicht unterstützen. Um die Auswirkungen der Verwendung von ES6+-Funktionen zu verstehen, testen Sie sie bitte mit allen zu unterstützenden Webbrowsern.
 
 Benutzerdefiniertes JavaScript kann auf der Benutzeroberfläche eingegeben werden, indem Sie auf „Editor öffnen“ klicken und den Code in das Editor-Fenster einfügen.
 
@@ -787,7 +787,7 @@ Sie können eines der folgenden Seitenattribute auswählen, um es in Ihrem Daten
 * URL
 * Hostname
 * Pathname
-* Protokoll
+* Protocol
 * Referrer
 * Title
 
@@ -831,7 +831,7 @@ Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Ve
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 
 * Landing page
-* Traffic source
+* Traffic-Quelle
 * Minutes on site
 * Session count
 * Session page view count
@@ -872,7 +872,7 @@ Gibt eines der folgenden Attribute für das Besuchergerät zurück:
 
 ### JavaScript-Tools
 
-Es ist ein Wrapper für gängige JavaScript-Operationen. Erhält ein Datenelement als Eingabe. Gibt das Ergebnis einer der folgenden Transformationen des Datenelementwerts zurück:
+Es ist ein Wrapper für gängige JavaScript-Operationen. Erhält ein Datenelement als Eingabe. Gibt das Ergebnis einer der folgenden Umwandlungen des Datenelementwerts zurück:
 
 * Grundlegende String-Manipulation (replace, substring, regex match, first and last index, split, slice)
 * Grundlegende Array-Operationen (slice, join, pop, shift)
