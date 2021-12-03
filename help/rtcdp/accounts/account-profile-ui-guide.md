@@ -4,7 +4,7 @@ title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
 source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1172'
 ht-degree: 100%
 
@@ -62,7 +62,7 @@ Real-Time Customer Data Platform B2B Edition unterstützt die Möglichkeit, eine
 
 Die Möglichkeit, eine direkte Suche durchzuführen, ist unter Umständen nützlich, wenn eine direkte Quellverbindung zu den Daten nicht möglich ist. Wenn Ihr Unternehmen beispielsweise über Data Governance-Richtlinien verfügt, die eine direkte Verbindung zu einem CRM verhindern, können Sie diese Daten in ein Cloud-Speichersystem exportieren und dann in Experience Platform aufnehmen.
 
-Ein weiteres Beispiel könnte sein, dass Sie eine Transformation der Daten durchführen, nachdem diese ein System verlassen haben und bevor sie in Platform aufgenommen werden. Sie können die Funktion für die direkte Suche verwenden, um einen Kontext für die Daten bereitzustellen (z. B. um anzugeben, dass es sich um Marketo-Daten handelt, obwohl sie beispielsweise von einem Amazon S3-Bucket stammen), sodass das System weiß, wo die Daten gesucht werden sollen und wie sie korrekt wiedergegeben werden.
+Ein weiteres Beispiel könnte sein, dass Sie eine Umwandlung der Daten durchführen, nachdem diese ein System verlassen haben und bevor sie in Platform aufgenommen werden. Sie können die Funktion für die direkte Suche verwenden, um einen Kontext für die Daten bereitzustellen (z. B. um anzugeben, dass es sich um Marketo-Daten handelt, obwohl sie beispielsweise von einem Amazon S3-Bucket stammen), sodass das System weiß, wo die Daten gesucht werden sollen und wie sie korrekt wiedergegeben werden.
 
 Um eine direkte Suche zu starten, wählen Sie **[!UICONTROL Sonstige]** aus dem Dropdown-Menü **[!UICONTROL Durchsuchen nach]** aus, und geben Sie dann **[!UICONTROL Quellnamen]**, **[!UICONTROL Quellinstanz]** und **[!UICONTROL Account-ID]** für den Account ein, den Sie anzeigen möchten.
 
@@ -76,7 +76,7 @@ Die Standardfelder können auch auf Organisationsebene geändert werden, um die 
 
 >[!NOTE]
 >
->Ähnliche Funktionen sind für Kundenprofile verfügbar und es gibt eine schrittweise Anleitung zum Hinzufügen und Entfernen von Attributen, zum Ändern der Größe von Bedienfeldern usw. Weitere Informationen finden Sie im [Handbuch zur Anpassung von Profildetails](../../profile/ui/profile-customization.md).
+>Ähnliche Funktionen sind für Kundenprofile verfügbar und es gibt eine schrittweise Anleitung zum Hinzufügen und Entfernen von Attributen, zum Ändern der Größe von Panels usw. Weitere Informationen finden Sie im [Handbuch zur Anpassung von Profildetails](../../profile/ui/profile-customization.md).
 
 ![](images/b2b-account-details.png)
 
@@ -96,7 +96,7 @@ Die Registerkarte **[!UICONTROL Personen]** enthält eine Liste der einzelnen Pe
 
 >[!NOTE]
 >
->Auf der Registerkarte [!UICONTROL Personen] wird eine Liste mit bis zu 25 Personen angezeigt, die mit dem Account in Verbindung stehen. Bei Accounts mit mehr als 25 Personen zeigt das System 25 zufällig ausgewählte Datensätze an.
+>Auf der Registerkarte [!UICONTROL Personen] wird eine Liste mit bis zu 25 Personen angezeigt, die mit dem Account in Verbindung stehen. Bei Accounts mit mehr als 25 Personen zeigt das System eine Stichprobe von 25 Datensätzen an.
 
 Neben der Anzeige einer Momentaufnahme der Informationen für den Kontakt enthält jede aufgeführte Person auch eine **[!UICONTROL Profilkennung]**, bei der es sich um einen anklickbaren Link handelt, über den Sie das Echtzeit-Kundenprofil für diese Person ermitteln können. Weitere Informationen zum Anzeigen einzelner Account-Profile in Bezug auf Ihre Accounts finden Sie im Handbuch zum [Durchsuchen von Profilen in Real-Time Customer Data Platform B2B Edition](../profile/profile-browse.md).
 
@@ -108,7 +108,7 @@ Die Registerkarte **[!UICONTROL Opportunitys]** enthält Informationen zu offene
 
 >[!NOTE]
 >
->Auf der Registerkarte [!UICONTROL Opportunitys] wird eine Liste mit bis zu 25 mit dem Account verbundenen Opportunitys angezeigt. Bei Accounts mit mehr als 25 verbundenen Opportunitys zeigt das System 25 zufällig ausgewählte Datensätze an.
+>Auf der Registerkarte [!UICONTROL Opportunitys] wird eine Liste mit bis zu 25 mit dem Account verbundenen Opportunitys angezeigt. Bei Accounts mit mehr als 25 verbundenen Opportunitys zeigt das System eine Stichprobe von 25 Datensätzen an.
 
 Jede Opportunity umfasst Informationen wie den Namen der Opportunity, ihren Umfang, die Phase und ob die Opportunity offen, geschlossen, gewonnen oder verloren ist.
 
