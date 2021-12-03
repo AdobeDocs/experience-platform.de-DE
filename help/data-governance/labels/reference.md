@@ -6,9 +6,9 @@ topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1984'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 99%
 
 Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
 
-In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert. Weitere Informationen zu Data Governance finden Sie im [Data Governance - Übersicht](../home.md).
+In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgestellten grundlegenden Datennutzungskennzeichnungen erläutert. Weitere Informationen zu Data Governance finden Sie im [Überblick zu Data Governance](../home.md).
 
 ## Vertragsbezeichnungen
 
@@ -70,7 +70,7 @@ Manche Daten können nur in aggregierter Form aus Adobe Experience Cloud exporti
 
 #### C2 {#c2}
 
-Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von sozialen Netzwerken erhalten, oft durch deren Verträge eingeschränkt. Die Kennzeichnung C2 ist restriktiver als [C1](#c1), die nur Aggregation und anonyme Daten erfordert.
+Einige Datenanbieter haben in ihren Verträgen Klauseln, die den Export von Daten von dort verbieten, wo sie ursprünglich erfasst wurden. So wird beispielsweise die Übertragung von Daten, die Sie von Social Media erhalten, oft durch deren Verträge eingeschränkt. Die Kennzeichnung C2 ist restriktiver als [C1](#c1), die nur Aggregation und anonyme Daten erfordert.
 
 #### C3 {#c3}
 
