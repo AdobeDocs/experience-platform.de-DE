@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Zugangssteuerung;adobe Admin Console
+keywords: Experience Platform;Startseite;beliebte Themen;Zugangssteuerung;adobe Admin Console
 solution: Experience Platform
 topic-legacy: overview
 title: Zugangssteuerung – Übersicht
 description: Die Zugangssteuerung für Adobe Experience Platform wird über Adobe Admin Console geboten. Diese Funktion nutzt Produktprofile in Admin Console, um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 source-git-commit: 2effccfa9b1975292f350369201269099dc1b2a1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1383'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ Ein Workflow auf hoher Ebene zum Abrufen und Zuweisen von Zugriffsberechtigungen
 - Der Administrator meldet sich bei der [Adobe Admin Console](#adobe-admin-console) an und wählt **Adobe Experience Platform** aus der Liste der Produkte auf der Übersichtsseite aus.
 - Der Administrator kann die standardmäßigen [Produktprofile](#product-profiles) anzeigen oder bei Bedarf neue Kundenproduktprofile erstellen.
 - Der Administrator kann die Berechtigungen und Benutzer für alle vorhandenen Profile bearbeiten.
-- Beim Erstellen oder Bearbeiten eines Profils fügt der Administrator dem Profil über den Tab **[!UICONTROL Benutzer]** Benutzer hinzu und gewährt diesen Benutzern Berechtigungen (wie z. B. [!UICONTROL Datensätze lesen] oder [!UICONTROL Schemas verwalten]), indem er auf den Tab **[!UICONTROL Berechtigungen]** zugreift. Ebenso kann der Administrator über die gleiche Registerkarte „ „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
+- Beim Erstellen oder Bearbeiten eines Profils fügt der Administrator dem Profil über den Tab **[!UICONTROL Benutzer]** Benutzer hinzu und gewährt diesen Benutzern Berechtigungen (wie z. B. [!UICONTROL Datensätze lesen] oder [!UICONTROL Schemas verwalten]), indem er auf den Tab **[!UICONTROL Berechtigungen]** zugreift. Ebenso kann der Administrator über die gleiche Registerkarte „Berechtigungen“ Zugriff auf Sandboxes zuweisen.
 - Wenn sich Benutzer bei der Benutzeroberfläche von [!DNL Experience Platform] anmelden, wird ihr Zugriff auf [!DNL Platform]-Funktionen durch die Berechtigungen gesteuert, die ihnen in Schritt 2 erteilt wurden. Wenn ein Benutzer beispielsweise nicht über die Zugriffsberechtigung [!UICONTROL Datensätze anzeigen] verfügt, ist der Tab **[!UICONTROL Datensätze]** im Seitenmenü für diesen Benutzer nicht sichtbar.
 
 Detailliertere Anweisungen zum Verwalten der Zugangssteuerung in [!DNL Experience Platform] finden Sie im [Benutzerhandbuch für die Zugriffssteuerung](./ui/overview.md).
