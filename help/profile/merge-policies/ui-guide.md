@@ -5,9 +5,9 @@ type: Documentation
 description: Beim Zusammenführen von Daten aus mehreren Quellen in Experience Platform stellen Zusammenführungsrichtlinien die Regeln dar, die Platform verwendet, um festzulegen, wie Daten priorisiert werden und welche Daten bei der Erstellung einzelner Kundenprofile kombiniert werden. Dieses Handbuch enthält schrittweise Anleitungen zum Verwenden von Zusammenführungsrichtlinien mit der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2319'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ Für den Workflow **[!UICONTROL Neue Zusammenführungsrichtlinie]** müssen Sie 
 
 ![Der neue Workflow für Zusammenführungsrichtlinien.](../images/merge-policies/create.png)
 
-## [!UICONTROL Konfigurieren von] {#configure}
+## [!UICONTROL Konfigurieren] {#configure}
 
 Im ersten Schritt des Workflows können Sie Ihre Zusammenführungsrichtlinie konfigurieren, indem Sie grundlegende Informationen angeben. Zu diesen Informationen gehören:
 
@@ -59,7 +59,7 @@ Im ersten Schritt des Workflows können Sie Ihre Zusammenführungsrichtlinie kon
    * **[!UICONTROL Privates Diagramm]**: Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen.
 * **[!UICONTROL Standardmäßige Zusammenführungsrichtlinie]**: Eine Umschalter-Schaltfläche, mit der Sie festlegen können, ob diese Zusammenführungsrichtlinie der Standard für Ihre Organisation sein soll oder nicht. Wenn die Auswahl aktiviert ist, werden Sie in einer Warnung aufgefordert zu bestätigen, dass Sie die standardmäßige Zusammenführungsrichtlinie Ihrer Organisation ändern möchten. Weitere Informationen zu standardmäßigen Zusammenführungsrichtlinien finden Sie unter [Übersicht über Zusammenführungsrichtlinien](overview.md).
    ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Richtlinie zur aktiven Zusammenführung auf Edge]**: Eine Umschalter-Schaltfläche, mit der Sie auswählen können, ob diese Zusammenführungsrichtlinie an der Kante aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer an Edges mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als aktiv am Rand markiert werden. Damit ein Segment an der Kante aktiviert werden kann (als Kantensegment markiert), muss es an eine Zusammenführungsrichtlinie gebunden sein, die als aktiv an der Kante markiert ist. Wenn ein Segment **not** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am -Edge markiert ist, wird das Segment nicht als aktiv am -Edge markiert und als Streaming-Segment markiert. Darüber hinaus kann jede IMS-Organisation nur über **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist.
+* **[!UICONTROL Zusammenführungsrichtlinie „Active-On-Edge“]**: Ein Umschalt-Button, mit dem Sie festlegen können, ob diese Zusammenführungsrichtlinie in den Randbereichen aktiv sein soll oder nicht. Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert. Darüber hinaus kann jede IMS-Organisation nur über **eine** Zusammenführungsrichtlinie verfügen, die im Randbereich aktiv ist.
 
 Nachdem die erforderlichen Felder ausgefüllt wurden, können Sie **[!UICONTROL Weiter]** auswählen, um mit dem Workflow fortzufahren.
 
@@ -193,7 +193,7 @@ Nachdem Sie die erforderlichen Änderungen vorgenommen haben, überprüfen Sie I
 
 ## Verstöße gegen Data Governance-Richtlinien
 
-Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte Marketing-Aktionen ausführen dürfen oder nicht. [!DNL Platform] Daten. Wenn zum Beispiel eine Zusammenführungsrichtlinie zum Erstellen eines Segments verwendet wurde, das für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation eine Datennutzungsrichtlinie aufwiese, die den Export bestimmter Daten an Dritte verhinderte, würden Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine Benachrichtigung erhalten, dass eine **[!UICONTROL „Verletzung der Data Governance-Richtlinie entdeckt“ wurde.]**.
+Beim Erstellen oder Aktualisieren einer Zusammenführungsrichtlinie wird geprüft, ob die Zusammenführungsrichtlinie eine der von Ihrer Organisation definierten Datennutzungsrichtlinien verletzt. Datennutzungsrichtlinien sind Teil von Adobe Experience Platform Data Governance und stellen Regeln dar, die die Arten von Marketing-Aktionen beschreiben, die Sie für bestimmte [!DNL Platform]-Daten ausführen dürfen oder nicht. Wenn zum Beispiel eine Zusammenführungsrichtlinie zum Erstellen eines Segments verwendet wurde, das für ein Drittanbieterziel aktiviert wurde, und Ihre Organisation eine Datennutzungsrichtlinie aufwiese, die den Export bestimmter Daten an Dritte verhinderte, würden Sie beim Versuch, Ihre Zusammenführungsrichtlinie zu speichern, eine Benachrichtigung erhalten, dass eine **[!UICONTROL „Verletzung der Data Governance-Richtlinie entdeckt“ wurde.]**.
 
 Diese Benachrichtigung enthält eine Liste der Datennutzungsrichtlinien, die verletzt wurden, und ermöglicht Ihnen das Anzeigen von Details zur Verletzung, indem Sie eine Richtlinie aus der Liste auswählen. Bei Auswahl einer verletzten Richtlinie liefert der Tab **[!UICONTROL Datenverlaufskontrolle]** den Grund für die Verletzung und die betroffenen Aktivierungen. So erhalten Sie genauere Details zur Verletzung der jeweiligen Datennutzungsrichtlinie.
 
