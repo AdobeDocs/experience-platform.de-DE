@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Handbuch zur Richtlinien-Service-API
 topic-legacy: developer guide
 description: Die Richtlinien-Service-API ermöglicht es Entwicklern, Datennutzungskennzeichnungen und -richtlinien in Experience Platform zu verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '504'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Da
 
 ## Marketing-Aktionen
 
-Marketing-Aktionen (auch Marketing-Anwendungsfälle genannt) im Kontext des Data Governance-Frameworks sind Aktionen, die [!DNL Experience Platform] -Datenkonsumenten können dies tun, für die Ihr Unternehmen die Datennutzung einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketing-Aktionen finden Sie im [Endpunkthandbuch zu Marketing-Aktionen](./marketing-actions.md).
+Marketing-Aktionen (auch als Marketing-Anwendungsfälle bezeichnet) im Rahmen des Data Governance-Frameworks sind Maßnahmen, die ein [!DNL Experience Platform]-Datenbenutzer ausführen kann und die Ihr Unternehmen in Bezug auf die Datennutzung möglicherweise einschränken möchte. Ausführliche Informationen zum Arbeiten mit Marketing-Aktionen finden Sie im [Endpunkthandbuch zu Marketing-Aktionen](./marketing-actions.md).
 
 ## Richtlinien
 
