@@ -1,27 +1,27 @@
 ---
-title: Adobe Experience Platform Web SDK-Konfiguration
-description: Erfahren Sie mehr über die Adobe Experience Platform Web SDK-Tag-Erweiterung.
+title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
+description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 7e27735697882065566ebdeccc36998ec368e404
+source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1049'
 ht-degree: 8%
 
 ---
 
-# Übersicht
+# Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
 
-Die Adobe Experience Platform Web SDK-Erweiterung sendet Daten aus Webeigenschaften über das Adobe Experience Platform Edge Network an Adobe Experience Cloud. Mit der Erweiterung können Sie Daten in Platform streamen, Identitäten synchronisieren, Zustimmungssignale von Kunden verarbeiten und automatisch Kontextdaten erfassen.
+Die Adobe Experience Platform Web SDK-Tag-Erweiterung sendet Daten aus Webeigenschaften über das Adobe Experience Platform Edge Network an Adobe Experience Cloud. Mit der Erweiterung können Sie Daten in Platform streamen, Identitäten synchronisieren, Zustimmungssignale von Kunden verarbeiten und automatisch Kontextdaten erfassen.
 
 In diesem Dokument wird beschrieben, wie Sie die Erweiterung in der Datenerfassungs-Benutzeroberfläche konfigurieren.
 
-## Konfigurieren Sie die Erweiterung
+## Erste Schritte
 
-Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Datenerfassungs-Benutzeroberfläche und wählen Sie die Registerkarte **[!UICONTROL Erweiterungen]** aus. Wählen Sie unter dem Platform Web SDK **[!UICONTROL Configure]** aus.
+Wenn die Platform Web SDK-Erweiterung bereits für eine Eigenschaft installiert wurde, öffnen Sie die Eigenschaft in der Datenerfassungs-Benutzeroberfläche und wählen Sie die **[!UICONTROL Erweiterungen]** Registerkarte. Wählen Sie unter dem Platform Web SDK die Option **[!UICONTROL Konfigurieren]**.
 
 ![](../images/extension/overview/configure.png)
 
-Wenn Sie die Erweiterung noch nicht installiert haben, wählen Sie die Registerkarte **[!UICONTROL Katalog]** aus. Suchen Sie in der Liste der verfügbaren Erweiterungen die Platform Web SDK-Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
+Wenn Sie die Erweiterung noch nicht installiert haben, wählen Sie die **[!UICONTROL Katalog]** Registerkarte. Suchen Sie in der Liste der verfügbaren Erweiterungen die Platform Web SDK-Erweiterung und wählen Sie **[!UICONTROL Installieren]**.
 
 ![](../images/extension/overview/install.png)
 
@@ -37,11 +37,11 @@ Die Konfigurationsoptionen oben auf der Seite geben Adobe Experience Platform an
 
 Die Adobe Experience Platform Web SDK-Erweiterung unterstützt mehrere Instanzen auf der Seite. Der Name wird verwendet, um Daten mit einer Tag-Konfiguration an mehrere Organisationen zu senden.
 
-Der Name der Erweiterung wird standardmäßig auf &quot;[!DNL alloy]&quot;festgelegt. Sie können den Instanznamen jedoch in einen beliebigen anderen gültigen JavaScript-Objektnamen ändern.
+Der Name der Erweiterung wird standardmäßig auf &quot;[!DNL alloy]&quot;. Sie können den Instanznamen jedoch in einen beliebigen anderen gültigen JavaScript-Objektnamen ändern.
 
 ### **[!UICONTROL IMS-Organisations-ID]**
 
-Die [!UICONTROL IMS-Organisations-ID] ist die Organisation, an die die Daten zur Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
+Die [!UICONTROL Kennung der IMS-Organisation] ist die Organisation, an die die Daten zur Adobe gesendet werden sollen. Meistens verwenden Sie den Standardwert, der automatisch ausgefüllt wird. Wenn sich auf der Seite mehrere Instanzen befinden, geben Sie in dieses Feld den Wert der zweiten Organisation ein, an die Sie Daten senden möchten.
 
 ### **[!UICONTROL Edge-Domäne]**
 
@@ -51,14 +51,14 @@ Die [!UICONTROL Edge-Domäne] ist die Domäne, von der die Adobe Experience Plat
 
 Wenn eine Anforderung an das Adobe Experience Platform Edge Network gesendet wird, wird eine Datastraam-ID verwendet, um auf die serverseitige Konfiguration zu verweisen. Sie können die Konfiguration aktualisieren, ohne Codeänderungen auf Ihrer Website vornehmen zu müssen.
 
-Weitere Informationen finden Sie im Handbuch zu [datastreams](../fundamentals/datastreams.md) .
+Siehe Handbuch unter [datastreams](../fundamentals/datastreams.md) für weitere Informationen.
 
 
 ## [!UICONTROL Datenschutz]
 
 ![](../images/extension/overview/privacy.png)
 
-Im Abschnitt [!UICONTROL Datenschutz] können Sie konfigurieren, wie das SDK Zustimmungssignale von Benutzern von Ihrer Website verarbeitet. Insbesondere können Sie damit das standardmäßige Zustimmungsniveau auswählen, das von einem Benutzer angenommen wird, wenn keine andere explizite Zustimmungsvoreinstellung angegeben wurde. Die standardmäßige Zustimmungsstufe wird nicht im Profil des Benutzers gespeichert. In der folgenden Tabelle wird aufgeschlüsselt, was jede Option beinhaltet:
+Die [!UICONTROL Datenschutz] können Sie konfigurieren, wie das SDK mit Zustimmungssignalen von Benutzern von Ihrer Website umgeht. Insbesondere können Sie damit das standardmäßige Zustimmungsniveau auswählen, das von einem Benutzer angenommen wird, wenn keine andere explizite Zustimmungsvoreinstellung angegeben wurde. Die standardmäßige Zustimmungsstufe wird nicht im Profil des Benutzers gespeichert. In der folgenden Tabelle wird aufgeschlüsselt, was jede Option beinhaltet:
 
 | [!UICONTROL Standardmäßige Zustimmungsstufe] | Beschreibung |
 | --- | --- |
@@ -85,7 +85,7 @@ Mit dieser Option kann das SDK versuchen, eine Benutzer-ID in einem Drittanbiete
 
 ![](../images/extension/overview/personalization.png)
 
-Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personalisierter Inhalte geladen wird, können Sie die Elemente angeben, die im Stil-Editor zum Vorab-Ausblenden ausgeblendet werden sollen. Anschließend können Sie das Ihnen bereitgestellte standardmäßige Codefragment zur Vorab-Ausblendung kopieren und in das Element `<head>`Ihrer HTML-Site einfügen.
+Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personalisierter Inhalte geladen wird, können Sie die Elemente angeben, die im Stil-Editor zum Vorab-Ausblenden ausgeblendet werden sollen. Sie können dann das Ihnen bereitgestellte standardmäßige Codefragment zur Vorab-Ausblendung kopieren und in das `<head>`-Element Ihrer HTML-Site.
 
 ## [!UICONTROL Datenerfassung]
 
@@ -93,15 +93,15 @@ Wenn Sie bestimmte Teile ausblenden möchten, wenn Ihre Site beim Laden personal
 
 ### [!UICONTROL Callback-Funktion]
 
-Die in der Erweiterung bereitgestellte Rückruffunktion wird in der Bibliothek auch als [`onBeforeEventSend` Funktion](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) bezeichnet. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an Adobe Edge Network gesendet werden. Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
+Die in der Erweiterung bereitgestellte Rückruffunktion wird auch als [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in der Bibliothek. Mit dieser Funktion können Sie Ereignisse global ändern, bevor sie an Adobe Edge Network gesendet werden. Ausführlichere Informationen zur Verwendung dieser Funktion finden Sie unter [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally).
 
 ### [!UICONTROL Klickdatenerfassung]
 
-Das SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmäßig ist diese Funktion aktiviert, kann jedoch über diese Option deaktiviert werden. Links werden auch als Downloadlinks bezeichnet, wenn sie einen der im Textfeld [!UICONTROL Download-Link-Qualifizierer] aufgelisteten Download-Ausdrücke enthalten. Adobe bietet einige standardmäßige Downloadlink-Kennungen, die jedoch jederzeit bearbeitet werden können.
+Das SDK kann automatisch Link-Klickinformationen für Sie erfassen. Standardmäßig ist diese Funktion aktiviert, kann jedoch über diese Option deaktiviert werden. Links werden auch als Downloadlinks bezeichnet, wenn sie einen der in der [!UICONTROL Downloadlink-Qualifizierung] Textfeld. Adobe bietet einige standardmäßige Downloadlink-Kennungen, die jedoch jederzeit bearbeitet werden können.
 
 ### [!UICONTROL Automatisch erfasste Kontextdaten]
 
-Standardmäßig erfasst das SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn Sie eine Liste der von der Adobe erfassten Informationen sehen möchten, finden Sie diese [hier](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Wenn Sie diese Daten nicht erfassen möchten oder nur bestimmte Datenkategorien erfassen möchten, können Sie diese Optionen ändern.
+Standardmäßig erfasst das SDK bestimmte Kontextdaten in Bezug auf Gerät, Web, Umgebung und Ortskontext. Wenn Sie eine Liste der von der Adobe erfassten Informationen sehen möchten, finden Sie sie [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). Wenn Sie diese Daten nicht erfassen möchten oder nur bestimmte Datenkategorien erfassen möchten, können Sie diese Optionen ändern.
 
 ## [!UICONTROL Erweiterte Einstellungen]
 
