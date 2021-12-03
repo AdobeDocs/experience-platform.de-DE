@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '458'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
@@ -34,21 +34,21 @@ Von Experience Platform bereitgestellte Datenerfassungstechnologien konzentriere
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-Dieses Handbuch bietet eine allgemeine Einführung in das Datenerfassungs-Framework und dessen Funktionsweise, Daten über das Platform Edge Network an Adobe Experience Cloud-Produkte und Anwendungen ohne Adobe zu senden.
+Dieses Handbuch bietet eine allgemeine Einführung in das Datenerfassungs-Framework und wie damit Daten über Platform Edge Network an Adobe Experience Cloud-Produkte und nicht von Adobe stammende Anwendungen gesendet werden.
 
 ## Tags, Web SDK und Mobile SDK
 
-Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Rohcode oder mithilfe von [tags](../tags/home.md) über die Datenerfassungs-Benutzeroberfläche.
+Das Platform Web SDK und Platform Mobile SDK reduzieren und komprimieren alle Adobe-Produktbibliotheken in einem einzigen Entwicklungs-Kit für Web- bzw. Mobilplattformen. Diese können mit Rohcode oder mithilfe von [Tags](../tags/home.md) über die Datenerfassungsbenutzeroberfläche implementiert werden.
 
-Das Komprimieren dieser Bibliotheken beschleunigt die Datenerfassung und konsolidiert Vorgänge in einem einzigen Stream von Client-seitigen Geräten zum Platform Edge Network.
+Durch Komprimieren dieser Bibliotheken wird die Datenerfassung beschleunigt und Vorgänge werden von Client-seitigen Geräten bis Platform Edge Network zu einem einzigen Stream zusammengefasst.
 
 ![Tags, Web SDK, Mobile SDK](./images/home/tags-sdks.png)
 
-## Platform Edge Network und Datenspeicher {#edge}
+## Platform Edge Network und Datenströme {#edge}
 
 Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Netzwerk von Servern, die Daten in einem enormen Umfang empfangen und verarbeiten können. Mit Tags können Sie [Datenströme](../edge/fundamentals/datastreams.md) für Produkte wie Adobe Target, Adobe Audience Manager und Adobe Analytics einrichten. Dadurch können Sie diese Produkte Server-seitig aktivieren, ohne den Client-seitigen Code zu ändern.
 
-![Datenspeicher und Adobe-Lösungen](./images/home/adobe-solutions.png)
+![Datenströme und Adobe-Lösungen](./images/home/adobe-solutions.png)
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 
 ## Ereignisweiterleitung
 
-[Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md) kann in einen beliebigen Experience Platform-Datastream tippen, sodass Sie Daten mit extrem geringer Latenz umwandeln, anreichern und an ein Ziel senden können, das keine Adobe ist, ohne dass dem Client-Gerät Drittanbietercode hinzugefügt wird.
+[Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md) kann sich einen beliebigen Experience Platform-Datenstrom zunutze machen, sodass Sie Daten mit extrem geringer Latenz umwandeln, anreichern und an ein Ziel senden können, bei dem es sich nicht um ein Adobe-Programm handelt, ohne dass dem Client-Gerät Drittanbieter-Code hinzugefügt wird.
 
 ![Ereignisweiterleitung](./images/home/event-forwarding.png)
 
@@ -66,4 +66,4 @@ Dieses Dokument bietet einen allgemeinen Überblick darüber, wie die Datenerfas
 
 ![Datenerfassungs-Framework](./images/home/collection.png)
 
-Weitere Informationen zum allgemeinen Workflow für das Senden von Ereignisdaten über das Edge-Netzwerk finden Sie im Abschnitt [End-to-End-Übersicht für die Datenerfassung](./e2e.md).
+Weitere Informationen zum allgemeinen Workflow für das Senden von Ereignisdaten über Edge Network finden Sie im Abschnitt [End-to-End-Übersicht für die Datenerfassung](./e2e.md).
