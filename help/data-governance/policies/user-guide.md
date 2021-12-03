@@ -6,7 +6,7 @@ topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet Ihnen einen Überblick über die Aktionen, die Sie im Arbeitsbereich „Richtlinien“ der Experience Platform-Benutzeroberfläche durchführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '776'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden [!DNL Experience Platform]-
 - [Data Governance](../home.md)
 - [Datennutzungsrichtlinien](./overview.md)
 
-## Anzeigen bestehender Richtlinien {#view-policies}
+## Aufrufen bestehender Richtlinien {#view-policies}
 
 Klicken Sie in der Benutzeroberfläche von [!DNL Experience Platform] auf **[!UICONTROL Richtlinien]**, um den Arbeitsbereich **[!UICONTROL Richtlinien]** zu öffnen. Auf der Registerkarte **[!UICONTROL Durchsuchen]** wird eine Liste der verfügbaren Richtlinien angezeigt, einschließlich der zugehörigen Bezeichnungen, Marketing-Aktionen und Status.
 
@@ -75,13 +75,13 @@ Sie können benutzerdefinierte Datennutzungsrichtlinien im Arbeitsbereich **[!UI
 
 ![](../images/policies/enable-policy.png)
 
-## Anzeigen von Marketing-Aktionen {#view-marketing-actions}
+## Aufrufen von Marketing-Aktionen {#view-marketing-actions}
 
 Wählen Sie im Arbeitsbereich **[!UICONTROL Richtlinien]** die Registerkarte **[!UICONTROL Marketing-Aktionen]**, um eine Liste der verfügbaren Marketing-Aktionen anzuzeigen, die von Adobe und Ihrem eigenen Unternehmen definiert worden sind.
 
 ![](../images/policies/marketing-actions.png)
 
-## Erstellen einer neuen Marketing-Aktion {#create-marketing-action}
+## Erstellen einer Marketing-Aktion {#create-marketing-action}
 
 Um eine neue benutzerdefinierte Marketing-Aktion zu erstellen, wählen Sie **[!UICONTROL Marketing-Aktion erstellen]** in der oberen rechten Ecke der Registerkarte **[!UICONTROL Marketing-Aktionen]** im Arbeitsbereich **[!UICONTROL Richtlinien]**.
 
