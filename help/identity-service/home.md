@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Identität;Identität;XDM-Diagramme;Identity Service;Identity Service
+keywords: Experience Platform;Startseite;beliebte Themen;Identität;Identität;XDM-Diagramme;Identity Service;Identity Service
 solution: Experience Platform
 title: Identity Service – Übersicht
 topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1747'
 ht-degree: 100%
 
@@ -76,7 +76,7 @@ Kunden über verschiedene Geräte und Kanäle hinweg zu verstehen, beginnt damit
 
 Ein Identitätsdiagramm ist eine Zusammenstellung der Beziehungen zwischen verschiedenen Identity-Namespaces, anhand derer Sie visualisieren und besser verstehen können, welche Kundenidentitäten zusammengeführt werden und wie. Weitere Informationen finden Sie im Tutorial zur [Verwendung des Identitätsdiagramm-Viewers](./ui/identity-graph-viewer.md).
 
-Das folgende Video soll Ihnen das Verständnis von Identitäten und Identitätsdiagrammen erleichtern.
+Das folgende Video soll Ihnen Identitäten und Identitätsdiagramme näherbringen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
