@@ -5,7 +5,7 @@ title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: ba215f20db3bfead8beba8f1dea98bfc37e4358c
+source-git-commit: 105ddf70aafe8c92b5a64959ba1c4cefa5eb6f12
 workflow-type: tm+mt
 source-wordcount: '1982'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Folgende Namespaces werden unterstützt:
 
 Sie müssen eine Zustimmungskonfiguration bereitstellen und ihren Standardwert auf Folgendes festlegen: `opt-in` oder `opt-out` für eine Einverständnisprüfung.
 
-Die Opt-in- und Opt-out-Einverständnisprüfung bestimmt, ob Sie mit der Einwilligung arbeiten können, Benutzerdaten standardmäßig freizugeben. Wenn die Zustimmungskonfiguration standardmäßig auf `opt-in`festgelegt ist, können Benutzerdaten freigegeben werden, es sei denn, ein Benutzer widersetzt sich ausdrücklich der Freigabe. Wenn der Standardwert auf `opt-out`, können Benutzerdaten nicht freigegeben werden, es sei denn, ein Benutzer meldet sich ausdrücklich an.
+Die Opt-in- und Opt-out-Einverständnisprüfung bestimmt, ob Sie mit der Einwilligung arbeiten können, Benutzerdaten standardmäßig freizugeben. Wenn die Zustimmungskonfiguration standardmäßig auf `opt-out`festgelegt ist, können Benutzerdaten freigegeben werden, es sei denn, ein Benutzer widersetzt sich ausdrücklich der Freigabe. Wenn der Standardwert auf `opt-in`, können Benutzerdaten nicht freigegeben werden, es sei denn, ein Benutzer meldet sich ausdrücklich an.
 
 Die standardmäßige Zustimmungskonfiguration für [!DNL Segment Match] auf `opt-out`. Um ein Anmeldemodell für Ihre Daten zu erzwingen, senden Sie bitte eine E-Mail-Anfrage an Ihren Adobe Account Manager.
 
