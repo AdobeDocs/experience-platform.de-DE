@@ -6,9 +6,9 @@ topic-legacy: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 source-git-commit: d8665a349c6f453d83b64317982f3544bbcde0f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1380'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -31,11 +31,11 @@ Sie sollten über Grundkenntnisse zu folgenden [!DNL Experience Platform]-Servic
 * [[!DNL Privacy Service]](../privacy-service/home.md): Verwaltet Anfragen von Kunden hinsichtlich Zugriff auf, Opt-out vom Verkauf oder Löschen ihrer personenbezogenen Daten in allen Adobe Experience Cloud-Anwendungen.
 * [[!DNL Catalog Service]](home.md): Das Aufzeichnungssystem für Speicherort und Herkunft von Daten in [!DNL Experience Platform]. Stellt eine API bereit, mit der Metadaten von Datensätzen aktualisiert werden können.
 * [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-* [[!DNL Identity Service]](../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen zusammengeführt werden.
+* [[!DNL Identity Service]](../identity-service/home.md): Löst das grundlegende Problem der Fragmentierung von Kundenerlebnisdaten, indem Identitäten geräte- und systemübergreifend zusammengeführt werden.
 
 ## Identitäts-Namespaces verstehen {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet Identitäts-Namespaces, um einen Kontext zu Identitätswerten bereitzustellen, indem sie mit dem System ihrer Herkunft verknüpft werden. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) darstellen oder die Identität einer bestimmten Anwendung zuordnen, z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
+Adobe Experience Platform [!DNL Identity Service] führt Identitätsdaten von Kunden über Systeme und Geräte hinweg zusammen. [!DNL Identity Service] verwendet Identitäts-Namespaces, um einen Kontext zu Identitätswerten bereitzustellen, indem sie mit dem System ihrer Herkunft verknüpft werden. Ein Namespace kann ein allgemeines Konzept wie eine E-Mail-Adresse („E-Mail“) sein oder die Identität einer bestimmten Anwendung zuordnen, wie z. B. eine Adobe Advertising Cloud-ID („AdCloud“) oder eine Adobe Target-ID („TNTID“).
 
 [!DNL Identity Service] verwaltet einen Speicher global definierter (standardmäßiger) und benutzerdefinierter Identitäts-Namespaces. Standardmäßige Namespaces (z. B. „E-Mail“ und „ECID“) stehen für alle Unternehmen zur Verfügung, während Ihr Unternehmen außerdem benutzerdefinierte Namespaces erstellen kann, die den jeweiligen Anforderungen entsprechen.
 
@@ -57,10 +57,10 @@ In diesem Abschnitt werden die Schritte zum Hinzufügen eines Identitätsdeskrip
 
 Es gibt zwei Methoden zum Hinzufügen eines Identitätsdeskriptors zu einem Datensatzschema:
 
-* [Verwenden der UI](#identity-ui)
+* [Verwenden der Benutzeroberfläche](#identity-ui)
 * [Verwenden der API](#identity-api)
 
-### Verwenden der UI {#identity-ui}
+### Verwenden der Benutzeroberfläche {#identity-ui}
 
 In der [!DNL Experience Platform ]-Benutzeroberfläche können Sie mit dem Arbeitsbereich **[!UICONTROL Schemata]** Ihre vorhandenen XDM-Schemata bearbeiten. Um einem Schema einen Identitätsdeskriptor hinzuzufügen, wählen Sie das Schema in der Liste aus und befolgen Sie die Schritte zum [Einrichten eines Schema-Felds als Identitätsfeld](../xdm/tutorials/create-schema-ui.md#identity-field) im Tutorial [!DNL Schema Editor].
 
@@ -72,7 +72,7 @@ Nachdem Sie die entsprechenden Felder im Schema als Identitätsfelder festgelegt
 >
 >In diesem Abschnitt wird davon ausgegangen, dass Sie den eindeutigen URI-ID-Wert des XDM-Schemas Ihres Datensatzes kennen. Wenn Sie diesen Wert nicht kennen, können Sie ihn mit der [!DNL Catalog Service]-API abrufen. Nachdem Sie den Abschnitt [Erste Schritte](./api/getting-started.md) des Entwicklerhandbuchs gelesen haben, führen Sie die Schritte aus, die unter [Auflistung](./api/list-objects.md) oder [Suchen](./api/look-up-object.md) von [!DNL Catalog]-Objekten beschrieben sind, um Ihren Datensatz zu finden. Die Schema-ID befindet sich unter `schemaRef.id`
 >
->In diesem Abschnitt wird außerdem davon ausgegangen, dass Sie wissen, wie Sie Aufrufe an die Schema Registry-API tätigen können. Wichtige Informationen zur Verwendung der API, einschließlich der Kenntnis Ihrer `{TENANT_ID}` und das Konzept der Container, siehe [Erste Schritte](../xdm/api/getting-started.md) Abschnitt des API-Handbuchs.
+>In diesem Abschnitt wird außerdem davon ausgegangen, dass Sie wissen, wie Sie Aufrufe an die Schema-Registry-API durchführen. Wichtige Informationen zur Verwendung der API, einschließlich Details über `{TENANT_ID}` und das Konzept der Container, finden Sie im Abschnitt [Erste Schritte](../xdm/api/getting-started.md) des API-Handbuchs.
 
 Sie können dem XDM-Schema eines Datensatzes einen Identitätsdeskriptor hinzufügen, indem Sie eine POST-Anfrage an den `/descriptors`-Endpunkt in der [!DNL Schema Registry]-API stellen.
 
@@ -146,7 +146,7 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für [!DNL 
 >
 >Die Dauer, die eine Datenschutzanfrage in Anspruch nehmen kann, kann nicht garantiert werden. Wenn Änderungen in Data Lake während der Verarbeitung einer Anfrage auftreten, kann auch nicht garantiert werden, ob diese Datensätze verarbeitet werden oder nicht.
 
-### Verwenden der UI
+### Verwenden der Benutzeroberfläche
 
 Wählen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profil]** unter **[!UICONTROL Produkte]** aus, um Aufträge für Daten, die in [!DNL Data Lake] bzw. [!DNL Real-time Customer Profile] gespeichert sind, zu verarbeiten.
 
@@ -154,11 +154,11 @@ Wählen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche **[!U
 
 ### Verwenden der API
 
-Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. IDs für die [!DNL Data Lake] muss `unregistered` für `type` und einen `namespace` -Wert, der mit einem [Datenschutzbezeichnungen](#privacy-labels) die zu den entsprechenden Datensätzen hinzugefügt wurden.
+Beim Erstellen von Auftragsanfragen in der API müssen alle angegebenen `userIDs` einen bestimmten `namespace` und `type` nutzen, je nach dem Datenspeicher, für den sie gelten. Kennungen für [!DNL Data Lake] müssen bei `type` den Wert `unregistered` aufweisen sowie über einen `namespace`-Wert verfügen, der mit einer der [Datenschutzkennzeichnungen](#privacy-labels) übereinstimmt, die den entsprechenden Datensätzen hinzugefügt wurden.
 
 Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Bei Anfragen an [!DNL Data Lake] muss das Array den Wert `aepDataLake` enthalten.
 
-Die folgende Anfrage erstellt einen neuen Datenschutzauftrag für die [!DNL Data Lake]unter Verwendung der nicht registrierten `email_label` Namespace. Sie enthält außerdem den Produktwert für [!DNL Data Lake] im `include`-Array:
+In der folgenden Anfrage wird ein neuer Datenschutzvorgang für den [!DNL Data Lake] mit dem nicht registrierten Namespace `email_label` erstellt. Sie enthält außerdem den Produktwert für [!DNL Data Lake] im `include`-Array:
 
 ```shell
 curl -X POST \
@@ -201,7 +201,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Platform verarbeitet Datenschutzanfragen für alle [Sandboxes](../sandboxes/home.md) , die zu Ihrer Organisation gehören. Daher kann jede `x-sandbox-name` -Kopfzeile, die in der Anfrage enthalten ist, wird vom System ignoriert.
+>Platform verarbeitet Datenschutzanfragen für alle [Sandboxes](../sandboxes/home.md), die zu Ihrer Organisation gehören. Daher wird jede `x-sandbox-name`-Kopfzeile, die in der Anfrage enthalten ist, vom System ignoriert.
 
 ## Verarbeitung von Löschanfragen
 
