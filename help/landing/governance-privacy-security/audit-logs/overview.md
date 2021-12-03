@@ -2,9 +2,9 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Auditprotokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d4beb7691c8fb38359425509a40572ea9b09fd26
+source-git-commit: d258ddef6a904fee5a4676a513fc426663342c91
 workflow-type: tm+mt
-source-wordcount: '608'
+source-wordcount: '658'
 ht-degree: 6%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
-Grundsätzlich gibt ein Auditprotokoll **Wer** **was** und **wann** ausgeführt hat. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute für den Aktionstyp angeben.
+In einem Prüfprotokoll wird **who** ausgeführt **what** Aktion und **when**. Jede in einem Protokoll aufgezeichnete Aktion enthält Metadaten, die den Aktionstyp, das Datum und die Uhrzeit, die E-Mail-ID des Benutzers, der die Aktion ausgeführt hat, und zusätzliche Attribute für den Aktionstyp angeben.
 
 In diesem Dokument werden Auditprotokolle in Platform behandelt, einschließlich der Anzeige und Verwaltung in der Benutzeroberfläche oder API.
 
@@ -39,11 +39,11 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei auftretenden Aktivitäten automatisch Prüfprotokolle erfasst. Sie müssen die Protokollerfassung nicht manuell aktivieren.
 
-Um Prüfprotokolle anzeigen und exportieren zu können, müssen Sie über die Zugriffssteuerungsberechtigung &quot;Audit-Protokolle anzeigen&quot;verfügen (zu finden unter der Kategorie &quot;Data Governance&quot;). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie in der [Dokumentation zur Zugriffskontrolle](../../../access-control/home.md).
+Um Prüfprotokolle anzeigen und exportieren zu können, müssen Sie über die Zugriffssteuerungsberechtigung &quot;Audit-Protokolle anzeigen&quot;verfügen (zu finden unter der Kategorie &quot;Data Governance&quot;). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../access-control/home.md).
 
 ## Verwalten von Prüfprotokollen in der Benutzeroberfläche
 
-Über den Arbeitsbereich **[!UICONTROL Audits]** in der Platform-Benutzeroberfläche können Sie Prüfprotokolle für verschiedene Experience Platform-Funktionen anzeigen. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
+Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform im **[!UICONTROL Prüfungen]** Arbeitsbereich in der Platform-Benutzeroberfläche. Der Arbeitsbereich zeigt eine Liste der aufgezeichneten Protokolle an, die standardmäßig von der letzten zur letzten sortiert sind.
 
 ![Dashboard &quot;Audit logs&quot;](../../images/audit-logs/audits.png)
 
@@ -53,7 +53,9 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 
 ![Ereignisdetails](../../images/audit-logs/select-event.png)
 
-Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)) aus, um eine Liste mit Filtersteuerelementen anzuzeigen, mit denen die Ergebnisse eingegrenzt werden können.
+### Auditprotokolle filtern
+
+Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)), um eine Liste von Filtersteuerelementen anzuzeigen, die die Eingrenzung der Ergebnisse unterstützen.
 
 ![Filter](../../images/audit-logs/filters.png)
 
@@ -61,29 +63,33 @@ Die folgenden Filter sind für Prüfereignisse in der Benutzeroberfläche verfü
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach [category](#category) zu filtern. |
-| [!UICONTROL Aktion] | Nach Aktion filtern. Derzeit können nur die Aktionen [!UICONTROL Erstellen] und [!UICONTROL Löschen] gefiltert werden. |
-| [!UICONTROL Zugriffssteuerungsstatus] | Filtern Sie danach, ob die Aktion aufgrund fehlender [Zugriffssteuerungsberechtigungen](../../../access-control/home.md) zulässig (abgeschlossen) oder verweigert wurde. |
+| [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach [category](#category). |
+| [!UICONTROL Aktion] | Nach Aktion filtern. Derzeit nur [!UICONTROL Erstellen] und [!UICONTROL Löschen] -Aktionen gefiltert werden. |
+| [!UICONTROL Zugriffssteuerungsstatus] | Filtern Sie nach, ob die Aktion zulässig (abgeschlossen) oder verweigert wurde, weil [Zugriffskontrolle](../../../access-control/home.md) Berechtigungen. |
 | [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. |
 
-Um einen Filter zu entfernen, wählen Sie das &quot;X&quot;auf dem Pillensymbol für den betreffenden Filter oder klicken Sie auf **[!UICONTROL Alle löschen]**, um alle Filter zu entfernen.
+Um einen Filter zu entfernen, wählen Sie das &quot;X&quot;auf dem Pillensymbol für den betreffenden Filter aus oder wählen Sie **[!UICONTROL Alle löschen]** um alle Filter zu entfernen.
 
 ![Filter löschen](../../images/audit-logs/clear-filters.png)
 
-<!-- (Planned for post-beta release)
-### Export an audit log
+### Audit-Protokolle exportieren
 
-Select **[!UICONTROL Download log]** to export an audit log.
--->
+Um die aktuelle Liste der Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]**.
+
+![Protokoll herunterladen](../../images/audit-logs/download.png)
+
+Wählen Sie im angezeigten Dialogfeld Ihr bevorzugtes Format aus (entweder **[!UICONTROL CSV]** oder **[!UICONTROL JSON]**), wählen Sie **[!UICONTROL Download]**. Der Browser lädt die generierte Datei herunter und speichert sie auf Ihrem Computer.
+
+![Download-Format auswählen](../../images/audit-logs/select-download-format.png)
 
 ## Verwalten von Auditprotokollen in der API
 
-Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch über API-Aufrufe ausgeführt werden. Weitere Informationen finden Sie im [API-Referenzdokument](https://www.adobe.io/experience-platform-apis/references/audit-query/) .
+Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können auch über API-Aufrufe ausgeführt werden. Siehe [API-Referenzdokument](https://www.adobe.io/experience-platform-apis/references/audit-query/) für weitere Informationen.
 
 ## Verwalten von Auditprotokollen für Adobe Admin Console
 
-Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie im folgenden [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie in den folgenden Abschnitten. [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Prüfprotokolle in Experience Platform verwaltet werden. Weitere Informationen zum Überwachen von Platform-Aktivitäten finden Sie in der Dokumentation zu [Observability Insights](../../../observability/home.md) und [Überwachung der Datenerfassung](../../../ingestion/quality/monitor-data-ingestion.md).
+In diesem Handbuch wurde beschrieben, wie Prüfprotokolle in Experience Platform verwaltet werden. Weitere Informationen zum Überwachen von Platform-Aktivitäten finden Sie in der Dokumentation zu [Observability Insights](../../../observability/home.md) und [Überwachen der Datenerfassung](../../../ingestion/quality/monitor-data-ingestion.md).
