@@ -3,9 +3,9 @@ title: Umgang mit Fehlern
 description: Hier erfahren Sie, wie Fehler in der Reactor-API gehandhabt werden.
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1068'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -86,7 +86,7 @@ In der folgenden Tabelle sind die verschiedenen Fehler aufgeführt, die die API 
 | `invalid-rule` | Eine ungültige Regel kann nicht zu einer Bibliothek hinzugefügt werden. |
 | `invalid-settings-syntax` | Beim Analysieren der JSON-Einstellungsdatei wurde ein Syntaxfehler festgestellt. |
 | `library-file-not-found` | Eine erforderliche Datei, die in „extension.json“ definiert ist, konnte im ZIP-Paket nicht gefunden werden. |
-| `minification-error` | Der Code konnte aufgrund eines ungültigen Codes nicht kompiliert werden. |
+| `minification-error` | Der Code ist ungültig und konnte daher nicht kompiliert werden. |
 | `multiple-revisions` | In einer Bibliothek kann nur eine Revision jeder Ressource enthalten sein. |
 | `no-available-orgs` | Dieses Benutzerkonto gehört nicht zu einem Produktprofil, das Zugriff auf Tags hat. Verwenden Sie die Admin Console, um diesen Benutzer einem Produktprofil mit Tag-Rechten hinzuzufügen. |
 | `not-authorized` | Dieses Benutzerkonto verfügt nicht über die erforderlichen Berechtigungen, um diese Aktion durchzuführen. |
