@@ -4,9 +4,9 @@ title: Beispiel für einen Anwendungsfall von Real-time Customer Data Platform B
 description: Dieses Beispielszenario bietet ein Beispiel für die Konfiguration Ihrer Implementierung von Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1134'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -91,7 +91,7 @@ Durch die Lektüre dieses Dokuments haben Sie nun eine Einführung in die Arten 
 
 Zum besseren Verständnis der B2B-spezifischen Funktionen wird die folgende Dokumentation empfohlen:
 
-- [Real-time Customer Data Platform B2B Edition End-to-End-Tutorial](./b2b-tutorial.md)
+- [Vollständiges Tutorial zu Real-time Customer Data Platform B2B Edition](./b2b-tutorial.md)
 - [Quellen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
 - [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
 - [Beispiele für B2B-Segmentierung](./segmentation/b2b.md)
