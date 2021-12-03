@@ -6,9 +6,9 @@ topic-legacy: developer guide
 description: Mit der Datensatz-Service-API können Sie Nutzungsbezeichnungen für Datensätze anwenden und bearbeiten. Sie gehört zu den Datenkatalogfunktionen von Adobe Experience Platform, ist jedoch von der Katalog-Service-API getrennt, die Datensatz-Metadaten verwaltet.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: ef711b1cbe0664f556e19ff6c64e9803d3cb1a21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '803'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -94,15 +94,15 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Anfrage**
 
-Die folgende Beispielanfrage aktualisiert die vorhandenen PUT-Bezeichnungen für einen Datensatz sowie ein bestimmtes Feld in diesem Datensatz. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine POST-Anfrage erforderlich wären.
+Mit der folgenden beispielhaften PUT-Anfrage werden die vorhandenen Kennzeichnungen für einen Datensatz sowie ein bestimmtes Feld in diesem Datensatz aktualisiert. Die in der Payload bereitgestellten Felder entsprechen den Feldern, die für eine POST-Anfrage erforderlich wären.
 
-Wenn Sie API-Aufrufe durchführen, die die vorhandenen Bezeichnungen eines Datensatzes (PUT) aktualisieren, wird ein `If-Match` -Kopfzeile, die die aktuelle Version der Entität für die Datensatzbeschriftung im Datensatzdienst anzeigt, muss enthalten sein. Um Datenkollisionen zu vermeiden, aktualisiert der Service die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
+Wenn API-Aufrufe durchgeführt werden, die die vorhandenen Kennzeichnungen eines Datensatzes aktualisieren (PUT), muss eine `If-Match`-Kopfzeile eingefügt werden, die die aktuelle Version der Entität für die Datensatzkennzeichnung in Dataset Service angibt. Um Datenkollisionen zu vermeiden, aktualisiert der Service die Datensatzentität nur, wenn die enthaltene `If-Match`-Zeichenfolge mit dem neuesten vom System für diesen Datensatz generierten Versions-Tag übereinstimmt.
 
 >[!NOTE]
 >
 >Wenn für den betreffenden Datensatz derzeit keine Kennzeichnungen vorhanden sind, können neue Kennzeichnungen nur über eine POST-Anfrage hinzugefügt werden, wofür keine `If-Match`-Kopfzeile erforderlich ist. Nachdem Kennzeichnungen zu einem Datensatz hinzugefügt wurden, wird ihm ein `etag`-Wert zugewiesen, mit dem die Kennzeichnungen zu einem späteren Zeitpunkt aktualisiert oder entfernt werden können.
 
-Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzbezeichnungen empfiehlt es sich, zunächst eine Suchanfrage für den Datensatz durchzuführen, um den neuesten Datensatz abzurufen `etag` -Wert, bevor Sie diesen Wert in `If-Match` -Kopfzeile Ihrer nachfolgenden PUT-Anfrage.
+Um die neueste Version der Datensatzkennzeichnungsentität abzurufen, stellen Sie eine [GET-Anfrage](#look-up) an den `/datasets/{DATASET_ID}/labels`-Endpunkt. Der aktuelle Wert wird in der Antwort unter einer `etag`-Kopfzeile zurückgegeben. Beim Aktualisieren vorhandener Datensatzkennzeichnungen sollten Sie zunächst eine Suchanfrage für den Datensatz durchführen, um den neuesten `etag`-Wert abzurufen, bevor Sie diesen Wert in der `If-Match`-Kopfzeile Ihrer nachfolgenden PUT-Anfrage verwenden.
 
 ```shell
 curl -X PUT \
@@ -135,7 +135,7 @@ curl -X PUT \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den aktualisierten Satz von Bezeichnungen für den Datensatz zurück.
+Eine erfolgreiche Antwort gibt den aktualisierten Satz von Kennzeichnungen für den Datensatz zurück.
 
 ```json
 {
