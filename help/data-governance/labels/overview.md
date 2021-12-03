@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen;Datenverwaltung;Datennutzungsbeschriftungs-API;Richtlinien-Service-API;Übersicht zu Datennutzungsbeschriftungen
+keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Datennutzungsbeschriftungs-API;Richtlinien-Service-API;Übersicht zu Datennutzungsbeschriftungen
 solution: Experience Platform
 title: Datennutzungsbeschriftungen – Übersicht
 topic-legacy: labels
 description: Mit Adobe Experience Platform Data Governance können Sie Datennutzungsbeschriftungen auf Datensätze und Felder anwenden und diese entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren. Dieses Dokument bietet einen Überblick über Datennutzungsbeschriftungen in Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '615'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # Datennutzungsbeschriftungen – Übersicht
 
-Mit Adobe Experience Platform Data Governance können Sie Datennutzungsbezeichnungen auf Datensätze und Felder anwenden und diese entsprechend den jeweiligen Datennutzungsrichtlinien kategorisieren.
+Mit Adobe Experience Platform Data Governance können Sie Datennutzungskennzeichnungen auf Datensätze und Felder anwenden und diese so entsprechend den für sie geltenden Nutzungsrichtlinien kategorisieren.
 
 Dieses Dokument bietet eine Übersicht über Datennutzungsbeschriftungen in [!DNL Experience Platform]. Bevor Sie dieses Handbuch lesen, finden Sie in der [Übersicht zu Data Governance](../home.md) eine solidere Einführung in das Data Governance-Framework.
 
@@ -38,15 +38,15 @@ Weitere Informationen zur Funktionsweise der automatischen Durchsetzung in Platf
 
 ### Vererbung von Adobe Audience Manager-Datenexportsteuerelementen
 
-[!DNL Experience Platform] hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportkontrollen, die auf Audience Manager-Segmente angewendet wurden, werden in entsprechende Beschriftungen und Marketing-Aktionen übersetzt, die von [!DNL Experience Platform] Data Governance.
+[!DNL Experience Platform] hat die Möglichkeit, Segmente für Adobe Audience Manager freizugeben. Alle Datenexportsteuerelemente, die auf Audience Manager-Segmente angewendet wurden, werden in entsprechende Kennzeichnungen und Marketing-Aktionen übersetzt, die von [!DNL Experience Platform] Data Governance erkannt werden.
 
-Eine Referenz dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungsbeschriftungen in [!DNL Platform] zugeordnet sind, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#aam-data-export-control-in-aep).
+Informationen dazu, wie bestimmte Datenexportsteuerelemente den Datennutzungskennzeichnungen in [!DNL Platform] zugeordnet werden, finden Sie in der [Audience Manager-Dokumentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de#aam-data-export-control-in-aep).
 
 ## Verwalten von Datennutzungsbeschriftungen in [!DNL Experience Platform] {#manage-labels}
 
 Sie können Datennutzungsbeschriftungen mit [!DNL Experience Platform]-APIs oder der Benutzeroberfläche verwalten. Einzelheiten finden Sie in den nachfolgenden Abschnitten.
 
-### Verwenden der UI
+### Verwenden der Benutzeroberfläche
 
 Der Arbeitsbereich **[!UICONTROL Richtlinien]** in der Benutzeroberfläche von [!DNL Experience Platform] ermöglicht die Ansicht und Verwaltung von Kern- und benutzerdefinierten Beschriftungen für Ihr Unternehmen. Im Arbeitsbereich **[!DNL Datasets]** können Sie Beschriftungen auf Datensätze und Felder anwenden. Weitere Informationen finden Sie im [Benutzerhandbuch zu Beschriftungen](user-guide.md).
 
