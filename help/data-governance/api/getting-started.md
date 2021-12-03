@@ -6,21 +6,21 @@ topic-legacy: developer guide
 description: Mit der Policy Service-API können Sie verschiedene Ressourcen im Zusammenhang mit der Data Governance von Adobe Experience Platform erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die Policy Service-API durchführen.
 exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '444'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # Erste Schritte mit der [!DNL Policy Service]-API
 
-Die [!DNL Policy Service] Mit der API können Sie verschiedene Ressourcen im Zusammenhang mit Adobe Experience Platform Data Governance erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [!DNL Policy Service]-API durchführen.
+Mit der [!DNL Policy Service]-API können Sie verschiedene Ressourcen im Zusammenhang mit Data Governance von Adobe Experience Platform erstellen und verwalten. In diesem Dokument erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die [!DNL Policy Service]-API durchführen.
 
 ## Voraussetzungen
 
 Die Verwendung des Entwicklerhandbuchs erfordert ein grundlegendes Verständnis der verschiedenen [!DNL Experience Platform]-Services, die bei der Arbeit mit Data Governance-Funktionen zum Einsatz kommen. Bevor Sie [!DNL Policy Service API] nutzen, lesen Sie die Dokumentation für folgende Services:
 
-* [Data Governance](../home.md): Das Framework, mit dem [!DNL Experience Platform] die Einhaltung der Datennutzungsrichtlinien durchsetzt.
+* [Data Governance](../home.md): Das Framework, mit dem [!DNL Experience Platform] die Einhaltung der Datennutzungsrichtlinien umsetzt.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
@@ -37,7 +37,7 @@ Außerdem setzt die API-Dokumentation voraus, dass Sie das [Authentifizierungs-T
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die zu Data Governance gehören, werden in bestimmte virtuelle Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu Data Governance gehören, sind in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
