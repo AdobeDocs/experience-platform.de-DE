@@ -1,10 +1,10 @@
 ---
-description: Als Teil des Destination SDK stellt Adobe Entwicklertools bereit, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen.
+description: Als Teil von Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen.
 title: Testen der Zielkonfiguration
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '526'
 ht-degree: 1%
 
 ---
@@ -13,17 +13,21 @@ ht-degree: 1%
 
 ## Übersicht {#overview}
 
-Als Teil des Destination SDK stellt Adobe Entwicklertools bereit, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. Informationen zum Erstellen einer Nachrichtenumwandlungsvorlage finden Sie unter [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./create-template.md).
+Als Teil von Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. Informationen zum Erstellen einer Nachrichtenumwandlungsvorlage finden Sie unter [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./create-template.md).
 
-Um **zu testen, ob Ihr Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen**, verwenden Sie das *Ziel-Test-Tool*. Mit diesem Tool können Sie Ihre Zielkonfiguration testen, indem Sie Nachrichten an Ihren REST-API-Endpunkt senden.
+nach **Testen Sie, ob Ihr Ziel richtig konfiguriert ist, und überprüfen Sie die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel.**, verwenden Sie die *Destination Test Tool*. Mit diesem Tool können Sie Ihre Zielkonfiguration testen, indem Sie Nachrichten an Ihren REST-API-Endpunkt senden.
 
-Nachstehend wird gezeigt, wie das Testen Ihres Ziels in den [Zielkonfigurations-Workflow](./configure-destination-instructions.md) im Destination SDK passt:
+Nachstehend wird gezeigt, wie das Testen Ihres Ziels in den [Zielkonfigurations-Workflow](./configure-destination-instructions.md) in Destination SDK:
 
 ![Abbildung, wo der Zieltestschritt in den Zielkonfigurations-Workflow passt](./assets/test-destination-step.png)
 
-## Destination Test Tool {#destination-testing-tool}
+## Zieltesttool - Zweck und Voraussetzungen {#destination-testing-tool}
 
-Verwenden Sie dieses Tool, um Ihre Zielkonfiguration zu testen, indem Sie Nachrichten an den Partnerendpunkt senden, den Sie in der [Serverkonfiguration](./server-and-template-configuration.md) angegeben haben.
+Verwenden Sie das Ziel-Testtool, um Ihre Zielkonfiguration zu testen, indem Sie Nachrichten an den Partnerendpunkt senden, den Sie im Abschnitt [Serverkonfiguration](./server-and-template-configuration.md).
+
+Bevor Sie das Tool verwenden, stellen Sie Folgendes sicher:
+* Konfigurieren Sie Ihr Ziel, indem Sie die im Abschnitt [Zielkonfigurations-Workflow](./configure-destination-instructions.md) und
+* Erstellen Sie eine Verbindung zu Ihrem Ziel, wie im Abschnitt [Abrufen der Ziel-Instanz-ID](./destination-testing-api.md#get-destination-instance-id).
 
 Mit diesem Tool haben Sie nach der Konfiguration Ihres Ziels folgende Möglichkeiten:
 * Testen Sie, ob Ihr Ziel richtig konfiguriert ist.
@@ -37,16 +41,16 @@ Mit diesem Tool haben Sie nach der Konfiguration Ihres Ziels folgende Möglichke
 
 Sie können den Ziel-Test-API-Endpunkt mit oder ohne Hinzufügen von Profilen zur Anfrage aufrufen.
 
-Wenn Sie der Anforderung keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anforderung hinzu. Wenn Sie Profile generieren möchten, die in dieser Anfrage verwendet werden sollen, lesen Sie den Abschnitt [API-Referenz zur Beispielprofilerstellung](./sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](./sample-profile-generation-api.md#generate-sample-profiles-source-schema) dargestellt. Beachten Sie, dass das Quellschema das [Vereinigungsschema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) der von Ihnen verwendeten Sandbox ist.
+Wenn Sie der Anforderung keine Profile hinzufügen, generiert Adobe diese intern und fügt sie der Anforderung hinzu. Informationen zum Generieren von Profilen für die Verwendung in dieser Anfrage finden Sie im Abschnitt [API-Referenz zur Profilgenerierung](./sample-profile-generation-api.md). Sie müssen Profile basierend auf dem Quell-XDM-Schema generieren, wie in der [API-Referenz](./sample-profile-generation-api.md#generate-sample-profiles-source-schema). Beachten Sie, dass das Quellschema die [Vereinigungsschema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=en) der von Ihnen verwendeten Sandbox.
 
 Die Antwort enthält das Ergebnis der Verarbeitung der Zielanfrage. Die Anfrage umfasst drei Hauptabschnitte:
 * Die von Adobe für das Ziel generierte Anfrage.
 * Die von Ihrem Ziel erhaltene Antwort.
-* Die Liste der in der Anfrage gesendeten Profile, unabhängig davon, ob die Profile von Ihnen in der Anfrage ](./destination-testing-api.md/#test-with-added-profiles) hinzugefügt wurden oder von Adobe generiert wurden, wenn [der Hauptteil der Ziel-Testanfrage leer war](./destination-testing-api.md#test-without-adding-profiles).[
+* Liste der in der Anfrage gesendeten Profile, unabhängig davon, ob es sich um Profile handelt [, die Sie in der Anfrage hinzugefügt haben](./destination-testing-api.md/#test-with-added-profiles)oder von Adobe generiert, wenn [der Hauptteil der Zieltestanfrage war leer](./destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >
->Adobe kann mehrere Anfrage- und Antwortpaare generieren. Wenn Sie beispielsweise 10 Profile an ein Ziel mit dem Wert `maxUsersPerRequest` 7 senden, gibt es eine Anfrage mit 7 Profilen und eine weitere Anfrage mit 3 Profilen.
+>Adobe kann mehrere Anfrage- und Antwortpaare generieren. Wenn Sie beispielsweise 10 Profile an ein Ziel senden, das über eine `maxUsersPerRequest` 7, gibt es eine Anfrage mit 7 Profilen und eine weitere Anfrage mit 3 Profilen.
 
 **Beispielanfrage mit Profilparametern im Hauptteil**
 
@@ -121,7 +125,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 **Beispielantwort**
 
-Beachten Sie, dass der Inhalt des Parameters `results.httpCalls` spezifisch für Ihre REST-API ist.
+Beachten Sie, dass der Inhalt der `results.httpCalls` -Parameter ist spezifisch für Ihre REST-API.
 
 ```json
 {
@@ -229,4 +233,4 @@ Beschreibungen der Anforderungs- und Antwortparameter finden Sie unter [API-Vorg
 
 ## Nächste Schritte
 
-Nachdem Sie Ihr Ziel getestet und bestätigt haben, dass es korrekt konfiguriert ist, verwenden Sie die [API zur Zielveröffentlichung](./destination-publish-api.md), um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+Nachdem Sie Ihr Ziel getestet und bestätigt haben, dass es korrekt konfiguriert ist, verwenden Sie die [Zielpublikations-API](./destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
