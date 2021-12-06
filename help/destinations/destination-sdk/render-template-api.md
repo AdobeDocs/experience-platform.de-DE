@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts "/authoring/testing/template/render"ausführen können, um exportierte Daten für Ihr Ziel basierend auf Ihrer Nachrichtenumwandlungsvorlage zu rendern.
 title: API-Vorgänge für Rendervorlagen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: 5ecfd6e7f2f783d31642b7d81cc34b51eb0d6307
+source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 2%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
@@ -24,6 +24,8 @@ Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md)
 ## Rendern exportierter Profile basierend auf der Vorlage für die Nachrichtenumwandlung {#render-exported-data}
 
 Sie können exportierte Profile rendern, indem Sie eine POST-Anfrage an die `authoring/testing/template/render` Endpunkt und Angabe der Ziel-ID der Zielkonfiguration und der Vorlage, die Sie mit der [Beispiel-Vorlagen-API-Endpunkt](./sample-template-api.md).
+
+Sie können eine einfache Vorlage verwenden, die Ihre Rohprofile exportiert, ohne Konvertierungen vorzunehmen, und dann zu einer komplexeren Vorlage wechseln, die Umwandlungen auf Profile anwendet. Die Syntax für die einfache Vorlage lautet: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
@@ -1065,7 +1067,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen für die Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte {#next-steps}
 
