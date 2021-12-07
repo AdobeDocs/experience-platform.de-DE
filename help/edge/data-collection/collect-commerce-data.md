@@ -3,10 +3,10 @@ title: Erfassen von Commerce- und Produktinformationen mit dem Adobe Experience 
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten zu Produkten oder einem Warenkorb hinzufügen.
 keywords: Produkte;Commerce;Maßnahmen;Maßnahme;Bestellung;cartAbandons;Checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;Einkäufe;saveForLaters;currencyCode;Zahlungen;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 22d15dde62f3113167684c7a76a2265e6f0e7bab
+source-git-commit: 51a18ca3a9d0817eafeecea328900eb2f4d1d9a4
 workflow-type: tm+mt
-source-wordcount: '1324'
-ht-degree: 93%
+source-wordcount: '1326'
+ht-degree: 91%
 
 ---
 
@@ -114,7 +114,7 @@ Die Produktliste gibt an, welche Produkte mit der entsprechenden Aktion in Verbi
 | **Feld** | **Empfehlung** | **Beschreibung** |
 |---|---|---|
 | [currencyCode](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmcurrencycode) | Optional | Die [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217)-Währung für das Produkt. Dies ist nur dann nützlich, wenn Sie Produkte mit unterschiedlichen Währungs-Codes haben können und wenn es anwendbar ist. Wenn es beispielsweise einen Kauf gibt oder eine Artikel zum Warenkorb hinzugefügt wird. |
-| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Dringend empfohlen | Sollte nur sofern zutreffend eingestellt werden. So ist es zum Beispiel u. U. nicht möglich, eine Einstellung auf `productView` vorzunehmen, weil unterschiedliche Produktvarianten auf `productListAdds` unterschiedliche Preise haben können. |
+| [priceTotal](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmpricetotal) | Dringend empfohlen | Sollte nur sofern zutreffend eingestellt werden. So ist es beispielsweise möglicherweise nicht möglich, `productView` -Ereignis eintreten, da unterschiedliche Produktvarianten unterschiedliche Preise haben können, jedoch auf einer `productListAdds` -Ereignis. |
 | [product](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproduct) | Dringend empfohlen | Die XDM-ID für das Produkt. |
 | [productAddMethod](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmproductaddmethod) | Dringend empfohlen | Die Methode, mit der der Besucher der Liste ein Produktelement hinzufügen konnte. Wird mit `productListAdds`-Maßnahmen eingestellt und sollte nur verwendet werden, wenn ein Produkt der Liste hinzugefügt wird. Beispiele sind `add to cart button`, `quick add` und `upsell`. |
 | [productName](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/content/productlistitem.schema.md#xdmname) | Dringend empfohlen | Dies wird auf den Anzeigenamen oder den für Menschen lesbaren Namen des Produkts festgelegt. |
