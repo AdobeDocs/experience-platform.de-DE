@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Zustimmungsverarbeitung in Adobe Experience Platform
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie in Adobe Experience Platform mithilfe des Adobe 2.0-Standards Zustimmungssignale von Kunden verarbeiten.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 1c398cdac45141b4886d984db32fbac7ca60265c
+source-git-commit: f9ccce8943e2aaf65cd3e0ffe2b974a668bba9b7
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1566'
 ht-degree: 0%
 
 ---
@@ -20,39 +20,39 @@ Dieses Dokument bietet einen Überblick darüber, wie Sie Ihre Datenvorgänge in
 
 >[!NOTE]
 >
->Dieses Dokument konzentriert sich auf die Verarbeitung von Einwilligungsdaten unter Verwendung des Adobe-Standards. Wenn Sie Einwilligungsdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 verarbeiten, lesen Sie das Handbuch zum [TCF 2.0-Support in Real-time Customer Data Platform](../iab/overview.md).
+>Dieses Dokument konzentriert sich auf die Verarbeitung von Einwilligungsdaten unter Verwendung des Adobe-Standards. Wenn Sie Einwilligungsdaten gemäß dem IAB Transparency and Consent Framework (TCF) 2.0 verarbeiten, lesen Sie das Handbuch zu [TCF 2.0-Unterstützung in Real-time Customer Data Platform](../iab/overview.md).
 
 ## Voraussetzungen
 
 Dieses Handbuch setzt ein Verständnis der verschiedenen Experience Platform-Services voraus, die mit der Verarbeitung von Zustimmungsdaten befasst sind:
 
 * [Experience-Datenmodell (XDM)](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-* [Adobe Experience Platform Identity-Dienst](../../../../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
-* [Echtzeit-Kundenprofil](../../../../profile/home.md): Verwendet  [!DNL Identity Service] Funktionen zum Erstellen detaillierter Kundenprofile aus Ihren Datensätzen in Echtzeit. Das Echtzeit-Kundenprofil ruft Daten aus dem Data Lake ab und behält Kundenprofile in seinem eigenen Datenspeicher bei.
+* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Löst die grundlegende Herausforderung, die sich aus der Fragmentierung von Kundenerlebnisdaten ergibt, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [Echtzeit-Kundenprofil](../../../../profile/home.md): Verwendet [!DNL Identity Service] Funktionen zum Erstellen detaillierter Kundenprofile aus Ihren Datensätzen in Echtzeit. Das Echtzeit-Kundenprofil ruft Daten aus dem Data Lake ab und behält Kundenprofile in seinem eigenen Datenspeicher bei.
 * [Adobe Experience Platform Web SDK](../../../../edge/home.md): Eine Client-seitige JavaScript-Bibliothek, mit der Sie verschiedene Platform-Dienste in Ihre kundenorientierte Website integrieren können.
    * [SDK-Zustimmungsbefehle](../../../../edge/consent/supporting-consent.md): Eine Anwendungsfallübersicht der einwilligungsbezogenen SDK-Befehle, die in diesem Handbuch gezeigt werden.
-* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Ermöglicht es Ihnen, Echtzeit-Kundenprofildaten in Gruppen von Einzelanwendern zu unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
+* [Adobe Experience Platform-Segmentierungsdienst](../../../../segmentation/home.md): Ermöglicht es Ihnen, Echtzeit-Kundenprofildaten in Gruppen von Einzelanwendern zu unterteilen, die ähnliche Eigenschaften aufweisen und ähnlich auf Marketing-Strategien reagieren.
 
 ## Zusammenfassung des Zustimmungsverarbeitungsflusses {#summary}
 
 Im Folgenden wird beschrieben, wie Einwilligungsdaten verarbeitet werden, nachdem das System ordnungsgemäß konfiguriert wurde:
 
 1. Ein Kunde gibt seine Zustimmungsvoreinstellungen für die Datenerfassung über ein Dialogfeld auf Ihrer Website an.
-1. Bei jedem Laden der Seite (oder wenn Ihr CMP eine Änderung der Zustimmungsvoreinstellungen erkennt) ordnet ein benutzerdefiniertes Skript auf Ihrer Site die aktuellen Voreinstellungen einem standardmäßigen XDM-Objekt zu. Dieses Objekt wird dann an den Befehl `setConsent` des Platform Web SDK übergeben.
-1. Wenn `setConsent` aufgerufen wird, prüft das Platform Web SDK, ob sich die Zustimmungswerte von denen unterscheiden, die es zuletzt erhalten hat. Wenn die Werte unterschiedlich sind (oder kein vorheriger Wert vorhanden ist), werden die strukturierten Zustimmungs-/Voreinstellungsdaten an Adobe Experience Platform gesendet.
-1. Die Einwilligungs-/Präferenzdaten werden in einen [!DNL Profile]-aktivierten Datensatz aufgenommen, dessen Schema Einwilligungs-/Präferenzfelder enthält.
+1. Bei jedem Laden der Seite (oder wenn Ihr CMP eine Änderung der Zustimmungsvoreinstellungen erkennt) ordnet ein benutzerdefiniertes Skript auf Ihrer Site die aktuellen Voreinstellungen einem standardmäßigen XDM-Objekt zu. Dieses Objekt wird dann an das Platform Web SDK übergeben. `setConsent` Befehl.
+1. Wann `setConsent` aufgerufen wird, überprüft das Platform Web SDK, ob sich die Zustimmungswerte von denen unterscheiden, die es zuletzt erhalten hat. Wenn die Werte unterschiedlich sind (oder kein vorheriger Wert vorhanden ist), werden die strukturierten Zustimmungs-/Voreinstellungsdaten an Adobe Experience Platform gesendet.
+1. Die Einwilligungs-/Präferenzdaten werden in eine [!DNL Profile]-aktivierter Datensatz, dessen Schema Zustimmungs-/Voreinstellungsfelder enthält.
 
-Zusätzlich zu den SDK-Befehlen, die von CMP-Zustimmungs-Change-Hooks ausgelöst werden, können Zustimmungsdaten auch über alle kundengenerierten XDM-Daten in Experience Platform fließen, die direkt in einen [!DNL Profile]-aktivierten Datensatz hochgeladen werden.
+Zusätzlich zu den SDK-Befehlen, die von CMP-Zustimmungs-Change-Hooks ausgelöst werden, können Zustimmungsdaten auch über alle kundengenerierten XDM-Daten in Experience Platform fließen, die direkt in eine [!DNL Profile]-aktivierter Datensatz.
 
 ### Einverständnisdurchsetzung
 
-In der aktuellen Version der Unterstützung für die Verarbeitung von Einwilligungen in Platform wird nur die Datenerfassungsberechtigung (`collect.val`) vom Platform Web SDK automatisch erzwungen. Auch wenn detailliertere Einverständnisse und Voreinstellungen in Kundenprofilen erfasst und beibehalten werden können, müssen diese zusätzlichen Signale in Ihren eigenen nachgelagerten Prozessen manuell erzwungen werden.
+In der aktuellen Version der Unterstützung für die Verarbeitung der Einwilligung in Platform ist nur die Datenerfassungsberechtigung (`collect.val`) wird automatisch vom Platform Web SDK erzwungen. Auch wenn detailliertere Einverständnisse und Voreinstellungen in Kundenprofilen erfasst und beibehalten werden können, müssen diese zusätzlichen Signale in Ihren eigenen nachgelagerten Prozessen manuell erzwungen werden.
 
 >[!NOTE]
 >
->Weitere Informationen zur Struktur der oben erwähnten XDM-Einwilligungsfelder finden Sie im Handbuch zum Datentyp [[!UICONTROL Einverständnisse und Voreinstellungen]](../../../../xdm/data-types/consents.md).
+>Weitere Informationen zur Struktur der oben erwähnten XDM-Einwilligungsfelder finden Sie im Handbuch zum [[!UICONTROL Einverständnis und Voreinstellungen] Datentyp](../../../../xdm/data-types/consents.md).
 
-Sobald das System konfiguriert wurde, interpretiert das Platform Web SDK den Wert für die Datenerfassungs-Einwilligung für den aktuellen Benutzer, um festzustellen, ob die Daten an das Adobe Experience Platform Edge Network gesendet, vom Client gelöscht oder beibehalten werden sollen, bis die Datenerfassungsberechtigung auf &quot;Ja&quot;oder &quot;Nein&quot;festgelegt ist.
+Sobald das System konfiguriert wurde, interpretiert das Platform Web SDK den Wert für die Datenerfassungs-Einwilligung für den aktuellen Benutzer, um festzustellen, ob die Daten an das Adobe Experience Platform Edge Network gesendet, vom Client abgelegt oder beibehalten werden sollen, bis die Datenerfassungsberechtigung auf &quot;Ja&quot;oder &quot;Nein&quot;festgelegt ist.
 
 ## Ermitteln, wie Sie in Ihrem CMP Kundenzustimmungsdaten generieren {#consent-data}
 
@@ -60,23 +60,23 @@ Da jedes CMP-System einzigartig ist, müssen Sie festlegen, wie Ihre Kunden bei 
 
 ![](../../../images/governance-privacy-security/consent/adobe/overview/consent-dialog.png)
 
-Dieser Dialog sollte es dem Kunden ermöglichen, bestimmte Marketing- und Personalisierungsanwendungsfälle für seine Daten einzuschalten oder abzulehnen. Diese Zustimmungen und Voreinstellungen sollten mit dem Datenmodell übereinstimmen, das Sie im nächsten Schritt für den [!DNL Profile]-aktivierten Datensatz definieren.
+Dieser Dialog sollte es dem Kunden ermöglichen, bestimmte Marketing- und Personalisierungsanwendungsfälle für seine Daten einzuschalten oder abzulehnen. Diese Zustimmungen und Voreinstellungen sollten mit dem Datenmodell übereinstimmen, das Sie für die [!DNL Profile]-aktivierter Datensatz im nächsten Schritt.
 
-## Hinzufügen standardisierter Einwilligungsfelder zu einem [!DNL Profile]-aktivierten Datensatz {#dataset}
+## Hinzufügen standardisierter Einwilligungsfelder zu einem [!DNL Profile]-aktivierter Datensatz {#dataset}
 
-Die Zustimmungsdaten des Kunden müssen an einen [!DNL Profile]-aktivierten Datensatz gesendet werden, dessen Schema Zustimmungsfelder enthält. Diese Felder müssen im selben Schema und Datensatz enthalten sein, mit dem Sie Attributinformationen zu einzelnen Kunden erfassen.
+Die Daten zur Kundenzustimmung müssen an eine [!DNL Profile]-aktivierter Datensatz, dessen Schema Zustimmungsfelder enthält. Diese Felder müssen im selben Schema und Datensatz enthalten sein, mit dem Sie Attributinformationen zu einzelnen Kunden erfassen.
 
-Ausführliche Anweisungen zum Hinzufügen dieser erforderlichen Felder zu einem [!DNL Profile]-aktivierten Datensatz finden Sie im Tutorial [Konfigurieren eines Datensatzes zum Erfassen von Einwilligungsdaten](./dataset.md) , bevor Sie mit diesem Handbuch fortfahren.
+Weiterführende Informationen finden Sie im Tutorial [Konfigurieren eines Datensatzes zur Erfassung von Zustimmungsdaten](./dataset.md) für detaillierte Schritte zum Hinzufügen dieser erforderlichen Felder zu einem [!DNL Profile]-aktivierter Datensatz, bevor Sie mit diesem Handbuch fortfahren.
 
-## Aktualisieren Sie die [!DNL Profile]-Zusammenführungsrichtlinien, um Einwilligungsdaten einzuschließen. {#merge-policies}
+## Aktualisieren [!DNL Profile] Zusammenführungsrichtlinien zum Einbeziehen von Einwilligungsdaten {#merge-policies}
 
-Nachdem Sie einen [!DNL Profile]-aktivierten Datensatz zur Verarbeitung von Zustimmungsdaten erstellt haben, müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert wurden, dass in jedem Kundenprofil immer Einwilligungsfelder enthalten sind. Dazu gehört das Festlegen der Datensatzpriorität, sodass Ihr Einwilligungsdatensatz Vorrang vor anderen möglicherweise in Konflikt stehenden Datensätzen erhält.
+Nachdem Sie eine [!DNL Profile]-aktivierter Datensatz zur Verarbeitung von Einwilligungsdaten, müssen Sie sicherstellen, dass Ihre Zusammenführungsrichtlinien so konfiguriert wurden, dass in jedem Kundenprofil immer Einwilligungsfelder enthalten sind. Dazu gehört das Festlegen der Datensatzpriorität, sodass Ihr Einwilligungsdatensatz Vorrang vor anderen möglicherweise in Konflikt stehenden Datensätzen erhält.
 
 >[!NOTE]
 >
 >Wenn keine Datensätze in Konflikt zueinander stehen, sollten Sie stattdessen die Zeitstempelpriorität für Ihre Zusammenführungsrichtlinie festlegen. Dadurch wird sichergestellt, dass die von einem Kunden zuletzt angegebene Zustimmung die verwendete Zustimmungseinstellung ist.
 
-Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie in der [Übersicht über Zusammenführungsrichtlinien](../../../../profile/merge-policies/overview.md). Beim Einrichten Ihrer Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Profile alle erforderlichen Zustimmungsattribute enthalten, die von der Schemafeldgruppe [!UICONTROL Einverständnisse und Voreinstellungen] bereitgestellt werden, wie im Handbuch zur [Datensatzvorbereitung](./dataset.md) beschrieben.
+Weitere Informationen zum Arbeiten mit Zusammenführungsrichtlinien finden Sie im Abschnitt [Übersicht über Zusammenführungsrichtlinien](../../../../profile/merge-policies/overview.md). Beim Einrichten Ihrer Zusammenführungsrichtlinien müssen Sie sicherstellen, dass Ihre Profile alle erforderlichen Zustimmungsattribute enthalten, die von der [!UICONTROL Einverständnis und Voreinstellungen] Schemafeldgruppe, wie im Handbuch [Datensatzvorbereitung](./dataset.md).
 
 ## Einverständnisdaten in Platform einbringen
 
@@ -88,23 +88,23 @@ Details zu diesen Methoden finden Sie in den folgenden Unterabschnitten.
 
 ### Experience Platform Web SDK zur Verarbeitung von Zustimmungsdaten konfigurieren {#web-sdk}
 
-Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Zustimmungsänderungsereignisse auf Ihrer Website überwacht, können Sie das Experience Platform Web SDK integrieren, um die aktualisierten Zustimmungseinstellungen zu erhalten und sie bei jedem Seitenladevorgang und bei jedem Einverständnisänderungsereignis an Platform zu senden. Weitere Informationen finden Sie im Handbuch zum [Konfigurieren des Web SDK für die Verarbeitung von Kundenzustimmungsdaten](../sdk.md).
+Nachdem Sie Ihren CMP so konfiguriert haben, dass er auf Zustimmungsänderungsereignisse auf Ihrer Website überwacht, können Sie das Experience Platform Web SDK integrieren, um die aktualisierten Zustimmungseinstellungen zu erhalten und sie bei jedem Seitenladevorgang und bei jedem Einverständnisänderungsereignis an Platform zu senden. Siehe Handbuch unter [Konfigurieren des Web SDK zur Verarbeitung der Kundenzustimmungsdaten](../sdk.md) für weitere Informationen.
 
 ### Experience Platform Mobile SDK für die Verarbeitung von Zustimmungsdaten konfigurieren {#mobile-sdk}
 
 Wenn in Ihrer Mobile App Zustimmungsvoreinstellungen von Kunden erforderlich sind, können Sie das Experience Platform Mobile SDK integrieren, um Zustimmungseinstellungen abzurufen und zu aktualisieren und sie an Platform zu senden, wann immer die API für die Einwilligung aufgerufen wird.
 
-Informationen zum Konfigurieren der mobilen Erweiterung &quot;Consent mobile extension](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent) und [mithilfe der API für Einwilligungen](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/using-mobile-extensions/adobe-edge-consent/edge-consent-api-reference) finden Sie in der Mobile SDK-Dokumentation . [ Weitere Informationen zum Umgang mit Datenschutzanliegen mit dem Mobile SDK finden Sie im Abschnitt [Datenschutz und DSGVO](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/privacy-and-gdpr).
+Siehe Mobile SDK-Dokumentation für [Konfigurieren der mobilen Erweiterung &quot;Consent&quot;](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network) und [über die API für die Zustimmung](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network/api-reference). Weitere Informationen zum Umgang mit Datenschutzanliegen mit dem Mobile SDK finden Sie im Abschnitt . [Datenschutz und DSGVO](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
 
 ### Direktes Aufnehmen von XDM-konformen Einwilligungsdaten {#batch}
 
 Sie können XDM-konforme Einwilligungsdaten aus einer CSV-Datei erfassen, indem Sie die Batch-Erfassung verwenden. Dies kann nützlich sein, wenn Sie einen Rückstand aus zuvor erfassten Zustimmungsdaten haben, die noch nicht in Ihre Kundenprofile integriert wurden.
 
-Im Tutorial [Zuordnen einer CSV-Datei zu XDM](../../../../ingestion/tutorials/map-a-csv-file.md) erfahren Sie, wie Sie Ihre Datenfelder in XDM konvertieren und in Platform aufnehmen. Stellen Sie bei der Auswahl von [!UICONTROL Ziel] für die Zuordnung sicher, dass Sie die Option **[!UICONTROL Vorhandenen Datensatz verwenden]** auswählen und den zuvor erstellten [!DNL Profile] aktivierten Einwilligungsdatensatz auswählen.
+Folgen Sie dem Tutorial zu [Zuordnen einer CSV-Datei zu XDM](../../../../ingestion/tutorials/map-a-csv-file.md) , um zu erfahren, wie Sie Ihre Datenfelder in XDM konvertieren und in Platform aufnehmen. Bei der Auswahl der [!UICONTROL Ziel] Stellen Sie für die Zuordnung sicher, dass Sie die **[!UICONTROL Vorhandenen Datensatz verwenden]** und wählen Sie die [!DNL Profile]-aktivierter Einwilligungsdatensatz, den Sie zuvor erstellt haben.
 
 ## Implementierung testen {#test-implementation}
 
-Nachdem Sie Daten zur Kundenzustimmung in Ihren [!DNL Profile]-aktivierten Datensatz aufgenommen haben, können Sie Ihre aktualisierten Profile überprüfen, um festzustellen, ob sie Zustimmungsattribute enthalten.
+Nachdem Sie Kundeneinwilligungsdaten in Ihre [!DNL Profile]-aktivierten Datensatz können Sie Ihre aktualisierten Profile überprüfen, um zu sehen, ob sie Zustimmungsattribute enthalten.
 
 >[!IMPORTANT]
 >
@@ -112,9 +112,9 @@ Nachdem Sie Daten zur Kundenzustimmung in Ihren [!DNL Profile]-aktivierten Daten
 >
 >Wenn Sie keinen Zugriff auf diese Informationen haben, können Sie Ihre eigenen Testzustimmungsdaten erfassen und sie mit einem Identitätswert/Namespace verknüpfen, der Ihnen stattdessen bekannt ist.
 
-Im Abschnitt zu [Browsing profiles by identity](../../../../profile/ui/user-guide.md#browse) im [!DNL Profile] UI-Handbuch finden Sie spezifische Schritte zum Nachschlagen der Details eines Profils.
+Siehe Abschnitt zu [Profile nach Identität durchsuchen](../../../../profile/ui/user-guide.md#browse) im [!DNL Profile] UI-Handbuch für spezifische Schritte zum Nachschlagen der Details eines Profils.
 
-Die neuen Zustimmungsattribute werden nicht standardmäßig im Dashboard eines Profils angezeigt. Sie müssen daher auf der Detailseite eines Profils zum Tab **[!UICONTROL Attribute]** navigieren, um zu bestätigen, dass die Elemente erwartungsgemäß erfasst wurden. Informationen zum Anpassen des Dashboards an Ihre Anforderungen finden Sie im Handbuch zum Profil-Dashboard [a1/> .](../../../../profile/ui/profile-dashboard.md)
+Die neuen Zustimmungsattribute werden nicht standardmäßig im Dashboard eines Profils angezeigt. Daher müssen Sie zum **[!UICONTROL Attribute]** auf der Detailseite eines Profils, um zu bestätigen, dass das Profil erwartungsgemäß aufgenommen wurde. Siehe Handbuch im [Profil-Dashboard](../../../../profile/ui/profile-dashboard.md) , um zu erfahren, wie Sie das Dashboard an Ihre Anforderungen anpassen können.
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
@@ -128,4 +128,4 @@ Customer Journey Management can also send consent-change signals back to Platfor
 
 In diesem Handbuch wurde beschrieben, wie Sie Ihre Platform-Vorgänge für die Verarbeitung von Kundenzustimmungsdaten mithilfe des Adobe-Standards konfigurieren und diese Attribute in Kundenprofilen darstellen lassen. Sie können jetzt Kundenzustimmungseinstellungen als entscheidenden Faktor für die Segmentqualifizierung und andere nachgelagerte Anwendungsfälle integrieren.
 
-Weitere Informationen zu den datenschutzbezogenen Funktionen von Experience Platform finden Sie in der Übersicht zu [Governance, Datenschutz und Sicherheit in Platform](../../overview.md).
+Weitere Informationen zu den datenschutzbezogenen Funktionen von Experience Platform finden Sie in der Übersicht unter [Governance, Datenschutz und Sicherheit in Platform](../../overview.md).
