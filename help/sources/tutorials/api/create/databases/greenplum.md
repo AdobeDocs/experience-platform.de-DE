@@ -6,44 +6,44 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung von GreenPlum mit Adobe Experience Platform herstellen.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: c3a72d5a4aea33f123f81bd416557a9cfe879224
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 11%
+ht-degree: 10%
 
 ---
 
-# Erstellen einer [!DNL GreenPlum]-Basisverbindung mithilfe der [!DNL Flow Service]-API
+# Erstellen Sie eine [!DNL GreenPlum] Basisverbindung mit [!DNL Flow Service] API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL GreenPlum] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL GreenPlum] mithilfe der [[!DNL Flow Service] API](https://docs.greenplum.org/6-7/security-guide/topics/Authenticate.html).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu [!DNL GreenPlum] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL GreenPlum] mithilfe der [!DNL Flow Service] API.
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit Ihrer [!DNL GreenPlum]-Instanz verwendet wird. Das Verbindungszeichenfolgenmuster für [!DNL GreenPlum] ist `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL GreenPlum] ist `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionString` | Die Verbindungszeichenfolge, über die die Verbindung zu Ihrem [!DNL GreenPlum] -Instanz. Das Verbindungszeichenfolgenmuster für [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
-Weitere Informationen zum Erwerb einer Verbindungszeichenfolge finden Sie in [diesem GreenPlum-Dokument](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
+Weitere Informationen zum Akquise einer Verbindungszeichenfolge finden Sie unter [dieses GreenPlum-Dokument](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
 ### Verwenden von Platform-APIs
 
-Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Basisverbindung erstellen
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL GreenPlum]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen [!DNL GreenPlum] Authentifizierungsberechtigungen als Teil der Anfrageparameter.
 
 **API-Format**
 
@@ -81,8 +81,8 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.connectionString` | Die Verbindungszeichenfolge, die für die Verbindung mit einem [!DNL GreenPlum]-Konto verwendet wird. Das Verbindungszeichenfolgenmuster lautet: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL GreenPlum]: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `auth.params.connectionString` | Die Verbindungszeichenfolge, mit der eine Verbindung zu einem [!DNL GreenPlum] -Konto. Das Verbindungszeichenfolgenmuster lautet: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | Die [!DNL GreenPlum] Verbindungsspezifikations-ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Antwort**
 
@@ -97,4 +97,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Verbindung zurück, ei
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL GreenPlum]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, während Sie lernen, wie Sie [Datenbanken mithilfe der Flow Service-API](../../explore/database-nosql.md) analysieren können.
+In diesem Tutorial haben Sie eine [!DNL GreenPlum] Verbindung mithilfe der [!DNL Flow Service] API und haben den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, während Sie lernen, wie Sie [Datenbanken mithilfe der Flow Service-API analysieren](../../explore/database-nosql.md).
