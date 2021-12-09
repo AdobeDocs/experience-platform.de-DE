@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/testing/destinationInstance/"ausführen können, um zu testen, ob Ihr Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen.
 title: API-Vorgänge für Zieltests
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: 45cff6f0c4d4fd63a17108087edec0184cbf9703
+source-git-commit: 52ce788f6947300b607dfc2efa09d028f9c2ddd7
 workflow-type: tm+mt
 source-wordcount: '664'
 ht-degree: 2%
@@ -15,27 +15,27 @@ ht-degree: 2%
 >
 >**API-Endpunkt**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt `/authoring/testing/destinationInstance/` ausführen können, um zu testen, ob Ihr Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Testen der Zielkonfiguration](./test-destination.md).
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/testing/destinationInstance/` API-Endpunkt, um zu testen, ob Ihr Ziel richtig konfiguriert ist, und um die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel zu überprüfen. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Testen der Zielkonfiguration](./test-destination.md).
 
 Sie stellen Anfragen an den Test-Endpunkt, mit oder ohne Profile zum Aufruf hinzuzufügen. Wenn Sie keine Profile für die Anfrage senden, generiert Adobe diese intern und fügt sie zur Anfrage hinzu.
 
-Sie können die API [Beispielprofilerstellung](./sample-profile-generation-api.md) verwenden, um Profile zu erstellen, die in Anforderungen an die Ziel-Test-API verwendet werden.
+Sie können die [API zur Profilerstellung](./sample-profile-generation-api.md) , um Profile zu erstellen, die in Anfragen an die Ziel-Test-API verwendet werden.
 
 ## Abrufen der Ziel-Instanz-ID {#get-destination-instance-id}
 
 >[!IMPORTANT]
 >
->* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Weitere Informationen finden Sie unter [Verbindung zum Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) und [Aktivieren von Profilen und Segmenten für ein Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) . Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt verwenden sollten, wenn Sie [eine Verbindung mit Ihrem Ziel durchsuchen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* Um diese API verwenden zu können, müssen Sie über eine bestehende Verbindung zu Ihrem Ziel in der Experience Platform-Benutzeroberfläche verfügen. Lesen [Verbindung zum Ziel herstellen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) und [Profile und Segmente für ein Ziel aktivieren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) für weitere Informationen. Nachdem Sie die Verbindung zu Ihrem Ziel hergestellt haben, rufen Sie die ID der Zielinstanz ab, die Sie in API-Aufrufen an diesen Endpunkt von der URL verwenden sollten, wenn [Durchsuchen einer Verbindung mit Ihrem Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
    >![UI-Bild, wie Sie die Ziel-Instanz-ID abrufen](./assets/get-destination-instance-id.png)
 
 
 ## Erste Schritte mit API-Vorgängen für Zieltests {#get-started}
 
-Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dazu gehören das Abrufen der erforderlichen Zielerstellungsberechtigung und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
 ## Testen Sie Ihre Zielkonfiguration, ohne Profile zum -Aufruf hinzuzufügen. {#test-without-adding-profiles}
 
-Sie können Ihre Zielkonfiguration testen, indem Sie eine POST-Anfrage an den `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}`-Endpunkt senden und die Ziel-Instanz-ID des Ziels angeben, das Sie testen.
+Sie können Ihre Zielkonfiguration testen, indem Sie eine POST-Anfrage an die `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` -Endpunkt und geben die Ziel-Instanz-ID des Ziels an, das Sie testen.
 
 **API-Format**
 
@@ -50,10 +50,10 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ruft den REST-API-Endpunkt Ihres Ziels auf. Die Anforderung wird durch den Abfrageparameter `{DESTINATION_INSTANCE_ID}` konfiguriert.
+Die folgende Anfrage ruft den REST-API-Endpunkt Ihres Ziels auf. Die Anforderung wird von der `{DESTINATION_INSTANCE_ID}` Abfrageparameter.
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -155,7 +155,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der API-Antwort 
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `aggregationKey` | Enthält Informationen zur für das Ziel konfigurierten Aggregationsrichtlinie. Weitere Informationen finden Sie im Abschnitt [Aggregationsrichtlinie](./destination-configuration.md#aggregation) im Zielkonfigurationsdokument. |
+| `aggregationKey` | Enthält Informationen zur für das Ziel konfigurierten Aggregationsrichtlinie. Weitere Informationen finden Sie im Abschnitt [Aggregationspolitik](./destination-configuration.md#aggregation) im Zielkonfigurationsdokument. |
 | `traceId` | Eine eindeutige Kennung für den Vorgang. Bei Auftreten von Fehlern können Sie diese ID zum Zwecke der Fehlerbehebung für das Adobe-Team freigeben. |
 | `results.httpCalls.request` | Enthält die Anfrage, die per Adobe an Ihr Ziel gesendet wurde. |
 | `results.httpCalls.response` | Enthält die Antwort, die die Adobe von Ihrem Ziel erhalten hat. |
@@ -165,7 +165,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der API-Antwort 
 
 ## Testen Sie Ihre Zielkonfiguration mit Profilen, die zum Aufruf hinzugefügt wurden. {#test-with-added-profiles}
 
-Sie können Ihre Zielkonfiguration testen, indem Sie eine POST-Anfrage an den `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}`-Endpunkt senden und die Ziel-Instanz-ID des Ziels angeben, das Sie testen.
+Sie können Ihre Zielkonfiguration testen, indem Sie eine POST-Anfrage an die `authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}` -Endpunkt und geben die Ziel-Instanz-ID des Ziels an, das Sie testen.
 
 **API-Format**
 
@@ -179,10 +179,10 @@ POST authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage ruft den REST-API-Endpunkt Ihres Ziels auf. Die Anforderung wird durch die in der Payload angegebenen Parameter und den Abfrageparameter `{DESTINATION_INSTANCE_ID}` konfiguriert.
+Die folgende Anfrage ruft den REST-API-Endpunkt Ihres Ziels auf. Die Anforderung wird durch die in der Payload angegebenen Parameter und die `{DESTINATION_INSTANCE_ID}` Abfrageparameter.
 
 ```shell
-curl --location --request GET 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
+curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/49966037-32cd-4457-a105-2cbf9c01826a' \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
@@ -321,8 +321,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit der API-Antwort 
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Weitere Informationen finden Sie unter [API-Status-Codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anforderungsheader](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen für die Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihr Ziel testen können. Sie können jetzt die Adobe [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) verwenden, um eine Dokumentationsseite für Ihr Ziel zu erstellen.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihr Ziel testen können. Sie können jetzt die Adobe [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) , um eine Dokumentationsseite für Ihr Ziel zu erstellen.
