@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit Destination SDK aufgeführt und beschrieben.
 title: Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 3b320f253516f2c169330e1eed6ad870a583891a
+source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,10 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 Im Folgenden finden Sie eine Beispielkonfiguration für eine Zielvorlage, die mithilfe der `/destinations` API-Endpunkt. Weitere Informationen zu dieser Vorlage finden Sie unter [Zielkonfiguration](./destination-configuration.md).
 
 Um die Server- und Vorlagenkonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und die Vorlagenkonfiguration als `destinationServerId` hier.
+
+>[!IMPORTANT]
+>
+>Um ein korrekt konfiguriertes Ziel zu erstellen, müssen Sie *must* mindestens eine Zielidentität in `identityNamespaces`, wie unten dargestellt. Wenn keine Zielidentität konfiguriert ist, können Benutzer nicht über die [Zuordnungsschritt](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) des Aktivierungs-Workflows.
 
 ```json
 POST platform.adobe.io/data/core/activation/authoring/destinations
