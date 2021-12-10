@@ -2,10 +2,10 @@
 title: Quellen in Real-time Customer Data Platform B2B Edition
 description: Ein Überblick über die Rolle der Quellen in Real-time Customer Data Platform B2B Edition.
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: ef3b9bb742b44aafc838b84a0076e7c8445ac84f
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 6%
+source-wordcount: '290'
+ht-degree: 17%
 
 ---
 
@@ -19,7 +19,9 @@ Real-time Customer Data Platform B2B Edition ermöglicht Ihnen, Ihre B2B-Daten a
 
 >[!TIP]
 >
->Real-time Customer Data Platform B2B Edition bietet eine breite Palette von externen Quellen, aus denen Daten aufgenommen werden können, verfügt jedoch nicht über so viele, wie für Real-time Customer Data Platform verfügbar sind. Um zu erfahren, welche Quell-Connectoren für Ihr Unternehmen verfügbar sind, können Sie den Quellkatalog in der Platform-Benutzeroberfläche anzeigen. Um auf den Katalog zuzugreifen, wählen Sie **Quellen** Wählen Sie im linken Navigationsbereich die Option **Katalog**.
+>Real-time Customer Data Platform B2B Edition bietet eine breite Palette von externen Quellen, aus denen Daten aufgenommen werden können, verfügt jedoch nicht über so viele, wie für Real-time Customer Data Platform verfügbar sind. Welche Quell-Connectoren für Ihr Unternehmen verfügbar sind, erfahren Sie im Quellkatalog in der Platform-Benutzeroberfläche. Um auf den Katalog zuzugreifen, wählen Sie im linken Navigationsbereich zunächst **Quellen** und anschließend die Option **Katalog** aus.
+
+Informationen zur Einbindung von Quellen in Ihren B2B-Workflow finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#ingest-your-data-into-experience-platform).
 
 Siehe [Übersicht über Quell-Connectoren](../../sources/home.md) für weitere Informationen zu den in Adobe Experience Platform verfügbaren Quellen.
 

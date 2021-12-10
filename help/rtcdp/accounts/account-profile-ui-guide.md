@@ -3,10 +3,10 @@ keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsr
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
-workflow-type: ht
-source-wordcount: '1172'
-ht-degree: 100%
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
+workflow-type: tm+mt
+source-wordcount: '1193'
+ht-degree: 98%
 
 ---
 
@@ -17,6 +17,8 @@ ht-degree: 100%
 >Account-Profile sind nur für Kunden von Real-time Customer Data Platform B2B Edition verfügbar. Um mehr über Real-Time Customer Data Platform zu erfahren, auch zu den für jeden Lizenztyp verfügbaren Funktionen, lesen Sie bitte zunächst den [Überblick über Real-Time Customer Data Platform](../overview.md).
 
 Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Accounts führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kunden-Account-Informationen verwendet. Dieses Dokument enthält ein Handbuch zur Interaktion mit Account-Profilen unter Verwendung der in der Benutzeroberfläche von Adobe Experience Platform verfügbaren Funktionen von Real-Time Customer Data Platform (B2B Edition).
+
+Weiterführende Informationen zur Erstellung von Kontoprofilen im Rahmen des B2B-Workflows finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md).
 
 ## Durchsuchen von Account-Profilen
 

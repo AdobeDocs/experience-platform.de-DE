@@ -2,10 +2,10 @@
 title: Ziele in Real-time Customer Data Platform B2B Edition
 description: Ein Überblick über die Rolle von Zielen in Real-time Customer Data Platform B2B Edition.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: f4ca1efe9c728f50008d7fbaa17aa009dfc18393
+source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 8%
+source-wordcount: '238'
+ht-degree: 7%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 8%
 >Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden, lesen Sie den Abschnitt [Übersicht über Ziele](../../destinations/home.md) anstatt.
 
 Zu den Experience Platform-Zielen, die vollständig von der Echtzeit-Kundendatenplattform B2B Edition unterstützt werden, gehören Google Customer Match, Facebook, LinkedIn, Marketo Engage, Amazon S3, Google Display &amp; Video 360, Google Ads und Google Ad Manager.
+
+Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#activate-your-evaluated-data-to-a-destination).
 
 Mit Real-time Customer Data Platform B2B Edition können Sie Ihre B2B-Daten über den Marketo Engage-Ziel-Connector exportieren. Mithilfe des Marketo Engage-Ziels können Sie in Adobe Experience Platform erstellte  an Marketo senden, wo sie als statische Listen angezeigt werden.
 

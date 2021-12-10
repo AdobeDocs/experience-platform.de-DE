@@ -1,17 +1,17 @@
 ---
-title: Übersicht über die Anwendungsfälle der Segmentierung für die Echtzeit-Kundendatenplattform B2B Edition
+title: Anwendungsfälle für die Segmentierung der Echtzeit-Kundendatenplattform B2B Edition
 description: Ein Überblick über die verschiedenen Anwendungsfälle der Echtzeit-CDP B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
+source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1105'
 ht-degree: 1%
 
 ---
 
-# Überblick über Anwendungsfälle zur Segmentierung für Real-time Customer Data Platform B2B Edition
+# Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition
 
-Dieses Dokument enthält Beispiele zur Segmentierung, die für die Echtzeit-Kundendatenplattform B2B Edition verfügbar ist, und dazu, wie die verschiedenen Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können.
+Dieses Dokument enthält Beispiele für Segmentdefinitionen in der Echtzeit-Kundendatenplattform B2B Edition und wie verschiedene Attributtypen für gängige B2B-Anwendungsfälle kombiniert werden können. Informationen dazu, wie Ziele in Ihren B2B-Workflow integriert werden können, finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
 >[!NOTE]
 >
