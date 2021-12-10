@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung der Benutzeroberfläche
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an Platform übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6db0aef66abe11b8ed9f4b8da56875aa296b1a10
+source-git-commit: 1fa7663cc8bebca98f284593e98163315acda478
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,12 @@ Nachdem Sie ein Streaming-fähiges Segment erstellt haben, können Sie Details z
 Details zum **[!UICONTROL Gesamtzahl der qualifizierten Zielgruppengröße]** angezeigt. Die **[!UICONTROL Gesamtzahl der qualifizierten Zielgruppengrößen]** zeigt die Gesamtzahl qualifizierter Zielgruppen aus der letzten abgeschlossenen Segmentauftragsausführung an. Wenn ein Segmentauftrag nicht innerhalb der letzten 24 Stunden abgeschlossen wurde, wird die Anzahl der Zielgruppen stattdessen aus einer Schätzung abgeleitet.
 
 Darunter ist ein Kantengraph, der die Anzahl der Segmente anzeigt, die in den letzten 24 Stunden qualifiziert und disqualifiziert wurden. Das Dropdown-Menü kann angepasst werden, um die letzten 24 Stunden, letzte Woche oder letzten 30 Tage anzuzeigen.
+
+>[!NOTE]
+>
+>Ein Segment wird als qualifiziert angesehen, wenn es von einem Status ohne realisiert wird oder von einem Segment zum nächsten realisiert wird. Ein Segment gilt als nicht qualifiziert, wenn es von realisiert zu beendet oder von existiert zu beendet wechselt.
+>
+>Weitere Informationen zu diesen Status finden Sie in der Statustabelle im [Segmentierungsübersicht](./overview.md#browse).
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
