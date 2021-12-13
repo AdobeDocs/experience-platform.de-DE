@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Dieser Leitfaden bietet eine Übersicht über die wichtigsten Konzepte im Zusammenhang mit Data Science Workspace in Adobe Experience Platform.
 exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 source-git-commit: b30700fde3ce75cc4f66343c8d37d3e731775627
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2388'
 ht-degree: 100%
 
@@ -124,7 +124,7 @@ Datenwissenschaftler können neue Technologien und Datensätze nutzen, sobald si
 Die Sicherung Ihrer Daten ist eine der obersten Prioritäten für Adobe. Adobe schützt Ihre Daten mit Sicherheitsprozessen und -kontrollen, die zur Einhaltung branchenüblicher Normen, Vorschriften und Zertifizierungen entwickelt wurden.
 
 Die Sicherheit ist in Software und Services als Teil des Adobe Secure Product Lifecycle integriert.
-Weitere Informationen zur Daten- und Software-Sicherheit bei Adobe, zu Compliance und mehr finden Sie auf der Sicherheitsseite unter https://www.adobe.com/security.html.
+Weitere Informationen zur Daten- und Software-Sicherheit bei Adobe, zu Compliance und mehr finden Sie auf der Sicherheitsseite unter https://www.adobe.com/de/security.html.
 
 ## [!DNL Data Science Workspace] in Aktion
 
