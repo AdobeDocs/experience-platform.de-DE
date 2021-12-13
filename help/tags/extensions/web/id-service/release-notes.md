@@ -3,7 +3,7 @@ title: Versionshinweise zur Adobe Experience Cloud Identity Service-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '521'
 ht-degree: 100%
 
