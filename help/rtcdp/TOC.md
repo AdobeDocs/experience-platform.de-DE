@@ -2,28 +2,28 @@
 product: adobe experience platform
 solution: Experience Platform, Real-time Customer Data Platform
 audience: user
-user-guide-title: Handbuch für Echtzeit-Kundendatenplattform
+user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
 source-git-commit: 69833137498fedd87e99ca4255b8f1ace0921ff9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '174'
 ht-degree: 100%
 
 ---
 
 
-# Hilfe zur Echtzeit-Kundendatenplattform {#rtcdp}
+# Hilfe zu Real-time Customer Data Platform {#rtcdp}
 
 * [Real-Time CDP – Übersicht](overview.md)
 * [Real-time Customer Data Platform B2B Edition – Übersicht](b2b-overview.md)
 * Erste Schritte {#intro}
-   * Echtzeit-CDP {#rtcdp-intro}
+   * Real-time CDP {#rtcdp-intro}
       * [Erste Schritte mit Real-time Customer Data Platform](get-started.md)
       * [Metriken – Übersicht](home-page-dashboards.md)
    * Real-time Customer Data Platform B2B Edition {#rtcdpb2b-intro}
       * [Beispielanwendungsfall](./b2b-use-case.md)
       * [Tutorial mit der Beschreibung aller Schritte](./b2b-tutorial.md)
-      * [Leitlinien für Real-time Customer Platform B2B Edition](b2b-guardrails.md)
+      * [Leitlinien für Real-time Customer Data Platform B2B Edition](b2b-guardrails.md)
 * Account-Profile {#account}
    * [Übersicht über Account-Profile](accounts/account-profile-overview.md)
    * [Handbuch zur Benutzeroberfläche von Account-Profilen](accounts/account-profile-ui-guide.md)
