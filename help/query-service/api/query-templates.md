@@ -5,7 +5,7 @@ title: API-Endpunkt für Abfragevorlagen
 topic-legacy: query templates
 description: Die folgende Dokumentation führt Sie durch die verschiedenen API-Aufrufe, die Sie mithilfe von Abfragevorlagen für die Query Service-API ausführen können.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '674'
 ht-degree: 89%
@@ -16,7 +16,7 @@ ht-degree: 89%
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit Aufrufen an die [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit den Aufrufen an die [!DNL Query Service] API. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Liste von Abfragevorlagen abrufen
 
@@ -82,7 +82,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragevo
                 "update": {
                     "href": "https://platform.adobe.io/data/foundation/query/query-templates/f7cb5155-29da-4b95-8131-8c5deadfbe7f",
                     "method": "PUT",
-                    "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+                    "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
                 }
             }
         }
@@ -162,7 +162,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zur 
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -220,7 +220,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur angegebenen A
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }
@@ -292,7 +292,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit den aktualis
         "update": {
             "href": "https://platform.adobe.io/data/foundation/query/query_templates/0094d000-9062-4e6a-8fdb-05606805f08f",
             "method": "PUT",
-            "body": "{\"sql\" : \"new sql \", \"name\" : \"new name\"}"
+            "body": "{\"sql\": \"new sql \", \"name\": \"new name\"}"
         }
     }
 }

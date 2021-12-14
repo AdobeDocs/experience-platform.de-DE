@@ -5,7 +5,7 @@ title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 9023019ed8a781f9ae3965adab875cf2244f55a9
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 4%
@@ -87,7 +87,7 @@ Mindestlänge der erforderlichen Daten = Schulungsfenster + Lookback-Fenster
 >
 > Die Mindestlänge der Daten, die für eine Anwendung mit Standardkonfigurationen erforderlich sind, ist: 2 Quartale (180 Tage) + 56 Tage = 236 Tage.
 
-Beispiel :
+Beispiel:
 
 - Sie möchten Konversionsereignisse zuordnen, die innerhalb der letzten 90 Tage (3 Monate) stattgefunden haben, und alle Touchpoints verfolgen, die innerhalb von 4 Wochen vor dem Konversionsereignis aufgetreten sind. Die Dauer der Eingabedaten sollte sich über die letzten 90 Tage + 28 Tage (4 Wochen) erstrecken. Das Schulungsfenster beträgt 90 Tage, das Lookback-Fenster 28 Tage und insgesamt 118 Tage.
 
@@ -139,7 +139,7 @@ In der folgenden Tabelle sind die Schemafelder in der Beispielausgabe für Rohbe
 | skuId (String) | True | Bestandseinheit (Stock Keeping Unit, SKU), die eindeutige Kennung für ein vom Anbieter definiertes Produkt. <br> **Beispiel:** MJ-03-XS-Black |
 | timestamp (DateTime) | True | Zeitstempel der Konvertierung. <br> **Beispiel:** 2020-06-09T00:01:51.000 Z |
 | passThrough (Object) | True | Zusätzliche Score-Datensatzspalten, die vom Benutzer beim Konfigurieren des Modells angegeben werden. |
-| commerce_order_purchaseCity (String) | True | Zusätzliche Spalte für Datensatz mit Punktzahl . <br> **Beispiel:** city : San Jose |
+| commerce_order_purchaseCity (String) | True | Zusätzliche Spalte für Datensatz mit Punktzahl . <br> **Beispiel:** city: San Jose |
 | customerProfile (Object) | False | Identitätsdetails des Benutzers, der zum Erstellen des Modells verwendet wird. |
 | identity (Object) | False | Enthält die Details des Benutzers, der zum Erstellen des Modells verwendet wird, z. B. `id` und `namespace`. |
 | id (String) | True | Identitäts-ID des Benutzers, z. B. Cookie-ID, AAID oder MCID usw. <br> **Beispiel:** 17348762725408656344688320891369597404 |

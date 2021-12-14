@@ -6,7 +6,7 @@ title: Eingabe und Ausgabe in Customer AI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Customer AI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 6da41552811a458fc6cf66b54fc2e9ed448a859d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 13%
@@ -114,7 +114,7 @@ Erforderliche Mindestlänge der Daten = berechtigte Population + Ergebnisfenster
 >
 > 30 ist die Mindestanzahl von Tagen, die für die förderfähige Bevölkerung erforderlich ist. Wenn dies nicht angegeben wird, beträgt der Standardwert 120 Tage.
 
-Beispiele :
+Beispiele:
 
 - Sie möchten vorhersagen, ob ein Kunde in den nächsten 30 Tagen wahrscheinlich eine Uhr kaufen wird. Sie möchten auch Benutzer bewerten, die in den letzten 60 Tagen eine gewisse Web-Aktivität haben. In diesem Fall ist die erforderliche Mindestlänge der Daten = 60 Tage + 30 Tage. Die förderfähige Bevölkerung beträgt 60 Tage und das Ergebnisfenster beträgt 30 Tage und insgesamt 90 Tage.
 

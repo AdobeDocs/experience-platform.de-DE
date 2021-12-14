@@ -5,7 +5,7 @@ title: Entwickeln von ETL-Integrationen für Adobe Experience Platform
 topic-legacy: overview
 description: Im Handbuch zur ETL-Integration werden die grundlegenden Schritte für die Erstellung von hochperformanten, sicheren Connectoren für Experience Platform und für die Aufnahme von Daten in Platform erläutert.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '4075'
 ht-degree: 100%
@@ -342,7 +342,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/5bf479a6
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 **Antwort**
@@ -409,7 +409,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 **Antwort**
@@ -445,7 +445,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/ea40946ac031
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 Die Antwort auf die obige Anfrage enthält eine Vorschau des Dateiinhalts.
@@ -474,7 +474,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **Antwort**
@@ -513,7 +513,7 @@ Mithilfe der [[!DNL Catalog API]](https://www.adobe.io/experience-platform-apis/
 curl -X GET "https://platform.adobe.io/data/foundation/catalog/batches?dataSet=DATASETID&createdAfter=START_TIMESTAMP&createdBefore=END_TIMESTAMP&sort=desc:created" \
   -H "Accept: application/json" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}"
 ```
@@ -531,7 +531,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 ### Zugreifen auf Dateien mittels Datei-ID
@@ -545,7 +545,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/export/files/{FILE_ID}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 Die Antwort verweist entweder auf eine einzelne Datei oder auf ein Verzeichnis. Einzelheiten zu jedem finden Sie im [[!DNL Data Access] -Tutorial](../data-access/tutorials/dataset-data.md).
@@ -629,7 +629,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization:Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
 ```
 
 Bei erfolgreicher Ausführung wird der HTTP-Status-Code 200 (OK) zurückgegeben, wobei der Antworttext leer bleibt.

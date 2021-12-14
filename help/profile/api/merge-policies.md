@@ -5,10 +5,10 @@ topic-legacy: guide
 type: Documentation
 description: Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen zusammenführen und kombinieren, damit Sie sich eine vollständige Ansicht über jeden einzelnen Ihrer Kunden verschaffen können. Beim Zusammenführen dieser Daten dienen Zusammenführungsrichtlinien als jene Regeln, mit denen Platform bestimmt, wie Daten priorisiert werden und welche Daten kombiniert werden, um eine einheitliche Ansicht zu schaffen.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: 9af59d5a4fda693a2aef8e590a7754f0e1c1ac8d
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2469'
-ht-degree: 66%
+ht-degree: 70%
 
 ---
 
@@ -36,9 +36,9 @@ Während jede Organisation potenziell über mehrere Zusammenführungsrichtlinien
 >
 >Wenn Sie eine neue Zusammenführungsrichtlinie als Standard festlegen, werden alle vorhandenen Zusammenführungsrichtlinien, die zuvor als Standard festgelegt wurden, automatisch aktualisiert und nicht mehr als Standard verwendet.
 
-Um sicherzustellen, dass alle Profilnutzer an Edges mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als aktiv am Rand markiert werden. Damit ein Segment an der Kante aktiviert werden kann (als Kantensegment markiert), muss es an eine Zusammenführungsrichtlinie gebunden sein, die als aktiv an der Kante markiert ist. Wenn ein Segment **not** an eine Zusammenführungsrichtlinie gebunden ist, die als aktiv am -Edge markiert ist, wird das Segment nicht als aktiv am -Edge markiert und als Streaming-Segment markiert.
+Um sicherzustellen, dass alle Profilnutzer in den Randbereichen mit derselben Ansicht arbeiten, können Zusammenführungsrichtlinien als am Rand aktiv markiert werden. Damit ein Segment im Randbereich aktiviert (bzw. als Randsegment markiert) werden kann, muss es mit einer Zusammenführungsrichtlinie verknüpft sein, die als im Randbereich aktiv markiert ist. Wenn ein Segment **nicht** mit einer Zusammenführungsrichtlinie verknüpft ist, die als im Randbereich aktiv markiert ist, wird das Segment nicht als im Randbereich aktiv, sondern als Streaming-Segment markiert.
 
-Darüber hinaus kann jede IMS-Organisation nur über **one** Zusammenführungsrichtlinie, die an der Kante aktiv ist. Wenn eine Zusammenführungsrichtlinie am Edge aktiv ist, kann sie für andere Systeme am Edge-Rand wie Edge Profile, Edge Segmentation und Ziele an Edge verwendet werden.
+Darüber hinaus kann jede IMS-Organisation nur über **eine** Zusammenführungsrichtlinie verfügen, die im Randbereich aktiv ist. Wenn eine Zusammenführungsrichtlinie am Edge aktiv ist, kann sie für andere Systeme am Edge-Rand wie Edge Profile, Edge Segmentation und Ziele an Edge verwendet werden.
 
 ### Komplettes Zusammenführungsrichtlinienobjekt
 
@@ -143,7 +143,7 @@ Ein Profilfragment besteht aus den Profildaten nur einer Identität aus der List
 Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 
 * **`timestampOrdered`**: (Standard) Priorität vor dem zuletzt aktualisierten Profil. Bei diesem Zusammenführungstyp ist das `data`-Attribut nicht erforderlich.
-* **`dataSetPrecedence`** : Profilfragmente erhalten je nach dem Datensatz, aus dem sie stammen, Priorität. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
+* **`dataSetPrecedence`**: Profilfragmente erhalten je nach dem Datensatz, aus dem sie stammen, Priorität. Dies kann hilfreich sein, wenn in einem Datensatz vorhandene Daten bevorzugt oder im Vergleich zu Daten in einem anderen Datensatz als vertrauenswürdiger eingestuft werden. Bei Verwendung dieses Zusammenführungstyps ist das `order`-Attribut erforderlich, da es die Datensätze in der Reihenfolge der Priorität auflistet.
    * **`order`**: Wenn &quot;dataSetPrecedence&quot;verwendet wird, wird ein `order` -Array muss mit einer Liste von Datensätzen bereitgestellt werden. Datensätze, die nicht in der Liste enthalten sind, werden nicht zusammengeführt. Anders ausgedrückt: Datensätze müssen explizit aufgeführt werden, um in einem Profil zusammengeführt zu werden. Das `order`-Array listet die Kennungen der Datensätze in der Reihenfolge ihrer Priorität auf.
 
 #### Beispiel `attributeMerge` -Objekt verwenden `dataSetPrecedence` type
@@ -151,7 +151,7 @@ Wobei `{ATTRIBUTE_MERGE_TYPE}` einer der folgenden Werte ist:
 ```json
     "attributeMerge": {
         "type": "dataSetPrecedence",
-        "order" : [
+        "order": [
             "dataSetId_2", 
             "dataSetId_3", 
             "dataSetId_1", 
@@ -482,12 +482,12 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "Loyalty members ordered by ID",
-    "identityGraph" : {
+    "identityGraph": {
         "type": "none"
     },
-    "attributeMerge" : {
+    "attributeMerge": {
         "type":"dataSetPrecedence",
-        "order" : [
+        "order": [
             "5b76f86b85d0e00000be5c8b",
             "5b76f8d787a6af01e2ceda18"
         ]

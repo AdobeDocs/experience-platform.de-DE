@@ -5,7 +5,7 @@ title: Export Job API Endpoint
 topic-legacy: developer guide
 description: Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können den Endpunkt /export/jobs in der Adobe Experience Platform Segmentation Service-API verwenden, mit dem Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 16%
@@ -14,15 +14,15 @@ ht-degree: 16%
 
 # Endpunkt &quot;Exportaufträge&quot;
 
-Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können den Endpunkt `/export/jobs` in der Adobe Experience Platform Segmentation API verwenden, mit dem Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
+Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können die `/export/jobs` -Endpunkt in der Adobe Experience Platform-Segmentierungs-API, mit der Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 
 >[!NOTE]
 >
->In diesem Handbuch wird die Verwendung von Exportvorgängen im [!DNL Segmentation API] beschrieben. Informationen zum Verwalten von Exportaufträgen für [!DNL Real-time Customer Profile]-Daten finden Sie im Handbuch zu [Exportaufträgen in der Profil-API](../../profile/api/export-jobs.md)
+>In diesem Handbuch wird die Verwendung von Exportvorgängen im [!DNL Segmentation API]. Informationen zum Verwalten von Exportvorgängen für [!DNL Real-time Customer Profile] Daten, siehe Handbuch zu [Exportaufträge in der Profil-API](../../profile/api/export-jobs.md)
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Liste mit Exportaufträgen abrufen {#retrieve-list}
 
@@ -198,10 +198,10 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste erfolgreich abgesc
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `destination` | Zielinformationen für die exportierten Daten:<ul><li>`datasetId`: Die ID des Datensatzes, in den Daten exportiert wurden.</li><li>`segmentPerBatch`: Ein boolescher Wert, der anzeigt, ob Segment-IDs konsolidiert sind oder nicht. Der Wert &quot;false&quot;bedeutet, dass alle Segment-IDs in eine Batch-Kennung exportiert werden. Der Wert &quot;true&quot;bedeutet, dass eine Segment-ID in eine Batch-Kennung exportiert wird. **Hinweis:** Das Festlegen des Werts auf &quot;true&quot;kann sich auf die Batch-Exportleistung auswirken.</li></ul> |
+| `destination` | Zielinformationen für die exportierten Daten:<ul><li>`datasetId`: Die ID des Datensatzes, in den Daten exportiert wurden.</li><li>`segmentPerBatch`: Ein boolescher Wert, der anzeigt, ob Segment-IDs konsolidiert sind oder nicht. Der Wert &quot;false&quot;bedeutet, dass alle Segment-IDs in eine Batch-Kennung exportiert werden. Der Wert &quot;true&quot;bedeutet, dass eine Segment-ID in eine Batch-Kennung exportiert wird. **Hinweis:** Das Festlegen des Werts auf &quot;true&quot;kann sich auf die Leistung beim Batch-Export auswirken.</li></ul> |
 | `fields` | Eine Liste der exportierten Felder, durch Kommas getrennt. |
 | `schema.name` | Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
-| `filter.segments` | Die Segmente, die exportiert werden. Die folgenden Felder sind enthalten:<ul><li>`segmentId`: Die Segment-ID, in die Profile exportiert werden.</li><li>`segmentNs`: Segment-Namespace für die angegebene  `segmentID`.</li><li>`status`: Ein Array von Zeichenfolgen, die einen Statusfilter für die  `segmentID`bereitstellen. Standardmäßig hat `status` den Wert `["realized", "existing"]` , der alle Profile darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: &quot;realisiert&quot;, &quot;vorhanden&quot;und &quot;beendet&quot;. Der Wert &quot;realisiert&quot;bedeutet, dass das Profil in das Segment eintritt. Der Wert &quot;Existiert&quot;bedeutet, dass sich das Profil weiterhin im Segment befindet. Der Wert &quot;Beenden&quot;bedeutet, dass das Profil das Segment verlässt.</li></ul> |
+| `filter.segments` | Die Segmente, die exportiert werden. Die folgenden Felder sind enthalten:<ul><li>`segmentId`: Die Segment-ID, in die Profile exportiert werden.</li><li>`segmentNs`: Segment-Namespace für die angegebene `segmentID`.</li><li>`status`: Ein Array von Zeichenfolgen, die einen Statusfilter für die `segmentID`. Standardmäßig `status` hat den Wert `["realized", "existing"]` , der alle Profile darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: &quot;realisiert&quot;, &quot;vorhanden&quot;und &quot;beendet&quot;. Der Wert &quot;realisiert&quot;bedeutet, dass das Profil in das Segment eintritt. Der Wert &quot;Existiert&quot;bedeutet, dass sich das Profil weiterhin im Segment befindet. Der Wert &quot;Beenden&quot;bedeutet, dass das Profil das Segment verlässt.</li></ul> |
 | `mergePolicy` | Informationen zu Zusammenführungsrichtlinien für die exportierten Daten. |
 | `metrics.totalTime` | Ein Feld, das die Gesamtzeit angibt, die die Ausführung des Exportvorgangs dauerte. |
 | `metrics.profileExportTime` | Ein Feld, das angibt, wie lange es gedauert hat, bis die Profile exportiert wurden. |
@@ -280,16 +280,16 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `fields` | Eine Liste der exportierten Felder, durch Kommas getrennt. Wenn leer gelassen, werden alle Felder exportiert. |
 | `mergePolicy` | Gibt die Zusammenführungsrichtlinie an, die für die exportierten Daten gelten soll. Schließen Sie diesen Parameter ein, wenn mehrere Segmente exportiert werden. Wenn nicht angegeben, wird für den Export dieselbe Zusammenführungsrichtlinie wie für das angegebene Segment verwendet. |
 | `filter` | Ein Objekt, das die Segmente angibt, die je nach Kennung, Qualifikationszeit oder Erfassungszeit in den Exportauftrag aufgenommen werden sollen, abhängig von den unten aufgeführten Untereigenschaften. Wenn leer gelassen, werden alle Daten exportiert. |
-| `filter.segments` | Gibt die zu exportierenden Segmente an. Wird dieser Wert nicht angegeben, werden alle Daten aus allen Profilen exportiert. Akzeptiert ein Array von Segmentobjekten, die jeweils die folgenden Felder enthalten:<ul><li>`segmentId`:  **(Erforderlich bei Verwendung von  `segments`)** Segment-ID für Profile, die exportiert werden sollen.</li><li>`segmentNs` *(Optional)* Segment-Namespace für die angegebene  `segmentID`.</li><li>`status` *(Optional)* Ein Array von Zeichenfolgen, die einen Statusfilter für die  `segmentID`angeben. Standardmäßig hat `status` den Wert `["realized", "existing"]` , der alle Profile darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: `"realized"`, `"existing"` und `"exited"`.  Der Wert &quot;realisiert&quot;bedeutet, dass das Profil in das Segment eintritt. Der Wert &quot;Existiert&quot;bedeutet, dass sich das Profil weiterhin im Segment befindet. Der Wert &quot;Beenden&quot;bedeutet, dass das Profil das Segment verlässt.</li></ul> |
+| `filter.segments` | Gibt die zu exportierenden Segmente an. Wird dieser Wert nicht angegeben, werden alle Daten aus allen Profilen exportiert. Akzeptiert ein Array von Segmentobjekten, die jeweils die folgenden Felder enthalten:<ul><li>`segmentId`: **(Erforderlich bei Verwendung von `segments`)** Segment-ID für Profile, die exportiert werden sollen.</li><li>`segmentNs` *(Optional)* Segment-Namespace für die angegebene `segmentID`.</li><li>`status` *(Optional)* Ein Array von Zeichenfolgen, die einen Statusfilter für die `segmentID`. Standardmäßig `status` hat den Wert `["realized", "existing"]` , der alle Profile darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: `"realized"`, `"existing"`und `"exited"`.  Der Wert &quot;realisiert&quot;bedeutet, dass das Profil in das Segment eintritt. Der Wert &quot;Existiert&quot;bedeutet, dass sich das Profil weiterhin im Segment befindet. Der Wert &quot;Beenden&quot;bedeutet, dass das Profil das Segment verlässt.</li></ul> |
 | `filter.segmentQualificationTime` | Filtern nach der Segmentqualifizierungszeit. Die Start- und/oder Endzeit kann angegeben werden. |
-| `filter.segmentQualificationTime.startTime` | Startzeit der Segmentqualifizierung für eine Segment-ID für einen bestimmten Status. Wird nicht angegeben, gibt es keinen Filter für die Startzeit einer Segment-ID-Qualifizierung. Der Zeitstempel muss im Format [RFC 3339](https://tools.ietf.org/html/rfc3339) angegeben werden. |
-| `filter.segmentQualificationTime.endTime` | Endzeit der Segmentqualifizierung für eine Segment-ID für einen bestimmten Status. Wird nicht angegeben, gibt es keinen Filter für die Endzeit einer Segment-ID-Qualifizierung. Der Zeitstempel muss im Format [RFC 3339](https://tools.ietf.org/html/rfc3339) angegeben werden. |
-| `filter.fromIngestTimestamp ` | Beschränkt exportierte Profile so, dass nur die Profile einbezogen werden, die nach diesem Zeitstempel aktualisiert wurden. Der Zeitstempel muss im Format [RFC 3339](https://tools.ietf.org/html/rfc3339) angegeben werden. <ul><li>`fromIngestTimestamp` für  **Profile**, sofern verfügbar: Umfasst alle zusammengeführten Profile, bei denen der zusammengeführte aktualisierte Zeitstempel größer als der angegebene Zeitstempel ist. Unterstützt den Operanden `greater_than` .</li><li>`fromIngestTimestamp` für  **Ereignisse**: Alle Ereignisse, die nach diesem Zeitstempel erfasst werden, werden entsprechend dem resultierenden Profilergebnis exportiert. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li> |
-| `filter.emptyProfiles` | Ein boolean -Wert, der anzeigt, ob nach leeren Profilen gefiltert werden soll. Profile können Profildatensätze, ExperienceEvent-Datensätze oder beides enthalten. Profile ohne Profildatensätze und nur ExperienceEvent-Datensätze werden als &quot;emptyProfiles&quot;bezeichnet. Um alle Profile im Profilspeicher zu exportieren, einschließlich der &quot;emptyProfiles&quot;, setzen Sie den Wert von `emptyProfiles` auf `true`. Wenn `emptyProfiles` auf `false` gesetzt ist, werden nur Profile mit Profildatensätzen im Store exportiert. Wenn das Attribut `emptyProfiles` nicht enthalten ist, werden standardmäßig nur Profile exportiert, die Profildatensätze enthalten. |
+| `filter.segmentQualificationTime.startTime` | Startzeit der Segmentqualifizierung für eine Segment-ID für einen bestimmten Status. Wird nicht angegeben, gibt es keinen Filter für die Startzeit einer Segment-ID-Qualifizierung. Der Zeitstempel muss in [RFC 3339](https://tools.ietf.org/html/rfc3339) Format. |
+| `filter.segmentQualificationTime.endTime` | Endzeit der Segmentqualifizierung für eine Segment-ID für einen bestimmten Status. Wird nicht angegeben, gibt es keinen Filter für die Endzeit einer Segment-ID-Qualifizierung. Der Zeitstempel muss in [RFC 3339](https://tools.ietf.org/html/rfc3339) Format. |
+| `filter.fromIngestTimestamp ` | Beschränkt exportierte Profile so, dass nur die Profile einbezogen werden, die nach diesem Zeitstempel aktualisiert wurden. Der Zeitstempel muss in [RFC 3339](https://tools.ietf.org/html/rfc3339) Format. <ul><li>`fromIngestTimestamp` für **profiles**, sofern angegeben: Umfasst alle zusammengeführten Profile, bei denen der zusammengeführte aktualisierte Zeitstempel größer als der angegebene Zeitstempel ist. Unterstützt `greater_than` Operand.</li><li>`fromIngestTimestamp` für **events**: Alle Ereignisse, die nach diesem Zeitstempel erfasst werden, werden entsprechend dem resultierenden Profilergebnis exportiert. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li> |
+| `filter.emptyProfiles` | Ein boolean -Wert, der anzeigt, ob nach leeren Profilen gefiltert werden soll. Profile können Profildatensätze, ExperienceEvent-Datensätze oder beides enthalten. Profile ohne Profildatensätze und nur ExperienceEvent-Datensätze werden als &quot;emptyProfiles&quot;bezeichnet. Um alle Profile im Profilspeicher zu exportieren, einschließlich der &quot;emptyProfiles&quot;, legen Sie den Wert von `emptyProfiles` nach `true`. Wenn `emptyProfiles` auf `false`, werden nur Profile mit Profildatensätzen im Speicher exportiert. Standardmäßig gilt Folgendes: `emptyProfiles` -Attribut nicht enthalten ist, werden nur Profile exportiert, die Profildatensätze enthalten. |
 | `additionalFields.eventList` | Steuert die Zeitreihen-Ereignisfelder, die für untergeordnete oder verknüpfte Objekte exportiert werden, indem eine oder mehrere der folgenden Einstellungen bereitgestellt werden:<ul><li>`fields`: Kontrollieren Sie die zu exportierenden Felder.</li><li>`filter`: Gibt Kriterien an, die die Ergebnisse aus verknüpften Objekten einschränken. Erwartet einen für den Export erforderlichen Mindestwert, normalerweise ein Datum.</li><li>`filter.fromIngestTimestamp`: Filtert Zeitreihenereignisse nach denjenigen, die nach dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li><li>`filter.toIngestTimestamp`: Filtert den Zeitstempel auf die Zeitstempel, die vor dem angegebenen Zeitstempel erfasst wurden. Dies ist nicht die Ereigniszeit selbst, sondern die Erfassungszeit für die Ereignisse.</li></ul> |
-| `destination` | **(Erforderlich)** Informationen zu den exportierten Daten:<ul><li>`datasetId`:  **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`segmentPerBatch`:  *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig &quot;false&quot;ergibt. Der Wert &quot;false&quot;exportiert alle Segment-IDs in eine Batch-Kennung. Der Wert &quot;true&quot;exportiert eine Segment-ID in eine Batch-Kennung. Beachten Sie, dass sich die Festlegung des Werts auf &quot;true&quot;auf die Batch-Exportleistung auswirken kann.</li></ul> |
+| `destination` | **(Erforderlich)** Informationen zu den exportierten Daten:<ul><li>`datasetId`: **(Erforderlich)** Die ID des Datensatzes, in den Daten exportiert werden sollen.</li><li>`segmentPerBatch`: *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig &quot;false&quot;hat. Der Wert &quot;false&quot;exportiert alle Segment-IDs in eine Batch-Kennung. Der Wert &quot;true&quot;exportiert eine Segment-ID in eine Batch-Kennung. Beachten Sie, dass sich die Festlegung des Werts auf &quot;true&quot;auf die Batch-Exportleistung auswirken kann.</li></ul> |
 | `schema.name` | **(Erforderlich)** Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
-| `evaluationInfo.segmentation` | *(Optional)* Ein boolescher Wert, der, falls nicht angegeben, standardmäßig  `false`verwendet wird. Der Wert `true` zeigt an, dass die Segmentierung für den Exportauftrag durchgeführt werden muss. |
+| `evaluationInfo.segmentation` | *(Optional)* Ein boolean -Wert, der standardmäßig auf `false`. Ein Wert von `true` gibt an, dass die Segmentierung für den Exportauftrag durchgeführt werden muss. |
 
 **Antwort**
 
@@ -358,13 +358,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrem neu erst
 | -------- | ----------- |
 | `id` | Ein systemgenerierter schreibgeschützter Wert, der den soeben erstellten Exportauftrag angibt. |
 
-Wenn `destination.segmentPerBatch` auf `true` gesetzt wäre, hätte das obige `destination`-Objekt ein `batches`-Array, wie unten dargestellt:
+Wenn `destination.segmentPerBatch` hatte `true`, die `destination` -Objekt würde `batches` Array, wie unten dargestellt:
 
 ```json
     "destination": {
-        "dataSetId" : "{DATASET_ID}",
+        "dataSetId": "{DATASET_ID}",
         "segmentPerBatch": true,
-        "batches" : [
+        "batches": [
             {
                 "segmentId": "segment1",
                 "segmentNs": "ups",
@@ -383,7 +383,7 @@ Wenn `destination.segmentPerBatch` auf `true` gesetzt wäre, hätte das obige `d
 
 ## Bestimmten Exportauftrag abrufen {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten Exportauftrag abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/export/jobs` senden und im Anfragepfad die Kennung des Exportauftrags angeben, den Sie abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten Exportauftrag abrufen, indem Sie eine GET-Anfrage an die `/export/jobs` -Endpunkt und geben Sie die Kennung des Exportauftrags an, den Sie im Anfragepfad abrufen möchten.
 
 **API-Format**
 
@@ -468,10 +468,10 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `destination` | Zielinformationen für die exportierten Daten:<ul><li>`datasetId`: Die ID des Datensatzes, in den die Daten exportiert wurden.</li><li>`segmentPerBatch`: Ein boolescher Wert, der anzeigt, ob Segment-IDs konsolidiert sind oder nicht. Der Wert `false` bedeutet, dass alle Segment-IDs zu einer Batch-Kennung zusammengefasst wurden. Der Wert `true` bedeutet, dass eine Segment-ID in eine Batch-Kennung exportiert wird.</li></ul> |
+| `destination` | Zielinformationen für die exportierten Daten:<ul><li>`datasetId`: Die ID des Datensatzes, in den die Daten exportiert wurden.</li><li>`segmentPerBatch`: Ein boolescher Wert, der anzeigt, ob Segment-IDs konsolidiert sind oder nicht. Ein Wert von `false` bedeutet, dass alle Segment-IDs zu einer Batch-Kennung zusammengefasst wurden. Ein Wert von `true` bedeutet, dass eine Segment-ID in eine Batch-Kennung exportiert wird.</li></ul> |
 | `fields` | Eine Liste der exportierten Felder, durch Kommas getrennt. |
 | `schema.name` | Der Name des Schemas, das mit dem Datensatz verknüpft ist, in den Daten exportiert werden sollen. |
-| `filter.segments` | Die Segmente, die exportiert werden. Die folgenden Felder sind enthalten:<ul><li>`segmentId`: Segment-ID für Profile, die exportiert werden sollen.</li><li>`segmentNs`: Segment-Namespace für die angegebene  `segmentID`.</li><li>`status`: Ein Array von Zeichenfolgen, die einen Statusfilter für die  `segmentID`bereitstellen. Standardmäßig hat `status` den Wert `["realized", "existing"]` , der alle Profile darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: &quot;realisiert&quot;, &quot;vorhanden&quot;und &quot;beendet&quot;.  Der Wert &quot;realisiert&quot;bedeutet, dass das Profil in das Segment eintritt. Der Wert &quot;Existiert&quot;bedeutet, dass sich das Profil weiterhin im Segment befindet. Der Wert &quot;Beenden&quot;bedeutet, dass das Profil das Segment verlässt.</li></ul> |
+| `filter.segments` | Die Segmente, die exportiert werden. Die folgenden Felder sind enthalten:<ul><li>`segmentId`: Segment-ID für Profile, die exportiert werden sollen.</li><li>`segmentNs`: Segment-Namespace für die angegebene `segmentID`.</li><li>`status`: Ein Array von Zeichenfolgen, die einen Statusfilter für die `segmentID`. Standardmäßig `status` hat den Wert `["realized", "existing"]` , der alle Profile darstellt, die zum aktuellen Zeitpunkt in das Segment fallen. Mögliche Werte sind: &quot;realisiert&quot;, &quot;vorhanden&quot;und &quot;beendet&quot;.  Der Wert &quot;realisiert&quot;bedeutet, dass das Profil in das Segment eintritt. Der Wert &quot;Existiert&quot;bedeutet, dass sich das Profil weiterhin im Segment befindet. Der Wert &quot;Beenden&quot;bedeutet, dass das Profil das Segment verlässt.</li></ul> |
 | `mergePolicy` | Informationen zu Zusammenführungsrichtlinien für die exportierten Daten. |
 | `metrics.totalTime` | Ein Feld, das die Gesamtzeit angibt, die die Ausführung des Exportvorgangs dauerte. |
 | `metrics.profileExportTime` | Ein Feld, das angibt, wie lange es gedauert hat, bis die Profile exportiert wurden. |
@@ -479,7 +479,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit genauen Informationen zum
 
 ## Bestimmten Exportauftrag abbrechen oder löschen {#delete}
 
-Sie können das Löschen des angegebenen Exportauftrags anfordern, indem Sie eine DELETE-Anfrage an den Endpunkt `/export/jobs` senden und im Anfragepfad die Kennung des Exportauftrags angeben, den Sie löschen möchten.
+Sie können das Löschen des angegebenen Exportauftrags anfordern, indem Sie eine DELETE-Anfrage an die `/export/jobs` -Endpunkt und geben Sie die Kennung des Exportauftrags an, den Sie im Anfragepfad löschen möchten.
 
 **API-Format**
 
@@ -489,7 +489,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{EXPORT_JOB_ID}` | Der `id` des Exportauftrags, den Sie löschen möchten. |
+| `{EXPORT_JOB_ID}` | Die `id` des Exportauftrags, den Sie löschen möchten. |
 
 **Anfrage**
 

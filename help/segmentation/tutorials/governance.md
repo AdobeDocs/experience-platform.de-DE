@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zur Durchsetzung der Datennutzungskonformität für Zielgruppensegmente von Echtzeit-Kundenprofilen mithilfe von APIs beschrieben.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 51%
@@ -168,7 +168,7 @@ Eine erfolgreiche Antwort gibt die Details der Zusammenführungsrichtlinie zurü
     "attributeMerge": {
         "type":"dataSetPrecedence", 
         "data": {
-            "order" : ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
+            "order": ["5b95b155419ec801e6eee780", "5b7c86968f7b6501e21ba9df"]
         }
     },
     "default": false,

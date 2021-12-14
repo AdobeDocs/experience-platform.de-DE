@@ -5,7 +5,7 @@ title: Batch Ingestion-API - Übersicht
 topic-legacy: overview
 description: Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 3eea0a1ecbe7db202f56f326e7b9b1300b37d236
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 71%
@@ -14,7 +14,7 @@ ht-degree: 71%
 
 # Batch-Aufnahme-API - Übersicht
 
-Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema in der [!DNL Experience Data Model] (XDM)-Registry entsprechen.
+Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei (z. B. einer Parquet-Datei) oder Daten sein, die einem bekannten Schema im [!DNL Experience Data Model] (XDM)-Registrierung.
 
 Der [Datenaufnahme-API-Verweis](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) enthält weitere Informationen zu diesen API-Aufrufen.
 
@@ -24,12 +24,12 @@ Das folgende Diagramm zeigt den Vorgang der Batch-Erfassung.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](getting-started.md) für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
 
 ### [!DNL Data Ingestion] Voraussetzungen
 
 - Die hochzuladenden Daten müssen im Parquet- oder JSON-Format vorliegen.
-- Ein Datensatz, der in [[!DNL Catalog services]](../../catalog/home.md) erstellt wurde.
+- Ein Datensatz, der im [[!DNL Catalog services]](../../catalog/home.md).
 - Der Inhalt der Parquet-Datei muss mit einer Untergruppe des Schemas des hochgeladenen Datensatzes übereinstimmen.
 - Lassen Sie sich nach der Authentifizierung Ihr eindeutiges Zugriffstoken anzeigen.
 
@@ -49,15 +49,15 @@ Die Erfassung von Batch-Daten unterliegt verschiedenen Einschränkungen:
 
 >[!NOTE]
 >
->Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleinere Abschnitte unterteilt werden. Anweisungen zum Hochladen einer großen Datei finden Sie im Abschnitt [Hochladen großer Dateien dieses Dokuments](#large-file-upload---create-file).
+>Um eine Datei hochzuladen, die größer als 512 MB ist, muss die Datei in kleinere Abschnitte unterteilt werden. Anweisungen zum Hochladen einer großen Datei finden Sie im Abschnitt [Abschnitt zum Hochladen großer Dateien in diesem Dokument](#large-file-upload---create-file).
 
 ### Typen
 
-Beim Erfassen von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model] (XDM)-Schemas funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
+Bei der Erfassung von Daten ist es wichtig zu verstehen, wie [!DNL Experience Data Model] (XDM)-Schemas funktionieren. Weiterführende Informationen zur Zuordnung von XDM-Feldtypen zu verschiedenen Formaten finden Sie im [Entwicklerhandbuch zur Schemaregistrierung](../../xdm/api/getting-started.md).
 
 Bei der Erfassung von Daten gibt es eine gewisse Flexibilität. Wenn ein Typ nicht mit dem Zielschema übereinstimmt, werden die Daten in den ausgedrückten Zieltyp konvertiert. Wenn das nicht möglich ist, schlägt der Batch mit einer `TypeCompatibilityException` fehl.
 
-Beispielsweise haben weder JSON noch CSV den Typ `date` oder `date-time` . Daher werden diese Werte mit [ISO 8061 formatierten Zeichenfolgen](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit ausgedrückt und in Millisekunden formatiert (1531263 959000) und werden zur Erfassungszeit in den Ziel-XDM-Typ konvertiert.
+Beispielsweise verfügt weder JSON noch CSV über eine `date` oder `date-time` Typ. Daher werden diese Werte mithilfe von [Formatierte Zeichenfolgen im ISO 8061-Format](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) oder Unix-Zeit formatiert in Millisekunden (1531263959000) und werden bei der Aufnahme in den Ziel-XDM-Typ konvertiert.
 
 Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterstützt werden.
 
@@ -80,7 +80,7 @@ Folgende Tabelle enthält die Konversionen, die beim Erfassen von Daten unterst�
 
 ## Verwenden der API
 
-Mit der API [!DNL Data Ingestion] können Sie Daten in drei grundlegenden Schritten als Batches (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als Einheit erfasst werden sollen) in [!DNL Experience Platform] erfassen:
+Die [!DNL Data Ingestion] Mit der API können Sie Daten als Batches (eine Dateneinheit, die aus einer oder mehreren Dateien besteht, die als Einheit erfasst werden sollen) in [!DNL Experience Platform] in drei grundlegenden Schritten:
 
 1. Erstellen eines neuen Batches.
 2. Hochladen von Dateien in einen angegebenen Datensatz, der dem XDM-Schema der Daten entspricht.
@@ -102,7 +102,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}"
+  -H "x-api-key: {API_KEY}"
   -d '{ 
           "datasetId": "{DATASET_ID}" 
       }'
@@ -147,11 +147,11 @@ Sie können Dateien mit der Small File Upload-API hochladen. Wenn Ihre Dateien j
 
 >[!NOTE]
 >
->Die Batch-Erfassung kann verwendet werden, um Daten im Profilspeicher schrittweise zu aktualisieren. Weitere Informationen finden Sie im Abschnitt [Aktualisieren eines Batches](#patch-a-batch) im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
+>Die Batch-Erfassung kann verwendet werden, um Daten im Profilspeicher schrittweise zu aktualisieren. Weitere Informationen finden Sie im Abschnitt zu [Batch aktualisieren](#patch-a-batch) im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
 
 >[!INFO]
 >
->Die folgenden Beispiele verwenden das Dateiformat [Apache Parquet](https://parquet.apache.org/documentation/latest/). Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
+>Die folgenden Beispiele verwenden die [Apache Parquet](https://parquet.apache.org/documentation/latest/) Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
 
 ### Hochladen von kleinen Dateien
 
@@ -175,7 +175,7 @@ curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
   -H "x-gw-ims-org-id: {IMS_ORG}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
@@ -258,7 +258,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. Auf diese Weise werden die [!DNL Catalog] DataSetFile -Einträge für die abgeschlossenen Dateien erstellt und mit dem oben generierten Batch verknüpft. Der [!DNL Catalog]-Batch wird dann als erfolgreich markiert, wodurch bei nachgelagerten Flüssen die Aufnahme der verfügbaren Daten ausgelöst wird.
+Nachdem alle Dateien in den Batch hochgeladen wurden, kann dieser als fertiggestellt gekennzeichnet werden. Dadurch wird die [!DNL Catalog] DataSetFile-Einträge werden für die abgeschlossenen Dateien erstellt und dem oben generierten Batch zugeordnet. Der [!DNL Catalog]-Batch wird dann als erfolgreich markiert, wodurch bei nachgelagerten Flüssen die Aufnahme der verfügbaren Daten ausgelöst wird.
 
 **Anfrage**
 
@@ -275,7 +275,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 -H "x-gw-ims-org-id: {IMS_ORG}" \
 -H "x-sandbox-name: {SANDBOX_NAME}" \
 -H "Authorization: Bearer {ACCESS_TOKEN}" \
--H "x-api-key : {API_KEY}"
+-H "x-api-key: {API_KEY}"
 ```
 
 **Antwort**

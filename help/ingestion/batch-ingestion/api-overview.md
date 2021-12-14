@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Handbuch zur Batch Ingestion-API
 description: Dieses Dokument enthält eine umfassende Anleitung für Entwickler, die mit Batch-Aufnahme-APIs für Adobe Experience Platform arbeiten.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 087a714c579c4c3b95feac3d587ed13589b6a752
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '2373'
 ht-degree: 78%
@@ -13,7 +13,7 @@ ht-degree: 78%
 
 # Entwicklerhandbuch zur Batch-Erfassung
 
-Dieses Dokument enthält eine umfassende Anleitung zur Verwendung der [API-Endpunkte für die Batch-Erfassung](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie, wenn Sie die [Batch-Aufnahme-API-Übersicht](overview.md) lesen.
+Dieses Dokument enthält eine umfassende Anleitung zur Verwendung von [API-Endpunkte für die Batch-Erfassung](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. Einen Überblick über Batch-Aufnahme-APIs, einschließlich Voraussetzungen und Best Practices, erhalten Sie im Abschnitt [Batch-Aufnahme-API - Übersicht](overview.md).
 
 Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten, die zur Erfassung verwendet werden sollen](#data-transformation-for-batch-ingestion), einschließlich Beispiel-CSV- und JSON-Datendateien.
 
@@ -21,7 +21,7 @@ Der Anhang zu diesem Dokument enthält Informationen zur [Formatierung von Daten
 
 Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [Datenerfassungs-API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data Ingestion bietet eine RESTful-API, mit der Sie bei unterstützten Objekttypen grundlegende CRUD-Vorgänge durchführen können.
 
-Bevor Sie fortfahren, lesen Sie zunächst den [Überblick über die Batch-Aufnahme-API](overview.md) und den [Erste Schritte](getting-started.md) .
+Bevor Sie fortfahren, lesen Sie bitte die [Batch-Aufnahme-API - Übersicht](overview.md) und [Erste Schritte](getting-started.md).
 
 ## JSON-Dateien erfassen
 
@@ -50,7 +50,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -122,7 +122,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -157,7 +157,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE" \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -184,7 +184,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
-  -H "x-api-key : {API_KEY}" \
+  -H "x-api-key: {API_KEY}" \
   -H "x-sandbox-name: {SANDBOX_NAME}" 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -257,7 +257,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
@@ -292,7 +292,7 @@ POST /batches/{BATCH_ID}?action=complete
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -325,7 +325,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -501,7 +501,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -569,7 +569,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
             "datasetId": "{DATASET_ID}",
@@ -646,7 +646,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.csv"
 ```
@@ -678,7 +678,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -708,7 +708,7 @@ POST /batches/{BATCH_ID}?action=ABORT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=ABORT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -738,7 +738,7 @@ POST /batches/{BATCH_ID}?action=REVERT
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=REVERT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -758,10 +758,10 @@ Gelegentlich kann es erforderlich sein, Daten im Profilspeicher Ihrer Organisati
 
 Folgendes ist erforderlich, um einen Batch zu patchen:
 
-- **Ein für Profil- und Attributaktualisierungen aktivierter Datensatz.** Dies erfolgt über Datensatz-Tags und erfordert das Hinzufügen eines bestimmten  `isUpsert:true` Tags zum  `unifiedProfile` Array. Ausführliche Anweisungen zum Erstellen eines Datensatzes oder Konfigurieren eines vorhandenen Datensatzes für die Aktualisierung finden Sie im Tutorial zum Aktivieren eines Datensatzes für Profilaktualisierungen](../../catalog/datasets/enable-upsert.md).[
+- **Ein für Profil- und Attributaktualisierungen aktivierter Datensatz.** Dies erfolgt über Datensatz-Tags und erfordert eine bestimmte `isUpsert:true` -Tag dem `unifiedProfile` Array. Ausführliche Anweisungen zum Erstellen eines Datensatzes oder Konfigurieren eines vorhandenen Datensatzes für die Aktualisierung finden Sie im Tutorial für [Aktivieren eines Datensatzes für Profil-Updates](../../catalog/datasets/enable-upsert.md).
 - **Eine Parquet-Datei mit den zu patchierenden Feldern und Identitätsfeldern für das Profil.** Das Datenformat für das Patchen eines Batches ähnelt dem normalen Batch-Erfassungsvorgang. Die erforderliche Eingabe ist eine Parquet-Datei. Zusätzlich zu den zu aktualisierenden Feldern müssen die hochgeladenen Daten die Identitätsfelder enthalten, damit sie mit den Daten im Profilspeicher übereinstimmen.
 
-Nachdem Sie einen Datensatz für Profil und Upload aktiviert haben und eine Parquet-Datei mit den zu patchierenden Feldern sowie den erforderlichen Identitätsfeldern, können Sie die Schritte für [Erfassung von Parquet-Dateien](#ingest-parquet-files) ausführen, um den Patch über die Batch-Erfassung abzuschließen.
+Nachdem Sie einen Datensatz für Profil und Upload aktiviert haben und eine Parquet-Datei mit den Feldern, die Sie patchen möchten, sowie den erforderlichen Identitätsfeldern, können Sie die Schritte für [Erfassen von Parquet-Dateien](#ingest-parquet-files) um den Patch über die Batch-Erfassung abzuschließen.
 
 ## Batch ersetzen
 
@@ -784,7 +784,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
   -d '{
           "datasetId": "{DATASET_ID}",
@@ -868,7 +868,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   --data-binary "@{FILE_PATH_AND_NAME}.json"
 ```
@@ -903,7 +903,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -919,7 +919,7 @@ Der folgende Abschnitt enthält zusätzliche Informationen zur Aufnahme von Date
 
 ### Datenumwandlung für die Batch-Erfassung
 
-Um eine Datendatei in [!DNL Experience Platform] aufzunehmen, muss die hierarchische Dateistruktur dem Schema [Experience-Datenmodell (XDM)](../../xdm/home.md) entsprechen, das mit dem hochgeladenen Datensatz verknüpft ist.
+So erfassen Sie eine Datendatei in [!DNL Experience Platform]muss die hierarchische Struktur der Datei mit dem [Experience-Datenmodell (XDM)](../../xdm/home.md) Schema, das mit dem hochgeladenen Datensatz verknüpft ist.
 
 Informationen dazu, wie Sie eine CSV-Datei einem XDM-Schema konform zuordnen, finden Sie im Dokument mit [Beispielumwandlungen](../../etl/transformations.md). Hier finden Sie außerdem ein Beispiel für eine richtig formatierte JSON-Datendatei. Im Dokument bereitgestellte Beispieldateien finden Sie hier:
 

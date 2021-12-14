@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Verbindung zu E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren
 description: In diesem Dokument wird die Erstellung von E-Mail-Marketing-Zielen mithilfe der Adobe Experience Platform-API beschrieben.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1701'
 ht-degree: 73%
@@ -21,14 +21,14 @@ In dieser Anleitung wird für alle Beispiele das Ziel „Adobe Campaign“ verwe
 
 ![Übersicht – Schritte zum Erstellen eines Ziels und Aktivieren von Segmenten](../assets/api/email-marketing/overview.png)
 
-Wenn Sie lieber die Benutzeroberfläche in Platform zum Verbinden eines Ziels und Aktivieren von Daten verwenden möchten, finden Sie weitere Informationen in den Tutorials [Ziel](../ui/connect-destination.md) verbinden[Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../ui/activate-batch-profile-destinations.md) .
+Wenn Sie es vorziehen, die Benutzeroberfläche in Platform zu verwenden, um ein Ziel zu verbinden und Daten zu aktivieren, lesen Sie den Abschnitt [Ziel verbinden](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../ui/activate-batch-profile-destinations.md) Tutorials.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-* [[!DNL Catalog Service]](../../catalog/home.md):  [!DNL Catalog] ist das Aufzeichnungssystem für Speicherort und Herkunft von Daten in  [!DNL Experience Platform].
+* [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] ist das Aufzeichnungssystem für Speicherort und Herkunft von Daten in [!DNL Experience Platform].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für E-Mail-Marketing-Ziele in Platform aktivieren zu können.
@@ -52,7 +52,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Ressourcen in [!DNL Experience Platform] können auf bestimmte virtuelle Sandboxes isoliert werden. Bei Anfragen an [!DNL Platform]-APIs können Sie den Namen und die Kennung der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in [!DNL Experience Platform] kann in bestimmte virtuelle Sandboxes isoliert werden. In Anforderungen an [!DNL Platform] APIs können Sie den Namen und die Kennung der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -66,7 +66,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ### Swagger-Dokumentation
 
-Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Weitere Informationen finden Sie in der [Flow Service-API-Dokumentation zu Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Aufrufe finden Sie in dieser Anleitung in Swagger. Siehe [Flussdienst-API-Dokumentation zur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Es wird empfohlen, diese Anleitung sowie die Seite mit der Swagger-Dokumentation parallel zu verwenden.
 
 ## Liste der verfügbaren Ziele abrufen {#get-the-list-of-available-destinations}
 
@@ -120,17 +120,17 @@ Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre ei
 }
 ```
 
-## Verbindung zu Ihren [!DNL Experience Platform]-Daten herstellen {#connect-to-your-experience-platform-data}
+## Verbinden Sie Ihre [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
 
 ![Übersicht über die Zielschritte – Schritt 2](../assets/api/email-marketing/step2.png)
 
-Als Nächstes müssen Sie eine Verbindung zu Ihren [!DNL Experience Platform]-Daten herstellen, damit Sie Profildaten exportieren und in Ihrem bevorzugten Ziel aktivieren können. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
+Als Nächstes müssen Sie eine Verbindung zu Ihrem [!DNL Experience Platform] Daten, damit Sie Profildaten exportieren und in Ihrem bevorzugten Ziel aktivieren können. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
 
-1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf Ihre Daten in [!DNL Experience Platform] zu autorisieren, indem Sie eine Basisverbindung einrichten.
-2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf durch, bei dem Sie eine Quellverbindung erstellen, durch die die Verbindung zu Ihren [!DNL Experience Platform]-Daten hergestellt wird.
+1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf Ihre Daten in [!DNL Experience Platform], indem Sie eine Basisverbindung einrichten.
+2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf durch, bei dem Sie eine Quellverbindung erstellen, durch die die Verbindung zu Ihrer [!DNL Experience Platform] Daten.
 
 
-### Zugriff auf Ihre Daten in [!DNL Experience Platform] zulassen
+### Zugriff auf Ihre Daten zulassen in [!DNL Experience Platform]
 
 **API-Format**
 
@@ -194,7 +194,7 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 }
 ```
 
-### Verbindung zu Ihren [!DNL Experience Platform]-Daten herstellen {#connect-to-platform-data}
+### Verbinden Sie Ihre [!DNL Experience Platform] data {#connect-to-platform-data}
 
 **API-Format**
 
@@ -251,16 +251,16 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
                 "format": "CSV",
                 "schema": null
             },
-            "params" : {}
+            "params": {}
 }'
 ```
 
 * `{BASE_CONNECTION_ID}`: Verwenden Sie die Kennung, die Sie im vorherigen Schritt erhalten haben.
-* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für  [!DNL Profile Service] -  `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikations-ID für [!DNL Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zu [!DNL Profile Service] zurück. Dies bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren [!DNL Experience Platform]-Daten hergestellt haben. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zu [!DNL Profile Service]. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihrem [!DNL Experience Platform] Daten. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
 
 ```json
 {
@@ -360,7 +360,7 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 
 ### Speicherort und Datenformat angeben
 
-[!DNL Adobe Experience Platform] exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele in Form von  [!DNL CSV] Dateien.
+[!DNL Adobe Experience Platform] Exportiert Daten für E-Mail-Marketing- und Cloud-Speicher-Ziele in Form von [!DNL CSV] Dateien.
 
 >[!IMPORTANT]
 > 
@@ -442,8 +442,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 * `{BASE_CONNECTION_ID}`: Nutzen Sie die Kennung der Basisverbindung, die Sie im obigen Schritt erhalten haben.
 * `{CONNECTION_SPEC_ID}`: Verwenden Sie die Verbindungsspezifikation, die Sie im Schritt [Liste der verfügbaren Ziele abrufen](#get-the-list-of-available-destinations) erhalten haben.
-* `{BUCKETNAME}`: Ihr  [!DNL Amazon] S3-Bucket, in dem Platform den Datenexport ablegt.
-* `{FILEPATH}`: Der Pfad in Ihrem  [!DNL Amazon] S3-Bucket-Verzeichnis, in dem Platform den Datenexport ablegt.
+* `{BUCKETNAME}`: Ihre [!DNL Amazon] S3-Bucket, in dem Platform den Datenexport ablegt.
+* `{FILEPATH}`: Der Pfad in Ihrer [!DNL Amazon] S3-Bucket-Verzeichnis, in das Platform den Datenexport ablegt.
 
 **Antwort**
 
@@ -459,7 +459,7 @@ Eine erfolgreiche Antwort gibt für die neu erstellte Zielverbindung zu Ihrem E-
 
 ![Übersicht über die Zielschritte – Schritt 4](../assets/api/email-marketing/step4.png)
 
-Mithilfe der IDs, die Sie in den vorherigen Schritten erhalten haben, können Sie jetzt einen Datenfluss zwischen Ihren [!DNL Experience Platform]-Daten und dem Ziel erstellen, für das Sie Daten aktivieren. Stellen Sie sich diesen Schritt als eine Pipeline vor, durch die später Daten zwischen [!DNL Experience Platform] und Ihrem gewünschten Ziel fließen.
+Mithilfe der IDs, die Sie in den vorherigen Schritten erhalten haben, können Sie jetzt einen Datenfluss zwischen Ihren [!DNL Experience Platform] Daten und das Ziel, für das Sie Daten aktivieren. Stellen Sie sich diesen Schritt wie die Erstellung der Pipeline vor, durch die später Daten fließen, zwischen [!DNL Experience Platform] und Ihr gewünschtes Ziel.
 
 Um einen Datenfluss zu erstellen, führen Sie eine POST-Anfrage durch (wie unten dargestellt) und geben Sie dabei die unten genannten Werte in der Payload an.
 
@@ -592,7 +592,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 * `{DATAFLOW_ID}`: Verwenden Sie den Datenfluss, den Sie im vorherigen Schritt erstellt haben.
 * `{ETAG}`: Verwenden Sie das eTag, das Sie im vorherigen Schritt erhalten haben.
-* `{SEGMENT_ID}`: Geben Sie die Kennung des Segments an, das Sie an dieses Ziel exportieren möchten. Um Segment-IDs für die Segmente abzurufen, die Sie aktivieren möchten, gehen Sie zu **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/**, wählen Sie **[!UICONTROL Segmentation Service API]** im linken Navigationsmenü aus und suchen Sie nach dem Vorgang `GET /segment/definitions` unter **[!UICONTROL Segmentdefinitionen]**.
+* `{SEGMENT_ID}`: Geben Sie die Kennung des Segments an, das Sie an dieses Ziel exportieren möchten. Um Segment-IDs für die Segmente abzurufen, die Sie aktivieren möchten, gehen Sie zu **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** auswählen **[!UICONTROL Segmentierungsdienst-API]** im linken Navigationsmenü und suchen Sie nach dem `GET /segment/definitions` Betrieb **[!UICONTROL Segmentdefinitionen]**.
 * `{PROFILE_ATTRIBUTE}`: Beispiel, `"person.lastName"`
 
 **Antwort**

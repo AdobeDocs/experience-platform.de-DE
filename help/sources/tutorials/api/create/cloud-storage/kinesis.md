@@ -6,48 +6,48 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und einer Amazon Kinesis-Quelle herstellen.
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '730'
 ht-degree: 8%
 
 ---
 
-# Erstellen einer [!DNL Amazon Kinesis]-Quellverbindung mithilfe der Flow Service-API
+# Erstellen Sie eine [!DNL Amazon Kinesis] Quellverbindung mit der Flow Service-API
 
-Dieses Tutorial führt Sie durch die Schritte, die erforderlich sind, um [!DNL Amazon Kinesis] (im Folgenden &quot;a1/>&quot;) mit der -Experience Platform zu verbinden, indem Sie die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) verwenden.[!DNL Kinesis]
+Dieses Tutorial führt Sie durch die Schritte zum Verbinden [!DNL Amazon Kinesis] (nachstehend &quot;genannt)[!DNL Kinesis]&quot;) zur Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform] Dienste.
 * [Sandboxes](../../../../../sandboxes/home.md)[!DNL Platform]: Experience bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um [!DNL Kinesis] mithilfe der [!DNL Flow Service]-API erfolgreich mit Platform zu verbinden.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung herzustellen [!DNL Kinesis] zur Plattform mithilfe der [!DNL Flow Service] API.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit [!DNL Flow Service] eine Verbindung zu Ihrem [!DNL Amazon Kinesis]-Konto herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Zur [!DNL Flow Service] , um eine Verbindung mit Ihrer [!DNL Amazon Kinesis] -Konto angeben, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `accessKeyId` | Die Zugriffsschlüssel-ID entspricht der Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Platform verwendet wird. |
-| `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihres [!DNL Kinesis]-Kontos bei Platform verwendet wird. |
-| `region` | Die Region für Ihr [!DNL Kinesis]-Konto. Weitere Informationen zu Regionen finden Sie im Handbuch zum Hinzufügen von IP-Adressen zu Ihrer Zulassungsliste](../../../../ip-address-allow-list.md).[ |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID [!DNL Kinesis] lautet: `86043421-563b-46ec-8e6c-e23184711bf6`. |
+| `accessKeyId` | Die Zugriffsschlüssel-ID entspricht der Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihrer [!DNL Kinesis] -Konto auf Platform. |
+| `secretKey` | Der geheime Zugriffsschlüssel ist die andere Hälfte des Zugriffsschlüsselpaars, das zum Authentifizieren Ihrer [!DNL Kinesis] -Konto auf Platform. |
+| `region` | Die Region für Ihre [!DNL Kinesis] -Konto. Siehe Handbuch unter [Hinzufügen von IP-Adressen zu Ihrer Zulassungsliste](../../../../ip-address-allow-list.md) für weitere Informationen über Regionen. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die [!DNL Kinesis] Verbindungsspezifikations-ID lautet: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-Weitere Informationen zu [!DNL Kinesis]-Zugriffsschlüsseln und deren Erstellung finden Sie in diesem [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Weitere Informationen finden Sie unter [!DNL Kinesis] Zugriffsschlüssel und deren Erstellung; siehe [[!DNL AWS] Handbuch zum Verwalten von Zugriffsschlüsseln für IAM-Benutzer](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Verwenden von Platform-APIs
 
-Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Basisverbindung erstellen
 
-Der erste Schritt beim Erstellen einer Quellverbindung besteht darin, Ihre [!DNL Kinesis]-Quelle zu authentifizieren und eine Basis-Verbindungs-ID zu generieren. Mit einer Basis-Verbindungs-ID können Sie Dateien aus Ihrer Quelle durchsuchen und durchsuchen und bestimmte Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
+Der erste Schritt beim Erstellen einer Quellverbindung besteht darin, Ihre [!DNL Kinesis] -Quelle und generieren Sie eine Basis-Verbindungs-ID. Mit einer Basis-Verbindungs-ID können Sie Dateien aus Ihrer Quelle durchsuchen und durchsuchen und bestimmte Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Kinesis]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen [!DNL Kinesis] Authentifizierungsberechtigungen als Teil der Anfrageparameter.
 
 **API-Format**
 
@@ -86,10 +86,10 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID für Ihr [!DNL Kinesis]-Konto. |
-| `auth.params.secretKey` | Der geheime Zugriffsschlüssel für Ihr [!DNL Kinesis]-Konto. |
-| `auth.params.region` | Die Region für Ihr [!DNL Kinesis]-Konto. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL Kinesis]: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `auth.params.accessKeyId` | Die Zugriffsschlüssel-ID für Ihre [!DNL Kinesis] -Konto. |
+| `auth.params.secretKey` | Der geheime Zugriffsschlüssel für Ihre [!DNL Kinesis] -Konto. |
+| `auth.params.region` | Die Region für Ihre [!DNL Kinesis] -Konto. |
+| `connectionSpec.id` | Die [!DNL Kinesis] Verbindungsspezifikations-ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Antwort**
 
@@ -106,7 +106,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurüc
 
 Eine Quellverbindung erstellt und verwaltet die Verbindung zur externen Quelle, von der aus Daten erfasst werden. Eine Quellverbindung besteht aus Informationen wie der Datenquelle, dem Datenformat und der Kennung der Quellverbindung, die zum Erstellen eines Datenflusses erforderlich ist. Eine Quellverbindungsinstanz ist für einen Mandanten und eine IMS-Organisation spezifisch.
 
-Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/sourceConnections`-Endpunkt der [!DNL Flow Service]-API.
+Um eine Quellverbindung zu erstellen, stellen Sie eine POST-Anfrage an die `/sourceConnections` Endpunkt der [!DNL Flow Service] API.
 
 **API-Format**
 
@@ -147,16 +147,16 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name Ihrer Quellverbindung. Stellen Sie sicher, dass der Name Ihrer Quellverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Quellverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Quellverbindung einzuschließen. |
-| `baseConnectionId` | Die Basis-Verbindungs-ID Ihrer [!DNL Kinesis]-Quelle, die im vorherigen Schritt generiert wurde. |
-| `connectionSpec.id` | Die ID der festen Verbindungsspezifikation für [!DNL Kinesis]. Diese ID lautet : `86043421-563b-46ec-8e6c-e23184711bf6` |
-| `data.format` | Das Format der [!DNL Kinesis]-Daten, die Sie erfassen möchten. Derzeit ist das einzige unterstützte Datenformat `json`. |
+| `baseConnectionId` | Die Kennung der Basisverbindung Ihrer [!DNL Kinesis] -Quelle, die im vorherigen Schritt generiert wurde. |
+| `connectionSpec.id` | Die ID der Festnetzverbindungsspezifikation für [!DNL Kinesis]. Diese ID lautet: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `data.format` | Das Format der [!DNL Kinesis] -Daten, die Sie erfassen möchten. Derzeit wird nur das Datenformat `json`. |
 | `params.stream` | Der Name des Datenstreams, aus dem Datensätze abgerufen werden sollen. |
 | `params.dataType` | Dieser Parameter definiert den Typ der aufgenommenen Daten. Zu den unterstützten Datentypen gehören: `raw` und `xdm`. |
-| `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwenden Sie `latest`, um mit dem Lesen der neuesten Daten zu beginnen, und verwenden Sie `earliest`, um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. |
+| `params.reset` | Dieser Parameter definiert, wie die Daten gelesen werden. Verwendung `latest` , um mit dem Lesen der neuesten Daten zu beginnen, und verwenden Sie `earliest` , um mit dem Lesen der ersten verfügbaren Daten im Stream zu beginnen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist im nächsten Tutorial zum Erstellen eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung. Diese ID ist im nächsten Tutorial zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
@@ -167,4 +167,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Kinesis]-Quellverbindung mit der [!DNL Flow Service]-API erstellt. Sie können diese Quell-Verbindungs-ID im nächsten Tutorial zu [Erstellen eines Streaming-Datenflusses mit der  [!DNL Flow Service] API](../../collect/streaming.md) verwenden.
+In diesem Tutorial haben Sie eine [!DNL Kinesis] Quellverbindung mithilfe der [!DNL Flow Service] API. Sie können diese Quell-Verbindungs-ID im nächsten Tutorial zu [Erstellen Sie einen Streaming-Datenfluss mit dem [!DNL Flow Service] API](../../collect/streaming.md).

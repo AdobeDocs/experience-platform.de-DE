@@ -4,18 +4,18 @@ title: Datensatz für Profil- und Identitätsdienst mithilfe von APIs aktivieren
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie einen Datensatz für die Verwendung mit Echtzeit-Kundenprofil und Identity Service mithilfe von Adobe Experience Platform-APIs aktivieren.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: 648923a0a124767f530bea09519449f76d576b5e
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1075'
 ht-degree: 20%
 
 ---
 
-# Datensatz für [!DNL Profile] und [!DNL Identity Service] mithilfe von APIs aktivieren
+# Datensatz aktivieren für [!DNL Profile] und [!DNL Identity Service] Verwenden von APIs
 
-In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes für die Verwendung in [!DNL Real-time Customer Profile] und [!DNL Identity Service] beschrieben, der in die folgenden Schritte unterteilt wird:
+In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes zur Verwendung in [!DNL Real-time Customer Profile] und [!DNL Identity Service], unterteilt in die folgenden Schritte:
 
-1. Aktivieren Sie einen Datensatz zur Verwendung in [!DNL Real-time Customer Profile] mithilfe einer von zwei Optionen:
+1. Datensatz zur Verwendung in aktivieren [!DNL Real-time Customer Profile], wobei eine von zwei Optionen verwendet wird:
    - [Neuen Datensatz erstellen](#create-a-dataset-enabled-for-profile-and-identity)
    - [Vorhandenen Datensatz konfigurieren](#configure-an-existing-dataset)
 1. [Daten in den Datensatz aufnehmen](#ingest-data-into-the-dataset)
@@ -27,8 +27,8 @@ In diesem Tutorial wird der Prozess zum Aktivieren eines Datensatzes für die Ve
 Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Dienste voraus, die mit der Verwaltung von profilaktivierten Datensätzen verbunden sind. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für diese zugehörigen DNL Platform-Dienste:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-- [[!DNL Identity Service]](../../identity-service/home.md): Ermöglicht  [!DNL Real-time Customer Profile] die Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die  [!DNL Platform]aufgenommen wird.
-- [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und für  [!DNL Real-time Customer Profile]   [!DNL Identity Service]und konfigurieren können.
+- [[!DNL Identity Service]](../../identity-service/home.md): Aktiviert [!DNL Real-time Customer Profile] durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die aufgenommen wird [!DNL Platform].
+- [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und konfigurieren können für [!DNL Real-time Customer Profile] und [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
@@ -45,19 +45,19 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {IMS_ORG}`
 
-Für alle Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche `Content-Type` -Kopfzeile erforderlich. Der richtige Wert für diese Kopfzeile wird bei Bedarf in den Beispielanfragen angezeigt.
+Für alle Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zusätzliche `Content-Type` -Kopfzeile. Der richtige Wert für diese Kopfzeile wird bei Bedarf in den Beispielanfragen angezeigt.
 
-Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Für alle Anfragen an [!DNL Platform]-APIs ist eine `x-sandbox-name`-Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
+Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Alle Anfragen an [!DNL Platform] APIs erfordern eine `x-sandbox-name` -Kopfzeile, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll. Weitere Informationen zu Sandboxes in [!DNL Platform] finden Sie in der [Sandbox-Übersichtsdokumentation](../../sandboxes/home.md).
 
 ## Erstellen eines Datensatzes, der für Profil und Identität aktiviert ist {#create-a-dataset-enabled-for-profile-and-identity}
 
-Sie können einen Datensatz für Echtzeit-Kundenprofil und Identity Service sofort nach der Erstellung oder zu einem beliebigen Zeitpunkt nach der Erstellung des Datensatzes aktivieren. Wenn Sie einen bereits erstellten Datensatz aktivieren möchten, führen Sie die Schritte für [Konfigurieren eines vorhandenen Datensatzes](#configure-an-existing-dataset) aus, die weiter unten in diesem Dokument zu finden sind.
+Sie können einen Datensatz für Echtzeit-Kundenprofil und Identity Service sofort nach der Erstellung oder zu einem beliebigen Zeitpunkt nach der Erstellung des Datensatzes aktivieren. Wenn Sie einen bereits erstellten Datensatz aktivieren möchten, gehen Sie wie folgt vor: [Konfigurieren eines vorhandenen Datensatzes](#configure-an-existing-dataset) finden Sie später in diesem Dokument.
 
 >[!NOTE]
 >
->Um einen neuen Datensatz mit aktiviertem Profil zu erstellen, müssen Sie die ID eines vorhandenen XDM-Schemas kennen, das für Profil aktiviert ist. Informationen zum Nachschlagen oder Erstellen eines Profilaktivierten Schemas finden Sie im Tutorial zum Erstellen eines Schemas mit der Schema Registry-API](../../xdm/tutorials/create-schema-api.md).[
+>Um einen neuen Datensatz mit aktiviertem Profil zu erstellen, müssen Sie die ID eines vorhandenen XDM-Schemas kennen, das für Profil aktiviert ist. Informationen zum Nachschlagen oder Erstellen eines Profilaktivierten Schemas finden Sie in der Anleitung zu [Erstellen eines Schemas mithilfe der Schema Registry-API](../../xdm/tutorials/create-schema-api.md).
 
-Um einen Datensatz zu erstellen, der für Profile aktiviert ist, können Sie eine POST-Anfrage an den Endpunkt `/dataSets` senden.
+Um einen Datensatz zu erstellen, der für Profile aktiviert ist, können Sie eine POST-Anfrage an die `/dataSets` -Endpunkt.
 
 **API-Format**
 
@@ -67,7 +67,7 @@ POST /dataSets
 
 **Anfrage**
 
-Durch die Einbeziehung von `unifiedProfile` und `unifiedIdentity` unter `tags` in den Anfrageinhalt wird der Datensatz sofort für [!DNL Profile] bzw. [!DNL Identity Service] aktiviert. Die Werte dieser Tags müssen ein Array sein, das die Zeichenfolge `"enabled:true"` enthält.
+Durch Einbeziehung von `unifiedProfile` und `unifiedIdentity` under `tags` im Anfrageinhalt wird der Datensatz sofort für [!DNL Profile] und [!DNL Identity Service]zurück. Die Werte dieser Tags müssen ein Array sein, das die Zeichenfolge enthält `"enabled:true"`.
 
 ```shell
 curl -X POST \
@@ -79,11 +79,11 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fields":[],
-    "schemaRef" : {
+    "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
         "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
     },
-    "tags" : {
+    "tags": {
        "unifiedProfile": ["enabled:true"],
        "unifiedIdentity": ["enabled:true"]
     }
@@ -92,12 +92,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 |---|---|
-| `schemaRef.id` | Die ID des [!DNL Profile]-aktivierten Schemas, auf dem der Datensatz basieren soll. |
-| `{TENANT_ID}` | Der Namespace innerhalb von [!DNL Schema Registry] , der Ressourcen enthält, die zu Ihrer IMS-Organisation gehören. Weitere Informationen finden Sie im Abschnitt [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) des [!DNL Schema Registry]-Entwicklerhandbuchs. |
+| `schemaRef.id` | Die ID der [!DNL Profile]-aktiviertes Schema, auf dem der Datensatz basieren soll. |
+| `{TENANT_ID}` | Der Namespace innerhalb der [!DNL Schema Registry] , die Ressourcen Ihrer IMS-Organisation enthält. Siehe [TENANT_ID](../../xdm/api/getting-started.md#know-your-tenant-id) Abschnitt [!DNL Schema Registry] Entwicklerhandbuch für weitere Informationen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort zeigt ein Array mit der Kennung des neu erstellten Datensatzes in der Form `"@/dataSets/{DATASET_ID}"` an. Nachdem Sie einen Datensatz erfolgreich erstellt und aktiviert haben, fahren Sie mit den Schritten für [Hochladen von Daten](#upload-data-to-the-dataset) fort.
+Eine erfolgreiche Antwort zeigt ein Array mit der Kennung des neu erstellten Datensatzes in der Form von `"@/dataSets/{DATASET_ID}"`. Nachdem Sie einen Datensatz erfolgreich erstellt und aktiviert haben, fahren Sie mit den Schritten für [Hochladen von Daten](#upload-data-to-the-dataset).
 
 ```json
 [
@@ -107,11 +107,11 @@ Eine erfolgreiche Antwort zeigt ein Array mit der Kennung des neu erstellten Dat
 
 ## Vorhandenen Datensatz konfigurieren {#configure-an-existing-dataset}
 
-Die folgenden Schritte beschreiben, wie Sie einen zuvor erstellten Datensatz für [!DNL Real-time Customer Profile] und [!DNL Identity Service] aktivieren. Wenn Sie bereits einen Datensatz mit aktiviertem Profil erstellt haben, fahren Sie mit den Schritten für [Erfassen von Daten](#ingest-data-into-the-dataset) fort.
+In den folgenden Schritten wird beschrieben, wie Sie einen zuvor erstellten Datensatz für [!DNL Real-time Customer Profile] und [!DNL Identity Service]. Wenn Sie bereits einen Datensatz mit aktiviertem Profil erstellt haben, fahren Sie mit den Schritten für [Datenerfassung](#ingest-data-into-the-dataset).
 
 ### Überprüfen, ob der Datensatz aktiviert ist {#check-if-the-dataset-is-enabled}
 
-Mithilfe der [!DNL Catalog]-API können Sie einen vorhandenen Datensatz überprüfen, um festzustellen, ob er für die Verwendung in [!DNL Real-time Customer Profile] und [!DNL Identity Service] aktiviert ist. Der folgende Aufruf ruft die Details eines Datensatzes nach Kennung ab.
+Verwenden der [!DNL Catalog] API können Sie einen vorhandenen Datensatz überprüfen, um festzustellen, ob er zur Verwendung in [!DNL Real-time Customer Profile] und [!DNL Identity Service]. Der folgende Aufruf ruft die Details eines Datensatzes nach Kennung ab.
 
 **API-Format**
 
@@ -186,11 +186,11 @@ curl -X GET \
 }
 ```
 
-Unter der Eigenschaft `tags` können Sie sehen, dass `unifiedProfile` und `unifiedIdentity` beide mit dem Wert `enabled:true` vorhanden sind. Daher sind [!DNL Real-time Customer Profile] und [!DNL Identity Service] für diesen Datensatz aktiviert.
+Unter dem `tags` -Eigenschaft, sehen Sie, dass `unifiedProfile` und `unifiedIdentity` sind beide mit dem Wert vorhanden `enabled:true`. Daher [!DNL Real-time Customer Profile] und [!DNL Identity Service] für diesen Datensatz aktiviert sind.
 
 ### Datensatz aktivieren {#enable-the-dataset}
 
-Wenn der vorhandene Datensatz für [!DNL Profile] oder [!DNL Identity Service] nicht aktiviert wurde, können Sie ihn aktivieren, indem Sie eine PATCH-Anfrage mit der Datensatz-ID ausführen.
+Wenn der vorhandene Datensatz nicht für [!DNL Profile] oder [!DNL Identity Service]können Sie sie aktivieren, indem Sie eine PATCH-Anfrage mit der Datensatz-ID ausführen.
 
 **API-Format**
 
@@ -218,10 +218,10 @@ curl -X PATCH \
       ]'
 ```
 
-Der Anfrageinhalt enthält `path` bis zu zwei Arten von Tags, `unifiedProfile` und `unifiedIdentity`. Die `value` von jedem sind Arrays, die die Zeichenfolge `enabled:true` enthalten.
+Der Anfrageinhalt enthält eine `path` zwei Arten von Tags, `unifiedProfile` und `unifiedIdentity`. Die `value` jeweils sind Arrays, die die Zeichenfolge enthalten `enabled:true`.
 
-****
-AntwortEine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurück. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die Tags `unifiedProfile` und `unifiedIdentity` wurden hinzugefügt und der Datensatz ist für die Verwendung durch Profil- und Identitätsdienste aktiviert.
+**Reaktion**
+Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die `unifiedProfile` und `unifiedIdentity` -Tags wurden hinzugefügt und der Datensatz ist für die Verwendung durch Profil- und Identitätsdienste aktiviert.
 
 ```json
 [
@@ -231,15 +231,15 @@ AntwortEine erfolgreiche PATCH-Anfrage gibt den HTTP-Status 200 (OK) und ein Arr
 
 ## Daten in den Datensatz aufnehmen {#ingest-data-into-the-dataset}
 
-Sowohl [!DNL Real-time Customer Profile] als auch [!DNL Identity Service] verwenden XDM-Daten, während sie in einen Datensatz aufgenommen werden. Anweisungen zum Hochladen von Daten in einen Datensatz finden Sie im Tutorial zum Erstellen eines Datensatzes mithilfe von APIs](../../catalog/datasets/create.md). [ Beachten Sie bei der Planung der an Ihren [!DNL Profile]-aktivierten Datensatz zu sendenden Daten die folgenden Best Practices:
+Beide [!DNL Real-time Customer Profile] und [!DNL Identity Service] XDM-Daten bei der Erfassung in einen Datensatz verwenden. Anweisungen zum Hochladen von Daten in einen Datensatz finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe von APIs](../../catalog/datasets/create.md). Bei der Planung, welche Daten an Ihre [!DNL Profile]-aktivierter Datensatz. Beachten Sie die folgenden Best Practices:
 
 - Schließen Sie alle Daten ein, die Sie als Segmentierungskriterien verwenden möchten.
-- Fügen Sie so viele Identifikatoren ein, wie Sie aus Ihren Profildaten erkennen können, um Ihr Identitätsdiagramm zu maximieren. Dadurch kann [!DNL Identity Service] Identitäten besser über Datensätze hinweg zuordnen.
+- Fügen Sie so viele Identifikatoren ein, wie Sie aus Ihren Profildaten erkennen können, um Ihr Identitätsdiagramm zu maximieren. Dies ermöglicht Folgendes [!DNL Identity Service] , um Identitäten effektiver über Datensätze hinweg zuzuordnen.
 
-## Datenerfassung bestätigen mit [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
+## Datenaufnahme bestätigen durch [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
 
-Beim erstmaligen Hochladen von Daten in einen neuen Datensatz oder im Rahmen eines Prozesses mit einem neuen ETL oder einer neuen Datenquelle wird empfohlen, die Daten sorgfältig zu überprüfen, um sicherzustellen, dass sie erwartungsgemäß hochgeladen wurden. Mit der Zugriffs-API [!DNL Real-time Customer Profile] können Sie Batch-Daten abrufen, während sie in einen Datensatz geladen werden. Wenn Sie keine der erwarteten Entitäten abrufen können, ist Ihr Datensatz möglicherweise nicht für [!DNL Real-time Customer Profile] aktiviert. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen. Detaillierte Anweisungen zur Verwendung der [!DNL Real-time Customer Profile]-API für den Zugriff auf [!DNL Profile]-Daten finden Sie im [Entitäts-Endpunkthandbuch](../../profile/api/entities.md), auch als &quot;[!DNL Profile Access]&quot;-API bezeichnet.
+Beim erstmaligen Hochladen von Daten in einen neuen Datensatz oder im Rahmen eines Prozesses mit einem neuen ETL oder einer neuen Datenquelle wird empfohlen, die Daten sorgfältig zu überprüfen, um sicherzustellen, dass sie erwartungsgemäß hochgeladen wurden. Verwenden der [!DNL Real-time Customer Profile] Auf API zugreifen, können Sie Batch-Daten abrufen, während sie in einen Datensatz geladen werden. Wenn Sie keine der erwarteten Entitäten abrufen können, wird Ihr Datensatz möglicherweise nicht für [!DNL Real-time Customer Profile]. Nachdem Sie bestätigt haben, dass Ihr Datensatz aktiviert wurde, stellen Sie sicher, dass Ihr Quelldatenformat und Ihre Identifikatoren Ihre Erwartungen unterstützen. Detaillierte Anweisungen zur Verwendung der [!DNL Real-time Customer Profile] API für den Zugriff [!DNL Profile] Daten, siehe [Endpunktleitfaden für Entitäten](../../profile/api/entities.md), auch als bezeichnet[!DNL Profile Access]&quot;API.
 
 ## Datenerfassung durch Identity Service bestätigen {#confirm-data-ingest-by-identity-service}
 
-Jedes erfasste Datenfragment, das mehr als eine Identität enthält, erstellt einen Link in Ihrem privaten Identitätsdiagramm. Weitere Informationen zu Identitätsdiagrammen und zum Zugriff auf Identitätsdaten finden Sie in der [Übersicht über den Identitätsdienst](../../identity-service/home.md).
+Jedes erfasste Datenfragment, das mehr als eine Identität enthält, erstellt einen Link in Ihrem privaten Identitätsdiagramm. Für weitere Informationen zu Identitätsdiagrammen und zum Zugriff auf Identitätsdaten lesen Sie zunächst das [Identity Service - Übersicht](../../identity-service/home.md).

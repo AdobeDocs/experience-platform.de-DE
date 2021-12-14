@@ -5,7 +5,7 @@ title: Datensatz mit APIs erstellen
 topic-legacy: datasets
 description: In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines Datensatzes mithilfe der Adobe Experience Platform-APIs erläutert und aufgezeigt, wie der Datensatz anhand einer Datei befüllt wird.
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
 workflow-type: tm+mt
 source-wordcount: '1305'
 ht-degree: 87%
@@ -20,11 +20,11 @@ In diesem Dokument werden die grundlegenden Schritte für die Erstellung eines D
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md):  [!DNL Experience Platform] ermöglicht die Aufnahme von Daten als Batch-Dateien.
+* [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten als Batch-Dateien.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Platform]-APIs erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Platform] APIs.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -60,9 +60,9 @@ Diese Standarddefinitionen ermöglichen eine konsistente Interpretation der Date
 
 Dieses Tutorial setzt das im [Tutorial zur Schema Registry-API](../../xdm/tutorials/create-schema-api.md) Gelernte fort und greift dazu das darin erstellte „Loyalty Members“-Schema auf.
 
-Wenn Sie das Tutorial [!DNL Schema Registry] noch nicht abgeschlossen haben, beginnen Sie dort und fahren Sie mit diesem Tutorial nur fort, nachdem Sie das erforderliche Schema erstellt haben.
+Wenn Sie die [!DNL Schema Registry] Tutorial, beginnen Sie dort und fahren Sie mit diesem Tutorial nur fort, wenn Sie das erforderliche Schema erstellt haben.
 
-Mit dem folgenden Aufruf können Sie das Schema &quot;Loyalty Members&quot;anzeigen, das Sie im API-Tutorial [!DNL Schema Registry] erstellt haben:
+Der folgende Aufruf kann verwendet werden, um das &quot;Loyalty Members&quot;-Schema anzuzeigen, das Sie während der [!DNL Schema Registry] API-Tutorial:
 
 **API-Format**
 
@@ -214,7 +214,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->In diesem Tutorial wird für alle Beispiele das Dateiformat [Apache Parquet](https://parquet.apache.org/documentation/latest/) verwendet. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Tutorial wird die [Apache Parquet](https://parquet.apache.org/documentation/latest/) Dateiformat für alle Beispiele. Ein Beispiel unter Verwendung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 
@@ -246,7 +246,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'content-type: application/json' \
   -d '{
         "datasetId":"5c8c3c555033b814b69f947f"
@@ -317,7 +317,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c/datasets/5c8c3c555033b814b69f947f/files/loyaltyData.parquet' \
   -H 'content-type: application/octet-stream' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   --data-binary '@{FILE_PATH_AND_NAME}.parquet'
@@ -329,7 +329,7 @@ Bei erfolgreichem Upload einer Datei wird für diese ein leerer Antworttext und 
 
 ## Kennzeichnen der Fertigstellung eines Batches
 
-Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Durch die Kennzeichnung der Fertigstellung erstellt der Dienst [!DNL Catalog] `DataSetFile` Einträge für die hochgeladenen Dateien und ordnet sie dem zuvor generierten Batch zu. Der Batch [!DNL Catalog] wird als erfolgreich markiert, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
+Nachdem Sie alle Ihre Datendateien in den Batch hochgeladen haben, können Sie ihn als fertiggestellt kennzeichnen. Die Fertigstellung der Signatur bewirkt, dass der Dienst [!DNL Catalog] `DataSetFile` -Einträge für die hochgeladenen Dateien und verknüpfen sie mit dem zuvor generierten Batch. Die [!DNL Catalog] Batch wurde als erfolgreich markiert, wodurch alle nachgelagerten Flüsse Trigger werden, die dann mit den jetzt verfügbaren Daten arbeiten können.
 
 **API-Format**
 
@@ -345,7 +345,7 @@ POST /batches/{BATCH_ID}?action=COMPLETE
 
 ```SHELL
 curl -X POST "https://platform.adobe.io/data/foundation/import/batches/5d01230fc78a4e4f8c0c6b387b4b8d1c?action=COMPLETE" \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
@@ -373,7 +373,7 @@ GET /batches?batch={BATCH_ID}
 ```SHELL
 curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?batch=5d01230fc78a4e4f8c0c6b387b4b8d1c' \
-  -H 'x-api-key : {API_KEY}' \
+  -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMG_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}'
