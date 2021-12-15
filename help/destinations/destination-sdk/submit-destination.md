@@ -1,9 +1,10 @@
 ---
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten Ziels senden müssen.
 title: Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln
-source-git-commit: bc77614eee6cc50d2ce6b14c1b228ed87f88f340
+exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
+source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '568'
 ht-degree: 1%
 
 ---
@@ -211,10 +212,6 @@ Geben Sie die ID der Veröffentlichungsanforderung für Ihr Ziel an. Information
 ## Zieldokumentation PR (Pull-Anforderung) für produktionierte Integrationen
 
 Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und eine [produktive Integration](./overview.md#productized-custom-integrations), verwenden Sie die [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite für Ihr Ziel zu erstellen. Stellen Sie als Teil des Sendevorgangs die Pull-Anforderung (PA) für Ihre Zieldokumentation bereit.
-
-Beispiel-PRs von vorhandenen Integrationspartnern sind:
-* [Dokumentation zu Yahoo-Zielen - PR](https://github.com/AdobeDocs/experience-platform.en/pull/110);
-* [Dokumentation zum Flugziel PR](https://github.com/AdobeDocs/experience-platform.en/pull/54).
 
 ## Logo für Ihr Ziel
 
