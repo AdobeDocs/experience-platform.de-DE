@@ -6,10 +6,10 @@ title: Konfigurieren einer Customer AI-Instanz
 topic-legacy: Instance creation
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 899ea8502c80fa520df55ce63255e95cb5ad436d
+source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
 workflow-type: tm+mt
-source-wordcount: '2299'
-ht-degree: 13%
+source-wordcount: '2608'
+ht-degree: 11%
 
 ---
 
@@ -19,7 +19,7 @@ Die Customer AI als Teil von Intelligent Services ermöglicht es Ihnen, benutzer
 
 Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 
-## Einrichten Ihrer Instanz {#set-up-your-instance}
+## Erstellen einer Instanz {#set-up-your-instance}
 
 Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Dienste]** in der linken Navigation. Der Browser für **[!UICONTROL Dienste]** erscheint und zeigt alle Dienste an, die Ihnen zur Verfügung stehen. Wählen Sie im Container für Customer AI die Option **[!UICONTROL Öffnen]**.
 
@@ -48,7 +48,7 @@ Um eine neue Instanz zu erstellen, wählen Sie **[!UICONTROL Instanz erstellen]*
 
 ## Einrichten
 
-Der Workflow für die Instanzerstellung wird angezeigt, beginnend mit dem Schritt **[!UICONTROL Einrichtung]**.
+Der Workflow zur Instanzerstellung wird angezeigt, beginnend mit dem **[!UICONTROL Einrichten]** Schritt.
 
 Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Instanz angeben müssen:
 
@@ -156,9 +156,13 @@ Standardmäßig werden Tendenzwerte für alle Profile generiert, es sei denn, es
 
 Wenn Sie zusätzlich zur [Standardereignisfelder](../input-output.md#standard-events) von Customer AI verwendet wird, um Tendenzwerte zu generieren, wird eine benutzerdefinierte Ereignisoption bereitgestellt. Mit dieser Option können Sie zusätzliche Ereignisse hinzufügen, die Sie als einflussreich erachten, was die Qualität Ihres Modells verbessern und zu genaueren Ergebnissen beitragen kann. Wenn der ausgewählte Datensatz benutzerdefinierte Ereignisse enthält, die in Ihrem Schema definiert sind, können Sie sie zu Ihrer Instanz hinzufügen.
 
+>[!NOTE]
+>
+> Eine ausführliche Erklärung dazu, wie sich benutzerdefinierte Ereignisse auf die Ergebnisse der Customer AI-Bewertung auswirken, finden Sie im [Beispiel für benutzerspezifisches Ereignis](#custom-event) Abschnitt.
+
 ![Ereignisfunktion](../images/user-guide/event-feature.png)
 
-Um ein benutzerspezifisches Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Benutzerspezifisches Ereignis hinzufügen]**. Geben Sie anschließend einen benutzerdefinierten Ereignisnamen ein und ordnen Sie ihn dem Ereignisfeld in Ihrem Schema zu. Benutzerdefinierte Ereignisnamen werden anstelle des Feldwerts angezeigt, wenn Einflussfaktoren und andere Einblicke betrachtet werden. Das bedeutet, dass Benutzer-IDs, Reservierungs-IDs, Geräteinformationen und andere benutzerdefinierte Werte mit dem benutzerspezifischen Ereignisnamen anstelle der ID/des Ereigniswerts aufgelistet werden. Diese zusätzlichen benutzerspezifischen Ereignisse werden von Customer AI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
+Um ein benutzerspezifisches Ereignis hinzuzufügen, wählen Sie **[!UICONTROL Benutzerspezifisches Ereignis hinzufügen]**. Geben Sie anschließend einen benutzerdefinierten Ereignisnamen ein und ordnen Sie ihn dem Ereignisfeld in Ihrem Schema zu. Benutzerdefinierte Ereignisnamen werden anstelle des Feldwerts angezeigt, wenn Einflussfaktoren und andere Einblicke betrachtet werden. Das bedeutet, dass der benutzerdefinierte Ereignisname anstelle der ID/des Werts des Ereignisses verwendet wird. Weitere Informationen zur Anzeige benutzerspezifischer Ereignisse finden Sie unter [Beispielabschnitt für benutzerspezifische Ereignisse](#custom-event). Diese zusätzlichen benutzerspezifischen Ereignisse werden von Customer AI verwendet, um die Qualität Ihres Modells zu verbessern und genauere Ergebnisse zu liefern.
 
 ![Feld &quot;Benutzerspezifisches Ereignis&quot;](../images/user-guide/custom-event.png)
 
@@ -178,21 +182,31 @@ Sie können in Ihren Daten neben dem [Standardereignisfelder](../input-output.md
 
 >[!NOTE]
 >
->Das Hinzufügen eines benutzerdefinierten Profilattributs folgt demselben Workflow wie das Hinzufügen eines benutzerdefinierten Ereignisses.
+>Das Hinzufügen eines benutzerdefinierten Profilattributs folgt demselben Workflow wie das Hinzufügen eines benutzerdefinierten Ereignisses. Ähnlich wie bei benutzerspezifischen Ereignissen wirken sich benutzerdefinierte Profilattribute auf die Modellbewertung auf die gleiche Weise aus. Eine ausführliche Erläuterung finden Sie unter [Beispiel für benutzerspezifisches Ereignis](#custom-event) Abschnitt.
 
 ![Hinzufügen eines benutzerdefinierten Profilattributs](../images/user-guide/profile-attributes.png)
 
+### Beispiel für benutzerspezifisches Ereignis hinzufügen {#custom-event}
+
+Im folgenden Beispiel werden ein benutzerdefiniertes Ereignis und ein Profilattribut zu einer Customer AI-Instanz hinzugefügt. Ziel der Customer AI-Instanz ist es, die Wahrscheinlichkeit vorherzusagen, mit der ein Kunde in den nächsten 60 Tagen ein weiteres Luma-Produkt kaufen wird. Normalerweise werden Produktdaten mit einer Produkt-SKU verknüpft. In diesem Fall lautet die SKU `prd1013`. Nachdem das Customer AI-Modell trainiert/bewertet wurde, kann diese SKU mit einem Ereignis verknüpft und als Einflussfaktor für einen Tendenzbehälter angezeigt werden.
+
+Customer AI wendet automatisch die Generierung von Funktionen wie &quot;Tage seit&quot;oder &quot;Anzahl der&quot;gegen benutzerspezifische Ereignisse wie **Kauf ansehen**. Wenn dieses Ereignis als einflussreicher Faktor für die hohe, mittlere oder niedrige Neigung von Kunden betrachtet wurde, zeigt Customer AI es als `Days since prd1013 purchase` oder `Count of prd1013 purchase`. Wenn Sie dies als benutzerspezifisches Ereignis erstellen, können Sie dem Ereignis einen neuen Namen geben, um die Ergebnisse viel leichter zu lesen. Beispiel: `Days since Watch purchase`. Darüber hinaus verwendet Customer AI dieses Ereignis für Training und Scoring, selbst wenn es sich bei dem Ereignis nicht um ein Standardereignis handelt. Dies bedeutet, dass Sie mehrere Ereignisse hinzufügen können, die Ihrer Meinung nach Einfluss haben könnten, und Ihr Modell weiter anpassen können, indem Sie Daten wie Reservierungen, Besucherprotokolle und andere Ereignisse einschließen. Das Hinzufügen dieser Datenpunkte erhöht die Genauigkeit und Genauigkeit Ihres Customer AI-Modells weiter.
+
+![Beispiel für ein benutzerspezifisches Ereignis](../images/user-guide/custom-event-name.png)
+
+## Optionen festlegen
+
+Im Schritt &quot;Optionen festlegen&quot;können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren und die **[!UICONTROL Profil]** Ein/Aus.
+
 ### Zeitplan konfigurieren *(optional)* {#configure-a-schedule}
 
-Die **[!UICONTROL Erweitert]** angezeigt. Mit diesem optionalen Schritt können Sie einen Zeitplan konfigurieren, um die Ausführung von Prognosen zu automatisieren, Prognoseausschlüsse zum Filtern bestimmter Ereignisse definieren oder **[!UICONTROL Beenden]** wenn nichts erforderlich ist.
-
-Richten Sie einen Auswertungszeitplan ein, indem Sie die **[!UICONTROL Auswertungshäufigkeit]** festlegen. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
+Um einen Scoring-Zeitplan einzurichten, konfigurieren Sie zunächst die **[!UICONTROL Scoring-Häufigkeit]**. Die Ausführung automatisierter Prognosen kann entweder wöchentlich oder monatlich geplant werden.
 
 ![](../images/user-guide/schedule.png)
 
-### Prognoseausschlüsse
+### Prognoseausschlüsse *(optional)*
 
-Wenn Ihr Datensatz Spalten enthielt, die als Testdaten hinzugefügt wurden, können Sie diese Spalte oder dieses Ereignis einer Ausschlussliste hinzufügen, indem Sie **Ausschluss hinzufügen** gefolgt von der Eingabe des Felds, das Sie ausschließen möchten. Dadurch wird verhindert, dass Ereignisse, die bestimmte Bedingungen erfüllen, beim Generieren von Werten ausgewertet werden. Diese Funktion kann verwendet werden, um irrelevante Dateneingaben oder bestimmte Promotions herauszufiltern.
+Wenn Ihr Datensatz Spalten enthielt, die als Testdaten hinzugefügt wurden, können Sie diese Spalte oder dieses Ereignis einer Ausschlussliste hinzufügen, indem Sie **[!UICONTROL Ausschluss hinzufügen]** gefolgt von der Eingabe des Felds, das Sie ausschließen möchten. Dadurch wird verhindert, dass Ereignisse, die bestimmte Bedingungen erfüllen, beim Generieren von Werten ausgewertet werden. Diese Funktion kann verwendet werden, um irrelevante Dateneingaben oder Promotions herauszufiltern.
 
 Um ein Ereignis auszuschließen, wählen Sie **[!UICONTROL Ausschluss hinzufügen]** und definieren Sie das Ereignis. Um einen Ausschluss zu entfernen, wählen Sie die Auslassungszeichen (**[!UICONTROL ...]**) oben rechts neben dem Ereigniscontainer und wählen Sie **[!UICONTROL Container löschen]**.
 
@@ -202,7 +216,7 @@ Um ein Ereignis auszuschließen, wählen Sie **[!UICONTROL Ausschluss hinzufüge
 
 Mit dem Profil -Umschalter kann Customer AI die Scoring-Ergebnisse in das Echtzeit-Kundenprofil exportieren. Durch Deaktivieren dieses Umschalters wird verhindert, dass die Ergebnisse der Modellbewertung zum Profil hinzugefügt werden. Die Ergebnisse der Customer AI-Bewertung sind weiterhin verfügbar, wenn diese Funktion deaktiviert ist.
 
-Wenn Sie Customer AI zum ersten Mal verwenden, sollten Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass Sie mehrere Scoring-Datensätze in das Echtzeit-Kundenprofil hochladen und gleichzeitig Ihr Modell optimieren.
+Wenn Sie Customer AI zum ersten Mal verwenden, können Sie diese Funktion deaktivieren, bis Sie mit den Modellausgabeergebnissen zufrieden sind. Dadurch wird verhindert, dass Sie mehrere Scoring-Datensätze in Ihre Kundenprofile hochladen und gleichzeitig Ihr Modell optimieren. Nachdem Sie die Kalibrierung Ihres Modells abgeschlossen haben, können Sie das Modell mit der [Klonoption](#set-up-your-instance) von **Dienstinstanzen** Seite. Auf diese Weise können Sie eine Kopie Ihres Modells erstellen und das Profil aktivieren.
 
 ![Profil-Umschalter](../images/user-guide/advanced-workflow.png)
 
