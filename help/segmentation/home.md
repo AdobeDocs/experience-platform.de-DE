@@ -5,10 +5,10 @@ title: Übersicht über den Segmentierungsdienst
 topic-legacy: overview
 description: Erfahren Sie mehr über den Segmentierungsdienst von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 9e73925b0842c3b67db8bfda4b984bfa3e98a2fe
+source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 7%
+source-wordcount: '1507'
+ht-degree: 8%
 
 ---
 
@@ -61,18 +61,6 @@ Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentati
 Als Alternative zu einem laufenden Datenauswahlprozess verschiebt die Batch-Segmentierung alle Profildaten gleichzeitig durch Segmentdefinitionen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird dieses Segment gespeichert, sodass Sie es zur Verwendung exportieren können.
 
 Batch-Segmente werden automatisch alle 24 Stunden ausgewertet. Wenn Sie ein Batch-Segment bei Bedarf auswerten möchten, können Sie einen Segmentauftrag verwenden. Weitere Informationen zu Segmentaufträgen finden Sie im Abschnitt [Dokumentation zu Segmentaufträgen](./api/segment-jobs.md).
-
-**Inkrementelle Segmentierung (Beta)**
-
-Batch-Segmente werden alle 24 Stunden ausgewertet. Bei vorhandenen Segmenten bleiben die Segmente jedoch durch die inkrementelle Segmentierung bis zu einer Stunde frisch.
-
-Inkrementelle Segmentierung wird für neue Daten ausgeführt, die in den Profilspeicher gelangen. Die folgenden Einschränkungen gelten jedoch für die inkrementelle Segmentierung:
-
-- Bei neuen oder kürzlich geänderten Segmenten werden Profile mit neuen Daten im nächsten inkrementellen Lauf qualifiziert. Profile ohne Änderungen werden jedoch im nächsten vollständigen Batch-Segmentierungsauftrag nachgeholt.
-- Bei der inkrementellen Segmentierung werden Segmente mit mehreren Entitäten aktualisiert. Im Falle von Entitätsaktualisierungen werden alle Profile mit neuen Daten diese im nächsten inkrementellen Verlauf verwenden. Profile ohne Änderungen werden jedoch beim nächsten vollständigen Batch-Segmentierungsauftrag nachgeholt.
-- Ereignisse, die aus dem Zeitfenster eines Segments entfernt werden, werden im nächsten vollständigen Batch-Segmentierungsauftrag abgestimmt.
-
-Informationen zum Auswerten von Segmenten finden Sie unter [Tutorial zur Segmentbewertung](./tutorials/evaluate-a-segment.md).
 
 ### Edge-Segmentierung
 
