@@ -5,9 +5,9 @@ title: Übersicht über den Audience Manager Source Connector
 topic-legacy: overview
 description: Der Adobe Audience Manager-Quell-Connector streamt Erstanbieterdaten, die im Audience Manager erfasst wurden, an Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: d0b6885b6e8606692cfe1173b75c7d3537800a5f
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '927'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Der Adobe Audience Manager-Data Connector streamt Erstanbieterdaten, die in Adob
 
 Der Audience Manager-Connector ordnet diese Datenkategorien dem Experience-Datenmodell (XDM)-Schema zu und sendet sie an Platform. Echtzeitdaten werden als XDM ExperienceEvent-Daten gesendet, während Profildaten als XDM Individual Profiles gesendet werden.
 
-Anweisungen zum Erstellen einer Verbindung mit Adobe Audience Manager mithilfe der Platform-Benutzeroberfläche finden Sie im [Audience Manager-Connector-Tutorial](../../tutorials/ui/create/adobe-applications/audience-manager.md).
+Anweisungen zum Erstellen einer Verbindung mit Adobe Audience Manager mithilfe der Platform-Benutzeroberfläche finden Sie in der [Audience Manager-Connector-Tutorial](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## Was ist Experience-Datenmodell (XDM)?
 
@@ -29,7 +29,7 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die ein standardisiertes F
 
 Durch die Einhaltung von XDM-Standards können Kundenerlebnisdaten einheitlich integriert werden, was die Bereitstellung von Daten und das Sammeln von Informationen erleichtert.
 
-Weitere Informationen zur Verwendung von XDM in Experience Platform finden Sie unter [XDM-Systemübersicht](../../../xdm/home.md). Weitere Informationen zur Struktur von XDM-Schemas wie Profil und ExperienceEvent finden Sie in den [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md).
+Weitere Informationen zur Verwendung von XDM in Experience Platform finden Sie unter [XDM-System - Übersicht](../../../xdm/home.md). Weitere Informationen zur Struktur von XDM-Schemas wie Profil und ExperienceEvent finden Sie in der [Grundlagen der Schemakomposition](../../../xdm/schema/composition.md).
 
 ## Beispiele für XDM-Schemas
 
@@ -45,7 +45,7 @@ Im Folgenden finden Sie Beispiele für die Audience Manager-Struktur, die XDM Ex
 
 ## Wie werden Felder von Adobe Audience Manager XDM zugeordnet?
 
-Weitere Informationen finden Sie in der Dokumentation zu [Audience Manager-Mapping-Feldern](./mapping/audience-manager.md) .
+Weitere Informationen finden Sie in der Dokumentation für [Audience Manager-Zuordnungsfelder](./mapping/audience-manager.md) für weitere Informationen.
 
 ## Daten-Management in Platform
 
@@ -55,20 +55,24 @@ Datensätze sind ein Speicher- und Verwaltungskonstrukt für eine Datenerfassung
 
 Audience Manager-Datensätze sind standardmäßig für Profil deaktiviert und Benutzer können Datensätze anhand ihrer Anwendungsfälle aktivieren oder deaktivieren. Es wird nicht empfohlen, Datensätze zu deaktivieren, die für die Segmentzugehörigkeit in Profil verwendet werden.
 
-| Datensatzname | Beschreibung |
-| ------------ | ----------- |
-| AAM Echtzeit | Dieser Datensatz enthält Daten, die von direkten Treffern auf Audience Manager-DCS-Endpunkten erfasst werden, und Identitätszuordnungen für Audience Manager-Profile. Lassen Sie diesen Datensatz für die Profilaufnahme aktiviert. |
-| AAM Echtzeit-Profilaktualisierungen | Dieser Datensatz ermöglicht das Echtzeit-Targeting von Audience Manager-Eigenschaften und -Segmenten. Sie enthält Informationen zum regionalen Routing, zu Eigenschaften und zur Segmentzugehörigkeit von Edge. Lassen Sie diesen Datensatz für die Profilaufnahme aktiviert. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
-| AAM Gerätedaten | Gerätedaten mit ECIDs und entsprechenden Segmentrealisierungen, die in Audience Manager aggregiert werden. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
-| AAM Geräteprofildaten | Wird für die Audience Manager-Connector-Diagnose verwendet. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
-| AAM authentifizierte Profile | Dieser Datensatz enthält vom Audience Manager authentifizierte Profile. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
-| AAM Authentifizierte Profilmetrikdaten | Wird für die Audience Manager Connector-Diagnose verwendet. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
-| Datenaufstockung für AAM Geräte | Datensatz aus dem Einbringen von Daten früherer Geräte. Dies umfasst ECIDs und entsprechende in Audience Manager aggregierte Segmentrealisierungen. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
-| Aufstockung authentifizierter AAM | Datensatz aus dem Einbringen authentifizierter Daten in die Vergangenheit. Hier sind vom Audience Manager authentifizierte Profile enthalten. Daten sind nicht als Batches im Datensatz sichtbar. Sie können den Umschalter **[!UICONTROL Profil]** aktivieren, um die Daten direkt in Profil aufzunehmen. |
+>[!NOTE]
+>
+>AAM Echtzeit ist der einzige Datensatz, der an die [!DNL Data Lake]. Alle anderen Audience Manager-Datensätze werden an [!DNL Profile], wenn sie für [!DNL Profile]. Wenn sie nicht aktiviert sind für [!DNL Profile], erhalten sie keine Daten und werden als leer angezeigt.
+
+| Datensatzname | Beschreibung | Klasse |
+| --- | --- | --- |
+| AAM Echtzeit | Dieser Datensatz enthält Daten, die von direkten Treffern auf Audience Manager-DCS-Endpunkten erfasst werden, und Identitätszuordnungen für Audience Manager-Profile. Lassen Sie diesen Datensatz für die Profilaufnahme aktiviert. | Erlebnisereignis |
+| AAM Echtzeit-Profilaktualisierungen | Dieser Datensatz ermöglicht das Echtzeit-Targeting von Audience Manager-Eigenschaften und -Segmenten. Sie enthält Informationen zum regionalen Routing, zu Eigenschaften und zur Segmentzugehörigkeit von Edge. Lassen Sie diesen Datensatz für die Profilaufnahme aktiviert. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
+| AAM Gerätedaten | Gerätedaten mit ECIDs und entsprechenden Segmentrealisierungen, die in Audience Manager aggregiert werden. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
+| AAM Geräteprofildaten | Wird für die Audience Manager-Connector-Diagnose verwendet. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
+| AAM authentifizierte Profile | Dieser Datensatz enthält vom Audience Manager authentifizierte Profile. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
+| AAM Authentifizierte Profilmetrikdaten | Wird für die Audience Manager Connector-Diagnose verwendet. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
+| Datenaufstockung für AAM Geräte | Datensatz aus dem Einbringen von Daten früherer Geräte. Dies umfasst ECIDs und entsprechende in Audience Manager aggregierte Segmentrealisierungen. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
+| Aufstockung authentifizierter AAM | Datensatz aus dem Einbringen authentifizierter Daten in die Vergangenheit. Hier sind vom Audience Manager authentifizierte Profile enthalten. Daten sind nicht als Batches im Datensatz sichtbar. Sie können die **[!UICONTROL Profil]** umschalten, um die Daten direkt in Profil zu erfassen. | Datensatz |
 
 ### Verbindungen
 
-Adobe Audience Manager erstellt eine Verbindung im Katalog: Audience Manager-Verbindung. Catalog ist das System der Datensätze für Speicherort und Herkunft von Daten in Adobe Experience Platform. Eine Verbindung ist ein Catalog-Objekt, das eine kundenspezifische Instanz von Connectoren ist. Weitere Informationen zu Katalog, Verbindungen und Connectoren finden Sie in der [Übersicht über den Katalogdienst](../../../catalog/home.md) .
+Adobe Audience Manager erstellt eine Verbindung im Katalog: Audience Manager-Verbindung. Catalog ist das System der Datensätze für Speicherort und Herkunft von Daten in Adobe Experience Platform. Eine Verbindung ist ein Catalog-Objekt, das eine kundenspezifische Instanz von Connectoren ist. Siehe [Catalog Service - Übersicht](../../../catalog/home.md) Weitere Informationen zu Katalog, Verbindungen und Connectoren.
 
 ## Wie hoch ist die erwartete Latenz für Audience Manager Data on Platform?
 
