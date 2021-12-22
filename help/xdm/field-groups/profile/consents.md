@@ -4,7 +4,7 @@ title: Einverständnis und Voreinstellungsfeldgruppe
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemafeldergruppe "Einwilligungen und Voreinstellungen".
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 0%
@@ -178,7 +178,7 @@ Die `adID` Das Einverständnis stellt die Zustimmung des Kunden dar, ob eine Adv
 
 Um die [!UICONTROL Einverständnis und Voreinstellungen] -Feldergruppe verwenden, um Einwilligungsdaten von Ihren Kunden zu erfassen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diese Feldergruppe enthält.
 
-Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Feldergruppen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe, siehe Abschnitt [Erstellen eines Datensatzes](../../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
+Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Feldergruppen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Feldergruppe, siehe Abschnitt [Erstellen eines Datensatzes](../../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
 
 >[!IMPORTANT]
 >

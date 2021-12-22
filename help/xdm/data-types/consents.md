@@ -4,7 +4,7 @@ title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
 workflow-type: tm+mt
 source-wordcount: '2039'
 ht-degree: 2%
@@ -21,8 +21,8 @@ In diesem Dokument werden die Struktur und die beabsichtigte Verwendung der Feld
 
 Dieses Dokument erfordert ein Verständnis von XDM und die Verwendung der Schemas in [!DNL Experience Platform]. Lesen Sie die folgende Dokumentation, bevor Sie fortfahren:
 
-* [XDM-System – Übersicht](http://www.adobe.com/go/xdm-home-en)
-* [Grundlagen der Schemakomposition](http://www.adobe.com/go/xdm-schema-best-practices-en)
+* [XDM-System – Übersicht](https://www.adobe.com/go/xdm-home-en)
+* [Grundlagen der Schemakomposition](https://www.adobe.com/go/xdm-schema-best-practices-en)
 
 ## Datentypstruktur {#structure}
 
@@ -255,7 +255,7 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 
 Um die [!UICONTROL Einverständnis und Voreinstellungen] -Datentyp verwenden, um Einwilligungsdaten von Ihren Kunden zu erfassen, müssen Sie einen Datensatz erstellen, der auf einem Schema basiert, das diesen Datentyp enthält.
 
-Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Datentypen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Datentyp, siehe Abschnitt . [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
+Siehe Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](https://www.adobe.com/go/xdm-schema-editor-tutorial-en) für Schritte zum Zuweisen von Datentypen zu Feldern. Nachdem Sie ein Schema erstellt haben, das ein Feld mit der [!UICONTROL Einverständnis und Voreinstellungen] Datentyp, siehe Abschnitt . [Erstellen eines Datensatzes](../../catalog/datasets/user-guide.md#create) Führen Sie im Benutzerhandbuch zu Datensätzen die Schritte zum Erstellen eines Datensatzes mit einem vorhandenen Schema aus.
 
 >[!IMPORTANT]
 >
