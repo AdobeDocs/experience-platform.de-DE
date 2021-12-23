@@ -5,9 +5,9 @@ title: Erste Schritte mit Real-time Customer Data Platform B2B Edition
 description: Verwenden Sie dieses Szenario als Beispiel, wenn Sie Ihre Implementierung von Real-Time Customer Data Platform einrichten.
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: 9bd7434f2b224d76decac1e04d8491a6b3149a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1205'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ In diesem im Tutorial gezeigten Verfahren werden mehrere Adobe Experience Platfo
 Im Rahmen der Ersteinrichtung muss die IT-Abteilung von Bodea ein XDM-Schema erstellen, um sicherzugehen, dass die Daten beim Einlesen in Platform einem Standardformat entsprechen und auf verschiedenen Platform-Services und Adobe Experience Cloud-Produkten (wie Adobe Analytics und Adobe Target) verarbeitet werden können.
 
 >!![WARNING]
-Sie müssen die Erfassungsmuster befolgen, wie in der entsprechenden Quelldokumentation beschrieben, die in diesem Tutorial mit verknüpft ist. Andere Feldzuordnungsmethoden funktionieren nicht mit Sicherheit.
+Sie müssen die Aufnahmemuster befolgen, wie in der entsprechenden Quelldokumentation beschrieben, die mit diesem Tutorial verknüpft ist. Andere Feldzuordnungsmethoden funktionieren nicht immer.
 
 Mit Adobe Experience Platform können Sie automatisch die Schemas und Namespaces generieren, die für B2B-Datenquellen erforderlich sind. Dieses Werkzeug stellt sicher, dass die erstellten Schemas die Daten in einer strukturierten, wiederverwendbaren Weise beschreiben. Eine vollständige Beschreibung des Einrichtungsprozesses finden Sie in der [Dokumentation zu B2B-Namespaces und dem Dienstprogramm zur automatischen Schemaerstellung](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
