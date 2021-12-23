@@ -2,7 +2,7 @@
 title: Übersicht über Tags
 description: Tags in Adobe Experience Platform sind die nächste Generation von Funktionen für das Tag-Management von Adobe. Tags bieten Kunden eine einfache Möglichkeit, alle Analyse-, Marketing- und Werbe-Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse notwendig sind.
 exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 4f31c77fd3efe06797055ca04a30ae5ff4872b4e
 workflow-type: tm+mt
 source-wordcount: '562'
 ht-degree: 100%
@@ -21,23 +21,23 @@ Tags ermöglichen jedem das Aufbauen und Verwalten eigener Integrationen (auch *
 
 Tags werden [!DNL Adobe Experience Cloud]-Kunden als inbegriffene Mehrwertfunktion angeboten.
 
-## Wesentliche Vorteile
+## Wesentliche Vorteile {#key-benefits}
 
 * Schnellere Amortisierungszeit.
 * Vertrauenswürdige Daten durch zentrale Erfassung, Organisation und Bereitstellung mithilfe von Datenelementen.
 * Attraktive Elebnisse durch die Integration von Daten und Marketingtechnologie mithilfe von Regel-Builder.
 
-## Wichtigste Funktionen
+## Wichtigste Funktionen {#key-features}
 
-### Erweiterungen
+### Erweiterungen {#extensions}
 
 Eine Erweiterung ist ein Paket mit Code (JavaScript, HTML und CSS) zur Erweiterung der Tag-Funktionalität. Erstellen, verwalten und aktualisieren Sie Ihre Integrationen mithilfe einer praktischen Self-Service-Oberfläche. Sie können sich Erweiterungen als Programme vorstellen, mit denen Sie Ihre Aufgaben erledigen.
 
-### Erweiterungskatalog
+### Erweiterungskatalog {#extension-catalog}
 
 Sie können von unabhängigen Softwareherstellern erstellte und gewartete Tools für Marketing/Werbung durchsuchen, konfigurieren und bereitstellen.
 
-### Regel-Builder
+### Regel-Builder {#rule-builder}
 
 Erstellen Sie zuverlässige Regeln, die mehrere Ereignisse miteinander kombinieren und so aufeinander folgen lassen, wie Sie es mithilfe der Wenn-dann-Logik mit Bedingungen und Ausnahmen bestimmen. Regeln bieten Optionen für:
 
@@ -50,11 +50,11 @@ Der Regel-Builder beinhaltet eine Echtzeit-Fehlerprüfung und Syntaxhervorhebung
 
 Wenn die in Ihren Regeln angegebenen Kriterien erfüllt sind und die entsprechenden Bedingungen ebenfalls erfüllt sind, werden die von Ihnen definierten Aktionen in der angegebenen Reihenfolge ausgeführt.
 
-### Datenelemente
+### Datenelemente {#data-elements}
 
 Sie können Daten für webbasierte Marketing- und Werbetechnologie erfassen, organisieren und bereitstellen.
 
-### Veröffentlichung für Unternehmen
+### Veröffentlichung für Unternehmen {#enterprise-publishing}
 
 Durch den Veröffentlichungsprozess können Teams Code auf Seiten veröffentlichen. Unterschiedliche Personen können eine Implementierung erstellen, genehmigen und auf Ihren Seiten veröffentlichen.
 
@@ -64,7 +64,7 @@ Durch den Veröffentlichungsprozess können Teams Code auf Seiten veröffentlich
 * Unbegrenzte Entwicklungsumgebungen&#x200B;
 * Ein absichtlicher, berechtigungsbasierter Prozess zum Zusammenführen von Bibliotheken.
 
-### Sie können APIs öffnen
+### Sie können APIs öffnen {#open-apis}
 
 Sie können Implementierungen einzelner Technologien oder einer Gruppe von Technologien automatisieren.
 
@@ -73,11 +73,11 @@ Sie können Implementierungen einzelner Technologien oder einer Gruppe von Techn
 * Integrieren Sie die -APIs in Ihre eigenen internen Systeme.
 * Sie können bei Bedarf Ihre eigene Benutzeroberfläche erstellen.
 
-### Einfaches, modulares Container-Tag
+### Einfaches, modulares Container-Tag {#modular-tag}
 
 Der Inhalt Ihres Containers wird minimiert, einschließlich Ihres benutzerspezifischen Codes. Alles ist modular. Wenn Sie ein Element nicht benötigen, ist es nicht in Ihrer Bibliothek enthalten. Das Ergebnis ist eine schnelle und kompakte Implementierung. Siehe [Minimierung](./ui/publishing/builds.md).
 
-## Weitere Besonderheiten
+## Weitere Besonderheiten {#other-highlights}
 
 Tags bieten verschiedene Verbesserungen im Vergleich zu ähnlichen Systemen. Dazu zählen unter anderem folgende:
 

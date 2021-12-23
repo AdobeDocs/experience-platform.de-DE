@@ -3,16 +3,16 @@ keywords: Tag-Erweiterungen; Tag-Erweiterung; Launch-Ziele; Platform-Tag-Erweite
 title: Tag-Erweiterungen in Adobe Experience Platform
 description: Adobe Experience Platform verfügt über die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: 272cf2906b44ccfeca041d9620ac0780e24ad1ae
+source-git-commit: fe71294cb73a25c2c4708b0a6ebe04fc2b97afdf
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 100%
+source-wordcount: '486'
+ht-degree: 81%
 
 ---
 
 # Tag-Erweiterungen in Adobe Experience Platform
 
-Adobe Experience Platform verfügt über die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten.
+Adobe Experience Platform bietet die nächste Generation von Tag-Management-Funktionen von Adobe. Platform bietet Ihnen eine einfache Möglichkeit zum Bereitstellen und Verwalten aller Analyse-, Marketing- und Werbe-Tags, die für relevante Kundenerlebnisse benötigt werden. Tags werden Adobe Experience Cloud-Kunden als integrierte Mehrwertfunktion angeboten.
 
 Eine Einführung in Tags finden Sie in den folgenden Ressourcen:
 
@@ -27,11 +27,21 @@ Um die Erweiterungen in der Platform-Benutzeroberfläche zu finden, navigieren S
 
 ## Funktionsweise von Tag-Erweiterungen {#how-extensions-work}
 
-Erweiterungen leiten Ereignis-Rohdaten an verschiedene Typen von Zielen weiter. Stellen Sie sich Erweiterungen als eine Art Ziel für die **Ereignisweiterleitung** vor. Dabei handelt es sich um eine einfachere Art der Integration mit Zielplattformen, die nur Rohdaten für Ereignisse weiterleiten. Beispiele hierfür sind die [Gainsight-Personalisierungserweiterung](../personalization/gainsight.md) oder die [Confirmit-Erweiterung „Stimme des Kunden“](../voice/confirmit-digital-feedback.md).
+A [Tag-Erweiterung](../../../tags/home.md#extensions) ist ein Code-Paket, das die Funktionalität einer Website oder App verbessert. Dazu kann das Senden von Rohdaten für Ereignisse an ein Ziel wie [Google Analytics](/help/destinations/catalog/analytics/google-universal-analytics.md) aber sie können auch andere Funktionen bedienen.
 
-**Profil-/Segmentexport-Ziele** in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, wenden Segmentierung an und exportieren Segmente und qualifizierte Profile in Ziele. Beispiele hierfür sind das [Amazon S3 Cloud-Speicher-Ziel](../cloud-storage/amazon-s3.md) oder das [Google Display &amp; Video 360-Werbeziel](../advertising/google-dv360.md).
+Es ist wichtig, zwischen Tag- und Ereignisweiterleitungs-Erweiterungen zu unterscheiden. Die in der Benutzeroberfläche der Platform-Ziele angezeigten Erweiterungen sind *Tag-Erweiterungen*. Weiterführende Informationen finden Sie in der Übersicht zur Ereignisweiterleitung . [Unterschiede zwischen Tags und Ereignisweiterleitung](/help/tags/ui/event-forwarding/overview.md#differences-between-event-forwarding-and-tags).
 
-![Tag-Erweiterungen im Vergleich zu anderen Zielen](../../assets/common/launch-and-other-destinations.png)
+
+
+<!--
+
+Extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
+
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+
+![Tag extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
+
+-->
 
 ## Vorteile der Verwendung von Tag-Erweiterungen {#extensions-benefits}
 
