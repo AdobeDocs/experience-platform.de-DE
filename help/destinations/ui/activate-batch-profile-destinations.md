@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 822276890b6ebed922d359f8dece58d8c90dea24
+source-git-commit: c0e6477907fa616aecebf57b0465d9f8d82c740a
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2187'
 ht-degree: 7%
 
 ---
@@ -89,10 +89,12 @@ Auswählen **[!UICONTROL Exportieren von vollständigen Dateien]** , um den Expo
    >
    >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Diese Einschränkung wird in zukünftigen Versionen behoben.
 
-1. Verwenden Sie die **[!UICONTROL Datum]** auswählen, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
-   >[!TIP]
+1. Verwenden Sie die **[!UICONTROL Datum]** auswählen, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll. Für tägliche Exporte empfiehlt es sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+
+   >[!IMPORTANT]
    >
-   > Legen Sie für tägliche Exporte Ihr Start- und Enddatum so fest, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+   > Bei der Auswahl eines Exportintervalls wird der letzte Tag des Intervalls nicht in die Exporte einbezogen. Wenn Sie beispielsweise ein Intervall vom 4. bis 11. Januar auswählen, findet der letzte Dateiexport am 10. Januar statt.
+
 1. Auswählen **[!UICONTROL Erstellen]** , um den Zeitplan zu speichern.
 
 
@@ -117,10 +119,12 @@ Auswählen **[!UICONTROL Inkrementelle Dateien exportieren]** , um einen Export 
    >
    >Aufgrund der Art und Weise, wie interne Experience Platform-Prozesse konfiguriert werden, enthält der erste inkrementelle oder vollständige Dateiexport möglicherweise nicht alle Aufstockungsdaten. <br> <br> Um einen vollständigen und aktuellsten Datenexport für die Aufstockung sowohl für vollständige als auch für inkrementelle Dateien sicherzustellen, empfiehlt Adobe, die erste Dateiexportzeit nach 22:00 Uhr GMT des folgenden Tages festzulegen. Diese Einschränkung wird in zukünftigen Versionen behoben.
 
-1. Verwenden Sie die **[!UICONTROL Datum]** auswählen, um den Tag oder das Intervall auszuwählen, an dem der Export stattfinden soll.
-   >[!TIP]
+1. Verwenden Sie die **[!UICONTROL Datum]** auswählen, um das Intervall auszuwählen, in dem der Export stattfinden soll. Es empfiehlt sich, Ihr Start- und Enddatum so festzulegen, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+
+   >[!IMPORTANT]
    >
-   >Legen Sie Ihr Start- und Enddatum so fest, dass es der Dauer Ihrer Kampagnen auf Ihren nachgelagerten Plattformen entspricht.
+   >Der letzte Tag des Intervalls ist nicht in den Exporten enthalten. Wenn Sie beispielsweise ein Intervall vom 4. bis 11. Januar auswählen, findet der letzte Dateiexport am 10. Januar statt.
+
 1. Auswählen **[!UICONTROL Erstellen]** , um den Zeitplan zu speichern.
 
 ### Dateinamen konfigurieren {#file-names}
