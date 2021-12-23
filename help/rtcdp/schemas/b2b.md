@@ -3,13 +3,13 @@ title: Schemas in Real-time Customer Data Platform B2B Edition
 description: Eine Übersicht über die Rolle von Experience-Datenmodell-Schemas (XDM) in Real-time Customer Data Platform B2B Edition.
 exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 source-git-commit: 1a104d26b920082ee73178dd0ad7234ad43dec1a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '235'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
-# Schemata in Real-time Customer Data Platform B2B Edition
+# Schemas in Real-time Customer Data Platform B2B Edition
 
 Real-time Customer Data Platform B2B Edition bietet mehrere standardmäßige [Experience-Datenmodell-Klassen (XDM)](../../xdm/schema/composition.md#class), die Details zu wesentlichen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen. Darüber hinaus können Sie mit Real-time Customer Data Platform B2B Edition zwischen diesen Schemas Viele-zu-Eins-Beziehungen definieren, sodass diese für erweiterte Segmentierungs-Anwendungsfälle verwendet werden können.
 
@@ -28,7 +28,7 @@ Die folgenden Standardklassen werden in Real-time Customer Data Platform B2B Edi
 * [XDM Business Marketing List](../../xdm/classes/b2b/business-marketing-list.md)
 * [XDM Business Marketing List Members](../../xdm/classes/b2b/business-marketing-list-members.md)
 
-Informationen dazu, wie Schemata in Ihren B2B-Workflow passen, finden Sie in der [End-to-End-Tutorial](../b2b-tutorial.md).
+Informationen dazu, wie Schemata in Ihren B2B-Workflow passen, finden Sie im [End-to-End-Tutorial](../b2b-tutorial.md).
 
 Anweisungen zum Erstellen einer n:1-Beziehung zwischen zwei Schemas finden Sie im Tutorial zum [Erstellen von B2B-Schemabeziehungen](../../xdm/tutorials/relationship-b2b.md).
 
