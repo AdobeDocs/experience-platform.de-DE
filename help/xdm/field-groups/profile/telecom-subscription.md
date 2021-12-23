@@ -5,31 +5,31 @@ title: Feldgruppe "Telecom Subscription Schema"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Feldergruppe "Telecom Subscription".
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '730'
 ht-degree: 8%
 
 ---
 
-# [!UICONTROL Feldgruppe &quot;Telecom ] Subscriptionschema&quot;
+# [!UICONTROL Telekom-Abonnement] Schemafeldgruppe
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Siehe Dokument unter [Namensaktualisierungen für Feldergruppen](../name-updates.md) für weitere Informationen.
 
-[!UICONTROL Telecom ] Subscriptionist eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md) Klasse, die den Telekom-Abonnementplan eines Kunden beschreibt, einschließlich Preisen, Paketen und individuellen Produktabonnements.
+[!UICONTROL Telekom-Abonnement] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) beschreibt den Telekom-Abonnementplan eines Kunden, einschließlich Preisen, Paketen und individuellen Produktabonnements.
 
-Die Feldergruppe stellt ein einzelnes Objekt-Feld bereit, `telecomSubscription`, dessen Eigenschaften unten beschrieben werden.
+Die Feldergruppe stellt ein einzelnes Feld vom Typ Objekt bereit, `telecomSubscription`, deren Eigenschaften nachfolgend beschrieben werden.
 
 ![Struktur der Telekommunikationsmitgliedschaft](../../images/field-groups/telecom-subscription/structure.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
-| `internetSubscription` | Array von Objekten | Beschreibt Details zum Internet-Abonnementplan wie Datenbegrenzung, Verbindungstyp und Geschwindigkeitsinformationen. Weitere Informationen finden Sie im Abschnitt [unter](#internetSubscription) . |
-| `landlineSubscription` | Array von Objekten | Beschreibt Details zum Festnetzabonnementplan, einschließlich ausgewählter Funktionen, Minuten und Wählplänen. Weitere Informationen finden Sie im Abschnitt [unter](#landlineSubscription) . |
-| `mediaSubscription` | Array von Objekten | Beschreibt Details zum Abonnementplan für Medien, einschließlich der Anzahl der Kanäle und der enthaltenen Streaming-Dienste. Weitere Informationen finden Sie im Abschnitt [unter](#mediaSubscription) . |
-| `mobileSubscription` | Array von Objekten | Beschreibt Details zum Mobile-Abonnementplan, einschließlich der Anzahl der Zeilen, Datenraten, Kosten und mehr. Weitere Informationen finden Sie im Abschnitt [unter](#mobileSubscription) . |
+| `internetSubscription` | Array von Objekten | Beschreibt Details zum Internet-Abonnementplan wie Datenbegrenzung, Verbindungstyp und Geschwindigkeitsinformationen. Siehe [Abschnitt unten](#internetSubscription) für weitere Informationen. |
+| `landlineSubscription` | Array von Objekten | Beschreibt Details zum Festnetzabonnementplan, einschließlich ausgewählter Funktionen, Minuten und Wählplänen. Siehe [Abschnitt unten](#landlineSubscription) für weitere Informationen. |
+| `mediaSubscription` | Array von Objekten | Beschreibt Details zum Abonnementplan für Medien, einschließlich der Anzahl der Kanäle und der enthaltenen Streaming-Dienste. Siehe [Abschnitt unten](#mediaSubscription) für weitere Informationen. |
+| `mobileSubscription` | Array von Objekten | Beschreibt Details zum Mobile-Abonnementplan, einschließlich der Anzahl der Zeilen, Datenraten, Kosten und mehr. Siehe [Abschnitt unten](#mobileSubscription) für weitere Informationen. |
 | `primarySubscriber` | [[!UICONTROL Person]](../../data-types/person.md) | Beschreibt den Inhaber des Abonnements. |
 | `bundleName` | Zeichenfolge | Erfasst den Namen aller Arten von Abonnement-Bundles, für die der Kunde angemeldet ist, z. B. `Internet + Media`. |
 | `primaryPartyID` | Zeichenfolge | Eine Kennung für die primäre Person, die für das Abonnement verantwortlich ist. Dabei kann es sich in der Regel um ihre Telefonnummer des Geräts handeln. |
@@ -43,7 +43,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `internetSubscription` {#internetSubscription}
 
-`internetSubscription` wird ein Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`internetSubscription` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
 
 ![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
@@ -60,7 +60,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `landlineSubscription` {#landlineSubscription}
 
-`landlineSubscription` wird ein Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`landlineSubscription` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
 
 ![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
@@ -83,7 +83,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `mediaSubscription` {#mediaSubscription}
 
-`mediaSubscription` wird ein Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`mediaSubscription` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
 
 ![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
@@ -97,7 +97,7 @@ Weitere Informationen zur Feldergruppe finden Sie im öffentlichen XDM-Repositor
 
 ## `mobileSubscription` {#mobileSubscription}
 
-`mobileSubscription` wird ein Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
+`mobileSubscription` wird als Array von Objekten bereitgestellt. Die Struktur der einzelnen Objekte wird nachfolgend beschrieben.
 
 ![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 

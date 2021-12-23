@@ -3,7 +3,7 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 82ce288d55e57f05910fd8290c38f44b1846f48e
+source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 14%
@@ -38,7 +38,7 @@ Ereignisweiterleitung in Kombination mit Adobe Experience Platform [Web SDK](../
 
 * Erhöhen Sie die Transparenz und Kontrolle darüber, welche Daten wohin über alle Eigenschaften hinweg gesendet werden.
 
-## Unterschiede zwischen Ereignisweiterleitung und Tags
+## Unterschiede zwischen Ereignisweiterleitung und Tags {#differences-from-tags}
 
 In Bezug auf die Konfiguration verwendet die Ereignisweiterleitung viele der gleichen Konzepte wie Tags, z. B. [Regeln](../managing-resources/rules.md), [Datenelemente](../managing-resources/data-elements.md)und [Erweiterungen](../managing-resources/extensions/overview.md). Der Hauptunterschied zwischen den beiden kann wie folgt zusammengefasst werden:
 
@@ -47,7 +47,7 @@ In Bezug auf die Konfiguration verwendet die Ereignisweiterleitung viele der gle
 
 Während Tags Ereignisdaten mithilfe der Platform Web- und Mobile-SDKs direkt von Ihrer Site oder nativen mobilen Anwendung erfassen, erfordert die Ereignisweiterleitung, dass Ereignisdaten bereits über das Platform Edge Network gesendet werden, um sie an Ziele weiterzuleiten. Mit anderen Worten: Sie müssen das Platform Web- oder Mobile-SDK in Ihre digitale Eigenschaft implementieren (entweder über Tags oder mithilfe von Rohcode), um die Ereignisweiterleitung verwenden zu können.
 
-### Eigenschaften
+### Eigenschaften {#properties}
 
 Die Ereignisweiterleitung verwaltet einen eigenen Speicher mit Eigenschaften, die von Tags getrennt sind. Diese können Sie in der Datenerfassungs-Benutzeroberfläche durch Auswahl von anzeigen **[!UICONTROL Ereignisweiterleitung]** in der linken Navigation.
 
@@ -61,13 +61,13 @@ Die Ereignisweiterleitung verfügt über einen eigenen Katalog kompatibler Erwei
 
 ![Erweiterungen für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/extensions.png)
 
-### Datenelemente
+### Datenelemente {#data-elements}
 
 Die in der Ereignisweiterleitung verfügbaren Datenelementtypen sind auf den Katalog kompatibler [Erweiterungen](#extensions) die sie bereitstellen.
 
 Während Datenelemente selbst in der Ereignisweiterleitung auf die gleiche Weise erstellt und konfiguriert werden wie Tags, gibt es einige wichtige Syntaxunterschiede bei der Referenzierung von Daten aus Platform Edge Network.
 
-#### Referenzieren von Daten aus Platform Edge Network
+#### Referenzieren von Daten aus Platform Edge Network {#edge}
 
 Um Daten aus Platform Edge Network zu referenzieren, müssen Sie ein Datenelement erstellen, das einen gültigen Pfad zu diesen Daten bereitstellt. Wählen Sie beim Erstellen des Datenelements in der Benutzeroberfläche die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Pfad]** für den Typ.
 
@@ -75,23 +75,23 @@ Die **[!UICONTROL Pfad]** -Wert für das Datenelement muss dem Muster entspreche
 
 ![Beispiel eines Datenelements vom Pfadtyp für die Ereignisweiterleitung](../../images/ui/event-forwarding/overview/data-reference.png)
 
-### Regeln
+### Regeln {#rules}
 
 Das Erstellen von Regeln in den Eigenschaften der Ereignisweiterleitung funktioniert ähnlich wie Tags, wobei der wesentliche Unterschied darin besteht, dass Sie Ereignisse nicht als Regelkomponenten auswählen können. Stattdessen verarbeitet eine Ereignisweiterleitungsregel alle Ereignisse, die sie vom [datastream](../../../edge/fundamentals/datastreams.md) und leitet diese Ereignisse an Ziele weiter, wenn bestimmte Bedingungen erfüllt sind.
 
 ![Regeln für die Ereignisweiterleitung in der Datenerfassungs-Benutzeroberfläche](../../images/ui/event-forwarding/overview/rules.png)
 
-#### Tokenisierung von Datenelementen
+#### Tokenisierung von Datenelementen {#tokenization}
 
 In Tag-Regeln werden Datenelemente mit einem -Token versehen. `%` am Anfang und am Ende des Datenelementnamens (z. B.: `%viewportHeight%`). In den Ereignisweiterleitungsregeln werden Datenelemente stattdessen mit einem -Token versehen `{{` am Anfang und `}}` am Ende des Datenelementnamens (z. B.: `{{viewportHeight}}`).
 
 ![Beispiel eines Datenelements vom Pfadtyp für die Ereignisweiterleitung](../../images/ui/event-forwarding/overview/tokenization.png)
 
-#### Sequenz von Regelaktionen
+#### Sequenz von Regelaktionen {#action-sequencing}
 
 Die [!UICONTROL Aktionen] -Abschnitt einer Ereignisweiterleitungsregel immer sequenziell ausgeführt wird. Stellen Sie beim Speichern einer Regel sicher, dass die Reihenfolge der Aktionen korrekt ist. Diese Ausführungssequenz kann nicht asynchron mit Tags ausgeführt werden.
 
-## Geheime Daten
+## Geheime Daten {#secrets}
 
 Mit der Ereignisweiterleitung können Sie Geheimnisse erstellen, verwalten und speichern, die für die Authentifizierung bei den Servern verwendet werden können, an die Sie Daten senden. Siehe Handbuch unter [Geheimnisse](./secrets.md) zu den verschiedenen Arten verfügbarer geheimer Typen und deren Implementierung in der Benutzeroberfläche.
 
