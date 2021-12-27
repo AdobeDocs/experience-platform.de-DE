@@ -69,7 +69,8 @@ Nachdem er nun über Authentifizierungsdaten verfügt, erstellt der Bodea-Market
 Der Marketo Engage-Quell-Connector bietet eine Funktion zur automatischen Zuordnung, mit der Sie all Ihre Datenfelder denen der neu erstellten Schemas zuordnen können.
 
 >[!NOTE]
-Wenn Sie benutzerdefinierte Feldergruppen in Ihren XDM-Schemas erstellt haben, verfügen Sie in dieser Phase des Prozesses möglicherweise über unverbundene Felder. Überprüfen Sie alle Werte in Ihren benutzerdefinierten Feldergruppen.
+>
+>Wenn Sie benutzerdefinierte Feldergruppen in Ihren XDM-Schemas erstellt haben, verfügen Sie in dieser Phase des Prozesses möglicherweise über unverbundene Felder. Überprüfen Sie alle Werte in Ihren benutzerdefinierten Feldergruppen.
 
 Der Bodea-Marketing-Experte prüft, ob alle Feldergruppen korrekt zugeordnet sind, und führt den Einrichtungsprozess der Quellen durch Initialisierung eines Datenflusses fort. Durch Erstellen eines Datenflusses zum Einlesen von Marketo-Daten können die eingehenden Daten von nachgelagerten Platform-Services verwendet werden. Während des anfänglichen Aufnahmevorgangs werden die Daten als Batch in Experience Platform übernommen. Danach werden nachfolgende aufgenommene Daten in nahezu Echtzeit an das Profil gestreamt.
 
@@ -96,7 +97,8 @@ Im Arbeitsbereich [!UICONTROL Segmente] der Platform-Benutzeroberfläche wählt 
 ![Aktivieren des Segments für ein Ziel](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
-Eine ausführliche Anleitung dazu finden Sie im Tutorial zum [Aktivieren eines Segments für ein Ziel](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de).
+>
+>Eine ausführliche Anleitung dazu finden Sie im Tutorial zum [Aktivieren eines Segments für ein Ziel](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=de).
 
 Der Bodea-Marketing-Experte aktiviert das Segment für das Marketo-Ziel, das es ihm ermöglicht, Segmentdaten in Form einer statischen Liste von Platform zu Marketo Engage zu übertragen. Weitere Informationen finden Sie im Handbuch zum [Marketo-Ziel](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=de).
 
