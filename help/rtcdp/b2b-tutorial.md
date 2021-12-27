@@ -30,8 +30,9 @@ In diesem im Tutorial gezeigten Verfahren werden mehrere Adobe Experience Platfo
 
 Im Rahmen der Ersteinrichtung muss die IT-Abteilung von Bodea ein XDM-Schema erstellen, um sicherzugehen, dass die Daten beim Einlesen in Platform einem Standardformat entsprechen und auf verschiedenen Platform-Services und Adobe Experience Cloud-Produkten (wie Adobe Analytics und Adobe Target) verarbeitet werden können.
 
->!![WARNING]
-Sie müssen die Aufnahmemuster befolgen, wie in der entsprechenden Quelldokumentation beschrieben, die mit diesem Tutorial verknüpft ist. Andere Feldzuordnungsmethoden funktionieren nicht immer.
+>![WARNING]
+>
+>Sie müssen die Aufnahmemuster befolgen, wie in der entsprechenden Quelldokumentation beschrieben, die mit diesem Tutorial verknüpft ist. Andere Feldzuordnungsmethoden funktionieren nicht immer.
 
 Mit Adobe Experience Platform können Sie automatisch die Schemas und Namespaces generieren, die für B2B-Datenquellen erforderlich sind. Dieses Werkzeug stellt sicher, dass die erstellten Schemas die Daten in einer strukturierten, wiederverwendbaren Weise beschreiben. Eine vollständige Beschreibung des Einrichtungsprozesses finden Sie in der [Dokumentation zu B2B-Namespaces und dem Dienstprogramm zur automatischen Schemaerstellung](../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -42,20 +43,24 @@ In der Adobe Experience Platform-Benutzeroberfläche wählt der Bodea-Marketing-
 Das Dienstprogramm zur automatischen Generierung definierte die Datenmodellstruktur für die Schemas mithilfe von standardmäßigen XDM-B2B-Klassen (wie [XDM Business Account](../xdm/classes/b2b/business-account.md) und [XDM Business Opportunity](../xdm/classes/b2b/business-opportunity.md)), die grundlegende B2B-Datenentitäten erfassen. Darüber hinaus verfügen die automatisch generierten B2B-Schemas, die auf diesen Klassen basieren, über vorab eingerichtete Beziehungen, die erweiterte Anwendungsfälle für die Segmentierung ermöglichen. Alle für die Datenstruktur erforderlichen zusätzlichen Feldergruppen können hier einfach über die Benutzeroberfläche erstellt werden. Weitere Informationen finden Sie im [Handbuch zur XDM-Benutzeroberfläche im Abschnitt zum Hinzufügen von Feldergruppen zu einem Schema](../xdm/ui/resources/schemas.md#add-field-groups).
 
 >[!NOTE]
-Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden oder eine neue Beziehung erstellen müssen, sehen Sie sich das Tutorial zum [Erstellen von Beziehungen zwischen B2B-Schemas](../xdm/tutorials/relationship-b2b.md) an.
+>
+>Wenn Sie das Dienstprogramm zur automatischen Generierung nicht verwenden oder eine neue Beziehung erstellen müssen, sehen Sie sich das Tutorial zum [Erstellen von Beziehungen zwischen B2B-Schemas](../xdm/tutorials/relationship-b2b.md) an.
 
 Das Echtzeit-Kundenprofil führt Daten aus unterschiedlichen Quellen zusammen, um konsolidierte Profile wichtiger B2B-Entitäten zu erstellen. Da Profile auf Basis einer einzelnen Klasse generiert werden, richtet das Dienstprogramm für die automatische Generierung basierend auf gängigen geschäftlichen Anwendungsfällen Beziehungen zwischen Schemas ein. Somit ist das Bodea-Team nun bereit, Daten basierend auf ihren B2B-Schemas aufzunehmen.
 
 >[!NOTE]
-Standardmäßige Identitäts-Namespaces, Primärschlüssel und Beziehungen, die vom Dienstprogramm zur automatischen Generierung für die Schemas erstellt wurden, können im Arbeitsbereich „Schema“ leicht gefunden werden.
-![Anzeige der standardmäßigen Schema-Identität und der Beziehung](./assets/b2b-tutorial/schema-identity-relationship.png)
+>
+>Standardmäßige Identitäts-Namespaces, Primärschlüssel und Beziehungen, die vom Dienstprogramm zur automatischen Generierung für die Schemas erstellt wurden, können im Arbeitsbereich „Schema“ leicht gefunden werden.
+>
+>![Anzeige der standardmäßigen Schema-Identität und der Beziehung](./assets/b2b-tutorial/schema-identity-relationship.png)
 
 ## Aufnehmen von Daten in Experience Platform
 
 Als Nächstes verwendet der Bodea-Marketing-Experte den [Marketo Engage-Connector](../sources/connectors/adobe-applications/marketo/marketo.md), um Daten in Platform aufzunehmen und für nachgelagerte Services zu verwenden. Sie können auch Daten aufnehmen, indem Sie eine der zugelassenen Quellen für Real-time Customer Data Platform B2B Edition verwenden.
 
 >[!NOTE]
-Welche Quell-Connectoren für Ihr Unternehmen verfügbar sind, erfahren Sie im Quellkatalog in der Platform-Benutzeroberfläche. Um auf den Katalog zuzugreifen, wählen Sie im linken Navigationsbereich zunächst **Quellen** und anschließend die Option **Katalog** aus.
+>
+>Welche Quell-Connectoren für Ihr Unternehmen verfügbar sind, erfahren Sie im Quellkatalog in der Platform-Benutzeroberfläche. Um auf den Katalog zuzugreifen, wählen Sie im linken Navigationsbereich zunächst **Quellen** und anschließend die Option **Katalog** aus.
 
 Um eine Verbindung zwischen einem Marketo-Account und Platform herzustellen, müssen Sie Authentifizierungsdaten anfordern. Detaillierte Anleitungen finden Sie im [Handbuch zum Erlangen der Authentifizierungsdaten für den Marketo-Quell-Connector](../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 
@@ -77,7 +82,8 @@ In diesem Beispiel findet das Segment alle Personen, die in der Verkaufsabteilun
 ![Anwendungsfallsegment](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
-Anweisungen zum Erstellen von Segmenten zur Auswertung Ihrer Daten finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](../segmentation/ui/segment-builder.md). Spezifischere Anwendungsfälle für die B2B-Segmentierung finden Sie in der [Segmentierungsübersicht für Real-time Customer Data Platform B2B Edition](./segmentation/b2b.md).
+>
+>Anweisungen zum Erstellen von Segmenten zur Auswertung Ihrer Daten finden Sie im [Handbuch zur Benutzeroberfläche von Segment Builder](../segmentation/ui/segment-builder.md). Spezifischere Anwendungsfälle für die B2B-Segmentierung finden Sie in der [Segmentierungsübersicht für Real-time Customer Data Platform B2B Edition](./segmentation/b2b.md).
 
 Mit Segment Builder können Sie aus Echtzeit-Kundenprofildaten eine vermarktbare Zielgruppe erstellen und Schätzungen Ihrer potenziellen Zielgruppe basierend auf der Kombination von Ihnen erstellten Attributen, Ereignissen und vorhandenen Zielgruppen anzeigen.
 
