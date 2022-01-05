@@ -4,202 +4,98 @@ solution: Experience Platform
 title: Erstellen und Veröffentlichen eines Modells für maschinelles Lernen
 topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace bietet die Möglichkeit, Ihr Ziel mithilfe des vordefinierten Recommendations-Rezepts für Produkte zu erreichen. In diesem Tutorial erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in Data Science Workspace generieren können.
+description: Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind.
 exl-id: f71e5a17-9952-411e-8e6a-aab46bc4c006
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff8a3612f34d6547577564ba40261052cd78ef01
 workflow-type: tm+mt
-source-wordcount: '1578'
-ht-degree: 2%
+source-wordcount: '1076'
+ht-degree: 11%
 
 ---
 
+
 # Erstellen und Veröffentlichen eines Modells für maschinelles Lernen
 
-![](../images/models-recipes/model-walkthrough/objective.png)
-
-Geben Sie an, dass Sie eine Online-Einzelhandelswebsite besitzen. Wenn Ihre Kunden auf Ihrer Retail-Website einkaufen, möchten Sie ihnen personalisierte Produktempfehlungen präsentieren, um eine Vielzahl anderer Produkte für Ihre Geschäftangebote verfügbar zu machen. Während der Existenz Ihrer Website haben Sie kontinuierlich Kundendaten gesammelt und möchten diese Daten irgendwie zur Generierung personalisierter Produktempfehlungen verwenden.
-
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] stellt die Mittel bereit, um Ihr Ziel mit dem vordefinierten  [Produkt-Recommendations-Rezept](../pre-built-recipes/product-recommendations.md) zu erreichen. In diesem Tutorial erfahren Sie, wie Sie auf Ihre Einzelhandelsdaten zugreifen und diese verstehen, ein Modell für maschinelles Lernen erstellen und optimieren und Einblicke in [!DNL Data Science Workspace] generieren können.
-
-Dieses Tutorial spiegelt den Workflow von [!DNL Data Science Workspace] wider und behandelt die folgenden Schritte zum Erstellen eines Modells für maschinelles Lernen:
-
-1. [Daten vorbereiten](#prepare-your-data)
-2. [Modell erstellen](#author-your-model)
-3. [Trainieren und Auswerten Ihres Modells](#train-and-evaluate-your-model)
-4. [Modell operationalisieren](#operationalize-your-model)
+Im folgenden Handbuch werden die Schritte beschrieben, die zum Erstellen und Veröffentlichen eines Modells für maschinelles Lernen erforderlich sind. Jeder Abschnitt enthält eine Beschreibung Ihrer Aktionen sowie einen Link zur Benutzeroberfläche und API-Dokumentation, um den beschriebenen Schritt durchzuführen.
 
 ## Erste Schritte
 
 Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
 
-- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform] haben, wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
+- Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
 
-- Aktivieren von Assets. Wenden Sie sich an Ihren Kundenbetreuer, um die folgenden Informationen für Sie bereitstellen zu lassen.
-   - Recommendations-Rezept
-   - Recommendations-Eingabedatensatz
-   - Recommendations-Eingabeschema
-   - Recommendations-Ausgabedatensatz
-   - Recommendations Output Schema
-   - Golden Data Set postValues
-   - Golden Data Set-Schema
-
-- Laden Sie die drei erforderlichen [!DNL Jupyter Notebook]-Dateien aus der [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs) herunter. Diese werden verwendet, um den [!DNL JupyterLab]-Workflow in [!DNL Data Science Workspace] zu demonstrieren.
-
-Ein Verständnis der folgenden Schlüsselkonzepte, die in diesem Tutorial verwendet werden:
-- [[!DNL Experience Data Model]](../../xdm/home.md): Der von der Adobe geleitete Standardisierungsaufwand zur Definition von Standardschemata wie  [!DNL Profile] und ExperienceEvent für Customer Experience Management.
-- Datensätze: Ein Speicher- und Verwaltungskonstrukt für tatsächliche Daten. Eine physische instanziierte Instanz eines [XDM-Schemas](../../xdm/schema/field-dictionary.md).
-- Batches: Datensätze bestehen aus Stapeln. Ein Batch ist ein Datensatz, der über einen bestimmten Zeitraum erfasst und als Einheit verarbeitet wird.
-- [!DNL JupyterLab]:  [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) ist eine Open-Source-Web-basierte Schnittstelle für Projekt  [!DNL Jupyter] und ist eng in  [!DNL Experience Platform]integriert.
-
-## Daten vorbereiten {#prepare-your-data}
-
-Um ein Modell für maschinelles Lernen zu erstellen, das Ihren Kunden personalisierte Produktempfehlungen unterbreitet, müssen frühere Käufe auf Ihrer Website analysiert werden. In diesem Abschnitt wird untersucht, wie diese Daten in [!DNL Platform] bis [!DNL Adobe Analytics] erfasst werden und wie diese Daten in einen Funktionsdatensatz umgewandelt werden, der von Ihrem maschinellen Lernmodell verwendet werden kann.
+- Alle Data Science Workspace-Tutorials verwenden das Luma-Tendenzmodell. Um fortfahren zu können, müssen Sie die [Luma-Eigenschaftenmodellschemata und -datensätze](./create-luma-data.md).
 
 ### Daten durchsuchen und Schemata verstehen
 
-Melden Sie sich bei [Adobe Experience Platform](https://platform.adobe.com/) an und wählen Sie **[!UICONTROL Datensätze]** aus, um alle vorhandenen Datensätze aufzulisten und den Datensatz auszuwählen, den Sie untersuchen möchten. In diesem Fall der [!DNL Analytics]-Datensatz **Goldener Datensatz postValues**.
+Anmelden bei [Adobe Experience Platform](https://platform.adobe.com/) und wählen Sie **[!UICONTROL Datensätze]** , um alle vorhandenen Datensätze aufzulisten und den Datensatz auszuwählen, den Sie untersuchen möchten. In diesem Fall sollten Sie die **Luma-Webdaten** Datensatz.
 
-![](../images/models-recipes/model-walkthrough/dataset-browse.png)
+![Luma-Webdatensatz auswählen](../images/models-recipes/model-walkthrough/luma-dataset.png)
 
-Die Seite mit der Datensatzaktivität wird geöffnet und listet Informationen zu Ihrem Datensatz auf. Sie können oben rechts **[!UICONTROL Datensatz-Vorschau]** auswählen, um Beispieldatensätze zu untersuchen. Sie können auch das Schema für den ausgewählten Datensatz anzeigen. Wählen Sie in der rechten Leiste den Schema-Link aus. Ein Popup wird angezeigt. Wenn Sie den Link unter **[!UICONTROL Schemaname]** auswählen, wird das Schema in einer neuen Registerkarte geöffnet.
+Die Seite mit der Datensatzaktivität wird geöffnet und listet Informationen zu Ihrem Datensatz auf. Sie können **[!UICONTROL Vorschau eines Datensatzes anzeigen]** oben rechts, um die Beispieldatensätze zu untersuchen. Sie können auch das Schema für den ausgewählten Datensatz anzeigen.
 
-![](../images/models-recipes/model-walkthrough/dataset-activity.png)
+![Vorschau von Luma-Webdaten](../images/models-recipes/model-walkthrough/preview-dataset.png)
 
+Wählen Sie in der rechten Leiste den Schema-Link aus. Es wird ein Popup angezeigt, in dem Sie den Link unter **[!UICONTROL Schemaname]** öffnet das Schema in einer neuen Registerkarte.
 
-![](../images/models-recipes/model-walkthrough/schema-view.png)
+![Vorschau des Luma-Webdatenschemas](../images/models-recipes/model-walkthrough/preview-schema.png)
 
-Die anderen Datensätze wurden zur Vorschau vorab mit Batches gefüllt. Sie können diese Datensätze anzeigen, indem Sie die oben genannten Schritte wiederholen.
+Sie können die Daten mithilfe des bereitgestellten Notebooks Exploratory Data Analysis (EDA) weiter untersuchen. Dieses Notebook kann verwendet werden, um Muster in den Luma-Daten zu verstehen, die Datensaniertheit zu überprüfen und die relevanten Daten für das prädiktive Tendenzmodell zusammenzufassen. Weitere Informationen zur Explorationsdatenanalyse finden Sie unter [EDA-Dokumentation](../jupyterlab/eda-notebook.md).
 
-| Datensatzname | Schema | Beschreibung |
-| ----- | ----- | ----- |
-| Golden Data Set postValues | Golden Data Set-Schema | [!DNL Analytics] Quelldaten von Ihrer Website |
-| Recommendations-Eingabedatensatz | Recommendations-Eingabeschema | Die [!DNL Analytics]-Daten werden mithilfe einer Funktions-Pipeline in einen Trainings-Datensatz umgewandelt. Diese Daten werden zum Trainieren des maschinellen Lernmodells für Produkt-Recommendations verwendet. `itemid` und  `userid` entsprechen einem von diesem Kunden erworbenen Produkt. |
-| Recommendations-Ausgabedatensatz | Recommendations Output Schema | Der Datensatz, für den Scoring-Ergebnisse gespeichert werden, enthält die Liste der empfohlenen Produkte für jeden Kunden. |
+## Erstellen des Luma-Tendenzrezepts {#author-your-model}
 
-## Modell erstellen {#author-your-model}
+Eine Hauptkomponente der [!DNL Data Science Workspace] Der Lebenszyklus umfasst die Erstellung von Rezepten und Modellen. Das Luma-Tendenzmodell wurde entwickelt, um eine Vorhersage darüber zu generieren, ob Kunden eine hohe Tendenz haben, ein Produkt von Luma zu kaufen.
 
-Die zweite Komponente des Lebenszyklus [!DNL Data Science Workspace] umfasst das Erstellen von Rezepten und Modellen. Das Produkt Recommendations Rezept wurde entwickelt, um unter Verwendung von bisherigen Kaufdaten und maschinellem Lernen maßstabsgetreue Produktempfehlungen zu generieren.
+Zum Erstellen des Luma-Tendenzmodells wird die Vorlage &quot;Rezept-Builder&quot;verwendet. Rezepte bilden die Grundlage für ein Modell, da sie Algorithmen für maschinelles Lernen und Logik zur Lösung spezifischer Probleme enthalten. Wichtiger noch: Rezepte ermöglichen es Ihnen, das maschinelle Lernen in Ihrer Organisation zu demokratisieren, sodass andere Benutzer für unterschiedliche Anwendungsfälle auf ein Modell zugreifen können, ohne Code schreiben zu müssen.
 
-Rezepte bilden die Grundlage für ein Modell, da sie Algorithmen für maschinelles Lernen und Logik zur Lösung spezifischer Probleme enthalten. Wichtiger noch: Rezepte ermöglichen es Ihnen, das maschinelle Lernen in Ihrer Organisation zu demokratisieren, sodass andere Benutzer für unterschiedliche Anwendungsfälle auf ein Modell zugreifen können, ohne Code schreiben zu müssen.
+Befolgen Sie die [ein Modell mit JupyterLab Notebooks erstellen](../jupyterlab/create-a-model.md) Tutorial zum Erstellen des Rezepts für das Luma-Tendenzmodell, das in nachfolgenden Tutorials verwendet wird.
 
-### Recommendations-Rezept durchsuchen
+## Importieren und verpacken Sie ein Rezept aus externen Quellen (*optional*)
 
-Navigieren Sie in Experience Platform in der linken Navigationsspalte zu **[!UICONTROL Modelle]** und wählen Sie dann **[!UICONTROL Rezepte]** in der oberen Navigationsleiste aus, um eine Liste der für Ihr Unternehmen verfügbaren Rezepte anzuzeigen.
+Wenn Sie ein Rezept zur Verwendung in Data Science Workspace importieren und verpacken möchten, müssen Sie Ihre Quelldateien in einer Archivdatei verpacken. Befolgen Sie die [Quelldateien in ein Rezept verpacken](./package-source-files-recipe.md) Tutorial. In diesem Tutorial erfahren Sie, wie Sie Quelldateien in einem Rezept verpacken können. Dies ist die Voraussetzung für den Import eines Rezepts in Data Science Workspace. Sobald das Tutorial abgeschlossen ist, erhalten Sie ein Docker-Bild in einer Azure Container Registry sowie die entsprechende Bild-URL, d. h. eine Archivdatei.
 
-![](../images/models-recipes/model-walkthrough/recipe-tab.png)
+Diese Archivdatei kann verwendet werden, um ein Rezept in Data Science Workspace zu erstellen, indem Sie dem Workflow zum Importieren von Rezepten mit dem [UI-Workflow](./import-packaged-recipe-ui.md) oder [API-Workflow](./import-packaged-recipe-api.md).
 
-Suchen und öffnen Sie anschließend das bereitgestellte **[!UICONTROL Recommendations-Rezept]**, indem Sie seinen Namen auswählen. Die Seite mit der Rezeptübersicht wird angezeigt.
+## Trainieren und Auswerten eines Modells {#train-and-evaluate-your-model}
 
-![](../images/models-recipes/model-walkthrough/Recipe-view.png)
+Nachdem Ihre Daten vorbereitet wurden und ein Rezept bereit ist, können Sie Ihr maschinelles Lernmodell weiter erstellen, trainieren und bewerten. Bei Verwendung des Recipe Builder sollten Sie Ihr Modell bereits trainiert, bewertet und bewertet haben, bevor Sie es in ein Rezept verpacken.
 
-Wählen Sie dann in der rechten Leiste **[!UICONTROL Recommendations Input Schema]** aus, um das Schema anzuzeigen, das das Rezept steuert. Die Schemafelder &quot;[!UICONTROL itemId]&quot;und &quot;[!UICONTROL userId]&quot;entsprechen einem Produkt, das von diesem Kunden zu einem bestimmten Zeitpunkt ([!UICONTROL timestamp[!UICONTROL interactionType]) gekauft wurde (timestamp]). Führen Sie die gleichen Schritte aus, um die Felder für das **[!UICONTROL Recommendations Output Schema]** zu überprüfen.
-
-![](../images/models-recipes/model-walkthrough/input-output.png)
-
-Sie haben jetzt die Eingabe- und Ausgabeschemata überprüft, die für das Produkt-Recommendations-Rezept erforderlich sind. Fahren Sie mit dem nächsten Abschnitt fort, um zu erfahren, wie Sie ein Produkt-Recommendations-Modell erstellen, trainieren und bewerten.
-
-## Trainieren und Auswerten Ihres Modells {#train-and-evaluate-your-model}
-
-Nachdem Ihre Daten vorbereitet wurden und das Rezept bereit ist, können Sie Ihr maschinelles Lernmodell erstellen, trainieren und bewerten.
+Mit der Data Science Workspace-Benutzeroberfläche und -API können Sie Ihr Rezept als Modell veröffentlichen. Darüber hinaus können Sie bestimmte Aspekte Ihres Modells weiter anpassen, z. B. das Hinzufügen, Entfernen und Ändern von Hyperparametern.
 
 ### Modell erstellen
 
-Ein Modell ist eine Instanz eines Rezepts, mit dem Sie mit skalierten Daten trainieren und bewerten können.
+Weitere Informationen zum Erstellen eines Modells mithilfe der Benutzeroberfläche finden Sie im Abschnitt zum Trainieren und Auswerten eines Modells in Data Science Workspace [UI-Tutorial](./train-evaluate-model-ui.md) oder [API-Tutorial](./train-evaluate-model-api.md). Dieses Tutorial bietet ein Beispiel für das Erstellen, Trainieren und Aktualisieren von Hyperparametern zur Feinabstimmung Ihres Modells.
 
-Navigieren Sie in Experience Platform in der linken Navigationsspalte zu **[!UICONTROL Modelle]** und wählen Sie dann **[!UICONTROL Rezepte]** in der oberen Navigationsleiste aus. Dadurch wird eine Liste der für Ihr Unternehmen verfügbaren Rezepte angezeigt. Wählen Sie das Rezept für Produktempfehlungen aus.
-
-![](../images/models-recipes/model-walkthrough/recipe-tab.png)
-
-Wählen Sie auf der Rezeptseite **[!UICONTROL Modell erstellen]** aus.
-
-![Modell erstellen](../images/models-recipes/model-walkthrough/create-model-recipe.png)
-
-Der Workflow zum Erstellen eines Modells beginnt mit der Auswahl eines Rezepts. Wählen Sie das **[!UICONTROL Recommendations-Rezept]** aus und klicken Sie dann oben rechts auf **[!UICONTROL Weiter]** .
-
-![](../images/models-recipes/model-walkthrough/create-model.png)
-
-Geben Sie als Nächstes einen Modellnamen an. Die verfügbaren Konfigurationen für das Modell sind mit Einstellungen für das standardmäßige Trainings- und Scoring-Verhalten des Modells aufgeführt. Überprüfen Sie die Konfigurationen und wählen Sie **[!UICONTROL Finish]** aus.
-
-![](../images/models-recipes/model-walkthrough/configure-model.png)
-
-Sie werden mit einem neu erstellten Trainings-Lauf auf Ihre Modellübersichtsseite umgeleitet. Ein Trainings-Lauf wird standardmäßig generiert, wenn ein Modell erstellt wird.
-
-![](../images/models-recipes/model-walkthrough/model-overview.png)
-
-Sie können auf den Abschluss des Trainings-Laufs warten oder im folgenden Abschnitt mit der Erstellung eines neuen Trainings-Laufs fortfahren.
-
-### Modell mithilfe benutzerdefinierter Hyperparameter trainieren
-
-Wählen Sie auf der Seite **Modellübersicht** **[!UICONTROL Trainieren]** oben rechts aus, um einen neuen Trainings-Lauf zu erstellen. Wählen Sie denselben Eingabedatensatz aus, den Sie beim Erstellen des Modells verwendet haben, und wählen Sie **[!UICONTROL Next]** aus.
-
-![](../images/models-recipes/model-walkthrough/select-train.png)
-
-Die Seite **[!UICONTROL Configuration]** wird angezeigt. Hier können Sie den Wert `num_recommendations` für die Trainings-Läufe konfigurieren, der auch als Hyperparameter bezeichnet wird. Ein trainiertes und optimiertes Modell verwendet die leistungsstärksten Hyperparameter basierend auf den Ergebnissen des Trainings-Laufs.
-
-Hyperparameter können nicht erlernt werden. Daher müssen sie vor Trainings-Läufen zugewiesen werden. Die Anpassung von Hyperparametern kann die Genauigkeit des trainierten Modells ändern. Da die Optimierung eines Modells ein iterativer Prozess ist, können mehrere Trainings-Läufe erforderlich sein, bevor eine zufriedenstellende Bewertung erreicht wird.
-
->[!TIP]
+>[!NOTE]
 >
->Setzen Sie `num_recommendations` auf 10.
+> Hyperparameter können nicht erlernt werden. Daher müssen sie vor Trainings-Läufen zugewiesen werden. Die Anpassung von Hyperparametern kann die Genauigkeit Ihres trainierten Modells ändern. Da die Optimierung eines Modells ein iterativer Prozess ist, können mehrere Trainings-Läufe erforderlich sein, bevor eine zufriedenstellende Bewertung erreicht wird.
 
-![](../images/models-recipes/model-walkthrough/training-configuration.png)
+## Modell bewerten {#score-a-model}
 
-Zusätzliche Datenpunkte werden im Modellbewertungsdiagramm angezeigt. Es kann bis zu mehrere Minuten dauern, bis dies angezeigt wird, sobald eine Ausführung abgeschlossen ist.
+Der nächste Schritt bei der Erstellung und Veröffentlichung eines Modells besteht darin, Ihr Modell zu operationalisieren, um Einblicke aus dem Data Lake und dem Echtzeit-Kundenprofil zu gewinnen und zu nutzen.
 
-![](../images/models-recipes/model-walkthrough/training-graphs.png)
+Scoring in Data Science Workspace kann durch Einspeisung von Eingabedaten in ein vorhandenes trainiertes Modell erreicht werden. Scoring-Ergebnisse werden dann als neuer Batch in einem angegebenen Ausgabedatensatz gespeichert und angezeigt.
 
-### Modell bewerten
+Um zu erfahren, wie Sie Ihr Modell bewerten, besuchen Sie die Bewertung eines Modells. [UI-Tutorial](./score-model-ui.md) oder [API-Tutorial](./score-model-api.md).
 
-Jedes Mal, wenn ein Trainings-Lauf abgeschlossen wird, können Sie die resultierenden Bewertungsmetriken anzeigen, um festzustellen, wie gut das Modell funktioniert hat.
+## Veröffentlichen eines bewerteten Modells als Dienst
 
-Um die Auswertungsmetriken (Präzision und Rückruf) für jeden abgeschlossenen Trainings-Lauf zu überprüfen, wählen Sie den Trainings-Lauf aus.
+Mit Data Science Workspace können Sie Ihr trainiertes Modell als Dienst veröffentlichen. Dadurch können Benutzer in Ihrer IMS-Organisation Daten bewerten, ohne eigene Modelle erstellen zu müssen.
 
-![](../images/models-recipes/model-walkthrough/select-training-run.png)
+Informationen zum Veröffentlichen eines Modells als Dienst finden Sie unter [UI-Tutorial](./publish-model-service-ui.md) oder [API-Tutorial](./publish-model-service-api.md).
 
-Sie können die für die einzelnen Bewertungsmetriken bereitgestellten Informationen untersuchen. Je höher diese Metriken sind, desto besser hat das Modell funktioniert.
+### Planen automatisierter Schulungen für einen Dienst
 
-![](../images/models-recipes/model-walkthrough/metrics.png)
+Nachdem Sie ein Modell als Dienst veröffentlicht haben, können Sie geplante Scoring- und Trainings-Läufe für Ihren maschinellen Lerndienst einrichten. Die Automatisierung des Trainings- und Scoring-Prozesses kann dazu beitragen, die Effizienz eines Dienstes im Laufe der Zeit zu erhalten und zu verbessern, indem Sie mit den Mustern in Ihren Daten Schritt halten. Besuchen Sie die [Planen eines Modells in der Benutzeroberfläche von Data Science Workspace](./schedule-models-ui.md) Tutorial.
 
-Sie können den Datensatz, das Schema und die Konfigurationsparameter anzeigen, die für jeden Trainings-Lauf in der rechten Leiste verwendet werden. Navigieren Sie zurück zur Modellseite und ermitteln Sie die leistungsfähigsten Schulungsabläufe, indem Sie deren Auswertungsmetriken beobachten.
-
-## Modell operationalisieren {#operationalize-your-model}
-
-Der letzte Schritt im Data Science-Arbeitsablauf besteht darin, Ihr Modell zu operationalisieren, um Erkenntnisse aus Ihrem Datenspeicher zu bewerten und zu nutzen.
-
-### Bewerten und Generieren von Einblicken
-
-Wählen Sie auf der Übersichtsseite des Produktempfehlungsmodells den Namen des Trainings-Laufs mit der besten Leistung mit den höchsten Rückruf- und Genauigkeitswerten aus.
-
-![den besten Lauf](../images/models-recipes/model-walkthrough/select-training-run.png)
-
-Wählen Sie dann oben rechts auf der Detailseite für Trainings-Läufe **[!UICONTROL Score]** aus.
-
-![Auswahlergebnis](../images/models-recipes/model-walkthrough/select-score.png)
-
-Wählen Sie als Nächstes den **[!UICONTROL Recommendations-Eingabedatensatz]** als Scoring-Eingabedatensatz aus, der mit dem Datensatz übereinstimmt, den Sie beim Erstellen des Modells und Ausführen der Trainings-Läufe verwendet haben. Wählen Sie dann **[!UICONTROL Weiter]** aus.
-
-![](../images/models-recipes/model-walkthrough/score-input.png)
-
-Sobald Sie Ihren Eingabedatensatz haben, wählen Sie den **[!UICONTROL Recommendations Output-Datensatz]** als Scoring-Ausgabedatensatz aus. Scoring-Ergebnisse werden in diesem Datensatz als Batch gespeichert.
-
-![](../images/models-recipes/model-walkthrough/score-output.png)
-
-Überprüfen Sie abschließend die Scoring-Konfigurationen. Diese Parameter enthalten die zuvor ausgewählten Eingabe- und Ausgabedatensätze zusammen mit den entsprechenden Schemata. Wählen Sie **[!UICONTROL Beenden]** aus, um den Scoring-Lauf zu starten. Die Ausführung kann mehrere Minuten dauern.
-
-![](../images/models-recipes/model-walkthrough/score-finish.png)
-
-### Anzeigen bewerteter Einblicke
-
-Sobald der Scoring-Lauf erfolgreich abgeschlossen wurde, können Sie die Ergebnisse in der Vorschau anzeigen und die erstellten Einblicke anzeigen.
-
-Wählen Sie auf der Seite mit den Scoring-Läufen den abgeschlossenen Scoring-Lauf und dann **[!UICONTROL Vorschau des Datensatzes mit den Scoring-Ergebnissen]** in der rechten Leiste aus.
-
-![](../images/models-recipes/model-walkthrough/preview-scores.png)
-
-In der Vorschautabelle enthält jede Zeile Produktempfehlungen für einen bestimmten Kunden mit der Bezeichnung [!UICONTROL recommendations] bzw. [!UICONTROL userId]. Da der Hyperparameter [!UICONTROL num_recommendations] in den Beispiel-Screenshots auf 10 gesetzt wurde, kann jede Empfehlungszeile bis zu 10 Produktidentitäten enthalten, die durch ein Nummernzeichen (#) getrennt sind.
-
-![](../images/models-recipes/model-walkthrough/preview_score_results.png)
+>[!NOTE]
+>
+> Sie können ein Modell nur für automatisierte Schulungen und Auswertungen über die Benutzeroberfläche planen.
 
 ## Nächste Schritte {#next-steps}
 
-In diesem Tutorial haben Sie den Workflow von [!DNL Data Science Workspace] vorgestellt, der zeigt, wie unverarbeitete Rohdaten durch maschinelles Lernen in nützliche Informationen umgewandelt werden können. Weiterführende Informationen zur Verwendung von [!DNL Data Science Workspace] finden Sie im nächsten Handbuch zum Erstellen des Einzelhandelsschemas und -datensatzes ](./create-retails-sales-dataset.md).[
+Adobe Experience Platform [!DNL Data Science Workspace] bietet die Tools und Ressourcen zum Erstellen, Auswerten und Verwenden maschineller Lernmodelle, um Datenprognosen und -einblicke zu generieren. Wenn Einblicke aus maschinellem Lernen in eine [!DNL Profile]-aktivierter Datensatz, der dieselben Daten auch als [!DNL Profile] Datensätze, die dann mithilfe von [!DNL Adobe Experience Platform Segmentation Service].
+
+Bevor aufgenommene Profil- und Zeitreihendaten mit bestehenden Daten zusammengeführt werden und die Vereinigungsansicht aktualisiert wird, bestimmt das Echtzeit-Kundenprofil anhand der sogenannten Streaming-Segmentierung durchgehend automatisch, ob die neuen Daten in den Segmenten eingeschlossen oder von ihnen ausgeschlossen werden. Das Ergebnis: Berechnungen und Entscheidungen dazu, wie Sie Ihren Kunden herausragende, individuell auf sie abgestimmte Erlebnisse liefern, lassen sich direkt während ihrer Interaktion mit Ihrer Marke anstellen bzw. treffen.
+
+Besuchen Sie das Tutorial für [Anreicherung des Echtzeit-Kundenprofils mit Einblicken aus maschinellem Lernen](./enrich-profile.md) , um mehr darüber zu erfahren, wie Sie Einblicke aus maschinellem Lernen nutzen können.
