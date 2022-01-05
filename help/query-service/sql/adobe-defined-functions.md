@@ -5,7 +5,7 @@ title: Adobe-definierte SQL-Funktionen in Query Service
 topic-legacy: functions
 description: Dieses Dokument enthält Informationen zu den in Adobe Experience Platform Query Service verfügbaren Adobe-definierten Funktionen.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 63b6236a7e3689afb2ebaa763349b3102697424e
 workflow-type: tm+mt
 source-wordcount: '2913'
 ht-degree: 22%
@@ -14,17 +14,17 @@ ht-degree: 22%
 
 # Adobe-definierte SQL-Funktionen in Query Service
 
-Adobe-definierte Funktionen, hier ADFs genannt, sind vordefinierte Funktionen in Adobe Experience Platform Query Service, mit denen häufig geschäftsbezogene Aufgaben für [!DNL Experience Event]-Daten durchgeführt werden können. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie die in Adobe Analytics.
+Adobe-definierte Funktionen, hier ADFs genannt, sind vordefinierte Funktionen in Adobe Experience Platform Query Service, mit denen gängige geschäftsbezogene Aufgaben für [!DNL Experience Event] Daten. Dazu gehören Funktionen für [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) und [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=de) wie in Adobe Analytics.
 
-Dieses Dokument enthält Informationen zu den in [!DNL Query Service] verfügbaren Adobe-definierten Funktionen.
+Dieses Dokument enthält Informationen zu den in der Adobe definierten Funktionen. [!DNL Query Service].
 
 ## Window-Funktionen {#window-functions}
 
-Ein großer Teil der Business-Logik setzt voraus, die Kontaktpunkte (bzw. „Touchpoints“) zu erfassen, an denen ein Kunde mit Ihrem Unternehmen interagiert, und diese nach dem Zeitpunkt ihres Eintretens zu sortieren. Diese Unterstützung wird von [!DNL Spark] SQL in Form von Fensterfunktionen bereitgestellt. Window-Funktionen sind Teil von Standard-SQL und werden von einer Vielzahl anderer SQL-Engines unterstützt.
+Ein großer Teil der Business-Logik setzt voraus, die Kontaktpunkte (bzw. „Touchpoints“) zu erfassen, an denen ein Kunde mit Ihrem Unternehmen interagiert, und diese nach dem Zeitpunkt ihres Eintretens zu sortieren. Diese Unterstützung wird von [!DNL Spark] SQL in Form von Fensterfunktionen. Window-Funktionen sind Teil von Standard-SQL und werden von einer Vielzahl anderer SQL-Engines unterstützt.
 
 Eine Window-Funktion aktualisiert eine Aggregation und gibt für jede Zeile in Ihrer sortierten Untergruppe ein einzelnes Element zurück. Die einfachste Aggregationsfunktion lautet `SUM()`. `SUM()` berechnet aus den von Ihnen angegebenen Zeilen die Summe. Wenden Sie `SUM()` stattdessen auf ein Fenster an, wird es in eine Window-Funktion umgewandelt und die kumulative Summe für jede Zeile ausgegeben.
 
-Die meisten der [!DNL Spark] SQL-Helfer sind Window-Funktionen, die jede Zeile in Ihrem Fenster aktualisieren, wobei der Status dieser Zeile hinzugefügt wird.
+Die Mehrheit der [!DNL Spark] SQL-Helfer sind Window-Funktionen, die jede Zeile in Ihrem Fenster aktualisieren, wobei der Status dieser Zeile hinzugefügt wird.
 
 **Abfragesyntax**
 
@@ -40,11 +40,11 @@ OVER ({PARTITION} {ORDER} {FRAME})
 
 ## Sessionization
 
-Wenn Sie mit [!DNL Experience Event]-Daten arbeiten, die von einer Website, einer Mobile App, einem interaktiven Sprachreaktionssystem oder einem anderen Kanal für Kundeninteraktionen stammen, ist es hilfreich, Ereignisse um einen verwandten Aktivitätszeitraum zu gruppieren. In der Regel fußt eine Aktivität auf einer bestimmten Absicht wie der Suche nach einem Produkt, der Zahlung einer Rechnung, dem Abrufen des Kontostandes, dem Ausfüllen eines Formulars etc.
+Wenn Sie mit [!DNL Experience Event] Daten aus einer Website, Mobile App, einem interaktiven Sprachreaktionssystem oder einem anderen Kanal zur Kundeninteraktion helfen Ihnen dabei, Ereignisse nach einem bestimmten Aktivitätszeitraum zu gruppieren. In der Regel fußt eine Aktivität auf einer bestimmten Absicht wie der Suche nach einem Produkt, der Zahlung einer Rechnung, dem Abrufen des Kontostandes, dem Ausfüllen eines Formulars etc.
 
 Diese Gruppierung oder Sitzungserstellung von Daten hilft bei der Zuordnung der Ereignisse, um mehr Kontext über das Kundenerlebnis zu finden.
 
-Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation zu [kontextsensitiven Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Weitere Informationen zur Sitzungserstellung in Adobe Analytics finden Sie in der Dokumentation unter [kontextbezogene Sitzungen](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Abfragesyntax**
 
@@ -57,7 +57,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | Das Zeitstempelfeld im Datensatz. |
 | `{EXPIRATION_IN_SECONDS}` | Die Anzahl der Sekunden, die zwischen Ereignissen erforderlich sind, um das Ende der aktuellen Sitzung und den Beginn einer neuen Sitzung zu qualifizieren. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -93,7 +93,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `session` Spalte. Die `session` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -102,7 +102,7 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 | Parameter | Beschreibung |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | Die Zeitdifferenz in Sekunden zwischen dem aktuellen und dem vorherigen Datensatz. |
-| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1 für den Schlüssel, der in der Funktion `PARTITION BY` der Window-Funktion definiert ist. |
+| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1, für den Schlüssel, der in der Variablen `PARTITION BY` der Window-Funktion. |
 | `{IS_NEW}` | Ein boolescher Wert, der angibt, ob ein Datensatz der erste einer Sitzung ist. |
 | `{DEPTH}` | Die Tiefe des aktuellen Datensatzes innerhalb der Sitzung. |
 
@@ -121,7 +121,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Das Zeitstempelfeld im Datensatz. |
 | `{TEST_EXPRESSION}` | Ein Ausdruck, mit dem Sie die Datenfelder überprüfen möchten. Beispiel: `application.launches > 0`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -158,7 +158,7 @@ SELECT
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `session` Spalte. Die `session` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -167,7 +167,7 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 | Parameter | Beschreibung |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | Die Zeitdifferenz in Sekunden zwischen dem aktuellen und dem vorherigen Datensatz. |
-| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1 für den Schlüssel, der in der Funktion `PARTITION BY` der Window-Funktion definiert ist. |
+| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1, für den Schlüssel, der in der Variablen `PARTITION BY` der Window-Funktion. |
 | `{IS_NEW}` | Ein boolescher Wert, der angibt, ob ein Datensatz der erste einer Sitzung ist. |
 | `{DEPTH}` | Die Tiefe des aktuellen Datensatzes innerhalb der Sitzung. |
 
@@ -186,7 +186,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Das Zeitstempelfeld im Datensatz. |
 | `{TEST_EXPRESSION}` | Ein Ausdruck, mit dem Sie die Datenfelder überprüfen möchten. Beispiel: `application.launches > 0`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -223,7 +223,7 @@ SELECT
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` angegeben. Die Spalte `session` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `session` Spalte. Die `session` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -232,7 +232,7 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 | Parameter | Beschreibung |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | Die Zeitdifferenz in Sekunden zwischen dem aktuellen und dem vorherigen Datensatz. |
-| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1 für den Schlüssel, der in der Funktion `PARTITION BY` der Window-Funktion definiert ist. |
+| `{NUM}` | Eine eindeutige Sitzungsnummer, beginnend bei 1, für den Schlüssel, der in der Variablen `PARTITION BY` der Window-Funktion. |
 | `{IS_NEW}` | Ein boolescher Wert, der angibt, ob ein Datensatz der erste einer Sitzung ist. |
 | `{DEPTH}` | Die Tiefe des aktuellen Datensatzes innerhalb der Sitzung. |
 
@@ -240,13 +240,13 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `session` an
 
 Die Zuordnung von Kundenaktionen zum Erfolg ist ein wichtiger Teil des Verständnisses der Faktoren, die Kundenerlebnisse beeinflussen. Die folgenden ADFs unterstützen die Erstkontakt- und Letztkontakt-Attribution mit unterschiedlichen Ablaufeinstellungen.
 
-Weitere Informationen zur Attribution in Adobe Analytics finden Sie unter [Übersicht über den Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) im Handbuch für das Attributionsbedienfeld [!DNL Analytics].
+Weitere Informationen zur Attribution in Adobe Analytics finden Sie unter [Übersicht über Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) im [!DNL Analytics] Handbuch zum Attributionsbedienfeld.
 
 ### Erstkontakt-Attribution
 
-Diese Abfrage gibt den Attributionswert des Erstkontakts und Details für einen einzelnen Kanal im Zieldatensatz [!DNL Experience Event] zurück. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
+Diese Abfrage gibt den Attributionswert des Erstkontakts und Details für einen einzelnen Kanal in der Zielgruppe zurück. [!DNL Experience Event] Datensatz. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
-Diese Abfrage hilft dabei nachzuvollziehen, welche Interaktion zu einer Reihe von Kundenaktionen geführt hat. Im unten gezeigten Beispiel wird dem anfänglichen Trackingcode (`em:946426`) in den [!DNL Experience Event] -Daten ein Anteil von 100 % (`1.0`) an den Kundenaktionen zugeschrieben, da dies die erste Interaktion war.
+Diese Abfrage hilft dabei nachzuvollziehen, welche Interaktion zu einer Reihe von Kundenaktionen geführt hat. Im folgenden Beispiel wird der ursprüngliche Trackingcode (`em:946426`) im [!DNL Experience Event] Daten werden zu 100 % (`1.0`) die Verantwortung für die Kundenaktionen übernehmen, da dies die erste Interaktion war.
 
 **Abfragesyntax**
 
@@ -260,7 +260,7 @@ ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PAR
 | `{CHANNEL_NAME}` | Die Bezeichnung für das zurückgegebene Objekt. |
 | `{CHANNEL_VALUE}` | Die Spalte oder das Feld, die bzw. das den Zielkanal für die Abfrage darstellt. |
 
-Eine Erläuterung der Parameter unter `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter in `OVER()` finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -294,7 +294,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `first_touch` angegeben. Die Spalte `first_touch` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `first_touch` Spalte. Die `first_touch` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -302,16 +302,16 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `first_touch
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{NAME}` | Die `{CHANNEL_NAME}`, die als Beschriftung in der ADF eingegeben wurde. |
+| `{NAME}` | Die `{CHANNEL_NAME}`, der in der ADF als Titel eingetragen wurde. |
 | `{VALUE}` | Der Wert aus `{CHANNEL_VALUE}`, der den Erstkontakt im darstellt.[!DNL Experience Event] |
-| `{TIMESTAMP}` | Der Zeitstempel von [!DNL Experience Event], bei dem der Erstkontakt erfolgte. |
+| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event] wobei der Erstkontakt erfolgte. |
 | `{FRACTION}` | Die Attribution des Erstkontakts, ausgedrückt als Dezimalbruch. |
 
 ### Letztkontakt-Attribution
 
-Diese Abfrage gibt den Attributionswert des letzten Kontakts und Details für einen einzelnen Kanal im Zieldatensatz [!DNL Experience Event] zurück. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
+Diese Abfrage gibt den Attributionswert des letzten Kontakts und Details für einen einzelnen Kanal in der Zielgruppe zurück. [!DNL Experience Event] Datensatz. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
-Diese Abfrage hilft dabei, die letzte Interaktion in einer Reihe von Kundenaktionen nachzuvollziehen. Im folgenden Beispiel stellt der Trackingcode im zurückgegebenen Objekt die letzte Interaktion in jedem [!DNL Experience Event] -Datensatz dar. Jedem Code wird 100 % (`1.0`) der Verantwortung für die Kundenaktionen zugeordnet, da dies die letzte Interaktion war.
+Diese Abfrage hilft dabei, die letzte Interaktion in einer Reihe von Kundenaktionen nachzuvollziehen. Im folgenden Beispiel stellt der Trackingcode im zurückgegebenen Objekt die letzte Interaktion in jeder [!DNL Experience Event] aufzeichnen. Jedem Code werden 100 % (`1.0`) Verantwortung für die Kundenaktionen, da dies die letzte Interaktion war.
 
 **Abfragesyntax**
 
@@ -325,7 +325,7 @@ ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PART
 | `{CHANNEL_NAME}` | Die Bezeichnung des zurückgegebenen Objekts. |
 | `{CHANNEL_VALUE}` | Die Spalte oder das Feld, die bzw. das den Zielkanal für die Abfrage darstellt. |
 
-Eine Erläuterung der Parameter unter `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter in `OVER()` finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -358,7 +358,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `last_touch` angegeben. Die Spalte `last_touch` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `last_touch` Spalte. Die `last_touch` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -366,16 +366,16 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `last_touch`
 
 | Parameter | Beschreibung |
 | ---------- | ----------- |
-| `{NAME}` | Die `{CHANNEL_NAME}`, die als Beschriftung in der ADF eingegeben wurde. |
+| `{NAME}` | Die `{CHANNEL_NAME}`, der in der ADF als Titel eingetragen wurde. |
 | `{VALUE}` | Der Wert aus `{CHANNEL_VALUE}`, der den letzten Kontakt im darstellt.[!DNL Experience Event] |
-| `{TIMESTAMP}` | Der Zeitstempel von [!DNL Experience Event], wobei `channelValue` verwendet wurde. |
+| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event] wobei `channelValue` verwendet wurde. |
 | `{FRACTION}` | Die Attribution des letzten Kontakts, ausgedrückt als Dezimalbruch. |
 
 ### Erstkontakt-Attribution mit Ablaufbedingung
 
-Diese Abfrage gibt den Attributionswert des Erstkontakts und Details für einen einzelnen Kanal im Zieldatensatz [!DNL Experience Event] zurück, der nach oder vor einer Bedingung abläuft. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
+Diese Abfrage gibt den Attributionswert des Erstkontakts und Details für einen einzelnen Kanal in der Zielgruppe zurück. [!DNL Experience Event] Datensatz, der nach oder vor einer Bedingung abläuft. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
-Diese Abfrage ist nützlich, wenn Sie sehen möchten, welche Interaktion zu einer Reihe von Kundenaktionen innerhalb eines Teils des [!DNL Experience Event]-Datensatzes geführt hat, der durch eine von Ihnen festgelegte Bedingung bestimmt wird. Im nachfolgenden Beispiel wird ein Kauf (`commerce.purchases.value IS NOT NULL`) an jedem der vier in den Ergebnissen angezeigten Tage (15., 21., 23. und 29. Juli) aufgezeichnet und dem anfänglichen Trackingcode an jedem Tag ein Anteil von 100 % (`1.0`) am Einfluss auf die Kundenaktionen zugeschrieben.
+Diese Abfrage ist nützlich, wenn Sie sehen möchten, welche Interaktion zu einer Reihe von Kundenaktionen innerhalb eines Teils der [!DNL Experience Event] Datensatz, der durch eine von Ihnen ausgewählte Bedingung bestimmt wird. Im nachfolgenden Beispiel wird ein Kauf (`commerce.purchases.value IS NOT NULL`) an jedem der vier in den Ergebnissen angezeigten Tage (15., 21., 23. und 29. Juli) aufgezeichnet und dem anfänglichen Trackingcode an jedem Tag ein Anteil von 100 % (`1.0`) am Einfluss auf die Kundenaktionen zugeschrieben.
 
 **Abfragesyntax**
 
@@ -391,9 +391,9 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
 | `{CHANNEL_NAME}` | Die Bezeichnung für das zurückgegebene Objekt. |
 | `{CHANNEL_VALUE}` | Die Spalte oder das Feld, die bzw. das den Zielkanal für die Abfrage darstellt. |
 | `{EXP_CONDITION}` | Die Bedingung, die den Ablaufpunkt des Kanals bestimmt. |
-| `{EXP_BEFORE}` | Ein boolescher Wert, der anzeigt, ob der Kanal vor oder nach der angegebenen Bedingung `{EXP_CONDITION}` abläuft. Dies ist in erster Linie für die Ablaufbedingungen einer Sitzung aktiviert, um sicherzustellen, dass der Erstkontakt nicht aus einer vorherigen Sitzung ausgewählt wird. Standardmäßig ist dieser Wert auf `false` gesetzt. |
+| `{EXP_BEFORE}` | Ein boolescher Wert, der anzeigt, ob der Kanal vor oder nach der angegebenen Bedingung abläuft, `{EXP_CONDITION}`, wird erfüllt. Dies ist in erster Linie für die Ablaufbedingungen einer Sitzung aktiviert, um sicherzustellen, dass der Erstkontakt nicht aus einer vorherigen Sitzung ausgewählt wird. Standardmäßig ist dieser Wert auf `false` gesetzt. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -426,7 +426,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `first_touch` angegeben. Die Spalte `first_touch` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `first_touch` Spalte. Die `first_touch` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -434,14 +434,14 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `first_touch
 
 | Parameter | Beschreibung |
 | ---------- | ----------- |
-| `{NAME}` | Die `{CHANNEL_NAME}`, die als Beschriftung in der ADF eingegeben wurde. |
-| `{VALUE}` | Der Wert aus `CHANNEL_VALUE}` , der den Erstkontakt in [!DNL Experience Event] vor `{EXP_CONDITION}` darstellt. |
-| `{TIMESTAMP}` | Der Zeitstempel von [!DNL Experience Event], bei dem der Erstkontakt erfolgte. |
+| `{NAME}` | Die `{CHANNEL_NAME}`, der in der ADF als Titel eingetragen wurde. |
+| `{VALUE}` | Der Wert aus `CHANNEL_VALUE}` Dies ist der erste Kontakt in der [!DNL Experience Event], bevor `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event] wobei der Erstkontakt erfolgte. |
 | `{FRACTION}` | Die Attribution des Erstkontakts, ausgedrückt als Dezimalbruch. |
 
 ### Erstkontakt-Attribution mit Ablauftimeout
 
-Diese Abfrage gibt den Attributionswert des Erstkontakts sowie Details für einen einzelnen Kanal im Zieldatensatz [!DNL Experience Event] für einen bestimmten Zeitraum zurück. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
+Diese Abfrage gibt den Attributionswert des Erstkontakts und Details für einen einzelnen Kanal in der Zielgruppe zurück. [!DNL Experience Event] Datensatz für einen bestimmten Zeitraum. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des Erstkontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
 Diese Abfrage hilft dabei nachzuvollziehen, welche Interaktion innerhalb eines bestimmten Zeitraums zu einer Kundenaktion geführt hat. Im nachfolgenden Beispiel stellt der für die einzelnen Kundeninteraktionen zurückgegebene Erstkontakt die früheste Interaktion innerhalb der letzten sieben Tage (`expTimeout = 86400 * 7`) dar.
 
@@ -460,7 +460,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
 | `{CHANNEL_VALUE}` | Die Spalte oder das Feld, die bzw. das den Zielkanal für die Abfrage darstellt. |
 | `{EXP_TIMEOUT}` | Das Zeitfenster vor dem Kanalereignis in Sekunden, in dem die Abfrage nach einem Erstkontaktereignis sucht. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -493,7 +493,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `first_touch` angegeben. Die Spalte `first_touch` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `first_touch` Spalte. Die `first_touch` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -501,16 +501,16 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `first_touch
 
 | Parameter | Beschreibung |
 | ---------- | ----------- |
-| `{NAME}` | Die `{CHANNEL_NAME}`, die als Beschriftung in der ADF eingegeben wurde. |
-| `{VALUE}` | Der Wert aus `CHANNEL_VALUE}` , der den Erstkontakt innerhalb des angegebenen `{EXP_TIMEOUT}`-Intervalls darstellt. |
-| `{TIMESTAMP}` | Der Zeitstempel von [!DNL Experience Event], bei dem der Erstkontakt erfolgte. |
+| `{NAME}` | Die `{CHANNEL_NAME}`, der in der ADF als Titel eingetragen wurde. |
+| `{VALUE}` | Der Wert aus `CHANNEL_VALUE}` Dies ist der Erstkontakt innerhalb des angegebenen `{EXP_TIMEOUT}` Intervall. |
+| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event] wobei der Erstkontakt erfolgte. |
 | `{FRACTION}` | Die Attribution des Erstkontakts, ausgedrückt als Dezimalbruch. |
 
 ### Letztkontakt-Attribution mit Ablaufbedingung
 
-Diese Abfrage gibt den Attributionswert des letzten Kontakts und Details für einen einzelnen Kanal im Zieldatensatz [!DNL Experience Event] zurück, der nach oder vor einer Bedingung abläuft. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
+Diese Abfrage gibt den Attributionswert des letzten Kontakts und Details für einen einzelnen Kanal in der Zielgruppe zurück. [!DNL Experience Event] Datensatz, der nach oder vor einer Bedingung abläuft. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
-Diese Abfrage ist nützlich, wenn Sie die letzte Interaktion in einer Reihe von Kundenaktionen innerhalb eines Teils des [!DNL Experience Event]-Datensatzes sehen möchten, der durch eine von Ihnen festgelegte Bedingung bestimmt wird. Im nachfolgenden Beispiel wird ein Kauf (`commerce.purchases.value IS NOT NULL`) an jedem der vier in den Ergebnissen angezeigten Tage (15., 21., 23. und 29. Juli) festgehalten und dem letzten Trackingcode an jedem Tag ein Anteil von 100 % (`1.0`) am Einfluss auf die Kundenaktionen zugeschrieben.
+Diese Abfrage ist nützlich, wenn Sie die letzte Interaktion in einer Reihe von Kundenaktionen innerhalb eines Teils der [!DNL Experience Event] Datensatz, der durch eine von Ihnen ausgewählte Bedingung bestimmt wird. Im nachfolgenden Beispiel wird ein Kauf (`commerce.purchases.value IS NOT NULL`) an jedem der vier in den Ergebnissen angezeigten Tage (15., 21., 23. und 29. Juli) festgehalten und dem letzten Trackingcode an jedem Tag ein Anteil von 100 % (`1.0`) am Einfluss auf die Kundenaktionen zugeschrieben.
 
 **Abfragesyntax**
 
@@ -526,7 +526,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
 | `{CHANNEL_NAME}` | Die Bezeichnung für das zurückgegebene Objekt. |
 | `{CHANNEL_VALUE}` | Die Spalte oder das Feld, die bzw. das den Zielkanal für die Abfrage darstellt. |
 | `{EXP_CONDITION}` | Die Bedingung, die den Ablaufpunkt des Kanals bestimmt. |
-| `{EXP_BEFORE}` | Ein boolescher Wert, der anzeigt, ob der Kanal vor oder nach der angegebenen Bedingung `{EXP_CONDITION}` abläuft. Dies ist in erster Linie für die Ablaufbedingungen einer Sitzung aktiviert, um sicherzustellen, dass der Erstkontakt nicht aus einer vorherigen Sitzung ausgewählt wird. Standardmäßig ist dieser Wert auf `false` gesetzt. |
+| `{EXP_BEFORE}` | Ein boolescher Wert, der anzeigt, ob der Kanal vor oder nach der angegebenen Bedingung abläuft, `{EXP_CONDITION}`, wird erfüllt. Dies ist in erster Linie für die Ablaufbedingungen einer Sitzung aktiviert, um sicherzustellen, dass der Erstkontakt nicht aus einer vorherigen Sitzung ausgewählt wird. Standardmäßig ist dieser Wert auf `false` gesetzt. |
 
 **Beispielabfrage**
 
@@ -559,7 +559,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `last_touch` angegeben. Die Spalte `last_touch` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `last_touch` Spalte. Die `last_touch` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -567,14 +567,14 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `last_touch`
 
 | Parameter | Beschreibung |
 | ---------- | ----------- |
-| `{NAME}` | Die `{CHANNEL_NAME}`, die als Beschriftung in der ADF eingegeben wurde. |
-| `{VALUE}` | Der Wert aus `{CHANNEL_VALUE}` , der den letzten Kontakt im [!DNL Experience Event] vor `{EXP_CONDITION}` darstellt. |
-| `{TIMESTAMP}` | Der Zeitstempel von [!DNL Experience Event], bei dem der letzte Kontakt aufgetreten ist. |
+| `{NAME}` | Die `{CHANNEL_NAME}`, der in der ADF als Titel eingetragen wurde. |
+| `{VALUE}` | Der Wert aus `{CHANNEL_VALUE}` Dies ist der letzte Kontakt im [!DNL Experience Event], bevor `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event] wobei der letzte Kontakt aufgetreten ist. |
 | `{FRACTION}` | Die Attribution des letzten Kontakts, ausgedrückt als Dezimalbruch. |
 
 ### Letztkontakt-Attribution mit Ablauftimeout
 
-Diese Abfrage gibt den Attributionswert des letzten Kontakts und Details für einen einzelnen Kanal im Zieldatensatz [!DNL Experience Event] für einen bestimmten Zeitraum zurück. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
+Diese Abfrage gibt den Attributionswert des letzten Kontakts und Details für einen einzelnen Kanal in der Zielgruppe zurück. [!DNL Experience Event] Datensatz für einen bestimmten Zeitraum. Die Abfrage liefert ein `struct`-Objekt mit dem Wert des letzten Kontakts, dem Zeitstempel sowie der Attribution für jede für den ausgewählten Kanal zurückgegebene Zeile.
 
 Diese Abfrage hilft dabei, die letzte Interaktion in einem bestimmten Zeitintervall nachzuvollziehen. Im nachfolgenden Beispiel stellt der für die einzelnen Kundeninteraktionen zurückgegebene letzte Kontakt die finale Interaktion innerhalb der darauffolgenden sieben Tage (`expTimeout = 86400 * 7`) dar.
 
@@ -593,7 +593,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
 | `{CHANNEL_VALUE}` | Spalte oder Feld, die bzw. das den Zielkanal für die Abfrage bildet. |
 | `{EXP_TIMEOUT}` | Das Zeitfenster, in dem die Abfrage nach einem Letztkontakt-Ereignis sucht (in Sekunden), nach dem das Kanalereignis eintritt. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -626,7 +626,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `last_touch` angegeben. Die Spalte `last_touch` besteht aus den folgenden Komponenten:
+Die Ergebnisse der angegebenen Beispielabfrage werden im `last_touch` Spalte. Die `last_touch` -Spalte besteht aus den folgenden Komponenten:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -634,9 +634,9 @@ Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `last_touch`
 
 | Parameter | Beschreibung |
 | ---------- | ----------- |
-| `{NAME}` | Der `{CHANNEL_NAME}`, der in der ADF als Beschriftung eingegeben wurde. |
+| `{NAME}` | Die `{CHANNEL_NAME}`, der in der ADF als Titel eingetragen wurde. |
 | `{VALUE}` | Der Wert aus `{CHANNEL_VALUE}`, der den letzten Kontakt innerhalb des `{EXP_TIMEOUT}`-Intervalls darstellt. |
-| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event], bei der der letzte Kontakt aufgetreten ist |
+| `{TIMESTAMP}` | Der Zeitstempel der [!DNL Experience Event] wo der letzte Kontakt aufgetreten ist |
 | `{FRACTION}` | Die Attribution des letzten Kontakts, ausgedrückt als Dezimalbruch. |
 
 ## Pathing
@@ -647,7 +647,7 @@ Die folgenden ADFs unterstützen die Erstellung von Pfadansichten aus ihren vorh
 
 ### Vorherige Seite
 
-Legt den vorherigen Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Funktion `WINDOW` mit einem Frame von `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` konfiguriert ist, mit dem die ADF die aktuelle Zeile und alle nachfolgenden Zeilen anzeigt.
+Legt den vorherigen Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Variable `WINDOW` -Funktion mit einem Frame von `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` die ADF so einstellen, dass sie sich die aktuelle Zeile und alle nachfolgenden Zeilen ansieht.
 
 **Abfragesyntax**
 
@@ -659,9 +659,9 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | Die Spalte oder das Feld aus dem Ereignis. |
 | `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der anzeigt, ob Null `{KEY}`-Werte ignoriert werden sollen. Der Standardwert ist `false`. |
+| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob null `{KEY}` -Werte ignoriert werden. Standardmäßig lautet der Wert `false`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -694,11 +694,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `previous_page` angegeben. Der Wert in der Spalte `previous_page` basiert auf dem in der ADF verwendeten `{KEY}`.
+Die Ergebnisse der angegebenen Beispielabfrage werden im `previous_page` Spalte. Der Wert innerhalb der `previous_page` basiert auf der `{KEY}` wird in der ADF verwendet.
 
 ### Nächste Seite
 
-Legt den nächsten Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Funktion `WINDOW` mit einem Frame von `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` konfiguriert ist, mit dem die ADF die aktuelle Zeile und alle nachfolgenden Zeilen anzeigt.
+Legt den nächsten Wert eines bestimmten Felds fest, der innerhalb des Fensters eine festgelegte Anzahl von Schritten entfernt ist. Beachten Sie im Beispiel, dass die Variable `WINDOW` -Funktion mit einem Frame von `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` die ADF so einstellen, dass sie sich die aktuelle Zeile und alle nachfolgenden Zeilen ansieht.
 
 **Abfragesyntax**
 
@@ -710,9 +710,9 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | Die Spalte oder das Feld aus dem Ereignis. |
 | `{SHIFT}` | (Optional) Die Anzahl der Ereignisse außerhalb des aktuellen Ereignisses. Der Standardwert ist 1. |
-| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der anzeigt, ob Null `{KEY}`-Werte ignoriert werden sollen. Der Standardwert ist `false`. |
+| `{IGNORE_NULLS}` | (Optional) Ein boolescher Wert, der angibt, ob null `{KEY}` -Werte ignoriert werden. Standardmäßig lautet der Wert `false`. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -746,7 +746,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `previous_page` angegeben. Der Wert in der Spalte `previous_page` basiert auf dem in der ADF verwendeten `{KEY}`.
+Die Ergebnisse der angegebenen Beispielabfrage werden im `previous_page` Spalte. Der Wert innerhalb der `previous_page` basiert auf der `{KEY}` wird in der ADF verwendet.
 
 ## Zeit zwischen
 
@@ -770,7 +770,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | Der Ausdruck, der das vorherige Ereignis qualifizieren soll. |
 | `{TIME_UNIT}` | Die Einheit der Ausgabe. Mögliche Werte sind Tage, Stunden, Minuten und Sekunden. Standardmäßig beträgt der Wert Sekunden. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -814,7 +814,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `average_minutes_since_registration` angegeben. Der Wert in der Spalte `average_minutes_since_registration` ist der Zeitunterschied zwischen dem aktuellen und dem vorherigen Ereignis. Die Zeiteinheit wurde zuvor in `{TIME_UNIT}` definiert.
+Die Ergebnisse der angegebenen Beispielabfrage werden im `average_minutes_since_registration` Spalte. Der Wert innerhalb der `average_minutes_since_registration` ist die Zeitdifferenz zwischen dem aktuellen und vorherigen Ereignis. Die Zeiteinheit wurde zuvor in der Variablen `{TIME_UNIT}`.
 
 ### Zeit zwischen nächster Übereinstimmung
 
@@ -832,7 +832,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | Der Ausdruck, der das nächste Ereignis qualifizieren soll. |
 | `{TIME_UNIT}` | (Optional) Die AusgabEinheit. Mögliche Werte sind Tage, Stunden, Minuten und Sekunden. Standardmäßig beträgt der Wert Sekunden. |
 
-Eine Erläuterung der Parameter innerhalb der Funktion `OVER()` finden Sie im Abschnitt [Fensterfunktionen](#window-functions).
+Eine Erläuterung der Parameter innerhalb der `OVER()` -Funktion finden Sie im Abschnitt [Bereich für Fensterfunktionen](#window-functions).
 
 **Beispielabfrage**
 
@@ -876,11 +876,11 @@ LIMIT 10
 (10 rows)
 ```
 
-Die Ergebnisse der angegebenen Beispielabfrage werden in der Spalte `average_minutes_until_order_confirmation` angegeben. Der Wert in der Spalte `average_minutes_until_order_confirmation` ist der Zeitunterschied zwischen dem aktuellen und dem nächsten Ereignis. Die Zeiteinheit wurde zuvor in `{TIME_UNIT}` definiert.
+Die Ergebnisse der angegebenen Beispielabfrage werden im `average_minutes_until_order_confirmation` Spalte. Der Wert innerhalb der `average_minutes_until_order_confirmation` ist die Zeitdifferenz zwischen dem aktuellen und dem nächsten Ereignis. Die Zeiteinheit wurde zuvor in der Variablen `{TIME_UNIT}`.
 
 ## Nächste Schritte
 
-Mithilfe der hier beschriebenen Funktionen können Sie Abfragen schreiben, um mithilfe von [!DNL Query Service] auf Ihre eigenen [!DNL Experience Event]-Datensätze zuzugreifen. Weitere Informationen zu Authoring-Abfragen in [!DNL Query Service] finden Sie in der Dokumentation zu [Erstellen von Abfragen](../best-practices/writing-queries.md).
+Mithilfe der hier beschriebenen Funktionen können Sie Abfragen erstellen, um auf Ihre [!DNL Experience Event] Datensätze mit [!DNL Query Service]. Weitere Informationen zu Authoring-Abfragen finden Sie unter [!DNL Query Service], siehe die Dokumentation unter [Abfragen erstellen](../best-practices/writing-queries.md).
 
 ## Weitere Ressourcen
 
