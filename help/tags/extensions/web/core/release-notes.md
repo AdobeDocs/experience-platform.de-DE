@@ -2,10 +2,10 @@
 title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 317f134420666de23f0ee9c14938fffeda09d3de
+source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
 workflow-type: tm+mt
-source-wordcount: '1543'
-ht-degree: 100%
+source-wordcount: '1565'
+ht-degree: 98%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 4. Januar 2022
+
+v3.3.0
+
+* Ändert die [Aktion für Trigger-Direktaufruf](./overview.md#direct-call-action) damit Sie benutzerdefinierte Ereignisinformationen bereitstellen können, die an Direktaufrufregeln gesendet werden.
 
 ## 8. Oktober 2021
 
