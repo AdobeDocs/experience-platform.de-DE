@@ -5,18 +5,18 @@ title: Beispielabfragen für Adobe Analytics-Daten
 topic-legacy: queries
 description: Die Daten aus ausgewählten Adobe Analytics-Report Suites werden in XDM ExperienceEvents umgewandelt und für Sie als Datensätze in Adobe Experience Platform aufgenommen. In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen diese Daten von Query Service von Adobe Experience Platform verwendet werden. Die enthaltenen Beispielabfragen sollten mit Ihren Adobe Analytics-Datensätzen funktionieren.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b140037ed5f055a8e7c583540910cc6b18bbf0bd
 workflow-type: tm+mt
-source-wordcount: '1021'
-ht-degree: 58%
+source-wordcount: '1052'
+ht-degree: 57%
 
 ---
 
 # Beispielabfragen für Adobe Analytics-Daten
 
-Daten aus ausgewählten Adobe Analytics Report Suites werden in Daten umgewandelt, die der [!DNL XDM ExperienceEvent]-Klasse entsprechen, und als Datensätze in Adobe Experience Platform aufgenommen.
+Daten aus ausgewählten Adobe Analytics Report Suites werden in Daten umgewandelt, die dem [!DNL XDM ExperienceEvent] -Klasse und in Adobe Experience Platform als Datensätze erfasst.
 
-In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Adobe Experience Platform [!DNL Query Service] diese Daten nutzt, einschließlich Beispielabfragen, die mit Ihren Adobe Analytics-Datensätzen funktionieren sollten. Weitere Informationen zur Zuordnung zu [!DNL Experience Events] finden Sie in der Dokumentation zu [Analytics-Feldzuordnung](../../sources/connectors/adobe-applications/mapping/analytics.md) .
+In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Adobe Experience Platform [!DNL Query Service] nutzt diese Daten, einschließlich Beispielabfragen, sollte mit Ihren Adobe Analytics-Datensätzen funktionieren. Weitere Informationen finden Sie in der Dokumentation unter [Analytics-Feldzuordnung](../../sources/connectors/adobe-applications/mapping/analytics.md) Weitere Informationen zur Zuordnung zu [!DNL Experience Events].
 
 ## Erste Schritte
 
@@ -118,6 +118,10 @@ GROUP BY Day, Hour
 ORDER BY Hour;
 ```
 
+## Deduplizierung
+
+Adobe Experience Platform Query Service unterstützt die Deduplizierung von Daten. Siehe [Datendeduplizierung in der Dokumentation zu Query Service](./deduplication.md) für Informationen zum Generieren neuer Werte zum Zeitpunkt der Abfrage [!DNL Experience Event] Datensätze.
+
 ## Merchandising-Variablen (Produktsyntax)
 
 
@@ -129,7 +133,7 @@ Diese Variablen werden als Merchandising-Variablen mit Produktsyntax bezeichnet.
 
 Weitere Informationen zur Verwendung der Produktsyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Produktsyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-product-syntax).
 
-Die folgenden Abschnitte beschreiben die XDM-Felder, die für den Zugriff auf die Merchandising-Variablen in Ihrem [!DNL Analytics]-Datensatz erforderlich sind:
+In den folgenden Abschnitten werden die XDM-Felder beschrieben, die für den Zugriff auf die Merchandising-Variablen in Ihren [!DNL Analytics] Datensatz:
 
 #### eVars
 
@@ -165,7 +169,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-Diese nächste Abfrage explodiert das `productListItems`-Array und gibt jedes Merchandising-eVar und jedes Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Der Wert `_id` ist ein eindeutiger Primärschlüssel für den Datensatz.
+Diese nächste Abfrage explodiert die `productListItems` und gibt jedes Merchandising-eVar und -Ereignis pro Produkt zurück. Das `_id`-Feld ist enthalten, um die Beziehung zum ursprünglichen Treffer anzuzeigen. Die `_id` -Wert ist ein eindeutiger Primärschlüssel für den Datensatz.
 
 ```sql
 SELECT
@@ -217,9 +221,9 @@ Beim Reporting werden Bestellungen, Umsatz, Produktansichten und Hinzufügen zum
 | Interne Suche:Sommerhemd | 19,99 | 1 | 1 | 1 |
 | Interne Suche:Wintermütze | 12,99 | 1 | 1 | 1 |
 
-Weitere Informationen zur Verwendung der Konversionssyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementierung von eVars mit Konversionssyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
+Weitere Informationen zur Verwendung der Konversionssyntax finden Sie in der Adobe Analytics-Dokumentation unter [Implementieren von eVars mit Konversionssyntax](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=en#implement-using-conversion-variable-syntax).
 
-Im Folgenden finden Sie die XDM-Felder, um die Konversionssyntax in Ihrem [!DNL Analytics] -Datensatz zu erzeugen:
+Hier finden Sie die XDM-Felder, um die Konversionssyntax in Ihrer [!DNL Analytics] Datensatz:
 
 #### eVars
 
