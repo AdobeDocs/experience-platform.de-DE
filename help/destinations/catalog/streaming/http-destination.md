@@ -1,11 +1,11 @@
 ---
 keywords: Streaming;
-title: HTTP-Verbindung
+title: HTTP-API-Verbindung
 description: Mit dem HTTP-API-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '634'
 ht-degree: 5%
 
 ---

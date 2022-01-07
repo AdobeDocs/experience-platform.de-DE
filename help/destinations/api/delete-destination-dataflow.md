@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Löschen eines Ziel-Datenflusses mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Datenflüsse an Batch- und Streaming-Ziele löschen.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 44%
+source-wordcount: '565'
+ht-degree: 43%
 
 ---
 
@@ -90,3 +91,5 @@ Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für di
 In diesem Tutorial haben Sie erfolgreich die [!DNL Flow Service] API zum Löschen eines vorhandenen Datenflusses in ein Ziel.
 
 Anweisungen zum Ausführen dieser Vorgänge mithilfe der Benutzeroberfläche finden Sie im Tutorial zu [Löschen von Datenflüssen in der Benutzeroberfläche](../ui/delete-destinations.md).
+
+Sie können jetzt fortfahren und [Zielkonten löschen](/help/destinations/api/delete-destination-account.md) mithilfe der [!DNL Flow Service] API.

@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Löschen eines Zielkontos mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie ein Zielkonto mithilfe der Flow Service-API löschen.
-source-git-commit: df89f8ce8050b26068e0ab7aa01f1c964f5d2422
+exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '758'
+source-wordcount: '769'
 ht-degree: 37%
 
 ---
@@ -184,4 +185,4 @@ Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für di
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich die [!DNL Flow Service] API zum Löschen vorhandener Zielkonten.
+In diesem Tutorial haben Sie erfolgreich die [!DNL Flow Service] API zum Löschen vorhandener Zielkonten. Weiterführende Informationen zur Verwendung von Zielen finden Sie im Abschnitt [Ziele - Übersicht](/help/destinations/home.md).

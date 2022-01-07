@@ -1,11 +1,11 @@
 ---
 keywords: Azure Event Hub-Ziel; Azure Event Hub; Azure Event Event Event Hub
-title: (Beta) !DNL Azure Event Hubs]-Verbindung
-description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem !DNL Azure Event Hubs]-Speicher, um Daten von Experience Platform zu streamen.
+title: (Beta) [!DNL Azure Event Hubs] connection
+description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Azure Event Hubs] -Speicher verwenden, um Daten aus Experience Platform zu streamen.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 8d2c5ef477d4707be4c0da43ba1f672fac797604
+source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '741'
 ht-degree: 2%
 
 ---
