@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destinations"ausführen können.
 title: API-Endpunktvorgänge für Ziele
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '2405'
+source-wordcount: '2387'
 ht-degree: 6%
 
 ---
@@ -507,7 +507,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 }
 ```
 
-## Bestimmte Zielkonfiguration abrufen {#get}
+## Abrufen einer bestimmten Zielkonfiguration {#get}
 
 Sie können detaillierte Informationen zu einer bestimmten Zielkonfiguration abrufen, indem Sie eine GET-Anfrage an die `/authoring/destinations` -Endpunkt und geben die Instanz-ID der Zielkonfiguration an, die Sie abrufen möchten.
 
@@ -697,8 +697,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren HTT
 
 ## Umgang mit API-Fehlern
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihr Ziel mithilfe der `/authoring/destinations` API-Endpunkt. Lesen [Verwenden des Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md) um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihr Ziel mithilfe der `/authoring/destinations` API-Endpunkt. Lesen [Verwendung von Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md) um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.

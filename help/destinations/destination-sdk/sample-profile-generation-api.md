@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/sample-profiles"ausführen können, um Beispielprofile zu generieren, die für Zieltests verwendet werden können.
 title: API-Vorgänge zur Profilerstellung
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 7f0dcc916b72145705ecd09b45aadd40eac99b23
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '971'
 ht-degree: 3%
 
 ---
@@ -375,7 +375,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen für die Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte
 

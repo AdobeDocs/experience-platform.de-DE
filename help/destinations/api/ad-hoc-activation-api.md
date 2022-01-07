@@ -5,13 +5,13 @@ title: (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-
 description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivieren von Zielgruppensegmenten über die Ad-hoc-Aktivierungs-API, einschließlich der Segmentierungsaufträge, die vor der Aktivierung ausgeführt werden.
 topic-legacy: tutorial
 type: Tutorial
-source-git-commit: 749fa5dc1e8291382408d9b1a0391c4c7f2b2a46
+exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 12%
+source-wordcount: '1047'
+ht-degree: 17%
 
 ---
-
 
 # (Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API
 
@@ -185,4 +185,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zurück.
 
 ## Umgang mit API-Fehlern
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.

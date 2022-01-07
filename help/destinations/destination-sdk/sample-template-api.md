@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/testing/template/sample"ausführen können, um eine Vorlage zur Testnachrichten-Transformation für Ihr Ziel zu erhalten.
 title: Abrufen von Beispielvorlagen-API-Vorgängen
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2ed132cd16db64b5921c5632445956f750fead56
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '383'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ ht-degree: 2%
 >
 >**API-Endpunkt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt `/authoring/testing/template/sample` ausführen können, um eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) für Ihr Ziel zu generieren. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Vorlage erstellen](./create-template.md).
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/testing/template/sample` API-Endpunkt, um eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) für Ihr Ziel. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Vorlage erstellen](./create-template.md).
 
 ## Erste Schritte mit API-Vorlagenvorgängen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dazu gehören das Abrufen der erforderlichen Zielerstellungsberechtigung und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
 ## Beispielvorlage abrufen {#generate-sample-template}
 
-Sie können eine Beispielvorlage abrufen, indem Sie eine GET-Anfrage an den Endpunkt `authoring/testing/template/sample/` senden und die Ziel-ID der Zielkonfiguration angeben, auf deren Grundlage Sie die Vorlage erstellen.
+Sie können eine Beispielvorlage abrufen, indem Sie eine GET-Anfrage an die `authoring/testing/template/sample/` -Endpunkt und die Ziel-ID der Zielkonfiguration angeben, basierend auf der Sie Ihre Vorlage erstellen.
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId` , die einer Zielkonfiguration entspricht, die mit dem Endpunkt `/destinations` erstellt wurde. Weitere Informationen finden Sie unter [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId` , die einer Zielkonfiguration entspricht, die mithilfe der `/destinations` -Endpunkt. Siehe Abschnitt [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
 
 
 **API-Format**
@@ -59,7 +59,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Beispielvorlage zurück, die Sie bearbeiten können, um Ihrem erwarteten Datenformat zu entsprechen.
 
-Wenn die von Ihnen angegebene Ziel-ID einer Zielkonfiguration mit [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) und `maxUsersPerRequest=1` in der Aggregationsrichtlinie entspricht, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
+Wenn die von Ihnen angegebene Ziel-ID einer Zielkonfiguration mit [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) und `maxUsersPerRequest=1` in der Aggregationsrichtlinie gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
 
 ```python
 {#- THIS is an example template for a single profile -#}
@@ -92,7 +92,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Zielkonfiguration mit [Aggregation d
 }
 ```
 
-Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit [konfigurierbarer Aggregation](./destination-configuration.md#configurable-aggregation) oder [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) mit `maxUsersPerRequest` größer als 1 entspricht, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
+Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) oder [Aggregation des besten Aufwands](./destination-configuration.md#best-effort-aggregation) mit `maxUsersPerRequest` größer als 1, gibt die Anfrage eine Beispielvorlage zurück, die der folgenden ähnelt:
 
 ```python
 {#- THIS is an example template for multiple profiles -#}
@@ -133,8 +133,8 @@ Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit [konfigurierba
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die Ziel-SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Weitere Informationen finden Sie unter [API-Status-Codes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anforderungsheader](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung für Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Nachrichtenumwandlungsvorlage mit dem API-Endpunkt `/authoring/testing/template/sample` generieren. Als Nächstes können Sie den [API-Endpunkt für Rendervorlagen](./render-template-api.md) verwenden, um exportierte Profile basierend auf der Vorlage zu generieren und mit dem erwarteten Datenformat Ihres Ziels zu vergleichen.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Nachrichtenumwandlungsvorlage mit dem `/authoring/testing/template/sample` API-Endpunkt. Als Nächstes können Sie die [API-Endpunkt für Rendervorlage](./render-template-api.md) , um exportierte Profile basierend auf der Vorlage zu generieren und mit dem erwarteten Datenformat Ihres Ziels zu vergleichen.

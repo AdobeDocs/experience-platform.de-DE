@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts "/authoring/testing/template/render"ausführen können, um exportierte Daten für Ihr Ziel basierend auf Ihrer Nachrichtenumwandlungsvorlage zu rendern.
 title: API-Vorgänge für Rendervorlagen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '806'
 ht-degree: 1%
 
 ---
@@ -1067,7 +1067,7 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen für die Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#api-status-codes) und [Fehler in der Anfragekopfzeile](https://experienceleague.adobe.com/docs/experience-platform/landing/troubleshooting.html?lang=en#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte {#next-steps}
 
