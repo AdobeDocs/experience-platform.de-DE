@@ -3,7 +3,7 @@ keywords: Streaming;
 title: HTTP-API-Verbindung
 description: Mit dem HTTP-API-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c93a054174bc68ecedf67599ef61ad0b41a56ada
+source-git-commit: b0c2c8313e05d1316f23dc15d99893e1887f8dcf
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 5%
@@ -81,7 +81,14 @@ Ihr exportiert [!DNL Experience Platform] Daten landen in Ihrer [!DNL HTTP] Ziel
 ```json
 {
   "person": {
-    "email": "yourstruly@adobe.com"
+    "birthDate": "YYYY-MM-DD",
+    "name": {
+      "firstName": "John",
+      "lastName": "Doe"
+    }
+  },
+  "personalEmail": {
+    "address": "john.doe@acme.com"
   },
   "segmentMembership": {
     "ups": {
