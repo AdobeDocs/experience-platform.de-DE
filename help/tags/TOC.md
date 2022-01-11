@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '382'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -54,7 +54,7 @@ ht-degree: 99%
 * Ereignisweiterleitung {#event-forwarding}
    * [Übersicht](./ui/event-forwarding/overview.md)
    * [Erste Schritte](./ui/event-forwarding/getting-started.md)
-   * [Geheimnisse konfigurieren](./ui/event-forwarding/secrets.md)
+   * [Konfigurieren von Geheimnissen](./ui/event-forwarding/secrets.md)
 * Administration {#admin}
    * [Übersicht](./ui/administration/overview.md)
    * [Unternehmen und Eigenschaften](./ui/administration/companies-and-properties.md)
@@ -176,7 +176,7 @@ ht-degree: 99%
       * [Anmerkungen](./api/endpoints/notes.md)
       * [Profil](./api/endpoints/profile.md)
       * [Durchsuchen](./api/endpoints/search.md)
-      * [Geheime Daten](./api/endpoints/secrets.md)
+      * [Geheimnisse](./api/endpoints/secrets.md)
    * Handbücher {#guides}
       * [Delegaten-Deskriptor-IDs](./api/guides/delegate-descriptor-ids.md)
       * [Verschlüsseln von Werten](./api/guides/encrypting-values.md)
@@ -186,7 +186,7 @@ ht-degree: 99%
       * [Sortieren von Antworten](./api/guides/sorting.md)
       * [Beziehungen](./api/guides/relationships.md)
       * [Suchen nach Ressourcen](./api/guides/search.md)
-      * [Geheime Daten](./api/guides/secrets.md)
+      * [Geheimnisse](./api/guides/secrets.md)
 * [FAQs](./faq.md)
 * [Aktualisierungen der Terminologie](./term-updates.md)
 * Versionshinweise {#release-notes}
