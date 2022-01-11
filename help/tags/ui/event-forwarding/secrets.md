@@ -1,15 +1,15 @@
 ---
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
-description: Erfahren Sie, wie Sie geheime Daten in der Datenerfassungs-Benutzeroberfläche konfigurieren, um sich bei Endpunkten zu authentifizieren, die in den Eigenschaften der Ereignisweiterleitung verwendet werden.
+description: Hier erfahren Sie, wie Sie Geheimnisse in der Datenerfassungs-Benutzeroberfläche konfigurieren können, um sich bei Endpunkten zu authentifizieren, die in den Properties der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1449'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
-# Konfigurieren von Geheimnissen in der Ereignisweiterleitung
+# Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 
 Bei der Ereignisweiterleitung sind geheime Daten eine Ressource, die eine Authentifizierungsberechtigung für ein anderes System darstellt und den sicheren Datenaustausch ermöglicht. Geheime Daten können nur in den Eigenschaften der Ereignisweiterleitung erstellt werden.
 
