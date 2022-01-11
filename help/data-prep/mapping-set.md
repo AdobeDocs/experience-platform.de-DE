@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Erfahren Sie, wie Sie Zuordnungssätze mit der Funktion zur Datenvorbereitung von Adobe Experience Platform verwenden.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '959'
 ht-degree: 100%
 
@@ -78,7 +78,7 @@ Die folgende JSON-Datei ist ein Beispiel für einen typischen Zuordnungssatz:
 | `source` | Für jede aufgelistete Zuordnung gibt das `source`-Attribut das Feld an, das Sie zuordnen möchten. Weitere Informationen zum Konfigurieren Ihrer Quelle finden Sie im Abschnitt [Quellen](#sources). |
 | `destination` | Für jede aufgelistete Zuordnung gibt das `destination`-Attribut das Feld oder den Pfad zum Feld an, in dem der aus dem Feld `source` extrahierte Wert platziert werden wird. Weitere Informationen zum Konfigurieren Ihrer Ziele finden Sie im Abschnitt [Ziele](#destination). |
 | `mappings.name` | (*Optional*) Ein Name für die Zuordnung. |
-| `mappings.description` | (*Optional)* Eine Beschreibung der Zuordnung. |
+| `mappings.description` | (*Optional*) Eine Beschreibung der Zuordnung. |
 
 ## Konfigurieren von Zuordnungsquellen
 
