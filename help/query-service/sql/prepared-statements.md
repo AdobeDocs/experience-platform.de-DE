@@ -5,16 +5,16 @@ title: Vorbereitete Anweisungen in Query Service
 topic-legacy: prepared statements
 description: In SQL werden vorbereitete Anweisungen verwendet, um ähnliche Abfragen oder Aktualisierungen als Vorlage zu verwenden. Adobe Experience Platform Query Service unterstützt vorbereitete Anweisungen durch Einsatz einer parametrisierten Abfrage.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 89%
+source-wordcount: '374'
+ht-degree: 85%
 
 ---
 
 # Vorbereitete Anweisungen
 
-In SQL dienen vorbereitete Anweisungen dazu, ähnliche Abfragen oder Aktualisierungen als Vorlagen zu erstellen. Adobe Experience Platform [!DNL Query Service] unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage. Dies kann zur Leistungsoptimierung beitragen, da Sie Abfragen nicht mehr immer wieder neu analysieren müssen.
+In SQL dienen vorbereitete Anweisungen dazu, ähnliche Abfragen oder Aktualisierungen als Vorlagen zu erstellen. Adobe Experience Platform [!DNL Query Service] unterstützt vorbereitete Anweisungen mithilfe einer parametrisierten Abfrage. Dies kann die Leistung optimieren, da Sie eine Abfrage nicht mehr wiederholt erneut analysieren müssen.
 
 ## Verwenden von vorbereiteten Anweisungen
 

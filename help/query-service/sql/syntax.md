@@ -5,7 +5,7 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b0cd372589be1db3d7ae571edaac68df9a3c493f
+source-git-commit: c2c543e64a4f2aef0064abf5e4fb9d7f2738159b
 workflow-type: tm+mt
 source-wordcount: '2207'
 ht-degree: 12%
@@ -330,7 +330,6 @@ statementList:
 Nachfolgend finden Sie ein Beispiel für die Verwendung eines anonymen Blocks.
 
 ```sql
-$$
 BEGIN
    SET @v_snapshot_from = select parent_id  from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
    SET @v_snapshot_to = select snapshot_id from (select history_meta('email_tracking_experience_event_dataset') ) tab where is_current;
@@ -342,7 +341,7 @@ EXCEPTION
   WHEN OTHER THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
-END$$;
+END;
 ```
 
 ## [!DNL Spark] SQL-Befehle
@@ -581,7 +580,7 @@ SHOW DateStyle;
 
 ### KOPIE
 
-Die `COPY` -Befehl gibt die Ausgabe eines `SELECT` an einen bestimmten Ort abrufen. Der Benutzer muss Zugriff auf diesen Speicherort haben, damit dieser Befehl erfolgreich ausgeführt werden kann.
+Die `COPY` -Befehl dupliziert die Ausgabe eines `SELECT` an einen bestimmten Ort abrufen. Der Benutzer muss Zugriff auf diesen Speicherort haben, damit dieser Befehl erfolgreich ausgeführt werden kann.
 
 ```sql
 COPY query
