@@ -3,10 +3,10 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 1%
+source-wordcount: '310'
+ht-degree: 0%
 
 ---
 
@@ -31,6 +31,12 @@ Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Tre
 Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_rsa"
+>title="RSA-öffentlicher Schlüssel"
+>abstract="Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als Base64-kodierte Zeichenfolge geschrieben werden."
+>text="Learn more in documentation"
 
 while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 

@@ -3,9 +3,9 @@ keywords: Amazon S3; S3-Ziel; s3; amazon s3
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um regelmäßig CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: b4810dfef7b0d437744ca14a32bd4f5746e8d002
+source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '390'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,12 @@ Erstellen Sie eine ausgehende Live-Verbindung zu Ihrer [!DNL Amazon Web Services
 Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_rsa"
+>title="RSA-öffentlicher Schlüssel"
+>abstract="Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als Base64-kodierte Zeichenfolge geschrieben werden."
+>text="Learn more in documentation"
 
 while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 

@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 055338228608685a65bc79d9d9d0c07e3ddddfb2
+source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
 workflow-type: tm+mt
-source-wordcount: '1785'
+source-wordcount: '1797'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 - [Ziele](../../destinations/home.md): Ziele sind vordefinierte Integrationen mit häufig verwendeten Anwendungen, die die nahtlose Aktivierung von Daten aus Platform für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle ermöglichen.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Überwachen von Datenflüssen im Arbeitsbereich &quot;Ziele&quot;
+## Überwachen von Datenflüssen im Arbeitsbereich &quot;Ziele&quot; {#monitor-dataflows-in-the-destinations-workspace}
 
 Im **[!UICONTROL Ziele]** Navigieren Sie in der Platform-Benutzeroberfläche zum **[!UICONTROL Durchsuchen]** und wählen Sie den Namen eines Ziels aus, das Sie anzeigen möchten.
 
@@ -42,21 +42,27 @@ Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
 | ------ | ----------- |
 | Aktiviert | Die `Enabled` Der Status gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem Zeitplan exportiert, der ihm bereitgestellt wurde. |
 | Deaktiviert | Die `Disabled` Der Status gibt an, dass ein Datenfluss inaktiv ist und keine Daten exportiert. |
-| Verarbeitung | Die `Processing` Status gibt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
+| In Bearbeitung | Die `Processing` Status gibt an, dass ein Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf. |
 | Fehler | Die `Error` Status gibt an, dass der Aktivierungsprozess eines Datenflusses unterbrochen wurde. |
 
-### Datenfluss-Ausführungen für Streaming-Ziele
+### Datenfluss-Ausführungen für Streaming-Ziele {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated"
 >title="Aktivierte Identitäten"
 >abstract="Die Anzahl der einzelnen Profilidentitäten, die erfolgreich für das ausgewählte Ziel aktiviert wurden."
->additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Weitere Informationen finden Sie in der Dokumentation ."
+>text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded"
 >title="Ausgeschlossene Identitäten"
 >abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_dataflow_identitiesfailed"
+>title="Identitäten fehlgeschlagen"
+>abstract="Die Anzahl der individuellen Profilidentitäten, die für das ausgewählte Ziel fehlgeschlagen sind. Weitere Informationen finden Sie unter Fehlerdiagnose ."
 >additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Bei Streaming-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab bietet eine stündliche Aktualisierung für Metrikdaten zu Ihren Datenfluss-Läufen. Die auffälligsten gekennzeichneten Statistiken sind für Identitäten.
@@ -93,7 +99,7 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Datenfluss-Ausführung für Batch-Ziele
+### Datenfluss-Ausführung für Batch-Ziele {#dataflow-runs-for-batch-destinations}
 
 Bei Batch-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfluss-Läufen. Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
 
