@@ -3,7 +3,7 @@ title: Versionshinweise für die Adobe Client-Datenschicht-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Client Data Layer“ in Adobe Experience Platform.
 exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
 source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
 ht-degree: 100%
 
@@ -32,7 +32,7 @@ Die Erweiterung stellt bei der ersten Version die folgenden Funktionen bereit:
    * Überwachen eines bestimmten gepushten Ereignisses
    * Alle Ereignisse können in verschiedenen Umfängen überwacht werden
 * Datenelemente:
-   * Berechneter Status: Globaler oder spezifischer Status
+   * Berechneter Status: globaler oder spezifischer Status
    * Datenschichtgröße
 * Aktionen:
    * Zurücksetzen der Datenschichtgröße (unter Beibehaltung des aktuellen berechneten Status)
