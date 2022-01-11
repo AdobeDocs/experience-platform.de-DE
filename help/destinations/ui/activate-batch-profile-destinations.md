@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f529a49c994d20f4b8da4c0d6bfe4c06a1a32655
+source-git-commit: a3596624c16da6369f8901d448bb381c37e3510e
 workflow-type: tm+mt
-source-wordcount: '2187'
+source-wordcount: '2194'
 ht-degree: 7%
 
 ---
@@ -72,7 +72,7 @@ Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Schaltfläche, die dem Segm
 >id="platform_destinations_activate_exportoptions"
 >title="Dateiexportoptionen"
 >abstract="Wählen Sie Vollständige Dateien exportieren aus, um eine vollständige Momentaufnahme aller Profile zu exportieren, die für das Segment qualifiziert sind. Wählen Sie Inkrementelle Dateien exportieren aus, um nur die Profile zu exportieren, die sich seit dem letzten Export für das Segment qualifiziert haben. Der erste inkrementelle Dateiexport umfasst alle Profile, die für das Segment qualifiziert sind, und dient als Aufstockung. Zukünftige inkrementelle Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für das Segment qualifiziert haben."
->additional-url="https://www.adobe.com/go/destinations-incremental-files-en" text="Inkrementelle Dateien exportieren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Inkrementelle Dateien exportieren"
 
 Auswählen **[!UICONTROL Exportieren von vollständigen Dateien]** , um den Export einer Datei mit einer vollständigen Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment Trigger.
 
