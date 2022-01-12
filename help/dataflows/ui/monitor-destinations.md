@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 86981f2bf97c9f504c17d9531cd51a58ab994dd2
+source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1879'
 ht-degree: 4%
 
 ---
@@ -83,7 +83,7 @@ Jeder einzelne Datenfluss zeigt die folgenden Details an:
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeitdauer, die die Verarbeitung des Datenflusses dauerte.
 - **[!UICONTROL Vorgenommene Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile.
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profilidentitäten, die erfolgreich für das ausgewählte Ziel aktiviert wurden.
-- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die zur Aktivierung aufgrund fehlender Attribute und Zustimmungsverstoßes ausgeschlossen sind.
+- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung ausgeschlossen sind.
 - **[!UICONTROL Identitäten fehlgeschlagen]** Die Gesamtzahl der Profilidentitäten, die aufgrund von Fehlern nicht für das Ziel aktiviert werden.
 - **[!UICONTROL Aktivierungsrate]**: Der Prozentsatz der empfangenen Identitäten, die erfolgreich aktiviert oder übersprungen wurden. Die folgende Formel zeigt, wie dieser Wert berechnet wird:
    ![](../assets/ui/monitor-destinations/activation-rate-formula.png)
@@ -101,10 +101,21 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ### Datenfluss-Ausführung für Batch-Ziele {#dataflow-runs-for-batch-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_dataflow_run_details_activation"
+>title="Datenfluss-Ausführungsdetails"
+>abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch Metrikdefinitionen ."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_profiles_received"
+>title="Vorgenommene Profile"
+>abstract="Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert."
+>additional-url="https://adobe.com/go/destinations-monitor-dataflows-batch-en" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Bei Batch-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfluss-Läufen. Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
 
 - **[!UICONTROL Aktivierte Identitäten]**: Die Anzahl der einzelnen Profilidentitäten, die erfolgreich für das ausgewählte Ziel aktiviert wurden.
-- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Anzahl der einzelnen Profilidentitäten, die für die Aktivierung für das ausgewählte Ziel ausgeschlossen sind, basierend auf fehlenden Attributen und einer Verletzung der Einwilligung.
+- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Anzahl der einzelnen Profilidentitäten, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
@@ -114,7 +125,7 @@ Jeder einzelne Datenfluss zeigt die folgenden Details an:
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
 - **[!UICONTROL Vorgenommene Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert.
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profilidentitäten, die erfolgreich für das ausgewählte Ziel aktiviert wurden.
-- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die zur Aktivierung aufgrund fehlender Attribute und Zustimmungsverstoßes ausgeschlossen sind.
+- **[!UICONTROL Ausgeschlossene Identitäten]**: Die Gesamtzahl der Profilidentitäten, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung ausgeschlossen sind.
 - **[!UICONTROL Status]**: Stellt den Status dar, in dem sich der Datenfluss befindet. Dabei kann es sich um einen von drei Status handeln: [!UICONTROL Erfolg], [!UICONTROL Fehlgeschlagen]und [!UICONTROL Verarbeitung]. [!UICONTROL Erfolg] bedeutet, dass der Datenfluss aktiv ist und Daten gemäß dem bereitgestellten Zeitplan exportiert. [!UICONTROL Fehlgeschlagen] bedeutet, dass die Aktivierung der Daten aufgrund von Fehlern ausgesetzt wurde. [!UICONTROL Verarbeitung] bedeutet, dass der Datenfluss noch nicht aktiv ist und im Allgemeinen beim Erstellen eines neuen Datenflusses auftritt.
 
 Um Details zu einem bestimmten Datenfluss-Lauf anzuzeigen, wählen Sie die Startzeit der Ausführung aus der Liste aus.
@@ -136,6 +147,11 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Dashboard &quot;Ziele überwachen&quot; {#monitoring-destinations-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_activation"
+>title="Activation"
+>abstract="Die Zielaktivierung enthält Informationen zum Aktivierungsstatus des Segments und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
 
 So greifen Sie auf die [!UICONTROL Überwachung] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie [!UICONTROL Ziele]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den ausgeführten Zielaufträgen.
 
