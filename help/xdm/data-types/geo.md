@@ -5,16 +5,16 @@ title: Geo-Datentyp
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Geo-XDM-Datentyp.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 39%
+ht-degree: 36%
 
 ---
 
-#  Geodatentyp
+# [!UICONTROL Geo] Datentyp
 
- Geois ist ein standardmäßiger XDM-Datentyp, der den geografischen Bereich beschreibt, in dem ein Ereignis beobachtet wurde.
+[!UICONTROL Geo] ist ein standardmäßiger XDM-Datentyp, der das geografische Gebiet beschreibt, in dem ein Ereignis beobachtet wurde.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
@@ -27,7 +27,7 @@ ht-degree: 39%
 | `dmaID` | Ganzzahl | Die Nielsen-Medienforschung bezeichnete ein Marktgebiet. |
 | `msaID` | Ganzzahl | Das metropolitane statistische Gebiet in den Vereinigten Staaten, in dem die Beobachtung stattfand. |
 | `postalCode` | Zeichenfolge | Die Postleitzahl des Ortes. Postleitzahlen sind nicht für alle Länder verfügbar. In einigen Ländern wird dies nur einen Teil der Postleitzahl enthalten. |
-| `stateProvince` | Zeichenfolge | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](http://www.unece.org/cefact/locode/subdivisions.html). |
+| `stateProvince` | Zeichenfolge | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](https://www.unece.org/cefact/locode/subdivisions.html). |
 
 {style=&quot;table-layout:auto&quot;}
 

@@ -2,7 +2,7 @@
 title: Ansichten  in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '2063'
 ht-degree: 100%
@@ -74,7 +74,7 @@ Die Methode `init` wird von Tags aufgerufen, sobald die Ansicht in den iframe ge
 | `propertySettings` | Ein Objekt, das Einstellungen für die Eigenschaft enthält. Weitere Informationen zu den in diesem Objekt enthaltenen Elementen finden Sie in der [Anleitung zum turbine-Objekt](../turbine.md#property-settings). |
 | `tokens` | Ein Objekt, das API-Token enthält. Für den Zugriff auf Adobe-APIs aus der Ansicht heraus müssen Sie normalerweise ein IMS-Token unter `tokens.imsAccess` verwenden. Dieses Token steht nur für Erweiterungen zur Verfügung, die von Adobe entwickelt wurden. Wenn Sie Mitarbeiter von Adobe sind und eine von Adobe erstellte Erweiterung bearbeiten, [senden Sie eine E-Mail an das Entwicklungs-Team für die Datenerfassung](mailto:reactor@adobe.com) und geben Sie den Namen der Erweiterung an, damit wir sie der Zulassungsliste hinzufügen können. |
 | `company` | Ein Objekt, das als einzige Eigenschaft `orgId` enthält, die Ihre Adobe Experience Cloud ID darstellt (eine 24-stellige alphanumerische Zeichenfolge). |
-| `schema` | Ein Objekt im [JSON-Schema](http://json-schema.org/)-Format. Dieses Objekt stammt aus dem [Erweiterungsmanifest](../manifest.md) und kann bei der Validierung Ihres Formulars hilfreich sein. |
+| `schema` | Ein Objekt im [JSON-Schema](https://json-schema.org/)-Format. Dieses Objekt stammt aus dem [Erweiterungsmanifest](../manifest.md) und kann bei der Validierung Ihres Formulars hilfreich sein. |
 
 Ihre Ansicht sollte diese Informationen zum Rendern und Verwalten des Formulars verwenden. Wahrscheinlich müssen Sie sich nur mit `info.settings` befassen, die anderen Informationen werden jedoch für den Fall bereitgestellt, dass sie erforderlich sind.
 

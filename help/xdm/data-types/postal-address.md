@@ -5,16 +5,16 @@ title: Datentyp der Postanschrift
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp für Postadresse.
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 12c3f440319046491054b3ef3ec404798bb61f06
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '341'
-ht-degree: 26%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Datentyp ] der Postanschrift
+# [!UICONTROL Postanschrift] Datentyp
 
-[!UICONTROL Postanschrift ] ist ein standardmäßiger XDM-Datentyp, der die Details einer Postanschrift beschreibt.
+[!UICONTROL Postanschrift] ist ein standardmäßiger XDM-Datentyp, der die Details einer Mailingadresse beschreibt.
 
 <img src="../images/data-types/postal-address.png" width="450" /><br />
 
@@ -31,14 +31,14 @@ ht-degree: 26%
 | `msaID` | Das metropolitane statistische Gebiet in den Vereinigten Staaten, in dem die Beobachtung stattfand. |
 | `postOfficeBox` | Das Postfach der Adresse. |
 | `postalCode` | Die Postleitzahl des Ortes. Postleitzahlen sind nicht für alle Länder verfügbar. In einigen Ländern wird dies nur einen Teil der Postleitzahl enthalten. |
-| `primary` | Ein boolescher Wert, der anzeigt, ob dies die primäre Adresse des Kontakts ist. Ein Profil kann zu einem bestimmten Zeitpunkt nur eine `primary`-Adresse haben. |
+| `primary` | Ein boolescher Wert, der anzeigt, ob dies die primäre Adresse des Kontakts ist. Ein Profil kann nur eine `primary` Adresse zu einem bestimmten Zeitpunkt. |
 | `region` | Die Region, der Kreis oder der Bezirk der Adresse. |
 | `repositoryCreatedBy` | Die ID des Benutzers, der den Datensatz erstellt hat. |
 | `repositoryLastModifiedBy` | Die ID des Benutzers, der den Datensatz zuletzt geändert hat. |
-| `stateProvince` | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](http://www.unece.org/cefact/locode/subdivisions.html). |
+| `stateProvince` | Das Bundesland oder die Provinz der Beobachtung. Das Format entspricht der [ISO-Norm 3166-2 (Land und Unterteilung)](https://www.unece.org/cefact/locode/subdivisions.html). |
 | `status` | Gibt an, ob die Adresse derzeit verwendet werden kann. |
 | `statusReason` | Eine Beschreibung des aktuellen `status`. |
-| `street1` - `street4` | Diese vier Felder sollen Informationen auf der primären Straßenniveau, Wohnungsnummer, Straßennummer und Straßenname enthalten. `street2` optional  `street4` sind. |
+| `street1` - `street4` | Diese vier Felder sollen Informationen auf der primären Straßenniveau, Wohnungsnummer, Straßennummer und Straßenname enthalten. `street2` nach `street4` sind optional. |
 
 {style=&quot;table-layout:auto&quot;}
 

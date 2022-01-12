@@ -5,9 +5,9 @@ topic-legacy: guide
 type: Documentation
 description: In Adobe Experience Platform sind berechnete Attribute Funktionen zum Aggregieren von Daten auf Ereignisebene in Profilattributen. Diese Funktionen werden automatisch berechnet, sodass sie für die Segmentierung, Aktivierung und Personalisierung verwendet werden können. In diesem Handbuch erfahren Sie, wie Sie berechnete Attribute mithilfe der Echtzeit-Kundenprofil-API erstellen, anzeigen, aktualisieren und löschen.
 exl-id: 6b35ff63-590b-4ef5-ab39-c36c39ab1d58
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '2272'
+source-wordcount: '2275'
 ht-degree: 63%
 
 ---
@@ -508,7 +508,7 @@ PATCH /config/computedAttributes/{ATTRIBUTE_ID}
 
 **Anfrage**
 
-Diese Anfrage nutzt die [JSON Patch-Formatierung](http://jsonpatch.com/), um den „value“ (Wert) des Felds „expression“ (Ausdruck) zu aktualisieren.
+Diese Anfrage nutzt die [JSON Patch-Formatierung](https://datatracker.ietf.org/doc/html/rfc6902), um den „value“ (Wert) des Felds „expression“ (Ausdruck) zu aktualisieren.
 
 ```shell
 curl -X PATCH \

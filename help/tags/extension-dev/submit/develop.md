@@ -2,10 +2,10 @@
 title: Entwickeln einer Erweiterung
 description: Dieses Dokument bietet einen allgemeinen Überblick über den Entwicklungsprozess von Tag-Erweiterungen mit Links zu weiterführender Dokumentation für detailliertere Prozesse.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 100%
+source-wordcount: '538'
+ht-degree: 97%
 
 ---
 
@@ -27,10 +27,10 @@ Wenn ein Plan vorhanden ist, können diese Anleitungen Ihnen helfen, den Entwick
 * Das [Tutorial-Video zu Erweiterungen](https://youtu.be/rxjtC9o4rl0) ist ein guter Anfang.
 * Die YouTube-Wiedergabeliste [Einführung in Erweiterungen](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) führt durch den Prozess der Erstellung von Erweiterungspaketen.
 * Artikel [JSON-Schema verstehen](https://spacetelescope.github.io/understanding-json-schema/index.html#).
-* [JSON Lint/Validator](http://jsonlint.com/).
+* [JSON Lint/Validator](https://jsonlint.com/).
 * [JSON-Viewer](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) Chrome-Erweiterung zum Hervorheben und Drucken von JSON &amp; JSONP.
 * [jsonschema.net](https://jsonschema.net/#/editor) Editor, um ein JSON-Schema von Ihrem Objekt zu erstellen.
-* [JSON-Schema-Validator](http://www.jsonschemavalidator.net/) Ein interaktiver JSON-Schema-Online-Validator.
+* [JSON-Schema-Validator](https://www.jsonschemavalidator.net) Ein interaktiver JSON-Schema-Online-Validator.
 
 ## Werkzeuge
 
@@ -53,6 +53,6 @@ Es gibt Beispielerweiterungen auf GitHub, die Sie prüfen oder als Einstiegsproj
 
 ## Slack-Arbeitsbereich
 
-Sie können Zugriff auf den Slack-Community-Arbeitsbereich anfordern, in dem sich Erweiterungsautoren mithilfe dieses [Anfrageformulars](http://join.launchdevelopers.chat) gegenseitig unterstützen können.
+Sie können Zugriff auf den Slack-Community-Arbeitsbereich anfordern, in dem sich Erweiterungsautoren mithilfe dieses [Anfrageformulars](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) gegenseitig unterstützen können.
 
 **Bitte beachten Sie**: Obwohl es in diesem Slack-Arbeitsbereich auch Mitglieder von Adobe gibt, handelt es sich hier um eine Community-Ressource, die nicht von Adobe gesponsert oder moderiert wird.

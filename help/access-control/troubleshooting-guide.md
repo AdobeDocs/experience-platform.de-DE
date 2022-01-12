@@ -5,7 +5,7 @@ title: Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
 topic-legacy: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 100%
@@ -16,7 +16,7 @@ ht-degree: 100%
 
 Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform. Fragen und Fehlerbehebungen für andere [!DNL Platform]-Services finden Sie im [Handbuch zur Fehlerbehebung in Experience Platform](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] nutzt Produktprofile in der [Adobe Admin Console](http://adminconsole.adobe.com), um rollenbasierte Zugriffskontrolle bereitzustellen und Anwender mit Berechtigungen und Sandboxes zu verknüpfen.  Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](home.md).
+[!DNL Experience Platform] nutzt Produktprofile in der [Adobe Admin Console](https://adminconsole.adobe.com), um rollenbasierte Zugriffskontrolle bereitzustellen und Anwender mit Berechtigungen und Sandboxes zu verknüpfen.  Weiterführende Informationen dazu finden Sie unter [Zugriffskontrolle – Übersicht](home.md).
 
 ## Wo finde ich meine aktuellen Zugriffsberechtigungen?
 

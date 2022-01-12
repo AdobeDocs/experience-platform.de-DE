@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Zeitpläne; Zeitplan; API; API;
+keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Zeitpläne; Zeitplan; API; API
 solution: Experience Platform
 title: Zeitplan-API-Endpunkt
 topic-legacy: developer guide
 description: Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 51%
+source-wordcount: '1209'
+ht-degree: 49%
 
 ---
 
 # Endpunkt &quot;Zeitpläne&quot;
 
-Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können. Sie können den Endpunkt `/config/schedules` verwenden, um eine Liste von Zeitplänen abzurufen, einen neuen Zeitplan zu erstellen, Details eines bestimmten Zeitplans abzurufen, einen bestimmten Zeitplan zu aktualisieren oder einen bestimmten Zeitplan zu löschen.
+Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können. Sie können die `/config/schedules` Endpunkt zum Abrufen einer Liste von Zeitplänen, Erstellen eines neuen Zeitplans, Abrufen von Details eines bestimmten Zeitplans, Aktualisieren eines bestimmten Zeitplans oder Löschen eines bestimmten Zeitplans.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um wichtige Informationen zu erhalten, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Anweisungen zum Lesen von Beispiel-API-Aufrufen.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Experience Platform Segmentation Service]-. Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich erforderlicher Kopfzeilen und Informationen zum Lesen von Beispiel-API-Aufrufen.
 
 ## Abrufen einer Liste von Zeitplänen {#retrieve-list}
 
@@ -100,7 +100,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 200 mit einer Liste der fü
 | `children.type` |  Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind &quot;batch_segmentation&quot;und &quot;export&quot;. |
 | `children.properties` | Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
 | `children.properties.segments` | Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `children.schedule` |  Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Die in diesem Bespiel verwendete Eingabe „0 0 1 * *“ legt fest, dass dieser Zeitplan am ersten jedes Monats um 0:00 Uhr ausgeführt wird. |
+| `children.schedule` |  Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Die in diesem Bespiel verwendete Eingabe „0 0 1 * *“ legt fest, dass dieser Zeitplan am ersten jedes Monats um 0:00 Uhr ausgeführt wird. |
 | `children.state` |  Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
 ## Erstellen neuer Zeitpläne {#create}
@@ -141,8 +141,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `name` | **Erforderlich.** Der Name des Zeitplans als Zeichenfolge. |
 | `type` | **Erforderlich.** Der Auftragstyp als Zeichenfolge. Die beiden unterstützten Typen sind &quot;batch_segmentation&quot;und &quot;export&quot;. |
 | `properties` | **Erforderlich.** Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
-| `properties.segments` | **Erforderlich, wenn  `type` gleich &quot;batch_segmentation&quot; ist.** Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Die in diesem Bespiel verwendete Eingabe „0 0 1 * *“ legt fest, dass dieser Zeitplan am ersten jedes Monats um 0:00 Uhr ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein systemgenerierter Zeitplan generiert. |
+| `properties.segments` | **Erforderlich, wenn `type` entspricht &quot;batch_segmentation&quot;.** Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
+| `schedule` | *Optional.* Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden. Das bedeutet, dass Sie nicht planen können, dass ein Auftrag innerhalb eines Zeitraums von 24 Stunden mehrmals ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Die in diesem Bespiel verwendete Eingabe „0 0 1 * *“ legt fest, dass dieser Zeitplan am ersten jedes Monats um 0:00 Uhr ausgeführt wird. <br><br>Wenn diese Zeichenfolge nicht angegeben wird, wird automatisch ein systemgenerierter Zeitplan generiert. |
 | `state` | *Optional.* Eine Zeichenfolge, die den Status des Zeitplans enthält. Die beiden unterstützten Status sind &quot;aktiv&quot;und &quot;inaktiv&quot;. Standardmäßig ist der Status auf &quot;inaktiv&quot;festgelegt. |
 
 **Antwort**
@@ -175,7 +175,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum von Ihn
 
 ## Abrufen einzelner Zeitpläne {#get}
 
-Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/config/schedules` senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie abrufen möchten.
+Sie können detaillierte Informationen zu einem bestimmten Zeitplan abrufen, indem Sie eine GET-Anfrage an die `/config/schedules` -Endpunkt und geben Sie die Kennung des Zeitplans an, den Sie im Anfragepfad abrufen möchten.
 
 **API-Format**
 
@@ -231,18 +231,18 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zum angegeb
 | `type` |  Der Auftragstyp als Zeichenfolge. Unterstützt werden die Typen `batch_segmentation` und `export`. |
 | `properties` | Ein Objekt, das zusätzliche dem Zeitplan zugehörige Eigenschaften enthält. |
 | `properties.segments` | Mit `["*"]` wird sichergestellt, dass alle Segmente einbezogen werden. |
-| `schedule` |  Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Die in diesem Bespiel verwendete Eingabe „0 0 1 * *“ legt fest, dass dieser Zeitplan am ersten jedes Monats um 0:00 Uhr ausgeführt wird. |
+| `schedule` |  Eine Zeichenfolge, die den Zeitplan für den Auftrag enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Die in diesem Bespiel verwendete Eingabe „0 0 1 * *“ legt fest, dass dieser Zeitplan am ersten jedes Monats um 0:00 Uhr ausgeführt wird. |
 | `state` |  Eine Zeichenfolge, die den Status des Zeitplans enthält. Unterstützt werden die Status `active` und `inactive`. Standardmäßig lautet der Status `inactive`. |
 
 ## Aktualisieren von Details für einen bestimmten Zeitplan {#update}
 
-Sie können einen bestimmten Zeitplan aktualisieren, indem Sie eine PATCH-Anfrage an den Endpunkt `/config/schedules` senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie aktualisieren möchten.
+Sie können einen bestimmten Zeitplan aktualisieren, indem Sie eine PATCH-Anfrage an die `/config/schedules` -Endpunkt und geben Sie die Kennung des Zeitplans an, den Sie im Anfragepfad aktualisieren möchten.
 
-Mit der PATCH-Anfrage können Sie entweder den [state](#update-state) oder den [cron-Zeitplan](#update-schedule) für einen einzelnen Zeitplan aktualisieren.
+Mit der PATCH-Anfrage können Sie entweder die [state](#update-state) oder [Cron-Zeitplan](#update-schedule) für einen individuellen Zeitplan.
 
 ### Aktualisieren des Status eines Zeitplans {#update-state}
 
-Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie die Eigenschaft `path` als `/state` und setzen `value` auf `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie in der [JSON Patch](http://jsonpatch.com/) -Dokumentation.
+Sie können einen JSON Patch-Vorgang verwenden, um den Status des Zeitplans zu aktualisieren. Um den Status zu aktualisieren, deklarieren Sie die `path` Eigenschaft als `/state` und legen Sie die `value` entweder `active` oder `inactive`. Weitere Informationen zum JSON Patch finden Sie im [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) Dokumentation.
 
 **API-Format**
 
@@ -274,7 +274,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;setzen. |
+| `path` | Der Pfad des Werts, den Sie ändern möchten. Da Sie in diesem Fall den Status des Zeitplans aktualisieren, müssen Sie den Wert von `path` auf &quot;/state&quot;. |
 | `value` | Der aktualisierte Wert des Status des Zeitplans. Dieser Wert kann entweder als &quot;aktiv&quot;oder &quot;inaktiv&quot;festgelegt werden, um den Zeitplan zu aktivieren oder zu deaktivieren. |
 
 **Antwort**
@@ -283,7 +283,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 204 (kein Inhalt) zurückge
 
 ### Cron-Zeitplan aktualisieren {#update-schedule}
 
-Sie können einen JSON Patch-Vorgang verwenden, um den Cron-Zeitplan zu aktualisieren. Um den Zeitplan zu aktualisieren, deklarieren Sie die Eigenschaft `path` als `/schedule` und setzen `value` auf einen gültigen Cron-Zeitplan. Weitere Informationen zum JSON Patch finden Sie in der [JSON Patch](http://jsonpatch.com/) -Dokumentation. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
+Sie können einen JSON Patch-Vorgang verwenden, um den Cron-Zeitplan zu aktualisieren. Um den Zeitplan zu aktualisieren, deklarieren Sie die `path` Eigenschaft als `/schedule` und legen Sie die `value` zu einem gültigen Cron-Zeitplan. Weitere Informationen zum JSON Patch finden Sie im [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) Dokumentation. Weitere Informationen zu Cron-Zeitplänen finden Sie in der Dokumentation zum [Format von Cron-Ausdrücken](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html).
 
 **API-Format**
 
@@ -315,7 +315,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `path` | Der Pfad des Werts, den Sie aktualisieren möchten. Da Sie in diesem Fall den Cron-Zeitplan aktualisieren, müssen Sie den Wert von `path` auf `/schedule` setzen. |
+| `path` | Der Pfad des Werts, den Sie aktualisieren möchten. Da Sie in diesem Fall den Cron-Zeitplan aktualisieren, müssen Sie den Wert von `path` nach `/schedule`. |
 | `value` | Der aktualisierte Wert des Cron-Zeitplans. Dieser Wert muss in Form eines Cron-Zeitplans angegeben werden. In diesem Beispiel wird der Zeitplan am zweiten Tag jedes Monats ausgeführt. |
 
 **Antwort**
@@ -324,7 +324,7 @@ Bei erfolgreicher Antwort wird der HTTP-Status-Code 204 (kein Inhalt) zurückge
 
 ## Löschen einzelner Zeitpläne
 
-Sie können das Löschen eines bestimmten Zeitplans anfordern, indem Sie eine DELETE-Anfrage an den Endpunkt `/config/schedules` senden und im Anfragepfad die Kennung des Zeitplans angeben, den Sie löschen möchten.
+Sie können das Löschen eines bestimmten Zeitplans anfordern, indem Sie eine DELETE-Anfrage an die `/config/schedules` -Endpunkt und geben Sie die Kennung des Zeitplans an, den Sie im Anfragepfad löschen möchten.
 
 **API-Format**
 

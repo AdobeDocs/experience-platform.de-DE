@@ -5,23 +5,23 @@ title: Datentyp "Geo-Koordinaten"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den XDM-Datentyp "Geo Coordinates".
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 15%
+ht-degree: 12%
 
 ---
 
-# [!UICONTROL Geo-] Koordinaten-Datentyp
+# [!UICONTROL Geo-Koordinaten] Datentyp
 
-[!UICONTROL Geo-] Koordinate ist ein standardmäßiger XDM-Datentyp, der die geografischen Koordinaten eines Orts beschreibt. Dieser Datentyp basiert auf der öffentlichen Spezifikation, die unter [schema.org](https://schema.org/GeoCoordinates) dokumentiert ist.
+[!UICONTROL Geo-Koordinaten] ist ein standardmäßiger XDM-Datentyp, der die geografischen Koordinaten eines Orts beschreibt. Dieser Datentyp basiert auf der öffentlichen Spezifikation, die dokumentiert ist unter [schema.org](https://schema.org/GeoCoordinates).
 
 <img src="../images/data-types/geo-coordinates.png" width="400" /><br />
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
 | `_schema.description` | Zeichenfolge | Eine Beschreibung dessen, was die Koordinaten identifizieren. |
-| `_schema.elevation` | Double | Die spezifische Höhe der definierten Koordinate. Der Wert muss dem [WGS84](http://gisgeography.com/wgs84-world-geodetic-system/)-Datum entsprechen und in Metern gemessen werden. |
+| `_schema.elevation` | Double | Die spezifische Höhe der definierten Koordinate. Der Wert muss mit der Variablen [WGS 84](https://gisgeography.com/wgs84-world-geodetic-system/) Datum und wird in Metern gemessen. |
 | `_schema.latitude` | Double | Die vorzeichenbehaftete vertikale Koordinate des geografischen Punkts. |
 | `_schema.longitude` | Double | Die vorzeichenbehaftete horizontale Koordinate des geografischen Punkts. |
 | `_id` | Zeichenfolge | Eine eindeutige, systemgenerierte ID für die Koordinaten. |

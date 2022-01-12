@@ -2,10 +2,10 @@
 title: Bibliotheksmodule in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Bibliotheksmodule für Web-Erweiterungen in Adobe Experience Platform formatieren.
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 100%
+source-wordcount: '378'
+ht-degree: 98%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Ein Bibliotheksmodul ist ein Teil des wiederverwendbaren Codes, der von einer Erweiterung bereitgestellt wird, die innerhalb der Tag-Laufzeitbibliothek in Adobe Experience Platform ausgegeben wird. Diese Bibliothek wird dann auf der Website des Kunden ausgeführt. Beispielsweise verfügt der Ereignistyp `gesture` über ein Bibliotheksmodul, das auf der Website des Client ausgeführt wird und Benutzergesten erkennt.
 
-Das Bibliotheksmodul hat die Struktur eines [CommonJS-Moduls](http://wiki.commonjs.org/wiki/Modules/1.1.1). In einem CommonJS-Modul stehen die folgenden Variablen zur Verwendung zur Verfügung:
+Das Bibliotheksmodul hat die Struktur eines [CommonJS-Moduls](https://nodejs.org/api/modules.html#modules-commonjs-modules). In einem CommonJS-Modul stehen die folgenden Variablen zur Verwendung zur Verfügung:
 
 ## [!DNL require]
 

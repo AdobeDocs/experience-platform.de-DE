@@ -2,10 +2,10 @@
 title: Überblick zum Entwickeln von Erweiterungen
 description: Lernen Sie die Hauptkomponenten verschiedener Tag-Erweiterungstypen und den Prozess der Erweiterungsentwicklung in Adobe Experience Platform kennen.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 100%
+source-wordcount: '949'
+ht-degree: 99%
 
 ---
 
@@ -29,7 +29,7 @@ Eine Manifestdatei ([`extension.json`](./manifest.md)) muss im Stammverzeichnis 
 
 ### Bibliotheksmodule
 
-Bibliotheksmodule sind die Dateien, die die verschiedenen [Komponenten](#components) beschreiben, die eine Erweiterung bereitstellt (d. h. die Logik, die in der Tag-Laufzeitbibliothek ausgegeben werden soll). Der Inhalt jeder Bibliotheksmoduldatei muss dem [CommonJS-Modulstandard](http://wiki.commonjs.org/wiki/Modules/1.1.1) entsprechen.
+Bibliotheksmodule sind die Dateien, die die verschiedenen [Komponenten](#components) beschreiben, die eine Erweiterung bereitstellt (d. h. die Logik, die in der Tag-Laufzeitbibliothek ausgegeben werden soll). Der Inhalt jeder Bibliotheksmoduldatei muss dem [CommonJS-Modulstandard](https://nodejs.org/api/modules.html#modules-commonjs-modules) entsprechen.
 
 Wenn Sie beispielsweise einen Aktionstyp namens „Beacon senden“ erstellen, müssen Sie über eine Datei verfügen, die die Logik zum Senden des Beacons enthält. Bei Verwendung von JavaScript könnte die Datei `sendBeacon.js` heißen. Der Inhalt dieser Datei wird innerhalb der Tag-Laufzeitbibliothek ausgegeben.
 

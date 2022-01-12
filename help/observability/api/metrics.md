@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Metrik-API-Endpunkt
 topic-legacy: developer guide
 description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: 5c893d7c8c455c86c94cd311a20ce774abcf65e0
+source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1864'
 ht-degree: 42%
 
 ---
@@ -84,8 +84,8 @@ curl -X POST \
 | `metrics` | Ein Array von Objekten, eines für jede Metrik, die Sie abrufen möchten. |
 | `name` | Der Name einer Metrik, die von Observability Insights erkannt wird. Siehe [Anhang](#available-metrics) für eine vollständige Liste der akzeptierten Metriknamen. |
 | `filters` | Ein optionales Feld, mit dem Sie Metriken nach bestimmten Datensätzen filtern können. Das Feld ist ein Array von Objekten (eines für jeden Filter), wobei jedes Objekt die folgenden Eigenschaften enthält: <ul><li>`name`: Der Typ der Entität, nach der Metriken gefiltert werden sollen. Derzeit wird nur `dataSets` unterstützt.</li><li>`value`: Die ID eines oder mehrerer Datensätze. Mehrere Datensatz-IDs können als einzelne Zeichenfolge angegeben werden, wobei jede ID durch vertikale Balkenzeichen (`\|`).</li><li>`groupBy`: Wenn auf &quot;true&quot;gesetzt, zeigt an, dass die entsprechende `value` stellt mehrere Datensätze dar, deren Metrikergebnisse separat zurückgegeben werden sollten. Wenn der Wert auf &quot;false&quot;gesetzt ist, werden die Metrikergebnisse für diese Datensätze gruppiert.</li></ul> |
-| `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Detaillierte Informationen zu den verfügbaren Aggregatoren finden Sie im Abschnitt [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
-| `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Sampling-Rate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für die Neuberechnung wird durch die `granularity` -Eigenschaft. Ausführliche Informationen zum Downsampling finden Sie im Abschnitt [OpenTSDB-Dokumentation](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
+| `aggregator` | Gibt die Aggregationsfunktion an, die zum Gruppieren mehrerer Datensätze aus Zeitreihen zu einzelnen Ergebnissen verwendet werden soll. Detaillierte Informationen zu den verfügbaren Aggregatoren finden Sie im Abschnitt [OpenTSDB-Dokumentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `downsample` | Ein optionales Feld, mit dem Sie eine Aggregationsfunktion angeben können, um die Sampling-Rate von Metrikdaten zu reduzieren, indem Sie Felder in Intervalle (oder &quot;Behälter&quot;) sortieren. Das Intervall für die Neuberechnung wird durch die `granularity` -Eigenschaft. Ausführliche Informationen zum Downsampling finden Sie im Abschnitt [OpenTSDB-Dokumentation](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
 
 {style=&quot;table-layout:auto&quot;}
 
