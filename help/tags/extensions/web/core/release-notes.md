@@ -3,9 +3,9 @@ title: Versionshinweise zur Core-Erweiterung
 description: Aktuelle Versionshinweise zur Core-Erweiterung in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 5441c6ca0c15996ee06afa2c795ec5ae6e030f35
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1565'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 
 v3.3.0
 
-* Ändert die [Aktion für Trigger-Direktaufruf](./overview.md#direct-call-action) damit Sie benutzerdefinierte Ereignisinformationen bereitstellen können, die an Direktaufrufregeln gesendet werden.
+* Ändert die [Trigger-Direktaufruf-Aktion](./overview.md#direct-call-action), damit Sie benutzerdefinierte Ereignisinformationen bereitstellen können, die an Direktaufrufregeln gesendet werden.
 
 ## 8. Oktober 2021
 
