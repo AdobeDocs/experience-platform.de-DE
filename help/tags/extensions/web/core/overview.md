@@ -3,9 +3,9 @@ title: Core-Erweiterung – Übersicht
 description: Machen Sie sich mit der Haupt-Tag-Erweiterung in Adobe Experience Platform vertraut.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: 04404ff9ab8d623214b96ec65342d2e8d11e85a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '5492'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -128,11 +128,11 @@ Das Ereignis wird ausgelöst, wenn ein benutzerspezifischer Ereignistyp eintritt
 
 Das Ereignis wird ausgelöst, wenn sich ein angegebenes Datenelement ändert. Sie müssen einen Namen für das Datenelement angeben. Sie können das Datenelement auswählen, indem Sie entweder seinen Namen in das Textfeld eingeben oder auf der rechten Seite des Textfelds das Datenelementsymbol auswählen und im angezeigten Dialogfeld aus einer Liste wählen.
 
-#### Direct Call {#direct-call-event}
+#### Direktaufruf {#direct-call-event}
 
-Ein Direktaufruferereignis umgeht die Ereigniserkennung und Suchsysteme. Direktaufrufregeln eignen sich optimal für Situationen, in denen Sie dem System mitteilen möchten, was genau passiert. Außerdem eignen sich Regeln dieses Typs ideal für Fälle, in denen das System kein Ereignis im DOM erkennen kann.
+Ein Direktaufruferereignis umgeht die Ereigniserkennung und Suchsysteme. Direktaufrufregeln eignen sich optimal für Situationen, in denen Sie dem System explizit vorgeben möchten, was passieren soll. Außerdem eignen sich Regeln dieses Typs ideal für Fälle, in denen das System kein Ereignis im DOM erkennen kann.
 
-Beim Definieren eines Direktaufrufereignisses müssen Sie eine Zeichenfolge angeben, die als Kennung dieses Ereignisses fungiert. Wenn eine [Direktaufruf-Aktion für Trigger](#direct-call-action) mit derselben Kennung ausgelöst wird, werden alle Regeln für Direktaufrufereignisse ausgeführt, die auf diese Kennung warten.
+Beim Definieren eines Direktaufrufereignisses müssen Sie eine Zeichenfolge angeben, die als Kennung dieses Ereignisses fungiert. Wenn eine [Trigger-Direktaufruf-Aktion](#direct-call-action) mit derselben Kennung ausgelöst wird, werden alle Regeln für Direktaufrufereignisse ausgeführt, die auf diese Kennung warten.
 
 ![Screenshot eines Direktaufruferereignisses in der Datenerfassungs-Benutzeroberfläche](../../../images/extensions/core/direct-call-event.png)
 
@@ -460,7 +460,7 @@ Geben Sie ein oder mehrere Hash-Muster an, die in der URL vorhanden sein müssen
 1. (Optional) Aktivieren Sie reguläre Ausdrücke, wenn dies ein regulärer Ausdruck ist.
 1. Fügen Sie beliebige weitere Hash-Muster hinzu.
 
-#### Path  And Query String
+#### Path And Query String
 
 Geben Sie einen oder mehrere Pfade an, die in der URL vorhanden sein müssen.  Dazu gehören der Pfad und die Abfragezeichenfolge.
 
@@ -524,7 +524,7 @@ Geben Sie einen Datumsbereich an. Wählen Sie das Datum und die Uhrzeit aus, nac
 Geben Sie an, wie oft die Bedingung „true“ zurückgibt. Sie können aus den folgenden Optionen auswählen:
 
 * Page view
-* Sitzungen
+* Sessions
 * Visitor
 * Seconds
 * Minutes
@@ -592,7 +592,7 @@ Wenn die Option „Run rule components in sequence“ in den Eigenschafteneinste
 
 *JavaScript*
 
-Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
+Beim Erstellen einer benutzerdefinierten JavaScript-Code-Aktion können Sie einen [Promise](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/Promise) in Ihrer Aktion zurückgeben. Die nächste Aktion in der Regel wird nur ausgeführt, wenn der zurückgegebene Promise ausgeführt wurde. Wenn der Promise abgelehnt wird, werden die nächsten Aktionen der Regel nicht ausgeführt.
 
 >[!NOTE]
 >
@@ -632,11 +632,11 @@ setTimeout(function() {
 
 ### Trigger-Direktaufruf {#direct-call-action}
 
-Diese Aktion Trigger alle Regeln, die eine bestimmte [Direktaufrufereignis](#direct-call-event). Beim Konfigurieren der Aktion müssen Sie die ID-Zeichenfolge für das Direktaufruferereignis angeben, das Sie Trigger haben möchten. Optional können Sie auch Daten über eine `detail` -Objekt, das einen benutzerdefinierten Satz von Schlüssel-Wert-Paaren enthalten kann.
+Diese Aktion löst alle Regeln aus, die ein bestimmtes [Direktaufrufereignis](#direct-call-event) verwenden. Beim Konfigurieren der Aktion müssen Sie die Kennungszeichenfolge für das Direktaufruferereignis angeben, das Sie auslösen möchten. Optional können Sie auch Daten über ein `detail`-Objekt, das einen benutzerdefinierten Satz von Schlüssel-Wert-Paaren enthalten kann, an ein Direktaufrufereignis weiterleiten.
 
 ![Screenshot einer Trigger-Direktaufruf-Aktion in der Datenerfassungs-Benutzeroberfläche](../../../images/extensions/core/direct-call-action.png)
 
-Die Aktion wird direkt dem [`track` method](../../../ui/client-side/satellite-object.md?lang=en#track) im `satellite` -Objekt, auf das clientseitiger Code zugreifen kann.
+Die Aktion wird direkt mit der [`track`-Methode](../../../ui/client-side/satellite-object.md?lang=en#track) im `satellite`-Objekt verknüpft, auf das Client-seitiger Code zugreifen kann.
 
 ## Datenelementtypen der Haupterweiterung
 
@@ -799,7 +799,7 @@ Sie können eines der folgenden Seitenattribute auswählen, um es in Ihrem Daten
 * URL
 * Hostname
 * Pathname
-* Protokoll
+* Protocol
 * Referrer
 * Title
 
