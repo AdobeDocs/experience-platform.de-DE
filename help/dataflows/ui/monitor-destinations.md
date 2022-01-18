@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: dc7de355284e2f1f52939ca7a80344345ce92c43
+source-git-commit: 567cfd5ecec23d35317a46a3126a608cc4792a73
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1897'
 ht-degree: 4%
 
 ---
@@ -152,6 +152,11 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="Die Zielaktivierung enthält Informationen zum Aktivierungsstatus des Segments und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
+
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Segmentaufträge"
+>abstract="Das Dashboard für Segmentaufträge enthält Informationen zu den Evaluierungs- und Exportvorgängen für alle Ihre Segmente."
 
 So greifen Sie auf die [!UICONTROL Überwachung] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie [!UICONTROL Ziele]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den ausgeführten Zielaufträgen.
 
