@@ -2,10 +2,10 @@
 title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
-workflow-type: ht
-source-wordcount: '1969'
-ht-degree: 100%
+source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
+workflow-type: tm+mt
+source-wordcount: '1973'
+ht-degree: 81%
 
 ---
 
@@ -121,22 +121,18 @@ Beim Erstellen oder Bearbeiten von Regeln können Sie diese Regeln in Ihrer [akt
 
 ## Regelsortierung {#rule-ordering}
 
-Mit der Regelsortierung können Sie steuern, in welcher Reihenfolge Regeln, die sich ein Ereignis teilen, ausgeführt werden.
+Mit der Regelsortierung können Sie steuern, in welcher Reihenfolge Regeln, die sich ein Ereignis teilen, ausgeführt werden. Jede Regel enthält eine Ganzzahl, die die Priorität ihrer Reihenfolge bestimmt (der Standardwert ist 50). Regeln, die niedrigere Werte für ihre Reihenfolge enthalten, werden vor Regeln mit höheren Werten ausgeführt.
 
-In vielen Fällen ist es erforderlich, dass Ihre Regeln in einer bestimmten Reihenfolge ausgelöst werden. Beispiele: (1) Sie verfügen über mehrere Regeln, die bedingt [!DNL Analytics]-Variablen festlegen, und müssen sicherstellen, dass die Regel mit „Beacon senden“ zuletzt ausgeführt wird. (2) Sie nutzen eine Regel, die [!DNL Target] auslöst, und eine andere, die [!DNL Analytics] auslöst. Die [!DNL Target]-Regel soll hierbei zuerst ausgeführt werden.
+Betrachten Sie einen Satz von fünf Regeln, die alle ein Ereignis teilen und alle Standardpriorität haben:
 
-Letztendlich ist der Entwickler des von Ihnen verwendeten Ereignistyps für die Ausführung von Aktionen in der richtigen Reihenfolge verantwortlich. Entwickler von Adobe-Erweiterungen stellen sicher, dass ihre Erweiterungen wie vorgesehen funktionieren. Bei Drittanbieter-Erweiterungen stellt Adobe Erweiterungsentwicklern Informationen dazu bereit, wie sie dies ordnungsgemäß implementieren können. Die Verantwortung liegt jedoch bei den Entwicklern.
+* Wenn es eine Regel gibt, die Sie zuletzt ausführen möchten, können Sie diese eine Regelkomponente bearbeiten und ihr eine Zahl über 50 (z. B. 60) zuweisen.
+* Wenn es eine Regel gibt, die Sie zuerst ausführen möchten, können Sie diese eine Regelkomponente bearbeiten und ihr eine Zahl unter 50 (z. B. 40) zuweisen.
 
-Adobe empfiehlt dringend, Ihre Regeln mit positiven Zahlen zwischen 1 und 100 zu sortieren (der Standardwert lautet 50). Denn einfacher ist immer besser. Denken Sie daran, dass die Reihenfolge eingehalten werden muss. Adobe berücksichtigt jedoch auch Sonderfälle, in denen hierdurch Einschränkungen auftreten. Deshalb sind auch andere Zahlen zulässig. Tags unterstützen Zahlen zwischen +/- 2.147.483.648. Sie können auch ca. ein Dutzend Dezimalstellen verwenden. Wenn Sie sich jedoch in einem Szenario befinden, in dem dies nötig ist, sollten Sie einige der Entscheidungen überdenken, die Sie bis zu diesem Punkt getroffen haben.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Im Aktionsabschnitt einer Regel werden Server-seitige Regeln nacheinander ausgeführt. Achten Sie beim Erstellen der Regel auf die richtige Reihenfolge.
+>Letztlich liegt die Verantwortung für die Ausführung von Aktionen in der richtigen Reihenfolge beim Erweiterungsentwickler des von Ihnen verwendeten Ereignistyps. Entwickler von Adobe-Erweiterungen stellen sicher, dass ihre Erweiterungen wie vorgesehen funktionieren. Adobe bietet Entwicklern von Drittanbietererweiterungen Anleitungen, dies ordnungsgemäß zu tun, kann jedoch nicht garantieren, wie diese Richtlinien befolgt werden.
 
-### Szenarios
-
-* Fünf Regeln teilen sich ein Ereignis. Alle haben Standardpriorität. Ich möchte, dass eine der Regeln zuletzt ausgeführt wird. Ich muss nur diese eine Regelkomponente bearbeiten und ihr eine Zahl über 50 (z. B. 60) zuweisen.
-* Fünf Regeln teilen sich ein Ereignis. Alle haben Standardpriorität. Ich möchte, dass eine der Regeln zuerst ausgeführt wird. Ich muss nur diese eine Regelkomponente bearbeiten und ihr eine Zahl unter 50 (z. B. 40) zuweisen.
+Es wird dringend empfohlen, Ihre Regeln mit positiven Zahlen zwischen 1 und 100 zu sortieren (standardmäßig 50). Da die Regelreihenfolge manuell beibehalten werden muss, empfiehlt es sich, Ihr Bestellschema so einfach wie möglich zu halten. Wenn es Edge-Fälle gibt, in denen diese Beschränkung zu begrenzt ist, unterstützen Tags die Regellaufnummern zwischen +/- 2.147.483.648.
 
 ### Client-seitige Regelverarbeitung
 
@@ -167,19 +163,21 @@ Adobe kann nicht garantieren, dass andere Regeln tatsächlich ausgelöst werden 
 
 ## Sequenzierung von Regelkomponenten {#sequencing}
 
-Das Verhalten der Tag-Laufzeitumgebung hängt davon ab, ob die Option **[!UICONTROL Regelkomponenten in der Sequenz ausführen]** für Ihre Eigenschaft aktiviert oder deaktiviert ist.
+Das Verhalten der Laufzeitumgebung hängt davon ab, ob **[!UICONTROL Regelkomponenten nacheinander ausführen]** für Ihre Eigenschaft aktiviert oder deaktiviert ist. Diese Einstellung bestimmt, ob die Komponenten einer Regel parallel (asynchron) ausgewertet werden können oder ob sie nacheinander ausgewertet werden müssen.
+
+>[!IMPORTANT]
+>
+>Diese Einstellung bestimmt nur, wie Bedingungen und Aktionen in den einzelnen Regeln ausgewertet werden, und beeinflusst nicht die Reihenfolge, in der Regeln selbst für Ihre Eigenschaft ausgeführt werden. Siehe vorherigen Abschnitt unter [Regelreihenfolge](#rule-ordering) für weitere Informationen zur Bestimmung der Ausführungsreihenfolge für mehrere Regeln.
+>
+>In [Ereignisweiterleitung](../event-forwarding/overview.md) -Eigenschaften, werden Regelaktionen immer nacheinander ausgeführt und diese Einstellung ist nicht verfügbar. Achten Sie beim Erstellen der Regel auf die richtige Reihenfolge.
 
 ### Aktiviert
 
-Wenn diese Option aktiviert ist, werden beim Auslösen eines Ereignisses zur Laufzeit die Regelbedingungen und -aktionen einer Verarbeitungswarteschlange hinzugefügt – basierend auf der von Ihnen definierten Reihenfolge – und nacheinander auf FIFO-Basis verarbeitet. Das Tag wartet auf den Abschluss der Komponente, bevor es zur nächsten Komponente wechselt.
+Wenn die Einstellung aktiviert ist, wenn ein Ereignis zur Laufzeit ausgelöst wird, werden die Bedingungen und Aktionen der Regel einer Verarbeitungswarteschlange hinzugefügt (basierend auf der von Ihnen definierten Reihenfolge) und nacheinander auf der Basis &quot;first in, first out&quot;(FIFO) verarbeitet. Die Regel wartet auf den Abschluss der Komponente, bevor sie zur nächsten Komponente wechselt.
 
 Wenn eine Bedingung nicht erfüllt wird oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Bedingungen und Aktionen dieser Regel aus der Warteschlange entfernt.
 
 Wenn eine Aktion fehlschlägt oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Aktionen dieser Regel aus der Warteschlange entfernt.
-
->[!NOTE]
->
->Wenn diese Einstellung aktiviert ist, werden alle Bedingungen und Aktionen asynchron ausgeführt, auch wenn Sie die Tag-Bibliothek synchron geladen haben.
 
 ### Deaktiviert
 
