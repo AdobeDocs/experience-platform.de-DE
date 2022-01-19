@@ -2,9 +2,9 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: e199553a2dcfd2d86d101f19d01e85556c90d05b
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1256'
 ht-degree: 48%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 48%
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in der [Versionshinweise zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.9.0 - 19. Januar 2022
+
+Enthält Version 2.8.0 der Adobe Experience Platform Web SDK-Bibliothek.
 
 ## Version 2.8.0 - 26. Oktober 2021
 

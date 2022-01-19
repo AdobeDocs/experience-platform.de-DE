@@ -3,14 +3,20 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7d7a9357f17b941a8f7800be86f211bb1276698d
+source-git-commit: a768cde86215ed9aad19e45362c6185276456703
 workflow-type: tm+mt
-source-wordcount: '811'
+source-wordcount: '852'
 ht-degree: 4%
 
 ---
 
 # Versionshinweise
+
+## Version 2.8.0 - 19. Januar 2022
+
+* Unterstützt Shadow-DOM-Selektoren für die Personalisierung.
+* Die Ereignistypen für die Personalisierung wurden umbenannt. (`display` und `click` werden `decisioning.propositionDisplay` und `decisioning.propositionInteract`)
+* Es wurde ein Problem behoben, bei dem HTML-Angebote mit Inline-Skript-Tags die Skript-Tags zweimal zur Seite hinzugefügt haben, obwohl das Skript nur einmal ausgeführt wurde.
 
 ## Version 2.7.0 - 26. Oktober 2021
 
