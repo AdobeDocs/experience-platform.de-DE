@@ -1,34 +1,59 @@
 ---
-keywords: Streaming;
+keywords: streaming;
 title: HTTP-API-Verbindung
-description: Mit dem HTTP-API-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
+description: The HTTP API destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: ba338972be13c7afa6720bba3f0fc96d244b8f9f
+source-git-commit: f098df9df2baa971db44a6746949f021e212ae3e
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 5%
+source-wordcount: '833'
+ht-degree: 4%
 
 ---
 
-# (Beta) [!DNL HTTP] API-Verbindung
+# (Beta) HTTP API connection
 
 >[!IMPORTANT]
 >
->Die [!DNL HTTP] Das Ziel in Platform befindet sich derzeit in der Beta-Phase. Dokumentation und Funktionalität können sich ändern.
+>The HTTP API destination in Platform is currently in beta. Dokumentation und Funktionalität können sich ändern.
 
 ## Übersicht {#overview}
 
-Die [!DNL HTTP] API-Ziel ist ein [!DNL Adobe Experience Platform] Streaming-Ziel, mit dem Sie Profildaten an Drittanbieter senden können [!DNL HTTP] -Endpunkte.
+Das HTTP-API-Ziel ist ein [!DNL Adobe Experience Platform] Streaming-Ziel, mit dem Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden können.
 
-So senden Sie Profildaten an [!DNL HTTP] -Endpunkte müssen Sie zunächst eine Verbindung zum Ziel in [[!DNL Adobe Experience Platform]](#connect-destination).
+Um Profildaten an HTTP-Endpunkte zu senden, müssen Sie zunächst [Verbindung zum Ziel herstellen](#connect-destination) in [!DNL Adobe Experience Platform].
 
 ## Anwendungsfälle {#use-cases}
 
-Die [!DNL HTTP] Ziel ist auf Kunden ausgerichtet, die XDM-Profildaten und Zielgruppensegmente in generische exportieren müssen [!DNL HTTP] -Endpunkte.
+The HTTP destination is targeted towards customers who need to export XDM profile data and audience segments to generic HTTP endpoints.
 
-[!DNL HTTP] Endpunkte können entweder die eigenen Systeme von Kunden oder Lösungen von Drittanbietern sein.
+HTTP-Endpunkte können entweder eigene Systeme von Kunden oder Lösungen von Drittanbietern sein.
 
-## Mit Ziel verbinden {#connect}
+## Voraussetzungen {#prerequisites}
+
+>[!IMPORTANT]
+>
+>Contact your Adobe representatives or Adobe Customer Care if you would like to enable the HTTP API destination beta functionality for your company.
+
+To use the HTTP API destination to export data out of Experience Platform, you must meet the following prerequisites:
+
+* Sie müssen über einen HTTP-Endpunkt verfügen, der die REST-API unterstützt.
+* Ihr HTTP-Endpunkt muss das Experience Platform-Profilschema unterstützen. No transformation to a 3rd-party payload schema is supported in the HTTP API destination. Siehe Abschnitt [exportierte Daten](#exported-data) ein Beispiel für das Ausgabeschema der Experience Platform.
+* Ihr HTTP-Endpunkt muss Kopfzeilen unterstützen.
+* Ihr HTTP-Endpunkt muss [OAuth 2.0-Client-Anmeldeinformationen](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) Authentifizierung. This requirement is valid while the HTTP API destination is in the beta phase.
+* Die Client-Anmeldedaten müssen in den Hauptteil der POST-Anfragen an Ihren -Endpunkt aufgenommen werden, wie im folgenden Beispiel gezeigt.
+
+```shell
+curl --location --request POST '<YOUR_API_ENDPOINT>' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>'
+```
+
+
+Sie können auch [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) , um eine Experience Platform einzurichten und Profildaten an einen HTTP-Endpunkt zu senden.
+
+## Mit Ziel verbinden {#connect-destination}
 
 Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
@@ -40,7 +65,7 @@ while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie d
    * Optional können Sie Abfrageparameter zum [!UICONTROL httpEndpoint] [!DNL URL].
 * **[!UICONTROL authEndpoint]**: die [!DNL URL] des HTTP-Endpunkts, der für [!DNL OAuth2] Authentifizierung.
 * **[!UICONTROL Client-ID]**: die [!DNL clientID] -Parameter, der in der [!DNL OAuth2] Client-Anmeldedaten.
-* **[!UICONTROL Client Secret]**: die [!DNL clientSecret] -Parameter, der in der [!DNL OAuth2] Client-Anmeldedaten.
+* **[!UICONTROL Client Secret]**: the [!DNL clientSecret] parameter used in the [!DNL OAuth2] client credentials.
 
    >[!NOTE]
    >
@@ -64,19 +89,19 @@ Im [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profile-desti
 
 ## Profil-Exportverhalten {#profile-export-behavior}
 
-Experience Platform optimiert das Profil-Exportverhalten für Ihr HTTP-API-Ziel, sodass nur Daten an Ihren API-Endpunkt exportiert werden, wenn relevante Profilaktualisierungen nach der Segmentqualifizierung oder anderen wichtigen Ereignissen durchgeführt wurden. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
+Experience Platform optimizes the profile export behavior to your HTTP API destination, to only export data to your API endpoint when relevant updates to a profile have occurred following segment qualification or other significant events. Profile werden in den folgenden Situationen an Ihr Ziel exportiert:
 
 * Das Profil-Update wurde durch eine Änderung der Segmentzugehörigkeit für mindestens eines der dem Ziel zugeordneten Segmente ausgelöst. Beispielsweise hat sich das Profil für eines der Segmente qualifiziert, die dem Ziel zugeordnet sind, oder eines der dem Ziel zugeordneten Segmente verlassen.
 * Das Profil-Update wurde durch eine Änderung der [Identitätszuordnung](/help/xdm/field-groups/profile/identitymap.md). Beispielsweise wurde einem Profil, das sich bereits für eines der dem Ziel zugeordneten Segmente qualifiziert hatte, eine neue Identität im Identitätszuordnungsattribut hinzugefügt.
 * Das Profil-Update wurde durch eine Änderung der Attribute für mindestens eines der dem Ziel zugeordneten Attribute ausgelöst. Beispielsweise wird eines der Attribute, die dem Ziel im Zuordnungsschritt zugeordnet sind, einem Profil hinzugefügt.
 
-In allen oben beschriebenen Fällen werden nur die Profile exportiert, in denen relevante Aktualisierungen vorgenommen wurden. Wenn beispielsweise ein Segment, das dem Zielfluss zugeordnet ist, aus hundert Mitgliedern besteht und fünf neue Profile für das Segment qualifiziert sind, ist der Export in Ihr Ziel inkrementell und umfasst nur die fünf neuen Profile.
+In all the cases described above, only the profiles where relevant updates have occurred are exported to your destination. Wenn beispielsweise ein Segment, das dem Zielfluss zugeordnet ist, aus hundert Mitgliedern besteht und fünf neue Profile für das Segment qualifiziert sind, ist der Export in Ihr Ziel inkrementell und umfasst nur die fünf neuen Profile.
 
-Beachten Sie, dass alle zugeordneten Attribute unabhängig vom Speicherort der Änderungen für ein Profil exportiert werden. Daher werden im Beispiel vor allem alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
+Note that the all the mapped attributes are exported for a profile, no matter where the changes lie. Daher werden im Beispiel vor allem alle zugeordneten Attribute für diese fünf neuen Profile exportiert, selbst wenn sich die Attribute selbst nicht geändert haben.
 
 ## Exportierte Daten {#exported-data}
 
-Ihr exportiert [!DNL Experience Platform] Daten landen in Ihrer [!DNL HTTP] Ziel im JSON-Format. Der folgende Export enthält beispielsweise ein Profil, das sich für ein bestimmtes Segment qualifiziert und ein anderes Segment verlassen hat, und das das Profilattribut mit Vorname, Nachname, Geburtsdatum und persönlicher E-Mail-Adresse enthält. Die Identitäten für dieses Profil sind ECID und E-Mail.
+Your exported [!DNL Experience Platform] data lands in your [!DNL HTTP] destination in JSON format. Der folgende Export enthält beispielsweise ein Profil, das sich für ein bestimmtes Segment qualifiziert und ein anderes Segment verlassen hat, und das das Profilattribut mit Vorname, Nachname, Geburtsdatum und persönlicher E-Mail-Adresse enthält. The identities for this profile are ECID and email.
 
 ```json
 {
