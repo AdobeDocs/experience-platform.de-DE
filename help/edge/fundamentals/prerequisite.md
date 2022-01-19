@@ -3,7 +3,7 @@ title: Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK
 description: Erfahren Sie mehr über die Voraussetzungen für die Verwendung des Adobe Experience Platform Web SDK.
 keywords: Erstanbieterdomäne;CNAME;Schema;Schema erstellen;Launch;AEP Web SDK-Erweiterung;Erweiterung;Konfigurations-ID;Konfigurationstool;Datenelement erstellen;Datenelement erstellen;XDM-Objekt;sendEvent;Ereignis senden;
 exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
-source-git-commit: 072e1968fa152454f4df6e88fcf7de5c03494030
+source-git-commit: a9b63d2ad2c1adbd647c0c3a43331cddffa8a04e
 workflow-type: tm+mt
 source-wordcount: '396'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Um das Adobe Experience Platform Web SDK zu verwenden, müssen Sie zunächst:
 
-- Lassen Sie Ihre Organisation diese Funktion bereitstellen. Wenn Sie Zugriff erhalten möchten, füllen Sie bitte Folgendes aus [Formular](http://adobe.ly/websdkaccess) und Adobe bieten Ihnen Zugriff auf Datenströme und Adobe Experience Platform (falls erforderlich). Bitte beachten Sie, dass Adobe Ihnen ohne Aufpreis den erforderlichen Zugriff zur begrenzten Nutzung mit dem SDK bietet.
+- Lassen Sie Ihre Organisation diese Funktion bereitstellen. Wenn Sie Zugriff erhalten möchten, füllen Sie bitte Folgendes aus [Formular](https://adobe.ly/websdkaccess) und Adobe bieten Ihnen Zugriff auf Datenströme und Adobe Experience Platform (falls erforderlich). Bitte beachten Sie, dass Adobe Ihnen ohne Aufpreis den erforderlichen Zugriff zur begrenzten Nutzung mit dem SDK bietet.
 - Es wird empfohlen, die Erstanbieterdomäne (CNAME) zu aktivieren. Wenn Sie bereits über einen CNAME für Adobe Analytics verfügen, sollten Sie diesen verwenden. Tests in der Entwicklung funktionieren ohne CNAME. Adobe empfiehlt jedoch, einen vor der Produktion zu verwenden. Obwohl eine CNAME-Implementierung keine Vorteile in Bezug auf die Cookie-Lebensdauer bietet, kann sie verhindern, dass bestimmte Anzeigensperren und seltener verwendete Browser SDK-Anforderungen blockieren. In diesen Fällen kann die Verwendung eines CNAME verhindern, dass die Datenerfassung für Benutzer, die diese Tools verwenden, unterbrochen wird.
 
 >[!IMPORTANT]
