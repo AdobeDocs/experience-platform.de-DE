@@ -6,24 +6,24 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: d6b16f09dc4e97135f42ddadd8e34b0f7db93327
 workflow-type: tm+mt
-source-wordcount: '1371'
-ht-degree: 67%
+source-wordcount: '1369'
+ht-degree: 66%
 
 ---
 
 # Streamen von Zeitreihendaten mit Streaming-Aufnahme-APIs
 
-In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen, die Teil der Adobe Experience Platform [!DNL Data Ingestion Service]-APIs sind.
+In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen, die Teil von Adobe Experience Platform sind [!DNL Data Ingestion Service] APIs.
 
 ## Erste Schritte
 
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, durch den [!DNL Platform] organisiert Erlebnisdaten.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassender Leitfaden, der alle verfügbaren Endpunkte der  [!DNL Schema Registry] API abdeckt und Anweisungen zum Aufrufen an diese Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
+- [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry] API und wie Sie Aufrufe an sie durchführen. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 
 Darüber hinaus setzt dieses Tutorial voraus, dass Sie bereits eine Streaming-Verbindung hergestellt haben. Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Sie im Tutorial zum [Erstellen einer Streaming-Verbindung](./create-streaming-connection.md).
 
@@ -35,7 +35,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -55,7 +55,7 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Schema erstellen auf Grundlage der XDM ExperienceEvent-Klasse
 
-Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die Klasse [!DNL XDM ExperienceEvent] implementiert. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
+Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die [!DNL XDM ExperienceEvent] -Klasse. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
 
 **API-Format**
 
@@ -100,7 +100,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Der Name, den Sie für Ihr Schema verwenden möchten. Dieser Name muss eindeutig sein. |
 | `description` | Eine aussagekräftige Beschreibung des Schemas, das Sie erstellen. |
-| `meta:immutableTags` | In diesem Beispiel wird das Tag `union` verwendet, um Ihre Daten in [[!DNL Real-time Customer Profile]](../../profile/home.md) zu speichern. |
+| `meta:immutableTags` | In diesem Beispiel wird die `union` -Tag verwendet wird, um Ihre Daten in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Antwort**
 
@@ -248,7 +248,7 @@ Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die 
 
 >[!NOTE]
 >
->Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und **[!DNL Identity]** aktiviert, indem die entsprechenden Tags festgelegt werden.
+>Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und **[!DNL Identity]** durch Festlegen der entsprechenden Tags.
 
 **API-Format**
 
@@ -298,7 +298,7 @@ Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Si
 
 ## Zeitreihendaten an die Streaming-Verbindung erfassen
 
-Mit dem erstellten Datensatz, der Streaming-Verbindung und dem erstellten Datenfluss können Sie XDM-formatierte JSON-Datensätze erfassen, um Zeitreihendaten innerhalb von [!DNL Platform] zu erfassen.
+Mit dem erstellten Datensatz, der Streaming-Verbindung und dem erstellten Datenfluss können Sie XDM-formatierte JSON-Datensätze erfassen, um Zeitreihendaten in [!DNL Platform].
 
 **API-Format**
 
@@ -309,7 +309,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | Der `id`-Wert der neu erstellten Streaming-Verbindung. |
-| `syncValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. Beachten Sie bitte, dass bei der Festlegung dieses Abfrageparameters auf `true` die Anforderungsrate auf 60-mal pro Minute pro `CONNECTION_ID` beschränkt ist. |
+| `syncValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. Beachten Sie Folgendes: Wenn Sie diesen Abfrageparameter auf `true` dass die Anfrage auf 60-mal pro Minute beschränkt wird `CONNECTION_ID`. |
 
 **Anfrage**
 
@@ -317,11 +317,13 @@ Die Erfassung von Zeitreihendaten in eine Streaming-Verbindung kann entweder mit
 
 Die folgende Beispielanfrage erfasst Zeitreihendaten mit einem fehlenden Quellnamen in Platform. Wenn den Daten der Quellname fehlt, wird die Quell-ID aus der Definition der Streaming-Verbindung hinzugefügt.
 
->[!IMPORTANT]
+Beide `xdmEntity._id` und `xdmEntity.timestamp` sind erforderliche Felder für Zeitreihendaten. Die `xdmEntity._id` -Attribut eine eindeutige Kennung für den Datensatz selbst darstellt, **not** eine eindeutige ID der Person oder des Geräts, deren Datensatz sie enthält.
+
+Sie müssen Ihre eigene `xdmEntity._id` und `xdmEntity.timestamp` für den Datensatz so zu verwenden, dass er konsistent bleibt, wenn der Datensatz jemals wieder aufgenommen werden muss. Idealerweise enthält Ihr Quellsystem diese Werte. Wenn keine ID verfügbar ist, sollten Sie die Werte anderer Felder im Datensatz verketten, um einen eindeutigen Wert zu erstellen, der bei der erneuten Aufnahme durchgängig aus dem Datensatz neu generiert werden kann.
+
+>[!NOTE]
 >
-> Sie müssen Ihre eigene `xdmEntity._id` und `xdmEntity.timestamp` erstellen. Eine gute Möglichkeit, eine ID zu generieren, besteht darin, die UUID-Funktion in der Datenvorbereitung zu verwenden. Weitere Informationen zur UUID-Funktion finden Sie im Leitfaden [Data Prep-Funktionen](../../data-prep/functions.md). Das Attribut `xdmEntity._id` stellt eine eindeutige Kennung für den Datensatz selbst dar, **nicht** eine eindeutige Kennung der Person oder des Geräts, deren Datensatz er ist. Die Personen- oder Geräte-ID ist in allen Attributen spezifisch, die als Personen- oder Gerätekennung des Schemas zugewiesen sind.
->
->Sowohl `xdmEntity._id` als auch `xdmEntity.timestamp` sind die einzigen erforderlichen Felder für Zeitreihendaten. Darüber hinaus sind für den folgenden API-Aufruf **keine** Authentifizierungskopfzeilen erforderlich.
+>Der folgende API-Aufruf **not** Authentifizierungs-Header benötigen.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -404,7 +406,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamten [!DNL Profile] zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamten zurück [!DNL Profile].
 
 ```json
 {
@@ -426,11 +428,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamt
 
 ## Die neu erfassten Zeitreihendaten abrufen
 
-Zur Validierung der zuvor erfassten Datensätze können Sie die [[!DNL Profile Access API]](../../profile/api/entities.md) verwenden, um die Zeitreihendaten abzurufen. Dazu können Sie eine GET-Anfrage an den `/access/entities`-Endpunkt richten und optionale Abfrageparameter nutzen. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
+Zur Validierung der zuvor erfassten Datensätze können Sie die [[!DNL Profile Access API]](../../profile/api/entities.md) , um die Zeitreihendaten abzurufen. Dazu können Sie eine GET-Anfrage an den `/access/entities`-Endpunkt richten und optionale Abfrageparameter nutzen. Es können mehrere Parameter verwendet werden, getrennt durch das kaufmännische Und-Zeichen (&amp;).
 
 >[!NOTE]
 >
->Wenn die Kennung der Zusammenführungsrichtlinie nicht definiert ist und `schema.name` oder `relatedSchema.name` `_xdm.context.profile` ist, ruft [!DNL Profile Access] alle zugehörigen Identitäten ab.****
+>Wenn die Kennung der Zusammenführungsrichtlinie nicht definiert ist und die `schema.name` oder `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] wird abgerufen **all** verwandte Identitäten.
 
 **API-Format**
 
@@ -528,6 +530,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Platform] aufnehmen können. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie mit der Überwachung der erfassten Daten über die [!DNL Platform] -Benutzeroberfläche beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
+Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten in [!DNL Platform] Streaming-Verbindungen verwenden. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie mit der Überwachung der erfassten Daten beginnen durch [!DNL Platform] Benutzeroberfläche. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).
