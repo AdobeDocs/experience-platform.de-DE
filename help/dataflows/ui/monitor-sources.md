@@ -6,7 +6,7 @@ title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 507fa2981f99cad26b117eb576c9dc18080886c8
+source-git-commit: 241deb93b3500139b79425a4da79258670e044a8
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 9%
@@ -41,13 +41,13 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Quellaufnahme"
->abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. <br> Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
+>abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Datenfluss-Ausführungsdetails"
->abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. <br> Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
+>abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
 >text="Learn more in documentation"
 
 Im [Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** über die linke Navigationsleiste auf [!UICONTROL Überwachung] Dashboard. Die [!UICONTROL Überwachung] Das Dashboard enthält Metriken und Informationen zu allen Datenflüssen von Quellen, einschließlich Einblicken in den Zustand des Daten-Traffics von einer Quelle zu [!DNL Identity Service]und [!DNL Profile].
@@ -151,7 +151,7 @@ Auswählen **[!UICONTROL Identitäten]** , um die Aufnahme in der [!UICONTROL Id
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
 >title="Identitätsverarbeitung"
->abstract="Die Identitätsverarbeitung enthält Informationen zu Datensätzen, die für den Identity-Dienst erfasst werden, einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme. <br> Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
+>abstract="Die Identitätsverarbeitung enthält Informationen zu Datensätzen, die für den Identity-Dienst erfasst werden, einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
 >text="Learn more in documentation"
 
 Die [!UICONTROL Identitätsverarbeitung] Seite enthält Informationen zu Datensätzen, die in [!DNL Identity Service], einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme.
