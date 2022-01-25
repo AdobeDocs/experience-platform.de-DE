@@ -3,9 +3,9 @@ title: Bibliotheksmodule in Edge-Erweiterungen
 description: Formatieren Sie Bibliotheksmodule für Tag-Erweiterungen in einer Edge-Eigenschaft.
 exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '307'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 98%
 >
 >Dieses Dokument behandelt das Bibliotheksmodulformat für Edge-Erweiterungen. Wenn Sie eine Web-Erweiterung entwickeln, lesen Sie stattdessen das Handbuch für das [Formatieren von Web-Erweiterungsmodulen](../web/format.md).
 
-Ein Bibliotheksmodul ist wiederverwendbarer Code, der von einer Erweiterung bereitgestellt wird, die in der Tag-Laufzeitbibliothek (der Bibliothek, die auf dem Edge-Knoten ausgeführt wird) ausgegeben wird. Ein `sendBeacon`-Aktionstyp verfügt beispielsweise über ein Bibliotheksmodul, das auf dem Edge-Knoten ausgeführt wird und einen Beacon sendet.
+Ein Bibliotheksmodul ist wiederverwendbarer Code, der von einer Erweiterung bereitgestellt wird, die in der Tag-Laufzeitbibliothek von Adobe Experience Platform (der Bibliothek, die auf dem Edge-Knoten ausgeführt wird) ausgegeben wird. Ein `sendBeacon`-Aktionstyp verfügt beispielsweise über ein Bibliotheksmodul, das auf dem Edge-Knoten ausgeführt wird und einen Beacon sendet.
 
 Das Bibliotheksmodul hat die Struktur eines [CommonJS-Moduls](https://nodejs.org/api/modules.html#modules-commonjs-modules). In einem CommonJS-Modul stehen die folgenden Variablen zur Verwendung zur Verfügung:
 
