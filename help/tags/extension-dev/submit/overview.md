@@ -3,9 +3,9 @@ title: Übersicht über den Prozess zur Übermittlung von Erweiterungen
 description: Erfahren Sie, wie Sie Ihre Erweiterung in Adobe Experience Platform übermitteln – alle Schritte von der Entwicklung bis zur Veröffentlichung.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '238'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Wählen Sie den entsprechenden Link aus, um weitere Informationen zu den einzeln
 
 ## Support
 
-Der Support ist über den Slack-Arbeitsbereich der Tag-Entwickler-Community verfügbar, während Sie Ihre Erweiterung erstellen und testen. Der Slack-Arbeitsbereich ist eine Online-Community, in der sich Erweiterungsautoren gegenseitig unterstützen. Sie können den Zugriff wie folgt anfordern: [Online-Formular](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+Der Support ist über den Slack-Arbeitsbereich der Tag-Entwickler-Community verfügbar, während Sie Ihre Erweiterung erstellen und testen. Der Slack-Arbeitsbereich ist eine Online-Community, in der sich Erweiterungsautoren gegenseitig unterstützen. Sie können den Zugriff mithilfe des folgenden [Online-Formulars](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) anfordern.
 
 >[!NOTE]
 >
