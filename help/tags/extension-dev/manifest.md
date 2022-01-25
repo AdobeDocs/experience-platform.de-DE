@@ -3,9 +3,9 @@ title: Erweiterungsmanifest
 description: Erfahren Sie, wie Sie eine JSON-Manifestdatei konfigurieren, die Adobe Experience Platform Informationen zur korrekten Verwendung Ihrer Erweiterung bereitstellt.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2647'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Ein Erweiterungsmanifest muss Folgendes enthalten:
 | --- | --- |
 | `name` | Name der Erweiterung. Dies muss sich von allen anderen Erweiterungen unterscheiden und den [Benennungsregeln](#naming-rules) entsprechen. **Er wird von Tags als Kennung verwendet und sollte nach der Veröffentlichung der Erweiterung nicht geändert werden.** |
 | `platform` | Die Plattform für die Erweiterung. Der einzige Wert, der im Moment akzeptiert wird, lautet `web`. |
-| `version` | Die Version der Erweiterung. Sie muss dem Versionierungsformat [semver](https://semver.org/) entsprechen. Dies entspricht dem [npm-Feld version](https://docs.npmjs.com/files/package.json#version). |
+| `version` | Die Version der Erweiterung. Sie muss dem Versionierungsformat [semver](https://semver.org/lang/de/) entsprechen. Dies entspricht dem [npm-Feld version](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | Der für Menschen lesbare Name der Erweiterung. Er wird Platform-Benutzern angezeigt. Es ist nicht erforderlich, „Tags“ oder „Erweiterung“ zu erwähnen, da die Benutzer bereits wissen, dass sie eine Tag-Erweiterung vor sich haben. |
 | `description` | Die Beschreibung der Erweiterung. Er wird Platform-Benutzern angezeigt. Wenn Benutzer mit Ihrer Erweiterung Ihr Produkt auf ihrer Website implementieren können, beschreiben Sie die Funktionen Ihres Produkts. Es ist nicht erforderlich, „Tags“ oder „Erweiterung“ zu erwähnen, da die Benutzer bereits wissen, dass sie eine Tag-Erweiterung vor sich haben. |
 | `iconPath` *(Optional)* | Der relative Pfad zu dem Symbol, das für die Erweiterung angezeigt wird. Er sollte nicht mit einem Schrägstrich beginnen. Er muss auf eine SVG-Datei mit der Erweiterung `.svg` verweisen. Das SVG-Symbol sollte quadratisch sein und sich von Platform skalieren lassen. |
@@ -134,7 +134,20 @@ Eine Typdefinition ist ein Objekt, mit dem ein Ereignis-, Bedingungs-, Aktions- 
       <td><code>schema</code></td>
       <td>Ein Objekt vom Typ <a href="https://json-schema.org/">JSON-Schema</a>, das das Format eines gültigen Einstellungsobjekts beschreibt, das vom Benutzer gespeichert werden kann. Die Einstellungen werden normalerweise von einem Benutzer über die Datenerfassungs-Benutzeroberfläche konfiguriert und gespeichert. In diesen Fällen kann die Ansicht der Erweiterung die erforderlichen Schritte zur Überprüfung der vom Benutzer bereitgestellten Einstellungen durchführen. Auf der anderen Seite entscheiden sich einige Benutzer dafür, Tag-APIs direkt ohne die Hilfe einer Benutzeroberfläche zu verwenden. Mit diesem Schema wird Platform in die Lage versetzt, genau zu überprüfen, ob die von den Benutzern gespeicherten settings-Objekte unabhängig davon, ob eine Benutzeroberfläche verwendet wird, in einem Format vorliegen, das mit dem Bibliotheksmodul kompatibel ist, das zur Laufzeit das settings-Objekt verarbeitet.<br><br>Ein Beispiel für ein schema-Objekt:<br>
 <pre class="JSON language-JSON hljs">
-{ "$schema": "http://json-schema.org/draft-04/schema#", "type": "object", "properties": { "delay": { "type": "number", "minimum": 1 } }, "required": [ "delay" ], "additionalProperties": false }
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "delay": {
+      "type": "number",
+      "minimum": 1
+    }
+  },
+  "required": [
+    "delay"
+  ],
+  "additionalProperties": false
+}
 </pre>
       Es wird empfohlen, zum manuellen Testen Ihres Schemas ein Tool wie <a href="https://www.jsonschemavalidator.net/">JSON Schema Validator</a> zu verwenden.</td>
     </tr>
