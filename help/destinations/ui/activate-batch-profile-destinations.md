@@ -6,9 +6,9 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a3596624c16da6369f8901d448bb381c37e3510e
+source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
 workflow-type: tm+mt
-source-wordcount: '2194'
+source-wordcount: '2193'
 ht-degree: 7%
 
 ---
@@ -196,7 +196,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.sta
 >abstract="Wählen Sie die XDM-Schemaattribute aus, die alle exportierten Profile enthalten sollen. Profile ohne obligatorischen Schlüssel werden nicht an das Ziel exportiert. Wenn Sie keinen obligatorischen Schlüssel auswählen, werden alle qualifizierten Profile unabhängig von ihren Attributen exportiert."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Weitere Informationen finden Sie in der Dokumentation ."
 
-Ein obligatorisches Attribut ist ein vom Benutzer aktiviertes Kontrollkästchen, mit dem sichergestellt wird, dass alle Profildatensätze das ausgewählte Attribut enthalten. Beispiel: alle exportierten Profile eine E-Mail-Adresse enthalten. &#x200B;
+Ein obligatorisches Attribut ist ein benutzeraktiviertes Kontrollkästchen, mit dem sichergestellt wird, dass alle Profildatensätze das ausgewählte Attribut enthalten. Beispiel: alle exportierten Profile eine E-Mail-Adresse enthalten. &#x200B;
 
 Sie können Attribute als obligatorisch markieren, um sicherzustellen, dass [!DNL Platform] exportiert nur die Profile, die das spezifische Attribut enthalten. Sie kann daher als zusätzliche Filterform verwendet werden. Kennzeichnen eines Attributs als obligatorisch **not** erforderlich.
 
