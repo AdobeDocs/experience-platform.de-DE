@@ -1,28 +1,24 @@
 ---
 keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniertes Ziel der Erlebnisplattform;
 title: Benutzerdefinierte Personalisierungsverbindung (Beta)
-description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet 1:1-Echtzeit-Personalisierung und basiert auf der Segmentmitgliedschaft eines Benutzerprofils.
+description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Mitgliedschaft in einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 50ab34cb9147cf880e199afad88e718875fb591f
+source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 8%
+source-wordcount: '575'
+ht-degree: 7%
 
 ---
 
-# Benutzerdefinierte Personalisierungsverbindung (Beta) {#custom-personalization-connection}
+# Benutzerdefinierte Personalisierungsverbindung {#custom-personalization-connection}
 
 ## Übersicht {#overview}
-
->[!IMPORTANT]
->
->Die Verbindung zur benutzerdefinierten Personalisierung in Adobe Experience Platform befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern.
 
 Dieses Ziel bietet eine Möglichkeit, Segmentinformationen von Adobe Experience Platform zu externen Personalisierungsplattformen, Content-Management-Systemen, Anzeigen-Servern und anderen Anwendungen abzurufen, die auf Kunden-Websites ausgeführt werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Integration basiert auf der [Adobe Experience Platform Web SDK](../../../edge/home.md). Sie müssen dieses SDK verwenden, um dieses Ziel zu verwenden.
+Diese Integration basiert auf der [Adobe Experience Platform Web SDK](../../../edge/home.md) oder [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). Sie müssen eines dieser SDKs verwenden, um dieses Ziel zu verwenden.
 
 ## Exporttyp {#export-type}
 
@@ -73,12 +69,10 @@ Hier finden Sie einen Beispielwert für die `event.destinations` Variable:
       "alias":"personalizationAlias",
       "segments":[
          {
-            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"399eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          },
          {
-            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77",
-            "mergePolicyId":"69638c01-2099-4032-8b41-84bee8ebcfa4"
+            "id":"499eb3e7-3d50-47d3-ad30-a5ad99e8ab77"
          }
       ]
    }
