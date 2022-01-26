@@ -5,20 +5,26 @@ title: 'Edge-Segmentierung mithilfe der API '
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele für die Verwendung der Kantensegmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 4d2c6385decd5b789a975165a87bc80f9b008cd7
+source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
 workflow-type: tm+mt
-source-wordcount: '942'
-ht-degree: 7%
+source-wordcount: '989'
+ht-degree: 6%
 
 ---
 
-# Edge-Segmentierung (Beta)
+# Edge-Segmentierung
 
 >[!NOTE]
 >
->Im folgenden Dokument erfahren Sie, wie Sie die Kantensegmentierung mithilfe der API durchführen. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Edge-Segmentierungsbenutzeroberfläche](../ui/edge-segmentation.md). Darüber hinaus befindet sich die Kantensegmentierung derzeit in der Betaphase. Die Dokumentation und Funktionalität können sich ändern.
+>Im folgenden Dokument erfahren Sie, wie Sie die Kantensegmentierung mithilfe der API durchführen. Informationen zur Kantensegmentierung mithilfe der Benutzeroberfläche finden Sie im Abschnitt [Handbuch zur Edge-Segmentierungsbenutzeroberfläche](../ui/edge-segmentation.md).
+>
+>Die Edge-Segmentierung ist jetzt allgemein für alle Platform-Benutzer verfügbar. Wenn Sie während der Beta-Phase Kantensegmente erstellt haben, sind diese Segmente weiterhin funktionsfähig.
 
 Bei der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+
+>[!IMPORTANT]
+>
+> Die Edge-Daten werden an einem Edge-Server-Speicherort gespeichert, der am nächsten zum Erfassungsort liegt, und können an einem anderen Speicherort als dem als Hub (oder Prinzipal) für das Adobe Experience Platform-Rechenzentrum bezeichnet werden.
 
 ## Erste Schritte
 
