@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise von November 2021 für Adobe Experience Platform.
-exl-id: f649b516-8ef8-49af-bb3e-0392337d0d86
-source-git-commit: 2c4b0d6dd0884fe81565356c31b18c0555bf973f
-workflow-type: ht
+description: Die neuesten Versionshinweise für Adobe Experience Platform.
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: a089ff9c053e46d32b98f94ddaf71d75d29fd4c7
+workflow-type: tm+mt
 source-wordcount: '798'
 ht-degree: 100%
 
@@ -50,7 +50,7 @@ Weitere Informationen zu Real-time Customer Data Platform B2B Edition finden Sie
 Neue Marketo-Connectoren für Datenquelle und Ziel ermöglichen das Streamen von Marketo-Daten in Platform und von Platform-Zielgruppen zurück an Marketo. Verfügbar für alle Platform-Benutzer.
 
 | Funktion | Beschreibung |
-|-----------|--------------|
+|----------|-------------|
 | Marketo Engage-Quell-Connector | Der [Marketo Engage-Quell-Connector](../../sources/connectors/adobe-applications/marketo/marketo.md) ermöglicht es Marketing-Experten, Daten aus einer oder mehreren Marketo-Instanzen nahtlos in ihre Adobe Experience Platform-Instanz aufzunehmen, und bietet eine Komplettlösung für Lead-Management und B2B-Marketing. |
 | Marketo Engage-Ziel | Das [Marketo-Ziel](../../destinations/catalog/adobe/marketo-engage.md) ermöglicht es Marketing-Experten, in Adobe Experience Platform erstellte Segmente per Push an Marketo zu übertragen, wo sie als statische Listen angezeigt werden. |
 
@@ -59,7 +59,7 @@ Neue Marketo-Connectoren für Datenquelle und Ziel ermöglichen das Streamen von
 Standard-B2B-XDM-Klassen, -Feldergruppen und -Datentypen sind für alle Platform-Benutzer verfügbar.
 
 | Funktion | Beschreibung |
-|----------|-------------|
+|-----------|--------------|
 | Standard-B2B-XDM-Klassen | Real-time Customer Data Platform B2B Edition bietet mehrere Standard-XDM, die Details zu wichtigen B2B-Datenentitäten wie Konten, Chancen und Kampagnen erfassen.. |
 
 Weitere Informationen zur Erfassung von B2B-Datenentitäten finden Sie unter [Schemas in Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md).
@@ -73,7 +73,7 @@ Mit der Ad-hoc-Aktivierungs-API können Marketing-Experten Zielgruppensegmente s
 Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 | Funktion | Beschreibung |
-| ------- | ----------- |
+|-----------|---------------|
 | Unterstützung für mehrere Datensätze | Attributions-KI kann jetzt problemlos mehrere Datensätze direkt in der Benutzeroberfläche aufnehmen, ohne dass jeder Datensatz zugeordnet und zusammengefügt werden muss. Diese neue zeitsparende Funktion bietet leistungsfähigere und genauere Scores mit umfangreicheren Daten aus mehreren Datensätzen. |
 | Medienkanal- und Kampagnenfeldzuordnung | Attributions-KI unterstützt jetzt die Zuordnung von Medienkanal- und Kampagnenfeldern. Die Zuordnung von Medienkanälen zwischen Datensätzen verbessert die aus Attributions-KI gewonnenen Insights und liefert klarere Ergebnisse, die einfach zu interpretieren sind. |
 
@@ -86,8 +86,9 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
-| --- | --- |
+|-----------|-------------|
 | Unterstützung für mehrere Datensätze | Kunden-KI kann jetzt mühelos mehrere Datensätze direkt in der Benutzeroberfläche erfassen, ohne dass jeder Datensatz zugeordnet und zusammengeführt werden muss. Diese neue zeitsparende Funktion bietet leistungsfähigere und genauere Scores mit umfangreicheren Daten aus mehreren Datensätzen. |
 | Benutzerdefinierte Profilattribute | Kunden-KI unterstützt jetzt die Definition benutzerdefinierter Profildatensatzfelder (mit Zeitstempeln) in Ihren Daten zusätzlich zu standardmäßigen Ereignisfeldern. Mit dieser Option können Sie zusätzliche, von Ihnen als einflussreich erachtete Profilattribute hinzufügen, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann.. |
 
 Weitere Informationen zu Kunden-KI finden Sie in der [Dokumentation zu Kunden-KI](../../intelligent-services/customer-ai/overview.md).
+
