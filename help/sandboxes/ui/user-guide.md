@@ -5,10 +5,10 @@ title: Handbuch zur Sandbox-UI
 topic-legacy: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: a43dd851a5c7ec722e792a0f43d1bb42777f0c15
+source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
 workflow-type: tm+mt
-source-wordcount: '832'
-ht-degree: 28%
+source-wordcount: '770'
+ht-degree: 16%
 
 ---
 
@@ -18,121 +18,91 @@ In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Ex
 
 ## Anzeigen von Sandboxes
 
-Wählen Sie in der Platform-Benutzeroberfläche im linken Navigationsbereich **[!UICONTROL Sandboxes]** aus, um das Dashboard [!UICONTROL Sandboxes] zu öffnen. Im Dashboard werden alle für Ihre Organisation verfügbaren Sandboxes aufgeführt, einschließlich Sandbox-Typ (Produktion oder Entwicklung) und Status (aktiv, wird erstellt, gelöscht oder fehlgeschlagen).
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Sandboxes]** in der linken Navigation und wählen Sie dann **[!UICONTROL Durchsuchen]** , um [!UICONTROL Sandboxes] Dashboard. Das Dashboard listet alle verfügbaren Sandboxes für Ihre Organisation auf, einschließlich der jeweiligen Typen (Produktion oder Entwicklung).
 
-![](../images/ui/view-sandboxes.png)
+![Ansicht-Sandboxes](../images/ui/view-sandboxes.png)
 
 ## Zwischen Sandboxes wechseln
 
-Das Steuerelement **Sandbox-Umschalter** oben links im Bildschirm zeigt die derzeit aktive Sandbox an.
+Die Sandbox-Anzeige befindet sich in der oberen Kopfzeile der Platform-Benutzeroberfläche und zeigt den Titel der Sandbox an, in der Sie sich derzeit befinden, deren Region und deren Typ.
 
-![](../images/ui/sandbox-switcher.png)
+![Sandbox-Indikator](../images/ui/sandbox-indicator.png)
 
-Um zwischen Sandboxes zu wechseln, wählen Sie den Sandbox-Umschalter aus und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
+Um zwischen Sandboxes zu wechseln, wählen Sie die Sandbox-Anzeige aus und wählen Sie die gewünschte Sandbox aus der Dropdown-Liste aus.
 
-![](../images/ui/switcher-menu.png)
+![switch-interface](../images/ui/switcher-interface.png)
 
-Sobald eine Sandbox ausgewählt ist, wird der Bildschirm aktualisiert; die ausgewählte Sandbox wird jetzt im Sandbox-Umschalter angezeigt.
+Sobald eine Sandbox ausgewählt ist, wird der Bildschirm aktualisiert und auf die ausgewählte Sandbox aktualisiert.
 
-![](../images/ui/switched.png)
-
-## Sandbox suchen
-
-Sie können über die Suchfunktion im Menü Sandbox-Umschalter durch die Liste der verfügbaren Sandboxes navigieren. Geben Sie den Namen der Sandbox ein, auf die Sie zugreifen möchten, um alle für Ihr Unternehmen verfügbaren Sandboxes zu filtern.
-
-![](../images/ui/sandbox-search.png)
+![Sandbox-vermittelt](../images/ui/sandbox-switched.png)
 
 ## Neue Sandbox erstellen
 
 >[!NOTE]
 >
->Wenn eine neue Sandbox erstellt wird, müssen Sie diese neue Sandbox zunächst in [Adobe Admin Console](https://adminconsole.adobe.com/) zu Ihrem Produktprofil hinzufügen, bevor Sie mit der Verwendung der neuen Sandbox beginnen können. Informationen zur Bereitstellung einer Sandbox für ein Produktprofil finden Sie in der Dokumentation zu [Verwalten von Berechtigungen für ein Produktprofil](../../access-control/ui/permissions.md) .
+>Wenn eine neue Sandbox erstellt wird, müssen Sie diese neue Sandbox zunächst Ihrem Produktprofil in [Adobe Admin Console](https://adminconsole.adobe.com/) bevor Sie mit der Verwendung der neuen Sandbox beginnen können. Weitere Informationen finden Sie in der Dokumentation unter [Berechtigungen für ein Produktprofil verwalten](../../access-control/ui/permissions.md) für Informationen zur Bereitstellung einer Sandbox für ein Produktprofil.
 
 Im folgenden Video erhalten Sie einen schnellen Überblick über die Verwendung von Sandboxes in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-Um eine neue Sandbox zu erstellen, wählen Sie **[!UICONTROL Sandbox erstellen]** in der oberen rechten Ecke des Bildschirms aus.
+Um eine neue Sandbox zu erstellen, wählen Sie **[!UICONTROL Sandbox erstellen]** oben rechts im Bildschirm.
 
-![create](../images/ui/create.png)
+![create-sandbox](../images/ui/create-sandbox.png)
 
-Das Dialogfeld **[!UICONTROL Sandbox erstellen]** wird angezeigt. Wenn Sie eine Entwicklungs-Sandbox erstellen, wählen Sie im Dropdown-Bedienfeld **[!UICONTROL Entwicklung]** aus. Um eine neue Produktions-Sandbox zu erstellen, wählen Sie **[!UICONTROL Produktion]** aus.
+Die **[!UICONTROL Sandbox erstellen]** angezeigt. Wenn Sie eine Entwicklungs-Sandbox erstellen, wählen Sie **[!UICONTROL Entwicklung]** im Dropdown-Bedienfeld. Um eine neue Produktions-Sandbox zu erstellen, wählen Sie **[!UICONTROL Produktion]**.
 
-![type](../images/ui/type.png)
+![Sandbox-Typ](../images/ui/sandbox-type.png)
 
 Geben Sie nach Auswahl des Typs Ihrer Sandbox einen Namen und einen Titel ein. Der Titel ist für Menschen lesbar und sollte beschreibend genug sein, um leicht identifizierbar zu sein. Der Sandbox-Name ist eine in Kleinbuchstaben verfasste Kennung zur Verwendung in API-Aufrufen und sollte daher eindeutig und kurz sein. Der Sandbox-Name muss mit einem Buchstaben beginnen, maximal 256 Zeichen lang sein und nur aus alphanumerischen Zeichen und Bindestrichen (-) bestehen.
 
 Klicken Sie abschließend auf **[!UICONTROL Erstellen]**.
 
-![Info](../images/ui/info.png)
+![sandbox-info](../images/ui/sandbox-info.png)
 
-Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite und die neue Sandbox wird im Dashboard **[!UICONTROL Sandboxes]** mit dem Status &quot;[!UICONTROL Erstellen]&quot;angezeigt. Die Bereitstellung neuer Sandboxes durch das System dauert etwa 30 Sekunden. Danach ändert sich ihr Status in &quot;[!UICONTROL Active]&quot;.
+Nachdem Sie die Sandbox fertig erstellt haben, aktualisieren Sie die Seite und die neue Sandbox wird im **[!UICONTROL Sandboxes]** Dashboard mit dem Status &quot;[!UICONTROL Erstellen]&quot;. Die Bereitstellung neuer Sandboxes durch das System dauert etwa 30 Sekunden, danach ändert sich ihr Status in &quot;[!UICONTROL Aktiv]&quot;.
+
+![new-sandbox](../images/ui/new-sandbox.png)
 
 ## Zurücksetzen einer Sandbox
 
->[!IMPORTANT]
+>[!WARNING]
 >
->Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das darin gehostete Identitätsdiagramm auch von Adobe Analytics für die Funktion [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) verwendet wird oder wenn das darin gehostete Identitätsdiagramm auch von Adobe Audience Manager für die Funktion [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de) verwendet wird.
+>Im Folgenden finden Sie eine Liste von Ausnahmen, mit denen Sie verhindern können, dass Sie die standardmäßige Produktions-Sandbox oder eine benutzerdefinierte Produktions-Sandbox zurücksetzen: <ul><li>Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das in der Sandbox gehostete Identitätsdiagramm auch von Adobe Analytics für die [Geräteübergreifende Analyse (Cross Device Analytics, CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=de) Funktion.</li><li>Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn das in der Sandbox gehostete Identitätsdiagramm auch von Adobe Audience Manager für die [Benutzerbasierte Ziele (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=de).</li><li>Die standardmäßige Produktions-Sandbox kann nicht zurückgesetzt werden, wenn sie Daten für CDA- und PBD-Funktionen enthält.</li><li>Eine benutzerdefinierte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit Adobe Audience Manager oder Audience Core Service verwendet wird, kann nach einer Warnmeldung zurückgesetzt werden.</li></ul>
 
 Durch das Zurücksetzen einer Produktions- oder Entwicklungs-Sandbox werden alle mit dieser Sandbox verknüpften Ressourcen (Schemas, Datensätze usw.) gelöscht, wobei der Name der Sandbox und die zugehörigen Berechtigungen beibehalten werden. Diese „saubere“ Sandbox ist für Benutzer, die Zugriff darauf haben, unter demselben Namen weiter verfügbar.
 
-Wählen Sie in der Sandbox-Liste die Sandbox aus, die Sie zurücksetzen möchten. Wählen Sie im rechten Navigationsfenster **[!UICONTROL Sandbox reset]** aus.
+Wählen Sie in der Sandbox-Liste die Sandbox aus, die Sie zurücksetzen möchten. Wählen Sie im sich öffnenden Navigationsfenster die Option **[!UICONTROL Sandbox zurücksetzen]**.
 
 ![Zurücksetzen](../images/ui/reset.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Auswählen **[!UICONTROL Weiter]** um fortzufahren.
 
 ![reset-warning](../images/ui/reset-warning.png)
 
-Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfeld ein und wählen Sie **[!UICONTROL Zurücksetzen]** aus.
+Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfeld ein und wählen Sie **[!UICONTROL Zurücksetzen]**.
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
-Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezeigt, um eine erfolgreiche Zurücksetzung zu bestätigen.
-
-![Erfolgreich](../images/ui/success.png)
-
-### Warnungen
-
-Eine standardmäßige Produktions-Sandbox, die CDA-Daten enthält, kann nicht zurückgesetzt werden und gibt die folgende Warnung zurück.
-
-![cda](../images/ui/cda.png)
-
-Eine standardmäßige Produktions-Sandbox, die PBD-Daten enthält, kann ebenfalls nicht zurückgesetzt werden und gibt die folgende Warnung zurück.
-
-![pbd](../images/ui/pbd.png)
-
-Eine standardmäßige Produktions-Sandbox, die Daten für CDA und PBD enthält, kann ebenfalls nicht zurückgesetzt werden und gibt die folgende Warnung zurück.
-
-![both](../images/ui/both.png)
-
-Sie können eine Produktions-Sandbox zurücksetzen, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird. Wählen Sie [!UICONTROL Weiter] aus, um mit dem Zurücksetzen fortzufahren.
-
-![both](../images/ui/seg.png)
-
 ## Sandbox löschen
 
->[!IMPORTANT]
+>[!WARNING]
 >
->Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden.
+>Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden. Eine vom Benutzer erstellte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] kann nach einer Warnmeldung gelöscht werden.
 
 Durch das Löschen einer Produktions- oder Entwicklungs-Sandbox werden alle mit dieser Sandbox verknüpften Ressourcen, einschließlich Berechtigungen, endgültig entfernt.
 
-Wählen Sie die Sandbox aus, die Sie aus der Sandbox-Liste löschen möchten. Wählen Sie im sich öffnenden Navigationsfenster **[!UICONTROL Delete]** aus.
+Wählen Sie die Sandbox aus, die Sie aus der Sandbox-Liste löschen möchten. Wählen Sie im sich öffnenden Navigationsfenster die Option **[!UICONTROL Löschen]**.
 
 ![delete](../images/ui/delete.png)
 
-Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Es wird ein Dialogfeld angezeigt, in dem Sie aufgefordert werden, Ihre Auswahl zu bestätigen. Auswählen **[!UICONTROL Weiter]** um fortzufahren.
 
 ![delete-warning](../images/ui/delete-warning.png)
 
-Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfeld ein und wählen Sie **[!UICONTROL Weiter]**
+Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfeld ein und wählen Sie  **[!UICONTROL Weiter]**.
 
 ![delete-validation](../images/ui/delete-confirm.png)
-
-Eine vom Benutzer erstellte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] verwendet wird, kann nach der folgenden Warnung weiterhin gelöscht werden.
-
-![seg](../images/ui/delete-seg.png)
 
 ## Nächste Schritte
 
