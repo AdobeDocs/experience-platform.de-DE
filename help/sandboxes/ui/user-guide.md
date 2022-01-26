@@ -5,7 +5,7 @@ title: Handbuch zur Sandbox-UI
 topic-legacy: user guide
 description: In diesem Dokument erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform verschiedene Vorgänge im Zusammenhang mit Sandboxes ausführen können.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 59b608ba06028f7f345f6a59dab333a4fdf2d225
+source-git-commit: 2fb972b0ec8d1f679c6ce104a439265b5cc4d535
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 16%
@@ -88,7 +88,7 @@ Geben Sie im letzten Bestätigungsfenster den Namen der Sandbox in das Dialogfel
 
 >[!WARNING]
 >
->Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden. Eine vom Benutzer erstellte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit [!DNL Audience Manager] oder [!DNL Audience Core Service] kann nach einer Warnmeldung gelöscht werden.
+>Die standardmäßige Produktions-Sandbox kann nicht gelöscht werden. Jede vom Benutzer erstellte Produktions-Sandbox, die für die bidirektionale Segmentfreigabe mit verwendet wird [!DNL Audience Manager] oder [!DNL Audience Core Service] kann nach einer Warnmeldung gelöscht werden.
 
 Durch das Löschen einer Produktions- oder Entwicklungs-Sandbox werden alle mit dieser Sandbox verknüpften Ressourcen, einschließlich Berechtigungen, endgültig entfernt.
 
