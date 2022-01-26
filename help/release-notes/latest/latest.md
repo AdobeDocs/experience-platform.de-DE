@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 78f9b8434d577909ccb1c62211a802e05c8291e1
+source-git-commit: 8a26a69e6a244fc8a0d347e2814f0406713b1c9b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 35%
+source-wordcount: '1253'
+ht-degree: 31%
 
 ---
 
@@ -18,6 +18,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [Warnhinweise](#alerts)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Dashboards]](#dashboards)
+- [[!DNL Destinations]](#destinations)
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Segmentierungs-Service](#segmentation)
@@ -25,14 +26,14 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Warnhinweise {#alerts}
 
-Experience Platform allows you to subscribe to event-based alerts for various Platform activities. Sie können unterschiedliche Regeln für Warnhinweise über die [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche angezeigt werden, und Sie können wählen, ob Warnhinweise in der Benutzeroberfläche selbst oder über E-Mail-Benachrichtigungen empfangen werden sollen.
+Mit Experience Platform können Sie ereignisbasierte Warnhinweise für verschiedene Platform-Aktivitäten abonnieren. Sie können unterschiedliche Regeln für Warnhinweise über die [!UICONTROL Warnhinweise] in der Platform-Benutzeroberfläche angezeigt werden, und Sie können wählen, ob Warnhinweise in der Benutzeroberfläche selbst oder über E-Mail-Benachrichtigungen empfangen werden sollen.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| New alert rules | Für Workflows, die sich auf die Datenerfassung, Identitäten, Profile, Segmentierung und Aktivierung beziehen, stehen jetzt verschiedene neue Warnhinweisregeln zur Verfügung. See the overview on [alert rules](../../observability/alerts/rules.md) for the updated list of alert types. |
-| In-Kontext-Warnhinweise für Datenflüsse zu Quellen | You can now subscribe to receive alert messages regarding the status of your dataflows during the ingestion workflow. Weitere Informationen finden Sie im Handbuch unter [Abrufen von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../sources/tutorials/ui/alerts.md). |
+| Neue Warnhinweisregeln | Für Workflows, die sich auf die Datenerfassung, Identitäten, Profile, Segmentierung und Aktivierung beziehen, stehen jetzt verschiedene neue Warnhinweisregeln zur Verfügung. Siehe Übersicht unter [Warnregeln](../../observability/alerts/rules.md) für die aktualisierte Liste der Warnungstypen. |
+| In-Kontext-Warnhinweise für Datenflüsse zu Quellen | Jetzt können Sie sich für den Empfang von Warnhinweisen zum Status Ihrer Datenflüsse während des Aufnahme-Workflows anmelden. Weitere Informationen finden Sie im Handbuch unter [Abrufen von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../sources/tutorials/ui/alerts.md). |
 
 Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warnungen - Übersicht](../../observability/alerts/overview.md).
 
@@ -42,8 +43,8 @@ Adobe Experience Platform bietet mehrere Dashboards, in denen Sie wichtige Infor
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Intelligente Untertitel | Ein maschineller Lernalgorithmus bietet automatisch Einblicke in Ihre Profil- und Zielgruppendaten und veranschaulicht Muster und Trends über einen Zeitraum von 30 bis 90 Tagen oder 12 Monaten. Die Beschriftungen enthalten Informationen zu <ul><li>Gesamtform und Statistiken</li><li>Trends und abrupte Änderungen</li><li>Seasonal patterns</li><li>Unerwartete Anomalien</li></ul> More information can be found on the [profiles dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) and [segments dashboards](../../dashboards/guides/segments.md#audience-size-trend) documentation. |
-| Dashboards Inventory | Greifen Sie auf die vorkonfigurierten Berichte der Profil-, Segment- und Ziel-Dashboards zu, einschließlich aller installierten Integrationen wie PowerBI, und zwar zentral. Weitere Informationen finden Sie unter [[!DNL Dashboards] Übersicht](../../dashboards/home.md). |
+| Intelligente Untertitel | Ein maschineller Lernalgorithmus bietet automatisch Einblicke in Ihre Profil- und Zielgruppendaten und veranschaulicht Muster und Trends über einen Zeitraum von 30 bis 90 Tagen oder 12 Monaten. Die Beschriftungen enthalten Informationen zu <ul><li>Gesamtform und Statistiken</li><li>Trends und abrupte Änderungen</li><li>Saisonale Muster</li><li>Unerwartete Anomalien</li></ul> Weitere Informationen finden Sie im [Profil-Dashboards](../../dashboards/guides/profiles.md#profiles-count-trend) und [Segmente-Dashboards](../../dashboards/guides/segments.md#audience-size-trend) Dokumentation. |
+| Dashboards-Inventar | Greifen Sie auf die vorkonfigurierten Berichte der Profil-, Segment- und Ziel-Dashboards zu, einschließlich aller installierten Integrationen wie PowerBI, und zwar zentral. Weitere Informationen finden Sie unter [[!DNL Dashboards] Übersicht](../../dashboards/home.md). |
 | PowerBI-Berichtsvorlagen | Erstellen, anpassen oder erweitern Sie Metriken aus den Datenmodellen für Profil-, Segment- und Zielberichtsdaten mithilfe neuer Power BI-Diagramme. Der automatisierte Installations-Workflow ermöglicht es Ihnen, innerhalb der PowerBI-Umgebung Ihre Marketing-Einblicke in Ihrem Unternehmen freizugeben. Weitere Informationen finden Sie unter [[!DNL Dashboards] Übersicht](../../dashboards/home.md). |
 
 Weitere Informationen finden Sie unter [!DNL Dashboards], siehe [[!DNL Dashboards] Übersicht](../../dashboards/home.md).
@@ -56,45 +57,49 @@ Weitere Informationen finden Sie unter [!DNL Dashboards], siehe [[!DNL Dashboard
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Konsolidiertes Zuordnungserlebnis | The new mapping interface in the Platform UI provides you with a consistent mapping experience to take advantage of intelligent mapping recommendations, manually configure mapping rules, and debug any errors that occur to your mapping sets. For more information, see the [[!DNL Data Prep] UI guide](../../data-prep/ui/mapping.md). |
+| Konsolidiertes Zuordnungserlebnis | Die neue Zuordnungsschnittstelle in der Platform-Benutzeroberfläche bietet Ihnen ein konsistentes Zuordnungserlebnis, um intelligente Zuordnungsempfehlungen zu nutzen, Zuordnungsregeln manuell zu konfigurieren und Fehler zu debuggen, die bei Ihren Zuordnungssätzen auftreten. Weitere Informationen finden Sie unter [[!DNL Data Prep] UI-Handbuch](../../data-prep/ui/mapping.md). |
 
 Weitere Informationen finden Sie unter [!DNL Data Prep], siehe [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
-<!--
-
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| Personalisierung auf derselben Seite und auf der nächsten Seite | Die Personalisierungsfunktion für die gleiche Seite und die nächste Seite bietet eine freigegebene, zielgruppenorientierte Ansicht der Benutzer für Anwendungen in Experience Edge, um die Konsistenz zwischen Marketing- und Kundenkanälen zu gewährleisten. Diese Personalisierung ist über die [Adobe Target-Verbindung](../../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren Ihrer Personalisierungskampagnen für die gleiche Seite oder die nächste Seite finden Sie unter [dediziertes Tutorial](../../destinations/ui/configure-personalization-destinations.md). |
+| Marketo-Zielverbesserungen | Experience Platform-Kunden, die Marketo Engage verwenden, können ihre Marketo-Datenbank maximieren, indem sie die neue Möglichkeit nutzen, neue Netto-Personendatensätze von Experience Platform aus per Push in Marketo Engage zu übertragen. [Marketo-Zielanschluss](/help/destinations/catalog/adobe/marketo-engage.md). Beim Senden von Zielgruppensegmenten von Experience Platform zu Marketo Engage können Personen innerhalb des Segments, die noch nicht in Ihrer Marketo Engage-Datenbank vorhanden sind, automatisch hinzugefügt werden. Weitere Informationen finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste pushen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (Schritt 9 des Tutorials zeigt, wie Sie Netto-neue Personendatensätze in Marketo verschieben können). |
+
+<!--
 
 | Feature | Description |
 | ----------- | ----------- |
-| Placeholder for next-hit personalization | Description |
-| Placeholder for batch monitoring | Description |
-| Placeholder for re-introducing scheduling in the UI | Description |
-| Placeholder for Marketo destination update | Description |
-
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| Placeholder for Target | Description |
-| Placeholder for Custom Personalization | Description |
-
-For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+| Batch destination monitoring and segment-level metrics | The destination monitoring functionality is now expanded from streaming destinations to also include batch destinations and segment-level metrics for your activation dataflows. For more information, read monitoring destinations dashboard, monitoring segment jobs dashboard, and segment-level view. |
+| Schedule editing in the UI for existing batch activation dataflows | This release introduces the option to edit the schedule of your existing activation dataflows to batch destinations. For more information, read [activate profile data to batch profile destinations](/help/destinations/ui/activate-batch-profile-destinations.md).  |
 
 -->
 
+**Neue Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [Adobe Target-Verbindung](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target ist eine Anwendung, die eine Echtzeit-Personalisierung und Experimentierfreudigkeit bei allen eingehenden Kundeninteraktionen über Websites, mobile Apps und mehr hinweg ermöglicht. Adobe Target ist eine Personalisierungsverbindung in Adobe Experience Platform. |
+| [Benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md) | Diese Personalisierungsverbindung bietet eine Möglichkeit, Segmentinformationen von Adobe Experience Platform zu externen Personalisierungsplattformen, Content-Management-Systemen, Anzeigenservern und anderen Anwendungen abzurufen, die auf Kunden-Websites ausgeführt werden. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
 ## Query Service {#query-service}
 
-[!DNL Query Service] allows you to use standard SQL to query data in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus der [!DNL Data Lake] und erfassen Sie die Abfrageergebnisse als neuen Datensatz zur Verwendung in Berichten, Data Science Workspace oder zur Aufnahme in das Echtzeit-Kundenprofil.
+[!DNL Query Service] ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von Daten in Adobe Experience Platform [!DNL Data Lake]. Sie können beliebige Datensätze aus der [!DNL Data Lake] und erfassen Sie die Abfrageergebnisse als neuen Datensatz zur Verwendung in Berichten, Data Science Workspace oder zur Aufnahme in das Echtzeit-Kundenprofil.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Anonymer Block | The anonymous block SQL construct allows you to break down large scale data preparation jobs in Query Service into smaller tasks, then reuse and execute them in sequence for incremental data loading. Weitere Informationen finden Sie unter [Query Service - Übersicht](../../query-service/home.md). |
-| Dataset Organization | Bietet eine kohärente, logische Datenstruktur zur Organisation Ihrer Daten-Assets für die Verwendung mit Query Service, da die Anzahl der Daten-Assets innerhalb der Sandbox zunimmt. Weitere Informationen finden Sie unter [Query Service - Übersicht](../../query-service/home.md). |
+| Anonymer Block | Das anonyme Block-SQL-Konstrukt ermöglicht es Ihnen, groß angelegte Datenvorbereitungsaufträge in Query Service in kleinere Aufgaben aufzuschlüsseln, sie dann wiederzuverwenden und nacheinander zum inkrementellen Laden der Daten auszuführen. Weitere Informationen finden Sie unter [Query Service - Übersicht](../../query-service/home.md). |
+| Datensatzorganisation | Bietet eine kohärente, logische Datenstruktur zur Organisation Ihrer Daten-Assets für die Verwendung mit Query Service, da die Anzahl der Daten-Assets innerhalb der Sandbox zunimmt. Weitere Informationen finden Sie unter [Query Service - Übersicht](../../query-service/home.md). |
 
 Weitere Informationen finden Sie unter [!DNL Query Service], siehe [[!DNL Query Service] Übersicht](../../query-service/home.md).
 
@@ -106,7 +111,7 @@ Adobe Experience Platform dient dazu, Programme für digitale Erlebnisse auf glo
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verbesserungen der Sandbox-Benutzeroberfläche | Der Sandbox-Indikator ist jetzt in die Kopfzeile für alle Platform-UI-Anwendungen integriert. The sandbox indicator displays the sandbox name, region, and type and also allows you to access a dropdown menu to switch between sandboxes. Weitere Informationen finden Sie unter [Handbuch zur Sandbox-Benutzeroberfläche](../../sandboxes/ui/user-guide.md). |
+| Verbesserungen der Sandbox-Benutzeroberfläche | Der Sandbox-Indikator ist jetzt in die Kopfzeile für alle Platform-UI-Anwendungen integriert. Die Sandbox-Anzeige zeigt den Namen, die Region und den Typ der Sandbox an und ermöglicht Ihnen auch den Zugriff auf ein Dropdown-Menü, über das zwischen Sandboxes gewechselt werden kann. Weitere Informationen finden Sie unter [Handbuch zur Sandbox-Benutzeroberfläche](../../sandboxes/ui/user-guide.md). |
 
 Weitere Informationen zu Sandboxes finden Sie im Abschnitt [Sandbox-Übersicht](../../sandboxes/home.md).
 
@@ -118,7 +123,7 @@ Weitere Informationen zu Sandboxes finden Sie im Abschnitt [Sandbox-Übersicht](
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Segmentübereinstimmung | Segment Match ist ein Dienst für die Zusammenarbeit mit Daten, der es zwei oder mehr Platform-Benutzern ermöglicht, Daten basierend auf gemeinsamen Kennungen auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen. Segment Match uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs. For more information, see the [Segment Match overview](../../segmentation/ui/segment-match/overview.md). |
+| Segmentübereinstimmung | Segment Match ist ein Dienst für die Zusammenarbeit mit Daten, der es zwei oder mehr Platform-Benutzern ermöglicht, Daten basierend auf gemeinsamen Kennungen auf sichere, verwaltete und datenschutzfreundliche Weise auszutauschen. Segment Match verwendet Platform-Datenschutzstandards und persönliche IDs wie Hash-E-Mails, Hash-Telefonnummern und Geräte-IDs wie IDFAs und GAIDs. Weitere Informationen finden Sie unter [Übersicht über Segmentübereinstimmungen](../../segmentation/ui/segment-match/overview.md). |
 
 Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierung – Übersicht](../../segmentation/home.md).
 
@@ -131,5 +136,5 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | Wechsel von Betaquellen zu allgemeiner Verfügbarkeit | Die folgenden Quellen wurden von der Betaversion auf allgemeine Verfügbarkeit umgestellt: <ul><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li><li>[[!DNL Veeva CRM]](../../sources/connectors/crm/veeva.md)</li></ul> |
-| Verbesserungen der [!DNL Event Hubs]-Quelle | The [!DNL Event Hubs] source now supports non-root SAS key type of authentication to connect and create source connection. Weitere Informationen finden Sie unter [[!DNL Event Hubs] Übersicht](../../sources/connectors/cloud-storage/eventhub.md). |
-| Verbesserungen der [!DNL SFTP]-Quelle | The [!DNL SFTP] source now allows you to a establish a set number of a maximum concurrent connections that a dataflow can use to connect to the SFTP server. Weitere Informationen finden Sie unter [[!DNL SFTP] Übersicht](../../sources/connectors/cloud-storage/sftp.md). |
+| Verbesserungen der [!DNL Event Hubs]-Quelle | Die [!DNL Event Hubs] -Quelle unterstützt jetzt den nicht-Root-SAS-Schlüsseltyp der Authentifizierung für die Verbindung und die Erstellung der Quellverbindung. Weitere Informationen finden Sie unter [[!DNL Event Hubs] Übersicht](../../sources/connectors/cloud-storage/eventhub.md). |
+| Verbesserungen der [!DNL SFTP]-Quelle | Die [!DNL SFTP] -Quelle können Sie jetzt eine bestimmte Anzahl gleichzeitiger Verbindungen festlegen, mit denen ein Datenfluss eine Verbindung zum SFTP-Server herstellen kann. Weitere Informationen finden Sie unter [[!DNL SFTP] Übersicht](../../sources/connectors/cloud-storage/sftp.md). |
