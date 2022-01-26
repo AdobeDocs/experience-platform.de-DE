@@ -4,10 +4,10 @@ title: Einführung in Experience Platform-Dashboards
 type: Documentation
 description: Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, mit denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen können, die bei täglichen Schnappschüssen erfasst werden.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: e927dbef8a3028155e907e0ca05c17c29fb74cf1
+source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 100%
+source-wordcount: '309'
+ht-degree: 71%
 
 ---
 
@@ -22,13 +22,19 @@ Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und wer
 
 ## Erste Schritte mit Dashboards
 
-Um auf Dashboards zuzugreifen, gehen Sie zum entsprechenden Abschnitt in der Platform-Benutzeroberfläche. Wählen Sie im Abschnitt die Registerkarte **[!UICONTROL Übersicht]** aus, wenn sie nicht automatisch ausgewählt ist, um das Dashboard anzuzeigen.
+Um Dashboards anzuzeigen und zu verwalten, navigieren Sie zu **[!UICONTROL Dashboards]** in der Experience Platform-Benutzeroberfläche (UI) und wählen Sie die **[!UICONTROL Durchsuchen]** -Tab, um auf das Dashboard-Inventar zuzugreifen.
+
+Sie können auch auf Dashboards zugreifen, indem Sie in der Benutzeroberfläche zum entsprechenden Bereich des Dashboards navigieren, das Sie anzeigen möchten. Um beispielsweise das Dashboard für Profile anzuzeigen, navigieren Sie zum **[!UICONTROL Profile]** Arbeitsbereich und wählen Sie die **[!UICONTROL Übersicht]** Registerkarte.
 
 Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnappschussaufnahme aufgetreten sind. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und die Dashboards werden nicht in Echtzeit aktualisiert.
 
 >[!NOTE]
 >
 >Änderungen oder Aktualisierungen, die seit der Aufnahme des Schnappschusses an den Daten vorgenommen wurden, werden erst dann im Dashboard angezeigt, wenn der nächste Schnappschuss erstellt wurde.
+
+## Dashboard-Inventar
+
+Detaillierte Anweisungen zur Verwendung der **[!UICONTROL Dashboards]** Der Arbeitsbereich zum Anzeigen aller verfügbaren Dashboards wird im Abschnitt [Dashboard-Inventarleitfaden](./inventory.md).
 
 ## Verfügbare Dashboards
 
