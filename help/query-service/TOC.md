@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: a41efa075d0fff5537eaf055635e346ac5ce677b
-workflow-type: ht
-source-wordcount: '141'
-ht-degree: 100%
+source-git-commit: d939624d222839532f4601ceed8dfa6e291f37aa
+workflow-type: tm+mt
+source-wordcount: '146'
+ht-degree: 96%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 100%
    - [Generieren von Datensätzen aus Abfrageergebnissen](ui/create-datasets.md)
 - Best Practices {#best-practices}
    - [Allgemeine Leitlinien für die Ausführung von Abfragen](best-practices/writing-queries.md)
+   - [Anleitung zur Organisation von Daten-Assets](./best-practices/organize-data-assets.md)
    - [Deduplizierung von Daten](best-practices/deduplication.md)
    - [Beispielabfragen von Erlebnisereignissen](best-practices/experience-event-queries.md)
    - [Beispielabfragen von Adobe Analytics](best-practices/adobe-analytics.md)

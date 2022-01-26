@@ -5,9 +5,9 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: c2c543e64a4f2aef0064abf5e4fb9d7f2738159b
+source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2301'
 ht-degree: 12%
 
 ---
@@ -343,6 +343,23 @@ EXCEPTION
     SELECT 'ERROR';
 END;
 ```
+
+## Data Asset-Organisation
+
+Es ist wichtig, Ihre Daten-Assets beim Wachstum im Adobe Experience Platform Data Lake logisch zu organisieren. Query Service erweitert SQL-Konstrukte, mit denen Sie Daten-Assets logisch in einer Sandbox gruppieren können. Diese Organisationsmethode ermöglicht die Freigabe von Daten-Assets zwischen Schemas, ohne dass diese physisch verschoben werden müssen.
+
+Die folgenden SQL-Konstrukte mit SQL-Standardsyntax werden unterstützt, damit Sie Ihre Daten logisch organisieren können.
+
+```SQL
+CREATE DATABASE dg1;
+CREATE SCHEMA dg1.schema1;
+CREATE table t1 ...;
+CREATE view v1 ...;
+ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
+ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
+```
+
+Siehe Handbuch unter [Logische Organisation von Daten-Assets](../best-practices/organize-data-assets.md) für eine detaillierte Erläuterung der Best Practices für Query Service.
 
 ## [!DNL Spark] SQL-Befehle
 
