@@ -6,9 +6,9 @@ topic-legacy: tutorial
 type: Tutorial
 description: Diese Anleitung für die Benutzeroberfläche hilft Ihnen beim Erstellen einer Streaming-Verbindung für Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: d39cdeaa57a221f10c975353a54d3ff7c88239d6
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1058'
 ht-degree: 10%
 
 ---
@@ -90,7 +90,8 @@ Um einen vorhandenen Datensatz zu verwenden, wählen Sie **[!UICONTROL Vorhanden
 
 ### Standardfelder zuordnen
 
-Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Weitere Informationen zu Mapper-Funktionen und berechneten Feldern finden Sie im Abschnitt [Handbuch zu Datenvorbereitung-Funktionen](../../../../../data-prep/functions.md) oder [Handbuch zu berechneten Feldern](../../../../../data-prep/calculated-fields.md).
+
+Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Umfassende Schritte zur Verwendung der Mapper-Oberfläche und der berechneten Felder finden Sie im Abschnitt [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 Um ein neues Quellfeld hinzuzufügen, wählen Sie **[!UICONTROL Neues Mapping hinzufügen]**.
 

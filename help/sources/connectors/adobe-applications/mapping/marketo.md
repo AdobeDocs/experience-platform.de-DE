@@ -5,7 +5,7 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 40e70903cd1a67f5012f6e7c8f09b6e91b3ae0ef
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '532'
 ht-degree: 9%
@@ -343,7 +343,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 >[!NOTE]
 >
->Die `to_object('ECID',arrays_to_objects('id',explode(ecids)))` Das Quellfeld ist ein berechnetes Feld, das mithilfe des [!UICONTROL Berechnetes Feld hinzufügen] in der Platform-Benutzeroberfläche. Siehe Tutorial zu [Hinzufügung berechneter Felder](../../../../data-prep/calculated-fields.md) für weitere Informationen.
+>Die `to_object('ECID',arrays_to_objects('id',explode(ecids)))` Das Quellfeld ist ein berechnetes Feld, das mithilfe des [!UICONTROL Berechnetes Feld hinzufügen] in der Platform-Benutzeroberfläche. Siehe Tutorial zu [Hinzufügung berechneter Felder](../../../../data-prep/ui/mapping.md#calculated-fields) für weitere Informationen.
 
 ## Nächste Schritte
 

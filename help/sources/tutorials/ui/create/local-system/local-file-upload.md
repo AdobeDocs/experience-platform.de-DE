@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Ihr lokales System erstellen, um lokale Dateien auf Platform zu bringen.
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 08805ed0d89d3d6908ddccdafda55d2f862e727e
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 16%
+source-wordcount: '770'
+ht-degree: 8%
 
 ---
 
@@ -23,44 +23,42 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Platfo
 
 * [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Platform Kundenerlebnisdaten organisiert.
    * [Grundlagen der Schemakomposition](../../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Tutorial](../../../../../xdm/tutorials/create-schema-ui.md) zum Schema Editor: Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen.
+   * [Tutorial zum Schema Editor](../../../../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie benutzerdefinierte Schemas mithilfe der Benutzeroberfläche des Schema-Editors erstellen.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 
 ## Hochladen lokaler Dateien in Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** aus der linken Navigationsleiste aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] enthält eine Vielzahl von Quellen, für die Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste, um auf die [!UICONTROL Quellen] Arbeitsbereich. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, für die Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchoption finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Lokales System] die Option **[!UICONTROL Lokaler Datei-Upload]** und klicken Sie dann auf **[!UICONTROL Konfigurieren]**.
+Unter dem [!UICONTROL Lokales System] category, select **[!UICONTROL Lokaler Datei-Upload]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/local/catalog.png)
 
 ### Vorhandenen Datensatz verwenden
 
-Auf der Seite [!UICONTROL Datenfluss-Detail] können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Datensatz oder in einen neuen Datensatz aufnehmen möchten.
+Die [!UICONTROL Datenflussdetails] -Seite können Sie auswählen, ob Sie Ihre CSV-Daten in einen vorhandenen Datensatz oder in einen neuen Datensatz aufnehmen möchten.
 
-Um Ihre CSV-Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandenen Datensatz]** aus. Sie können einen vorhandenen Datensatz entweder mit der Option [!UICONTROL Erweiterte Suche] abrufen oder indem Sie im Dropdown-Menü durch die Liste der vorhandenen Datensätze scrollen.
-
-![select-existing-dataset](../../../../images/tutorials/create/local/select-existing-dataset.png)
+Um Ihre CSV-Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder mit der [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü.
 
 Geben Sie bei ausgewähltem Datensatz einen Namen für Ihren Datenfluss und eine optionale Beschreibung an.
 
-Während dieses Prozesses können Sie auch [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Erfassung] aktivieren. [!UICONTROL Die ] Fehlerdiagnose ermöglicht eine detaillierte Erzeugung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten. Bei der  [!UICONTROL partiellen ] Erfassung können Sie Daten mit Fehlern bis zu einem bestimmten Schwellenwert erfassen, den Sie manuell definieren. Weitere Informationen finden Sie unter [Übersicht über die partielle Batch-Erfassung](../../../../../ingestion/batch-ingestion/partial.md) .
+Während dieses Vorgangs können Sie auch [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Erfassung]. [!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erzeugung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Erfassung] ermöglicht die Aufnahme von fehlerhaften Daten bis zu einem bestimmten Schwellenwert, den Sie manuell definieren. Siehe [partielle Batch-Erfassung - Übersicht](../../../../../ingestion/batch-ingestion/partial.md) für weitere Informationen.
 
-![dataflow-detail-existing](../../../../images/tutorials/create/local/dataflow-detail-existing.png)
+![existing-dataset](../../../../images/tutorials/create/local/existing-dataset.png)
 
 ### Verwenden eines neuen Datensatzes
 
-Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuer Datensatz]** aus und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie anschließend ein Schema aus, das mithilfe der Option [!UICONTROL Erweiterte Suche] zugeordnet werden soll, oder scrollen Sie durch die Liste der vorhandenen Schemas im Dropdown-Menü.
+Um Ihre CSV-Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuer Datensatz]** und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes ein Schema aus, das mithilfe des [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemas im Dropdown-Menü.
 
-![select-new-dataset](../../../../images/tutorials/create/local/select-new-dataset.png)
+Geben Sie bei ausgewähltem Schema einen Namen für Ihren Datenfluss und eine optionale Beschreibung ein und wenden Sie dann die [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Erfassung] -Einstellungen, die Sie für Ihren Datenfluss benötigen. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
-Geben Sie bei ausgewähltem Schema einen Namen für Ihren Datenfluss und eine optionale Beschreibung ein und wenden Sie dann die Einstellungen [!UICONTROL Fehlerdiagnose] und [!UICONTROL Partielle Erfassung] an, die Sie für Ihren Datenfluss benötigen. Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+![new-dataset](../../../../images/tutorials/create/local/new-dataset.png)
 
 ### Daten auswählen
 
-Der Schritt [!UICONTROL Daten auswählen] wird angezeigt und bietet Ihnen eine Oberfläche zum Hochladen Ihrer lokalen Dateien und zur Vorschau ihrer Struktur und Inhalte. Wählen Sie **[!UICONTROL Dateien]** aus, um eine CSV-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die CSV-Datei, die Sie hochladen möchten, per Drag-and-Drop in das Bedienfeld [!UICONTROL Drag-and-Drop von Dateien] ziehen.
+Die [!UICONTROL Daten auswählen] -Schritt angezeigt werden. Sie erhalten eine Oberfläche zum Hochladen Ihrer lokalen Dateien und zur Vorschau ihrer Struktur und Inhalte. Auswählen **[!UICONTROL Dateien auswählen]** , um eine CSV-Datei von Ihrem lokalen System hochzuladen. Alternativ können Sie die CSV-Datei, die Sie hochladen möchten, per Drag-and-Drop in die [!UICONTROL Dateien per Drag &amp; Drop verschieben] Bereich.
 
 >[!TIP]
 >
@@ -72,97 +70,26 @@ Nach dem Hochladen Ihrer Datei wird die Vorschau-Oberfläche aktualisiert, um In
 
 ![preview-sample-data](../../../../images/tutorials/create/local/preview-sample-data.png)
 
-Je nach Datei können Sie ein Spaltentrennzeichen wie Tabulatoren, Kommas, senkrechte Striche oder ein benutzerdefiniertes Spaltentrennzeichen für die Quelldaten auswählen. Wählen Sie den Dropdown-Pfeil **[!UICONTROL Trennzeichen]** aus und wählen Sie dann das entsprechende Trennzeichen aus dem Menü aus.
+Je nach Datei können Sie ein Spaltentrennzeichen wie Tabulatoren, Kommas, senkrechte Striche oder ein benutzerdefiniertes Spaltentrennzeichen für die Quelldaten auswählen. Wählen Sie die **[!UICONTROL Trennzeichen]** Dropdown-Pfeil und wählen Sie dann das entsprechende Trennzeichen aus dem Menü aus.
 
 Wenn Sie fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
 
 ![delimiter](../../../../images/tutorials/create/local/delimiter.png)
 
-### Zuordnung
+## Zuordnung
 
-Der Schritt [!UICONTROL Mapping] wird angezeigt und bietet Ihnen eine Schnittstelle zum Zuordnen der Quellfelder aus Ihrem Quellschema zu den entsprechenden Ziel-XDM-Feldern im Zielschema.
+Die [!UICONTROL Zuordnung] -Schritt angezeigt werden. Sie erhalten eine Schnittstelle, über die Sie die Quellfelder aus Ihrem Quellschema den entsprechenden Ziel-XDM-Feldern im Zielschema zuordnen können.
 
-![mapping-interface](../../../../images/tutorials/create/local/mapping-interface.png)
+Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsschnittstelle finden Sie in der [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
-#### Vorschau der Daten
+Sobald Ihre Zuordnungssätze fertig sind, wählen Sie **[!UICONTROL Beenden]** und lassen einige Momente zu, damit der neue Datenfluss erstellt wird.
 
-Wählen Sie **[!UICONTROL Vorschau der Daten]** aus, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz anzuzeigen.
-
-![preview-mapping](../../../../images/tutorials/create/local/preview-mapping.png)
-
-Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da dies die wichtigsten Informationen ist, die bei der Validierung der Zuordnungsergebnisse erforderlich sind. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Close]** aus.
-
-![preview-panel](../../../../images/tutorials/create/local/preview-panel.png)
-
-#### Berechnetes Feld hinzufügen
-
-Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
-
-Wählen Sie die Schaltfläche **[!UICONTROL Berechnetes Feld hinzufügen]** aus, um fortzufahren.
-
-![add-calculated-field](../../../../images/tutorials/create/local/add-calculated-field.png)
-
-Das Bedienfeld [!UICONTROL Berechnetes Feld erstellen] wird angezeigt. Das linke Dialogfeld enthält die Felder, Funktionen und Operatoren, die in berechneten Feldern unterstützt werden. Wählen Sie eine der Registerkarten aus, um Funktionen, Felder oder Operatoren zum Ausdruckseditor hinzuzufügen.
-
-![create-calculated-field](../../../../images/tutorials/create/local/create-calculated-field.png)
-
-| Tab | Beschreibung |
-| --------- | ----------- |
-| Funktion | Auf der Registerkarte „Funktionen“ werden die Funktionen aufgelistet, die zur Transformation der Daten verfügbar sind. Weitere Informationen zu den Funktionen, die Sie in berechneten Feldern verwenden können, finden Sie im Handbuch [Verwendung der Funktionen zur Datenvorbereitung (Mapper)](../../../../../data-prep/functions.md). |
-| Feld | Auf der Registerkarte „Felder“ werden die im Quellschema verfügbaren Felder und Attribute aufgelistet. |
-| Operator | Auf der Registerkarte „Operatoren“ werden die zur Transformation der Daten verfügbaren Operatoren aufgelistet. |
-
-Wählen Sie den Ausdruckseditor aus, um Felder, Funktionen und Operatoren manuell hinzuzufügen. Nachdem Sie ein berechnetes Feld erstellt haben, wählen Sie **[!UICONTROL Speichern]** aus, um fortzufahren.
-
-![expression-editor](../../../../images/tutorials/create/local/expression-editor.png)
-
-#### Zuordnungsstruktur des Quellschemas filtern
-
-Um nach Ihrem Quellschema zu filtern, wählen Sie **[!UICONTROL Alle Quellfelder]** und dann das spezifische Feld, das Sie zuordnen möchten, aus dem Dropdown-Menü aus.
-
-In der folgenden Tabelle werden die Sortieroptionen für die Quellschemastruktur angezeigt:
-
-| Quellfelder | Beschreibung |
-| --- | --- |
-| [!UICONTROL Alle Quellfelder] | Diese Option zeigt alle Quellfelder Ihres Quellschemas an. Diese Option wird standardmäßig angezeigt. |
-| [!UICONTROL Erforderliche Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die zum Abschließen der Zuordnung erforderlich sind. |
-| [!UICONTROL Identitätsfelder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die für Identity markiert sind. |
-| [!UICONTROL Zugeordnete Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die bereits zugeordnet wurden. |
-| [!UICONTROL Nicht zugeordnete Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die noch zugeordnet werden müssen. |
-| [!UICONTROL Felder mit Empfehlung] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die Zuordnungsempfehlungen enthalten. |
-
-![all-source-fields](../../../../images/tutorials/create/local/all-source-fields.png)
-
-#### Intelligente Empfehlungen
-
-Platform bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen.
-
-![source-schema-tree](../../../../images/tutorials/create/local/source-schema-tree.png)
-
-Um alle automatisch generierenden Zuordnungswerte zu akzeptieren, wählen Sie **[!UICONTROL Alle Zielfelder akzeptieren]**.
-
-![all-target-fields](../../../../images/tutorials/create/local/all-target-fields.png)
-
-Manchmal ist mehr als eine Empfehlung für das Quellschema verfügbar. In diesem Fall zeigt die Zuordnungskarte die auffälligste Empfehlung an, gefolgt von einem blauen Kreis, der die Anzahl der verfügbaren zusätzlichen Empfehlungen enthält. Durch Auswahl des Glühbirnensymbols wird eine Liste der zusätzlichen Empfehlungen angezeigt. Sie können eine der alternativen Empfehlungen auswählen, indem Sie das Kontrollkästchen neben der Empfehlung aktivieren, der Sie die Empfehlung zuordnen möchten.
-
-![manuelles Mapping](../../../../images/tutorials/create/local/manual-mapping.png)
-
-Alternativ können Sie Ihr Quellschema manuell Ihrem Zielschema zuordnen. Bewegen Sie dazu den Mauszeiger über das Quellschema, das Sie zuordnen möchten, und wählen Sie dann das Pluszeichen (`+`) aus.
-
-![select-plus-icon](../../../../images/tutorials/create/local/select-plus-icon.png)
-
-Das Popup **[!UICONTROL Quelle dem Zielfeld zuordnen]** wird angezeigt. Von hier aus können Sie auswählen, welches Feld Sie zuordnen möchten, gefolgt von **[!UICONTROL Speichern]**, um Ihre neue Zuordnung hinzuzufügen.
-
-![map-source-to-target-field](../../../../images/tutorials/create/local/map-source-to-target-field.png)
-
-Wenn Sie fertig sind, wählen Sie **[!UICONTROL Abgeschlossen]** aus.
-
-![Beenden](../../../../images/tutorials/create/local/finish.png)
+![Mapping](../../../../images/tutorials/create/local/mapping.png)
 
 ## Überwachen der Datenerfassung
 
-Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die über sie erfassten Daten mithilfe des Monitoring-Dashboards überwachen. Weitere Informationen finden Sie im Tutorial zum [Überwachen von Datenflüssen zu Quellen in der Benutzeroberfläche](../../../../../dataflows/ui/monitor-sources.md).
+Nachdem Ihre CSV-Datei zugeordnet und erstellt wurde, können Sie die über sie erfassten Daten mithilfe des Monitoring-Dashboards überwachen. Weitere Informationen finden Sie im Tutorial zu [Überwachen von Datenflüssen aus Quellen in der Benutzeroberfläche](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich eine flache CSV-Datei einem XDM-Schema zugeordnet und in Platform aufgenommen. Diese Daten können jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] verwendet werden. Weitere Informationen finden Sie in der Übersicht zu [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) .
+In diesem Tutorial haben Sie erfolgreich eine flache CSV-Datei einem XDM-Schema zugeordnet und in Platform aufgenommen. Diese Daten können jetzt nachgelagert verwendet werden [!DNL Platform] Dienste wie [!DNL Real-time Customer Profile]. Siehe Übersicht für [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) für weitere Informationen.

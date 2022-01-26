@@ -5,7 +5,7 @@ title: XDM ExperienceEvent-Klasse
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die XDM ExperienceEvent-Klasse und Best Practices für die Modellierung von Ereignisdaten.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: 64e76c456ac5f59a2a1996e58eda405f1b27efa8
+source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
 workflow-type: tm+mt
 source-wordcount: '1758'
 ht-degree: 3%
@@ -53,7 +53,7 @@ Bestimmte Interaktionen in Ihren Erlebnisanwendungen können zu mehreren verwand
 
 [Adobe Experience Platform-Datenvorbereitung](../../data-prep/home.md) ermöglicht die Zuordnung, Umwandlung und Validierung von Daten zu und von XDM. Verfügbare [Zuordnungsfunktionen](../../data-prep/functions.md) durch den Dienst bereitgestellte Dienste können Sie logische Operatoren aufrufen, um bei der Aufnahme in Experience Platform Daten aus Datensätzen mit mehreren Ereignissen zu priorisieren, umzuwandeln und/oder zu konsolidieren. Im obigen Beispiel können Sie `eventType` als berechnetes Feld, das einer &quot;Produktansicht&quot;Priorität vor einer &quot;Seitenansicht&quot;einräumt, wann immer beide auftreten.
 
-Wenn Sie Daten manuell über die Benutzeroberfläche in Platform erfassen, lesen Sie das Handbuch unter [berechnete Felder](../../data-prep/calculated-fields.md) für spezifische Schritte zur Erstellung berechneter Felder.
+Wenn Sie Daten manuell über die Benutzeroberfläche in Platform erfassen, lesen Sie das Handbuch unter [berechnete Felder](../../data-prep/ui/mapping.md#calculated-fields) für spezifische Schritte zur Erstellung berechneter Felder.
 
 Wenn Sie Daten mithilfe einer Quellverbindung an Platform streamen, können Sie die Quelle so konfigurieren, dass stattdessen berechnete Felder verwendet werden. Siehe Abschnitt [Dokumentation zu Ihrer jeweiligen Quelle](../../sources/home.md) für Anweisungen zur Implementierung berechneter Felder beim Konfigurieren der Verbindung.
 
