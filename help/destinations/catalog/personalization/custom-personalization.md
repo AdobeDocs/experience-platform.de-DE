@@ -3,7 +3,7 @@ keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniert
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Mitgliedschaft in einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: cfbf8fb29d15badd10bafe35c558d95e534d23e8
 workflow-type: tm+mt
 source-wordcount: '574'
 ht-degree: 7%
