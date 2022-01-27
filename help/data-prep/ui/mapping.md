@@ -2,7 +2,8 @@
 keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei zuordnen;CSV-Datei zu xdm zuordnen;CSV zu xdm zuordnen;ui-Handbuch;Mapper;Zuordnung;Datenvorbereitung;Datenvorbereitung;Vorbereiten von Daten;
 title: Anleitung zur Datenvorbereitung-Benutzeroberfläche
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe von Datenvorbereitungsfunktionen in der Platform-Benutzeroberfläche CSV-Dateien einem XDM-Schema zuordnen können.
-source-git-commit: 4c2e3380881e6a032100ef00502b55112f3b103f
+exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
+source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
 workflow-type: tm+mt
 source-wordcount: '1665'
 ht-degree: 17%
@@ -80,18 +81,18 @@ Die **[!UICONTROL Mapping]** -Schnittstelle bietet Ihnen ein umfassendes Tool zu
 
 ### Grundlegendes zur Zuordnungsschnittstelle
 
-Die Zuordnungsoberfläche enthält ein Dashboard, das Informationen zum Zustand Ihrer Zuordnungssätze im Kontext des Aufnahme-Workflows bereitstellt. Im Dashboard werden die folgenden Details zu Ihren Zuordnungssätzen angezeigt:
+Die Zuordnungsschnittstelle enthält ein Dashboard, das Informationen zum Zustand Ihrer Zuordnungsfelder im Kontext des Aufnahme-Workflows bereitstellt. Im Dashboard werden die folgenden Details zu Ihren Zuordnungsfeldern angezeigt:
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | [!UICONTROL Zugeordnete Felder] | Zeigt die Gesamtzahl der Quellfelder an, die einem Ziel-XDM-Feld zugeordnet wurden, unabhängig von Fehlern. |
 | [!UICONTROL Erforderliche Felder] | Zeigt die Anzahl der erforderlichen Zuordnungsfelder an. |
-| [!UICONTROL Identitätsfelder] | Zeigt die Gesamtzahl der als Identität definierten Zuordnungssätze an. Diese Zuordnungssätze werden durch ein Fingerabdrucksymbol dargestellt. |
-| [!UICONTROL Fehler] | Zeigt die Anzahl fehlerhafter Zuordnungssätze an. |
+| [!UICONTROL Identitätsfelder] | Zeigt die Gesamtzahl der als Identität definierten Zuordnungsfelder an. Diese Zuordnungsfelder werden durch ein Fingerabdrucksymbol dargestellt. |
+| [!UICONTROL Fehler] | Zeigt die Anzahl fehlerhafter Zuordnungsfelder an. |
 
 ![oberer Bereich](../images/ui/mapping/top-panel.png)
 
-Die Zuordnungsoberfläche bietet außerdem ein Optionsfeld, aus dem Sie auswählen können, um Ihre Zuordnungssätze besser zu interagieren oder zu filtern.
+Die Zuordnungsschnittstelle bietet außerdem ein Optionsfeld, aus dem Sie auswählen können, um Ihre Zuordnungsfelder besser zu interagieren oder zu filtern.
 
 ![zweites Bedienfeld](../images/ui/mapping/second-panel.png)
 
@@ -112,11 +113,11 @@ Die Filteroptionen sind:
 | [!UICONTROL Nicht zugeordnete Felder] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die noch zugeordnet werden müssen. |
 | [!UICONTROL Felder mit Empfehlung] | Diese Option filtert das Quellschema so, dass nur die Felder angezeigt werden, die Zuordnungsempfehlungen enthalten. |
 
-Auswählen **[!UICONTROL Felder mit Fehlern]** um alle Zuordnungssätze mit Fehlern anzuzeigen.
+Auswählen **[!UICONTROL Felder mit Fehlern]** um alle Zuordnungsfelder mit Fehlern anzuzeigen.
 
 ![filter](../images/ui/mapping/filter.png)
 
-Eine isolierte Ansicht fehlerhafter Zuordnungssätze wird angezeigt, sodass Sie Fehler durch intelligente Zuordnungsempfehlungen oder durch die manuelle Zuordnungsstruktur beheben können.
+Eine isolierte Ansicht fehlerhafter Zuordnungsfelder wird angezeigt, sodass Sie Fehler durch intelligente Zuordnungsempfehlungen oder durch die manuelle Zuordnungsstruktur beheben können.
 
 ![fields-with-errors](../images/ui/mapping/fields-with-errors.png)
 
@@ -176,13 +177,13 @@ Während der Vorschau wird die Identitätsspalte als erstes Feld priorisiert, da
 
 ![preview-screen](../images/ui/mapping/preview-screen.png)
 
-Um alle Zuordnungssätze zu entfernen, wählen Sie **[!UICONTROL Alle Zuordnungen löschen]**.
+Um alle Zuordnungsfelder zu entfernen, wählen Sie **[!UICONTROL Alle Zuordnungen löschen]**.
 
 ![clear-all](../images/ui/mapping/clear-all.png)
 
 ### Zuordnungsschnittstelle verwenden
 
-Platform bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen oder doppelte Zuordnungssätze korrigieren, um Fehler zu löschen.
+Platform bietet automatisch intelligente Empfehlungen für automatisch zugeordnete Felder, die auf dem von Ihnen ausgewählten Zielschema oder Datensatz basieren. Sie können die Zuordnungsregeln manuell an Ihre Anwendungsfälle anpassen oder duplizierte Zuordnungsfelder korrigieren, um Fehler zu löschen.
 
 ![mapping-interface](../images/ui/mapping/mapping-interface.png)
 
@@ -200,7 +201,7 @@ Alternativ können Sie **[!UICONTROL Manuell auswählen]** , um die interaktive 
 
 ![recc-panel](../images/ui/mapping/recc-panel.png)
 
-Die Benutzeroberfläche für die Zielschemazuordnung wird in derselben Ansicht wie die Zuordnungssets angezeigt, sodass Sie die Zuordnungspaare im selben Bildschirm ändern können. Wählen Sie das Zielfeld aus, das Ihrem Anwendungsfall entspricht oder Ihre Fehler behebt.
+Die Zielschemazuordnungsschnittstelle wird in derselben Ansicht wie die Zuordnungsfelder angezeigt, sodass Sie die Zuordnungspaare im selben Bildschirm ändern können. Wählen Sie das Zielfeld aus, das Ihrem Anwendungsfall entspricht oder Ihre Fehler behebt.
 
 ![select-target-field](../images/ui/mapping/select-target-field.png)
 
