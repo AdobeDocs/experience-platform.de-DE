@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Ein Datenfluss ist eine geplante Aufgabe, die Daten aus einer Quelle abruft und in einen Platform-Datensatz aufnimmt. In diesem Tutorial werden Schritte zum Konfigurieren eines neuen Datenflusses mithilfe Ihres Cloud-Speicherkontos beschrieben.
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 38f64f2ba0b40a20528aac6efff0e2fd6bc12ed2
+source-git-commit: 86d8313d7acea41e7b3bcea6554e91ea2190ae69
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 4%
+source-wordcount: '2083'
+ht-degree: 3%
 
 ---
 
@@ -171,7 +171,7 @@ Geben Sie Werte für den Zeitplan an und wählen Sie **[!UICONTROL Nächste]**.
 
 >[!NOTE]
 >
->Bei der Batch-Erfassung wählt jeder darauf folgende Datenfluss Dateien aus, die basierend auf ihren **letzte Änderung** Zeitstempel. Das bedeutet, dass Batch-Datenflüsse ausgewählte Dateien aus der Quelle verwenden, die neu sind oder seit der letzten Ausführung des Datenflusses geändert wurden.
+>Bei der Batch-Erfassung wählt jeder darauf folgende Datenfluss Dateien aus, die basierend auf ihren **letzte Änderung** Zeitstempel. Das bedeutet, dass Batch-Datenflüsse ausgewählte Dateien aus der Quelle auswählen, die neu sind oder seit der letzten Flussausführung geändert wurden. Darüber hinaus müssen Sie sicherstellen, dass zwischen dem Datei-Upload und einem geplanten Ablauf ausreichend Zeit ist, da Dateien, die nicht vollständig in Ihr Cloud-Speicherkonto hochgeladen wurden, bevor die geplante Flusslaufzeit möglicherweise nicht zur Aufnahme abgerufen wird.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/scheduling-interval-on.png)
 
