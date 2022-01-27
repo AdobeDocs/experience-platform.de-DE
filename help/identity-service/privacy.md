@@ -2,13 +2,13 @@
 keywords: Experience Platform;Startseite;beliebte Themen
 title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
-source-git-commit: 49f5de6c4711120306bfc3e6759ed4e83e8a19c2
-workflow-type: ht
-source-wordcount: '666'
-ht-degree: 100%
+exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
+source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
+workflow-type: tm+mt
+source-wordcount: '722'
+ht-degree: 92%
 
 ---
-
 
 # Verarbeiten von Datenschutzanfragen in [!DNL Identity Service]
 
@@ -50,6 +50,10 @@ Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte f�
 
 Die folgende Anfrage erstellt einen neuen Datenschutzvorgang gemäß der DSGVO für die Daten eines einzelnen Kunden im [!DNL Identity]-Speicher. Im Array `userIDs` werden zwei Identitätswerte für den Kunden bereitgestellt; einer davon verwendet den standardmäßigen Identity-Namespace `Email` und der andere einen `ECID`-Namespace. Es enthält auch den Produktwert für [!DNL Identity] (`Identity`) im Array :`include`
 
+>[!TIP]
+>
+>Beim Löschen eines benutzerdefinierten Namespace mithilfe der API müssen Sie das Identitätssymbol als Namespace anstelle des Anzeigenamens angeben.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/privacy/jobs \
@@ -89,6 +93,10 @@ curl -X POST \
 ```
 
 ### Verwenden der Benutzeroberfläche
+
+>[!TIP]
+>
+>Beim Löschen eines benutzerdefinierten Namespace über die Benutzeroberfläche müssen Sie das Identitätssymbol als Namespace angeben, anstatt den Anzeigenamen. Darüber hinaus können Sie benutzerdefinierte Namespaces in der Benutzeroberfläche für Nicht-Produktions-Sandboxes nicht löschen.
 
 Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!UICONTROL Identität]** unter **[!UICONTROL Produkte]**, um Vorgänge für Daten zu verarbeiten, die in [!DNL Identity Service] gespeichert sind.
 
