@@ -6,7 +6,7 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fbcaa4c9010835f7a21f9f555671f6de2344f892
+source-git-commit: e75dec7d71c301ea16cc5bfb6bad948964180c4d
 workflow-type: tm+mt
 source-wordcount: '3204'
 ht-degree: 2%
@@ -200,6 +200,11 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 
 ## Dashboard &quot;Überwachen von Segmentaufträgen&quot; {#monitoring-segment-jobs-dashboard}
 
+>[!CONTEXTUALHELP]
+>id="platform_monitoring_segment_jobs"
+>title="Segmentaufträge"
+>abstract="Das Dashboard für Segmentaufträge enthält Informationen zu den Evaluierungs- und Exportvorgängen für alle Ihre Segmente."
+
 So greifen Sie auf die [!UICONTROL Segmentaufträge] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie [!UICONTROL Segmentaufträge]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den Segmentbewertungs- und Exportvorgängen.
 
 ![Dashboard zur Überwachung von Segmentaufträgen](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
@@ -222,11 +227,6 @@ Die folgenden Metriken sind für Segmentaufträge verfügbar:
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="Die Zielaktivierung enthält Informationen zum Aktivierungsstatus des Segments und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segmentaufträge"
->abstract="Das Dashboard für Segmentaufträge enthält Informationen zu den Evaluierungs- und Exportvorgängen für alle Ihre Segmente."
 
 So greifen Sie auf die [!UICONTROL Überwachung] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie [!UICONTROL Ziele]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den ausgeführten Zielaufträgen.
 
