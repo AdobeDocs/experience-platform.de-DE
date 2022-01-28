@@ -4,9 +4,9 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 7356802ee5bb0c5c05b224d9aa5f0e32cf1de843
+source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '887'
 ht-degree: 19%
 
 ---
@@ -74,7 +74,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 >
 > * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Segmente aktivieren ]**-Schaltfläche, um Segmente an dieses Ziel zu senden.
 > * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Schaltfläche zu [remove](delete-destinations.md) eine bestehende Verbindung zu einem Ziel.
-> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Überwachungsschaltfläche](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Überwachung ]**-Schaltfläche, um die Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Anzeigen in Überwachungsschaltfläche](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Anzeigen in der Überwachung ]**Schaltfläche zum Anzeigen der Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
 
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)
