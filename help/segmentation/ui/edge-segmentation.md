@@ -5,9 +5,9 @@ title: UI-Anleitung zur Edge-Segmentierung
 topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: f168566d03485176b16b6d3833c37930b38b0149
+source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,8 @@ Mit der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort 
 >[!IMPORTANT]
 >
 > Die Edge-Daten werden an einem Edge-Server-Speicherort gespeichert, der am nächsten zum Erfassungsort liegt, und können an einem anderen Speicherort als dem als Hub (oder Prinzipal) für das Adobe Experience Platform-Rechenzentrum bezeichnet werden.
+>
+> Darüber hinaus berücksichtigt die Edge-Segmentierungsmodul nur Anforderungen an den Edge, an dem **one** mit Primärkennzeichnung versehene Identität, die mit nicht Edge-basierten primären Identitäten konsistent ist.
 
 ## Kantensegmentierungs-Abfragetypen
 
