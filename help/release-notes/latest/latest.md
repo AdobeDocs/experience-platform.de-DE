@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: 5a27b725d945fcfc3908b2299f770796ce4fdbd1
+source-git-commit: 51f0cfc1423f8a3bd2ffbceb65de4a09c39d474b
 workflow-type: tm+mt
-source-wordcount: '1337'
+source-wordcount: '1341'
 ht-degree: 29%
 
 ---
@@ -70,7 +70,7 @@ Weitere Informationen finden Sie unter [!DNL Data Prep], siehe [[!DNL Data Prep]
 | Funktion | Beschreibung |
 | ----------- | ----------- |
 | Personalisierung auf derselben Seite und auf der nächsten Seite | Die [Personalisierungsfunktion für die gleiche Seite und die nächste Seite](../../destinations/ui/configure-personalization-destinations.md) bietet eine freigegebene, zielgruppenorientierte Ansicht von Benutzern für Anwendungen in Experience Edge, um die Konsistenz zwischen Marketing- und Kundenkanälen zu gewährleisten. Diese Personalisierung ist über die [Adobe Target-Verbindung](../../destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierungsverbindung](../../destinations/catalog/personalization/custom-personalization.md). Informationen zum Konfigurieren Ihrer Personalisierungskampagnen für die gleiche Seite oder die nächste Seite finden Sie unter [dediziertes Tutorial](../../destinations/ui/configure-personalization-destinations.md). |
-| Batch-Zielüberwachung und Metriken auf Segmentebene | Die Funktion zur Zielüberwachung wurde von Streaming-Zielen erweitert und umfasst jetzt auch Batch-Ziele und Metriken auf Segmentebene für Ihre Aktivierungsdatenflüsse. Weitere Informationen finden Sie unter [Dashboard für Überwachungsziele](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) und [Ansicht auf Segmentebene](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
+| Batch-Zielüberwachung und Metriken auf Segmentebene | Die Funktion zur Zielüberwachung wurde von Streaming-Zielen erweitert und umfasst jetzt auch Batch-Ziele und Metriken auf Segmentebene für Ihre Aktivierungsdatenflüsse. Weitere Informationen finden Sie unter [Dashboard für Überwachungsziele](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard), [Dashboard für Segmentaufträge überwachen](/help/dataflows/ui/monitor-destinations.md#monitoring-segment-jobs-dashboard)und [Ansicht auf Segmentebene](/help/dataflows/ui/monitor-destinations.md#segment-level-view). |
 | Planen der Bearbeitung vorhandener Batch-Aktivierungsdatenflüsse in der Benutzeroberfläche | Mit dieser Version wird die Option eingeführt, den Zeitplan Ihrer vorhandenen Aktivierungsdaten für Batch-Ziele zu bearbeiten. Weitere Informationen finden Sie unter [Aktivieren von Profildaten für Batch-Profilziele](/help/destinations/ui/activate-batch-profile-destinations.md). |
 | Marketo-Zielverbesserungen | Experience Platform-Kunden, die Marketo Engage verwenden, können ihre Marketo-Datenbank maximieren, indem sie die neue Möglichkeit nutzen, neue Netto-Personendatensätze von Experience Platform aus per Push in Marketo Engage zu übertragen. [Marketo-Zielanschluss](/help/destinations/catalog/adobe/marketo-engage.md). <br> Beim Senden von Zielgruppensegmenten von Experience Platform zu Marketo Engage können Personen innerhalb des Segments, die noch nicht in Ihrer Marketo Engage-Datenbank vorhanden sind, automatisch hinzugefügt werden. Weitere Informationen finden Sie unter [Adobe Experience Platform-Segment in eine statische Marketo-Liste pushen](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=en) (Schritt 9 des Tutorials zeigt, wie Sie Netto-neue Personendatensätze in Marketo verschieben können). |
 
