@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentübereinstimmung; Segmentübereinstimmung
 solution: Experience Platform
-title: Häufig gestellte Fragen zur Segmentübereinstimmung (Beta)
+title: Häufig gestellte Fragen zur Segmentübereinstimmung
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
 exl-id: cfa9db16-0bc3-4d25-914d-0d923eccb5a3
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 823eb549e5514a3201ba68ed395c69e202cb747f
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# [!DNL Segment Match] häufig gestellte Fragen (Beta)
+# [!DNL Segment Match] häufig gestellte Fragen
 
 Dieses Handbuch enthält Antworten auf Datenschutz- und Rechtsfragen, die häufig zur Adobe Experience Platform-Segmentübereinstimmung gestellt werden.
 
