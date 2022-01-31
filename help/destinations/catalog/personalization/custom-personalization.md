@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniert
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Mitgliedschaft in einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: cfbf8fb29d15badd10bafe35c558d95e534d23e8
+source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
 workflow-type: tm+mt
-source-wordcount: '574'
-ht-degree: 7%
+source-wordcount: '635'
+ht-degree: 6%
 
 ---
 
@@ -39,6 +39,12 @@ Eine Website zum Vermieten und Verkaufen möchte ihre Startseite anhand von Segm
 Mithilfe eines separaten benutzerdefinierten Personalisierungsziels für den Anzeigenserver kann dieselbe Website für die Werbung auf der Site einen anderen Satz von Segmenten aus Adobe Experience Platform als Targeting-Kriterien verwenden.
 
 ## Mit Ziel verbinden {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_custom_personalization_datastream"
+>title="Über Datastream-IDs"
+>abstract="Diese Option bestimmt, in welchem Datenerfassungsdatenstrom die Segmente in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datastream konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Erfahren Sie, wie Sie einen Datastream konfigurieren."
 
 Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
