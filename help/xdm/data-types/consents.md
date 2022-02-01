@@ -4,9 +4,9 @@ title: Datentyp "Einwilligungen und Voreinstellungen"
 description: Der Datentyp Einverständnis für Datenschutz, Personalisierung und Marketing-Voreinstellungen soll die Erfassung von Kundenberechtigungen und -präferenzen unterstützen, die von CMPs (Consent Management Platform) und anderen Quellen aus Ihren Datenvorgängen generiert werden.
 topic-legacy: guide
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 04e778d3318d60733772c2042c8bb272f0c87d5c
+source-git-commit: 65ad76bb4a5318b03d79d68d3c7e030d7878cf30
 workflow-type: tm+mt
-source-wordcount: '2039'
+source-wordcount: '2058'
 ht-degree: 2%
 
 ---
@@ -53,10 +53,11 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 {
   "consents": {
     "collect": {
-      "val": "y",
+      "val": "VI",
     },
     "adID": {
-      "val": "VI"
+      "idType": "IDFA",
+      "val": "y"
     },
     "share": {
       "val": "y",
@@ -99,10 +100,11 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 ```json
 "consents": {
   "collect": {
-    "val": "y",
+    "val": "VI",
   },
   "adID": {
-    "val": "VI"
+    "idType": "IDFA",
+    "val": "y"
   },
   "share": {
     "val": "y",
@@ -144,16 +146,18 @@ Die folgende JSON-Datei zeigt ein Beispiel für den Datentyp, bei dem die [!UICO
 
 ### `adID`
 
-`adID` stellt die Zustimmung des Kunden dar, ob eine Advertiser-ID (IDFA oder GAID) verwendet werden kann, um den Kunden über Apps auf diesem Gerät hinweg zu verknüpfen.
+`adID` stellt die Zustimmung des Kunden dar, ob eine Advertiser-ID verwendet werden kann, um den Kunden über Apps auf diesem Gerät hinweg zu verknüpfen.
 
 ```json
 "adID": {
+  "idType": "IDFA",
   "val": "y"
 }
 ```
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
+| `idType` | Der Anzeigen-ID-Typ, entweder `IDFA` für Apple ID für Advertiser oder `GAID` für die Advertiser-ID von Google, auch Android Advertiser ID (AAID) genannt. |
 | `val` | Die vom Kunden bereitgestellte Entscheidung für die Zustimmung für diesen Anwendungsfall. Siehe [Anhang](#choice-values) für akzeptierte Werte und Definitionen. |
 
 {style=&quot;table-layout:auto&quot;}
