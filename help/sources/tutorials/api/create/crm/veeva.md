@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem VEC-CRM verbinden.
 exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
-source-git-commit: 89a0e2544a17fe10e6dfd7611b5223ca4fc55501
+source-git-commit: 25cc0c5a1e6dcf01b82956ea1022663445315a27
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '497'
 ht-degree: 10%
 
 ---
 
-# (Beta) Erstellen Sie eine [!DNL Veeva CRM]-Basisverbindung mithilfe der [!DNL Flow Service]-API.
-
->[!NOTE]
->
->Die Quelle [!DNL Veeva CRM] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../../../home.md#terms-and-conditions) .
+# Erstellen Sie eine [!DNL Veeva CRM] Basisverbindung mit [!DNL Flow Service] API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
@@ -27,34 +23,34 @@ Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindun
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu [!DNL Veeva CRM] herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Veeva CRM] mithilfe der [!DNL Flow Service] API.
 
 ### Erforderliche Anmeldedaten sammeln
 
-Damit [!DNL Flow Service] eine Verbindung mit [!DNL Veeva CRM] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Zur [!DNL Flow Service] zur Verbindung mit [!DNL Veeva CRM]müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Berechtigung | Beschreibung |
 | ---------- | ----------- |
-| `environmentUrl` | Die URL Ihrer [!DNL Veeva CRM]-Instanz. |
-| `username` | Der Benutzername-Wert Ihres [!DNL Veeva CRM]-Kontos. |
-| `password` | Der Kennwortwert Ihres [!DNL Veeva CRM]-Kontos. |
-| `securityToken` | Das Sicherheits-Token für Ihre [!DNL Veeva CRM]-Instanz. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Veeva CRM] lautet: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
+| `environmentUrl` | Die URL Ihrer [!DNL Veeva CRM] -Instanz. |
+| `username` | Der Benutzername-Wert Ihres [!DNL Veeva CRM] -Konto. |
+| `password` | Der Kennwortwert Ihrer [!DNL Veeva CRM] -Konto. |
+| `securityToken` | Das Sicherheits-Token für Ihre [!DNL Veeva CRM] -Instanz. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL Veeva CRM] ist: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
-Weitere Informationen zu diesen Werten finden Sie in diesem [[!DNL Veeva CRM] Dokument](https://developer.veevacrm.com/api/#order-management-rest-api).
+Weiterführende Informationen zu diesen Werten finden Sie in diesem Abschnitt [[!DNL Veeva CRM] Dokument](https://developer.veevacrm.com/api/#order-management-rest-api).
 
 ### Verwenden von Platform-APIs
 
-Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Basisverbindung erstellen
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Veeva CRM]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen [!DNL Veeva CRM] Authentifizierungsberechtigungen als Teil der Anfrageparameter.
 
 **API-Format**
 
@@ -95,13 +91,13 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `name` | Der Name Ihrer [!DNL Veeva CRM]-Basisverbindung. Sie können diesen Namen verwenden, um Ihre [!DNL Veeva CRM] Basisverbindung zu suchen. |
-| `description` | Eine optionale Beschreibung für Ihre [!DNL Veeva CRM]-Basisverbindung. |
+| `name` | Der Name Ihres [!DNL Veeva CRM] Basisverbindung. Sie können diesen Namen verwenden, um Ihre [!DNL Veeva CRM] Basisverbindung. |
+| `description` | Eine optionale Beschreibung für Ihre [!DNL Veeva CRM] Basisverbindung. |
 | `auth.specName` | Der Authentifizierungstyp, der für die Verbindung verwendet wird. |
-| `auth.params.environmentUrl` | Die URL Ihrer [!DNL Veeva CRM]-Instanz. |
-| `auth.params.username` | Der Benutzername-Wert Ihres [!DNL Veeva CRM]-Kontos. |
-| `auth.params.password` | Der Kennwortwert Ihres [!DNL Veeva CRM]-Kontos. |
-| `auth.params.securityToken` | Das Sicherheits-Token für Ihre [!DNL Veeva CRM]-Instanz. |
+| `auth.params.environmentUrl` | Die URL Ihrer [!DNL Veeva CRM] -Instanz. |
+| `auth.params.username` | Der Benutzername-Wert Ihres [!DNL Veeva CRM] -Konto. |
+| `auth.params.password` | Der Kennwortwert Ihrer [!DNL Veeva CRM] -Konto. |
+| `auth.params.securityToken` | Das Sicherheits-Token für Ihre [!DNL Veeva CRM] -Instanz. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID für [!DNL Veeva CRM]: `fcad62f3-09b0-41d3-be11-449d5a621b69`. |
 
 **Antwort**
@@ -117,4 +113,4 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurüc
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API eine [!DNL Veeva CRM]-Basisverbindung erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie [CRM-Systeme mithilfe der Flow Service-API](../../explore/crm.md) untersuchen.
+In diesem Tutorial haben Sie eine [!DNL Veeva CRM] Basisverbindung mit [!DNL Flow Service] API und haben den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, während Sie lernen, wie Sie [Erkunden von CRM-Systemen mit der Flow Service-API](../../explore/crm.md).
