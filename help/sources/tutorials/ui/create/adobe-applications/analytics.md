@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Adobe Analytics-Quellverbindung in der Benutzeroberfläche erstellen, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1571'
 ht-degree: 7%
 
 ---
@@ -61,6 +61,16 @@ Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** angezeigt. Auswählen 
 >[!IMPORTANT]
 >
 >Die Datenvorbereitung-Unterstützungsfunktion für die [!DNL Analytics] -Quelle befindet sich in der Beta-Phase.
+
+Bevor Sie Ihre [!DNL Analytics] Daten, um ein XDM-Schema als Ziel festzulegen, müssen Sie zunächst auswählen, ob Sie ein Standardschema oder ein benutzerdefiniertes Schema verwenden.
+
+Ein Standardschema erstellt in Ihrem Namen ein neues Schema, das die [!DNL Analytics] Feldergruppe. Um ein Standardschema zu verwenden, wählen Sie **[!UICONTROL Standardschema]**.
+
+![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
+
+Bei einem benutzerdefinierten Schema können Sie jedes verfügbare Schema für Ihre [!DNL Analytics] -Daten, solange dieses Schema [!DNL Analytics] Feldergruppe. Um ein benutzerdefiniertes Schema zu verwenden, wählen Sie **[!UICONTROL Benutzerdefiniertes Schema]**.
+
+![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
 Die [!UICONTROL Zuordnung] -Seite bietet eine Schnittstelle zur Zuordnung von Quellfeldern zu den entsprechenden Zielschemafeldern. Von hier aus können Sie benutzerdefinierte Variablen neuen Schemafeldgruppen zuordnen und Berechnungen anwenden, wie von der Datenvorbereitung unterstützt. Wählen Sie ein Zielschema aus, um den Zuordnungsprozess zu starten.
 
