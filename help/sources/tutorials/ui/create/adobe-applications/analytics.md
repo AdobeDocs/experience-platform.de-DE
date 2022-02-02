@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Adobe Analytics-Quellverbindung in der Benutzeroberfläche erstellen, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 7bc706751a801a9a673590582cf57872c9c4ae95
+source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 7%
@@ -64,11 +64,11 @@ Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** angezeigt. Auswählen 
 
 Bevor Sie Ihre [!DNL Analytics] Daten, um ein XDM-Schema als Ziel festzulegen, müssen Sie zunächst auswählen, ob Sie ein Standardschema oder ein benutzerdefiniertes Schema verwenden.
 
-Ein Standardschema erstellt in Ihrem Namen ein neues Schema, das die [!DNL Analytics] Feldergruppe. Um ein Standardschema zu verwenden, wählen Sie **[!UICONTROL Standardschema]**.
+Ein Standardschema erstellt in Ihrem Namen ein neues Schema, das die [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppe. Um ein Standardschema zu verwenden, wählen Sie **[!UICONTROL Standardschema]**.
 
 ![default-schema](../../../../images/tutorials/create/analytics/default-schema.png)
 
-Bei einem benutzerdefinierten Schema können Sie jedes verfügbare Schema für Ihre [!DNL Analytics] -Daten, solange dieses Schema [!DNL Analytics] Feldergruppe. Um ein benutzerdefiniertes Schema zu verwenden, wählen Sie **[!UICONTROL Benutzerdefiniertes Schema]**.
+Bei einem benutzerdefinierten Schema können Sie jedes verfügbare Schema für Ihre [!DNL Analytics] -Daten, solange dieses Schema die [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppe. Um ein benutzerdefiniertes Schema zu verwenden, wählen Sie **[!UICONTROL Benutzerdefiniertes Schema]**.
 
 ![custom-schema](../../../../images/tutorials/create/analytics/custom-schema.png)
 
@@ -76,7 +76,7 @@ Die [!UICONTROL Zuordnung] -Seite bietet eine Schnittstelle zur Zuordnung von Qu
 
 >[!TIP]
 >
->Nur Schemas mit der [!DNL Analytics] Vorlagenfeldgruppe werden im Menü zur Schemaauswahl angezeigt. Andere Schemata werden weggelassen. Wenn für Ihre Report Suite-Daten keine geeigneten Schemata verfügbar sind, müssen Sie ein neues Schema erstellen. Ausführliche Anweisungen zum Erstellen von Schemas finden Sie im Handbuch unter [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../../../../xdm/ui/resources/schemas.md).
+>Nur Schemas mit der [!DNL Adobe Analytics ExperienceEvent Template] Feldergruppen werden im Menü zur Schemaauswahl angezeigt. Andere Schemata werden weggelassen. Wenn für Ihre Report Suite-Daten keine geeigneten Schemata verfügbar sind, müssen Sie ein neues Schema erstellen. Ausführliche Anweisungen zum Erstellen von Schemas finden Sie im Handbuch unter [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
