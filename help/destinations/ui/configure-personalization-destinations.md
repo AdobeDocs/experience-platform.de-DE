@@ -6,16 +6,14 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Erfahren Sie, wie Sie Personalisierungsziele für die Personalisierung von derselben Seite und nächsten Seiten konfigurieren.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 1%
+source-wordcount: '367'
+ht-degree: 0%
 
 ---
 
 # Personalisierungsziele für die Personalisierung von derselben Seite und nächsten Seiten konfigurieren
-
-## Übersicht {#overview}
 
 Adobe Experience Platform verwendet [Kantensegmentierung](../../segmentation/ui/edge-segmentation.md) , damit Kunden Zielgruppensegmente in großem Maßstab in Echtzeit erstellen und ansprechen können.
 
@@ -23,11 +21,15 @@ Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von d
 
 Dieser Artikel enthält eine schrittweise Anleitung zum Konfigurieren der Experience Platform und Ihrer Personalisierungsziele für diese Anwendungsfälle.
 
-## Schritt 1: Experience Platform Web SDK-Datenspeicher konfigurieren {#configure-datastream}
+## Schritt 1: Konfigurieren eines Datenspeichers in der Benutzeroberfläche für die Datenerfassung {#configure-datastream}
 
-Der erste Schritt bei der Konfiguration Ihres Personalisierungsanwendungsfalls besteht darin, eine [!DNL Web SDK datastream].
+Der erste Schritt bei der Einrichtung Ihres Personalisierungsziels besteht darin, einen Datastream für das Experience Platform Web SDK zu konfigurieren. Dies erfolgt in der Benutzeroberfläche für die Datenerfassung.
 
-Befolgen Sie die Anweisungen im Abschnitt [Datenspeicherkonfiguration](../../edge/fundamentals/datastreams.md) Dokumentation.
+Beim Konfigurieren des Datastreams unter **[!UICONTROL Adobe Experience Platform]** Stellen Sie sicher, dass beide **[!UICONTROL Edge-Segmentierung]** und **[!UICONTROL Personalisierungsziele]** ausgewählt sind.
+
+![Datenspeicherkonfiguration](../assets/ui/configure-personalization-destinations/datastream-config.png)
+
+Weitere Informationen zum Einrichten eines Datastreams finden Sie in den Anweisungen unter [Dokumentation zum Platform Web SDK](../../edge/fundamentals/datastreams.md).
 
 ## Schritt 2: Personalisierungsziel konfigurieren {#configure-destination}
 
