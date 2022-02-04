@@ -6,18 +6,18 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Benutzeroberfläche von Platform einen Quell-Connector für die Data Landing Zone erstellen.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: ca7197036283ee15dbf60c113d361a5ea34d65c1
+source-git-commit: b007cdf92811b453df5b5d005456a05cd845b769
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '462'
 ht-degree: 9%
 
 ---
 
-# Verbinden von [!DNL Data Landing Zone] mit Platform über die Benutzeroberfläche
+# Verbinden [!DNL Data Landing Zone] zur Plattform mithilfe der Benutzeroberfläche
 
-[!DNL Data Landing Zone] ist eine Cloud-basierte Datenspeicheranlage für temporäre Dateispeicher, die mit Adobe Experience Platform bereitgestellt wird. [!DNL Data Landing Zone] wird ausschließlich für den Eingang und die Ausspeisung Ihrer Daten in und aus Platform verwendet. Daten werden nach sieben Tagen automatisch aus dem [!DNL Data Landing Zone] gelöscht.
+[!DNL Data Landing Zone] ist eine Cloud-basierte Datenspeicheranlage für temporäre Dateispeicher, die mit Adobe Experience Platform bereitgestellt wird. Daten werden automatisch aus der [!DNL Data Landing Zone] nach sieben Tagen.
 
-In diesem Tutorial werden Schritte zum Erstellen einer [!DNL Data Landing Zone]-Quellverbindung mithilfe der Platform-Benutzeroberfläche beschrieben.
+In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Data Landing Zone] Quellverbindung über die Platform-Benutzeroberfläche.
 
 ## Erste Schritte
 
@@ -26,36 +26,40 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Übernehmen Ihrer Dateien von [!DNL Data Landing Zone] in Platform
+## Dateien aus [!DNL Data Landing Zone] Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** aus dem linken Navigationsbereich aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] enthält eine Vielzahl von Quellen, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle über die Suchleiste finden.
 
-Wählen Sie unter der Kategorie [!UICONTROL Cloud-Speicher] die Option [!DNL Data Landing Zone] und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
+Unter dem [!UICONTROL Cloud-Speicher] category, select [!DNL Data Landing Zone] und wählen Sie **[!UICONTROL Daten hinzufügen]**.
 
 ![Katalog](../../../../images/tutorials/create/dlz/catalog.png)
 
-Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt und bietet Ihnen eine Benutzeroberfläche zum Auswählen und Anzeigen einer Vorschau der Daten, die Sie an Platform übermitteln möchten.
+Die [!UICONTROL Daten hinzufügen] angezeigt werden. Sie erhalten eine Oberfläche, über die Sie die Daten auswählen und eine Vorschau der Daten anzeigen können, die Sie in Platform laden möchten.
 
 ![add-data](../../../../images/tutorials/create/dlz/add-data.png)
 
-Eine ausführliche schrittweise Anleitung zum Erstellen eines Datenflusses für eine Cloud-Speicherquelle finden Sie in der Anleitung zum Erstellen eines Cloud-Datenflusses [Erstellen eines Cloud-Datenflusses, um Daten an Platform](../../dataflow/batch/cloud-storage.md) zu übertragen.
+Eine detaillierte, schrittweise Anleitung zum Erstellen eines Datenflusses für eine Cloud-Speicherquelle finden Sie im Tutorial unter [Erstellen eines Cloud-Speicher-Datenflusses zum Übertragen von Daten an Platform](../../dataflow/batch/cloud-storage.md).
 
-## Abrufen und Aktualisieren Ihrer [!DNL Data Landing Zone]-Anmeldedaten
+## Abrufen und Aktualisieren Ihrer [!DNL Data Landing Zone] Anmeldeinformationen
 
-[!DNL Data Landing Zone] ist eine native Quelle, die im Lieferumfang Ihrer Adobe Experience Platform Sources-Lizenz enthalten ist. [!DNL Data Landing Zone] verwendet eine SAS-URI- und SAS-Token-basierte Authentifizierung. Sie können Ihre Authentifizierungsdaten von der Seite [!UICONTROL Quellen-Katalog] abrufen und aktualisieren.
+[!DNL Data Landing Zone] ist eine native Quelle, die im Lieferumfang Ihrer Adobe Experience Platform Sources-Lizenz enthalten ist. [!DNL Data Landing Zone] verwendet eine SAS-URI- und SAS-Token-basierte Authentifizierung. Sie können Ihre Authentifizierungsberechtigungen über die [!UICONTROL Quellen-Katalog] Seite.
 
-Wählen Sie im [!UICONTROL Quellkatalog] unter der Kategorie [!UICONTROL Cloud-Speicher] die Auslassungspunkte (**...**) von der Karte **[!UICONTROL Data Landing Zone]** aus. Wählen Sie im angezeigten Dropdown-Menü **[!UICONTROL Anmeldedaten anzeigen]** aus.
+Im [!UICONTROL Quellen-Katalog]unter [!UICONTROL Cloud-Speicher] -Kategorie, wählen Sie die Auslassungszeichen (**...**) aus dem **[!UICONTROL Data Landing Zone]** Karte. Wählen Sie im angezeigten Dropdown-Menü die Option **[!UICONTROL Anmeldedaten anzeigen]**.
 
 ![options](../../../../images/tutorials/create/dlz/options.png)
 
 Es wird ein Popup angezeigt, in dem Ihr Containername, Ihr SAS-Token, der Name des Speicherkontos und Ihr SAS-URI angezeigt werden.
 
-Wählen Sie **[!UICONTROL Aktualisieren Sie die Anmeldeinformationen]** und warten Sie einige Sekunden, bis Ihre aktualisierten Anmeldeinformationen verarbeitet werden.
+Auswählen **[!UICONTROL Anmeldeinformationen aktualisieren]** und einige Sekunden Zeit in Anspruch nehmen, damit Ihre aktualisierten Anmeldedaten verarbeitet werden.
+
+>[!TIP]
+>
+>Ihre [!DNL Data Landing Zone] Die Anmeldedaten laufen nach 90 Tagen automatisch ab und Sie müssen neue Anmeldedaten verwenden, um eine erneute Verbindung zu [!DNL Data Landing Zone] nach Ablauf. Ihre Datenflüsse in Platform sind nicht durch das Ablaufen von Anmeldeinformationen betroffen. Sie können weiterhin mit neuen und vorhandenen Datenflüssen mit Ihren neuen Anmeldedaten arbeiten.
 
 ![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie auf Ihren [!DNL Data Landing Zone]-Container zugegriffen und gelernt, Ihre Anmeldedaten abzurufen und zu aktualisieren. Sie können jetzt mit dem nächsten Tutorial zum Erstellen eines Datenflusses fortfahren, um Daten aus einem Cloud-Speicher in Platform](../../dataflow/batch/cloud-storage.md) zu übertragen.[
+In diesem Tutorial haben Sie auf Ihre [!DNL Data Landing Zone] Container hinzugefügt und erfahren, wie Sie Ihre Anmeldedaten abrufen und aktualisieren können. Sie können jetzt mit dem nächsten Tutorial zum [Erstellen eines Datenflusses zum Übertragen von Daten aus einem Cloud-Speicher in Platform](../../dataflow/batch/cloud-storage.md).
