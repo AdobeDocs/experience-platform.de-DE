@@ -4,10 +4,10 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 60df79ce1d12bdce133bff54ffda1ed13307bfa4
+source-git-commit: 533f76891f47ba11e2a9de87aa8c249eb9249895
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 19%
+source-wordcount: '1084'
+ht-degree: 20%
 
 ---
 
@@ -64,11 +64,30 @@ Weitere Informationen zu Zielkategorien und Informationen zu den einzelnen Ziele
 
 ## [!UICONTROL Konten] {#accounts}
 
-Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit verschiedenen Zielen hergestellt haben, und ermöglicht es Ihnen, vorhandene Verbindungsdetails zu aktualisieren. Siehe [Konten aktualisieren](update-accounts.md) für detaillierte Anweisungen.
+Die **[!UICONTROL Konten]** zeigt Details zu den Verbindungen an, die Sie mit verschiedenen Zielen hergestellt haben, und ermöglicht es Ihnen, vorhandene Kontodetails zu aktualisieren oder zu löschen. Die nachstehende Tabelle enthält alle Informationen zu den einzelnen Zielkonten.
+
+>[!TIP]
+>
+> * Wählen Sie die drei Punkte im [!UICONTROL Plattform] und verwenden Sie die ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Segmente aktivieren ]**-Schaltfläche, um Segmente an dieses Ziel zu senden.
+> * Wählen Sie die drei Punkte im [!UICONTROL Plattform] und verwenden Sie die ![Schaltfläche &quot;Details bearbeiten&quot;](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Details bearbeiten ]**Schaltfläche zu [update](update-accounts.md) die Details eines vorhandenen Zielkontos.
+> * Wählen Sie die drei Punkte im [!UICONTROL Plattform] und verwenden Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Schaltfläche zu [delete](delete-destination-account.md) ein vorhandenes Zielkonto.
+
+
+![Registerkarte „Konten“](../assets/ui/workspace/destination-account-options.png)
+
+| Element | Beschreibung |
+|---|---|
+| [!UICONTROL Plattform] | Das Ziel, für das Sie die Verbindung eingerichtet haben. |
+| [!UICONTROL Verbindungstyp] | Stellt den Verbindungstyp des Kontos zu Ihrem Speicherbehälter oder Ziel dar. Je nach Ziel stehen folgende Authentifizierungsoptionen zur Verfügung: <ul><li>Für E-Mail-Marketing-Ziele: Kann S3, FTP oder Azure Blob sein.</li><li>Bei Echtzeit-Werbezielen: Server-zu-Server.</li><li>Bei Amazon S3-Cloud-Speicherzielen: Zugriffsschlüssel. </li><li>Bei SFTP-Cloud-Speicherzielen: Grundlegende Authentifizierung für SFTP.</li><li>OAuth 1- oder OAuth 2-Authentifizierung</li><li>Trägertoken-Authentifizierung</li></ul> |
+| [!UICONTROL Benutzername] | Der Benutzername, den Sie im [Zielverbindungsassistenten](../catalog/email-marketing/overview.md#connect-destination) ausgewählt haben. |
+| [!UICONTROL Ziele] | Stellt die Anzahl der eindeutigen erfolgreichen Ziel-Datenflüsse dar, die mit grundlegenden Informationen verknüpft sind, die für ein Ziel erstellt wurden. |
+| [!UICONTROL Autorisiert] | Das Datum, an dem die Verbindung zu diesem Ziel genehmigt wurde. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!UICONTROL Durchsuchen] {#browse}
 
-Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele mit der **[!UICONTROL Aktiviert/Deaktiviert]** Umschalten aktiviert: Setzen Sie das Ziel auf &quot;aktiv&quot;bzw. &quot;inaktiv&quot;. Sie können auch die Ziele anzeigen, an denen Daten fließen, indem Sie **[!UICONTROL Segmente]** > **[!UICONTROL Durchsuchen]** und wählen Sie ein zu prüfendes Segment aus. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele auf der Registerkarte „Durchsuchen“ verfügbar sind:
+Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, mit denen Sie eine Verbindung hergestellt haben. Ziele mit der **[!UICONTROL Aktiviert/Deaktiviert]** Umschalten aktiviert: Setzen Sie das Ziel auf &quot;aktiv&quot;bzw. &quot;inaktiv&quot;. Sie können auch die Ziele anzeigen, an denen Daten fließen, indem Sie **[!UICONTROL Segmente]** > **[!UICONTROL Durchsuchen]** und wählen Sie ein zu prüfendes Segment aus. Die nachstehende Tabelle enthält alle Informationen, die für die einzelnen Ziele in der [!UICONTROL Durchsuchen] tab:
 
 >[!TIP]
 >
