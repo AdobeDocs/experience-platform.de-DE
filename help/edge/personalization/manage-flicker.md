@@ -3,7 +3,7 @@ title: Verwalten von Flackern für personalisierte Erlebnisse mit dem Adobe Expe
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Flackern bei Benutzererlebnissen verhindern können.
 keywords: target;flackern;prehidingStyle;asynchron;asynchron;
 exl-id: f4b59109-df7c-471b-9bd6-7082e00c293b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: e5d279397cab30e997103496beda5265520dca77
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 76%
@@ -24,7 +24,7 @@ Die Funktion zum Beheben von Flackern umfasst einige Phasen:
 
 Während der Vorabausblendungsphase verwendet das SDK die `prehidingStyle`-Konfigurationsoption, um ein HTML-Tag zu erstellen und es an die DOM anzuhängen, um sicherzustellen, dass große Teile der Seite ausgeblendet werden. Wenn Sie sich nicht sicher sind, welche Teile der Seite personalisiert werden, sollten Sie `prehidingStyle` auf `body { opacity: 0 !important }` einstellen. Dadurch wird sichergestellt, dass die gesamte Seite ausgeblendet wird. Dies hat jedoch den Nachteil, dass die Leistung beim Seiten-Rendering schlechter wird, was von Tools wie Lighthouse, Webseitentests usw. gemeldet wird. Um die beste Leistung beim Seiten-Rendering zu erzielen, wird empfohlen, `prehidingStyle` auf eine Liste von Container-Elementen einzustellen, die die Seitenabschnitte enthalten, die personalisiert werden.
 
-Angenommen, Sie haben eine HTML-Seite wie die unten stehende und Sie wissen, dass nur `bar` - und `bazz` -Container-Elemente jemals personalisiert werden:
+Angenommen, Sie haben eine HTML-Seite wie die unten stehende, und Sie wissen nur, dass `bar` und `bazz` Container-Elemente werden immer personalisiert:
 
 ```html
 <html>
@@ -68,7 +68,7 @@ Es wird empfohlen, das SDK immer asynchron zu laden, um die beste Leistung beim 
     var o=e.createElement("style");
     o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),
     setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, "body { opacity: 0 !important }", 3000);
+    (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, "body { opacity: 0 !important }", 3000);
 </script>
 ```
 
