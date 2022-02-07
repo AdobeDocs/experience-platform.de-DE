@@ -2,10 +2,10 @@
 title: Konfigurieren von Geheimnissen bei der Ereignisweiterleitung
 description: Hier erfahren Sie, wie Sie Geheimnisse in der Datenerfassungs-Benutzeroberfläche konfigurieren können, um sich bei Endpunkten zu authentifizieren, die in den Properties der Ereignisweiterleitung verwendet werden.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: ht
-source-wordcount: '1449'
-ht-degree: 100%
+source-git-commit: 737354ca3b286f6c39cb71bc09aa4d6141c4d9a4
+workflow-type: tm+mt
+source-wordcount: '1447'
+ht-degree: 98%
 
 ---
 
@@ -130,7 +130,7 @@ Sie können einen Austausch von geheimen Daten über den Bearbeitungsbildschirm 
 | Typ von geheimen Daten | Protokoll erneut versuchen |
 | --- | --- |
 | [!UICONTROL Token] | Wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um den Austausch der geheimen Daten erneut zu versuchen. Dieses Steuerelement ist nur verfügbar, wenn eine Umgebung mit den jeweiligen geheimen Daten verknüpft ist. |
-| [!UICONTROL HTTP] | Wenn keine Umgebung mit den jeweiligen geheimen Daten verknüpft ist, wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um die Berechtigung in base64 auszutauschen. Wenn eine Umgebung angehängt ist, wählen Sie die Option **[!UICONTROL Geheime Daten austauschen und bereitstellen]** aus, um auf base64 auszutauschen und die geheimen Daten für Cloudfare bereitzustellen. |
+| [!UICONTROL HTTP] | Wenn keine Umgebung mit den jeweiligen geheimen Daten verknüpft ist, wählen Sie die Option **[!UICONTROL Geheime Daten austauschen]** aus, um die Berechtigung in base64 auszutauschen. Wenn eine Umgebung angehängt ist, wählen Sie die Option **[!UICONTROL Geheimnis austauschen und bereitstellen]** um auf base64 auszutauschen und das Geheimnis bereitzustellen. |
 | [!UICONTROL OAuth2] | Wählen Sie **[!UICONTROL Token erstellen]** aus, um die Anmeldeinformationen auszutauschen und ein Zugriffs-Token vom Authentifizierungsanbieter zurückzugeben. |
 
 ## Löschen von geheimen Daten
