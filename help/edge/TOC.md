@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Anleitung
 user-guide-description: Interagieren Sie mit Experience Cloud-Diensten über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: ccda6d3e16fd6b9966c2f30491feed5fafec47f2
+source-git-commit: 2b6a64bed3033cc5e4f97ed838050dab4400a282
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 100%
+source-wordcount: '146'
+ht-degree: 90%
 
 ---
 
@@ -45,6 +45,7 @@ ht-degree: 100%
       * [Übersicht](personalization/adobe-target/target-overview.md)
       * [Implementierung von Einzelseitenanwendungen](personalization/adobe-target/spa-implementation.md)
       * [Zugriff auf Antwort-Token](personalization/adobe-target/accessing-response-tokens.md)
+      * [Verwenden der Mbox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
    * Offer Decisioning {#offer-decisioning}
       * [Übersicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Einverständnis {#consent}
