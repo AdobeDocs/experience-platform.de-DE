@@ -2,7 +2,7 @@
 title: Beispiel für anonyme Blockabfragen
 description: Der anonyme Baustein ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9f4e34edc47a333aa88153529d0af6a10f189a15
+source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 1%
@@ -33,18 +33,14 @@ Beachten Sie, dass ein Block eine ausführbare Anweisung ist und daher in andere
 Die folgende Abfrage zeigt ein Beispiel für die Verkettung von SQL-Anweisungen. Siehe [SQL-Syntax in Query Service](../sql/syntax.md) für weitere Informationen zur verwendeten SQL-Syntax.
 
 ```SQL
-BEGIN
-     
+$$ BEGIN
     CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
     ....
-    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
-     
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....; 
     EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
-     
-END;
+END
+$$;
 ```
-
-<!-- The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature. -->
 
 Im folgenden Beispiel: `SET` behält das Ergebnis eines `SELECT` Abfrage in der angegebenen lokalen Variablen. Die Variable wird auf den anonymen Block übertragen.
 
@@ -53,10 +49,11 @@ Die Snapshot-ID wird als lokale Variable (`@current_sid`). Sie wird dann in der 
 Ein Datenbank-Snapshot ist eine schreibgeschützte statische Ansicht einer SQL Server-Datenbank. Für mehr [Informationen zur Snapshot-Klausel](../sql/syntax.md#SNAPSHOT-clause) Weitere Informationen finden Sie in der Dokumentation zur SQL-Syntax .
 
 ```SQL
-BEGIN                                             
+$$ BEGIN                                             
   SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
-END;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                           
+END
+$$;
 ```
 
 ## Nächste Schritte

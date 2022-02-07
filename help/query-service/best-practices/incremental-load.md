@@ -2,7 +2,7 @@
 title: Beispielhafte inkrementelle Lastabfragen
 description: Die inkrementelle Ladefunktion verwendet sowohl anonyme Block- als auch Snapshot-Funktionen, um eine nahezu Echtzeit-Lösung zum Verschieben von Daten aus dem Data Lake in Ihr Data Warehouse zu bieten, ohne übereinstimmende Daten zu ignorieren.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 943886078fe31a12542c297133ac6a0a0d551e08
+source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 2%
@@ -65,7 +65,7 @@ INSERT INTO
 >Die `history_meta('source table name')` ist eine praktische Methode, mit der Sie auf verfügbare Momentaufnahmen in einem Datensatz zugreifen können.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -86,7 +86,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END 
+$$;
 ```
 
 4 Verwenden Sie die inkrementelle Datenladelogik im Beispiel für anonyme Bausteine unten, um zu ermöglichen, dass neue Daten aus dem Quelldatensatz (seit dem letzten Zeitstempel) verarbeitet und regelmäßig an die Zieltabelle angehängt werden. Im Beispiel ändern sich die Daten in `DIM_TABLE_ABC` wird verarbeitet und an `DIM_TABLE_ABC_incremental`.
@@ -96,7 +97,7 @@ EXCEPTION
 > `_ID` ist der Primäre Schlüssel in beiden `DIM_TABLE_ABC_Incremental` und `SELECT history_meta('DIM_TABLE_ABC')`.
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -117,7 +118,8 @@ INSERT INTO
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 Diese Logik kann auf jede Tabelle angewendet werden, um inkrementelle Lasten durchzuführen.
@@ -137,7 +139,7 @@ SET resolve_fallback_snapshot_on_failure=true;
 Der gesamte Codeblock sieht wie folgt aus:
 
 ```SQL
-BEGIN
+$$ BEGIN
     SET resolve_fallback_snapshot_on_failure=true;
     SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') FROM checkpoint_log a JOIN
                             (SELECT MAX(process_timestamp)process_timestamp FROM checkpoint_log
@@ -158,7 +160,8 @@ Insert Into
 EXCEPTION
   WHEN OTHER THEN
     SELECT 'ERROR';
- END;
+END
+$$;
 ```
 
 ## Nächste Schritte
