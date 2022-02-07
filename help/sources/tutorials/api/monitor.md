@@ -6,7 +6,7 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service-API beschrieben.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 33%
@@ -15,22 +15,22 @@ ht-degree: 33%
 
 # Überwachen von Datenflüssen mithilfe der Flow Service-API
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern mithilfe von [!DNL Platform] Dienste. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 
 [!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Überwachen von Flusslaufdaten auf Vollständigkeit, Fehler und Metriken mithilfe der Variablen [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
-Für dieses Tutorial müssen Sie über den ID-Wert eines gültigen Datenflusses verfügen. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellen-Übersicht](../../home.md) aus und führen Sie die Schritte aus, die vor dem Ausführen dieses Tutorials beschrieben werden.
+Für dieses Tutorial müssen Sie über den ID-Wert eines gültigen Datenflusses verfügen. Wenn Sie keine gültige Datenfluss-ID haben, wählen Sie Ihren Connector aus der [Quellen - Übersicht](../../home.md) und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben wurden.
 
 Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
 
-* [Quellen](../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
 * [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-In den folgenden Abschnitten finden Sie zusätzliche Informationen, die Sie benötigen, um die Flussläufe mithilfe der [!DNL Flow Service]-API erfolgreich überwachen zu können.
+In den folgenden Abschnitten finden Sie zusätzliche Informationen, die Sie benötigen, um die Flussläufe mithilfe des [!DNL Flow Service] API.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -38,7 +38,7 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -54,7 +54,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Durchfluss überwachen
 
-Nachdem Sie einen Datenfluss erstellt haben, führen Sie eine GET-Anfrage an die [!DNL Flow Service]-API aus.
+Nachdem Sie einen Datenfluss erstellt haben, führen Sie eine GET-Anfrage an die [!DNL Flow Service] API.
 
 **API-Format**
 
@@ -64,7 +64,7 @@ GET /runs?property=flowId=={FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige `id` -Wert für den Datenfluss, den Sie überwachen möchten. |
+| `{FLOW_ID}` | Die eindeutige `id` für den Datenfluss, den Sie überwachen möchten. |
 
 **Anfrage**
 
@@ -193,7 +193,7 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurück
                         "outputFileCount": 1,
                         "extensions": {
                             "manifest": {
-                                "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
+                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
                             }
                         }
                     },
@@ -207,8 +207,8 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurück
                         ],
                         "extensions": {
                             "manifest": {
-                                "failedRecords": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
+                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
+                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
                             },
                             "errors": [
                                 {
@@ -256,4 +256,4 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurück
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie mithilfe der API [!DNL Flow Service] Metriken und Fehlerinformationen zu Ihrem Datenfluss abgerufen. Sie können jetzt Ihren Datenfluss abhängig von Ihrem Erfassungszeitplan weiter überwachen, um dessen Status und Erfassungsraten zu verfolgen. Informationen dazu, wie Sie dieselben Aufgaben mit der Benutzeroberfläche ausführen, finden Sie im Tutorial zum [Überwachen von Datenflüssen mithilfe der Benutzeroberfläche](../ui/monitor.md)
+In diesem Tutorial haben Sie mithilfe der Variablen [!DNL Flow Service] API. Sie können jetzt Ihren Datenfluss abhängig von Ihrem Erfassungszeitplan weiter überwachen, um dessen Status und Erfassungsraten zu verfolgen. Informationen dazu, wie Sie dieselben Aufgaben mit der Benutzeroberfläche ausführen, finden Sie im Tutorial zu [Überwachen von Datenflüssen mithilfe der Benutzeroberfläche](../ui/monitor.md)

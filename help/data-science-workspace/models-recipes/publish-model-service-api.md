@@ -6,24 +6,24 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mit der Sensei Machine Learning-API behandelt.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: a6d047d52dad085ba662bd684c896bdffe3eef2e
+source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 49%
 
 ---
 
-# Veröffentlichen Sie ein Modell als Dienst mit [!DNL Sensei Machine Learning API]
+# Veröffentlichen eines Modells als Dienst mithilfe der [!DNL Sensei Machine Learning API]
 
-In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mit dem [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) beschrieben.
+In diesem Tutorial wird der Prozess zum Veröffentlichen eines Modells als Dienst mit dem [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
 ## Erste Schritte
 
-Dieses Tutorial setzt ein grundlegendes Verständnis von Adobe Experience Platform Data Science Workspace voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie die [Übersicht über Data Science Workspace](../home.md) , um eine allgemeine Einführung in den Dienst zu erhalten.
+Dieses Tutorial setzt ein grundlegendes Verständnis von Adobe Experience Platform Data Science Workspace voraus. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die [Data Science Workspace - Übersicht](../home.md) für eine allgemeine Einführung in den Dienst.
 
-Um diesem Tutorial zu folgen, müssen Sie über eine vorhandene ML-Engine, MLInstance und ein vorhandenes Experiment verfügen. Anweisungen zum Erstellen dieser Rezepte in der API finden Sie im Tutorial zum Importieren eines gepackten Rezepts](./import-packaged-recipe-api.md).[
+Um diesem Tutorial zu folgen, müssen Sie über eine vorhandene ML-Engine, MLInstance und ein vorhandenes Experiment verfügen. Anweisungen zum Erstellen dieser Komponenten in der API finden Sie im Tutorial zu [Importieren eines gepackten Rezepts](./import-packaged-recipe-api.md).
 
-Bevor Sie mit diesem Tutorial beginnen, lesen Sie abschließend den Abschnitt [Erste Schritte](../api/getting-started.md) des Entwicklerhandbuchs, um wichtige Informationen zu erhalten, die Sie benötigen, um die [!DNL Sensei Machine Learning]-API erfolgreich aufrufen zu können, einschließlich der erforderlichen Kopfzeilen, die in diesem Tutorial verwendet werden:
+Bevor Sie mit diesem Tutorial beginnen, lesen Sie abschließend die [Erste Schritte](../api/getting-started.md) im Entwicklerhandbuch wichtige Informationen erhalten, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Sensei Machine Learning] API, einschließlich der erforderlichen Kopfzeilen, die in diesem Tutorial verwendet werden:
 
 - `{ACCESS_TOKEN}`
 - `{IMS_ORG}`
@@ -39,7 +39,7 @@ In der folgenden Tabelle sind einige häufig verwendete Begriffe in diesem Tutor
 
 | Begriff | Definition |
 | --- | --- |
-| **Machine Learning Instance (MLInstance)** | Eine Instanz einer [!DNL Sensei]-Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei]-Code enthält. |
+| **Machine Learning Instance (MLInstance)** | Eine Instanz eines [!DNL Sensei] Engine für einen bestimmten Mandanten, die bestimmte Daten, Parameter und [!DNL Sensei] Code. |
 | **Experiment** | Eine Dachentität für Schulungs-Experimentabläufe, Auswertungs-Experimentabläufe, oder beides. |
 | **Geplantes Experiment** | Ein Begriff, der die Automatisierung von Schulungen oder Auswertungen von Experimentabläufen beschreibt und von einem benutzerdefinierten Zeitplan bestimmt wird. |
 | **Experimentablauf** | Eine bestimmte Instanz von Experimenten-Schulungen oder -Auswertungen. Mehrere Experimentabläufe eines bestimmten Experiments können sich von den für die Schulung oder Auswertung verwendeten Datensatzwerten unterscheiden. |
@@ -95,7 +95,7 @@ curl -X POST
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück, einschließlich des eindeutigen `id` und des `scoringExperimentId` für das entsprechende Scoring-Experiment.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück, einschließlich der eindeutigen `id` und `scoringExperimentId` für das entsprechende Scoring-Experiment.
 
 
 ```JSON
@@ -177,7 +177,7 @@ curl -X POST
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dazu gehören das eindeutige `id` des Dienstes sowie das `trainingExperimentId` und das `scoringExperimentId` für die entsprechenden Schulungs- und Auswertungsexperimente.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dies umfasst die eindeutige `id`sowie `trainingExperimentId` und `scoringExperimentId` für die entsprechenden Schulungs- bzw. Auswertungs-Experimente.
 
 ```JSON
 {
@@ -214,7 +214,7 @@ POST /mlServices
 **Anfrage**
 
 ```SHELL
-curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices' 
+curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
   -H 'x-gw-ims-org-id: {IMS_ORG}' 
@@ -255,7 +255,7 @@ curl -X POST 'https://platform-int.adobe.io/data/sensei/mlServices'
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dazu gehören das eindeutige `id` des Dienstes sowie die `trainingExperimentId` und `scoringExperimentId` der zugehörigen Schulungs- und Auswertungsexperimente. In der folgenden Beispielantwort deutet das Vorhandensein von `trainingSchedule` und `scoringSchedule` darauf hin, dass die Experiment-Entitäten für Schulung und Auswertung geplante Experimente sind.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurück. Dies umfasst die eindeutige `id`sowie `trainingExperimentId` und `scoringExperimentId` der entsprechenden Schulungs- und Auswertungsexperimente. In der folgenden Beispielantwort wird das Vorhandensein von `trainingSchedule` und `scoringSchedule` legt nahe, dass die Experiment-Entitäten für Schulung und Auswertung geplante Experimente sind.
 
 ```JSON
 {
@@ -286,7 +286,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten ML-Dienstes zurüc
 
 ## Suchen nach einem ML-Dienst {#retrieving-ml-services}
 
-Sie können einen vorhandenen ML-Dienst nachschlagen, indem Sie eine `GET` -Anfrage an `/mlServices` stellen und im Pfad die eindeutige `id` des ML-Dienstes angeben.
+Sie können einen vorhandenen ML-Dienst nachschlagen, indem Sie einen `GET` Anfrage an `/mlServices` und die eindeutige `id` des ML-Dienstes im Pfad.
 
 **API-Format**
 
@@ -346,7 +346,7 @@ Eine erfolgreiche Antwort gibt die Details des ML-Dienstes zurück.
 
 ## Planen von Schulungen oder Auswertungen
 
-Wenn Sie Scoring und Schulungen für einen bereits veröffentlichten ML-Dienst planen möchten, können Sie dies tun, indem Sie den vorhandenen ML-Dienst mit einer `PUT`-Anfrage für `/mlServices` aktualisieren.
+Wenn Sie die Auswertung und Schulung für einen bereits veröffentlichten ML-Dienst planen möchten, können Sie dies tun, indem Sie den vorhandenen ML-Dienst mit einer `PUT` Anfrage an `/mlServices`.
 
 **API-Format**
 
@@ -360,7 +360,7 @@ PUT /mlServices/{SERVICE_ID}
 
 **Anfrage**
 
-Die folgende Anfrage plant das Trainieren und Scoring für einen vorhandenen ML-Dienst, indem die `trainingSchedule`- und `scoringSchedule`-Schlüssel mit den entsprechenden `startTime`-, `endTime`- und `cron`-Schlüsseln hinzugefügt werden.
+Die folgende Anfrage plant das Training und Scoring für einen vorhandenen ML-Dienst, indem die `trainingSchedule` und `scoringSchedule` Schlüssel mit den entsprechenden `startTime`, `endTime`und `cron` Schlüssel.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -393,7 +393,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Versuchen Sie nicht, die `startTime` für bestehende geplante Trainings- und Scoring-Aufträge zu ändern. Wenn die `startTime` geändert werden muss, sollten Sie erwägen, dasselbe Modell zu veröffentlichen und die Schulungs- und Auswertungsaufträge umzuplanen.
+>Versuchen Sie nicht, die `startTime` für bestehende geplante Trainings- und Scoring-Aufträge. Wenn die `startTime` geändert werden muss, sollten Sie erwägen, dasselbe Modell zu veröffentlichen und die Schulungs- und Auswertungsaufträge umzuplanen.
 
 **Antwort**
 
