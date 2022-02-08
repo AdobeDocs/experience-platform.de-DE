@@ -5,10 +5,10 @@ title: 'Bewerten von Ereignissen in nahezu Echtzeit mit Streaming-Segmentierung 
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung von Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 4b9c72b4acb9c419afc1725235a9d7865181736b
 workflow-type: tm+mt
-source-wordcount: '1831'
-ht-degree: 34%
+source-wordcount: '1834'
+ht-degree: 33%
 
 ---
 
@@ -338,7 +338,7 @@ curl -X POST \
 | `type` | **(Erforderlich)** Der Auftragstyp im Zeichenfolgenformat. Die unterstützten Typen sind `batch_segmentation` und `export`. |
 | `properties` | **(Erforderlich)** Ein Objekt, das zusätzliche Eigenschaften im Zusammenhang mit dem Zeitplan enthält. |
 | `properties.segments` | **(Erforderlich, wenn `type` gleich `batch_segmentation`)** Die Verwendung von `["*"]` stellt sicher, dass alle Segmente einbezogen werden. |
-| `schedule` | **(Erforderlich)** Eine Zeichenfolge, die den Auftragszeitplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Das folgende Beispiel (`0 0 1 * * ?`) bedeutet, dass der Auftrag jeden Tag bei 1 ausgelöst wird.:00:00 UTC. Weiterführende Informationen finden Sie in der Dokumentation zum [Cron-Ausdrucksformat](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). |
+| `schedule` | **(Erforderlich)** Eine Zeichenfolge, die den Auftragszeitplan enthält. Aufträge können nur einmal pro Tag ausgeführt werden, d. h., Sie können einen Auftrag nicht so planen, dass er während eines Zeitraums von 24 Stunden mehr als einmal ausgeführt wird. Das folgende Beispiel (`0 0 1 * * ?`) bedeutet, dass der Auftrag jeden Tag bei 1 ausgelöst wird.:00:00 UTC. Weitere Informationen finden Sie im Anhang im [Cron-Ausdrucksformat](./schedules.md#appendix) in der Dokumentation zu Zeitplänen innerhalb der Segmentierung. |
 | `state` | *(Optional)* Zeichenfolge, die den Zeitplanstatus enthält. Verfügbare Werte: `active` und `inactive`. Der Standardwert ist `inactive`. Eine IMS-Organisation kann nur einen Zeitplan erstellen. Schritte zum Aktualisieren des Zeitplans finden Sie weiter unten in dieser Anleitung. |
 
 **Antwort**
