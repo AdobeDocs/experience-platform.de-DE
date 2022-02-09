@@ -3,9 +3,9 @@ keywords: Amazon S3; S3-Ziel; s3; amazon s3
 title: Amazon S3-Verbindung
 description: Erstellen Sie eine aktive ausgehende Verbindung zu Ihrem Amazon Web Services (AWS) S3-Speicher, um regelmäßig CSV-Datendateien aus Adobe Experience Platform in Ihre eigenen S3-Behälter zu exportieren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: bf46f4e6549fcbd975a9f0a6034040ed2e9b34e6
+source-git-commit: e6dc0fb136a6f5199153630a20e8809c2c040107
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '503'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,19 @@ Erstellen Sie eine ausgehende Live-Verbindung zu Ihrer [!DNL Amazon Web Services
 Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_bucket"
+>title="Bucket-Name"
+>abstract="Muss zwischen 3 und 63 Zeichen lang sein. Muss mit einem Buchstaben oder einer Zahl beginnen und enden. Darf nur Kleinbuchstaben, Zahlen oder Bindestriche ( - ) enthalten. Darf nicht als IP-Adresse formatiert sein (z. B. 192.100.1.1)."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_folderpath"
+>title="Ordnerpfad"
+>abstract="Darf nur die Zeichen A-Z, a-z, 0-9 und die folgenden Sonderzeichen enthalten: `/!-_.'()"^[]+$%.*"`. Um einen Ordner pro Segmentdatei zu erstellen, fügen Sie das Makro /%SEGMENT_NAME% oder /%SEGMENT_ID% oder /%SEGMENT_NAME%/%SEGMENT_ID% in das Textfeld ein. Makros können nur am Ende des Ordnerpfads eingefügt werden. Anzeigen von Makrobeispielen in der Dokumentation."
+>text="Learn more in documentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=en#use-macros" text="Verwenden Sie Makros, um einen Ordner in Ihrem Speicherort zu erstellen"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_rsa"
