@@ -6,16 +6,16 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie die Sensei Machine Learning-APIs nutzen können, um ein Experiment und einen Experimentablauf zu erstellen.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6ae6bbb5af0f007e483145dca5d4d505c388cc2c
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 91%
+source-wordcount: '554'
+ht-degree: 87%
 
 ---
 
 # Score a model using [!DNL Sensei Machine Learning API]
 
-In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine detaillierte Liste der API-Dokumentationen finden Sie in [diesem Dokument](https://www.adobe.io/apis/cloudplatform/dataservices/api-reference.html).
+In diesem Tutorial erfahren Sie, wie Sie die APIs nutzen können, um ein Experiment und einen Experimentlauf zu erstellen. Eine Liste aller Endpunkte der Sensei Machine Learning-API finden Sie unter [dieses Dokuments](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 
 ## Geplantes Experiment für Scoring erstellen
 
