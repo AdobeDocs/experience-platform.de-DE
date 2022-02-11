@@ -3,9 +3,9 @@ title: Regeln
 description: Machen Sie sich mit der Funktionsweise von Tag-Erweiterungen in Adobe Experience Platform vertraut.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 source-git-commit: 85413e4a8b604dd9111ca4d47ad6a1ec49d8f547
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1973'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -121,18 +121,18 @@ Beim Erstellen oder Bearbeiten von Regeln können Sie diese Regeln in Ihrer [akt
 
 ## Regelsortierung {#rule-ordering}
 
-Mit der Regelsortierung können Sie steuern, in welcher Reihenfolge Regeln, die sich ein Ereignis teilen, ausgeführt werden. Jede Regel enthält eine Ganzzahl, die die Priorität ihrer Reihenfolge bestimmt (der Standardwert ist 50). Regeln, die niedrigere Werte für ihre Reihenfolge enthalten, werden vor Regeln mit höheren Werten ausgeführt.
+Mit der Regelreihenfolge können Sie die Reihenfolge der Ausführung von Regeln steuern, die ein Ereignis gemeinsam haben. Jede Regel enthält eine Ganzzahl, die ihre Priorität in der Reihenfolge bestimmt (der Standardwert ist 50). Regeln, die niedrigere Werte für ihre Reihenfolge enthalten, werden vor Regeln mit höheren Werten ausgeführt.
 
-Betrachten Sie einen Satz von fünf Regeln, die alle ein Ereignis teilen und alle Standardpriorität haben:
+Im Folgenden sehen Sie einen Satz von fünf Regeln, die alle ein Ereignis gemeinsam haben und alle Standardpriorität besitzen:
 
-* Wenn es eine Regel gibt, die Sie zuletzt ausführen möchten, können Sie diese eine Regelkomponente bearbeiten und ihr eine Zahl über 50 (z. B. 60) zuweisen.
-* Wenn es eine Regel gibt, die Sie zuerst ausführen möchten, können Sie diese eine Regelkomponente bearbeiten und ihr eine Zahl unter 50 (z. B. 40) zuweisen.
+* Wenn es eine Regel gibt, die Sie als letzte ausführen möchten, können Sie diese Regelkomponente bearbeiten und ihr eine Zahl über 50 (z. B. 60) zuweisen.
+* Wenn es eine Regel gibt, die Sie als erste ausführen möchten, können Sie diese Regelkomponente bearbeiten und ihr eine Zahl unter 50 (z. B. 40) zuweisen.
 
 >[!NOTE]
 >
->Letztlich liegt die Verantwortung für die Ausführung von Aktionen in der richtigen Reihenfolge beim Erweiterungsentwickler des von Ihnen verwendeten Ereignistyps. Entwickler von Adobe-Erweiterungen stellen sicher, dass ihre Erweiterungen wie vorgesehen funktionieren. Adobe bietet Entwicklern von Drittanbietererweiterungen Anleitungen, dies ordnungsgemäß zu tun, kann jedoch nicht garantieren, wie diese Richtlinien befolgt werden.
+>Letztendlich liegt die Verantwortung für die Ausführung von Aktionen in der richtigen Reihenfolge beim Entwickler der Erweiterung des Ereignistyps, den Sie verwenden. Entwickler von Adobe-Erweiterungen stellen sicher, dass ihre Erweiterungen wie vorgesehen funktionieren. Adobe bietet Entwicklern von Drittanbietererweiterungen Anleitungen, dies ordnungsgemäß zu tun, kann jedoch nicht garantieren, inwieweit diese Richtlinien befolgt werden.
 
-Es wird dringend empfohlen, Ihre Regeln mit positiven Zahlen zwischen 1 und 100 zu sortieren (standardmäßig 50). Da die Regelreihenfolge manuell beibehalten werden muss, empfiehlt es sich, Ihr Bestellschema so einfach wie möglich zu halten. Wenn es Edge-Fälle gibt, in denen diese Beschränkung zu begrenzt ist, unterstützen Tags die Regellaufnummern zwischen +/- 2.147.483.648.
+Es wird dringend empfohlen, Ihre Regeln mit positiven Zahlen zwischen 1 und 100 zu sortieren (Standardwert 50). Da die Regelreihenfolge manuell gepflegt werden muss, ist es am besten, wenn Sie Ihr Ordnungsschema so einfach wie möglich halten. Sollte diese Einschränkung in bestimmten Grenzfällen zu stark sein, unterstützen die Tags Regelordnungsnummern zwischen +/- 2.147.483.648.
 
 ### Client-seitige Regelverarbeitung
 
@@ -163,17 +163,17 @@ Adobe kann nicht garantieren, dass andere Regeln tatsächlich ausgelöst werden 
 
 ## Sequenzierung von Regelkomponenten {#sequencing}
 
-Das Verhalten der Laufzeitumgebung hängt davon ab, ob **[!UICONTROL Regelkomponenten nacheinander ausführen]** für Ihre Eigenschaft aktiviert oder deaktiviert ist. Diese Einstellung bestimmt, ob die Komponenten einer Regel parallel (asynchron) ausgewertet werden können oder ob sie nacheinander ausgewertet werden müssen.
+Das Verhalten der Laufzeitumgebung hängt davon ab, ob die Option **[!UICONTROL Regelkomponenten nacheinander ausführen]** für Ihre Eigenschaft aktiviert oder deaktiviert ist. Diese Einstellung bestimmt, ob die Komponenten einer Regel parallel (asynchron) ausgewertet werden können oder ob sie nacheinander ausgewertet werden müssen.
 
 >[!IMPORTANT]
 >
->Diese Einstellung bestimmt nur, wie Bedingungen und Aktionen in den einzelnen Regeln ausgewertet werden, und beeinflusst nicht die Reihenfolge, in der Regeln selbst für Ihre Eigenschaft ausgeführt werden. Siehe vorherigen Abschnitt unter [Regelreihenfolge](#rule-ordering) für weitere Informationen zur Bestimmung der Ausführungsreihenfolge für mehrere Regeln.
+>Diese Einstellung bestimmt nur, wie Bedingungen und Aktionen innerhalb der einzelnen Regeln ausgewertet werden, und beeinflusst nicht die Reihenfolge, in der die Regeln selbst für Ihre Eigenschaft ausgeführt werden. Siehe vorherigen Abschnitt unter [Regelreihenfolge](#rule-ordering) für weitere Informationen zur Bestimmung der Ausführungsreihenfolge für mehrere Regeln.
 >
->In [Ereignisweiterleitung](../event-forwarding/overview.md) -Eigenschaften, werden Regelaktionen immer nacheinander ausgeführt und diese Einstellung ist nicht verfügbar. Achten Sie beim Erstellen der Regel auf die richtige Reihenfolge.
+>In den [Ereignisweiterleitungs](../event-forwarding/overview.md)-Eigenschaften werden Regelaktionen immer nacheinander ausgeführt, und diese Einstellung ist nicht verfügbar. Achten Sie beim Erstellen der Regel auf die richtige Reihenfolge.
 
 ### Aktiviert
 
-Wenn die Einstellung aktiviert ist, wenn ein Ereignis zur Laufzeit ausgelöst wird, werden die Bedingungen und Aktionen der Regel einer Verarbeitungswarteschlange hinzugefügt (basierend auf der von Ihnen definierten Reihenfolge) und nacheinander auf der Basis &quot;first in, first out&quot;(FIFO) verarbeitet. Die Regel wartet auf den Abschluss der Komponente, bevor sie zur nächsten Komponente wechselt.
+Wenn die Einstellung aktiviert ist, wenn ein Ereignis zur Laufzeit ausgelöst wird, werden die Bedingungen und Aktionen der Regel einer Verarbeitungswarteschlange hinzugefügt (basierend auf der von Ihnen definierten Reihenfolge) und nacheinander nach dem Prinzip „first in, first out“ (FIFO) verarbeitet. Die Regel wartet auf den Abschluss der Komponente, bevor sie zur nächsten Komponente übergeht.
 
 Wenn eine Bedingung nicht erfüllt wird oder ihre definierte Zeitüberschreitung erreicht, werden die nachfolgenden Bedingungen und Aktionen dieser Regel aus der Warteschlange entfernt.
 
