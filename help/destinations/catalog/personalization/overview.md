@@ -3,10 +3,10 @@ keywords: Personalisierung;Personalisierung
 title: Personalisierungsziele – Übersicht
 description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: 8f9a601a833149c83d465f68d16ca362ed730b8a
+source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 86%
+source-wordcount: '143'
+ht-degree: 88%
 
 ---
 
@@ -22,8 +22,8 @@ Derzeit unterstützt Platform die unten aufgeführten Personalisierungsziele. In
 
 **Verbindungen**
 
-* [(Beta) Adobe Target](adobe-target-connection.md)
-* [(Beta) Benutzerdefinierte Personalisierungsverbindung](custom-personalization.md)
+* [Adobe Target](adobe-target-connection.md)
+* [Benutzerdefinierte Personalisierungsverbindung](custom-personalization.md)
 
 **Erweiterungen**
 
