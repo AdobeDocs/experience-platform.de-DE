@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung; Bestimmungsort; Ziel der Erlebnisplattform; Adob
 title: Adobe Target-Verbindung
 description: Adobe Target ist eine Anwendung, die Echtzeit-KI-gestützte Personalisierungs- und Experimentierungsfunktionen für alle eingehenden Kundeninteraktionen über Websites, mobile Apps und mehr hinweg bietet.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 8845bb42fe1a47f1bcd6521f7886c1582d209993
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 9%
+source-wordcount: '475'
+ht-degree: 8%
 
 ---
 
@@ -33,6 +33,10 @@ Diese Integration basiert auf der [Adobe Experience Platform Web SDK](../../../e
 Ein häusliches Vermieter und Vertriebsunternehmen möchte seine Homepage mit einem Banner personalisieren, das auf den Qualifikationen der Kundensegmente in Adobe Experience Platform basiert. Das Unternehmen kann auswählen, welche Zielgruppen ein personalisiertes Erlebnis erhalten sollen, und diese als Targeting-Kriterien für sein Target-Angebot an Adobe Target senden.
 
 ## Mit Ziel verbinden {#connect}
+
+>[!IMPORTANT]
+>
+>Vor der Erstellung [!DNL Adobe Target] Verbindung herzustellen, empfehlen wir Ihnen, unsere Anleitung zum [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](../../ui/configure-personalization-destinations.md). In diesem Handbuch werden die erforderlichen Konfigurationsschritte für die Personalisierungsfälle der gleichen Experience Platform und der nächsten Seite für mehrere Seitenkomponenten erläutert.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"

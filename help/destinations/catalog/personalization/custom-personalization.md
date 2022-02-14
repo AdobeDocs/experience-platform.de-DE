@@ -3,9 +3,9 @@ keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniert
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Mitgliedschaft in einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
+source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '682'
 ht-degree: 6%
 
 ---
@@ -39,6 +39,10 @@ Eine Website zum Vermieten und Verkaufen möchte ihre Startseite anhand von Segm
 Mithilfe eines separaten benutzerdefinierten Personalisierungsziels für den Anzeigenserver kann dieselbe Website für die Werbung auf der Site einen anderen Satz von Segmenten aus Adobe Experience Platform als Targeting-Kriterien verwenden.
 
 ## Mit Ziel verbinden {#connect}
+
+>[!IMPORTANT]
+>
+>Bevor Sie eine benutzerdefinierte Personalisierungsverbindung erstellen, sollten Sie unser Handbuch lesen, wie Sie [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](../../ui/configure-personalization-destinations.md). In diesem Handbuch werden die erforderlichen Konfigurationsschritte für die Personalisierungsfälle der gleichen Experience Platform und der nächsten Seite für mehrere Seitenkomponenten erläutert.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
