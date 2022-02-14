@@ -6,9 +6,9 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Erfahren Sie, wie Sie Personalisierungsziele für die Personalisierung von derselben Seite und nächsten Seiten konfigurieren.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: 851a9598523d26ba52a367f6c03e3c9612f6678b
+source-git-commit: 69db8dbc315f97a0133bcc761ebf850d587dd7d1
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Adobe Experience Platform verwendet [Kantensegmentierung](../../segmentation/ui/
 Mit dieser Funktion können Sie Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten konfigurieren.
 
 Dieser Artikel enthält eine schrittweise Anleitung zum Konfigurieren der Experience Platform und Ihrer Personalisierungsziele für diese Anwendungsfälle.
+
+Sehen Sie sich außerdem das folgende Video an, um einen Überblick über den End-to-End-Konfigurationsprozess zu erhalten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/340091/)
 
 ## Schritt 1: Konfigurieren eines Datenspeichers in der Benutzeroberfläche für die Datenerfassung {#configure-datastream}
 
