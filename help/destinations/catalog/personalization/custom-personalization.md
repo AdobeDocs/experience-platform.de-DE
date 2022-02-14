@@ -3,9 +3,9 @@ keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniert
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Mitgliedschaft in einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d0638ea80c03bf9d5ce76e27e3a4fc7358bfe83c
+source-git-commit: acbee5c4f67dd576b5513c061a67ed4b5af2d254
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '637'
 ht-degree: 6%
 
 ---
@@ -63,7 +63,7 @@ Lesen [Profile und Segmente für Profilanforderungsziele aktivieren](../../ui/ac
 
 ## Exportierte Daten {#exported-data}
 
-Wenn Sie [Adobe Tags](../../../tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK die [Abschluss des Versandereignisses](../../../edge/extension/event-types.md) -Funktion und Ihre Aktion mit benutzerdefiniertem Code verfügt über eine `event.destinations` -Variable, mit der Sie die exportierten Daten anzeigen können.
+Wenn Sie [Tags in Adobe Experience Platform](../../../tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK die [Abschluss des Versandereignisses](../../../edge/extension/event-types.md) -Funktion und Ihre Aktion mit benutzerdefiniertem Code verfügt über eine `event.destinations` -Variable, mit der Sie die exportierten Daten anzeigen können.
 
 Hier finden Sie einen Beispielwert für die `event.destinations` Variable:
 
@@ -85,7 +85,7 @@ Hier finden Sie einen Beispielwert für die `event.destinations` Variable:
 ]
 ```
 
-Wenn Sie [Adobe Tags](../../../tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK die [Umgang mit Antworten von Ereignissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) -Funktion, um die exportierten Daten anzuzeigen.
+Wenn Sie [Tags](../../../tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK die [Umgang mit Antworten von Ereignissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) -Funktion, um die exportierten Daten anzuzeigen.
 
 Die JSON-Antwort von Adobe Experience Platform kann analysiert werden, um den entsprechenden Integrationsalias der Anwendung zu finden, die Sie in Adobe Experience Platform integrieren. Die Segment-IDs können als Targeting-Parameter in den Code der Anwendung übergeben werden. Nachfolgend finden Sie ein Beispiel dafür, wie dies spezifisch für die Zielantwort aussehen würde.
 
