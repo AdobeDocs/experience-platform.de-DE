@@ -1,10 +1,10 @@
 ---
-title: Vergleich von at.js mit dem Platform Web SDK
-description: Erfahren Sie, wie die at.js-Funktionen mit den Web-SDKs verglichen werden.
+title: Vergleich von at.js mit dem Experience Platform Web SDK
+description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
-source-git-commit: 95c6d0d20ee04affb4b67c3d9f90d80e655e2752
+source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2277'
 ht-degree: 7%
 
 ---
@@ -129,7 +129,7 @@ alloy("sendEvent", {
 });
 ```
 
-Das AEP WEB SDK sendet automatisch eine Benachrichtigung mit den vom WEB SDK ausgeführten Angeboten. Dies ist ein Beispiel dafür, wie eine Payload einer Benachrichtigungsanfrage aussieht:
+Experience Platform Web SDK sendet automatisch eine Benachrichtigung mit den vom WEB SDK ausgeführten Angeboten. Dies ist ein Beispiel dafür, wie eine Payload einer Benachrichtigungsanfrage aussieht:
 
 ```json
 {
@@ -638,7 +638,7 @@ adobe.target.triggerView("homeView")
 
 ### Verwenden des Web SDK
 
-Um eine Änderung der Ansicht einer Einzelseitenanwendung Trigger oder zu signalisieren, legen Sie die `web.webPageDetails.viewName` -Eigenschaft unter `xdm` der `sendEvent` Befehl. Das AEP WEB SDK prüft den Ansichts-Cache, ob Angebote für die `viewName` festgelegt in `sendEvent` Sie werden ausgeführt und ein Anzeigebenachrichtigungsereignis gesendet.
+Um eine Änderung der Ansicht einer Einzelseitenanwendung Trigger oder zu signalisieren, legen Sie die `web.webPageDetails.viewName` -Eigenschaft unter `xdm` der `sendEvent` Befehl. Das Web SDK prüft den Ansichts-Cache, ob Angebote für die `viewName` festgelegt in `sendEvent` Sie werden ausgeführt und ein Anzeigebenachrichtigungsereignis gesendet.
 
 **Beispiel**
 
