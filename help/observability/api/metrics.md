@@ -5,7 +5,7 @@ title: Metrik-API-Endpunkt
 topic-legacy: developer guide
 description: Erfahren Sie, wie Sie Beobachtbarkeitsmetriken in Experience Platform mithilfe der Observability Insights-API abrufen.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: 365fb476fa80f665ddd43bf85ec22533ee0c8ad8
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 42%
@@ -282,7 +282,7 @@ In der folgenden Tabelle sind die Metriken für [!DNL Real-time Customer Profile
 | timeseries.profiles.dataset.batchsuccess.count | Anzahl der [!DNL Profile] Batches, die für einen Datensatz oder für alle Datensätze erfasst werden. | Datensatz-ID |
 | timeseries.profiles.dataset.batchfailed.count | Anzahl der [!DNL Profile] Batches schlugen für einen Datensatz oder für alle Datensätze fehl. | Datensatz-ID |
 | platform.ups.ingest.streaming.request.m1_rate | Rate eingehender Anfragen. | IMS-Organisation (**Erforderlich**) |
-| platform.ups.ingest.streaming.access.put.success.m1_rate | Erfolgsrate der Aufnahme. | IMS-Organisation (**Erforderlich**) |
+| aep.core.unified-profile.psi.platform.ups.ingest.streaming.access.put.success.meter.m1_rate | Erfolgsrate der Aufnahme. | IMS-Organisation (**Erforderlich**) |
 | platform.ups.ingest.streaming.records.created.m15_rate | Rate der neuen Einträge, die für einen Datensatz erfasst werden. | Datensatz-ID (**Erforderlich**) |
 | platform.ups.ingest.streaming.request.error.created.outOfOrder.m1_rate | Rate von mit Zeitstempel versehenen und sich nicht in der Reihenfolge befindlichen Einträgen für die Erstellungsanfrage für einen Datensatz. | Datensatz-ID (**Erforderlich**) |
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.created.timestamp | Zeitstempel für die letzte Anfrage zur Eintragserstellung für einen Datensatz. | Datensatz-ID (**Erforderlich**) |
