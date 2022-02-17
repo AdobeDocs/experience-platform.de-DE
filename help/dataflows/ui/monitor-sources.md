@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 38e56beacd8857648abbbf20f4a5c4941ff779ee
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '1856'
+source-wordcount: '1862'
 ht-degree: 9%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 9%
 
 In Adobe Experience Platform werden Daten aus zahlreichen Quellen aufgenommen, analysiert und für eine Vielzahl an Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
 
-Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses. Sie können eine aggregierte Überwachungsansicht verwenden und von der Quellebene zu einem Datenfluss und einem Datenfluss vertikal navigieren, sodass Sie die entsprechenden Metriken anzeigen können, die zum Erfolg oder Misserfolg eines Datenflusses beitragen. You can also use the monitoring dashboard&#39;s cross-service monitoring capacity to monitor a dataflow&#39;s journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
+Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses. Sie können eine aggregierte Überwachungsansicht verwenden und von der Quellebene zu einem Datenfluss und einem Datenfluss vertikal navigieren, sodass Sie die entsprechenden Metriken anzeigen können, die zum Erfolg oder Misserfolg eines Datenflusses beitragen. Sie können auch die dienstübergreifende Überwachungskapazität des Monitoring-Dashboards verwenden, um die Journey eines Datenflusses von einer Quelle aus zu überwachen. [!DNL Identity Service]und [!DNL Profile].
 
 In diesem Tutorial werden Schritte zur Überwachung Ihres Datenflusses beschrieben, wobei sowohl eine aggregierte Überwachungsansicht als auch eine dienstübergreifende Überwachung verwendet werden.
 
@@ -41,18 +41,18 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
 >title="Quellaufnahme"
->abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. Review the metric definition guide to learn more about metrics and graphs."
+>abstract="Die Ansicht Quellaufnahme enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
 >title="Datenfluss-Ausführungsdetails"
->abstract="Sources processing contains information on data activity status and metrics in data lake service, including records ingested and records failed. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
+>abstract="Die Quellverarbeitung enthält Informationen zum Status der Datenaktivität und zu Metriken im Data Lake-Dienst, einschließlich aufgenommenen Datensätzen und fehlgeschlagenen Datensätzen. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
 >text="Learn more in documentation"
 
-Im [Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** über die linke Navigationsleiste auf [!UICONTROL Überwachung] Dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Im [Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** über die linke Navigationsleiste auf [!UICONTROL Überwachung] Dashboard. Die [!UICONTROL Überwachung] Das Dashboard enthält Metriken und Informationen zu allen Datenflüssen von Quellen, einschließlich Einblicken in den Zustand des Daten-Traffics von einer Quelle zu [!DNL Identity Service]und [!DNL Profile].
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed.
+Im Mittelpunkt des Dashboards steht die [!UICONTROL Quellaufnahme] -Bereich, der Metriken und Diagramme enthält, die Daten zu erfassten Datensätzen und fehlgeschlagenen Datensätzen anzeigen.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
@@ -60,7 +60,7 @@ Standardmäßig enthalten die angezeigten Daten die Aufnahmeraten der letzten 24
 
 ![change-date](../assets/ui/monitor-sources/change-date.png)
 
-Es wird ein Kalender-Popup-Fenster mit Optionen für alternative Erfassungszeitrahmen angezeigt. Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**
+Es wird ein Kalender-Popup-Fenster mit Optionen für alternative Erfassungszeitrahmen angezeigt. Auswählen **[!UICONTROL Letzte 30 Tage]** und wählen Sie **[!UICONTROL Anwenden]**
 
 ![Zeitrahmen anpassen](../assets/ui/monitor-sources/adjust-timeframe.png)
 
@@ -70,9 +70,9 @@ Die Diagramme sind standardmäßig aktiviert und Sie können sie deaktivieren, u
 
 | Quellaufnahme | Beschreibung |
 | ---------------- | ----------- |
-| [!UICONTROL Aufgenommene Datensätze ] | The total number of records ingested. |
-| [!UICONTROL Records failed] | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern in den Daten nicht erfasst wurden. |
-| [!UICONTROL Total failed dataflows] | Die Gesamtzahl der Datenflüsse mit einer `failed` Status. |
+| [!UICONTROL Aufgenommene Datensätze ] | Die Gesamtzahl der erfassten Datensätze. |
+| [!UICONTROL Fehlgeschlagene Datensätze] | Die Gesamtzahl der Datensätze, die aufgrund von Fehlern in den Daten nicht erfasst wurden. |
+| [!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse] | Die Gesamtzahl der Datenflüsse mit einer `failed` Status. |
 
 In der Liste der Quellerfassung werden alle Quellen angezeigt, die mindestens ein vorhandenes Konto enthalten. Die Liste enthält außerdem Informationen zur Erfassungsrate jeder Quelle, zur Anzahl fehlgeschlagener Datensätze und zur Gesamtzahl fehlgeschlagener Datenflüsse basierend auf dem von Ihnen angewendeten Zeitraum.
 
@@ -94,7 +94,7 @@ Eine Liste der Datenflüsse wird angezeigt. Um die Liste einzuschränken und sic
 
 ![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
 
-Locate the dataflow that you want to monitor and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status.
+Suchen Sie den zu überwachenden Datenfluss und wählen Sie dann das Filtersymbol aus. ![filter](../assets/ui/monitor-sources/filter.png) um weitere Informationen zum Ausführungsstatus anzuzeigen.
 
 ![dataflow](../assets/ui/monitor-sources/dataflow.png)
 
@@ -150,8 +150,8 @@ Auswählen **[!UICONTROL Identitäten]** , um die Aufnahme in der [!UICONTROL Id
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
->title="Identity processing"
->abstract="Die Identitätsverarbeitung enthält Informationen zu Datensätzen, die für den Identity-Dienst erfasst werden, einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
+>title="Identitätsverarbeitung"
+>abstract="Die Ansicht zur Identitätsverarbeitung enthält Informationen zu den Datensätzen, die für den Identity-Dienst erfasst werden, einschließlich der Anzahl der hinzugefügten Identitäten, der erstellten Diagramme und der aktualisierten Diagramme. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -159,7 +159,7 @@ Auswählen **[!UICONTROL Identitäten]** , um die Aufnahme in der [!UICONTROL Id
 >title="Datenfluss-Ausführungsdetails"
 >abstract="Auf der Seite mit den Ausführungsdetails des Datenflusses werden weitere Informationen zu Ihrem Identity-Datenfluss-Lauf angezeigt, einschließlich der IMS-Organisations-ID und der Kennung des Datenflusses."
 
-The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
+Die [!UICONTROL Identitätsverarbeitung] Seite enthält Informationen zu Datensätzen, die in [!DNL Identity Service], einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme.
 
 Filtersymbol auswählen ![filter](../assets/ui/monitor-sources/filter.png) neben der Startzeit des Datenflusses, um weitere Informationen zu Ihrer [!DNL Identity] dataflow ausführen.
 
@@ -167,17 +167,17 @@ Filtersymbol auswählen ![filter](../assets/ui/monitor-sources/filter.png) neben
 
 | Identitätsmetriken | Beschreibung |
 | ---------------- | ----------- |
-| [!UICONTROL Erhaltene Aufzeichnungen] | The number of records received from [!DNL Data Lake]. |
-| [!UICONTROL Fehlgeschlagene Datensätze] | The number of records that were not ingested into Platform due to errors in the data. |
+| [!UICONTROL Erhaltene Aufzeichnungen] | Anzahl der von [!DNL Data Lake]. |
+| [!UICONTROL Fehlgeschlagene Datensätze] | Die Anzahl der Datensätze, die aufgrund von Fehlern in den Daten nicht in Platform erfasst wurden. |
 | [!UICONTROL Übersprungene Datensätze] | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Identity Service] weil in der Datensatzzeile nur eine Kennung vorhanden war. |
-| [!UICONTROL Aufgenommene Datensätze] | The number of records ingested into [!DNL Identity Service]. |
+| [!UICONTROL Aufgenommene Datensätze] | Anzahl der erfassten Datensätze in [!DNL Identity Service]. |
 | [!UICONTROL Datensätze insgesamt] | die Gesamtzahl aller Datensätze, einschließlich fehlgeschlagener Datensätze, übersprungener Datensätze, [!DNL Identities] hinzugefügt und duplizierte Datensätze. |
 | [!UICONTROL Hinzugefügte Identitäten] | Die Anzahl neuer Kennungen, die zu [!DNL Identity Service]. |
 | [!UICONTROL Erstellte Diagramme] | Die Anzahl neuer Identitätsdiagramme, die in erstellt wurden. [!DNL Identity Service]. |
-| [!UICONTROL Diagramme aktualisiert] | The number of existing identity graphs updated with new edges. |
-| [!UICONTROL Failed dataflow runs] | Die Anzahl der fehlgeschlagenen Datenflüsse. |
-| [!UICONTROL Verarbeitungszeit] | The timestamp from the start of ingestion to completion. |
-| [!UICONTROL Status] | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
+| [!UICONTROL Diagramme aktualisiert] | Die Anzahl vorhandener Identitätsdiagramme, die mit neuen Edges aktualisiert wurden. |
+| [!UICONTROL Fehlgeschlagene Datenfluss-Ausführungen] | Die Anzahl der fehlgeschlagenen Datenflüsse. |
+| [!UICONTROL Verarbeitungszeit] | Der Zeitstempel vom Beginn der Aufnahme bis zum Abschluss. |
+| [!UICONTROL Status] | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
 
 Die [!UICONTROL Datenfluss-Ausführungsdetails] Seite zeigt weitere Informationen zu Ihrer [!DNL Identity] dataflow-Ausführung, einschließlich der Kennung der IMS-Organisation und der Ausführungskennung des Datenflusses. Auf dieser Seite werden auch der entsprechende Fehlercode und die entsprechende Fehlermeldung angezeigt, die von [!DNL Identity Service], falls im Aufnahmeprozess Fehler auftreten sollten.
 
@@ -194,7 +194,7 @@ Aus dem [!UICONTROL Identitätsverarbeitung] Seite, wählen Sie **[!UICONTROL Pr
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profile_processing"
 >title="Profilverarbeitung"
->abstract="Die Profilverarbeitung enthält Informationen zu den Datensätzen, die für den Profildienst erfasst werden, einschließlich der Anzahl der erstellten Profilfragmente, der aktualisierten Profilfragmente und der Gesamtzahl der Profilfragmente."
+>abstract="Die Ansicht Profilverarbeitung enthält Informationen zu den Datensätzen, die für den Profil-Dienst erfasst werden, einschließlich der Anzahl der erstellten Profilfragmente, der aktualisierten Profilfragmente und der Gesamtzahl der Profilfragmente."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -212,10 +212,10 @@ Filtersymbol auswählen ![filter](../assets/ui/monitor-sources/filter.png) neben
 | --------------- | ----------- |
 | [!UICONTROL Erhaltene Aufzeichnungen] | Anzahl der von [!DNL Data Lake]. |
 | [!UICONTROL Fehlgeschlagene Datensätze ] | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
-| [!UICONTROL Profile fragments added] | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
+| [!UICONTROL Profilfragmente hinzugefügt] | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
 | [!UICONTROL Profilfragmente aktualisiert] | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert |
 | [!UICONTROL Profilfragmente insgesamt] | Die Gesamtzahl der in [!DNL Profile], einschließlich aller vorhandenen [!DNL Profile] Fragmente aktualisiert und neu [!DNL Profile] erstellte Fragmente. |
-| [!UICONTROL Failed dataflow runs] | Die Anzahl der fehlgeschlagenen Datenflüsse. |
+| [!UICONTROL Fehlgeschlagene Datenfluss-Ausführungen] | Die Anzahl der fehlgeschlagenen Datenflüsse. |
 | [!UICONTROL Verarbeitungszeit] | Der Zeitstempel vom Beginn der Aufnahme bis zum Abschluss. |
 | [!UICONTROL Status] | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
 
@@ -225,7 +225,7 @@ Die [!UICONTROL Datenfluss-Ausführungsdetails] Seite zeigt weitere Informatione
 
 ## Nächste Schritte {#next-steps}
 
-Durch Befolgen dieses Tutorials haben Sie den Datenfluss der Aufnahme erfolgreich von der Quellebene bis hin zu [!DNL Identity Service]und [!DNL Profile], wobei **[!UICONTROL Überwachung]** Dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Durch Befolgen dieses Tutorials haben Sie den Datenfluss der Aufnahme erfolgreich von der Quellebene bis hin zu [!DNL Identity Service]und [!DNL Profile], wobei **[!UICONTROL Überwachung]** Dashboard. Sie haben auch erfolgreich Fehler identifiziert, die zum Fehlschlagen von Datenflüssen während des Aufnahmevorgangs beigetragen haben. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md)
 * [Data Science Workspace – Übersicht](../../data-science-workspace/home.md)

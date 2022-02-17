@@ -6,7 +6,7 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 551b07eac95b560950fe2d70fd2a981ae3a29252
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
 source-wordcount: '2188'
 ht-degree: 7%
@@ -71,7 +71,7 @@ Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Schaltfläche, die dem Segm
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Dateiexportoptionen"
->abstract="Wählen Sie Vollständige Dateien exportieren aus, um eine vollständige Momentaufnahme aller Profile zu exportieren, die für das Segment qualifiziert sind. Wählen Sie Inkrementelle Dateien exportieren aus, um nur die Profile zu exportieren, die sich seit dem letzten Export für das Segment qualifiziert haben. Der erste inkrementelle Dateiexport umfasst alle Profile, die für das Segment qualifiziert sind, und dient als Aufstockung. Zukünftige inkrementelle Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für das Segment qualifiziert haben."
+>abstract="Auswählen **Exportieren von vollständigen Dateien** um eine vollständige Momentaufnahme aller Profile zu exportieren, die für das Segment qualifiziert sind. Auswählen **Inkrementelle Dateien exportieren** um nur die Profile zu exportieren, die sich seit dem letzten Export für das Segment qualifiziert haben. <br> Der erste inkrementelle Dateiexport umfasst alle Profile, die für das Segment qualifiziert sind, und dient als Aufstockung. Zukünftige inkrementelle Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für das Segment qualifiziert haben."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Inkrementelle Dateien exportieren"
 
 Auswählen **[!UICONTROL Exportieren von vollständigen Dateien]** , um den Export einer Datei mit einer vollständigen Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment Trigger.
@@ -348,7 +348,6 @@ Adobe empfiehlt die Auswahl eines Identitäts-Namespace, z. B. einer [!DNL CRM I
 >
 >* Die Felder werden in der Segmentdefinition verwendet.
 >* Die Felder werden als projizierte Attribute für das Ziel der Zielgruppe konfiguriert.
-
 >
 > Wenn beispielsweise das Feld `person.name.firstName` über bestimmte Datennutzungsbezeichnungen verfügt, die im Konflikt mit der Marketing-Aktion des Ziels stehen, wird Ihnen im Überprüfungsschritt eine Verletzung der Datennutzungsrichtlinien angezeigt. Weitere Informationen finden Sie unter [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 

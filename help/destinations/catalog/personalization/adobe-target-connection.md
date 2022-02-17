@@ -3,9 +3,9 @@ keywords: Zielpersonalisierung; Bestimmungsort; Ziel der Erlebnisplattform; Adob
 title: Adobe Target-Verbindung
 description: Adobe Target ist eine Anwendung, die Echtzeit-KI-gestützte Personalisierungs- und Experimentierungsfunktionen für alle eingehenden Kundeninteraktionen über Websites, mobile Apps und mehr hinweg bietet.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: fb79d0697244518cc713efeada7d017d64ce6214
+source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '474'
 ht-degree: 8%
 
 ---
