@@ -5,9 +5,9 @@ title: UI-Anleitung zur Edge-Segmentierung
 topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 522a6a005bc4b9d5059b4de3ceb0a24f7767caad
+source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '769'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der
 | Einzelereignis, das ein Profil referenziert | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein einzelnes eingehendes Ereignis ohne Zeitbeschränkung verweist. | Personen, die in den USA leben und die Homepage besucht haben. |
 | Negatives einzelnes Ereignis mit einem Profilattribut | Jede Segmentdefinition, die auf ein negatives eingehendes Ereignis und ein oder mehrere Profilattribute verweist. | Menschen, die in den USA leben und **not** besuchte die Homepage. |
 | Einzelereignisse innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein einzelnes eingehendes Ereignis innerhalb von 24 Stunden verweist. | Personen, die die Homepage in den letzten 24 Stunden besucht haben. |
-| Einzelnes Ereignis mit einem Profilattribut innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein negiertes eingehendes Ereignis innerhalb von 24 Stunden verweist. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. |
+| Einzelnes Ereignis mit einem Profilattribut innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein einziges eingehendes Ereignis innerhalb von 24 Stunden verweist. | Personen, die in den USA leben und die die Homepage in den letzten 24 Stunden besucht haben. |
 | Vernachlässigtes einzelnes Ereignis mit einem Profilattribut innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein oder mehrere Profilattribute und ein negiertes eingehendes Ereignis innerhalb von 24 Stunden verweist. | Menschen, die in den USA leben und **not** die Homepage in den letzten 24 Stunden besucht haben. |
 | Frequenzereignis innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die auf ein Ereignis verweist, das innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfindet. | Besucher der Homepage **mindestens** fünf Mal in den letzten 24 Stunden. |
 | Häufigkeitsereignis mit einem Profilattribut innerhalb eines 24-Stunden-Zeitfensters | Jede Segmentdefinition, die sich auf ein oder mehrere Profilattribute und ein Ereignis bezieht, die innerhalb eines Zeitfensters von 24 Stunden eine bestimmte Anzahl von Malen stattfinden. | Personen aus den USA, die die Homepage besucht haben **mindestens** fünf Mal in den letzten 24 Stunden. |
