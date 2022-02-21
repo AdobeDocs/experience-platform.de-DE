@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 100%
 
