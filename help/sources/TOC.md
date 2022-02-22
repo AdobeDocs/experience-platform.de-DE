@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: d6b633c5c53c3deba9e27c91ec2ced78d3ca9c9e
+source-git-commit: 0154891cf2c68a38c08b9fe44251ec13325a7366
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '741'
 ht-degree: 19%
 
 ---
@@ -81,6 +81,7 @@ ht-degree: 19%
       - [Lokaler Datei-Upload-Connector](connectors/local-system/local-file-upload.md)
    - Marketing-Automatisierung {#marketing-automation}
       - [HubSpot-Connector](connectors/marketing-automation/hubspot.md)
+      - [Mailchimp-Connector](connectors/marketing-automation/mailchimp.md)
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
@@ -232,6 +233,8 @@ ht-degree: 19%
          - [Lokaler Datei-Upload](tutorials/ui/create/local-system/local-file-upload.md)
       - Marketing-Automatisierung {#marketing-automation}
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+         - [Mailchimp-Kampagnen](tutorials/ui/create/marketing-automation/mailchimp-campaigns.md)
+         - [Mailchimp-Mitglieder](tutorials/ui/create/marketing-automation/mailchimp-members.md)
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
