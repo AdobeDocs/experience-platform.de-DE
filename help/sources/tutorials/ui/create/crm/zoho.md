@@ -5,18 +5,15 @@ title: Erstellen einer Zoho CRM-Quellverbindung in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zoho CRM-Quellverbindung erstellen.
-source-git-commit: 030789af0a049b54d6e271410836c08456a83441
+exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
+source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 10%
+source-wordcount: '551'
+ht-degree: 11%
 
 ---
 
 # Erstellen Sie eine [!DNL Zoho CRM] Quellverbindung in der Benutzeroberfläche
-
->[!NOTE]
->
-> Die [!DNL Zoho CRM] -Quelle befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Quell-Connectoren in Adobe Experience Platform bieten die Möglichkeit, externe CRM-Daten planmäßig zu erfassen. In diesem Tutorial werden Schritte zum Erstellen eines [!DNL Zoho CRM] Quell-Connector mit [!DNL Platform] -Benutzeroberfläche.
 

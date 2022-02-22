@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Adobe Analytics-Quellverbindung in der Benutzeroberfläche erstellen, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: d62d1ff9ebef58401911bab1232d1847d65e043f
+source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1560'
 ht-degree: 7%
 
 ---
@@ -57,10 +57,6 @@ Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** angezeigt. Auswählen 
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Zuordnung
-
->[!IMPORTANT]
->
->Die Datenvorbereitung-Unterstützungsfunktion für die [!DNL Analytics] -Quelle befindet sich in der Beta-Phase.
 
 Bevor Sie Ihre [!DNL Analytics] Daten, um ein XDM-Schema als Ziel festzulegen, müssen Sie zunächst auswählen, ob Sie ein Standardschema oder ein benutzerdefiniertes Schema verwenden.
 
