@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
+source-git-commit: 6d360721a598ff3fa82169aea608263a09c1f05f
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '575'
 ht-degree: 41%
 
 ---
@@ -33,7 +33,6 @@ Platform bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundene
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
 
-
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
@@ -52,7 +51,7 @@ Für die Bereitstellung relevanter digitaler Erlebnisse ist ein umfassendes Vers
 
 Adobe Experience Platform [!DNL Identity Service] hilft Ihnen, einen besseren Überblick über Ihren Kunden und sein Verhalten zu erhalten, indem Identitäten über Geräte und Systeme hinweg überbrückt werden, sodass Sie in Echtzeit wirkungsvolle, persönliche digitale Erlebnisse bereitstellen können.
 
-**Neue Funktionen**
+**Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
@@ -65,6 +64,8 @@ Weitere allgemeine Informationen zu [!DNL Identity Service] finden Sie unter [Id
 Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
+
+**Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
