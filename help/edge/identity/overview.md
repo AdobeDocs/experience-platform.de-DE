@@ -1,59 +1,69 @@
 ---
-title: Abrufen von Experience Cloud-IDs mit dem Adobe Experience Platform Web SDK
-description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen.
-seo-description: Learn how to get Adobe Experience Cloud Id.
+title: Identitätsdaten im Platform Web SDK
+description: Erfahren Sie, wie Sie Adobe Experience Cloud IDs (ECIDs) mit dem Adobe Experience Platform Web SDK abrufen und verwalten.
 keywords: Identität; Erstanbieter-Identität; Identity-Dienst; Drittanbieter-Identität; ID-Migration; Besucher-ID; Drittanbieter-Identität; thirdPartyCookiesEnabled; idMigrationEnabled; getIdentity; Syncing Identities; syncIdentity; sendEvent; identityMap; primary; ecid; Identity-Namespace; Namespace-ID; authenticationState; hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: d753cfca6f518dfe2cafa1cb30ad26bd0b591c54
+source-git-commit: 6fb6d1579f888720b6af9617400d512a68d06264
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 6%
+source-wordcount: '1327'
+ht-degree: 1%
 
 ---
 
-# Adobe Experience Cloud IDs
+# Identitätsdaten im Platform Web SDK
 
-Das Adobe Experience Platform Web SDK nutzt [Adobe Identity Service](../../identity-service/ecid.md). Dadurch wird sichergestellt, dass jedes Gerät über eine eindeutige Kennung verfügt, die auf dem Gerät beibehalten wird, sodass Aktivitäten zwischen Seiten verknüpft werden können.
+Das Adobe Experience Platform Web SDK nutzt [Adobe Experience Cloud IDs (ECIDs)](../../identity-service/ecid.md) , um das Besucherverhalten zu verfolgen. Mithilfe von ECIDs können Sie sicherstellen, dass jedes Gerät über eine eindeutige ID verfügt, die über mehrere Sitzungen hinweg persistent sein kann, und alle Treffer, die während und über mehrere Websitzungen hinweg auftreten, an ein bestimmtes Gerät binden.
 
-## Erstanbieteridentität
+Dieses Dokument bietet einen Überblick darüber, wie ECIDs mit dem Platform Web SDK verwaltet werden.
 
-[!DNL Identity Service] speichert die Identität in einem Cookie in einer Erstanbieterdomäne. [!DNL Identity Service] versucht, das Cookie mithilfe eines HTTP-Headers in der Domäne festzulegen. Wenn dies fehlschlägt, setzt [!DNL Identity Service] auf das Setzen von Cookies mit JavaScript zurück. Es wird empfohlen, einen CNAME für Ihre [Edge Domain-Konfiguration](../fundamentals/configuring-the-sdk.md#edgeConfigId) einzurichten.
+## Tracking von ECIDs mit dem SDK
 
-Jedem vom Platform Web SDK stammenden Treffer wird vom Identity Service im Edge Network eine ECID hinzugefügt. Bei erstmaligen Besuchern wird die ECID generiert und der Payload hinzugefügt. Bei sich wiederholenden Besuchern wird die ECID aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie abgerufen und der Payload hinzugefügt.
+Das Platform Web SDK weist ECIDs mithilfe von Cookies zu und verfolgt sie mit verschiedenen Methoden, um zu konfigurieren, wie diese Cookies generiert werden.
 
-Die ECID wird unter dem Feld `identityMap` in Ihrem `xdm` hinzugefügt. Mithilfe des Entwicklungstools des Browsers können Sie die ECID in der Antwort unter der Payload mit dem Typ anzeigen: `identity:result`, aber die ECID kann nicht in der Anfrage angezeigt werden.
+Wenn ein neuer Benutzer auf Ihre Website gelangt, versucht Adobe Experience Cloud Identity Service, ein Cookie zur Identifizierung des Geräts für diesen Benutzer zu setzen. Bei erstmaligen Besuchern wird eine ECID generiert und in der ersten Antwort vom Adobe Experience Platform Edge Network zurückgegeben. Bei wiederkehrenden Besuchern wird die ECID aus dem `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -Cookie und zur Payload hinzugefügt.
 
-Mit der CNAME-Implementierungen können Sie die von Adobe verwendete Sammel-Domain so anpassen, dass sie mit Ihrer eigenen Domain übereinstimmt. Dadurch kann Adobe First-Party-Cookies mithilfe von JavaScript Server-seitig anstatt Client-seitig setzen. In der Vergangenheit waren diese Server-seitigen Erstanbieter-Cookies keinen Beschränkungen unterworfen, die gemäß der Apple-Richtlinie zur intelligenten Tracking-Prävention (ITP) für Safari-Browser gelten. Im November 2020 aktualisierte Apple jedoch seine Richtlinien, sodass diese Einschränkungen auch auf Cookies angewendet wurden, die über CNAME gesetzt wurden. Derzeit sind beide Cookies, die serverseitig durch CNAME gesetzt werden, und die von JavaScript auf Client-Seite gesetzten Cookies unter ITP auf einen Ablauf von sieben Tagen oder 24 Stunden beschränkt. Weitere Informationen zur ITP-Richtlinie finden Sie in diesem Apple-Dokument zum Thema [Tracking Prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp).
+Nachdem das Cookie mit der ECID gesetzt wurde, enthält jede nachfolgende vom Platform Web SDK generierte Anforderung die ECID.
 
-Auch wenn eine CNAME-Implementierung keine Vorteile in Bezug auf die Cookie-Lebensdauer bietet, kann es einige weitere Vorteile wie Anzeigenblocker und weniger häufig verwendete Browser geben, die verhindern, dass Daten an Domänen gesendet werden, die sie als Tracker klassifizieren. In diesen Fällen kann die Verwendung eines CNAME verhindern, dass die Datenerfassung für Benutzer, die diese Tools verwenden, unterbrochen wird.
+Bei der Verwendung von Cookies zur Geräteerkennung haben Sie zwei Möglichkeiten, mit dem Edge Network zu interagieren:
 
-## Identität von Drittanbietern
+1. Daten direkt an die Edge Network-Domäne senden `adobedc.net`. Diese Methode wird als [Datenerfassung von Drittanbietern](#third-party).
+1. Erstellen Sie einen CNAME für Ihre eigene Domäne, der auf `adobedc.net`. Diese Methode wird als [Erstanbieter-Datenerfassung](#first-party).
 
-[!DNL Identity Service] kann eine ID mit einer Drittanbieterdomäne (demdex.net) synchronisieren, um die Site-übergreifende Verfolgung zu ermöglichen. Wenn dies aktiviert ist, wird die erste Anforderung für einen Besucher (z. B. eine Person ohne ECID) an demdex.net gesendet. Dies erfolgt nur bei Browsern, die dies zulassen (z. B. Chrome) und wird durch den Parameter `thirdPartyCookiesEnabled` in der Konfiguration gesteuert. Wenn Sie diese Funktion alle zusammen deaktivieren möchten, setzen Sie `thirdPartyCookiesEnabled` auf &quot;false&quot;.
+Wie in den folgenden Abschnitten erläutert, wirkt sich die von Ihnen gewählte Datenerfassungsmethode direkt auf die Cookie-Lebensdauer in allen Browsern aus.
 
-## ID-Migration
+### Datenerfassung von Drittanbietern {#third-party}
 
-Bei der Migration von der Verwendung der Besucher-API können Sie auch vorhandene AMCV-Cookies migrieren. Um die ECID-Migration zu aktivieren, legen Sie den Parameter `idMigrationEnabled` in der Konfiguration fest. Die ID-Migration ermöglicht die folgenden Anwendungsfälle:
+Die Datenerfassung von Drittanbietern beinhaltet das direkte Senden von Daten an die Edge Network-Domäne `adobedc.net`.
 
-* Wenn einige Seiten einer Domäne die Besucher-API verwenden und andere Seiten dieses SDK verwenden. Um dies zu unterstützen, liest das SDK vorhandene AMCV-Cookies und schreibt ein neues Cookie mit der vorhandenen ECID. Darüber hinaus schreibt das SDK AMCV-Cookies so, dass nachfolgende Seiten, die mit der Besucher-API instrumentiert werden, dieselbe ECID haben, wenn die ECID zuerst auf einer mit dem SDK instrumentierten Seite abgerufen wird.
-* Wenn das Adobe Experience Platform Web SDK auf einer Seite eingerichtet ist, die auch über eine Besucher-API verfügt. Wenn das AMCV-Cookie nicht gesetzt ist, sucht das SDK in diesem Fall nach der Besucher-API auf der Seite und ruft sie auf, um die ECID abzurufen.
-* Wenn die gesamte Site das Adobe Experience Platform Web SDK verwendet und keine Besucher-API hat, ist es nützlich, die ECIDs zu migrieren, damit die zurückgegebenen Besucherinformationen beibehalten werden. Nachdem das SDK für einen bestimmten Zeitraum mit `idMigrationEnabled` bereitgestellt wurde, sodass die meisten Besucher-Cookies migriert werden, kann die Einstellung deaktiviert werden.
+In den letzten Jahren haben die Webbrowser bei der Behandlung von Cookies von Drittanbietern immer restriktiver werden. Einige Browser blockieren standardmäßig Drittanbieter-Cookies. Wenn Sie zur Identifizierung von Site-Besuchern Drittanbieter-Cookies verwenden, ist die Lebensdauer dieser Cookies fast immer kürzer, als dies sonst durch Erstanbieter-Cookies möglich wäre. In einigen Fällen läuft ein Drittanbieter-Cookie innerhalb von sieben Tagen ab.
 
-## Eigenschaften für die Migration aktualisieren
+Wenn die Datenerfassung von Drittanbietern verwendet wird, beschränken einige Anzeigensperren den Traffic außerdem vollständig auf die Datenerfassungs-Endpunkte der Adobe.
 
-Wenn XDM-formatierte Daten an Audience Manager gesendet werden, müssen diese Daten bei der Migration in Signale konvertiert werden. Ihre Eigenschaften müssen aktualisiert werden, um die neuen Schlüssel widerzuspiegeln, die XDM bereitstellt. Dieser Vorgang wird durch die Verwendung des [BAAAM-Tools](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) vereinfacht, das der Audience Manager erstellt hat.
+### Erstanbieter-Datenerfassung {#first-party}
 
-## Serverseitige Weiterleitung
+Die Datenerfassung von Erstanbietern umfasst das Setzen von Cookies über einen CNAME in Ihrer eigenen Domäne, der auf Folgendes verweist: `adobedc.net`.
 
-Wenn Sie derzeit die serverseitige Weiterleitung aktiviert haben und `appmeasurement.js` verwenden. und `visitor.js` können Sie die serverseitige Weiterleitungsfunktion aktivieren lassen, was keine Probleme verursacht. Im Backend ruft Adobe alle AAM Segmente ab und fügt sie zum Aufruf von Analytics hinzu. Wenn der Aufruf an Analytics diese Segmente enthält, ruft Analytics Audience Manager nicht auf, Daten weiterzuleiten, sodass keine doppelte Datenerfassung erfolgt. Bei Verwendung des Web SDK ist außerdem kein Standorthinweis erforderlich, da dieselben Segmentierungsendpunkte im Backend aufgerufen werden.
+Während Browser Cookies, die von CNAME-Endpunkten gesetzt werden, seit langem ähnlich wie von Site-eigenen Endpunkten behandeln, haben kürzlich von Browsern implementierte Änderungen eine Unterscheidung in der Handhabung von CNAME-Cookies geschaffen. Es gibt zwar keine Browser, die standardmäßig Erstanbieter-CNAME-Cookies blockieren, aber einige Browser beschränken die Lebensdauer von Cookies, die mit einem CNAME gesetzt werden, auf nur sieben Tage.
 
-## Abrufen der Besucher-ID und Regions-ID
+### Auswirkungen von Cookie-Lebenszyklen auf Adobe Experience Cloud-Anwendungen {#lifespans}
 
-Wenn Sie die Unique Visitor-ID verwenden möchten, verwenden Sie den Befehl `getIdentity` . `getIdentity` gibt die vorhandene ECID für den aktuellen Besucher zurück. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück. Weitere Informationen finden Sie im [Adobe Audience Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=de).
+Unabhängig davon, ob Sie die Datenerfassung von Erstanbietern oder Drittanbietern auswählen, hat die Dauer, die ein Cookie beibehalten werden kann, direkte Auswirkungen auf die Besucherzahlen in Adobe Analytics und Customer Journey Analytics. Darüber hinaus kann es bei Endbenutzern zu inkonsistenten Personalisierungserlebnissen kommen, wenn Adobe Target oder Offer decisioning auf der Site verwendet wird.
+
+Angenommen, Sie haben ein Personalisierungs-Erlebnis erstellt, das jedes Element auf die Startseite weiterleitet, wenn ein Benutzer es in den letzten sieben Tagen dreimal angesehen hat.
+
+Wenn ein Endbenutzer die Site dreimal in einer Woche besucht und dann sieben Tage lang nicht erneut aufruft, kann dieser Benutzer bei seiner Rückkehr zur Site als neuer Benutzer gelten, da seine Cookies möglicherweise von einer Browserrichtlinie gelöscht wurden (je nach dem Browser, den er bei seinem Besuch auf der Site verwendet hat). In diesem Fall behandelt Ihr Analytics-Tool den Besucher als neuen Benutzer, auch wenn er die Site vor etwas mehr als sieben Tagen besucht hat. Darüber hinaus beginnen alle Bemühungen, das Erlebnis für den Benutzer zu personalisieren, erneut.
+
+### Erstanbieter-Geräte-IDs
+
+Um die oben beschriebenen Auswirkungen von Cookie-Lebenszyklen zu berücksichtigen, können Sie stattdessen Ihre eigenen Geräte-IDs festlegen und verwalten. Siehe Handbuch unter [Erstanbieter-Geräte-IDs](./first-party-device-ids.md) für weitere Informationen.
+
+## Abrufen der ECID und der Region für den aktuellen Benutzer
+
+Um die eindeutige ECID für den aktuellen Besucher abzurufen, verwenden Sie die `getIdentity` Befehl. Für erstmalige Besucher, die noch keine ECID haben, generiert dieser Befehl eine neue ECID. `getIdentity` gibt auch die Regions-ID für den Besucher zurück.
 
 >[!NOTE]
 >
->Diese Methode wird normalerweise bei benutzerdefinierten Lösungen verwendet, bei denen die [!DNL Experience Cloud]-ID gelesen werden muss oder die den Adobe Audience Manager-Standorthinweis benötigen. Sie wird nicht von einer Standardimplementierung verwendet.
+>Diese Methode wird normalerweise bei benutzerdefinierten Lösungen verwendet, bei denen das Lesen der [!DNL Experience Cloud] ID oder Sie benötigen einen Standorthinweis für Adobe Audience Manager. Sie wird nicht von einer Standardimplementierung verwendet.
 
 ```javascript
 alloy("getIdentity")
@@ -68,19 +78,11 @@ alloy("getIdentity")
   });
 ```
 
-## Synchronisieren von Identitäten
+## Verwenden `identityMap`
 
->[!NOTE]
->
->Die `syncIdentity`-Methode wurde in Version 2.1.0 zusätzlich zur Hashing-Funktion entfernt. Wenn Sie Version 2.1.0+ verwenden und Identitäten synchronisieren möchten, können Sie diese direkt in der `xdm`-Option des Befehls `sendEvent` unter dem Feld `identityMap` senden.
+Verwenden eines XDM [`identityMap` field](../../xdm/schema/composition.md#identityMap)können Sie ein Gerät/einen Benutzer anhand mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre ID gilt. Wenn keine Kennung als `primary`, ist standardmäßig die `ECID`.
 
-Außerdem können Sie mit [!DNL Identity Service] Ihre eigenen IDs mit der ECID synchronisieren, indem Sie den Befehl `syncIdentity` verwenden.
-
->[!NOTE]
->
->Es wird dringend empfohlen, alle verfügbaren Identitäten bei jedem `sendEvent`-Befehl weiterzugeben. Dadurch wird eine Reihe von Anwendungsfällen, einschließlich der Personalisierung, freigeschaltet. Nachdem Sie diese Identitäten nun im Befehl `sendEvent` übergeben können, können sie direkt in Ihre DataLayer eingefügt werden.
-
-Durch die Synchronisierung von Identitäten können Sie ein Gerät/Benutzer anhand mehrerer Identitäten identifizieren, seinen Authentifizierungsstatus festlegen und entscheiden, welche Kennung als die primäre ID gilt. Wenn keine Kennung als `primary` festgelegt wurde, ist die primäre Standardeinstellung `ECID`.
+`identityMap` -Felder werden mithilfe der `sentEvent` Befehl.
 
 ```javascript
 alloy("sendEvent", {
@@ -98,30 +100,28 @@ alloy("sendEvent", {
 });
 ```
 
-Jede Eigenschaft innerhalb von `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identitäts-Namespace](../../identity-service/namespaces.md) gehören. Der Eigenschaftsname sollte das Identitäts-Namespace-Symbol sein, das Sie in der Adobe Experience Platform-Benutzeroberfläche unter &quot;[!UICONTROL Identitäten]&quot;finden. Der Eigenschaftswert sollte ein Array von Identitäten sein, die sich auf diesen Identitäts-Namespace beziehen.
+Jede Eigenschaft in `identityMap` stellt Identitäten dar, die zu einem bestimmten [Identitäts-Namespace](../../identity-service/namespaces.md). Der Eigenschaftsname sollte das Identitäts-Namespace-Symbol sein, das Sie in der Adobe Experience Platform-Benutzeroberfläche unter[!UICONTROL Identitäten]&quot;. Der Eigenschaftswert sollte ein Array von Identitäten sein, die sich auf diesen Identitäts-Namespace beziehen.
 
-Jedes Identitätsobjekt im Identitäts-Array ist wie folgt strukturiert:
+Jedes Identitätsobjekt im Identitäten-Array enthält die folgenden Eigenschaften:
 
-### `id`
+| Eigenschaft | Datentyp | Beschreibung |
+| --- | --- | --- |
+| `id` | Zeichenfolge | **(Erforderlich)** Die ID, die Sie für den angegebenen Namespace festlegen möchten. |
+| `authenticationState` | Zeichenfolge | **(Erforderlich)** Der Authentifizierungsstatus der ID. Zu den möglichen Werten gehören `ambiguous`, `authenticated` und `loggedOut`. |
+| `primary` | Boolesch | Bestimmt, ob diese Identität als primäres Fragment im Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt. Wenn dieses Wert weggelassen wird, wird standardmäßig `false` verwendet. |
 
-| **Typ** | **Erforderlich** | **Standardwert** |
-| -------- | ------------ | ----------------- |
-| Zeichenfolge | Ja | Keine |
+## Migration von der Besucher-API zur ECID
 
-Dies ist die ID, die Sie für den angegebenen Namespace synchronisieren möchten.
+Bei der Migration von der Verwendung der Besucher-API können Sie auch vorhandene AMCV-Cookies migrieren. Um die ECID-Migration zu aktivieren, legen Sie die `idMigrationEnabled` -Parameter in der Konfiguration. Die ID-Migration ermöglicht die folgenden Anwendungsfälle:
 
-### `authenticationState`
+* Wenn einige Seiten einer Domäne die Besucher-API verwenden und andere Seiten dieses SDK verwenden. Um dies zu unterstützen, liest das SDK vorhandene AMCV-Cookies und schreibt ein neues Cookie mit der vorhandenen ECID. Darüber hinaus schreibt das SDK AMCV-Cookies so, dass nachfolgende Seiten, die mit der Besucher-API instrumentiert werden, dieselbe ECID haben, wenn die ECID zuerst auf einer mit dem SDK instrumentierten Seite abgerufen wird.
+* Wenn das Adobe Experience Platform Web SDK auf einer Seite eingerichtet ist, die auch über eine Besucher-API verfügt. Wenn das AMCV-Cookie nicht gesetzt ist, sucht das SDK in diesem Fall nach der Besucher-API auf der Seite und ruft sie auf, um die ECID abzurufen.
+* Wenn die gesamte Site das Adobe Experience Platform Web SDK verwendet und keine Besucher-API hat, ist es nützlich, die ECIDs zu migrieren, damit die zurückgegebenen Besucherinformationen beibehalten werden. Nach der Bereitstellung des SDK mit `idMigrationEnabled` für einen bestimmten Zeitraum, sodass die meisten Besucher-Cookies migriert werden, kann die Einstellung deaktiviert werden.
 
-| **Typ** | **Erforderlich** | **Standardwert** | **Mögliche Werte** |
-| -------- | ------------ | ----------------- | ------------------------------------ |
-| Zeichenfolge | Ja | mehrdeutig | mehrdeutig, authentifiziert und angemeldetOut |
+### Eigenschaften für die Migration aktualisieren
 
-Der Authentifizierungsstatus der ID.
+Wenn XDM-formatierte Daten an Audience Manager gesendet werden, müssen diese Daten bei der Migration in Signale konvertiert werden. Ihre Eigenschaften müssen aktualisiert werden, um die neuen Schlüssel widerzuspiegeln, die XDM bereitstellt. Dieser Prozess wird durch die Verwendung der [BAAAM-Tool](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) Dieser Audience Manager hat erstellt.
 
-### `primary`
+## Verwendung in der Ereignisweiterleitung
 
-| **Typ** | **Erforderlich** | **Standardwert** |
-| -------- | ------------ | ----------------- |
-| Boolesch | optional | false |
-
-Bestimmt, ob diese Identität als primäres Fragment im einheitlichen Profil verwendet werden soll. Standardmäßig wird die ECID als primäre Kennung für den Benutzer festgelegt.
+Wenn Sie derzeit [Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) aktiviert sind und verwenden `appmeasurement.js` und `visitor.js`können Sie die Ereignisweiterleitungsfunktion aktivieren lassen, was keine Probleme verursacht. Am Backend ruft Adobe alle AAM Segmente ab und fügt sie zum Aufruf von Analytics hinzu. Wenn der Aufruf an Analytics diese Segmente enthält, ruft Analytics Audience Manager nicht auf, Daten weiterzuleiten, sodass keine doppelte Datenerfassung erfolgt. Bei Verwendung des Web SDK ist außerdem kein Standorthinweis erforderlich, da dieselben Segmentierungsendpunkte im Backend aufgerufen werden.
