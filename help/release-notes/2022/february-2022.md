@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 762a4b7336f1c26b79883db9484d8f5fc7bff53c
+source-git-commit: 07dc417cbeb5ac0a59d2405986e9bb771b0735f2
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 62%
+source-wordcount: '573'
+ht-degree: 41%
 
 ---
 
@@ -14,9 +14,25 @@ ht-degree: 62%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Datenerfassung](#data-collection)
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Identity Service]](#identity)
 - [Quellen](#sources)
+
+## Datenerfassung {#data-collection}
+
+Platform bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert, transformiert und an Ziele außerhalb der Adobe oder der Adobe verteilt werden können.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Verbesserter UI-Workflow für die Konfiguration von Datastreams | Der Arbeitsablauf zum Erstellen eines neuen Datastreams in der Datenerfassungs-Benutzeroberfläche wurde aktualisiert. Beim Hinzufügen von Diensten zu einem Datastream werden nur die Dienste, auf die Sie Zugriff haben, in die Optionsliste aufgenommen. Siehe Handbuch unter [Konfigurieren eines Datenspeichers](../../edge/fundamentals/datastreams.md) für weitere Informationen. |
+| Datenvorbereitung für die Datenerfassung | Wenn Sie das Adobe Experience Platform Web SDK verwenden, können Sie jetzt Datenvorlagenfunktionen nutzen, um Ihre Daten serverseitig dem Experience-Datenmodell (XDM) zuzuordnen. Siehe Abschnitt zu [Datenvorbereitung für die Datenerfassung](../../edge/fundamentals/datastreams.md#data-prep) Weitere Informationen finden Sie im Datenspeicher-Handbuch. |
+| Erstanbieter-Geräte-IDs | Sie können jetzt Ihre eigenen Geräte-IDs beim Erfassen von Kundendaten mit dem Platform Web SDK an das Adobe Experience Platform Edge Network senden, um eine Problemumgehung für aktuelle Browserbeschränkungen bei Cookie-Lebenszyklen von Drittanbietern zu bieten. Siehe Handbuch unter [Erstanbieter-Geräte-IDs](../../edge/identity/first-party-device-ids.md) für weitere Informationen. |
+
+Weitere Informationen zur Datenerfassung in Platform finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
+
 
 ## [!DNL Data Prep] {#data-prep}
 
