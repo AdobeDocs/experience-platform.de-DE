@@ -5,10 +5,10 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 91fc4c50eb9a5ab64de3445b47465eec74a61736
+source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
 workflow-type: tm+mt
-source-wordcount: '2301'
-ht-degree: 12%
+source-wordcount: '2360'
+ht-degree: 11%
 
 ---
 
@@ -217,14 +217,37 @@ INSERT INTO table_name select_query
 
 **Beispiel**
 
+>[!NOTE]
+>
+>Im Folgenden finden Sie ein hilfreiches Beispiel und nur zu Anleitungszwecken.
+
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
->[!NOTE]
+>[!INFO]
+> 
 > Die `SELECT` statement **darf nicht** in Klammern (). Außerdem wird das Schema des Ergebnisses der `SELECT` -Anweisung muss mit der in der `INSERT INTO` -Anweisung. Sie können eine `SNAPSHOT` -Klausel, um inkrementelle Deltas in die Zieltabelle zu lesen.
+
+Die meisten Felder in einem echten XDM-Schema befinden sich nicht auf der Stammebene und SQL lässt die Verwendung der Punktnotation nicht zu. Um mithilfe verschachtelter Felder ein realistisches Ergebnis zu erzielen, müssen Sie jedes Feld in Ihrem `INSERT INTO` Pfad.
+
+nach `INSERT INTO` verschachtelte Pfade verwenden die folgende Syntax:
+
+```sql
+INSERT INTO [dataset]
+SELECT struct([source field1] as [target field in schema],
+[source field2] as [target field in schema],
+[source field3] as [target field in schema]) [tenant name]
+FROM [dataset]
+```
+
+**Beispiel**
+
+```sql
+INSERT INTO Customers SELECT struct(SupplierName as Supplier, City as SupplierCity, Country as SupplierCountry) _Adobe FROM OnlineCustomers;
+```
 
 ## DROP TABLE
 
