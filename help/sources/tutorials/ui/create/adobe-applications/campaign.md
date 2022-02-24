@@ -4,7 +4,7 @@ title: Erstellen einer Adobe Campaign Managed Services-Quellverbindung über die
 description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine Verbindung zwischen Adobe Experience Platform und Adobe Campaign Managed Services herstellen.
 hide: true
 hidefromtoc: true
-source-git-commit: 1b1f25093db642b394c6e05f15f6d1071096eb36
+source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
 workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 5%
@@ -33,8 +33,6 @@ Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Campa
 
 ### Daten auswählen {#select-data}
 
-Die [!UICONTROL Daten auswählen] -Schritt angezeigt wird und Sie eine Oberfläche zum Konfigurieren von Werten für Ihre [!UICONTROL Adobe Campaign-Instanz], [!UICONTROL Zielgruppen-Mapping]und [!UICONTROL Schemaname].
-
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="ACC-Instanz"
@@ -52,3 +50,5 @@ Die [!UICONTROL Daten auswählen] -Schritt angezeigt wird und Sie eine Oberfläc
 >title="Schemaname"
 >abstract="Der Name der in der Adobe Campaign-Datenbank definierten Entität."
 >text="Learn more in documentation"
+
+Die [!UICONTROL Daten auswählen] -Schritt angezeigt wird und Sie eine Oberfläche zum Konfigurieren von Werten für Ihre [!UICONTROL Adobe Campaign-Instanz], [!UICONTROL Zielgruppen-Mapping]und [!UICONTROL Schemaname].
