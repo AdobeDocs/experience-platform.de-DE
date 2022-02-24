@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden alle API-Vorgänge beschrieben, die Sie mit dem API-Endpunkt "/authoring/audience-templates"ausführen können.
 title: API-Vorgänge für Zielgruppen-Metadaten-Endpunkte
 exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: afdabdebe9b82d828cb1941edb99ca2518a941a2
 workflow-type: tm+mt
 source-wordcount: '879'
 ht-degree: 6%
@@ -26,7 +26,6 @@ Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md)
 Sie können eine neue Zielgruppenvorlage erstellen, indem Sie eine POST-Anfrage an die `/authoring/audience-templates` -Endpunkt.
 
 **API-Format**
-
 
 ```http
 POST /authoring/audience-templates
@@ -146,6 +145,31 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
                "value":"string"
             }
          ]
+      },
+      "notify":{
+         "url":"string",
+         "httpMethod":"string",
+         "headers":[
+            {
+               "header":"string",
+               "value":"string"
+            }
+         ],
+         "requestBody":{
+            
+         },
+         "responseFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ],
+         "responseErrorFields":[
+            {
+               "name":"string",
+               "value":"string"
+            }
+         ]
       }
    },
    "validations":[
@@ -183,7 +207,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellte
 Sie können eine vorhandene Zielgruppenvorlage aktualisieren, indem Sie eine PUT-Anfrage an die `/authoring/audience-templates` -Endpunkt und die Instanz-ID der Zielgruppenvorlage angeben, die Sie aktualisieren möchten. Geben Sie im Text des Aufrufs die aktualisierte Vorlage an.
 
 **API-Format**
-
 
 ```http
 PUT /authoring/audience-templates/{INSTANCE_ID}
@@ -292,7 +315,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/audience-te
    }
 }
 ```
-
 
 ## Abrufen einer Liste von Zielgruppenvorlagen {#retrieve-list}
 
@@ -430,7 +452,6 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielgruppen-Me
 Sie können detaillierte Informationen zu einer bestimmten Zielgruppenvorlage abrufen, indem Sie eine GET-Anfrage an die `/authoring/audience-templates` -Endpunkt und die Instanz-ID der Zielgruppenvorlage angeben, die Sie abrufen möchten.
 
 **API-Format**
-
 
 ```http
 GET /authoring/audience-templates/{INSTANCE_ID}

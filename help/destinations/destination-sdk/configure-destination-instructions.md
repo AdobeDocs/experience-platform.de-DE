@@ -1,10 +1,10 @@
 ---
-description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mit Destination SDK aufgeführt und beschrieben.
+description: Auf dieser Seite werden die Schritte zum Konfigurieren eines Streaming-Ziels mithilfe von Destination SDK aufgeführt und beschrieben.
 title: Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: b3d0f0c43b60895961cee2ee54518c0450e2e2f7
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '688'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,7 @@ ht-degree: 0%
 
 ## Übersicht {#overview}
 
-Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten zum Konfigurieren eines [Streaming-Ziel](/help/destinations/destination-types.md#streaming-destinations). Die Schritte werden in der folgenden Reihenfolge angeordnet.
-
->[!NOTE]
->
->Die Konfiguration eines Batch-Ziels über Destination SDK wird derzeit nicht unterstützt.
+Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten zum Konfigurieren einer [Streaming-Ziel](/help/destinations/destination-types.md#streaming-destinations). Die Schritte werden in der folgenden Reihenfolge angeordnet.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -29,7 +25,7 @@ Bevor Sie mit den unten dargestellten Schritten fortfahren, lesen Sie bitte die 
 
 ## Schritt 1: Erstellen einer Server- und Vorlagenkonfiguration {#create-server-template-configuration}
 
-Erstellen Sie zunächst einen Server und eine Vorlagenkonfiguration mit dem `/destinations-server` Endpunkt (lesen) [API-Referenz](./destination-server-api.md)). Weitere Informationen zur Server- und Vorlagenkonfiguration finden Sie unter [Server- und Vorlagenspezifikationen](./configuration-options.md#server-and-template) im Referenzabschnitt.
+Erstellen Sie zunächst einen Server und eine Vorlagenkonfiguration mit dem `/destinations-server` Endpunkt (lesen) [API-Referenz](destination-server-api.md)). Weitere Informationen zur Server- und Vorlagenkonfiguration finden Sie unter [Server- und Vorlagenspezifikationen](server-and-template-configuration.md) im Referenzabschnitt.
 
 Nachfolgend finden Sie eine Beispielkonfiguration. Beachten Sie, dass die Nachrichtenumwandlungsvorlage in `requestBody.value` -Parameter wird in Schritt 3 behandelt; [Umwandlungsvorlage erstellen](./configure-destination-instructions.md#create-transformation-template).
 
@@ -58,7 +54,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Schritt 2: Zielkonfiguration erstellen {#create-destination-configuration}
 
-Im Folgenden finden Sie eine Beispielkonfiguration für eine Zielvorlage, die mithilfe der `/destinations` API-Endpunkt. Weitere Informationen zu dieser Vorlage finden Sie unter [Zielkonfiguration](./destination-configuration.md).
+Im Folgenden finden Sie eine Beispielkonfiguration für eine Zielvorlage, die mithilfe der `/destinations` API-Endpunkt. Weitere Informationen zu dieser Konfiguration finden Sie unter [Zielkonfiguration](./destination-configuration.md).
 
 Um die Server- und Vorlagenkonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und die Vorlagenkonfiguration als `destinationServerId` hier.
 
@@ -156,11 +152,11 @@ Nachdem Sie eine Vorlage für die Nachrichtenumwandlung erstellt haben, die für
 
 ## Schritt 4: Erstellen der Konfiguration von Zielgruppen-Metadaten {#create-audience-metadata-configuration}
 
-Für einige Ziele erfordert Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
+Für einige Ziele erfordert die Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
 
 Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie sie mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Audience-Metadatenkonfiguration Ihrer Zielkonfiguration als `audienceTemplateId`.
 
-## Schritt 5: Konfiguration von Anmeldedaten erstellen/Authentifizierung einrichten {#set-up-authentication}
+## Schritt 5: Authentifizierung einrichten {#set-up-authentication}
 
 Je nachdem, ob `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` In der obigen Zielkonfiguration können Sie die Authentifizierung für Ihr Ziel einrichten, indem Sie die `/destination` oder `/credentials` -Endpunkt.
 

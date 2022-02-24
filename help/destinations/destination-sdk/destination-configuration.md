@@ -1,27 +1,27 @@
 ---
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
-title: Zielkonfigurationsoptionen für Ziel-SDK
+title: Konfigurationsoptionen für Streaming-Ziele für die Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
 workflow-type: tm+mt
-source-wordcount: '1757'
-ht-degree: 6%
+source-wordcount: '1756'
+ht-degree: 5%
 
 ---
 
-# Zielkonfiguration {#destination-configuration}
+# Konfiguration des Streaming-Ziels {#destination-configuration}
 
 ## Übersicht {#overview}
 
-Mit dieser Konfiguration können Sie wichtige Informationen wie Ihren Zielnamen, Ihre Kategorie, eine Beschreibung und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
+Mit dieser Konfiguration können Sie wichtige Informationen für Ihr Streaming-Ziel angeben, z. B. Ihren Zielnamen, Ihre Kategorie, eine Beschreibung und mehr. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 
 Diese Konfiguration verbindet auch die anderen Konfigurationen, die erforderlich sind, damit Ihr Ziel funktioniert - Zielserver und Zielgruppen-Metadaten - mit dieser Konfiguration. Erfahren Sie, wie Sie auf die beiden Konfigurationen in einer [Abschnitt weiter unten](./destination-configuration.md#connecting-all-configurations).
 
 Sie können die in diesem Dokument beschriebenen Funktionen mithilfe der `/authoring/destinations` API-Endpunkt. Lesen [API-Endpunktvorgänge für Ziele](./destination-configuration-api.md) für eine vollständige Liste der Vorgänge, die Sie am -Endpunkt ausführen können.
 
-## Beispielkonfiguration  {#example-configuration}
+## Beispiel für eine Streaming-Konfiguration {#example-configuration}
 
-Unten finden Sie eine Beispielkonfiguration eines fiktiven Ziels, Moviestar, das Endpunkte an vier Orten auf der Welt hat. Das Ziel gehört zur Kategorie der mobilen Ziele . Die folgenden Abschnitte zeigen, wie diese Konfiguration aufgebaut ist.
+Dies ist eine Beispielkonfiguration eines fiktiven Streaming-Ziels, Moviestar, das Endpunkte an vier Orten auf der Welt hat. Das Ziel gehört zur Kategorie der mobilen Ziele .
 
 ```json
 {
@@ -137,29 +137,28 @@ Unten finden Sie eine Beispielkonfiguration eines fiktiven Ziels, Moviestar, das
 
 Dieser Abschnitt in der Zielkonfiguration generiert die [Neues Ziel konfigurieren](/help/destinations/ui/connect-destination.md) in der Experience Platform-Benutzeroberfläche, auf der Benutzer die Experience Platform mit den Konten verbinden, die sie mit Ihrem Ziel haben. Je nachdem, welche Authentifizierungsoption Sie im `authType` -Feld wird die Benutzerseite wie folgt für die Experience Platform generiert:
 
-**Bearer-Authentifizierung**
+### Bearer-Authentifizierung
 
 Wenn Sie den Authentifizierungstyp des Inhabers konfigurieren, müssen Benutzer das Trägertoken eingeben, das sie von Ihrem Ziel erhalten.
 
-![UI-Rendering mit Trägerauthentifizierung](./assets/bearer-authentication-ui.png)
+![UI-Rendering mit Trägerauthentifizierung](assets/bearer-authentication-ui.png)
 
-**OAuth 2-Authentifizierung**
+### OAuth 2-Authentifizierung
 
-Benutzer auswählen **[!UICONTROL Mit Ziel verbinden]** , um den OAuth 2-Authentifizierungsfluss an Ihr Ziel Trigger, wie im folgenden Beispiel für das Twitter-Ziel für benutzerdefinierte Zielgruppen dargestellt. Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [OAuth 2-Authentifizierungsseite des Destination SDK](./oauth2-authentication.md).
+Benutzer auswählen **[!UICONTROL Mit Ziel verbinden]** , um den OAuth 2-Authentifizierungsfluss an Ihr Ziel Trigger, wie im folgenden Beispiel für das Twitter Custom Audiences-Ziel dargestellt. Detaillierte Informationen zum Konfigurieren der OAuth 2-Authentifizierung für Ihren Ziel-Endpunkt finden Sie in der entsprechenden [Authentifizierungsseite für Destination SDK OAuth 2](./oauth2-authentication.md).
 
-![UI-Rendering mit OAuth 2-Authentifizierung](./assets/oauth2-authentication-ui.png)
-
+![UI-Rendering mit OAuth 2-Authentifizierung](assets/oauth2-authentication-ui.png)
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `customerAuthenticationConfigurations` | Zeichenfolge | Gibt die Konfiguration an, die zum Authentifizieren von Experience Platform-Kunden auf Ihrem Server verwendet wird. Siehe `authType` unten für gültige Werte. |
-| `authType` | Zeichenfolge | Akzeptierte Werte sind `OAUTH2, BEARER`. <br><ul><li> Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, wählen Sie die `OAUTH2` und fügen Sie die erforderlichen Felder für OAuth 2 hinzu, wie in der [OAuth 2-Authentifizierungsseite des Destination SDK](./oauth2-authentication.md). Darüber hinaus sollten Sie `authenticationRule=CUSTOMER_AUTHENTICATION` im [Zielversandabschnitt](./destination-configuration.md). </li><li>Wählen Sie für die Trägerauthentifizierung `BEARER` und wählen Sie `authenticationRule=CUSTOMER_AUTHENTICATION` im [Zielversandabschnitt](./destination-configuration.md).</li></ul> |
+| `authType` | Zeichenfolge | Zulässige Werte für Streaming-Ziele sind:<ul><li>`BEARER`. Wenn Ihr Ziel die Trägerauthentifizierung unterstützt, legen Sie `"authType":"Bearer"` und  `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielversandabschnitt](./destination-configuration.md).</li><li>`OAUTH2`. Wenn Ihr Ziel die OAuth 2-Authentifizierung unterstützt, legen Sie `"authType":"OAUTH2"` und fügen Sie die erforderlichen Felder für OAuth 2 hinzu, wie in der [Authentifizierungsseite für Destination SDK OAuth 2](./oauth2-authentication.md). Zusätzlich wird `"authenticationRule":"CUSTOMER_AUTHENTICATION"` im [Zielversandabschnitt](./destination-configuration.md).</li> |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Kundendatenfelder {#customer-data-fields}
 
-In diesem Abschnitt können Partner benutzerdefinierte Felder einführen. In der obigen Beispielkonfiguration `customerDataFields` erfordert, dass Benutzer einen Endpunkt im Authentifizierungsfluss auswählen und ihre Kunden-ID mit dem Ziel angeben. Die Konfiguration spiegelt sich im Authentifizierungsfluss wider, wie unten dargestellt:
+Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Felder für Ihr Ziel auszufüllen, wenn sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Ziel herstellen. Die Konfiguration spiegelt sich im Authentifizierungsfluss wider, wie unten dargestellt:
 
 ![Benutzerdefinierter Feldauthentifizierungsfluss](./assets/custom-field-authentication-flow.png)
 
@@ -184,7 +183,7 @@ Dieser Abschnitt bezieht sich auf die UI-Elemente in der obigen Konfiguration, d
 | `documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) für Ihr Ziel. Verwendung `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` ist der Name Ihres Ziels. Für ein Ziel mit dem Namen Moviestar würden Sie `http://www.adobe.com/go/destinations-moviestar-en` |
 | `category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 | `connectionType` | Zeichenfolge | `Server-to-server` ist derzeit die einzige verfügbare Option. |
-| `frequency` | Zeichenfolge | `Streaming` ist derzeit die einzige verfügbare Option. |
+| `frequency` | Zeichenfolge | Bezieht sich auf den vom Ziel unterstützten Datenexport-Typ. Unterstützte Werte: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -202,6 +201,7 @@ Verwenden Sie die Parameter in `schemaConfig` , um den Zuordnungsschritt des Zie
 | `identityRequired` | Boolesch | Verwendung `true` , wenn Benutzer in der Lage sein sollten, Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuzuordnen. |
 
 {style=&quot;table-layout:auto&quot;}
+
 
 ## Identitäten und Attribute {#identities-and-attributes}
 

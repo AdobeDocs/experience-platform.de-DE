@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
+source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 42%
+source-wordcount: '722'
+ht-degree: 41%
 
 ---
 
@@ -156,8 +156,10 @@ ht-degree: 42%
    * [Erste Schritte](./destination-sdk/getting-started.md)
    * Destination SDK {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
-      * [Zielkonfiguration](./destination-sdk/destination-configuration.md)
-      * [Server- und Vorlagenspezifikationen](./destination-sdk/server-and-template-configuration.md)
+      * [Konfiguration des Streaming-Ziels](./destination-sdk/destination-configuration.md)
+      * [Dateibasierte Zielkonfiguration](./destination-sdk/file-based-destination-configuration.md)
+      * [Server- und Vorlagenspezifikationen für Streaming-Ziele](./destination-sdk/server-and-template-configuration.md)
+      * [Server- und Dateispezifikationen für dateibasierte Ziele](./destination-sdk/server-and-file-configuration.md)
       * [Nachrichtenformat](./destination-sdk/message-format.md)
       * [Zielgruppen-Metadatenverwaltung](./destination-sdk/audience-metadata-management.md)
       * Authentifizierung {#authentication}
@@ -180,6 +182,7 @@ ht-degree: 42%
          * [API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
    * Handbücher {#guides}
       * [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
+      * [(Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln](./destination-sdk/submit-destination.md)
    * Ziel dokumentieren {#document-destination}
       * [Ziel in Adobe Experience Platform dokumentieren](./destination-sdk/docs-framework/documentation-instructions.md)

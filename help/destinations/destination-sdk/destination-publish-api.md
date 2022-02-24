@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destinations/publish"ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
 workflow-type: tm+mt
 source-wordcount: '757'
 ht-degree: 6%
@@ -20,6 +20,7 @@ Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie 
 Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überprüfung und Veröffentlichung an Adobe senden.
 
 Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanforderung zu senden, wenn:
+
 * Als Destination SDK-Partner möchten Sie Ihr produktives Ziel in allen Experience Platform-Unternehmen für alle Experience Platform-Kunden zur Verfügung stellen.
 * Sie möchten Ihr benutzerdefiniertes Ziel in Ihrer eigenen Experience Platform-Organisation für alle Sandboxes verfügbar machen.
 
@@ -32,7 +33,6 @@ Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md)
 Sie können eine Zielkonfiguration zur Veröffentlichung senden, indem Sie eine POST-Anfrage an die `/authoring/destinations/publish` -Endpunkt.
 
 **API-Format**
-
 
 ```http
 POST /authoring/destinations/publish
@@ -78,7 +78,6 @@ Sie können eine Liste aller Ziele abrufen, die zur Veröffentlichung für Ihre 
 
 **API-Format**
 
-
 ```http
 GET /authoring/destinations/publish
 ```
@@ -114,7 +113,6 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
       }
    ]
 }
-    
 ```
 
 | Parameter | Typ | Beschreibung |
@@ -132,7 +130,6 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
 Sie können die zulässigen Organisationen in einer bestehenden Ziel-Veröffentlichungsanforderung aktualisieren, indem Sie eine PUT-Anfrage an die `/authoring/destinations/publish` -Endpunkt und geben die ID des Ziels an, für das Sie die zulässigen Organisationen aktualisieren möchten. Geben Sie im Text des Aufrufs die aktualisierten zulässigen Organisationen an.
 
 **API-Format**
-
 
 ```http
 PUT /authoring/destinations/publish/{DESTINATION_ID}
@@ -169,7 +166,6 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 Sie können detaillierte Informationen zu einer bestimmten Ziel-Veröffentlichungsanforderung abrufen, indem Sie eine GET-Anfrage an die `/authoring/destinations/publish` -Endpunkt und die ID des Ziels angeben, für das Sie den Veröffentlichungsstatus abrufen möchten.
 
 **API-Format**
-
 
 ```http
 GET /authoring/destinations/publish/{DESTINATION_ID}

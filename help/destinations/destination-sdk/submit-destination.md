@@ -2,7 +2,7 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten Ziels senden müssen.
 title: Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: 111da9ce3e38096d11a1910929ee892e5661722c
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -37,6 +37,7 @@ Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experienc
 ## Testergebnisse nach Verwendung der Test-Ziel-API
 
 Stellen Sie die Testergebnisse nach Verwendung der [Test-Ziel-API](./test-destination.md) -Endpunkt verwenden, um einen HTTP-Aufruf an Ihr Ziel durchzuführen. Dazu gehören:
+
 * Die vollständige API-Anfrage (Kopfzeilen und Hauptteil), die mithilfe der Test-API an Ihren Ziel-Endpunkt gesendet wurde.
 * Die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
 
