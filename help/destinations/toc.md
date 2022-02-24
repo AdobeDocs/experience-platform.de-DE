@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 2f8e31321345a14c098f795b50d33c700ac0faa8
+source-git-commit: e03f680bfa2ee4c1e79e7ee22724702ac3721a84
 workflow-type: tm+mt
-source-wordcount: '722'
+source-wordcount: '724'
 ht-degree: 41%
 
 ---
@@ -157,9 +157,9 @@ ht-degree: 41%
    * Destination SDK {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
       * [Konfiguration des Streaming-Ziels](./destination-sdk/destination-configuration.md)
-      * [Dateibasierte Zielkonfiguration](./destination-sdk/file-based-destination-configuration.md)
+      * [(Beta) Dateibasierte Zielkonfiguration](./destination-sdk/file-based-destination-configuration.md)
       * [Server- und Vorlagenspezifikationen für Streaming-Ziele](./destination-sdk/server-and-template-configuration.md)
-      * [Server- und Dateispezifikationen für dateibasierte Ziele](./destination-sdk/server-and-file-configuration.md)
+      * [(Beta) Dateibasierte Zielserver- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
       * [Nachrichtenformat](./destination-sdk/message-format.md)
       * [Zielgruppen-Metadatenverwaltung](./destination-sdk/audience-metadata-management.md)
       * Authentifizierung {#authentication}
