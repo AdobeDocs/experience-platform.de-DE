@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Marketo Engage in der Benutzeroberfläche beschrieben, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: cffa2edf5746f0412bf8366c32ea777ca1974334
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1369'
 ht-degree: 5%
 
 ---
@@ -52,19 +52,19 @@ Unter dem [!UICONTROL Adobe Apps] category, select **[!UICONTROL Marketo Engage]
 
 ![Katalog](../../../../images/tutorials/create/marketo/catalog.png)
 
-Die **[!UICONTROL Mit Marketo Engage verbinden]** angezeigt. Auf dieser Seite können Sie entweder ein neues Konto verwenden oder auf ein vorhandenes Konto zugreifen.
-
-### Neues Konto
-
-Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Formular einen Kontonamen, eine optionale Beschreibung und Ihre [!DNL Marketo] Authentifizierungsberechtigungen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
-
-![new-account](../../../../images/tutorials/create/marketo/new.png)
+Die **[!UICONTROL Marketo Engage-Konto verbinden]** angezeigt. Auf dieser Seite können Sie entweder ein neues Konto verwenden oder auf ein vorhandenes Konto zugreifen.
 
 ### Vorhandenes Konto
 
 Um einen Datenfluss mit einem vorhandenen Konto zu erstellen, wählen Sie **[!UICONTROL Vorhandenes Konto]** und wählen Sie dann die [!DNL Marketo] -Konto, das Sie verwenden möchten. Auswählen **[!UICONTROL Nächste]** um fortzufahren.
 
 ![vorhandene](../../../../images/tutorials/create/marketo/existing.png)
+
+### Neues Konto
+
+Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]**. Geben Sie im angezeigten Formular einen Kontonamen, eine optionale Beschreibung und Ihre [!DNL Marketo] Authentifizierungsberechtigungen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Verbindung mit Quelle herstellen]** und dann etwas Zeit für die Einrichtung der neuen Verbindung.
+
+![new](../../../../images/tutorials/create/marketo/new.png)
 
 ## Datensatz auswählen
 
@@ -74,41 +74,53 @@ Die linke Hälfte der Oberfläche ist ein Verzeichnisbrowser mit den 10 [!DNL Ma
 
 >[!NOTE]
 >
->Aus Gründen der Kürze verwendet das folgende Tutorial [!UICONTROL Spezifische Konten] Beispiel: Die unten beschriebenen Schritte gelten jedoch für jeden der 10 [!DNL Marketo] Datensätze.
+>Aus Gründen der Kürze verwendet das folgende Tutorial [!UICONTROL Chancen] Beispiel: Die unten beschriebenen Schritte gelten jedoch für jeden der 10 [!DNL Marketo] Datensätze.
 
 Wählen Sie zuerst den Datensatz aus, den Sie erfassen möchten, und wählen Sie dann **[!UICONTROL Nächste]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Zuordnung [!DNL Marketo] Schemata in Platform
+## Datenflussdetails angeben
 
-Die [!UICONTROL Zuordnung] wird ein Schritt angezeigt, der eine Zuordnungsschnittstelle bereitstellt [!DNL Marketo] Schemas in Platform.
+Die [!UICONTROL Datenflussdetails] -Seite können Sie auswählen, ob Sie einen vorhandenen Datensatz oder einen neuen Datensatz verwenden möchten. Während dieses Vorgangs können Sie auch Einstellungen für [!UICONTROL Profildatensatz], [!UICONTROL Fehlerdiagnose], [!UICONTROL Partielle Erfassung]und [!UICONTROL Warnhinweise].
 
-Wählen Sie einen Datensatz für eingehende Daten aus, die in aufgenommen werden sollen. Sie können entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen.
+![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-details.png)
 
 ### Vorhandenen Datensatz verwenden
 
-Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandener Datensatz]** und wählen Sie dann das Datensatzsymbol aus.
+Um Daten in einen vorhandenen Datensatz zu erfassen, wählen Sie **[!UICONTROL Vorhandener Datensatz]**. Sie können einen vorhandenen Datensatz entweder mit der [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Datensätze im Dropdown-Menü. Nachdem Sie einen Datensatz ausgewählt haben, geben Sie einen Namen und eine Beschreibung für Ihren Datenfluss ein.
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-Die **[!UICONTROL Datensatz auswählen]** angezeigt. Suchen Sie den Datensatz mit dem gewünschten Schema, wählen Sie ihn aus und wählen Sie dann **[!UICONTROL Bestätigen]**.
-
-![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
-
 ### Verwenden eines neuen Datensatzes
 
-Um Daten in einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuer Datensatz]** und geben Sie einen Namen und eine Beschreibung für den Datensatz in die entsprechenden Felder ein.
+Um einen neuen Datensatz zu erfassen, wählen Sie **[!UICONTROL Neuer Datensatz]** und geben Sie dann einen Namen für den Ausgabedatensatz und eine optionale Beschreibung an. Wählen Sie als Nächstes ein Schema aus, das mithilfe des [!UICONTROL Erweiterte Suche] oder durch Scrollen durch die Liste der vorhandenen Schemas im Dropdown-Menü. Geben Sie nach Auswahl eines Schemas einen Namen und eine Beschreibung für Ihren Datenfluss ein.
 
-Sie können nach einem Schema suchen, indem Sie dessen Namen in die **[!UICONTROL Schema auswählen]** Suchleiste. Sie können auch das Dropdown-Symbol auswählen, um eine Liste der vorhandenen Schemas anzuzeigen. Alternativ können Sie **[!UICONTROL Erweiterte Suche]** , um auf die Seite vorhandener Schemas mit ihren jeweiligen Details zuzugreifen.
+![new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
 
-Umschalten zwischen **[!UICONTROL Profildatensatz]** Schaltfläche zum Aktivieren Ihres Zieldatensatzes für [!DNL Profile], sodass Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen können. Daten aus allen [!DNL Profile]-aktivierte Datensätze werden in [!DNL Profile] und Änderungen werden angewendet, wenn Sie Ihren Datenfluss speichern.
+### Aktivieren [!DNL Profile] und Fehlerdiagnose
 
-![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
+Wählen Sie als Nächstes die **[!UICONTROL Profildatensatz]** Umschalten auf die Aktivierung Ihres Datensatzes für [!DNL Profile]. Auf diese Weise können Sie eine ganzheitliche Ansicht der Attribute und Verhaltensweisen einer Entität erstellen. Daten aus allen [!DNL Profile]-aktivierte Datensätze werden in [!DNL Profile] und Änderungen werden angewendet, wenn Sie Ihren Datenfluss speichern.
 
-Nachdem Sie ein Schema ausgewählt haben, scrollen Sie nach unten, um das Zuordnungsdialogfeld anzuzeigen und mit der Zuordnung Ihres Schemas zu beginnen. [!DNL Marketo] Datensatzfelder an die entsprechenden Ziel-XDM-Felder an.
+[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erzeugung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Erfassung] ermöglicht die Aufnahme von fehlerhaften Daten bis zu einem bestimmten Schwellenwert, den Sie manuell definieren. Siehe [partielle Batch-Erfassung - Übersicht](../../../../../ingestion/batch-ingestion/partial.md) für weitere Informationen.
 
-### Zuordnen [!DNL Marketo] Datensatzquellenfelder zum Targeting von XDM-Feldern
+>[!IMPORTANT]
+>
+>Die [!DNL Marketo] Connector verwendet die Batch-Erfassung, um alle historischen Datensätze zu erfassen, und verwendet die Streaming-Erfassung für Echtzeit-Aktualisierungen. Dadurch kann der Connector das Streaming fortsetzen, während er fehlerhafte Datensätze erfasst. Aktivieren Sie die **[!UICONTROL Partielle Erfassung]** ein- und legen Sie dann [!UICONTROL Fehlerschwellenwert %] auf &quot;Maximum&quot;, um zu verhindern, dass der Datenfluss fehlschlägt.
+
+![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
+
+### Warnhinweise aktivieren
+
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status Ihres Datenflusses zu erhalten. Wählen Sie einen Warnhinweis aus der Liste aus, um Benachrichtigungen zum Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zu [Abrufen von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../alerts.md).
+
+Wenn Sie mit der Bereitstellung von Details für Ihren Datenfluss fertig sind, wählen Sie **[!UICONTROL Nächste]**.
+
+![Warnungen](../../../../images/tutorials/create/marketo/alerts.png)
+
+## Zuordnen [!DNL Marketo] Datensatzquellenfelder zum Targeting von XDM-Feldern
+
+Die [!UICONTROL Zuordnung] -Schritt angezeigt werden. Sie erhalten eine Schnittstelle, über die Sie die Quellfelder aus Ihrem Quellschema den entsprechenden Ziel-XDM-Feldern im Zielschema zuordnen können.
 
 Jeder [!DNL Marketo] -Datensatz verfügt über eigene spezifische Zuordnungsregeln, die befolgt werden müssen. Weitere Informationen zur Zuordnung finden Sie im Folgenden [!DNL Marketo] Datensätze in XDM:
 
@@ -123,33 +135,11 @@ Jeder [!DNL Marketo] -Datensatz verfügt über eigene spezifische Zuordnungsrege
 * [Kontaktrollen bei Chancen](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [Personen](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
-Auswählen **[!UICONTROL Datenvorschau]** , um die Zuordnungsergebnisse basierend auf Ihrem ausgewählten Datensatz anzuzeigen.
+Je nach Bedarf können Sie Felder direkt zuordnen oder mithilfe von Datenvorbereitungsfunktionen Quelldaten transformieren, um berechnete oder berechnete Werte abzuleiten. Umfassende Schritte zur Verwendung der Zuordnungsschnittstelle finden Sie in der [Handbuch zur Datenvorbereitung-Benutzeroberfläche](../../../../../data-prep/ui/mapping.md).
 
 ![Mapping](../../../../images/tutorials/create/marketo/mapping.png)
 
-Die [!UICONTROL Vorschau] Popover bietet Ihnen eine Schnittstelle zur Erforschung der Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz.
-
-![Vorschau](../../../../images/tutorials/create/marketo/mapping-preview.png)
-
-Nachdem die Quellfelder den entsprechenden Zielfeldern zugeordnet wurden, wählen Sie **[!UICONTROL Schließen]**.
-
-## Datenflussdetails angeben
-
-Die [!UICONTROL Datenflussdetails] angezeigt, sodass Sie einen Namen und eine kurze Beschreibung zu Ihrem neuen Datenfluss eingeben können.
-
-![dataflow-detail](../../../../images/tutorials/create/marketo/dataflow-detail.png)
-
-Aktivieren Sie die **[!UICONTROL Fehlerdiagnose]** Aktivieren Sie diese Option, um die detaillierte Erstellung von Fehlermeldungen für neu aufgenommene Batches zuzulassen, die Sie über die API herunterladen können. Weitere Informationen finden Sie im Tutorial zu [Fehlerdiagnose beim Abrufen der Datenerfassung](../../../../../ingestion/quality/error-diagnostics.md).
-
-![errors](../../../../images/tutorials/create/marketo/errors.png)
-
-Die [!DNL Marketo] Connector verwendet die Batch-Erfassung, um alle historischen Datensätze zu erfassen, und verwendet die Streaming-Erfassung für Echtzeit-Aktualisierungen. Dadurch kann der Connector das Streaming fortsetzen, während er fehlerhafte Datensätze erfasst. Aktivieren Sie die **[!UICONTROL Partielle Erfassung]** ein- und legen Sie dann [!UICONTROL Fehlerschwellenwert %] auf &quot;Maximum&quot;, um zu verhindern, dass der Datenfluss fehlschlägt.
-
-**[!UICONTROL Partielle Erfassung]** bietet die Möglichkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen. Weitere Informationen finden Sie unter [partielle Batch-Erfassung - Übersicht](../../../../../ingestion/batch-ingestion/partial.md).
-
-Nachdem Sie Ihre Datenflug-Details angegeben und Ihren Fehlerschwellenwert auf max. gesetzt haben, wählen Sie **[!UICONTROL Nächste]**.
-
-![partielle Erfassung](../../../../images/tutorials/create/marketo/partial-ingestion.png)
+Sobald Ihre Zuordnungssätze fertig sind, wählen Sie **[!UICONTROL Nächste]** und lassen einige Momente zu, damit der neue Datenfluss erstellt wird.
 
 ## Überprüfen Sie Ihren Datenfluss.
 
@@ -158,7 +148,7 @@ Die **[!UICONTROL Überprüfen]** angezeigt, sodass Sie Ihren neuen Datenfluss �
 * **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quellentität und die Anzahl der Spalten innerhalb dieser Quellentität an.
 * **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
 
-Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Beenden]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
+Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Speichern und aufnehmen]** und lassen Sie etwas Zeit für die Erstellung des Datenflusses zu.
 
 ![Überprüfung](../../../../images/tutorials/create/marketo/review.png)
 
