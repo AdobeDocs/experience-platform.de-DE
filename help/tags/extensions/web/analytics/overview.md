@@ -2,10 +2,10 @@
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 100%
+source-wordcount: '2275'
+ht-degree: 96%
 
 ---
 
@@ -327,13 +327,22 @@ Geben Sie die einzelnen Stufen in der Hierarchie an.
 
 Konfigurieren Sie bei Bedarf weitere Hierarchien.
 
+#### Seitenname
+
+Dieser Wert bezieht sich auf den Namen einer bestimmten Seite und entspricht dem [`pageName` Variable](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+
+>[!IMPORTANT]
+>
+>In Adobe Experience Manager-Implementierungen teilt diese Variable AEM mit, wo der abgerufene Analytics-Bericht gespeichert werden soll. Um sicherzustellen, dass Berichte ordnungsgemäß persistiert werden, muss die Seitenname-Zeichenfolge als durch Doppelpunkte getrennte Pfad zur Site formatiert werden.
+>
+>Beispielsweise eine Webseite unter `content/we-retail/language-masters/en/men.html` sollte den Wert des Seitennamen haben von `content:we-retail:language-masters:en:men`.
+
 #### Weitere Informationen
 
 Geben Sie weitere Informationen an, die von Ihren Seiten verwendet werden.
 
 Zu diesen Einstellungen gehören folgende:
 
-* Seitenname
 * „Seiten-URL“
 * Server
 * Kanal
