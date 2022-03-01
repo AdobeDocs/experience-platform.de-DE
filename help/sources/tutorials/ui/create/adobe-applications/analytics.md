@@ -6,9 +6,9 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Adobe Analytics-Quellverbindung in der Benutzeroberfläche erstellen, um Verbraucherdaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 96791e24c59734f82113972a8db9191ea1c0c557
+source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1578'
 ht-degree: 7%
 
 ---
@@ -44,7 +44,7 @@ Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Analy
 
 ![Katalog](../../../../images/tutorials/create/analytics/catalog.png)
 
-### Daten auswählen
+### Auswählen von Daten
 
 Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** angezeigt. Auswählen **[!UICONTROL Report Suite]** , um eine Quellverbindung für Analytics Report Suite-Daten zu erstellen, und wählen Sie dann die Report Suite aus, die Sie aufnehmen möchten. Report Suites, die nicht auswählbar sind, wurden bereits aufgenommen, entweder in dieser Sandbox oder in einer anderen Sandbox. Auswählen **[!UICONTROL Nächste]** um fortzufahren.
 
@@ -57,6 +57,10 @@ Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** angezeigt. Auswählen 
 <!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Zuordnung
+
+>[!IMPORTANT]
+>
+>Data Prep-Unterstützung für die [!DNL Analytics] -Quelle befindet sich derzeit in der Beta-Phase. Die Funktion und Dokumentation können sich ändern.
 
 Bevor Sie Ihre [!DNL Analytics] Daten, um ein XDM-Schema als Ziel festzulegen, müssen Sie zunächst auswählen, ob Sie ein Standardschema oder ein benutzerdefiniertes Schema verwenden.
 
