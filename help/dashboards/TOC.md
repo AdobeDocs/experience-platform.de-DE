@@ -5,9 +5,9 @@ breadcrumb-title: Dashboards-Handbuch
 user-guide-description: Visualisieren Sie Experience Platform-Daten auf anpassbaren Dashboards.
 feature: Dashboards
 source-git-commit: 058f1cf5aa0ea134f276d1b3bc7064195fb252f1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '64'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
