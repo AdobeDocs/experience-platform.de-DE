@@ -1,26 +1,26 @@
 ---
-title: Konfigurierte Dashboards anzeigen
-description: Zeigen Sie eine Liste der konfigurierten Dashboards Ihres Unternehmens in der Experience Platform-Benutzeroberfläche an.
-source-git-commit: 2c8c98467d1a8e11ee1e32ae9ada4e3f87c7b27e
-workflow-type: tm+mt
+title: Anzeigen von konfigurierten Dashboards
+description: Zeigen Sie eine Liste der konfigurierten Dashboards Ihrer Organisation in der Experience Platform-Benutzeroberfläche an.
+exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
+source-git-commit: 36fc6f996b4ffd33f542eb9be4fbc50f3fcdd1cb
+workflow-type: ht
 source-wordcount: '154'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Anzeigen von konfigurierten Dashboards
 
-# Konfigurierte Dashboards anzeigen
+Wenn Ihre Organisation über mehrere Dashboards in Adobe Experience Platform verfügt, können Sie diese Dashboards innerhalb der Benutzeroberfläche (UI) sehen.
 
-Wenn Ihr Unternehmen über mehrere Dashboards in Adobe Experience Platform verfügt, können Sie diese Dashboards in der Benutzeroberfläche (Benutzeroberfläche) überprüfen.
+Um die Dashboards anzuzeigen, die von Ihrer Organisation konfiguriert wurden, wählen Sie in der linken Navigationsleiste **[!UICONTROL Dashboards]** und dann die Registerkarte **[!UICONTROL Durchsuchen]** aus.
 
-Um die Dashboards anzuzeigen, die Ihre Organisation konfiguriert hat, wählen Sie **[!UICONTROL Dashboards]** in der linken Navigation und wählen Sie dann die **[!UICONTROL Durchsuchen]** Registerkarte.
+Eine Liste aller Dashboards, die in Ihrer Platform-Instanz verfügbar sind, finden Sie in der Registerkarte [!UICONTROL Durchsuchen]. Dazu gehören integrierte Dashboards, die von Ihrer Organisation erstellt wurden und über Anwendungen von Drittanbietern konfiguriert wurden.
 
-Eine Liste aller Dashboards, die in Ihrer Platform-Instanz verfügbar sind, finden Sie unter [!UICONTROL Durchsuchen] Registerkarte. Dazu gehören integrierte Dashboards, die von Ihrem Unternehmen erstellt wurden und über Anwendungen von Drittanbietern konfiguriert wurden.
+![Die Registerkarte „Durchsuchen“ im Abschnitt „Dashboards“ der Benutzeroberfläche.](./images/inventory/browse-tab.png)
 
-![Die Registerkarte Durchsuchen im Abschnitt Dashboards der Benutzeroberfläche.](./images/inventory/browse-tab.png)
+Sie können ein einzelnes Dashboard anzeigen, indem Sie seinen Namen aus der Liste auswählen.
 
-Sie können ein einzelnes Dashboard anzeigen, indem Sie den Namen des Dashboards aus der Liste auswählen.
+![Registerkarte „Durchsuchen“ mit dem hervorgehobenen Namen eines Dashboards.](./images/inventory/dashboard-name.png)
 
-![Registerkarte &quot;Durchsuchen&quot;mit dem Namen eines Dashboards hervorgehoben.](./images/inventory/dashboard-name.png)
-
-Wenn diese Option aktiviert ist, wird das Dashboard entweder in der Platform-Benutzeroberfläche oder in einem vollständig integrierten Anwendungs-Arbeitsbereich geöffnet, in dem Sie sich mit den erforderlichen Anmeldeinformationen anmelden müssen.
+Wenn das Dashboard ausgewählt wird, wird es entweder in der Platform-Benutzeroberfläche oder in einem vollständig integrierten Anwendungs-Arbeitsbereich geöffnet, in dem Sie sich mit den erforderlichen Zugangsdaten anmelden müssen.
