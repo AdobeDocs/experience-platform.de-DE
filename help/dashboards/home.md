@@ -5,9 +5,9 @@ type: Documentation
 description: Lernen Sie mehrere Dashboard in Adobe Experience Platform kennen, mit denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen können, die bei täglichen Schnappschüssen erfasst werden.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 source-git-commit: e7ff48d6aa7d7f70688081df45ae2d36da741eb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '309'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -22,9 +22,9 @@ Dashboards bieten vordefinierte Berichte zu den Daten Ihres Unternehmens und wer
 
 ## Erste Schritte mit Dashboards
 
-Um Dashboards anzuzeigen und zu verwalten, navigieren Sie zu **[!UICONTROL Dashboards]** in der Experience Platform-Benutzeroberfläche (UI) und wählen Sie die **[!UICONTROL Durchsuchen]** -Tab, um auf das Dashboard-Inventar zuzugreifen.
+Um Dashboards anzuzeigen und zu verwalten, navigieren Sie zu **[!UICONTROL Dashboards]** in der Experience Platform-Benutzeroberfläche und wählen Sie die Registerkarte **[!UICONTROL Durchsuchen]** aus, um auf das Dashboard-Inventar zuzugreifen.
 
-Sie können auch auf Dashboards zugreifen, indem Sie in der Benutzeroberfläche zum entsprechenden Bereich des Dashboards navigieren, das Sie anzeigen möchten. Um beispielsweise das Dashboard für Profile anzuzeigen, navigieren Sie zum **[!UICONTROL Profile]** Arbeitsbereich und wählen Sie die **[!UICONTROL Übersicht]** Registerkarte.
+Sie können auch auf Dashboards zugreifen, indem Sie in der Benutzeroberfläche zum entsprechenden Abschnitt für das Dashboard navigieren, das Sie anzeigen möchten. Um beispielsweise das Dashboard für Profile anzuzeigen, navigieren Sie zum Arbeitsbereich **[!UICONTROL Profile]** und wählen Sie die Registerkarte **[!UICONTROL Übersicht]** aus.
 
 Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnappschussaufnahme aufgetreten sind. Das heißt, der Schnappschuss ist keine Annäherung oder Stichprobe der Daten und die Dashboards werden nicht in Echtzeit aktualisiert.
 
@@ -34,7 +34,7 @@ Der Schnappschuss zeigt die Daten exakt so an, wie sie zum Zeitpunkt der Schnapp
 
 ## Dashboard-Inventar
 
-Detaillierte Anweisungen zur Verwendung der **[!UICONTROL Dashboards]** Der Arbeitsbereich zum Anzeigen aller verfügbaren Dashboards wird im Abschnitt [Dashboard-Inventarleitfaden](./inventory.md).
+Detaillierte Anweisungen, wie Sie den Arbeitsbereich **[!UICONTROL Dashboards]** verwenden, um alle verfügbaren Dashboards anzuzeigen, finden Sie im [Handbuch zum Dashboard-Inventar](./inventory.md).
 
 ## Verfügbare Dashboards
 
