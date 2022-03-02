@@ -3,9 +3,9 @@ title: Ansichten in Web-Erweiterungen
 description: Erfahren Sie, wie Sie Ansichten für Bibliotheksmodule in Ihren Adobe Experience Platform Web-Erweiterungen definieren.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2083'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -70,7 +70,7 @@ Die Methode `init` wird von Tags aufgerufen, sobald die Ansicht in den iframe ge
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `settings` | Ein Objekt mit Einstellungen, die zuvor in dieser Ansicht gespeichert wurden. Wenn `settings` den Wert `null` hat, zeigt dies an, dass der Benutzer die anfänglichen Einstellungen erstellt, anstatt eine gespeicherte Version zu laden. Wenn `settings` ein Objekt ist, sollten Sie es in Ihre Ansicht laden, da der Benutzer die zuvor gespeicherten Einstellungen bearbeiten möchte. |
-| `extensionSettings` | In der Erweiterungskonfigurationsansicht gespeicherte Einstellungen. Dies kann nützlich sein, um in Ansichten, bei denen es sich nicht um die Erweiterungskonfigurationsansicht handelt, auf Erweiterungseinstellungen zuzugreifen. Wenn es sich bei der aktuellen Ansicht um die Erweiterungskonfigurationsansicht handelt, verwenden Sie `settings` |
+| `extensionSettings` | In der Erweiterungskonfigurationsansicht gespeicherte Einstellungen. Dies kann nützlich sein, um in Ansichten, bei denen es sich nicht um die Erweiterungskonfigurationsansicht handelt, auf Erweiterungseinstellungen zuzugreifen. Wenn es sich bei der aktuellen Ansicht um die Erweiterungskonfigurationsansicht handelt, verwenden Sie `settings`. |
 | `propertySettings` | Ein Objekt, das Einstellungen für die Eigenschaft enthält. Weitere Informationen zu den in diesem Objekt enthaltenen Elementen finden Sie in der [Anleitung zum turbine-Objekt](../turbine.md#property-settings). |
 | `tokens` | Ein Objekt, das API-Token enthält. Für den Zugriff auf Adobe-APIs aus der Ansicht heraus müssen Sie normalerweise ein IMS-Token unter `tokens.imsAccess` verwenden. Dieses Token steht nur für Erweiterungen zur Verfügung, die von Adobe entwickelt wurden. Wenn Sie Mitarbeiter von Adobe sind und eine von Adobe erstellte Erweiterung bearbeiten, [senden Sie eine E-Mail an das Entwicklungs-Team für die Datenerfassung](mailto:reactor@adobe.com) und geben Sie den Namen der Erweiterung an, damit wir sie der Zulassungsliste hinzufügen können. |
 | `company` | Ein Objekt, das als einzige Eigenschaft `orgId` enthält, die Ihre Adobe Experience Cloud ID darstellt (eine 24-stellige alphanumerische Zeichenfolge). |
@@ -130,7 +130,7 @@ Durch den Aufruf dieser Methode wird ein modales Element angezeigt, in dem der B
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `pattern` | Das Muster des regulären Ausdrucks, das als Ausgangswert des Musterfelds im Tester verwendet werden soll. Diese Eigenschaft wird normalerweise bereitgestellt, wenn der Benutzer einen vorhandenen regulären Ausdruck bearbeitet. Wenn sie nicht angegeben wird, ist das Musterfeld zunächst leer. |
-| `flags` | Die Flags des regulären Ausdrucks, die vom Tester verwendet werden sollten. Beispiel: `gi` gibt das Flag für globale Übereinstimmung und das Flag zum Ignorieren der Groß-/Kleinschreibung an. Diese Flags können vom Benutzer im Tester nicht geändert werden, sie veranschaulichen jedoch die spezifischen Flags, die die Erweiterung beim Ausführen des regulären Ausdrucks verwendet. Wenn diese Eigenschaft nicht angegeben wird, werden im Tester keine Flags verwendet. Weitere Informationen zu Flags für reguläre Ausdrücke finden Sie in der [RegExp-Dokumentation von MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Ein gängiges Szenario ist eine Erweiterung, mit der Benutzer umschalten können, ob bei einem regulären Ausdruck die Groß-/Kleinschreibung ignoriert wird oder nicht. Dazu stellt die Erweiterung meist ein Kontrollkästchen in der Ansicht der Erweiterung bereit, das bei Aktivierung die Option zum Ignorieren der Groß-/Kleinschreibung (dargestellt durch die Kennzeichnung `i`) einschaltet. Das von der Ansicht gespeicherte settings-Objekt muss darstellen, ob das Kontrollkästchen aktiviert wurde, damit das Bibliotheksmodul, das den regulären Ausdruck ausführt, erfährt, ob das Flag `i` verwendet werden soll. Wenn die Ansicht der Erweiterung den Tester für reguläre Ausdrücke öffnen möchte, muss die Kennzeichnung `i` übergeben werden, sobald das Kontrollkästchen zum Ignorieren der Groß-/Kleinschreibung aktiviert wird. Dadurch kann der Benutzer den regulären Ausdruck ordnungsgemäß testen, wobei die Groß-/Kleinschreibung nicht berücksichtigt wird. |
+| `flags` | Die Flags des regulären Ausdrucks, die vom Tester verwendet werden sollten. Beispiel: `gi` gibt das Flag für globale Übereinstimmung und das Flag zum Ignorieren der Groß-/Kleinschreibung an. Diese Flags können vom Benutzer im Tester nicht geändert werden, sie veranschaulichen jedoch die spezifischen Flags, die die Erweiterung beim Ausführen des regulären Ausdrucks verwendet. Wenn diese Eigenschaft nicht angegeben wird, werden im Tester keine Flags verwendet. Weitere Informationen zu Flags für reguläre Ausdrücke finden Sie in der [RegExp-Dokumentation von MDN](https://developer.mozilla.org/de-DE/docs/Web/JavaScript/Reference/Global_Objects/RegExp).<br><br>Ein gängiges Szenario ist eine Erweiterung, mit der Benutzer umschalten können, ob bei einem regulären Ausdruck die Groß-/Kleinschreibung ignoriert wird oder nicht. Dazu stellt die Erweiterung meist ein Kontrollkästchen in der Ansicht der Erweiterung bereit, das bei Aktivierung die Option zum Ignorieren der Groß-/Kleinschreibung (dargestellt durch die Kennzeichnung `i`) einschaltet. Das von der Ansicht gespeicherte settings-Objekt muss darstellen, ob das Kontrollkästchen aktiviert wurde, damit das Bibliotheksmodul, das den regulären Ausdruck ausführt, erfährt, ob das Flag `i` verwendet werden soll. Wenn die Ansicht der Erweiterung den Tester für reguläre Ausdrücke öffnen möchte, muss die Kennzeichnung `i` übergeben werden, sobald das Kontrollkästchen zum Ignorieren der Groß-/Kleinschreibung aktiviert wird. Dadurch kann der Benutzer den regulären Ausdruck ordnungsgemäß testen, wobei die Groß-/Kleinschreibung nicht berücksichtigt wird. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
@@ -172,7 +172,7 @@ Um anzugeben, wo die Verwendung von Datenelementen für die Benutzer hilfreich s
 
 >[!NOTE]
 >
->Um das entsprechende Symbol herunterzuladen, navigieren Sie zum [Symbolseite für Adobe Spectrum](https://spectrum.adobe.com/page/icons/) und suchen Sie nach &quot;[!DNL Data]&quot;.
+>Um das entsprechende Symbol herunterzuladen, gehen Sie zur [Seite „Symbole“ auf Adobe Spectrum](https://spectrum.adobe.com/page/icons/) und suchen Sie nach „[!DNL Data]“.
 
 Wenn ein Benutzer auf den Button neben dem Textfeld klickt, wird `window.extensionBridge.openDataElementSelector` wie [oben beschrieben](#open-data-element) aufgerufen. Daraufhin wird eine Liste der Datenelemente angezeigt, die dem Benutzer zur Auswahl stehen, sodass er sich weder den Namen merken noch die Prozentzeichen eingeben muss. Nachdem der Benutzer ein Datenelement ausgewählt hat, wird der Name des ausgewählten Datenelements, der in Prozentzeichen eingeschlossen ist (sofern die Option `tokenize` nicht auf `false` festgelegt wurde), übergeben. Wir empfehlen Ihnen, das Textfeld dann mit dem Ergebnis zu füllen.
 
