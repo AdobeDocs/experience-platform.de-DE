@@ -5,9 +5,9 @@ description: In diesem Dokument wird beschrieben, wie Sie Adobe I/O-Ereignisbena
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 source-git-commit: 29b1942e4009770d4f9d346a760b6e78cef23969
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '774'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -56,9 +56,9 @@ Im nächsten Bildschirm wird eine Liste der Ereignistypen angezeigt, die abonnie
 
 >[!NOTE]
 >
->Wenn Sie sich nicht sicher sind, bei welchen Ereignissen Sie sich für den Dienst anmelden möchten, mit dem Sie arbeiten, lesen Sie die folgende Dokumentation:
+>Wenn Sie sich nicht sicher sind, welche Ereignisse Sie für den Service, mit dem sie arbeiten, abonnieren sollen, konsultieren Sie die Service-spezifische Dokumentation:
 >
->* [Plattformbenachrichtigungen](./rules.md)
+>* [Platform-Benachrichtigungen](./rules.md)
 >* [Privacy Service-Benachrichtigungen](../../privacy-service/privacy-events.md)
 
 
