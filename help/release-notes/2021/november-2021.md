@@ -1,8 +1,9 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 7cd4a776ab07fcd123e798497b23edd41266f409
-workflow-type: tm+mt
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
+source-git-commit: c02f6ace461e6964b0005d07caee9026dca47e63
+workflow-type: ht
 source-wordcount: '798'
 ht-degree: 100%
 
@@ -90,4 +91,3 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 | Benutzerdefinierte Profilattribute | Kunden-KI unterstützt jetzt die Definition benutzerdefinierter Profildatensatzfelder (mit Zeitstempeln) in Ihren Daten zusätzlich zu standardmäßigen Ereignisfeldern. Mit dieser Option können Sie zusätzliche, von Ihnen als einflussreich erachtete Profilattribute hinzufügen, was die Qualität Ihres Modells verbessern und genauere Ergebnisse liefern kann.. |
 
 Weitere Informationen zu Kunden-KI finden Sie in der [Dokumentation zu Kunden-KI](../../intelligent-services/customer-ai/overview.md).
-
