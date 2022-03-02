@@ -7,7 +7,7 @@ feature: Queries
 source-git-commit: 0247d43429bb3d4cbf43ba0a94d435d01fbaf7a8
 workflow-type: tm+mt
 source-wordcount: '151'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 93%
    - [Generieren von Datensätzen aus Abfrageergebnissen](ui/create-datasets.md)
 - Best Practices {#best-practices}
    - [Allgemeine Leitlinien für die Ausführung von Abfragen](best-practices/writing-queries.md)
-   - [Anleitung zur Organisation von Daten-Assets](./best-practices/organize-data-assets.md)
+   - [Informationen zur Ordnung von Daten-Medienelementen](./best-practices/organize-data-assets.md)
    - [Arbeiten mit verschachtelten Datenstrukturen](best-practices/nested-data-structures.md)
    - [Deduplizierung von Daten](best-practices/deduplication.md)
    - [Beispielabfragen von Erlebnisereignissen](best-practices/experience-event-queries.md)

@@ -113,7 +113,7 @@ In der folgenden Tabelle sind die für [!DNL Experience Platform] in der [!DNL A
 | Data Governance | [!UICONTROL Anwenden von Datennutzungskennzeichnungen] | Zugriff zum Lesen, Erstellen und Löschen von Datennutzungskennzeichnungen. |
 | Data Governance | [!UICONTROL Verwalten von Datennutzungsrichtlinien] | Zugriff zum Lesen, Erstellen, Bearbeiten und Löschen von Datennutzungsrichtlinien. |
 | Data Governance | [!UICONTROL Anzeigen von Datennutzungsrichtlinien] | Schreibgeschützter Zugriff auf Datennutzungsrichtlinien Ihres Unternehmens. |
-| Data Governance | [!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen] | Schreibgeschützter Zugriff zur Anzeige aufgezeichneter [Administratorprotokolle](../landing/governance-privacy-security/audit-logs/overview.md) von Platform-Aktivitäten. |
+| Data Governance | [!UICONTROL Anzeigen des Benutzer-Aktivitätspotokolls] | Schreibgeschützter Zugriff zur Anzeige aufgezeichneter [Administratorprotokolle](../landing/governance-privacy-security/audit-logs/overview.md) von Platform-Aktivitäten. |
 | [!DNL Dashboards] | [!UICONTROL Anzeigen des Dashboards zur Lizenznutzung] | Schreibgeschützter Zugriff zum Anzeigen des Dashboards zur Lizenznutzung. |
 | [!DNL Dashboards] | [!UICONTROL Standard-Dashboards verwalten] | Fügen Sie benutzerdefinierte Attribute hinzu, die sich noch nicht im Data Warehouse befinden. |
 | [!DNL Query Service] | [!UICONTROL Verwalten von Abfragen] | Zugriff auf das Lesen, Erstellen, Bearbeiten und Löschen strukturierter SQL-Abfragen für Platform-Daten. |
