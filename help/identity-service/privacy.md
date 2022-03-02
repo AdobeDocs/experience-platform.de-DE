@@ -4,9 +4,9 @@ title: Verarbeitung von Datenschutzanfragen in Identity Service
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Identity Service behandelt.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: f0fa8d77e6184314056f8e70205a9b42409d09d5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '722'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Die folgende Anfrage erstellt einen neuen Datenschutzvorgang gemäß der DSGVO f
 
 >[!TIP]
 >
->Beim Löschen eines benutzerdefinierten Namespace mithilfe der API müssen Sie das Identitätssymbol als Namespace anstelle des Anzeigenamens angeben.
+>Beim Löschen eines benutzerdefinierten Namespace mithilfe der API müssen Sie das Identitätssymbol anstelle des Anzeigenamens als Namespace angeben.
 
 ```shell
 curl -X POST \
@@ -96,11 +96,11 @@ curl -X POST \
 
 >[!TIP]
 >
->Beim Löschen eines benutzerdefinierten Namespace über die Benutzeroberfläche müssen Sie das Identitätssymbol als Namespace angeben, anstatt den Anzeigenamen. Darüber hinaus können Sie benutzerdefinierte Namespaces in der Benutzeroberfläche für Nicht-Produktions-Sandboxes nicht löschen.
+>Beim Löschen eines benutzerdefinierten Namespace mithilfe der Benutzeroberfläche müssen Sie das Identitätssymbol anstelle des Anzeigenamens als Namespace angeben. Darüber hinaus können Sie benutzerdefinierte Namespaces in der Benutzeroberfläche nicht löschen, wenn diese nicht für Produktions-Sandboxes vorgesehen sind.
 
 Wählen Sie beim Erstellen von Vorgangsanfragen in der Benutzeroberfläche **[!UICONTROL Identität]** unter **[!UICONTROL Produkte]**, um Vorgänge für Daten zu verarbeiten, die in [!DNL Identity Service] gespeichert sind.
 
-![Identität-DSGVO](./images/identity-gdpr.png)
+![identity-gdpr](./images/identity-gdpr.png)
 
 ## Verarbeitung von Löschanfragen
 
