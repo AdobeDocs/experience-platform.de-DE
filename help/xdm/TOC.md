@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Hilfe zum Experience-Datenmodell (XDM)-System
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
-user-guide-description: Verwenden Sie Experience-Datenmodell (XDM)-Klassen und Schemafeldgruppen, um Erlebnisdaten zu standardisieren.
+user-guide-description: Verwenden Sie Klassen und Schemafeldergruppen im Experience-Datenmodell (XDM), um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: fecea2040af6e6c666de8eb4f1b13b3beaa45486
+source-git-commit: 760b82c89730a74ca5f5dd331d543f43eec1e0d6
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 36%
+source-wordcount: '435'
+ht-degree: 38%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 36%
 * Klassen {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
+   * [Richtlinie](./classes/policy.md)
+   * [Produkt](./classes/product.md)
    * [Segmentdefinition](./classes/segment-definition.md)
    * B2B-Klassen {#b2b}
       * [XDM Business Account](./classes/b2b/business-account.md)
@@ -42,7 +44,7 @@ ht-degree: 36%
       * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
       * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * Feldergruppen {#field-groups}
-   * Profilfeldgruppen {#profile}
+   * XDM Individual Profile {#profile}
       * [Demografische Details](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -54,11 +56,14 @@ ht-degree: 36%
       * [Kontaktangaben für Arbeitskontakte](./field-groups/profile/work-contact-details.md)
       * [XDM-Geschäftspersonenkomponenten](./field-groups/profile/business-person-components.md)
       * [XDM-Geschäftspersonendetails](./field-groups/profile/business-person-details.md)
-   * Ereignisfeldgruppen {#event}
+   * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+      * [Bilanzübertragungen](./field-groups/event/balance-transfers.md)
       * [Kampagnen-Marketingdetails](./field-groups/event/campaign-marketing-details.md)
+      * [Kartenaktionen](./field-groups/event/card-actions.md)
       * [Kanaldetails](./field-groups/event/channel-details.md)
       * [Commerce-Details](./field-groups/event/commerce-details.md)
+      * [Einlagendetails](./field-groups/event/deposit-details.md)
       * [Details zum Gerätehandel](./field-groups/event/device-trade-in-details.md)
       * [Speisereservierung](./field-groups/event/dining-reservation.md)
       * [Details zur Endbenutzer-ID](./field-groups/event/enduserids.md)
@@ -66,10 +71,15 @@ ht-degree: 36%
       * [Flugreservierung](./field-groups/event/flight-reservation.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/event/iab.md)
       * [Unterkunftsreservierung](./field-groups/event/lodging-reservation.md)
+      * [Anführungsanfragedetails](./field-groups/event/quote-request-details.md)
       * [Buchungsdetails](./field-groups/event/reservation-details.md)
+      * [Support Site Search](./field-groups/event/support-site-search.md)
       * [Upgrade-Details](./field-groups/event/upgrade-details.md)
       * [Upsell-Details](./field-groups/event/upsell-details.md)
       * [Webdetails](./field-groups/event/web-details.md)
+   * Produkt {#product}
+      * [Produktkatalog](./field-groups/product/product-catalog.md)
+      * [Produktkategorie](./field-groups/product/product-category.md)
    * [Namensänderungen der Feldergruppe](./field-groups/name-updates.md)
 * Datentypen {#data-types}
    * [Programm](./data-types/application.md)
@@ -85,6 +95,7 @@ ht-degree: 36%
    * [Umgebung](./data-types/environment.md)
    * [Experience-Kanal](./data-types/experience-channel.md)
    * [Audit-Attribute des externen Quellsystems](./data-types/external-source-system-audit-attributes.md)
+   * [Finanzkonto](./data-types/financial-account.md)
    * [Generisches Einverständnisfeld](./data-types/consent-field.md)
    * [Feld für allgemeine Marketing-Voreinstellungen](./data-types/marketing-field.md)
    * [Allgemeines Marketing-Präferenzfeld mit Abonnements](./data-types/marketing-field-subscriptions.md)
@@ -96,6 +107,7 @@ ht-degree: 36%
    * [Geo-Form](./data-types/geo-shape.md)
    * [Identität](./data-types/identity.md)
    * [Impressionen](./data-types/impressions.md)
+   * [Interne Site-Suche](./data-types/internal-site-search.md)
    * [Schlüssel-Wert-Paar](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Maßnahme](./data-types/measure.md)
