@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destinations/publish"ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 6ad556e3b7bf15f1d6ff522307ff232b8fd947d3
+source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 6%
+source-wordcount: '718'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/destinations/publish` API-Endpunkt.
 
-Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überprüfung und Veröffentlichung an Adobe senden.
+Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überprüfung und Veröffentlichung an Adobe senden. Lesen [Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln](./submit-destination.md) für alle anderen Schritte, die Sie im Rahmen des Zielübermittlungsprozesses ausführen müssen.
 
 Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanforderung zu senden, wenn:
 
@@ -52,19 +52,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
  -d '
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "xyz@AdobeOrg",
-      "lmn@AdobeOrg"
-   ]
+   "destinationAccess":"ALL"
 }
 ```
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie zur Veröffentlichung übermitteln. Rufen Sie die Ziel-ID einer Zielkonfiguration ab, indem Sie die [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list). |
-| `destinationAccess` | Zeichenfolge | `ALL` oder `LIMITED`. Geben Sie an, ob Ihr Ziel im Katalog für alle Experience Platform-Kunden oder nur für bestimmte Unternehmen angezeigt werden soll. <br> **Hinweis**: Wenn Sie `LIMITED`festgelegt ist, wird das Ziel nur für Ihre Experience Platform-Organisation veröffentlicht. Wenn Sie das Ziel für Kundentestzwecke in einer Untergruppe von Experience Platform-Organisationen veröffentlichen möchten, wenden Sie sich an den Support von Adobe. |
-| `allowedOrgs` | Zeichenfolge | Wenn Sie `"destinationAccess":"LIMITED"`, geben Sie die Organisationen der Experience Platform an, für die das Ziel verfügbar sein soll. |
+| `destinationAccess` | Zeichenfolge | Verwendung `ALL` damit Ihr Ziel im Katalog für alle Experience Platform-Kunden angezeigt wird. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -84,7 +79,7 @@ GET /authoring/destinations/publish
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Liste der Ziele abgerufen, die zur Veröffentlichung gesendet wurden und auf die Sie Zugriff haben, basierend auf der IMS-Organisation und der Sandbox-Konfiguration.
+Die folgende Anfrage ruft basierend auf der IMS-Organisation und der Sandbox-Konfiguration die Liste der Ziele ab, die zur Veröffentlichung gesendet wurden, auf die Sie Zugriff haben.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -103,12 +98,12 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
-         "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
-         ],
-         "status":"TEST",
+         "configId":"123cs780-ce29-434f-921e-4ed6ec2a6c35",
+         "allowedOrgs": [
+            "*"
+         ],    
+         "status":"PUBLISHED",
+         "destinationType": "PUBLIC",
          "publishedDate":"1630617746"
       }
    ]
@@ -119,47 +114,12 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
 |---------|----------|------|
 | `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie zur Veröffentlichung gesendet haben. |
 | `publishDetailsList.configId` | Zeichenfolge | Die eindeutige ID der Ziel-Veröffentlichungsanforderung für Ihr gesendetes Ziel. |
-| `publishDetailsList.allowedOrgs` | Zeichenfolge | Gibt die Organisationen der Experience Platform zurück, für die das Ziel verfügbar sein soll. |
-| `publishDetailsList.status` | Zeichenfolge | Der Status Ihrer Ziel-Veröffentlichungsanforderung. Mögliche Werte `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. |
+| `publishDetailsList.allowedOrgs` | Zeichenfolge | Gibt die Organisationen der Experience Platform zurück, für die das Ziel verfügbar ist. <br> <ul><li> Für `"destinationType": "PUBLIC"`, gibt dieser Parameter `"*"`, was bedeutet, dass das Ziel für alle Organisationen der Experience Platform verfügbar ist.</li><li> Für `"destinationType": "DEV"`gibt dieser Parameter die Organisations-ID der Organisation zurück, die Sie zum Erstellen und Testen des Ziels verwendet haben.</li></ul> |
+| `publishDetailsList.status` | Zeichenfolge | Der Status Ihrer Ziel-Veröffentlichungsanforderung. Mögliche Werte `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Ziele mit dem Wert `PUBLISHED` sind live und können von Experience Platform-Kunden verwendet werden. |
+| `publishDetailsList.destinationType` | Zeichenfolge | Der Zieltyp. Werte können `DEV` und `PUBLIC`. `DEV` entspricht dem Ziel in Ihrer Experience Platform-Organisation. `PUBLIC` entspricht dem Ziel, das Sie zur Veröffentlichung übermittelt haben. Stellen Sie sich diese beiden Optionen in Git-Begriffen vor, wobei die `DEV` -Version steht für Ihre lokale Authoring-Verzweigung und die `PUBLIC` version steht für den Remote-Hauptzweig. |
 | `publishDetailsList.publishedDate` | Zeichenfolge | Das Datum, an dem das Ziel zur Veröffentlichung gesendet wurde, in Epochenzeit. |
 
 {style=&quot;table-layout:auto&quot;}
-
-## Vorhandene Ziel-Veröffentlichungsanforderung aktualisieren {#update}
-
-Sie können die zulässigen Organisationen in einer bestehenden Ziel-Veröffentlichungsanforderung aktualisieren, indem Sie eine PUT-Anfrage an die `/authoring/destinations/publish` -Endpunkt und geben die ID des Ziels an, für das Sie die zulässigen Organisationen aktualisieren möchten. Geben Sie im Text des Aufrufs die aktualisierten zulässigen Organisationen an.
-
-**API-Format**
-
-```http
-PUT /authoring/destinations/publish/{DESTINATION_ID}
-```
-
-| Parameter | Beschreibung |
-| -------- | ----------- |
-| `{DESTINATION_ID}` | Die ID des Ziels, für das Sie die Veröffentlichungsanforderung aktualisieren möchten. |
-
-**Anfrage**
-
-Mit der folgenden Anfrage wird eine vorhandene Ziel-Veröffentlichungsanforderung aktualisiert, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Im folgenden Beispielaufruf aktualisieren wir die zulässigen Organisationen.
-
-```shell
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '
-{
-   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "destinationAccess":"LIMITED",
-   "allowedOrgs":[
-      "abc@AdobeOrg",
-      "def@AdobeOrg"
-   ]
-}
-```
 
 ## Abrufen des Status einer bestimmten Ziel-Veröffentlichungsanforderung {#get}
 
@@ -194,13 +154,30 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
    "publishDetailsList":[
       {
-         "configId":"string",
+         "configId":"ab41387c0-4772-4709-a3ce-6d5fee654520",
          "allowedOrgs":[
-            "xyz@AdobeOrg",
-            "lmn@AdobeOrg"
+            "716543205DB85F7F0A495E5B@AdobeOrg"
          ],
          "status":"TEST",
-         "publishedDate":"string"
+         "destinationType":"DEV"
+      },
+      {
+         "configId":"cd568c67-f25e-47e4-b9a2-d79297a20b27",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"DEPRECATED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630525501009
+      },
+      {
+         "configId":"ef6f07154-09bc-4bee-8baf-828ea9c92fba",
+         "allowedOrgs":[
+            "*"
+         ],
+         "status":"PUBLISHED",
+         "destinationType":"PUBLIC",
+         "publishedDate":1630531586002
       }
    ]
 }
