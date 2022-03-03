@@ -2,10 +2,10 @@
 title: Konfigurieren der Adobe Experience Platform Web SDK-Erweiterung
 description: So konfigurieren Sie die Adobe Experience Platform Web SDK-Tag-Erweiterung in der Datenerfassungs-Benutzeroberfläche.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
-source-git-commit: 92344ca9c2daf603d866c8a3cc4e92b72a382fb1
+source-git-commit: 1f9454148ed4ee95f0d86f03c4bcf8c917d0aeea
 workflow-type: tm+mt
-source-wordcount: '1049'
-ht-degree: 8%
+source-wordcount: '1047'
+ht-degree: 6%
 
 ---
 
@@ -45,7 +45,7 @@ Die [!UICONTROL Kennung der IMS-Organisation] ist die Organisation, an die die D
 
 ### **[!UICONTROL Edge-Domäne]**
 
-Die [!UICONTROL Edge-Domäne] ist die Domäne, von der die Adobe Experience Platform-Erweiterung Daten sendet und empfängt. Für die Erweiterung ist es erforderlich, dass Sie einen Erstanbieter-CNAME für den Produktions-Traffic verwenden. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
+Die [!UICONTROL Edge-Domäne] ist die Domäne, von der die Adobe Experience Platform-Erweiterung Daten sendet und empfängt. Adobe empfiehlt die Verwendung einer Erstanbieterdomäne (CNAME) für diese Erweiterung. Die standardmäßige Drittanbieterdomäne funktioniert in Entwicklungsumgebungen, ist jedoch nicht für Produktionsumgebungen geeignet. Anweisungen zum Einrichten eines Erstanbieter-CNAME finden Sie [hier](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
 ## [!UICONTROL Datenströme]
 
