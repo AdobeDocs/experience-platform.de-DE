@@ -5,10 +5,10 @@ title: Datenerfassung – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: 0926f0a6dc005b1bf278e7a0fa0afe4296d8ad80
-workflow-type: ht
-source-wordcount: '458'
-ht-degree: 100%
+source-git-commit: 1322ef78683e62130b56c5b6a22b8699e57a31cf
+workflow-type: tm+mt
+source-wordcount: '478'
+ht-degree: 95%
 
 ---
 
@@ -59,6 +59,10 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 [Ereignisweiterleitung](../tags/ui/event-forwarding/overview.md) kann sich einen beliebigen Experience Platform-Datenstrom zunutze machen, sodass Sie Daten mit extrem geringer Latenz umwandeln, anreichern und an ein Ziel senden können, bei dem es sich nicht um ein Adobe-Programm handelt, ohne dass dem Client-Gerät Drittanbieter-Code hinzugefügt wird.
 
 ![Ereignisweiterleitung](./images/home/event-forwarding.png)
+
+>[!NOTE]
+>
+>Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die nur im Rahmen von Real-time Customer Data Platform-Verbindungen angeboten wird.
 
 ## Nächste Schritte
 
