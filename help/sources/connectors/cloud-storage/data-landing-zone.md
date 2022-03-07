@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Datenquelle der Einstiegszone
 topic-legacy: overview
 description: Erfahren Sie, wie Sie die Einstiegszone für Daten mit Adobe Experience Platform verbinden.
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: ecc9bc603bfd7b56f5f232b0d6d91eb65a901510
+source-git-commit: 2a403be9a90d919aba2114f14c3cf64707b814b9
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 4%
+source-wordcount: '817'
+ht-degree: 2%
 
 ---
 
@@ -25,9 +25,126 @@ Im Folgenden finden Sie eine Liste von Einschränkungen, die Sie bei der Benennu
 - Die Namen von Verzeichnis- und Dateikomponenten dürfen 255 Zeichen nicht überschreiten.
 - Verzeichnis- und Dateinamen können nicht mit einem Schrägstrich (`/`). Wenn angegeben, wird sie automatisch entfernt.
 - Die folgenden Zeichen der reservierten URL müssen ordnungsgemäß maskiert sein: `! ' ( ) ; @ & = + $ , % # [ ]`
-- Die folgenden Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
+- Folgende Zeichen sind nicht zulässig: `" \ / : | < > * ?`.
 - Unzulässige URL-Pfadzeichen sind nicht zulässig. Codepunkte wie `\uE000`, obwohl in NTFS-Dateinamen gültig, sind keine gültigen Unicode-Zeichen. Darüber hinaus werden einige ASCII- oder Unicode-Zeichen, wie Steuerzeichen (wie `0x00` nach `0x1F`, `\u0081`usw.), sind ebenfalls nicht zulässig. Regeln für Unicode-Zeichenfolgen in HTTP/1.1 finden Sie unter [RFC 2616, Abschnitt 2.2: Grundlegende Regeln](https://www.ietf.org/rfc/rfc2616.txt) und [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Die folgenden Dateinamen sind nicht zulässig: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, PRN, AUX, NUL, CON, CLOCK$, Punkt (..) und zwei Zeichen (..).
+
+## Verwalten des Inhalts Ihrer [!DNL Data Landing Zone]
+
+Sie können [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/features/storage-explorer/) die Inhalte Ihrer [!DNL Data Landing Zone] Container.
+
+Im [!DNL Azure Storage Explorer] -Benutzeroberfläche das Verbindungssymbol im linken Navigationsbereich auswählen. Die **Ressource auswählen** -Fenster angezeigt, mit dem Sie eine Verbindung herstellen können. Auswählen **[!DNL Blob container]** zur Verbindung mit [!DNL Data Landing Zone].
+
+![select-resource](../../images/tutorials/create/dlz/select-resource.png)
+
+Wählen Sie als Nächstes **Shared Access Signature URL (SAS)** als Verbindungsmethode und wählen Sie dann **Nächste**.
+
+![select-connection-method](../../images/tutorials/create/dlz/select-connection-method.png)
+
+Nach Auswahl der Verbindungsmethode müssen Sie als Nächstes eine **Anzeigename** und **[!DNL Blob]Container-SAS-URL** , die Ihrer [!DNL Data Landing Zone] Container.
+
+>[!TIP]
+>
+>Sie können Ihre [!DNL Data Landing Zone] Anmeldedaten aus dem Quellkatalog in der Platform-Benutzeroberfläche.
+
+Geben Sie Ihre [!DNL Data Landing Zone] SAS-URL und dann **Nächste**
+
+![enter-connection-info](../../images/tutorials/create/dlz/enter-connection-info.png)
+
+Die **Zusammenfassung** -Fenster angezeigt, das Ihnen einen Überblick über Ihre Einstellungen einschließlich Informationen zu Ihrer [!DNL Blob] -Endpunkt und Berechtigungen. Wenn Sie bereit sind, wählen Sie **Verbinden**.
+
+![summary](../../images/tutorials/create/dlz/summary.png)
+
+Eine erfolgreiche Verbindung aktualisiert Ihre [!DNL Azure Storage Explorer] Benutzeroberfläche mit [!DNL Data Landing Zone] Container.
+
+![dlz-user-container](../../images/tutorials/create/dlz/dlz-user-container.png)
+
+Mit [!DNL Data Landing Zone] Container, der mit [!DNL Azure Storage Explorer], können Sie jetzt mit dem Hochladen von Dateien in Ihre [!DNL Data Landing Zone] Container. Wählen Sie zum Hochladen **Hochladen** und wählen Sie **Hochladen von Dateien**.
+
+![hochladen](../../images/tutorials/create/dlz/upload.png)
+
+Nachdem Sie die hochzuladende Datei ausgewählt haben, müssen Sie die [!DNL Blob] Geben Sie ein, dass Sie es als und das gewünschte Zielverzeichnis hochladen möchten. Wenn Sie fertig sind, wählen Sie **Hochladen**.
+
+| [!DNL Blob] Typen | Beschreibung |
+| --- | --- |
+| Block [!DNL Blob] | Block [!DNL Blobs] sind für das effiziente Hochladen großer Datenmengen optimiert. Block [!DNL Blobs] sind die Standardoption für [!DNL Data Landing Zone]. |
+| Anhängen [!DNL Blob] | Anhängen [!DNL Blobs] sind für das Anhängen von Daten an das Dateiende optimiert. |
+
+![upload-files](../../images/tutorials/create/dlz/upload-files.png)
+
+## Hochladen von Dateien in Ihre [!DNL Data Landing Zone] über die Befehlszeilenschnittstelle
+
+Sie können auch die Befehlszeilenschnittstelle Ihres Geräts verwenden und auf die Upload-Dateien zu Ihrem [!DNL Data Landing Zone].
+
+### Datei mit Bash hochladen
+
+Im folgenden Beispiel werden Bash und cURL verwendet, um eine Datei in eine [!DNL Data Landing Zone] mit dem [!DNL Azure Blob Storage] REST-API:
+
+```shell
+# Set Azure Blob-related settings
+DATE_NOW=$(date -Ru | sed 's/\+0000/GMT/')
+AZ_VERSION="2018-03-28"
+AZ_BLOB_URL="<URL TO BLOB ACCOUNT>"
+AZ_BLOB_CONTAINER="<BLOB CONTAINER NAME>"
+AZ_BLOB_TARGET="${AZ_BLOB_URL}/${AZ_BLOB_CONTAINER}"
+AZ_SAS_TOKEN="<SAS TOKEN, STARTING WITH ? AND ENDING WITH %3D>"
+
+# Path to the file we wish to upload
+FILE_PATH="</PATH/TO/FILE>"
+FILE_NAME=$(basename "$FILE_PATH")
+
+# Execute HTTP PUT to upload file (remove '-v' flag to suppress verbose output)
+curl -v -X PUT \
+   -H "Content-Type: application/octet-stream" \
+   -H "x-ms-date: ${DATE_NOW}" \
+   -H "x-ms-version: ${AZ_VERSION}" \
+   -H "x-ms-blob-type: BlockBlob" \
+   --data-binary "@${FILE_PATH}" "${AZ_BLOB_TARGET}/${FILE_NAME}${AZ_SAS_TOKEN}"
+```
+
+### Datei mit Python hochladen
+
+Das folgende Beispiel verwendet [!DNL Microsoft's] Python v12 SDK zum Hochladen einer Datei in ein [!DNL Data Landing Zone]:
+
+>[!TIP]
+>
+>Während im folgenden Beispiel der vollständige SAS-URI zum Herstellen einer Verbindung zu einem [!DNL Azure Blob] -Container können Sie andere Methoden und Vorgänge zur Authentifizierung verwenden. Siehe dies [[!DNL Microsoft] Dokument zum Python v12 SDK](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-python) für weitere Informationen.
+
+```py
+import os
+from azure.storage.blob import ContainerClient
+
+try:
+    # Set Azure Blob-related settings
+    sasUri = "<SAS URI>"
+    srcFilePath = "<FULL PATH TO FILE>" 
+    srcFileName = os.path.basename(srcFilePath)
+
+    # Connect to container using SAS URI
+    containerClient = ContainerClient.from_container_url(sasUri)
+
+    # Upload file to Data Landing Zone with overwrite enabled
+    with open(srcFilePath, "rb") as fileToUpload:
+        containerClient.upload_blob(srcFileName, fileToUpload, overwrite=True)
+
+except Exception as ex:
+    print("Exception: " + ex.strerror)
+```
+
+### Eine Datei hochladen mit [!DNL AzCopy]
+
+Das folgende Beispiel verwendet [!DNL Microsoft's] [!DNL AzCopy] Dienstprogramm zum Hochladen einer Datei in eine [!DNL Data Landing Zone]:
+
+>[!TIP]
+>
+>Während im folgenden Beispiel die Variable `copy` können Sie andere Befehle und Optionen verwenden, um eine Datei in Ihre [!DNL Data Landing Zone]verwendet [!DNL AzCopy]. Siehe dies [[!DNL Microsoft AzCopy] Dokument](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) für weitere Informationen.
+
+```bat
+set sasUri=<FULL SAS URI, PROPERLY ESCAPED>
+set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
+
+azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
+```
 
 ## Verbinden [!DNL Data Landing Zone] nach [!DNL Platform]
 
@@ -38,7 +155,7 @@ Die nachstehende Dokumentation enthält Informationen zum Datenimport von [!DNL 
 - [Erstellen Sie eine [!DNL Data Landing Zone] Quellverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/data-landing-zone.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherquelle mithilfe der Flow Service-API](../../tutorials/api/collect/cloud-storage.md)
 
-### Verwenden der UI
+### Verwenden der Benutzeroberfläche
 
 - [Verbinden [!DNL Data Landing Zone] zur Plattform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Erstellen eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/batch/cloud-storage.md)
