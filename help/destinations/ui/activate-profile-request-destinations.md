@@ -6,10 +6,10 @@ seo-title: Activate audience data to profile request destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente Profilanfragezielen zuordnen.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: dd9493077706b102467493e90b363ac202550eee
+source-git-commit: d0660f29df93659990d80353f86dcbf856afb733
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 9%
+source-wordcount: '457'
+ht-degree: 8%
 
 ---
 
@@ -25,7 +25,7 @@ Um Daten für Ziele aktivieren zu können, müssen Sie erfolgreich [mit Ziel ver
 
 ### Segmentzusammenführungsrichtlinie {#merge-policy}
 
-Derzeit unterstützen Profilanforderungsziele nur die Aktivierung von Segmenten, die die [standardmäßige Zusammenführungsrichtlinie](../../segmentation/ui/segment-builder.md#merge-policies).
+Derzeit unterstützen Profilanforderungsziele nur die Aktivierung von Segmenten, die die [Richtlinie zur aktiven Zusammenführung auf Edge](../../segmentation/ui/segment-builder.md#merge-policies) als Standard festlegen.
 
 ## Ziel auswählen {#select-destination}
 
