@@ -5,10 +5,10 @@ title: Mailchimp Connector - Übersicht
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Mailchimp über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
-source-git-commit: f8951b5a0a0ca94679155bad9f4c4c2991740b1a
+source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 16%
+source-wordcount: '221'
+ht-degree: 14%
 
 ---
 
@@ -27,15 +27,9 @@ Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Mailchimp
 ## Verbinden [!DNL Mailchimp Campaigns] Platform
 
 * [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Campaigns] Daten an Platform mithilfe von APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-
-<!--
-* [Create a source connection to bring [!DNL Mailchimp Campaigns] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
--->
+* [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Campaigns] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## Verbinden [!DNL Mailchimp Members] Platform
 
 * [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Members] Daten an Platform mithilfe von APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-
-<!--
-* [Create a source connection to bring [!DNL Mailchimp Members] data to Platform using the user interface](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
--->
+* [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Members] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
