@@ -5,10 +5,10 @@ seo-title: Frequently asked questions
 description: Antworten auf die am häufigsten gestellten Fragen zu Adobe Experience Platform-Zielen
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 69fc8e8ec3211495056be73c2e49c6aecfc569ea
+source-git-commit: b2636377eda6740dceb9bc07fbcc082b85ff3c94
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 10%
+source-wordcount: '864'
+ht-degree: 9%
 
 ---
 
@@ -78,6 +78,12 @@ Detaillierte Erläuterungen zu den Anforderungen an die ID-Zuordnung finden Sie 
 **Kann ich mehrere Facebook-Ziele in der Platform-Benutzeroberfläche für separate Facebook-Konten erstellen?**
 
 Ja. Ein Facebook-Ziel in Experience Platform ist 1:1 für ein Anzeigenkonto in Facebook. Sie können für jedes Facebook-Anzeigenkonto in Ihrem Unternehmen ein eigenes Facebook-Ziel erstellen. Befolgen Sie die [Tutorial zur Zielverbindung](/help/destinations/ui/connect-destination.md) und eine Verbindung zu einem separaten Facebook-Konto für jedes neue Facebook-Ziel in der Platform-Benutzeroberfläche herstellen. Die Anzahl der Facebook-Anzeigenkonten, mit denen Sie eine Verbindung herstellen können, ist unbegrenzt.
+
+## Google-Kundenabgleich {#google-customer-match}
+
+**Warum werden beim Exportieren von Segmenten in Google-Kundenabgleich am Ende der Segmentnamen in der Google-Benutzeroberfläche zusätzliche Zahlen angehängt?**
+
+Google erfordert, dass Segmentnamen eindeutig sind. Die Zahlen, die Sie sehen, sind [UNIX-Zeitstempel](https://www.unixtimestamp.com/) und sie werden angehängt, um die Segmentnamen eindeutig zu halten, wenn Sie dasselbe Segment mehreren Google-Zielen zugeordnet haben.
 
 ## linkedIn Matched Audiences {#linkedin}
 
