@@ -4,9 +4,9 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 8571d86e1ce9dc894e54fe72dea75b9f8fe84f0b
+source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '2324'
 ht-degree: 5%
 
 ---
@@ -43,6 +43,26 @@ Sie können das Erscheinungsbild der [!UICONTROL Profile] Dashboard durch Auswah
 
 Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über Widget-Bibliotheken](../customize/widget-library.md) Dokumentation .
 
+## (Beta) Einblicke in die Profileffizienz {#profile-efficiency-insights}
+
+>[!IMPORTANT]
+>
+>Die Insight-Funktion zur Profileffizienz befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+
+Die [!UICONTROL Wirksamkeit] liefert Metriken zur Qualität und Vollständigkeit Ihrer Profildaten während der Verwendung von Widgets zur Profilwirksamkeit. Diese Widgets veranschaulichen auf einen Blick die Zusammensetzung Ihrer Profile, Trends in der Vollständigkeit im Zeitverlauf und Bewertungen der Qualität Ihrer Profildaten.
+
+[Das Dashboard zur Profilwirksamkeit.](../images/profiles/attributes-quality-assessment.png)
+
+Siehe [Abschnitt mit Widgets zur Profilwirksamkeit](#profile-efficacy-widgets) für weitere Informationen zu den momentan verfügbaren Widgets.
+
+Das Layout dieses Dashboards kann auch durch Auswahl von [**[!UICONTROL Dashboard ändern]**](../customize/modify.md) von [!UICONTROL Übersicht] Registerkarte.
+
+## Profile durchsuchen {#browse-profiles}
+
+Die [!UICONTROL Durchsuchen] -Tab können Sie die schreibgeschützten Profile durchsuchen und anzeigen, die in Ihrer IMS-Organisation erfasst wurden. Von hier aus können Sie wichtige Informationen aus dem Profil bezüglich Voreinstellungen, vergangener Ereignisse, Interaktionen und Segmenten sehen
+
+Weitere Informationen zu den in der Platform-Benutzeroberfläche bereitgestellten Funktionen zur Profilanzeige finden Sie in der Dokumentation unter [Durchsuchen von Profilen in Real-time Customer Data Platform](../../rtcdp/profile/profile-browse.md).
+
 ## Zusammenführungsrichtlinien {#merge-policies}
 
 Die in der [!UICONTROL Profile] Dashboards basieren auf Zusammenführungsrichtlinien, die auf Ihre Echtzeit-Kundenprofildaten angewendet werden. Wenn Daten aus mehreren Quellen zusammengeführt werden, um das Kundenprofil zu erstellen, können die Daten widersprüchliche Werte enthalten (z. B. kann ein Datensatz einen Kunden als &quot;einzeln&quot;auflisten, während ein anderer Datensatz den Kunden als &quot;verheiratet&quot;auflisten kann). Es ist der Auftrag der Zusammenführungsrichtlinie, zu bestimmen, welche Daten als Teil des Profils priorisiert und angezeigt werden sollen.
@@ -56,6 +76,14 @@ Das Dashboard wählt automatisch eine anzuzeigende Zusammenführungsrichtlinie a
 >Im Dropdown-Menü werden nur Zusammenführungsrichtlinien angezeigt, die sich auf die Klasse &quot;XDM Individual Profile&quot;beziehen. Wenn Ihr Unternehmen jedoch mehrere Zusammenführungsrichtlinien erstellt hat, müssen Sie möglicherweise einen Bildlauf durchführen, um die vollständige Liste der verfügbaren Zusammenführungsrichtlinien anzuzeigen.
 
 ![](../images/profiles/select-merge-policy.png)
+
+## Vereinigungsschemas
+
+Die [!UICONTROL Vereinigungsschema] Dashboard zeigt das Vereinigungsschema für eine bestimmte XDM-Klasse an. Durch Auswahl der [!UICONTROL **Klasse**] -Dropdown-Liste können Sie die Vereinigungsschemas für verschiedene XDM-Klassen anzeigen.
+
+Vereinigungsschemas bestehen aus mehreren Schemas, die dieselbe Klasse teilen und für Profile aktiviert wurden. Sie ermöglichen es Ihnen, in einer einzigen Ansicht eine Zusammenführung aller Felder zu sehen, die in jedem Schema enthalten sind, das dieselbe Klasse aufweist.
+
+Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche des Vereinigungsschemas . [Anzeigen von Vereinigungsschemas in der Platform-Benutzeroberfläche](../../profile/ui/union-schema.md#view-union-schemas).
 
 ## Widgets und Metriken
 
@@ -134,6 +162,59 @@ Weitere Informationen zu Profilfragmenten finden Sie im Abschnitt unter [Profilf
 Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
 
 ![](../images/profiles/identity-overlap.png)
+
+## (Beta) Widgets zur Profilwirksamkeit {#profile-efficacy-widgets}
+
+>[!IMPORTANT]
+>
+>Die Widgets zur Profileffizienz befinden sich derzeit in der Betaphase und stehen nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+
+Adobe bietet mehrere Widgets, mit denen die Vollständigkeit der für Ihre Datenanalyse verfügbaren aufgenommenen Profile bewertet werden kann. Alle Wirksamkeits-Widgets des Profils können nach Zusammenführungsrichtlinien gefiltert werden. Um den Filter für Zusammenführungsrichtlinien zu ändern, wählen Sie die[!UICONTROL Profile mithilfe von Zusammenführungsrichtlinien] und wählen Sie die entsprechende Richtlinie aus der verfügbaren Liste aus.
+
+Um mehr über die einzelnen Wirksamkeits-Widgets des Profils zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
+
+* [[!UICONTROL Beurteilung der Attributqualität]](#attribute-quality-assessment)
+* [[!UICONTROL Profilvollständigkeit]](#profile-completeness)
+* [[!UICONTROL Profilvollständigkeitstrend]](#profile-completeness-trend)
+
+### (Beta) [!UICONTROL Beurteilung der Attributqualität] {#attribute-quality-assessment}
+
+Dieses Widget zeigt die Vollständigkeit und Kardinalität jedes Profilattributs seit dem letzten Verarbeitungsdatum. Diese Informationen werden als Tabelle mit vier Spalten dargestellt, wobei jede Zeile in der Tabelle ein einzelnes Attribut darstellt.
+
+| Spalte | Beschreibung |
+|---|---|
+| Attribut | Der Name des Attributs. |
+| Profile | Die Anzahl der Profile, die dieses Attribut aufweisen und mit Werten gefüllt sind, die nicht null sind. |
+| Vollständigkeit | Dieser Prozentsatz wird durch die Gesamtanzahl der Profile bestimmt, die dieses Attribut aufweisen und mit Werten ungleich null gefüllt sind. Die Zahl wird berechnet, indem die Gesamtzahl der Profile durch die Gesamtzahl der nicht leeren Werte in den Profilen für dieses Attribut dividiert wird. |
+| Kardinalität | Die Gesamtzahl der **eindeutig** Werte ungleich null dieses Attributs. Er wird über alle Profile hinweg gemessen. |
+
+![Das Widget zur Qualitätsbewertung der Attribute](../images/profiles/attributes-quality-assessment.png)
+
+### (Beta) [!UICONTROL Profile nach Vollständigkeit] {#profile-completeness}
+
+Dieses Widget erstellt ein Kreisdiagramm zur Profilvollständigkeit seit dem letzten Verarbeitungsdatum. Die Vollständigkeit eines Profils wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten ungleich null gefüllt sind.
+
+Dieses Widget zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vollständigkeit. Standardmäßig sind drei Stufen der Vollständigkeit konfiguriert:
+
+* Hohe Vollständigkeit: Profile haben zu mehr als 70 % Attribute ausgefüllt.
+* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % Attribute.
+* Geringe Vollständigkeit: Profile haben weniger als 30 % Attribute ausgefüllt.
+
+![Profile nach Vollständigkeits-Widget](../images/profiles/profiles-by-completeness.png)
+
+### (Beta) [!UICONTROL Profilvollständigkeitstrend] {#profile-completeness-trend}
+
+Dieses Widget erstellt ein gestapeltes Spaltendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten gefüllt werden, die ungleich null sind. Die Profilvollständigkeit wird seit dem letzten Verarbeitungsdatum als hoch, mittel oder gering kategorisiert.
+
+Die X-Achse stellt die Zeit dar, die Y-Achse die Anzahl der Profile und die Farben stellen die drei Stufen der Profilvollständigkeit dar.
+
+Die drei Stufen der Vollständigkeit sind:
+
+* Hohe Vollständigkeit: Profile haben zu mehr als 70 % Attribute ausgefüllt.
+* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % Attribute.
+* Geringe Vollständigkeit: Profile haben weniger als 30 % Attribute ausgefüllt.
+
+![Das Trend-Widget zur Profilvollständigkeit](../images/profiles/profiles-completeness-trend.png)
 
 ## Nächste Schritte
 
