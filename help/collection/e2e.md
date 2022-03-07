@@ -2,7 +2,7 @@
 title: Datenerfassung End-to-End – Übersicht
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mithilfe der von Adobe Experience Platform bereitgestellten Datenerfassungstechnologien an Adobe Experience Cloud-Lösungen senden können.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: d326267cacf8d678937e8c959de8acbfbbb88c93
+source-git-commit: a1369c0d7af5808d7ff830ce017e686f7697181e
 workflow-type: tm+mt
 source-wordcount: '2618'
 ht-degree: 100%
@@ -104,7 +104,7 @@ Wählen Sie in der Datenerfassungs-Benutzeroberfläche **[!UICONTROL Datenström
 
 Die Konfigurationsanforderungen für einen Datenstrom hängen davon ab, an welche Produkte und Funktionen Sie Daten senden. Detaillierte Informationen zu den Konfigurationsoptionen für die einzelnen Produkte finden Sie in der [Übersicht zu Datenströmen](../edge/fundamentals/datastreams.md).
 
-## Installieren und konfigurieren des Web SDKs
+## Installieren und konfigurieren des Web SDKs {#install}
 
 Nachdem Sie ein Schema und einen Datenstrom erstellt haben, müssen Sie das Platform Web SDK installieren und konfigurieren, um mit dem Senden von Daten an das Edge Network zu beginnen.
 
