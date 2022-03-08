@@ -1,9 +1,10 @@
 ---
 title: Erweitern eines Softbounce-Felds
 description: Erfahren Sie, wie Sie in der Schema Registry-API ein Feld mit Softbounce erweitern.
-source-git-commit: 2d85db789e6e6a28402bb68122a3b5cfe9d0c5dc
+exl-id: 96897a5d-e00a-410f-a20e-f77e223bd8c4
+source-git-commit: a26c8d43ff7874bcedd2adb3d6da995986198c96
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '531'
 ht-degree: 1%
 
 ---
@@ -197,4 +198,4 @@ Nach der Anwendung der Änderung antwortet die Schema Registry beim Abrufen des 
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde die Erweiterung von Soft Enums in der Schema Registry-API beschrieben. Weitere Informationen zum Definieren verschiedener Feldtypen in der API finden Sie im Handbuch unter [XDM-Feldtypbegrenzungen](../schema/field-constraints.md#define-fields).
+In diesem Handbuch wurde die Erweiterung von Soft Enums in der Schema Registry-API beschrieben. Siehe Handbuch unter [Definieren benutzerdefinierter Felder in der API](./custom-fields-api.md) für weitere Informationen zum Erstellen verschiedener Feldtypen.
