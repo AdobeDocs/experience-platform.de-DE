@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 042a739593b291cdd7193437906a16dc889a3b4b
+source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
 workflow-type: tm+mt
-source-wordcount: '3358'
+source-wordcount: '3338'
 ht-degree: 2%
 
 ---
@@ -56,25 +56,21 @@ Weitere Informationen zu Status finden Sie in der folgenden Tabelle:
 >id="platform_monitoring_profiles_received_streaming"
 >title="Vorgenommene Profile"
 >abstract="Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_streaming"
 >title="Aktivierte Identitäten"
 >abstract="Die Anzahl der einzelnen Profilidentitäten, die erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Segmenten erstellt, aktualisiert und entfernt werden."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_streaming"
 >title="Ausgeschlossene Identitäten"
 >abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Identitäten fehlgeschlagen"
 >abstract="Die Anzahl der individuellen Profilidentitäten, die für das ausgewählte Ziel fehlgeschlagen sind. Weitere Informationen finden Sie unter Fehlerdiagnose ."
->text="Learn more in documentation"
 
 Bei Streaming-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab bietet eine stündliche Aktualisierung für Metrikdaten zu Ihren Datenfluss-Läufen. Die auffälligsten gekennzeichneten Statistiken sind für Identitäten.
 
@@ -118,29 +114,22 @@ Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und a
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Datenfluss-Ausführungsdetails"
 >abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch Metrikdefinitionen ."
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_activation_batch"
->title="Datenfluss-Ausführungsdetails"
->abstract="Die Ausführungsdetails des Ziel-Datenflusses enthalten Informationen zum Aktivierungsstatus des Segments und zu den Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren. Weitere Informationen finden Sie im Handbuch Metrikdefinitionen ."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=en#dataflow-runs-for-streaming-destinations" text="Datenfluss-Ausführungen für Streaming-Ziele"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Vorgenommene Profile"
 >abstract="Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
 >title="Aktivierte Identitäten"
 >abstract="Die Anzahl der einzelnen Profilidentitäten, die erfolgreich für das ausgewählte Ziel aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Segmenten erstellt, aktualisiert und entfernt werden."
->text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesexcluded_batch"
 >title="Ausgeschlossene Identitäten"
 >abstract="Die Anzahl der einzelnen Profildatensätze, die aufgrund fehlender Attribute und Zustimmungsverletzungen von der Aktivierung für das ausgewählte Ziel ausgeschlossen sind."
->text="Learn more in documentation"
 
 Bei Batch-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfluss-Läufen. Es wird eine Liste einzelner Ausführungen und der jeweiligen Metriken mit den folgenden Gesamtwerten für Identitäten angezeigt:
 
