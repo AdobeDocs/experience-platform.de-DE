@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b714a5cf0f4bdf2c0f010664bfef96c5b6641c22
+source-git-commit: 366656346c25cd5206b36c7ff2b9942c5027de17
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 30%
+source-wordcount: '1018'
+ht-degree: 26%
 
 ---
 
@@ -20,9 +20,10 @@ ht-degree: 30%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Dashboards]](#dashboards)
-- [Datenerfassung](#data-collection)
+- [[!DNL Data collection]](#data-collection)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Identity Service]](#identity)
-- [Quellen](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
@@ -49,6 +50,16 @@ Platform bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundene
 | Erstanbieter-Geräte-IDs | Sie können jetzt Ihre eigenen Geräte-IDs beim Erfassen von Kundendaten mit dem Platform Web SDK an das Adobe Experience Platform Edge Network senden, um eine Problemumgehung für aktuelle Browserbeschränkungen bei Cookie-Lebenszyklen von Drittanbietern zu bieten. Siehe Handbuch unter [Erstanbieter-Geräte-IDs](../../edge/identity/first-party-device-ids.md) für weitere Informationen. |
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| (Beta) Destination SDK-Unterstützung für dateibasierte Ziele | [Destination SDK-Unterstützung für dateibasierte Ziele](../../destinations/destination-sdk/file-based-destination-configuration.md) befindet sich derzeit in der privaten Beta-Phase und steht nur einer ausgewählten Anzahl von Partnern und Kunden zur Verfügung. Die Funktionalität und die zugehörige Dokumentation können sich vor der Veröffentlichung der allgemeinen Verfügbarkeit ändern.<br><br>Wenden Sie sich an Ihren Kundenbetreuer, um zu erfahren, wie Sie auf die Funktion zugreifen können. Adobe-interne Kundenbetreuer sollten sich an die Produkt- und Engineering-Teams der Experience Platform-Ziele wenden, um unterstützte Anwendungsfälle zu besprechen. <br><br> In der Beta-Phase der Destination SDK-Unterstützung für dateibasierte Ziele können Beta-Partner und -Kunden die [Destination SDK der Experience Platform](/help/destinations/destination-sdk/overview.md) um private Ziele zu erstellen, um von der folgenden Funktion zu profitieren: <ul><li>Erstellen Sie ein dateibasiertes (Batch-)Ziel über Amazon S3, SFTP-Server, Azure Blob, Azure Data Lake Storage, Data Landing Zone Storage.</li><li>Konfigurieren und legen Sie die standardmäßigen Zeitplanungs- und Frequenzoptionen für Dateiexporte fest.</li><li>Konfigurieren und legen Sie Optionen zum Formatieren der exportierten CSV-Dateien fest (Trennzeichen, Escape-Zeichen und andere Optionen).</li><li>Möglichkeit zum Festlegen und Bearbeiten benutzerdefinierter Dateikopfzeilen.</li><li>Möglichkeit zum Empfang von Ereignisbenachrichtigungen über den Export von Dateien und Segmenten.</li><li>Möglichkeit, zusätzliche Dateitypen wie CSV, TSV, JSON, Parquet zu exportieren.</li></ul>  <br>Lesen Sie für die ersten Schritte mit der neuen Funktion [(Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.](../../destinations/destination-sdk/file-based-destination-configuration.md). <br><br> Die Funktion zum Erstellen privater oder produktiver *Streaming* Ziele mithilfe von Destination SDK sind bereits für alle Experience Platform-Kunden und -Partner verfügbar. Lesen Sie das Handbuch zum [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](/help/destinations/destination-sdk/configure-destination-instructions.md) für Details. |
 
 ## [!DNL Identity Service] {#identity}
 
