@@ -4,7 +4,7 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 5%
@@ -51,7 +51,7 @@ Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/mod
 
 Die [!UICONTROL Wirksamkeit] liefert Metriken zur Qualität und Vollständigkeit Ihrer Profildaten während der Verwendung von Widgets zur Profilwirksamkeit. Diese Widgets veranschaulichen auf einen Blick die Zusammensetzung Ihrer Profile, Trends in der Vollständigkeit im Zeitverlauf und Bewertungen der Qualität Ihrer Profildaten.
 
-[Das Dashboard zur Profilwirksamkeit.](../images/profiles/attributes-quality-assessment.png)
+![Das Dashboard zur Profilwirksamkeit.](../images/profiles/attributes-quality-assessment.png)
 
 Siehe [Abschnitt mit Widgets zur Profilwirksamkeit](#profile-efficacy-widgets) für weitere Informationen zu den momentan verfügbaren Widgets.
 
