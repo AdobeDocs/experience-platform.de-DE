@@ -5,10 +5,10 @@ title: Berechtigungen für ein Produktprofil verwalten
 topic-legacy: user guide
 description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Dieses Dokument dient als Anleitung zum Verwalten von Berechtigungen für ein Produktprofil für Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 099bfc0098ebf5a2325f344215c6b21f1c347473
+source-git-commit: 4881b456cbb6281f35cf1bdcb81e1d21fe764297
 workflow-type: tm+mt
 source-wordcount: '339'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -26,7 +26,7 @@ Klicken Sie auf eine Kategorie in der Liste, um die Seite **[!UICONTROL Berechti
 
 Auf der Seite **[!UICONTROL Berechtigungen bearbeiten]** gibt es einen Arbeitsbereich zum Hinzufügen und Entfernen von Berechtigungen für das ausgewählte Produktprofil. Auf der linken Seite des Bildschirms wird eine Liste mit Berechtigungskategorien angezeigt. Durch Klicken auf eine Kategorie ändert sich, welche Berechtigungen jeweils unter **[!UICONTROL Verfügbare Berechtigungselemente]** angezeigt werden.
 
-Um zum Beispiel die Berechtigungen für das Profil-Management zu aktualisieren, wählen Sie **[!UICONTROL Profil-Management]**.
+Um beispielsweise Berechtigungen für die Datenmodellierung zu aktualisieren, wählen Sie **[!UICONTROL Datenmodellierung]**.
 
 ![profile-management](../images/profile-management.png)
 
