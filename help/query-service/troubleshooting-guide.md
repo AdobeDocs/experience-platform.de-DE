@@ -5,9 +5,9 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Informationen zu häufigen Fehlercodes, auf die Sie stoßen, sowie zu den möglichen Ursachen.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
 workflow-type: tm+mt
-source-wordcount: '3293'
+source-wordcount: '3292'
 ht-degree: 4%
 
 ---
@@ -489,8 +489,7 @@ FROM <table_name>
 
 ## Drittanbieter-Tools {#third-party-tools}
 
-+++Antwort Dieser Abschnitt enthält Informationen zur Verwendung von Drittanbieter-Tools wie PSQL und Power BI.
-+++
+Dieser Abschnitt enthält Informationen zur Verwendung von Drittanbieter-Tools wie PSQL und Power BI.
 
 ### Kann ich Query Service mit einem Tool eines Drittanbieters verbinden?
 
