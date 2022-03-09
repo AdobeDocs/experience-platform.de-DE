@@ -4,7 +4,7 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 77fb7efa90e03c42c036b267ee93547647dab41d
+source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
 workflow-type: tm+mt
 source-wordcount: '2324'
 ht-degree: 5%
@@ -43,11 +43,11 @@ Sie können das Erscheinungsbild der [!UICONTROL Profile] Dashboard durch Auswah
 
 Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über Widget-Bibliotheken](../customize/widget-library.md) Dokumentation .
 
-## (Beta) Einblicke in die Profileffizienz {#profile-efficiency-insights}
+## (Beta) Einblicke in die Profilwirksamkeit {#profile-efficacy-insights}
 
 >[!IMPORTANT]
 >
->Die Insight-Funktion zur Profileffizienz befindet sich derzeit in der Betaphase und steht nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Funktion zur Einsicht der Wirksamkeit des Profils befindet sich derzeit in der Betaphase und steht nicht allen Anwendern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
 Die [!UICONTROL Wirksamkeit] liefert Metriken zur Qualität und Vollständigkeit Ihrer Profildaten während der Verwendung von Widgets zur Profilwirksamkeit. Diese Widgets veranschaulichen auf einen Blick die Zusammensetzung Ihrer Profile, Trends in der Vollständigkeit im Zeitverlauf und Bewertungen der Qualität Ihrer Profildaten.
 
@@ -167,7 +167,7 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 
 >[!IMPORTANT]
 >
->Die Widgets zur Profileffizienz befinden sich derzeit in der Betaphase und stehen nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+>Die Widgets zur Profilwirksamkeit befinden sich derzeit in der Betaversion und stehen nicht allen Anwendern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
 Adobe bietet mehrere Widgets, mit denen die Vollständigkeit der für Ihre Datenanalyse verfügbaren aufgenommenen Profile bewertet werden kann. Alle Wirksamkeits-Widgets des Profils können nach Zusammenführungsrichtlinien gefiltert werden. Um den Filter für Zusammenführungsrichtlinien zu ändern, wählen Sie die[!UICONTROL Profile mithilfe von Zusammenführungsrichtlinien] und wählen Sie die entsprechende Richtlinie aus der verfügbaren Liste aus.
 

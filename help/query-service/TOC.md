@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: c3baf586f5e11e085114b1f26422d191b1067281
+source-git-commit: 341b34c9acd7b3e19369ec30c4ba643c0cf1b829
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 96%
+source-wordcount: '149'
+ht-degree: 94%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 96%
    - [Allgemeine Leitlinien für die Ausführung von Abfragen](best-practices/writing-queries.md)
    - [Informationen zur Ordnung von Daten-Medienelementen](./best-practices/organize-data-assets.md)
    - [Arbeiten mit verschachtelten Datenstrukturen](best-practices/nested-data-structures.md)
-   - [Anonyme Beispiel-Blockabfragen](best-practices/anonymous-block.md)
+   - [Anonymer Block](best-practices/anonymous-block.md)
    - [Inkrementelles Laden](best-practices/incremental-load.md)
    - [Deduplizierung von Daten](best-practices/deduplication.md)
 - Beispielabfragen {#sample-queries}
