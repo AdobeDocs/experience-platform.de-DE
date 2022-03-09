@@ -1,15 +1,15 @@
 ---
-title: Beispielhafte inkrementelle Lastabfragen
+title: Inkrementelle Belastung in Query Service
 description: Die inkrementelle Ladefunktion verwendet sowohl anonyme Block- als auch Snapshot-Funktionen, um eine nahezu Echtzeit-Lösung zum Verschieben von Daten aus dem Data Lake in Ihr Data Warehouse zu bieten, ohne übereinstimmende Daten zu ignorieren.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: e5a79db157524d014c9a07d2bf5907a5544e7b77
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '688'
 ht-degree: 2%
 
 ---
 
-# Beispielhafte inkrementelle Datenladeabfragen
+# Inkrementelle Belastung in Query Service
 
 Das inkrementelle Lastdesign-Muster ist eine Lösung für die Datenverwaltung. Das Muster verarbeitet nur Informationen im Datensatz, die seit der letzten Ausführung des Ladevorgangs erstellt oder geändert wurden.
 

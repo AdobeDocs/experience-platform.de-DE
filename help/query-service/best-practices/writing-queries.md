@@ -6,7 +6,7 @@ topic-legacy: queries
 type: Tutorial
 description: In diesem Dokument werden wichtige Details zum Schreiben von Abfragen in Adobe Experience Platform Query Service beschrieben.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: c36ef1d5f5e5f7875da2b7a878c86b449d46c3c5
+source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 3%
@@ -318,4 +318,4 @@ Query Service standardisiert persistente Daten in Adobe Experience Platform mith
 
 Durch Lesen dieses Dokuments haben Sie einige wichtige Aspekte beim Schreiben von Abfragen mit [!DNL Query Service]. Weitere Informationen zur Verwendung der SQL-Syntax zum Schreiben Ihrer eigenen Abfragen finden Sie im Abschnitt [SQL-Syntaxdokumentation](../sql/syntax.md).
 
-Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, finden Sie in den Handbüchern unter [Beispielabfragen für Adobe Analytics](./adobe-analytics.md), [Beispielabfragen für Adobe Target](./adobe-target.md)oder [Beispielabfragen für ExperienceEvent](./experience-event-queries.md).
+Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, finden Sie in den Handbüchern unter [Beispielabfragen für Adobe Analytics](../sample-queries/adobe-analytics.md), [Beispielabfragen für Adobe Target](../sample-queries/adobe-target.md)oder [Beispielabfragen für ExperienceEvent](../sample-queries/experience-event.md).

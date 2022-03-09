@@ -1,15 +1,15 @@
 ---
-title: Beispiel für anonyme Blockabfragen
+title: Anonymer Block in Query Service
 description: Der anonyme Baustein ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 83b9aad78bcbf6e40d3059607a3779b6f1a2083f
+source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '491'
 ht-degree: 1%
 
 ---
 
-# Beispielabfragen für anonymen Baustein
+# Anonymer Block in Query Service
 
 Adobe Experience Platform Query Service unterstützt anonyme Bausteine. Mit der Funktion für anonyme Bausteine können Sie eine oder mehrere SQL-Anweisungen ketten, die nacheinander ausgeführt werden. Sie ermöglichen auch die Möglichkeit der Ausnahmebehandlung.
 
@@ -60,4 +60,4 @@ $$;
 
 Durch Lesen dieses Dokuments erhalten Sie jetzt ein klares Verständnis der anonymen Bausteine und ihrer Struktur. [Weitere Informationen zur Ausführung von Abfragen](./writing-queries.md), lesen Sie bitte das Handbuch zur Ausführung von Abfragen in Query Service.
 
-Weitere Beispiele für Abfragen, die in Query Service verwendet werden können, finden Sie in den Handbüchern unter [Beispielabfragen für Adobe Analytics](./adobe-analytics.md), [Beispielabfragen für Adobe Target](./adobe-target.md)oder [Beispielabfragen für ExperienceEvent](./experience-event-queries.md).
+Sie sollten auch [Verwendung des anonymen Bausteins mit dem Muster für das inkrementelle Laden](./incremental-load.md) , um die Abfrageeffizienz zu erhöhen.
