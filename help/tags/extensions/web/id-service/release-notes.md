@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Experience Cloud Identity Service-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Experience Cloud Identity Service“ in Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 1d3abede47c97c9a4f3b18ae25c890c309e942fd
-workflow-type: ht
-source-wordcount: '521'
-ht-degree: 100%
+source-git-commit: 04dfe55fec06d08a0caef7aee5bf8d85c6056149
+workflow-type: tm+mt
+source-wordcount: '614'
+ht-degree: 86%
 
 ---
 
@@ -17,13 +17,28 @@ ht-degree: 100%
 
 Versionshinweise, die sich nicht nur auf die Adobe Experience Platform-Tag-Erweiterung beziehen, sondern auf Experience Cloud Identity Service selbst, finden Sie unter [https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=de)
 
-## 3. November 2021
+## 9. März 2022
 
-### Experience Cloud ID-Erweiterung 5.2.1
+### Experience Cloud ID-Erweiterung 5.4.0
 
 #### **Funktionen**
 
-* Dieser Patch enthält eine Fehlerbehebung für das Schreiben von Cookies aus einem iFrame mit dem Attribut `SameSite=None` im Google Chrome-Browser.
+* Diese Version enthält die neueste Version von Visitor 5.4.0, die folgende Aktualisierungen aufweist:
+
+   * Möglichkeit, die Lebensdauer der `s_ecid` Cookie mit cookieLifetime config
+   * Aktualisierung eines Firefox-Browserproblems, das auftritt, wenn eine Seite in einen untergeordneten iFrame geladen wird
+
+## 10. Oktober 2021
+
+### Experience Cloud ID-Erweiterung 5.3.1
+
+#### **Funktionen**
+
+* Diese Version enthält die neueste Version von Visitor 5.3.0, die die folgenden neuen Aktualisierungen aufweist:
+
+   * Aktualisierter Algorithmus zum Generieren einer lokalen ECID
+   * Neueste Opt-in-Funktion mit `Secure` und `SameSite` Flags für das Datenschutz-Cookie
+   * Korrektur eines Firefox-Browserproblems, das auftrat, wenn eine Seite in einen untergeordneten iFrame geladen wurde
 
 ## 12. Januar 2021
 
@@ -32,6 +47,14 @@ Versionshinweise, die sich nicht nur auf die Adobe Experience Platform-Tag-Erwei
 #### **Funktionen**
 
 * Das Aktualisieren auf den Patch „VisitorJS 5.2.0“ mit einer Fehlerbehebung für „ECID DataElement“ konnte bei Eingang der Zustimmung nicht aktualisiert werden.
+
+## 3. November 2020
+
+### Experience Cloud ID-Erweiterung 5.2.1
+
+#### **Funktionen**
+
+* Dieser Patch enthält eine Fehlerbehebung für das Schreiben von Cookies aus einem iFrame mit dem Attribut `SameSite=None` im Google Chrome-Browser.
 
 ## 27. Oktober 2020
 
