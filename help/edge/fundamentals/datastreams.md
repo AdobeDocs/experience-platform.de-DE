@@ -3,10 +3,10 @@ title: Konfigurieren Ihres Datenspeichers für das Experience Platform Web SDK
 description: 'Erfahren Sie, wie Sie die Datastreams konfigurieren. '
 keywords: Konfiguration; Datastreams; datastreamId; edge; datastream id; Umgebungseinstellungen; edgeConfigId; identity; ID-Synchronisierung aktiviert; ID-Sync-Container-ID; Sandbox; Streaming-Inlet; Ereignis-Datensatz; Target; Client-Code; Eigenschaften-Token; Target-Umgebungs-ID; Cookie-Ziele; URL-Ziele; Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: c2378c5da73c36e5889d2c83b18194ff239fce96
+source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
 workflow-type: tm+mt
-source-wordcount: '2045'
-ht-degree: 2%
+source-wordcount: '1940'
+ht-degree: 3%
 
 ---
 
@@ -107,14 +107,6 @@ Sobald die Anzahl der erforderlichen Felder null erreicht hat und Sie mit Ihrer 
 Nachdem Sie einen neuen Datastream konfiguriert oder einen vorhandenen ausgewählt haben, um ihn anzuzeigen, wird die Detailseite für diesen Datastream angezeigt. Hier finden Sie weitere Informationen zum Datastream, einschließlich seiner Kennung.
 
 ![Detailseite für einen erstellten Datastream](../images/datastreams/view-details.png)
-
-Beim Erstellen eines Datastreams werden drei verknüpfte Umgebungen automatisch mit identischen Einstellungen erstellt. Diese drei Umgebungen `dev`, `stage`und `prod`, die dem [Standardumgebungen für Tags](../../tags/ui/publishing/environments.md). Wenn Sie eine Tag-Bibliothek für eine `dev` -Umgebung verwendet die Bibliothek automatisch die `dev` -Umgebung vom Datastream aus. Sie können die Einstellungen in den einzelnen Umgebungen beliebig bearbeiten.
-
-In SDK-Implementierungen wird ein `edgeConfigId` ist eine zusammengesetzte ID, die den Datastream und die spezifische Umgebung innerhalb dieses Datastreams angibt. Um beispielsweise die `stage` -Umgebung für einen Datastream mit ID `1c86778b-cdba-4684-9903-750e52912ad1`, verwenden Sie die `edgeConfigId` `1c86778b-cdba-4684-9903-750e52912ad1:stage`.
-
->[!IMPORTANT]
->
->Wenn in der zusammengesetzten ID keine Umgebung vorhanden ist, wird die Produktionsumgebung (`prod`) verwendet wird.
 
 Im Bildschirm mit den Datenspeicherdetails können Sie [Dienste hinzufügen](#add-services) , um Funktionen aus den Adobe Experience Cloud-Produkten zu aktivieren, auf die Sie Zugriff haben.
 
