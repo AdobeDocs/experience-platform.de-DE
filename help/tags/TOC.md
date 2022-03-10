@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Tags
 breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
-source-git-commit: 7cbf8cfa4ac7aeff9f1ed56777212f5203df2ce9
-workflow-type: ht
-source-wordcount: '382'
-ht-degree: 100%
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
+workflow-type: tm+mt
+source-wordcount: '386'
+ht-degree: 98%
 
 ---
 
@@ -44,6 +44,7 @@ ht-degree: 100%
    * [Bibliotheken](./ui/publishing/libraries.md)
    * [Self-Hosting von Bibliotheken](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Bibliothek erneut veröffentlichen](./ui/publishing/republish.md)
+   * [Premium-CDN-Unterstützung (Beta)](./ui/publishing/premium-cdn.md)
 * Client-seitige Informationen {#client-side}
    * [Übersicht](./ui/client-side/overview.md)
    * [Asynchrone Implementierung](./ui/client-side/asynchronous-deployment.md)

@@ -2,7 +2,7 @@
 title: Umgebungen
 description: Hier erfahren Sie mehr über das Konzept von Tag-Umgebungen und wie sie in Adobe Experience Platform funktionieren.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 66975d2352062e4abe1af35d7a7130a5c85188d0
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 100%
@@ -43,7 +43,7 @@ In den einzelnen Umgebungen können verschiedene Artefakte vorhanden sein. Dadur
 >
 >Jeder Umgebung kann jeweils nur ein Bibliotheks-Build zugewiesen werden. Es ist jedoch zu erwarten, dass eine Umgebung im Laufe der Zeit viele verschiedene Builds enthält, während Sie sie durch den Publishing-Workflow bewegen und Builds Umgebungen bei Bedarf neu zuordnen.
 
-## Installation
+## Installation {#installation}
 
 Jede Umgebung verfügt über eine Reihe von Anweisungen, mit deren Hilfe sie mit Ihrer Anwendung verbunden werden kann. Bei Web-Eigenschaften werden mithilfe dieser Anweisungen Einbettungs-Codes bereitgestellt. Bei mobilen Eigenschaften stellen diese Anweisungen den Code bereit, der zum Instanziieren der von Ihnen verwendeten Bibliotheken und zum Abrufen der Konfiguration zur Laufzeit benötigt wird.
 
