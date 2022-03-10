@@ -4,9 +4,9 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7dd7cccfe17d360b072783823517e847a50166e6
+source-git-commit: 5d4d4a984ef858865e4ca5427ce042b879f2c981
 workflow-type: tm+mt
-source-wordcount: '2324'
+source-wordcount: '2329'
 ht-degree: 5%
 
 ---
@@ -169,7 +169,7 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 >
 >Die Widgets zur Profilwirksamkeit befinden sich derzeit in der Betaversion und stehen nicht allen Anwendern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
 
-Adobe bietet mehrere Widgets, mit denen die Vollständigkeit der für Ihre Datenanalyse verfügbaren aufgenommenen Profile bewertet werden kann. Alle Wirksamkeits-Widgets des Profils können nach Zusammenführungsrichtlinien gefiltert werden. Um den Filter für Zusammenführungsrichtlinien zu ändern, wählen Sie die[!UICONTROL Profile mithilfe von Zusammenführungsrichtlinien] und wählen Sie die entsprechende Richtlinie aus der verfügbaren Liste aus.
+Adobe bietet mehrere Widgets, um die Vollständigkeit der erfassten Profile zu bewerten, die für Ihre Datenanalyse verfügbar sind. Alle Wirksamkeits-Widgets des Profils können nach Zusammenführungsrichtlinien gefiltert werden. Um den Filter für Zusammenführungsrichtlinien zu ändern, wählen Sie die[!UICONTROL Profile mithilfe von Zusammenführungsrichtlinien] und wählen Sie die entsprechende Richtlinie aus der verfügbaren Liste aus.
 
 Um mehr über die einzelnen Wirksamkeits-Widgets des Profils zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
@@ -196,9 +196,9 @@ Dieses Widget erstellt ein Kreisdiagramm zur Profilvollständigkeit seit dem let
 
 Dieses Widget zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vollständigkeit. Standardmäßig sind drei Stufen der Vollständigkeit konfiguriert:
 
-* Hohe Vollständigkeit: Profile haben zu mehr als 70 % Attribute ausgefüllt.
-* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % Attribute.
-* Geringe Vollständigkeit: Profile haben weniger als 30 % Attribute ausgefüllt.
+* Hohe Vollständigkeit: Profile haben mehr als 70 % der Attribute ausgefüllt.
+* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % der ausgefüllten Attribute.
+* Geringe Vollständigkeit: Profile haben weniger als 30 % der Attribute ausgefüllt.
 
 ![Profile nach Vollständigkeits-Widget](../images/profiles/profiles-by-completeness.png)
 
@@ -210,9 +210,9 @@ Die X-Achse stellt die Zeit dar, die Y-Achse die Anzahl der Profile und die Farb
 
 Die drei Stufen der Vollständigkeit sind:
 
-* Hohe Vollständigkeit: Profile haben zu mehr als 70 % Attribute ausgefüllt.
-* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % Attribute.
-* Geringe Vollständigkeit: Profile haben weniger als 30 % Attribute ausgefüllt.
+* Hohe Vollständigkeit: Profile haben mehr als 70 % der Attribute ausgefüllt.
+* Mittlere Vollständigkeit: Profile haben weniger als 70 % und mehr als 30 % der ausgefüllten Attribute.
+* Geringe Vollständigkeit: Profile haben weniger als 30 % der Attribute ausgefüllt.
 
 ![Das Trend-Widget zur Profilvollständigkeit](../images/profiles/profiles-completeness-trend.png)
 
