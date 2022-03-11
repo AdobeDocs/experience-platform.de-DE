@@ -5,10 +5,10 @@ title: Benutzerhandbuch für Segment Builder
 topic-legacy: ui guide
 description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6f4d250750d36c516a9a5730b5ced91e47d3bf05
+source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
 workflow-type: tm+mt
-source-wordcount: '2371'
-ht-degree: 37%
+source-wordcount: '2457'
+ht-degree: 35%
 
 ---
 
@@ -113,6 +113,14 @@ Um Ihrer Segmentdefinition eine neue Regel hinzuzufügen, ziehen Sie eine Kachel
 >[!IMPORTANT]
 >
 >Die neuesten Änderungen an Adobe Experience Platform haben die Verwendung der `OR` und `AND` logische Operatoren zwischen Ereignissen. Diese Aktualisierungen wirken sich nicht auf bestehende Segmente aus. Diese Änderungen wirken sich jedoch auf alle nachfolgenden Aktualisierungen vorhandener Segmente und der Erstellung neuer Segmente aus. Bitte lesen Sie die [Aktualisierung von Zeitkonstanten](./segment-refactoring.md) für weitere Informationen.
+
+Bei der Auswahl eines Werts für das Attribut wird eine Liste mit Enum-Werten angezeigt, die das Attribut sein kann.
+
+![](../images/ui/segment-builder/enum-list.png)
+
+Wenn Sie einen Wert aus dieser Auflistungsliste auswählen, wird der Wert mit einem durchgehenden Rand dargestellt. Für Felder, die `meta:enum` (weiche) Auflistungen können Sie auch einen Wert auswählen, der **not** aus der Liste der Auflistungen. Wenn Sie einen eigenen Wert erstellen, wird dieser mit einem gepunkteten Rahmen und einer Warnung versehen, dass dieser Wert nicht in der Enum-Liste enthalten ist.
+
+![](../images/ui/segment-builder/enum-warning.png)
 
 ### Hinzufügen von Zielgruppen
 
