@@ -6,16 +6,18 @@ seo-title: Edit activation dataflows
 description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
 seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 0%
+source-wordcount: '328'
+ht-degree: 1%
 
 ---
 
 # Bearbeiten von Aktivierungsdatenflüssen {#edit-activation-flows}
 
 In Adobe Experience Platform können Sie verschiedene Komponenten vorhandener Aktivierungsdatenflüsse an Ziele bearbeiten, z. B. die exportierten Segmente und Profilattribute, die Exportfrequenz, ob der Aktivierungsdataflow aktiviert oder deaktiviert ist usw.
+
+## Datenflüsse bearbeiten {#edit-dataflows}
 
 Gehen Sie wie folgt vor, um vorhandene Aktivierungsdatenflüsse zu bearbeiten:
 
@@ -42,4 +44,8 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsdatenflüsse zu bearbeiten:
 
    ![Zieldetails](../assets/ui/edit-activation/destination-details.png)
 
-5. Siehe [Aktivierungsübersicht](activation-overview.md) für Details zur Aktivierung neuer Segmente für Ihre Ziele.
+## Nächste Schritte {#next-steps}
+
+In diesem Tutorial haben Sie erfolgreich die **[!UICONTROL Ziele]** Arbeitsbereich zum Aktualisieren vorhandener Ziel-Datenflüsse.
+
+Weitere Informationen zu Zielen finden Sie im Abschnitt [Ziele - Übersicht](../catalog/overview.md).
