@@ -1,9 +1,10 @@
 ---
 title: Premium CDN-Unterstützung für Tags
 description: Erfahren Sie mehr über die Premium-CDN-Funktion für Tags und wie Sie damit Ihre Inhalte in mehreren geografischen Regionen bereitstellen können.
-source-git-commit: 530fc1ad3f389ffb5d77ddf6aa0b0b3208f1d532
+exl-id: 33e36d3b-9e21-44a8-8498-32a5fc20b46b
+source-git-commit: 3843b08a3a047200f02c1ceb17a64a196d4a0287
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -20,21 +21,13 @@ Um dies zu berücksichtigen, bieten Tags in Experience Platform eine Premium-CDN
 
 Die Premium-CDN-Unterstützung ist eine gebührenpflichtige Funktion und muss von Ihrer Organisation erworben werden, um sie zu aktivieren und zu verwenden. In diesem Handbuch wird beschrieben, wie Sie diese Funktion nach dem Kauf in der Datenerfassungs-Benutzeroberfläche konfigurieren und verwenden.
 
-## Premium-CDN für ein Unternehmen aktivieren
+## Premium-CDN für Ihre Organisation aktivieren
 
-Premium-CDN ist auf Unternehmensebene aktiviert, d. h. Sie müssen über Berechtigungen zur Unternehmensbearbeitung verfügen, um die Funktion zu aktivieren.
-
-Navigieren Sie in der Datenerfassungs-Benutzeroberfläche zu **[!UICONTROL Tags]** > **[!UICONTROL Unternehmen]**. Wählen Sie hier das Unternehmen aus, für das Sie die Funktion aktivieren möchten, und wählen Sie dann **[!UICONTROL Konfigurieren]** .
-
-![Wählen Sie ein Unternehmen aus, das konfiguriert werden soll](../../images/ui/publishing/premium-cdn/configure-property.png)
-
-Wählen Sie im angezeigten Konfigurationsdialogfeld die Option für **[!UICONTROL Premium CDN aktiviert]** vor der Auswahl **[!UICONTROL Speichern]** um Ihre Änderungen zu bestätigen.
-
-![Premium-CDN-Option aktivieren](../../images/ui/publishing/premium-cdn/enable-premium-cdn.png)
+Premium CDN wird auf Unternehmensebene aktiviert. Sobald Ihr Unternehmen die Premium-CDN-Funktion erworben hat, aktiviert ein Adobe-Administrator für Ihr Unternehmen die Datenerfassungs-Benutzeroberfläche.
 
 ## Tag-Bibliotheken mit aktualisierten Einbettungscodes neu erstellen und installieren
 
-Die Aktivierung der Premium-CDN-Funktion bedeutet nicht, dass Ihre Tag-Assets sofort repliziert werden und in den neuen Regionen verwendet werden können. Dies bedeutet nur, dass Sie jetzt entscheiden können, wann Sie sich für diese Funktion anmelden möchten.
+Sobald das Premium-CDN aktiviert ist, bedeutet dies nicht, dass Ihre Tag-Assets sofort repliziert werden und in den neuen Regionen verwendet werden können. Dies bedeutet nur, dass Sie jetzt entscheiden können, wann Sie sich für diese Funktion anmelden möchten.
 
 >[!IMPORTANT]
 >
