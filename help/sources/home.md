@@ -5,7 +5,7 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7254c84f1a7f4f45a0098e27515a7a01cae395db
+source-git-commit: 5be496cec28ab99c057834005aa1f014cea7406c
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 56%
@@ -24,7 +24,7 @@ Mit Experience Platform können Sie Daten aus unterschiedlichen Quellen an zentr
 
 Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in folgende Kategorien unterteilt:
 
-### Adobe-Anwendungen
+### Adobe-Anwendungen {#adobe-applications}
 
 Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe Apps, einschließlich Adobe Analytics und Adobe Audience Manager. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
@@ -38,13 +38,13 @@ Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe Apps, e
 - [[!DNL Marketo Engage] Connector - Übersicht](connectors/adobe-applications/marketo/marketo.md)
 - [Erstellen Sie eine [!DNL Marketo Engage] Quellverbindung in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
 
-### Adobe Advertising
+### Adobe Advertising {#advertising}
 
 Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieter-Werbe-System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) Connector
 
-### Cloud-Speicherplatz
+### Cloud-Speicherplatz {#cloud-storage}
 
 Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Die einzelnen Prozessschritte werden anhand der Benutzeroberfläche in den Datenquellen-Workflow integriert. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
@@ -62,7 +62,7 @@ Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertrage
 - [[!DNL Oracle Object Storage] Connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] Connector](connectors/cloud-storage/sftp.md)
 
-### CRM (Customer Relationship Management)
+### CRM (Customer Relationship Management) {#crm}
 
 CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden können, um die Kundentreue und -bindung zu fördern. Experience Platform unterstützt die Aufnahme von CRM-Daten aus [!DNL Microsoft Dynamics 365] und [!DNL Salesforce]. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
@@ -71,14 +71,14 @@ CRM-Systeme liefern Daten, mit deren Hilfe Kundenbeziehungen gepflegt werden kö
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md)
 
-### Kundenerfolg
+### Kundenerfolg {#customer-success}
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbieter-Anwendungen für das Customer Success Management. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Salesforce Service Cloud] Connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] Connector](connectors/customer-success/servicenow.md)
 
-### Datenbank
+### Datenbank {#database}
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
@@ -101,19 +101,19 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Datenbanken von Dritt
 - [[!DNL PostgreSQL] Connector](connectors/databases/postgres.md)
 - [[!DNL Snowflake] Connector](connectors/databases/snowflake.md)
 
-### E-Commerce
+### E-Commerce {#ecommerce}
 
 Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieter-E-Commerce-System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
-### Lokales System
+### Lokales System {#local-system}
 
 Experience Platform unterstützt die Erfassung von Daten aus Ihrem lokalen System. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [Lokaler Datei-Upload](connectors/local-system/local-file-upload.md)
 
-### Marketing-Automatisierung
+### Marketing-Automatisierung {#marketing-automation}
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
@@ -121,19 +121,19 @@ Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md)
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
-### Zahlungen
+### Zahlungen {#payments}
 
 Experience Platform unterstützt die Erfassung von Daten aus einem Zahlungssystem von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL PayPal] Connector](connectors/payments/paypal.md)
 
-### Streaming
+### Streaming {#streaming}
 
 Experience Platform unterstützt die Aufnahme von Daten aus Streaming-Quellen. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
 
-### Protokolle
+### Protokolle {#protocols}
 
 Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieterprotokollsystem. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
