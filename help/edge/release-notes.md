@@ -3,14 +3,24 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: a768cde86215ed9aad19e45362c6185276456703
+source-git-commit: 3d8e21f76b23bac3ee88702c19cf6d6a6e25a3ae
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 4%
+source-wordcount: '976'
+ht-degree: 3%
 
 ---
 
 # Versionshinweise
+
+## Version 2.9.0 - 10. März 2022
+
+* Hinzugefügte Unterstützung für Tracking [!DNL control (default)] Adobe Target-Erlebnisse.
+* Die Ansichtsänderungsereignisse für Einzelseitenanwendungen wurden optimiert. Die Benachrichtigung zur Anzeige ist jetzt beim Rendern personalisierter Erlebnisse in das Ansichtsänderungsereignis eingeschlossen.
+* Konsolenwarnung wurde entfernt, wenn keine `eventType` vorhanden ist.
+* Es wurde ein Problem behoben, bei dem die Variable `propositions` -Eigenschaft wurde nur von einer `sendEvent` -Befehl, wenn Erlebnisse aus dem Cache angefordert oder abgerufen wurden. Die `propositions` -Eigenschaft wird jetzt immer als Array definiert.
+* Es wurde ein Problem behoben, bei dem ausgeblendete Container nicht angezeigt wurden, wenn ein Fehler von Adobe Experience Edge zurückgegeben wurde.
+* Es wurde ein Problem behoben, bei dem die Interaktionsereignisse in Adobe Target nicht gezählt wurden. Dieses Problem wurde behoben, indem der Ansichtsname dem XDM unter web.webPageDetails.viewName hinzugefügt wurde.
+* Es wurden fehlerhafte Dokumentationslinks in Konsolenmeldungen behoben.
 
 ## Version 2.8.0 - 19. Januar 2022
 
