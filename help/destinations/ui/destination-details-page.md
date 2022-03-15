@@ -4,10 +4,10 @@ title: Zieldetails anzeigen
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 6d81973554f30642cafff54330140c606ab5499d
+source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
 workflow-type: tm+mt
-source-wordcount: '681'
-ht-degree: 6%
+source-wordcount: '708'
+ht-degree: 5%
 
 ---
 
@@ -76,6 +76,10 @@ Sie können die **[!UICONTROL Aktiviert]/[!UICONTROL Behinderte]** Umschalten, u
 ## [!UICONTROL Datenfluss-Abläufe] {#dataflow-runs}
 
 Die [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenflüssen, die an Batch- und Streaming-Ziele ausgeführt werden. Siehe [Überwachen von Datenflüssen](monitor-dataflows.md) für Details und Metrikdefinitionen.
+
+>[!NOTE]
+>
+>Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP-API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) Ziele.
 
 ![Datenfluss-Ausführungsansicht](../assets/ui/details-page/dataflow-runs.png)
 

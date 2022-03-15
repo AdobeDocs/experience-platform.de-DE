@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 0a6813d5d614d86940b042e03d2ab4f083644600
+source-git-commit: a076e9815050b10c0db5001a15371761710a3c28
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3365'
 ht-degree: 2%
 
 ---
@@ -194,6 +194,10 @@ Die folgenden Metriken sind für Segmentaufträge verfügbar:
 >id="platform_monitoring_activation"
 >title="Activation"
 >abstract="Die Zielaktivierungsansicht enthält Informationen zum Aktivierungsstatus des Segments und Metriken, die aus dem Echtzeit-Kundenprofil abgerufen wurden, um eindeutige Identitäten zu generieren."
+
+>[!NOTE]
+>
+>Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP-API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) Ziele.
 
 So greifen Sie auf die [!UICONTROL Überwachung] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie [!UICONTROL Ziele]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den ausgeführten Zielaufträgen.
 
