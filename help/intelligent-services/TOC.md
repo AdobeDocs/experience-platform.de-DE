@@ -4,9 +4,9 @@ audience: user
 user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Dienste, um Ergebnisse zu generieren, Einblicke zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 43405e50d0c418a8ee988f4d10b187cc4941c5ea
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '123'
 ht-degree: 100%
 
 ---
@@ -24,6 +24,7 @@ ht-degree: 100%
    - [Einblicke erlangen](attribution-ai/discover-insights.md)
    - [Scores herunterladen](attribution-ai/download-scores.md)
    - [Scores mithilfe von Query Service analysieren](attribution-ai/aai-query-service.md)
+   - [Fehlerbehebung](attribution-ai/troubleshooting.md)
 - Content and Commerce AI (Beta) {#content-commerce-ai}
    - [Übersicht](content-commerce-ai/overview.md)
    - [Erste Schritte](content-commerce-ai/getting-started.md)
