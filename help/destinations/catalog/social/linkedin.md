@@ -3,10 +3,10 @@ keywords: LinkedIn-Verbindung; LinkedIn-Verbindung; LinkedIn-Ziele; LinkedIn;
 title: Verbindung von LinkedIn mit übereinstimmenden Zielgruppen
 description: Aktivieren Sie Profile für Ihre LinkedIn-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 3aac1e7c7fe838201368379da8504efc8e316e1c
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 3%
+source-wordcount: '834'
+ht-degree: 4%
 
 ---
 
@@ -14,48 +14,56 @@ ht-degree: 3%
 
 ## Übersicht {#overview}
 
-Aktivieren Sie Profile für Ihre [!DNL LinkedIn]-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung, basierend auf Hash-E-Mails und mobilen IDs.
+Profile für Ihre [!DNL LinkedIn] Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails und mobilen IDs.
 
 ![linkedIn-Ziel in der Adobe Experience Platform-Benutzeroberfläche](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Anwendungsfälle
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann das [!DNL LinkedIn Matched Audiences]-Ziel verwendet werden soll, finden Sie hier einen Anwendungsfall, den Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
+So können Sie besser verstehen, wie und wann die Variable [!DNL LinkedIn Matched Audiences] Ziel, hier ein Anwendungsfall, den Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
-Ein Softwareunternehmen organisiert eine Konferenz und möchte mit den Teilnehmern in Kontakt bleiben und ihnen personalisierte Angebote basierend auf ihrem Konferenzstatus zeigen. Das Unternehmen kann E-Mail-Adressen oder Mobilgeräte-IDs von seinem eigenen [!DNL CRM] in Adobe Experience Platform erfassen. Anschließend können sie Segmente aus ihren eigenen Offline-Daten erstellen und diese Segmente an die soziale Plattform [!DNL LinkedIn] senden, wodurch ihre Werbeausgaben optimiert werden.
+Ein Softwareunternehmen organisiert eine Konferenz und möchte mit den Teilnehmern in Kontakt bleiben und ihnen personalisierte Angebote basierend auf ihrem Konferenzstatus zeigen. Das Unternehmen kann E-Mail-Adressen oder Mobilgeräte-IDs von eigenen erfassen [!DNL CRM] nach Adobe Experience Platform. Anschließend können sie Segmente aus ihren eigenen Offline-Daten erstellen und diese Segmente an die [!DNL LinkedIn] Social-Plattform zur Optimierung ihrer Werbeausgaben.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
+[!DNL LinkedIn Matched Audiences] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Weitere Informationen [identities](/help/identity-service/namespaces.md).
 
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|
 | GAID | Google Advertising ID | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- und Hash-E-Mails. Wenn Ihr Quellfeld ungehashte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Übereinstimmung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mails. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
 
+{style=&quot;table-layout:auto&quot;}
 
-## Exporttyp {#export-type}
+## Exportart und -frequenz {#export-type-frequency}
 
-**Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im  [!DNL LinkedIn Matched Audiences] Ziel verwendet werden.
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im [!DNL LinkedIn Matched Audiences] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Voraussetzungen für linkedIn-Konten {#LinkedIn-account-prerequisites}
 
-Bevor Sie das Ziel [!UICONTROL LinkedIn Matched Audience] verwenden können, stellen Sie sicher, dass Ihr [!DNL LinkedIn Campaign Manager]-Konto über die Berechtigungsebene [!DNL Creative Manager] oder höher verfügt.
+Bevor Sie die [!UICONTROL linkedIn Match Audience] Ziel, stellen Sie sicher, dass Ihre [!DNL LinkedIn Campaign Manager] -Konto hat [!DNL Creative Manager] Berechtigungsebene oder höher.
 
-Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager]-Benutzerberechtigungen finden Sie unter [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Werbekonten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
+Informationen zum Bearbeiten Ihrer [!DNL LinkedIn Campaign Manager] Benutzerberechtigungen, siehe [Hinzufügen, Bearbeiten und Entfernen von Benutzerberechtigungen für Werbekonten](https://www.linkedin.com/help/lms/answer/5753) in der LinkedIn-Dokumentation.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audiences] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher können die für [!DNL LinkedIn Matched Audiences] aktivierten Zielgruppen von *Hash*-Identifikatoren wie E-Mail-Adressen oder Mobilgeräte-IDs abgeleitet werden.
+[!DNL LinkedIn Matched Audiences] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher werden die Zielgruppen für [!DNL LinkedIn Matched Audiences] kann deaktiviert werden *Hash* Kennungen, wie E-Mail-Adressen oder Mobilgeräte-IDs.
 
 Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
 ## Anforderungen an das E-Mail-Hashing {#email-hashing-requirements}
 
-Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und [!DNL Platform] bei Aktivierung hash-Adressen einrichten.
+Sie können E-Mail-Adressen hash, bevor Sie sie in Adobe Experience Platform aufnehmen, oder eindeutige E-Mail-Adressen in Experience Platform verwenden und [!DNL Platform] Hash sie bei Aktivierung.
 
-Weitere Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie unter [Batch-Erfassung - Übersicht](/help/ingestion/batch-ingestion/overview.md) und [Streaming-Erfassung - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
+Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie in der [Batch-Erfassung - Übersicht](/help/ingestion/batch-ingestion/overview.md) und [Streaming-Erfassung - Übersicht](/help/ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen:
 
@@ -68,43 +76,43 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 
 >[!NOTE]
 >
->Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DNL Platform] gehasht.
+>Daten aus nicht gehashten Namespaces werden automatisch von [!DNL Platform] bei Aktivierung.
 > Attributquellendaten werden nicht automatisch gehasht.
 > 
-> Aktivieren Sie während des Schritts [Identitätszuordnung](../../ui/activate-segment-streaming-destinations.md#mapping) die Option **[!UICONTROL Umwandlung anwenden]**, wenn Ihr Quellfeld ungehashte Attribute enthält, damit [!DNL Platform] die Daten bei Aktivierung automatisch hasst.
+> Während [Identitätszuordnung](../../ui/activate-segment-streaming-destinations.md#mapping) Schritt: Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash.
 > 
-> Die Option **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Es wird nicht angezeigt, wenn Sie Namespaces auswählen.
+> Die **[!UICONTROL Umwandlung anwenden]** wird nur angezeigt, wenn Sie Attribute als Quellfelder auswählen. Es wird nicht angezeigt, wenn Sie Namespaces auswählen.
 
 ![Identity Mapping Transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
-Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences]-Ziels und zum Aktivieren von Segmenten.
+Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL LinkedIn Matched Audiences] Zielgruppen und Aktivieren von Segmenten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
->Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+>Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: einen Namen, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
-* **[!UICONTROL Konto-ID]**: Ihr  [!DNL LinkedIn Campaign Manager Account ID]. Sie finden diese ID in Ihrem [!DNL LinkedIn Campaign Manager] -Konto.
+* **[!UICONTROL Konto-ID]**: Ihre [!DNL LinkedIn Campaign Manager Account ID]. Diese ID finden Sie in Ihrer [!DNL LinkedIn Campaign Manager] -Konto.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ## Exportierte Daten {#exported-data}
 
-Eine erfolgreiche Aktivierung bedeutet, dass eine [!DNL LinkedIn] benutzerdefinierte Zielgruppe programmgesteuert in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login) erstellt wird. Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
+Eine erfolgreiche Aktivierung bedeutet, dass eine [!DNL LinkedIn] eine benutzerdefinierte Zielgruppe wird programmgesteuert in [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). Segmentmitgliedschaft in der Zielgruppe wird hinzugefügt und entfernt, wenn Anwender für die aktivierten Segmente qualifiziert oder disqualifiziert werden.
 
 >[!TIP]
 >
->Die Integration zwischen Adobe Experience Platform und [!DNL LinkedIn Matched Audiences] unterstützt historische Zielgruppen-Backups. Alle historischen Segmentqualifikationen werden an [!DNL LinkedIn] gesendet, wenn Sie die Segmente für das Ziel aktivieren.
+>Die Integration zwischen Adobe Experience Platform und [!DNL LinkedIn Matched Audiences] unterstützt historische Zielgruppen-Backups. Alle historischen Segmentqualifikationen werden an gesendet. [!DNL LinkedIn] wenn Sie die Segmente für das Ziel aktivieren.

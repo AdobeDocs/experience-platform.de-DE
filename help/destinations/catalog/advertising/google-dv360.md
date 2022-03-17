@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick Bid Manager;DoubleClick;Display & 
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: 3154020d5be029c738c3a5bfe52ae975a15be2ec
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 38%
+source-wordcount: '769'
+ht-degree: 35%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 38%
 
 ## Zielspezifikationen {#specifics}
 
-Beachten Sie die folgenden Details, die speziell für [!DNL Google Display & Video 360]-Ziele gelten:
+Beachten Sie die folgenden Details, die spezifisch für [!DNL Google Display & Video 360] Ziele:
 
 * Aktivierte Zielgruppen werden in der Google-Plattform programmgesteuert erstellt.
 * [!DNL Platform] enthält derzeit keine Messmetrik zur Validierung einer erfolgreichen Aktivierung. Konsultieren Sie die Zielgruppenzahlen in Google, um die Integration zu validieren und die Zielgruppengröße zu verstehen.
@@ -35,25 +35,30 @@ Beachten Sie die folgenden Details, die speziell für [!DNL Google Display & Vid
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | [!DNL Apple ID for Advertisers] | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), auch als  [!DNL Device ID] bezeichnet. Eine numerische, 38-stellige Geräte-ID, die der Audience Manager jedem Gerät zuordnet, mit dem er interagiert. | Google verwendet [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) für das Targeting von Benutzern in Kalifornien und die Google-Cookie-ID für alle anderen Benutzer. |
+| AAM UUID | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), auch bekannt als [!DNL Device ID]. Eine numerische, 38-stellige Geräte-ID, die der Audience Manager jedem Gerät zuordnet, mit dem er interagiert. | Google verwendet [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) , um Benutzer in Kalifornien als Ziel auszuwählen, und die Google-Cookie-ID für alle anderen Benutzer. |
 | [!DNL Google] Cookie-ID | [!DNL Google] Cookie-ID | [!DNL Google] verwendet diese ID, um Benutzer außerhalb von Kalifornien anzusprechen. |
 | RIDA | Roku-ID für Werbung. Diese ID identifiziert Roku-Geräte eindeutig. |  |
 | MAID | Microsoft Advertising-ID. Diese ID identifiziert Geräte mit Windows 10 eindeutig. |  |
 | Amazon Fire TV ID | Diese ID identifiziert Amazon Fire TVs eindeutig. |  |
 
-## Exporttyp {#export-type}
+## Exportart und -frequenz {#export-type-frequency}
 
-**Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel.
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Voraussetzungen {#prerequisites}
 
-### Zulassungsauflistung
+### Zulassungsauflistung {#allow-listing}
 
 >[!NOTE]
 >
->Die Zulassungsauflistung ist vor der Einrichtung Ihres ersten [!DNL Google Display & Video 360]-Ziels in Platform obligatorisch. Stellen Sie sicher, dass der unten beschriebene Genehmigungsprozess von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Zulassungsauflistung ist vor der Einrichtung Ihrer ersten [!DNL Google Display & Video 360] Ziel in Platform. Stellen Sie sicher, dass der unten beschriebene Genehmigungsprozess von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
 
-Bevor Sie das [!DNL Google Display & Video 360]-Ziel in Platform erstellen, müssen Sie sich an Google wenden und darum bitten, die Adobe auf die Liste der zugelassenen Datenanbieter zu setzen und Ihr Konto der Zulassungsliste hinzuzufügen. Kontaktieren Sie Google und machen Sie folgende Angaben:
+Vor der Erstellung [!DNL Google Display & Video 360] Ziel in Platform angeben, müssen Sie sich an Google wenden und darum bitten, die Adobe auf die Liste der zugelassenen Datenanbieter zu setzen und Ihr Konto der Zulassungsliste hinzuzufügen. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
 * **Konto-ID**: Kontokennung der Adobe mit Google. Konto-ID: 87933855.
 * **Kunden-ID**: Kundenkonto-ID von Adobe mit Google. Kunden-ID: 89690775.
@@ -61,11 +66,11 @@ Bevor Sie das [!DNL Google Display & Video 360]-Ziel in Platform erstellen, müs
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
@@ -76,15 +81,15 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 >[!NOTE]
 >
->Wenden Sie sich beim Einrichten eines [!DNL Google Display & Video 360]-Ziels an Ihren [!DNL Google Account Manager]- oder Kundenbetreuer, um zu erfahren, welchen Kontotyp Sie haben.
+>Beim Einrichten einer [!DNL Google Display & Video 360] Ziel, arbeiten Sie bitte mit Ihrem [!DNL Google Account Manager] oder dem Kundenbetreuer der Adobe, um zu verstehen, welchen Kontotyp Sie haben.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ## Exportierte Daten
 
-Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Google Display & Video 360]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Google Display & Video 360]-Konto. Bei erfolgreicher Aktivierung werden Zielgruppen in Ihr Konto eingetragen.
+So überprüfen Sie, ob die Daten erfolgreich in die [!DNL Google Display & Video 360] Ziel, überprüfen Sie Ihre [!DNL Google Display & Video 360] -Konto. Bei erfolgreicher Aktivierung werden Zielgruppen in Ihr Konto eingetragen.
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -94,4 +99,4 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#prerequisites) nicht erfüllen. Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf die Zulassungsliste gesetzt ist.
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#prerequisites). Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf die Zulassungsliste gesetzt ist.

@@ -3,9 +3,9 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Salesforce; Salesforce-Ziel
 title: Salesforce-Marketing Cloud-Verbindung
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: b0d6e02c67f2a62971332acb224c7422ea467e6c
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '506'
 ht-degree: 18%
 
 ---
@@ -18,9 +18,16 @@ ht-degree: 18%
 
 So senden Sie Segmentdaten an [!DNL Salesforce Marketing Cloud], müssen Sie zuerst [Ziel verbinden](#connect-destination) in Platform und dann [Datenimport einrichten](#import-data-into-salesforce) von Ihrem Speicherort zu [!DNL Salesforce Marketing Cloud].
 
-## Exporttyp {#export-type}
+## Exportart und -frequenz {#export-type-frequency}
 
-**Profilbasiert** - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm &quot;Attribute auswählen&quot;der [Zielgruppenaktivierungs-Workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute im [Zielaktivierungs-Workflow](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Mehr dazu [Batch-dateibasierte Ziele](/help/destinations/destination-types.md#file-based). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## IP-Adressen-Zulassungsliste {#allow-list}
 

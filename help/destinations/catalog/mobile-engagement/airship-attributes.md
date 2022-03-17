@@ -3,10 +3,10 @@ keywords: Luftschiffsattribute;Luftschiffsziel
 title: Verbindung zu Luftverkehrsattributen
 description: Nahtlose Weitergabe von Adobe-Zielgruppendaten an Airship als Zielgruppenattribute für das Targeting innerhalb von Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: a765f6829f08f36010e0e12a7186bf5552dfe843
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 0%
+source-wordcount: '802'
+ht-degree: 1%
 
 ---
 
@@ -16,84 +16,95 @@ ht-degree: 0%
 
 [!DNL Airship] ist die führende Plattform für Kundeninteraktionen, mit der Sie Ihren Benutzern in allen Phasen des Kundenlebenszyklus sinnvolle, personalisierte Omnichannel-Nachrichten bereitstellen können.
 
-Durch diese Integration werden Adobe-Profildaten zum Targeting oder zur Auslösung als [Attribute](https://docs.airship.com/guides/audience/attributes/) an [!DNL Airship] übergeben.
+Diese Integration übergibt Adobe-Profildaten an [!DNL Airship] as [Attribute](https://docs.airship.com/guides/audience/attributes/) für Targeting oder Aktivierung.
 
-Weitere Informationen zu [!DNL Airship] finden Sie in den [Airship Docs](https://docs.airship.com).
+Weitere Informationen finden Sie unter [!DNL Airship], siehe [Dokumente für die Luftfahrt](https://docs.airship.com).
 
 >[!TIP]
 >
->Diese Dokumentationsseite wurde vom [!DNL Airship]-Team erstellt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
+>Diese Dokumentationsseite wurde von der [!DNL Airship] Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an [support.airship.com](https://support.airship.com/).
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie Ihre Zielgruppensegmente an [!DNL Airship] senden können, müssen Sie Folgendes tun:
+Bevor Sie Ihre Zielgruppensegmente an senden können [!DNL Airship]müssen Sie:
 
-* Aktivieren Sie Attribute in Ihrem [!DNL Airship]-Projekt.
+* Attribute in Ihren [!DNL Airship] Projekt.
 * Generieren Sie ein Trägertoken zur Authentifizierung.
 
 >[!TIP]
 >
->Erstellen Sie ein [!DNL Airship]-Konto über [diesen Anmelde-Link](https://go.airship.eu/accounts/register/plan/starter/), falls noch nicht geschehen.
+>Erstellen Sie eine [!DNL Airship] Konto über [dieser Anmelde-Link](https://go.airship.eu/accounts/register/plan/starter/) wenn Sie noch nicht fertig sind.
+
+## Exportart und -frequenz {#export-type-frequency}
+
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Attribute aktivieren {#enable-attributes}
 
-Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] -Attributen und können in Platform mithilfe des im Folgenden auf dieser Seite beschriebenen Mapping-Tools einfach zugeordnet werden.
+Adobe Experience Platform-Profilattribute ähneln [!DNL Airship] -Attribute und können in Platform mithilfe des unten beschriebenen Zuordnungstools einfach miteinander zugeordnet werden.
 
-[!DNL Airship] -Projekte haben mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es zuerst in [!DNL Airship] definieren. Weitere Informationen finden Sie unter [Attribute einrichten und verwalten](https://docs.airship.com/tutorials/audience/attributes/) .
+[!DNL Airship] -Projekte haben mehrere vordefinierte und standardmäßige Attribute. Wenn Sie über ein benutzerdefiniertes Attribut verfügen, müssen Sie es in [!DNL Airship] zuerst. Siehe [Einrichten und Verwalten von Attributen](https://docs.airship.com/tutorials/audience/attributes/) für Details.
 
 ## Bearer-Token generieren {#bearer-token}
 
-Gehen Sie zu **[!UICONTROL Einstellungen]**&quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen Sie im Menü links **[!UICONTROL Tokens]** aus.
+Navigieren Sie zu **[!UICONTROL Einstellungen]** &quot; **[!UICONTROL APIs und Integrationen]** im [Airship Dashboard](https://go.airship.com) und wählen Sie **[!UICONTROL Token]** im Menü links.
 
-Klicken Sie auf **[!UICONTROL Token erstellen]**.
+Klicken **[!UICONTROL Token erstellen]**.
 
 Geben Sie einen benutzerfreundlichen Namen für Ihr Token ein, z. B. &quot;Adobe Attributes Destination&quot;und wählen Sie &quot;All Access&quot;für die  aus.
 
-Klicken Sie auf **[!UICONTROL Token erstellen]** und speichern Sie die Details als vertraulich.
+Klicken **[!UICONTROL Token erstellen]** und speichern Sie die Angaben als vertraulich.
 
 ## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie das [!DNL Airship Attributes]-Ziel verwenden sollten, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die [!DNL Airship Attributes] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
 
 ### Anwendungsfall 1
 
-Nutzen Sie in Adobe Experience Platform erfasste Profildaten zur Personalisierung der Nachricht und des Rich-Inhalts in einem der Kanäle von [!DNL Airship]. Verwenden Sie beispielsweise [!DNL Experience Platform]-Profildaten, um Standortattribute in [!DNL Airship] festzulegen. Dadurch kann eine Hotelmarke für jeden Benutzer ein Bild für den nächstgelegenen Hotelstandort anzeigen.
+Nutzen Sie in Adobe Experience Platform erfasste Profildaten zur Personalisierung der Nachricht und Rich-Content in einem beliebigen von [!DNL Airship]der Kanäle. Beispiel: [!DNL Experience Platform] Profildaten zum Festlegen von Standortattributen in [!DNL Airship]. Dadurch kann eine Hotelmarke für jeden Benutzer ein Bild für den nächstgelegenen Hotelstandort anzeigen.
 
 ### Anwendungsfall 2
 
-Nutzen Sie Attribute aus Adobe Experience Platform, um [!DNL Airship]-Profile weiter anzureichern und sie mit SDK- oder [!DNL Airship]-Prognosedaten zu kombinieren. Beispielsweise kann ein Einzelhändler ein Segment mit Treuestatus und Standortdaten (Attribute von Platform) erstellen und [!DNL Airship] mit Abwanderungsdaten erstellen, um hochgradig zielgerichtete Nachrichten an Benutzer mit dem Gold-Treuestatus zu senden, die in Las Vegas, NV leben und eine hohe Wahrscheinlichkeit für Abwanderung haben.
+Nutzen von Attributen aus Adobe Experience Platform zur weiteren Anreicherung [!DNL Airship] Profile und deren Kombination mit SDK oder [!DNL Airship] Prognosedaten. Ein Einzelhändler kann beispielsweise ein Segment mit Treuestatus und Standortdaten (Attribute aus Platform) erstellen und [!DNL Airship] Daten abwandern, um Nachrichten mit hoher Zielgruppenbestimmung an Benutzer mit dem Gold-Treuestatus zu senden, die in Las Vegas, NV leben und eine hohe Wahrscheinlichkeit für Abwanderungen haben.
 
 ## Mit Ziel verbinden {#connect}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Trägertoken]**: das Inhaber-Token, das Sie über das  [!DNL Airship] Dashboard generiert haben.
+* **[!UICONTROL Trägertoken]**: das Trägertoken, das Sie aus dem [!DNL Airship] Dashboard.
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels hilft.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für dieses Ziel ein.
-* **[!UICONTROL Domäne]**: Wählen Sie entweder ein US- oder ein EU-Rechenzentrum aus, je nachdem, welches  [!DNL Airship] Rechenzentrum für dieses Ziel gilt.
+* **[!UICONTROL Domäne]**: Wählen Sie entweder ein US- oder EU-Rechenzentrum aus, je nachdem, welche [!DNL Airship] -Rechenzentrum gilt für dieses Ziel.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
-[!DNL Airship] -Attribute können entweder für einen Kanal festgelegt werden, der die Geräteinstanz darstellt, z. B. iPhone, oder für einen benannten Benutzer, der alle Geräte eines Benutzers einer gemeinsamen Kennung wie einer Kunden-ID zuordnet. Wenn Sie E-Mail-Adressen mit normalem Text (ungehasht) als primäre Identität in Ihrem Schema haben, wählen Sie das E-Mail-Feld in Ihrem **[!UICONTROL Quellattribute]** aus und ordnen Sie es in der rechten Spalte unter **[!UICONTROL Zielidentitäten]** dem benannten Benutzer [!DNL Airship] zu, wie unten dargestellt.
+[!DNL Airship] -Attribute können entweder für einen Kanal festgelegt werden, der die Geräteinstanz darstellt, z. B. iPhone, oder für einen benannten Benutzer, der alle Geräte eines Benutzers einer gemeinsamen Kennung wie einer Kunden-ID zuordnet. Wenn Sie in Ihrem Schema als primäre Identität Nur-Text-E-Mail-Adressen (ungehasht) verwenden, wählen Sie das E-Mail-Feld in Ihrem **[!UICONTROL Quellattribute]** und zugeordnet werden [!DNL Airship] benannter Benutzer in der rechten Spalte unter **[!UICONTROL Target-Identitäten]**, wie unten dargestellt.
 
 ![Zuordnung von benannten Benutzern](../../assets/catalog/mobile-engagement/airship/mapping.png)
 
 Bei Kennungen, die einem Kanal zugeordnet werden sollen, d. h. einem Gerät, müssen Sie basierend auf der Quelle dem entsprechenden Kanal zuordnen. Die folgenden Abbildungen zeigen, wie zwei Zuordnungen erstellt werden:
 
-* IDFA iOS Advertising-ID für einen iOS-Kanal [!DNL Airship]
-* Attribut Adobe `fullName` des Attributs [!DNL Airship] &quot;Vollständiger Name&quot;
+* IDFA iOS Advertising-ID an eine [!DNL Airship] iOS-Kanal
+* Adobe `fullName` Attribut [!DNL Airship] Attribut &quot;Vollständiger Name&quot;
 
 >[!NOTE]
 >
->Verwenden Sie den benutzerfreundlichen Namen, der im Dashboard [!DNL Airship] angezeigt wird, wenn Sie das Zielfeld für Ihr Attribut-Mapping auswählen.
+>Verwenden Sie den benutzerfreundlichen Namen, der im [!DNL Airship] Dashboard bei der Auswahl des Zielfelds für Ihr Attribut-Mapping.
 
 **Zuordnungsidentität**
 
@@ -122,4 +133,4 @@ Wählen Sie das Zielattribut aus:
 
 ## Datennutzung und -verwaltung {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] Data Governance durchsetzt, finden Sie unter [Übersicht über Data Governance](../../../data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, siehe [Data Governance - Übersicht](../../../data-governance/home.md).

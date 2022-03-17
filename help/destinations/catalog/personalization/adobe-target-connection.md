@@ -3,10 +3,10 @@ keywords: Zielpersonalisierung; Bestimmungsort; Ziel der Erlebnisplattform; Adob
 title: Adobe Target-Verbindung
 description: Adobe Target ist eine Anwendung, die Echtzeit-KI-gestützte Personalisierungs- und Experimentierungsfunktionen für alle eingehenden Kundeninteraktionen über Websites, mobile Apps und mehr hinweg bietet.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '469'
-ht-degree: 8%
+source-wordcount: '530'
+ht-degree: 11%
 
 ---
 
@@ -26,9 +26,16 @@ Diese Integration basiert auf der [Adobe Experience Platform Web SDK](../../../e
 >
 >Vor der Erstellung [!DNL Adobe Target] Verbindung, lesen Sie die Anleitung zum [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](../../ui/configure-personalization-destinations.md). In diesem Handbuch werden die erforderlichen Konfigurationsschritte für die Personalisierungsfälle der gleichen Experience Platform und der nächsten Seite für mehrere Seitenkomponenten erläutert.
 
-## Exporttyp {#export-type}
+## Exportart und -frequenz {#export-type-frequency}
 
-**Profilanfrage** - Sie fordern alle Segmente an, die im Adobe Target-Ziel für ein einzelnes Profil zugeordnet sind.
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!DNL Profile request]** | Sie fordern alle Segmente an, die im Adobe Target-Ziel für ein einzelnes Profil zugeordnet sind. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Anwendungsfälle {#use-cases}
 

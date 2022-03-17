@@ -1,88 +1,99 @@
 ---
-title: Vorlage für Selbstbedienung der Dokumentation // Durch den Namen Ihres Ziels ersetzen
-description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen durch den Absatz im Übersichtsabschnitt
+title: Vorlage für Dokumentations-Self-Service // Ersetzen Sie durch den Namen Ihres Ziels.
+description: Verwenden Sie diese Vorlage, um eine öffentliche Dokumentation für Ihr Ziel im Adobe Experience Platform-Katalog zu erstellen. // Ersetzen Sie durch den Absatz im Abschnitt "Übersicht".
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '1066'
 ht-degree: 3%
 
 ---
 
 # YOURDESTINATION {#your-destination}
 
-*Wenn Sie diese Vorlage durchlaufen, ersetzen oder löschen Sie alle Absätze kursiv (beginnend mit dieser).*
+*Wenn Sie diese Vorlage durchlaufen, ersetzen oder löschen Sie alle kursiv gedruckten Absätze (beginnend mit dieser).*
 
-*Beginn durch Aktualisieren der Metadaten (Titel und Beschreibung) oben auf der Seite. Ignorieren Sie alle Instanzen von UICONTROL auf dieser Seite. Dieses Tag hilft unseren maschinellen Übersetzungsprozessen, die Seite korrekt in mehrere Sprachen zu übersetzen, die wir unterstützen. Wir fügen Ihrer Dokumentation Tags hinzu, nachdem Sie sie gesendet haben.*
+*Aktualisieren Sie zunächst die Metadaten (Titel und Beschreibung) oben auf der Seite. Bitte ignorieren Sie alle UICONTROL Instanzen auf dieser Seite. Dies ist ein Tag, das unseren maschinellen Übersetzungsprozessen hilft, die Seite korrekt in die verschiedenen Sprachen zu übersetzen, die wir unterstützen. Wir fügen Ihrer Dokumentation Tags hinzu, nachdem Sie sie gesendet haben.*
 
 ## Übersicht {#overview}
 
-*Geben Sie einen kurzen Überblick über Ihre Firma, einschließlich des Kundenwerts. Fügen Sie einen Link zu Ihrer Produktdokumentations-Homepage ein, um ihn weiter zu lesen.*
+*Geben Sie einen kurzen Überblick über Ihr Unternehmen, einschließlich des Nutzens, den es Kunden bietet. Fügen Sie einen Link zu Ihrer Homepage für die Produktdokumentation hinzu, um ihn weiter zu lesen.*
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde erstellt von *YOURDESTINATION* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an die zuständigen Behörden unter *Link oder E-Mail-Adresse einfügen, wo Sie für Aktualisierungen erreichbar sind*
+>Diese Dokumentationsseite wurde von der *YOURDESTINATION* Team. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an *Link oder E-Mail-Adresse einfügen, an die Sie zur Aktualisierung gelangen können*
 
 ## Voraussetzungen {#prerequisites}
 
-*hinzufügen Informationen in diesem Abschnitt über alles, was Kunden wissen müssen, bevor sie mit der Einrichtung des Ziels in der Adobe Experience Platform-Benutzeroberfläche beginnen. Hier geht es um:*
+*Fügen Sie in diesem Abschnitt Informationen zu allen Elementen hinzu, die Kunden kennen müssen, bevor sie mit der Einrichtung des Ziels in der Adobe Experience Platform-Benutzeroberfläche beginnen. Dabei kann es sich um Folgendes handeln:*
 
-* *muss einer Zulassungsliste hinzugefügt werden*
-* *Anforderungen für E-Mail-Hashing*
-* *alle Kontoangaben auf Ihrer Seite*
-* *wie Sie einen API-Schlüssel für die Verbindung mit Ihrer Plattform erhalten*
+* *einer Zulassungsliste hinzugefügt werden müssen*
+* *Anforderungen für das E-Mail-Hashing*
+* *alle Kontospezifikationen auf Ihrer Seite*
+* *Abrufen eines API-Schlüssels für die Verbindung mit Ihrer Plattform*
 
-*Wenn dies für Kunden von Nutzen wäre, können Sie einen Link zu Ihrer relevanten Dokumentation herstellen.*
+*Wenn dies für Kunden von Nutzen wäre, können Sie einen Link zu Ihrer relevanten Dokumentation erstellen.*
 
 ## Unterstützte Identitäten {#supported-identities}
 
-*hinzufügen Informationen in diesem Abschnitt über die von Ihrem Ziel unterstützten Identitäten. Wir haben die Tabelle mit einigen Standardwerten vorausgefüllt. Löschen Sie die Werte, die nicht für Ihr Ziel gelten, und alle Werte, die nicht vorausgefüllt sind.*
+*Fügen Sie in diesem Abschnitt Informationen zu den Identitäten hinzu, die von Ihrem Ziel unterstützt werden. Wir haben die Tabelle mit einigen Standardwerten vorausgefüllt. Löschen Sie die Werte, die nicht auf Ihr Ziel zutreffen, sowie alle Werte, die nicht vorausgefüllt sind.*
 
-*YOURDESTINATION* unterstützt die Aktivierung der Identitäten, die in der folgenden Tabelle beschrieben ist. Weitere Informationen [Identitäten](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
+*YOURDESTINATION* unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Weitere Informationen [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#getting-started).
 
-| Identität der Zielgruppe | Beschreibung | Zu beachten |
+| Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|
-| GAID | Google Advertising ID | Wählen Sie die GAID-Zielgruppe-Identität aus, wenn Ihre Quellkennung ein GAID-Namensraum ist. |
-| IDFA | Apple ID for Advertisers | Wählen Sie die IDFA-Zielgruppe-Identität aus, wenn Ihre Quellkennung ein IDFA-Namensraum ist. |
-| ECID | Experience Cloud ID | Ein Namensraum, der die ECID darstellt. Auf diesen Namensraum können auch die folgenden Aliasse verweisen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Siehe folgendes Dokument: [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) für weitere Informationen. |
-| phone_sha256 | Telefonnummern mit Hash-Algorithmus SHA256 | Sowohl einfache Textnachrichten als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungelöste Attribute enthält, überprüfen Sie die **[!UICONTROL Transformation anwenden]** Option [!DNL Platform] Daten auf Aktivierung automatisch hash. |
-| email_lc_sha256 | E-Mail-Adressen mit SHA256-Algorithmus | Sowohl reine Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungelöste Attribute enthält, überprüfen Sie die **[!UICONTROL Transformation anwenden]** Option [!DNL Platform] Daten auf Aktivierung automatisch hash. |
-| extern_id | Benutzerspezifische Benutzer-IDs | Wählen Sie diese Zielgruppe-Identität aus, wenn Ihre Quellkennung ein benutzerdefinierter Namensraum ist. |
+| GAID | Google Advertising ID | Wählen Sie die GAID-Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
+| IDFA | Apple ID für Advertiser | Wählen Sie die IDFA-Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
+| ECID | Experience Cloud ID | Ein Namespace, der die ECID darstellt. Dieser Namespace kann auch durch die folgenden Alias referenziert werden: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Siehe folgendes Dokument unter [ECID](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) für weitere Informationen. |
+| phone_sha256 | Telefonnummern, die mit dem SHA256-Algorithmus gehasht wurden | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| extern_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Exporttyp {#export-type}
+## Exportart und -frequenz {#export-type-frequency}
 
-**Segmentexport** - Sie exportieren alle Segmentmitglieder (Audience) mit den Bezeichnern (Name, Telefonnummer oder andere), die in der *YOURDESTINATION* Ziel.
+*Behalten Sie in der Tabelle nur die Zeilen bei, die Ihrem Ziel entsprechen. Sie sollten eine Zeile für den Exporttyp und eine Zeile für die Exporthäufigkeit haben. Löschen Sie die Werte, die nicht auf Ihr Ziel zutreffen.*
 
-## Anwendungsfälle
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
 
-Um Ihnen ein besseres Verständnis zu vermitteln, wie und wann Sie *YOURDESTINATION* Ziel, hier sind Beispielverwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer oder andere), die im *YOURDESTINATION* Ziel. |
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname), wie im Bildschirm Profilattribute im [Zielaktivierungs-Workflow](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+| Exporthäufigkeit | **[!UICONTROL Batch]** | Batch-Ziele exportieren Dateien in Schritten von drei, sechs, acht, zwölf oder vierundzwanzig Stunden auf nachgelagerte Plattformen. Mehr dazu [Batch-dateibasierte Ziele](/help/destinations/destination-types.md#file-based). |
 
-### Fall Nr. 1 verwenden
+{style=&quot;table-layout:auto&quot;}
+
+## Anwendungsfälle {#use-cases}
+
+Um Ihnen zu helfen, besser zu verstehen, wie und wann Sie die *YOURDESTINATION* Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit diesem Ziel lösen können.
+
+### Anwendungsfall 1
 
 *Für mobile Messaging-Plattformen:*
 
-*Eine Home-Miet- und Verkaufsplattform möchte mobile Benachrichtigungen an Android- und iOS-Geräte der Kunden senden, um ihnen mitzuteilen, dass es 100 aktualisierte Einträge in dem Bereich gibt, in dem sie zuvor nach einer Miete gesucht haben.*
+*Eine Heimmiet- und Verkaufsplattform möchte Mobile-Benachrichtigungen an die Android- und iOS-Geräte von Kunden senden, um ihnen mitzuteilen, dass es 100 aktualisierte Listen in dem Bereich gibt, in dem sie zuvor nach einer Vermietung gesucht haben.*
 
-### Fall Nr. 2 verwenden
+### Anwendungsfall 2
 
 *Für soziale Netzwerkplattformen:*
 
-*Eine sportliche Bekleidungsmarke möchte bestehende Kunden über ihre Social-Media-Konten erreichen. Die Bekleidungsmarke kann E-Mail-Adressen von ihrem eigenen CRM nach Adobe Experience Platform erfassen, Segmente aus ihren eigenen Offline-Daten aufbauen und diese Segmente an YOURDESTINATION senden, um Anzeigen in den Social-Media-Feeds ihrer Kunden anzuzeigen.*
+*Eine Marke für Sportbekleidung möchte bestehende Kunden über ihre Social-Media-Konten erreichen. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in Adobe Experience Platform erfassen, Segmente aus ihren eigenen Offline-Daten erstellen und diese Segmente an YOURDESTINATION senden, um Anzeigen in den Social-Media-Feeds ihrer Kunden anzuzeigen.*
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die in der [Übungen zur Zielkonfiguration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
+Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html).
 
 ### Verbindungsparameter {#parameters}
 
-Während [einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) an diesem Ziel angeben, müssen Sie die folgenden Informationen angeben:
+while [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
-*hinzufügen die Felder, die Kunden bei der Konfiguration eines neuen Ziels ausfüllen müssen. Diese Felder sind zielspezifisch und hängen von Ihrer Konfiguration im Ziel-SDK ab. Die Felder Ihres Ziels dürfen nicht mit denen im Folgenden übereinstimmen.*
+*Fügen Sie die Felder hinzu, die Kunden beim Konfigurieren eines neuen Ziels ausfüllen müssen. Diese Felder sind zielspezifisch und hängen von Ihrer Konfiguration in Destination SDK ab. Die Felder Ihres Ziels entsprechen möglicherweise nicht den unten aufgeführten.*
 
-* **[!UICONTROL Name]**: Ein Name, unter dem Sie dieses Ziel in der Zukunft erkennen.
-* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen hilft, dieses Ziel in der Zukunft zu identifizieren.
+* **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
+* **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
 * **[!UICONTROL Konto-ID]**: Ihre *YOURDESTINATION* Konto-ID.
 
 
@@ -115,9 +126,9 @@ Während [einrichten](https://experienceleague.adobe.com/docs/experience-platfor
 
 -->
 
-## Segmente zu diesem Ziel aktivieren {#activate}
+## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Gelesen [Profil und Segmente für Streaming-Segmentexportziele aktivieren](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) für Anweisungen zum Aktivieren von Audiencen-Segmenten für dieses Ziel.
+Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 <!--
 
@@ -152,7 +163,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Exportierte Daten {#exported-data}
 
-*hinzufügen einen Hinweis darüber, wie Daten an Ihr Ziel exportiert werden. Dies würde dem Kunden dabei helfen, sicherzustellen, dass er sich korrekt in Ihr Ziel integriert hat. Sie können z. B. eine JSON-Beispieldatei wie die unten angegebene bereitstellen.*
+*Fügen Sie einen Hinweis hinzu, wie Daten an Ihr Ziel exportiert werden. Dadurch kann der Kunde sicherstellen, dass er korrekt in Ihr Ziel integriert ist. Sie können beispielsweise eine JSON-Beispieldatei wie die unten stehende bereitstellen.*
 
 ```
 {
@@ -192,9 +203,9 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 }
 ```
 
-## Nutzung und Verwaltung von Daten {#data-usage-governance}
+## Datennutzung und -verwaltung {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] Ziele entsprechen bei der Verarbeitung Ihrer Daten den Datenschutzrichtlinien. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Datenverwaltung, lesen Sie die [Datenverwaltung - Überblick](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alle [!DNL Adobe Experience Platform] Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, lesen Sie die [Data Governance - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Weitere Ressourcen {#additional-resources}
 

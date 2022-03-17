@@ -3,10 +3,10 @@ keywords: Google Ad Manager;Google Ad Manager;DoubleClick;DoubleClick AdX;Double
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '653'
-ht-degree: 23%
+source-wordcount: '718'
+ht-degree: 22%
 
 ---
 
@@ -37,15 +37,24 @@ Beachten Sie die folgenden Details, die spezifisch für [!DNL Google Ad Manager]
 | MAID | Microsoft Advertising-ID. Diese ID identifiziert Geräte mit Windows 10 eindeutig. |  |
 | Amazon Fire TV ID | Diese ID identifiziert Amazon Fire TVs eindeutig. |  |
 
-## Exporttyp {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**Segmentexport** - Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel.
+## Exportart und -frequenz {#export-type-frequency}
 
-## Voraussetzungen
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Google-Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
+
+## Voraussetzungen {#prerequisites}
 
 Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] und nicht aktiviert haben, [ID-Synchronisierungsfunktion](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) Wenden Sie sich in der Vergangenheit (mit Audience Manager oder anderen Experience Cloud-ID-Diensten) an Adobe Consulting oder die Kundenunterstützung, um ID-Synchronisierungen zu aktivieren. Wenn Sie zuvor [!DNL Google] -Integrationen in Audience Manager werden die von Ihnen eingerichteten ID-Synchronisierungen auf Platform übertragen.
 
-## Zulassungsliste
+### Zulassungsauflistung {#allow-listing}
 
 >[!NOTE]
 >
@@ -82,6 +91,6 @@ while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie d
 
 Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
-## Exportierte Daten
+## Exportierte Daten {#exported-data}
 
 So überprüfen Sie, ob die Daten erfolgreich in die [!DNL Google Ad Manager] Ziel, überprüfen Sie Ihre [!DNL Google Ad Manager] -Konto. Bei erfolgreicher Aktivierung werden Zielgruppen in Ihr Konto eingetragen.

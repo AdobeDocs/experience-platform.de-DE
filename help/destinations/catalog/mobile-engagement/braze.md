@@ -3,10 +3,10 @@ keywords: mobil; einatmen; Messaging;
 title: Bremsverbindung
 description: Braze ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 3d7151645bc90a2dcbd6b31251ed459029ab77c9
+source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 1%
+source-wordcount: '824'
+ht-degree: 2%
 
 ---
 
@@ -14,25 +14,25 @@ ht-degree: 1%
 
 ## Übersicht {#overview}
 
-Mit dem [!DNL Braze]-Ziel können Sie Profildaten an [!DNL Braze] senden.
+Die [!DNL Braze] Das Ziel hilft beim Senden von Profildaten an [!DNL Braze].
 
 [!DNL Braze] ist eine umfassende Kundeninteraktionsplattform, die relevante und unvergessliche Erlebnisse zwischen Kunden und den Marken, die sie lieben, ermöglicht.
 
-Um Profildaten an [!DNL Braze] zu senden, müssen Sie zunächst eine Verbindung zum Ziel herstellen.
+So senden Sie Profildaten an [!DNL Braze], müssen Sie zunächst eine Verbindung zum Ziel herstellen.
 
 ## Zielspezifikationen {#specifics}
 
-Beachten Sie die folgenden Details, die speziell für das Ziel [!DNL Braze] gelten:
+Beachten Sie die folgenden Details, die spezifisch für die [!DNL Braze] Ziel:
 
-* [!DNL Adobe Experience Platform] -Segmente werden  [!DNL Braze] unter dem - `AdobeExperiencePlatformSegments` Attribut nach exportiert.
+* [!DNL Adobe Experience Platform] Segmente werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
 
 >[!NOTE]
 >
->Beachten Sie, dass das Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] zu einem Anstieg des [!DNL Braze] Datenpunktverbrauchs führen kann. Wenden Sie sich an Ihren [!DNL Braze]-Kundenbetreuer, bevor Sie zusätzliche benutzerdefinierte Attribute senden.
+>Beachten Sie beim Senden zusätzlicher benutzerdefinierter Attribute an [!DNL Braze] kann zu einem Anstieg Ihrer [!DNL Braze] Datenpunktverbrauch. Wenden Sie sich an Ihre [!DNL Braze] Kundenbetreuer vor dem Senden zusätzlicher benutzerdefinierter Attribute.
 
 ## Anwendungsfälle {#use-cases}
 
-Als Marketer möchte ich Benutzer in einem Ziel für mobile Interaktionen ansprechen, wobei Segmente in [!DNL Adobe Experience Platform] integriert sind. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse basierend auf Attributen aus ihren [!DNL Adobe Experience Platform]-Profilen bereitstellen, sobald Segmente und Profile in [!DNL Adobe Experience Platform] aktualisiert werden.
+Als Marketing-Experte möchte ich Benutzer in einem Ziel für mobile Interaktionen ansprechen, wobei Segmente in [!DNL Adobe Experience Platform]. Darüber hinaus möchte ich ihnen personalisierte Erlebnisse basierend auf Attributen aus ihren [!DNL Adobe Experience Platform] Profile, sobald Segmente und Profile in [!DNL Adobe Experience Platform].
 
 ## Unterstützte Identitäten {#supported-identities}
 
@@ -40,68 +40,76 @@ Als Marketer möchte ich Benutzer in einem Ziel für mobile Interaktionen anspre
 
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|
-| external_id | Benutzerdefinierte [!DNL Braze]-Kennung, die die Zuordnung einer beliebigen Identität unterstützt. | Sie können jede [Identität](../../../identity-service/namespaces.md) an das [!DNL Braze]-Ziel senden, sofern Sie sie [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation) zuordnen. |
+| external_id | Benutzerdefiniert [!DNL Braze] Kennung, die die Zuordnung einer beliebigen Identität unterstützt. | Sie können [identity](../../../identity-service/namespaces.md) der [!DNL Braze] Ziel, solange Sie es dem [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
-## Exporttyp {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Profile-based]** - Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.
-[!DNL Adobe Experience Platform] -Segmente werden  [!DNL Braze] unter dem - `AdobeExperiencePlatformSegments` Attribut nach exportiert.
+## Exportart und -frequenz {#export-type-frequency}
+
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Profilbasiert]** | Sie exportieren alle Mitglieder eines Segments zusammen mit den gewünschten Schemafeldern (z. B.: E-Mail-Adresse, Telefonnummer, Nachname) und/oder Identitäten, entsprechend Ihrer Feldzuordnung.[!DNL Adobe Experience Platform] Segmente werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Braze-Konto-Token]**: Das ist dein  [!DNL Braze] [!DNL API] Schlüssel. Ausführliche Anweisungen zum Abrufen Ihres [!DNL API]-Schlüssels finden Sie hier: [REST API Key Overview](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Braze-Konto-Token]**: Dies ist Ihr [!DNL Braze] [!DNL API] Schlüssel. Detaillierte Anweisungen zum Abrufen Ihrer [!DNL API] Schlüssel hier: [REST-API-Schlüssel - Überblick](https://www.braze.com/docs/api/api_key/).
 * **[!UICONTROL Name]**: Geben Sie einen Namen ein, mit dem Sie dieses Ziel in Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung ein, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
-* **[!UICONTROL Endpunktinstanz]**: Fragen Sie Ihren  [!DNL Braze] Kundenbetreuer, welche Endpunktinstanz Sie verwenden sollten.
+* **[!UICONTROL Endpunktinstanz]**: fragen Sie [!DNL Braze] repräsentativ ist, welche Endpunktinstanz Sie verwenden sollten.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
 ## Zuordnungsüberlegungen {#mapping-considerations}
 
-Um Ihre Zielgruppendaten korrekt von [!DNL Adobe Experience Platform] an das [!DNL Braze]-Ziel zu senden, müssen Sie den Schritt für die Feldzuordnung durchlaufen.
+So senden Sie die Zielgruppendaten ordnungsgemäß von [!DNL Adobe Experience Platform] der [!DNL Braze] Ziel, müssen Sie den Schritt zur Feldzuordnung durchlaufen.
 
-Die Zuordnung besteht darin, eine Verknüpfung zwischen den Schemafeldern [!DNL Experience Data Model] (XDM) in Ihrem [!DNL Platform]-Konto und den entsprechenden Entsprechungen zum Zielziel zu erstellen.
+Mapping besteht aus der Erstellung einer Verknüpfung zwischen [!DNL Experience Data Model] (XDM)-Schemafelder in Ihrer [!DNL Platform] und ihre entsprechenden Entsprechungen vom Zielort.
 
-Gehen Sie wie folgt vor, um Ihre XDM-Felder den Zielfeldern [!DNL Braze] richtig zuzuordnen:
+So ordnen Sie Ihre XDM-Felder korrekt der [!DNL Braze] Führen Sie die folgenden Schritte aus:
 
-Klicken Sie im Schritt [!UICONTROL Mapping] auf **[!UICONTROL Neue Zuordnung hinzufügen]**.
+Im [!UICONTROL Zuordnung] Schritt, klicken Sie auf **[!UICONTROL Neues Mapping hinzufügen]**.
 
 ![Zielzuordnung löschen](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Klicken Sie im Abschnitt [!UICONTROL Quellfeld] auf die Pfeilschaltfläche neben dem leeren Feld.
+Im [!UICONTROL Quellfeld] klicken Sie auf die Pfeilschaltfläche neben dem leeren Feld.
 
 ![Zielquellenzuordnung löschen](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
-Im Fenster [!UICONTROL Quellfeld] auswählen können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
-* [!UICONTROL Attribute auswählen]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema einem  [!DNL Braze] Attribut zuzuordnen.
+Im [!UICONTROL Quellfeld auswählen] -Fenster können Sie zwischen zwei Kategorien von XDM-Feldern wählen:
+* [!UICONTROL Attribute auswählen]: Verwenden Sie diese Option, um ein bestimmtes Feld aus Ihrem XDM-Schema einem [!DNL Braze] -Attribut.
 
 ![Quell-Attribut für Zielzuordnung ausblenden](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Identitäts-Namespace] auswählen: Verwenden Sie diese Option, um einen  [!DNL Platform] Identitäts-Namespace einem  [!DNL Braze] Namespace zuzuordnen.
+* [!UICONTROL Identitäts-Namespace auswählen]: Verwenden Sie diese Option, um eine [!DNL Platform] Identitäts-Namespace in eine [!DNL Braze] Namespace.
 
 ![Braze Destination Mapping Source Namespace](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Wählen Sie das Quellfeld aus und klicken Sie dann auf **[!UICONTROL Auswählen]**.
+Wählen Sie das Quellfeld aus und klicken Sie auf **[!UICONTROL Auswählen]**.
 
-Klicken Sie im Abschnitt [!UICONTROL Zielfeld] auf das Zuordnungssymbol rechts neben dem Feld.
+Im [!UICONTROL Zielfeld] klicken Sie auf das Zuordnungssymbol rechts neben dem Feld.
 
 ![Zielgruppen-Mapping für Braze](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-Im Fenster [!UICONTROL Zielfeld] auswählen können Sie zwischen zwei Kategorien von Zielfeldern wählen:
-* [!UICONTROL Identitäts-Namespace] auswählen: Verwenden Sie diese Option, um  [!DNL Platform] Identitäts-Namespaces  [!DNL Braze] Identitäts-Namespaces zuzuordnen.
-* [!UICONTROL Wählen Sie benutzerdefinierte Attribute] aus: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten  [!DNL Braze] Attributen zuzuordnen, die Sie in Ihrem  [!DNL Braze] Konto definiert haben. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in  [!DNL Braze]umzubenennen. Wenn Sie beispielsweise ein `lastName` XDM-Attribut einem benutzerdefinierten `Last_Name`-Attribut in [!DNL Braze] zuordnen, wird das `Last_Name`-Attribut in [!DNL Braze] erstellt, sofern es noch nicht vorhanden ist, und das `lastName`-XDM-Attribut zugeordnet.
+Im [!UICONTROL Zielgruppenfeld auswählen] -Fenster können Sie zwischen zwei Kategorien von Zielfeldern wählen:
+* [!UICONTROL Identitäts-Namespace auswählen]: Verwenden Sie diese Option für die Zuordnung [!DNL Platform] Identitäts-Namespaces zu [!DNL Braze] Identitäts-Namespaces.
+* [!UICONTROL Benutzerdefinierte Attribute auswählen]: Verwenden Sie diese Option, um XDM-Attribute benutzerdefinierten Attributen zuzuordnen [!DNL Braze] -Attribute, die Sie in Ihren [!DNL Braze] -Konto. <br> Sie können diese Option auch verwenden, um vorhandene XDM-Attribute in [!DNL Braze]. Sie können beispielsweise eine `lastName` XDM-Attribut zu einem benutzerdefinierten `Last_Name` -Attribut in [!DNL Braze], erstellt die `Last_Name` -Attribut in [!DNL Braze], falls noch nicht vorhanden, und ordnen Sie die `lastName` XDM-Attribut.
 
 ![Zielgruppen-Mapping-Felder von Braze Destination](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Wählen Sie Ihr Zielfeld aus und klicken Sie dann auf **[!UICONTROL Auswählen]**.
+Wählen Sie Ihr Zielfeld aus und klicken Sie auf **[!UICONTROL Auswählen]**.
 
 Ihr Feld-Mapping sollte jetzt in der Liste angezeigt werden.
 
@@ -111,7 +119,7 @@ Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die vorherigen Schritte.
 
 ## Zuordnungsbeispiel {#mapping-example}
 
-Angenommen, Ihr XDM-Profilschema und Ihre [!DNL Braze]-Instanz enthalten die folgenden Attribute und Identitäten:
+Angenommen, Ihr XDM-Profilschema und Ihr [!DNL Braze] -Instanz enthält die folgenden Attribute und Identitäten:
 
 |  | XDM-Profilschema | [!DNL Braze] Instanz |
 |---|---|---|
@@ -124,8 +132,8 @@ Die korrekte Zuordnung würde wie folgt aussehen:
 
 ## Exportierte Daten {#exported-data}
 
-Um zu überprüfen, ob die Daten erfolgreich an das [!DNL Braze]-Ziel exportiert wurden, überprüfen Sie Ihr [!DNL Braze]-Konto. [!DNL Adobe Experience Platform] -Segmente werden  [!DNL Braze] unter dem - `AdobeExperiencePlatformSegments` Attribut nach exportiert.
+So überprüfen Sie, ob die Daten erfolgreich in die [!DNL Braze] Ziel, überprüfen Sie Ihre [!DNL Braze] -Konto. [!DNL Adobe Experience Platform] Segmente werden nach [!DNL Braze] unter `AdobeExperiencePlatformSegments` -Attribut.
 
 ## Datennutzung und -verwaltung {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen dazu, wie [!DNL Adobe Experience Platform] Data Governance durchsetzt, finden Sie unter [Übersicht über Data Governance](../../../data-governance/home.md).
+Alle [!DNL Adobe Experience Platform] Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, siehe [Data Governance - Übersicht](../../../data-governance/home.md).

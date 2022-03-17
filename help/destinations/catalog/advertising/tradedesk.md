@@ -3,10 +3,10 @@ keywords: Werbung; die Geschäftsstelle; Werbefachgeschäft
 title: Verbindung zum Trade Desk
 description: Das Trade Desk ist eine Self-Service-Plattform für Anzeigenkäufer, mit der sie digitale Kampagnen für Zielgruppen und Zielgruppen aus Display-, Video- und mobilen Inventarquellen ausführen können.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 169a7ad1adfa3282bd0503ce277373b654ec57cd
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 2%
+source-wordcount: '552'
+ht-degree: 4%
 
 ---
 
@@ -34,9 +34,18 @@ Als Marketer möchte ich Segmente verwenden können, die aus [!DNL Trade Desk ID
 | IDFA | [!DNL Apple ID for Advertisers] |
 | Handelsschalter-ID | Advertiser-ID in der Trade Desk-Plattform |
 
-## Exporttyp {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**[!DNL Segment export]** - Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Ziel.
+## Exportart und -frequenz {#export-type-frequency}
+
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) in das Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Voraussetzungen {#prerequisites}
 

@@ -3,9 +3,9 @@ keywords: Google-Kundenabgleich;Google-Kundenabgleich;Google-Kundenabgleich
 title: Google-Kundenabgleich-Verbindung
 description: Mit Google-Kundenabgleich können Sie Ihre Online- und Offline-Daten verwenden, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google wie Suche, Shopping, Gmail und YouTube zu erreichen und erneut mit ihnen zu interagieren.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d0112cb26fcb85ad91ba403f81ee7f11d0889046
+source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1623'
 ht-degree: 1%
 
 ---
@@ -14,76 +14,85 @@ ht-degree: 1%
 
 ## Übersicht {#overview}
 
-[Google Customer ](https://support.google.com/google-ads/answer/6379332?hl=en) Matchets, mit denen Sie Ihre Online- und Offline-Daten nutzen, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut zu kontaktieren, z. B.:  [!DNL Search],  [!DNL Shopping],  [!DNL Gmail] und  [!DNL YouTube].
+[Google-Kundenabgleich](https://support.google.com/google-ads/answer/6379332?hl=en) ermöglicht Ihnen die Verwendung Ihrer Online- und Offline-Daten, um Ihre Kunden über die eigenen und betriebenen Eigenschaften von Google zu erreichen und erneut mit ihnen zu interagieren, z. B.: [!DNL Search], [!DNL Shopping], [!DNL Gmail]und [!DNL YouTube].
 
 ![Google Customer Match-Ziel in der Benutzeroberfläche von Adobe Experience Platform](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
-## Anwendungsfälle
+## Anwendungsfälle {#use-cases}
 
-Um Ihnen zu helfen, besser zu verstehen, wie und wann das [!DNL Google Customer Match]-Ziel verwendet werden sollte, finden Sie hier Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
+So können Sie besser verstehen, wie und wann die Variable [!DNL Google Customer Match] Ziel, hier finden Sie Beispielanwendungsfälle, die Adobe Experience Platform-Kunden mit dieser Funktion lösen können.
 
 ### Anwendungsfall 1
 
-Eine Marke für Sportbekleidung möchte Bestandskunden über [!DNL Google Search] und [!DNL Google Shopping] erreichen, um Angebote und Artikel auf der Grundlage ihrer früheren Käufe und des Browserverlaufs zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in die Experience Platform aufnehmen und aus ihren eigenen Offline-Daten Segmente erstellen. Anschließend können sie diese Segmente an [!DNL Google Customer Match] senden, um sie über [!DNL Search] und [!DNL Shopping] hinweg zu verwenden und so ihre Werbeausgaben zu optimieren.
+Eine Sportbekleidungsmarke möchte bestehende Kunden über erreichen [!DNL Google Search] und [!DNL Google Shopping] , um Angebote und Artikel basierend auf ihren bisherigen Käufen und dem Browser-Verlauf zu personalisieren. Die Bekleidungsmarke kann E-Mail-Adressen aus ihrem eigenen CRM-System in die Experience Platform aufnehmen und aus ihren eigenen Offline-Daten Segmente erstellen. Anschließend können sie diese Segmente an senden [!DNL Google Customer Match] verwendet werden [!DNL Search] und [!DNL Shopping], wodurch ihre Werbeausgaben optimiert werden.
 
 ### Anwendungsfall 2
 
 Ein renommiertes Technologieunternehmen startete ein neues Telefon. Um dieses neue Telefonmodell zu bewerben, möchten sie Kunden, die Inhaber früherer Modelle ihrer Telefone sind, für die neuen Funktionen des Telefons sensibilisieren.
 
-Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Kennungen. Segmente werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen. Anschließend werden Segmente an [!DNL Google Customer Match] gesendet, sodass das Unternehmen aktuelle Kunden, Kunden, die ältere Telefonmodelle besitzen, und ähnliche Kunden mit [!DNL YouTube] ansprechen kann.
+Um die Veröffentlichung zu bewerben, laden sie E-Mail-Adressen aus ihrer CRM-Datenbank in Experience Platform hoch und verwenden dabei die E-Mail-Adressen als Kennungen. Segmente werden basierend auf Kunden erstellt, die ältere Telefonmodelle besitzen. Anschließend werden Segmente an gesendet [!DNL Google Customer Match], damit das Unternehmen aktuelle Kunden, Kunden, die Inhaber älterer Telefonmodelle sind, und ähnliche Kunden in ansprechen kann [!DNL YouTube].
 
-## Data Governance für [!DNL Google Customer Match]-Ziele {#data-governance}
+## Data Governance für [!DNL Google Customer Match] Ziele {#data-governance}
 
-Für einige Ziele in der Experience Platform gelten bestimmte Regeln und Pflichten für Daten, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Data Governance-Tools, mit denen Sie einige dieser Datennutzungsverpflichtungen verwalten können. [Erfahren Sie ](../../../data-governance/labels/overview.md) mehr über Data Governance-Tools und -Richtlinien.
+Für einige Ziele in der Experience Platform gelten bestimmte Regeln und Pflichten für Daten, die an die Zielplattform gesendet oder von dieser empfangen werden. Sie sind dafür verantwortlich, die Einschränkungen und Pflichten Ihrer Daten zu verstehen und zu verstehen, wie Sie diese Daten in Adobe Experience Platform und der Zielplattform verwenden. Adobe Experience Platform bietet Data Governance-Tools, mit denen Sie einige dieser Datennutzungsverpflichtungen verwalten können. [Weitere Infos](../../../data-governance/labels/overview.md) über Data Governance-Tools und -Richtlinien.
 
 ## Unterstützte Identitäten {#supported-identities}
 
-[!DNL Google Customer Match] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Erfahren Sie mehr über [identities](/help/identity-service/namespaces.md).
+[!DNL Google Customer Match] unterstützt die Aktivierung der in der folgenden Tabelle beschriebenen Identitäten. Weitere Informationen [identities](/help/identity-service/namespaces.md).
 
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 |---|---|---|
 | GAID | Google Advertising ID | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein GAID-Namespace ist. |
 | IDFA | Apple ID für Advertiser | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein IDFA-Namespace ist. |
-| phone_sha256_e.164 | Telefonnummern im E164-Format, gehasht mit dem SHA256-Algorithmus | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für einfache Text- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
-| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Zuordnung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| phone_sha256_e.164 | Telefonnummern im E164-Format, gehasht mit dem SHA256-Algorithmus | Sowohl einfache als auch SHA256-Hash-Telefonnummern werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Übereinstimmung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Klartext- bzw. Hash-Telefonnummern. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
+| email_lc_sha256 | E-Mail-Adressen, die mit dem SHA-256-Algorithmus gehasht wurden | Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experience Platform unterstützt. Befolgen Sie die Anweisungen im Abschnitt [Anforderungen an die ID-Übereinstimmung](#id-matching-requirements-id-matching-requirements) und verwenden Sie die entsprechenden Namespaces für Nur-Text- bzw. Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash. |
 | user_id | Benutzerdefinierte Benutzer-IDs | Wählen Sie diese Zielidentität aus, wenn Ihre Quellidentität ein benutzerdefinierter Namespace ist. |
 
-## Exporttyp {#export-type}
+{style=&quot;table-layout:auto&quot;}
 
-**Segmentexport** : Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im  [!DNL Google Customer Match] Ziel verwendet werden.
+## Exportart und -frequenz {#export-type-frequency}
+
+Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten stehenden Tabelle.
+
+| Element | Typ | Anmerkungen |
+---------|----------|---------|
+| Exporttyp | **[!UICONTROL Segmentexport]** | Sie exportieren alle Mitglieder eines Segments (Zielgruppe) mit den IDs (Name, Telefonnummer und andere), die im [!DNL Google Customer Match] Ziel. |
+| Exporthäufigkeit | **[!UICONTROL Streaming]** | Streaming-Ziele sind &quot;immer auf&quot;-API-basierte Verbindungen. Sobald ein Profil in Experience Platform auf der Grundlage einer Segmentbewertung aktualisiert wird, sendet der Connector das Update nachgelagert an die Zielplattform. Mehr dazu [Streaming-Ziele](/help/destinations/destination-types.md#streaming-destinations). |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## [!DNL Google Customer Match] Kontovoraussetzungen {#google-account-prerequisites}
 
-Bevor Sie ein [!DNL Google Customer Match]-Ziel in Experience Platform einrichten, sollten Sie die Google-Richtlinie zur Verwendung von [!DNL Customer Match] lesen und befolgen, wie in der [Google-Support-Dokumentation](https://support.google.com/google-ads/answer/6299717) beschrieben.
+Vor der Einrichtung einer [!DNL Google Customer Match] Ziel in Experience Platform lesen und beachten Sie die Google-Richtlinie zur Verwendung von [!DNL Customer Match], die im Abschnitt [Dokumentation zur Google-Unterstützung](https://support.google.com/google-ads/answer/6299717).
 
-Stellen Sie als Nächstes sicher, dass Ihr [!DNL Google]-Konto für eine [!DNL Standard] oder eine höhere Berechtigungsebene konfiguriert ist. Weitere Informationen finden Sie in der [Google Ads-Dokumentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
+Stellen Sie als Nächstes sicher, dass Ihre [!DNL Google] -Konto für eine [!DNL Standard] oder einer höheren Berechtigungsebene. Siehe [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) für Details.
 
 ### Zulassungsliste {#allowlist}
 
-Bevor Sie das [!DNL Google Customer Match]-Ziel in Experience Platform erstellen, stellen Sie sicher, dass Ihr [!DNL Google Ads]-Konto die [Google-Kundenübereinstimmungsrichtlinie](https://support.google.com/google-ads/answer/6299717/customer-match-policy) erfüllt.
+Vor der Erstellung [!DNL Google Customer Match] Ziel in Experience Platform, stellen Sie sicher, dass Ihre [!DNL Google Ads] das Konto erfüllt [Google-Richtlinie zur Kundenabstimmung](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
 Kunden mit kompatiblen Konten werden von Google automatisch auf die Zulassungsliste gesetzt.
 
 ## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
-[!DNL Google] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher können die für [!DNL Google Customer Match] aktivierten Zielgruppen von *Hash*-Identifikatoren wie E-Mail-Adressen oder Telefonnummern abgeleitet werden.
+[!DNL Google] erfordert, dass keine personenbezogenen Daten (PII) klar übermittelt werden. Daher werden die Zielgruppen für [!DNL Google Customer Match] kann deaktiviert werden *Hash* Kennungen wie E-Mail-Adressen oder Telefonnummern.
 
 Abhängig vom Typ der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen.
 
-## Hash-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
+### Hash-Anforderungen für Telefonnummern {#phone-number-hashing-requirements}
 
 Es gibt zwei Methoden zum Aktivieren von Telefonnummern in [!DNL Google Customer Match]:
 
-* **Rohe Telefonnummern** erfassen: Sie können rohe Telefonnummern im  [!DNL E.164] Format in aufnehmen und  [!DNL Platform]werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in den Namespace `Phone_E.164` aufzunehmen.
-* **Hash-Telefonnummern** erfassen: Sie können Ihre Telefonnummern vorab hash, bevor Sie sie in  [!DNL Platform]aufnehmen. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in den Namespace `PHONE_SHA256_E.164` aufzunehmen.
+* **Rohe Telefonnummern erfassen**: Sie können rohe Telefonnummern in der [!DNL E.164] in [!DNL Platform]und sie werden bei Aktivierung automatisch gehasht. Wenn Sie diese Option wählen, achten Sie darauf, Ihre rohen Telefonnummern immer in die `Phone_E.164` Namespace.
+* **Hash-Telefonnummern erfassen**: Sie können Ihre Telefonnummern vor der Erfassung in [!DNL Platform]. Wenn Sie diese Option wählen, achten Sie darauf, Ihre Hash-Telefonnummern immer in die `PHONE_SHA256_E.164` Namespace.
 
 >[!NOTE]
 >
->Telefonnummern, die in den Namespace `Phone` aufgenommen werden, können in [!DNL Google Customer Match] nicht aktiviert werden.
+>Telefonnummern, die in die `Phone` Namespace kann nicht in aktiviert werden [!DNL Google Customer Match].
 
-## Anforderungen an das E-Mail-Hashing {#hashing-requirements}
+### Anforderungen an das E-Mail-Hashing {#hashing-requirements}
 
-Sie können E-Mail-Adressen vor der Aufnahme in Adobe Experience Platform hash-Adressen oder in der Experience Platform eindeutige E-Mail-Adressen verwenden und [!DNL Platform] bei Aktivierung hash-Adressen einrichten.
+Sie können E-Mail-Adressen hash, bevor Sie sie in Adobe Experience Platform aufnehmen, oder eindeutige E-Mail-Adressen in Experience Platform verwenden und [!DNL Platform] Hash sie bei Aktivierung.
 
 Weitere Informationen zu den Hash-Anforderungen von Google und anderen Aktivierungsbeschränkungen finden Sie in den folgenden Abschnitten der Google-Dokumentation:
 
@@ -93,13 +102,13 @@ Weitere Informationen zu den Hash-Anforderungen von Google und anderen Aktivieru
 * [Kundenabgleich mit Mobilgeräte-IDs](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
 
 
-Weitere Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie unter [Batch-Erfassung - Übersicht](../../../ingestion/batch-ingestion/overview.md) und [Streaming-Erfassung - Übersicht](../../../ingestion/streaming-ingestion/overview.md).
+Informationen zur Aufnahme von E-Mail-Adressen in Experience Platform finden Sie in der [Batch-Erfassung - Übersicht](../../../ingestion/batch-ingestion/overview.md) und [Streaming-Erfassung - Übersicht](../../../ingestion/streaming-ingestion/overview.md).
 
 Wenn Sie sich dafür entscheiden, die E-Mail-Adressen selbst zu hash, stellen Sie sicher, dass Sie die Anforderungen von Google erfüllen, wie in den obigen Links beschrieben.
 
-## Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
+### Verwenden benutzerdefinierter Namespaces {#custom-namespaces}
 
-Bevor Sie den Namespace `User_ID` verwenden können, um Daten an Google zu senden, stellen Sie sicher, dass Sie Ihre eigenen Kennungen mit [!DNL gTag] synchronisieren. Ausführliche Informationen finden Sie in der [offiziellen Google-Dokumentation](https://support.google.com/google-ads/answer/9199250).
+Bevor Sie die `User_ID` Namespace zum Senden von Daten an Google verwenden, stellen Sie sicher, dass Sie Ihre eigenen Kennungen mit [!DNL gTag]. Siehe Abschnitt [Offizielle Dokumentation zu Google](https://support.google.com/google-ads/answer/9199250) für detaillierte Informationen.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
@@ -114,11 +123,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 ## Mit Ziel verbinden {#connect}
 
-Um eine Verbindung zu diesem Ziel herzustellen, führen Sie die Schritte aus, die im Tutorial [Zielkonfiguration](../../ui/connect-destination.md) beschrieben sind.
+Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
 
-Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
+while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Namen für diese Zielverbindung angeben
 * **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für diese Zielverbindung ein
@@ -126,18 +135,18 @@ Während [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie 
 
 >[!IMPORTANT]
 >
-> * Die Marketing-Aktion **[!UICONTROL Kombinieren mit PII]** ist standardmäßig für das [!DNL Google Customer Match]-Ziel ausgewählt und kann nicht entfernt werden.
+> * Die **[!UICONTROL Kombinieren mit PII]** Marketing-Aktion ist standardmäßig für die [!DNL Google Customer Match] Ziel und kann nicht entfernt werden.
 
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) .
+Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
-Im Schritt **[!UICONTROL Segment schedule]** müssen Sie die [!UICONTROL App-ID] angeben, wenn Sie [!DNL IDFA]- oder [!DNL GAID]-Segmente an [!DNL Google Customer Match] senden.
+Im **[!UICONTROL Segmentplan]** Schritt, müssen Sie die [!UICONTROL App-ID] beim Senden [!DNL IDFA] oder [!DNL GAID] Segmente in [!DNL Google Customer Match].
 
 ![Google-Kunden-Match-App-ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Weitere Informationen zum Auffinden des [!DNL App ID] finden Sie in der [offiziellen Google-Dokumentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Weitere Informationen zum Auffinden der [!DNL App ID], siehe [Offizielle Dokumentation zu Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
 
 ### Zuordnungsbeispiel: Aktivieren von Zielgruppendaten in [!DNL Google Customer Match] {#example-gcm}
 
@@ -145,34 +154,34 @@ Dies ist ein Beispiel für die korrekte Identitätszuordnung bei der Aktivierung
 
 Auswählen von Quellfeldern:
 
-* Wählen Sie den Namespace `Email` als Quellidentität aus, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht sind.
-* Wählen Sie den Namespace `Email_LC_SHA256` als Quellidentität aus, wenn Sie Kunden-E-Mail-Adressen bei der Datenerfassung in [!DNL Platform] gehasht haben, gemäß [!DNL Google Customer Match] [E-Mail-Hashing-Anforderungen](#hashing-requirements).
-* Wählen Sie den Namespace `PHONE_E.164` als Quellkennung aus, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] werden die Telefonnummern hash, um die  [!DNL Google Customer Match] Anforderungen zu erfüllen.
-* Wählen Sie den Namespace `Phone_SHA256_E.164` als Quellidentität aus, wenn Sie bei der Datenerfassung Telefonnummern gemäß [!DNL Facebook] [ [!DNL Platform]Anforderungen an das Hashing von Telefonnummern](#phone-number-hashing-requirements) gehasht haben.
-* Wählen Sie den Namespace `IDFA` als Quellidentität aus, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs bestehen.
-* Wählen Sie den Namespace `GAID` als Quellidentität aus, wenn Ihre Daten aus [!DNL Android] Geräte-IDs bestehen.
-* Wählen Sie den Namespace `Custom` als Quellidentität aus, wenn Ihre Daten aus einem anderen Kennungstyp bestehen.
+* Wählen Sie die `Email` Namespace als Quellidentität verwenden, wenn die von Ihnen verwendeten E-Mail-Adressen nicht gehasht sind.
+* Wählen Sie die `Email_LC_SHA256` Namespace als Quellidentität verwenden, wenn Sie bei der Datenerfassung in einen Hash-Wert für E-Mail-Adressen von Kunden [!DNL Platform]gemäß [!DNL Google Customer Match] [Anforderungen an das E-Mail-Hashing](#hashing-requirements).
+* Wählen Sie die `PHONE_E.164` Namespace als Quellkennung verwenden, wenn Ihre Daten aus nicht gehashten Telefonnummern bestehen. [!DNL Platform] Hash die Telefonnummern, um die [!DNL Google Customer Match] Anforderungen.
+* Wählen Sie die `Phone_SHA256_E.164` Namespace als Quellidentität, wenn Sie bei der Datenerfassung in [!DNL Platform]gemäß [!DNL Facebook] [Hash-Anforderungen für Telefonnummern](#phone-number-hashing-requirements).
+* Wählen Sie die `IDFA` Namespace als Quellidentität, wenn Ihre Daten aus [!DNL Apple] Geräte-IDs.
+* Wählen Sie die `GAID` Namespace als Quellidentität, wenn Ihre Daten aus [!DNL Android] Geräte-IDs.
+* Wählen Sie die `Custom` Namespace als Quellidentität verwenden, wenn Ihre Daten aus einem anderen Kennungstyp bestehen.
 
 Zielgruppenfelder auswählen:
 
-* Wählen Sie den Namespace `Email_LC_SHA256` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `Email` oder `Email_LC_SHA256` lauten.
-* Wählen Sie den Namespace `Phone_SHA256_E.164` als Zielidentität aus, wenn Ihre Quell-Namespaces entweder `PHONE_E.164` oder `Phone_SHA256_E.164` lauten.
-* Wählen Sie die Namespaces `IDFA` oder `GAID` als Zielidentität aus, wenn Ihre Quell-Namespaces `IDFA` oder `GAID` lauten.
-* Wählen Sie den Namespace `User_ID` als Zielidentität aus, wenn Ihr Quellnamespace ein benutzerdefinierter Namespace ist.
+* Wählen Sie die `Email_LC_SHA256` Namespace als Zielidentität verwenden, wenn Ihre Quell-Namespaces `Email` oder `Email_LC_SHA256`.
+* Wählen Sie die `Phone_SHA256_E.164` Namespace als Zielidentität verwenden, wenn Ihre Quell-Namespaces `PHONE_E.164` oder `Phone_SHA256_E.164`.
+* Wählen Sie die `IDFA` oder `GAID` Namespaces als Zielidentität verwenden, wenn Ihre Quell-Namespaces `IDFA` oder `GAID`.
+* Wählen Sie die `User_ID` Namespace als Zielidentität verwenden, wenn Ihr Quell-Namespace ein benutzerdefinierter ist.
 
 ![Identitätszuordnung](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
-Daten aus nicht gehashten Namespaces werden bei Aktivierung automatisch von [!DNL Platform] gehasht.
+Daten aus nicht gehashten Namespaces werden automatisch von [!DNL Platform] bei Aktivierung.
 
-Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, aktivieren Sie die Option **[!UICONTROL Umwandlung anwenden]**, damit [!DNL Platform] die Daten bei Aktivierung automatisch hash.
+Attributquellendaten werden nicht automatisch gehasht. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die **[!UICONTROL Umwandlung anwenden]** -Option, um [!DNL Platform] die Daten bei Aktivierung automatisch hash.
 
 ![Identity Mapping Transformation](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Überprüfen, ob die Segmentaktivierung erfolgreich war {#verify-activation}
 
-Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrem **[!UICONTROL Google Ads]**-Konto. Die aktivierten Segmente werden in Ihrem Google-Konto als Kundenlisten angezeigt. Beachten Sie, dass je nach Segmentgröße einige Zielgruppen nur dann gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
+Wechseln Sie nach Abschluss des Aktivierungsvorgangs zu Ihrer **[!UICONTROL Google Ads]** -Konto. Die aktivierten Segmente werden in Ihrem Google-Konto als Kundenlisten angezeigt. Beachten Sie, dass je nach Segmentgröße einige Zielgruppen nur dann gefüllt werden, wenn mehr als 100 aktive Benutzer zur Verfügung stehen.
 
-Wenn Sie ein Segment sowohl [!DNL IDFA] als auch [!DNL GAID] mobile IDs zuordnen, erstellt [!DNL Google Customer Match] für jede ID-Zuordnung ein eigenes Segment. Ihr [!DNL Google Ads]-Konto zeigt zwei verschiedene Segmente an, eines für [!DNL IDFA] und eines für das [!DNL GAID]-Mapping.
+Beim Zuordnen eines Segments zu [!DNL IDFA] und [!DNL GAID] mobile IDs, [!DNL Google Customer Match] erstellt für jede ID-Zuordnung ein eigenes Segment. Ihre [!DNL Google Ads] zeigt zwei verschiedene Segmente an: eines für die [!DNL IDFA]und einer für die [!DNL GAID] Zuordnung.
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -182,9 +191,9 @@ Beim Konfigurieren dieses Ziels wird möglicherweise der folgende Fehler angezei
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites) nicht erfüllen. Um dieses Problem zu beheben, wenden Sie sich an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für ein [!DNL Standard] oder eine höhere Berechtigungsstufe konfiguriert ist. Weitere Informationen finden Sie in der [Google Ads-Dokumentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) .
+Dieser Fehler tritt auf, wenn Kundenkonten die [Voraussetzungen](#google-account-prerequisites). Wenden Sie sich zur Behebung dieses Problems an Google und stellen Sie sicher, dass Ihr Konto auf der Zulassungsliste steht und für eine [!DNL Standard] oder einer höheren Berechtigungsebene. Siehe [Dokumentation zu Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) für Details.
 
-## Zusätzliche Ressourcen {#additional-resources}
+## Weitere Ressourcen {#additional-resources}
 
 * [Google-Kundenabgleich integrieren - Video-Tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
 
