@@ -4,10 +4,10 @@ description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK konfigu
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinations Enabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 exl-id: d1e95afc-0b8a-49c0-a20e-e2ab3d657e45
-source-git-commit: c0e2d01bd21405f07f4857e1ccf45dd0e4d0f414
+source-git-commit: 4d0f1b3e064bd7b24e17ff0fafb50d930b128968
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 40%
+source-wordcount: '860'
+ht-degree: 39%
 
 ---
 
@@ -17,7 +17,7 @@ Die Konfiguration für das SDK erfolgt mit dem `configure`-Befehl.
 
 >[!IMPORTANT]
 >
->`configure` ist immer  ** der erste Befehl mit dem Namen .
+>`configure` is *always* der erste Befehl mit dem Namen .
 
 ```javascript
 alloy("configure", {
@@ -72,9 +72,19 @@ Gibt an, ob das Debugging aktiviert ist. Durch das Festlegen dieser Konfiguratio
 
 ### `edgeDomain` {#edge-domain}
 
-Füllen Sie dieses Feld mit Ihrer Erstanbieterdomäne aus. Weitere Informationen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
+Füllen Sie dieses Feld mit Ihrer Erstanbieterdomäne aus. Weitere Informationen finden Sie im [Dokumentation](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=de).
 
-Die Domäne ähnelt `data.{customerdomain.com}` für eine Website unter www.{customerdomain.com}.
+Die Domäne ähnelt dem `data.{customerdomain.com}` für eine Website unter www.{customerdomain.com}.
+
+### `edgeBasePath` {#edge-base-path}
+
+Pfad nach der edgeDomain, die zur Kommunikation und Interaktion mit Adobe-Diensten verwendet wird.  Häufig würde sich dies nur ändern, wenn nicht die standardmäßige Produktionsumgebung verwendet wird.
+
+| **Typ** | **Erforderlich** | **Standardwert** |
+| -------- | ------------ | ----------------- |
+| Zeichenfolge | Nein | ee |
+
+{style=&quot;table-layout:auto&quot;}
 
 ### `orgId`
 
@@ -84,7 +94,7 @@ Die Domäne ähnelt `data.{customerdomain.com}` für eine Website unter www.{cus
 
 {style=&quot;table-layout:auto&quot;}
 
-Ihre zugewiesene [!DNL Experience Cloud] Organisations-ID. Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
+Ihr zugewiesener [!DNL Experience Cloud] Organisations-ID. Beim Konfigurieren mehrerer Instanzen innerhalb einer Seite müssen Sie für jede Instanz eine andere `orgId` konfigurieren.
 
 ## Datenerfassung
 
@@ -96,7 +106,7 @@ Ihre zugewiesene [!DNL Experience Cloud] Organisations-ID. Beim Konfigurieren me
 
 {style=&quot;table-layout:auto&quot;}
 
-Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Weitere Informationen finden Sie unter [Automatische Linktracking](../data-collection/track-links.md#automaticLinkTracking) . Links werden auch als Downloadlinks bezeichnet, wenn sie ein Download-Attribut enthalten oder wenn der Link mit einer Dateierweiterung endet. Downloadlink-Qualifikatoren können mit einem regulären Ausdruck konfiguriert werden. Der Standardwert lautet `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
+Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Siehe [Automatische Linktracking](../data-collection/track-links.md#automaticLinkTracking) für weitere Informationen. Links werden auch als Downloadlinks bezeichnet, wenn sie ein Download-Attribut enthalten oder wenn der Link mit einer Dateierweiterung endet. Downloadlink-Qualifikatoren können mit einem regulären Ausdruck konfiguriert werden. Der Standardwert lautet `"\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xlsx|ppt|pptx)$"`
 
 ### `onBeforeEventSend`
 
@@ -106,7 +116,7 @@ Gibt an, ob mit Link-Klicks verknüpfte Daten automatisch erfasst werden. Weiter
 
 {style=&quot;table-layout:auto&quot;}
 
-Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden aufgerufen wird. Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet. Um zu ändern, was gesendet wird, ändern Sie das `xdm` -Objekt. Innerhalb des Rückrufs werden die Daten bereits im Ereignisbefehl an das `xdm`-Objekt und die automatisch erfassten Informationen übergeben. Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
+Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden aufgerufen wird. Ein Objekt mit dem Feld `xdm` wird an den Rückruf gesendet. Um die gesendeten Nachrichten zu ändern, ändern Sie die `xdm` -Objekt. Innerhalb des Rückrufs wird die `xdm` -Objekt enthält bereits die Daten, die im Ereignisbefehl übergeben werden, und die automatisch erfassten Informationen. Weitere Informationen zum Timing dieses Rückrufs und ein Beispiel finden Sie unter [Globale Änderung von Ereignissen](tracking-events.md#modifying-events-globally).
 
 ## Datenschutzoptionen
 
@@ -118,7 +128,7 @@ Konfigurieren Sie einen Callback, der für jedes Ereignis kurz vor dem Senden au
 
 {style=&quot;table-layout:auto&quot;}
 
-Legt die Standardzustimmung des Nutzers fest. Verwenden Sie diese Einstellung, wenn für den Benutzer keine Zustimmungsvoreinstellung gespeichert wurde. Die anderen gültigen Werte sind `"pending"` und `"out"`. Dieser Standardwert wird nicht im Profil des Benutzers beibehalten. Das Profil des Benutzers wird nur aktualisiert, wenn `setConsent` aufgerufen wird.
+Legt die Standardzustimmung des Nutzers fest. Verwenden Sie diese Einstellung, wenn für den Benutzer keine Zustimmungsvoreinstellung gespeichert wurde. Die anderen gültigen Werte sind `"pending"` und `"out"`. Dieser Standardwert wird nicht im Profil des Benutzers beibehalten. Das Benutzerprofil wird nur aktualisiert, wenn `setConsent` aufgerufen wird.
 * `"in"`: Wenn diese Einstellung festgelegt ist oder kein Wert angegeben wird, wird die Arbeit ohne Voreinstellungen für die Benutzerzustimmung fortgesetzt.
 * `"pending"`: Wenn diese Einstellung festgelegt ist, wird die Arbeit in die Warteschlange gestellt, bis der Benutzer Zustimmungsvoreinstellungen bereitstellt.
 * `"out"`: Wenn diese Einstellung festgelegt ist, wird die Arbeit verworfen, bis der Benutzer Zustimmungsvoreinstellungen bereitstellt.
@@ -136,7 +146,7 @@ Nachdem die Voreinstellungen des Nutzers bereitgestellt wurden, wird die Arbeit 
 
 Wird verwendet, um eine CSS-Stildefinition zu erstellen, die Inhaltsbereiche Ihrer Web-Seite ausblendet, während personalisierter Inhalt vom Server geladen wird. Wenn diese Option nicht bereitgestellt wird, versucht das SDK nicht, Inhaltsbereiche beim Laden personalisierter Inhalte auszublenden, was möglicherweise zu einem &quot;Flackern&quot;führt.
 
-Wenn beispielsweise ein Element auf Ihrer Web-Seite die Kennung `container` aufweist, dessen Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, verwenden Sie den folgenden Vorab-Ausblendungsstil:
+Wenn beispielsweise ein Element auf Ihrer Web-Seite die ID `container`, deren Standardinhalt Sie ausblenden möchten, während personalisierter Inhalt vom Server geladen wird, verwenden Sie den folgenden Stil für die Vorab-Ausblendung:
 
 ```javascript
   prehidingStyle: "#container { opacity: 0 !important }"
@@ -184,4 +194,4 @@ Wenn &quot;true&quot;, liest und setzt das SDK alte AMCV-Cookies. Diese Option h
 
 {style=&quot;table-layout:auto&quot;}
 
-Aktiviert die Einstellung von Adobe-Drittanbieter-Cookies. Das SDK kann die Besucher-ID in einem Drittanbieterkontext beibehalten, damit dieselbe Besucher-ID siteübergreifend verwendet werden kann. Verwenden Sie diese Option, wenn Sie mehrere Sites haben oder Daten mit Partnern teilen möchten. Manchmal ist diese Option jedoch aus Datenschutzgründen nicht erwünscht.
+Aktiviert die Einstellung von Adobe-Drittanbieter-Cookies. Das SDK kann die Besucher-ID in einem Drittanbieterkontext beibehalten, damit dieselbe Besucher-ID siteübergreifend verwendet werden kann. Verwenden Sie diese Option, wenn Sie mehrere Sites haben oder Daten mit Partnern teilen möchten. Manchmal ist diese Option jedoch aus Datenschutzgründen nicht wünschenswert.
