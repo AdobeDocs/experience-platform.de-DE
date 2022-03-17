@@ -3,10 +3,10 @@ title: Übersicht über das Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Platform-Funktionen in Ihre Website integrieren können.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;Edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;Web SDK;SDK;Web SDK;Launch;Launch
 exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
-source-git-commit: 1048f19e2395f63fac8c4218ed92a546b8071a93
+source-git-commit: 71857ffc5e671f4d9a0502fb95d89d30fdec1f15
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 13%
+source-wordcount: '622'
+ht-degree: 17%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 Adobe Experience Platform Web SDK ist eine Client-seitige JavaScript-Bibliothek, die es Kunden von Adobe Experience Cloud ermöglicht, mit den verschiedenen Diensten im [!DNL Experience Cloud] über das Adobe Experience Platform Edge Network. Zusätzlich zur JavaScript-Bibliothek gibt es eine [Tag-Erweiterung](./extension/web-sdk-extension-configuration.md) um Hilfe bei Ihren Web SDK-Konfigurationen zu erhalten.
 
-**Eine schrittweise Anleitung zum Einrichten des Web SDK mit Tags und zum Senden von Daten an die Lösungen finden Sie in unserer [Tutorial zur Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=en)**
+**Eine schrittweise Anleitung zum Einrichten des Web SDK mit Tags und zum Senden von Daten an die Lösungen finden Sie in unserer [Tutorial zur Implementierung von Adobe Experience Cloud mit Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=de)**
 
 ## Experience Edge
 
@@ -62,9 +62,4 @@ Das folgende Video zeigt Adobe Experience Platform [!DNL Web SDK] und Adobe Expe
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-Dieses Produkt entwickelt sich ständig weiter und wächst, um immer mehr Anwendungsfälle zu unterstützen. Um mit dem neuesten Stand zu bleiben, lesen Sie den Abschnitt [Seite mit unterstützten Anwendungsfällen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). Auf dieser Seite werden die aktuell unterstützten Anwendungsfälle mit Links zu weiteren Informationen aufgeführt, sofern verfügbar.
-
-* **Anwendungsfälle, die noch nicht unterstützt werden:** Dies sind Anwendungsfälle, die auf unserem Fahrplan stehen und in Zukunft unterstützt werden sollen.
-* **In Bearbeitung befindliche Anwendungsfälle:** Dies sind die Anwendungsfälle, an denen das Team derzeit arbeitet, um die Veröffentlichung abzuschließen.
-* **Unterstützte Anwendungsfälle:** Dies sind die Anwendungsfälle, die unterstützt werden und heute funktionieren.
-* **Anwendungsfälle, die wir nicht unterstützen:** Dies sind die Anwendungsfälle, die wir beschlossen haben, nicht zu unterstützen.
+Dieses Produkt entwickelt sich ständig weiter und wächst, um immer mehr Anwendungsfälle zu unterstützen. Um mit der neuesten Version Schritt zu halten und zu sehen, was wir derzeit unterstützen, lesen Sie den Abschnitt [Seite mit unterstützten Anwendungsfällen](https://github.com/orgs/adobe/projects/18/views/1).

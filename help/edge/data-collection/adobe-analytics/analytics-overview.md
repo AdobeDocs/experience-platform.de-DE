@@ -3,10 +3,10 @@ title: Verwenden von Adobe Analytics mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
 keywords: Adobe Analytics;Analytics;zugeordnete Daten;zugeordnete Vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 45becec3b198821e38afbc21fe42a8901e352888
+source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
 workflow-type: tm+mt
-source-wordcount: '189'
-ht-degree: 62%
+source-wordcount: '233'
+ht-degree: 51%
 
 ---
 
@@ -17,6 +17,10 @@ Die Adobe Experience Platform [!DNL Web SDK] kann Daten an Adobe Analytics sende
 ## Einrichten
 
 Adobe Analytics nimmt die gesendeten Daten automatisch auf, wenn in der Benutzeroberfläche für die Kundenkonfiguration eine Report Suite zugeordnet ist. Hier können Sie einen oder mehrere Berichte einer bestimmten Konfiguration zuordnen. Nachdem eine Report Suite zugeordnet wurde, beginnt automatisch der Datenfluss.
+
+## XDM-Feldergruppe
+
+Um die Erfassung der gängigsten Adobe Analytics-Metriken zu vereinfachen, stellen wir eine Analytics-Feldergruppe bereit, die Sie verwenden können. Weitere Informationen zu diesem Schema finden Sie in der Dokumentation für das [Feldergruppe Adobe Analytics ExperienceEvent Full Extension](../../../xdm/field-groups/event/analytics-full-extension.md)
 
 ## Automatisch zugeordnete Daten
 
