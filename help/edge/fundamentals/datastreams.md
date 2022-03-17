@@ -3,9 +3,9 @@ title: Konfigurieren Ihres Datenspeichers für das Experience Platform Web SDK
 description: 'Erfahren Sie, wie Sie die Datastreams konfigurieren. '
 keywords: Konfiguration; Datastreams; datastreamId; edge; datastream id; Umgebungseinstellungen; edgeConfigId; identity; ID-Synchronisierung aktiviert; ID-Sync-Container-ID; Sandbox; Streaming-Inlet; Ereignis-Datensatz; Target; Client-Code; Eigenschaften-Token; Target-Umgebungs-ID; Cookie-Ziele; URL-Ziele; Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 0d23576097b113fa3b24857467658bdf745be427
+source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1944'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ In diesem Dokument werden die Schritte zum Konfigurieren eines Datastreams in de
 
 >[!NOTE]
 >
->Ihre Organisation muss für diese Funktion freigeschaltet sein, damit sie über die Benutzeroberfläche darauf zugreifen kann. Wenn Sie keinen Zugriff haben, wenden Sie sich an Ihren Customer Success Manager (CSM), um die Zulassungsliste aufzurufen.
+>Ihre Organisation muss für diese Funktion freigeschaltet sein, damit sie über die Benutzeroberfläche darauf zugreifen kann. Wenn Sie keinen Zugriff haben, füllen Sie bitte Folgendes aus [Formular](http://adobe.ly/websdkaccess) und wir gewähren Ihnen den notwendigen Zugang.
 
 ## Zugriff auf [!UICONTROL Datenspeicher] Arbeitsbereich
 
