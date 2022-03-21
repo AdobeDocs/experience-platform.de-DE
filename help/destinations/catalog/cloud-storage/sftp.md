@@ -3,10 +3,10 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 691e3181e05a24b6bb0ebbe8e0f797a2b4c572d2
+source-git-commit: fa393b2bd8085a17653962b5a8b112a5db10df83
 workflow-type: tm+mt
-source-wordcount: '361'
-ht-degree: 2%
+source-wordcount: '517'
+ht-degree: 1%
 
 ---
 
@@ -44,16 +44,44 @@ Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-des
 >title="RSA-öffentlicher Schlüssel"
 >abstract="Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als Base64-kodierte Zeichenfolge geschrieben werden."
 
-while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_sftp_ssh"
+>title="SSH-Schlüssel"
+>abstract="Der SSH-Schlüssel erfordert eine Base64-Zeichenfolge."
 
-* **Host**: Die Adresse Ihres SFTP-Speicherorts
-* **Benutzername**: Der Benutzername für die Anmeldung bei Ihrem SFTP-Speicherort
-* **Passwort**: Das Kennwort für die Anmeldung bei Ihrem SFTP-Speicherort
-* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels hilft.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung dieses Ziels ein.
-* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, der die exportierten Dateien hosten soll.
+Wann [Verbindung](../../ui/connect-destination.md) zu diesem Ziel hinzufügen, müssen Sie die folgenden Informationen angeben:
 
-Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierter String.
+#### Authentifizierungsinformationen {#authentication-information}
+
+Wenn Sie die **[!UICONTROL Grundlegende Authentifizierung]** Typ, um eine Verbindung zu Ihrem SFTP-Speicherort herzustellen:
+
+![Grundlegende SFTP-Zielauthentifizierung](/help/destinations/assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+
+* **[!UICONTROL Host]**: Die Adresse Ihres SFTP-Speicherorts;
+* **[!UICONTROL Benutzername]**: Der Benutzername für die Anmeldung bei Ihrem SFTP-Speicherort.
+* **[!UICONTROL Passwort]**: Das Kennwort für die Anmeldung bei Ihrem SFTP-Speicherort.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierter String.
+
+
+Wenn Sie die **[!UICONTROL SFTP mit SSH-Schlüssel]** Authentifizierungstyp für die Verbindung mit Ihrem SFTP-Speicherort:
+
+![SFTP-Ziel-SSH-Schlüsselauthentifizierung](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-ssh-key-authentication.png)
+
+* **[!UICONTROL Domäne]**: Geben Sie die IP-Adresse oder den Domänennamen Ihres SFTP-Kontos ein.
+* **[!UICONTROL Port]**: Der von Ihrem SFTP-Speicherort verwendete Port;
+* **[!UICONTROL Benutzername]**: Der Benutzername für die Anmeldung bei Ihrem SFTP-Speicherort.
+* **[!UICONTROL SSH-Schlüssel]**: Der SSH-Schlüssel zum Anmelden bei Ihrem SFTP-Speicherort.
+* **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierter String.
+
+#### Zieldetails {#destination-details}
+
+Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort die folgenden Informationen für das Ziel ein:
+
+![Verfügbare Zieldetails für SFTP-Ziel](/help/destinations/assets/catalog/cloud-storage/sftp/sftp-destination-details.png)
+
+* **[!UICONTROL Name]**: Geben Sie einen Namen ein, der Ihnen bei der Identifizierung dieses Ziels in der Benutzeroberfläche von Experience Platform hilft;
+* **[!UICONTROL Beschreibung]**: eine Beschreibung für dieses Ziel eingeben;
+* **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Ordner in Ihrem SFTP-Speicherort ein, in den die Dateien exportiert werden sollen.
 
 ## Exportierte Daten {#exported-data}
 

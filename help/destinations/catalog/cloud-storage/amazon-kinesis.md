@@ -1,11 +1,11 @@
 ---
 keywords: Amazon Kinesis; Kinesis-Ziel; Kinesis
-title: Amazon Kinesis-Verbindung
+title: (Beta) Amazon Kinesis-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem Amazon Kinesis-Speicher, um Daten von Adobe Experience Platform zu streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b1945d42b82b549985d848071762fa6ee2451368
+source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1298'
 ht-degree: 2%
 
 ---
