@@ -6,115 +6,106 @@ title: Aktualisieren eines Datenflusses für die Quellverbindung in der Benutzer
 topic-legacy: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 6a9ad0ce5d664e3b32cab4183b54fabd5d9d19e3
 workflow-type: tm+mt
-source-wordcount: '744'
-ht-degree: 7%
+source-wordcount: '724'
+ht-degree: 11%
 
 ---
 
 # Aktualisieren von Datenflüssen in der Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie einen vorhandenen Datenfluss aktualisieren, einschließlich Informationen zum Bearbeiten eines Datenflusszeitplans und -zuordnung unter Verwendung des Arbeitsbereichs [!UICONTROL Quellen].
+In diesem Tutorial erfahren Sie, wie Sie einen vorhandenen Datenfluss mithilfe des Arbeitsbereichs &quot;Quellen&quot;aktualisieren, einschließlich Zeitplan und Zuordnung.
 
 ## Erste Schritte
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
-- [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Zuordnung bearbeiten
+## Datenflüsse aktualisieren
 
->[!NOTE]
->
->Die Bearbeitungszuordnungsfunktion wird für die folgenden Quellen derzeit nicht unterstützt: Adobe Analytics, Adobe Audience Manager, HTTP-API und [!DNL Marketo Engage].
-
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** aus dem linken Navigationsbereich aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Wählen Sie **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile aus, um eine Liste der vorhandenen Datenflüsse anzuzeigen.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich. Auswählen **[!UICONTROL Datenflüsse]** aus der oberen Kopfzeile, um eine Liste der vorhandenen Datenflüsse anzuzeigen.
 
 ![Katalog](../../images/tutorials/update-dataflows/catalog.png)
 
-Die Seite [!UICONTROL Datenflüsse] enthält eine Liste aller vorhandenen Datenflüsse, einschließlich Informationen zum Ausführungsstatus, zum letzten Ausführungsdatum und zum Kontonamen.
+Die [!UICONTROL Datenflüsse] -Seite enthält eine Liste aller vorhandenen Datenflüsse, einschließlich Informationen zu ihrem entsprechenden Zieldatensatz, ihrer Quelle und ihrem Kontonamen.
 
-Wählen Sie oben links das Filtersymbol ![filter](../../images/tutorials/update/filter.png) aus, um das Sortierungsfenster zu öffnen.
+Um die Liste zu sortieren, wählen Sie das Filtersymbol aus ![filter](../../images/tutorials/update/filter.png) oben links, um das Sortierfeld zu verwenden.
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 
 Das Sortierungsfenster bietet eine Liste aller verfügbaren Quellen. Sie können mehrere Quellen aus der Liste auswählen, um auf eine gefilterte Auswahl von Datenflüssen aus verschiedenen Quellen zuzugreifen.
 
-Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, um eine Liste der vorhandenen Datenflüsse anzuzeigen. Nachdem Sie den zu aktualisierenden Datenfluss identifiziert haben, wählen Sie die Auslassungszeichen (`...`) neben dem Kontonamen aus.
+Wählen Sie die Quelle aus, mit der Sie arbeiten möchten, um eine Liste der vorhandenen Datenflüsse anzuzeigen. Nachdem Sie den zu aktualisierenden Datenfluss identifiziert haben, wählen Sie die Auslassungszeichen (`...`) neben dem Namen des Datenflusses.
 
 ![edit-source](../../images/tutorials/update-dataflows/edit-source.png)
 
-Es wird ein Dropdown-Menü mit Optionen zum Aktualisieren des ausgewählten Datenflusses angezeigt. Von hier aus können Sie die Zuordnungs- und Erfassungszeitpläne eines Datenflusses aktualisieren. Sie können auch Optionen zum Überprüfen des Datenflusses im Monitoring-Dashboard sowie zum Deaktivieren oder Löschen des Datenflusses auswählen.
+Es wird ein Dropdown-Menü mit Optionen zum Aktualisieren des ausgewählten Datenflusses angezeigt. Von hier aus können Sie die Zuordnungs- und Erfassungszeitpläne eines Datenflusses aktualisieren. Sie können auch Optionen zum Überprüfen des Datenflusses im Monitoring-Dashboard auswählen, Warnhinweise abonnieren sowie den Datenfluss deaktivieren oder löschen.
 
-Wählen Sie **[!UICONTROL Quelle bearbeiten]** aus, um die Zuordnung zu aktualisieren.
+Um die Informationen Ihres Datenflusses zu aktualisieren, wählen Sie **[!UICONTROL Aktualisieren des Datenflusses]**.
 
-![edit-dataflow](../../images/tutorials/update-dataflows/edit-dataflow.png)
+![update-dataflow](../../images/tutorials/update-dataflows/update-dataflow.png)
 
-Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt. Wählen Sie das entsprechende Datenformat aus, um den Inhalt der ausgewählten Daten zu überprüfen, und klicken Sie dann auf **[!UICONTROL Weiter]**, um fortzufahren.
+### Hinzufügen von Daten
+
+Der Schritt [!UICONTROL Daten hinzufügen] wird angezeigt. Wählen Sie das geeignete Datenformat aus, um den Inhalt der ausgewählten Daten zu überprüfen, und wählen Sie dann **[!UICONTROL Nächste]** um fortzufahren.
 
 ![add-data](../../images/tutorials/update-dataflows/add-data.png)
 
-Die Seite [!UICONTROL Mapping] bietet eine Schnittstelle, über die Sie Zuordnungssätze hinzufügen und entfernen können, die mit Ihrem Datensatz verknüpft sind.
+### Datenflussdetails
 
->[!TIP]
->
->Zuordnungsaktualisierungen werden nur auf in der Zukunft geplante Datenfluss-Läufe angewendet.
+Im [!UICONTROL Datenflussdetails] -Seite können Sie einen aktualisierten Namen und eine Beschreibung für Ihren Datenfluss angeben und den Fehlerschwellenwert Ihres Datenflusses neu konfigurieren. Während dieses Schritts können Sie auch Einstellungen für Ihr Warnhinweis-Abonnement konfigurieren oder ändern.
 
-Wählen Sie **[!UICONTROL Neue Zuordnung hinzufügen]** aus, um einen neuen Zuordnungssatz hinzuzufügen.
-
-![add-new-mapping](../../images/tutorials/update-dataflows/add-new-mapping.png)
-
-Geben Sie als Nächstes das entsprechende Quellfeldattribut und die XDM-Zielfeldwerte ein, um Ihren zusätzlichen Zuordnungssatz abzuschließen. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
-
-![new-mapping-added](../../images/tutorials/update-dataflows/new-mapping-added.png)
-
-Der Schritt [!UICONTROL Planung] wird angezeigt, mit dem Sie den Aufnahmeplan Ihres Datenflusses aktualisieren und die ausgewählten Quelldaten automatisch mit den aktualisierten Zuordnungen erfassen können.
-
->[!NOTE]
->
->Sie können keine Zuordnungssätze für Datenflüsse aktualisieren, die für die einmalige Erfassung geplant waren und deren Startzeit in der Vergangenheit liegt.
-
-![scheduling](../../images/tutorials/update-dataflows/scheduling.png)
-
-Auf der Seite [!UICONTROL Datenfluss-Detail] können Sie einen aktualisierten Namen und eine Beschreibung für Ihren Datenfluss angeben und den Fehlerschwellenwert Ihres Datenflusses neu konfigurieren.
-
-Nachdem Sie die aktualisierten Werte angegeben haben, wählen Sie **[!UICONTROL Weiter]** aus.
+Nachdem Sie die aktualisierten Werte angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
 
 ![dataflow-detail](../../images/tutorials/update-dataflows/dataflow-detail.png)
 
-Der Schritt **[!UICONTROL Überprüfen]** wird angezeigt, sodass Sie Ihren Datenfluss überprüfen können, bevor er aktualisiert wird.
+### Zuordnung
 
-Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Beenden]** aus und lassen Sie etwas Zeit für den Datenfluss zu, wobei die neuen Zuordnungssätze erstellt werden.
+>[!NOTE]
+>
+>Die Bearbeitungszuordnungsfunktion wird für die folgenden Quellen derzeit nicht unterstützt: Adobe Analytics, Adobe Audience Manager, HTTP-API und [!DNL Marketo Engage].
 
-![Überprüfung](../../images/tutorials/update-dataflows/review.png)
+Die [!UICONTROL Zuordnung] -Seite bietet eine Benutzeroberfläche, über die Sie Zuordnungssätze hinzufügen und entfernen können, die mit Ihrem Datenfluss verknüpft sind.
 
-## Zeitplan bearbeiten
+In der Zuordnungsschnittstelle wird der vorhandene Zuordnungssatz Ihres Datenflusses und nicht der neue empfohlene Zuordnungssatz angezeigt. Zuordnungsaktualisierungen werden nur auf in der Zukunft geplante Datenfluss-Läufe angewendet. Für einen Datenfluss, der für die einmalige Erfassung geplant war, können die Zuordnungssätze nicht aktualisiert werden.
 
-Um den Erfassungszeitplan eines vorhandenen Datenflusses zu bearbeiten, wählen Sie die Auslassungszeichen (`...`) neben einem Datenflussnamen aus und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]** aus dem Dropdown-Menü aus.
+Von hier aus können Sie die Zuordnungsschnittstelle verwenden, um die auf Ihren Datenfluss angewendeten Zuordnungssätze zu ändern. Umfassende Schritte zur Verwendung der Zuordnungsschnittstelle finden Sie in der [Benutzerhandbuch zur Datenvorbereitung](../../../data-prep/ui/mapping.md) für weitere Informationen.
 
-![edit-schedule](../../images/tutorials/update-dataflows/edit-schedule.png)
+![Mapping](../../images/tutorials/update-dataflows/mapping.png)
 
-Das Dialogfeld **[!UICONTROL Zeitplan bearbeiten]** bietet Optionen zum Aktualisieren der Erfassungsfrequenz und Intervallrate Ihres Datenflusses. Nachdem Sie die aktualisierten Häufigkeits- und Intervallwerte festgelegt haben, wählen Sie **[!UICONTROL Speichern]** aus.
+### Zeitplan
+
+Die [!UICONTROL Planung] angezeigt, sodass Sie den Aufnahmezeitplan Ihres Datenflusses aktualisieren und die ausgewählten Quelldaten automatisch mit den aktualisierten Zuordnungen erfassen können.
 
 >[!NOTE]
 >
 >Sie können einen Datenfluss, der für die einmalige Erfassung geplant war, nicht neu planen.
 
-![schedule-dialog-box](../../images/tutorials/update-dataflows/schedule-dialog-box.png)
+![new-schedule](../../images/tutorials/update-dataflows/new-schedule.png)
 
-| Zeitplan | Beschreibung |
-| ---------- | ----------- |
-| Häufigkeit | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte für den Zeitplan für die Bearbeitungsfrequenz eines bereits vorhandenen Datenflusses umfassen: `minute`, `hour`, `day` oder `week`. |
-| Intervall | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein und größer oder gleich `15` sein. |
+Sie können auch den Aufnahmezeitplan Ihres Datenflusses aktualisieren, indem Sie die Option Inline-Update verwenden, die auf der Datenflussseite bereitgestellt wird.
 
-Nach einigen Augenblicken wird unten im Bildschirm ein Bestätigungsfeld angezeigt, um eine erfolgreiche Aktualisierung zu bestätigen.
+Wählen Sie auf der Seite &quot;Datenflüsse&quot;die Auslassungspunkte (`...`) neben dem Namen des Datenflusses und wählen Sie dann **[!UICONTROL Zeitplan bearbeiten]** aus dem Dropdown-Menü, das angezeigt wird.
 
-![schedule-confirm](../../images/tutorials/update-dataflows/schedule-confirm.png)
+![edit-schedule](../../images/tutorials/update-dataflows/edit-schedule.png)
+
+Die **[!UICONTROL Zeitplan bearbeiten]** bietet Optionen zum Aktualisieren der Erfassungsfrequenz und Intervallrate Ihres Datenflusses. Nachdem Sie die aktualisierten Häufigkeits- und Intervallwerte festgelegt haben, wählen Sie **[!UICONTROL Speichern]**.
+
+![schedule-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
+
+### Überprüfung
+
+Die **[!UICONTROL Überprüfen]** angezeigt, sodass Sie Ihren Datenfluss überprüfen können, bevor er aktualisiert wird.
+
+Nachdem Sie Ihren Datenfluss überprüft haben, wählen Sie **[!UICONTROL Beenden]** und lassen Sie etwas Zeit für den Datenfluss zu, wobei die neuen Zuordnungssätze erstellt werden.
+
+![Überprüfung](../../images/tutorials/update-dataflows/review.png)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich den Arbeitsbereich [!UICONTROL Quellen] verwendet, um den Erfassungszeitplan und die Zuordnungssätze Ihres Datenflusses zu aktualisieren.
+In diesem Tutorial haben Sie erfolgreich die [!UICONTROL Quellen] Arbeitsbereich zum Aktualisieren des Erfassungszeitplans und der Zuordnungssätze Ihres Datenflusses.
 
-Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mithilfe der [!DNL Flow Service]-API finden Sie im Tutorial zum Aktualisieren von Datenflüssen mithilfe der Flow Service-API](../../tutorials/api/update-dataflows.md).[
+Anweisungen zum programmgesteuerten Ausführen dieser Vorgänge mit dem [!DNL Flow Service] API, siehe Tutorial zu [Aktualisieren von Datenflüssen mithilfe der Flow Service-API](../../tutorials/api/update-dataflows.md).
