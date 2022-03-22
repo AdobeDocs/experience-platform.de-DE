@@ -3,12 +3,13 @@ keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren
 solution: Experience Platform
 title: Quellen-SDK - Überblick (Beta)
 topic-legacy: overview
-description: Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source using the Flow Service API to bring your data to Experience Platform.
+description: Das Adobe Experience Platform Sources-SDK ist eine Reihe von Konfigurations-APIs, mit denen Sie eine REST-API-basierte Quelle mithilfe der Flow Service-API integrieren können, um Ihre Daten in die Experience Platform zu übertragen.
 hide: true
 hidefromtoc: true
-source-git-commit: 3d510876cfdd8ac3045dae8df6fcf6045de2538b
+exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
+source-git-commit: ce902e461c748e30e0307558da894a4dbdd212a4
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '544'
 ht-degree: 8%
 
 ---
@@ -17,7 +18,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
+>Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
 
 Das Adobe Experience Platform Sources-SDK ist ein Satz von Konfigurations-APIs, mit denen Sie eine REST-API-basierte Quelle mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) , um Ihre Daten in die Experience Platform zu übertragen.
 
@@ -29,9 +30,9 @@ Mit dem Sources-SDK können Sie:
 
 Die Dokumentation zum Sources-SDK enthält Anweisungen zur Verwendung des Adobe Experience Platform Sources-SDK zum Konfigurieren, Testen und Veröffentlichen einer REST API-basierten Quellintegration mit Platform und dazu, dass Ihre Quelle Teil des ständig wachsenden Quellkatalogs wird.
 
-![catalog](./assets/catalog.png)
+![Katalog](./assets/catalog.png)
 
-## Understanding sources
+## Grundlagen zu Quellen
 
 Mit Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
@@ -45,24 +46,24 @@ Siehe Handbuch unter [Erstellen einer neuen Verbindungsspezifikation](./api/api-
 
 ## Quelle dokumentieren
 
-Once your source is created, see the [documentation guide](./documentation/doc-overview.md) for instructions on how to document your source through the [!DNL GitHub] web interface or through your own text editor.
+Nachdem die Quelle erstellt wurde, lesen Sie den Abschnitt [Handbuch](./documentation/doc-overview.md) Anweisungen zum Dokumentieren der Quelle über das [!DNL GitHub] Web-Oberfläche oder über Ihren eigenen Texteditor.
 
-## High-level process
+## Verfahren auf hoher Ebene
 
-The step-by-step process to configure your source in Experience Platform is outlined below:
+Der Schritt-für-Schritt-Vorgang zum Konfigurieren der Quelle in Experience Platform ist unten beschrieben:
 
 * Lesen Sie die [API-Handbuch für Quellen-SDK](./api/api-overview.md);
    * Lesen Sie die [Erste Schritte](./api/getting-started.md);
    * Folgen Sie dem Tutorial zu [Erstellen einer neuen Verbindungsspezifikation](./api/create.md);
-   * Follow the tutorial on [updating your connection specification](./api/update-connection-specs.md);
-   * Follow the tutorial on [adding your new connection specification ID to a flow specification](./api/update-flow-specs.md)
+   * Folgen Sie dem Tutorial zu [Aktualisieren der Verbindungsspezifikation](./api/update-connection-specs.md);
+   * Folgen Sie dem Tutorial zu [Hinzufügen der neuen Verbindungsspezifikations-ID zu einer Flussspezifikation](./api/update-flow-specs.md)
    * [Neue Quelle senden](./api/submit.md).
 * Um ein besseres Verständnis der Struktur und Eigenschaften einer Verbindungsspezifikation zu erhalten, lesen Sie das Handbuch unter [Konfigurationsoptionen für das Quellen-SDK](./config/config.md);
    * Siehe Handbuch unter [Authentifizierungsspezifikationen konfigurieren](./config/authspec.md);
    * Siehe Handbuch unter [Quellspezifikationen konfigurieren](./config/sourcespec.md);
-   * See the guide on [configuring your explore specifications](./config/explorespec.md);
-* To start documenting your source, see the [overview on creating documentation for Sources SDK](./documentation/doc-overview.md)
-   * You can use this [sources documentation template](./documentation/template.md) to structure your documentation;
+   * Siehe Handbuch unter [Konfigurieren von Discover-Spezifikationen](./config/explorespec.md);
+* Informationen zum Dokumentieren der Quelle finden Sie unter [Übersicht über das Erstellen der Dokumentation für das Quellen-SDK](./documentation/doc-overview.md)
+   * Sie können dies [Quellen-API-Dokumentationsvorlage](./documentation/template.md) die Struktur der API-Dokumentation;
+   * Sie können dies [Dokumentationsvorlage zur Quellenbenutzeroberfläche](./documentation/ui-template.md) zur Strukturierung der Benutzeroberflächendokumentation;
    * Siehe Handbuch unter [Verwenden der GitHub-Webschnittstelle](./documentation/github.md) Anweisungen zum Erstellen der Dokumentation mit GitHub;
-   * See the guide on [using a text editor](./documentation/text-editor.md) for steps on how to create documentation using your local machine.
-
+   * Siehe Handbuch unter [mit einem Texteditor](./documentation/text-editor.md) Anweisungen zum Erstellen von Dokumentationen mit Ihrem lokalen Computer.

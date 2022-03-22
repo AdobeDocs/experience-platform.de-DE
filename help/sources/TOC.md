@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: da3d0399bae9953cd74bd0ac6d6e16b64796a578
+source-git-commit: c74676836d4690568665f16445c0dcf91496daf6
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '750'
 ht-degree: 19%
 
 ---
@@ -277,7 +277,8 @@ ht-degree: 19%
    - [Dokumentieren der Quelle in Adobe Experience Platform](sources-sdk/documentation/doc-overview.md)
    - [Verwenden Sie die GitHub-Web-Oberfläche, um eine Seite mit der Quellendokumentation zu erstellen](sources-sdk/documentation/github.md)
    - [Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.](sources-sdk/documentation/text-editor.md)
-   - [Vorlage für Dokumentations-Self-Service](sources-sdk/documentation/template.md)
+   - [Dokumentation-Self-Service-API-Vorlage](sources-sdk/documentation/template.md)
+   - [Vorlage für die Dokumentation-Self-Service-Benutzeroberfläche](sources-sdk/documentation/ui-template.md)
 - [Flusslaufbenachrichtigungen](notifications.md)
 - [IP-Adressen-Zulassungsliste](ip-address-allow-list.md)
 - [Häufig gestellte Fragen](./troubleshooting.md)
