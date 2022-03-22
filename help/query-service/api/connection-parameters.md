@@ -5,22 +5,22 @@ title: Verbindungsparameter-API-Endpunkt
 topic-legacy: connection parameters
 description: Sie können Ihre Verbindungsparameter für die Verwendung des interaktiven Dienstes abrufen, indem Sie eine GET-Anfrage an den Endpunkt /connection_parameters senden.
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: cff95575530e0db00d34ff1ea4c90e5422b6562d
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 38%
+source-wordcount: '130'
+ht-degree: 28%
 
 ---
 
 # Endpunkt der Verbindungsparameter
 
-## Beispiel-API-Aufrufe
+## Beispiel-API-Aufruf
 
-Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit Aufrufen an die [!DNL Query Service]-API beginnen. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mit der [!DNL Query Service]-API ausführen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+Im folgenden Abschnitt werden Sie durch den API-Aufruf geführt, den Sie mithilfe der [!DNL Query Service] API. Der Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Verbindungsparameter anfordern
 
-Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/connection_parameters` stellen. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
+Sie können Ihre Verbindungsparameter abrufen, indem Sie eine GET-Anfrage an die `/connection_parameters` -Endpunkt. Weitere Informationen zu Clients, die Verbindungsparameter verwenden, um eine Verbindung über den interaktiven Service herzustellen, finden Sie in der Dokumentation zu [Query Service-Clients](../clients/overview.md).
 
 **API-Format**
 
