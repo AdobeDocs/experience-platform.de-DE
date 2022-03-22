@@ -5,10 +5,10 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: b291bcf4e0ce068b071adde489653b006f4e7fb2
+source-git-commit: 575352d8ee6da092fd0fc3a3033e481ee59bd7d3
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 11%
+source-wordcount: '2378'
+ht-degree: 12%
 
 ---
 
@@ -182,11 +182,11 @@ Die folgende Syntax definiert eine `CREATE TABLE AS SELECT` (CTAS)-Abfrage:
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-**Parameter**
-
-- `schema`: Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage erstellt wurde.
-- `rowvalidation`: (Optional) Gibt an, ob der Benutzer die Überprüfung aller neuen Batches auf Zeilenebene wünscht, die für den neu erstellten Datensatz erfasst werden. Der Standardwert lautet `true`.
-- `select_query`: A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries).
+| Parameter | Beschreibung |
+| ----- | ----- |
+| `schema` | Der Titel des XDM-Schemas. Verwenden Sie diese Klausel nur, wenn Sie ein vorhandenes XDM-Schema für den neuen Datensatz verwenden möchten, der von der CTAS-Abfrage erstellt wurde. |
+| `rowvalidation` | (Optional) Gibt an, ob der Benutzer die Überprüfung aller neuen Batches auf Zeilenebene wünscht, die für den neu erstellten Datensatz erfasst werden. Der Standardwert lautet `true`. |
+| `select_query` | A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries). |
 
 **Beispiel**
 
@@ -210,10 +210,10 @@ Die `INSERT INTO` -Befehl wird wie folgt definiert:
 INSERT INTO table_name select_query
 ```
 
-**Parameter**
-
-- `table_name`: Der Name der Tabelle, in die die Abfrage eingefügt werden soll.
-- `select_query`: A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries).
+| Parameter | Beschreibung |
+| ----- | ----- |
+| `table_name` | Der Name der Tabelle, in die die Abfrage eingefügt werden soll. |
+| `select_query` | A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries). |
 
 **Beispiel**
 
@@ -257,9 +257,9 @@ Die `DROP TABLE` löscht eine vorhandene Tabelle und löscht den mit der Tabelle
 DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-**Parameter**
-
-- `IF EXISTS`: Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Tabelle **not** existieren.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Tabelle **not** existieren. |
 
 ## DROP-DATENBANK
 
@@ -269,9 +269,9 @@ Die `DROP DATABASE` -Befehl speichert eine vorhandene Datenbank.
 DROP DATABASE [IF EXISTS] db_name
 ```
 
-**Parameter**
-
-- `IF EXISTS`: Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Datenbank **not** existieren.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Datenbank **not** existieren. |
 
 ## DROP-SCHEMA
 
@@ -281,13 +281,11 @@ Die `DROP SCHEMA` -Befehl entfernt ein vorhandenes Schema.
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
 
-**Parameter**
-
-- `IF EXISTS`: Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn das Schema **not** existieren.
-
-- `RESTRICT`: Standardwert für den Modus. Wenn dies angegeben wird, wird das Schema nur gelöscht, wenn es **nicht** enthält alle Tabellen.
-
-- `CASCADE`: Wenn dies angegeben wird, wird das Schema zusammen mit allen im Schema vorhandenen Tabellen abgelegt.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn das Schema **not** existieren. |
+| `RESTRICT` | Standardwert für den Modus. Wenn dies angegeben wird, wird das Schema nur gelöscht, wenn es **nicht** enthält alle Tabellen. |
+| `CASCADE` | Wenn dies angegeben wird, wird das Schema zusammen mit allen im Schema vorhandenen Tabellen abgelegt. |
 
 ## CREATE VIEW
 
@@ -297,10 +295,10 @@ Die folgende Syntax definiert eine `CREATE VIEW` Abfrage:
 CREATE VIEW view_name AS select_query
 ```
 
-**Parameter**
-
-- `view_name`: Der Name der zu erstellenden Ansicht.
-- `select_query`: A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries).
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `view_name` | Der Name der zu erstellenden Ansicht. |
+| `select_query` | A `SELECT` -Anweisung. Die Syntax der `SELECT` -Abfrage finden Sie im Abschnitt [Abschnitt &quot;Abfragen auswählen&quot;](#select-queries). |
 
 **Beispiel**
 
@@ -318,10 +316,10 @@ Die folgende Syntax definiert eine `DROP VIEW` Abfrage:
 DROP VIEW [IF EXISTS] view_name
 ```
 
-**Parameter**
-
-- `IF EXISTS`: Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Ansicht dies tut **not** existieren.
-- `view_name`: Der Name der zu löschenden Ansicht.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `IF EXISTS` | Wenn dies angegeben ist, wird keine Ausnahme ausgelöst, wenn die Ansicht dies tut **not** existieren. |
+| `view_name` | Der Name der zu löschenden Ansicht. |
 
 **Beispiel**
 
@@ -396,10 +394,10 @@ Die `SET` -Befehl legt eine Eigenschaft fest und gibt entweder den Wert einer vo
 SET property_key = property_value
 ```
 
-**Parameter**
-
-- `property_key`: Der Name der Eigenschaft, die Sie auflisten oder ändern möchten.
-- `property_value`: Der Wert, als den die Eigenschaft festgelegt werden soll.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `property_key` | Der Name der Eigenschaft, die Sie auflisten oder ändern möchten. |
+| `property_value` | Der Wert, als den die Eigenschaft festgelegt werden soll. |
 
 Um den Wert für eine Einstellung zurückzugeben, verwenden Sie `SET [property key]` ohne `property_value`.
 
@@ -447,10 +445,10 @@ Die `DECLARE` -Befehl ermöglicht es einem Benutzer, einen Cursor zu erstellen, 
 DECLARE name CURSOR FOR query
 ```
 
-**Parameter**
-
-- `name`: Der Name des zu erstellenden Cursors.
-- `query`: Ein `SELECT`- oder `VALUES`-Befehl, der die vom Cursor zurückzugebenden Zeilen angibt.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `name` | Der Name des zu erstellenden Cursors. |
+| `query` | Ein `SELECT`- oder `VALUES`-Befehl, der die vom Cursor zurückzugebenden Zeilen angibt. |
 
 ### EXECUTE
 
@@ -462,10 +460,10 @@ Wenn die Variable `PREPARE` -Anweisung, die die Anweisung erstellt hat, die eini
 EXECUTE name [ ( parameter ) ]
 ```
 
-**Parameter**
-
-- `name`: Der Name der vorbereiteten Anweisung, die ausgeführt werden soll.
-- `parameter`: Der tatsächliche Wert eines Parameters für die vorbereitete Anweisung. Hierbei muss es sich um einen Ausdruck handeln, der einen Wert liefert, der mit dem Datentyp dieses Parameters kompatibel ist, der bei der Erstellung der vorbereiteten Anweisung festgelegt wurde.  Wenn mehrere Parameter für die vorbereitete Anweisung vorhanden sind, werden sie durch Kommas getrennt.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `name` | Der Name der vorbereiteten Anweisung, die ausgeführt werden soll. |
+| `parameter` | Der tatsächliche Wert eines Parameters für die vorbereitete Anweisung. Hierbei muss es sich um einen Ausdruck handeln, der einen Wert liefert, der mit dem Datentyp dieses Parameters kompatibel ist, der bei der Erstellung der vorbereiteten Anweisung festgelegt wurde.  Wenn mehrere Parameter für die vorbereitete Anweisung vorhanden sind, werden sie durch Kommas getrennt. |
 
 ### EXPLAIN
 
@@ -482,11 +480,11 @@ ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
-**Parameter**
-
-- `ANALYZE`: Wenn die Variable `option` contains `ANALYZE`, werden die Laufzeiten und andere Statistiken angezeigt.
-- `FORMAT`: Wenn die Variable `option` contains `FORMAT`, gibt es das Ausgabeformat an, das `TEXT` oder `JSON`. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt.
-- `statement`: Jede `SELECT`-, `INSERT`-, `UPDATE`-, `DELETE`-, `VALUES`-, `EXECUTE`-, `DECLARE`-, `CREATE TABLE AS`- oder `CREATE MATERIALIZED VIEW AS`-Anweisung, deren Ausführungsplan Sie sehen möchten.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `ANALYZE` | Wenn die Variable `option` contains `ANALYZE`, werden die Laufzeiten und andere Statistiken angezeigt. |
+| `FORMAT` | Wenn die Variable `option` contains `FORMAT`, gibt es das Ausgabeformat an, das `TEXT` oder `JSON`. Die Ausgabe ohne Text enthält dieselben Informationen wie das Textausgabeformat, ist jedoch für Programme einfacher zu analysieren. Dieser Parameter ist standardmäßig auf `TEXT` voreingestellt. |
+| `statement` | Jede `SELECT`-, `INSERT`-, `UPDATE`-, `DELETE`-, `VALUES`-, `EXECUTE`-, `DECLARE`-, `CREATE TABLE AS`- oder `CREATE MATERIALIZED VIEW AS`-Anweisung, deren Ausführungsplan Sie sehen möchten. |
 
 >[!IMPORTANT]
 >
@@ -515,10 +513,10 @@ Die `FETCH` -Befehl ruft Zeilen mit einem zuvor erstellten Cursor ab.
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-**Parameter**
-
-- `num_of_rows`: Die Anzahl der abzurufenden Zeilen.
-- `cursor_name`: Der Name des Cursors, aus dem Sie Informationen abrufen.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `num_of_rows` | Die Anzahl der abzurufenden Zeilen. |
+| `cursor_name` | Der Name des Cursors, aus dem Sie Informationen abrufen. |
 
 ### PREPARE {#prepare}
 
@@ -532,10 +530,10 @@ Optional können Sie eine Liste von Parameterdatentypen angeben. Wenn der Datent
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-**Parameter**
-
-- `name`: Der Name für die vorbereitete Anweisung.
-- `data_type`: Die Datentypen der Parameter der vorbereiteten Anweisung. Wenn der Datentyp eines Parameters nicht aufgeführt ist, kann der Typ aus dem Kontext abgeleitet werden. Wenn Sie mehrere Datentypen hinzufügen müssen, können Sie sie in einer durch Kommas getrennten Liste hinzufügen.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `name` | Der Name für die vorbereitete Anweisung. |
+| `data_type` | Die Datentypen der Parameter der vorbereiteten Anweisung. Wenn der Datentyp eines Parameters nicht aufgeführt ist, kann der Typ aus dem Kontext abgeleitet werden. Wenn Sie mehrere Datentypen hinzufügen müssen, können Sie sie in einer durch Kommas getrennten Liste hinzufügen. |
 
 ### ROLLBACK
 
@@ -568,13 +566,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-**Parameter**
-
 Weitere Informationen zu den standardmäßigen SELECT-Abfrageparametern finden Sie im [SELECT-Abfrageabschnitt](#select-queries). In diesem Abschnitt werden nur Parameter aufgelistet, die ausschließlich für die `SELECT INTO` Befehl.
 
-- `TEMPORARY` oder `TEMP`: Ein optionaler Parameter. Wenn angegeben, ist die zu erstellende Tabelle eine temporäre Tabelle.
-- `UNLOGGED`: Ein optionaler Parameter. Wenn angegeben, ist die Tabelle, die wie erstellt wird, eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie im [PostgreSQL-Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html).
-- `new_table`: Der Name der zu erstellenden Tabelle.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `TEMPORARY` oder `TEMP` | Ein optionaler Parameter. Wenn angegeben, ist die zu erstellende Tabelle eine temporäre Tabelle. |
+| `UNLOGGED` | Ein optionaler Parameter. Wenn angegeben, ist die Tabelle, die wie erstellt wird, eine nicht protokollierte Tabelle. Weitere Informationen zu nicht protokollierten Tabellen finden Sie im [PostgreSQL-Dokumentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `new_table` | Der Name der zu erstellenden Tabelle. |
 
 **Beispiel**
 
@@ -593,15 +591,10 @@ SHOW name
 SHOW ALL
 ```
 
-**Parameter**
-
-- `name`: Der Name des Laufzeitparameters, zu dem Sie Informationen benötigen. Mögliche Werte für den Laufzeitparameter sind die folgenden Werte:
-   - `SERVER_VERSION`: Dieser Parameter zeigt die Versionsnummer des Servers an.
-   - `SERVER_ENCODING`: Dieser Parameter zeigt die serverseitige Zeichensatzkodierung an.
-   - `LC_COLLATE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Sortierung (Textanordnung) an.
-   - `LC_CTYPE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Zeichenklassifizierung an.
-      `IS_SUPERUSER`: Dieser Parameter zeigt an, ob die aktuelle Rolle über Superuser-Berechtigungen verfügt.
-- `ALL`: Zeigt die Werte aller Konfigurationsparameter mit Beschreibungen an.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `name` | Der Name des Laufzeitparameters, zu dem Sie Informationen benötigen. Mögliche Werte für den Laufzeitparameter sind die folgenden Werte:<br>`SERVER_VERSION`: Dieser Parameter zeigt die Versionsnummer des Servers an.<br>`SERVER_ENCODING`: Dieser Parameter zeigt die serverseitige Zeichensatzkodierung an.<br>`LC_COLLATE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Sortierung (Textanordnung) an.<br>`LC_CTYPE`: Dieser Parameter zeigt die Gebietsschemaeinstellung der Datenbank für die Zeichenklassifizierung an.<br>`IS_SUPERUSER`: Dieser Parameter zeigt an, ob die aktuelle Rolle über Superuser-Berechtigungen verfügt. |
+| `ALL` | Zeigt die Werte aller Konfigurationsparameter mit Beschreibungen an. |
 
 **Beispiel**
 
@@ -628,10 +621,10 @@ COPY query
     [  WITH FORMAT 'format_name']
 ```
 
-**Parameter**
-
-- `query`: Die Abfrage, die Sie kopieren möchten.
-- `format_name`: Das Format, in das die Abfrage kopiert werden soll. Die `format_name` kann eines von `parquet`, `csv`oder `json`. Standardmäßig lautet der Wert `parquet`.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `query` | Die Abfrage, die Sie kopieren möchten. |
+| `format_name` | Das Format, in das die Abfrage kopiert werden soll. Die `format_name` kann eines von `parquet`, `csv`oder `json`. Standardmäßig lautet der Wert `parquet`. |
 
 >[!NOTE]
 >
@@ -657,13 +650,13 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
 
-**Parameter**
-
-- `table_name`: Der Name der Tabelle, die Sie bearbeiten.
-- `constraint_name`: Der Name der Einschränkung, die Sie hinzufügen oder löschen möchten.
-- `column_name`: Der Name der Spalte, der Sie eine Einschränkung hinzufügen.
-- `referenced_table_name`: Der Name der Tabelle, auf die der Fremdschlüssel verweist.
-- `primary_column_name`: Der Name der Spalte, auf die der Fremdschlüssel verweist.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `table_name` | Der Name der Tabelle, die Sie bearbeiten. |
+| `constraint_name` | Der Name der Einschränkung, die Sie hinzufügen oder löschen möchten. |
+| `column_name` | Der Name der Spalte, der Sie eine Einschränkung hinzufügen. |
+| `referenced_table_name` | Der Name der Tabelle, auf die der Fremdschlüssel verweist. |
+| `primary_column_name` | Der Name der Spalte, auf die der Fremdschlüssel verweist. |
 
 >[!NOTE]
 >
@@ -679,11 +672,11 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
-**Parameter**
-
-- `table_name`: Der Name der Tabelle, die Sie bearbeiten.
-- `column_name`: Der Name der Spalte, die Sie hinzufügen möchten.
-- `data_type`: Der Datentyp der Spalte, die Sie hinzufügen möchten. Zu den unterstützten Datentypen zählen: bigint, char, string, date, datetime, double, double Precision, integer, smallint, tinyint, varchar.
+| Parameter | Beschreibung |
+| ------ | ------ |
+| `table_name` | Der Name der Tabelle, die Sie bearbeiten. |
+| `column_name` | Der Name der Spalte, die Sie hinzufügen möchten. |
+| `data_type` | Der Datentyp der Spalte, die Sie hinzufügen möchten. Zu den unterstützten Datentypen zählen: bigint, char, string, date, datetime, double, double Precision, integer, smallint, tinyint, varchar. |
 
 ### PRIMÄRE SCHLÜSSEL ANZEIGEN
 
