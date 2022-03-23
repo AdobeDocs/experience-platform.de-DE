@@ -5,18 +5,18 @@ title: Beispielabfragen für Adobe Target-Daten
 topic-legacy: queries
 description: Daten von Adobe Target werden in XDM-Schema für Erlebnisereignisse umgewandelt und als Datensätze in Experience Platform integriert. Dieses Dokument enthält Beispielabfragen zur Verwendung von Query Service mit Ihren Adobe Target-Datensätzen.
 exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
-source-git-commit: c0e7ae8f65aa0373d35a55d4da46e0ffcb0e60f9
+source-git-commit: 76847d8286776a554e55209fa1b334c98b02d76b
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 51%
+source-wordcount: '324'
+ht-degree: 52%
 
 ---
 
 # Beispielabfragen für Adobe Target-Daten
 
-Daten aus Adobe Target werden in Erlebnisereignis-XDM-Schema umgewandelt und als Datensätze in Adobe Experience Platform aufgenommen. Es gibt viele Anwendungsfälle für Adobe Experience Platform Query Service mit diesen Daten. Die folgenden Beispielabfragen sollten mit Ihren Adobe Target-Datensätzen funktionieren.
+Aus Adobe Target erfasste Daten werden in das Erlebnis-Ereignis-XDM-Schema umgewandelt und als Datensätze in Adobe Experience Platform aufgenommen. Adobe Experience Platform Query Service erleichtert viele Anwendungsfälle für diese Daten. Die folgenden Beispielabfragen sollten mit Ihren Adobe Target-Datensätzen funktionieren.
 
-In Experience Platform lautet der Name des automatisch erstellten Datensatzes &quot;Adobe Target-Erlebnisereignisse&quot;. Bei Verwendung dieses Datensatzes mit Abfragen sollten Sie den Namen `adobe_target_experience_events`.
+In Experience Platform lautet der Name eines automatisch erstellten Datensatzes &quot;Adobe Target-Erlebnisereignisse&quot;. Verwenden Sie bei Verwendung dieses Datensatzes mit Abfragen den Namen `adobe_target_experience_events`.
 
 ## Partielle XDM-Feldzuordnung auf hoher Ebene
 
