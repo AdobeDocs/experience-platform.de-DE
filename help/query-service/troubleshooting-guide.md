@@ -5,9 +5,9 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Informationen zu häufigen Fehlercodes, auf die Sie stoßen, sowie zu den möglichen Ursachen.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 38d0c34e7af2466fa005c8adaf3bd9e1d9fd78e1
+source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
 workflow-type: tm+mt
-source-wordcount: '3292'
+source-wordcount: '3413'
 ht-degree: 4%
 
 ---
@@ -21,6 +21,8 @@ Die folgende Liste von Antworten auf häufig gestellte Fragen ist in folgende Ka
 - [Allgemein](#general)
 - [Exportieren von Daten](#exporting-data)
 - [Drittanbieter-Tools](#third-party-tools)
+- [PostgreSQL-API-Fehler](#postgresql-api-errors)
+- [REST-API-Fehler](#rest-api-errors)
 
 ## Allgemeine Fragen zu Query Service {#general}
 
@@ -38,7 +40,7 @@ Dieser Abschnitt enthält Informationen zu Leistung, Beschränkungen und Prozess
 
 ### Kann ich Postman für die Query Service-API verwenden?
 
-++ + Antwort Ja, Sie können alle Adobe-API-Dienste mit Postman visualisieren und mit diesen interagieren (eine kostenlose Drittanbieteranwendung). Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für eine schrittweise Anleitung zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+++ + Antwort Ja, Sie können alle Adobe-API-Dienste mit Postman visualisieren und mit diesen interagieren (eine kostenlose Drittanbieteranwendung). Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für schrittweise Anweisungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -434,38 +436,9 @@ WHERE T2.ID IS NULL
 
 +++
 
-## REST-API-Fehler
-
-| HTTP-Statuscode | Beschreibung | Mögliche Ursachen |
-|------------------|-----------------------|----------------------------|
-| 400 | Ungültige Anfrage | Falsch formulierte oder illegale Abfrage |
-| 401 | Authentifizierung fehlgeschlagen | Ungültiges Authentifizierungs-Token |
-| 500 | Interner Server-Fehler | Interner Systemfehler |
-
-## PostgreSQL-API-Fehler
-
-| Fehler-Code | Verbindungsstatus | Beschreibung | Mögliche Ursache |
-|------------|---------------------------|-------------|----------------|
-| **08P01** | K. A. | Nicht unterstützter Nachrichtentyp | Nicht unterstützter Nachrichtentyp |
-| **28P01** | Start-up - Authentifizierung | Ungültiges Kennwort | Ungültiges Authentifizierungs-Token |
-| **28000** | Start-up - Authentifizierung | Ungültiger Autorisierungstyp | Ungültiger Autorisierungstyp. Muss `AuthenticationCleartextPassword`sein. |
-| **42P12** | Start-up - Authentifizierung | Keine Tabellen gefunden | Keine Tabellen zur Verwendung gefunden |
-| **42601** | Abfrage | Syntaxfehler | Ungültiger Befehl- oder Syntaxfehler |
-| **42P01** | Abfrage | Tabelle nicht gefunden | Die in der Abfrage angegebene Tabelle wurde nicht gefunden |
-| **42P07** | Abfrage | Tabelle vorhanden | Eine Tabelle mit demselben Namen ist bereits vorhanden (CREATE TABLE) |
-| **53400** | Abfrage | LIMIT überschreitet den Maximalwert | Benutzer hat eine LIMIT-Klausel über 100.000 angegeben |
-| **53400** | Abfrage | Anweisungs-Timeout | Die abgesendete Live-Anweisung dauerte mehr als 10 Minuten |
-| **58000** | Abfrage | Systemfehler | Interner Systemfehler |
-| **0A000** | Abfrage/Befehl | Nicht unterstützt | Die Funktion/Funktion in der Abfrage/dem Befehl wird nicht unterstützt |
-| **42501** | DROP TABLE Query | Dropdown-Tabelle, die nicht von Query Service erstellt wurde | Die abgelegte Tabelle wurde nicht von Query Service mit dem `CREATE TABLE` statement |
-| **42501** | DROP TABLE Query | Vom authentifizierten Benutzer nicht erstellte Tabelle | Die abgelegte Tabelle wurde nicht vom aktuell angemeldeten Benutzer erstellt |
-| **42P01** | DROP TABLE Query | Tabelle nicht gefunden | Die in der Abfrage angegebene Tabelle wurde nicht gefunden |
-| **42P12** | DROP TABLE Query | Keine Tabelle gefunden für `dbName`: Bitte überprüfen Sie die `dbName` | In der aktuellen Datenbank wurden keine Tabellen gefunden |
-
 ## Exportieren von Daten {#exporting-data}
 
 Dieser Abschnitt enthält Informationen zum Exportieren von Daten und Einschränkungen.
-
 
 ### Gibt es eine Möglichkeit, Daten aus Query Service nach der Abfrageverarbeitung zu extrahieren und die Ergebnisse in einer CSV-Datei zu speichern?
 
@@ -524,3 +497,51 @@ Durch Hinzufügen der Cacheserver-Ebene werden die Daten aus Query Service zwisc
 
 ++ + Antwort Nein, pgAdmin-Konnektivität wird nicht unterstützt. A [Liste der verfügbaren Clients von Drittanbietern und Anweisungen zur Verbindung dieser Clients mit Query Service](./clients/overview.md) finden Sie in der Dokumentation.
 +++
+
+## PostgreSQL-API-Fehler {#postgresql-api-errors}
+
+Die folgende Tabelle enthält PSQL-Fehlercodes und die möglichen Ursachen.
+
+| Fehler-Code | Verbindungsstatus | Beschreibung | Mögliche Ursache |
+|------------|---------------------------|-------------|----------------|
+| **08P01** | K. A. | Nicht unterstützter Nachrichtentyp | Nicht unterstützter Nachrichtentyp |
+| **28P01** | Start-up - Authentifizierung | Ungültiges Kennwort | Ungültiges Authentifizierungs-Token |
+| **28000** | Start-up - Authentifizierung | Ungültiger Autorisierungstyp | Ungültiger Autorisierungstyp. Muss `AuthenticationCleartextPassword`sein. |
+| **42P12** | Start-up - Authentifizierung | Keine Tabellen gefunden | Keine Tabellen zur Verwendung gefunden |
+| **42601** | Abfrage | Syntaxfehler | Ungültiger Befehl- oder Syntaxfehler |
+| **42P01** | Abfrage | Tabelle nicht gefunden | Die in der Abfrage angegebene Tabelle wurde nicht gefunden |
+| **42P07** | Abfrage | Tabelle vorhanden | Eine Tabelle mit demselben Namen ist bereits vorhanden (CREATE TABLE) |
+| **53400** | Abfrage | LIMIT überschreitet den Maximalwert | Benutzer hat eine LIMIT-Klausel über 100.000 angegeben |
+| **53400** | Abfrage | Anweisungs-Timeout | Die abgesendete Live-Anweisung dauerte mehr als 10 Minuten |
+| **58000** | Abfrage | Systemfehler | Interner Systemfehler |
+| **0A000** | Abfrage/Befehl | Nicht unterstützt | Die Funktion/Funktion in der Abfrage/dem Befehl wird nicht unterstützt |
+| **42501** | DROP TABLE Query | Dropdown-Tabelle, die nicht von Query Service erstellt wurde | Die abgelegte Tabelle wurde nicht von Query Service mit dem `CREATE TABLE` statement |
+| **42501** | DROP TABLE Query | Vom authentifizierten Benutzer nicht erstellte Tabelle | Die abgelegte Tabelle wurde nicht vom aktuell angemeldeten Benutzer erstellt |
+| **42P01** | DROP TABLE Query | Tabelle nicht gefunden | Die in der Abfrage angegebene Tabelle wurde nicht gefunden |
+| **42P12** | DROP TABLE Query | Keine Tabelle gefunden für `dbName`: Bitte überprüfen Sie die `dbName` | In der aktuellen Datenbank wurden keine Tabellen gefunden |
+
+### Warum habe ich einen Fehlercode 58000 erhalten, wenn ich die history_meta() -Methode in meiner Tabelle verwende?
+
+++ + Antwort auf die `history_meta()` -Methode verwendet wird, um auf einen Schnappschuss aus einem Datensatz zuzugreifen. Wenn Sie zuvor eine Abfrage für einen leeren Datensatz in Azure Data Lake Storage (ADLS) ausführen würden, würden Sie einen Fehlercode 58000 erhalten, der besagt, dass der Datensatz nicht vorhanden ist. Nachfolgend finden Sie ein Beispiel für den alten Systemfehler.
+
+```shell
+ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]
+```
+
+Dieser Fehler ist aufgetreten, weil für die Abfrage kein Rückgabewert vorhanden war. Dieses Verhalten wurde behoben, um die folgende Meldung zurückzugeben:
+
+```text
+Query complete in {timeframe}. 0 rows returned. 
+```
+
++++
+
+## REST-API-Fehler {#rest-api-errors}
+
+Die folgende Tabelle enthält HTTP-Fehlercodes und die möglichen Ursachen.
+
+| HTTP-Statuscode | Beschreibung | Mögliche Ursachen |
+|------------------|-----------------------|----------------------------|
+| 400 | Ungültige Anfrage | Falsch formulierte oder illegale Abfrage |
+| 401 | Authentifizierung fehlgeschlagen | Ungültiges Authentifizierungs-Token |
+| 500 | Interner Server-Fehler | Interner Systemfehler |
