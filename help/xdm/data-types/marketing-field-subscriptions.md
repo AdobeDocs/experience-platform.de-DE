@@ -4,9 +4,9 @@ title: Feld für allgemeine Marketing-Voreinstellungen mit Abonnementdatentyp
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über das Feld "Allgemeine Marketing-Voreinstellung"mit dem XDM-Datentyp "Abonnements".
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
-source-git-commit: 0f39e9237185b49417f2af8dfc288ab1420cccae
+source-git-commit: bccf97d85421fcb2f8fe153ad0ddbef4975b6f7e
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -59,29 +59,31 @@ Einige Unternehmen ermöglichen es Kunden, sich für verschiedene Abonnements zu
 Die folgende JSON stellt ein Beispiel für ein Marketing-Feld für einen Marketing-Kanal für Telefonanrufe dar, der einen `subscriptions` map. Jeder Schlüssel im `subscriptions` -Objekt stellt ein individuelles Abonnement für den Marketing-Kanal dar. Jedes Abonnement enthält einen Opt-in-Wert (`val`).
 
 ```json
-"phone-marketing-field": {
+"email-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
     "loyalty-offers": {
       "val": "y",
       "type": "sales",
+      "topics": ["discounts", "early-access"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "overdrawn-account": {
+    "newsletters": {
       "val": "y",
-      "type": "issues",
+      "type": "advertising",
+      "topics": ["hardware"],
       "subscribers": {
-        "123-555-0928": {
+        "jdoe@example.com": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "301-555-1527": {
+        "tparan@example.com": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
@@ -93,7 +95,9 @@ Die folgende JSON stellt ein Beispiel für ein Marketing-Feld für einen Marketi
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
+| `val` | Die [Zustimmungswert](#val) für das Abonnement. |
 | `type` | Der Abonnementtyp. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst. |
+| `topics` | Ein Array von Zeichenfolgen, die die Interessensgebiete darstellen, die ein Kunde abonniert hat und die zum Senden relevanter Inhalte verwendet werden können. |
 | `subscribers` | Ein optionales Feld vom Typ Zuordnung , das eine Reihe von Kennungen (wie E-Mail-Adressen oder Telefonnummern) darstellt, die ein bestimmtes Abonnement abonniert haben. Jeder Schlüssel in diesem Objekt stellt die betreffende Kennung dar und enthält zwei Untereigenschaften: <ul><li>`time`: Ein ISO 8601-Zeitstempel, der angibt, wann die Identität abonniert hat (falls zutreffend).</li><li>`source`: Die Quelle, aus der der Abonnent stammt. Dabei kann es sich um eine beliebige beschreibende Zeichenfolge handeln, sofern diese 15 Zeichen oder weniger umfasst.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
