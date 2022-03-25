@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; Einblicke; Kundenunterstützung; beliebte Themen; Kundenai-Einblicke
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Insights mit Customer AI
 topic-legacy: Discovering insights
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 63d6ec7d72b448e9d1bf1da96a1f148838d99cec
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 7%

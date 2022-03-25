@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; Erste Schritte; Kundenunterstützung; beliebte Themen; Eingabe der Kundenunterstützung; Ausgabe der Kundenai
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Eingabe und Ausgabe in Customer AI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Customer AI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '3054'
 ht-degree: 13%

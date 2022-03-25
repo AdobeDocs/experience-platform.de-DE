@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform; Übersicht; Kundenunterstützung; beliebte Themen; Überblick über Kundenai
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Customer AI – Übersicht
 topic-legacy: Customer AI Overview
 description: Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt, ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 landing-page-description: Customer AI wird verwendet, um für einzelne Profile skaliert benutzerdefinierte Tendenzwerte wie Abwanderung und Konversion zu berechnen.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 89%
@@ -52,4 +52,4 @@ Customer AI analysiert vorhandene Kundenerlebnis-Ereignisdaten, um Tendenzwerte 
 
 ## Nächste Schritte
 
-Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieses Handbuch führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für Customer AI. Wenn Sie bereits alle Ihre Anmeldedaten und Daten bereit haben, besuchen Sie [Konfigurieren einer Customer AI-Instanz](./user-guide/configure.md). Es enthält Schritte zur Verwendung von Customer AI.
+Beginnen Sie mit den [Ersten Schritten](./getting-started.md). Dieses Handbuch führt Sie durch die Einrichtung aller erforderlichen Voraussetzungen für Customer AI. Wenn Sie bereits alle Ihre Anmeldedaten und Daten bereit haben, besuchen Sie  [Konfigurieren einer Customer AI-Instanz](./user-guide/configure.md). Es enthält Schritte zur Verwendung von Customer AI.

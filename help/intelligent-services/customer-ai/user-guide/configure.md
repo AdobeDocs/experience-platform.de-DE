@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; Benutzerhandbuch; Kundenunterstützung; beliebte Themen; Instanz konfigurieren; Instanz erstellen;
-solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
+solution: Intelligent Services, Real-time Customer Data Platform
 feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 topic-legacy: Instance creation
 description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f7fde9ed299e6bdb6e63279be1126b91fc90d3f3
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '2608'
 ht-degree: 11%
@@ -62,7 +62,7 @@ Im Folgenden finden Sie wichtige Informationen zu Werten, die Sie für die Insta
 
 Geben Sie die erforderlichen Werte an und wählen Sie dann **[!UICONTROL Nächste]** , um fortzufahren.
 
-## Daten auswählen {#select-data}
+## Auswählen von Daten {#select-data}
 
 Standardmäßig verwendet Customer AI Adobe Analytics-, Adobe Audience Manager-, Erlebnisereignis- und Kundenerlebnisereignisdaten zur Berechnung der Tendenzwerte. Bei der Auswahl eines Datensatzes werden nur Datensätze aufgelistet, die mit Customer AI kompatibel sind. Um einen Datensatz auszuwählen, wählen Sie die **+**) neben dem Datensatznamen oder aktivieren Sie das Kontrollkästchen, um mehrere Datensätze gleichzeitig hinzuzufügen. Verwenden Sie die Suchoption, um schnell die Datensätze zu finden, an denen Sie interessiert sind.
 

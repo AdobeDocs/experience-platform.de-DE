@@ -1,11 +1,11 @@
 ---
 keywords: Visuelle Ähnlichkeit; visuelle Ähnlichkeit; CCAI API
-solution: Experience Platform, Intelligent Services
+solution: Intelligent Services
 title: Visuelle Ähnlichkeit in der Inhalts- und Commerce-API
 topic-legacy: Developer guide
 description: Der Dienst für visuelle Ähnlichkeit findet bei einem Bild automatisch visuell ähnliche Bilder aus einem Katalog.
 exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 3%
@@ -36,7 +36,7 @@ Mit der folgenden Anfrage werden visuell ähnliche Bilder aus einem Katalog abge
 
 >[!CAUTION]
 >
->`analyzer_id` bestimmt, welche verwendet  [!DNL Sensei Content Framework] wird. Vergewissern Sie sich, dass Sie über die richtige `analyzer_id` verfügen, bevor Sie Ihre Anfrage stellen. Wenden Sie sich an das Beta-Team von Content and Commerce AI , um Ihr `analyzer_id` für diesen Dienst zu erhalten.
+>`analyzer_id` bestimmt, [!DNL Sensei Content Framework] verwendet. Vergewissern Sie sich bitte, dass Sie über die richtige `analyzer_id` bevor Sie Ihre Anfrage stellen. Kontaktieren Sie das Beta-Team von Content and Commerce AI , um Ihre `analyzer_id` für diesen Dienst.
 
 ```SHELL
 curl -i -X POST https://sensei.adobe.io/services/v1/predict \
@@ -75,21 +75,21 @@ curl -i -X POST https://sensei.adobe.io/services/v1/predict \
 
 | Eigenschaft | Beschreibung | Obligatorisch |
 | --- | --- | --- |
-| `analyzer_id` | Die Dienst-ID [!DNL Sensei], unter der Ihre Anfrage bereitgestellt wird. Diese ID bestimmt, welche der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das KI-Team von Content and Commerce, um eine benutzerdefinierte ID einzurichten. | Ja |
+| `analyzer_id` | Die [!DNL Sensei] Dienst-ID, unter der Ihre Anfrage bereitgestellt wird. Diese ID bestimmt, welcher der [!DNL Sensei Content Frameworks] verwendet werden. Wenden Sie sich bei benutzerdefinierten Diensten an das KI-Team von Content and Commerce, um eine benutzerdefinierte ID einzurichten. | Ja |
 | `application-id` | Die ID der erstellten Anwendung. | Ja |
-| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer dem Array `data` außer Kraft. Jede der anderen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, kann von `data` aus überschrieben werden. | Ja |
+| `data` | Ein Array, das ein JSON-Objekt mit jedem Objekt im Array enthält, das ein Bild darstellt. Alle Parameter, die als Teil dieses Arrays übergeben werden, setzen die globalen Parameter außer Kraft, die außerhalb der `data` Array. Jede der anderen Eigenschaften, die unten in dieser Tabelle aufgeführt sind, kann von innerhalb `data`. | Ja |
 | `content-id` | Die eindeutige ID für das Datenelement, das in der Antwort zurückgegeben wird. Wenn dies nicht übergeben wird, wird eine automatisch generierte ID zugewiesen. | Nein |
-| `content` | Der Inhalt, der vom visuellen Ähnlichkeitsdienst analysiert werden soll. Falls das Bild Teil des Anfragetexts ist, verwenden Sie `-F file=@<filename>` im curl-Befehl, um das Bild zu übergeben, wobei dieser Parameter als leere Zeichenfolge verbleibt. <br> Wenn das Bild eine Datei auf S3 ist, übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anfragetexts ist, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
-| `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anfragetexts oder einer signierten URL für einen S3-Behälter ist. Der Standardwert für diese Eigenschaft ist `inline`. | Nein |
-| `encoding` | Das Dateiformat des Eingabebilds. Derzeit können nur JPEG- und PNG-Bilder verarbeitet werden. Der Standardwert für diese Eigenschaft ist `jpeg`. | Nein |
-| `threshold` | Der Schwellenwert des Punktes (0 bis 1), über dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
-| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0`, um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold` ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Limits. Der Standardwert für diese Eigenschaft ist `0`. | Nein |
+| `content` | Der Inhalt, der vom visuellen Ähnlichkeitsdienst analysiert werden soll. Falls das Bild Teil des Anfrageinhalts ist, verwenden Sie `-F file=@<filename>` im curl -Befehl, um das Bild zu übergeben, wobei dieser Parameter als leere Zeichenfolge beibehalten wird. <br> Wenn das Bild eine Datei auf S3 ist, übergeben Sie die signierte URL. Wenn der Inhalt Teil des Anfragetexts ist, sollte die Liste der Datenelemente nur ein Objekt enthalten. Wenn mehr als ein Objekt übergeben wird, wird nur das erste Objekt verarbeitet. | Ja |
+| `content-type` | Wird verwendet, um anzugeben, ob die Eingabe Teil des Anfragetexts oder einer signierten URL für einen S3-Behälter ist. Der Standardwert für diese Eigenschaft lautet `inline`. | Nein |
+| `encoding` | Das Dateiformat des Eingabebilds. Derzeit können nur JPEG- und PNG-Bilder verarbeitet werden. Der Standardwert für diese Eigenschaft lautet `jpeg`. | Nein |
+| `threshold` | Der Schwellenwert des Punktes (0 bis 1), über dem die Ergebnisse zurückgegeben werden müssen. Verwenden Sie den Wert `0` , um alle Ergebnisse zurückzugeben. Der Standardwert für diese Eigenschaft lautet `0`. | Nein |
+| `top-N` | Die Anzahl der zurückzugebenden Ergebnisse (darf keine negative Ganzzahl sein). Verwenden Sie den Wert `0` , um alle Ergebnisse zurückzugeben. Bei Verwendung in Verbindung mit `threshold`, ist die Anzahl der zurückgegebenen Ergebnisse die niedrigere der beiden festgelegten Limits. Der Standardwert für diese Eigenschaft lautet `0`. | Nein |
 | `custom` | Alle benutzerdefinierten Parameter, die weitergegeben werden sollen. | Nein |
 | `historic-metadata` | Ein Array, das Metadaten übergeben werden kann. | Nein |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein `response`-Array zurück, das für jedes der visuell ähnlichen Bilder im Katalog `feature_value` und `feature_name` enthält.
+Eine erfolgreiche Antwort gibt eine `response` Array, das `feature_value` und `feature_name` für jedes der visuell ähnlichen Bilder im Katalog.
 
 Die folgenden visuell ähnlichen Bilder wurden in der unten gezeigten Beispielantwort zurückgegeben:
 
