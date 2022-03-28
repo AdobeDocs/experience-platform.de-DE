@@ -3,10 +3,10 @@ title: Konfigurieren Ihres Datenspeichers für das Experience Platform Web SDK
 description: 'Erfahren Sie, wie Sie die Datastreams konfigurieren. '
 keywords: Konfiguration; Datastreams; datastreamId; edge; datastream id; Umgebungseinstellungen; edgeConfigId; identity; ID-Synchronisierung aktiviert; ID-Sync-Container-ID; Sandbox; Streaming-Inlet; Ereignis-Datensatz; Target; Client-Code; Eigenschaften-Token; Target-Umgebungs-ID; Cookie-Ziele; URL-Ziele; Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 9dbadcb65d4306702e5e4d7dae2614e86cbde332
+source-git-commit: 7fc62099ef7561595d260a5507fb2094f58b6016
 workflow-type: tm+mt
-source-wordcount: '1944'
-ht-degree: 3%
+source-wordcount: '2004'
+ht-degree: 2%
 
 ---
 
@@ -49,6 +49,16 @@ Der Workflow zur Erstellung von Datensätzen wird angezeigt, beginnend mit dem K
 Wenn Sie diesen Datastream zur Verwendung in Experience Platform konfigurieren und das Platform Web SDK verwenden, müssen Sie auch eine [ereignisbasiertes Experience-Datenmodell (XDM)-Schema](../../xdm/classes/experienceevent.md) um die Daten darzustellen, die Sie für die Aufnahme planen.
 
 ![Grundlegende Konfiguration für einen Datastream](../images/datastreams/configure.png)
+
+Auswählen **[!UICONTROL Erweiterte Optionen]** , um zusätzliche Steuerelemente zum Konfigurieren des Datenspeichers anzuzeigen.
+
+![Erweiterte Konfigurationsoptionen](../images/datastreams/advanced-options.png)
+
+| Einstellung | Beschreibung |
+| --- | --- |
+| [!UICONTROL Geo-Position] | Bestimmt anhand der IP-Adresse des Benutzers, ob GPS-Suchen stattfinden. Die Standardeinstellung **[!UICONTROL Keines]** deaktiviert alle GPS-Suchen, während die **[!UICONTROL Ort]** -Einstellung stellt GPS-Koordinaten auf zwei Dezimalstellen bereit. |
+| [!UICONTROL Erstanbieter-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einem [Erstanbieter-Geräte-ID](../identity/first-party-device-ids.md), anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll. |
+| [!UICONTROL Synchronisierung der Drittanbieter-ID] | ID-Synchronisationen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisierungen für diesen Datastream ausgeführt wird. |
 
 Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile SDK verwenden oder anderweitig nicht Ihren Datenspeicher für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
 
@@ -199,16 +209,6 @@ Dieser Dienst steuert, ob und wie Daten an gesendet werden [Ereignisweiterleitun
 >[!NOTE]
 >
 >Sie können **[!UICONTROL IDs manuell eingeben]** um die Eigenschaften- und Umgebungsnamen einzugeben, anstatt die Dropdown-Menüs zu verwenden.
-
-### [!UICONTROL Synchronisierung der Drittanbieter-ID] settings
-
-Der Abschnitt mit der Drittanbieter-ID ist der einzige Abschnitt, der immer aktiviert ist. Es stehen zwei Einstellungen zur Verfügung: &quot;[!UICONTROL Synchronisierung der Drittanbieter-ID aktiviert]&quot; und &quot;[!UICONTROL Container-ID der Drittanbieter-ID-Synchronisierung]&quot;.
-
-![Abschnitt zur ID-Synchronisierung von Drittanbietern in der Konfigurationsoberfläche](../images/datastreams/third-party-id-sync-config.png)
-
-| Einstellung | Beschreibung |
-| --- | --- |
-| [!UICONTROL Container-ID der Drittanbieter-ID-Synchronisierung] | ID-Synchronisationen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Dadurch wird gesteuert, welcher Container mit ID-Synchronisierungen für diesen Datastream ausgeführt wird. |
 
 ## Nächste Schritte
 
