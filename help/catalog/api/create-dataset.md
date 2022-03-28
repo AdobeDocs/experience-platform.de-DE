@@ -5,20 +5,20 @@ title: Erstellen eines Datensatzes in der API
 topic-legacy: developer guide
 description: In diesem Dokument wird beschrieben, wie Sie ein Datensatzobjekt in der Catalog Service-API erstellen.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 57%
+source-wordcount: '253'
+ht-degree: 55%
 
 ---
 
 # Datensatz in der API erstellen
 
-Um einen Datensatz mit der API [!DNL Catalog] zu erstellen, müssen Sie den Wert `$id` des [!DNL Experience Data Model] (XDM)-Schemas kennen, auf dem der Datensatz basieren soll. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/datasets` in der API [!DNL Catalog] senden.
+So erstellen Sie einen Datensatz mit der [!DNL Catalog] API, Sie müssen die `$id` Wert der [!DNL Experience Data Model] (XDM)-Schema, auf dem der Datensatz basieren wird. Sobald Sie über die Schema-ID verfügen, können Sie einen Datensatz erstellen, indem Sie eine POST-Anfrage an die `/datasets` -Endpunkt im [!DNL Catalog] API.
 
 >[!NOTE]
 >
->In diesem Dokument wird nur die Erstellung eines Datensatzobjekts in [!DNL Catalog] beschrieben. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
+>In diesem Dokument wird nur beschrieben, wie Sie ein Datensatzobjekt in [!DNL Catalog]. Ausführliche Anweisungen zum Erstellen, Füllen und Überwachen eines Datensatzes finden Sie im folgenden [Tutorial](../datasets/create.md).
 
 **API-Format**
 
@@ -55,7 +55,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->In diesem Beispiel wird das Dateiformat [Apache Parquet](https://parquet.apache.org/documentation/latest/) für die Eigenschaft `containerFormat` verwendet. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
+>In diesem Beispiel wird die [Apache Parquet](https://parquet.apache.org/docs/) Dateiformat für `containerFormat` -Eigenschaft. Ein Beispiel zur Nutzung des JSON-Dateiformats finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](../../ingestion/batch-ingestion/api-overview.md).
 
 **Antwort**
 

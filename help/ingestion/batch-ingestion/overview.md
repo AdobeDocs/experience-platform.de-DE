@@ -5,9 +5,9 @@ title: Batch Ingestion-API - Übersicht
 topic-legacy: overview
 description: Mit der Adobe Experience Platform Data Ingestion-API können Sie Daten als Batch-Dateien in Platform erfassen. Daten, die erfasst werden, können Profildaten aus einer reduzierten Datei in einem CRM-System (z. B. eine Parquet-Datei) oder Daten sein, die einem bekannten Schema in der Experience-Datenmodell (XDM)-Registry entsprechen.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1387'
 ht-degree: 71%
 
 ---
@@ -151,7 +151,7 @@ Sie können Dateien mit der Small File Upload-API hochladen. Wenn Ihre Dateien j
 
 >[!INFO]
 >
->Die folgenden Beispiele verwenden die [Apache Parquet](https://parquet.apache.org/documentation/latest/) Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
+>Die folgenden Beispiele verwenden die [Apache Parquet](https://parquet.apache.org/docs/) Dateiformat. Ein Beispiel, das das JSON-Dateiformat verwendet, finden Sie im [Entwicklerhandbuch zur Batch-Erfassung](api-overview.md).
 
 ### Hochladen von kleinen Dateien
 

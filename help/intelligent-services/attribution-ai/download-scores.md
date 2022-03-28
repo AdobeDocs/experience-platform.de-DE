@@ -5,10 +5,10 @@ title: Herunterladen von Bewertungen in Attribution AI
 topic-legacy: Downloading scores
 description: Dieses Dokument dient als Anleitung zum Herunterladen von Bewertungen für Attribution AI.
 exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: 75426b1ddc16af39eb6c423027fac7d4d0e21c6a
 workflow-type: tm+mt
-source-wordcount: '1053'
-ht-degree: 68%
+source-wordcount: '1052'
+ht-degree: 67%
 
 ---
 
@@ -18,13 +18,13 @@ Dieses Dokument dient als Anleitung zum Herunterladen von Bewertungen für Attri
 
 ## Erste Schritte
 
-Mit Attribution AI können Sie Bewertungen im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Bewertungen im Handbuch [Erste Schritte](./getting-started.md) gelesen und abgeschlossen haben.
+Mit Attribution AI können Sie Bewertungen im Parquet-Dateiformat herunterladen. Für dieses Tutorial müssen Sie den Abschnitt zum Herunterladen von Attribution AI-Bewertungen im Abschnitt [Erste Schritte](./getting-started.md) Handbuch.
 
-Um auf Bewertungen für Attribution AI zugreifen zu können, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie das [Attribution AI-Benutzerhandbuch](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
+Um auf Bewertungen für Attribution AI zugreifen zu können, benötigen Sie außerdem eine Dienstinstanz mit einem erfolgreichen Ausführungsstatus. Um eine neue Dienstinstanz zu erstellen, besuchen Sie die [Attribution AI-Benutzerhandbuch](./user-guide.md). Wenn Sie kürzlich eine Dienstinstanz erstellt haben und diese sich noch in der Trainings- und Bewertungsphase befindet, warten Sie bitte 24 Stunden, bis sie fertig ist.
 
 ## Ermitteln Ihrer Datensatz-ID {#dataset-id}
 
-Klicken Sie in Ihrer Dienstinstanz für Attribution AI-Einblicke in das Dropdown-Menü *Mehr Aktionen* oben rechts und wählen Sie dann **[!UICONTROL Auf Bewertungen zugreifen]** aus.
+Klicken Sie in Ihrer Dienstinstanz für Attribution AI-Einblicke auf die *Mehr Aktionen* Dropdown in der oberen rechten Navigation und wählen Sie **[!UICONTROL Auf Bewertungen zugreifen]**.
 
 ![Mehr Aktionen](./images/download-scores/more-actions.png)
 
@@ -34,7 +34,7 @@ Es wird ein neues Dialogfeld mit einem Link zur Dokumentation zum Herunterladen 
 
 ## Abrufen Ihrer Batch-Kennung {#retrieve-your-batch-id}
 
-Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für den Abfrageparameter `limit` auf den gewünschten Wert, der zurückgegeben werden soll. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../catalog/api/filter-data.md).
+Rufen Sie mit Ihrer Datensatz-ID aus dem vorherigen Schritt die Catalog-API auf, um eine Batch-Kennung abzurufen. Für diesen API-Aufruf werden zusätzliche Abfrageparameter verwendet, um den neuesten erfolgreichen Batch anstelle einer Liste von Batches Ihrer Organisation zurückzugeben. Um weitere Batches zurückzugeben, erhöhen Sie die Zahl für die `limit` den Abfrageparameter auf den gewünschten Betrag, den Sie zurückgeben möchten. Weitere Informationen zu den verfügbaren Parametertypen für die Abfrage finden Sie im Handbuch zum [Filtern von Katalogdaten mithilfe von Abfrageparametern](../../catalog/api/filter-data.md).
 
 **API-Format**
 
@@ -62,7 +62,7 @@ Eine erfolgreiche Antwort gibt eine Payload zurück, die ein Batch-ID-Objekt ent
 
 >[!NOTE]
 >
-> In der folgenden Antwort wurde das `tags` -Objekt zur Lesbarkeit reformiert.
+> Die folgende Antwort enthielt die `tags` zur Lesbarkeit reformiert wurde.
 
 ```json
 {
@@ -260,11 +260,11 @@ Die Antwort lädt die angeforderte Datei in Ihr aktuelles Verzeichnis herunter. 
 
 ![Endgerät](./images/download-scores/terminal-output.png)
 
-Die heruntergeladenen Bewertungen werden im Parquet-Format angezeigt und benötigen entweder einen [!DNL Spark]-shell- oder Parquet-Reader, um die Bewertungen anzuzeigen. Für die Rohwertanzeige können Sie [Apache Parquet Tools](https://parquet.apache.org/documentation/latest/) verwenden. Parquet-Tools können die Daten mit [!DNL Spark] analysieren.
+Die heruntergeladenen Bewertungen werden im Parquet-Format angezeigt und benötigen entweder eine [!DNL Spark]-Shell- oder Parquet-Leser, um die Bewertungen anzuzeigen. Für die Rohwertanzeige können Sie [Apache Parquet-Tools](https://parquet.apache.org/docs/). Parquet-Tools können die Daten mit [!DNL Spark].
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die zum Herunterladen von Attribution AI-Bewertungen erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie in der Dokumentation [Attribution AI-Eingabe und -Ausgabe](./input-output.md) .
+In diesem Dokument wurden die zum Herunterladen von Attribution AI-Bewertungen erforderlichen Schritte beschrieben. Weitere Informationen zu den Ergebnisausgaben finden Sie unter [Eingabe und Ausgabe von Attribution AI](./input-output.md) Dokumentation.
 
 ## Aufrufen von Bewertungen mithilfe von Snowflake
 
