@@ -4,14 +4,14 @@ title: 'IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele '
 type: Documentation
 description: Diese Seite enthält IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform auf Ihren SFTP-Server, Amazon S3 oder Azure Blob-Speicher zu exportieren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 4cc7fb2714f6df8065a0531f7e507983940d662c
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
 
-# IP-Adressen-Zulassungsliste für Cloud-Speicher-Ziele {#ip-address-allow-list}
+# IP-Adresse - Zulassungsliste für Cloud-Speicher-Ziele {#ip-address-allow-list}
 
 >[!IMPORTANT]
 >
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## Übersicht {#overview}
 
-Diese Seite enthält IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von der Experience Platform in Ihren [SFTP-Server](./sftp.md) zu exportieren.
+Auf dieser Seite finden Sie IP-Bereiche, die Sie zu Ihrer Zulassungsliste hinzufügen können, um Daten sicher von der Experience Platform in Ihre [SFTP-Server](./sftp.md).
 
 Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen.
 
-Adobe empfiehlt, die folgenden IP-Bereiche zu einer Zulassungsliste hinzuzufügen, bevor Sie mit Cloud-Speicher-Zielverbindungen arbeiten. Wenn Sie Ihrer Zulassungsliste Ihren regionsspezifischen IP-Bereich nicht hinzufügen, kann dies bei der Verwendung der Zielverbindungen des Cloud-Speichers zu Fehlern oder Leistungseinbußen führen.
+Adobe empfiehlt, die folgenden IP-Bereiche einer Zulassungsliste hinzuzufügen, bevor Sie mit Zielverbindungen des Cloud-Speichers arbeiten. Wenn Sie Ihren regionsspezifischen IP-Bereich nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung der Zielverbindungen des Cloud-Speichers zu Fehlern oder Leistungseinbußen führen.
 
 ## Erforderlich für alle Kunden
 

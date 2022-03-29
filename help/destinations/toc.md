@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '733'
 ht-degree: 41%
 
 ---
@@ -96,7 +96,7 @@ ht-degree: 41%
       * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
       * [(Beta) Azure Event Hub-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
-      * [IP-Adressen-Zulassungsliste](./catalog/cloud-storage/ip-address-allow-list.md)
+      * [IP-Adresse - Zulassungsliste für Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * Data Management Platform-Ziele {#data-management}
       * [Übersicht über Data Management Platform-(DMP-)Ziele](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
@@ -138,6 +138,7 @@ ht-degree: 41%
       * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
    * Streaming-Ziele {#streaming}
       * [ (Beta) HTTP-API-Verbindung](./catalog/streaming/http-destination.md)
+      * [IP-Adressen-Zulassungsliste für Streaming-Ziele](./catalog/streaming/ip-address-allow-list.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)
       * [Foresee-Erweiterungsziel](./catalog/survey/foresee.md)

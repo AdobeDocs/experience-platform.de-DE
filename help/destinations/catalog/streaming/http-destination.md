@@ -3,9 +3,9 @@ keywords: Streaming;
 title: HTTP-API-Verbindung
 description: Mit dem HTTP-API-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c2e726a7e66267bf8f301014ae30dedd7472c693
+source-git-commit: 7acacc4a5ddd10f47da59837ad7dab2615d41789
 workflow-type: tm+mt
-source-wordcount: '1377'
+source-wordcount: '1384'
 ht-degree: 3%
 
 ---
@@ -61,8 +61,11 @@ curl --location --request POST '<YOUR_API_ENDPOINT>' \
 --data-urlencode 'client_secret=<CLIENT_SECRET>'
 ```
 
-
 Sie können auch [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) , um eine Experience Platform einzurichten und Profildaten an einen HTTP-Endpunkt zu senden.
+
+## IP-Adressen-Zulassungsliste {#ip-address-allowlist}
+
+Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das HTTP-API-Ziel auf die Zulassungsliste gesetzt haben. Siehe [IP-Adressen-Zulassungsliste für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md) für die vollständige Liste der IP-Adressen in Zulassungsliste.
 
 ## Mit Ziel verbinden {#connect-destination}
 
@@ -97,10 +100,6 @@ Siehe [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](../..
 ### Zielattribute {#attributes}
 
 Im [[!UICONTROL Attribute auswählen]](../../ui/activate-streaming-profile-destinations.md#select-attributes) in Adobe empfiehlt, eine eindeutige Kennung aus der [Vereinigungsschema](../../../profile/home.md#profile-fragments-and-union-schemas). Wählen Sie die eindeutige Kennung und alle anderen XDM-Felder aus, die Sie an das Ziel exportieren möchten.
-
-## Produktaspekte {#product-considerations}
-
-Experience Platform streamt Daten nicht über feste statische IPs an HTTP-Endpunkte. Daher kann Adobe keine Liste statischer IPs bereitstellen, die Sie für das HTTP-API-Ziel auf die Zulassungsliste gesetzt haben.
 
 ## Profil-Exportverhalten {#profile-export-behavior}
 
