@@ -2,18 +2,14 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Auditprotokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 7e4853cee8a0fa937c82eb842cd73b675eb337a3
+source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
 workflow-type: tm+mt
-source-wordcount: '657'
-ht-degree: 6%
+source-wordcount: '757'
+ht-degree: 8%
 
 ---
 
-# Audit-Protokolle (Beta)
-
->[!IMPORTANT]
->
->Die Funktion &quot;Prüfprotokolle&quot;in Adobe Experience Platform befindet sich derzeit in der Betaphase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
+# Auditprotokolle
 
 Um die Transparenz und Sichtbarkeit der im System durchgeführten Aktivitäten zu erhöhen, ermöglicht es Ihnen Adobe Experience Platform, die Benutzeraktivität für verschiedene Dienste und Funktionen in Form von &quot;Auditprotokollen&quot;zu überprüfen. Diese Protokolle bilden ein Audit-Protokoll, das Ihnen bei der Fehlerbehebung in Platform helfen und Ihrem Unternehmen helfen kann, die Richtlinien der Unternehmensdatenverwaltung und die gesetzlichen Anforderungen effektiv zu erfüllen.
 
@@ -27,13 +23,18 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 | Ressource | Aktionen |
 | --- | --- |
-| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Profil aktivieren</li></ul> |
 | [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Datentyp](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
-| [Ziel](../../../destinations/home.md) | <ul><li>Aktivieren</li></ul> |
+| [Ziel](../../../destinations/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Erstellung</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
+| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Konto (Adobe)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 
 ## Zugriff auf Prüfprotokolle
 
@@ -47,7 +48,7 @@ Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform
 
 ![Dashboard &quot;Audit logs&quot;](../../images/audit-logs/audits.png)
 
-Das System zeigt nur Prüfprotokolle aus dem letzten Jahr an. Alle Protokolle, die diese Beschränkung überschreiten, werden automatisch aus dem System entfernt.
+Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
@@ -55,7 +56,12 @@ Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leis
 
 ### Auditprotokolle filtern
 
-Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)), um eine Liste von Filtersteuerelementen anzuzeigen, die die Eingrenzung der Ergebnisse unterstützen.
+>[!NOTE]
+>
+>Da es sich hierbei um eine neue Funktion handelt, gehen die angezeigten Daten nur bis März 2022 zurück. Je nach ausgewählter Ressource stehen möglicherweise frühere Daten ab Januar 2022 zur Verfügung.
+
+
+Wählen Sie das Trichtersymbol (![Filtersymbol](../../images/audit-logs/icon.png)), um eine Liste von Filtersteuerelementen anzuzeigen, die die Eingrenzung der Ergebnisse unterstützen. Unabhängig von den ausgewählten Filtern werden nur die letzten 1000 Datensätze angezeigt.
 
 ![Filter](../../images/audit-logs/filters.png)
 
@@ -65,8 +71,9 @@ Die folgenden Filter sind für Prüfereignisse in der Benutzeroberfläche verfü
 | --- | --- |
 | [!UICONTROL Kategorie] | Verwenden Sie das Dropdown-Menü, um die angezeigten Ergebnisse nach [category](#category). |
 | [!UICONTROL Aktion] | Nach Aktion filtern. Derzeit nur [!UICONTROL Erstellen] und [!UICONTROL Löschen] -Aktionen gefiltert werden. |
+| [!UICONTROL Benutzer] | Geben Sie die vollständige Benutzer-ID ein (z. B. `johndoe@acme.com`), um nach Benutzer zu filtern. |
 | [!UICONTROL Status] | Filtern Sie nach, ob die Aktion zulässig (abgeschlossen) oder verweigert wurde, weil [Zugriffskontrolle](../../../access-control/home.md) Berechtigungen. |
-| [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. |
+| [!UICONTROL Datum] | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. Daten können mit einem Lookback-Zeitraum von 90 Tagen exportiert werden (z. B. 2021-12-15-2022-03-15). Dies kann je nach Ereignistyp unterschiedlich sein. |
 
 Um einen Filter zu entfernen, wählen Sie das &quot;X&quot;auf dem Pillensymbol für den betreffenden Filter aus oder wählen Sie **[!UICONTROL Alle löschen]** um alle Filter zu entfernen.
 
@@ -90,6 +97,10 @@ Alle Aktionen, die Sie in der Benutzeroberfläche ausführen können, können au
 
 Informationen zum Verwalten von Auditprotokollen für Aktivitäten in Adobe Admin Console finden Sie in den folgenden Abschnitten. [Dokument](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
-## Nächste Schritte
+## Nächste Schritte und zusätzliche Ressourcen
 
 In diesem Handbuch wurde beschrieben, wie Prüfprotokolle in Experience Platform verwaltet werden. Weitere Informationen zum Überwachen von Platform-Aktivitäten finden Sie in der Dokumentation zu [Observability Insights](../../../observability/home.md) und [Überwachen der Datenerfassung](../../../ingestion/quality/monitor-data-ingestion.md).
+
+Sehen Sie sich das folgende Video an, um Ihr Verständnis der Auditprotokolle in Experience Platform zu verbessern:
+
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
