@@ -4,10 +4,10 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: d8ada2de0ee0408e4e10f0dc45652af6eb6352cf
-workflow-type: ht
-source-wordcount: '728'
-ht-degree: 100%
+source-git-commit: f1098f5992068173f35cb1c53924a82df6996acb
+workflow-type: tm+mt
+source-wordcount: '785'
+ht-degree: 94%
 
 ---
 
@@ -27,6 +27,8 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Datenerfassung](../../inge
 | Informationen zur Ausführung des Quellflusses | Erfolgreiche Ausführung des Quellflusses | Dieser Warnhinweis wird ausgelöst, wenn Daten erfolgreich aus einer Quellverbindung aufgenommen werden. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehler beim Ausführen des Quellflusses | Dieser Warnhinweis wird ausgelöst, wenn bei der Aufnahme von Daten aus einer Quellverbindung ein Fehler auftritt. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmeverzögerung | Dieser Warnhinweis wird ausgelöst, wenn die Verarbeitung eines Batch-Erfassungsablaufs länger als 150 Minuten dauert. |
+| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehlende Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden. |
+| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmefehler | Dieser Warnhinweis wird Trigger, wenn das Verhältnis der fehlgeschlagenen Datensätze zu allen Datensätzen einen Schwellenwert von 0,5 % überschreitet |
 
 {style=&quot;table-layout:auto&quot;}
 
