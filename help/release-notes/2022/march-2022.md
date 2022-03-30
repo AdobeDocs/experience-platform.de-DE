@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 04d35137a301492794ab8c0c67183cf5c76f2105
+source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 30%
+source-wordcount: '882'
+ht-degree: 31%
 
 ---
 
@@ -20,9 +20,9 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Warnhinweise](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Experience-Datenmodell (XDM)](#xdm)
 - [[!DNL Query Service]](#query-service)
 - [Quellen](#sources)
+<!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Auditprotokolle {#audit-logs}
 
@@ -70,6 +70,8 @@ Im Dashboard &quot;Profile&quot;wird eine Momentaufnahme der Attributdaten (Date
 | Nicht segmentierte Profile nach Identity Widget | Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 | Widget &quot;Einzelidentitätsprofile&quot; | Dieses Widget gibt einen Überblick über die Profile Ihrer Organisation, die nur über einen ID-Typ verfügen, der ihre Identität erstellt, entweder eine E-Mail oder eine ECID. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 
+{style=&quot;table-layout:auto&quot;}
+
 Weiterführende Informationen zu Profil-Dashboards finden Sie im Abschnitt [Profil-Dashboards - Übersicht](../../dashboards/guides/profiles.md).
 
 ### Ziele-Dashboards
@@ -82,19 +84,21 @@ Das Dashboard Ziele zeigt eine Momentaufnahme der Ziele an, die Ihr Unternehmen 
 | --- | --- |
 | Widget zur Zielanzahl | Das Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele. Siehe [Dokumentation zum Standard-Widget für Ziele](../../dashboards/guides/destinations.md#standard-widgets) für weitere Informationen. |
 
-Weiterführende Informationen zu Ziel-Dashboards in Platform finden Sie im Abschnitt [Ziele-Dashboards - Übersicht](../../dashboards/guides/destinations.md).
-
-## Experience-Datenmodell (XDM) {#xdm}
-
-Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
-
-| Funktion | Beschreibung |
-| --- | --- |
-| Hinzufügen oder Entfernen einzelner Standardfelder für ein Schema | Mit der Benutzeroberfläche des Schema-Editors können Sie nun Teile von Standardfeldgruppen zu Ihren Schemas hinzufügen und so mehr Flexibilität für die Felder bieten, die Sie einbeziehen möchten, ohne dass Sie benutzerdefinierte Ressourcen von Grund auf neu erstellen müssen.<br><br>Sie können jetzt auch benutzerdefinierte Ad-hoc-Felder direkt in der Schemastruktur definieren und sie einer neuen oder vorhandenen benutzerdefinierten Feldergruppe zuweisen, ohne die Feldergruppe zuvor erstellen oder bearbeiten zu müssen.<br><br>Siehe Handbuch unter [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../xdm/ui/resources/schemas.md) für weitere Informationen zu diesen neuen Workflows. |
-
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersicht](../../xdm/home.md).
+Weiterführende Informationen zu Ziel-Dashboards in Platform finden Sie im Abschnitt [Ziele-Dashboards - Übersicht](../../dashboards/guides/destinations.md).
+
+<!-- ## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that provides common structures and definitions (schemas) for data that is brought into Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Add or remove individual standard fields for a schema | The Schema Editor UI now allows you to add portions of standard field groups to your schemas, providing more flexibility for the fields you choose to include without needing to build custom resources from scratch.<br><br>You can now also define ad-hoc custom fields directly within the schema structure and assign them to a new or existing custom field group without needing to create or edit the field group beforehand.<br><br>See the guide on [creating and editing schemas in the UI](../../xdm/ui/resources/schemas.md) for more information on these new workflows. |
+
+{style="table-layout:auto"}
+
+For more information on XDM in Platform, see the [XDM System overview](../../xdm/home.md). -->
 
 ## Abfrage-Service {#query-service}
 
@@ -105,6 +109,8 @@ Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersic
 | Funktion | Beschreibung |
 | --- | --- |
 | `table_exists` | Mit dem Befehl &quot;Neue Funktion&quot;wird bestätigt, ob im System derzeit eine Tabelle vorhanden ist. Der Befehl gibt einen booleschen Wert zurück: `true` , wenn die Tabelle **does** vorhanden und `false` , wenn die Tabelle **not** existieren. Siehe [SQL-Syntaxdokumentation](../../query-service/sql/syntax.md) für weitere Informationen. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zu den verfügbaren Funktionen finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md).
 
