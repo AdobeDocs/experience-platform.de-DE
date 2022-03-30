@@ -5,9 +5,9 @@ title: Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Schemafeldgruppen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 716250b8bcfa1b2d9c868aa80b3122da401553b9
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -22,45 +22,49 @@ Adobe Experience Platform bietet viele Standardfeldgruppen, die eine Vielzahl vo
 
 ## Voraussetzungen
 
-Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem finden Sie in der [XDM-Übersicht](../../home.md) und in den [Grundlagen der Schemakomposition](../../schema/composition.md) , wie Feldgruppen zu XDM-Schemas beitragen.
+Dieses Handbuch setzt ein Verständnis des XDM-Systems voraus. Siehe Abschnitt [XDM-Übersicht](../../home.md) für eine Einführung in die Rolle von XDM im Experience Platform-Ökosystem und die [Grundlagen der Schemakomposition](../../schema/composition.md) für den Beitrag von Feldergruppen zu XDM-Schemas.
 
-Für dieses Handbuch ist zwar nicht erforderlich, Sie sollten jedoch auch das Tutorial zum Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) befolgen, um sich mit den verschiedenen Funktionen von [!DNL Schema Editor] vertraut zu machen.[
+Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch das Tutorial zu [Erstellen eines Schemas in der Benutzeroberfläche](../../tutorials/create-schema-ui.md) sich mit den verschiedenen Fähigkeiten der [!DNL Schema Editor].
 
 ## Neue Feldergruppe erstellen {#create}
 
-Um eine neue Feldergruppe zu erstellen, müssen Sie zunächst ein Schema auswählen, dem die Feldergruppe hinzugefügt wird. Sie können [ein neues Schema](./schemas.md#create) oder [ein vorhandenes Schema zum Bearbeiten](./schemas.md#edit) auswählen.
+Um eine neue Feldergruppe zu erstellen, müssen Sie zunächst ein Schema auswählen, dem die Feldergruppe hinzugefügt wird. Sie können zwischen [Erstellen eines neuen Schemas](./schemas.md#create) oder [ein vorhandenes Schema zur Bearbeitung auswählen](./schemas.md#edit).
 
-Nachdem Sie das Schema in [!DNL Schema Editor] geöffnet haben, wählen Sie **[!UICONTROL Hinzufügen]** neben dem Abschnitt [!UICONTROL Feldergruppen] in der linken Leiste aus.
+Sobald Sie das Schema im [!DNL Schema Editor]auswählen **[!UICONTROL Hinzufügen]** neben dem [!UICONTROL Feldergruppen] in der linken Leiste.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Es wird ein Dialogfeld mit einer Liste der vorhandenen Feldergruppen für Ihre Organisation angezeigt. Wählen Sie oben im Dialogfeld **[!UICONTROL Neue Feldergruppe erstellen]** aus. Hier können Sie einen **[!UICONTROL Anzeigenamen]** und **[!UICONTROL Beschreibung]** für die Feldergruppe angeben. Wählen Sie abschließend **[!UICONTROL Feldergruppe hinzufügen]** aus.
+Es wird ein Dialogfeld mit einer Liste der vorhandenen Feldergruppen für Ihre Organisation angezeigt. Wählen Sie oben im Dialogfeld die Option **[!UICONTROL Neue Feldergruppe erstellen]**. Hier können Sie eine **[!UICONTROL Anzeigename]** und **[!UICONTROL Beschreibung]** für die Feldergruppe. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Feldergruppe hinzufügen]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
-Das [!DNL Schema Editor] wird erneut angezeigt, wobei die neue Feldergruppe in der linken Leiste aufgelistet ist. Da es sich um eine ganz neue Feldergruppe handelt, stellt sie dem Schema derzeit keine Felder bereit, weshalb die Arbeitsfläche unverändert bleibt. Jetzt können Sie [Felder zur Feldergruppe](#add-fields) hinzufügen.
+Die [!DNL Schema Editor] wird erneut angezeigt, wobei die neue Feldergruppe in der linken Leiste aufgelistet ist. Da es sich um eine ganz neue Feldergruppe handelt, stellt sie dem Schema derzeit keine Felder bereit, weshalb die Arbeitsfläche unverändert bleibt. Sie können jetzt beginnen [Felder zur Feldergruppe hinzufügen](#add-fields).
 
 ## Vorhandene Feldergruppe bearbeiten {#edit}
 
 >[!NOTE]
 >
->Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Hauptfeldgruppen können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schemas bearbeitet werden. Weitere Informationen finden Sie im Abschnitt [Bearbeiten von Anzeigenamen für Schemafelder](./schemas.md#display-names) .
+>Nur benutzerdefinierte Feldergruppen, die von Ihrer Organisation definiert wurden, können vollständig bearbeitet und angepasst werden. Für von Adobe definierte Hauptfeldgruppen können nur die Anzeigenamen für ihre Felder im Kontext einzelner Schemas bearbeitet werden. Siehe Abschnitt zu [Bearbeiten von Anzeigenamen für Schemafelder](./schemas.md#display-names) für Details.
 >
->Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema zur Datenerfassung verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Weitere Informationen finden Sie unter [Regeln der Schemaentwicklung](../../schema/composition.md#evolution) .
+>Nachdem eine benutzerdefinierte Feldergruppe gespeichert und in einem Schema zur Datenerfassung verwendet wurde, können anschließend nur noch additive Änderungen an der Feldergruppe vorgenommen werden. Siehe [Regeln der Schemaentwicklung](../../schema/composition.md#evolution) für weitere Informationen.
 
-Um eine vorhandene Feldergruppe zu bearbeiten, müssen Sie zunächst ein Schema öffnen, das die Feldergruppe innerhalb von [!DNL Schema Editor] verwendet. Sie können [ein vorhandenes Schema zum Bearbeiten](./schemas.md#edit) auswählen oder [ein neues Schema](./schemas.md#create) erstellen und die betreffende Feldergruppe hinzufügen.
+Um eine vorhandene Feldergruppe zu bearbeiten, müssen Sie zunächst ein Schema öffnen, das die Feldergruppe innerhalb der [!DNL Schema Editor]. Sie können [ein vorhandenes Schema zur Bearbeitung auswählen](./schemas.md#edit)oder Sie können [Erstellen eines neuen Schemas](./schemas.md#create) und fügen Sie die betreffende Feldergruppe hinzu.
 
-Sobald das Schema im Editor geöffnet ist, können Sie [Felder zur Feldergruppe](#add-fields) hinzufügen.
+Sobald das Schema im Editor geöffnet ist, können Sie beginnen [Felder zur Feldergruppe hinzufügen](#add-fields).
 
 ## Felder zu einer Feldergruppe hinzufügen {#add-fields}
 
-Um einer Feldergruppe in [!DNL Schema Editor] Felder hinzuzufügen, wählen Sie zunächst den Namen der Feldergruppe in der linken Leiste aus und klicken Sie dann auf das Symbol **plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche.
+>[!NOTE]
+>
+>Dieser Abschnitt konzentriert sich auf das Hinzufügen von Feldern zu benutzerdefinierten Feldergruppen. Informationen zum Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen finden Sie im Abschnitt [Handbuch zur Schemabenutzeroberfläche](./schemas.md#custom-fields-for-standard-groups).
+
+So fügen Sie Felder zu einer benutzerdefinierten Feldergruppe im [!DNL Schema Editor], wählen Sie zunächst den Namen der Feldergruppe in der linken Leiste aus und wählen Sie dann die **plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Ein **[!UICONTROL Neues Feld]** wird auf der Arbeitsfläche angezeigt und die rechte Leiste aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Spezifische Schritte zum Konfigurieren und Hinzufügen des Felds zur Feldergruppe finden Sie im Handbuch zu [Definieren von Feldern in der Benutzeroberfläche](../fields/overview.md#define) .
+A **[!UICONTROL Neues Feld]** wird auf der Arbeitsfläche angezeigt und die rechte Leiste wird aktualisiert, um Steuerelemente zum Konfigurieren der Feldeigenschaften anzuzeigen. Siehe Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../fields/overview.md#define) für spezifische Schritte zum Konfigurieren und Hinzufügen des Felds zur Feldergruppe.
 
-Fügen Sie der Feldergruppe weiterhin beliebig viele Felder hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus, um sowohl das Schema als auch die Feldergruppe zu speichern.
+Fügen Sie der Feldergruppe weiterhin beliebig viele Felder hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** , um sowohl das Schema als auch die Feldergruppe zu speichern.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -68,6 +72,6 @@ Wenn dieselbe Feldergruppe bereits in anderen Schemas verwendet wird, werden die
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Feldergruppen mithilfe der Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen des Arbeitsbereichs [!UICONTROL Schemas] finden Sie unter [[!UICONTROL Schemas] Workspace - Übersicht](../overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Feldergruppen mithilfe der Platform-Benutzeroberfläche erstellen und bearbeiten. Weitere Informationen zu den Funktionen der [!UICONTROL Schemas] Arbeitsbereich, siehe [[!UICONTROL Schemas] Arbeitsbereich - Übersicht](../overview.md).
 
-Informationen zum Verwalten von Feldergruppen mithilfe der [!DNL Schema Registry]-API finden Sie im [Handbuch für Feldergruppen-Endpunkte](../../api/field-groups.md).
+So verwalten Sie Feldergruppen mit der [!DNL Schema Registry] API, siehe [Endpunktleitfaden für Feldergruppen](../../api/field-groups.md).
