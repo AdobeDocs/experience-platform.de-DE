@@ -4,9 +4,9 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 7590c24baae669ebe3214985088a7135a69ff8bc
+source-git-commit: 86041e3165d4ea9cb55717f24b002afa084ff420
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1709'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Nicht zugeordnete Segmente nach Identität]](#unmapped-segments-by-identity)
 * [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
+* [[!UICONTROL Zielanzahl]](#destinations-count)
 
 ### [!UICONTROL Am häufigsten verwendete Ziele] {#most-used-destinations}
 
@@ -151,6 +152,14 @@ Wenn die Anzahl Ihrer segmentzugeordneten Profile außerhalb einer Standardabwei
 Wenn ein Segment innerhalb der [!UICONTROL Zugewiesene Zielgruppen-Konsistenz] -Widget um einen breiten Rand abweicht, sollten Sie auf das Trend-Diagramm zur Zielgruppengröße verweisen und das anormale Segment lokalisieren. Der Trend kann weitere Einblicke in die Gesundheit Ihres Segments bieten.
 
 ![Das Widget zur Zuordnungszielgruppe.](../images/destinations/mapped-audience-health.png)
+
+### [!UICONTROL Zielanzahl] (#destinations-count)
+
+Die [!UICONTROL Zielanzahl] Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele.
+
+Wählen Sie unter der Gesamtanzahl die Option **[!UICONTROL Ziele]** , um zur Registerkarte zum Durchsuchen von Zielen zu navigieren. Auf dieser Seite werden alle Ziele aufgelistet, mit denen Sie bis dato eine Verbindung hergestellt haben.
+
+![Das Widget Ziele zählen .](../images/destinations/destinations-count.png)
 
 ## Nächste Schritte
 
