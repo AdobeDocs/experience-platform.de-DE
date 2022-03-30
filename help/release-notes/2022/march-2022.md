@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
-source-git-commit: 4bead30e4bb13461cf42374cb93f3d67520a14ec
+source-git-commit: 004835ab8af8f187c3e6af036429072e8de19024
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 31%
@@ -125,7 +125,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | Neue Quellen für die B2B-Nutzung verfügbar | Sie können jetzt alle verfügbaren Quellen in Platform für B2B-Anwendungsfälle verwenden. Siehe [Quellkatalog](../../sources/home.md) für eine vollständige Liste der verfügbaren Quellen. |
-| Allgemeine Verfügbarkeit neuer [!DNL Oracle Eloqua] source | Sie können jetzt die [!DNL Oracle Eloqua] -Quelle, um Daten aus Ihrem [!DNL Oracle Eloqua] -Instanz (Konto, Kampagne, Kontakte) zu Platform. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL Oracle Eloqua] Quellverbindung](../../sources/connectors/oracle-eloqua.md) für weitere Informationen. |
+| Allgemeine Verfügbarkeit neuer [!DNL Oracle Eloqua] source | Sie können jetzt die [!DNL Oracle Eloqua] -Quelle, um Daten aus Ihrem [!DNL Oracle Eloqua] -Instanz (Konto, Kampagne, Kontakte) zu Platform. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL Oracle Eloqua] Quellverbindung](../../sources/connectors/marketing-automation/oracle-eloqua.md) für weitere Informationen. |
 | API-Verbesserungen für [!DNL Data Landing Zone] | Die [!DNL Data Landing Zone] -Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der [!DNL Flow Service] API. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL Data Landing Zone] Quellverbindung](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
