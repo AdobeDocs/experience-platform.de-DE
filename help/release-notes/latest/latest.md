@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6ae54c1f3f06c8daaf7c0d36beb4d5884bc258eb
+source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
 workflow-type: tm+mt
-source-wordcount: '882'
-ht-degree: 31%
+source-wordcount: '1059'
+ht-degree: 25%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 31%
 Neue Funktionen in Adobe Experience Platform:
 
 - [Auditprotokolle](#audit-logs)
+- [Verwandte Konten in Real-Time CDP B2B Edition](#related-accounts)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -39,6 +40,22 @@ Mit Experience Platform können Sie die Benutzeraktivität für verschiedene Die
 {style=&quot;table-layout:auto&quot;}
 
 Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Abschnitt [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
+
+## Verwandte Konten in Real-Time CDP B2B Edition {#related-accounts}
+
+>[!NOTE]
+>
+>Die Funktion &quot;Ähnliche Konten&quot;ist nur für Kunden der Real-Time CDP B2B Edition verfügbar.
+
+B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jede nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine genaue Ansicht der Kunden zu erhalten und so die Effizienz und Effektivität ihrer B2B-Marketing- und Verkaufsaktivitäten zu reduzieren. Mit der Freigabe der entsprechenden Konten [!DNL Real-time CDP B2B] zeigt Ihnen jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind. Sie können die zugehörigen Konten in Ihre Segmentdefinitionen aufnehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren Segmenten anzuwenden.
+
+Weitere Informationen zur Funktion finden Sie auf den folgenden Dokumentationsseiten:
+
+- [Übersicht über verwandte Konten in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Registerkarte &quot;Zugehörige Konten&quot;im UI-Handbuch für Kontoprofile](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
+- [Verwendung verwandter Konten in Segmentdefinitionen](../../rtcdp/segmentation/b2b.md#related-account)
+
+Weitere Informationen zur Echtzeit-Kundendatenplattform B2B Edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
 
 ## Warnhinweise {#alerts}
 
