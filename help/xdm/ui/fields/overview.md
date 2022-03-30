@@ -5,9 +5,9 @@ title: Definieren von XDM-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie XDM-Felder in der Experience Platform-Benutzeroberfläche definieren.
 topic-legacy: user guide
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 08002616450259aded0cc53046472f10ce0a9bb9
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1331'
 ht-degree: 5%
 
 ---
@@ -26,30 +26,25 @@ Für dieses Handbuch ist zwar nicht erforderlich, es wird jedoch empfohlen, auch
 
 Um neue XDM-Felder in der Benutzeroberfläche zu definieren, müssen Sie zunächst ein Schema innerhalb der [!DNL Schema Editor]. Je nachdem, welche Schemas Ihnen derzeit im [!DNL Schema Library]können Sie [Erstellen eines neuen Schemas](../resources/schemas.md#create) oder [ein vorhandenes Schema zur Bearbeitung auswählen](../resources/schemas.md#edit).
 
-Sobald Sie [!DNL Schema Editor] geöffnet, werden Steuerelemente zum Hinzufügen oder Bearbeiten von Feldern auf der Arbeitsfläche angezeigt. Diese Steuerelemente werden neben dem Namen des Schemas sowie allen Feldern vom Typ Objekt angezeigt, die unter der ausgewählten Klasse oder Feldergruppe definiert wurden.
+Sobald Sie [!DNL Schema Editor] öffnen, wählen Sie in der linken Leiste die Klasse oder Feldergruppe aus, für die Sie Felder definieren möchten. Wenn es sich bei der Ressource um eine von Ihrer Organisation definierte benutzerdefinierte Ressource handelt, werden Steuerelemente zum Hinzufügen oder Bearbeiten von Feldern auf der Arbeitsfläche angezeigt. Diese Steuerelemente werden neben dem Namen des Schemas sowie allen Feldern vom Typ Objekt angezeigt, die unter der ausgewählten Klasse oder Feldergruppe definiert wurden.
 
 ![](../../images/ui/fields/overview/select-resource.png)
 
->[!WARNING]
+>[!NOTE]
 >
->Wenn Sie versuchen, ein Feld zu einem Objekt hinzuzufügen, das von einer Standardfeldgruppe bereitgestellt wird, wird diese Feldergruppe in eine benutzerdefinierte Feldergruppe konvertiert und die ursprüngliche Feldergruppe ist nicht mehr verfügbar. Siehe Abschnitt zu [Felder zu Standardfeldgruppen hinzufügen](../resources/schemas.md#custom-fields-for-standard-groups) Weitere Informationen finden Sie im Handbuch zur Schemabenutzeroberfläche .
+>Wenn es sich bei der ausgewählten Klasse oder Feldergruppe um eine von Adobe bereitgestellte Kernressource handelt, kann sie nicht bearbeitet werden. Daher werden die oben gezeigten Steuerelemente nicht angezeigt. Wenn das Schema, dem Sie Felder hinzufügen möchten, auf einer Kern-XDM-Klasse basiert und keine benutzerdefinierten Feldergruppen enthält, können Sie [eine neue Feldergruppe erstellen](../resources/field-groups.md#create) , um stattdessen zum Schema hinzuzufügen.
 
 Um der Ressource ein neues Feld hinzuzufügen, wählen Sie die **plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche oder neben dem Feld vom Typ Objekt, unter dem Sie das Feld definieren möchten.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
-Je nachdem, ob Sie ein Feld direkt zu einem Schema oder seiner zugehörigen Klasse und Feldergruppen hinzufügen, variieren die erforderlichen Schritte zum Hinzufügen des Felds. Der Rest dieses Dokuments konzentriert sich auf die Konfiguration der Eigenschaften eines Felds, unabhängig davon, wo dieses Feld im Schema erscheint. Weiterführende Informationen zu den verschiedenen Methoden zum Hinzufügen von Feldern zu einem Schema finden Sie in den folgenden Abschnitten des Handbuchs zur Schemabenutzeroberfläche:
+## Feld für eine Ressource definieren {#define}
 
-* [Felder zu Feldergruppen hinzufügen](../resources/schemas.md#add-fields)
-* [Felder direkt zu einem Schema hinzufügen](../resources/schemas.md#add-individual-fields)
-
-## Definieren der Eigenschaften eines Felds {#define}
-
-Nach Auswahl der **plus (+)** -Symbol, ein **[!UICONTROL Neues Feld]** wird in der Arbeitsfläche angezeigt, die sich in einem Objekt befindet, das der eindeutigen Mandanten-ID zugewiesen ist (siehe `_tenantId` im Beispiel unten). Alle benutzerdefinierten Felder, die einem Schema hinzugefügt werden, werden automatisch in diesen Namespace eingefügt, um Konflikte mit anderen Feldern aus von der Adobe bereitgestellten Klassen und Feldergruppen zu vermeiden.
+Nach Auswahl der **plus (+)** -Symbol, ein **[!UICONTROL Neues Feld]** wird in der Arbeitsfläche angezeigt, die sich in einem Objekt auf der Stammebene befindet, das mit Ihrer eindeutigen Mandanten-ID benannt ist (siehe `_tenantId` im Beispiel unten). Alle Felder, die über benutzerdefinierte Klassen und Feldergruppen zu einem Schema hinzugefügt werden, werden automatisch in diesen Namespace eingefügt, um Konflikte mit anderen Feldern aus von der Adobe bereitgestellten Klassen und Feldergruppen zu vermeiden.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** können Sie die Details des neuen Felds konfigurieren. Für jedes Feld sind folgende Informationen erforderlich:
+In der rechten Leiste unter **[!UICONTROL Feldeigenschaften]** können Sie die Details der neuen Felder konfigurieren. Für jedes Feld sind folgende Informationen erforderlich:
 
 | Feldeigenschaft | Beschreibung |
 | --- | --- |

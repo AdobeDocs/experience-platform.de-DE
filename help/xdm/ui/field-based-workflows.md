@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Ihren Experience-Datenmodell (XDM)-Schemas ei
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c1b1a3b18a9950d71fb84e463adc973ab45ba563
+source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1199'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Die in diesem Beta-Dokument beschriebenen Workflows sind jetzt allgemein in Adobe Experience Platform verfügbar. Die neuesten Anleitungen zu feldbasierten Workflows im Schema Editor finden Sie im Abschnitt [Handbuch zur Schemabenutzeroberfläche](./resources/schemas.md) anstatt. Dieses Handbuch wird bald entfernt.
+>Die in diesem Dokument beschriebenen Workflows befinden sich derzeit in der Betaphase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
 
 Adobe Experience Platform bietet einen robusten Satz standardisierter [Feldergruppen](../schema/composition.md#field-group) zur Verwendung in Experience-Datenmodell (XDM)-Schemas. Die Struktur und die Semantik hinter diesen Feldergruppen sind sorgfältig darauf zugeschnitten, eine Vielzahl von Segmentierungsanwendungsfällen und anderen nachgelagerten Anwendungen in Platform zu erfüllen. Sie können auch eigene benutzerdefinierte Feldergruppen definieren, um individuelle Geschäftsanforderungen zu erfüllen.
 
