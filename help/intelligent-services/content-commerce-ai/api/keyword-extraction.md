@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Erste Schritte; Content-Hilfe; Commerce-API; Content- und Commerce-API; Keyword-Extraktion; Keyword-Extraktion
-solution: Intelligent Services
+solution: Experience Platform
 title: Keyword-Extraktion in der Inhalts- und Commerce-API
 topic-legacy: Developer guide
 description: Der Suchbegriffextraktionsdienst extrahiert bei der Bereitstellung eines Textdokuments automatisch Suchbegriffe oder Suchbegriffe, die den Betreff des Dokuments am besten beschreiben. Um Suchbegriffe zu extrahieren, wird eine Kombination aus benannten Algorithmen zur Identifikation von Entitäten (NER) und unbeaufsichtigten Keyword-Extraktion verwendet.
 exl-id: 56a2da96-5056-4702-9110-a1dfec56f0dc
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 4%

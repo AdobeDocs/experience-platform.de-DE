@@ -1,10 +1,10 @@
 ---
-solution: Intelligent Services
+solution: Experience Platform
 audience: user
 user-guide-title: Intelligent Services-Hilfe
 breadcrumb-title: Handbuch zu Intelligent Services
 user-guide-description: Nutzen Sie intelligente KI-Dienste, um Ergebnisse zu generieren, Einblicke zu erhalten und Segmente aus Ihren Marketing-Ereignisdaten zu erstellen.
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '123'
 ht-degree: 100%

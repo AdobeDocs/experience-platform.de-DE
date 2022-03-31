@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform; Herunterladen von Bewertungen; Kundenunterstützung; beliebte Themen; Exportieren; Exportieren; Herunterladen von Kundenai; Bewertung von Kundenai
-solution: Intelligent Services, Real-time Customer Data Platform
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Herunterladen von Bewertungen in Customer AI
 topic-legacy: Downloading scores
 description: Mit Customer AI können Sie Bewertungen im Parquet-Dateiformat herunterladen.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 16120a10f8a6e3fd7d2143e9f52a822c59a4c935
+source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 85%
