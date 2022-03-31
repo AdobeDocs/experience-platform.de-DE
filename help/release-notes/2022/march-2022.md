@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: d8983f08821b9157edd64fdba1f42a8ac9d38a3d
+source-git-commit: b378a920380030d51956a0910271f1b1f9f4c371
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1158'
 ht-degree: 24%
 
 ---
@@ -22,8 +22,10 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Warnhinweise](#alerts)
 - [[!DNL Dashboards]](#dashboards)
+- [Datenerfassung](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Quellen](#sources)
+
 <!-- - [Experience Data Model (XDM)](#xdm) -->
 
 ## Auditprotokolle {#audit-logs}
