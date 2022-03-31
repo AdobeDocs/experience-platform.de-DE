@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 13e10956519199ae1872685ba6a6eff8b5d73e21
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '1059'
 ht-degree: 25%
@@ -15,7 +15,7 @@ ht-degree: 25%
 
 Neue Funktionen in Adobe Experience Platform:
 
-- [Auditprotokolle](#audit-logs)
+- [Audit logs](#audit-logs)
 - [Verwandte Konten in Real-Time CDP B2B Edition](#related-accounts)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
@@ -34,8 +34,8 @@ Mit Experience Platform können Sie die Benutzeraktivität für verschiedene Die
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Prüfprotokolle für Datensatz, Schema, Klasse, Feldergruppe, Datentyp, Sandbox, Ziel, Segment, Zusammenführungsrichtlinie, berechnetes Attribut, Produktprofil und Konto (Adobe) | Dies sind die Ressourcen, die von Prüfprotokollen aufgezeichnet werden. Wenn die Funktion aktiviert ist, werden die Prüfprotokolle automatisch erfasst, sobald eine Aktivität stattfindet. Sie müssen die Protokollerfassung nicht manuell aktivieren. |
-| Audit-Protokolle exportieren | Die Prüfprotokolle können als `CSV` oder `JSON` -Datei. Die erzeugten Dateien werden direkt auf Ihrem Computer gespeichert. |
+| Prüfprotokolle für Datensatz, Schema, Klasse, Feldergruppe, Datentyp, Sandbox, Ziel, Segment, Zusammenführungsrichtlinie, berechnetes Attribut, Produktprofil und Konto (Adobe) | Dies sind die Ressourcen, die von Prüfprotokollen aufgezeichnet werden. If the feature is enabled, the audit logs will be automatically collected as activity occurs. You do not need to manually enable log collection. |
+| Export audit logs | Die Prüfprotokolle können als `CSV` oder `JSON` -Datei. Die erzeugten Dateien werden direkt auf Ihrem Computer gespeichert. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -53,7 +53,7 @@ Weitere Informationen zur Funktion finden Sie auf den folgenden Dokumentationsse
 
 - [Übersicht über verwandte Konten in Real-Time CDP B2B Edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Registerkarte &quot;Zugehörige Konten&quot;im UI-Handbuch für Kontoprofile](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
-- [Verwendung verwandter Konten in Segmentdefinitionen](../../rtcdp/segmentation/b2b.md#related-account)
+- [Verwendung verwandter Konten in Segmentdefinitionen](../../rtcdp/segmentation/b2b.md#related-accounts)
 
 Weitere Informationen zur Echtzeit-Kundendatenplattform B2B Edition finden Sie in der [Übersicht](../../rtcdp/overview.md).
 
@@ -75,7 +75,7 @@ Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warn
 
 Adobe Experience Platform bietet mehrere [!DNL dashboards] mit dem Sie wichtige Informationen zu den Daten Ihres Unternehmens anzeigen können, wie sie bei täglichen Momentaufnahmen erfasst werden.
 
-### Profil-Dashboards
+### Profile Dashboards
 
 Im Dashboard &quot;Profile&quot;wird eine Momentaufnahme der Attributdaten (Datensatzdaten) angezeigt, die Ihr Unternehmen im Profilspeicher in der Experience Platform hat.
 
@@ -84,13 +84,13 @@ Im Dashboard &quot;Profile&quot;wird eine Momentaufnahme der Attributdaten (Date
 | Funktion | Beschreibung |
 | --- | --- |
 | Widget &quot;Nicht segmentierte Profile&quot; | Das Widget stellt die Gesamtanzahl aller Profile bereit, die an kein Segment angehängt sind. Die generierte Zahl ist ab der letzten Momentaufnahme korrekt und stellt die Möglichkeit zur Profilaktivierung in Ihrer gesamten Organisation dar. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
-| Trend-Widget &quot;Nicht segmentierte Profile&quot; | Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht an ein Segment angehängt sind. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
+| Trend-Widget &quot;Nicht segmentierte Profile&quot; | Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht an ein Segment angehängt sind. The trend can be visualized over 30 days, 90 days, and 12 month periods. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 | Nicht segmentierte Profile nach Identity Widget | Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 | Widget &quot;Einzelidentitätsprofile&quot; | Dieses Widget gibt einen Überblick über die Profile Ihrer Organisation, die nur über einen ID-Typ verfügen, der ihre Identität erstellt, entweder eine E-Mail oder eine ECID. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Weiterführende Informationen zu Profil-Dashboards finden Sie im Abschnitt [Profil-Dashboards - Übersicht](../../dashboards/guides/profiles.md).
+For more information on Profiles dashboards, refer to the [Profiles dashboards overview](../../dashboards/guides/profiles.md).
 
 ### Ziele-Dashboards
 
@@ -100,7 +100,7 @@ Das Dashboard Ziele zeigt eine Momentaufnahme der Ziele an, die Ihr Unternehmen 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Widget zur Zielanzahl | Das Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele. Siehe [Dokumentation zum Standard-Widget für Ziele](../../dashboards/guides/destinations.md#standard-widgets) für weitere Informationen. |
+| Widget zur Zielanzahl | Das Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele. See the [destinations standard widget documentation](../../dashboards/guides/destinations.md#standard-widgets) for more information. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -130,13 +130,13 @@ For more information on XDM in Platform, see the [XDM System overview](../../xdm
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zu den verfügbaren Funktionen finden Sie im Abschnitt [Query Service - Übersicht](../../query-service/home.md).
+For more information on available features, refer to the [Query Service overview](../../query-service/home.md).
 
 ## Quellen {#sources}
 
 Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
-Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Speichersystemen und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und die Datenerfassung überall verwalten.
+Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughout.
 
 **Aktualisierte Funktionen**
 

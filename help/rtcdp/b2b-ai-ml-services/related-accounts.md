@@ -2,7 +2,8 @@
 title: Verwandte Konten in Real-Time CDP B2B Edition
 type: Documentation
 description: Eine Übersicht und weitere Informationen über die zugehörige Kontofunktion in der Echtzeit-Kundendatenplattform von Experience Platform B2B.
-source-git-commit: 09fd6c30461a4229411ce67426fdcb247661f7cb
+exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
+source-git-commit: 5be8eac1603f1b81e45b4c0aeace5c2017b46149
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 7%
@@ -53,4 +54,4 @@ Weitere Informationen zu [Finden verwandter Konten in der Benutzeroberfläche](/
 
 Sie können Konten und zugehörige Konten bei der Segmentierung verwenden. Die Entscheidung, ob verwandte Konten in Ihren Segmentdefinitionen verwendet werden sollen, hängt von Ihrem Marketing-Anwendungsfall ab. Sie können beispielsweise verwandte Konten für E-Mail-Marketing- oder Werbekampagnen verwenden, bei denen Sie im Austausch für eine größere Reichweite eine geringere Genauigkeit akzeptieren können.
 
-Siehe [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-account) verwendet verwandte Konten.
+Siehe [Segmentierungsbeispiel](/help/rtcdp/segmentation/b2b.md#related-accounts) verwendet verwandte Konten.
