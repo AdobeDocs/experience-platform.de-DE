@@ -1,11 +1,12 @@
 ---
 keywords: IP-Adresse, IP-Bereich, Zulassungsliste-Ziele, Zulassungsliste-Ziel, Streaming-Ziele für Zulassungslisten
-title: 'IP-Adressen-Zulassungsliste für Streaming-Ziele '
+title: IP-Adressen-Zulassungsliste für Streaming-Ziele
 type: Documentation
-description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform in Ihren HTTP-REST-API-Endpunkt zu exportieren.
-source-git-commit: 508435ebe7ba762d204408118703fa6469616118
+description: Auf dieser Seite finden Sie IP-Bereiche, die Sie Ihrer Zulassungsliste hinzufügen können, um Daten sicher von Experience Platform an Ihren HTTP REST API-Endpunkt, Amazon Kinesis oder Azure Event Hub-Instanz zu exportieren.
+exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
+source-git-commit: 8ea871d3ba66b9ee1a864a6319cde21f518f4534
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
