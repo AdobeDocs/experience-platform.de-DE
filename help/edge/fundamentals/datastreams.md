@@ -1,11 +1,11 @@
 ---
-title: Konfigurieren Ihres Datenspeichers für das Experience Platform Web SDK
-description: 'Erfahren Sie, wie Sie die Datastreams konfigurieren. '
-keywords: Konfiguration; Datastreams; datastreamId; edge; datastream id; Umgebungseinstellungen; edgeConfigId; identity; ID-Synchronisierung aktiviert; ID-Sync-Container-ID; Sandbox; Streaming-Inlet; Ereignis-Datensatz; Target; Client-Code; Eigenschaften-Token; Target-Umgebungs-ID; Cookie-Ziele; URL-Ziele; Analytics Settings Blockreport suite id;
+title: Konfigurieren eines Datenspeichers
+description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und -Zielen von Drittanbietern.
+keywords: Konfiguration;Datastreams;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschaft-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Data Prep für Datenerfassung;Mappings;Mappings er;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 026d45b2c9d362d7510576601174c296e3b18a2a
+source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
 workflow-type: tm+mt
-source-wordcount: '1995'
+source-wordcount: '2090'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,7 @@ Auswählen **[!UICONTROL Erweiterte Optionen]** , um zusätzliche Steuerelemente
 | [!UICONTROL Erstanbieter-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einem [Erstanbieter-Geräte-ID](../identity/first-party-device-ids.md), anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll. |
 | [!UICONTROL Synchronisierung der Drittanbieter-ID] | ID-Synchronisationen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisierungen für diesen Datastream ausgeführt wird. |
 
-Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile-SDK verwenden oder anderweitig nicht Ihren Datastrom für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
+Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile SDK verwenden oder anderweitig nicht Ihren Datenspeicher für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
 
 ### Datenvorbereitung für die Datenerfassung {#data-prep}
 
@@ -78,13 +78,78 @@ In den folgenden Unterabschnitten werden die grundlegenden Schritte zum Zuordnen
 
 #### [!UICONTROL Auswählen von Daten]
 
-Auswählen **[!UICONTROL Zuordnung speichern und hinzufügen]** nach Abschluss der [Grundlegender Konfigurationsschritt](#configure)und die **[!UICONTROL Daten auswählen]** angezeigt. Von hier müssen Sie ein JSON-Beispielobjekt bereitstellen, das die Struktur der Daten darstellt, die Sie an Platform senden möchten. Sie können die Option auswählen, um das Objekt als Datei hochzuladen, oder stattdessen das Raw-Objekt in das bereitgestellte Textfeld einfügen.
+Auswählen **[!UICONTROL Zuordnung speichern und hinzufügen]** nach Abschluss der [Grundlegender Konfigurationsschritt](#configure)und die **[!UICONTROL Daten auswählen]** angezeigt. Von hier müssen Sie ein JSON-Beispielobjekt bereitstellen, das die Struktur der Daten darstellt, die Sie an Platform senden möchten.
+
+Sie sollten dieses JSON-Objekt so erstellen, dass Sie es den Eigenschaften in Ihrer Datenschicht zuordnen können, die Sie erfassen möchten. Wählen Sie den folgenden Abschnitt aus, um ein Beispiel für ein ordnungsgemäß formatiertes JSON-Objekt anzuzeigen.
+
++++JSON-Beispieldatei
+
+```json
+{
+  "data": {
+    "eventMergeId": "cce1b53c-571f-4f36-b3c1-153d85be6602",
+    "eventType": "view:load",
+    "timestamp": "2021-09-30T14:50:09.604Z",
+    "web": {
+      "webPageDetails": {
+        "siteSection": "Product section",
+        "server": "example.com",
+        "name": "product home",
+        "URL": "https://www.example.com"
+      },
+      "webReferrer": {
+        "URL": "https://www.adobe.com/index2.html",
+        "type": "external"
+      }
+    },
+    "commerce": {
+      "purchase": 1,
+      "order": {
+        "orderID": "1234"
+      }
+    },
+    "product": [
+      {
+        "productInfo": {
+          "productID": "123"
+        }
+      },
+      {
+        "productInfo": {
+          "productID": "1234"
+        }
+      }
+    ],
+    "reservation": {
+      "id": "anc45123xlm",
+      "name": "Embassy Suits",
+      "SKU": "12345-L",
+      "skuVariant": "12345-LG-R",
+      "priceTotal": "112.99",
+      "currencyCode": "USD",
+      "adults": 2,
+      "children": 3,
+      "productAddMethod": "PDP",
+      "_namespace": {
+        "test": 1,
+        "priceTotal": "112.99",
+        "category": "Overnight Stay"
+      },
+      "freeCancellation": false,
+      "cancellationFee": 20,
+      "refundable": true
+    }
+  }
+}
+```
+
++++
 
 >[!IMPORTANT]
 >
 >Das JSON-Objekt muss über einen einzigen Stammknoten verfügen. `data` , um die Validierung zu bestehen.
 
-Wenn die JSON gültig ist, wird im rechten Bereich ein Vorschauschema angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
+Sie können die Option auswählen, um das Objekt als Datei hochzuladen, oder stattdessen das Raw-Objekt in das bereitgestellte Textfeld einfügen. Wenn die JSON gültig ist, wird im rechten Bereich ein Vorschauschema angezeigt. Klicken Sie auf **[!UICONTROL Weiter]**, um fortzufahren.
 
 ![JSON-Beispiel für erwartete eingehende Daten](../images/datastreams/select-data.png)
 
@@ -105,6 +170,12 @@ Wählen Sie anschließend das Schemasymbol (![Schemasymbol](../images/datastream
 Die Zuordnungsseite wird erneut mit dem abgeschlossenen Feld-Mapping angezeigt. Die **[!UICONTROL Zuordnen des Fortschritts]** -Abschnitt aktualisiert, um die Gesamtzahl der Felder widerzuspiegeln, die erfolgreich zugeordnet wurden.
 
 ![Feld, das erfolgreich mit dem erkannten Fortschritt zugeordnet wurde](../images/datastreams/field-mapped.png)
+
+>[!TIP]
+>
+>Wenn Sie ein Array von Objekten (im Quellfeld) einem Array von verschiedenen Objekten (im Zielfeld) zuordnen möchten, fügen Sie `[*]` nach dem Array-Namen in den Pfaden für Quell- und Zielfelder, wie unten dargestellt.
+>
+>![Array-Objektzuordnung](../images/datastreams/array-object-mapping.png)
 
 Führen Sie die oben genannten Schritte aus, um den Rest der Felder dem Zielschema zuzuordnen. Sie müssen zwar nicht alle verfügbaren Quellfelder zuordnen, jedoch müssen alle Felder im Zielschema, die wie erforderlich festgelegt sind, zugeordnet werden, um diesen Schritt abzuschließen. Die **[!UICONTROL Erforderliche Felder]** gibt an, wie viele erforderliche Felder in der aktuellen Konfiguration noch nicht zugeordnet sind.
 
