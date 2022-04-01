@@ -5,10 +5,10 @@ user-guide-title: Adobe Experience Platform – Datenerfassung
 breadcrumb-title: Handbuch zur Datenerfassung
 user-guide-description: Aktivieren Sie Client-seitige Datenerfassung für Adobe Experience Platform Edge Network.
 feature: Data Collection
-source-git-commit: 602617f857800bdc39869f5597bc88ba3ed7f66f
+source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
 workflow-type: tm+mt
-source-wordcount: '38'
-ht-degree: 81%
+source-wordcount: '74'
+ht-degree: 51%
 
 ---
 
@@ -21,3 +21,15 @@ ht-degree: 81%
 - Besucheridentifizierung {#visitor-identification}
    - [Übersicht](visitor-identification.md)
    - [Besucheridentifizierung über FPID](visitor-identification-fpid.md)
+- Edge Network Server-API {#edge-network-server-api}
+   - [Übersicht](overview.md)
+   - [Authentifizierung](authentication.md)
+   - Datenerfassung {#server-api-data-collection}
+      - [Datenerfassung mit einem Ereignis](interactive-data-collection.md)
+      - [Datenerfassung für Batch-Ereignisse](non-interactive-data-collection.md)
+   - Interaktion mit anderen Lösungen der Adobe {#interacting-other-adobe-solutions}
+      - [Interagieren mit Adobe Analytics](interacting-adobe-analytics.md)
+      - [Interagieren mit Adobe Experience Platform](interacting-experience-platform.md)
+   - [Interaktion mit Lösungen von Drittanbietern](interacting-third-party-solutions.md)
+   - [Umgang mit Fehlern](error-handling.md)
+   - [Fehlerbehebung](troubleshooting.md)
