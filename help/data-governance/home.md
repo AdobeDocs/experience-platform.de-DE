@@ -5,10 +5,10 @@ title: Data Governance – Übersicht
 topic-legacy: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1371'
-ht-degree: 100%
+source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+workflow-type: tm+mt
+source-wordcount: '1432'
+ht-degree: 92%
 
 ---
 
@@ -76,15 +76,18 @@ Weitere Informationen finden Sie in der Übersicht zu [Datennutzungskennzeichnun
 
 Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen.
 
-Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn es eine Richtlinie gibt, die besagt, dass bestimmte Datentypen, z. B. persönliche identifizierbare Informationen (PII), nicht exportiert werden können, und der Datensatz eine Kennzeichnung „I“ (Identitätsdaten) enthält, weist [!DNL Policy Service] Sie in einer Antwort darauf hin, dass eine Datennutzungsrichtlinie verletzt wurde.
+Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz an den Service eines Drittanbieters zu exportieren. Wenn eine Richtlinie besagt, dass personenbezogene Daten (PII) nicht exportiert werden können, und eine &quot;I&quot;-Beschriftung (Identitätsdaten) auf den Datensatz angewendet wurde, [!DNL Policy Service] verhindert jede Aktion, die diesen Datensatz an ein Drittanbieterziel exportiert. Sollte einer dieser Aktionsversuche eintreten, sendet Policy Service eine Meldung, die Sie darüber informiert, dass eine Datennutzungsrichtlinie verletzt wurde.
 
-Sobald Datennutzungsbezeichnungen angewendet wurden, können Datenverwalter mithilfe der [!DNL Policy Service]-API oder der Benutzeroberfläche von [!DNL Experience Platform] Richtlinien erstellen.
+Es stehen zwei Arten von Richtlinien zur Verfügung:
+
+* **[!UICONTROL Data Governance-Politik]**: Schränken Sie die Datenaktivierung auf der Grundlage der Marketing-Aktion und der Datennutzungsbezeichnungen der betreffenden Daten ein.
+* **[!UICONTROL Einverständnisrichtlinie] (Beta)**: Filtern der Profile, für die aktiviert werden können [Ziele](../destinations/home.md) basierend auf der Zustimmung oder den Vorlieben Ihrer Kunden.
+
+Sobald Datennutzungsbezeichnungen angewendet wurden, können Datenverwalter mithilfe der [!DNL Policy Service]-API oder der Benutzeroberfläche von [!DNL Experience Platform] Richtlinien erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 
 >[!IMPORTANT]
 >
 >Alle Datennutzungsrichtlinien (einschließlich der von Adobe bereitgestellten Kernrichtlinien) sind standardmäßig deaktiviert. Damit eine einzelne Richtlinie zur Durchsetzung in Betracht gezogen werden kann, müssen Sie diese Richtlinie manuell aktivieren.
-
-Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 
 ## Nächste Schritte
 

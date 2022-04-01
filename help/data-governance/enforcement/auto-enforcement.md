@@ -5,10 +5,10 @@ title: Automatische Richtliniendurchsetzung
 topic-legacy: guide
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Segmente für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1231'
-ht-degree: 100%
+source-git-commit: 63705bdcf102ff01b4d67ce5955d8e23b32dbfe6
+workflow-type: tm+mt
+source-wordcount: '1232'
+ht-degree: 91%
 
 ---
 
@@ -31,10 +31,11 @@ Das folgende Diagramm zeigt, wie die Richtliniendurchsetzung in den Datenfluss d
 
 ![](../images/enforcement/enforcement-flow.png)
 
-Wenn ein Segment zum ersten Mal aktiviert wird, prüft [!DNL Policy Service] anhand der folgenden Faktoren, ob Richtlinienverletzungen vorliegen:
+Wenn ein Segment zum ersten Mal aktiviert wird, [!DNL Policy Service] Prüfungen auf der Grundlage der folgenden Faktoren auf die anwendbaren Richtlinien:
 
 * Die Datennutzungsbezeichnungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
 * Marketing-Zweck des Ziels.
+<!-- * (Beta) The profiles that have consented to be included in the segment activation, based on your configured consent policies. -->
 
 >[!NOTE]
 >
@@ -62,9 +63,10 @@ Jede Phase in der oben genannten Timeline stellt eine Entität dar, die wie in d
 | Datenherkunftsphase | Rolle bei der Richtliniendurchsetzung |
 | --- | --- |
 | Datensatz | Datensätze enthalten Datennutzungsbeschriftungen (angewendet auf Datensatz- oder Feldebene), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt. |
-| Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
-| Segment | Segmentregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt das Segment alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie ein Segment aktivieren, dessen übernommene Beschriftungen aufgrund der jeweiligen Richtlinien des Zielorts der Zielgruppe eingeschränkt sind. |
-| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall korreliert gemäß Definition in einer Datennutzungsrichtlinie mit einer Marketing-Aktion. Mit anderen Worten: Der Marketing-Anwendungsfall, den Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien für dieses Ziel gelten. Richtlinienverletzungen treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungsbeschriftungen durch die geltenden Richtlinien des Zielgruppen-Ziels eingeschränkt sind. |
+<!-- | Dataset | Datasets contain data usage labels (applied at the dataset or field level) that define which use cases the entire dataset or specific fields can be used for. Policy violations will occur if a dataset or field containing certain labels is used for a purpose that a policy restricts.<br><br>Any consent attributes collected from your customers are also stored in datasets. If you have access to [consent policies](../policies/user-guide.md#consent-policy) (currently in beta), any profiles that do not meet the consent attribute requirements of your policies will be excluded from segments that are activated to a destination. | -->
+| Fusionspolitik | Zusammenführungsrichtlinien sind die Regeln, mit denen Platform bestimmt, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview. ](../../profile/merge-policies/overview.md) | | Segment | Segmentregeln definieren, welche Attribute aus Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt das Segment alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie ein Segment aktivieren, dessen übernommene Beschriftungen aufgrund der jeweiligen Richtlinien des Zielorts der Zielgruppe eingeschränkt sind. |
+<!-- | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. | -->
+| Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall korreliert mit einer Marketing-Aktion, wie in einer Richtlinie definiert. Mit anderen Worten: Der Marketing-Anwendungsfall, den Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Zustimmungsrichtlinien für dieses Ziel gelten. Richtlinienverletzungen treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungsbeschriftungen durch die geltenden Richtlinien des Zielgruppen-Ziels eingeschränkt sind. |
 
 >[!IMPORTANT]
 >
@@ -75,6 +77,14 @@ Jede Phase in der oben genannten Timeline stellt eine Entität dar, die wie in d
 Wenn Richtlinienverletzungen auftreten, bieten die in der Benutzeroberfläche angezeigten Meldungen nützliche Werkzeuge, um die Datenherkunft, die zur Verletzung beiträgt, zu untersuchen und so zur Lösung des Problems beizutragen. Weitere Informationen finden Sie im nächsten Abschnitt.
 
 ## Meldungen zu Richtlinienverstößen {#enforcement}
+
+<!-- (TO INCLUDE FOR PHASE 2)
+The sections below outline the different policy enforcement messages that appear in the Platform UI:
+
+* [Data usage policy violation](#data-usage-violation)
+* [Consent policy evaluation](#consent-policy-evaluation)
+
+### Data usage policy violation {#data-usage-violation} -->
 
 Wenn ein Richtlinienverstoß beim Versuch auftritt, ein Segment zu aktivieren (oder [ein bereits aktiviertes Segment zu bearbeiten](#policy-enforcement-for-activated-segments)), wird die Aktion verhindert und in einem Popup angezeigt, dass gegen eine oder mehrere Richtlinien verstoßen wurden. Nachdem ein Verstoß ausgelöst wurde, wird die Schaltfläche **[!UICONTROL Speichern]** für die Entität, die Sie bearbeiten, deaktiviert, bis die entsprechenden Komponenten aktualisiert wurden und den Datennutzungsrichtlinien entsprechen.
 
@@ -97,6 +107,20 @@ Sie können auch das Symbol **[!UICONTROL Filtern]** (![](../images/enforcement/
 Wählen Sie **[!UICONTROL Listenansicht]** aus, um die Datenherkunft als Liste anzuzeigen. Um zum visuellen Diagramm zurückzukehren, wählen Sie **[!UICONTROL Pfadansicht]**.
 
 ![](../images/enforcement/list-view.png)
+
+<!-- (TO INCLUDE FOR PHASE 2)
+### Consent policy evaluation (Beta) {#consent-policy-evaluation}
+
+>[!IMPORTANT]
+>
+>Consent policies are currently in beta and your organization may not have access to them yet.
+
+If you have [created consent policies](../policies/user-guide.md#consent-policy) and are activating a segment to a destination, you can see how your consent policies will affect the percentage of profiles that will be included in the activation.
+
+Once you reach at the **[!UICONTROL Review]** step in the [activation workflow](../../destinations/ui/activation-overview.md), select **[!UICONTROL View applied policies]**.
+
+A policy check dialog appears, showing you a preview of how your consent policies affect the addressable audience of the activated segment.
+ -->
 
 ## Richtliniendurchsetzung für aktivierte Segmente {#policy-enforcement-for-activated-segments}
 
