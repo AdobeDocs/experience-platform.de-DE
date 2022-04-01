@@ -3,9 +3,9 @@ title: Edge Network Server-API
 description: Erfahren Sie, was die Adobe Experience Platform Edge Network Server-API ist und wie Sie sie verwenden können.
 seo-description: Learn what the Adobe Experience Platform Edge Network Server API is and how you can use it.
 keywords: Datenerfassung; Datenerfassung; Adobe Experience Platform Edge Network; Server-API;
-source-git-commit: 92b3a7bff576f72edc8628a850a2cdb9b43cb1c4
+source-git-commit: 4145e22519c1df2d5c010e563b81642a6f647cdc
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Die [!DNL Server API] unterstützt die interaktive und Batch-Datenerfassung übe
 1. Der interaktive Endpunkt unterstützt die Kommunikation mit Adobe Experience Platform- und Adobe Experience Cloud-Diensten, die erweiterte Segmentierung, Personalisierung und andere Marketing-Anwendungsfälle unterstützen.
 2. Der Batch-Endpunkt ermöglicht das Senden von Anfragen im Batch-Modus, wenn Daten integriert werden müssen, ohne eine Antwort von den Anwendungen zu erhalten, die aufgerufen werden.
 
-Die [!DNL Server API] unterstützt den folgenden Anforderungstyp: Die [!DNL Server API] unterstützt authentifizierte Anfragen über [Adobe I/O](https://developer.adobe.com/), unter Verwendung der neuen `server.adobedc.net` -Endpunkt.
+Die [!DNL Server API] unterstützt den folgenden Anforderungstyp:
 
 * Authentifizierte Anfragen über [Adobe I/O](https://developer.adobe.com/), unter Verwendung der neuen `server.adobedc.net` -Endpunkt.
 * Nicht authentifizierte Anforderungen über die `edge.adobedc.net` -Endpunkt.
