@@ -1,0 +1,42 @@
+---
+title: Interagieren mit Adobe Experience Platform
+description: Erfahren Sie, wie Sie mit der Edge Network Server-API mit Adobe Experience Platform interagieren
+seo-description: Learn how to use the Edge Network Server API to interact with Adobe Experience Platform
+keywords: Datenerfassung; Auslass; Analyse; Adobe Experience Platform Edge Network API;aep
+exl-id: c49e40b7-9653-40f1-9db5-8941b20de8a3
+source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+workflow-type: tm+mt
+source-wordcount: '71'
+ht-degree: 1%
+
+---
+
+# Interagieren mit Adobe Experience Platform
+
+## Übersicht {#overview}
+
+Um die Datenerfassung in Experience Platform zu aktivieren, müssen Sie zunächst [Datenspeicher konfigurieren](../edge/fundamentals/datastreams.md) , um Ereignisse an Experience Platform-Datensätze weiterzuleiten.
+
+Nach der Konfiguration sollte die Konfiguration des Datenspeichers Einstellungen für `com_adobe_experience_platform`, wie im folgenden Beispiel gezeigt:
+
+
+```json
+{
+  // datastream config header
+
+  "settings": {
+    "com_adobe_experience_platform": {
+      "sandboxName": "prod",
+      "enabled": true,
+      "datasets": {
+        "event": {
+          "xdmSchema": "https://ns.adobe.com/atag/schemas/35a31609b6d3242736751df469ade031",
+          "datasetId": "5f67e6ad9501b0194b5aafb6"
+        }
+      }
+    }
+
+    // other settings
+  }
+}
+```
