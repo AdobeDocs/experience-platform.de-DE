@@ -5,20 +5,21 @@ title: Clients mit Query Service verbinden
 topic-legacy: connect
 description: In diesem Dokument wird beschrieben, wie Sie über verschiedene Desktop-Client-Anwendungen eine Verbindung zu Query Service herstellen und diese Verbindungen überprüfen können.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 76687d46508ea641ecb6f9b090cea228f8bbe549
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 6%
 
 ---
 
-# Verbinden von Clients mit [!DNL Query Service]
+# Clients mit verbinden [!DNL Query Service]
 
-In diesem Abschnitt wird beschrieben, wie Sie von einer Vielzahl von Desktop-Clientanwendungen aus eine Verbindung zu [!DNL Query Service] herstellen und diese Verbindungen überprüfen können. [!DNL Query Service] verwendet das  [!DNL PostgreSQL] Protokoll, daher wird in den Anweisungen in diesem Abschnitt erläutert, wie Sie mit  [!DNL PostgreSQL] Tools und Treibern eine Verbindung herstellen und Abfragen schreiben können.
+In diesem Abschnitt wird beschrieben, wie Sie eine Verbindung zu [!DNL Query Service] von verschiedenen Desktop-Client-Anwendungen und wie diese Verbindungen überprüft werden. [!DNL Query Service] verwendet die [!DNL PostgreSQL] -Protokoll verwenden. Daher wird in den Anweisungen in diesem Abschnitt die Verwendung von [!DNL PostgreSQL] Tools und Treiber zum Verbinden und Schreiben von Abfragen.
 
 Anweisungen werden für folgende Clients bereitgestellt:
 
 - [[!DNL Aqua Data Studio]](./aqua-data-studio.md)
+- [[!DNL DbVisualizer]](./dbvisulaizer.md)
 - [[!DNL Looker]](./looker.md)
 - [[!DNL Postico (Mac)]](./postico.md)
 - [[!DNL Power BI (PC)]](./power-bi.md)

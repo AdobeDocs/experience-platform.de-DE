@@ -5,7 +5,7 @@ title: UI-Anleitung für Query Service
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 87ec2ab37105aefc52abe102d45fd124492ac79f
+source-git-commit: b4388106caf1c6ee48c44051fe484cd595278483
 workflow-type: tm+mt
 source-wordcount: '1127'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Die **[!UICONTROL Ablaufberechtigungen]** enthält die folgenden Informationen:
 - **[!UICONTROL PSQL-Befehl]**: Ein Befehl, der automatisch alle relevanten Informationen eingefügt hat, damit Sie über PSQL über die Befehlszeile eine Verbindung zu Query Service herstellen können.
 - **[!UICONTROL Läuft ab]**: Das Ablaufdatum für die ablaufenden Anmeldeinformationen. Die Anmeldeinformationen laufen 24 Stunden nach ihrer Erstellung ab.
 
-## Nicht ablaufende Anmeldeinformationen
+## Nicht ablaufende Anmeldeinformationen {#non-expiring-credentials}
 
 Sie können nicht ablaufende Anmeldedaten verwenden, um eine permanentere Verbindung zu einem externen Client einzurichten.
 
