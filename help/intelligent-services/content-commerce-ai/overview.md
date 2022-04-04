@@ -1,11 +1,11 @@
 ---
 keywords: Experience Cloud; Erste Schritte; Inhalts- und Commerce-Hilfe; beliebte Themen; Intelligente Dienste; CCAI
-solution: Experience Cloud, Intelligent Services, Experience Platform
+solution: Experience Platform
 title: Inhalts- und Commerce-KI - Überblick
 topic-legacy: Content and Commerce AI
 description: Content and Commerce AI ist eine Reihe von KI-Diensten, mit denen Sie intelligente Funktionen aus Ihren Inhalten extrahieren, den Inhaltsfluss organisieren, optimieren und Ihren Kunden wirkungsvollere, personalisierte Erlebnisse bereitstellen können.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Inhalt ist eine wesentliche Komponente dieser Erlebnisse. Um Marketing-Fragen be
 
 | Content-Typ | Funktionen | Übersicht über die Funktionen |
 | --- | --- | --- |
-| Text | - Keyword und Entitätsextraktion <br> - Benutzerdefinierte Classifications | - Automatische Extraktion von Suchbegriffen und Tags aus Unternehmensdokumenten und Webseiten mithilfe eines vordefinierten KI-Dienstes. <br> - Automatisches Kennzeichnen von Dokumenten oder Webseiten eines Unternehmens pro Unternehmenstaxonomie mithilfe eines auf benutzerdefinierten KI-Modellen basierenden Dienstes. |
+| Text | - Extraktion von Keywords und Entitäten <br>- Benutzerdefinierte Classifications | - Automatische Extraktion von Suchbegriffen und Tags aus Unternehmensdokumenten und Webseiten mithilfe eines vordefinierten KI-Dienstes. <br> - Automatisches Kennzeichnen von Dokumenten oder Webseiten eines Unternehmens pro Unternehmenstaxonomie mithilfe eines auf benutzerdefinierten KI-Modellen basierenden Dienstes. |
 | Bilder | - Visuelle Empfehlungen <br> - Farbextraktion | - Bereitstellung visuell ähnlicher Produktempfehlungen für Verbraucher, basierend auf einem KI-Modell, das auf intuitiven Produktfunktionen (Design, Farbe, Form) entwickelt wurde. <br> - Extrahieren Sie exakt dominante Farben (Etiketten und hexadezimale Werte) und deren Gewichtung aus einem Produktbild. |
 
 ## Grundlagen zur Inhalts- und Commerce-KI
