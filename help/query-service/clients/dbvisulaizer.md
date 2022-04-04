@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Verbinden von DbVisualizer mit Query Service
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von DbVisualizer mit Adobe Experience Platform Query Service beschrieben.
-source-git-commit: e9653341756a2067e27ca0d0658c54fc93db7505
+source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
 # Verbinden [!DNL DbVisualizer] nach [!DNL Query Service] {#connect-dbvisualizer}
 
-In diesem Dokument werden die Schritte zum Verbinden von [!DNL DbVisualizer] Desktop mit Adobe Experience Platform [!DNL Query Service].
+In diesem Dokument werden die Schritte zum Verbinden des [!DNL DbVisualizer] Datenbank-Tool mit Adobe Experience Platform [!DNL Query Service].
 
 ## Erste Schritte
 
-Für dieses Handbuch benötigen Sie bereits Zugriff auf [!DNL DbVisualizer] -Desktop-Programm verwenden und mit dem Navigieren in der -Benutzeroberfläche vertraut sind. So laden Sie die [!DNL DbVisualizer] Desktop-Programm oder weitere Informationen finden Sie in der [offiziell [!DNL DbVisualizer] Dokumentation](https://www.dbvis.com/download/).
+Für dieses Handbuch benötigen Sie bereits Zugriff auf [!DNL DbVisualizer] -Desktop-Programm verwenden und mit dem Navigieren in der -Benutzeroberfläche vertraut sind. So laden Sie die [!DNL DbVisualizer] Desktop-Programm oder weitere Informationen finden Sie unter [offiziell [!DNL DbVisualizer] Dokumentation](https://www.dbvis.com/download/).
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Geben Sie Ihre Benutzername und Ihr Kennwort ein und wählen Sie **[!DNL Connect
 
 ## Nächste Schritte
 
-Nachdem Sie eine Verbindung hergestellt haben [!DNL DbVisualizer] mit [!DNL Query Service]können Sie [!DNL DbVisualizer] , um Abfragen zu schreiben. Weiterführende Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Handbuch zur Ausführung von Abfragen.
+Nachdem Sie eine Verbindung hergestellt haben [!DNL DbVisualizer] mit [!DNL Query Service]können Sie [!DNL DbVisualizer] , um Abfragen zu schreiben. Weitere Informationen zum Schreiben und Ausführen von Abfragen finden Sie im Abschnitt [Handbuch zur Ausführung von Abfragen](../best-practices/writing-queries.md).
