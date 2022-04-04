@@ -5,7 +5,7 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7eaa808ecc644fdb9bc6b3fe1347c7651d54a33b
+source-git-commit: 5e0db96b833cabd0330b1073a2ab14d4528c68b4
 workflow-type: tm+mt
 source-wordcount: '1572'
 ht-degree: 33%
@@ -14,35 +14,35 @@ ht-degree: 33%
 
 # Handbuch für die [!DNL Query Editor]-Benutzeroberfläche
 
-[!DNL Query Editor] ist ein interaktives Tool von Adobe Experience Platform,  [!DNL Query Service]mit dem Sie Abfragen für Kundenerlebnisdaten in der  [!DNL Experience Platform] Benutzeroberfläche schreiben, validieren und ausführen können. [!DNL Query Editor] unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen zu Entwicklungszwecken sowie nicht-interaktiver Abfragen zum Ausfüllen von Datensätzen in  [!DNL Experience Platform].
+[!DNL Query Editor] ist ein interaktives Tool, das von Adobe Experience Platform bereitgestellt wird [!DNL Query Service], mit dem Sie Abfragen für Kundenerlebnisdaten in der [!DNL Experience Platform] -Benutzeroberfläche. [!DNL Query Editor] unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen zu Entwicklungszwecken sowie nicht interaktiver Abfragen zum Füllen von Datensätzen in [!DNL Experience Platform].
 
-Weitere Informationen zu Konzepten und Funktionen von [!DNL Query Service] finden Sie unter [Query Service - Übersicht](../home.md). Weitere Informationen zum Navigieren in der Query Service-Benutzeroberfläche unter [!DNL Platform] finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
+Weitere Informationen zu Konzepten und Funktionen von [!DNL Query Service], siehe [Query Service - Übersicht](../home.md). Weitere Informationen zum Navigieren in der Benutzeroberfläche von Query Service finden Sie unter [!DNL Platform], siehe [Übersicht über die Benutzeroberfläche von Query Service](./overview.md).
 
 ## Erste Schritte
 
-[!DNL Query Editor] bietet flexible Ausführung von Abfragen durch Verbinden mit  [!DNL Query Service]. Abfragen werden nur ausgeführt, wenn diese Verbindung aktiv ist.
+[!DNL Query Editor] bietet flexible Ausführung von Abfragen durch Verbinden mit [!DNL Query Service], und Abfragen werden nur ausgeführt, während diese Verbindung aktiv ist.
 
-### Verbindung zu [!DNL Query Service]
+### Herstellen einer Verbindung zu [!DNL Query Service]
 
-[!DNL Query Editor] Es dauert ein paar Sekunden,  [!DNL Query Service] wenn die Initialisierung und Verbindung mit erfolgt. Die Konsole gibt an, ob eine Verbindung besteht (siehe unten). Wenn Sie versuchen, eine Abfrage auszuführen, bevor der Editor eine Verbindung hergestellt hat, wird die Ausführung verzögert, bis die Verbindung hergestellt ist.
+[!DNL Query Editor] Initialisierung und Verbindung dauert einige Sekunden [!DNL Query Service] beim Öffnen. Die Konsole gibt an, ob eine Verbindung besteht (siehe unten). Wenn Sie versuchen, eine Abfrage auszuführen, bevor der Editor eine Verbindung hergestellt hat, wird die Ausführung verzögert, bis die Verbindung hergestellt ist.
 
 ![Bild](../images/ui/query-editor/connect.png)
 
-### Ausführen von Abfragen über [!DNL Query Editor]
+### Ausführen von Abfragen [!DNL Query Editor]
 
-Von [!DNL Query Editor] ausgeführte Abfragen werden interaktiv ausgeführt. Das bedeutet, dass die Abfrage abgebrochen wird, wenn Sie den Browser schließen oder wegnavigieren. Dies gilt auch für Abfragen, die zum Generieren von Datensätzen aus Abfrageausgaben vorgenommen werden.
+Von [!DNL Query Editor] interaktiv ausführen. Das bedeutet, dass die Abfrage abgebrochen wird, wenn Sie den Browser schließen oder wegnavigieren. Dies gilt auch für Abfragen, die zum Generieren von Datensätzen aus Abfrageausgaben vorgenommen werden.
 
 ## Abfragebearbeitung mit [!DNL Query Editor]
 
-Mit [!DNL Query Editor] können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle Abfragen, die in [!DNL Query Editor] ausgeführt oder gespeichert werden, stehen allen Benutzern in Ihrer Organisation mit Zugriff auf [!DNL Query Service] zur Verfügung.
+Verwenden [!DNL Query Editor], können Sie Abfragen für Kundenerlebnisdaten schreiben, ausführen und speichern. Alle Abfragen, die ausgeführt werden in [!DNL Query Editor]oder gespeichert sind, stehen allen Benutzern in Ihrer Organisation mit Zugriff auf [!DNL Query Service].
 
 ### Zugreifen auf [!DNL Query Editor]
 
-Wählen Sie in der Benutzeroberfläche [!DNL Experience Platform] im linken Navigationsmenü **[!UICONTROL Abfragen]** aus, um den Arbeitsbereich [!DNL Query Service] zu öffnen. Wählen Sie dann **[!UICONTROL Abfrage erstellen]** oben rechts im Bildschirm aus, um Abfragen zu schreiben. Dieser Link ist auf allen Seiten im Arbeitsbereich [!DNL Query Service] verfügbar.
+Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Abfragen]** im linken Navigationsmenü, um die [!DNL Query Service] Arbeitsbereich. Wählen Sie als Nächstes **[!UICONTROL Abfrage erstellen]** oben rechts im Bildschirm, um mit dem Schreiben von Abfragen zu beginnen. Dieser Link ist auf jeder der Seiten im [!DNL Query Service] Arbeitsbereich.
 
 ![Bild](../images/ui/query-editor/create-query.png)
 
-### Schreiben von Abfragen
+### Schreiben von Abfragen {#writing-queries}
 
 [!UICONTROL Der Abfrage-Editor ist so organisiert, dass das Schreiben von Abfragen so einfach wie möglich ist.] Der folgende Screenshot zeigt, wie der Editor in der Benutzeroberfläche angezeigt wird, wobei die Schaltfläche **Abspielen** und das SQL-Eingabefeld hervorgehoben sind.
 
@@ -76,55 +76,55 @@ Wenn Fehler erkannt werden, können Sie die spezifischen Fehlermeldungen anzeige
 
 ### Details zur Abfrage
 
-Während Sie eine Abfrage in [!DNL Query Editor] anzeigen, bietet das Bedienfeld **[!UICONTROL Abfragedetails]** Tools zum Verwalten der ausgewählten Abfrage.
+Beim Anzeigen einer Abfrage in [!DNL Query Editor], die **[!UICONTROL Details zur Abfrage]** bietet Tools zum Verwalten der ausgewählten Abfrage.
 
 ![Bild](../images/ui/query-editor/query-details.png)
 
 In diesem Bedienfeld können Sie einen Ausgabedatensatz direkt über die Benutzeroberfläche generieren, die angezeigte Abfrage löschen oder benennen und der Abfrage einen Zeitplan hinzufügen.
 
-In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Um einen Datensatz zu generieren, wählen Sie **[!UICONTROL Ausgabedatensatz]** aus. Das Dialogfeld **[!UICONTROL Ausgabedatensatz]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie dann **[!UICONTROL Abfrage ausführen]** aus. Der neue Datensatz wird auf der Registerkarte **[!UICONTROL Datensätze]** der [!DNL Query Service]-Benutzeroberfläche unter [!DNL Platform] angezeigt.
+In diesem Bedienfeld werden außerdem nützliche Metadaten angezeigt, z. B. das letzte Mal, dass die Abfrage geändert wurde und wer sie ggf. geändert hat. Um einen Datensatz zu generieren, wählen Sie **[!UICONTROL Ausgabedatensatz]**. Das Dialogfeld **[!UICONTROL Ausgabedatensatz]** wird angezeigt. Geben Sie einen Namen und eine Beschreibung ein und wählen Sie **[!UICONTROL Abfrage ausführen]**. Der neue Datensatz wird im **[!UICONTROL Datensätze]** auf der Registerkarte [!DNL Query Service] Benutzeroberfläche auf [!DNL Platform].
 
 ### Geplante Abfragen {#scheduled-queries}
 
 >[!NOTE]
 >
-> Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Außerdem können Sie **nicht** einen Zeitplan zu einer parametrisierten Abfrage hinzufügen.
+> Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde. Darüber hinaus werden Sie **not** in der Lage sein, einer parametrisierten Abfrage einen Zeitplan hinzuzufügen.
 
-Um einen Zeitplan zu einer Abfrage hinzuzufügen, wählen Sie **[!UICONTROL Zeitplan hinzufügen]** aus.
+Um einen Zeitplan zu einer Abfrage hinzuzufügen, wählen Sie **[!UICONTROL Zeitplan hinzufügen]**.
 
 ![Bild](../images/ui/query-editor/add-schedule.png)
 
-Die Seite **[!UICONTROL Details des Zeitplans]** wird angezeigt. Auf dieser Seite können Sie die Häufigkeit der geplanten Abfrage, das Datum der Ausführung der geplanten Abfrage sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll.
+Die **[!UICONTROL Details planen]** angezeigt. Auf dieser Seite können Sie die Häufigkeit der geplanten Abfrage, das Datum der Ausführung der geplanten Abfrage sowie den Datensatz auswählen, in den die Abfrage exportiert werden soll.
 
 ![Bild](../images/ui/query-editor/schedule-details.png)
 
-Sie können die folgenden Optionen für **[!UICONTROL Häufigkeit]** auswählen:
+Sie können die folgenden Optionen für **[!UICONTROL Häufigkeit]**:
 
 - **[!UICONTROL Stündlich]**: Die geplante Abfrage wird für den ausgewählten Datumsbereich stündlich ausgeführt.
-- **[!UICONTROL Täglich]**: Die geplante Abfrage wird alle X Tage zum ausgewählten Zeitpunkt und zum ausgewählten Zeitraum ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
-- **[!UICONTROL Wöchentlich]**: Die ausgewählte Abfrage wird an den Wochentagen, zur Uhrzeit und zum ausgewählten Datumsbereich ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
-- **[!UICONTROL Monatlich]**: Die ausgewählte Abfrage wird jeden Monat am Tag, zur Uhrzeit und zum ausgewählten Datumsbereich ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
-- **[!UICONTROL Jährlich]**: Die ausgewählte Abfrage wird jedes Jahr an dem von Ihnen ausgewählten Tag, Monat, Uhrzeit und Zeitraum ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht in Ihrer lokalen Zeitzone liegt.
+- **[!UICONTROL Täglich]**: Die geplante Abfrage wird alle X Tage zum ausgewählten Zeitpunkt und zum ausgewählten Zeitraum ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht Ihre lokale Zeitzone.
+- **[!UICONTROL Wöchentlich]**: Die ausgewählte Abfrage wird an den Wochentagen, zur Uhrzeit und zum ausgewählten Datumsbereich ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht Ihre lokale Zeitzone.
+- **[!UICONTROL Monatlich]**: Die ausgewählte Abfrage wird jeden Monat am Tag, zur Uhrzeit und zum ausgewählten Datumsbereich ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht Ihre lokale Zeitzone.
+- **[!UICONTROL Jährlich]**: Die ausgewählte Abfrage wird jedes Jahr an dem von Ihnen ausgewählten Tag, Monat, Uhrzeit und Zeitraum ausgeführt. Bitte beachten Sie, dass die ausgewählte Zeit in **UTC** und nicht Ihre lokale Zeitzone.
 
 Für den Datensatz haben Sie die Möglichkeit, entweder einen vorhandenen Datensatz zu verwenden oder einen neuen Datensatz zu erstellen.
 
 >[!IMPORTANT]
 >
-> Da Sie einen vorhandenen Datensatz verwenden oder einen neuen erstellen, müssen Sie **not** entweder `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil der Abfrage einbeziehen, da die Datensätze bereits festgelegt sind. Wenn Sie `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil Ihrer geplanten Abfragen einbeziehen, wird ein Fehler ausgegeben.
+> Da Sie entweder einen vorhandenen Datensatz verwenden oder einen neuen Datensatz erstellen, tun Sie Folgendes: **not** entweder `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil der Abfrage, da die Datensätze bereits festgelegt sind. Einschließen von `INSERT INTO` oder `CREATE TABLE AS SELECT` als Teil Ihrer geplanten Abfragen zu einem Fehler führen.
 
-Nachdem Sie alle diese Details bestätigt haben, wählen Sie **[!UICONTROL Speichern]** aus, um einen Zeitplan zu erstellen.
+Nachdem Sie alle diese Details bestätigt haben, wählen Sie **[!UICONTROL Speichern]** um einen Zeitplan zu erstellen.
 
-Die Seite mit den Abfragedetails wird erneut angezeigt und zeigt nun die Details des neu erstellten Zeitplans einschließlich der Zeitplan-ID, des Zeitplans selbst und des Ausgabedatensatzes des Zeitplans an. Sie können die Zeitplan-ID verwenden, um weitere Informationen zu den Ausführungen der geplanten Abfrage selbst zu erhalten. Weiterführende Informationen finden Sie im [Handbuch zu geplanten Abfrage-Run-Endpunkten](../api/runs-scheduled-queries.md).
+Die Seite mit den Abfragedetails wird erneut angezeigt und zeigt nun die Details des neu erstellten Zeitplans einschließlich der Zeitplan-ID, des Zeitplans selbst und des Ausgabedatensatzes des Zeitplans an. Sie können die Zeitplan-ID verwenden, um weitere Informationen zu den Ausführungen der geplanten Abfrage selbst zu erhalten. Weitere Informationen finden Sie im [Handbuch zu geplanten Abfrage-Run-Endpunkten](../api/runs-scheduled-queries.md).
 
 >[!NOTE]
 >
-> Sie können die Abfragevorlage **eine** nur mithilfe der Benutzeroberfläche planen. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn mit der API bereits ein Zeitplan hinzugefügt wurde, können Sie **not** zusätzliche Zeitpläne über die Benutzeroberfläche hinzufügen. Wenn bereits mehrere Zeitpläne an eine Abfragevorlage angehängt sind, wird nur der älteste Zeitplan angezeigt. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im [Handbuch zum geplanten Abfrageendpunkt](../api/scheduled-queries.md).
+> Sie können **one** Abfragevorlage, die die Benutzeroberfläche verwendet. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn ein Zeitplan bereits mit der API hinzugefügt wurde, werden Sie **not** Fügen Sie mithilfe der Benutzeroberfläche zusätzliche Zeitpläne hinzu. Wenn bereits mehrere Zeitpläne an eine Abfragevorlage angehängt sind, wird nur der älteste Zeitplan angezeigt. Informationen zum Hinzufügen von Zeitplänen mithilfe der API finden Sie im Abschnitt [Endpunktleitfaden für geplante Abfragen](../api/scheduled-queries.md).
 >
 > Darüber hinaus sollten Sie die Seite aktualisieren, wenn Sie sicherstellen möchten, dass Sie über den neuesten Status für den Zeitplan verfügen, den Sie anzeigen.
 
 #### Zeitplan löschen
 
-Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL einen Zeitplan löschen]** auswählen.
+Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL Zeitplan löschen]**.
 
 ![Bild](../images/ui/query-editor/delete-schedule.png)
 
@@ -134,25 +134,25 @@ Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL einen Zeitplan lös
 
 ### Speichern von Abfragen
 
-[!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Save]** in der oberen rechten Ecke von [!DNL Query Editor] aus. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
+[!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke von [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
 
 ### Auffinden früherer Abfragen
 
-Alle von [!DNL Query Editor] ausgeführten Abfragen werden in der Log-Tabelle erfasst. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte **[!UICONTROL Durchsuchen]** angezeigt.
+Alle Abfragen, die ausgeführt werden von [!DNL Query Editor] werden in der Log-Tabelle erfasst. Sie können die Suchfunktion auf der Registerkarte **[!UICONTROL Protokoll]** verwenden, um Abfrageausführungen zu finden. Gespeicherte Abfragen werden auf der Registerkarte **[!UICONTROL Durchsuchen]** angezeigt.
 
 Weitere Informationen finden Sie in der [Übersicht über die Query Service-Benutzeroberfläche](./overview.md).
 
 >[!NOTE]
 >
-> Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage in [!DNL Query Service] verfügbar ist, muss sie in [!DNL Query Editor] ausgeführt oder gespeichert werden.
+> Nicht ausgeführte Abfragen werden nicht im Protokoll gespeichert. Damit die Abfrage verfügbar ist in [!DNL Query Service], muss sie ausgeführt oder in gespeichert werden. [!DNL Query Editor].
 
 ## Ausführen von Abfragen mit dem Abfrage-Editor
 
-Um eine Abfrage in [!DNL Query Editor] auszuführen, können Sie SQL im Editor eingeben oder eine frühere Abfrage von der Registerkarte **[!UICONTROL Protokoll]** oder **[!UICONTROL Durchsuchen]** laden und **Abspielen** auswählen. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
+So führen Sie eine Abfrage in aus [!DNL Query Editor]können Sie SQL im Editor eingeben oder eine frühere Abfrage aus dem **[!UICONTROL Protokoll]** oder **[!UICONTROL Durchsuchen]** und wählen Sie **Play**. Der Ausführungsstatus der Abfrage wird auf der Registerkarte **[!UICONTROL Konsole]** angezeigt und die Ausgabedaten werden auf der Registerkarte **[!UICONTROL Ergebnisse]** angezeigt.
 
 ### Konsole
 
-Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Service]. Die Konsole zeigt den Verbindungsstatus zu [!DNL Query Service], die ausgeführten Abfragevorgänge sowie alle Fehlermeldungen an, die aus diesen Abfragen resultieren.
+Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Service]. Die Konsole zeigt den Verbindungsstatus an [!DNL Query Service], und alle Fehlermeldungen, die aus diesen Abfragen resultieren.
 
 ![Bild](../images/ui/query-editor/console.png)
 
@@ -162,11 +162,11 @@ Die Konsole bietet Informationen zum Status und zum Betrieb von [!DNL Query Serv
 
 ### Abfrageergebnisse
 
-Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage mit bis zu 100 Zeilen an. Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Anweisungen zum Generieren eines Datensatzes aus Abfrageergebnissen finden Sie im Tutorial [Generieren von Datensätzen](./create-datasets.md) .[!DNL Query Editor]
+Nach Abschluss einer Abfrage werden die Ergebnisse auf der Registerkarte **[!UICONTROL Ergebnisse]** neben der Registerkarte **[!UICONTROL Konsole]** angezeigt. Diese Ansicht zeigt die tabellarische Ausgabe Ihrer Abfrage mit bis zu 100 Zeilen an. Mit dieser Ansicht können Sie überprüfen, ob Ihre Abfrage die erwartete Ausgabe erzeugt. Um einen Datensatz mit Ihrer Abfrage zu generieren, entfernen Sie Begrenzungen für zurückgegebene Zeilen und führen Sie die Abfrage mit `CREATE TABLE tablename AS SELECT` aus, um einen Datensatz mit der Ausgabe zu generieren. Siehe [Tutorial zum Generieren von Datensätzen](./create-datasets.md) Anweisungen zum Generieren eines Datensatzes aus Abfrageergebnissen finden Sie unter [!DNL Query Editor].
 
 ![Bild](../images/ui/query-editor/query-results.png)
 
-## Video-Tutorial zum Ausführen von Abfragen mit [!DNL Query Service]
+## Ausführen von Abfragen mit [!DNL Query Service] Tutorial-Video
 
 Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platform-Benutzeroberfläche und in einem PSQL-Client ausführen. Darüber hinaus wird die Verwendung einzelner Eigenschaften in einem XDM-Objekt, die Verwendung von Adobe-definierten Funktionen und die Verwendung von CREATE TABLE AS SELECT (CTAS) demonstriert.
 
@@ -174,4 +174,4 @@ Im folgenden Video erfahren Sie, wie Sie Abfragen in der Adobe Experience Platfo
 
 ## Nächste Schritte
 
-Nachdem Sie nun wissen, welche Funktionen in [!DNL Query Editor] verfügbar sind und wie Sie in der Anwendung navigieren, können Sie Ihre eigenen Abfragen direkt in [!DNL Platform] erstellen. Weitere Informationen zum Ausführen von SQL-Abfragen für Datensätze in [!DNL Data Lake] finden Sie im Handbuch zu [laufenden Abfragen](../best-practices/writing-queries.md).
+Jetzt wissen Sie, welche Funktionen in verfügbar sind [!DNL Query Editor] und wie Sie in der Anwendung navigieren, können Sie Ihre eigenen Abfragen direkt in [!DNL Platform]. Weitere Informationen zum Ausführen von SQL-Abfragen für Datensätze finden Sie unter [!DNL Data Lake], siehe Handbuch zu [Ausführen von Abfragen](../best-practices/writing-queries.md).
