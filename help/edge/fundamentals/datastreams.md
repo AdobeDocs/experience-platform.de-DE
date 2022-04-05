@@ -3,9 +3,9 @@ title: Konfigurieren eines Datenspeichers
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und -Zielen von Drittanbietern.
 keywords: Konfiguration;Datastreams;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschaft-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Data Prep für Datenerfassung;Mappings;Mappings er;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: cfe524169b94b5b4160ed75e5e36c83c217f4270
+source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2102'
 ht-degree: 2%
 
 ---
@@ -60,7 +60,7 @@ Auswählen **[!UICONTROL Erweiterte Optionen]** , um zusätzliche Steuerelemente
 | [!UICONTROL Erstanbieter-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einem [Erstanbieter-Geräte-ID](../identity/first-party-device-ids.md), anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll. |
 | [!UICONTROL Synchronisierung der Drittanbieter-ID] | ID-Synchronisationen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisierungen für diesen Datastream ausgeführt wird. |
 
-Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile SDK verwenden oder anderweitig nicht Ihren Datenspeicher für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
+Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile-SDK verwenden oder anderweitig nicht Ihren Datastrom für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
 
 ### Datenvorbereitung für die Datenerfassung {#data-prep}
 
@@ -70,11 +70,18 @@ Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von 
 
 Data Prep ist ein Experience Platform-Dienst, mit dem Sie Daten dem Experience-Datenmodell (XDM) (Experience-Datenmodell) zuordnen, umwandeln und überprüfen können. Beim Konfigurieren eines Platform-aktivierten Datastreams können Sie Datenvorbereitungsfunktionen verwenden, um Ihre Quelldaten beim Senden an das Platform Edge Network XDM zuzuordnen.
 
-In den folgenden Unterabschnitten werden die grundlegenden Schritte zum Zuordnen Ihrer Daten in der Datenerfassungs-Benutzeroberfläche beschrieben. Eine umfassende Anleitung zu allen Data Prep-Funktionen, einschließlich Umwandlungsfunktionen für berechnete Felder, finden Sie in der folgenden Dokumentation:
+>[!NOTE]
+>
+>Eine umfassende Anleitung zu allen Data Prep-Funktionen, einschließlich Umwandlungsfunktionen für berechnete Felder, finden Sie in der folgenden Dokumentation:
+>
+>* [Datenvorbereitung – Übersicht](../../data-prep/home.md)
+>* [Zuordnungsfunktionen für Datenvorbereitung](../../data-prep/functions.md)
+>* [Verarbeiten von Datenformaten mit der Datenvorbereitung](../../data-prep/data-handling.md)
 
-* [Datenvorbereitung – Übersicht](../../data-prep/home.md)
-* [Zuordnungsfunktionen für Datenvorbereitung](../../data-prep/functions.md)
-* [Verarbeiten von Datenformaten mit der Datenvorbereitung](../../data-prep/data-handling.md)
+
+In den folgenden Unterabschnitten werden die grundlegenden Schritte zum Zuordnen Ihrer Daten in der Datenerfassungs-Benutzeroberfläche beschrieben. Eine kurze Demonstration dieser Schritte finden Sie im folgenden Video:
+
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 #### [!UICONTROL Auswählen von Daten]
 
