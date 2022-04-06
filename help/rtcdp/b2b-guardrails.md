@@ -2,14 +2,14 @@
 keywords: Profile;Echtzeit-Kundenprofil;Fehlerbehebung;Leitlinien;Richtlinien;Limit;Entität;primäre Entität;Dimensionentität;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;Echtzeit-Kundendatenplattform;Real-time CDP;B2B;CDP;
 title: Standardmäßige Leitlinien für Real-time Customer Data Platform B2B Edition
 type: Documentation
-description: 'Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, mit denen Sie Ihre Daten für eine optimale Systemleistung mit Real-time Customer Data Platform B2B Edition modellieren können. '
-source-git-commit: 7b9b01657ab2a682b900a8c55a201f9864e4428b
-workflow-type: ht
+description: Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Ratenbeschränkungen, mit denen Sie Ihre Daten für eine optimale Systemleistung mit Real-time Customer Data Platform B2B Edition modellieren können.
+exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
+source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
+workflow-type: tm+mt
 source-wordcount: '1601'
 ht-degree: 100%
 
 ---
-
 
 # Standardmäßige Leitlinien für Real-time Customer Data Platform B2B Edition
 

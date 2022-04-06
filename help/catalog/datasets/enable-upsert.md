@@ -4,16 +4,20 @@ title: Datensatz für Profil-Updates mithilfe von APIs aktivieren
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit Adobe Experience Platform-APIs einen Datensatz mit "upsert"-Funktionen aktivieren können, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: 58c58048538eaf5977b1a5905fab44307bb433a9
+source-git-commit: e7bd2c699b30276dca1a2e29c19f0a885b246f48
 workflow-type: tm+mt
-source-wordcount: '965'
-ht-degree: 22%
+source-wordcount: '991'
+ht-degree: 21%
 
 ---
 
 # Datensatz für Profilaktualisierungen mithilfe von APIs aktivieren
 
 In diesem Tutorial wird die Aktivierung eines Datensatzes mit &quot;upsert&quot;-Funktionen beschrieben, um Aktualisierungen an Echtzeit-Kundenprofildaten vorzunehmen. Dies umfasst die Schritte zum Erstellen eines neuen Datensatzes und zum Konfigurieren eines vorhandenen Datensatzes.
+
+>[!NOTE]
+>
+>Der aktualisierte Workflow funktioniert nur bei der Batch-Erfassung. Streaming-Erfassung ist **not** unterstützt.
 
 ## Erste Schritte
 
@@ -22,7 +26,7 @@ Dieses Tutorial setzt Grundkenntnisse verschiedener Adobe Experience Platform-Di
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [[!DNL Catalog Service]](../../catalog/home.md): Eine RESTful-API, mit der Sie Datensätze erstellen und konfigurieren können für [!DNL Real-time Customer Profile] und [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
-- [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md)
+- [Batch-Erfassung](../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die Platform-APIs erfolgreich aufrufen zu können.
 
@@ -102,11 +106,11 @@ Eine erfolgreiche Antwort zeigt ein Array mit der Kennung des neu erstellten Dat
 
 ## Vorhandenen Datensatz konfigurieren {#configure-an-existing-dataset}
 
-Die folgenden Schritte beschreiben, wie Sie einen vorhandenen Datensatz mit aktiviertem Profil für die Aktualisierungsfunktion (&quot;upsert&quot;) konfigurieren.
+Die folgenden Schritte beschreiben, wie Sie einen vorhandenen Datensatz mit aktiviertem Profil für die Aktualisierung (Aktualisierung) konfigurieren.
 
 >[!NOTE]
 >
->Um einen vorhandenen Datensatz mit aktiviertem Profil für &quot;upsert&quot;zu konfigurieren, müssen Sie zunächst den Datensatz für Profil deaktivieren und ihn dann neben der `isUpsert` -Tag. Wenn der vorhandene Datensatz nicht für Profil aktiviert ist, können Sie direkt mit den Schritten für [Aktivieren des Datensatzes für Profil und Hochladen](#enable-the-dataset). Wenn Sie sich nicht sicher sind, zeigen Ihnen die folgenden Schritte, wie Sie überprüfen können, ob der Datensatz bereits aktiviert ist.
+>Um einen vorhandenen Datensatz mit aktiviertem Profil für die Aktualisierung zu konfigurieren, müssen Sie zunächst den Datensatz für Profil deaktivieren und ihn dann neben der `isUpsert` -Tag. Wenn der vorhandene Datensatz nicht für Profil aktiviert ist, können Sie direkt mit den Schritten für [Aktivieren des Datensatzes für Profil und Hochladen](#enable-the-dataset). Wenn Sie sich nicht sicher sind, zeigen Ihnen die folgenden Schritte, wie Sie überprüfen können, ob der Datensatz bereits aktiviert ist.
 
 ### Überprüfen Sie, ob der Datensatz für Profil aktiviert ist.
 
@@ -219,7 +223,8 @@ curl -X PATCH \
       ]'
 ```
 
-**Reaktion**
+**Antwort**
+
 Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Array mit der Kennung des aktualisierten Datensatzes zurückgegeben. Diese ID sollte mit der in der PATCH-Anfrage gesendeten ID übereinstimmen. Die `unifiedProfile` -Tag deaktiviert wurde.
 
 ```json
@@ -270,4 +275,4 @@ Bei erfolgreicher PATCH-Anfrage werden der HTTP-Status-Code 200 (OK) und ein Arr
 
 ## Nächste Schritte
 
-Ihr Profil und Ihr hochaktivierter Datensatz können jetzt von Batch- und Streaming-Aufnahme-Workflows verwendet werden, um Aktualisierungen an Profildaten vorzunehmen. Um mehr über die Aufnahme von Daten in Adobe Experience Platform zu erfahren, lesen Sie zunächst das [Datenerfassung - Übersicht](../../ingestion/home.md).
+Ihr Profil und Ihr hochaktivierter Datensatz können jetzt von Batch-Aufnahme-Workflows verwendet werden, um Aktualisierungen an Profildaten vorzunehmen. Um mehr über die Aufnahme von Daten in Adobe Experience Platform zu erfahren, lesen Sie zunächst das [Datenerfassung - Übersicht](../../ingestion/home.md).
