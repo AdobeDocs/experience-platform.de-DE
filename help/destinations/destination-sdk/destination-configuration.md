@@ -2,9 +2,9 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für die Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
+source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1787'
 ht-degree: 5%
 
 ---
@@ -98,8 +98,8 @@ Dies ist eine Beispielkonfiguration eines fiktiven Streaming-Ziels, Moviestar, d
       "aggregationType":"CONFIGURABLE_AGGREGATION",
       "configurableAggregation":{
          "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
+         "maxBatchAgeInSecs":2400,
+         "maxNumEventsInBatch":5000,
          "aggregationKey":{
             "includeSegmentId":true,
             "includeSegmentStatus":true,
@@ -276,6 +276,10 @@ Diese Option ermöglicht Ihnen Folgendes:
    * Segment-ID;
    * Segmentstatus;
    * Identität oder Gruppen von Identitäten.
+
+>[!NOTE]
+>
+>Achten Sie bei Verwendung der konfigurierbaren Aggregationsoption für Ihr Ziel auf die Mindest- und Höchstwerte, die Sie für die beiden Parameter verwenden können `maxBatchAgeInSecs` (mindestens 1 800 und höchstens 3 600) und `maxNumEventsInBatch` (mindestens 1.000, höchstens 10.000).
 
 Ausführliche Erläuterungen der Aggregationsparameter finden Sie im Abschnitt [API-Endpunktvorgänge für Ziele](./destination-configuration-api.md) Referenzseite, auf der jeder Parameter beschrieben wird.
 
