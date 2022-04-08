@@ -5,10 +5,10 @@ title: PSQL mit Query Service verbinden
 topic-legacy: connect
 description: PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation von PostgreSQL auf Ihrem Computer bereitgestellt wird. Sie können es installieren, indem Sie die nachfolgenden Anweisungen befolgen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 06d3a8aa6f2f73c2d5392a76fb5b36b18691cf0d
+source-git-commit: 4d9e6ce81809c6e6ee1188177a937ac8fc609996
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 20%
+source-wordcount: '294'
+ht-degree: 19%
 
 ---
 
@@ -22,9 +22,11 @@ PSQL ist eine Befehlszeilenschnittstelle, die bei der Installation installiert w
 
 Nach der Installation von PSQL auf Ihrem Computer können Sie PSQL mit Query Service verbinden. Kehren Sie zu [!DNL Platform] Benutzeroberfläche, wählen Sie **[!UICONTROL Abfragen]**, gefolgt von **[!UICONTROL Anmeldeinformationen]**.
 
-![Bild](../images/clients/psql/connect-bi.png)
+Unter dem **[!UICONTROL PSQL-Befehl]** auswählen, wählen Sie die **[!UICONTROL In Zwischenablage kopieren]** Symbol (![Kopiersymbol](../images/clients/psql/copy-icon.png)), um die Befehlszeichenfolge zu kopieren.
 
-Wählen Sie das Symbol aus, um den Abschnitt mit der Bezeichnung **[!UICONTROL PSQL-Befehl]** und fügen Sie dann die Befehlszeichenfolge in ein Terminal- oder Befehlszeilenfenster ein, bevor Sie die Eingabetaste drücken.
+![Die Registerkarte &quot;Dashboard-Anmeldedaten für Abfragen&quot;mit dem Kopiersymbol wird hervorgehoben.](../images/clients/psql/connect-bi.png)
+
+Fügen Sie die Befehlszeichenfolge in ein Terminal- oder Befehlszeilenfenster ein und drücken Sie die Eingabetaste **Eingabe** auf Ihrer Tastatur.
 
 >[!IMPORTANT]
 >
