@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Batch-Profil-basierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6c64e8400c85865aab4e8cfb9e86850562ba97aa
+source-git-commit: 98e2076832bee8e11df8834063cc0b11c1ae3164
 workflow-type: tm+mt
-source-wordcount: '2178'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -73,6 +73,16 @@ Wählen Sie die **[!UICONTROL Zeitplan erstellen]** -Schaltfläche, die dem Segm
 >title="Dateiexportoptionen"
 >abstract="Auswählen **Exportieren von vollständigen Dateien** um eine vollständige Momentaufnahme aller Profile zu exportieren, die für das Segment qualifiziert sind. Auswählen **Inkrementelle Dateien exportieren** um nur die Profile zu exportieren, die sich seit dem letzten Export für das Segment qualifiziert haben. <br> Der erste inkrementelle Dateiexport umfasst alle Profile, die für das Segment qualifiziert sind, und dient als Aufstockung. Zukünftige inkrementelle Dateien enthalten nur die Profile, die sich seit dem ersten inkrementellen Dateiexport für das Segment qualifiziert haben."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#export-incremental-files" text="Inkrementelle Dateien exportieren"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_aftersegmentevaluation"
+>title="Aktivieren nach Segmentbewertung"
+>abstract="Die Aktivierung wird unmittelbar nach Abschluss des täglichen Segmentierungsauftrags ausgeführt. Dadurch wird sichergestellt, dass die aktuellsten Profile exportiert werden. Dieses Popup muss in den neuen Abschnitt zur Aktivierungsketten verschoben werden, um die korrekte Verknüpfung zu ermöglichen."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activationchaining_scheduled"
+>title="Geplante Aktivierung"
+>abstract="Die Aktivierung erfolgt zu einer festen Tageszeit. Dieses Popup muss in den neuen Abschnitt zur Aktivierungsketten verschoben werden, um die korrekte Verknüpfung zu ermöglichen."
 
 Auswählen **[!UICONTROL Exportieren von vollständigen Dateien]** , um den Export einer Datei mit einer vollständigen Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment Trigger.
 
