@@ -1,11 +1,11 @@
 ---
-description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destination-servers"ausführen können. Die Server- und Vorlagenspezifikationen für Ihr Ziel können in Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt "/authoring/destination-servers"konfiguriert werden.
+description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt „/authoring/destination-servers“ ausführen können. Die Server- und Vorlagenspezifikationen für Ihr Ziel können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt „/authoring/destination-servers“ konfiguriert werden.
 title: API-Vorgänge für Ziel-Server-Endpunkte
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
 source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1454'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 8%
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/destination-servers`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/destination-servers` API-Endpunkt. Die Server- und Vorlagenspezifikationen für Ihr Ziel können in Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt konfiguriert werden. `/authoring/destination-servers`. Eine Beschreibung der von diesem Endpunkt bereitgestellten Funktionalität finden Sie unter [Server- und Vorlagenspezifikationen](./server-and-template-configuration.md).
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt `/authoring/destination-servers` ausführen können. Die Server- und Vorlagenspezifikationen für Ihr Ziel können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt `/authoring/destination-servers` konfiguriert werden. Eine Beschreibung der von diesem Endpunkt bereitgestellten Funktionalität finden Sie unter [Server- und Vorlagenspezifikationen](./server-and-template-configuration.md).
 
-## Erste Schritte mit API-Vorgängen für Zielserver {#get-started}
+## Erste Schritte mit API-Vorgängen für Ziel-Server {#get-started}
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
 
-## Erstellen einer Konfiguration für einen Streaming-Zielserver {#create}
+## Erstellen einer Konfiguration für einen Streaming-Ziel-Server {#create}
 
-Sie können eine neue Zielserverkonfiguration für ein Streaming-Ziel erstellen, indem Sie eine POST-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine neue Ziel-Server-Konfiguration für ein Streaming-Ziel erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
 
@@ -33,7 +33,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destination-servers` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` angenommen wurden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -66,29 +66,29 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parameter | Typ | Beschreibung |
 | -------- | ----------- | ----------- |
 | `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist für Partner oder Kunden nicht sichtbar. Beispiel `Moviestar destination server`. |
-| `destinationServerType` | Zeichenfolge | *Erforderlich.* Legen Sie fest auf `URL_BASED` für Streaming-Ziele. |
-| `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwendung `PEBBLE_V1` , wenn die Adobe die URL im `value` unten. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwendung `NONE` wenn keine Transformation auf der Seite der Adobe erforderlich ist, z. B. wenn Sie einen Endpunkt wie: `https://api.moviestar.com/data/items`.</li></ul> |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* Festlegen auf `URL_BASED` für Streaming-Ziele. |
+| `urlBasedDestination.url.templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Adobe die URL im nachstehenden Feld `value` umwandeln muss. Verwenden Sie diese Option, wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Verwenden Sie `NONE`, wenn von Adobe keine Umwandlung erforderlich ist, z. B. wenn Sie folgenden Endpunkt haben: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
-| `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Optionen sind `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
-| `httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden von `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die mit Zeichen versehene Version, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Dienst erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie in der [Verwenden des Vorlagenabschnitts](./message-format.md#using-templating). </li><li> Weitere Informationen zum Escapen von Zeichen finden Sie im Abschnitt [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im Abschnitt [Profilattribute](./message-format.md#attributes) Umwandlung. </li></ul> |
-| `httpTemplate.contentType` | Zeichenfolge | *Erforderlich.* Der Inhaltstyp, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
+| `httpTemplate.httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Es gibt die Optionen `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpTemplate.requestBody.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
+| `httpTemplate.requestBody.value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die Version mit Escape-Zeichen, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> <ul><li> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](./message-format.md#using-templating). </li><li> Weitere Informationen zu Escape-Zeichen finden Sie unter [RFC JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Ein Beispiel für eine einfache Umwandlung finden Sie im unter [Umwandlung von Profilattributen](./message-format.md#attributes). </li></ul> |
+| `httpTemplate.contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 
-## Erstellen der Konfiguration für einen dateibasierten Zielserver {#create-file-based}
+## Erstellen Sie eine Konfiguration für einen dateibasierten Ziel-Server {#create-file-based}
 
-### Beispiel: Konfiguration für einen SFTP-Zielserver erstellen
+### Beispiel: Erstellen Sie eine Konfiguration für einen SFTP-Ziel-Server
 
 >[!IMPORTANT]
 >
->Die dateibasierte Zielunterstützung in Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
-Sie können eine neue SFTP-Zielserverkonfiguration erstellen, indem Sie eine POST-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine neue SFTP-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
 
@@ -98,7 +98,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destination-servers` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 
 ```shell
@@ -189,16 +189,16 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Erstellen einer Konfiguration für einen Amazon S3-Zielserver
++++Beispiel: Erstellen Sie eine Konfiguration für einen Amazon S3-Ziel-Server
 
 >[!IMPORTANT]
 >
->Die dateibasierte Zielunterstützung in Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
-Sie können eine neue Amazon S3-Zielserverkonfiguration erstellen, indem Sie eine POST-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine neue Amazon S3-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den `/authoring/destination-servers`-Endpunkt senden.
 
 **API-Format**
 
@@ -208,7 +208,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destination-servers` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -300,16 +300,16 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Konfiguration für einen Azure Blob-Zielserver erstellen
++++Beispiel: Erstellen Sie eine Konfiguration für einen Azure Blob-Ziel-Server
 
 >[!IMPORTANT]
 >
->Die dateibasierte Zielunterstützung in Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
-Sie können eine neue Azure Blob-Zielserverkonfiguration erstellen, indem Sie eine POST-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine neue Azure Blob-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
 
@@ -320,7 +320,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destination-servers` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -412,16 +412,16 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Konfiguration für einen Azure Data Lake Storage (ADLS)-Zielserver erstellen
++++Beispiel: Erstellen Sie eine Konfiguration für einen Azure Data Lake Storage (ADLS)-Ziel-Server
 
 >[!IMPORTANT]
 >
->Die dateibasierte Zielunterstützung in Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
-Sie können eine neue ADLS-Zielserverkonfiguration erstellen, indem Sie eine POST-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine neue ADLS-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
 
@@ -432,7 +432,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destination-servers` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -520,18 +520,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Konfiguration für einen Data Landing Zone (DLZ)-Zielserver erstellen
++++Beispiel: Erstellen Sie eine Konfiguration für einen Data Landing Zone (DLZ)-Ziel-Server
 
 >[!IMPORTANT]
 >
->Die dateibasierte Zielunterstützung in Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) ist ein [!DNL Azure Blob] von Adobe Experience Platform bereitgestellte Speicherschnittstelle, über die Sie auf eine sichere, Cloud-basierte Dateispeichereinrichtung zugreifen können, um Dateien in Platform zu laden. Siehe
+[!DNL Data Landing Zone] ([!DNL DLZ]) ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Siehe
 
-Sie können eine neue DLZ-Zielserverkonfiguration erstellen, indem Sie eine POST-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine neue DLZ-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
 
@@ -542,7 +542,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destination-servers` -Endpunkt. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -631,12 +631,12 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zur neu erstellten Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-## Zielserverkonfigurationen auflisten {#retrieve-list}
+## Auflisten von Ziel-Server-Konfigurationen {#retrieve-list}
 
-Sie können eine Liste aller Zielserverkonfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an die `/authoring/destination-servers` -Endpunkt.
+Sie können eine Liste aller Ziel-Server-Konfigurationen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
 
@@ -647,7 +647,7 @@ GET /authoring/destination-servers
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird die Liste der Zielserverkonfigurationen abgerufen, auf die Sie Zugriff haben, basierend auf der IMS-Organisation und der Sandbox-Konfiguration.
+Mit der folgenden Anfrage wird die Liste der Ziel-Server-Konfigurationen abgerufen, auf die Sie Zugriff haben, basierend auf der IMS-Organisation und der Sandbox-Konfiguration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -659,7 +659,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste der Zielserverkonfigurationen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. One `instanceId` entspricht der Vorlage für einen Zielserver. Die Antwort wird aus Gründen der Kürze abgeschnitten.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste der Ziel-Server-Konfigurationen zurück, auf die Sie Zugriff haben, basierend auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen. Eine `instanceId` entspricht der Vorlage für einen Ziel-Server. Die Antwort wird verkürzt angegeben.
 
 ```json
 {
@@ -735,9 +735,9 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste der Zielserverkonf
     
 ```
 
-## Vorhandene Zielserverkonfiguration aktualisieren {#update}
+## Aktualisieren einer vorhandenen Ziel-Server-Konfiguration {#update}
 
-Sie können eine vorhandene Zielserverkonfiguration aktualisieren, indem Sie eine PUT-Anfrage an die `/authoring/destination-servers` -Endpunkt und geben die Instanz-ID der Zielserverkonfiguration an, die Sie aktualisieren möchten. Geben Sie im Hauptteil des Aufrufs die aktualisierte Zielserverkonfiguration an.
+Sie können eine vorhandene Ziel-Server-Konfiguration aktualisieren, indem Sie eine PUT-Anfrage an den Endpunkt `/authoring/destination-servers` senden und die Instanz-ID der Ziel-Server-Konfiguration angeben, die Sie aktualisieren möchten. Geben Sie im Hauptteil des Aufrufs die aktualisierte Ziel-Server-Konfiguration an.
 
 **API-Format**
 
@@ -748,11 +748,11 @@ PUT /authoring/destination-servers/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Die ID der Zielserverkonfiguration, die Sie aktualisieren möchten. |
+| `{INSTANCE_ID}` | Die ID des Ziel-Servers, den Sie aktualisieren möchten. |
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert eine vorhandene Zielserverkonfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
+Die folgende Anfrage aktualisiert eine vorhandene Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination-servers/bd4ec8f0-e98f-4b6a-8064-dd7adbfffec9 \
@@ -782,9 +782,9 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 }
 ```
 
-## Abrufen einer bestimmten Zielserverkonfiguration {#get}
+## Abrufen einer bestimmten Ziel-Server-Konfiguration {#get}
 
-Sie können detaillierte Informationen zu einer bestimmten Zielserverkonfiguration abrufen, indem Sie eine GET-Anfrage an die `/authoring/destination-servers` -Endpunkt und geben die Instanz-ID der Zielserverkonfiguration an, die Sie aktualisieren möchten.
+Sie können detaillierte Informationen zu einer bestimmten Ziel-Server-Konfiguration abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/destination-servers` senden und die Instanz-ID der Ziel-Server-Konfiguration angeben, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -795,7 +795,7 @@ GET /authoring/destination-servers/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | Die ID der Zielserverkonfiguration, die Sie abrufen möchten. |
+| `{INSTANCE_ID}` | Die ID der Ziel-Server-Konfiguration, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -809,7 +809,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Zielserverkonfiguration zurück.
+Eine erfolgreiche Antwort enthält den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Ziel-Server-Konfiguration.
 
 ```json
 {
@@ -833,9 +833,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 ```
 
 
-## Löschen einer bestimmten Zielserverkonfiguration {#delete}
+## Löschen einer bestimmten Ziel-Server-Konfiguration {#delete}
 
-Sie können die angegebene Zielserverkonfiguration löschen, indem Sie eine DELETE-Anfrage an die `/authoring/destination-servers` -Endpunkt und geben Sie die ID der Zielserverkonfiguration an, die Sie im Anfragepfad löschen möchten.
+Sie können die angegebene Ziel-Server-Konfiguration löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/authoring/destination-servers` senden und im Anfragepfad die ID der Ziel-Server-Konfiguration angeben, die Sie löschen möchten.
 
 **API-Format**
 
@@ -845,7 +845,7 @@ DELETE /authoring/destination-servers/{INSTANCE_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{INSTANCE_ID}` | Die `id` der Zielserverkonfiguration, die Sie löschen möchten. |
+| `{INSTANCE_ID}` | Die `id` der Ziel-Server-Konfiguration, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -863,8 +863,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren HTT
 
 ## Umgang mit API-Fehlern
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihren Zielserver konfigurieren und Vorlagen mithilfe der `/authoring/destination-servers` API-Endpunkt. Lesen [Verwendung von Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md) um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie Ihren Ziel-Server konfigurieren und Vorlagen mithilfe des API-Endpunkts `/authoring/destination-servers` erstellen. Lesen Sie [Verwendung des Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
