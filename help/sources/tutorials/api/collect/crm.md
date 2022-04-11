@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; crm; CRM
+keywords: Experience Platform;Startseite;beliebte Themen;crm;CRM
 solution: Experience Platform
-title: Erstellen eines Datenflusses für CRM-Quellen mithilfe der Flow Service-API
+title: Erstellen Sie mithilfe der Flow Service-API einen Datenfluss für CRM-Quellen
 topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem CRM-System von Drittanbietern und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
-# Erstellen Sie einen Datenfluss für CRM-Quellen mithilfe der [!DNL Flow Service] API
+# Erstellen Sie einen Datenfluss für CRM-Quellen mithilfe der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer CRM-Quelle und zum Übertragen dieser Daten auf Platform mithilfe von [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer CRM-Quelle und deren Übergabe an die Platform mittels [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) behandelt.
 
 >[!NOTE]
 >
@@ -23,30 +23,30 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer CRM-Quell
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
+Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   * [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
-* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist „System of Record“ für die Position und Herkunft von Daten in Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
-* [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
+   * [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
+   * [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten in Form von Batch-Dateien in Experience Platform aufnehmen.
+* [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Verwenden von Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
 
-## Quellverbindung erstellen {#source}
+## Erstellen einer Quellverbindung {#source}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
-Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Aufzählungswert für das Datenformat-Attribut definieren.
 
-Verwenden Sie die folgenden Enum-Werte für dateibasierte Connectoren:
+Verwenden Sie die folgenden Aufzählungswerte für dateibasierte Connectoren:
 
-| Datenformat | Enum-Wert |
+| Datenformat | Aufzählungswert |
 | ----------- | ---------- |
-| Getrennt | `delimited` |
+| Durch Trennzeichen getrennt | `delimited` |
 | JSON | `json` |
 | Parquet | `parquet` |
 
@@ -116,7 +116,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -129,21 +129,21 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
-Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zu [Erstellen eines Schemas mithilfe der API](../../../../xdm/api/schemas.md).
+Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial [Erstellen eines Schemas mithilfe der API](../../../../xdm/api/schemas.md).
 
-## Zieldatensatz erstellen {#target-dataset}
+## Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), wodurch die ID des Zielschemas in der Payload angegeben wird.
+Sie können einen Zieldatensatz erstellen, indem Sie eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) senden, wobei Sie in der Payload die ID des Zielschemas angeben.
 
-Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../catalog/api/create-dataset.md).
+Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial [Erstellen eines Datensatzes mithilfe der API](../../../../catalog/api/create-dataset.md).
 
 ## Erstellen einer Zielverbindung
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, in dem die aufgenommenen Daten landen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, müssen Sie die festgelegte Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Verwenden der [!DNL Flow Service] API können Sie eine Zielverbindung erstellen, indem Sie diese Kennungen zusammen mit dem Datensatz angeben, der die eingehenden Quelldaten enthält.
+Sie verfügen jetzt über die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID zum Data Lake. Mit der [!DNL Flow Service]-API können Sie eine Zielverbindung erstellen, indem Sie diese Bezeichner zusammen mit dem Datensatz angeben, der die eingehenden Quelldaten enthalten soll.
 
 **API-Format**
 
@@ -183,8 +183,8 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `data.schema.id` | Die `$id` des Ziel-XDM-Schemas. |
-| `data.schema.version` | Die Version des Schemas. Dieser Wert muss festgelegt werden `application/vnd.adobe.xed-full+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. |
-| `params.dataSetId` | Die ID des Zieldatensatzes. |
+| `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` gesetzt werden, wodurch die neueste Nebenversion des Schemas zurückgegeben wird. |
+| `params.dataSetId` | Die Kennung des Zieldatensatzes. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit dem Data Lake verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json
@@ -196,9 +196,9 @@ curl -X POST \
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört.
 
-Um einen Zuordnungssatz zu erstellen, stellen Sie eine POST-Anfrage an die `mappingSets` Endpunkt der [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) beim Bereitstellen des Ziel-XDM-Schemas `$id` und die Details der Zuordnungssätze, die Sie erstellen möchten.
+Um einen Zuordnungssatz zu erstellen, stellen Sie eine POST-Anfrage an den `mappingSets`-Endpunkt der [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml), während Sie Ihr Ziel-XDM-Schema `$id` und die Details der Zuordnungssätze angeben, die Sie erstellen möchten.
 
 **API-Format**
 
@@ -252,7 +252,7 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `xdmSchema` | Die ID des Ziel-XDM-Schemas. |
+| `xdmSchema` | Die ID des XDM-Zielschemas. |
 
 **Antwort**
 
@@ -269,9 +269,9 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 }
 ```
 
-## Datenflussspezifikationen abrufen {#specs}
+## Abrufen von Datenflussspezifikationen {#specs}
 
-Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von CRM-Daten zuständig sind.
+Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von CRM-Daten gelten.
 
 **API-Format**
 
@@ -291,7 +291,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenflug-Spezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform zuständig ist. Die Antwort enthält die eindeutige Flussspezifikation `id` erforderlich, um einen neuen Datenfluss zu erstellen.
+Bei einer erfolgreichen Antwort werden die Details der Datenflussspezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform sorgt. Die Antwort enthält die eindeutige Flussspezifikation `id`, die zum Erstellen eines neuen Datenflusses erforderlich ist.
 
 ```json
 {
@@ -520,18 +520,18 @@ Bei einer erfolgreichen Antwort werden die Details der Datenflug-Spezifikation z
 }
 ```
 
-## Datenfluss erstellen
+## Erstellen eines Datenflusses
 
-Der letzte Schritt bei der Erfassung von CRM-Daten besteht in der Erstellung eines Datenflusses. Jetzt sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt bei der Erfassung von CRM-Daten besteht in der Erstellung eines Datenflusses. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source)
-* [Target-Verbindungs-ID](#target)
-* [Mapping-ID](#mapping)
-* [Dataflow-Spezifikations-ID](#specs)
+* [Zielverbindungs-ID](#target)
+* [Zuordnungs-ID](#mapping)
+* [Datenflussspezifikations-ID](#specs)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day`oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen an und bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinanderfolgenden Aufnahmen an. Bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf `15` oder einen größeren Wert festgelegt werden.
 
 **API-Format**
 
@@ -589,19 +589,19 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `flowSpec.id` | Die [Flussspezifikations-ID](#specs) im vorherigen Schritt abgerufen werden. |
-| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) in einem früheren Schritt abgerufen. |
-| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection) in einem früheren Schritt abgerufen. |
-| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) in einem früheren Schritt abgerufen. |
-| `transformations.params.deltaColum` | Die benannte Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte erfasst. Das unterstützte Format für `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. Wenn Sie Microsoft Dynamics verwenden, wird das unterstützte Format für `deltaColumn` is `yyyy-MM-ddTHH:mm:ssZ`. |
-| `transformations.params.mappingId` | Die Ihrer Datenbank zugeordnete Zuordnungs-ID. |
+| `flowSpec.id` | Die [Flussspezifikations-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die [ID der Ausgangsverbindung](#source), die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die [ID der Zielgruppenverbindung](#target-connection), die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.deltaColum` | Die Spalte, die verwendet wird, um zwischen neuen und vorhandenen Daten zu unterscheiden. Inkrementelle Daten werden basierend auf dem Zeitstempel der ausgewählten Spalte aufgenommen. Für `deltaColumn` wird das Format `yyyy-MM-dd HH:mm:ss` unterstützt. Wenn Sie Microsoft Dynamics verwenden, wird für `deltaColumn` das Format `yyyy-MM-ddTHH:mm:ssZ` unterstützt. |
+| `transformations.params.mappingId` | Die mit Ihrer Datenbank verknüpfte Zuordnungs-ID. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` und sollte größer oder gleich sein als `15` für andere Frequenzwerte. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall muss nicht angegeben werden, wenn die Häufigkeit auf `once` festgelegt ist, und für andere Frequenzwerte sollte es größer oder gleich `15` sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses.
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses zurückgegeben.
 
 ```json
 {
@@ -613,14 +613,14 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses.
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die erfassten Daten überwachen, um Informationen über die Durchsatzausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial zu [Überwachen von Datenflüssen in der API ](../monitor.md)
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial zum [Überwachen von Datenflüssen in der API ](../monitor.md)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus einem CRM-System planmäßig zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus einem CRM-System nach Plan zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-* [Data Science Workspace – Übersicht](../../../../data-science-workspace/home.md)
+* [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)
 
 ## Anhang
 
