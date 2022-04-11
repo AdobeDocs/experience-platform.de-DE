@@ -1,36 +1,36 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Erstellen eines Datenflusses für Mailchimp-Mitglieder mithilfe der Flow Service-API
 topic-legacy: tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und MailChimp-Mitgliedern herstellen.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
 source-git-commit: fd851dea5623522e4706c6beb8bd086d466773b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2500'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Erstellen eines Datenflusses für [!DNL Mailchimp Members] Verwenden der Flow Service-API
+# Erstellen eines Datenflusses für [!DNL Mailchimp Members] mithilfe der Flow Service-API
 
-Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Members] Daten an Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer Quellverbindung und eines Datenflusses, um [!DNL Mailchimp Members]-Daten mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) an Platform zu übermitteln.
 
 ## Voraussetzungen
 
-Bevor Sie eine Verbindung herstellen können [!DNL Mailchimp] nach Adobe Experience Platform mit OAuth 2-Aktualisierungscode wechseln, müssen Sie zunächst Ihr Zugriffstoken für [!DNL MailChimp.] Siehe [[!DNL Mailchimp] OAuth 2-Handbuch](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/) für detaillierte Anweisungen zum Suchen Ihres Zugriffstokens.
+Bevor Sie eine Verbindung von [!DNL Mailchimp] zu Adobe Experience Platform mit OAuth 2-Aktualisierungs-Code herstellen können, müssen Sie zunächst Ihr Zugriffs-Token für [!DNL MailChimp.] abrufen. Ausführliche Anweisungen zum Ermitteln Ihres Zugriffs-Tokens finden Sie im [[!DNL Mailchimp] OAuth 2-Leitfaden](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
 
-## Basisverbindung erstellen {#base-connection}
+## Erstellen einer Basisverbindung {#base-connection}
 
-Nachdem Sie Ihre [!DNL Mailchimp] Authentifizierungsberechtigungen, können Sie jetzt den Prozess der Erstellung des Datenflusses starten, um [!DNL Mailchimp Members] Daten an Platform. Der erste Schritt bei der Erstellung eines Datenflusses besteht darin, eine Basisverbindung zu erstellen.
+Nachdem Sie Ihre [!DNL Mailchimp]-Authentifizierungsdaten abgerufen haben, können Sie jetzt mit dem Erstellen des Datenflusses beginnen, um [!DNL Mailchimp Members]-Daten in Platform zu bringen. Der erste Schritt bei der Erstellung eines Datenflusses besteht darin, eine Basisverbindung zu erstellen.
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-[!DNL Mailchimp] unterstützt sowohl grundlegende Authentifizierung als auch OAuth 2-Aktualisierungscode. In den folgenden Beispielen finden Sie Anleitungen zum Authentifizieren mit beiden Authentifizierungstypen.
+[!DNL Mailchimp] unterstützt sowohl einfache Authentifizierung als auch OAuth 2-Aktualisierungs-Code. In den folgenden Beispielen finden Sie Anleitungen zum Authentifizieren mit beiden Authentifizierungstypen.
 
-### Erstellen Sie eine [!DNL Mailchimp] Basisverbindung mit einfacher Authentifizierung
+### Erstellen einer [!DNL Mailchimp]-Basisverbindung mit einfacher Authentifizierung
 
-So erstellen Sie eine [!DNL Mailchimp] Basisverbindung mit einfacher Authentifizierung, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt von [!DNL Flow Service] API beim Bereitstellen von Anmeldeinformationen für Ihre `host`, `authorizationTestUrl`, `username`und `password`.
+Um eine [!DNL Mailchimp]-Basisverbindung mit einfacher Authentifizierung zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt der [!DNL Flow Service]-API und geben dabei die Anmeldeinformationen für Ihre `host`, `authorizationTestUrl`, `username` und `password` an.
 
 **API-Format**
 
@@ -73,16 +73,16 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über das [!DNL Flow Service] API. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle mit Platform verbinden. |
-| `auth.params.host` | Die Stamm-URL, mit der die Verbindung hergestellt wird [!DNL Mailchimp] API. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` stellt das Rechenzentrum dar, das Ihrem Konto entspricht. |
+| `auth.params.host` | Die Stamm-URL, die zum Herstellen einer Verbindung mit der [!DNL Mailchimp]-API verwendet wird. Das Format für die Stamm-URL ist `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
 | `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldeinformationen nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
-| `auth.params.username` | Der Benutzername, der Ihrer [!DNL Mailchimp] -Konto. Dies ist für die einfache Authentifizierung erforderlich. |
-| `auth.params.password` | Das Kennwort, das Ihrem [!DNL Mailchimp] -Konto. Dies ist für die einfache Authentifizierung erforderlich. |
+| `auth.params.username` | Der Benutzername, der Ihrem [!DNL Mailchimp]-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
+| `auth.params.password` | Das Passwort, das Ihrem [!DNL Mailchimp]-Konto entspricht. Dies ist für die einfache Authentifizierung erforderlich. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um die Dateistruktur und Inhalte Ihrer Quelle im nächsten Schritt zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einschließlich ihrer eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um die Dateistruktur und Inhalte Ihrer Quelle im nächsten Schritt zu untersuchen.
 
 ```json
 {
@@ -91,9 +91,9 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschlie
 }
 ```
 
-### Erstellen Sie eine [!DNL Mailchimp] Basisverbindung mit OAuth 2-Aktualisierungscode
+### Erstellen einer [!DNL Mailchimp]-Basisverbindung mit OAuth 2-Aktualisierungs-Code
 
-So erstellen Sie eine [!DNL Mailchimp] Basisverbindung mit OAuth 2-Aktualisierungscode, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen von Anmeldeinformationen für Ihre `host`, `authorizationTestUrl`und `accessToken`.
+Um eine [!DNL Mailchimp]-Basisverbindung mit OAuth 2-Aktualisierungs-Code zu erstellen, stellen Sie eine POST-Anfrage an den `/connections`-Endpunkt, während Sie Anmeldeinformationen für `host`, `authorizationTestUrl` und `accessToken` bereitstellen.
 
 **API-Format**
 
@@ -135,15 +135,15 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Sie Ihre Quelle mit der [!DNL Flow Service] API. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Sie Ihre Quelle mit der [!DNL Flow Service]-API registriert haben. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
-| `auth.params.host` | Die Stamm-URL, mit der die Verbindung hergestellt wird [!DNL Mailchimp] API. Das Format für die Stamm-URL lautet `https://{DC}.api.mailchimp.com`, wobei `{DC}` stellt das Rechenzentrum dar, das Ihrem Konto entspricht. |
+| `auth.params.host` | Die Stamm-URL, mit der die Verbindung zur [!DNL Mailchimp]-API hergestellt wird. Das Format für die Stamm-URL ist `https://{DC}.api.mailchimp.com`, wobei `{DC}` das Rechenzentrum darstellt, das Ihrem Konto entspricht. |
 | `auth.params.authorizationTestUrl` | (Optional) Die URL für den Autorisierungstest wird verwendet, um Anmeldeinformationen beim Erstellen einer Basisverbindung zu überprüfen. Wenn die Anmeldeinformationen nicht angegeben sind, werden sie stattdessen während des Erstellungsschritts der Quellverbindung automatisch überprüft. |
 | `auth.params.accessToken` | Das entsprechende Zugriffs-Token, das zum Authentifizieren Ihrer Quelle verwendet wird. Dies ist für die OAuth-basierte Authentifizierung erforderlich. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um die Dateistruktur und Inhalte Ihrer Quelle im nächsten Schritt zu untersuchen.
+Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschließlich der eindeutigen Verbindungskennung (`id`) zurückgegeben. Diese ID ist erforderlich, um die Dateistruktur und Inhalte Ihrer Quelle im nächsten Schritt zu untersuchen.
 
 ```json
 {
@@ -152,13 +152,13 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschlie
 }
 ```
 
-## Quelle durchsuchen {#explore}
+## Durchsuchen der Quelle {#explore}
 
-Mithilfe der im vorherigen Schritt generierten Basis-Verbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
+Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
 
 >[!TIP]
 >
->So rufen Sie den akzeptierten Formattyp für ab: `{SOURCE_PARAMS}`, müssen Sie die gesamte `list_id` Zeichenfolge in base64. Beispiel: `"list_id": "10c097ca71"` kodiert in base64 entspricht `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
+>Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge `list_id` in base64 kodieren. Beispielsweise entspricht `"list_id": "10c097ca71"` in base64 kodiert `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`.
 
 **API-Format**
 
@@ -170,11 +170,11 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basis-Verbindungs-ID. |
-| `{OBJECT_TYPE}` | Der Typ des Objekts, das Sie untersuchen möchten. Bei REST-Quellen wird dieser Wert standardmäßig auf `rest`. |
+| `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
+| `{OBJECT_TYPE}` | Der Typ des Objekts, das Sie untersuchen möchten. Für REST-Quellen ist dieser Wert standardmäßig `rest`. |
 | `{OBJECT}` | Das Objekt, das Sie untersuchen möchten. |
 | `{FILE_TYPE}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
-| `{PREVIEW}` | Ein boolean -Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
+| `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
 | `{SOURCE_PARAMS}` | Eine base64-kodierte Zeichenfolge Ihrer `list_id`. |
 
 **Anfrage**
@@ -325,17 +325,17 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück.
 }
 ```
 
-## Quellverbindung erstellen {#source-connection}
+## Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
-Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Aufzählungswert für das Datenformat-Attribut definieren.
 
-Verwenden Sie die folgenden Enum-Werte für dateibasierte Quellen:
+Verwenden Sie die folgenden Aufzählungswerte für dateibasierte Quellen:
 
-| Datenformat | Enum-Wert |
+| Datenformat | Aufzählungswert |
 | ----------- | ---------- |
-| Getrennt | `delimited` |
+| Durch Trennzeichen getrennt | `delimited` |
 | JSON | `json` |
 | Parquet | `parquet` |
 
@@ -382,12 +382,12 @@ curl -X POST \
 | `description` | (Optional) Eine Eigenschaft, die Sie einfügen können, um weitere Informationen zu Ihrer Quellverbindung bereitzustellen. |
 | `baseConnectionId` | Die Basisverbindungs-ID von [!DNL Mailchimp]. Diese ID wurde in einem früheren Schritt generiert. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
-| `data.format` | Das Format der [!DNL Mailchimp] -Daten, die Sie erfassen möchten. |
-| `params.listId` | Wird auch als Zielgruppen-ID bezeichnet. [!DNL Mailchimp] Die Listen-ID ermöglicht die Übertragung von Zielgruppendaten an andere Integrationen. |
+| `data.format` | Das Format der [!DNL Mailchimp]-Daten, die Sie aufnehmen möchten. |
+| `params.listId` | Die Listen-ID [!DNL Mailchimp] wird auch als Zielgruppen-ID bezeichnet und ermöglicht die Übertragung von Zielgruppendaten an andere Integrationen. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -400,21 +400,21 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
-Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zu [Erstellen eines Schemas mithilfe der API](../../../../../xdm/api/schemas.md).
+Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../../../xdm/api/schemas.md).
 
-### Zieldatensatz erstellen {#target-dataset}
+### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../../catalog/api/create-dataset.md).
 
 ## Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, in dem die aufgenommenen Daten landen. Um eine Zielverbindung zu erstellen, müssen Sie die ID der Festnetzverbindungsspezifikation angeben, die dem [!DNL Data Lake]. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die [!DNL Data Lake] entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas und eines Zieldatensatzes sowie über die Kennung der Verbindungsspezifikation für die [!DNL Data Lake]. Mithilfe dieser Kennungen können Sie mithilfe der [!DNL Flow Service] API zum Angeben des Datensatzes, der die eingehenden Quelldaten enthält.
+Sie haben jetzt die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID für [!DNL Data Lake]. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -458,14 +458,14 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einfügen können, um weitere Informationen zu Ihrer Zielverbindung bereitzustellen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die [!DNL Data Lake]. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das Format der [!DNL Mailchimp] Daten, die Sie an Platform übermitteln möchten. |
-| `params.dataSetId` | Die Ziel-Datensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die [!DNL Data Lake] entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Das Format der [!DNL Mailchimp]-Daten, die Sie an Platform übermitteln möchten. |
+| `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`). Diese ID ist in späteren Schritten erforderlich.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung an (`id`). Diese ID ist in späteren Schritten erforderlich.
 
 ```json
 {
@@ -476,7 +476,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht. Dies wird erreicht, indem eine POST-Anfrage an die [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen, die in der Anfrage-Payload definiert sind.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird durch eine POST-Anfrage an die [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen erreicht, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -517,14 +517,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `xdmSchema` | Die ID der [Ziel-XDM-Schema](#target-schema) in einem früheren Schritt generiert wurde. |
+| `xdmSchema` | Die ID des [Ziel-XDM-Schema](#target-schema), die in einem früheren Schritt generiert wurde. |
 | `mappings.destinationXdmPath` | Der Ziel-XDM-Pfad, dem das Quellattribut zugeordnet wird. |
 | `mappings.sourceAttribute` | Das Quellattribut, das einem Ziel-XDM-Pfad zugeordnet werden muss. |
-| `mappings.identity` | Ein boolean -Wert, der angibt, ob der Zuordnungssatz als [!DNL Identity Service]. |
+| `mappings.identity` | Ein boolescher Wert, der angibt, ob der Zuordnungssatz für [!DNL Identity Service] markiert wird. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, einschließlich der eindeutigen Kennung (`id`). Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschließlich der eindeutigen Kennung (`id`). Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
@@ -537,17 +537,17 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 }
 ```
 
-## Erstellen eines Workflows {#flow}
+## Erstellen eines Flusses {#flow}
 
-Der letzte Schritt in Richtung [!DNL Mailchimp] Daten an Platform zu senden, um einen Datenfluss zu erstellen. Jetzt sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt, um [!DNL Mailchimp]-Daten an Platform zu senden, besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
-* [Target-Verbindungs-ID](#target-connection)
-* [Mapping-ID](#mapping)
+* [Zielverbindungs-ID](#target-connection)
+* [Zuordnungs-ID](#mapping)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day`oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen an und bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinanderfolgenden Aufnahmen an. Bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
 
 
 **API-Format**
@@ -598,23 +598,23 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss nachschlagen können. |
-| `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
+| `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
+| `description` | (Optional) Eine Eigenschaft, die Sie einfügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert wird standardmäßig auf `1.0`. |
-| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source-connection) in einem früheren Schritt generiert wurde. |
-| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection) in einem früheren Schritt generiert wurde. |
+| `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
+| `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
+| `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
 | `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
-| `transformations.name` | Der der Transformation zugewiesene Name. |
-| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) in einem früheren Schritt generiert wurde. |
-| `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert wird standardmäßig auf `0`. |
-| `scheduleParams.startTime` | Die vorgesehene Startzeit für den Beginn der ersten Datenerfassung. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` und sollte größer oder gleich sein als `15` für andere Frequenzwerte. |
+| `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
+| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
+| `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
+| `scheduleParams.startTime` | Die vorgesehene Startzeit für den Beginn der ersten Datenaufnahme. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses. Mit dieser ID können Sie Ihren Datenfluss überwachen, aktualisieren oder löschen.
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses angegeben. Mit dieser ID können Sie Ihren Datenfluss überwachen, aktualisieren oder löschen.
 
 ```json
 {
@@ -625,7 +625,7 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses. Mi
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die erfassten Daten überwachen, um Informationen über die Durchsatzausführungen, den Abschlussstatus und Fehler anzuzeigen.
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen.
 
 **API-Format**
 
@@ -648,7 +648,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurückgegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung der Flussausführung (`id`).
+Bei einer erfolgreichen Antwort werden Details zu Ihrem Flussvorgang angegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung des Flussvorgangs (`id`).
 
 ```json
 {
@@ -733,21 +733,21 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurück
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `items` | Enthält eine einzige Payload von Metadaten, die mit Ihrem spezifischen Flusslauf verknüpft sind. |
-| `id` | Zeigt die Ihrem Datenfluss entsprechende ID an. |
+| `items` | Enthält eine einzige Payload von Metadaten, die mit Ihrer spezifischen Datenflussausführung verknüpft sind. |
+| `id` | Zeigt die ID an, die Ihrem Datenfluss entspricht. |
 | `state` | Zeigt den aktuellen Status Ihres Datenflusses an. |
 | `inheritedAttributes` | Enthält die Attribute, die Ihren Fluss definieren, z. B. IDs für die entsprechende Basis-, Quell- und Zielverbindung. |
-| `scheduleParams` | Enthält Informationen zum Erfassungszeitplan Ihres Datenflusses, z. B. Startzeit (in Epochenzeit), Häufigkeit und Intervall. |
+| `scheduleParams` | Enthält Informationen zum Aufnahmezeitplan Ihres Datenflusses, z. B. Startzeit (in Epochenzeit), Häufigkeit und Intervall. |
 | `transformations` | Enthält Informationen zu den auf Ihren Datenfluss angewendeten Transformationseigenschaften. |
-| `runs` | Zeigt die entsprechende Run-ID Ihres Workflows an. Sie können diese ID verwenden, um bestimmte Flussläufe zu überwachen. |
+| `runs` | Zeigt die entsprechende Ausführungs-ID Ihres Flusses an. Sie können diese ID verwenden, um bestimmte Flussausführungen zu überwachen. |
 
-## Datenfluss aktualisieren
+## Aktualisieren des Datenflusses
 
-Führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und des neuen Zeitplans, den Sie verwenden möchten.
+Um den Ausführungsplan, Namen und die Beschreibung Ihres Datenflusses zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Fluss-ID, Version und den neuen Zeitplan an, den Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -788,13 +788,13 @@ curl -X PATCH \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren des Datenflusses erforderliche Aktion definiert wird. Operationen umfassen: `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Fluss-ID.
+Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Fluss-ID angeben.
 
 ```json
 {
@@ -803,9 +803,9 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
-## Datenfluss löschen
+## Löschen des Datenflusses
 
-Mit einer vorhandenen Fluss-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] API.
+Mit einer vorhandenen Fluss-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen.
 
 **API-Format**
 
@@ -815,7 +815,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Die eindeutige `id` für den Datenfluss, den Sie löschen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id`-Wert für den Datenfluss, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -830,15 +830,15 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für den Datenfluss ausführen. Die API gibt einen HTTP 404-Fehler (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an den Datenfluss stellen. Die API gibt den HTTP-Fehler 404 (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
 
-## Verbindung aktualisieren
+## Aktualisieren der Verbindung
 
-Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID, -Version und der neuen Informationen, die Sie verwenden möchten.
+Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Basisverbindungs-ID, -Version und die neuen Informationen an, die Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -848,7 +848,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Die eindeutige `id` für die Verbindung, die Sie aktualisieren möchten. |
+| `{BASE_CONNECTION_ID}` | Der eindeutige `id`-Wert für die Verbindung, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -892,7 +892,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Basis-Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Verbindungs-ID.
+Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Verbindungs-ID angeben.
 
 ```json
 {
@@ -901,9 +901,9 @@ Bei einer erfolgreichen Antwort werden Ihre Basis-Verbindungs-ID und ein aktuali
 }
 ```
 
-## Verbindung löschen
+## Löschen Ihrer Verbindung
 
-Nachdem Sie über eine bestehende Basis-Verbindungs-ID verfügen, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service] API.
+Nachdem Sie über eine bestehende Basisverbindungs-ID verfügen, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API durch.
 
 **API-Format**
 
@@ -913,7 +913,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Die eindeutige `id` für die Basisverbindung, die Sie löschen möchten. |
+| `{BASE_CONNECTION_ID}` | Der eindeutige `id`-Wert für die Basisverbindung, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -930,4 +930,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für die Verbindung ausführen.
+Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Verbindung stellen.
