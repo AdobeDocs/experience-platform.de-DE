@@ -1,46 +1,46 @@
 ---
-description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten Ziels senden müssen.
-title: Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln
+description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit dem Destination SDK erstellten Ziels übermitteln müssen.
+title: Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
 source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '580'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln
+# Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung
 
 ## Übersicht {#overview}
 
-Bevor Ihr Ziel in der [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md)müssen Sie der Adobe bestimmte Informationen über das Ziel und die von Ihnen durchgeführten Tests bereitstellen, um sicherzustellen, dass Benutzer beim Aktivieren von Daten für Ihre Plattform das bestmögliche Erlebnis erhalten.
+Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) veröffentlicht werden kann, müssen Sie Adobe bestimmte Informationen über das Ziel und die von Ihnen durchgeführten Tests zukommen lassen, um sicherzustellen, dass die Anwender beim Aktivieren von Daten auf Ihrer Plattform die bestmöglichen Ergebnisse erzielen.
 
-Auf dieser Seite finden Sie alle Informationen, die Sie beim Senden oder Aktualisieren eines mit Adobe Experience Platform Destination SDK erstellten Ziels benötigen. Um ein Ziel in Adobe Experience Platform erfolgreich zu senden, senden Sie eine E-Mail an <aepdestsdk@adobe.com> Folgendes umfasst:
+Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, wenn Sie ein mit dem Adobe Experience Platform Destination SDK erstelltes Ziel übermitteln oder aktualisieren. Um ein Ziel in Adobe Experience Platform erfolgreich zu übermitteln, senden Sie eine E-Mail an <aepdestsdk@adobe.com>, die folgende Informationen enthält:
 
 * Eine Beschreibung der Anwendungsfälle, die Ihr Ziel löst. Dies ist nicht erforderlich, wenn Sie eine vorhandene Zielkonfiguration aktualisieren.
-* Testergebnisse nach Verwendung des Ziel-API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Teilen Sie mit Adobe:
+* Testergebnisse nach Verwendung des Destination API-Endpunkts zum Ausführen eines HTTP-Aufrufs an Ihr Ziel. Bitte teilen Sie Adobe Folgendes mit:
    * Ein API-Aufruf an Ihren Ziel-Endpunkt.
    * Die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
-* Der Beweis, dass Sie mit dem [Zielpublikations-API](./destination-publish-api.md).
-* (Nur für produktive Integrationen) eine Dokumentation-PR (Pull-Anfrage) entsprechend den Anweisungen im Abschnitt [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
-* Eine Bilddatei, die als Logo für Ihre Zielkarte im Zielkatalog der Experience Platform angezeigt wird.
+* Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](./destination-publish-api.md) übermittelt haben.
+* (Nur für produktive Integrationen) eine Dokumentations-PR (Pull-Anfrage) entsprechend den Anweisungen im Abschnitt [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
+* Eine Grafikdatei, die als Logo für Ihre Zielkarte im Zielkatalog von Experience Platform angezeigt werden soll.
 
 >[!NOTE]
 >
->Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Ziel-Veröffentlichungsanforderungen beträgt 5 Werktage.
+>Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Zielveröffentlichungsanfragen beträgt 5 Werktage.
 
 Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgenden Abschnitten:
 
-## Anwendungsfallbeschreibung
+## Beschreibung der Anwendungsfälle
 
-Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experience Platform-Kunden löst. Ihre Beschreibungen können Nutzungsszenarios von vorhandenen Partnern ähneln:
+Geben Sie eine Beschreibung der Anwendungsfälle an, die Ihr Ziel für Experience Platform-Kunden löst. Ihre Beschreibungen können Anwendungsfällen von vorhandenen Partnern ähneln:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): Erstellen Sie Zielgruppen aus Ihren Kundenlisten, Personen, die Ihre Site besucht haben, oder Personen, die bereits mit Ihren Inhalten in Pinterest interagiert haben.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Advertiser verfügbar, die eine bestimmte Zielgruppen-Gruppe ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurde. Diese können schnell ein neues Segment erstellen und die gewünschte Zielgruppe mithilfe der nahezu Echtzeit-API von VMG übertragen.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): DataX-APIs sind für Werbetreibende verfügbar, die bestimmte Zielgruppen ansprechen möchten, die von E-Mail-Adressen in Verizon Media (VMG) abgeleitet wurden. Sie können schnell ein neues Segment erstellen und mithilfe der Fast-Echtzeit-API von VMG an die gewünschten Zielgruppen senden.
 
 ## Testergebnisse nach Verwendung der Test-Ziel-API
 
-Stellen Sie die Testergebnisse nach Verwendung der [Test-Ziel-API](./test-destination.md) -Endpunkt verwenden, um einen HTTP-Aufruf an Ihr Ziel durchzuführen. Dazu gehören:
+Stellen Sie Testergebnisse bereit, nachdem Sie den Endpunkt [Test-Ziel-API](./test-destination.md) verwendet haben, um einen HTTP-Aufruf an Ihr Ziel durchzuführen. Dazu gehören:
 
 * Die vollständige API-Anfrage (Kopfzeilen und Hauptteil), die mithilfe der Test-API an Ihren Ziel-Endpunkt gesendet wurde.
 * Die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
@@ -208,15 +208,15 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 }
 ```
 
-## Nachweis, dass Sie eine Zielveröffentlichungsanforderung gesendet haben
+## Nachweis, dass Sie eine Zielveröffentlichungsanfrage übermittelt haben
 
-Nachdem Sie Ihr Ziel erfolgreich getestet haben, müssen Sie die [Zielpublikations-API](./destination-publish-api.md) , um das Ziel zur Überprüfung und Veröffentlichung an Adobe zu senden.
+Nachdem Sie Ihr Ziel erfolgreich getestet haben, müssen Sie die [Zielveröffentlichungs-API](./destination-publish-api.md) verwenden, um das Ziel zur Überprüfung und Veröffentlichung an Adobe zu übermitteln.
 
-Geben Sie die ID der Veröffentlichungsanforderung für Ihr Ziel an. Informationen zum Abrufen der Veröffentlichungsanfrage-ID finden Sie unter [Veröffentlichungsanforderungen des Ziels auflisten](./destination-publish-api.md#retrieve-list).
+Geben Sie die ID der Veröffentlichungsanfrage für Ihr Ziel an. Weitere Informationen zum Abrufen der Veröffentlichungsanfragen-ID finden Sie unter [Auflisten der Veröffentlichungsanfragen für Ziele](./destination-publish-api.md#retrieve-list).
 
-## Zieldokumentation PR (Pull-Anforderung) für produktionierte Integrationen
+## Zieldokumentations-PR (Pull-Anfrage) für produktbezogene Integrationen
 
-Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und eine [produktive Integration](./overview.md#productized-custom-integrations), verwenden Sie die [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite für Ihr Ziel zu erstellen. Stellen Sie als Teil des Sendevorgangs die Pull-Anforderung (PA) für Ihre Zieldokumentation bereit.
+Wenn Sie als unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) eine [produktbezogene Integration](./overview.md#productized-custom-integrations) erstellen, verwenden Sie den [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel zu erstellen. Stellen Sie als Teil des Übermittlungsprozesses die Pull-Anfrage (PR) für Ihre Zieldokumentation bereit.
 
 ## Logo für Ihr Ziel
 
@@ -226,6 +226,6 @@ Die Bildanforderungen sind:
 * **Format**: `SVG`
 * **Größe**: weniger als 2 MB
 
-## Beispiel-E-Mail herunterladen
+## Herunterladen einer Beispiel-E-Mail
 
-[Download](./assets/sample-email-submit-destination.rtf) eine Beispiel-E-Mail mit allen Informationen, die Sie für Adobe bereitstellen müssen.
+Laden Sie [hier](./assets/sample-email-submit-destination.rtf) eine Beispiel-E-Mail mit allen Informationen herunter, die Sie Adobe zur Verfügung stellen müssen.
