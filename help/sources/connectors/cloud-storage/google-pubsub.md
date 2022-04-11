@@ -1,33 +1,33 @@
 ---
-keywords: Experience Platform;home;popular topics;Google PubSub;google pubsub
+keywords: Experience Platform;Startseite;beliebte Themen;Google PubSub;google pubsub
 solution: Experience Platform
-title: Google PubSub Source Connector - Überblick
+title: Google PubSub-Quell-Connector – Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Google PubSub über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
 source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '174'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# [!DNL Google PubSub] Connector
+# [!DNL Google PubSub]-Connector
 
-Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie [!DNL AWS], [!DNL Google Cloud Platform]und [!DNL Azure], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Diensten und Zielen in Platform importieren können.
+Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie [!DNL AWS], [!DNL Google Cloud Platform] und [!DNL Azure], sodass Sie Daten aus diesen Systemen zur Verwendung in nachgelagerten Services und Zielen in Platform importieren können.
 
-Cloud-Speicher-Quellen können Ihre Daten in Platform übertragen, ohne herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Ursprungs-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Azure Event Hubs] in Echtzeit.
+Cloud-Speicher sind eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Azure Event Hubs] in Echtzeit importieren.
 
-## Verbinden [!DNL Google PubSub] Platform
+## Verbinden von [!DNL Google PubSub] mit Platform
 
-Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Google PubSub] zur Plattform mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Google PubSub] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
 
 ### Verwenden von APIs
 
 - [Erstellen einer Google PubSub-Quellverbindung mit der Flow Service-API](../../tutorials/api/create/cloud-storage/google-pubsub.md)
-- [Erfassen von Streaming-Daten mithilfe der Flow Service-API](../../tutorials/api/collect/streaming.md)
+- [Erfassen von Streaming-Daten mit der Flow Service-API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der Benutzeroberfläche
 
-- [Erstellen einer Google PubSub-Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
-- [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Erstellen einer Quellverbindung für Google PubSub über die Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/google-pubsub.md)
+- [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung über die Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
