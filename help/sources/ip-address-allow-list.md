@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform; Homepage; beliebte Themen; IP-Adresse; IP-Adressen; IP-Adressen; Zulassungsliste der IP-Adresse; Zulassungsliste
+keywords: Experience Platform;Homepage;beliebte Themen;IP-Adresse;IP-Adressen;IP-Adressen-Zulassungsliste;Zulassungsliste
 description: IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor sie mit Quell-Connectoren arbeiten können.
 solution: Experience Platform
 title: IP-Adressen-Zulassungsliste für Quellverbindungen
 topic-legacy: overview
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 source-git-commit: a93b14c0e8390ba1a6c486851900a5933fb26a6d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '111'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # IP-Adressen-Zulassungsliste
 
-Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie Traffic für den Datenübertragungsdienst zulassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
+Sie können Netzwerkzugriffssteuerungen über Ihre Netzwerk-Firewall definieren. Durch Angabe des entsprechenden Quell-IP-Bereichs können Sie Traffic für den Datenübertragungs-Service zulassen. Die folgenden IP-Adressen müssen einer Zulassungsliste hinzugefügt werden, bevor Sie mit Quell-Connectoren arbeiten können. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen.
 
 ## VA7: Nordamerika
 
