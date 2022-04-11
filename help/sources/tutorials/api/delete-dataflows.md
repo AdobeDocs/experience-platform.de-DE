@@ -1,40 +1,40 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; API; API; API; Löschen; Löschen von Datenflüssen
+keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;API;api;Löschen;Löschen von Datenflüssen
 solution: Experience Platform
 title: Löschen eines Datenflusses mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Batch- und Streaming-Datenflüsse löschen.
+description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Batch- und Streaming-Datenflüsse löschen können.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
 # Löschen eines Datenflusses mithilfe der Flow Service-API
 
-Sie können Batch- und Streaming-Datenflüsse löschen, die Fehler enthalten oder mit dem [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Sie können Batch- und Streaming-Datenflüsse, die Fehler enthalten oder veraltet sind, mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) löschen.
 
-In diesem Tutorial werden die Schritte zum Löschen von Datenflüssen beschrieben, die sowohl mit Batch- als auch Streaming-Quellen mithilfe von [!DNL Flow Service].
+In diesem Tutorial werden die Schritte zum Löschen von Datenflüssen aus Batch- und Streaming-Quellen mithilfe von [!DNL Flow Service] beschrieben.
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellen - Übersicht](../../home.md) und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben wurden.
+Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Flow-ID haben, wählen Sie den gewünschten Connector aus der [Quellenübersicht](../../home.md) und befolgen Sie die beschriebenen Schritte, bevor Sie mit diesem Tutorial fortfahren.
 
-Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
+Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem Sie [!DNL Platform] Dienste.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu unterstützen.
 
 ### Verwenden von Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
 
-## Datenfluss löschen
+## Löschen eines Datenflusses
 
-Mit einer vorhandenen Fluss-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] API.
+Mit einer vorhandenen Flow-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen.
 
 **API-Format**
 
@@ -44,7 +44,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Die eindeutige `id` für den Datenfluss, den Sie löschen möchten. |
+| `{FLOW_ID}` | Der eindeutige Wert `id` für den Datenfluss, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -59,10 +59,10 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für den Datenfluss ausführen. Die API gibt einen HTTP 404-Fehler (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an den Datenfluss stellen. Die API gibt den HTTP-Fehler 404 (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie erfolgreich die [!DNL Flow Service] API zum Löschen eines vorhandenen Datenflusses.
+Mithilfe dieses Tutorials haben Sie erfolgreich einen vorhandenen Datenfluss mithilfe der [!DNL Flow Service]-API gelöscht.
 
-Anweisungen zum Ausführen dieser Vorgänge mithilfe der Benutzeroberfläche finden Sie im Tutorial zu [Löschen von Datenflüssen in der Benutzeroberfläche](../../tutorials/ui/delete.md)
+Wie Sie diese Vorgänge mithilfe der Benutzeroberfläche durchführen können, erfahren Sie im Tutorial [Löschen von Datenflüssen in der Benutzeroberfläche](../../tutorials/ui/delete.md)
