@@ -1,37 +1,37 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Kampagne; Kampagnenverwaltete Dienste
-title: Erstellen einer Adobe Campaign Managed Services-Quellverbindung über die Platform-Benutzeroberfläche
-description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine Verbindung zwischen Adobe Experience Platform und Adobe Campaign Managed Services herstellen.
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Kampagne;Kampagnenverwaltete Services
+title: Erstellen einer Managed Services-Quellverbindung mit Adobe Campaign über die Platform-Benutzeroberfläche
+description: Erfahren Sie, wie Sie über die Platform-Benutzeroberfläche eine Verbindung zwischen Adobe Experience Platform und Managed Services in Adobe Campaign herstellen.
 hide: true
 hidefromtoc: true
 source-git-commit: 57a34b10e40dee80638392477d49c21e107c491f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '300'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 
-# Erstellen einer Adobe Campaign Managed Services-Quellverbindung über die Platform-Benutzeroberfläche
+# Erstellen einer Managed Services-Quellverbindung mit Adobe Campaign über die Platform-Benutzeroberfläche
 
-In diesem Tutorial erfahren Sie, wie Sie einen Quell-Connector erstellen, um Ihre Adobe Campaign Managed Services-Daten in Adobe Experience Platform zu übertragen.
+In diesem Tutorial erfahren Sie, wie Sie einen Quell-Connector erstellen, um Ihre Managed Services-Daten von Adobe Campaign in Adobe Experience Platform zu übertragen.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem [!DNL Platform] Dienste.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen aufteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu erleichtern.
+* [Quellen](../../../../home.md): Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-## Verbinden von Adobe Campaign Managed Services mit Platform
+## Verbinden von Managed Services in Adobe Campaign mit Platform
 
-Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** über die linke Navigationsleiste auf [!UICONTROL Quellen] Arbeitsbereich. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
+Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Quellen]** in der linken Navigationsleiste, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie ein Konto erstellen können.
 
 Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Sie können auch die Suchleiste verwenden, um die angezeigten Quellen einzugrenzen.
 
-Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Campaign Managed Services]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+Wählen Sie unter der Kategorie **[!UICONTROL Adobe-Programme]** die Option **[!UICONTROL Adobe Campaign Managed Services]** und anschließend die Option **[!UICONTROL Daten hinzufügen]**.
 
-### Daten auswählen {#select-data}
+### Auswählen von Daten {#select-data}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
@@ -41,8 +41,8 @@ Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Campa
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_mapping"
->title="Zielgruppen-Mapping"
->abstract="Zielgruppen-Mappings sind technische Objekte, die von Campaign zum Versand von Nachrichten verwendet werden und alle technischen Einstellungen enthalten, die für den Versand erforderlich sind (Adressen, Telefonnummern, Opt-in-Indikatoren, zusätzliche Kennungen usw.)."
+>title="Zielgruppenzuordnung"
+>abstract="Zielgruppenzuordnungen sind technische Objekte, die von Campaign zum Versand von Nachrichten verwendet werden und alle technischen Einstellungen enthalten, die für den Versand erforderlich sind (Adressen, Telefonnummern, Opt-in-Indikatoren, zusätzliche Kennungen usw.)."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -51,4 +51,4 @@ Unter dem **[!UICONTROL Adobe Apps]** category, select **[!UICONTROL Adobe Campa
 >abstract="Der Name der in der Adobe Campaign-Datenbank definierten Entität."
 >text="Learn more in documentation"
 
-Die [!UICONTROL Daten auswählen] -Schritt angezeigt wird und Sie eine Oberfläche zum Konfigurieren von Werten für Ihre [!UICONTROL Adobe Campaign-Instanz], [!UICONTROL Zielgruppen-Mapping]und [!UICONTROL Schemaname].
+Der Schritt [!UICONTROL Daten auswählen] wird angezeigt und bietet Ihnen eine Schnittstelle zur Konfiguration von Werten für Ihre [!UICONTROL Adobe Campaign-Instanz], [!UICONTROL Zielgruppenzuordnung] und [!UICONTROL Schemaname].
