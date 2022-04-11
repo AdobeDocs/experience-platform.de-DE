@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Flussdienst; Konten aktualisieren
+keywords: Experience Platform;Startseite;beliebte Themen;Flow Service;Konten aktualisieren
 solution: Experience Platform
 title: Aktualisieren von Konten mithilfe der Flow Service-API
 topic-legacy: overview
@@ -7,9 +7,9 @@ type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen eines Kontos mithilfe der Flow Service-API beschrieben.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '523'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
@@ -17,24 +17,24 @@ ht-degree: 15%
 
 Unter bestimmten Umständen kann es erforderlich sein, die Details einer vorhandenen Quellverbindung zu aktualisieren. [!DNL Flow Service] bietet Ihnen die Möglichkeit, Details einer vorhandenen Batch- oder Streaming-Verbindung, einschließlich Name, Beschreibung und Anmeldeinformationen, hinzuzufügen, zu bearbeiten und zu löschen.
 
-In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldedaten einer Verbindung mit dem [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden die Schritte zum Aktualisieren der Details und Anmeldeinformationen einer Verbindung mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie eine vorhandene Verbindung und eine gültige Verbindungs-ID. Wenn Sie noch keine Verbindung haben, wählen Sie die gewünschte Quelle aus der [Quellen - Übersicht](../../home.md) und führen Sie die Schritte aus, die vor dem Versuch dieses Tutorials beschrieben wurden.
+Für dieses Tutorial benötigen Sie eine vorhandene Verbindung und eine gültige Verbindungs-ID. Wenn Sie noch keine Verbindung haben, wählen Sie die gewünschte Quelle aus der [Übersicht über Quellen](../../home.md) und führen Sie vor diesem Tutorial die beschriebenen Schritte aus.
 
-Für dieses Tutorial benötigen Sie außerdem ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
+Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
-* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Verwenden von Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch zu den [Ersten Schritten mit Platform-APIs](../../../landing/api-guide.md).
 
-## Verbindungsdetails nachschlagen
+## Nachschlagen von Verbindungsdetails
 
-Der erste Schritt beim Aktualisieren Ihrer Verbindung besteht darin, ihre Details mithilfe Ihrer Verbindungs-ID abzurufen. Um die aktuellen Details Ihrer Verbindung abzurufen, stellen Sie eine GET-Anfrage an die [!DNL Flow Service] API bei Angabe der Verbindungs-ID der Verbindung, die Sie aktualisieren möchten.
+Der erste Schritt beim Aktualisieren Ihrer Verbindung besteht darin, ihre Details mithilfe Ihrer Verbindungs-ID abzurufen. Um die aktuellen Details Ihrer Verbindung abzurufen,stellen Sie eine GET-Anfrage an die [!DNL Flow Service]-API und geben Sie dabei die Verbindungs-ID der Verbindung an, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -44,7 +44,7 @@ GET /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Die eindeutige `id` für die Verbindung, die Sie abrufen möchten. |
+| `{CONNECTION_ID}` | Der eindeutige `id`-Wert für die Verbindung, die Sie abrufen möchten. |
 
 **Anfrage**
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die aktuellen Details Ihrer Verbindung zurück, einschließlich der Anmeldeinformationen, der eindeutigen Kennung (`id`) und -Version. Der Versionswert ist erforderlich, um Ihre Verbindung zu aktualisieren.
+Bei einer erfolgreichen Antwort werden die aktuellen Details Ihrer Verbindung zurückgegeben, einschließlich der Anmeldedaten, der eindeutigen Kennung (`id`) und der Version. Der Versionswert ist erforderlich, um Ihre Verbindung zu aktualisieren.
 
 ```json
 {
@@ -97,13 +97,13 @@ Eine erfolgreiche Antwort gibt die aktuellen Details Ihrer Verbindung zurück, e
 }
 ```
 
-## Verbindung aktualisieren
+## Aktualisieren der Verbindung
 
-Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Verbindungs-ID, -Version und der neuen Informationen, die Sie verwenden möchten.
+Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API durch und geben Sie dabei Ihre Verbindungs-ID, die Version und die neuen Informationen an, die Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
+>Die `If-Match`-Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -113,7 +113,7 @@ PATCH /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Die eindeutige `id` für die Verbindung, die Sie aktualisieren möchten. |
+| `{CONNECTION_ID}` | Der eindeutige `id`-Wert für die Verbindung, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Verbindungs-ID.
+Bei einer erfolgreichen Antwort werden Ihre Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Verbindungs-ID angeben.
 
 ```json
 {
@@ -169,4 +169,4 @@ Bei einer erfolgreichen Antwort werden Ihre Verbindungs-ID und ein aktualisierte
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie die Anmeldeinformationen und Informationen für Ihre Verbindung mit der [!DNL Flow Service] API. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie im Abschnitt [Quellen - Übersicht](../../home.md).
+In diesem Tutorial haben Sie mithilfe der [!DNL Flow Service]-API die Anmeldeinformationen und Informationen für Ihre Verbindung aktualisiert. Weitere Informationen zur Verwendung von Quell-Connectoren finden Sie im Abschnitt [Quellen – Übersicht](../../home.md).
