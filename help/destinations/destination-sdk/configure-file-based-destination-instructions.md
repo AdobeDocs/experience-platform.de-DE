@@ -1,36 +1,36 @@
 ---
-description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe von Destination SDK aufgeführt und beschrieben.
-title: (Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.
+description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
+title: (Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '477'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# (Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.
+# (Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
 
 ## Übersicht {#overview}
 
 >[!IMPORTANT]
 >
->Die Funktion zum Konfigurieren und Senden dateibasierter Ziele mithilfe von Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+>Die Funktion zum Konfigurieren und Übermitteln dateibasierter Ziele mithilfe des Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
 
-Auf dieser Seite wird die Verwendung der Informationen unter [Konfigurationsoptionen im Ziel-SDK](./configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten zum Konfigurieren einer [dateibasiertes Ziel](../../destinations/destination-types.md#file-based). Die Schritte werden in der folgenden Reihenfolge angeordnet.
+Auf dieser Seite wird beschrieben, wie Sie die Informationen in [Konfigurationsoptionen im Destination SDK](./configuration-options.md) und in anderen Destination SDK-Funktionen und API-Referenzdokumenten verwenden können, um ein [dateibasiertes Ziel](../../destinations/destination-types.md#file-based) zu konfigurieren. Die Schritte sind im Folgenden in der vorgegebenen Reihenfolge aufgeführt.
 
 ## Voraussetzungen {#prerequisites}
 
-Bevor Sie mit den unten dargestellten Schritten fortfahren, lesen Sie bitte die [Erste Schritte mit Destination SDK](./getting-started.md) Seite mit Informationen zum Abrufen der erforderlichen Anmeldeinformationen für die Adobe I/O-Authentifizierung und anderen Voraussetzungen für die Verwendung mit Destination SDK-APIs.
+Bevor Sie mit den unten dargestellten Schritten fortfahren, informieren Sie sich auf der Seite [Erste Schritte mit dem Destination SDK](./getting-started.md), wie Sie die erforderlichen Adobe I/O-Authentifizierungsdaten und andere Voraussetzungen für die Arbeit mit Destination SDK-APIs erhalten.
 
-## Schritte zum Verwenden der Konfigurationsoptionen in Destination SDK zum Einrichten Ihres Ziels {#steps}
+## Schritte zum Verwenden der Konfigurationsoptionen im Destination SDK zum Einrichten Ihres Ziels {#steps}
 
 ![Veranschaulichte Schritte zur Verwendung von Destination SDK-Endpunkten](./assets/destination-sdk-steps-batch.png)
 
 ## Schritt 1: Erstellen einer Server- und Dateikonfiguration {#create-server-file-configuration}
 
-Erstellen Sie zunächst einen Server und eine Dateikonfiguration mit dem `/destinations-server` Endpunkt (lesen) [API-Referenz](./destination-server-api.md)).
+Erstellen Sie zunächst eine Server- und Dateikonfiguration mithilfe des Endpunkts `/destinations-server` (siehe [API-Referenz](./destination-server-api.md)).
 
-Nachfolgend finden Sie eine Beispielkonfiguration für eine [!DNL Amazon S3] Ziel. Informationen zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie in den entsprechenden [Serverkonfigurationen](server-and-file-configuration.md).
+Nachfolgend finden Sie eine Beispielkonfiguration für ein [!DNL Amazon S3]-Ziel. Informationen zum Konfigurieren anderer Typen dateibasierter Ziele finden Sie in den entsprechenden [Server-Konfigurationen](server-and-file-configuration.md).
 
 **API-Format**
 
@@ -119,11 +119,11 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 }
 ```
 
-## Schritt 2: Zielkonfiguration erstellen {#create-destination-configuration}
+## Schritt 2: Erstellen einer Zielkonfiguration {#create-destination-configuration}
 
-Nachfolgend finden Sie ein Beispiel für eine Zielkonfiguration, die mithilfe der `/destinations` API-Endpunkt. Weitere Informationen zu dieser Konfiguration finden Sie unter [Zielkonfiguration](./file-based-destination-configuration.md).
+Unten sehen Sie ein Beispiel für eine Zielkonfiguration, die mithilfe des API-Endpunkts `/destinations` erstellt wurde. Weitere Informationen zu dieser Konfiguration finden Sie unter [Zielkonfiguration](./file-based-destination-configuration.md).
 
-Um den Server und die Dateikonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und die Vorlagenkonfiguration als `destinationServerId` hier.
+Um die Server- und Dateikonfiguration in Schritt 1 mit dieser Zielkonfiguration zu verbinden, fügen Sie die Instanz-ID des Servers und die Vorlagenkonfiguration hier als `destinationServerId` hinzu.
 
 **API-Format**
 
@@ -246,25 +246,25 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 }
 ```
 
-## Schritt 3: Erstellen der Konfiguration von Zielgruppen-Metadaten {#create-audience-metadata-configuration}
+## Schritt 3: Erstellen einer Zielgruppen-Metadatenkonfiguration {#create-audience-metadata-configuration}
 
-Für einige Ziele erfordert die Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Siehe [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen.
+Für einige Ziele erfordert das Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Unter [Verwaltung von Zielgruppen-Metadaten](./audience-metadata-management.md) finden Sie Informationen darüber, wann Sie diese Konfiguration einrichten müssen und wie Sie dies tun.
 
-Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie sie mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Audience-Metadatenkonfiguration Ihrer Zielkonfiguration als `audienceTemplateId`.
+Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Zielgruppen-Metadatenkonfiguration als `audienceTemplateId` zu Ihrer Zielkonfiguration hinzu.
 
-## Schritt 4: Authentifizierung einrichten {#set-up-authentication}
+## Schritt 4: Einrichten der Authentifizierung {#set-up-authentication}
 
-Je nachdem, ob `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` In der obigen Zielkonfiguration können Sie die Authentifizierung für Ihr Ziel einrichten, indem Sie die `/destination` oder `/credentials` -Endpunkt.
+Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"authenticationRule": "PLATFORM_AUTHENTICATION"` in der obigen Zielkonfiguration angeben, können Sie die Authentifizierung für Ihr Ziel einrichten, indem Sie den Endpunkt `/destination` oder `/credentials` verwenden.
 
-* Wenn Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` In der Zielkonfiguration finden Sie in den folgenden Abschnitten die Authentifizierungstypen, die von Destination SDK für dateibasierte Ziele unterstützt werden:
+* Wenn Sie in der Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ausgewählt haben, finden Sie in den folgenden Abschnitten Informationen zu den Authentifizierungstypen, die vom Destination SDK für dateibasierte Ziele unterstützt werden:
 
    * [Amazon S3-Authentifizierung](authentication-configuration.md#s3)
    * [Azure-Verbindungszeichenfolge](authentication-configuration.md#blob)
-   * [Azure-Dienstprinzipal](authentication-configuration.md#adls)
+   * [Azure-Service-Prinzipal](authentication-configuration.md#adls)
    * [SFTP-Authentifizierung mit SSH-Schlüssel](authentication-configuration.md#sftp-ssh)
-   * [SFTP-Authentifizierung mit Kennwort](authentication-configuration.md#sftp-password)
+   * [SFTP-Authentifizierung mit Passwort](authentication-configuration.md#sftp-password)
 
-* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"`, siehe [Authentifizierungskonfiguration](./authentication-configuration.md#when-to-use).
+* Wenn Sie `"authenticationRule": "PLATFORM_AUTHENTICATION"` ausgewählt haben, lesen Sie den Abschnitt [Authentifizierungskonfiguration](./authentication-configuration.md#when-to-use).
 
 
 <!-- ## Step 5: Test your destination {#test-destination}
@@ -276,10 +276,10 @@ As part of the process to test your destination, you must use the Experience Pla
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en) -->
 
-## Schritt 5: Ziel veröffentlichen {#publish-destination}
+## Schritt 5: Veröffentlichen des Ziels {#publish-destination}
 
-Verwenden Sie nach dem Konfigurieren und Testen Ihres Ziels die [Zielpublikations-API](./destination-publish-api.md) , um Ihre Konfiguration zur Überprüfung an Adobe zu senden.
+Nachdem Sie Ihr Ziel konfiguriert und getestet haben, verwenden Sie die [Zielveröffentlichungs-API](./destination-publish-api.md), um Ihre Konfiguration zur Überprüfung an Adobe zu übermitteln.
 
-## Schritt 6: Ziel dokumentieren {#document-destination}
+## Schritt 6: Dokumentieren des Ziels {#document-destination}
 
-Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind und eine [produktive Integration](./overview.md#productized-custom-integrations), verwenden Sie die [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md) , um eine Produktdokumentationsseite für Ihr Ziel in der [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md).
+Wenn Sie ein unabhängiger Software-Anbieter (ISV) oder Systemintegrator (SI) sind, der eine [produktbezogene Integration](./overview.md#productized-custom-integrations) erstellt, verwenden Sie den [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite für Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) zu erstellen.
