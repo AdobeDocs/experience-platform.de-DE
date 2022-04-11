@@ -4,9 +4,9 @@ title: Personalisierungsziele – Übersicht
 description: Personalisierungsplattformen erfassen Daten und Insights aus individuellen Verhaltensweisen. Diese Plattformen können Marketern dabei helfen, anonyme Daten richtig zu nutzen und Angebote oder Anzeigen für potenzielle Neukunden bereitzustellen, die auf vorherigen Aktivitäten oder auf Zielgruppensegmenten mit ähnlichen Gewohnheiten basieren.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
 source-git-commit: 7acb823b9cbfb4a7988235949c6d2fd0b9baa7c0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '143'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Derzeit unterstützt Platform die unten aufgeführten Personalisierungsziele. In
 * [Adobe Target v2-Erweiterung](adobe-target-v2.md)
 * [Beemray-Erweiterung](beemray.md)
 * [D&amp;B Visitor Intelligence-Erweiterung](dnb.md)
-* [Experience Cloud ID-Diensterweiterung](adobe-ecid.md)
+* [Experience Cloud-ID-Service-Erweiterung](adobe-ecid.md)
 * [Gainsight-Erweiterung](gainsight.md)
 * [Kickfire-Erweiterung](kickfire.md)
-* [Marketo Web Personalization-Erweiterung](marketo-web-personalization.md)
+* [Marketo Web-Personalisierungserweiterung](marketo-web-personalization.md)
