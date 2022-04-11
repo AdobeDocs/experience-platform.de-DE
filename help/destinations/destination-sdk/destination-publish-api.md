@@ -1,36 +1,36 @@
 ---
-description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/destinations/publish"ausführen können.
+description: Auf dieser Seite sind alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/destinations/publish“ ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 source-git-commit: 702a5b7154724faa9f5e6847b462e0ae90475571
 workflow-type: tm+mt
 source-wordcount: '718'
-ht-degree: 5%
+ht-degree: 75%
 
 ---
 
-# API-Vorgänge für Veröffentlichungsziele-Endpunkte {#publish-destination}
+# API-Vorgänge für Endpunkte von Veröffentlichungszielen {#publish-destination}
 
 >[!IMPORTANT]
 >
 >**API-Endpunkt**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/destinations/publish` API-Endpunkt.
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt `/authoring/destinations/publish` ausführen können.
 
 Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überprüfung und Veröffentlichung an Adobe senden. Lesen [Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln](./submit-destination.md) für alle anderen Schritte, die Sie im Rahmen des Zielübermittlungsprozesses ausführen müssen.
 
-Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanforderung zu senden, wenn:
+Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanfrage zu senden, wenn:
 
-* Als Destination SDK-Partner möchten Sie Ihr produktives Ziel in allen Experience Platform-Unternehmen für alle Experience Platform-Kunden zur Verfügung stellen.
+* Als Destination SDK-Partner möchten Sie Ihr produktbezogenes Ziel über alle Experience Platform-Unternehmen für alle Experience Platform-Kunden verfügbar machen.
 * Sie möchten Ihr benutzerdefiniertes Ziel in Ihrer eigenen Experience Platform-Organisation für alle Sandboxes verfügbar machen.
 
-## Erste Schritte mit API-Vorgängen für die Zielveröffentlichung {#get-started}
+## Erste Schritte mit API-Vorgängen zur Zielveröffentlichung {#get-started}
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie bitte [Erste Schritte](./getting-started.md), um sich wichtige Informationen zu verschaffen, die Sie benötigen, um die API erfolgreich aufrufen zu können. Dies betrifft auch Informationen zur Vorgehensweise beim Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Header.
 
-## Senden einer Zielkonfiguration zur Veröffentlichung {#create}
+## Senden einer Zielkonfiguration für das Veröffentlichen {#create}
 
-Sie können eine Zielkonfiguration zur Veröffentlichung senden, indem Sie eine POST-Anfrage an die `/authoring/destinations/publish` -Endpunkt.
+Sie können eine Zielkonfiguration zum Veröffentlichen übermitteln, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destinations/publish` stellen.
 
 **API-Format**
 
@@ -40,7 +40,7 @@ POST /authoring/destinations/publish
 
 **Anfrage**
 
-Mit der folgenden Anfrage wird ein Ziel zur Veröffentlichung in allen Organisationen gesendet, die von den in der Payload bereitgestellten Parametern konfiguriert wurden. Die nachstehende Payload enthält alle Parameter, die vom `/authoring/destinations/publish` -Endpunkt.
+Mit der folgenden Anfrage wird ein Ziel für eine Veröffentlichung in allen Organisationen gesendet, die von den in der Payload bereitgestellten Parametern konfiguriert wurden. Die nachstehende Payload enthält alle Parameter, die für den Endpunkt `/authoring/destinations/publish` zulässig sind.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -58,18 +58,18 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie zur Veröffentlichung übermitteln. Rufen Sie die Ziel-ID einer Zielkonfiguration ab, indem Sie die [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list). |
+| `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie für eine Veröffentlichung übermitteln. Rufen Sie die Ziel-ID einer Zielkonfiguration unter Verwendung der [API-Referenz für die Zielkonfiguration](./destination-configuration-api.md#retrieve-list) ab. |
 | `destinationAccess` | Zeichenfolge | Verwendung `ALL` damit Ihr Ziel im Katalog für alle Experience Platform-Kunden angezeigt wird. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zu Ihrer Ziel-Veröffentlichungsanforderung zurück.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 201 mit Details zu Ihrer Zielveröffentlichungsanfrage zurückgegeben.
 
-## Veröffentlichungsanforderungen des Ziels auflisten {#retrieve-list}
+## Auflisten der Zielveröffentlichungsanfragen {#retrieve-list}
 
-Sie können eine Liste aller Ziele abrufen, die zur Veröffentlichung für Ihre IMS-Organisation übermittelt wurden, indem Sie eine GET-Anfrage an die `/authoring/destinations/publish` -Endpunkt.
+Sie können eine Liste aller für Ihre IMS-Organisation zur Veröffentlichung übermittelten Ziele abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/authoring/destinations/publish` stellen.
 
 **API-Format**
 
@@ -91,7 +91,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück, die zur Veröffentlichung gesendet wurden und auf die Sie Zugriff haben. Diese Liste basiert auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen der IMS-Organisation. One `configId` entspricht der Veröffentlichungsanforderung für ein Ziel.
+Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück, die zur Veröffentlichung übermittelt wurden und auf die Sie Zugriff haben. Diese Liste basiert auf der von Ihnen verwendeten IMS-Organisations-ID und dem Sandbox-Namen der IMS-Organisation. Eine `configId` entspricht der Veröffentlichungsanfrage für jeweils ein Ziel.
 
 ```json
 {
@@ -112,18 +112,18 @@ Die folgende Antwort gibt den HTTP-Status 200 mit einer Liste von Zielen zurück
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
-| `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie zur Veröffentlichung gesendet haben. |
-| `publishDetailsList.configId` | Zeichenfolge | Die eindeutige ID der Ziel-Veröffentlichungsanforderung für Ihr gesendetes Ziel. |
+| `destinationId` | Zeichenfolge | Die Ziel-ID der Zielkonfiguration, die Sie zur Veröffentlichung übermittelt haben. |
+| `publishDetailsList.configId` | Zeichenfolge | Die eindeutige ID der Zielveröffentlichungsanfrage für Ihr übermitteltes Ziel. |
 | `publishDetailsList.allowedOrgs` | Zeichenfolge | Gibt die Organisationen der Experience Platform zurück, für die das Ziel verfügbar ist. <br> <ul><li> Für `"destinationType": "PUBLIC"`, gibt dieser Parameter `"*"`, was bedeutet, dass das Ziel für alle Organisationen der Experience Platform verfügbar ist.</li><li> Für `"destinationType": "DEV"`gibt dieser Parameter die Organisations-ID der Organisation zurück, die Sie zum Erstellen und Testen des Ziels verwendet haben.</li></ul> |
-| `publishDetailsList.status` | Zeichenfolge | Der Status Ihrer Ziel-Veröffentlichungsanforderung. Mögliche Werte `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Ziele mit dem Wert `PUBLISHED` sind live und können von Experience Platform-Kunden verwendet werden. |
+| `publishDetailsList.status` | Zeichenfolge | Der Status Ihrer Anfrage zum Ziel der Veröffentlichung. Mögliche Werte sind `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`. Ziele mit dem Wert `PUBLISHED` sind live und können von Experience Platform-Kunden verwendet werden. |
 | `publishDetailsList.destinationType` | Zeichenfolge | Der Zieltyp. Werte können `DEV` und `PUBLIC`. `DEV` entspricht dem Ziel in Ihrer Experience Platform-Organisation. `PUBLIC` entspricht dem Ziel, das Sie zur Veröffentlichung übermittelt haben. Stellen Sie sich diese beiden Optionen in Git-Begriffen vor, wobei die `DEV` -Version steht für Ihre lokale Authoring-Verzweigung und die `PUBLIC` version steht für den Remote-Hauptzweig. |
-| `publishDetailsList.publishedDate` | Zeichenfolge | Das Datum, an dem das Ziel zur Veröffentlichung gesendet wurde, in Epochenzeit. |
+| `publishDetailsList.publishedDate` | Zeichenfolge | Das Datum, an dem das Ziel zur Veröffentlichung gesendet wurde, angegeben in Epochenzeit. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Abrufen des Status einer bestimmten Ziel-Veröffentlichungsanforderung {#get}
+## Abrufen des Status einer bestimmten Anfrage zum Ziel einer Veröffentlichung {#get}
 
-Sie können detaillierte Informationen zu einer bestimmten Ziel-Veröffentlichungsanforderung abrufen, indem Sie eine GET-Anfrage an die `/authoring/destinations/publish` -Endpunkt und die ID des Ziels angeben, für das Sie den Veröffentlichungsstatus abrufen möchten.
+Sie können detaillierte Informationen zu einer bestimmten Anfrage bezüglich des Ziels einer Veröffentlichung abrufen, indem Sie eine GET-Anfrage an den `/authoring/destinations/publish`-Endpunkt senden und darin die ID des Ziels angeben, für das Sie den Veröffentlichungsstatus abrufen möchten.
 
 **API-Format**
 
@@ -147,7 +147,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Ziel-Veröffentlichungsanforderung zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Informationen zur angegebenen Anfrage bezüglich des Ziels der Veröffentlichung zurück.
 
 ```json
 {
@@ -185,8 +185,8 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 ## Umgang mit API-Fehlern
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
 
 ## Nächste Schritte
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie eine Veröffentlichungsanforderung für Ihr Ziel senden können. Das Adobe Experience Platform-Team prüft Ihre Veröffentlichungsanforderung und setzt sich innerhalb von fünf Werktagen mit Ihnen in Verbindung.
+Nach dem Studium dieses Dokuments wissen Sie jetzt, wie Sie eine Veröffentlichungsanfrage für Ihr Ziel senden können. Das Adobe Experience Platform-Team prüft Ihre Veröffentlichungsanfrage und setzt sich innerhalb von fünf Werktagen mit Ihnen in Verbindung.

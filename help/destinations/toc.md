@@ -7,7 +7,7 @@ feature: Destinations
 source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
 workflow-type: tm+mt
 source-wordcount: '733'
-ht-degree: 41%
+ht-degree: 97%
 
 ---
 
@@ -17,55 +17,55 @@ ht-degree: 41%
 * [Ziele – Übersicht](./home.md)
 * [Zieltypen und Kategorien](./destination-types.md)
 * API-Tutorials {#api}
-   * [Mit Streaming-Zielen verbinden und Daten mithilfe der Flow Service-API aktivieren](./api/streaming-destinations.md)
-   * [Verbindung zu Batch-Cloud-Speicher und E-Mail-Marketing-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren](./api/connect-activate-batch-destinations.md)
+   * [Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API](./api/streaming-destinations.md)
+   * [Verbinden Sie sich mit Batch-Cloud-Speicher und E-Mail-Marketing-Zielen und aktivieren Sie Daten mit der Flow Service-API](./api/connect-activate-batch-destinations.md)
    * [(Beta) Aktivieren von Zielgruppensegmenten für Batch-Ziele über die Ad-hoc-Aktivierungs-API](./api/ad-hoc-activation-api.md)
    * [Aktualisieren von Ziel-Datenflüssen](./api/update-destination-dataflows.md)
-   * [Zielkonten löschen](./api/delete-destination-account.md)
+   * [Löschen von Zielkonten](./api/delete-destination-account.md)
    * [Zieldatenflüsse löschen](./api/delete-destination-dataflow.md)
-* Benutzeroberflächen-Handbücher {#ui}
+* UI-Handbücher {#ui}
    * [Arbeitsbereich „Ziele“](./ui/destinations-workspace.md)
-   * [Neue Zielverbindung erstellen](./ui/connect-destination.md)
-   * Aktivieren von Zielgruppendaten für Ziele{#activate}
-      * [Übersicht über Activation](./ui/activation-overview.md)
+   * [Erstellen einer neuen Zielverbindung](./ui/connect-destination.md)
+   * Aktivieren von Zielgruppendaten für Ziele {#activate}
+      * [Aktivierungsübersicht](./ui/activation-overview.md)
       * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md)
-      * [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](./ui/activate-streaming-profile-destinations.md)
-      * [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](./ui/activate-batch-profile-destinations.md)
+      * [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md)
+      * [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md)
       * [Aktivieren von Zielgruppendaten für Profilanforderungsziele](./ui/activate-profile-request-destinations.md)
-      * [Personalisierungsziele für die Personalisierung von derselben Seite und nächsten Seiten konfigurieren](./ui/configure-personalization-destinations.md)
-   * [Zieldetails anzeigen](./ui/destination-details-page.md)
-   * [Zielkonten aktualisieren](./ui/update-accounts.md)
-   * [Zielkonten löschen](./ui/delete-destination-account.md)
+      * [Konfigurieren von Personalisierungszielen für die Personalisierung auf derselben Seite und auf der nächsten Seite](./ui/configure-personalization-destinations.md)
+   * [Anzeigen von Zieldetails](./ui/destination-details-page.md)
+   * [Aktualisieren von Zielkonten](./ui/update-accounts.md)
+   * [Löschen von Zielkonten](./ui/delete-destination-account.md)
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
-   * [Ziele löschen](./ui/delete-destinations.md)
+   * [Löschen von Zielen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
    * Adobe-Ziele {#adobe}
       * [Adobe-Ziele – Übersicht](./catalog/adobe/overview.md)
       * [Marketo Engage-Verbindung](./catalog/adobe/marketo-engage.md)
-      * [Segmentfreigabe in Experience Platformen](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
+      * [Segmentfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
-      * [Awin Advertiser Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
+      * [Awin Advertising Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
-      * [Bing Ads Universal Event Tracking (UET)-Erweiterung](./catalog/advertising/bing-ads.md)
+      * [Erweiterung für Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Branch-Erweiterung](./catalog/advertising/branch.md)
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
       * [Flashspeak OneTag-Erweiterung](./catalog/advertising/flashtalking.md)
-      * [Verbindung zu Google Ads](./catalog/advertising/google-ads-destination.md)
+      * [Google Ads-Verbindung](./catalog/advertising/google-ads-destination.md)
       * [Google Ads-Erweiterung](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
-      * [Google-Kundenabgleich-Verbindung](./catalog/advertising/google-customer-match.md)
+      * [Google Customer Match-Verbindung](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
-      * [LinkedIn Insight-Tag-Erweiterung](./catalog/advertising/linkedin.md)
+      * [LinkedIn Insight Tag-Erweiterung](./catalog/advertising/linkedin.md)
       * [Microsoft Bing-Verbindung](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-Erweiterung](./catalog/advertising/pinterest-extension.md)
-      * [Pinterest-Kundenlistenverbindung](./catalog/advertising/pinterest.md)
-      * [Verbindung zum Trade Desk](./catalog/advertising/tradedesk.md)
+      * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
+      * [The Trade Desk-Verbindung](./catalog/advertising/tradedesk.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-Verbindung](./catalog/advertising/datax.md)
    * Analyseziele {#analytics}
@@ -90,7 +90,7 @@ ht-degree: 41%
       * [TMMData-Erweiterung](./catalog/analytics/tmmdata.md)
       * [Yext Conversion Tracking-Erweiterung](./catalog/analytics/yext.md)
    * Cloud-Speicher-Ziele {#cloud-storage}
-      * [Übersicht über Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
+      * [Cloud-Speicher-Ziele – Übersicht](./catalog/cloud-storage/overview.md)
       * [(Beta) Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
@@ -98,7 +98,7 @@ ht-degree: 41%
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
       * [IP-Adresse - Zulassungsliste für Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * Data Management Platform-Ziele {#data-management}
-      * [Übersicht über Data Management Platform-(DMP-)Ziele](./catalog/data-management/overview.md)
+      * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
       * [Audience Manager DIL-Erweiterung](./catalog/data-management/aam-dil-extension.md)
    * E-Mail-Ziele {#email}
       * [Bizible-Erweiterung](./catalog/email/bizible.md)
@@ -110,14 +110,14 @@ ht-degree: 41%
       * [Adobe Campaign-Verbindung](./catalog/email-marketing/adobe-campaign.md)
       * [Oracle Eloqua-Verbindung](./catalog/email-marketing/oracle-eloqua.md)
       * [Oracle Responsys-Verbindung](./catalog/email-marketing/oracle-responsys.md)
-      * [Salesforce-Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [Salesforce Marketing Cloud-Verbindung](./catalog/email-marketing/salesforce-marketing-cloud.md)
    * Tag-Erweiterungen {#launch-extensions}
-      * [Übersicht über die Tag-Erweiterung](./catalog/launch-extensions/overview.md)
-   * Mobile Interaktionsziele {#mobile-engagement}
-      * [Mobile Interaktionsziele - Übersicht](./catalog/mobile-engagement/overview.md)
-      * [Verbindung zu Luftverkehrsattributen](./catalog/mobile-engagement/airship-attributes.md)
-      * [Verbindung von Airship Tags](./catalog/mobile-engagement/airship-tags.md)
-      * [Bremsverbindung](./catalog/mobile-engagement/braze.md)
+      * [Übersicht über Tag-Erweiterungen](./catalog/launch-extensions/overview.md)
+   * Ziele für mobile Interaktion {#mobile-engagement}
+      * [Ziele für mobile Interaktion – Übersicht](./catalog/mobile-engagement/overview.md)
+      * [Airship Attributes-Verbindung](./catalog/mobile-engagement/airship-attributes.md)
+      * [Airship Tags-Verbindung](./catalog/mobile-engagement/airship-tags.md)
+      * [Braze-Verbindung](./catalog/mobile-engagement/braze.md)
    * Personalisierungsziele {#personalization}
       * [Personalisierungsziele – Übersicht](./catalog/personalization/overview.md)
       * [Adobe Target-Verbindung](./catalog/personalization/adobe-target-connection.md)
@@ -126,16 +126,16 @@ ht-degree: 41%
       * [Beemray-Erweiterung](./catalog/personalization/beemray.md)
       * [Benutzerdefinierte Personalisierungsverbindung](./catalog/personalization/custom-personalization.md)
       * [D&amp;B Visitor Intelligence-Erweiterung](./catalog/personalization/dnb.md)
-      * [Experience Cloud ID-Diensterweiterung](./catalog/personalization/adobe-ecid.md)
+      * [Experience Cloud-ID-Service-Erweiterung](./catalog/personalization/adobe-ecid.md)
       * [Gainsight-Erweiterung](./catalog/personalization/gainsight.md)
       * [KickFire-Erweiterung](./catalog/personalization/kickfire.md)
-      * [Marketo Web Personalization-Erweiterung](./catalog/personalization/marketo-web-personalization.md)
-   * Social-Ziele{#social}
-      * [Social-Ziele - Übersicht](./catalog/social/overview.md)
+      * [Marketo Web-Personalisierungserweiterung](./catalog/personalization/marketo-web-personalization.md)
+   * Social-Media-Ziele {#social}
+      * [Social-Media-Ziele – Übersicht](./catalog/social/overview.md)
       * [Adobe Livefyre-Erweiterung](./catalog/social/adobe-livefyre.md)
       * [Facebook-Verbindung](./catalog/social/facebook.md)
-      * [Verbindung zwischen linkedIn Matched Audiences](./catalog/social/linkedin.md)
-      * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
+      * [LinkedIn Matched Audiences-Verbindung](./catalog/social/linkedin.md)
+      * [[!DNL Twitter Custom Audiences]-Verbindung](./catalog/social/twitter.md)
    * Streaming-Ziele {#streaming}
       * [ (Beta) HTTP-API-Verbindung](./catalog/streaming/http-destination.md)
       * [IP-Adressen-Zulassungsliste für Streaming-Ziele](./catalog/streaming/ip-address-allow-list.md)
@@ -146,49 +146,49 @@ ht-degree: 41%
       * [Qualtrics Website Feedback-Erweiterung](./catalog/survey/qualtrics.md)
       * [QuestionPro Intercept Surveys-Erweiterung](./catalog/survey/web-intercept-surveys.md)
    * Sprache der Kundenziele {#voice}
-      * [Sprache der Kundenziele - Übersicht](./catalog/voice/overview.md)
+      * [Sprache der Kundenziele – Übersicht](./catalog/voice/overview.md)
       * [Confirmit Digital Feedback-Erweiterung](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca Tags-Erweiterung](./catalog/voice/invoca.md)
       * [Medallia-Erweiterung](./catalog/voice/medallia.md)
       * [Talk URL Inbox-Erweiterung](./catalog/voice/talkurl.md)
-* Ziel-SDK {#destination-sdk}
+* Destination SDK {#destination-sdk}
    * [Übersicht](./destination-sdk/overview.md)
-   * [Integrationsvoraussetzungen](./destination-sdk/integration-prerequisites.md)
+   * [Voraussetzungen für die Integration](./destination-sdk/integration-prerequisites.md)
    * [Erste Schritte](./destination-sdk/getting-started.md)
-   * Destination SDK {#functionality}
+   * Funktionen des Destination SDK {#functionality}
       * [Konfigurationsoptionen](./destination-sdk/configuration-options.md)
       * [Konfiguration des Streaming-Ziels](./destination-sdk/destination-configuration.md)
-      * [(Beta) Dateibasierte Zielkonfiguration](./destination-sdk/file-based-destination-configuration.md)
+      * [(Beta) Konfiguration dateibasierter Ziele](./destination-sdk/file-based-destination-configuration.md)
       * [Server- und Vorlagenspezifikationen für Streaming-Ziele](./destination-sdk/server-and-template-configuration.md)
-      * [(Beta) Dateibasierte Zielserver- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
+      * [(Beta) Dateibasierte Ziel-Server- und Dateispezifikationen](./destination-sdk/server-and-file-configuration.md)
       * [Nachrichtenformat](./destination-sdk/message-format.md)
-      * [Zielgruppen-Metadatenverwaltung](./destination-sdk/audience-metadata-management.md)
+      * [Verwaltung von Zielgruppen-Metadaten](./destination-sdk/audience-metadata-management.md)
       * Authentifizierung {#authentication}
          * [Authentifizierungskonfiguration](./destination-sdk/authentication-configuration.md)
          * [OAuth 2-Authentifizierung](./destination-sdk/oauth2-authentication.md)
-      * Entwicklertools {#developer-tools}
-         * [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./destination-sdk/create-template.md)
-         * [Testen der Zielkonfiguration](./destination-sdk/test-destination.md)
+      * Entwickler-Tools {#developer-tools}
+         * [Erstellen und Testen einer Nachrichten-Umwandlungsvorlage](./destination-sdk/create-template.md)
+         * [Testen einer Zielkonfiguration](./destination-sdk/test-destination.md)
    * API-Vorgänge {#api}
-      * [API-Referenz zur Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [API-Referenz zum Destination SDK (Destination Authoring)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * [API-Vorgänge für Ziel-Endpunkte](./destination-sdk/destination-configuration-api.md)
       * [API-Vorgänge für Ziel-Server-Endpunkte](./destination-sdk/destination-server-api.md)
       * [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./destination-sdk/audience-metadata-api.md)
-      * [API-Vorgänge für Anmeldeendpunkte](./destination-sdk/credentials-configuration-api.md)
-      * [API-Vorgänge für Veröffentlichungsendpunkte](./destination-sdk/destination-publish-api.md)
-      * Referenz zu Entwicklertools {#developer-tools-reference}
+      * [API-Vorgänge für Zugriffsdaten-Endpunkte](./destination-sdk/credentials-configuration-api.md)
+      * [Veröffentlichen von Endpunkt-API-Vorgänge](./destination-sdk/destination-publish-api.md)
+      * Referenz zu Entwickler-Tools {#developer-tools-reference}
          * [Abrufen von Beispielvorlagen-API-Vorgängen](./destination-sdk/sample-template-api.md)
          * [API-Vorgänge für Rendervorlagen](./destination-sdk/render-template-api.md)
          * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
-         * [API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
+         * [Beispiele für API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
    * Handbücher {#guides}
-      * [Verwenden von Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
-      * [(Beta) Verwenden Sie Destination SDK, um ein dateibasiertes Ziel zu konfigurieren.](./destination-sdk/configure-file-based-destination-instructions.md)
-      * [Zur Überprüfung eines in Destination SDK erstellten Ziels übermitteln](./destination-sdk/submit-destination.md)
-   * Ziel dokumentieren {#document-destination}
-      * [Ziel in Adobe Experience Platform dokumentieren](./destination-sdk/docs-framework/documentation-instructions.md)
-      * [Verwenden Sie die GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
-      * [Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Zieldokumentationsseite zu erstellen.](./destination-sdk/docs-framework/work-in-local-environment.md)
-      * [Vorlage für Dokumentations-Self-Service](./destination-sdk/docs-framework/self-service-template.md)
+      * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
+      * [(Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
+      * [Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung](./destination-sdk/submit-destination.md)
+   * Dokumentieren des Ziels {#document-destination}
+      * [Dokumentieren des Ziels in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Verwenden der GitHub-Web-Oberfläche, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Verwenden eines Texteditors in der lokalen Umgebung, um eine Zieldokumentationsseite zu erstellen](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Dokumentationsvorlage für Self-Service](./destination-sdk/docs-framework/self-service-template.md)
 * [Häufig gestellte Fragen](./destinations-faq.md)
-* [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+* [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)

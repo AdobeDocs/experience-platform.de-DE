@@ -1,12 +1,12 @@
 ---
-keywords: benutzerdefinierte Personalisierung; Bestimmungsort; Benutzerdefiniertes Ziel der Erlebnisplattform;
+keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel von Experience Platform;
 title: Benutzerdefinierte Personalisierungsverbindung
-description: Dieses Ziel bietet eine externe Personalisierung, Content Management-Systeme, Anzeigen-Server und andere Anwendungen, die auf Ihrer Site ausgeführt werden, um Segmentinformationen aus Adobe Experience Platform abzurufen. Dieses Ziel bietet eine Echtzeit-Personalisierung basierend auf der Mitgliedschaft in einem Benutzerprofilsegment.
+description: Dieses Ziel bietet externen Personalisierungs-, Content-Management-Systemen, Anzeigen-Servern und anderen Programmen, die auf Ihrer Site ausgeführt werden, die Möglichkeit, Segmentinformationen von Adobe Experience Platform abzurufen. Dieses Ziel bietet Echtzeit-Personalisierung auf der Grundlage auf der Zugehörigkeit zu einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
 workflow-type: tm+mt
 source-wordcount: '678'
-ht-degree: 7%
+ht-degree: 99%
 
 ---
 
@@ -14,62 +14,62 @@ ht-degree: 7%
 
 ## Übersicht {#overview}
 
-Dieses Ziel bietet eine Möglichkeit, Segmentinformationen von Adobe Experience Platform zu externen Personalisierungsplattformen, Content-Management-Systemen, Anzeigen-Servern und anderen Anwendungen abzurufen, die auf Kunden-Websites ausgeführt werden.
+Dieses Ziel bietet eine Möglichkeit, Segmentinformationen von Adobe Experience Platform auf externe Personalisierungsplattformen, Content-Management-Systeme, Anzeigen-Server und andere Programme zu übertragen, die auf Kunden-Websites ausgeführt werden.
 
 ## Voraussetzungen {#prerequisites}
 
-Diese Integration basiert auf der [Adobe Experience Platform Web SDK](../../../edge/home.md) oder [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). Sie müssen eines dieser SDKs verwenden, um dieses Ziel zu verwenden.
+Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../edge/home.md) oder [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/). Sie müssen eines dieser SDKs verwenden, um dieses Ziel verwenden zu können.
 
 >[!IMPORTANT]
 >
->Lesen Sie vor der Erstellung einer benutzerdefinierten Personalisierungsverbindung das Handbuch zum [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](../../ui/configure-personalization-destinations.md). In diesem Handbuch werden die erforderlichen Konfigurationsschritte für die Personalisierungsfälle der gleichen Experience Platform und der nächsten Seite für mehrere Seitenkomponenten erläutert.
+>Lesen Sie vor der Erstellung einer benutzerdefinierten Personalisierungsverbindung die Anleitung zum [Konfigurieren von Personalisierungszielen für die Personalisierung derselben Seite und der nächsten Seite](../../ui/configure-personalization-destinations.md). In dieser Anleitung werden die erforderlichen Konfigurationsschritte für die Anwendungsfälle der Personalisierung derselben Seite und der nächsten Seite für mehrere Experience Platform-Komponenten erläutert.
 
-## Exportart und -frequenz {#export-type-frequency}
+## Exporttyp und Häufigkeit {#export-type-frequency}
 
-**Profilanfrage** - Sie fordern alle Segmente an, die im benutzerdefinierten Personalisierungsziel für ein einzelnes Profil zugeordnet sind. Verschiedene benutzerdefinierte Personalisierungsziele können für verschiedene [Datenerfassungs-Datenspeicher der Adobe](../../../edge/fundamentals/datastreams.md).
+**Profilanfrage**: Sie fordern alle Segmente an, die im benutzerdefinierten Personalisierungsziel für ein einzelnes Profil zugeordnet sind. Für verschiedene [Adobe-Datenerfassungsdatenströme](../../../edge/fundamentals/datastreams.md) können verschiedene benutzerdefinierte Personalisierungsziele eingerichtet werden.
 
 ## Anwendungsfälle {#use-cases}
 
-Dieses Ziel teilt Zielgruppen mit Adservern und Nicht-Adobe-Personalisierungsanwendungen, die in Echtzeit verwendet werden, um zu entscheiden, welche Advertising-Benutzer auf einer Website sehen sollen.
+Dieses Ziel gibt Zielgruppen an Anzeigen-Server und Personalisierungsprogramme anderer Hersteller als Adobe weiter, die verwendet werden, um in Echtzeit zu entscheiden, welche Werbung die Benutzer auf einer Website sehen sollen.
 
 ### Anwendungsfall 1
 
 **Personalisieren einer Startseite**
 
-Eine Website zum Vermieten und Verkaufen möchte ihre Startseite anhand von Segmentqualifikationen in Adobe Experience Platform personalisieren. Das Unternehmen kann auswählen, welche Zielgruppen ein personalisiertes Erlebnis erhalten sollen, und diese Zielgruppen dem benutzerdefinierten Personalisierungsziel zuordnen, das für seine Nicht-Adobe-Personalisierungsanwendung als Targeting-Kriterien eingerichtet wurde.
+Eine Website für die Vermietung und den Verkauf von Wohnungen möchte ihre Startseite anhand von Segmentqualifikationen in Adobe Experience Platform personalisieren. Das Unternehmen kann auswählen, welche Zielgruppen ein personalisiertes Erlebnis erhalten sollen, und diese Zielgruppen dem benutzerdefinierten Personalisierungsziel zuordnen, das für sein Personalisierungsprogramm eines anderen Herstellers als Targeting-Kriterium eingerichtet wurde.
 
-**Targeting-Onsite-Werbung**
+**Gezielte-Onsite-Werbung**
 
-Mithilfe eines separaten benutzerdefinierten Personalisierungsziels für den Anzeigenserver kann dieselbe Website für die Werbung auf der Site einen anderen Satz von Segmenten aus Adobe Experience Platform als Targeting-Kriterien verwenden.
+Durch die Verwendung eines separaten benutzerdefinierten Personalisierungsziels für den Anzeigen-Server kann dieselbe Website die Werbung auf der Website mit verschiedenen Segmenten von Adobe Experience Platform als Targeting-Kriterien auf Zielgruppen ausrichten.
 
-## Mit Ziel verbinden {#connect}
+## Herstellen einer Verbindung mit der Datenbank {#connect}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Über Datastream-IDs"
->abstract="Diese Option bestimmt, in welchem Datenerfassungsdatenstrom die Segmente in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datastream konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en" text="Erfahren Sie, wie Sie einen Datastream konfigurieren"
+>title="Informationen zu Datenstrom-IDs"
+>abstract="Diese Option bestimmt, in welchen Datenerfassungsdatenstrom die Segmente in der Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Sie müssen einen Datenstrom konfigurieren, bevor Sie Ihr Ziel konfigurieren können."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=de" text="Erfahren Sie, wie Sie einen Datenstrom konfigurieren"
 
-Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 ### Verbindungsparameter {#parameters}
 
-while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
+Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
-* **[!UICONTROL Name]**: Geben Sie einen bevorzugten Namen für das Ziel ein.
-* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für Ihr Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
+* **[!UICONTROL Name]**: Geben Sie den gewünschten Namen für das Ziel ein.
+* **[!UICONTROL Beschreibung]**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
 * **[!UICONTROL Integrationsalias]**: Dieser Wert wird als JSON-Objektname an das Experience Platform Web SDK gesendet.
-* **[!UICONTROL Datenspeicher-ID]**: Dadurch wird bestimmt, in welchem Datenerfassungsdatenstrom die Segmente in die Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Zielkonfiguration aktiviert ist. Siehe [Konfigurieren eines Datastreams](../../../edge/fundamentals/datastreams.md) für weitere Details.
+* **[!UICONTROL Datenstrom-ID]**: Diese Angabe legt fest, in welchen Datenerfassungsdatenstrom die Segmente in der Antwort auf die Seite aufgenommen werden. Das Dropdown-Menü enthält nur Datenströme, für die die Zielkonfiguration aktiviert ist. Weitere Details finden Sie unter [Konfigurieren eines Datenstroms](../../../edge/fundamentals/datastreams.md).
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
-Lesen [Profile und Segmente für Profilanforderungsziele aktivieren](../../ui/activate-profile-request-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
+Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel finden Sie unter [Aktivieren von Profilen und Segmenten für Profilanfrageziele](../../ui/activate-profile-request-destinations.md).
 
 ## Exportierte Daten {#exported-data}
 
-Wenn Sie [Tags in Adobe Experience Platform](../../../tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK die [Abschluss des Versandereignisses](../../../edge/extension/event-types.md) -Funktion und Ihre Aktion mit benutzerdefiniertem Code verfügt über eine `event.destinations` -Variable, mit der Sie die exportierten Daten anzeigen können.
+Wenn Sie [Tags in Adobe Experience Platform](../../../tags/home.md) zum Bereitstellen des Experience Platform Web SDK verwenden, nutzen Sie die Funktion [send event complete](../../../edge/extension/event-types.md), damit Ihre Aktion mit benutzerdefiniertem Code über eine `event.destinations`-Variable verfügt, mit der Sie die exportierten Daten anzeigen können.
 
-Hier finden Sie einen Beispielwert für die `event.destinations` Variable:
+Hier finden Sie einen Beispielwert für die `event.destinations`-Variable:
 
 ```
 [
@@ -89,9 +89,9 @@ Hier finden Sie einen Beispielwert für die `event.destinations` Variable:
 ]
 ```
 
-Wenn Sie [Tags](../../../tags/home.md) Verwenden Sie zum Bereitstellen des Experience Platform Web SDK die [Umgang mit Antworten von Ereignissen](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) -Funktion, um die exportierten Daten anzuzeigen.
+Wenn Sie [Tags](../../../tags/home.md) nicht zum Bereitstellen des Experience Platform Web SDK verwenden, nutzten Sie die Funktion [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events), um die exportierten Daten anzuzeigen.
 
-Die JSON-Antwort von Adobe Experience Platform kann analysiert werden, um den entsprechenden Integrationsalias der Anwendung zu finden, die Sie in Adobe Experience Platform integrieren. Die Segment-IDs können als Targeting-Parameter in den Code der Anwendung übergeben werden. Nachfolgend finden Sie ein Beispiel dafür, wie dies spezifisch für die Zielantwort aussehen würde.
+Die JSON-Antwort von Adobe Experience Platform kann analysiert werden, um den entsprechenden Integrationsalias des Programms zu finden, das Sie mit Adobe Experience Platform integrieren. Die Segment-IDs können als Targeting-Parameter dem Code des Programms übergeben werden. Nachfolgend finden Sie ein Beispiel dafür, wie dies spezifisch für die Zielantwort aussehen würde.
 
 ```
 alloy("sendEvent", {
@@ -126,6 +126,6 @@ alloy("sendEvent", {
 ```
 
 
-## Datennutzung und -verwaltung {#data-usage-governance}
+## Datennutzung und -Governance {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Detaillierte Informationen zur [!DNL Adobe Experience Platform] erzwingt Data Governance, lesen Sie die [Data Governance - Übersicht](../../../data-governance/home.md).
+Alle [!DNL Adobe Experience Platform]-Ziele sind bei der Verarbeitung Ihrer Daten mit Datennutzungsrichtlinien konform. Ausführliche Informationen darüber, wie [!DNL Adobe Experience Platform] Data Governance erzwingt, finden Sie unter [Data Governance - Übersicht](../../../data-governance/home.md).

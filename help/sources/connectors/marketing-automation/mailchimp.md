@@ -1,35 +1,35 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Mailchimp; Mailchimp-Kampagnen; Mailchimp-Mitglieder
+keywords: Experience Platform;Startseite;beliebte Themen;Mailchimp;Mailchimp-Kampagnen;Mailchimp-Mitglieder
 solution: Experience Platform
-title: Mailchimp Connector - Übersicht
+title: Mailchimp-Connector - Übersicht
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Mailchimp über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
 source-git-commit: ed185d0957c3cd84c33a6ff60c5ded2b17fbfe74
 workflow-type: tm+mt
 source-wordcount: '221'
-ht-degree: 14%
+ht-degree: 88%
 
 ---
 
-# [!DNL Mailchimp] Connector
+# [!DNL Mailchimp]-Connector
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern mithilfe von [!DNL Platform] Dienste. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Unterstützung für Anbieter von Marketing-Automatisierungslösungen umfasst [!DNL Mailchimp].
+Experience Platform ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Der Support für Anbieter von Marketing-Automatisierung umfasst [!DNL Mailchimp].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Siehe [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) für weitere Informationen.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [Zulassungsliste für IP-Adressen](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Mailchimp] zu Platform und bringen Sie entweder [!DNL Mailchimp Campaigns] oder [!DNL Mailchimp Members] Daten mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen darüber, wie Sie [!DNL Mailchimp] mit Platform verbinden und entweder [!DNL Mailchimp Campaigns]- oder [!DNL Mailchimp Members]-Daten über APIs oder die Benutzeroberfläche übertragen:
 
-## Verbinden [!DNL Mailchimp Campaigns] Platform
+## Verbinden von [!DNL Mailchimp Campaigns] mit Platform
 
-* [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Campaigns] Daten an Platform mithilfe von APIs](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
+* [Erstellen Sie eine Quellverbindung, um [!DNL Mailchimp Campaigns] -Daten durch Verwenden von APIs in Platform zu importieren](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
 * [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Campaigns] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
-## Verbinden [!DNL Mailchimp Members] Platform
+## Verbinden von [!DNL Mailchimp Members] mit Platform
 
-* [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Members] Daten an Platform mithilfe von APIs](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
+* [Erstellen Sie eine Quellverbindung, um [!DNL Mailchimp Members] -Daten durch Verwenden von APIs in Platform zu importieren](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 * [Erstellen Sie eine Quellverbindung, um sie zu bringen. [!DNL Mailchimp Members] Daten an Platform mithilfe der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
