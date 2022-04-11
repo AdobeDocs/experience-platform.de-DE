@@ -1,47 +1,47 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
-title: Erstellen Sie eine neue Verbindungsspezifikation mithilfe der Flow Service-API (Beta).
+title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API (Beta)
 topic-legacy: tutorial
-description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über das Sources-SDK integrieren.
+description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über das Quellen-SDK integrieren.
 hide: true
 hidefromtoc: true
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
 source-git-commit: d84af88bc1bfe2bfb1bbf2bf36cdb43894975288
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '524'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Erstellen Sie eine neue Verbindungsspezifikation mit der [!DNL Flow Service] API (Beta)
+# Erstellen einer neuen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API (Beta)
 
 >[!IMPORTANT]
 >
->Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
+>Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
 
-Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Es enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und untersucht werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Die `/connectionSpecs` -Endpunkt im [!DNL Flow Service] Mit der API können Sie die Verbindungsspezifikationen in Ihrem Unternehmen programmatisch verwalten.
+Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
-Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service] API und Integration einer neuen Quelle über das Sources-SDK.
+Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API und zum Integrieren einer neuen Quelle über das Quellen-SDK.
 
 ## Erste Schritte
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Artefakte sammeln
+## Sammeln von Artefakten
 
-Der erste Schritt beim Erstellen einer neuen Quelle durch [!DNL Sources SDK] ist es, sich mit Ihrem Adobe-Support-Mitarbeiter abzustimmen und Werte für die entsprechenden Quellen zu identifizieren. **icon**, **description**, **label** und **category**.
+Der erste Schritt beim Erstellen einer neuen Quelle über das [!DNL Sources SDK] ist es, sich mit Ihrem Adobe-Support-Mitarbeiter abzustimmen und die entsprechenden Werte für **icon**, **description**, **label** und **category** Ihrer Quelle zu identifizieren.
 
 | Artefakte | Beschreibung | Beispiel |
 | --- | --- | --- |
 | Kennzeichnung | Der Name Ihrer Quelle. | [!DNL MailChimp Members] |
-| Beschreibung | Eine kurze Beschreibung Ihrer Quelle. | Erstellen Sie eine eingehende Live-Verbindung zu Ihrer [!DNL Mailchimp Members] , um sowohl historische als auch geplante Daten in Experience Platform aufzunehmen. |
-| Icon | Das Bild oder Logo, das Ihre Quelle darstellt. Das Symbol wird im Platform-UI-Rendering Ihrer Quelle angezeigt. | `mailchimp-members-icon.svg` |
+| Beschreibung | Eine kurze Beschreibung Ihrer Quelle. | Erstellen Sie eine eingehende Live-Verbindung zu Ihrer [!DNL Mailchimp Members]-Instanz, um sowohl historische als auch geplante Daten in Experience Platform aufzunehmen. |
+| Symbol | Das Bild oder Logo, das Ihre Quelle darstellt. Das Symbol wird als Darstellung Ihrer Quelle in der Platform-Benutzeroberfläche angezeigt. | `mailchimp-members-icon.svg` |
 | Kategorie | Die Kategorie Ihrer Quelle. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Vorlage für Verbindungsspezifikationen kopieren
+## Kopieren der Vorlage für die Verbindungsspezifikation
 
 Nachdem Sie die erforderlichen Artefakte gesammelt haben, kopieren Sie die unten stehende Vorlage für die Verbindungsspezifikation in den Texteditor Ihrer Wahl und aktualisieren Sie dann die Attribute in Klammern `{}` mit Informationen, die für Ihre spezifische Quelle relevant sind.
 
@@ -426,19 +426,19 @@ Nachdem Sie die erforderlichen Artefakte gesammelt haben, kopieren Sie die unten
 }
 ```
 
-## Verbindungsspezifikation erstellen {#create}
+## Erstellen einer Verbindungsspezifikation {#create}
 
-Nachdem Sie die Vorlage für die Verbindungsspezifikation erworben haben, können Sie jetzt mit der Erstellung einer neuen Verbindungsspezifikation beginnen, indem Sie die entsprechenden Werte eingeben, die Ihrer Quelle entsprechen.
+Sobald Sie sich die Vorlage für die Verbindungsspezifikation besorgt haben, können Sie damit beginnen, eine neue Verbindungsspezifikation zu erstellen, indem Sie die passenden Werte eingeben, die Ihrer Quelle entsprechen.
 
 Eine Verbindungsspezifikation kann in drei verschiedene Teile unterteilt werden: die Authentifizierungsspezifikationen, die Quellspezifikationen und die Analysespezifikationen.
 
 In den folgenden Dokumenten finden Sie Anweisungen zum Ausfüllen der Werte der einzelnen Teile einer Verbindungsspezifikation:
 
-* [Authentifizierungsspezifikation konfigurieren](../config/authspec.md)
-* [Quellspezifikation konfigurieren](../config/sourcespec.md)
-* [Konfigurieren der Discover-Spezifikation](../config/explorespec.md)
+* [Konfigurieren Ihrer Authentifizierungsspezifikation](../config/authspec.md)
+* [Konfigurieren Ihrer Quellspezifikation](../config/sourcespec.md)
+* [Konfigurieren Ihrer Erkundungsspezifikation](../config/explorespec.md)
 
-Wenn Ihre Spezifikationsdaten aktualisiert wurden, können Sie die neue Verbindungsspezifikation senden, indem Sie eine POST an die `/connectionSpecs` Endpunkt der [!DNL Flow Service] API.
+Wenn Ihre Spezifikationsdaten aktualisiert worden sind, können Sie die neue Verbindungsspezifikation übermitteln, indem Sie eine POST-Anfrage an den Endpunkt `/connectionSpecs` der [!DNL Flow Service]-API stellen.
 
 **API-Format**
 
@@ -448,7 +448,7 @@ POST /connectionSpecs
 
 **Anfrage**
 
-Die folgende Anfrage ist ein Beispiel für eine vollständig verfasste Verbindungsspezifikation für eine [!DNL MailChimp] source:
+Die folgende Anfrage ist ein Beispiel für eine vollständig verfasste Verbindungsspezifikation für eine [!DNL MailChimp]-Quelle:
 
 ```shell
 curl -X POST \
@@ -623,7 +623,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindungsspezifikation zurück, einschließlich der eindeutigen `id`.
+Bei einer erfolgreichen Antwort wird die neu erstellte Verbindungsspezifikation einschließlich ihrer eindeutigen `id` zurückgegeben.
 
 ```json
 {
@@ -808,6 +808,6 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindungsspezifikation zurüc
 
 ## Nächste Schritte
 
-Nachdem Sie eine neue Verbindungsspezifikation erstellt haben, müssen Sie die entsprechende Verbindungsspezifikations-ID zu einer vorhandenen Flussspezifikation hinzufügen. Siehe Tutorial zu [Flussspezifikationen aktualisieren](./update-flow-specs.md) für weitere Informationen.
+Nachdem Sie eine neue Verbindungsspezifikation erstellt haben, müssen Sie die entsprechende Verbindungsspezifikations-ID zu einer vorhandenen Flussspezifikation hinzufügen. Weitere Informationen finden Sie im Tutorial zum [Aktualisieren von Flussspezifikationen](./update-flow-specs.md).
 
-Informationen zum Ändern der von Ihnen erstellten Verbindungsspezifikation finden Sie im Tutorial zum [Aktualisierung der Verbindungsspezifikationen](./update-connection-specs.md).
+Informationen zum Ändern der von Ihnen erstellten Verbindungsspezifikation finden Sie im Tutorial zum [Aktualisieren der Verbindungsspezifikationen](./update-connection-specs.md).
