@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
-title: Authentifizierungsspezifikationen für Quellen-SDK konfigurieren
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
+title: Konfigurieren von Authentifizierungsspezifikationen für das Quellen-SDK
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
+description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Quellen-SDK vorbereiten müssen.
 hide: true
 hidefromtoc: true
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
 source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '861'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Quellspezifikation für das Quellen-SDK konfigurieren
+# Konfigurieren von Quellenspezifikationen für das Quellen-SDK
 
-Quellspezifikationen enthalten quellenspezifische Informationen, einschließlich Attributen, die sich auf die Kategorie einer Quelle, den Beta-Status und das Katalogsymbol beziehen. Sie enthalten auch nützliche Informationen wie URL-Parameter, Inhalt, Kopfzeile und Zeitplan. Quellspezifikationen beschreiben auch das Schema der Parameter, die zum Erstellen einer Quellverbindung aus einer Basisverbindung erforderlich sind. Das Schema ist erforderlich, um eine Quellverbindung zu erstellen.
+Quellenspezifikationen enthalten quellenspezifische Informationen, darunter Attribute, die sich auf die Kategorie einer Quelle, den Beta-Status und das Katalogsymbol beziehen. Sie enthalten auch hilfreiche Informationen wie URL-Parameter, Inhalte, Kopfzeile und Zeitplan. Quellenspezifikationen beschreiben außerdem das Schema der Parameter, die zum Erstellen einer Quellverbindung aus einer Basisverbindung erforderlich sind. Das Schema ist erforderlich, um eine Quellverbindung zu erstellen.
 
-Siehe [Anhang](#source-spec) ein Beispiel für eine vollständig ausgefüllte Quellspezifikation.
+Ein Beispiel für eine vollständig angegebene Quellspezifikation finden Sie im [Anhang](#source-spec).
 
 
 ```json
@@ -226,40 +226,40 @@ Siehe [Anhang](#source-spec) ein Beispiel für eine vollständig ausgefüllte Qu
 
 | Eigenschaft | Beschreibung | Beispiel |
 | --- | --- | --- |
-| `sourceSpec.attributes` | Enthält Informationen zur Quelle, die für die Benutzeroberfläche oder API spezifisch ist. |
-| `sourceSpec.attributes.uiAttributes` | Zeigt Informationen über die für die Benutzeroberfläche spezifische Quelle an. |
-| `sourceSpec.attributes.uiAttributes.isBeta` | Ein boolesches Attribut, das anzeigt, ob die Quelle mehr Feedback von Kunden benötigt, um sie zu ihrer Funktion hinzuzufügen. | <ul><li>`true`</li><li>`false`</li></ul> |
+| `sourceSpec.attributes` | Enthält Informationen zu der Quelle, die für die UI oder API spezifisch ist. |
+| `sourceSpec.attributes.uiAttributes` | Zeigt Informationen zu der UI-spezifischen Quelle an. |
+| `sourceSpec.attributes.uiAttributes.isBeta` | Ein boolesches Attribut, das anzeigt, ob die Quelle mehr Kunden-Feedback benötigt, das ihre Funktionalität erweitert. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definiert die Kategorie der Quelle. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Definiert das Symbol, das für das Rendering der Quelle in der Platform-Benutzeroberfläche verwendet wird. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Zeigt eine kurze Beschreibung der Quelle an. |
 | `sourceSpec.attributes.uiAttributes.label` | Zeigt den Titel an, der für das Rendering der Quelle in der Platform-Benutzeroberfläche verwendet werden soll. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Enthält Informationen zum URL-Ressourcenpfad, zur Methode und zu den unterstützten Abfrageparametern. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Definiert den Ressourcenpfad, aus dem die Daten abgerufen werden sollen. | `/3.0/reports/${campaignId}/email-activity` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Definiert die HTTP-Methode, die verwendet werden soll, um die Anfrage an die Ressource zum Abrufen von Daten zu senden. | `GET`, `POST` |
-| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definiert die unterstützten Abfrageparameter, mit denen die Quell-URL angehängt werden kann, wenn eine Anforderung zum Abrufen von Daten gesendet wird. **Hinweis**: Jeder vom Benutzer bereitgestellte Parameterwert muss als Platzhalter formatiert sein. Beispiel: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wird wie folgt an die Quell-URL angehängt: `/?key=value&key1=value1` |
-| `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definiert Kopfzeilen, die in der HTTP-Anfrage an die Quell-URL beim Abrufen von Daten bereitgestellt werden müssen. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.contentPath` | Definiert den Knoten, der die Liste der Elemente enthält, die in Platform aufgenommen werden müssen. Dieses Attribut sollte der gültigen JSON-Pfadsyntax entsprechen und auf ein bestimmtes Array verweisen. | Siehe [Anhang](#content-path) ein Beispiel für die Ressource, die in einem Inhaltspfad enthalten ist. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Der Pfad, der auf die Sammlungsdatensätze verweist, die in Platform erfasst werden sollen. | `$.emails` |
-| `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Mit dieser Eigenschaft können Sie bestimmte Elemente aus der im Inhaltspfad identifizierten Ressource identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Mit dieser Eigenschaft können Sie explizit die einzelnen Attribute angeben, die Sie beibehalten möchten. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Mit dieser Eigenschaft können Sie den Wert des Attributnamens überschreiben, den Sie in `contentPath`. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Mit dieser Eigenschaft können Sie zwei Arrays reduzieren und Ressourcendaten in die Platform-Ressource umwandeln. |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Der Pfad, der auf die Sammlungsdatensätze verweist, die Sie reduzieren möchten. | `$.email.activity` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Mit dieser Eigenschaft können Sie bestimmte Elemente aus der im Entitätspfad identifizierten Ressource identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Mit dieser Eigenschaft können Sie explizit die einzelnen Attribute angeben, die Sie beibehalten möchten. | `[total_items]` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Mit dieser Eigenschaft können Sie den Wert des Attributnamens überschreiben, den Sie in `explodeEntityPath`. | `activity` |
-| `sourceSpec.attributes.spec.properties.paginationParams` | Definiert die Parameter oder Felder, die bereitgestellt werden müssen, um von der aktuellen Seitenantwort des Benutzers oder beim Erstellen einer nächsten Seiten-URL einen Link zur nächsten Seite zu erhalten. |
-| `sourceSpec.attributes.spec.properties.paginationParams.type` | Zeigt den Typ des unterstützten Paginierungstyps für Ihre Quelle an. | <ul><li>`offset`: Mit diesem Paginierungstyp können Sie die Ergebnisse analysieren, indem Sie einen Index angeben, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür, wie viele Ergebnisse zurückgegeben werden.</li><li>`pointer`: Mit diesem Seitentyp können Sie eine `pointer` auf ein bestimmtes Element verweisen, das mit einer Anfrage gesendet werden muss. Die Seitennummerierung des Zeigertyps erfordert den Pfad in der Payload, der auf die nächste Seite verweist.</li></ul> |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Der Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. | `limit` oder `count` |
-| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Die Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. | `limit=10` oder `count=10` |
-| `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Der Name des Offset-Attributs. Dies ist erforderlich, wenn der Paginierungstyp auf `offset`. | `offset` |
-| `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Der Zeiger-Attributname. Dies erfordert den JSON-Pfad zum -Attribut, das auf die nächste Seite verweist. Dies ist erforderlich, wenn der Paginierungstyp auf `pointer`. | `pointer` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Definiert die HTTP-Methode, die verwendet werden soll, um die Anfrage zum Abrufen von Daten an die Ressource zu senden. | `GET`, `POST` |
+| `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definiert die unterstützten Abfrageparameter, mit denen die Quell-URL angehängt werden kann, wenn eine Anfrage zum Abrufen von Daten gesendet wird. **Hinweis**: Jeder vom Benutzer bereitgestellte Parameterwert muss als Platzhalter formatiert sein. Beispiel: `${USER_PARAMETER}`. | `"queryParams" : {"key" : "value", "key1" : "value1"}` wird wie folgt an die Quell-URL angehängt: `/?key=value&key1=value1` |
+| `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Definiert Kopfzeilen, die beim Abrufen von Daten in der HTTP-Anfrage an die Quell-URL bereitgestellt werden müssen. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definiert den Knoten, der die Liste der Elemente enthält, die in Platform aufgenommen werden müssen. Dieses Attribut sollte der gültigen JSON-Pfadsyntax entsprechen und muss auf ein bestimmtes Array verweisen. | Ein Beispiel für eine Ressource, die in einem Inhaltspfad enthalten ist, finden Sie im [Anhang](#content-path). |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Pfad, der auf die Sammlungsdatensätze verweist, die in Platform erfasst werden sollen. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Diese Eigenschaft ermöglicht es, in der im Inhaltspfad identifizierten Ressource bestimmte Elemente zu identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Diese Eigenschaft ermöglicht es, explizit die einzelnen Attribute anzugeben, die Sie beibehalten möchten. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Diese Eigenschaft ermöglicht es, den Wert des Attributnamens, den Sie in `contentPath` angegeben haben, zu überschreiben. | `email` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Diese Eigenschaft ermöglicht es, zwei Arrays zu vereinfachen und Ressourcendaten in die Platform-Ressource zu überführen. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Pfad, der auf die Sammlungsdatensätze verweist, die Sie reduzieren möchten. | `$.email.activity` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Diese Eigenschaft ermöglicht es, in der im Entitätspfad identifizierten Ressource bestimmte Elemente zu identifizieren, die von der Erfassung ausgeschlossen werden sollen. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Diese Eigenschaft ermöglicht es, explizit die einzelnen Attribute anzugeben, die Sie beibehalten möchten. | `[total_items]` |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath.overrideWrapperAttribute` | Diese Eigenschaft ermöglicht es, den in `explodeEntityPath` angegebenen Wert des Attributnamens zu überschreiben. | `activity` |
+| `sourceSpec.attributes.spec.properties.paginationParams` | Definiert die Parameter oder Felder, die bereitgestellt werden müssen, um aus der Antwort der aktuellen Seite des Benutzers oder beim Erstellen der URL für eine nächste Seite einen Link zur nächsten Seite zu erhalten. |
+| `sourceSpec.attributes.spec.properties.paginationParams.type` | Zeigt den Typ des unterstützten Paginierungstyps für Ihre Quelle an. | <ul><li>`offset`: Dieser Paginierungstyp ermöglicht es, die Ergebnisse zu analysieren, indem Sie einen Index, von dem aus das resultierende Array gestartet werden soll, und eine Begrenzung dafür angeben, wie viele Ergebnisse zurückgegeben werden.</li><li>`pointer`: Dieser Paginierungstyp ermöglicht es, mit einer `pointer`-Variablen auf ein bestimmtes Element zu verweisen, das mit einer Anfrage gesendet werden muss. Die Paginierung des Zeigertyps erfordert einen Pfad in der Payload, der auf die nächste Seite verweist.</li></ul> |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitName` | Name des Limits, mit dem die API die Anzahl der Datensätze angeben kann, die auf einer Seite abgerufen werden sollen. | `limit` oder `count` |
+| `sourceSpec.attributes.spec.properties.paginationParams.limitValue` | Anzahl der Datensätze, die auf einer Seite abgerufen werden sollen. | `limit=10` oder `count=10` |
+| `sourceSpec.attributes.spec.properties.paginationParams.offSetName` | Name des Offset-Attributs. Ist erforderlich, wenn der Paginierungstyp auf `offset` festgesetzt ist. | `offset` |
+| `sourceSpec.attributes.spec.properties.paginationParams.pointerPath` | Der Zeiger-Attributname. Dies erfordert den JSON-Pfad zum Feldnamen, der auf die nächste Seite verweist. Dies ist erforderlich, wenn der Paginierungstyp auf `pointer` eingestellt ist. | `pointer` |
 | `sourceSpec.attributes.spec.properties.scheduleParams` | Enthält Parameter, die unterstützte Planungsformate für Ihre Quelle definieren. Zeitplanparameter beinhalten `startTime` und `endTime`, mit denen Sie bestimmte Zeitintervalle für Batch-Ausführungen festlegen können. Dadurch wird sichergestellt, dass in einer vorherigen Batch-Ausführung abgerufene Datensätze nicht erneut abgerufen werden. |
-| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Definiert den Parameternamen für die Startzeit | `since_last_changed` |
+| `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamName` | Definiert den Namen des Startzeit-Parameters | `since_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamName` | Definiert den Namen des Endzeit-Parameters | `before_last_changed` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleStartParamFormat` | Definiert das unterstützte Format für `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.spec.properties.scheduleParams.scheduleEndParamFormat` | Definiert das unterstützte Format für `scheduleEndParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.spec.properties` | Definiert die vom Benutzer bereitgestellten Parameter zum Abrufen von Ressourcenwerten. | Siehe [Anhang](#user-input) für ein Beispiel für vom Benutzer eingegebene Parameter für `spec.properties`. |
+| `sourceSpec.spec.properties` | Definiert die vom Benutzer bereitgestellten Parameter zum Abrufen von Ressourcenwerten. | Im [Anhang](#user-input) finden Sie ein Beispiel für vom Benutzer eingegebene Parameter für `spec.properties`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -267,7 +267,7 @@ Siehe [Anhang](#source-spec) ein Beispiel für eine vollständig ausgefüllte Qu
 
 ### Beispiel für Inhaltspfad {#content-path}
 
-Im Folgenden finden Sie ein Beispiel für den Inhalt der `contentPath` -Eigenschaft in einer [!DNL MailChimp Campaigns] Verbindungsspezifikation.
+Das Folgende ist ein Beispiel für den Inhalt der `contentPath`-Eigenschaft in einer [!DNL MailChimp Campaigns]-Verbindungsspezifikation.
 
 ```json
 "contentPath": {
@@ -281,11 +281,11 @@ Im Folgenden finden Sie ein Beispiel für den Inhalt der `contentPath` -Eigensch
 }
 ```
 
-### `spec.properties` Beispiel für Benutzereingabe {#user-input}
+### `spec.properties`-Beispiel für Benutzereingabe {#user-input}
 
-Im Folgenden finden Sie ein Beispiel für einen vom Benutzer bereitgestellten `spec.properties` mit [!DNL MailChimp Members] Verbindungsspezifikation.
+Das Folgende ist ein Beispiel für ein vom Benutzer bereitgestelltes `spec.properties` unter Verwendung einer [!DNL MailChimp Members]-Verbindungsspezifikation.
 
-In diesem Beispiel `listId` wird als Teil von `urlParams.path`. Wenn Sie `listId` von einem Kunden aus erstellen, müssen Sie ihn auch als Teil von `spec.properties`.
+In diesem Beispiel wird `listId` als Teil von `urlParams.path` bereitgestellt. Wenn Sie `listId` von einem Kunden abrufen müssen, müssen Sie es auch als Teil von `spec.properties` definieren.
 
 
 ```json
@@ -372,4 +372,4 @@ Im Folgenden finden Sie eine abgeschlossene Quellspezifikation mit [!DNL MailChi
 
 ## Nächste Schritte
 
-Nachdem Sie die Quellspezifikationen ausgefüllt haben, können Sie mit der Konfiguration der Analysespezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Siehe das Dokument unter [Konfigurieren von Erkunden-Spezifikationen](./explorespec.md) für weitere Informationen.
+Wenn Ihre Quellspezifikationen ausgefüllt sind, können Sie mit der Konfiguration der Erkundungsspezifikationen für die Quelle fortfahren, die Sie in Platform integrieren möchten. Weitere Informationen finden Sie im Dokument zum [Konfigurieren von Erkungungsspezifikationen](./explorespec.md).
