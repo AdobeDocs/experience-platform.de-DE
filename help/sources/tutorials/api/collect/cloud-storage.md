@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Cloud-Speicher-Daten
+keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicherdaten
 solution: Experience Platform
-title: Erstellen eines Datenflusses für Cloud Storage-Quellen mithilfe der Flow Service-API
+title: Erstellen eines Datenflusses für Cloud-Speicherquellen mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Drittanbieter-Cloud-Speicher und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
+description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 67e6de74ea8f2f4868a39ec1907ee1cac335c9f0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1575'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
-# Erstellen Sie einen Datenfluss für Cloud-Speicher-Quellen mit dem [!DNL Flow Service] API
+# Erstellen eines Datenflusses für Cloud-Speicherquellen mit der [!DNL Flow Service]-API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Speicherquelle und zum Übertragen dieser Daten auf Platform mithilfe von [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Speicherquelle und zum Übertragen dieser Daten in Platform mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/) behandelt.
 
 >[!NOTE]
 >
@@ -23,36 +23,36 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Spe
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist „System of Record“ für die Position und Herkunft von Daten in Experience Platform.
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten als Batch-Dateien in Experience Platform erfassen.
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
+   - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
+   - [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): Mit der Batch-Aufnahme-API können Sie Daten in Form von Batch-Dateien in Experience Platform aufnehmen.
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Verwenden von Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
 
-## Quellverbindung erstellen {#source}
+## Erstellen einer Quellverbindung {#source}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
-Um eine Quellverbindung zu erstellen, müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
+Um eine Quellverbindung zu erstellen, müssen Sie auch einen Aufzählungswert für das Datenformat-Attribut definieren.
 
-Verwenden Sie die folgenden Enum-Werte für dateibasierte Quellen:
+Verwenden Sie die folgenden Aufzählungswerte für dateibasierte Quellen:
 
-| Datenformat | Enum-Wert |
+| Datenformat | Aufzählungswert |
 | ----------- | ---------- |
-| Getrennt | `delimited` |
+| Durch Trennzeichen getrennt | `delimited` |
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Setzen Sie für alle tabellenbasierten Quellen den Wert auf `tabular`.
+Legen Sie für alle tabellenbasierten Quellen den Wert auf `tabular` fest.
 
-- [Erstellen einer Quellverbindung mit benutzerdefinierten getrennten Dateien](#using-custom-delimited-files)
+- [Erstellen einer Quellverbindung mit Dateien mit benutzerdefinierten Trennzeichen](#using-custom-delimited-files)
 - [Erstellen einer Quellverbindung mit komprimierten Dateien](#using-compressed-files)
 
 **API-Format**
@@ -61,13 +61,13 @@ Setzen Sie für alle tabellenbasierten Quellen den Wert auf `tabular`.
 POST /sourceConnections
 ```
 
-### Erstellen einer Quellverbindung mit benutzerdefinierten getrennten Dateien {#using-custom-delimited-files}
+### Erstellen einer Quellverbindung mit Dateien mit benutzerdefinierten Trennzeichen {#using-custom-delimited-files}
 
 **Anfrage**
 
-Sie können eine durch Trennzeichen getrennte Datei mit einem benutzerdefinierten Trennzeichen aufnehmen, indem Sie eine `columnDelimiter` als Eigenschaft. Jeder einzelne Zeichenwert ist ein zulässiges Spaltentrennzeichen. Wenn kein Komma angegeben wird `(,)` wird als Standardwert verwendet.
+Sie können eine durch ein benutzerdefiniertes Trennzeichen getrennte Datei aufnehmen, indem Sie ein `columnDelimiter` als Eigenschaft angeben. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wird kein Trennzeichen angegeben, dann wird ein Komma `(,)` als Standardwert verwendet.
 
-Die folgende Beispielanfrage erstellt eine Quellverbindung für einen durch Trennzeichen getrennten Dateityp mit tabulatorgetrennten Werten.
+Die folgende Beispielanfrage erstellt eine Quellverbindung für einen Dateityp mit durch Tabulatoren getrennten Werten.
 
 ```shell
 curl -X POST \
@@ -99,14 +99,14 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `baseConnectionId` | Die eindeutige Verbindungs-ID des Cloud-Speichersystems eines Drittanbieters, auf das Sie zugreifen. |
-| `data.format` | Ein enum -Wert, der das Datenformatattribut definiert. |
-| `data.columnDelimiter` | Sie können ein beliebiges Spaltentrennzeichen für einzelne Zeichen verwenden, um flache Dateien zu sammeln. Diese Eigenschaft ist nur bei der Aufnahme von CSV- oder TSV-Dateien erforderlich. |
+| `data.format` | Ein Aufzählungswert, der das Datenformatattribut definiert. |
+| `data.columnDelimiter` | Sie können ein beliebiges einzelnes Zeichen als Spaltentrennzeichen zum Erfassen von Flatfiles verwenden. Diese Eigenschaft ist nur für die Aufnahme von CSV- oder TSV-Dateien erforderlich. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrem spezifischen Cloud-Speichersystem von Drittanbietern verknüpft ist. Siehe [Anhang](#appendix) für eine Liste der Verbindungsspezifikations-IDs. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrem spezifischen Cloud-Speichersystem eines Drittanbieters verknüpft ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -119,7 +119,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 **Anfrage**
 
-Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien erfassen, indem Sie deren `compressionType` als Eigenschaft. Die Liste der unterstützten komprimierten Dateitypen lautet:
+Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien erfassen, indem Sie deren `compressionType` als Eigenschaft angeben. Die unterstützten komprimierten Dateitypen sind unten aufgelistet:
 
 - `bzip2`
 - `gzip`
@@ -128,7 +128,7 @@ Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien er
 - `tarGzip`
 - `tar`
 
-Die folgende Beispielanfrage erstellt eine Quellverbindung für eine komprimierte, durch Trennzeichen getrennte Datei mithilfe einer `gzip` Dateityp.
+Die folgende Beispielanfrage erstellt eine Quellverbindung für eine komprimierte, durch Trennzeichen getrennte Datei mit dem Dateityp `gzip`.
 
 ```shell
 curl -X POST \
@@ -160,11 +160,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `data.properties.compressionType` | Bestimmt den komprimierten Dateityp für die Erfassung. Diese Eigenschaft ist nur erforderlich, wenn komprimierte JSON- oder durch Trennzeichen getrennte Dateien aufgenommen werden. |
+| `data.properties.compressionType` | Bestimmt den komprimierten Dateityp für die Aufnahme. Diese Eigenschaft ist nur erforderlich, wenn komprimierte JSON- oder durch Trennzeichen getrennte Dateien aufgenommen werden. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -177,21 +177,21 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Ein Ziel-XDM-Schema kann durch eine POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) erstellt werden.
 
-Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zu [Erstellen eines Schemas mithilfe der API](../../../../xdm/api/schemas.md).
+Ausführliche Anweisungen zum Erstellen eines Ziel-XDM-Schemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../../xdm/api/schemas.md).
 
-## Zieldatensatz erstellen {#target-dataset}
+## Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), wodurch die ID des Zielschemas in der Payload angegeben wird.
+Sie können einen Zieldatensatz erstellen, indem Sie eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) senden und darin die ID des Zielschemas in der Payload angeben.
 
-Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../../catalog/api/create-dataset.md).
+Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial [Erstellen eines Datensatzes mithilfe der API](../../../../catalog/api/create-dataset.md).
 
 ## Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, in dem die aufgenommenen Daten landen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, in das die aufgenommenen Daten übernommen werden. Um eine Zielverbindung zu erstellen, müssen Sie die festgelegte Verbindungsspezifikations-ID angeben, die dem Data Lake zugeordnet ist. Diese Verbindungsspezifikations-ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Mithilfe dieser Kennungen können Sie mithilfe der [!DNL Flow Service] API zum Angeben des Datensatzes, der die eingehenden Quelldaten enthält.
+Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas, eines Zieldatensatzes und der Verbindungsspezifikations-ID zum Data Lake. Mithilfe dieser Kennungen können Sie über die [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -230,14 +230,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `data.schema.id` | Die `$id` des Ziel-XDM-Schemas. |
-| `data.schema.version` | Die Version des Schemas. Dieser Wert muss festgelegt werden `application/vnd.adobe.xed-full+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. |
-| `params.dataSetId` | Die ID des Zieldatensatzes. |
+| `data.schema.id` | Die `$id` des XDM-Zielschemas. |
+| `data.schema.version` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full+json;version=1` festgelegt werden, wodurch die neueste Nebenversion des Schemas zurückgegeben wird. |
+| `params.dataSetId` | Die Kennung des Zieldatensatzes. |
 | `connectionSpec.id` | Die feste Verbindungsspezifikations-ID zum Data Lake. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`). Diese ID ist in späteren Schritten erforderlich.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`) zurück. Diese ID ist in späteren Schritten erforderlich.
 
 ```json
 {
@@ -248,13 +248,13 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört.
 
-Um einen Zuordnungssatz zu erstellen, stellen Sie eine POST-Anfrage an die `mappingSets` Endpunkt der [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) beim Bereitstellen des Ziel-XDM-Schemas `$id` und die Details der Zuordnungssätze, die Sie erstellen möchten.
+Um einen Zuordnungssatz zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `mappingSets` der [[!DNL Data Prep] -API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) und geben dabei Ihr Ziel-XDM-Schema `$id` und die Details der zu erstellenden Zuordnungssätze an.
 
 >[!TIP]
 >
->Mithilfe eines Cloud-Speicher-Quell-Connectors können Sie komplexe Datentypen wie Arrays in JSON-Dateien zuordnen.
+>Sie können komplexe Datentypen, wie z. B. Arrays in JSON-Dateien mithilfe eines Cloud-Speicher-Quell-Connectors zuordnen.
 
 **API-Format**
 
@@ -308,11 +308,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `xdmSchema` | Die ID des Ziel-XDM-Schemas. |
+| `xdmSchema` | Die ID des XDM-Zielschemas. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, einschließlich der eindeutigen Kennung (`id`). Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung aus, einschließlich ihrer eindeutigen Kennung (`id`). Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
@@ -325,7 +325,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 }
 ```
 
-## Datenflussspezifikationen abrufen {#specs}
+## Abrufen von Datenflussspezifikationen {#specs}
 
 Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, die für die Erfassung von Cloud-Speicherdaten zuständig sind.
 
@@ -347,7 +347,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden die Details der Datenflug-Spezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform zuständig ist. Die Antwort enthält die eindeutige Flussspezifikation `id` erforderlich, um einen neuen Datenfluss zu erstellen.
+Bei einer erfolgreichen Antwort werden die Details der Datenflussspezifikation zurückgegeben, die für die Übermittlung von Daten aus Ihrer Quelle an Platform sorgt. Die Antwort enthält die eindeutige Flussspezifikation `id`, die erforderlich ist, um einen neuen Datenfluss zu erstellen.
 
 ```json
 {
@@ -474,26 +474,26 @@ Bei einer erfolgreichen Antwort werden die Details der Datenflug-Spezifikation z
 }
 ```
 
-## Datenfluss erstellen
+## Erstellen eines Datenflusses
 
-Der letzte Schritt bei der Erfassung von Cloud-Speicherdaten besteht darin, einen Datenfluss zu erstellen. Jetzt sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt bei der Erfassung von Cloud-Speicherdaten besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 - [Quellverbindungs-ID](#source)
-- [Target-Verbindungs-ID](#target)
-- [Mapping-ID](#mapping)
-- [Dataflow-Spezifikations-ID](#specs)
+- [Zielverbindungs-ID](#target)
+- [Zuordnungs-ID](#mapping)
+- [Datenflussspezifikations-ID](#specs)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
 >[!NOTE]
 >
->Bei der Batch-Erfassung wählt jeder darauf folgende Datenfluss Dateien aus, die basierend auf ihren **letzte Änderung** Zeitstempel. Das bedeutet, dass Batch-Datenflüsse ausgewählte Dateien aus der Quelle verwenden, die neu sind oder seit der letzten Ausführung des Datenflusses geändert wurden.
+>Bei der Batch-Aufnahme wählt jeder nachfolgende Datenfluss die aufzunehmenden Dateien aus Ihrer Quelle anhand ihres **zuletzt geänderten** Zeitstempels aus. Das bedeutet, dass Batch-Datenflüsse Dateien aus der Quelle auswählen, die neu sind oder seit der letzten Ausführung des Datenflusses geändert wurden.
 
-Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day`oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Aufnahmen an und bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine dieser fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinanderfolgenden Aufnahmen an. Bei der Erstellung einer einmaligen Aufnahme ist kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
 
 >[!IMPORTANT]
 >
->Es wird dringend empfohlen, Ihren Datenfluss für die einmalige Erfassung zu planen, wenn Sie die [FTP-Connector](../../../connectors/cloud-storage/ftp.md).
+>Es wird dringend empfohlen, Ihren Datenfluss für eine einmalige Aufnahme zu planen, wenn Sie den [FTP-Connector](../../../connectors/cloud-storage/ftp.md) verwenden.
 
 **API-Format**
 
@@ -542,17 +542,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `flowSpec.id` | Die [Flussspezifikations-ID](#specs) im vorherigen Schritt abgerufen werden. |
-| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) in einem früheren Schritt abgerufen. |
-| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection) in einem früheren Schritt abgerufen. |
-| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) in einem früheren Schritt abgerufen. |
+| `flowSpec.id` | Die [Flussspezifikations-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die [Quellverbindungs-ID](#source), die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt abgerufen wurde. |
+| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
 | `scheduleParams.startTime` | Die Startzeit für den Datenfluss in Epochenzeit. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` und sollte größer oder gleich sein als `15` für andere Frequenzwerte. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Frequenz auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses.
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses angegeben.
 
 ```json
 {
@@ -563,18 +563,18 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses.
 
 ## Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die erfassten Daten überwachen, um Informationen über die Durchsatzausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial zu [Überwachen von Datenflüssen in der API](../monitor.md)
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen. Weitere Informationen zum Überwachen von Datenflüssen finden Sie im Tutorial [Überwachen von Datenflüssen in der API](../monitor.md)
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus Ihrem Cloud-Speicher planmäßig zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Daten aus Ihrem Cloud-Speicherplatz planmäßig zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-- [Data Science Workspace – Übersicht](../../../../data-science-workspace/home.md)
+- [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)
 
 ## Anhang {#appendix}
 
-Im folgenden Abschnitt finden Sie die verschiedenen Connectoren für Cloud-Speicher und deren Verbindungsspezifikationen.
+Im folgenden Abschnitt finden Sie die verschiedenen Quell-Connectoren für Cloud-Speicher und deren Verbindungsspezifikationen.
 
 ### Verbindungsspezifikation
 
