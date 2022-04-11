@@ -1,11 +1,11 @@
 ---
-description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts "/authoring/testing/template/render"ausführen können, um exportierte Daten für Ihr Ziel basierend auf Ihrer Nachrichtenumwandlungsvorlage zu rendern.
+description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/testing/template/render“ durchführen können, um exportierte Daten für Ihr Ziel basierend auf Ihrer Nachrichtenumwandlungsvorlage zu rendern.
 title: API-Vorgänge für Rendervorlagen
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: b337d65bcdfbb65da1b751645ddc649d30440dc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '806'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -15,21 +15,21 @@ ht-degree: 1%
 >
 >**API-Endpunkt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/testing/template/render` API-Endpunkt zum Rendern exportierter Profile, die dem erwarteten Format Ihres Ziels entsprechen, basierend auf Ihrer [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating). Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Vorlage erstellen](./create-template.md).
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts `/authoring/testing/template/render` durchführen können, um basierend auf Ihrer [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) exportierte Profile zu rendern, die dem erwarteten Format Ihres Ziels entsprechen. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Erstellen einer Vorlage](./create-template.md).
 
-## Erste Schritte mit API-Vorgängen für Rendervorlagen {#get-started}
+## Erste Schritte mit API-Vorgängen für Render-Vorlagen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Berechtigung zur Zielerstellung und der erforderlichen Kopfzeilen.
 
 ## Rendern exportierter Profile basierend auf der Vorlage für die Nachrichtenumwandlung {#render-exported-data}
 
-Sie können exportierte Profile rendern, indem Sie eine POST-Anfrage an die `authoring/testing/template/render` Endpunkt und Angabe der Ziel-ID der Zielkonfiguration und der Vorlage, die Sie mit der [Beispiel-Vorlagen-API-Endpunkt](./sample-template-api.md).
+Sie können exportierte Profile rendern, indem Sie eine POST-Anfrage an den Endpunkt `authoring/testing/template/render` stellen und dabei die Ziel-ID der Zielkonfiguration und die Vorlage angeben, die Sie mit dem [Beispiel-Vorlagen-API-Endpunkt](./sample-template-api.md) erstellt haben.
 
 Sie können eine einfache Vorlage verwenden, die Ihre Rohprofile exportiert, ohne Konvertierungen vorzunehmen, und dann zu einer komplexeren Vorlage wechseln, die Umwandlungen auf Profile anwendet. Die Syntax für die einfache Vorlage lautet: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId` , die einer Zielkonfiguration entspricht, die mithilfe der `/destinations` -Endpunkt. Siehe Abschnitt [API-Vorgänge für die Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Weitere Informationen finden Sie unter [API-Vorgänge für die Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
 
 
 **API-Format**
@@ -39,32 +39,32 @@ Sie können eine einfache Vorlage verwenden, die Ihre Rohprofile exportiert, ohn
 POST authoring/testing/template/render
 ```
 
-| Anforderungsparameter | Beschreibung |
+| Anfrageparameter | Beschreibung |
 | -------- | ----------- |
 | `destinationId` | Die ID der Zielkonfiguration, für die Sie exportierte Profile rendern. |
-| `template` | Die mit Zeichen versehene Version der Vorlage, basierend auf der Sie exportierte Profile rendern. |
-| `profiles` | *Optional*. Sie können Profile zum Anfrageinhalt hinzufügen. Wenn Sie keine Profile hinzufügen, erstellt Experience Platform automatisch Profile und fügt sie der Anforderung hinzu. <br> Wenn Sie Profile zum Hauptteil des Aufrufs hinzufügen möchten, können Sie mithilfe der [API zur Profilerstellung](./sample-profile-generation-api.md). |
+| `template` | Die mit Escape-Zeichen versehene Version der Vorlage, basierend auf der Sie exportierte Profile rendern. |
+| `profiles` | *Optional*. Sie können Profile zum Anfrageinhalt hinzufügen. Wenn Sie keine Profile hinzufügen, erstellt Experience Platform automatisch Profile und fügt sie der Anfrage hinzu. <br> Wenn Sie Profile zum Hauptteil des Aufrufs hinzufügen möchten, können Sie einige mithilfe der [API zur Erzeugung von Musterprofilen](./sample-profile-generation-api.md) erzeugen. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Beachten Sie, dass die vom API-Endpunkt für Rendervorlagen zurückgegebene Antwort je nach Ziel-Aggregationsrichtlinie unterschiedlich ist. Wenn Ihr Ziel über eine konfigurierbare Aggregationsrichtlinie verfügt, wird der Aggregationsschlüssel, der bestimmt, wie Profile aggregiert werden, auch in der Antwort zurückgegeben. Mehr dazu [Aggregationsrichtlinien](./destination-configuration.md#aggregation) im Zielkonfigurationsdokument.
+Beachten Sie, dass die vom API-Endpunkt für Render-Vorlagen zurückgegebene Antwort je nach Ziel-Aggregationsrichtlinie unterschiedlich ist. Wenn Ihr Ziel über eine konfigurierbare Aggregationsrichtlinie verfügt, wird der Aggregationsschlüssel, der bestimmt, wie Profile aggregiert werden, auch in der Antwort zurückgegeben. Weitere Informationen über [Aggregationsrichtlinien](./destination-configuration.md#aggregation) finden Sie im Dokument zur Zielkonfiguration.
 
 | Antwortparameter | Beschreibung |
 | -------- | ----------- |
-| `aggregationKey` | Stellt die Richtlinie dar, nach der Profile in Exporten zu Ihrem Ziel aggregiert werden. Dieser Parameter ist optional und nur vorhanden, wenn die Ziel-Aggregationsrichtlinie auf `CONFIGURABLE_AGGREGATION`. |
+| `aggregationKey` | Stellt die Richtlinie dar, nach der Profile in Exporten zu Ihrem Ziel aggregiert werden. Dieser Parameter ist optional und nur vorhanden, wenn die Aggregationsrichtlinie für das Ziel auf `CONFIGURABLE_AGGREGATION` gesetzt ist. |
 | `profiles` | Zeigt die in der Anfrage angegebenen Profile oder die automatisch generierten Profile an, wenn in der Anfrage keine Profile angegeben wurden. |
-| `output` | Renderprofil(e) als Escapezeichenfolge basierend auf der bereitgestellten Vorlage für die Nachrichtenumwandlung |
+| `output` | Das bzw. die gerenderte(n) Profil(e) als Escape-Zeichenfolge, basierend auf der bereitgestellten Nachrichtenumwandlungsvorlage |
 
 Die folgenden Abschnitte enthalten detaillierte Anforderungen und Antworten für beide oben beschriebenen Fälle.
 
-* [Aggregation des besten Aufwands und ein im Anfrageinhalt enthaltenes Profil](#best-effort)
+* [Aggregation nach bestem Bemühen und ein im Anfrageinhalt enthaltenes Profil](#best-effort)
 * [Konfigurierbare Aggregation und Profile im Anfrageinhalt](#configurable-aggregation)
 
-### Rendern exportierter Profile mit der besten Anstrengung und einem einzelnen Profil, das im Anfrageinhalt enthalten ist {#best-effort}
+### Rendern exportierter Profile nach bestem Bemühen und ein einzelnes Profil, das im Anfrageinhalt enthalten ist {#best-effort}
 
 **Anfrage**
 
-Die folgende Anfrage rendert ein exportiertes Profil, das dem von Ihrem Ziel erwarteten Format entspricht. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit der besten Aufwandsaggregation und ein Beispielprofil ist im Hauptteil der Anfrage enthalten.
+Die folgende Anfrage rendert ein exportiertes Profil, das dem von Ihrem Ziel erwarteten Format entspricht. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit der Aggregation nach bestem Bemühen, und ein Beispielprofil ist im Hauptteil der Anfrage enthalten.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -126,7 +126,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Antwort**
 
 Die Antwort gibt das Ergebnis des Renderns der Vorlage oder etwaige Fehler zurück.
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den exportierten Daten zurück. Suchen Sie das exportierte Profil im `output` als Escapezeichenfolge bezeichnet.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den exportierten Daten zurückgegeben. Das exportierte Profil finden Sie im Parameter `output` in Form einer Escape-Zeichenfolge.
 Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibungen der aufgetretenen Fehler zurückgegeben.
 
 ```json
@@ -181,12 +181,12 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 }    
 ```
 
-### Exportierte Profile mit konfigurierbarer Aggregation und im Anfrageinhalt enthaltenen Profilen rendern {#configurable-aggregation}
+### Rendern von exportierten Profilen mit konfigurierbarer Aggregation und im Anfragekörper enthaltenen Profilen {#configurable-aggregation}
 
 **Anfrage**
 
 
-Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jedes drei Segmentqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [Beispielprofilgenerierungs-API](./sample-profile-generation-api.md).
+Die folgende Anfrage rendert mehrere exportierte Profile, die dem von Ihrem Ziel erwarteten Format entsprechen. In diesem Beispiel entspricht die Ziel-ID einer Zielkonfiguration mit konfigurierbarer Aggregation. Im Text der Anfrage sind zwei Profile enthalten, von denen jedes drei Segmentqualifikationen und fünf Identitäten aufweist. Sie können Profile generieren, die bei dem Aufruf gesendet werden, indem Sie die [API zur Erzeugung von Musterprofilen](./sample-profile-generation-api.md) verwenden.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/authoring/testing/template/render' \
@@ -307,7 +307,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 **Antwort**
 
 Die Antwort gibt das Ergebnis des Renderns der Vorlage oder etwaige Fehler zurück.
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den exportierten Daten zurück. Beachten Sie in der Antwort, wie die Profile basierend auf der Segmentzugehörigkeit und den Identitäten aggregiert werden. Suchen Sie die exportierten Profile in der `output` als Escapezeichenfolge bezeichnet.
+Bei einer erfolgreichen Antwort wird der HTTP-Status 200 mit Details zu den exportierten Daten zurückgegeben. Beachten Sie in der Antwort, wie die Profile basierend auf der Segmentzugehörigkeit und den Identitäten aggregiert werden. Die exportierten Profile finden Sie im Parameter `output` in Form einer Escape-Zeichenfolge.
 Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibungen der aufgetretenen Fehler zurückgegeben.
 
 ```json
@@ -1066,8 +1066,8 @@ Bei einer fehlerhaften Antwort wird der HTTP-Status 400 zusammen mit Beschreibun
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
 
 ## Nächste Schritte {#next-steps}
 
-Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit der Umwandlungsvorlage der Nachricht exportierte Profile generieren können, die dem erwarteten Datenformat Ihres Ziels entsprechen. Lesen [Verwendung von Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md) um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie Sie mit der Umwandlungsvorlage der Nachricht exportierte Profile generieren können, die dem erwarteten Datenformat Ihres Ziels entsprechen. Lesen Sie [Verwendung des Destination SDK zum Konfigurieren Ihres Ziels](./configure-destination-instructions.md), um zu verstehen, wo dieser Schritt in den Prozess der Konfiguration Ihres Ziels passt.
