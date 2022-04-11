@@ -1,56 +1,56 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Verbindung zu Batch-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren
+title: Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-API
 description: Schrittweise Anleitungen zur Verwendung der Flow Service-API zum Erstellen eines Batch-Cloud-Speichers oder E-Mail-Marketing-Ziels in Experience Platform und zum Aktivieren von Daten
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3083'
-ht-degree: 21%
+ht-degree: 100%
 
 ---
 
-# Verbindung zu Batch-Zielen herstellen und Daten mithilfe der Flow Service-API aktivieren
+# Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-API
 
-In diesem Tutorial erfahren Sie, wie Sie mit der Flow Service-API einen Batch erstellen [Cloud-Speicher](../catalog/cloud-storage/overview.md) oder [E-Mail-Marketing-Ziel](../catalog/email-marketing/overview.md)erstellen Sie einen Datenfluss zu Ihrem neu erstellten Ziel und exportieren Sie Daten über CSV-Dateien an Ihr neu erstelltes Ziel.
+In diesem Tutorial erfahren Sie, wie Sie die Flow Service-API verwenden, um per Batch ein [Cloud-Speicher-Ziel](../catalog/cloud-storage/overview.md) oder ein [E-Mail-Marketing-Ziel](../catalog/email-marketing/overview.md) zu erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel zu erstellen und Daten über CSV-Dateien zu Ihrem neu erstellten Ziel zu exportieren.
 
-In diesem Tutorial wird die [!DNL Adobe Campaign] Ziel in allen Beispielen, aber die Schritte sind für alle Batch-Cloud-Speicher- und E-Mail-Marketing-Ziele identisch.
+In diesem Tutorial wird für alle Beispiele das Ziel [!DNL Adobe Campaign] verwendet, die Schritte sind aber für alle Batch-Cloud-Speicher-Ziele und E-Mail-Marketing-Ziele identisch.
 
 ![Übersicht – Schritte zum Erstellen eines Ziels und Aktivieren von Segmenten](../assets/api/email-marketing/overview.png)
 
-Wenn Sie die Platform-Benutzeroberfläche bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen unter [Ziel verbinden](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../ui/activate-batch-profile-destinations.md) Tutorials.
+Wenn Sie die Platform-Benutzeroberfläche bevorzugen, um eine Verbindung zu einem Ziel herzustellen und Daten zu aktivieren, finden Sie weitere Informationen in den Tutorials [Verbinden eines Ziels](../ui/connect-destination.md) und [Aktivieren von Zielgruppendaten für Batch-Profilexportziele](../ui/activate-batch-profile-destinations.md).
 
 ## Erste Schritte {#get-started}
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] von [!DNL Real-time Customer Profile] Daten.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen in [!DNL Adobe Experience Platform] mit Ihren [!DNL Real-time Customer Profile]-Daten.
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Daten für Batch-Ziele in Platform zu aktivieren.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie kennen sollten, um Daten für Batch-Ziele in Platform zu aktivieren.
 
-### Erforderliche Anmeldedaten sammeln {#gather-required-credentials}
+### Sammeln erforderlicher Anmeldeinformationen {#gather-required-credentials}
 
-Um die Schritte in diesem Tutorial abzuschließen, sollten Sie je nach Zieltyp, mit dem Sie Segmente verbinden und aktivieren, über die folgenden Anmeldeinformationen verfügen.
+Um die Schritte in diesem Tutorial abzuschließen, benötigen Sie die folgenden Anmeldeinformationen, je nach Art der Ziele, mit denen Sie Segmente verbinden und aktivieren möchten.
 
-* Für [!DNL Amazon S3] Verbindungen: `accessId`, `secretKey`
-* Für [!DNL Amazon S3] Verbindungen zu [!DNL Adobe Campaign]: `accessId`, `secretKey`
-* Bei SFTP-Verbindungen: `domain`, `port`, `username`, `password` oder `sshKey` (je nach Verbindungsmethode zum FTP-Speicherort)
-* Für [!DNL Azure Blob] Verbindungen: `connectionString`
+* Für [!DNL Amazon S3]-Verbindungen: `accessId`, `secretKey`
+* Für [!DNL Amazon S3]-Verbindungen zu [!DNL Adobe Campaign]: `accessId`, `secretKey`
+* Für SFTP-Verbindungen: `domain`, `port`, `username`, `password` oder `sshKey` (abhängig von der Verbindungsmethode zum FTP-Speicherort)
+* Für [!DNL Azure Blob]-Verbindungen: `connectionString`
 
 >[!NOTE]
 >
->Die Anmeldeinformationen `accessId`, `secretKey` für [!DNL Amazon S3] Verbindungen und `accessId`, `secretKey` für [!DNL Amazon S3] Verbindungen zu [!DNL Adobe Campaign] sind identisch.
+>Die Anmeldeinformationen `accessId`, `secretKey` für [!DNL Amazon S3]-Verbindungen und `accessId`, `secretKey` für [!DNL Amazon S3]-Verbindungen zu [!DNL Adobe Campaign] sind identisch.
 
 ### Lesen von Beispiel-API-Aufrufen {#reading-sample-api-calls}
 
 In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md#how-do-i-format-an-api-request) im Handbuch zur Fehlerbehebung für [!DNL Experience Platform]
 
-### Werte für erforderliche und optionale Kopfzeilen sammeln {#gather-values-headers}
+### Sammeln der Werte für erforderliche und optionale Kopfzeilen {#gather-values-headers}
 
 Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
@@ -58,7 +58,7 @@ Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierung
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-Ressourcen in [!DNL Experience Platform] kann in bestimmte virtuelle Sandboxes isoliert werden. In Anforderungen an [!DNL Platform] APIs können Sie den Namen und die Kennung der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
+Ressourcen in [!DNL Experience Platform] lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an [!DNL Platform]-APIs können Sie den Namen und die ID der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -72,9 +72,9 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ### API-Referenzdokumentation {#api-reference-documentation}
 
-Die zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Siehe Abschnitt [Flussdienst-API-Dokumentation zur Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Es wird empfohlen, dieses Tutorial und die API-Referenzdokumentation parallel zu verwenden.
+Eine zugehörige Referenzdokumentation für alle API-Vorgänge finden Sie in diesem Tutorial. Weitere Informationen finden Sie in der [Flow Service-API-Dokumentation zu Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). Wir empfehlen, dass Sie dieses Tutorial und die API-Referenzdokumentation parallel verwenden.
 
-## Liste der verfügbaren Ziele abrufen {#get-the-list-of-available-destinations}
+## Abrufen der Liste der verfügbaren Ziele {#get-the-list-of-available-destinations}
 
 ![Übersicht über die Zielschritte – Schritt 1](../assets/api/batch-destination/step1.png)
 
@@ -100,7 +100,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie beispielsweise eine Verbindung herstellen und Segmente für bereitstellen möchten [!DNL Adobe Campaign], suchen Sie in der Antwort nach dem folgenden Snippet:
+Eine erfolgreiche Antwort enthält eine Liste der verfügbaren Ziele und ihre eindeutigen Kennungen (`id`). Notieren Sie sich den Wert des Ziels, das Sie verwenden möchten, da Sie ihn in weiteren Schritten benötigen werden. Wenn Sie z. B. Segmente mit [!DNL Adobe Campaign] verbinden und bereitstellen möchten, suchen Sie in der Antwort nach folgendem Code-Ausschnitt:
 
 ```json
 {
@@ -125,16 +125,16 @@ Die nachstehende Tabelle enthält die Verbindungsspezifikations-IDs für häufig
 
 {style=&quot;table-layout:auto&quot;}
 
-## Verbinden Sie Ihre [!DNL Experience Platform] data {#connect-to-your-experience-platform-data}
+## Verbinden mit Ihren [!DNL Experience Platform]-Daten {#connect-to-your-experience-platform-data}
 
 ![Übersicht über die Zielschritte – Schritt 2](../assets/api/batch-destination/step2.png)
 
-Als Nächstes müssen Sie eine Verbindung zu Ihrem [!DNL Experience Platform] Daten, damit Sie Profildaten exportieren und in Ihrem bevorzugten Ziel aktivieren können. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
+Als Nächstes müssen Sie eine Verbindung zu Ihren [!DNL Experience Platform]-Daten herstellen, um Profildaten exportieren und in Ihrem bevorzugten Ziel aktivieren zu können. Dies umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
 
-1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf Ihre Daten in [!DNL Experience Platform], indem Sie eine Basisverbindung einrichten.
-2. Führen Sie dann mithilfe der Basis-Verbindungs-ID einen weiteren Aufruf durch, bei dem Sie eine *Quellverbindung*, wodurch die Verbindung zu Ihrer [!DNL Experience Platform] Daten.
+1. Sie müssen zunächst einen Aufruf ausführen, um den Zugriff auf Ihre Daten in [!DNL Experience Platform] zu autorisieren, indem Sie eine Basisverbindung einrichten.
+2. Führen Sie dann unter Verwendung der Basisverbindungs-ID einen weiteren Aufruf durch, in dem Sie eine *Quellverbindung* erstellen, die die Verbindung zu Ihren [!DNL Experience Platform]-Daten herstellt.
 
-### Zugriff auf Ihre Daten zulassen in [!DNL Experience Platform]
+### Autorisieren des Zugriffs auf Ihre Daten in [!DNL Experience Platform]
 
 **API-Format**
 
@@ -163,9 +163,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `name` | Geben Sie einen Namen für die Basisverbindung zur Experience Platform an [!DNL Profile Store]. |
+| `name` | Geben Sie einen Namen für die Basisverbindung zum [!DNL Profile Store] von Experience Platform an. |
 | `description` | Optional können Sie eine Beschreibung für die Basisverbindung angeben. |
-| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für die [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für den [Profile Store von Experience Platform](/help/profile/home.md#profile-data-store) – `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -179,7 +179,7 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 }
 ```
 
-### Verbinden Sie Ihre [!DNL Experience Platform] data {#connect-to-platform-data}
+### Verbinden mit Ihren [!DNL Experience Platform]-Daten {#connect-to-platform-data}
 
 **API-Format**
 
@@ -214,17 +214,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `name` | Geben Sie einen Namen für die Quellverbindung zur Experience Platform an [!DNL Profile Store]. |
+| `name` | Geben Sie einen Namen für die Quellverbindung zum [!DNL Profile Store] von Experience Platform an. |
 | `description` | Optional können Sie eine Beschreibung für die Quellverbindung angeben. |
-| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für die [Experience Platform-Profilspeicher](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
-| `baseConnectionId` | Verwenden Sie die Kennung der Basisverbindung, die Sie im vorherigen Schritt erhalten haben. |
+| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für den [Profile Store von Experience Platform](/help/profile/home.md#profile-data-store) – `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `baseConnectionId` | Verwenden Sie die Basisverbindungs-ID, die Sie im vorherigen Schritt erhalten haben. |
 | `data.format` | `CSV` ist derzeit das einzige unterstützte Dateiexportformat. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Quellverbindung zu [!DNL Profile Store]. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihrem [!DNL Experience Platform] Daten. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
+Bei einer erfolgreichen Antwort wird der eindeutige Bezeichner (`id`) für die neu erstellte Quellverbindung zum [!DNL Profile Store] zurückgegeben. Dadurch wird bestätigt, dass Sie erfolgreich eine Verbindung zu Ihren [!DNL Experience Platform]-Daten hergestellt haben. Notieren Sie sich diesen Wert, da Sie ihn in einem späteren Schritt benötigen werden.
 
 ```json
 {
@@ -232,16 +232,16 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstel
 }
 ```
 
-## Verbindung zum Batch-Ziel herstellen {#connect-to-batch-destination}
+## Herstellen einer Verbindung zum Batch-Ziel {#connect-to-batch-destination}
 
 ![Übersicht über die Zielschritte – Schritt 3](../assets/api/batch-destination/step3.png)
 
-In diesem Schritt richten Sie eine Verbindung zu Ihrem gewünschten Batch-Cloud-Speicher oder E-Mail-Marketing-Ziel ein. Das umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
+In diesem Schritt richten Sie eine Verbindung zu Ihrem gewünschten Batch-Cloud-Speicher- oder E-Mail-Marketing-Ziel ein. Dies umfasst zwei Unterschritte, die nachfolgend beschrieben werden.
 
-1. Zunächst müssen Sie einen Aufruf ausführen, um den Zugriff auf die Zielplattform zu autorisieren, indem Sie eine Basisverbindung einrichten.
-2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf durch, in dem Sie eine *Zielverbindung*, der den Speicherort in Ihrem Speicherkonto angibt, an dem die exportierten Datendateien bereitgestellt werden, sowie das Format der zu exportierenden Daten.
+1. Sie müssen zunächst einen Aufruf ausführen, um den Zugriff auf die Zielplattform zu autorisieren, indem Sie eine Basisverbindung einrichten.
+2. Mithilfe der Kennung der Basisverbindung führen Sie dann einen weiteren Aufruf aus, mit dem Sie eine *Zielverbindung erstellen*. In dem Aufruf sind der Ort in Ihrem Speicherkonto, an dem die exportierten Datendateien bereitgestellt werden, sowie das Format der zu exportierenden Daten angegeben.
 
-### Zugriff auf das Batch-Ziel zulassen {#authorize-access-to-batch-destination}
+### Autorisieren des Zugriffs auf das Batch-Ziel {#authorize-access-to-batch-destination}
 
 **API-Format**
 
@@ -251,7 +251,7 @@ POST /connections
 
 **Anfrage**
 
-Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Adobe Campaign] Ziele. Abhängig vom Speicherort, an den Sie Dateien exportieren möchten ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), halten Sie die entsprechenden `auth` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Adobe Campaign]-Zielen her. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten ([!DNL Amazon S3], SFTP, [!DNL Azure Blob]), die entsprechende `auth`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -303,9 +303,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Siehe die folgenden Beispielanfragen zum Herstellen einer Verbindung zu anderen unterstützten Batch-Cloud-Speicher- und E-Mail-Marketing-Zielen.
 
-+++ Beispielanfrage zum Herstellen einer Verbindung [!DNL Amazon S3] Ziele
++++ Beispielanfrage zum Herstellen einer Verbindung zu [!DNL Amazon S3]-Zielen
 
-Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Amazon S3] Ziele.
+Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Amazon S3]-Zielen her.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -333,9 +333,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Herstellen einer Verbindung [!DNL Azure Blob] Ziele
++++ Beispielanfrage zum Herstellen einer Verbindung zu [!DNL Azure Blob]-Zielen
 
-Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Azure Blob] Ziele.
+Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Azure Blob]-Zielen her.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -362,9 +362,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Herstellen einer Verbindung [!DNL Oracle Eloqua] Ziele
++++ Beispielanfrage zum Herstellen einer Verbindung zu [!DNL Oracle Eloqua]-Zielen
 
-Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Oracle Eloqua] Ziele. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `auth` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Oracle Eloqua]-Zielen her. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `auth`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -403,9 +403,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Herstellen einer Verbindung [!DNL Oracle Responsys] Ziele
++++ Beispielanfrage zum Herstellen einer Verbindung zu [!DNL Oracle Responsys]-Zielen
 
-Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Oracle Responsys] Ziele. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `auth` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Oracle Responsys]-Zielen her. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `auth`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -444,9 +444,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Herstellen einer Verbindung [!DNL Salesforce Marketing Cloud] Ziele
++++ Beispielanfrage zum Herstellen einer Verbindung zu [!DNL Salesforce Marketing Cloud]-Zielen
 
-Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Salesforce Marketing Cloud] Ziele. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `auth` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Basisverbindung zu [!DNL Salesforce Marketing Cloud]-Zielen her. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `auth`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -485,7 +485,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanforderung für die Verbindung mit SFTP mit Passwortzielen
++++ Beispielanfrage für die Verbindung mit SFTP mit Passwortzielen
 
 Die nachstehende Anfrage stellt eine Basisverbindung zu SFTP-Zielen her.
 
@@ -520,9 +520,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Geben Sie einen Namen für die Basisverbindung zum Batch-Ziel an. |
 | `description` | Optional können Sie eine Beschreibung für die Basisverbindung angeben. |
-| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für Ihr gewünschtes Batch-Ziel. Sie haben diese ID im Schritt erhalten. [Liste der verfügbaren Ziele abrufen](#get-the-list-of-available-destinations). |
-| `auth.specname` | Gibt das Authentifizierungsformat für das Ziel an. Um den specName für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Endpunkt &quot;Verbindungsanforderungen&quot;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), um die Verbindungsspezifikation Ihres gewünschten Ziels anzugeben. Suchen Sie nach dem Parameter . `authSpec.name` in der Antwort. <br> Bei Adobe Campaign-Zielen können Sie beispielsweise eine der folgenden Optionen verwenden: `S3`, `SFTP with Password`oder `SFTP with SSH Key`. |
-| `params` | Je nach Ziel, mit dem Sie eine Verbindung herstellen, müssen Sie unterschiedliche erforderliche Authentifizierungsparameter angeben. Bei Verbindungen des Typs Amazon S3 müssen Sie Ihre Zugriffskennung und den geheimen Schlüssel für Ihren Speicherort im Amazon S3-Speicher angeben. <br> Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Endpunkt &quot;Verbindungsanforderungen&quot;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), um die Verbindungsspezifikation Ihres gewünschten Ziels anzugeben. Suchen Sie nach dem Parameter . `authSpec.spec.required` in der Antwort. |
+| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für Ihr gewünschtes Batch-Ziel. Sie haben diese ID im Schritt [Abrufen der Liste der verfügbaren Ziele](#get-the-list-of-available-destinations) erhalten. |
+| `auth.specname` | Gibt das Authentifizierungsformat für das Ziel an. Um den specName für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.name`. <br> Bei Adobe Campaign-Zielen können Sie beispielsweise eine der folgenden Optionen verwenden: `S3`, `SFTP with Password` oder `SFTP with SSH Key`. |
+| `params` | Je nach Ziel, mit dem Sie eine Verbindung herstellen, müssen Sie unterschiedliche erforderliche Authentifizierungsparameter angeben. Bei Verbindungen des Typs Amazon S3 müssen Sie Ihre Zugriffs-ID und den geheimen Schlüssel für Ihren Speicherort im Amazon S3-Speicher angeben. <br> Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `authSpec.spec.required`. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -538,13 +538,13 @@ Eine erfolgreiche Antwort enthält die eindeutige Kennung der Basisverbindung (`
 
 ### Speicherort und Datenformat angeben {#specify-storage-location-data-format}
 
-[!DNL Adobe Experience Platform] Exportiert Daten für Batch-E-Mail-Marketing- und Cloud-Speicher-Ziele in Form von [!DNL CSV] Dateien. In diesem Schritt können Sie den Pfad in Ihrem Speicherort ermitteln, an dem die Dateien exportiert werden.
+[!DNL Adobe Experience Platform] exportiert Daten für Batch-E-Mail-Marketing- und Cloud-Speicher-Ziele in Form von [!DNL CSV]-Dateien. In diesem Schritt können Sie den Pfad in Ihrem Speicherort ermitteln, an dem die Dateien exportiert werden.
 
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] teilt die Exportdateien automatisch mit 5 Millionen Datensätzen (Zeilen) pro Datei auf. Jede Zeile stellt ein Profil dar.
 >
->Dateinamen mit Aufspaltung werden mit einer Zahl angehängt, die angibt, dass die Datei Teil eines größeren Exports ist. Dies zeigt an: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+>Bei aufgeteilten Dateien wird eine Nummer an den Namen angehängt, die anzeigt, dass die Datei Teil eines größeren Exports ist, z. B. `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API-Format**
 
@@ -554,7 +554,7 @@ POST /targetConnections
 
 **Anfrage**
 
-Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Adobe Campaign] Ziele, um zu bestimmen, wo die exportierten Dateien in Ihrem Speicherort landen. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `params` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Adobe Campaign]-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `params`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -599,9 +599,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Siehe die folgenden Beispielanfragen zum Einrichten eines Speicherorts für andere unterstützte Batch-Cloud-Speicher- und E-Mail-Marketing-Ziele.
 
-+++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Amazon S3] Ziele
++++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Amazon S3]-Ziele
 
-Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Amazon S3] Ziele, um zu bestimmen, wo die exportierten Dateien in Ihrem Speicherort landen.
+Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Amazon S3]-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -635,9 +635,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Azure Blob] Ziele
++++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Azure Blob]-Ziele
 
-Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Azure Blob] Ziele, um zu bestimmen, wo die exportierten Dateien in Ihrem Speicherort landen.
+Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Azure Blob]-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -671,9 +671,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Oracle Eloqua] Ziele
++++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Oracle Eloqua]-Ziele
 
-Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Oracle Eloqua] Ziele, um zu bestimmen, wo die exportierten Dateien in Ihrem Speicherort landen. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `params` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Oracle Eloqua]-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `params`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -712,9 +712,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Oracle Responsys] Ziele
++++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Oracle Responsys]-Ziele
 
-Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Oracle Responsys] Ziele, um zu bestimmen, wo die exportierten Dateien in Ihrem Speicherort landen. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `params` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Oracle Responsys]-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `params`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -753,9 +753,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Salesforce Marketing Cloud] Ziele
++++ Beispielanfrage zum Einrichten eines Speicherorts für [!DNL Salesforce Marketing Cloud]-Ziele
 
-Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Salesforce Marketing Cloud] Ziele, um zu bestimmen, wo die exportierten Dateien in Ihrem Speicherort landen. Behalten Sie je nach Speicherort, in den Sie Dateien exportieren möchten, die entsprechenden `params` die anderen anzugeben und zu löschen.
+Die nachstehende Anfrage stellt eine Zielverbindung zu [!DNL Salesforce Marketing Cloud]-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen. Behalten Sie je nach Speicherort, an den Sie die Dateien exportieren möchten, die entsprechende `params`-Spezifikation bei und löschen Sie die anderen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -796,7 +796,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++ Beispielanfrage zum Einrichten eines Speicherorts für SFTP-Ziele
 
-Die folgende Anfrage stellt eine Zielverbindung zu SFTP-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort landen.
+Die folgende Anfrage stellt eine Zielverbindung zu SFTP-Zielen her, um zu bestimmen, wo die exportierten Dateien an Ihrem Speicherort abgelegt werden sollen.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -833,11 +833,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Geben Sie einen Namen für die Zielverbindung zum Batch-Ziel an. |
 | `description` | Optional können Sie eine Beschreibung für die Zielverbindung angeben. |
-| `baseConnectionId` | Verwenden Sie die Kennung der Basisverbindung, die Sie im obigen Schritt erstellt haben. |
-| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für Ihr gewünschtes Batch-Ziel. Sie haben diese ID im Schritt erhalten. [Liste der verfügbaren Ziele abrufen](#get-the-list-of-available-destinations). |
-| `params` | Je nach Ziel, mit dem Sie eine Verbindung herstellen, müssen Sie für Ihren Speicherort unterschiedliche erforderliche Parameter angeben. Bei Verbindungen des Typs Amazon S3 müssen Sie Ihre Zugriffskennung und den geheimen Schlüssel für Ihren Speicherort im Amazon S3-Speicher angeben. <br> Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Endpunkt &quot;Verbindungsanforderungen&quot;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), um die Verbindungsspezifikation Ihres gewünschten Ziels anzugeben. Suchen Sie nach dem Parameter . `targetSpec.spec.required` in der Antwort. |
-| `params.mode` | Abhängig vom unterstützten Modus für Ihr Ziel müssen Sie hier einen anderen Wert angeben. Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Endpunkt &quot;Verbindungsanforderungen&quot;](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec), um die Verbindungsspezifikation Ihres gewünschten Ziels anzugeben. Suchen Sie nach dem Parameter . `targetSpec.spec.properties.mode.enum` in der Antwort und wählen Sie den gewünschten Modus aus. |
-| `params.bucketName` | Geben Sie bei S3-Verbindungen den Namen des Buckets an, in den Dateien exportiert werden sollen. |
+| `baseConnectionId` | Verwenden Sie die ID der Basisverbindung, die Sie im obigen Schritt erstellt haben. |
+| `connectionSpec.id` | Verwenden Sie die Verbindungsspezifikations-ID für Ihr gewünschtes Batch-Ziel. Sie haben diese ID im Schritt [Abrufen der Liste der verfügbaren Ziele](#get-the-list-of-available-destinations) erhalten. |
+| `params` | Je nach Ziel, mit dem Sie eine Verbindung herstellen, müssen Sie für Ihren Speicherort unterschiedliche erforderliche Parameter angeben. Bei Verbindungen des Typs Amazon S3 müssen Sie Ihre Zugriffs-ID und den geheimen Schlüssel für Ihren Speicherort im Amazon S3-Speicher angeben. <br> Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels angeben. Suchen Sie in der Antwort nach dem Parameter `targetSpec.spec.required`. |
+| `params.mode` | Abhängig vom unterstützten Modus für Ihr Ziel müssen Sie hier einen anderen Wert angeben. Um die erforderlichen Parameter für Ihr Ziel zu ermitteln, führen Sie einen [GET-Aufruf an den Verbindungsspezifikationen-Endpunkt](https://developer.adobe.com/experience-platform-apis/references/flow-service/#operation/retrieveConnectionSpec) durch, wobei Sie die Verbindungsspezifikation Ihres gewünschten Ziels anzugeben. Suchen Sie in der Antwort nach dem Parameter `targetSpec.spec.properties.mode.enum` und wählen Sie den gewünschten Modus aus. |
+| `params.bucketName` | Geben Sie bei S3-Verbindungen den Namen des Behälters an, in den Dateien exportiert werden sollen. |
 | `params.path` | Geben Sie bei S3-Verbindungen den Dateipfad in Ihrem Speicherort an, an den Dateien exportiert werden sollen. |
 | `params.format` | `CSV` ist derzeit der einzige unterstützte Dateiexporttyp. |
 
@@ -845,7 +845,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstellte Zielverbindung zu Ihrem Batch-Ziel. Notieren Sie sich diesen Wert, da Sie ihn in späteren Schritten benötigen werden.
+Bei einer erfolgreichen Antwort wird die eindeutige Kennung (`id`) für die neu erstellte Zielverbindung zu Ihrem Batch-Ziel zurückgegeben. Notieren Sie sich diesen Wert, da Sie ihn in späteren Schritten benötigen werden.
 
 ```json
 {
@@ -853,13 +853,13 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) für die neu erstel
 }
 ```
 
-## Datenfluss erstellen {#create-dataflow}
+## Erstellen eines Datenflusses {#create-dataflow}
 
 ![Übersicht über die Zielschritte – Schritt 4](../assets/api/batch-destination/step4.png)
 
-Mithilfe der Flussspezifikation, der Quellverbindung und der Ziel-Verbindungs-IDs, die Sie in den vorherigen Schritten erhalten haben, können Sie jetzt einen Datenfluss zwischen Ihrem [!DNL Experience Platform] und dem Ziel, an dem Sie Datendateien exportieren. Stellen Sie sich diesen Schritt wie die Erstellung der Pipeline vor, durch die später Daten fließen [!DNL Experience Platform] und Ihr gewünschtes Ziel.
+Mithilfe der Flussspezifikation, der Quellverbindungs- und der Zielverbindungs-IDs können Sie nun einen Datenfluss zwischen Ihren [!DNL Experience Platform]-Daten und dem Ziel erstellen, in das Sie Datendateien exportieren werden. Stellen Sie sich diesen Schritt wie den Bau einer Pipeline vor, durch die später Daten zwischen [!DNL Experience Platform] und dem gewünschten Ziel fließen werden.
 
-Um einen Datenfluss zu erstellen, führen Sie eine POST-Anfrage wie unten dargestellt durch und geben Sie dabei die unten genannten Werte in der Payload an.
+Um einen Datenfluss zu erstellen, führen Sie eine POST-Anfrage durch (wie unten dargestellt) und geben Sie dabei die unten genannten Werte in der Payload an.
 
 **API-Format**
 
@@ -911,10 +911,10 @@ curl -X POST \
 | --------- | ----------- |
 | `name` | Geben Sie einen Namen für den Datenfluss an, den Sie erstellen. |
 | `description` | Optional können Sie eine Beschreibung für den Datenfluss angeben. |
-| `flowSpec.Id` | Verwenden Sie die Flussspezifikations-ID für das Batch-Ziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikations-ID abzurufen, führen Sie einen GET-Vorgang für die `flowspecs` -Endpunkt, wie in der [API-Referenzdokumentation für Flussspezifikationen](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec). Suchen Sie in der Antwort nach `upsTo` und kopieren Sie die entsprechende Kennung des Batch-Ziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie zum Beispiel für Adobe Campaign nach `upsToCampaign` und kopieren Sie den `id`-Parameter. |
-| `sourceConnectionIds` | Verwenden Sie die Kennung der Quellverbindung, die Sie im Schritt erhalten haben [Verbindung zu Ihren Experience Platform-Daten herstellen](#connect-to-your-experience-platform-data). |
-| `targetConnectionIds` | Verwenden Sie die Ziel-Verbindungs-ID, die Sie im Schritt erhalten haben [Verbindung zum Batch-Ziel herstellen](#connect-to-batch-destination). |
-| `transformations` | Im nächsten Schritt füllen Sie diesen Abschnitt mit den zu aktivierenden Segmenten und Profilattributen. |
+| `flowSpec.Id` | Verwenden Sie die Flussspezifikations-ID für das Batch-Ziel, mit dem Sie eine Verbindung herstellen möchten. Um die Flussspezifikations-ID abzurufen, führen Sie einen GET-Vorgang für den Endpunkt `flowspecs` durch, wie in der [API-Referenzdokumentation für Flussspezifikationen](https://www.adobe.io/experience-platform-apis/references/flow-service/#operation/retrieveFlowSpec) beschrieben. Suchen Sie in der Antwort nach `upsTo` und kopieren Sie die entsprechende ID des Batch-Ziels, mit dem Sie eine Verbindung herstellen möchten. Suchen Sie zum Beispiel für Adobe Campaign nach `upsToCampaign` und kopieren Sie den `id`-Parameter. |
+| `sourceConnectionIds` | Verwenden Sie die Quellverbindungs-ID, die Sie im Schritt [Verbinden mit Ihren Experience Platform-Daten](#connect-to-your-experience-platform-data) erhalten haben. |
+| `targetConnectionIds` | Verwenden Sie die Zielverbindungs-ID, die Sie im Schritt [Verbinden mit dem Batch-Ziel](#connect-to-batch-destination) erhalten haben. |
+| `transformations` | Im nächsten Schritt werden Sie diesen Abschnitt mit den zu aktivierenden Segmenten und Profilattributen füllen. |
 
 Die nachstehende Tabelle enthält die Flussspezifikations-IDs für häufig verwendete Batch-Ziele:
 
@@ -940,9 +940,9 @@ Bei einer erfolgreichen Antwort werden die Kennung (`id`) des neu erstellten Dat
 
 ![Übersicht über die Zielschritte – Schritt 5](../assets/api/batch-destination/step5.png)
 
-Nachdem Sie alle Verbindungen und den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Zielplattform aktivieren. In diesem Schritt wählen Sie aus, welche Segmente und Profilattribute an das Ziel exportiert werden sollen.
+Nachdem Sie alle Verbindungen sowie den Datenfluss erstellt haben, können Sie jetzt Ihre Profildaten für die Zielplattform aktivieren. In diesem Schritt wählen Sie aus, welche Segmente und Profilattribute an das Ziel exportiert werden sollen.
 
-Sie können auch das Dateibenennungsformat der exportierten Dateien bestimmen und festlegen, welche Attribute als [Deduplizierungsschlüssel](../ui/activate-batch-profile-destinations.md#mandatory-keys) oder [obligatorische Attribute](../ui/activate-batch-profile-destinations.md#mandatory-attributes). In diesem Schritt können Sie auch den Zeitplan für das Senden von Daten an das Ziel festlegen.
+Sie können auch das Dateibenennungsformat der exportierten Dateien bestimmen und festlegen, welche Attribute als [Deduplizierungsschlüssel](../ui/activate-batch-profile-destinations.md#mandatory-keys) oder [obligatorische Attribute](../ui/activate-batch-profile-destinations.md#mandatory-attributes) verwendet werden sollen. In diesem Schritt können Sie auch den Zeitplan für das Senden von Daten an das Ziel festlegen.
 
 Um Segmente für Ihr neues Ziel zu aktivieren, müssen Sie einen JSON-PATCH-Vorgang ausführen, ähnlich dem Beispiel unten. Sie können mehrere Profil- und Segmentattribute in einem Aufruf aktivieren. Weiterführende Informationen zu JSON PATCH finden Sie in der [RFC-Spezifikation](https://tools.ietf.org/html/rfc6902).
 
@@ -1016,27 +1016,27 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 | Eigenschaft | Beschreibung |
 | --------- | ----------- |
-| `{DATAFLOW_ID}` | Verwenden Sie in der URL die Kennung des Datenflusses, den Sie im vorherigen Schritt erstellt haben. |
+| `{DATAFLOW_ID}` | Verwenden Sie in der URL die ID des Datenflusses, den Sie im vorherigen Schritt erstellt haben. |
 | `{ETAG}` | Verwenden Sie das eTag, das Sie im vorherigen Schritt erhalten haben. |
-| `{SEGMENT_ID}` | Geben Sie die Segment-ID an, die Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen von Segment-IDs für die Segmente, die Sie aktivieren möchten, finden Sie unter [Segmentdefinition abrufen](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
+| `{SEGMENT_ID}` | Geben Sie ID des Segments an, das Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen von Segment-IDs für die Segmente, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Segmentdefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
 | `{PROFILE_ATTRIBUTE}` | Beispiel: `"person.lastName"` |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren des Datenflusses erforderliche Aktion definiert wird. Operationen umfassen: `add`, `replace` und `remove`. Um einem Datenfluss ein Segment hinzuzufügen, verwenden Sie die `add` Vorgang. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment zu einem Datenfluss hinzuzufügen, verwenden Sie die Operation `add`. |
 | `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen eines Segments zu einem Datenfluss den im Beispiel angegebenen Pfad. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
-| `id` | Geben Sie die Kennung des Segments an, das Sie dem Ziel-Datenfluss hinzufügen. |
-| `name` | *Optional*. Geben Sie den Namen des Segments an, das Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie erfolgreich ein Segment zum Ziel-Datenfluss hinzufügen können, ohne dessen Namen anzugeben. |
-| `filenameTemplate` | Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die Kennung des exportierten Segments.</li><li>`%SEGMENT_NAME%`: Optional. Die exportierten Dateien enthalten den Namen des exportierten Segments.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: Optional. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: Optional. Ersetzen Sie diesen Platzhalter durch jeden benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weiterführende Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Dateinamen konfigurieren](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
-| `exportMode` | Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [vollständige Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [inkrementelle Dateien exportieren](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `id` | Geben Sie die ID des Segments an, das Sie dem Ziel-Datenfluss hinzufügen. |
+| `name` | *Optional*. Geben Sie den Namen des Segments an, das Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie ein Segment erfolgreich zum Ziel-Datenfluss hinzufügen können, ohne dessen Namen anzugeben. |
+| `filenameTemplate` | Dieses Feld bestimmt das Dateinamenformat der Dateien, die an Ihr Ziel exportiert werden. <br> Die folgenden Optionen sind verfügbar: <br> <ul><li>`%DESTINATION_NAME%`: Obligatorisch. Die exportierten Dateien enthalten den Zielnamen.</li><li>`%SEGMENT_ID%`: Obligatorisch. Die exportierten Dateien enthalten die ID des exportierten Segments.</li><li>`%SEGMENT_NAME%`: Optional. Die exportierten Dateien enthalten den Namen des exportierten Segments.</li><li>`DATETIME(YYYYMMdd_HHmmss)` oder `%TIMESTAMP%`: Optional. Wählen Sie eine dieser beiden Optionen für Ihre Dateien aus, um den Zeitpunkt einzuschließen, zu dem sie von Experience Platform generiert werden.</li><li>`custom-text`: Optional. Ersetzen Sie diesen Platzhalter durch einen beliebigen benutzerdefinierten Text, den Sie am Ende Ihrer Dateinamen anhängen möchten.</li></ul> <br> Weitere Informationen zur Konfiguration von Dateinamen finden Sie im Abschnitt [Konfigurieren von Dateinamen](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) im Tutorial zur Aktivierung von Batch-Zielen. |
+| `exportMode` | Obligatorisch. Wählen Sie `"DAILY_FULL_EXPORT"` oder `"FIRST_FULL_THEN_INCREMENTAL"` aus. Weitere Informationen zu den beiden Optionen finden Sie unter [Exportieren von vollständigen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) und [Exportieren von inkrementellen Dateien](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) im Tutorial zur Aktivierung von Batch-Zielen. |
 | `startDate` | Wählen Sie das Datum aus, an dem das Segment Profile in Ihr Ziel exportieren soll. |
-| `frequency` | Obligatorisch. <br> <ul><li>Für `"DAILY_FULL_EXPORT"` Exportmodus können Sie `ONCE` oder `DAILY`.</li><li>Für `"FIRST_FULL_THEN_INCREMENTAL"` Exportmodus können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `endDate` | Nicht zutreffend bei Auswahl `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, an dem Segmentmitglieder nicht mehr in das Ziel exportiert werden. |
+| `frequency` | Obligatorisch. <br> <ul><li>Für den Exportmodus `"DAILY_FULL_EXPORT"` können Sie `ONCE` oder `DAILY` wählen.</li><li>Für den Exportmodus `"FIRST_FULL_THEN_INCREMENTAL"` können Sie `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"` wählen.</li></ul> |
+| `endDate` | Nicht anwendbar bei der Auswahl von `"exportMode":"DAILY_FULL_EXPORT"` und `"frequency":"ONCE"`. <br> Legt das Datum fest, ab dem Segmentmitglieder nicht mehr in das Ziel exportiert werden. |
 | `startTime` | Obligatorisch. Wählen Sie den Zeitpunkt aus, zu dem Dateien, die Mitglieder des Segments enthalten, generiert und an Ihr Ziel exportiert werden sollen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Suchen Sie nach einer akzeptierten Antwort vom Typ 202. Es wird kein Antworttext zurückgegeben. Informationen zum Überprüfen der Richtigkeit der Anforderung finden Sie im nächsten Schritt: [Validieren des Datenflusses](#validate-dataflow).
+Suchen Sie nach einer „202 Accepted“-Antwort. Es wird kein Antworttext zurückgegeben. Um zu überprüfen, ob die Anfrage korrekt war, lesen Sie den nächsten Schritt [Validieren des Datenflusses](#validate-dataflow).
 
 ## Validieren des Datenflusses {#validate-dataflow}
 
