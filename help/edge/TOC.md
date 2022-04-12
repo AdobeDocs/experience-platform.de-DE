@@ -5,10 +5,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: ff612f7ef466276757095a3a9a724781eeb6a089
+source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 85%
+source-wordcount: '174'
+ht-degree: 83%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 85%
    * [Unterstützte Anwendungsfälle](fundamentals/supported-use-cases.md)
 * Identität {#identity}
    * [Übersicht](identity/overview.md)
-   * [Erstanbieter-Geräte-IDs](identity/first-party-device-ids.md)
+   * [IDs von Erstanbieter-Geräten](identity/first-party-device-ids.md)
 * Datenerfassung {#data-collection}
    * [Automatisch erfasste Informationen](data-collection/automatic-information.md)
    * [Verfolgen von Links](data-collection/track-links.md)
@@ -48,6 +48,10 @@ ht-degree: 85%
       * [Zugriff auf Antwort-Token](personalization/adobe-target/accessing-response-tokens.md)
       * [Verwenden der Mbox-Drittanbieter-ID](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Vergleich der at.js-Bibliothek mit dem Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * Protokollierung von Analytics for Target (A4T) {#a4t}
+         * [Überblick](personalization/adobe-target/analytics-logging/overview.md)
+         * [Client-seitig Protokollierung](personalization/adobe-target/analytics-logging/client-side.md)
+         * [Serverseitige Protokollierung](personalization/adobe-target/analytics-logging/server-side.md)
    * Offer Decisioning {#offer-decisioning}
       * [Übersicht](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Einverständnis {#consent}
