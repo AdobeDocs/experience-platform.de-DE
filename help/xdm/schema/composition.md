@@ -5,10 +5,10 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 3397e0ef79b585b828e794ca5f5d9e4c8ae470aa
+source-git-commit: 997a3cdd6301adc2c52b6b397307c1dd1d194d7c
 workflow-type: tm+mt
-source-wordcount: '3850'
-ht-degree: 29%
+source-wordcount: '3838'
+ht-degree: 28%
 
 ---
 
@@ -230,7 +230,7 @@ Die gültigen Bereiche dieser Skalartypen können weiter auf bestimmte Muster, F
 
 >[!NOTE]
 >
-> Der Feldtyp „Karte“ ermöglicht Daten für Schlüssel-Wertepaare, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten können nur auf Systemebene definiert werden, d. h. Sie können in einem branchen- oder herstellerdefinierten Schema auf eine Karte stoßen, diese steht jedoch nicht für die Verwendung in von Ihnen definierten Feldern zur Verfügung. Das [Entwicklerhandbuch für Schema-Registry-API](../api/getting-started.md) enthält weitere Informationen zum Definieren von Feldtypen.
+> Der Feldtyp „Karte“ ermöglicht Daten für Schlüssel-Wertepaare, einschließlich mehrerer Werte für einen einzelnen Schlüssel. Karten finden Sie in Standard-XDM-Klassen und Feldergruppen, Sie können jedoch auch benutzerdefinierte Maps mithilfe der Schema Registry-API definieren. Siehe Tutorial zu [Definieren von benutzerdefinierten Feldern](../tutorials/custom-fields-api.md#maps) für weitere Informationen.
 
 ## Kompositionsbeispiel
 
