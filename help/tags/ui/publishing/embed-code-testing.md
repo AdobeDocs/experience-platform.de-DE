@@ -2,9 +2,9 @@
 title: Testen von Einbettungs-Codes mit Adobe Experience Platform Debugger
 description: Hier erfahren Sie, wie Sie mit Platform Debugger verschiedene Einbettungs-Codes für Adobe Experience Platform lokal auf Ihrer Website testen können.
 exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '510'
 ht-degree: 100%
 
 ---
@@ -58,4 +58,4 @@ Der Tab **[!UICONTROL Konfiguration]** wird wieder angezeigt und zeigt an, dass 
 
 ## Nächste Schritte
 
-In diesem Tutorial wurde beschrieben, wie Sie mit Platform Debugger zu Testzwecken zwischen Einbettungs-Codes wechseln können. Weitere Informationen zu den verschiedenen Funktionen finden Sie in der [Dokumentation zum Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=de).
+In diesem Tutorial wurde beschrieben, wie Sie mit Platform Debugger zu Testzwecken zwischen Einbettungs-Codes wechseln können. Weitere Informationen zu den verschiedenen Funktionen finden Sie in der [Dokumentation zum Platform Debugger](../../../debugger/home.md).

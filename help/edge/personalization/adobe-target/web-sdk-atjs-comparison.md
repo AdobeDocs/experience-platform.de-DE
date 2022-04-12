@@ -2,9 +2,10 @@
 title: Vergleich von at.js mit dem Experience Platform Web SDK
 description: Erfahren Sie, wie die at.js-Funktionen mit dem Experience Platform Web SDK verglichen werden.
 keywords: Target; adobe target; activity.id; experience.id; renderDecisions; DecisionScopes; Vorabausblenden von Snippet; VEC; Form-Based Experience Composer; xdm; Zielgruppen; Entscheidungen; Umfang; Schema; Systemdiagramm; Diagramm
-source-git-commit: 6efb40e90cb8c29a0141bb0db6e20cec23f2be9a
+exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
+source-git-commit: 71c63e0d0b993206cb3bb5de7f7fbd5e10c6f2e3
 workflow-type: tm+mt
-source-wordcount: '2277'
+source-wordcount: '2269'
 ht-degree: 7%
 
 ---
@@ -1224,5 +1225,5 @@ Bei Verwendung des Web SDK stehen Ihnen mehrere Debugging-Funktionen zur Verfüg
 * Verwenden [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon)
 * [Web SDK-Debugging aktiviert](../../../edge/fundamentals/debugging.md)
 * Verwendung [Web SDK-Überwachungshooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Verwendung [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=en)
+* Verwendung [Adobe Experience Platform Debugger](../../../debugger/home.md)
 * Target Trace
