@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8d302a5d2907d971d0ff6b7602d18bed418d3a12
+source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
 workflow-type: tm+mt
-source-wordcount: '1006'
-ht-degree: 100%
+source-wordcount: '1032'
+ht-degree: 98%
 
 ---
 
@@ -61,6 +61,13 @@ Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertrage
 - [[!DNL Google PubSub]-Connector](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL Oracle Object Storage]-Connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP]-Connector](connectors/cloud-storage/sftp.md)
+
+### Einverständnis und Voreinstellungen {#consent}
+
+Experience Platform unterstützt die Aufnahme von Daten aus einer Genehmigungs- und Präferenzverwaltungsplattform von Drittanbietern. Näheres hierzu finden Sie in den folgenden Dokumenten:
+
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
+
 
 ### CRM (Customer Relationship Management) {#crm}
 
