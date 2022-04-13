@@ -1,10 +1,11 @@
 ---
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren.
-source-git-commit: af4c345819d3e293af4e888c9cabba6bd874583b
+exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
+source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 14%
+source-wordcount: '783'
+ht-degree: 13%
 
 ---
 
@@ -225,16 +226,18 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
 
 ## Erstellen benutzerdefinierter Zuordnungstypen {#maps}
 
-Um &quot;map-ähnliche&quot;Daten in XDM effizient zu unterstützen, können Objekte mit einer `meta:xdmType` auf `map` , um deutlich zu machen, dass ein Objekt so verwaltet werden sollte, als wäre der Schlüsselsatz nicht eingeschränkt. XDM legt die folgenden Einschränkungen für die Verwendung dieses Speicherhinweises fest:
+Um &quot;map-ähnliche&quot;Daten in XDM effizient zu unterstützen, können Objekte mit einer `meta:xdmType` auf `map` , um deutlich zu machen, dass ein Objekt so verwaltet werden sollte, als wäre der Schlüsselsatz nicht eingeschränkt. Daten, die in Zuordnungsfelder aufgenommen werden, müssen Zeichenfolgenschlüssel und nur Zeichenfolgen- oder Ganzzahlwerte verwenden (wie durch `additionalProperties.type`).
 
-* Zuordnungstypen MÜSSEN vom Typ sein `object`
+XDM legt die folgenden Einschränkungen für die Verwendung dieses Speicherhinweises fest:
+
+* Zuordnungstypen MÜSSEN vom Typ sein `object`.
 * Für Zuordnungstypen dürfen KEINE Eigenschaften definiert sein (d. h. sie definieren &quot;leere&quot;Objekte).
-* Zuordnungstypen MÜSSEN eine `additionalProperties` schema, das die Werte beschreibt, die in der Zuordnung platziert werden können
+* Zuordnungstypen MÜSSEN Folgendes enthalten: `additionalProperties.type` -Feld, das die Werte beschreibt, die in der Zuordnung platziert werden können, entweder `string` oder `integer`.
 
 Stellen Sie sicher, dass Sie nur Felder vom Typ Zuordnung verwenden, wenn dies unbedingt erforderlich ist, da sie die folgenden Leistungsbeeinträchtigungen aufweisen:
 
-* Die Antwortzeit von Adobe Experience Platform Query Service wird für 100 Millionen Datensätze von drei Sekunden auf zehn Sekunden reduziert
-* Karten müssen weniger als 16 Schlüssel aufweisen, sonst könnten sie weiter abgebaut werden
+* Die Antwortzeit von Adobe Experience Platform Query Service wird für 100 Millionen Datensätze von drei Sekunden auf zehn Sekunden reduziert.
+* Karten mit weniger als 16 Schlüsseln müssen vorhanden sein. Andernfalls besteht die Gefahr einer weiteren Verschlechterung.
 
 Die Benutzeroberfläche von Platform weist außerdem Einschränkungen hinsichtlich der Art und Weise auf, wie die Schlüssel von Feldern vom Typ Zuordnung extrahiert werden können. Während Objekttypen erweitert werden können, werden Zuordnungen stattdessen als ein einzelnes Feld angezeigt.
 
