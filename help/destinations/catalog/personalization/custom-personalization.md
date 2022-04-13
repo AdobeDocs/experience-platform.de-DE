@@ -3,10 +3,10 @@ keywords: benutzerdefinierte Personalisierung; Ziel; benutzerdefiniertes Ziel vo
 title: Benutzerdefinierte Personalisierungsverbindung
 description: Dieses Ziel bietet externen Personalisierungs-, Content-Management-Systemen, Anzeigen-Servern und anderen Programmen, die auf Ihrer Site ausgeführt werden, die Möglichkeit, Segmentinformationen von Adobe Experience Platform abzurufen. Dieses Ziel bietet Echtzeit-Personalisierung auf der Grundlage auf der Zugehörigkeit zu einem Benutzerprofilsegment.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 05217dead7e1365d6dcc0cc7ae4078628514d1d5
+source-git-commit: c83c7e2a74a6bf4a7a4c9c04ccebfd0296c89bce
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 99%
+source-wordcount: '912'
+ht-degree: 61%
 
 ---
 
@@ -30,17 +30,27 @@ Diese Integration basiert auf dem [Adobe Experience Platform Web SDK](../../../e
 
 ## Anwendungsfälle {#use-cases}
 
-Dieses Ziel gibt Zielgruppen an Anzeigen-Server und Personalisierungsprogramme anderer Hersteller als Adobe weiter, die verwendet werden, um in Echtzeit zu entscheiden, welche Werbung die Benutzer auf einer Website sehen sollen.
+Die [!DNL Custom personalization connection] ermöglicht Ihnen die Verwendung eigener Plattformen für Personalisierungspartner (z. B. [!DNL Optimizely], [!DNL Pega]), wobei auch die Datenerfassungs- und Segmentierungsfunktionen des Edge-Netzwerks genutzt werden, um eine tiefere Kundenpersonalisierung zu ermöglichen.
 
-### Anwendungsfall 1
+Die unten beschriebenen Anwendungsfälle umfassen sowohl die Personalisierung der Site als auch zielgruppengerechte On-site-Werbung.
 
-**Personalisieren einer Startseite**
+Um diese Anwendungsfälle zu aktivieren, benötigen Kunden eine schnelle, optimierte Methode zum Abrufen von Segmentinformationen aus der Experience Platform und zum Senden dieser Informationen an ihre vorgesehenen Systeme, die sie in der Experience Platform-Benutzeroberfläche als benutzerdefinierte Personalisierungsverbindungen konfiguriert haben.
 
-Eine Website für die Vermietung und den Verkauf von Wohnungen möchte ihre Startseite anhand von Segmentqualifikationen in Adobe Experience Platform personalisieren. Das Unternehmen kann auswählen, welche Zielgruppen ein personalisiertes Erlebnis erhalten sollen, und diese Zielgruppen dem benutzerdefinierten Personalisierungsziel zuordnen, das für sein Personalisierungsprogramm eines anderen Herstellers als Targeting-Kriterium eingerichtet wurde.
+Bei diesen Systemen kann es sich um externe Personalisierungsplattformen, Content Management-Systeme, Adserver und andere Anwendungen handeln, die über die Web- und mobilen Eigenschaften von Kunden hinweg ausgeführt werden.
 
-**Gezielte-Onsite-Werbung**
+### Personalisierung auf derselben Seite {#same-page}
 
-Durch die Verwendung eines separaten benutzerdefinierten Personalisierungsziels für den Anzeigen-Server kann dieselbe Website die Werbung auf der Website mit verschiedenen Segmenten von Adobe Experience Platform als Targeting-Kriterien auf Zielgruppen ausrichten.
+Ein Benutzer besucht eine Seite Ihrer Website. Der Kunde kann die aktuelle Seitenbesuchsinformationen (z. B. verweisende URL, Browsersprache, eingebettete Produktinformationen) verwenden, um die nächste Aktion/Entscheidung (z. B. Personalisierung) auszuwählen, indem er die benutzerdefinierte Personalisierungsverbindung für Plattformen ohne Adobe verwendet (z. B. [!DNL Pega], [!DNL Optimizely]usw.).
+
+### Personalisierung der nächsten Seite {#next-page}
+
+Ein Benutzer besucht Seite A auf Ihrer Website. Auf der Grundlage dieser Interaktion hat sich der Benutzer für eine Reihe von Segmenten qualifiziert. Der Benutzer klickt dann auf einen Link, der ihn von Seite A zu Seite B bringt. Die Segmente, für die sich der Benutzer während der vorherigen Interaktion auf Seite A qualifiziert hat, werden zusammen mit den durch den aktuellen Website-Besuch festgelegten Profilaktualisierungen verwendet, um die nächste Aktion/Entscheidung zu ermöglichen (z. B. welches Werbebanner dem Besucher angezeigt werden soll oder, im Fall von A/B-Tests, welche Version der Seite angezeigt werden soll).
+
+### Personalisierung der nächsten Sitzung {#next-session}
+
+Ein Benutzer besucht mehrere Seiten auf Ihrer Website. Auf der Grundlage dieser Interaktionen hat sich der Benutzer für eine Reihe von Segmenten qualifiziert. Der Benutzer beendet dann die aktuelle Browser-Sitzung.
+
+Am folgenden Tag kehrt der Benutzer zur gleichen Kundenwebsite zurück. Die Segmente, für die sie sich während der vorherigen Interaktion mit allen besuchten Webseiten qualifiziert hatten, sowie die durch den aktuellen Website-Besuch bestimmten Profilattribute werden zur Auswahl der nächsten Aktion/Entscheidung verwendet (z. B. welches Werbebanner dem Besucher angezeigt werden soll oder, im Fall von A/B-Tests, welche Version der Seite angezeigt werden soll).
 
 ## Herstellen einer Verbindung mit der Datenbank {#connect}
 
