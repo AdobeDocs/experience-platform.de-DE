@@ -4,7 +4,7 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 7ca40776747541615e1a1d717aae8d48bed27a74
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '2572'
 ht-degree: 4%
@@ -232,7 +232,7 @@ Dieses Widget zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vo
 
 ### (Beta) [!UICONTROL Profilvollständigkeitstrend] {#profile-completeness-trend}
 
-Dieses Widget erstellt ein gestapeltes Spaltendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten gefüllt werden, die ungleich null sind. Die Profilvollständigkeit wird seit dem letzten Verarbeitungsdatum als hoch, mittel oder gering kategorisiert.
+Dieses Widget erstellt ein gestapeltes Flächendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten gefüllt werden, die ungleich null sind. Die Profilvollständigkeit wird seit dem letzten Verarbeitungsdatum als hoch, mittel oder gering kategorisiert.
 
 Die X-Achse stellt die Zeit dar, die Y-Achse die Anzahl der Profile und die Farben stellen die drei Stufen der Profilvollständigkeit dar.
 

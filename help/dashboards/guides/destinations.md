@@ -4,7 +4,7 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
+source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 3%
@@ -51,7 +51,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
 * [[!UICONTROL Kürzlich aktivierte Segmente]](#recently-activated-segments)
 * [[!UICONTROL Kürzlich aktivierte Segmente nach Ziel]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Zielgruppengrößentrend]](#audience-size-trends)
+* [[!UICONTROL Zielgruppengrößentrend]](#audience-size-trend)
 * [[!UICONTROL Nicht zugeordnete Segmente nach Identität]](#unmapped-segments-by-identity)
 * [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
