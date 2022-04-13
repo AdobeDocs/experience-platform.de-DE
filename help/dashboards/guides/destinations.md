@@ -4,9 +4,9 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 32df4c5972cb32afc6021ae27dc05f77076a5984
+source-git-commit: 45806166e48e3a9d9d7eeeaea0827d6f83c3ca3b
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1764'
 ht-degree: 3%
 
 ---
@@ -112,6 +112,10 @@ Ein Zeitraum für den Zielgruppentrend in den letzten 30 Tagen, 90 Tagen oder 12
 Im zweiten Dropdown-Menü werden alle verfügbaren Segmente aufgelistet, die an das im oberen Bereich des Dashboards ausgewählte Zielkonto gesendet werden können.
 
 ![Das Trend-Widget zur Zielgruppengröße.](../images/destinations/audience-size-trend.png)
+
+Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine [!UICONTROL Untertitel] -Schaltfläche oben rechts im Widget. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen. Ein Modell für maschinelles Lernen generiert automatisch Beschriftungen zur Beschreibung der wichtigsten Trends und Ereignisse, indem es die Diagramm- und Segmentdaten analysiert.
+
+![Das Dialogfeld für automatische Beschriftungen für das Trend-Widget zur Zielgruppengröße.](../images/destinations/audience-size-trend-captions.png)
 
 ### [!UICONTROL Nicht zugeordnete Segmente nach Identität] {#unmapped-segments-by-identity}
 
