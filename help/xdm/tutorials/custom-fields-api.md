@@ -2,7 +2,7 @@
 title: Definieren von XDM-Feldern in der Schema Registry-API
 description: Erfahren Sie, wie Sie beim Erstellen benutzerdefinierter Experience-Datenmodell (XDM)-Ressourcen in der Schema Registry-API verschiedene Felder definieren.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 536657f11a50ea493736296780dd57f41dfefeae
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 13%
@@ -80,7 +80,7 @@ Suchen Sie zunächst den gewünschten Feldtyp und verwenden Sie den Beispielcode
           },
           "default": "value1"
 }</pre>
-    <br>Beachten Sie Folgendes: <code>meta:enum</code> Wert: <strong>not</strong> Deklarieren Sie eine Auflistung oder führen Sie eine Datenvalidierung allein durch. In den meisten Fällen werden unter <code>meta:enum</code> werden auch <code>enum</code> , um sicherzustellen, dass die Daten begrenzt sind. Es gibt jedoch einige Anwendungsfälle, in denen <code>meta:enum</code> ohne entsprechende <code>enum</code> Array. Siehe Tutorial zu <a href="../tutorials/extend-soft-enum.md">Erweitern von Soft Enves</a> für weitere Informationen.
+    <br>Beachten Sie Folgendes: <code>meta:enum</code> Wert: <strong>not</strong> Deklarieren Sie eine Auflistung oder führen Sie eine Datenvalidierung allein durch. In den meisten Fällen werden unter <code>meta:enum</code> werden auch <code>enum</code> , um sicherzustellen, dass die Daten begrenzt sind. Es gibt jedoch einige Anwendungsfälle, in denen <code>meta:enum</code> ohne entsprechende <code>enum</code> Array. Siehe Tutorial zu <a href="../tutorials/suggested-values.md">Definieren empfohlener Werte</a> für weitere Informationen.
     </td>
   </tr>
   <tr>

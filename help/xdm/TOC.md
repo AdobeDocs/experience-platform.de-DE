@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell-System (XDM)
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Klassen und Schemafeldgruppen im Experience-Datenmodell (XDM), um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: 2144c75eb83a5806fa2cd9c75edc8cb0e85695fd
+source-git-commit: 4ce9e53ec420a8c9ba07cdfd75e66d854989f8d2
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 93%
+source-wordcount: '442'
+ht-degree: 92%
 
 ---
 
@@ -171,7 +171,7 @@ ht-degree: 93%
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
    * [Definieren einer Schemabeziehung in der Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
-   * [Erweitern eines weichen Aufzählungsfelds (API)](tutorials/extend-soft-enum.md)
+   * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)
