@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Schema; XDM; ExperienceEvent; Felder; Schemas; Schemas; Schema-Design; Feldergruppe; Feldergruppe; iab; tcf; Einverständnis;
 solution: Experience Platform
-title: IAB TCF 2.0-Gruppe für Einverständnisschema-Feld
+title: IAB TCF 2.0-Feldergruppe für Einverständniserklärungen für Ereignisschemata
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die IAB TCF 2.0-Schemafeldgruppe für Einwilligungen für die XDM ExperienceEvent-Klasse.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 046486d5e154b45fc2c2f5408eee235dddf46a4d
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 2%
+source-wordcount: '253'
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL IAB TCF 2.0-] Feldergruppe &quot;Einwilligungsschema&quot;
+# [!UICONTROL IAB TCF 2.0-Zustimmung] Feldergruppe für Ereignisschemata
 
 >[!IMPORTANT]
 >
->Dieses Dokument behandelt die Schemafeldgruppe [!UICONTROL IAB TCF 2.0 Consent] für die XDM ExperienceEvent-Klasse. Diese Feldergruppe sollte nur verwendet werden, wenn Sie Zustimmungsänderungsereignisse im Laufe der Zeit verfolgen möchten.
+>Dieses Dokument behandelt die [!UICONTROL IAB TCF 2.0-Zustimmung] Schemafeldgruppe für die XDM ExperienceEvent-Klasse. Diese Feldergruppe sollte nur verwendet werden, wenn Sie Zustimmungsänderungsereignisse im Laufe der Zeit verfolgen möchten.
 >
 >Beachten Sie, dass in Ereignisdaten aufgezeichnete Zustimmungswerte in automatischen Durchsetzungs-Workflows nicht berücksichtigt werden. Damit eine automatische Durchsetzung erfolgt, müssen Zustimmungswerte in die Klasse &quot;XDM Individual Profile&quot;aufgenommen und für Echtzeit-Kundenprofil aktiviert werden.
 >
->Die Feldergruppe, die für die Klasse &quot;XDM Individual Profile&quot;vorgesehen ist, finden Sie stattdessen im folgenden [Dokument](../profile/iab.md) .
+>Die Feldergruppe, die für die Klasse &quot;XDM Individual Profile&quot;vorgesehen ist, finden Sie im Folgenden. [Dokument](../profile/iab.md) anstatt.
 
-[!UICONTROL IAB TCF 2.0 ] Konfiguriert eine Schemafeldgruppe für die  [[!DNL XDM ExperienceEvent] ](../../classes/experienceevent.md) Klasse, die zum Erfassen einer IAB-Zustimmungszeichenfolge mit Zeitstempel verwendet wird, um Zustimmungsänderungen im Laufe der Zeit zu verfolgen.
+[!UICONTROL IAB TCF 2.0-Zustimmung] ist eine Standardschemafeldgruppe für die [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) wird verwendet, um IAB-Zustimmungszeichenfolgen mit Zeitstempel zu erfassen, um Zustimmungsänderungen im Laufe der Zeit zu verfolgen.
 
 ![](../../images/field-groups/iab-event.png)
 
@@ -32,7 +32,7 @@ ht-degree: 2%
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zum Anwendungsfall dieser Feldergruppe finden Sie im Handbuch zur [IAB TCF 2.0-Unterstützung in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) . Weitere Informationen zur Feldergruppe selbst finden Sie im öffentlichen XDM-Repository:
+Siehe Handbuch unter [IAB TCF 2.0-Unterstützung in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) für weitere Informationen zum Anwendungsfall dieser Feldergruppe. Weitere Informationen zur Feldgruppe selbst finden Sie im öffentlichen XDM-Repository:
 
 * [Ausgefülltes Beispiel](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Vollständiges Schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

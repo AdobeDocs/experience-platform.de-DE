@@ -3,9 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; OneTrust
 solution: Experience Platform
 title: (Beta) Erstellen eines Datenflusses für eine OneTrust-Integrationsquelle mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API eine Verbindung zwischen Adobe Experience Platform und OneTrust-Integration herstellen.
-source-git-commit: adefaeb895c91d45727f791b73b73a17a2b1ccf9
+exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2317'
+source-wordcount: '2313'
 ht-degree: 75%
 
 ---
@@ -6794,7 +6795,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) durchgeführt wird.
+Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
 Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../../../xdm/api/schemas.md).
 
@@ -7786,4 +7787,3 @@ curl -X DELETE \
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
 Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Verbindung stellen.
-

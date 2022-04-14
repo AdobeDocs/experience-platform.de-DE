@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
-title: Vorlage für Dokumentations-Self-Service
+title: Dokumentationsvorlage für Self-Service
 topic-legacy: tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit YOURSOURCE verbinden.
 hide: true
 hidefromtoc: true
 exl-id: c6927a71-3721-461e-9752-8ebc0b7b1cca
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 74ef1b3abb90ab3ca24690c88c073083f02a2f1b
 workflow-type: tm+mt
-source-wordcount: '2300'
-ht-degree: 7%
+source-wordcount: '2296'
+ht-degree: 75%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 7%
 
 Das folgende Tutorial führt Sie durch die Schritte zum Erstellen einer *YOURSOURCE* Quellverbindung und Erstellen eines Datenflusses zum *YOURSOURCE* Daten an Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-### Basisverbindung erstellen {#base-connection}
+### Erstellen einer Basisverbindung {#base-connection}
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
@@ -87,13 +87,13 @@ curl -X POST \
 | --- | --- |
 | `name` | Der Name Ihrer Basisverbindung. Stellen Sie sicher, dass der Name Ihrer Basisverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Basisverbindung nachschlagen können. |
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Basisverbindung bereitzustellen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über das [!DNL Flow Service] API. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID Ihrer Quelle. Diese ID kann abgerufen werden, nachdem Ihre Quelle registriert und über die [!DNL Flow Service]-API genehmigt wurde. |
 | `auth.specName` | Der Authentifizierungstyp, mit dem Sie Ihre Quelle für Platform authentifizieren. |
 | `auth.params.` | Enthält die Anmeldeinformationen, die zum Authentifizieren Ihrer Quelle erforderlich sind. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschließlich der eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um die Dateistruktur und Inhalte Ihrer Quelle im nächsten Schritt zu untersuchen.
+Eine erfolgreiche Antwort gibt die neu erstellte Basisverbindung zurück, einschließlich ihrer eindeutigen Verbindungskennung (`id`). Diese ID ist erforderlich, um die Dateistruktur und Inhalte Ihrer Quelle im nächsten Schritt zu untersuchen.
 
 ```json
 {
@@ -102,9 +102,9 @@ Bei einer erfolgreichen Antwort wird die neu erstellte Basisverbindung einschlie
 }
 ```
 
-### Quelle durchsuchen {#explore}
+### Durchsuchen der Quelle {#explore}
 
-Mithilfe der im vorherigen Schritt generierten Basis-Verbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
+Mithilfe der im vorherigen Schritt generierten Basisverbindungs-ID können Sie Dateien und Ordner durch Ausführen von GET-Anfragen untersuchen.
 Verwenden Sie die folgenden Aufrufe, um den Pfad der Datei zu finden, die in integriert werden soll [!DNL Platform]:
 
 **API-Format**
@@ -118,12 +118,12 @@ Bei der Durchführung von GET-Anfragen zur Analyse der Dateistruktur und des Inh
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basis-Verbindungs-ID. |
+| `{BASE_CONNECTION_ID}` | Die im vorherigen Schritt generierte Basisverbindungs-ID. |
 | `objectType=rest` | Der Typ des Objekts, das Sie untersuchen möchten. Derzeit ist dieser Wert immer auf `rest`. |
 | `{OBJECT}` | Dieser Parameter ist nur beim Anzeigen eines bestimmten Ordners erforderlich. Der Wert stellt den Pfad des Ordners dar, den Sie untersuchen möchten. |
 | `fileType=json` | Der Dateityp der Datei, die Sie in Platform laden möchten. Zurzeit `json` ist der einzige unterstützte Dateityp. |
-| `{PREVIEW}` | Ein boolean -Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
-| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. So rufen Sie den akzeptierten Formattyp für ab: `{SOURCE_PARAMS}`, müssen Sie die gesamte `list_id` Zeichenfolge in base64. Im folgenden Beispiel: `"list_id": "10c097ca71"` kodiert in base64 entspricht `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
+| `{PREVIEW}` | Ein boolescher Wert, der definiert, ob der Inhalt der Verbindung die Vorschau unterstützt. |
+| `{SOURCE_PARAMS}` | Definiert Parameter für die Quelldatei, die Sie in Platform laden möchten. Um den akzeptierten Formattyp für `{SOURCE_PARAMS}` abzurufen, müssen Sie die gesamte Zeichenfolge `list_id` in base64 kodieren. Im folgenden Beispiel: `"list_id": "10c097ca71"` kodiert in base64 entspricht `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=`. |
 
 
 **Anfrage**
@@ -226,9 +226,9 @@ Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei zurück.
 }
 ```
 
-### Quellverbindung erstellen {#source-connection}
+### Erstellen einer Quellverbindung {#source-connection}
 
-Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
 
 **API-Format**
 
@@ -272,11 +272,11 @@ curl -X POST \
 | `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen über Ihre Quellverbindung bereitzustellen. |
 | `baseConnectionId` | Die Basisverbindungs-ID von *YOURSOURCE*. Diese ID wurde in einem früheren Schritt generiert. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer Quelle entspricht. |
-| `data.format` | Das Format der *YOURSOURCE* -Daten, die Sie erfassen möchten. Derzeit wird nur das Datenformat `json`. |
+| `data.format` | Das Format der *YOURSOURCE* -Daten, die Sie erfassen möchten. Derzeit wird nur das Datenformat `json` unterstützt. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -289,21 +289,21 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind.
 
-Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema Registry-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+Ein Ziel-XDM-Schema kann erstellt werden, indem eine POST-Anfrage an die [Schema-Registrierungs-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) durchgeführt wird.
 
-Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zu [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 
-### Zieldatensatz erstellen {#target-dataset}
+### Erstellen eines Zieldatensatzes {#target-dataset}
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), wodurch die ID des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
 ### Erstellen einer Zielverbindung {#target-connection}
 
-Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die ID der Festnetzverbindungsspezifikation angeben, die dem [!DNL Data Lake]. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Eine Zielverbindung stellt die Verbindung zum Ziel dar, an dem die aufgenommenen Daten gespeichert werden sollen. Um eine Zielverbindung zu erstellen, müssen Sie die feste Verbindungsspezifikations-ID angeben, die [!DNL Data Lake] entspricht. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Sie verfügen jetzt über die eindeutigen Kennungen eines Zielschemas und eines Zieldatensatzes sowie über die Kennung der Verbindungsspezifikation für die [!DNL Data Lake]. Mithilfe dieser Kennungen können Sie mithilfe der [!DNL Flow Service] API zum Angeben des Datensatzes, der die eingehenden Quelldaten enthält.
+Sie haben jetzt die eindeutigen Kennungen, ein Zielschema, einen Zieldatensatz und die Verbindungsspezifikations-ID für [!DNL Data Lake]. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -342,15 +342,15 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `name` | Der Name Ihrer Zielverbindung. Stellen Sie sicher, dass der Name Ihrer Zielverbindung beschreibend ist, da Sie damit Informationen zu Ihrer Zielverbindung nachschlagen können. |
-| `description` | Ein optionaler Wert, den Sie angeben können, um weitere Informationen zu Ihrer Zielverbindung bereitzustellen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die [!DNL Data Lake]. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `description` | Ein optionaler Wert, den Sie für weitere Informationen zu Ihrer Zielverbindung angeben können. |
+| `connectionSpec.id` | Die Spezifikations-ID der Verbindung, die [!DNL Data Lake] entspricht. Diese feste ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Das Format der *YOURSOURCE* Daten, die Sie an Platform übermitteln möchten. |
-| `params.dataSetId` | Die Ziel-Datensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
+| `params.dataSetId` | Die Zieldatensatz-ID, die in einem vorherigen Schritt abgerufen wurde. |
 
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`). Diese ID ist in späteren Schritten erforderlich.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung an (`id`). Diese ID ist in späteren Schritten erforderlich.
 
 ```json
 {
@@ -361,7 +361,7 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (
 
 ### Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht. Dies wird erreicht, indem eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen, die in der Anfrage-Payload definiert sind.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört. Dies wird erreicht, indem eine POST-Anfrage an [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) mit Datenzuordnungen, die in der Anfrage-Payload definiert sind.
 
 **API-Format**
 
@@ -415,14 +415,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `xdmSchema` | Die ID der [Ziel-XDM-Schema](#target-schema) in einem früheren Schritt generiert wurde. |
+| `xdmSchema` | Die ID des [Ziel-XDM-Schema](#target-schema), die in einem früheren Schritt generiert wurde. |
 | `mappings.destinationXdmPath` | Der Ziel-XDM-Pfad, dem das Quellattribut zugeordnet wird. |
 | `mappings.sourceAttribute` | Das Quellattribut, das einem Ziel-XDM-Pfad zugeordnet werden muss. |
-| `mappings.identity` | Ein boolean -Wert, der angibt, ob der Zuordnungssatz als [!DNL Identity Service]. |
+| `mappings.identity` | Ein boolescher Wert, der angibt, ob der Zuordnungssatz für [!DNL Identity Service] markiert wird. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, einschließlich der eindeutigen Kennung (`id`). Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung an, einschließlich der eindeutigen Kennung (`id`). Dieser Wert ist in einem späteren Schritt zum Erstellen eines Datenflusses erforderlich.
 
 ```json
 {
@@ -435,17 +435,17 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, ein
 }
 ```
 
-### Erstellen eines Workflows {#flow}
+### Erstellen eines Flusses {#flow}
 
-Der letzte Schritt zur Datenübermittlung von *YOURSOURCE* in Platform einen Datenfluss erstellen. Jetzt sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt zur Datenübermittlung von *YOURSOURCE* in Platform einen Datenfluss erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 * [Quellverbindungs-ID](#source-connection)
-* [Target-Verbindungs-ID](#target-connection)
-* [Mapping-ID](#mapping)
+* [Zielverbindungs-ID](#target-connection)
+* [Zuordnungs-ID](#mapping)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
-Um eine Aufnahme zu planen, müssen Sie zunächst den Startzeitwert auf Epochenzeit in Sekunden festlegen. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day`oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Erfassungsschritten an. Für die Erstellung einer einmaligen Erfassung ist jedoch kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15`.
+Um eine Aufnahme zu planen, legen Sie zunächst den Startzeitwert auf die Epochenzeit in Sekunden fest. Anschließend müssen Sie den Frequenzwert auf eine der fünf Optionen festlegen: `once`, `minute`, `hour`, `day` oder `week`. Der Intervallwert gibt den Zeitraum zwischen zwei aufeinander folgenden Erfassungsschritten an. Für die Erstellung einer einmaligen Erfassung ist jedoch kein Intervall erforderlich. Für alle anderen Frequenzen muss der Intervallwert auf gleich oder größer als `15` festgelegt werden.
 
 
 **API-Format**
@@ -495,23 +495,23 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss nachschlagen können. |
+| `name` | Der Name Ihres Datenflusses. Stellen Sie sicher, dass der Name Ihres Datenflusses beschreibend ist, da Sie damit Informationen zu Ihrem Datenfluss suchen können. |
 | `description` | Ein optionaler Wert, den Sie hinzufügen können, um weitere Informationen zu Ihrem Datenfluss bereitzustellen. |
 | `flowSpec.id` | Die Flussspezifikations-ID, die zum Erstellen eines Datenflusses erforderlich ist. Diese feste ID lautet: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
-| `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert wird standardmäßig auf `1.0`. |
-| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source-connection) in einem früheren Schritt generiert wurde. |
-| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection) in einem früheren Schritt generiert wurde. |
+| `flowSpec.version` | Die entsprechende Version der Flussspezifikations-ID. Dieser Wert ist standardmäßig auf `1.0` festgelegt. |
+| `sourceConnectionIds` | Die [Quellverbindungs-ID](#source-connection), die in einem früheren Schritt generiert wurde. |
+| `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt generiert wurde. |
 | `transformations` | Diese Eigenschaft enthält die verschiedenen Umwandlungen, die auf Ihre Daten angewendet werden müssen. Diese Eigenschaft ist erforderlich, wenn nicht-XDM-konforme Daten an Platform übermittelt werden. |
-| `transformations.name` | Der der Transformation zugewiesene Name. |
-| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping) in einem früheren Schritt generiert wurde. |
-| `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert wird standardmäßig auf `0`. |
+| `transformations.name` | Der Name, der der Transformation zugewiesen wurde. |
+| `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt generiert wurde. |
+| `transformations.params.mappingVersion` | Die entsprechende Version der Zuordnungs-ID. Dieser Wert ist standardmäßig auf `0` festgelegt. |
 | `scheduleParams.startTime` | Diese Eigenschaft enthält Informationen zur Erfassungszeitplanung des Datenflusses. |
-| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day`oder `week`. |
-| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinander folgenden Durchsatzausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` und sollte größer oder gleich sein als `15` für andere Frequenzwerte. |
+| `scheduleParams.frequency` | Die Häufigkeit, mit der der Datenfluss Daten erfasst. Zulässige Werte sind: `once`, `minute`, `hour`, `day` oder `week`. |
+| `scheduleParams.interval` | Das Intervall bezeichnet den Zeitraum zwischen zwei aufeinanderfolgenden Datenflussausführungen. Der Wert des Intervalls sollte eine Ganzzahl ungleich null sein. Das Intervall ist nicht erforderlich, wenn die Häufigkeit auf `once` festgelegt ist, und sollte größer oder gleich `15` für andere Frequenzwerte sein. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses. Mit dieser ID können Sie Ihren Datenfluss überwachen, aktualisieren oder löschen.
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses angegeben. Mit dieser ID können Sie Ihren Datenfluss überwachen, aktualisieren oder löschen.
 
 ```json
 {
@@ -522,7 +522,7 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses. Mi
 
 ### Überwachen Ihres Datenflusses
 
-Nachdem Ihr Datenfluss erstellt wurde, können Sie die erfassten Daten überwachen, um Informationen über die Durchsatzausführungen, den Abschlussstatus und Fehler anzuzeigen.
+Nachdem Ihr Datenfluss erstellt wurde, können Sie die Datenaufnahme überwachen, um Informationen über die Datenflussausführungen, den Abschlussstatus und Fehler anzuzeigen.
 
 **API-Format**
 
@@ -545,7 +545,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurückgegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung der Flussausführung (`id`).
+Bei einer erfolgreichen Antwort werden Details zu Ihrem Flussvorgang angegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung des Flussvorgangs (`id`).
 
 ```json
 {
@@ -709,22 +709,22 @@ Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurück
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `items` | Enthält eine einzige Payload von Metadaten, die mit Ihrem spezifischen Flusslauf verknüpft sind. |
-| `metrics` | Definiert die Eigenschaften der Daten im Durchfluss. |
+| `items` | Enthält eine einzige Payload von Metadaten, die mit Ihrer spezifischen Datenflussausführung verknüpft sind. |
+| `metrics` | Definiert die Eigenschaften der Daten in der Flussausführung. |
 | `activities` | Definiert, wie die Daten transformiert werden. |
 | `durationSummary` | Definiert die Start- und Endzeit des Durchlaufs. |
 | `sizeSummary` | Definiert das Volumen der Daten in Byte. |
-| `recordSummary` | Definiert die Datensatzanzahl der Daten. |
+| `recordSummary` | Definiert die Anzahl der Datensätze. |
 | `fileSummary` | Definiert die Dateianzahl der Daten. |
-| `statusSummary` | Definiert, ob die Flussausführung ein Erfolg oder ein Fehler ist. |
+| `statusSummary` | Definiert, ob die Flussausführung erfolgreich oder fehlgeschlagen ist. |
 
-### Datenfluss aktualisieren
+### Aktualisieren des Datenflusses
 
-Führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Angabe Ihrer Fluss-ID, Version und des neuen Zeitplans, den Sie verwenden möchten.
+Um den Ausführungsplan, Namen und die Beschreibung Ihres Datenflusses zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Fluss-ID, Version und den neuen Zeitplan an, den Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist das eindeutige Tag des Datenflusses, den Sie aktualisieren möchten.
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist das eindeutige Tag des Datenflusses, den Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -765,13 +765,13 @@ curl -X PATCH \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Vorgangsaufruf, mit dem die zum Aktualisieren des Datenflusses erforderliche Aktion definiert wird. Operationen umfassen: `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Fluss-ID.
+Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Fluss-ID angeben.
 
 ```json
 {
@@ -780,9 +780,9 @@ Bei einer erfolgreichen Antwort werden Ihre Fluss-ID und ein aktualisiertes eTag
 }
 ```
 
-### Datenfluss löschen
+### Löschen des Datenflusses
 
-Mit einer vorhandenen Fluss-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service] API.
+Mit einer vorhandenen Fluss-ID können Sie einen Datenfluss löschen, indem Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API stellen.
 
 **API-Format**
 
@@ -792,7 +792,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Die eindeutige `id` für den Datenfluss, den Sie löschen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id`-Wert für den Datenfluss, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -807,15 +807,15 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für den Datenfluss ausführen. Die API gibt einen HTTP 404-Fehler (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
+Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück. Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an den Datenfluss stellen. Die API gibt den HTTP-Fehler 404 (Nicht gefunden) zurück, der angibt, dass der Datenfluss gelöscht wurde.
 
-### Verbindung aktualisieren
+### Aktualisieren der Verbindung
 
-Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service] API bei der Bereitstellung Ihrer Basis-Verbindungs-ID, -Version und der neuen Informationen, die Sie verwenden möchten.
+Um den Namen, die Beschreibung und die Anmeldeinformationen Ihrer Verbindung zu aktualisieren, führen Sie eine PATCH-Anfrage an die [!DNL Flow Service]-API aus und geben Sie dabei Ihre Basisverbindungs-ID, -Version und die neuen Informationen an, die Sie verwenden möchten.
 
 >[!IMPORTANT]
 >
->Die `If-Match` -Kopfzeile ist bei einer PATCH-Anfrage erforderlich. Der Wert für diesen Header ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
+>Die Kopfzeile `If-Match` ist bei einer PATCH-Anfrage erforderlich. Der Wert für diese Kopfzeile ist die eindeutige Version der Verbindung, die Sie aktualisieren möchten.
 
 **API-Format**
 
@@ -825,7 +825,7 @@ PATCH /connections/{BASE_CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Die eindeutige `id` für die Verbindung, die Sie aktualisieren möchten. |
+| `{BASE_CONNECTION_ID}` | Der eindeutige `id`-Wert für die Verbindung, die Sie aktualisieren möchten. |
 
 **Anfrage**
 
@@ -864,13 +864,13 @@ curl -X PATCH \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `op` | Der Operationsaufruf, der für die Definition der zum Aktualisieren der Verbindung erforderlichen Aktion verwendet wird. Operationen umfassen: `add`, `replace` und `remove`. |
+| `op` | Der Operationsaufruf, der für die Definition der zum Aktualisieren der Verbindung erforderlichen Aktion verwendet wird. Die Operationen umfassen `add`, `replace` und `remove`. |
 | `path` | Der Pfad des zu aktualisierenden Parameters. |
 | `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Ihre Basis-Verbindungs-ID und ein aktualisiertes eTag zurückgegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service] API bei gleichzeitiger Angabe Ihrer Verbindungs-ID.
+Bei einer erfolgreichen Antwort werden Ihre Basisverbindungs-ID und ein aktualisiertes E-Tag angegeben. Sie können die Aktualisierung überprüfen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API stellen und dabei Ihre Verbindungs-ID angeben.
 
 ```json
 {
@@ -879,9 +879,9 @@ Bei einer erfolgreichen Antwort werden Ihre Basis-Verbindungs-ID und ein aktuali
 }
 ```
 
-### Verbindung löschen
+### Löschen Ihrer Verbindung
 
-Nachdem Sie über eine bestehende Basis-Verbindungs-ID verfügen, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service] API.
+Nachdem Sie über eine bestehende Basisverbindungs-ID verfügen, führen Sie eine DELETE-Anfrage an die [!DNL Flow Service]-API durch.
 
 **API-Format**
 
@@ -891,7 +891,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Die eindeutige `id` für die Basisverbindung, die Sie löschen möchten. |
+| `{BASE_CONNECTION_ID}` | Der eindeutige `id`-Wert für die Basisverbindung, die Sie löschen möchten. |
 
 **Anfrage**
 
@@ -908,4 +908,4 @@ curl -X DELETE \
 
 Eine erfolgreiche Antwort gibt den HTTP-Status 204 (Kein Inhalt) und leeren Text zurück.
 
-Sie können den Löschvorgang bestätigen, indem Sie eine Nachschlageanfrage (GET) für die Verbindung ausführen.
+Sie können den Löschvorgang bestätigen, indem Sie eine Suchanfrage (GET) an die Verbindung stellen.
