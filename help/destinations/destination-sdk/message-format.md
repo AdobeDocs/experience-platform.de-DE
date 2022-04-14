@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 468b9309c5184684c0b25c2656a9eef37715af53
+source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
 workflow-type: tm+mt
-source-wordcount: '1981'
-ht-degree: 2%
+source-wordcount: '2266'
+ht-degree: 3%
 
 ---
 
@@ -41,18 +41,15 @@ Users who want to activate data to your destination need to map the fields in th
 
 -->
 
-**Quell-XDM-Schema (1)**: Dieses Element bezieht sich auf das Schema, das Kunden in Experience Platform verwenden. In Experience Platform im [Zuordnungsschritt](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) des Workflows Ziel aktivieren, ordnen Kunden Felder aus ihrem Quellschema dem Zielschema Ihres Ziels zu (2).
+**Quell-XDM-Schema (1)**: Dieses Element bezieht sich auf das Schema, das Kunden in Experience Platform verwenden. In Experience Platform im [Zuordnungsschritt](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) des Workflows &quot;Ziel aktivieren&quot;können Kunden Felder aus ihrem XDM-Schema dem Zielschema Ihres Ziels zuordnen (2).
 
-**Target-XDM-Schema (2)**: Basierend auf dem JSON-Standardschema (3) des erwarteten Formats Ihres Ziels können Sie Profilattribute und Identitäten in Ihrem Ziel-XDM-Schema definieren. Dies können Sie in der Zielkonfiguration im Abschnitt [schemaConfig](./destination-configuration.md#schema-configuration) und [identityNamespaces](./destination-configuration.md#identities-and-attributes) Objekte.
+**Target-XDM-Schema (2)**: Basierend auf dem JSON-Standardschema (3) des erwarteten Formats Ihres Ziels und den Attributen, die Ihr Ziel interpretieren kann, können Sie Profilattribute und Identitäten in Ihrem Ziel-XDM-Schema definieren. Dies können Sie in der Zielkonfiguration im Abschnitt [schemaConfig](./destination-configuration.md#schema-configuration) und [identityNamespaces](./destination-configuration.md#identities-and-attributes) Objekte.
 
-**JSON-Standardschema Ihrer Zielprofilattribute (3)**: Dieses Element stellt eine [JSON-Schema](https://json-schema.org/learn/miscellaneous-examples.html) der von Ihrer Plattform unterstützten Profilattribute und der zugehörigen Typen (z. B.: -Objekt, -Zeichenfolge, -Array). Beispielfelder, die Ihr Ziel unterstützen könnte `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`usw. Sie benötigen eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) , um die aus der Experience Platform exportierten Daten an das gewünschte Format anzupassen.
+**JSON-Standardschema Ihrer Zielprofilattribute (3)**: Dieses Beispiel stellt eine [JSON-Schema](https://json-schema.org/learn/miscellaneous-examples.html) der von Ihrer Plattform unterstützten Profilattribute und der zugehörigen Typen (z. B.: -Objekt, -Zeichenfolge, -Array). Beispielfelder, die Ihr Ziel unterstützen könnte `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`usw. Sie benötigen eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) , um die aus der Experience Platform exportierten Daten an das gewünschte Format anzupassen.
 
 Basierend auf den oben beschriebenen Schematransformationen wird hier gezeigt, wie sich eine Profilkonfiguration zwischen dem Quell-XDM-Schema und einem Beispielschema auf der Partnerseite ändert:
 
 ![Beispiel einer Umwandlungsmeldung](./assets/transformations-with-examples.png)
-
-<br> 
-
 
 ## Erste Schritte - Transformieren von drei grundlegenden Attributen {#getting-started}
 
@@ -87,9 +84,79 @@ In Bezug auf das Nachrichtenformat lauten die entsprechenden Umwandlungen wie fo
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
+## Profilstruktur in Experience Platform {#profile-structure}
+
+Um die unten aufgeführten Beispiele auf der Seite zu verstehen, müssen Sie die Profilstruktur in Experience Platform kennen.
+
+Profile haben drei Bereiche:
+
+* `segmentMembership` (immer in einem Profil vorhanden)
+   * Dieser Abschnitt enthält alle Segmente, die im Profil vorhanden sind. Die Segmente können einen von drei Status aufweisen: `realized`, `existing`, `exited`.
+* `identityMap` (immer in einem Profil vorhanden)
+   * Dieser Abschnitt enthält alle Identitäten, die im Profil vorhanden sind (E-Mail, Google GAID, Apple IDFA usw.) und die der Benutzer für den Export im Aktivierungs-Workflow zugeordnet hat.
+* -Attribute (je nach Zielkonfiguration können diese im Profil vorhanden sein). Es gibt auch einen geringfügigen Unterschied zwischen vordefinierten Attributen und Freiformattributen:
+   * für *Freiformattribute* enthalten, enthalten diese `.value` Pfad, wenn das Attribut im Profil vorhanden ist (siehe `lastName` -Attribut aus Beispiel 1). Wenn sie nicht im Profil vorhanden sind, enthalten sie nicht die `.value` path (siehe `firstName` -Attribut aus Beispiel 1).
+   * für *vordefinierte Attribute* enthalten, enthalten diese keine `.value` Pfad. Alle zugeordneten Attribute, die in einem Profil vorhanden sind, werden in der Attributzuordnung angezeigt. Die nicht vorhandenen werden nicht vorhanden sein (siehe Beispiel 2 - `firstName` -Attribut nicht im Profil vorhanden ist).
+
+Siehe zwei Beispiele für Profile in Experience Platform:
+
+### Beispiel 1 mit `segmentMembership`, `identityMap` und -Attribute für Freiformattribute {#example-1}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "firstName": {
+    },
+    "lastName": {
+      "value": "lastName"
+    }
+  }
+}
+```
+
+### Beispiel 2 mit `segmentMembership`, `identityMap` und Attribute für vordefinierte Attribute {#example-2}
+
+```json
+{
+  "segmentMembership": {
+    "ups": {
+      "11111111-1111-1111-1111-111111111111": {
+        "lastQualificationTime": "2019-04-15T02:41:50.000+0000",
+        "status": "existing"
+      }
+    }
+  },
+  "identityMap": {
+    "mobileIds": [
+      {
+        "id": "e86fb215-0921-4537-bc77-969ff775752c"
+      }
+    ]
+  },
+  "attributes": {
+    "lastName": "lastName"
+  }
+}
+```
+
 ## Verwenden einer Vorlagensprache für die Transformationen von Identitäten, Attributen und Segmentzugehörigkeiten {#using-templating}
 
-Adobe verwendet eine Vorlagensprache, die der folgenden ähnelt: [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) , um die Felder aus dem XDM-Schema in ein Format umzuwandeln, das von Ihrem Ziel unterstützt wird.
+Verwendung von Adoben [Kiesvorlagen](https://pebbletemplates.io/), eine Vorlagensprache, die der [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), um die Felder aus dem Experience Platform-XDM-Schema in ein von Ihrem Ziel unterstütztes Format umzuwandeln.
 
 In diesem Abschnitt finden Sie mehrere Beispiele dafür, wie diese Umwandlungen vorgenommen werden - vom Eingabe-XDM-Schema über die Vorlage und die Ausgabe in Payload-Formaten, die von Ihrem Ziel akzeptiert werden. Die folgenden Beispiele werden durch zunehmende Komplexität dargestellt:
 
@@ -180,7 +247,7 @@ Profil 2:
 }
 ```
 
-### Segmentmitgliedschaft {#segment-membership}
+### Segmentzugehörigkeit {#segment-membership}
 
 Die [segmentMembership](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en) Das XDM-Attribut informiert darüber, zu welchen Segmenten ein Profil gehört.
 Für die drei verschiedenen Werte im `status` -Feld, lesen Sie die Dokumentation unter [Feldergruppe Segmentzugehörigkeitsdetails](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html).
@@ -947,10 +1014,10 @@ customerList={{input.aggregationKey.segmentAlias}}
 
 Wenn Sie [konfigurierbare Aggregation](./destination-configuration.md#configurable-aggregation) und `includeSegmentId` und `includeSegmentStatus` auf &quot;true&quot;gesetzt ist, können Sie auf den Segmentstatus in der Vorlage zugreifen. Auf diese Weise können Sie Profile in den an Ihr Ziel exportierten HTTP-Nachrichten gruppieren, je nachdem, ob die Profile hinzugefügt oder aus Segmenten entfernt werden sollen.
 
-Mögliche Werte:
+Mögliche Werte sind:
 
 * realisiert
-* vorhandene
+* vorhanden
 * beendet
 
 Fügen Sie der Vorlage die folgende Zeile hinzu, um Profile aus Segmenten hinzuzufügen oder daraus zu entfernen, basierend auf den oben stehenden Werten:
@@ -1129,12 +1196,10 @@ Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Be
 | `addedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `realized` oder `existing`. |
 | `removedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `exited`. |
 
-<!--
+## Nächste Schritte {#next-steps}
 
-## What Adobe needs from you to set up your destination {#what-adobe-needs}
+Nach dem Lesen dieses Dokuments wissen Sie jetzt, wie aus Experience Platform exportierte Daten transformiert werden. Lesen Sie als Nächstes die folgenden Seiten, um Ihre Kenntnisse über die Erstellung von Vorlagen zur Nachrichtenumwandlung für Ihr Ziel zu vervollständigen:
 
-Based on the transformations outlined in the sections above, Adobe needs the following information to set up your destination:
-
-* Considering *all* the fields that your platform can receive, Adobe needs the standard JSON schema that corresponds to your expected message format. Having the template allows Adobe to define transformations and to create a custom XDM schema for your company, which customers would use to export data to your destination.
-
--->
+* [Erstellen und Testen einer Nachrichten-Umwandlungsvorlage](/help/destinations/destination-sdk/create-template.md)
+* [API-Vorgänge für Rendervorlagen](/help/destinations/destination-sdk/render-template-api.md)
+* [Unterstützte Umwandlungsfunktionen in Destination SDK](/help/destinations/destination-sdk/supported-functions.md)

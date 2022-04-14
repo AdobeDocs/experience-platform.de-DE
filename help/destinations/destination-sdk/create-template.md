@@ -1,19 +1,19 @@
 ---
-description: Als Teil von Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Vorlage für die Nachrichtenumwandlung erstellen und testen.
-title: Erstellen und Testen einer Nachrichtenumwandlungsvorlage
+description: Als Teil der Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Vorlage für die Nachrichtenumwandlung erstellen und testen.
+title: Erstellen und Testen einer Nachrichten-Umwandlungsvorlage
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: aa5898369d41ba48a1416a0b4ea82f6345333d18
+source-git-commit: 97ffaa2a53dbbf5a7be5f002e63be4ed3339f565
 workflow-type: tm+mt
-source-wordcount: '947'
-ht-degree: 0%
+source-wordcount: '960'
+ht-degree: 2%
 
 ---
 
-# Erstellen und Testen einer Nachrichtenumwandlungsvorlage {#create-template}
+# Erstellen und Testen einer Nachrichten-Umwandlungsvorlage {#create-template}
 
 ## Übersicht {#overview}
 
-Als Teil von Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Vorlage für die Nachrichtenumwandlung erstellen und testen. Informationen zum Testen Ihres Ziels finden Sie unter [Testen der Zielkonfiguration](./test-destination.md).
+Als Teil der Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie eine Vorlage für die Nachrichtenumwandlung erstellen und testen. Informationen zum Testen Ihres Ziels finden Sie unter [Testen der Zielkonfiguration](./test-destination.md).
 
 nach **Erstellen und Testen einer Nachrichtenumwandlungsvorlage** zwischen dem Zielschema in Adobe Experience Platform und dem von Ihrem Ziel unterstützten Nachrichtenformat, verwenden Sie die *Authoring-Tool für Vorlagen* weiter unten beschrieben.  Weitere Informationen zur Datenumwandlung zwischen Quell- und Zielschema finden Sie im Abschnitt [Nachrichtenformat-Dokument](./message-format.md#using-templating).
 
@@ -40,6 +40,7 @@ Bevor Sie bereit sind, die Vorlage zu erstellen, führen Sie die folgenden Schri
    * Verwendung `maxUsersPerRequest` einen Wert größer als 1 haben, wenn Sie möchten, dass ein API-Aufruf an Ihr Ziel mehrere Profile sowie deren Segmentqualifikationen, Identitäten und Profilattribute enthält.
 2. [Erstellen einer Zielkonfiguration](./destination-configuration-api.md#create) und fügen Sie die ID der Zielserverkonfiguration in `destinationDelivery.destinationServerId`.
 3. [ID der Zielkonfiguration abrufen](./destination-configuration-api.md#retrieve-list) die Sie gerade erstellt haben, sodass Sie sie im Tool zur Vorlagenerstellung verwenden können.
+4. Grundlegendes [Welche Funktionen und Filter können Sie verwenden](./supported-functions.md) in der Nachrichtenumwandlungsvorlage.
 
 ## Verwendung der API für Beispielvorlagen und Rendering-Vorlagen-API zum Erstellen einer Vorlage für Ihr Ziel {#iterative-process}
 
