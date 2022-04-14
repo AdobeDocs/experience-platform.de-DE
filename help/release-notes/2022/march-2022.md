@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 8d0f39dff6b047d21d4dff17005405fc83941961
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 24%
+source-wordcount: '1193'
+ht-degree: 27%
 
 ---
 
@@ -30,14 +30,14 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 ## Auditprotokolle {#audit-logs}
 
-Mit Experience Platform können Sie die Benutzeraktivität für verschiedene Dienste und Funktionen überprüfen. The audit logs provide information about who did what and when.
+Mit Experience Platform können Sie die Benutzeraktivität für verschiedene Dienste und Funktionen überprüfen. Die Prüfprotokolle enthalten Informationen darüber, wer wann was getan hat.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
 | Prüfprotokolle für Datensatz, Schema, Klasse, Feldergruppe, Datentyp, Sandbox, Ziel, Segment, Zusammenführungsrichtlinie, berechnetes Attribut, Produktprofil und Konto (Adobe) | Dies sind die Ressourcen, die von Prüfprotokollen aufgezeichnet werden. Wenn die Funktion aktiviert ist, werden die Prüfprotokolle automatisch erfasst, sobald eine Aktivität stattfindet. Sie müssen die Protokollerfassung nicht manuell aktivieren. |
-| Export audit logs | The audit logs can be downloaded as a `CSV` or `JSON` file. The generated files are saved directly to your machine. |
+| Audit-Protokolle exportieren | Die Prüfprotokolle können als `CSV` oder `JSON` -Datei. Die erzeugten Dateien werden direkt auf Ihrem Computer gespeichert. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -49,7 +49,7 @@ Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Absc
 >
 >Die Funktion &quot;Ähnliche Konten&quot;ist nur für Kunden der Real-Time CDP B2B Edition verfügbar.
 
-B2B enterprises often have their customer information stored in multiple systems, each including only partial or even conflicting data for the same real-world business entity. Dies stellt eine enorme Herausforderung dar, eine genaue Ansicht der Kunden zu erhalten und so die Effizienz und Effektivität ihrer B2B-Marketing- und Verkaufsaktivitäten zu reduzieren. With the release of related accounts, [!DNL Real-time CDP B2B] now shows you a list of accounts that are similar to the account you are browsing. Sie können die zugehörigen Konten in Ihre Segmentdefinitionen aufnehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren Segmenten anzuwenden.
+B2B-Unternehmen haben häufig ihre Kundeninformationen in mehreren Systemen gespeichert, von denen jede nur teilweise oder sogar widersprüchliche Daten für dieselbe reale Geschäftseinheit enthält. Dies stellt eine enorme Herausforderung dar, eine genaue Ansicht der Kunden zu erhalten und so die Effizienz und Effektivität ihrer B2B-Marketing- und Verkaufsaktivitäten zu reduzieren. Mit der Freigabe der entsprechenden Konten [!DNL Real-time CDP B2B] zeigt Ihnen jetzt eine Liste von Konten an, die dem Konto, das Sie durchsuchen, ähnlich sind. Sie können die zugehörigen Konten in Ihre Segmentdefinitionen aufnehmen, um Ihre Reichweite zu erweitern oder umfassendere Kriterien in Ihren Segmenten anzuwenden.
 
 Weitere Informationen zur Funktion finden Sie auf den folgenden Dokumentationsseiten:
 
@@ -67,7 +67,7 @@ Mit Experience Platform können Sie ereignisbasierte Warnhinweise zu Adobe Exper
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Warnhinweisregeln | Two new alert rules are now available for sources related to data ingestion. Die aktualisierte Liste der Warnhinweistypen finden Sie in der Übersicht zu [Warnhinweisregeln](../../observability/alerts/rules.md). |
+| Neue Warnhinweisregeln | Für Quellen, die mit der Datenerfassung in Verbindung stehen, stehen nun zwei neue Warnhinweisregeln zur Verfügung. Die aktualisierte Liste der Warnhinweistypen finden Sie in der Übersicht zu [Warnhinweisregeln](../../observability/alerts/rules.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -77,7 +77,7 @@ Weitere Informationen zu Warnhinweisen in Platform finden Sie im Abschnitt [Warn
 
 Adobe Experience Platform bietet mehrere [!DNL dashboards] mit dem Sie wichtige Informationen zu den Daten Ihres Unternehmens anzeigen können, wie sie bei täglichen Momentaufnahmen erfasst werden.
 
-### Profile Dashboards
+### Profil-Dashboards
 
 Im Dashboard &quot;Profile&quot;wird eine Momentaufnahme der Attributdaten (Datensatzdaten) angezeigt, die Ihr Unternehmen im Profilspeicher in der Experience Platform hat.
 
@@ -87,14 +87,14 @@ Im Dashboard &quot;Profile&quot;wird eine Momentaufnahme der Attributdaten (Date
 | --- | --- |
 | Widget &quot;Nicht segmentierte Profile&quot; | Das Widget stellt die Gesamtanzahl aller Profile bereit, die an kein Segment angehängt sind. Die generierte Zahl ist ab der letzten Momentaufnahme korrekt und stellt die Möglichkeit zur Profilaktivierung in Ihrer gesamten Organisation dar. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 | Trend-Widget &quot;Nicht segmentierte Profile&quot; | Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht an ein Segment angehängt sind. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
-| Nicht segmentierte Profile nach Identity Widget | Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
-| Widget &quot;Einzelidentitätsprofile&quot; | This widget provides a count of your organization&#39;s profiles that only have one type of ID type that creates their identity, either an email or ECID. See the [profiles standard widgets documentation](../../dashboards/guides/profiles.md#standard-widgets) for more information. |
+| Nicht segmentierte Profile nach Identity Widget | Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
+| Widget &quot;Einzelidentitätsprofile&quot; | Dieses Widget gibt einen Überblick über die Profile Ihrer Organisation, die nur über einen ID-Typ verfügen, der ihre Identität erstellt, entweder eine E-Mail oder eine ECID. Siehe [Dokumentation zu Standard-Widgets für Profile](../../dashboards/guides/profiles.md#standard-widgets) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
 
 Weiterführende Informationen zu Profil-Dashboards finden Sie im Abschnitt [Profil-Dashboards - Übersicht](../../dashboards/guides/profiles.md).
 
-### Destinations Dashboards
+### Ziele-Dashboards
 
 Das Dashboard Ziele zeigt eine Momentaufnahme der Ziele an, die Ihr Unternehmen in Experience Platform aktiviert hat.
 
@@ -102,7 +102,7 @@ Das Dashboard Ziele zeigt eine Momentaufnahme der Ziele an, die Ihr Unternehmen 
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Widget zur Zielanzahl | Das Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. This number includes both active and inactive destinations. Siehe [Dokumentation zum Standard-Widget für Ziele](../../dashboards/guides/destinations.md#standard-widgets) für weitere Informationen. |
+| Widget zur Zielanzahl | Das Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele. Siehe [Dokumentation zum Standard-Widget für Ziele](../../dashboards/guides/destinations.md#standard-widgets) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -110,15 +110,16 @@ Weiterführende Informationen zu Ziel-Dashboards in Platform finden Sie im Absch
 
 ## Datenerfassung {#data-collection}
 
-Platform provides a suite of technologies that allow you to collect client-side customer experience data and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations.
+Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie an Adobe oder andere Ziele weitergegeben, transformiert und verteilt werden können.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
 | Globale Datenspeichereinstellungen | Sie können jetzt beim Konfigurieren eines Datenspeichers mehrere neue globale Einstellungen konfigurieren: Geo-Speicherort, Erstanbieter-ID-Cookie und Synchronisierung der Drittanbieter-ID. Siehe Abschnitt zu [Konfigurieren eines Datenspeichers](../../edge/fundamentals/datastreams.md#configure) Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche von Datastreams . |
+| [Edge Network Server-API](../../server-api/overview.md) | Mit der Server-API können Kunden mithilfe eines neuen, authentifizierten Endpunkts mit dem Experience Platform Edge Network interagieren, um eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing zu unterstützen. |
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
+Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
@@ -156,9 +157,9 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Neue Quellen für die B2B-Nutzung verfügbar | You can now use all the available sources on Platform for B2B use cases. Siehe [Quellkatalog](../../sources/home.md) für eine vollständige Liste der verfügbaren Quellen. |
+| Neue Quellen für die B2B-Nutzung verfügbar | Sie können jetzt alle verfügbaren Quellen in Platform für B2B-Anwendungsfälle verwenden. Siehe [Quellkatalog](../../sources/home.md) für eine vollständige Liste der verfügbaren Quellen. |
 | Allgemeine Verfügbarkeit neuer [!DNL Oracle Eloqua] source | Sie können jetzt die [!DNL Oracle Eloqua] -Quelle, um Daten aus Ihrem [!DNL Oracle Eloqua] -Instanz (Konto, Kampagne, Kontakte) zu Platform. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL Oracle Eloqua] Quellverbindung](../../sources/connectors/marketing-automation/oracle-eloqua.md) für weitere Informationen. |
-| API-Verbesserungen für [!DNL Data Landing Zone] | Die [!DNL Data Landing Zone] -Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der [!DNL Flow Service] API. See the documentation on [creating a [!DNL Data Landing Zone] source connection](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) for more information. |
+| API-Verbesserungen für [!DNL Data Landing Zone] | Die [!DNL Data Landing Zone] -Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der [!DNL Flow Service] API. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL Data Landing Zone] Quellverbindung](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
 

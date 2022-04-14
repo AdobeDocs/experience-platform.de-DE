@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 63c25b1d99e55fae92c3c5e89025ac2bbcff5b03
+source-git-commit: 3f1750d75bd69c5cf47eb593144f564564f90405
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 24%
+source-wordcount: '1193'
+ht-degree: 27%
 
 ---
 
@@ -110,15 +110,16 @@ Weiterführende Informationen zu Ziel-Dashboards in Platform finden Sie im Absch
 
 ## Datenerfassung {#data-collection}
 
-Platform bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert, transformiert und an Ziele außerhalb der Adobe oder der Adobe verteilt werden können.
+Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie an Adobe oder andere Ziele weitergegeben, transformiert und verteilt werden können.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
 | Globale Datenspeichereinstellungen | Sie können jetzt beim Konfigurieren eines Datenspeichers mehrere neue globale Einstellungen konfigurieren: Geo-Speicherort, Erstanbieter-ID-Cookie und Synchronisierung der Drittanbieter-ID. Siehe Abschnitt zu [Konfigurieren eines Datenspeichers](../../edge/fundamentals/datastreams.md#configure) Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche von Datastreams . |
+| [Edge Network Server-API](../../server-api/overview.md) | Mit der Server-API können Kunden mithilfe eines neuen, authentifizierten Endpunkts mit dem Experience Platform Edge Network interagieren, um eine Vielzahl von Anwendungsfällen für Datenerfassung, Personalisierung, Werbung und Marketing zu unterstützen. |
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
+Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
 <!-- ## Experience Data Model (XDM) {#xdm}
 
