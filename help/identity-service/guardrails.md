@@ -2,9 +2,10 @@
 keywords: Experience Platform; Identität; Identitätsdienst; Fehlerbehebung; Limits; Richtlinien; Einschränkung
 title: Limits für Identity Service
 description: Dieses Dokument enthält Informationen zu Verwendung und Quotenbegrenzungen für Identity Service-Daten, die Sie bei der Optimierung Ihrer Verwendung des Identitätsdiagramms unterstützen.
-source-git-commit: b36ace84acdb13b89deb6f77a02c298acade8d8e
+exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
+source-git-commit: b07a45e5bb9cae6e147ea790ebb77cb63f8790c1
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '385'
 ht-degree: 13%
 
 ---
@@ -30,7 +31,7 @@ In der folgenden Tabelle sind statische Beschränkungen für Identitätsdaten au
 
 | Beschränkung | Limit | Anmerkungen |
 | --- | --- | --- |
-| Anzahl der Identitäten in einem Diagramm | 150 | Das Identitätsdiagramm wird nach Erreichen des Grenzwerts nicht mehr aktualisiert. |
+| Anzahl der Identitäten in einem Diagramm | 150 | Die Begrenzung wird auf Sandbox-Ebene angewendet. Das Identitätsdiagramm wird nach Erreichen des Grenzwerts nicht mehr aktualisiert. |
 | Anzahl der Identitäten in einem XDM-Datensatz | 20 | Die erforderliche Mindestanzahl von XDM-Datensätzen beträgt zwei. |
 | Anzahl der benutzerdefinierten Namespaces | Keine | Die Anzahl der benutzerdefinierten Namespaces, die Sie erstellen können, ist unbegrenzt. |
 | Anzahl der Diagramme | Keine | Die Anzahl der Identitätsdiagramme, die Sie erstellen können, ist unbegrenzt. |
