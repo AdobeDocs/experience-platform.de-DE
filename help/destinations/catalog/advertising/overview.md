@@ -5,10 +5,10 @@ seo-title: Advertising destinations overview
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 0911a0a08c5571161acdafa6857095e275a50600
+source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 37%
+source-wordcount: '234'
+ht-degree: 53%
 
 ---
 
@@ -28,13 +28,14 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ### Verbindungen
 
+* [(Beta) Criteo-Verbindung](criteo.md)
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
-* [Verbindung zu Google Ads](google-ads-destination.md)
+* [Google Ads-Verbindung](google-ads-destination.md)
 * [Google Ad Manager-Verbindung](google-ad-manager.md)
-* [Google-Kundenabgleich-Verbindung](google-customer-match.md)
+* [Google Customer Match-Verbindung](google-customer-match.md)
 * [Microsoft Bing-Verbindung](bing.md)
-* [Pinterest-Kundenlistenverbindung](pinterest.md)
-* [Verbindung zum Trade Desk](tradedesk.md)
+* [Pinterest Customer List-Verbindung](pinterest.md)
+* [The Trade Desk-Verbindung](tradedesk.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Erweiterungen
@@ -49,10 +50,10 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Flashspeak OneTag-Erweiterung](flashtalking.md)
 * [Google Ads-Erweiterung](google-ads-extension.md)
 * [Google gtag-Erweiterung](gtag-advertising.md)
-* [LinkedIn Insight-Tag-Erweiterung](linkedin.md)
+* [LinkedIn Insight Tag-Erweiterung](linkedin.md)
 * [Pinterest Conversion Tracking-Erweiterung](pinterest-extension.md)
 * [Twitter Universal Website Tag-Erweiterung](twitter-uwt.md)
 
 ## Mit einem neuen Werbeziel verbinden {#connect-destination}
 
-Um Segmente für Ihre Kampagnen an Werbeziele zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Detaillierte Informationen zum Einrichten eines neuen Ziels finden Sie im [Tutorial zur Zielerstellung](../../ui/connect-destination.md) .
+Um Segmente für Ihre Kampagnen an Werbeziele zu senden, muss Platform zunächst eine Verbindung zum Ziel herstellen. Siehe [Tutorial zur Zielerstellung](../../ui/connect-destination.md) für detaillierte Informationen zur Einrichtung eines neuen Ziels.

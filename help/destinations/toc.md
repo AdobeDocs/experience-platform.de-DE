@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: c4d8ae6de2e1bbf23a25a66bde5dc88c13a13402
+source-git-commit: 9467aa3b09df04e901e158368db9b7a2a255e880
 workflow-type: tm+mt
-source-wordcount: '733'
+source-wordcount: '736'
 ht-degree: 97%
 
 ---
@@ -52,6 +52,7 @@ ht-degree: 97%
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
       * [Erweiterung für Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Branch-Erweiterung](./catalog/advertising/branch.md)
+      * [(Beta) Criteo-Verbindung](./catalog/advertising/criteo.md)
       * [DoubleClick Floodlight (Beta)-Erweiterung](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook-Pixel-Erweiterung](./catalog/advertising/facebook-pixel.md)
       * [Flashspeak OneTag-Erweiterung](./catalog/advertising/flashtalking.md)
