@@ -4,10 +4,10 @@ title: E-Mail-Marketing-Ziele – Übersicht
 type: Tutorial
 description: E-Mail-Service-Anbieter (ESPs) ermöglichen Ihnen die Verwaltung Ihrer E-Mail-Marketing-Aktivitäten, z. B. beim Senden von Werbe-E-Mail-Kampagnen.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 9d2e98c834eddcacf67de7caafef4717e38d80f8
-workflow-type: ht
-source-wordcount: '387'
-ht-degree: 100%
+source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+workflow-type: tm+mt
+source-wordcount: '388'
+ht-degree: 99%
 
 ---
 
@@ -27,6 +27,7 @@ Adobe Experience Platform unterstützt die folgenden E-Mail-Marketing-Ziele:
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
 * [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [SendGrid](sendgrid.md)
 
 ## Verbinden mit einem neuen E-Mail-Marketing-Ziel {#connect-destination}
 
@@ -66,7 +67,7 @@ Lesen Sie die Artikel zu den jeweiligen E-Mail-Marketing-Zielen, um zu erfahren,
 * [Adobe Campaign](adobe-campaign.md)
 * [Oracle Eloqua](oracle-eloqua.md)
 * [Oracle Responsys](oracle-responsys.md)
-* [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
+* [Salesforce-Marketing Cloud](salesforce-marketing-cloud.md)
 
 ## Aktivieren von Segmenten für E-Mail-Marketing-Ziele {#activate}
 
