@@ -5,9 +5,9 @@ title: Benutzerhandbuch zu Attribution AI
 topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ca390f8cba05148ba39a57734c5172265dcfa5ce
+source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
 workflow-type: tm+mt
-source-wordcount: '2281'
+source-wordcount: '2331'
 ht-degree: 4%
 
 ---
@@ -54,7 +54,7 @@ Als Nächstes wird die Seite zum Einrichten von Attribution AI angezeigt, auf de
 
 ![Benennen einer Instanz](./images/user-guide/naming_instance.png)
 
-## Daten auswählen {#select-data}
+## Auswählen von Daten {#select-data}
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
@@ -84,7 +84,7 @@ In der Datensatzvorschau ist ein Prozentsatz für die Vollständigkeit eines Dat
 
 ### Identität auswählen {#identity}
 
-Damit mehrere Datensätze miteinander verknüpft werden können, müssen Sie einen Identitätstyp (auch als &quot;Identitäts-Namespace&quot;bezeichnet) und einen Identitätswert in diesem Namespace auswählen. Wenn Sie innerhalb Ihres Schemas unter demselben Namespace mehr als ein Feld als Identität zugewiesen haben, werden alle zugewiesenen Identitätswerte im Dropdown-Menü &quot;Identität&quot;angezeigt, dem der Namespace vorangestellt wird, z. B. `EMAIL (personalEmail.address)` oder `EMAIL (workEmail.address)`.
+Sie können jetzt mehrere Datensätze auf Grundlage der Identitätszuordnung (Feld) miteinander verknüpfen. Sie müssen einen Identitätstyp (auch als &quot;Identitäts-Namespace&quot;bezeichnet) und einen Identitätswert in diesem Namespace auswählen. Wenn Sie innerhalb Ihres Schemas unter demselben Namespace mehr als ein Feld als Identität zugewiesen haben, werden alle zugewiesenen Identitätswerte im Dropdown-Menü &quot;Identität&quot;angezeigt, dem der Namespace vorangestellt wird, z. B. `EMAIL (personalEmail.address)` oder `EMAIL (workEmail.address)`.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Damit mehrere Datensätze miteinander verknüpft werden können, müssen Sie ein
 
 Um eine Identität auszuwählen, wählen Sie den unterstrichenen Wert in der Identitätsspalte aus. Das Popover zur Identitätsauswahl wird angezeigt.
 
-![denselben Namespace auswählen](./images/user-guide/identity-type.png)
+![denselben Namespace auswählen](./images/user-guide/aai-identity-map.png)
 
 Wenn innerhalb eines Namespace mehr als eine Identität verfügbar ist, wählen Sie das richtige Identitätsfeld für Ihren Anwendungsfall aus. Beispielsweise sind im E-Mail-Namespace zwei E-Mail-Identitäten verfügbar: eine Arbeit und eine persönliche E-Mail. Je nach Anwendungsfall ist es wahrscheinlicher, dass eine persönliche E-Mail ausgefüllt wird, und nützlicher bei individuellen Prognosen. Sie können also `EMAIL (personalEmail.address)` als Ihre Identität.
 
-![Datensatz-Schlüssel nicht ausgewählt](./images/user-guide/select-identity.png)
+![Datensatz-Schlüssel nicht ausgewählt](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ Wenn innerhalb eines Namespace mehr als eine Identität verfügbar ist, wählen 
 
 Nachdem Sie die Auswahl und das Hinzufügen von Datensätzen abgeschlossen haben, wird die **Zuordnung** Konfigurationsschritt angezeigt. Attribution AI erfordert, dass Sie das Feld Medienkanal für jeden Datensatz zuordnen, den Sie im vorherigen Schritt ausgewählt haben. Dies liegt daran, dass ohne die Medienkanal-Zuordnung zwischen Datensätzen von aus Attribution AI abgeleiteten Einblicken möglicherweise nicht richtig angezeigt wird, was die Interpretationsseite der Einblicke erschwert. Obwohl nur der Medienkanal erforderlich ist, wird dringend empfohlen, einige der optionalen Felder wie Medienaktion, Kampagnenname, Kampagnengruppe und Kampagnen-Tag zuzuordnen. Dadurch kann Attribution AI bessere Einblicke und optimale Ergebnisse erzielen.
 
-![Mapping](./images/user-guide/mapping.png)
+![Zuordnung](./images/user-guide/mapping.png)
 
 ## Ereignisse definieren {#define-events}
 
@@ -122,9 +122,9 @@ Es gibt drei verschiedene Arten von Eingabedaten, die zur Definition von Ereigni
 
 ### Konversionsereignisse definieren {#define-conversion-events}
 
-Um ein Konversionsereignis zu definieren, müssen Sie dem Ereignis einen Namen geben und den Ereignistyp auswählen, indem Sie die **Feldname eingeben** Dropdown-Menü.
+Um ein Konversionsereignis zu definieren, müssen Sie dem Ereignis einen Namen geben und den Ereignistyp auswählen, indem Sie den Datensatz und das Feld aus dem **Datensatz und Feld auswählen** Dropdown-Menü.
 
-![Ja Dropdown](./images/user-guide/conversion_event_2.png)
+![Ja Dropdown](./images/user-guide/define-conversion-events.png)
 
 Sobald ein Ereignis ausgewählt ist, wird rechts ein neues Dropdown-Menü angezeigt. Das zweite Dropdown-Menü wird verwendet, um durch die Verwendung von Vorgängen weiteren Kontext für Ihr Ereignis bereitzustellen. Für dieses Konversionsereignis ist der Standardvorgang *exists* verwendet.
 
@@ -133,6 +133,8 @@ Sobald ein Ereignis ausgewählt ist, wird rechts ein neues Dropdown-Menü angeze
 >Eine Zeichenfolge unter *Konversionsname* aktualisiert wird, während Sie Ihr Ereignis definieren.
 
 ![kein Dropdown](./images/user-guide/conversion_event_1.png)
+
+Als Nächstes können Sie einen kombinierten Datensatz auswählen, der durch die Kombination aller Eingabedatensätze im vorherigen Schritt generiert wird. Alternativ können Sie eine Spalte anhand einzelner Datensätze aus der **Datensatz und Feld auswählen** Dropdown-Menü.
 
 Die **[!UICONTROL Ereignis hinzufügen]** und **[!UICONTROL Gruppe hinzufügen]** -Schaltflächen dienen zur weiteren Definition Ihrer Konvertierung. Je nach der von Ihnen definierten Konversion müssen Sie möglicherweise die **[!UICONTROL Ereignis hinzufügen]** und **[!UICONTROL Gruppe hinzufügen]** -Schaltflächen, um weiteren Kontext bereitzustellen.
 

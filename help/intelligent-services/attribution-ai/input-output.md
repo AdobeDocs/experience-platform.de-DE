@@ -5,10 +5,10 @@ title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
 workflow-type: tm+mt
-source-wordcount: '2268'
-ht-degree: 4%
+source-wordcount: '2392'
+ht-degree: 3%
 
 ---
 
@@ -21,10 +21,14 @@ Im folgenden Dokument werden die verschiedenen in [!DNL Attribution AI].
 Attribution AI analysiert die folgenden Datensätze, um algorithmische Ergebnisse zu berechnen:
 
 - Adobe Analytics-Datensätze, die die [Analytics-Quell-Connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
-- Datensatz für Erlebnisereignisse (EE)
-- Datensatz für Kundenerlebnis-Ereignisse (CEE)
+- Allgemeine Experience Event (EE)-Datensätze aus dem Adobe Experience Platform-Schema
+- Datasets für Consumer Experience Event (CEE)
 
-Sie können mehrere Datensätze aus verschiedenen Quellen hinzufügen, wenn jeder Datensatz denselben Identitätstyp (Namespace) wie eine ECID aufweist. Weitere Informationen zum Hinzufügen mehrerer Datensätze finden Sie unter [Attribution AI-Benutzerhandbuch](./user-guide.md#identity).
+Sie können jetzt mehrere Datensätze aus verschiedenen Quellen hinzufügen, basierend auf der **Identitätszuordnung** (Feld), wenn jeder Datensatz denselben Identitätstyp (Namespace) wie eine ECID aufweist. Nachdem Sie eine Identität und einen Namespace ausgewählt haben, werden Metriken zur Vollständigkeit der ID-Spalte angezeigt, die das Volumen der zuzuordnenden Daten angeben. Weitere Informationen zum Hinzufügen mehrerer Datensätze finden Sie unter [Attribution AI-Benutzerhandbuch](./user-guide.md#identity).
+
+Die Kanalinformationen werden nicht immer standardmäßig zugeordnet. Wenn der mediaChannel (Feld) in einigen Fällen leer ist, können Sie den Vorgang erst fortsetzen, wenn Sie ein Feld mediaChannel zuordnen, da es sich um eine erforderliche Spalte handelt. Wenn der Kanal im Datensatz erkannt wird, wird er standardmäßig mediaChannel zugeordnet. Die anderen Spalten, z. B. **Medientyp** und **Medienaktion** sind weiterhin optional.
+
+Nachdem Sie das Kanalfeld zugeordnet haben, fahren Sie mit dem Schritt &quot;Ereignisse definieren&quot;fort, in dem Sie Konversionsereignisse und Touchpoint-Ereignisse auswählen und bestimmte Felder aus einzelnen Datensätzen auswählen können.
 
 >[!IMPORTANT]
 >
@@ -34,11 +38,9 @@ Weitere Informationen zur Einrichtung der [!DNL Consumer Experience Event] Schem
 
 Nicht alle Spalten im [!DNL Consumer Experience Event] (CEE)-Schema ist für Attribution AI obligatorisch.
 
->[!NOTE]
->
-> Die folgenden neun Spalten sind obligatorisch. Zusätzliche Spalten sind optional, werden jedoch empfohlen/erforderlich, wenn Sie dieselben Daten für andere Lösungen der Adobe verwenden möchten, z. B. [!DNL Customer AI] und [!DNL Journey AI].
+Sie können die Touchpoints mit allen unten empfohlenen Feldern im Schema oder im ausgewählten Datensatz konfigurieren.
 
-| Obligatorische Spalten | Benötigt für |
+| Empfohlene Spalten | Benötigt für |
 | --- | --- |
 | Primäres Identitätsfeld | Touchpoint/Konversion |
 | Zeitstempel | Touchpoint/Konversion |
@@ -52,17 +54,11 @@ Nicht alle Spalten im [!DNL Consumer Experience Event] (CEE)-Schema ist für Att
 
 In der Regel wird die Attribution für Konversionsspalten wie Bestellung, Käufe und Checkouts unter &quot;Commerce&quot;ausgeführt. Die Spalten für &quot;channel&quot;und &quot;marketing&quot;werden verwendet, um Touchpoints für Attribution AI zu definieren (z. B. `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). Für optimale Ergebnisse und Einblicke wird dringend empfohlen, so viele Konversions- und Touchpoint-Spalten wie möglich einzuschließen. Außerdem sind Sie nicht auf die oben genannten Spalten beschränkt. Sie können alle anderen empfohlenen oder benutzerdefinierten Spalten als Konversions- oder Touchpoint-Definition einbeziehen.
 
+Experience Event (EE)-Datensätze müssen keine Kanal- und Marketing-Mixins enthalten, solange die Kanal- oder Kampagneninformationen, die für die Konfiguration eines Touchpoints relevant sind, in einem der Mixin- oder Durchlauffelder vorhanden sind.
+
 >[!TIP]
 >
 >Wenn Sie Adobe Analytics-Daten in Ihrem CEE-Schema verwenden, werden die Touchpoint-Informationen für Analytics normalerweise in `channel.typeAtSource` (z. B. `channel.typeAtSource = 'email'`).
-
-Die folgenden Spalten sind nicht erforderlich. Es wird jedoch empfohlen, sie in Ihr CEE-Schema einzuschließen, wenn Sie über die verfügbaren Informationen verfügen.
-
-**Zusätzliche empfohlene Spalten:**
-- web.webReferer
-- web.webInteraction
-- web.webPageDetails
-- xdm:productListItems
 
 ## Historische Daten {#data-requirements}
 
@@ -158,7 +154,6 @@ Sie können den Pfad zu Ihren Rohbewertungen in der Benutzeroberfläche anzeigen
 Wählen Sie anschließend ein Feld im **[!UICONTROL Struktur]** -Fenster der Benutzeroberfläche, der **[!UICONTROL Feldeigenschaften]** -Registerkarte geöffnet. Within **[!UICONTROL Feldeigenschaften]** ist das Pfadfeld, das Ihren Rohbewertungen zugeordnet ist.
 
 ![Auswählen eines Schemas](./images/input-output/field_properties.png)
-
 
 ### Aggregierte Attributionswerte {#aggregated-attribution-scores}
 
