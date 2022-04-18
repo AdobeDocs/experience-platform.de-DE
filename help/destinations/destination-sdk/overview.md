@@ -2,10 +2,10 @@
 description: Das Adobe Experience Platform Destination SDK umfasst eine Reihe von Konfigurations-APIs, mit denen Sie Zielintegrationsmuster für Experience Platform konfigurieren können, um Zielgruppen- und Profildaten basierend auf den von Ihnen ausgewählten Daten- und Authentifizierungsformaten an Ihren Endpunkt zu senden. Die Konfigurationen werden in Experience Platform gespeichert und können über eine API für zusätzliche Aktualisierungen abgerufen werden.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
-workflow-type: ht
-source-wordcount: '702'
-ht-degree: 100%
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+workflow-type: tm+mt
+source-wordcount: '703'
+ht-degree: 98%
 
 ---
 
@@ -72,11 +72,11 @@ Der Zugriff auf das Destination SDK hängt von Ihrem Status als Partner oder Exp
 
 Der Prozess zum Konfigurieren Ihres Ziels in Experience Platform ist unten beschrieben:
 
-1. Wenn Sie ein ISV oder SI sind, lesen Sie die Informationen zum Abrufen von Zugriffsinformationen im Abschnitt oben. [Adobe Experience Platform Activation](https://helpx.adobe.com/de/legal/product-descriptions/adobe-experience-platform0.html)-Kunden können diesen Schritt überspringen.
+1. Wenn Sie ein ISV oder SI sind, lesen Sie die Informationen zum Abrufen von Zugriffsinformationen im Abschnitt oben. [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)-Kunden können diesen Schritt überspringen.
 2. [Fordern Sie die Bereitstellung einer Experience Platform-Sandbox an](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) und aktivieren Sie die Authoring-Berechtigung für das Ziel.
 3. [Erstellen Sie die Integration](./configure-destination-instructions.md) gemäß Produktdokumentation.
 4. [Testen Sie die Integration](./test-destination.md) gemäß Produktdokumentation.
-5. [Reichen Sie die Integration](./submit-destination.md) zur Überprüfung durch Adobe ein (die standardmäßige Antwortzeit beträgt 5 Werktage).
+5. [Einreichen der Integration](./submit-destination.md) für die Überprüfung durch die Adobe (die standardmäßige Antwortzeit beträgt fünf Werktage).
 6. Wenn Sie ein ISV oder SI sind und eine [angepasste Integration](./overview.md#productized-custom-integrations) erstellen, verwenden Sie den [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md), um eine Produktdokumentationsseite auf Experience League für Ihr Ziel zu erstellen.
 7. Sobald die Integration von Adobe genehmigt wurde, wird sie im [Experience Platform-Katalog](/help/destinations/catalog/overview.md) angezeigt.
 8. Wenn Sie Ihre Integration aktualisieren möchten, gehen Sie genauso vor.

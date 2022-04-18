@@ -2,10 +2,10 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit dem Destination SDK erstellten Ziels übermitteln müssen.
 title: Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 85b308b3f92a734fed0c885a574b71fa05684bb4
-workflow-type: ht
-source-wordcount: '580'
-ht-degree: 100%
+source-git-commit: 7c6d0c8d4d1eea16f13359e9d7a895d767ad3c00
+workflow-type: tm+mt
+source-wordcount: '648'
+ht-degree: 87%
 
 ---
 
@@ -25,9 +25,14 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
 * (Nur für produktive Integrationen) eine Dokumentations-PR (Pull-Anfrage) entsprechend den Anweisungen im Abschnitt [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
 * Eine Grafikdatei, die als Logo für Ihre Zielkarte im Zielkatalog von Experience Platform angezeigt werden soll.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Zielveröffentlichungsanfragen beträgt 5 Werktage.
+>* Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Ziel-Veröffentlichungsanforderungen beträgt fünf Werktage.
+>
+>* Wenn das Adobe-Team nach der ersten Übermittlung darum bittet, Ihre Konfigurationen zu aktualisieren, müssen Sie nach der Aktualisierung eine weitere Ziel-Veröffentlichungsanforderung senden.
+>
+>* Selbst wenn Ihr Ziel im Experience Platform-Katalog aktiv ist, müssen Sie, wenn Sie Ihre Konfigurationen aktualisieren müssen, eine neue Ziel-Veröffentlichungsanforderung senden, damit die Aktualisierungen in den Konfigurationen angezeigt werden.
+
 
 Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgenden Abschnitten:
 
