@@ -4,10 +4,11 @@ solution: Experience Platform
 title: Verbinden von DbVisualizer mit Query Service
 topic-legacy: connect
 description: In diesem Dokument werden die Schritte zum Verbinden von DbVisualizer mit Adobe Experience Platform Query Service beschrieben.
-source-git-commit: 69e105b2c52a668ba708847795d4c92813aad0db
+exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
+source-git-commit: ad3e1b0de6dd3b82cc82f0dc3d0f36b12cd3899e
 workflow-type: tm+mt
-source-wordcount: '701'
-ht-degree: 0%
+source-wordcount: '726'
+ht-degree: 1%
 
 ---
 
@@ -47,6 +48,10 @@ Die drei erforderlichen Treibereigenschaften sind in der folgenden Tabelle aufge
 | `SSL` | Dies steuert die Verwendung von SSL-Anforderungen. You **must** Verwenden Sie den Wert &quot;1&quot;, um diese Anforderung zu aktivieren. |
 | `user` | Der mit der Datenbank verbundene Benutzername ist Ihre Organisations-ID. Es handelt sich um eine alphanumerische Zeichenfolge, die auf `@adobe.org` |
 
+>[!IMPORTANT]
+>
+>Siehe [[!DNL Query Service] SSL-Dokumentation](./ssl-modes.md) Erfahren Sie mehr über die SSL-Unterstützung für Drittanbieterverbindungen zu Adobe Experience Platform Query Service und über die Verbindung mit `verify-full` SSL-Modus.
+
 ### [!DNL Query Service] Anmeldeinformationen
 
 Die `PGHOST` und `user` -Werte aus Ihren Adobe Experience Platform-Anmeldedaten entnommen werden. Um Ihre Anmeldeinformationen zu finden, melden Sie sich bei der Platform-Benutzeroberfläche an und wählen Sie **[!UICONTROL Abfragen]** aus der linken Navigation, gefolgt von **[!UICONTROL Anmeldeinformationen]**. Weitere Informationen zum Auffinden Ihres Datenbanknamens, Hosts, Ports und Ihrer Anmeldedaten finden Sie in der [Handbuch zu Anmeldeinformationen](../ui/credentials.md).
@@ -71,7 +76,7 @@ Wenn bei jeder Verbindungsherstellung eine Benutzer-ID und eine kennwortbasierte
 
 ![Das Bedienfeld Verbindungs-Authentifizierung mit den Kontrollkästchen &quot;Benutzername&quot;und &quot;Kennwort&quot;wurde hervorgehoben.](../images/clients/dbvisualizer/connection-authentication.png)
 
-## Verbindung zu Platform herstellen
+## Verbinden von  mit Platform
 
 Um eine Verbindung herzustellen, wählen Sie die **[!DNL Connection]** im Arbeitsbereich &quot;Datenbankverbindung&quot;und geben Sie Ihre Anmeldedaten für die Experience Platform für die folgenden Einstellungen ein.
 
