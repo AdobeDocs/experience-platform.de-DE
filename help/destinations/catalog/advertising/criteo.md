@@ -1,14 +1,14 @@
 ---
-keywords: 'Werbung; criteo; '
+keywords: Werbung; criteo;
 title: Crito-Verbindung
 description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
-source-git-commit: a3263a322012a48f37cee6137054c7fcf3cdb8a2
+exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
+source-git-commit: 36da42b184450cfaf12b097f982234d628681430
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '763'
 ht-degree: 9%
 
 ---
-
 
 # (Beta) Criteo-Verbindung
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 
 >[!IMPORTANT]
 >
->Diese Dokumentationsseite wurde von Criteo erstellt. Dies ist derzeit ein Beta-Produkt. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Diese Dokumentationsseite wurde von Criteo erstellt. Dies ist derzeit ein Beta-Produkt und die Funktionalität kann sich ändern. Bei Fragen oder Aktualisierungsanfragen wenden Sie sich bitte direkt an Criteo [here](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
 
@@ -24,7 +24,11 @@ Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbra
 
 * Sie benötigen ein Administratorbenutzerkonto für [Criteo Management Center](https://marketing.criteo.com).
 * Sie benötigen Ihre Criteo Advertiser ID (fragen Sie Ihren Criteo-Kontakt, wenn Sie diese ID nicht haben).
-* Criteo akzeptiert nur SHA-256- und Text-E-Mails (die vor dem Versand in SHA-256 umgewandelt werden sollen). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen der Person oder Telefonnummern).
+
+## Einschränkungen {#limitations}
+
+* Criteo unterstützt derzeit nicht das Entfernen von Benutzern aus Zielgruppen.
+* Criteo akzeptiert nur [!DNL SHA-256]-Hash- und Text-E-Mails (zu konvertieren in [!DNL SHA-256] vor dem Senden). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen der Person oder Telefonnummern).
 
 ![Voraussetzungen](../../assets/catalog/advertising/criteo/prerequisites.png)
 
