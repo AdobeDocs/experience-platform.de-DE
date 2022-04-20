@@ -2,10 +2,10 @@
 title: Handbuch zur Fehlerbehebung bei Tags
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 2181ec15f2d868d1821a5f9926729d2796f2f298
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 100%
+source-wordcount: '1042'
+ht-degree: 97%
 
 ---
 
@@ -106,6 +106,4 @@ Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um 
 
 ## Was ist, wenn ich weitere Fragen habe?
 
-Wenn Sie weitere Fragen haben, wenden Sie sich auf der Hauptseite zu Tags unter [https://adobe.com/go/launchme](https://adobe.com/go/launchme) an die Adobe-Community.
-
-Tags sind nur ein Beispiel für die künftige Ausrichtung unserer Plattform: offener, stärker integriert und wie immer orientiert am Erfolg des Kunden.
+Wenn Sie weitere Fragen haben, können Sie die [Adobe Experience Platform-Datenerfassungs-Community-Seite](https://adobe.com/go/launchme) auf der Experience League oder dem [offizielle Slack-Gruppe für Tag-Entwickler](http://join.connectionsdevs.chat).
