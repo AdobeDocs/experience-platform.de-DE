@@ -2,16 +2,23 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: bb06dd63de1a36d3e3d065a986f3d34f63783895
+source-git-commit: 22ae7d206d4393719352232dc254d7669ca667bd
 workflow-type: tm+mt
-source-wordcount: '1290'
-ht-degree: 48%
+source-wordcount: '1313'
+ht-degree: 47%
 
 ---
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in der [Versionshinweise zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.11.0 - 22. April 2022
+
+* Die Benutzeroberfläche von Tags wurde verbessert.
+* Fügen Sie Sandbox-Selektoren zur Konfiguration der Datenspeicher-Erweiterung hinzu.
+
+Enthält Version 2.10.0 der Adobe Experience Platform Web SDK Library.
 
 ## Version 2.10.0 - 10. März 2022
 
