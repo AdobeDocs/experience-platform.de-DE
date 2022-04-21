@@ -3,10 +3,10 @@ keywords: Amazon Kinesis; Kinesis-Ziel; Kinesis
 title: (Beta) Amazon Kinesis-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem Amazon Kinesis-Speicher, um Daten von Adobe Experience Platform zu streamen.
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 1%
+source-wordcount: '1422'
+ht-degree: 4%
 
 ---
 
@@ -88,13 +88,23 @@ Im folgenden Beispiel werden die Mindestzugriffsrechte angezeigt, die erforderli
 
 Weitere Informationen zur Zugriffskontrolle für [!DNL Kinesis] Datenströme, lesen Sie Folgendes [[!DNL Kinesis] Dokument](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## Mit Ziel verbinden {#connect}
+## Herstellen einer Verbindung mit der Datenbank {#connect}
 
-Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 ### Verbindungsparameter {#parameters}
 
-while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmentnames"
+>title="Segmentnamen einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport die Namen der Segmente enthalten soll, die Sie exportieren. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_kinesis_includesegmenttimestamps"
+>title="Segmentzeitstempel einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Segmente den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Segmente zum Zeitpunkt der Aktivierung dem Ziel zugeordnet wurden. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!DNL Amazon Web Services]Zugriffsschlüssel und geheimer Schlüssel**: In [!DNL Amazon Web Services], generieren Sie eine `access key - secret access key` , um Platform Zugriff auf Ihre [!DNL Amazon Kinesis] -Konto. Weitere Informationen finden Sie unter [Amazon Web Services-Dokumentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Geben Sie an, [!DNL Amazon Web Services] Region, an die Daten gestreamt werden sollen.

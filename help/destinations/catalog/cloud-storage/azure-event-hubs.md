@@ -3,10 +3,10 @@ keywords: Azure Event Hub-Ziel; Azure Event Hub; Azure Event Event Event Hub
 title: (Beta) [!DNL Azure Event Hubs] connection
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Azure Event Hubs] -Speicher verwenden, um Daten aus Experience Platform zu streamen.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: b2ac26589527313ec9f3cf84126e3e23da6c7b83
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1289'
-ht-degree: 1%
+source-wordcount: '1371'
+ht-degree: 4%
 
 ---
 
@@ -49,13 +49,23 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, bietet Experience Platform eine Liste statischer IPs, die Sie für die [!DNL Azure Event Hubs] Ziel. Siehe [IP-Adressen-Zulassungsliste für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md) für die vollständige Liste der IP-Adressen in Zulassungsliste.
 
-## Mit Ziel verbinden {#connect}
+## Herstellen einer Verbindung mit der Datenbank {#connect}
 
-Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 ### Verbindungsparameter {#parameters}
 
-while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Segmentnamen einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport die Namen der Segmente enthalten soll, die Sie exportieren. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Segmentzeitstempel einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Segmente den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Segmente zum Zeitpunkt der Aktivierung dem Ziel zugeordnet wurden. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL SAS-Schlüsselname]**: Der Name der Autorisierungsregel, der auch als SAS-Schlüsselname bezeichnet wird.
 * **[!UICONTROL SAS-Schlüssel]**: Der Primärschlüssel des Ereignis-Hubs-Namespace. Die `sasPolicy` dass `sasKey` muss **verwalten** -Berechtigungen, die für das Ausfüllen der Liste der Ereignis-Hubs konfiguriert wurden. Informationen zur Authentifizierung bei [!DNL Azure Event Hubs] mit SAS-Schlüsseln in [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).

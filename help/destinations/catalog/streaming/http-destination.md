@@ -3,10 +3,10 @@ title: (Beta) HTTP-API-Verbindung
 keywords: Streaming;
 description: Mit dem HTTP-API-Ziel in Adobe Experience Platform können Sie Profildaten an HTTP-Endpunkte von Drittanbietern senden.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 0d58445557490a5539279f55c34183994429c632
+source-git-commit: c62117de27b150f072731c910bb0593ce1fca082
 workflow-type: tm+mt
-source-wordcount: '1382'
-ht-degree: 3%
+source-wordcount: '1560'
+ht-degree: 6%
 
 ---
 
@@ -67,13 +67,43 @@ Sie können auch [Adobe Experience Platform Destination SDK](/help/destinations/
 
 Um die Sicherheits- und Compliance-Anforderungen von Kunden zu erfüllen, stellt Experience Platform eine Liste mit statischen IPs bereit, die Sie für das HTTP-API-Ziel auf die Zulassungsliste gesetzt haben. Siehe [IP-Adressen-Zulassungsliste für Streaming-Ziele](/help/destinations/catalog/streaming/ip-address-allow-list.md) für die vollständige Liste der IP-Adressen in Zulassungsliste.
 
-## Mit Ziel verbinden {#connect-destination}
+## Herstellen einer Verbindung mit der Datenbank {#connect-destination}
 
-Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 ### Verbindungsparameter {#parameters}
 
-while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Client-Anmeldeinformationen-Typ"
+>abstract="Auswählen **Textkörperformular kodiert** , um die Client-ID und das Client-Geheimnis in den Text der Anfrage einzuschließen, oder **Grundlegende Autorisierung** , um die Client-ID und das Client-Geheimnis in einen Autorisierungs-Header aufzunehmen. Anzeigen von Beispielen in der Dokumentation."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_headers"
+>title="Header"
+>abstract="Geben Sie alle benutzerdefinierten Header ein, die in die Ziel-Aufrufe aufgenommen werden sollen. Verwenden Sie dazu folgendes Format: `header1:value1,header2:value2,...headerN:valueN`"
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_endpoint"
+>title="HTTP-Endpunkt"
+>abstract="Die URL des HTTP-Endpunkts, an den Sie die Profildaten senden möchten."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmentnames"
+>title="Segmentnamen einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport die Namen der Segmente enthalten soll, die Sie exportieren. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_includesegmenttimestamps"
+>title="Segmentzeitstempel einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Segmente den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Segmente zum Zeitpunkt der Aktivierung dem Ziel zugeordnet wurden. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_queryparameters"
+>title="Abfrageparameter"
+>abstract="Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`."
+
+Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL httpEndpoint]**: die [!DNL URL] des HTTP-Endpunkts, an den Sie die Profildaten senden möchten.
    * Optional können Sie Abfrageparameter zum [!UICONTROL httpEndpoint] [!DNL URL].
