@@ -5,16 +5,16 @@ title: Marketo Engage-Connector
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 21617c6ec364fc05d7b8b6d00daa68608d1ed318
+source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
 workflow-type: tm+mt
-source-wordcount: '529'
-ht-degree: 12%
+source-wordcount: '521'
+ht-degree: 15%
 
 ---
 
-# [!DNL Marketo Engage] Connector
+# [!DNL Marketo Engage]-Connector
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (nachstehend &quot;genannt)[!DNL Marketo]&quot;) ist eine Komplettlösung für das Lead-Management. B2B-Marketer können damit Kundenerlebnisse transformieren, indem sie in allen Phasen komplexer Journey Interaktionen ermöglichen.
 
@@ -28,9 +28,9 @@ Um eine Verbindung herzustellen [!DNL Marketo] in Platform müssen Sie zunächst
 
 Siehe die Schritte, die im Abschnitt [Authentifizieren des Marketo-Quell-Connectors](./marketo-auth.md) Dokument zum Abrufen Ihrer Anmeldedaten.
 
-## Einrichten der Adobe Experience Cloud-Zielgruppenfreigabe
+## Einrichten der Adobe-Organisationszuordnung
 
-Bevor Sie Zuordnungssätze für [!DNL Marketo]müssen Sie zunächst die Zielgruppenfreigabe in Adobe Experience Cloud einrichten. Ausführliche Anweisungen finden Sie im Handbuch unter [Einrichten der Adobe Experience Cloud-Zielgruppenfreigabe für [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-experience-cloud-audience-sharing.html?lang=en).
+Bevor Sie Zuordnungssätze für [!DNL Marketo]müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen finden Sie im Handbuch unter [Einrichten der Adobe-Organisationszuordnung für [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
 
 ## Experience-Datenmodell (XDM)
 
@@ -51,10 +51,10 @@ Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Marketo] D
 * [Programmmitgliedschaften](../mapping/marketo.md#program-memberships)
 * [Firmen](../mapping/marketo.md#companies)
 * [Statische Listen](../mapping/marketo.md#static-lists)
-* [Mitgliedschaft in statischen Listen](../mapping/marketo.md#static-list-memberships)
-* [Spezifische Konten](../mapping/marketo.md#named-accounts)
-* [Chancen](../mapping/marketo.md#opportunities)
-* [Kontaktrollen bei Chancen](../mapping/marketo.md#opportunity-contact-roles)
+* [Mitgliedschaften in statischen Listen](../mapping/marketo.md#static-list-memberships)
+* [Benannte Konten](../mapping/marketo.md#named-accounts)
+* [Opportunities](../mapping/marketo.md#opportunities)
+* [Rollen von Kontakten bei Opportunities](../mapping/marketo.md#opportunity-contact-roles)
 * [Personen](../mapping/marketo.md#persons)
 
 ## Erwartete Latenz von [!DNL Marketo] Daten in Platform
