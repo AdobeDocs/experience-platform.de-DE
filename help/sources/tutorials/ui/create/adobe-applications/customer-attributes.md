@@ -4,61 +4,79 @@ solution: Experience Platform
 title: Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie in der Benutzeroberfläche eine Quellverbindung zum Erfassen von Kundenattributprofildaten in Adobe Experience Platform erstellen.
+description: Erfahren Sie, wie Sie eine Quellverbindung in der Benutzeroberfläche erstellen, um Kundenattributprofildaten in Adobe Experience Platform zu importieren.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: b1b820c93ff1731b797f2b5e3ace7d2d6995b98b
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 6%
+source-wordcount: '623'
+ht-degree: 39%
 
 ---
 
 # Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche
 
-In diesem Tutorial werden Schritte zum Erstellen einer Quellverbindung in der Benutzeroberfläche zum Erfassen von Kundenattribut-Profildaten in Adobe Experience Platform beschrieben. Weitere Informationen zu Kundenattributen finden Sie unter [Übersicht über Kundenattribute](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=de).
+In diesem Tutorial erfahren Sie, wie Sie in der Benutzeroberfläche eine Quellverbindung erstellen, um Kundenattributprofildaten in Adobe Experience Platform zu importieren. Weitere Informationen zu Kundenattributen finden Sie unter [Übersicht über Kundenattribute](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=de).
 
 >[!IMPORTANT]
 >
->Die Funktionen zum Deaktivieren, Aktivieren und Löschen von Datenflüssen werden derzeit für die Kundenattributquelle nicht unterstützt.
+>Die Quelle Kundenattribute unterstützt derzeit nicht die Aktivierung oder Deaktivierung von Datenflüssen.
 
-## Quellverbindung erstellen
-
-Wählen Sie in der Platform-Benutzeroberfläche **[!UICONTROL Quellen]** aus dem linken Navigationsbereich aus, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Der Bildschirm [!UICONTROL Katalog] enthält eine Vielzahl von Quellen, mit denen Sie eine Verbindung herstellen können.
-
-Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle über die Suchleiste finden.
-
-Wählen Sie unter der Kategorie [!UICONTROL Adobe Applications] die Option **[!UICONTROL Kundenattribute]** und klicken Sie dann auf **[!UICONTROL Daten hinzufügen]**.
+## Erstellen einer Quellverbindung
 
 >[!NOTE]
 >
 >Wenn Sie bereits eine Quellverbindung für Kundenattribut-Profildaten hergestellt haben, ist die Option zur Verbindung mit der Quelle deaktiviert.
 
-![](../../../../images/tutorials/create/customer-attributes/catalog.png)
+Wählen Sie in der Platform-Benutzeroberfläche in der linken Navigationsleiste die Option **[!UICONTROL Quellen]**, um auf den Arbeitsbereich [!UICONTROL Quellen] zuzugreifen. Die [!UICONTROL Katalog] zeigt eine Vielzahl von Quellen an, mit denen Sie eine Verbindung herstellen können.
 
-Der Bildschirm [!UICONTROL Daten hinzufügen] listet alle verfügbaren Datenquellen für Kundenattribute auf. Um eine neue Verbindung zu erstellen, wählen Sie eine Datenquelle aus der Liste aus und klicken Sie dann auf **[!UICONTROL Weiter]**.
+Sie können die gewünschte Kategorie aus dem Katalog auf der linken Bildschirmseite auswählen. Alternativ können Sie die gewünschte Quelle mithilfe der Suchleiste finden.
+
+Unter dem [!UICONTROL Adobe Apps] category, select **[!UICONTROL Kundenattribute]** und wählen Sie **[!UICONTROL Daten hinzufügen]**.
+
+![Katalog](../../../../images/tutorials/create/customer-attributes/catalog.png)
+
+### Datenquelle für Kundenattribute auswählen
+
+Die [!UICONTROL Daten hinzufügen] -Bildschirm listet alle verfügbaren Datenquellen für Kundenattribute auf. Pro Quellverbindung mit Kundenattributen kann nur ein Datensatz ausgewählt werden.
 
 >[!NOTE]
 >
->Pro Quellverbindung mit Kundenattributen kann nur ein Datensatz ausgewählt werden.
+>Feldergruppen, Schemata und Datensätze werden im Rahmen der Flussbereitstellung nativ erstellt. Sie bleiben unverändert und müssen bei Bedarf manuell gelöscht werden.
 
-![](../../../../images/tutorials/create/customer-attributes/add-data.png)
+Die Schemaentwicklung wird von der Quelle der Kundenattribute nicht unterstützt. Wenn die Schemaeingabe einer Datenquelle mit Kundenattributen geändert wird, würde sie mit Platform inkompatibel werden. Als Problemumgehung können Sie einen vorhandenen Datenfluss mit Kundenattributen zusammen mit dem zugehörigen Datensatz, Schema und der Feldergruppe löschen und dann einen neuen Datenfluss mit dem aktualisierten Schema und der aktualisierten Datenquelle erstellen.
 
-Der Schritt [!UICONTROL Datenfluss-Detail] wird angezeigt, mit dem Sie einen Namen eingeben und eine kurze Beschreibung für Ihren neuen Datenfluss angeben können.
+>[!IMPORTANT]
+>
+>Sie können einen Datenfluss mit Kundenattributen zwar löschen, der entsprechende Datensatz bleibt jedoch auch nach dem Löschen des Datenflusses bestehen. Siehe Handbuch unter [Löschen eines Datensatzes](../../../../../catalog/datasets/user-guide.md) für Schritte zum manuellen Löschen eines Datensatzes.
 
-Während dieses Prozesses können Sie auch [!UICONTROL Partielle Erfassung] und [!UICONTROL Fehlerdiagnose] aktivieren. [!UICONTROL Die partielle ] Erfassung bietet die Möglichkeit, Daten mit Fehlern bis zu einem bestimmten Schwellenwert zu erfassen, den Sie einstellen können, während die  [!UICONTROL Fehlerdiagnose Details zu allen falschen Daten ] anzeigt, die separat stapelt werden. Weitere Informationen finden Sie unter [Übersicht über die partielle Batch-Erfassung](../../../../../ingestion/batch-ingestion/partial.md).
+Um eine neue Verbindung zu erstellen, wählen Sie eine Datenquelle aus der Liste aus und klicken Sie auf **[!UICONTROL Nächste]**.
 
-![](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+![add-data](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
-Der Schritt [!UICONTROL Überprüfen] wird angezeigt, mit dem Sie Ihren neuen Datenfluss überprüfen können, bevor er erstellt wird. Details werden in die folgenden Kategorien eingeteilt:
+### Angeben von Datenflussdetails
+
+Die [!UICONTROL Datenflussdetails] angezeigt, sodass Sie einen Namen und eine kurze Beschreibung für Ihren Datenfluss angeben können. Während dieses Vorgangs können Sie auch Einstellungen für [!UICONTROL Fehlerdiagnose], [!UICONTROL Partielle Erfassung]und [!UICONTROL Warnhinweise].
+
+[!UICONTROL Fehlerdiagnose] ermöglicht eine detaillierte Erstellung von Fehlermeldungen für alle fehlerhaften Datensätze, die in Ihrem Datenfluss auftreten, während [!UICONTROL Partielle Aufnahme] die Aufnahme von fehlerhaften Daten bis zu einem gewissen Schwellenwert, den Sie manuell definieren, ermöglicht. Weitere Informationen finden Sie in der [Übersicht zur partiellen Batch-Aufnahme](../../../../../ingestion/batch-ingestion/partial.md).
+
+Sie können Warnhinweise aktivieren, um Benachrichtigungen zum Status Ihres Datenflusses zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnhinweisen finden Sie im Handbuch zum [Abonnieren von Warnhinweisen zu Quellen über die Benutzeroberfläche](../../alerts.md).
+
+Wenn Sie mit dem Eingeben der Details für Ihren Datenfluss fertig sind, klicken Sie auf **[!UICONTROL Weiter]**.
+
+![dataflow-detail](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+
+### Überprüfung dataflow
+
+Der Schritt [!UICONTROL Überprüfung] wird angezeigt, sodass Sie Ihren neuen Datenfluss überprüfen können, bevor er hergestellt wird. Die Details lassen sich wie folgt kategorisieren:
 
 * **[!UICONTROL Verbindung]**: Zeigt den Quelltyp, den relevanten Pfad der ausgewählten Quelldatei und die Anzahl der Spalten in dieser Quelldatei an.
-* **[!UICONTROL Zuweisen von Datensatz- und Zuordnungsfeldern]**: Zeigt, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
+* **[!UICONTROL Datensatz- und Zuordnungsfelder zuweisen]**: Zeigt an, in welchen Datensatz die Quelldaten aufgenommen werden, einschließlich des Schemas, dem der Datensatz entspricht.
 
-![](../../../../images/tutorials/create/customer-attributes/review.png)
+![überprüfen](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Nächste Schritte
 
-Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der ersten Aufnahme können Kundenattributprofildaten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Segmentation Service] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Nachdem die Verbindung erstellt wurde, werden automatisch ein Zielgruppenschema und ein Datensatz erstellt, die die eingehenden Daten enthalten. Nach Abschluss der ersten Aufnahme können Kundenattributprofildaten von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Segmentation Service]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 * [[!DNL Real-time Customer Profile] – Übersicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] – Übersicht](../../../../../segmentation/home.md)
