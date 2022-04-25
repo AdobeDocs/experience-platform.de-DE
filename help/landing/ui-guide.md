@@ -5,10 +5,10 @@ title: Übersicht über die Experience Platform-Benutzeroberfläche
 topic-legacy: ui guide
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 8236806efae6a4f570c3dd2ef78e80184e189b84
+source-git-commit: 5fb7284760489fc526b5891d258c51ed20a2b095
 workflow-type: tm+mt
 source-wordcount: '1809'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -164,7 +164,7 @@ Offer Decisioning ist ein in Adobe Experience Platform integrierter Anwendungsdi
 
 ### [!UICONTROL Administration]
 
-Die Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden. Rufen Sie dieses Dashboard auf, indem Sie **[!UICONTROL Lizenzverwendung]** in der Navigation. Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie unter [Dashboard-Handbuch zur Lizenznutzung](license-usage-dashboard.md).
+Die Platform-Benutzeroberfläche bietet ein Dashboard, über das Sie wichtige Informationen zur Lizenznutzung Ihres Unternehmens anzeigen können, wie sie in einer täglichen Momentaufnahme erfasst werden. Rufen Sie dieses Dashboard auf, indem Sie **[!UICONTROL Lizenzverwendung]** in der Navigation. Weitere Informationen zum Dashboard zur Lizenznutzung finden Sie unter [Dashboard-Handbuch zur Lizenznutzung](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
