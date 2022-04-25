@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c87bf1cbf8471c178597523b06d7d109c0c87a3e
+source-git-commit: a4c70c00bf2c44abc292d189de013eb1a243bdb0
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 96%
+source-wordcount: '2209'
+ht-degree: 97%
 
 ---
 
@@ -77,12 +77,12 @@ Wählen Sie die Schaltfläche **[!UICONTROL Zeitplan erstellen]** für das Segme
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Aktivieren nach Segmentbewertung"
->abstract="Die Aktivierung wird unmittelbar nach Abschluss des täglichen Segmentierungsauftrags ausgeführt. Dadurch wird sichergestellt, dass die aktuellsten Profile exportiert werden. Dieses Popup muss in den neuen Abschnitt zur Aktivierungsketten verschoben werden, um die korrekte Verknüpfung zu ermöglichen."
+>abstract="Die Aktivierung wird unmittelbar nach Abschluss des täglichen Segmentierungsauftrags ausgeführt. Dadurch wird sichergestellt, dass die aktuellsten Profile exportiert werden."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
 >title="Geplante Aktivierung"
->abstract="Die Aktivierung erfolgt zu einer festen Tageszeit. Dieses Popup muss in den neuen Abschnitt zur Aktivierungsketten verschoben werden, um die korrekte Verknüpfung zu ermöglichen."
+>abstract="Die Aktivierung erfolgt zu einer festen Tageszeit."
 
 Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export einer Datei auszulösen, die eine vollständige Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment enthält.
 
