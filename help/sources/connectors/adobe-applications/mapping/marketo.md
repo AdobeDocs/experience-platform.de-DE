@@ -5,16 +5,20 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: f5d341daffd7d4d77ee816cc7537b0d0c52ca636
+source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 9%
+source-wordcount: '608'
+ht-degree: 10%
 
 ---
 
 # [!DNL Marketo Engage] Feldzuordnungen
 
 Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [!DNL Marketo] Datensätze und die zugehörigen Experience-Datenmodell (XDM)-Felder.
+
+>[!TIP]
+>
+>Alle [!DNL Marketo] Datensätze außer `Activities` jetzt unterstützen `isDeleted`. Ihre vorhandenen Datenflüsse enthalten automatisch `isDeleted`, jedoch wird das Flag nur für neu aufgenommene Daten erfasst. Wenn Sie die Kennzeichnung auf alle historischen Daten anwenden möchten, müssen Sie Ihre vorhandenen Datenflüsse stoppen und sie mit der neuen Zuordnung neu erstellen. Beachten Sie Folgendes: Wenn Sie `isDeleted`, haben Sie keinen Zugriff mehr auf die Funktion. Es ist wichtig, dass die Zuordnung beibehalten wird, nachdem sie automatisch ausgefüllt wurde.
 
 ## Aktivitäten {#activities}
 
@@ -118,6 +122,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -148,6 +153,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -177,6 +183,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
 | `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -192,10 +199,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `description` | `marketingListDescription` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Mitgliedschaft in statischen Listen {#static-list-memberships}
+## Mitgliedschaften in statischen Listen {#static-list-memberships}
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -206,6 +214,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `iif(staticListID != null && staticListID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", staticListID, "sourceKey", concat(staticListID,"@${MUNCHKIN_ID}.Marketo")), null)` | `marketingListKey` | Beziehung |
 | `iif(personID != null && personID != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", personID, "sourceKey", concat(personID,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Beziehung |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -235,10 +244,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `name` | `accountName` |
 | `iif(parentAccountId != null && parentAccountId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(parentAccountId, ".mkto_acct"), "sourceKey", concat(parentAccountId, ".mkto_acct@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 | `sourceType` | `accountSourceType` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Chancen {#opportunities}
+## Opportunities {#opportunities}
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -268,10 +278,11 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Kontaktrollen bei Chancen {#opportunity-contact-roles}
+## Rollen von Kontakten bei Opportunities {#opportunity-contact-roles}
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
@@ -286,6 +297,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -338,6 +350,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Dies ist ein berechnetes Feld. |
+| `marketoIsDeleted` | `isDeleted` |
 
 {style=&quot;table-layout:auto&quot;}
 
