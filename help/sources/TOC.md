@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 66dafe4bca6e1eb0fc67a745ac20a6e0b119aa39
+source-git-commit: cc966bccf28dcc915d5c19eab7614d6e80a7e67f
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '777'
 ht-degree: 96%
 
 ---
@@ -88,6 +88,7 @@ ht-degree: 96%
       - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Zahlungen {#payments}
       - [PayPal-Connector](connectors/payments/paypal.md)
+      - [Quadratischer Anschluss](connectors/payments/square.md)
    - Protokolle {#protocols}
       - [Generic OData-Connector](connectors/protocols/odata.md)
       - [Generic REST-API-Connector](connectors/protocols/generic-rest.md)
@@ -150,6 +151,7 @@ ht-degree: 96%
          - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
+         - [Quadrat](tutorials/api/create/payments/square.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/api/create/protocols/odata.md)
          - [Generic REST-API](tutorials/api/create/protocols/generic-rest.md)
@@ -248,6 +250,7 @@ ht-degree: 96%
          - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Zahlungen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
+         - [Quadrat](tutorials/ui/create/payments/square.md)
       - Protokolle {#protocols}
          - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
