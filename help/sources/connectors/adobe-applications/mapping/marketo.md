@@ -5,7 +5,7 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3f4c7c5a5b792476cb46afe886af5a469edfe745
+source-git-commit: 765a56919afa3325db2e7881664e37d16eaeaac5
 workflow-type: tm+mt
 source-wordcount: '608'
 ht-degree: 10%
@@ -18,7 +18,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 
 >[!TIP]
 >
->Alle [!DNL Marketo] Datensätze außer `Activities` jetzt unterstützen `isDeleted`. Ihre vorhandenen Datenflüsse enthalten automatisch `isDeleted`, jedoch wird das Flag nur für neu aufgenommene Daten erfasst. Wenn Sie die Kennzeichnung auf alle historischen Daten anwenden möchten, müssen Sie Ihre vorhandenen Datenflüsse stoppen und sie mit der neuen Zuordnung neu erstellen. Beachten Sie Folgendes: Wenn Sie `isDeleted`, haben Sie keinen Zugriff mehr auf die Funktion. Es ist wichtig, dass die Zuordnung beibehalten wird, nachdem sie automatisch ausgefüllt wurde.
+>Alle [!DNL Marketo] Datensätze außer `Activities` jetzt unterstützen `isDeleted`. Ihre vorhandenen Datenflüsse enthalten automatisch `isDeleted`, aber erfasst nur das Flag für neu aufgenommene Daten. Wenn Sie die Kennzeichnung auf alle historischen Daten anwenden möchten, müssen Sie Ihre vorhandenen Datenflüsse stoppen und sie mit der neuen Zuordnung neu erstellen. Beachten Sie Folgendes: Wenn Sie `isDeleted`, haben Sie keinen Zugriff mehr auf die Funktion. Es ist wichtig, dass die Zuordnung beibehalten wird, nachdem sie automatisch ausgefüllt wurde.
 
 ## Aktivitäten {#activities}
 
