@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 935bbbc842ce5e2f42ee92c525255c9708bf34c2
+source-git-commit: 1bb3db196ed603a5a9ba0dcf9d54419d36a6ed51
 workflow-type: tm+mt
-source-wordcount: '3363'
+source-wordcount: '3190'
 ht-degree: 2%
 
 ---
@@ -164,29 +164,6 @@ Auf der Detailseite für einen Datenfluss werden neben den Details, die in der L
 Auf der Detailseite wird auch eine Liste mit fehlgeschlagenen Identitäten und ausgeschlossenen Identitäten angezeigt. Es werden Informationen für die fehlgeschlagenen und ausgeschlossenen Identitäten angezeigt, einschließlich Fehlercode und Beschreibung. Standardmäßig werden in der Liste die fehlgeschlagenen Identitäten angezeigt. Um ausgeschlossene Identitäten anzuzeigen, wählen Sie die **[!UICONTROL Ausgeschlossene Identitäten]** umschalten.
 
 ![Datenflussdatensätze für Batch-Ziele](../assets/ui/monitor-destinations/dataflow-records-batch.png)
-
-## Dashboard &quot;Überwachen von Segmentaufträgen&quot; {#monitoring-segment-jobs-dashboard}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_segment_jobs"
->title="Segmentaufträge"
->abstract="Die Ansicht &quot;Segmentaufträge&quot;enthält Informationen zu den Evaluierungs- und Exportvorgängen für alle Ihre Segmente."
-
-So greifen Sie auf die [!UICONTROL Segmentaufträge] Dashboard, auswählen **[!UICONTROL Überwachung]** (![Überwachungssymbol](../assets/ui/monitor-destinations/monitoring-icon.png)) in der linken Navigation. Einmal im [!UICONTROL Überwachung] Seite, wählen Sie [!UICONTROL Segmentaufträge]. Die [!UICONTROL Überwachung] Dashboard enthält Metriken und Informationen zu den Segmentbewertungs- und Exportvorgängen.
-
-![Dashboard zur Überwachung von Segmentaufträgen](../assets/ui/monitor-destinations/dashboard-segment-jobs.png)
-
-Verwenden Sie die [!UICONTROL Segmentaufträge] Dashboard , um zu verstehen, ob die Profilbewertung und der Export rechtzeitig und ohne Ausnahmen erfolgen, sodass die nachgelagerten Dienste für die Zielaktivierung über die neuesten ausgewerteten Profildaten verfügen können.
-
-Die folgenden Metriken sind für Segmentaufträge verfügbar:
-
-| Metrik | Beschreibung |
----------|----------|
-| **[!UICONTROL Segmentauftrag]** | Gibt den Namen des Segmentauftrags an. |
-| **[!UICONTROL Typ]** | Gibt den Typ des Segmentauftrags - Export oder Auswertung an. Beachten Sie, dass der Segmentauftrag in beiden Fällen ausgewertet oder exportiert wird. *all* Segmente, die zu einer Organisation gehören. |
-| **[!UICONTROL Auftragsstart]** | Datum und Uhrzeit des Starts des Segmentauftrags. |
-| **[!UICONTROL Auftragsende]** | Datum und Uhrzeit des Abschlusses des Segmentauftrags. |
-| **[!UICONTROL Status]** | Der Status des abgeschlossenen Auftrags - erfolgreich oder fehlgeschlagen. |
 
 ## Dashboard &quot;Ziele überwachen&quot; {#monitoring-destinations-dashboard}
 

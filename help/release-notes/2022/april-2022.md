@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
-source-git-commit: 4bbf7642a456f36ea0fe7fc1c8d68ad37351ff4c
+source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
 workflow-type: tm+mt
-source-wordcount: '907'
-ht-degree: 14%
+source-wordcount: '1045'
+ht-degree: 21%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 14%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Datenflüsse](#dataflows)
 - [Experience-Datenmodell (XDM)](#xdm)
+
+## Datenflüsse {#dataflows}
+
+In Platform werden Daten aus vielen verschiedenen Quellen erfasst, innerhalb des Systems analysiert und für eine Vielzahl von Zielen aktiviert. Plattform erleichtert das Tracking dieses potenziell nicht-linearen Datenflusses durch Transparenz.
+
+Datenflüsse sind eine Darstellung von Aufträgen, die Daten innerhalb von Platform bewegen. Diese Datenflüsse werden über verschiedene Services konfiguriert, wodurch Daten von den Quell-Connectoren in Zieldatensätze verschoben werden können. Dort werden sie von Identity Service und vom Echtzeit-Kundenprofil verwendet, bevor sie schließlich für Ziele aktiviert werden.
+
+**Neue Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Segmente-Dashboard | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse auf Segmente zu überwachen. Weitere Informationen finden Sie im Handbuch unter [Überwachen von Segmenten in der Benutzeroberfläche](../../dataflows/ui/monitor-segments.md) |
+
+Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht zu Datenflüssen](../../dataflows/home.md). Weitere Informationen zur Segmentierung finden Sie im Abschnitt [Segmentierungsübersicht](../../segmentation/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
@@ -70,3 +85,4 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 {style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersicht](../../xdm/home.md).
+
