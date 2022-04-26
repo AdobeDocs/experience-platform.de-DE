@@ -5,24 +5,24 @@ topic-legacy: guide
 type: Documentation
 description: Mit Adobe Experience Platform können Sie einen Datensatz oder Batch aus dem Profilspeicher löschen, um Echtzeit-Kundenprofildaten zu entfernen, die nicht mehr benötigt werden oder fehlerhaft hinzugefügt wurden. Dazu muss die Profil-API zum Erstellen eines Profilsystemauftrags oder einer Löschanfrage verwendet werden.
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 4c544170636040b8ab58780022a4c357cfa447de
+source-git-commit: ba8b62c67cdd6fa011166cc851ffc1c970108835
 workflow-type: tm+mt
 source-wordcount: '1316'
-ht-degree: 67%
+ht-degree: 70%
 
 ---
 
 # Endpunkt für Profilsystemaufträge (Löschanfragen)
 
-Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in [!DNL Platform] erfasst werden, werden im [!DNL Data Lake] gespeichert. Wenn die Datensätze für Profil aktiviert wurden, werden diese Daten auch im [!DNL Real-time Customer Profile]-Datenspeicher gespeichert. Gelegentlich kann es erforderlich sein, Datensätze oder Batches aus dem Profilspeicher zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder irrtümlich hinzugefügt wurden. Dies erfordert die Verwendung der [!DNL Real-time Customer Profile]-API zum Erstellen eines [!DNL Profile]-Systemauftrags oder `delete request`, der bei Bedarf auch geändert, überwacht oder entfernt werden kann.
+Mit Adobe Experience Platform können Sie Daten aus verschiedenen Quellen erfassen und zuverlässige Profile für einzelne Kunden einrichten. Daten, die in erfasst werden [!DNL Platform] wird im [!DNL Data Lake]und wenn die Datensätze für Profil aktiviert wurden, werden diese Daten im [!DNL Real-time Customer Profile] auch Datenspeicher. Gelegentlich kann es erforderlich sein, Datensätze oder Batches aus dem Profilspeicher zu löschen, um Daten zu entfernen, die nicht mehr benötigt werden oder irrtümlich hinzugefügt wurden. Dazu muss die [!DNL Real-time Customer Profile] API zum Erstellen einer [!DNL Profile] Systemauftrag oder `delete request`, die bei Bedarf auch geändert, überwacht oder entfernt werden können.
 
 >[!NOTE]
 >
->Wenn Sie versuchen, Datensätze oder Batches aus [!DNL Data Lake] zu löschen, finden Sie weitere Informationen unter [Übersicht über den Katalogdienst](../../catalog/home.md) .
+>Wenn Sie versuchen, Datensätze oder Batches aus dem [!DNL Data Lake], besuchen Sie bitte die [Catalog Service - Übersicht](../../catalog/home.md) für weitere Informationen.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete API-Endpunkt ist Teil von [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
 ## Löschanfragen anzeigen
 
@@ -93,10 +93,10 @@ Die Antwort enthält ein „untergeordnetes“ Array mit einem Objekt für jede 
 | Eigenschaft | Beschreibung |
 |---|---|
 | `_page.count` | Die Gesamtanzahl der Anfragen. Diese Antwort wurde aus Platzgründen abgeschnitten. |
-| `_page.next` | Wenn eine zusätzliche Ergebnisseite vorhanden ist, zeigen Sie die nächste Ergebnisseite an, indem Sie den ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) durch den bereitgestellten Wert `"next"` ersetzen. |
-| `jobType` | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer `"DELETE"` zurückgegeben. |
-| `status` | Der Status der Löschanfrage. Mögliche Werte `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Ein Objekt, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Zeit in Sekunden, die die Anfrage verarbeitet wurde, oder die Dauer bis zum Abschluss der Anfrage (`"timeTakenInSec"`) enthält. |
+| `_page.next` | Wenn eine zusätzliche Ergebnisseite vorhanden ist, zeigen Sie die nächste Ergebnisseite an, indem Sie den ID-Wert in einer [Suchanfrage](#view-a-specific-delete-request) mit dem `"next"` bereitgestellter Wert. |
+| `jobType` | Der Typ des zu erstellenden Auftrags. In diesem Fall wird immer `"DELETE"`. |
+| `status` | Der Status der Löschanfrage. Mögliche Werte sind `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
+| `metrics` | Ein Objekt, das die Anzahl der verarbeiteten Datensätze enthält (`"recordsProcessed"`) und die Zeit in Sekunden, die die Anfrage verarbeitet wurde oder wie lange die Anfrage gedauert hat (`"timeTakenInSec"`). |
 
 ## Löschanfrage erstellen {#create-a-delete-request}
 
@@ -189,7 +189,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `"status"` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Der Wert `"batchId"` in der Antwort sollte mit dem Wert `"batchId"` übereinstimmen, der in der Anfrage gesendet wurde.
+Eine erfolgreiche Antwort gibt die Details der neu erstellten Löschanfrage zurück, einschließlich einer eindeutigen, vom System generierten und schreibgeschützten Kennung für die Anfrage. Diese kann zum Nachschlagen der Anfrage und Überprüfen ihres Status verwendet werden. Der `"status"` (Status) der Anfrage lautet zum Zeitpunkt der Erstellung `"NEW"`, und zwar solange, bis die Verarbeitung beginnt. Die `"batchId"` -Wert in der Antwort sollte mit dem `"batchId"` -Wert, der in der Anfrage gesendet wird.
 
 ```json
 {
@@ -241,7 +241,7 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 **Anfrage**
 
 ```shell
-curl -X POST \
+curl -X GET \
   https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -251,7 +251,7 @@ curl -X POST \
 
 **Antwort**
 
-Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktualisierten Status. Die Kennung der Löschanfrage in der Antwort (der Wert `"id"`) sollte mit der im Anfragepfad gesendeten ID übereinstimmen.
+Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktualisierten Status. Die Kennung der Löschanfrage in der Antwort (die `"id"` -Wert) mit der im Anfragepfad gesendeten ID übereinstimmen.
 
 ```json
 {
@@ -268,11 +268,11 @@ Die Antwort enthält die Details der Löschanfrage, einschließlich ihres aktual
 
 | Eigenschaften | Beschreibung |
 |---|---|
-| `jobType` | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer `"DELETE"` zurückgegeben. |
+| `jobType` | Der Typ des zu erstellenden Auftrags, in diesem Fall wird immer `"DELETE"`. |
 | `status` | Der Status der Löschanfrage. Mögliche Werte: `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
-| `metrics` | Ein Array, das die Anzahl der verarbeiteten Datensätze (`"recordsProcessed"`) und die Zeit in Sekunden, die die Anfrage verarbeitet wurde, oder die Dauer bis zum Abschluss der Anfrage (`"timeTakenInSec"`) enthält. |
+| `metrics` | Ein Array, das die Anzahl der verarbeiteten Datensätze enthält (`"recordsProcessed"`) und die Zeit in Sekunden, die die Anfrage verarbeitet wurde oder wie lange die Anfrage gedauert hat (`"timeTakenInSec"`). |
 
-Sobald der Status der Löschanfrage `"COMPLETED"` lautet, können Sie bestätigen, dass die Daten gelöscht wurden, indem Sie versuchen, mithilfe der Data Access API auf die gelöschten Daten zuzugreifen. Anweisungen zum Zugreifen auf Datensätze und Batches mit der Data Access-API finden Sie in der [Dokumentation zu Data Access](../../data-access/home.md).
+Sobald der Löschanfragestatus `"COMPLETED"` Sie können bestätigen, dass die Daten gelöscht wurden, indem Sie versuchen, mithilfe der Data Access API auf die gelöschten Daten zuzugreifen. Anweisungen zum Zugreifen auf Datensätze und Batches mit der Data Access-API finden Sie in der [Dokumentation zu Data Access](../../data-access/home.md).
 
 ## Löschanfrage entfernen
 
@@ -305,4 +305,4 @@ Bei erfolgreicher Löschanfrage werden der HTTP-Status 200 (OK) und ein leerer A
 
 ## Nächste Schritte
 
-Nachdem Sie nun die Schritte kennen, die beim Löschen von Datensätzen und Batches aus [!DNL Profile Store] innerhalb von [!DNL Experience Platform] erforderlich sind, können Sie Daten, die irrtümlicherweise hinzugefügt wurden oder die Ihr Unternehmen nicht mehr benötigt, sicher löschen. Beachten Sie, dass Löschanfragen nicht rückgängig gemacht werden können. Daher sollten Sie Daten nur dann löschen, wenn Sie sicher sind, dass Sie sie jetzt und in Zukunft nicht mehr benötigen werden.
+Jetzt wissen Sie, welche Schritte beim Löschen von Datensätzen und Batches aus der [!DNL Profile Store] Innerhalb [!DNL Experience Platform]können Sie Daten löschen, die irrtümlich hinzugefügt wurden oder die Ihre Organisation nicht mehr benötigt. Beachten Sie, dass Löschanfragen nicht rückgängig gemacht werden können. Daher sollten Sie Daten nur dann löschen, wenn Sie sicher sind, dass Sie sie jetzt und in Zukunft nicht mehr benötigen werden.
