@@ -3,10 +3,10 @@ keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei 
 title: Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe von Datenvorbereitungsfunktionen in der Platform-Benutzeroberfläche CSV-Dateien einem XDM-Schema zuordnen können.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 4cce36ef21ad7490941eecff3933ff0459a0425c
-workflow-type: ht
-source-wordcount: '1665'
-ht-degree: 100%
+source-git-commit: edef8843c03282774991f30220504ece97af52cf
+workflow-type: tm+mt
+source-wordcount: '1837'
+ht-degree: 90%
 
 ---
 
@@ -168,6 +168,34 @@ Das Bedienfeld **[!UICONTROL Berechnetes Feld erstellen]** wird angezeigt. Das l
 Mithilfe des Ausdruckseditors in der Mitte können Sie manuell Felder, Funktionen und Operatoren hinzufügen. Wählen Sie den Editor aus, um mit der Erstellung eines Ausdrucks zu beginnen. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Speichern]** aus, um fortzufahren.
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
+
+### Import-Mapping {#import}
+
+Sie können die Zuordnung eines vorhandenen Datenflusses wiederverwenden, um die manuelle Konfigurationszeit Ihrer Datenaufnahme zu reduzieren und Fehler zu begrenzen. Auswählen **[!UICONTROL Import-Mapping]** , um eine vorhandene Zuordnung wiederzuverwenden.
+
+![import-mapping](../images/ui/mapping/import-mapping.png)
+
+Die [!UICONTROL Import-Mapping] -Fenster angezeigt, sodass Sie eine Liste mit Datenflüssen zur Auswahl erhalten.
+
+Wählen Sie das Vorschausymbol aus, um die Zuordnung des ausgewählten Datenflusses in der Vorschau anzuzeigen.
+
+![list-mapping](../images/ui/mapping/list-mapping.png)
+
+Im Vorschaufenster können Sie die vorhandene Zuordnung vor dem Import in Ihren Datenfluss überprüfen. Nachdem Sie die Zuordnung überprüft haben, können Sie **[!UICONTROL Zurück]** , um zur Liste der Datenflüsse zurückzukehren und einen anderen Satz von Zuordnungen zu überprüfen, oder Sie können **[!UICONTROL Auswählen]** um fortzufahren.
+
+![preview-mapping](../images/ui/mapping/preview-mapping.png)
+
+Alternativ können Sie die zu importierende Zuordnung aus der Liste der Datenflüsse auswählen. Wählen Sie den Datenfluss aus, der die zu importierende Zuordnung enthält, und wählen Sie dann **[!UICONTROL Auswählen]** um fortzufahren.
+
+![select-mapping](../images/ui/mapping/select-mapping.png)
+
+Die Benutzeroberfläche wird mit dem importierten Mapping aktualisiert.
+
+>[!NOTE]
+>
+>Alle vorhandenen Zuordnungssätze, die Sie erstellen oder die Empfehlungen für die ML-Zuordnung erstellen, werden durch die Zuordnung ersetzt, die Sie aus einem vorhandenen Datenfluss importiert haben.
+
+![mapping-importiert](../images/ui/mapping/mapping-imported.png)
 
 Wählen Sie **[!UICONTROL Vorschaudaten]** aus, um die Zuordnungsergebnisse von bis zu 100 Zeilen mit Beispieldaten aus dem ausgewählten Datensatz anzuzeigen.
 
