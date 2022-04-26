@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
-source-git-commit: fe30444fb2d11c38433c73d88ee4c8e9a32bdff8
+source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 21%
+source-wordcount: '1473'
+ht-degree: 30%
 
 ---
 
@@ -15,7 +15,10 @@ ht-degree: 21%
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [Datenflüsse](#dataflows)
+- [[!DNL Data Prep]](#data-prep)
 - [Experience-Datenmodell (XDM)](#xdm)
+- [Real-time Customer Data Platform B2B Edition](#B2B)
+- [Quellen](#sources)
 
 ## Datenflüsse {#dataflows}
 
@@ -30,6 +33,19 @@ Datenflüsse sind eine Darstellung von Aufträgen, die Daten innerhalb von Platf
 | Segmente-Dashboard | Sie können jetzt das Monitoring-Dashboard verwenden, um Datenflüsse auf Segmente zu überwachen. Weitere Informationen finden Sie im Handbuch unter [Überwachen von Segmenten in der Benutzeroberfläche](../../dataflows/ui/monitor-segments.md) |
 
 Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht zu Datenflüssen](../../dataflows/home.md). Weitere Informationen zur Segmentierung finden Sie im Abschnitt [Segmentierungsübersicht](../../segmentation/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung für Adobe Analytics-Quelle | Die Adobe Analytics-Quelle unterstützt jetzt Data Prep-Funktionen, mit denen Sie Ihre Analytics Report Suite-Daten beim Erstellen eines Datenflusses einem Ziel-XDM-Schema zuordnen können. Siehe Tutorial zu [Erstellen einer Analytics-Quellverbindung](../../sources/tutorials/ui/create/adobe-applications/analytics.md) für weitere Informationen. |
+| Unterstützung für den Import vorhandener Zuordnungsregeln | Sie können jetzt Zuordnungsregeln aus einem vorhandenen Datenfluss importieren, um Ihre Datenflusskonfigurationen zu beschleunigen und Fehler zu begrenzen. Siehe Tutorial zu [Importieren vorhandener Zuordnungsregeln](../../data-prep/ui/mapping.md) für weitere Informationen. |
+
+Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
@@ -86,3 +102,30 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersicht](../../xdm/home.md).
 
+### Real-time Customer Data Platform B2B Edition {#B2B}
+
+Real-time Customer Data Platform B2B Edition basiert auf Real-time Customer Data Platform (Real-time CDP) und wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Service-Modell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung für `isDeleted` Funktion | Alle [!DNL Marketo] Datensätze außer `Activities` unterstützt jetzt die `isDeleted` Zuordnung. Die neue Zuordnung wird automatisch zu Ihren vorhandenen B2B-Datenflüssen hinzugefügt. Sie können die `isDeleted` -Mapping, um gelöschte Datensätze herauszufiltern, sodass Ihre Daten in der [!DNL Data Lake] mit Ihren Quelldaten konsistent ist. Siehe [[!DNL Marketo] Handbuch zu Zuordnungsfeldern](../../sources/connectors/adobe-applications/mapping/marketo.md) Weitere Informationen zu `isDeleted`. |
+
+Weitere Informationen zu Real-time Customer Data Platform B2B Edition finden Sie in der [B2B-Übersicht](../../rtcdp/b2b-overview.md).
+
+## Quellen {#sources}
+
+Mit Adobe Experience Platform können Sie Daten aus externen Quellen erfassen und diese Daten mithilfe von Platform-Diensten strukturieren, kennzeichnen und verbessern. Daten können Sie aus verschiedenen Quellen erfassen, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+
+Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die [!DNL OneTrust Integration] Quelle zur Aufnahme von Einwilligungs- und Voreinstellungsdaten aus Ihrer [!DNL OneTrust] -Konto auf Platform. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL OneTrust Integration] Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md) für weitere Informationen. |
+| Unterstützung für [!DNL Square] | Sie können jetzt die [!DNL Square] -Quelle, um Zahlungsdaten von Ihrer [!DNL Square] -Konto auf Platform. |
+| Unterstützung für das Löschen von Datenflüssen für Kundenattribute | Sie können jetzt mit dem Quell-Connector für Kundenattribute erstellte Datenflüsse löschen. |
+
+Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
