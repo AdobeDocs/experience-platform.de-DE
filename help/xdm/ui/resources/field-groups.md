@@ -5,9 +5,9 @@ title: Erstellen und Bearbeiten von Schemafeldgruppen in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie Schemafeldgruppen in der Benutzeroberfläche "Experience Platform"erstellen und bearbeiten.
 topic-legacy: user guide
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: 49a54b78d1e3745694352e779fb2226acd99d663
+source-git-commit: 1d4eba9f566dc1926afd7886c6ad2808ed91ea13
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,11 @@ Sobald das Schema im Editor geöffnet ist, können Sie beginnen [Felder zur Feld
 
 ## Felder zu einer Feldergruppe hinzufügen {#add-fields}
 
-So fügen Sie Felder zu einer Feldergruppe im [!DNL Schema Editor], wählen Sie zunächst den Namen der Feldergruppe in der linken Leiste aus und wählen Sie dann die **plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche.
+>[!NOTE]
+>
+>Dieser Abschnitt konzentriert sich auf das Hinzufügen von Feldern zu benutzerdefinierten Feldergruppen. Informationen zum Hinzufügen benutzerdefinierter Felder zu Standardfeldgruppen finden Sie im Abschnitt [Handbuch zur Schemabenutzeroberfläche](./schemas.md#custom-fields-for-standard-groups).
+
+So fügen Sie Felder zu einer benutzerdefinierten Feldergruppe im [!DNL Schema Editor], wählen Sie zunächst den Namen der Feldergruppe in der linken Leiste aus und wählen Sie dann die **plus (+)** neben dem Namen des Schemas auf der Arbeitsfläche.
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
