@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
-source-git-commit: d09eb2e71a5ebce31aeaf8560c20f0c8595f5d19
+source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 30%
+source-wordcount: '1999'
+ht-degree: 25%
 
 ---
 
@@ -14,11 +14,37 @@ ht-degree: 30%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Dashboards]](#dashboards)
 - [Datenflüsse](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Quellen](#sources)
+
+## [!DNL Dashboards] {#dashboards}
+
+Platform bietet mehrere Dashboards, in denen Sie wichtige Informationen zu den Daten Ihres Unternehmens sehen, basierend auf täglichen Schnappschüssen der Daten.
+
+Dashboards bieten vorkonfigurierte Berichtsoptionen für die Daten Ihres Unternehmens und sind direkt in den Marketing-Workflow in Platform integriert. Diese Dashboards können ohne zusätzliche IT-Unterstützung genutzt werden, und es fällt hierbei auch nicht der Zeit- und Arbeitsaufwand an, der andernfalls für den Export und die Verarbeitung von Daten mit Data Warehouse-Design und -Implementierung als Zusatz erforderlich wäre.
+
+Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboards verfügbar. Weitere Informationen finden Sie in der Dokumentation zu [Hinzufügen von Widgets über die Widget-Bibliothek](../../dashboards/customize/widget-library.md).
+
+| Funktion | Dashboard | Beschreibung |
+| --------------------------------------------------------- | ------------- | ----------- |
+| [!UICONTROL Hinzugefügte Trends bei Profilen] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtanzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
+| [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] | Profile | Dieses Widget zeigt die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen in einer einzelnen Metrik an und verwendet ein doppeltes Diagramm, um den proportionalen Unterschied zwischen den Summen zu veranschaulichen. |
+| [!UICONTROL Zielgruppengröße] | Profile | Dieses Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen auflistet. Die Liste hängt von der angewendeten und von oben nach unten sortierten Zusammenführungsrichtlinie ab, die der Gesamtzahl der Zielgruppen entspricht. |
+| [!UICONTROL Trend zur Profilanzahl] | Profile | Dieses Widget verwendet ein Liniendiagramm, um den Trend der Gesamtanzahl der im System enthaltenen Profile im Zeitverlauf zu veranschaulichen. Die Daten können über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+| [!UICONTROL Einzelne Identitätsprofile nach Identität] | Profile | Dieses Widget verwendet ein Balkendiagramm, um die Gesamtanzahl der Profile zu veranschaulichen, die mit nur einer eindeutigen Kennung identifiziert werden. Das Widget unterstützt bis zu fünf der am häufigsten auftretenden Identitäten. |
+| [!UICONTROL Zielstatus] | Ziele | Dieses Widget zeigt die Gesamtzahl der aktivierten Ziele als einzelne Metrik an und verwendet ein doppeltes Diagramm, um den proportionalen Unterschied zwischen aktivierten und deaktivierten Zielen zu veranschaulichen. |
+| [!UICONTROL Aktive Ziele nach Zielplattform] | Ziele | Dieses Widget verwendet eine zweispaltige Tabelle, um eine Liste der aktiven Zielplattformen und die Gesamtzahl der aktiven Ziele für jede Zielplattform anzuzeigen. |
+| [!UICONTROL Aktivierte Zielgruppen für alle Ziele] | Ziele | Dieses Widget stellt die Gesamtanzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. |
+| [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] | Segmente | Dieses Widget bietet eine dreiseitige Tabelle, in der der Zielname, die Plattform und das Aktivierungsdatum der Zielgruppe aufgelistet sind. |
+| [!UICONTROL Zielgruppengrößentrend] | Segmente | Dieses Widget bietet eine grafische Darstellung der Gesamtanzahl der Profile, die die Kriterien einer Segmentdefinition über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten erfüllen. |
+| [!UICONTROL Trend zur Änderung der Zielgruppengröße] | Segmente | Dieses Widget bietet eine Liniendiagramm, die die Differenz in der Gesamtzahl der Profile anzeigt, die sich für ein bestimmtes Segment zwischen den letzten täglichen Momentaufnahmen qualifiziert haben. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+| [!UICONTROL Trend zur Zielgruppengröße nach Identität] | Segmente | Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf einem ausgewählten Identitätstyp. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+
+Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)und [[!DNL Segments]](../../dashboards/guides/segments.md) Dashboards.
 
 ## Datenflüsse {#dataflows}
 
