@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: f9938aca8a5c72a53a688152ac2ab0c0abe632ce
+source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 96%
+source-wordcount: '753'
+ht-degree: 95%
 
 ---
 
@@ -188,6 +188,7 @@ ht-degree: 96%
       * [(Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
       * [Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung](./destination-sdk/submit-destination.md)
    * Referenz {#reference}
+      * [Ratenbegrenzungs- und Wiederholungsrichtlinie für Streaming-Ziele](./destination-sdk/rate-limiting-retry-policy.md)
       * [Unterstützte Umwandlungsfunktionen](./destination-sdk/supported-functions.md)
    * Dokumentieren des Ziels {#document-destination}
       * [Dokumentieren des Ziels in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
