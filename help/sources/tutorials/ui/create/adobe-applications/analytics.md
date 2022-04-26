@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 06232d4b567ba1d6bed55226aaa08147510c4498
-workflow-type: ht
-source-wordcount: '1578'
-ht-degree: 100%
+source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+workflow-type: tm+mt
+source-wordcount: '1700'
+ht-degree: 86%
 
 ---
 
@@ -32,7 +32,7 @@ Es ist wichtig, die folgenden Schlüsselbegriffe zu verstehen, die in diesem Dok
 * **Standardattribut**: Standardattribute sind alle Attribute, die von Adobe vordefiniert wurden. Sie haben dieselbe Bedeutung für alle Kunden und sind in den [!DNL Analytics]-Quelldaten und [!DNL Analytics]-Schemafeldergruppen verfügbar.
 * **Benutzerdefiniertes Attribut**: Benutzerdefinierte Attribute sind alle Attribute in der Hierarchie der benutzerdefinierten Variablen in [!DNL Analytics]. Benutzerdefinierte Attribute werden innerhalb einer Adobe Analytics-Implementierung verwendet, um bestimmte Informationen in einer Report Suite zu erfassen. Ihre Verwendung kann sich von Report Suite zu Report Suite unterscheiden. Zu den benutzerdefinierten Attributen gehören eVars, Eigenschaften und Listen. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de) finden Sie weitere Informationen zu eVars.
 * **Attribute in benutzerdefinierten Feldgruppen**: Attribute, die aus von Kunden erstellten Feldgruppen stammen, sind alle benutzerdefiniert und gelten weder als Standard- noch als benutzerdefinierte Attribute.
-* **Anzeigenamen**: Anzeigenamen sind von Benutzern bereitgestellte Bezeichnungen für benutzerdefinierte Variablen in einer [!DNL Analytics]-Implementierung. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=de) finden Sie weitere Informationen zu Anzeigenamen.
+* **Anzeigenamen**: Anzeigenamen sind von Benutzern bereitgestellte Bezeichnungen für benutzerdefinierte Variablen in einer [!DNL Analytics]-Implementierung. In der folgenden [[!DNL Analytics] Dokumentation zu Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) finden Sie weitere Informationen zu Anzeigenamen.
 
 ## Erstellen einer Quellverbindung mit Adobe Analytics
 
@@ -46,11 +46,17 @@ Wählen Sie unter der Kategorie **[!UICONTROL Adobe-Programme]** das Programm **
 
 ### Auswählen von Daten
 
-Der Schritt **[!UICONTROL Analytics-Quelle – Daten hinzufügen]** wird angezeigt. Wählen Sie **[!UICONTROL Report Suite]** aus, um eine Quellverbindung für Analytics-Report Suite-Daten zu erstellen, und wählen Sie dann die Report Suite aus, die Sie aufnehmen möchten. Report Suites, die nicht auswählbar sind, wurden bereits aufgenommen, entweder in dieser Sandbox oder in einer anderen Sandbox. Wählen Sie **[!UICONTROL Weiter]** aus, um fortzufahren.
+Die **[!UICONTROL Analytics-Quelle - Daten hinzufügen]** -Schritt bietet Ihnen eine Liste von [!DNL Analytics] Report Suite-Daten, mit denen eine Quellverbindung hergestellt werden soll.
+
+Eine Report Suite kann nur mit einem einzigen aktiven Datenfluss erfasst werden. Sie kann nicht in mehreren Datenflüssen verwendet werden. Darüber hinaus muss eine Report Suite derselben Region angehören wie die Platform-Sandbox-Instanz, in der die Quellverbindung erstellt wird. Eine Report Suite, die nicht auswählbar ist, wurde bereits aufgenommen, entweder in dieser Sandbox oder in einer anderen Sandbox.
+
+Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites in dieselbe Sandbox zu bringen. Wenn die Report Suites unterschiedliche Schemas für Variablen haben (z. B. eVars oder Ereignisse), sollten sie bestimmten Feldern in den benutzerdefinierten Feldergruppen zugeordnet werden, um Datenkonflikte bei der Verwendung von [Datenvorbereitung](../../../../../data-prep/ui/mapping.md). Report Suites können nur zu einer einzelnen Sandbox hinzugefügt werden.
 
 >[!NOTE]
 >
->Es können mehrere eingehende Verbindungen hergestellt werden, um mehrere Report Suites einzubinden. Es kann jedoch jeweils nur eine Report Suite mit Real-time Customer Data Platform verwendet werden.
+>Daten aus mehreren Report Suites können nur dann für das Echtzeit-Kundendatenprofil aktiviert werden, wenn keine Datenkonflikte bestehen, z. B. zwei benutzerdefinierte Eigenschaften (eVars, Listen und Props) mit unterschiedlicher Bedeutung, die nicht demselben Attribut im XDM zugeordnet werden können.
+
+So erstellen Sie eine [!DNL Analytics] Quellverbindung, wählen Sie eine Report Suite und klicken Sie auf **[!UICONTROL Nächste]** um fortzufahren.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -60,7 +66,7 @@ Der Schritt **[!UICONTROL Analytics-Quelle – Daten hinzufügen]** wird angezei
 
 >[!IMPORTANT]
 >
->Unterstützung für die Datenvorbereitung für die [!DNL Analytics]-Quelle befindet sich derzeit in der Beta-Version. Die Funktion und die Dokumentation können sich ändern.
+>Datenvorbereitung-Transformationen können zum Datenfluss insgesamt Latenzzeiten hinzufügen. Die zusätzliche Latenz variiert je nach Komplexität der Umwandlungslogik.
 
 Bevor Sie Ihre [!DNL Analytics]-Daten einem Ziel-XDM-Schema zuordnen können, müssen Sie zunächst auswählen, ob Sie ein Standardschema oder ein benutzerdefiniertes Schema verwenden.
 
