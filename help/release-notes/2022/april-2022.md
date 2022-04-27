@@ -1,10 +1,11 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
-source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
+exl-id: 39233787-3089-4469-8363-b006ae41ae21
+source-git-commit: b3655b70a44f878a29c6a401e5957660edebeba6
 workflow-type: tm+mt
-source-wordcount: '2260'
-ht-degree: 25%
+source-wordcount: '2379'
+ht-degree: 26%
 
 ---
 
@@ -18,6 +19,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Datenflüsse](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
+- [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Quellen](#sources)
@@ -88,6 +90,23 @@ Weitere allgemeine Informationen zu Datenflüssen finden Sie in der [Übersicht 
 | Unterstützung für den Import vorhandener Zuordnungsregeln | Sie können jetzt Zuordnungsregeln aus einem vorhandenen Datenfluss importieren, um Ihre Datenflusskonfigurationen zu beschleunigen und Fehler zu begrenzen. Siehe Tutorial zu [Importieren vorhandener Zuordnungsregeln](../../data-prep/ui/mapping.md) für weitere Informationen. |
 
 Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| [In-Kontext-Warnhinweise für Ziel-Datenflüsse](../../destinations/ui/alerts.md) | Jetzt können Sie Warnhinweise abonnieren, wenn Sie einen Ziel-Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Sie können Warnungen über die Experience Platform-Benutzeroberfläche oder per E-Mail erhalten. |
+
+**Neue Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Verbinden und aktivieren Sie Daten mit der Werbeplattform von Criteo. |
+| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Verbinden und aktivieren Sie Daten für Transaktions- und Marketing-E-Mails mit der Sendgrid-Plattform. |
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
