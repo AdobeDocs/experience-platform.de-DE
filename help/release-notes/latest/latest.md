@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
+source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
 workflow-type: tm+mt
-source-wordcount: '2378'
-ht-degree: 26%
+source-wordcount: '2492'
+ht-degree: 25%
 
 ---
 
@@ -84,14 +84,31 @@ Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Ü
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| [In-Kontext-Warnhinweise für Ziel-Datenflüsse](../../destinations/ui/alerts.md) | Jetzt können Sie Warnhinweise abonnieren, wenn Sie einen Ziel-Datenfluss erstellen, um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Sie können Warnungen über die Experience Platform-Benutzeroberfläche oder per E-Mail erhalten. |
+| Erweiterte Enterprise Destination Connectors | Drei Enterprise-Ziel-Connectoren sind jetzt allgemein verfügbar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)und [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> Die allgemeine Verfügbarkeit von Ziel-Connectoren für Unternehmen umfasst alle Funktionen, die zuvor in der Beta-Phase angeboten wurden, und mehr: <ul><li>Neue Authentifizierungsfunktionen, einschließlich [Signatur für freigegebenen Zugriff in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) und mehr [Authentifizierungstypen](../../destinations/catalog/streaming/http-destination.md#authentication-information) (Trägertoken, OAuth 2) im HTTP-API-Ziel;</li><li>[Aufstocken historischer Profildaten](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (Versand von Verlaufsprofilen, die für das Segment qualifiziert sind, wenn es zum ersten Mal aktiviert wird);</li><li>Metriken zu Datenflüssen werden jetzt für diese Ziele unterstützt.</li><li>[Zusätzliche Segmentmetadaten](../../destinations/catalog/streaming/http-destination.md#destination-details) in der Daten-Payload enthalten, einschließlich Segmentnamen und Segmentzeitstempeln;</li><li>Unterstützung für [statische IP-Adressen](/help/destinations/catalog/streaming/ip-address-allow-list.md) für Kunden, die die Experience Platform der Zulassungsliste benötigen.</li></ul> |
+| In-Kontext-Warnhinweise für Ziel-Datenflüsse | Sie können jetzt [Warnhinweise abonnieren](../../destinations/ui/alerts.md) beim Erstellen eines Ziel-Datenflusses , um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Sie können Warnungen über die Experience Platform-Benutzeroberfläche oder per E-Mail erhalten. |
+
+<!--
+
+### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+
+For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+
+If you have been utilizing these destinations in the Beta phase, please note the following:
+
+- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
+- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
+- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
+
+-->
 
 **Neue Ziele**
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) | Verbinden und aktivieren Sie Daten mit der Werbeplattform von Criteo. |
-| [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) | Verbinden und aktivieren Sie Daten für Transaktions- und Marketing-E-Mails mit der Sendgrid-Plattform. |
+| [!DNL Criteo] | Verbinden und Aktivieren von Daten mit dem [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) Werbeplattform. |
+| [!DNL Sendgrid] | Verbinden und Aktivieren von Daten mit dem [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) Plattform für Transaktions- und Marketing-E-Mails. |
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 
