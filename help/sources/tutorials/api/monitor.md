@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Überwachen von Datenflüssen;Flow Service API;Flow Service
 solution: Experience Platform
-title: Überwachen von Datenflüssen mithilfe der Flow Service-API
+title: Überwachen von Datenflüssen zu Quellen mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Überwachen von Daten in Datenflüssen auf Vollständigkeit, Fehler und Metriken mithilfe der Flow Service-API beschrieben.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: ht
-source-wordcount: '410'
-ht-degree: 100%
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
+workflow-type: tm+mt
+source-wordcount: '412'
+ht-degree: 96%
 
 ---
 
-# Überwachen von Datenflüssen mithilfe der Flow Service-API
+# Überwachen von Datenflüssen aus Quellen mithilfe der Flow Service-API
 
 In diesem Tutorial werden die Schritte zum Überwachen von Datenflüssen auf Vollständigkeit, Fehler und Metriken mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
 
@@ -61,7 +61,7 @@ curl -X GET \
 
 **Antwort**
 
-Bei einer erfolgreichen Antwort werden Details zu Ihrer Flussausführung zurückgegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung der Flussausführung (`id`).
+Bei einer erfolgreichen Antwort werden Details zu Ihrem Flussvorgang angegeben, einschließlich Informationen zum Erstellungsdatum, zu den Quell- und Zielverbindungen sowie zur eindeutigen Kennung des Flussvorgangs (`id`).
 
 ```json
 {

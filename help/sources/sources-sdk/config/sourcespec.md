@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
-title: Konfigurieren von Authentifizierungsspezifikationen für das Quellen-SDK
+title: Quellspezifikationen für das Quellen-SDK konfigurieren
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Quellen-SDK vorbereiten müssen.
 hide: true
 hidefromtoc: true
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 4c4c89ab7db7d3546163d707ac80210561c2fa02
-workflow-type: ht
+source-git-commit: 9727f7b0e8eaae92c85f102e5e7bea018a2ee6de
+workflow-type: tm+mt
 source-wordcount: '861'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
