@@ -6,10 +6,10 @@ title: Insights mit Customer AI
 topic-legacy: Discovering insights
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Einblicken von Dienstinstanzen in der Benutzeroberfläche von Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 417b3f885f75f107d2db06331053917a76c904c4
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 7%
+source-wordcount: '2079'
+ht-degree: 6%
 
 ---
 
@@ -169,7 +169,7 @@ Um Ihr neues Segment in der Platform-Benutzeroberfläche anzuzeigen, wählen Sie
 
 ![Alle Segmente](../images/insights/Segments-dashboard.png)
 
-## Metriken mit Leistungszusammenfassungen {#performance-metrics}
+## Historische Leistung {#historical-performance}
 
 Die **[!UICONTROL Leistungszusammenfassung]** zeigt die tatsächlichen Abwanderungs- oder Konversionsraten in die einzelnen Tendenzbehälter, die von Customer AI bewertet werden.
 
@@ -192,6 +192,37 @@ Die untere Hälfte der **[!UICONTROL Leistungszusammenfassung]** zeigt die Ergeb
 Je nachdem, ob Sie Abwanderung oder Konversion vorhersagen, wird die [!UICONTROL Verteilung der Werte] -Diagramm zeigt die Verteilung der Profile an, die in den einzelnen Schritten aktiviert/konvertiert und nicht gedreht/nicht konvertiert wurden.
 
 ![individuelle Bewertung](../images/insights/scoring_tab.png)
+
+## Modellbewertung {#model-evaluation}
+
+Zusätzlich zum Tracking der prognostizierten und tatsächlichen Ergebnisse im Zeitverlauf auf der Registerkarte &quot;Historische Leistung&quot;haben Marketingexperten im Tab Modellauswertung noch mehr Transparenz in Bezug auf die Modellqualität. Sie können die Diagramme Steigerung und Gewinne verwenden, um die Unterschiede bei der Verwendung eines prädiktiven Modells im Vergleich zum zufälligen Targeting zu ermitteln. Darüber hinaus können Sie bestimmen, wie viele positive Ergebnisse bei jedem Score-Cutoff erfasst werden. Dies ist nützlich für die Segmentierung und für die Abstimmung der Kapitalrendite auf Marketing-Aktionen.
+
+### Lift-Diagramm
+
+![Steigerungsdiagramm](../images/user-guide/lift-chart.png)
+
+Das Steigerungsdiagramm misst die Verbesserung der Verwendung eines Vorhersagemodells anstelle von zufälligem Targeting.
+
+Zu den hochwertigen Modellindikatoren gehören:
+
+- Hohe Steigerungswerte in den ersten Dezimalstellen. Das bedeutet, dass das Modell gut darin ist, die Benutzer zu identifizieren, die die größte Neigung haben, die gewünschten Aktionen durchzuführen.
+- Absteigende Steigerungswerte. Dies bedeutet, dass Kunden mit höheren Werten mit höherer Wahrscheinlichkeit die Aktion von Interesse ausführen als Kunden mit niedrigeren Werten.
+
+### Gewinnerdiagramm
+
+![Gewinndiagramm](../images/user-guide/gains-chart.png)
+
+Das Diagramm für kumulative Gewinne misst den Prozentsatz der positiven Ergebnisse, die durch Targeting-Ergebnisse über einem bestimmten Schwellenwert erfasst werden. Nach Sortierung der Kunden nach Tendenzwert von hoch bis niedrig wird die Population in Dezimalstellen aufgeteilt - 10 gleich große Gruppen. Ein perfektes Modell würde alle positiven Ergebnisse in den höchsten Punktzahlen erfassen. Eine zufällige Basismethode erfasst positive Ergebnisse proportional zur Größe der Gruppe. Bei der Zielgruppenbestimmung würden 30 % der Benutzer 30 % der Ergebnisse erfassen.
+
+Zu den hochwertigen Modellindikatoren gehören:
+
+- Die kumulierten Gewinne nähern sich 100% schnell.
+- Die kumulierte Gewinnkurve für das Modell ist näher an der oberen linken Ecke des Diagramms.
+- Das Diagramm für kumulierte Gewinne kann verwendet werden, um die Bewertungsabschläge für die Segmentierung und das Targeting zu bestimmen. Wenn das Modell beispielsweise 70 % der positiven Ergebnisse in den ersten 2 Bewertungsdezimeln erfasst, wird erwartet, dass das Targeting von Benutzern mit PerzentilScore > 80 ungefähr 70 % der positiven Ergebnisse erfasst.
+
+### AUC (Fläche unter der Kurve)
+
+Die AUC spiegelt die Stärke der Beziehung zwischen dem Rang nach Bewertung und dem Auftreten des prognostizierten Ziels wider. Ein **AUC** von 0,5 bedeutet, dass das Modell nicht besser ist als eine zufällige Schätzung. Ein **AUC** von 1 bedeutet, dass das Modell perfekt vorhersagen kann, wer die entsprechende Aktion ergreifen wird.
 
 ## Nächste Schritte
 
