@@ -4,10 +4,10 @@ title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus vier Bereichen: Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 2d944c7bd237efbbd4a770b3a6dd03c4133bc901
+source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 19%
+source-wordcount: '1156'
+ht-degree: 18%
 
 ---
 
@@ -94,6 +94,7 @@ Auf der Registerkarte **[!UICONTROL Durchsuchen]** werden die Ziele angezeigt, m
 > * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Segmente aktivieren ]**-Schaltfläche, um Segmente an dieses Ziel zu senden.
 > * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Schaltfläche &quot;Löschen&quot;](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Löschen ]**Schaltfläche zu [remove](delete-destinations.md) eine bestehende Verbindung zu einem Ziel.
 > * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Anzeigen in Überwachungsschaltfläche](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Anzeigen in der Überwachung ]**Schaltfläche zum Anzeigen der Aktivierungsinformationen für dieses Ziel im [Monitoring-Dashboard](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Wählen Sie die drei Punkte im [!UICONTROL Name] und verwenden Sie die ![Warnhinweise abonnieren ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL Warnhinweise abonnieren ]**Schaltfläche zum Abonnieren von Ziel-Datenfluss-Warnhinweisen. Sie können Warnhinweise abonnieren, um Nachrichten zum Status, Erfolg oder Misserfolg Ihrer Workflow-Ausführung zu erhalten. Siehe [In-Context-Zielwarnungen abonnieren](alerts.md) für detaillierte Informationen zu Ziel-Datenfluss-Warnhinweisen.
 
 
 ![Registerkarte „Durchsuchen“](../assets/ui/workspace/browse-tab.png)

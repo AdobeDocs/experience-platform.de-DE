@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 73bb1d21e70644ffef50b08f22048d0937a6a729
+source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 95%
+source-wordcount: '758'
+ht-degree: 94%
 
 ---
 
@@ -39,6 +39,7 @@ ht-degree: 95%
    * [Bearbeiten von Aktivierungsdatenflüssen](./ui/edit-activation.md)
    * [Löschen von Zielen](./ui/delete-destinations.md)
    * [Überwachen von Datenflüssen](./ui/monitor-dataflows.md)
+   * [In-Context-Zielwarnungen abonnieren](ui/alerts.md)
 * Zielkatalog {#catalog}
    * [Zielkatalog – Übersicht](./catalog/overview.md)
    * Adobe-Ziele {#adobe}
