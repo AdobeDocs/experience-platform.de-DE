@@ -1,9 +1,9 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
-source-git-commit: 820fba06d3460408640c816c80f05bff1de227cd
+source-git-commit: ea04132c5092ce62820b0af1edc95bb1e0a1a16f
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '2260'
 ht-degree: 25%
 
 ---
@@ -14,12 +14,28 @@ ht-degree: 25%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenflüsse](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Quellen](#sources)
+
+## [!DNL Intelligent Services] {#intelligent-services}
+
+Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich wären.
+
+Mit Attribution AI und Customer AI können Kunden erweiterte KI-/ML-Modelle für die Marketing-Attribution und die Kundenneigung konfigurieren. Mit der Funktion für mehrere Datensätze können Kunden zum Zeitpunkt der Modellkonfiguration mehrere Datensätze einbringen, ohne dass Daten im Voraus zugeordnet und vorbereitet werden müssen.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können die Identitätszuordnung und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identitäts-Namespace für alle Datensätze gibt. Attribution AI unterstützt die folgenden Schemata: Adobe Analytics, Experience Event, Consumer Experience Event. Customer AI unterstützt alle diese Schemas sowie das Adobe Audience Manager-Schema. Weiterführende Informationen zur Unterstützung mehrerer Datensätze in Attribution AI und Customer AI finden Sie im Abschnitt [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md) und [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Neue Modellbewertungsmetriken in Customer AI | Neue Gewinndiagramme in Customer AI ermöglichen es Marketing-Experten, die Gruppengröße für das Targeting anhand ihres Budgets und ihrer ROI-Ziele zu bestimmen. In neuen Steigerungsdiagrammen wird die Qualität des Modells gemessen, was eine bessere Sichtbarkeit der Steigerung ermöglicht, die sie gegenüber zufälligem Targeting erhalten würden. Weitere Informationen finden Sie unter [Einblicke in Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) Dokument. |
+
+Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
 ## [!DNL Dashboards] {#dashboards}
 
