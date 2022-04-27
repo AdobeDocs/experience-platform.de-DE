@@ -2,9 +2,10 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Datenmanagement; Lizenzberechtigungen; Lizenzierung; Best Practices
 title: Best Practices für Data Management-Lizenzberechtigungen
 description: In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ihre Lizenzberechtigungen mit Adobe Experience Platform besser verwalten können.
-source-git-commit: 3bac35ba5f6e9cde6c1324b11220c523daa1f8cb
+exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
+source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2586'
 ht-degree: 1%
 
 ---
@@ -193,7 +194,7 @@ In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktion
 | [Adobe Analytics-Datenvorbereitung-Filter](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Anwenden [!DNL Kafka] Filter zum Ausschließen unnötiger Daten von der Erfassung |
 | [Adobe Audience Manager-Quell-Connector-Filter](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Anwenden von Audience Manager-Quellverbindungsfiltern, um unnötige Daten von der Erfassung auszuschließen |
 | [Zulassen von SDK-Datenfiltern](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Alloy-Filter anwenden, um unnötige Daten von der Erfassung auszuschließen |
-| [Serverseitige Datenfilter](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en-better-data-governance) | Anwenden [!DNL Kafka] -Filter, um unnötige Daten von der Erfassung auszuschließen.  Weitere Informationen finden Sie in der Dokumentation unter [Ereignisse und Bedingungen](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html#events-and-conditions-(if)) für weitere Informationen. |
+| [Datenfilter für die Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) | Serverseitig anwenden [!DNL Kafka] -Filter, um unnötige Daten von der Erfassung auszuschließen.  Weitere Informationen finden Sie in der Dokumentation unter [Tag-Regeln](../../tags/ui/managing-resources/rules.md) für weitere Informationen. |
 | [Benutzeroberfläche des Lizenznutzungs-Dashboards](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Zeigen Sie eine Momentaufnahme der lizenzbezogenen Daten Ihres Unternehmens für die Experience Platform an. |
 | [Datensatz-Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Gibt die Datensätze aus, die am meisten zu Ihrer ansprechbaren Zielgruppe beitragen |
 | [Unbekannte Profiles Report API](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) | Gibt die Auswirkungen der Anwendung der pseudonymen TTL für verschiedene Zeitschwellen aus |

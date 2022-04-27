@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e9e4e58de454abb1fc66e07d5ad4ce18398c6a44
+source-git-commit: 881be00b9dd10ea95677cc1a960c80db0afe0c54
 workflow-type: tm+mt
 source-wordcount: '2378'
 ht-degree: 26%
@@ -163,7 +163,7 @@ Mit Attribution AI und Customer AI können Kunden erweiterte KI-/ML-Modelle für
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
-### Real-time Customer Data Platform B2B Edition {#B2B}
+## Real-time Customer Data Platform B2B Edition {#B2B}
 
 Real-time Customer Data Platform B2B Edition basiert auf Real-time Customer Data Platform (Real-time CDP) und wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Service-Modell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
