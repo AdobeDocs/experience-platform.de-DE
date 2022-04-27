@@ -2,10 +2,10 @@
 title: XDM Business Opportunity-Klasse
 description: Dieses Dokument bietet einen Überblick über die XDM Business Opportunity-Klasse im Experience-Datenmodell (XDM).
 exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 5%
+source-wordcount: '321'
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL XDM-Geschäftschancen] ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die die erforderlichen Mindesteigenschaften einer Geschäftschance erfasst.
 
-![](../../images/classes/b2b/business-opportunity.png)
+![Die Struktur der XDM Business Opportunity-Klasse, wie sie in der Benutzeroberfläche angezeigt wird](../../images/classes/b2b/business-opportunity.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
@@ -26,6 +26,7 @@ ht-degree: 5%
 | `opportunityKey` | [[!UICONTROL B2B-Quelle]](../../data-types/b2b-source.md) | Eine zusammengesetzte Kennung für die Opportunity. |
 | `_id` | Zeichenfolge | Eine eindeutige Kennung für den Datensatz. Dies ist ein systemgenerierter Wert, der getrennt vom `opportunityID`. |
 | `accountID` | Zeichenfolge | Eine eindeutige ID für das Konto, mit dem diese Gelegenheit verknüpft ist. |
+| `isDeleted` | Boolesch | Gibt an, ob diese Entität der Marketingliste in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch im Echtzeit-Kundenprofil angezeigt. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `opportunityDescription` | Zeichenfolge | Eine Beschreibung der Gelegenheit. |
 | `opportunityID` | Zeichenfolge | Eine eindeutige ID für die Opportunity. |
 | `opportunityName` | Zeichenfolge | Der Name der Gelegenheit. |

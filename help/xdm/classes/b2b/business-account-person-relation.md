@@ -2,10 +2,10 @@
 title: XDM Business Account Person Relation Class
 description: Dieses Dokument bietet einen Überblick über die XDM Business Account Person Relation-Klasse im Experience-Datenmodell (XDM).
 exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
-source-git-commit: 8718512a9768158183b9fb6b9e336081e47cd889
+source-git-commit: 50e5fe8573d828f88867ed33fe86e974c85de60a
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 5%
+source-wordcount: '444'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 [!UICONTROL Personenbeziehung zwischen XDM-Geschäftskonto] ist eine standardmäßige Experience-Datenmodell (XDM)-Klasse, die die erforderlichen Mindesteigenschaften einer Person erfasst, die mit einem Geschäftskonto verknüpft ist.
 
-![](../../images/classes/b2b/business-account-person-relation.png)
+![Die Struktur der XDM Business Account Person Relation-Klasse, wie sie in der Benutzeroberfläche angezeigt wird](../../images/classes/b2b/business-account-person-relation.png)
 
 | Eigenschaft | Datentyp | Beschreibung |
 | --- | --- | --- |
@@ -30,12 +30,14 @@ ht-degree: 5%
 | `accountPersonID` | Zeichenfolge | Eine eindeutige Kennung für die Entität der Kundenbeziehung. |
 | `currencyCode` | Zeichenfolge | Der Währungscode nach ISO 4217, der für die Beziehung zwischen dem Konto und der Person verwendet wird. |
 | `isActive` | Boolesch | Gibt an, ob die Beziehung zwischen dem Konto und der Person aktiv ist. |
+| `isDeleted` | Boolesch | Gibt an, ob diese Beziehung zwischen Konto und Person in Marketo Engage gelöscht wurde.<br><br>Bei Verwendung von [Marketo-Quell-Connector](../../../sources/connectors/adobe-applications/marketo/marketo.md), werden alle in Marketo gelöschten Datensätze automatisch im Echtzeit-Kundenprofil angezeigt. Datensätze, die sich auf diese Profile beziehen, können jedoch im Data Lake bestehen bleiben. Durch Festlegen von `isDeleted` nach `true`können Sie mithilfe des Felds herausfiltern, welche Datensätze bei der Abfrage des Data Lake aus Ihren Quellen gelöscht wurden. |
 | `isDirect` | Boolesch | Gibt an, ob es sich um eine direkte Beziehung zwischen dem Konto und der Person handelt. |
 | `isPrimary` | Boolesch | Gibt an, ob die Person der Hauptkontakt für dieses Konto ist. |
 | `personID` | Zeichenfolge | Eine eindeutige Kennung für die Person in der Beziehung zwischen Konto und Person. |
-| `personRole` | Zeichenfolge | Die Rolle der Person in der Beziehung zwischen Konto und Person. |
+| `personRoles` | Zeichenfolgen-Array | Führt die Rollen der Person in der Beziehung zwischen Konto und Person auf. |
 | `relationEndDate` | DateTime | Das Datum, an dem die Beziehung zwischen dem Konto und der Person endete. |
 | `relationStartDate` | DateTime | Das Datum, an dem die Beziehung zwischen dem Konto und der Person begann. |
+| `relationshipSource` | Zeichenfolge | Die Quelle der Konto-Person-Relation. |
 
 {style=&quot;table-layout:auto&quot;}
 
