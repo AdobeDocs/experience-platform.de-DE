@@ -1,26 +1,26 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Sandbox-Entwicklerhandbuch
 solution: Experience Platform
-title: Sandbox-API-Anleitung
+title: Erste Schritte mit der Sandbox-API
 topic-legacy: developer guide
 description: Mit der Sandbox-API können Entwickler Sandboxes in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: f00e6161d82f1fd7ba442be9f06283f3c866573f
+source-git-commit: d38df5ede84c1306a76fd1ec83d9d0a540b0d01c
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 87%
+source-wordcount: '376'
+ht-degree: 89%
 
 ---
 
-# Sandbox API guide
+# Erste Schritte mit der Sandbox-API
 
 Sandboxes in Adobe Experience Platform stellen isolierte Entwicklungsumgebungen bereit, mit denen Sie Funktionen testen, Experimente ausführen und benutzerdefinierte Konfigurationen vornehmen können, ohne Ihre Produktionsumgebung zu beeinträchtigen.
 
 In diesem Entwicklerhandbuch finden Sie Anweisungen dazu, wie Sie die Sandbox-API zur Verwaltung von Sandboxes in Experience Platform verwenden können. Außerdem finden Sie Beispiele für API-Aufrufe zur Ausführung verschiedener Vorgänge.
 
-## Erste Schritte mit der Sandbox-API
+## Voraussetzungen
 
-Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Users without access permissions can only use the [available sandboxes endpoint](./available.md) to list active sandboxes for the current user. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
+Um Sandboxes für Ihre IMS-Organisation zu verwalten, benötigen Sie Sandbox Administration-Berechtigungen. Benutzer ohne Zugriffsberechtigungen können nur die [verfügbarer Sandbox-Endpunkt](./available.md) , um aktive Sandboxes für den aktuellen Benutzer aufzulisten. Weiterführende Informationen zum Zuweisen von Sandbox-Berechtigungen für Experience Platform finden Sie unter [Zugriffskontrolle – Übersicht](../../access-control/home.md).
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -28,7 +28,7 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abgeschlossen haben, damit Sie Platform-APIs erfolgreich aufrufen können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Für diese Anleitung müssen Sie das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abgeschlossen haben, damit Sie Platform-APIs erfolgreich aufrufen können. Im Rahmen des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Kopfzeilen in allen Experience Platform-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
