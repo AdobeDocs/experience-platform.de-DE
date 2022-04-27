@@ -4,9 +4,9 @@ title: Zieltypen und Kategorien
 seo-title: Destination types and categories
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 08c6c2716b88180b1eb290663117e6da2d8641f0
+source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '596'
 ht-degree: 12%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 12%
 
 Lesen Sie diese Seite, um die verschiedenen Typen und Kategorien von Adobe Experience Platform-Zielen zu verstehen.
 
-## Zieltypen
+## Zieltypen {#destination-types}
 
 In Adobe Experience Platform unterscheiden wir zwischen zwei Zieltypen: Verbindungen und Erweiterungen. Es gibt zwei Arten von Verbindungszielen: Profilexportziele und Segmentexportziele.
 
@@ -25,16 +25,28 @@ In Adobe Experience Platform unterscheiden wir zwischen zwei Zieltypen: Verbindu
 
 **[!UICONTROL Profilexport]** und **[!UICONTROL Export von Streaming-Segmenten]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Segmente und qualifizierte Profile in Ziele.
 
-## Profilexportziele
+## Profilexportziele {#profile-export}
 
 Profilexportziele erhalten Rohdaten, oft mit der E-Mail-Adresse als Primärschlüssel. Experience Platform unterstützt derzeit zwei Typen von Profilexportzielen:
 
-* [Export-Ziele für Streaming-Profile](#streaming-profile-export)
+* [Export-Ziele für Streaming-Profile (Enterprise-Ziele)](#streaming-profile-export)
 * [Batch-Ziele (dateibasiert)](#file-based)
 
-### Export-Ziele für Streaming-Profile {#streaming-profile-export}
+### Export-Ziele für Streaming-Profile (Enterprise-Ziele) {#streaming-profile-export}
 
-Streaming-Profil-Export-Ziele empfangen Segment- und Profildaten als Experience Platform-Datenströme. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) und [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) sind Beispiele für solche Ziele.
+>[!IMPORTANT]
+>
+>Enterprise-Ziele oder Streaming-Profil-Export-Ziele sind verfügbar für [Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/de/legal/product-descriptions/real-time-customer-data-platform.html) -Kunden.
+
+Verwenden Sie Enterprise-Ziel-Data Connectors, um Real-time Customer Data Platform-Profile nahezu in Echtzeit an interne Systeme oder an andere Drittanbietersysteme zur Datensynchronisierung, Analyse und weiteren Profilanreicherung bereitzustellen.
+
+Diese Ziele erhalten Segment- und Profildaten als Experience Platform-Datenströme.
+
+Zu den Enterprise-Zielen gehören:
+
+* [HTTP-API-Ziel](catalog/streaming/http-destination.md)
+* [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md)
 
 ### Batch-Ziele (dateibasiert) {#file-based}
 
@@ -42,7 +54,7 @@ Dateibasierte Ziele empfangen `.csv` Dateien, die Profile und/oder Attribute ent
 
 ## Export-Ziele für Streaming-Segmente {#streaming-destinations}
 
-Segmentexportziele erhalten Daten zu Experience Platform-Segmenten. Diese Ziele verwenden Segment-IDs oder Benutzer-IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)und sind Beispiele für solche Ziele.
+Segmentexportziele erhalten Daten zu Experience Platform-Segmenten. Diese Ziele verwenden Segment-IDs oder Benutzer-IDs. Werbung und soziale Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
 
 ## Export- und Segmentexportziele - Videoübersicht {#video}
 

@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: d5f83f9d99789afba44e26400d0cea8a72946d7a
+source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 94%
+source-wordcount: '755'
+ht-degree: 93%
 
 ---
 
@@ -93,10 +93,10 @@ ht-degree: 94%
       * [Yext Conversion Tracking-Erweiterung](./catalog/analytics/yext.md)
    * Cloud-Speicher-Ziele {#cloud-storage}
       * [Cloud-Speicher-Ziele – Übersicht](./catalog/cloud-storage/overview.md)
-      * [(Beta) Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
+      * [Amazon Kinesis-Verbindung](./catalog/cloud-storage/amazon-kinesis.md)
       * [Amazon S3-Verbindung](./catalog/cloud-storage/amazon-s3.md)
       * [Azure Blob-Verbindung](./catalog/cloud-storage/azure-blob.md)
-      * [(Beta) Azure Event Hub-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Azure Event Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
       * [IP-Adresse - Zulassungsliste für Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
    * Data Management Platform-Ziele {#data-management}
@@ -140,7 +140,7 @@ ht-degree: 94%
       * [LinkedIn Matched Audiences-Verbindung](./catalog/social/linkedin.md)
       * [[!DNL Twitter Custom Audiences]-Verbindung](./catalog/social/twitter.md)
    * Streaming-Ziele {#streaming}
-      * [ (Beta) HTTP-API-Verbindung](./catalog/streaming/http-destination.md)
+      * [HTTP-API-Verbindung](./catalog/streaming/http-destination.md)
       * [IP-Adressen-Zulassungsliste für Streaming-Ziele](./catalog/streaming/ip-address-allow-list.md)
    * Umfrageziele {#survey}
       * [Umfrageziele – Übersicht](./catalog/survey/overview.md)

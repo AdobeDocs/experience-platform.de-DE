@@ -1,17 +1,17 @@
 ---
 keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
-title: Zieldetails anzeigen
+title: Anzeigen von Zieldetails
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. '
 seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: a129085f034665a6398bbf0ccfe2f1dc8acbdd8a
+source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 5%
+source-wordcount: '718'
+ht-degree: 7%
 
 ---
 
-# Zieldetails anzeigen
+# Anzeigen von Zieldetails
 
 ## Übersicht {#overview}
 
@@ -21,7 +21,7 @@ In der Adobe Experience Platform-Benutzeroberfläche können Sie die Attribute u
 >
 >Die Zieldetailseite ist Teil der [!UICONTROL Ziele] Arbeitsbereich im [!DNL Platform] [!DNL UI]. Siehe [[!UICONTROL Ziele] Arbeitsbereich - Übersicht](./destinations-workspace.md) für weitere Informationen.
 
-## Zieldetails anzeigen {#view-details}
+## Anzeigen von Zieldetails {#view-details}
 
 Gehen Sie wie folgt vor, um weitere Details zu einem vorhandenen Ziel anzuzeigen.
 
@@ -35,7 +35,7 @@ Gehen Sie wie folgt vor, um weitere Details zu einem vorhandenen Ziel anzuzeigen
 
 1. Wählen Sie den Namen des Ziels aus, das Sie anzeigen möchten.
 
-   ![Ziel auswählen](../assets/ui/details-page/destination-select.png)
+   ![Auswählen des Ziels](../assets/ui/details-page/destination-select.png)
 
 1. Die Detailseite für das Ziel wird mit den verfügbaren Steuerelementen angezeigt.
 
@@ -79,7 +79,9 @@ Die [!UICONTROL Datenfluss-Abläufe] -Tab enthält Metrikdaten zu Ihren Datenfl�
 
 >[!NOTE]
 >
->Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [HTTP-API](/help/destinations/catalog/streaming/http-destination.md), [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) Ziele.
+>* Die Funktion zur Zielüberwachung wird derzeit für alle Ziele in Experience Platform unterstützt *Ausnahme* die [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefinierte Personalisierung](/help/destinations/catalog/personalization/custom-personalization.md) Ziele.
+>* Für [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)und [HTTP-API](/help/destinations/catalog/streaming/http-destination.md) Ziele, ausgeschlossene Identitäten werden derzeit nicht angezeigt.
+
 
 ![Datenfluss-Ausführungsansicht](../assets/ui/details-page/dataflow-runs.png)
 

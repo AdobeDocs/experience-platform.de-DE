@@ -6,18 +6,14 @@ description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilf
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 1b9b2476047b78c67a8c9950e28b0812642c7941
 workflow-type: tm+mt
-source-wordcount: '2067'
+source-wordcount: '2049'
 ht-degree: 56%
 
 ---
 
 # Verbinden Sie sich mit Streaming-Zielen und aktivieren Sie Daten über die Flow Service-API
-
->[!NOTE]
->
->Die [!DNL Amazon Kinesis] und [!DNL Azure Event Hubs] Ziele in Platform befinden sich derzeit in der Beta-Phase. Die Dokumentation und Funktionalität können sich ändern.
 
 >[!IMPORTANT]
 > 
