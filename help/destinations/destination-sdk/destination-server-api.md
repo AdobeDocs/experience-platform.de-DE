@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt „/authoring/destination-servers“ ausführen können. Die Server- und Vorlagenspezifikationen für Ihr Ziel können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt „/authoring/destination-servers“ konfiguriert werden.
 title: API-Vorgänge für Ziel-Server-Endpunkte
 exl-id: a144b0fb-d34f-42d1-912b-8576296e59d2
-source-git-commit: 6bdb7a3ce6e9f37070dceff8b0226bd6cd53038b
-workflow-type: ht
-source-wordcount: '1454'
-ht-degree: 100%
+source-git-commit: ce63d602e768d04ba7fdc6aded34869682ee7206
+workflow-type: tm+mt
+source-wordcount: '1382'
+ht-degree: 95%
 
 ---
 
@@ -33,7 +33,7 @@ POST /authoring/destination-servers
 
 **Anfrage**
 
-Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` angenommen wurden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
+Die folgende Anfrage erstellt eine neue Ziel-Server-Konfiguration, die durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter, die vom Endpunkt `/authoring/destination-servers` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-servers \
@@ -82,11 +82,13 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erst
 
 ## Erstellen Sie eine Konfiguration für einen dateibasierten Ziel-Server {#create-file-based}
 
-### Beispiel: Erstellen Sie eine Konfiguration für einen SFTP-Ziel-Server
-
 >[!IMPORTANT]
 >
 >Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
+
+### Beispielkonfiguration für den SFTP-Zielserver {#sftp-server-sample}
+
++++Beispiel für ein [!DNL SFTP] Zielserverkonfiguration
 
 Sie können eine neue SFTP-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
@@ -192,11 +194,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Erstellen Sie eine Konfiguration für einen Amazon S3-Ziel-Server
+### [!DNL Amazon S3] Beispielkonfiguration für Zielserver {#s3-server-sample}
 
->[!IMPORTANT]
->
->Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
++++Beispiel für ein [!DNL Amazon S3] Zielserverkonfiguration
 
 Sie können eine neue Amazon S3-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den `/authoring/destination-servers`-Endpunkt senden.
 
@@ -303,16 +303,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Erstellen Sie eine Konfiguration für einen Azure Blob-Ziel-Server
+### [!DNL Azure Blob] Beispielkonfiguration für Zielserver {#blob-server-sample}
 
->[!IMPORTANT]
->
->Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
++++Beispiel für ein [!DNL Azure Blob] Zielserverkonfiguration
 
 Sie können eine neue Azure Blob-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -415,16 +412,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Erstellen Sie eine Konfiguration für einen Azure Data Lake Storage (ADLS)-Ziel-Server
+### [!DNL Azure Data Lake Storage] Beispielkonfiguration für Zielserver {#adls-server-sample}
 
->[!IMPORTANT]
->
->Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
++++Beispiel für ein [!DNL Azure Data Lake Storage (ADLS)] Zielserverkonfiguration
 
 Sie können eine neue ADLS-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -523,18 +517,15 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu Ihrer neu erstellten Ziel-Server-Konfiguration zurück.
 +++
 
-+++Beispiel: Erstellen Sie eine Konfiguration für einen Data Landing Zone (DLZ)-Ziel-Server
+### [!DNL Data Landing Zone] (DLZ) Beispiel-Konfiguration des Zielservers {#dlz-server-sample}
 
->[!IMPORTANT]
->
->Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern.
++++Beispiel für ein [!DNL Data Landing Zone (DLZ)] Zielserverkonfiguration
 
-[!DNL Data Landing Zone] ([!DNL DLZ]) ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden. Siehe
+[!DNL Data Landing Zone] ([!DNL DLZ]) ist eine von Adobe Experience Platform bereitgestellte [!DNL Azure Blob]-Speicherschnittstelle, die Ihnen Zugriff auf eine sichere, Cloud-basierte Dateispeichereinrichtung gewährt, um Dateien in Platform zu laden.
 
 Sie können eine neue DLZ-Ziel-Server-Konfiguration erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/authoring/destination-servers` senden.
 
 **API-Format**
-
 
 ```http
 POST /authoring/destination-servers
@@ -640,7 +631,6 @@ Sie können eine Liste aller Ziel-Server-Konfigurationen für Ihre IMS-Organisat
 
 **API-Format**
 
-
 ```http
 GET /authoring/destination-servers
 ```
@@ -741,7 +731,6 @@ Sie können eine vorhandene Ziel-Server-Konfiguration aktualisieren, indem Sie e
 
 **API-Format**
 
-
 ```http
 PUT /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -788,7 +777,6 @@ Sie können detaillierte Informationen zu einer bestimmten Ziel-Server-Konfigura
 
 **API-Format**
 
-
 ```http
 GET /authoring/destination-servers/{INSTANCE_ID}
 ```
@@ -832,7 +820,6 @@ Eine erfolgreiche Antwort enthält den HTTP-Status 200 mit detaillierten Informa
 }
 ```
 
-
 ## Löschen einer bestimmten Ziel-Server-Konfiguration {#delete}
 
 Sie können die angegebene Ziel-Server-Konfiguration löschen, indem Sie eine DELETE-Anfrage an den Endpunkt `/authoring/destination-servers` senden und im Anfragepfad die ID der Ziel-Server-Konfiguration angeben, die Sie löschen möchten.
@@ -863,7 +850,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 zusammen mit einer leeren HTT
 
 ## Umgang mit API-Fehlern
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
 
 ## Nächste Schritte
 
