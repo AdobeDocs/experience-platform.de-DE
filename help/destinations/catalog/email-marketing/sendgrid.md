@@ -2,13 +2,13 @@
 keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; sendgrid; sendgrid; sendgrid-Ziel
 title: SendGrid-Verbindung
 description: Mit dem SendGrid-Ziel können Sie Ihre Erstanbieterdaten exportieren und in SendGrid für Ihre geschäftlichen Anforderungen aktivieren.
-source-git-commit: ccbc633bfce8f4f66577b50064c28cfc26cb6dca
+exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1475'
 ht-degree: 7%
 
 ---
-
 
 # [!DNL SendGrid]-Verbindung
 
@@ -74,6 +74,11 @@ Marketingteams, die SendGrid verwenden, können eine Mailingliste in SendGrid er
 
 ## Mit Ziel verbinden {#connect}
 
+>[!IMPORTANT]
+> 
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+
+
 Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Die für dieses Ziel spezifischen Schritte werden unten detailliert dargestellt.
 
 1. Innerhalb der [!DNL Adobe Experience Platform] Konsole, navigieren Sie zu **Ziele**.
@@ -101,6 +106,10 @@ Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/de
 ![](../../assets/catalog/email-marketing/sendgrid/06.jpg)
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
+
+>[!IMPORTANT]
+> 
+>Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Lesen [Aktivieren von Profilen und Segmenten für Streaming-Segmentexportziele](/help/destinations/ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 

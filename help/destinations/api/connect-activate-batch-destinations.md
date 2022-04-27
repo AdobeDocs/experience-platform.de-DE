@@ -6,14 +6,22 @@ description: Schrittweise Anleitungen zur Verwendung der Flow Service-API zum Er
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: a8a8b3b9e4fdae11be95d2fa80abc0f356eff345
-workflow-type: ht
-source-wordcount: '3083'
-ht-degree: 100%
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+workflow-type: tm+mt
+source-wordcount: '3129'
+ht-degree: 98%
 
 ---
 
 # Verbinden mit Batch-Zielen und Aktivieren von Daten mit der Flow Service-API
+
+>[!IMPORTANT]
+> 
+>Um eine Verbindung zu einem Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions).
+>
+>Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions).
+>
+>Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 In diesem Tutorial erfahren Sie, wie Sie die Flow Service-API verwenden, um per Batch ein [Cloud-Speicher-Ziel](../catalog/cloud-storage/overview.md) oder ein [E-Mail-Marketing-Ziel](../catalog/email-marketing/overview.md) zu erstellen, einen Datenfluss zu Ihrem neu erstellten Ziel zu erstellen und Daten über CSV-Dateien zu Ihrem neu erstellten Ziel zu exportieren.
 

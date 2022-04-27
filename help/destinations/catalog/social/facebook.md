@@ -3,14 +3,14 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c5d2427635d90f3a9551e2a395d01d664005e8bc
+source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 6%
+source-wordcount: '1713'
+ht-degree: 9%
 
 ---
 
-# [!DNL Facebook] connection
+# [!DNL Facebook]-Verbindung
 
 ## Übersicht {#overview}
 
@@ -118,9 +118,13 @@ Wenn Sie die E-Mail-Adressen selbst hash möchten, stellen Sie sicher, dass Sie 
 
 Bevor Sie die `Extern_ID` Namespace zum Senden von Daten an [!DNL Facebook], stellen Sie sicher, dass Sie Ihre eigenen Kennungen mit [!DNL Facebook Pixel]. Siehe [Offizielle Dokumentation zu facebook](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) für detaillierte Informationen.
 
-## Mit Ziel verbinden {#connect}
+## Herstellen einer Verbindung mit der Datenbank {#connect}
 
-Gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+>[!IMPORTANT]
+> 
+>Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
 
 Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Facebook] Zielgruppen und Aktivieren von Segmenten.
 
@@ -128,11 +132,11 @@ Das folgende Video zeigt auch die Schritte zum Konfigurieren eines [!DNL Faceboo
 
 >[!NOTE]
 >
->Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md).
 
 ### Verbindungsparameter {#parameters}
 
-while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie die folgenden Informationen angeben:
+Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
 * **[!UICONTROL Name]**: Ein Name, mit dem Sie dieses Ziel in der Zukunft erkennen werden.
 * **[!UICONTROL Beschreibung]**: Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren.
@@ -144,7 +148,7 @@ while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie d
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Ursprung der Zielgruppe"
 >abstract="Wählen Sie aus, wie die Kundendaten im Segment ursprünglich erfasst wurden. Die Daten werden in Facebook angezeigt, wenn ein Benutzer in die Zielgruppe des Segments fällt"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Weitere Informationen finden Sie in der Dokumentation ."
+>additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Weitere Informationen finden Sie in der Dokumentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -160,6 +164,10 @@ while [Einrichten](../../ui/connect-destination.md) An diesem Ziel müssen Sie d
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
 >title="Ursprung der Zielgruppe"
 >abstract="Advertiser haben Daten direkt von ihren Kunden und Partnern erfasst."
+
+>[!IMPORTANT]
+> 
+>Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 

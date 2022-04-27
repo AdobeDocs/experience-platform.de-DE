@@ -4,14 +4,18 @@ title: Erstellen einer neuen Zielverbindung
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Herstellen einer Verbindung zu einem Ziel in Adobe Experience Platform aufgeführt
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: b275621d9c6552327e0e55c00c8fcf0397088168
+source-git-commit: 729c0724c7af88bb69c9d68a45d58c3575c90828
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '411'
 ht-degree: 6%
 
 ---
 
 # Erstellen einer neuen Zielverbindung
+
+>[!IMPORTANT]
+> 
+>Um eine Verbindung zu einem Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Übersicht {#overview}
 

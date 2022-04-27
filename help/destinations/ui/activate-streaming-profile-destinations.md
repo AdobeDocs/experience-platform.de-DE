@@ -1,78 +1,82 @@
 ---
-keywords: Profil-Ziele aktivieren; Ziele aktivieren; Daten aktivieren; E-Mail-Marketingziele aktivieren; Cloud-Datenspeicherung-Ziele aktivieren
-title: Audience-Daten in Streaming-Profil-Exportziele aktivieren
+keywords: Profilattribute aktivieren;Ziele aktivieren;Daten aktivieren;E-Mail-Marketing-Ziele aktivieren;Cloud-Speicher-Ziele aktivieren
+title: Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen
 type: Tutorial
 seo-title: Activate audience data to streaming profile export destinations
-description: Erfahren Sie, wie Sie die Audience in Adobe Experience Platform aktivieren, indem Sie Segmente an Streaming-Profil-basierte Ziele senden.
+description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Segmente an profilbasierte Ziele senden.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 2b1cde9fc913be4d3bea71e7d56e0e5fe265a6be
+source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 7%
+source-wordcount: '557'
+ht-degree: 74%
 
 ---
 
-# Audience-Daten in Streaming-Profil-Exportziele aktivieren
+# Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen
+
+>[!IMPORTANT]
+> 
+>Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 ## Übersicht {#overview}
 
-In diesem Artikel wird der Arbeitsablauf erläutert, der zur Aktivierung von Audience-Daten in Adobe Experience Platform-Streaming-Profilen wie Amazon Kinesis erforderlich ist.
+In diesem Artikel wird der Workflow erläutert, der zum Aktivieren von Zielgruppendaten in profilbasierten Adobe Experience Platform-Zielen wie Amazon Kinesis erforderlich ist.
 
 ## Voraussetzungen {#prerequisites}
 
-Um Daten in Ziele zu aktivieren, müssen Sie erfolgreich [mit einem Ziel verbunden](./connect-destination.md). Wenn Sie das noch nicht getan haben, gehen Sie zu [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
+Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbindung zu einem Ziel](./connect-destination.md) hergestellt haben. Wenn Sie das noch nicht getan haben, navigieren Sie zum [Zielkatalog](../catalog/overview.md), durchsuchen Sie die unterstützten Ziele und konfigurieren Sie das Ziel, das Sie verwenden möchten.
 
-## Ziel auswählen {#select-destination}
+## Auswählen des Ziels {#select-destination}
 
-1. Gehe zu **[!UICONTROL Verbindungen > Ziele]**, und wählen Sie **[!UICONTROL Katalog]** Tabulator.
+1. Navigieren Sie zu **[!UICONTROL Verbindungen und Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
 
-   ![Registerkarte &quot;Zielkatalog&quot;](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Registerkarte „Zielkatalog“](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Auswählen **[!UICONTROL Segmente aktivieren]** auf der Karte, die dem Ziel entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
+1. Wählen Sie **[!UICONTROL Segmente aktivieren]** auf der Karte, die dem Zielort entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltfläche &quot;Segmente aktivieren&quot;](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
+   ![Schaltfläche „Segmente aktivieren“](../assets/ui/activate-streaming-profile-destinations/activate-segments-button.png)
 
-1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren der Segmente verwenden möchten, und wählen Sie dann **[!UICONTROL Weiter]**.
+1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Segmente verwenden möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-   ![Ziel auswählen](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
+   ![Auswählen des Ziels](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. Zum nächsten Abschnitt verschieben nach [Ihre Segmente auswählen](#select-segments).
+1. Gehen Sie zum nächsten Abschnitt, um [Ihre Segmente auszuwählen](#select-segments).
 
-## Segmente auswählen {#select-segments}
+## Auswählen der Segmente {#select-segments}
 
-Verwenden Sie die Kontrollkästchen links neben den Segmentnamen, um die Segmente auszuwählen, die Sie am Ziel aktivieren möchten, und wählen Sie dann **[!UICONTROL Weiter]**.
+Aktivieren Sie die Kontrollkästchen links neben den Segmentnamen, um die Segmente auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![Segmente auswählen](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
+![Auswählen der Segmente](../assets/ui/activate-streaming-profile-destinations/select-segments.png)
 
-## Profil-Attribute auswählen {#select-attributes}
+## Auswählen der Profilattribute {#select-attributes}
 
-Wählen Sie die Profil-Attribute aus, die an das Ziel der Zielgruppe gesendet werden sollen.
+Wählen Sie die Profilattribute aus, die Sie an das Ziel senden möchten.
 
 >[!NOTE]
 >
-> Adobe Experience Platform erfüllt Ihre Auswahl mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Adobe Experience Platform füllt Ihre Auswahl vorab mit vier empfohlenen, häufig verwendeten Attributen aus Ihrem Schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
-Der Dateiexport variiert auf folgende Weise, je nachdem, ob `segmentMembership.status` ist ausgewählt:
-* Wenn `segmentMembership.status` Feld ausgewählt, exportierte Dateien enthalten **[!UICONTROL Aktiv]** Mitglieder im ursprünglichen vollständigen Schnappschuss und **[!UICONTROL Aktiv]** und **[!UICONTROL Abgelaufen]** Mitglieder in späteren inkrementellen Exporten.
-* Wenn `segmentMembership.status` Feld nicht ausgewählt, exportierte Dateien enthalten nur **[!UICONTROL Aktiv]** -Member im ursprünglichen vollständigen Schnappschuss und in nachfolgenden inkrementellen Exporten.
+Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.status` ausgewählt ist:
+* Wenn das Feld `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
+* Wenn die Variable `segmentMembership.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
 
 ![empfohlene Attribute](../assets/ui/activate-streaming-profile-destinations/attributes-default.png)
 
-1. In **[!UICONTROL Attribute auswählen]** Seite, auswählen **[!UICONTROL Neues Feld Hinzufügen]**.
+1. Wählen Sie auf der Seite **[!UICONTROL Attribute auswählen]** die Option **[!UICONTROL Neues Feld hinzufügen]**.
 
-   ![Neue Zuordnung Hinzufügen](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![Neue Zuordnung hinzufügen](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
-1. Wählen Sie den Pfeil rechts neben dem **[!UICONTROL Schema]** Eintrag.
+1. Wählen Sie den Pfeil rechts neben dem Eintrag **[!UICONTROL Schemafeld]**.
 
    ![Quellfeld auswählen](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. In **[!UICONTROL Feld auswählen]** Seite, wählen Sie die XDM-Attribute aus, die an das Ziel gesendet werden sollen, und wählen Sie dann **[!UICONTROL Auswählen]**.
+1. Wählen Sie auf der Seite **[!UICONTROL Feld auswählen]** die XDM-Attribute aus, die Sie an das Ziel senden möchten, und klicken Sie dann auf **[!UICONTROL Auswählen]**.
 
    ![Quellfeldseite auswählen](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
-1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 3 und wählen Sie dann **[!UICONTROL Weiter]**.
+1. Wiederholen Sie die Schritte 1 bis 3 und wählen Sie dann **[!UICONTROL Nächste]**.
 
 ## Überprüfung {#review}
 
@@ -80,17 +84,17 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 
 >[!IMPORTANT]
 >
->In diesem Schritt prüft Adobe Experience Platform auf Verstöße gegen die Datenschutzrichtlinien. Im Folgenden finden Sie ein Beispiel für Verstöße gegen eine Richtlinie. Sie können den Segmentarbeitsablauf erst abschließen, wenn Sie die Verletzung behoben haben. Informationen zur Behebung von Verstößen gegen die Politik finden Sie unter [Durchsetzung der Rechtsvorschriften](../../rtcdp/privacy/data-governance-overview.md#enforcement) in der Dokumentation zur Datenverwaltung.
+>In diesem Schritt prüft Adobe Experience Platform, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen dazu, wie Richtlinienverletzungen behoben werden, finden Sie unter [Durchsetzung von Richtlinien](../../rtcdp/privacy/data-governance-overview.md#enforcement) im Dokumentationsabschnitt zur Data Governance.
 
-![Datenrichtlinienverletzung](../assets/common/data-policy-violation.png)
+![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
 
-Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Fertigstellen]** um Ihre Auswahl zu bestätigen und den Beginn zu informieren, der Daten an das Ziel sendet.
+Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
 ![Überprüfung](../assets/ui/activate-streaming-profile-destinations/review.png)
 
-## Aktivierung des Segments überprüfen {#verify}
+## Überprüfen der Segmentaktivierung {#verify}
 
-Ihr exportiert [!DNL Experience Platform] Daten landen im JSON-Format am Ziel Ihrer Zielgruppe. Das folgende Ereignis enthält beispielsweise das E-Mail-Adressattribut einer Audience, die sich für ein bestimmtes Profil qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Potenzieller Kunde sind ECID und E-Mail.
+Ihr exportiert [!DNL Experience Platform] Daten landen in Ihrem Ziel im JSON-Format. Beispielsweise enthält das nachstehende Ereignis das E-Mail-Adressen-Profilattribut einer Zielgruppe, die sich für ein bestimmtes Segment qualifiziert und ein anderes Segment verlassen hat. Die Identitäten für diesen Interessenten sind ECID und E-Mail.
 
 ```json
 {
