@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6c2271e4c5be924dcd8c137cb40bef72e104c7e2
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
-source-wordcount: '2492'
-ht-degree: 25%
+source-wordcount: '2707'
+ht-degree: 23%
 
 ---
 
@@ -87,19 +87,15 @@ Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Ü
 | Erweiterte Enterprise Destination Connectors | Drei Enterprise-Ziel-Connectoren sind jetzt allgemein verfügbar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)und [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> Die allgemeine Verfügbarkeit von Ziel-Connectoren für Unternehmen umfasst alle Funktionen, die zuvor in der Beta-Phase angeboten wurden, und mehr: <ul><li>Neue Authentifizierungsfunktionen, einschließlich [Signatur für freigegebenen Zugriff in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) und mehr [Authentifizierungstypen](../../destinations/catalog/streaming/http-destination.md#authentication-information) (Trägertoken, OAuth 2) im HTTP-API-Ziel;</li><li>[Aufstocken historischer Profildaten](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (Versand von Verlaufsprofilen, die für das Segment qualifiziert sind, wenn es zum ersten Mal aktiviert wird);</li><li>Metriken zu Datenflüssen werden jetzt für diese Ziele unterstützt.</li><li>[Zusätzliche Segmentmetadaten](../../destinations/catalog/streaming/http-destination.md#destination-details) in der Daten-Payload enthalten, einschließlich Segmentnamen und Segmentzeitstempeln;</li><li>Unterstützung für [statische IP-Adressen](/help/destinations/catalog/streaming/ip-address-allow-list.md) für Kunden, die die Experience Platform der Zulassungsliste benötigen.</li></ul> |
 | In-Kontext-Warnhinweise für Ziel-Datenflüsse | Sie können jetzt [Warnhinweise abonnieren](../../destinations/ui/alerts.md) beim Erstellen eines Ziel-Datenflusses , um Warnhinweise zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Sie können Warnungen über die Experience Platform-Benutzeroberfläche oder per E-Mail erhalten. |
 
-<!--
+### Freigabeprozess für erweiterte Enterprise-Ziel-Connectoren {#release-process-enterprise-destinations}
 
-### Release process for advanced enterprise destination connectors {#release-process-enterprise-destinations}
+Für die Amazon Kinesis-, Azure Event-Hub- und HTTP-API-Ziele werden während des Veröffentlichungsprozesses (ab dem 27. April) sowohl die ehemalige Beta-Zielkarte als auch die neue allgemein verfügbare Zielkarte (GA) im Zielkatalog angezeigt. Alle Datenflüsse, die von Kunden konfiguriert wurden, die die Beta-Ziele verwenden, werden in den nächsten Tagen auf die GA-Version desselben Ziels migriert. Diese Migration sollte am Freitag, dem 29. April, Ende des Tages abgeschlossen sein. Die Beta-Ziele sind während dieses kurzen Zeitfensters weiterhin sichtbar und als **Veraltet**.
 
-For the Amazon Kinesis, Azure Event Hubs, and HTTP API destinations, during the release process (starting April 27th), you will see both the former Beta destination card, as well as the new generally available (GA) destination card in the destinations catalog. Any dataflows configured by customers using the beta destinations will be migrated in the next couple of days to the GA version of the same destination. This migration should ultimately be completed by the end of day Friday April 29th. The Beta destinations will be continue to be visible during this short time-window and labeled as **Deprecated**.
+Wenn Sie diese Ziele in der Beta-Phase verwendet haben, beachten Sie Folgendes:
 
-If you have been utilizing these destinations in the Beta phase, please note the following:
-
-- If have been previously in Beta with any of the 3 destinations, no action is needed. All dataflows set up as part of Beta will continue to be functional and will be migrated to the GA version.
-- If you want to set up these destinations beginning April 27th, please do so with the new GA version of the destinations.
-- The beta cards marked as deprecated will be removed once the release operation is complete, estimated by the end of day Friday April 29th. The Experience Platform engineering team is monitoring closely for a successful release operation.
-
--->
+- Wenn Sie bereits Teil der Beta-Version mit einem der 3 Ziele waren, ist keine Aktion erforderlich. Alle Datenflüsse, die als Teil der Beta-Version eingerichtet wurden, funktionieren weiterhin und werden in die GA-Version migriert.
+- Wenn Sie diese Ziele ab dem 27. April einrichten möchten, tun Sie dies mit der neuen GA-Version der Ziele.
+- Die als veraltet gekennzeichneten Beta-Karten werden entfernt, sobald der Veröffentlichungsvorgang abgeschlossen ist, was am Freitag, dem 29. April geschätzt wird. Das Experience Platform-Engineering-Team überwacht sorgfältig die erfolgreiche Veröffentlichung.
 
 **Neue Ziele**
 

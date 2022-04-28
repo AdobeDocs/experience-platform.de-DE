@@ -3,7 +3,7 @@ title: HTTP-API-Verbindung
 keywords: Streaming;
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an den Drittanbieter-HTTP-Endpunkt zu senden, um Ihre eigenen Analysen auszuführen oder andere Vorgänge durchzuführen, die Sie möglicherweise für aus Experience Platform exportierte Profildaten benötigen.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2296'
 ht-degree: 3%
@@ -92,6 +92,11 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 ### Authentifizierungsinformationen {#authentication-information}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_http_clientcredentialstype"
+>title="Client-Anmeldeinformationen-Typ"
+>abstract="Auswählen **Textkörperformular kodiert** , um die Client-ID und das Client-Geheimnis in den Text der Anfrage einzuschließen, oder **Grundlegende Autorisierung** , um die Client-ID und das Client-Geheimnis in einen Autorisierungs-Header aufzunehmen. Anzeigen von Beispielen in der Dokumentation."
+
 #### Trägertoken-Authentifizierung {#bearer-token-authentication}
 
 Wenn Sie die **[!UICONTROL Trägertoken]** Authentifizierungstyp zum Herstellen einer Verbindung mit Ihrem HTTP-Endpunkt, Eingabe der folgenden Felder und Auswahl **[!UICONTROL Mit Ziel verbinden]**:
@@ -121,11 +126,6 @@ Wenn Sie die **[!UICONTROL OAuth 2 Password]** Authentifizierungstyp zum Herstel
 * **[!UICONTROL Passwort]**: Das Kennwort für den Zugriff auf Ihren HTTP-Endpunkt.
 
 #### OAuth 2 Client Credentials authentication {#oauth-2-client-credentials-authentication}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_http_clientcredentialstype"
->title="Client-Anmeldeinformationen-Typ"
->abstract="Auswählen **Textkörperformular kodiert** , um die Client-ID und das Client-Geheimnis in den Text der Anfrage einzuschließen, oder **Grundlegende Autorisierung** , um die Client-ID und das Client-Geheimnis in einen Autorisierungs-Header aufzunehmen. Anzeigen von Beispielen in der Dokumentation."
 
 Wenn Sie die **[!UICONTROL OAuth 2 Client-Anmeldedaten]** Authentifizierungstyp zum Herstellen einer Verbindung mit Ihrem HTTP-Endpunkt, Eingabe der folgenden Felder und Auswahl **[!UICONTROL Mit Ziel verbinden]**:
 
