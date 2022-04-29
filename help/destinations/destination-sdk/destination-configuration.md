@@ -2,7 +2,7 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 51417bee5dba7a96d3a7a7eb507fc95711fad4a5
+source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 98%
@@ -220,7 +220,7 @@ Mehr dazu in der [Übersicht über Identitäts-Namespaces](https://experiencelea
 |---------|----------|------|
 | `acceptsAttributes` | Boolesch | Gibt an, ob Ihr Ziel Standardprofilattribute akzeptiert. Normalerweise werden diese Attribute in der Dokumentation der Partner genannt. |
 | `acceptsCustomNamespaces` | Boolesch | Gibt an, ob Kunden benutzerdefinierte Namespaces in Ihrem Ziel einrichten können. |
-| `allowedAttributesTransformation` | Zeichenfolge | *Wird in der Beispielkonfiguration nicht angezeigt*. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut verwendet und Ihre Plattform nur gehashte E-Mails akzeptiert. In diesem Objekt können Sie die Transformation spezifizieren, die angewendet werden muss (z. B. E-Mail in Kleinbuchstaben umwandeln und dann hashen). Ein Beispiel finden Sie unter `requiredTransformation` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#update). |
+| `transformation` | Zeichenfolge | *Wird in der Beispielkonfiguration nicht angezeigt*. Wird beispielsweise verwendet, wenn der [!DNL Platform]-Kunde einfache E-Mail-Adressen als Attribut verwendet und Ihre Plattform nur gehashte E-Mails akzeptiert. In diesem Objekt können Sie die Transformation spezifizieren, die angewendet werden muss (z. B. E-Mail in Kleinbuchstaben umwandeln und dann hashen). Ein Beispiel finden Sie unter `requiredTransformation` in der [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#update). |
 | `acceptedGlobalNamespaces` | – | Wird für Fälle verwendet, in denen Ihre Plattform [Standard-Identitäts-Namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de#standard-namespaces) (z. B. IDFA) akzeptiert, sodass Sie Platform-Benutzer darauf beschränken können, nur diese Identitäts-Namespaces auszuwählen. |
 
 {style=&quot;table-layout:auto&quot;}
