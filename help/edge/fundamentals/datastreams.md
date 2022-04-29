@@ -1,12 +1,12 @@
 ---
 title: Konfigurieren eines Datenspeichers
-description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und -Zielen von Drittanbietern.
+description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
 keywords: Konfiguration;Datastreams;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschaft-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Data Prep für Datenerfassung;Mappings;Mappings er;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5c57f65014736e20e1bcad6a9b158c923bbb4220
+source-git-commit: 2275a32cfa9419d2ca407dd48a15f8d06354cd49
 workflow-type: tm+mt
-source-wordcount: '2102'
-ht-degree: 2%
+source-wordcount: '2081'
+ht-degree: 4%
 
 ---
 
@@ -18,17 +18,13 @@ In diesem Dokument werden die Schritte zum Konfigurieren eines Datastreams in de
 
 >[!NOTE]
 >
->Ihre Organisation muss für diese Funktion freigeschaltet sein, damit sie über die Benutzeroberfläche darauf zugreifen kann. Bitte füllen Sie Folgendes aus [Formular](https://adobe.ly/websdkaccess) , um den erforderlichen Zugriff anzufordern.
+>Ihre Organisation muss für diese Funktion freigeschaltet sein, damit sie über die Benutzeroberfläche darauf zugreifen kann. Bitte füllen Sie Folgendes aus [Formular](https://adobe.ly/websdkaccess) , um den erforderlichen Zugriff anzufordern. Um Datenspeicher zu verwalten, muss Ihr Benutzerkonto einem Produktprofil für Tags in hinzugefügt werden. [!DNL Adobe Experience Platform].
 
 ## Zugriff auf [!UICONTROL Datenspeicher] Arbeitsbereich
 
 Sie können Datenspeicher in der Datenerfassungs-Benutzeroberfläche erstellen und verwalten, indem Sie **[!UICONTROL Datenspeicher]** in der linken Navigation.
 
 ![Registerkarte &quot;Datenspeicher&quot;in der Benutzeroberfläche &quot;Datenerfassung&quot;](../images/datastreams/datastreams-tab.png)
-
->[!NOTE]
->
->Während Sie auf die [!UICONTROL Datenspeicher] -Registerkarte unabhängig davon, ob Sie die Tag-Management-Funktionen von Platform verwenden, müssen Sie über Entwicklerberechtigungen verfügen, um Datenspeicher selbst zu verwalten. Siehe [Benutzerberechtigungen](../../tags/ui/administration/user-permissions.md) in der Dokumentation zu Tags finden Sie weitere Details.
 
 Die [!UICONTROL Datenspeicher] zeigt eine Liste der vorhandenen Datensätze an, einschließlich Anzeigename, Kennung und Datum der letzten Änderung. Wählen Sie den Namen eines Datastreams aus, um [Anzeigen der Details und Konfigurieren von Diensten](#view-details).
 
@@ -60,7 +56,7 @@ Auswählen **[!UICONTROL Erweiterte Optionen]** , um zusätzliche Steuerelemente
 | [!UICONTROL Erstanbieter-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einem [Erstanbieter-Geräte-ID](../identity/first-party-device-ids.md), anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll. |
 | [!UICONTROL Synchronisierung der Drittanbieter-ID] | ID-Synchronisationen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisierungen für diesen Datastream ausgeführt wird. |
 
-Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile-SDK verwenden oder anderweitig nicht Ihren Datastrom für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
+Der Rest dieses Abschnitts konzentriert sich auf die Schritte zur Zuordnung von Daten zu einem ausgewählten Platform-Ereignisschema. Wenn Sie das Mobile SDK verwenden oder anderweitig nicht Ihren Datenspeicher für Platform konfigurieren, wählen Sie **[!UICONTROL Speichern]** bevor Sie mit dem nächsten Abschnitt fortfahren [Hinzufügen von Diensten zum Datastream](#add-services).
 
 ### Datenvorbereitung für die Datenerfassung {#data-prep}
 
@@ -75,7 +71,7 @@ Data Prep ist ein Experience Platform-Dienst, mit dem Sie Daten dem Experience-D
 >Eine umfassende Anleitung zu allen Data Prep-Funktionen, einschließlich Umwandlungsfunktionen für berechnete Felder, finden Sie in der folgenden Dokumentation:
 >
 >* [Datenvorbereitung – Übersicht](../../data-prep/home.md)
->* [Zuordnungsfunktionen für Datenvorbereitung](../../data-prep/functions.md)
+>* [Funktionen zur Datenvorbereitung](../../data-prep/functions.md)
 >* [Verarbeiten von Datenformaten mit der Datenvorbereitung](../../data-prep/data-handling.md)
 
 
