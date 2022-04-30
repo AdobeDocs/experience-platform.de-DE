@@ -2,10 +2,10 @@
 title: Datenelemente
 description: Datenelemente sind Bausteine für Ihr Datenwörterbuch (oder Ihre Datenkarte). Verwenden Sie Datenelemente zum Sammeln, Organisieren und Bereitstellen von Daten in Marketing- und Werbetechnologie.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: af9a5118f3633c132dd88ab659f570c9136b12e1
 workflow-type: tm+mt
 source-wordcount: '1631'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -132,11 +132,16 @@ return eventType; // if this data element is called from a "DOM Ready" event, th
 
 Mithilfe der `_satellite`-Objektsyntax können Sie dies dann in benutzerdefinierten Skripten verwenden:
 
-`_satellite.getVar('data element name', event);`
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
-Bei Verwendung mit der Notation `%..%` müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
+Bei Verwendung von Prozent (`%`), müssen Sie nur den Datenelementnamen angeben. Sie brauchen `event` nicht zu spezifizieren.
 
-`%data element name%`
+```text
+%data element name%
+```
 
 ### DOM-Attribut
 
@@ -236,7 +241,7 @@ Dieses Datenelement verwendet ähnlich wie die Seiteninformationen allgemeine Ve
 Wählen Sie eines der folgenden Attribute für das Besucherverhalten aus:
 
 * Landing page
-* Traffic source
+* Traffic-Quelle
 * Minutes on site
 * Session count
 * Session page view count
