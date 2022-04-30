@@ -2,10 +2,10 @@
 title: Satellitenobjektreferenz
 description: Hier erfahren Sie mehr über das Client-seitige _satellite-Objekt und die verschiedenen Funktionen, die Sie damit in Tags ausführen können.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 814f853d16219021d9151458d93fc5bdc6c860fb
+source-git-commit: 47391de09bcad1dc99340caa84cdfff13e9f5237
 workflow-type: tm+mt
-source-wordcount: '1279'
-ht-degree: 100%
+source-wordcount: '1291'
+ht-degree: 95%
 
 ---
 
@@ -49,7 +49,16 @@ var product = _satellite.getVar('product');
 
 Wenn ein Datenelement mit dem entsprechenden Namen vorhanden ist, wird der Wert des Datenelements zurückgegeben. Wenn kein passendes Datenelement vorhanden ist, wird überprüft, ob zuvor über `_satellite.setVar()` eine benutzerdefinierte Variable mit dem jeweiligen Namen festgelegt wurde. Wenn eine passende benutzerdefinierte Variable gefunden wird, wird ihr Wert zurückgegeben.
 
-Beachten Sie, dass Sie in vielen Formularfeldern in der Datenerfasslungs-Benutzeroberfläche die Syntax `%%` zum Referenzieren von Variablen verwenden können, wodurch die Notwendigkeit von Aufrufen von `_satellite.getVar()` reduziert wird. Beispielsweise dient %product% dem Zugriff auf den Wert des Produktdatenelements oder der benutzerdefinierten Variable.
+>[!NOTE]
+>
+>Sie können Prozentwerte (`%`) Syntax, um Variablen für viele Formularfelder in der Datenerfassungs-Benutzeroberfläche zu referenzieren, wodurch der Aufruf von `_satellite.getVar()`. Verwenden Sie beispielsweise `%product%` greift auf den Wert des Produktdatenelements oder der benutzerdefinierten Variablen zu.
+
+Wenn ein Ereignis eine Regel Trigger, können Sie die entsprechende Regel übergeben `event` Objekt in `_satellite.getVar()` wie folgt:
+
+```javascript
+// event refers to the calling rule's event
+var rule = _satellite.getVar('return event rule', event);
+```
 
 ## `setVar`
 
