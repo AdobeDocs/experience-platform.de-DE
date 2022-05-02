@@ -2,9 +2,9 @@
 title: Anonymer Block in Query Service
 description: Der anonyme Baustein ist eine SQL-Syntax, die von Adobe Experience Platform Query Service unterstützt wird und mit der Abfragen effizient ausgeführt werden können.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 7087991c7a3daad57c5acd92a20c7024a1152c7e
+source-git-commit: 43c5bdbfa93872ba54bde72bbea8201b73e9dfee
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '515'
 ht-degree: 1%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 1%
 Adobe Experience Platform Query Service unterstützt anonyme Bausteine. Mit der Funktion für anonyme Bausteine können Sie eine oder mehrere SQL-Anweisungen ketten, die nacheinander ausgeführt werden. Sie ermöglichen auch die Möglichkeit der Ausnahmebehandlung.
 
 Die Funktion für anonyme Bausteine bietet eine effiziente Möglichkeit, eine Abfolge von Vorgängen oder Abfragen durchzuführen. Die Kette von Abfragen innerhalb des Blocks kann als Vorlage gespeichert und für eine bestimmte Zeit oder ein bestimmtes Intervall geplant werden. Diese Abfragen können zum Schreiben und Anhängen von Daten verwendet werden, um einen neuen Datensatz zu erstellen. Sie werden normalerweise dort verwendet, wo Sie eine Abhängigkeit haben.
+
+>[!IMPORTANT]
+>
+>Die Planung von Abfragen mithilfe anonymer Bausteine ist derzeit nur über das [!DNL Query Service] API. Weitere Informationen finden Sie in der Dokumentation für [vollständige Anweisungen zur Planung von Abfragen über die API](../api/scheduled-queries.md).
 
 Die Tabelle enthält eine Aufschlüsselung der Hauptabschnitte des Blocks: Ausführung und Ausnahmebehandlung. Die Abschnitte werden durch die Schlüsselwörter definiert `BEGIN`, `END`und `EXCEPTION`.
 

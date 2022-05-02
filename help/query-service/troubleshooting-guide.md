@@ -5,9 +5,9 @@ title: Anleitung zur Fehlerbehebung bei Query Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Informationen zu häufigen Fehlercodes, auf die Sie stoßen, sowie zu den möglichen Ursachen.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: a6924a1018d5dd4e3f03b3d8b6375cacb450a4f5
+source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
 workflow-type: tm+mt
-source-wordcount: '3413'
+source-wordcount: '3516'
 ht-degree: 4%
 
 ---
@@ -40,7 +40,7 @@ Dieser Abschnitt enthält Informationen zu Leistung, Beschränkungen und Prozess
 
 ### Kann ich Postman für die Query Service-API verwenden?
 
-++ + Antwort Ja, Sie können alle Adobe-API-Dienste mit Postman visualisieren und mit diesen interagieren (eine kostenlose Drittanbieteranwendung). Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für schrittweise Anweisungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+++ + Antwort Ja: Sie können alle Adobe API-Dienste mithilfe von Postman (einer kostenlosen Drittanbieteranwendung) visualisieren und damit interagieren. Beobachten Sie die [Postman-Setup-Handbuch](https://video.tv.adobe.com/v/28832) für schrittweise Anweisungen zum Einrichten eines Projekts in der Adobe Developer Console und zum Abrufen aller erforderlichen Anmeldeinformationen für die Verwendung mit Postman. Die offizielle Dokumentation finden Sie unter [Anleitung zum Starten, Ausführen und Freigeben von Postman-Sammlungen](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Gibt es eine Begrenzung für die maximale Anzahl von Zeilen, die von einer Abfrage über die Benutzeroberfläche zurückgegeben werden?
@@ -257,6 +257,8 @@ SELECT count(1) FROM myTableName
 +++Antwort Zunächst überprüfen Sie die Protokolle, um die Details des Fehlers zu ermitteln. Der Abschnitt &quot;FAQ&quot;zu [Fehler in Protokollen suchen](#error-logs) enthält weitere Informationen dazu.
 
 Sie sollten auch die Dokumentation lesen, um Anleitungen zur Leistung zu erhalten [Geplante Abfragen in der Benutzeroberfläche](./ui/user-guide.md#scheduled-queries) und [die API](./api/scheduled-queries.md).
+
+Im Folgenden finden Sie eine Liste von Überlegungen zu geplanten Abfragen bei Verwendung der [!DNL Query Editor]. Sie gelten nicht für die [!DNL Query Service] API:<br/>Sie können einen Zeitplan nur zu einer Abfrage hinzufügen, die bereits erstellt, gespeichert und ausgeführt wurde.<br/>You **cannot** einen Zeitplan zu einer parametrisierten Abfrage hinzufügen.<br/>Geplante Abfragen **cannot** einen anonymen Block enthalten.<br/>Sie können **one** Abfragevorlage, die die Benutzeroberfläche verwendet. Wenn Sie einer Abfragevorlage zusätzliche Zeitpläne hinzufügen möchten, müssen Sie die API verwenden. Wenn ein Zeitplan bereits mithilfe der API hinzugefügt wurde, können Sie keine zusätzlichen Zeitpläne über die Benutzeroberfläche hinzufügen.
 +++
 
 ### Was bedeutet der Fehler &quot;Sitzungsbegrenzung erreicht&quot;?
