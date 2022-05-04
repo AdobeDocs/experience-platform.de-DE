@@ -4,10 +4,10 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: bc449e066a6c9875dd667c5b1715ab3226228d85
+source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
 workflow-type: tm+mt
-source-wordcount: '1764'
-ht-degree: 3%
+source-wordcount: '1962'
+ht-degree: 2%
 
 ---
 
@@ -39,11 +39,11 @@ Um in der Platform-Benutzeroberfläche zum Ziel-Dashboard zu navigieren, wählen
 
 Sie können das Erscheinungsbild des Ziel-Dashboards durch Auswahl von **[!UICONTROL Dashboard ändern]**. Dadurch können Sie Widgets aus dem Dashboard verschieben, hinzufügen und entfernen sowie auf die **[!UICONTROL Widget-Bibliothek]** , um verfügbare Widgets zu erkunden und benutzerdefinierte Widgets für Ihre Organisation zu erstellen.
 
-Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über Widget-Bibliotheken](../customize/widget-library.md) Dokumentation .
+Weitere Informationen finden Sie unter [Ändern von Dashboards](../customize/modify.md) und [Übersicht über die Widget-Bibliothek](../customize/widget-library.md) Dokumentation .
 
 ## Standard-Widgets
 
-Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken in Bezug auf Ihre Ziele visualisieren und die Vollständigkeit der für Ihre Datenanalyse verfügbaren Segmente bewerten können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek]. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Übersicht über Widget-Bibliotheken](../customize/widget-library.md).
+Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken in Bezug auf Ihre Ziele visualisieren und die Vollständigkeit der für Ihre Datenanalyse verfügbaren Segmente bewerten können. Sie können auch benutzerdefinierte Widgets erstellen, die für Ihre Organisation freigegeben werden, indem Sie die [!UICONTROL Widget-Bibliothek]. Um mehr über das Erstellen benutzerdefinierter Widgets zu erfahren, lesen Sie zunächst den Abschnitt [Übersicht über die Widget-Bibliothek](../customize/widget-library.md).
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
@@ -56,6 +56,9 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
 * [[!UICONTROL Zielanzahl]](#destinations-count)
+* [[!UICONTROL Zielstatus]](#destination-status)
+* [[!UICONTROL Aktive Ziele nach Zielplattform]](#active-destinations-by-destination-platform)
+* [[!UICONTROL Aktivierte Zielgruppen für alle Ziele]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Am häufigsten verwendete Ziele] {#most-used-destinations}
 
@@ -129,7 +132,7 @@ Die Spalte &quot;Identitäten&quot;zählt die Anzahl der Quell-IDs innerhalb des
 
 ### [!UICONTROL Zugeordnete Segmente nach Identität] {#mapped-segments-by-identity}
 
-Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Segmente. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Segmenten sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Übersichts-Dashboard ausgewählt wird.
+Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Segmente. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Segmenten sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die im Dropdown-Menü im Widget verfügbaren Ziel-IDs ändern sich entsprechend dem Zielkontofilter, der oben im Übersichts-Dashboard ausgewählt wird.
 
 ![Zugeordnete Segmente nach Identitäts-Widget.](../images/destinations/mapped-segments-by-identity.png)
 
@@ -164,6 +167,28 @@ Die [!UICONTROL Zielanzahl] Widget stellt die Gesamtzahl der verfügbaren Endpun
 Wählen Sie unter der Gesamtanzahl die Option **[!UICONTROL Ziele]** , um zur Registerkarte zum Durchsuchen von Zielen zu navigieren. Auf dieser Seite werden alle Ziele aufgelistet, mit denen Sie bis dato eine Verbindung hergestellt haben.
 
 ![Das Widget Ziele zählen .](../images/destinations/destinations-count.png)
+
+### [!UICONTROL Zielstatus] {#destination-status}
+
+Die [!UICONTROL Zielstatus] -Widget zeigt die Gesamtzahl der aktivierten Ziele als einzelne Metrik an und verwendet ein Ringdiagramm, um den proportionalen Unterschied zwischen aktivierten und deaktivierten Zielen zu veranschaulichen.
+
+Einzelne Zählungen für aktivierte oder deaktivierte Ziele werden in einem Dialogfeld angezeigt, wenn der Cursor den Mauszeiger über den entsprechenden Abschnitt des Ringdiagramms bewegt.
+
+![Das Widget Ziel-Status .](../images/destinations/destination-status.png)
+
+### [!UICONTROL Aktive Ziele nach Zielplattform] {#active-destinations-by-destination-platform}
+
+Das Widget bietet eine zweispaltige Tabelle, die eine Liste der aktiven Zielplattformen und die Gesamtzahl der aktiven Ziele für jede Zielplattform anzeigt. Die Liste der Zielplattformen wird von oben nach unten sortiert.
+
+![Das Widget Aktive Ziele nach Zielplattform .](../images/destinations/active-destinations-by-destination-platform.png)
+
+### [!UICONTROL Aktivierte Zielgruppen für alle Ziele] {#activated-audiences-across-all-destinations}
+
+Die [!UICONTROL Aktivierte Zielgruppen für alle Ziele] -Widget stellt die Gesamtanzahl der Zielgruppen bereit, die für alle Ziele in einer einzelnen Metrik aktiviert sind. Diese Zahl entspricht der neuesten Momentaufnahme.
+
+![Das Widget Aktivierte Zielgruppen für alle Ziele .](../images/destinations/activated-audiences-across-all-destinations.png)
+
+Auswählen **[!UICONTROL Zielgruppen]** , um zu den Zielen zu navigieren [!UICONTROL Durchsuchen] Registerkarte. Diese Seite enthält eine Liste aller aktivierten Ziele und eine Vielzahl relevanter Metriken. Weitere Informationen finden Sie in der Dokumentation für [Weitere Informationen über [!UICONTROL Durchsuchen] tab](../../destinations/ui/destinations-workspace.md#browse).
 
 ## Nächste Schritte
 
