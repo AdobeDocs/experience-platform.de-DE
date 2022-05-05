@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: 15d835fcbcb6e34995f153c14d90fc937792eefc
+source-git-commit: b5c9dd966e14739e570105892becd39990d9acfb
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 92%
+source-wordcount: '156'
+ht-degree: 90%
 
 ---
 
@@ -57,6 +57,7 @@ ht-degree: 92%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- [Auditprotokoll-Handbuch](audit-log-guide.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
