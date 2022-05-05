@@ -7,8 +7,8 @@ description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus ex
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '997'
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertrage
 
 ### Einverständnis und Voreinstellungen {#consent}
 
-Experience Platform unterstützt die Aufnahme von Daten aus einer Genehmigungs- und Präferenzverwaltungsplattform von Drittanbietern. Näheres hierzu finden Sie in den folgenden Dokumenten:
+Experience Platform unterstützt die Aufnahme von Daten aus einer Einverständnis- und Voreinstellungs-Verwaltungsplattform von Dritten. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
 - [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md)
 

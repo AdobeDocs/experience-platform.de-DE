@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
 workflow-type: tm+mt
 source-wordcount: '2707'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -198,8 +198,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die [!DNL OneTrust Integration] Quelle zur Aufnahme von Einwilligungs- und Voreinstellungsdaten aus Ihrer [!DNL OneTrust] -Konto auf Platform. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL OneTrust Integration] Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md) für weitere Informationen. |
+| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die [!DNL OneTrust Integration] Quelle zur Aufnahme von Einwilligungs- und Voreinstellungsdaten aus Ihrer [!DNL OneTrust] -Konto auf Platform. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL OneTrust Integration] -Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md). |
 | Unterstützung für [!DNL Square] | Sie können jetzt die [!DNL Square] -Quelle, um Zahlungsdaten von Ihrer [!DNL Square] -Konto auf Platform. |
 | Unterstützung für das Löschen von Datenflüssen für Kundenattribute | Sie können jetzt mit dem Quell-Connector für Kundenattribute erstellte Datenflüsse löschen. |
 
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
