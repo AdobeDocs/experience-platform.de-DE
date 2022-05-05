@@ -3,7 +3,7 @@ title: Übersicht über die Hauptereignisweiterleitungserweiterung
 description: Machen Sie sich mit der Hauptereignisweiterleitungserweiterung in Adobe Experience Platform vertraut.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: d41779c5897b748130b88d3886472c7908347389
+source-git-commit: 15e7245acef1fe13a09ed0e083033b3963c444f2
 workflow-type: tm+mt
 source-wordcount: '1724'
 ht-degree: 100%
@@ -43,16 +43,16 @@ getDataElementValue('productName')
 In Ihrem benutzerspezifischen Code können Sie auch das Objekt `ruleStash` verwenden.
 
 ```javascript
-arc.ruleStash: Object<string, *>`
-```
-
-```javascript
 utils.logger.log(context.arc.ruleStash);
 ```
 
 `ruleStash` ist ein Objekt, das alle von Aktionsmodulen zurückgegebenen Ergebnisse erfasst.
 
 Jede Erweiterung hat ihren eigenen Namensraum. Wenn Ihre Erweiterung beispielsweise den Namen `send-beacon` hat, werden alle Ergebnisse der `send-beacon`-Aktionen im Namensraum `ruleStash['send-beacon']` gespeichert.
+
+```javascript
+utils.logger.log(context.arc.ruleStash['adobe-cloud-connector']);
+```
 
 Der Namensraum ist für jede Erweiterung eindeutig und hat am Anfang den Wert `undefined`.
 
