@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem ServiceNow-Server verbinden.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
 workflow-type: tm+mt
-source-wordcount: '474'
-ht-degree: 11%
+source-wordcount: '479'
+ht-degree: 57%
 
 ---
 
@@ -17,39 +17,39 @@ ht-degree: 11%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Google ServiceNow] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Google ServiceNow] mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+* [Quellen](../../../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um mithilfe der [!DNL Flow Service]-API erfolgreich eine Verbindung zu einem [!DNL ServiceNow]-Server herstellen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu einer [!DNL ServiceNow] Server, der [!DNL Flow Service] API.
 
-### Erforderliche Anmeldedaten sammeln
+### Sammeln erforderlicher Anmeldeinformationen
 
-Damit [!DNL Flow Service] eine Verbindung zu [!DNL ServiceNow] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Um [!DNL Flow Service] mit [!DNL ServiceNow] zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
-| Berechtigung | Beschreibung |
+| Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `endpoint` | Der Endpunkt des [!DNL ServiceNow]-Servers. |
-| `username` | Der Benutzername, der für die Verbindung zum [!DNL ServiceNow]-Server zur Authentifizierung verwendet wird. |
-| `password` | Das Kennwort, das zur Authentifizierung mit dem [!DNL ServiceNow]-Server verbunden werden soll. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL ServiceNow] lautet: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
+| `endpoint` | Der Endpunkt der [!DNL ServiceNow] Server. |
+| `username` | Der Benutzername, mit dem die Verbindung zum [!DNL ServiceNow] -Server zur Authentifizierung. |
+| `password` | Das Kennwort, mit dem eine Verbindung hergestellt werden soll [!DNL ServiceNow] -Server zur Authentifizierung. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL ServiceNow] ist: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
-Weitere Informationen zu den ersten Schritten finden Sie in [diesem ServiceNow-Dokument](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Weitere Informationen zu den ersten Schritten finden Sie unter [this ServiceNow document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
 ### Verwenden von Platform-APIs
 
-Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-## Basisverbindung erstellen
+## Erstellen einer Basisverbindung
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL ServiceNow]-Authentifizierungsdaten als Teil der Anfrageparameter an.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL ServiceNow]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -89,14 +89,14 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `auth.params.server` | Der Endpunkt Ihres [!DNL ServiceNow]-Servers. |
-| `auth.params.username` | Der Benutzername, der für die Verbindung zum [!DNL ServiceNow]-Server zur Authentifizierung verwendet wird. |
-| `auth.params.password` | Das Kennwort, das zur Authentifizierung mit dem [!DNL ServiceNow]-Server verbunden werden soll. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID [!DNL ServiceNow]: `eb13cb25-47ab-407f-ba89-c0125281c563` |
+| `auth.params.server` | Der Endpunkt Ihrer [!DNL ServiceNow] Server. |
+| `auth.params.username` | Der Benutzername, mit dem die Verbindung zum [!DNL ServiceNow] -Server zur Authentifizierung. |
+| `auth.params.password` | Das Kennwort, mit dem eine Verbindung hergestellt werden soll [!DNL ServiceNow] -Server zur Authentifizierung. |
+| `connectionSpec.id` | Die [!DNL ServiceNow] Verbindungsspezifikations-ID: `eb13cb25-47ab-407f-ba89-c0125281c563` |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihr CRM-System im nächsten Schritt zu untersuchen.
+Bei einer erfolgreichen Antwort wird die neu erstellte Verbindung einschließlich der eindeutigen Kennung (`id`). Diese ID ist erforderlich, um Ihr CRM-System im nächsten Schritt zu untersuchen.
 
 ```json
 {
@@ -107,4 +107,7 @@ Eine erfolgreiche Antwort gibt die neu erstellte Verbindung zurück, einschließ
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL ServiceNow]-Verbindung mit der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese Verbindungs-ID im nächsten Tutorial verwenden, wenn Sie erfahren, wie Sie [Kundenerfolgssysteme mithilfe der Flow Service-API](../../explore/customer-success.md) untersuchen.
+In diesem Tutorial haben Sie eine [!DNL ServiceNow] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+
+* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erstellen Sie einen Datenfluss, um Kundenerfolgsdaten mithilfe der [!DNL Flow Service] API](../../collect/customer-success.md)

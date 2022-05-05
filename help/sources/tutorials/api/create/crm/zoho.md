@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit dem Zoho-CRM verbinden.
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
-source-git-commit: 46b2fd6bc715bf1d8ccfeed576a2a2d193f92edd
-workflow-type: ht
-source-wordcount: '649'
-ht-degree: 100%
+source-git-commit: 17055f76800deadacf435970a691cec79c9f1d17
+workflow-type: tm+mt
+source-wordcount: '654'
+ht-degree: 92%
 
 ---
 
@@ -46,7 +46,7 @@ Weitere Informationen zu diesen Anmeldeinformationen finden Sie in der Dokumenta
 
 ### Verwenden von Platform-APIs
 
-Weitere Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
 ## Erstellen einer Basisverbindung
 
@@ -106,7 +106,7 @@ curl -X POST \
 | `auth.params.accountsUrl` | Die Konto-URL wird verwendet, um Ihre Zugriffs- und Aktualisierungs-Token zu generieren. Die URL muss Domain-spezifisch sein. |
 | `auth.params.clientId` | Die Client-ID, die Ihrem [!DNL Zoho CRM]-Benutzerkonto entspricht. |
 | `auth.params.clientSecret` | Das Client-Geheimnis, das Ihrem [!DNL Zoho CRM]-Benutzerkonto entspricht. |
-| `auth.params.accessToken` | Das Zugriffs-Token autorisiert den sicheren und temporären Zugriff auf Ihr [!DNL Zoho CRM]-Konto. |
+| `auth.params.accessToken` | Das Zugriffs-Token autorisiert Ihren sicheren und temporären Zugriff auf Ihr [!DNL Zoho CRM]-Konto. |
 | `auth.params.refreshToken` | Ein Aktualisierungs-Token ist ein Token, mit dem ein neues Zugriffs-Token generiert wird, sobald Ihr Zugriffs-Token abgelaufen ist. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID für [!DNL Zoho CRM]: `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
 
@@ -123,4 +123,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Zoho CRM]-Basisverbindung mithilfe der [!DNL Flow Service]-API erstellt und den eindeutigen ID-Wert der Verbindung erhalten. Sie können diese ID im nächsten Tutorial verwenden, in dem Sie das [Erkunden von CRM-Systemen mit der Flow Service-API](../../explore/crm.md) lernen.
+In diesem Tutorial haben Sie eine [!DNL Zoho] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+
+* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
+* [Erstellen Sie einen Datenfluss, um CRM-Daten mithilfe des [!DNL Flow Service] API](../../collect/crm.md)

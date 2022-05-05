@@ -5,10 +5,10 @@ title: Übersicht über den Quell-Connector für IBM DB2
 topic-legacy: overview
 description: Erfahren Sie, wie Sie IBM DB2 mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 0%
+source-wordcount: '229'
+ht-degree: 22%
 
 ---
 
@@ -16,22 +16,22 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Der IBM DB2-Connector befindet sich in der Betaphase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../home.md#terms-and-conditions) .
+>Der IBM DB2-Connector befindet sich in der Betaphase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform] übertragen.
+Adobe Experience Platform bietet native Konnektivität für Datenbankanbieter wie [!DNL Microsoft], MySQL und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in [!DNL Platform].
 
 Es werden verschiedene Arten von Datenbanken von Drittanbietern unterstützt, darunter relationale Datenbanken, NoSQL-Datenbanken oder Data Warehouse. Die Unterstützung für Datenbankanbieter umfasst IBM DB2.
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie IBM DB2 mit [!DNL Platform] über APIs oder die Benutzeroberfläche verbinden:
+Die folgende Dokumentation enthält Informationen zum Verbinden von IBM DB2 mit [!DNL Platform] Verwendung von APIs oder der Benutzeroberfläche:
 
-## Verbinden von IBM DB2 mit [!DNL Platform] mithilfe von APIs
+## Verbinden von IBM DB2 mit [!DNL Platform] Verwenden von APIs
 
 - [Erstellen einer IBM DB2-Basisverbindung mit der Flow Service-API](../../tutorials/api/create/databases/ibm-db2.md)
-- [Datenstruktur und Inhalt einer Datenbankquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/database-nosql.md)
+- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbinden von IBM DB2 mit [!DNL Platform] über die Benutzeroberfläche

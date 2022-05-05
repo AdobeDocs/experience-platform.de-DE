@@ -5,32 +5,32 @@ title: Übersicht über den HubSpot Source Connector
 topic-legacy: overview
 description: Erfahren Sie, wie Sie HubSpot über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
-source-git-commit: 9d21d83204941db2db69f6be0f20d4e8627fc2ff
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 13%
+source-wordcount: '218'
+ht-degree: 61%
 
 ---
 
-# [!DNL HubSpot] Connector
+# [!DNL HubSpot]-Connector
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform ] ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Unterstützung für Anbieter von Marketing-Automatisierungen: [!DNL HubSpot].
+[!DNL Experience Platform ]ermöglicht die Aufnahme von Daten aus Drittanbietersystemen für die Marketing-Automatisierung. Unterstützung für Anbieter von Marketing-Automatisierungslösungen: [!DNL HubSpot].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie mithilfe von APIs oder der Benutzeroberfläche eine Verbindung zwischen [!DNL HubSpot] und [!DNL Platform] herstellen:
+Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL HubSpot] mit mithilfe von APIs oder der Benutzeroberfläche:[!DNL Platform]
 
-## Verbinden Sie [!DNL HubSpot] mit [!DNL Platform] mithilfe von APIs
+## Verbinden von [!DNL HubSpot] mit [!DNL Platform] mithilfe von APIs
 
 - [Erstellen einer HubSpot-Basisverbindung mithilfe der Flow Service-API](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Datenstruktur und Inhalt einer Marketing-Automatisierungsquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/marketing-automation.md)
+- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Marketing-Automatisierungsquelle mithilfe der Flow Service-API](../../tutorials/api/collect/marketing-automation.md)
 
-## Verbinden Sie [!DNL HubSpot] mit [!DNL Platform] über die Benutzeroberfläche
+## Verbinden von [!DNL HubSpot] mit [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen einer HubSpot-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/marketing-automation/hubspot.md)
 - [Erstellen eines Datenflusses für eine Verbindung zur Marketing-Automatisierungsquelle in der Benutzeroberfläche](../../tutorials/ui/dataflow/marketing-automation.md)

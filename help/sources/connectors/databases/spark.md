@@ -5,36 +5,36 @@ title: Apache Spark auf Azure HDInsights Source Connector - Übersicht
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Apache Spark in Azure HDInsights mit Adobe Experience Platform über APIs oder die Benutzeroberfläche verbinden.
 exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
-source-git-commit: 5821f9304a37c1a03d17f0113d09548799662a2e
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 10%
+source-wordcount: '271'
+ht-degree: 39%
 
 ---
 
-# (Beta) [!DNL Apache Spark] auf dem [!DNL Azure HDInsights]-Connector
+# (Beta) [!DNL Apache Spark] on [!DNL Azure HDInsights] Connector
 
 >[!NOTE]
 >
->Der Connector [!DNL Apache Spark] auf [!DNL Azure HDInsights] befindet sich in der Beta-Phase. Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren finden Sie unter [Quellen - Übersicht](../../home.md#terms-and-conditions) .
+>Die [!DNL Apache Spark] on [!DNL Azure HDInsights] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Diensten zu strukturieren, zu beschriften und zu erweitern. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter: [!DNL Apache Spark] bei [!DNL Azure HDInsights].
+[!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus Datenbanken von Drittanbietern. [!DNL Platform] kann eine Verbindung zu verschiedenen Arten von Datenbanken wie z. B. relationalen, NoSQL- oder Data Warehouse-Datenbanken herstellen. Unterstützung für Datenbankanbieter umfasst [!DNL Apache Spark] on [!DNL Azure HDInsights].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Informationen finden Sie auf der Seite [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) .
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
-Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Apache Spark] unter [!DNL Azure HDInsights] mithilfe von APIs oder der Benutzeroberfläche mit [!DNL Platform] verbinden:
+Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Apache Spark] on [!DNL Azure HDInsights] nach [!DNL Platform] Verwendung von APIs oder der Benutzeroberfläche:
 
-## Verbinden Sie [!DNL Apache Spark] unter [!DNL Azure HDInsights] mit [!DNL Platform] mithilfe von APIs
+## Verbinden [!DNL Apache Spark] on [!DNL Azure HDInsights] nach [!DNL Platform] Verwenden von APIs
 
 - [Erstellen Sie eine Apache Spark-Basisverbindung für Azure HDInsights mithilfe der Flow Service-API.](../../tutorials/api/create/databases/spark.md)
-- [Datenstruktur und Inhalt einer Datenbankquelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/database-nosql.md)
+- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine Datenbankquelle mithilfe der Flow Service-API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinden Sie [!DNL Apache Spark] unter [!DNL Azure HDInsights] mit [!DNL Platform] über die Benutzeroberfläche
+## Verbinden [!DNL Apache Spark] on [!DNL Azure HDInsights] nach [!DNL Platform] über die Benutzeroberfläche
 
 - [Erstellen eines Apache Spark auf der Azure HDInsights-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/create/databases/spark.md)
 - [Erstellen eines Datenflusses für eine Datenbankquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/databases.md)

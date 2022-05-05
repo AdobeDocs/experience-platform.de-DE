@@ -1,14 +1,15 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; oracle; eloqua; oracle eloqua
+keywords: Experience Platform;home;popular topics;oracle;eloqua;oracle eloqua
 solution: Experience Platform
 title: Erstellen einer Oracle Eloqua-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Eloqua verbinden.
-source-git-commit: 423f0efc3c0d9fb38cb8d1b16b885e1eddc23e72
+description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using the Flow Service API.
+exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
+source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 5%
+source-wordcount: '567'
+ht-degree: 58%
 
 ---
 
@@ -16,39 +17,39 @@ ht-degree: 5%
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Oracle Eloqua] mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL Oracle Eloqua] mithilfe der [[!DNL Flow Service] -API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Platform voraus:
 
-* [Quellen](../../../../home.md): Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern, indem [!DNL Platform] Dienste.
-* [Sandboxes](../../../../../sandboxes/home.md): Platform stellt virtuelle Sandboxes bereit, die eine einzelne [!DNL Platform] in separate virtuelle Umgebungen zu integrieren, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu unterstützen.
+* [Quellen](../../../../home.md): Platform ermöglicht das Aufnehmen von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, eingehende Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md)[!DNL Platform]:  bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu [!DNL Oracle Eloqua] mithilfe der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie für eine erfolgreiche Verbindung mit [!DNL Oracle Eloqua] unter Verwendung der [!DNL Flow Service]-API benötigen.
 
-### Erforderliche Anmeldedaten sammeln
+### Sammeln erforderlicher Anmeldeinformationen
 
-Zur [!DNL Flow Service] zur Verbindung mit [!DNL Oracle Eloqua]müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
+Damit [!DNL Flow Service] eine Verbindung mit [!DNL Oracle Eloqua] herstellen kann, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
-| Berechtigung | Beschreibung |
+| Anmeldedaten | Beschreibung |
 | --- | --- |
 | `endpoint` | Der Endpunkt Ihrer [!DNL Oracle Eloqua]. |
 | `username` | Der Benutzername Ihres [!DNL Oracle Eloqua] -Konto. Der Benutzername muss als `siteName + \\ + username`, wobei `siteName` ist der Unternehmensname, mit dem Sie sich bei [!DNL Oracle Eloqua] und `username` ist Ihr Benutzername. Der Benutzername für die Anmeldung kann beispielsweise wie folgt lauten: `adobe\\emily`. |
 | `password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua] Benutzername. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua] -Quelle wie folgt fest: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. The value for the connection specification ID of the [!DNL Oracle Eloqua] source is fixed as: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 Weitere Informationen zu Authentifizierungsberechtigungen für [!DNL Oracle Eloqua], siehe [[!DNL Oracle Eloqua] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
 ### Verwenden von Platform-APIs
 
-Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
+Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-## Basisverbindung erstellen
+## Erstellen einer Basisverbindung
 
 Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an die `/connections` Endpunkt beim Bereitstellen [!DNL Oracle Eloqua] Authentifizierungsberechtigungen als Teil der Anfrageparameter.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL Oracle Eloqua]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 **API-Format**
 
@@ -88,17 +89,17 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `name` | Der Name Ihres [!DNL Oracle Eloqua] Basisverbindung. Es wird empfohlen, einen beschreibenden Namen anzugeben, da Sie diesen Wert zum Nachschlagen Ihrer Basisverbindung verwenden können. |
+| `name` | Der Name Ihrer [!DNL Oracle Eloqua]-Basisverbindung. Es wird empfohlen, einen beschreibenden Namen anzugeben, da Sie diesen Wert zum Nachschlagen Ihrer Basisverbindung verwenden können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um zusätzliche Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `auth.specName` | Der Authentifizierungstyp, der für die Verbindung verwendet wird. |
-| `auth.params.endpoint` | Der Endpunkt Ihrer [!DNL Oracle Eloqua] Server. |
+| `auth.params.endpoint` | The endpoint of your [!DNL Oracle Eloqua] server. |
 | `auth.params.username` | Die verkettete Berechtigung, die den Site-Namen und Benutzernamen enthält, der Ihrer [!DNL Oracle Eloqua] -Konto. |
-| `auth.params.password` | Das Kennwort, das Ihrem [!DNL Oracle Eloqua] -Konto. |
+| `auth.params.password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua]-Konto entspricht. |
 | `connectionSpec.id` | Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua] -Quelle wie folgt fest: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
+Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbindung zurückgegeben, einschließlich ihrer eindeutigen Kennung (`id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
 
 ```json
 {
@@ -109,9 +110,7 @@ Eine erfolgreiche Antwort gibt Details zur neu erstellten Basisverbindung zurüc
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL Oracle Eloqua] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+By following this tutorial, you have created an [!DNL Oracle Eloqua] base connection using the [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Struktur und Inhalt einer Marketing-Automatisierungsquelle mithilfe des [!DNL Flow Service] API](../../explore/marketing-automation.md)
+* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Daten zur Marketing-Automatisierung mit der [!DNL Flow Service] API](../../collect/marketing-automation.md)
-
-

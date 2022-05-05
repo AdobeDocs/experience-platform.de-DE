@@ -5,22 +5,22 @@ title: Salesforce Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Salesforce über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: bd3d3a83c030baaecccba2b1793b49ad8a6caa08
+source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 6%
+source-wordcount: '897'
+ht-degree: 17%
 
 ---
 
-# [!DNL Salesforce] Connector
+# [!DNL Salesforce]-Connector
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
-Experience Platform unterstützt die Aufnahme von Daten aus einem Drittanbieter-CRM-System. Unterstützung für CRM-Anbieter umfasst [!DNL Salesforce].
+Experience Platform bietet Unterstützung für die Aufnahme von Daten aus einem CRM-System eines Drittanbieters. Unterstützung für CRM-Anbieter umfasst [!DNL Salesforce].
 
 ## IP-Adressen-Zulassungsliste
 
-Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Siehe [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md) für weitere Informationen.
+Vor der Arbeit mit Quell-Connectoren muss einer Zulassungsliste eine Liste von IP-Adressen hinzugefügt werden. Wenn Sie Ihre regionsspezifischen IP-Adressen nicht zu Ihrer Zulassungsliste hinzufügen, kann dies bei der Verwendung von Quellen zu Fehlern oder Leistungseinbußen führen. Weitere Information finden Sie unter [IP-Adressen-Zulassungsliste](../../ip-address-allow-list.md).
 
 ## Feldzuordnung aus [!DNL Salesforce] in XDM
 
@@ -31,8 +31,8 @@ Detaillierte Informationen zu den Feldzuordnungsregeln zwischen [!DNL Salesforce
 - [Kontakte](../adobe-applications/mapping/salesforce.md#contact)
 - [Leads](../adobe-applications/mapping/salesforce.md#lead)
 - [Konten](../adobe-applications/mapping/salesforce.md#account)
-- [Chancen](../adobe-applications/mapping/salesforce.md#opportunity)
-- [Kontaktrollen bei Chancen](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
+- [Opportunities](../adobe-applications/mapping/salesforce.md#opportunity)
+- [Rollen von Kontakten bei Opportunities](../adobe-applications/mapping/salesforce.md#opportunity-contact-role)
 - [Kampagnen](../adobe-applications/mapping/salesforce.md#campaign)
 - [Kampagnenmitglieder](../adobe-applications/mapping/salesforce.md#campaign-member)
 
@@ -87,10 +87,10 @@ Eine erfolgreiche Anfrage erstellt die B2B-Namespaces und -Schemas gemäß den B
 
 ## Verbinden [!DNL Salesforce] zur Plattform mithilfe von APIs
 
-Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Salesforce] zur Plattform mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Salesforce] mit Platform mithilfe von APIs oder der Benutzeroberfläche:
 
 - [Salesforce-Basisverbindung mithilfe der Flow Service-API erstellen](../../tutorials/api/create/crm/salesforce.md)
-- [Datenstruktur und Inhalt einer CRM-Quelle mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/crm.md)
+- [Datentabellen mithilfe der Flow Service-API durchsuchen](../../tutorials/api/explore/tabular.md)
 - [Erstellen eines Datenflusses für eine CRM-Quelle mithilfe der Flow Service-API](../../tutorials/api/collect/crm.md)
 
 ## Verbinden [!DNL Salesforce] zur Plattform mithilfe der Benutzeroberfläche
