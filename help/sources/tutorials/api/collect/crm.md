@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem CRM-System von Drittanbietern und zum Einbringen dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer CRM-Quell
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer der folgenden CRM-Quellen in Platform verfügen:<ul><li>[[!DNL Microsoft Dynamics]](../create/crm/ms-dynamics.md)</li><li>[[!DNL Salesforce]](../create/crm/salesforce.md)</li><li>[[!DNL Veeva CRM]](../create/crm/veeva.md)</li><li>[[!DNL Zoho CRM]](../create/crm/zoho.md)</li></ul>
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer CRM-Quelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#customer-relationship-management) für eine Liste von CRM-Quellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

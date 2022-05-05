@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Protokollprogramm und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1276'
-ht-degree: 100%
+source-wordcount: '1293'
+ht-degree: 96%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Protokoll
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID mit einer der folgenden Protokollquellen für Platform verfügen:<ul><li>[Generic OData](../create/protocols/odata.md)</li><li>[Generic REST](../create/protocols/generic-rest.md)</li></ul>
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Protokollquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#protocols) für eine Liste von Protokollquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

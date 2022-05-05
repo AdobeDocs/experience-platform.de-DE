@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1575'
-ht-degree: 100%
+source-wordcount: '1597'
+ht-degree: 97%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Cloud-Spe
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer der folgenden Cloud-Speicherquellen in Platform verfügen:<ul><li>[[!DNL Amazon S3]](../create/cloud-storage/s3.md)</li><li>[[!DNL Apache HDFS]](../create/cloud-storage/hdfs.md)</li><li>[[!DNL Azure Blob]](../create/cloud-storage/blob.md)</li><li>[[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)</li><li>[[!DNL FTP]](../create/cloud-storage/ftp.md)</li><li>[[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)</li><li>[[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)</li><li>[[!DNL SFTP]](../create/cloud-storage/sftp.md)</li></ul>
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Cloud-Speicherquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#cloud-storage) für eine Liste der Cloud-Speicher-Quellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

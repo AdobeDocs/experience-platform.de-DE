@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Werbeprogramm von Drittanbietern und deren Aufnahme in Platform mithilfe von Quell-Connectoren und der Flow Service-API beschrieben.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1296'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus dem Werbeprogra
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID für [!DNL Google AdWords] verfügen. Wenn Sie diese ID nicht haben, lesen Sie die Schritte zum [Erstellen einer  [!DNL Google AdWords] -Basisverbindung](../create/advertising/ads.md) bevor Sie versuchen, dieses Tutorial durchzuführen.
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Werbequelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#advertising) für eine Liste von Werbequellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

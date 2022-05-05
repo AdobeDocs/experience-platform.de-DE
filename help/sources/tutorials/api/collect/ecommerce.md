@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem E-Commerce-System eines Drittanbieters und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1260'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer E-Commerc
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basisverbindungs-ID für [!DNL Shopify] verfügen. Wenn Sie diese ID nicht haben, lesen Sie die Schritte zum [Erstellen einer  [!DNL Shopify] -Basisverbindung](../create/ecommerce/shopify.md) bevor Sie versuchen, dieses Tutorial durchzuführen.
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer E-Commerce-Quelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#ecommerce) für eine Liste von E-Commerce-Quellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

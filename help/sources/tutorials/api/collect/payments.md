@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Zahlungsprogramm und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Zahlungsq
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer der folgenden Zahlungsquellen in Platform verfügen:<ul><li>[[!DNL PayPal]](../create/payments/paypal.md)</li><li>[[!DNL Square]](../create/payments/square.md)</li></ul>
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Zahlungsquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#payments) für eine Liste von Zahlungsquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 

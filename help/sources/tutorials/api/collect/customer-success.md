@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Customer-Success-System und deren Aufnahme in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: fc719a4ec90c5150f129deec45da87df703ec4b5
+source-git-commit: 85af48f773d36eb00149b9fdec71a9c566a1bde5
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einer Customer-
 
 >[!NOTE]
 >
->Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer der folgenden Customer-Success-Quellen in Platform verfügen:<ul><li>[[!DNL Salesforce Service Cloud]](../create/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL ServiceNow]](../create/customer-success/servicenow.md)</li></ul>
+>Um einen Datenfluss zu erstellen, müssen Sie bereits über eine gültige Basis-Verbindungs-ID mit einer Kunden-Erfolgsquelle verfügen. Wenn Sie diese ID nicht haben, sehen Sie sich die [Quellen - Übersicht](../../../home.md#customer-success) für eine Liste von Kundenerfolgsquellen, mit denen Sie eine Basisverbindung erstellen können.
 
 ## Erste Schritte
 
