@@ -5,10 +5,10 @@ title: Query Service – Übersicht
 topic-legacy: overview
 description: Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 36710ced69cc951c27869e5491344a5f38935324
 workflow-type: tm+mt
-source-wordcount: '635'
-ht-degree: 100%
+source-wordcount: '722'
+ht-degree: 87%
 
 ---
 
@@ -36,7 +36,15 @@ Adobe Experience Platform [!DNL Data Science Workspace] nutzt maschinelles Lerne
 
 Mit in Adobe Experience Platform [!DNL Segmentation Service] können Benutzer ihre Kunden in kleinere Gruppen mit ähnlichen Eigenschaften unterteilen. Diese Segmente können anschließend ausgewertet werden, um eine bessere Analyse der Daten des [!DNL Real-time Customer Profile] zu erhalten. Mit [!DNL Query Service] können Sie diese Analyse bereitstellen, indem Sie Abfragen zu diesen Segmentdaten im [!DNL Data Lake] ausführen. Weitere Informationen zur Segmentierung finden Sie im Überblick über [!DNL Segmentation Service] und Informationen zur Analyse von Segmenten finden Sie im Handbuch zu [!DNL Profile Query Language] (PQL).
 
-### Looker BI-Anwendungsfall
+## Anwendungsfälle
+
+[!DNL Query Service] bietet einen flexiblen Ansatz für Ihre Datenverarbeitung, der vielen Zwecken dient. So kann unter anderem die Segmentierung durch Marketing-Experten erleichtert und dazu beigetragen werden, umsetzbare Zielgruppen und aussagekräftige geschäftliche Einblicke zu generieren. Die folgenden Anwendungsbeispiele bieten detailliertere Beispiele für die Leistungsfähigkeit von [!DNL Query Service].
+
+### Abbruch beim Adobe Analytics-Durchsuchen
+
+Diese [Beispiel für abgebrochene Suche - Zentren für die Verwendung von Adobe [!DNL Analytics]](./get-started/use-case.md) Daten, um eine bestimmte umsetzbare Zielgruppe zu erstellen. [!DNL Query Service] berücksichtigt komplexe Logik für die Segmentierung, um verschiedene personalisierte Attribute zur nachgelagerten Verwendung zu berechnen oder die Erstellung Ihrer Segmente erheblich zu vereinfachen.
+
+### Looker BI-Dashboards
 
 Mit Adobe Experience Platform können Sie alle gespeicherten Datensätze aufnehmen, speichern, strukturieren und abrufen — einschließlich Verhaltensdaten, CRM-Daten und Verkaufsdaten. Mithilfe von [!DNL Experience Platform's Query Service] können Sie Abfragen zu diesen Datensätzen durchführen, spezifische Fragen zur Geschäftstätigkeit beantworten und dann nützliche Einblicke gewinnen. Das folgende Video zeigt die Vorteile, die das Erstellen von Dashboards in Business Intelligence-Tools mit [!DNL Query Service] hat.
 
