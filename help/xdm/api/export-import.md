@@ -5,26 +5,26 @@ title: API-Endpunkte exportieren/importieren
 description: Mit den Endpunkten /export und /import in der Schema Registry-API können Sie XDM-Ressourcen zwischen IMS-Organisationen und Sandboxes freigeben.
 topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
-source-git-commit: 8133804076b1c0adf2eae5b748e86a35f3186d14
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '506'
-ht-degree: 6%
+ht-degree: 14%
 
 ---
 
 # Endpunkte exportieren/importieren
 
-Alle Ressourcen innerhalb von [!DNL Schema Library] sind in einer bestimmten Sandbox innerhalb einer IMS-Organisation enthalten. In einigen Fällen möchten Sie möglicherweise Experience-Datenmodell (XDM)-Ressourcen zwischen Sandboxes und IMS-Organisationen freigeben. Die [!DNL Schema Registry]-API bietet zwei Endpunkte, mit denen Sie eine Export-Payload für ein Schema, eine Schemafeldgruppe oder einen Datentyp in der[!DNL  Schema Library] generieren und diese Payload dann verwenden können, um diese Ressource (und alle abhängigen Ressourcen) in eine Ziel-Sandbox und die IMS-Organisation zu importieren.
+Alle Ressourcen innerhalb der [!DNL Schema Library] in einer bestimmten Sandbox in einer IMS-Organisation enthalten sind. In einigen Fällen möchten Sie möglicherweise Experience-Datenmodell (XDM)-Ressourcen zwischen Sandboxes und IMS-Organisationen freigeben. Die [!DNL Schema Registry] Die API bietet zwei Endpunkte, mit denen Sie eine Export-Payload für beliebige Schemas, Schemafelder oder Datentypen im[!DNL  Schema Library]und verwenden Sie dann diese Payload, um diese Ressource (und alle abhängigen Ressourcen) in eine Ziel-Sandbox und IMS-Organisation zu importieren.
 
 ## Erste Schritte
 
-Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Schema Registry] -](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie zunächst das [Erste-Schritte-Handbuch](./getting-started.md) , um Links zur zugehörigen Dokumentation zu erhalten, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [[!DNL Schema Registry] -](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-Die Export-/Import-Endpunkte sind Teil der Remote-Prozeduraufrufe (RPCs), die von [!DNL Schema Registry] unterstützt werden. Im Gegensatz zu anderen Endpunkten in der [!DNL Schema Registry]-API erfordern RPC-Endpunkte keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type` und verwenden keine `CONTAINER_ID`. Stattdessen müssen sie den Namespace `/rpc` verwenden, wie in den API-Aufrufen unten dargestellt.
+Die Export-/Import-Endpunkte sind Teil der Remote-Prozeduraufrufe (RPCs), die von der [!DNL Schema Registry]. Im Gegensatz zu anderen Endpunkten im [!DNL Schema Registry] API-, RPC-Endpunkte erfordern keine zusätzlichen Kopfzeilen wie `Accept` oder `Content-Type`und verwenden Sie keine `CONTAINER_ID`. Stattdessen müssen sie die `/rpc` -Namespace, wie in den API-Aufrufen unten dargestellt.
 
 ## Abrufen einer Export-Payload für eine Ressource {#export}
 
-Für alle vorhandenen Schemas, Feldgruppen oder Datentypen im [!DNL Schema Library] können Sie eine Export-Payload generieren, indem Sie eine GET-Anfrage an den Endpunkt `/export` senden und dabei die Kennung der Ressource im Pfad angeben.
+Für jedes vorhandene Schema, jede vorhandene Feldergruppe oder jeden vorhandenen Datentyp im [!DNL Schema Library], können Sie eine Export-Payload generieren, indem Sie eine GET-Anfrage an die `/export` -Endpunkt, der die Kennung der Ressource im Pfad angibt.
 
 **API-Format**
 
@@ -34,29 +34,29 @@ GET /rpc/export/{RESOURCE_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{RESOURCE_ID}` | Die `meta:altId` oder URL-kodierte `$id` der XDM-Ressource, die Sie exportieren möchten. |
+| `{RESOURCE_ID}` | Die `meta:altId` oder URL-kodiert `$id` der XDM-Ressource, die Sie exportieren möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage ruft eine Export-Payload für eine `Restaurant` -Feldergruppe ab.
+Die folgende Anfrage ruft eine Export-Payload für eine `Restaurant` Feldergruppe.
 
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Accept: application/vnd.adobe.xdm-link+json'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Ziel-XDM-Ressource und alle abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein von einem Mandanten erstellter `Property`-Datentyp, den die Feldergruppe `Restaurant` verwendet, während das zweite Objekt die Feldergruppe `Restaurant` selbst ist. Diese Payload kann dann verwendet werden, um [die Ressource](#import) in eine andere Sandbox oder IMS-Organisation zu importieren.
+Eine erfolgreiche Antwort gibt ein Array von Objekten zurück, die die Ziel-XDM-Ressource und alle abhängigen Ressourcen darstellen. In diesem Beispiel ist das erste Objekt im Array ein von einem Mandanten erstellter `Property` Datentyp, der `Restaurant` -Feldergruppe verwendet, während das zweite Objekt die `Restaurant` Feldergruppe selbst. Diese Payload kann dann verwendet werden, um [Importieren der Ressource](#import) in eine andere Sandbox oder IMS-Organisation.
 
-Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>` ersetzt werden. Dadurch kann die Schema Registry die richtige Mandantenkennung automatisch auf die Ressourcen anwenden, je nachdem, wo sie im nachfolgenden Importaufruf gesendet werden.
+Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TENANTID_PLACEHOLDER>`. Dadurch kann die Schema Registry die richtige Mandantenkennung automatisch auf die Ressourcen anwenden, je nachdem, wo sie im nachfolgenden Importaufruf gesendet werden.
 
 ```json
 [
@@ -198,7 +198,7 @@ Beachten Sie, dass alle Instanzen der Mandanten-ID der Ressource durch `<XDM_TEN
 
 ## Ressource importieren {#import}
 
-Nachdem Sie [eine Export-Payload](#export) für eine XDM-Ressource generiert haben, können Sie diese Payload in einer POST-Anfrage an den `/import`-Endpunkt verwenden, um diese  in eine Ziel-IMS-Organisation und -Sandbox zu importieren.
+Einmal [eine Export-Payload generiert hat](#export) für eine XDM-Ressource verwenden, können Sie diese Payload in einer POST-Anfrage an die `/import` Endpunkt zum Importieren dieser Ressource in eine Ziel-IMS-Organisation und -Sandbox.
 
 **API-Format**
 
@@ -208,14 +208,14 @@ POST /rpc/import
 
 **Anfrage**
 
-Die folgende Anfrage nutzt die im vorherigen [Exportbeispiel](#export) zurückgegebene Payload, um die Feldergruppe `Restaurant` in eine neue IMS-Organisation und Sandbox zu importieren, wie durch die Header `x-gw-ims-org-id` bzw. `x-sandbox-name` bestimmt.
+Die folgende Anfrage nutzt die Payload, die im vorherigen [Exportbeispiel](#export) , um `Restaurant` Feldergruppe in eine neue IMS-Organisation und Sandbox, wie durch die `x-gw-ims-org-id` und `x-sandbox-name` Kopfzeilen.
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/rpc/import \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -427,7 +427,7 @@ Eine erfolgreiche Antwort gibt eine Liste der importierten Ressourcen zurück, w
             }
         ],
         "refs": [],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:xdmType": "object",
@@ -506,7 +506,7 @@ Eine erfolgreiche Antwort gibt eine Liste der importierten Ressourcen zurück, w
         "refs": [
             "https://ns.adobe.com/{TENANT_ID}/datatypes/fc07162ee7ca8d18e074a3bb50c3938c76160bf6040e8495"
         ],
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [],

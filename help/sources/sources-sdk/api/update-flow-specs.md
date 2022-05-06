@@ -1,14 +1,15 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: Flussspezifikationen mithilfe der Flow Service-API (Beta) aktualisieren
 topic-legacy: developer guide
 description: Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der Flow Service-API für das Sources-SDK.
 hide: true
 hidefromtoc: true
-source-git-commit: d98cf404fd1a4d150f202154aba87b0089418957
+exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '432'
-ht-degree: 2%
+ht-degree: 22%
 
 ---
 
@@ -16,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
+>Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
 
 Nachdem Sie eine neue Verbindungsspezifikations-ID generiert haben, müssen Sie diese ID einer Flussspezifikation hinzufügen, um einen Datenfluss zu erstellen.
 
@@ -26,7 +27,7 @@ Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flusss
 
 ## Erste Schritte
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den erforderlichen Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
 ## Flussspezifikation nachschlagen {#lookup}
 
@@ -48,7 +49,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' 
 ```
 
@@ -69,7 +70,7 @@ Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flu
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "{SANDBOX_ID}",
           "sandboxName": "{SANDBOX_NAME}",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "name": "RestStorageToAEP",
           "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
           "version": "1.0",
@@ -237,7 +238,7 @@ Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flu
 }
 ```
 
-## Flussspezifikation aktualisieren {#update}
+## Aktualisieren einer Flussspezifikation {#update}
 
 Sie können die Felder einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich sind.
 
@@ -261,7 +262,7 @@ PUT -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
 `     "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
@@ -445,7 +446,7 @@ Eine erfolgreiche Antwort gibt die Details der Spezifikation des abgefragten Flu
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "{SANDBOX_ID}",
     "sandboxName": "{SANDBOX_NAME}",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "name": "RestStorageToAEP",
     "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
     "version": "1.0",

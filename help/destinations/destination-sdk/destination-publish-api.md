@@ -2,7 +2,7 @@
 description: Auf dieser Seite sind alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/destinations/publish“ ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: a73a4ea93a432f60d62da5e234d8e357009b2d88
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 72%
@@ -47,7 +47,7 @@ Mit der folgenden Anfrage wird ein Ziel für eine Veröffentlichung in allen Org
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
@@ -85,7 +85,7 @@ Die folgende Anfrage ruft basierend auf der IMS-Organisation und der Sandbox-Kon
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -141,7 +141,7 @@ GET /authoring/destinations/publish/{DESTINATION_ID}
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

@@ -5,7 +5,7 @@ title: Salesforce Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Salesforce über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '897'
 ht-degree: 17%
@@ -60,7 +60,7 @@ Die folgende Tabelle enthält Beispielwerte sowie zusätzliche Informationen zum
 | `PRIVATE_KEY` | Eine Berechtigung zum Authentifizieren Ihrer [!DNL Postman] -Instanz zu Experience Platform-APIs. Siehe Tutorial zum Einrichten der Entwicklerkonsole und [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) für Anweisungen zum Abrufen Ihres {PRIVATE_KEY}. | `{PRIVATE_KEY}` |
 | `TECHNICAL_ACCOUNT_ID` | Eine Berechtigung zur Integration in Adobe I/O. | `D42AEVJZTTJC6LZADUBVPA15@techacct.adobe.com` |
 | `IMS` | Das Identity Management-System (IMS) bietet das Framework für die Authentifizierung bei Adobe-Diensten. Im Hinblick auf [!DNL Marketo]festgelegt ist, wird dieser Wert festgelegt und immer auf Folgendes festgelegt: `ims-na1.adobelogin.com`. | `ims-na1.adobelogin.com` |
-| `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienste besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann. Siehe Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer `{IMS_ORG}` Informationen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
+| `IMS_ORG` | Eine Unternehmenseinheit, die Produkte und Dienste besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann. Siehe Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer `{ORG_ID}` Informationen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `SANDBOX_NAME` | Der Name der von Ihnen verwendeten virtuellen Sandbox-Partition. | `prod` |
 | `TENANT_ID` | Eine ID, mit der sichergestellt wird, dass die von Ihnen erstellten Ressourcen den richtigen Namespace aufweisen und in Ihrer IMS-Organisation enthalten sind. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Der URL-Endpunkt, an den Sie API-Aufrufe durchführen. Dieser Wert ist fest festgelegt und immer auf Folgendes festgelegt: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |

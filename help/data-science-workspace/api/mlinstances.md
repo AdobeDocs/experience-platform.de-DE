@@ -5,7 +5,7 @@ title: MLInstances API Endpoint
 topic-legacy: Developer guide
 description: Eine MLInstance ist eine Kopplung einer vorhandenen Engine mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 19%
@@ -14,13 +14,13 @@ ht-degree: 19%
 
 # MLInstances-Endpunkt
 
-Eine MLInstance ist eine Kopplung einer vorhandenen [Engine](./engines.md) mit einem entsprechenden Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
+Eine MLInstance ist eine Kopplung eines vorhandenen [Engine](./engines.md) mit einem geeigneten Satz von Konfigurationen, die Trainings-Parameter, Scoring-Parameter oder Hardware-Ressourcenkonfigurationen definieren.
 
 ## Erstellen einer MLInstance {#create-an-mlinstance}
 
-Sie können eine MLInstance erstellen, indem Sie eine POST-Anfrage ausführen und dabei eine Anfrage-Payload angeben, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einem entsprechenden Satz von Standardkonfigurationen besteht.
+Sie können eine MLInstance erstellen, indem Sie eine POST-Anfrage ausführen und dabei eine Anfrage-Payload angeben, die aus einer gültigen Engine-ID (`{ENGINE_ID}`) und einen entsprechenden Satz von Standardkonfigurationen.
 
-Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Anzahl der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn auf eine Python-Engine verwiesen wird, können Sie entweder eine CPU oder eine GPU zu Trainings- und Scoring-Zwecken verwenden. Weitere Informationen finden Sie in den Anhang-Abschnitten zu [PySpark- und Spark-Ressourcenkonfigurationen](./appendix.md#resource-config) und [Python-CPU- und GPU-Konfigurationen](./appendix.md#cpu-gpu-config).
+Wenn die Engine-ID auf eine PySpark- oder Spark-Engine verweist, können Sie die Anzahl der Berechnungsressourcen konfigurieren, z. B. die Anzahl der Kerne oder die Speichermenge. Wenn auf eine Python-Engine verwiesen wird, können Sie entweder eine CPU oder eine GPU zu Trainings- und Scoring-Zwecken verwenden. Weitere Informationen finden Sie im Anhang unter [PySpark- und Spark-Ressourcenkonfigurationen](./appendix.md#resource-config) und [Python-CPU- und GPU-Konfigurationen](./appendix.md#cpu-gpu-config) für weitere Informationen.
 
 **API-Format**
 
@@ -35,7 +35,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -83,7 +83,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten MLInstance einschließlich ihrer eindeutigen Kennung (`id`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten MLInstance einschließlich ihrer eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -142,7 +142,7 @@ GET /mlInstances?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAMETER_2}={VALUE_2}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern von Ergebnissen verwendet wird. |
+| `{QUERY_PARAMETER}` | Eines der [Verfügbare Abfrageparameter](./appendix.md#query) verwendet, um Ergebnisse zu filtern. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
@@ -152,7 +152,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -217,7 +217,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -275,7 +275,7 @@ Sie können eine vorhandene MLInstance aktualisieren, indem Sie ihre Eigenschaft
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zuerst eine GET-Anfrage an [zum Abrufen der MLInstance nach ID](#retrieve-specific) auszuführen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abrufen der MLInstance nach ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Mit dem folgenden Beispiel-API-Aufruf werden die Trainings- und Scoring-Parameter einer MLInstance aktualisiert, während sie zunächst über diese Eigenschaften verfügen:
 
@@ -329,7 +329,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=mlInstance.v1.json' \
     -d '{
@@ -424,7 +424,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances?engineId=22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -459,7 +459,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/mlInstances/46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

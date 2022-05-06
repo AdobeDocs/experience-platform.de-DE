@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
-title: Zustimmungs-API-Endpunkt
+title: API-Endpunkt für Zustimmung
 topic-legacy: developer guide
-description: Erfahren Sie, wie Sie mit der Privacy Service-API Kundenanfragen für Experience Cloud-Anwendungen verwalten.
+description: Erfahren Sie, wie Sie mit der Privacy Service-API Anfragen zur Kundenzustimmung für Experience Cloud-Anwendungen verwalten.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '247'
 ht-degree: 5%
 
 ---
 
-# Zustimmungs-Endpunkt
+# Zustimmungsendpunkt
 
-Bestimmte Bestimmungen bedürfen der ausdrücklichen Zustimmung des Kunden, bevor seine persönlichen Daten erhoben werden können. Die `/consent` Endpunkt im [!DNL Privacy Service] API ermöglicht es Ihnen, Anfragen zur Kundengenehmigung zu verarbeiten und in Ihren Datenschutz-Workflow zu integrieren.
+Bestimmte Vorschriften erfordern eine ausdrückliche Zustimmung des Kunden, bevor seine personenbezogenen Daten erfasst werden können. Die `/consent` -Endpunkt im [!DNL Privacy Service] Mit der API können Sie Anfragen zur Kundenzustimmung verarbeiten und in Ihren Datenschutz-Workflow integrieren.
 
-Bevor Sie dieses Handbuch verwenden, beachten Sie bitte die [Erste Schritte](./getting-started.md) Anleitung für Informationen zu den erforderlichen Authentifizierungskopfzeilen, die im Beispiel-API-Aufruf unten aufgeführt sind.
+Bevor Sie dieses Handbuch verwenden, lesen Sie bitte den Abschnitt [Erste Schritte](./getting-started.md) Anleitung für Informationen zu den erforderlichen Authentifizierungskopfzeilen, die im folgenden Beispiel-API-Aufruf beschrieben werden.
 
-## Anfrage auf Kundenzustimmung verarbeiten
+## Verarbeiten einer Kundenzustimmungsanfrage
 
-Zustimmungsanforderungen werden verarbeitet, indem Sie eine POST anfordern an die `/consent` Endpunkt.
+Einverständnisanfragen werden verarbeitet, indem eine POST-Anfrage an die `/consent` -Endpunkt.
 
 **API-Format**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **Anfrage**
 
-Mit der folgenden Anforderung wird ein neuer Bestätigungsauftrag für die Benutzer-IDs erstellt, die in der `entities` Array.
+Mit der folgenden Anfrage wird ein neuer Zustimmungsauftrag für die Benutzer-IDs erstellt, die in der `entities` Array.
 
 ```shell
 curl -X POST \
@@ -38,7 +38,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
         "optOutOfSale": true,
         "entities": [
@@ -61,17 +61,17 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `optOutOfSale` | Wenn auf &quot;true&quot;eingestellt, bedeutet dies, dass die unter `entities` Sie möchten den Verkauf oder die Weitergabe ihrer personenbezogenen Daten ablehnen. |
-| `entities` | Ein Array von Objekten, die die Benutzer angeben, für die die Genehmigungsanfrage gilt. Jedes Objekt enthält `namespace` und ein Array von `values` , um einzelne Benutzer mit diesem Namensraum abzustimmen. |
-| `nameSpace` | Jedes Objekt in `entities` Array muss einen der folgenden enthalten: [Standard-Identitäts-Namensraum](./appendix.md#standard-namespaces) von der Privacy Service-API erkannt. |
-| `values` | Ein Array von Werten für jeden Benutzer, das der angegebenen entspricht `nameSpace`. |
+| `optOutOfSale` | Gibt bei der Festlegung auf &quot;true&quot;an, dass die unter `entities` möchte den Verkauf oder die Weitergabe ihrer personenbezogenen Daten deaktivieren. |
+| `entities` | Ein Array von Objekten, die die Benutzer angeben, für die die Genehmigungsanfrage gilt. Jedes Objekt enthält eine `namespace` und ein Array von `values` , um einzelne Benutzer mit diesem Namespace abzugleichen. |
+| `nameSpace` | Jedes Objekt im `entities` -Array muss einen der [Standard-Identitäts-Namespaces](./appendix.md#standard-namespaces) von der Privacy Service-API erkannt werden. |
+| `values` | Ein Array von Werten für jeden Benutzer, die dem bereitgestellten `nameSpace`. |
 
 {style=&quot;table-layout:auto&quot;}
 
 >[!NOTE]
 >
->Weitere Informationen dazu, wie Sie bestimmen, an welche Kundenidentitätswerte gesendet werden sollen [!DNL Privacy Service], siehe Leitfaden [Identitätsdaten bereitstellen](../identity-data.md).
+>Weitere Informationen dazu, wie Sie bestimmen, an welche Kundenidentitätswerte gesendet werden [!DNL Privacy Service], siehe Handbuch zu [Identitätsdaten bereitstellen](../identity-data.md).
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) ohne Nutzlast zurück, was darauf hinweist, dass die Anforderung von [!DNL Privacy Service] und wird verarbeitet.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) ohne Payload zurück und gibt an, dass die Anfrage von [!DNL Privacy Service] und wird verarbeitet.

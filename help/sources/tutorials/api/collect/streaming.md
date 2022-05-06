@@ -1,38 +1,38 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Cloud-Speicherdaten; Streaming-Daten; Streaming
+keywords: Experience Platform;Startseite;beliebte Themen;Cloud-Speicherdaten;Streaming-Daten;Streaming
 solution: Experience Platform
 title: Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der Flow Service-API
 topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Streaming-Daten und deren Einbindung in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: b4291b4f13918a1f85d73e0320c67dd2b71913fc
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1099'
-ht-degree: 17%
+ht-degree: 55%
 
 ---
 
-# Erstellen eines Streaming-Datenflusses für Rohdaten mithilfe der [!DNL Flow Service]-API
+# Erstellen Sie einen Streaming-Datenfluss für Rohdaten mithilfe der [!DNL Flow Service] API
 
-In diesem Tutorial werden die Schritte zum Abrufen von Rohdaten aus einem Streaming-Quell-Connector und zum Übertragen dieser Daten in die Experience Platform mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) beschrieben.
+In diesem Tutorial werden die Schritte zum Abrufen von Rohdaten aus einem Streaming-Quell-Connector und zum Übertragen dieser Daten in die Experience Platform mithilfe des [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie ein Verständnis der folgenden Komponenten von Adobe Experience Platform:
+Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
-   - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den Grundbausteinen von XDM-Schemas sowie den zentralen Konzepten und Best Practices rund um die Erstellung von Schemas vertraut.
-   - [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry-API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog ist „System of Record“ für die Position und Herkunft von Daten in Experience Platform.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten ordnet.
+   - [Grundlagen der Schemakomposition](../../../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
+   - [Entwicklerhandbuch zur Schema Registry](../../../../xdm/api/getting-started.md): Enthält wichtige Informationen, die Sie benötigen, um die Schema Registry API erfolgreich aufrufen zu können. Diese umfassen Ihre `{TENANT_ID}`, das Konzept sogenannter „Container“ und die für Anfragen erforderlichen Kopfzeilen, von denen insbesondere die Accept-Kopfzeile und deren mögliche Werte wichtig sind.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Der Katalog ist das „System of Record“ für den Speicherort und die Herkunft von Daten in Experience Platform.
 - [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Die Streaming-Erfassung für Platform bietet Benutzern eine Methode, Daten von Client- und Server-seitigen Geräten in Echtzeit an die Experience Platform zu senden.
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Verwenden von Platform-APIs
 
-Informationen dazu, wie Sie erfolgreich Aufrufe an Platform-APIs durchführen können, finden Sie im Handbuch [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
+Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../landing/api-guide.md).
 
-### Quellverbindung erstellen {#source}
+### Erstellen einer Quellverbindung {#source}
 
 Für dieses Tutorial benötigen Sie außerdem eine gültige Quell-Verbindungs-ID für einen Streaming-Connector. Wenn Sie diese Informationen nicht haben, lesen Sie die folgenden Tutorials zum Erstellen einer Streaming-Quellverbindung , bevor Sie dieses Tutorial ausführen:
 
@@ -42,9 +42,9 @@ Für dieses Tutorial benötigen Sie außerdem eine gültige Quell-Verbindungs-ID
 
 ## Erstellen eines XDM-Zielschemas {#target-schema}
 
-Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind. Dieses Ziel-XDM-Schema erweitert auch die XDM-Klasse [!DNL Individual Profile] .
+Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Das Zielschema wird dann verwendet, um einen Platform-Datensatz zu erstellen, in dem die Quelldaten enthalten sind. Dieses Ziel-XDM-Schema erweitert auch das XDM-Schema [!DNL Individual Profile] -Klasse.
 
-Um ein Ziel-XDM-Schema zu erstellen, stellen Sie eine POST-Anfrage an den `/schemas`-Endpunkt der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Um ein Ziel-XDM-Schema zu erstellen, stellen Sie eine POST-Anfrage an die `/schemas` Endpunkt der [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API-Format**
 
@@ -54,14 +54,14 @@ POST /tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanfrage erstellt ein XDM-Schema, das die XDM-Klasse [!DNL Individual Profile] erweitert.
+Die folgende Beispielanfrage erstellt ein XDM-Schema, das das XDM-Schema erweitert [!DNL Individual Profile] -Klasse.
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -88,7 +88,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einschließlich der eindeutigen Kennung (`$id`). Diese ID ist in späteren Schritten erforderlich, um einen Zieldatensatz, eine Zielzuordnung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich der eindeutigen Kennung (`$id`). Diese ID ist in späteren Schritten erforderlich, um einen Zieldatensatz, eine Zielzuordnung und einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -121,7 +121,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einsch
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -150,9 +150,9 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einsch
 }
 ```
 
-## Zieldatensatz erstellen
+## Erstellen eines Zieldatensatzes
 
-Mit einem erstellten Ziel-XDM-Schema und seinem eindeutigen `$id` können Sie jetzt einen Zieldatensatz erstellen, der Ihre Quelldaten enthält. Um einen Zieldatensatz zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `dataSets` der [Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/) und geben Sie dabei die ID des Zielschemas in der Payload an.
+Mit einem erstellten Ziel-XDM-Schema und seiner eindeutigen `$id` Sie können jetzt einen Zieldatensatz erstellen, der Ihre Quelldaten enthält. Um einen Zieldatensatz zu erstellen, stellen Sie eine POST-Anfrage an die `dataSets` Endpunkt der [Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/), während die ID des Zielschemas in der Payload angegeben wird.
 
 **API-Format**
 
@@ -167,7 +167,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -190,12 +190,12 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `name` | Der Name des zu erstellenden Datensatzes. |
-| `schemaRef.id` | Der URI `$id` für das XDM-Schema, auf dem der Datensatz basieren soll. |
-| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1` gesetzt werden, was die neueste Nebenversion des Schemas zurückgibt. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
+| `schemaRef.id` | Der URI `$id` für das XDM-Schema, auf dem der Datensatz basieren wird. |
+| `schemaRef.contentType` | Die Version des Schemas. Dieser Wert muss auf `application/vnd.adobe.xed-full-notext+json;version=1`, die die neueste Nebenversion des Schemas zurückgibt. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Die Ziel-Datensatz-ID ist in späteren Schritten erforderlich, um eine Zielverbindung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Die Ziel-Datensatz-ID ist in späteren Schritten erforderlich, um eine Zielverbindung und einen Datenfluss zu erstellen.
 
 ```json
 [
@@ -207,7 +207,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstel
 
 Target-Verbindungen erstellen und verwalten eine Zielverbindung zu Platform oder einem beliebigen Standort, an dem die übertragenen Daten landen. Target-Verbindungen enthalten Informationen zu Datenziel, Datenformat und der Zielverbindungs-ID, die zum Erstellen eines Datenflusses erforderlich ist. Target-Verbindungsinstanzen sind spezifisch für einen Mandanten und eine IMS-Organisation.
 
-Um eine Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an den `/targetConnections`-Endpunkt der [!DNL Flow Service]-API. Im Rahmen der Anfrage müssen Sie das Datenformat, das im vorherigen Schritt abgerufene `dataSetId` und die mit [!DNL Data Lake] verknüpfte feststehende Verbindungs-Spezifikations-ID angeben. Diese ID lautet `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Um eine Zielverbindung zu erstellen, stellen Sie eine POST-Anfrage an die `/targetConnections` Endpunkt der [!DNL Flow Service] API. Im Rahmen der Anfrage müssen Sie das Datenformat, das `dataSetId` im vorherigen Schritt abgerufen wurden, und die ID der festen Verbindungsspezifikation, an die [!DNL Data Lake]. Diese ID lautet `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API-Format**
 
@@ -222,7 +222,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -247,13 +247,13 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit [!DNL Data Lake] verwendet wird. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Das angegebene Format der Daten, die Sie an [!DNL Data Lake] übermitteln. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die für die Verbindung mit der [!DNL Data Lake]. Diese ID lautet: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | Das angegebene Format der Daten, die Sie an [!DNL Data Lake]. |
 | `params.dataSetId` | Die ID des Zieldatensatzes, der im vorherigen Schritt abgerufen wurde. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`) zurück. Diese ID ist in späteren Schritten erforderlich.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung an (`id`). Diese ID ist in späteren Schritten erforderlich.
 
 ```json
 {
@@ -264,9 +264,9 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (
 
 ## Erstellen einer Zuordnung {#mapping}
 
-Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, dem der Zieldatensatz entspricht.
+Damit die Quelldaten in einen Zieldatensatz aufgenommen werden können, müssen sie zunächst dem Zielschema zugeordnet werden, zu dem der Zieldatensatz gehört.
 
-Um einen Zuordnungssatz zu erstellen, stellen Sie eine POST-Anfrage an den `mappingSets`-Endpunkt der [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) und geben Sie dabei Ihr Ziel-XDM-Schema `$id` sowie die Details der Zuordnungssätze an, die Sie erstellen möchten.
+Um einen Zuordnungssatz zu erstellen, senden Sie eine POST-Anfrage an den `mappingSets`-Endpunkt der [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml), wobei Sie das Ziel-XDM-Schema `$id` und die Details der Zuordnungssätze, die Sie erstellen möchten, angeben.
 
 **API-Format**
 
@@ -281,7 +281,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -307,11 +307,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `xdmSchema` | Das `$id` des Ziel-XDM-Schemas. |
+| `xdmSchema` | `$id` des XDM-Zielschemas. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Mapping zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt Details zur neu erstellten Zuordnung zurück, einschließlich der eindeutigen Kennung (`id`). Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
 
 ```json
 {
@@ -326,7 +326,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Mapping zurück, einsc
 
 ## Abrufen einer Liste von Datenfluss-Spezifikationen {#specs}
 
-Ein Datenfluss ist für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform zuständig. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API richten.
+Ein Datenfluss sorgt für die Erfassung von Daten aus Quellen und deren Aufnahme in Platform. Um einen Datenfluss zu erstellen, müssen Sie zunächst die Datenflussspezifikationen abrufen, indem Sie eine GET-Anfrage an die [!DNL Flow Service]-API senden.
 
 **API-Format**
 
@@ -340,13 +340,13 @@ GET /flowSpecs
 curl -X GET \
     'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Datenflug-Spezifikationen zurück. Die Datenfluss-Spezifikations-ID, die Sie zum Erstellen eines Datenflusses mit einem beliebigen von [!DNL Amazon Kinesis], [!DNL Azure Event Hubs] oder [!DNL Google PubSub] abrufen müssen, lautet `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+Eine erfolgreiche Antwort gibt eine Liste von Datenflug-Spezifikationen zurück. Die Datenflug-Spezifikations-ID, die Sie abrufen müssen, um einen Datenfluss mit einem der folgenden Elemente zu erstellen [!DNL Amazon Kinesis], [!DNL Azure Event Hubs]oder  [!DNL Google PubSub], ist `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -414,14 +414,14 @@ Eine erfolgreiche Antwort gibt eine Liste von Datenflug-Spezifikationen zurück.
 }
 ```
 
-## Datenfluss erstellen
+## Erstellen eines Datenflusses
 
-Der letzte Schritt bei der Erfassung von Streaming-Daten besteht in der Erstellung eines Datenflusses. Jetzt sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt bei der Erfassung von Streaming-Daten besteht in der Erstellung eines Datenflusses. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 - [Quellverbindungs-ID](#source)
-- [Target-Verbindungs-ID](#target)
-- [Mapping-ID](#mapping)
-- [Dataflow-Spezifikations-ID](#specs)
+- [Zielverbindungs-ID](#target)
+- [Zuordnungs-ID](#mapping)
+- [Datenflussspezifikations-ID](#specs)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
@@ -437,7 +437,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -468,13 +468,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `flowSpec.id` | Die [Flussspezifikations-ID](#specs), die im vorherigen Schritt abgerufen wurde. |
-| `sourceConnectionIds` | Die [Quell-Verbindungs-ID](#source) wurde in einem früheren Schritt abgerufen. |
-| `targetConnectionIds` | Die [Ziel-Verbindungs-ID](#target-connection), die in einem früheren Schritt abgerufen wurde. |
+| `sourceConnectionIds` | Die [Quellverbindungs-ID](#source), die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die [Zielverbindungs-ID](#target-connection), die in einem früheren Schritt abgerufen wurde. |
 | `transformations.params.mappingId` | Die [Zuordnungs-ID](#mapping), die in einem früheren Schritt abgerufen wurde. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zurück.
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses angegeben.
 
 ```json
 {
@@ -485,7 +485,7 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zur
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten aus Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Datenfluss erstellt, um Streaming-Daten aus Ihrem Streaming-Connector zu erfassen. Eingehende Daten können jetzt von nachgelagerten Platform-Services wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../../profile/home.md)
-- [Data Science Workspace – Übersicht](../../../../data-science-workspace/home.md)
+- [Übersicht über Data Science Workspace](../../../../data-science-workspace/home.md)

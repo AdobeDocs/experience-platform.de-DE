@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Katalog; API; Objekt
 solution: Experience Platform
 title: Aktualisieren eines Katalogobjekts
 topic-legacy: developer guide
-description: Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen. Dieses Dokument behandelt die Verwendung der Felder und die Verwendung der JSON Patch-Notation zum Ausführen von PATCH-Vorgängen für Catalog-Objekte.
+description: Sie können einen Teil eines Katalogobjekts aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen. Dieses Dokument behandelt die Verwendung von Feldern und die Verwendung der JSON Patch-Notation zum Ausführen von PATCH-Vorgängen für Catalog-Objekte.
 exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 81%
@@ -14,7 +14,7 @@ ht-degree: 81%
 
 # Aktualisieren eines Katalogobjekts
 
-Sie können einen Teil eines [!DNL Catalog]-Objekts aktualisieren, indem Sie dessen Kennung in den Pfad einer PATCH-Anfrage einschließen. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
+Sie können einen Teil eines [!DNL Catalog] -Objekt, indem die zugehörige ID in den Pfad einer PATCH-Anfrage aufgenommen wird. In diesem Dokument werden die beiden Methoden zum Ausführen von PATCH-Vorgängen für Katalogobjekte behandelt:
 
 * Verwenden von Feldern
 * Verwenden der JSON Patch-Notation
@@ -35,7 +35,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -48,7 +48,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
        "name":"Updated Dataset Name",
@@ -84,7 +84,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu aktualisierenden [!DNL Catalog] -Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu aktualisieren. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -96,7 +96,7 @@ curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json-patch+json' \
   -d '[

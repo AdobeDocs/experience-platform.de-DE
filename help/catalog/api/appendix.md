@@ -5,7 +5,7 @@ title: Anhang zum Catalog Service API-Handbuch
 topic-legacy: developer guide
 description: Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der Catalog-API in Adobe Experience Platform unterstützen.
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 79%
@@ -14,11 +14,11 @@ ht-degree: 79%
 
 # [!DNL Catalog Service] Anhang zum API-Handbuch
 
-Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit der [!DNL Catalog]-API unterstützen.
+Dieses Dokument enthält zusätzliche Informationen, die Sie bei der Arbeit mit dem [!DNL Catalog] API.
 
 ## Verwandte Objekte anzeigen {#view-interrelated-objects}
 
-Einige [!DNL Catalog]-Objekte können mit anderen [!DNL Catalog]-Objekten verknüpft werden. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
+Einige [!DNL Catalog] Objekte können mit anderen verknüpft werden [!DNL Catalog] Objekte. Alle Felder, die in Antwort-Payloads das Präfix `@` aufweisen, bezeichnen verwandte Objekte. Die Werte für diese Felder haben die Form eines URI, der in einer separaten GET-Anfrage zum Abrufen der zugehörigen Objekte, die sie darstellen, genutzt werden kann.
 
 Der Beispieldatensatz, der im Dokument zum [Nachschlagen eines bestimmten Datensatzes](look-up-object.md) zurückgegeben wird, enthält ein `files`-Feld mit dem folgenden URI-Wert: `"@/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files"`. Der Inhalt des `files`-Felds kann durch Verwendung des URI als Pfad für eine neue GET-Anfrage angezeigt werden.
 
@@ -41,7 +41,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets/5ba9452f7de80400007fc52a/views/5ba9452f7de80400007fc52b/files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -55,7 +55,7 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
         "id": "7d501090-0280-11ea-a6bb-f18323b7005c-1",
         "batchId": "7d501090-0280-11ea-a6bb-f18323b7005c",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -67,7 +67,7 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
         "id": "148ac690-0280-11ea-8d23-8571a35dce49-1",
         "batchId": "148ac690-0280-11ea-8d23-8571a35dce49",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -79,7 +79,7 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
         "id": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb-1",
         "batchId": "64dd5e19-8ea4-4ddd-acd1-f43cccd8eddb",
         "dataSetViewId": "5ba9452f7de80400007fc52b",
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "createdUser": "{USER_ID}",
         "createdClient": "{CLIENT_ID}",
         "updatedUser": "{USER_ID}",
@@ -92,9 +92,9 @@ Eine erfolgreiche Antwort gibt eine Liste verwandter Objekte zurück. In diesem 
 
 ## Mehrere Anfragen in einem einzelnen Aufruf stellen
 
-Der Root-Endpunkt der API [!DNL Catalog] ermöglicht es, mehrere Anfragen innerhalb eines einzelnen Aufrufs zu stellen. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
+Der Stamm-Endpunkt der [!DNL Catalog] API ermöglicht es, mehrere Anfragen innerhalb eines einzelnen Aufrufs zu stellen. Die Anfrage-Payload enthält eine Gruppe von Objekten, die normalerweise einzelne Anfragen darstellen würden, die dann der Reihenfolge nach ausgeführt werden.
 
-Wenn es sich bei diesen Anforderungen um Änderungen oder Ergänzungen zu [!DNL Catalog] handelt und eine der Änderungen fehlschlägt, werden alle Änderungen zurückgesetzt.
+Wenn es sich bei diesen Anforderungen um Änderungen oder Ergänzungen von [!DNL Catalog] und eine der Änderungen fehlschlägt, werden alle Änderungen rückgängig gemacht.
 
 **API-Format**
 
@@ -117,7 +117,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/catalog \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '[
@@ -145,13 +145,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `id` | Vom Anwender angegebene Kennung, die an das Antwortobjekt angehängt wird, damit Sie Anfragen Antworten zuordnen können. [!DNL Catalog] speichert diesen Wert nicht und gibt ihn in der Antwort lediglich zu Referenzzwecken zurück. |
-| `resource` | Der Ressourcenpfad relativ zum Stamm der [!DNL Catalog]-API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Dieser Ressourcenpfad ist nicht mit dem vom Benutzer angegebenen `id` zu verwechseln. Er verwendet die Kennung des [!DNL Catalog]-Objekts selbst (z. B. `resource: "/dataSets/1234567890"`). |
+| `resource` | Der Ressourcenpfad relativ zum Stammverzeichnis der [!DNL Catalog] API. Das Protokoll und die Domain sollten nicht Teil dieses Werts sein und sollten mit dem Präfix „/“ versehen werden. <br/><br/> Wenn Sie PATCH oder DELETE als Unteranfrage verwenden`method`, fügen Sie die Objektkennung in den Ressourcenpfad ein. Nicht zu verwechseln mit dem vom Benutzer bereitgestellten `id`verwendet der Ressourcenpfad die Kennung der [!DNL Catalog] Objekt selbst (z. B. `resource: "/dataSets/1234567890"`). |
 | `method` | Der Name der Methode (GET, PUT, POST, PATCH oder DELETE), die mit der in der Anfrage ausgeführten Aktion verknüpft ist. |
 | `body` | Das JSON-Dokument, das in einer POST-, PUT- oder PATCH-Anfrage normalerweise als Payload übergeben wird. Diese Eigenschaft ist bei GET- oder DELETE-Anfragen nicht erforderlich. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Da bei allen drei Beispielanfragen neue Objekte erstellt werden sollten, ist das `body` jedes Objekts ein Array, das nur die ID des neu erstellten Objekts enthält, genau wie bei den meisten erfolgreichen POST-Antworten in [!DNL Catalog] der Standard.
+Eine erfolgreiche Antwort gibt eine Gruppe von Objekten, die die einzelnen Anfragen zugewiesene `id` enthalten, den HTTP-Status-Code für die jeweilige Anfrage und den `body` (Text) der Antwort zurück. Da alle drei Beispielanfragen neue Objekte erstellen sollten, wird die `body` von jedem Objekt ist ein Array, das nur die ID des neu erstellten Objekts enthält, ebenso wie der Standard mit den erfolgreichsten POST-Antworten in [!DNL Catalog].
 
 ```json
 [
@@ -192,6 +192,6 @@ Es kann vorkommen, dass Sie ein Objekt prüfen möchten, ohne die Informationen 
 
 ## Datenkomprimierung
 
-Komprimierung ist ein [!DNL Experience Platform]-Dienst, der Daten aus kleinen Dateien in größeren Dateien zusammenführt, ohne Daten zu ändern. Aus Leistungsgründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
+Komprimierung ist eine [!DNL Experience Platform] -Dienst, der Daten aus kleinen Dateien in größeren Dateien zusammenführt, ohne Daten zu ändern. Aus Leistungsgründen kann es sinnvoll sein, mehrere kleine Dateien in größeren Dateien zu kombinieren, um bei Abfragen schneller auf Daten zugreifen zu können.
 
-Wenn die Dateien in einem erfassten Batch komprimiert wurden, wird das zugehörige [!DNL Catalog]-Objekt zu Überwachungszwecken aktualisiert.
+Wenn die Dateien in einem erfassten Batch komprimiert wurden, werden die zugehörigen [!DNL Catalog] -Objekt wird zu Überwachungszwecken aktualisiert.

@@ -5,7 +5,7 @@ title: Identity Service API-Anleitung
 topic-legacy: API guide
 description: Mit der Identity Service-API können Entwickler die geräteübergreifende, kanalübergreifende und nahezu echtzeitübergreifende Identifizierung Ihrer Kunden mithilfe von Identitätsdiagrammen in Adobe Experience Platform verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: f269a7b1584a6e4a0e1820a0c587a647c0c8f7b5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '767'
 ht-degree: 36%
@@ -22,9 +22,9 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 - [[!DNL Identity Service]](../home.md): Löst die grundlegende Herausforderung aus, die sich aus der Fragmentierung von Kundenprofildaten ergibt. Dies geschieht durch die Verknüpfung von Identitäten über Geräte und Systeme hinweg, in denen Kunden mit Ihrer Marke interagieren.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die [!DNL Identity Service]-API erfolgreich aufrufen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Identity Service] API.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -32,11 +32,11 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
@@ -52,9 +52,9 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ### regionenbasiertes Routing
 
-The [!DNL Identity Service] API employs region-specific endpoints that require the inclusion of a `{REGION}` as part of the request path. Während der Bereitstellung Ihrer IMS-Organisation wird eine Region in Ihrem IMS-Org-Profil bestimmt und gespeichert. Using the correct region with each endpoint ensures that all requests made using the [!DNL Identity Service] API are routed to the appropriate region.
+Die [!DNL Identity Service] API verwendet regionenspezifische Endpunkte, für die die Einbeziehung einer `{REGION}` als Teil des Anfragepfads. Während der Bereitstellung Ihrer IMS-Organisation wird eine Region in Ihrem IMS-Org-Profil bestimmt und gespeichert. Durch Verwendung des richtigen Bereichs für jeden Endpunkt wird sichergestellt, dass alle Anfragen, die mit dem [!DNL Identity Service] Die API wird an die entsprechende Region weitergeleitet.
 
-There are two regions currently supported by [!DNL Identity Service] APIs: VA7 and NLD2.
+Derzeit werden zwei Regionen unterstützt von [!DNL Identity Service] APIs: VA7 und NLD2.
 
 Die folgende Tabelle zeigt Beispielpfade mit Regionen:
 
@@ -69,21 +69,21 @@ Die folgende Tabelle zeigt Beispielpfade mit Regionen:
 
 Wenn Sie die Region in Ihrem IMS-Org-Profil nicht finden können, wenden Sie sich an Ihren Systemadministrator, um Unterstützung zu erhalten.
 
-## Verwenden der [!DNL Identity Service]-API
+## Verwenden der [!DNL Identity Service] API
 
 Identitätsparameter, die in diesen Diensten verwendet werden, können auf zwei Arten ausgedrückt werden: zusammengesetzt oder XID.
 
-Verbund-Identitäten sind Konstrukte, die sowohl den ID-Wert als auch den Namespace enthalten. Bei Verwendung von zusammengesetzten Identitäten kann der Namespace entweder mit dem Namen (`namespace.code`) oder der Kennung (`namespace.id`) angegeben werden.
+Verbund-Identitäten sind Konstrukte, die sowohl den ID-Wert als auch den Namespace enthalten. Bei Verwendung von zusammengesetzten Identitäten kann der Namespace entweder mit einem Namen (`namespace.code`) oder ID (`namespace.id`).
 
-Wenn eine Identität persistiert wird, generiert [!DNL Identity Service] eine Kennung, die als native ID oder XID bezeichnet wird, und weist sie dieser Identität zu. Alle Varianten von Cluster- und Mapping-APIs unterstützen sowohl zusammengesetzte Identitäten als auch XID in ihren Anfragen und Antworten. Einer der Parameter ist erforderlich - `xid` oder Kombination von [`ns` oder `nsid`] und `id` , um diese APIs zu verwenden.
+Wenn eine Identität beibehalten wird, [!DNL Identity Service] generiert und weist dieser Identität eine Kennung zu, die als native ID oder XID bezeichnet wird. Alle Varianten von Cluster- und Mapping-APIs unterstützen sowohl zusammengesetzte Identitäten als auch XID in ihren Anfragen und Antworten. Einer der Parameter ist erforderlich - `xid` oder Kombination von [`ns` oder `nsid`] und `id` , um diese APIs zu verwenden.
 
 Um die Payload in Antworten zu begrenzen, passen APIs ihre Antworten an den Typ des verwendeten Identitätskonstrukts an. Wenn Sie also XID übergeben, haben Ihre Antworten XIDs, wenn Sie zusammengesetzte Identitäten übergeben, folgt die Antwort der in der Anfrage verwendeten Struktur.
 
-Die Beispiele in diesem Dokument decken nicht die gesamte Funktionalität der [!DNL Identity Service]-API ab. For the complete API, see the [Swagger API Reference](https://www.adobe.io/experience-platform-apis/references/identity-service).
+Die Beispiele in diesem Dokument decken nicht die gesamte Funktionalität der [!DNL Identity Service] API. Die vollständige API finden Sie in der [Swagger-API-Referenz](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >
->Alle zurückgegebenen Identitäten werden im nativen XID-Formular angezeigt, wenn in der Anfrage die native XID verwendet wird. Es wird empfohlen, das Formular ID/Namespace zu verwenden. For more information, see the section on [getting the XID for an identity](./create-custom-namespace.md).
+>Alle zurückgegebenen Identitäten werden im nativen XID-Formular angezeigt, wenn in der Anfrage die native XID verwendet wird. Es wird empfohlen, das Formular ID/Namespace zu verwenden. Weitere Informationen finden Sie im Abschnitt zu [Abrufen der XID für eine Identität](./create-custom-namespace.md).
 
 ## Nächste Schritte
 

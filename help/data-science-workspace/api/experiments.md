@@ -5,7 +5,7 @@ title: Experiment-API-Endpunkt
 topic-legacy: Developer guide
 description: Modellentwicklung und -schulung finden auf Experimentebene statt, bei der ein Experiment aus einer MLInstance, Trainings-Läufen und Scoring-Läufen besteht.
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 17%
@@ -37,7 +37,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/experiments \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiment.v1.json' \
     -d '{
@@ -53,7 +53,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details des neu erstellten Experiments einschließlich der eindeutigen Kennung (`id`).
 
 ```json
 {
@@ -90,7 +90,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experimentRun.v1.json' \
     -d '{
@@ -100,11 +100,11 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `{TASK}` | Gibt die Aufgabe der Ausführung an. Legen Sie diesen Wert entweder auf `train` für die Schulung, `score` für die Auswertung oder auf `featurePipeline` für die Feature-Pipeline fest. |
+| `{TASK}` | Gibt die Aufgabe der Ausführung an. Setzen Sie diesen Wert auf `train` für die Ausbildung, `score` für Scoring oder `featurePipeline` für die Funktions-Pipeline. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Ausführung einschließlich der geerbten standardmäßigen Trainings- oder Scoring-Parameter und der eindeutigen Kennung der Ausführung (`{RUN_ID}`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload mit den Details der neu erstellten Ausführung zurück, einschließlich der geerbten standardmäßigen Trainings- oder Scoring-Parameter und der eindeutigen Kennung der Ausführung (`{RUN_ID}`).
 
 ```json
 {
@@ -154,13 +154,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments?property=mlInstanceId==46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von Experimenten zurück, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`) aufweisen.
+Eine erfolgreiche Antwort gibt eine Liste von Experimenten zurück, die dieselbe MLInstance-ID (`{MLINSTANCE_ID}`).
 
 ```json
 {
@@ -218,7 +218,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -259,7 +259,7 @@ GET /experiments/{EXPERIMENT_ID}/runs?{QUERY_PARAMETER_1}={VALUE_1}&{QUERY_PARAM
 | Parameter | Beschreibung |
 | --- | --- |
 | `{EXPERIMENT_ID}` | Eine gültige Experiment-ID. |
-| `{QUERY_PARAMETER}` | Einer der [verfügbaren Abfrageparameter](./appendix.md#query), der zum Filtern von Ergebnissen verwendet wird. |
+| `{QUERY_PARAMETER}` | Eines der [Verfügbare Abfrageparameter](./appendix.md#query) verwendet, um Ergebnisse zu filtern. |
 | `{VALUE}` | Der Wert für den vorangehenden Abfrageparameter. |
 
 **Anfrage**
@@ -271,13 +271,13 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b/runs?property=mode==train \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die eine Liste von Ausführungen und deren Details einschließlich ihrer Experimentablauf-ID (`{RUN_ID}`) enthält.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die eine Liste der Ausführungen und deren Details einschließlich ihrer Experimentablauf-ID (`{RUN_ID}`).
 
 ```json
 {
@@ -307,7 +307,7 @@ Sie können ein vorhandenes Experiment aktualisieren, indem Sie seine Eigenschaf
 
 >[!TIP]
 >
->Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [zum Abrufen des Experiments nach ID](#retrieve-specific) durchzuführen. Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
+>Um den Erfolg dieser PUT-Anfrage sicherzustellen, wird empfohlen, zunächst eine GET-Anfrage an [Abrufen des Experiments nach ID](#retrieve-specific). Ändern und aktualisieren Sie dann das zurückgegebene JSON-Objekt und übernehmen Sie die Gesamtheit des geänderten JSON-Objekts als Payload für die PUT-Anfrage.
 
 Der folgende Beispiel-API-Aufruf aktualisiert den Namen eines Experiments und weist zunächst diese Eigenschaften auf:
 
@@ -340,7 +340,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=experiments.v1.json' \
     -d '{
@@ -393,7 +393,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/experiments/5cb25a2d-2cbd-4c99-a619-8ddae5250a7b \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -428,7 +428,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/experiments?mlInstanceId=46986c8f-7739-4376-8509-0178bdf32cda \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

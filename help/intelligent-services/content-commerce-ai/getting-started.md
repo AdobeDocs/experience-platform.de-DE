@@ -5,7 +5,7 @@ title: Erste Schritte mit Content and Commerce AI
 topic-legacy: Getting started
 description: Die Inhalts- und Commerce-KI verwendet Adobe I/O-APIs. Um Adobe I/O-APIs und die I/O-Konsolenintegration aufzurufen, müssen Sie zunächst das Authentifizierungs-Tutorial abschließen.
 exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
-source-git-commit: eae43834d1cd5931dd752b95023da7ac77668e56
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 14%
@@ -28,11 +28,11 @@ Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einze
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 ## Erstellen einer Postman-Umgebung (optional)
 
-Nachdem Sie Ihr Projekt und Ihre API in der Adobe Developer Console eingerichtet haben, können Sie eine Umgebungsdatei für Postman herunterladen. under **[!UICONTROL APIs]** Wählen Sie in der linken Leiste Ihres Projekts die Option **[!UICONTROL Inhalts- und Commerce-KI]**. Eine neue Registerkarte wird geöffnet, die eine Karte mit der Bezeichnung &quot;[!DNL Try it out]&quot;. Auswählen **Herunterladen für Postman** um eine JSON-Datei herunterzuladen, die zur Konfiguration Ihrer Postman-Umgebung verwendet wird.
+Nachdem Sie Ihr Projekt und Ihre API in der Adobe Developer Console eingerichtet haben, können Sie eine Umgebungsdatei für Postman herunterladen. under **[!UICONTROL APIs]** Wählen Sie in der linken Leiste Ihres Projekts die Option **[!UICONTROL Inhalts- und Commerce-KI]**. Eine neue Registerkarte wird geöffnet, die eine Karte mit der Bezeichnung &quot;[!DNL Try it out]&quot;. Auswählen **Download für Postman** um eine JSON-Datei herunterzuladen, die zur Konfiguration Ihrer Postman-Umgebung verwendet wird.
 
 ![Download für Postman](./images/add-to-postman.png)
 

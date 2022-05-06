@@ -5,7 +5,7 @@ topic-legacy: guide
 type: Documentation
 description: Berechnete Attribute sind Funktionen, mit denen Daten auf Ereignisebene in Attribute auf Profilebene aggregiert werden. Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry-API erstellt werden, um ein Schema und eine benutzerdefinierte Feldergruppe zu definieren, die das berechnete Attributfeld enthalten.
 exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
-source-git-commit: e4bf5bb77ac4186b24580329699d74d653310d93
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '736'
 ht-degree: 16%
@@ -20,11 +20,11 @@ ht-degree: 16%
 
 Um ein berechnetes Attribut zu konfigurieren, müssen Sie zunächst das Feld ermitteln, das den berechneten Attributwert enthält. Dieses Feld kann mithilfe der Schema Registry-API erstellt werden, um ein Schema und eine benutzerdefinierte Schemafeldergruppe zu definieren, die das berechnete Attributfeld enthalten. Es wird empfohlen, ein eigenes Schema und eine separate Feldergruppe &quot;Berechnete Attribute&quot;zu erstellen, in die Ihre Organisation alle Attribute einfügen kann, die als berechnete Attribute verwendet werden sollen. Dadurch kann Ihr Unternehmen das berechnete Attributschema sauber von anderen Schemata trennen, die für die Datenerfassung verwendet werden.
 
-Der Workflow in diesem Dokument beschreibt, wie Sie mit der Schema Registry-API ein Profil-aktiviertes Schema &quot;Berechnetes Attribut&quot;erstellen, das auf eine benutzerdefinierte Feldergruppe verweist. Dieses Dokument enthält Beispielcode für berechnete Attribute. Detaillierte Informationen zum Definieren von Feldergruppen und Schemas mithilfe der API finden Sie im [API-Handbuch zur Schema Registry](../../xdm/api/overview.md) .
+Der Workflow in diesem Dokument beschreibt, wie Sie mit der Schema Registry-API ein Profil-aktiviertes Schema &quot;Berechnetes Attribut&quot;erstellen, das auf eine benutzerdefinierte Feldergruppe verweist. Dieses Dokument enthält Beispielcode speziell für berechnete Attribute. Weitere Informationen finden Sie jedoch im Abschnitt [Handbuch zur Schema Registry-API](../../xdm/api/overview.md) für detaillierte Informationen zum Definieren von Feldergruppen und Schemas mithilfe der API.
 
 ## Erstellen einer Feldergruppe mit berechneten Attributen
 
-Um eine Feldergruppe mithilfe der Schema Registry-API zu erstellen, stellen Sie zunächst eine POST-Anfrage an den `/tenant/fieldgroups`-Endpunkt und geben Sie die Details der Feldergruppe im Anfrageinhalt an. Weitere Informationen zum Arbeiten mit Feldergruppen mithilfe der Schema Registry-API finden Sie im [API-Endpunkthandbuch für Feldergruppen](../../xdm/api/field-groups.md).
+Um eine Feldergruppe mithilfe der Schema Registry-API zu erstellen, stellen Sie zunächst eine POST-Anfrage an die `/tenant/fieldgroups` -Endpunkt und geben Sie die Details der Feldergruppe im Anfrageinhalt an. Weitere Informationen zum Arbeiten mit Feldergruppen mithilfe der Schema Registry-API finden Sie im Abschnitt [Handbuch für Feldergruppen-API-Endpunkte](../../xdm/api/field-groups.md).
 
 **API-Format**
 
@@ -39,7 +39,7 @@ curl -X POST \
   https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
@@ -84,7 +84,7 @@ curl -X POST \
 
 **Antwort**
 
-Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellt) mit einem Antworttext zurückgegeben, der die Details der neu erstellten Feldergruppe einschließlich `$id`, `meta:altIt` und `version` enthält. Diese Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
+Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellt) mit einem Antworttext zurückgegeben, der die Details der neu erstellten Feldergruppe einschließlich der `$id`, `meta:altIt`und `version`. Diese Werte sind schreibgeschützt und werden von der Schema Registry zugewiesen.
 
 ```json
 {
@@ -120,7 +120,7 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellt) mit einem Ant
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -146,9 +146,9 @@ Bei erfolgreicher Anfrage wird der HTTP-Status-Code 201 (Erstellt) mit einem Ant
 
 ## Aktualisieren der Feldergruppe mit zusätzlichen berechneten Attributen
 
-Da mehr berechnete Attribute erforderlich sind, können Sie die Feldergruppe mit berechneten Attributen mit zusätzlichen Attributen aktualisieren, indem Sie eine PUT-Anfrage an den Endpunkt `/tenant/fieldgroups` stellen. Für diese Anforderung müssen Sie die eindeutige ID der Feldergruppe, die Sie im Pfad erstellt haben, sowie alle neuen Felder, die Sie im Text hinzufügen möchten, einschließen.
+Da mehr berechnete Attribute erforderlich sind, können Sie die Feldergruppe mit berechneten Attributen mit zusätzlichen Attributen aktualisieren, indem Sie eine PUT-Anfrage an die `/tenant/fieldgroups` -Endpunkt. Für diese Anforderung müssen Sie die eindeutige ID der Feldergruppe, die Sie im Pfad erstellt haben, sowie alle neuen Felder, die Sie im Text hinzufügen möchten, einschließen.
 
-Weiterführende Informationen zum Aktualisieren einer Feldergruppe mithilfe der Schema Registry-API finden Sie im [API-Endpunkthandbuch für Feldergruppen](../../xdm/api/field-groups.md).
+Weiterführende Informationen zum Aktualisieren einer Feldergruppe mithilfe der Schema Registry-API finden Sie im Abschnitt [Handbuch für Feldergruppen-API-Endpunkte](../../xdm/api/field-groups.md).
 
 **API-Format**
 
@@ -158,7 +158,7 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 **Anfrage**
 
-Mit dieser Anfrage werden neue Felder für `purchaseSummary`-Informationen hinzugefügt.
+Diese Anfrage fügt neue Felder hinzu, die sich auf `purchaseSummary` Informationen.
 
 >[!NOTE]
 >
@@ -170,7 +170,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -285,7 +285,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldergruppe zurü
       "meta:xdmType": "object"
     }
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": true,
   "meta:abstract": true,
   "meta:intendedToExtend": [
@@ -311,9 +311,9 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten Feldergruppe zurü
 
 ## Erstellen eines Profilaktivierten Schemas
 
-Um ein Schema mithilfe der Schema Registry-API zu erstellen, stellen Sie zunächst eine POST-Anfrage an den `/tenant/schemas`-Endpunkt und geben Sie die Schemadetails im Anfrageinhalt an. Das Schema muss auch für [!DNL Profile] aktiviert sein und als Teil des Vereinigungsschemas für die Schemaklasse angezeigt werden.
+Um ein Schema mit der Schema Registry-API zu erstellen, stellen Sie zunächst eine POST-Anfrage an die `/tenant/schemas` -Endpunkt hinzu und geben die Details des Schemas im Anfragetext an. Das Schema muss auch für [!DNL Profile] und werden als Teil des Vereinigungsschemas für die Schemaklasse angezeigt.
 
-Weitere Informationen zu [!DNL Profile]-aktivierten Schemas und Vereinigungsschemas finden Sie im [[!DNL Schema Registry] API-Handbuch](../../xdm/api/overview.md) und in der [Grundlagendokumentation zur Schemakomposition](../../xdm/schema/composition.md).
+Weitere Informationen finden Sie unter [!DNL Profile]-aktivierte Schemas und Vereinigungsschemas, lesen Sie bitte die [[!DNL Schema Registry] API-Handbuch](../../xdm/api/overview.md) und [Dokumentation zu Grundlagen der Schemakomposition](../../xdm/schema/composition.md).
 
 **API-Format**
 
@@ -323,7 +323,7 @@ POST /tenants/schemas
 
 **Anfrage**
 
-Die folgende Anfrage erstellt ein neues Schema, das auf das zuvor in diesem Dokument erstellte `computedAttributesFieldGroup` verweist (mithilfe seiner eindeutigen ID) und für das Schema der Profilunion aktiviert ist (mithilfe des Arrays `meta:immutableTags` ). Detaillierte Anweisungen zum Erstellen eines Schemas mithilfe der Schema Registry-API finden Sie im [Schema-API-Endpoint-Handbuch](../../xdm/api/schemas.md).
+Die folgende Anfrage erstellt ein neues Schema, das auf die `computedAttributesFieldGroup` wurde zuvor in diesem Dokument erstellt (mithilfe der eindeutigen ID) und ist für das Schema der Profilunion aktiviert (mithilfe der `meta:immutableTags` Array). Detaillierte Anweisungen zum Erstellen eines Schemas mithilfe der Schema Registry-API finden Sie im Abschnitt [Handbuch zu Schemas-API-Endpunkten](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \
@@ -331,7 +331,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
@@ -400,7 +400,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
     "https://ns.adobe.com/xdm/context/identitymap",
     "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
-  "imsOrg": "{IMS_ORG}",
+  "imsOrg": "{ORG_ID}",
   "meta:extensible": false,
   "meta:abstract": false,
   "meta:extends": [
@@ -434,4 +434,4 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 (Erstellt) und eine Payload m
 
 ## Nächste Schritte
 
-Nachdem Sie ein Schema und eine Feldergruppe erstellt haben, in denen Ihre berechneten Attribute gespeichert werden, können Sie das berechnete Attribut mithilfe des API-Endpunkts `/computedattributes` erstellen. Ausführliche Anweisungen zum Erstellen eines berechneten Attributs in der API finden Sie in den Schritten im [Handbuch zum API-Endpunkt für berechnete Attribute](ca-api.md).
+Nachdem Sie ein Schema und eine Feldergruppe erstellt haben, in denen Ihre berechneten Attribute gespeichert werden, können Sie das berechnete Attribut mit dem `/computedattributes` API-Endpunkt. Ausführliche Anweisungen zum Erstellen eines berechneten Attributs in der API finden Sie in den Schritten unter [Handbuch zum API-Endpunkt für berechnete Attribute](ca-api.md).

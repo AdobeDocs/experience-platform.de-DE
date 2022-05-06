@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial wird der Prozess der Veröffentlichung eines Modells als Dienst mit der Sensei Machine Learning-API behandelt.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1516'
 ht-degree: 49%
@@ -26,7 +26,7 @@ Um diesem Tutorial zu folgen, müssen Sie über eine vorhandene ML-Engine, MLIns
 Bevor Sie mit diesem Tutorial beginnen, lesen Sie abschließend die [Erste Schritte](../api/getting-started.md) im Entwicklerhandbuch wichtige Informationen erhalten, die Sie benötigen, um erfolgreich Aufrufe an die [!DNL Sensei Machine Learning] API, einschließlich der erforderlichen Kopfzeilen, die in diesem Tutorial verwendet werden:
 
 - `{ACCESS_TOKEN}`
-- `{IMS_ORG}`
+- `{ORG_ID}`
 - `{API_KEY}`
 
 Für alle POST-, PUT- und PATCH-Anfragen ist eine zusätzliche Kopfzeile erforderlich:
@@ -64,7 +64,7 @@ curl -X POST
   https://platform.adobe.io/data/sensei/mlServices
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
   -H 'Content-Type: application/json'
   -d '{
         "name": "Service name",
@@ -145,7 +145,7 @@ curl -X POST
   https://platform.adobe.io/data/sensei/mlServices
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "Service name",
@@ -217,7 +217,7 @@ POST /mlServices
 curl -X POST 'https://platform.adobe.io/data/sensei/mlServices' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "string",
@@ -304,7 +304,7 @@ GET /mlServices/{SERVICE_ID}
 curl -X GET 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
   -H 'Authorization: Bearer {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -366,7 +366,7 @@ Die folgende Anfrage plant das Training und Scoring für einen vorhandenen ML-Di
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
   -H 'Authorization: {ACCESS_TOKEN}' 
   -H 'x-api-key: {API_KEY}' 
-  -H 'x-gw-ims-org-id: {IMS_ORG}' 
+  -H 'x-gw-ims-org-id: {ORG_ID}' 
   -H 'x-sandbox-name: {SANDBOX_NAME}'
   -d '{
         "name": "string",

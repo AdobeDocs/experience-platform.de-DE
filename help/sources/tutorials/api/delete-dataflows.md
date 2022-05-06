@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Batch- und Streaming-Datenflüsse löschen können.
 exl-id: ea9040b1-3a40-493d-86f0-27deef09df07
-source-git-commit: 95f455bd03b7baefe0133a9818c9d048f36f9d38
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 100%
 
@@ -21,12 +21,12 @@ In diesem Tutorial werden die Schritte zum Löschen von Datenflüssen aus Batch-
 
 ## Erste Schritte
 
-Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Flow-ID haben, wählen Sie den gewünschten Connector aus der [Quellenübersicht](../../home.md) und befolgen Sie die beschriebenen Schritte, bevor Sie mit diesem Tutorial fortfahren.
+Für dieses Tutorial benötigen Sie eine gültige Fluss-ID. Wenn Sie keine gültige Fluss-ID haben, wählen Sie Ihren gewünschten Connector aus der [Quellen – Übersicht](../../home.md) und befolgen Sie die beschriebenen Schritte, bevor Sie dieses Tutorial beginnen.
 
 Dieses Tutorial setzt außerdem ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, um die Entwicklung und Weiterentwicklung von Programmen für digitale Erlebnisse zu unterstützen.
+* [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ### Verwenden von Platform-APIs
 
@@ -44,7 +44,7 @@ DELETE /flows/{FLOW_ID}
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{FLOW_ID}` | Der eindeutige Wert `id` für den Datenfluss, den Sie löschen möchten. |
+| `{FLOW_ID}` | Der eindeutige `id`-Wert für den Datenfluss, den Sie löschen möchten. |
 
 **Anfrage**
 
@@ -53,7 +53,7 @@ curl -X DELETE \
     'https://platform.adobe.io/data/foundation/flowservice/flows/20c115bc-46e3-40f3-bfe9-fb25abe4ba76' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

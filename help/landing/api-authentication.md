@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f5f4230c85a16aba00d0071b388e8305ccc654d5
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1272'
 ht-degree: 18%
@@ -14,13 +14,13 @@ ht-degree: 18%
 ---
 
 
-# Experience Platform-APIs authentifizieren und aufrufen
+# Authentifizieren und Zugreifen auf Experience Platform-APIs
 
 Dieses Dokument bietet eine schrittweise Anleitung für den Zugriff auf ein Adobe Experience Platform-Entwicklerkonto, damit Sie Aufrufe an Experience Platform-APIs durchführen können. Am Ende dieses Tutorials haben Sie die folgenden Anmeldeinformationen generiert, die für alle Platform-API-Aufrufe erforderlich sind:
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
-* `{IMS_ORG}`
+* `{ORG_ID}`
 
 Um die Sicherheit Ihrer Anwendungen und Benutzer zu gewährleisten, müssen alle Anfragen an Adobe I/O-APIs mit Standards wie OAuth und JSON Web Tokens (JWT) authentifiziert und autorisiert werden. Ein JWT wird zusammen mit clientspezifischen Informationen verwendet, um Ihr persönliches Zugriffstoken zu generieren.
 
@@ -61,7 +61,7 @@ Ihre [!DNL Admin Console] -Administrator muss Sie auch als Benutzer zum selben P
 >
 >Wenn Sie diesem Dokument aus dem [Handbuch zur Privacy Service-API](../privacy-service/api/getting-started.md)können Sie nun zu diesem Handbuch zurückkehren, um die eindeutigen Zugriffsberechtigungen für [!DNL Privacy Service].
 
-Nachdem Sie Entwicklern und Benutzern Zugriff auf Platform gewährt haben, über [!DNL Admin Console], wird im nächsten Schritt die `{IMS_ORG}` und `{API_KEY}` Anmeldedaten in der Adobe Developer Console. Diese Anmeldeinformationen müssen nur einmal generiert werden und können in zukünftigen Platform-API-Aufrufen wiederverwendet werden.
+Nachdem Sie Entwicklern und Benutzern Zugriff auf Platform gewährt haben, über [!DNL Admin Console], wird im nächsten Schritt die `{ORG_ID}` und `{API_KEY}` Anmeldedaten in der Adobe Developer Console. Diese Anmeldeinformationen müssen nur einmal generiert werden und können in zukünftigen Platform-API-Aufrufen wiederverwendet werden.
 
 ### Experience Platform zu einem Projekt hinzufügen
 
@@ -86,7 +86,7 @@ Folgen Sie hier den Schritten, die im Tutorial zu [Hinzufügen einer API zu eine
 Nachdem die API zum Projekt hinzugefügt wurde, wird die **[!UICONTROL Experience Platform-API]** -Seite für das Projekt werden die folgenden Anmeldeinformationen angezeigt, die für alle Aufrufe von Experience Platform-APIs erforderlich sind:
 
 * `{API_KEY}` ([!UICONTROL Client-ID])
-* `{IMS_ORG}` ([!UICONTROL Organisations-ID])
+* `{ORG_ID}` ([!UICONTROL Organisations-ID])
 
 ![](././images/api-authentication/api-key-ims-org.png)
 
@@ -118,7 +118,7 @@ Die Seite wird aktualisiert und zeigt das generierte JWT sowie einen cURL-Beispi
 
 ## Zugriffstoken generieren
 
-Nachdem Sie ein JWT generiert haben, können Sie es in einem API-Aufruf verwenden, um Ihre `{ACCESS_TOKEN}`. Im Gegensatz zu den Werten für `{API_KEY}` und `{IMS_ORG}`muss ein neues Token alle 24 Stunden generiert werden, damit Sie weiterhin Platform-APIs verwenden können.
+Nachdem Sie ein JWT generiert haben, können Sie es in einem API-Aufruf verwenden, um Ihre `{ACCESS_TOKEN}`. Im Gegensatz zu den Werten für `{API_KEY}` und `{ORG_ID}`muss ein neues Token alle 24 Stunden generiert werden, damit Sie weiterhin Platform-APIs verwenden können.
 
 **Anfrage**
 
@@ -169,7 +169,7 @@ curl -X GET https://platform.adobe.io/data/foundation/schemaregistry/global/clas
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwort**
@@ -197,7 +197,7 @@ Wenn Ihre Antwort der unten gezeigten ähnelt, sind Ihre Anmeldedaten gültig un
 
 ## Verwenden von Postman zum Authentifizieren und Testen von API-Aufrufen
 
-[Postman](https://www.postman.com/) ist ein beliebtes Tool, mit dem Entwickler RESTful-APIs untersuchen und testen können. Diese [Mittlerer Beitrag](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) beschreibt, wie Sie Postman so einrichten können, dass es automatisch eine JWT-Authentifizierung durchführt und Platform-APIs verwendet.
+[Postman](https://www.postman.com/) ist ein beliebtes Tool, mit dem Entwickler RESTful-APIs untersuchen und testen können. Diese [Mittlerer Beitrag](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) beschreibt, wie Sie Postman so einrichten können, dass automatisch eine JWT-Authentifizierung durchgeführt und Platform-APIs verwendet werden.
 
 ## Nächste Schritte
 

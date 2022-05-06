@@ -5,7 +5,7 @@ title: Referenz-API-Endpunkt
 topic-legacy: developer guide
 description: Mit der Zugriffssteuerung in Adobe Experience Platform können Sie Rollen und Berechtigungen für verschiedene Funktionen der Plattform mithilfe von Adobe Admin Console verwalten. Sie können die Namen aller Berechtigungen und Ressourcentypen auflisten, indem Sie eine GET-Anfrage an den Endpunkt /acl/reference in der Zugriffssteuerungs-API stellen. Diese Namen können dann in API-Aufrufen verwendet werden, um effektive Richtlinien für den aktuellen Anwender anzuzeigen.
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 100%
@@ -31,7 +31,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/access-control/acl/reference \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}'
+  -H 'x-gw-ims-org-id: {ORG_ID}'
 ```
 
 **Antwort**

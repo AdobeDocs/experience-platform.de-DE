@@ -5,7 +5,7 @@ title: Fehlerdiagnose beim Abrufen der Datenerfassung
 topic-legacy: overview
 description: Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: 104e6eb258136caa2192b61c793697baf95b55eb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '979'
 ht-degree: 40%
@@ -14,7 +14,7 @@ ht-degree: 40%
 
 # Fehlerdiagnose bei der Datenerfassung abrufen
 
-Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, um Daten mit verschiedenen Dateitypen (z. B. CSV-Dateien) einzufügen, oder die Streaming-Erfassung, mit der Sie ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in [!DNL Platform] einfügen können.
+Adobe Experience Platform bietet für den Upload und die Aufnahme von Daten zwei Methoden. Sie können entweder die Batch-Erfassung verwenden, mit der Sie Daten aus verschiedenen Dateitypen (z. B. CSV-Dateien) einfügen können, oder die Streaming-Erfassung, mit der Sie ihre Daten in [!DNL Platform] Verwendung von Streaming-Endpunkten in Echtzeit.
 
 Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur Verwaltung von Fehlern bei der partiellen Batch-Erfassung sowie eine Referenz zu Typen der partiellen Batch-Erfassung.
 
@@ -22,7 +22,7 @@ Dieses Dokument enthält Informationen zur Überwachung der Batch-Erfassung, zur
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
 - [[!DNL Adobe Experience Platform Data Ingestion]](../home.md): Die Methoden, mit denen Daten an [!DNL Experience Platform] gesendet werden können.
 
 ### Lesen von Beispiel-API-Aufrufen
@@ -31,13 +31,13 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
-Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Schema Registry] gehören, werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
+Alle Ressourcen in [!DNL Experience Platform], einschließlich derjenigen, die [!DNL Schema Registry], werden auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -47,7 +47,7 @@ Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, d
 
 ## Herunterladen der Fehlerdiagnose {#download-diagnostics}
 
-Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird innerhalb von [!DNL Platform] bis zu 30 Tage aufbewahrt.
+Mit Adobe Experience Platform können Benutzer die Fehlerdiagnose der Eingabedateien herunterladen. Die Diagnose wird in [!DNL Platform] für bis zu 30 Tage.
 
 ### Eingabedateien auflisten {#list-files}
 
@@ -69,7 +69,7 @@ GET /batches/{BATCH_ID}/meta?path=input_files
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -127,13 +127,13 @@ GET /batches/{BATCH_ID}/meta?path=input_files/{FILE}
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-2233-11ea-acf0-f3edfcded2d2/meta?path=input_files/fileMetaData1.json \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` -Objekte enthalten, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path`-Objekte im Format [JSON-Zeilen](https://jsonlines.org/) zurück.
+Eine erfolgreiche Antwort gibt JSON-Objekte zurück, die `path` Objekte, die detailliert angeben, wo die Diagnose gespeichert wurde. Die Antwort gibt die `path` Objekte in [JSON-Zeilen](https://jsonlines.org/) Format.
 
 ```json
 {"path": "F1.json"}
@@ -146,7 +146,7 @@ Wenn Batches Fehler enthalten, sollten Sie Fehlerinformationen zu diesen Fehlern
 
 ### Status prüfen {#check-status}
 
-Um den Status des erfassten Batch zu überprüfen, müssen Sie im Pfad einer GET-Anfrage die Kennung des Batch angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im [Katalog-Endpunkt-Handbuch](../../catalog/api/list-objects.md).
+Um den Status des erfassten Batch zu überprüfen, müssen Sie im Pfad einer GET-Anfrage die Kennung des Batch angeben. Weitere Informationen zur Verwendung dieses API-Aufrufs finden Sie im Abschnitt [Katalog-Endpunkthandbuch](../../catalog/api/list-objects.md).
 
 **API-Format**
 
@@ -158,7 +158,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | Parameter | Beschreibung |
 | --------- | ----------- |
 | `{BATCH_ID}` | Der `id`-Wert des Batch, dessen Status Sie überprüfen möchten. |
-| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch zum Filtern von Katalogdaten [a1/>.](../../catalog/api/filter-data.md) |
+| `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weitere Informationen finden Sie im Handbuch unter [Filtern von Katalogdaten](../../catalog/api/filter-data.md). |
 
 **Anfrage**
 
@@ -166,7 +166,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 curl -X GET https://platform.adobe.io/data/foundation/catalog/batches/af838510-2233-11ea-acf0-f3edfcded2d2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -193,7 +193,7 @@ Eine erfolgreiche Antwort gibt detaillierte Informationen zum Status des Batches
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "started": 1576741718543,
         "metrics": {
             "inputByteSize": 568,
@@ -215,7 +215,7 @@ Eine erfolgreiche Antwort gibt detaillierte Informationen zum Status des Batches
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem `inputRecordCount` von `outputRecordCount` subtrahiert wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion der Variablen `inputRecordCount` von `outputRecordCount`. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
 
 **Fehlerbehebung**
 
@@ -240,7 +240,7 @@ Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktivie
         "inputFormat": {
             "format": "parquet"
         },
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "started": 1576741718543,
         "metrics": {
             "inputByteSize": 568,
@@ -278,8 +278,8 @@ Wenn der Batch einen oder mehrere Fehler aufweist und die Fehlerdiagnose aktivie
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann abgeleitet werden, indem `inputRecordCount` von `outputRecordCount` subtrahiert wird. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
-| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **nur** generiert, wenn `errorDiagnostics` aktiviert ist. |
+| `metrics.failedRecordCount` | Die Anzahl der Zeilen, die aufgrund der Analyse, Konvertierung oder Validierung nicht verarbeitet werden konnten. Dieser Wert kann durch Subtraktion der Variablen `inputRecordCount` von `outputRecordCount`. Dieser Wert wird für alle Batches generiert, unabhängig davon, ob `errorDiagnostics` aktiviert ist. |
+| `errors.recordCount` | Die Anzahl der Zeilen, die für den angegebenen Fehlercode fehlgeschlagen sind. Dieser Wert ist **only** generiert `errorDiagnostics` aktiviert ist. |
 
 >[!NOTE]
 >
@@ -338,7 +338,7 @@ GET /export/batches/{BATCH_ID}/meta?path=row_errors
 curl -X GET https://platform.adobe.io/data/foundation/export/batches/01EFZ7W203PEKSAMVJC3X99VHQ/meta?path=row_errors \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -375,7 +375,7 @@ Eine erfolgreiche Antwort gibt eine Liste der Dateien mit Fehlern zurück.
 }
 ```
 
-Anschließend können Sie mit dem [Diagnostics-Abrufendpunkt](#retrieve-diagnostics) detaillierte Informationen zu den Fehlern abrufen.
+Sie können dann detaillierte Informationen zu Fehlern mit dem [Diagnostischer Abrufendpunkt](#retrieve-diagnostics).
 
 Nachfolgend finden Sie eine Beispielantwort zum Abrufen der Fehlerdatei:
 

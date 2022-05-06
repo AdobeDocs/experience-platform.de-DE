@@ -5,7 +5,7 @@ title: Katalogobjekte auflisten
 topic-legacy: developer guide
 description: Sie können über einen einzigen API-Aufruf eine Liste aller verfügbaren Objekte eines bestimmten Typs abrufen. Es empfiehlt sich, Filter einzubeziehen, um die Größe der Antwort beschränken.
 exl-id: 2c65e2bc-4ddd-445a-a52d-6ceb1153ccea
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 53%
@@ -25,7 +25,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des aufzulistenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das aufgeführt werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{FILTER}` | Ein Abfrageparameter, mit dem die in der Antwort zurückgegebenen Ergebnisse gefiltert werden. Mehrere Parameter werden durch das kaufmännische Und-Zeichen (`&`) getrennt. Weiterführende Informationen finden Sie im Handbuch zum [Filtern von Katalogdaten](filter-data.md). |
 
 **Anfrage**
@@ -37,17 +37,17 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=5&properties=name,description,files' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten in Form von Schlüssel-Wert-Paaren zurück, gefiltert nach den in der Anfrage angegebenen Abfrageparametern. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für das betreffende [!DNL Catalog]-Objekt dar, die dann in einem anderen Aufruf an [Anzeigen dieses bestimmten Objekts](look-up-object.md) für weitere Details verwendet werden kann.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekte in Form von Schlüssel-Wert-Paaren, gefiltert durch die in der Anfrage angegebenen Abfrageparameter. Für jedes Schlüssel-Wert-Paar stellt der Schlüssel eine eindeutige Kennung für die [!DNL Catalog] -Objekt, das dann in einem anderen Aufruf an verwendet werden kann [Anzeigen eines bestimmten Objekts](look-up-object.md) für weitere Details.
 
 >[!NOTE]
 >
->Wenn ein zurückgegebenes Objekt eine oder mehrere der angeforderten Eigenschaften nicht enthält, die durch die `properties`-Abfrage angegeben werden, gibt die Antwort nur die angeforderten Eigenschaften zurück, die es enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten dargestellt.
+>Wenn ein zurückgegebenes Objekt keine der angeforderten Eigenschaften enthält, die durch die Variable `properties` -Abfrage, gibt die Antwort nur die angeforderten Eigenschaften zurück, die sie enthält, wie in ***`Sample Dataset 3`*** und ***`Sample Dataset 4`*** unten.
 
 ```json
 {

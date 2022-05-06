@@ -5,7 +5,7 @@ title: Katalogobjekt ersetzen
 topic-legacy: developer guide
 description: Sie können den Inhalt eines Catalog-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 exl-id: cd98d13c-5261-4bff-b5db-af5f06d093c9
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 10%
@@ -14,11 +14,11 @@ ht-degree: 10%
 
 # Catalog-Objekt ersetzen
 
-Sie können den Inhalt eines [!DNL Catalog]-Objekts mithilfe einer PUT-Anfrage überschreiben, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
+Sie können den Inhalt eines [!DNL Catalog] -Objekt, das eine PUT-Anfrage verwendet, wobei die gesamte Ressource durch die Anfrage-Payload ersetzt wird.
 
 >[!NOTE]
 >
->Wenn Sie nur einige bestimmte Felder in einem [!DNL Catalog] -Objekt aktualisieren müssen, kann die Verwendung einer PATCH-Anfrage effizienter sein.
+>Wenn Sie nur einige bestimmte Felder in einer [!DNL Catalog] -Objekt, kann die Verwendung einer PATCH-Anfrage effizienter sein.
 
 **API-Format**
 
@@ -28,7 +28,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des zu ersetzenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt zu ersetzen. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{OBJECT_ID}` | Die Kennung des spezifischen Objekts, das Sie aktualisieren möchten. |
 
 **Anfrage**
@@ -41,7 +41,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "name": "New Dataset Name",

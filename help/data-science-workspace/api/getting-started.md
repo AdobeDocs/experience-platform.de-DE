@@ -5,7 +5,7 @@ title: Handbuch zur Sensei Machine Learning API
 topic-legacy: Developer guide
 description: Mit der Sensei Machine Learning API können Entwickler CRUD-Vorgänge für verschiedene Data Science Workspace-Ressourcen durchführen. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 40%
@@ -14,17 +14,17 @@ ht-degree: 40%
 
 # [!DNL Sensei Machine Learning]-API-Handbuch
 
-Die [!DNL Sensei Machine Learning]-API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von maschinellen Lerndiensten, von der Onboarding von Algorithmen über Experimente bis hin zur Bereitstellung von Diensten.
+Die [!DNL Sensei Machine Learning] Die API bietet Datenwissenschaftlern einen Mechanismus zum Organisieren und Verwalten von maschinellen Lerndiensten, von der Onboarding von Algorithmen über Experimente bis hin zur Bereitstellung von Diensten.
 
-Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) unterstützen, und zeigt API-Aufrufe für die Ausführung von CRUD-Vorgängen für verschiedene Data Science Workspace-Ressourcen.
+Dieses Entwicklerhandbuch enthält Schritte, die Sie bei der Verwendung der [Sensei Machine Learning-API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)und zeigt API-Aufrufe zur Durchführung von CRUD-Vorgängen für verschiedene Data Science Workspace-Ressourcen.
 
 ## Erste Schritte
 
-Sie müssen das Tutorial [authentication](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abgeschlossen haben, um Zugriff auf die folgenden Anforderungsheader zu erhalten, um Aufrufe an [!DNL Adobe Experience Platform]-APIs durchführen zu können:
+Sie müssen die [Authentifizierung](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) Tutorial, um Zugriff auf die folgenden Anforderungsheader zu erhalten, um Aufrufe an [!DNL Adobe Experience Platform] APIs:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 

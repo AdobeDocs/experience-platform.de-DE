@@ -5,7 +5,7 @@ title: Verfügbare Identitäts-Namespaces auflisten
 topic-legacy: API guide
 description: Liste aller verfügbaren Namespaces.
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 44%
@@ -27,13 +27,13 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/idnamespace/identities' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot;von &quot;[!UICONTROL false]&quot;sind Standard-Namespaces, während Namespaces mit dem Wert &quot;[!UICONTROL custom]&quot;mit dem Wert &quot;[!UICONTROL true]&quot;Namespaces sind, die von Ihrem Unternehmen erstellt wurden.
+Die Antwort enthält ein Array von Objekten, wobei jedes Objekt einen verfügbaren Namensraum darstellt. Namespaces mit einem &quot;&quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL false]&quot; sind Standard-Namespaces, während diejenigen mit einem &quot;[!UICONTROL custom]&quot; value of &quot;[!UICONTROL true]&quot; sind Namespaces, die Ihre Organisation erstellt hat.
 
 >[!NOTE]
 >

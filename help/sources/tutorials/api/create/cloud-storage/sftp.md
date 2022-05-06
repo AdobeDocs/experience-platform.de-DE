@@ -1,64 +1,64 @@
 ---
-keywords: Experience Platform;home;beliebte Themen;SFTP;sftp;Secure File Transfer Protocol;Secure File Transfer Protocol
+keywords: Experience Platform; Startseite; beliebte Themen; SFTP; SFTP; Secure File Transfer Protocol; Secure File Transfer Protocol
 solution: Experience Platform
-title: Erstellen Sie eine SFTP-Basisverbindung mithilfe der Flow Service API
+title: Erstellen einer SFTP-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem SFTP-Server (Secure File Transfer Protocol) verbinden.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 13bd1254dfe89004465174a7532b4f6aaef54c09
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '800'
-ht-degree: 7%
+ht-degree: 32%
 
 ---
 
-# Erstellen Sie eine SFTP-Basisverbindung mit [!DNL Flow Service] API
+# Erstellen Sie eine SFTP-Basisverbindung mit der [!DNL Flow Service] API
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
-Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL SFTP] (Secure File Transfer Protocol) mit [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer Basisverbindung für [!DNL SFTP] (Secure File Transfer Protocol) unter Verwendung des [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-* [Quellen](../../../../home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Plattformdiensten zu strukturieren, zu kennzeichnen und zu verbessern.
-* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 >[!IMPORTANT]
 >
->Es wird empfohlen, beim Erfassen von JSON-Objekten mit einer [!DNL SFTP] Quellverbindung. Um die Beschränkung zu umgehen, verwenden Sie ein einzelnes JSON-Objekt pro Zeile und verwenden mehrere Zeilen, um Dateien zu hinterlassen.
+>Es wird empfohlen, beim Erfassen von JSON-Objekten mit einer [!DNL SFTP] Quellverbindung. Um die Beschränkung zu umgehen, verwenden Sie ein einzelnes JSON-Objekt pro Zeile und verwenden mehrere Zeilen für die darauf folgenden Dateien.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um erfolgreich eine Verbindung zu einer [!DNL SFTP] Server, der [!DNL Flow Service] API.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um eine erfolgreiche Verbindung zu einer [!DNL SFTP] Server, der [!DNL Flow Service] API.
 
-### Erforderliche Anmeldedaten sammeln
+### Sammeln erforderlicher Anmeldeinformationen
 
-In der Reihenfolge [!DNL Flow Service] Verbindung herstellen zu [!DNL SFTP], müssen Sie Werte für die folgenden Verbindungseigenschaften bereitstellen:
+Um [!DNL Flow Service] mit [!DNL SFTP] zu verbinden, müssen Sie Werte für die folgenden Verbindungseigenschaften angeben:
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `host` | Der Name oder die IP-Adresse, die Ihrer/Ihrem [!DNL SFTP] Server. |
-| `port` | Der SFTP-Serveranschluss, mit dem Sie eine Verbindung herstellen. Wenn nicht angegeben, wird der Wert standardmäßig auf `22`. |
+| `host` | Der Name oder die IP-Adresse, die mit Ihrer [!DNL SFTP] Server. |
+| `port` | Der SFTP-Server-Port, mit dem Sie eine Verbindung herstellen. Wenn der Wert nicht angegeben wird, wird standardmäßig `22`. |
 | `username` | Der Benutzername mit Zugriff auf Ihre [!DNL SFTP] Server. |
 | `password` | Das Kennwort für Ihre [!DNL SFTP] Server. |
-| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss als RSA oder DSA klassifiziert werden. |
-| `passPhrase` | Der Ausdruck oder das Kennwort &quot;Kennwort übergeben&quot;, um den privaten Schlüssel zu entschlüsseln, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Passphrase geschützt ist. Wenn `privateKeyContent` kennwortgeschützt ist, muss dieser Parameter mit der Passphrase des privaten Schlüssels als Wert verwendet werden. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Verbindungseigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für das Erstellen der Basis- und Quellverbindungen. Verbindungsspezifikations-ID für [!DNL SFTP] ist: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
+| `privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
+| `passPhrase` | Der Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass-Satz geschützt ist. Wenn die Variable `privateKeyContent` kennwortgeschützt ist, muss dieser Parameter mit der Passphrase des privaten Schlüsselinhalts als Wert verwendet werden. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Die Verbindungsspezifikations-ID für [!DNL SFTP] ist: `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
-### Verwenden von Plattform-APIs
+### Verwenden von Platform-APIs
 
-Informationen dazu, wie Sie erfolgreich Aufrufe von Plattform-APIs durchführen, finden Sie im Handbuch zu [Erste Schritte mit Plattform-APIs](../../../../../landing/api-guide.md).
+Informationen zum Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../../../landing/api-guide.md).
 
-## Basisverbindung erstellen
+## Erstellen einer Basisverbindung
 
-Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Plattform gespeichert, einschließlich der Authentifizierungsinformationen Ihrer Quelle, des aktuellen Zustands der Verbindung und Ihrer eindeutigen Basis-Verbindungs-ID. Die Basis-Verbindungs-ID ermöglicht es Ihnen, Dateien von der Quelle aus zu erkunden und zu navigieren und die spezifischen Elemente zu identifizieren, die Sie aufnehmen möchten, einschließlich Informationen zu den Datentypen und Formaten.
+Bei einer Basisverbindung werden Informationen zwischen Ihrer Quelle und Platform gespeichert, einschließlich der Authentifizierungsdaten Ihrer Quelle, des aktuellen Verbindungsstatus und Ihrer eindeutigen Kennung der Basisverbindung. Mit der Kennung der Basisverbindung können Sie Dateien aus Ihrer Quelle heraus analysieren und darin navigieren und die spezifischen Elemente identifizieren, die Sie erfassen möchten, einschließlich Informationen zu ihren Datentypen und Formaten.
 
-Um eine Basis-Verbindungs-ID zu erstellen, stellen Sie eine POST an `/connections` Endpunkt beim Bereitstellen von [!DNL SFTP] Authentifizierungsdaten als Teil der Anforderungsparameter.
+Um eine Basisverbindungs-ID zu erstellen, stellen Sie eine POST-Anfrage an den Endpunkt `/connections` und geben Sie dabei Ihre [!DNL SFTP]-Authentifizierungsdaten als Teil der Anfrageparameter an.
 
 ### Erstellen Sie eine [!DNL SFTP] Basisverbindung mit einfacher Authentifizierung
 
-So erstellen Sie [!DNL SFTP] Basisverbindung mit einfacher Authentifizierung, stellen Sie eine POST an [!DNL Flow Service] API bei Angabe von Werten für die `host`, `userName`und `password`.
+So erstellen Sie eine [!DNL SFTP] Basisverbindung mit einfacher Authentifizierung, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] API beim Bereitstellen von Werten für die `host`, `userName`und `password`.
 
 **API-Format**
 
@@ -68,14 +68,14 @@ POST /connections
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine Basisverbindung für [!DNL SFTP] einfache Authentifizierung verwenden:
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL SFTP] einfache Authentifizierung verwenden:
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
@@ -98,14 +98,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.host` | Der Hostname des SFTP-Servers. |
-| `auth.params.username` | Der Ihrem SFTP-Server zugeordnete Benutzername. |
-| `auth.params.password` | Das mit Ihrem SFTP-Server verknüpfte Kennwort. |
-| `connectionSpec.id` | Spezifikations-ID für die SFTP-Serververbindung: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `auth.params.host` | Der Hostname Ihres SFTP-Servers. |
+| `auth.params.username` | Der Benutzername, der Ihrem SFTP-Server zugeordnet ist. |
+| `auth.params.password` | Das Ihrem SFTP-Server zugeordnete Kennwort. |
+| `connectionSpec.id` | Die Spezifikations-ID der SFTP-Server-Verbindung: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung zurück (`id`) der neu erstellten Verbindung. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Tutorial zu erkunden.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Verbindung. Diese ID ist erforderlich, um Ihren SFTP-Server im nächsten Tutorial zu untersuchen.
 
 ```json
 {
@@ -114,13 +114,13 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung zurück (`id`) der neu ers
 }
 ```
 
-### Erstellen Sie eine [!DNL SFTP] Basisverbindung mit Authentifizierung mit öffentlichem SSH-Schlüssel
+### Erstellen Sie eine [!DNL SFTP] Basisverbindung mit SSH-Authentifizierung für öffentlichen Schlüssel
 
-So erstellen Sie [!DNL SFTP] Basisverbindung mit Authentifizierung mit öffentlichem SSH-Schlüssel erstellen Sie eine POST an [!DNL Flow Service] API bei Angabe von Werten für die `host`, `userName`, `privateKeyContent`und `passPhrase`.
+So erstellen Sie eine [!DNL SFTP] Basisverbindung mit Authentifizierung mit dem öffentlichen SSH-Schlüssel, stellen Sie eine POST-Anfrage an die [!DNL Flow Service] API beim Bereitstellen von Werten für die `host`, `userName`, `privateKeyContent`und `passPhrase`.
 
 >[!IMPORTANT]
 >
->Die [!DNL SFTP] Connector unterstützt einen RSA- oder DSA-Schlüssel vom Typ OpenSSH. Stellen Sie sicher, dass Ihre Schlüsseldateiinhalte Beginn mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und endet mit `"-----END [RSA/DSA] PRIVATE KEY-----"`. Wenn es sich bei der Datei mit privatem Schlüssel um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
+>Die [!DNL SFTP] Connector unterstützt einen OpenSSH-Schlüssel vom Typ RSA oder DSA. Stellen Sie sicher, dass der Inhalt Ihrer Schlüsseldatei mit `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` und endet mit `"-----END [RSA/DSA] PRIVATE KEY-----"`. Wenn es sich bei der privaten Schlüsseldatei um eine PPK-Datei handelt, verwenden Sie das PuTTY-Tool, um von PPK in das OpenSSH-Format zu konvertieren.
 
 **API-Format**
 
@@ -130,14 +130,14 @@ POST /connections
 
 **Anfrage**
 
-Die folgende Anforderung erstellt eine Basisverbindung für [!DNL SFTP] Authentifizierung mit öffentlichem SSH-Schlüssel verwenden:
+Die folgende Anfrage erstellt eine Basisverbindung für [!DNL SFTP] Verwenden der Authentifizierung mit dem öffentlichen SSH-Schlüssel:
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -161,15 +161,15 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `auth.params.host` | Der Hostname von [!DNL SFTP] Server. |
-| `auth.params.username` | Der Ihrem/r [!DNL SFTP] Server. |
-| `auth.params.privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss als RSA oder DSA klassifiziert werden. |
-| `auth.params.passPhrase` | Der Ausdruck oder das Kennwort &quot;Kennwort übergeben&quot;, um den privaten Schlüssel zu entschlüsseln, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Passphrase geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
+| `auth.params.host` | Der Hostname Ihres [!DNL SFTP] Server. |
+| `auth.params.username` | Der Benutzername, der mit Ihrer [!DNL SFTP] Server. |
+| `auth.params.privateKeyContent` | Der Base64-kodierte Inhalt mit privatem SSH-Schlüssel. Der Typ des OpenSSH-Schlüssels muss entweder als RSA oder als DSA klassifiziert werden. |
+| `auth.params.passPhrase` | Der Ausdruck oder das Kennwort zum Entschlüsseln des privaten Schlüssels, wenn die Schlüsseldatei oder der Schlüsselinhalt durch einen Pass-Satz geschützt ist. Wenn PrivateKeyContent kennwortgeschützt ist, muss dieser Parameter mit der Passphrase von PrivateKeyContent als Wert verwendet werden. |
 | `connectionSpec.id` | Die [!DNL SFTP] Spezifikations-ID der Serververbindung: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung zurück (`id`) der neu erstellten Verbindung. Diese ID ist erforderlich, um Ihre [!DNL SFTP] Server im nächsten Tutorial.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Verbindung. Diese ID ist erforderlich, um Ihre [!DNL SFTP] -Server im nächsten Tutorial.
 
 ```json
 {
@@ -180,4 +180,4 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung zurück (`id`) der neu ers
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie eine [!DNL SFTP] Verbindung mit [!DNL Flow Service] API und den eindeutigen ID-Wert der Verbindung erhalten haben. Sie können diese Verbindungs-ID verwenden, um [Cloud-Datenspeicherung mithilfe der Flow Service API erkunden](../../explore/cloud-storage.md).
+In diesem Tutorial haben Sie eine [!DNL SFTP] Verbindung mithilfe der [!DNL Flow Service] API verwenden und den eindeutigen ID-Wert der Verbindung erhalten haben. Sie können diese Verbindungs-ID verwenden, um [Erkunden von Cloud-Speichern mithilfe der Flow Service-API](../../explore/cloud-storage.md).

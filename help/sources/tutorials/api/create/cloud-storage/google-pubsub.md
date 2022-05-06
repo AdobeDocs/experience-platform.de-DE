@@ -6,8 +6,8 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit einem Google PubSub-Konto verbinden.
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: da7b6fe8f9d274b8e5f27138a1baf8caf63a0c01
-workflow-type: ht
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+workflow-type: tm+mt
 source-wordcount: '724'
 ht-degree: 100%
 
@@ -32,7 +32,7 @@ Um [!DNL Flow Service] mit [!DNL PubSub] zu verbinden, müssen Sie Werte für di
 
 | Anmeldedaten | Beschreibung |
 | ---------- | ----------- |
-| `projectId` | Die zum Authentifizieren von [!DNL PubSub] erforderliche Projekt-ID. |
+| `projectId` | Die zur Authentifizierung von [!DNL PubSub] erforderliche Projekt-ID. |
 | `credentials` | Die zum Authentifizieren von [!DNL PubSub] erforderlichen Anmeldedaten bzw. der erforderliche Schlüssel. |
 | `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Datenbank- und Quelle-Ziel-Verbindungen. Die Spezifikations-ID der [!DNL PubSub]-Verbindung lautet: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
@@ -65,7 +65,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -122,7 +122,7 @@ curl -X POST \
     -H 'authorization: Bearer {ACCESS_TOKEN}' \
     -H 'content-type: application/json' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_Org}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -d '{
         "name": "Google PubSub source connection",

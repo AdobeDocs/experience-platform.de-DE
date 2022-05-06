@@ -5,18 +5,18 @@ title: Filtern von Katalogdaten mithilfe von Abfrageparametern
 topic-legacy: developer guide
 description: Die Catalog Service-API ermöglicht ein Filtern von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Zu den Best Practices bei Catalog gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Last der API reduzieren und die Gesamtleistung verbessern.
 exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '2121'
 ht-degree: 88%
 
 ---
 
-# Daten mithilfe von Abfrageparametern filtern[!DNL Catalog]
+# Filter [!DNL Catalog] Daten mithilfe von Abfrageparametern
 
-Mit der API [!DNL Catalog Service] können Antwortdaten mithilfe von Abfrageparametern für Anfragen gefiltert werden. Zu den Best Practices für [!DNL Catalog] gehört die Verwendung von Filtern in allen API-Aufrufen, da sie die Auslastung der API reduzieren und die Gesamtleistung verbessern.
+Die [!DNL Catalog Service] API ermöglicht die Filterung von Antwortdaten mithilfe von Abfrageparametern für Anfragen. Teil der Best Practices für [!DNL Catalog] verwendet Filter in allen API-Aufrufen, da sie die Auslastung der API reduzieren und die Gesamtleistung verbessern.
 
-In diesem Dokument werden die gängigsten Methoden zum Filtern von [!DNL Catalog]-Objekten in der API beschrieben. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] Weitere allgemeine Informationen zu [!DNL Catalog Service] finden Sie unter [[!DNL Catalog] overview](../home.md).
+In diesem Dokument werden die gängigsten Filtermethoden beschrieben [!DNL Catalog] -Objekte in der API. Wir empfehlen Ihnen, dieses Dokument beim Lesen des [Entwicklerhandbuchs zu ](getting-started.md) als Referenz zu nutzen, um mehr über die Interaktion mit der Catalog-API zu erfahren.[!DNL Catalog] Allgemeine Informationen: [!DNL Catalog Service], siehe [[!DNL Catalog] Übersicht](../home.md).
 
 ## Zurückgegebene Objekte begrenzen
 
@@ -36,7 +36,7 @@ GET /{OBJECT_TYPE}?limit={LIMIT}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{LIMIT}` | Eine Ganzzahl, die die Zahl der zurückzugebenden Objekte angibt (im Bereich von 1 bis 100). |
 
 **Anfrage**
@@ -48,7 +48,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?limit=3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -104,9 +104,9 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY}` | Der Name eines Attributs, das im Antworttext enthalten sein soll. |
-| `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten [!DNL Catalog]-Objekts, das abgerufen wird. |
+| `{OBJECT_ID}` | Die eindeutige Kennung eines bestimmten [!DNL Catalog] -Objekt abgerufen werden. |
 
 **Anfrage**
 
@@ -117,13 +117,13 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?limit=4&properties=name,schemaRef' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekten zurück, wobei nur die angeforderten Eigenschaften angezeigt werden.
+Eine erfolgreiche Antwort gibt eine Liste von [!DNL Catalog] -Objekte, bei denen nur die angeforderten Eigenschaften angezeigt werden.
 
 ```json
 {
@@ -157,7 +157,7 @@ Auf Grundlage der obigen Antwort kann Folgendes abgeleitet werden:
 
 >[!NOTE]
 >
->In der Eigenschaft `schemaRef` für jeden Datensatz gibt die Versionsnummer die neueste Version des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch.
+>Im `schemaRef` -Eigenschaft für jeden Datensatz angeben, zeigt die Versionsnummer die neueste Nebenversion des Schemas an. Weitere Informationen finden Sie im Abschnitt zur [Schemaversionierung](../../xdm/api/getting-started.md#versioning) im XDM-API-Handbuch.
 
 ## Startindex von Antwortliste versetzen
 
@@ -185,7 +185,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?start=4&limit=2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -209,7 +209,7 @@ Bei Verwendung von Tags sind einige Einschränkungen zu beachten:
 * Die einzigen Catalog-Objekte, die derzeit Tags unterstützen, sind Datensätze, Batches und Verbindungen.
 * Tag-Namen sind für Ihre IMS-Organisation eindeutig.
 * Adobe-Prozesse können Tags für bestimmte Verhaltensweisen nutzen. Den Namen dieser Tags wird standardmäßig „adobe“ vorangestellt. Daher sollten Sie diese Konvention beim Deklarieren von Tag-Namen vermeiden.
-* Die folgenden Tag-Namen sind für die Verwendung in [!DNL Experience Platform] reserviert und können daher nicht als Tag-Name für Ihre Organisation deklariert werden:
+* Die folgenden Tag-Namen sind für die Verwendung in allen [!DNL Experience Platform]und kann daher nicht als Tag-Name für Ihre Organisation deklariert werden:
    * `unifiedProfile`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Real-time Customer Profile]](../../profile/home.md) erfasst werden sollen.
    * `unifiedIdentity`: Dieser Tag-Name ist für Datensätze reserviert, die von [[!DNL Identity Service]](../../identity-service/home.md) erfasst werden sollen.
 
@@ -218,7 +218,7 @@ Nachfolgend finden Sie ein Beispiel für einen Datensatz, der eine `tags`-Eigens
 ```json
 {
     "5be1f2ecc73c1714ceba66e2": {
-        "imsOrg": "{IMS_ORG}",
+        "imsOrg": "{ORG_ID}",
         "tags": {
             "sampleTag": [
                 "123456"
@@ -265,7 +265,7 @@ GET /{OBJECT_TYPE}?tags={TAG_NAME}:*
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`dataSets`</li></ul> |
 | `{TAG_NAME}` | Der Name des Tags, nach dem gefiltert werden soll. |
 | `{TAG_VALUE}` | Der Wert des Tags, nach dem gefiltert werden soll. Unterstützt Platzhalterzeichen (`*`). |
 
@@ -278,7 +278,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?tags=sampleTag:123456,secondTag:* \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -290,7 +290,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -310,7 +310,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1533539550237,
             "updated": 1533539552416,
@@ -336,7 +336,7 @@ Eine erfolgreiche Antwort gibt eine Liste mit Datensätzen zurück, die `sampleT
 
 ## Nach Datumsbereich filtern
 
-Einige Endpunkte in der API [!DNL Catalog] verfügen über Abfrageparameter, die Abfragen in einem bestimmten Bereich ermöglichen, meist bei Datumsangaben.
+Einige Endpunkte im [!DNL Catalog] API verfügt über Abfrageparameter, die Abfragen in verschiedenen Bereichen ermöglichen, meist bei Datumsangaben.
 
 **API-Format**
 
@@ -357,19 +357,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/batches?createdAfter=1554076800000&createdBefore=1556668799000' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die innerhalb des angegebenen Datumsbereichs liegen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die in den angegebenen Datumsbereich fallen. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 1",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -381,7 +381,7 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die 
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.0",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "Example Dataset 2",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -425,19 +425,19 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?orderBy=name,desc:updated' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 **Antwort**
 
-Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die nach dem Parameter `orderBy` sortiert sind. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
+Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] Objekte, die nach `orderBy` Parameter. Sofern keine Begrenzung angegeben wurde, enthält die Antwort maximal 20 Objekte.
 
 ```json
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "0405",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -449,7 +449,7 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die 
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -461,7 +461,7 @@ Eine erfolgreiche Antwort enthält eine Liste von [!DNL Catalog] -Objekten, die 
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "AAM Dataset",
             "created": 1554028394852,
             "updated": 1554130582960,
@@ -500,7 +500,7 @@ GET /{OBJECT_TYPE}?{PROPERTY_NAME}=!{VALUE_1},{VALUE_2},{VALUE_3}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{PROPERTY_NAME}` | Der Name der Eigenschaft, nach deren Wert Sie filtern möchten. |
 | `{VALUE}` | Ein Eigenschaftswert, der bestimmt, welche Ergebnisse ein- oder ausgeschlossen werden (je nach Abfrage). |
 
@@ -513,7 +513,7 @@ curl -X GET \
   'https://platform.adobe.io/data/foundation/catalog/dataSets?name=exampleName,anotherName' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -525,7 +525,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.0.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleName",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -537,7 +537,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, wobei alle Daten
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.3",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherName",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -576,7 +576,7 @@ GET /{OBJECT_TYPE}?property={CONDITION}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{OBJECT_TYPE}` | Der Typ des abzurufenden [!DNL Catalog]-Objekts. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
+| `{OBJECT_TYPE}` | Der Typ von [!DNL Catalog] -Objekt, das abgerufen werden soll. Gültige Objekte sind: <ul><li>`accounts`</li><li>`batches`</li><li>`connections`</li><li>`connectors`</li><li>`dataSets`</li><li>`dataSetFiles`</li><li>`dataSetViews`</li></ul> |
 | `{CONDITION}` | Ein bedingter Ausdruck, der angibt, welche Eigenschaft abgefragt und wie ihr Wert ausgewertet werden soll. Nachfolgend finden Sie verschiedene Beispiele. |
 
 Der Wert des `property`-Parameters unterstützt unterschiedliche Typen von bedingten Ausdrücken. Folgende Tabelle enthält die grundlegende Syntax für unterstützte Ausdrücke:
@@ -606,7 +606,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/catalog/dataSets?property=version>1.0.3 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -618,7 +618,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
 {
     "5b67f4dd9f6e710000ea9da4": {
             "version": "1.1.2",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "sampleDataset",
             "created": 1554930967705,
             "updated": 1554931119718,
@@ -630,7 +630,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
     },
     "5b1e3c867e6d2600003d5b49": {
             "version": "1.0.6",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "exampleDataset",
             "created": 1554974386247,
             "updated": 1554974386268,
@@ -642,7 +642,7 @@ Eine erfolgreiche Antwort enthält eine Liste von Datensätzen, deren Versionsnu
     },
     "5cd3a129ec106214b722a939": {
             "version": "1.0.4",
-            "imsOrg": "{IMS_ORG}",
+            "imsOrg": "{ORG_ID}",
             "name": "anotherDataset",
             "created": 1554028394852,
             "updated": 1554130582960,

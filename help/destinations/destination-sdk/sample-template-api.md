@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem API-Endpunkt "/authoring/testing/template/sample"ausführen können, um eine Vorlage zur Testnachrichten-Transformation für Ihr Ziel zu erhalten.
 title: Abrufen von Beispielvorlagen-API-Vorgängen
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 6dd8a94e46b9bee6d1407e7ec945a722d8d7ecdb
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 2%
+ht-degree: 31%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 2%
 >
 >**API-Endpunkt**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
-Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/testing/template/sample` API-Endpunkt, um eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) für Ihr Ziel. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Vorlage erstellen](./create-template.md).
+Auf dieser Seite werden alle API-Vorgänge aufgelistet und beschrieben, die Sie mit dem `/authoring/testing/template/sample` API-Endpunkt, um eine [Nachrichtenumwandlungsvorlage](./message-format.md#using-templating) für Ihr Ziel. Eine Beschreibung der von diesem Endpunkt unterstützten Funktionen finden Sie unter [Erstellen einer Vorlage](./create-template.md).
 
 ## Erste Schritte mit API-Vorlagenvorgängen {#get-started}
 
-Bevor Sie fortfahren, lesen Sie bitte die [Erste Schritte](./getting-started.md) für wichtige Informationen, die Sie benötigen, um die API erfolgreich aufrufen zu können, einschließlich Informationen zum Abrufen der erforderlichen Authoring-Berechtigung für Ziele und der erforderlichen Kopfzeilen.
+Bevor Sie fortfahren, lesen Sie [Erste Schritte](./getting-started.md). Dort finden Sie die nötigen Informationen für den erfolgreichen Aufruf der API, einschließlich Details für den Abruf der erforderlichen Authoring-Berechtigung für Ziele und zu den erforderlichen Kopfzeilen.
 
 ## Beispielvorlage abrufen {#generate-sample-template}
 
@@ -27,7 +27,7 @@ Sie können eine Beispielvorlage abrufen, indem Sie eine GET-Anfrage an die `aut
 
 >[!TIP]
 >
->* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId` , die einer Zielkonfiguration entspricht, die mithilfe der `/destinations` -Endpunkt. Siehe Abschnitt [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
+>* Die Ziel-ID, die Sie hier verwenden sollten, ist die `instanceId`, die einer mithilfe des `/destinations`-Endpunkts erstellten Zielkonfiguration entspricht. Siehe Abschnitt [API-Referenz zur Zielkonfiguration](./destination-configuration-api.md#retrieve-list).
 
 
 **API-Format**
@@ -51,7 +51,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
@@ -133,7 +133,7 @@ Wenn die von Ihnen angegebene Ziel-ID einer Zielservervorlage mit [konfigurierba
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen der Experience Platform API-Fehlermeldung. Siehe [API-Statuscodes](../../landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](../../landing/troubleshooting.md#request-header-errors) im Handbuch zur Fehlerbehebung bei Platform.
+Destination SDK-API-Endpunkte folgen den allgemeinen Grundsätzen von Experience Platform API-Fehlermeldungen. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
 
 ## Nächste Schritte {#next-steps}
 

@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie die Authentifizierung für die Adobe Experien
 seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
 keywords: Datenerfassung; Authentifizierung; Adobe Experience Platform Edge Network API; Autorisierung
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 19%
@@ -44,7 +44,7 @@ Um Platform-APIs aufrufen zu können, müssen Sie zunächst das [Authentifizieru
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* x-gw-ims-org-id: `{ORG_ID}`
 
 Ressourcen in Experience Platform lassen sich in spezifischen virtuellen Sandboxes isolieren. Bei Anfragen an Platform-APIs können Sie den Namen und die Kennung der Sandbox angeben, in der der Vorgang ausgeführt werden soll. Dies sind optionale Parameter.
 

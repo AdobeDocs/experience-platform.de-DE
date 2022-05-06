@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Diese Anleitung beinhaltet Informationen über die Voraussetzungen und Elemente, die bei allen anderen Anleitungen für Adobe Experience Platform Data Science Workspace benötigt werden. Danach stehen Ihnen und den Mitgliedern Ihrer IMS-Organisation in Experience Platform das Schema „Einzelhandelsumsätze“ und entsprechende Datensätze zur Verfügung.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 61%
@@ -22,10 +22,10 @@ In diesem Tutorial erhalten Sie die Voraussetzungen und Assets, die für alle an
 
 Bevor Sie mit diesem Tutorial beginnen, müssen Sie folgende Voraussetzungen erfüllen:
 - Zugriff auf [!DNL Adobe Experience Platform]. Wenn Sie keinen Zugriff auf eine IMS-Organisation in [!DNL Experience Platform]Wenden Sie sich an Ihren Systemadministrator, bevor Sie fortfahren.
-- Genehmigung zur Erstellung [!DNL Experience Platform] API-Aufrufe. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
+- Genehmigung zur Erstellung [!DNL Experience Platform] API-Aufrufe. Führen Sie die Anleitung zum [Authentifizieren und Aufrufen von Adobe Experience Platform-APIs](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) aus, um die folgenden Werte abzurufen, damit die Anleitung erfolgreich abgeschlossen werden kann:
    - Authorization: `{ACCESS_TOKEN}`
    - x-api-key: `{API_KEY}`
-   - x-gw-ims-org-id: `{IMS_ORG}`
+   - x-gw-ims-org-id: `{ORG_ID}`
    - Client-Geheimnis: `{CLIENT_SECRET}`
    - Client-Zertifikat: `{PRIVATE_KEY}`
 - Beispieldaten und Quelldateien für das [Rezept „Einzelhandelsumsätze“](../pre-built-recipes/retail-sales.md). Herunterladen der für diese und andere [!DNL Data Science Workspace] Tutorials aus dem [Öffentliches Git-Repository von Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
@@ -50,7 +50,7 @@ Das Schema und die Datensätze für Einzelhandelsumsätze werden mithilfe des be
    ```yaml
    Enterprise:
        api_key: {API_KEY}
-       org_id: {IMS_ORG}
+       org_id: {ORG_ID}
        tech_acct: {technical_account_id}
        client_secret: {CLIENT_SECRET}
        priv_key_filename: {PRIVATE_KEY}

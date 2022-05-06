@@ -4,7 +4,7 @@ solution: Experience Platform
 title: API-Endpunkt für Schemas
 topic-legacy: schemas
 description: 'Sie können den Endpunkt „/schemas“ in der Adobe Experience Platform-API verwenden, um Schemas zur Verwendung mit Mapper in Platform programmgesteuert abzurufen, zu erstellen und zu aktualisieren. '
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 100%
@@ -49,7 +49,7 @@ Mit der folgenden Anfrage werden die letzten beiden erstellten Schemas für Ihre
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0&limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -149,7 +149,7 @@ Mit der folgenden Anfrage können Sie ein Schema erstellen, indem Sie ein [JSON-
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -188,7 +188,7 @@ Mit der folgenden Anfrage können Sie ein Schema anhand von Beispieldaten erstel
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -253,7 +253,7 @@ Mit der folgenden Anfrage können Sie ein Schema erstellen, indem Sie auf ein vo
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
@@ -285,7 +285,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status-Code 200 mit Details zu Ihrem neu
     "id": "4b64daa51b774cb2ac21b61d80125ed0",
     "version": 0,
     "name": "schemaName",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{IMS_ORG}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
+    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"SimpleUser\",...,\"imsOrg\":\"{ORG_ID}\",\"$id\":\"https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96\"}",
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/901c44cc5b2748488574f4e2824c5f96",
         "contentType": "application/vnd.adobe.xed+json;version=1.0"
@@ -311,7 +311,7 @@ Mit der folgenden Anfrage können Sie ein Schema aus einer hochgeladenen JSON-Da
 curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas/upload \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: multipart/form-data' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -F 'file=@{PATH_TO_FILE}.json'
@@ -354,7 +354,7 @@ Die folgende Anfrage ruft Details zum angegebenen Schema ab.
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```

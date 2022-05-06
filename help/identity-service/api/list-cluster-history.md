@@ -5,7 +5,7 @@ title: Abrufen des Cluster-Verlaufs einer Identität
 topic-legacy: API guide
 description: Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. Identity Service bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 48%
@@ -16,7 +16,7 @@ ht-degree: 48%
 
 Identitäten können Cluster im Laufe verschiedener Gerätediagrammabläufe verschieben. [!DNL Identity Service] bietet einen Überblick über die Cluster-Verbindungen einer bestimmten Identität im Zeitverlauf.
 
-Verwenden Sie den optionalen Parameter `graph-type`, um den Ausgabetyp anzugeben, aus dem der Cluster abgerufen werden soll. Die Optionen sind:
+Use optional `graph-type` -Parameter, um den Ausgabetyp anzugeben, von dem der Cluster abgerufen werden soll. Die Optionen sind:
 
 - `None` - Keine Identitätszusammenfügung durchführen.
 - `Private Graph` - Identitätszusammenfügung basierend auf Ihrem privaten Identitätsdiagramm durchführen. Wenn kein `graph-type` angegeben wird, ist dies der Standardwert.
@@ -38,7 +38,7 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?nsId=411&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -49,7 +49,7 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?ns=AMO&id=WTCpVgAAAFq14FMF' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -60,13 +60,13 @@ curl -X GET \
   'https://platform-va7.adobe.io/data/core/identity/cluster/history?xid=CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
 ## Abrufen des Cluster-Verlaufs mehrerer Identitäten
 
-Verwenden Sie die Methode `POST` als Batch-Äquivalent der oben beschriebenen `GET`-Methode, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
+Verwenden Sie die `POST` -Methode als Batch-Entsprechung der `GET` -Methode, die oben beschrieben wurde, um die Cluster-Verläufe mehrerer Identitäten zurückzugeben.
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'x-uis-cst-ctx: stub' \
   -d '{
@@ -134,7 +134,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "xids": ["GYMBWaoXbMtZ1j4eAAACepuQGhs","b2NJK9a5X7x4LVE4rUqkMyM"],
@@ -150,7 +150,7 @@ curl -X POST \
   -H 'authorization: Bearer {ACCESS_TOKEN}' \
   -H 'content-type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "compositeXids": [{
@@ -218,4 +218,4 @@ curl -X POST \
 
 ## Nächste Schritte
 
-Fahren Sie mit dem nächsten Tutorial zu [Listen-Identitätszuordnungen](./list-identity-mappings.md) fort.
+Fahren Sie mit dem nächsten Tutorial fort, um [Auflisten von Identitätszuordnungen](./list-identity-mappings.md)

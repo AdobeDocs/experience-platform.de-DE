@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Erfassungs-APIs beginnen können, die Bestandteil der Data Ingestion Service-APIs von Adobe Experience Platform sind.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: beb5d615da6d825678f446eec609a2bb356bb310
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 63%
@@ -16,14 +16,14 @@ ht-degree: 63%
 
 # Streamen von Datensatzdaten mit Streaming-Aufnahme-APIs
 
-In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen, die Teil der Adobe Experience Platform [!DNL Data Ingestion Service]-APIs sind.
+In diesem Tutorial erfahren Sie, wie Sie mit der Verwendung von Streaming-Aufnahme-APIs beginnen, die Teil von Adobe Experience Platform sind [!DNL Data Ingestion Service] APIs.
 
 ## Erste Schritte
 
 Für dieses Tutorial benötigen Sie Grundkenntnisse zu verschiedenen Adobe Experience Platform-Diensten. Bevor Sie mit diesem Tutorial beginnen, lesen Sie bitte die Dokumentation für die folgenden Dienste:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Erlebnisdaten  [!DNL Platform] organisiert werden.
-   - [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassender Leitfaden, der alle verfügbaren Endpunkte der  [!DNL Schema Registry] API abdeckt und Anweisungen zum Aufrufen an diese Endpunkte enthält. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Der standardisierte Rahmen, durch den [!DNL Platform] organisiert Erlebnisdaten.
+   - [Entwicklerhandbuch zur Schema Registry](../../xdm/api/getting-started.md): Ein umfassendes Handbuch, das alle verfügbaren Endpunkte der [!DNL Schema Registry] API und wie Sie Aufrufe an sie durchführen. Zum Beispiel müssen Sie Ihre `{TENANT_ID}` kennen, die in Aufrufen in diesem Tutorial immer wieder verwendet wird, und wissen, wie man Schemas erstellt, die zum Einrichten eines zu erfassenden Datensatzes dienen.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Verbraucherprofil in Echtzeit, das auf aggregierten Daten aus mehreren Quellen basiert.
 
 Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um die APIs für die Streaming-Erfassung erfolgreich aufrufen zu können.
@@ -34,11 +34,11 @@ In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- x-gw-ims-org-id: `{ORG_ID}`
 
 Alle Ressourcen in [!DNL Experience Platform] sind auf bestimmte virtuelle Sandboxes beschränkt. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
@@ -52,9 +52,9 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 - Content-Type: application/json
 
-## Erstellen eines Schemas basierend auf der [!DNL XDM Individual Profile]-Klasse
+## Erstellen eines Schemas basierend auf der [!DNL XDM Individual Profile] class
 
-Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die Klasse [!DNL XDM Individual Profile] implementiert. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
+Um einen Datensatz zu erstellen, müssen Sie zunächst ein neues Schema erstellen, das die [!DNL XDM Individual Profile] -Klasse. Weiterführende Informationen zum Erstellen von Schemas finden Sie im [Entwicklerhandbuch zur Schema Registry-API](../../xdm/api/getting-started.md).
 
 **API-Format**
 
@@ -69,7 +69,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "type": "object",
@@ -96,7 +96,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Der Name, den Sie für Ihr Schema verwenden möchten. Dieser Name muss eindeutig sein. |
 | `description` | Eine aussagekräftige Beschreibung des Schemas, das Sie erstellen. |
-| `meta:immutableTags` | In diesem Beispiel wird das Tag `union` verwendet, um Ihre Daten in [[!DNL Real-time Customer Profile]](../../profile/home.md) zu speichern. |
+| `meta:immutableTags` | In diesem Beispiel wird die `union` -Tag verwendet wird, um Ihre Daten in [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Antwort**
 
@@ -138,7 +138,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Details zu Ihrem neu erst
         "union"
     ],
     "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:xdmType": "object",
     "meta:registryMetadata": {
         "repo:createDate": 1551376506996,
@@ -170,7 +170,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "@type":"xdm:descriptorIdentity",
@@ -211,7 +211,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 201 mit Informationen zum neu ers
     "@id": "17aaebfa382ce8fc0a40d3e43870b6470aab894e1c368d16",
     "meta:containerId": "tenant",
     "version": "1",
-    "imsOrg": "{IMS_ORG}"
+    "imsOrg": "{ORG_ID}"
 }
 ```
 
@@ -221,7 +221,7 @@ Nachdem Sie Ihr Schema erstellt haben, müssen Sie nun einen Datensatz für die 
 
 >[!NOTE]
 >
->Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und **[!DNL Identity Service]** aktiviert.
+>Dieser Datensatz wird für **[!DNL Real-time Customer Profile]** und **[!DNL Identity Service]**.
 
 **API-Format**
 
@@ -236,7 +236,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d ' {
     "name": "Dataset name",
@@ -270,7 +270,7 @@ Weiterführende Informationen zum Erstellen einer Streaming-Verbindung finden Si
 
 ## Aufnehmen von Datensatzdaten in die Streaming-Verbindung {#ingest-data}
 
-Mit dem vorhandenen Datensatz und der Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Datensatzdaten in [!DNL Platform] aufzunehmen.
+Mit dem vorhandenen Datensatz und der Streaming-Verbindung können Sie XDM-formatierte JSON-Datensätze erfassen, um Datensatzdaten in [!DNL Platform].
 
 **API-Format**
 
@@ -280,8 +280,8 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 | Parameter | Beschreibung |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | Der `inletId`-Wert der zuvor erstellten Streaming-Verbindung. |
-| `syncValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. Beachten Sie bitte, dass bei der Festlegung dieses Abfrageparameters auf `true` die Anforderungsrate auf 60-mal pro Minute pro `CONNECTION_ID` beschränkt ist. |
+| `{CONNECTION_ID}` | Die `inletId` -Wert der zuvor erstellten Streaming-Verbindung. |
+| `syncValidation` | Ein optionaler Abfrageparameter, der für Entwicklungszwecke vorgesehen ist. Wenn er auf `true` gesetzt ist, kann er für unmittelbares Feedback verwendet werden, um zu ermitteln, ob die Anfrage erfolgreich gesendet wurde. Standardmäßig ist dieser Wert auf `false` gesetzt. Beachten Sie Folgendes: Wenn Sie diesen Abfrageparameter auf `true` dass die Anfrage auf 60-mal pro Minute beschränkt wird `CONNECTION_ID`. |
 
 **Anfrage**
 
@@ -291,7 +291,7 @@ Die folgende Beispielanfrage erfasst einen Datensatz mit einem fehlenden Quellna
 
 >[!NOTE]
 >
->Der folgende API-Aufruf erfordert **nicht** Authentifizierungskopfzeilen.
+>Der folgende API-Aufruf **not** Authentifizierungs-Header benötigen.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
@@ -303,7 +303,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=t
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -342,7 +342,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "datasetId": "{DATASET_ID}",
         "source": {
             "name": "Sample source name"
@@ -352,7 +352,7 @@ Wenn Sie einen Quellnamen einbeziehen möchten, zeigt das folgende Beispiel, wie
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamten [!DNL Profile] zurück.
+Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamten zurück [!DNL Profile].
 
 ```json
 {
@@ -374,11 +374,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zum neu gestreamt
 
 ## Abrufen der neu erfassten Datensatzdaten
 
-Zur Validierung der zuvor erfassten Datensätze können Sie die [[!DNL Profile Access API]](../../profile/api/entities.md) verwenden, um die Datensatzdaten abzurufen.
+Zur Validierung der zuvor erfassten Datensätze können Sie die [[!DNL Profile Access API]](../../profile/api/entities.md) , um die Datensatzdaten abzurufen.
 
 >[!NOTE]
 >
->Wenn die Kennung der Zusammenführungsrichtlinie nicht definiert ist und `schema.name` oder `relatedSchema.name` `_xdm.context.profile` ist, ruft [!DNL Profile Access] alle zugehörigen Identitäten ab.****
+>Wenn die Kennung der Zusammenführungsrichtlinie nicht definiert ist und die `schema.name` oder `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] wird abgerufen **all** verwandte Identitäten.
 
 **API-Format**
 
@@ -402,7 +402,7 @@ Sie können die zuvor erfassten Datensatzdaten mit der folgenden GET-Anfrage üb
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -457,6 +457,6 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit Details zu den angeforder
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten mithilfe von Streaming-Verbindungen in [!DNL Platform] aufnehmen können. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie mit der Überwachung der erfassten Daten über die [!DNL Platform] -Benutzeroberfläche beginnen. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
+Durch Lesen dieses Dokuments wissen Sie jetzt, wie Sie Datensatzdaten in [!DNL Platform] Streaming-Verbindungen verwenden. Sie können versuchen, zusätzliche Aufrufe mit unterschiedlichen Werten durchzuführen und die aktualisierten Werte abzurufen. Darüber hinaus können Sie mit der Überwachung der erfassten Daten beginnen durch [!DNL Platform] Benutzeroberfläche. Weiterführende Informationen finden Sie im Handbuch zur [Überwachung der Datenerfassung](../quality/monitor-data-ingestion.md).
 
 Weitere allgemeine Informationen zur Streaming-Erfassung finden Sie in der [Streaming-Erfassung – Übersicht](../streaming-ingestion/overview.md).

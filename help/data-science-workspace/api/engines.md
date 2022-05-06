@@ -5,7 +5,7 @@ title: Engines API Endpoint
 topic-legacy: Developer guide
 description: Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Workspace. Sie enthalten Algorithmen für maschinelles Lernen, die bestimmte Probleme lösen, Pipelines zur Funktionsentwicklung aufweisen oder beides.
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1165'
 ht-degree: 69%
@@ -20,7 +20,7 @@ Engines dienen als Grundlage für maschinelle Lernmodelle in Data Science Worksp
 
 >[!TIP]
 >
->Wenn Sie keine Docker-URL haben, finden Sie im Tutorial [Quelldateien in einem Rezept](../models-recipes/package-source-files-recipe.md) eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL.
+>Wenn Sie keine Docker-URL haben, besuchen Sie die [Quelldateien in einem Rezept verpacken](../models-recipes/package-source-files-recipe.md) Tutorial für eine schrittweise Anleitung zum Erstellen einer Docker-Host-URL.
 
 Ihre Anmeldedaten für die Docker-Registrierung benötigen Sie, um eine verpackte Rezeptdatei hochladen zu können, einschließlich Ihrer Docker-Host-URL, des Benutzernamens und des Passworts. Sie können diese Daten nachschlagen, indem Sie die folgende GET-Anfrage ausführen:
 
@@ -36,7 +36,7 @@ GET /engines/dockerRegistry
 curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -73,7 +73,7 @@ curl -X POST \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -104,14 +104,14 @@ curl -X POST \
 
 **PySpark/Scala anfordern**
 
-Wenn Sie eine Anfrage für PySpark-Rezepte stellen, lautet `executionType` und `type` &quot;PySpark&quot;. Bei einer Anforderung für Scala-Rezepte lautet `executionType` und `type` &quot;Spark&quot;. Das folgende Scala-Rezept-Beispiel verwendet Spark:
+Wenn Sie eine Anforderung für PySpark-Rezepte stellen, wird die `executionType` und `type` ist &quot;PySpark&quot;. Wenn Sie eine Anforderung für Scala-Rezepte stellen, wird die `executionType` und `type` ist &quot;Spark&quot;. Das folgende Scala-Rezept-Beispiel verwendet Spark:
 
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: multipart/form-data' \
     -F 'engine={
@@ -137,7 +137,7 @@ curl -X POST \
 | `name` | Der gewünschte Name für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Der Wert kann auf Spark oder PySpark festgelegt werden. |
-| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` gesetzt werden. |
+| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
 | `artifacts.default.image.location` | Der Speicherort des Docker-Bildes. Nur Azure ACR oder Public (nicht authentifiziert) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
 
@@ -214,18 +214,18 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | --- | --- |
 | `type` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Der Wert kann auf Spark oder PySpark festgelegt werden. |
-| `algorithm` | Setzen Sie den verwendeten Algorithmus auf `fp` (Feature Pipeline). |
+| `algorithm` | Setzen Sie den verwendeten Algorithmus auf `fp` (Funktions-Pipeline). |
 | `name` | Der gewünschte Name für die Feature Pipeline-Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Rezeptname. |
 | `description` | Eine optionale Beschreibung für die Engine. Das Rezept, das dieser Engine entspricht, übernimmt den Wert, der in der Benutzeroberfläche angezeigt werden soll, als Beschreibung des Rezepts. Diese Eigenschaft ist erforderlich. Wenn Sie keine Beschreibung angeben möchten, legen Sie als Wert eine leere Zeichenfolge fest. |
-| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark` gesetzt werden. |
+| `mlLibrary` | Ein Feld, das beim Erstellen von Engines für PySpark- und Scala-Rezepte erforderlich ist. Dieses Feld muss auf `databricks-spark`. |
 | `artifacts.default.image.location` | Der Speicherort des Docker-Bildes. Nur Azure ACR oder Public (nicht authentifiziert) Dockerhub wird unterstützt. |
 | `artifacts.default.image.executionType` | Der Ausführungstyp der Engine. Dieser Wert entspricht der Sprache, auf der das Docker-Bild basiert. Dies kann entweder &quot;Spark&quot;oder &quot;PySpark&quot;sein. |
-| `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker` gesetzt werden. |
-| `artifacts.default.defaultMLInstanceConfigs` | Ihre Parameter für die Konfigurationsdatei `pipeline.json`. |
+| `artifacts.default.image.packagingType` | Der Verpackungstyp des Motors. Dieser Wert sollte auf `docker`. |
+| `artifacts.default.defaultMLInstanceConfigs` | Ihre `pipeline.json` Konfigurationsparameter. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Feature Pipeline-Engine einschließlich ihrer eindeutigen Kennung (`id`) enthält. Die folgende Beispielantwort bezieht sich auf eine PySpark-Feature-Pipeline-Engine.
+Eine erfolgreiche Antwort gibt eine Payload zurück, die die Details der neu erstellten Feature Pipeline-Engine einschließlich ihrer eindeutigen Kennung (`id`). Die folgende Beispielantwort bezieht sich auf eine PySpark-Feature-Pipeline-Engine.
 
 ```json
 {
@@ -271,7 +271,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -348,7 +348,7 @@ curl -X GET \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
@@ -425,7 +425,7 @@ curl -X PUT \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'content-type: application/vnd.adobe.platform.sensei+json;profile=engine.v1.json' \
     -d '{
@@ -493,7 +493,7 @@ curl -X DELETE \
     https://platform.adobe.io/data/sensei/engines/22f4166f-85ba-4130-a995-a2b8e1edde32 \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 

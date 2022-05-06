@@ -5,7 +5,7 @@ title: Query API Endpoint
 topic-legacy: queries
 description: In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des /queries -Endpunkts in der Query Service-API ausführen können.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 536c2998f7d320dec0cb392465677dd30c8ea622
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '676'
 ht-degree: 32%
@@ -16,11 +16,11 @@ ht-degree: 32%
 
 ## Beispiel-API-Aufrufe
 
-In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe des Endpunkts `/queries` in der API [!DNL Query Service] tätigen können. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die Aufrufe erläutert, die Sie mithilfe der `/queries` -Endpunkt im [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
 
 ### Abrufen einer Abfrageliste
 
-Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/queries` stellen.
+Sie können eine Liste aller Abfragen für Ihre IMS-Organisation abrufen, indem Sie eine GET-Anfrage an die `/queries` -Endpunkt.
 
 **API-Format**
 
@@ -40,9 +40,9 @@ Im Folgenden finden Sie eine Liste der verfügbaren Abfrageparameter zur Auflist
 | `orderby` | Gibt das Feld an, nach dem Ergebnisse sortiert werden sollen. Die unterstützten Felder sind `created` und `updated`. `orderby=created` zum Beispiel sortiert Ergebnisse in aufsteigender Reihenfolge. Durch Hinzufügen eines `-`-Zeichens vor „created“ (`orderby=-created`) werden Elemente nach der Erstellung in absteigender Reihenfolge sortiert. |
 | `limit` | Gibt die maximale Seitengröße an, um die Anzahl der Ergebnisse zu steuern, die auf einer Seite enthalten sind. (*Standardwert: 20*) |
 | `start` | Versetzt die Antwortliste mit einer nullbasierten Nummerierung. Beispielsweise gibt `start=2` eine Liste zurück, die bei der dritten aufgelisteten Abfrage beginnt. (*Standardwert: 0*) |
-| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state` und `id`. Die Liste der unterstützten Operatoren ist `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt beispielsweise alle Abfragen mit der angegebenen ID zurück. |
-| `excludeSoftDeleted` | Gibt an, ob eine Abfrage einbezogen werden soll, bei der eine weiche Löschung vorgenommen wurde. Zum Beispiel `excludeSoftDeleted=false` enthält **die** weichen gelöschten Abfragen. (*Boolesch, Standardwert: true*) |
-| `excludeHidden` | Gibt an, ob benutzergesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, enthält **auch** nicht vom Benutzer gesteuerte Abfragen wie CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen. (*Boolesch, Standardwert: true*) |
+| `property` | Filtern Sie Ergebnisse nach Feldern. Die Filter **müssen** mit HTML-Escape-Zeichen versehen sein. Kommas dienen dazu, mehrere Filter zu kombinieren. Die unterstützten Felder sind `created`, `updated`, `state`und `id`. Die Liste der unterstützten Operatoren finden Sie unter `>` (größer als), `<` (kleiner als), `>=` (größer oder gleich), `<=` (kleiner oder gleich), `==` (gleich), `!=` (nicht gleich) und `~` (enthält). Beispiel: `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` gibt alle Abfragen mit der angegebenen ID zurück. |
+| `excludeSoftDeleted` | Gibt an, ob eine Abfrage einbezogen werden soll, bei der eine weiche Löschung vorgenommen wurde. Beispiel: `excludeSoftDeleted=false` will **include** Soft gelöschte Abfragen. (*Boolesch, Standardwert: true*) |
+| `excludeHidden` | Gibt an, ob benutzergesteuerte Abfragen angezeigt werden sollen. Wenn dieser Wert auf &quot;false&quot;gesetzt ist, wird **include** benutzergesteuerte Abfragen, z. B. CURSOR-Definitionen, FETCH- oder Metadaten-Abfragen. (*Boolesch, Standardwert: true*) |
 
 **Anfrage**
 
@@ -51,7 +51,7 @@ Mit der folgenden Anfrage wird die neueste für Ihre IMS-Organisation erstellte 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -117,9 +117,9 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit einer Liste von Abfragen 
 }
 ```
 
-### Abfragen erstellen
+### Erstellen einer Abfrage
 
-Sie können eine neue Abfrage erstellen, indem Sie eine POST-Anfrage an den Endpunkt `/queries` senden.
+Sie können eine neue Abfrage erstellen, indem Sie eine POST-Anfrage an die `/queries` -Endpunkt.
 
 **API-Format**
 
@@ -135,7 +135,7 @@ Die folgende Anfrage erstellt eine neue Abfrage, die durch die in der Payload an
 curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
@@ -155,7 +155,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Nachdem die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, ändert sich `state` von `SUBMITTED` in `SUCCESS`.
+Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu Ihrer neu erstellten Abfrage zurück. Nachdem die Abfrage aktiviert wurde und erfolgreich ausgeführt wurde, wird die `state` ändert sich von `SUBMITTED` nach `SUCCESS`.
 
 ```json
 {
@@ -198,11 +198,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (Akzeptiert) mit Details zu I
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` bis [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` nach [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
 
 ### Abfrage nach ID abrufen
 
-Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/queries` senden und im Anfragepfad den Wert `id` der Abfrage angeben.
+Sie können detaillierte Informationen zu einer bestimmten Abfrage abrufen, indem Sie eine GET-Anfrage an die `/queries` -Endpunkt und Bereitstellung der `id` -Wert im Anfragepfad.
 
 **API-Format**
 
@@ -212,14 +212,14 @@ GET /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id` -Wert der Abfrage, die Sie abrufen möchten. |
+| `{QUERY_ID}` | Die `id` -Wert der Abfrage, die Sie abrufen möchten. |
 
 **Anfrage**
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
@@ -269,11 +269,11 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit detaillierten Information
 
 >[!NOTE]
 >
->Sie können den Wert von `_links.cancel` bis [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
+>Sie können den Wert von `_links.cancel` nach [Ihre erstellte Abfrage abbrechen](#cancel-a-query).
 
 ### Abbrechen einer Abfrage
 
-Sie können das Löschen einer bestimmten Abfrage anfordern, indem Sie eine PATCH-Anfrage an den Endpunkt `/queries` senden und im Anfragepfad den Wert `id` der Abfrage angeben.
+Sie können das Löschen einer bestimmten Abfrage anfordern, indem Sie eine PATCH-Anfrage an die `/queries` -Endpunkt und Bereitstellung der `id` -Wert im Anfragepfad.
 
 **API-Format**
 
@@ -283,7 +283,7 @@ PATCH /queries/{QUERY_ID}
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `{QUERY_ID}` | Der `id` -Wert der Abfrage, die Sie abbrechen möchten. |
+| `{QUERY_ID}` | Die `id` -Wert der Abfrage, die Sie abbrechen möchten. |
 
 
 **Anfrage**
@@ -294,7 +294,7 @@ Diese API-Anfrage nutzt für die Payload die JSON Patch-Syntax. Weiterführende 
 curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-cf8f-463a-a182-54bccb9954fc \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json',
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '{
@@ -304,7 +304,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `op` | Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel ` festlegen. |
+| `op` | Um die Abfrage abzubrechen, müssen Sie den Parameter op mit dem Wert `cancel `. |
 
 **Antwort**
 

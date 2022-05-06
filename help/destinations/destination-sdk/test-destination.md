@@ -1,19 +1,19 @@
 ---
-description: Als Teil von Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen.
-title: Testen der Zielkonfiguration
+description: Als Teil der Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen.
+title: Testen einer Zielkonfiguration
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 1d191b0ce8eb3de8b14dbdc0b3a513585c18d1ea
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
-# Testen der Zielkonfiguration {#developer-tools}
+# Testen einer Zielkonfiguration {#developer-tools}
 
 ## Übersicht {#overview}
 
-Als Teil von Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. Informationen zum Erstellen einer Nachrichtenumwandlungsvorlage finden Sie unter [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./create-template.md).
+Als Teil der Destination SDK bietet Adobe Entwicklertools, mit denen Sie Ihr Ziel konfigurieren und testen können. Auf dieser Seite wird beschrieben, wie Sie Ihre Zielkonfiguration testen. Informationen zum Erstellen einer Nachrichtenumwandlungsvorlage finden Sie unter [Erstellen und Testen einer Nachrichtenumwandlungsvorlage](./create-template.md).
 
 nach **Testen Sie, ob Ihr Ziel richtig konfiguriert ist, und überprüfen Sie die Integrität der Datenflüsse zu Ihrem konfigurierten Ziel.**, verwenden Sie die *Destination Test Tool*. Mit diesem Tool können Sie Ihre Zielkonfiguration testen, indem Sie Nachrichten an Ihren REST-API-Endpunkt senden.
 
@@ -60,7 +60,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw '{
    "profiles":[
@@ -118,7 +118,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 --header 'Accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
---header 'x-gw-ims-org-id: {IMS_ORG}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --data-raw ''
 ```

@@ -5,16 +5,16 @@ solution: Experience Platform
 title: Flusslaufbenachrichtigungen
 topic-legacy: overview
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: a51c878bbfd3004cb597ce9244a9ed2f2318604b
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '786'
-ht-degree: 7%
+ht-degree: 17%
 
 ---
 
 # Flusslaufbenachrichtigungen
 
-Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten zu strukturieren, zu beschriften und zu erweitern mithilfe von [!DNL Platform] Dienste. Daten können aus verschiedensten Quellen erfasst werden, darunter etwa Adobe-Anwendungen, Cloud-basierte Datenspeicher und Datenbanken.
+Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und zu verbessern. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 
 [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) dient zur Erfassung und Zentralisierung von Kundendaten aus verschiedenen Quellen innerhalb von [!DNL Platform]. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
@@ -30,7 +30,7 @@ Dieses Dokument setzt auch ein Verständnis der Webhooks voraus und wie ein Webh
 
 ## Webhook für Fluss-Ausführungsbenachrichtigungen registrieren
 
-Um Benachrichtigungen über Flusslaufvorgänge zu erhalten, müssen Sie die Adobe Developer Console verwenden, um einen Webhook bei Ihrem [!DNL Experience Platform] Integration.
+Um Benachrichtigungen über die Ausführung von Flüssen zu erhalten, müssen Sie die Adobe Developer Console verwenden, um einen Webhook bei Ihrem [!DNL Experience Platform] Integration.
 
 Folgen Sie dem Tutorial zu [Abonnieren von [!DNL I/O Event]-Benachrichtigungen](../observability/alerts/subscribe.md) für detaillierte Schritte, wie Sie dies erreichen können.
 
@@ -68,7 +68,7 @@ Eine erfolgreiche Antwort gibt eine Reihe von `metrics` die Eigenschaften eines 
     "updatedClient": "{UPDATED_CLIENT}",
     "sandboxId": "7127a4f0-def8-11e9-83ce-e79494b1c2a5",
     "sandboxName": "prod",
-    "imsOrgId": "{IMS_ORG}",
+    "imsOrgId": "{ORG_ID}",
     "id": "933cf9f4-cf01-4d75-bcf9-f4cf010d750a",
     "flowId": "1c6f1047-dcaf-48fe-af10-47dcaf08feaf",
     "providerRefId": "test1234",
@@ -173,7 +173,7 @@ Eine erfolgreiche Antwort gibt eine Reihe von `metrics` die Eigenschaften eines 
     "processStartTime": 1597213531213,
     "header": {
       "_adobeio": {
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "providerMetadata": "platform_notifications",
         "eventCode": "sources_flow_run_success"
       }
@@ -185,14 +185,14 @@ Eine erfolgreiche Antwort gibt eine Reihe von `metrics` die Eigenschaften eines 
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `metrics` | Definiert die Eigenschaften der Daten im Durchfluss. |
+| `metrics` | Definiert die Eigenschaften der Daten in der Flussausführung. |
 | `activities` | Definiert die verschiedenen Schritte und Aktivitäten, die zur Transformation der Daten durchgeführt werden. |
 | `durationSummary` | Definiert die Start- und Endzeit des Durchlaufs. |
 | `sizeSummary` | Definiert das Volumen der Daten in Byte. |
-| `recordSummary` | Definiert die Datensatzanzahl der Daten. |
+| `recordSummary` | Definiert die Anzahl der Datensätze. |
 | `fileSummary` | Definiert die Dateianzahl der Daten. |
 | `fileInfo` | Eine URL, die zu einem Überblick über die erfolgreich aufgenommenen Dateien führt. |
-| `statusSummary` | Definiert, ob die Flussausführung ein Erfolg oder ein Fehler ist. |
+| `statusSummary` | Definiert, ob die Flussausführung erfolgreich oder fehlgeschlagen ist. |
 
 ### Fehlgeschlagen
 
@@ -206,7 +206,7 @@ Die folgende Antwort ist ein Beispiel für einen fehlgeschlagenen Fluss, bei dem
         "msgType": "eventNotification",
         "version": "1.0",
         "timestamp": 1597434157622,
-        "imsOrgId": "{IMS_ORG}",
+        "imsOrgId": "{ORG_ID}",
         "schema": {
           "name": "run-notification",
           "version": "1.0"
@@ -225,7 +225,7 @@ Die folgende Antwort ist ein Beispiel für einen fehlgeschlagenen Fluss, bei dem
           "updatedClient": "{UPDATED_CLIENT}",
           "sandboxId": "e49ebb00-d0fa-11e9-b164-ed6a398c8b35",
           "sandboxName": "prod",
-          "imsOrgId": "{IMS_ORG}",
+          "imsOrgId": "{ORG_ID}",
           "id": "d9024c32-2174-4271-824c-322174627101",
           "flowId": "cf4fce79-8822-456d-8fce-798822556dc6",
           "etag": "\"0c003dbf-0000-0200-0000-5f36e92d0000\"",

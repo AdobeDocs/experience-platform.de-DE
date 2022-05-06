@@ -6,27 +6,27 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Flow Service-API verwendet, um Sie durch die Schritte zur Aufnahme von Apache Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem zu führen.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 5160bc8057a7f71e6b0f7f2d594ba414bae9d8f6
+source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
 source-wordcount: '1095'
-ht-degree: 24%
+ht-degree: 47%
 
 ---
 
-# Aufnehmen von Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem mithilfe der [!DNL Flow Service]-API
+# Aufnehmen von Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem mithilfe des [!DNL Flow Service] API
 
 [!DNL Flow Service] wird verwendet, um Kundendaten aus verschiedenen Quellen innerhalb von Adobe Experience Platform zu sammeln und zu zentralisieren. Der Dienst bietet eine Benutzeroberfläche und eine RESTful-API, über die alle unterstützten Quellen verbunden werden können.
 
-In diesem Tutorial wird die [!DNL Flow Service]-API verwendet, um Sie durch die Schritte zum Erfassen von Parquet-Daten von einem Drittanbieter-Cloud-Speichersystem zu führen.
+In diesem Tutorial wird die [!DNL Flow Service] API, die Sie durch die Schritte führt, mit denen Sie Parquet-Daten aus einem Drittanbieter-Cloud-Speichersystem erfassen können.
 
 ## Erste Schritte
 
 Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
-- [Quellen](../../home.md):  [!DNL Experience Platform] ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von  [!DNL Platform] Diensten zu strukturieren, zu beschriften und zu erweitern.
+- [Quellen](../../home.md): [!DNL Experience Platform] ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von [!DNL Platform]-Services zu strukturieren, zu kennzeichnen und anzureichern.
 - [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] bietet virtuelle Sandboxes, die eine einzelne [!DNL Platform]-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
-Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Parquet-Daten mithilfe der API [!DNL Flow Service] erfolgreich aus einem Drittanbieter-Cloud-Speicher erfassen zu können.
+Die folgenden Abschnitte enthalten zusätzliche Informationen, die Sie benötigen, um Parquet-Daten erfolgreich aus einem Drittanbieter-Cloud-Speicher mithilfe der [!DNL Flow Service] API.
 
 ### Lesen von Beispiel-API-Aufrufen
 
@@ -34,11 +34,11 @@ In diesem Tutorial wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
+Um [!DNL Platform]-APIs aufzurufen, müssen Sie zunächst das [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de) abschließen. Durch Abschluss des Authentifizierungs-Tutorials werden die Werte für die einzelnen erforderlichen Header in allen [!DNL Experience Platform]-API-Aufrufen bereitgestellt, wie unten dargestellt:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
+- `x-gw-ims-org-id: {ORG_ID}`
 
 Alle Ressourcen in [!DNL Experience Platform], einschließlich der Ressourcen, die zu [!DNL Flow Service] gehören, werden in bestimmten virtuellen Sandboxes isoliert. Bei allen Anfragen an [!DNL Platform]-APIs ist eine Kopfzeile erforderlich, die den Namen der Sandbox angibt, in der der Vorgang ausgeführt werden soll:
 
@@ -50,7 +50,7 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 ## Verbindung erstellen
 
-Um Parquet-Daten mithilfe von [!DNL Platform]-APIs zu erfassen, müssen Sie über eine gültige Verbindung für die Cloud-Speicherquelle von Drittanbietern verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung für den Speicher haben, mit dem Sie arbeiten möchten, können Sie eine durch die folgenden Tutorials erstellen:
+So erfassen Sie Parquet-Daten mit [!DNL Platform] APIs verwenden, müssen Sie über eine gültige Verbindung für die Cloud-Speicherquelle von Drittanbietern verfügen, auf die Sie zugreifen. Wenn Sie noch keine Verbindung für den Speicher haben, mit dem Sie arbeiten möchten, können Sie eine durch die folgenden Tutorials erstellen:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -58,13 +58,13 @@ Um Parquet-Daten mithilfe von [!DNL Platform]-APIs zu erfassen, müssen Sie übe
 - [Google Cloud Store](./create/cloud-storage/google.md)
 - [SFTP](./create/cloud-storage/sftp.md)
 
-Rufen Sie die eindeutige Kennung (`$id`) der Verbindung ab und speichern Sie sie. Fahren Sie dann mit dem nächsten Schritt dieses Tutorials fort.
+Die eindeutige Kennung (`$id`) der Verbindung herunter und fahren Sie dann mit dem nächsten Schritt dieses Tutorials fort.
 
 ## Zielschema erstellen
 
-Damit die Quelldaten in [!DNL Platform] verwendet werden können, muss auch ein Zielschema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Das Zielschema wird dann zum Erstellen eines [!DNL Platform]-Datensatzes verwendet, in dem die Quelldaten enthalten sind.
+Damit die Quelldaten in [!DNL Platform], muss auch ein Zielschema erstellt werden, um die Quelldaten entsprechend Ihren Anforderungen zu strukturieren. Das Zielschema wird dann zum Erstellen einer [!DNL Platform] Datensatz, in dem die Quelldaten enthalten sind.
 
-Wenn Sie die Benutzeroberfläche in [!DNL Experience Platform] bevorzugen, enthält das [Tutorial zum Schema-Editor](../../../xdm/tutorials/create-schema-ui.md) schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema Editor.
+Wenn Sie die Benutzeroberfläche in [!DNL Experience Platform], die [Tutorial zum Schema Editor](../../../xdm/tutorials/create-schema-ui.md) enthält schrittweise Anweisungen zum Ausführen ähnlicher Aktionen im Schema-Editor.
 
 **API-Format**
 
@@ -74,14 +74,14 @@ POST /schemaregistry/tenant/schemas
 
 **Anfrage**
 
-Die folgende Beispielanfrage erstellt ein XDM-Schema, das die XDM-Klasse [!DNL Individual Profile] erweitert.
+Die folgende Beispielanfrage erstellt ein XDM-Schema, das das XDM-Schema erweitert [!DNL Individual Profile] -Klasse.
 
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -117,7 +117,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einschließlich der eindeutigen Kennung (`$id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
+Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema einschließlich der eindeutigen Kennung (`$id`). Diese ID ist im nächsten Schritt erforderlich, um eine Quellverbindung zu erstellen.
 
 ```json
 {
@@ -168,7 +168,7 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einsch
         "https://ns.adobe.com/xdm/context/identitymap",
         "https://ns.adobe.com/xdm/context/profile-work-details"
     ],
-    "imsOrg": "{IMS_ORG}",
+    "imsOrg": "{ORG_ID}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -197,9 +197,9 @@ Eine erfolgreiche Antwort gibt Details zum neu erstellten Schema zurück, einsch
 }
 ```
 
-## Quellverbindung erstellen {#source}
+## Erstellen einer Quellverbindung {#source}
 
-Nachdem ein Ziel-XDM-Schema erstellt wurde, kann jetzt eine Quellverbindung mit einer POST-Anfrage an die [!DNL Flow Service]-API erstellt werden. Eine Quellverbindung besteht aus einer Verbindung für die API, einem Quelldatenformat und einem Verweis auf das im vorherigen Schritt abgerufene Ziel-XDM-Schema.
+Mit einem erstellten Ziel-XDM-Schema kann jetzt eine Quellverbindung mit einer POST-Anfrage an die [!DNL Flow Service] API. Eine Quellverbindung besteht aus einer Verbindung für die API, einem Quelldatenformat und einem Verweis auf das im vorherigen Schritt abgerufene Ziel-XDM-Schema.
 
 **API-Format**
 
@@ -214,7 +214,7 @@ curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -258,15 +258,15 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten 
 
 ## Erstellen einer Datensatzbase-Verbindung
 
-Um externe Daten in [!DNL Platform] zu erfassen, muss zunächst eine [!DNL Experience Platform] Datensatz-Basisverbindung erworben werden.
+So erfassen Sie externe Daten in [!DNL Platform], und [!DNL Experience Platform] Zunächst muss eine Datensatzbase-Verbindung erworben werden.
 
-Um eine Datensatzbase-Verbindung zu erstellen, führen Sie die Schritte aus, die im Tutorial [Datenbankverbindung zum Datensatz](./create-dataset-base-connection.md) beschrieben sind.
+Gehen Sie wie im Abschnitt [Tutorial zur Datenbankverbindung zu Datensätzen](./create-dataset-base-connection.md).
 
-Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Basisverbindung für den Datensatz erstellt haben. Rufen Sie die eindeutige Kennung (`$id`) ab und speichern Sie sie im nächsten Schritt als Basis-Verbindungs-ID, um eine Zielverbindung zu erstellen.
+Führen Sie die im Entwicklerhandbuch beschriebenen Schritte aus, bis Sie eine Basisverbindung für den Datensatz erstellt haben. Die eindeutige Kennung (`$id`) und fahren Sie mit der Verwendung als Basis-Verbindungs-ID im nächsten Schritt fort, um eine Zielverbindung zu erstellen.
 
-## Zieldatensatz erstellen
+## Erstellen eines Zieldatensatzes
 
-Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service-API](https://www.adobe.io/experience-platform-apis/references/catalog/) gesendet wird, wobei die Kennung des Zielschemas in der Payload angegeben wird.
+Ein Zieldatensatz kann erstellt werden, indem eine POST-Anfrage an die [Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/) durchgeführt wird, wodurch die ID des Zielschemas in der Payload angegeben wird.
 
 **API-Format**
 
@@ -281,7 +281,7 @@ curl -X POST \
     'https://platform.adobe.io/data/foundation/catalog/dataSets?requestDataSource=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -299,7 +299,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format `"@/datasets/{DATASET_ID}"` enthält. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Ziel-Datensatz-ID so, wie es in späteren Schritten erforderlich ist, um eine Zielverbindung und einen Datenfluss zu erstellen.
+Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstellten Datensatzes im Format enthält `"@/datasets/{DATASET_ID}"`. Die Datensatz-ID ist eine schreibgeschützte, vom System generierte Zeichenfolge, mit der in API-Aufrufen auf den Datensatz verwiesen wird. Speichern Sie die Ziel-Datensatz-ID so, wie es in späteren Schritten erforderlich ist, um eine Zielverbindung und einen Datenfluss zu erstellen.
 
 ```json
 [
@@ -309,7 +309,7 @@ Eine erfolgreiche Antwort gibt ein Array zurück, das die Kennung des neu erstel
 
 ## Erstellen einer Zielverbindung {#target}
 
-Sie verfügen jetzt über die eindeutigen Kennungen für eine Datensatzbase-Verbindung, ein Zielschema und einen Zieldatensatz. Mithilfe dieser Kennungen können Sie mithilfe der API [!DNL Flow Service] eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
+Sie verfügen jetzt über die eindeutigen Kennungen für eine Datensatzbase-Verbindung, ein Zielschema und einen Zieldatensatz. Anhand dieser Kennungen können Sie mit der [!DNL Flow Service]-API eine Zielverbindung erstellen, um den Datensatz anzugeben, der die eingehenden Quelldaten enthalten wird.
 
 **API-Format**
 
@@ -324,7 +324,7 @@ curl -X POST \
     'http://platform.adobe.io/data/foundation/flowservice/targetConnections' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -350,13 +350,13 @@ curl -X POST \
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
 | `baseConnectionId` | Die ID Ihrer Datensatzbase-Verbindung. |
-| `data.schema.id` | Das `$id` des Ziel-XDM-Schemas. |
-| `params.dataSetId` | Die ID des Zieldatensatzes. |
+| `data.schema.id` | Die `$id` des XDM-Zielschemas. |
+| `params.dataSetId` | Die Kennung des Zieldatensatzes. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID für Ihren Cloud-Speicher. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (`id`) zurück. Notieren Sie sich diesen Wert, da Sie ihn in späteren Schritten benötigen werden.
+Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung an (`id`). Notieren Sie sich diesen Wert, da Sie ihn in späteren Schritten benötigen werden.
 
 ```json
 {
@@ -365,12 +365,12 @@ Eine erfolgreiche Antwort gibt die eindeutige Kennung der neuen Zielverbindung (
 }
 ```
 
-## Datenfluss erstellen
+## Erstellen eines Datenflusses
 
-Der letzte Schritt zur Aufnahme von Parquet-Daten aus einem Drittanbieter-Cloud-Speicher besteht darin, einen Datenfluss zu erstellen. Jetzt sind die folgenden erforderlichen Werte vorbereitet:
+Der letzte Schritt zur Aufnahme von Parquet-Daten aus einem Drittanbieter-Cloud-Speicher besteht darin, einen Datenfluss zu erstellen. Bislang haben Sie die folgenden erforderlichen Werte vorbereitet:
 
 - [Quellverbindungs-ID](#source)
-- [Target-Verbindungs-ID](#target)
+- [Zielverbindungs-ID](#target)
 
 Ein Datenfluss ist für die Planung und Erfassung von Daten aus einer Quelle verantwortlich. Sie können einen Datenfluss erstellen, indem Sie eine POST-Anfrage ausführen und dabei die oben genannten Werte in der Payload angeben.
 
@@ -386,7 +386,7 @@ POST /flows
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/flows' \
     -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
@@ -412,12 +412,12 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| `sourceConnectionIds` | Die Kennung der Quellverbindung, die in einem früheren Schritt abgerufen wurde. |
-| `targetConnectionIds` | Die in einem früheren Schritt abgerufene Zielverbindungs-ID. |
+| `sourceConnectionIds` | Die Quellverbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
+| `targetConnectionIds` | Die Zielverbindungs-ID, die in einem früheren Schritt abgerufen wurde. |
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zurück.
+Bei einer erfolgreichen Antwort wird die ID (`id`) des neu erstellten Datenflusses angegeben.
 
 ```json
 {
@@ -428,7 +428,7 @@ Eine erfolgreiche Antwort gibt die ID (`id`) des neu erstellten Datenflusses zur
 
 ## Nächste Schritte
 
-In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Drittanbieter-Cloud-Speicher auf geplanter Basis zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Diensten wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace] verwendet werden. Weitere Informationen finden Sie in den folgenden Dokumenten:
+In diesem Tutorial haben Sie einen Quell-Connector erstellt, um Parquet-Daten aus Ihrem Drittanbieter-Cloud-Speicher auf geplanter Basis zu erfassen. Eingehende Daten können jetzt von nachgelagerten [!DNL Platform]-Services verwendet werden, wie [!DNL Real-time Customer Profile] und [!DNL Data Science Workspace]. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
 - [Übersicht über das Echtzeit-Kundenprofil](../../../profile/home.md)
-- [Data Science Workspace – Übersicht](../../../data-science-workspace/home.md)
+- [Übersicht über Data Science Workspace](../../../data-science-workspace/home.md)

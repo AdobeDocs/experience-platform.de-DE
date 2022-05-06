@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;oracle;eloqua;oracle eloqua
+keywords: Experience Platform; Startseite; beliebte Themen; oracle; eloqua; oracle eloqua
 solution: Experience Platform
 title: Erstellen einer Oracle Eloqua-Basisverbindung mit der Flow Service-API
 topic-legacy: overview
 type: Tutorial
-description: Learn how to connect Adobe Experience Platform to Oracle Eloqua using the Flow Service API.
+description: Erfahren Sie, wie Sie Adobe Experience Platform mithilfe der Flow Service-API mit Oracle Eloqua verbinden.
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
-source-git-commit: 1f2ae53e5503618b7ac12628923b30c457fd17e2
+source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
 workflow-type: tm+mt
 source-wordcount: '567'
 ht-degree: 58%
@@ -37,7 +37,7 @@ Damit [!DNL Flow Service] eine Verbindung mit [!DNL Oracle Eloqua] herstellen ka
 | `endpoint` | Der Endpunkt Ihrer [!DNL Oracle Eloqua]. |
 | `username` | Der Benutzername Ihres [!DNL Oracle Eloqua] -Konto. Der Benutzername muss als `siteName + \\ + username`, wobei `siteName` ist der Unternehmensname, mit dem Sie sich bei [!DNL Oracle Eloqua] und `username` ist Ihr Benutzername. Der Benutzername für die Anmeldung kann beispielsweise wie folgt lauten: `adobe\\emily`. |
 | `password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua] Benutzername. |
-| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. The value for the connection specification ID of the [!DNL Oracle Eloqua] source is fixed as: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
+| `connectionSpec.id` | Die Verbindungsspezifikation gibt die Connector-Eigenschaften einer Quelle zurück, einschließlich der Authentifizierungsspezifikationen für die Erstellung der Basis- und Quellverbindungen. Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua] -Quelle wie folgt fest: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 Weitere Informationen zu Authentifizierungsberechtigungen für [!DNL Oracle Eloqua], siehe [[!DNL Oracle Eloqua] Authentifizierungshandbuch](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
@@ -66,7 +66,7 @@ curl -X POST \
   'https://platform.adobe.io/data/foundation/flowservice/connections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json'
   -d '{
@@ -92,7 +92,7 @@ curl -X POST \
 | `name` | Der Name Ihrer [!DNL Oracle Eloqua]-Basisverbindung. Es wird empfohlen, einen beschreibenden Namen anzugeben, da Sie diesen Wert zum Nachschlagen Ihrer Basisverbindung verwenden können. |
 | `description` | (Optional) Eine Eigenschaft, die Sie einbeziehen können, um zusätzliche Informationen zu Ihrer Basisverbindung bereitzustellen. |
 | `auth.specName` | Der Authentifizierungstyp, der für die Verbindung verwendet wird. |
-| `auth.params.endpoint` | The endpoint of your [!DNL Oracle Eloqua] server. |
+| `auth.params.endpoint` | Der Endpunkt Ihrer [!DNL Oracle Eloqua] Server. |
 | `auth.params.username` | Die verkettete Berechtigung, die den Site-Namen und Benutzernamen enthält, der Ihrer [!DNL Oracle Eloqua] -Konto. |
 | `auth.params.password` | Das Passwort, das Ihrem [!DNL Oracle Eloqua]-Konto entspricht. |
 | `connectionSpec.id` | Der Wert für die Verbindungsspezifikations-ID der [!DNL Oracle Eloqua] -Quelle wie folgt fest: `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
@@ -110,7 +110,7 @@ Bei einer erfolgreichen Antwort werden Details zu der neu erstellten Basisverbin
 
 ## Nächste Schritte
 
-By following this tutorial, you have created an [!DNL Oracle Eloqua] base connection using the [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
+In diesem Tutorial haben Sie eine [!DNL Oracle Eloqua] Basisverbindung mit [!DNL Flow Service] API. Sie können diese Basis-Verbindungs-ID in den folgenden Tutorials verwenden:
 
-* [Explore the structure and contents of your data tables using the [!DNL Flow Service] API](../../explore/tabular.md)
+* [Struktur und Inhalt Ihrer Datentabellen mithilfe des [!DNL Flow Service] API](../../explore/tabular.md)
 * [Erstellen Sie einen Datenfluss, um Daten zur Marketing-Automatisierung mit der [!DNL Flow Service] API](../../collect/marketing-automation.md)
