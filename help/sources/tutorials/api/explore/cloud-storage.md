@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Cloud-Speicher; Clou
 title: Durchsuchen von Cloud-Speicherordnern mithilfe der Flow Service-API
 description: In diesem Tutorial wird die Flow Service-API verwendet, um ein Cloud-Speichersystem von Drittanbietern zu untersuchen.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '663'
-ht-degree: 20%
+source-wordcount: '699'
+ht-degree: 19%
 
 ---
 
@@ -106,6 +106,7 @@ Sie können die Struktur einer Datendatei aus Ihrer Cloud-Speicherquelle überpr
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&fileType={FILE_TYPE}&{QUERY_PARAMS}&preview=true
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&columnDelimiter=\t
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&preview=true&fileType=delimited&compressionType=gzip;
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&preview=true&ileType=delimited&encoding=ISO-8859-1;
 ```
 
 | Parameter | Beschreibung |
@@ -119,7 +120,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{BASE_CONNECTION_ID}/explore?objectType=file&object=/aep-bootcamp/Adobe%20Pets%20Customer%2020190801%20EXP.json&fileType=json&preview=true' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -163,6 +164,7 @@ Die [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refe
 | --------- | ----------- |
 | `columnDelimiter` | Der Einzelzeichenwert, den Sie als Spaltentrennzeichen zum Überprüfen von CSV- oder TSV-Dateien angegeben haben. Wenn der Parameter nicht angegeben ist, wird standardmäßig ein Komma verwendet `(,)`. |
 | `compressionType` | Ein erforderlicher Abfrageparameter für die Vorschau einer komprimierten getrennten Datei oder JSON-Datei. Folgende komprimierte Dateien werden unterstützt: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `encoding` | Definiert, welcher Kodierungstyp für die Wiedergabe der Vorschau verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Die `encoding` -Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung erfasst. `UTF-8`. |
 
 ## Nächste Schritte
 

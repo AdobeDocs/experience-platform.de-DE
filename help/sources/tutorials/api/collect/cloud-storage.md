@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
 workflow-type: tm+mt
-source-wordcount: '1597'
-ht-degree: 97%
+source-wordcount: '1549'
+ht-degree: 82%
 
 ---
 
@@ -38,9 +38,9 @@ Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, find
 
 ## Erstellen einer Quellverbindung {#source}
 
-Sie können eine Quellverbindung herstellen, indem Sie eine POST-Anfrage an die [!DNL Flow Service]-API senden. Eine Quellverbindung besteht aus einer Verbindungs-ID, einem Pfad zur Quelldatendatei und einer Verbindungsspezifikations-ID.
+Sie können eine Quellverbindung erstellen, indem Sie eine POST-Anfrage an die `sourceConnections` Endpunkt von [!DNL Flow Service] API bei Angabe Ihrer Basis-Verbindungs-ID, des Pfads zur Quelldatei, die Sie aufnehmen möchten, und der entsprechenden Verbindungsspezifikations-ID Ihrer Quelle.
 
-Um eine Quellverbindung zu erstellen, müssen Sie auch einen Aufzählungswert für das Datenformat-Attribut definieren.
+Beim Erstellen einer Quellverbindung müssen Sie auch einen Enum-Wert für das Datenformat-Attribut definieren.
 
 Verwenden Sie die folgenden Aufzählungswerte für dateibasierte Quellen:
 
@@ -50,10 +50,7 @@ Verwenden Sie die folgenden Aufzählungswerte für dateibasierte Quellen:
 | JSON | `json` |
 | Parquet | `parquet` |
 
-Legen Sie für alle tabellenbasierten Quellen den Wert auf `tabular` fest.
-
-- [Erstellen einer Quellverbindung mit Dateien mit benutzerdefinierten Trennzeichen](#using-custom-delimited-files)
-- [Erstellen einer Quellverbindung mit komprimierten Dateien](#using-compressed-files)
+Setzen Sie für alle tabellenbasierten Quellen den Wert auf `tabular`.
 
 **API-Format**
 
@@ -61,13 +58,7 @@ Legen Sie für alle tabellenbasierten Quellen den Wert auf `tabular` fest.
 POST /sourceConnections
 ```
 
-### Erstellen einer Quellverbindung mit Dateien mit benutzerdefinierten Trennzeichen {#using-custom-delimited-files}
-
 **Anfrage**
-
-Sie können eine durch ein benutzerdefiniertes Trennzeichen getrennte Datei aufnehmen, indem Sie ein `columnDelimiter` als Eigenschaft angeben. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wird kein Trennzeichen angegeben, dann wird ein Komma `(,)` als Standardwert verwendet.
-
-Die folgende Beispielanfrage erstellt eine Quellverbindung für einen Dateityp mit durch Tabulatoren getrennten Werten.
 
 ```shell
 curl -X POST \
@@ -78,16 +69,20 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connection for delimited files",
-        "description": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud Storage source connection",
+        "description: "Source connection for a cloud storage source",
+        "baseConnectionId": "1f164d1b-debe-4b39-b4a9-df767f7d6f7c",
         "data": {
             "format": "delimited",
-            "columnDelimiter": "\t"
+            "properties": {
+                "columnDelimiter": "{COLUMN_DELIMITER}",
+                "encoding": "{ENCODING}"
+                "compressionType": "{COMPRESSION_TYPE}"
+            }
         },
         "params": {
-            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
-            "recursive": "true"
+            "path": "/acme/summerCampaign/account.csv",
+            "type": "file"
         },
         "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -98,69 +93,14 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `baseConnectionId` | Die eindeutige Verbindungs-ID des Cloud-Speichersystems eines Drittanbieters, auf das Sie zugreifen. |
-| `data.format` | Ein Aufzählungswert, der das Datenformatattribut definiert. |
-| `data.columnDelimiter` | Sie können ein beliebiges einzelnes Zeichen als Spaltentrennzeichen zum Erfassen von Flatfiles verwenden. Diese Eigenschaft ist nur für die Aufnahme von CSV- oder TSV-Dateien erforderlich. |
+| `baseConnectionId` | Die Kennung der Basisverbindung Ihrer Cloud-Speicherquelle. |
+| `data.format` | Das Format der Daten, die Sie an Platform übermitteln möchten. Folgende Werte werden unterstützt: `delimited`, `JSON`und `parquet`. |
+| `data.properties` | (Optional) Eine Reihe von Eigenschaften, die Sie beim Erstellen einer Quellverbindung auf Ihre Daten anwenden können. |
+| `data.properties.columnDelimiter` | (Optional) Ein einstelliges Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Komma angegeben wurde, wird ein`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter` -Eigenschaft kann nur bei der Aufnahme von durch Trennzeichen getrennten Dateien verwendet werden. |
+| `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Die `encoding` -Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung erfasst. `UTF-8`. |
+| `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`und `tar`. **Hinweis**: Die `compressionType` -Eigenschaft kann nur bei der Aufnahme von getrennten oder JSON-Dateien verwendet werden. |
 | `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
-| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die mit Ihrem spezifischen Cloud-Speichersystem eines Drittanbieters verknüpft ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
-
-**Antwort**
-
-Eine erfolgreiche Antwort gibt die eindeutige Kennung (`id`) der neu erstellten Quellverbindung zurück. Diese ID ist in einem späteren Schritt erforderlich, um einen Datenfluss zu erstellen.
-
-```json
-{
-    "id": "26b53912-1005-49f0-b539-12100559f0e2",
-    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
-}
-```
-
-### Erstellen einer Quellverbindung mit komprimierten Dateien {#using-compressed-files}
-
-**Anfrage**
-
-Sie können auch komprimierte JSON- oder durch Trennzeichen getrennte Dateien erfassen, indem Sie deren `compressionType` als Eigenschaft angeben. Die unterstützten komprimierten Dateitypen sind unten aufgelistet:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
-
-Die folgende Beispielanfrage erstellt eine Quellverbindung für eine komprimierte, durch Trennzeichen getrennte Datei mit dem Dateityp `gzip`.
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Cloud storage source connection for compressed files",
-        "description": "Cloud storage source connection for compressed files",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
-        "data": {
-            "format": "delimited",
-            "properties": {
-                "compressionType": "gzip"
-            }
-        },
-        "params": {
-            "path": "/compressed/files.gzip"
-        },
-        "connectionSpec": {
-            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-            "version": "1.0"
-        }
-     }'
-```
-
-| Eigenschaft | Beschreibung |
-| --- | --- |
-| `data.properties.compressionType` | Bestimmt den komprimierten Dateityp für die Aufnahme. Diese Eigenschaft ist nur erforderlich, wenn komprimierte JSON- oder durch Trennzeichen getrennte Dateien aufgenommen werden. |
+| `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer spezifischen Cloud-Speicherquelle zugeordnet ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**
 
