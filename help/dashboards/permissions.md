@@ -4,70 +4,71 @@ title: Erhalten & Gewähren von Zugriffsberechtigungen für Experience Platform-
 type: Documentation
 description: Gewähren Sie Benutzern die Möglichkeit, Experience Platform-Dashboards mithilfe von Adobe Admin Console anzuzeigen, zu bearbeiten und zu aktualisieren.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 052e365c6127961363b7b5333cb0f4f82ab5479a
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 100%
+source-wordcount: '645'
+ht-degree: 32%
 
 ---
 
 # Zugriffsberechtigungen für Dashboards
 
-Damit Benutzer Dashboards anzeigen, bearbeiten und aktualisieren können, müssen Sie zunächst Berechtigungen aktivieren. In Adobe Experience Platform wird die Zugriffskontrolle über die Adobe Admin Console bereitgestellt. Diese Funktion nutzt Produktprofile in [!DNL Admin Console], um Anwender mit Berechtigungen und Sandboxes zu verknüpfen.
+Damit Benutzer Dashboards anzeigen, bearbeiten und aktualisieren können, müssen Sie zunächst Berechtigungen aktivieren. In Adobe Experience Platform wird die Zugriffskontrolle über die [Adobe Admin Console](https://adminconsole.adobe.com/). Benutzer werden über Produktprofile in der [!DNL Admin Console].
 
-In diesem Dokument erfahren Sie, wie Sie in Admin Console Zugriff auf bestimmte Dashboard-Berechtigungen gewähren. Ausführliche Informationen zum Abrufen und Zuweisen von Zugriffsberechtigungen finden Sie in der [Übersicht zur Zugriffskontrolle](../access-control/home.md).
+Dieses Dokument bietet eine Zusammenfassung der verfügbaren Berechtigungen für Dashboards, einschließlich der Funktionen, auf die sie Zugriff gewähren, und der Benutzerfunktionen, die sie aktivieren. Ausführliche Informationen zum Abrufen und Zuweisen von Zugriffsberechtigungen finden Sie in der [Übersicht zur Zugriffskontrolle](../access-control/home.md).
 
->[!NOTE]
+## Voraussetzungen
+
+Zum Konfigurieren der Zugriffssteuerung für [!DNL Experience Platform] müssen Sie Administratorrechte für ein Unternehmen haben, das über eine [!DNL Experience Platform]-Produktintegration verfügt. Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+
+## Verfügbare Dashboard-Berechtigungen {#available-permissions}
+
+Die [!DNL Dashboards] -Dienst bietet drei Berechtigungen, die, wenn sie kombiniert werden, uneingeschränkten Zugriff auf die [!UICONTROL Profile], [!UICONTROL Segmente], [!UICONTROL Ziele]und [!UICONTROL Lizenzverwendung] Dashboards in Adobe Experience Platform. Diese Berechtigungen sind:
+
+| Berechtigung | Beschreibung |
+|---|---|
+| **Standard-Dashboards verwalten** | Diese Berechtigung ist eine **globale Lese- und Schreibberechtigungen**. Damit können Sie [Erstellen benutzerdefinierter Widgets](./customize/custom-widgets.md) und [Widget-Schema bearbeiten](./customize/edit-schema.md) durch [!UICONTROL Widget-Bibliothek]. |
+| **Standard-Dashboards anzeigen** | Diese **schreibgeschützt** -Funktion [!UICONTROL Profile], [!UICONTROL Ziele]und [!UICONTROL Segmente] Dashboards verwenden und über die linke Navigation von Platform Zugriff auf diese zulassen. Außerdem wird [!UICONTROL Dashboards] zur linken Navigation und Zugriff auf die [!UICONTROL Dashboards] Registerkarte &quot;Inventar und Integrationen&quot;. |
+| **Anzeigen des Dashboards zur Lizenznutzung** | Diese Berechtigung ermöglicht Benutzern **schreibgeschützt** Zugriff auf [das Dashboard zur Lizenznutzung](./guides/license-usage.md) in der Experience Platform-Benutzeroberfläche. |
+
+Es gibt fünf Berechtigungen, die nicht im [!DNL Dashboard] -Kategorie, die je nach Ihren Anforderungen möglicherweise erforderlich ist. In der folgenden Tabelle sind die Kategoriestandorte in der Admin Console aufgeführt:
+
+>[!IMPORTANT]
 >
->Zum Konfigurieren der Zugriffssteuerung für [!DNL Experience Platform] müssen Sie Administratorrechte für ein Unternehmen haben, das über eine [!DNL Experience Platform]-Produktintegration verfügt. Weitere Informationen zu [Administratorrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
+>Beide **[!DNL Manage Standard Dashboards]** und **[!DNL View Standard Dashboards]** Berechtigungen **erfordern** die Berechtigung &quot;Ansicht&quot;oder &quot;Verwalten&quot;aus der [!DNL Profile Management] oder [!DNL Destinations] in der Admin Console, um die entsprechenden Bereiche in der Platform-Benutzeroberfläche zu aktivieren.
 
-## Verfügbare Berechtigungen {#available-permissions}
+| Berechtigung | Speicherort der Admin Console-Kategorie |
+|---|---|
+| [!DNL View Profiles] | [!DNL Profile Management] |
+| [!DNL View Segments] | [!DNL Profile Management] |
+| [!DNL View Destinations] | [!DNL Destinations] |
+| [!DNL Manage Queries] | [!DNL Query Service] |
+| [!DNL Manage Sandboxes] | [!DNL Sandbox Administration] |
 
-Es gibt zwei Hauptberechtigungen, die für den Zugriff auf Dashboards in Experience Platform erforderlich sind. Diese Berechtigungen sind:
+## Zugriffssteuerungsmatrix
 
-* **Anzeigen des Dashboards zur Lizenznutzung**: Diese Berechtigung ermöglicht Benutzern schreibgeschützten Zugriff auf das Dashboard zur Lizenzverwendung in der Experience Platform-Benutzeroberfläche.
-* **Standard-Dashboards verwalten**: Mit dieser Berechtigung können Benutzer benutzerdefinierte Attribute hinzufügen, die sich noch nicht im Data Warehouse befinden.
+Die folgende Zugriffssteuerungsmatrix zeigt, welche Berechtigungen erforderlich sind und welche Funktionen sie für den Zugriff auf die verschiedenen Dashboard-Funktionen bereitstellen. Berechtigungen werden in der oberen horizontalen Zeile aufgelistet und der Platform UI-Arbeitsbereich wird entlang der linken Spalte aufgeführt.
 
-Die folgenden Schritte zeigen Ihnen, wie Sie diese Berechtigungen mithilfe von Admin Console hinzufügen.
+|  | [!UICONTROL Standard-Dashboard anzeigen] ODER [!UICONTROL Standard-Dashboard verwalten] | [!UICONTROL Profile anzeigen],<br/>[!UICONTROL Segmente anzeigen],<br/> [!UICONTROL Anzeigen von Zielen] | [!UICONTROL Abfragen verwalten] &amp; [!UICONTROL Verwalten von Sandboxes] | [!UICONTROL Anzeigen des Dashboards zur Lizenznutzung] |
+|---|---|---|---|---|
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] in der linken Navigation. | K. A. | **Die Berechtigung &quot;Ansicht&quot;oder &quot;Verwalten&quot;ist ERFORDERLICH.** für jedes Dashboard. | K. A. | K. A. |
+| [!DNL Dashboards] in der linken Navigation. | AKTIVIERT | **Mindestens ein ERFORDERLICHER**. | K. A. | K. A. |
+| [!DNL Dashboards] [!DNL Inventory] <br/>(Registerkarte &quot;Durchsuchen&quot;) | AKTIVIERT | K. A. | K. A. | K. A. |
+| [!DNL Dashboards] [!DNL Integrations] tab <br/>(zur Installation von Power BI verwendet) | AKTIVIERT | **Mindestens ein ERFORDERLICHER** | K. A. | K. A. |
+| Schaltfläche &quot;Power BI installieren&quot;und Workflow | AKTIVIERT | K. A. | **ERFORDERLICH** | K. A. |
+| [!DNL Profiles],<br/>[!DNL Segments],<br/>[!DNL Destinations] Dashboards.<br/>Die Möglichkeit, Widget-Schemata zu bearbeiten und neue Attribute zur Widget-Anpassung hinzuzufügen | **ERFORDERLICHES Dashboard verwalten** | **ERFORDERLICH (für jedes Dashboard)** | K. A. | K. A. |
+| [!DNL License Usage Dashboard] | K. A. | K. A. | K. A. | AKTIVIERT |
 
-## Wählen Sie „Produktprofile“. 
+{style=&quot;table-layout:auto&quot;}
 
-Um Benutzern Zugriff auf Dashboards in Experience Platform zu gewähren, melden Sie sich zunächst bei [Adobe Admin Console](https://adminconsole.adobe.com) an und wählen Sie **Products** aus der oberen Navigationsleiste aus.
+## Berechtigungen zu Ihrem Produktprofil hinzufügen
 
-![](images/admin-console/admin-console-overview.png)
-
-Wählen Sie **Adobe Experience Platform** aus dem Dropdown-Menü Experience Cloud im linken Navigationsbereich oder aus den unter *Alle Produkte und Dienste* aufgelisteten Karten. Wählen Sie auf der Adobe Experience Platform-Produktseite das Produktprofil aus, dem Sie die Dashboard-Berechtigungen hinzufügen möchten, oder wählen Sie **Neues Profil** aus, um ein neues Produktprofil zu erstellen.
-
-![](images/admin-console/products.png)
-
-Das ausgewählte Produktprofil wird geöffnet und zeigt die mit diesem Produktprofil verknüpften Benutzer an. Um die Berechtigungen für das Produktprofil zu verwalten, wählen Sie **Berechtigungen** aus.
-
-![](images/admin-console/product-users.png)
-
-## Berechtigungen hinzufügen/bearbeiten
-
-Auf der Registerkarte **Berechtigungen** werden alle verfügbaren Berechtigungen für das Produktprofil angezeigt. Suchen Sie die Zeile **Dashboards** und beachten Sie, dass derzeit &quot;0 von 2 enthalten&quot;steht. Das bedeutet, dass für das Produktprofil keine Dashboard-Berechtigungen aktiviert sind.
-
-Um die Dashboard-Berechtigungen zu bearbeiten, wählen Sie **Bearbeiten** in der Dashboard-Zeile aus.
-
-![](images/admin-console/product-permissions.png)
-
-Das Dialogfeld **Berechtigungen bearbeiten** wird geöffnet und zeigt verfügbare Berechtigungselemente und eingeschlossene Berechtigungselemente an. Sie können das Pluszeichen (`+`) neben der Berechtigung zum Hinzufügen auswählen oder **+ Alle hinzufügen** auswählen, um alle Berechtigungen gleichzeitig hinzuzufügen.
+Verwenden Sie die oben angegebenen Informationen, um Ihrem Produktprofil die entsprechenden Berechtigungen hinzuzufügen. Vollständige Anweisungen finden Sie in der Dokumentation unter [Hinzufügen von Berechtigungen über die Benutzeroberfläche der Zugriffskontrolle](../access-control/ui/permissions.md).
 
 Beschreibungen der Berechtigungen finden Sie im Abschnitt [Verfügbare Berechtigungen](#available-permissions) weiter oben in diesem Dokument.
 
 >[!NOTE]
 >
->Sie müssen nicht alle Berechtigungen für alle Benutzer aktivieren. Abhängig von der Struktur Ihres Unternehmens möchten Sie möglicherweise separate Produktprofile für bestimmte Benutzer erstellen und eingeschränkten Zugriff gewähren (z. B. schreibgeschützt).
+>Sie müssen nicht alle Berechtigungen für alle Benutzer aktivieren. Abhängig von der Struktur Ihres Unternehmens möchten Sie möglicherweise separate Produktprofile für bestimmte Benutzer erstellen und eingeschränkten Zugriff gewähren (z. B. schreibgeschützt). Weitere Informationen finden Sie in der Dokumentation zum Verwalten von Benutzern für ein Produktprofil . [Zuweisen von Berechtigungen für bestimmte Benutzer](../access-control/ui/users.md).
 
-Nachdem die Berechtigungen hinzugefügt wurden, wählen Sie **Speichern** aus, um zum Produktprofil zurückzukehren.
-
-![](images/admin-console/dashboard-permissions.png)
-
-Wenn Sie zum Produktprofil zurückkehren, können Sie überprüfen, ob die Berechtigungen hinzugefügt wurden, indem Sie bestätigen, dass die Zeile **Dashboards** die Zeile „2 von 2 enthalten“ anzeigt.
-
-![](images/admin-console/product-permissions-included.png)
-
-## Nächste Schritte
-
-Nachdem Sie den Dashboards Zugriffsberechtigungen hinzugefügt haben, können Benutzer in Ihrem Unternehmen Dashboards in der Experience Platform-Benutzeroberfläche anzeigen und andere Aktionen ausführen, die auf den von Ihnen zugewiesenen Berechtigungen basieren.
+Nachdem Sie die erforderlichen Zugriffsberechtigungen hinzugefügt haben, können Benutzer in Ihrem Unternehmen Dashboards in der Experience Platform-Benutzeroberfläche anzeigen und andere Aktionen ausführen, die auf den von Ihnen zugewiesenen Berechtigungen basieren.
