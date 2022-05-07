@@ -3,7 +3,7 @@ keywords: Experience Platform; Query Service; Query Service; Query
 title: Erste Schritte mit Adobe Experience Platform Query Service
 topic-legacy: tutorial
 description: Aufschlüsselung der erforderlichen Schritte zur vollständigen Nutzung des Adobe Experience Platform Query Service
-source-git-commit: a071f14dd92b22ae4f1f0e62c3d374069b684b79
+source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 8%
@@ -20,7 +20,7 @@ Nachdem Sie Ihre Daten in Adobe Experience Platform aufgenommen haben, können S
 
 ## Nächste Schritte
 
-In diesem Dokument wurden die Voraussetzungen für die Verwendung von [!DNL Query Service] Funktionen in Experience Platform. Weitere Informationen zum [!DNL Query Service] Vorteile der Datenverarbeitung in Platform, siehe [Beispielanwendungsfall - Präsentation](./use-case.md).
+In diesem Dokument wurden die Voraussetzungen für die Verwendung von [!DNL Query Service] Funktionen in Experience Platform. Weitere Informationen zum [!DNL Query Service] Vorteile der Datenverarbeitung in Platform, siehe [Beispielanwendungsfall - Präsentation](../use-cases/abandoned-cart.md).
 
 Die folgenden Ressourcen sind hilfreich, um Ihr Verständnis für [!DNL Query Service]:
 
