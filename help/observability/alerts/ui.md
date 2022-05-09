@@ -4,10 +4,10 @@ title: Handbuch zur Warnhinweis-Benutzeroberfläche
 description: Hier erfahren Sie, wie Sie Warnhinweise in der Benutzeroberfläche von Experience Platform verwalten.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: d82487f34c0879ed27ac55e42d70346f45806131
+source-git-commit: ed18ecea98497e0c20d44617436a013bf83b69d2
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 100%
+source-wordcount: '345'
+ht-degree: 69%
 
 ---
 
@@ -36,6 +36,24 @@ Wählen Sie eine Regel aus der Liste aus, um ihre Beschreibung und ihre Konfigur
 Wählen Sie auf die Auslassungspunkte (**...**) neben dem Namen einer Regel klicken, zeigt eine Dropdown-Liste die Steuerelemente zum Aktivieren oder Deaktivieren des Warnhinweises (je nach seinem aktuellen Status) und zum Abonnieren oder Abbestellen von E-Mail-Benachrichtigungen für den Warnhinweis.
 
 ![](../images/alerts/ui/disable-subscribe.png)
+
+## Aktivieren von E-Mail-Warnungen
+
+Warnhinweise können direkt an Ihre E-Mail gesendet werden.
+
+Wählen Sie das Glockensymbol (![Glockensymbol](../images/alerts/ui/bell-icon.png)) im oberen Band auf der rechten Seite, um Benachrichtigungen und Mitteilungen anzuzeigen. Wählen Sie im angezeigten Dropdown-Menü das Zahnradsymbol (![Zahnradsymbol](../images/alerts/ui/cog-icon.png)), um auf die Seite mit den Experience Cloud-Voreinstellungen zuzugreifen.
+
+![](../images/alerts/ui/edit-preferences.png)
+
+Die **Profil** angezeigt. Wählen Sie die **[!UICONTROL Benachrichtigungen]** im linken Navigationsbereich, um auf die Voreinstellungen für E-Mail-Warnungen zuzugreifen.
+
+![](../images/alerts/ui/profile.png)
+
+Scrollen Sie zum **E-Mails** im unteren Bereich der Seite und wählen Sie **[!UICONTROL Sofortige Benachrichtigungen]**
+
+![](../images/alerts/ui/notifications.png)
+
+Alle Warnungen, die Sie abonniert haben, werden jetzt an die E-Mail-Adresse gesendet, die mit Ihrem Adobe ID-Konto verbunden ist.
 
 ## Anzeigen des Warnhinweisverlaufs
 
