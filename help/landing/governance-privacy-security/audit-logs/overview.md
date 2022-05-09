@@ -1,11 +1,11 @@
 ---
 title: Übersicht über Auditprotokolle
-description: Erfahren Sie, wie Sie mithilfe von Auditprotokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
+description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d726576a4d1f29d83f3b7cf72c9f5c5d4ff114d3
+source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 8%
+source-wordcount: '767'
+ht-degree: 13%
 
 ---
 
@@ -35,10 +35,12 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 | [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Konto (Adobe)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Abfragevorlage](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Geplante Abfrage](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 
 ## Zugriff auf Prüfprotokolle
 
-Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei auftretenden Aktivitäten automatisch Prüfprotokolle erfasst. Sie müssen die Protokollerfassung nicht manuell aktivieren.
+Wenn die Funktion für Ihr Unternehmen aktiviert ist, werden bei auftretenden Aktivitäten automatisch Prüfprotokolle erfasst. Sie müssen die Datenerfassung in Auditprotokollen nicht manuell aktivieren.
 
 Um Prüfprotokolle anzeigen und exportieren zu können, benötigen Sie die **[!UICONTROL Protokoll zu Benutzeraktivitäten anzeigen]** Zugriffskontrollberechtigung erteilt (zu finden unter [!UICONTROL Data Governance] Kategorie). Informationen zum Verwalten individueller Berechtigungen für Platform-Funktionen finden Sie im Abschnitt [Zugriffssteuerungsdokumentation](../../../access-control/home.md).
 
@@ -79,7 +81,7 @@ Um einen Filter zu entfernen, wählen Sie das &quot;X&quot;auf dem Pillensymbol 
 
 ![Filter löschen](../../images/audit-logs/clear-filters.png)
 
-### Audit-Protokolle exportieren
+### Auditprotokolle exportieren
 
 Um die aktuelle Liste der Prüfprotokolle zu exportieren, wählen Sie **[!UICONTROL Protokoll herunterladen]**.
 
