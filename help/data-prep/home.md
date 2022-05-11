@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f8ad7ce2ed5a45fa0200715a2b961d75f17d192c
+source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 100%
+source-wordcount: '594'
+ht-degree: 92%
 
 ---
 
@@ -50,6 +50,10 @@ Weitere Informationen zu Zuordnungssätzen, einschließlich der Verwendung von F
 ## Verarbeiten von Datenformaten
 
 Datenvorbereitung kann verschiedene Datenformate, die in Platform erfasst werden, zuverlässig verarbeiten. Weitere Informationen zum Verarbeiten verschiedener Datentypen durch die Datenvorbereitung finden Sie in der [Übersicht zur Verarbeitung von Datenformaten](./data-handling.md).
+
+## Teilzeilenaktualisierungen senden mit [!DNL Data Prep]
+
+Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilenaktualisierungen an zu senden [!DNL Profile Service] -Daten sowie beim Erstellen und Erstellen neuer Identitätslinks mit einer einzelnen API-Anfrage. Weitere Informationen zum Streamen von Uploads finden Sie in [!DNL Data Prep], siehe das Dokument unter [Teilzeilenaktualisierungen senden](./upserts.md).
 
 ## Nächste Schritte
 

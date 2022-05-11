@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Datenvorbereitungsanleitung
 user-guide-description: Bereiten Sie Ihre Daten für die Aufnahme in Adobe Experience Platform vor.
 feature: Data Prep
-source-git-commit: d8d49bc904664f2950dd6ea2bf022584c2737709
-workflow-type: ht
-source-wordcount: '46'
-ht-degree: 100%
+source-git-commit: 752c662876df012dbcb44db6168705be2a5375ce
+workflow-type: tm+mt
+source-wordcount: '48'
+ht-degree: 95%
 
 ---
 
@@ -24,4 +24,5 @@ ht-degree: 100%
    - [Handbuch zur Datenvorbereitungs-Benutzeroberfläche](./ui/mapping.md)
 - [Verarbeiten von Datenformaten](./data-handling.md)
 - [Zuordnungssätze](mapping-set.md)
+- [Stream-Uploads](upserts.md)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
