@@ -3,12 +3,12 @@ keywords: Experience Platform;Startseite;beliebte Themen;Datenverwaltung;Benutze
 solution: Experience Platform
 title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 topic-legacy: policies
-description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. This document provides an overview of the actions that you can perform in the Policies workspace in the Experience Platform user interface.
+description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich "Richtlinien"der Benutzeroberfläche "Experience Platform"ausführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 8feb9fbdead75ca7b9ed7e5dcd3a0aab6f328ad5
+source-git-commit: 1c0685e7acb594829795674f859f76f229ecee61
 workflow-type: tm+mt
-source-wordcount: '1295'
-ht-degree: 53%
+source-wordcount: '1331'
+ht-degree: 51%
 
 ---
 
@@ -33,7 +33,7 @@ Klicken Sie in der Benutzeroberfläche von [!DNL Experience Platform] auf **[!UI
 
 ![](../images/policies/browse-policies.png)
 
-If you have access to consent policies (currently in beta), select the **[!UICONTROL Consent policies]** toggle to view them in the [!UICONTROL Browse] tab.
+Wenn Sie Zugriff auf Zustimmungsrichtlinien haben (derzeit in der Beta-Phase), wählen Sie die **[!UICONTROL Einverständnisrichtlinien]** Umschalten der Anzeige in der [!UICONTROL Durchsuchen] Registerkarte.
 
 ![](../images/policies/consent-policy-toggle.png)
 
@@ -47,13 +47,13 @@ Um eine neue benutzerdefinierte Datennutzungsrichtlinie zu erstellen, klicken Si
 
 ![](../images/policies/create-policy-button.png)
 
-Depending on whether you are part of the beta for consent policies, one of the following occurs:
+Je nachdem, ob Sie Teil der Beta-Version für Zustimmungsrichtlinien sind, geschieht eine der folgenden Aktionen:
 
 * Wenn Sie nicht Teil der Beta-Version sind, werden Sie sofort zum Workflow für [Erstellen einer Data Governance-Richtlinie](#create-governance-policy).
 * Wenn Sie Teil der Beta-Version sind, bietet ein Dialogfeld eine zusätzliche Option zum [eine Zustimmungsrichtlinie erstellen](#consent-policy).
    ![](../images/policies/choose-policy-type.png)
 
-### Create a data governance policy {#create-governance-policy}
+### Data Governance-Richtlinie erstellen {#create-governance-policy}
 
 Der Workflow **[!UICONTROL Richtlinie erstellen]** wird angezeigt. Geben Sie zunächst einen Namen und eine Beschreibung für die neue Richtlinie an.
 
@@ -83,22 +83,22 @@ Die Registerkarte **[!UICONTROL Durchsuchen]** wird erneut angezeigt, wo die neu
 
 >[!IMPORTANT]
 >
->Consent policies are currently in beta and your organization may not have access to them yet.
+>Die Einverständnisrichtlinien befinden sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf.
 
 Wenn Sie sich dafür entschieden haben, eine Zustimmungsrichtlinie zu erstellen, wird ein neuer Bildschirm angezeigt, in dem Sie die neue Richtlinie konfigurieren können.
 
 ![](../images/policies/consent-policy-dialog.png)
 
-In order to make use of consent policies, you must have consent attributes present in your profile data. Siehe Handbuch unter [Zustimmungsverarbeitung in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) für detaillierte Schritte zum Einschließen der erforderlichen Attribute in Ihr Vereinigungsschema.
+Um Einwilligungsrichtlinien verwenden zu können, müssen in Ihren Profildaten Einwilligungsattribute vorhanden sein. Siehe Handbuch unter [Zustimmungsverarbeitung in Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md) für detaillierte Schritte zum Einschließen der erforderlichen Attribute in Ihr Vereinigungsschema.
 
 Einverständnisrichtlinien bestehen aus zwei logischen Komponenten:
 
-* **[!UICONTROL If]**: The condition that will trigger the policy check. Dies kann auf einer bestimmten Marketing-Aktion, dem Vorhandensein bestimmter Datennutzungsbezeichnungen oder einer Kombination aus beiden basieren.
+* **[!UICONTROL Wenn]**: Die Bedingung, die die Richtlinienüberprüfung Trigger. Dies kann auf einer bestimmten Marketing-Aktion, dem Vorhandensein bestimmter Datennutzungsbezeichnungen oder einer Kombination aus beiden basieren.
 * **[!UICONTROL Dann]**: Die Zustimmungsattribute, die vorhanden sein müssen, damit ein Profil in die Aktion aufgenommen wird, die die Richtlinie ausgelöst hat.
 
 #### Bedingungen konfigurieren
 
-Under the **[!UICONTROL If]** section, select the marketing actions and/or data usage labels that should trigger this policy. Auswählen **[!UICONTROL Alle anzeigen]** und **[!UICONTROL Titel auswählen]** , um die vollständigen Listen der verfügbaren Marketing-Aktionen bzw. -Beschriftungen anzuzeigen.
+Unter dem **[!UICONTROL Wenn]** Wählen Sie die Marketing-Aktionen und/oder Datennutzungsbezeichnungen aus, die auf diese Richtlinie Trigger werden sollen. Auswählen **[!UICONTROL Alle anzeigen]** und **[!UICONTROL Titel auswählen]** , um die vollständigen Listen der verfügbaren Marketing-Aktionen bzw. -Beschriftungen anzuzeigen.
 
 Nachdem Sie mindestens eine Bedingung hinzugefügt haben, können Sie **[!UICONTROL Bedingung hinzufügen]** um weitere Bedingungen nach Bedarf hinzuzufügen, wählen Sie den entsprechenden Bedingungstyp aus der Dropdown-Liste aus.
 
@@ -108,9 +108,9 @@ Wenn Sie mehr als eine Bedingung auswählen, können Sie das zwischen ihnen ange
 
 ![](../images/policies/and-or-selection.png)
 
-#### Select consent attributes
+#### Zustimmungsattribute auswählen
 
-Unter dem **[!UICONTROL Dann]** Wählen Sie mindestens ein Zustimmungsattribut aus dem Vereinigungsschema aus. Dies ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die von dieser Richtlinie geregelt wird. You can choose one of the provided options from the list, or select **[!UICONTROL View all]** to choose the attribute directly from the union schema.
+Unter dem **[!UICONTROL Dann]** Wählen Sie mindestens ein Zustimmungsattribut aus dem Vereinigungsschema aus. Dies ist das Attribut, das vorhanden sein muss, damit Profile in die Aktion einbezogen werden, die von dieser Richtlinie geregelt wird. Sie können eine der bereitgestellten Optionen aus der Liste auswählen oder **[!UICONTROL Alle anzeigen]** , um das Attribut direkt aus dem Vereinigungsschema auszuwählen.
 
 Wählen Sie beim Auswählen des Zustimmungsattributs die Werte für das Attribut aus, nach dem diese Richtlinie geprüft werden soll.
 
@@ -128,9 +128,13 @@ Sie können der Richtlinie weiterhin beliebig Bedingungen und Zustimmungsattribu
 
 ![](../images/policies/name-and-save.png)
 
-The consent policy is now created, and its status is set to [!UICONTROL Disabled] by default. Um die Richtlinie sofort zu aktivieren, wählen Sie die **[!UICONTROL Status]** in der rechten Leiste ein-/ausschalten.
+Die Einwilligungsrichtlinie wird jetzt erstellt und ihr Status ist auf [!UICONTROL Behinderte] Standardmäßig. Um die Richtlinie sofort zu aktivieren, wählen Sie die **[!UICONTROL Status]** in der rechten Leiste ein-/ausschalten.
 
 ![](../images/policies/enable-consent-policy.png)
+
+#### Überprüfung der Richtliniendurchsetzung
+
+Nachdem Sie eine Einwilligungsrichtlinie erstellt und aktiviert haben, können Sie eine Vorschau davon anzeigen, wie sie sich auf Ihre einwilligten Zielgruppen auswirkt, wenn Sie Segmente für Ziele aktivieren. Siehe Abschnitt zu [Bewertung der Einwilligungsrichtlinie](../enforcement/auto-enforcement.md#consent-policy-evaluation) für weitere Informationen.
 
 ## Aktivieren oder Deaktivieren einer Richtlinie {#enable}
 
