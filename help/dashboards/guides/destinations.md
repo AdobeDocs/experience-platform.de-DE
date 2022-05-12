@@ -4,9 +4,9 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1962'
+source-wordcount: '2538'
 ht-degree: 2%
 
 ---
@@ -55,12 +55,19 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Nicht zugeordnete Segmente nach Identität]](#unmapped-segments-by-identity)
 * [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
+* [[!UICONTROL Zugewiesene Zielgruppen-Konsistenz]](#mapped-audience-health)
 * [[!UICONTROL Zielanzahl]](#destinations-count)
 * [[!UICONTROL Zielstatus]](#destination-status)
 * [[!UICONTROL Aktive Ziele nach Zielplattform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Aktivierte Zielgruppen für alle Ziele]](#activated-audiences-across-all-destinations)
 
 ### [!UICONTROL Am häufigsten verwendete Ziele] {#most-used-destinations}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mostuseddestinations"
+>title="Am häufigsten verwendete Ziele"
+>abstract="Dieses Widget zeigt die aktivsten Ziele Ihres Unternehmens nach der Anzahl der zugeordneten Segmente an. Diese Zahlen sind zum Zeitpunkt der letzten Momentaufnahme korrekt. Dieses Ranking bietet Einblicke, welche Ziele derzeit am häufigsten verwendet werden, während diejenigen hervorgehoben werden, die möglicherweise nicht ausreichend genutzt werden."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#most-used-destinations" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Am häufigsten verwendete Ziele]** -Widget zeigt die wichtigsten Ziele Ihres Unternehmens nach der Anzahl der zugeordneten Segmente ab dem letzten Schnappschuss an. Dieses Ranking bietet Einblicke, welche Ziele verwendet werden, und zeigt möglicherweise auch diejenigen, die möglicherweise nicht genutzt werden.
 
@@ -74,6 +81,12 @@ Wenn Sie den Namen eines Ziels aus der im Widget angezeigten Liste auswählen, g
 
 ### [!UICONTROL Kürzlich erstellte Ziele] {#recently-created-destinations}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlycreateddestinations"
+>title="Kürzlich erstellte Ziele"
+>abstract="Dieses Widget zeigt eine Liste der zuletzt konfigurierten Ziele in Ihrem Unternehmen an."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-created-destinations" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Die **[!UICONTROL Kürzlich erstellte Ziele]** -Widget können Sie eine Liste der zuletzt konfigurierten Ziele Ihres Unternehmens anzeigen.
 
 Das angezeigte Erstellungsdatum entspricht der letzten täglichen Momentaufnahme. Mit anderen Worten: Wenn Sie ein neues Ziel erstellen, wird es erst nach dem nächsten Schnappschuss in der Liste angezeigt.
@@ -86,7 +99,13 @@ Weitere Informationen zum Konfigurieren bestimmter Zieltypen finden Sie unter [D
 
 ### [!UICONTROL Kürzlich aktivierte Segmente] {#recently-activated-segments}
 
-Die **[!UICONTROL Kürzlich aktivierte Segmente]** -Widget stellt eine Liste der Segmente bereit, die einem Ziel zuletzt zugeordnet wurden. Diese Liste zeigt, welche Segmente und Ziele aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegments"
+>title="Kürzlich aktivierte Segmente"
+>abstract="Dieses Widget bietet eine Liste der Segmente, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments" text="Weitere Informationen finden Sie in der Dokumentation ."
+
+Die **[!UICONTROL Kürzlich aktivierte Segmente]** -Widget stellt eine Liste der Segmente bereit, die einem Ziel zuletzt zugeordnet wurden. Diese Liste enthält eine Momentaufnahme der Segmente und Ziele, die aktiv im System verwendet werden, und kann bei der Fehlerbehebung bei fehlerhaften Zuordnungen helfen.
 
 Das angezeigte aktualisierte Datum zeigt an, wann das Segment zuletzt für das Ziel aktiviert wurde, und ist für den letzten täglichen Schnappschuss korrekt. Wenn Sie also ein Segment für das Ziel aktivieren, ändert sich das aktualisierte Datum erst, nachdem der nächste Schnappschuss erstellt wurde.
 
@@ -98,6 +117,12 @@ Weitere Informationen zum Arbeiten mit Segmenten in Experience Platform erhalten
 
 ### [!UICONTROL Kürzlich aktivierte Segmente nach Ziel] {#recently-activated-segments-by-destination}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_recentlyactivatedsegmentsbydestination"
+>title="Kürzlich aktivierte Segmente nach Ziel"
+>abstract="Dieses Widget zeigt die fünf am häufigsten aktivierten Segmente in absteigender Reihenfolge entsprechend dem im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Ziel an."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#recently-activated-segments-by-destination" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Die **[!UICONTROL Kürzlich aktivierte Segmente nach Ziel]** -Widget zeigt die fünf am häufigsten aktivierten Segmente in absteigender Reihenfolge an, je nach dem im Dropdown-Menü &quot;Übersicht&quot;ausgewählten Ziel. Sie ähnelt dem [!UICONTROL Kürzlich aktivierte Segmente] Widget, aber die angezeigten Daten **only** gilt für das ausgewählte Ziel.
 
 Dieses Widget enthält zwei Metriken: den Segmentnamen und das Datum, an dem das Segment zuletzt für das Ziel aktiviert wurde. Die angezeigten Daten sind ab der letzten täglichen Momentaufnahme korrekt.
@@ -107,6 +132,12 @@ Sie können die Details eines Segments anzeigen, indem Sie den Namen eines Segme
 ![Kürzlich aktivierte Segmente nach Ziel-Widget.](../images/destinations/recently-activated-segments-by-destination.png)
 
 ### [!UICONTROL Zielgruppengrößentrend] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_audiencesizetrend"
+>title="Zielgruppengrößentrend"
+>abstract="Dieses Widget veranschaulicht die Anzahl der im Segment enthaltenen Profile, die täglich an das Zielkonto gesendet werden. Im ersten Dropdown-Menü wird der Zeitraum für den Zielgruppentrend angepasst. Im zweiten Widget-Dropdown-Menü wird das Segment für die Analyse ausgewählt. Das Ziel wird aus dem Dropdown-Menü Übersicht ausgewählt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Zielgruppengrößentrend]** Widget zeigt die Beziehung der Profilanzahl über einen bestimmten Zeitraum für ein Segment an, das diesem Zielkonto zugeordnet wurde. Das Widget verwendet ein Liniendiagramm, um die Anzahl der im Segment enthaltenen Profile zu veranschaulichen, die täglich an das Zielkonto gesendet werden.
 
@@ -122,6 +153,12 @@ Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine [!UICONTROL Unt
 
 ### [!UICONTROL Nicht zugeordnete Segmente nach Identität] {#unmapped-segments-by-identity}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_unmappedsegmentsbyidentity"
+>title="Nicht zugeordnete Segmente nach Identität"
+>abstract="Dieses Widget listet die fünf häufigsten **nicht zugeordnet** Segmente, die nach absteigender Identitätszahl für ein bestimmtes Ziel und eine bestimmte Identität sortiert sind. Die Filter-IDs, die im Widget-Dropdown-Menü aufgeführt sind, ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#unmapped-segments-by-identity" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Die **[!UICONTROL Nicht zugeordnete Segmente nach Identität]** Widget listet die fünf obersten **nicht zugeordnet** Segmente, die nach absteigender Identitätszahl für ein bestimmtes Ziel und eine bestimmte Identität sortiert sind. Es werden Segmente hervorgehoben, die basierend auf der ausgewählten ID dem ausgewählten Zielkonto am besten zugeordnet werden.
 
 Das Dropdown-Menü Ziel-ID filtert Ihre verfügbaren Segmente. Die im Dropdown-Menü aufgelisteten Filter-IDs ändern sich je nach dem Zielkonto, das oben auf der Übersichtsseite ausgewählt wurde.
@@ -132,13 +169,25 @@ Die Spalte &quot;Identitäten&quot;zählt die Anzahl der Quell-IDs innerhalb des
 
 ### [!UICONTROL Zugeordnete Segmente nach Identität] {#mapped-segments-by-identity}
 
-Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Segmente. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Segmenten sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die im Dropdown-Menü im Widget verfügbaren Ziel-IDs ändern sich entsprechend dem Zielkontofilter, der oben im Übersichts-Dashboard ausgewählt wird.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedsegmentsbyidentity"
+>title="Zugeordnete Segmente nach Identität"
+>abstract="Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Segmente. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Segmenten sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die in der Widget-Dropdown-Liste verfügbaren Ziel-IDs hängen vom oben im Übersichts-Dashboard ausgewählten Ziel ab."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-segments-by-identity" text="Weitere Informationen finden Sie in der Dokumentation ."
+
+Dieses Widget bietet die fünf wichtigsten Listen von **zugeordnet** Segmente. Die Liste wird von oben nach unten entsprechend der Anzahl der Quell-IDs in den Segmenten sortiert. Die zu zählende Ziel-ID wird aus dem Dropdown-Menü unter dem Widget-Titel ausgewählt. Die Ziel-IDs, die über die Dropdown-Liste im Widget verfügbar sind, ändern sich entsprechend dem Zielkontofilter, der oben im Übersichts-Dashboard ausgewählt wird.
 
 ![Zugeordnete Segmente nach Identitäts-Widget.](../images/destinations/mapped-segments-by-identity.png)
 
 Die **[!UICONTROL Zugeordnete Segmente nach Identität]** Widget hebt auf einen Blick die Wahrscheinlichkeit eines erfolgreichen Targetings von Profilmöglichkeiten für eine Kampagne innerhalb des ausgewählten Ziels hervor. Eine effiziente zielgerichtete Kampagne hängt nicht von der Anzahl der an das Ziel gesendeten Profile ab, sondern von der Anzahl der Quell-IDs, die wahrscheinlich mit den Ziel-IDs abgeglichen werden, um nützliche und umsetzbare Daten bereitzustellen.
 
-### Häufige Zielgruppen
+### Häufige Zielgruppen {#common-audiences}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_commonaudiences"
+>title="Häufige Zielgruppen"
+>abstract="Dieses Widget bietet eine Liste der fünf wichtigsten Segmente, die für das am oberen Seitenrand ausgewählte Zielkonto aktiviert wurden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Segmente wird nach der kürzlich aktivierten Funktion geordnet. Das zuletzt aktivierte Segment wird oben angezeigt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html?lang=en#common-audiences" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Häufige Zielgruppen]** Widget bietet eine Liste der fünf wichtigsten Segmente, die für das am oberen Rand der Seite ausgewählte Zielkonto aktiviert wurden, sowie das im Widget-Dropdown-Menü ausgewählte Ziel. Die Liste der Segmente wird nach der kürzlich aktivierten Funktion geordnet. Das zuletzt aktivierte Segment wird oben angezeigt.
 
@@ -146,7 +195,13 @@ Die [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtanzahl der Profile jedes aufg
 
 ![Das Widget Allgemeine Zielgruppen .](../images/destinations/common-audiences.png)
 
-### Zugewiesene Zielgruppen-Konsistenz
+### Zugewiesene Zielgruppen-Konsistenz {#mapped-audience-health}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_mappedaudiencehealth"
+>title="Zugewiesene Zielgruppen-Konsistenz"
+>abstract="Dieses Widget bietet eine Liste von bis zu 20 zugeordneten Segmenten, deren Gesamtprofilzahlen um einen Faktor von mindestens einer Standardabweichung von der 30-Tage-Mittelwert der Zielgruppengröße abweichen, die diesem Ziel zugeordnet ist. Es bietet eine berechnete Metrik für die Verteilung der Zielgruppengrößen aus dem Mittelwert über die letzten 30 Tage. Die Zielgruppengrößen werden von hoch bis niedrig sortiert."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#mapped-audience-health" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Das Widget bietet eine Liste von bis zu 20 zugeordneten Segmenten, deren Gesamtprofilanzahl ab dem letzten täglichen Schnappschuss um einen Faktor von mindestens einer Standardabweichung von der 30-Tage-Mittelwert der Zielgruppengröße abweicht, die diesem Ziel zugeordnet ist.
 
@@ -161,6 +216,12 @@ Wenn ein Segment innerhalb der [!UICONTROL Zugewiesene Zielgruppen-Konsistenz] -
 ![Das Widget zur Zuordnungszielgruppe.](../images/destinations/mapped-audience-health.png)
 
 ### [!UICONTROL Zielanzahl] {#destinations-count}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_destinations_destinationscount"
+>title="Zielanzahl"
+>abstract="Dieses Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#destinations-count" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Zielanzahl] Widget stellt die Gesamtzahl der verfügbaren Endpunkte bereit, an denen eine Zielgruppe im System aktiviert und bereitgestellt werden kann. Diese Zahl umfasst sowohl aktive als auch inaktive Ziele.
 

@@ -4,10 +4,10 @@ title: Segmente-Dashboard
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: b4cd7bc0d8c038346aacdda7c4c9def12864065c
+source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 5%
+source-wordcount: '1491'
+ht-degree: 4%
 
 ---
 
@@ -77,6 +77,12 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 
 ### [!UICONTROL Zielgruppengröße] {#audience-size}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesize"
+>title="Zielgruppengröße"
+>abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments an. Diese Zahl hängt von der auf Ihre Daten angewendeten Zusammenführungsrichtlinie ab und ist zum Zeitpunkt der letzten Momentaufnahme korrekt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Die **[!UICONTROL Zielgruppengröße]** Widget zeigt die Gesamtzahl der zusammengeführten Profile innerhalb des ausgewählten Segments zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der Anwendung der Segmentzusammenführungsrichtlinie auf Ihre Profildaten, um Profilfragmente zu einem einzigen Profil für jede Person im Segment zusammenzuführen.
 
 Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
@@ -85,9 +91,15 @@ Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_identityoverlap"
+>title="Identitätsüberschneidung"
+>abstract="Dieses Widget zeigt die Überschneidung von Profilen in Ihrem Segment, die beide ausgewählte Identitäten enthalten. Die Kreise zeigen die relative Größe jeder Identität an. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch die Überlappung der Kreise dargestellt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#identity-overlap" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 Die **[!UICONTROL Identitätsüberschneidung]** -Widget zeigt ein Venn-Diagramm oder ein Set-Diagramm an, das die Überschneidung von Profilen in Ihrem Segment mit mehreren Identitäten anzeigt.
 
-Nachdem Sie die zu vergleichenden Identitäten mithilfe der Dropdown-Menüs im Widget ausgewählt haben, werden Kreise angezeigt, die die relative Größe jeder Identität anzeigen. Die Anzahl der Profile, die beide Namespaces enthalten, wird durch die Größe der Überschneidung zwischen den Kreisen dargestellt.
+Verwenden Sie die Dropdown-Menüs im Widget, um die Identitäten auszuwählen, die Sie vergleichen möchten. Die Kreise zeigen die relative Größe jeder ausgewählten Identität an, wobei die Anzahl der Profile, die beide Namespaces enthalten, durch die Größe der Überschneidung zwischen den Kreisen dargestellt wird.
 
 Wenn ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Identitäten zugeordnet. Daher ist es wahrscheinlich, dass Ihr Unternehmen über mehrere Profile verfügt, die Fragmente aus mehr als einer Identität enthalten.
 
@@ -97,7 +109,13 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 
 ### [!UICONTROL Profile nach Identität] {#profiles-by-identity}
 
-Die **[!UICONTROL Profile nach Identität]** -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem ausgewählten Segment hinweg an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile im Segment, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass das Addieren der für jede Identität angezeigten Werte mehr als die gesamte Zielgruppengröße im Segment ausmacht, da bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_profilesbyidentity"
+>title="Profile nach Identität"
+>abstract="Dieses Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrem ausgewählten Segment an."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#profiles-by-identity" text="Weitere Informationen finden Sie in der Dokumentation ."
+
+Die **[!UICONTROL Profile nach Identität]** Widget zeigt die Aufschlüsselung der Identitäten für jedes zusammengeführte Profil in Ihrem ausgewählten Segment an. Die Gesamtzahl der Profile nach Identität kann höher sein als die Gesamtzahl der Profile im Segment, da einem Profil mehrere Identitäten zugeordnet sein können. Das heißt, dass das Addieren der für jede Identität angezeigten Werte mehr als die gesamte Zielgruppengröße im Segment ausmacht, da bei der Interaktion eines Kunden mit Ihrer Marke auf mehr als einem Kanal mehrere Identitäten mit diesem einzelnen Kunden verknüpft werden können.
 
 Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
 
@@ -115,9 +133,23 @@ Die [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] Widget bietet eine Tab
 
 ### [!UICONTROL Zielgruppengrößentrend] {#audience-size-trend}
 
-Die [!UICONTROL Zielgruppengrößentrend] Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die den Kriterien von **any** Segmentdefinition über einen bestimmten Zeitraum. Der Trend zur Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Zielgruppengrößentrend"
+>abstract="Dieses Widget enthält Informationen zur Gesamtanzahl der Profile, die den Kriterien von **any** Segmentdefinition, die während der täglichen Momentaufnahme für die letzten 30 Tage, 90 Tage oder 12 Monate erfasst wurde."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Weitere Informationen finden Sie in der Dokumentation ."
 
-![Das Trend-Widget zur Zielgruppengröße .](../images/segments/audience-size-trend.png)
+Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die den Kriterien von **any** Segmentdefinition über einen bestimmten Zeitraum. Der Trend zur Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
+
+Dieses Widget enthält auch die automatische [!UICONTROL Untertitel] Funktion, bei der ein maschinelles Lernmodell die Diagramm- und Segmentdaten analysiert und automatisch Beschriftungen generiert, um die wichtigsten Trends und Ereignisse zu beschreiben. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
+
+![In der Segmentübersicht wird das Trend-Widget zur Zielgruppengröße angezeigt.](../images/segments/audience-size-trend-captions.png)
+
+Das Dialogfeld für automatische Beschriftungen wird geöffnet und bietet Einblicke in Ihre Daten.
+
+![Das Dialogfeld für automatische Beschriftungen für das Trend-Widget zur Zielgruppengröße.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Weiterführende Informationen zur Segmentauswertung und zur Qualifizierung und Ausstieg von Profilen finden Sie im Abschnitt [Dokumentation zum Segmentierungsdienst](../../segmentation/home.md).
 
 ### [!UICONTROL Trend zur Änderung der Zielgruppengröße] {#audience-size-change-trend}
 
