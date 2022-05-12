@@ -2,16 +2,16 @@
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
 workflow-type: tm+mt
-source-wordcount: '2708'
+source-wordcount: '2802'
 ht-degree: 23%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 27. April 2022**
+**Versionsdatum: 27. April 2022**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -32,8 +32,10 @@ Dashboards bieten vorkonfigurierte Berichtsoptionen für die Daten Ihres Unterne
 
 Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboards verfügbar. Weitere Informationen finden Sie in der Dokumentation zu [Hinzufügen von Widgets über die Widget-Bibliothek](../../dashboards/customize/widget-library.md).
 
-| Funktion | Dashboard | Beschreibung |
-| --------------------------------------------------------- | ------------- | ----------- |
+**Neue Widgets**
+
+| Widget | Dashboard | Beschreibung |
+| ------ | --------- | ----------- |
 | [!UICONTROL Hinzugefügte Trends bei Profilen] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtanzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
 | [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] | Profile | Dieses Widget zeigt die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen in einer einzelnen Metrik an und verwendet ein doppeltes Diagramm, um den proportionalen Unterschied zwischen den Summen zu veranschaulichen. |
 | [!UICONTROL Zielgruppengröße] | Profile | Dieses Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen auflistet. Die Liste hängt von der angewendeten und von oben nach unten sortierten Zusammenführungsrichtlinie ab, die der Gesamtzahl der Zielgruppen entspricht. |
@@ -46,6 +48,12 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 | [!UICONTROL Zielgruppengrößentrend] | Segmente | Dieses Widget bietet eine grafische Darstellung der Gesamtanzahl der Profile, die die Kriterien einer Segmentdefinition über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten erfüllen. |
 | [!UICONTROL Trend zur Änderung der Zielgruppengröße] | Segmente | Dieses Widget bietet eine Liniendiagramm, die die Differenz in der Gesamtzahl der Profile anzeigt, die sich für ein bestimmtes Segment zwischen den letzten täglichen Momentaufnahmen qualifiziert haben. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
 | [!UICONTROL Trend zur Zielgruppengröße nach Identität] | Segmente | Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf einem ausgewählten Identitätstyp. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+
+**Neue Funktionen**
+
+| Funktion | Dashboard | Beschreibung |
+| ------- | --------- | ----------- |
+| Bereinigung der Mitgliedschaft in verwaisten Profilsegmenten | Profile und Lizenznutzung | Der Profildienst entfernt jetzt täglich leftover-Segment-Mitglieder, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version leftover Segmentfragmente enthielten. |
 
 Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)und [[!DNL Segments]](../../dashboards/guides/segments.md) Dashboards.
 
@@ -198,8 +206,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die [!DNL OneTrust Integration] Quelle zur Aufnahme von Einwilligungs- und Voreinstellungsdaten aus Ihrer [!DNL OneTrust] -Konto auf Platform. Weitere Informationen finden Sie in der Dokumentation unter [Erstellen einer [!DNL OneTrust Integration] Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md) für weitere Informationen. |
+| Unterstützung für [!DNL OneTrust Integration] | Sie können jetzt die [!DNL OneTrust Integration] Quelle zur Aufnahme von Einwilligungs- und Voreinstellungsdaten aus Ihrer [!DNL OneTrust] -Konto auf Platform. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL OneTrust Integration] -Quellverbindung](../../sources/connectors/consent-and-preferences/onetrust.md). |
 | Unterstützung für [!DNL Square] | Sie können jetzt die [!DNL Square] -Quelle, um Zahlungsdaten von Ihrer [!DNL Square] -Konto auf Platform. |
 | Unterstützung für das Löschen von Datenflüssen für Kundenattribute | Sie können jetzt mit dem Quell-Connector für Kundenattribute erstellte Datenflüsse löschen. |
 
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
