@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2707'
-ht-degree: 24%
+source-wordcount: '2804'
+ht-degree: 23%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 27. April 2022**
+**Versionsdatum: 27. April 2022**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -32,8 +32,10 @@ Dashboards bieten vorkonfigurierte Berichtsoptionen für die Daten Ihres Unterne
 
 Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboards verfügbar. Weitere Informationen finden Sie in der Dokumentation zu [Hinzufügen von Widgets über die Widget-Bibliothek](../../dashboards/customize/widget-library.md).
 
-| Funktion | Dashboard | Beschreibung |
-| --------------------------------------------------------- | ------------- | ----------- |
+**Neue Widgets**
+
+| Widget | Dashboard | Beschreibung |
+| ------ | --------- | ----------- |
 | [!UICONTROL Hinzugefügte Trends bei Profilen] | Profile | Dieses Widget verwendet ein Liniendiagramm, um die Gesamtanzahl der zusammengeführten Profile zu veranschaulichen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. |
 | [!UICONTROL Zielgruppen, die dem Zielstatus zugeordnet sind] | Profile | Dieses Widget zeigt die Gesamtzahl der zugeordneten und nicht zugeordneten Zielgruppen in einer einzelnen Metrik an und verwendet ein doppeltes Diagramm, um den proportionalen Unterschied zwischen den Summen zu veranschaulichen. |
 | [!UICONTROL Zielgruppengröße] | Profile | Dieses Widget bietet eine zweispaltige Tabelle, die bis zu 20 Segmente und die Gesamtzahl der in den einzelnen Segmenten enthaltenen Zielgruppen auflistet. Die Liste hängt von der angewendeten und von oben nach unten sortierten Zusammenführungsrichtlinie ab, die der Gesamtzahl der Zielgruppen entspricht. |
@@ -46,6 +48,14 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 | [!UICONTROL Zielgruppengrößentrend] | Segmente | Dieses Widget bietet eine grafische Darstellung der Gesamtanzahl der Profile, die die Kriterien einer Segmentdefinition über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten erfüllen. |
 | [!UICONTROL Trend zur Änderung der Zielgruppengröße] | Segmente | Dieses Widget bietet eine Liniendiagramm, die die Differenz in der Gesamtzahl der Profile anzeigt, die sich für ein bestimmtes Segment zwischen den letzten täglichen Momentaufnahmen qualifiziert haben. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
 | [!UICONTROL Trend zur Zielgruppengröße nach Identität] | Segmente | Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf einem ausgewählten Identitätstyp. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
+
+**Neue Funktionen**
+
+| Funktion | Dashboard | Beschreibung |
+| ------- | --------- | ----------- |
+| Bereinigung der Mitgliedschaft in verwaisten Profilsegmenten | Profile und Lizenznutzung | Der Profildienst entfernt jetzt täglich leftover-Segment-Mitglieder, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version leftover Segmentfragmente enthielten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)und [[!DNL Segments]](../../dashboards/guides/segments.md) Dashboards.
 

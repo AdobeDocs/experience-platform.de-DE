@@ -2,9 +2,9 @@
 title: Adobe Experience Platform - Versionshinweise, April 2022
 description: Die Versionshinweise für Adobe Experience Platform vom April 2022.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 1f5c21e09e471ac0d6f1d98e219e06e571ede89f
+source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
 workflow-type: tm+mt
-source-wordcount: '2802'
+source-wordcount: '2805'
 ht-degree: 23%
 
 ---
@@ -49,11 +49,13 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 | [!UICONTROL Trend zur Änderung der Zielgruppengröße] | Segmente | Dieses Widget bietet eine Liniendiagramm, die die Differenz in der Gesamtzahl der Profile anzeigt, die sich für ein bestimmtes Segment zwischen den letzten täglichen Momentaufnahmen qualifiziert haben. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
 | [!UICONTROL Trend zur Zielgruppengröße nach Identität] | Segmente | Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf einem ausgewählten Identitätstyp. Der Zeitraum der Trendanalyse kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. |
 
-**Neue Funktionen**
+**Neue Funktionen** {#new-features}
 
 | Funktion | Dashboard | Beschreibung |
 | ------- | --------- | ----------- |
 | Bereinigung der Mitgliedschaft in verwaisten Profilsegmenten | Profile und Lizenznutzung | Der Profildienst entfernt jetzt täglich leftover-Segment-Mitglieder, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version leftover Segmentfragmente enthielten. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weitere Informationen finden Sie in der Dokumentation zu [[!DNL Profiles]](../../dashboards/guides/profiles.md), [[!DNL Destinations]](../../dashboards/guides/destinations.md)und [[!DNL Segments]](../../dashboards/guides/segments.md) Dashboards.
 
