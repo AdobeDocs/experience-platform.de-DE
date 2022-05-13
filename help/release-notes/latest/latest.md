@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a80f011dc8a6e10d1d311bc85029fa9f57d8b4ab
+source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
 workflow-type: tm+mt
-source-wordcount: '2804'
-ht-degree: 23%
+source-wordcount: '2916'
+ht-degree: 25%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 23%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
 - [Datenflüsse](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
 - [Ziele](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
-- [[!DNL Intelligent Services]](#intelligent-services)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Quellen](#sources)
 
@@ -171,17 +171,31 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 Weitere Informationen zu XDM in Platform finden Sie unter [XDM-System - Übersicht](../../xdm/home.md).
 
-## [!DNL Intelligent Services] {#intelligent-services}
+## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich wären.
+Mit KI-/ML-Diensten können Marketing-Analysten und Praktiker die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich wären.
 
-Mit Attribution AI und Customer AI können Kunden erweiterte KI-/ML-Modelle für die Marketing-Attribution und die Kundenneigung konfigurieren. Mit der Funktion für mehrere Datensätze können Kunden zum Zeitpunkt der Modellkonfiguration mehrere Datensätze einbringen, ohne dass Daten im Voraus zugeordnet und vorbereitet werden müssen.
+### Attributions-KI
+
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können die Identitätszuordnung und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identitäts-Namespace für alle Datensätze gibt. Attribution AI unterstützt die folgenden Schemata: Adobe Analytics, Experience Event, Consumer Experience Event. Customer AI unterstützt alle diese Schemas sowie das Adobe Audience Manager-Schema. Weiterführende Informationen zur Unterstützung mehrerer Datensätze in Attribution AI und Customer AI finden Sie im Abschnitt [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md) und [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können die Identitätszuordnung und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identitäts-Namespace für alle Datensätze gibt. Attribution AI unterstützt die folgenden Schemata: Adobe Analytics, Experience Event, Consumer Experience Event. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attribution AI finden Sie im Abschnitt [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md). |
+
+Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
+
+### Kunden-KI
+
+Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile in gewünschten Umfang benutzerdefinierte Neigungswerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ------- | ----------- |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können die Identitätszuordnung und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identitäts-Namespace für alle Datensätze gibt. Customer AI unterstützt die folgenden Schemas: Adobe Analytics, Experience Event, Consumer Experience Event und das Adobe Audience Manager-Schema. Weitere Informationen zur Unterstützung von mehreren Datensätzen in Customer AI finden Sie im Abschnitt [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Neue Modellbewertungsmetriken in Customer AI | Neue Gewinndiagramme in Customer AI ermöglichen es Marketing-Experten, die Gruppengröße für das Targeting anhand ihres Budgets und ihrer ROI-Ziele zu bestimmen. In neuen Steigerungsdiagrammen wird die Qualität des Modells gemessen, was eine bessere Sichtbarkeit der Steigerung ermöglicht, die sie gegenüber zufälligem Targeting erhalten würden. Weitere Informationen finden Sie unter [Einblicke in Customer AI](../../intelligent-services/customer-ai/user-guide/discover-insights.md) Dokument. |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
