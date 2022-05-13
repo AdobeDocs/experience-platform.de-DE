@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Handbuch zu Datenflüssen
 user-guide-description: Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben.
 feature: Dataflows
-source-git-commit: 054ef0833f83a737df5ee05a3af68bc78c16f4eb
+source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 80%
+source-wordcount: '63'
+ht-degree: 69%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 80%
    - [Sortieren und Filtern von API-Antworten](./api/sort-and-filter.md)
 - UI-Handbücher {#ui}
    - [Überwachen von Datenflüssen in Quellen](./ui/monitor-sources.md)
+   - [Überwachen von Datenflüssen in Identitäten](./ui/monitor-identities.md)
+   - [Überwachen von Datenflüssen in Profilen](./ui/monitor-profiles.md)
    - [Überwachen von Datenflüssen in Segmenten](./ui/monitor-segments.md)
    - [Überwachen von Datenflüssen in Zielen](./ui/monitor-destinations.md)
    - B2B-Überwachung {#b2b}

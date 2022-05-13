@@ -6,10 +6,10 @@ title: Überwachen von Datenflüssen für Quellen in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: ee9ed1c17a566f37b4ad79df7c66f8b2ffb4b879
+source-git-commit: ed88ebe7822f60ace2babd7d5a04d2d92d83cf49
 workflow-type: tm+mt
-source-wordcount: '1862'
-ht-degree: 9%
+source-wordcount: '1069'
+ht-degree: 17%
 
 ---
 
@@ -31,10 +31,10 @@ Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe 
 
 * [Datenflüsse](../home.md): Datenflüsse sind eine Darstellung von Datenvorgängen, die Daten über Platform verschieben. Datenflüsse werden über verschiedene Dienste hinweg konfiguriert und helfen beim Verschieben von Daten aus Quell-Connectoren in Zieldatensätze, in [!DNL Identity] und [!DNL Profile] sowie in [!DNL Destinations].
    * [Datenfluss-Abläufe](../../sources/notifications.md): Datenfluss-Ausführungen sind die wiederkehrenden geplanten Aufträge, die auf der Frequenzkonfiguration ausgewählter Datenflüsse basieren.
-* [Quellen](../../sources/home.md): Experience Platform ermöglicht die Erfassung von Daten aus verschiedenen Quellen und bietet Ihnen gleichzeitig die Möglichkeit, eingehende Daten mithilfe von Platform-Diensten zu strukturieren, zu beschriften und zu erweitern.
-* [Identity Service](../../identity-service/home.md): Sorgt für eine bessere Darstellung einzelner Kunden und deren Verhalten, indem Identitäten zwischen Geräten und Systemen überbrückt werden.
+* [Quellen](../../sources/home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
+* [Identity Service](../../identity-service/home.md): Verschaffen Sie sich einen besseren Überblick über einzelne Kunden und deren Verhalten, indem Sie Identitäten geräte- und systemübergreifend verknüpfen.
 * [Echtzeit-Kundenprofil](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Anwendungen für digitale Erlebnisse entwickeln und weiterentwickeln können.
+* [Sandboxes](../../sandboxes/home.md): Experience Platform bietet virtuelle Sandboxes, die eine einzelne Platform-Instanz in separate virtuelle Umgebungen unterteilen, damit Sie Programme für digitale Erlebnisse entwickeln und weiterentwickeln können.
 
 ## Aggregierte Monitoring-Ansicht {#aggregated-monitoring-view}
 
@@ -130,102 +130,9 @@ Sie können das Breadcrumb-System oben in der Kopfzeile verwenden, um zurück zu
 
 ![Breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
 
-## Dienstübergreifende Überwachung {#cross-service-monitoring}
-
-Der obere Teil des Dashboards enthält eine Darstellung des Aufnahmeflusses von der Quellebene bis [!DNL Identity Service]und [!DNL Profile]. Jede Zelle enthält eine Punktmarke, die das Vorhandensein von Fehlern anzeigt, die in dieser Aufnahmephase aufgetreten sind. Ein grüner Punkt bedeutet eine fehlerfreie Aufnahme, während ein roter Punkt bedeutet, dass in dieser bestimmten Aufnahmephase ein Fehler aufgetreten ist.
-
-![dienstübergreifende Überwachung](../assets/ui/monitor-sources/cross-service-monitoring.png)
-
-Suchen Sie auf der Seite &quot;Datenflüsse&quot;einen erfolgreichen Datenfluss und wählen Sie das Filtersymbol aus. ![filter](../assets/ui/monitor-sources/filter.png) daneben, um die Ausführungsinformationen des Datenflusses anzuzeigen.
-
-![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
-
-Die [!UICONTROL Quellaufnahme] -Seite enthält Informationen, die die erfolgreiche Erfassung Ihres Datenflusses bestätigen. Von hier aus können Sie die Überwachung der Journey Ihres Datenflusses von der Quellebene bis [!DNL Identity Service]und dann [!DNL Profile].
-
-Auswählen **[!UICONTROL Identitäten]** , um die Aufnahme in der [!UICONTROL Identitäten] Bühne.
-
-![sources](../assets/ui/monitor-sources/sources.png)
-
-### [!DNL Identity] Metriken {#identity-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_identity_processing"
->title="Identitätsverarbeitung"
->abstract="Die Ansicht zur Identitätsverarbeitung enthält Informationen zu den Datensätzen, die für den Identity-Dienst erfasst werden, einschließlich der Anzahl der hinzugefügten Identitäten, der erstellten Diagramme und der aktualisierten Diagramme. Weitere Informationen zu Metriken und Diagrammen finden Sie im Handbuch zur Metrikdefinition ."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_identity"
->title="Datenfluss-Ausführungsdetails"
->abstract="Auf der Seite mit den Ausführungsdetails des Datenflusses werden weitere Informationen zu Ihrem Identity-Datenfluss-Lauf angezeigt, einschließlich der IMS-Organisations-ID und der Kennung des Datenflusses."
-
-Die [!UICONTROL Identitätsverarbeitung] Seite enthält Informationen zu Datensätzen, die in [!DNL Identity Service], einschließlich der Anzahl hinzugefügter Identitäten, erstellter Diagramme und aktualisierter Diagramme.
-
-Filtersymbol auswählen ![filter](../assets/ui/monitor-sources/filter.png) neben der Startzeit des Datenflusses, um weitere Informationen zu Ihrer [!DNL Identity] dataflow ausführen.
-
-![identities](../assets/ui/monitor-sources/identities.png)
-
-| Identitätsmetriken | Beschreibung |
-| ---------------- | ----------- |
-| [!UICONTROL Erhaltene Aufzeichnungen] | Anzahl der von [!DNL Data Lake]. |
-| [!UICONTROL Fehlgeschlagene Datensätze] | Die Anzahl der Datensätze, die aufgrund von Fehlern in den Daten nicht in Platform erfasst wurden. |
-| [!UICONTROL Übersprungene Datensätze] | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Identity Service] weil in der Datensatzzeile nur eine Kennung vorhanden war. |
-| [!UICONTROL Aufgenommene Datensätze] | Anzahl der erfassten Datensätze in [!DNL Identity Service]. |
-| [!UICONTROL Datensätze insgesamt] | die Gesamtzahl aller Datensätze, einschließlich fehlgeschlagener Datensätze, übersprungener Datensätze, [!DNL Identities] hinzugefügt und duplizierte Datensätze. |
-| [!UICONTROL Hinzugefügte Identitäten] | Die Anzahl neuer Kennungen, die zu [!DNL Identity Service]. |
-| [!UICONTROL Erstellte Diagramme] | Die Anzahl neuer Identitätsdiagramme, die in erstellt wurden. [!DNL Identity Service]. |
-| [!UICONTROL Diagramme aktualisiert] | Die Anzahl vorhandener Identitätsdiagramme, die mit neuen Edges aktualisiert wurden. |
-| [!UICONTROL Fehlgeschlagene Datenfluss-Ausführungen] | Die Anzahl der fehlgeschlagenen Datenflüsse. |
-| [!UICONTROL Verarbeitungszeit] | Der Zeitstempel vom Beginn der Aufnahme bis zum Abschluss. |
-| [!UICONTROL Status] | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
-
-Die [!UICONTROL Datenfluss-Ausführungsdetails] Seite zeigt weitere Informationen zu Ihrer [!DNL Identity] dataflow-Ausführung, einschließlich der Kennung der IMS-Organisation und der Ausführungskennung des Datenflusses. Auf dieser Seite werden auch der entsprechende Fehlercode und die entsprechende Fehlermeldung angezeigt, die von [!DNL Identity Service], falls im Aufnahmeprozess Fehler auftreten sollten.
-
-Auswählen **[!UICONTROL Start ausführen: 14.02.2021, 21.47 Uhr]** , um zur vorherigen Seite zurückzukehren.
-
-![identities-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
-
-Aus dem [!UICONTROL Identitätsverarbeitung] Seite, wählen Sie **[!UICONTROL Profile]** um den Status der Datensatzaufnahme im [!UICONTROL Profile] Bühne.
-
-![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
-
-### [!DNL Profile] Metriken {#profile-metrics}
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_profile_processing"
->title="Profilverarbeitung"
->abstract="Die Ansicht Profilverarbeitung enthält Informationen zu den Datensätzen, die für den Profil-Dienst erfasst werden, einschließlich der Anzahl der erstellten Profilfragmente, der aktualisierten Profilfragmente und der Gesamtzahl der Profilfragmente."
->text="Learn more in documentation"
-
->[!CONTEXTUALHELP]
->id="platform_monitoring_dataflow_run_details_profile"
->title="Datenfluss-Ausführungsdetails"
->abstract="Auf der Seite mit den Ausführungsdetails des Datenflusses werden weitere Informationen zu Ihrem Profil-Datenfluss angezeigt, einschließlich der IMS-Organisations-ID und der Kennung des Datenflusses."
-
-Die [!UICONTROL Profilverarbeitung] Seite enthält Informationen zu Datensätzen, die in [!DNL Profile], einschließlich der Anzahl der erstellten Profilfragmente, der aktualisierten Profilfragmente und der Gesamtzahl der Profilfragmente.
-
-Filtersymbol auswählen ![filter](../assets/ui/monitor-sources/filter.png) neben der Startzeit des Datenflusses, um weitere Informationen zu Ihrer [!DNL Profile] dataflow ausführen.
-
-![profiles](../assets/ui/monitor-sources/profiles.png)
-
-| Profilmetriken | Beschreibung |
-| --------------- | ----------- |
-| [!UICONTROL Erhaltene Aufzeichnungen] | Anzahl der von [!DNL Data Lake]. |
-| [!UICONTROL Fehlgeschlagene Datensätze ] | Die Anzahl der Datensätze, die erfasst wurden, jedoch nicht in [!DNL Profile] aufgrund von Fehlern. |
-| [!UICONTROL Profilfragmente hinzugefügt] | Die Zahl der neuen Nettoempfänger [!DNL Profile] Fragmente hinzugefügt. |
-| [!UICONTROL Profilfragmente aktualisiert] | Die Anzahl der vorhandenen [!DNL Profile] Fragmente aktualisiert |
-| [!UICONTROL Profilfragmente insgesamt] | Die Gesamtzahl der in [!DNL Profile], einschließlich aller vorhandenen [!DNL Profile] Fragmente aktualisiert und neu [!DNL Profile] erstellte Fragmente. |
-| [!UICONTROL Fehlgeschlagene Datenfluss-Ausführungen] | Die Anzahl der fehlgeschlagenen Datenflüsse. |
-| [!UICONTROL Verarbeitungszeit] | Der Zeitstempel vom Beginn der Aufnahme bis zum Abschluss. |
-| [!UICONTROL Status] | Definiert den Gesamtstatus eines Datenflusses. Mögliche Statuswerte sind: <ul><li>`Success`: Gibt an, dass ein Datenfluss aktiv ist und Daten gemäß dem festgelegten Zeitplan erfasst.</li><li>`Failed`: Gibt an, dass der Aktivierungsprozess eines Datenflusses aufgrund von Fehlern unterbrochen wurde. </li><li>`Processing`: Gibt an, dass der Datenfluss noch nicht aktiv ist. Dieser Status tritt oft unmittelbar nach der Erstellung eines neuen Datenflusses auf.</li></ul> |
-
-Die [!UICONTROL Datenfluss-Ausführungsdetails] Seite zeigt weitere Informationen zu Ihrer [!DNL Profile] dataflow-Ausführung, einschließlich der Kennung der IMS-Organisation und der Ausführungskennung des Datenflusses. Auf dieser Seite werden auch der entsprechende Fehlercode und die entsprechende Fehlermeldung angezeigt, die von [!DNL Profile], falls im Aufnahmeprozess Fehler auftreten sollten.
-
-![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
-
 ## Nächste Schritte {#next-steps}
 
-Durch Befolgen dieses Tutorials haben Sie den Datenfluss der Aufnahme erfolgreich von der Quellebene bis hin zu [!DNL Identity Service]und [!DNL Profile], wobei **[!UICONTROL Überwachung]** Dashboard. Sie haben auch erfolgreich Fehler identifiziert, die zum Fehlschlagen von Datenflüssen während des Aufnahmevorgangs beigetragen haben. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Durch Befolgen dieses Tutorials haben Sie den Datenfluss der Aufnahme von der Quellebene mithilfe der Variablen **[!UICONTROL Überwachung]** Dashboard. Sie haben auch erfolgreich Fehler identifiziert, die zum Fehlschlagen von Datenflüssen während des Aufnahmevorgangs beigetragen haben. Weiterführende Informationen finden Sie in folgenden Dokumenten:
 
-* [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md)
-* [Data Science Workspace – Übersicht](../../data-science-workspace/home.md)
+* [Identitäten in Datenflüssen überwachen](./monitor-identities.md)
+* [Profile in Datenflüssen überwachen](./monitor-profiles.md)
