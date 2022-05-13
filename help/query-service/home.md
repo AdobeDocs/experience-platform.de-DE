@@ -5,7 +5,7 @@ title: Query Service – Übersicht
 topic-legacy: overview
 description: Dieses Dokument gibt einen Überblick über die Rolle von Query Service in Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: 796460be52b465216cdc69d45aa38ac80aa3516d
+source-git-commit: c09a7a6198bf1ef3f94e53bdbdf3b0b93f6b2bd1
 workflow-type: tm+mt
 source-wordcount: '722'
 ht-degree: 87%
@@ -42,7 +42,7 @@ Mit in Adobe Experience Platform [!DNL Segmentation Service] können Benutzer ih
 
 ### Abbruch beim Adobe Analytics-Durchsuchen
 
-Diese [Beispiel für abgebrochene Suche - Zentren für die Verwendung von Adobe [!DNL Analytics]](./use-cases/abandoned-cart.md) Daten, um eine bestimmte umsetzbare Zielgruppe zu erstellen. [!DNL Query Service] berücksichtigt komplexe Logik für die Segmentierung, um verschiedene personalisierte Attribute zur nachgelagerten Verwendung zu berechnen oder die Erstellung Ihrer Segmente erheblich zu vereinfachen.
+Diese [Beispiel für abgebrochene Suche - Zentren für die Verwendung von Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) Daten, um eine bestimmte umsetzbare Zielgruppe zu erstellen. [!DNL Query Service] berücksichtigt komplexe Logik für die Segmentierung, um verschiedene personalisierte Attribute zur nachgelagerten Verwendung zu berechnen oder die Erstellung Ihrer Segmente erheblich zu vereinfachen.
 
 ### Looker BI-Dashboards
 

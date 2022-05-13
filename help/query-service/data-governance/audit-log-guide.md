@@ -2,9 +2,9 @@
 title: Auditprotokollintegration für Query Service
 description: Die Auditprotokolle von Query Service enthalten Aufzeichnungen zu verschiedenen Benutzeraktionen, um ein Audit-Protokoll zur Fehlerbehebung bei Problemen oder zur Einhaltung von Richtlinien zur Unternehmensdatenverwaltung und Regulierungsanforderungen zu erstellen. Dieses Tutorial bietet einen Überblick über die Auditprotokollfunktionen, die speziell für Query Service gelten.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 861283cb8ea99b91480bf776ff0c53de52f464ad
+source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Die von [!DNL Query Service] sind wie folgt.
 |---|---|
 | [!UICONTROL Geplante Abfrage] | In dieser Kategorie können Sie die Zeitpläne überprüfen, die in [!DNL Query Service]. |
 | [!UICONTROL Abfragevorlage] | In dieser Kategorie können Sie die verschiedenen Aktionen (Erstellen, Aktualisieren und Löschen) einer Abfragevorlage überprüfen. |
-| [!UICONTROL Abfrage] | In dieser Kategorie können Sie Abfrageausführungen überprüfen. |
+<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
 
 ## Führen Sie eine [!DNL Query Service] Auditprotokoll {#perform-an-audit-log}
 

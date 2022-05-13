@@ -1,9 +1,10 @@
 ---
 title: Bot-Filterung in Query Service mit maschinellem Lernen
 description: Dieses Dokument bietet einen Überblick darüber, wie Sie Query Service und maschinelles Lernen verwenden können, um Bot-Aktivitäten zu bestimmen und ihre Aktionen nach dem echten Besucher-Traffic auf einer Online-Website zu filtern.
-source-git-commit: 7b223b4917e6bdb3f4a05238cbaf66261d80660e
+exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
+source-git-commit: c5b91bd516e876e095a2a6b6e3ba962b29f55a7b
 workflow-type: tm+mt
-source-wordcount: '875'
+source-wordcount: '873'
 ht-degree: 6%
 
 ---
@@ -164,6 +165,6 @@ Das Beispielmodell, das mit einer hohen Genauigkeit bestimmt wird, dass alle Bes
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie Query Service und maschinelles Lernen verwenden, um Bot-Aktivitäten zu bestimmen und zu filtern.
+Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie [!DNL Query Service] und maschinelles Lernen zum Ermitteln und Filtern von Bot-Aktivitäten.
 
-Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen geschäftlichen Einblicken Ihres Unternehmens sind das Anwendungsbeispiel für abgebrochene Durchsuchen .
+Andere Dokumente, die die Vorteile von [!DNL Query Service] zu den strategischen Geschäftseinblicken Ihres Unternehmens zählen [Anwendungsfall für abgebrochenes Durchsuchen](./abandoned-browse.md) Beispiel.
