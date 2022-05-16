@@ -6,7 +6,7 @@ topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 source-git-commit: f0b8b5d16739b2bec6e1a11b718962de3faed463
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '997'
 ht-degree: 100%
 
