@@ -4,10 +4,10 @@ title: Echtzeit-Kundenprofil – Übersicht
 topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 9f00bff31f9e7d2da1294d3d1f24cba7870a4614
-workflow-type: ht
-source-wordcount: '1888'
-ht-degree: 100%
+source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
+workflow-type: tm+mt
+source-wordcount: '2046'
+ht-degree: 92%
 
 ---
 
@@ -19,11 +19,24 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 Die nachfolgende Abbildung zeigt die Zusammenhänge zwischen dem Echtzeit-Kundenprofil und anderen Services in Experience Platform:
 
-![](images/profile-overview/profile-in-platform.png)
+![Die Beziehung zwischen Echtzeit-Kundenprofil und anderen Diensten in Adobe Experience Platform. Dieses Diagramm zeigt, dass Profil eine der Kernkomponenten von Adobe Experience Platform ist.](images/profile-overview/profile-in-platform.png)
 
 ## Profile verstehen
 
 [!DNL Real-time Customer Profile] führt Daten aus verschiedenen Unternehmenssystemen zusammen und ermöglicht dann den Zugriff auf diese Daten in Form von Profilen mit zugehörigen Zeitreihen-Ereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen. In den folgenden Abschnitten werden einige der Kernkonzepte hervorgehoben, die Sie verstehen müssen, um Profile innerhalb von Platform effektiv zu erstellen und zu verwalten.
+
+### Entitätszusammenstellung des Profils
+
+Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der so genannten **primäre Entität** und verschiedenen unterstützenden Entitäten. Die primäre Entität besteht aus Eigenschaften, Verhaltensweisen und Segmentmitgliedschaften eines Profils. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
+
+- **Dimensionentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Classification-Entität bezeichnet.
+- **B2B-Unternehmen**: Entitäten, die die Beziehung des Profils zu Geschäftskonten und Gelegenheiten beschreiben.
+
+![Ein Diagramm, das die Zusammensetzung der Profilentität erklärt.](./images/profile-overview/profile-entity-composition.png)
+
+>[!IMPORTANT]
+>
+>Da Dimensions- und B2B-Entitäten nur außerhalb der primären Entität vorhanden sind, werden sie nur für die Batch-Segmentierung verwendet.
 
 ### Profil-Datenspeicher
 
@@ -115,9 +128,9 @@ Data Governance umfasst eine Reihe von Strategien und Technologien, mittels dere
 
 Da es um Datenzugriff geht, nimmt die Data Governance in [!DNL Experience Platform] eine zentrale Rolle ein, und zwar auf verschiedenen Ebenen:
 
-* Datennutzungsbeschriftungen
-* Datenzugriffsrichtlinien
-* Zugangssteuerung für Marketing-Aktivitäten
+- Datennutzungsbeschriftungen
+- Datenzugriffsrichtlinien
+- Zugangssteuerung für Marketing-Aktivitäten
 
 Die Umsetzung von Data Governance erfolgt an mehreren Stellen. So wird etwa bestimmt, welche Daten in [!DNL Platform] aufgenommen werden und auf welche Daten nach ihrer Aufnahme für eine bestimmte Marketing-Aktivität zugegriffen werden kann. Gehen Sie für weitere Informationen hierzu zunächst die [Übersicht über Data Governance](../data-governance/home.md) durch.
 
