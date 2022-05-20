@@ -5,10 +5,10 @@ title: Handbuch zur Fehlerbehebung bei Identity Service
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zum Adobe Experience Platform Identity Service sowie eine Anleitung zur Behebung gängiger Fehler.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 80530705f5f8d30294ad31e00d8956257ee2c085
+source-git-commit: 3d308d18c926cabdf0bd4b52c0623d8ec9428ee8
 workflow-type: tm+mt
-source-wordcount: '2236'
-ht-degree: 80%
+source-wordcount: '2180'
+ht-degree: 78%
 
 ---
 
@@ -90,13 +90,7 @@ Identitäten werden in API-Aufrufen entweder anhand ihrer zusammengesetzten Iden
 
 ## Wie geht Identity Service mit personenbezogenen Daten (PII) um?
 
-Identity Service erzeugt einen starken, kryptografischen Ein-Weg-Hash für personenbezogene Daten, bevor Werte persistiert werden. Identitätsdaten in den Namespaces „Telefon“ und „E-Mail“ werden automatisch mit SHA-256 gehasht, wobei „E-Mail“-Werte vor dem Hashing automatisch in Kleinbuchstaben konvertiert werden.
-
-## Soll ich alle personenbezogenen Daten verschlüsseln, bevor sie an Platform gesendet werden?
-
-Personenbezogene Daten müssen vor der Erfassung in Platform nicht manuell verschlüsselt werden. Durch Anwendung der Datennutzungsbezeichnung `I1` auf alle entsprechenden Datenfelder wandelt Platform diese Felder bei der Erfassung automatisch in gehashte ID-Werte um.
-
-Anweisungen zum Anwenden und Verwalten von Datennutzungsbezeichnungen finden Sie im Tutorial zu [Datennutzungsbezeichnungen](../data-governance/labels/user-guide.md).
+Identity Service verfügt über Standard-Namespaces, die die Erfassung von Hash-Identitätswerten für Telefonnummern und E-Mails unterstützen. Sie sind jedoch für das Hashing von Werten verantwortlich. Weitere Informationen zum Hashing von Daten, die in Platform erfasst werden, finden Sie unter [[!DNL Data Prep] Handbuch zu Zuordnungsfunktionen](../data-prep/functions.md#hashing).
 
 ## Was gilt es beim Hashing von PII-basierten Identitäten zu beachten?
 
