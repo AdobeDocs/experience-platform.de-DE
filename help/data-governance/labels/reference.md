@@ -5,10 +5,10 @@ title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1984'
-ht-degree: 100%
+source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+workflow-type: tm+mt
+source-wordcount: '2053'
+ht-degree: 96%
 
 ---
 
@@ -22,7 +22,7 @@ In diesem Dokument werden die derzeit von [!DNL Experience Platform] bereitgeste
 
 Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die vertragliche Bestimmungen aufweisen oder mit Data Governance-Richtlinien Ihrer Organisation in Zusammenhang stehen.
 
-| Beschriftung | Definition |
+| Kennzeichnung | Definition |
 | --- | --- |
 | **C1** | Die Daten können nur in aggregierter Form aus Adobe Experience Cloud exportiert werden, ohne dass dabei Einzel- oder Gerätekennungen einbezogen werden. [Weitere Infos...](#c1) |
 | **C2** | Daten können nicht zu einem Drittanbieter exportiert werden. [Weitere Infos...](#c2) |
@@ -40,7 +40,7 @@ Vertragliche „C“-Bezeichnungen dienen zur Kategorisierung von Daten, die ver
 
 Identitätsbezogene „I“-Bezeichnungen dienen der Kategorisierung von Daten, mit denen sich eine bestimmte Person identifizieren oder kontaktieren lässt.
 
-| Beschriftung | Definition |
+| Kennzeichnung | Definition |
 | --- | --- |
 | **I1** | Direkt identifizierbare Daten, mit denen eine bestimmte Person anstatt eines Geräts identifiziert oder kontaktiert werden kann. |
 | **I2** | Indirekt identifizierbare Daten, die in Verbindung mit anderen Daten zur Identifizierung oder zum Kontakt mit einer bestimmten Person verwendet werden können. |
@@ -51,10 +51,12 @@ Vertrauliche „S“-Bezeichnungen (sensitive) dienen dazu, Daten zu kategorisie
 
 Bei Daten, die Sie als sensibel betrachten, kann es sich um verschiedene Arten von geografischen Daten handeln; diese Kategorie ist jedoch nicht auf geografische Daten beschränkt.
 
-| Beschriftung | Definition |
+| Kennzeichnung | Definition |
 | --- | --- |
 | **S1** | Daten zur Angabe von Breiten- und Längengrad, die zur Bestimmung der genauen Position eines Geräts verwendet werden können. |
 | **S2** | Daten, die zur Bestimmung eines allgemein definierten Geofence-Bereichs verwendet werden können. |
+| **PSPD** | &quot;Permitted Sensitive Personal Data (PSPD)&quot;bezieht sich auf Daten, die von der Adobe vertraglich zum Hochladen zugelassen werden und die als &quot;vertraulich&quot;, &quot;besondere Datenkategorie&quot;oder ähnlich durch geltendes Recht verwendet werden. Hiervon ausgenommen sind insbesondere geschützte Gesundheitsinformationen (PHI) und andere regulierte Gesundheitsdaten. |
+| **RHD** | Daten, die sich auf geschützte Gesundheitsinformationen (PHI) beziehen, oder Informationen über einen Patienten, die von der Adobe vertraglich zum Hochladen zugelassen sind. |
 
 ## Anhang
 
