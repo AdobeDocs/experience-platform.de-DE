@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform 11. November 2020
+title: Adobe Experience Platform - Versionshinweise, November 2020
+description: Versionshinweise von November 2020 für Adobe Experience Platform.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: 38c493e6306e493f4ef5caf90509bda6f4d80023
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '2180'
+source-wordcount: '2184'
 ht-degree: 26%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 11. November 2020**
+**Versionsdatum: 11. November 2020**
 
 Neue Funktionen in Adobe Experience Platform:
 
@@ -139,7 +139,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 Weitere Informationen finden Sie im Abschnitt unter [Hinzufügen von Identitätsfeldern zu einem Datensatz](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) im Handbuch zur Datenvorbereitung für Intelligent Services.
 
-### Attribution AI
+### Attributions-KI
 
 Attribution AI als Teil von Intelligent Services ist ein algorithmischer Attributionsdienst mit mehreren Kanälen, der den Einfluss und die inkrementelle Auswirkung von Kundeninteraktionen auf bestimmte Ergebnisse berechnet.
 
@@ -161,7 +161,7 @@ Attribution AI als Teil von Intelligent Services ist ein algorithmischer Attribu
 
 Weitere Informationen finden Sie im [Attribution AI - Übersicht](../../intelligent-services/attribution-ai/overview.md).
 
-### Customer AI
+### Kunden-KI
 
 Customer AI bietet Marketing-Experten als Teil von Intelligent Services die Möglichkeit, Kundenvorhersagen auf individueller Ebene mit Erklärungen zu erstellen. Mithilfe von Einflussfaktoren kann Customer AI vorhersagen, was ein Kunde wahrscheinlich tun wird und warum. Darüber hinaus können Marketing-Experten von Prognosen und Einblicken durch Customer AI profitieren, um Kundenerlebnisse durch Bereitstellung der am besten geeigneten Angebote und Botschaften zu personalisieren.
 
@@ -216,4 +216,4 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 | Sandbox-Unterstützung für Adobe Audience Manager-Connector | Der Audience Manager-Connector ist jetzt Sandbox-unterstützt. Benutzer können den Connector aktivieren, um Audience Manager-Datensätze an die Sandbox ihrer Wahl zu leiten (einschließlich Nicht-Produktions-Sandboxes). Die Konfiguration ist auf eine Sandbox pro IMS-Organisation beschränkt. |
 | UX-Verbesserungen | Die dateibasierte Erfassung ist jetzt über den Quellkatalog verfügbar. |
 
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

@@ -1,15 +1,15 @@
 ---
-title: Versionshinweise zu Adobe Experience Platform
-description: Versionshinweise zu Experience Platform vom 11. März 2020
+title: Adobe Experience Platform - Versionshinweise, März 2020
+description: Die Versionshinweise für Adobe Experience Platform vom März 2020.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: Versionshinweise;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '851'
-ht-degree: 74%
+source-wordcount: '855'
+ht-degree: 72%
 
 ---
 

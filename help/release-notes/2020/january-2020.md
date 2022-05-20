@@ -1,20 +1,20 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform vom 15. Januar 2020
+title: Adobe Experience Platform - Versionshinweise Januar 2020
+description: Die Versionshinweise für Adobe Experience Platform vom Januar 2020.
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 44%
+source-wordcount: '888'
+ht-degree: 42%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Releasedatum: 15. Januar 2020**
+**Versionsdatum: 15. Januar 2020**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -33,38 +33,38 @@ XDM ist eine öffentlich dokumentierte Spezifikation, die die Leistungsfähigkei
 
 | Funktion | Beschreibung |
 |--- | ---|
-| Feldtypbeschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als ein bestimmter Typ definiert wurde, müssen alle anderen Felder mit demselben Namen und derselben Hierarchie denselben Feldtyp verwenden, unabhängig von den Klassen oder Schemafeldgruppen, in denen sie verwendet werden. Wenn beispielsweise eine Feldergruppe für die XDM [!DNL Profile]-Klasse ein `profile.age`-Feld vom Typ &quot;integer&quot;enthält, kann eine ähnliche Feldergruppe für XDM [!DNL ExperienceEvent] kein `profile.age`-Feld vom Typ &quot;string&quot;haben. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie aufweisen als das zuvor definierte Feld (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schemas in einer Vereinigung zusammengeführt werden. Die Beschränkung wirkt sich zwar nicht rückwirkend auf vorhandene Schemas aus, es wird jedoch dringend empfohlen, Ihre Schemas auf Konflikte mit Feldtypen zu überprüfen und sie nach Bedarf zu bearbeiten. |
+| Feldtypbeschränkungen für Felder gleicher Hierarchie | Nachdem ein XDM-Feld als ein bestimmter Typ definiert wurde, müssen alle anderen Felder mit demselben Namen und derselben Hierarchie denselben Feldtyp verwenden, unabhängig von den Klassen oder Schemafeldgruppen, in denen sie verwendet werden. Wenn beispielsweise eine Feldergruppe für das XDM [!DNL Profile] -Klasse enthält `profile.age` Feld des Typs &quot;integer&quot;, eine ähnliche Feldergruppe für XDM [!DNL ExperienceEvent] kann keine `profile.age` Feld des Typs &quot;String&quot;. Um einen anderen Feldtyp zu verwenden, muss das Feld eine andere Hierarchie aufweisen als das zuvor definierte Feld (z. B. `profile.person.age`). Diese Funktion soll Konflikte verhindern, wenn Schemas in einer Vereinigung zusammengeführt werden. Die Beschränkung wirkt sich zwar nicht rückwirkend auf vorhandene Schemas aus, es wird jedoch dringend empfohlen, Ihre Schemas auf Konflikte mit Feldtypen zu überprüfen und sie nach Bedarf zu bearbeiten. |
 | Feldvalidierung unter Berücksichtigung der Groß-/Kleinschreibung | Benutzerdefinierte Felder auf derselben Ebene müssen unabhängig von der Groß-/Kleinschreibung unterschiedliche Namen haben. Wenn Sie beispielsweise ein benutzerdefiniertes Feld namens &quot;E-Mail&quot;hinzufügen, können Sie kein weiteres benutzerdefiniertes Feld auf derselben Ebene namens &quot;E-Mail&quot;hinzufügen. |
 
 **Bekannte Probleme**
 
 * Keine
 
-Weitere Informationen zum Arbeiten mit XDM unter Verwendung der [!DNL Schema Registry]-API und der [!DNL Schema Editor]-Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
+Weitere Informationen zum Arbeiten mit XDM unter Verwendung der [!DNL Schema Registry] API und [!DNL Schema Editor] Die Benutzeroberfläche finden Sie in der [XDM-Systemdokumentation](../../xdm/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen. Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie diese Datenanforderungen Ihrer Kunden verwalten können. Mit [!DNL Privacy Service] können Sie Anfragen zum Zugreifen auf und Löschen von personenbezogenen oder privaten Kundendaten aus Adobe Experience Cloud-Anwendungen stellen, was die automatische Einhaltung gesetzlicher und organisatorischer Datenschutzbestimmungen erleichtert.
+Neue gesetzliche und organisatorische Vorschriften geben Benutzern das Recht, auf Anfrage auf ihre personenbezogenen Daten zuzugreifen bzw. diese Daten aus Ihren Datenspeichern löschen zu lassen. Adobe Experience Platform [!DNL Privacy Service] bietet eine RESTful-API und eine Benutzeroberfläche, mit der Sie diese Datenanforderungen Ihrer Kunden verwalten können. Mit [!DNL Privacy Service]können Sie Anfragen zum Zugriff auf und zur Löschung von personenbezogenen oder privaten Kundendaten aus Adobe Experience Cloud-Anwendungen stellen, was die automatische Einhaltung gesetzlicher und organisatorischer Datenschutzbestimmungen erleichtert.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 |--- | ---|
-| [!DNL Privacy Service] Rebranding | Der zuvor als &quot;DSGVO-Dienst&quot;bezeichnete Dienst wurde in [!DNL Privacy Service] umbenannt, da der Dienst erweitert wurde, um neben der DSGVO auch andere Vorschriften zu unterstützen. |
-| Neue API-Endpunkte | Der Basispfad für die API [!DNL Privacy Service] wurde von `/data/privacy/gdpr` auf `/data/core/privacy/jobs` aktualisiert. |
-| Neue erforderliche `regulation`-Eigenschaft | Beim Erstellen neuer Aufträge in der [!DNL Privacy Service]-API muss in der Anfrage-Payload eine `regulation`-Eigenschaft angegeben werden, nach der die zu verfolgende Vorschrift verfolgt werden soll. Die zulässigen Werte sind `gdpr` und `ccpa`. |
-| Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe  [!DNL Primetime Authentication], wobei  `primetimeAuthentication` als Produktwert verwendet wird. |
+| [!DNL Privacy Service] Rebranding | Der zuvor als &quot;DSGVO-Dienst&quot;bezeichnete Dienst wurde in [!DNL Privacy Service] da der Dienst zunehmend andere Vorschriften zusätzlich zur DSGVO unterstützt. |
+| Neue API-Endpunkte | Basispfad für [!DNL Privacy Service] Die API wurde aktualisiert von `/data/privacy/gdpr` nach `/data/core/privacy/jobs`. |
+| Neue erforderliche `regulation`-Eigenschaft | Beim Erstellen neuer Aufträge in [!DNL Privacy Service] API, eine `regulation` -Eigenschaft muss in der Anfrage-Payload angegeben werden, unter welcher Verordnung der Auftrag verfolgt werden soll. Die zulässigen Werte sind `gdpr` und `ccpa`. |
+| Unterstützung für [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] akzeptiert jetzt Zugriffs-/Löschanfragen von Adobe [!DNL Primetime Authentication]verwendet `primetimeAuthentication` als Produktwert. |
 | Verbesserungen der Benutzeroberfläche von Privacy Service | Separate Auftragsverfolgungsseiten für DSGVO- und CCPA-Vorschriften. Neue Dropdown-Liste **Regelungstyp **Dropdown, um zwischen Tracking-Daten für DSGVO und CCPA zu wechseln. |
 
 **Bekannte Probleme**
 
 * Keine
 
-Weitere Informationen zu [!DNL Privacy Service] finden Sie in der [Übersicht über Privacy Service](../../privacy-service/home.md).
+Weitere Informationen finden Sie unter [!DNL Privacy Service]Bitte lesen Sie zunächst [Übersicht über Privacy Service](../../privacy-service/home.md).
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten mithilfe von [!DNL Platform]-Diensten strukturieren, beschriften und erweitern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten strukturieren, beschriften und erweitern, indem es [!DNL Platform] Dienste. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -91,7 +91,7 @@ Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](.
 
 ## Ziele {#destinations}
 
-In [Echtzeit-Kundendatenplattform](../../rtcdp/overview.md) sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten nahtlos für diese Partner aktivieren.
+In [Echtzeit-Kundendatenplattform](../../rtcdp/overview.md), sind Ziele vordefinierte Integrationen mit Zielplattformen, die Daten für diese Partner nahtlos aktivieren.
 
 **Neue Funktionen**
 

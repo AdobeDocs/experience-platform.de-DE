@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zu Experience Platform vom 21. April 2021.
+title: Adobe Experience Platform – Versionshinweise April 2021
+description: Die Versionshinweise für Adobe Experience Platform vom April 2021.
 doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '885'
-ht-degree: 100%
+source-wordcount: '888'
+ht-degree: 99%
 
 ---
 
@@ -51,7 +51,7 @@ Mit Intelligent Services können Marketing-Analysten und -Experten die Vorteile 
 
 ### Customer AI
 
-Customer AI, in der Echtzeit-Kundendatenplattform verfügbar, dient dazu, für einzelne Profile in großem Maßstab benutzerdefinierte Kaufneigungswerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
+Kunden-KI, in der Echtzeit-Kundendatenplattform verfügbar, dient dazu, für einzelne Profile in großem Maßstab benutzerdefinierte Kaufneigungswerte wie Abwanderung und Konversion zu generieren. Dies wird erreicht, ohne dass die Geschäftsanforderungen in ein Problem des maschinellen Lernens umgewandelt werden müssen bzw. ein Algorithmus ausgewählt, trainiert oder bereitgestellt werden muss.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
@@ -63,7 +63,7 @@ Weitere Informationen zu unterstützten Datensätzen finden Sie in der [[!DNL In
 
 ### Attribution AI
 
-Attribution AI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
+Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |

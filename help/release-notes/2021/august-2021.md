@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zu Experience Platform zum 25. August 2021.
+title: Adobe Experience Platform - Versionshinweise, August 2021
+description: Die Versionshinweise für Adobe Experience Platform vom August 2021.
 doc-type: release notes
 last-update: August 25, 2021
 author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
-source-git-commit: e9d5f24bec8cd2793ce30245b46c1d912bf17cc7
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 100%
+source-wordcount: '712'
+ht-degree: 98%
 
 ---
 

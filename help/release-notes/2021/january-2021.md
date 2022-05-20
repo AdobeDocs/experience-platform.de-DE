@@ -1,14 +1,14 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform vom 27. Januar 2021
+title: Adobe Experience Platform - Versionshinweise Januar 2021
+description: Die Versionshinweise für Adobe Experience Platform vom Januar 2021.
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: 02c22453470d55236d4235c479742997e8407ef3
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '713'
-ht-degree: 100%
+source-wordcount: '717'
+ht-degree: 98%
 
 ---
 

@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Die neuesten Versionshinweise für Adobe Experience Platform.
+title: Adobe Experience Platform - Versionshinweise - September 2021
+description: Die Versionshinweise für Adobe Experience Platform vom September 2021.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: 57089cc9aa9c586f5fae70e2a7154d48ebd62447
-workflow-type: ht
-source-wordcount: '376'
-ht-degree: 100%
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+workflow-type: tm+mt
+source-wordcount: '377'
+ht-degree: 96%
 
 ---
 

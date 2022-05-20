@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Versionshinweise zur Experience Platform 9. September 2020
+title: Adobe Experience Platform - Versionshinweise - September 2020
+description: Die Versionshinweise für Adobe Experience Platform vom September 2020.
 doc-type: release notes
 last-update: September 8, 2020
 author: crhoades, ens25212
 exl-id: bf401f3a-b088-4cbd-9a64-224294b797b9
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '863'
 ht-degree: 37%
 
 ---
@@ -97,7 +97,7 @@ Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche u
 | Exportaufträge | Es wurde ein Flag hinzugefügt, mit dem Segmente im Rahmen eines Exportvorgangs ausgewertet werden können. Daher können Benutzer sowohl die Segmentierung als auch Exporte in einem einzigen Auftrag ausführen. |
 | Zusammenführungsrichtlinien | In einem einzelnen Batch-Segmentierungsauftrag können mehrere Zusammenführungsrichtlinien enthalten sein. |
 
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierung – Übersicht](../../segmentation/home.md)
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md)
 
 ## Quellen {#sources}
 
@@ -112,4 +112,4 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 | Automatische Zuordnung | [!DNL Platform] bietet intelligente Empfehlungen für die automatische Zuordnung während des Datenerfassungs-Workflows, basierend auf einem vom Benutzer ausgewählten Zielschema oder Datensatz. Sie können flexible Regeln für die automatische Zuordnung manuell an Ihre Anwendungsfälle anpassen. |
 | UX-Verbesserungen | Benutzer können auf Inline-Tabellenaktionen zugreifen, um den Zugriff auf primäre Aktionen wie das Hinzufügen von Daten, die Bearbeitung der Planung und das Hinzufügen von Segmenten zu erleichtern. Siehe [Überwachen von Datenflüssen](../../sources/tutorials/ui/monitor.md) für weitere Informationen. |
 
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).

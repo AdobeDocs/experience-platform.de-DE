@@ -1,13 +1,13 @@
 ---
-title: Adobe Experience Platform – Versionshinweise
-description: Experience Platform - Versionshinweise, Oktober 2020
+title: Adobe Experience Platform - Versionshinweise, Oktober 2020
+description: Die Versionshinweise für Adobe Experience Platform vom Oktober 2020.
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: ab0798851e5f2b174d9f4241ad64ac8afa20a938
+source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1016'
 ht-degree: 25%
 
 ---
@@ -30,21 +30,21 @@ Die Datenvorbereitung ermöglicht es Dateningenieuren, Daten dem Experience-Date
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| `is_set`-Funktion | Mit der Funktion `is_set` können Sie überprüfen, ob ein Attribut in den Quelldaten vorhanden ist. `is_set` kann in Kombination mit verwendet werden,  `is_empty` um sowohl das Vorhandensein des Attributs als auch das Vorhandensein des Werts im Attribut zu überprüfen. |
-| `get_values`-Funktion | Mit der Funktion `get_values` können Sie die Werte aus der Eingabemap für einen beliebigen Schlüssel abrufen. |
+| `is_set`-Funktion | Die `is_set` -Funktion können Sie überprüfen, ob ein Attribut in den Quelldaten vorhanden ist. `is_set` kann in Kombination mit `is_empty` , um sowohl das Vorhandensein des Attributs als auch das Vorhandensein des Werts im Attribut zu überprüfen. |
+| `get_values`-Funktion | Die `get_values` -Funktion können Sie die Werte aus der Eingabezuordnung für einen beliebigen Schlüssel abrufen. |
 
-Weitere Informationen finden Sie in der [Übersicht über die Datenvorbereitung](../../data-prep/home.md).
+Weitere Informationen finden Sie im [Datenvorbereitung - Übersicht](../../data-prep/home.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
-Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit [!DNL Real-time Customer Profile] können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
+Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsistenter und relevanter Erlebnisse für Kunden, unabhängig davon, wo und wann diese mit Ihrer Marke interagieren. Mit [!DNL Real-time Customer Profile]können Sie eine ganzheitliche Ansicht jedes einzelnen Kunden anzeigen, die Daten aus mehreren Kanälen kombiniert, einschließlich Online-, Offline-, CRM- und Drittanbieter-Daten. [!DNL Profile] ermöglicht es Ihnen, Ihre unterschiedlichen Kundendaten in einer einheitlichen Ansicht zusammenzufassen, die eine umsetzbare, mit Zeitstempel versehene Übersicht über jede Kundeninteraktion bietet.
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
 | API-Ergänzungen zur Profilvorschau | Die Profilvorschau-API (`/previewsamplestatus`) bietet jetzt die Möglichkeit, eine Aufschlüsselung der gesamten Profilfragmente in Ihrer IMS-Organisation anzuzeigen und die Verteilung der Profilfragmente über Identitäts-Namespaces hinweg anzuzeigen. |
 | Aktualisierungen der Schema-Ansicht von Vereinigungen | In der Experience Platform-Benutzeroberfläche können Benutzer leichter Informationen zu allen Schemas und Datensätzen finden, die zum Vereinigungsschema beitragen, sowie wichtige Oberflächenattribute wie Identitäts- und Beziehungsfelder. Diese Aktualisierungen verbessern die Fehlerbehebung und die Überprüfung der korrekten Konfiguration von Profilen, der korrekten Zuordnung von Identitäten und der erfolgreichen Erfassung von Daten. |
 
-Weitere Informationen zu [!DNL Real-time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile]-Daten, finden Sie in der [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
+Weitere Informationen finden Sie unter [!DNL Real-time Customer Profile], einschließlich Tutorials und Best Practices für die Arbeit mit [!DNL Profile] Daten lesen Sie bitte die [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ## Segmentierungs-Service {#segmentation}
 
@@ -58,11 +58,11 @@ Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche u
 | ------- | ----------- |
 | Entfernung der Streaming-Segmentierung begrenzen | Die Beschränkung von sieben Tagen für den Lookback-Zeitraum wurde entfernt. |
 
-Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Segmentierung – Übersicht](../../segmentation/home.md)
+Weitere Informationen zu [!DNL Segmentation Service] finden Sie in der [Übersicht zu Segmentierung](../../segmentation/home.md)
 
 ## Quellen {#sources}
 
-Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten mithilfe von [!DNL Platform]-Diensten strukturieren, beschriften und erweitern. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
+Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzeitig diese Daten strukturieren, beschriften und erweitern, indem es [!DNL Platform] Dienste. Daten können aus verschiedenen Quellen erfasst werden, z. B. aus Adobe-Anwendungen, Cloud-basiertem Speicher, Software von Drittanbietern und Ihrem CRM-System.
 
 [!DNL Experience Platform]Im Rahmen von stehen eine RESTful-API und interaktive Benutzeroberfläche zur Verfügung, mit deren Hilfe Sie auf unkomplizierte Weise Verbindungen zu Datenquellen verschiedener Anbieter einrichten können. Mit diesen Quellverbindungen können Sie sich authentifizieren und eine Verbindung zu externen Datenspeichern und CRM-Diensten herstellen, Zeiten für Erfassungsläufe festlegen und den Durchsatz der Datenerfassung verwalten.
 
@@ -70,10 +70,10 @@ Adobe Experience Platform kann Daten aus externen Quellen erfassen und gleichzei
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| SSH-Authentifizierungsunterstützung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] über RSA/DSA Open SSH-Schlüssel verbinden. Weitere Informationen finden Sie unter [SFTP - Übersicht](../../sources/connectors/cloud-storage/sftp.md) . |
-| UX-Verbesserungen | Sie können Ihren Datensatz während der Datenerfassung für [!DNL Profile] aktivieren. Weitere Informationen finden Sie im Tutorial zum [Cloud-Speicher-Datenfluss-Workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) . |
+| SSH-Authentifizierungsunterstützung für SFTP | Sie können Ihr SFTP-Konto mit [!DNL Platform] mithilfe von RSA/DSA Open SSH-Schlüsseln. Siehe [SFTP-Übersicht](../../sources/connectors/cloud-storage/sftp.md) für weitere Informationen. |
+| UX-Verbesserungen | Sie können Ihren Datensatz für [!DNL Profile] während des Datenerfassungsprozesses. Siehe [Cloud-Speicher-Datenfluss-Workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) Tutorial für weitere Informationen. |
 
-Weitere Informationen zu Quellen finden Sie in der [Quellen – Übersicht](../../sources/home.md).
+Weitere Informationen zu Quellen finden Sie im Abschnitt [Quellen – Übersicht](../../sources/home.md).
 
 ## Zeit bis Wert {#time-to-value}
 
