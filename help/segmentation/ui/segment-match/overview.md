@@ -5,10 +5,10 @@ title: Übersicht über Segmentübereinstimmungen
 topic-legacy: overview
 description: Segmentabgleich ist ein Dienst zur Segmentfreigabe in Adobe Experience Platform, mit dem zwei oder mehr Platform-Benutzer Segmentdaten auf sichere, gesteuerte und datenschutzfreundliche Weise austauschen können.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: 50795be308649052037be62153109eadab02c9a1
+source-git-commit: 1c2b9862facfe9fbce59246c882e6373f3e2c3ef
 workflow-type: tm+mt
-source-wordcount: '1968'
-ht-degree: 5%
+source-wordcount: '1994'
+ht-degree: 6%
 
 ---
 
@@ -114,7 +114,13 @@ So verbinden Sie einen Partner mit seiner [!UICONTROL connect-ID], geben Sie ihr
 
 ![connect-partner.png](./images/connect-partner.png)
 
-### Feed erstellen
+### Feed erstellen {#create-feed}
+
+>[!CONTEXTUALHELP]
+>id="platform_segment_match_marketing"
+>title="Anwendungsfälle für eingeschränktes Marketing"
+>abstract="Anwendungsfälle mit eingeschränktem Marketing helfen Ihren Partnern dabei, sicherzustellen, dass freigegebene Segmente gemäß Ihren Data Governance-Beschränkungen ordnungsgemäß verwendet werden."
+>text="Learn more in documentation"
 
 A **Feed** ist eine Gruppierung von Daten (Segmenten), den Regeln, wie diese Daten bereitgestellt oder verwendet werden können, und den Konfigurationen, die bestimmen, wie Ihre Daten mit den Daten Ihrer Partner abgeglichen werden. Ein Feed kann unabhängig verwaltet und mit anderen Platform-Benutzern über [!DNL Segment Match].
 
@@ -132,7 +138,7 @@ Die grundlegende Einrichtung eines Feeds umfasst einen Namen, eine Beschreibung 
 * [!UICONTROL Export in Dritte]
 * [!UICONTROL Onsite-Werbung]
 * [!UICONTROL Onsite-Personalisierung]
-* [!UICONTROL Segmentübereinstimmung]
+* [!UICONTROL Segment Match]
 * [!UICONTROL Personalisierung mit einer Identität]
 
 Wählen Sie abschließend die entsprechenden Identitäts-Namespaces für Ihren Feed aus. Informationen zu den spezifischen Namespaces, die von [!DNL Segment Match], siehe [Identitätsdaten und Namensraum-Tabelle](#namespaces). Wenn Sie fertig sind, wählen Sie **[!UICONTROL Nächste]**.
