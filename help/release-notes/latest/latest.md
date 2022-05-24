@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
 workflow-type: tm+mt
 source-wordcount: '2916'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Die folgenden Widgets sind über die Widget-Bibliothek in den jeweiligen Dashboa
 
 | Funktion | Dashboard | Beschreibung |
 | ------- | --------- | ----------- |
-| Bereinigung der Mitgliedschaft in verwaisten Profilsegmenten | Profile und Lizenznutzung | Der Profildienst entfernt jetzt täglich leftover-Segment-Mitglieder, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version leftover Segmentfragmente enthielten. |
+| Bereinigung der Zugehörigkeit zu verwaisten Profilsegmenten | Profile und Lizenznutzung | Der Profil-Service entfernt jetzt täglich übrig gebliebene Segmentmitglieder, um eine genauere Darstellung Ihrer Profile in Ihrem System zu bieten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden. Dies kann zu einem Rückgang der Metrik „Adressierbare Zielgruppe“ im Lizenznutzungs-Dashboard und zu einem Rückgang der Metrik „Profilanzahl“ im Profil-Dashboard führen, da diese Metriken vor dieser Version übrig gebliebene Segmentfragmente einbezogen haben. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -173,7 +173,7 @@ Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-S
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
-Mit KI-/ML-Diensten können Marketing-Analysten und Praktiker die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich wären.
+KI/ML-Services ermöglichen es Marketing-Analysten und -Praktikern, die Leistungsfähigkeit von künstlicher Intelligenz und maschinellem Lernen in Anwendungsfällen mit Kundenerlebnissen zu nutzen. So können Marketing-Analysten mithilfe von Konfigurationen auf Unternehmensebene spezifische Prognosen für die Anforderungen der Firma erstellen, ohne dass hierfür Kenntnisse aus der Datenwissenschaft erforderlich wären.
 
 ### Attributions-KI
 
@@ -183,7 +183,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Attributions-KI unterstützt die folgenden Schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attribution AI finden Sie im Abschnitt [Attribution AI-Benutzerhandbuch](../../intelligent-services/attribution-ai/user-guide.md). |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Attributions-KI unterstützt die folgenden Schemas: Adobe Analytics, Experience Event, Consumer Experience Event. Weitere Informationen zur Unterstützung für mehrere Datensätze in Attributions-KI finden Sie im [Benutzerhandbuch für Attributions-KI](../../intelligent-services/attribution-ai/user-guide.md). |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
 
@@ -195,7 +195,7 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Customer AI unterstützt die folgenden Schemas: Adobe Analytics, Experience Event, Consumer Experience Event und das Adobe Audience Manager-Schema. Weitere Informationen zur Unterstützung von mehreren Datensätzen in Customer AI finden Sie im Abschnitt [Benutzerhandbuch für Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md). |
+| Unterstützung für mehrere Datensätze | Die Funktion für mehrere Datensätze unterstützt jetzt alle Experience Event-Datensätze sowie die Auswahl von Identity Map als Identität. Kunden können Identity Map und alle zugehörigen IDs auswählen, sofern es einen gemeinsamen Identity-Namespace für alle Datensätze gibt. Kunden-KI unterstützt die folgenden Schemata: Adobe Analytics, Erlebnisereignis, Verbrauchererlebnisereignis und das Adobe Audience Manager-Schema. Weitere Informationen zur Unterstützung von mehreren Datensätzen in Kunden-KI finden Sie im [Benutzerhandbuch für Kunden-KI](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Neue Modellevaluierungsmetriken in Kunden-KI | Neue Gewinndiagramme in Kunden-KI ermöglichen es Marketing-Experten, die Gruppengröße für das Targeting anhand ihres Budgets und ihrer ROI-Ziele zu bestimmen. In neuen Steigerungsdiagrammen wird die Qualität des Modells gemessen, was eine bessere Sichtbarkeit der Steigerung ermöglicht, die verglichen mit zufälligem Targeting auftreten würde. Weitere Informationen finden Sie im Dokument [Einblicke gewinnen mit Kunden-KI](../../intelligent-services/customer-ai/user-guide/discover-insights.md). |
 
 Weitere Informationen zu [!DNL Intelligent Services] finden Sie in der [[!DNL Intelligent Services] Übersicht](../../intelligent-services/home.md).
