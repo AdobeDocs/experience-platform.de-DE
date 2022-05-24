@@ -4,23 +4,24 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: be3967e7045e159736952e369a55df322afd9fec
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 95%
+source-wordcount: '777'
+ht-degree: 93%
 
 ---
 
 
-# Quell-Connectoren {#sources}
+# Quellen {#sources}
 
-- [Übersicht über Quell-Connectoren](home.md)
+- [Quellen – Übersicht](home.md)
 - Verfügbare Quell-Connectoren {#connectors}
    - Adobe-Programme {#adobe-applications}
-      - [Quell-Connector für Analytics-Klassifizierungen](connectors/adobe-applications/classifications.md)
-      - [Analytics-Quell-Connector](connectors/adobe-applications/analytics.md)
-      - [Quell-Connector für Audience Manager](connectors/adobe-applications/audience-manager.md)
-      - [Quell-Connector für Kundenattribute](connectors/adobe-applications/customer-attributes.md)
+      - [Analytics Classifications source](connectors/adobe-applications/classifications.md)
+      - [Analytics-Quelle](connectors/adobe-applications/analytics.md)
+      - [Audience Manager source](connectors/adobe-applications/audience-manager.md)
+      - [Quelle der Kundenattribute](connectors/adobe-applications/customer-attributes.md)
+      - [Datenquelle](connectors/adobe-applications/data-collection.md)
       - Feldzuordnungen {#mapping}
          - [Analytics-Feldzuordnungen](connectors/adobe-applications/mapping/analytics.md)
          - [Audience Manager-Feldzuordnungen](connectors/adobe-applications/mapping/audience-manager.md)
