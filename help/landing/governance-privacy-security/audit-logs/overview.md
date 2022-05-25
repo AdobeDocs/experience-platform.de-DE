@@ -2,10 +2,10 @@
 title: Übersicht über Auditprotokolle
 description: Erfahren Sie, wie Sie mithilfe von Audit-Protokollen sehen können, wer welche Aktionen in Adobe Experience Platform durchgeführt hat.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: ba190bdd1856b2d89fa28679eb7f09c258ddd17c
+source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
-source-wordcount: '767'
-ht-degree: 13%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,20 +23,28 @@ In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in A
 
 | Ressource | Aktionen |
 | --- | --- |
-| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Update</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li></ul> |
-| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Profil aktivieren</li></ul> |
+| [Zugriffskontrollrichtlinie (attributbasierte Zugriffskontrolle)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Update</li><li>Löschen</li></ul> |
+| [Konto (Adobe)](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Administratorprotokolle](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportieren</li></ul> |
 | [Klasse](../../../xdm/schema/composition.md#class) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Datentyp](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
-| [Ziel](../../../destinations/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
-| [Segment](../../../segmentation/home.md) | <ul><li>Erstellung</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
-| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Berechnetes Attribut](../../../profile/computed-attributes/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Datensatz](../../../catalog/datasets/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren für [Echtzeit-Kundenprofil](../../../profile/home.md)</li><li>Profil deaktivieren</li><li>Hinzufügen von Daten</li><li>Batch löschen</li></ul> |
+| [Datentypen](../../../xdm/schema/composition.md#data-type) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Ziel](../../../destinations/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profil aktivieren</li><li>Profil löschen</li></ul> |
+| [Feldergruppe](../../../xdm/schema/composition.md#field-group) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Identitätsdiagramm](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Ansicht</li></ul> |
+| [Identity-Namespace](../../../identity-service/ui/identity-graph-viewer.md) | <ul><li>Erstellung</li><li>Aktualisieren</li></ul> |
+| [Zusammenführungsrichtlinie](../../../profile/merge-policies/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
 | [Produktprofile](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Konto (Adobe)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Abfragevorlage](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
-| [Geplante Abfrage](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Abfrage](../../../query-service/ui/overview.md) | <ul><li>Execute</li></ul> |
+| [Abfragevorlage](../../../query-service/ui/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Rolle (attributbasierte Zugriffssteuerung)](../../../access-control/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Benutzer hinzufügen</li><li>Benutzer löschen</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Zurücksetzen</li><li>Löschen</li></ul> |
+| [Geplante Abfrage](../../../query-service/ui/overview.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li></ul> |
+| [Schema](../../../xdm/schema/composition.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Profil aktivieren</li></ul> |
+| [Segment](../../../segmentation/home.md) | <ul><li>Erstellung</li><li>Löschen</li><li>Segmentaktivierung</li><li>Segment entfernen</li></ul> |
+| [Quelldatenfluss](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Erstellung</li><li>Aktualisieren</li><li>Löschen</li><li>Aktivieren</li><li>Deaktivieren</li><li>Datensatz aktivieren</li><li>Datensatz entfernen</li><li>Profilaktivität</li><li>Profil entfernen</li></ul> |
+| [Arbeitsauftrag](../../../hygiene/home.md) | <ul><li>Erstellung</li></ul> |
 
 ## Zugriff auf Prüfprotokolle
 
@@ -50,7 +58,7 @@ Sie können Prüfprotokolle für verschiedene Funktionen der Experience Platform
 
 ![Dashboard &quot;Audit logs&quot;](../../images/audit-logs/audits.png)
 
-Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren.
+Prüfprotokolle werden 365 Tage lang aufbewahrt, danach werden sie aus dem System gelöscht. Daher können Sie nur für einen Zeitraum von maximal 365 Tagen zurückkehren. Wenn Sie Daten von mehr als 365 Tagen benötigen, sollten Sie Protokolle regelmäßig exportieren, um Ihre internen Richtlinienanforderungen zu erfüllen.
 
 Wählen Sie ein Ereignis aus der Liste aus, um seine Details in der rechten Leiste anzuzeigen.
 
