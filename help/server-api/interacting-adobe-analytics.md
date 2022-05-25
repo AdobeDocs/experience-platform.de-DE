@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit der Edge Network Server-API mit Adobe Ana
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: Datenerfassung; Auslass; Analyse; Adobe Experience Platform Edge Network API;Analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Die Adobe Analytics-Datenerfassung funktioniert durch die Übersetzung von XDM-D
 
 Sie können auch [Manuelles Zuordnen von XDM-Werten](../edge/data-collection/adobe-analytics/manually-mapping-variables.md) zu älteren Analytics-Variablen hinzu.
 
-Damit Adobe Analytics Daten von der Server-API empfangen kann, müssen Sie [Datenspeicher konfigurieren](../edge/fundamentals/datastreams.md#adobe-analytics-settings) , um Ereignisse an Adobe Analytics weiterzuleiten, indem Sie die Report Suite-ID auf der Seite mit der Datastream-Konfiguration eingeben.
+Damit Adobe Analytics Daten von der Server-API empfangen kann, müssen Sie [Datenspeicher konfigurieren](../edge/datastreams/overview.md#adobe-analytics-settings) , um Ereignisse an Adobe Analytics weiterzuleiten, indem Sie die Report Suite-ID auf der Seite mit der Datastream-Konfiguration eingeben.
 
 ![Adobe Analytics-Datenspeicherkonfiguration](assets/analytics-datastream.png)
 
@@ -33,7 +33,7 @@ POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
 
 ### Anfrage {#request}
 
-Das folgende Beispiel enthält mehrere automatisch zugeordnete Werte aus dem `_experience.analytics` Feldergruppe. Sie umfasst auch JSON-basierte Datenschichten. Diese Datenschichten können zwar nicht automatisch zugeordnet werden, es ist jedoch möglich, [Datenvorbereitung für die Datenerfassung](../edge/fundamentals/datastreams.md#data-prep) , um diese Werte einem Schema zuzuordnen, das die oben referenzierten Feldergruppen enthält.
+Das folgende Beispiel enthält mehrere automatisch zugeordnete Werte aus dem `_experience.analytics` Feldergruppe. Sie umfasst auch JSON-basierte Datenschichten. Diese Datenschichten können zwar nicht automatisch zugeordnet werden, es ist jedoch möglich, [Datenvorbereitung für die Datenerfassung](../edge/datastreams/data-prep.md) , um diese Werte einem Schema zuzuordnen, das die oben referenzierten Feldergruppen enthält.
 
 Alle Werte, die Benutzer diesen Feldern zuordnen, werden automatisch den entsprechenden Analytics-Werten zugeordnet, so als wären sie in der API-Anfrage enthalten.
 

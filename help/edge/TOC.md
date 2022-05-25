@@ -5,9 +5,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform Web SDK
 breadcrumb-title: Web SDK-Handbuch
 user-guide-description: Interagieren Sie mit Experience Cloud-Services über das Edge-Netzwerk.
 feature: Web SDK
-source-git-commit: 7eb89d44bdb6e3c6e6aede0a1ce20c02b19284fd
+source-git-commit: 1a53d98d8a0b47b96d54e79d93f2ece2d4b587a6
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '178'
 ht-degree: 83%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 83%
 * [Platform Web-SDK – Übersicht](home.md)
 * Grundlagen {#fundamentals}
    * [Voraussetzungen](fundamentals/prerequisite.md)
-   * [Konfigurieren eines Datenflusses](fundamentals/datastreams.md)
    * [Installieren des SDK](fundamentals/installing-the-sdk.md)
    * [Konfigurieren des SDK](fundamentals/configuring-the-sdk.md)
    * [Ausführen von Befehlen](fundamentals/executing-commands.md)
@@ -27,6 +26,9 @@ ht-degree: 83%
    * [Konfigurieren eines CSP](fundamentals/configuring-a-csp.md)
    * [Interaktion mit mehreren Eigenschaften](fundamentals/interacting-with-multiple-properties.md)
    * [Unterstützte Anwendungsfälle](fundamentals/supported-use-cases.md)
+* Datenströme {#datastreams}
+   * [Übersicht](./datastreams/overview.md)
+   * [Datenvorbereitung für die Datenerfassung](./datastreams/data-prep.md)
 * Identität {#identity}
    * [Übersicht](identity/overview.md)
    * [IDs von Erstanbieter-Geräten](identity/first-party-device-ids.md)

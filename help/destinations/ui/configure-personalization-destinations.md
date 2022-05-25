@@ -6,8 +6,8 @@ seo-title: Configure personalization destinations for same-page and next-page pe
 description: Erfahren Sie, wie Sie Personalisierungsziele für die Personalisierung auf derselben Seite und der nächsten Seiten konfigurieren.
 seo-description: Configure personalization destinations for same-page and next-page personalization.
 exl-id: 7d7b6869-bd59-4766-a044-f449396f6524
-source-git-commit: a990e829c8ba034f31b883360495513f3f5b4cfc
-workflow-type: ht
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+workflow-type: tm+mt
 source-wordcount: '413'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ Stellen Sie beim Konfigurieren des Datenstroms unter **[!UICONTROL Adobe Experie
 
 ![Datenstromkonfiguration](../assets/ui/configure-personalization-destinations/datastream-config.png)
 
-Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisungen in der [Dokumentation zum Platform Web SDK](../../edge/fundamentals/datastreams.md).
+Weitere Informationen zum Einrichten eines Datenstroms finden Sie in den Anweisungen in der [Dokumentation zum Platform Web SDK](../../edge/datastreams/overview.md).
 
 ## Schritt 2: Konfigurieren Ihres Personalisierungsziels {#configure-destination}
 

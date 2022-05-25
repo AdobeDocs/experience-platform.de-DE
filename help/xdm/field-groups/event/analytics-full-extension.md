@@ -2,8 +2,8 @@
 title: Adobe Analytics ExperienceEvent Full Extension – Schemafeldgruppe
 description: Dieses Dokument bietet einen Überblick über die Schemafeldgruppe „Adobe Analytics ExperienceEvent Full Extension“.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
-workflow-type: ht
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 100%
 
@@ -103,4 +103,4 @@ Jedes lineare Objekt verwendet den Datentyp [[!UICONTROL Kennzahl]](../../data-t
 
 In diesem Dokument wurden die Struktur und der Anwendungsfall für die Feldgruppe der Analytics-Erweiterung behandelt. Weitere Informationen zur Feldgruppe selbst finden Sie im [öffentlichen XDM-Repository](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
-Wenn Sie diese Feldgruppe verwenden, um Analytics-Daten mithilfe des Adobe Experience Platform Web SDK zu erfassen, erfahren Sie in der Anleitung unter [Konfigurieren eines Datenstroms](../../../edge/fundamentals/datastreams.md), wie Sie Daten Server-seitig XDM zuordnen.
+Wenn Sie diese Feldgruppe verwenden, um Analytics-Daten mithilfe des Adobe Experience Platform Web SDK zu erfassen, erfahren Sie in der Anleitung unter [Konfigurieren eines Datenstroms](../../../edge/datastreams/overview.md), wie Sie Daten Server-seitig XDM zuordnen.

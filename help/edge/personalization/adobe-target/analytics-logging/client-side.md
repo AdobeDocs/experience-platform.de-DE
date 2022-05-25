@@ -4,7 +4,8 @@ description: Erfahren Sie, wie Sie die clientseitige Protokollierung für Adobe 
 seo-title: Client-side logging for A4T data in the Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: Target; a4t; Protokollierung; Web SDK; Erlebnis; Plattform;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 5%
@@ -39,7 +40,7 @@ In den folgenden Unterabschnitten wird beschrieben, wie Sie die clientseitige Pr
 
 ### Aktivieren der clientseitigen Analytics-Protokollierung {#enable-analytics-client-side-logging}
 
-Um die clientseitige Protokollierung in Analytics für Ihre Implementierung zu berücksichtigen, müssen Sie die Adobe Analytics-Konfiguration in Ihrer [datastream](../../../fundamentals/datastreams.md).
+Um die clientseitige Protokollierung in Analytics für Ihre Implementierung zu berücksichtigen, müssen Sie die Adobe Analytics-Konfiguration in Ihrer [datastream](../../../datastreams/overview.md).
 
 ![Analytics-Datenspeicherkonfiguration deaktiviert](../assets/disable-analytics-datastream.png)
 

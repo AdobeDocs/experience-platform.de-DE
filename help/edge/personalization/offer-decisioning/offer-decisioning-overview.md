@@ -3,10 +3,10 @@ title: Verwenden von Offer decisioning mit dem Platform Web SDK
 description: Das Adobe Experience Platform Web SDK kann personalisierte Angebote bereitstellen und rendern, die unter Offer decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche oder -API erstellen.
 keywords: offer decisioning; Entscheidungsfindung; Web SDK; Platform Web SDK; personalisierte Angebote; Angebote bereitstellen; Bereitstellung von Angeboten; Personalisierung von Angeboten;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b0cc2343a502e180267d86bca4a699c02f2d6f3d
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '870'
-ht-degree: 7%
+ht-degree: 20%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 >
 >Die Verwendung von Offer decisioning im Adobe Experience Platform Web SDK ist für ausgewählte Benutzer in einem frühen Stadium verfügbar. Diese Funktion ist nicht für alle IMS-Organisationen verfügbar.
 
-Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte mithilfe der Offer decisioning-Benutzeroberfläche (UI) oder APIs erstellen.
+Adobe Experience Platform [!DNL Web SDK] kann personalisierte Angebote bereitstellen und rendern, die in Offer Decisioning verwaltet werden. Sie können Ihre Angebote und andere verwandte Objekte über APIs oder die Benutzeroberfläche (UI) von Offer Decisioning erstellen.
 
 ## Voraussetzungen
 
@@ -53,7 +53,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
    ![](assets/decision-scope-copy.png)
 
-* **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](../../fundamentals/datastreams.md) Dokumentation.
+* **Datenspeicher:** Weitere Informationen finden Sie im [datastreams](../../datastreams/overview.md) Dokumentation.
 
 * **Identität**: Weitere Informationen finden Sie in dieser Dokumentation . [Platform Web SDK verwendet Identity Service](../../identity/overview.md).
 
@@ -61,7 +61,7 @@ Bei der Arbeit mit Offer decisioning ist es wichtig, die folgende Terminologie z
 
 Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
-1. Aktivierte Adobe Experience Platform in Ihrem [datastream](../../fundamentals/datastreams.md) und aktivieren Sie die Option &quot;Offer decisioning&quot;
+1. Aktivierte Adobe Experience Platform in Ihrem [datastream](../../datastreams/overview.md) und aktivieren Sie die Option &quot;Offer decisioning&quot;
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
@@ -83,15 +83,15 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
          ```
    * SDK über Tags installieren
 
-      1. [Tag-Eigenschaft erstellen](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Hinzufügen des Einbettungscodes](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem von Ihnen erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen finden Sie in der Dokumentation unter [Erweiterungen](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. [Erstellen Sie eine Tag-Eigenschaft](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Fügen Sie den Einbettungs-Code hinzu](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. Installieren und konfigurieren Sie die Platform Web SDK-Erweiterung mit dem von Ihnen erstellten Datastream, indem Sie die Konfiguration aus der Dropdown-Liste &quot;Datastream&quot;auswählen. Weitere Informationen finden Sie in der Dokumentation zu [Erweiterungen](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
 
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Erstellen Sie die erforderlichen [Datenelemente](../../../tags/ui/managing-resources/data-elements.md). Sie müssen mindestens eine Platform Web SDK Identity Map und ein Platform Web SDK XDM Object -Datenelement erstellen.
+      1. Erstellen Sie die erforderlichen [Datenelemente](../../../tags/ui/managing-resources/data-elements.md). Sie müssen zumindest eine Platform Web SDK Identity Map und ein Platform Web SDK XDM Object-Datenelement erstellen.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
 
@@ -102,7 +102,7 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
          * Fügen Sie die Aktion &quot;Ereignis senden&quot;für das Platform Web SDK hinzu und fügen Sie die entsprechende hinzu `decisionScopes` zur Konfiguration dieser Aktion
 
             ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-      1. [Erstellen und Veröffentlichen einer Bibliothek](../../../tags/ui/publishing/libraries.md) mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
+      1. [](../../../tags/ui/publishing/libraries.md)Erstellen und veröffentlichen Sie eine Bibliothek mit allen relevanten Regeln, Datenelementen und Erweiterungen, die Sie konfiguriert haben
 
 
 
@@ -332,4 +332,4 @@ Führen Sie die folgenden Schritte aus, um Offer decisioning zu aktivieren:
 
 ## Einschränkungen
 
-Einige Angebotsbegrenzungen werden derzeit nicht von den mobilen Experience Edge-Workflows unterstützt, z. B. Capping. Der Wert des Felds Begrenzung gibt an, wie oft ein Angebot für alle Benutzer angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Einige Angebotseinschränkungen werden derzeit nicht mit den mobilen Experience Edge-Workflows unterstützt, beispielsweise die Begrenzung. Der Wert des Feldes „Begrenzung“ gibt an, wie oft ein Angebot allen Benutzern angezeigt werden kann. Weitere Informationen finden Sie in der [Dokumentation zu Angebotseignungsregeln und Einschränkungen](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).

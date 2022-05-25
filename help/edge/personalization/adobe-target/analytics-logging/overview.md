@@ -4,13 +4,13 @@ description: Erfahren Sie, wie Sie die Erfassung von Adobe Analytics for Target-
 seo-title: Adobe Analytics for Target (A4T) Logging in the Platform Web SDK
 seo-description: Learn how to control the collection of Adobe Analytics for Target (A4T) data using the Experience Platform Web SDK.
 keywords: a4t; Protokollierung; Analytics; SDK; Web SDK;
-source-git-commit: a2214465001f90d19d88c0622c154e7a4ae3bb03
+exl-id: f1c90ccd-48a9-4668-b2ac-eacd5bec0b91
+source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
 workflow-type: tm+mt
 source-wordcount: '284'
 ht-degree: 2%
 
 ---
-
 
 # Protokollierung von Adobe Analytics for Target (A4T) im Platform Web SDK
 
@@ -29,7 +29,7 @@ Das Adobe Experience Platform Web SDK unterstützt zwei Arten von Analytics-Prot
 | Serverseitige Analytics-Protokollierung | Alle Analytics-Treffer, die über das Edge-Netzwerk gesendet werden, werden mit Target-Details auf der Server-Seite erweitert, ohne den Trefferzuordnungsprozess durchlaufen zu müssen. |
 | Clientseitige Analytics-Protokollierung | Target-Daten werden Client-seitig zurückgegeben, sodass Sie Daten mithilfe der [Dateneinfüge-API](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
 
-Die Protokollierungsmethode hängt davon ab, ob Adobe Analytics in Ihrer Konfiguration aktiviert ist. [datastream](../../../fundamentals/datastreams.md):
+Die Protokollierungsmethode hängt davon ab, ob Adobe Analytics in Ihrer Konfiguration aktiviert ist. [datastream](../../../datastreams/overview.md):
 
 ![Entscheidungsfluss der Protokollierungsmethode](../assets/analytics-logging.png)
 
