@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform Privacy Service
 breadcrumb-title: Privacy Service-Anleitung
 user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
 feature: Privacy
-source-git-commit: 82dea48c732b3ddea957511c22f90bbd032ed9b7
+source-git-commit: e74d0658d5c389a22497301d289e0310d28731f0
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '83'
 ht-degree: 100%
 
 ---
@@ -32,7 +32,6 @@ ht-degree: 100%
    * [Übersicht](./regulations/overview.md)
    * [FAQs](./regulations/faq.md)
    * [Terminologie](./regulations/terminology.md)
-* [Data Hygiene-API (Alpha)](./data-hygiene-api.md)
 * [Handbuch zur Fehlerbehebung](./troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Versionshinweise](./release-notes.md)
