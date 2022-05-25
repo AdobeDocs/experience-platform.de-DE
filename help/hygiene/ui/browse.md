@@ -1,7 +1,8 @@
 ---
 title: Durchsuchen von Arbeitshygiene-Aufträgen
 description: Erfahren Sie, wie Sie bestehende Workflows zur Datenhygiene in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten.
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
+source-git-commit: 18ef55a084ced8c26e583598f9016dd9f4741153
 workflow-type: tm+mt
 source-wordcount: '555'
 ht-degree: 2%
@@ -25,11 +26,11 @@ In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der 
 
 ## Auflisten und Filtern vorhandener Arbeitsaufträge
 
-Wenn Sie zum ersten Mal auf **[!UICONTROL Datenhygiene]** Arbeitsbereich in der Benutzeroberfläche werden eine Liste der vorhandenen Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
+Wenn Sie zum ersten Mal auf **[!UICONTROL Datenhygiene]** Arbeitsbereich in der Benutzeroberfläche werden eine Liste der bestehenden Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
 
 ![Bild, das die [!UICONTROL Datenhygiene] Workspace in der Platform-Benutzeroberfläche](../images/ui/browse/work-order-list.png)
 
-In der Liste werden nur Arbeitsaufträge für eine Kategorie gleichzeitig angezeigt Auswahl **[!UICONTROL Verbraucher]** eine Liste der Aufgaben zum Löschen von Verbrauchern anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der Time-to-Live (TTL)-Zeitpläne für Datensätze anzuzeigen.
+Die Liste zeigt nur Arbeitsaufträge für eine Kategorie an. Auswählen **[!UICONTROL Verbraucher]** eine Liste der Aufgaben zum Löschen von Verbrauchern anzuzeigen, und **[!UICONTROL Datensatz]** , um eine Liste der Time-to-Live (TTL)-Zeitpläne für Datensätze anzuzeigen.
 
 ![Bild, das die [!UICONTROL Datensatz] tab](../images/ui/browse/dataset-tab.png)
 
