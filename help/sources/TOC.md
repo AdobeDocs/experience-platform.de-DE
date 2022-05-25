@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '781'
 ht-degree: 93%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 93%
    - Customer Success {#customer-success}
       - [Salesforce Service Cloud-Connector](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-Connector](connectors/customer-success/servicenow.md)
+      - [Zendesk-Connector](connectors/customer-success/zendesk.md)
    - Datenbanken {#databases}
       - [Amazon Redshift-Connector](connectors/databases/redshift.md)
       - [Apache Hive on Azure HDInsights-Connector](connectors/databases/hive.md)
@@ -123,6 +124,7 @@ ht-degree: 93%
       - Customer Success {#customer-success}
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Datenbanken {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive on Azure HDInsights](tutorials/api/create/databases/hive.md)
@@ -221,6 +223,7 @@ ht-degree: 93%
       - Customer Success {#customer-success}
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
+         - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Datenbanken {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive auf Azure HDInsights](tutorials/ui/create/databases/hive.md)
