@@ -5,10 +5,10 @@ description: Dieses Dokument enthält Informationen zur attributbasierten Zugrif
 hide: true
 hidefromtoc: true
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 4ac69f614d878cd3c3b9f47e41dedbc6f09288ac
+source-git-commit: 70c0ba81c682fd512c24265f12d1fef6ca14b34e
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 23%
+source-wordcount: '1575'
+ht-degree: 22%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 >
->Die attributbasierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
+>Die attribut-basierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
 
-Mit der attributbasierten Zugriffssteuerung können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern. Attribute können ein vorhandener Wert sein, z. B. die Geolocation oder die Abteilung einer Person. Attribute können auch Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird.
+Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Ein Administrator definiert Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 Mit dieser Funktion können Sie Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder zu definieren und den Zugriff, der Benutzern oder Benutzergruppen (internen, externen oder Drittanbieterbenutzern) gewährt wird, besser zu verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Administratoren die Verwaltung des Zugriffs auf bestimmte Segmente.
 
-Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf sowohl sensible persönliche Daten (EPPD) als auch personenbezogene Daten (PII) in allen Platform-Workflows und -Ressourcen steuern. Administratoren können bestimmte Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder haben, sowie nur auf bestimmte Daten, die diesen Feldern entsprechen.
+Mithilfe der attributbasierten Zugriffskontrolle können Administratoren Ihres Unternehmens den Zugriff der Benutzer auf sowohl sensible persönliche Daten (EPPD) als auch personenbezogene Daten (PII) für alle Platform-Workflows und -Ressourcen steuern. Administratoren können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
 
 ## Terminologie der attributbasierten Zugriffskontrolle
 
@@ -30,7 +30,7 @@ Die attributbasierte Zugriffskontrolle umfasst die folgenden Komponenten:
 
 | Terminologie | Definition |
 | --- | --- |
-| Attribute | Attribute sind die Bezeichner, die die Korrelation zwischen einem Benutzer und den Platform-Ressourcen angeben, auf die er Zugriff hat. Attribute können ein vorhandener Wert sein, z. B. die Geolocation oder die Abteilung einer Person. Attribute können auch Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. |
+| Attribute | Attribute sind die Bezeichner, die die Korrelation zwischen einem Benutzer und den Platform-Ressourcen angeben, auf die er Zugriff hat. Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Ein Administrator definiert Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten. |
 | Beschriftungen | Mit Beschriftungen können Sie Datensätze und Felder entsprechend den für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Beschriftungen können jederzeit angewendet werden, was eine flexible Handhabung der Daten ermöglicht. Best Practices legen nahe, Daten direkt bei ihrer Aufnahme in Platform oder ab dem Zeitpunkt ihrer Nutzbarkeit in Platform mit einer Beschriftung zu versehen. |
 | Berechtigungen | Zu den Berechtigungen gehört die Möglichkeit, Platform-Funktionen anzuzeigen und/oder zu verwenden, z. B. das Erstellen von Sandboxes, das Definieren von Schemas und das Verwalten von Datensätzen. |
 | Berechtigungssätze | Berechtigungssätze stellen eine Gruppe von Berechtigungen dar, die ein Administrator auf eine Rolle anwenden kann. Ein Administrator kann einer Rolle Berechtigungssätze zuweisen, anstatt einzelne Berechtigungen zuzuweisen. Auf diese Weise können Sie benutzerdefinierte Rollen aus einer vordefinierten Rolle erstellen, die eine Gruppe von Berechtigungen enthält. |
@@ -46,11 +46,13 @@ Die attributbasierte Zugriffskontrolle umfasst die folgenden Komponenten:
 >
 >Sobald Ihre Organisation für eine attributbasierte Zugriffskontrolle aktiviert wurde, können Sie mit der Verwendung von Berechtigungen für Adobe Experience Cloud anstelle von Produktprofilen in der Adobe Admin Console beginnen, um Berechtigungen für Benutzer, Funktionen, Beschriftungen und andere Ressourcen in Ihrer Organisation zu verwalten.
 
-Berechtigungen sind der Bereich des Experience Cloud, in dem Administratoren Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen, Funktionen und Objekte in einer Produktanwendung zu verwalten. Über die Berechtigungen können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie im Handbuch zu Berechtigungen.
+Berechtigungen sind der Bereich des Experience Cloud, in dem Administratoren Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
+
+Über Berechtigungen können Sie Rollen erstellen und verwalten sowie die gewünschten Ressourcenberechtigungen für diese Rollen zuweisen. Mit Berechtigungen können Sie auch die Bezeichnungen, Sandboxes und Benutzer verwalten, die einer bestimmten Rolle zugeordnet sind. Weitere Informationen finden Sie unter [Berechtigungshandbuch](ui/browse.md).
 
 ## Attributbasierte Zugriffssteuerungs-API
 
-Mit der attributbasierten Zugriffssteuerungs-API können Sie Rollen, Richtlinien und Produkte in Platform mithilfe von APIs programmgesteuert verwalten.
+Mit der attributbasierten Zugriffssteuerungs-API können Sie Rollen, Richtlinien und Produkte in Platform mithilfe von APIs programmgesteuert verwalten. Weitere Informationen finden Sie im Handbuch unter [Verwenden der API zum Verwalten attributbasierter Zugriffssteuerungskonfigurationen](api/overview.md).
 
 ## Attributbasierte Zugriffssteuerung in Adobe Experience Platform
 
