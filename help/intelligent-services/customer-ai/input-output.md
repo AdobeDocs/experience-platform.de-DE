@@ -6,7 +6,7 @@ title: Eingabe und Ausgabe in Customer AI
 topic-legacy: Getting started
 description: Erfahren Sie mehr über die erforderlichen Ereignisse, Eingaben und Ausgaben, die von Customer AI verwendet werden.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 0f408f217dd168b9c94b8dbbd7dc3c6edb06488c
+source-git-commit: 62188f56861dd021db7b13325f622323644af8e0
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 15%
@@ -265,7 +265,7 @@ Wenn Sie eine neue Kunden-KI-Instanz konfigurieren, `audienceName` und `audience
 
 Customer AI generiert mehrere Attribute für einzelne Profile, die als geeignet gelten. Es gibt zwei Möglichkeiten, die Punktzahl (Ausgabe) basierend auf dem, was Sie bereitgestellt haben, zu nutzen. Wenn Sie über einen Datensatz mit aktiviertem Echtzeit-Kundenprofil verfügen, können Sie Einblicke aus dem Echtzeit-Kundenprofil im [Segment Builder](../../segmentation/ui/segment-builder.md). Wenn Sie keinen Datensatz mit aktiviertem Profil haben, können Sie [Customer AI-Ausgabe herunterladen](./user-guide/download-scores.md) Datensatz, der im Data Lake verfügbar ist.
 
-Sie finden den Ausgabedatensatz unter **Datensätze** in Platform. Alle Ausgabedatensätze von Customer AI beginnen mit dem Namen **Customer AI-Werte - Name_der_App** während alle Ausgabeschemata der Customer AI mit dem Namen beginnen **Customer AI-Schema - Name_of_app**.
+Sie finden den Ausgabedatensatz unter **Datensätze** in Platform. Alle Ausgabedatensätze von Customer AI beginnen mit dem Namen **Customer AI-Werte - Name_der_App**. Ebenso beginnen alle Ausgabeschemata von Customer AI mit dem Namen **Customer AI-Schema - Name_of_app**.
 
 ![cai-schema-name-of-app](./images/user-guide/cai-schema-name-of-app.png)
 
