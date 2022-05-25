@@ -1,7 +1,10 @@
 ---
 title: Datensatz-Time-to-Live (TTL)-API-Endpunkt
 description: Mit dem Endpunkt /ttl in der Data Hygiene API können Sie Datensatz-TTLs in Adobe Experience Platform programmgesteuert planen.
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 7%

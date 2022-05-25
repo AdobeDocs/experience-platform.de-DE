@@ -1,7 +1,10 @@
 ---
 title: Datensatz-TTLs verwalten
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche eine Live-Zeit (TTL) für einen Datensatz planen.
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
+hide: true
+hidefromtoc: true
+source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 0%
