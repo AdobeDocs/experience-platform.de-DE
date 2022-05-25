@@ -2,9 +2,9 @@
 title: Auditprotokollintegration für Query Service
 description: Die Auditprotokolle von Query Service enthalten Aufzeichnungen zu verschiedenen Benutzeraktionen, um ein Audit-Protokoll zur Fehlerbehebung bei Problemen oder zur Einhaltung von Richtlinien zur Unternehmensdatenverwaltung und Regulierungsanforderungen zu erstellen. Dieses Tutorial bietet einen Überblick über die Auditprotokollfunktionen, die speziell für Query Service gelten.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: 12b717be67cb35928d84e83b6d692f9944d651d8
+source-git-commit: 40de87ae407884d4ec7c75215fc7319721fbe1d0
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '935'
 ht-degree: 2%
 
 ---
@@ -25,9 +25,9 @@ Die von [!DNL Query Service] sind wie folgt.
 
 | Kategorie | Beschreibung |
 |---|---|
-| [!UICONTROL Geplante Abfrage] | In dieser Kategorie können Sie die Zeitpläne überprüfen, die in [!DNL Query Service]. |
+| [!UICONTROL Abfrage] | In dieser Kategorie können Sie Abfrageausführungen überprüfen. |
 | [!UICONTROL Abfragevorlage] | In dieser Kategorie können Sie die verschiedenen Aktionen (Erstellen, Aktualisieren und Löschen) einer Abfragevorlage überprüfen. |
-<!-- | [!UICONTROL Query] | This category allows you to audit query executions. | -->
+| [!UICONTROL Geplante Abfrage] | In dieser Kategorie können Sie die Zeitpläne überprüfen, die in [!DNL Query Service]. |
 
 ## Führen Sie eine [!DNL Query Service] Auditprotokoll {#perform-an-audit-log}
 
@@ -42,7 +42,7 @@ Die zurückgegebenen Auditprotokolldaten enthalten die folgenden Informationen z
 | Spaltenname | Beschreibung |
 |---|---|
 | [!UICONTROL Zeitstempel] | Datum und Uhrzeit der in einem `month/day/year hour:minute AM/PM` Format. |
-| [!UICONTROL Asset-Name] | Der Wert für [!UICONTROL Asset-Name] -Feld hängt von der als Filter ausgewählten Kategorie ab. Bei Verwendung von [!UICONTROL Geplante Abfrage] -Kategorie, die dies ist **Planungsname**. Bei Verwendung von [!UICONTROL Abfragevorlage] -Kategorie, ist dies die **Vorlagenname**. |
+| [!UICONTROL Asset-Name] | Der Wert für [!UICONTROL Asset-Name] -Feld hängt von der als Filter ausgewählten Kategorie ab. Bei Verwendung von [!UICONTROL Geplante Abfrage] -Kategorie, die dies ist **Planungsname**. Bei Verwendung von [!UICONTROL Abfragevorlage] -Kategorie, ist dies die **Vorlagenname**. Bei Verwendung von [!UICONTROL Abfrage] -Kategorie, ist dies die **session ID** |
 | [!UICONTROL Kategorie] | Dieses Feld entspricht der von Ihnen im Filter -Dropdown-Menü ausgewählten Kategorie. |
 | [!UICONTROL Aktion] | Dies kann entweder erstellt, gelöscht, aktualisiert oder ausgeführt werden. Die verfügbaren Aktionen hängen von der als Filter ausgewählten Kategorie ab. |
 | [!UICONTROL Benutzer] | Dieses Feld enthält die Benutzer-ID, die die Abfrage ausgeführt hat. |
@@ -53,13 +53,25 @@ Die zurückgegebenen Auditprotokolldaten enthalten die folgenden Informationen z
 >
 >Durch das Herunterladen der Protokollergebnisse im CSV- oder JSON-Dateiformat werden mehr Abfragedetails bereitgestellt als standardmäßig im Dashboard des Auditprotokolls angezeigt.
 
+## Detailbereich
+
 Wählen Sie eine beliebige Zeile mit Auditprotokollergebnissen aus, um einen Detailbereich rechts vom Bildschirm zu öffnen.
 
 ![Registerkarte &quot;Protokoll der Dashboard-Aktivität&quot;mit dem Detailbereich hervorgehoben.](../images/audit-log/details-panel.png)
 
->[!NOTE]
->
->Im Detailbereich können Sie die [!UICONTROL Asset-ID]. Der Wert der [!UICONTROL Asset-ID] ändert sich je nach der in der Prüfung verwendeten Kategorie. Bei Verwendung von [!UICONTROL Abfragevorlage] Kategorie, [!UICONTROL Asset-ID] ist die **template ID**. Bei Verwendung von [!UICONTROL Geplante Abfrage] Kategorie, [!UICONTROL Asset-ID] ist die  **Zeitplan-ID**.
+Im Detailbereich können Sie die [!UICONTROL Asset-ID] und [!UICONTROL Ereignisstatus].
+
+Der Wert der [!UICONTROL Asset-ID] ändert sich je nach der in der Prüfung verwendeten Kategorie.
+
+* Bei Verwendung von [!UICONTROL Abfrage] Kategorie, [!UICONTROL Asset-ID] ist die  **session ID**.
+* Bei Verwendung von [!UICONTROL Abfragevorlage] Kategorie, [!UICONTROL Asset-ID] ist die **template ID** und mit dem Präfix `[!UICONTROL templateID:]`.
+* Bei Verwendung von [!UICONTROL Geplante Abfrage] Kategorie, [!UICONTROL Asset-ID] ist die  **Zeitplan-ID** und mit dem Präfix `[!UICONTROL scheduleID:]`.
+
+Der Wert der [!UICONTROL Ereignisstatus] ändert sich je nach der in der Prüfung verwendeten Kategorie.
+
+* Bei Verwendung von [!UICONTROL Abfrage] Kategorie, [!UICONTROL Ereignisstatus] enthält eine Liste aller **Abfrage-IDs** vom Benutzer innerhalb dieser Sitzung ausgeführt werden.
+* Bei Verwendung von [!UICONTROL Abfragevorlage] Kategorie, [!UICONTROL Ereignisstatus] -Feld bietet die **Vorlagenname** als Präfix für den Ereignisstatus.
+* Bei Verwendung von [!UICONTROL Abfrageplan] Kategorie, [!UICONTROL Ereignisstatus] -Feld bietet die **Planungsname** als Präfix für den Ereignisstatus.
 
 ## Verfügbare Filter für [!DNL Query Service] Prüfprotokollkategorien {#available-filters}
 
@@ -68,9 +80,9 @@ Die verfügbaren Filter variieren je nach der im Dropdown-Menü ausgewählten Ka
 | Filter | Beschreibung |
 |---|---|
 | Kategorie | Siehe [[!DNL Query Service] Prüfprotokollkategorien](#audit-log-categories) für eine vollständige Liste der verfügbaren Kategorien. |
-| Aktion | Wenn auf [!DNL Query Service] Audit-Kategorien, Aktualisierung ist eine **Änderung am vorhandenen Formular**, ist Löschen der Wert **Entfernung des Zeitplans oder der Vorlage**, erstellen ist **Erstellen eines neuen Zeitplans oder einer neuen Vorlage**, und führt eine Abfrage aus. |
+| Aktion | Wenn auf [!DNL Query Service] Audit-Kategorien, Aktualisierung ist eine **Änderung am vorhandenen Formular**, ist Löschen der Wert **Entfernung des Zeitplans oder der Vorlage**, erstellen ist **Erstellen eines neuen Zeitplans oder einer neuen Vorlage**, und die Ausführung lautet **Ausführen einer Abfrage**. |
 | Benutzer | Geben Sie die vollständige Benutzer-ID ein (z. B. johndoe@acme.com), um nach Benutzer zu filtern. |
-| Status | Dieser Filter gilt nicht für die [!DNL Query Service] Prüfprotokolle. Die [!UICONTROL Zulassen], [!UICONTROL Erfolg]und [!UICONTROL Fehlgeschlagen] -Optionen filtern die Ergebnisse nicht, während die [!UICONTROL Ablehnen] Option wird ausgefiltert **all** Protokolle. |
+| Status | Die [!UICONTROL Zulassen], [!UICONTROL Erfolg]und [!UICONTROL Fehlgeschlagen] -Optionen filtern die Protokolle nach &quot;Status&quot;oder &quot;Ereignisstatus&quot;, während die [!UICONTROL Ablehnen] Option wird ausgefiltert **all** Protokolle. |
 | Datum | Wählen Sie ein Startdatum und/oder ein Enddatum aus, um einen Datumsbereich zu definieren, nach dem die Ergebnisse gefiltert werden sollen. |
 
 ## Nächste Schritte
