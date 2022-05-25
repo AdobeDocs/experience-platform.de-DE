@@ -67,7 +67,7 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 * **Name**: Geben Sie den gewünschten Namen für das Ziel ein.
 * **Beschreibung**: Geben Sie eine Beschreibung für das Ziel ein. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden. Dieses Feld ist optional.
-* **Datenspeicher-ID**: Dadurch wird bestimmt, in welchen Datenerfassungsdatenstrom die Segmente einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die das Target-Ziel aktiviert ist. Siehe [Konfigurieren eines Datenspeichers](../../../edge/datastreams/overview.md#target) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Target.
+* **Datenspeicher-ID**: Dadurch wird bestimmt, in welchen Datenerfassungsdatenstrom die Segmente einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die das Target-Ziel aktiviert ist. Siehe [Konfigurieren eines Datenspeichers](../../../edge/fundamentals/datastreams/overview.md#target) für detaillierte Informationen zum Konfigurieren eines Datastreams für Adobe Target.
    * **[!UICONTROL Keines]**: Wählen Sie diese Option aus, wenn Sie die Adobe Target-Personalisierung konfigurieren möchten, die Implementierung der [Experience Platform Web SDK](../../../edge/home.md). Bei Verwendung dieser Option unterstützen Segmente, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung und die Kantensegmentierung ist deaktiviert. Weiterführende Informationen finden Sie in der folgenden Tabelle.
 
 | Kein Datenspeicher ausgewählt | Datenspeicher ausgewählt |
