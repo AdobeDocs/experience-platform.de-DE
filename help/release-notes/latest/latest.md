@@ -2,16 +2,16 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7040a3415ced04035e2a6a73292c2113411df21d
+source-git-commit: 73aaf93e4d11c9e6dd20dfaaf64501eda9220ef8
 workflow-type: tm+mt
-source-wordcount: '2916'
-ht-degree: 100%
+source-wordcount: '2613'
+ht-degree: 96%
 
 ---
 
 # Adobe Experience Platform – Versionshinweise
 
-**Veröffentlichungsdatum: 27. April 2022**
+**Veröffentlichungsdatum: 25. Mai 2022**
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
@@ -19,7 +19,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Datenflüsse](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Ziele](#destinations)
+- [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Real-time Customer Data Platform B2B Edition](#B2B)
 - [Quellen](#sources)
@@ -94,27 +94,9 @@ Weitere Informationen zu [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Ü
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| Erweiterte Enterprise-Destination-Connectoren | Drei Enterprise-Destination-Connectoren sind jetzt allgemein verfügbar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)und [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> Die allgemeine Verfügbarkeit von Enterprise-Destination-Connectoren umfasst alle Funktionen, die zuvor in der Beta-Phase angeboten wurden, und mehr: <ul><li>Neue Authentifizierungsfunktionen, einschließlich [Shared Access Signature in Azure Event Hubs](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) und mehr [Authentifizierungstypen](../../destinations/catalog/streaming/http-destination.md#authentication-information) (Träger-Token, OAuth 2) im HTTP-API-Ziel;</li><li>[Aufstocken historischer Profildaten](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (Versand von historischen Profilen, die für das Segment qualifiziert sind, wenn es zum ersten Mal aktiviert wird);</li><li>Metriken zu Datenflüssen werden jetzt für diese Ziele unterstützt;</li><li>[Zusätzliche Segmentmetadaten](../../destinations/catalog/streaming/http-destination.md#destination-details) sind in der Daten-Payload enthalten, einschließlich Segmentnamen und Segmentzeitstempeln;</li><li>Unterstützung für [statische IP-Adressen](/help/destinations/catalog/streaming/ip-address-allow-list.md) für Kunden, die Experience Platform auf die Zulassungsliste setzen müssen.</li></ul> |
-| Kontextabhängige Warnhinweise für Zieldatenflüsse | Sie können jetzt beim Erstellen eines Ziel-Datenflusses [Warnhinweise abonnieren](../../destinations/ui/alerts.md), um Benachrichtigungen zum Status, Erfolg oder Misserfolg Ihres Datenflusses zu erhalten. Diese Benachrichtigungen können über die Experience Platform-Benutzeroberfläche oder per E-Mail empfangen werden. |
+| Exportieren der neuesten Profilqualifikationen [nach täglicher Segmentbewertung](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) | Sie können jetzt einen vollständigen einmal oder täglich durchgeführten Dateiexport mit den neuesten Profilqualifikationen planen, nachdem die tägliche Segmentbewertung abgeschlossen ist. |
+| Optionale Datastream-ID für [Adobe Target-Ziele](../../destinations/catalog/personalization/adobe-target-connection.md) | Um die Adobe Target-Personalisierung für Benutzer zu aktivieren, die das Experience Platform Web SDK nicht implementieren können, ist die Auswahl der Datastraam-ID jetzt bei der Konfiguration von Adobe Target-Zielen optional. Wenn Sie keinen Datastream verwenden, unterstützen Segmente, die von Experience Platform nach Target exportiert werden, nur die Personalisierung der nächsten Sitzung, während die Kantensegmentierung zusammen mit allen [Anwendungsfälle](../../destinations/ui/configure-personalization-destinations.md) die von der Kantensegmentierung abhängen. |
 
-### Veröffentlichungsprozess für erweiterte Enterprise-Destination-Connectoren {#release-process-enterprise-destinations}
-
-Für die Amazon Kinesis-, Azure Event-Hub- und HTTP-API-Ziele werden während des Veröffentlichungsprozesses (ab dem 27. April) im Zielkatalog sowohl die ehemalige Beta-Zielkarte als auch die neue allgemein verfügbare Zielkarte (GA) angezeigt. Alle Datenflüsse, die von Kunden unter Verwendung der Beta-Ziele konfiguriert wurden, werden in den nächsten Tagen auf die GA-Version desselben Ziels migriert. Diese Migration sollte am Freitag, dem 29. April, bis zum Ende des Tages abgeschlossen sein. Die Beta-Ziele sind während dieses kurzen Zeitfensters weiterhin sichtbar und als **Veraltet** („Deprecated“) gekennzeichnet.
-
-Wenn Sie diese Ziele in der Beta-Phase verwendet haben, beachten Sie Folgendes:
-
-- Wenn Sie die Beta-Version bereits zuvor mit einem der 3 Ziele verwendet haben, ist keine Aktion erforderlich. Alle Datenflüsse, die im Rahmen der Beta-Version eingerichtet wurden, funktionieren weiterhin und werden in die GA-Version migriert.
-- Wenn Sie diese Ziele ab dem 27. April einrichten möchten, verwenden Sie dazu die neue GA-Version der Ziele.
-- Die als veraltet gekennzeichneten Beta-Karten werden entfernt, sobald der Veröffentlichungsvorgang abgeschlossen ist, was voraussichtlich am Freitag, dem 29. April der Fall sein wird. Das Experience Platform-Engineering-Team überwacht sorgfältig die erfolgreiche Veröffentlichung.
-
-**Neue Ziele**
-
-| Ziel | Beschreibung |
-| ----------- | ----------- |
-| [!DNL Criteo] | Verbinden und Aktivieren von Daten mit der [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md)-Werbeplattform. |
-| [!DNL Sendgrid] | Verbinden und Aktivieren von Daten mit der [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md)-Plattform für Transaktions- und Marketing-E-Mails. |
-
-Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 

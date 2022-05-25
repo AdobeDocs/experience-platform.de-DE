@@ -26,7 +26,7 @@ In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der 
 
 ## Auflisten und Filtern vorhandener Arbeitsaufträge
 
-Wenn Sie zum ersten Mal auf **[!UICONTROL Datenhygiene]** Arbeitsbereich in der Benutzeroberfläche werden eine Liste der bestehenden Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
+Wenn Sie zum ersten Mal auf **[!UICONTROL Datenhygiene]** Arbeitsbereich in der Benutzeroberfläche werden eine Liste der vorhandenen Arbeitsaufträge mit ihren grundlegenden Details angezeigt.
 
 ![Bild, das die [!UICONTROL Datenhygiene] Workspace in der Platform-Benutzeroberfläche](../images/ui/browse/work-order-list.png)
 

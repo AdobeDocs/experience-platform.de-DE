@@ -3,7 +3,7 @@ title: Übersicht über Datenspeicher
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
 keywords: Konfiguration;Datastreams;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschaft-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Data Prep für Datenerfassung;Mappings;Mappings er;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 4ad80d8198f86010291532a9e6b9cd564abf6d15
+source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
 workflow-type: tm+mt
 source-wordcount: '1686'
 ht-degree: 3%
@@ -84,7 +84,7 @@ In den folgenden Unterabschnitten werden die Konfigurationsoptionen für die ein
 >
 >Jede Dienstkonfiguration enthält eine **[!UICONTROL Aktiviert]** ein-/ausschalten, der automatisch aktiviert wird, wenn der Dienst ausgewählt ist. Um den ausgewählten Dienst für diesen Datastream zu deaktivieren, wählen Sie die **[!UICONTROL Aktiviert]** wieder umschalten.
 
-### Adobe Analytics-Einstellungen
+### Adobe Analytics-Einstellungen {#analytics}
 
 Dieser Dienst steuert, ob und wie Daten an Adobe Analytics gesendet werden. Weitere Informationen finden Sie im Handbuch zu [Senden von Daten an Analytics](../data-collection/adobe-analytics/analytics-overview.md).
 
@@ -94,7 +94,7 @@ Dieser Dienst steuert, ob und wie Daten an Adobe Analytics gesendet werden. Weit
 | --- | --- |
 | [!UICONTROL Report Suite-ID] | **(Erforderlich)** Die ID der Analytics Report Suite, an die Sie Daten senden möchten. Diese ID finden Sie in der Adobe Analytics-Benutzeroberfläche unter [!UICONTROL Admin] > [!UICONTROL ReportSuites]. Wenn mehrere Report Suites angegeben sind, werden die Daten in die einzelnen Report Suites kopiert. |
 
-### Adobe Audience Manager-Einstellungen
+### Adobe Audience Manager-Einstellungen {#audience-manager}
 
 Dieser Dienst steuert, ob und wie Daten an Adobe Audience Manager gesendet werden. Zum Senden von Daten an Audience Manager ist nur diese Option erforderlich. Die anderen Einstellungen sind optional, werden jedoch empfohlen.
 
@@ -105,7 +105,7 @@ Dieser Dienst steuert, ob und wie Daten an Adobe Audience Manager gesendet werde
 | [!UICONTROL Cookie-Ziele aktiviert] | Ermöglicht dem SDK das Freigeben von Segmentinformationen über [Cookie-Ziele](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) von [!DNL Audience Manager]. |
 | [!UICONTROL URL-Ziele aktiviert] | Ermöglicht dem SDK das Freigeben von Segmentinformationen über [URL-Ziele](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html) von [!DNL Audience Manager]. |
 
-### Adobe Experience Platform-Einstellungen
+### Adobe Experience Platform-Einstellungen {#aep}
 
 >[!IMPORTANT]
 >
@@ -127,7 +127,7 @@ Dieser Dienst steuert, ob und wie Daten an Adobe Experience Platform gesendet we
 | [!UICONTROL Edge-Segmentierung] | Aktivieren Sie dieses Kontrollkästchen, um [Kantensegmentierung](../../segmentation/ui/edge-segmentation.md) für diesen Datastream. Wenn das SDK Daten über einen Datastream sendet, der für die Kantensegmentierung aktiviert ist, werden alle aktualisierten Segmentmitgliedschaften für das betreffende Profil in der Antwort zurückgesendet.<br><br>Diese Option kann in Kombination mit [!UICONTROL Personalisierungsziele] für [Anwendungsfälle für die Personalisierung der nächsten Seite](../../destinations/ui/configure-personalization-destinations.md). |
 | [!UICONTROL Personalisierungsziele] | Bei Verwendung in Kombination mit dem [!UICONTROL Edge-Segmentierung] aktivieren, ermöglicht es diese Option dem Datastream, eine Verbindung zu Personalisierungsmaschinen wie Adobe Target herzustellen. Spezifische Schritte finden Sie in der Dokumentation zu Zielen unter [Konfigurieren von Personalisierungszielen](../../destinations/ui/configure-personalization-destinations.md). |
 
-### Adobe Target-Einstellungen
+### Adobe Target-Einstellungen {#target}
 
 Dieser Dienst steuert, ob und wie Daten an Adobe Target gesendet werden.
 
