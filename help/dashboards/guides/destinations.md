@@ -4,10 +4,10 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 65096a2da03f504c16f00a75bfdef9e78f8c1799
+source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
 workflow-type: tm+mt
-source-wordcount: '2538'
-ht-degree: 2%
+source-wordcount: '2671'
+ht-degree: 3%
 
 ---
 
@@ -51,7 +51,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Kürzlich erstellte Ziele]](#recently-created-destinations)
 * [[!UICONTROL Kürzlich aktivierte Segmente]](#recently-activated-segments)
 * [[!UICONTROL Kürzlich aktivierte Segmente nach Ziel]](#recently-activated-segments-by-destination)
-* [[!UICONTROL Zielgruppengrößentrend]](#audience-size-trend)
+* [[!UICONTROL Trend der Zielgruppengröße]](#audience-size-trend)
 * [[!UICONTROL Nicht zugeordnete Segmente nach Identität]](#unmapped-segments-by-identity)
 * [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
@@ -60,6 +60,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Zielstatus]](#destination-status)
 * [[!UICONTROL Aktive Ziele nach Zielplattform]](#active-destinations-by-destination-platform)
 * [[!UICONTROL Aktivierte Zielgruppen für alle Ziele]](#activated-audiences-across-all-destinations)
+* [[!UICONTROL Aktivierte Zielgruppen]](#activated-audiences)
 
 ### [!UICONTROL Am häufigsten verwendete Ziele] {#most-used-destinations}
 
@@ -131,11 +132,11 @@ Sie können die Details eines Segments anzeigen, indem Sie den Namen eines Segme
 
 ![Kürzlich aktivierte Segmente nach Ziel-Widget.](../images/destinations/recently-activated-segments-by-destination.png)
 
-### [!UICONTROL Zielgruppengrößentrend] {#audience-size-trend}
+### [!UICONTROL Trend der Zielgruppengröße] {#audience-size-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Zielgruppengrößentrend"
+>title="Trend der Zielgruppengröße"
 >abstract="Dieses Widget veranschaulicht die Anzahl der im Segment enthaltenen Profile, die täglich an das Zielkonto gesendet werden. Im ersten Dropdown-Menü wird der Zeitraum für den Zielgruppentrend angepasst. Im zweiten Widget-Dropdown-Menü wird das Segment für die Analyse ausgewählt. Das Ziel wird aus dem Dropdown-Menü Übersicht ausgewählt."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/destinations.html#audience-size-trend" text="Weitere Informationen finden Sie in der Dokumentation ."
 
@@ -250,6 +251,18 @@ Die [!UICONTROL Aktivierte Zielgruppen für alle Ziele] -Widget stellt die Gesam
 ![Das Widget Aktivierte Zielgruppen für alle Ziele .](../images/destinations/activated-audiences-across-all-destinations.png)
 
 Auswählen **[!UICONTROL Zielgruppen]** , um zu den Zielen zu navigieren [!UICONTROL Durchsuchen] Registerkarte. Diese Seite enthält eine Liste aller aktivierten Ziele und eine Vielzahl relevanter Metriken. Weitere Informationen finden Sie in der Dokumentation für [Weitere Informationen über [!UICONTROL Durchsuchen] tab](../../destinations/ui/destinations-workspace.md#browse).
+
+### [!UICONTROL Aktivierte Zielgruppen] {#activated-audiences}
+
+Dieses Widget bietet eine einzelne Metrik für die Gesamtzahl der für ein Ziel aktivierten Zielgruppen.
+
+![Das Widget Aktivierte Zielgruppen .](../images/destinations/activated-audiences.png)
+
+Auswählen **[!UICONTROL Zielgruppen]** , um zur Detailseite des Ziel-Dashboards zu navigieren. Die [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente an, die dem Ziel zugeordnet wurden, einschließlich des Anfangs- und Enddatums (falls zutreffend) sowie anderer relevanter Informationen für den Datenexport, wie Exporttyp, -zeitplan und -frequenz. Um die Details zu einem bestimmten Segment anzuzeigen, wählen Sie dessen Namen aus der Liste aus.
+
+![Die Detailseite des Ziel-Dashboards mit der Registerkarte Aktivierungsdaten wurde hervorgehoben.](../images/destinations/activation-data-tab.png)
+
+Dieses Widget hilft Ihnen, den Wert Ihrer Ziele anhand der Anzahl der auf einen Blick aktivierten Zielgruppen zu verstehen. Sie bietet auch einfachen Zugriff auf detailliertere Informationen für weitere Analysen.
 
 ## Nächste Schritte
 
