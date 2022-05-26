@@ -3,7 +3,7 @@ keywords: Zielpersonalisierung;Ziel;Ziel von Experience Platform;Adobe Target-Zi
 title: Adobe Target-Verbindung
 description: Adobe Target ist ein Programm, das bei allen eingehenden Kundeninteraktionen über Websites, Mobile Apps usw. KI-gestützte Echtzeit-Personalisierung und Experimente ermöglicht.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 0868d81bcd1968b3223c79abb5a7bb8f279a4130
+source-git-commit: 46e732dfc630ad1875a57289a6e6cf9c964b9547
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 46%
@@ -51,7 +51,7 @@ Ein Unternehmen, das Häuser vermietet und verkauft, möchte seine Homepage mit 
 >id="platform_destinations_target_datastream"
 >title="Informationen zu Datenstrom-IDs"
 >abstract="Diese Option bestimmt, in welchen Datenerfassungsdatastream die Segmente einbezogen werden. Das Dropdown-Menü zeigt nur Datensätze an, für die die Target-Konfiguration aktiviert ist. Um die Kantensegmentierung zu verwenden, müssen Sie eine Datastream-ID auswählen. Wenn Sie Kein auswählen, werden alle Anwendungsfälle deaktiviert, die Kantensegmentierung verwenden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Erfahren Sie mehr über die Auswahl von Datastreams."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="Erfahren Sie mehr über die Auswahl von Datastreams"
 
 >[!IMPORTANT]
 > 
