@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie bestehende Workflows zur Datenhygiene in der 
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: e539ee73b04230ac6e3dc4801ce0f8446bec8de6
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '562'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,8 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="IDs für Arbeitsaufträge"
->abstract="Wenn an das System eine Anforderung zur Datenhygiene gesendet wird, wird eine Arbeitsreihenfolge erstellt, um die angeforderte Aufgabe auszuführen. Mit anderen Worten, ein Arbeitsauftrag stellt einen spezifischen Datenhygiene-Prozess dar, der seinen aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung wird jedem Arbeitsauftrag automatisch eine eigene eindeutige ID zugewiesen. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
+>abstract="Wenn an das System eine Anforderung zur Datenhygiene gesendet wird, wird eine Arbeitsreihenfolge erstellt, um die angeforderte Aufgabe auszuführen. Mit anderen Worten, ein Arbeitsauftrag stellt einen spezifischen Datenhygiene-Prozess dar, der seinen aktuellen Status und andere zugehörige Details enthält. Bei der Erstellung wird jedem Arbeitsauftrag automatisch eine eigene eindeutige ID zugewiesen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/browse.html" text="Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene ."
 
 >[!IMPORTANT]
 >
