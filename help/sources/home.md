@@ -5,10 +5,10 @@ title: Übersicht über Quell-Connectoren
 topic-legacy: overview
 description: Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quellen und bietet spezielle Services, mittels derer Sie eingehende Daten strukturieren, beschriften und erweitern können. Daten können aus verschiedensten Quellen aufgenommen werden, darunter etwa Adobe-Programme, Cloud-basierte Datenspeicher und Datenbanken.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: cae2c80c5e0fc7aaece948599e781b32d67989bb
+source-git-commit: 7ffc2ed09b58cc6b6118ef2115666aae092c202c
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 99%
+source-wordcount: '1001'
+ht-degree: 98%
 
 ---
 
@@ -28,22 +28,22 @@ Die für die Aufnahme in Experience Platform verwendeten Datenquellen sind in fo
 
 Experience Platform ermöglicht die Aufnahme von Daten aus anderen Adobe-Programmen wie Adobe Analytics und Adobe Audience Manager. Näheres hierzu finden Sie in den folgenden Dokumenten:
 
-- [Übersicht über den Adobe Audience Manager-Connector](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager-Quellübersicht](connectors/adobe-applications/audience-manager.md)
 - [Erstellen einer Adobe Audience Manager-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Übersicht über Adobe Analytics Classifications-Datenquellenverbindungen](connectors/adobe-applications/classifications.md)
 - [Erstellen einer Adobe Analytics Classifications-Datenquellenverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Übersicht über Adobe Analytics-Report Suite-Datenquellenverbindungen](connectors/adobe-applications/analytics.md)
 - [Erstellen einer Adobe Analytics-Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Data Collection](connectors/adobe-applications/data-collection.md)
+- [Übersicht über die Datenquelle der Adobe-Datenerfassung](connectors/adobe-applications/data-collection.md)
 - [Erstellen einer Quellverbindung für Kundenattribute in der Benutzeroberfläche](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage]-Connector – Übersicht](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage] Quellübersicht](connectors/adobe-applications/marketo/marketo.md)
 - [Erstellen einer  [!DNL Marketo Engage] -Quellverbindung über die Benutzeroberfläche](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Werbung {#advertising}
 
 Experience Platform ermöglicht die Aufnahme von Daten aus Werbesystemen von Drittanbietern. Näheres zu den einzelnen Quell-Connectoren finden Sie in den folgenden Dokumenten:
 
-- [[!DNL Google AdWords]](connectors/advertising/ads.md)-Connector
+- [[!DNL Google AdWords]](connectors/advertising/ads.md)
 
 ### Cloud-Speicherplatz {#cloud-storage}
 
