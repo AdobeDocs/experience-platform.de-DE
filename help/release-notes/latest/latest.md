@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 37d073266bf9293ad3a9e85c193acd1e2e47fa2a
+source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
 workflow-type: tm+mt
 source-wordcount: '1553'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
@@ -71,9 +71,11 @@ Mit Experience Platform können Sie die Benutzeraktivität in Verbindung mit ver
 
 **Aktualisierte Funktionen**
 
-| Funktion | Name | Beschreibung | | — | — | — | | Ressourcen hinzugefügt | <ul><li> Zugriffskontrollrichtlinie </li><li> Rolle </li><li> Auditprotokolle </li><li> Arbeitsauftrag </li><li> Identity-Namespace </li><li> Identitätsdiagramm </li><li> Abfrage </li><li> Datensatz </li><li> Quelldatenfluss </li></ul> | Auditprotokollressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet. Wenn die Funktion aktiviert ist, müssen Sie die Protokollerfassung nicht manuell aktivieren. |
+| Funktion | Name | Beschreibung |
+| --- | --- | --- |
+| Ressourcen hinzugefügt | <ul><li> Zugriffskontrollrichtlinie </li><li> Rolle </li><li> Auditprotokolle </li><li> Arbeitsauftrag </li><li> Identity-Namespace </li><li> Identitätsdiagramm </li><li> Abfrage </li><li> Datensatz </li><li> Quelldatenfluss </li></ul> | Die Auditprotokollressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet. Wenn die Funktion aktiviert ist, müssen Sie die Protokollerfassung nicht manuell aktivieren. |
 
-
+{style=&quot;table-layout:auto&quot;}
 
 Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Abschnitt [Übersicht über Auditprotokolle](../../landing/governance-privacy-security/audit-logs/overview.md).
 
