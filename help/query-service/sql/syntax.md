@@ -5,9 +5,9 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
 workflow-type: tm+mt
-source-wordcount: '2747'
+source-wordcount: '3050'
 ht-degree: 11%
 
 ---
@@ -714,7 +714,7 @@ COPY query
 >
 >Der vollständige Ausgabepfad wird `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
-### ALTERSTABELLE
+### ALTERSTABELLE {#alter-table}
 
 Die `ALTER TABLE` -Befehl können Sie Primär- oder Fremdschlüsseleinschränkungen hinzufügen oder ablegen sowie Spalten zur Tabelle hinzufügen.
 
@@ -747,6 +747,26 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 >
 >Das Tabellenschema sollte eindeutig sein und nicht von mehreren Tabellen gemeinsam genutzt werden. Darüber hinaus ist der Namespace für Primärschlüsseleinschränkungen obligatorisch.
 
+#### Primäre und sekundäre Identitäten hinzufügen oder löschen
+
+Die `ALTER TABLE` -Befehl können Sie über SQL direkt Begrenzungen für primäre und sekundäre Identitätstabelle-Spalten hinzufügen oder löschen.
+
+Die folgenden Beispiele fügen eine primäre Identität und eine sekundäre Identität hinzu, indem Einschränkungen hinzugefügt werden.
+
+```sql
+ALTER TABLE t1 ADD CONSTRAINT PRIMARY IDENTITY (id) NAMESPACE 'IDFA';
+ALTER TABLE t1 ADD CONSTRAINT IDENTITY(id) NAMESPACE 'IDFA';
+```
+
+Identitäten können auch durch Ablegen von Einschränkungen entfernt werden, wie im folgenden Beispiel gezeigt.
+
+```sql
+ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
+ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
+```
+
+Weitere Informationen finden Sie im Dokument zum Festlegen von Identitäten in Ad-hoc-Datensätzen .
+
 #### SPALTE HINZUFÜGEN
 
 Die folgenden SQL-Abfragen zeigen Beispiele für das Hinzufügen von Spalten zu einer Tabelle.
@@ -756,6 +776,23 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
+
+##### Unterstützte Datentypen
+
+In der folgenden Tabelle sind die zulässigen Datentypen für das Hinzufügen von Spalten zu einer Tabelle mit [!DNL Postgres SQL], XDM und die [!DNL Accelerated Database Recovery] (ADR) in Azure SQL.
+
+| --- | PSQL-Client | XDM | ADR | Beschreibung |
+|---|---|---|---|---|
+| 1 | `bigint` | `int8` | `bigint` | Ein numerischer Datentyp zum Speichern großer Ganzzahlen zwischen -9.223.372.036.854.775.807 und 9.223.372.036.854.775.807 in 8 Byte. |
+| 2 | `integer` | `int4` | `integer` | Ein numerischer Datentyp zum Speichern von Ganzzahlen zwischen -2.147.483.648 und 2.147.483.647 in 4 Byte. |
+| 3 | `smallint` | `int2` | `smallint` | Ein numerischer Datentyp zum Speichern von Ganzzahlen zwischen -32.768 und 215-1 32.767 in 2 Byte. |
+| 4 | `tinyint` | `int1` | `tinyint` | Ein numerischer Datentyp zum Speichern von Ganzzahlen zwischen 0 und 255 in 1 Byte. |
+| 5 | `varchar(len)` | `string` | `varchar(len)` | Ein Datentyp mit Zeichen, der variablengroß ist. `varchar` wird am besten verwendet, wenn die Größe der Spaltendateneinträge erheblich variiert. |
+| 6 | `double` | `float8` | `double precision` | `FLOAT8` und `FLOAT` sind gültige Synonyme für `DOUBLE PRECISION`. `double precision` ist ein Gleitkomma-Datentyp. Gleitkommawerte werden in 8 Byte gespeichert. |
+| 7 | `double precision` | `float8` | `double precision` | `FLOAT8` ist ein gültiges Synonym für `double precision`.`double precision` ist ein Gleitkomma-Datentyp. Gleitkommawerte werden in 8 Byte gespeichert. |
+| 8 | `date` | `date` | `date` | Die `date` -Datentyp sind 4-Byte-gespeicherte Kalenderdatumswerte ohne Zeitstempelinformationen. Der Datumsbereich reicht vom 01-01-0001 bis zum 12-31-999. |
+| 9 | `datetime` | `datetime` | `datetime` | Ein Datentyp, mit dem ein als Kalenderdatum und -uhrzeit ausgedrückter Zeitpunkt gespeichert wird. `datetime` umfasst die Kennzahlen für: Jahr, Monat, Tag, Stunde, Sekunde und Fraktion. A `datetime` Die Deklaration kann eine Teilmenge dieser Zeiteinheiten enthalten, die in dieser Sequenz zusammengefügt sind, oder sogar nur eine Zeiteinheit umfassen. |
+| 10 | `char(len)` | `string` | `char(len)` | Die `char(len)` -Keyword wird verwendet, um anzugeben, dass es sich bei dem Element um ein Zeichen fester Länge handelt. |
 
 #### SCHEMA HINZUFÜGEN
 
