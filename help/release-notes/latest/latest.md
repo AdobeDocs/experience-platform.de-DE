@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 9484da6948243a098db2ff8ebdd59c5e70a51635
+source-git-commit: d8f62bdaa0d043fa2c27b25ae2a6f5979076314e
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 33%
+source-wordcount: '1593'
+ht-degree: 32%
 
 ---
 
@@ -136,6 +136,7 @@ Experience Platform bietet eine Reihe von Technologien, mit denen Sie clientseit
 | Importieren von Datenspeicher-Zuordnungsregeln | Beim Einrichten der Datenvorbereitung für die Datenerfassung können Sie [die Zuordnungsregeln eines vorhandenen Datenspeichers importieren](../../edge/datastreams/data-prep.md#import-mapping) anstatt jede Feldzuordnung manuell zu konfigurieren. |
 | Unterstützung der Datasteam-Zuordnung für das Mobile SDK | Sie können jetzt die Datenvorbereitung für die Datenerfassung für Datenspeicher konfigurieren, die für die Verwendung mit dem Experience Platform Mobile SDK vorgesehen sind. |
 | Unterstützung der Datasteam-Zuordnung für XDM-Objekte | Ordnen Sie XDM-Objekte zusätzlich zu Datenschichtobjekten zu, wenn [Konfigurieren der Datenvorbereitung für die Datenerfassung](../../edge/datastreams/data-prep.md#select-data). |
+| Integration mit Datenflüssen | Verwenden Sie den Quellkatalog in Platform, um auf Ihre Daten im Platform Edge Network zuzugreifen, einschließlich der Datenvorbereitung für die Datenerfassung und der verbesserten Unterstützung für Datenvorbereitung-Warnungen. Siehe [Übersicht über die Datenquelle der Adobe-Datenerfassung](../../sources/connectors/adobe-applications/data-collection.md) für weitere Informationen. |
 
 Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
@@ -238,7 +239,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | Beta-Version [!DNL Zendesk] source | Verwenden Sie die [!DNL Zendesk] Quelle, um Benutzer-, Agenten- und Organisationsdaten aus Ihrer [!DNL Zendesk] Instanz für [!DNL Profile] Anreicherung. Siehe [[!DNL Zendesk] Quellübersicht](../../sources/connectors/customer-success/zendesk.md) für weitere Informationen. |
-| Unterstützung für die Datenerfassung in Adobe | Verwenden Sie den Quellkatalog, um auf Ihre Datenerfassungs-Experience Edge-Daten zuzugreifen, einschließlich der Datenvorbereitung für die Datenerfassung und der verbesserten Unterstützung für Datenwarnungen aus der Datenvorbereitung. Siehe [Übersicht über die Datenquelle der Adobe-Datenerfassung](../../sources/connectors/adobe-applications/data-collection.md) für weitere Informationen. |
+| Unterstützung für die Datenerfassung in Adobe | Verwenden Sie den Quellkatalog in Platform, um auf Ihre Daten im Platform Edge Network zuzugreifen, einschließlich der Datenvorbereitung für die Datenerfassung und der verbesserten Unterstützung für Datenvorbereitung-Warnungen. Siehe [Übersicht über die Datenquelle der Adobe-Datenerfassung](../../sources/connectors/adobe-applications/data-collection.md) für weitere Informationen. |
 | Unterstützung für die Aufnahme von Dateien mit `ISO-8859-1` encoding | Verwenden Sie die `encoding` Parameter zur Aufnahme `ISO-8859-1` kodierte Dateien mit einer Cloud-Speicherquelle für Platform mithilfe der [!DNL Flow Service] API. Siehe Handbuch unter [Erstellen einer Cloud-Speicher-Quellverbindung](../../sources/tutorials/api/collect/cloud-storage.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
