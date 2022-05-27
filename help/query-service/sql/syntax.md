@@ -5,7 +5,7 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: f509b468e7779b822eda96033a2c55cc3a12893d
+source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
 workflow-type: tm+mt
 source-wordcount: '3050'
 ht-degree: 11%
@@ -765,7 +765,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Weitere Informationen finden Sie im Dokument zum Festlegen von Identitäten in Ad-hoc-Datensätzen .
+Siehe Dokument unter [Festlegen von Identitäten in Ad-hoc-Datensätzen](../data-governance/ad-hoc-schema-identities.md) für detailliertere Informationen.
 
 #### SPALTE HINZUFÜGEN
 
