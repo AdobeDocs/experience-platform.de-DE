@@ -5,9 +5,9 @@ topic-legacy: guide
 description: Das Echtzeit-Kundenprofil führt Daten aus verschiedenen Quellen zusammen und bietet Zugriff auf diese Daten in Form von individuellen Kundenprofilen und zugehörigen Zeitreihenereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 source-git-commit: d2182b48e21de059f12ad8923bb3b420ed87bcfc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2046'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -19,24 +19,24 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 Die nachfolgende Abbildung zeigt die Zusammenhänge zwischen dem Echtzeit-Kundenprofil und anderen Services in Experience Platform:
 
-![Die Beziehung zwischen Echtzeit-Kundenprofil und anderen Diensten in Adobe Experience Platform. Dieses Diagramm zeigt, dass Profil eine der Kernkomponenten von Adobe Experience Platform ist.](images/profile-overview/profile-in-platform.png)
+![Die Beziehung zwischen Echtzeit-Kundenprofil und anderen Services in Adobe Experience Platform. Dieses Diagramm zeigt, dass das Profil eine der Kernkomponenten von Adobe Experience Platform ist.](images/profile-overview/profile-in-platform.png)
 
 ## Profile verstehen
 
 [!DNL Real-time Customer Profile] führt Daten aus verschiedenen Unternehmenssystemen zusammen und ermöglicht dann den Zugriff auf diese Daten in Form von Profilen mit zugehörigen Zeitreihen-Ereignissen. die es Marketing-Experten ermöglichen, über verschiedenste Kanäle hinweg koordinierte, konsistente und relevante Erlebnisse für ihre Zielgruppen umzusetzen. In den folgenden Abschnitten werden einige der Kernkonzepte hervorgehoben, die Sie verstehen müssen, um Profile innerhalb von Platform effektiv zu erstellen und zu verwalten.
 
-### Entitätszusammenstellung des Profils
+### Entitätskomposition des Profils
 
-Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der so genannten **primäre Entität** und verschiedenen unterstützenden Entitäten. Die primäre Entität besteht aus Eigenschaften, Verhaltensweisen und Segmentmitgliedschaften eines Profils. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
+Ein Echtzeit-Kundenprofil besteht aus einer Hauptentität, der sogenannten **primäreen Entität**, und verschiedenen unterstützenden Entitäten. Die primäre Entität besteht aus Eigenschaften, Verhaltensweisen und Segmentzugehörigkeiten eines Profils. Andere Entitäten ermöglichen es der Segmentierungs-Engine, Daten außerhalb der primären Entität des Profils zu verwenden, und umfassen Folgendes:
 
-- **Dimensionentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Classification-Entität bezeichnet.
-- **B2B-Unternehmen**: Entitäten, die die Beziehung des Profils zu Geschäftskonten und Gelegenheiten beschreiben.
+- **Dimensionsentität**: Die Entität, die zur Vereinfachung des Datenmodellierungsprozesses für Informationen verwendet wird, die über Ereignisse oder Profildatensätze hinweg freigegeben werden. Dies wird auch als Lookup-Entität oder Klassifizierungsentität bezeichnet.
+- **B2B-Entität**: Entitäten, die die Beziehung des Profils zu B2B-Konten und Opportunities beschreiben.
 
 ![Ein Diagramm, das die Zusammensetzung der Profilentität erklärt.](./images/profile-overview/profile-entity-composition.png)
 
 >[!IMPORTANT]
 >
->Da Dimensions- und B2B-Entitäten nur außerhalb der primären Entität vorhanden sind, werden sie nur für die Batch-Segmentierung verwendet.
+>Da dimensionale und B2B-Entitäten nur außerhalb der primären Entität existieren, werden diese nur für die Stapelsegmentierung verwendet.
 
 ### Profil-Datenspeicher
 
