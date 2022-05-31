@@ -5,10 +5,10 @@ description: Dieses Dokument enthält Informationen zur attributbasierten Zugrif
 hide: true
 hidefromtoc: true
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
 workflow-type: tm+mt
-source-wordcount: '188'
-ht-degree: 2%
+source-wordcount: '245'
+ht-degree: 20%
 
 ---
 
@@ -17,6 +17,10 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >Die attribut-basierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
+
+Sandboxes sind virtuelle Partitionen innerhalb einer Instanz von Experience Platform, die eine nahtlose Integration in den Entwicklungsprozess Ihrer Programme für digitale Erlebnisse ermöglichen. Alle Inhalte und Aktionen, die innerhalb einer Sandbox ausgeführt werden, sind auf diese Sandbox beschränkt und wirken sich nicht auf andere Sandboxes aus. Weitere Informationen zu Sandboxes finden Sie unter [Sandbox-Übersicht](../../../sandboxes/home.md).
+
+## Sandboxes konfigurieren
 
 Um Details und Rollen anzuzeigen, die einer Sandbox zugewiesen sind, wählen Sie die **[!UICONTROL Sandboxes]** Registerkarte.
 

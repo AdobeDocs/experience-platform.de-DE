@@ -5,9 +5,9 @@ description: Dieses Dokument enthält Informationen zur attributbasierten Zugrif
 hide: true
 hidefromtoc: true
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '376'
 ht-degree: 20%
 
 ---
@@ -17,6 +17,17 @@ ht-degree: 20%
 >[!IMPORTANT]
 >
 >Die attribut-basierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
+
+Berechtigungen ist der Bereich von Adobe Experience Cloud, in dem Administratoren Benutzerrollen und Zugriffsrichtlinien definieren können, um Zugriffsberechtigungen für Funktionen und Objekte in einer Produktanwendung zu verwalten.
+
+Mit Berechtigungen können Sie Folgendes konfigurieren:
+
+* [Beschriftungen](./labels.md)
+* [Berechtigungen](./permissions.md)
+* [Richtlinien](./permissions.md)
+* [Rollen](./roles.md)
+* [Sandboxes](./sandboxes.md)
+* [Benutzer](./users.md)
 
 Um auf attributbasierte Zugriffssteuerungsberechtigungen für [!DNL Experience Cloud]müssen Sie Administrator für Ihre Organisation sein, die über ein Abonnement für [!DNL Experience Cloud]. Adobe unterstützt zwar flexible Administrationshierarchien für Ihre Unternehmen, Sie müssen jedoch Produktadministrator für Adobe Experience Platform sein, um Berechtigungen konfigurieren zu können. Weiterführende Informationen zu [Verwaltungsrollen](https://helpx.adobe.com/de/enterprise/using/admin-roles.html) finden Sie im Adobe Help Center-Artikel.
 
