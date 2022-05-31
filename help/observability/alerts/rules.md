@@ -4,7 +4,7 @@ title: Standardmäßige Warnhinweisregeln
 description: In diesem Dokument werden die von Experience Platform bereitgestellten vordefinierten Warnhinweisregeln behandelt.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 67aef7ca2ad4061003af8d91fb29339397d8af01
+source-git-commit: c0559fc55531e2b0c2938294742397b43e9e0445
 workflow-type: tm+mt
 source-wordcount: '811'
 ht-degree: 92%
@@ -29,7 +29,6 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Datenerfassung](../../inge
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmeverzögerung | Dieser Warnhinweis wird ausgelöst, wenn die Verarbeitung eines Batch-Erfassungsablaufs länger als 150 Minuten dauert. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Fehlende Aufnahme | Dieser Warnhinweis sendet Ihnen eine Nachricht, wenn die Aufnahme um mehr als sieben Stunden verzögert ist und keine Daten an Platform erfasst werden. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Aufnahmefehler | Dieser Warnhinweis wird Trigger, wenn das Verhältnis der fehlgeschlagenen Datensätze zu allen Datensätzen einen Schwellenwert von 0,5 % überschreitet. |
-| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Quellflusses | Übersprungrate überschreitet Schwellenwert | Dieser Warnhinweis wird Trigger, wenn das Verhältnis der übersprungenen IDs zur Gesamtzahl der IDs einen Schwellenwert überschreitet. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -83,6 +82,7 @@ Die folgenden Warnhinweisregeln sind spezifisch für [Ziele](../../destinations/
 | Informationen zur Ausführung des Zielflusses | Erfolgreiche Ausführung des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn ein Segment erfolgreich für ein Ziel aktiviert wurde. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Verzögerung bei der Ausführung des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn die Aktivierung eines Segments durch einen Zielfluss länger als 150 Minuten in Anspruch nimmt. |
 | Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Fehler beim Ausführen des Zielflusses | Dieser Warnhinweis wird ausgelöst, wenn beim Aktivieren eines Segments für ein Ziel ein Fehler auftritt. |
+| Verzögerungen, Ausfälle und Fehler bei der Ausführung des Zielflusses | Übersprungrate überschreitet Schwellenwert | Dieser Warnhinweis wird Trigger, wenn das Verhältnis zwischen übersprungenen IDs und Gesamt-IDs einen Schwellenwert überschreitet. |
 
 {style=&quot;table-layout:auto&quot;}
 
