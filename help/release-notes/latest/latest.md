@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8e1f4d8cef1a962a056328417a1dbdff1aed2078
+source-git-commit: 1b417935d557f7d58039c508544ed768f6ad1cc4
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 34%
+source-wordcount: '1719'
+ht-degree: 33%
 
 ---
 
@@ -252,7 +252,8 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Funktion | Beschreibung |
 | --- | --- |
 | Beta-Version [!DNL Zendesk] source | Verwenden Sie die [!DNL Zendesk] Quelle, um Benutzer-, Agenten- und Organisationsdaten aus Ihrer [!DNL Zendesk] Instanz für [!DNL Profile] Anreicherung. Siehe [[!DNL Zendesk] Quellübersicht](../../sources/connectors/customer-success/zendesk.md) für weitere Informationen. |
-| Unterstützung für die Datenerfassung in Adobe | Verwenden Sie den Quellkatalog in Platform, um auf Ihre Daten im Platform Edge Network zuzugreifen, einschließlich der Datenvorbereitung für die Datenerfassung und der verbesserten Unterstützung für Datenvorbereitung-Warnungen. Siehe [Übersicht über die Datenquelle der Adobe-Datenerfassung](../../sources/connectors/adobe-applications/data-collection.md) für weitere Informationen. |
+| Allgemeine Verfügbarkeit von B2B [!DNL Microsoft Dynamics] source | Sie können jetzt die [!DNL Microsoft Dynamics] B2B-Objekte wie Konten, Chancen, Kampagnen, Marketinglisten und Mitglieder der Marketingliste aufnehmen. Siehe [[!DNL Microsoft Dynamics] Quellübersicht](../../sources/connectors/crm/ms-dynamics.md) für weitere Informationen. |
+| Unterstützung für die Datenerfassung in Adobe | Verwenden Sie den Quellkatalog, um auf Ihre Datenerfassungs-Experience Edge-Daten zuzugreifen, einschließlich der Datenvorbereitung für die Datenerfassung und der verbesserten Unterstützung für Datenwarnungen aus der Datenvorbereitung. Siehe [Übersicht über die Datenquelle der Adobe-Datenerfassung](../../sources/connectors/adobe-applications/data-collection.md) für weitere Informationen. |
 | Unterstützung für die Aufnahme von Dateien mit `ISO-8859-1` encoding | Verwenden Sie die `encoding` Parameter zur Aufnahme `ISO-8859-1` kodierte Dateien mit einer Cloud-Speicherquelle für Platform mithilfe der [!DNL Flow Service] API. Siehe Handbuch unter [Erstellen einer Cloud-Speicher-Quellverbindung](../../sources/tutorials/api/collect/cloud-storage.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}

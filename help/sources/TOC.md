@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 3c80f3b297e7119067480739e206064bb2ace22c
+source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
 workflow-type: tm+mt
-source-wordcount: '781'
-ht-degree: 93%
+source-wordcount: '785'
+ht-degree: 92%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 93%
          - [Audience Manager-Feldzuordnungen](connectors/adobe-applications/mapping/audience-manager.md)
          - [Zielfeldzuordnungen](connectors/adobe-applications/mapping/target.md)
          - [Marketo Engage-Feldzuordnungen](connectors/adobe-applications/mapping/marketo.md)
+         - [Microsoft Dynamics-Feldzuordnungen](connectors/adobe-applications/mapping/dynamics.md)
          - [Salesforce-Feldzuordnungen](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
          - [Marketo Engage-Connector](connectors/adobe-applications/marketo/marketo.md)
