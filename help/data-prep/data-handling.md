@@ -5,10 +5,10 @@ title: Verarbeiten von Datenformaten mit der Datenvorbereitung
 topic-legacy: overview
 description: In diesem Dokument erhalten Sie einen Überblick darüber, wie verschiedene Datentypen von der Datenvorbereitung verarbeitet werden.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: 27c59904b1ebe98d65ff8d4001edc2a85cada294
-workflow-type: ht
-source-wordcount: '568'
-ht-degree: 100%
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 98%
 
 ---
 
@@ -106,3 +106,7 @@ Die folgende Tabelle zeigt, welche Musterbuchstaben für Formatzeichenfolgen def
 | V | Zeitzonen-ID | Text | America/Los_Angeles |
 | O | Zeitzonenversatz | Text | GMT+8 |
 | Q/q | Quartal des Jahres | Zahl/Text | 3; 03; Q3; 3. Quartal |
+
+## Karten {#maps}
+
+Karten werden derzeit nicht in [!DNL Data Prep].

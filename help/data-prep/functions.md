@@ -5,9 +5,9 @@ title: Zuordnungsfunktionen für Datenvorbereitung
 topic-legacy: overview
 description: In diesem Dokument werden die mit der Datenvorbereitung verwendeten Zuordnungsfunktionen vorgestellt.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: ddc1750502281bfd7432336e707a35b8139ff069
+source-git-commit: 15afb221a3576b7a37ea02195549f246833b800d
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4175'
 ht-degree: 7%
 
 ---
@@ -164,10 +164,13 @@ Informationen zur Objektkopierfunktion finden Sie im Abschnitt . [below](#object
 | join_arrays | Kombiniert die Arrays miteinander. | <ul><li>ARRAY: **Erforderlich** Das Array, dem Sie Elemente hinzufügen.</li><li>WERTE: Die Array(e), die an das übergeordnete Array angehängt werden sollen.</li></ul> | join_arrays &#x200B;(ARRAY, VALUES) | join_arrays &#x200B;([&quot;a&quot;, &quot;b&quot;], [&#39;c&#39;], [&quot;d&quot;, &quot;e&quot;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Nimmt eine Liste von Eingaben und konvertiert sie in ein Array. | <ul><li>INCLUDE_NULLS: **Erforderlich** Ein boolean -Wert, der angibt, ob Nullen in das Antwort-Array aufgenommen werden sollen.</li><li>WERTE: **Erforderlich** Die Elemente, die in ein Array konvertiert werden sollen.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Gibt die Größe der Eingabe zurück. | <ul><li>EINGABE: **Erforderlich** Das Objekt, dessen Größe Sie ermitteln möchten.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | Mit dieser Funktion werden alle Elemente im gesamten Eingabe-Array an das Ende des Arrays in Profil angehängt. Diese Funktion ist **only** anwendbar während Aktualisierungen. Wenn diese Funktion im Kontext von Einfügen verwendet wird, gibt sie die Eingabe unverändert zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, an das das Array im Profil angehängt werden soll.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123.456] |
-| upsert_array_replace | Diese Funktion wird verwendet, um Elemente in einem Array zu ersetzen. Diese Funktion ist **only** anwendbar während Aktualisierungen. Wenn diese Funktion im Kontext von Einfügen verwendet wird, gibt sie die Eingabe unverändert zurück. | <ul><li>ARRAY: **Erforderlich** Das Array, das das Array im Profil ersetzen soll.</li><li>INDEX: **Optional** Die Position, von der aus der Austausch erfolgen soll.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123.456] |
 
 {style=&quot;table-layout:auto&quot;}
+
+<!--
+| upsert_array_append | This function is used to append all elements in the entire input array to the end of the array in Profile. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to append the array in the Profile.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
+| upsert_array_replace | This function is used to replace elements in an array. This function is **only** applicable during updates. If used in the context of inserts, this function returns the input as is. | <ul><li>ARRAY: **Required** The array to replace the array in the Profile.</li><li>INDEX: **Optional** The position from where the replacement needs to happen.</li></li> | upsert_array_replace(ARRAY, INDEX) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+-->
 
 ### Logische Operatoren {#logical-operators}
 

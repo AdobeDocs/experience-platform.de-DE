@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Datenvorbereitung; D
 title: Teilweise Zeilenaktualisierungen an den Profildienst mithilfe der Datenvorbereitung senden
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe der Datenvorbereitung Teilzeilenaktualisierungen an den Profildienst senden.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: 67049cf220379bfa5b64f530f26045ea21077be0
+source-git-commit: 93c95fce45dc034c0b9c53d9893a8e38e752ec0f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1175'
+ht-degree: 9%
 
 ---
 
@@ -248,7 +248,7 @@ curl -X POST 'https://dcs.adobedc.net/collection/9aba816d350a69c4abbd283eb5818ec
 Im Folgenden finden Sie eine Liste bekannter Einschränkungen, die beim Streaming von Uploads mit [!DNL Data Prep]:
 
 * Die Streaming-Upsermethode sollte nur verwendet werden, wenn Teilzeilenaktualisierungen an [!DNL Profile Service]. Teilzeilenaktualisierungen sind **not** von Data Lake verbraucht.
-* Die Streaming-Upsert-Methode unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Identitäten können nur mit dem `identity: create` Vorgang.
+* Die Streaming-Upsert-Methode unterstützt nicht das Aktualisieren, Ersetzen und Entfernen von Identitäten. Neue Identitäten werden erstellt, wenn sie nicht vorhanden sind. Daher `identity` -Vorgang muss immer auf &quot;Erstellen&quot;eingestellt sein. Wenn bereits eine Identität vorhanden ist, ist der Vorgang ein no-op-Vorgang.
 * Die Streaming-Auffüllungsmethode unterstützt derzeit nur primitive Attribute mit einem Wert (wie Ganzzahlen, Datumsangaben, Zeitstempel und Zeichenfolgen) und Objekte. Die Streaming-Upsert-Methode unterstützt nicht das Ersetzen, Anhängen oder Überschreiben von Array-Attributen und bestimmten Array-Indizes.
 
 ## Nächste Schritte
