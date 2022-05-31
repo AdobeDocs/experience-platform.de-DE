@@ -3,10 +3,10 @@ keywords: Werbung; criteo;
 title: Crito-Verbindung
 description: Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbraucher im offenen Internet reichhaltigere Erlebnisse zu bieten. Mit dem weltweit größten Commerce-Datensatz und einer erstklassigen KI stellt Criteo sicher, dass jeder Touchpoint über die Einkaufs-Journey personalisiert ist, um Kunden zur richtigen Zeit mit der richtigen Anzeige zu erreichen.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: add177efd3fdd0a39dc33c5add59375f8e918c1e
+source-git-commit: 07974f92c741d74e6d0289120538655379d3ca35
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 8%
+source-wordcount: '942'
+ht-degree: 7%
 
 ---
 
@@ -24,11 +24,13 @@ Criteo ermöglicht vertrauenswürdige und wirkungsvolle Werbung, um jedem Verbra
 
 * Sie benötigen ein Administratorbenutzerkonto für [Criteo Management Center](https://marketing.criteo.com).
 * Sie benötigen Ihre Criteo Advertiser ID (fragen Sie Ihren Criteo-Kontakt, wenn Sie diese ID nicht haben).
+* Sie müssen [!DNL GUM caller ID], falls Sie [!DNL GUM ID] als Kennung.
 
 ## Einschränkungen {#limitations}
 
 * Criteo unterstützt derzeit nicht das Entfernen von Benutzern aus Zielgruppen.
-* Criteo akzeptiert nur [!DNL SHA-256]-Hash- und Text-E-Mails (zu konvertieren in [!DNL SHA-256] vor dem Senden). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen der Person oder Telefonnummern).
+* Criteo akzeptiert nur [!DNL SHA-256]-Hash- und Text-E-Mails (zu konvertieren in [!DNL SHA-256] vor dem Senden). Bitte senden Sie keine personenbezogenen Daten (personenbezogene Daten, wie z.B. die Namen von Einzelpersonen oder Telefonnummern).
+* Criteo benötigt mindestens eine Kennung, die vom Client bereitgestellt werden muss. Prioritäten [!DNL GUM ID] als Kennung anstelle von Hash-E-Mail, da sie zu einer besseren Übereinstimmungsrate beiträgt.
 
 ![Voraussetzungen](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -39,6 +41,7 @@ Criteo unterstützt die Aktivierung von Identitäten, die in der folgenden Tabel
 | Zielgruppenidentität | Beschreibung | Zu beachten |
 | --- | --- | --- |
 | `email_sha256` | Mit dem SHA-256-Algorithmus gehashte E-Mail-Adressen | Adobe Experience Platform unterstützt sowohl einfache als auch SHA-256-Hash-E-Mail-Adressen. Wenn Ihr Quellfeld ungehashte Attribute enthält, überprüfen Sie die [!UICONTROL Umwandlung anwenden] , damit Platform die Daten bei der Aktivierung automatisch hasst. |
+| `gum_id` | Criteo [!DNL GUM] Cookie-Kennung | [!DNL GUM IDs] Kunden die Möglichkeit geben, eine Korrespondenz zwischen ihrem Benutzeridentifizierungssystem und der Benutzeridentifizierung von Criteo zu pflegen ([!DNL UID]). Wenn der Kennungstyp `GUM`, einen zusätzlichen Parameter, die [!DNL GUM Caller ID], muss ebenfalls einbezogen werden. Wenden Sie sich an Ihr Criteo-Account-Team, um Informationen zu den entsprechenden [!DNL GUM Caller ID] oder weitere Informationen dazu zu erhalten `GUM` bei Bedarf synchronisieren. |
 
 ## Exportart und -frequenz {#export-type-frequency}
 
@@ -98,6 +101,7 @@ Geben Sie nach der Authentifizierung beim Ziel die folgenden Verbindungsparamete
 | Beschreibung | Eine Beschreibung, die Ihnen dabei hilft, dieses Ziel in der Zukunft zu identifizieren. | Nein |
 | API-Version | API-Version von Criteo. Wählen Sie Vorschau aus. | Ja |
 | Advertiser-ID | Criteo Advertiser ID Ihres Unternehmens. Wenden Sie sich an Ihren Criteo-Kundenbetreuer, um diese Informationen zu erhalten. | Ja |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] Ihrer Organisation. Wenden Sie sich an Ihr Criteo-Account-Team, um Informationen zu den entsprechenden [!DNL GUM Caller ID] oder weitere Informationen dazu zu erhalten [!DNL GUM] bei Bedarf synchronisieren. | Ja, wann immer [!DNL GUM ID] wird als Kennung bereitgestellt |
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate-segments}
 
@@ -114,21 +118,29 @@ Sie können die exportierten Segmente im [Zentrum für die Verwaltung von Kriter
 Die bei der [!DNL Criteo] -Verbindung sieht in etwa wie folgt aus:
 
 ```json
-{ 
-  "data": { 
-    "type": "ContactlistWithUserAttributesAmendment", 
-    "attributes": { 
-      "operation": "add", 
-      "identifierType": "sha256email", 
-      "identifiers": [ 
-        { 
-          "identifier": "1c8494bbc4968277345133cca6ba257b9b3431b8a84833a99613cf075a62a16d", 
-          "attributes": [{ "key": "customValue", "value": "1" }] 
-        } 
-      ] 
-    } 
-  } 
-} 
+{
+  "data": {
+    "type": "ContactlistWithUserAttributesAmendment",
+    "attributes": {
+      "operation": "add",
+      "identifierType": "gum",
+      "gumCallerId": "123",
+      "identifiers": [
+        {
+          "identifier": "456",
+          "attributes": [
+            { "key": "ctoid_GumCaller", "value": "123" },
+            { "key": "ctoid_Gum", "value": "456" },
+            {
+              "key": "ctoid_HashedEmail",
+              "value": "98833030dc03751f2b2c1a0017078975fdae951aa6908668b3ec422040f2d4be"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
 ```
 
 ## Datennutzung und -Governance {#data-usage}
