@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie mit der Edge Network Server-API mit Adobe Ana
 seo-description: Learn how to use the Edge Network Server API to interact with Adobe Analytics
 keywords: Datenerfassung; Auslass; Analyse; Adobe Experience Platform Edge Network API;Analytics
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
-source-git-commit: 08b1924c518a76873051b4038d8a1fe38dc7ddac
+source-git-commit: 396dc8d861f0e699a76aa367fc07fe62be804cc5
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Damit Adobe Analytics Daten von der Server-API empfangen kann, müssen Sie [Date
 ### API-Format {#format}
 
 ```http
-POST https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}
+POST https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}
 ```
 
 ### Anfrage {#request}
@@ -38,7 +38,7 @@ Das folgende Beispiel enthält mehrere automatisch zugeordnete Werte aus dem `_e
 Alle Werte, die Benutzer diesen Feldern zuordnen, werden automatisch den entsprechenden Analytics-Werten zugeordnet, so als wären sie in der API-Anfrage enthalten.
 
 ```shell
-curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}" \
+curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}" \
 -H "Authorization: Bearer {TOKEN}" 
 -H "x-gw-ims-org-id: {ORG_ID}" 
 -H "x-api-key: {API_KEY}" 
