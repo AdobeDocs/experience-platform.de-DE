@@ -2,12 +2,10 @@
 title: Data Hygiene API-Anleitung
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 29%
+source-wordcount: '309'
+ht-degree: 33%
 
 ---
 
@@ -41,9 +39,9 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 In diesem Dokument wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/api-guide.md#sample-api) in den Ersten Schritten für Experience Platform-APIs.
 
-## Arbeitsaufträge
+<!-- ## Work orders
 
-Eine Arbeitsreihenfolge ist eine Darstellung einer Datenhygiene-Aufgabe, die Verbraucheridentitäten aus einem bestimmten Datensatz oder allen Datensätzen löscht. Siehe [Endpunktleitfaden für Arbeitsaufträge](./workorder.md) für Details zum Arbeiten mit Arbeitsaufträgen in der API.
+A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
 ## Time to Live (TTL) für Datensätze
 

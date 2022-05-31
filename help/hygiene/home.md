@@ -2,11 +2,9 @@
 title: Übersicht über die Datenhygiene
 description: Mit Adobe Experience Platform Data Hygiene können Sie den Lebenszyklus Ihrer Daten verwalten, indem Sie veraltete oder ungenaue Datensätze aktualisieren oder bereinigen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-hide: true
-hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
-source-wordcount: '223'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
@@ -19,11 +17,11 @@ ht-degree: 0%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, um Kundenerlebnisse zu koordinieren. Da Daten im Laufe der Zeit in das System aufgenommen werden, wird es immer wichtiger, Ihre Datenspeicher so zu verwalten, dass Daten erwartungsgemäß verwendet, aktualisiert werden, wenn falsche Daten korrigiert werden müssen, und gelöscht wird, wenn dies von Richtlinien der Organisation für erforderlich gehalten wird.
 
-Mit den Datenhygienefunktionen von Platform können Sie Ihre gespeicherten Verbraucherdaten durch programmgesteuerte Löschung von Verbraucherdatensätzen und -datensätzen verwalten.
+Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Verbraucherdaten durch programmatische Löschungen von Datensätzen verwalten.
 
 ## [!UICONTROL Datenhygiene] UI-Arbeitsbereich
 
-Die [!UICONTROL Datenhygiene] Mit Workspace in der Platform-Benutzeroberfläche können Sie Datenhygienevorgänge konfigurieren und planen und sicherstellen, dass Ihre Datensätze erwartungsgemäß gepflegt werden.
+Die [!UICONTROL Datenhygiene] Mit Workspace in der Platform-Benutzeroberfläche können Sie Datenhygienevorgänge konfigurieren und planen, um sicherzustellen, dass Ihre Datensätze erwartungsgemäß gepflegt werden.
 
 Ausführliche Anweisungen zum Verwalten von Datenhygiene-Aufgaben in der Benutzeroberfläche finden Sie in der [Handbuch zur Data Hygiene UI](./ui/overview.md).
 

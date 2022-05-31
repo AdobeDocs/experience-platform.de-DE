@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b557946252cd2afc07159caad939ec3a11d35e28
+source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2375'
 ht-degree: 26%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 26%
 
 Neue Funktionen in Adobe Experience Platform:
 
-- [Attributbasierte Zugriffssteuerung](#abac) —>
+- [Attributbasierte Zugriffssteuerung](#abac)
 - [Datenhygiene](#hygiene)
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
@@ -60,8 +60,9 @@ Experience Platform bietet eine Reihe von Funktionen zur Datenhygiene, mit denen
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Löschen von Verbrauchern | [Verbraucherdatensätze löschen](../../hygiene/ui/delete-consumer.md) aus dem Daten-Pool und Profilspeicher basierend auf primären Identitätsdaten. |
 | Time to Live (TTL) für Datensätze | [TTLs planen](../../hygiene/ui/ttl.md) für Platform-Datensätze. |
+
+{style=&quot;table-layout:auto&quot;}
 
 Weiterführende Informationen zu Auditprotokollen in Platform finden Sie im Abschnitt [Übersicht über die Datenhygiene](../../hygiene/home.md).
 
