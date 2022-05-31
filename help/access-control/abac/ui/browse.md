@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
 title: Attributbasierte Zugriffskontrolle - Durchsuchen
-description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dieses Dokument enthält Informationen zur Verwendung der Benutzeroberfläche für Berechtigungen in Adobe Experience Cloud
 exl-id: 39634bde-8858-44a6-b39a-776846654fc1
-source-git-commit: 143db2c19ec5ee7628b5cb9b30e71f24b4b3dcc8
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 20%
 
 ---

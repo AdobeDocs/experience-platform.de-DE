@@ -2,10 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Attributbasierte Zugriffssteuerung; attributbasierte Zugriffssteuerung
 title: Erste Schritte mit der attributbasierten Zugriffssteuerung
 description: Mit der attributbasierten Zugriffssteuerung können Sie Rollen und Richtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
-hide: true
-hidefromtoc: true
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 64%

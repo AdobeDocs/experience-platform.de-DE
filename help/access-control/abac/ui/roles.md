@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
 title: Attributbasierte Zugriffssteuerung Rolle erstellen
-description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dieses Dokument enthält Informationen zum Verwalten von Rollen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---

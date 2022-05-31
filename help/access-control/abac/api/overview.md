@@ -3,10 +3,8 @@ keywords: Experience Platform; Startseite; beliebte Themen; API; attributbasiert
 solution: Experience Platform
 title: API-Anleitung zur Attributbasierten Zugriffssteuerung
 description: Mit der Attributbasierten Zugriffssteuerungs-API können Sie Rollen und Richtlinien in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
-hide: true
-hidefromtoc: true
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 11%

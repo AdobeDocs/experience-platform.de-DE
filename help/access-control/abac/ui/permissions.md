@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
 title: Attributbasierte Zugriffssteuerung Rollenberechtigungen verwalten
-description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dieses Dokument enthält Informationen zum Konfigurieren von Berechtigungen für eine Rolle über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 02a17d8aed743b03219958cae2f0585f871e56f6
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---

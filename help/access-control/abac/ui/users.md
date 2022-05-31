@@ -1,13 +1,11 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; attributbasierte Zugriffskontrolle; ABAC
 title: Attributbasierte Zugriffssteuerung - Benutzer verwalten
-description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
-hide: true
-hidefromtoc: true
+description: Dieses Dokument enthält Informationen zum Verwalten von Benutzern und Benutzergruppen über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: 19f1e8df8cd8b55ed6b03f80e42810aefd211474
+source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '191'
 ht-degree: 2%
 
 ---
