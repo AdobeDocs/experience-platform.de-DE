@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 0f3cb17650612399091c12a6b638471a80306729
+source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 93%
+source-wordcount: '759'
+ht-degree: 92%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 93%
       * [Segmentfreigabe in Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=de)
    * Werbeziele {#advertising}
       * [Werbeziele – Übersicht](./catalog/advertising/overview.md)
+      * [Adobe Advertising Cloud-Verbindung](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Adobe Advertising Cloud-Erweiterung](./catalog/advertising/adobe-advertising-cloud.md)
       * [Awin Advertising Conversion Tag-Erweiterung](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag-Erweiterung](./catalog/advertising/awin-mastertag.md)
