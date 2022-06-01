@@ -6,10 +6,10 @@ seo-title: Activate audience data to batch profile export destinations
 description: Erfahren Sie, wie Sie die Zielgruppendaten aktivieren, die Sie in Adobe Experience Platform haben, indem Sie Segmente an Ziele senden, die auf Batch-Profilen basieren.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 95dd6982eeecf6b13b6c8a6621b5e6563c25ae26
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 88%
+source-wordcount: '2544'
+ht-degree: 81%
 
 ---
 
@@ -31,15 +31,15 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 1. Navigieren Sie zu **[!UICONTROL Verbindungen und Ziele]** und wählen Sie die Registerkarte **[!UICONTROL Katalog]**.
 
-   ![Registerkarte „Zielkatalog“](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
+   ![Bild mit Informationen zum Zugriff auf die Registerkarte des Zielkatalogs](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
 1. Wählen Sie **[!UICONTROL Segmente aktivieren]** auf der Karte, die dem Zielort entspricht, an dem Sie Ihre Segmente aktivieren möchten, wie in der Abbildung unten dargestellt.
 
-   ![Schaltfläche „Segmente aktivieren“](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+   ![Bild, das die Schaltfläche Segmente aktivieren hervorhebt](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
 
 1. Wählen Sie die Zielverbindung aus, die Sie zum Aktivieren Ihrer Segmente verwenden möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-   ![Auswählen des Ziels](../assets/ui/activate-batch-profile-destinations/select-destination.png)
+   ![Bild, das die Auswahl eines oder mehrerer Ziele zum Aktivieren von Segmenten für erläutert](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Gehen Sie zum nächsten Abschnitt, um [Ihre Segmente auszuwählen](#select-segments).
 
@@ -47,7 +47,7 @@ Um Daten für Ziele aktivieren zu können, müssen Sie eine erfolgreiche [Verbin
 
 Aktivieren Sie die Kontrollkästchen links neben den Segmentnamen, um die Segmente auszuwählen, die Sie für das Ziel aktivieren möchten, und klicken Sie dann auf **[!UICONTROL Weiter]**.
 
-![Auswählen der Segmente](../assets/ui/activate-batch-profile-destinations/select-segments.png)
+![Bild, das die Auswahl eines oder mehrerer Segmente zum Aktivieren vorstellt](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## Planen des Segmentexports {#scheduling}
@@ -68,7 +68,7 @@ Aktivieren Sie die Kontrollkästchen links neben den Segmentnamen, um die Segmen
 
 Wählen Sie die Schaltfläche **[!UICONTROL Zeitplan erstellen]** für das Segment, das Sie an Ihr Ziel senden möchten.
 
-![Schaltfläche „Zeitplan erstellen“](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
+![Bild, das die Schaltfläche Zeitplan erstellen hervorhebt](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exportieren von vollständigen Dateien {#export-full-files}
 
@@ -90,7 +90,7 @@ Wählen Sie die Schaltfläche **[!UICONTROL Zeitplan erstellen]** für das Segme
 
 Wählen Sie **[!UICONTROL Vollständige Dateien exportieren]**, um den Export einer Datei auszulösen, die eine vollständige Momentaufnahme aller Profilqualifikationen für das ausgewählte Segment enthält.
 
-![Vollständige Dateien exportieren](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
+![Bild der Benutzeroberfläche mit aktiviertem Umschalter Vollständige Dateien exportieren .](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
 
@@ -132,7 +132,7 @@ Wählen Sie **[!UICONTROL Inkrementelle Dateien exportieren]**, um einen Export 
 >
 >Die erste exportierte inkrementelle Datei enthält alle Profile, die für das Segment qualifiziert sind und als Aufstockung fungieren.
 
-![Inkrementelle Dateien exportieren](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
+![Bild der Benutzeroberfläche mit aktiviertem Umschalter Inkrementelle Dateien exportieren .](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Verwenden Sie den **[!UICONTROL Häufigkeitsselektor]** zur Auswahl der Exportfrequenz:
 
@@ -164,11 +164,15 @@ Die standardmäßigen Dateinamen bestehen aus Zielname, Segment-ID und einem Dat
 
 Wählen Sie das Stiftsymbol aus, um ein modales Fenster zu öffnen und die Dateinamen zu bearbeiten. Dateinamen sind auf 255 Zeichen begrenzt.
 
-![Dateinamen konfigurieren](../assets/ui/activate-batch-profile-destinations/configure-name.png)
+>[!NOTE]
+>
+>Die folgende Abbildung zeigt, wie Dateinamen für Amazon S3-Ziele bearbeitet werden können, der Prozess jedoch für alle Batch-Ziele identisch ist (z. B. SFTP oder Azure Blob Storage).
+
+![Bild, das das Stiftsymbol markiert, mit dem Dateinamen konfiguriert werden.](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 Im Dateinamen-Editor können Sie verschiedene Komponenten auswählen, die zum Dateinamen hinzugefügt werden sollen.
 
-![Optionen zum Bearbeiten von Dateinamen](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
+![Bild mit allen verfügbaren Dateinamenoptionen.](../assets/ui/activate-batch-profile-destinations/activate-workflow-configure-step-2.png)
 
 Zielname und Segment-ID können nicht aus Dateinamen entfernt werden. Zusätzlich können Sie Folgendes hinzufügen:
 
@@ -191,17 +195,17 @@ Bei profilbasierten Zielen müssen Sie die Profilattribute auswählen, die Sie a
 
 1. Wählen Sie auf der Seite **[!UICONTROL Attribute auswählen]** die Option **[!UICONTROL Neues Feld hinzufügen]**.
 
-   ![Neue Zuordnung hinzufügen](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
+   ![Bild, das die Schaltfläche Neues Feld hinzufügen markiert.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
 1. Wählen Sie den Pfeil rechts neben dem Eintrag **[!UICONTROL Schemafeld]**.
 
-   ![Quellfeld auswählen](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
+   ![Bild zur Auswahl eines Quellfelds.](../assets/ui/activate-batch-profile-destinations/select-target-field.png)
 
 1. Wählen Sie auf der Seite **[!UICONTROL Feld auswählen]** die XDM-Attribute aus, die Sie an das Ziel senden möchten, und klicken Sie dann auf **[!UICONTROL Auswählen]**.
 
-   ![Quellfeldseite auswählen](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
+   ![Bild, das die verschiedenen als Quellfelder verfügbaren Felder anzeigt.](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-1. Um weitere Zuordnungen hinzuzufügen, wiederholen Sie die Schritte 1 bis 3.
+1. Wiederholen Sie die Schritte 1 bis 3, um weitere Zuordnungen hinzuzufügen.
 
 >[!NOTE]
 >
@@ -211,7 +215,7 @@ Dateiexporte variieren auf folgende Weise, je nachdem, ob `segmentMembership.sta
 * Wenn das Feld `segmentMembership.status` ausgewählt ist, enthalten exportierte Dateien in der ersten vollständigen Momentaufnahme die **[!UICONTROL aktiven]** Mitglieder und in nachfolgenden inkrementellen Exporten die **[!UICONTROL aktiven]** und die **[!UICONTROL abgelaufenen]** Mitglieder.
 * Wenn die Variable `segmentMembership.status` nicht ausgewählt ist, umfassen exportierte Dateien sowohl in der ersten vollständigen Momentaufnahme als auch in nachfolgenden inkrementellen Exporten nur die **[!UICONTROL aktiven]** Mitglieder.
 
-![empfohlene Attribute](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
+![Bild mit vorausgefüllten empfohlenen Attributen im Zuordnungsschritt des Segmentaktivierungsarbeitsablaufs.](../assets/ui/activate-batch-profile-destinations/mandatory-deduplication.png)
 
 ### Obligatorische Attribute {#mandatory-attributes}
 
@@ -384,11 +388,11 @@ Auf der Seite **[!UICONTROL Überprüfen]** können Sie eine Zusammenfassung Ihr
 >
 >In diesem Schritt prüft Adobe Experience Platform, ob Verstöße gegen Datennutzungsrichtlinien vorliegen. Nachstehend ist ein Beispiel angegeben, bei dem eine Richtlinie verletzt wird. Sie können den Workflow zur Segmentaktivierung erst abschließen, nachdem Sie den Verstoß behoben haben. Informationen dazu, wie Richtlinienverletzungen behoben werden, finden Sie unter [Durchsetzung von Richtlinien](../../rtcdp/privacy/data-governance-overview.md#enforcement) im Dokumentationsabschnitt zur Data Governance.
 
-![Verletzung von Datenrichtlinien](../assets/common/data-policy-violation.png)
+![Bild mit einem Beispiel für eine Verletzung einer Datenrichtlinie.](../assets/common/data-policy-violation.png)
 
 Wenn keine Richtlinienverletzungen festgestellt wurden, wählen Sie **[!UICONTROL Beenden]**, um Ihre Auswahl zu bestätigen und mit dem Senden von Daten an das Ziel zu beginnen.
 
-![Überprüfung](../assets/ui/activate-batch-profile-destinations/review.png)
+![Bild, das den Prüfungsbildschirm des Segmentaktivierungs-Workflows anzeigt.](../assets/ui/activate-batch-profile-destinations/review.png)
 
 ## Überprüfen der Segmentaktivierung {#verify}
 

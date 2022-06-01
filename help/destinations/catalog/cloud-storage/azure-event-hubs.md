@@ -3,7 +3,7 @@ keywords: Azure Event Hub-Ziel; Azure Event Hub; Azure Event Event Event Hub
 title: Azure Event Hubs-Verbindung
 description: Erstellen Sie eine ausgehende Echtzeitverbindung zu Ihrem [!DNL Azure Event Hubs] -Speicher verwenden, um Daten aus Experience Platform zu streamen.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 30549f31e7ba7f9cfafd2e71fb3ccfb701b9883f
+source-git-commit: b19dc5c0d67bc218de0366fdc40f752ce7c3ad71
 workflow-type: tm+mt
 source-wordcount: '1926'
 ht-degree: 2%
@@ -71,16 +71,6 @@ Wenn Sie die **[!UICONTROL Standardauthentifizierung]** Geben Sie ein, um eine V
 
 #### Shared Access Signature (SAS)-Authentifizierung {#sas-authentication}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmentnames"
->title="Segmentnamen einschließen"
->abstract="Schalten Sie ein, wenn der Datenexport die Namen der Segmente enthalten soll, die Sie exportieren. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
-
->[!CONTEXTUALHELP]
->id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
->title="Segmentzeitstempel einschließen"
->abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Segmente den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Segmente zum Zeitpunkt der Aktivierung dem Ziel zugeordnet wurden. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
-
 ![Bild des UI-Bildschirms mit ausgefüllten Feldern für die Standardauthentifizierungsdetails der Azure Event Hubs-Standardauthentifizierungsdetails](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 Wenn Sie die **[!UICONTROL Standardauthentifizierung]** Geben Sie ein, um eine Verbindung mit Ihrem HTTP-Endpunkt herzustellen, geben Sie die folgenden Felder ein und wählen Sie **[!UICONTROL Mit Ziel verbinden]**:
@@ -91,6 +81,16 @@ Wenn Sie die **[!UICONTROL Standardauthentifizierung]** Geben Sie ein, um eine V
 * **[!UICONTROL Namespace]**: Füllen Sie Ihre [!DNL Azure Event Hubs] Namespace. Informationen zu [!DNL Azure Event Hubs] Namespaces im [Microsoft-Dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ### Zieldetails {#destination-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmentnames"
+>title="Segmentnamen einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport die Namen der Segmente enthalten soll, die Sie exportieren. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_eventhubs_includesegmenttimestamps"
+>title="Segmentzeitstempel einschließen"
+>abstract="Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Segmente den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Segmente zum Zeitpunkt der Aktivierung dem Ziel zugeordnet wurden. Zeigen Sie die Dokumentation für ein Beispiel für einen Datenexport mit dieser Option an."
 
 Geben Sie nach Einrichtung der Authentifizierungsverbindung zum Azure Event Hubs-Ziel die folgenden Informationen für das Ziel ein:
 
