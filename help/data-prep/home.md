@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 3dac1a80e640364f8c0b6b6fd81821499bf889b3
+source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 92%
+source-wordcount: '715'
+ht-degree: 76%
 
 ---
 
@@ -54,6 +54,14 @@ Datenvorbereitung kann verschiedene Datenformate, die in Platform erfasst werden
 ## Teilzeilenaktualisierungen senden mit [!DNL Data Prep]
 
 Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilenaktualisierungen an zu senden [!DNL Profile Service] -Daten sowie beim Erstellen und Erstellen neuer Identitätslinks mit einer einzelnen API-Anfrage. Weitere Informationen zum Streamen von Uploads finden Sie in [!DNL Data Prep], siehe das Dokument unter [Teilzeilenaktualisierungen senden](./upserts.md).
+
+## Attributbasierte Zugriffssteuerung in [!DNL Data Prep]
+
+Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
+
+Attributbasierte Zugriffskontrolle stellt sicher, dass Sie nur die Attribute zuordnen können, auf die Sie Zugriff haben. Attribute, auf die Sie keinen Zugriff haben, können nicht in Pass-Through-Mappings und berechneten Feldern verwendet werden. Wenn Sie also keinen Zugriff auf ein erforderliches Feld haben, können Sie eine Zuordnung nicht erfolgreich speichern. Außerdem können Sie keine Objekte oder Objekt-Arrays zuordnen, wenn Sie keinen Zugriff auf eines der untergeordneten Attribute haben. Sie können jedoch andere Elemente innerhalb des Objekt- oder Objekt-Arrays einzeln zuordnen.
+
+Siehe [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md) für weitere Informationen.
 
 ## Nächste Schritte
 
