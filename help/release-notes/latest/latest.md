@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c318d64f6dc09094855ec20d998a7c41d837211f
+source-git-commit: 1dc97fa33fa8cb46184e11d311ef8246199b4f03
 workflow-type: tm+mt
-source-wordcount: '2375'
+source-wordcount: '2409'
 ht-degree: 26%
 
 ---
@@ -254,6 +254,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | --- | --- |
 | Attributbasierte Zugriffssteuerung in Quellen | Sie können jetzt den Zugriff auf einzelne Quellfelder und Attribute während der Erfassung verwalten und steuern. **Hinweis**: Die attribut-basierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung. |
 | Beta-Version [!DNL Zendesk] source | Verwenden Sie die [!DNL Zendesk] Quelle, um Benutzer-, Agenten- und Organisationsdaten aus Ihrer [!DNL Zendesk] Instanz für [!DNL Profile] Anreicherung. Siehe [[!DNL Zendesk] Quellübersicht](../../sources/connectors/customer-success/zendesk.md) für weitere Informationen. |
+| Allgemeine Verfügbarkeit von B2B [!DNL Microsoft Dynamics] source | Sie können jetzt die [!DNL Microsoft Dynamics] B2B-Objekte wie Konten, Chancen, Kampagnen, Marketinglisten und Mitglieder der Marketingliste aufnehmen. Siehe [[!DNL Microsoft Dynamics] Quellübersicht](../../sources/connectors/crm/ms-dynamics.md) für weitere Informationen. |
 | Unterstützung für die Datenerfassung in Adobe | Verwenden Sie den Quellkatalog in Platform, um auf Ihre Daten im Platform Edge Network zuzugreifen, einschließlich der Datenvorbereitung für die Datenerfassung und der verbesserten Unterstützung für Datenvorbereitung-Warnungen. Siehe [Übersicht über die Datenquelle der Adobe-Datenerfassung](../../sources/connectors/adobe-applications/data-collection.md) für weitere Informationen. |
 | Unterstützung für die Aufnahme von Dateien mit `ISO-8859-1` encoding | Verwenden Sie die `encoding` Parameter zur Aufnahme `ISO-8859-1` kodierte Dateien mit einer Cloud-Speicherquelle für Platform mithilfe der [!DNL Flow Service] API. Siehe Handbuch unter [Erstellen einer Cloud-Speicher-Quellverbindung](../../sources/tutorials/api/collect/cloud-storage.md) für weitere Informationen. |
 
