@@ -3,9 +3,9 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung - Übersicht
 description: Dieses Dokument enthält Informationen zur attributbasierten Zugriffskontrolle in Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 567bfe089fd96cb08cb8ea7c90d065c804be9413
+source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1576'
 ht-degree: 22%
 
 ---
@@ -113,7 +113,7 @@ Das Experience-Datenmodell (XDM) ist eine Open-Source-Spezifikation, die dazu di
 
 Mit der attributbasierten Zugriffskontrolle können Sie:
 
-* Wenden Sie Attribute auf Feldergruppen und oder Klassen an. Dies ermöglicht es mehreren Schemas mit denselben Feldergruppen oder -klassen, Felder mit denselben Attributen zu versehen, je nach den Konfigurationen auf Feldergruppen- oder Klassenebene.
+* [Anwenden von Datennutzungsbezeichnungen auf Feldergruppen und Klassen](../../xdm/tutorials/labels.md). Dies ermöglicht es mehreren Schemas mit denselben Feldergruppen oder -klassen, Felder mit denselben Attributen zu versehen, je nach den Konfigurationen auf Feldergruppen- oder Klassenebene.
 * Konfigurieren Sie den Benutzerzugriff auf bestimmte XDM-Schemafelder abhängig von den auf Benutzerrollen angewendeten Berechtigungssätzen.
 
 Weitere Informationen zu XDM finden Sie im Abschnitt [XDM-Übersicht](../../xdm/home.md).

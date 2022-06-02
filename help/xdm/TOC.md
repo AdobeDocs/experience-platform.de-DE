@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell-System (XDM)
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Klassen und Schemafeldgruppen im Experience-Datenmodell (XDM), um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: fab182dc868990ddd5fbc45f0f50dc87258f98bc
+source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 90%
+source-wordcount: '465'
+ht-degree: 89%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 90%
       * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
       * [XDM Business Marketing List Members](./classes/b2b/business-marketing-list-members.md)
 * Feldergruppen {#field-groups}
-   * Individuelles XDM-Profil {#profile}
+   * XDM Individual Profile {#profile}
       * [Demografische Details](./field-groups/profile/demographic-details.md)
       * [IAB TCF 2.0-Zustimmung](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
@@ -174,6 +174,7 @@ ht-degree: 90%
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
    * [Definieren einer Schemabeziehung in der Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Verwalten von Datennutzungsbezeichnungen für ein Schema](tutorials/labels.md)
    * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
    * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)

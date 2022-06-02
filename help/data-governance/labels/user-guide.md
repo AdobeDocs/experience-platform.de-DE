@@ -5,10 +5,10 @@ title: Verwalten von Datennutzungsbeschriftungen in der Benutzeroberfläche
 topic-legacy: labels
 description: Dieses Handbuch beschreibt die Schritte zum Arbeiten mit Datennutzungsbeschriftungen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
-workflow-type: ht
-source-wordcount: '1140'
-ht-degree: 100%
+source-git-commit: 3876af19ef100f29ef738cf7518696a57600945a
+workflow-type: tm+mt
+source-wordcount: '1186'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ Der Umschalter **[!UICONTROL Übernommene Beschriftungen anzeigen]** ist standar
 
 ![Ausblenden von übernommenen Beschriftungen](../images/labels/inherited-labels.png)
 
-## Verwalten von Beschriftungen auf Feldebene
+## Verwalten von Bezeichnungen auf Datensatzfeldebene
 
 Wenn Sie den Arbeitsablauf zum [Hinzufügen und Bearbeiten von Datennutzungskennzeichnungen auf Datensatzebene](#add-labels) fortsetzen, können Sie im Arbeitsbereich **[!UICONTROL Data Governance]** auch Kennzeichnungen auf Feldebene für diesen Datensatz verwalten.
 
@@ -99,6 +99,12 @@ Sie können diese Schritte wiederholen, um weiterhin Kennzeichnungen auf Feldebe
 ![Wählen Sie mehrere Felder aus, um Kennzeichnungen auf Feldebene gleichzeitig anzuwenden.](../images/labels/multiple-fields.png)
 
 Es ist wichtig, sich zu merken, dass die Vererbung nur von der obersten Ebene nach unten möglich ist wird (Datensatz → Felder). Das bedeutet, dass auf Feldebene angewendete Kennzeichnungen nicht in andere Felder oder Datensätze übertragen werden.
+
+## Verwalten von Bezeichnungen auf Schemaebene
+
+Sie können einem Schema oder Feldern innerhalb dieses Schemas direkt Beschriftungen hinzufügen. Alle auf Schemaebene angewendeten Felder werden auf alle Datensätze übertragen, die auf diesem Schema basieren.
+
+Siehe Tutorial zu [Verwalten von Beschriftungen auf Schemaebene](../../xdm/tutorials/labels.md) für weitere Informationen.
 
 ## Verwalten von benutzerdefinierten Kennzeichnungen
 
