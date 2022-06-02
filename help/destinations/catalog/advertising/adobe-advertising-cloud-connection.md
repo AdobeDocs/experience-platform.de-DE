@@ -1,19 +1,19 @@
 ---
 title: Adobe Advertising Cloud DSP-Verbindung
-description: 'Adobe Advertising Cloud DSP ist ein integriertes Ziel für die [!DNL Adobe Real-time Customer Data Profile], sodass Sie authentifizierte Erstanbietersegmente für zugelassene Advertiser und Benutzer freigeben können, um Kampagnen zu aktivieren.  '
-source-git-commit: 2b1e74a704003bbbf1d72e4a01b2fb9f9c8d22ca
+description: Adobe Advertising Cloud DSP ist ein integriertes Ziel für die [!DNL Adobe Real-time Customer Data Profile], sodass Sie authentifizierte Erstanbietersegmente für zugelassene Advertiser und Benutzer freigeben können, um Kampagnen zu aktivieren.
+exl-id: 11ff7797-a9c6-4334-b843-ae9df9a48e54
+source-git-commit: 2b8c9d81b7d9eddbbed3119a496e9c8d37e6c415
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '954'
 ht-degree: 4%
 
 ---
-
 
 # Adobe Advertising Cloud DSP-Verbindung
 
 ## Übersicht {#overview}
 
-Mit dem Advertising Cloud DSP-Ziel können Sie authentifizierte Erstanbietersegmente für genehmigte Advertiser und Benutzer freigeben, damit sie für DSP aktiviert werden können.<!-- To learn more about the Real-Time CDP integration with DSP, see [About Activating Authenticated Segments from Audience Sources](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html). -->
+Die Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) Mit dem Ziel können Sie authentifizierte Erstanbietersegmente für zugelassene Advertiser und Benutzer freigeben, damit die Kampagne für DSP aktiviert werden kann. Weitere Informationen zur Integration von Real-Time CDP mit DSP finden Sie unter [Informationen zum Aktivieren authentifizierter Segmente aus Zielgruppen-Quellen](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ Eine Medienagentur mit einem DSP-Konto führt eine Retargeting-Kampagne im Auftr
 
 * Einstellungen auf Kontoebene und Kampagnenebene DSP, um die Segmentfreigabe zu ermöglichen [!DNL LiveRamp RampID], wodurch Kundendaten in übersetzt werden [!DNL RampIDs] , um Zielgruppensegmente zu erstellen. Diese Konfiguration wird von Ihrem DSP-Account-Team durchgeführt.
 * Die Experience Cloud-Organisations-ID für das Experience Platform-Konto. Ihre Kennung finden Sie in Ihrer [!DNL Real-Time CDP] Benutzerprofilseite.
-* A [!DNL Real-Time CDP] Quelle in DSP<!-- [[!DNL Real-Time CDP] source in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) --> um Segmente für die Kampagnenaktivierung zu erhalten. Ihr DSP-Kontoteam erstellt die Quelle mithilfe Ihrer Experience Cloud-Organisations-ID.
-* Der Quellschlüssel für das DSP Konto oder Advertiser, der bei einem [!DNL Real-Time CDP] -Quelle wird in DSP erstellt<!-- [[!DNL Real-Time CDP] source is created in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Ihr DSP-Account-Team wird diesen Schlüssel für Sie freigeben. Sie verwenden es in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel zu erstellen, wie [erklärt unten](#authenticate).
+* A [[!DNL Real-Time CDP] Quelle in DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) um Segmente für die Kampagnenaktivierung zu erhalten. Ihr DSP-Kontoteam erstellt die Quelle mithilfe Ihrer Experience Cloud-Organisations-ID.
+* Der Quellschlüssel für das DSP Konto oder Advertiser, der bei einem [[!DNL Real-Time CDP] -Quelle wird in DSP erstellt](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Account-Team wird diesen Schlüssel für Sie freigeben. Sie verwenden es in Experience Platform, um eine Zielverbindung zum Advertising Cloud DSP-Ziel zu erstellen, wie [erklärt unten](#authenticate).
 * Kundendaten, die aus E-Mails oder gehashten E-Mails bestehen.
 
 ## Unterstützte Identitäten {#supported-identities}
@@ -72,7 +72,7 @@ Um eine Verbindung zum Ziel herzustellen, befolgen Sie die Anweisungen unter [Er
 
 Um eine Verbindung zum Ziel herzustellen, geben Sie den folgenden Parameter in der [!UICONTROL Verbindungstyp] und wählen Sie **[!UICONTROL Mit Ziel verbinden]**.:
 
-* **[!UICONTROL Konto- oder Advertiser-Schlüssel]**: Diese [!UICONTROL Quellschlüssel] wird generiert, wenn ein [!DNL Real-Time CDP] -Quelle wird in der DSP-Benutzeroberfläche erstellt.<!-- [[!DNL Real-Time CDP] source is created in the DSP user interface](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) -->. Ihr DSP-Account-Team gibt diesen Schlüssel nach der Erstellung der Quelle für Sie frei.
+* **[!UICONTROL Konto- oder Advertiser-Schlüssel]**: Diese [!UICONTROL Quellschlüssel] wird generiert, wenn ein [[!DNL Real-Time CDP] -Quelle wird in der DSP-Benutzeroberfläche erstellt.](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Ihr DSP-Account-Team gibt diesen Schlüssel nach der Erstellung der Quelle für Sie frei.
 
 ![Feld Verbindungstyp](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
