@@ -5,10 +5,10 @@ title: Benutzerhandbuch für Segment Builder
 topic-legacy: ui guide
 description: Der Segmentaufbau in der Adobe Experience Platform-Benutzeroberfläche bietet einen umfassenden Arbeitsbereich, in dem Sie mit Profildatenelementen interagieren können. Der Arbeitsbereich bietet intuitive Steuerelemente zum Erstellen und Bearbeiten von Regeln, z. B. Drag-and-Drop-Kacheln, die zur Darstellung von Dateneigenschaften dienen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 708103a52187ef17892de60ff8e562a05fc2f2db
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '2457'
-ht-degree: 35%
+source-wordcount: '2612'
+ht-degree: 34%
 
 ---
 
@@ -18,9 +18,14 @@ ht-degree: 35%
 
 ![](../images/ui/segment-builder/segment-builder.png)
 
-## Bausteine einer Segmentdefinition
+## Bausteine einer Segmentdefinition {#building-blocks}
 
-Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse auch als Komponenten für neue Definitionen verwendet werden.
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_fields"
+>title="Felder"
+>abstract="Die drei Feldtypen, aus denen ein Segment besteht, sind Attribute, Ereignisse und Zielgruppen. Mithilfe von Attributen können Sie Profilattribute verwenden, die zur Klasse &quot;XDM Individual Profile&quot;gehören. Mit Ereignissen können Sie eine Zielgruppe basierend auf Aktionen oder Ereignissen erstellen, die mithilfe von XDM ExperienceEvent-Datenelementen stattfinden. Außerdem können Sie mit Zielgruppen importierte Zielgruppen aus externen Quellen verwenden."
+
+Die grundlegenden Bausteine von Segmentdefinitionen sind Attribute und Ereignisse. Darüber hinaus können die in bestehenden Zielgruppen enthaltenen Attribute und Ereignisse als Komponenten für neue Definitionen verwendet werden.
 
 Sie können diese Bausteine im Abschnitt **[!UICONTROL Felder]** links im Arbeitsbereich von sehen.[!DNL Segment Builder] **[!UICONTROL Felder]** enthält für jeden der Hauptbausteine einen Tab: &quot;[!UICONTROL Attribute]&quot;, &quot;[!UICONTROL Veranstaltungen]&quot; und &quot;[!UICONTROL Zielgruppen]&quot;.
 
@@ -66,7 +71,7 @@ Angenommen, Sie hatten zwei Report Suites mit den folgenden Variablen:
 
 | Feld | Report Suite-Schema A | Report Suite-Schema B |
 | ----- | --------------------- | --------------------- |
-| eVar1 | Referrer-Domäne | Angemeldet J/N |
+| eVar1 | Referrer-Domain | Angemeldet J/N |
 | eVar2 | Page Name | Mitglied-Treuekennung |
 | eVar3 | URL | Seitenname |
 | eVar4 | Suchbegriffe | Produktname |
@@ -210,7 +215,19 @@ Um eine Zusammenführungsrichtlinie für Ihre Segmentdefinition auszuwählen, w�
 
 ![](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Segmenteigenschaften
+## Segmenteigenschaften {#segment-properties}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_segmentproperties"
+>title="Segmenteigenschaften"
+>abstract="Im Abschnitt mit den Segmenteigenschaften wird eine Schätzung der Größe des resultierenden Segments mit der Anzahl der qualifizierten Profile im Vergleich zur Gesamtanzahl der Profile angezeigt. Auf diese Weise können Sie Ihre Segmentdefinition nach Bedarf anpassen, bevor Sie die Zielgruppe selbst erstellen."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_refreshestimate"
+>title="Schätzungen aktualisieren"
+>abstract="Sie können die Schätzungen Ihres Segments aktualisieren, um sofort eine Vorschau der Anzahl der Profile anzuzeigen, die für das vorgeschlagene Segment qualifiziert sind.  Audience-Schätzungen werden anhand einer Stichprobengröße der Beispieldaten dieses Tages erstellt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=en#estimate-and-preview-an-audience" text="Weitere Informationen finden Sie in der Dokumentation ."
+
 
 Beim Erstellen einer Segmentdefinition zeigt der Abschnitt **[!UICONTROL Segmenteigenschaften]** auf der rechten Seite des Arbeitsbereichs eine geschätzte Größe des resultierenden Segments an, sodass Sie die Segmentdefinition nach Bedarf anpassen können, bevor Sie die eigentliche Zielgruppe erstellen.
 

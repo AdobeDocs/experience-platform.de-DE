@@ -5,10 +5,10 @@ title: Handbuch zur Benutzeroberfläche des Segmentierungsdienstes
 topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service bietet eine Benutzeroberfläche zum Erstellen und Verwalten von Segmentdefinitionen.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: ce3d5e3db28d39b8d7d5a984700dd681c650ac94
+source-git-commit: 71741a18c99a003e6401bc324822d50a266350b3
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 20%
+source-wordcount: '1746'
+ht-degree: 19%
 
 ---
 
@@ -23,7 +23,7 @@ Die Arbeit mit Segmentdefinitionen erfordert ein Verständnis der verschiedenen 
 - [[!DNL Segmentation Service]](../home.md): [!DNL Segmentation Service] ermöglicht die Aufteilung der in [!DNL Experience Platform] die sich auf Einzelanwender (wie Kunden, Interessenten, Benutzer oder Organisationen) in kleinere Gruppen bezieht.
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 - [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Ermöglicht die Erstellung von Kundenprofilen durch Überbrückung von Identitäten aus unterschiedlichen Datenquellen, in die erfasst wird [!DNL Platform].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Platform] Kundenerlebnisdaten organisiert. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Platform] organisiert werden. Um die Segmentierung optimal zu nutzen, stellen Sie bitte sicher, dass Ihre Daten als Profile und Ereignisse gemäß dem [Best Practices für die Datenmodellierung](../../xdm/schema/best-practices.md).
 
 Außerdem sollten Sie zwei Schlüsselbegriffe kennen, die in diesem Dokument verwendet werden, und den Unterschied zwischen ihnen verstehen:
 - **Segmentdefinition**: Der Regelsatz, der zur Beschreibung wichtiger Merkmale oder Verhaltensweisen einer Zielgruppe verwendet wird.
@@ -37,7 +37,7 @@ Wählen Sie in der Benutzeroberfläche &quot;Experience Platform&quot;die Option
 >
 >Wenn Ihr Unternehmen neu bei Platform ist und noch keine aktiven Profildatensätze oder Zusammenführungsrichtlinien erstellt wurden, wird die [!UICONTROL Segmente] Das Dashboard ist nicht sichtbar. Stattdessen wird die [!UICONTROL Übersicht] enthält Links und Dokumentation, die Ihnen bei den ersten Schritten mit Segmenten helfen.
 
-### [!UICONTROL Segmente] Dashboard {#segments-dashboard}
+### [!UICONTROL Segment-Dashboard] {#segments-dashboard}
 
 Die **[!UICONTROL Segmente]** Im Dashboard werden Schlüsselmetriken im Zusammenhang mit den Segmentdaten Ihres Unternehmens beschrieben.
 
@@ -46,6 +46,16 @@ Weitere Informationen finden Sie unter [Segment-Dashboard-Handbuch](../../dashbo
 ![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Durchsuchen {#browse}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_churncolumnname"
+>title="Abwanderung"
+>abstract="Die Abwanderung stellt den Prozentsatz der Profile dar, die sich innerhalb einer Segmentdefinition ändern, verglichen mit dem letzten Ausführen des Segmentauftrags."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_evaluationmethodcolumnname"
+>title="Auswertungsmethode"
+>abstract="Zu den Auswertungsmethoden für Segmente gehören Batch, Streaming und Edge."
 
 Wählen Sie die **[!UICONTROL Durchsuchen]** um eine Liste aller Segmentdefinitionen für Ihre IMS-Organisation anzuzeigen.
 
@@ -65,7 +75,7 @@ Die Aufschlüsselung zeigt ein Balkendiagramm, in dem der Prozentsatz der Profil
 
 Die Abwanderung stellt den Prozentsatz der Profile dar, die sich innerhalb einer Segmentdefinition ändern, im Vergleich zum letzten Ausführen des Segmentauftrags, während die Profilanzahl die Gesamtanzahl der Profile darstellt, die sich für das Segment qualifizieren.
 
-Die Auswertungsmethode kann entweder Streaming oder Batch sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet.
+Die Auswertungsmethode kann entweder Streaming, Batch oder Edge sein. Streaming-Segmente werden konstant ausgewertet, sobald Daten in das System strömen. Batch-Segmente werden gemäß einem festgelegten Zeitplan ausgewertet. Edge-Segmente werden in Echtzeit ausgewertet, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 
 ![](../images/ui/overview/segment-browse-segments.png)
 
@@ -177,9 +187,9 @@ Zeitpläne können derzeit nur mit der API erstellt werden. Ausführliche Anweis
 
 ![](../images/ui/overview/segment-browse-scheduled.png)
 
-## Streaming-Segmentierung {#streaming-segmentation}
+## Streaming-Segmentierung  {#streaming-segmentation}
 
-Streaming-Segmentierung die Möglichkeit zur Segmentierung in [!DNL Platform] nahezu in Echtzeit, wobei der Schwerpunkt auf Datenreichweite liegt. Mit Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten eingehen in [!DNL Platform], wodurch Segmentierungsaufträge einfacher geplant und ausgeführt werden müssen.
+Streaming-Segmentierung ist die Möglichkeit, die Segmentierung für [!DNL Platform] nahezu in Echtzeit, wobei der Schwerpunkt auf Datenreichweite liegt. Mit Streaming-Segmentierung erfolgt die Segmentqualifizierung jetzt, wenn Daten eingehen in [!DNL Platform], wodurch Segmentierungsaufträge einfacher geplant und ausgeführt werden müssen.
 
 Weitere Informationen zur Streaming-Segmentierung finden Sie im Abschnitt [Benutzerhandbuch zur Streaming-Segmentierung](./streaming-segmentation.md).
 
