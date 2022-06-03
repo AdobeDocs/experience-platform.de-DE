@@ -1,19 +1,17 @@
 ---
-title: Personalisierungsinhalte aus anderen Adobe-Lösungen abrufen
+title: Personalisierungsübersicht
 description: Erfahren Sie, wie Sie mit der Adobe Experience Platform Edge Network Server-API personalisierte Inhalte aus Adobe-Personalisierungslösungen abrufen können.
 seo-description: Learn how to use the Adobe Experience Platform Edge Network Server API to retrieve personalized content from Adobe personalization solutions
 keywords: Personalisierung; Server-API; Adobe Experience Platform Edge Network; Personalisierung abrufen
-source-git-commit: 4fd5b5eebdeca065582365343b605a5b9ee695bb
+source-git-commit: 492efa6ef0d95b502839d612988f0b7f59b8bd69
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 9%
 
 ---
 
 
-# Personalisierungsinhalte aus Adobe-Lösungen abrufen
-
-## Übersicht {#overview}
+# Personalisierungsübersicht
 
 Mit dem [!DNL Server API], können Sie personalisierte Adoben aus Personalisierungslösungen abrufen, darunter [Adobe Target](https://business.adobe.com/products/target/adobe-target.html) und [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=en).
 
@@ -138,7 +136,7 @@ Die personalisierten Inhalte, die aus Personalisierungslösungen abgerufen werde
 **API-Format**
 
 ```http
-POST /v2/interact
+POST /ee/v2/interact
 ```
 
 ### Anfrage {#request}
