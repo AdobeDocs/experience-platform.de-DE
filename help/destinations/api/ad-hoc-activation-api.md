@@ -6,10 +6,10 @@ description: Dieser Artikel veranschaulicht den End-to-End-Workflow zum Aktivier
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 049b9c3ef2b96001a23ee54ac3e86a4df7b4ecea
 workflow-type: tm+mt
-source-wordcount: '1047'
-ht-degree: 20%
+source-wordcount: '1102'
+ht-degree: 19%
 
 ---
 
@@ -65,7 +65,7 @@ Bevor Sie die Adobe Experience Platform-APIs aufrufen können, stellen Sie siche
 
 * Sie verfügen über ein IMS-Organisationskonto mit Zugriff auf Adobe Experience Platform.
 * Ihr Experience Platform-Konto verfügt über die `developer` und `user` Rollen, die für das Adobe Experience Platform API-Produktprofil aktiviert sind. Wenden Sie sich an [Admin Console](../../access-control/home.md) Administrator, um diese Rollen für Ihr Konto zu aktivieren.
-* Du hast einen Adobe ID. Wenn Sie keine Adobe ID haben, navigieren Sie zum [Adobe Developer Console](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
+* Du hast einen Adobe ID. Wenn Sie keine Adobe ID haben, navigieren Sie zum [Adobe Developer-Konsole](https://developer.adobe.com/console) und erstellen Sie ein neues Konto.
 
 ## Schritt 2: Sammeln von Anmeldeinformationen {#credentials}
 
@@ -91,9 +91,10 @@ Bei allen Anfragen, die eine Payload enthalten (POST, PUT, PATCH), ist eine zus�
 
 Bevor Sie Segmente über die Ad-hoc-Aktivierungs-API aktivieren können, muss zunächst ein Aktivierungsfluss in der Platform-Benutzeroberfläche für das ausgewählte Ziel konfiguriert werden.
 
-Dazu gehören der Einstieg in den Aktivierungs-Workflow, die Auswahl Ihrer Segmente, die Konfiguration eines Zeitplans und die Aktivierung dieser Segmente.
+Dazu gehören der Einstieg in den Aktivierungs-Workflow, die Auswahl Ihrer Segmente, die Konfiguration eines Zeitplans und die Aktivierung dieser Segmente. Sie können die Benutzeroberfläche oder API verwenden, um einen Aktivierungsfluss zu erstellen:
 
-Detaillierte Anweisungen zum Konfigurieren eines Aktivierungsflusses für Batch-Ziele finden Sie im folgenden Tutorial: [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](../ui/activate-batch-profile-destinations.md).
+* [Verwenden Sie die Platform-Benutzeroberfläche, um einen Aktivierungsfluss zu Batch-Profil-Exportzielen zu erstellen](../ui/activate-batch-profile-destinations.md)
+* [Verwenden Sie die Flow Service-API, um eine Verbindung zu Batch-Profil-Exportzielen herzustellen und Daten zu aktivieren.](../api/connect-activate-batch-destinations.md)
 
 ## Schritt 4: Abrufen der neuesten Segmentexportauftrag-ID {#segment-export-id}
 
@@ -156,7 +157,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Eigenschaft | Beschreibung |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Segmente aktivieren möchten. |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Die IDs der Zielinstanzen, für die Sie Segmente aktivieren möchten. Sie können diese IDs über die Platform-Benutzeroberfläche abrufen, indem Sie zu **[!UICONTROL Ziele]** > **[!UICONTROL Durchsuchen]** und auf die gewünschte Zielzeile klicken, um die Ziel-ID in der rechten Leiste anzuzeigen. Weitere Informationen finden Sie im Abschnitt [Dokumentation zum Zielarbeitsbereich](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Die IDs der Segmente, die Sie für das ausgewählte Ziel aktivieren möchten. |
 | <ul><li>`exportId1`</li></ul> | Die in der Antwort der [Segmentexport](../../segmentation/api/export-jobs.md#retrieve-list) Auftrag. Siehe [Schritt 4: Abrufen der neuesten Segmentexportauftrag-ID](#segment-export-id) für Anweisungen zum Auffinden dieser ID. |
 
