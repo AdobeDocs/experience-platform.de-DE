@@ -2,13 +2,13 @@
 cloud: Experience Cloud
 product: adobe experience platform
 feature-set: Experience Platform
-solution-title: Platform-Übersicht
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=de
+solution-title: Platform Overview
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
-getting-started-title: Dokumentation
-getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html?lang=de
+getting-started-title: Documentation
+getting-started-url: https://experienceleague.adobe.com/docs/experience-platform.html
 tutorials-title: Tutorials
-tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=de
+tutorials-url: https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/experience-platform.de-DE
 solution: Experience Platform
 type: Documentation
@@ -16,9 +16,8 @@ index: true
 role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
 source-git-commit: 3dbf99bd25bb2e3983de2ca5f0e1f20e9020ba7e
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '111'
 ht-degree: 100%
-showfeedback: true
 
 ---
 
