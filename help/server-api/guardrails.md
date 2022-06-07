@@ -1,47 +1,31 @@
 ---
-title: Vereinbarungen und Ziele auf Dienstebene
-description: Erfahren Sie, wie Sie die Authentifizierung für die Edge Network Server-API konfigurieren
-seo-description: Learn how to configure authentication for the Edge Network Server API
+title: Leistungsgarantien
+description: Erfahren Sie, wie Sie die Server-API in optimalen Leistungsgarantien verwenden.
 keywords: Datenerfassung;Datenerfassung;Edge-Netzwerk;API;SAL;SLIT;Service-Level
-hide: true
-hidefromtoc: true
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '435'
 ht-degree: 2%
 
 ---
 
 
-# Schutzschilde
+# Leistungsgarantien
 
 ## Übersicht {#overview}
 
-Die Adobe wird kommerziell verantwortungsvolle Anstrengungen unternehmen, um die [!DNL Server API] innerhalb eines monatlichen Betriebszeitanteils von mindestens 99,9 % für jede Region während eines monatlichen Abrechnungszyklus verfügbar sind.
+Leistungsgarantien definieren Nutzungsbeschränkungen im Zusammenhang mit Anwendungsfällen Ihrer Server-API. Eine Überschreitung der in diesem Artikel beschriebenen Leistungsgarantien könnte zu einer Leistungsbeeinträchtigung führen.
+
+Adobe ist nicht für Leistungsbeeinträchtigungen verantwortlich, die durch überschrittene Nutzungsbeschränkungen verursacht werden. Kunden, die die Leistungsgarantien konsequent überschreiten, können zusätzliche Verarbeitungskapazität anfordern, um eine Leistungsbeeinträchtigung zu vermeiden.
 
 ## Definitionen
 
 * **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Adobe Experience Platform Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Adobe Experience Platform Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
 * **Monatlicher Uptime-Prozentsatz** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-minütigen Intervalle in einem Monat berechnet.
 * Ein **Upstream** ist ein Dienst hinter dem Adobe Edge-Netzwerk, der für einen bestimmten Datastream aktiviert ist, z. B. Adobe Server Side Forwarding, Adobe Edge Segmentation oder Adobe Target.
-* A **Anfrage** an die Server-API gesendet wird, ist als eine oder mehrere Anfrageeinheiten definiert.
 * A **Anfrageeinheit** entspricht einem 8-KB-Fragment einer Anforderung und einem vorgelagerten für einen Datastream konfigurierten.
+* A **Anfrage** ist eine einzige Nachricht, die von einer kundeneigenen Anwendung an die [!DNL Server API]. Eine Anforderung kann eine oder mehrere Anfrageeinheiten enthalten.
 * Ein **error** ist eine Anforderung, die aufgrund eines Adobe Experience Platform Edge Network fehlschlägt [Interner Dienstfehler](error-handling.md).
-
-## Interne Ziele
-
-Adobe-Engineering-Teams setzen nahezu zeitnahe Telemetrie-, Monitoring- und Skalierungsverfahren ein, um die folgenden Ziele sicherzustellen:
-
-* Weniger als 1 % der HTTP-Anforderungen gibt zurück `5xx` Fehler in den letzten fünf Minuten
-* Weniger als 1 % der Upstream-Verbindungen geben in den letzten fünf Minuten einen Fehler zurück
-* Jede Mandantenkapazität wird in weniger als 10 Minuten ab dem Zeitpunkt verdoppelt, an dem eine Beschränkung erreicht wird.
-
-## Vertragsausschlüsse auf Dienstebene
-
-Die oben beschriebene Service-Level-Verpflichtung gilt nicht für Fehler bei der Verfügbarkeit oder Leistung, die durch die folgenden Ereignisse verursacht werden:
-
-* Faktoren außerhalb unserer angemessenen Kontrolle, einschließlich Internetzugang oder damit zusammenhängende Probleme außerhalb der Adobe-Infrastruktur.
-* Jeder Missbrauch der [!DNL Server API], wie in den unten aufgeführten Beschränkungen definiert.
 
 ## Dienstbeschränkungen
 
@@ -80,4 +64,3 @@ Die folgende Tabelle zeigt die Standardgrenzwerte. Wenden Sie sich an Ihren Kund
 >[!NOTE]
 >
 >Abhängig von der Payload selbst sind die binären Formate im Allgemeinen 20-40 % kompakter, sodass Sie mehr Daten als im Nur-Text-JSON-Format übertragen können. Wenden Sie sich an Ihren Kundenbetreuer, wenn Sie eine höhere Kapazität für Ihre Datenspeicher benötigen.
-
