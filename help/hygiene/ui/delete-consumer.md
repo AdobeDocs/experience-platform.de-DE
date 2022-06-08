@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Verbraucherdatensätze in der Benutzeroberfl�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
+source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1110'
 ht-degree: 0%
 
 ---
@@ -62,12 +62,12 @@ Wenn Sie Verbraucherdaten aus allen Datensätzen löschen möchten, wählen Sie 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primäre Identität"
->abstract="Eine primäre Identität ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das primäre Identitätsfeld für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) der primären Identität des Kunden angeben, z. B. &quot;E-Mail&quot;für E-Mail-Adressen und &quot;ecid&quot;für Experience Cloud-IDs. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
+>abstract="Eine primäre Identität ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das primäre Identitätsfeld für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) für die primäre Identität des Kunden angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud-IDs. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Identitätswert"
->abstract="In dieser Spalte müssen Sie den Wert für die primäre Identität des Kunden angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der primäre Identitätstyp &quot;E-Mail&quot;ist, sollte der Wert die E-Mail-Adresse des Verbrauchers sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
+>abstract="In dieser Spalte müssen Sie den Wert für die primäre Identität des Kunden angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der primäre Identitätstyp `email`, sollte der Wert die E-Mail-Adresse des Verbrauchers sein. Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche für Datenhygiene."
 
 Beim Löschen von Verbraucherdaten müssen Sie Identitätsinformationen angeben, damit das System bestimmen kann, welche Datensätze gelöscht werden müssen. Für jeden Datensatz in Platform werden Datensätze basierend auf der Variablen **primäre Identität** -Feld, das durch das Schema des Datensatzes definiert wird.
 
