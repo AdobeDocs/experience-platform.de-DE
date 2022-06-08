@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Verbraucherdatensätze in der Benutzeroberfl�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: 6f94c7c5e844eaddd50653296875886757f6fb35
+source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
-source-wordcount: '1110'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -144,4 +144,10 @@ Nachdem die Anfrage gesendet wurde, wird eine Arbeitsreihenfolge erstellt und au
 
 In diesem Dokument wurde beschrieben, wie Sie Verbraucherdatensätze in der Experience Platform-Benutzeroberfläche löschen. Weitere Informationen zur Durchführung anderer Datenhygieneaufgaben in der Benutzeroberfläche finden Sie im Abschnitt [Übersicht über die Benutzeroberfläche der Datenhygiene](./overview.md).
 
-Informationen zum Löschen von Verbraucherdatensätzen mithilfe der Data Hygiene API finden Sie im Abschnitt [Endpunktleitfaden für Arbeitsaufträge](../api/workorder.md).
+<!--
+
+Paragraph below should be commented out until workorder.md will be added to the TOC.
+
+To learn how to delete consumer records using the Data Hygiene API, refer to the [work order endpoint guide](../api/workorder.md).
+
+-->

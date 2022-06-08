@@ -4,9 +4,9 @@ user-guide-title: Hilfe zur Datenhygiene
 breadcrumb-title: Data Hygiene Guide
 user-guide-description: Verwalten Sie Anfragen von Verbraucherdaten, um gesetzliche Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
 feature: Privacy
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+source-git-commit: 6b665648e547eee65deb90465e85aeadbba135b4
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '55'
 ht-degree: 3%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 3%
    * [Übersicht](./ui/overview.md)
    * [Vorhandene Arbeitsaufträge durchsuchen](./ui/browse.md)
    * [Time to Live (TTL) für Datensätze verwalten](./ui/ttl.md)
+   * [Verbraucherdatensätze löschen](./ui/delete-consumer.md)
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)
    * [Gültigkeitsdauer des Datensatzes (TTL)](./api/ttl.md)
