@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Verbraucherdatensätze in der Benutzeroberfl�
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 hide: true
 hidefromtoc: true
-source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
+source-git-commit: 95d75292b7697ef4f98e3ebd34c04724019ac37f
 workflow-type: tm+mt
 source-wordcount: '1113'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Wenn Sie Verbraucherdaten aus allen Datensätzen löschen möchten, wählen Sie 
 >
 >Auswählen der **[!UICONTROL Alle Datensätze]** -Option kann dazu führen, dass der Löschvorgang länger dauert und möglicherweise nicht zu einer präzisen Löschung von Datensätzen führt.
 
-## Kundenidentitäten bereitstellen {#identities}
+## Kundenidentitäten bereitstellen {#provide-consumer-identities}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
