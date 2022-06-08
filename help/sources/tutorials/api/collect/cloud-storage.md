@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Abrufen von Daten aus einem Cloud-Speicher eines Drittanbieters und zum Importieren dieser Daten in Platform mithilfe von Quell-Connectoren und APIs beschrieben.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 88e6f084ce1b857f785c4c1721d514ac3b07e80b
+source-git-commit: e059ff1066ef0197207667b40fb2f31c296464cb
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 82%
+source-wordcount: '1586'
+ht-degree: 80%
 
 ---
 
@@ -99,7 +99,8 @@ curl -X POST \
 | `data.properties.columnDelimiter` | (Optional) Ein einstelliges Spaltentrennzeichen, das Sie beim Erfassen flacher Dateien angeben können. Jeder einzelne Zeichenwert ist als Spaltentrennzeichen zulässig. Wenn kein Komma angegeben wurde, wird ein`,`) als Standardwert verwendet. **Hinweis**: Die `columnDelimiter` -Eigenschaft kann nur bei der Aufnahme von durch Trennzeichen getrennten Dateien verwendet werden. |
 | `data.properties.encoding` | (Optional) Eine Eigenschaft, die den Kodierungstyp definiert, der bei der Aufnahme Ihrer Daten in Platform verwendet werden soll. Folgende Kodierungstypen werden unterstützt: `UTF-8` und `ISO-8859-1`. **Hinweis**: Die `encoding` -Parameter ist nur verfügbar, wenn durch Trennzeichen getrennte CSV-Dateien aufgenommen werden. Andere Dateitypen werden mit der Standardkodierung erfasst. `UTF-8`. |
 | `data.properties.compressionType` | (Optional) Eine Eigenschaft, die den komprimierten Dateityp für die Erfassung definiert. Folgende komprimierte Dateitypen werden unterstützt: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`und `tar`. **Hinweis**: Die `compressionType` -Eigenschaft kann nur bei der Aufnahme von getrennten oder JSON-Dateien verwendet werden. |
-| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. |
+| `params.path` | Der Pfad der Quelldatei, auf die Sie zugreifen. Dieser Parameter verweist auf eine einzelne Datei oder einen ganzen Ordner. |
+| `params.type` | Der Dateityp der Quelldatendatei, die Sie aufnehmen. Use type `file` , um eine einzelne Datei zu erfassen und den Typ `folder` , um einen ganzen Ordner aufzunehmen. |
 | `connectionSpec.id` | Die Verbindungsspezifikations-ID, die Ihrer spezifischen Cloud-Speicherquelle zugeordnet ist. Eine Liste der Verbindungsspezifikations-IDs finden Sie im [Anhang](#appendix). |
 
 **Antwort**
