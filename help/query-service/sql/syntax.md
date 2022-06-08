@@ -5,9 +5,9 @@ title: SQL-Syntax in Query Service
 topic-legacy: syntax
 description: Dieses Dokument zeigt die von Adobe Experience Platform Query Service unterstützte SQL-Syntax.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 7016c0ce1ca8be5cecb7c09d01e9fd2e48e551de
+source-git-commit: 17a90bb716bd64c9fb9b383a5ffa49598e978288
 workflow-type: tm+mt
-source-wordcount: '3050'
+source-wordcount: '3042'
 ht-degree: 11%
 
 ---
@@ -724,28 +724,34 @@ Die `ALTER TABLE` -Befehl können Sie Primär- oder Fremdschlüsseleinschränkun
 Die folgenden SQL-Abfragen zeigen Beispiele für das Hinzufügen oder Ablegen von Begrenzungen zu einer Tabelle.
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT IDENTITY ( column_name ) NAMESPACE namespace
 
-ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY IDENTITY ( column_name )
+
+ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 ```
 
 | Parameter | Beschreibung |
 | ------ | ------ |
 | `table_name` | Der Name der Tabelle, die Sie bearbeiten. |
-| `constraint_name` | Der Name der Einschränkung, die Sie hinzufügen oder löschen möchten. |
 | `column_name` | Der Name der Spalte, der Sie eine Einschränkung hinzufügen. |
 | `referenced_table_name` | Der Name der Tabelle, auf die der Fremdschlüssel verweist. |
 | `primary_column_name` | Der Name der Spalte, auf die der Fremdschlüssel verweist. |
 
+
 >[!NOTE]
 >
->Das Tabellenschema sollte eindeutig sein und nicht von mehreren Tabellen gemeinsam genutzt werden. Darüber hinaus ist der Namespace für Primärschlüsseleinschränkungen obligatorisch.
+>Das Tabellenschema sollte eindeutig sein und nicht von mehreren Tabellen gemeinsam genutzt werden. Darüber hinaus ist der Namespace für Primärschlüssel, primäre Identität und Identitätseinschränkungen obligatorisch.
 
 #### Primäre und sekundäre Identitäten hinzufügen oder löschen
 
