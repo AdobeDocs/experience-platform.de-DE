@@ -3,9 +3,9 @@ title: Übersicht über Datenspeicher
 description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integration mit Adobe-Produkten und Zielen von Drittanbietern.
 keywords: Konfiguration;Datastreams;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschaft-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Data Prep für Datenerfassung;Mappings;Mappings er;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: fe66cbd61d546da8fb6621ef78b3565126cb193d
+source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
-source-wordcount: '1686'
+source-wordcount: '1774'
 ht-degree: 3%
 
 ---
@@ -53,6 +53,7 @@ Auswählen **[!UICONTROL Erweiterte Optionen]** , um zusätzliche Steuerelemente
 | [!UICONTROL Geo-Position] | Bestimmt anhand der IP-Adresse des Benutzers, ob GPS-Suchen stattfinden. Die Standardeinstellung **[!UICONTROL Keines]** deaktiviert alle GPS-Suchen, während die **[!UICONTROL Ort]** -Einstellung stellt GPS-Koordinaten auf zwei Dezimalstellen bereit. |
 | [!UICONTROL Erstanbieter-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einem [Erstanbieter-Geräte-ID](../identity/first-party-device-ids.md), anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert werden soll. |
 | [!UICONTROL Synchronisierung der Drittanbieter-ID] | ID-Synchronisationen können in Container gruppiert werden, damit verschiedene ID-Synchronisierungen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisierungen für diesen Datastream ausgeführt wird. |
+| [!UICONTROL Zugriffstyp] | Definiert den Authentifizierungstyp, den die [!DNL Edge Network] akzeptiert für den Datastream. <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anforderungen. Wählen Sie diese Option, wenn Sie das Web SDK verwenden möchten, oder [Mobile SDK](https://aep-sdks.gitbook.io/docs/)zusammen mit [Server-API](../../server-api/overview.md). </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge-Netzwerk nur authentifizierte Anforderungen. Wählen Sie diese Option aus, wenn Sie nur die Server-API verwenden möchten und verhindern möchten, dass nicht authentifizierte Anforderungen von der [!DNL Edge Network]. </li></ul> |
 
 Wenn Sie von hier aus Ihren Datastream für die Experience Platform konfigurieren, folgen Sie dem Tutorial zu [Datenvorbereitung für die Datenerfassung](./data-prep.md) , um Ihre Daten einem Platform-Ereignisschema zuzuordnen, bevor Sie zu diesem Handbuch zurückkehren. Andernfalls wählen Sie **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Abschnitt fort.
 
