@@ -2,13 +2,13 @@
 title: Leistungsgarantien
 description: Erfahren Sie, wie Sie die Server-API in optimalen Leistungsgarantien verwenden.
 keywords: Datenerfassung;Datenerfassung;Edge-Netzwerk;API;SAL;SLIT;Service-Level
-source-git-commit: 951773d7a314b3d128fa364a7a034e0e8514bbe4
+exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
+source-git-commit: 6f0eb81f9709cf4fcaea94334449117c4ed76107
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '426'
 ht-degree: 2%
 
 ---
-
 
 # Leistungsgarantien
 
@@ -20,12 +20,12 @@ Adobe ist nicht für Leistungsbeeinträchtigungen verantwortlich, die durch übe
 
 ## Definitionen
 
-* **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Adobe Experience Platform Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Adobe Experience Platform Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
+* **Verfügbarkeit** wird für jedes fünfminütige Intervall als Prozentsatz der vom Experience Platform Edge Network verarbeiteten Anforderungen berechnet, die nicht fehlschlagen und sich ausschließlich auf die bereitgestellten Edge Network-APIs beziehen. Wenn ein Mandant in einem bestimmten Fünfminüterintervall keine Anforderungen gestellt hat, gilt dieses Intervall als zu 100 % verfügbar.
 * **Monatlicher Uptime-Prozentsatz** für eine bestimmte Region wird als Durchschnitt der Verfügbarkeit für alle 5-minütigen Intervalle in einem Monat berechnet.
-* Ein **Upstream** ist ein Dienst hinter dem Adobe Edge-Netzwerk, der für einen bestimmten Datastream aktiviert ist, z. B. Adobe Server Side Forwarding, Adobe Edge Segmentation oder Adobe Target.
+* Ein **Upstream** ist ein Dienst hinter dem Edge Network, der für einen bestimmten Datastream aktiviert ist, z. B. für die serverseitige Weiterleitung von Adoben, die Adobe Edge-Segmentierung oder Adobe Target.
 * A **Anfrageeinheit** entspricht einem 8-KB-Fragment einer Anforderung und einem vorgelagerten für einen Datastream konfigurierten.
 * A **Anfrage** ist eine einzige Nachricht, die von einer kundeneigenen Anwendung an die [!DNL Server API]. Eine Anforderung kann eine oder mehrere Anfrageeinheiten enthalten.
-* Ein **error** ist eine Anforderung, die aufgrund eines Adobe Experience Platform Edge Network fehlschlägt [Interner Dienstfehler](error-handling.md).
+* Ein **error** ist eine Anforderung, die aufgrund eines Edge-Netzwerks fehlschlägt [Interner Dienstfehler](error-handling.md).
 
 ## Dienstbeschränkungen
 
