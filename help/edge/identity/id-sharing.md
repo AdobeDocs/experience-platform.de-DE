@@ -2,13 +2,13 @@
 title: Freigabe von Mobilgeräte für das Internet und domänenübergreifende IDs
 description: Erfahren Sie, wie Sie Besucher-IDs von mobilen auf Web-Eigenschaften und domänenübergreifend beibehalten können.
 keywords: Identität; mobil; ID; Freigabe; Domäne; domänenübergreifend; SDK; Plattform;
-source-git-commit: 55e28f749741c653a230b42fabf5a047ba8c7d01
+exl-id: b9bb236f-52cf-4615-96d8-1137d957de8c
+source-git-commit: 3b65143e33804b251f888dbe2a69d238b3f4cda3
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '901'
 ht-degree: 1%
 
 ---
-
 
 # Freigabe von Mobilgeräte für das Internet und domänenübergreifende IDs
 
@@ -32,9 +32,11 @@ Ein Technologie-Händler möchte die Berichte zu Besucheraktivitäten verbessern
 
 ## Voraussetzungen {#prerequisites}
 
-Um die Freigabe mobiler und domänenübergreifender IDs zu verwenden, müssen Sie das Update auf [!DNL Web SDK] Version 2.11.0 oder höher.
+Um die Freigabe mobiler und domänenübergreifender IDs zu verwenden, müssen Sie [!DNL Web SDK] Version 2.11.0 oder höher.
 
 Bei mobilen Implementierungen von Edge Network wird diese Funktion im Abschnitt [Identität für Edge Network](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) -Erweiterung ab Version 1.1.0 (iOS und Android).
+
+Diese Funktion ist auch mit [!DNL VisitorAPI.js] Version 1.7.0 oder höher.
 
 ## Freigabe mobiler oder Web-IDs {#mobile-to-web}
 
