@@ -3,9 +3,9 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: 715533352e84573f60f012504988595af6146e2f
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '671'
 ht-degree: 7%
 
 ---
@@ -50,8 +50,8 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
->title="SSH-Schlüssel"
->abstract="Der SSH-Schlüssel erfordert eine Base64-Zeichenfolge."
+>title="Privater SSH-Schlüssel"
+>abstract="Der private SSH-Schlüssel muss als Base64-kodierte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein. "
 
 Wann [Verbindung](../../ui/connect-destination.md) zu diesem Ziel hinzufügen, müssen Sie die folgenden Informationen angeben:
 
@@ -59,7 +59,7 @@ Wann [Verbindung](../../ui/connect-destination.md) zu diesem Ziel hinzufügen, m
 
 Wenn Sie die **[!UICONTROL Grundlegende Authentifizierung]** Typ, um eine Verbindung zu Ihrem SFTP-Speicherort herzustellen:
 
-![Grundlegende SFTP-Zielauthentifizierung](../..//assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
+![Grundlegende SFTP-Zielauthentifizierung](../../assets/catalog/cloud-storage/sftp/stfp-basic-authentication.png)
 
 * **[!UICONTROL Host]**: Die Adresse Ihres SFTP-Speicherorts;
 * **[!UICONTROL Benutzername]**: Der Benutzername für die Anmeldung bei Ihrem SFTP-Speicherort.
@@ -77,11 +77,11 @@ Wenn Sie die **[!UICONTROL SFTP mit SSH-Schlüssel]** Authentifizierungstyp für
 * **[!UICONTROL Domäne]**: Geben Sie die IP-Adresse oder den Domänennamen Ihres SFTP-Kontos ein.
 * **[!UICONTROL Port]**: Der von Ihrem SFTP-Speicherort verwendete Port;
 * **[!UICONTROL Benutzername]**: Der Benutzername für die Anmeldung bei Ihrem SFTP-Speicherort.
-* **[!UICONTROL SSH-Schlüssel]**: Der SSH-Schlüssel zum Anmelden bei Ihrem SFTP-Speicherort.
+* **[!UICONTROL SSH-Schlüssel]**: Der private SSH-Schlüssel, der zum Anmelden bei Ihrem SFTP-Speicherort verwendet wird. Der private Schlüssel muss als Base64-kodierte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein.
 * **[!UICONTROL Verschlüsselungsschlüssel]**: Optional können Sie Ihren RSA-formatierten öffentlichen Schlüssel anhängen, um Ihren exportierten Dateien Verschlüsselung hinzuzufügen. Ihr öffentlicher Schlüssel muss als [!DNL Base64] kodierter String.
    * Beispiel: `----BEGIN PGP PUBLIC KEY BLOCK---- {Base64-encoded string} ----END PGP PUBLIC KEY BLOCK----`. Unten finden Sie ein Beispiel für einen korrekt formatierten PGP-Schlüssel, bei dem der mittlere Teil gekürzt ist.
 
-      ![PGP-Schlüssel](../..//assets/catalog/cloud-storage/sftp/pgp-key.png)
+      ![PGP-Schlüssel](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### Zieldetails {#destination-details}
 
