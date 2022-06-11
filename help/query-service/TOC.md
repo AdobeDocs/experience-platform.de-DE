@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: 5079bb768ba02d78669dd8b6c1ebe28943a1bb68
+source-git-commit: f501a93786a726c5aa74e19903ac3b2564e72a91
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '179'
 ht-degree: 79%
 
 ---
@@ -45,7 +45,6 @@ ht-degree: 79%
 - Beispielabfragen {#sample-queries}
    - [Beispielabfragen von Erlebnisereignissen](sample-queries/experience-event.md)
    - [Beispielabfragen von Adobe Analytics](sample-queries/adobe-analytics.md)
-   - [Beispielabfragen von Adobe Target](sample-queries/adobe-target.md)
 - Data Governance {#data-governance}
    - [Auditprotokoll-Handbuch](data-governance/audit-log-guide.md)
    - [Identitäten in Ad-hoc-Schemata-Datensätzen](data-governance/ad-hoc-schema-identities.md)

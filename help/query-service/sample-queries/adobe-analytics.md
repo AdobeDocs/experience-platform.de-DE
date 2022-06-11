@@ -5,10 +5,10 @@ title: Beispielabfragen für Adobe Analytics-Daten
 topic-legacy: queries
 description: Daten aus ausgewählten Adobe Analytics Report Suites werden in XDM ExperienceEvents umgewandelt und als Datensätze in Adobe Experience Platform aufgenommen. In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Query Service diese Daten nutzt, sowie Beispielabfragen, die für die Verwendung mit Ihren Adobe Analytics-Datensätzen entwickelt wurden.
 exl-id: 96da3713-c7ab-41b3-9a9d-397756d9dd07
-source-git-commit: fec6f614946860e6ad377beaca05972a63052dd8
+source-git-commit: e0cdfc514a9e1277134d4c0d5396fc0bdf9d9958
 workflow-type: tm+mt
-source-wordcount: '1066'
-ht-degree: 46%
+source-wordcount: '975'
+ht-degree: 41%
 
 ---
 
@@ -16,107 +16,9 @@ ht-degree: 46%
 
 Daten aus ausgewählten Adobe Analytics Report Suites werden in Daten umgewandelt, die dem [!DNL XDM ExperienceEvent] -Klasse und in Adobe Experience Platform als Datensätze erfasst.
 
-In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Adobe Experience Platform [!DNL Query Service] verwendet diese Daten, einschließlich Beispielabfragen, die für die Verwendung mit Ihren Adobe Analytics-Datensätzen entwickelt wurden. Weitere Informationen finden Sie in der Dokumentation unter [Analytics-Feldzuordnung](../../sources/connectors/adobe-applications/mapping/analytics.md) Weitere Informationen zur Zuordnung zu [!DNL Experience Events].
+In diesem Dokument wird eine Reihe von Anwendungsfällen beschrieben, in denen Adobe Experience Platform [!DNL Query Service] verwendet diese Daten. Weitere Informationen finden Sie in der Dokumentation unter [Analytics-Feldzuordnung](../../sources/connectors/adobe-applications/mapping/analytics.md) Weitere Informationen zur Zuordnung zu [!DNL Experience Events].
 
-## Erste Schritte
-
-Für die SQL-Beispiele in diesem Dokument müssen Sie SQL bearbeiten und die erwarteten Parameter für Ihre Abfragen entsprechend dem Datensatz, der eVar, dem Ereignis oder dem Zeitrahmen ausfüllen, den Sie bewerten möchten. Geben Sie Parameter an, wo immer Sie `{ }` in den folgenden SQL-Beispielen sehen.
-
-## Häufig verwendete SQL-Beispiele
-
-Die folgenden Beispiele zeigen SQL-Abfragen für gängige Anwendungsfälle zur Analyse Ihrer Adobe Analytics-Daten.
-
-### Stündliche Besucherzahl für einen bestimmten Tag
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day,
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
-
-### Top 10 der angezeigten Seiten für einen bestimmten Tag
-
-```sql
-SELECT web.webpagedetails.name AS Page_Name, 
-       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY web.webpagedetails.name 
-ORDER BY page_views DESC 
-LIMIT  10;
-```
-
-### Top 10 der aktivsten Benutzer
-
-```sql
-SELECT enduserids._experience.aaid.id AS aaid, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY enduserids._experience.aaid.id
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### Top 10 der Städte nach Benutzeraktivität
-
-```sql
-SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
-       Count(timestamp) AS Count
-FROM   {TARGET_TABLE}
-WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY state_city
-ORDER BY Count DESC
-LIMIT  10;
-```
-
-### Top 10 der angezeigten Produkte
-
-```sql
-SELECT Product_SKU,
-       Sum(Product_Views) AS Total_Product_Views
-FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
-              commerce.productviews.value   AS Product_Views 
-       FROM   {TARGET_TABLE}
-            WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-              AND commerce.productviews.value IS NOT NULL) 
-GROUP BY Product_SKU 
-ORDER BY Total_Product_Views DESC
-LIMIT  10;
-```
-
-### Top 10 des Gesamtbestellumsatzes
-
-```sql
-SELECT Purchase_ID, 
-       Round(Sum(Product_Items.priceTotal * Product_Items.quantity), 2) AS Total_Order_Revenue 
-FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID, 
-               Explode(productlistitems)   AS Product_Items 
-        FROM   {TARGET_TABLE} 
-        WHERE  commerce.`order`.purchaseid IS NOT NULL 
-                AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-
-GROUP BY Purchase_ID 
-ORDER BY total_order_revenue DESC 
-LIMIT  10;
-```
-
-### Anzahl der Ereignisse nach Tag
-
-```sql
-SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Day, 
-       Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
-       Sum(_experience.analytics.event1to100.{TARGET_EVENT}.value) AS Event_Count
-FROM   {TARGET_TABLE}
-WHERE  _experience.analytics.event1to100.{TARGET_EVENT}.value IS NOT NULL 
-        AND TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
-GROUP BY Day, Hour
-ORDER BY Hour;
-```
+Siehe [Anwendungsfalldokumentation für Analytics](../use-cases/analytics-insights.md) , um zu erfahren, wie Sie mit Query Service praktische Einblicke aus erfassten Adobe Analytics-Daten erstellen können.
 
 ## Deduplizierung
 
