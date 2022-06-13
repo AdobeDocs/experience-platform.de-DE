@@ -3,14 +3,32 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 29852bc8f17de6db04805f4738f383f2dc7c1406
+source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
 workflow-type: tm+mt
-source-wordcount: '1018'
+source-wordcount: '1169'
 ht-degree: 3%
 
 ---
 
+
 # Versionshinweise
+
+In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
+Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in der [Versionshinweise zur Web SDK-Tag-Erweiterung](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.11.0 - 13. Juni 2022
+
+**Neue Funktionen**
+
+* Sie können jetzt personalisierte Erlebnisse genauer bereitstellen, indem Sie Besucher-IDs zwischen mobilen Apps und mobilen Webinhalten sowie domänenübergreifend freigeben. Siehe [dedizierte Dokumentation](identity/id-sharing.md) , um mehr zu erfahren.
+* Sie können jetzt eine Reihe von Vorschlägen aus [!DNL Adobe Target] in Einzelseitenanwendungen, ohne die Analytics-Metriken zu erhöhen. Dadurch werden Berichtsfehler reduziert und die Analysegenauigkeit erhöht. Siehe [dedizierte Dokumentation](personalization/rendering-personalization-content.md#applypropositions) , um mehr zu erfahren.
+* Zusätzliche Informationen zum `getLibraryInfo` -Befehl mit verfügbaren Befehlen und der endgültigen Konfiguration für die Instanz.
+
+**Fehlerbehebungen und Verbesserungen**
+
+* Die Cookie-Einstellungen zur Verwendung von `sameSite="none"` und `secure` Markierung auf [!DNL HTTPS] Seiten.
+* Es wurde ein Problem behoben, bei dem personalisierter Inhalt bei Verwendung der Variablen `eq` Pseudo-Selektor.
+* Es wurde ein Problem behoben, bei dem `localTimezoneOffset` konnte die Validierung der Experience Platform fehlschlagen.
 
 ## Version 2.10.1 - 3. Mai 2022
 

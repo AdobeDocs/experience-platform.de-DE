@@ -2,16 +2,27 @@
 title: Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 description: Adobe Experience Platform Web SDK-Tag-Erweiterung
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 18f7e32c8922b254d68655aeb2b633c12a97d2a7
+source-git-commit: 83f7fca5d8a3fd2a57d39c155153caa70d89d353
 workflow-type: tm+mt
-source-wordcount: '1343'
-ht-degree: 46%
+source-wordcount: '1398'
+ht-degree: 44%
 
 ---
+
 
 # Versionshinweise zur Adobe Experience Platform Web SDK-Erweiterung
 
 In diesem Dokument werden die Versionshinweise für die Adobe Experience Platform Web SDK-Tag-Erweiterung behandelt. Die neuesten Versionshinweise zum SDK finden Sie in der [Versionshinweise zum Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.12.0 - 13. Juni 2022
+
+* Die `identityMap` -Datenelement, um die Namespace-Optionen basierend auf den Sandboxes zu füllen, die in den Erweiterungseinstellungen definiert sind.
+* Hinzugefügt **[!UICONTROL Umleiten mit Identität]** Aktion zum Ermöglichen der domänenübergreifenden Identitätsfreigabe.
+* Es wurden Dokumentationslinks zum `sendEvent` Aktion.
+* Die Bibliothek der React Spectrum-Benutzeroberfläche wurde aktualisiert.
+* Mehrere Verbesserungen der Benutzeroberfläche.
+
+Enthält Version 2.11.0 der Adobe Experience Platform Web SDK Library.
 
 ## Version 2.11.2 - 3. Mai 2022
 
