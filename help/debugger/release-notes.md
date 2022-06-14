@@ -1,17 +1,29 @@
 ---
 title: Versionshinweise zu Adobe Experience Platform Debugger
-description: Die aktuellen Versionshinweise für Adobe Experience Platform Debugger.
+description: Die neuesten Versionshinweise für Adobe Experience Platform Debugger.
 keywords: Debugger;Experience Platform Debugger-Erweiterung;Chrome;Erweiterung;Versionshinweise
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a15b5525d3a2fa034715803c83dc22a94915347e
+source-git-commit: 9c4f16c84b78403e5baf02595a38093341eefa67
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 0%
+source-wordcount: '351'
+ht-degree: 2%
 
 ---
 
 # Versionshinweise zu Adobe Experience Platform Debugger
+
+## Version 1.3.2 - 9. Juni 2022
+
+* Es wurde ein Standardavatar hinzugefügt, wenn der Benutzer angemeldet ist.
+* Es wurde eine Syntaxhervorhebung zu JSON-Objekten in Protokollen hinzugefügt.
+
+## Version 1.3.1 - 24. Mai 2022
+
+* Aktualisierte Abhängigkeiten.
+* Es wurde ein Analytics-Problem behoben, bei dem Nachbearbeitungstreffer nicht aktiviert werden konnten.
+* Es wurde ein Problem behoben, bei dem der Debugger an das Anmeldefenster der Adobe angehängt wurde.
+* AT.js-Problem behoben, bei dem Protokollmeldungen im Debugger nicht angezeigt wurden.
 
 ## Version 1.3.0 - 28. Januar 2022
 
