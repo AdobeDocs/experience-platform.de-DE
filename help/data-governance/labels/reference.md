@@ -5,14 +5,20 @@ title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 15b0c2fb2565ada489c5a8811b946efc4319696b
+source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
 workflow-type: tm+mt
-source-wordcount: '2053'
-ht-degree: 96%
+source-wordcount: '2083'
+ht-degree: 95%
 
 ---
 
 # Glossar der Datennutzungskennzeichnungen
+
+>[!CONTEXTUALHELP]
+>id="platform_policies_labeltype"
+>title="Beschriftungstypen"
+>abstract="Es gibt mehrere Kategorien von Datennutzungsbezeichnungen. Zu den von der Adobe definierten Bezeichnungen gehören Vertragsbezeichnungen, Identitätsbezeichnungen und vertrauliche Bezeichnungen. Von Ihrem Unternehmen definierte Beschriftungen werden als benutzerdefinierte Beschriftungen kategorisiert."
+>text="See the data usage labels glossary for more information on these label types."
 
 Mit Datennutzungsbeschriftungen können Sie Datensätze anhand der für diese Daten geltenden Nutzungsrichtlinien kategorisieren. Adobe Experience Platform Data Governance bietet mehrere gebrauchsfertige, grundlegende Datennutzungskennzeichnungen, die Sie verwenden können, um Ihre Daten zu kategorisieren.
 
