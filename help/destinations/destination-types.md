@@ -4,10 +4,10 @@ title: Zieltypen und Kategorien
 seo-title: Destination types and categories
 description: Erfahren Sie mehr über die verschiedenen Zieltypen und -kategorien in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 1c2846941df09b66eb74f8ea8bec91574577fbbc
+source-git-commit: 2252c6e8bd5f0ada717d67f005b7f6ddd0b238ab
 workflow-type: tm+mt
-source-wordcount: '596'
-ht-degree: 12%
+source-wordcount: '642'
+ht-degree: 11%
 
 ---
 
@@ -23,7 +23,7 @@ In Adobe Experience Platform unterscheiden wir zwischen zwei Zieltypen: Verbindu
 
 ## Verbindungen {#connections}
 
-**[!UICONTROL Profilexport]** und **[!UICONTROL Export von Streaming-Segmenten]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Segmente und qualifizierte Profile in Ziele.
+**[!UICONTROL Profilexport]**, **[!UICONTROL Export von Streaming-Segmenten]** und **[!DNL Edge Personalization]** Ziele in Adobe Experience Platform erfassen Ereignisdaten, kombinieren sie mit anderen Datenquellen, um die [Echtzeit-Kundenprofil](../profile/home.md), wenden Sie die Segmentierung an und exportieren Sie Segmente und qualifizierte Profile in Ziele.
 
 ## Profilexportziele {#profile-export}
 
@@ -55,6 +55,12 @@ Dateibasierte Ziele empfangen `.csv` Dateien, die Profile und/oder Attribute ent
 ## Export-Ziele für Streaming-Segmente {#streaming-destinations}
 
 Segmentexportziele erhalten Daten zu Experience Platform-Segmenten. Diese Ziele verwenden Segment-IDs oder Benutzer-IDs. Werbung und soziale Ziele wie [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md)oder [Facebook](catalog/social/facebook.md) sind Beispiele für solche Ziele.
+
+## Edge-Personalisierungsziele {#edge-personalization-destinations}
+
+Zu den Edge-Personalisierungszielen in Experience Platform gehören: [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) und [Benutzerdefiniertes Personalisierungsziel](/help/destinations/catalog/personalization/custom-personalization.md). Mithilfe dieser Ziele können Sie Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten für Ihre Kunden aktivieren.
+
+Weitere Informationen zum [Personalisierungsziele für die Personalisierung der gleichen Seite und der nächsten Seite konfigurieren](/help/destinations/ui/configure-personalization-destinations.md).
 
 ## Export- und Segmentexportziele - Videoübersicht {#video}
 
