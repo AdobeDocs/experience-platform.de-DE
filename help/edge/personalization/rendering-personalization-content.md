@@ -3,10 +3,10 @@ title: Rendern von personalisierten Inhalten mit dem Adobe Experience Platform W
 description: Erfahren Sie, wie Sie personalisierte Inhalte mit dem Adobe Experience Platform Web SDK rendern.
 keywords: personalization;renderDecisions;sendEvent;DecisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 6ba563db7fd31084813426ffbb0c35be9d7fe4bb
+source-git-commit: 0d8e19d8428191cc0c6c56e629e8c5528a96115c
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 3%
+source-wordcount: '924'
+ht-degree: 2%
 
 ---
 
@@ -296,3 +296,94 @@ alloy("sendEvent", {
 ### Verwalten von Flackern
 
 Das SDK bietet Funktionen für [Flackern verwalten](../personalization/manage-flicker.md) während des Personalisierungsprozesses.
+
+## Vorschläge in Einzelseitenanwendungen rendern, ohne Metriken zu erhöhen {#applypropositions}
+
+Die `applyPropositions` -Befehl ermöglicht es Ihnen, ein Array von Vorschlägen aus [!DNL Target] in Einzelseitenanwendungen, ohne die [!DNL Analytics] und [!DNL Target] Metriken. Dies erhöht die Genauigkeit der Berichterstellung.
+
+>[!IMPORTANT]
+>
+>Wenn Vorschläge für die `__view__` der Bereich beim Laden der Seite gerendert wurde, `renderAttempted` -Markierung wird auf `true`. Die `applyPropositions` -Befehl gibt die `__view__` Vorschläge mit dem `renderAttempted: true` Markierung.
+
+### Anwendungsfall 1: Wiedergeben von Vorschlägen für die Ansicht von Einzelseiten-Apps
+
+Der im folgenden Beispiel beschriebene Anwendungsfall rendert die zuvor abgerufenen und gerenderten Vorschläge zur Warenkorbansicht erneut, ohne dass Anzeigebenachrichtigungen gesendet werden.
+
+Im folgenden Beispiel wird die Variable `sendEvent` wird bei einer Änderung der Ansicht ausgelöst und speichert das resultierende Objekt in einer Konstante.
+
+Wenn die Ansicht oder Komponente aktualisiert wird, wird die `applyPropositions` -Befehl mit den Vorschlägen aus dem vorherigen `sendEvent` -Befehl, um die Anzeigevorschläge erneut zu rendern.
+
+```js
+var cartPropositions = alloy("sendEvent", {
+    renderDecisions: true,
+    xdm: {
+        web: {
+            webPageDetails: {
+                viewName: "cart"
+            }
+        }
+    }
+}).then(function(result) {
+    var propositions = result.propositions;
+
+    // Collect response tokens, etc.
+    return propositions;
+});
+
+// Call applyPropositions to re-render the view propositions from the previous sendEvent command.
+alloy("applyPropositions", {
+    propositions: cartPropositions
+});
+```
+
+### Anwendungsfall 2: Vorschläge rendern, für die kein Selektor vorhanden ist
+
+Dieser Anwendungsfall gilt für Aktivitätsangebote, die mithilfe des [!DNL Target Form-based Experience Composer].
+
+Sie müssen den Selektor, die Aktion und den Bereich im `applyPropositions` aufrufen.
+
+Unterstützt `actionTypes` sind:
+
+* `setHtml`
+* `replaceHtml`
+* `appendHtml`
+
+```js
+// Retrieve propositions for salutation and discount scopes
+alloy("sendEvent", {
+    decisionScopes: ["salutation", "discount"]
+}).then(function(result) {
+    var retrievedPropositions = result.propositions;
+    // Render propositions on the page by providing additional metadata
+
+    return alloy("applyPropositions", {
+        propositions: retrievedPropositions,
+        metadata: {
+            salutation: {
+                selector: "#first-form-based-offer",
+                actionType: "setHtml"
+            },
+            discount: {
+                selector: "#second-form-based-offer",
+                actionType: "replaceHtml"
+            }
+        }
+    }).then(function(applyPropositionsResult) {
+        var renderedPropositions = applyPropositionsResult.propositions;
+
+        // Send the display notifications via sendEvent command
+        alloy("sendEvent", {
+            xdm: {
+                eventType: "decisioning.propositionDisplay",
+                _experience: {
+                    decisioning: {
+                        propositions: renderedPropositions
+                    }
+                }
+            }
+        });
+    });
+});
+```
+
+Wenn Sie für einen Entscheidungsbereich keine Metadaten angeben, werden die zugehörigen Vorschläge nicht gerendert.
