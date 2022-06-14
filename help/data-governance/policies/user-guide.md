@@ -5,9 +5,9 @@ title: Verwalten von Datennutzungsrichtlinien in der Benutzeroberfläche
 topic-legacy: policies
 description: Adobe Experience Platform Data Governance bietet eine Benutzeroberfläche, über die Sie Datennutzungsrichtlinien erstellen und verwalten können. Dieses Dokument bietet einen Überblick über die Aktionen, die Sie im Arbeitsbereich "Richtlinien"der Benutzeroberfläche "Experience Platform"ausführen können.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1329'
+source-wordcount: '1326'
 ht-degree: 51%
 
 ---
@@ -33,7 +33,7 @@ Klicken Sie in der Benutzeroberfläche von [!DNL Experience Platform] auf **[!UI
 
 ![](../images/policies/browse-policies.png)
 
-Wenn Sie Zugriff auf Zustimmungsrichtlinien haben (derzeit in der Beta-Phase), wählen Sie die **[!UICONTROL Einverständnisrichtlinien]** Umschalten der Anzeige in der [!UICONTROL Durchsuchen] Registerkarte.
+Wenn Sie Zugriff auf Zustimmungsrichtlinien haben, wählen Sie die **[!UICONTROL Einverständnisrichtlinien]** Umschalten der Anzeige in der [!UICONTROL Durchsuchen] Registerkarte.
 
 ![](../images/policies/consent-policy-toggle.png)
 

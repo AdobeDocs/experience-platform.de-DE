@@ -5,9 +5,9 @@ title: Datennutzungsrichtlinien – Übersicht
 topic-legacy: policies
 description: Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen können, müssen Sie Datennutzungsrichtlinien definieren und aktivieren. Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in Experience Platform ausführen bzw. nicht ausführen dürfen.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1121'
 ht-degree: 92%
 
 ---
@@ -19,7 +19,7 @@ Damit Datennutzungsbezeichnungen die Datenkonformität effektiv unterstützen k�
 Es stehen zwei Arten von Richtlinien zur Verfügung:
 
 * **[!UICONTROL Data Governance-Politik]**: Schränken Sie die Datenaktivierung auf der Grundlage der Marketing-Aktion und der Datennutzungsbezeichnungen der betreffenden Daten ein.
-* **[!UICONTROL Einverständnisrichtlinie] (Beta)**: Filtern der Profile, für die aktiviert werden können [Ziele](../../destinations/home.md) auf der Grundlage der Zustimmung oder Voreinstellungen Ihrer Kunden
+* **[!UICONTROL Einverständnisrichtlinie]**: Filtern der Profile, für die aktiviert werden können [Ziele](../../destinations/home.md) auf der Grundlage der Zustimmung oder Voreinstellungen Ihrer Kunden
 
 Dieses Dokument bietet eine allgemeine Übersicht über die Richtlinien zur Datennutzung und enthält Links zu weiteren Dokumentationen zum Arbeiten mit Richtlinien in der Benutzeroberfläche oder API.
 

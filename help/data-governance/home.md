@@ -5,9 +5,9 @@ title: Data Governance – Übersicht
 topic-legacy: overview
 description: Mit Data Governance in Adobe Experience Platform können Sie Kundendaten verwalten und bei der Verwendung von Daten die Einhaltung von Vorschriften, Einschränkungen und Richtlinien sicherstellen. Die Funktion spielt in Experience Platform auf verschiedenen Ebenen eine wichtige Rolle, wie z.B. bei Katalogisierung, Ermittlung der Datenherkunft, Datennutzungsbezeichnung, Datennutzungsrichtlinien und Steuerung der Nutzung von Daten für Marketing-Aktionen
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 6e4a3ff03a551069efb8dc96f21b82de06cc47d8
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1431'
 ht-degree: 92%
 
 ---
@@ -81,7 +81,7 @@ Ein Beispiel für eine Marketing-Aktion könnte der Wunsch sein, einen Datensatz
 Es stehen zwei Arten von Richtlinien zur Verfügung:
 
 * **[!UICONTROL Data Governance-Politik]**: Schränken Sie die Datenaktivierung auf der Grundlage der Marketing-Aktion und der Datennutzungsbezeichnungen der betreffenden Daten ein.
-* **[!UICONTROL Einverständnisrichtlinie] (Beta)**: Filtern der Profile, für die aktiviert werden können [Ziele](../destinations/home.md) basierend auf der Zustimmung oder den Vorlieben Ihrer Kunden.
+* **[!UICONTROL Einverständnisrichtlinie]**: Filtern der Profile, für die aktiviert werden können [Ziele](../destinations/home.md) basierend auf der Zustimmung oder den Vorlieben Ihrer Kunden.
 
 Sobald Datennutzungsbezeichnungen angewendet wurden, können Datenverwalter mithilfe der [!DNL Policy Service]-API oder der Benutzeroberfläche von [!DNL Experience Platform] Richtlinien erstellen. Weitere Informationen zu Datennutzungsrichtlinien und Marketing-Aktionen finden Sie unter [Richtlinien – Übersicht](./policies/overview.md).
 

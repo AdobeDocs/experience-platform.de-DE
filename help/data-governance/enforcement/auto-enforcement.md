@@ -5,9 +5,9 @@ title: Automatische Richtliniendurchsetzung
 topic-legacy: guide
 description: In diesem Dokument wird erläutert, wie Datennutzungsrichtlinien automatisch erzwungen werden, wenn in Experience Platform Segmente für Ziele aktiviert werden.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 931b847761e649696aa8433d53233593efd4d1ee
+source-git-commit: 0c78b5dc420a1346c92bf9ed7864fa1733422a83
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1696'
 ht-degree: 66%
 
 ---
@@ -35,7 +35,7 @@ Wenn ein Segment zum ersten Mal aktiviert wird, [!DNL Policy Service] Prüfungen
 
 * Die Datennutzungsbezeichnungen, die auf Felder und Datensätze innerhalb des zu aktivierenden Segments angewendet werden.
 * Marketing-Zweck des Ziels.
-* (Beta) Die Profile, die zugestimmt haben, in die Segmentaktivierung einbezogen zu werden, basierend auf Ihren konfigurierten Zustimmungsrichtlinien.
+* Die Profile, die der Segmentaktivierung zugestimmt haben, basierend auf Ihren konfigurierten Zustimmungsrichtlinien.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Jede Phase in der obigen Zeitleiste stellt eine Entität dar, die zur Durchsetzu
 
 | Datenherkunftsphase | Rolle bei der Richtliniendurchsetzung |
 | --- | --- |
-| Datensatz | Datensätze enthalten Datennutzungsbeschriftungen (angewendet auf Datensatz- oder Feldebene), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Zustimmungsattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Zustimmungsrichtlinien haben (aktuell in der Beta-Version), werden alle Profile, die nicht den Zustimmungsattributanforderungen Ihrer Richtlinien entsprechen, aus Segmenten ausgeschlossen, die für ein Ziel aktiviert sind. |
+| Datensatz | Datensätze enthalten Datennutzungsbeschriftungen (angewendet auf Datensatz- oder Feldebene), mit denen festgelegt wird, für welche Anwendungsfälle der gesamte Datensatz oder bestimmte Felder verwendet werden können. Richtlinienverletzungen treten auf, wenn ein Datensatz oder ein Feld mit bestimmten Beschriftungen für einen Zweck verwendet wird, den eine Richtlinie einschränkt.<br><br>Alle von Ihren Kunden erfassten Zustimmungsattribute werden ebenfalls in Datensätzen gespeichert. Wenn Sie Zugriff auf Zustimmungsrichtlinien haben, werden alle Profile, die nicht den Zustimmungsattributanforderungen Ihrer Richtlinien entsprechen, aus Segmenten ausgeschlossen, die für ein Ziel aktiviert sind. |
 | Zusammenführungsrichtlinie | Zusammenführungsrichtlinien sind die Regeln, die Platform verwendet, um festzulegen, wie Daten beim Zusammenführen von Fragmenten aus mehreren Datensätzen priorisiert werden. Richtlinienverletzungen treten auf, wenn Ihre Zusammenführungsrichtlinien so konfiguriert sind, dass Datensätze mit eingeschränkten Beschriftungen für ein Ziel aktiviert werden. Weitere Informationen dazu finden Sie in der [merge policies overview](../../profile/merge-policies/overview.md). |
 | Segment | Segmentregeln definieren, welche Attribute aus den Kundenprofilen einbezogen werden sollen. Je nachdem, welche Felder eine Segmentdefinition enthält, übernimmt das Segment alle angewendeten Nutzungsbeschriftungen für diese Felder. Richtlinienverletzungen treten je nach Marketing-Anwendungsfall auf, wenn Sie ein Segment aktivieren, dessen übernommene Beschriftungen aufgrund der jeweiligen Richtlinien des Zielorts der Zielgruppe eingeschränkt sind. |
 | Ziel | Beim Einrichten eines Ziels kann eine Marketing-Aktion (manchmal auch als Marketing-Anwendungsfall bezeichnet) definiert werden. Dieser Anwendungsfall korreliert mit einer Marketing-Aktion, wie in einer Richtlinie definiert. Mit anderen Worten: Die Marketing-Aktion, die Sie für ein Ziel definieren, bestimmt, welche Datennutzungsrichtlinien und Zustimmungsrichtlinien für dieses Ziel gelten.<br><br>Verstöße gegen Datennutzungsrichtlinien treten auf, wenn Sie ein Segment aktivieren, dessen Nutzungsbezeichnungen für die Marketing-Aktion des Zielziels eingeschränkt sind.<br><br>(Beta) Wenn ein Segment aktiviert wird, werden alle Profile, die nicht die erforderlichen Zustimmungsattribute für die Marketing-Aktion enthalten (wie durch Ihre Zustimmungsrichtlinien definiert), aus der aktivierten Zielgruppe ausgeschlossen. |
