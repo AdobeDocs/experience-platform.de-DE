@@ -5,10 +5,10 @@ title: Marketo Engage-Connector
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: ebf605bda32a7e587e6a6ca93a58669d16581ff9
+source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 15%
+source-wordcount: '578'
+ht-degree: 14%
 
 ---
 
@@ -31,6 +31,10 @@ Siehe die Schritte, die im Abschnitt [Authentifizieren des Marketo-Quell-Connect
 ## Einrichten der Adobe-Organisationszuordnung
 
 Bevor Sie Zuordnungssätze für [!DNL Marketo]müssen Sie zunächst die Adobe-Organisationszuordnung einrichten. Ausführliche Anweisungen finden Sie im Handbuch unter [Einrichten der Adobe-Organisationszuordnung für [!DNL Marketo]](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html).
+
+## Einrichten von B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung
+
+Verwenden Sie als Nächstes den B2B-Namespace und das Dienstprogramm zur automatischen Schemaerstellung, um Ihre Platform-Entwicklerkonsole und Postman-Umgebung einzurichten. Auf diese Weise können Sie Ihre B2B-Namespaces und -Schemata automatisch ausfüllen lassen. Detaillierte Anweisungen finden Sie im Handbuch unter [Einrichten Ihrer B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung](./marketo-namespaces.md)
 
 ## Experience-Datenmodell (XDM)
 

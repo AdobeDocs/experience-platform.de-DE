@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: In diesem Tutorial werden die Schritte zum Erstellen eines Quell-Connectors für Marketo Engage über die Benutzeroberfläche beschrieben, um B2B-Daten in Adobe Experience Platform zu importieren.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: 8d88af787508f9aeaa7966409b33bf0aae488a87
+source-git-commit: 72fb25a262d2ab76085f12e3ad0c6a8decba50ac
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 95%
+source-wordcount: '1473'
+ht-degree: 92%
 
 ---
 
@@ -25,6 +25,7 @@ In diesem Tutorial erfahren Sie, wie Sie einen [!DNL Marketo Engage]-Quell-Conne
 
 Dieses Tutorial setzt ein Grundverständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
+* [B2B-Namespaces und Dienstprogramm zur automatischen Schemaerstellung](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Mithilfe der B2B-Namespaces und des Dienstprogramm zur automatischen Schemaerstellung können Sie [!DNL Postman] , um automatisch Werte für Ihre B2B-Namespaces und -Schemas zu generieren. Sie müssen zuerst Ihre B2B-Namespaces und -Schemas abschließen, bevor Sie eine [!DNL Marketo] Quellverbindung und Datenfluss.
 * [Quellen](../../../../home.md): Experience Platform ermöglicht die Aufnahme von Daten aus verschiedenen Quellen und bietet Ihnen die Möglichkeit, die eingehenden Daten mithilfe von Platform-Services zu strukturieren, zu kennzeichnen und anzureichern.
 * [Experience-Datenmodell (XDM)](../../../../../xdm/home.md): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche](../../../../../xdm/ui/resources/schemas.md): Erfahren Sie, wie Sie in der Benutzeroberfläche Schemata erstellen und bearbeiten.
