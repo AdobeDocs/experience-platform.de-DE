@@ -2,10 +2,10 @@
 title: Callback-Endpunkt
 description: Erfahren Sie, wie Sie den /callback-Endpunkt in der Reactor-API aufrufen.
 exl-id: dd980f91-89e3-4ba0-a6fc-64d66b288a22
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 7f3b9ef9270b7748bc3366c8c39f503e1aee2100
 workflow-type: tm+mt
 source-wordcount: '621'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -205,6 +205,7 @@ curl -X POST \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
@@ -262,12 +263,12 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Callbacks zurück.
 
 ## Aktualisieren eines Callbacks
 
-Sie können einen Callback aktualisieren, indem Sie seine ID im Pfad einer PUT-Anfrage angeben.
+Sie können einen Rückruf aktualisieren, indem Sie dessen ID in den Pfad einer PATCH-Anfrage einschließen.
 
 **API-Format**
 
 ```http
-PUT /callbacks/{CALLBACK_ID}
+PATCH /callbacks/{CALLBACK_ID}
 ```
 
 | Parameter | Beschreibung |
@@ -281,15 +282,17 @@ PUT /callbacks/{CALLBACK_ID}
 Die folgende Anfrage aktualisiert das `subscriptions`-Array für einen vorhandenen Callback.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data": {
           "attributes": {
+            "url": "https://www.example.net",
             "subscriptions": [
               "rule.created",
               "build.created"
@@ -369,7 +372,9 @@ curl -X DELETE \
   https://reactor.adobe.io/callbacks/CB4310904d415549888cc9e31ebe1e1e45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
 **Antwort**
