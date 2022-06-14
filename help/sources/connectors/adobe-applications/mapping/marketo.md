@@ -5,10 +5,10 @@ title: Zuordnen von Feldern für die Marketo Engage-Quelle
 topic-legacy: overview
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern in den Marketo-Datensätzen und den zugehörigen XDM-Feldern.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 1d2f485a91a8ad2c5b2bea9816c05b7bc26ae8e7
+source-git-commit: be3ec7dc7e2089a8cee0b1577659e1ec0a465044
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 9%
+source-wordcount: '713'
+ht-degree: 8%
 
 ---
 
@@ -21,6 +21,8 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen den Feldern der neun [
 >Alle [!DNL Marketo] Datensätze außer `Activities` jetzt unterstützen `isDeleted`. Ihre vorhandenen Datenflüsse enthalten automatisch `isDeleted`, aber erfasst nur das Flag für neu aufgenommene Daten. Wenn Sie die Kennzeichnung auf alle historischen Daten anwenden möchten, müssen Sie Ihre vorhandenen Datenflüsse stoppen und sie mit der neuen Zuordnung neu erstellen. Beachten Sie Folgendes: Wenn Sie `isDeleted`, haben Sie keinen Zugriff mehr auf die Funktion. Es ist wichtig, dass die Zuordnung beibehalten wird, nachdem sie automatisch ausgefüllt wurde.
 
 ## Aktivitäten {#activities}
+
+Die [!DNL Marketo] -Quelle unterstützt jetzt zusätzliche Standardaktivitäten. Zur Verwendung von Standardaktivitäten müssen Sie Ihr Schema mit der Variablen [Dienstprogramm zur automatischen Schemaerstellung](../marketo/marketo-namespaces.md) weil, wenn Sie neue `activities` Datenfluss, ohne das Schema zu aktualisieren, schlagen die Zuordnungsvorlagen fehl, da die neuen Zielfelder in Ihrem Schema nicht vorhanden sind. Wenn Sie sich gegen eine Aktualisierung Ihres Schemas entscheiden, können Sie weiterhin einen neuen Datenfluss erstellen und Fehler verwerfen. Neue oder aktualisierte Felder werden jedoch nicht in Platform erfasst.
 
 | Quelldatensatz | XDM-Zielfeld | Anmerkungen |
 | -------------- | ---------------- | ----- |
