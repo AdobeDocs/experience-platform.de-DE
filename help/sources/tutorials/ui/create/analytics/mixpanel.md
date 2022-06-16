@@ -4,9 +4,9 @@ title: (Beta) Erstellen einer Mixpanel-Quellverbindung in der Benutzeroberfläch
 description: Erfahren Sie, wie Sie eine Quellverbindung für Mixpanel mithilfe der Adobe Experience Platform-Benutzeroberfläche erstellen.
 hide: true
 hidefromtoc: true
-source-git-commit: 2ad3737c7099319e0b14f4e843dda87a6a554d97
+source-git-commit: 8092829c95c9bc43894b73db104fdbb22363e460
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '897'
 ht-degree: 33%
 
 ---
@@ -72,7 +72,7 @@ Wenn Sie ein neues Konto erstellen, wählen Sie **[!UICONTROL Neues Konto]** und
 >id="platform_sources_mixpanel_timezone"
 >title="Zeitzone für die Mixpanel-Erfassung festlegen"
 >abstract="Die Zeitzone muss mit der Zeitzone Ihres Mixpanel-Profils übereinstimmen, da Platform die dafür vorgesehene Zeitzone des Projekts verwendet, um relevante Daten aus Mixpanel zu erfassen. Mixpanel passt seine Zeitzone an die Koordination mit Ihrer Projekt-Zeitzone an, bevor das Ereignis in einem Mixpanel-Datenspeicher aufgezeichnet wird."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/tutorials/ui/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Weitere Informationen finden Sie in der Dokumentation"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=en#project-id-and-timezone" text="Weitere Informationen finden Sie in der Dokumentation"
 
 Geben Sie nach der Authentifizierung Ihrer Quelle Ihre Projekt-ID und Zeitzone ein und wählen Sie **[!UICONTROL Auswählen]**.
 
