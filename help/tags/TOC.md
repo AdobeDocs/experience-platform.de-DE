@@ -5,9 +5,9 @@ breadcrumb-title: Tags
 user-guide-description: Erfahren Sie, wie Sie Analytics-, Marketing- und Anzeigen-Tags bereitstellen und verwalten können, um Kundenerlebnisse zu optimieren.
 feature: Tags
 solution: Data Collection
-source-git-commit: 638b4fea8a80763a2b46863ecb0e3969a6fc127a
+source-git-commit: 1d1d070de0a62c42cdda3f021cafad731a73709b
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '393'
 ht-degree: 98%
 
 ---
@@ -57,6 +57,7 @@ ht-degree: 98%
    * [Übersicht](./ui/event-forwarding/overview.md)
    * [Erste Schritte](./ui/event-forwarding/getting-started.md)
    * [Konfigurieren von Geheimnissen](./ui/event-forwarding/secrets.md)
+   * [Überwachung](./ui/event-forwarding/monitoring.md)
 * Administration {#admin}
    * [Übersicht](./ui/administration/overview.md)
    * [Unternehmen und Eigenschaften](./ui/administration/companies-and-properties.md)
