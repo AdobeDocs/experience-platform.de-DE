@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Salesforce; Salesfor
 title: Salesforce-Zuordnungsfelder
 description: Die folgenden Tabellen enthalten die Zuordnungen zwischen Salesforce-Quellfeldern und den entsprechenden XDM-Feldern.
 exl-id: 33ee76f2-0495-4acd-a862-c942c0fa3177
-source-git-commit: 7921eded0a63b8667e693aefab87013c12cd4061
+source-git-commit: 5a8c5c4f6d569ea1c587b12e5d72cd471b111921
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 13%
+ht-degree: 18%
 
 ---
 
@@ -34,6 +34,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `HomePhone` | `homePhone.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `b2b.personKey.sourceID` |
 | `"Salesforce"` | `personComponents.sourcePersonKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `personComponents.sourcePersonKey.sourceInstanceID` |
@@ -83,6 +84,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | `Fax` | `faxPhone.number` |
 | `FirstName` | `person.name.firstName` |
 | `IsConverted` | `b2b.isConverted` |
+| `isDeleted` | `isDeleted` |
 | `"Salesforce"` | `b2b.personKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `b2b.personKey.sourceInstanceID` |
 | `Id` | `b2b.personKey.sourceID` |
@@ -144,6 +146,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | `Description` | `accountDescription` |
 | `DunsNumber` | `accountOrganization.DUNSNumber` | data.com-Funktion |
 | `Fax` | `accountFax.number` |
+| `isDeleted` | `isDeleted` |
 | `Id` | `accountKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `accountKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
 | `Industry` | `accountOrganization.industry` |
@@ -199,6 +202,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | `ForecastCategoryName` | `forecastCategoryName` |
 | `Id` | `opportunityKey.sourceID` |
 | `IsClosed` | `isClosed` |
+| `isDeleted` | `isDeleted` |
 | `IsWon` | `isWon` |
 | `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
@@ -228,6 +232,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Id` | `opportunityPersonKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `opportunityPersonKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `isDeleted` | `isDeleted` |
 | `IsPrimary` | `isPrimary` |
 | `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
 | `"Salesforce"` | `opportunityKey.sourceType` |
@@ -244,6 +249,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | --- | --- | --- |
 | `"Salesforce"` | `campaignKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
 | `Name` | `campaignName` |
@@ -272,6 +278,7 @@ Die folgenden Tabellen enthalten die Zuordnungen zwischen [!DNL Salesforce] Quel
 | --- | --- | --- |
 | `"Salesforce"` | `campaignMemberKey.sourceType` |
 | `"${CRM_ORG_ID}"` | `campaignMemberKey.sourceInstanceID` | Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
+| `isDeleted` | `isDeleted` |
 | `Id` | `campaignMemberKey.sourceID` |
 | `concat(Id,"@${CRM_ORG_ID}.Salesforce")` | `campaignMemberKey.sourceKey` | Primäre Identität. Der Wert für `"${CRM_ORG_ID}"` automatisch ersetzt. |
 | `"Salesforce"` | `campaignKey.sourceType` |
