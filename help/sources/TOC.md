@@ -4,9 +4,9 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: b21e735b5c6c310b485700ef619302e3e3086763
+source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '795'
 ht-degree: 92%
 
 ---
@@ -35,6 +35,8 @@ ht-degree: 92%
          - [B2B-Namespaces und -Schemata](connectors/adobe-applications/marketo/marketo-namespaces.md)
    - Adobe Advertising {#advertising}
       - [Google AdWords-Connector](connectors/advertising/ads.md)
+   - Analytics {#analytics}
+      - [Mixpanel-Anschluss](connectors/analytics/mixpanel.md)
    - Cloud-Speicherplatz {#cloud-storage}
       - [Amazon Kinesis-Connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-Connector](connectors/cloud-storage/s3.md)
@@ -101,6 +103,8 @@ ht-degree: 92%
    - Erstellen einer Basisverbindung {#create}
       - Werbung {#advertising}
          - [Google AdWords](tutorials/api/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
       - Cloud-Speicherplatz {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
@@ -197,8 +201,10 @@ ht-degree: 92%
          - [Adobe Campaign Managed Services](tutorials/ui/create/adobe-applications/campaign.md)
          - [Kundenattribute](tutorials/ui/create/adobe-applications/customer-attributes.md)
          - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
-      - Adobe Advertising {#create}
+      - Adobe Advertising {#advertising}
          - [Google AdWords](tutorials/ui/create/advertising/ads.md)
+      - Analytics {#analytics}
+         - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
       - Cloud-Speicherplatz {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
@@ -263,6 +269,7 @@ ht-degree: 92%
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Konfigurieren eines Datenflusses {#dataflow}
       - [Datenfluss der Werbeverbindung](tutorials/ui/dataflow/advertising.md)
+      - [Datenfluss der Analytics-Verbindung](tutorials/ui/dataflow/analytics.md)
       - [Datenfluss der Batch-Cloud-Speicherverbindung](tutorials/ui/dataflow/batch/cloud-storage.md)
       - [Datenfluss der Streaming-Cloud-Speicher-Verbindung](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
       - [Verbindungsdataflow für Einverständnis und Voreinstellungen](tutorials/ui/dataflow/consent-and-preferences.md)
