@@ -1,39 +1,39 @@
 ---
-title: Datensatz-Time-to-Live (TTL)-API-Endpunkt
-description: Mit dem Endpunkt /ttl in der Data Hygiene API können Sie Datensatz-TTLs in Adobe Experience Platform programmgesteuert planen.
+title: Endpunkt der Datensatz-TTL-API (Time-to-Live)
+description: Mit dem Endpunkt /ttl in der Data Hygiene API können Sie programmgesteuert einen Zeitplan für Datensatz-TTLs in Adobe Experience Platform festlegen.
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1315'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Endpunkt &quot;Datensatzzeit bis Live&quot;(TTL)
+# Datensatz-TTL-Endpunkt (Time-to-Live)
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield für das Gesundheitswesen erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield for Healthcare erworben haben.
 
-Die `/ttl` -Endpunkt in der Data Hygiene API ermöglicht es Ihnen, Time-to-Live (TTL)-Protokolle für Datensätze in Adobe Experience Platform zu planen.
+Der `/ttl`-Endpunkt in der Data Hygiene API ermöglicht Ihnen, in Adobe Experience Platform einen Zeitplan für TTL-Protokolle für Datensätze festzulegen.
 
-Eine Datensatz-TTL ist nur ein zeitverzögerter Löschvorgang. Der Datensatz ist in der Zwischenzeit nicht geschützt, daher kann er auf andere Weise gelöscht werden, bevor sein Ablauf erreicht ist.
+Eine Datensatz-TTL ist ein zeitverzögerter Löschvorgang. Der Datensatz ist in der Zwischenzeit nicht geschützt und kann daher auf andere Weise gelöscht werden, bevor sein Ablaufdatum erreicht wurde.
 
 >[!NOTE]
 >
->Obwohl der Ablauf als spezifischer Zeitpunkt angegeben ist, kann es bis zu 24 Stunden nach Ablauf der Frist geben, bevor die eigentliche Löschung eingeleitet wird. Sobald der Löschvorgang eingeleitet wurde, kann es bis zu sieben Tage dauern, bis alle Spuren des Datensatzes aus Platform-Systemen entfernt wurden.
+>Obwohl die Löschung als spezifischer Zeitpunkt angegeben ist, kann es bis zu 24 Stunden nach Ablauf der Frist dauern, bevor die eigentliche Löschung eingeleitet wird. Nachdem der Löschvorgang gestartet wurde, kann es bis zu sieben Tage dauern, bis alle Spuren des Datensatzes aus Platform-Systemen entfernt wurden.
 
-Sie können die TTL jederzeit abbrechen oder die Trigger-Zeit ändern, bevor der Datensatz-Löschvorgang tatsächlich eingeleitet wird. Nachdem Sie eine TTL abgebrochen haben, können Sie sie erneut öffnen, indem Sie einen neuen Ablauf festlegen.
+Sie können die TTL jederzeit abbrechen oder den Löschzeitpunkt ändern, solange der Datensatz-Löschvorgang noch nicht gestartet wurde. Nachdem Sie einen TTL-Vorgang abgebrochen haben, können Sie ihn erneut starten, indem Sie ein neues Ablaufdatum festlegen.
 
-Sobald das Löschen des Datensatzes initiiert wurde, wird seine TTL als `executing`und darf nicht weiter geändert werden. Der Datensatz selbst kann bis zu sieben Tage lang wiederhergestellt werden, jedoch nur durch einen manuellen Prozess, der über eine Adobe-Serviceanfrage initiiert wurde.
+Sobald das Löschen des Datensatzes gestartet wurde, wird seine TTL als `executing` gekennzeichnet und darf nicht weiter geändert werden. Der Datensatz selbst kann bis zu sieben Tage lang wiederhergestellt werden, jedoch nur durch einen manuellen Prozess über eine Adobe-Service-Anfrage.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie bitte die [Übersicht](./overview.md) für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Datensatz-TTLs auflisten {#list}
+## Auflisten der Datensatz-TTLs {#list}
 
-Sie können alle TTL-Datensätze für Ihr Unternehmen auflisten, indem Sie eine GET-Anfrage stellen.
+Sie können alle Datensatz-TTLs für Ihre Organisation auflisten, indem Sie eine GET-Anfrage stellen.
 
 **API-Format**
 
@@ -43,7 +43,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | Eine Liste optionaler Abfrageparameter mit mehreren durch getrennten Parametern `&` Zeichen. Zu den gebräuchlichen Parametern gehören `size` und `page` für Paginierungszwecke. Eine vollständige Liste der unterstützten Abfrageparameter finden Sie im Abschnitt [Anhang](#query-params). |
+| `{QUERY_PARAMETERS}` | Eine Liste optionaler Abfrageparameter mit mehreren durch `&`-Zeichen getrennten Parametern. Zu den gebräuchlichen Parametern gehören `size` und `page` für Paginierungszwecke. Eine vollständige Liste der unterstützten Abfrageparameter finden Sie im [Anhang](#query-params). |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -60,7 +60,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort listet die resultierenden TTLs auf. Das folgende Beispiel wurde aus Platzgründen abgeschnitten.
+Eine erfolgreiche Antwort listet die resultierenden TTLs auf. Das folgende Beispiel wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -92,16 +92,16 @@ Eine erfolgreiche Antwort listet die resultierenden TTLs auf. Das folgende Beisp
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `results` | Enthält die Details der zurückgegebenen TTLs. Weitere Informationen zu den Eigenschaften einer TTL-Entität finden Sie im Abschnitt Antwort zum Erstellen einer [Suchaufruf](#lookup). |
+| `results` | Enthält die Details der zurückgegebenen TTLs. Weitere Informationen zu den Eigenschaften einer TTL-Entität finden Sie im Antwort-Abschnitt zum Erstellen eines [Suchaufrufs](#lookup). |
 | `current_page` | Die aktuelle Seite der aufgelisteten Ergebnisse. |
 | `total_pages` | Die Gesamtzahl der Seiten in der Antwort. |
 | `total_count` | Die Gesamtzahl der TTL-Entitäten in der Antwort. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## TTL nachschlagen {#lookup}
+## Suchen einer TTL {#lookup}
 
-Sie können eine Datensatz-TTL über eine GET-Anfrage nachschlagen.
+Sie können eine Datensatz-TTL über eine GET-Anfrage suchen.
 
 **API-Format**
 
@@ -111,7 +111,7 @@ GET /ttl/{TTL_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die Kennung der TTL, die Sie nachschlagen möchten. |
+| `{TTL_ID}` | Die ID der TTL, die Sie suchen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -144,8 +144,8 @@ Eine erfolgreiche Antwort gibt die Details der TTL zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die Kennung der TTL des Datensatzes. |
-| `datasetId` | Die Kennung des Datensatzes, für den diese TTL gilt. |
+| `ttlId` | Die ID der Datensatz-TTL. |
+| `datasetId` | Die ID des Datensatzes, für den diese TTL gilt. |
 | `imsOrg` | Die Kennung Ihres Unternehmens. |
 | `status` | Der aktuelle Status der TTL. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
@@ -154,7 +154,7 @@ Eine erfolgreiche Antwort gibt die Details der TTL zurück.
 
 {style=&quot;table-layout:auto&quot;}
 
-## TTL erstellen {#create}
+## Erstellen einer TTL {#create}
 
 Sie können eine TTL für einen Datensatz über eine POST-Anfrage hinzufügen.
 
@@ -166,7 +166,7 @@ POST /ttl
 
 **Anfrage**
 
-Die folgende Anfrage plant einen Datensatz `5b020a27e7040801dedbf46e` zur Streichung Ende 2022 (Greenwich Mean Time).
+Mit der folgenden Anfrage wird als Zeitpunkt für die Löschung des Datensatzes `5b020a27e7040801dedbf46e` Ende 2022 festgelegt (Greenwich Mean Time).
 
 ```shell
 curl -X POST \
@@ -191,7 +191,7 @@ curl -X POST \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der TTL mit dem HTTP-Status 200 (OK) zurück, wenn eine bereits vorhandene TTL aktualisiert wurde, oder 201 (Erstellt), wenn keine bereits vorhandene TTL vorhanden war.
+Eine erfolgreiche Antwort gibt die Details der TTL mit dem HTTP-Status 200 (OK) zurück, wenn eine bereits vorhandene TTL aktualisiert wurde, oder 201 (Erstellt), wenn keine TTL vorhanden war.
 
 ```json
 {
@@ -207,8 +207,8 @@ Eine erfolgreiche Antwort gibt die Details der TTL mit dem HTTP-Status 200 (OK) 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die Kennung der TTL des Datensatzes. |
-| `datasetId` | Die Kennung des Datensatzes, für den diese TTL gilt. |
+| `ttlId` | Die ID der Datensatz-TTL. |
+| `datasetId` | Die ID des Datensatzes, für den diese TTL gilt. |
 | `imsOrg` | Die Kennung Ihres Unternehmens. |
 | `status` | Der aktuelle Status der TTL. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
@@ -217,7 +217,7 @@ Eine erfolgreiche Antwort gibt die Details der TTL mit dem HTTP-Status 200 (OK) 
 
 {style=&quot;table-layout:auto&quot;}
 
-## TTL aktualisieren {#update}
+## Aktualisieren einer TTL {#update}
 
 Sie können eine TTL für einen Datensatz über eine PUT-Anfrage aktualisieren.
 
@@ -229,13 +229,13 @@ PUT /ttl/{TTL_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die Kennung der TTL, die Sie ändern möchten. |
+| `{TTL_ID}` | Die ID der TTL, die Sie ändern möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die TTL für den Datensatz `5b020a27e7040801dedbf46e` so läuft sie Ende 2023 aus (Greenwich Mean Time).
+Mit der folgenden Anfrage wird die TTL für den Datensatz `5b020a27e7040801dedbf46e` aktualisiert, sodass sie Ende 2023 gelöscht wird (Greenwich Mean Time).
 
 ```shell
 curl -X PUT \
@@ -274,8 +274,8 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten TTL zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die Kennung der TTL des Datensatzes. |
-| `datasetId` | Die Kennung des Datensatzes, für den diese TTL gilt. |
+| `ttlId` | Die ID der Datensatz-TTL. |
+| `datasetId` | Die ID des Datensatzes, für den diese TTL gilt. |
 | `imsOrg` | Die Kennung Ihres Unternehmens. |
 | `status` | Der aktuelle Status der TTL. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
@@ -284,7 +284,7 @@ Eine erfolgreiche Antwort gibt die Details der aktualisierten TTL zurück.
 
 {style=&quot;table-layout:auto&quot;}
 
-## TTL abbrechen {#delete}
+## Abbrechen einer TTL {#delete}
 
 Sie können eine TTL abbrechen, indem Sie eine DELETE-Anfrage stellen.
 
@@ -296,13 +296,13 @@ DELETE /ttl/{TTL_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die Kennung der TTL, die Sie abbrechen möchten. |
+| `{TTL_ID}` | Die ID der TTL, die Sie abbrechen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Anfrage**
 
-Die folgende Anfrage aktualisiert die TTL für den Datensatz `5b020a27e7040801dedbf46e` so läuft sie Ende 2023 aus (Greenwich Mean Time).
+Mit der folgenden Anfrage wird die TTL für den Datensatz `5b020a27e7040801dedbf46e` aktualisiert, sodass sie Ende 2023 gelöscht wird (Greenwich Mean Time).
 
 ```shell
 curl -X DELETE \
@@ -315,7 +315,7 @@ curl -X DELETE \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der TTL mit ihrer `status` -Attribut jetzt auf `cancelled`.
+Eine erfolgreiche Antwort gibt die Details der TTL zurück, wobei das `status`-Attribut jetzt `cancelled` lautet.
 
 ```json
 {
@@ -331,8 +331,8 @@ Eine erfolgreiche Antwort gibt die Details der TTL mit ihrer `status` -Attribut 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die Kennung der TTL des Datensatzes. |
-| `datasetId` | Die Kennung des Datensatzes, für den diese TTL gilt. |
+| `ttlId` | Die ID der Datensatz-TTL. |
+| `datasetId` | Die ID des Datensatzes, für den diese TTL gilt. |
 | `imsOrg` | Die Kennung Ihres Unternehmens. |
 | `status` | Der aktuelle Status der TTL. |
 | `expiry` | Das geplante Datum und die Uhrzeit, zu der der Datensatz gelöscht wird. |
@@ -341,9 +341,9 @@ Eine erfolgreiche Antwort gibt die Details der TTL mit ihrer `status` -Attribut 
 
 {style=&quot;table-layout:auto&quot;}
 
-## Verlauf einer TTL abrufen
+## Abrufen des TTL-Verlaufs
 
-Sie können den Verlauf einer bestimmten TTL mithilfe des Abfrageparameters nachschlagen `include=history` in einer Suchanfrage. Das Ergebnis enthält Informationen über die Erstellung der TTL, alle angewendeten Aktualisierungen sowie über deren Abbruch oder Ausführung (falls zutreffend).
+Sie können den Verlauf einer TTL in einer Suchanfrage mithilfe des Abfrageparameters `include=history` aufrufen. Das Ergebnis enthält Informationen über die Erstellung der TTL, alle Aktualisierungen sowie über ihren Abbruch oder ihre Ausführung (falls zutreffend).
 
 **API-Format**
 
@@ -353,7 +353,7 @@ GET /ttl/{TTL_ID}?include=history
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{TTL_ID}` | Die Kennung der TTL, deren Verlauf Sie nachschlagen möchten. |
+| `{TTL_ID}` | Die ID der TTL, deren Verlauf Sie aufrufen möchten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -370,7 +370,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details der TTL mit einer `history` Array, das die Details angibt `status`, `expiry`, `updatedAt`und `updatedBy` -Attribute für jede der aufgezeichneten Aktualisierungen.
+Eine erfolgreiche Antwort gibt die Details der TTL mit einem `history`-Array zurück, das die Details der Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für jede der aufgezeichneten Aktualisierungen angibt.
 
 ```json
 {
@@ -406,10 +406,10 @@ Eine erfolgreiche Antwort gibt die Details der TTL mit einer `history` Array, da
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `ttlId` | Die Kennung der TTL des Datensatzes. |
-| `datasetId` | Die Kennung des Datensatzes, für den diese TTL gilt. |
+| `ttlId` | Die ID der Datensatz-TTL. |
+| `datasetId` | Die ID des Datensatzes, für den diese TTL gilt. |
 | `imsOrg` | Die Kennung Ihres Unternehmens. |
-| `history` | Listet den Verlauf der Aktualisierungen für die TTL als Array von Objekten auf, wobei jedes Objekt die `status`, `expiry`, `updatedAt`und `updatedBy` -Attribute für die TTL zum Zeitpunkt der Aktualisierung. |
+| `history` | Listet den Verlauf der Aktualisierungen für die TTL als Array von Objekten auf, wobei jedes Objekt die Attribute `status`, `expiry`, `updatedAt` und `updatedBy` für die TTL zum Zeitpunkt der Aktualisierung enthält. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -417,20 +417,20 @@ Eine erfolgreiche Antwort gibt die Details der TTL mit einer `history` Array, da
 
 ### Akzeptierte Abfrageparameter {#query-params}
 
-In der folgenden Tabelle sind die verfügbaren Abfrageparameter aufgeführt, wenn [Datensatz-TTLs auflisten](#list):
+In der folgenden Tabelle sind die verfügbaren Abfrageparameter beim [Auflisten von Datensatz-TTLs](#list) aufgeführt:
 
 | Parameter | Beschreibung | Beispiel |
 | --- | --- | --- |
 | `size` | Eine Ganzzahl zwischen 1 und 100, die die maximale Anzahl der zurückzugebenden TTLs angibt. Die Standardeinstellung ist 25. | `size=50` |
 | `page` | Eine Ganzzahl, die angibt, welche Seite von TTLs zurückgegeben werden soll. | `page=3` |
-| `status` | Eine kommagetrennte Liste von Status. Wenn dies eingeschlossen ist, stimmt die Antwort mit TTLs überein, deren aktueller Status zu den aufgelisteten gehört. | `status=pending,cancelled` |
-| `author` | Stimmt überein mit TTLs, deren `created_by` entspricht der Suchzeichenfolge. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE`, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als Zeichenfolge in Textform behandelt, die genau mit dem gesamten Inhalt eines `created_by` -Feld. | `author=LIKE %john%` |
-| `createdDate` | Sucht nach TTLs, die im 24-Stunden-Fenster erstellt wurden, beginnend mit dem angegebenen Zeitpunkt.<br><br>Beachten Sie, dass Daten ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit am Anfang des Tages darstellen. Daher `createdDate=2021-12-07` bezieht sich auf alle am 7. Dezember 2021 erstellten TTL aus `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
-| `createdFromDate` | Entspricht TTLs, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
-| `createdToDate` | Entspricht TTLs, die zum angegebenen Zeitpunkt oder vor dem angegebenen Zeitpunkt erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
-| `updatedDate` / `updatedToDate` / `updatedFromDate` | liken `createdDate` / `createdFromDate` / `createdToDate`, stimmt jedoch mit der Aktualisierungszeit einer TTL anstelle der Erstellungszeit überein.<br><br>Eine TTL wird bei jeder Bearbeitung als aktualisiert betrachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |
-| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Sucht nach TTLs, die zu einem beliebigen Zeitpunkt im angegebenen Intervall abgebrochen wurden. Dies gilt auch dann, wenn die TTL später erneut geöffnet wurde (durch Festlegen eines neuen Ablaufs für denselben Datensatz). | `updatedDate=2022-01-01` |
-| `completedDate` / `completedToDate` / `completedFromDate` | Sucht nach TTLs, die im angegebenen Intervall abgeschlossen wurden. | `completedToDate=2021-11-11-06:00` |
+| `status` | Eine durch Kommas getrennte Liste von Status. Wenn dieser Parameter enthalten ist, werden in der Antwort die TTLs zurückgegeben, deren aktueller Status aufgelistet ist. | `status=pending,cancelled` |
+| `author` | Sucht TTLs, deren `created_by` der Suchzeichenfolge entspricht. Wenn die Suchzeichenfolge mit `LIKE` oder `NOT LIKE` beginnt, wird der Rest als SQL-Suchmuster behandelt. Andernfalls wird die gesamte Suchzeichenfolge als exakte Zeichenfolge gehandhabt, die genau mit dem gesamten Inhalt des `created_by`-Felds übereinstimmen muss. | `author=LIKE %john%` |
+| `createdDate` | Sucht nach TTLs, die im 24-Stunden-Fenster erstellt wurden, beginnend mit dem angegebenen Zeitpunkt.<br><br>Beachten Sie, dass ein Datum ohne Uhrzeit (wie `2021-12-07`) den Datum/Uhrzeit-Wert am Anfang des Tages darstellt. Daher bezieht sich `createdDate=2021-12-07` auf alle am 7. Dezember 2021 erstellten TTLs, von `00:00:00` bis `23:59:59.999999999` (UTC). | `createdDate=2021-12-07` |
+| `createdFromDate` | Sucht TTLs, die zum angegebenen Zeitpunkt oder danach erstellt wurden. | `createdFromDate=2021-12-07T00:00:00Z` |
+| `createdToDate` | Sucht TTLs, die zum angegebenen Zeitpunkt oder davor erstellt wurden. | `createdToDate=2021-12-07T23:59:59.999999999Z` |
+| `updatedDate` / `updatedToDate` / `updatedFromDate` | Wie `createdDate` / `createdFromDate` / `createdToDate`, jedoch wird die Aktualisierungszeit einer TTL anstelle der Erstellungszeit herangezogen.<br><br>Eine TTL wird bei jeder Bearbeitung als aktualisiert erachtet, auch wenn sie erstellt, abgebrochen oder ausgeführt wird. | `updatedDate=2022-01-01` |
+| `cancelledDate` / `cancelledToDate` / `cancelledFromDate` | Sucht nach TTLs, die zu einem beliebigen Zeitpunkt im angegebenen Intervall abgebrochen wurden. Dies gilt auch dann, wenn die TTL später erneut erstellt wurde (durch Festlegen eines neuen Ablaufdatums für denselben Datensatz). | `updatedDate=2022-01-01` |
+| `completedDate` / `completedToDate` / `completedFromDate` | Sucht nach TTLs, die im angegebenen Intervall ausgeführt wurden. | `completedToDate=2021-11-11-06:00` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Sucht nach TTLs, die im angegebenen Intervall ausgeführt werden sollen oder bereits ausgeführt wurden. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 
 {style=&quot;table-layout:auto&quot;}
