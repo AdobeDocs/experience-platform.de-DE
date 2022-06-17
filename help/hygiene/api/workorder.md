@@ -1,31 +1,31 @@
 ---
-title: API-Endpunkt für Arbeitsauftrag
-description: Mit dem /workorder -Endpunkt in der Data Hygiene API können Sie Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
+title: API-Endpunkt für Arbeitsaufträge
+description: Mit dem Endpunkt /workorder in der Data Hygiene API können Sie Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: c2e7cf1859f6a2b277783cdec535ecc208703fac
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1000'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Arbeitserstellungsendpunkt
+# Arbeitsauftrags-Endpunkt
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield für das Gesundheitswesen erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield for Healthcare erworben haben.
 
-Die `/workorder` -Endpunkt in der Data Hygiene API ermöglicht Ihnen die programmgesteuerte Verwaltung von Löschaufgaben für Verbraucheridentitäten in Adobe Experience Platform.
+Mit dem Endpunkt `/workorder` in der Data Hygiene API können Sie in Adobe Experience Platform Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 
 ## Erste Schritte
 
-Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie bitte die [Übersicht](./overview.md) für Links zur zugehörigen Dokumentation, eine Anleitung zum Lesen der Beispiel-API-Aufrufe in diesem Dokument und wichtige Informationen zu erforderlichen Kopfzeilen, die für das erfolgreiche Aufrufen von Experience Platform-APIs benötigt werden.
+Der in diesem Handbuch verwendete Endpunkt ist Teil der Data Hygiene API. Bevor Sie fortfahren, lesen Sie die [Übersicht](./overview.md) mit Links zur zugehörigen Dokumentation, einer Anleitung zum Lesen der API-Beispielaufrufe in diesem Dokument und wichtigen Informationen zu den Kopfzeilen, die für die erfolgreiche Ausführung von Aufrufen an eine Experience Platform-API erforderlich sind.
 
-## Identitäten löschen {#delete-identities}
+## Löschen von Identitäten {#delete-identities}
 
-Sie können eine oder mehrere Verbraucheridentitäten aus einem Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an die `/workorder` -Endpunkt.
+Sie können eine oder mehrere Verbraucheridentitäten aus einem einzelnen Datensatz oder allen Datensätzen löschen, indem Sie eine POST-Anfrage an den `/workorder`-Endpunkt stellen.
 
 **API-Format**
 
@@ -35,7 +35,7 @@ POST /workorder
 
 **Anfrage**
 
-Abhängig vom Wert der Variablen `datasetId` in der Anfrage-Payload angegeben wird, löscht der API-Aufruf Verbraucheridentitäten aus allen Datensätzen oder einem einzelnen Datensatz, den Sie angeben. Mit der folgenden Anfrage werden drei Verbraucheridentitäten aus einem bestimmten Datensatz gelöscht.
+Abhängig vom Wert der `datasetId` in der Anfrage-Payload löscht der API-Aufruf Verbraucheridentitäten aus allen Datensätzen oder einem einzelnen von Ihnen angegebenen Datensatz. Mit der folgenden Anfrage werden drei Verbraucheridentitäten aus einem Datensatz gelöscht.
 
 ```shell
 curl -X POST \
@@ -73,15 +73,15 @@ curl -X POST \
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `action` | Die auszuführende Aktion. Der Wert muss auf `delete_identity` beim Löschen von Identitäten. |
-| `datasetId` | Wenn Sie aus einem Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss das zugeordnete Experience-Datenmodell (XDM)-Schema des Datensatzes über eine primäre Identität verfügen. |
-| `identities` | Ein Array, das die Identitäten von mindestens einem Benutzer enthält, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einer [Identitäts-Namespace](../../identity-service/namespaces.md) und einen Wert:<ul><li>`namespace`: Enthält eine einzelne String-Eigenschaft, `code`, der den Identitäts-Namespace darstellt. </li><li>`id`: Der Identitätswert.</ul>Wenn `datasetId` gibt einen einzelnen Datensatz an, wobei jede Entität unter `identities` muss denselben Identitäts-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL`, die `identities` -Array ist nicht auf einen einzelnen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anforderungen sind jedoch weiterhin auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `action` | Die auszuführende Aktion. Zum Löschen von Identitäten muss für den Wert `delete_identity` ausgewählt werden. |
+| `datasetId` | Wenn Sie Identitäten aus einem einzelnen Datensatz löschen, muss dieser Wert die Kennung des betreffenden Datensatzes sein. Wenn Sie Identitäten aus allen Datensätzen löschen, setzen Sie den Wert auf `ALL`.<br><br>Wenn Sie einen einzelnen Datensatz angeben, muss für das zugeordnete Experience-Datenmodell-Schema (XDM) des Datensatzes eine primäre Identität definiert sein. |
+| `identities` | Ein Array mit den Identitäten von mindestens einem Benutzer, dessen Informationen Sie löschen möchten. Jede Identität besteht aus einem [Identity-Namespace](../../identity-service/namespaces.md) und einem Wert:<ul><li>`namespace`: enthält die einzige Zeichenfolgen-Eigenschaft `code`, die den Identity-Namespace darstellt. </li><li>`id`: der Identitätswert.</ul>Wenn `datasetId` einen einzelnen Datensatz spezifiziert, muss jede Entität unter `identities` denselben Identity-Namespace wie die primäre Identität des Schemas verwenden.<br><br>Wenn `datasetId` auf `ALL` festgelegt ist, ist das `identities`-Array nicht auf einen einzigen Namespace beschränkt, da jeder Datensatz anders sein kann. Ihre Anfragen sind aber auf die Namespaces beschränkt, die Ihrer Organisation zur Verfügung stehen, wie von [Identity Service](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces) spezifiziert. |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des Identitätslöschens zurück.
+Eine erfolgreiche Antwort gibt die Details der Identitätslöschung zurück.
 
 ```json
 {
@@ -100,20 +100,20 @@ Eine erfolgreiche Antwort gibt die Details des Identitätslöschens zurück.
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `workorderId` | Die ID der Löschreihenfolge. Dies kann verwendet werden, um den Status des Löschvorgangs später nachzuschlagen. |
+| `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Die Kennung Ihres Unternehmens. |
-| `batchId` | Die Kennung des Batches, mit dem diese Löschreihenfolge verknüpft ist und der zum Debugging verwendet wird. Mehrere Löschaufträge werden zu einem Batch gebündelt, der von nachgelagerten Diensten verarbeitet werden soll. |
-| `bundleOrdinal` | Die Reihenfolge, in der diese Löschreihenfolge empfangen wurde, als sie in einem Batch zur nachgelagerten Verarbeitung gebündelt wurde. Dient zum Debugging. |
-| `payloadByteSize` | Die Größe der Liste der Identitäten in Byte, die in der Anfrage-Payload bereitgestellt wurden, die diese Löschreihenfolge erstellt hat. |
-| `operationCount` | Die Anzahl der Identitäten, für die diese Löschreihenfolge gilt. |
-| `createdAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge erstellt wurde. |
-| `responseMessage` | Die neueste vom System zurückgegebene Antwort. Tritt bei der Verarbeitung ein Fehler auf, ist dieser Wert eine JSON-Zeichenfolge mit detaillierten Fehlerinformationen, die Ihnen dabei helfen, mögliche Fehler zu verstehen. |
-| `status` | Der aktuelle Status der Löschreihenfolge. |
-| `createdBy` | Der Benutzer, der die Löschreihenfolge erstellt hat. |
+| `batchId` | Die Kennung des Batches, mit dem dieser Löschauftrag verknüpft ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Batch zusammengefasst, der von nachgelagerten Services verarbeitet wird. |
+| `bundleOrdinal` | Die Reihenfolge, in der dieser Löschauftrag empfangen wurde, als er in einem Batch zur nachgelagerten Verarbeitung zusammengefasst wurde. Dient zur Fehlerbehebung. |
+| `payloadByteSize` | Die Größe (gemessen in Bytes) der Liste mit Identitäten, die in der Anfrage-Payload bereitgestellt wurden, durch die dieser Löschauftrag erstellt wurde. |
+| `operationCount` | Die Anzahl der Identitäten, für die dieser Löschauftrag gilt. |
+| `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
+| `responseMessage` | Die jüngste vom System zurückgegebene Antwort. Tritt bei der Verarbeitung ein Fehler auf, ist dieser Wert eine JSON-Zeichenfolge mit detaillierten Fehlerinformationen, die Ihnen dabei helfen, mögliche Fehler zu verstehen. |
+| `status` | Der aktuelle Status des Löschauftrags. |
+| `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Status aller Identitätslöschungen auflisten {#list}
+## Auflistung der Status aller Identitätslöschungen {#list}
 
 Sie können die Status aller Identitätslöschungen auflisten, indem Sie eine GET-Anfrage stellen.
 
@@ -125,7 +125,7 @@ GET /workorder?{QUERY_PARAMS}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{QUERY_PARAMS}` | Eine Liste optionaler Abfrageparameter für den Auflistungsaufruf mit mehreren Parametern, getrennt durch `&` Zeichen. Folgende Abfrageparameter werden akzeptiert:<ul><li>`data` - Ein boolescher Wert, der bei Festlegung auf `true`enthält alle zusätzlichen Anfrage- und Antwortdaten, die für die Löschreihenfolge empfangen wurden. Die Standardeinstellung ist `false`.</li><li>`start` - Ein Zeitstempel für den Anfang des Zeitrahmens, um nach Löschanweisungen zu suchen.</li><li>`end` - Ein Zeitstempel für das Ende des Zeitrahmens für die Suche nach Löschanweisungen.</li><li>`page` - Die spezifische Antwortseite, die zurückgegeben werden soll.</li><li>`limit` - Die Anzahl der pro Seite anzuzeigenden Datensätze.</li></ul> |
+| `{QUERY_PARAMS}` | Eine Liste optionaler Abfrageparameter für den Auflistungsaufruf mit mehreren Parametern, die durch `&`-Zeichen getrennt sind. Folgende Abfrageparameter werden akzeptiert:<ul><li>`data`: ein boolescher Wert, der bei Festlegung auf `true` alle zusätzlichen Anfrage- und Antwortdaten enthält, die für den Löschauftrag empfangen wurden. Die Standardeinstellung ist `false`.</li><li>`start`: ein Zeitstempel für den Beginn des Zeitrahmens für die Suche nach Löschaufträgen.</li><li>`end`: ein Zeitstempel für das Ende des Zeitrahmens für die Suche nach Löschaufträgen.</li><li>`page`: die spezifische Antwortseite, die zurückgegeben werden soll.</li><li>`limit`: die Anzahl der pro Seite anzuzeigenden Datensätze.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details aller Löschvorgänge zurück, einschließlich des aktuellen Status. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
+Eine erfolgreiche Antwort gibt die Details aller Löschvorgänge zurück, einschließlich ihres aktuellen Status. Die folgende Beispielantwort wurde aus Platzgründen gekürzt.
 
 ```json
 {
@@ -189,16 +189,16 @@ Eine erfolgreiche Antwort gibt die Details aller Löschvorgänge zurück, einsch
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `results` | Enthält die Liste der Löschaufträge und deren Details. Weitere Informationen zu den Eigenschaften einer Löschreihenfolge finden Sie in der Beispielantwort im Abschnitt [Nachschlagen einer Löschreihenfolge](#lookup). |
-| `total` | Die Gesamtzahl der gefundenen Löschaufträge basierend auf aktuellen Filtern. |
+| `results` | Enthält die Liste der Löschaufträge und deren Details. Weitere Informationen zu den Eigenschaften eines Löschauftrags finden Sie in der Beispielantwort im Abschnitt zur [Suche eines Löschauftrags](#lookup). |
+| `total` | Die Gesamtzahl der gefundenen Löschaufträge basierend auf den aktuellen Filtern. |
 | `count` | Die Gesamtzahl der Löschaufträge, die auf jeder Seite der Antwort gefunden wurden. |
-| `_links` | Enthält Paginierungsinformationen, mit denen Sie die restliche Antwort untersuchen können:<ul><li>`next`: Enthält eine URL für die nächste Seite in der Antwort.</li><li>`page`: Enthält eine URL-Vorlage für den Zugriff auf eine andere Seite in der Antwort oder zur Anpassung der Anzahl der auf jeder Seite zurückgegebenen Elemente.</li></ul> |
+| `_links` | Enthält Paginierungsinformationen, mit denen Sie die restliche Antwort untersuchen können:<ul><li>`next`: enthält eine URL für die nächste Seite in der Antwort.</li><li>`page`: enthält eine URL-Vorlage für den Zugriff auf eine weitere Seite in der Antwort oder zur Anpassung der Anzahl der auf jeder Seite zurückgegebenen Elemente.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
-## Abrufen des Status eines Identitätslöschens (#lookup)
+## Abrufen des Status einer Identitätslöschung (#lookup)
 
-Nach dem Senden einer Anfrage an [Identität löschen](#delete-identities)können Sie den Status mit einer GET-Anfrage überprüfen.
+Nach dem Senden einer Anfrage zum [Löschen einer Identität](#delete-identities) können Sie den Status mit einer GET-Anfrage überprüfen.
 
 **API-Format**
 
@@ -208,7 +208,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `{WORK_ORDER_ID}` | Die `workorderId` der Identitätslöschung, die Sie nachschlagen. |
+| `{WORK_ORDER_ID}` | Die `workorderId` der Identitätslöschung, nach der Sie suchen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -244,13 +244,13 @@ Eine erfolgreiche Antwort gibt die Details des Löschvorgangs zurück, einschlie
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `workorderId` | Die ID der Löschreihenfolge. Dies kann verwendet werden, um den Status des Löschvorgangs später nachzuschlagen. |
+| `workorderId` | Die ID des Löschauftrags. Diese kann verwendet werden, um den Status des Löschvorgangs später anzuzeigen. |
 | `orgId` | Die Kennung Ihres Unternehmens. |
-| `batchId` | Die Kennung des Batches, mit dem diese Löschreihenfolge verknüpft ist und der zum Debugging verwendet wird. Mehrere Löschaufträge werden zu einem Batch gebündelt, der von nachgelagerten Diensten verarbeitet werden soll. |
-| `bundleOrdinal` | Die Reihenfolge, in der diese Löschreihenfolge empfangen wurde, als sie in einem Batch zur nachgelagerten Verarbeitung gebündelt wurde. Dient zum Debugging. |
-| `payloadByteSize` | Die Größe der Liste der Identitäten in Byte, die in der Anfrage-Payload bereitgestellt wurden, die diese Löschreihenfolge erstellt hat. |
-| `operationCount` | Die Anzahl der Identitäten, für die diese Löschreihenfolge gilt. |
-| `createdAt` | Ein Zeitstempel, der angibt, wann die Löschreihenfolge erstellt wurde. |
-| `responseMessage` | Die neueste vom System zurückgegebene Antwort. Tritt bei der Verarbeitung ein Fehler auf, ist dieser Wert eine JSON-Zeichenfolge mit detaillierten Fehlerinformationen, die Ihnen dabei helfen, mögliche Fehler zu verstehen. |
-| `status` | Der aktuelle Status der Löschreihenfolge. |
-| `createdBy` | Der Benutzer, der die Löschreihenfolge erstellt hat. |
+| `batchId` | Die Kennung des Batches, mit dem dieser Löschauftrag verknüpft ist. Sie wird zur Fehlerbehebung verwendet. Mehrere Löschaufträge werden zu einem Batch zusammengefasst, der von nachgelagerten Services verarbeitet wird. |
+| `bundleOrdinal` | Die Reihenfolge, in der dieser Löschauftrag empfangen wurde, als er in einem Batch zur nachgelagerten Verarbeitung zusammengefasst wurde. Dient zur Fehlerbehebung. |
+| `payloadByteSize` | Die Größe (gemessen in Bytes) der Liste mit Identitäten, die in der Anfrage-Payload bereitgestellt wurden, durch die dieser Löschauftrag erstellt wurde. |
+| `operationCount` | Die Anzahl der Identitäten, für die dieser Löschauftrag gilt. |
+| `createdAt` | Ein Zeitstempel, der angibt, wann der Löschauftrag erstellt wurde. |
+| `responseMessage` | Die jüngste vom System zurückgegebene Antwort. Tritt bei der Verarbeitung ein Fehler auf, ist dieser Wert eine JSON-Zeichenfolge mit detaillierten Fehlerinformationen, die Ihnen dabei helfen, mögliche Fehler zu verstehen. |
+| `status` | Der aktuelle Status des Löschauftrags. |
+| `createdBy` | Der Benutzer, der den Löschauftrag erstellt hat. |
