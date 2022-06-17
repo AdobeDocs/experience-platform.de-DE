@@ -1,13 +1,13 @@
 ---
 audience: user
-user-guide-title: Hilfe zur Datenhygiene
-breadcrumb-title: Data Hygiene Guide
-user-guide-description: Verwalten Sie Anfragen von Verbraucherdaten, um gesetzliche Datenschutzbestimmungen wie DSGVO und CCPA einzuhalten.
+user-guide-title: Datenhygiene-Hilfe
+breadcrumb-title: Datenhygiene-Handbuch
+user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie die DSGVO und den CCPA einzuhalten.
 feature: Privacy
 source-git-commit: 6b665648e547eee65deb90465e85aeadbba135b4
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 3%
+ht-degree: 94%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 3%
 # Datenhygiene {#hygiene}
 
 * [Übersicht über die Datenhygiene](./home.md)
-* Data Hygiene UI {#ui}
+* Datenhygiene-Benutzeroberfläche {#ui}
    * [Übersicht](./ui/overview.md)
-   * [Vorhandene Arbeitsaufträge durchsuchen](./ui/browse.md)
-   * [Time to Live (TTL) für Datensätze verwalten](./ui/ttl.md)
-   * [Verbraucherdatensätze löschen](./ui/delete-consumer.md)
+   * [Durchsuchen vorhandener Arbeitsaufträge](./ui/browse.md)
+   * [Verwalten der Time-to-Live (TTL) für Datensätze](./ui/ttl.md)
+   * [Löschen von Verbraucherdatensätzen](./ui/delete-consumer.md)
 * Data Hygiene API {#api}
    * [Übersicht](./api/overview.md)
-   * [Gültigkeitsdauer des Datensatzes (TTL)](./api/ttl.md)
+   * [Datensatz-TTL (Time-to-Live)](./api/ttl.md)
    * [Löschvorgänge für Verbraucher](./api/jobs.md)
