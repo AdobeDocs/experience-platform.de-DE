@@ -1,11 +1,11 @@
 ---
-title: Data Hygiene API-Anleitung
+title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '309'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
@@ -13,19 +13,19 @@ ht-degree: 33%
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield für das Gesundheitswesen erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield for Healthcare erworben haben.
 
-Mit der Data Hygiene API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmatisch korrigieren oder löschen sowie TTL-Protokolle (Time-to-Live) für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu endpunktspezifischeren Dokumentationen bereitgestellt.
+Mit der Data Hygiene API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmgesteuert korrigieren oder löschen sowie TTL-Protokolle (Time-to-Live) für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu Endpunkt-Dokumentationen bereitgestellt.
 
 ## Erste Schritte
 
-Sie können über den folgenden Stammpfad auf die Data Hygiene-API zugreifen: `https://platform.adobe.io/data/core/hygiene/`
+Sie können über den folgenden Stammpfad auf die Data Hygiene API zugreifen: `https://platform.adobe.io/data/core/hygiene/`
 
-In den folgenden Abschnitten werden die wichtigsten Konzepte beschrieben, die Sie kennen müssen, bevor Sie Aufrufe an die API durchführen.
+Im nachfolgenden Abschnitt erhalten Sie eine Einführung in die wichtigsten Konzepte, die Sie kennen sollten, bevor Sie Aufrufe an die API durchführen.
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungsdaten erfassen. Befolgen Sie die [API-Authentifizierungshandbuch](../../landing/api-authentication.md) um Werte für die einzelnen Header zu generieren, die für die Data Hygiene-API erforderlich sind, wie unten dargestellt:
+Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungsdaten erfassen. Folgen Sie den Schritten im [API-Authentifizierungs-Handbuch](../../landing/api-authentication.md), um wie unten dargestellt Werte für die einzelnen Kopfzeilen zu generieren, die für die Data Hygiene API erforderlich sind:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -45,8 +45,8 @@ A work order is a representation of a data hygiene task that deletes consumer id
 
 ## Time to Live (TTL) für Datensätze
 
-Eine Datensatz-TTL ist eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Durch Erstellen einer TTL geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Siehe [Endpunktleitfaden für Datensatz-TTL](./ttl.md) für Details zur Planung von Datensatz-TTLs in der API.
+Eine Datensatz-TTL ist eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Beim Erstellen einer TTL geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Weitere Informationen zur Planung von Datensatz-TTLs in der API finden Sie im [Handbuch für Datensatz-TTL-Endpunkte](./ttl.md).
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie Datenhygiene-Anfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie in der [Handbuch zur Datenhygiene](../ui/overview.md).
+In diesem Handbuch wurde beschrieben, wie Sie Datenhygiene-Anfragen mithilfe von API-Aufrufen verwalten. Informationen zum Ausführen dieser Aktionen in der Platform-Benutzeroberfläche finden Sie im [Handbuch für die Datenhygiene-Benutzeroberfläche](../ui/overview.md).
