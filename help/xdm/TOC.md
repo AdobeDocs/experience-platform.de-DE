@@ -4,10 +4,10 @@ user-guide-title: Hilfe zum Experience-Datenmodell-System (XDM)
 breadcrumb-title: Handbuch zum Experience-Datenmodell (XDM)
 user-guide-description: Verwenden Sie Klassen und Schemafeldgruppen im Experience-Datenmodell (XDM), um Erlebnisdaten zu standardisieren.
 feature: Schemas
-source-git-commit: ec61d4ed810029646e2ae28ffc91215eb9189f10
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 89%
+source-wordcount: '469'
+ht-degree: 87%
 
 ---
 
@@ -171,12 +171,13 @@ ht-degree: 89%
    * [Erstellen eines Schemas in der Benutzeroberfläche](tutorials/create-schema-ui.md)
    * [Erstellen eines Schemas in der API](tutorials/create-schema-api.md)
    * [Definieren benutzerdefinierter Felder in der API](./tutorials/custom-fields-api.md)
+   * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
+   * [Veraltetes XDM-Feld](tutorials/field-deprecation.md)
    * [Definieren einer Schemabeziehung in der Benutzeroberfläche](tutorials/relationship-ui.md)
    * [Definieren einer Schemabeziehung in der API](tutorials/relationship-api.md)
    * [Definieren einer Schemabeziehung in der Real-time CDP B2B Edition](tutorials/relationship-b2b.md)
    * [Verwalten von Datennutzungsbezeichnungen für ein Schema](tutorials/labels.md)
-   * [Erstellen eines Ad-hoc-Schemas (API)](tutorials/ad-hoc.md)
-   * [Hinzufügen empfohlener Werte zu einem Feld (API)](tutorials/suggested-values.md)
+   * [Erstellen eines Ad-hoc-Schemas](tutorials/ad-hoc.md)
 * [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 * [API-Referenz](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)

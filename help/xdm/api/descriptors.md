@@ -5,10 +5,10 @@ title: Descriptors-API-Endpunkt
 description: Mit dem Endpunkt /descriptors in der Schema Registry-API können Sie XDM-Deskriptoren in Ihrer Erlebnisanwendung programmgesteuert verwalten.
 topic-legacy: developer guide
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b92246e729ca26387a3d375e5627165a29956e52
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 58%
+source-wordcount: '1836'
+ht-degree: 51%
 
 ---
 
@@ -311,7 +311,7 @@ Ein Identitätsdeskriptor signalisiert, dass der[!UICONTROL sourceProperty]&quot
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für einen Identitätsdeskriptor muss dieser Wert auf `xdm:descriptorIdentity`. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein wird. Der Pfad sollte mit einem „/“ beginnen und nicht mit einem enden. Schließen Sie „properties“ nicht in den Pfad ein (verwenden Sie z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
@@ -347,7 +347,7 @@ Mit Anzeigenamendeskriptoren können Benutzer die `title`, `description`und `met
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Bei einem Anzeigenamendeskriptor muss dieser Wert auf `xdm:alternateDisplayInfo`. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zur spezifischen Eigenschaft, die die Identität sein wird. Der Pfad sollte mit einem „/“ beginnen und nicht mit einem enden. Schließen Sie „properties“ nicht in den Pfad ein (verwenden Sie z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
@@ -377,7 +377,7 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für einen Beziehungsdeskriptor muss dieser Wert auf `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem die Beziehung definiert wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
@@ -386,7 +386,6 @@ Beziehungsdeskriptoren beschreiben eine Beziehung zwischen zwei verschiedenen Sc
 | `xdm:destinationProperty` | Optionaler Pfad zu einem Zielfeld im Zielschema. Wenn diese Eigenschaft weggelassen wird, wird das Zielfeld von allen Feldern mit einem entsprechenden Referenzidentitätsdeskriptor abgeleitet (siehe unten). |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 #### Referenzidentitätsdeskriptor
 
@@ -404,8 +403,32 @@ Referenzidentitätsdeskriptoren stellen einen Referenzkontext für die primäre 
 
 | Eigenschaft | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für einen Referenzidentitätsdeskriptor muss dieser Wert auf `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | Der `$id`-URI des Schemas, wo der Deskriptor definiert wird. |
 | `xdm:sourceVersion` | Die Hauptversion des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Feld im Quellschema, in dem der Deskriptor definiert wird. Sollte mit einem „/“ beginnen und nicht mit einem solchen enden. Schließen Sie „properties“ nicht in den Pfad ein (z. B. „/personalEmail/address“ anstelle von „/properties/personalEmail/properties/address“). |
 | `xdm:identityNamespace` | Der Identitäts-Namespace-Code für die Quelleigenschaft. |
+
+{style=&quot;table-layout:auto&quot;}
+
+#### Veralteter Felddeskriptor
+
+Sie können [Verwerfen eines Felds in einer benutzerdefinierten XDM-Ressource](../tutorials/field-deprecation.md#custom) durch Hinzufügen eines `meta:status` -Attribut auf `deprecated` auf das entsprechende Feld. Wenn Sie Felder, die von standardmäßigen XDM-Ressourcen in Ihren Schemas bereitgestellt werden, veraltet sein möchten, können Sie dem betreffenden Schema jedoch einen veralteten Felddeskriptor zuweisen, um denselben Effekt zu erzielen. Verwenden der [korrekt `Accept` header](../tutorials/field-deprecation.md#verify-deprecation)können Sie dann anzeigen, welche Standardfelder für ein Schema nicht mehr unterstützt werden, wenn Sie es in der API nachschlagen.
+
+```json
+{
+  "@type": "xdm:descriptorDeprecated",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c65ddf08cf2d4a2fe94bd06113bf4bc4c855e12a936410d5",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/faxPhone"
+}
+```
+
+| Eigenschaft | Beschreibung |
+| --- | --- |
+| `@type` | Der Typ des Deskriptors. Für einen Deskriptor zur Einstellung von Feldern muss dieser Wert auf `xdm:descriptorDeprecated`. |
+| `xdm:sourceSchema` | Der URI `$id` des Schemas, auf das Sie den Deskriptor anwenden. |
+| `xdm:sourceVersion` | Die Version des Schemas, auf das Sie den Deskriptor anwenden. Sollte auf `1`. |
+| `xdm:sourceProperty` | Der Pfad zur Eigenschaft innerhalb des Schemas, auf das Sie den Deskriptor anwenden. Wenn Sie den Deskriptor auf mehrere Eigenschaften anwenden möchten, können Sie eine Liste von Pfaden in Form eines Arrays bereitstellen (z. B. `["/firstName", "/lastName"]`). |
+
+{style=&quot;table-layout:auto&quot;}
