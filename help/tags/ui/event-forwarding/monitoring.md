@@ -2,10 +2,11 @@
 title: Überwachen von Aktivitäten bei der Ereignisweiterleitung
 description: Erfahren Sie, wie Sie Nutzung, Fehler und Berechnungszeit in Ihren Ereignisweiterleitungseigenschaften überwachen.
 feature: Event Forwarding
-source-git-commit: 4de448fb5e8ed94d23ebfbcc1bfe19bcfd36fbca
+exl-id: 9d8572a3-816e-4b66-afe6-344fe8a15f22
+source-git-commit: 9313ebe6d51d5ef42915d154def9cb0612407439
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '548'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +23,12 @@ Die **[!UICONTROL Überwachung]** in der Datenerfassungs-Benutzeroberfläche kö
 ## Voraussetzungen
 
 In diesem Handbuch wird davon ausgegangen, dass Sie die Ereignisweiterleitung erworben haben und dass Sie über ein Verständnis der Funktionsweise der Ereignisweiterleitung verfügen. Siehe [Übersicht über die Ereignisweiterleitung](./overview.md) für weitere Informationen.
+
+## Videoüberblick
+
+Sehen Sie sich das folgende Video an, um einen allgemeinen Überblick über die Überwachungsfunktion zu erhalten:
+
+>[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
 
 ## Auswählen von Eigenschaften und Umgebungen
 
