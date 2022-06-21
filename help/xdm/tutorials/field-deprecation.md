@@ -1,16 +1,18 @@
 ---
 title: Veraltetes XDM-Feld
 description: Erfahren Sie, wie Sie Experience-Datenmodell (XDM)-Felder in der Schema Registry-API verwerfen.
-source-git-commit: dc400dce8a77f27347e767230faf7301afc7c1fb
+source-git-commit: a1b86e6976cdb5b2bd3c2ecee933dfde337c9880
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '554'
 ht-degree: 6%
 
 ---
 
 # Veraltetes XDM-Feld
 
-Im Experience-Datenmodell (XDM) können Sie ein Feld in einem Schema oder einer benutzerdefinierten Ressource verwerfen, indem Sie die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). In diesem Dokument wird beschrieben, wie Felder für verschiedene XDM-Ressourcen nicht mehr unterstützt werden.
+Im Experience-Datenmodell (XDM) können Sie ein Feld in einem Schema oder einer benutzerdefinierten Ressource verwerfen, indem Sie die [Schema Registry-API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Wenn ein Feld veraltet wird, wird es in den nachgelagerten Benutzeroberflächen wie der [!UICONTROL Profile] Arbeitsbereich und Customer Journey Analytics, es handelt sich jedoch andernfalls um eine nicht brechende Änderung, die sich nicht negativ auf bestehende Datenflüsse auswirkt.
+
+In diesem Dokument wird beschrieben, wie Felder für verschiedene XDM-Ressourcen nicht mehr unterstützt werden.
 
 ## Erste Schritte
 
