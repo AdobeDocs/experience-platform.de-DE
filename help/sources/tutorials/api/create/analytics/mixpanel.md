@@ -2,9 +2,8 @@
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 title: (Beta) Erstellen einer Quellverbindung und eines Datenflusses für Mixpanel mithilfe der Flow Service-API
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Mixpanel verbinden.
-hide: true
-hidefromtoc: true
-source-git-commit: 0a21280aaeb62374437c208da83cd4b42569ee91
+exl-id: 804b876d-6fd5-4a28-b33c-4ecab1ba3333
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 76%

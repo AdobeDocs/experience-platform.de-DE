@@ -3,9 +3,9 @@ keywords: Experience Platform;Zendesk;Quellen;Connectoren;Quell-Connectoren;Sour
 title: Erstellen einer Zendesk-Quellverbindung in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie mithilfe der Adobe Experience Platform-Benutzeroberfläche eine Zendesk-Quellverbindung erstellen.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 017f074a325b5ca1921128f6d3d9759612a8a398
+source-git-commit: f0348abd41e7d594109a04fd11ed06857cedfa53
 workflow-type: tm+mt
-source-wordcount: '808'
+source-wordcount: '797'
 ht-degree: 32%
 
 ---
@@ -97,10 +97,6 @@ Wählen Sie in der Platform-Benutzeroberfläche die Option **[!UICONTROL Datens�
 Wählen Sie anschließend die Datenfluss-Start-ID des Datenflusses aus, den Sie anzeigen möchten, um bestimmte Details zu diesem Datenfluss anzuzeigen.
 
 ![Dataflow-Seite](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
-
-Um Details zu Ihrem Schema anzuzeigen, wählen Sie **[!UICONTROL Data Governance]**.
-
-![Zendesk-Schema](../../../../images/tutorials/create/zendesk/dataset-governance.png)
 
 Wählen Sie abschließend **[!UICONTROL Vorschau des Datensatzes anzeigen]** , um die erfassten Daten anzuzeigen.
 

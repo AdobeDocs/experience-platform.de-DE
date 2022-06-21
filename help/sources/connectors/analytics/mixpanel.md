@@ -2,9 +2,8 @@
 keywords: Experience Platform;Startseite;beliebte Themen;
 title: (Beta) Mixpanel Source Connector - Übersicht
 description: Erfahren Sie, wie Sie Mixpanel über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
-hide: true
-hidefromtoc: true
-source-git-commit: e7a5e20721f5826ca1f4520b4a27d261eed1e4df
+exl-id: 7eb605f6-8580-40b7-a9b3-96b9c3444f5d
+source-git-commit: e44f6d5bb2fd891a3e3b3c5e4aed68e8d4687b53
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 27%
@@ -61,4 +60,3 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Mixpa
 
 * [Erstellen einer  [!DNL Mixpanel] -Quellverbindung über die Benutzeroberfläche](../../tutorials/ui/create/analytics/mixpanel.md)
 * [Erstellen eines Datenflusses für eine Kundenerfolgsquellenverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/analytics.md)
-
