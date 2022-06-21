@@ -1,9 +1,10 @@
 ---
 title: Verwalten von Datennutzungsbezeichnungen für ein Schema
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche Schemafeldern des Experience-Datenmodell (XDM) Datennutzungsbezeichnungen hinzufügen.
-source-git-commit: 6156d84cfdd33f8fe491e9a80e3711cf304733e9
+exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
+source-git-commit: 6c72e9dd5961d4dc94d8264a7da795ebd96c40ec
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '711'
 ht-degree: 6%
 
 ---
@@ -20,6 +21,8 @@ Eine auf ein Schemafeld angewendete Beschriftung zeigt die Nutzungsrichtlinien a
 
 Während Bezeichnungen auf einzelne Datensätze (und Felder in diesen Datensätzen) angewendet werden können, können Sie auch Bezeichnungen auf Schemaebene anwenden. Wenn Beschriftungen direkt auf ein Schema angewendet werden, werden diese Beschriftungen auf alle vorhandenen und zukünftigen Datensätze übertragen, die auf diesem Schema basieren.
 
+Darüber hinaus werden alle Feldbeschriftungen, die Sie in einem Schema hinzufügen, zu allen anderen Schemas weitergeleitet, die dasselbe Feld aus einer freigegebenen Klasse oder Feldergruppe verwenden. So können Sie sicherstellen, dass die Nutzungsregeln für ähnliche Felder im gesamten Datenmodell einheitlich sind.
+
 In diesem Tutorial werden die Schritte zum Hinzufügen von Bezeichnungen zu einem Schema mithilfe des Schema-Editors in der Platform-Benutzeroberfläche beschrieben.
 
 ## Erste Schritte
@@ -32,7 +35,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 
 ## Schema oder Feld auswählen, dem Beschriftungen hinzugefügt werden sollen
 
-Beschriftungen können nur auf Schemas angewendet werden und können nicht zu den Komponenten hinzugefügt werden, aus denen diese Schemas bestehen (Klassen, Feldergruppen und Datentypen). Um Beschriftungen hinzuzufügen, müssen Sie zunächst [ein vorhandenes Schema zur Bearbeitung auswählen](../ui/resources/schemas.md#edit) oder [Erstellen eines neuen Schemas](../ui/resources/schemas.md#create) , um die Struktur im Schema-Editor anzuzeigen.
+Um Beschriftungen hinzuzufügen, müssen Sie zunächst [ein vorhandenes Schema zur Bearbeitung auswählen](../ui/resources/schemas.md#edit) oder [Erstellen eines neuen Schemas](../ui/resources/schemas.md#create) , um die Struktur im Schema-Editor anzuzeigen.
 
 Um die Beschriftungen für ein einzelnes Feld zu bearbeiten, können Sie das Feld auf der Arbeitsfläche auswählen und dann **[!UICONTROL Zugriff verwalten]** in der rechten Leiste.
 
