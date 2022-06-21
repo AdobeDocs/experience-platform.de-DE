@@ -5,14 +5,14 @@ title: Einschränkungen für XDM-Feldtypen
 topic-legacy: overview
 description: Eine Referenz für Feldtypbegrenzungen im Experience-Datenmodell (XDM), einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren können.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 279a1d90be82188ad6fd9d2bb9123354d0046b0d
+source-git-commit: 2a58236031834bbe298576e2fcab54b04ec16ac3
 workflow-type: tm+mt
 source-wordcount: '668'
-ht-degree: 12%
+ht-degree: 13%
 
 ---
 
-# XDM-Feldtypbegrenzungen
+# Begrenzungen für XDM-Feldtypen
 
 In Experience-Datenmodell (XDM)-Schemas beschränkt der Typ eines Felds, welche Daten das Feld enthalten kann. Dieses Dokument bietet einen Überblick über die einzelnen Kernfeldtypen, einschließlich der anderen Serialisierungsformate, denen sie zugeordnet werden können, und wie Sie Ihre eigenen Feldtypen in der API definieren, um verschiedene Einschränkungen zu erzwingen.
 
@@ -22,7 +22,7 @@ Bevor Sie dieses Handbuch verwenden, lesen Sie bitte die [Grundlagen der Schemak
 
 Wenn Sie Ihre eigenen Feldtypen in der API definieren möchten, wird dringend empfohlen, mit der [Entwicklerhandbuch zur Schema Registry](../api/getting-started.md) , um zu erfahren, wie Sie Feldergruppen und Datentypen erstellen, in die Ihre benutzerdefinierten Felder eingefügt werden. Wenn Sie zur Erstellung Ihrer Schemas die Experience Platform-Benutzeroberfläche verwenden, finden Sie im Handbuch unter [Definieren von Feldern in der Benutzeroberfläche](../ui/fields/overview.md) um zu erfahren, wie Sie Einschränkungen für Felder implementieren, die Sie in benutzerdefinierten Feldergruppen und Datentypen definieren.
 
-## Basisstruktur und Beispiele
+## Basisstruktur und Beispiele {#basic-types}
 
 XDM basiert auf dem JSON-Schema und daher erben XDM-Felder bei der Definition ihres Typs eine ähnliche Syntax. Wenn Sie wissen, wie verschiedene Feldtypen im JSON-Schema dargestellt werden, können Sie die grundlegenden Einschränkungen der einzelnen Typen anzeigen.
 
