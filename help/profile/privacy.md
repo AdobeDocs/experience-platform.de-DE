@@ -5,9 +5,9 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1281'
 ht-degree: 40%
 
 ---
@@ -135,7 +135,7 @@ Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage e
 
 >[!IMPORTANT]
 >
->Bei einer erfolgreichen Löschanfrage werden die erfassten Attributdaten für einen Kunden (oder eine Gruppe von Kunden) entfernt. Die im Identitätsdiagramm eingerichteten Verknüpfungen werden jedoch durch die Anfrage nicht entfernt.
+>Wenn eine Löschanfrage für das Profil erfolgt (`ProfileService`), aber nicht Identity Service (`identity`), entfernt der resultierende Auftrag die erfassten Attributdaten für einen Kunden (oder eine Gruppe von Kunden), entfernt jedoch nicht die im Identitätsdiagramm eingerichteten Verknüpfungen.
 >
 >Beispielsweise eine Löschanfrage, bei der die `email_id` und `customer_id` entfernt alle unter diesen IDs gespeicherten Attributdaten. Alle Daten, die anschließend unter dem gleichen `customer_id` weiterhin mit dem entsprechenden `email_id`, da die Verbindung noch existiert.
 >

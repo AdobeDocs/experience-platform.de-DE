@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;Home;beliebte Themen
+keywords: Experience Platform;Startseite;beliebte Themen
 solution: Experience Platform
 title: Anhang zum Privacy Service-API-Handbuch
 topic-legacy: developer guide
 description: Dieses Dokument enth채lt zus채tzliche Informationen zum Arbeiten mit der Privacy Service-API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: 532c9c9d07c112944ff26b1e48545d2b4777b06c
+source-git-commit: 1a84ebfa0ad7801e14896dffd28302f057ae171d
 workflow-type: tm+mt
 source-wordcount: '485'
 ht-degree: 9%
@@ -24,7 +24,7 @@ In der folgenden Tabelle sind mehrere h채ufig verwendete, vordefinierte Identit�
 
 | Identit채tstyp | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| E-Mail  | `Email` | `6` |
+| E-Mail | `Email` | `6` |
 | Telefon | `Phone` | `7` |
 | Adobe Advertising Cloud ID | `AdCloud` | `411` |
 | Adobe Audience Manager UUID | `CORE` | `0` |
@@ -73,7 +73,7 @@ In der folgenden Tabelle sind die zul채ssigen Werte f체r die Angabe eines Adobe-
 | Adobe Primetime-Authentifizierung | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Kundenattribute (CRS) | `CRS` |
-| Identity Service | `Identity` |
+| Identity Service | `identity` |
 | Marketo Engage | `marketo` |
 
 {style=&quot;table-layout:auto&quot;}
