@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: d01875bcb89d887ca4f4dbb9e7fe6179446faa3c
+source-git-commit: 34c408e5e4c9917be7f664f284e4b8e87898945c
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '761'
 ht-degree: 92%
 
 ---
@@ -153,6 +153,7 @@ ht-degree: 92%
       * [Sprache der Kundenziele – Übersicht](./catalog/voice/overview.md)
       * [Confirmit Digital Feedback-Erweiterung](./catalog/voice/confirmit-digital-feedback.md)
       * [Invoca Tags-Erweiterung](./catalog/voice/invoca.md)
+      * [Medallia-Verbindung](./catalog/voice/medallia-connector.md)
       * [Medallia-Erweiterung](./catalog/voice/medallia.md)
       * [Talk URL Inbox-Erweiterung](./catalog/voice/talkurl.md)
 * Destination SDK {#destination-sdk}
