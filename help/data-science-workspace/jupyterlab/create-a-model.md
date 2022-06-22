@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Dieses Tutorial führt Sie durch die erforderlichen Schritte zum Erstellen eines Rezepts mithilfe der JupyterLab Notebook-Rezept-Builder-Vorlage.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: fd0f6aa2ac73bdc0a5413c437d091df6bb5d38a6
+source-git-commit: b4dabd36f54cc571b78a6c6c9535f9f08c403b64
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 34%
@@ -38,7 +38,7 @@ Die [!UICONTROL Rezept Builder] Mit Notebook können Sie Trainings- und Scoring-
 >
 >Die [!UICONTROL Rezept Builder] Notebook unterstützt die Arbeit mit allen Dateiformaten, derzeit unterstützt die Funktion &quot;Rezept erstellen&quot;jedoch nur [!DNL Python].
 
-![](../images/jupyterlab/create-recipe/recipe_builder.png)
+![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
 Wenn Sie die [!UICONTROL Rezept Builder] Notebook vom Starter aus, wird das Notebook in einer neuen Registerkarte geöffnet.
 
