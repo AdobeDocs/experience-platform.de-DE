@@ -4,7 +4,7 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Abfrageservice
 breadcrumb-title: Anleitung zum Abfragedienst
 user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform Data Lake.
 feature: Queries
-source-git-commit: d074ebaef19616f1556671f4c7307faeb954cd60
+source-git-commit: fc2d2e7dadb95460f5d735ba33e5f106880a0198
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 73%
@@ -47,10 +47,6 @@ ht-degree: 73%
 - Beispielabfragen {#sample-queries}
    - [Beispielabfragen von Erlebnisereignissen](sample-queries/experience-event.md)
    - [Beispielabfragen von Adobe Analytics](sample-queries/adobe-analytics.md)
-- Data Governance {#data-governance}
-   - [Auditprotokoll-Handbuch](data-governance/audit-log-guide.md)
-   - [Identitäten in Ad-hoc-Schemata-Datensätzen](data-governance/ad-hoc-schema-identities.md)
-   - [Unterstützung der attributbasierten Zugriffskontrolle für Ad-hoc-Schemata](./data-governance/ad-hoc-schema-labels.md)
 - SQL-Referenz {#sql}
    - [SQL – Übersicht](sql/overview.md)
    - [SQL-Syntax](sql/syntax.md)
@@ -69,6 +65,10 @@ ht-degree: 73%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
+- Data Governance {#data-governance}
+   - [Auditprotokoll-Handbuch](data-governance/audit-log-guide.md)
+   - [Identitäten in Ad-hoc-Schemata-Datensätzen](data-governance/ad-hoc-schema-identities.md)
+   - [Unterstützung der attributbasierten Zugriffskontrolle für Ad-hoc-Schemata](./data-governance/ad-hoc-schema-labels.md)
 - [Handbuch zur Fehlerbehebung](troubleshooting-guide.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
