@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Datensätzen
 topic-legacy: datasets
 description: Erfahren Sie, wie Sie in der Benutzeroberfläche von Adobe Experience Platform allgemeine Aktionen beim Arbeiten mit Datensätzen durchführen.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 09db4aab17b933c63968d997f33279ab9a96bdef
+source-git-commit: 6238558e8edf968df4b24c43a626b736e2478be6
 workflow-type: tm+mt
-source-wordcount: '1185'
-ht-degree: 46%
+source-wordcount: '1208'
+ht-degree: 47%
 
 ---
 
@@ -21,19 +21,25 @@ Dieses Benutzerhandbuch enthält Anweisungen zur Ausführung allgemeiner Aktione
 Das Benutzerhandbuch setzt ein grundlegendes Verständnis der folgenden Komponenten von Adobe Experience Platform voraus:
 
 * [Datensätze](overview.md): Das Speicher- und Verwaltungskonstrukt für Datenpersistenz in [!DNL Experience Platform].
-* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem [!DNL Experience Platform] Kundenerlebnisdaten organisiert.
-   * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemas vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemaerstellung.
+* [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Das standardisierte Framework, mit dem Kundenerlebnisdaten von [!DNL Experience Platform] organisiert werden.
+   * [Grundlagen der Schemakomposition](../../xdm/schema/composition.md): Machen Sie sich mit den grundlegenden Bausteinen von XDM-Schemata vertraut, einschließlich der wichtigsten Prinzipien und Best Practices bei der Schemakomposition.
    * [Schema Editor](../../xdm/tutorials/create-schema-ui.md): Erfahren Sie, wie Sie mithilfe des [!DNL Schema Editor] innerhalb der [!DNL Platform] -Benutzeroberfläche.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Bietet ein einheitliches Echtzeit-Kundenprofil, das auf aggregierten Daten aus verschiedenen Quellen basiert.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): Sorgen Sie bei der Nutzung von Kundendaten für die Einhaltung von Vorschriften, Begrenzungen und Richtlinien.
 
-## Anzeigen von Datensätzen
+## Anzeigen von Datensätzen {#view-datasets}
 
-Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Datensätze]** im linken Navigationsbereich, um die **[!UICONTROL Datensätze]** Dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Erfassungslaufs.
+>[!CONTEXTUALHELP]
+>id="platform_datasets_negative_numbers"
+>title="Negative Zahlen in der Datensatzaktivität"
+>abstract="Negative Zahlen in aufgenommenen Datensätzen bedeuten, dass ein Benutzer bestimmte Batches in einem ausgewählten Zeitraum gelöscht hat."
+>text="Learn more in documentation"
+
+Im [!DNL Experience Platform] Benutzeroberfläche, auswählen **[!UICONTROL Datensätze]** im linken Navigationsbereich, um die **[!UICONTROL Datensätze]** Dashboard. Das Dashboard listet alle verfügbaren Datensätze für Ihre Organisation auf. Zu jedem aufgelisteten Datensatz werden Details angezeigt, einschließlich seines Namens, des Schemas, dem der Datensatz entspricht, und des Status des letzten Aufnahmelaufs.
 
 ![](../images/datasets/user-guide/browse-datasets.png)
 
-Standardmäßig werden nur die Datensätze angezeigt, die Sie in aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, aktivieren Sie die **[!UICONTROL Anzeigen von Systemdatensätzen]** umschalten. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexport-Datensatz zur Verarbeitung des Profil-Dashboards verwendet.
+Standardmäßig werden nur die Datensätze angezeigt, die Sie aufgenommen haben. Wenn Sie die systemgenerierten Datensätze anzeigen möchten, aktivieren Sie die **[!UICONTROL Anzeigen von Systemdatensätzen]** umschalten. Systemgenerierte Datensätze werden nur zur Verarbeitung anderer Komponenten verwendet. Beispielsweise wird der systemgenerierte Profilexport-Datensatz zur Verarbeitung des Profil-Dashboards verwendet.
 
 ![](../images/datasets/user-guide/system-datasets.png)
 
@@ -59,7 +65,7 @@ Für zuverlässigere Methoden zum Zugriff auf Ihre Daten: [!DNL Experience Platf
 
 ## Erstellen eines Datensatzes {#create}
 
-Um einen neuen Datensatz zu erstellen, wählen Sie zunächst **[!UICONTROL Datensatz erstellen]** im **[!UICONTROL Datensätze]** Dashboard.
+Um einen neuen Datensatz zu erstellen, klicken Sie im Dashboard „Datensätze“ auf die Option **[!UICONTROL Datensatz erstellen]**.****
 
 ![](../images/datasets/user-guide/select-create.png)
 
