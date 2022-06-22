@@ -3,9 +3,9 @@ title: Verfolgen von Ereignissen mit dem Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Adobe Experience Platform Web SDK-Ereignisse verfolgen.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;Send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 27e5c64f31b9a68252d262b531660811a0576177
+source-git-commit: 9b108d0e1722ea1b895c08fd7f42104a0d0da5df
 workflow-type: tm+mt
-source-wordcount: '1209'
+source-wordcount: '1177'
 ht-degree: 32%
 
 ---
@@ -218,14 +218,6 @@ Die `sendEvent` gibt einen Promise zurück, der mit einer `result` -Objekt. Die 
 >[!WARNING]
 >
 >`destinations` ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalität können sich ändern.
-
-**Rückschlüsse**: Einblicke in maschinelles Lernen in Echtzeit. [Erfahren Sie mehr über maschinelles Lernen in Echtzeit.](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/real-time-machine-learning/home.html?lang=en)
-
->[!WARNING]
->
->`inferences` ist derzeit als Betaversion verfügbar. Dokumentation und Funktionalität können sich ändern.
-
-
 
 ## Globale Änderung von Ereignissen {#modifying-events-globally}
 
