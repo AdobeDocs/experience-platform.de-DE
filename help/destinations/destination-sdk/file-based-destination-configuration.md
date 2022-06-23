@@ -2,7 +2,7 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: (Beta) Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 89e05ed522aed697ba3a2f06137546fd5673920d
+source-git-commit: 39fbdcdb704f096e1fcee680221c529758a00555
 workflow-type: tm+mt
 source-wordcount: '2304'
 ht-degree: 82%
@@ -308,7 +308,6 @@ Sie können die in diesem Dokument beschriebenen Funktionen mithilfe des `/autho
             "CUSTOM_TEXT"
          ],
          "defaultFilenameAppendOptions":[
-            "SEGMENT_ID",
             "DATETIME"
          ],
          "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
@@ -759,22 +758,21 @@ Dieser Abschnitt bezieht sich auf die Dateiexporteinstellungen in der obigen Kon
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
    "filenameConfig":{
-      "allowedFilenameAppendOptions":[
-         "SEGMENT_NAME",
-         "DESTINATION_INSTANCE_ID",
-         "DESTINATION_INSTANCE_NAME",
-         "ORGANIZATION_NAME",
-         "SANDBOX_NAME",
-         "DATETIME",
-         "CUSTOM_TEXT"
-      ],
-      "defaultFilenameAppendOptions":[
-         "SEGMENT_ID",
-         "DATETIME"
-      ],
-      "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+         "allowedFilenameAppendOptions":[
+            "SEGMENT_NAME",
+            "DESTINATION_INSTANCE_ID",
+            "DESTINATION_INSTANCE_NAME",
+            "ORGANIZATION_NAME",
+            "SANDBOX_NAME",
+            "DATETIME",
+            "CUSTOM_TEXT"
+         ],
+         "defaultFilenameAppendOptions":[
+            "DATETIME"
+         ],
+         "defaultFilename":"%DESTINATION%_%SEGMENT_ID%"
+      },
    }
-}
 ```
 
 | Parameter | Typ | Beschreibung |
