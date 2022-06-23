@@ -5,10 +5,10 @@ seo-title: Advertising destinations overview
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 275c3fae8b001154a702edbf4356d6a374f9a16f
+source-git-commit: 74b3c6f24486d8b18750932f1268f0da7f5fa034
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 53%
+source-wordcount: '239'
+ht-degree: 52%
 
 ---
 
@@ -32,6 +32,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
 * [Google Ads-Verbindung](google-ads-destination.md)
 * [Google Ad Manager-Verbindung](google-ad-manager.md)
+* [(Beta) Google Ad Manager 360-Verbindung](google-ad-manager-360-connection.md)
 * [Google Customer Match-Verbindung](google-customer-match.md)
 * [Microsoft Bing-Verbindung](bing.md)
 * [Pinterest Customer List-Verbindung](pinterest.md)

@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 8c2ce6936eea5c90319a03e35f697ebcdb89e1e5
+source-git-commit: e017f98ba2fbeab9fe1a785cc7710f75d3dd496a
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 91%
+source-wordcount: '777'
+ht-degree: 90%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 91%
       * [Google Ads-Verbindung](./catalog/advertising/google-ads-destination.md)
       * [Google Ads-Erweiterung](./catalog/advertising/google-ads-extension.md)
       * [Google Ad Manager-Verbindung](./catalog/advertising/google-ad-manager.md)
+      * [Verbindung zu Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-Verbindung](./catalog/advertising/google-customer-match.md)
       * [Google Display &amp; Video 360-Verbindung](./catalog/advertising/google-dv360.md)
       * [Google gtag-Erweiterung](./catalog/advertising/gtag-advertising.md)
