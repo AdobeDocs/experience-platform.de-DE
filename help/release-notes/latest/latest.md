@@ -1,10 +1,10 @@
 ---
 title: Juni 2022 - Adobe Experience Platform-Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Juni 2022.
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 47%
+source-wordcount: '824'
+ht-degree: 46%
 
 ---
 
@@ -67,6 +67,7 @@ Weitere allgemeine Informationen zu Data Science Workspace finden Sie unter [Üb
 | ----------- | ----------- |
 | [(Beta) Google Ad Manager 360](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | Die [!DNL Google Ad Manager 360] Verbindung aktiviert Batch-Upload für [!DNL publisher provided identifiers] (PPID) nach [!DNL Google Ad Manager 360]über [!DNL Google Cloud Storage] <br><br>Dieses Ziel befindet sich derzeit in der Betaversion und steht nur einer begrenzten Anzahl von Kunden zur Verfügung. So fordern Sie Zugriff auf die [!DNL Google Ad Manager 360] Verbindung herstellen, kontaktieren Sie Ihren Kundenbetreuer und geben Sie Ihre [!DNL IMS Organization ID]. |
 | [[!DNL Medallia]](/help/destinations/catalog/voice/medallia-connector.md) | Aktivieren Sie Profile für zielgerichtete Media-Umfragen und Feedback-Erfassung, um Kundenanforderungen und Erwartungen besser zu verstehen. |
+| [[!DNL Adobe Advertising Cloud DSP]](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | Die Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) Mit dem Ziel können Sie authentifizierte Erstanbietersegmente für zugelassene Advertiser und Benutzer freigeben, damit die Kampagne für DSP aktiviert werden kann. |
 
 {style=&quot;table-layout:auto&quot;}
 
