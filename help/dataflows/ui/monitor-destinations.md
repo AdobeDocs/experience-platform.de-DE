@@ -6,9 +6,9 @@ title: Überwachen von Datenflüssen für Ziele in der Benutzeroberfläche
 topic-legacy: overview
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 2be8ed7daaac6554bdbc52acab325a474fa87566
+source-git-commit: 20fbc4a33baa677cf34b3e1525f45af1862a7024
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3211'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 Mit Zielen können Sie Ihre Daten von Adobe Experience Platform für unzählige externe Partner aktivieren. Platform erleichtert das Tracking des Datenflusses zu Ihren Zielen, indem Datenflüsse für Transparenz sorgen.
 
-Das Monitoring-Dashboard bietet eine visuelle Darstellung der Journey eines Datenflusses, einschließlich des Ziels, für das die Daten aktiviert werden. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse entweder direkt im Arbeitsbereich &quot;Ziele&quot;überwachen oder das Monitoring-Dashboard verwenden können, um Datenflüsse für Ihre Ziele mithilfe der Experience Platform-Benutzeroberfläche zu überwachen.
+Das Monitoring-Dashboard bietet eine visuelle Darstellung des Journey eines Datenflusses, einschließlich des Ziels, für das die Daten aktiviert werden. In diesem Tutorial erfahren Sie, wie Sie Datenflüsse entweder direkt im Arbeitsbereich &quot;Ziele&quot;überwachen oder das Monitoring-Dashboard verwenden können, um Datenflüsse für Ihre Ziele mithilfe der Experience Platform-Benutzeroberfläche zu überwachen.
 
 ## Erste Schritte {#getting-started}
 
@@ -141,6 +141,7 @@ Bei Batch-Zielen muss die Variable [!UICONTROL Datenfluss-Abläufe] -Tab enthäl
 Jeder einzelne Datenfluss zeigt die folgenden Details an:
 
 - **[!UICONTROL Start des Datenflusses]**: Die Zeit, zu der der Datenfluss gestartet wurde.
+- **[!UICONTROL Segment]**: Der Name des Segments, das mit jedem Datenfluss verknüpft ist.
 - **[!UICONTROL Verarbeitungszeit]**: Die Zeit, die für die Verarbeitung des Datenflusses benötigt wurde.
 - **[!UICONTROL Vorgenommene Profile]**: Die Gesamtzahl der im Datenfluss empfangenen Profile. Dieser Wert wird alle 60 Minuten aktualisiert.
 - **[!UICONTROL Aktivierte Identitäten]**: Die Gesamtzahl der Profil-Identitäten, die erfolgreich für das ausgewählte Ziel im Rahmen der Datenfluss-Ausführung aktiviert wurden. Diese Metrik enthält Identitäten, die aus exportierten Segmenten erstellt, aktualisiert und entfernt werden.
@@ -214,7 +215,7 @@ Die **[!UICONTROL Aktivierung]** zeigt eine Liste von Zielen an, die mindestens 
 | **[!UICONTROL Ausgeschlossene Identitäten]** | Streaming und Batch |
 | **[!UICONTROL Aktivierungsrate]** | Streaming |
 | **[!UICONTROL Gesamtzahl fehlgeschlagener Datenflüsse]** | Batch |
-| **[!UICONTROL Letzte Aktualisierung]** | Streaming und Batch |
+| **[!UICONTROL Zuletzt aktualisiert]** | Streaming und Batch |
 
 ![Dashboard aller aktivierten Ziele](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
