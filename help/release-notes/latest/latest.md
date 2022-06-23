@@ -1,10 +1,10 @@
 ---
 title: Juni 2022 - Adobe Experience Platform-Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Juni 2022.
-source-git-commit: 71f781fafa6124237955e7979fab29e7c03f984e
+source-git-commit: bff266fca5762d6da123af712364ee1fc30a6784
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 51%
+source-wordcount: '802'
+ht-degree: 47%
 
 ---
 
@@ -52,6 +52,15 @@ Weitere allgemeine Informationen zu Data Science Workspace finden Sie unter [Üb
 ## [!DNL Destinations] {#destinations}
 
 [!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+**Neue oder aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| ----------- | ----------- |
+| [(Beta) Google Ad Manager 360-Verbindung](../../destinations/catalog/advertising/google-ad-manager-360-connection.md) | Die [!DNL Google Ad Manager 360] Verbindung aktiviert Batch-Upload für [!DNL publisher provided identifiers] (PPID) nach [!DNL Google Ad Manager 360]über [!DNL Google Cloud Storage] <br><br>Dieses Ziel befindet sich derzeit in der Betaversion und steht nur einer begrenzten Anzahl von Kunden zur Verfügung. So fordern Sie Zugriff auf die [!DNL Google Ad Manager 360] Verbindung herstellen, kontaktieren Sie Ihren Kundenbetreuer und geben Sie Ihre [!DNL IMS Organization ID]. |
+| (Beta) Destination SDK-Unterstützung für [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) dateibasierte Ziele und [konfigurierbare Dateinamen](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Sie können jetzt die Destination SDK verwenden, um Google Cloud-Speicher-Ziele zu erstellen und benutzerdefinierte Dateinamen für exportierte Dateien über Dateinamenmakros zu definieren. <br><br> Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern. |
+
+{style=&quot;table-layout:auto&quot;}
 
 **Neue Ziele**
 
