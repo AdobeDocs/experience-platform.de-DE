@@ -1,10 +1,10 @@
 ---
 title: Juni 2022 - Adobe Experience Platform-Versionshinweise
 description: Die Versionshinweise für Adobe Experience Platform vom Juni 2022.
-source-git-commit: 4edd2042234149ab8836da4fc58eb4d6084ae205
+source-git-commit: 314cd79185748e848bcb06fb21bfe4fea37a8853
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 46%
+source-wordcount: '860'
+ht-degree: 44%
 
 ---
 
@@ -58,6 +58,7 @@ Weitere allgemeine Informationen zu Data Science Workspace finden Sie unter [Üb
 | Funktion | Beschreibung |
 | ----------- | ----------- |
 | (Beta) Destination SDK-Unterstützung für [[!DNL Google Cloud Storage]](../../destinations/destination-sdk/server-and-file-configuration.md#gcs-example) dateibasierte Ziele und [konfigurierbare Dateinamen](../../destinations/destination-sdk/file-based-destination-configuration.md#file-name-configuration). | Sie können jetzt die Destination SDK verwenden, um Google Cloud-Speicher-Ziele zu erstellen und benutzerdefinierte Dateinamen für exportierte Dateien über Dateinamenmakros zu definieren. <br><br> Die Unterstützung für dateibasierte Ziele im Adobe Experience Platform Destination SDK ist derzeit als Beta-Version verfügbar. Dokumentation und Funktionalität können sich ändern. |
+| Segmentspalte im Datenfluss führt zu Batch-Zielen aus. | Für Datenflüsse, die zu Batch-Zielen ausgeführt werden, zeigt die Benutzeroberfläche jetzt den Namen des Segments an, das mit jedem Datenfluss verknüpft ist. Mehr dazu [Datenfluss wird zu Batch-Zielen ausgeführt](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations). |
 
 {style=&quot;table-layout:auto&quot;}
 
