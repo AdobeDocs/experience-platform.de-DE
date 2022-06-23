@@ -1,10 +1,11 @@
 ---
 description: Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele können im Adobe Experience Platform Destination SDK über den Endpunkt /destination-servers konfiguriert werden.
 title: (Beta) Konfigurationsoptionen für dateibasierte Ziel-Server-Spezifikationen
-source-git-commit: bc357e2e93b80edb5f7825bf2dee692f14bd7297
-workflow-type: ht
-source-wordcount: '748'
-ht-degree: 100%
+exl-id: 56434e36-0458-45d9-961d-f6505de998f7
+source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+workflow-type: tm+mt
+source-wordcount: '895'
+ht-degree: 90%
 
 ---
 
@@ -37,7 +38,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
         }
     },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -50,6 +51,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedS3Destination.bucket.value` | Zeichenfolge | Der Name des [!DNL Amazon S3]-Buckets, der von diesem Ziel verwendet werden soll. |
 | `fileBasedS3Destination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedS3Destination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
+| `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
 ## Spezifikation des dateibasierten SFTP-Ziel-Servers {#sftp-example}
 
@@ -70,7 +72,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
       "encryptionMode" : "PGP"
    },
     "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -85,6 +87,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedSftpDestination.hostName.value` | Zeichenfolge | Der Host-Name des Zielspeichers. |
 | `port` | Ganzzahl | Der SFTP-Datei-Server-Port. |
 | `encryptionMode` | Zeichenfolge | Gibt an, ob eine Dateiverschlüsselung verwendet werden soll. Unterstützte Werte: <ul><li>PGP</li><li>Keine</li></ul> |
+| `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Azure Data Lake Storage] ([!DNL ADLS]) {#adls-example}
 
@@ -99,7 +102,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -110,6 +113,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `destinationServerType` | Zeichenfolge | Legen Sie diesen Wert entsprechend Ihrer Zielplattform fest. Wählen Sie für [!DNL Azure Data Lake Storage]-Ziele `FILE_BASED_ADLS_GEN2`. |
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
+| `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Azure Blob Storage] {#blob-example}
 
@@ -128,7 +132,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
       }
    },
   "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -141,6 +145,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedAzureBlobDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedAzureBlobDestination.container.value` | Zeichenfolge | Der Name des [!DNL Azure Blob Storage]-Containers, der von diesem Ziel verwendet werden soll. |
+| `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
@@ -156,7 +161,7 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
       "useCase": "Your use case"
    },
    "fileConfigurations": {
-       // see File-based destinations file configuration
+       // See the file formatting configuration section further below on this page
     }
 }
 ```
@@ -167,8 +172,41 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `destinationServerType` | Zeichenfolge | Legen Sie diesen Wert entsprechend Ihrer Zielplattform fest. Wählen Sie für [!DNL Data Landing Zone]-Ziele `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.*  Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
+| `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
-## Dateibasierte Zieldateikonfiguration {#file-configuration}
+## Dateibasierte Ziel-Server-Spezifikation für [!DNL Google Cloud Storage] {#gcs-example}
+
+```json
+{
+   "name":"Google Cloud Storage Server",
+   "destinationServerType":"FILE_BASED_GOOGLE_CLOUD",
+   "fileBasedGoogleCloudStorageDestination":{
+      "bucket":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.bucket}}"
+      },
+      "path":{
+         "templatingStrategy":"PEBBLE_V1",
+         "value":"{{customerData.path}}"
+      }
+   },
+   "fileConfigurations":{
+      // See the file formatting configuration section further below on this page
+   }
+}
+```
+
+| Parameter | Typ | Beschreibung |
+|---|---|---|
+| `name` | Zeichenfolge | Der Name Ihrer Zielverbindung. |
+| `destinationServerType` | Zeichenfolge | Legen Sie diesen Wert entsprechend Ihrer Zielplattform fest. Wählen Sie für [!DNL Google Cloud Storage]-Ziele `FILE_BASED_GOOGLE_CLOUD`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | Zeichenfolge | *Erforderlich.*  Verwenden Sie `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.value` | Zeichenfolge | Der Name des [!DNL Google Cloud Storage]-Buckets, der von diesem Ziel verwendet werden soll. |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
+| `fileBasedGoogleCloudStorageDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
+| `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
+
+## Dateiformatierung {#file-configuration}
 
 In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportierten `CSV`-Dateien beschrieben. Sie können verschiedene Eigenschaften der exportierten Dateien an die Anforderungen des Dateiempfangssystems auf Ihrer Seite anpassen, um die aus Experience Platform empfangenen Dateien optimal zu lesen und zu interpretieren.
 
@@ -239,7 +277,8 @@ In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportie
                 "templatingStrategy": "NONE",
                 "value": "\n"
             }
-        }
+        },
+        "maxFileRowCount":5000000
     }
 ```
 
@@ -260,3 +299,4 @@ In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportie
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. |
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` |
 | `csvOptions.lineSep.value` | Optional | *Nur für`"fileType.value": "csv"`*. Definiert das Zeilentrennzeichen, das zum Schreiben verwendet werden soll. Die maximale Länge beträgt 1 Zeichen. | `\n` |
+| `maxFileRowCount` | Optional | Maximale Anzahl von Zeilen, die die exportierte Datei enthalten kann. Konfigurieren Sie dies anhand der Dateigrößenanforderungen Ihrer Zielplattform. | K. A. |

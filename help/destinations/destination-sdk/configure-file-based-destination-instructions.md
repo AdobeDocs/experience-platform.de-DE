@@ -1,10 +1,11 @@
 ---
 description: Auf dieser Seite werden die Schritte zum Konfigurieren eines dateibasierten Ziels mithilfe des Destination SDK aufgeführt und beschrieben.
 title: (Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
-source-wordcount: '477'
-ht-degree: 100%
+exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
+source-git-commit: 77c80c391ef6677f95af81ef15272380687e6789
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 99%
 
 ---
 
@@ -248,7 +249,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ## Schritt 3: Erstellen einer Zielgruppen-Metadatenkonfiguration {#create-audience-metadata-configuration}
 
-Für einige Ziele erfordert das Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Unter [Verwaltung von Zielgruppen-Metadaten](./audience-metadata-management.md) finden Sie Informationen darüber, wann Sie diese Konfiguration einrichten müssen und wie Sie dies tun.
+Für einige Ziele erfordert das Destination SDK, dass Sie eine Zielgruppen-Metadatenkonfiguration konfigurieren, um Zielgruppen in Ihrem Ziel programmgesteuert zu erstellen, zu aktualisieren oder zu löschen. Informationen dazu, wann Sie diese Konfiguration einrichten müssen und wie Sie sie durchführen, finden Sie unter [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md).
 
 Wenn Sie eine Zielgruppen-Metadatenkonfiguration verwenden, müssen Sie diese mit der Zielkonfiguration verbinden, die Sie in Schritt 2 erstellt haben. Fügen Sie die Instanz-ID Ihrer Zielgruppen-Metadatenkonfiguration als `audienceTemplateId` zu Ihrer Zielkonfiguration hinzu.
 
@@ -259,8 +260,9 @@ Je nachdem, ob Sie `"authenticationRule": "CUSTOMER_AUTHENTICATION"` oder `"auth
 * Wenn Sie in der Zielkonfiguration `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ausgewählt haben, finden Sie in den folgenden Abschnitten Informationen zu den Authentifizierungstypen, die vom Destination SDK für dateibasierte Ziele unterstützt werden:
 
    * [Amazon S3-Authentifizierung](authentication-configuration.md#s3)
-   * [Azure-Verbindungszeichenfolge](authentication-configuration.md#blob)
-   * [Azure-Service-Prinzipal](authentication-configuration.md#adls)
+   * [Azure Blob](authentication-configuration.md#blob)
+   * [Azure Data Lake Storage](authentication-configuration.md#adls)
+   * [Google Cloud Storage](authentication-configuration.md#gcs)
    * [SFTP-Authentifizierung mit SSH-Schlüssel](authentication-configuration.md#sftp-ssh)
    * [SFTP-Authentifizierung mit Passwort](authentication-configuration.md#sftp-password)
 

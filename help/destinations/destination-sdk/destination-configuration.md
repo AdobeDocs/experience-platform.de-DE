@@ -2,7 +2,7 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: e3886cbcde76e37263d2fa23769fb9e96501edc4
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '1787'
 ht-degree: 98%
@@ -271,6 +271,7 @@ Geben Sie über den Parameter `maxUsersPerRequest` die maximale Anzahl der Profi
 Diese Option eignet sich am besten, wenn Sie im selben Aufruf große Batches mit Tausenden Profilen verwenden möchten. Mit dieser Option können Sie die exportierten Profile auch anhand komplexer Aggregationsregeln aggregieren.
 
 Diese Option ermöglicht Ihnen Folgendes:
+
 * Legen Sie vor einem eines API-Aufruf an Ihr Ziel die maximale Zeit und die maximale Anzahl von Profilen fest, die aggregiert werden sollen.
 * Aggregieren Sie die exportierten, dem Ziel zugeordneten Profile anhand folgender Kriterien:
    * Segment-ID;

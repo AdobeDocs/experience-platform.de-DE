@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden alle API-Abläufe aufgelistet und beschrieben, die Sie mit dem API-Endpunkt „/authoring/destinations“ ausführen können.
 title: API-Endpunktvorgänge für Ziele
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: b12e46592c6c7bb09a90b809e7fac7d05703210a
 workflow-type: tm+mt
 source-wordcount: '2537'
 ht-degree: 98%
@@ -35,7 +35,7 @@ POST /authoring/destinations
 
 Die folgende Anfrage erstellt eine neue Streaming-Zielkonfiguration, der durch die in der Payload bereitgestellten Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter für Streaming-Ziele, die vom Endpunkt `/authoring/destinations` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
-```json
+```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
@@ -200,7 +200,14 @@ POST /authoring/destinations
 
 Die folgende Anfrage erstellt eine neue [!DNL Amazon S3]-dateibasierte Zielkonfiguration, die anhand der in der Payload angegebenen Parameter konfiguriert wird. Die nachstehende Payload enthält alle Parameter für dateibasierte Ziele, die vom Endpunkt `/authoring/destinations` akzeptiert werden. Beachten Sie, dass Sie nicht alle Parameter für den Aufruf hinzufügen müssen und dass die Vorlage entsprechend Ihren API-Anforderungen angepasst werden kann.
 
-```json
+```shell
+curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '
 {
         "name": "S3 Destination with CSV Options",
         "description": "S3 Destination with CSV Options",

@@ -2,7 +2,7 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: f000eadb689a99f7667c47e2bef5d2a780aa0505
+source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
 workflow-type: tm+mt
 source-wordcount: '2266'
 ht-degree: 3%
@@ -61,7 +61,7 @@ Um den Prozess der Profilumwandlung zu demonstrieren, verwendet das folgende Bei
 
 Nehmen wir an, Ihre Plattform kann ein Nachrichtenformat wie:
 
-```curl
+```shell
 POST https://YOUR_REST_API_URL/users/
 Content-Type: application/json
 Authorization: Bearer YOUR_REST_API_KEY
@@ -474,7 +474,6 @@ Profil 2:
     ]
 }
 ```
-
 
 ### Erstellen einer Vorlage, die Segmente und Identitäten sendet {#segments-and-identities}
 
