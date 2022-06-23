@@ -5,10 +5,10 @@ title: Löschen eines Ziel-Datenflusses mithilfe der Flow Service-API
 type: Tutorial
 description: Erfahren Sie, wie Sie mithilfe der Flow Service-API Datenflüsse an Batch- und Streaming-Ziele löschen.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c35a29d4e9791b566d9633b651aecd2c16f88507
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 60%
+source-wordcount: '572'
+ht-degree: 57%
 
 ---
 
@@ -84,7 +84,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 202 (kein Inhalt) und leeren Text
 
 ## Umgang mit API-Fehlern {#api-error-handling}
 
-Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für die Fehlermeldung bei der Experience Platform-API. Siehe [API-Status-Codes](../../landing/troubleshooting.md#api-status-codes) und [Fehler im Anfrage-Header](../../landing/troubleshooting.md#request-header-errors) in der Anleitung zur Fehlerbehebung für Platform.
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für die Fehlermeldung bei der Experience Platform-API. Siehe [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
 
 ## Nächste Schritte {#next-steps}
 

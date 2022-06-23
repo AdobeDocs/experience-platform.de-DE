@@ -7,10 +7,10 @@ landing-page-description: Hier finden Sie Antworten auf häufig gestellte Fragen
 topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: ef565383ab6abfe93eb8ed6a86216642eec11f6e
+source-git-commit: da3e93f6c10c89c173fff786604ef844f56081be
 workflow-type: tm+mt
-source-wordcount: '1758'
-ht-degree: 66%
+source-wordcount: '1851'
+ht-degree: 63%
 
 ---
 
@@ -34,11 +34,11 @@ Weitere Informationen zum Erstellen von API-Anfragen finden Sie im Erste-Schritt
 
 ## Was ist meine IMS-Organisation? {#what-is-my-ims-organization}
 
-Eine IMS-Organisation ist eine Adobe-Darstellung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation berechtigt ist, [!DNL Experience Platform], kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anfragen als Kopfzeile obligatorisch. Diese ID kann über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): im **Integrationen** Registerkarte navigieren, navigieren Sie zum **Übersicht** für eine bestimmte Integration, um die ID unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren in [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de#platform-apis).
+Eine IMS-Organisation ist eine Adobe-Darstellung eines Kunden. Alle lizenzierten Adobe-Lösungen sind in diese Kundenorganisation integriert. Wenn eine IMS-Organisation berechtigt ist, [!DNL Experience Platform], kann sie Entwicklern Zugriff zuweisen. Die IMS-Organisations-ID (`x-gw-ims-org-id`) stellt die Organisation dar, für die ein API-Aufruf ausgeführt werden soll, und ist daher in allen API-Anfragen als Kopfzeile obligatorisch. Diese ID kann über die [Adobe Developer-Konsole](https://www.adobe.com/go/devs_console_ui): im **Integrationen** Registerkarte navigieren, navigieren Sie zum **Übersicht** für eine bestimmte Integration, um die ID unter zu finden. **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren in [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=de).
 
 ## Wo finde ich meinen API-Schlüssel? {#where-can-i-find-my-api-key}
 
-In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie finden sie über die [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration; Sie finden den Schlüssel dann unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
+In allen API-Anfragen ist ein API-Schlüssel als Kopfzeile erforderlich. Sie finden sie über die [Adobe Developer-Konsole](https://www.adobe.com/go/devs_console_ui). Navigieren Sie in der Konsole auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration; Sie finden den Schlüssel dann unter **Client-Anmeldedaten**. Eine schrittweise Anleitung zum Authentifizieren bei [!DNL Platform], siehe [Authentifizierungs-Tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Woher bekomme ich ein Zugriffstoken? {#how-do-i-get-an-access-token}
 
@@ -64,7 +64,7 @@ Viele PATCH-Vorgänge in [!DNL Platform] APIs verwenden [JSON Pointer](https://t
 
 ## Kann ich Postman verwenden, um Aufrufe an [!DNL Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) ist ein hilfreiches Tool zur Visualisierung von Aufrufen an RESTful-APIs. Die [Erste Schritte mit der Platform-API](api-guide.md) enthält ein Video und Anweisungen zum Importieren von Postman-Sammlungen. Darüber hinaus wird für jeden Dienst eine Liste von Postman-Kollektionen bereitgestellt.
+[Postman](https://www.postman.com/) ist ein hilfreiches Tool zur Visualisierung von Aufrufen an RESTful-APIs. Die [Erste Schritte mit der Platform-API](api-guide.md) enthält ein Video und Anweisungen zum Importieren von Postman-Sammlungen. Darüber hinaus wird eine Liste mit Postman-Sammlungen für jeden Dienst bereitgestellt.
 
 ## Welche Systemanforderungen gelten für [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
@@ -109,7 +109,7 @@ Alle API-Aufrufe in [!DNL Platform] erfordert bestimmte Anfragekopfzeilen. Infor
 
 Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine `Authorization`-Kopfzeile fehlt. Stellen Sie sicher, dass die Autorisierungskopfzeile ein gültiges Zugriffstoken beinhaltet, bevor Sie es erneut versuchen.
 
-### OAuth-Token ist ungültig
+### OAuth-Token ist ungültig {#oauth-token-is-not-valid}
 
 ```json
 {
@@ -120,7 +120,7 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine `Authorizatio
 
 Diese Fehlermeldung wird angezeigt, wenn das in der `Authorization`-Kopfzeile angegebene Zugriffstoken ungültig ist. Vergewissern Sie sich, dass Sie das Token richtig eingegeben haben, oder [generieren Sie ein neues Token](https://www.adobe.com/go/platform-api-authentication-en) in der Adobe I/O-Konsole.
 
-### API-Schlüssel erforderlich
+### API-Schlüssel erforderlich {#api-key-is-required}
 
 ```json
 {
@@ -131,7 +131,7 @@ Diese Fehlermeldung wird angezeigt, wenn das in der `Authorization`-Kopfzeile an
 
 Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile für den API-Schlüssel (`x-api-key`) fehlt. Stellen Sie sicher, dass die Kopfzeile einen gültigen API-Schlüssel enthält, bevor Sie es erneut versuchen.
 
-### API-Schlüssel ist ungültig
+### API-Schlüssel ist ungültig {#api-key-is-invalid}
 
 ```json
 {
@@ -142,8 +142,7 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile fü
 
 Diese Fehlermeldung wird angezeigt, wenn der Wert der bereitgestellten API-Schlüsselkopfzeile (`x-api-key`) ungültig ist. Vergewissern Sie sich, dass Sie den Schlüssel richtig eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie Ihren API-Schlüssel nicht kennen, können Sie ihn in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um den API-Schlüssel unter **Client-Anmeldedaten** anzuzeigen.
 
-
-### Fehlende Kopfzeile
+### Fehlende Kopfzeile {#missing-header}
 
 ```json
 {
@@ -154,7 +153,7 @@ Diese Fehlermeldung wird angezeigt, wenn der Wert der bereitgestellten API-Schl�
 
 Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile für die IMS-Organisation (`x-gw-ims-org-id`) fehlt. Stellen Sie sicher, dass die Kopfzeile die Kennung Ihrer IMS-Organisation enthält, bevor Sie es erneut versuchen.
 
-### Profil ist ungültig
+### Profil ist ungültig {#profile-is-not-valid}
 
 ```json
 {
@@ -165,7 +164,19 @@ Diese Fehlermeldung wird angezeigt, wenn in einer API-Anfrage eine Kopfzeile fü
 
 Diese Fehlermeldung wird angezeigt, wenn der Benutzer bzw. die Adobe I/O (durch die Variable [Zugriffstoken](#how-do-i-get-an-access-token) im `Authorization` -Kopfzeile) nicht berechtigt ist, Aufrufe an [!DNL Experience Platform] APIs für die IMS-Organisation, die im Abschnitt `x-gw-ims-org-id` -Kopfzeile. Stellen Sie sicher, dass Sie in der Kopfzeile die richtige Kennung für Ihre IMS-Organisation eingegeben haben, bevor Sie es erneut versuchen. Wenn Sie die Kennung Ihrer Organisation nicht kennen, können Sie sie in der [Adobe I/O-Konsole](https://console.adobe.io) finden: Navigieren Sie auf der Registerkarte **Integrationen** zum Abschnitt **Übersicht** einer bestimmten Integration, um die Kennung unter **Client-Anmeldedaten** anzuzeigen.
 
-### Kein gültiger Inhaltstyp angegeben
+### Aktualisieren des eTag-Fehlers {#refresh-etag-error}
+
+```json
+{
+"errorMessage":"Supplied version=[\\\\\\\"a200a2a3-0000-0200-0000-123178f90000\\\\\\\"] does not match the current version on entity=[\\\\\\\"a200cdb2-0000-0200-0000-456179940000\\\\\\\"]"
+}
+```
+
+Sie erhalten möglicherweise einen eTag-Fehler, wenn eine Änderung an einer Quell- oder Zielentität wie Fluss, Verbindung, Quell-Connector oder Zielverbindung durch einen anderen API-Aufrufer vorgenommen wurde. Aufgrund der unterschiedlichen Versionen wurde die Änderung, die Sie vornehmen möchten, nicht auf die neueste Version der Entität angewendet.
+
+Um dies zu beheben, müssen Sie die Entität erneut abrufen, sicherstellen, dass Ihre Änderungen mit der neuen Version der Entität kompatibel sind, und dann das neue eTag im `If-Match` und schließlich den API-Aufruf ausführen.
+
+### Kein gültiger Inhaltstyp angegeben {#valid-content-type-not-specified}
 
 ```json
 {
@@ -178,7 +189,7 @@ Diese Fehlermeldung wird angezeigt, wenn der Benutzer bzw. die Adobe I/O (durch 
 
 Diese Fehlermeldung wird angezeigt, wenn eine POST-, PUT- oder PATCH-Anfrage eine ungültige oder fehlende `Content-Type`-Kopfzeile aufweist. Stellen Sie sicher, dass die Kopfzeile in der Anfrage enthalten ist und ihr Wert `application/json` lautet.
 
-### Benutzerregion fehlt
+### Benutzerregion fehlt {#user-region-is-missing}
 
 ```json
 {

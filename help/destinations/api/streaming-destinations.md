@@ -6,10 +6,10 @@ description: In diesem Dokument wird die Erstellung von Streaming-Zielen mithilf
 topic-legacy: tutorial
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 183830318a3dd5012f27a73a8dd2753638aff83f
 workflow-type: tm+mt
-source-wordcount: '2049'
-ht-degree: 56%
+source-wordcount: '2241'
+ht-degree: 58%
 
 ---
 
@@ -471,10 +471,17 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]
 ```
 
-* `{DATAFLOW_ID}`: Verwenden Sie den Datenfluss, den Sie im vorherigen Schritt erstellt haben.
-* `{ETAG}`: Verwenden Sie das eTag, das Sie im vorherigen Schritt erhalten haben.
-* `{SEGMENT_ID}`: Geben Sie die Kennung des Segments an, das Sie an dieses Ziel exportieren möchten. Um Segment-IDs für die Segmente abzurufen, die Sie aktivieren möchten, gehen Sie zu **https://www.adobe.io/apis/experienceplatform/home/api-reference.html#/** auswählen **[!UICONTROL Segmentierungsdienst-API]** im linken Navigationsmenü und suchen Sie nach dem `GET /segment/definitions` Betrieb **[!UICONTROL Segmentdefinitionen]**.
-* `{PROFILE_ATTRIBUTE}`: Beispiel: `personalEmail.address` oder `person.lastName`
+| Eigenschaft | Beschreibung |
+| --------- | ----------- |
+| `{DATAFLOW_ID}` | Verwenden Sie in der URL die ID des Datenflusses, den Sie im vorherigen Schritt erstellt haben. |
+| `{ETAG}` | Rufen Sie die `{ETAG}` aus der Antwort im vorherigen Schritt, [Erstellen eines Datenflusses](#create-dataflow). Das Antwortformat im vorherigen Schritt hat Escape-Anführungszeichen. Sie müssen die nicht maskierten Werte in der Kopfzeile der Anfrage verwenden. Siehe das Beispiel unten: <br> <ul><li>Reaktionsbeispiel: `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Wert, der in Ihrer Anfrage verwendet werden soll: `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> Der eTag-Wert wird bei jeder erfolgreichen Aktualisierung eines Datenflusses aktualisiert. |
+| `{SEGMENT_ID}` | Geben Sie ID des Segments an, das Sie an dieses Ziel exportieren möchten. Informationen zum Abrufen von Segment-IDs für die Segmente, die Sie aktivieren möchten, finden Sie unter [Abrufen einer Segmentdefinition](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) in der Experience Platform-API-Referenz. |
+| `{PROFILE_ATTRIBUTE}` | Beispiel: `"person.lastName"` |
+| `op` | Der Operationsaufruf, der verwendet wird, um die Aktion zu definieren, die zur Aktualisierung des Datenflusses erforderlich ist. Operationen umfassen: `add`, `replace` und `remove`. Um ein Segment zu einem Datenfluss hinzuzufügen, verwenden Sie die Operation `add`. |
+| `path` | Definiert den Teil des Flusses, der aktualisiert werden soll. Verwenden Sie beim Hinzufügen eines Segments zu einem Datenfluss den im Beispiel angegebenen Pfad. |
+| `value` | Der neue Wert, mit dem Sie Ihren Parameter aktualisieren möchten. |
+| `id` | Geben Sie die ID des Segments an, das Sie dem Ziel-Datenfluss hinzufügen. |
+| `name` | *Optional*. Geben Sie den Namen des Segments an, das Sie dem Ziel-Datenfluss hinzufügen möchten. Beachten Sie, dass dieses Feld nicht obligatorisch ist und Sie ein Segment erfolgreich zum Ziel-Datenfluss hinzufügen können, ohne dessen Namen anzugeben. |
 
 **Antwort**
 
@@ -597,7 +604,7 @@ Die zurückgegebene Antwort sollte im `transformations`-Parameter die Segmente u
 }
 ```
 
-## Verwenden von Postman-Sammlungen zum Herstellen einer Verbindung zu Streaming-Zielen  {#collections}
+## Verwenden [!DNL Postman] Sammlungen für die Verbindung mit Streaming-Zielen  {#collections}
 
 Um eine gestraffte Verbindung zu den in diesem Tutorial beschriebenen Streaming-Zielen herzustellen, können Sie [[!DNL Postman]](https://www.postman.com/).
 
@@ -612,17 +619,21 @@ Klicken [here](../assets/api/streaming-destination/DestinationPostmanCollection.
 
 Jede Sammlung enthält die erforderlichen Anforderungen und Umgebungsvariablen für [!DNL AWS Kinesis]und [!DNL Azure Event Hub]zurück.
 
-### Verwendung von Postman-Sammlungen
+### Verwendung der [!DNL Postman] Sammlungen {#how-to-use-postman-collections}
 
 So verbinden Sie sich erfolgreich mit den Zielen über die angehängte [!DNL Postman] Sammlungen, führen Sie die folgenden Schritte aus:
 
 * Herunterladen und installieren [!DNL Postman];
 * [Download](../assets/api/streaming-destination/DestinationPostmanCollection.zip) und entpacken Sie die angehängten Sammlungen.
-* Importieren Sie die Sammlungen aus den entsprechenden Ordnern in Postman.
+* Importieren Sie Sammlungen aus den entsprechenden Ordnern in [!DNL Postman];
 * Füllen Sie die Umgebungsvariablen gemäß den Anweisungen in diesem Artikel aus.
-* Führen Sie die [!DNL API] -Anfragen von Postman basierend auf den Anweisungen in diesem Artikel.
+* Führen Sie die [!DNL API] Anforderungen von [!DNL Postman], basierend auf den Anweisungen in diesem Artikel.
 
-## Nächste Schritte
+## Umgang mit API-Fehlern {#api-error-handling}
+
+Die API-Endpunkte in diesem Tutorial folgen den allgemeinen Grundsätzen für die Fehlermeldung bei der Experience Platform-API. Siehe [API-Statuscodes](/help/landing/troubleshooting.md#api-status-codes) und [Fehler in der Anfragekopfzeile](/help/landing/troubleshooting.md#request-header-errors) Weitere Informationen zur Interpretation von Fehlerantworten finden Sie im Handbuch zur Fehlerbehebung bei Platform .
+
+## Nächste Schritte {#next-steps}
 
 In diesem Tutorial haben Sie Platform erfolgreich mit einem Ihrer bevorzugten Streaming-Ziele verbunden und einen Datenfluss zum entsprechenden Ziel eingerichtet. Ausgehende Daten können jetzt im Ziel für Kundenanalysen oder andere Datenvorgänge verwendet werden, die Sie ausführen möchten. Weiterführende Informationen finden Sie auf den folgenden Seiten:
 
