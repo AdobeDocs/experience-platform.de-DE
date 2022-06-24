@@ -3,11 +3,11 @@ keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Abfra
 solution: Experience Platform
 title: API-Endpunkt für Abfragevorlagen
 topic-legacy: query templates
-description: Die folgende Dokumentation führt Sie durch die verschiedenen API-Aufrufe, die Sie mithilfe von Abfragevorlagen für die Query Service-API ausführen können.
+description: In diesem Handbuch werden die verschiedenen API-Aufrufe für Abfragevorlagen beschrieben, die Sie mit der Query Service-API ausführen können.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '668'
 ht-degree: 89%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 89%
 
 ## Beispiel-API-Aufrufe
 
-Nachdem Sie nun wissen, welche Header verwendet werden sollen, können Sie mit den Aufrufen an die [!DNL Query Service] API. In den folgenden Abschnitten werden die verschiedenen API-Aufrufe erläutert, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+In den folgenden Abschnitten werden die verschiedenen API-Aufrufe beschrieben, die Sie mithilfe der [!DNL Query Service] API. Jeder Aufruf enthält das allgemeine API-Format, eine Beispielanfrage mit den erforderlichen Kopfzeilen und eine Beispielantwort.
+
+Siehe [Dokumentation zu Benutzeroberflächenabfragevorlagen](../ui/query-templates.md) für Informationen zum Erstellen von Vorlagen über die Experience Platform-Benutzeroberfläche.
 
 ### Liste von Abfragevorlagen abrufen
 

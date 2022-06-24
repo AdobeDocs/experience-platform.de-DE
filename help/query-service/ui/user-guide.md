@@ -5,10 +5,10 @@ title: Anleitung zur Benutzeroberfläche des Abfrage-Editors
 topic-legacy: query editor
 description: Der Abfrage-Editor ist ein interaktives Tool von Adobe Experience Platform Query Service, mit dem Sie Abfragen für Kundenerlebnisdaten in der Experience Platform-Benutzeroberfläche schreiben, validieren und ausführen können. Der Abfrage-Editor unterstützt die Entwicklung von Abfragen für die Analyse und Datenexploration und ermöglicht Ihnen das Ausführen interaktiver Abfragen für Entwicklungszwecke sowie nicht interaktiver Abfragen zum Auffüllen von Datensätzen in Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: aa61cb696d647c5f039283ce5926d5fa1e901a13
+source-git-commit: c8b3b22b678622c31462ba0baa2f50fbe89b00d5
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 30%
+source-wordcount: '1625'
+ht-degree: 29%
 
 ---
 
@@ -135,6 +135,10 @@ Sie können einen Zeitplan löschen, indem Sie **[!UICONTROL Zeitplan löschen]*
 ### Speichern von Abfragen {#saving-queries}
 
 [!DNL Query Editor] bietet eine Speicherfunktion, mit der Sie eine Abfrage speichern und später daran arbeiten können. Um eine Abfrage zu speichern, wählen Sie **[!UICONTROL Speichern]** in der oberen rechten Ecke von [!DNL Query Editor]. Bevor eine Abfrage gespeichert werden kann, muss über das Bedienfeld **[!UICONTROL Details zur Abfrage]** ein Name für die Abfrage angegeben werden.
+
+>[!NOTE]
+>
+>Mit dem Abfrage-Editor in benannte und gespeicherte Abfragen sind als Vorlagen im Abfrage-Dashboard verfügbar. [!UICONTROL Durchsuchen] Registerkarte. Siehe [Vorlagendokumentation](./query-templates.md) für weitere Informationen.
 
 ### Auffinden früherer Abfragen {#previous-queries}
 
