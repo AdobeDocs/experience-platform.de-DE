@@ -3,10 +3,10 @@ title: Debugging im Adobe Experience Platform Web SDK
 description: Erfahren Sie, wie Sie Debugging-Funktionen im Experience Platform Web SDK umschalten.
 keywords: Debugging von Web SDK;Debugging;Konfigurieren;Befehl konfigurieren;Debugging-Befehl;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: d0d7fe42827579c502be9de29d36f24c94259b5f
+source-git-commit: c1e6b1519bc40e7d36bd83dc49e442d3d5583fed
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 65%
+source-wordcount: '515'
+ht-degree: 62%
 
 ---
 
@@ -19,7 +19,7 @@ Das Debugging ist standardmäßig deaktiviert, kann jedoch auf vier verschiedene
 * `configure`-Befehl
 * `setDebug`-Befehl
 * Abfragezeichenfolge-Parameter
-* Umschalten auf Debugging in Adobe Experience Platform Debugger aktivieren . Adobe Experience Platform ist ein leistungsstarkes Tool, das Ihre Webseiten überprüft und Ihnen dabei hilft, Implementierungsprobleme mit Ihren Experience Cloud-Produkten zu beheben. Adobe Experience Platform Debugger ist als Erweiterung [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) und [Firefox](https://addons.mozilla.org/de/firefox/addon/adobe-experience-platform-dbg/) verfügbar. Das Debugging kann über die Registerkarte &quot;Konfiguration&quot;im Abschnitt &quot;AEP Web SDK&quot;aktiviert werden.
+* Umschalten auf Debugging in Adobe Experience Platform Debugger aktivieren . Adobe Experience Platform ist ein leistungsstarkes Tool, das Ihre Webseiten überprüft und Ihnen dabei hilft, Implementierungsprobleme mit Ihren Experience Cloud-Produkten zu beheben. Adobe Experience Platform Debugger ist als [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) und [Firefox](https://addons.mozilla.org/de/firefox/addon/adobe-experience-platform-dbg/) -Erweiterung. Das Debugging kann über die Registerkarte &quot;Konfiguration&quot;im Abschnitt &quot;AEP Web SDK&quot;aktiviert werden.
 
 ![](../images/enable-debugging.png)
 
@@ -76,9 +76,13 @@ Es ist oft hilfreich, auf einige Details hinter der Bibliothek zuzugreifen, die 
 ```js
 alloy("getLibraryInfo").then(function(result) {
   console.log(result.libraryInfo.version);
+  console.log(result.libraryInfo.commands);
+  console.log(result.libraryInfo.configs);
 });
 ```
 
 Derzeit enthält das bereitgestellte `libraryInfo`-Objekt die folgenden Eigenschaften:
 
-* `version` Dies ist die Version der geladenen Bibliothek. Wenn die Version der Bibliothek, die geladen wird, beispielsweise 1.0.0 wäre, wäre der Wert `1.0.0`. Wenn die Bibliothek innerhalb der Tag-Erweiterung (mit dem Namen &quot;AEP Web SDK&quot;) ausgeführt wird, ist die Version die Bibliotheksversion und die Tag-Erweiterungsversion wurde mit einem &quot;+&quot;-Zeichen verbunden. Wenn die Version der Bibliothek beispielsweise 1.0.0 wäre und die Version der Tag-Erweiterung 1.2.0 wäre, wäre der Wert `1.0.0+1.2.0`.
+* `version`: Dies ist die Version der geladenen Bibliothek. Wenn die Version der Bibliothek, die geladen wird, beispielsweise 1.0.0 wäre, wäre der Wert `1.0.0`. Wenn die Bibliothek innerhalb der Tag-Erweiterung (mit dem Namen &quot;AEP Web SDK&quot;) ausgeführt wird, ist die Version die Bibliotheksversion und die Tag-Erweiterungsversion wurde mit einem &quot;+&quot;-Zeichen verbunden. Wenn die Version der Bibliothek beispielsweise 1.0.0 wäre und die Version der Tag-Erweiterung 1.2.0 wäre, wäre der Wert `1.0.0+1.2.0`.
+* `commands`: Dies sind alle verfügbaren Befehle, die von der geladenen Bibliothek unterstützt werden.
+* `configs`: Dies sind alle aktuellen Konfigurationen in der geladenen Bibliothek.

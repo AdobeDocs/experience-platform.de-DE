@@ -3,7 +3,7 @@ title: Ausführen von Adobe Experience Platform Web SDK-Befehlen
 description: Erfahren Sie, wie Sie Experience Platform Web SDK-Befehle ausführen
 keywords: Ausführen von Befehlen;commandName;Promises;getLibraryInfo;Antwortobjekte;Zustimmung;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: ca3ee230d510dfb9de400b6f573a612ec33c8f7a
+source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 71%
@@ -13,7 +13,7 @@ ht-degree: 71%
 # Ausführen von Befehlen
 
 
-Nachdem der Basis-Code auf Ihrer Web-Seite implementiert wurde, können Sie mit der Ausführung von Befehlen mit dem SDK beginnen. Sie müssen nicht warten, bis die externe Datei (`alloy.js`) vom Server geladen wird, bevor Befehle ausgeführt werden. Wenn das SDK noch nicht fertig geladen wurde, werden Befehle in die Warteschlange gestellt und so bald wie möglich vom SDK verarbeitet.
+Nachdem der Basis-Code auf Ihrer Web-Seite implementiert wurde, können Sie mit der Ausführung von Befehlen mit dem SDK beginnen. Sie müssen nicht auf die externe Datei (`alloy.js`) vom Server geladen werden, bevor Befehle ausgeführt werden. Wenn das SDK noch nicht fertig geladen wurde, werden Befehle in die Warteschlange gestellt und so bald wie möglich vom SDK verarbeitet.
 
 Befehle werden mit der folgenden Syntax ausgeführt.
 
@@ -65,12 +65,14 @@ alloy("commandName", options)
 
 ### Antwortobjekte
 
-Alle von Befehlen zurückgegebenen Zusagen werden mit einem `result` -Objekt aufgelöst. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Beispielsweise werden Bibliotheksinformationen im folgenden Befehl als Eigenschaft des Ergebnisobjekts übergeben.
+Alle von Befehlen zurückgegebenen Zusagen werden mit einem `result` -Objekt. Das Ergebnisobjekt enthält Daten, die vom Befehl und der Zustimmung des Benutzers abhängen. Beispielsweise werden Bibliotheksinformationen im folgenden Befehl als Eigenschaft des Ergebnisobjekts übergeben.
 
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
     console.log(result.libraryInfo.version);
+    console.log(result.libraryInfo.commands);
+    console.log(result.libraryInfo.configs);
   });
 ```
 
