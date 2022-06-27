@@ -1,17 +1,21 @@
 ---
-description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit dem Destination SDK erstellten Ziels übermitteln müssen.
-title: Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung
+description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
+title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 87%
+source-wordcount: '683'
+ht-degree: 75%
 
 ---
 
-# Übermitteln eines im Destination SDK erstellten Ziels zur Überprüfung
+# Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 
 ## Übersicht {#overview}
+
+>[!IMPORTANT]
+>
+>Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktierte (öffentliche) Ziele übermitteln. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie diese Materialien nicht produzieren und mit Adobe teilen.
 
 Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) veröffentlicht werden kann, müssen Sie Adobe bestimmte Informationen über das Ziel und die von Ihnen durchgeführten Tests zukommen lassen, um sicherzustellen, dass die Anwender beim Aktivieren von Daten auf Ihrer Plattform die bestmöglichen Ergebnisse erzielen.
 
@@ -22,7 +26,7 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
    * Ein API-Aufruf an Ihren Ziel-Endpunkt.
    * Die API-Antwort, die von Ihrem Ziel-Endpunkt empfangen wurde.
 * Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](./destination-publish-api.md) übermittelt haben.
-* (Nur für produktive Integrationen) eine Dokumentations-PR (Pull-Anfrage) entsprechend den Anweisungen im Abschnitt [Selbstbedienungs-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
+* Eine Dokumentation-PR (Pull-Anforderung) entsprechend den Anweisungen im Abschnitt [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
 * Eine Grafikdatei, die als Logo für Ihre Zielkarte im Zielkatalog von Experience Platform angezeigt werden soll.
 
 >[!IMPORTANT]

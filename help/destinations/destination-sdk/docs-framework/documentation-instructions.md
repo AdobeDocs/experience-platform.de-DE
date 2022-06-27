@@ -2,14 +2,18 @@
 title: Dokumentieren des Ziels in Adobe Experience Platform
 description: Schrittweise Anleitungen zum Erstellen einer Dokumentationsseite für Ihr Ziel in Adobe Experience Platform
 exl-id: 6cc9c758-44bb-463b-941a-06b1a22ee8f3
-source-git-commit: 3c871471802e905b58acf8cd25db6788f49b9e43
+source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '538'
 ht-degree: 8%
 
 ---
 
 # Dokumentieren des Ziels in Adobe Experience Platform
+
+>[!IMPORTANT]
+>
+>Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktierte (öffentliche) Ziele übermitteln. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie keine Dokumentation für Ihr Ziel erstellen und veröffentlichen.
 
 ## Übersicht {#overview}
 
