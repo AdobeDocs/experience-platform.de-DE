@@ -1,12 +1,10 @@
 ---
 title: Authentifizierung
-description: Erfahren Sie, wie Sie die Authentifizierung für die Adobe Experience Platform Edge Network Server-API konfigurieren
-seo-description: Learn how to configure authentication for the Adobe Experience Platform Edge Network Server API
-keywords: Datenerfassung; Authentifizierung; Adobe Experience Platform Edge Network API; Autorisierung
+description: Erfahren Sie, wie Sie die Authentifizierung für die Adobe Experience Platform Edge Network Server-API konfigurieren.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 64093bdb8cb1bf2f14caaa562e196a1d69e74359
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '638'
 ht-degree: 18%
 
 ---

@@ -1,12 +1,10 @@
 ---
 title: Nicht interaktive Datenerfassung
 description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API eine nicht interaktive Datenerfassung durchführt.
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs non-interactive data collection
-keywords: Datenerfassung;Sammlung;Adobe Experience Platform Edge Network;API;nicht interaktive Datenerfassung
 exl-id: 1a704e8f-8900-4f56-a843-9550007088fe
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '217'
 ht-degree: 5%
 
 ---
@@ -20,17 +18,6 @@ Nicht-interaktive Ereignis-Datenerfassungs-Endpunkte werden verwendet, um mehrer
 Das Senden von Ereignissen im Batch-Modus wird empfohlen, wenn Endbenutzerereignisse für einen kurzen Zeitraum lokal in die Warteschlange gestellt werden (z. B. wenn keine Netzwerkverbindung besteht).
 
 Batch-Ereignisse sollten nicht unbedingt demselben Endbenutzer angehören, d. h. Ereignisse können unterschiedliche Identitäten in ihren `identityMap` -Objekt.
-
-
-<!-- However, when an `ECID` identity is sent via a cookie or metadata (in Edge Network accepted format), the Edge Network will read it and associate it with each event in the batch.
-
-Each event should include the corresponding `XDM` content that needs to be collected.
-
->[!NOTE]
->
->[Experience Edge Identity Protocol](visitor-identification.md#experience-edge-identity-protocol) (`ECID` generation) is not applicable for data collection requests, meaning that events sent to this API should already have at least one identity associated to them. For server datastreams (calls to `server.adobedc.net`), the API requires that each event contains an identity **explicitly set as primary**. For device datastreams, the Edge Network will attempt to set the `ECID` as primary, when it is present, and no other primary identity is explicitly set.
-
--->
 
 ## Beispiel für nicht interaktiven API-Aufruf {#example}
 

@@ -1,14 +1,13 @@
 ---
 title: Personalisierung über Adobe Target
 description: Erfahren Sie, wie Sie mit der Server-API personalisierte Erlebnisse bereitstellen und rendern können, die in Adobe Target erstellt wurden.
-keywords: Personalisierung; Server-API; Adobe Experience Platform Edge Network; Personalisierung abrufen;Ziel;Adobe Target
-source-git-commit: 59cb43007c4a7ff125738c21064381cf833063b2
+exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '702'
 ht-degree: 3%
 
 ---
-
 
 # Personalisierung über Adobe Target
 
@@ -80,7 +79,7 @@ Die [!DNL Server API] ermöglicht Aktualisierungen am Target-Profil. Um ein Targ
 
 ## Abfrage zu Target-Aktivitäten {#querying-target-activities}
 
-### Schemata {#schemas}
+### Schemas {#schemas}
 
 Der Abfrageteil der Anfrage bestimmt, welcher Inhalt von Target zurückgegeben wird. Unter dem `personalization` -Objekt, `schemas` bestimmt den Inhaltstyp, der von Target zurückgegeben werden soll.
 

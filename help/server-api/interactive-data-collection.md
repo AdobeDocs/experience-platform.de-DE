@@ -1,12 +1,10 @@
 ---
 title: Interaktive Datenerfassung
 description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API die interaktive Datenerfassung durchführt.
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API performs interactive data collection
-keywords: Datenerfassung;Datenerfassung;Experience Platform Edge Network;API;interaktive Datenerfassung
 exl-id: 1b06e755-b6a9-42dd-96c1-98ad67e7d222
-source-git-commit: 0dce36d690cbe0b666bf30acfa69f52a8c6cac57
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '138'
 ht-degree: 7%
 
 ---

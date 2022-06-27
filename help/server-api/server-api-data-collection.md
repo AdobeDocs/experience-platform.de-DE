@@ -1,12 +1,10 @@
 ---
 title: Datenerfassung
 description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API die erfassten Daten strukturiert.
-seo-description: Learn how the Adobe Experience Platform Edge Network Server API structures the collected data
-keywords: Datenerfassung;Datenerfassung;Adobe Experience Platform Edge Network;API;Struktur
-source-git-commit: 422f859bef8faf292fd7e5fd8b6a8d31967421c1
+source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 8%
+source-wordcount: '131'
+ht-degree: 9%
 
 ---
 
@@ -18,7 +16,7 @@ Die [!DNL Server API] bietet zwei Arten von Datenerfassungs-Endpunkten:
 * [Endpunkte der interaktiven Datenerfassung](interactive-data-collection.md)verwendet wird, wenn der Client erwartet, dass eine Antwort vom Server zurückgegeben wird. Diese Endpunkte können bei der Datenerfassung auch Inhalte von anderen Edge Network-Diensten zurückgeben.
 * [Nicht interaktive Ereignisdatenerfassung](non-interactive-data-collection.md)verwendet, wenn vom Server keine Antwort erwartet wird. Diese Endpunkte werden nur für die Datenerfassung verwendet.
 
-## `Event` -Objekt {#event-object}
+## `Event` Objekt {#event-object}
 
 Von der [!DNL Server API] ist in der `Event` -Objekt. Die Struktur dieses Objekts wird nachfolgend beschrieben.
 
