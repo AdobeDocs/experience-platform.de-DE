@@ -1,14 +1,12 @@
 ---
 keywords: Ziele; Adobe Experience Platform; Plattform; Ziele - Übersicht; aktivieren von Daten; Aktivieren;
 title: Ziele – Übersicht
-seo-title: Destinations overview
-description: Erfahren Sie, wie Sie Adobe Experience Platform-Daten für Ziele für kanalübergreifende Marketing-Kampagnen, E-Mails, zielgruppengerechte Werbung und mehr aktivieren.
-seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: Ziele sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Sie können Ziele in der Adobe Experience Platform verwenden, um Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle zu aktivieren.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: c93e23d334ffe3cbee049f120a7b6c5e7e69d0ea
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 39%
+source-wordcount: '489'
+ht-degree: 44%
 
 ---
 
@@ -64,10 +62,10 @@ Weitere Informationen zur Auswahl von Marketing-Aktionen im Workflow &quot;Ziel 
 * [Werbeziele - Google Display &amp; Video 360 ](./catalog/advertising/google-dv360.md)
 * [Cloud-Speicher-Ziele](./catalog/cloud-storage/overview.md)
 * [E-Mail-Marketing-Ziele ](./catalog/email-marketing/overview.md)
-* [Social-Ziele](./catalog/social/overview.md)
+* [Social-Media-Ziele ](./catalog/social/overview.md)
 
 Weitere Informationen zu Verstößen gegen Datenrichtlinien im Workflow für die Segmentaktivierung finden Sie im Schritt Überprüfen in den folgenden Handbüchern:
 
 * [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](./ui/activate-segment-streaming-destinations.md#review)
-* [Aktivieren von Zielgruppendaten für Streaming-Profil-Export-Ziele](./ui/activate-streaming-profile-destinations.md#review)
-* [Aktivieren von Zielgruppendaten für Batch-Profil-Export-Ziele](./ui/activate-batch-profile-destinations.md#review)
+* [Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen](./ui/activate-streaming-profile-destinations.md#review)
+* [Aktivieren von Zielgruppendaten für Batch-Profil-Exportziele](./ui/activate-batch-profile-destinations.md#review)

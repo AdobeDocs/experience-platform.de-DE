@@ -2,11 +2,9 @@
 keywords: Profilattribute aktivieren;Ziele aktivieren;Daten aktivieren;E-Mail-Marketing-Ziele aktivieren;Cloud-Speicher-Ziele aktivieren
 title: Aktivieren von Zielgruppendaten für Exportziele von Streaming-Profilen
 type: Tutorial
-seo-title: Activate audience data to streaming profile export destinations
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren können, indem Sie Segmente an profilbasierte Ziele senden.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 0b094e635e6d22e58e5aa79a374df0879167a833
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 74%

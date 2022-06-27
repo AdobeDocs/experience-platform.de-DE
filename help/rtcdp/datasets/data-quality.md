@@ -1,11 +1,9 @@
 ---
 keywords: Datenqualität; rtcdp-Datenqualität
 title: Datenqualität in Real-time Customer Data Platform
-seo-title: Data quality on Real-time Customer Data Platform
 description: Ein Dokument zur Datenqualität in der Echtzeit-Kundendatenplattform
-seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
 exl-id: 1d1b0bf9-1011-4053-8f8a-7a141febd000
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 84%

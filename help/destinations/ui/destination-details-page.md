@@ -2,9 +2,8 @@
 keywords: Ziele; Ziel; Zieldetailseite; Zieldetailseite; Zieldetailseite
 title: Anzeigen von Zieldetails
 description: 'Die Detailseite für ein einzelnes Ziel bietet einen Überblick über die Zieldetails. Zu den Zieldetails gehören der Zielname, die ID, die dem Ziel zugeordneten Segmente und die Steuerelemente zum Bearbeiten der Aktivierung und zum Aktivieren und Deaktivieren des Datenflusses. '
-seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9928241235cac97b9b9a050256a22f9659e4092f
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '718'
 ht-degree: 7%
@@ -93,7 +92,7 @@ Die [!UICONTROL Aktivierungsdaten] zeigt eine Liste der Segmente an, die dem Zie
 >
 >Um Details zu den Attributen und Identitäten anzuzeigen und zu bearbeiten, die einem Ziel zugeordnet sind, wählen Sie **[!UICONTROL Segmente aktivieren]** im [rechte Leiste](#right-rail).
 
-![Batch-Ziel für die Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
+![Batch-Ziel der Aktivierungsdatenansicht](../assets/ui/details-page/activation-data-batch.png)
 
 ![Streaming-Ziel für Aktivierungsdaten-Ansicht](../assets/ui/details-page/activation-data-streaming.png)
 

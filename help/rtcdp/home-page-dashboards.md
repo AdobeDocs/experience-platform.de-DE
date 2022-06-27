@@ -1,11 +1,9 @@
 ---
 keywords: Metriken - Übersicht; Übersicht über rtcdp-Metriken
 title: Startseite und Dashboards der Echtzeit-Kundendatenplattform
-seo-title: Real-time Customer Data Platform Home Page and Dashboards
 description: Dashboards, Startseite und erstmalige Nutzung von Adobe Experience Platform
-seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 78%
@@ -43,13 +41,13 @@ Zusätzliche Metriken (z. B. für Profile und Segmente) stehen in anderen Teile
 
 ### Datensätze
 
-Der Zähler **[!UICONTROL Datensätze]** zeigt die Anzahl der Datensätze im System und die Datenmenge in [!DNL Platform] an. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
+Die **[!UICONTROL Datensätze]** Zähler zeigt die Anzahl der Datensätze im System und die Datenmenge in [!DNL Platform]. Dieser Zähler wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
 Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
 ### Profile
 
-Die Zählung **[!UICONTROL Profile]** zeigt die Gesamtzahl der Personen mit Profilen in [!DNL Real-time Customer Profile] an. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
+Die **[!UICONTROL Profile]** count zeigt die Gesamtzahl der Personen mit Profilen in der [!DNL Real-time Customer Profile]. Profilfragmente werden nicht einbezogen. Dabei handelt es sich um Ihre gesamte adressierbare Zielgruppe.
 
 Der Zähler nutzt die standardmäßige [Zusammenführungsrichtlinie](profile/merge-policies.md), die in der Konfiguration der Zusammenführungsrichtlinien im einheitlichen Profil festgelegt ist.
 
@@ -107,7 +105,7 @@ The number of failed profile records is updated hourly. -->
 
 Auf der Karte **[!UICONTROL Letzte Datensätze]** werden die fünf letzten Datensätze angezeigt, die im Unternehmen erstellt wurden. Diese Liste wird aktualisiert, sobald ein neuer Datensatz erstellt wird.
 
-Wählen Sie einen Datensatz aus, um die Details für dieses Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]**, um die Liste der Datensätze anzuzeigen. Dort können Sie eine bestimmte Quelle für Details auswählen.
+einen Datensatz auswählen, um die Details zu diesem Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um die Liste der Datensätze anzuzeigen. Dort können Sie eine bestimmte Quelle für Details auswählen.
 
 Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübersicht](../catalog/datasets/overview.md).
 
@@ -115,7 +113,7 @@ Weiterführende Informationen über Datensätze finden Sie in der [Datensatzübe
 
 Auf der Metrikkarte **[!UICONTROL Letzte Quellen]** werden die fünf Quellen angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald eine neue Quelle erstellt wird.
 
-Wählen Sie eine Quelle aus, um die Details für dieses Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]**, um die Liste der Quellen anzuzeigen. Dort können Sie eine bestimmte Quelle für Details auswählen.
+Wählen Sie eine Quelle aus, um die Details für dieses Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]** um die Liste der Quellen anzuzeigen. Dort können Sie eine bestimmte Quelle für Details auswählen.
 
 Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](sources/sources-overview.md).
 
@@ -123,7 +121,7 @@ Weiterführende Informationen zu Quellen finden Sie in der [Quellenübersicht](s
 
 Auf der Metrikkarte **[!UICONTROL Letzte Segmente]** werden die fünf Segmente angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Segment erstellt wird.
 
-Wählen Sie ein Segment aus, um die Details für dieses Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Segmente anzuzeigen.
+Wählen Sie ein Segment aus, um die Details für dieses Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]** , um Informationen zu weiteren Segmenten anzuzeigen.
 
 Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – Übersicht](segmentation/segmentation-overview.md).
 
@@ -131,6 +129,6 @@ Weitere Informationen zu Segmenten finden Sie unter [Segmentation Service – �
 
 Auf der Metrikkarte **[!UICONTROL Letzte Ziele]** werden die fünf Ziele angezeigt, die im Unternehmen zuletzt erstellt wurden. Diese Liste wird aktualisiert, sobald ein neues Ziel erstellt wird.
 
-Wählen Sie ein Ziel aus, um die Details für dieses Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]**, um Informationen über weitere Ziele anzuzeigen.
+Wählen Sie ein Ziel aus, um die Details zu diesem Element anzuzeigen, oder **[!UICONTROL Alle anzeigen]** , um Informationen über weitere Ziele anzuzeigen.
 
 Weiterführende Informationen zu Zielen finden Sie unter [Zielübersicht](destinations/overview.md).

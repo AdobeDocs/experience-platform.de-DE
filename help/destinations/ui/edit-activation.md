@@ -2,11 +2,9 @@
 keywords: Aktivierung bearbeiten, Ziel bearbeiten, Ziel bearbeiten
 title: Bearbeiten von Aktivierungsdatenflüssen
 type: Tutorial
-seo-title: Edit activation dataflows
 description: Führen Sie die Schritte in diesem Artikel aus, um einen vorhandenen Aktivierungsdatenfluss in Adobe Experience Platform zu bearbeiten.
-seo-description: Follow the steps in this article to edit an existing activation dataflow in Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: cf87db062f162f73a22c7085a25cc34e997597b1
+source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 1%
@@ -31,7 +29,7 @@ Gehen Sie wie folgt vor, um vorhandene Aktivierungsdatenflüsse zu bearbeiten:
 
 3. Wählen Sie den Namen des Ziel-Datenflusses aus, den Sie bearbeiten möchten.
 
-   ![Ziel auswählen](../assets/ui/edit-activation/destination-select.png)
+   ![Auswählen des Ziels](../assets/ui/edit-activation/destination-select.png)
 
 4. Die **[!UICONTROL Datenfluss-Abläufe]** -Seite für das Ziel angezeigt und zeigt die verfügbaren Steuerelemente an. An dieser Stelle können Sie mehrere Komponenten des Ziel-Datenflusses bearbeiten:
 

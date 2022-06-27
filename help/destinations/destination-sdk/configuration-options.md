@@ -1,17 +1,15 @@
 ---
 description: Der Zieldienst in Adobe Experience Platform verwendet Konfigurationsvorlagen für verschiedene Komponenten, die die Funktion "Ziele"aufbauen. Gemeinsam ermöglichen diese Komponenten der Experience Platform, eine Verbindung zu Zielpartnern herzustellen, benutzerdefinierte Nachrichten zu senden und Profildaten im gesamten digitalen Ökosystem zu aktivieren.
-seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
-seo-title: Configuration options in Destination SDK
-title: Konfigurationsoptionen im Ziel-SDK
+title: Konfigurationsoptionen in Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 0bd57e226155ee68758466146b5d873dc4fdca29
+source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
 source-wordcount: '345'
-ht-degree: 2%
+ht-degree: 8%
 
 ---
 
-# Konfigurationsoptionen im Ziel-SDK
+# Konfigurationsoptionen in Destination SDK
 
 ## Übersicht {#overview}
 
@@ -24,18 +22,18 @@ Der Zieldienst in Adobe Experience Platform verwendet Konfigurationsvorlagen fü
 * **Authentifizierungskonfiguration**: Diese Einstellungen definieren, wie Adobe Experience Platform-Benutzer eine Verbindung zu Ihrem Ziel herstellen.
 * **Konfiguration von Zielgruppen-Metadaten**: Mit dieser Vorlage können Sie konfigurieren, wie Zielgruppen/Segmente programmgesteuert in Ihrem Ziel erstellt, aktualisiert oder gelöscht werden.
 
-![Ziel-SDK-Vorlagen und -Konfigurationen](./assets/self-service-configuration.png)
+![Destination SDK-Vorlagen und -Konfigurationen](./assets/self-service-configuration.png)
 
 ## Verwandte Links {#related-links}
 
-Auf den folgenden Seiten finden Sie weitere Details zu den im Destination SDK verfügbaren Funktionen und Konfigurationsoptionen sowie zu den entsprechenden API-Vorgängen, die Sie ausführen können.
+Auf den folgenden Seiten finden Sie weitere Details zu den in Destination SDK verfügbaren Funktionen und Konfigurationsoptionen sowie zu den entsprechenden API-Vorgängen, die Sie ausführen können.
 
 | Beschreibung der Funktionen | API-Referenz |
 |--- |--- |
 | [Zielkonfiguration](./destination-configuration.md) | [API-Endpunktvorgänge für Ziele](./destination-configuration-api.md) |
 | [Server- und Vorlagenspezifikationen](./server-and-template-configuration.md) | [API-Endpunktvorgänge für Zielserver](./destination-server-api.md) |
-| [Authentifizierungskonfiguration](./authentication-configuration.md) | [API-Vorgänge für Anmeldeendpunkte](./credentials-configuration-api.md) |
-| [Zielgruppen-Metadatenverwaltung](./audience-metadata-management.md) | [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./audience-metadata-api.md) |
+| [Authentifizierungskonfiguration](./authentication-configuration.md) | [API-Vorgänge für Zugriffsdaten-Endpunkte](./credentials-configuration-api.md) |
+| [Verwaltung von Zielgruppen-Metadaten](./audience-metadata-management.md) | [API-Vorgänge für Zielgruppen-Metadaten-Endpunkte](./audience-metadata-api.md) |
 | [OAuth 2-Konfiguration](./oauth2-authentication.md) | Konfigurieren Sie mithilfe des `customerAuthenticationConfigurations` -Parameter in der [/destinations-API-Endpunkt](./destination-configuration-api.md). |
 | [Nachrichtenformat](./message-format.md) | – |
 | [Zieltests](./test-destination.md) | [API-Vorgänge für Zieltests](./destination-testing-api.md) |
