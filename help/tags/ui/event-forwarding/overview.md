@@ -3,7 +3,7 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: b445e25ebda39e1604b926dc40d8ed52ad2e9b54
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 100%
@@ -67,7 +67,7 @@ Die Typen der in der Ereignisweiterleitung verfügbaren Datenelemente sind auf d
 
 Während die Datenelemente selbst in der Ereignisweiterleitung auf die gleiche Weise erstellt und konfiguriert werden wie Tags, gibt es einige wichtige Syntaxunterschiede bei der Referenzierung von Daten im Platform Edge Network.
 
-#### Referenzieren von Daten im Platform Edge Network {#edge}
+#### Referenzieren von Daten im Platform Edge Network {#data-element-path}
 
 Um Daten im Platform Edge Network zu referenzieren, müssen Sie ein Datenelement erstellen, das einen gültigen Pfad zu diesen Daten bereitstellt. Wählen Sie beim Erstellen des Datenelements in der Benutzeroberfläche die Option **[!UICONTROL Core]** für die Erweiterung und **[!UICONTROL Pfad]** für den Typ.
 
