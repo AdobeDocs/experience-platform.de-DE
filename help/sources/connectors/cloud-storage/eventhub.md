@@ -5,19 +5,19 @@ title: Azure Event Hubs Source Connector - Überblick
 topic-legacy: overview
 description: Erfahren Sie, wie Sie Azure Event Hubs über APIs oder die Benutzeroberfläche mit Adobe Experience Platform verbinden.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: b64054859cbd88687dd05b0c65e51d0b2ef2a7b3
+source-git-commit: 9415b4add3784cc6f81794060464b7ff63497a96
 workflow-type: tm+mt
 source-wordcount: '534'
-ht-degree: 4%
+ht-degree: 19%
 
 ---
 
 
-# [!DNL Azure Event Hubs] Connector
+# [!DNL Azure Event Hubs]-Connector
 
 Adobe Experience Platform bietet native Konnektivität für Cloud-Anbieter wie AWS, [!DNL Google Cloud Platform]und [!DNL Azure]. Sie können Ihre Daten aus diesen Systemen in Platform importieren.
 
-Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON-, XDM Parquet- oder als Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Sources-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Event Hubs] in Echtzeit.
+Cloud-Speicher bieten eine Quelle, von der Sie Ihre Daten in Platform übertragen können, ohne diese herunterladen, formatieren oder hochladen zu müssen. Aufgenommene Daten können als XDM JSON, XDM Parquet oder mit Trennzeichen formatiert werden. Jeder Schritt des Prozesses wird in den Quell-Workflow integriert. Mit Platform können Sie Daten aus [!DNL Event Hubs] in Echtzeit importieren.
 
 ## Skalierung mit [!DNL Event Hubs]
 
@@ -87,8 +87,8 @@ Die nachstehende Liste zeigt verschiedene Regionen von Platform-Subnetzen:
     "virtualNetworkRules": [
       {
         "subnet": {
-          "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_va7_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
-        },
+            "id": "/subscriptions/40bde086-46ad-44c3-afba-c306f54b64ec/resourceGroups/ethos_12_prod_nld2_network/providers/Microsoft.Network/virtualNetworks/ethos_12_prod_nld2_network_10_20_40_0_23/subnets/ethos_12_prod_nld2_network_10_20_40_0_23"
+        }, 
         "ignoreMissingVnetServiceEndpoint": true
       },
     ],
@@ -118,16 +118,16 @@ Die nachstehende Liste zeigt verschiedene Regionen von Platform-Subnetzen:
 
 Siehe Folgendes [[!DNL Event Hubs] Dokument](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) für weitere Informationen zu Netzwerkregelsätzen.
 
-## Verbinden [!DNL Event Hubs] Platform
+## Verbinden von [!DNL Event Hubs] mit Platform
 
-Die folgende Dokumentation enthält Informationen zur Verbindung [!DNL Event Hubs] zur Plattform mithilfe von APIs oder der Benutzeroberfläche:
+Die folgende Dokumentation enthält Informationen dazu, wie Sie [!DNL Event Hubs] mithilfe von APIs oder der Benutzeroberfläche mit Platform verbinden können:
 
 ### Verwenden von APIs
 
 * [Erstellen einer Quell-Verbindung für Ereignis-Hub mithilfe der Flow Service-API](../../tutorials/api/create/cloud-storage/eventhub.md)
-* [Erfassen von Streaming-Daten mithilfe der Flow Service-API](../../tutorials/api/collect/streaming.md)
+* [Erfassen von Streaming-Daten mit der Flow Service-API](../../tutorials/api/collect/streaming.md)
 
 ### Verwenden der Benutzeroberfläche
 
 * [Erstellen einer Quell-Verbindung für Ereignis-Hub in der Benutzeroberfläche](../../tutorials/ui/create/cloud-storage/eventhub.md)
-* [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+* [Konfigurieren eines Datenflusses für eine Cloud-Speicherverbindung über die Benutzeroberfläche](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
