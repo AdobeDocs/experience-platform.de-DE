@@ -2,9 +2,9 @@
 description: Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele können im Adobe Experience Platform Destination SDK über den Endpunkt /destination-servers konfiguriert werden.
 title: (Beta) Konfigurationsoptionen für dateibasierte Ziel-Server-Spezifikationen
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 3c8ad296ab9f0ce62743466ca8823b13c4545a9d
+source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '916'
 ht-degree: 90%
 
 ---
@@ -53,6 +53,8 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedS3Destination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Spezifikation des dateibasierten SFTP-Ziel-Servers {#sftp-example}
 
 ```json
@@ -89,6 +91,8 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `encryptionMode` | Zeichenfolge | Gibt an, ob eine Dateiverschlüsselung verwendet werden soll. Unterstützte Werte: <ul><li>PGP</li><li>Keine</li></ul> |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Azure Data Lake Storage] ([!DNL ADLS]) {#adls-example}
 
 ```json
@@ -114,6 +118,8 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedAdlsGen2Destination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedAdlsGen2Destination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Azure Blob Storage] {#blob-example}
 
@@ -147,6 +153,8 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedAzureBlobDestination.container.value` | Zeichenfolge | Der Name des [!DNL Azure Blob Storage]-Containers, der von diesem Ziel verwendet werden soll. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
 
+{style=&quot;table-layout:auto&quot;}
+
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Data Landing Zone] ([!DNL DLZ]) {#dlz-example}
 
 ```json
@@ -173,6 +181,8 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedDlzDestination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.*  Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedDlzDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Dateibasierte Ziel-Server-Spezifikation für [!DNL Google Cloud Storage] {#gcs-example}
 
@@ -205,6 +215,8 @@ Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele kön
 | `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
 | `fileBasedGoogleCloudStorageDestination.path.value` | Zeichenfolge | Der Pfad zum Zielordner, in dem die exportierten Dateien gespeichert werden. |
 | `fileConfigurations` | Objekt | Siehe [Dateiformatierungskonfiguration](#file-configuration) für ausführliche Erläuterungen zu diesem Abschnitt. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Dateiformatierung {#file-configuration}
 
@@ -300,3 +312,5 @@ In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportie
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` |
 | `csvOptions.lineSep.value` | Optional | *Nur für`"fileType.value": "csv"`*. Definiert das Zeilentrennzeichen, das zum Schreiben verwendet werden soll. Die maximale Länge beträgt 1 Zeichen. | `\n` |
 | `maxFileRowCount` | Optional | Maximale Anzahl von Zeilen, die die exportierte Datei enthalten kann. Konfigurieren Sie dies anhand der Dateigrößenanforderungen Ihrer Zielplattform. | K. A. |
+
+{style=&quot;table-layout:auto&quot;}

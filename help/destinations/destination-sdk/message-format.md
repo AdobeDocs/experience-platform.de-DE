@@ -2,9 +2,9 @@
 description: Auf dieser Seite werden das Nachrichtenformat und die Profilumwandlung von aus Adobe Experience Platform in Ziele exportierten Daten behandelt.
 title: Nachrichtenformat
 exl-id: 1212c1d0-0ada-4ab8-be64-1c62a1158483
-source-git-commit: 6600549cf421e2adc360b75e0b463992d549b85e
+source-git-commit: bd89df0659604c05ffd049682343056dbe5667e3
 workflow-type: tm+mt
-source-wordcount: '2266'
+source-wordcount: '2272'
 ht-degree: 3%
 
 ---
@@ -83,6 +83,8 @@ In Bezug auf das Nachrichtenformat lauten die entsprechenden Umwandlungen wie fo
 | `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Profilstruktur in Experience Platform {#profile-structure}
 
@@ -1194,6 +1196,8 @@ Die nachstehende Tabelle enthält Beschreibungen der Funktionen in den obigen Be
 | `destination.segmentNames` | Ordnen Sie Segmentnamen im Adobe Experience Platform-Namespace Segmentnamen im System des Partners zu. |
 | `addedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `realized` oder `existing`. |
 | `removedSegments(listOfSegments)` | Gibt nur Segmente mit Status zurück `exited`. |
+
+{style=&quot;table-layout:auto&quot;}
 
 ## Nächste Schritte {#next-steps}
 
