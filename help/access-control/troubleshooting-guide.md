@@ -5,10 +5,10 @@ title: Handbuch zur Fehlerbehebung bei der Zugriffssteuerung
 topic-legacy: troubleshooting guide
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Zugriffskontrolle in Adobe Experience Platform.
 exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
-workflow-type: ht
-source-wordcount: '321'
-ht-degree: 100%
+source-git-commit: 79ffdf35e27d74a64ea8e25544fdeeb293b58306
+workflow-type: tm+mt
+source-wordcount: '408'
+ht-degree: 78%
 
 ---
 
@@ -33,3 +33,7 @@ Wenn Sie keine Zugriffsberechtigungen für eine bestimmte [!DNL Platform]-Funkti
 Berechtigungen werden nach den Funktionen von [!DNL Platform] gruppiert und kategorisiert, für die sie gelten (z. B. [!DNL Data Management] und [!DNL Profile Management]). Eine vollständige Liste der verfügbaren Berechtigungen sowie der Gruppen, zu denen sie gehören, finden Sie im Abschnitt [Berechtigungen](home.md#permissions) in der Übersicht zur Zugriffskontrolle.
 
 Weiterführende Informationen zur Bereitstellung rollenbasierter Zugriffskontrolle finden Sie unter [Zugriffskontrolle – Übersicht](home.md).
+
+## Was passiert mit Berechtigungen nach der Migration von Adobe IO zu Business ID?
+
+Die Zugriffskontrolle verwendet die Benutzer-ID (eine interne eindeutige ID, die einem Benutzer zugewiesen ist) für die Erteilung von Berechtigungen. Wenn eine Organisation von Adobe ID zu Business ID migriert wird, gehen alle für ihre Benutzer festgelegten Berechtigungen verloren, da sich die Benutzer-ID ändert und die Zugriffskontrolle die neu generierte Benutzer-ID verwendet. Wenn Ihr Unternehmen zu einer Business ID migriert wird, wenden Sie sich an Ihren Kundenbetreuer, um Ihre Adobe-ID von Adobe ID zu Business ID zu migrieren.
