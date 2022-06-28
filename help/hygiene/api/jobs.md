@@ -3,18 +3,23 @@ title: Löschen von Verbraucherdatensätzen mithilfe der Data Hygiene API
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 hide: true
 hidefromtoc: true
-source-git-commit: 9057d424d63217a3cef7ad2237a65700d9159323
+exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
+source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 92%
+source-wordcount: '505'
+ht-degree: 85%
 
 ---
 
 # Löschen von Verbraucherdatensätzen mithilfe der Data Hygiene API
 
+>[!IMPORTANT]
+>
+>Die Data Hygiene API befindet sich derzeit in der Betaphase. Die in diesem Dokument beschriebenen Funktionen können sich ändern.
+
 Mit der Data Hygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmatisch korrigieren oder löschen.
 
-Sie können über den folgenden Stammpfad auf die API zugreifen: `https://platform.adobe.io/data/core/hygiene/`
+Sie können auf die API über denselben Stammpfad zugreifen wie auf [Privacy Service-API](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
 ## Erste Schritte
 
@@ -52,7 +57,7 @@ Die Anfrage-Payload ist ähnlich wie eine [Löschanfrage in der Privacy Service-
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/core/hygiene/jobs \
+  https://platform.adobe.io/data/core/privacy/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
