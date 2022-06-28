@@ -5,14 +5,14 @@ title: Handbuch zur Streaming-Segmentierung der Benutzeroberfläche
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an Platform übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 0e08b034eb9193dda72693cf842e3cd78cf44694
+source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
-# Streaming-Segmentierung
+# Streaming-Segmentierung 
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ Streaming-Segmentierung in [!DNL Adobe Experience Platform] ermöglicht es Kunde
 
 >[!NOTE]
 >
->Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Segmente, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind.
+>Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Daten, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind.
 >
 >Darüber hinaus können Segmente, die mit Streaming-Segmentierung ausgewertet werden, zwischen idealer und tatsächlicher Mitgliedschaft wechseln, wenn das Segment auf einem anderen Segment basiert, das mithilfe der Batch-Segmentierung ausgewertet wird. Wenn beispielsweise Segment A auf Segment B basiert und Segment B mithilfe der Batch-Segmentierung ausgewertet wird, da Segment B nur alle 24 Stunden aktualisiert wird, entfernt sich Segment A weiter von den tatsächlichen Daten, bis es mit der Aktualisierung Segment B erneut synchronisiert wird.
 
@@ -101,7 +101,7 @@ In den meisten Fällen wird die Qualifizierung der Streaming-Segmentierung in Ec
 
 ### Auf welche Daten funktioniert Streaming-Segmentierung?
 
-Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Segmente, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind.
+Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Segmente, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind. Ereignisse, die in das System mit einem Zeitstempel von über 24 Stunden gestreamt werden, werden im nachfolgenden Batch-Auftrag verarbeitet.
 
 ### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
 

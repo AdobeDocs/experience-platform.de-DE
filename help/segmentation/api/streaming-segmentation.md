@@ -5,9 +5,9 @@ title: 'Bewerten von Ereignissen in nahezu Echtzeit mit Streaming-Segmentierung 
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung von Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1915'
 ht-degree: 32%
 
 ---
@@ -424,7 +424,7 @@ In den meisten Fällen wird die Qualifizierung der Streaming-Segmentierung in Ec
 
 ### Auf welche Daten funktioniert Streaming-Segmentierung?
 
-Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Segmente, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind.
+Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Quelle erfasst wurden. Segmente, die mit einer Batch-basierten Quelle erfasst werden, werden nächtlich ausgewertet, selbst wenn sie für Streaming-Segmentierung geeignet sind. Ereignisse, die in das System mit einem Zeitstempel von über 24 Stunden gestreamt werden, werden im nachfolgenden Batch-Auftrag verarbeitet.
 
 ### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
 
