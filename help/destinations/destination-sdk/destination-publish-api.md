@@ -2,14 +2,18 @@
 description: Auf dieser Seite sind alle API-Vorgänge aufgelistet und beschrieben, die Sie mithilfe des API-Endpunkts „/authoring/destinations/publish“ ausführen können.
 title: API-Endpunktvorgänge für Veröffentlichungsziele
 exl-id: 0564a132-42f4-478c-9197-9b051acf093c
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 1fb0fde2054528679235268ae96e3b7e78de80ef
 workflow-type: tm+mt
-source-wordcount: '748'
-ht-degree: 72%
+source-wordcount: '779'
+ht-degree: 67%
 
 ---
 
 # API-Vorgänge für Endpunkte von Veröffentlichungszielen {#publish-destination}
+
+>[!IMPORTANT]
+>
+>Sie müssen diesen API-Endpunkt nur verwenden, wenn Sie ein produktives (öffentliches) Ziel senden, das von anderen Experience Platform-Kunden verwendet werden soll. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie das Ziel nicht formell mit der Publishing-API übermitteln.
 
 >[!IMPORTANT]
 >
@@ -22,8 +26,9 @@ Nachdem Sie Ihr Ziel konfiguriert und getestet haben, können Sie es zur Überpr
 Verwenden Sie den API-Endpunkt für Veröffentlichungsziele, um eine Veröffentlichungsanfrage zu senden, wenn:
 
 * Als Destination SDK-Partner möchten Sie Ihr produktbezogenes Ziel über alle Experience Platform-Unternehmen für alle Experience Platform-Kunden verfügbar machen.
-* Sie möchten Ihr benutzerdefiniertes Ziel in Ihrer eigenen Experience Platform-Organisation für alle Sandboxes verfügbar machen.
 * Sie machen *alle Aktualisierungen* zu Ihren Konfigurationen hinzufügen. Konfigurationsaktualisierungen werden erst dann im Ziel angezeigt, wenn Sie eine neue Veröffentlichungsanforderung senden, die vom Experience Platform-Team genehmigt wurde.
+
+<!-- * You want to make your custom destination available in your own Experience Platform organization, across all sandboxes. -->
 
 ## Erste Schritte mit API-Vorgängen zur Zielveröffentlichung {#get-started}
 
