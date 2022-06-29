@@ -3,9 +3,9 @@ keywords: 'Werbung; Schläuche; '
 title: Microsoft Bing-Verbindung
 description: Mit dem Microsoft Bing-Verbindungsziel können Sie digitale Kampagnen für Retargeting und Zielgruppen-Targeting in Microsoft Display Advertising durchführen.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 0006c498cd33d9deb66f1d052b4771ec7504457d
+source-git-commit: cffd689363e71f27a554df31beaf763f9bad37f4
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '570'
 ht-degree: 11%
 
 ---
@@ -73,15 +73,22 @@ Beim [Einrichten](../../ui/connect-destination.md) dieses Ziels müssen Sie die 
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_bing_mapping_id"
+>title="Zuordnungs-ID"
+>abstract="Geben Sie die numerische Bing-Segment-ID ein, der Sie das ausgewählte Segment zuordnen möchten. Wenn die Variable [!UICONTROL Zuordnungs-ID] entspricht nicht einer Segment-ID im Bing-Ziel, werden die erwarteten Zielgruppendaten in Ihrem Bing-Konto nicht angezeigt."
+
 >[!IMPORTANT]
 > 
 >Um Daten zu aktivieren, benötigen Sie die **[!UICONTROL Ziele verwalten]**, **[!UICONTROL Ziele aktivieren]**, **[!UICONTROL Profile anzeigen]** und **[!UICONTROL Segmente anzeigen]** [Zugriffssteuerungsberechtigungen](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
 Siehe [Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele](../../ui/activate-segment-streaming-destinations.md) für Anweisungen zum Aktivieren von Zielgruppensegmenten für dieses Ziel.
 
-Im [Segmentplan](../../ui/activate-segment-streaming-destinations.md#scheduling) Schritt, müssen Sie Ihre Segmente manuell ihrer entsprechenden ID oder dem Anzeigenamen im Ziel zuordnen.
+Im [Segmentplan](../../ui/activate-segment-streaming-destinations.md#scheduling) Schritt: Sie müssen Ihre Segmente manuell ihrer entsprechenden numerischen Segment-ID in der [!DNL Bing] Ziel. Füllen Sie die numerische Segment-ID aus [!DNL Bing] im [!UICONTROL Zuordnungs-ID] -Feld.
 
-Bei der Zuordnung von Segmenten empfehlen wir die Verwendung der [!DNL Platform] Segmentname oder eine kürzere Form davon, um die Verwendung zu erleichtern. Die Segment-ID oder der Name in Ihrem Ziel muss jedoch nicht mit der in Ihrer [!DNL Platform] -Konto. Alle Werte, die Sie in das Zuordnungsfeld einfügen, werden vom Ziel übernommen.
+![UI-Bild, das den Bildschirm für die Segmentzuordnung mit einem Beispiel für eine Bing-Mapping-ID anzeigt](../../assets/catalog/advertising/bing/mapping-id.png)
+
+Wenn die Variable [!UICONTROL Zuordnungs-ID] entspricht nicht einer Segment-ID im Bing-Ziel, werden die erwarteten Zielgruppendaten in Ihrem Bing-Konto nicht angezeigt.
 
 ## Exportierte Daten {#exported-data}
 
