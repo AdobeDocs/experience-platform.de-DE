@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target v2-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target v2“ in Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 824fea41bc7e7082814648efd58184f5208e5e6f
-workflow-type: ht
-source-wordcount: '642'
-ht-degree: 100%
+source-git-commit: 3f6526ec87189d6e629d4dcb8eb626367543b9e5
+workflow-type: tm+mt
+source-wordcount: '603'
+ht-degree: 94%
 
 ---
 
@@ -15,36 +15,31 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
 
-## 28. Januar 2022
+## v0.18.0 (1. Juni 2022)
 
-### Adobe Target v2-Erweiterung 0.17.1
+- Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.9.0 unterstützt wird
+- Unterstützung für User Agent Client Hints wurde hinzugefügt.
+
+## v0.17.1 (28. Januar 2022)
 
 - Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.8.1 unterstützt wird
 - Es wurde ein Problem behoben, bei dem `pageLoad` im hybriden ODD-Ausführungsmodus nicht auf `target-global-mbox` abgebildet wurde.
 - Es wurde ein Problem mit Analysedetails für `mbox`-Anfragen behoben
 - Dev-Abhängigkeiten wurden aktualisiert, um Sicherheitslücken zu beheben
 
-## 7. Januar 2022
-
-### Adobe Target v2-Erweiterung 0.17.0
+## v0.17.0 (7. Januar 2022)
 
 - Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.8.0 unterstützt und jetzt Funktionsnutzungs- und Leistungstelemetriedaten erfasst werden.  Personenbezogene Daten werden nicht erfasst. Um diese Funktion abzuwählen, setzen Sie `telemetryEnabled` in `targetGlobalSettings` auf `false`.
 
-## 28. Oktober 2021
-
-### Adobe Target v2-Erweiterung 0.16.0
+## v0.16.0 (28. Oktober 2021)
 
 - Es wurde eine Aktualisierung vorgenommen, sodass `at.js` v2.7.0 unterstützt wird und jetzt zum Download von Adobe Target verfügbar ist.
 
-## 20. Juli 2021
-
-### Adobe Target v2-Erweiterung 0.15.1
+## v0.15.1 (20. Juli 2021)
 
 - Es wurde ein Problem mit einem `stringify`-Funktionsnamen behoben, das dazu führte, dass falsche UUID-Werte für `sessionId`, `requestId` usw. generiert wurden.
 
-## 16. Juli 2021
-
-### Adobe Target v2-Erweiterung 0.15.0
+## v0.15.0 (16. Juli 2021)
 
 - Das Attribut „secure“ wird zu Cookies hinzugefügt, wenn die `at.js`-Einstellung „secureOnly“ auf „true“ gesetzt ist
 - Es sind jetzt Response-Token verfügbar, wenn man `triggerView()` verwendet
@@ -54,77 +49,57 @@ ht-degree: 100%
 - Der Verfall des `sessionId`-Cookies wird bei jedem Netzwerkaufruf korrekt verlängert
 - Die Cache-Initialisierung der SPA-Ansicht wird jetzt korrekt verarbeitet und berücksichtigt die `viewsEnable`-Einstellungen
 
-## 2. Juni 2021
-
-### Adobe Target v2-Erweiterung 0.14.2
+## v0.14.2 (2. Juni 2021)
 
 - Behebung eines Fehlers, durch den das endgültige Bundle zwei `at.js`-Versionen enthielt, eine mit On-Device Decisioning und eine ohne.
 
-## 19. Mai 2021
-
-### Adobe Target v2-Erweiterung 0.14.1
+## v0.14.1 (19. Mai 2021)
 
 - Die mit Version 0.14 eingeführte Regression wurde korrigiert, bei der die Aktion „Target laden“ globale Mbox-Aufrufe auslöste
 
-## 14. Mai 2021
-
-### Adobe Target v2-Erweiterung 0.14
+## v0.14 (14. Mai 2021)
 
 - Es wurde die neue Aktion „Target mit [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning) laden“ hinzugefügt, die `at.js` 2.5 mit Funktionen für On-Device Decisioning lädt.
 - `at.js` auf 2.5 aktualisiert
 
 
-## 25. März 2021
-
-### Adobe Target v2-Erweiterung 0.13.7
+## v0.13.7 (25. März 2021)
 
 - Es wurde ein Problem behoben, bei dem `targetPageParams` in Mbox-Anforderungen enthalten war. `targetPageParams` sollten nur in `pageLoad`-Anforderungen aufgenommen werden.
 - Es wurde ein Problem mit globalen Dokument- und Fensterobjekten in der Tag-Erweiterung behoben, indem die globalen Objektabhängigkeiten von Platform Launch durch direkte Verweise darauf ersetzt wurden.
 - `at.js` auf 2.4.1 aktualisiert
 
-## 25. Januar 2021
-
-### Adobe Target v2-Erweiterung 0.13.6
+## v0.13.6 (25. Januar 2021)
 
 - Unterstützt Versand-API-Kunden-IDs mit einheitlicher Profil-/Plattform-ID
 - Behebt eine ungültige Injektion eines Stil-Tags
 - Aktualisierung von at.s auf 2.4.0
 - Behebung eines Problems, bei dem undefinierte Parameter zu fehlerhaften Versandanforderungen führen können
 
-## 25. November 2020
-
-### Adobe Target v2-Erweiterung 0.13.4
+## v0.13.4 (25. November 2020)
 
 - Es wurde ein Fehler behoben, durch den mbox-Parameter nicht in der UI angezeigt wurden
 - Brandingupdates
 - Aktualisierung der `at.js`-Version auf 2.3.3
 
-## 24. Juli 2020
-
-### Adobe Target v2-Erweiterung 0.13.3
+## v0.13.3 (24. Juli 2020)
 
 - Es wurde ein Fehler behoben, der dazu führte, dass Links im QS-Modus für inaktive Aktivitäten nicht funktionierten.
 - Es wurde ein Fehler behoben, der auftrat, wenn die Erweiterung fehlschlug, wenn ein Skript oder Code die `default`-Eigenschaft zu `window` oder `document` hinzufügte.
 
-## 15. Juni 2020
-
-### Adobe Target v2-Erweiterung 0.13.2
+## v0.13.2 (15. Juni 2020)
 
 - Es wurde ein Fehler bei der Verwendung von CNAME und Edge Override behoben, bei dem `at.js` 1.x fälschlicherweise die Server-Domain erstellte, wodurch die Target-Anfrage fehlschlug
 - Es wurde ein Problem behoben, bei dem Target bei Verwendung der v2-Tag-Erweiterung für die Tag-Erweiterung von Target und Adobe Analytics den Analytics-Aufruf „sendBeacon“ verzögerte.
 - Die `deviceIdLifetime` Einstellung wurde verbessert, indem sie durch `targetGlobalSettings` überschrieben werden kann.
 
-## 25. März 2020
-
-### Adobe Target v2-Erweiterung 0.13.0
+## v0.13.0 (25. März 2020)
 
 - `at.js` wurde auf Version 2.3 aktualisiert.
 - adobe.target.getOffer-API unterstützt jetzt Target Global Mbox.
 - Es wurde ein Problem behoben, bei dem Parameter und Seitenladeparameter nicht korrekt verarbeitet wurden.
 
-## 10. Oktober 2019
-
-### Adobe Target v2-Erweiterung 0.12.0
+## v0.12.0 (10. Oktober 2019)
 
 - `at.js` wurde auf Version 2.2 aktualisiert.
 - Verbesserte Leistung bei Integrationen zwischen Experience Cloud ID Library (ECID) v4.4 und `at.js` 2.2.
@@ -133,15 +108,11 @@ ht-degree: 100%
 >[!NOTE]
 >Aktualisieren Sie Ihre ECID-Tag-Erweiterung auf Version 4.4.1, um diese Leistungsverbesserung nutzen zu können.
 
-## 31. Juli 2019
-
-### Adobe Target v2-Erweiterung 0.11.1
+## v0.11.1 (31. Juli 2019)
 
 - Aktualisierung der Erweiterungsversion für die Verwendung von `at.js` 2.1.1.
 - Eine Korrektur für die Verwendung von Parametern wurde hinzugefügt.
 
-## 3. Juni 2019
-
-### Adobe Target v2-Erweiterung 0.11.0
+## v0.11.0 (3. Juni 2019)
 
 - Neue Tag-Erweiterung zur Unterstützung von `at.js` 2.1
