@@ -5,9 +5,9 @@ title: Handbuch zur Streaming-Segmentierung der Benutzeroberfläche
 topic-legacy: ui guide
 description: Mit der Streaming-Segmentierung auf Adobe Experience Platform können Sie die Segmentierung nahezu in Echtzeit durchführen und sich dabei auf den Datenreichtum konzentrieren. Mit Streaming-Segmentierung erfolgt jetzt eine Segmentqualifizierung, wenn Daten in Platform landen. So wird die Notwendigkeit verringert, Segmentierungsaufträge zu planen und auszuführen. Mit dieser Funktion können die meisten Segmentregeln jetzt ausgewertet werden, wenn die Daten an Platform übergeben werden. Das bedeutet, dass die Segmentzugehörigkeit ohne Ausführung geplanter Segmentierungsaufträge auf dem neuesten Stand gehalten wird.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4022eb62e791282bb519f9604b6edf903d69239f
+source-git-commit: f6825869805733d2c3838f0cad0bca0f4baf7f16
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -67,9 +67,9 @@ Nachdem Sie ein Streaming-fähiges Segment erstellt haben, können Sie Details z
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment.png)
 
-Details zum **[!UICONTROL Gesamtzahl der qualifizierten Zielgruppengröße]** angezeigt. Die **[!UICONTROL Gesamtzahl der qualifizierten Zielgruppengrößen]** zeigt die Gesamtzahl qualifizierter Zielgruppen aus der letzten abgeschlossenen Segmentauftragsausführung an. Wenn ein Segmentauftrag nicht innerhalb der letzten 24 Stunden abgeschlossen wurde, wird die Anzahl der Zielgruppen stattdessen aus einer Schätzung abgeleitet.
+Insbesondere wird die **[!UICONTROL Gesamtzahl qualifiziert]** wird angezeigt, was die Gesamtzahl qualifizierter Zielgruppen basierend auf Batch- und Streaming-Auswertungen für dieses Segment anzeigt.
 
-Darunter ist ein Kantengraph, der die Anzahl der Segmente anzeigt, die in den letzten 24 Stunden qualifiziert und disqualifiziert wurden. Das Dropdown-Menü kann angepasst werden, um die letzten 24 Stunden, letzte Woche oder letzten 30 Tage anzuzeigen.
+Darunter ist ein Liniendiagramm, das die Anzahl der neuen Zielgruppen anzeigt, die in den letzten 24 Stunden mit der Streaming-Auswertungsmethode aktualisiert wurden. Das Dropdown-Menü kann angepasst werden, um die letzten 24 Stunden, letzte Woche oder letzten 30 Tage anzuzeigen. Die **[!UICONTROL Neue Zielgruppe aktualisiert]** basiert auf der Änderung der Zielgruppengröße während des ausgewählten Zeitraums, wie durch Streaming-Segmentierung bewertet. Diese Metrik umfasst nicht die gesamte qualifizierte Zielgruppe aus der täglichen Segmentstapelauswertung.
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Darunter ist ein Kantengraph, der die Anzahl der Segmente anzeigt, die in den le
 
 ![](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
-Weitere Informationen zur letzten Segmentbewertung finden Sie durch Auswahl der Informationsblase.
+Weitere Informationen zur letzten Segmentauswertung finden Sie, indem Sie die Informationsblase neben **[!UICONTROL Gesamtzahl qualifiziert]**.
 
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
