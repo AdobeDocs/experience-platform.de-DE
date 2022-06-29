@@ -3,9 +3,9 @@ title: Versionshinweise zum Adobe Experience Platform Web-SDK
 description: Die neuesten Versionshinweise für Adobe Experience Platform Web-SDK.
 keywords: Adobe Experience Platform Web SDK; Platform Web SDK; Web SDK; Versionshinweise;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 207fdd6d8a8dc27fa89798999734ba820f30fd54
+source-git-commit: b12f97a7c5e937a116d86495b3434dd9c0805b04
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1227'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,11 @@ ht-degree: 3%
 
 In diesem Dokument werden die Versionshinweise für das Adobe Experience Platform Web SDK behandelt.
 Die neuesten Versionshinweise zur Web SDK-Tag-Erweiterung finden Sie in der [Versionshinweise zur Web SDK-Tag-Erweiterung](extension/web-sdk-ext-release-notes.md).
+
+## Version 2.12.0 - 29. Juni 2022
+
+* Ändern Sie die Anforderungen an das Edge-Netzwerk, um die `cluster` Cookie-Standorthinweis als Teil der URL. Dadurch wird sichergestellt, dass Benutzer, die ihren Standort ändern (z. B. über ein VPN oder mit Mobilgeräten usw.), während der Sitzung denselben Edge erreichen und über dasselbe Personalisierungsprofil verfügen.
+* Konfigurieren Sie die konfigurierten Funktionen in der Befehlsantwort getLibraryInfo .
 
 ## Version 2.11.0 - 13. Juni 2022
 
