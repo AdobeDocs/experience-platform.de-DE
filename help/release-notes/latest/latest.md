@@ -1,11 +1,11 @@
 ---
-title: Juni 2022 - Adobe Experience Platform-Versionshinweise
-description: Die Versionshinweise für Adobe Experience Platform vom Juni 2022.
+title: Adobe Experience Platform – Versionshinweise
+description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3b0ae00e97eddc342e5a502f4ebf08d2fa90259f
+source-git-commit: def32d9667c4630de760d228c88676eb9d5a6de4
 workflow-type: tm+mt
-source-wordcount: '1036'
-ht-degree: 47%
+source-wordcount: '1786'
+ht-degree: 37%
 
 ---
 
@@ -18,6 +18,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Data Collection]](#data-collection)
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Destinations]](#destinations)
+- [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
 - [Quellen](#sources)
 
@@ -74,6 +75,46 @@ Weitere allgemeine Informationen zu Data Science Workspace finden Sie unter [Üb
 {style=&quot;table-layout:auto&quot;}
 
 Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
+## Experience-Datenmodell (XDM) {#xdm}
+
+XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
+
+**Neue XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung |
+| --- | --- | --- |
+| Klasse | [[!UICONTROL Medizin]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Eine Klasse der Gesundheitsindustrie, die Details über einen Stoff erfasst, der für die medizinische Behandlung verwendet wird, insbesondere ein Arzneimittel oder ein Medikament. |
+| Klasse | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Eine Klasse der Gesundheitsbranche, die Details zu einem medizinischen Plan erfasst, wie z. B. einen Krankenversicherungsplan oder einen Versicherungsplan. |
+| Klasse | [[!UICONTROL Anbieter]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Eine Klasse der Gesundheitsbranche, die Details über einen Gesundheitsdienstleister erfasst. |
+| Klasse | [[!UICONTROL Player]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Eine Klasse der Gesundheitsbranche, die Details über ein Versicherungsunternehmen erfasst. |
+| Klasse | [[!UICONTROL Live-Ereigniszeitplan]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Eine Sport- und Unterhaltungsbranchenklasse, die Details zu einem Live-Veranstaltungskalender erfasst, wie z. B. einen Fahrplan für ein Reisekonzert oder den Zeitplan eines Sportteams. |
+| Klasse | [[!UICONTROL Ort ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Eine Sport- und Unterhaltungsindustrie, die den Standort einer Live-Veranstaltung erfasst, wie z. B. einen Konzerthaus oder eine Sportarena. |
+| Feldergruppe | [[!UICONTROL Arzneimittel]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Eine Feldergruppe für [!UICONTROL Medizin] -Klasse, die Details über die Medikation erfasst, wie z. B. Markenname, Losnummer und Menge. |
+| Feldergruppe | [[!UICONTROL Details zum Gesundheitsplan]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Eine Feldergruppe für [!UICONTROL Plan] -Klasse, die Details wie Netzwerk, Typ und aktiven Status erfasst. |
+| Feldergruppe | [[!UICONTROL Gesundheitsdienstleister]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Eine Feldergruppe für [!UICONTROL Anbieter] -Klasse, die Details eines individuellen Gesundheitsberufs oder einer Gesundheitseinrichtung erfasst, die für die Erbringung von Gesundheitsdiagnosen und -therapiediensten zugelassen ist. |
+| Feldergruppe | [[!UICONTROL Details zum Gesundheitsbetreuer]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Eine Feldergruppe für [!UICONTROL XDM Individual Profile] -Klasse, die Informationen zu einer Person erfasst, die über eine Dienstleistung oder Betreuung verfügt oder empfangen wird, wie Kontaktinformationen, medizinische Grundversorgung und Planinformationen. |
+| Feldergruppe | [[!UICONTROL Sitetool-Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] -Klasse, die Informationen erfasst, die von Sitools wie Chatbot, Umfrage usw. erfasst werden. |
+| Feldergruppe | [[!UICONTROL Kauf eines Live-Ereignis-Tickets]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] -Klasse, die die Einkaufsgeschichte für Eintrittskarten zu einer Live-Veranstaltung wie einem Konzert oder einem Sportspiel erfasst. |
+| Feldergruppe | [[!UICONTROL Veranstaltungskalender für Sport und Unterhaltung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Eine Feldergruppe für [!UICONTROL Live-Ereigniszeitplan] -Klasse, die weitere Details zum Zeitplan erfasst, wie z. B. den Namen der Attraktion, Öffnungszeiten der Tür und mehr. |
+| Feldergruppe | [[!UICONTROL Veranstaltungsort für Sportunterhaltung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Eine Feldergruppe für [!UICONTROL Standort] -Klasse, die weitere Details zum Veranstaltungsort erfasst, wie Sitzplatzkapazität und Designated Market Areas (DMAs). |
+| Globales Schema | (Mehrere) | Für Zielmetriken für RTCDP Insights stehen neue globale Schemata zur Verfügung. Siehe Folgendes [Pull-Anfrage](https://github.com/adobe/xdm/pull/1560) für weitere Details. |
+
+{style=&quot;table-layout:auto&quot;}
+
+**Aktualisierte XDM-Komponenten**
+
+| Typ der Komponente | Name | Beschreibung der Aktualisierung |
+| --- | --- | --- |
+| Verhalten | [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Es wurde ein Ereignistyp zum Aktualisieren von Medienstatus hinzugefügt. |
+| Feldergruppe | [[!UICONTROL Unterkunftsreservierung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Es wurde eine Eigenschaft zum Checkout für die Unterkunft hinzugefügt. |
+| Datentyp | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Es wurden Felder für den Statusstart und das Statusende hinzugefügt. |
+| Erweiterung | [[!UICONTROL Workfront-Änderungsereignis]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Es wurden zwei Felder hinzugefügt, die zum Speichern von Attributen verwendet werden, um den Benutzer und den Zeitpunkt eines Erstellungsereignisses zu identifizieren. |
+| Erweiterung | [[!UICONTROL Adobe CJM ExperienceEvent - Details zur Nachrichteninteraktion]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Dem Landingpage-Objekt wurden Abonnement-, Einverständnis-, benutzerdefinierte E-Mail- und zusätzliche Dateninformationen hinzugefügt. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
 ## Query Service {#query-service}
 
