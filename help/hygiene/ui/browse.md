@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: c24aa700eb425770266bbee5c187e2e87b15a9ac
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 86%
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield for Healthcare erworben haben.
 
-Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Eine Arbeitsreihenfolge stellt einen bestimmten Datenhygieneprozess dar, z. B. eine geplante Live-Zeit (TTL) für einen Datensatz, der seinen aktuellen Status und andere zugehörige Details enthält.
+Wenn eine Datenhygiene-Anfrage an das System gesendet wird, wird ein Arbeitsauftrag erstellt, um die angeforderte Aufgabe auszuführen. Ein Arbeitsauftrag stellt einen bestimmten Datenhygieneprozess dar, z. B. eine geplante Time-to-Live (TTL) für einen Datensatz, wobei sein aktueller Status und andere zugehörige Details enthalten sind.
 
 In diesem Handbuch wird beschrieben, wie Sie bestehende Arbeitsaufträge in der Adobe Experience Platform-Benutzeroberfläche anzeigen und verwalten können.
 
@@ -42,7 +42,7 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 | Filter | Beschreibung |
 | --- | --- |
 | [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags. |
-| [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem die TTL-Anforderung des Datensatzes gestellt wurde. |
+| [!UICONTROL Erstellt am] | Filtern Sie auf der Grundlage des Zeitpunkts, zu dem die TTL-Anfrage für den Datensatz gestellt wurde. |
 | [!UICONTROL Löschdatum] | Filtern Sie nach dem Löschdatum, das in der TTL geplant ist. |
 | [!UICONTROL Aktualisierungsdatum] | Filtern Sie nach dem Zeitpunkt, zu dem die Datensatz-TTL zuletzt aktualisiert wurde. Die Erstellung und das Ablaufen der Gültigkeit der TTL werden als Aktualisierungen gezählt. |
 
@@ -76,4 +76,4 @@ Die Detailseite für eine Datensatz-TTL enthält Informationen zu allgemeinen At
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie im Handbuch unter [Datensatz-TTL planen](./ttl.md).
+In diesem Handbuch wurde beschrieben, wie Sie vorhandene Datenhygiene-Arbeitsaufträge in der Platform-Benutzeroberfläche anzeigen und verwalten können. Informationen zum Erstellen eigener Arbeitsaufträge finden Sie im Handbuch zum [Planen der TTL eines Datensatzes](./ttl.md).

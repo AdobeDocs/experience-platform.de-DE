@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Um auf den Arbeitsbereich zuzugreifen, wählen Sie in der linken Navigationsleis
 
 ![Bild, das den Arbeitsbereich [!UICONTROL Datenhygiene] in der Platform-Benutzeroberfläche zeigt](../images/ui/overview/home.png)
 
-Von hier aus können Sie bestehende Arbeitsaufträge durchsuchen und neue Datenhygiene-Vorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
+Hier können Sie bestehende Arbeitsaufträge einsehen und neue Datenhygienevorgänge konfigurieren. Weitere Informationen finden Sie in den folgenden Abschnitten dieses Handbuchs:
 
 * [Durchsuchen vorhandener Arbeitsaufträge](./browse.md)
 * [Verwalten der Time-to-Live (TTL) für Datensätze](./ttl.md)

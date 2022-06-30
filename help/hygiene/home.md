@@ -5,7 +5,7 @@ exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '220'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 80%
 
 Adobe Experience Platform bietet leistungsstarke Tools zur Verwaltung großer, komplizierter Datenvorgänge, was die Orchestrierung von Customer Experiences ermöglicht. Da im Laufe der Zeit Daten in das System aufgenommen werden, ist es wichtig, Ihre Datenspeicher so zu verwalten, dass Daten wie vorgesehen verwendet werden. So müssen Daten aktualisiert werden, um falsche Einträge zu korrigieren, und Daten gelöscht werden, wenn dies aufgrund von Unternehmensrichtlinien erforderlich ist.
 
-Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Verbraucherdaten durch programmatische Löschungen von Datensätzen verwalten.
+Mit den Datenhygiene-Funktionen von Platform können Sie Ihre gespeicherten Daten von Privatkund*innen durch programmatische Löschungen von Datensätzen verwalten.
 
 ## Arbeitsbereich [!UICONTROL Datenhygiene] in der Benutzeroberfläche
 
-Die [!UICONTROL Datenhygiene] Mit Workspace in der Platform-Benutzeroberfläche können Sie Datenhygienevorgänge konfigurieren und planen, um sicherzustellen, dass Ihre Datensätze erwartungsgemäß gepflegt werden.
+Der Arbeitsbereich [!UICONTROL Datenhygiene] in der Platform-Benutzeroberfläche ermöglicht es Ihnen, Datenhygienevorgänge zu konfigurieren und zu planen, um sicherzustellen, dass Ihre Datensätze wie vorgesehen gepflegt werden.
 
 Ausführliche Anleitungen zum Verwalten von Datenhygiene-Aufgaben in der Benutzeroberfläche finden Sie im [Handbuch zur Datenhygiene-Benutzeroberfläche](./ui/overview.md).
 

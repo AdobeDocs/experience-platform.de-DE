@@ -1,23 +1,23 @@
 ---
-title: Löschen von Verbraucherdatensätzen mithilfe der Data Hygiene API
-description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
+title: Löschen von Verbraucherdatensätzen mithilfe der Datenhygiene-API
+description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kund*innen in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
 source-git-commit: c0d51d33d1e9d49d43f732925f2a794b5afea03b
 workflow-type: tm+mt
 source-wordcount: '505'
-ht-degree: 85%
+ht-degree: 93%
 
 ---
 
-# Löschen von Verbraucherdatensätzen mithilfe der Data Hygiene API
+# Löschen von Verbraucherdatensätzen mithilfe der Datenhygiene-API
 
 >[!IMPORTANT]
 >
 >Die Data Hygiene API befindet sich derzeit in der Betaphase. Die in diesem Dokument beschriebenen Funktionen können sich ändern.
 
-Mit der Data Hygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmatisch korrigieren oder löschen.
+Mit der Datenhygiene-API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kund*innen programmatisch korrigieren oder löschen.
 
 Sie können auf die API über denselben Stammpfad zugreifen wie auf [Privacy Service-API](../../privacy-service/api/overview.md): `https://platform.adobe.io/data/core/privacy/`
 
@@ -27,7 +27,7 @@ In diesem Abschnitt erhalten Sie eine Einführung in die wichtigsten Konzepte, d
 
 ### Sammeln von Werten für erforderliche Kopfzeilen
 
-Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungsdaten erfassen. Hierbei handelt es sich um dieselben Anmeldeinformationen wie die, die Sie für den Zugriff auf die Privacy Service-API verwenden. Siehe Abschnitt [API-Übersicht](./overview.md#getting-started) um Werte für die einzelnen Header zu generieren, die für die Data Hygiene-API erforderlich sind, wie unten dargestellt:
+Um die Data Hygiene-API aufrufen zu können, müssen Sie zunächst Ihre Authentifizierungsdaten erfassen. Hierbei handelt es sich um dieselben Anmeldeinformationen wie die, die Sie für den Zugriff auf die Privacy Service-API verwenden. Folgen Sie den Schritten in der [API-Übersicht](./overview.md#getting-started), um Werte für jede der erforderlichen Kopfzeilen für die Datenhygiene-API zu generieren, wie unten gezeigt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

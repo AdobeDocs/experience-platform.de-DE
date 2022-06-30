@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
 workflow-type: tm+mt
 source-wordcount: '372'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Nachdem Sie einen Datensatz und ein TTL-Datum ausgewählt haben, klicken Sie auf
 
 Sie werden aufgefordert, das Datum zu bestätigen, an dem der Datensatz gelöscht werden soll. Wählen Sie **[!UICONTROL Senden]** aus, um fortzufahren.
 
-Nachdem die Anfrage gesendet wurde, wird eine Arbeitsreihenfolge erstellt und auf der Registerkarte &quot;Haupt&quot;im [!UICONTROL Datenhygiene] Arbeitsbereich. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
+Nachdem die Anfrage übermittelt wurde, wird ein Arbeitsauftrag erstellt und auf der Hauptregisterkarte des Arbeitsbereichs [!UICONTROL Datenhygiene] angezeigt. Hier können Sie den Fortschritt des Arbeitsauftrags überwachen.
 
 ## Bearbeiten oder Abbrechen einer TTL
 
@@ -59,4 +59,4 @@ Auf der Detailseite der TTL zeigt die rechte Leiste Steuerelemente zum Bearbeite
 
 ## Nächste Schritte
 
-In diesem Dokument wurde beschrieben, wie Sie in der Experience Platform-Benutzeroberfläche einen Zeitplan für Datensatz-TTLs erstellen können. Informationen zum Planen von Datensatz-TTLs mithilfe der Data Hygiene API finden Sie im [Handbuch zum Datensatz-TTL-Endpunkt](../api/ttl.md).
+In diesem Dokument wurde beschrieben, wie Sie in der Experience Platform-Benutzeroberfläche einen Zeitplan für Datensatz-TTLs erstellen können. Informationen zum Planen von Datensatz-TTLs mithilfe der Datenhygiene-API finden Sie im [Handbuch zum Datensatz-TTL-Endpunkt](../api/ttl.md).

@@ -7,7 +7,7 @@ hidefromtoc: true
 source-git-commit: d17c53066d77652e46471ba4c696fde682eb3bab
 workflow-type: tm+mt
 source-wordcount: '1091'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -62,12 +62,12 @@ Wenn Sie Verbraucherdaten aus allen Datensätzen löschen möchten, wählen Sie 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Primäre Identität"
->abstract="Eine primäre Identität ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das Feld für die primäre Identität für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) für die primäre Identität des Kunden angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud-IDs. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="Eine primäre Identität ist ein Attribut, das einen Datensatz mit dem Profil eines Verbrauchers in Experience Platform verknüpft. Das Feld für die primäre Identität für einen Datensatz wird durch das Schema definiert, auf dem der Datensatz basiert. In dieser Spalte müssen Sie den Typ (oder Namespace) der primären Identität der Privatkund*innen angeben, z. B. `email` für E-Mail-Adressen und `ecid` für Experience Cloud-IDs. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
 >title="Identitätswert"
->abstract="In dieser Spalte müssen Sie den Wert für die primäre Identität des Verbrauchers angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der primäre Identitätstyp `email`, sollte der Wert die E-Mail-Adresse des Verbrauchers sein. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
+>abstract="In dieser Spalte müssen Sie den Wert für die primäre Identität des Verbrauchers angeben, der dem in der linken Spalte angegebenen Identitätstyp entsprechen muss. Wenn der primäre Identitätstyp `email` ist, sollte der Wert die E-Mail-Adresse der Privatkund*innen sein. Weitere Informationen finden Sie im Handbuch zur Datenhygiene-Benutzeroberfläche."
 
 Beim Löschen von Verbraucherdaten müssen Sie Identitätsinformationen angeben, damit das System weiß, welche Datensätze gelöscht werden sollen. Für jeden Datensatz in Platform werden Daten basierend auf dem Feld **primäre Identität** gelöscht, das durch das Schema des Datensatzes definiert wird.
 

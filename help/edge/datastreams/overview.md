@@ -6,7 +6,7 @@ exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: e0c39c20ce536b057367da2854901e33a3f67dd6
 workflow-type: tm+mt
 source-wordcount: '1774'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Wählen Sie **[!UICONTROL Erweiterte Optionen]** aus, um zusätzliche Steuerelem
 | [!UICONTROL Geografie – Standort] | Hiermit legen Sie fest, ob anhand der IP-Adresse des Benutzers GPS-Suchen stattfinden. Mit der Standardeinstellung **[!UICONTROL Keine]** werden alle GPS-Suchen deaktiviert, während die Einstellung **[!UICONTROL Ort]** GPS-Koordinaten auf zwei Dezimalstellen genau bereitstellt. |
 | [!UICONTROL First-Party-ID-Cookie] | Wenn diese Einstellung aktiviert ist, weist sie das Edge-Netzwerk an, bei der Suche nach einer [First-Party-Geräte-ID](../identity/first-party-device-ids.md) ein bestimmtes Cookie zu verwenden, anstatt nach diesem Wert in der Identity Map zu suchen.<br><br>Wenn Sie diese Einstellung aktivieren, müssen Sie den Namen des Cookies angeben, in dem die ID gespeichert ist. |
 | [!UICONTROL Synchronisierung der Third-Party-ID] | ID-Synchronisationen können in Container zusammengefasst werden, damit verschiedene ID-Synchronisationen zu unterschiedlichen Zeiten ausgeführt werden können. Wenn diese Einstellung aktiviert ist, können Sie festlegen, welcher Container mit ID-Synchronisationen für diesen Datenstrom ausgeführt werden soll. |
-| [!UICONTROL Zugriffstyp] | Definiert den Authentifizierungstyp, den die [!DNL Edge Network] akzeptiert für den Datastream. <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anforderungen. Wählen Sie diese Option, wenn Sie das Web SDK verwenden möchten, oder [Mobile SDK](https://aep-sdks.gitbook.io/docs/)zusammen mit [Server-API](../../server-api/overview.md). </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge-Netzwerk nur authentifizierte Anforderungen. Wählen Sie diese Option aus, wenn Sie nur die Server-API verwenden möchten und verhindern möchten, dass nicht authentifizierte Anforderungen von der [!DNL Edge Network]. </li></ul> |
+| [!UICONTROL Zugriffstyp] | Definiert den Authentifizierungstyp, den das [!DNL Edge Network] für den Datenstrom akzeptiert. <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anfragen. Wählen Sie diese Option, wenn Sie das Web SDK oder das [Mobile SDK](https://aep-sdks.gitbook.io/docs/) zusammen mit der [Server-API](../../server-api/overview.md) verwenden möchten. </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network nur authentifizierte Anfragen. Wählen Sie diese Option aus, wenn Sie nur die Server-API verwenden und verhindern möchten, dass nicht authentifizierte Anforderungen vom [!DNL Edge Network] verarbeitet werden. </li></ul> |
 
 Wenn hier Ihren Datenstrom für Experience Platform konfigurieren, folgen Sie dem Tutorial zu [Datenvorbereitung für die Datenerfassung](./data-prep.md), um Ihre Daten einem Platform-Ereignisschema zuzuordnen, bevor Sie mit dieser Anleitung fortfahren. Wählen Sie andernfalls **[!UICONTROL Speichern]** und fahren Sie mit dem nächsten Abschnitt fort.
 
