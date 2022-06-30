@@ -6,7 +6,7 @@ topic-legacy: tutorial
 type: Tutorial
 description: Mit der Streaming-Erfassung können Sie Ihre Daten mithilfe von Streaming-Endpunkten in Echtzeit in Adobe Experience Platform hochladen. Streaming-Aufnahme-APIs unterstützen zwei Validierungsmodi - synchron und asynchron.
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
-source-git-commit: 958bd461be0eb3ed59b44759407bed40a3edc00a
+source-git-commit: ec8eb0e805f7127dd8712fc3fe08057d1d8c10c1
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 25%
@@ -60,13 +60,13 @@ Bei allen Anfragen mit einer Payload (POST, PUT, PATCH) ist eine zusätzliche Ko
 
 ## Synchrone Überprüfung
 
->[!WARNING]
->
->Die `syncValidation` Der Abfrageparameter ist nur für den Einzelnachrichten-Endpunkt verfügbar und kann nicht für den Batch-Endpunkt verwendet werden.
-
 Die synchrone Validierung ist eine Methode zur Validierung, die sofort Rückmeldungen darüber liefert, warum eine Aufnahme fehlgeschlagen ist. Bei einem Fehler werden jedoch die Datensätze, die bei der Validierung fehlschlagen, verworfen und können nicht nachgelagert gesendet werden. Daher sollte die synchrone Validierung nur während des Entwicklungsprozesses verwendet werden. Bei der synchronen Validierung werden die Aufrufer sowohl über das Ergebnis der XDM-Validierung als auch über den Grund für das Fehlschlagen informiert, wenn dies fehlgeschlagen ist.
 
 Standardmäßig ist die synchrone Validierung nicht aktiviert. Um dies zu aktivieren, müssen Sie den optionalen Abfrageparameter übergeben `syncValidation=true` bei API-Aufrufen. Darüber hinaus ist eine synchrone Validierung derzeit nur verfügbar, wenn sich Ihr Stream-Endpunkt im VA7-Rechenzentrum befindet.
+
+>[!NOTE]
+>
+>Die `syncValidation` Der Abfrageparameter ist nur für den Einzelnachrichten-Endpunkt verfügbar und kann nicht für den Batch-Endpunkt verwendet werden.
 
 Wenn eine Nachricht während der synchronen Validierung fehlschlägt, wird sie nicht in die Ausgabeschlange geschrieben, die Benutzern sofortiges Feedback gibt.
 
