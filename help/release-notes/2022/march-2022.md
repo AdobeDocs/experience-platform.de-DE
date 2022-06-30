@@ -2,7 +2,7 @@
 title: Adobe Experience Platform - Versionshinweise, März 2022
 description: Die Versionshinweise für Adobe Experience Platform vom März 2022.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3a031c84138d36a5e23b2f80a44ada06e1a52184
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1194'
 ht-degree: 98%
@@ -117,7 +117,7 @@ Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kunden
 | Globale Datenstromeinstellungen | Sie können jetzt beim Konfigurieren eines Datenstroms mehrere neue globale Einstellungen konfigurieren: Ort, First-Party-ID-Cookie und Third-Party-ID-Synchronisierung. Weitere Informationen dazu finden Sie im Handbuch zur Datenstrom-Benutzeroberfläche im Abschnitt [Konfigurieren eines Datenstroms](../../edge/datastreams/overview.md#create). |
 | [Edge Network Server-API](../../server-api/overview.md) | Mit der Server-API können Kunden mithilfe eines neuen, authentifizierten Endpunkts mit dem Experience Platform Edge Network interagieren, wodurch eine Vielzahl von Datenerfassungs-, Personalisierungs-, Werbungs- und Marketing-Anwendungsfällen ermöglicht wird. |
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
+Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../rtcdp-connections/home.md).
 
 ## Abfrage-Service {#query-service}
 

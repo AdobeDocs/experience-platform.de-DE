@@ -2,7 +2,8 @@
 keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Quelle; Datenerfassung
 title: Adobe Data Collection
 description: Dieses Dokument bietet einen Überblick über die Datenquelle der Adobe-Datenerfassung.
-source-git-commit: be3967e7045e159736952e369a55df322afd9fec
+exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
+source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 52%
@@ -31,8 +32,8 @@ Ein Datenstrom ist eine Konfiguration, die dem Edge-Netzwerk mitteilt, wohin Ihr
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Umfassende Schritte zur Verwendung der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Ende-zu-Ende-Datenerfassung](../../../collection/e2e.md).
+Umfassende Schritte zur Verwendung der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Ende-zu-Ende-Datenerfassung](../../../rtcdp-connections/e2e.md).
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie mithilfe des Arbeitsbereichs &quot;Quellen&quot;auf die Benutzeroberfläche für die Datenerfassung zugreifen können. Weitere Informationen zur Datenerfassung finden Sie unter [Datenerfassung - Übersicht](../../../collection/e2e.md).
+Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie mithilfe des Arbeitsbereichs &quot;Quellen&quot;auf die Benutzeroberfläche für die Datenerfassung zugreifen können. Weitere Informationen zur Datenerfassung finden Sie unter [Datenerfassung - Übersicht](../../../rtcdp-connections/e2e.md).
