@@ -4,16 +4,14 @@ description: Erfahren Sie, wie Sie Besucher mithilfe der Server-API mithilfe der
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
 keywords: Edge-Netzwerk;Gateway;API;Besucher;Identifizierung;Fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
 
 # Besucheridentifizierung über FPID
-
-## Übersicht
 
 [!DNL First-party IDs] (`FPIDs`) sind Geräte-IDs, die von Kunden generiert, verwaltet und gespeichert werden. Dadurch erhalten Kunden Kontrolle über die Identifizierung von Benutzergeräten. Durch Versand `FPIDs`, generiert das Edge-Netzwerk keine brandneue `ECID` für eine Anfrage, die keine enthält.
 
@@ -35,7 +33,7 @@ Die `ECID` auf diese Weise abgerufen werden kann, über eine `identity.fetch` Ab
 }
 ```
 
-Für Anforderungen, die sowohl eine `FPID` und `ECID`, die `ECID` bereits in der -Anfrage vorhanden ist, hat Vorrang vor der , die von der `FPID`. Daher verwendet das Edge-Netzwerk die `ECID` bereits bereitgestellt wurden und keinen aus dem angegebenen `FPID`.
+Für Anforderungen, die sowohl eine `FPID` und `ECID`, die `ECID` bereits in der -Anfrage vorhanden ist, hat Vorrang vor der , die von der `FPID`. Das heißt, das Edge-Netzwerk verwendet die `ECID` bereits bereitgestellt wurden und `FPID` wird ignoriert. Eine neue `ECID` wird nur generiert, wenn eine `FPID` wird für sich allein bereitgestellt.
 
 In Bezug auf Geräte-IDs wird die `server` datastreams sollte `FPID` als Geräte-ID. Andere Identitäten (d. h. `EMAIL`) kann auch im Anfrageinhalt bereitgestellt werden. Das Edge-Netzwerk erfordert jedoch, dass explizit eine primäre Identität angegeben wird. Primäre Identität ist die Basisidentität, in der Profildaten gespeichert werden.
 
