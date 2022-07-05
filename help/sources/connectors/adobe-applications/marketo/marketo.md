@@ -5,10 +5,10 @@ title: Marketo Engage-Connector
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über den Marketo Engage-Quell-Connector, einschließlich Informationen zur Authentifizierung, Zuordnung und Datenlatenz.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 1ecdd5f058a5996b4a3d12ba62c5f352633cd75a
+source-git-commit: 8b8e08adb5ff3498169c1702680ea44f3bebf5c5
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 14%
+source-wordcount: '601'
+ht-degree: 13%
 
 ---
 
@@ -19,6 +19,10 @@ Adobe Experience Platform ermöglicht die Aufnahme von Daten aus externen Quelle
 [[!DNL Marketo Engage]](https://www.marketo.com/software/) (nachstehend &quot;genannt)[!DNL Marketo]&quot;) ist eine Komplettlösung für das Lead-Management. B2B-Marketer können damit Kundenerlebnisse transformieren, indem sie in allen Phasen komplexer Journey Interaktionen ermöglichen.
 
 Mit dem [!DNL Marketo] Quell-Connector: Sie können B2B-Daten von [!DNL Marketo] zu Platform hinzufügen und diese Daten mithilfe von Anwendungen, die mit Platform verbunden sind, auf dem neuesten Stand zu halten.
+
+>[!IMPORTANT]
+>
+>Sie müssen Zugriff auf [Real-time Customer Data Platform B2B Edition](../../../../rtcdp/b2b-overview.md) für die Teilnahme von Marketo Engage an [Echtzeit-Kundenprofil](../../../../profile/home.md).
 
 Dieses Dokument bietet einen Überblick über die [!DNL Marketo] Quell-Connector, einschließlich Informationen zur Authentifizierung des Connectors, zur Zuordnung [!DNL Marketo] -Felder auf das Experience-Datenmodell (XDM) und die Datenlatenz des Connectors hinzu.
 
