@@ -1,15 +1,14 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; API; XDM; XDM; XDM-System; Experience-Datenmodell; Experience-Datenmodell; Experience-Datenmodell; Datenmodell; Datenmodell; Schemaregistrierung; Schema; Schema; Schemas; Beziehung; Beziehung; Beziehungsdeskriptor; Beziehungsdeskriptor; Referenzidentität; Referenzidentität; Referenzidentität
-solution: Experience Platform
 title: Definieren einer Beziehung zwischen zwei Schemas mithilfe der Schema Registry-API
 description: Dieses Dokument bietet eine Anleitung zum Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas, die von Ihrer Organisation mithilfe der Schema Registry-API definiert wurden.
 topic-legacy: tutorial
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 65a6eca9450b3a3e19805917fb777881c08817a0
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 36%
+source-wordcount: '1367'
+ht-degree: 32%
 
 ---
 
@@ -110,13 +109,13 @@ Notieren Sie sich die `$id`-Werte der beiden Schemas, für die Sie eine Beziehun
 
 ## Referenzfeld für das Quellschema definieren
 
-Innerhalb der [!DNL Schema Registry], funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in relationalen Datenbanktabellen: Ein Feld im Quellschema dient als Verweis auf das primäre Identitätsfeld eines Zielschemas. Wenn Ihr Quellschema über kein Feld zu diesem Zweck verfügt, müssen Sie möglicherweise eine Schemafeldergruppe mit dem neuen Feld erstellen und zum Schema hinzufügen. Dieses neue Feld muss eine `type` Wert von &quot;[!DNL string]&quot;.
+Innerhalb der [!DNL Schema Registry], funktionieren Beziehungsdeskriptoren ähnlich wie Fremdschlüssel in relationalen Datenbanktabellen: Ein Feld im Quellschema dient als Verweis auf das primäre Identitätsfeld eines Zielschemas. Wenn Ihr Quellschema über kein Feld zu diesem Zweck verfügt, müssen Sie möglicherweise eine Schemafeldergruppe mit dem neuen Feld erstellen und zum Schema hinzufügen. Dieses neue Feld muss eine `type` Wert von `string`.
 
 >[!IMPORTANT]
 >
->Im Gegensatz zum Zielschema kann das Quellschema seine primäre Identität nicht als Referenzfeld verwenden.
+>Das Quellschema kann seine primäre Identität nicht als Referenzfeld verwenden.
 
-In diesem Tutorial wurde das Zielschema &quot;[!DNL Hotels]&quot; enthält ein `hotelId` -Feld, das als primäre Identität des Schemas dient und daher auch als Referenzfeld dient. Das Quellschema &quot;[!DNL Loyalty Members]&quot; hat kein dediziertes Feld, das als Referenz verwendet werden soll, und muss eine neue Feldergruppe erhalten, die dem Schema ein neues Feld hinzufügt: `favoriteHotel`.
+In diesem Tutorial wurde das Zielschema &quot;[!DNL Hotels]&quot; enthält ein `hotelId` -Feld, das als primäre Identität des Schemas dient. Das Quellschema &quot;[!DNL Loyalty Members]&quot; verfügt nicht über ein dediziertes Feld, das als Verweis auf `hotelId`und daher muss eine benutzerdefinierte Feldergruppe erstellt werden, um dem Schema ein neues Feld hinzuzufügen: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -344,9 +343,9 @@ Eine erfolgreiche Antwort gibt die Details des aktualisierten Schemas zurück, d
 
 ## Referenzidentitätsdeskriptor erstellen {#reference-identity}
 
-Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Referenz aus anderen Schemas in einer Beziehung verwendet werden. Seit `favoriteHotel` -Feld in[!DNL Loyalty Members]&quot; bezieht sich auf die `hotelId` -Feld in[!DNL Hotels]&quot;, `hotelId` muss einen Referenzidentitätsdeskriptor erhalten.
+Auf Schemafelder muss ein Referenzidentitätsdeskriptor angewendet werden, wenn sie als Verweis auf ein anderes Schema in einer Beziehung verwendet werden. Seit `favoriteHotel` -Feld in[!DNL Loyalty Members]&quot; bezieht sich auf die `hotelId` -Feld in[!DNL Hotels]&quot;, `favoriteHotel` muss einen Referenzidentitätsdeskriptor erhalten.
 
-Erstellen Sie einen Referenzdeskriptor für das Zielschema, indem Sie eine POST-Anfrage an den `/tenant/descriptors`-Endpunkt senden.
+Erstellen Sie einen Referenzdeskriptor für das Quellschema, indem Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
 
 **API-Format**
 
@@ -356,7 +355,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen Referenzdeskriptor für die `hotelId` im Zielschema &quot;[!DNL Hotels]&quot;.
+Die folgende Anfrage erstellt einen Referenzdeskriptor für die `favoriteHotel` -Feld im Quellschema &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -368,33 +367,33 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu definierenden Deskriptors. Bei Referenzdeskriptoren muss der Wert &quot;xdm:descriptorReferenceIdentity&quot;lauten. |
-| `xdm:sourceSchema` | Die `$id`-URL des Zielschemas. |
-| `xdm:sourceVersion` | Die Versionsnummer des Zielschemas. |
-| `sourceProperty` | Der Pfad zum primären Identitätsfeld des Zielschemas. |
-| `xdm:identityNamespace` | Der Identitäts-Namespace des Referenzfelds. Hierbei muss es sich um denselben Namespace handeln, der beim Definieren des Felds als primäre Identität des Schemas verwendet wird. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
+| `@type` | Der Typ des zu definierenden Deskriptors. Für Referenzdeskriptoren muss der Wert `xdm:descriptorReferenceIdentity`. |
+| `xdm:sourceSchema` | Die `$id`-URL des Quellschemas. |
+| `xdm:sourceVersion` | Die Versionsnummer des Quellschemas. |
+| `sourceProperty` | Der Pfad zum Feld im Quellschema, das verwendet wird, um auf die primäre Identität des Zielschemas zu verweisen. |
+| `xdm:identityNamespace` | Der Identitäts-Namespace des Referenzfelds. Dieser Namespace muss mit der primären Identität des Zielschemas übereinstimmen. Weiterführende Informationen dazu finden Sie unter [Übersicht zu Identitäts-Namespaces](../../identity-service/home.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
 **Antwort**
 
-Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptors für das Zielschema zurück.
+Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptors für das Quellfeld zurück.
 
 ```json
 {
     "@type": "xdm:descriptorReferenceIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
+    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/533ca5da28087c44344810891b0f03d9",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
@@ -403,7 +402,7 @@ Eine erfolgreiche Antwort gibt die Details des neu erstellten Referenzdeskriptor
 
 ## Beziehungsdeskriptor erstellen {#create-descriptor}
 
-Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Zielschema her. Nachdem Sie einen Referenzdeskriptor für das Zielschema definiert haben, können Sie einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
+Beziehungsdeskriptoren stellen eine Eins-zu-Eins-Beziehung zwischen einem Quellschema und einem Zielschema her. Nachdem Sie einen Referenzidentitätsdeskriptor für das entsprechende Feld im Quellschema definiert haben, können Sie einen neuen Beziehungsdeskriptor erstellen, indem Sie eine POST-Anfrage an die `/tenant/descriptors` -Endpunkt.
 
 **API-Format**
 
@@ -413,7 +412,7 @@ POST /tenant/descriptors
 
 **Anfrage**
 
-Die folgende Anfrage erstellt einen neuen Beziehungsdeskriptor mit &quot;[!DNL Loyalty Members]&quot; als Quellschema und &quot;[!DNL Legacy Loyalty Members]&quot; als Zielschema.
+Die folgende Anfrage erstellt einen neuen Beziehungsdeskriptor mit &quot;[!DNL Loyalty Members]&quot; als Quellschema und &quot;[!DNL Hotels]&quot; als Zielschema.
 
 ```shell
 curl -X POST \
@@ -436,13 +435,13 @@ curl -X POST \
 
 | Parameter | Beschreibung |
 | --- | --- |
-| `@type` | Der Typ des zu erstellenden Deskriptors. Die `@type` Wert für Beziehungsdeskriptoren ist &quot;xdm:descriptorOneToOne&quot;. |
+| `@type` | Der Typ des zu erstellenden Deskriptors. Der `@type`-Wert für Beziehungsdeskriptoren lautet `xdm:descriptorOneToOne`. |
 | `xdm:sourceSchema` | Die `$id`-URL des Quellschemas. |
 | `xdm:sourceVersion` | Die Versionsnummer des Quellschemas. |
 | `xdm:sourceProperty` | Der Pfad zum Referenzfeld im Quellschema. |
 | `xdm:destinationSchema` | Die `$id`-URL des Zielschemas. |
 | `xdm:destinationVersion` | Die Versionsnummer des Zielschemas. |
-| `xdm:destinationProperty` | Der Pfad zum Referenzfeld im Zielschema. |
+| `xdm:destinationProperty` | Der Pfad zum primären Identitätsfeld im Zielschema. |
 
 {style=&quot;table-layout:auto&quot;}
 
