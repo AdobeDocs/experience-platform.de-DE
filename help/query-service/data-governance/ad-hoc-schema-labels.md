@@ -1,10 +1,11 @@
 ---
 title: Unterstützung der attributbasierten Zugriffssteuerung für Ad-hoc-Schemas
 description: Eine Anleitung zum Einschränken des Zugriffs auf Datenfelder in Ad-hoc-Schemata, die über Adobe Experience Platform Query Service generiert wurden.
-source-git-commit: 3d908face315c7aa2ad8f6350fb1fe0d3446d428
+exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
+source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
 workflow-type: tm+mt
 source-wordcount: '1037'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
@@ -27,7 +28,7 @@ Dieses Handbuch setzt ein Verständnis der folgenden Komponenten von Adobe Exper
 * [Experience-Datenmodell (XDM)-System](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de): Das standardisierte Framework, mit dem Experience Platform Kundenerlebnisdaten organisiert.
    * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=de): Erfahren Sie, wie Sie in der Platform-Benutzeroberfläche Schemas und andere Ressourcen erstellen und verwalten.
 * [[!DNL Data Governance]](../../data-governance/home.md): Erfahren Sie mehr [!DNL Data Governance] ermöglicht Ihnen, Kundendaten zu verwalten und die Einhaltung von Vorschriften, Einschränkungen und Richtlinien für die Datennutzung sicherzustellen.
-* [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md): Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können einem Objekt Metadaten hinzugefügt werden, z. B. eine Bezeichnung, die einem Ad-hoc- oder regulären Schemafeld hinzugefügt wird. Ein Administrator definiert Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
+* [Attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md): Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können. Attribute können einem Objekt Metadaten hinzugefügt werden, z. B. eine Bezeichnung, die einem Ad-hoc- oder regulären Schemafeld hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
 
 ## Erstellen eines Ad-hoc-Schemas
 
@@ -41,7 +42,7 @@ Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zu [!UICONTROL Schemas] 
 
 ## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche
 
-Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (../images/data-governance/filter.png) links neben dem Suchfeld aus und klicken Sie dann auf **[!UICONTROL Anzeigen von Ad-hoc-Schemata] in der linken Leiste, die angezeigt wird.
+Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Ein Filtersymbol.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann ** aus.[!UICONTROL Anzeigen von Ad-hoc-Schemata] in der linken Leiste, die angezeigt wird.
 
 ![Die Filter-Optionen des Schema-Dashboards werden in der linken Leiste mit aktiviertem Umschalter &quot;Ad-hoc-Schema anzeigen&quot;angezeigt.](../images/data-governance/adhoc-schema-toggle.png)
 
