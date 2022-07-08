@@ -4,10 +4,10 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: 492a05b24ec905de926d861f607a6e5d294d46e0
+source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 90%
+source-wordcount: '814'
+ht-degree: 86%
 
 ---
 
@@ -184,10 +184,17 @@ ht-degree: 90%
       * [API-Vorgänge für Zugriffsdaten-Endpunkte](./destination-sdk/credentials-configuration-api.md)
       * [Veröffentlichen von Endpunkt-API-Vorgänge](./destination-sdk/destination-publish-api.md)
       * Referenz zu Entwickler-Tools {#developer-tools-reference}
-         * [Abrufen von Beispielvorlagen-API-Vorgängen](./destination-sdk/sample-template-api.md)
-         * [API-Vorgänge für Rendervorlagen](./destination-sdk/render-template-api.md)
-         * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
-         * [Beispiele für API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
+         * Streaming-Ziel-Test-API {#streaming-destination-testing-api}
+            * [Abrufen von Beispielvorlagen-API-Vorgängen](./destination-sdk/sample-template-api.md)
+            * [API-Vorgänge für Rendervorlagen](./destination-sdk/render-template-api.md)
+            * [API-Vorgänge für Zieltests](./destination-sdk/destination-testing-api.md)
+            * [Beispiele für API-Vorgänge zur Profilerstellung](./destination-sdk/sample-profile-generation-api.md)
+         * Dateibasierte Ziel-Test-API {#file-based-destination-testing-api}
+            * [Übersicht über die dateibasierte Ziel-Test-API](./destination-sdk/file-based-destination-testing-overview.md)
+            * [Erstellen von Beispielprofilen basierend auf einem Quellschema](./destination-sdk/file-based-sample-profile-generation-api.md)
+            * [Testen Ihres dateibasierten Ziels mit Beispielprofilen](./destination-sdk/file-based-destination-testing-api.md)
+            * [Detaillierte Aktivierungsergebnisse anzeigen](./destination-sdk/file-based-destination-results-api.md)
+            * [Validieren von vorlagenbasierten Kundenfeldern](./destination-sdk/file-based-render-template-api.md)
    * Handbücher {#guides}
       * [Verwenden des Destination SDK zum Konfigurieren eines Streaming-Ziels](./destination-sdk/configure-destination-instructions.md)
       * [(Beta) Verwenden des Destination SDK zum Konfigurieren eines dateibasierten Ziels](./destination-sdk/configure-file-based-destination-instructions.md)
