@@ -5,10 +5,10 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
 workflow-type: tm+mt
-source-wordcount: '3881'
-ht-degree: 27%
+source-wordcount: '3992'
+ht-degree: 26%
 
 ---
 
@@ -131,15 +131,23 @@ In der folgenden Tabelle werden die Änderungen aufgeschlüsselt, die beim Bearb
 
 | Unterstützte Änderungen | Brechende Änderungen (nicht unterstützt) |
 | --- | --- |
-| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Definieren eines obligatorischen Felds als optional</li><li>Einführen neuer obligatorischer Felder*</li><li>Anzeigename und Beschreibung der Ressource ändern</li><li>Aktivieren des Schemas zur Teilnahme am Profil</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben vorhandener Felder an eine andere Position im Baum</li><li>Löschen des Schemas</li><li>Deaktivieren der Teilnahme des Schemas am Profil</li></ul> |
+| <ul><li>Hinzufügen neuer Felder zur Ressource</li><li>Festlegen eines erforderlichen Felds als optional</li><li>Neue erforderliche Felder einführen*</li><li>Anzeigename und Beschreibung der Ressource ändern</li><li>Aktivieren des Schemas zur Teilnahme am Profil</li></ul> | <ul><li>Entfernen zuvor definierter Felder</li><li>Umbenennen oder Neudefinieren vorhandener Felder</li><li>Entfernen oder Eingrenzen zuvor unterstützter Feldwerte</li><li>Verschieben vorhandener Felder an eine andere Position im Baum</li><li>Löschen des Schemas</li><li>Deaktivieren der Teilnahme des Schemas am Profil</li></ul> |
 
-\**Siehe Abschnitt [Unterabschnitt unten](#post-ingestion-required-fields) wichtige Überlegungen zum Festlegen neuer erforderlicher Felder.*
+\**Wichtige Aspekte zu [Festlegen neuer erforderlicher Felder](#post-ingestion-required-fields).*
 
-#### Felder nach der Aufnahme als obligatorisch festlegen {#post-ingestion-required-fields}
+### Erforderliche Felder
+
+Einzelne Schemafelder können [markiert als erforderlich](../ui/fields/required.md), d. h. alle erfassten Datensätze müssen Daten in diesen Feldern enthalten, um die Validierung zu bestehen. Wenn Sie beispielsweise das primäre Identitätsfeld eines Schemas nach Bedarf festlegen, können Sie sicherstellen, dass alle erfassten Datensätze am Echtzeit-Kundenprofil teilnehmen, während Sie bei Bedarf ein Zeitstempelfeld festlegen, um sicherzustellen, dass alle Zeitreihenereignisse chronologisch erhalten bleiben.
+
+>[!IMPORTANT]
+>
+>Unabhängig davon, ob ein Schemafeld erforderlich ist oder nicht, akzeptiert Platform nicht `null` oder leere Werte für alle erfassten Felder. Wenn in einem Datensatz oder Ereignis kein Wert für ein bestimmtes Feld vorhanden ist, sollte der Schlüssel für dieses Feld aus der Aufnahme-Payload ausgeschlossen werden.
+
+#### Felder nach der Aufnahme entsprechend einstellen {#post-ingestion-required-fields}
 
 Wenn ein Feld zum Erfassen von Daten verwendet wurde und ursprünglich nicht als erforderlich festgelegt wurde, kann dieses Feld für einige Datensätze einen Nullwert aufweisen. Wenn Sie dieses Feld nach der Erfassung als erforderlich festlegen, müssen alle zukünftigen Datensätze einen Wert für dieses Feld enthalten, auch wenn historische Datensätze möglicherweise null sind.
 
-Beachten Sie beim Festlegen eines zuvor optionalen Felds als obligatorisch Folgendes:
+Beachten Sie beim Festlegen eines zuvor optionalen Felds nach Bedarf Folgendes:
 
 1. Wenn Sie historische Daten abfragen und die Ergebnisse in einen neuen Datensatz schreiben, schlagen einige Zeilen fehl, da sie Nullwerte für das erforderliche Feld enthalten.
 1. Wenn das Feld an [Echtzeit-Kundenprofil](../../profile/home.md) und wenn Sie Daten exportieren, bevor Sie sie nach Bedarf festlegen, können sie für einige Profile null sein.
