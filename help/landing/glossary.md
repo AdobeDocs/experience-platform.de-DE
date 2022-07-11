@@ -5,10 +5,10 @@ title: Adobe Experience Platform-Glossar
 topic-legacy: getting started
 description: Ein Glossar wichtiger Experience Platform-Terminologie.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 7bafa87de874c6be90b80e4a899c02fd3868290e
+source-git-commit: c0f01efa224bffb5b435e2f247e793edfbc576b9
 workflow-type: tm+mt
-source-wordcount: '7385'
-ht-degree: 3%
+source-wordcount: '7428'
+ht-degree: 4%
 
 ---
 
@@ -258,6 +258,8 @@ ht-degree: 3%
 
 **DSGVO (Datenschutz-Grundverordnung)**: Die Datenschutz-Grundverordnung (DSGVO) ist ein Rechtsrahmen, der Richtlinien für die Erhebung und Verarbeitung personenbezogener Daten von Personen in der Europäischen Union (EU) festlegt. Die DSGVO legt die Grundsätze für das Datenmanagement und die Rechte des Einzelnen fest und erfasst alle Unternehmen, die mit den Daten von EU-Bürgern zu tun haben.
 
+**Schutzschilde**: Limits sind Schwellenwerte, die die Datennutzung und Systemnutzung, Leistungsoptimierung und Vermeidung von Fehlern oder unerwarteten Ergebnissen in Adobe Experience Platform unterstützen. Limits können sich auf Ihre Nutzung oder Nutzung von Daten und Verarbeitung im Zusammenhang mit Ihren Lizenzberechtigungen beziehen.
+
 ## H
 
 **Host**: Im Kontext von Tags gibt ein Host den Speicherort, die Domäne und die Benutzeranmeldeinformationen an, die erforderlich sind, damit das System einen Build bereitstellen kann.
@@ -464,7 +466,7 @@ ht-degree: 3%
 
 **Segment Builder**: Die [!DNL Segment Builder] ist eine visuelle Entwicklungsumgebung zum Erstellen von Segmentdefinitionen. Sie dient als gemeinsame Komponente aller Anwendungen, die den Segmentierungsdienst von Experience Platform verwenden.
 
-**Segmentdefinition**: Eine Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet wird. Nach der Konzeption werden die in einer Segmentdefinition beschriebenen Regeln verwendet, um qualifizierte Zielgruppenmitglieder für ein Segment zu bestimmen.
+**Segmentdefinition**: Eine Segmentdefinition ist der Regelsatz, der zur Beschreibung der Hauptmerkmale oder des Verhaltens einer Zielgruppe verwendet wird. Nach der Erstellung einer Segmentdefinition werden die darin beschriebenen Regeln zur Bestimmung qualifizierter Zielgruppenmitglieder für ein Segment verwendet.
 
 **Methode zur Segmentauswertung**: Es gibt zwei Methoden zur Segmentauswertung: geplant und bei Bedarf. Die geplante Auswertung ermöglicht einen wiederkehrenden Zeitplan für die Ausführung eines Exportauftrags zu einem bestimmten Zeitpunkt, während die On-Demand-Auswertung die Erstellung eines Segmentauftrags umfasst, um die Zielgruppe sofort zu erstellen.
 
@@ -506,7 +508,7 @@ ht-degree: 3%
 
 **Streaming-Erfassung**: Mit der Streaming-Erfassung können Sie Daten von Client- und Server-seitigen Geräten in Echtzeit an die Experience Platform senden.
 
-**Streaming-Segmentierung**: Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf eingehende Daten angewendet auf [!DNL Real-time Customer Profile]. Segmentzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
+**Streaming-Segmentierung**: Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-time Customer Profile] eingehende Daten angewendet. Segmenthinzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
 
 **Systemansicht**: Die Systemansicht ist eine visuelle Darstellung von Quelldatensätzen, die durchlaufen werden. [!DNL Real-time Customer Profile] zu Zielen.
 
@@ -538,7 +540,7 @@ ht-degree: 3%
 
 **XDM ExperienceEvent**: XDM ExperienceEvent ist eine zeitreihenbasierte Klasse, mit der der Status des Systems beim Eintreten eines Ereignisses (oder einer Reihe von Ereignissen) erfasst wird, einschließlich des Zeitpunkts und der Identität des betroffenen Subjekts. Siehe auch: Erlebnisereignis
 
-**XDM Individual Profile**: XDM [!DNL Individual Profile] ist eine auf Aufzeichnungen basierende Klasse, die eine eindeutige Darstellung der Attribute sowohl identifizierter als auch teilweise identifizierter Personen bildet. Hoch identifizierte Profile können für persönliche Kommunikation oder zielgerichtete Interaktionen verwendet werden und detaillierte persönliche Informationen wie Name, Geschlecht, Geburtsdatum, Ort und Kontaktinformationen, einschließlich Telefonnummern und E-Mail-Adressen, enthalten.
+**XDM Individual Profile**: XDM [!DNL Individual Profile] ist eine auf Aufzeichnungen basierende Klasse, die eine eindeutige Darstellung der Attribute sowohl identifizierter als auch teilweise identifizierter Personen bildet. Hochgradig identifizierte Profile können für die persönliche Kommunikation oder zielgerichtete Interaktionen verwendet werden und detaillierte persönliche Informationen wie Name, Geschlecht, Geburtsdatum, Ort und Kontaktinformationen, einschließlich Telefonnummern und E-Mail-Adressen, enthalten.
 
 **XDM-System**: XDM System stellt das Framework dar, das XDM-Schemas für die Verwendung in nachgelagerten Experience Platform-Services implementiert.
 
