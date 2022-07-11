@@ -5,25 +5,25 @@ title: Schemafeldgruppe "Segmentzugehörigkeitsdetails"
 topic-legacy: overview
 description: Dieses Dokument bietet einen Überblick über die Schemakonzerne "Segmentzugehörigkeitsdetails".
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: afe748d443aad7b6da5b348cd569c9e806e4419b
+source-git-commit: 5f28c9eceb42ee19f7a8b22604ff36f8ffbd89b1
 workflow-type: tm+mt
-source-wordcount: '426'
-ht-degree: 4%
+source-wordcount: '430'
+ht-degree: 6%
 
 ---
 
 
-# [!UICONTROL Feldergruppe ] &quot;Segmentzugehörigkeitsdetails&quot;
+# [!UICONTROL Details zur Segmentzugehörigkeit] Schemafeldgruppe
 
 >[!NOTE]
 >
->Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu [Feldgruppennamenupdates](../name-updates.md) .
+>Die Namen verschiedener Schemafeldgruppen wurden geändert. Weitere Informationen finden Sie im Dokument zu den [Namensaktualisierungen für Feldgruppen](../name-updates.md).
 
-[!UICONTROL Segmentzugehörigkeitsdetails ] sind eine Standardschemafeldgruppe für die  [[!DNL XDM Individual Profile] Klasse](../../classes/individual-profile.md). Die Feldergruppe bietet ein einzelnes Zuordnungsfeld, das Informationen zur Segmentzugehörigkeit erfasst, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifikationszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis.
+[!UICONTROL Details zur Segmentzugehörigkeit] ist eine Standardschemafeldgruppe für die [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). Die Feldergruppe bietet ein einzelnes Zuordnungsfeld, das Informationen zur Segmentzugehörigkeit erfasst, einschließlich der Segmente, zu denen die Person gehört, der letzten Qualifikationszeit und des Zeitpunkts, zu dem die Mitgliedschaft gültig ist, bis.
 
 >[!WARNING]
 >
->Während das Feld `segmentMembership` mithilfe dieser Feldergruppe manuell zum Profilschema hinzugefügt werden muss, sollten Sie nicht versuchen, dieses Feld manuell zu füllen oder zu aktualisieren. Das System aktualisiert die `segmentMembership`-Zuordnung für jedes Profil automatisch, wenn Segmentierungsaufträge ausgeführt werden.
+>Während `segmentMembership` muss mithilfe dieser Feldergruppe manuell zum Profilschema hinzugefügt werden. Sie sollten nicht versuchen, dieses Feld manuell zu füllen oder zu aktualisieren. Das System aktualisiert automatisch die `segmentMembership` für jedes Profil zuordnen, da Segmentierungsaufträge ausgeführt werden.
 
 <img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
 
@@ -33,7 +33,7 @@ ht-degree: 4%
 
 {style=&quot;table-layout:auto&quot;}
 
-Im Folgenden finden Sie ein Beispiel für die Zuordnung `segmentMembership`, die das System für ein bestimmtes Profil ausgefüllt hat. Segmentmitgliedschaften werden nach Namespace sortiert, wie durch die Schlüssel auf der Stammebene des Objekts angegeben. Die einzelnen Schlüssel unter jedem Namespace stellen wiederum die IDs der Segmente dar, denen das Profil angehört. Jedes Segmentobjekt enthält mehrere Unterfelder, die weitere Details zur Mitgliedschaft bieten:
+Im Folgenden finden Sie ein Beispiel `segmentMembership` zuordnen, dass das System für ein bestimmtes Profil ausgefüllt wurde. Segmentmitgliedschaften werden nach Namespace sortiert, wie durch die Schlüssel auf der Stammebene des Objekts angegeben. Die einzelnen Schlüssel unter jedem Namespace stellen wiederum die IDs der Segmente dar, denen das Profil angehört. Jedes Segmentobjekt enthält mehrere Unterfelder, die weitere Details zur Mitgliedschaft bieten:
 
 ```json
 {
@@ -77,8 +77,8 @@ Im Folgenden finden Sie ein Beispiel für die Zuordnung `segmentMembership`, die
 | `xdm:version` | Die Version des Segments, für das dieses Profil qualifiziert ist. |
 | `xdm:lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
 | `xdm:validUntil` | Ein Zeitstempel, der angibt, wann die Segmentzugehörigkeit nicht mehr als gültig betrachtet werden soll. |
-| `xdm:status` | Gibt an, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
-| `xdm:payload` | Einige Segmentmitgliedschaften enthalten eine Payload, die zusätzliche Werte beschreibt, die direkt mit der Mitgliedschaft in Verbindung stehen. Für jede Mitgliedschaft kann nur eine Payload eines bestimmten Typs angegeben werden. `xdm:payloadType` gibt den Typ der Payload an (`boolean`,  `number`,  `propensity` oder  `string`), während die Geschwistereigenschaft den Wert für den Payload-Typ bereitstellt. |
+| `xdm:status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
+| `xdm:payload` | Einige Segmentmitgliedschaften enthalten eine Payload, die zusätzliche Werte beschreibt, die direkt mit der Mitgliedschaft in Verbindung stehen. Für jede Mitgliedschaft kann nur eine Payload eines bestimmten Typs angegeben werden. `xdm:payloadType` gibt den Payload-Typ an (`boolean`, `number`, `propensity`oder `string`), während seine gleichrangige Eigenschaft den Wert für den Payload-Typ bereitstellt. |
 
 {style=&quot;table-layout:auto&quot;}
 
