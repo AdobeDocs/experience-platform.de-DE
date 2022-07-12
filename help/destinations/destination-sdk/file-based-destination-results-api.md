@@ -1,7 +1,7 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /testing/destinationInstance die vollständigen Details Ihrer Testergebnisse anzeigen können. Dieser API-Endpunkt gibt dasselbe Ergebnis zurück, das Sie bei der Verwendung der Flow Service-API zur Überwachung von Datenflüssen erhalten würden.
 title: Detaillierte Aktivierungsergebnisse anzeigen
-source-git-commit: 5b62203113dd55dad8adeb96cbcc2d46b3420c3a
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 15%
@@ -42,7 +42,7 @@ Bevor Sie die `/testing/destinationInstance` -Endpunkt verwenden, stellen Sie si
 
 Einmal [Zielkonfiguration validieren](file-based-destination-testing-api.md)können Sie detaillierte Aktivierungsergebnisse anzeigen, indem Sie eine GET-Anfrage an die `authoring/testing/destinationInstance/` -Endpunkt und geben die Ziel-Instanz-ID des Ziels an, das Sie testen, sowie die Flusslaufs-IDs der aktivierten Segmente.
 
-Die vollständige API-URL, die Sie verwenden müssen, finden Sie in der `results` -Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md).
+Sie finden die vollständige API-URL, die Sie in der `results` -Eigenschaft, die in der [Antwort des Zieltestaufrufs](file-based-destination-testing-api.md).
 
 **API-Format**
 

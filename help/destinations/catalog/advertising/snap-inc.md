@@ -1,10 +1,10 @@
 ---
 title: (Beta) Snap Inc-Verbindung
 description: Erfahren Sie, wie Sie eine Verbindung zur Snapchat Ads-Plattform herstellen und Ihre Zielgruppensegmente aus Experience Platform exportieren.
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '949'
-ht-degree: 5%
+source-wordcount: '1012'
+ht-degree: 6%
 
 ---
 
@@ -103,6 +103,12 @@ Füllen Sie die erforderlichen Felder aus und wählen Sie **[!UICONTROL Nächste
 >[!IMPORTANT]
 > 
 >Wenn Sie eine falsche oder ungültige Snapchat-Konto-ID eingeben, schlägt die Segmentaktivierung fehl. Vergewissern Sie sich bitte, dass Sie die richtige Anzeigenkonto-ID eingegeben haben.
+
+### Aktivieren von Warnhinweisen {#enable-alerts}
+
+Sie können Warnhinweise aktivieren, um Benachrichtigungen über den Status des Datenflusses an Ihr Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zu [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+
+Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 

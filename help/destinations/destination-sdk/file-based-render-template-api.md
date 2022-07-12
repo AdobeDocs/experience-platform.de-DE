@@ -1,9 +1,9 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem Endpunkt /authoring/testing/template/render visualisieren können, wie die in Ihrer Zielkonfiguration definierten vorlagenbasierten Kundendatenfelder aussehen.
 title: Validieren von vorlagenbasierten Kundenfeldern
-source-git-commit: fa092e4d1828d9ecd5bc98e3f225fa377f38065f
+source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 20%
 
 ---
@@ -83,7 +83,7 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 
 Eine erfolgreiche Antwort gibt eine `HTTP 200 OK` und der Hauptteil zufällig generierte Werte für Ihre Vorlagenfelder enthält.
 
-Diese Antwort soll Ihnen dabei helfen, die korrekte Struktur Ihrer Kundendatenfelder zu überprüfen, z. B. Behälternamen oder Ordnerpfade.
+Diese Antwort kann Ihnen dabei helfen, die richtige Struktur Ihrer Kundendatenfelder zu überprüfen, z. B. Behälternamen oder Ordnerpfade.
 
 
 ```json
