@@ -6,14 +6,14 @@ description: Dieses Dokument bietet eine Anleitung zum Definieren einer Beziehun
 topic-legacy: tutorial
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 0ce574700ce4134cddbb990b9b2765c25112b44d
 workflow-type: tm+mt
-source-wordcount: '1042'
-ht-degree: 24%
+source-wordcount: '1145'
+ht-degree: 22%
 
 ---
 
-# Definieren Sie mithilfe der [!DNL Schema Editor]
+# Definieren einer Eins-zu-Eins-Beziehung zwischen zwei Schemas mithilfe der [!DNL Schema Editor]
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"
@@ -21,9 +21,21 @@ ht-degree: 24%
 >abstract="Schemas, die zu verschiedenen Klassen gehören, können kontextgebunden über Beziehungsfelder verknüpft werden, sodass Sie komplexere Segmentierungsregeln erstellen können."
 >text="See the documentation for more information on schema relationships."
 
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_reference_schema"
+>title="Referenzschema"
+>abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Dieses Schema kann eine andere Klasse sein als das aktuelle Schema."
+>text="See the documentation for more information on schema relationships."
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_1to1_identity_namespace"
+>title="Referenz-Identitäts-Namespace"
+>abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgestelltes primäres Identitätsfeld verfügen, um an einer Beziehung teilnehmen zu können."
+>text="See the documentation for more information on schema relationships."
+
 >[!NOTE]
 >
->Wenn Sie Real-time Customer Data Platform B2B Edition verwenden, lesen Sie das Handbuch unter [Erstellen von B2B-Beziehungen](./relationship-b2b.md) anstatt.
+>Anweisungen zum Erstellen einer n:1-Beziehung in Real-time Customer Data Platform B2B Edition finden Sie im Handbuch unter [Erstellen von B2B-Beziehungen](./relationship-b2b.md).
 
 Die Möglichkeit, Beziehungen zwischen Ihren Kunden und deren Interaktionen mit Ihrer Marke kanalübergreifend zu analysieren, ist ein wichtiger Bestandteil von Adobe Experience Platform. Definieren dieser Beziehungen innerhalb der Struktur Ihrer [!DNL Experience Data Model] (XDM)-Schemas ermöglichen es Ihnen, komplexe Einblicke in Ihre Kundendaten zu erhalten.
 
@@ -110,6 +122,10 @@ Die aktualisierten `favoriteHotel` auf der Arbeitsfläche angezeigt. Auswählen 
 ## Beziehungsfeld für das Quellschema definieren {#relationship-field}
 
 Sobald in Ihrem Quellschema ein dediziertes Referenzfeld definiert ist, können Sie es als Beziehungsfeld festlegen.
+
+>[!NOTE]
+>
+>Die folgenden Schritte beschreiben, wie Sie ein Beziehungsfeld mithilfe der Steuerelemente in der rechten Leiste auf der Arbeitsfläche definieren. Wenn Sie Zugriff auf Real-Time CDP B2B Edition haben, können Sie auch eine Eins-zu-Eins-Beziehung mithilfe der [Dialogfeld](./relationship-b2b.md#relationship-field) wie beim Erstellen von 1:1-Beziehungen.
 
 Wählen Sie die `favoriteHotel` -Feld auf der Arbeitsfläche und scrollen Sie dann nach unten **[!UICONTROL Feldeigenschaften]** bis zum **[!UICONTROL Beziehung]** angezeigt. Aktivieren Sie das Kontrollkästchen, um die erforderlichen Parameter für die Konfiguration eines Beziehungsfelds anzuzeigen.
 
