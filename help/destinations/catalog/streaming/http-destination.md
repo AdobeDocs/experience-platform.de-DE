@@ -3,10 +3,10 @@ title: HTTP-API-Verbindung
 keywords: Streaming;
 description: Verwenden Sie das HTTP-API-Ziel in Adobe Experience Platform, um Profildaten an den Drittanbieter-HTTP-Endpunkt zu senden, um Ihre eigenen Analysen auszuführen oder andere Vorgänge durchzuführen, die Sie möglicherweise für aus Experience Platform exportierte Profildaten benötigen.
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: d4a4baf330925d6696f515bf650d86740c18e97c
+source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
 workflow-type: tm+mt
-source-wordcount: '2296'
-ht-degree: 3%
+source-wordcount: '2374'
+ht-degree: 4%
 
 ---
 
@@ -138,7 +138,7 @@ Wenn Sie die **[!UICONTROL OAuth 2 Client-Anmeldedaten]** Authentifizierungstyp 
    * **[!UICONTROL Textkörperformular kodiert]**: In diesem Fall wird die [!DNL client ID] und [!DNL client secret] sind enthalten *im Hauptteil des Antrags* an Ihr Ziel gesendet. Ein Beispiel finden Sie unter [Unterstützte Authentifizierungstypen](#supported-authentication-types) Abschnitt.
    * **[!UICONTROL Grundlegende Autorisierung]**: In diesem Fall wird die [!DNL client ID] und [!DNL client secret] sind enthalten *in einer `Authorization` header* nachdem base64-kodiert und an Ihr Ziel gesendet wurde. Ein Beispiel finden Sie unter [Unterstützte Authentifizierungstypen](#supported-authentication-types) Abschnitt.
 
-### Zieldetails {#destination-details}
+### Zieldetails ausfüllen {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_headers"
@@ -165,7 +165,7 @@ Wenn Sie die **[!UICONTROL OAuth 2 Client-Anmeldedaten]** Authentifizierungstyp 
 >title="Abfrageparameter"
 >abstract="Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`."
 
-Geben Sie nach Einrichtung der Authentifizierungsverbindung zum HTTP-Endpunkt die folgenden Informationen für das Ziel ein:
+Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details für das Ziel zu konfigurieren. Ein Sternchen neben einem Feld in der Benutzeroberfläche zeigt an, dass das Feld erforderlich ist.
 
 ![Bild des UI-Bildschirms mit ausgefüllten Feldern für die HTTP-Zieldetails](../../assets/catalog/http/http-api-destination-details.png)
 
@@ -176,6 +176,12 @@ Geben Sie nach Einrichtung der Authentifizierungsverbindung zum HTTP-Endpunkt di
 * **[!UICONTROL Abfrageparameter]**: Optional können Sie Abfrageparameter zur HTTP-Endpunkt-URL hinzufügen. Formatieren Sie die verwendeten Abfrageparameter wie folgt: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Segmentnamen einschließen]**: Schalten Sie ein, wenn der Datenexport die Namen der Segmente enthalten soll, die Sie exportieren. Ein Beispiel für einen Datenexport mit aktivierter Option finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
 * **[!UICONTROL Segmentzeitstempel einschließen]**: Schalten Sie ein, wenn der Datenexport zum Zeitpunkt der Erstellung und Aktualisierung der Segmente den UNIX-Zeitstempel sowie den UNIX-Zeitstempel enthalten soll, zu dem die Segmente zum Zeitpunkt der Aktivierung dem Ziel zugeordnet wurden. Ein Beispiel für einen Datenexport mit aktivierter Option finden Sie im Abschnitt [Exportierte Daten](#exported-data) weiter unten.
+
+### Aktivieren von Warnhinweisen {#enable-alerts}
+
+Sie können Warnhinweise aktivieren, um Benachrichtigungen über den Status des Datenflusses an Ihr Ziel zu erhalten. Wählen Sie einen Warnhinweis aus der zu abonnierenden Liste aus, um Benachrichtigungen über den Status Ihres Datenflusses zu erhalten. Weitere Informationen zu Warnungen finden Sie im Handbuch zu [Abonnieren von Zielwarnhinweisen über die Benutzeroberfläche](../../ui/alerts.md).
+
+Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!UICONTROL Nächste]**.
 
 ## Aktivieren von Segmenten für dieses Ziel {#activate}
 

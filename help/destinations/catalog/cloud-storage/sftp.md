@@ -3,10 +3,10 @@ keywords: SFTP; SFTP
 title: SFTP-Verbindung
 description: Erstellen Sie eine ausgehende Live-Verbindung zu Ihrem SFTP-Server, um durch Trennzeichen getrennte Datendateien regelmäßig aus Adobe Experience Platform zu exportieren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: 715533352e84573f60f012504988595af6146e2f
+source-git-commit: fd2019feb25b540612a278cbea5bf5efafe284dc
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 7%
+source-wordcount: '673'
+ht-degree: 6%
 
 ---
 
@@ -39,9 +39,9 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 > 
 >Um eine Verbindung zum Ziel herzustellen, benötigen Sie die **[!UICONTROL Ziele verwalten]** [Zugriffsberechtigung](/help/access-control/home.md#permissions). Lesen Sie die [Zugriffskontrolle - Übersicht](/help/access-control/ui/overview.md) oder wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
 
-Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor.
+Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tutorial zur Zielkonfiguration](../../ui/connect-destination.md) beschrieben vor. Füllen Sie im Workflow zum Konfigurieren des Ziels die Felder aus, die in den beiden folgenden Abschnitten aufgeführt sind.
 
-### Verbindungsparameter {#parameters}
+### Authentifizierungsinformationen {#authentication-information}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_rsa"
@@ -51,11 +51,7 @@ Um eine Verbindung mit diesem Ziel herzustellen, gehen Sie wie im Abschnitt [Tut
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_sftp_ssh"
 >title="Privater SSH-Schlüssel"
->abstract="Der private SSH-Schlüssel muss als Base64-kodierte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein. "
-
-Wann [Verbindung](../../ui/connect-destination.md) zu diesem Ziel hinzufügen, müssen Sie die folgenden Informationen angeben:
-
-#### Authentifizierungsinformationen {#authentication-information}
+>abstract="Der private SSH-Schlüssel muss als Base64-kodierte Zeichenfolge formatiert sein und darf nicht kennwortgeschützt sein."
 
 Wenn Sie die **[!UICONTROL Grundlegende Authentifizierung]** Typ, um eine Verbindung zu Ihrem SFTP-Speicherort herzustellen:
 
@@ -83,7 +79,7 @@ Wenn Sie die **[!UICONTROL SFTP mit SSH-Schlüssel]** Authentifizierungstyp für
 
       ![PGP-Schlüssel](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Zieldetails {#destination-details}
+### Zieldetails {#destination-details}
 
 Geben Sie nach Herstellung der Authentifizierungsverbindung zum SFTP-Speicherort die folgenden Informationen für das Ziel ein:
 
