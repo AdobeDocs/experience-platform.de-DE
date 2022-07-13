@@ -5,9 +5,9 @@ title: Erstellen und Bearbeiten von Schemata in der Benutzeroberfläche
 description: Lernen Sie die Grundlagen zum Erstellen und Bearbeiten von Schemas in der Benutzeroberfläche von Experience Platform kennen.
 topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '2895'
+source-wordcount: '2901'
 ht-degree: 0%
 
 ---
@@ -225,8 +225,7 @@ Nachdem Sie Ihre Änderungen angewendet haben, wird das neue Feld unter Ihrem Ma
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Aktivieren eines Schemas für Profil"
->abstract="Wenn ein Schema für Profil aktiviert ist, beteiligen sich alle Datensätze, die aus diesem Schema erstellt wurden, an Echtzeit-Kundenprofil, das Daten aus unterschiedlichen Quellen zusammenführt, um eine vollständige Ansicht jedes Kunden zu erstellen. Sobald ein Schema zur Aufnahme von Daten in das Profil verwendet wird, kann es nicht mehr deaktiviert werden."
->text="See the documentation for more information on enabling a schema for Profile."
+>abstract="Wenn ein Schema für Profil aktiviert ist, beteiligen sich alle Datensätze, die aus diesem Schema erstellt wurden, an Echtzeit-Kundenprofil, das Daten aus unterschiedlichen Quellen zusammenführt, um eine vollständige Ansicht jedes Kunden zu erstellen. Sobald ein Schema zur Aufnahme von Daten in das Profil verwendet wird, kann es nicht mehr deaktiviert werden. Weitere Informationen finden Sie in der Dokumentation."
 
 [Echtzeit-Kundenprofil](../../../profile/home.md) führt Daten aus unterschiedlichen Quellen zusammen, um eine vollständige Ansicht jedes einzelnen Kunden zu erhalten. Wenn die von einem Schema erfassten Daten an diesem Prozess teilnehmen sollen, müssen Sie das Schema zur Verwendung in [!DNL Profile].
 

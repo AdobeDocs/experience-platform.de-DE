@@ -2,10 +2,10 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: b9ec275df738e006d3fec2cdd64b0ed6577dbff8
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 6%
+source-wordcount: '1401'
+ht-degree: 5%
 
 ---
 
@@ -14,12 +14,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Referenzschema"
->abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Abhängig von der Klasse des Schemas kann es auch vorhandene Beziehungen zu anderen Entitäten im B2B-Kontext haben."
->text="See the documentation to learn how B2B schema classes relate to each other."
-
->[!NOTE]
->
->Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden oder eine Eins-zu-Eins-Beziehung erstellen möchten, lesen Sie das Handbuch unter [Erstellen einer Eins-zu-Eins-Beziehung](./relationship-ui.md) anstatt.
+>abstract="Wählen Sie das Schema aus, mit dem Sie eine Beziehung herstellen möchten. Abhängig von der Klasse des Schemas kann es auch vorhandene Beziehungen zu anderen Entitäten im B2B-Kontext haben. In der Dokumentation erfahren Sie, wie sich B2B-Schemaklasse zueinander verhalten."
 
 Real-time Customer Data Platform B2B Edition bietet mehrere Experience-Datenmodell (XDM)-Klassen, die grundlegende B2B-Datenentitäten erfassen, darunter auch [Konten](../classes/b2b/business-account.md), [Gelegenheiten](../classes/b2b/business-opportunity.md), [Kampagnen](../classes/b2b/business-campaign.md)und mehr. Indem Sie Schemas erstellen, die auf diesen Klassen basieren, und sie zur Verwendung in [Echtzeit-Kundenprofil](../../profile/home.md)können Sie Daten aus unterschiedlichen Quellen in einer einheitlichen Darstellung zusammenführen, die als Vereinigungsschema bezeichnet wird.
 
@@ -32,6 +27,8 @@ Das folgende Diagramm zeigt ein Beispiel dafür, wie die verschiedenen B2B-Klass
 In diesem Tutorial werden die Schritte zum Definieren einer 1:1-Beziehung zwischen zwei Schemas in der Echtzeit-CDP B2B Edition beschrieben.
 
 >[!NOTE]
+>
+>Wenn Sie Real-time Customer Data Platform B2B Edition nicht verwenden oder eine Eins-zu-Eins-Beziehung erstellen möchten, lesen Sie das Handbuch unter [Erstellen einer Eins-zu-Eins-Beziehung](./relationship-ui.md) anstatt.
 >
 >In diesem Tutorial wird beschrieben, wie Sie in der Platform-Benutzeroberfläche manuell Beziehungen zwischen B2B-Schemas herstellen. Wenn Sie Daten aus einer B2B-Quellverbindung einbringen, können Sie stattdessen ein Dienstprogramm zur automatischen Generierung verwenden, um die erforderlichen Schemas, Identitäten und Beziehungen zu erstellen. Weitere Informationen zu B2B-Namespaces und -Schemata finden Sie in der Quelldokumentation zu B2B-Namespaces . [mit dem Dienstprogramm zur automatischen Erzeugung](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -54,8 +51,7 @@ Schemabeziehungen werden durch ein dediziertes Feld in einer **Quellschema** , d
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_identity_namespace"
 >title="Referenz-Identitäts-Namespace"
->abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgestelltes primäres Identitätsfeld verfügen, um an einer Beziehung teilnehmen zu können."
->text="See the documentation to learn more about identities in B2B relationships."
+>abstract="Der Namespace (Typ) für das primäre Identitätsfeld des Referenzschemas. Das Referenzschema muss über ein festgestelltes primäres Identitätsfeld verfügen, um an einer Beziehung teilnehmen zu können. Weitere Informationen zu Identitäten in B2B-Beziehungen finden Sie in der Dokumentation ."
 
 Um eine Beziehung herzustellen, muss das Zielschema über eine definierte primäre Identität verfügen. Beachten Sie beim Festlegen einer primären Identität für eine B2B-Entität, dass sich die Zeichenfolgen-basierten Entitäts-IDs überschneiden können, wenn Sie sie über verschiedene Systeme oder Standorte hinweg erfassen. Dies könnte zu Datenkonflikten in Platform führen.
 
@@ -88,14 +84,12 @@ Das Zielschema &quot;[!DNL Accounts]&quot; basiert auf der Variablen [!UICONTROL
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"
 >title="Beziehungsname aus aktuellem Schema"
->abstract="Eine Beschriftung, die die Beziehung des aktuellen Schemas zum Referenzschema beschreibt (z. B. &quot;Verknüpftes Konto&quot;). Diese Bezeichnung wird in Profil und Segmentierung verwendet, um Kontext zu Daten verwandter B2B-Entitäten zu geben."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="Eine Beschriftung, die die Beziehung des aktuellen Schemas zum Referenzschema beschreibt (z. B. &quot;Verknüpftes Konto&quot;). Diese Bezeichnung wird in Profil und Segmentierung verwendet, um Kontext zu Daten verwandter B2B-Entitäten zu geben. Weitere Informationen zum Erstellen von B2B-Schemabeziehungen finden Sie in der Dokumentation ."
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_reference"
 >title="Beziehungsname aus Referenzschema"
->abstract="Eine Beschriftung, die die Beziehung vom Referenzschema zum aktuellen Schema beschreibt (z. B. &quot;Verwandte Möglichkeiten&quot;). Diese Bezeichnung wird in Profil und Segmentierung verwendet, um Kontext zu Daten verwandter B2B-Entitäten zu geben."
->text="See the documentation to learn more about building B2B schema relationships."
+>abstract="Eine Beschriftung, die die Beziehung vom Referenzschema zum aktuellen Schema beschreibt (z. B. &quot;Verwandte Möglichkeiten&quot;). Diese Bezeichnung wird in Profil und Segmentierung verwendet, um Kontext zu Daten verwandter B2B-Entitäten zu geben. Weitere Informationen zum Erstellen von B2B-Schemabeziehungen finden Sie in der Dokumentation ."
 
 Um eine Beziehung zwischen zwei Schemas zu definieren, muss das Quellschema über ein dediziertes Feld verfügen, das auf die primäre Identität des Zielschemas verweist. Standard-B2B-Klassen enthalten dedizierte Quellschlüsselfelder für häufig verwandte Geschäftsentitäten. Beispiel: die [!UICONTROL XDM-Geschäftschancen] -Klasse enthält Quellschlüsselfelder für ein verwandtes Konto (`accountKey`) und einer damit verbundenen Kampagne (`campaignKey`). Sie können jedoch auch andere [!UICONTROL B2B-Quelle] -Felder durch Verwendung benutzerdefinierter Feldergruppen zum Schema hinzufügen, wenn Sie mehr als die Standardkomponenten benötigen.
 

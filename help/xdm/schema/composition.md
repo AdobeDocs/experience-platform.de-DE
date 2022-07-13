@@ -5,9 +5,9 @@ title: Grundlagen der Schemakomposition
 topic-legacy: overview
 description: Dieses Dokument bietet Ihnen eine Einführung in Experience-Datenmodell (XDM)-Schemas und die Bausteine, Grundsätze und Best Practices zum Erstellen von Schemas, die in Adobe Experience Platform verwendet werden sollen.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 11dcb1a824020a5b803621025863e95539ab4d71
+source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
 workflow-type: tm+mt
-source-wordcount: '3992'
+source-wordcount: '4103'
 ht-degree: 26%
 
 ---
@@ -54,8 +54,7 @@ Sowohl Schemas der Datensätze als auch der Zeitreihen enthalten eine Zuordnung 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identitäten in Schemata"
->abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Betreff identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um das Identitätsdiagramm für jede Person zu erstellen und Kundenprofile zu erstellen."
->text="See the documentation for more information on identities in schemas."
+>abstract="Identitäten sind Schlüsselfelder innerhalb eines Schemas, mit denen ein Betreff identifiziert werden kann, z. B. eine E-Mail-Adresse oder eine Marketing-ID. Diese Felder werden verwendet, um das Identitätsdiagramm für jede Person zu erstellen und Kundenprofile zu erstellen. Weitere Informationen zu Identitäten in Schemas finden Sie in der Dokumentation ."
 
 Schemas werden zur Aufnahme von Daten in [!DNL Experience Platform]. Diese Daten können über mehrere Dienste hinweg verwendet werden, um eine einzelne, einheitliche Ansicht einer einzelnen Entität zu erstellen. Daher ist es wichtig, wenn man über Schemas nachdenkt, über Kundenidentitäten nachzudenken und welche Felder zur Identifizierung eines Subjekts verwendet werden können, unabhängig davon, woher die Daten stammen.
 
@@ -169,6 +168,11 @@ Schemas werden nach folgender Formel zusammengestellt:
 
 ### Klasse {#class}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class"
+>title="Klasse"
+>abstract="Jedes Schema basiert auf einer einzelnen Klasse. Die Klasse definiert das Verhalten des Schemas und die allgemeinen Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, enthalten müssen. Weitere Informationen dazu, wie Klassen in die Schemakomposition eingebunden sind, finden Sie in der Dokumentation ."
+
 Das Erstellen eines Schemas beginnt mit dem Zuweisen einer Klasse. Klassen definieren die Verhaltensaspekte der Daten, die das Schema enthalten soll (Datensatz oder Zeitreihen). Darüber hinaus beschreiben Klassen die kleinste Anzahl gemeinsamer Eigenschaften, die alle Schemas, die auf dieser Klasse basieren, beinhalten müssen, und bieten eine Möglichkeit zum Zusammenführen mehrerer kompatibler Datensätze.
 
 Die Klasse eines Schemas bestimmt, welche Feldergruppen für die Verwendung in diesem Schema infrage kommen. Weitere Informationen hierzu finden Sie im Abschnitt [nächster Abschnitt](#field-group).
@@ -182,6 +186,11 @@ Der folgende Screenshot zeigt, wie Klassen in der Platform-Benutzeroberfläche d
 Die aktuellste Liste der verfügbaren Standard-XDM-Klassen finden Sie im Abschnitt [Offizielles XDM-Repository](https://github.com/adobe/xdm/tree/master/components/classes). Sie können auch das Handbuch unter [Erkunden von XDM-Komponenten](../ui/explore.md) , wenn Sie es vorziehen, Ressourcen in der Benutzeroberfläche anzuzeigen.
 
 ### Feldergruppe {#field-group}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_fieldgroup"
+>title="Feldergruppe"
+>abstract="Feldergruppen sind wiederverwendbare Komponenten, mit denen Sie Schemas mit zusätzlichen Attributen erweitern können. Die meisten Feldergruppen sind nur mit bestimmten Klassen kompatibel. Sie können Standardfeldgruppen verwenden, die von Adobe definiert werden, oder Sie können manuell eigene benutzerdefinierte Feldgruppen definieren. Weitere Informationen zur Beteiligung von Feldergruppen an der Schemakomposition finden Sie in der Dokumentation ."
 
 Eine Feldergruppe ist eine wiederverwendbare Komponente, die ein oder mehrere Felder definiert, die bestimmte Funktionen wie persönliche Details, Hotelpräferenzen oder Adressen implementieren. Feldergruppen sind als Teil eines Schemas vorgesehen, das eine kompatible Klasse implementiert.
 
