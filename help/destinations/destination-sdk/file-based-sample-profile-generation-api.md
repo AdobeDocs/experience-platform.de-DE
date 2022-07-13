@@ -1,9 +1,9 @@
 ---
 description: Auf dieser Seite wird erläutert, wie Sie mit dem API-Endpunkt /sample-profiles von Destination SDK Beispielprofile generieren können, die auf einem Quellschema basieren. Sie können diese Beispielprofile verwenden, um Ihre dateibasierte Zielkonfiguration zu testen.
 title: Erstellen von Beispielprofilen basierend auf einem Quellschema
-source-git-commit: 734d66cc881ab1b691c13ef446331d0c51851cf9
+source-git-commit: ee2bf346a4857a70a7f9aec02bab574f8a257ace
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '678'
 ht-degree: 13%
 
 ---
@@ -108,7 +108,7 @@ Eine erfolgreiche Antwort gibt den HTTP-Status 200 mit der angegebenen Anzahl vo
 | -------- | ----------- |
 | `segmentMembership` | Ein map -Objekt, das die Segmentmitgliedschaften des Kontakts beschreibt. Weitere Informationen finden Sie unter `segmentMembership`, lesen [Details zur Segmentzugehörigkeit](../../xdm/field-groups/profile/segmentation.md). |
 | `lastQualificationTime` | Ein Zeitstempel, der angibt, wann sich dieses Profil zuletzt für das Segment qualifiziert hat. |
-| `status` | Gibt an, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
+| `status` | Ein Zeichenfolgenfeld, das anzeigt, ob die Segmentzugehörigkeit im Rahmen der aktuellen Anforderung realisiert wurde. Folgende Werte werden akzeptiert: <ul><li>`existing`: Das Profil war bereits vor der Anfrage Teil des Segments und behält weiterhin seine Mitgliedschaft bei.</li><li>`realized`: Das Profil gibt das Segment als Teil der aktuellen Anforderung ein.</li><li>`exited`: Das Profil beendet das Segment als Teil der aktuellen Anforderung.</li></ul> |
 | `identityMap` | Ein Feld vom Typ Zuordnung , das die verschiedenen Identitätswerte einer Person zusammen mit den zugehörigen Namespaces beschreibt. Weitere Informationen finden Sie unter `identityMap`, siehe [Grundlage der Schemakomposition](../../xdm/schema/composition.md#identityMap). |
 
 {style=&quot;table-layout:auto&quot;}
