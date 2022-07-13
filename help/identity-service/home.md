@@ -5,10 +5,10 @@ title: Identity Service – Übersicht
 topic-legacy: overview
 description: Der Adobe Experience Platform Identity Service hilft Ihnen, sich einen besseren Überblick über Ihren Kunden und sein Verhalten zu verschaffen, indem Identitäten geräte- und systemübergreifend zusammengeführt werden. So können Sie in Echtzeit für eindrucksvolle persönliche digitale Erlebnisse sorgen.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: eb0fe2267416c5053cb589cc6d147324cc31c985
+source-git-commit: 3e073d2c45f88c56473ccc2e3d18a2bbedd4f254
 workflow-type: tm+mt
-source-wordcount: '1747'
-ht-degree: 100%
+source-wordcount: '1839'
+ht-degree: 96%
 
 ---
 
@@ -63,10 +63,21 @@ Zu den Beispielen für Implementierungen von [!DNL Identity Service] gehören:
 - Eine Bank könnte in Offline-Datensätzen, wie z. B. Transaktionen in Zweigstellen, die „Kontonummer“ bevorzugen. Bei Online-Datensätzen könnte sie hingegen die „Anmeldekennung“ nutzen, da die meisten Besucher während ihres Besuchs authentifiziert werden.
 - Möglicherweise verfügen Ihre Kunden auch über eindeutige proprietäre Kennungen, wie die GUID oder andere Universally Unique Identifiers.
 
-## Identity-Namespaces
+## Identity-Namespace {#identity-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_namespace"
+>title="Identity-Namespaces"
+>abstract="Ein Identity-Namespace dient zur Unterscheidung des Kontexts oder des Typs einer Identität. Beispielsweise unterscheidet eine Identität zwischen „name<span>@email.com“ als E-Mail-Adresse und „443522“ als numerischer CRM-ID."
+>text="Learn more in documentation"
+
+>[!CONTEXTUALHELP]
+>id="platform_identity_value"
+>title="Identitätswerte"
+>abstract="Ein Identitätswert ist ein Bezeichner, der eine eindeutige Person, Organisation oder ein Asset darstellt. Der Kontext oder der Typ der Identität, den der Wert darstellt, wird durch einen entsprechenden Identitäts-Namespace definiert. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen. Bei der Zuordnung von Datensatzdaten zu Profilfragmenten müssen Namespace und Identitätswert übereinstimmen."
+>text="Learn more in documentation"
 
 Wenn Sie eine Person ohne weiteren Kontext fragen würden, wie ihre Identität lautet, würde es ihr wahrscheinlich schwer fallen, eine sinnvolle Antwort zu geben. Nach der gleichen Logik ist ein Zeichenfolgenwert, der einen Identitätswert darstellt (unabhängig davon, ob es sich um eine vom System erzeugte Kennung oder eine E-Mail-Adresse handelt), nur dann vollständig, wenn ein Qualifizierer mit dem Kontext des Zeichenfolgenwerts angegeben wird: der Identitäts-Namespace.
-
 
 Es ist möglich, dass Ihre Kunden mit Ihrer Marke über eine Kombination von Online- und Offline-Kanälen interagieren, was die Herausforderung mit sich bringt, diese fragmentierten Interaktionen zu einer einzigen Kundenidentität zusammenzuführen.
 
