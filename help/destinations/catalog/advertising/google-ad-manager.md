@@ -3,10 +3,10 @@ keywords: Google Ad Manager;Google Ad Manager;DoubleClick;DoubleClick AdX;Double
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 0c5d3ae2f43b0eeb6c86f535e37a906b7c414600
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 26%
+source-wordcount: '873'
+ht-degree: 24%
 
 ---
 
@@ -64,8 +64,8 @@ Vor der Erstellung [!DNL Google Ad Manager] Ziel in Platform müssen Sie [!DNL G
 
 * **Konto-ID**: Kontokennung der Adobe mit Google. Konto-ID: 87933855.
 * **Kunden-ID**: Kundenkonto-ID von Adobe mit Google. Kunden-ID: 89690775.
-* **Netzwerkkennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
-* **Zielgruppenverknüpfungskennung**: Dies ist Ihr Konto bei [!DNL Google Ad Manager]
+* **Netzwerkcode**: Dies ist Ihr [!DNL Google Ad Manager] Netzwerkkennung, gefunden unter **[!UICONTROL Admin > Globale Einstellungen]** in der Google-Benutzeroberfläche sowie in der URL.
+* **Zielgruppenverknüpfungskennung**: Dies ist eine spezifische Kennung, die mit Ihrem [!DNL Google Ad Manager] Netzwerk (nicht [!DNL Network code]), auch gefunden unter **[!UICONTROL Admin > Globale Einstellungen]** in der Google-Benutzeroberfläche.
 * Ihr Kontotyp. DFP von Google oder AdX Buyer.
 
 ## Herstellen einer Verbindung mit der Datenbank {#connect}
