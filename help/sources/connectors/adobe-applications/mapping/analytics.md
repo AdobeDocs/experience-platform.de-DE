@@ -3,18 +3,18 @@ keywords: Experience Platform; Startseite; beliebte Themen; Analytics-Zuordnungs
 solution: Experience Platform
 title: Zuordnen von Feldern für den Adobe Analytics Source Connector
 topic-legacy: overview
-description: Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics Data Connector (ADC) erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
+description: Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über die Analytics-Quelle erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: af5564a07577a0123e1a45043d5479f6ad45d73e
+source-git-commit: efe36904b0dce94a8b1f5e7a3d3f38da1038d49c
 workflow-type: tm+mt
-source-wordcount: '3405'
-ht-degree: 99%
+source-wordcount: '3401'
+ht-degree: 98%
 
 ---
 
 # Analytics-Feldzuordnungen
 
-Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über den Analytics Data Connector (ADC) erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
+Mit Adobe Experience Platform können Sie Adobe Analytics-Daten über die Analytics-Quelle erfassen. Manche der über ADC erfassten Daten können direkt aus Analytics-Feldern Experience-Datenmodell (XDM)-Feldern zugeordnet werden, während andere Daten Transformationen und spezifische Funktionen erfordern, um sich richtig zuordnen zu lassen.
 
 ![](../images/analytics-data-experience-platform.png)
 
