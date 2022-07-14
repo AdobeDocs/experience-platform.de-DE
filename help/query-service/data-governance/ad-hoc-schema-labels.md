@@ -2,7 +2,7 @@
 title: Unterstützung der attributbasierten Zugriffssteuerung für Ad-hoc-Schemas
 description: Eine Anleitung zum Einschränken des Zugriffs auf Datenfelder in Ad-hoc-Schemata, die über Adobe Experience Platform Query Service generiert wurden.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 9b327257eacea189363587ad79dc6595b636d5b8
+source-git-commit: d955473fb9123a6fc2384cde4073c713b921f582
 workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Um eine Datenbeschriftung hinzuzufügen, navigieren Sie zu [!UICONTROL Schemas] 
 >
 >Ad-hoc-Schemata werden nicht standardmäßig im Schema-Inventar angezeigt.
 
-## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche
+## Entdecken Sie Ad-hoc-Schemas im Schema-Inventar der Platform-Benutzeroberfläche {#discover-ad-hoc-schemas}
 
 Um die Anzeige von Ad-hoc-Schemata in der Platform-Benutzeroberfläche zu aktivieren, wählen Sie das Filtersymbol (![Ein Filtersymbol.](../images/data-governance/filter.png)) links neben dem Suchfeld und wählen Sie dann ** aus.[!UICONTROL Anzeigen von Ad-hoc-Schemata] in der linken Leiste, die angezeigt wird.
 
