@@ -1,19 +1,19 @@
 ---
-title: Übersicht über Real-time Customer Data Platform-Verbindungen von Ende zu Ende
-description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mit Real-time Customer Data Platform Connections an Adobe Experience Cloud-Lösungen senden.
+title: End-to-End-Übersicht über Real-Time Customer Data Platform Connections
+description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mit Real-Time Customer Data Platform Connections an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2612'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
-# Übersicht über Real-time Customer Data Platform-Verbindungen von Ende zu Ende
+# End-to-End-Übersicht über Real-Time Customer Data Platform Connections
 
 Real-time Customer Data Platform (RTCDP) Connections erfasst und transferiert Ihre Daten an andere Adobe-Produkte und Drittanbieterziele. Um Ereignisdaten von Ihrem Programm an das Adobe Experience Platform Edge Network zu senden, müssen Sie diese Kerntechnologien kennen und wissen, wie Sie sie so konfigurieren können, dass sie bei Bedarf Ihre Daten an die gewünschten Ziele senden.
 
-Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge-Netzwerk mithilfe von RTCDP-Verbindungen. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
+Dieses Handbuch enthält eine allgemeine Anleitung zum Senden eines Ereignisses über das Edge Network mithilfe von RTCDP Connections. Insbesondere führt das Tutorial die Schritte zum Installieren und Konfigurieren der Tag-Erweiterung des Adobe Experience Platform Web SDK in der Datenerfassungs-Benutzeroberfläche (früher Adobe Experience Platform Launch) durch.
 
 >[!NOTE]
 >
@@ -40,13 +40,13 @@ Informationen zum Gewähren von Berechtigungen für Platform-Funktionen für Ben
 
 ## Prozesszusammenfassung
 
-Der Prozess der Konfiguration von RTCDP-Verbindungen für Ihre Website kann wie folgt zusammengefasst werden:
+Der Prozess der Konfiguration von RTCDP Connections für Ihre Website kann wie folgt zusammengefasst werden:
 
-1. [Erstellen Sie ein Schema](#schema), um zu bestimmen, wie Ihre Daten strukturiert sind, wenn sie an das Edge-Netzwerk gesendet werden.
+1. [Erstellen Sie ein Schema](#schema), um zu bestimmen, wie Ihre Daten strukturiert sind, wenn sie an das Edge Network gesendet werden.
 1. [Erstellen Sie einen Datenstrom](#datastream), um zu konfigurieren, an welche Ziele Ihre Daten gesendet werden sollen.
 1. [Installieren und konfigurieren Sie das Web SDK](#sdk), um Daten an den Datenstrom zu senden, wenn bestimmte Ereignisse auf Ihrer Website auftreten.
 
-Sobald Sie Daten an das Edge-Netzwerk senden können, können Sie optional auch [die Ereignisweiterleitung konfigurieren](#event-forwarding), wenn Ihr Unternehmen über eine Lizenz dafür verfügt.
+Sobald Sie Daten an das Edge Network senden können, können Sie optional auch [die Ereignisweiterleitung konfigurieren](#event-forwarding), wenn Ihr Unternehmen über eine Lizenz dafür verfügt.
 
 ## Erstellen eines Schemas {#schema}
 
@@ -84,7 +84,7 @@ Klicken Sie auf ![Feldergruppen hinzufügen](./images/e2e/add-field-groups.png)
 >
 >Detaillierte Anweisungen zum Suchen nach verschiedenen Feldergruppen für Ihre Anwendungsfälle finden Sie im Handbuch zu [Hinzufügen von Feldergruppen](../xdm/ui/resources/schemas.md#add-field-groups) in der XDM-Dokumentation.
 >
->Es empfiehlt sich, nur Felder für Daten hinzuzufügen, die Sie über das Edge-Netzwerk senden möchten. Nachdem Sie Felder zu einem Schema hinzugefügt und es gespeichert haben, können anschließend nur noch additive Änderungen am Schema vorgenommen werden. Weitere Informationen finden Sie im Abschnitt [Regeln der Schemaentwicklung](../xdm/schema/composition.md#evolution).
+>Es empfiehlt sich, nur Felder für Daten hinzuzufügen, die Sie über das Edge Network senden möchten. Nachdem Sie Felder zu einem Schema hinzugefügt und es gespeichert haben, können anschließend nur noch additive Änderungen am Schema vorgenommen werden. Weitere Informationen finden Sie im Abschnitt [Regeln der Schemaentwicklung](../xdm/schema/composition.md#evolution).
 
 Nachdem Sie die erforderlichen Felder hinzugefügt haben, klicken Sie auf **[!UICONTROL Speichern]**, um das Schema zu speichern.
 
@@ -92,7 +92,7 @@ Nachdem Sie die erforderlichen Felder hinzugefügt haben, klicken Sie auf **[!UI
 
 ## Erstellen eines Datenspeichers {#datastream}
 
-Ein Datenstrom ist eine Konfiguration, die dem Edge-Netzwerk mitteilt, wohin Ihre Daten gesendet werden sollen. Insbesondere gibt ein Datenstrom an, an welche Experience Cloud-Produkte Sie die Daten senden möchten und wie die Daten in jedem Produkt verarbeitet und gespeichert werden sollen.
+Ein Datenstrom ist eine Konfiguration, die dem Edge Network mitteilt, wohin Ihre Daten gesendet werden sollen. Insbesondere gibt ein Datenstrom an, an welche Experience Cloud-Produkte Sie die Daten senden möchten und wie die Daten in jedem Produkt verarbeitet und gespeichert werden sollen.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Der Prozess lässt sich wie folgt zusammenfassen:
 
 1. [Installieren Sie das Adobe Experience Platform Web SDK in einer Tag-Eigenschaft](#install-sdk), um Zugriff auf seine Funktionen zu erhalten.
 1. [Erstellen Sie ein XDM-Objektdatenelement](#data-element), um Variablen auf Ihrer Website der Struktur des zuvor erstellten XDM-Schemas zuzuordnen.
-1. [Erstellen Sie eine Regel](#rule), die dem SDK mitteilt, wann Daten an das Edge-Netzwerk gesendet werden sollen.
+1. [Erstellen Sie eine Regel](#rule), die dem SDK mitteilt, wann Daten an das Edge Network gesendet werden sollen.
 1. [Erstellen und installieren Sie eine Bibliothek](#library), um die Regel auf Ihrer Website zu implementieren.
 
 ### Installieren des SDKs in einer Tag-Eigenschaft {#install-sdk}
@@ -148,7 +148,7 @@ Bevor Sie das SDK installieren können, müssen Sie jedoch einen Datenstrom ausw
 
 ### Erstellen eines XDM-Datenelements {#data-element}
 
-Damit das SDK Daten an das Edge-Netzwerk senden kann, müssen diese Daten dem XDM-Schema zugeordnet werden, das Sie in einem [vorherigen Schritt](#schema) erstellt haben. Diese Zuordnung wird mithilfe eines Datenelements erreicht.
+Damit das SDK Daten an das Edge Network senden kann, müssen diese Daten dem XDM-Schema zugeordnet werden, das Sie in einem [vorherigen Schritt](#schema) erstellt haben. Diese Zuordnung wird mithilfe eines Datenelements erreicht.
 
 Wählen Sie in der Benutzeroberfläche **[!UICONTROL Datenelemente]** und dann **[!UICONTROL Neues Datenelement erstellen]** aus.
 
@@ -178,7 +178,7 @@ Nachdem Sie die Zuordnung Ihrer Daten zum Schema abgeschlossen haben, geben Sie 
 
 ### Erstellen einer Regel
 
-Nach dem Speichern des Datenelements besteht der nächste Schritt darin, eine Regel zu erstellen, die es an das Edge-Netzwerk sendet, sobald ein bestimmtes Ereignis auf Ihrer Website eintritt (z. B. wenn ein Kunde ein Produkt zu einem Warenkorb hinzufügt).
+Nach dem Speichern des Datenelements besteht der nächste Schritt darin, eine Regel zu erstellen, die es an das Edge Network sendet, sobald ein bestimmtes Ereignis auf Ihrer Website eintritt (z. B. wenn ein Kunde ein Produkt zu einem Warenkorb hinzufügt).
 
 Sie können Regeln für praktisch jedes Ereignis einrichten, das auf Ihrer Website auftreten kann. In diesem Abschnitt wird beispielsweise gezeigt, wie eine Regel erstellt wird, die beim Senden eines Formulars durch einen Kunden ausgelöst wird. Der folgende HTML-Code stellt eine einfache Web-Seite mit dem Formular „Zum Warenkorb hinzufügen“ dar, die Gegenstand der Regel sein wird:
 
@@ -223,11 +223,11 @@ Andernfalls besteht der nächste Schritt darin, eine Aktion hinzuzufügen, die v
 
 ![Aktion hinzufügen](./images/e2e/add-action.png)
 
-Die Seite mit der Aktionskonfiguration wird angezeigt. Um die Regel zum Senden von Daten an das Edge-Netzwerk abzurufen, wählen Sie **[!UICONTROL Adobe Experience Platform Web SDK]** für die Erweiterung und **[!UICONTROL Ereignis senden]** für den Aktionstyp aus.
+Die Seite mit der Aktionskonfiguration wird angezeigt. Um die Regel zum Senden von Daten an das Edge Network abzurufen, wählen Sie **[!UICONTROL Adobe Experience Platform Web SDK]** für die Erweiterung und **[!UICONTROL Ereignis senden]** für den Aktionstyp aus.
 
 ![Aktionstyp](./images/e2e/action-type.png)
 
-Der Bildschirm wird aktualisiert und zeigt zusätzliche Optionen zum Konfigurieren der Sendeereignisaktion. Unter **[!UICONTROL Typ]** können Sie einen benutzerdefinierten Typwert bereitstellen, um das XDM-Feld `eventType` auszufüllen. Geben Sie unter **[!UICONTROL XDM-Daten]** den Namen des zuvor erstellten XDM-Datentyps ein (eingeschlossen von Prozentzeichen) oder wählen Sie das Datenbanksymbol (![Datenbanksymbol](./images/e2e/database-symbol.png)) aus, um ihn aus einer Liste auszuwählen. Dies sind die Daten, die letztendlich an das Edge-Netzwerk gesendet werden.
+Der Bildschirm wird aktualisiert und zeigt zusätzliche Optionen zum Konfigurieren der Sendeereignisaktion. Unter **[!UICONTROL Typ]** können Sie einen benutzerdefinierten Typwert bereitstellen, um das XDM-Feld `eventType` auszufüllen. Geben Sie unter **[!UICONTROL XDM-Daten]** den Namen des zuvor erstellten XDM-Datentyps ein (eingeschlossen von Prozentzeichen) oder wählen Sie das Datenbanksymbol (![Datenbanksymbol](./images/e2e/database-symbol.png)) aus, um ihn aus einer Liste auszuwählen. Dies sind die Daten, die letztendlich an das Edge Network gesendet werden.
 
 Wählen Sie nach Abschluss **[!UICONTROL Änderungen beibehalten]** aus.
 
@@ -257,7 +257,7 @@ Nachdem Sie die Umgebung auf Ihrer Website installiert haben, können Sie mit de
 >
 >Die Ereignisweiterleitung ist nur für Organisationen verfügbar, die dafür lizenziert wurden.
 
-Nachdem Sie das SDK für das Senden von Daten an das Edge-Netzwerk konfiguriert haben, können Sie die Ereignisweiterleitung einrichten, um dem Edge-Netzwerk mitzuteilen, wo die Daten bereitgestellt werden sollen.
+Nachdem Sie das SDK für das Senden von Daten an das Edge Network konfiguriert haben, können Sie die Ereignisweiterleitung einrichten, um dem Edge Network mitzuteilen, wo die Daten bereitgestellt werden sollen.
 
 Um die Ereignisweiterleitung zu verwenden, müssen Sie zunächst eine Ereignisweiterleitungseigenschaft erstellen. Wählen Sie in der linken Navigationsleiste **[!UICONTROL Ereignisweiterleitung]** und dann **[!UICONTROL Neue Eigenschaft]** aus. Geben Sie einen Namen für die Eigenschaft ein, bevor Sie auf **[!UICONTROL Speichern]** klicken.
 
@@ -273,4 +273,4 @@ Nach Abschluss des Builds besteht der letzte Schritt darin, den Datenstrom zu ak
 
 ## Nächste Schritte
 
-Dieses Handbuch bietet eine allgemeine Übersicht darüber, wie Daten mithilfe des Platform Web SDKs an das Edge-Netzwerk gesendet werden. Weitere Informationen zu den verschiedenen Komponenten und Services finden Sie in der Dokumentation, auf die in diesem Handbuch verlinkt wird.
+Dieses Handbuch bietet eine allgemeine Übersicht darüber, wie Daten mithilfe des Platform Web SDKs an das Edge Network gesendet werden. Weitere Informationen zu den verschiedenen Komponenten und Services finden Sie in der Dokumentation, auf die in diesem Handbuch verlinkt wird.
