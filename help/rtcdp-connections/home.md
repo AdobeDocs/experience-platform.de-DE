@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenerfassung;Start;Web-SDK
 solution: Experience Platform
-title: Übersicht über Real-time Customer Data Platform-Verbindungen
+title: Übersicht über Real-Time Customer Data Platform Connections
 topic-legacy: overview
 description: Erfahren Sie mehr über die verschiedenen Technologien zur Erfassung von Daten zu Kundenerlebnissen in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '472'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
-# Übersicht über Real-time Customer Data Platform-Verbindungen
+# Übersicht über Real-Time Customer Data Platform Connections
 
-Real-time Customer Data Platform (RTCDP) Connections bietet eine Reihe von Technologien, mit denen Sie Kundenerlebnisdaten aus Client-seitigen Quellen erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie in Sekundenschnelle an Adobe- oder Nicht-Adobe-Ziele angereichert, transformiert und verteilt werden können.
+Real-Time Customer Data Platform (RTCDP) Connections bietet eine Reihe von Technologien, mit denen Sie Kundenerlebnisdaten aus Client-seitigen Quellen erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie in Sekundenschnelle an Adobe oder andere Ziele weitergegeben, transformiert und verteilt werden können.
 
-RTCDP-Verbindungen werden für die folgenden clientseitigen Quellen unterstützt:
+RTCDP Connections wird für die folgenden Client-seitigen Quellen unterstützt:
 
 * Web-basierte Programme
 * Native Mobile Apps
 * OTT-Programme (Over-the-top)
 
-RTCDP-Verbindungen konzentrieren sich auf die Erkennung und Zugänglichkeit erfasster Datensätze und umfassen Folgendes:
+RTCDP Connections konzentriert sich auf die Auffindbarkeit und Zugänglichkeit erfasster Datensätze und umfasst Folgendes:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=de)
 * [Tags](../tags/home.md)
@@ -34,7 +34,7 @@ RTCDP-Verbindungen konzentrieren sich auf die Erkennung und Zugänglichkeit erfa
 * [Experience-Datenmodell (XDM)](../xdm/home.md)
 * [Adobe Experience Platform Identity Service](../identity-service/home.md)
 
-Dieses Handbuch bietet eine allgemeine Einführung in RTCDP-Verbindungen und wie Daten über das Platform Edge Network an Adobe Experience Cloud-Produkte und Nicht-Adobe-Anwendungen gesendet werden können.
+Dieses Handbuch bietet eine allgemeine Einführung zu RTCDP Connections und dazu, wie damit Daten über Platform Edge Network an Adobe Experience Cloud-Produkte und nicht von Adobe stammende Programme gesendet werden.
 
 ## Tags, Web SDK und Mobile SDK
 
@@ -62,12 +62,12 @@ Platform Edge Network ist ein global verteiltes, schnelles und zuverlässiges Ne
 
 >[!NOTE]
 >
->Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die nur im Rahmen von Real-time Customer Data Platform-Verbindungen angeboten wird.
+>Die Ereignisweiterleitung ist eine gebührenpflichtige Funktion, die nur im Rahmen von Real-Time Customer Data Platform Connections angeboten wird.
 
 ## Nächste Schritte
 
-In diesem Dokument erhalten Sie einen allgemeinen Überblick darüber, wie RTCDP-Verbindungen den Versand Ihrer erfassten Kundenerlebnisdaten an Adobe-Produkte und Drittanbieterziele automatisieren.
+Dieses Dokument bietet einen allgemeinen Überblick darüber, wie RTCDP Connections dazu beiträgt, den Prozess des Versands Ihrer erfassten Kundenerlebnisdaten an Adobe-Produkte und Drittanbieterziele zu automatisieren.
 
 ![Datenerfassungs-Framework](./images/home/collection.png)
 
-Weitere Informationen zum allgemeinen Workflow für das Senden von Ereignisdaten über das Edge-Netzwerk finden Sie im Abschnitt [End-to-End-Übersicht](./e2e.md).
+Weitere Informationen zum allgemeinen Workflow für das Senden von Ereignisdaten über Edge Network finden Sie im Abschnitt [End-to-End-Übersicht](./e2e.md).
