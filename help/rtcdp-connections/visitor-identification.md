@@ -1,13 +1,13 @@
 ---
 title: Besucheridentifizierung
-description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API Besucher identifiziert
+description: Erfahren Sie, wie die Adobe Experience Platform Edge Network Server-API Besuchende identifiziert
 seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
-keywords: Edge-Netzwerk;Gateway;API;Besucher;Identifizierung
+keywords: Edge Network;Gateway;API;Besucher;Besucherin;Identifizierung
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
 source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '151'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 5%
 
 Die Edge Network Server-API unterstützt [Besucheridentifizierung über Erstanbieter-ID ([!DNL FPID])](visitor-identification-fpid.md).
 
-Alle Benutzeridentitäten sollten im Abschnitt `identityMap` Feldergruppe. Diese Feldergruppe ist im AEP Web SDK enthalten. `ExperienceEvent` Mixin.
+Alle Benutzeridentitäten sollten in der Feldergruppe `identityMap` angegeben werden. Diese Feldergruppe ist im AEP Web SDK-Mixin `ExperienceEvent` enthalten.
 
 ```json
 {
@@ -38,12 +38,12 @@ Alle Benutzeridentitäten sollten im Abschnitt `identityMap` Feldergruppe. Diese
 
 ## Geräte-IDs {#identifiers}
 
-Es gibt mehrere Möglichkeiten, ein Gerät innerhalb des Edge-Netzwerks zu identifizieren. Eine Übersicht über die unterstützten IDs finden Sie in der unten stehenden Tabelle.
+Es gibt mehrere Möglichkeiten, ein Gerät innerhalb des Edge Network zu identifizieren. Eine Übersicht über die unterstützten IDs finden Sie in der unten stehenden Tabelle.
 
 | ID-Namespace | Verwaltet von | Beschreibung |
 | --- | --- | --- |
-| `FPID` | Kunde | `FPID` wird automatisch in eine `ECID` durch das Edge-Netzwerk, also Lösungen, die eine `ECID` wird auch funktionieren.  <br><br> Um eine konsistente Geräterkennung zu gewährleisten, müssen diese IDs auf dem Gerät gespeichert und bei jeder Anfrage angegeben werden. Bei Web-Interaktionen werden diese als Browser-Cookies gespeichert. |
-| `IDFA`/`GAID` | Experience Platform | Kann Benutzer anwendungsübergreifend identifizieren, sodass diese IDs nicht in kodiert sind `ECID` durch das Edge-Netzwerk. |
+| `FPID` | Kundin bzw. Kunde | Eine `FPID` wird vom Edge Network automatisch in eine `ECID` codiert, sodass auch Lösungen, die eine `ECID` erfordern, funktionieren.  <br><br> Um eine konsistente Geräte-Erkennung zu gewährleisten, müssen diese IDs auf dem Gerät gespeichert und bei jeder Anfrage angegeben werden. Bei Web-Interaktionen werden diese als Browser-Cookies gespeichert. |
+| `IDFA`/`GAID` | Experience Platform | Kann Benutzende programmübergreifend identifizieren, daher werden diese IDs vom Edge Network nicht in `ECID` codiert. |
 
 <!--
 | `ECID` | Adobe | `ECID` is required when leveraging and integrating with Adobe Analytics and Adobe Audience Manager. <br><br> For consistent device identification, these IDs must be persisted on the device and supplied on each request. For web interactions, this involves storing them as browser cookies. |
