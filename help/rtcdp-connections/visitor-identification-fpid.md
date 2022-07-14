@@ -1,25 +1,25 @@
 ---
 title: Besucheridentifizierung über FPID
-description: Erfahren Sie, wie Sie Besucher mithilfe der Server-API mithilfe der FPID konsistent identifizieren.
+description: Erfahren Sie, wie Sie Besuchende mit der Server-API mithilfe der FPID konsistent identifizieren.
 seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
-keywords: Edge-Netzwerk;Gateway;API;Besucher;Identifizierung;Fpid
+keywords: Edge Network;Gateway;API;Besucher;Besucherin;Identifizierung;FPID
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
 source-git-commit: 6798c15b1cee781c41b9faf5cc6dcfa73090a60a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '348'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Besucheridentifizierung über FPID
 
-[!DNL First-party IDs] (`FPIDs`) sind Geräte-IDs, die von Kunden generiert, verwaltet und gespeichert werden. Dadurch erhalten Kunden Kontrolle über die Identifizierung von Benutzergeräten. Durch Versand `FPIDs`, generiert das Edge-Netzwerk keine brandneue `ECID` für eine Anfrage, die keine enthält.
+[!DNL First-party IDs] (`FPIDs`) sind Geräte-IDs, die von Kundinnen und Kunden generiert, verwaltet und gespeichert werden. Dadurch erhalten Kundinnen und Kunden Kontrolle über die Identifizierung von Benutzergeräten. Durch den Versand von `FPIDs` generiert das Edge Network keine brandneue `ECID` für eine Anfrage, die keine enthält.
 
-Die `FPID` kann im API-Anfragetext als Teil der `identityMap` oder kann als Cookie gesendet werden.
+Die `FPID` kann im API-Anfragetext als Teil der `identityMap` gesendet werden, oder aber als Cookie.
 
-Ein `FPID` kann deterministisch in eine `ECID` durch das Edge-Netzwerk, usw. `FPID` Identitäten sind vollständig mit Experience Cloud-Lösungen kompatibel. Beziehen einer `ECID` aus einem bestimmten `FPID` liefert immer dasselbe Ergebnis, sodass Benutzer ein konsistentes Erlebnis haben.
+Eine `FPID` kann durch das Edge Network deterministisch in eine `ECID` umgewandelt werden, sodass `FPID`-Identitäten vollständig mit Experience Cloud-Lösungen kompatibel sind. Das Beziehen einer `ECID` aus einer bestimmten `FPID` liefert immer dasselbe Ergebnis, sodass Benutzende ein konsistentes Erlebnis haben.
 
-Die `ECID` auf diese Weise abgerufen werden kann, über eine `identity.fetch` Abfrage:
+Die auf diese Weise erhaltene `ECID` kann über eine `identity.fetch`-Abfrage abgerufen werden:
 
 ```json
 {
@@ -33,15 +33,15 @@ Die `ECID` auf diese Weise abgerufen werden kann, über eine `identity.fetch` Ab
 }
 ```
 
-Für Anforderungen, die sowohl eine `FPID` und `ECID`, die `ECID` bereits in der -Anfrage vorhanden ist, hat Vorrang vor der , die von der `FPID`. Das heißt, das Edge-Netzwerk verwendet die `ECID` bereits bereitgestellt wurden und `FPID` wird ignoriert. Eine neue `ECID` wird nur generiert, wenn eine `FPID` wird für sich allein bereitgestellt.
+Bei Anfragen, die sowohl eine `FPID` als auch eine `ECID` enthalten, hat die bereits in der Anfrage vorhandene `ECID` Vorrang vor derjenigen, die aus der `FPID` generiert werden könnte. Mit anderen Worten: Das Edge Network verwendet die bereits vorhandene `ECID` und ignoriert die `FPID`. Eine neue `ECID` wird nur dann generiert, wenn eine `FPID` eigenständig bereitgestellt wird.
 
-In Bezug auf Geräte-IDs wird die `server` datastreams sollte `FPID` als Geräte-ID. Andere Identitäten (d. h. `EMAIL`) kann auch im Anfrageinhalt bereitgestellt werden. Das Edge-Netzwerk erfordert jedoch, dass explizit eine primäre Identität angegeben wird. Primäre Identität ist die Basisidentität, in der Profildaten gespeichert werden.
+Was die Geräte-IDs betrifft, so sollten die `server`-Datenströme die `FPID` als Geräte-ID verwenden. Andere Identitäten (z. B. `EMAIL`) können zwar ebenfalls im Anfragetext angegeben werden, aber das Edge Network verlangt, dass eine primäre Identität ausdrücklich angegeben wird. Die primäre Identität ist die Basisidentität, unter der die Profildaten gespeichert werden.
 
 >[!NOTE]
 >
 >Anfragen, die keine Identität bzw. keine explizit im Anfragetext festgelegte primäre Identität aufweisen, schlagen fehl.
 
-Folgendes `identityMap` Feldergruppe für eine `server` Datastream-Anfrage:
+Die folgende `identityMap`-Feldergruppe hat die korrekte Form für eine `server`-Datenstromanfrage:
 
 ```json
 {
@@ -63,7 +63,7 @@ Folgendes `identityMap` Feldergruppe für eine `server` Datastream-Anfrage:
 }
 ```
 
-Folgendes `identityMap` Die Feldergruppe führt zu einer Fehlerantwort, wenn sie für eine `server` Datastream-Anfrage:
+Die folgende `identityMap`-Feldergruppe führt zu einer Fehlerantwort, wenn sie auf eine `server`-Datenstromanfrage gesetzt wird:
 
 ```json
 {
@@ -102,7 +102,7 @@ Die vom Edge Network zurückgegebene Fehlerantwort ähnelt in diesem Fall der fo
 
 ## Besucheridentifizierung mit `FPID`
 
-So identifizieren Sie Benutzer über `FPID`stellen sicher, dass `FPID` -Cookie gesendet wurde, bevor Anfragen an das Edge-Netzwerk gesendet wurden. Die `FPID` kann in einem Cookie oder als Teil der `identityMap` im Text der Anfrage.
+Um Benutzende über eine `FPID` zu identifizieren, stellen Sie sicher, dass das `FPID`-Cookie gesendet wurde, bevor Sie eine Anfrage an das Edge Network stellen. Die `FPID` kann in einem Cookie oder als Teil der `identityMap` im Text der Anfrage übergeben werden.
 
 <!--
 
@@ -167,9 +167,9 @@ curl -X POST 'https://edge.adobedc.net/v2/interact?dataStreamId={Data Stream ID}
 ```
 -->
 
-## Anfrage mit `FPID` übergeben als `identityMap` field
+## Anfrage mit Übergabe der `FPID` als `identityMap`-Feld
 
-Im folgenden Beispiel wird die [!DNL FPID] als `identityMap` Parameter.
+Im folgenden Beispiel wird die [!DNL FPID] als `identityMap`-Parameter übergeben.
 
 ```shell
 curl -X POST "https://server.adobedc.net/v2/interact?dataStreamId={DATASTREAM_ID}"
