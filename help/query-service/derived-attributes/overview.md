@@ -1,10 +1,8 @@
 ---
 title: Abgeleitete Attribute
 description: Abgeleitete Attribute bieten eine praktische Möglichkeit, um Attribute Ihrer Wahl zu generieren, die bei jeder regulären Platzierung aktualisiert und optional in Ihren Echtzeit-Kundenprofildaten veröffentlicht werden können. Dieses Dokument bietet einen Überblick darüber, wie Sie mit Query Service abgeleitete Attribute zur Verwendung mit Ihren Profildaten erstellen können.
-hide: true
-hidefromtoc: true
 exl-id: 5d52b268-e2a3-411c-8242-3aa32e759937
-source-git-commit: ae11d6f622c42d08373b7454ef920a80abaf2425
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '752'
 ht-degree: 0%

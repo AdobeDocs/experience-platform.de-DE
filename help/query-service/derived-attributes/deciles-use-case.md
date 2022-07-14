@@ -1,9 +1,7 @@
 ---
 title: 'Anwendungsfall für auf Entscheidungen basierende abgeleitete Attribute '
 description: In diesem Handbuch werden die Schritte erläutert, die zur Verwendung von Query Service zum Erstellen von dezimalbasierten abgeleiteten Attributen für die Verwendung mit Ihren Profildaten erforderlich sind.
-hide: true
-hidefromtoc: true
-source-git-commit: 4f44e66ee7537e038628a5beb6b3b3bd0760ff1b
+source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
