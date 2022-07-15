@@ -3,7 +3,7 @@ title: Handbuch zur Reactor-API
 description: Mit der Reactor-API können Entwickler alle Ressourcen für Tags in Adobe Experience Platform programmgesteuert verwalten. In diesem Handbuch erfahren Sie, wie Sie wichtige Vorgänge mit der API durchführen.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: 7e4bc716e61b33563e0cb8059cb9f1332af7fd36
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 100%
 

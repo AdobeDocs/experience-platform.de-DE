@@ -3,12 +3,12 @@ keywords: Experience Platform; Startseite; beliebte Themen; Datenspeicherort; Da
 solution: Experience Platform
 title: Datensätze - Übersicht
 topic-legacy: datasets
-description: Dieses Dokument bietet einen allgemeinen Überblick über Datensätze in Experience Platform.
+description: Dieses Dokument bietet einen umfassenden Überblick über Datensätze in Experience Platform.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 03e7863f38b882a2fbf6ba0de1755e1924e8e228
 workflow-type: tm+mt
 source-wordcount: '711'
-ht-degree: 7%
+ht-degree: 17%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 Alle Daten, die erfolgreich in Adobe Experience Platform aufgenommen wurden, bleiben im [!DNL Data Lake] als Datensätze. Ein Datensatz ist ein Konstrukt zur Datenspeicherung und -verwaltung, in dem Daten (in der Regel) in einer Tabelle erfasst werden, die ein Schema (Spalten) und Felder (Zeilen) beinhaltet. Datensätze enthalten auch Metadaten, die verschiedene Aspekte der in ihnen gespeicherten Daten beschreiben.
 
-Dieses Dokument bietet einen allgemeinen Überblick über Datensätze in [!DNL Experience Platform].
+Dieses Dokument bietet einen umfassenden Überblick über Datensätze in [!DNL Experience Platform].
 
 ## Erstellen von Datensätzen und Tracking-Metadaten
 
@@ -44,7 +44,7 @@ Mit Adobe Experience Platform Data Governance können Sie Kundendaten verwalten,
 
 Datennutzungsbezeichnungen können auf komplette Datensätze oder einzelne Datensatzfelder angewendet werden. Auf Datensatzebene hinzugefügte Bezeichnungen werden von allen Feldern in diesem Datensatz übernommen.
 
-Siehe [Data Governance - Übersicht](../../data-governance/home.md) für weitere Informationen zum Dienst. Anweisungen zum Arbeiten mit Nutzungsbezeichnungen finden Sie unter [!DNL Platform], siehe die folgenden Handbücher:
+Weitere Informationen zu dem Service finden Sie in der [Übersicht zu Data Governance. ](../../data-governance/home.md) Anweisungen zum Arbeiten mit Nutzungsbezeichnungen finden Sie unter [!DNL Platform], siehe die folgenden Handbücher:
 
 * [Verwalten von Kennzeichnungen in der Benutzeroberfläche](../../data-governance/labels/user-guide.md)
 * [Verwalten der Datensatzbezeichnungen in der API](../../data-governance/labels/dataset-api.md)
@@ -56,7 +56,7 @@ Sobald Datensätze zum Speichern erfasster Daten verwendet wurden, werden diese 
 Im Folgenden finden Sie eine Liste der nachgelagerten Dienste, die Datensätze für verschiedene Vorgänge verwenden. Weitere Informationen finden Sie in der Dokumentation für jeden Dienst.
 
 * [[!DNL Data Access API]](../../data-access/home.md): Ermöglicht den Zugriff auf und den Download des Inhalts von Dateien, die in Datensätzen gespeichert sind.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Brilliert Identitäten zwischen Geräten und Systemen und verknüpft Datensätze anhand der Identitätsfelder, die von den XDM-Schemas definiert werden, mit denen sie übereinstimmen.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): Führt Identitäten zwischen Geräten und Systemen zusammen und verknüpft Datensätze anhand der Identitätsfelder, die von den entsprechenden XDM-Schemas definiert werden.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Nutzung [!DNL Identity Service] , um aus Ihren Datensätzen in Echtzeit detaillierte Kundenprofile zu erstellen. [!DNL Real-time Customer Profile] ruft Daten aus der [!DNL Data Lake] und speichert Kundenprofile in einem eigenen separaten Datenspeicher.
 * [Adobe Experience Platform-Segmentierungsdienst](../../segmentation/home.md): Ermöglicht Ihnen das Erstellen von Segmenten und das Generieren von Zielgruppen aus Ihrer [!DNL Real-time Customer Profile] Daten. Diese Zielgruppen können dann in ihre eigenen Datensätze innerhalb der [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Verwendet maschinelles Lernen und künstliche Intelligenz, um Einblicke in große Datensätze zu erhalten.

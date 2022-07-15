@@ -56,7 +56,7 @@ ht-degree: 96%
          * [Übersicht](./governance-privacy-security/consent/iab/overview.md)
          * [Konfigurieren eines Datensatzes zur Erfassung von Einwilligungs- und Präferenzdaten](./governance-privacy-security/consent/iab/dataset.md)
       * [Integrieren des Platform Web SDK zur Verarbeitung von Einverständnis- und Voreinstellungsdaten](./governance-privacy-security/consent/sdk.md)
-   * Administratorprotokolle {#audit-logs}
+   * Auditprotokolle {#audit-logs}
       * [Übersicht](./governance-privacy-security/audit-logs/overview.md)
    * [Datenverschlüsselung](./governance-privacy-security/encryption.md)
 * Lizenzverwendung und Limits {#license}

@@ -5,7 +5,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: cd7ce8c107769a77373f328d9aa84c982be0d8ee
 workflow-type: tm+mt
 source-wordcount: '847'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -17,7 +17,7 @@ In einem Prüfprotokoll wird **who** ausgeführt **what** Aktion und **when**. J
 
 In diesem Dokument werden Auditprotokolle in Platform behandelt, einschließlich der Anzeige und Verwaltung in der Benutzeroberfläche oder API.
 
-## Von Prüfprotokollen erfasste Ereignistypen {#category}
+## Von Audit-Protokollen erfasste Ereignistypen {#category}
 
 In der folgenden Tabelle sind die Aktionen aufgeführt, für die Ressourcen in Auditprotokollen aufgezeichnet werden:
 

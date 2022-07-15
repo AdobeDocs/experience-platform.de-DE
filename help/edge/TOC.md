@@ -8,7 +8,7 @@ feature: Web SDK
 source-git-commit: 2b9edb258e647dc04faadbbaeab429cf8ac3e0ec
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 81%
+ht-degree: 84%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 81%
 * Identität {#identity}
    * [Übersicht](identity/overview.md)
    * [IDs von Erstanbieter-Geräten](identity/first-party-device-ids.md)
-   * [Freigabe von Mobilgeräte für das Internet und domänenübergreifende IDs](identity/id-sharing.md)
+   * [Mobile-zu-Web und Domain-übergreifender ID-Austausch](identity/id-sharing.md)
 * Datenerfassung {#data-collection}
    * [Automatisch erfasste Informationen](data-collection/automatic-information.md)
    * [Verfolgen von Links](data-collection/track-links.md)

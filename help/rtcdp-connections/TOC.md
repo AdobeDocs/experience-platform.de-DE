@@ -6,9 +6,9 @@ breadcrumb-title: Real-time Customer Data Platform Connections
 user-guide-description: Aktivieren Sie Client-seitige Datenerfassung für das Adobe Experience Platform Edge Network.
 feature: Data Collection
 source-git-commit: 08541ed2d179040a1faef0dace477f268687fd54
-workflow-type: ht
-source-wordcount: '40'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

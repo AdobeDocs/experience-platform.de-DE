@@ -4,7 +4,7 @@ title: Beispiel für einen Anwendungsfall von Real-time Customer Data Platform B
 description: Dieses Beispielszenario bietet ein Beispiel für die Konfiguration Ihrer Implementierung von Real-time Customer Data Platform B2B Edition.
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 source-git-commit: e6f71954d52e0a998955c3420307417cc011c24d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 100%
 

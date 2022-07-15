@@ -6,8 +6,8 @@ user-guide-description: Verwenden Sie Klassen und Schemafeldgruppen im Experienc
 feature: Schemas
 source-git-commit: c57c0ff63abe35fcf0246088b12b6bc6cfc542b6
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 86%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

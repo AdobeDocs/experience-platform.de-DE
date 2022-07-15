@@ -5,8 +5,8 @@ description: Überblick über das Konto von Real-time Customer Data Platform B2B
 exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 source-git-commit: ad0d38cbd249642d582a807c5679065827f57717
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

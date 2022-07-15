@@ -7,7 +7,7 @@ feature: Segments
 source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
 workflow-type: tm+mt
 source-wordcount: '163'
-ht-degree: 71%
+ht-degree: 74%
 
 ---
 
@@ -26,16 +26,16 @@ ht-degree: 71%
    - [Segmentdefinitionen](api/segment-definitions.md)
    - [Segmentaufträge](api/segment-jobs.md)
    - [Segmentsuche](api/segment-search.md)
-   - [Streaming-Segmentierung](api/streaming-segmentation.md)
+   - [Streaming-Segmentierung ](api/streaming-segmentation.md)
 - Segmentierungsbenutzeroberfläche {#ui}
    - [Übersicht](ui/overview.md)
    - [Segment-Dashboard](ui/segment-dashboard.md)
    - [Segment Builder](ui/segment-builder.md)
    - [Edge-Segmentierung](ui/edge-segmentation.md)
    - [Streaming-Segmentierung](ui/streaming-segmentation.md)
-   - [Streaming-Segmentierung (Video)](video/streaming-segmentation-overview.md)
+   - [Streaming-Segmentierung  (Video)](video/streaming-segmentation-overview.md)
    - [Umgestaltung von Zeitbeschränkungen](ui/segment-refactoring.md)
-   - Segmentübereinstimmung {#segment-match}
+   - Segment Match {#segment-match}
       - [Übersicht über Segmentübereinstimmungen](ui/segment-match/overview.md)
       - [Fehlerbehebung](ui/segment-match/troubleshooting.md)
 - [Einverständniserklärung](consents.md)
@@ -48,7 +48,7 @@ ht-degree: 71%
    - [Zuordnungsfunktionen](pql/map-functions.md)
    - [Zeichenfolgen-Funktionen](pql/string-functions.md)
    - [Objektfunktionen](pql/object-functions.md)
-   - [Arithmetische Funktionen ](pql/arithmetic-functions.md)
+   - [Arithmetische Funktionen](pql/arithmetic-functions.md)
    - [Aggregationsfunktionen](pql/aggregation-functions.md)
    - [Datums- und Uhrzeitfunktionen](pql/datetime-functions.md)
    - [Filterfunktionen](pql/filter-functions.md)
@@ -64,4 +64,4 @@ ht-degree: 71%
    - [Erstellen eines Datensatzes zum Exportieren von Daten](tutorials/create-dataset-export-segment.md)
    - [Einhalten der Datennutzungs-Compliance für Segmente](tutorials/governance.md)
 - [API-Referenz](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Platform – Versionshinweise](https://docs.adobe.com/content/help/de-DE/experience-platform/release-notes/latest.html)
+- [Platform – Versionshinweise](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=de)

@@ -4,7 +4,7 @@ title: Best Practices für die Verwaltung von Daten im Rahmen von Lizenzberechti
 description: In diesem Dokument werden Best Practices und Tools beschrieben, mit denen Sie Ihre Lizenzberechtigungen mit Adobe Experience Platform besser verwalten können.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
 source-git-commit: 02882957fc38058ff092938d631e290725d4bdc2
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 100%
 
@@ -194,7 +194,7 @@ In der folgenden Tabelle finden Sie eine Liste der derzeit verfügbaren Funktion
 | [!DNL ExperienceEvent] Datensatz-TTL | Anwenden einer TTL für Verhaltensdatensätze im Profilspeicher. Wenden Sie sich an Ihren Adobe-Support-Mitarbeiter. |
 | [Adobe Analytics-Datenvorbereitungsfilter](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Anwenden von [!DNL Kafka]-Filtern zum Ausschließen unnötiger Daten von der Aufnahme |
 | [Quell-Connector-Filter von Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Anwenden von Audience Manager-Quellverbindungsfiltern, um unnötige Daten von der Aufnahme auszuschließen |
-| [Alloy-SDK-Datenfilter](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=de#fundamentals) | Anwenden von Alloy-Filtern, um unnötige Daten von der Aufnahme auszuschließen |
+| [Alloy-SDK-Datenfilter](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#fundamentals) | Anwenden von Alloy-Filtern, um unnötige Daten von der Aufnahme auszuschließen |
 | [Datenfilter für die Ereignisweiterleitung](../../tags/ui/event-forwarding/overview.md) | Anwenden von Server-seitigen [!DNL Kafka]-Filtern, um unnötige Daten von der Aufnahme auszuschließen.  Weitere Informationen finden Sie in der Dokumentation unter [Tag-Regeln](../../tags/ui/managing-resources/rules.md). |
 | [Lizenznutzungs-Dashboard](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Ansicht eines Snapshots der lizenzbezogenen Daten Ihres Unternehmens für Experience Platform. |
 | [Dataset Overlap Report API](../../profile/tutorials/dataset-overlap-report.md) | Gibt die Datensätze an, die am meisten zu Ihrer Addressable Audience beitragen. |

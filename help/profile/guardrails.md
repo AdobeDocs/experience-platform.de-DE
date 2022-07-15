@@ -4,12 +4,12 @@ title: Standardmäßige Limits für Echtzeit-Kundenprofildaten
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: 'Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument enthält standardmäßige Verwendungs- und Quotenbegrenzungen, die Sie bei der Modellierung Ihrer Profildaten für eine optimale Systemleistung unterstützen. '
+description: 'Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
 workflow-type: tm+mt
 source-wordcount: '1941'
-ht-degree: 46%
+ht-degree: 48%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 46%
 
 Mit Adobe Experience Platform können Sie personalisierte kanalübergreifende Erlebnisse auf der Grundlage von Verhaltenseinblicken und Kundenattributen in Form von Echtzeit-Kundenprofilen bereitstellen. Um diesen neuen Ansatz bei Profilen zu unterstützen, verwendet Experience Platform ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet.
 
-Dieses Dokument enthält standardmäßige Verwendungs- und Quotenbegrenzungen, die Sie bei der Modellierung Ihrer Profildaten für eine optimale Systemleistung unterstützen. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
+Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können. Bei der Überprüfung der folgenden Leitlinien wird davon ausgegangen, dass Sie die Daten korrekt modelliert haben. Wenden Sie sich bei Fragen zum Modellieren Ihrer Daten an Ihren Kundenbetreuer.
 
 >[!NOTE]
 >

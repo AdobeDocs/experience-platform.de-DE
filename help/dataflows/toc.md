@@ -5,8 +5,8 @@ user-guide-description: Datenflüsse sind eine Darstellung von Datenvorgängen, 
 feature: Dataflows
 source-git-commit: 2e5d5a574f4c8bec99ef05ea751908c81c358050
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 69%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
