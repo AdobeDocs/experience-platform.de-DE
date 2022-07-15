@@ -5,14 +5,14 @@ title: Glossar der Datennutzungskennzeichnungen
 topic-legacy: labels
 description: In diesem Dokument werden alle derzeit von Adobe Experience Platform unterstützten Datennutzungskennzeichnungen beschrieben.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 90f055f2fbeb7571d2f7c1daf4ea14490069f2eb
+source-git-commit: 1a10216c01a049539b5e1d21d0c42942496b2e3e
 workflow-type: tm+mt
 source-wordcount: '2083'
 ht-degree: 95%
 
 ---
 
-# Glossar der Datennutzungskennzeichnungen
+# Glossar der Datennutzungskennzeichnungen {#data-usage-labels-glossary}
 
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"

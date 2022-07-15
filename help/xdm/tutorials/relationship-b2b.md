@@ -2,14 +2,14 @@
 title: Definieren einer Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
 description: Erfahren Sie, wie Sie in Real-time Customer Data Platform B2B Edition eine n:1-Beziehung zwischen zwei Schemas definieren.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: a95e5cf02e993d6c761abd74c98c0967a89eb678
+source-git-commit: 86a230d746d6642437c4e37958c07a1186ebadc3
 workflow-type: tm+mt
 source-wordcount: '1401'
 ht-degree: 5%
 
 ---
 
-# Definieren einer 1:1-Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition
+# Definieren einer 1:1-Beziehung zwischen zwei Schemas in Real-time Customer Data Platform B2B Edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
