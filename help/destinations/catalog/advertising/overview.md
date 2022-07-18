@@ -3,10 +3,10 @@ keywords: Werbeziele; Ziele; Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 14f7efc2d893bf081c4e167b46a3e85baeff4ec9
+source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 51%
+source-wordcount: '248'
+ht-degree: 50%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 51%
 
 ## Übersicht {#overview}
 
-Verbinden Sie Adobe Experience Platform mit Drittanbieter-Werbeplattformen wie DSP, angebotsseitige Plattformen (SSP) und Werbenetzwerke und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
+Verbinden Sie Adobe Experience Platform mit Werbeplattformen wie DSP, angebotsseitigen Plattformen (SSP) und Werbenetzwerken, um bekannte und pseudonyme Zielgruppen für diese Plattformen freizugeben.
 
 Beim Herstellen einer Verbindung zu einem Werbeziel werden Ihre Zielgruppen als Kennungen an die Zielplattform gesendet, wo sie einer der Zielplattform bekannten Kennung zugeordnet werden.
 
@@ -26,6 +26,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 
 ### Verbindungen
 
+* [Adobe Advertising Cloud-Verbindung](adobe-advertising-cloud-connection.md)
 * [(Beta) Criteo-Verbindung](criteo.md)
 * [Google Display &amp; Video 360-Verbindung](google-dv360.md)
 * [Google Ads-Verbindung](google-ads-destination.md)
