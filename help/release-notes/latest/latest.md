@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
 workflow-type: tm+mt
 source-wordcount: '1794'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Query Service](#query-service)
-- [Real-time Customer Data Platform-Verbindungen](#data-collection)
+- [Real-time Customer Data Platform Connections](#data-collection)
 - [Quellen](#sources)
 
 ## [!DNL Data Science Workspace] {#dsw}
@@ -70,21 +70,21 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
-| Klasse | [[!UICONTROL Medizin]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Eine Klasse der Gesundheitsindustrie, die Details über einen Stoff erfasst, der für die medizinische Behandlung verwendet wird, insbesondere ein Arzneimittel oder ein Medikament. |
-| Klasse | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Eine Klasse der Gesundheitsbranche, die Details zu einem medizinischen Plan erfasst, wie z. B. einen Krankenversicherungsplan oder einen Versicherungsplan. |
-| Klasse | [[!UICONTROL Anbieter]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Eine Klasse der Gesundheitsbranche, die Details über einen Gesundheitsdienstleister erfasst. |
-| Klasse | [[!UICONTROL Player]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Eine Klasse der Gesundheitsbranche, die Details über ein Versicherungsunternehmen erfasst. |
-| Klasse | [[!UICONTROL Live-Ereigniszeitplan]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Eine Sport- und Unterhaltungsbranchenklasse, die Details zu einem Live-Veranstaltungskalender erfasst, wie z. B. einen Fahrplan für ein Reisekonzert oder den Zeitplan eines Sportteams. |
-| Klasse | [[!UICONTROL Ort ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Eine Sport- und Unterhaltungsindustrie, die den Standort einer Live-Veranstaltung erfasst, wie z. B. einen Konzerthaus oder eine Sportarena. |
-| Feldergruppe | [[!UICONTROL Arzneimittel]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Eine Feldergruppe für [!UICONTROL Medizin] -Klasse, die Details über die Medikation erfasst, wie z. B. Markenname, Losnummer und Menge. |
-| Feldergruppe | [[!UICONTROL Details zum Gesundheitsplan]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Eine Feldergruppe für [!UICONTROL Plan] -Klasse, die Details wie Netzwerk, Typ und aktiven Status erfasst. |
-| Feldergruppe | [[!UICONTROL Gesundheitsdienstleister]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Eine Feldergruppe für [!UICONTROL Anbieter] -Klasse, die Details eines individuellen Gesundheitsberufs oder einer Gesundheitseinrichtung erfasst, die für die Erbringung von Gesundheitsdiagnosen und -therapiediensten zugelassen ist. |
-| Feldergruppe | [[!UICONTROL Details zum Gesundheitsbetreuer]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Eine Feldergruppe für [!UICONTROL XDM Individual Profile] -Klasse, die Informationen zu einer Person erfasst, die über eine Dienstleistung oder Betreuung verfügt oder empfangen wird, wie Kontaktinformationen, medizinische Grundversorgung und Planinformationen. |
-| Feldergruppe | [[!UICONTROL Sitetool-Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] -Klasse, die Informationen erfasst, die von Sitools wie Chatbot, Umfrage usw. erfasst werden. |
-| Feldergruppe | [[!UICONTROL Kauf eines Live-Ereignis-Tickets]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] -Klasse, die die Einkaufsgeschichte für Eintrittskarten zu einer Live-Veranstaltung wie einem Konzert oder einem Sportspiel erfasst. |
-| Feldergruppe | [[!UICONTROL Veranstaltungskalender für Sport und Unterhaltung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Eine Feldergruppe für [!UICONTROL Live-Ereigniszeitplan] -Klasse, die weitere Details zum Zeitplan erfasst, wie z. B. den Namen der Attraktion, Öffnungszeiten der Tür und mehr. |
-| Feldergruppe | [[!UICONTROL Veranstaltungsort für Sportunterhaltung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Eine Feldergruppe für [!UICONTROL Standort] -Klasse, die weitere Details zum Veranstaltungsort erfasst, wie Sitzplatzkapazität und Designated Market Areas (DMAs). |
-| Globales Schema | (Mehrere) | Für Zielmetriken für RTCDP Insights stehen neue globale Schemata zur Verfügung. Siehe Folgendes [Pull-Anfrage](https://github.com/adobe/xdm/pull/1560) für weitere Details. |
+| Klasse | [[!UICONTROL Medizin]](https://github.com/adobe/xdm/blob/master/components/classes/medication.schema.json) | Eine Klasse der Gesundheitsbranche, in der Details über einen Stoff erfasst werden, der für die medizinische Behandlung verwendet wird, insbesondere ein Arzneimittel oder ein Medikament. |
+| Klasse | [[!UICONTROL Plan]](https://github.com/adobe/xdm/blob/master/components/classes/plan.schema.json) | Eine Klasse der Gesundheitsbranche, in der Details zu einem medizinischen Plan erfasst werden, wie z. B. einem Krankenversicherungsplan oder einem Versicherungsplan. |
+| Klasse | [[!UICONTROL Anbieter]](https://github.com/adobe/xdm/blob/master/components/classes/provider.schema.json) | Eine Klasse der Gesundheitsbranche, in der Details über einen Gesundheitsdienstleister erfasst werden. |
+| Klasse | [[!UICONTROL Kostenträger]](https://github.com/adobe/xdm/blob/master/components/classes/payer.schema.json) | Eine Klasse der Gesundheitsbranche, in der Details über ein Versicherungsunternehmen erfasst werden. |
+| Klasse | [[!UICONTROL Plan für Live-Veranstaltungen]](https://github.com/adobe/xdm/blob/master/components/classes/live-event-schedule.json) | Eine Klasse der Sport- und Unterhaltungsbranchen, in der Details zu einem Plan für Live-Veranstaltungen erfasst werden, wie z. B. einem Plan für eine Konzerttour oder dem Zeitplan eines Sport-Teams. |
+| Klasse | [[!UICONTROL Ort ]](https://github.com/adobe/xdm/blob/master/components/classes/location.json) | Eine Klasse der Sport- und Unterhaltungsbranche, in der der Standort einer Live-Veranstaltung erfasst wird, z. B. ein Konzerthaus oder eine Sportarena. |
+| Feldergruppe | [[!UICONTROL Arzneimittel]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL Medizin], in der Details über die Medikation erfasst werden, z. B. Markenname, Lotnummer und Menge. |
+| Feldergruppe | [[!UICONTROL Details zur Gesundheitsvorsorge]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/plan/healthcare-plan-details.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL Vorsorge], in der Details wie Netzwerk, Typ und aktiver Status erfasst werden. |
+| Feldergruppe | [[!UICONTROL Gesundheitsdienstleister]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL Anbieter], in der Details eines individuellen Gesundheitsberufs oder einer Gesundheitseinrichtung erfasst werden, der bzw. die für die Erbringung von Diagnosen und Therapiediensten zugelassen ist. |
+| Feldergruppe | [[!UICONTROL Details zur versicherten Person]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/provider/healthcare-provider-details.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL XDM Individual Profile], in der Informationen zu einer Person erfasst werden, die eine Dienstleistung oder Betreuung erhalten hat oder erhalten wird. Zu den erfassten Informationen können beispielsweise Kontaktinformationen, medizinische Grundversorgung und Informationen zur Vorsorge gehören. |
+| Feldergruppe | [[!UICONTROL Sitetool-Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL XDM ExperienceEvent], in der von Sitetools wie Chatbots, Umfragen usw. erfasste Informationen gespeichert werden. |
+| Feldergruppe | [[!UICONTROL Kauf von Tickets für Live-Veranstaltungen]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-live-event-ticket-purchase.json) | Eine Feldergruppe für die Klasse [!UICONTROL XDM ExperienceEvent], in der der Kaufverlauf für Tickets eine Live-Veranstaltung wie ein Konzert oder ein Sportereignis erfasst wird. |
+| Feldergruppe | [[!UICONTROL Veranstaltungskalender für Sport und Unterhaltung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/live-event-schedule/sports-entertainment-event-schedule.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL Live-Ereigniszeitplan], die weitere Details zum Zeitplan erfasst, wie z. B. den Namen der Attraktion, die Öffnungszeiten der Türen und mehr. |
+| Feldergruppe | [[!UICONTROL Veranstaltungsort für Sportunterhaltung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/location/sports-entertainment-event-venue.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL Standort], die weitere Details zum Veranstaltungsort erfasst, wie Sitzplatzkapazität und Designated Market Areas (DMAs). |
+| Globales Schema | (Mehrere) | Für Zielmetriken für RTCDP Insights stehen neue globale Schemata zur Verfügung. Siehe die folgende [Pull-Anfrage](https://github.com/adobe/xdm/pull/1560) für weitere Details. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -95,8 +95,8 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 | Verhalten | [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/blob/master/components/behaviors/time-series.schema.json) | Es wurde ein Ereignistyp zum Aktualisieren von Medienstatus hinzugefügt. |
 | Feldergruppe | [[!UICONTROL Unterkunftsreservierung]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json) | Es wurde eine Eigenschaft zum Checkout für die Unterkunft hinzugefügt. |
 | Datentyp | [[!UICONTROL Media information]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Es wurden Felder für den Statusstart und das Statusende hinzugefügt. |
-| Erweiterung | [[!UICONTROL Workfront-Änderungsereignis]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Es wurden zwei Felder hinzugefügt, die zum Speichern von Attributen verwendet werden, um den Benutzer und den Zeitpunkt eines Erstellungsereignisses zu identifizieren. |
-| Erweiterung | [[!UICONTROL Adobe CJM ExperienceEvent - Details zur Nachrichteninteraktion]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Dem Landingpage-Objekt wurden Abonnement-, Einverständnis-, benutzerdefinierte E-Mail- und zusätzliche Dateninformationen hinzugefügt. |
+| Erweiterung | [[!UICONTROL Workfront-Änderungsereignis]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Es wurden zwei Felder hinzugefügt, die zum Speichern von Attributen verwendet werden, um die Benutzenden und den Zeitpunkt eines Erstellungsereignisses zu identifizieren. |
+| Erweiterung | [[!UICONTROL Adobe CJM ExperienceEvent – Details zur Nachrichteninteraktion]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/message-interaction.schema.json) | Es wurden Informationen zu Abonnement, Zustimmung, benutzerdefinierter E-Mail und zusätzlichen Daten im Landingpage-Objekt hinzugefügt. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -117,19 +117,19 @@ Query Service ermöglicht Ihnen die Verwendung von Standard-SQL zur Abfrage von 
 
 Weitere Informationen über Abfrage-Services finden Sie unter [Abfrage-Service – Übersicht](../../query-service/home.md).
 
-## Real-time Customer Data Platform-Verbindungen {#data-collection}
+## Real-time Customer Data Platform Connections {#data-collection}
 
-Real-time Customer Data Platform Connections bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert, transformiert und an Adobe- oder Nicht-Adobe-Ziele verteilt werden können.
+Real-Time Customer Data Platform Connections bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe oder andere Ziele weitergegeben werden können.
 
 **Neue Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| [Konfiguration des Zugriffstyps für Datenströme](../../edge/datastreams/overview.md#create) | Beim Erstellen eines neuen Datenstroms können Sie jetzt auswählen, welche Art von Anfragen das Edge-Netzwerk annehmen soll: <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anfragen. Wählen Sie diese Option, wenn Sie das Web SDK oder das [Mobile SDK](https://aep-sdks.gitbook.io/docs/) zusammen mit der [Server-API](../../server-api/overview.md) verwenden möchten. </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network nur authentifizierte Anfragen. Wählen Sie diese Option aus, wenn Sie nur die Server-API verwenden und verhindern möchten, dass nicht authentifizierte Anforderungen vom [!DNL Edge Network] verarbeitet werden. </li></ul> |
+| [Konfiguration des Zugriffstyps für Datenströme](../../edge/datastreams/overview.md#create) | Beim Erstellen eines neuen Datenstroms können Sie jetzt auswählen, welche Art von Anfragen das Edge Network annehmen soll: <ul><li>**[!UICONTROL Gemischte Authentifizierung]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network sowohl authentifizierte als auch nicht authentifizierte Anfragen. Wählen Sie diese Option, wenn Sie das Web SDK oder das [Mobile SDK](https://aep-sdks.gitbook.io/docs/) zusammen mit der [Server-API](../../server-api/overview.md) verwenden möchten. </li><li>**[!UICONTROL Nur authentifiziert]**: Wenn diese Option aktiviert ist, akzeptiert das Edge Network nur authentifizierte Anfragen. Wählen Sie diese Option aus, wenn Sie nur die Server-API verwenden und verhindern möchten, dass nicht authentifizierte Anforderungen vom [!DNL Edge Network] verarbeitet werden. </li></ul> |
 | [Vorschläge rendern](../../edge/personalization/rendering-personalization-content.md#applypropositions) in Single-Page Applications ohne Inkrementierung von Metriken. | Die neu hinzugefügte `applyPropositions`-Befehl ermöglicht es Ihnen, ein Array von Vorschlägen aus [!DNL Target] in Single-Page Applications zu rendern oder auszuführen, ohne die [!DNL Analytics] und [!DNL Target]-Metriken zu erhöhen. Dies erhöht die Genauigkeit des Reportings. |
 | [Mobile-zu-Web und Domain-übergreifender ID-Austausch](../../edge/identity/id-sharing.md) | Das Web-SDK von Adobe Experience Platform unterstützt jetzt den Austausch von Besucher-IDs, mit denen Sie personalisierte Erlebnisse präziser zwischen Content für Mobile Apps und mobiles Web sowie Domain-übergreifend bereitstellen können. |
 
-Weitere Informationen finden Sie im [Übersicht über Real-Time CDP-Verbindungen](../../rtcdp-connections/home.md).
+Weitere Informationen finden Sie in der [Übersicht über Real-Time CDP Connections](../../rtcdp-connections/home.md). 
 
 ## Quellen {#sources}
 
