@@ -1,7 +1,8 @@
 ---
-title: 'Anwendungsfall für auf Entscheidungen basierende abgeleitete Attribute '
+title: Anwendungsfall für auf Entscheidungen basierende abgeleitete Attribute
 description: In diesem Handbuch werden die Schritte erläutert, die zur Verwendung von Query Service zum Erstellen von dezimalbasierten abgeleiteten Attributen für die Verwendung mit Ihren Profildaten erforderlich sind.
-source-git-commit: 61e0895484b8005e2109056d51557f609fecaf97
+exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
+source-git-commit: c1ec6f949bd0ab9ec3b1ccc58baf74d8c71deca0
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 3%
@@ -59,7 +60,7 @@ Die folgende Tabelle zeigt die Beispieldaten im `_profilefoundationreportingstg`
 
 >[!NOTE]
 >
->Für Kürze wird die Regel-ID `_profilefoundationreportingstg` wurde am Anfang des Namespace in den Spaltentiteln und nachfolgenden Erwähnungen im gesamten Dokument weggelassen.
+>Für Kürze wird die Mandanten-ID `_profilefoundationreportingstg` wurde am Anfang des Namespace in den Spaltentiteln und nachfolgenden Erwähnungen im gesamten Dokument weggelassen.
 
 | `.membershipNumber` | `.emailAddress.address` | `.transactionDate` | `.transactionType` | `.transactionDetails` | `.mileage` | `.loyaltyStatus` |
 |---|---|---|---|---|---|---|
@@ -299,4 +300,3 @@ Führen Sie die Abfrage aus, um den Dezimaldatensatz zu füllen. Sie können die
 ## Nächste Schritte
 
 Im oben genannten Anwendungsbeispiel werden die Schritte erläutert, um Dezimalattribute im Echtzeit-Kundenprofil verfügbar zu machen. Dadurch kann Segmentation Service über eine Benutzeroberfläche oder eine RESTful-API Zielgruppen basierend auf diesen Dezimalgruppen generieren. Siehe [Übersicht über den Segmentierungsdienst](../../segmentation/home.md) für Informationen zum Erstellen, Auswerten und Zugreifen auf Segmente.
-
