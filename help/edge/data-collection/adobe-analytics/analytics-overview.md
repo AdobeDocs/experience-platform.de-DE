@@ -3,10 +3,10 @@ title: Verwenden von Adobe Analytics mit dem Platform Web SDK
 description: Erfahren Sie, wie Sie mit dem Adobe Experience Platform Web SDK Daten an Adobe Analytics senden.
 keywords: Adobe Analytics;Analytics;zugeordnete Daten;zugeordnete Vars;
 exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
-source-git-commit: 921a3a32ee5f2daa04512a3f2c68935667ab3875
+source-git-commit: f627c1f6c917e74e0a366ce0611a1fa6bd0e3c3d
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 51%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ Die Adobe Experience Platform [!DNL Edge Network] ordnet viele XDM-Variablen aut
 
 ## Manuell zugeordnete Daten
 
-Auf alle vom Edge Network erfassten Daten kann über Verarbeitungsregeln zugegriffen werden. Die Daten werden mithilfe der Punktnotation reduziert und stehen als Kontextdaten zur Verfügung.
+Auf nicht automatisch vom Edge Network zugeordnete Daten kann über Verarbeitungsregeln zugegriffen werden. Die Daten werden mithilfe der Punktnotation reduziert und stehen als Kontextdaten zur Verfügung.
 
 Angenommen, Sie haben ein Schema, das so aussieht:
 
