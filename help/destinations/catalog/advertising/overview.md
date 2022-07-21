@@ -3,10 +3,10 @@ keywords: Werbeziele; Ziele; Plattformziele
 title: Werbeziele – Übersicht
 description: Verbinden Sie Adobe Experience Platform mit einer Drittanbieter-Werbeplattform (z. B. DSP, Werbenetzwerk, SSP) und geben Sie für diese Plattformen pseudonyme Zielgruppen frei.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 4b48a1062e922a28ba925050b3879feff8fc40b2
+source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 50%
+source-wordcount: '253'
+ht-degree: 49%
 
 ---
 
@@ -37,6 +37,7 @@ Informationen zum Unterschied zwischen Verbindungen und Erweiterungen finden Sie
 * [Pinterest Customer List-Verbindung](pinterest.md)
 * [(Beta) Snapchat Ads-Verbindung](snap-inc.md)
 * [The Trade Desk-Verbindung](tradedesk.md)
+* [Die CRM-Verbindung des Trade Desk](tradedesk-emails.md)
 * [Yahoo/Verizon DataX](datax.md)
 
 ### Erweiterungen
