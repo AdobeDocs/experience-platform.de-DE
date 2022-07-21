@@ -2,9 +2,10 @@
 keywords: Experience Platform; Fehlerbehebung; Limits; Richtlinien;
 title: Limits für die Datenerfassung
 description: Dieses Dokument enthält Anleitungen zu Limits für die Datenerfassung in Adobe Experience Platform
-source-git-commit: 3f558c9c11945cc9af51c42f7ed872101521259f
+exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
+source-git-commit: 4fd26078017ae13e22ebb02f98335094c8e0581b
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -32,7 +33,7 @@ In der folgenden Tabelle sind die bei Verwendung der Variablen [Streaming-Aufnah
 | Art der Aufnahme | Leitlinien | Anmerkungen |
 | --- | --- | --- |
 | Streaming-Erfassung | <ul><li>Die maximale Datensatzgröße beträgt 1 MB, die empfohlene Größe beträgt 10 KB.</li><li>Sie können 20000 Anfragen pro Sekunde an Profile in weniger als einer Minute verarbeiten.</li><li>Sie können bis zu 20000 Anfragen pro Sekunde an Data Lake in weniger als 15 Minuten verarbeiten.</li></ul> | Verwenden Sie die Batch-Aufnahme-API , wenn Sie einen höheren Datendurchsatz benötigen. |
-| Streaming-Quellen | <ul><li>Die maximale Datensatzgröße beträgt 1 MB, die empfohlene Größe beträgt 10 KB.</li><li>Streaming-Quellen unterstützen bei Erstellung einer neuen Quellverbindung zwischen 4000 und 5000 Anfragen pro Sekunde.</li><li>Sie können zwischen 4000 und 5000 Anfragen pro Sekunde an Data Lake verarbeiten.</li></ul> | Streaming-Quellen wie [!DNL Kafka], [!DNL Azure Event Hubs]und [!DNL Amazon Kinesis] Verwenden Sie nicht die [!DNL Data Collection Core Service] (DCCS) und unterschiedliche Durchsatzbeschränkungen aufweisen. Siehe [Quellen - Übersicht](../sources/home.md) für einen Katalog von Quellen, die Sie für die Datenerfassung verwenden können. |
+| Streaming-Quellen | <ul><li>Die maximale Datensatzgröße beträgt 1 MB, die empfohlene Größe beträgt 10 KB.</li><li>Streaming-Quellen unterstützen bei Erstellung einer neuen Quellverbindung zwischen 4000 und 5000 Anfragen pro Sekunde. **Hinweis**: Es kann bis zu 30 Minuten dauern, bis Streaming-Daten vollständig in Data Lake verarbeitet werden.</li><li>Sie können zwischen 4000 und 5000 Anfragen pro Sekunde an Data Lake verarbeiten. **Hinweis**: Es kann bis zu 30 Minuten dauern, bis Streaming-Daten vollständig in Data Lake verarbeitet werden.</li></ul> | Streaming-Quellen wie [!DNL Kafka], [!DNL Azure Event Hubs]und [!DNL Amazon Kinesis] Verwenden Sie nicht die [!DNL Data Collection Core Service] (DCCS) und unterschiedliche Durchsatzbeschränkungen aufweisen. Siehe [Quellen - Übersicht](../sources/home.md) für einen Katalog von Quellen, die Sie für die Datenerfassung verwenden können. |
 
 ## Nächste Schritte
 
