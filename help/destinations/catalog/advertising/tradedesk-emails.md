@@ -1,9 +1,9 @@
 ---
 title: (Beta) Verbindung zwischen Trade Desk und CRM
 description: Aktivieren Sie Profile in Ihrem Trade Desk-Konto für Zielgruppen-Targeting und -Unterdrückung basierend auf CRM-Daten.
-source-git-commit: 69bf43f86ab3369ad0c7febcb69ec41d3bcac8bb
+source-git-commit: b186a1a4b7417503ffa08a66136411ccff495510
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1041'
 ht-degree: 10%
 
 ---
@@ -33,7 +33,7 @@ Dieses Dokument soll Ihnen helfen, Profile für Ihre [!DNL Trade Desk] Zielgrupp
 
 Bevor Sie Segmente aktivieren können, um [!DNL The Trade Desk]müssen Sie Ihre [!DNL The Trade Desk] Kundenbetreuer zur Unterzeichnung des CRM-Onboarding-Vertrags. [!DNL The Trade Desk] gibt dann die Erlaubnis und gibt Ihre Advertiser-ID frei, um Ihr Ziel zu konfigurieren.
 
-## Anforderungen an die ID-Übereinstimmung (#id-match-requirements)
+## Anforderungen an die ID-Übereinstimmung {#id-matching-requirements}
 
 Je nach der Art der IDs, die Sie in Adobe Experience Platform erfassen, müssen Sie die entsprechenden Anforderungen erfüllen. Bitte lesen Sie die [Übersicht über Identity Namespace](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=de) für weitere Informationen.
 
@@ -50,7 +50,7 @@ Sowohl Nur-Text- als auch SHA256-Hash-E-Mail-Adressen werden von Adobe Experienc
 
 {style=&quot;table-layout:auto&quot;}
 
-## Anforderungen an das E-Mail-Hashing (#hashing-requirements)
+## Anforderungen an das E-Mail-Hashing {#hashing-requirements}
 
 Sie können E-Mail-Adressen hashen, bevor Sie sie in Adobe Experience Platform aufnehmen, oder Sie können E-Mail-Adressen als Rohdaten verwenden.
 
@@ -77,11 +77,11 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 ## Herstellen einer Verbindung mit der Datenbank {#connect}
 
-### Bei Ziel authentifizieren (#authenticate)
+### Auf Ziel authentifizieren {#authenticate}
 
 [!DNL The Trade Desk] Das CRM-Ziel ist ein täglicher Batch-Datei-Upload und erfordert keine Authentifizierung durch den Benutzer.
 
-### Füllen Sie Zieldetails aus (#fill-in-details)
+### Zieldetails ausfüllen {#fill-in-details}
 
 Bevor Sie Zielgruppendaten an ein Ziel senden oder aktivieren können, müssen Sie eine Verbindung zu Ihrer eigenen Zielplattform herstellen. Beim [Einrichten](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) dieses Ziels müssen Sie die folgenden Informationen angeben:
 
@@ -120,7 +120,7 @@ Zielgruppenfelder auswählen:
 * Wählen Sie die `Email` Namespace als Zielidentität, wenn Ihr Quell-Namespace oder -Attribut `Email`.
 * Wählen Sie die `Email_LC_SHA256` Namespace als Zielidentität, wenn Ihr Quell-Namespace oder -Attribut `Email_LC_SHA256`.
 
-## Datenexport überprüfen (#validate)
+## Datenexport überprüfen {#validate}
 
 Überprüfen, ob die Daten ordnungsgemäß aus der Experience Platform in [!DNL The Trade Desk]finden Sie die Segmente unter der Datenkachel Adobe 1PD in [!DNL The Trade Desk] Data Management Platform (DMP). Im Folgenden finden Sie die Schritte zum Auffinden der entsprechenden ID im [!DNL Trade Desk] Benutzeroberfläche:
 
