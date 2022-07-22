@@ -2,10 +2,10 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: (Beta) Konfigurationsoptionen für dateibasierte Ziele für das Destination SDK
 exl-id: 6b0a0398-6392-470a-bb27-5b34b0062793
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '2330'
-ht-degree: 81%
+source-wordcount: '2389'
+ht-degree: 79%
 
 ---
 
@@ -369,6 +369,8 @@ Wenn Sie den Authentifizierungstyp SFTP mit SSH-Schlüssel konfigurieren, müsse
 Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Felder für Ihr Ziel auszufüllen, wenn sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Ziel herstellen.
 
 Im folgenden Beispiel: `customerDataFields` erfordert, dass Benutzer einen Namen für ihr Ziel eingeben und eine [!DNL Amazon S3] Behältername und Ordnerpfad sowie Komprimierungstyp, Dateiformat und verschiedene andere Dateiexportoptionen.
+
+Sie können in der Vorlage auf die Kundeneingaben aus den Kundendatenfeldern zugreifen und diese verwenden. Makro verwenden `{{customerData.name}}`. Wenn Sie beispielsweise Benutzer auffordern, ein Amazon S3-Bucket-Feld mit dem Namen einzugeben `bucket`, können Sie in der Vorlage darauf zugreifen, indem Sie das -Makro verwenden `{{customerData.bucket}}`. Ein Beispiel für die Verwendung eines Kundendatenfelds im [Zielserverkonfiguration](/help/destinations/destination-sdk/server-and-file-configuration.md#s3-example).
 
 ```json
  "customerDataFields":[

@@ -2,10 +2,10 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
 workflow-type: tm+mt
-source-wordcount: '1807'
-ht-degree: 97%
+source-wordcount: '1888'
+ht-degree: 93%
 
 ---
 
@@ -35,7 +35,7 @@ Dies ist eine Beispielkonfiguration des fiktiven Streaming-Ziels Moviestar, das 
    ],
    "customerDataFields":[
       {
-         "name":"endpointsInstance",
+         "name":"endpointRegion",
          "type":"string",
          "title":"Select Endpoint",
          "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
@@ -158,9 +158,13 @@ Benutzer wählen **[!UICONTROL Mit Ziel verbinden]** aus, um den OAuth 2-Authent
 
 ## Benutzerdefinierte Datenfelder {#customer-data-fields}
 
-Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Felder für Ihr Ziel auszufüllen, wenn sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Ziel herstellen. Die Konfiguration wird wie unten dargestellt im Authentifizierungsfluss sichtbar:
+Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Felder für Ihr Ziel auszufüllen, wenn sie in der Experience Platform-Benutzeroberfläche eine Verbindung zum Ziel herstellen. Die Konfiguration wird wie unten dargestellt im Authentifizierungsfluss sichtbar.
 
 ![Benutzerdefinierter Feldauthentifizierungsfluss](./assets/custom-field-authentication-flow.png)
+
+>[!TIP]
+>
+>Sie können in der Vorlage auf die Kundeneingaben aus den Kundendatenfeldern zugreifen und diese verwenden. Makro verwenden `{{customerData.name}}`. Wenn Sie beispielsweise Benutzer auffordern, ein Kunden-ID-Feld mit dem Namen einzugeben `userId`, können Sie in der Vorlage darauf zugreifen, indem Sie das -Makro verwenden `{{customerData.userId}}`. Ein Beispiel für die Verwendung eines Kundendatenfelds in der URL Ihres API-Endpunkts finden Sie im [Zielserverkonfiguration](/help/destinations/destination-sdk/server-and-template-configuration.md#server-specs).
 
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
@@ -178,10 +182,12 @@ Verwenden Sie diesen Abschnitt, um Benutzer aufzufordern, benutzerdefinierte Fel
 
 Dieser Abschnitt bezieht sich auf die Benutzeroberflächenelemente in der obigen Konfiguration, die von Adobe für Ihr Ziel in der Adobe Experience Platform-Benutzeroberfläche verwendet werden sollte. Siehe unten:
 
+![Abbildung der Konfiguration von Benutzeroberflächenattributen.](/help/destinations/destination-sdk/assets/ui-attributes-configuration.png)
+
 | Parameter | Typ | Beschreibung |
 |---------|----------|------|
 | `documentationLink` | Zeichenfolge | Weitere Informationen finden Sie auf der Dokumentationsseite im [Zielkatalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=de#catalog) für Ihr Ziel. Verwenden Sie `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, wobei `YOURDESTINATION` für den Namen Ihres Ziels steht. Für ein Ziel mit dem Namen „Moviestar“ würden Sie `http://www.adobe.com/go/destinations-moviestar-en` verwenden. Beachten Sie, dass dieser Link nur funktioniert, wenn Adobe Ihr Ziel live festlegt und die Dokumentation veröffentlicht wird. |
-| `category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=de). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
+| `category` | Zeichenfolge | Bezieht sich auf die Ihrem Ziel in Adobe Experience Platform zugewiesene Kategorie. Weitere Informationen finden Sie unter [Zielkategorien](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=de). Verwenden Sie einen der folgenden Werte: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br> Beachten Sie, dass Sie derzeit nur eine Kategorie pro Ziel auswählen können. |
 | `connectionType` | Zeichenfolge | `Server-to-server` ist derzeit die einzige verfügbare Option. |
 | `frequency` | Zeichenfolge | Bezieht sich auf die Art des Datenexports, die vom Ziel unterstützt wird. Unterstützte Werte: <ul><li>`Streaming`</li><li>`Batch`</li></ul> |
 
@@ -201,7 +207,6 @@ Verwenden Sie die Parameter in `schemaConfig`, um den Zuordnungsschritt des Ziel
 | `identityRequired` | Boolesch | Verwenden Sie `true`, wenn Benutzer in der Lage sein sollen, Identitäts-Namespaces von Experience Platform Ihrem gewünschten Schema zuzuordnen. |
 
 {style=&quot;table-layout:auto&quot;}
-
 
 ## Identitäten und Attribute {#identities-and-attributes}
 

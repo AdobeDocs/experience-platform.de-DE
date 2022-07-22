@@ -2,8 +2,8 @@
 description: Die Server- und Vorlagenspezifikationen können im Adobe Experience Platform Destination SDK über den allgemeinen Endpunkt „/authoring/destination-servers“ konfiguriert werden.
 title: Konfigurationsoptionen für Server- und Vorlagenspezifikationen im Destination SDK
 exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
-source-git-commit: 92bca3600d854540fd2badd925e453fba41601a7
-workflow-type: ht
+source-git-commit: a08201c4bc71b0e37202133836e9347ed4d3cd6b
+workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 100%
 
@@ -25,8 +25,8 @@ Dieser Prozess stellt Benutzerdaten als eine Reihe von HTTP-Nachrichten an Ihre 
 
 | Parameter | Typ | Beschreibung |
 |---|---|---|
-| `name` | Zeichenfolge | *Erforderlich.* Stellt einen benutzerfreundlichen Namen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist für Partner oder Kunden nicht sichtbar. Beispiel `Moviestar destination server`. |
-| `destinationServerType` | Zeichenfolge | *Erforderlich.* Für Streaming-Ziele auf `URL_BASED` festgelegt. |
+| `name` | Zeichenfolge | *Erforderlich.* Stellt einen Anzeigenamen Ihres Servers dar, der nur für Adobe sichtbar ist. Dieser Name ist für Partner oder Kunden nicht sichtbar. Beispiel `Moviestar destination server`. |
+| `destinationServerType` | Zeichenfolge | *Erforderlich.* Festlegen auf `URL_BASED` für Streaming-Ziele. |
 | `templatingStrategy` | Zeichenfolge | *Erforderlich.* <ul><li>Verwenden Sie `PEBBLE_V1`, wenn Sie im Feld `value` ein Makro anstelle eines festen Werts verwenden. Verwenden Sie diese Option, wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/{{customerData.region}}/items` haben. </li><li> Verwenden Sie `NONE`, wenn auf der Adobe-Seite keine Transformation erforderlich ist, z. B. wenn Sie einen Endpunkt wie `https://api.moviestar.com/data/items` haben. </li></ul> |
 | `value` | Zeichenfolge | *Erforderlich.* Geben Sie die Adresse des API-Endpunkts ein, mit dem sich Experience Platform verbinden soll. |
 
@@ -54,7 +54,7 @@ Mit der Vorlagenspezifikation können Sie konfigurieren, wie Sie die exportierte
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.endpointRegion}}/items"
       }
    },
    "httpTemplate":{
@@ -70,9 +70,9 @@ Mit der Vorlagenspezifikation können Sie konfigurieren, wie Sie die exportierte
 
 | Parameter | Typ | Beschreibung |
 |---|---|---|
-| `httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Die Optionen sind `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
+| `httpMethod` | Zeichenfolge | *Erforderlich.* Die Methode, die Adobe bei Aufrufen an Ihren Server verwendet. Es gibt die Optionen `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | Zeichenfolge | *Erforderlich.* Verwenden Sie `PEBBLE_V1`. |
 | `value` | Zeichenfolge | *Erforderlich.* Diese Zeichenfolge ist die von Sonderzeichen bereinigte Version, die die Daten von Platform-Kunden in das Format umwandelt, das Ihr Service erwartet. <br> Informationen zum Schreiben der Vorlage finden Sie im Abschnitt [Verwenden von Vorlagen](./message-format.md#using-templating). <br> Weitere Informationen zur Bereinigung von Zeichen finden Sie im Abschnitt [RFC-JSON-Standard, Abschnitt 7](https://tools.ietf.org/html/rfc8259#section-7). <br> Ein einfaches Beispiel finden Sie unter [Umwandlung von Profilattributen](./message-format.md#attributes). |
-| `contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist wahrscheinlich `application/json`. |
+| `contentType` | Zeichenfolge | *Erforderlich.* Der Content-Typ, den Ihr Server akzeptiert. Dieser Wert ist höchstwahrscheinlich `application/json`. |
 
 {style=&quot;table-layout:auto&quot;}
