@@ -2,10 +2,10 @@
 title: End-to-End-Übersicht über Real-Time Customer Data Platform Connections
 description: Eine allgemeine Übersicht darüber, wie Sie Ereignisdaten mit Real-Time Customer Data Platform Connections an Adobe Experience Cloud-Lösungen senden.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
-workflow-type: ht
-source-wordcount: '2612'
-ht-degree: 100%
+source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+workflow-type: tm+mt
+source-wordcount: '2613'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ In diesem Tutorial wird die Datenerfassungs-Benutzeroberfläche verwendet, um ei
 * Entwickeln
 * Erweiterungen verwalten
 
-Informationen zum Gewähren des Zugriffs auf Eigenschaften und Eigenschaftsrechte finden Sie im Handbuch zu [Verwalten von Berechtigungen für Tags](../tags/ui/administration/manage-permissions.md).
+Siehe Handbuch unter [Verwalten von Berechtigungen für die Datenerfassung](./permissions.md) , um zu erfahren, wie Sie Zugriff auf Eigenschaften und Eigentumsrechte gewähren.
 
 Um die verschiedenen in diesem Handbuch erwähnten Datenerfassungsprodukte verwenden zu können, müssen Sie außerdem Zugriff auf Datenströme haben sowie die Möglichkeit, Schemas zu erstellen und zu verwalten. Wenn Sie Zugriff auf eine dieser Funktionen benötigen, wenden Sie sich an Ihren CSM, um den erforderlichen Zugriff zu erhalten. Wenn Sie Adobe Experience Platform noch nicht erworben haben, erhalten Sie von Adobe den erforderlichen Zugriff, damit Sie das SDK ohne Aufpreis nutzen können.
 
