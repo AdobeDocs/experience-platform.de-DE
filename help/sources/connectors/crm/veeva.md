@@ -5,7 +5,7 @@ title: Übersicht über den Connector für Veva CRM-Quellen
 topic-legacy: overview
 description: Erfahren Sie, wie Sie mit APIs oder der Benutzeroberfläche eine Verbindung zwischen Veva CRM und Adobe Experience Platform herstellen.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: fa861e9740e05b4fcc4e8039bb288301d42b8357
+source-git-commit: ec0d6be6fde8ea7a0378769810079e3e62e9fd60
 workflow-type: tm+mt
 source-wordcount: '224'
 ht-degree: 73%
@@ -32,5 +32,5 @@ Die folgende Dokumentation enthält Informationen zur Verbindung von [!DNL Veeva
 
 ## Verbinden von [!DNL Veeva CRM] mit [!DNL Platform] über die Benutzeroberfläche
 
-- [Erstellen einer Quellverbindung mit Microsoft Dynamics in der Benutzeroberfläche](../../tutorials/ui/create/crm/veeva.md)
+- [Erstellen einer Quellverbindung aus dem VEC CRM über die Benutzeroberfläche](../../tutorials/ui/create/crm/veeva.md)
 - [Erstellen eines Datenflusses für eine CRM-Quellverbindung in der Benutzeroberfläche](../../tutorials/ui/dataflow/crm.md)
