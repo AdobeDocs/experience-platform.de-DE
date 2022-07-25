@@ -2,7 +2,7 @@
 title: Adobe Experience Platform - Versionshinweise - Februar 2022
 description: Die Versionshinweise für Adobe Experience Platform vom Februar 2022.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1019'
 ht-degree: 53%
@@ -49,7 +49,7 @@ Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kunden
 | Datenvorbereitung für die Datenerfassung | Wenn Sie das Adobe Experience Platform Web SDK verwenden, können Sie jetzt Datenvorlagenfunktionen verwenden, um Ihre Daten Server-seitig dem Experience-Datenmodell (XDM) zuzuordnen. Weitere Informationen finden Sie im Abschnitt [Datenvorbereitung für die Datenerfassung](../../edge/datastreams/data-prep.md) im Leitfaden zu den Datenströmen. |
 | IDs von Erstanbieter-Geräten | Sie können jetzt Ihre eigenen Geräte-IDs beim Erfassen von Kundendaten mit dem Platform Web SDK an das Adobe Experience Platform Edge Network senden, um eine Problemumgehung für aktuelle Browser-Beschränkungen bei Cookie-Lebenszyklen von Drittanbietern zu bieten. Weitere Informationen finden Sie im Leitfaden zu [IDs von Erstanbieter-Geräten](../../edge/identity/first-party-device-ids.md). |
 
-Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../rtcdp-connections/home.md).
+Weitere Informationen zur Datenerfassung in Platform finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 

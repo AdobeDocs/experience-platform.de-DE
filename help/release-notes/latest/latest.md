@@ -2,7 +2,7 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4956b940dfd25f55eaf67296f2cb31db65fac079
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 93%
@@ -77,7 +77,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie clie
 | [Google Ads Enhanced Conversions-Ereignisweiterleitungs-Erweiterung](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108630.html) | Mit der Google Ads Enhanced Conversions-Erweiterung können Sie Ihre Google Ads-Konversionen in Echtzeit verbessern. |
 | [Mailchimp-Ereignisweiterleitungserweiterung](../../tags/extensions/web/mailchimp/overview.md) | Die Ereignisweiterleitungs-Erweiterung Mailchimp sendet Ereignisse an die Mailchimp Marketing-API, die E-Mails für Mailchimp-Marketingkampagnen, Journey oder Transaktionen Trigger. |
 
-Weitere Informationen finden Sie im [Datenerfassung - Übersicht](../../rtcdp-connections/home.md).
+Weitere Informationen finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
 
 ## Experience-Datenmodell (XDM) {#xdm}
 

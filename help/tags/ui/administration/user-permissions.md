@@ -2,7 +2,7 @@
 title: Benutzerberechtigungen für Tags
 description: Hier erfahren Sie mehr über die verschiedenen Arten von Berechtigungen, die für Tags verfügbar sind, und über einige grundlegende Implementierungsstrategien für verschiedene geschäftliche Anwendungsfälle.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 96%
@@ -21,7 +21,7 @@ Dieses Handbuch bietet einen Überblick über die verschiedenen Arten von Berech
 
 >[!NOTE]
 >
->Anweisungen zum Konfigurieren von Berechtigungen für Benutzer mithilfe von Admin Console finden Sie im Tutorial zu [Verwalten von Berechtigungen für die Datenerfassung](../../../rtcdp-connections/permissions.md).
+>Anweisungen zum Konfigurieren von Berechtigungen für Benutzer mithilfe von Admin Console finden Sie im Tutorial zu [Verwalten von Berechtigungen für die Datenerfassung](../../../collection/permissions.md).
 
 ## Berechtigungstypen
 
@@ -121,4 +121,4 @@ In der folgenden Tabelle finden Sie einige Beispiele für die Rollentypen, die S
 
 ## Nächste Schritte
 
-Dieses Dokument bietet einen Überblick über die verfügbaren Berechtigungen für Tags in Experience Platform. Anweisungen zum Konfigurieren von Produktprofilen für Tags in Adobe Admin Console finden Sie im Handbuch unter [Verwalten von Benutzerberechtigungen für die Datenerfassung](../../../rtcdp-connections/permissions.md).
+Dieses Dokument bietet einen Überblick über die verfügbaren Berechtigungen für Tags in Experience Platform. Anweisungen zum Konfigurieren von Produktprofilen für Tags in Adobe Admin Console finden Sie im Handbuch unter [Verwalten von Benutzerberechtigungen für die Datenerfassung](../../../collection/permissions.md).

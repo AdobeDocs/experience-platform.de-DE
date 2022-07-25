@@ -3,7 +3,7 @@ title: Datenverschlüsselung in Adobe Experience Platform
 topic-legacy: data protection
 description: Erfahren Sie, wie Daten im Transit und im Ruhezustand in Adobe Experience Platform verschlüsselt werden.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 6%
@@ -24,7 +24,7 @@ Alle Daten, die zwischen Platform und einer externen Komponente übertragen werd
 
 Im Allgemeinen werden Daten auf drei Arten in Platform importiert:
 
-* [Datenerfassung](../../rtcdp-connections/home.md) -Funktionen ermöglichen es Websites und mobilen Anwendungen, Daten zum Staging und zur Vorbereitung auf die Aufnahme an das Platform Edge Network zu senden.
+* [Datenerfassung](../../collection/home.md) -Funktionen ermöglichen es Websites und mobilen Anwendungen, Daten zum Staging und zur Vorbereitung auf die Aufnahme an das Platform Edge Network zu senden.
 * [Quell-Connectoren](../../sources/home.md) Daten direkt aus Adobe Experience Cloud-Anwendungen und anderen Datenquellen für Unternehmen an Platform streamen.
 * Nicht-Adobe-ETL-Tools (Extrahieren, Transformieren, Laden) senden Daten an die [Batch-Aufnahme-API](../../ingestion/batch-ingestion/overview.md) für den Verbrauch.
 

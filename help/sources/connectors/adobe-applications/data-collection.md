@@ -3,7 +3,7 @@ keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Quelle; Dat
 title: Adobe Data Collection
 description: Dieses Dokument bietet einen Überblick über die Datenquelle der Adobe-Datenerfassung.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '296'
 ht-degree: 52%
@@ -28,12 +28,12 @@ Unter dem [!UICONTROL Adobe Apps] category, select **[!UICONTROL Adobe Data Coll
 
 Die Datenerfassungs-Benutzeroberfläche wird auf der **[!UICONTROL Datenspeicher]** Registerkarte.
 
-Ein Datenstrom ist eine Konfiguration, die dem Edge-Netzwerk mitteilt, wohin Ihre Daten gesendet werden sollen. Insbesondere gibt ein Datenstrom an, an welche Experience Cloud-Produkte Sie die Daten senden möchten und wie die Daten in jedem Produkt verarbeitet und gespeichert werden sollen.
+Ein Datenstrom ist eine Konfiguration, die dem Edge Network mitteilt, wohin Ihre Daten gesendet werden sollen. Insbesondere gibt ein Datenstrom an, an welche Experience Cloud-Produkte Sie die Daten senden möchten und wie die Daten in jedem Produkt verarbeitet und gespeichert werden sollen.
 
 ![datastreams](./images/data-collection/datastreams.png)
 
-Umfassende Schritte zur Verwendung der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Ende-zu-Ende-Datenerfassung](../../../rtcdp-connections/e2e.md).
+Umfassende Schritte zur Verwendung der Datenerfassungs-Benutzeroberfläche finden Sie in der [Übersicht über Ende-zu-Ende-Datenerfassung](../../../collection/e2e.md).
 
 ## Nächste Schritte
 
-Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie mithilfe des Arbeitsbereichs &quot;Quellen&quot;auf die Benutzeroberfläche für die Datenerfassung zugreifen können. Weitere Informationen zur Datenerfassung finden Sie unter [Datenerfassung - Übersicht](../../../rtcdp-connections/e2e.md).
+Durch Lesen dieses Dokuments haben Sie erfahren, wie Sie mithilfe des Arbeitsbereichs &quot;Quellen&quot;auf die Benutzeroberfläche für die Datenerfassung zugreifen können. Weitere Informationen zur Datenerfassung finden Sie unter [Datenerfassung - Übersicht](../../../collection/e2e.md).

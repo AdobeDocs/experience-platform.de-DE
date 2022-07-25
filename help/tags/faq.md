@@ -2,7 +2,7 @@
 title: Handbuch zur Fehlerbehebung bei Tags
 description: Erhalten Sie Antworten auf häufig gestellte Fragen zu Tags in Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: a99046cc7df18d53b068c679ab07f5f9dd8eff0a
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '1049'
 ht-degree: 97%
@@ -96,13 +96,13 @@ Ja! Tags unterstützen jetzt mobile Eigenschaften und Konfiguration für die neu
 
 ## Warum gibt die Benutzeroberfläche an, dass beim Laden meines Kontos ein Fehler aufgetreten ist?
 
-Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](../rtcdp-connections/permissions.md).
+Wenn Sie eine Meldung erhalten, dass beim Laden Ihres Kontos ein Fehler aufgetreten ist, bedeutet dies, dass Ihr Konto zu keinem Produktprofil für Tags gehört. Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um Zugriff auf die Datenerfassungs-Benutzeroberfläche zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](../collection/permissions.md).
 
 ## Warum kann ich in der Benutzeroberfläche keine Eigenschaften hinzufügen?
 
 Wenn Sie bei der Datenerfassungs-Benutzeroberfläche angemeldet sind und keine neuen Eigenschaften erstellen können, bedeutet dies, dass Ihr Konto zu keinem Produktprofil gehört, das über das Recht „Eigenschaften verwalten“ verfügt.
 
-Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um das Recht „Eigenschaften verwalten“ zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](../rtcdp-connections/permissions.md). Weitere Informationen zu den unterschiedlichen Rechten für Tags finden Sie in der Übersicht zu [Benutzerberechtigungen für Tags](./ui/administration/user-permissions.md).
+Informationen zum Konfigurieren eines Produktprofils in Adobe Admin Console, um das Recht „Eigenschaften verwalten“ zu gewähren, finden Sie im Handbuch zum [Verwalten von Berechtigungen](../collection/permissions.md). Weitere Informationen zu den unterschiedlichen Rechten für Tags finden Sie in der Übersicht zu [Benutzerberechtigungen für Tags](./ui/administration/user-permissions.md).
 
 ## Was ist, wenn ich weitere Fragen habe?
 

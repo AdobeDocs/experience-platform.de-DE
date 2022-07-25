@@ -3,7 +3,7 @@ title: Übersicht über die Ereignisweiterleitung
 description: Hier erfahren Sie mehr über Adobe Experience Platform, mit dessen Hilfe Sie über das Platform Edge-Netzwerk Aufgaben ausführen können, ohne dabei Ihre Tag-Implementierung zu ändern.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 0a01dd2b0d8a1039178e3593475f9a87639ccdcd
+source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 100%
@@ -20,11 +20,11 @@ Mit der Ereignisweiterleitung in Adobe Experience Platform können Sie erfasste 
 
 Dieses Dokument bietet einen Überblick über die Ereignisweiterleitung in Platform.
 
-![Ereignisweiterleitung im Datenerfassungs-Ökosystem](../../../rtcdp-connections/images/home/event-forwarding.png)
+![Ereignisweiterleitung im Datenerfassungs-Ökosystem](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Informationen dazu, wie die Ereignisweiterleitung in Platform in das Datenerfassungs-Ökosystem passt, finden Sie in der [Übersicht zur Datenerfassung](../../../rtcdp-connections/home.md).
+>Informationen dazu, wie die Ereignisweiterleitung in Platform in das Datenerfassungs-Ökosystem passt, finden Sie in der [Übersicht zur Datenerfassung](../../../collection/home.md).
 
 Die Ereignisweiterleitung in Kombination mit dem [Web SDK](../../../edge/home.md) und dem [Mobile SDK](https://aep-sdks.gitbook.io/docs/) von Adobe Experience Platform bietet die folgenden Vorteile:
 
