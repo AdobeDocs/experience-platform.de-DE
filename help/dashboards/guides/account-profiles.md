@@ -1,7 +1,8 @@
 ---
 title: Dashboard "Kontoprofile"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
-source-git-commit: 4ff30c689808e0513245852625efc4a162ab2c0e
+exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
+source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 4%
@@ -42,7 +43,7 @@ Die [!UICONTROL Durchsuchen] -Tab können Sie die in Ihrem Unternehmen erfassten
 
 Wählen Sie die [!UICONTROL Profil-ID] aus den auf der [!UICONTROL Durchsuchen] Registerkarte zum Öffnen [!UICONTROL Details] für das Kontoprofil.
 
-![Auf der Registerkarte &quot;Kontoprofile&quot;werden die Ergebnisse angezeigt und die Profil-ID hervorgehoben.](../images/account-profiles/account-profiles-browse-tab.png) —>
+![Auf der Registerkarte &quot;Kontoprofile&quot;werden die Ergebnisse angezeigt und die Profil-ID hervorgehoben.](../images/account-profiles/account-profiles-browse-tab.png)
 
 Die Kontoprofilinformationen werden auf der Seite [!UICONTROL Details] wurde aus mehreren Profilfragmenten zusammengeführt, um eine Ansicht des einzelnen Kontos zu bilden. Weitere Informationen finden Sie in der Dokumentation unter [Durchsuchen von Kontoprofilen in Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) , um mehr über die Anzeigefunktionen von Kontoprofilen in der Platform-Benutzeroberfläche zu erfahren.
 

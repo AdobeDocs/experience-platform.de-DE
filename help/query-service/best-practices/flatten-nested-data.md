@@ -2,7 +2,8 @@
 keywords: Experience Platform; Abfragedienst; Query Service; verschachtelte Datenstrukturen; verschachtelte Daten; reduzieren; reduzieren verschachtelte Daten;
 title: Reduzieren verschachtelter Datenstrukturen für die Verwendung mit BI-Tools
 description: In diesem Dokument wird erläutert, wie Sie XDM-Schemas für alle Tabellen und Ansichten während einer Sitzung reduzieren, wenn Sie BI-Tools von Drittanbietern mit Query Service verwenden.
-source-git-commit: 3c9a1f552760b34bfb2c4246382fcb2d66e563d0
+exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
+source-git-commit: a7f273383293359cf6adbcc0a508fb19d2789339
 workflow-type: tm+mt
 source-wordcount: '865'
 ht-degree: 1%
@@ -55,7 +56,7 @@ prod:all?FLATTEN
 
 Das in diesem Handbuch verwendete Beispielschema verwendet die Standardfeldgruppe [!UICONTROL Commerce-Details], das die `commerce` Objektstruktur und `productListItems` Array. Siehe XDM-Dokumentation für [Weitere Informationen über [!UICONTROL Commerce-Details] Feldergruppe](../../xdm/field-groups/event/commerce-details.md). Eine Darstellung der Schemastruktur finden Sie in der Abbildung unten.
 
-![Ein Schemadiagramm für die Feldergruppe &quot;Commerce-Details&quot;, einschließlich der `commerce` und `productListItems` Strukturen.](../images/best-practices/final-subscription-schema.png)
+![Ein Schemadiagramm für die Feldergruppe &quot;Commerce-Details&quot;, einschließlich der `commerce` und `productListItems` Strukturen.](../images/best-practices/flatten-nested-data/commerce-details.png)
 
 Wenn Ihr BI-Tool verschachtelte Datenstrukturen nicht unterstützt, kann es schwierig sein, verschachtelte Felder zu referenzieren, wenn sie serialisierte Werte enthalten (z. B. `commerce` und `productListItems` im Beispielschema). Diese Werte können als Teile eines einzelnen kodierten `commerce` Zeichenfolgenfeld und sind realistisch nicht verwendbar.
 
