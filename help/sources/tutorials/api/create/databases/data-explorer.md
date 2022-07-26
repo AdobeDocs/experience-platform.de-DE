@@ -6,18 +6,14 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Azure Data Explorer mit Adobe Experience Platform verbinden.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30
-source-git-commit: 93061c84639ca1fdd3f7abb1bbd050eb6eebbdd6
+source-git-commit: 1e2644b7d83a0bcb7175f27d7c4859c0efba4060
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 52%
+source-wordcount: '522'
+ht-degree: 54%
 
 ---
 
 # Erstellen Sie eine [!DNL Azure Azure Data Explorer] Basisverbindung mit [!DNL Flow Service] API
-
->[!NOTE]
->
->Die [!DNL Azure Azure Data Explorer] -Connector befindet sich in der Beta-Phase. Siehe [Quellen - Übersicht](../../../../home.md#terms-and-conditions) Weitere Informationen zur Verwendung von Beta-gekennzeichneten Connectoren.
 
 Eine Basisverbindung stellt die authentifizierte Verbindung zwischen einer Quelle und Adobe Experience Platform dar.
 
