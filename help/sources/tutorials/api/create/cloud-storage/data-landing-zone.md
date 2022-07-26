@@ -6,16 +6,16 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie mit der Flow Service-API Adobe Experience Platform mit Data Landing Zone verbinden.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b98afad74ef45cf3fabb9fa1ced283b2c768cef8
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1222'
 ht-degree: 20%
 
 ---
 
 # Verbinden [!DNL Data Landing Zone] Adobe Experience Platform mithilfe der Flow Service-API
 
-[!DNL Data Landing Zone] ist eine Cloud-basierte Datenspeicheranlage für temporäre Dateispeicher, die mit Adobe Experience Platform bereitgestellt wird. Daten werden automatisch aus der [!DNL Data Landing Zone] nach sieben Tagen.
+[!DNL Data Landing Zone] ist eine sichere, Cloud-basierte Dateispeicheranlage, mit der Dateien in Adobe Experience Platform importiert werden können. Daten werden automatisch aus der [!DNL Data Landing Zone] nach sieben Tagen.
 
 Dieses Tutorial führt Sie durch die Schritte zum Erstellen einer [!DNL Data Landing Zone] Quellverbindung mithilfe der [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Dieses Tutorial enthält auch Anweisungen zum Abrufen Ihrer [!DNL Data Landing Zone], sowie das Anzeigen und Aktualisieren Ihrer Anmeldedaten.
 
@@ -349,7 +349,7 @@ curl -X GET \
 
 Eine erfolgreiche Antwort gibt die Struktur der abgefragten Datei einschließlich Dateinamen und Datentypen sowie eine `properties` Schlüssel, enthält Informationen zu `fileType`, `compressionType`und `columnDelimiter`.
 
-++ + Klicken auf mich
++++Hier klicken
 
 ```json
 {
