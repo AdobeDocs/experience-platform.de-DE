@@ -3,9 +3,9 @@ keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsr
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 5a13059c7ddd3f78ef2147533c95d9bd59c5c449
+source-git-commit: 9963c78bff8d48816982bc79af9239f1a7b5e90a
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1478'
 ht-degree: 81%
 
 ---
@@ -20,7 +20,7 @@ Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vere
 
 Weitere Informationen zur Erstellung von Account-Profilen im Rahmen des B2B-Workflows finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md).
 
-## Übersicht über Kontoprofile (#account-profiles-overview)
+## Übersicht über Account-Profile {#account-profiles-overview}
 
 Eine Übersicht über ein Kontoprofil erhalten Sie, indem Sie **[!UICONTROL Profile]** under [!UICONTROL Konten] im linken Navigationsbereich. Unter dem [!UICONTROL Übersicht] -Registerkarte, zeigt das Dashboard eine Grafik oder ein Diagramm an, die bzw. das Widgets in einem einzelnen Einstiegspunkt anzeigt.
 
