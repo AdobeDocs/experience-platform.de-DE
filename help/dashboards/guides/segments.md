@@ -4,10 +4,10 @@ title: Segmente-Dashboard
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 63a7857c2b88e81de3df7d925daf15bf631ff84c
+source-git-commit: 2d84a9a7caf080abd51e846f39e4090cb4aa05c7
 workflow-type: tm+mt
 source-wordcount: '1576'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
@@ -171,6 +171,15 @@ Dieses Widget stellt die Anzahl der Profile aus zwei Segmenten dar, die die Krit
 Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie die Ähnlichkeiten in den Ergebnissen Ihrer Segmentdefinitionen visualisieren.
 
 ![Das Widget Zielgruppenüberschneidung .](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Nächste Schritte
 

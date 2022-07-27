@@ -4,9 +4,9 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 2fdcd0748ccfe5b6b079bc21c8dbde491fbb2471
+source-git-commit: 54020785166b735fcd4dbe052ce1e738a70a30df
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2726'
 ht-degree: 3%
 
 ---
@@ -55,6 +55,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Nicht zugeordnete Segmente nach Identität]](#unmapped-segments-by-identity)
 * [[!UICONTROL Zugeordnete Segmente nach Identität]](#mapped-segments-by-identity)
 * [[!UICONTROL Häufige Zielgruppen]](#common-audiences)
+* [[!UICONTROL Zugeordnete Zielgruppen]](#mapped-audiences)
 * [[!UICONTROL Zugewiesene Zielgruppen-Konsistenz]](#mapped-audience-health)
 * [[!UICONTROL Zielanzahl]](#destinations-count)
 * [[!UICONTROL Zielstatus]](#destination-status)
@@ -195,6 +196,14 @@ Die **[!UICONTROL Häufige Zielgruppen]** Widget bietet eine Liste der fünf wic
 Die [!UICONTROL ZIELGRUPPENGRÖSSE] gibt die Gesamtanzahl der Profile jedes aufgelisteten Segments an.
 
 ![Das Widget Allgemeine Zielgruppen .](../images/destinations/common-audiences.png)
+
+### Zugeordnete Zielgruppen {#mapped-audiences}
+
+Die [!UICONTROL Zugeordnete Zielgruppen] Widget zeigt die Gesamtanzahl der zugeordneten Zielgruppen an, die für das am oberen Rand der Seite ausgewählte Ziel aktiviert werden können.
+
+Auswählen **[!UICONTROL Segmente]** Navigieren zum Segmente-Dashboard [!UICONTROL Durchsuchen] Registerkarte. Dieser Arbeitsbereich zeigt eine Liste aller Segmentdefinitionen für Ihre Organisation an.
+
+![Das Widget Zugeordnete Zielgruppen .](../images/destinations/mapped-audiences.png)
 
 ### Zugewiesene Zielgruppen-Konsistenz {#mapped-audience-health}
 
