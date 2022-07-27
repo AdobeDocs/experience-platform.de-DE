@@ -3,10 +3,10 @@ keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsr
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 55af435c4819193fa3f18a85543bc1fad423bb4d
+source-git-commit: 5a13059c7ddd3f78ef2147533c95d9bd59c5c449
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 84%
+source-wordcount: '1479'
+ht-degree: 81%
 
 ---
 
@@ -19,6 +19,14 @@ ht-degree: 84%
 Mit Account-Profilen können Sie Account-Informationen aus mehreren Quellen vereinheitlichen. Diese einheitliche Ansicht eines Accounts führt Daten aus all Ihren Marketing-Kanälen und den diversen Systemen zusammen, die Ihr Unternehmen derzeit zum Speichern von Kunden-Account-Informationen verwendet. Dieses Dokument enthält ein Handbuch zur Interaktion mit Account-Profilen unter Verwendung der in der Benutzeroberfläche von Adobe Experience Platform verfügbaren Funktionen von Real-Time Customer Data Platform (B2B Edition).
 
 Weitere Informationen zur Erstellung von Account-Profilen im Rahmen des B2B-Workflows finden Sie im Abschnitt [End-to-End-Tutorial](../b2b-tutorial.md).
+
+## Übersicht über Kontoprofile (#account-profiles-overview)
+
+Eine Übersicht über ein Kontoprofil erhalten Sie, indem Sie **[!UICONTROL Profile]** under [!UICONTROL Konten] im linken Navigationsbereich. Unter dem [!UICONTROL Übersicht] -Registerkarte, zeigt das Dashboard eine Grafik oder ein Diagramm an, die bzw. das Widgets in einem einzelnen Einstiegspunkt anzeigt.
+
+![Registerkarte „Überblick“](images/b2b-account-profile-overview.png)
+
+Weitere Informationen zum Dashboard &quot;Kontoprofile&quot;finden Sie im Abschnitt [Dashboard &quot;Kontoprofile&quot;](../../dashboards/guides/account-profiles.md) Dokumentation.
 
 ## Durchsuchen von Account-Profilen {#browse-account-profiles}
 
