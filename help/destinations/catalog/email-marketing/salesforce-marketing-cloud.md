@@ -3,14 +3,14 @@ keywords: E-Mail; E-Mail; E-Mail; E-Mail-Ziele; Salesforce; Salesforce-Ziel
 title: Salesforce Marketing Cloud-Verbindung
 description: Salesforce Marketing Cloud ist eine Digital-Marketing-Suite, die früher als ExactTarget bekannt war und mit der Sie Journeys für Besucher und Kunden erstellen und anpassen können, um deren Erlebnis zu personalisieren.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 28%
 
 ---
 
-# [!DNL Salesforce Marketing Cloud]-Verbindung
+# [!DNL (Files) Salesforce Marketing Cloud]-Verbindung
 
 ## Übersicht {#overview}
 

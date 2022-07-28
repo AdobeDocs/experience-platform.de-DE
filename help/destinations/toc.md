@@ -4,9 +4,9 @@ user-guide-title: Zielhandbuch
 user-guide-description: Aktivieren Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, gezielte Werbung und viele andere Anwendungsfälle.
 description: Dieses Dokument listet das Inhaltsverzeichnis für Adobe Experience Platform-Ziele auf
 feature: Destinations
-source-git-commit: a8faa3a146669e206b9aa129f5541a7511c1854a
+source-git-commit: 30e75b8fbaa4a8269a32f82ade435b67767630c5
 workflow-type: tm+mt
-source-wordcount: '842'
+source-wordcount: '843'
 ht-degree: 83%
 
 ---
@@ -72,7 +72,7 @@ ht-degree: 83%
       * [Pinterest Customer List-Verbindung](./catalog/advertising/pinterest.md)
       * [(Beta) Snapchat Ads-Verbindung](./catalog/advertising/snap-inc.md)
       * [The Trade Desk-Verbindung](./catalog/advertising/tradedesk.md)
-      * [Die CRM-Verbindung des Trade Desk](./catalog/advertising/tradedesk-emails.md)
+      * [(Beta) Die CRM-Verbindung des Trade Desk](./catalog/advertising/tradedesk-emails.md)
       * [Twitter Universal Website Tag-Erweiterung](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-Verbindung](./catalog/advertising/datax.md)
    * Analyseziele {#analytics}
@@ -104,7 +104,7 @@ ht-degree: 83%
       * [Azure Event Hubs-Verbindung](./catalog/cloud-storage/azure-event-hubs.md)
       * [SFTP-Verbindung](./catalog/cloud-storage/sftp.md)
       * [IP-Adresse - Zulassungsliste für Cloud-Speicher-Ziele](./catalog/cloud-storage/ip-address-allow-list.md)
-   * CRM-Ziele (Customer Relationship Management) {#crm-destinations}
+   * CRM-Ziele (Customer Relationship Management) {#crm}
       * [Salesforce CRM-Verbindung](./catalog/crm/salesforce.md)
    * Data Management Platform-Ziele {#data-management}
       * [Data Management Platform (DMP)-Ziele – Übersicht](./catalog/data-management/overview.md)
