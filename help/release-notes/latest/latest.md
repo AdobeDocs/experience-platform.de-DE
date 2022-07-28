@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a69586dbe492a9cfe64383adc44be62854154a
+source-git-commit: 4876df90e7e715c89e0614a9e1e81c3e7091bccb
 workflow-type: tm+mt
-source-wordcount: '1884'
-ht-degree: 32%
+source-wordcount: '2085'
+ht-degree: 29%
 
 ---
 
@@ -120,8 +120,12 @@ Weitere Informationen finden Sie unter [!DNL Data Prep], siehe [[!DNL Data Prep]
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [(Beta) Die [!DNL Trade Desk] - CRM-Verbindung](../../destinations/catalog/advertising/tradedesk-emails.md) | Verwendung [!DNL The Trade Desk] CRM-Ziel, Profile für Ihre [!DNL Trade Desk] Zielgruppen-Targeting und -Unterdrückung anhand von CRM-Daten. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Das Marketo Engage-Ziel-Update ermöglicht es Ihnen, den Prozess der Erstellung statischer Listen mit Automatisierung zu optimieren und Benutzern zu ermöglichen, zusätzliche Felder in ihre Leads einzufügen. Weitere Informationen zu den Verbesserungen in Marketo V2 finden Sie unten: <br><ul><li>Im **[!UICONTROL Segment planen]** Schritt des Aktivierungs-Workflows: In Marketo V1 müssen Sie manuell einen **Zuordnungs-ID** , um Daten erfolgreich nach Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.</li><li>Im **[!UICONTROL Zuordnung]** -Schritt des Aktivierungs-Workflows in Marketo V1 konnten Sie XDM-Felder nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName`und `companyName`. Mit der Marketo V2-Version können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie unter [unterstützte Attribute in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
+| [Pega Customer Decisioning Hub](../../destinations/catalog/personalization/pega.md) | Verwenden Sie Profilattribute und Segmentzugehörigkeitsinformationen aus Adobe Experience Platform in Pega Customer Decisioning Hub als Prädikatoren in adaptiven Modellen und helfen Sie bei der Entscheidungsfindung für die nächste beste Aktion. |
+| [(API) Salesforce-Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzersegmente in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden. |
+| [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Aktualisieren von Kontaktinformationen in Salesforce Marketing Cloud mit Profil- und Segmentinformationen in Experience Platform |
 | [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzersegmente in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
+| [(Beta) Die [!DNL Trade Desk] - CRM-Verbindung](../../destinations/catalog/advertising/tradedesk-emails.md) | Verwendung [!DNL The Trade Desk] CRM-Ziel, Profile für Ihre [!DNL Trade Desk] Zielgruppen-Targeting und -Unterdrückung anhand von CRM-Daten. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
 
 {style=&quot;table-layout:auto&quot;}
 
