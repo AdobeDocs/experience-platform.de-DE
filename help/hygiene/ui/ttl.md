@@ -2,10 +2,10 @@
 title: Datensatz-TTL verwalten
 description: Erfahren Sie, wie Sie in der Adobe Experience Platform-Benutzeroberfläche eine Time-to-Live (TTL) für einen Datensatz planen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 22da9e39e168d9a995c7c134733aa7a1b3587749
+source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 100%
+source-wordcount: '370'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Adobe Shield for Healthcare erworben haben.
+>Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die den Gesundheitsschild erworben haben.
 
 Sie können einen Zeitplan für die Time-to-Live (TTL) eines Datensatzes in der Adobe Experience Platform-Benutzeroberfläche im [[!UICONTROL Datenhygiene]-Arbeitsbereich](./overview.md) festlegen.
 
