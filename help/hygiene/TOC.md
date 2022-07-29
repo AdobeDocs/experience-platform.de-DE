@@ -5,7 +5,7 @@ breadcrumb-title: Datenhygiene-Handbuch
 user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen Datenschutzbestimmungen wie die DSGVO und den CCPA einzuhalten.
 feature: Data Hygiene
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '55'
 ht-degree: 100%
 
