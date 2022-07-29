@@ -2,9 +2,9 @@
 title: (Beta) [!DNL Google Ad Manager 360] connection
 description: Google Ad Manager 360 ist eine Adserving-Plattform von Google, mit der Herausgeber die Anzeige von Werbung auf ihren Websites, über Videos und in Apps verwalten können.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: aed15e0abfd51a8a08290e78302239792f86535a
+source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '914'
 ht-degree: 13%
 
 ---
@@ -93,7 +93,7 @@ Füllen Sie die folgenden erforderlichen und optionalen Felder aus, um Details f
 * **[!UICONTROL Beschreibung]**: Optional. Hier können Sie beispielsweise erwähnen, für welche Kampagne Sie dieses Ziel verwenden.
 * **[!UICONTROL Bucket-Name]**: Geben Sie den Namen der [!DNL Google Cloud Storage] -Bucket, der von diesem Ziel verwendet werden soll.
 * **[!UICONTROL Ordnerpfad]**: Geben Sie den Pfad zum Zielordner ein, der die exportierten Dateien hosten soll.
-* **[!UICONTROL Konto-ID]**: Geben Sie Ihre Konto-ID mit [!DNL Google]. Dies kann Ihr Netzwerkcode oder Ihre Zielgruppenverknüpfungskennung sein. Normalerweise ist dies eine achtstellige Kennung.
+* **[!UICONTROL Konto-ID]**: Füllen Sie Ihre Zielgruppen-Link-ID mit [!DNL Google].
 * **[!UICONTROL Kontotyp]**: Wählen Sie je nach Konto bei Google eine Option aus:
    * Verwenden Sie `DFP by Google` für for Publishers.[!DNL DoubleClick]
    * Verwendung `AdX buyer` für [!DNL Google AdX]
