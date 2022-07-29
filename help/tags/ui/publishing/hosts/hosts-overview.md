@@ -2,10 +2,10 @@
 title: Hosts – Übersicht
 description: Erfahren Sie mehr über die verschiedenen Hosting-Optionen in Adobe Experience Platform.
 exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 02af02644968346dbcf41d13c2c6e52d3a3ec7ed
 workflow-type: tm+mt
 source-wordcount: '166'
-ht-degree: 100%
+ht-degree: 86%
 
 ---
 
@@ -26,4 +26,4 @@ Ausführliche Informationen zu den einzelnen Host-Typen finden Sie unter den obi
 
 Derselbe Host kann für mehrere Umgebungen innerhalb einer Eigenschaft verwendet werden.
 
-Weitere Informationen, die Ihnen bei der Wahl zwischen selbstständigem Hosting und der Verwaltung des Hosts durch Adobe helfen, finden Sie im [Handbuch zum selbstständigen Hosting](./self-hosting-libraries.md).
+Weitere Informationen, die Sie bei der Entscheidung zwischen Self-Hosting und der Verwaltung des Hosting durch die Adobe unterstützen, finden Sie im Abschnitt [Handbuch zum selbstständigen Hosting](./self-hosting-libraries.md).
