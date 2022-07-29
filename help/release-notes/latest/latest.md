@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
 workflow-type: tm+mt
 source-wordcount: '2114'
-ht-degree: 28%
+ht-degree: 31%
 
 ---
 
@@ -74,7 +74,7 @@ Weitere Informationen zum Dashboard &quot;Ziele&quot;finden Sie unter [Übersich
 
 ## Datenerfassung {#collection}
 
-Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie clientseitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert, umgewandelt und an Ziele außerhalb der Adobe verteilt werden können.
+Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Client-seitige Kundenerlebnisdaten erfassen und an das Adobe Experience Platform Edge Network senden können, wo sie angereichert und transformiert und an Adobe- oder Drittanbieter-Ziele weitergegeben werden können.
 
 **Neue Funktionen**
 
@@ -84,7 +84,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie clie
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen finden Sie im [Datenerfassung - Übersicht](../../collection/home.md).
+Weiterführende Informationen finden Sie in der [Übersicht zur Datenerfassung](../../collection/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
