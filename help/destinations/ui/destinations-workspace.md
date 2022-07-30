@@ -3,9 +3,9 @@ keywords: Plattform; Ziele; Arbeitsbereich "Ziele"; Arbeitsbereich; UI; Ziele in
 title: Arbeitsbereich „Ziele“
 description: 'Der Arbeitsbereich Ziele besteht aus fünf Bereichen: Überblick, Katalog, Durchsuchen, Konten und Systemansicht. Sie werden in den folgenden Abschnitten beschrieben.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 802a15212f51db2c616860ed0fd2c3f1cf2d3777
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1162'
 ht-degree: 18%
 
 ---
@@ -26,7 +26,7 @@ Die **[!UICONTROL Übersicht]** angezeigt wird, [!UICONTROL Ziele] Dashboard, da
 >
 >Wenn Ihr Unternehmen neu bei Experience Platform ist und noch keine aktiven Ziele hat, wird die [!UICONTROL Ziele] Dashboard und [!UICONTROL Übersicht] nicht sichtbar sind. Wählen Sie stattdessen [!UICONTROL Ziele] über die linke Navigation zeigt die [[!UICONTROL Katalog] tab](#catalog).
 
-![](../../dashboards/images/destinations/dashboard-overview.png)
+![Die Registerkarte Ziele-Dashboard - Übersicht .](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Katalog] {#catalog}
 

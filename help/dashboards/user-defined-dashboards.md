@@ -1,7 +1,8 @@
 ---
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
-source-git-commit: 47e74a0cabbf40df3a45e835ca3a1e9a36fb4532
+exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
+source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
 workflow-type: tm+mt
 source-wordcount: '883'
 ht-degree: 1%
@@ -56,7 +57,7 @@ Die [!UICONTROL Daten auswählen] angezeigt. Wählen Sie in der linken Spalte ei
 >
 >Benutzerdefinierte Dashboards unterstützen derzeit nur das Profildatenmodell. Weitere Optionen werden unterstützt.
 
-![Dialogfeld &quot;Daten auswählen&quot;.](./images/user-defined-dashboards/select-data-dialog.png)
+![Das Dialogfeld Daten auswählen .](./images/user-defined-dashboards/select-data-dialog.png)
 
 Die Vorschauliste enthält Details zu den im Datenmodell enthaltenen Tabellen. Die nachstehende Tabelle enthält Beschreibungen der Spaltenfelder und ihrer potenziellen Werte.
 
@@ -68,9 +69,9 @@ Die Vorschauliste enthält Details zu den im Datenmodell enthaltenen Tabellen. D
 
 Auswählen **[!UICONTROL Nächste]** zur Bestätigung Ihrer Wahl des Datenmodells. In der nächsten Ansicht wird eine Liste der verfügbaren Tabellen in der linken Leiste angezeigt. Wählen Sie eine Tabelle aus, um eine umfassende Aufschlüsselung der in der ausgewählten Tabelle enthaltenen Daten anzuzeigen.
 
-Die [!UICONTROL Vorschau] Bereich enthält Registerkarten für [!UICONTROL Beispieldatensätze] und [!UICONTROL Attribute].Die [!UICONTROL Beispieldatensätze] bietet eine Teilmenge der Datensätze aus der ausgewählten Tabelle in einer tabellarischen Ansicht. Die [!UICONTROL Attribute] tab stellt den Attributnamen, den Datentyp und die Quelltabelle für jedes Attribut bereit, das mit der ausgewählten Tabelle verknüpft ist.
+Die [!UICONTROL Vorschau] Bereich enthält Registerkarten für [!UICONTROL Beispieldatensätze] und [!UICONTROL Attribute]. Die [!UICONTROL Beispieldatensätze] bietet eine Teilmenge der Datensätze aus der ausgewählten Tabelle in einer tabellarischen Ansicht. Die [!UICONTROL Attribute] tab stellt den Attributnamen, den Datentyp und die Quelltabelle für jedes Attribut bereit, das mit der ausgewählten Tabelle verknüpft ist.
 
-Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für Ihr Widget bereitzustellen, und wählen Sie [!UICONTROL Auswählen] , um zum Widget Composer zurückzukehren.
+Wählen Sie eine Tabelle aus der Liste in der linken Leiste aus, um Daten für Ihr Widget bereitzustellen, und wählen Sie **[!UICONTROL Auswählen]** , um zum Widget Composer zurückzukehren.
 
 ![Das Dialogfeld &quot;Daten auswählen&quot;mit hervorgehobener Auswahl.](./images/user-defined-dashboards/select-a-table.png)
 
@@ -117,7 +118,3 @@ Widgets können in diesem Arbeitsbereich neu angeordnet und in der Größe angep
 Durch Lesen dieses Dokuments können Sie besser verstehen, wie Sie ein benutzerdefiniertes Dashboard erstellen und benutzerdefinierte Widgets für dieses Dashboard erstellen, bearbeiten und aktualisieren.
 
 So ermitteln Sie die verfügbaren vorkonfigurierten Metriken und Visualisierungen für die [profiles](./guides/profiles.md#standard-widgets), [Segmente](./guides/segments.md#standard-widgets)und [Ziele](./guides/destinations.md#standard-widgets) -Dashboards finden Sie in der entsprechenden Dokumentation eine Liste der Standard-Widgets.
-
-
-
-

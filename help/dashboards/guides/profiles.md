@@ -4,9 +4,9 @@ title: Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: a1a5a34ed0f46223b1eae3df75ff65f27041503e
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '3875'
+source-wordcount: '3901'
 ht-degree: 7%
 
 ---
@@ -89,7 +89,9 @@ Weitere Informationen finden Sie im Handbuch zur Benutzeroberfläche des Vereini
 
 Das Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihren Profildaten enthalten.
 
-Das Datum und die Uhrzeit der letzten Aktualisierung eines Widgets zeigen an, wann die letzte Momentaufnahme der Daten erstellt wurde. Datum und Uhrzeit der Momentaufnahme werden in UTC angegeben. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
+Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Dropdown-Menü &quot;Zusammenführungsrichtlinie&quot;. Alle Widget-Daten sind ab diesem Datum und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird in UTC bereitgestellt. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
+
+![Die Registerkarte Übersicht des Profil-Dashboards mit dem neuesten Snapshot-Zeitstempel wird hervorgehoben.](../images/profiles/snapshot-timestamp.png)
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -105,13 +107,13 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
 * [[!UICONTROL Einzelne Identitätsprofile]](#single-identity-profiles)
+* [[!UICONTROL Einzelne Identitätsprofile nach Identität]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Nicht segmentierte Profile]](#unsegmented-profiles)
 * [[!UICONTROL Trend zu nicht segmentierten Profilen]](#unsegmented-profiles-trend)
 * [[!UICONTROL Nicht segmentierte Profile nach Identität]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Zielgruppen]](#audiences)
 * [[!UICONTROL Zielgruppen, die einem Zielstatus zugeordnet sind]](#audiences-mapped-to-destination-status)
 * [[!UICONTROL Zielgruppengröße]](#audiences-size)
-* [[!UICONTROL Einzelne Identitätsprofile nach Identität]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie]](#audience-overlap-by-merge-policy)
 
 ### [!UICONTROL Anzahl der Profile] {#profile-count}
@@ -238,6 +240,14 @@ Die [!UICONTROL Einzelne Identitätsprofile] -Widget stellt die Anzahl der Profi
 
 ![Widget Single Identity Profiles .](../images/profiles/single-identity-profiles.png)
 
+### [!UICONTROL Einzelne Identitätsprofile nach Identität] {#single-identity-profiles-by-identity}
+
+Dieses Widget verwendet ein Balkendiagramm, um die Gesamtanzahl der Profile zu veranschaulichen, die mit nur einer eindeutigen Kennung gekennzeichnet sind. Das Widget unterstützt bis zu fünf der am häufigsten vorkommenden Identitäten.
+
+Bewegen Sie den Mauszeiger über einzelne Balken, um ein Dialogfeld mit der Gesamtanzahl der Profile für eine Identität anzuzeigen.
+
+![Die einzelnen Identitätsprofile nach Identitäts-Widget.](../images/profiles/single-identity-profiles-by-identity.png)
+
 ### [!UICONTROL Nicht segmentierte Profile] {#unsegmented-profiles}
 
 >[!CONTEXTUALHELP]
@@ -319,14 +329,6 @@ Um umfassende Informationen zu einem Segment anzuzeigen, wählen Sie einen Segme
 ![Das Widget Größe von Zielgruppen mit einem Segmentnamen und Anzeige des gesamten markierten Segmenttexts.](../images/profiles/audiences-size-view-all-segments.png)
 
 Weitere Informationen zu finden Sie in der Dokumentation . [[!UICONTROL Segmente] [!UICONTROL  Durchsuchen] tab](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#browse).
-
-### [!UICONTROL Einzelne Identitätsprofile nach Identität] {#single-identity-profiles-by-identity}
-
-Dieses Widget verwendet ein Balkendiagramm, um die Gesamtanzahl der Profile zu veranschaulichen, die mit nur einer eindeutigen Kennung gekennzeichnet sind. Das Widget unterstützt bis zu fünf der am häufigsten vorkommenden Identitäten.
-
-Bewegen Sie den Mauszeiger über einzelne Balken, um ein Dialogfeld mit der Gesamtanzahl der Profile für eine Identität anzuzeigen.
-
-![Die einzelnen Identitätsprofile nach Identitäts-Widget.](../images/profiles/single-identity-profiles-by-identity.png)
 
 ### [!UICONTROL Zielgruppenüberschneidung nach Zusammenführungsrichtlinie] {#audience-overlap-by-merge-policy}
 

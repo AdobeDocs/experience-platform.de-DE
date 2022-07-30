@@ -4,9 +4,9 @@ title: Dashboard "Ziele"
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den aktiven Zielen Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '2726'
+source-wordcount: '2791'
 ht-degree: 3%
 
 ---
@@ -29,11 +29,13 @@ Die [!UICONTROL Ziele] Dashboard zeigt eine Momentaufnahme der Ziele an, die Ihr
 
 Um in der Platform-Benutzeroberfläche zum Ziel-Dashboard zu navigieren, wählen Sie **[!UICONTROL Ziele]** Wählen Sie in der linken Leiste die **[!UICONTROL Übersicht]** zum Anzeigen des Dashboards.
 
+Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Ziel-Dropdown-Menü. Alle Widget-Daten sind ab diesem Datum und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird in UTC bereitgestellt. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
+
 >[!NOTE]
 >
 >Wenn Ihr Unternehmen neu bei Experience Platform ist und noch keine aktiven Ziele hat, wird die [!UICONTROL Ziele] Dashboard und [!UICONTROL Übersicht] nicht sichtbar sind. Wählen Sie stattdessen [!UICONTROL Ziele] über die linke Navigation zeigt die [!UICONTROL Katalog] Registerkarte. Weitere Informationen zum [!UICONTROL Katalog] Registerkarte, siehe [[!UICONTROL Ziele] Arbeitsbereichshandbuch](../../destinations/ui/destinations-workspace.md).
 
-![](../images/destinations/dashboard-overview.png)
+![Die Übersicht über die Ziele der Platform-Benutzeroberfläche mit dem neuesten Schnappschuss wurde hervorgehoben.](../images/destinations/snapshot-timestamp.png)
 
 ### Ändern des Ziel-Dashboards
 

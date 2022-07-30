@@ -4,9 +4,9 @@ title: Segmente-Dashboard
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 4bb0078b6687da5239f57e7285507815aa7f3255
+source-git-commit: e1d44c453385b8beaa49e9793eb4858876d865b0
 workflow-type: tm+mt
-source-wordcount: '1575'
+source-wordcount: '1597'
 ht-degree: 11%
 
 ---
@@ -57,9 +57,9 @@ Um ein anderes Segment auszuwählen, wählen Sie das Dropdown-Menü neben dem Se
 
 Das Segmente-Dashboard besteht aus Widgets, die schreibgeschützte Metriken sind und wichtige Informationen zu Ihrem ausgewählten Segment enthalten.
 
-Das Datum und die Uhrzeit der letzten Aktualisierung eines Widgets zeigen an, wann die letzte Momentaufnahme der Daten erstellt wurde. Datum und Uhrzeit der Momentaufnahme werden in UTC angegeben. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
+Datum und Uhrzeit der letzten Momentaufnahme werden oben im [!UICONTROL Übersicht] neben dem Dropdown-Menü &quot;Segment&quot;ein. Alle Widget-Daten sind ab diesem Datum und dieser Uhrzeit korrekt. Der Zeitstempel der Momentaufnahme wird in UTC bereitgestellt. Es befindet sich nicht in der Zeitzone des einzelnen Benutzers oder der Organisation.
 
-![](../images/segments/widget-timestamp.png)
+![Die Registerkarte Segmentübersicht mit einem Widget-Zeitstempel hervorgehoben.](../images/segments/widget-timestamp.png)
 
 ## Standard-Widgets {#standard-widgets}
 
@@ -68,13 +68,13 @@ Adobe bietet mehrere Standard-Widgets, mit denen Sie verschiedene Metriken im Zu
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
 * [[!UICONTROL Zielgruppengröße]](#audience-size)
-* [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
-* [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 * [[!UICONTROL Zielgruppenaktivierungs-Reihenfolge]](#audience-activation-order)
 * [[!UICONTROL Trend der Zielgruppengröße]](#audience-size-trend)
 * [[!UICONTROL Trend bei der Änderung der Zielgruppengröße]](#audience-size-change-trend)
 * [[!UICONTROL Trend der Zielgruppengröße nach Identität]](#audience-size-trend-by-identity)
 * [[!UICONTROL Zielgruppenüberschneidung]](#audience-overlap)
+* [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
+* [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
 
 ### [!UICONTROL Zielgruppengröße] {#audience-size}
 
@@ -89,6 +89,61 @@ Die **[!UICONTROL Zielgruppengröße]** Widget zeigt die Gesamtzahl der zusammen
 Weitere Informationen zu Fragmenten und zusammengeführten Profilen erhalten Sie im Abschnitt [Übersicht über das Echtzeit-Kundenprofil](../../profile/home.md).
 
 ![](../images/segments/audience-size.png)
+
+### [!UICONTROL Trend der Zielgruppengröße] {#audience-size-trend}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_segments_audiencesizetrend"
+>title="Trend der Zielgruppengröße"
+>abstract="Dieses Widget enthält Informationen zur Gesamtanzahl der Profile, die den Kriterien von **any** Segmentdefinition, die während der täglichen Momentaufnahme für die letzten 30 Tage, 90 Tage oder 12 Monate erfasst wurde."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Weitere Informationen finden Sie in der Dokumentation ."
+
+Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die den Kriterien von **any** Segmentdefinition über einen bestimmten Zeitraum. Der Trend zur Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
+
+Dieses Widget enthält auch die automatische [!UICONTROL Untertitel] Funktion, bei der ein maschinelles Lernmodell die Diagramm- und Segmentdaten analysiert und automatisch Beschriftungen generiert, um die wichtigsten Trends und Ereignisse zu beschreiben. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
+
+![In der Segmentübersicht wird das Trend-Widget zur Zielgruppengröße angezeigt.](../images/segments/audience-size-trend-captions.png)
+
+Das Dialogfeld für automatische Beschriftungen wird geöffnet und bietet Einblicke in Ihre Daten.
+
+![Das Dialogfeld für automatische Beschriftungen für das Trend-Widget zur Zielgruppengröße.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
+
+Weiterführende Informationen zur Segmentauswertung und zur Qualifizierung und Ausstieg von Profilen finden Sie im Abschnitt [Dokumentation zum Segmentierungsdienst](../../segmentation/home.md).
+
+### [!UICONTROL Trend bei der Änderung der Zielgruppengröße] {#audience-size-change-trend}
+
+Dieses Widget bietet ein Liniendiagramm, das die Differenz der Gesamtzahl der Profile anzeigt, die sich im Zeitraum zwischen den jüngsten täglichen Snapshots für ein bestimmtes Segment qualifiziert haben. Das für die Analyse ausgewählte Segment wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
+
+![Das Widget zur Zielgruppengröße ändert den Trend.](../images/segments/audience-size-change-trend.png)
+
+### [!UICONTROL Trend der Zielgruppengröße nach Identität] {#audience-size-trend-by-identity}
+
+Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf dem Identitätstyp, der im Widget-Dropdown-Menü ausgewählt wurde. Das für die Analyse verwendete Segment wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
+
+![Der Trend zur Zielgruppengröße nach Identitäts-Widget.](../images/segments/audience-size-trend-by-identity.png)
+
+### [!UICONTROL Zielgruppenaktivierungs-Reihenfolge] {#audience-activation-order}
+
+Die [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] Widget bietet eine Tabelle mit drei Spalten, in der die [!UICONTROL Zielname], die [!UICONTROL platform]und der Aktivierung [!UICONTROL date] der Audience. Die Liste ist von oben nach unten geordnet, entsprechend der Neuigkeit, und kann bis zu 10 Zeilen aufnehmen.
+
+![Das Widget zur Zielgruppenaktivierungsreihenfolge .](../images/segments/audience-activation-order.png)
+
+### [!UICONTROL Zielgruppenüberschneidung] {#audience-overlap}
+
+Dieses Widget stellt die Anzahl der Profile aus zwei Segmenten dar, die die Kriterien für beide Segmentdefinitionen erfüllen. Die zum Vergleich verwendeten Segmente werden aus den Widget-Dropdown-Menüs ausgewählt. Die Gesamtzahl der in der relevanten Segmentdefinition enthaltenen Profile kann durch Bewegen des Mauszeigers über einen Kreis oder die Schnittmenge des Venn-Diagramms angezeigt werden.
+
+Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie die Ähnlichkeiten in den Ergebnissen Ihrer Segmentdefinitionen visualisieren.
+
+![Das Widget Zielgruppenüberschneidung .](../images/segments/audience-overlap.png)
+
+<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
+<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
+
+<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
+
+<!-- ![The Audience overlap report widget.]() -->
+
+<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ### [!UICONTROL Identitätsüberschneidung] {#identity-overlap}
 
@@ -125,61 +180,6 @@ Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen
 Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsseldimensionen der Daten analysiert.
 
 Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
-
-### [!UICONTROL Zielgruppenaktivierungs-Reihenfolge] {#audience-activation-order}
-
-Die [!UICONTROL Aktivierungsreihenfolge für Zielgruppen] Widget bietet eine Tabelle mit drei Spalten, in der die [!UICONTROL Zielname], die [!UICONTROL platform]und der Aktivierung [!UICONTROL date] der Audience. Die Liste ist von oben nach unten geordnet, entsprechend der Neuigkeit, und kann bis zu 10 Zeilen aufnehmen.
-
-![Das Widget zur Zielgruppenaktivierungsreihenfolge .](../images/segments/audience-activation-order.png)
-
-### [!UICONTROL Trend der Zielgruppengröße] {#audience-size-trend}
-
->[!CONTEXTUALHELP]
->id="platform_dashboards_segments_audiencesizetrend"
->title="Trend der Zielgruppengröße"
->abstract="Dieses Widget enthält Informationen zur Gesamtanzahl der Profile, die den Kriterien von **any** Segmentdefinition, die während der täglichen Momentaufnahme für die letzten 30 Tage, 90 Tage oder 12 Monate erfasst wurde."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/segments.html#audience-size-trend" text="Weitere Informationen finden Sie in der Dokumentation ."
-
-Die **[!UICONTROL Zielgruppengrößentrend]** Widget bietet eine Kantengraph-Illustration für die Gesamtzahl der Profile, die den Kriterien von **any** Segmentdefinition über einen bestimmten Zeitraum. Der Trend zur Zielgruppengröße kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
-
-Dieses Widget enthält auch die automatische [!UICONTROL Untertitel] Funktion, bei der ein maschinelles Lernmodell die Diagramm- und Segmentdaten analysiert und automatisch Beschriftungen generiert, um die wichtigsten Trends und Ereignisse zu beschreiben. Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen Beschriftungen zu öffnen.
-
-![In der Segmentübersicht wird das Trend-Widget zur Zielgruppengröße angezeigt.](../images/segments/audience-size-trend-captions.png)
-
-Das Dialogfeld für automatische Beschriftungen wird geöffnet und bietet Einblicke in Ihre Daten.
-
-![Das Dialogfeld für automatische Beschriftungen für das Trend-Widget zur Zielgruppengröße.](../images/segments/audience-size-trend-automatic-captions-dialog.png)
-
-Weiterführende Informationen zur Segmentauswertung und zur Qualifizierung und Ausstieg von Profilen finden Sie im Abschnitt [Dokumentation zum Segmentierungsdienst](../../segmentation/home.md).
-
-### [!UICONTROL Trend bei der Änderung der Zielgruppengröße] {#audience-size-change-trend}
-
-Dieses Widget bietet ein Liniendiagramm, das die Differenz der Gesamtzahl der Profile anzeigt, die sich im Zeitraum zwischen den jüngsten täglichen Snapshots für ein bestimmtes Segment qualifiziert haben. Das für die Analyse ausgewählte Segment wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Zielgruppengröße wird auf der Y-Achse und der Zeit auf der X-Achse dargestellt.
-
-![Das Widget zur Zielgruppengröße ändert den Trend.](../images/segments/audience-size-change-trend.png)
-
-### [!UICONTROL Trend der Zielgruppengröße nach Identität] {#audience-size-trend-by-identity}
-
-Dieses Widget veranschaulicht den Trend zur Zielgruppengröße für ein bestimmtes Segment basierend auf dem Identitätstyp, der im Widget-Dropdown-Menü ausgewählt wurde. Das für die Analyse verwendete Segment wird aus der Dropdown-Liste Übersicht ausgewählt. Der Trend kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt.
-
-![Der Trend zur Zielgruppengröße nach Identitäts-Widget.](../images/segments/audience-size-trend-by-identity.png)
-
-### [!UICONTROL Zielgruppenüberschneidung] {#audience-overlap}
-
-Dieses Widget stellt die Anzahl der Profile aus zwei Segmenten dar, die die Kriterien für beide Segmentdefinitionen erfüllen. Die zum Vergleich verwendeten Segmente werden aus den Widget-Dropdown-Menüs ausgewählt. Die Gesamtzahl der in der relevanten Segmentdefinition enthaltenen Profile kann durch Bewegen des Mauszeigers über einen Kreis oder die Schnittmenge des Venn-Diagramms angezeigt werden.
-
-Mit diesem Widget können Sie Ihre Segmentierungsstrategie optimieren, indem Sie die Ähnlichkeiten in den Ergebnissen Ihrer Segmentdefinitionen visualisieren.
-
-![Das Widget Zielgruppenüberschneidung .](../images/segments/audience-overlap.png)
-
-<!-- * [[!UICONTROL Audience overlap report]](#audience-overlap-report) -->
-<!-- ### [!UICONTROL Audience overlap report] {#audience-overlap-report} -->
-
-<!-- View an ordered list of audiences by Highest or Lowest overlap percentages. -->
-
-<!-- ![The Audience overlap report widget.]() -->
-
-<!-- https://jira.corp.adobe.com/browse/PLAT-125511 -->
 
 ## Nächste Schritte
 
