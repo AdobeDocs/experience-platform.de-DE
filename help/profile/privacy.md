@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Echtzeit-Kundenprofil
 type: Documentation
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, die entsprechend diversen Datenschutzbestimmungen auf ihre personenbezogenen Daten zugreifen, deren Verkauf widersprechen oder sie löschen möchten. In diesem Dokument werden wesentliche Konzepte zur Verarbeitung von Datenschutzanfragen für Echtzeit-Kundenprofil behandelt.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 1686ff1684080160057462e9aa40819a60bf6b75
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1281'
-ht-degree: 40%
+source-wordcount: '1312'
+ht-degree: 39%
 
 ---
 
@@ -46,9 +46,7 @@ In den folgenden Abschnitten wird beschrieben, wie Sie Datenschutzanfragen für 
 
 >[!IMPORTANT]
 >
->Privacy Service kann nur verarbeitet werden [!DNL Profile] Daten mit einer Zusammenführungsrichtlinie verwenden, die keine Identitätszuordnung durchführt. Wenn Sie die Benutzeroberfläche verwenden, um zu überprüfen, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit &quot;[!DNL None]&quot; [!UICONTROL ID-Zuordnung] Typ. Mit anderen Worten, Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Zuordnung] auf &quot;[!UICONTROL Privates Diagramm]&quot;.
->
->![Die ID-Zuordnung der Zusammenführungsrichtlinie ist auf &quot;Ohne&quot;festgelegt](./images/privacy/no-id-stitch.png)
+>Privacy Service kann nur verarbeitet werden [!DNL Profile] Daten mit einer Zusammenführungsrichtlinie verwenden, die keine Identitätszuordnung durchführt. Siehe Abschnitt zu [Einschränkungen bei Zusammenführungsrichtlinien](#merge-policy-limitations) für weitere Informationen.
 >
 >Beachten Sie außerdem, dass die Dauer, die eine Datenschutzanfrage dauern kann, nicht garantiert werden kann. Wenn Änderungen in Ihrer [!DNL Profile] -Daten, während eine Anforderung noch verarbeitet wird, unabhängig davon, ob diese Datensätze auch verarbeitet werden, nicht garantiert werden können.
 
@@ -60,7 +58,11 @@ Beim Erstellen von Vorgangsanfragen in der API müssen alle IDs innerhalb von `u
 >
 >Je nach Identitätsdiagramm und der Verteilung Ihrer Profilfragmente in Platform-Datensätzen müssen Sie möglicherweise mehr als eine ID für jeden Kunden angeben. Siehe nächsten Abschnitt [Profilfragmente](#fragments) für weitere Informationen.
 
-Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Wenn Sie Anforderungen an [!DNL Data Lake], muss das Array den Wert &quot;ProfileService&quot;enthalten.
+Darüber hinaus muss das `include`-Array der Anfrage-Payload die Produktwerte für die verschiedenen Datenspeicher enthalten, an die die Anfrage gesendet wird. Um die mit einer Identität verknüpften Profildaten zu löschen, muss das Array den Wert enthalten `ProfileService`. Um die Identitätsdiagrammzuordnungen des Kunden zu löschen, muss das Array den Wert enthalten `identity`.
+
+>[!NOTE]
+>
+>Siehe Abschnitt zu [Profilanfragen und Identitätsanfragen](#profile-v-identity) Weitere Informationen zu den Auswirkungen der Verwendung von `ProfileService` und `identity` innerhalb der `include` Array.
 
 Mit der folgenden Anfrage wird ein neuer Datenschutzauftrag für die Daten eines einzelnen Kunden in der [!DNL Profile] speichern. Zwei Identitätswerte werden für den Kunden im `userIDs` Array; Standard `Email` Identitäts-Namespace und der andere mit einem benutzerdefinierten `Customer_ID` Namespace. Er enthält auch den Produktwert für [!DNL Profile] (`ProfileService`) im `include` array:
 
@@ -96,7 +98,7 @@ curl -X POST \
         ]
       }
     ],
-    "include": ["ProfileService"],
+    "include": ["ProfileService","identity"],
     "expandIds": false,
     "priority": "normal",
     "regulation": "ccpa"
@@ -129,22 +131,25 @@ Einer der Datensätze verwendet `customer_id` als primäre Kennung, während die
 
 Um sicherzustellen, dass Ihre Datenschutzanfragen alle relevanten Kundenattribute verarbeiten, müssen Sie die primären Identitätswerte für alle relevanten Datensätze angeben, in denen diese Attribute gespeichert werden können (maximal neun IDs pro Kunde). Siehe Abschnitt zu Identitätsfeldern in der [Grundlagen der Schemakomposition](../xdm/schema/composition.md#identity) für weitere Informationen zu Feldern, die häufig als Identitäten markiert sind.
 
-## Verarbeitung von Löschanfragen
+## Verarbeitung von Löschanfragen {#delete}
 
 Wenn [!DNL Experience Platform] von [!DNL Privacy Service] eine DELETE-Anfrage erhält, sendet [!DNL Platform] eine Bestätigung an [!DNL Privacy Service], dass die Anfrage empfangen wurde und die betroffenen Daten zum Löschen markiert wurden. Die Datensätze werden dann aus dem [!DNL Data Lake] oder [!DNL Profile] speichern, sobald der Datenschutzauftrag abgeschlossen ist. Während der Löschauftrag noch verarbeitet wird, werden die Daten weich gelöscht und stehen daher keinem der Benutzer zur Verfügung [!DNL Platform] Dienst. Siehe Abschnitt [[!DNL Privacy Service] Dokumentation](../privacy-service/home.md#monitor) für weitere Informationen zum Verfolgen des Auftragsstatus.
 
->[!IMPORTANT]
->
->Wenn eine Löschanfrage für das Profil erfolgt (`ProfileService`), aber nicht Identity Service (`identity`), entfernt der resultierende Auftrag die erfassten Attributdaten für einen Kunden (oder eine Gruppe von Kunden), entfernt jedoch nicht die im Identitätsdiagramm eingerichteten Verknüpfungen.
->
->Beispielsweise eine Löschanfrage, bei der die `email_id` und `customer_id` entfernt alle unter diesen IDs gespeicherten Attributdaten. Alle Daten, die anschließend unter dem gleichen `customer_id` weiterhin mit dem entsprechenden `email_id`, da die Verbindung noch existiert.
->
->Darüber hinaus kann Privacy Service nur verarbeitet werden [!DNL Profile] Daten mit einer Zusammenführungsrichtlinie verwenden, die keine Identitätszuordnung durchführt. Wenn Sie die Benutzeroberfläche verwenden, um zu überprüfen, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit &quot;[!DNL None]&quot; [!UICONTROL ID-Zuordnung] Typ. Mit anderen Worten, Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Zuordnung] auf &quot;[!UICONTROL Privates Diagramm]&quot;.
->
->![Die ID-Zuordnung der Zusammenführungsrichtlinie ist auf &quot;Ohne&quot;festgelegt](./images/privacy/no-id-stitch.png)
-
 In zukünftigen Versionen wird [!DNL Platform] eine Bestätigung an [!DNL Privacy Service] senden, nachdem Daten physisch gelöscht wurden.
 
+### Profilanfragen versus Identitätsanfragen {#profile-v-identity}
+
+Wenn eine Löschanfrage für das Profil erfolgt (`ProfileService`), aber nicht Identity Service (`identity`), entfernt der resultierende Auftrag die erfassten Attributdaten für einen Kunden (oder eine Gruppe von Kunden), entfernt jedoch nicht die im Identitätsdiagramm eingerichteten Verknüpfungen.
+
+Beispielsweise eine Löschanfrage, bei der die `email_id` und `customer_id` entfernt alle unter diesen IDs gespeicherten Attributdaten. Alle Daten, die anschließend unter dem gleichen `customer_id` weiterhin mit dem entsprechenden `email_id`, da die Verbindung noch existiert.
+
+Um das Profil und alle Identitätszuordnungen für einen bestimmten Kunden zu entfernen, stellen Sie sicher, dass Sie sowohl Profil als auch Identity Service als Zielprodukte in Ihre Löschanfragen aufnehmen.
+
+### Einschränkungen von Zusammenführungsrichtlinien {#merge-policy-limitations}
+
+Privacy Service kann nur verarbeitet werden [!DNL Profile] Daten mit einer Zusammenführungsrichtlinie verwenden, die keine Identitätszuordnung durchführt. Wenn Sie über die Benutzeroberfläche überprüfen, ob Ihre Datenschutzanfragen verarbeitet werden, stellen Sie sicher, dass Sie eine Richtlinie mit **[!DNL None]** als [!UICONTROL ID-Zuordnung] Typ. Mit anderen Worten, Sie können keine Zusammenführungsrichtlinie verwenden, bei der [!UICONTROL ID-Zuordnung] auf [!UICONTROL Privates Diagramm].
+>![Die ID-Zuordnung der Zusammenführungsrichtlinie ist auf &quot;Ohne&quot;festgelegt](./images/privacy/no-id-stitch.png)
+>
 ## Nächste Schritte
 
 In diesem Dokument haben Sie eine Einleitung zu den wichtigsten Konzepten bei der Verarbeitung von Datenschutzanfragen in [!DNL Experience Platform] erhalten. Wir empfehlen Ihnen, die Dokumentation in diesem Handbuch weiterzulesen, um Ihr Verständnis hinsichtlich der Verwaltung von Identitätsdaten und Erstellung von Datenschutzaufträgen zu vertiefen.

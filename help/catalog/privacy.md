@@ -5,10 +5,10 @@ title: Verarbeitung von Datenschutzanfragen im Data Lake
 topic-legacy: overview
 description: Adobe Experience Platform Privacy Service bearbeitet Anfragen von Kunden, auf ihre personenbezogenen Daten zuzugreifen, sich gegen deren Verkauf zu wenden oder sie zu löschen, wie in den gesetzlichen und organisatorischen Datenschutzbestimmungen festgelegt. In diesem Dokument werden wesentliche Konzepte bei der Verarbeitung von Datenschutzanfragen für im Data Lake gespeicherte Kundendaten behandelt.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: a713245f3228ed36f262fa3c2933d046ec8ee036
 workflow-type: tm+mt
-source-wordcount: '1380'
-ht-degree: 100%
+source-wordcount: '1388'
+ht-degree: 97%
 
 ---
 
@@ -148,9 +148,9 @@ Im folgenden Abschnitt wird beschrieben, wie Sie Datenschutzanfragen für [!DNL 
 
 ### Verwenden der Benutzeroberfläche
 
-Wählen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche **[!UICONTROL AEP Data Lake]** und/oder **[!UICONTROL Profil]** unter **[!UICONTROL Produkte]** aus, um Aufträge für Daten, die in [!DNL Data Lake] bzw. [!DNL Real-time Customer Profile] gespeichert sind, zu verarbeiten.
+Stellen Sie beim Erstellen von Auftragsanfragen in der Benutzeroberfläche sicher, dass Sie **[!UICONTROL AEP Data Lake]** under **[!UICONTROL Produkte]** zum Verarbeiten von Aufträgen für Daten, die in der [!DNL Data Lake].
 
-<img src="images/privacy/product-value.png" width="450"><br>
+![Bild, das das im Dialogfeld zur Erstellung von Datenschutzanfragen ausgewählte Data Lake-Produkt anzeigt](./images/privacy/product-value.png)
 
 ### Verwenden der API
 
