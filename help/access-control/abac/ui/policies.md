@@ -3,10 +3,10 @@ keywords: Experience Platform; Startseite; beliebte Themen; Zugriffskontrolle; a
 title: Attributbasierte Zugriffssteuerung Erstellen einer Richtlinie
 description: Dieses Dokument enthält Informationen zum Verwalten von Richtlinien über die Benutzeroberfläche "Berechtigungen"in Adobe Experience Cloud
 exl-id: 66820711-2db0-4621-908d-01187771de14
-source-git-commit: c31855bff9d87133252c43e2f2f2fe1960c7b144
+source-git-commit: 97b4b98a2f14e36e8e8c71bd2ab9631782bc333f
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Die attribut-basierte Zugriffskontrolle ist derzeit in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Real-time Customer Data Platform-Kunden nach der vollständigen Veröffentlichung zur Verfügung.
+>Die attributbasierte Zugriffssteuerung ist derzeit nur in einer eingeschränkten Version für US-Kunden im Gesundheitswesen verfügbar. Diese Funktion steht allen Kunden von Real-time Customer Data Platform nach der vollständigen Veröffentlichung zur Verfügung.
 
 Richtlinien sind Aussagen, die Attribute zusammenbringen, um zulässige und unzulässige Handlungen festzustellen. Richtlinien können lokal oder global sein und andere Richtlinien überschreiben.
 
@@ -42,7 +42,7 @@ Wählen Sie das Pluszeichen aus, um **Ausdruck für Übereinstimmungen hinzufüg
 
 Wählen Sie mithilfe des Dropdown-Menüs die **Ressource**.
 
-![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown.png)
+![flac-policy-resource-dropdown](../../images/flac-ui/flac-policy-resource-dropdown-1.png)
 
 Wählen Sie anschließend mithilfe der Dropdown-Liste die **Stimmt überein mit**.
 
