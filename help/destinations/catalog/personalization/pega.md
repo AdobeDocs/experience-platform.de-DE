@@ -1,13 +1,13 @@
 ---
 title: Pega Customer Decision Hub-Verbindung
 description: Verwenden Sie das Pega Customer Decisioning Hub-Ziel in Adobe Experience Platform, um Profilattribute und Segmentmitgliedsdaten an Pega Customer Decisioning Hub zu senden, um die Entscheidungsfindung für nächstbeste Maßnahmen zu treffen.
-source-git-commit: 475b3b6dceefe968ffb451193cee4d7ed6387c86
+exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
+source-git-commit: f06afec31b7fa550a612280b8ad665b8393ee2e3
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 7%
 
 ---
-
 
 # Pega Customer Decision Hub-Verbindung
 
@@ -39,7 +39,7 @@ Bevor Sie mit diesem Ziel Daten aus Adobe Experience Platform exportieren könne
 
 * Konfigurieren Sie die Adobe-Segmentzugehörigkeitskomponente in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
 * Konfigurieren von OAuth 2.0 [Client-Registrierung mithilfe von Client-Anmeldeinformationen](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) Grant-Typ in Ihrer [!DNL Pega Customer Decision Hub] -Instanz.
-* Konfigurieren [Datenfluss bei Echtzeit-Ausführung](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flow)  für den Datenfluss der Segmentzugehörigkeit in Ihrer Adobe [!DNL Pega Customer Decision Hub] -Instanz.
+* Konfigurieren [Datenfluss bei Echtzeit-Ausführung](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) für den Datenfluss der Segmentzugehörigkeit in Ihrer Adobe [!DNL Pega Customer Decision Hub] -Instanz.
 
 ## Unterstützte Identitäten {#supported-identities}
 
