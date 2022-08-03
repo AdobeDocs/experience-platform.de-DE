@@ -2,9 +2,9 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7cb940019905240b36e96b834b9e5d0166c1324d
+source-git-commit: 72ca4f0c22d5e37ffa079940ed20e219445a0bf1
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2347'
 ht-degree: 31%
 
 ---
@@ -15,15 +15,18 @@ ht-degree: 31%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
-- [Dashboards](#dashboards)
-- [Datenerfassung](#collection)
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [Experience-Datenmodell (XDM)](#xdm)
-
-<!-- - [Real-time Customer Data Platform B2B Edition](#b2b) -->
-- [Echtzeit-Kundenprofil](#profile)
-- [Quellen](#sources)
+- [Adobe Experience Platform – Versionshinweise](#adobe-experience-platform-release-notes)
+   - [Dashboards {#dashboards}](#dashboards-dashboards)
+      - [Dashboards für Kontoprofile](#account-profiles-dashboards)
+      - [Profil-Dashboards](#profile-dashboards)
+      - [Ziele-Dashboards](#destinations-dashboards)
+   - [Datenerfassung {#collection}](#data-collection-collection)
+   - [[!DNL Data Prep] {#data-prep}](#dnl-data-prep-data-prep)
+   - [[!DNL Destinations] {#destinations}](#dnl-destinations-destinations)
+   - [Experience-Datenmodell (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Real-time Customer Data Platform B2B Edition {#b2b}](#real-time-customer-data-platform-b2b-edition-b2b)
+   - [Echtzeit-Kundenprofil {#profile}](#real-time-customer-profile-profile)
+   - [Quellen {#sources}](#sources-sources)
 
 ## Dashboards {#dashboards}
 
@@ -170,16 +173,23 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 Weitere Informationen zu XDM in Platform finden Sie in der [Übersicht zum XDM-System](../../xdm/home.md).
 
-<!-- ## Real-time Customer Data Platform B2B Edition {#b2b}
+## Real-time Customer Data Platform B2B Edition {#b2b}
 
-Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+Real-time Customer Data Platform B2B Edition basiert auf Real-time Customer Data Platform (Real-time CDP) und wurde speziell für Marketing-Experten entwickelt, die in einem Business-to-Business-Service-Modell arbeiten. Es führt Daten aus verschiedenen Quellen zusammen und kombiniert sie zu einer einzigen Ansicht von Personen und Account-Profilen. Diese vereinheitlichten Daten ermöglichen es Marketing-Experten, bestimmte Zielgruppen präzise anzusprechen und über alle verfügbaren Kanäle anzusprechen.
 
-| Feature | Description |
-| Lead to account matching | Lead to account matching allows you to use Real-time CDP B2B edition to match known person profiles to account profiles so that these profiles can be segmented and targeted with B2B context data like account, opportunity (and add something else like don't use etc. to the description). For more information, see the document on [lead to account matching](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md). For a guide on how to monitor profile enrichment, see the document on [monitoring profile enrichment in the UI](../../dataflows/ui/b2b/monitor-profile-enrichment.md). For instructions on how to use related accounts in segment definitions, see the guide on [Segmentation use cases for Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts)."|
+**Neue Funktionen**
 
-{style="table-layout:auto"}
+| Funktion | Beschreibung |
+| --- | --- |
+| Interessenten-Konto-Abgleich | Die Zuordnung von Lead-zu-Konto ermöglicht es Ihnen, bekannte Personenprofile zur Kontoerstellung hinzuzufügen. Anschließend können Sie Daten in B2B-Kontexten wie Konten oder Gelegenheiten segmentieren und ansprechen. Die täglich ausgeführten Aufträge verwenden sowohl deterministische als auch probabilistische Faktoren, um Personenprofile, die noch keinem Konto zugeordnet sind, einem am besten übereinstimmenden Konto zuzuordnen. Sie können dann entscheiden, ob solche Übereinstimmungen in Ihre Segmentdefinitionen aufgenommen werden sollen |
 
-To learn more about Real-time CDP B2B Edition, see the [Real-time CDP B2B overview](../../rtcdp/overview.md). -->
+Weitere Informationen finden Sie im Dokument unter [zu einer Kontoübereinstimmung führen](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+
+Eine Anleitung zum Überwachen der Profilanreicherung finden Sie im Dokument unter [Überwachung der Profilanreicherung in der Benutzeroberfläche](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
+
+Anweisungen zur Verwendung verwandter Konten in Segmentdefinitionen finden Sie im Handbuch unter [Anwendungsfälle für die Segmentierung für Real-time Customer Data Platform B2B Edition](../../rtcdp/segmentation/b2b.md#related-accounts).
+
+Weitere Informationen zur Echtzeit-Kundendatenplattform B2B Edition finden Sie in der [Übersicht über die B2B-Echtzeit-Kundendatenplattform](../../rtcdp/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
