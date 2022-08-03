@@ -6,8 +6,8 @@ user-guide-description: Verwenden Sie SQL-Standarddaten zur Abfrage in Platform 
 feature: Queries
 source-git-commit: 1fe657ac698dd4fcce84902d85b582a9ed7fd4ac
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 71%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

@@ -4,7 +4,7 @@ description: Verbinden Sie Ihre Client-seitige Experience Platform SDK-Integrati
 keywords: Konfiguration;Datenströme;datastreamId;edge;datastream id;Umgebungseinstellungen;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Ereignis-Datensatz;Target;Client-Code;Eigenschafts-Token;Target-Umgebungs-ID;Cookie-Ziele;URL-Ziele;Analytics Settings Blockreport suite id;Datenvorbereitung für Datenerfassung;Data Prep;Mapper;XDM Mapper;Mapper in Edge;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 100%
 

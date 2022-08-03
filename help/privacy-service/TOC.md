@@ -6,8 +6,8 @@ user-guide-description: Verwalten Sie Kundendatenanfragen, um die gesetzlichen D
 feature: Privacy
 source-git-commit: e74d0658d5c389a22497301d289e0310d28731f0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '83'
+ht-degree: 100%
 
 ---
 
