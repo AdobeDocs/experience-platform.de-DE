@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Überwachen von Profilanreicherungsaufträgen
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 6811e3032abe569b1f00d757553eb6862e4e3354
+source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '634'
+ht-degree: 4%
 
 ---
 
-# Überwachen von Profilanreicherungsaufträgen in der Benutzeroberfläche (#monitor-profile-anreicherung)
+# Überwachen von Profilanreicherungsaufträgen in der Benutzeroberfläche {#monitor-profile-enrichment}
 
 Verwenden Sie die [!UICONTROL Profilanreicherung] Dashboard, um zu verstehen, ob die Profilanreicherungsaufträge erfolgreich ausgeführt und abgeschlossen wurden, und um die grundlegenden Metriken zur Messung der Effektivität der Anreicherungen anzuzeigen.
 
@@ -38,7 +38,7 @@ Die folgenden Metriken stehen für verwandte Profilanreicherungsaufträge zur Ve
 | **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des zugehörigen Kontoauftrags an. |
 | **[!UICONTROL Nachricht]** | Gibt eine Fehler- oder Warnmeldung für eine bestimmte Auftragsausführung an. |
 
-## Lead-to-Account-Abgleich-Profilanreicherung (#lead-to-account-match)
+## Möglichkeit zur Profilanreicherung {#lead-to-account-matching}
 
 Die [!UICONTROL Interessenten-Konto-Abgleich] Dashboard zeigt die grundlegenden Metriken und den täglichen Auftragslaufstatus an, die für die [Interessenten-Konto-Abgleich](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md) Profilanreicherung.
 
