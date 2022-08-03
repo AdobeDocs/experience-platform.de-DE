@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Profilanreicherungsaufträgen
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 47a6cc9b77a0591d488d5ebc3929b465e1a6e6d2
+source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '633'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Verwenden Sie die [!UICONTROL Profilanreicherung] Dashboard, um zu verstehen, ob
 
 Im [Platform-Benutzeroberfläche](https://platform.adobe.com)auswählen **[!UICONTROL Überwachung]** über die linke Navigationsleiste auf [!UICONTROL Überwachung] Dashboard. Wählen Sie in der Ansichtsauswahl **B2B-Fluss** um die Dashboard-Elemente anzuzeigen, die spezifisch für [Real-Time CDP B2B](/help/rtcdp/b2b-overview.md).  Die [!UICONTROL Überwachung] Das Dashboard enthält die grundlegenden Metriken aus der letzten erfolgreichen Ausführung sowie den täglichen Auftragsstatus von bis zu 90 Tagen in der Vergangenheit.
 
-## Profilanreicherung für verwandte Konten (#related-accounts)
+## Profilanreicherung für verwandte Konten {#related-accounts}
 
 Die [!UICONTROL Verwandte Konten] Dashboard zeigt grundlegende Metriken und den Status des täglichen Auftrags an, der spezifisch für die [Verwandte Konten](/help/rtcdp/b2b-ai-ml-services/related-accounts.md) Profilanreicherung.
 
