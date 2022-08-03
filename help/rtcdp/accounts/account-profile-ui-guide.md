@@ -3,10 +3,10 @@ keywords: RTCDP-Profil;Profile RTCDP;RTCDP-Identitäten;RTCDP-Zusammenführungsr
 title: Handbuch zur Benutzeroberfläche von Account-Profilen
 description: Durch die Verwendung von Account-Profilen ermöglicht Ihnen Real-time Customer Data Platform B2B Edition die Vereinheitlichung von Account-Informationen aus verschiedenen Quellen. Dieses Handbuch enthält Details zur Interaktion mit Account-Profilen in der Benutzeroberfläche von Adobe Experience Platform.
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 604d2e100981b2c92d4cfac6862d78511791aa91
+source-git-commit: 9119e6376228c3cec214977265abf0ce55093b64
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 81%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,6 +27,26 @@ Auswählen **[!UICONTROL Profile]** under [!UICONTROL Konten] im linken Navigati
 ![Registerkarte &quot;Übersicht&quot;mit Widgets](images/b2b-account-profile-overview.png)
 
 Weitere Informationen finden Sie in der Dokumentation unter [[!UICONTROL Kontoprofile]](../../dashboards/guides/account-profiles.md) Dashboard , um mehr zu erfahren.
+
+## Konfigurieren des Leads zur Kontozuordnung {#configure-lead-to-account-matching}
+
+>[!IMPORTANT]
+>
+> Nur B2B AI-Administratoren können den Lead aktivieren, deaktivieren und konfigurieren, um den Dienst für die Kontoabstimmung zu aktivieren. Nach der Deaktivierung des Dienstes werden die entsprechenden Ergebnisse innerhalb von 24 Stunden gelöscht.
+
+Wählen Sie zum Konfigurieren des Interessenten-Kontoabgleichs die Option **[!UICONTROL Profile]** under [!UICONTROL Konten] in der linken Navigation. Im **[!UICONTROL Übersicht]** Registerkarte, wählen Sie **[!UICONTROL Einstellungen]** oben rechts.
+
+![Einstellungen auswählen](images/b2b-configuring-accounts-profile.png)
+
+Die **[!UICONTROL Kontoeinstellungen]** wird geöffnet. Wählen Sie hier die **[!UICONTROL Lead-zu-Konto-Abgleich aktivieren]** aktivieren, um die Funktion zu aktivieren. Wählen Sie über das Dropdown-Menü **[!UICONTROL Täglich]** für **[!UICONTROL Übereinstimmende Cadence]** -Einstellung. Wählen Sie abschließend die **[!UICONTROL Übereinstimmende Kriterien]** Optionen gefolgt von **[!UICONTROL Speichern]** , um Ihre Einstellungen zu bestätigen und zur **[!UICONTROL Kontoprofile]** angezeigt.
+
+>[!NOTE]
+>
+> Die Adresse kann nicht als einziges übereinstimmendes Kriterium verwendet werden. Es müssen mindestens eines der anderen Kriterien ausgewählt werden.
+
+![Kontoeinstellungen konfigurieren](images/b2b-configuring-account-settings.png)
+
+Weitere Informationen zum Interessenten-Kontoabgleich finden Sie im Abschnitt [Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform - B2B-Übersicht](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
 ## Durchsuchen von Account-Profilen {#browse-account-profiles}
 
