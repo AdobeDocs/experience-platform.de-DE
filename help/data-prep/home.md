@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d6d8b6ad9877735848d04cb229b3059842471ee8
+source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 76%
+source-wordcount: '780'
+ht-degree: 71%
 
 ---
 
@@ -39,7 +39,11 @@ Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [H
 
 Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
 
-Weiterführende Informationen zu berechneten Feldern finden Sie im [Handbuch zu berechneten Feldern](./functions.md#calculated-fields).
+Weitere Informationen zu berechneten Feldern finden Sie im Abschnitt [Handbuch zu berechneten Feldern](./functions.md#calculated-fields).
+
+### Escape-Sonderzeichen
+
+Sie können Sonderzeichen in einem Feld mit `${...}`. JSON-Dateien mit Feldern mit einem Punkt (`.`) werden von diesem Mechanismus nicht unterstützt. Wenn bei der Interaktion mit Hierarchien ein untergeordnetes Attribut einen Punkt (`.`), müssen Sie einen umgekehrten Schrägstrich (`\`), um Sonderzeichen zu maskieren. Beispiel: `address` ist ein Objekt, das das Attribut enthält `street.name`, kann dies dann als `address.street\.name` anstelle von `address.street.name`.
 
 ## Zuordnungssatz
 
@@ -59,7 +63,7 @@ Streaming-Aktualisierungen in [!DNL Data Prep] ermöglicht es Ihnen, Teilzeilena
 
 Die attributbasierte Zugriffskontrolle in Adobe Experience Platform ermöglicht es Administratoren, den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen zu steuern.
 
-Attributbasierte Zugriffskontrolle stellt sicher, dass Sie nur die Attribute zuordnen können, auf die Sie Zugriff haben. Attribute, auf die Sie keinen Zugriff haben, können nicht in Pass-Through-Mappings und berechneten Feldern verwendet werden. Wenn Sie also keinen Zugriff auf ein erforderliches Feld haben, können Sie eine Zuordnung nicht erfolgreich speichern. Außerdem können Sie keine Objekte oder Objekt-Arrays zuordnen, wenn Sie keinen Zugriff auf eines der untergeordneten Attribute haben. Sie können jedoch andere Elemente innerhalb des Objekt- oder Objekt-Arrays einzeln zuordnen.
+Attributbasierte Zugriffskontrolle stellt sicher, dass Sie nur die Attribute zuordnen können, auf die Sie Zugriff haben. Attribute, auf die Sie keinen Zugriff haben, können nicht in Passthrough-Zuordnungen und berechneten Feldern verwendet werden. Wenn Sie also keinen Zugriff auf ein erforderliches Feld haben, können Sie eine Zuordnung nicht erfolgreich speichern. Außerdem können Sie keine Objekte oder Objekt-Arrays zuordnen, wenn Sie keinen Zugriff auf eines der untergeordneten Attribute haben. Sie können jedoch andere Elemente innerhalb des Objekt- oder Objekt-Arrays einzeln zuordnen.
 
 Siehe [Attributbasierte Zugriffskontrolle - Übersicht](../access-control/abac/overview.md) für weitere Informationen.
 
