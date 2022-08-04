@@ -2,9 +2,9 @@
 title: Benutzerdefinierte Dashboards
 description: Erfahren Sie, wie Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie maßgeschneiderte Widgets erstellen, hinzufügen und bearbeiten können, um wichtige Metriken zu visualisieren.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: f138bb0f1b8d289cc872afc065d31c5e55d4b05c
+source-git-commit: bf2b35e3366c71c51c58b6257cc55f7c9b0cd9c7
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '825'
 ht-degree: 1%
 
 ---
@@ -17,21 +17,19 @@ ht-degree: 1%
 
 Adobe Experience Platform-Dashboards helfen Ihnen, Einblicke zu beschleunigen und die Visualisierung über die benutzerdefinierte Dashboards-Funktion anzupassen. Mit dieser Funktion können Sie benutzerdefinierte Dashboards erstellen und verwalten, in denen Sie benutzerspezifische Widgets erstellen, hinzufügen und bearbeiten können, um für Ihr Unternehmen relevante Schlüsselmetriken zu visualisieren.
 
-## Erste Schritte
+<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
-Um Dashboards in Adobe Experience Platform anzeigen zu können, müssen Sie über die entsprechenden Berechtigungen verfügen. Bitte lesen Sie die [Dokumentation zu Dashboards-Berechtigungen](./permissions.md#available-permissions) Hier erfahren Sie, wie Sie Benutzern die Möglichkeit geben, Experience Platformen-Dashboards mit Adobe Admin Console anzuzeigen, zu bearbeiten und zu aktualisieren. Wenn Sie keine Administratorberechtigungen für Ihr Unternehmen haben, wenden Sie sich an Ihren Produktadministrator, um die erforderlichen Berechtigungen zu erhalten.
+## Getting started
+
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
 
 ## Benutzerdefinierte Dashboards erstellen
 
 Um ein benutzerdefiniertes Dashboard zu erstellen, navigieren Sie zunächst zum Dashboard-Inventar. Auswählen **[!UICONTROL Dashboards]** aus der linken Navigation der Platform-Benutzeroberfläche gefolgt von **[!UICONTROL Dashboard erstellen]**.
 
-Weitere Informationen zu den verfügbaren vorkonfigurierten Dashboards finden Sie unter [Übersicht über das Dashboard-Inventar](./inventory.md).
+![Das Dashboard-Inventar mit Dashboards im linken Navigationsbereich und &quot;Dashboard erstellen&quot;hervorgehoben.](./images/user-defined-dashboards/create-dashboard.png)
 
->[!NOTE]
->
->Durch Hinzufügen eines benutzerdefinierten Dashboards wird die Liste der vorkonfigurierten Dashboards aus dem Dashboard-Inventar entfernt. Stattdessen umfasst das Dashboard-Inventar ausschließlich benutzerdefinierte Dashboards.
-
-![Dashboard-Inventar mit &quot;Dashboard erstellen&quot;hervorgehoben.](./images/user-defined-dashboards/create-dashboard.png)
+Bevor Sie ein benutzerdefiniertes Dashboard hinzufügen, ist der Dashboards-Bestand leer und zeigt die Meldung &quot;Keine Dashboards gefunden&quot;an. angezeigt. Nach der Erstellung werden alle benutzerdefinierten Dashboards im Dashboard-Inventar aufgelistet.
 
 Die [!UICONTROL Dashboard erstellen] angezeigt. Geben Sie einen benutzerfreundlichen, beschreibenden Namen für die Sammlung von Widgets ein, die Sie erstellen möchten, und wählen Sie **[!UICONTROL Speichern]**.
 
@@ -85,9 +83,9 @@ Das Datenmodell und die aktuell ausgewählte Tabelle werden oben in der linken L
 >
 >Sie können das ausgewählte Datenmodell ändern, indem Sie das Stiftsymbol (![Bleistiftsymbol.](./images/user-defined-dashboards/edit-icon.png)) in der linken Leiste.
 
-Wählen Sie die Auslassungszeichen (`...`) neben einem Attributnamen, um ein Attribut zur X- oder Y-Achse hinzuzufügen.
+Wählen Sie das Symbol zum Hinzufügen aus (./images/user-defined-dashboards/add-icon.png) neben einem Attributnamen, um der X- oder Y-Achse ein Attribut hinzuzufügen.
 
-![Der Widget-Composer mit hervorgehobenem Dropdown-Menü mit Auslassungspunkten, um Attribute zu einer Widget-Achse hinzuzufügen.](./images/user-defined-dashboards/attributes-dropdown.png)
+![Der Widget Composer mit dem Dropdown-Menü zum Hinzufügen von Symbolen wird hervorgehoben, um Attribute zu einer Widget-Achse hinzuzufügen.](./images/user-defined-dashboards/attributes-dropdown.png)
 
 Wählen Sie als Nächstes den Diagrammtyp aus der [!UICONTROL Marken] Dropdown-Liste, um eine Vorschau der aktuellen Einstellungen Ihres Widgets zu erzeugen. Im [!UICONTROL Eigenschaften] auf der rechten Seite des Bildschirms einen Namen für das Widget in der [!UICONTROL Widget title] Textfeld.
 
