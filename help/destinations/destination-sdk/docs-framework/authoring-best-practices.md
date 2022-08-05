@@ -1,9 +1,10 @@
 ---
 title: Best Practices für die Inhaltserstellung
 description: Erfahren Sie, welche Regeln und Tipps Sie beim Verfassen Ihrer Zieldokumentationsseite befolgen sollten, um sicherzustellen, dass sie den Qualitätsstandards der Adobe Experience Platform-Dokumentation entspricht.
-source-git-commit: 35e5c388e9572a3b27ec4bce55e766725936eda4
+exl-id: b12059f1-6635-41cd-acc5-6ff471111164
+source-git-commit: 0b9b724c2530e43ce681011d12fc1341148ddbf5
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -20,6 +21,15 @@ Auf dieser Seite werden die Regeln beschrieben, die Sie bei [Erstellen der Zield
 * Fügen Sie in der Produktdokumentation keine Beobachtungen und Schätzungen hinzu.
 * In der Experience Platform-Dokumentation verwenden Adobe-Autoren **Fettformatierung** , um auf Steuerelemente der Benutzeroberfläche zu verweisen, wie in diesem Beispiel:
    * Navigieren Sie zu **[!UICONTROL Verbindungen]** > **[!UICONTROL Ziele]** und wählen Sie die **[!UICONTROL Katalog]** Registerkarte. Ein Beispiel dafür anzeigen, wie Steuerelemente der Benutzeroberfläche in einer [Tutorial zu Zielen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=en#select-destination).
+
+## Schreibstil
+
+>[!IMPORTANT]
+>
+>Lesen [Schreibanleitung für die Dokumentation von Adoben](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=en) bevor Sie mit der Bearbeitung der Zieldokumentationsseite beginnen.
+
+* Halten Sie Ihre Sätze kurz und kommen Sie schnell zur Sache. Wenn Ihr Satz über 20 Wörter lang ist oder mehrere Kommas verwendet, sollten Sie ihn in separate Sätze aufteilen. Sätze mit mehr als 20 Wörtern können besonders für Leser eine Herausforderung darstellen.
+* Sei nicht zu höflich! Vermeiden Sie die Verwendung von &quot;Bitte&quot; oder &quot;Gutes tun ...&quot; in der technischen Dokumentation.
 
 ## Verlinken {#linking}
 
