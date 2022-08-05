@@ -4,9 +4,9 @@ title: Anleitung zur Fehlerbehebung bei der Datenvorbereitung
 topic-legacy: troubleshooting
 description: Dieses Dokument enthält Antworten auf häufig gestellte Fragen zur Adobe Experience Platform-Datenvorbereitung.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: 4bb21ce5861419964b80a827269e40ef3e6483f8
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '342'
 ht-degree: 2%
 
 ---
@@ -30,3 +30,7 @@ Alle Zeilen, die ungültig sind, auch ohne Transformationsfehler, werden ebenfal
 ### Wie kann ich Sonderzeichen in einem Feld ausschließen?
 
 Sie können Sonderzeichen in einem Feld mit `${...}`. JSON-Dateien mit Feldern mit einem Punkt (`.`) werden von diesem Mechanismus nicht unterstützt. Wenn bei der Interaktion mit Hierarchien ein untergeordnetes Attribut einen Punkt (`.`), müssen Sie einen umgekehrten Schrägstrich (`\`), um Sonderzeichen zu maskieren. Beispiel: `address` ist ein Objekt, das das Attribut enthält `street.name`, kann dies dann als `address.street\.name` anstelle von `address.street.name`.
+
+### Wie lang sind die berechneten Felder maximal?
+
+Berechnete Felder haben eine maximale Länge von 4096 Zeichen.

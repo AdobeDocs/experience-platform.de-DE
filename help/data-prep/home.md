@@ -5,10 +5,10 @@ title: Datenvorbereitung – Übersicht
 topic-legacy: overview
 description: Dieses Dokument führt in die Datenvorbereitung in Adobe Experience Platform ein.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: 7042c6f5e3061fee7183b1befa447333f116c125
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 71%
+source-wordcount: '788'
+ht-degree: 70%
 
 ---
 
@@ -37,7 +37,7 @@ Weitere Informationen zu den verschiedenen Zuordnungsfunktionen finden Sie im [H
 
 ### Berechnete Felder
 
-Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
+Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen. Berechnete Felder haben eine maximale Länge von 4096 Zeichen.
 
 Weitere Informationen zu berechneten Feldern finden Sie im Abschnitt [Handbuch zu berechneten Feldern](./functions.md#calculated-fields).
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;Startseite;beliebte Themen;CSV zuordnen;CSV-Datei 
 title: Handbuch zur Datenvorbereitungs-Benutzeroberfläche
 description: In diesem Dokument erfahren Sie, wie Sie mithilfe von Datenvorbereitungsfunktionen in der Platform-Benutzeroberfläche CSV-Dateien einem XDM-Schema zuordnen können.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: edef8843c03282774991f30220504ece97af52cf
+source-git-commit: d0f5d1f55101ce15934289d4fcfd1f70c1b63fc7
 workflow-type: tm+mt
-source-wordcount: '1837'
+source-wordcount: '1845'
 ht-degree: 90%
 
 ---
@@ -149,7 +149,7 @@ Wenn Sie fertig sind, wählen Sie das Schemasymbol aus, um die Benutzeroberfläc
 
 #### Berechnete Felder {#calculated-fields}
 
-Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen.
+Berechnete Felder ermöglichen die Erstellung von Werten anhand der Attribute im Eingabeschema. Diese Werte können dann Attributen im Zielschema zugewiesen und mit einem Namen und einer Beschreibung versehen werden, um eine einfachere Referenz zu ermöglichen. Berechnete Felder haben eine maximale Länge von 4096 Zeichen.
 
 Um ein berechnetes Feld zu erstellen, wählen Sie **[!UICONTROL Neuer Feldtyp]** und dann **[!UICONTROL Berechnetes Feld hinzufügen]** aus.
 
