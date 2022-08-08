@@ -2,10 +2,10 @@
 description: Auf dieser Seite werden alle API-Abläufe aufgelistet und beschrieben, die Sie mit dem API-Endpunkt „/authoring/destinations“ ausführen können.
 title: API-Endpunktvorgänge für Ziele
 exl-id: 96755e9d-be62-432f-b985-91330575b395
-source-git-commit: 301cef53644e813c3fd43e7f2dbaf730c9e5fc11
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
-source-wordcount: '2571'
-ht-degree: 96%
+source-wordcount: '2572'
+ht-degree: 95%
 
 ---
 
@@ -171,7 +171,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `aggregation.bestEffortAggregation.maxUsersPerRequest` | Ganzzahl | Experience Platform kann mehrere exportierte Profile in einem einzigen HTTP-Aufruf aggregieren. Geben Sie die maximale Anzahl von Profilen an, die Ihr Endpunkt in einem einzelnen HTTP-Aufruf erhalten soll. Beachten Sie, dass dies eine bestmögliche Aggregation ist. Wenn Sie beispielsweise den Wert 100 angeben, kann Platform eine beliebige Anzahl von Profilen senden, solange es weniger als 100 sind. <br> Wenn Ihr Server mehrere Benutzer pro Anforderung nicht akzeptiert, setzen Sie diesen Wert auf 1. |
 | `aggregation.bestEffortAggregation.splitUserById` | Boolesch | Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Namespace nur eine Identität pro Aufruf akzeptiert. |
 | `aggregation.configurableAggregation.splitUserById` | Boolesch | Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Verwenden Sie dieses Flag, wenn der Aufruf an das Ziel nach Identität aufgeteilt werden soll. Setzen Sie dieses Flag auf `true`, wenn Ihr Server für einen gegebenen Namespace nur eine Identität pro Aufruf akzeptiert. |
-| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Ganzzahl | <ul><li>*Mindestwert: 1800*</li><li>*Höchstwert: 3600*</li><li>Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Konfigurieren Sie einen Wert zwischen den akzeptierten Mindest- und Höchstwerten. Gemeinsam mit `maxNumEventsInBatch`festgelegt ist, bestimmt dieser Parameter, wie lange die Experience Platform warten soll, bis ein API-Aufruf an Ihren -Endpunkt gesendet wird. <br> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet Experience Platform entweder 3.600 Sekunden ODER, bis 10.000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was früher eintritt). </li></ul> |
+| `aggregation.configurableAggregation.maxBatchAgeInSecs` | Ganzzahl | <ul><li>*Mindestwert: 1800*</li><li>*Höchstwert: 3600*</li><li>Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Konfigurieren Sie einen Wert zwischen den akzeptierten Mindest- und Höchstwerten. Gemeinsam mit `maxNumEventsInBatch`festgelegt ist, bestimmt dieser Parameter, wie lange die Experience Platform warten soll, bis ein API-Aufruf an Ihren -Endpunkt gesendet wird. <br> Wenn Sie beispielsweise den Maximalwert für beide Parameter verwenden, wartet die Experience Platform entweder 3600 Sekunden ODER bis 10.000 qualifizierte Profile vorhanden sind, bevor der API-Aufruf erfolgt (je nachdem, was zuerst eintritt). </li></ul> |
 | `aggregation.configurableAggregation.maxNumEventsInBatch` | Ganzzahl | <ul><li>*Mindestwert: 1000*</li><li>*Höchstwert: 10.000*</li><li>Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Konfigurieren Sie einen Wert zwischen den akzeptierten Mindest- und Höchstwerten. Eine Beschreibung dieses Parameters finden Sie unter `maxBatchAgeInSecs` direkt oben.</li></ul> |
 | `aggregation.configurableAggregation.aggregationKey` | Boolesch | Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Ermöglicht die Aggregation der dem Ziel zugeordneten exportierten Profile anhand der folgenden Parameter: <br> <ul><li>Segment-ID</li><li> Segmentstatus </li><li> Identitäts-Namespace </li></ul> |
 | `aggregation.configurableAggregation.aggregationKey.includeSegmentId` | Boolesch | Siehe Parameter in der Beispielkonfiguration [hier](./destination-configuration.md#example-configuration). Legen Sie dies auf `true` fest, wenn Sie Profile gruppieren möchten, die nach Segmentkennung in Ihr Ziel exportiert wurden. |

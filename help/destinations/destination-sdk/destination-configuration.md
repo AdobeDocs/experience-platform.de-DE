@@ -2,7 +2,7 @@
 description: Mit dieser Konfiguration können Sie grundlegende Informationen wie Zielname, Kategorie, Beschreibung, Logo und mehr angeben. Die Einstellungen in dieser Konfiguration bestimmen auch, wie Experience Platform-Benutzer sich bei Ihrem Ziel authentifizieren, wie es in der Experience Platform-Benutzeroberfläche angezeigt wird und welche Identitäten an Ihr Ziel exportiert werden können.
 title: Konfigurationsoptionen für Streaming-Ziele für das Destination SDK
 exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
-source-git-commit: fe61b2ebe1a06e8909ef675cae088cb4e7d2b325
+source-git-commit: 75399d2fbe111a296479f8d3404d43c6ba0d50b5
 workflow-type: tm+mt
 source-wordcount: '1888'
 ht-degree: 93%
