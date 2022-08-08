@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
 source-wordcount: '2327'
-ht-degree: 31%
+ht-degree: 94%
 
 ---
 
@@ -30,20 +30,20 @@ Adobe Experience Platform bietet mehrere [!DNL dashboards], in denen basierend a
 
 ### Dashboards für Kontoprofile
 
-Das Dashboard &quot;Kontoprofile&quot;zeigt eine Momentaufnahme der einheitlichen Kontoinformationen aus den verschiedenen Quellen für Ihre Marketingkanäle und die verschiedenen Systeme an, die Ihr Unternehmen derzeit zum Speichern von Kundenkontoinformationen verwendet.
+Das Dashboard „Kontoprofile“ zeigt eine Momentaufnahme der einheitlichen Kontoinformationen aus den verschiedenen Quellen für Ihre Marketing-Kanäle und die verschiedenen Systeme an, die Ihr Unternehmen derzeit zum Speichern von Kundenkontoinformationen verwendet.
 
 **Aktualisierte Funktionen**
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Gesamtkonten nach Branchen-Widget | Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Zählergrößen für die Branchen zu veranschaulichen, aus denen die Gesamtanzahl besteht. |
-| Widget &quot;Kontoprofile hinzugefügt&quot; | Dieses Widget verwendet ein farbkodiertes Balkendiagramm, um die Anzahl der Profile, die einem Konto über einen bestimmten Zeitraum hinzugefügt wurden, und den Anteil der verschiedenen Branchen, aus denen diese hinzugefügten Profile bestehen, zu veranschaulichen. |
+| Widget für die Gesamtanzahl der Konten nach Branchen | Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Anteile für die Branchen zu veranschaulichen, aus denen sich die Gesamtanzahl zusammensetzt. |
+| Widget „Hinzugefügte Kontoprofile“ | Dieses Widget verwendet ein farbcodiertes Balkendiagramm, um die Anzahl der Profile, die über einen bestimmten Zeitraum zu einem Konto hinzugefügt wurden, und den Anteil der verschiedenen Branchen, aus denen diese hinzugefügten Profile kommen, zu veranschaulichen. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Siehe [Übersicht über die Echtzeit-Kundendatenplattform, B2B Edition](../../rtcdp/b2b-overview.md) , um mehr über die verfügbaren B2B-Funktionen zu erfahren, oder über die [End-to-End-Tutorial](../../rtcdp/b2b-tutorial.md) Erfahren Sie mehr darüber, wie Kontoprofile im Rahmen des B2B-Workflows erstellt werden.
+Siehe die [Übersicht über Real-Time CDP, B2B Edition](../../rtcdp/b2b-overview.md), um mehr über die verfügbaren B2B-Funktionen zu erfahren, oder das [Tutorial mit der Beschreibung aller Schritte](../../rtcdp/b2b-tutorial.md), in dem Sie mehr darüber erfahren, wie Kontoprofile im Rahmen des B2B-Workflows erstellt werden.
 
-Weitere Informationen zu den Widgets zur Visualisierung Ihrer Kontoprofilmetriken finden Sie in der [Dokumentation zu Kontoprofil-Widgets](../../dashboards/guides/account-profiles.md#standard-widgets).
+Weitere Informationen zu den verfügbaren Widgets zur Visualisierung Ihrer Kontoprofilmetriken finden Sie in der [Dokumentation zu Kontoprofil-Widgets](../../dashboards/guides/account-profiles.md#standard-widgets).
 
 ### Profil-Dashboards
 
@@ -53,9 +53,9 @@ Im Dashboard „Profile“ wird eine Momentaufnahme der Attributdaten (Datensatz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Widget &quot;Zugeordnete Zielgruppen&quot; | Dieses Widget zeigt die Gesamtzahl der zugeordneten Zielgruppen an, die für das im Dashboard &quot;Profile&quot;ausgewählte Ziel aktiviert werden können. |
+| Widget „Zugeordnete Zielgruppen“ | Dieses Widget zeigt die Gesamtzahl der zugeordneten Zielgruppen an, die für das im Dropdown-Menü des Dashboards „Profile“ ausgewählte Ziel aktiviert werden können. |
 
-Weitere Informationen zum Dashboard &quot;Profile&quot;finden Sie im Abschnitt [Profil-Dashboards - Übersicht](../../dashboards/guides/profiles.md).
+Weitere Informationen zum Dashboard „Profile“ finden Sie in der [Übersicht zum Dashboard „Profile“](../../dashboards/guides/profiles.md).
 
 ### Ziele-Dashboards
 
@@ -65,11 +65,11 @@ Im Dashboard „Ziele“ finden Sie eine Momentaufnahme der Ziele, die Ihr Unter
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Zielgruppen-Widget | Dieses Widget stellt die Gesamtzahl der Segmente bereit, die entsprechend der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, aktiviert werden können. |
+| Zielgruppen-Widget | Dieses Widget enthält die Gesamtzahl der Segmente, die entsprechend der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, aktiviert werden können. |
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen zum Dashboard &quot;Ziele&quot;finden Sie unter [Übersicht über das Dashboard &quot;Ziele&quot;](../../dashboards/guides/destinations.md).
+Weitere Informationen zum Dashboard „Ziele“ finden Sie in der [Übersicht über das Dashboard „Ziele“](../../dashboards/guides/destinations.md).
 
 ## Datenerfassung {#collection}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform bietet eine Reihe von Technologien, mit denen Sie Clie
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Berechtigungsverwaltung über Adobe Admin Console | Der Zugriff auf Datenerfassungsfunktionen wird jetzt über Adobe Admin Console unter der Karte für die Adobe Experience Platform-Datenerfassung verwaltet. Siehe Handbuch unter [Datenerfassungsberechtigungen](../../collection/permissions.md) für weitere Informationen.<br><br>Berechtigungen für Datastreams werden jetzt auch über die Admin Console unter der Karte für Adobe Experience Platform verwaltet, wodurch die Sicherheit gegenüber der vorherigen Methode, diese Berechtigungen manuell für jeden Benutzer festzulegen, verbessert wird. |
+| Berechtigungsverwaltung über Adobe Admin Console | Der Zugriff auf Datenerfassungsfunktionen wird jetzt über Adobe Admin Console unter der Karte für die Adobe Experience Platform-Datenerfassung verwaltet. Weitere Informationen finden Sie im Handbuch zu [Datenerfassungsberechtigungen](../../collection/permissions.md).<br><br>Berechtigungen für Datenströme werden jetzt auch über Admin Console unter der Karte für Adobe Experience Platform verwaltet, wodurch die Sicherheit gegenüber der vorherigen Methode verbessert wird, wo diese Berechtigungen manuell für jeden Benutzer festgelegt wurden. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -93,12 +93,12 @@ Weiterführende Informationen finden Sie in der [Übersicht zur Datenerfassung](
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Verbesserungen an [!DNL Data Prep] Recommendations | [!DNL Data Prep] Recommendations ist jetzt schlauer und schneller. Neue Validierungsprüfungen reduzieren die häufigsten Zuordnungsfehler erheblich und verkürzen so die Wertschöpfungszeit. |
-| Hierarchische Unterstützung für Streaming-Upsets | Sie können jetzt Funktionen verwenden `upsert_array_append` und `upsert_array_replace` um beim Streaming von Uploads an Profile Arrays und Objekte zu aktualisieren. Siehe [[!DNL Data Prep] Handbuch zu Zuordnungsfunktionen](../../data-prep/functions.md) für weitere Informationen. |
+| Verbesserungen an [!DNL Data Prep]-Recommendations | [!DNL Data Prep]-Recommendations sind jetzt noch intelligenter und schneller. Durch neue Validierungsprüfungen werden die häufigsten Zuordnungsfehler deutlich reduziert, was die Zeit bis zum Erreichen des Ziels weiter verkürzt. |
+| Hierarchische Unterstützung für das Streaming von Upserts | Sie können jetzt die Funktionen `upsert_array_append` und `upsert_array_replace` verwenden, um Arrays und Objekte beim Streaming von Upserts an Profile zu aktualisieren. Weitere Informationen finden Sie im [[!DNL Data Prep] Handbuch zu Zuordnungsfunktionen](../../data-prep/functions.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
-Weitere Informationen finden Sie unter [!DNL Data Prep], siehe [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
+Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -108,7 +108,7 @@ Weitere Informationen finden Sie unter [!DNL Data Prep], siehe [[!DNL Data Prep]
 
 | Funktion | Beschreibung |
 | ----------- | ----------- |
-| [Datei jetzt exportieren (Beta)](../../destinations/ui/export-file-now.md) | Exportieren Sie eine vollständige Datei, ohne den aktuellen Exportplan eines zuvor geplanten Segments zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nicht die Exportfrequenz des Segments. <br> Der Dateiexport wird sofort ausgelöst und es werden die neuesten Ergebnisse aus der Experience Platform-Segmentierung abgerufen. <br> <br>Wenden Sie sich an Ihren Kundenbetreuer, um Zugriff auf diese Funktion zu erhalten. |
+| [Datei jetzt exportieren (Beta)](../../destinations/ui/export-file-now.md) | Exportieren Sie eine vollständige Datei, ohne den aktuellen Exportplan eines zuvor geplanten Segments zu unterbrechen. Dieser Export erfolgt zusätzlich zu den zuvor geplanten Exporten und ändert nichts an der Exportfrequenz des Segments. <br> Der Dateiexport wird sofort ausgelöst, und es werden die neuesten Ergebnisse der Segmentierungsläufe von Experience Platform abgerufen. <br> <br>Wenden Sie sich an Ihre Adobe-Support-Mitarbeitenden, um Zugriff auf diese Funktion zu erhalten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -116,12 +116,12 @@ Weitere Informationen finden Sie unter [!DNL Data Prep], siehe [[!DNL Data Prep]
 
 | Ziel | Beschreibung |
 | ----------- | ----------- |
-| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Das Marketo Engage-Ziel-Update ermöglicht es Ihnen, den Prozess der Erstellung statischer Listen mit Automatisierung zu optimieren und Benutzern zu ermöglichen, zusätzliche Felder in ihre Leads einzufügen. Weitere Informationen zu den Verbesserungen in Marketo V2 finden Sie unten: <br><ul><li>Im **[!UICONTROL Segment planen]** Schritt des Aktivierungs-Workflows: In Marketo V1 müssen Sie manuell einen **Zuordnungs-ID** , um Daten erfolgreich nach Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.</li><li>Im **[!UICONTROL Zuordnung]** -Schritt des Aktivierungs-Workflows in Marketo V1 konnten Sie XDM-Felder nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName`und `companyName`. Mit der Marketo V2-Version können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie unter [unterstützte Attribute in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
-| [Pega Customer Decisioning Hub](../../destinations/catalog/personalization/pega.md) | Verwenden Sie Profilattribute und Segmentzugehörigkeitsinformationen aus Adobe Experience Platform in Pega Customer Decisioning Hub als Prädikatoren in adaptiven Modellen und helfen Sie bei der Entscheidungsfindung für die nächste beste Aktion. |
-| [(API) Salesforce-Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzersegmente in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden. |
+| [Marketo V2](../../destinations/catalog/adobe/marketo-engage.md) | Das Ziel-Update von Marketo Engage ermöglicht es Ihnen, den Prozess der Erstellung statischer Listen mit Automatisierung zu optimieren und Benutzenden zu ermöglichen, zusätzliche Felder in ihre Leads einzufügen. Weitere Informationen zu den Verbesserungen in Marketo V2 finden Sie unten: <br><ul><li>In Marketo V1 mussten Sie im Schritt **[!UICONTROL Segment planen]** des Aktivierungs-Workflows manuell eine **Zuordnungs-ID** hinzufügen, um Daten erfolgreich in Marketo zu exportieren. Dieser manuelle Schritt ist in Marketo V2 nicht mehr erforderlich.</li><li>Im Schritt **[!UICONTROL Zuordnung]** des Aktivierungs-Workflows konnten Sie XDM-Felder in Marketo V1 nur drei Zielfeldern in Marketo zuordnen: `firstName`, `lastName` und `companyName`. Mit der Version Marketo V2 können Sie jetzt XDM-Felder vielen weiteren Feldern in Marketo zuordnen. Weitere Informationen finden Sie unter [Unterstützte Attribute in Marketo V2](../../destinations/catalog/adobe/marketo-engage.md#supported-attributes).  </li></ul> |
+| [Pega Customer Decision Hub](../../destinations/catalog/personalization/pega.md) | Verwenden Sie Profilattribute und Segmentzugehörigkeitsinformationen aus Adobe Experience Platform in Pega Customer Decision Hub als Prädikatoren in adaptiven Modellen, die Ihnen bei der Entscheidungsfindung für die nächstbeste Aktion helfen. |
+| [(API) Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) | Mit diesem Ziel können Marketing-Fachleute in Experience Platform erstellte Benutzersegmente in Snapchat Ads importieren und für das Targeting ihrer Anzeigen verwenden. |
 | [Salesforce CRM](../../destinations/catalog/crm/salesforce.md) | Aktualisieren von Kontaktinformationen in Salesforce Marketing Cloud mit Profil- und Segmentinformationen in Experience Platform |
-| [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Mit diesem Ziel können Marketing-Experten in Experience Platform erstellte Benutzersegmente in Momentaufnahmen-Anzeigen importieren und für das Targeting ihrer Anzeigen verwenden. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
-| [(Beta) Die [!DNL Trade Desk] - CRM-Verbindung](../../destinations/catalog/advertising/tradedesk-emails.md) | Verwendung [!DNL The Trade Desk] CRM-Ziel, Profile für Ihre [!DNL Trade Desk] Zielgruppen-Targeting und -Unterdrückung anhand von CRM-Daten. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
+| [(Beta) [!DNL Snap Inc.]](../../destinations/catalog/advertising/snap-inc.md) | Mit diesem Ziel können Marketing-Fachleute in Experience Platform erstellte Benutzersegmente in Snapchat Ads importieren und für das Targeting ihrer Anzeigen verwenden. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
+| [(Beta) Die  [!DNL Trade Desk] -CRM-Verbindung](../../destinations/catalog/advertising/tradedesk-emails.md) | Verwenden Sie das [!DNL The Trade Desk]-CRM-Ziel, um Profile für Ihr [!DNL Trade Desk]-Konto zu aktivieren, sodass Sie auf der Grundlage von CRM-Daten Zielgruppen ansprechen bzw. unterdrücken können. <br><br>Dieses Ziel befindet sich derzeit in der Betaversion. Dokumentation und Funktionalität können sich ändern. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -135,7 +135,7 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Datenmodell der Gesundheitsbranche | Ein Standarddatenmodell für Gesundheitsdaten wurde eingeführt, um fünf gängige Anwendungsfälle der Industrie zu unterstützen, die mit der zunehmenden digitalen Akquise, der Verbesserung der Programmregistrierung und der Förderung von Arzneimittelinformationen zusammenhängen. Die Übersicht finden Sie auf der [Datenmodell](../../xdm/schema/industries/healthcare.md) für weitere Informationen zu diesen Anwendungsfällen und den Standard-XDM-Komponenten, die sie unterstützen.<br><br>Ein neuer Branchenfilter wurde zum [!UICONTROL Schemas] Benutzeroberfläche, die Ihnen beim Durchsuchen von Komponenten im Zusammenhang mit der Gesundheitsfürsorge beim Erstellen benutzerdefinierter Schemata hilft. |
+| Datenmodell der Gesundheitsbranche | Ein Standarddatenmodell für Gesundheitsdaten wurde eingeführt, um fünf gängige Anwendungsfälle der Branche zu unterstützen, die mit der zunehmenden digitalen Akquise, der Verbesserung der Einschreibung für Programme und der Förderung von Arzneimittelinformationen zusammenhängen. In der Übersicht über das [Gesundheitsdatenmodell](../../xdm/schema/industries/healthcare.md) finden Sie weitere Informationen zu diesen Anwendungsfällen und den Standard-XDM-Komponenten, die sie unterstützen.<br><br>Ein neuer Branchenfilter wurde zur Benutzeroberfläche [!UICONTROL Schemas] hinzugefügt, um beim Durchsuchen von Komponenten im Zusammenhang mit der Gesundheitsfürsorge beim Erstellen benutzerdefinierter Schemas zu helfen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -143,27 +143,27 @@ XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definition
 
 >[!WARNING]
 >
->Die in der folgenden Tabelle aufgelisteten neuen XDM-Komponenten sind experimentell und werden derzeit getestet. Diese Komponenten werden voraussichtlich mit brechenden Änderungen aktualisiert (falls erforderlich), bevor sie stabilisiert werden. Planen Sie Ihre Entwicklungsbemühungen bitte entsprechend.
+>Die in der folgenden Tabelle aufgelisteten neuen XDM-Komponenten sind experimentell und werden derzeit noch getestet. Diese Komponenten werden voraussichtlich mit grundlegenden Änderungen aktualisiert (falls erforderlich), bevor sie stabilisiert werden. Beziehen Sie dies bei Ihren Entwicklungsplänen bitte mit ein.
 
 | Typ der Komponente | Name | Beschreibung |
 | --- | --- | --- |
 | Klasse | [[!UICONTROL Wetter]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Eine auf Aufzeichnungen basierende Klasse, die zur Erfassung von Wetterdaten verwendet wird. |
-| Feldergruppe | [[!UICONTROL Aktuelles Wetter]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter] Klassen, die zur Erfassung der aktuellen Wetterbedingungen für eine Postleitzahl verwendet werden. |
-| Feldergruppe | [[!UICONTROL Vorhergesagtes Wetter]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter] Klassen, die zur Erfassung der prognostizierten Wetterbedingungen für eine Postleitzahl verwendet werden. |
-| Feldergruppe | [[!UICONTROL Produkt-Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter] Klassen, die zur Erfassung produktspezifischer Trigger verwendet werden, die die Wetterbedingungen nutzen, die bekanntermaßen das Verbraucherverhalten beeinflussen. |
-| Feldergruppe | [[!UICONTROL Relative Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter] Klassen, die zur Erfassung relativer Trigger verwendet werden, die die Wetterbedingungen nutzen, die bekanntermaßen das Verbraucherverhalten beeinflussen. |
-| Feldergruppe | [[!UICONTROL Schwere Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter] Klassen, die zur Erfassung von Triggern verwendet werden, die mit schweren Wetterbedingungen arbeiten, die bekanntermaßen das Verbraucherverhalten beeinflussen. |
-| Feldergruppe | [[!UICONTROL Wetter-Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter] Klassen, die zur Erfassung allgemeiner Trigger verwendet werden, die die Wetterbedingungen nutzen, die bekanntermaßen das Verbraucherverhalten beeinflussen. |
-| Feldergruppe | [[!UICONTROL MediaCollection Interaction-Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] -Klasse, die Details zu einer Medieninteraktion erfasst. |
-| Feldergruppe | [[!UICONTROL Details zur MediaReporting-Interaktion]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | Eine Feldergruppe für [!UICONTROL XDM ExperienceEvent] -Klasse, die Details zu einer Interaktion mit Medienberichten erfasst. |
-| Datentyp | [[!UICONTROL Informationen zu Werbedetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Erfasst Details zu einem Anzeigen-Asset. |
-| Datentyp | [[!UICONTROL Informationen zur Werbeunterbrechung]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | Erfasst Details zu einem Anzeigen-Pod. Hierbei handelt es sich um eine Folge mehrerer Anzeigen, die innerhalb einer Werbeunterbrechung wiedergegeben werden. |
-| Datentyp | [[!UICONTROL Informationen zu Kapiteldetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | Erfasst Details zu einem Kapitel oder Segment in einem Videoinhalt. |
-| Datentyp | [[!UICONTROL Informationen zu Fehlerdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Erfasst Details zu einem Videowiedergabefehler. |
-| Datentyp | [[!UICONTROL Informationen zu Player-Ereignissen]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | Erfasst ereignisbezogene Details zu einem Videoplayer, einschließlich Abspielposition und Sitzungs-ID. |
-| Datentyp | [[!UICONTROL Player-Statusinformationen]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | Erfasst Statusbezogene Details zu einem Videoplayer. |
-| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Erfasst Details zur Erlebnisqualität (QoE) zu einem Videowiedergabeereignis. |
-| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Erfasst Sitzungsdetails zu einem Videowiedergabeereignis. |
+| Feldergruppe | [[!UICONTROL Aktuelles Wetter]](https://github.com/adobe/xdm/blob/master/components/classes/weather.schema.json) | Eine Feldergruppe für die Klassen [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter], die zur Erfassung der aktuellen Wetterbedingungen für eine Postleitzahl verwendet werden. |
+| Feldergruppe | [[!UICONTROL Vorhergesagtes Wetter]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/forecasted-weather.schema.json) | Eine Feldergruppe für die Klassen [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter], die zur Erfassung der vorhergesagten Wetterbedingungen für eine Postleitzahl verwendet werden. |
+| Feldergruppe | [[!UICONTROL Produkt-Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/product-triggers.schema.json) | Eine Feldergruppe für die Klassen [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter], die zur Erfassung produktspezifischer Trigger verwendet werden, welche die Wetterbedingungen nutzen, die erfahrungsgemäß das Verbraucherverhalten beeinflussen. |
+| Feldergruppe | [[!UICONTROL Relative Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/relative-triggers.schema.json) | Eine Feldergruppe für die Klassen [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter], die zur Erfassung relativer Trigger verwendet werden, welche die Wetterbedingungen nutzen, die erfahrungsgemäß das Verbraucherverhalten beeinflussen. |
+| Feldergruppe | [[!UICONTROL Starke Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/severe-triggers.schema.json) | Eine Feldergruppe für die Klassen [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter], die zur Erfassung von Triggern verwendet werden, welche extreme Wetterbedingungen nutzen, die erfahrungsgemäß das Verbraucherverhalten beeinflussen. |
+| Feldergruppe | [[!UICONTROL Wetter-Trigger]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/weather-triggers.schema.json) | Eine Feldergruppe für die Klassen [!UICONTROL XDM ExperienceEvent] und [!UICONTROL Wetter], die zur Erfassung allgemeiner Trigger verwendet werden, welche die Wetterbedingungen nutzen, die erfahrungsgemäß das Verbraucherverhalten beeinflussen. |
+| Feldergruppe | [[!UICONTROL MediaCollection Interaction-Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-collection.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL XDM ExperienceEvent], die Details zu einer Medieninteraktion erfasst. |
+| Feldergruppe | [[!UICONTROL Details zur MediaReporting-Interaktion]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-media-reporting.schema.json) | Eine Feldergruppe für die Klasse [!UICONTROL XDM ExperienceEvent], die Details zu einer Interaktion mit Medienberichten erfasst. |
+| Datentyp | [[!UICONTROL Informationen zu Werbedetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingdetails.schema.json) | Erfasst Details zu einem Werbe-Asset. |
+| Datentyp | [[!UICONTROL Detailinformationen zu Werbeblöcken]](https://github.com/adobe/xdm/blob/master/components/datatypes/advertisingpoddetails.schema.json) | Erfasst Details über einen Werbeblock. Hierbei handelt es sich um eine Sequenz von mehreren Werbespots, die innerhalb eines einzigen Werbeblocks hintereinander abgespielt werden. |
+| Datentyp | [[!UICONTROL Informationen zu Kapiteldetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/chapterdetails.schema.json) | Erfasst Details zu einem Kapitel oder Segment im Inhalt eines Videos. |
+| Datentyp | [[!UICONTROL Informationen zu Fehlerdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Erfasst Details zu einem Fehler bei der Videowiedergabe. |
+| Datentyp | [[!UICONTROL Informationen zu Player-Ereignissen]](https://github.com/adobe/xdm/blob/master/components/datatypes/playereventdetails.schema.json) | Erfasst ereignisbezogene Details zu einem Video-Player, einschließlich Abspielposition und Sitzungs-ID. |
+| Datentyp | [[!UICONTROL Player-Statusdateninformationen]](https://github.com/adobe/xdm/blob/master/components/datatypes/playerstatedata.schema.json) | Erfasst statusbezogene Details zu einem Video-Player. |
+| Datentyp | [[!UICONTROL Informationen zu QoE-Daten]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Erfasst Details zur Erlebnisqualität (QoE) für ein Videowiedergabeereignis. |
+| Datentyp | [[!UICONTROL Informationen zu Sitzungsdetails]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Erfasst Sitzungsdetails für ein Videowiedergabeereignis. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -193,7 +193,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Verwaiste Profilattributbereinigung (begrenzte Version) | Wenn Ihr Unternehmen Zugriff auf diese Funktion hat, entfernt der Profil-Service jetzt täglich die Attribute der übrig gebliebenen Benutzeraktivitätsregion, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf die Zusammenführung von Profilen aus Datensätzen auswirken, in denen `com_adobe_aep_profile_region_dataset` als &quot;true&quot;markiert ist. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version verbleibende Edge-Attributfragmente enthielten. |
+| Bereinigung von verwaisten Profilrandattributen (begrenzte Version) | Wenn Ihr Unternehmen Zugriff auf diese Funktion hat, entfernt der Profil-Service jetzt täglich die übrig gebliebenen Randattribute einer Benutzeraktivitätsregion, um eine genauere Darstellung der Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf die Zusammenführung von Profilen aus Datensätzen auswirken, für die `com_adobe_aep_profile_region_dataset` als „true“ markiert ist. Dies kann zu einem Rückgang der Metrik „Adressierbare Zielgruppe“ im Lizenznutzungs-Dashboard und zu einem Rückgang der Metrik „Profilanzahl“ im Profil-Dashboard führen, da diese Metriken vor der Einführung dieser Version übrig gebliebene Randattributfragmente einbezogen haben. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -209,9 +209,9 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Allgemeine Verfügbarkeit der [!DNL Azure Data Explorer] source | Verwenden Sie die Azure Data Explorer-Quelle, um Daten von Ihrem [!DNL Azure] -Instanz zu Experience Platform. Informationen dazu finden Sie in der [[!DNL Azure Data Explorer] Übersicht zu Quellen](../../sources/connectors/databases/data-explorer.md). |
-| Allgemeine Verfügbarkeit [!DNL Generic OData] source | Verwenden Sie die [!DNL Generic OData] -Quelle, um Ressourcen von Systemen zu übertragen, die Open-Data-Protokoll unterstützen. Informationen dazu finden Sie in der [[!DNL Generic OData] Übersicht zu Quellen](../../sources/connectors/protocols/odata.md). |
-| Unterstützung der automatischen Erkennung von Quelldateieigenschaften für [!DNL Data Landing Zone] in der Experience Platform-Benutzeroberfläche | Die [!DNL Data Landing Zone] -Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Data Landing Zone] -Quellverbindung](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
+| Allgemeine Verfügbarkeit der [!DNL Azure Data Explorer]-Quelle | Verwenden Sie die Azure Data Explorer-Quelle, um Daten von Ihrer [!DNL Azure]-Instanz in Experience Platform einzubringen. Informationen dazu finden Sie in der [[!DNL Azure Data Explorer] Übersicht zu Quellen](../../sources/connectors/databases/data-explorer.md). |
+| Allgemeine Verfügbarkeit der [!DNL Generic OData]-Quelle | Verwenden Sie die [!DNL Generic OData]-Quelle, um Ressourcen von Systemen in Experience Platform einzubringen, die ein Open-Data-Protokoll unterstützen. Weitere Informationen dazu finden Sie in der [[!DNL Generic OData] Übersicht zu Quellen](../../sources/connectors/protocols/odata.md). |
+| Unterstützung der automatischen Erkennung von Quelldateieigenschaften für [!DNL Data Landing Zone] in der Experience Platform-Benutzeroberfläche | Die [!DNL Data Landing Zone]-Quelle unterstützt jetzt die automatische Erkennung von Dateieigenschaften bei Verwendung der Experience Platform-Benutzeroberfläche. Weitere Informationen finden Sie in der Dokumentation zur [Erstellung einer  [!DNL Data Landing Zone] -Quellverbindung](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
