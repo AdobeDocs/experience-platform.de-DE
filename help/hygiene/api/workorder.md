@@ -5,9 +5,9 @@ exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
 hide: true
 hidefromtoc: true
 source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '998'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 98%
 
 >[!IMPORTANT]
 >
->Die Funktionen zur Datenhygiene in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die den Gesundheitsschild erworben haben.
+>Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
 
 Mit dem Endpunkt `/workorder` in der Data Hygiene API können Sie in Adobe Experience Platform Löschaufgaben für Verbraucheridentitäten programmgesteuert verwalten.
 
