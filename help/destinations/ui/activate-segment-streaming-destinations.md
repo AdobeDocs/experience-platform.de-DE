@@ -4,9 +4,9 @@ title: Aktivieren von Zielgruppendaten für Streaming-Segmentexportziele
 type: Tutorial
 description: Erfahren Sie, wie Sie die in Adobe Experience Platform vorhandenen Zielgruppendaten aktivieren, indem Sie Segmente Segmenten Segmentstreaming-Zielen zuordnen.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: a6fe0f5a0c4f87ac265bf13cb8bba98252f147e0
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '811'
 ht-degree: 36%
 
 ---
@@ -83,7 +83,6 @@ Bei einigen Segmentstreaming-Zielen müssen Sie Quellattribute oder Identitäts-
 >id="platform_destinations_activate_applytransformation"
 >title="Umwandlung anwenden"
 >abstract="Aktivieren Sie diese Option bei Verwendung von nicht gehashten Quellfeldern, damit Adobe Experience Platform sie bei Aktivierung automatisch hash."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html#apply-transformation" text="Weitere Informationen finden Sie in der Dokumentation"
 
 Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel erwartet, dass sie gehasht werden (z. B.: `email_lc_sha256` oder `phone_sha256`), überprüfen Sie die **Umwandlung anwenden** Option, damit Adobe Experience Platform die Quellattribute bei Aktivierung automatisch hasst.
 
@@ -95,7 +94,6 @@ Wenn Sie ungehashte Quellattribute Zielattributen zuordnen, von denen das Ziel e
 >id="platform_destinations_activate_enddate"
 >title="Enddatum"
 >abstract="Das Hinzufügen eines Enddatums für den Segmentzeitplan ist nicht verfügbar."
->additional-url="https://www.adobe.com/go/destinations-activate-segment-scheduling-en" text="Weitere Informationen finden Sie in der Dokumentation"
 
 Standardmäßig wird die [!UICONTROL Segmentplan] zeigt nur die neu ausgewählten Segmente an, die Sie im aktuellen Aktivierungsfluss ausgewählt haben.
 

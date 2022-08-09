@@ -3,9 +3,9 @@ keywords: facebook-Verbindung; facebook-Verbindung; facebook-Ziele; facebook; in
 title: Facebook-Verbindung
 description: Aktivieren Sie Profile für Ihre Facebook-Kampagnen für Zielgruppen-Targeting, Personalisierung und Unterdrückung basierend auf Hash-E-Mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 70670f7aec2ab6a5594f5e69672236c7bcc3ce81
 workflow-type: tm+mt
-source-wordcount: '1867'
+source-wordcount: '1859'
 ht-degree: 9%
 
 ---
@@ -165,7 +165,6 @@ Wenn Sie alle Details für Ihre Zielverbindung angegeben haben, wählen Sie **[!
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Ursprung der Zielgruppe"
 >abstract="Wählen Sie aus, wie die Kundendaten im Segment ursprünglich erfasst wurden. Die Daten werden in Facebook angezeigt, wenn ein Benutzer in die Zielgruppe des Segments fällt"
->additional-url="http://www.adobe.com/go/destinations-facebook-activate-section-en" text="Weitere Informationen finden Sie in der Dokumentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
