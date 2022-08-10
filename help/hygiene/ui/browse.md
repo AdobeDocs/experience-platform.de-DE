@@ -2,10 +2,10 @@
 title: Durchsuchen von Datenhygiene-Arbeitsaufträgen
 description: Erfahren Sie, wie Sie bestehende Datenhygiene-Arbeitsaufträge in der Benutzeroberfläche von Adobe Experience Platform anzeigen und verwalten können.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: e57b5ec6c6234d4d1fe22f8d03c70d6bd9c02f0f
+source-git-commit: 525e2520bb6140b00cfb7e68579eb2d0288ad9b1
 workflow-type: tm+mt
-source-wordcount: '484'
-ht-degree: 78%
+source-wordcount: '485'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Wählen Sie das Trichtersymbol (![Bild des Trichtersymbols](../images/ui/browse/
 
 | Filter | Beschreibung |
 | --- | --- |
-| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Die Arbeit ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Auftrag wurde erstellt, aber noch nicht ausgeführt. A [TTL-Anfrage (Time-to-Live) des Datensatzes](./ttl.md) nimmt diesen Status vor dem geplanten Löschdatum an. Sobald das Löschdatum eintrifft, wird der Status in [!UICONTROL Wird ausgeführt] , es sei denn, der Auftrag wurde im Voraus storniert.</li><li>**[!UICONTROL Wird ausgeführt]**: Der Auftrag wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Auftrag wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
+| [!UICONTROL Status] | Filtern Sie nach dem aktuellen Status des Arbeitsauftrags:<ul><li>**[!UICONTROL Abgeschlossen]**: Die Arbeit ist abgeschlossen.</li><li>**[!UICONTROL Ausstehend]**: Der Auftrag wurde erstellt, aber noch nicht ausgeführt. A [TTL-Anfrage (Time-to-Live) des Datensatzes](./ttl.md) nimmt diesen Status vor dem geplanten Löschdatum an. Sobald das Löschdatum eintrifft, wird der Status in [!UICONTROL Wird ausgeführt] , es sei denn, der Auftrag wurde im Voraus storniert.</li><li>**[!UICONTROL Wird ausgeführt]**: Die TTL-Anfrage wurde gestartet und wird derzeit verarbeitet.</li><li>**[!UICONTROL Abgebrochen]**: Der Auftrag wurde im Rahmen einer manuellen Benutzeranfrage abgebrochen.</li></ul> |
 | [!UICONTROL Erstellt am] | Filtern Sie nach dem Zeitpunkt, zu dem der Arbeitsauftrag ausgeführt wurde. |
 | [!UICONTROL Ablaufdatum] | Filtern Sie TTL-Anforderungen nach dem geplanten Löschdatum für den betreffenden Datensatz. |
 | [!UICONTROL Aktualisierungsdatum] | Filtern Sie TTL-Anforderungen nach dem Zeitpunkt, zu dem die Arbeitsreihenfolge zuletzt aktualisiert wurde. Die Erstellung und das Ablaufen der Gültigkeit der TTL werden als Aktualisierungen gezählt. |
