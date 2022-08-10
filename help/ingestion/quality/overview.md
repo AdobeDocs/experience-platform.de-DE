@@ -5,10 +5,10 @@ title: Datenqualität
 topic-legacy: overview
 description: Das folgende Dokument bietet eine Zusammenfassung der unterstützten Prüf- und Validierungsverfahren für die Batch- und Streaming-Erfassung in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: 7857b9a82dc1b5e12c9f8d757f6967b926124ec4
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 76%
+source-wordcount: '425'
+ht-degree: 57%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Experience Platform bietet klar definierte Garantien für Vollständigkeit
 
 ## Unterstützte Validierungsverfahren
 
-Sowohl die Batch- als auch die Streaming-Erfassung verhindern, dass fehlerhafte Daten nachgelagert werden, indem fehlerhafte Daten zum Abrufen und zur Analyse in [!DNL Data Lake] verschoben werden. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
+Sowohl die Batch- als auch die Streaming-Erfassung verhindern, dass fehlerhafte Daten nachgelagert werden, indem fehlerhafte Daten zum Abrufen und zur Analyse in verschoben werden. [!DNL Data Lake]. Die Datenerfassung bietet die folgenden Validierungen für die Batch- und Streaming-Erfassung.
 
 ### Batch-Erfassung
 
@@ -55,4 +55,15 @@ Die folgenden Validierungen werden für die Streaming-Erfassung durchgeführt:
 | Datensatz | Stellt sicher, dass der Datensatz angegeben, aktiviert und nicht entfernt wurde. |
 | Kopfzeile | Stellt sicher, dass die Kopfzeile angegeben und gültig ist. |
 
-Weitere Informationen dazu, wie [!DNL Platform] Daten überwacht und validiert, finden Sie in der [Dokumentation zu Überwachungsdatenflüssen](./monitor-data-ingestion.md).
+Weitere Informationen zum [!DNL Platform] Daten zu Monitoren und Validierungen finden Sie im Abschnitt [Dokumentation zur Überwachung von Datenflüssen](./monitor-data-ingestion.md).
+
+## Überprüfung des Identitätswerts
+
+In der folgenden Tabelle sind die vorhandenen Regeln aufgeführt, die Sie befolgen müssen, um eine erfolgreiche Überprüfung Ihres Identitätswerts sicherzustellen.
+
+| Namespace | Validierungsregel | Systemverhalten bei Verletzung einer Regel |
+| --- | --- | --- |
+| ECID | <ul><li>Der Identitätswert einer ECID muss genau 38 Zeichen betragen.</li><li>Der Identitätswert einer ECID darf nur aus Zahlen bestehen.</li></ul> | <ul><li>Wenn der Identitätswert der ECID nicht genau 38 Zeichen beträgt, wird der Datensatz übersprungen.</li><li>Wenn der Identitätswert der ECID nicht numerische Zeichen enthält, wird der Datensatz übersprungen.</li></ul> |
+| Nicht ECID | Der Identitätswert darf 1024 Zeichen nicht überschreiten. | Wenn der Identitätswert 1024 Zeichen überschreitet, wird der Datensatz übersprungen. |
+
+Weitere Informationen finden Sie unter [!DNL Identity Service] Limits, siehe [[!DNL Identity Service] Limits - Übersicht](../../identity-service/guardrails.md).
