@@ -2,14 +2,22 @@
 title: Versionshinweise zur Common Analytics Plugins-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Common Analytics Plugins“ in Adobe Experience Platform.
 exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1be361f9cd70b0424542af64a994da0b21d6b5dc
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 100%
+source-wordcount: '329'
+ht-degree: 97%
 
 ---
 
 # Common Analytics Plugins – Versionshinweise
+
+## 03. Juni 2022
+
+### Allgemeine Analytics-Plug-ins-Erweiterung 3.0.7
+
+#### Funktionen
+
+Plug-ins, die Cookies setzen, verwenden jetzt das sichere Flag
 
 ## 23. Juni 2021
 
