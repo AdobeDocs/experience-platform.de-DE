@@ -5,10 +5,10 @@ title: Segmentierungs-Service – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 3130d9731a53c01fb7bc15265e044191ceae47f6
-workflow-type: ht
-source-wordcount: '1507'
-ht-degree: 100%
+source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+workflow-type: tm+mt
+source-wordcount: '1630'
+ht-degree: 93%
 
 ---
 
@@ -46,25 +46,47 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >
 >Wenn die Time-to-Live (TTL) für den Datensatz aktiviert ist, könnte sich dies auf die Zugehörigkeit des erstellten Segments auswirken. Weiterführende Informationen zur TTL und deren Auswirkungen auf die Segmentierung finden Sie im Handbuch [Profile Service TTL](../profile/apply-ttl.md).
 
-## Evaluieren von Segmenten
+## Evaluieren von Segmenten {#evaluate-segments}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation"
+>title="Auswertungsmethoden"
+>abstract="Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
 
 Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
 
-### Streaming-Segmentierung
+### Streaming-Segmentierung  {#streaming}
 
-Streaming-Segmentierung  ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente infolge von Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-time Customer Profile] eingehende Daten angewendet. Segmenthinzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_streaming"
+>title="Streaming-Bewertung"
+>abstract="Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Bewerten von Ereignissen nahezu in Echtzeit mit Streaming-Segmentierung"
+
+Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-time Customer Profile] eingehende Daten angewendet. Segmenthinzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
 
 Weitere Informationen zur Streaming-Segmentierung finden Sie in der [Dokumentation zur Streaming-Segmentierung](./api/streaming-segmentation.md).
 
-### Batch-Segmentierung
+### Batch-Segmentierung {#batch}
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_batch"
+>title="Batch-Auswertung"
+>abstract="Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung wird das Segment gespeichert, damit Sie es zur Verwendung exportieren können."
 
 Als Alternative zum kontinuierlichen Datenauswahlprozess werden bei der Batch-Segmentierung alle Profildaten gleichzeitig mit Segmentdefinitionen verglichen, um entsprechende Zielgruppen zu erstellen. Nach der Erstellung eines Segments wird es gespeichert, sodass Sie es exportieren und weiterverwenden können.
 
 Batch-Segmente werden automatisch alle 24 Stunden evaluiert. Wenn Sie ein Batch-Segment on demand evaluieren möchten, können Sie einen Segmentierungsvorgang verwenden. Weitere Informationen zu Segmentierungsvorgängen finden Sie in der [Dokumentation zu Segmentierungsvorgängen](./api/segment-jobs.md).
 
-### Edge-Segmentierung
+### Edge-Segmentierung {#edge}
 
-Bei der Edge-Segmentierung werden Segmente in Platform sofort in Experience Edge evaluiert, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
+>[!CONTEXTUALHELP]
+>id="platform_segments_evaluation_edge"
+>title="Edge-Bewertung"
+>abstract="Bei der Edge-Segmentierung können Segmente in Platform sofort in Experience Edge ausgewertet werden, was Anwendungsfälle für die Personalisierung von derselben Seite und nächsten Seiten ermöglicht."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Handbuch zur Benutzeroberfläche für Edge-Segmentierung"
+
+Mit der Edge-Segmentierung können Segmente in Platform sofort ausgewertet werden. [In Experience Edge](../edge/home.md), wodurch Anwendungsfälle für die Personalisierung von derselben Seite und der nächsten Seite aktiviert werden.
 
 Weitere Informationen zur Edge-Segmentierung finden Sie in der [API-Dokumentation](./api/edge-segmentation.md) oder [Benutzeroberflächendokumentation](./ui/edge-segmentation.md).
 
