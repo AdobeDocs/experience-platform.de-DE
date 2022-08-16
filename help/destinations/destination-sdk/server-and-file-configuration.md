@@ -2,9 +2,9 @@
 description: Die Server- und Dateikonfigurationsspezifikationen für dateibasierte Ziele können im Adobe Experience Platform Destination SDK über den Endpunkt /destination-servers konfiguriert werden.
 title: (Beta) Konfigurationsoptionen für dateibasierte Ziel-Server-Spezifikationen
 exl-id: 56434e36-0458-45d9-961d-f6505de998f7
-source-git-commit: 7a72c190d28d63c7bcd1bf12d8a52efc4589b848
+source-git-commit: a43bb18182ac6e591e011b585719da955ee681b7
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '899'
 ht-degree: 90%
 
 ---
@@ -284,10 +284,6 @@ In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportie
             "emptyValue": {
                 "templatingStrategy": "NONE",
                 "value": ""
-            },
-            "lineSep": {
-                "templatingStrategy": "NONE",
-                "value": "\n"
             }
         },
         "maxFileRowCount":5000000
@@ -310,7 +306,6 @@ In diesem Abschnitt werden die Dateiformatierungseinstellungen für die exportie
 | `csvOptions.timestampFormat.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolge für ein Zeitstempelformat fest. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt ein einzelnes Zeichen fest, das zum Maskieren des Escape-Zeichens für das Anführungszeichen verwendet wird. | `\` wenn Escape- und Anführungszeichen unterschiedlich sind. `\0` wenn Escape- und Anführungszeichen identisch sind. |
 | `csvOptions.emptyValue.value` | Optional | *Nur für`"fileType.value": "csv"`*. Legt die Zeichenfolgendarstellung eines leeren Werts fest. | `""` |
-| `csvOptions.lineSep.value` | Optional | *Nur für`"fileType.value": "csv"`*. Definiert das Zeilentrennzeichen, das zum Schreiben verwendet werden soll. Die maximale Länge beträgt 1 Zeichen. | `\n` |
 | `maxFileRowCount` | Optional | Maximale Anzahl von Zeilen, die die exportierte Datei enthalten kann. Konfigurieren Sie dies anhand der Dateigrößenanforderungen Ihrer Zielplattform. | K. A. |
 
 {style=&quot;table-layout:auto&quot;}
