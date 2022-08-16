@@ -2,10 +2,10 @@
 title: Versionshinweise zur Adobe Target-Erweiterung
 description: Aktuelle Versionshinweise für die Tag-Erweiterung „Adobe Target“ in Adobe Experience Platform.
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 130db749ef84840532588a8a27e40cb277c13066
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 100%
+source-wordcount: '520'
+ht-degree: 98%
 
 ---
 
@@ -14,6 +14,13 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Eine konsolidierte Übersicht der terminologischen Änderungen finden Sie im folgenden [Dokument](../../../term-updates.md).
+
+## 16. September 2021
+
+### Adobe Target-Erweiterung 0.11.4
+
+* Aktualisierung auf at.js v1.8.3
+* Hinzugefügt `SameSite=None` und `Secure` Attribute beim Setzen von Cookies
 
 ## 24. Juli 2020
 
