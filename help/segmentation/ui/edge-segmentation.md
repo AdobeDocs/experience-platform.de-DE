@@ -5,7 +5,7 @@ title: UI-Anleitung zur Edge-Segmentierung
 topic-legacy: ui guide
 description: Bei der Edge-Segmentierung können Segmente in Platform sofort am Rand ausgewertet werden, was Anwendungsfälle für die Personalisierung derselben Seite und der nächsten Seite ermöglicht.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 0173fbd36791f837e0d0336f9fa7bcc84e64909f
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Mit der Edge-Segmentierung können Segmente in Adobe Experience Platform sofort 
 
 Derzeit können nur ausgewählte Abfragetypen mit Kantensegmentierung ausgewertet werden. Die folgenden Abschnitte enthalten eine Liste von Abfragetypen, die mit der Kantensegmentierung ausgewertet werden können und die derzeit nicht unterstützt werden.
 
-### Unterstützte Abfragetypen
+### Unterstützte Abfragetypen {#query-types}
 
 Eine Abfrage kann mit Kantensegmentierung ausgewertet werden, wenn sie eines der in der folgenden Tabelle aufgeführten Kriterien erfüllt.
 

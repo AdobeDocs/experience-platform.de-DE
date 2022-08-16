@@ -5,9 +5,9 @@ title: 'Bewerten von Ereignissen in nahezu Echtzeit mit Streaming-Segmentierung 
 topic-legacy: developer guide
 description: Dieses Dokument enthält Beispiele zur Verwendung von Streaming-Segmentierung mit der Adobe Experience Platform Segmentation Service-API.
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 81659da18d4fa8b733200998c27c25ec356ca264
+source-git-commit: 654e141735b6882b4c0233b8e1c73d0838c8374e
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1873'
 ht-degree: 32%
 
 ---
@@ -429,10 +429,6 @@ Streaming-Segmentierung funktioniert mit allen Daten, die mit einer Streaming-Qu
 ### Wie werden Segmente als Batch- oder Streaming-Segmentierung definiert?
 
 Ein Segment wird entweder als Batch- oder Streaming-Segmentierung basierend auf einer Kombination aus Abfragetyp und Ereignisverlaufsdauer definiert. Eine Liste der Segmente, die als Streaming-Segment ausgewertet werden, finden Sie im [Abschnitt zu Streaming-Segmentierungs-Abfragetypen](#query-types).
-
-### Kann ein Benutzer ein Segment als Batch- oder Streaming-Segmentierung definieren?
-
-Zu diesem Zeitpunkt kann der Benutzer nicht definieren, ob ein Segment mithilfe der Batch- oder Streaming-Erfassung ausgewertet wird, da das System automatisch bestimmt, mit welcher Methode das Segment ausgewertet wird.
 
 ### Warum steigt die Anzahl der &quot;insgesamt qualifizierten&quot;Segmente weiterhin, während die Zahl unter &quot;Letzte X Tage&quot;im Abschnitt mit den Segmentdetails bei null bleibt?
 
