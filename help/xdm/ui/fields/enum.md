@@ -5,28 +5,33 @@ title: Definieren von Enum-Feldern in der Benutzeroberfläche
 description: Erfahren Sie, wie Sie in der Experience Platform-Benutzeroberfläche ein Enum-Feld definieren.
 topic-legacy: user guide
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: 5d449c1ca174cafcca988e9487940eb7550bd5cf
+source-git-commit: f6fefda974d2ae6fd4b035ef3b5fe633311c9772
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 0%
+source-wordcount: '310'
+ht-degree: 2%
 
 ---
 
-# Definieren von Aufzählungsfeldern in der Benutzeroberfläche
+# Definieren von Aufzählungsfeldern in der Benutzeroberfläche {#enum}
+
+>[!CONTEXTUALHELP]
+>id="platform_xdm_enumsuggestedvalue"
+>title="Aufzählungen und empfohlene Werte"
+>abstract="Ein Enum beschränkt ein Zeichenfolgenfeld so, dass nur Daten erfasst werden können, die mit einem vordefinierten Satz von Werten übereinstimmen. Alternativ können Sie einen Satz von vorgeschlagenen Werten für das Feld definieren, die die Aufnahme nicht einschränken, sondern die Attribute definieren, aus denen Sie in der Segmentierung auswählen können. Weitere Informationen finden Sie in der Dokumentation."
 
 Im Experience-Datenmodell (XDM) stellt ein Enum-Feld ein Feld dar, das auf eine vordefinierte Liste zulässiger Werte beschränkt ist.
 
-Wenn Sie [ein neues Feld](./overview.md#define) in der Adobe Experience Platform-Benutzeroberfläche definieren, können Sie es als Enum-Feld festlegen, indem Sie in der rechten Leiste das Kontrollkästchen **[!UICONTROL Enum]** aktivieren.
+Wann [Definieren eines neuen Felds](./overview.md#define) In der Benutzeroberfläche von Adobe Experience Platform können Sie sie als Enum-Feld festlegen, indem Sie die **[!UICONTROL Enum]** in der rechten Leiste.
 
 ![](../../images/ui/fields/special/enum.png)
 
-Nach Auswahl des Kontrollkästchens werden zusätzliche Steuerelemente angezeigt, mit denen Sie die Wertbegrenzungen für die Aufzählung festlegen können. Unter der Spalte **[!UICONTROL Wert]** müssen Sie den genauen Wert angeben, auf den Sie das Feld beschränken möchten. Dieser Wert muss dem [!UICONTROL Typ] entsprechen, den Sie für das Enum-Feld ausgewählt haben. Sie können optional auch eine benutzerfreundliche **[!UICONTROL Beschriftung]** für die Beschränkung angeben.
+Nach Auswahl des Kontrollkästchens werden zusätzliche Steuerelemente angezeigt, mit denen Sie die Wertbegrenzungen für die Aufzählung festlegen können. Unter dem **[!UICONTROL Wert]** -Spalte müssen Sie den genauen Wert angeben, auf den Sie das Feld beschränken möchten. Dieser Wert muss den [!UICONTROL Typ] Sie für das Enum-Feld ausgewählt haben. Sie können optional eine benutzerfreundliche **[!UICONTROL Titel]** auch für die Beschränkung.
 
-Um dem Enum zusätzliche Einschränkungen hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]** aus.
+Um der Auflistung zusätzliche Einschränkungen hinzuzufügen, wählen Sie **[!UICONTROL Zeile hinzufügen]**.
 
 ![](../../images/ui/fields/special/enum-add-row.png)
 
-Fügen Sie der Enum weiterhin die gewünschten Einschränkungen und optionalen Beschriftungen hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** aus, um die Änderungen auf das Schema anzuwenden.
+Fügen Sie der Enum weiterhin die gewünschten Einschränkungen und optionalen Beschriftungen hinzu. Wenn Sie fertig sind, wählen Sie **[!UICONTROL Anwenden]** , um die Änderungen auf das Schema anzuwenden.
 
 ![](../../images/ui/fields/special/enum-configured.png)
 
@@ -36,4 +41,4 @@ Die Arbeitsfläche wird entsprechend den Änderungen aktualisiert. Wenn Sie dies
 
 ## Nächste Schritte
 
-In diesem Handbuch wurde beschrieben, wie Sie in der Benutzeroberfläche ein Enum-Feld definieren. Informationen zum Definieren anderer XDM-Feldtypen im [!DNL Schema Editor] finden Sie in der Übersicht zu [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special).
+In diesem Handbuch wurde beschrieben, wie Sie in der Benutzeroberfläche ein Enum-Feld definieren. Siehe Übersicht unter [Definieren von Feldern in der Benutzeroberfläche](./overview.md#special) , um zu erfahren, wie Sie andere XDM-Feldtypen im [!DNL Schema Editor].
