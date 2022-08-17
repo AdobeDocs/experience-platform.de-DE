@@ -3,10 +3,10 @@ title: Verarbeiten von Kundeneinwilligungsdaten mit dem Adobe Experience Platfor
 topic-legacy: getting started
 description: Erfahren Sie, wie Sie das Adobe Experience Platform Web SDK integrieren, um Kundeneinwilligungsdaten in Adobe Experience Platform zu verarbeiten.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: fb0d8aedbb88aad8ed65592e0b706bd17840406b
+source-git-commit: 79bc41c713425e14bb3c12646b9b71b2c630618b
 workflow-type: tm+mt
-source-wordcount: '1330'
-ht-degree: 1%
+source-wordcount: '1375'
+ht-degree: 2%
 
 ---
 
@@ -98,14 +98,19 @@ Nachdem Sie die Konfiguration der Erweiterung abgeschlossen haben, kann sie in I
 
 Nachdem Sie die SDK-Erweiterung in Ihre Website integriert haben, können Sie mit der Verwendung des Platform Web SDK beginnen `setConsent` -Befehl zum Senden von Einwilligungsdaten an Platform.
 
->[!IMPORTANT]
->
->Die `setConsent` -Befehl aktualisiert nur Daten direkt im Profilspeicher und sendet keine Daten an den Data Lake.
+Die `setConsent` -Befehl führt zwei Aktionen aus:
+
+1. Aktualisiert die Profilattribute des Benutzers direkt im Profilspeicher. Dadurch werden keine Daten an den Data Lake gesendet.
+1. Erstellt eine [Erlebnisereignis](../../../xdm/classes/experienceevent.md) , das ein mit Zeitstempel versehenes Konto des Zustimmungsänderungsereignisses aufzeichnet. Diese Daten werden direkt an den Data Lake gesendet und können verwendet werden, um Änderungen der Zustimmungsparameter im Laufe der Zeit zu verfolgen.
+
+### Wann wird aufgerufen `setConsent`
 
 Es gibt zwei Szenarien, in denen `setConsent` sollte auf Ihrer Site aufgerufen werden:
 
 1. Wenn die Einwilligung auf der Seite geladen wird (d. h. bei jedem Laden der Seite)
 1. Als Teil eines CMP-Hooks oder Ereignis-Listeners, der Änderungen in den Zustimmungseinstellungen erkennt
+
+### `setConsent` Syntax
 
 >[!NOTE]
 >
