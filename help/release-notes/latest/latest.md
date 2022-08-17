@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c4cd691eeae9e27dd7616dc19672dc5d08b8cec7
 workflow-type: tm+mt
 source-wordcount: '2327'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -177,15 +177,15 @@ Real-time Customer Data Platform B2B Edition basiert auf Real-time Customer Data
 
 | Funktion | Beschreibung |
 | --- | --- |
-| Interessenten-Konto-Abgleich | Mithilfe der Kontozuordnung können Sie Profile bekannter Personen zuordnen. Anschließend können Sie Daten in B2B-Kontexten wie Konten oder Gelegenheiten segmentieren und ansprechen. Die täglich ausgeführten Aufträge verwenden sowohl deterministische als auch probabilistische Faktoren, um Personenprofile, die noch keinem Konto zugeordnet sind, einem am besten übereinstimmenden Konto zuzuordnen. Sie können dann entscheiden, ob solche Übereinstimmungen in Ihre Segmentdefinitionen aufgenommen werden sollen |
+| Lead-Konto-Zuordnung | Mithilfe der Lead-Konto-Zuordnung können Sie bekannte Personenprofile mit Kontoprofilen verbinden. Sie können dann Daten in einem B2B-Kontext wie Konten oder Verkaufschancen segmentieren und ansprechen. Die täglich ausgeführten Aufträge verwenden sowohl deterministische als auch probabilistische Faktoren, um Personenprofile, die noch keinem Konto zugeordnet sind, einem am besten übereinstimmenden Konto zuzuordnen. Sie können dann entscheiden, ob solche Übereinstimmungen in Ihre Segmentdefinitionen aufgenommen werden sollen |
 
-Weitere Informationen finden Sie im Dokument unter [zu einer Kontoübereinstimmung führen](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
+Weitere Informationen finden Sie in dem Dokument [Lead-Konto-Zuordnung](../../rtcdp/b2b-ai-ml-services/lead-to-account-matching.md).
 
-Eine Anleitung zum Überwachen der Profilanreicherung finden Sie im Dokument unter [Überwachung der Profilanreicherung in der Benutzeroberfläche](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
+Eine Anleitung zum Überwachen der Profilanreicherung finden Sie im Dokument zur [Überwachung der Profilanreicherung in der Benutzeroberfläche](../../dataflows/ui/b2b/monitor-profile-enrichment.md).
 
-Anweisungen zum Konfigurieren des Interessenten-Kontoabgleichs finden Sie unter [Handbuch zur Benutzeroberfläche des Kontoprofils](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
+Anweisungen zum Konfigurieren der Lead-Konto-Zuordnung finden Sie im [Handbuch zur Benutzeroberfläche des Kontoprofils](../../rtcdp/account/../accounts/account-profile-ui-guide.md?lang=en#configure-lead-to-account-matching).
 
-Weitere Informationen zur Echtzeit-Kundendatenplattform B2B Edition finden Sie in der [Übersicht über die B2B-Echtzeit-Kundendatenplattform](../../rtcdp/overview.md).
+Weitere Informationen über die Real-Time CDP B2B-Edition finden Sie im [Überblick über Real-Time CDP B2B](../../rtcdp/overview.md).
 
 ## Echtzeit-Kundenprofil {#profile}
 
