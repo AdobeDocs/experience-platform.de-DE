@@ -2,7 +2,7 @@
 description: Auf dieser Seite finden Sie alle Informationen, die Sie zum Überprüfen eines mit Destination SDK erstellten produktiven Ziels übermitteln müssen.
 title: Zur Überprüfung eines in der Destination SDK erstellten produktisierten Ziels übermitteln
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: dd4a150351b5e0c41586cf663324aeb345a896e4
+source-git-commit: 50f205a5ddd9ec264d7390911fef45dc595ca6a1
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 75%
@@ -15,7 +15,14 @@ ht-degree: 75%
 
 >[!IMPORTANT]
 >
->Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktierte (öffentliche) Ziele übermitteln. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie diese Materialien nicht produzieren und mit Adobe teilen.
+>* Der hier dokumentierte Prozess ist nur für Partner erforderlich, die produktierte (öffentliche) Ziele übermitteln. Wenn Sie ein privates Ziel für Ihre eigene Verwendung erstellen, müssen Sie diese Materialien nicht produzieren und mit Adobe teilen.
+>
+>* Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Ziel-Veröffentlichungsanforderungen beträgt fünf Werktage.
+>
+>* Wenn das Adobe-Team nach der ersten Übermittlung darum bittet, Ihre Konfigurationen zu aktualisieren, müssen Sie nach der Aktualisierung eine weitere Ziel-Veröffentlichungsanforderung senden.
+>
+>* Selbst wenn Ihr Ziel im Experience Platform-Katalog aktiv ist, müssen Sie, wenn Sie Ihre Konfigurationen aktualisieren müssen, eine neue Ziel-Veröffentlichungsanforderung senden, damit die Aktualisierungen in den Konfigurationen angezeigt werden.
+
 
 Bevor Ihr Ziel im [Experience Platform-Zielkatalog](/help/destinations/catalog/overview.md) veröffentlicht werden kann, müssen Sie Adobe bestimmte Informationen über das Ziel und die von Ihnen durchgeführten Tests zukommen lassen, um sicherzustellen, dass die Anwender beim Aktivieren von Daten auf Ihrer Plattform die bestmöglichen Ergebnisse erzielen.
 
@@ -28,15 +35,6 @@ Auf dieser Seite sind alle Informationen aufgeführt, die Sie angeben müssen, w
 * Nachweis, dass Sie eine Anfrage zur Veröffentlichung eines Ziels für Ihr Ziel mithilfe der [Zielveröffentlichungs-API](./destination-publish-api.md) übermittelt haben.
 * Eine Dokumentation-PR (Pull-Anforderung) entsprechend den Anweisungen im Abschnitt [Self-Service-Dokumentationsprozess](./docs-framework/documentation-instructions.md).
 * Eine Grafikdatei, die als Logo für Ihre Zielkarte im Zielkatalog von Experience Platform angezeigt werden soll.
-
->[!IMPORTANT]
->
->* Die standardmäßige Antwortzeit von Adobe zur Überprüfung von Ziel-Veröffentlichungsanforderungen beträgt fünf Werktage.
->
->* Wenn das Adobe-Team nach der ersten Übermittlung darum bittet, Ihre Konfigurationen zu aktualisieren, müssen Sie nach der Aktualisierung eine weitere Ziel-Veröffentlichungsanforderung senden.
->
->* Selbst wenn Ihr Ziel im Experience Platform-Katalog aktiv ist, müssen Sie, wenn Sie Ihre Konfigurationen aktualisieren müssen, eine neue Ziel-Veröffentlichungsanforderung senden, damit die Aktualisierungen in den Konfigurationen angezeigt werden.
-
 
 Detaillierte Informationen zu den einzelnen Elementen finden Sie in den folgenden Abschnitten:
 
