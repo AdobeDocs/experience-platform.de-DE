@@ -3,10 +3,10 @@ keywords: Google-Anzeigen; Google-Anzeigen; Google-Adwords; Google AdWords; Goog
 title: Google Ads-Verbindung
 description: Google Ads, früher Google AdWords genannt, ist ein Online-Werbedienst, der Unternehmen Pay-per-Click-Werbung für textbasierte Suchvorgänge, grafische Displays, YouTube-Videos und In-App-Anzeigen zu nutzen.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 20%
+source-wordcount: '945'
+ht-degree: 19%
 
 ---
 
@@ -66,7 +66,8 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 >[!NOTE]
 >
->Die Zulassungsliste ist vor der Einrichtung der ersten [!DNL Google Ads] Ziel in Platform. Vergewissern Sie sich, dass die unten beschriebene Zulassungsliste durch [!DNL Google] vor dem Erstellen eines Ziels.
+>Die Zulassungsauflistung ist vor der Einrichtung Ihrer ersten [!DNL Google Ads] Ziel in Platform. Vergewissern Sie sich, dass der unten beschriebene Genehmigungsprozess durch [!DNL Google] vor dem Erstellen eines Ziels.
+>Die Ausnahme für diese Regel ist [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de) -Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut durchzuführen und mit den nächsten Schritten fortzufahren.
 
 Vor der Erstellung [!DNL Google Ads] Ziel in Platform müssen Sie [!DNL Google] , damit die Adobe in die Liste der zugelassenen Datenanbieter aufgenommen und Ihr Konto zur Zulassungsliste hinzugefügt werden kann. Kontakt [!DNL Google] und geben Sie die folgenden Informationen an:
 

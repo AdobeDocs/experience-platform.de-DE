@@ -3,9 +3,9 @@ keywords: Google Ad Manager;Google Ad Manager;DoubleClick;DoubleClick AdX;Double
 title: Google Ad Manager-Verbindung
 description: Google Ad Manager, früher als DoubleClick für Herausgeber oder DoubleClick AdX bekannt, ist eine AdX-Plattform von Google, die Herausgebern die Möglichkeit gibt, die Anzeige von Werbung auf ihren Websites, über Videos und in Mobile Apps zu verwalten.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: f163b1e3c60953192b2ddf543eb4f3e8df88799b
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '903'
 ht-degree: 22%
 
 ---
@@ -58,7 +58,8 @@ Wenn Sie Ihr erstes Ziel mit [!DNL Google Ad Manager] und nicht aktiviert haben,
 
 >[!NOTE]
 >
->Die Zulassungsliste ist vor der Einrichtung der ersten [!DNL Google Ad Manager] Ziel in Platform. Vergewissern Sie sich, dass die unten beschriebene Zulassungsliste durch [!DNL Google] vor dem Erstellen eines Ziels.
+>Die Zulassungsauflistung ist vor der Einrichtung Ihrer ersten [!DNL Google Ad Manager] Ziel in Platform. Vergewissern Sie sich, dass der unten beschriebene Genehmigungsprozess durch [!DNL Google] vor dem Erstellen eines Ziels.
+>Die Ausnahme für diese Regel ist [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de) -Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut durchzuführen und mit den nächsten Schritten fortzufahren.
 
 Vor der Erstellung [!DNL Google Ad Manager] Ziel in Platform müssen Sie [!DNL Google] , damit die Adobe in die Liste der zugelassenen Datenanbieter aufgenommen und Ihr Konto zur Zulassungsliste hinzugefügt werden kann. Kontakt [!DNL Google] und geben Sie die folgenden Informationen an:
 

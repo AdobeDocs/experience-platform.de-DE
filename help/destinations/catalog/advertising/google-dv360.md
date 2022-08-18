@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;DoubleClick Bid Manager;DoubleClick;Display & 
 title: Google Display & Video 360-Verbindung
 description: Display & Video 360, früher als DoubleClick Bid Manager bekannt, ist ein Tool zum Ausführen von digitalen Kampagnen für Retargeting und Zielgruppen-Targeting für Inventarquellen für Display, Video und Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: dd18350387aa6bdeb61612f0ccf9d8d2223a8a5d
+source-git-commit: 7d32499bec8d7248472ae60b07893dbb5496d984
 workflow-type: tm+mt
-source-wordcount: '893'
-ht-degree: 37%
+source-wordcount: '942'
+ht-degree: 36%
 
 ---
 
@@ -56,7 +56,8 @@ Informationen zum Zielexporttyp und zur Häufigkeit finden Sie in der unten steh
 
 >[!NOTE]
 >
->Die Zulassungsauflistung ist vor der Einrichtung Ihrer ersten [!DNL Google Display & Video 360] Ziel in Platform. Stellen Sie sicher, dass der unten beschriebene Genehmigungsprozess von Google abgeschlossen wurde, bevor Sie ein Ziel erstellen.
+>Die Zulassungsauflistung ist vor der Einrichtung Ihrer ersten [!DNL Google Display & Video 360] Ziel in Platform. Vergewissern Sie sich, dass der unten beschriebene Genehmigungsprozess durch [!DNL Google] vor dem Erstellen eines Ziels.
+>Die Ausnahme für diese Regel ist [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=de) -Kunden. Wenn Sie bereits eine Verbindung zu diesem Google-Ziel in Audience Manager erstellt haben, ist es nicht erforderlich, den Zulassungsauflistungsprozess erneut durchzuführen und mit den nächsten Schritten fortzufahren.
 
 Vor der Erstellung [!DNL Google Display & Video 360] Ziel in Platform angeben, müssen Sie sich an Google wenden und darum bitten, die Adobe auf die Liste der zugelassenen Datenanbieter zu setzen und Ihr Konto der Zulassungsliste hinzuzufügen. Kontaktieren Sie Google und machen Sie folgende Angaben:
 
