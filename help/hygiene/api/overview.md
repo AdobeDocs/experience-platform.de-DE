@@ -2,10 +2,10 @@
 title: Data Hygiene API-Handbuch
 description: Erfahren Sie, wie Sie die gespeicherten personenbezogenen Daten Ihrer Kunden in Adobe Experience Platform programmatisch korrigieren oder löschen können.
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: 7f1e4bdf54314cab1f69619bcbb34216da94b17e
-workflow-type: ht
-source-wordcount: '307'
-ht-degree: 100%
+source-git-commit: 49ba5263c6dc8eccac2ffe339476cf316c68e486
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 75%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >Die Datenhygiene-Funktionen in Adobe Experience Platform sind derzeit nur für Organisationen verfügbar, die Healthcare Shield erworben haben.
 
-Mit der Data Hygiene API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmgesteuert korrigieren oder löschen sowie TTL-Protokolle (Time-to-Live) für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu Endpunkt-Dokumentationen bereitgestellt.
+Mit der Data Hygiene API können Sie die in Adobe Experience Platform gespeicherten personenbezogenen Daten Ihrer Kunden programmatisch korrigieren oder löschen sowie Ablaufdaten für Datensätze planen. In diesem Handbuch werden die erforderlichen Schritte zur Verwendung der API beschrieben und Links zu Endpunkt-Dokumentationen bereitgestellt.
 
 ## Erste Schritte
 
@@ -43,9 +43,9 @@ In diesem Dokument wird anhand von Beispielen für API-Aufrufe die korrekte Form
 
 A work order is a representation of a data hygiene task that deletes consumer identities from a specific dataset or all datasets. See the [work order endpoint guide](./workorder.md) for details on working with work orders in the API. -->
 
-## Time to Live (TTL) für Datensätze
+## Datensatzabläufe
 
-Eine Datensatz-TTL ist eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Beim Erstellen einer TTL geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Weitere Informationen zur Planung von Datensatz-TTLs in der API finden Sie im [Handbuch für Datensatz-TTL-Endpunkte](./ttl.md).
+Bei einem Datensatzablauf handelt es sich um eine zeitverzögerte Aktion zum Löschen eines Datensatzes. Durch Erstellung eines Datensatzablaufs geben Sie einen zukünftigen Zeitpunkt an, zu dem dieser Datensatz gelöscht werden soll. Siehe [Endpunkt-Anleitung zum Ablauf von Datensätzen](./dataset-expiration.md) für Details zur Planung der Ablaufdaten von Datensätzen in der API.
 
 ## Nächste Schritte
 
