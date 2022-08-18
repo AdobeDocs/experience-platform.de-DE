@@ -5,10 +5,10 @@ title: Segmentierungs-Service – Übersicht
 topic-legacy: overview
 description: Erfahren Sie mehr über den Segmentierungs-Service von Adobe Experience Platform und die Rolle, die dieser im Platform-Ökosystem spielt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 0267b0141f7b6944ea65bc413f14cc9580081387
+source-git-commit: 52197a6c009fb5b0b6037a4fef3c98ad7c327e2e
 workflow-type: tm+mt
-source-wordcount: '1630'
-ht-degree: 93%
+source-wordcount: '1632'
+ht-degree: 92%
 
 ---
 
@@ -53,15 +53,15 @@ Informationen zum Erstellen von Segmentdefinitionen mithilfe der API finden Sie 
 >title="Auswertungsmethoden"
 >abstract="Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
 
-Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
-
-### Streaming-Segmentierung  {#streaming}
-
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
 >title="Streaming-Bewertung"
->abstract="Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung."
+>abstract="Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente als Reaktion auf Benutzeraktivitäten aktualisiert."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Bewerten von Ereignissen nahezu in Echtzeit mit Streaming-Segmentierung"
+
+Platform unterstützt derzeit drei Methoden zum Evaluieren von Segmenten: Streaming-Segmentierung, Batch-Segmentierung und Edge-Segmentierung.
+
+### Streaming-Segmentierung  {#streaming}
 
 Streaming-Segmentierung ist ein fortlaufender Datenauswahlprozess, der Ihre Segmente als Reaktion auf Benutzeraktivitäten aktualisiert. Nachdem ein Segment erstellt und gespeichert wurde, wird die Segmentdefinition auf in [!DNL Real-time Customer Profile] eingehende Daten angewendet. Segmenthinzufügungen und -entfernungen werden regelmäßig verarbeitet, um sicherzustellen, dass Ihre Zielgruppe relevant bleibt.
 
