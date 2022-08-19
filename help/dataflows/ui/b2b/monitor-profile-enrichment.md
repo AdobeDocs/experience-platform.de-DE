@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Überwachen von Profilanreicherungsaufträgen
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: 842fe74b0b751c515a4faee437e1f94bd0662e11
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '768'
 ht-degree: 4%
 
 ---
@@ -56,6 +56,23 @@ Die folgenden Metriken sind für Lead-Vorgänge verfügbar, bei denen Profile zu
 | **[!UICONTROL Letzte erfolgreiche Ausführung]** | Gibt das Datum und die Uhrzeit des letzten erfolgreichen Leads an, zu dem der übereinstimmende Auftrag ausgeführt wurde. |
 | **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des Leads an, der zu einem übereinstimmenden Konto führt. |
 
+## Prädiktive Profilanreicherung für Lead- und Kontobewertung {#predictive-lead-to-account-scoring}
+
+Die [!UICONTROL Prädiktive Lead- und Kontobewertung] Dashboard zeigt die grundlegenden Metriken und den täglichen Auftragslaufstatus an, die für die [Prädiktive Lead- und Kontobewertung](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md) Profilanreicherung.
+
+![Prädiktive Profilanreicherung für Lead- und Kontobewertung](/help/dataflows/assets/ui/b2b/predictive-lead-and-account-scoring.png)
+
+Die folgenden Metriken sind für prädiktive Anreicherungsaufträge für Lead- und Kontobewertungsprofile verfügbar:
+
+| Metrik | Beschreibung |
+| --------- | ---------- |
+| **[!UICONTROL Auftragsstart]** | Gibt das Startdatum und die Startzeit des prädiktiven Lead- und Kontoauswertungsauftrags an. |
+| **[!UICONTROL Verarbeitungszeit]** | Die Gesamtdauer, die zum Abschluss des Auftrags benötigt wurde. |
+| **[!UICONTROL Score name]** | Der Bewertungsname des Auftrags. |
+| **[!UICONTROL Profiltyp]** | Der Typ der Punktzahl: <ul><li>Person</li><li>Konto</li></ul>. |
+| **[!UICONTROL Auftragstyp]** | Der Auftragstyp:<ul><li>Scoring</li><li>Training</li>. |
+| **[!UICONTROL Status]** | Gibt den Status (erfolgreich, fehlgeschlagen oder Verarbeitung) des prädiktiven Lead- und Kontobewertungsauftrags an. |
+
 ## UI-Steuerelemente {#ui-controls}
 
 In diesem Abschnitt werden verschiedene Optionen der Benutzeroberfläche in der Monitoring-Oberfläche beschrieben, mit denen Sie die auf der Seite angezeigten Metriken filtern können.
@@ -79,3 +96,4 @@ In diesem Tutorial können Sie jetzt Metriken für Profilanreicherungsaufträge 
 * [Verwandte Konten in der Echtzeit-Kundendatenplattform B2B](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 * [Registerkarte „Verwandte Konten“ im Handbuch zur Benutzeroberfläche für Kontoprofile](/help/rtcdp/accounts/account-profile-ui-guide.md)
 * [Lead zur Kontoübereinstimmung in der Echtzeit-Kundendatenplattform B2B](/help/rtcdp/b2b-ai-ml-services/lead-to-account-matching.md)
+* [Prädiktive Lead- und Kontobewertung in der Echtzeit-Kundendatenplattform B2B](/help/rtcdp/b2b-ai-ml-services/predictive-lead-and-account-scoring.md)

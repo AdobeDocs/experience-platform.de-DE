@@ -2,9 +2,9 @@
 title: Anwendungsfälle für die Segmentierung der Echtzeit-Kundendatenplattform B2B Edition
 description: Ein Überblick über die verschiedenen Anwendungsfälle der Echtzeit-CDP B2B Edition.
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: 6a108a0bfde3c8f44c1a1221b06581f0f69b5203
+source-git-commit: 1fed0cf37e7297c21330ebf51ae15054aa21c781
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1275'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,12 @@ Finden Sie alle Personen, die ein &quot;Entscheidungsträger&quot;jeder verloren
 Finden Sie alle Personen, die in einer Personalabteilung (HR) arbeiten und mit einem beliebigen Konto in Verbindung stehen. *oder eines der damit verbundenen Konten* die mindestens eine offene Chance im Wert des angegebenen Betrags (1 Million Dollar) oder mehr hat. Dieses Segment erfordert eine Verknüpfung zwischen dem [!UICONTROL XDM Individual Profile] Klasse, [!UICONTROL XDM-Geschäftskonto] -Klasse und [!UICONTROL XDM-Geschäftschancen] -Klasse.
 
 ![Benutzeroberfläche zur Segmentierung verwandter Konten](../assets/segmentation/segmentation-related-accounts.png)
+
+### Beispiel 9: Lead-Bewertungen und/oder Kontobewertungen zur Profilqualifizierung verwenden {#account-scoring}
+
+Finden Sie alle Profile mit einem Lead-Ergebnis über 80.
+
+![Benutzeroberfläche mit Segmentierung für prädiktive Lead- und Kontobewertung](../assets/segmentation/segmentation-predictive-lead-and-account-scoring.png)
 
 ## Nächste Schritte {#next-steps}
 

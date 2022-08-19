@@ -4,10 +4,10 @@ solution: Real-time Customer Data Platform
 audience: user
 user-guide-title: Handbuch zu Real-time Customer Data Platform
 user-guide-description: Bringen Sie bekannte und anonyme Daten aus mehreren Unternehmensquellen zusammen, um Kundenprofile anzulegen, Zielgruppen-Segmente aus diesen Profilen zu erstellen und diese Segmente für Drittanbieterziele bereitzustellen.
-source-git-commit: 375f0c8a221540553b05aa1d5fb188a31e43f3e8
+source-git-commit: 03c2a8b427d2bd916c87000b63de16950a9e05bf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '205'
+ht-degree: 86%
 
 ---
 
@@ -47,7 +47,10 @@ ht-degree: 0%
    * [Profil durchsuchen](profile/profile-browse.md)
 * Echtzeit-CDP B2B Edition AI/ML-Dienste {#b2b-cdp-ai-ml}
    * [Verwandte Konten](b2b-ai-ml-services/related-accounts.md)
-   * [Interessenten-Konto-Abgleich](b2b-ai-ml-services/lead-to-account-matching.md)
+   * [Lead-Konto-Zuordnung](b2b-ai-ml-services/lead-to-account-matching.md)
+   * Prädiktive Lead- und Kontobewertung {#predictive-lead-and-account-scoring-intro}
+      * [Prädiktive Lead- und Kontobewertung - Übersicht](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
+      * [Prädiktive Lead- und Kontobewertung verwalten](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}
    * [Übersicht über Schemas](schemas/overview.md)
    * [Schemas in Real-time Customer Data Platform B2B Edition](schemas/b2b.md)
