@@ -2,7 +2,7 @@
 title: Adobe Analytics-Erweiterung – Übersicht
 description: Machen Sie sich mit der Tag-Erweiterung „Adobe Analytics“ in Adobe Experience Platform vertraut.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 4b0b4cf7c262940bd21965d928cc7d0cf12d15d1
+source-git-commit: 9fe94af349e1d9c979c78dce69c5180086df3adb
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 96%
@@ -221,7 +221,7 @@ Konfigurieren Sie Feldbeschreibungen für die globalen Cookie-Einstellungen, die
 
 Eindeutiger Wert, der einen Kunden in Online- und Offline-Systemen kennzeichnet.
 
-Siehe [visitorID](https://experienceleague.adobe.com/docs/analytics/import/data-sources/data-types-and-categories/datasrc-visitorid.html?lang=de).
+Siehe [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=de).
 
 ### Besucher-Namespace
 
