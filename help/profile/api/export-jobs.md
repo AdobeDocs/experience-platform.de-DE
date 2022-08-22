@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform; Profil; Echtzeit-Kundenprofil; Fehlerbehebung; API
-title: Export Job API Endpoint
+title: Profil-Export-Auftrags-API-Endpunkt
 topic-legacy: guide
 type: Documentation
 description: Das Echtzeit-Kundenprofil ermöglicht es Ihnen, innerhalb von Adobe Experience Platform eine zentrale Ansicht einzelner Kunden zu erstellen, indem es Daten aus verschiedenen Quellen zusammenführt, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden.
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1519'
 ht-degree: 10%
 
 ---
 
-# Endpunkt &quot;Exportaufträge&quot;
+# Endpunkt der Profilexport-Aufträge
 
 [!DNL Real-time Customer Profile] ermöglicht Ihnen, eine zentrale Ansicht einzelner Kunden zu erstellen, indem Sie Daten aus verschiedenen Quellen zusammenführen, einschließlich Attributdaten und Verhaltensdaten. Profildaten können dann zur weiteren Verarbeitung in einen Datensatz exportiert werden. Beispielsweise Zielgruppensegmente aus [!DNL Profile] -Daten können zur Aktivierung exportiert und Profilattribute zur Berichterstellung exportiert werden.
 

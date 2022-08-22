@@ -1,14 +1,12 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Datenvorbereitung;API-Handbuch;Schemas;
-solution: Experience Platform
-title: Endpunkt für Schema-API
-topic-legacy: schemas
-description: Sie können den Endpunkt „/features“ in der Adobe Experience Platform-API verwenden, um Ihre Zuordnungsausdrücke zu validieren und die verfügbaren Zuordnungssatzfunktionen aufzulisten.
+title: Functions API Endpoint
+description: Sie können den Endpunkt "/features"in der Data Prep-API verwenden, um Ihre Zuordnungsausdrücke zu validieren und die verfügbaren Zuordnungssatzfunktionen aufzulisten.
 exl-id: dc24bfb4-2d96-4757-a610-0c2ee960d41d
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 100%
+source-wordcount: '209'
+ht-degree: 88%
 
 ---
 

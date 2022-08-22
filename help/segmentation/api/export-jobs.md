@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Segmentierung; Segmentierung; Segmentierungsdienst; Exportaufträge; API;
 solution: Experience Platform
-title: Export Job API Endpoint
+title: API-Endpunkt für Segmentexport-Aufträge
 topic-legacy: developer guide
 description: Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können den Endpunkt /export/jobs in der Adobe Experience Platform Segmentation Service-API verwenden, mit dem Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1682'
 ht-degree: 16%
 
 ---
 
-# Endpunkt &quot;Exportaufträge&quot;
+# Endpunkt der Segmentexportaufträge
 
 Exportaufträge sind asynchrone Prozesse, mit denen Zielgruppensegmentmitglieder in Datensätzen beibehalten werden. Sie können die `/export/jobs` -Endpunkt in der Adobe Experience Platform-Segmentierungs-API, mit der Sie Exportaufträge programmgesteuert abrufen, erstellen und abbrechen können.
 

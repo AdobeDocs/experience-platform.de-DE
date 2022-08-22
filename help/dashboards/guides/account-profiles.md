@@ -1,11 +1,11 @@
 ---
-title: Dashboard "Kontoprofile"
+title: Dashboard-Anleitung für Kontoprofile
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den B2B-Kontoprofilen Ihres Unternehmens anzeigen können.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8de94d38fd1d2c001935180851d6877dfe2a8941
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 4%
+source-wordcount: '823'
+ht-degree: 9%
 
 ---
 
@@ -61,12 +61,12 @@ Adobe bietet Standard-Widgets, mit denen Sie verschiedene Metriken im Zusammenha
 
 Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen Sie den Namen eines Widgets aus der folgenden Liste aus:
 
-* [Rechnungsabschlüsse nach Wirtschaftszweigen insgesamt](#total-accounts-by-industry)
+* [ für die Gesamtanzahl der Konten nach Branchen](#total-accounts-by-industry)
 * [Kontoprofile hinzugefügt](#account-profiles-added)
 
-### Rechnungsabschlüsse nach Wirtschaftszweigen insgesamt {#total-accounts-by-industry}
+###  für die Gesamtanzahl der Konten nach Branchen {#total-accounts-by-industry}
 
-Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Zählergrößen für die Branchen zu veranschaulichen, aus denen die Gesamtanzahl besteht. Der Schlüssel bietet Informationen zur Farbcodierung für die verschiedenen Branchen, aus denen das Ringdiagramm besteht.
+Dieses Widget zeigt die Gesamtanzahl der Konten in einer einzelnen Metrik und verwendet ein Ringdiagramm, um die proportionalen Anteile für die Branchen zu veranschaulichen, aus denen sich die Gesamtanzahl zusammensetzt. Der Schlüssel bietet Informationen zur Farbcodierung für die verschiedenen Branchen, aus denen das Ringdiagramm besteht.
 
 Einzelne Zahlen für die verschiedenen Branchen werden in einem Dialogfeld angezeigt, wenn der Cursor über den entsprechenden Abschnitt des Ringdiagramms bewegt wird.
 

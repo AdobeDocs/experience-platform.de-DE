@@ -1,5 +1,5 @@
 ---
-title: Echtzeit-Kundenprofil – Übersicht
+title: Videoübersicht zum Echtzeit-Kundenprofil
 description: In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und eine Übersicht über das Durchsuchen von Profilen in der Platform-Benutzeroberfläche.
 product: experience platform
 type: Documentation
@@ -9,19 +9,19 @@ audience: all
 doc-type: video
 activity: understand
 exl-id: cdc91194-771f-4026-808f-97d70db436d9
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 6%
+source-wordcount: '117'
+ht-degree: 18%
 
 ---
 
 # Übersicht über das Echtzeit-Kundenprofil
 
-In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und erfahren, wie Daten aus mehreren Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden Ihrer Kunden zu erstellen. Um mehr über die Funktionen und Funktionen des Echtzeit-Kundenprofils zu erfahren, lesen Sie zunächst die [Übersicht über das Echtzeit-Kundenprofil](../home.md).
+In diesem Video erhalten Sie ein grundlegendes Verständnis des Echtzeit-Kundenprofils in Adobe Experience Platform und erfahren, wie Daten aus mehreren Quellen zusammengeführt werden, um ein zentralisiertes Profil für jeden Ihrer Kunden zu erstellen. Um mehr über die Funktionen und Funktionen des Echtzeit-Kundenprofils zu erfahren, lesen Sie zunächst das [Übersicht über das Echtzeit-Kundenprofil](../home.md).
 
 >[!NOTE]
 >
->Die Benutzeroberfläche der Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Die aktuellsten Informationen finden Sie im [Profil-UI-Handbuch](../ui/user-guide.md).
+>Die Benutzeroberfläche von Experience Platform wird häufig aktualisiert und kann sich seit der Aufzeichnung dieses Videos geändert haben. Aktuelle Informationen finden Sie im Abschnitt [Handbuch zur Profil-UI](../ui/user-guide.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)

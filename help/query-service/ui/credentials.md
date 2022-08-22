@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform; Startseite; beliebte Themen; Abfragedienst; Query Service; Abfrage; Abfrageeditor; Abfrage-Editor; Abfrage-Editor;
 solution: Experience Platform
-title: UI-Anleitung für Query Service
+title: Anleitung zu Query Service-Anmeldedaten
 topic-legacy: guide
 description: Adobe Experience Platform Query Service bietet eine Benutzeroberfläche, über die Abfragen geschrieben und ausgeführt, zuvor ausgeführte Abfragen angezeigt und auf Abfragen zugegriffen werden kann, die von Benutzern in Ihrer IMS-Organisation gespeichert wurden.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: a5e8b4df78d8dff58e000030d209606b46a582e8
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
 source-wordcount: '1168'
 ht-degree: 2%

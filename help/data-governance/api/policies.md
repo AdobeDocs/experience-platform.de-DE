@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Richtliniendurchsetzung;API-basierte Durchsetzung;Datenverwaltung
 solution: Experience Platform
-title: Richtlinien-API-Endpunkt
+title: API-Endpunkt für Datennutzungsrichtlinien
 topic-legacy: developer guide
 description: Datennutzungsrichtlinien sind von Ihrem Unternehmen angewandte Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in der Experience Platform ausführen bzw. nicht ausführen dürfen. Der Endpunkt „/policies“ wird für alle API-Aufrufe zum Anzeigen, Erstellen, Aktualisieren oder Löschen von Datennutzungsrichtlinien verwendet.
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
 workflow-type: tm+mt
-source-wordcount: '1813'
-ht-degree: 100%
+source-wordcount: '1840'
+ht-degree: 98%
 
 ---
 
-# Richtlinien-Endpunkt
+# Endpunkt für Datennutzungsrichtlinien
 
 Datennutzungsrichtlinien sind Regeln, die die Arten von Marketing-Aktionen beschreiben, die Sie für Daten in [!DNL Experience Platform] ausführen bzw. nicht ausführen dürfen. Mit dem `/policies`-Endpunkt in der [!DNL Policy Service API] können Sie Datennutzungsrichtlinien für Ihr Unternehmen programmgesteuert verwalten.
+
+>[!IMPORTANT]
+>
+>Dieser Endpunkt darf nicht mit der `/policies` -Endpunkt im [Access Control-API](../../access-control/abac/api/policies.md), der zur Verwaltung von Zugriffssteuerungsrichtlinien verwendet wird.
 
 ## Erste Schritte
 
