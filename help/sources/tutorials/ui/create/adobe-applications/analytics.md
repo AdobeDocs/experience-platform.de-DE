@@ -6,10 +6,10 @@ topic-legacy: overview
 type: Tutorial
 description: Erfahren Sie, wie Sie eine Quellverbindung für Adobe Analytics über die Benutzeroberfläche erstellen, um Kundendaten in Adobe Experience Platform zu importieren.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 2cb6803ecf56dd9a7d9614c72e3a1ff4e76ba966
+source-git-commit: 1d77ad44c7123f32301257c238299b7c16e2c92b
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 86%
+source-wordcount: '2182'
+ht-degree: 69%
 
 ---
 
@@ -151,6 +151,82 @@ Die folgende Dokumentation enthält weitere Ressourcen zum Verständnis von Date
 * [Datenvorbereitung – Übersicht](../../../../../data-prep/home.md)
 * [Funktionen zur Datenvorbereitung](../../../../../data-prep/functions.md)
 * [Hinzufügen von berechneten Feldern](../../../../../data-prep/ui/mapping.md#calculated-fields)
+
+### Filtern nach [!DNL Profile Service] (Beta)
+
+>[!IMPORTANT]
+>
+>Filterunterstützung [!DNL Analytics] -Daten befinden sich derzeit in der Beta-Phase und stehen nicht allen Benutzern zur Verfügung. Die Dokumentation und Funktionalität können sich ändern.
+
+Nachdem Sie die Zuordnungen für Ihre [!DNL Analytics] Report Suite-Daten verwenden, können Sie Filterregeln und -bedingungen anwenden, um Daten selektiv in die [!DNL Profile Service]. Filterunterstützung ist nur verfügbar für [!DNL Analytics] Daten und Daten werden nur vor der Eingabe gefiltert [!DNL Profile.] Alle Daten werden in den Daten-Pool aufgenommen.
+
+#### Filterung auf Zeilenebene
+
+Sie können Daten nach [!DNL Profile] Aufnahme auf Zeilen- und Spaltenebene. Mit der Filterung auf Zeilenebene können Sie Kriterien definieren, z. B. Zeichenfolge enthält, gleich, beginnt oder endet mit. Sie können auch die Filterung auf Zeilenebene verwenden, um Join-Bedingungen mithilfe von `AND` sowie `OR`und die Bedingungen mithilfe von `NOT`.
+
+So filtern Sie Ihre [!DNL Analytics] Daten auf Zeilenebene, wählen Sie **[!UICONTROL Zeilenfilter]**.
+
+![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
+
+Verwenden Sie die linke Leiste, um durch die Schemahierarchie zu navigieren, und wählen Sie das von Ihnen ausgewählte Schemaattribut aus, um ein bestimmtes Schema weiter aufzuschlüsseln.
+
+![linke Leiste](../../../../images/tutorials/create/analytics/left-rail.png)
+
+Nachdem Sie das Attribut identifiziert haben, das Sie konfigurieren möchten, wählen Sie es aus der linken Leiste aus und ziehen Sie es in das Filterfeld.
+
+![filtering-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
+
+Um verschiedene Bedingungen zu konfigurieren, wählen Sie **[!UICONTROL gleich]** und wählen Sie dann eine Bedingung aus dem angezeigten Dropdown-Fenster aus.
+
+Die Liste der konfigurierbaren Bedingungen umfasst:
+
+* [!UICONTROL gleich]
+* [!UICONTROL ist nicht gleich]
+* [!UICONTROL beginnt mit]
+* [!UICONTROL endet mit]
+* [!UICONTROL endet nicht mit]
+* [!UICONTROL contains]
+* [!UICONTROL „Enthält nicht“]
+* [!UICONTROL vorhanden]
+* [!UICONTROL nicht vorhanden]
+
+![Bedingungen](../../../../images/tutorials/create/analytics/conditions.png)
+
+Geben Sie anschließend die Werte ein, die Sie basierend auf dem von Ihnen ausgewählten Attribut aufnehmen möchten. Im folgenden Beispiel: [!DNL Apple] und [!DNL Google] zur Aufnahme als Teil der **[!UICONTROL Hersteller]** -Attribut.
+
+![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+
+Um Ihre Filterbedingungen weiter zu spezifizieren, fügen Sie ein weiteres Attribut aus dem Schema hinzu und fügen Sie dann Werte hinzu, die auf diesem Attribut basieren. Im folgenden Beispiel wird die Variable **[!UICONTROL Modell]** hinzugefügt und Modelle wie das [!DNL iPhone 13] und [!DNL Google Pixel 6] zur Aufnahme gefiltert werden.
+
+![include-model](../../../../images/tutorials/create/analytics/include-model.png)
+
+Um einen neuen Container hinzuzufügen, wählen Sie die Auslassungszeichen (`...`) oben rechts in der Filteroberfläche und wählen Sie dann **[!UICONTROL Container hinzufügen]**.
+
+![add-container](../../../../images/tutorials/create/analytics/add-container.png)
+
+Nachdem ein neuer Container hinzugefügt wurde, wählen Sie **[!UICONTROL Einschließen]** und wählen Sie **[!UICONTROL Ausschließen]** aus dem Dropdown-Fenster, das angezeigt wird.
+
+![exclude](../../../../images/tutorials/create/analytics/exclude.png)
+
+Schließen Sie den gleichen Prozess ab, indem Sie Schemaattribute ziehen und die entsprechenden Werte hinzufügen, die Sie aus der Filterung ausschließen möchten. Im folgenden Beispiel wird die Variable [!DNL iPhone 12], [!DNL iPhone 12 mini]und [!DNL Google Pixel 5] werden alle aus dem Ausschluss aus dem **[!UICONTROL Modell]** -Attribut, ist Querformat von der **[!UICONTROL Bildschirmausrichtung]**, und Modellnummer [!DNL A1633] ist ausgeschlossen von **[!UICONTROL Modellnummer]**.
+
+Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+
+![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
+
+#### Filterung auf Spaltenebene
+
+Auswählen **[!UICONTROL Spaltenfilter]** aus der Kopfzeile, um die Filterung auf Spaltenebene anzuwenden.
+
+![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
+
+Die Seite wird in eine interaktive Schemastruktur aktualisiert und zeigt Ihre Schemaattribute auf Spaltenebene an. Von hier aus können Sie die Datenspalten auswählen, aus denen Sie ausschließen möchten [!DNL Profile] Aufnahme. Alternativ können Sie eine Spalte erweitern und bestimmte Attribute zum Ausschließen auswählen.
+
+Standardmäßig werden alle [!DNL Analytics] gehen Sie zu [!DNL Profile] und dieser Prozess ermöglicht, dass Verzweigungen von XDM-Daten ausgeschlossen werden. [!DNL Profile] Aufnahme.
+
+Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **[!UICONTROL Weiter]**.
+
+![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Angeben von Datenflussdetails
 
