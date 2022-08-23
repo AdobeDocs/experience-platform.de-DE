@@ -4,10 +4,10 @@ user-guide-title: Hilfe zu Adobe Experience Platform-Quell-Connectoren
 breadcrumb-title: Source Connectoren-Anleitung
 user-guide-description: Erfassen Sie Daten aus verschiedenen Quellen oder Strukturen, kennzeichnen Sie diese, und verbessern Sie bereits erfasste Daten.
 feature: Sources
-source-git-commit: 6f7611b120046fffc1b7c15bd657d699f4b4a588
+source-git-commit: 6ae0560607c1e5f80ddfe752e59850f438794351
 workflow-type: tm+mt
-source-wordcount: '795'
-ht-degree: 92%
+source-wordcount: '802'
+ht-degree: 91%
 
 ---
 
@@ -82,6 +82,7 @@ ht-degree: 92%
       - [Phoenix-Connector](connectors/databases/phoenix.md)
       - [PostgreSQL-Connector](connectors/databases/postgres.md)
       - [Snowflake-Connector](connectors/databases/snowflake.md)
+      - [Teradata Vantage-Connector](connectors/databases/teradata-vantage.md)
    - E-Commerce {#ecommerce}
       - [Shopify-Connector](connectors/ecommerce/shopify.md)
    - Lokales System {#local-system}
@@ -148,6 +149,7 @@ ht-degree: 92%
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
+         - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
       - E-Commerce {#ecommerce}
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -250,6 +252,7 @@ ht-degree: 92%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
+         - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - E-Commerce {#ecommerce}
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
       - Lokales System {#local-system}
