@@ -1,10 +1,10 @@
 ---
 title: Adobe Experience Platform - Versionshinweise, August 2022
 description: Die Versionshinweise für Adobe Experience Platform vom August 2022.
-source-git-commit: 5e7ceda9ed126a2c003fb51302393631e0425cd2
+source-git-commit: 2a507b4fe5b7c9dc523ceb5b2f39becf9e574ed9
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 62%
+source-wordcount: '317'
+ht-degree: 49%
 
 ---
 
@@ -14,7 +14,22 @@ ht-degree: 62%
 
 Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
+- [Datenvorbereitung](#data-prep)
 - [Quellen](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] ermöglicht es Dateningenieuren, Daten mit dem Experience-Datenmodell (XDM) zu mappen sowie sie umzuformen und zu validieren.
+
+**Aktualisierte Funktionen**
+
+| Funktion | Beschreibung |
+| --- | --- |
+| Unterstützung für die Aufnahme von Datensätzen mit Warnungen | Die Datenvorbereitung lokalisiert nun Warnungen (nicht kritische Fehler) in die Felder und ermöglicht die Erfassung des restlichen Teils der Zeile. Alle Mapper-Transformationsfehler werden jetzt als Warnungen und teilweise aufgenommene Zeilen als erfolgreich gemeldet, mit einer Warnung.  Die Überwachung wird auch für Datensätze mit Warnungen und Diagnosedetails unterstützt. Die partielle Erfassung von Datensätzen mit Warnungen ist derzeit nur für Streaming-Daten verfügbar. Lesen Sie die Dokumentation unter [Erfassen von Datensätzen mit Warnungen](../../sources/tutorials/ui/monitor-streaming.md) für weitere Informationen. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
 ## Quellen {#sources}
 
