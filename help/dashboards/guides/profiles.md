@@ -4,9 +4,9 @@ title: Handbuch zum Profil-Dashboard
 description: Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu den Echtzeit-Kundenprofildaten Ihres Unternehmens anzeigen können.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 05e63064dc8eb3f070a383f508cc4a86d4f5e9cc
+source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
 workflow-type: tm+mt
-source-wordcount: '3902'
+source-wordcount: '3769'
 ht-degree: 8%
 
 ---
@@ -122,7 +122,6 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 >id="platform_dashboards_profiles_profilecount"
 >title="Anzahl der Profile"
 >abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Profilanzahl]** Widget zeigt die Gesamtzahl der zusammengeführten Profile im Profilspeicher zum Zeitpunkt der Momentaufnahme an. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen.
 
@@ -148,7 +147,6 @@ Die [!UICONTROL Trend zur Profilanzahl] Widget verwendet ein Kantengraph, um den
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Änderung der Profilanzahl"
 >abstract="Dieses Widget zeigt die Gesamtzahl der zusammengeführten Profile an **hinzugefügt** zum Profilspeicher zum Zeitpunkt der letzten Momentaufnahme. Die Zahl hängt von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Änderung der Profilanzahl]** -Widget zeigt die Anzahl der zusammengeführten Profile an, die seit der vorherigen Momentaufnahme zum Profilspeicher hinzugefügt wurden. Diese Zahl ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zu einem einzelnen Profil für jede Person zusammenzuführen. Mit der Dropdown-Auswahl können Sie die Anzahl der Profile anzeigen, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten hinzugefügt wurden.
 
@@ -164,7 +162,6 @@ Die **[!UICONTROL Änderung der Profilanzahl]** -Widget zeigt die Anzahl der zus
 >id="platform_dashboards_profiles_profilesaddedtrend"
 >title="Trend zur Änderung der Anzahl der Profile"
 >abstract="Dieses Widget zeigt die Anzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Die Zahl hängt auch von der ausgewählten Zusammenführungsrichtlinie ab, die auf Ihre Profildaten angewendet wird."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Trend zur Änderung der Anzahl der Profile]** Widget zeigt die Gesamtanzahl der zusammengeführten Profile an, die in den letzten 30 Tagen, 90 Tagen oder 12 Monaten täglich zum Profilspeicher hinzugefügt wurden. Diese Zahl wird jeden Tag aktualisiert, wenn die Momentaufnahme erstellt wird. Wenn Sie also Profile in Platform aufnehmen möchten, wird die Anzahl der Profile erst angezeigt, wenn die nächste Momentaufnahme erfolgt. Die Anzahl der hinzugefügten Profile ist das Ergebnis der ausgewählten Zusammenführungsrichtlinie, die auf Ihre Profildaten angewendet wird, um Profilfragmente zusammenzuführen und so für jede Person ein Profil zu erstellen.
 
@@ -194,7 +191,6 @@ Dieses Widget unterstützt Sie bei der Verwaltung Ihrer Zielaktivierungsanforder
 >id="platform_dashboards_profiles_profilesbyidentity"
 >title="Profile nach Identität"
 >abstract="Dieses Widget zeigt die Aufschlüsselung aller zusammengeführten Profile im Profilspeicher nach Identitäten an."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Profile nach Identität]** -Widget zeigt die Aufschlüsselung der Identitäten über alle zusammengeführten Profile in Ihrem Profilspeicher an. Die Gesamtzahl der Profile nach Identität (d. h. das Addieren der für jeden Namespace angezeigten Werte) kann höher sein als die Gesamtzahl der zusammengeführten Profile, da einem Profil mehrere Namespaces zugeordnet sein können. Wenn beispielsweise ein Kunde mit Ihrer Marke auf mehr als einem Kanal interagiert, werden diesem einzelnen Kunden mehrere Namespaces zugeordnet.
 
@@ -216,7 +212,6 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 >id="platform_dashboards_profiles_identityoverlap"
 >title="Identitätsüberschneidung"
 >abstract="Dieses Widget verwendet ein Venn-Diagramm, um die Überschneidung von Profilen in Ihrem Profilspeicher anzuzeigen, die die beiden ausgewählten Identitäten enthalten."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die **[!UICONTROL Identitätsüberschneidung]** Widget verwendet ein Venn-Diagramm oder ein Set-Diagramm, um die Überschneidung von Profilen in Ihrem Profilspeicher anzuzeigen, die die beiden ausgewählten Identitäten enthalten.
 
@@ -234,7 +229,6 @@ Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe E
 >id="platform_dashboards_profiles_singleidentityprofiles"
 >title="Einzelne Identitätsprofile"
 >abstract="Dieses Widget enthält die Profile Ihrer Organisation, die nur über einen ID-Typ verfügen, der ihre Identität erstellt. Dieser ID-Typ kann entweder eine E-Mail oder eine ECID sein."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Einzelne Identitätsprofile] -Widget stellt die Anzahl der Profile Ihres Unternehmens bereit, die nur über einen ID-Typ verfügen, der ihre Identität erstellt. Dieser ID-Typ kann entweder eine E-Mail oder eine ECID sein. Die Anzahl der Profile wird aus den Daten der letzten Momentaufnahme generiert.
 
@@ -254,7 +248,6 @@ Bewegen Sie den Mauszeiger über einzelne Balken, um ein Dialogfeld mit der Gesa
 >id="platform_dashboards_profiles_unsegmentedprofiles"
 >title="Nicht segmentierte Profile"
 >abstract="Dieses Widget stellt die Gesamtanzahl aller Profile bereit, die keinem Segment zugeordnet sind, und bietet die Möglichkeit zur Profilaktivierung in Ihrer gesamten Organisation."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Nicht segmentierte Profile] -Widget stellt die Gesamtanzahl aller Profile bereit, die an kein Segment angehängt sind. Der generierte Wert gibt die zum Zeitpunkt der letzten Momentaufnahme korrekte Anzahl an und zeigt, wie viele Profile in Ihrem gesamten Unternehmen aktiviert werden können. Sie zeigt auch die Möglichkeit an, Profile auszuschließen, die keinen angemessenen ROI bieten.
 
@@ -266,7 +259,6 @@ Die [!UICONTROL Nicht segmentierte Profile] -Widget stellt die Gesamtanzahl alle
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"
 >title="Trend zu nicht segmentierten Profilen"
 >abstract="Dieses Widget bietet eine grafische Darstellung der Anzahl der Profile, die in einem bestimmten Zeitraum nicht mit einem Segment verbunden sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#unsegmented-profiles-trend" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Trend für nicht segmentierte Profile] -Widget bietet eine Liniendiagrammdarstellung für die Anzahl der Profile, die in einem bestimmten Zeitraum nicht an ein Segment angehängt sind. Der Trend der Profile, die keinem Segment zugeordnet sind, kann über einen Zeitraum von 30 Tagen, 90 Tagen und 12 Monaten visualisiert werden. Der Zeitraum wird aus einem Dropdown-Menü im Widget ausgewählt. Die Anzahl der Profile wird auf der Y-Achse und der Zeit auf der X-Achse angezeigt.
 
@@ -278,7 +270,6 @@ Die [!UICONTROL Trend für nicht segmentierte Profile] -Widget bietet eine Linie
 >id="platform_dashboards_profiles_unsegmentedprofilesbyidentity"
 >title="Nicht segmentierte Profile nach Identität"
 >abstract="Dieses Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Nicht segmentierte Profile nach Identität] Widget kategorisiert die Gesamtzahl der nicht segmentierten Profile anhand ihrer eindeutigen Kennung. Die Daten werden in einem Balkendiagramm visualisiert, um einen einfachen Vergleich zu ermöglichen.
 
@@ -359,7 +350,6 @@ Um mehr über die einzelnen Wirksamkeits-Widgets des Profils zu erfahren, wähle
 >id="platform_dashboards_profiles_attributesqualityassessment"
 >title="Attributqualitätsbeurteilung"
 >abstract="Dieses Widget zeigt die Vollständigkeit und Kardinalität aller Profile entsprechend ihren Attributen. Jede Zeile beschreibt ein Attribut. Die **Profile** gibt die Anzahl der Profile an, die dieses Attribut aufweisen und mit Werten gefüllt sind, die nicht null sind. Die **Vollständigkeit** Prozentwert wird durch die Gesamtanzahl der Profile bestimmt, die dieses Attribut aufweisen und mit Werten ungleich null gefüllt sind, dividiert durch die Gesamtanzahl der nicht leeren Werte in den Profilen für dieses Attribut. **Kardinalität** stellt die Gesamtzahl der eindeutigen Werte ungleich null dieses Attributs für alle Attribute bereit."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Beurteilung der Attributqualität] -Widget zeigt die Vollständigkeit und Kardinalität aller Profile entsprechend ihren Attributen an. Die Daten sind bis zum letzten Verarbeitungsdatum korrekt. Diese Informationen werden als Tabelle mit vier Spalten dargestellt, wobei jede Zeile in der Tabelle ein einzelnes Attribut darstellt.
 
@@ -378,7 +368,6 @@ Die [!UICONTROL Beurteilung der Attributqualität] -Widget zeigt die Vollständi
 >id="platform_dashboards_profiles_profilesbycompleteness"
 >title="Profile nach Vollständigkeit"
 >abstract="Das Ringdiagramm zeigt den Prozentsatz der Profilattribute an, die unter allen beobachteten Attributen mit Werten gefüllt sind, die nicht null sind. Es zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vollständigkeit. Bei hochwertigen Vollständigkeitsprofilen werden mehr als 70 % ihrer Attribute ausgefüllt. Mittlere Vollständigkeitsprofile enthalten zwischen 30 % und 70 % ihrer Attribute. Profile mit geringer Vollständigkeit haben weniger als 30 % ihrer Attribute ausgefüllt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Die [!UICONTROL Profile nach Vollständigkeit] -Widget erstellt ein Ringdiagramm zur Profilvollständigkeit seit dem letzten Verarbeitungsdatum. Die Vollständigkeit eines Profils wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten ungleich null gefüllt sind.
 
@@ -396,7 +385,6 @@ Dieses Widget zeigt den Anteil der Profile mit hoher, mittlerer oder geringer Vo
 >id="platform_dashboards_profiles_profilescompletenesstrend"
 >title="Profilvollständigkeitstrend"
 >abstract="Dieses Widget erstellt ein gestapeltes Flächendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten gefüllt sind, die nicht null sind."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html" text="Weitere Informationen finden Sie in der Dokumentation ."
 
 Dieses Widget erstellt ein gestapeltes Flächendiagramm zur Darstellung des Trends der Profilvollständigkeit im Zeitverlauf. Die Vollständigkeit wird anhand des Prozentsatzes der Attribute gemessen, die unter allen beobachteten Attributen mit Werten ungleich null gefüllt sind. Die Profilvollständigkeit wird seit dem letzten Verarbeitungsdatum als hoch, mittel oder gering kategorisiert.
 
