@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: f458b3f204e961f849782f26a1563a67d6ea4b60
+source-git-commit: 3e3389c3e77597ace4177e683aaf7494364a5be7
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 36%
+source-wordcount: '1900'
+ht-degree: 37%
 
 ---
 
@@ -36,7 +36,7 @@ Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Ko
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Datenschutz | <ul><li>Attribution AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung.</li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li>bis [attributbasierte Zugriffssteuerung](../../../help/access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Administratoren können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>[Datenhygiene](../../../help/hygiene/home.md) -Funktionen innerhalb von Attribution AI ermöglichen es Ihnen, aktualisierte Daten nur für Weiterbildung und Scoring zu verwenden. Wenn Sie Daten löschen möchten, verwendet Attribution AI auch nicht die gelöschten Daten.</li><li>Attribution AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li></ul> |
+| Unterstützung für Datenschutz | <ul><li>Attribution AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien für die Verwaltung von [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung.</li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li>bis [attributbasierte Zugriffssteuerung](../../../help/access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Dabei kann es sich um einem Objekt hinzugefügte Metadaten handeln, z. B. Beschriftungen. Administratoren können außerdem Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Attribution AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -52,7 +52,7 @@ Kunden-KI in Real-time Customer Data Platform dient dazu, für einzelne Profile 
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Unterstützung für Datenschutz | <ul><li>Customer AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien zur Verwaltung [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung.</li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Diese Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. Beschriftungen. Administratoren können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>[Datenhygiene](../../../help/hygiene/home.md) Funktionen innerhalb von Customer AI ermöglichen Ihnen, aktualisierte Daten nur für Weiterbildung und Scoring zu verwenden. Auf ähnliche Weise verzichtet Customer AI bei der Anforderung, Daten zu löschen, auf die Verwendung der gelöschten Daten.</li><li>Customer AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li></ul> |
+| Unterstützung für Datenschutz | <ul><li>Customer AI unterstützt jetzt die Definition von Benutzerrollen und Zugriffsrichtlinien zur Verwaltung [Berechtigungen](../../../help/access-control/abac/ui/permissions.md) für Funktionen und Objekte in einer Produktanwendung.</li><li>Die Administratorprotokoll-Ressourcen werden automatisch aufgezeichnet, wenn die Aktivität stattfindet.</li><li> bis [attributbasierte Zugriffssteuerung](../../access-control/abac/overview.md), können Administratoren den Zugriff auf bestimmte Objekte und/oder Funktionen anhand bestimmter Attribute steuern. Diese Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. Beschriftungen. Administratoren können auch Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.</li><li>Customer AI nutzt Platform-Datensätze. Um die Einhaltung der DSGVO zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen. Alle Daten werden im Transit und im Ruhezustand verschlüsselt.</li></ul> |
 
 {style=&quot;table-layout:auto&quot;}
 
