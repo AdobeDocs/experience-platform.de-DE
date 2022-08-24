@@ -4,10 +4,10 @@ title: Dashboard-Anleitung für Segmente
 description: 'Adobe Experience Platform bietet ein Dashboard, über das Sie wichtige Informationen zu Segmenten anzeigen können, die Ihr Unternehmen erstellt hat. '
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: e59ba2e83808b460016805997580dc16c4cd369e
+source-git-commit: e18d37ba02d6edee77c91b719a0a2336e1316b71
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 11%
+source-wordcount: '1665'
+ht-degree: 10%
 
 ---
 
@@ -75,6 +75,7 @@ Um mehr über die einzelnen verfügbaren Standard-Widgets zu erfahren, wählen S
 * [[!UICONTROL Zielgruppenüberschneidung]](#audience-overlap)
 * [[!UICONTROL Identitätsüberschneidung]](#identity-overlap)
 * [[!UICONTROL Profile nach Identität]](#profiles-by-identity)
+* [[!UICONTROL Geplante Aktivierungen]](#scheduled-activations)
 
 ### [!UICONTROL Zielgruppengröße] {#audience-size}
 
@@ -176,6 +177,14 @@ Auswählen **[!UICONTROL Untertitel]** , um das Dialogfeld mit den automatischen
 Ein maschinelles Lernmodell generiert automatisch Dateneinblicke, indem es die Gesamtverteilung und die Schlüsseldimensionen der Daten analysiert.
 
 Weitere Informationen zu Identitäten finden Sie unter [Dokumentation zu Adobe Experience Platform Identity Service](../../identity-service/home.md).
+
+### Geplante Aktivierungen {#scheduled-activations}
+
+Die [!UICONTROL Geplante Aktivierungen] -Widget bietet eine tabellarisierte Ansicht der zuletzt aktivierten Ziele. Die Tabelle enthält die Zielplattform, den Namen Ihres Aktivierungsflusses zu diesem Ziel sowie das Start- und Enddatum der Aktivierung für das ausgewählte Segment. Wenn für die Aktivierung kein Enddatum angegeben wurde, wird dies als [!UICONTROL Laufend]. Das zu analysierende Segment wird oben auf der Seite aus dem Dropdown-Menü ausgewählt.
+
+Mit dem Widget können Sie auf einen Blick erkennen, wo und wann die Audience aktiviert wird, und doppelte oder unnötige Aktivierungen transparenter machen. Diese gesammelten Informationen zeigen auch, wo jegliche Aktivierungen ausgeschlossen wurden.
+
+![Das Widget Geplante Aktivierungen .](../images/segments/scheduled-activations.png)
 
 ## Nächste Schritte
 
