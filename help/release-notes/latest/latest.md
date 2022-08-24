@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0e23475fd120858b59794742860b7afececfece2
+source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 36%
+source-wordcount: '1810'
+ht-degree: 35%
 
 ---
 
@@ -123,7 +123,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
-| Bereinigung der verwaisten Profilattribute | Für alle Organisationen entfernt der Profildienst jetzt täglich die Attribute der Region der Benutzeraktivität, die übrig geblieben sind, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf die Zusammenführung von Profilen aus Datensätzen auswirken, in denen `com_adobe_aep_profile_region_dataset` als `true`. Dies kann zu einem Rückgang der Metrik „Adressierbare Zielgruppe“ im Lizenznutzungs-Dashboard und zu einem Rückgang der Metrik „Profilanzahl“ im Profil-Dashboard führen, da diese Metriken vor der Einführung dieser Version übrig gebliebene Randattributfragmente einbezogen haben. |
+| Bereinigung der verwaisten Profilattribute | Für alle Organisationen entfernt der Profildienst jetzt täglich die Attribute der Region der Benutzeraktivität, die übrig geblieben sind, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf die Zusammenführung von Profilen aus Datensätzen auswirken, in denen `com_adobe_aep_profile_region_dataset` als `true`. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version verbleibende Edge-Attributfragmente enthielten. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -155,7 +155,6 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Allgemeine Verfügbarkeit der [!DNL Google BigQuery]-Quelle | Verwenden Sie die [!DNL Google BigQuery] -Quelle, um Daten aus Ihrem [!DNL Google BigQuery] Data Warehouse in Experience Platform. Weitere Informationen finden Sie in der Dokumentation unter [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] source (Beta) | Verwenden Sie die [!DNL Teradata Vantage] -Quelle, um Daten aus hybriden Multi-Cloud-Umgebungen in Experience Platform zu erfassen. Weitere Informationen finden Sie in der Dokumentation unter [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
 | Regionsübergreifende Unterstützung für Adobe Analytics-Quellen | Sie können jetzt Report Suites aus einer beliebigen Region (USA, Großbritannien oder Singapur) erfassen. Report Suites müssen derselben Organisation wie die Experience Platform-Sandbox-Instanz zugeordnet sein, in der die Quellverbindung erstellt wird. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| API-Unterstützung für On-Demand-Erfassung | Verwenden Sie die On-Demand-Erfassung, um Ad-hoc-Fluss-Läufe für einen bestimmten Datenfluss mit dem [!DNL Flow Service] API. Die erstellten Flussläufe müssen auf eine einmalige Erfassung festgelegt werden. Weitere Informationen finden Sie im Handbuch unter [Erstellen eines Flusslaufs für die On-Demand-Erfassung mithilfe der API](../../sources/tutorials/api/on-demand-ingestion.md) für weitere Informationen. |
 
 {style=&quot;table-layout:auto&quot;}
 
