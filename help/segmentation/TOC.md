@@ -4,9 +4,9 @@ user-guide-title: Hilfe zum Adobe Experience Platform-Segmentierungs-Service
 breadcrumb-title: Anleitung zum Segmentierungs-Service
 user-guide-description: Erstellen Sie Segmente und generieren Sie Audiences aus Ihren Echtzeit-Kundenprofildaten.
 feature: Segments
-source-git-commit: 0f20b5cfb3301bc7f7f336e14e9faa0234c05c51
+source-git-commit: b70b4302c95cbf4301b036feea799537fa633490
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '164'
 ht-degree: 74%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 74%
 - Segmentation-API {#api}
    - [Übersicht](api/overview.md)
    - [Erste Schritte](api/getting-started.md)
+   - [Audiences](api/audiences.md)
    - [Edge-Segmentierung](api/edge-segmentation.md)
    - [Exportaufträge](api/export-jobs.md)
    - [Vorschau und Schätzung](api/previews-and-estimates.md)

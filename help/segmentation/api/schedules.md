@@ -5,10 +5,10 @@ title: Zeitplan-API-Endpunkt
 topic-legacy: developer guide
 description: Zeitpläne sind ein Tool, mit dem Batch-Segmentierungsaufträge einmal täglich automatisch ausgeführt werden können.
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: 604d1d02156b441ab3978ff976e02191bbdc311f
+source-git-commit: 84026b447eea00955bc9e6482b81ae1aad3c312e
 workflow-type: tm+mt
-source-wordcount: '2013'
-ht-degree: 26%
+source-wordcount: '2011'
+ht-degree: 25%
 
 ---
 
@@ -22,7 +22,7 @@ Die in diesem Handbuch verwendeten API-Endpunkte sind Teil der [!DNL Adobe Exper
 
 ## Abrufen einer Liste von Zeitplänen {#retrieve-list}
 
-Sie können eine Liste aller Zeitpläne Ihrer IMS-Organisation abrufen, indem Sie eine GET-Anfrage an den Endpunkt `/config/schedules` stellen.
+Sie können eine Liste aller Zeitpläne für Ihr Unternehmen abrufen, indem Sie eine GET-Anfrage an die `/config/schedules` -Endpunkt.
 
 **API-Format**
 
@@ -41,7 +41,7 @@ GET /config/schedules?limit={LIMIT}
 
 **Anfrage**
 
-Mit der folgenden Anfrage werden die letzten zehn Zeitpläne abgerufen, die innerhalb Ihrer IMS-Organisation veröffentlicht wurden.
+Mit der folgenden Anfrage werden die letzten zehn Zeitpläne abgerufen, die innerhalb Ihres Unternehmens veröffentlicht wurden.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
