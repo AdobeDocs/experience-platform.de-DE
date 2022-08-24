@@ -1,29 +1,23 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
-title: Flussspezifikationen mithilfe der Flow Service-API (Beta) aktualisieren
+title: Flussspezifikationen mithilfe der Flow Service-API aktualisieren
 topic-legacy: developer guide
-description: Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der Flow Service-API für das Sources-SDK.
-hide: true
-hidefromtoc: true
+description: Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der Flow Service-API für Self-Serve-Quellen (Batch SDK).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 22%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Flussspezifikationen mithilfe der [!DNL Flow Service] API (Beta)
-
->[!IMPORTANT]
->
->Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
+# Flussspezifikationen mithilfe der [!DNL Flow Service] API
 
 Nachdem Sie eine neue Verbindungsspezifikations-ID generiert haben, müssen Sie diese ID einer Flussspezifikation hinzufügen, um einen Datenfluss zu erstellen.
 
 Flussspezifikationen enthalten Informationen, die einen Fluss definieren, einschließlich der von ihm unterstützten Quell- und Zielverbindungs-IDs, Transformationsspezifikationen, die auf die Daten angewendet werden müssen, und Planungsparameter, die zum Generieren eines Datenflusses erforderlich sind. Sie können Flussspezifikationen mithilfe des `/flowSpecs` -Endpunkt.
 
-Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der [!DNL Flow Service] API für das Quellen-SDK.
+Das folgende Dokument enthält Schritte zum Abrufen und Aktualisieren von Flussspezifikationen mithilfe der [!DNL Flow Service] API für Self-Serve-Quellen (Batch-SDK).
 
 ## Erste Schritte
 

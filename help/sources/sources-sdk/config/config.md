@@ -1,28 +1,23 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
-title: Konfigurationsoptionen im Quellen-SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
+title: Konfigurationsoptionen in Self-Serve-Quellen (Batch-SDK)
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
+exl-id: a41b3b80-599a-47ed-a391-419721be5aa2
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '316'
-ht-degree: 1%
+source-wordcount: '297'
+ht-degree: 23%
 
 ---
 
-# Konfigurationsoptionen im Quellen-SDK
+# Konfigurationsoptionen in Self-Serve-Quellen (Batch-SDK)
 
->[!IMPORTANT]
->
->Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
-
-Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
+Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 
 ## Verbindungsspezifikation
 
-Verbindungsspezifikationen geben die Connector-Eigenschaften einer Quelle zurück. Dazu gehören Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen sowie eine feste Verbindungs-Spezifikations-ID, die einer bestimmten Quelle zugewiesen ist. Verbindungsspezifikationen sind Mandant und IMS-Organisation agnostisch. Eine typische Verbindungsspezifikation enthält grundlegende Informationen zu einer bestimmten Quelle sowie drei verschiedene Abschnitte: `authSpec`, `sourceSpec`und `exploreSpec`.
+Verbindungsspezifikationen geben die Connector-Eigenschaften einer Quelle zurück. Dazu gehören Authentifizierungsspezifikationen im Zusammenhang mit der Erstellung der Basis- und Quellverbindungen sowie eine feste Verbindungs-Spezifikations-ID, die einer bestimmten Quelle zugewiesen ist. Verbindungsspezifikationen sind Mandanten und Unternehmen agnostisch. Eine typische Verbindungsspezifikation enthält grundlegende Informationen zu einer bestimmten Quelle sowie drei verschiedene Abschnitte: `authSpec`, `sourceSpec`und `exploreSpec`.
 
 | Spezifikationen | Beschreibung |
 | --- | --- |
@@ -38,8 +33,6 @@ Eine Verbindungsspezifikation kann in drei verschiedene Teile unterteilt werden:
 
 In den folgenden Dokumenten finden Sie Anweisungen zum Ausfüllen der Werte der einzelnen Teile einer Verbindungsspezifikation:
 
-* [Authentifizierungsspezifikation konfigurieren](./authspec.md)
-* [Quellspezifikation konfigurieren](./sourcespec.md)
-* [Konfigurieren der Discover-Spezifikation](./explorespec.md)
-
-
+* [Konfigurieren Ihrer Authentifizierungsspezifikation](./authspec.md)
+* [Konfigurieren Ihrer Quellspezifikation](./sourcespec.md)
+* [Konfigurieren Ihrer Erkundungsspezifikation](./explorespec.md)

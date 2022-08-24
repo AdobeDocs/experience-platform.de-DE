@@ -1,28 +1,22 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
-title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API (Beta)
+title: Erstellen einer neuen Verbindungsspezifikation mithilfe der Flow Service-API
 topic-legacy: tutorial
-description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über das Quellen-SDK integrieren.
-hide: true
-hidefromtoc: true
+description: Im folgenden Dokument erfahren Sie, wie Sie eine Verbindungsspezifikation mithilfe der Flow Service-API erstellen und eine neue Quelle über Self-Serve-Quellen integrieren.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: ae5bb475bca90b31d8eb7cf6b66d4d191d36ac5c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Erstellen einer neuen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API (Beta)
-
->[!IMPORTANT]
->
->Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihre Organisation hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
+# Erstellen einer neuen Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API
 
 Eine Verbindungsspezifikation stellt die Struktur einer Quelle dar. Sie enthält Informationen zu den Authentifizierungsanforderungen einer Quelle, definiert, wie Quelldaten untersucht und geprüft werden können, und enthält Informationen zu den Attributen einer bestimmten Quelle. Der `/connectionSpecs`-Endpunkt in der [!DNL Flow Service]-API ermöglicht Ihnen die programmgesteuerte Verwaltung der Verbindungsspezifikationen innerhalb Ihrer Organisation.
 
-Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service]-API und zum Integrieren einer neuen Quelle über das Quellen-SDK.
+Das folgende Dokument beschreibt die Schritte zum Erstellen einer Verbindungsspezifikation mithilfe der [!DNL Flow Service] API und Integration einer neuen Quelle über Self-Serve-Quellen (Batch SDK).
 
 ## Erste Schritte
 
@@ -30,16 +24,37 @@ Bevor Sie fortfahren, lesen Sie das Handbuch [Erste Schritte](./getting-started.
 
 ## Sammeln von Artefakten
 
-Der erste Schritt beim Erstellen einer neuen Quelle über das [!DNL Sources SDK] ist es, sich mit Ihrem Adobe-Support-Mitarbeiter abzustimmen und die entsprechenden Werte für **icon**, **description**, **label** und **category** Ihrer Quelle zu identifizieren.
+Um eine neue Batch-Quelle mithilfe von Self-Serve-Quellen zu erstellen, müssen Sie zunächst eine Koordination mit Adobe durchführen, ein privates Git-Repository anfordern und die Adobe in den Details zu Titel, Beschreibung, Kategorie und Symbol für Ihre Quelle abstimmen.
 
-| Artefakte | Beschreibung | Beispiel |
+Nach der Bereitstellung müssen Sie Ihr privates Git-Repository wie folgt strukturieren:
+
+* Quellen
+   * {your_source}
+      * Artefakte
+         * {your_source}-category.txt
+         * {your_source}-description.txt
+         * {your_source}-icon.svg
+         * {your_source}-label.txt
+         * {your_source}-connectionSpec.json
+
+| Artefakte (Dateinamen) | Beschreibung | Beispiel |
 | --- | --- | --- |
-| Kennzeichnung | Der Name Ihrer Quelle. | [!DNL MailChimp Members] |
-| Beschreibung | Eine kurze Beschreibung Ihrer Quelle. | Erstellen Sie eine eingehende Live-Verbindung zu Ihrer [!DNL Mailchimp Members]-Instanz, um sowohl historische als auch geplante Daten in Experience Platform aufzunehmen. |
-| Symbol | Das Bild oder Logo, das Ihre Quelle darstellt. Das Symbol wird als Darstellung Ihrer Quelle in der Platform-Benutzeroberfläche angezeigt. | `mailchimp-members-icon.svg` |
-| Kategorie | Die Kategorie Ihrer Quelle. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
+| {your_source} | Der Name Ihrer Quelle. Dieser Ordner sollte alle Artefakte enthalten, die mit Ihrer Quelle in Ihrem privaten Git-Repository zusammenhängen. | `mailchimp-members` |
+| {your_source}-category.txt | Die Kategorie, zu der die Quelle gehört, formatiert als Textdatei. Die Liste der verfügbaren Quellkategorien, die von Self-Serve-Quellen (Batch SDK) unterstützt werden, umfasst: <ul><li>Werbung</li><li>Analysen</li><li>Einverständnis und Voreinstellungen</li><li>CRM</li><li>Customer Success</li><li>Datenbank</li><li>e-Commerce</li><li>Marketing-Automatisierung</li><li>Zahlungen</li><li>Protokolle</li></ul> **Hinweis**: Wenn Sie der Meinung sind, dass Ihre Quelle nicht zu einer der oben genannten Kategorien passt, wenden Sie sich an Ihren Kundenbetreuer, um darüber zu diskutieren. | `mailchimp-members-category.txt` Geben Sie innerhalb der Datei die Kategorie Ihrer Quelle an, z. B.: `marketingAutomation`. |
+| {your_source}-description.txt | Eine kurze Beschreibung Ihrer Quelle. | [!DNL Mailchimp Members] ist eine Marketing-Automatisierungsquelle, die Sie verwenden können, um [!DNL Mailchimp Members] Daten in die Experience Platform. |
+| {your_source}-icon.svg | Das Bild, das für die Darstellung Ihrer Quelle im Experience Platform-Quellkatalog verwendet werden soll. Dieses Symbol muss eine SVG-Datei sein. |
+| {your_source}-label.txt | Der Quellname, wie er im Quellkatalog der Experience Platform angezeigt werden soll. | Mailchimp-Mitglieder |
+| {your_source}-connectionSpec.json | Eine JSON-Datei, die die Verbindungsspezifikation Ihrer Quelle enthält. Diese Datei ist zunächst nicht erforderlich, da Sie Ihre Verbindungsspezifikation nach Abschluss dieses Handbuchs füllen werden. | `mailchimp-members-connectionSpec.json` |
 
 {style=&quot;table-layout:auto&quot;}
+
+>[!TIP]
+>
+>Während des Testzeitraums Ihrer Verbindungsspezifikation können Sie anstelle von Schlüsselwerten Folgendes verwenden: `text` in der Verbindungsspezifikation.
+
+Nachdem Sie die erforderlichen Dateien zu Ihrem privaten Git-Repository hinzugefügt haben, müssen Sie eine Pull-Anforderung (PA) erstellen, damit Adobe sie überprüfen kann. Wenn Ihr PR genehmigt und zusammengeführt wird, erhalten Sie eine ID, die für Ihre Verbindungsspezifikation verwendet werden kann, um auf den Titel, die Beschreibung und das Symbol Ihrer Quelle zu verweisen.
+
+Führen Sie anschließend die unten beschriebenen Schritte aus, um Ihre Verbindungsspezifikation zu konfigurieren. Weitere Anleitungen zu den verschiedenen Funktionen, die Sie Ihrer Quelle hinzufügen können, wie z. B. erweiterte Planung, benutzerdefiniertes Schema oder verschiedene Paginierungstypen, finden Sie im Handbuch unter [Quellspezifikationen konfigurieren](../config/sourcespec.md).
 
 ## Kopieren der Vorlage für die Verbindungsspezifikation
 
@@ -68,10 +83,6 @@ Nachdem Sie die erforderlichen Artefakte gesammelt haben, kopieren Sie die unten
         "type": "object",
         "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
         "properties": {
-          "host": {
-            "type": "string",
-            "description": "Enter resource url host path."
-          },
           "authorizationTestUrl": {
             "description": "Authorization test url to validate accessToken.",
             "type": "string"
@@ -206,6 +217,10 @@ Nachdem Sie die erforderlichen Artefakte gesammelt haben, kopieren Sie die unten
         "urlParams": {
           "type": "object",
           "properties": {
+            "host": {
+            "type": "string",
+            "description": "Enter resource url host path."
+          },
             "path": {
               "type": "string",
               "description": "Enter resource path",
@@ -480,9 +495,9 @@ curl -X POST \
                   "type": "object",
                   "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path"
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "authorizationTestUrl": {
                           "description": "Authorization test url to validate accessToken.",
@@ -495,7 +510,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "accessToken"
                   ]
               }
@@ -508,9 +523,9 @@ curl -X POST \
                   "type": "object",
                   "description": "defines auth params required for connecting to rest service.",
                   "properties": {
-                      "host": {
-                          "type": "string",
-                          "description": "Enter resource url host path."
+                      "domain": {
+                        "type": "string",
+                        "description": "Enter domain name for host url"
                       },
                       "username": {
                           "description": "Username to connect mailChimp endpoint.",
@@ -523,7 +538,7 @@ curl -X POST \
                       }
                   },
                   "required": [
-                      "host",
+                      "domain",
                       "username",
                       "password"
                   ]
@@ -547,10 +562,19 @@ curl -X POST \
                   }
               },
               "urlParams": {
+                  "host": "https://${domain}.api.mailchimp.com",
                   "path": "/3.0/lists/${listId}/members",
                   "method": "GET"
               },
-              "contentPath": "$.members",
+              "contentPath": {
+                  "path": "$.members",
+                  "skipAttributes": [
+                    "_links",
+                    "total_items",
+                    "list_id"
+                  ],
+                  "overrideWrapperAttribute": "member"
+                },
               "paginationParams": {
                   "type": "OFFSET",
                   "limitName": "count",

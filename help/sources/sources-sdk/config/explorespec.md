@@ -1,21 +1,19 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
-title: Konfigurieren von Erkundungsspezifikationen für das Quellen-SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
+title: Konfigurieren von Erkundungsspezifikationen für Self-Serve-Quellen (Batch-SDK)
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
-hide: true
-hidefromtoc: true
-source-git-commit: ae1a1139c24fd80e9f689e4c637897c905004c5f
+description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
+exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
+# Konfigurieren von Erkundungsspezifikationen für Self-Serve-Quellen (Batch-SDK)
 
-# Configure explore specifications for Sources SDK
-
-Explore specifications defines the parameters required for exploring and inspecting objects contained in your source. Mithilfe von Erkunden-Spezifikationen wird auch das Antwortformat definiert, das zurückgegeben wird, wenn Objekte untersucht und untersucht werden.
+Mithilfe der Spezifikationen werden die Parameter definiert, die zum Erkunden und Überprüfen der in Ihrer Quelle enthaltenen Objekte erforderlich sind. Mithilfe von Erkunden-Spezifikationen wird auch das Antwortformat definiert, das zurückgegeben wird, wenn Objekte untersucht und untersucht werden.
 
 >[!TIP]
 >
@@ -71,20 +69,20 @@ Explore specifications defines the parameters required for exploring and inspect
 | `name` | Definiert den Namen oder die Kennung der Analysespezifikation. | `Resource` |
 | `type` | Definiert den Typ der Analysespezifikation. | `Resource` |
 | `requestSpec` | Enthält die Parameter, die zum Erkunden von Objekten in der Verbindung erforderlich sind. |
-| `requestSpec.type` | Defines the data type of the request specification. | `object` |
+| `requestSpec.type` | Definiert den Datentyp der Anforderungsspezifikation. | `object` |
 | `responseSpec` | Enthält die Parameter, die das Format der Antwortnachricht definieren, die bei einem Erkundungsaufruf zurückgegeben wird. |
 | `responseSpec.type` | Definiert den Datentyp der Antwortspezifikation. | `object` |
 | `responseSpec.properties` | Enthält Informationen zur Formatierung der Antwortnachricht. |
-| `responseSpec.properties.format` | Defines the formatting of the response schema. | `object` |
+| `responseSpec.properties.format` | Definiert die Formatierung des Antwortschemas. | `object` |
 | `responseSpec.properties.format.type` | Definiert den Datentyp von Eigenschaften. | `string` |
 | `responseSpec.schema` | Enthält Informationen zur Formatierung des Antwortschemas. |
 | `responseSpec.schema.type` | Definiert den Datentyp des Schemas. | `object` |
 | `responseSpec.schema.properties` | Enthält Informationen zu den Spalten, dem Typ und den Elementen, die in einem Schema gespeichert sind. |
-| `responseSpec.schema.properties.columns.items.properties.name` | Displays the name of the file. |
-| `responseSpec.schema.properties.columns.items.properties.name.type` | Defines the data type of the file name. | `string` |
+| `responseSpec.schema.properties.columns.items.properties.name` | Zeigt den Namen der Datei an. |
+| `responseSpec.schema.properties.columns.items.properties.name.type` | Definiert den Datentyp des Dateinamens. | `string` |
 
 {style=&quot;table-layout:auto&quot;}
 
 ## Nächste Schritte
 
-Nachdem Sie Ihre Erkundungsspezifikationen ausgefüllt haben, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mit dem [!DNL Flow Service] API. See the the [[!DNL Sources SDK] API guide](../api/api-overview.md) for more information.
+Nachdem Sie Ihre Erkundungsspezifikationen ausgefüllt haben, können Sie mit der Erstellung einer vollständigen Verbindungsspezifikation mit dem [!DNL Flow Service] API. Siehe [Handbuch zur API für Self-Serve-Quellen (Batch SDK)](../api/api-overview.md) für weitere Informationen.

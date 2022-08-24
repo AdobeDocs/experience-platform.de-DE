@@ -1,39 +1,34 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
-title: Quelle übermitteln (Beta)
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
+title: Quelle übermitteln
 topic-legacy: overview
-description: Das folgende Dokument enthält Schritte zum Testen und Überprüfen einer neuen Quelle mithilfe der Flow Service-API und zur Integration einer neuen Quelle über das Sources-SDK.
-hide: true
-hidefromtoc: true
-source-git-commit: 274784a5b82d12497f7437fdeaf665dd64224c2d
+description: Das folgende Dokument enthält Schritte zum Testen und Überprüfen einer neuen Quelle mithilfe der Flow Service-API und zur Integration einer neuen Quelle über Self-Serve-Quellen (Batch SDK).
+exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 3%
+source-wordcount: '826'
+ht-degree: 16%
 
 ---
 
-# Quelle übermitteln (Beta)
+# Übermitteln Ihrer Quelle
 
->[!IMPORTANT]
->
->Das Quellen-SDK befindet sich derzeit in der Beta-Phase und Ihr Unternehmen hat möglicherweise noch keinen Zugriff darauf. Die in dieser Dokumentation beschriebene Funktionalität kann sich ändern.
-
-Der letzte Schritt bei der Integration Ihrer neuen Quelle in Adobe Experience Platform mithilfe von [!DNL Sources SDK] ist es, Ihre Quelle zur Verifizierung zu testen. Nach erfolgreichem Abschluss können Sie Ihre neue Quelle senden, indem Sie sich an Ihren Kundenbetreuer wenden.
+Der letzte Schritt bei der Integration Ihrer neuen Quelle in Adobe Experience Platform mithilfe von Self-Serve-Quellen (Batch SDK) besteht darin, Ihre Quelle zur Verifizierung zu testen. Nach erfolgreichem Abschluss können Sie Ihre neue Quelle senden, indem Sie sich an Ihren Kundenbetreuer wenden.
 
 Das folgende Dokument enthält Schritte zum Testen und Debuggen der Quelle mit dem [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Erste Schritte
 
-* Informationen zum erfolgreichen Aufrufen von Platform-APIs finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
+* Informationen darüber, wie Sie Platform-APIs erfolgreich aufrufen können, finden Sie im Handbuch unter [Erste Schritte mit Platform-APIs](../../../landing/api-guide.md).
 * Informationen zum Generieren Ihrer Anmeldeinformationen für Platform-APIs finden Sie im Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md).
 * Informationen zur Einrichtung von [!DNL Postman] Informationen zu Platform-APIs finden Sie im Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md).
-* Laden Sie die [[!DNL Sources SDK] Verification Collection und Umgebung hier](../assets/sdk-verification.zip) und folgen Sie den unten beschriebenen Schritten.
+* Laden Sie die [Erfassung und Umgebung der Verifizierung von Self-Serve-Quellen](../assets/sdk-verification.zip) und folgen Sie den unten beschriebenen Schritten.
 
 ## Testen der Quelle
 
-Um Ihre Quelle zu testen, müssen Sie die [[!DNL Sources SDK] Überprüfungssammlung und -umgebung](../assets/sdk-verification.zip) on [!DNL Postman] , während Sie die entsprechenden Umgebungsvariablen für Ihre Quelle angeben.
+Um Ihre Quelle zu testen, müssen Sie die [Erfassung und Umgebung der Verifizierung von Self-Serve-Quellen](../assets/sdk-verification.zip) on [!DNL Postman] , während Sie die entsprechenden Umgebungsvariablen für Ihre Quelle angeben.
 
-Um mit dem Testen zu beginnen, müssen Sie zunächst die Sammlung und die Umgebung in [!DNL Postman]. Geben Sie als Nächstes die Verbindungsspezifikations-ID an, die Sie testen möchten. Diese ID sollte mit der ID übereinstimmen, die Sie mit [!DNL Sources SDK].
+Um mit dem Testen zu beginnen, müssen Sie zunächst die Sammlung und die Umgebung in [!DNL Postman]. Geben Sie als Nächstes die Verbindungsspezifikations-ID an, die Sie testen möchten.
 
 ### Legen Sie `authSpecName`
 
@@ -68,7 +63,7 @@ Nachdem Sie die Authentifizierungs- und Quellspezifizierungsparameter angegeben 
 | `x-api-key` | Eine eindeutige Kennung, die zum Authentifizieren von Aufrufen an Experience Platform-APIs verwendet wird. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) Informationen zum Abrufen Ihrer `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Eine Unternehmenseinheit, die Produkte und Dienste besitzen oder lizenzieren und Zugriff auf ihre Mitglieder gewähren kann. Siehe Tutorial zu [Einrichten der Entwicklerkonsole und [!DNL Postman]](../../../landing/postman.md) Anweisungen zum Abrufen Ihrer `x-gw-ims-org-id` Informationen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
 | `authorizationToken` | Das Autorisierungstoken, das zum Abschließen von Aufrufen an Experience Platform-APIs erforderlich ist. Siehe Tutorial zu [Authentifizierung und Zugriff auf Experience Platform-APIs](../../../landing/api-authentication.md) Informationen zum Abrufen Ihrer `authorizationToken`. | `Bearer authorizationToken` |
-| `schemaId` | Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Anweisungen zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zu [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `schemaId` | Damit die Quelldaten in Platform verwendet werden können, muss ein Zielschema erstellt werden, das die Quelldaten entsprechend Ihren Anforderungen strukturiert. Ausführliche Schritte zum Erstellen eines XDM-Zielschemas finden Sie im Tutorial zum [Erstellen eines Schemas mithilfe der API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | Die eindeutige Version, die Ihrem Schema entspricht. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | Die `meta:altId` wird zusammen mit der  `schemaId` beim Erstellen eines neuen Schemas. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Ausführliche Anweisungen zum Erstellen eines Zieldatensatzes finden Sie im Tutorial zu [Erstellen eines Datensatzes mithilfe der API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -92,6 +87,6 @@ Die [!DNL Runner] -Schnittstelle angezeigt, über die Sie die Ausführungsreihen
 
 ![run-collection](../assets/run-collection.png)
 
-## Quelle senden
+## Übermitteln Ihrer Quelle
 
 Sobald Ihre Quelle den gesamten Workflow abschließen kann, können Sie sich an Ihren Adobe-Support-Mitarbeiter wenden und Ihre Integrationsquelle übermitteln.

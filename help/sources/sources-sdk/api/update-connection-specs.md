@@ -1,19 +1,17 @@
 ---
 keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
-title: Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API (Beta)
+title: Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API
 topic-legacy: developer guide
 description: Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren.
-hide: true
-hidefromtoc: true
 exl-id: fcb00521-8fc2-491e-aa35-6e0f9b730dd4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '120'
+source-wordcount: '118'
 ht-degree: 14%
 
 ---
 
-# Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API (Beta)
+# Aktualisieren einer Verbindungsspezifikation mithilfe der Flow Service-API
 
 Sie können die Eigenschaften einer Verbindungsspezifikation über einen PUT-Vorgang aktualisieren. Beim Aktualisieren einer Verbindungsspezifikation über eine PUT-Anfrage muss der Hauptteil alle Felder enthalten, die beim Erstellen einer neuen Verbindungsspezifikation in einer POST-Anfrage erforderlich sind.
 

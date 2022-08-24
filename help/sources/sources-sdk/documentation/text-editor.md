@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um eine Seite mit der Quellendokumentation zu erstellen.
 topic-legacy: tutorial
 description: In diesem Dokument erfahren Sie, wie Sie mit Ihrer lokalen Umgebung die Dokumentation für Ihre Quelle erstellen und eine Pull-Anforderung (PA) senden können.
-hide: true
-hidefromtoc: true
-source-git-commit: d4b5b54be9fa2b430a3b45eded94a523b6bd4ef8
+exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '652'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Verwenden Sie einen Texteditor in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.
+# Verwenden eines Texteditors in Ihrer lokalen Umgebung, um die Seite mit der Quellendokumentation zu erstellen.
 
 In diesem Dokument erfahren Sie, wie Sie mit Ihrer lokalen Umgebung die Dokumentation für Ihre Quelle erstellen und eine Pull-Anforderung (PA) senden können.
 
@@ -71,7 +70,7 @@ Geben Sie als Nächstes ein `Adobe Markdown Authoring` in die Suchleiste ein und
 
 ![install](../assets/install.png)
 
-Laden Sie die [Quelldokumentationsvorlage](../assets/template.zip) und extrahieren Sie die Datei in `experience-platform.en/help/sources/tutorials/api/create/...` mit [`...`] die Kategorie Ihrer Wahl. Wenn Sie beispielsweise eine Cloud-Speicherquelle erstellen, wählen Sie den Ordner des Cloud-Speichers aus.
+Laden Sie die [Quelldokumentationsvorlage](../assets/template.zip) und extrahieren Sie die Datei in `experience-platform.en/help/sources/tutorials/api/create/...` mit [`...`] die Kategorie Ihrer Wahl. Wenn Sie beispielsweise eine Datenbankquelle erstellen, wählen Sie den Datenbankordner aus.
 
 Befolgen Sie abschließend die in der Vorlage beschriebenen Anweisungen und bearbeiten Sie die Vorlage mit den entsprechenden Informationen zu Ihrer Quelle.
 

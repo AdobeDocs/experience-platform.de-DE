@@ -1,16 +1,14 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
 solution: Experience Platform
 title: Verwenden Sie die GitHub-Webschnittstelle, um eine Quelldokumentationsseite zu erstellen
 topic-legacy: tutorial
 description: In diesem Dokument erfahren Sie, wie Sie mit der GitHub-Web-Oberfläche die Dokumentation erstellen und eine Pull-Anforderung (PA) senden können.
-hide: true
-hidefromtoc: true
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 39accd28edc388c6444910f9a2ea6d2f01acfdaf
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
 source-wordcount: '624'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -36,19 +34,19 @@ Nachdem die Verzweigung abgeschlossen ist, wählen Sie **Übergeordnet** und geb
 
 ![create-branch](../assets/create-branch.png)
 
-Navigieren Sie in der GitHub-Ordnerstruktur Ihres abgespalteten Repositorys zu [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) und wählen Sie dann die gewünschte Kategorie für Ihre Quelle aus der Liste aus. Wenn Sie beispielsweise die Dokumentation für eine neue Cloud-Speicherquelle erstellen, wählen Sie **Cloud-Speicher**.
+Navigieren Sie in der GitHub-Ordnerstruktur Ihres abgespalteten Repositorys zu [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) und wählen Sie dann die gewünschte Kategorie für Ihre Quelle aus der Liste aus. Wenn Sie beispielsweise die Dokumentation für eine neue CRM-Quelle erstellen, wählen Sie **crm**.
 
 >[!TIP]
 >
 >Wenn Sie die Dokumentation für die Benutzeroberfläche erstellen, navigieren Sie zu [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) und wählen Sie die entsprechende Kategorie für Ihre Quelle aus. Um Ihre Bilder hinzuzufügen, navigieren Sie zu [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) Fügen Sie dann Ihre Screenshots zum `sdk` Ordner.
 
-![Cloud-Speicher](../assets/cloud-storage.png)
+![crm](../assets/crm.png)
 
-Ein Ordner mit vorhandenen Cloud-Speicherquellen wird angezeigt. Um die Dokumentation für eine neue Quelle hinzuzufügen, wählen Sie **Datei hinzufügen** und wählen Sie **Neue Datei erstellen** aus dem Dropdown-Menü, das angezeigt wird.
+Ein Ordner mit vorhandenen CRM-Quellen wird angezeigt. Um die Dokumentation für eine neue Quelle hinzuzufügen, wählen Sie **Datei hinzufügen** und wählen Sie **Neue Datei erstellen** aus dem Dropdown-Menü, das angezeigt wird.
 
 ![create-new-file](../assets/create-new-file.png)
 
-Benennen Sie die Quelldatei. `YOURSOURCE.md` wobei YOURSOURCE der Name Ihrer Quelle in Platform ist. Wenn Ihr Unternehmen beispielsweise [!DNL Mailchimp], sollte Ihr Dateiname `mailchimp.md`.
+Benennen Sie die Quelldatei. `YOURSOURCE.md` wobei YOURSOURCE der Name Ihrer Quelle in Platform ist. Wenn Ihr Unternehmen beispielsweise ACME CRM ist, sollte Ihr Dateiname `acme-crm.md`.
 
 ![git-interface](../assets/git-interface.png)
 

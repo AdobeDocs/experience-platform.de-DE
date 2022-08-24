@@ -1,19 +1,17 @@
 ---
-keywords: Experience Platform; Startseite; beliebte Themen; Quellen; Connectoren; Quell-Connectoren; Quellen-SDK; SDK
-title: Authentifizierungsspezifikationen für Quellen-SDK konfigurieren
+keywords: Experience Platform;Startseite;beliebte Themen;Quellen;Connectoren;Quell-Connectoren;Quellen-SDK;SDK
+title: Authentifizierungsspezifikationen für Self-Serve-Quellen konfigurieren (Batch SDK)
 topic-legacy: overview
-description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung des Sources-SDK vorbereiten müssen.
-hide: true
-hidefromtoc: true
+description: Dieses Dokument bietet einen Überblick über die Konfigurationen, die Sie für die Verwendung von Self-Serve-Quellen (Batch SDK) vorbereiten müssen.
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: a3bfd3b87343ca1dd2d122f4f82926082965578c
+source-git-commit: 4d7799b01c34f4b9e4a33c130583eadcfdc3af69
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '535'
+ht-degree: 5%
 
 ---
 
-# Authentifizierungsspezifikationen für Quellen-SDK konfigurieren
+# Authentifizierungsspezifikationen für Self-Serve-Quellen konfigurieren (Batch SDK)
 
 Authentifizierungsspezifikationen definieren, wie Adobe Experience Platform-Benutzer eine Verbindung zu Ihrer Quelle herstellen können.
 
@@ -21,7 +19,7 @@ Die `authSpec` -Array enthält Informationen zu den Authentifizierungsparametern
 
 ## Authentifizierungsspezifikationen
 
-Zurzeit [!DNL Sources SDK] unterstützt OAuth 2-Aktualisierungs-Codes und grundlegende Authentifizierung. Die folgenden Tabellen enthalten Anleitungen zur Verwendung eines OAuth 2-Aktualisierungscodes und einer einfachen Authentifizierung
+Self-Serve-Quellen (Batch SDK) unterstützen OAuth 2-Aktualisierungs-Codes und einfache Authentifizierung. Die folgenden Tabellen enthalten Anleitungen zur Verwendung eines OAuth 2-Aktualisierungscodes und einer einfachen Authentifizierung
 
 ### OAuth 2-Aktualisierungscode
 
@@ -36,10 +34,6 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
     "type": "object",
     "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
     "properties": {
-      "host": {
-        "type": "string",
-        "description": "Enter resource url host path."
-      },
       "authorizationTestUrl": {
         "description": "Authorization test url to validate accessToken.",
         "type": "string"
@@ -141,7 +135,7 @@ Ein OAuth 2-Aktualisierungscode ermöglicht einen sicheren Zugriff auf eine Anwe
 {style=&quot;table-layout:auto&quot;}
 
 
-### Grundlegende Authentifizierung
+### Einfache Authentifizierung
 
 Die Standardauthentifizierung ist ein Authentifizierungstyp, mit dem Sie mithilfe einer Kombination aus Host-URL, Benutzername und Passwort Ihrer Anwendung auf Ihre Anwendung zugreifen können.
 
