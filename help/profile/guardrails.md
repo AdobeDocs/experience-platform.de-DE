@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: 'Adobe Experience Platform verwendet ein stark denormalisiertes Hybrid-Datenmodell, das sich vom herkömmlichen relationalen Datenmodell unterscheidet. Dieses Dokument liefert standardmäßige Verwendungs- und Quotenbegrenzungen zur Hilfe bei der Modellierung Ihrer Profildaten, sodass Sie eine optimale Systemleistung gewährleisten können. '
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 8a343ad275dcfc33eb304e3fc19d375b81277448
+source-git-commit: e3813691af6477a0afbb47ed0fd53d5bb3834fd0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1941'
+ht-degree: 48%
 
 ---
 
@@ -54,12 +54,12 @@ Die folgenden Leitlinien bieten empfohlene Beschränkungen bei der Modellierung 
 | --- | --- | --- | --- |
 | Klassendatensätze von XDM Individual Profile | 20 | Weich | Es werden maximal 20 Datensätze empfohlen, die die Klasse &quot;XDM Individual Profile&quot;nutzen. |
 | XDM ExperienceEvent-Klassendatensätze | 20 | Weich | Es werden maximal 20 Datensätze empfohlen, die die XDM ExperienceEvent-Klasse nutzen. |
-| Für Profil aktivierte Adobe Analytics Report Suite-Datensätze | 1 | Weich | Es sollte maximal ein (1) Analytics Report Suite-Datensatz für Profil aktiviert werden. Der Versuch, mehrere Analytics Report Suite-Datensätze für Profile zu aktivieren, kann unbeabsichtigte Auswirkungen auf die Datenqualität haben. Weitere Informationen finden Sie im Abschnitt zu [Adobe Analytics-Datensätze](#aa-datasets) in der Anlage. |
+| Für Profil aktivierte Adobe Analytics Report Suite-Datensätze | 1 | Soft | Es sollte maximal ein (1) Analytics Report Suite-Datensatz für Profil aktiviert werden. Der Versuch, mehrere Analytics Report Suite-Datensätze für Profile zu aktivieren, kann unbeabsichtigte Auswirkungen auf die Datenqualität haben. Weitere Informationen finden Sie im Abschnitt zu [Adobe Analytics-Datensätze](#aa-datasets) in der Anlage. |
 | Beziehungen mit mehreren Entitäten | 5 | Weich | Es werden maximal 5 Beziehungen mit mehreren Entitäten empfohlen, die in primären Entitäten oder Dimensionsentitäten definiert sind. Zusätzliche Beziehungszuordnungen sollten erst vorgenommen werden, wenn eine vorhandene Beziehung entfernt oder deaktiviert wurde. |
-| JSON-Tiefe für ID-Feld, das in der Beziehung mit mehreren Entitäten verwendet wird | 4 | Weich | Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, beträgt 4. Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
-| Array-Kardinalität in einem Profilfragment | &lt;=500 | Weich | Die optimale Array-Kardinalität in einem Profilfragment (zeitunabhängige Daten) ist &lt;=500. |
-| Array-Kardinalität in ExperienceEvent | &lt;=10 | Weich | Die optimale Array-Kardinalität in einem ExperienceEvent (Zeitreihendaten) ist &lt;=10. |
-| Identitätsanzahl für jedes Profil - Identitätsdiagramm | 50 | Hart | **Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Profil beträgt 50.** Alle Profile mit mehr als 50 Identitäten werden von der Segmentierung, dem Export und der Suche ausgeschlossen. |
+| JSON-Tiefe für ID-Feld, das in der Beziehung mit mehreren Entitäten verwendet wird | 4 | Soft | Die empfohlene maximale JSON-Tiefe für ein ID-Feld, das in Beziehungen mit mehreren Entitäten verwendet wird, beträgt 4. Dies bedeutet, dass in einem hochverschachtelten Schema Felder, die mehr als vier Ebenen tief verschachtelt sind, nicht als ID-Feld in einer Beziehung verwendet werden sollten. |
+| Array-Kardinalität in einem Profilfragment | &lt;=500 | Soft | Die optimale Array-Kardinalität in einem Profilfragment (zeitunabhängige Daten) ist &lt;=500. |
+| Array-Kardinalität in ExperienceEvent | &lt;=10 | Soft | Die optimale Array-Kardinalität in einem ExperienceEvent (Zeitreihendaten) ist &lt;=10. |
+| Identitätsanzahl für jedes Profil - Identitätsdiagramm | 50 | Hard | **Die maximale Anzahl von Identitäten in einem Identitätsdiagramm für ein einzelnes Profil beträgt 50.** Alle Profile mit mehr als 50 Identitäten werden von der Segmentierung, dem Export und der Suche ausgeschlossen. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -69,7 +69,7 @@ Die folgenden Leitlinien bieten empfohlene Beschränkungen bei der Modellierung 
 | --- | --- | --- | --- |
 | Keine Zeitreihendaten zulässig für Nicht-Zeitreihen[!DNL XDM Individual Profile] entity | 0 | Hart | **Zeitreihendaten sind für Nicht-Analytics nicht zulässig.[!DNL XDM Individual Profile] Entitäten in Profil Service.** Wenn ein Datensatz aus Zeitreihen mit einem Nicht-Segment verknüpft ist[!DNL XDM Individual Profile] ID, sollte der Datensatz nicht für [!DNL Profile]. |
 | Keine verschachtelten Beziehungen | 0 | Weich | Sie sollten keine Beziehung zwischen zwei Nicht-[!DNL XDM Individual Profile]-Schemas erstellen. Die Möglichkeit, Beziehungen zu erstellen, wird für keine Schemas empfohlen, die nicht Teil des einheitlichen [!DNL Profile]-Schemas sind. |
-| JSON-Tiefe für primäres ID-Feld | 4 | Weich | Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld beträgt 4. Das bedeutet, dass Sie in einem hochverschachtelten Schema ein Feld nicht als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
+| JSON-Tiefe für primäres ID-Feld | 4 | Soft | Die empfohlene maximale JSON-Tiefe für das primäre ID-Feld beträgt 4. Das bedeutet, dass Sie in einem hochverschachtelten Schema ein Feld nicht als primäre ID auswählen sollten, wenn es mehr als vier Ebenen tief verschachtelt ist. Ein Feld, das sich auf der vierten verschachtelten Ebene befindet, kann als primäre ID verwendet werden. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -85,11 +85,11 @@ In den folgenden Leitlinien erhalten Sie Informationen zur Datengröße und zu e
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Maximale ExperienceEvent-Größe | 10 KB | Hart | **Die maximale Größe eines Ereignisses beträgt 10 KB.** Die Aufnahme wird fortgesetzt, jedoch werden alle Ereignisse, die größer als 10 KB sind, gelöscht. |
-| Maximale Profildatensatzgröße | 100 KB | Hart | **Die maximale Größe eines Profildatensatzes beträgt 100 KB.** Die Aufnahme wird fortgesetzt, Profildatensätze, die größer als 100 KB sind, werden jedoch gelöscht. |
-| Maximale Größe von Profilfragmenten | 50 MB | Hart | **Die maximale Größe eines einzelnen Profilfragments beträgt 50 MB.** Die Segmentierung, der Export und die Suche können bei allen [Profilfragment](#profile-fragments) größer als 50 MB ist. |
-| Maximale Profilspeichergröße | 50 MB | Weich | **Die maximale Größe eines gespeicherten Profils beträgt 50 MB.** Hinzufügen neuer [Profilfragmente](#profile-fragments) in ein Profil, das größer als 50 MB ist, wirkt sich auf die Systemleistung aus. Beispielsweise könnte ein Profil ein einzelnes Fragment mit 50 MB enthalten oder mehrere Fragmente aus mehreren Datensätzen mit einer kombinierten Gesamtgröße von 50 MB enthalten. Der Versuch, ein Profil mit einem einzelnen Fragment, das größer als 50 MB ist, oder mehreren Fragmenten mit einer Gesamtgröße von mehr als 50 MB zu speichern, wirkt sich auf die Systemleistung aus. |
-| Anzahl der täglich erfassten Profil- oder ExperienceEvent-Batches | 90 | Weich | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag erfasst werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der täglich erfassten Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Die Erfassung zusätzlicher Batches wirkt sich auf die Systemleistung aus. |
+| Maximale ExperienceEvent-Größe | 10 KB | Hard | **Die maximale Größe eines Ereignisses beträgt 10 KB.** Die Aufnahme wird fortgesetzt, jedoch werden alle Ereignisse, die größer als 10 KB sind, gelöscht. |
+| Maximale Profildatensatzgröße | 100 KB | Hard | **Die maximale Größe eines Profildatensatzes beträgt 100 KB.** Die Aufnahme wird fortgesetzt, Profildatensätze, die größer als 100 KB sind, werden jedoch gelöscht. |
+| Maximale Größe von Profilfragmenten | 50 MB | Hard | **Die maximale Größe eines einzelnen Profilfragments beträgt 50 MB.** Die Segmentierung, der Export und die Suche können bei allen [Profilfragment](#profile-fragments) größer als 50 MB ist. |
+| Maximale Profilspeichergröße | 50 MB | Soft | **Die maximale Größe eines gespeicherten Profils beträgt 50 MB.** Hinzufügen neuer [Profilfragmente](#profile-fragments) in ein Profil, das größer als 50 MB ist, wirkt sich auf die Systemleistung aus. Beispielsweise könnte ein Profil ein einzelnes Fragment mit 50 MB enthalten oder mehrere Fragmente aus mehreren Datensätzen mit einer kombinierten Gesamtgröße von 50 MB enthalten. Der Versuch, ein Profil mit einem einzelnen Fragment, das größer als 50 MB ist, oder mehreren Fragmenten mit einer Gesamtgröße von mehr als 50 MB zu speichern, wirkt sich auf die Systemleistung aus. |
+| Anzahl der täglich erfassten Profil- oder ExperienceEvent-Batches | 90 | Soft | **Die maximale Anzahl von Profil- oder ExperienceEvent-Batches, die pro Tag erfasst werden, beträgt 90.** Das bedeutet, dass die Gesamtanzahl der täglich erfassten Profil- und ExperienceEvent-Batches 90 nicht überschreiten darf. Die Erfassung zusätzlicher Batches wirkt sich auf die Systemleistung aus. |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -109,9 +109,9 @@ Die in diesem Abschnitt beschriebenen Leitlinien beziehen sich auf die Anzahl un
 
 | Beschränkung | Limit | Art von Limit | Beschreibung |
 | --- | --- | --- | --- |
-| Segmente pro Sandbox | 10.000 | Weich | Eine Organisation kann insgesamt über mehr als 10.000 Segmente verfügen, sofern in jeder Sandbox weniger als 10.000 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, kann sich auf die Systemleistung auswirken. |
-| Streaming-Segmente pro Sandbox | 500 | Weich | Eine Organisation kann über mehr als 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
-| Batch-Segmente pro Sandbox | 10.000 | Weich | Eine Organisation kann insgesamt über mehr als 10.000 Batch-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 10.000 Batch-Segmente vorhanden sind. Der Versuch, zusätzliche Batch-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
+| Segmente pro Sandbox | 4000 | Soft | Eine Organisation kann insgesamt über mehr als 4000 Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 4000 Segmente vorhanden sind. Der Versuch, zusätzliche Segmente zu erstellen, kann sich auf die Systemleistung auswirken. |
+| Streaming-Segmente pro Sandbox | 500 | Soft | Eine Organisation kann über mehr als 500 Streaming-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 500 Streaming-Segmente vorhanden sind. Der Versuch, zusätzliche Streaming-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
+| Batch-Segmente pro Sandbox | 4000 | Soft | Eine Organisation kann insgesamt über mehr als 4.000 Batch-Segmente verfügen, sofern in jeder einzelnen Sandbox weniger als 4.000 Batch-Segmente vorhanden sind. Der Versuch, zusätzliche Batch-Segmente zu erstellen, kann die Systemleistung beeinträchtigen. |
 
 {style=&quot;table-layout:auto&quot;}
 
