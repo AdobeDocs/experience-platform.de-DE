@@ -2,10 +2,10 @@
 title: Adobe Experience Platform – Versionshinweise
 description: Die neuesten Versionshinweise für Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 24f16e315607a1076ff2efef129d9e97040a9500
+source-git-commit: 70bc3d8743dfa6c14e8a5c467775faa0c3c5a767
 workflow-type: tm+mt
-source-wordcount: '1810'
-ht-degree: 35%
+source-wordcount: '1962'
+ht-degree: 36%
 
 ---
 
@@ -17,7 +17,8 @@ Aktualisierungen vorhandener Funktionen in Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
-- [Datenvorbereitung](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [Experience-Datenmodell (XDM)](#xdm)
 - [Echtzeit-Kundenprofil](#profile)
 - [Segmentierungs-Service](#segmentation)
@@ -85,6 +86,32 @@ Weitere Informationen zu [!DNL Dashboards] finden Sie in der [[!DNL Dashboards] 
 
 Weitere Informationen über [!DNL Data Prep] finden Sie in der [[!DNL Data Prep] Übersicht](../../data-prep/home.md).
 
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] sind vorkonfigurierte Integrationen mit Zielplattformen, die eine nahtlose Aktivierung von Daten aus Adobe Experience Platform ermöglichen. Mit Zielen können Sie Ihre bekannten und unbekannten Daten für kanalübergreifende Marketing-Kampagnen, E-Mail-Kampagnen, zielgruppengerechte Werbung und viele andere Anwendungsfälle aktivieren.
+
+<!--
+
+**New or updated features**
+
+| Feature | Description |
+| ----------- | ----------- |
+|  ||
+
+{style="table-layout:auto"}
+
+-->
+
+**Neue Ziele**
+
+| Ziel | Beschreibung |
+| ----------- | ----------- |
+| [[!DNL Outreach]](../..//destinations/catalog/crm/outreach.md) | [[!DNL Outreach]](https://www.outreach.io/) ist eine Sales Execution Platform mit den weltweit besten B2B-Käufer-Verkäuferinteraktionsdaten und umfangreichen Investitionen in proprietäre KI-Technologien, um Verkaufsdaten in intelligente Lösungen zu übersetzen. [!DNL Outreach] unterstützt Unternehmen bei der Automatisierung von Verkaufsaktivitäten und der Umsetzung von Umsatz-Intelligenz, um ihre Effizienz, Vorhersehbarkeit und ihr Wachstum zu verbessern. |
+
+{style=&quot;table-layout:auto&quot;}
+
+Weitere allgemeine Informationen zu Zielen finden Sie in der [Übersicht zu Zielen](../../destinations/home.md).
+
 ## Experience-Datenmodell (XDM) {#xdm}
 
 XDM ist eine Open-Source-Spezifikation, die allgemeine Strukturen und Definitionen (Schemas) für Daten bereitstellt, die in Adobe Experience Platform importiert werden. Durch die Einhaltung von XDM-Standards können alle Kundenerlebnisdaten in eine gemeinsame Darstellung integriert werden, die Erkenntnisse schneller und besser integriert liefert. Sie können wertvolle Einblicke aus Kundenaktionen gewinnen, Zielgruppen durch Segmente definieren und Kundenattribute für Personalisierungszwecke verwenden.
@@ -123,6 +150,7 @@ Adobe Experience Platform ermöglicht die Bereitstellung koordinierter, konsiste
 
 | Funktion | Beschreibung |
 | ------- | ----------- |
+| Hard Limit für Zusammenführungsrichtlinien | Platform erzwingt jetzt eine feste Grenze von **fünf** Zusammenführungsrichtlinien pro Sandbox. Wenn Ihre Sandbox derzeit über mehr als fünf Zusammenführungsrichtlinien verfügt, werden Sie **not** können neue Zusammenführungsrichtlinien erstellen, bis die Sandbox über weniger als fünf Zusammenführungsrichtlinien verfügt. |
 | Bereinigung der verwaisten Profilattribute | Für alle Organisationen entfernt der Profildienst jetzt täglich die Attribute der Region der Benutzeraktivität, die übrig geblieben sind, um eine genauere Darstellung Ihrer Profile in Ihrem System zu erhalten. Diese Bereinigung erfolgt, nachdem alle Profilfragmente für ein bestimmtes Profil gelöscht wurden, und sollte sich auf die Zusammenführung von Profilen aus Datensätzen auswirken, in denen `com_adobe_aep_profile_region_dataset` als `true`. Dies kann einen Rückgang der Metrik &quot;Addressable audience&quot;im Dashboard zur Lizenznutzung anzeigen und einen Rückgang der Metrik &quot;Profilanzahl&quot;im Profil-Dashboard anzeigen, da diese Metriken vor dieser Version verbleibende Edge-Attributfragmente enthielten. |
 
 {style=&quot;table-layout:auto&quot;}
@@ -154,7 +182,7 @@ Im Rahmen von Experience Platform stehen eine RESTful-API und interaktive Benutz
 | Allgemeine Verfügbarkeit von Self-Serve-Quellen (Batch-SDK) | Entwickeln, testen und integrieren Sie Ihre REST API-basierte Datenquelle, um Batch-Daten mithilfe einfacher Quellspezifikationen in Experience Platform zu erfassen. Mit dem Sources-SDK können Sie: <ul><li>Konfigurieren Sie eine neue Quelle für den Experience Platform-Katalog.</li><li>Definieren Sie Spezifikationen für Ihre Quelle, einschließlich Informationen zu unterstützten Authentifizierungstypen, Planung und Art und Weise, wie Ressourcendaten abgerufen werden.</li><li>Erstellen Sie eine benutzerfreundliche Dokumentation für Ihre neue Quelle.</li></ul> Weitere Informationen finden Sie in der Dokumentation unter [Self-Serve-Quellen (Batch-SDK)](../../sources/sources-sdk/overview.md). |
 | Allgemeine Verfügbarkeit der [!DNL Google BigQuery]-Quelle | Verwenden Sie die [!DNL Google BigQuery] -Quelle, um Daten aus Ihrem [!DNL Google BigQuery] Data Warehouse in Experience Platform. Weitere Informationen finden Sie in der Dokumentation unter [[!DNL Google BigQuery] source](../../sources/connectors/databases/bigquery.md). |
 | [!DNL Teradata Vantage] source (Beta) | Verwenden Sie die [!DNL Teradata Vantage] -Quelle, um Daten aus hybriden Multi-Cloud-Umgebungen in Experience Platform zu erfassen. Weitere Informationen finden Sie in der Dokumentation unter [[!DNL Teradata Vantage] source](../../sources/connectors/databases/teradata-vantage.md). |
-| Regionsübergreifende Unterstützung für Adobe Analytics-Quellen | Sie können jetzt Report Suites aus einer beliebigen Region (USA, Großbritannien oder Singapur) erfassen. Report Suites müssen derselben Organisation wie die Experience Platform-Sandbox-Instanz zugeordnet sein, in der die Quellverbindung erstellt wird. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
+| Regionsübergreifende Unterstützung für Adobe Analytics-Quellen | Sie können jetzt Berichts-Suites aus jeder Region (Vereinigte Staaten, Vereinigtes Königreich oder Singapur) einlesen. Report Suites müssen derselben Organisation wie die Experience Platform-Sandbox-Instanz zugeordnet sein, in der die Quellverbindung erstellt wird. Weitere Informationen finden Sie im Handbuch unter [Erstellen einer Adobe Analytics-Quellverbindung in der Benutzeroberfläche](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 
 {style=&quot;table-layout:auto&quot;}
 
