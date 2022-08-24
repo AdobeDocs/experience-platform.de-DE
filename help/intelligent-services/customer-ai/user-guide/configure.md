@@ -4,20 +4,21 @@ solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 title: Konfigurieren einer Customer AI-Instanz
 topic-legacy: Instance creation
-description: Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
+description: AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c4e1d739bf54cbebf6a04d87f92d0df4bdbc083e
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2618'
-ht-degree: 11%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
+
 # Konfigurieren einer Customer AI-Instanz
 
-Die Customer AI als Teil von Intelligent Services ermöglicht es Ihnen, benutzerspezifische Tendenzwerte zu generieren, ohne sich um Machine Learning kümmern zu müssen.
+Mit Customer AI als Teil von AI/ML Services können Sie benutzerdefinierte Tendenzwerte generieren, ohne sich um maschinelles Lernen kümmern zu müssen.
 
-Intelligent Services stellen Customer AI als einfach zu verwendenden Adobe Sensei-Dienst bereit, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
+AI-/ML-Dienste bieten Customer AI als einfach zu verwendenden Adobe Sensei-Dienst, der für verschiedene Anwendungsfälle konfiguriert werden kann. Die folgenden Abschnitte enthalten Schritte zum Konfigurieren einer Instanz von Customer AI.
 
 ## Erstellen einer Instanz {#set-up-your-instance}
 
@@ -139,7 +140,7 @@ Wenn Sie beispielsweise vorhersagen möchten, welche Kunden weniger engagiert si
 
 ### Alle und beliebige von
 
-In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen aufweist, wählen Sie die **[!UICONTROL Alle]** -Option aus der Dropdown-Liste der zweiten Ebene auf der **[!UICONTROL Ziel definieren]** Seite.
+In einigen Fällen können Sie vorhersagen, ob eine Kombination von Ereignissen eintritt, in anderen Fällen können Sie das Auftreten eines Ereignisses aus einem vordefinierten Satz vorhersagen. Um vorherzusagen, ob ein Kunde eine Kombination von Ereignissen aufweist, wählen Sie die **[!UICONTROL Alle]** -Option aus der Dropdown-Liste der zweiten Ebene auf **[!UICONTROL Ziel definieren]** Seite.
 
 Sie können beispielsweise vorhersagen, ob ein Kunde ein bestimmtes Produkt kauft. Dieses Prognoseziel wird durch zwei Bedingungen definiert: a `commerce.order.purchaseID` **exists** und `productListItems.SKU` **gleich** einen bestimmten Wert.
 
@@ -191,6 +192,18 @@ Sie können in Ihren Daten neben dem [Standardereignisfelder](../input-output.md
 
 ![Hinzufügen eines benutzerdefinierten Profilattributs](../images/user-guide/profile-attributes.png)
 
+#### Profilattribute aus dem Profil-Snapshot-Export auswählen
+
+Sie können auch Profilattribute aus dem täglichen Profil-Snapshot-Export einbeziehen. Diese Attribute werden mit dem Profil-Snapshot-Export synchronisiert und zeigen den zuletzt verfügbaren Wert an.
+
+>[!WARNING]
+>
+> Achten Sie darauf, kein Profilattribut auszuwählen, das aufgrund des Prognoseziels aktualisiert oder stark mit dem Prognoseziel korreliert wird. Dies führt zu Datenlecks und Überanpassung des Modells. Ein Beispiel für ein solches Attribut ist `total_purchases_in_the_last_3_months` die Kaufkonversion vorhersagt.
+
+>[!NOTE]
+>
+>Unterstützung für die Verwendung von Profilattributen aus dem UPS Snapshot-Export ist auf Anfrage in der Benutzeroberfläche verfügbar.
+
 ### Beispiel für benutzerspezifisches Ereignis hinzufügen {#custom-event}
 
 Im folgenden Beispiel werden ein benutzerdefiniertes Ereignis und ein Profilattribut zu einer Customer AI-Instanz hinzugefügt. Ziel der Customer AI-Instanz ist es, die Wahrscheinlichkeit vorherzusagen, mit der ein Kunde in den nächsten 60 Tagen ein weiteres Luma-Produkt kaufen wird. Normalerweise werden Produktdaten mit einer Produkt-SKU verknüpft. In diesem Fall lautet die SKU `prd1013`. Nachdem das Customer AI-Modell trainiert/bewertet wurde, kann diese SKU mit einem Ereignis verknüpft und als Einflussfaktor für einen Tendenzbehälter angezeigt werden.
@@ -234,6 +247,38 @@ Wenn die Instanz erfolgreich erstellt wurde, wird sofort eine Prognose ausgefüh
 >Je nach Umfang der Eingabedaten kann die Ausführung von Prognosen bis zu 24 Stunden dauern.
 
 In diesem Abschnitt haben Sie eine Instanz von Customer AI konfiguriert und eine Prognose ausgeführt. Nach erfolgreichem Abschluss der Ausführung werden Profile mit Bewertungsdaten automatisch mit prognostizierten Werten ausgefüllt, wenn der Profil-Umschalter aktiviert ist. Warten Sie bis zu 24 Stunden, bevor Sie mit dem nächsten Abschnitt dieses Tutorials fortfahren.
+
+### Attributbasierte Zugriffssteuerung
+
+>[!IMPORTANT]
+>
+>Die attributbasierte Zugriffskontrolle ist derzeit nur in einer eingeschränkten Version verfügbar.
+
+[Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können.](../../../access-control/abac/overview.md) Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
+
+Mit dieser Funktion können Sie Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder zu definieren und den Zugriff, der Benutzern oder Benutzergruppen (internen, externen oder Drittanbieterbenutzern) gewährt wird, besser zu verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Administrierenden die Verwaltung des Zugriffs auf bestimmte Segmente.
+
+Mithilfe der attributbasierten Zugriffssteuerung können Administrierende Ihres Unternehmens den Zugriff der Benutzer*innen auf sowohl sensible persönliche Daten als auch personenbezogene Daten (PII) für alle Platform-Workflows und -Ressourcen steuern. Administrierende können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+
+Aufgrund der attributbasierten Zugriffskontrolle sind für einige Felder und Funktionen Zugriffsbeschränkungen eingeschränkt und für bestimmte Customer AI-Dienstinstanzen nicht verfügbar. Beispiele sind &quot;Identität&quot;, &quot;Score-Definition&quot;und &quot;Klon&quot;.
+
+![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern der Dienstinstanz wird hervorgehoben.](../images/user-guide/unavailable-functionalities.png)
+
+Am oberen Rand des Arbeitsbereichs &quot;Customer AI&quot; **Insight-Seite** Beachten Sie, dass die Details in der Seitenleiste, der Bewertungsdefinition, der Identität und den Profilattributen alle &quot;Zugriff eingeschränkt&quot;anzeigen.
+
+![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern des Schemas wird hervorgehoben.](../images/user-guide/access-restricted.png)
+
+<!-- If you select datasets with restricted schemas on the **[!UICONTROL Create instance workflow]** page, a warning sign appears next to the dataset name with the message: [!UICONTROL Restricted information is excluded].
+
+![The Customer AI workspace with the restricted fields of the selected datasets results highlighted.](../images/user-guide/restricted-info-excluded.png) -->
+
+Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** angezeigt wird, erscheint ein Warnhinweis, der Ihnen mitteilt, dass [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
+
+![Der Customer AI-Arbeitsbereich mit den eingeschränkten Feldern der Vorschau-Datensätze mit eingeschränkten Schemaergebnissen hervorgehoben.](../images/user-guide/restricted-dataset-preview.png)
+
+Nachdem Sie eine Instanz mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
+
+![Der Arbeitsbereich Customer AI mit den eingeschränkten Feldern der Dienstinstanz wird hervorgehoben.](../images/user-guide/information-not-displayed.png)
 
 ## Nächste Schritte {#next-steps}
 

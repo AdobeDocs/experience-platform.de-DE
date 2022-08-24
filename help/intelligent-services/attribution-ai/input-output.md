@@ -5,10 +5,10 @@ title: Eingabe und Ausgabe in Attribution AI
 topic-legacy: Input and Output data for Attribution AI
 description: Im folgenden Dokument werden die verschiedenen Ein- und Ausgabedaten beschrieben, die in Attribution AI verwendet werden.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: 3ea17aa57a5bfbc968f354b13d2ed107b2efa39b
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '2392'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -234,6 +234,12 @@ Die nachstehende Tabelle ordnet die aggregierten Werte den Rohbewertungen zu. We
 | Aktion | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.mediaAction |
 | campaign_group | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignGroup |
 | campaign_name | _tenantID.your_schema_name.touchpointsDetail.element.touchpoint.campaignName |
+
+>[!IMPORTANT]
+>
+> - Attribution AI verwendet nur aktualisierte Daten für Weiterbildung und Scoring. Wenn Sie Daten löschen möchten, verwendet Attribution AI auch nicht die gelöschten Daten.
+> - Um die Einhaltung der DSGVO in Attribution AI zu erleichtern, können Sie mit Adobe Experience Platform Privacy Service Protokolle einrichten, um Kundenanfragen beim Zugriff auf und Löschen ihrer Daten im Data Lake, Identity Service und Echtzeit-Kundenprofil zu berücksichtigen.
+> - Alle Daten werden im Transit und im Ruhezustand verschlüsselt. Weitere Informationen finden Sie in der Dokumentation . [Datenverschlüsselung](../../../help/landing/governance-privacy-security/encryption.md)
 
 
 ## Nächste Schritte {#next-steps}

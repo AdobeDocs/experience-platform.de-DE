@@ -6,10 +6,10 @@ title: Erste Schritte mit Customer AI
 topic-legacy: Getting started
 description: In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads.
 exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: b3c331821e2df17380edbc673066f6b10a06d65f
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 71%
+source-wordcount: '650'
+ht-degree: 62%
 
 ---
 
@@ -47,6 +47,12 @@ Alle Ressourcen in Experience Platform sind auf bestimmte virtuelle Sandboxes be
 ### Lesen von Beispiel-API-Aufrufen
 
 In diesem Handbuch wird anhand von Beispielen für API-Aufrufe die korrekte Formatierung von Anfragen aufgezeigt. Dazu gehören Pfade, erforderliche Kopfzeilen und ordnungsgemäß formatierte Anfrage-Payloads. Außerdem wird ein Beispiel für eine von der API im JSON-Format zurückgegebene Antwort bereitgestellt. Informationen zu den Konventionen, die in der Dokumentation für Beispiel-API-Aufrufe verwendet werden, finden Sie im Abschnitt zum [Lesen von Beispiel-API-Aufrufen](../../landing/troubleshooting.md) im Handbuch zur Fehlerbehebung für Experience Platform.
+
+## Berechtigungen
+
+Bei Verwendung der Zugriffssteuerung muss die **Anzeigen von Customer AI** und **Customer AI verwalten** -Berechtigungen gewähren Zugriff auf verschiedene Funktionen von Customer AI. Die **Customer AI verwalten** -Berechtigung **erstellen**,**update**, **delete**, **enable** oder **disable** eine Instanz während **Anzeigen von Customer AI** Sie können sie lesen oder anzeigen. Die **erstellen**, **update** und **delete** -Aktionen werden in Auditprotokollen aufgezeichnet.
+
+Weitere Informationen finden Sie in der Dokumentation . [Zuweisen von Berechtigungen für die Zugriffskontrolle](../../../help/access-control/home.md) oder wie [Verwenden Sie Auditprotokolle zur Überwachung von Zugriff und Aktivität.](../../../help/landing/governance-privacy-security/audit-logs/overview.md).
 
 ## Nächste Schritte
 

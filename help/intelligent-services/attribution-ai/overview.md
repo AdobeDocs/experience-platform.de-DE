@@ -6,7 +6,7 @@ topic-legacy: Attribution AI
 description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren. Beispiele für Touchpoints sind Impressionen auf Display-Anzeigen, E-Mail-Sendungen, E-Mail-Öffnungen und Paid-Search-Klicks.
 landing-page-description: Attributions-KI wird verwendet, um Touchpoints Ereignissen zuzuordnen, die zu Konversionen führen. Dies kann von Marketing-Experten genutzt werden, um die Auswirkungen jedes einzelnen Marketing-Touchpoints auf einer Customer Journey zu quantifizieren.
 exl-id: a5991b08-217a-4b39-9948-d28eadea7ded
-source-git-commit: c3320f040383980448135371ad9fae583cfca344
+source-git-commit: a71da02b7cef5870bc9ca689a47c25098b2297b8
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Attribution AI kann zur Unterstützung der folgenden Anwendungsbeispiele verwend
 
 ### Zusätzliche Funktionen
 
-Attribution AI bietet auch die Integration mit anderen Adobe-Lösungen wie [!DNL Adobe Analytics]. Auf diese Weise können Sie diese Lösungen verwenden, um das anpassbare algorithmische Modell zur Bewertung der Medienleistung und zur Bereitstellung analytischer Einblicke zu nutzen.
+Attribution AI bietet auch die Integration mit anderen Adobe-Lösungen wie [!DNL Customer Journey Analytics]. Auf diese Weise können Sie diese Lösungen verwenden, um das anpassbare algorithmische Modell zur Bewertung der Medienleistung und zur Bereitstellung analytischer Einblicke zu nutzen.
 
 ## Nächste Schritte
 

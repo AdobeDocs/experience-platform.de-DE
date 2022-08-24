@@ -5,10 +5,10 @@ title: Benutzerhandbuch zu Attribution AI
 topic-legacy: User guide
 description: Dieses Dokument dient als Leitfaden für die Interaktion mit Attribution AI in der Benutzeroberfläche von Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: f27ddda4d5e6c33fa41e4ac503f80ddb1e39b09b
+source-git-commit: ac21668955305c135d78c1e6afbee8f6499f6885
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -261,6 +261,36 @@ Um sicherzustellen, dass Sie ein möglichst präzises Modell erhalten, müssen S
 Nachdem Sie Ihr Schulungsfenster ausgewählt haben, wählen Sie **[!UICONTROL Beenden]** in der oberen rechten Ecke. Warten Sie etwas, bis die Daten verarbeitet werden. Nach Abschluss des Vorgangs wird ein Popup-Dialogfeld angezeigt, in dem bestätigt wird, dass die Instanzeinrichtung abgeschlossen ist. Auswählen **[!UICONTROL Ok]** , die an die **[!UICONTROL Dienstinstanzen]** Seite, auf der Sie Ihre Dienstinstanz sehen können.
 
 ![Setup abgeschlossen](./images/user-guide/instance_setup_complete.png)
+
+### Attributbasierte Zugriffssteuerung
+
+>[!IMPORTANT]
+>
+>Die attributbasierte Zugriffskontrolle ist derzeit nur in einer eingeschränkten Version verfügbar.
+
+[Die attributbasierte Zugriffssteuerung ist eine Funktion von Adobe Experience Platform, mit der Administrierende den Zugriff auf bestimmte Objekte und/oder Funktionen anhand von Attributen steuern können.](../../../help/access-control/abac/overview.md) Attribute können Metadaten sein, die einem Objekt hinzugefügt werden, z. B. eine Bezeichnung, die einem Schemafeld oder Segment hinzugefügt wird. Administrierende definieren Zugriffsrichtlinien, die Attribute zur Verwaltung von Benutzerzugriffsberechtigungen enthalten.
+
+Mit dieser Funktion können Sie Experience-Datenmodell (XDM)-Schemafelder mit Bezeichnungen beschriften, die Organisations- oder Datennutzungsbereiche definieren. Parallel dazu können Administratoren die Benutzeroberfläche zur Verwaltung von Benutzern und Rollen verwenden, um Zugriffsrichtlinien für XDM-Schemafelder zu definieren und den Zugriff, der Benutzern oder Benutzergruppen (internen, externen oder Drittanbieterbenutzern) gewährt wird, besser zu verwalten. Darüber hinaus ermöglicht die attributbasierte Zugriffskontrolle Administrierenden die Verwaltung des Zugriffs auf bestimmte Segmente.
+
+Mithilfe der attributbasierten Zugriffskontrolle können Administratoren den Zugriff der Benutzer auf sowohl sensible personenbezogene Daten (EPPD) als auch auf persönlich identifizierbare Informationen (PII) in allen Platform-Workflows und -Ressourcen steuern. Administratoren können Benutzerrollen definieren, die nur Zugriff auf bestimmte Felder und Daten haben, die diesen Feldern entsprechen.
+
+Aufgrund der attributbasierten Zugriffskontrolle sind einige Felder und Funktionen möglicherweise eingeschränkt und stehen für bestimmte Attribution AI-Dienstinstanzen nicht zur Verfügung. Beispiele sind &quot;Identität&quot;, &quot;Score-Definition&quot;und &quot;Klon&quot;.
+
+Oben im Arbeitsbereich &quot;Attribution AI&quot; **Insight-Seite**, haben die Details, die in der Seitenleiste angezeigt werden, eingeschränkten Zugriff.
+
+![Der Attribution AI-Arbeitsbereich mit hervorgehobenen eingeschränkten Schemafeldern.](./images/user-guide/access-restricted.png)
+
+Wenn Sie Datensätze mit eingeschränkten Schemas im **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** -Seite wird neben dem Datensatznamen ein Warnzeichen mit der Meldung angezeigt: [!UICONTROL Eingeschränkte Informationen sind ausgeschlossen].
+
+![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der ausgewählten Datensätze mit eingeschränkten Schemata wird hervorgehoben.](./images/user-guide/restricted-info-excluded.png)
+
+Bei der Vorschau von Datensätzen mit eingeschränktem Schema auf der **[!UICONTROL Workflow &quot;Instanz erstellen&quot;]** angezeigt wird, erscheint ein Warnhinweis, der Ihnen mitteilt, dass [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Datensatzvorschau angezeigt.]
+
+![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der in der Vorschau angezeigten Schemaergebnisse wurde hervorgehoben.](./images/user-guide/restricted-dataset-preview.png)
+
+Nachdem Sie eine Instanz mit eingeschränkten Informationen erstellt haben, fahren Sie mit dem **[!UICONTROL Ziel definieren]** Schritt, wird oben eine Warnung angezeigt: [!UICONTROL Aufgrund von Zugriffsbeschränkungen werden bestimmte Informationen nicht in der Konfiguration angezeigt.]
+
+![Der Arbeitsbereich Attribution AI mit den eingeschränkten Feldern der Instanz wird hervorgehoben.](./images/user-guide/information-not-displayed.png)
 
 ## Nächste Schritte
 
